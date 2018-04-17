@@ -1,13 +1,9 @@
 ---
 title: Как печатать файлы XPS программным способом
-ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - dotnet-wpf
-ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -16,29 +12,28 @@ helpviewer_keywords:
 - printing XPS files programmatically [WPF]
 - XPS files [WPF], printing programmatically
 ms.assetid: 0b1c0a3f-b19e-43d6-bcc9-eb3ec4e555ad
-caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 0b58e617fb04ecaba45ed655dc650459e89453dd
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 55a9a50527df0605cb9699622a165147597a500a
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-programmatically-print-xps-files"></a>Как печатать файлы XPS программным способом
 Можно использовать перегрузку <xref:System.Printing.PrintQueue.AddJob%2A> метод печать [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] файлов без открытия <xref:System.Windows.Controls.PrintDialog> или, в принципе, все [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] вообще.  
   
- Также можно напечатать [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] файлов с помощью многие <xref:System.Windows.Xps.XpsDocumentWriter.Write%2A> и <xref:System.Windows.Xps.XpsDocumentWriter.WriteAsync%2A> методы <xref:System.Windows.Xps.XpsDocumentWriter>. Дополнительные сведения см. в разделе [Печать документа XPS](http://msdn.microsoft.com/library/849555c8-0c4e-48c0-86bc-a5494c69b36c).  
+ Также можно напечатать [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] файлов с помощью многие <xref:System.Windows.Xps.XpsDocumentWriter.Write%2A> и <xref:System.Windows.Xps.XpsDocumentWriter.WriteAsync%2A> методы <xref:System.Windows.Xps.XpsDocumentWriter>. Дополнительные сведения см. в разделе [Печать документа XPS](https://msdn.microsoft.com/library/849555c8-0c4e-48c0-86bc-a5494c69b36c(v=vs.90)).  
   
- Другой способ печати [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] заключается в использовании <xref:System.Windows.Controls.PrintDialog.PrintDocument%2A> или <xref:System.Windows.Controls.PrintDialog.PrintVisual%2A> методы <xref:System.Windows.Controls.PrintDialog> элемента управления. См. раздел [Вызов диалогового окна печати](../../../../docs/framework/wpf/advanced/how-to-invoke-a-print-dialog.md).  
+ Другой способ печати [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] заключается в использовании <xref:System.Windows.Controls.PrintDialog.PrintDocument%2A> или <xref:System.Windows.Controls.PrintDialog.PrintVisual%2A> методы <xref:System.Windows.Controls.PrintDialog> элемента управления. См. раздел [Вызов диалогового окна печати](how-to-invoke-a-print-dialog.md).  
   
 ## <a name="example"></a>Пример  
  Необходимо с помощью параметра три основных шага <xref:System.Printing.PrintQueue.AddJob%28System.String%2CSystem.String%2CSystem.Boolean%29> метода, как показано ниже. Подробные сведения см. в примере.  
   
-1.  Определите, является ли принтер принтером XPSDrv. (Дополнительные сведения о XPSDrv см. в разделе [Обзор печати](../../../../docs/framework/wpf/advanced/printing-overview.md).)  
+1.  Определите, является ли принтер принтером XPSDrv. (Дополнительные сведения о XPSDrv см. в разделе [Обзор печати](printing-overview.md).)  
   
 2.  Если принтер не является принтером XPSDrv, задайте однопотоковое подразделение потока.  
   
@@ -54,7 +49,7 @@ ms.lasthandoff: 03/26/2018
   
  Соответственно, пример начинается с создания экземпляра <xref:System.Threading.Thread> объекта и его передачи **PrintXPS** метод как <xref:System.Threading.ThreadStart> параметр. (Метод **PrintXPS** определяется ниже в этом примере.) Затем для потока устанавливается однопотоковое подразделение. Остальной код метода `Main` начинается с нового потока.  
   
- Основу этого примера составляет метод `static` **BatchXPSPrinter.PrintXPS**. После создания сервера и очереди печати метод предлагает пользователю выбрать каталог, содержащий файлы [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)]. После того, как существование каталога и наличие в нем XPS-файлов будет проверено, метод добавляет каждый такой файл в очередь печати. В примере предполагается, что принтер является не XPSDrv, поэтому мы передаем `false` для последнего параметра <xref:System.Printing.PrintQueue.AddJob%28System.String%2CSystem.String%2CSystem.Boolean%29> метод. В связи с этим метод проверит разметку [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] в файле и только после этого конвертирует его в язык описания страниц принтера. Если проверка завершается ошибкой, выдается исключение. Код в примере перехватит исключение, сообщит о нем пользователю, а затем перейдет к обработке следующего файла [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)].  
+ Основу этого примера составляет метод `static` **BatchXPSPrinter.PrintXPS**. После создания сервера и очереди печати метод предлагает пользователю выбрать каталог, содержащий файлы [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)]. После проверки существования каталога и наличия \*расширением XPS файлы в нем, метод добавляет каждый такой файл в очередь печати. В примере предполагается, что принтер является не XPSDrv, поэтому мы передаем `false` для последнего параметра <xref:System.Printing.PrintQueue.AddJob%28System.String%2CSystem.String%2CSystem.Boolean%29> метод. В связи с этим метод проверит разметку [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] в файле и только после этого конвертирует его в язык описания страниц принтера. Если проверка завершается ошибкой, выдается исключение. Код в примере перехватит исключение, сообщит о нем пользователю, а затем перейдет к обработке следующего файла [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)].  
   
  [!code-csharp[BatchPrintXPSFiles#BatchPrintXPSFiles](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BatchPrintXPSFiles/CSharp/Program.cs#batchprintxpsfiles)]
  [!code-vb[BatchPrintXPSFiles#BatchPrintXPSFiles](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BatchPrintXPSFiles/visualbasic/program.vb#batchprintxpsfiles)]  
@@ -69,7 +64,7 @@ ms.lasthandoff: 03/26/2018
   
  Эта маскировка позволит передать `true` как последний параметр <xref:System.Printing.PrintQueue.AddJob%28System.String%2CSystem.String%2CSystem.Boolean%29> без вызова исключения, но поскольку  *\<PseudoXPSPrinter >* не представляет собой принтера XPSDrv, будет печататься только мусор.  
   
- **Примечание.** Для простоты в приведенном выше примере то, является ли файл [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)], проверяется по наличию расширения XPS. При этом файлы [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] не обязательно должны иметь такое расширение. [isXPS.exe (isXPS Conformance Tool)](http://msdn.microsoft.com/library/bfbb433f-7ab6-417a-90f0-71443d76bcb3) является одним из способов проверки файла на соответствие [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)].  
+ **Примечание** для простоты в примере выше используется наличие \*расширения расширением XPS в качестве проверки того, что файл является [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)]. При этом файлы [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] не обязательно должны иметь такое расширение. [isXPS.exe (isXPS Conformance Tool)](https://msdn.microsoft.com/library/bfbb433f-7ab6-417a-90f0-71443d76bcb3(v=vs.100)) является одним из способов проверки файла на соответствие [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)].  
   
 ## <a name="see-also"></a>См. также  
  <xref:System.Printing.PrintQueue>  
@@ -77,8 +72,8 @@ ms.lasthandoff: 03/26/2018
  <xref:System.Threading.ApartmentState>  
  <xref:System.STAThreadAttribute>  
  [XPS](http://www.microsoft.com/xps)  
- [Печать документа XPS](http://msdn.microsoft.com/library/849555c8-0c4e-48c0-86bc-a5494c69b36c)  
- [Управляемые и неуправляемые потоки](http://msdn.microsoft.com/library/db425c20-4b2f-4433-bf96-76071c7881e5)  
- [isXPS.exe (средство проверки соответствия isXPS)](http://msdn.microsoft.com/library/bfbb433f-7ab6-417a-90f0-71443d76bcb3)  
- [Документы в WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
- [Общие сведения о печати](../../../../docs/framework/wpf/advanced/printing-overview.md)
+ [Печать документа XPS](https://msdn.microsoft.com/library/849555c8-0c4e-48c0-86bc-a5494c69b36c(v=vs.90))  
+ [Управляемые и неуправляемые потоки](https://msdn.microsoft.com/library/db425c20-4b2f-4433-bf96-76071c7881e5(v=vs.100))  
+ [isXPS.exe (средство проверки соответствия isXPS)](https://msdn.microsoft.com/library/bfbb433f-7ab6-417a-90f0-71443d76bcb3(v=vs.100))  
+ [Документы в WPF](documents-in-wpf.md)  
+ [Общие сведения о печати](printing-overview.md)

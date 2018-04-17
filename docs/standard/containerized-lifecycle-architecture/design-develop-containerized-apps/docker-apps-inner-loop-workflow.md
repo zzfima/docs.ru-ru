@@ -1,18 +1,18 @@
 ---
-title: "Внутренний цикл разработки рабочего процесса для Docker приложений"
-description: "Жизненный цикл контейнерного приложения Docker на основе платформы и средств Майкрософт"
-keywords: "Docker, микрослужбы, ASP.NET, контейнер"
+title: Внутренний цикл разработки рабочего процесса для Docker приложений
+description: Жизненный цикл контейнерного приложения Docker на основе платформы и средств Майкрософт
+ms.prod: .net
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 632c04507c1478238a5dc2573542f8c88bae2a51
-ms.sourcegitcommit: c3957fdb990060559d73cca44ab3e2c7b4d049c0
+ms.openlocfilehash: 7f49b19b0836636bf7656dc618ef2f181a0d7fff
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="inner-loop-development-workflow-for-docker-apps"></a>Внутренний цикл разработки рабочего процесса для Docker приложений
 
@@ -52,7 +52,7 @@ ms.lasthandoff: 03/05/2018
 
 Последние версии Docker для Mac и Windows проще, чем когда-либо для разработки приложений Docker и настройка является простым.
 
-**Дополнительные сведения о** инструкции по настройке Docker для Windows, см. в [https://docs.docker.com/docker-for-windows/](https://docs.docker.com/docker-for-windows/).
+**Дополнительные сведения о** инструкции по настройке Docker для Windows, см. в [ https://docs.docker.com/docker-for-windows/ ](https://docs.docker.com/docker-for-windows/).
 
 Инструкции по настройке Docker для Mac, см. в <https://docs.docker.com/docker-for-mac/>.
 
@@ -60,7 +60,7 @@ ms.lasthandoff: 03/05/2018
 
 Корпорация Майкрософт предоставляет Visual Studio код, который является простой редактор кода, поддерживается в Windows, Mac и Linux и предоставляет IntelliSense с [для многих языков](https://code.visualstudio.com/docs/languages/overview) (JavaScript, .NET, Go, Java, Ruby, Python и большинство современные языки) [отладки](https://code.visualstudio.com/Docs/editor/debugging), [интеграция с Git](https://code.visualstudio.com/Docs/editor/versioncontrol) и [расширения поддержки](https://code.visualstudio.com/docs/extensions/overview). Этот редактор — отлично подходит для разработчиков Mac и Linux. В Windows можно использовать полный приложения Visual Studio.
 
-**Дополнительные сведения о** инструкции по установке Visual Studio для Windows, Mac или Linux, перейдите к [http://code.visualstudio.com/docs/setup/setup-overview/https://docs.docker.com/docker-for-mac/](http://code.visualstudio.com/docs/setup/setup-overview/https:/docs.docker.com/docker-for-mac/).
+**Дополнительные сведения о** инструкции по установке Visual Studio для Windows, Mac или Linux, перейдите к [ http://code.visualstudio.com/docs/setup/setup-overview/https://docs.docker.com/docker-for-mac/ ](http://code.visualstudio.com/docs/setup/setup-overview/https:/docs.docker.com/docker-for-mac/).
 
 Можно работать с Docker CLI и напишите код, используя любой редактор кода, но при использовании кода Visual Studio упрощает их автора Dockerfile и docker compose.yml файлов в рабочей области. Кроме того можно выполнять задачи кода Visual Studio в интегрированной среде разработки, который будет предлагать сценарии, которые могут работать продуманные операций, с помощью Docker CLI под.
 
@@ -125,7 +125,7 @@ ENTRYPOINT ["dotnet", "MyCustomMicroservice.dll"]
 
 **Дополнительные сведения о** сведения о создании образов Docker для приложений .NET Core, перейдите к <https://docs.microsoft.com/dotnet/core/docker/building-net-docker-images>.
 
-Дополнительные сведения о создании собственных образов, перейдите к [https://docs.docker.com/engine/ \учебники/dockerimages/](https://docs.docker.com/engine/tutorials/dockerimages/).
+Дополнительные сведения о создании собственных образов, перейдите к [ https://docs.docker.com/engine/\учебники/dockerimages/](https://docs.docker.com/engine/tutorials/dockerimages/).
 
 **Репозитории многоплатформенного изображения**
 
@@ -258,7 +258,7 @@ cesardl/netcore-webapi-microservice-docker:first
 
 Также можно отлаживать .NET Core контейнеры Docker при использовании Visual Studio, как описано в следующем разделе.
 
-**Дополнительные сведения:** Дополнительные сведения об отладке контейнеры Node.js Docker, перейдите к <https://blog.docker.com/2016/07/live-debugging-docker/> и [https://blogs.msdn.microsoft.com/ \ пользователя\_ed/2016-02/27 / Visual-Studio-Code-New-Features-13-Big-Debugging-Updates-Rich-Object-hover-Conditional-Breakpoints-node-js-Mono-More/](https://blogs.msdn.microsoft.com/user_ed/2016/02/27/visual-studio-code-new-features-13-big-debugging-updates-rich-object-hover-conditional-breakpoints-node-js-mono-more/).
+**Дополнительные сведения:** Дополнительные сведения об отладке контейнеры Node.js Docker, перейдите к <https://blog.docker.com/2016/07/live-debugging-docker/> и [ https://blogs.msdn.microsoft.com/\ пользователя\_ed/2016-02/27 / Visual-Studio-Code-New-Features-13-Big-Debugging-Updates-Rich-Object-hover-Conditional-Breakpoints-node-js-Mono-More/](https://blogs.msdn.microsoft.com/user_ed/2016/02/27/visual-studio-code-new-features-13-big-debugging-updates-rich-object-hover-conditional-breakpoints-node-js-mono-more/).
 
 
 >[!div class="step-by-step"]

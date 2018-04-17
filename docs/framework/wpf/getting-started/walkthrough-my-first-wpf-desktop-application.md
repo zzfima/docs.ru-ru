@@ -1,12 +1,13 @@
 ---
-title: "Пошаговое руководство: Мои первого классического приложения WPF"
-ms.custom: 
+title: Пошаговое руководство. Создание первого классического приложения WPF
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,21 +16,22 @@ helpviewer_keywords:
 - getting started [WPF], WPF
 - WPF [WPF], getting started
 ms.assetid: b96bed40-8946-4285-8fe4-88045ab854ed
-caps.latest.revision: "71"
+caps.latest.revision: 71
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 16ed99181f8462e805638b5d3881464b16f21177
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 3725e96b514b0204f10f6b5c45ed2bbec1d892de
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="walkthrough-my-first-wpf-desktop-application"></a>Пошаговое руководство: Мои первого классического приложения WPF
+# <a name="walkthrough-my-first-wpf-desktop-application"></a>Пошаговое руководство. Создание первого классического приложения WPF
 В этом пошаговом руководстве представляет собой введение в разработку [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] приложения, которое содержит элементы, которые являются общими для большинства [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] приложений: [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] разметки, кода, определения приложения, элементы управления, макет, Привязка данных и стили. 
   
- Пошаговом руководстве описывается разработка простого [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] приложения, выполнив следующие действия. 
+Пошаговом руководстве описывается разработка простого [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] приложения, выполнив следующие действия. 
   
 -   Определение [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] на внешний вид приложения [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]. 
   
@@ -43,9 +45,9 @@ ms.lasthandoff: 01/19/2018
   
 -   Привязка [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] с данными для заполнения [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] из данных и синхронизации данных и [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] синхронизированы. 
   
- В конце данного пошагового руководства вы сможете создать автономный [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] приложение, которое позволяет пользователям просматривать отчеты о расходах для выбранных пользователей. Приложение будет состоять из нескольких [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] страницы, размещенные в окне обозревателя. 
+В конце данного пошагового руководства вы сможете создать автономный [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] приложение, которое позволяет пользователям просматривать отчеты о расходах для выбранных пользователей. Приложение будет состоять из нескольких [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] страницы, размещенные в окне обозревателя. 
   
- Пример кода, который используется в этом пошаговом руководстве, доступен как для [!INCLUDE[TLA#tla_visualb](../../../../includes/tlasharptla-visualb-md.md)] и [!INCLUDE[TLA#tla_cshrp](../../../../includes/tlasharptla-cshrp-md.md)] в [введение в построение приложений WPF](http://go.microsoft.com/fwlink/?LinkID=160008). 
+Пример кода, который используется в этом пошаговом руководстве, доступен как для [!INCLUDE[TLA#tla_visualb](../../../../includes/tlasharptla-visualb-md.md)] и [!INCLUDE[TLA#tla_cshrp](../../../../includes/tlasharptla-cshrp-md.md)] в [введение в построение приложений WPF](http://go.microsoft.com/fwlink/?LinkID=160008). 
 
 ## <a name="prerequisites"></a>Предварительные требования  
 
@@ -54,12 +56,12 @@ ms.lasthandoff: 01/19/2018
 Дополнительные сведения об установке последней версии Visual Studio см. в разделе [установите Visual Studio](/visualstudio/install/install-visual-studio).
   
 ## <a name="creating-the-application-project"></a>Создание проекта приложения  
- В этом разделе вы создадите инфраструктуру приложения, включающую в себя определение приложения, две страницы и изображение. 
+В этом разделе вы создадите инфраструктуру приложения, включающую в себя определение приложения, две страницы и изображение. 
   
 1. Создайте проект приложения WPF на Visual Basic или Visual C# с именем `ExpenseIt`. Дополнительные сведения см. в разделе [Практическое руководство. Создание нового проекта приложения WPF](http://msdn.microsoft.com/library/1f6aea7a-33e1-4d3f-8555-1daa42e95d82). 
   
     > [!NOTE]
-    >  В этом пошаговом руководстве используется <xref:System.Windows.Controls.DataGrid> управления, доступных в .NET Framework 4. Быть в том, что проект предназначен для .NET Framework 4 или более поздней версии. Дополнительные сведения см. в разделе[как: целевой версии платформы .NET Framework](/visualstudio/ide/how-to-target-a-version-of-the-dotnet-framework). 
+    >  В этом пошаговом руководстве используется <xref:System.Windows.Controls.DataGrid> управления, доступных в .NET Framework 4. Быть в том, что проект предназначен для .NET Framework 4 или более поздней версии. Дополнительные сведения см. в [практическом руководстве по настройке конкретной версии .NET Framework](/visualstudio/ide/how-to-target-a-version-of-the-dotnet-framework). 
   
 2. Откройте файл Application.xaml (Visual Basic) или файл App.xaml (C#). 
   
@@ -79,7 +81,7 @@ ms.lasthandoff: 01/19/2018
   
 4. Изменение <xref:System.Windows.Window> элемент <xref:System.Windows.Navigation.NavigationWindow>. 
   
-     Приложение будет переходить к различному содержимому согласно действиям пользователя. Поэтому главное <xref:System.Windows.Window> должно быть изменено <xref:System.Windows.Navigation.NavigationWindow>. <xref:System.Windows.Navigation.NavigationWindow>наследует все свойства <xref:System.Windows.Window>. <xref:System.Windows.Navigation.NavigationWindow> Элемент файла XAML создает экземпляр <xref:System.Windows.Navigation.NavigationWindow> класса. Дополнительные сведения см. в разделе [Общие сведения о переходах](../../../../docs/framework/wpf/app-development/navigation-overview.md). 
+     Приложение будет переходить к различному содержимому согласно действиям пользователя. Поэтому главное <xref:System.Windows.Window> должно быть изменено <xref:System.Windows.Navigation.NavigationWindow>. <xref:System.Windows.Navigation.NavigationWindow> наследует все свойства <xref:System.Windows.Window>. <xref:System.Windows.Navigation.NavigationWindow> Элемент файла XAML создает экземпляр <xref:System.Windows.Navigation.NavigationWindow> класса. Дополнительные сведения см. в разделе [Общие сведения о переходах](../../../../docs/framework/wpf/app-development/navigation-overview.md). 
   
 5. Измените следующие свойства на <xref:System.Windows.Navigation.NavigationWindow> элемента:  
   
@@ -113,7 +115,7 @@ ms.lasthandoff: 01/19/2018
     [!code-vb[ExpenseIt#3](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ExpenseIt/VB/ExpenseIt1_A/MainWindow.xaml.vb#3)]  
   
 ## <a name="adding-files-to-the-application"></a>Добавление файлов в приложение  
- В этом разделе в приложение добавляются две страницы и изображение. 
+В этом разделе в приложение добавляются две страницы и изображение. 
   
 1. Добавление новой страницы (WPF) в проект с именем `ExpenseItHome.xaml`. Дополнительные сведения см. в разделе [как: Добавление новых элементов в проект WPF](http://msdn.microsoft.com/library/17e6b238-fc32-4385-98ef-2f66ca09d9ad). 
   
@@ -171,12 +173,12 @@ ms.lasthandoff: 01/19/2018
     [!code-csharp[ExpenseIt#5](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt/ExpenseReportPage.xaml.cs#5)]
     [!code-vb[ExpenseIt#5](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ExpenseIt/VB/ExpenseIt1_A/ExpenseReportPage.xaml.vb#5)]  
   
-10. Добавьте в проект изображение с именем watermark.png. Можно создать собственное изображение или скопировать файл из образца кода. Дополнительные сведения см. в разделе [NIB: Практическое: Добавление существующих элементов в проект](http://msdn.microsoft.com/library/15f4cfb7-78ab-457f-9f14-099a25a6a2d3). 
+10. Добавьте изображение с именем *watermark.png* в проект. Можно создать собственное изображение или скопировать файл из образца кода. Дополнительные сведения см. в разделе [как: Добавление существующих элементов в проект](/previous-versions/visualstudio/visual-studio-2008/9f4t9t92(v=vs.90)). 
 
 ## <a name="building-and-running-the-application"></a>Построение и запуск приложения  
- В этом разделе выполняются сборка и запуск приложения. 
+В этом разделе выполняются сборка и запуск приложения. 
   
-1. Построение и запуск приложения, нажав клавишу F5 или выберите **начать отладку** из **отладки** меню. 
+1. Построение и запуск приложения нажатием клавиши F5 или выбрав **начать отладку** из **отладки** меню. 
   
      На следующем рисунке показано приложение с <xref:System.Windows.Navigation.NavigationWindow> кнопки. 
   
@@ -185,7 +187,7 @@ ms.lasthandoff: 01/19/2018
 2. Закройте приложение, чтобы вернуться к [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)]. 
   
 ## <a name="creating-the-layout"></a>Создание макета  
- Макет позволяет упорядочивать для размещения [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] элементов, а также управление размером и положением при [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] изменяется. Обычно макет создается с одним из следующих элементов управления макетом.  
+Макет позволяет упорядочивать для размещения [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] элементов, а также управление размером и положением при [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] изменяется. Обычно макет создается с одним из следующих элементов управления макетом.  
   
 -   <xref:System.Windows.Controls.Canvas>  
   
@@ -199,12 +201,12 @@ ms.lasthandoff: 01/19/2018
   
 -   <xref:System.Windows.Controls.WrapPanel>  
   
- Каждый из этих элементов управления макетом поддерживает специальный тип макета дочерних элементов. Размер страниц приложения ExpenseIt может быть изменен. На каждой странице представлены элементы, которые упорядочены по горизонтали и вертикали рядом с другими элементами. Следовательно <xref:System.Windows.Controls.Grid> является идеальным элементом макета для приложения. 
+Каждый из этих элементов управления макетом поддерживает специальный тип макета дочерних элементов. Размер страниц приложения ExpenseIt может быть изменен. На каждой странице представлены элементы, которые упорядочены по горизонтали и вертикали рядом с другими элементами. Следовательно <xref:System.Windows.Controls.Grid> является идеальным элементом макета для приложения. 
   
 > [!NOTE]
 >  Дополнительные сведения о <xref:System.Windows.Controls.Panel> см [Общие сведения о панелях](../../../../docs/framework/wpf/controls/panels-overview.md). Дополнительные сведения о макете см. в разделе [макета](../../../../docs/framework/wpf/advanced/layout.md). 
   
- В разделе, создании одного столбца таблицы с тремя строками и 10 пикселей путем добавления определений столбцов и строк для <xref:System.Windows.Controls.Grid> в ExpenseItHome.xaml. 
+В разделе, создании одного столбца таблицы с тремя строками и 10 пикселей путем добавления определений столбцов и строк для <xref:System.Windows.Controls.Grid> в ExpenseItHome.xaml. 
   
 1. Откройте файл ExpenseItHome.xaml. 
   
@@ -221,17 +223,17 @@ ms.lasthandoff: 01/19/2018
     [!code-xaml[ExpenseIt#9](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt3/ExpenseItHome.xaml#9)]  
   
 ## <a name="adding-controls"></a>Добавление элементов управления  
- В этом разделе, на домашней странице [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] обновляется для отображения списка людей, пользователи могут выбрать, чтобы отобразить отчет по расходам для выбранного пользователя из. Элементы управления — это объекты пользовательского интерфейса, позволяющие пользователям взаимодействовать с приложением. Более подробную информацию см. в разделе [Элементы управления](../../../../docs/framework/wpf/controls/index.md). 
+В этом разделе, на домашней странице [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] обновляется для отображения списка людей, пользователи могут выбрать, чтобы отобразить отчет по расходам для выбранного пользователя из. Элементы управления — это объекты пользовательского интерфейса, позволяющие пользователям взаимодействовать с приложением. Более подробную информацию см. в разделе [Элементы управления](../../../../docs/framework/wpf/controls/index.md). 
   
- Для создания этого [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)], ExpenseItHome.xaml добавляются следующие элементы:  
+Для создания этого [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)], ExpenseItHome.xaml добавляются следующие элементы:  
   
--   <xref:System.Windows.Controls.ListBox>(для список людей). 
+-   <xref:System.Windows.Controls.ListBox> (для список людей). 
   
--   <xref:System.Windows.Controls.Label>(для заголовков списка). 
+-   <xref:System.Windows.Controls.Label> (для заголовков списка). 
   
--   <xref:System.Windows.Controls.Button>(чтобы щелкните, чтобы просмотреть отчет по расходам для человека, выбранного в списке). 
+-   <xref:System.Windows.Controls.Button> (чтобы щелкните, чтобы просмотреть отчет по расходам для человека, выбранного в списке). 
   
- Каждый элемент управления помещается в строку <xref:System.Windows.Controls.Grid> , установив <xref:System.Windows.Controls.Grid.Row%2A?displayProperty=nameWithType> вложенное свойство. Дополнительные сведения о вложенных свойствах см. в разделе [зависимостей](../../../../docs/framework/wpf/advanced/attached-properties-overview.md). 
+Каждый элемент управления помещается в строку <xref:System.Windows.Controls.Grid> , установив <xref:System.Windows.Controls.Grid.Row%2A?displayProperty=nameWithType> вложенное свойство. Дополнительные сведения о вложенных свойствах см. в разделе [зависимостей](../../../../docs/framework/wpf/advanced/attached-properties-overview.md). 
   
 1. Откройте файл ExpenseItHome.xaml. 
   
@@ -241,12 +243,12 @@ ms.lasthandoff: 01/19/2018
   
 3. Выполните сборку и запуск приложения. 
   
- На следующем рисунке показаны элементы управления, созданные с помощью кода XAML в этом разделе. 
+На следующем рисунке показаны элементы управления, созданные с помощью кода XAML в этом разделе. 
   
- ![Снимок экрана примера ExpenseIt](../../../../docs/framework/wpf/getting-started/media/gettingstartedfigure2.png "GettingStartedFigure2")  
+![Снимок экрана примера ExpenseIt](../../../../docs/framework/wpf/getting-started/media/gettingstartedfigure2.png "GettingStartedFigure2")  
   
 ## <a name="adding-an-image-and-a-title"></a>Добавление изображения и заголовка  
- В этом разделе, на домашней странице [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] обновляется изображение и заголовок страницы. 
+В этом разделе, на домашней странице [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] обновляется изображение и заголовок страницы. 
   
 1. Откройте файл ExpenseItHome.xaml. 
   
@@ -272,9 +274,9 @@ ms.lasthandoff: 01/19/2018
   
 7. Выполните сборку и запуск приложения. 
   
- На следующем рисунке показаны результаты действий из этого раздела. 
+На следующем рисунке показаны результаты действий из этого раздела. 
   
- ![Снимок экрана примера ExpenseIt](../../../../docs/framework/wpf/getting-started/media/gettingstartedfigure3.png "GettingStartedFigure3")  
+![Снимок экрана примера ExpenseIt](../../../../docs/framework/wpf/getting-started/media/gettingstartedfigure3.png "GettingStartedFigure3")  
   
 ## <a name="adding-code-to-handle-events"></a>Добавление кода для обработки событий  
   
@@ -292,7 +294,7 @@ ms.lasthandoff: 01/19/2018
     [!code-vb[ExpenseIt#16](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ExpenseIt/VB/ExpenseIt6/ExpenseItHome.xaml.vb#16)]  
   
 ## <a name="creating-the-ui-for-expensereportpage"></a>Создание пользовательского интерфейса для страницы ExpenseReportPage  
- На странице ExpenseReportPage.xaml отображается отчет о расходах для человека, выбранного на странице ExpenseItHome.xaml. Добавляет элементы управления в этом разделе и создает [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] для ExpenseReportPage.xaml. В этом разделе также добавляется фона и цвета заливки на разные [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] элементов. 
+На странице ExpenseReportPage.xaml отображается отчет о расходах для человека, выбранного на странице ExpenseItHome.xaml. Добавляет элементы управления в этом разделе и создает [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] для ExpenseReportPage.xaml. В этом разделе также добавляется фона и цвета заливки на разные [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] элементов. 
   
 1. Откройте файл ExpenseReportPage.xaml. 
   
@@ -311,12 +313,12 @@ ms.lasthandoff: 01/19/2018
   
      Появится страница отчета по расходам. 
   
- На следующем рисунке показана [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] элементы, добавленные ExpenseReportPage.xaml. Обратите внимание на то, что кнопка возврата активна. 
+На следующем рисунке показана [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] элементы, добавленные ExpenseReportPage.xaml. Обратите внимание на то, что кнопка возврата активна. 
   
- ![Снимок экрана примера ExpenseIt](../../../../docs/framework/wpf/getting-started/media/gettingstartedfigure4.png "GettingStartedFigure4")  
+![Снимок экрана примера ExpenseIt](../../../../docs/framework/wpf/getting-started/media/gettingstartedfigure4.png "GettingStartedFigure4")  
   
 ## <a name="styling-controls"></a>Настройка стиля элементов управления  
- Внешний вид различных элементов часто могут совпадать для всех элементов одного типа в [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]. [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] использует стили, чтобы варианты внешнего вида можно было многократно использовать для нескольких элементов. Повторное использование стилей помогает упростить [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Создание и управление ими. Дополнительные сведения о стилях см. в разделе [Стилизация и использование шаблонов](../../../../docs/framework/wpf/controls/styling-and-templating.md). В этом разделе атрибуты, установленные ранее для каждого элемента, заменяются стилями. 
+Внешний вид различных элементов часто могут совпадать для всех элементов одного типа в [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]. [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] использует стили, чтобы варианты внешнего вида можно было многократно использовать для нескольких элементов. Повторное использование стилей помогает упростить [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Создание и управление ими. Дополнительные сведения о стилях см. в разделе [Стилизация и использование шаблонов](../../../../docs/framework/wpf/controls/styling-and-templating.md). В этом разделе атрибуты, установленные ранее для каждого элемента, заменяются стилями. 
   
 1. Откройте файл Application.xaml или App.xaml. 
   
@@ -361,7 +363,7 @@ ms.lasthandoff: 01/19/2018
      После добавления [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] в этом разделе приложение выглядит так же, как и перед обновлением с использованием стилей. 
   
 ## <a name="binding-data-to-a-control"></a>Привязка данных к элементу управления  
- В этом разделе создайте [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] данные, привязанные к различным элементам управления. 
+В этом разделе создайте [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] данные, привязанные к различным элементам управления. 
   
 1. Откройте файл ExpenseItHome.xaml. 
   
@@ -386,7 +388,7 @@ ms.lasthandoff: 01/19/2018
      Этот код XAML привязывает <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> свойство <xref:System.Windows.Controls.ListBox> к источнику данных и применяет шаблон данных как <xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A>. 
   
 ## <a name="connecting-data-to-controls"></a>Подключение данных к элементам управления  
- В этом разделе, можно написать код, который получает текущий элемент, выбранный в списке людей на странице ExpenseItHome.xaml и передается ссылка на конструктор `ExpenseReportPage` во время создания экземпляра. `ExpenseReportPage` задает контекст данных для переданного элемента, к которому будут привязаны элементы управления, определенные в файле ExpenseReportPage.xaml. 
+В этом разделе, можно написать код, который получает текущий элемент, выбранный в списке людей на странице ExpenseItHome.xaml и передается ссылка на конструктор `ExpenseReportPage` во время создания экземпляра. `ExpenseReportPage` задает контекст данных для переданного элемента, к которому будут привязаны элементы управления, определенные в файле ExpenseReportPage.xaml. 
   
 1. Откройте файл ExpenseReportPage.xaml.vb или ExpenseReportPage.xaml.cs. 
   
@@ -403,7 +405,7 @@ ms.lasthandoff: 01/19/2018
     [!code-vb[ExpenseIt#27](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ExpenseIt/VB/ExpenseIt8/ExpenseItHome.xaml.vb#27)]  
   
 ## <a name="styling-data-with-data-templates"></a>Стили данных с помощью шаблонов данных  
- В этом разделе обновления [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] для каждого элемента данных, привязанного к списков с помощью шаблонов данных. 
+В этом разделе обновления [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] для каждого элемента данных, привязанного к списков с помощью шаблонов данных. 
   
 1. Откройте файл ExpenseReportPage.xaml. 
   
@@ -427,7 +429,7 @@ ms.lasthandoff: 01/19/2018
  ![Снимки экрана примера ExpenseIt](../../../../docs/framework/wpf/getting-started/media/gettingstartedfigure5.png "GettingStartedFigure5")  
   
 ## <a name="best-practices"></a>Рекомендации  
- В этом примере демонстрируется конкретная функциональная возможность WPF, поэтому рекомендации по разработке приложений не соблюдаются. Полное описание [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] и [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)] лучшие методики разработки приложений, в следующих разделах соответствующим образом:  
+В этом примере демонстрируется конкретная функциональная возможность WPF, поэтому рекомендации по разработке приложений не соблюдаются. Полное описание [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] и [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)] лучшие методики разработки приложений, в следующих разделах соответствующим образом:  
   
 -   Специальные возможности: [Рекомендации по специальным возможностям](../../../../docs/framework/ui-automation/accessibility-best-practices.md)  
   
@@ -437,8 +439,8 @@ ms.lasthandoff: 01/19/2018
   
 -   Производительность [Улучшение производительности приложений WPF](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md)  
   
-## <a name="whats-next"></a>Что дальше  
- Теперь у вас есть несколько способов в вашем распоряжении для создания [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] с помощью [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. Теперь вы получите более основательно изучить основные стандартные блоки, привязкой данных [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)] приложения. Информация в этом разделе ни в коем случае не является исчерпывающей, но мы надеемся, что у вас также есть теперь некоторое представление о возможностях, которые вы можете изучить самостоятельно, помимо рассмотренных в этом разделе. 
+## <a name="whats-next"></a>Дальнейшие действия  
+Теперь у вас есть несколько способов в вашем распоряжении для создания [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] с помощью [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. Теперь вы получите более основательно изучить основные стандартные блоки, привязкой данных [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)] приложения. Информация в этом разделе ни в коем случае не является исчерпывающей, но мы надеемся, что у вас также есть теперь некоторое представление о возможностях, которые вы можете изучить самостоятельно, помимо рассмотренных в этом разделе. 
   
  Более подробную информацию об архитектуре и моделях программирования WPF см. в следующих разделах:  
   

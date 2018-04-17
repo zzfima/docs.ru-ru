@@ -1,18 +1,18 @@
 ---
-title: "Монитор контейнерных приложений служб"
-description: "Жизненный цикл контейнерного приложения Docker на основе платформы и средств Майкрософт"
-keywords: "Docker, микрослужбы, ASP.NET, контейнер"
+title: Монитор контейнерных приложений служб
+description: Жизненный цикл контейнерного приложения Docker на основе платформы и средств Майкрософт
+ms.prod: .net
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 58bf96dfa06a78892563698200e6f4df5f371346
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: b3ffa6c230176e1de6269ed0b30d05711ff78704
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="monitor-containerized-application-services"></a>Монитор контейнерных приложений служб
 
@@ -42,10 +42,10 @@ ms.lasthandoff: 12/23/2017
 
 Чтобы создать ресурс Application Insights, следуйте инструкциям в статьях, представленных в списке ниже. Портал Azure создаст необходимый скрипт для вас.
 
--   **Наблюдение за приложениями Docker в Application Insights:**[https://docs.microsoft.com/azure/application-insights/app-insights-docker](https://docs.microsoft.com/azure/application-insights/app-insights-docker)
+-   **Наблюдение за приложениями Docker в Application Insights:**  [https://docs.microsoft.com/azure/application-insights/app-insights-docker](https://docs.microsoft.com/azure/application-insights/app-insights-docker)
 
 -   **Образ Docker аналитики приложений в Docker Hub и Github:**  
-[https://Hub.docker.com/r/Microsoft/applicationinsights/](https://hub.docker.com/r/microsoft/applicationinsights/) и <https://github.com/Microsoft/ApplicationInsights-Docker>
+[https://hub.docker.com/r/microsoft/applicationinsights/](https://hub.docker.com/r/microsoft/applicationinsights/) и <https://github.com/Microsoft/ApplicationInsights-Docker>
 
 -   **Настройте Application Insights для ASP.NET:**  
 [https://docs.microsoft.com/azure/application-insights/app-insights-asp-net](https://docs.microsoft.com/azure/application-insights/app-insights-asp-net)
@@ -97,7 +97,7 @@ Operations Management Suite, реализованные в виде облачн
 
 Сохранение запросов также является стандартным компонентом в Operations Management Suite и помогут вам поддерживать запросы нахожу полезным и трендов в системе.
 
-**Дополнительные сведения о** для поиска сведений об установке и настройке Docker решение контейнера в [Operations Management Suite](http://microsoft.com/oms), перейдите в меню <https://docs.microsoft.com/azure/log-analytics /log-Analytics-Containers>.
+**Дополнительные сведения о** для поиска сведений об установке и настройке Docker решение контейнера в [Operations Management Suite](http://microsoft.com/oms), перейдите в меню <https://docs.microsoft.com/azure/log-analytics/log-analytics-containers>.
 
 >[!div class="step-by-step"]
 [Предыдущие] (Управление производственного docker-environments.md) [Далее] (.. /Key-takeaways/index.MD)

@@ -1,18 +1,18 @@
 ---
-title: "Управление Docker рабочих сред"
-description: "Жизненный цикл контейнерного приложения Docker на основе платформы и средств Майкрософт"
-keywords: "Docker, микрослужбы, ASP.NET, контейнер"
+title: Управление Docker рабочих сред
+description: Жизненный цикл контейнерного приложения Docker на основе платформы и средств Майкрософт
+ms.prod: .net
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: c962543004c88b0a6413cc22d8bdddf954af66f8
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 72ae92c89ed9b51815016205e20b09fc4dced1e1
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="manage-production-docker-environments"></a>Управление Docker рабочих сред
 
@@ -29,9 +29,9 @@ ms.lasthandoff: 12/23/2017
 Средства управления Docker таблица 6-1.
 
 
-| Средства управления      | Описание:           | Связанные orchestrators |
+| Средства управления      | Описание           | Связанные orchestrators |
 |-----------------------|-----------------------|-----------------------|
-| Контейнер службы\(управления пользовательского интерфейса на портале Azure) | [Контейнер службы](https://azure.microsoft.com/en-us/services/container-service/) предоставляет удобно получать способ работы [развернуть кластер контейнера в Azure](https://docs.microsoft.com/azure/container-service/dcos-swarm/container-service-deployment) основании популярных orchestrators как Mesosphere DC/OS, Kubernetes и помощью Docker Swarm. <br /><br /> Контейнер службы оптимизирует конфигурацию этих платформ. Необходимо выбрать размер, количество узлов, а также инструменты orchestrator и контейнер службы обрабатывает все остальное. | Mesosphere DC/OS <br /><br /> Kubernetes <br /><br /> Docker группу мелких объектов |
+| Контейнер службы\(управления пользовательского интерфейса на портале Azure) | [Контейнер службы](https://azure.microsoft.com/en-us/services/container-service/) предоставляет удобно получать способ работы [развернуть кластер контейнера в Azure](https://docs.microsoft.com/azure/container-service/dcos-swarm/container-service-deployment) основании популярных orchestrators как Mesosphere DC/OS, Kubernetes и помощью Docker Swarm. <br /><br /> Контейнер службы оптимизирует конфигурацию этих платформ. Необходимо выбрать размер, количество узлов, а также инструменты orchestrator и контейнер службы обрабатывает все остальное. | Mesosphere DC/OS <br /><br /> Kubernetes <br /><br /> Docker Swarm |
 | Docker универсальной плоскости управления\(локально или в облаке) | [Docker универсальной плоскости управления](https://docs.docker.com/v1.11/ucp/overview/) — решение управления кластера корпоративного уровня с Docker. Он позволяет управлять весь кластер из одного места. <br /><br /> Docker универсальной плоскости управления включен в состав коммерческого продукт с именем Docker центра обработки данных, который предоставляет помощью Docker Swarm, универсальной плоскости управления Docker и доверенный реестр Docker. <br /><br /> Docker центра обработки данных может быть установленный в локальной или подготовить из общедоступного облака, таких как Azure. | Помощью docker Swarm\(поддерживается службой контейнера) |
 | Облако docker\(также называется Tutum; облака SaaS) | [Облако docker](https://docs.docker.com/docker-cloud/) — это служба управления размещенного (SaaS), которая предоставляет возможности orchestration и реестр Docker построения и тестирования возможности изображения Dockerized приложений, средства, которые помогут создать и настроить инфраструктуру хост-компьютера, и функций развертывания для автоматизации развертывания изображения к конкретной инфраструктуре. Учетной записи облачного Docker SaaS можно подключиться к инфраструктуре в контейнер службы, работу кластера с помощью Docker Swarm. | Помощью docker Swarm\(поддерживается службой контейнера) |
 | Mesosphere Marathon\(локально или в облаке) | [Marathon](https://mesosphere.github.io/marathon/docs/marathon-ui.html) — платформа orchestration и планировщик контейнера производственного класса для контроллера домена/OS и Apache Mesos Mesosphere элемента. <br /><br /> Она работает с Mesos (контроллера домена или ОС на основе Apache Mesos) для управления длительной службы и предоставляет [веб-Интерфейсе для процесса и управления контейнером](https://mesosphere.github.io/marathon/docs/marathon-ui.html). Он предоставляет веб-инструмент управления пользовательского интерфейса | Mesosphere DC/OS\(основании Apache Mesos; поддерживается службой контейнера) |

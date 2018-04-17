@@ -1,18 +1,18 @@
 ---
-title: "С помощью средств Visual Studio для Docker (Visual Studio в Windows)"
-description: "Жизненный цикл контейнерного приложения Docker на основе платформы и средств Майкрософт"
-keywords: "Docker, микрослужбы, ASP.NET, контейнер"
+title: С помощью средств Visual Studio для Docker (Visual Studio в Windows)
+description: Жизненный цикл контейнерного приложения Docker на основе платформы и средств Майкрософт
+ms.prod: .net
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 0525633b23625d915fd447d438c6281fb14b3b46
-ms.sourcegitcommit: c3957fdb990060559d73cca44ab3e2c7b4d049c0
+ms.openlocfilehash: cbd4dea32b98e79e85302aa5d4a5c97b1b0fa556
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="using-visual-studio-tools-for-docker-visual-studio-on-windows"></a>С помощью средств Visual Studio для Docker (Visual Studio в Windows)
 
@@ -26,7 +26,7 @@ ms.lasthandoff: 03/05/2018
 
 Если вы используете Visual Studio 2015, необходимо иметь обновления 3 или более поздней версии, а также средств Visual Studio для Docker.
 
-**Дополнительные сведения:** инструкции по установке Visual Studio перейдите к [https://www.visualstudio.com/ \ продуктов или vs-2015--выпуски продукта](https://www.visualstudio.com/products/vs-2015-product-editions).
+**Дополнительные сведения:** инструкции по установке Visual Studio перейдите к [ https://www.visualstudio.com/\ продуктов или vs-2015--выпуски продукта](https://www.visualstudio.com/products/vs-2015-product-editions).
 
 Для просмотра дополнительных сведений об установке набора средств Visual Studio для Docker, воспользуйтесь <http://aka.ms/vstoolsfordocker> и <https://docs.microsoft.com/aspnet/core/host-and-deploy/docker/visual-studio-tools-for-docker>.
 
@@ -70,7 +70,7 @@ ms.lasthandoff: 03/05/2018
 
 Сборки, отладки, обновления и обновления приложений в локальном контейнере Docker: [https://docs.microsoft.com/azure/vs-azure-tools-docker-edit-and-refresh/](https://docs.microsoft.com/azure/vs-azure-tools-docker-edit-and-refresh)
 
-Разверните контейнер ASP.NET к удаленному узлу Docker: [https://docs.microsoft.com/azure/vs-azure-tools-docker-hosting-web-apps-in-docker/](https://docs.microsoft.com/azure/vs-azure-tools-docker-hosting-web-apps-in-docker)
+Разверните контейнер ASP.NET к удаленному узлу Docker. [https://docs.microsoft.com/azure/vs-azure-tools-docker-hosting-web-apps-in-docker/](https://docs.microsoft.com/azure/vs-azure-tools-docker-hosting-web-apps-in-docker)
 
 
 >[!div class="step-by-step"]

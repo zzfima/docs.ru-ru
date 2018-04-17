@@ -1,10 +1,10 @@
 ---
-title: "Кортежи в Visual Basic"
-ms.custom: 
+title: Кортежи в Visual Basic
+ms.custom: ''
 ms.date: 04/23/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - devlang-visual-basic
 ms.topic: article
@@ -13,11 +13,11 @@ helpviewer_keywords:
 ms.assetid: 3e66cd1b-3432-4e1d-8c37-5ebacae8f53f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bf26b7ce58c1e20fbbe5043cbd2acfd5712837fa
-ms.sourcegitcommit: d95a91d685565f4d95c8773b558752864a6a3d7e
+ms.openlocfilehash: 68c82e75ce4a438381bc9c60ce8c992565eb31cb
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="tuples-visual-basic"></a>Кортежи (Visual Basic)
 
@@ -80,7 +80,7 @@ ms.lasthandoff: 03/12/2018
 
 Кортеж Visual Basic — это тип значения, который представляет собой экземпляр одного из **System.ValueTuple** универсальных типов. Например `holiday` кортежа, определенных в предыдущем примере является экземпляром класса <xref:System.ValueTuple%603> структуры. Она должна быть упрощенный контейнер для данных. Поскольку кортежа стремится упростить процесс создания объекта с несколькими элементами данных, он не имеет некоторые возможности, которые может иметь пользовательскую структуру. Сюда входит следующее.
 
-- Члены клиента. Не удается определить собственные свойства, методы или события для кортеж.
+- Пользовательские элементы. Не удается определить собственные свойства, методы или события для кортеж.
 
 - Проверка. Не удалось проверить данные, присвоенные поля.
 
@@ -90,7 +90,7 @@ ms.lasthandoff: 03/12/2018
 
 Кортеж Visual Basic наследуют элементы его **ValueTuple** типа. В дополнение к его полям к ним относятся следующие методы:
 
-| Член | Описание: |
+| Член | Описание |
 | ---|---|
 | CompareTo | Сравнивает текущий кортеж другой кортежу с одинаковым числом элементов. |
 | Равно | Определяет, равен ли текущий кортеж другой кортеж или объектом. |

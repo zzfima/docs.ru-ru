@@ -1,13 +1,13 @@
 ---
-title: "Импорт библиотеки типов в виде сборки"
-ms.custom: 
+title: Импорт библиотеки типов в виде сборки
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - importing type library
@@ -23,17 +23,17 @@ helpviewer_keywords:
 - COM interop, importing type library
 - COM interop, exposing COM components
 ms.assetid: d1898229-cd40-426e-a275-f3eb65fbc79f
-caps.latest.revision: 
+caps.latest.revision: 14
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 625bbce6dca8d57d7870dbe13e086c9a34954c9b
-ms.sourcegitcommit: d95a91d685565f4d95c8773b558752864a6a3d7e
+ms.openlocfilehash: 0299ef58d58318714b8f0eb8082928f8da565d2f
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="importing-a-type-library-as-an-assembly"></a>Импорт библиотеки типов в виде сборки
 Определения COM-типов обычно хранятся в библиотеке типов. С другой стороны, CLS-совместимые компиляторы создают в сборке метаданные типов. Эти два источника сведений о типах заметно отличаются. В этом разделе описываются способы создания метаданных из библиотеки типов. Результирующая сборка и называется сборкой взаимодействия, а содержащиеся в ней сведения о типах позволяют приложениям .NET Framework использовать COM-типы.  
@@ -55,7 +55,7 @@ ms.lasthandoff: 03/12/2018
   
 -   Visual Studio  
   
-     Visual Studio 2005 автоматически преобразует COM-типы библиотеки типов в метаданные сборки. Инструкции см. в разделах [Практическое руководство. Добавление ссылок на библиотеки типов](../../../docs/framework/interop/how-to-add-references-to-type-libraries.md) и [Пошаговое руководство. Внедрение данных о типе из сборок для приложений Microsoft Office](http://msdn.microsoft.com/library/85b55e05-bc5e-4665-b6ae-e1ada9299fd3).  
+     Visual Studio 2005 автоматически преобразует COM-типы библиотеки типов в метаданные сборки. Инструкции см. в разделах [Практическое руководство. Добавление ссылок на библиотеки типов](../../../docs/framework/interop/how-to-add-references-to-type-libraries.md) и [Пошаговое руководство. Внедрение данных о типе из сборок для приложений Microsoft Office](https://msdn.microsoft.com/library/85b55e05-bc5e-4665-b6ae-e1ada9299fd3(v=vs.100)).  
   
 -   [Программа импорта библиотек типов (Tlbimp.exe)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md)  
   
@@ -92,4 +92,4 @@ ms.lasthandoff: 03/12/2018
  [Развертывание приложения взаимодействия](../../../docs/framework/interop/deploying-an-interop-application.md)  
  [Практическое руководство. Добавление ссылок на библиотеки типов](../../../docs/framework/interop/how-to-add-references-to-type-libraries.md)  
  [Практическое руководство. Создание сборок взаимодействия их библиотек типов](../../../docs/framework/interop/how-to-generate-interop-assemblies-from-type-libraries.md)  
- [Пошаговое руководство. Внедрение данных о типе из сборок для приложений Microsoft Office](http://msdn.microsoft.com/library/85b55e05-bc5e-4665-b6ae-e1ada9299fd3)
+ [Пошаговое руководство. Внедрение данных о типе из сборок для приложений Microsoft Office](https://msdn.microsoft.com/library/85b55e05-bc5e-4665-b6ae-e1ada9299fd3(v=vs.100))

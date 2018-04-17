@@ -1,24 +1,26 @@
 ---
-title: "&lt;Диагностика&gt;"
-ms.custom: 
+title: '&lt;Диагностика&gt;'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 0c2f95c4-cc12-4fb5-a70c-7fc6fa95db58
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 5c7997b3ffc1a1c3a16372398f43e8f0d06aadee
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: bb5506fd72745f32194b2e3cc409ff848fd1c270
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="ltdiagnosticsgt"></a>&lt;Диагностика&gt;
 Элемент `diagnostics` определяет параметры, которые могут быть использованы администратором для проверки и контроля времени выполнения.  
@@ -30,20 +32,26 @@ ms.lasthandoff: 12/22/2017
   
 ```xml  
 <system.serviceModel>  
-   <diagnostics etwProviderId="String"       performanceCounters="Off/ServiceOnly/All/Default"              wmiProviderEnabled="Boolean" >       <endToEndTracing activityTracing="Boolean"  
-          messageFlowTracing="Boolean"  
-          propagateActivity="Boolean" />  
-       <messageLogging logEntireMessage="Boolean"  
-          logMalformedMessages="Boolean"  
-          logMessagesAtServiceLevel="Boolean"  
-          logMessagesAtTransportLevel="Boolean"  
-          maxMessagesToLog="Integer"  
-          maxSizeOfMessageToLog="Integer" >  
-          <filters>  
-             <clear />  
-          </filters>  
-       </messageLogging>  
-   </diagnostics>  
+  <diagnostics 
+      etwProviderId="String"       
+      performanceCounters="Off/ServiceOnly/All/Default"              
+      wmiProviderEnabled="Boolean" >       
+    <endToEndTracing 
+        activityTracing="Boolean"  
+        messageFlowTracing="Boolean"  
+        propagateActivity="Boolean" />  
+    <messageLogging 
+        logEntireMessage="Boolean"  
+        logMalformedMessages="Boolean"  
+        logMessagesAtServiceLevel="Boolean"  
+        logMessagesAtTransportLevel="Boolean"  
+        maxMessagesToLog="Integer"  
+        maxSizeOfMessageToLog="Integer" >  
+      <filters>  
+        <clear />  
+      </filters>  
+    </messageLogging>  
+  </diagnostics>  
 </system.serviceModel>  
 ```  
   
@@ -56,11 +64,11 @@ ms.lasthandoff: 12/22/2017
 |---------------|-----------------|  
 |etwProviderId|Строка, которая задает идентификатор для поставщика отслеживания событий, который записывает события в сеансы ETW.|  
 |performanceCounters|Указывает, включены ли счетчики производительности для сборки. Допустимы следующие значения:<br /><br /> -Off: Счетчики производительности отключены.<br />-ServiceOnly: Включены только те счетчики производительности, относящиеся к данной службе.<br />— Все: Производительности счетчики можно просматривать во время выполнения.<br />-По умолчанию: Один производительности счетчика экземпляра _wcf_admin. Данный экземпляр используется, чтобы включить коллекцию данных SQM для использования инфраструктурой. Значения счетчика для данного экземпляра не обновляются и, соответственно, остаются нулевыми. Если для WCF не задана конфигурация, это значение используется по умолчанию.|  
-|wmiProviderEnabled|Логическое значение, определяющее, включен ли поставщик WMI для сборки. Данный поставщик WMI требуется пользователю, чтобы на время выполнения получить доступ к функциональным возможностям проверки и контроля Windows Communication Foundation (WCF). Значение по умолчанию — `false`.|  
+|wmiProviderEnabled|Логическое значение, определяющее, включен ли поставщик WMI для сборки. Данный поставщик WMI требуется пользователю, чтобы на время выполнения получить доступ к функциональным возможностям проверки и контроля Windows Communication Foundation (WCF). Значение по умолчанию — `false`.|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
 |[\<endToEndTracing >](../../../../../docs/framework/configure-apps/file-schema/wcf/endtoendtracing.md)|Элемент конфигурации, который позволяет включать и отключать различные аспекты сквозной отслеживания во время выполнения приложения службы.|  
 |[\<messageLogging >](../../../../../docs/framework/configure-apps/file-schema/wcf/messagelogging.md)|Описывает параметры ведения журнала сообщений WCF.|  
@@ -77,18 +85,20 @@ ms.lasthandoff: 12/22/2017
 ## <a name="example"></a>Пример  
   
 ```xml  
-<diagnostics wmiProviderEnabled="false"  
-       performanceCounters="all">  
-       <messageLogging logEntireMessage="true"  
-          logMalformedMessages="true"  
-          logMessagesAtServiceLevel="true"  
-          logMessagesAtTransportLevel="true"  
-          maxMessagesToLog="42"  
-          maxSizeOfMessageToLog="42">  
-         <filters>  
-         <clear />  
+<diagnostics
+    wmiProviderEnabled="false"  
+    performanceCounters="all">  
+  <messageLogging 
+      logEntireMessage="true"  
+      logMalformedMessages="true"  
+      logMessagesAtServiceLevel="true"  
+      logMessagesAtTransportLevel="true"  
+      maxMessagesToLog="42"  
+      maxSizeOfMessageToLog="42">  
+    <filters>  
+      <clear />  
     </filters>  
-       </messageLogging>  
+  </messageLogging>  
 </diagnostics>  
 ```  
   

@@ -1,9 +1,9 @@
 ---
-title: "#<a name=\"ifthenelse-directives\"></a>If... Then... #Else директивы"
-ms.date: 07/20/2015
+title: '#If... Then... #Else директивы'
+ms.date: 04/11/2018
 ms.prod: .net
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - vb.#EndIf
@@ -22,14 +22,13 @@ helpviewer_keywords:
 - else directive (#else)
 - '#Else directive [Visual Basic]'
 ms.assetid: 10bba104-e3fd-451b-b672-faa472530502
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 77757e441ae937aa86122f237e839d1005644409
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: rpetrusha
+ms.author: ronpet
+ms.openlocfilehash: 884c7ed6f0a346f2d35f01006cea23e47907d13f
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="ifthenelse-directives"></a>Директивы #If...Then...#Else
 Условно компилирует выбранные блоки кода Visual Basic.  
@@ -67,14 +66,29 @@ ms.lasthandoff: 11/21/2017
  Независимо от результата любого вычисления, все выражения вычисляются с помощью `Option Compare Binary`. `Option Compare` Инструкции не влияет на выражения в `#If` и `#ElseIf` инструкции.  
   
 > [!NOTE]
->  Ни в какой форме однострочный `#If`, `#Else`, `#ElseIf`, и `#End If` существует директивы. Никакой другой код могут отображаться на одной строке с любой из директивы.  
-  
-## <a name="example"></a>Пример  
+>  Ни в какой форме однострочный `#If`, `#Else`, `#ElseIf`, и `#End If` существует директивы. Никакой другой код могут отображаться на одной строке с любой из директивы. 
+
+Операторы в блоке условной компиляции должен быть полный логических операторов. Например нельзя условной компиляции только атрибуты функции, но можно условно Объявите функцию и ее атрибуты:
+
+```vb
+   #If DEBUG Then
+   <WebMethod()>
+   Public Function SomeFunction() As String
+   #Else
+   <WebMethod(CacheDuration:=86400)>
+   Public Function SomeFunction() As String
+   #End If
+```
+
+## <a name="example"></a>Пример
  В этом примере используется `#If...Then...#Else` для определения, следует ли компилировать определенных операторов.  
   
  [!code-vb[VbVbalrConditionalComp#1](../../../visual-basic/language-reference/directives/codesnippet/VisualBasic/if-then-else-directives_1.vb)]  
   
 ## <a name="see-also"></a>См. также  
- [Директива #Const](../../../visual-basic/language-reference/directives/const-directive.md)  
- [Оператор If...Then...Else](../../../visual-basic/language-reference/statements/if-then-else-statement.md)  
- [Условная компиляция](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)
+[Директива #Const](../../../visual-basic/language-reference/directives/const-directive.md)  
+[Оператор If...Then...Else](../../../visual-basic/language-reference/statements/if-then-else-statement.md)  
+[Условная компиляция](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)   
+<xref:System.Diagnostics.ConditionalAttribute?displayProperty=nameWithType>   
+
+

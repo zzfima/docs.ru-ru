@@ -1,13 +1,9 @@
 ---
 title: Маршалинг по умолчанию для объектов
-ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -16,17 +12,16 @@ helpviewer_keywords:
 - objects, interop marshaling
 - interop marshaling, objects
 ms.assetid: c2ef0284-b061-4e12-b6d3-6a502b9cc558
-caps.latest.revision: ''
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: b49575bb7f16b942a56a48e9ad3f5a44edfb373a
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 6980db381322d354cace38709586e50681ae0a7e
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="default-marshaling-for-objects"></a>Маршалинг по умолчанию для объектов
 Параметры и поля, типизированные как <xref:System.Object?displayProperty=nameWithType>, могут предоставляться в неуправляемый код в виде одного из следующих типов:  
@@ -304,7 +299,7 @@ mo.SetVariant(new CurrencyWrapper(new Decimal(5.25)));
 ## <a name="marshaling-byref-variants"></a>Маршалинг вариантов ByRef  
  Сами по себе варианты могут передаваться по значению или по ссылке. Несмотря на это, также можно использовать флаг **VT_BYREF** с любым типом варианта, чтобы указать, что содержимое варианта передается по ссылке, а не по значению. Разница между маршалингом вариантов по ссылке и с установленным флагом **VT_BYREF** может показаться не очевидной. На следующем рисунке показаны различия между этими способами.  
   
- ![Вариант, передающийся по стопке](../../../docs/framework/interop/media/interopvariant.gif "interopvariant")  
+ ![Вариант, передающийся по стопке](./media/interopvariant.gif "interopvariant")  
 Варианты, передаваемые по значению и по ссылке  
   
  **Поведение по умолчанию при маршалинге объектов и вариантов по значению**  
@@ -338,11 +333,11 @@ mo.SetVariant(new CurrencyWrapper(new Decimal(5.25)));
 |**Объект**  *o*|**Вариант**  *v*|Никогда|  
 |**Вариант**   ***\****  *pv*|**Ссылочный объект**  *o*|Всегда|  
 |**Ссылочный объект**  *o*|**Вариант**   ***\****  *pv*|Всегда|  
-|**Вариант***v* **(VT_BYREF** *&#124;* **VT_\*)** |**Объект**  *o*|Никогда|  
+|**Вариант***v* **(VT_BYREF** *& #124;* **VT_\*)** |**Объект**  *o*|Никогда|  
 |**Вариант**  *v* **(VT_BYREF** *&#124;* **VT_)**|**Ссылочный объект**  *o*|Только если тип не был изменен.|  
   
 ## <a name="see-also"></a>См. также  
- [Характеристики маршалинга по умолчанию](../../../docs/framework/interop/default-marshaling-behavior.md)  
- [Преобразуемые и непреобразуемые типы](../../../docs/framework/interop/blittable-and-non-blittable-types.md)  
- [Атрибуты направления](http://msdn.microsoft.com/library/241ac5b5-928e-4969-8f58-1dbc048f9ea2)  
- [Копирование и закрепление](../../../docs/framework/interop/copying-and-pinning.md)
+ [Характеристики маршалинга по умолчанию](default-marshaling-behavior.md)  
+ [Преобразуемые и непреобразуемые типы](blittable-and-non-blittable-types.md)  
+ [Атрибуты направления](https://msdn.microsoft.com/library/241ac5b5-928e-4969-8f58-1dbc048f9ea2(v=vs.100))  
+ [Копирование и закрепление](copying-and-pinning.md)

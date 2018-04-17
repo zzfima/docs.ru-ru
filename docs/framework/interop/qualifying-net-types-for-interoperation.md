@@ -1,5 +1,5 @@
 ---
-title: "Уточнение типов .NET для взаимодействия"
+title: Уточнение типов .NET для взаимодействия
 ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.technology:
@@ -18,11 +18,11 @@ ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 0f08f2de4a8f402b2c9c41908aa4bcfe2730fef5
-ms.sourcegitcommit: d95a91d685565f4d95c8773b558752864a6a3d7e
+ms.openlocfilehash: 586772399a458bfc98d35dd0a1fb277e57366eaa
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="qualifying-net-types-for-interoperation"></a>Уточнение типов .NET для взаимодействия
 Если вы планируете предоставлять типы в сборке COM-приложениям, во время разработки необходимо учитывать требования COM-взаимодействия. Управляемые типы (класс, интерфейс, структура и перечисление) легко интегрируются с COM-типами, если следовать приведенным ниже рекомендациям:  
@@ -56,6 +56,6 @@ ms.lasthandoff: 03/12/2018
 ## <a name="see-also"></a>См. также  
  <xref:System.Runtime.InteropServices.ComVisibleAttribute>  
  [Предоставление компонентов .NET Framework клиентам COM](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)  
- [Введение в интерфейс класса](https://msdn.microsoft.com/library/733c0dd2-12e5-46e6-8de1-39d5b25df024(v=vs.100))  
+ [Введение в интерфейс класса](com-callable-wrapper.md#introducing-the-class-interface)  
  [Применение атрибутов взаимодействия](../../../docs/framework/interop/applying-interop-attributes.md)  
  [Упаковка сборки для модели COM](../../../docs/framework/interop/packaging-an-assembly-for-com.md)

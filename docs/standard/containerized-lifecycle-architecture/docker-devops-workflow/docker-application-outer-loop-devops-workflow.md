@@ -1,18 +1,18 @@
 ---
-title: "Действия в рабочем процессе DevOps внешний цикл для Docker приложения"
-description: "Жизненный цикл контейнерного приложения Docker на основе платформы и средств Майкрософт"
-keywords: "Docker, микрослужбы, ASP.NET, контейнер"
+title: Действия в рабочем процессе DevOps внешний цикл для Docker приложения
+description: Жизненный цикл контейнерного приложения Docker на основе платформы и средств Майкрософт
+ms.prod: .net
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: fe51fc4b5026d17f0f9b93e7fd0dedde93ef4a3c
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: a03a9d153793b30ca9276b64a0a33e3de26f8f6e
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="steps-in-the-outer-loop-devops-workflow-for-a-docker-application"></a>Действия в рабочем процессе DevOps внешний цикл для Docker приложения
 
@@ -110,13 +110,13 @@ CI стал стандартом для тестирования совреме�
 
 **Дополнительные сведения о** для чтения дополнительных сведений о сборке в Visual Studio Team Services Docker CI конвейерная передача и просмотр пошаговые руководства, посетите следующие сайты:
 
-Агент Visual Studio Team Services как контейнер Docker: [https://hub.docker.com/r/ \ vsts/microsoft агент /](https://hub.docker.com/r/microsoft/vsts-agent/)
+Агент Visual Studio Team Services как контейнер Docker: [ https://hub.docker.com/r/\ vsts/microsoft агент /](https://hub.docker.com/r/microsoft/vsts-agent/)
 
-Расширения VSTS Docker: <https://aka.ms/vstsdockerextension>
+Расширения VSTS Docker. <https://aka.ms/vstsdockerextension>
 
 Создание образов .NET Core Linux Docker с Visual Studio Team Services: <https://blogs.msdn.microsoft.com/stevelasker/2016/06/13/building-net-core-linux-docker-images-with-visual-studio-team-services/>
 
-Создание службы под управлением Linux команды Visual Studio построить компьютера с поддержкой Docker: <http://donovanbrown.com/post/2016/06/03/Building-a-Linux-Based-Visual-Studio-Team-Service-Build-Machine-with-Docker-Support>
+Построение компьютера под управлением Linux Visual Studio Team Service построения с поддержкой Docker: <http://donovanbrown.com/post/2016/06/03/Building-a-Linux-Based-Visual-Studio-Team-Service-Build-Machine-with-Docker-Support>
 
 ### <a name="integrate-test-and-validate-multicontainer-docker-applications"></a>Интеграция, тестирование и проверка приложений multicontainer Docker
 
@@ -220,7 +220,7 @@ CI стал стандартом для тестирования совреме�
 
 **Дополнительные сведения о** чтобы узнать подробнее о конвейере компакт-диска с помощью Visual Studio Team Services и Docker, посетите следующие сайты:
 
-Расширение Visual Studio Team Services для Docker и контейнера службы Azure: [https://aka.ms/ \ vstsdockerextension](https://aka.ms/vstsdockerextension)
+Расширение Visual Studio Team Services для Docker и контейнера службы Azure: [ https://aka.ms/\ vstsdockerextension](https://aka.ms/vstsdockerextension)
 
 Служба Azure контейнера: <https://aka.ms/azurecontainerservice>
 
