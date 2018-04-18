@@ -1,6 +1,6 @@
 ---
-title: "Оператор &amp; (справочник по C#)"
-ms.date: 07/20/2015
+title: Оператор &amp; (справочник по C#)
+ms.date: 04/04/2018
 ms.prod: .net
 ms.technology:
 - devlang-csharp
@@ -13,24 +13,24 @@ helpviewer_keywords:
 - '& operator [C#]'
 - AND operator (&) [C#]
 ms.assetid: afa346d5-90ec-4b1f-a2c8-3881f018741d
-caps.latest.revision: 
+caps.latest.revision: 19
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: eceee8e01ba46f65c6b182a40d14e62aaba5dd53
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: f26305bfa1e8c9ba45493ad2ab4937d554590911
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="amp-operator-c-reference"></a>Оператор &amp; (справочник по C#)
-Оператор & может функционировать как унарный или как бинарный оператор.  
+Оператор `&` может функционировать как унарный или как бинарный оператор.  
   
 ## <a name="remarks"></a>Примечания  
- Унарный оператор & возвращает адрес своего операнда (в этом случае требуется контекст [unsafe](../../../csharp/language-reference/keywords/unsafe.md)).  
+ Унарный оператор `&` возвращает адрес своего операнда (в этом случае требуется контекст [unsafe](../../../csharp/language-reference/keywords/unsafe.md)).  
   
- Бинарные операторы & предварительно определены для целочисленных типов и типа `bool`. Для целочисленных типов оператор & выполняет побитовую логическую операцию И для всех своих операндов. Для операндов типа `bool` оператор & выполняет логическую операцию И для всех своих операндов. Таким образом, значение `true` возвращается только тогда, когда оба операнда имеют значение `true`.  
+ Бинарные операторы `&` предварительно определены для целочисленных типов и типа `bool`. Для целочисленных типов оператор & выполняет побитовую логическую операцию И для всех своих операндов. Для операндов типа `bool` оператор & выполняет логическую операцию И для всех своих операндов. Таким образом, значение `true` возвращается только тогда, когда оба операнда имеют значение `true`.  
   
- Оператор `&` вычисляет оба оператора независимо от значения первого из них. Пример:  
+ Бинарный оператор `&` вычисляет оба оператора независимо от значения первого из них, в отличие от [условного оператора AND](../../../csharp/language-reference/operators/conditional-and-operator.md) `&&`. Пример:  
   
  [!code-csharp[csRefOperators#37](../../../csharp/language-reference/operators/codesnippet/CSharp/and-operator_1.cs)]  
   
