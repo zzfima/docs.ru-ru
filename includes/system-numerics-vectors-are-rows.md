@@ -1,0 +1,1 @@
+В матричных преобразованиях экземпляры <xref:System.Numerics.Vector2>, <xref:System.Numerics.Vector3> и <xref:System.Numerics.Vector4> отображаются в виде строк: вектор *v* преобразуется матрицей *M* с помощью умножения *vM*.
