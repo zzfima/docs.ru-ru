@@ -1,1 +1,0 @@
-Стандарт AES (Advanced Encryption Standard)

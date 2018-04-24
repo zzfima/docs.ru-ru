@@ -1,1 +1,0 @@
-Атрибуты .NET Framework

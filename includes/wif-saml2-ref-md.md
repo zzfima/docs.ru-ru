@@ -1,1 +1,0 @@
-Дополнительные сведения об элементе, представляемом этим классом, см. в следующей спецификации: [Assertions and Protocols for the OASIS Security Assertion Markup Language (SAML) V2.0](http://go.microsoft.com/fwlink/?LinkID=215998) (Утверждения и протоколы для OASIS SAML 2.0) (http://go.microsoft.com/fwlink/?LinkID=215998).

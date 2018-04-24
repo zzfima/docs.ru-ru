@@ -1,1 +1,0 @@
-Дополнительные сведения об элементе, представляемом этим классом, см. в следующей спецификации: [Metadata for the OASIS Security Assertion Markup Language (SAML) V2.0](http://go.microsoft.com/fwlink/?LinkId=231291) (Метаданные для OASIS SAML 2.0) (http://go.microsoft.com/fwlink/?LinkId=231291).
