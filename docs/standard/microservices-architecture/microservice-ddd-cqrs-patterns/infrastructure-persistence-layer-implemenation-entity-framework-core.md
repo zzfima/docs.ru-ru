@@ -1,7 +1,7 @@
 ---
-title: "Реализация уровня сохраняемости инфраструктуры с помощью Entity Framework Core"
-description: "Архитектура микрослужб .NET для контейнерных приложений .NET | Реализация уровня сохраняемости инфраструктуры с помощью Entity Framework Core"
-keywords: "Docker, микрослужбы, ASP.NET, контейнер"
+title: Реализация уровня сохраняемости инфраструктуры с помощью Entity Framework Core
+description: Архитектура микрослужб .NET для контейнерных приложений .NET | Реализация уровня сохраняемости инфраструктуры с помощью Entity Framework Core
+keywords: Docker, микрослужбы, ASP.NET, контейнер
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/12/2017
@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 4acdbde6405af7eb78a8c605562fdb1795fedf4d
-ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
+ms.openlocfilehash: 49bd528db50397ea896b7251ea60d18b90fea30c
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="implementing-the-infrastructure-persistence-layer-with-entity-framework-core"></a>Реализация уровня сохраняемости инфраструктуры с помощью Entity Framework Core
 
@@ -342,7 +342,7 @@ class OrderEntityTypeConfiguration : IEntityTypeConfiguration<Order>
 
 -   Он создает удобный для восприятия идентификатор, в отличие от методов, в которых используются идентификаторы GUID.
 
-EF Core поддерживает алгоритм [HiLo](http://stackoverflow.com/questions/282099/whats-the-hi-lo-algorithm) с помощью метода ForSqlServerUseSequenceHiLo, как показано в предыдущем примере.
+EF Core поддерживает алгоритм [HiLo](https://stackoverflow.com/questions/282099/whats-the-hi-lo-algorithm) с помощью метода ForSqlServerUseSequenceHiLo, как показано в предыдущем примере.
 
 ### <a name="mapping-fields-instead-of-properties"></a>Сопоставление полей вместо свойств
 
@@ -467,7 +467,7 @@ public IEnumerable<T> List(ISpecification<T> spec)
     [*https://docs.microsoft.com/ef/core/modeling/backing-field*](https://docs.microsoft.com/ef/core/modeling/backing-field)
 
 -   **Стив Смит (Steve Smith). Инкапсулированные коллекции в Entity Framework Core**
-    [*http://ardalis.com/encapsulated-collections-in-entity-framework-core*](http://ardalis.com/encapsulated-collections-in-entity-framework-core)
+    [*https://ardalis.com/encapsulated-collections-in-entity-framework-core*](https://ardalis.com/encapsulated-collections-in-entity-framework-core)
 
 -   **Свойства тени**
     [*https://docs.microsoft.com/ef/core/modeling/shadow-properties*](https://docs.microsoft.com/ef/core/modeling/shadow-properties)

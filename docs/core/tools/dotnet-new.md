@@ -3,17 +3,17 @@ title: Команда dotnet new — интерфейс командной ст
 description: Команда dotnet new создает проекты .NET Core на основе указанного шаблона.
 author: mairaw
 ms.author: mairaw
-ms.date: 03/21/2018
+ms.date: 03/26/2018
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.workload:
 - dotnetcore
-ms.openlocfilehash: 2cbd42195d0ec713d2ccb4af823075ece950ceff
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 4432587c0015c353a34816eee4206dc53cdefba9
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="dotnet-new"></a>dotnet new
 
@@ -42,7 +42,7 @@ dotnet new [-h|--help]
 
 ## <a name="description"></a>Описание:
 
-Команда `dotnet new` предоставляет удобный способ инициализации проекта .NET Core. 
+Команда `dotnet new` предоставляет удобный способ инициализации проекта .NET Core.
 
 Она вызывает [подсистему шаблонов](https://github.com/dotnet/templating), чтобы создать артефакты на диске на основе заданных параметров и шаблона.
 
@@ -122,6 +122,9 @@ dotnet new [-h|--help]
 
 Язык создаваемого шаблона. Допустимый язык зависит от шаблона (см. значения по умолчанию в разделе об [аргументах](#arguments)). Не является допустимым для некоторых шаблонов.
 
+    > [!NOTE]
+    > Some shells interpret `#` as a special character. In those cases, you need to enclose the language parameter value, such as `dotnet new console -lang "F#"`.
+
 `-n|--name <OUTPUT_NAME>`
 
 Имя создаваемых выходных данных. Если имя не указано, используется имя текущего каталога.
@@ -159,6 +162,9 @@ dotnet new [-h|--help]
 `-lang|--language {C#|F#}`
 
 Язык создаваемого шаблона. Допустимый язык зависит от шаблона (см. значения по умолчанию в разделе об [аргументах](#arguments)). Не является допустимым для некоторых шаблонов.
+
+    > [!NOTE]
+    > Some shells interpret `#` as a special character. In those cases, you need to enclose the language parameter value, such as `dotnet new console -lang "F#"`.
 
 `-n|--name <OUTPUT_NAME>`
 
@@ -304,7 +310,7 @@ dotnet new [-h|--help]
 
 Создание проекта консольного приложения F# в текущем каталоге:
 
-`dotnet new console -lang f#`
+`dotnet new console -lang F#`
 
 Создание проекта стандартной библиотеки классов .NET в указанном каталоге (доступно только при использовании пакета SDK для .NET Core 2.0 или более поздней версии):
 

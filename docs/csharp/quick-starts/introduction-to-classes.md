@@ -1,6 +1,6 @@
 ---
-title: "Руководство по началу работы с классами. Краткие руководства по локальной разработке на C#"
-description: "Создайте свою первую программу на C# и ознакомьтесь с основными понятиями объектно-ориентированного программирования"
+title: Руководство по началу работы с классами. Краткие руководства по локальной разработке на C#
+description: Создайте свою первую программу на C# и ознакомьтесь с основными понятиями объектно-ориентированного программирования
 author: billwagner
 ms.author: wiwagn
 ms.date: 10/11/2017
@@ -9,11 +9,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: 97c1de562c86ea04153ec09bb0e813565523a3ba
-ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
+ms.openlocfilehash: dd3fff6f74c92a45545e8e36f28eab351b39b37e
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="introduction-to-classes"></a>Общие сведения о классах
 
@@ -215,6 +215,6 @@ Console.WriteLine(account.GetAccountHistory());
 
 ## <a name="next-steps"></a>Следующие шаги
 
-Если у вас возникли проблемы, воспользуйтесь исходным кодом примеров для этого руководства [из репозитория GitHub](https://github.com/dotnet/docs/tree/master/samples/csharp/classes-quickstart/).
+Если у вас возникли проблемы, воспользуйтесь исходным кодом примеров для этого руководства [из репозитория GitHub](https://github.com/dotnet/samples/tree/master/csharp/classes-quickstart/).
 
 Поздравляем! Вы выполнили задачи всех наших кратких руководств. Если вы хотите узнать больше, обратитесь к нашим [руководствам](../tutorials/index.md).

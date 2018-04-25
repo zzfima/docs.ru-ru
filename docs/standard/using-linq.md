@@ -1,6 +1,6 @@
 ---
-title: "Встроенный язык запросов LINQ"
-description: "Сведения о том, как LINQ предоставляет возможности выполнения запросов на уровне языка и API в C# и VB для написания выразительного и декларативного кода."
+title: Встроенный язык запросов LINQ
+description: Сведения о том, как LINQ предоставляет возможности выполнения запросов на уровне языка и API в C# и VB для написания выразительного и декларативного кода.
 keywords: .NET, .NET Core
 author: cartermp
 ms.author: wiwagn
@@ -13,11 +13,11 @@ ms.assetid: c00939e1-59e3-4e61-8fe9-08ad6b3f1295
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: eb9bc30c31ab02df7c04c885f59cadfcc1f00253
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 5ce6819abee90ceccc52a79f8bda794f2fd345fb
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="linq-language-integrated-query"></a>Встроенный язык запросов LINQ
 
@@ -83,7 +83,7 @@ public static IEnumerable<XElement> FindAllElementsWithAttribute(XElement docume
 
 Написать код для просмотра XML-документа вручную будет намного сложнее.
 
-Поставщики LINQ можно использовать для реализации целого ряда задач, не ограничиваясь только взаимодействием с XML. [LINQ to SQL](../../docs/framework/data/adonet/sql/linq/index.md) является довольно минималистичным инструментом объектно-реляционного сопоставления (ORM) для базы данных сервера MSSQL. Библиотека [JSON.NET](http://www.newtonsoft.com/json/help/html/LINQtoJSON.htm) предоставляет эффективные возможности просмотра документов JSON с помощью LINQ. Кроме того, если библиотека с необходимыми вам функциями отсутствует, можно [написать собственный поставщик LINQ](https://msdn.microsoft.com/library/Bb546158.aspx)!
+Поставщики LINQ можно использовать для реализации целого ряда задач, не ограничиваясь только взаимодействием с XML. [LINQ to SQL](../../docs/framework/data/adonet/sql/linq/index.md) является довольно минималистичным инструментом объектно-реляционного сопоставления (ORM) для базы данных сервера MSSQL. Библиотека [JSON.NET](https://www.newtonsoft.com/json/help/html/LINQtoJSON.htm) предоставляет эффективные возможности просмотра документов JSON с помощью LINQ. Кроме того, если библиотека с необходимыми вам функциями отсутствует, можно [написать собственный поставщик LINQ](https://msdn.microsoft.com/library/Bb546158.aspx)!
 
 ## <a name="why-use-the-query-syntax"></a>Зачем нужно использовать синтаксис запроса?
 
@@ -143,7 +143,7 @@ var cats = dogs.Select(dog => dog.TurnIntoACat());
 var queryCats = from dog in dogs
                 select dog.TurnIntoACat();
 
-// Summing then lengths of a set of strings
+// Summing the lengths of a set of strings
 int seed = 0;
 int sumOfStrings = strings.Aggregate(seed, (s1, s2) => s1.Length + s2.Length);
 ```
@@ -263,4 +263,4 @@ public static string GetAllFacebookUserLikesMessage(IEnumerable<FacebookUser> fa
 
 *   [101 пример по LINQ](https://code.msdn.microsoft.com/101-LINQ-Samples-3fb9811b)
 *   [LINQPad](https://www.linqpad.net/) — среда и механизм запросов к базе данных для C#/F#/VB
-*   [EduLinq](http://codeblog.jonskeet.uk/2011/02/23/reimplementing-linq-to-objects-part-45-conclusion-and-list-of-posts/) — электронная книга с информацией по реализации LINQ to Objects
+*   [EduLinq](https://codeblog.jonskeet.uk/2011/02/23/reimplementing-linq-to-objects-part-45-conclusion-and-list-of-posts/) — электронная книга с информацией по реализации LINQ to Objects

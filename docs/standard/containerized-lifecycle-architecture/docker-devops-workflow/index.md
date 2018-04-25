@@ -5,14 +5,15 @@ ms.prod: .net
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
+ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 13f279b371bc5212a4ce9a171d37316c5e6efb77
-ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
-ms.translationtype: MT
+ms.openlocfilehash: bde96fd6348cf651dcca988eb546549fedf4df85
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="docker-application-devops-workflow-with-microsoft-tools"></a>Рабочий процесс DevOps для приложения Docker с использованием средств Майкрософт
 
@@ -32,7 +33,7 @@ Microsoft Visual Studio, Visual Studio Team Services, Team Foundation Server и 
 
 -   Выполнение автоматических тестов в рамках конвейера сборки в Visual Studio Team Services.
 
--   Visual Studio Team Services может укрепить жизненный цикл DevOps за счет доставки в различные среды (не только в рабочие), например в тестовые, включая A/B-тестирование, [начальные выпуски](http://martinfowler.com/bliki/CanaryRelease.html) и т. д.
+-   Visual Studio Team Services может укрепить жизненный цикл DevOps за счет доставки в различные среды (не только в рабочие), например в тестовые, включая A/B-тестирование, [начальные выпуски](https://martinfowler.com/bliki/CanaryRelease.html) и т. д.
 
 -   Организации могут легко создавать контейнеры Docker из частных образов, хранящихся в реестре контейнеров Azure вместе с любыми зависимостями от компонентов Azure (данные, PaaS и т. д.), используя шаблоны Azure Resource Manager и хорошо знакомые инструменты.
 

@@ -19,11 +19,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 7760f30e8053b55c2f846c08ccb6a3d026089afb
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: e36d23c6dfd89b54c86d0b6062813aeccb649579
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="collections-and-data-structures"></a>Коллекции и структуры данных
 Связанные данные могут обрабатываться более эффективно, если они объединены в коллекцию. Вы можете использовать класс <xref:System.Array?displayProperty=nameWithType> или классы в пространствах имен <xref:System.Collections>, <xref:System.Collections.Generic>, <xref:System.Collections.Concurrent> и System.Collections.Immutable, чтобы добавлять, удалять и изменять отдельные элементы или диапазон элементов в коллекции.  
@@ -39,7 +39,7 @@ ms.lasthandoff: 12/23/2017
   
 -   **Возможность перечисления коллекции**  
   
-     Чтобы обеспечить итерацию по коллекции, коллекции .NET Framework реализуют либо <xref:System.Collections.IEnumerable?displayProperty=nameWithType>, либо <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType>. Перечислитель может рассматриваться как перемещаемый указатель на любой элемент в коллекции. Оператор [foreach, in](~/docs/csharp/language-reference/keywords/foreach-in.md) и [For Each...Next Statement](~/docs/visual-basic/language-reference/statements/for-each-next-statement.md) использует итератор, предоставляемый методом <xref:System.Collections.IEnumerable.GetEnumerator%2A>, и скрывает сложность работы с итератором. Кроме того, любая коллекция, реализующая <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType>, считается *запрашиваемым типом*, и к ней можно создавать запросы LINQ. Запросы LINQ предоставляют общий шаблон для доступа к данным. Обычно они являются более четкими и удобочитаемыми, чем стандартные циклы `foreach`, и предлагают возможности фильтрации, упорядочения и группировки. LINQ запросы также могут повысить производительность. Дополнительные сведения см. в статьях [LINQ to Objects](http://msdn.microsoft.com/library/73cafe73-37cf-46e7-bfa7-97c7eea7ced9), [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md) и [Введение в запросы LINQ (C#)](~/docs/csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md).  
+     Чтобы обеспечить итерацию по коллекции, коллекции .NET Framework реализуют либо <xref:System.Collections.IEnumerable?displayProperty=nameWithType>, либо <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType>. Перечислитель может рассматриваться как перемещаемый указатель на любой элемент в коллекции. Оператор [foreach, in](~/docs/csharp/language-reference/keywords/foreach-in.md) и [For Each...Next Statement](~/docs/visual-basic/language-reference/statements/for-each-next-statement.md) использует итератор, предоставляемый методом <xref:System.Collections.IEnumerable.GetEnumerator%2A>, и скрывает сложность работы с итератором. Кроме того, любая коллекция, реализующая <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType>, считается *запрашиваемым типом*, и к ней можно создавать запросы LINQ. Запросы LINQ предоставляют общий шаблон для доступа к данным. Обычно они являются более четкими и удобочитаемыми, чем стандартные циклы `foreach`, и предлагают возможности фильтрации, упорядочения и группировки. LINQ запросы также могут повысить производительность. Дополнительные сведения см. в статьях [LINQ to Objects](https://msdn.microsoft.com/library/73cafe73-37cf-46e7-bfa7-97c7eea7ced9), [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md) и [Введение в запросы LINQ (C#)](~/docs/csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md).  
   
 -   **Возможность копирования содержимого коллекции в массив**  
   
@@ -78,7 +78,7 @@ ms.lasthandoff: 12/23/2017
 |Набор для математических функций|<xref:System.Collections.Generic.HashSet%601><br /><br /> <xref:System.Collections.Generic.SortedSet%601>|Рекомендации отсутствуют|<xref:System.Collections.Immutable.ImmutableHashSet%601><br /><br /> <xref:System.Collections.Immutable.ImmutableSortedSet%601>|  
   
 <a name="BKMK_RelatedTopics"></a>   
-## <a name="related-topics"></a>Связанные разделы  
+## <a name="related-topics"></a>См. также  
   
 |Заголовок|Описание:|  
 |-----------|-----------------|  
@@ -92,7 +92,7 @@ ms.lasthandoff: 12/23/2017
 |System.Collections.Immutable|Приводятся вводные сведения о неизменяемых коллекциях и ссылки на типы коллекций.|  
   
 <a name="BKMK_Reference"></a>   
-## <a name="reference"></a>Ссылки  
+## <a name="reference"></a>Ссылка  
  <xref:System.Array?displayProperty=nameWithType>  
  <xref:System.Collections?displayProperty=nameWithType>  
  <xref:System.Collections.Concurrent?displayProperty=nameWithType>  

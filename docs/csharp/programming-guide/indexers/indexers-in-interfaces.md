@@ -1,21 +1,22 @@
 ---
-title: "Индексаторы в интерфейсах (Руководство по программированию в C#)"
+title: Индексаторы в интерфейсах (Руководство по программированию в C#)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - indexers [C#], in interfaces
 - accessors [C#], indexers
 ms.assetid: e16b54bd-4a83-4f52-bd75-65819fca79e8
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 304f2e037d8df025376d06f229ddd1584f8713b6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 478920b5c1dea489db48caa48c045c4bd3da66ec
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="indexers-in-interfaces-c-programming-guide"></a>Индексаторы в интерфейсах (Руководство по программированию в C#)
 Индексаторы можно объявлять для [интерфейса](../../../csharp/language-reference/keywords/interface.md). Методы доступа индексаторов интерфейса отличаются от методов доступа индексаторов [класса](../../../csharp/language-reference/keywords/class.md) следующим образом:  
@@ -37,10 +38,10 @@ ms.lasthandoff: 11/21/2017
   
  [!code-csharp[csProgGuideIndexers#4](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/indexers-in-interfaces_2.cs)]  
   
- В приведенном выше примере можно использовать явную реализацию члена интерфейса с помощью полного имени члена интерфейса. Например:  
+ В приведенном выше примере можно использовать явную реализацию члена интерфейса с помощью полного имени члена интерфейса. Пример:  
   
 ```  
-public string ISomeInterface.this   
+public string ISomeInterface.this[int index]   
 {   
 }   
 ```  
@@ -48,7 +49,7 @@ public string ISomeInterface.this
  Тем не менее полное имя требуется только в целях устранения неоднозначности, если класс реализует более одного интерфейса с одинаковой сигнатурой индексатора. Например, если класс `Employee` реализует два интерфейса (`ICitizen` и `IEmployee`), оба из которых имеют одинаковую сигнатуру индексатора, требуется явная реализация члена интерфейса. Это значит, что потребуется следующее объявление индексатора:  
   
 ```  
-public string IEmployee.this   
+public string IEmployee.this[int index]   
 {   
 }   
 ```  
@@ -56,7 +57,7 @@ public string IEmployee.this
  реализует индексатор в интерфейсе `IEmployee`, тогда как следующее объявление:  
   
 ```  
-public string ICitizen.this   
+public string ICitizen.this[int index]
 {   
 }   
 ```  

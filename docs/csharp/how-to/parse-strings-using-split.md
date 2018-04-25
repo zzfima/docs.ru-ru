@@ -1,6 +1,6 @@
 ---
-title: "Практическое руководство. Анализ строк с помощью метода String.Split (руководство по программированию на C#)"
-description: "Метод String.Split возвращает массив строк, разбитых по набору разделителей. Это простой и удобный способ анализа строк."
+title: Практическое руководство. Анализ строк с помощью метода String.Split (руководство по программированию на C#)
+description: Метод String.Split возвращает массив строк, разбитых по набору разделителей. Это простой и удобный способ анализа строк.
 ms.date: 01/03/2018
 ms.prod: .net
 ms.technology:
@@ -15,11 +15,11 @@ ms.assetid: 729c2923-4169-41c6-9c90-ef176c1e2953
 author: BillWagner
 ms.author: wiwagn
 ms.custom: mvc
-ms.openlocfilehash: afaff6f81a1a4240214f738d0fc9f3bafdaf868c
-ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
+ms.openlocfilehash: c6ccbe8e1287101d3b79d0ec84e530e0e525ff57
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="how-to-parse-strings-using-stringsplit-c-guide"></a>Практическое руководство. Анализ строк с помощью метода String.Split (руководство по программированию на C#)
 
@@ -51,7 +51,7 @@ ms.lasthandoff: 02/28/2018
   
 [!code-csharp-interactive[split strings using strings as separators](../../../samples/snippets/csharp/how-to/strings/ParseStringsUsingSplit.cs#5)]
 
-Вы можете оценить эти примеры, просмотрев код в нашем [репозитории GitHub](https://github.com/dotnet/docs/tree/master/samples/snippets/csharp/how-to/strings). Или можете загрузить образцы [в ZIP-файле](https://github.com/dotnet/docs/tree/master/samples/snippets/csharp/how-to/strings.zip).
+Вы можете оценить эти примеры, просмотрев код в нашем [репозитории GitHub](https://github.com/dotnet/samples/tree/master/snippets/csharp/how-to/strings). Или можете загрузить образцы [в ZIP-файле](https://github.com/dotnet/samples/raw/master/snippets/csharp/how-to/strings.zip).
 
 ## <a name="see-also"></a>См. также  
  [Руководство по программированию на C#](../programming-guide/index.md)  

@@ -1,12 +1,12 @@
 ---
-title: "Строки стандартных форматов даты и времени"
-ms.custom: 
+title: Строки стандартных форматов даты и времени
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -20,18 +20,18 @@ helpviewer_keywords:
 - formatting [.NET Framework], time
 - date and time strings
 ms.assetid: bb79761a-ca08-44ee-b142-b06b3e2fc22b
-caps.latest.revision: 
+caps.latest.revision: 92
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 55f8f6b544a3ade0ad9423e8253cc44e0fb5fec1
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 5de7da12867e11fcde00089e13c98396ed279a5e
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="standard-date-and-time-format-strings"></a>Строки стандартных форматов даты и времени
 Строка стандартного формата даты и времени использует один описатель формата для определения текстового представления значения даты и времени. Любая строка формата даты и времени, содержащая более одного символа, включая пробел, интерпретируется как строка настраиваемого формата даты и времени. Дополнительные сведения см. в разделе [Строки настраиваемых форматов даты и времени](../../../docs/standard/base-types/custom-date-and-time-format-strings.md). Строку стандартного или пользовательского формата можно использовать двумя способами:  
@@ -43,7 +43,7 @@ ms.lasthandoff: 12/23/2017
  Строки стандартного формата даты и времени могут использоваться как со значением <xref:System.DateTime>, так и со значением <xref:System.DateTimeOffset>.  
   
 > [!TIP]
->  Вы можете загрузить [служебную программу форматирования](http://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)— приложение, позволяющее применять строки формата к значениям даты и времени и числовым значениям и отображающее результирующую строку.  
+>  Вы можете загрузить [Служебную программу форматирования](https://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d), которая применяет строки формата к значениям даты и времени или числовым значениям и отображает результирующую строку.  
   
 <a name="table"></a> В следующей таблице описаны спецификаторы стандартных форматов даты и времени. Если не указано иное, то описатель стандартного формата даты и времени выдает одинаковое строковое представление независимо от того, используется ли он со значением <xref:System.DateTime> или со значением <xref:System.DateTimeOffset>. Дополнительные сведения об использовании стандартных строк формата даты и времени см. в подразделе [Примечания](#Notes).  
   
@@ -426,4 +426,4 @@ ms.lasthandoff: 12/23/2017
  <xref:System.DateTimeOffset?displayProperty=nameWithType>  
  [Типы форматирования](../../../docs/standard/base-types/formatting-types.md)  
  [Строки настраиваемых форматов даты и времени](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)  
- [Пример. Служебная программа форматирования для .NET Framework 4](http://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)
+ [Пример. Служебная программа форматирования для .NET Framework 4](https://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)

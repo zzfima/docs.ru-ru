@@ -16,11 +16,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 824e06a00c4242d8ee38bdfc5a57151a71e4f285
-ms.sourcegitcommit: ba765893e3efcece67d99fd6d5ce0074b050d1d9
+ms.openlocfilehash: 0da27afc5509af6db510b5e622ffde461ae2e0a1
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="xml-documents-and-data"></a>XML-документы и данные
 Платформа .NET Framework имеет всеобъемлющий и интегрированный набор классов, с помощью которых можно легко создавать приложения, использующие XML. Классы из следующих пространств имен поддерживают синтаксический анализ и запись XML-кода, изменение XML-данных в памяти, проверку данных и преобразование XSLT.  
@@ -35,21 +35,21 @@ ms.lasthandoff: 03/02/2018
   
 -   <xref:System.Xml.Linq>  
   
- Полный список приведен на странице [Пространства имен System.Xml](http://msdn.microsoft.com/library/gg145036.aspx).  
+ Полный список приведен на странице [Пространства имен System.Xml](https://msdn.microsoft.com/library/gg145036.aspx).  
   
  Классы из этих пространств имен поддерживают рекомендации W3C. Пример:  
   
--   Класс <xref:System.Xml.XmlDocument?displayProperty=nameWithType> реализует рекомендации модели W3C [DOM базового уровня 1](http://www.w3.org/TR/REC-DOM-Level-1/) и [DOM базового уровня 2](http://www.w3.org/TR/DOM-Level-2-Core/).  
+-   Класс <xref:System.Xml.XmlDocument?displayProperty=nameWithType> реализует рекомендации модели W3C [DOM базового уровня 1](https://www.w3.org/TR/REC-DOM-Level-1/) и [DOM базового уровня 2](https://www.w3.org/TR/DOM-Level-2-Core/).  
   
--   Классы <xref:System.Xml.XmlReader?displayProperty=nameWithType> и <xref:System.Xml.XmlWriter?displayProperty=nameWithType> поддерживают рекомендации [W3C XML 1.0](http://www.w3.org/TR/2006/REC-xml-20060816/) и [Пространства имен в XML](http://www.w3.org/TR/REC-xml-names/).  
+-   Классы <xref:System.Xml.XmlReader?displayProperty=nameWithType> и <xref:System.Xml.XmlWriter?displayProperty=nameWithType> поддерживают рекомендации [W3C XML 1.0](https://www.w3.org/TR/2006/REC-xml-20060816/) и [Пространства имен в XML](https://www.w3.org/TR/REC-xml-names/).  
   
--   Схемы из класса <xref:System.Xml.Schema.XmlSchemaSet?displayProperty=nameWithType> поддерживают рекомендации W3C [Схема XML. Часть 1. Структуры](http://www.w3.org/TR/xmlschema-1/) и [Схема XML. Часть 2. Типы данных](http://www.w3.org/TR/xmlschema-2/).  
+-   Схемы из класса <xref:System.Xml.Schema.XmlSchemaSet?displayProperty=nameWithType> поддерживают рекомендации W3C [Схема XML. Часть 1. Структуры](https://www.w3.org/TR/xmlschema-1/) и [Схема XML. Часть 2. Типы данных](https://www.w3.org/TR/xmlschema-2/).  
   
 -   Классы в пространстве имен <xref:System.Xml.Xsl?displayProperty=nameWithType> поддерживают преобразования XSLT, соответствующие рекомендациям [W3C XSLT 1.0](http://www.w3.org/TR/xslt).  
   
  Классы XML в платформе .NET Framework предоставляют следующие преимущества.  
   
--   **Производительность** [LINQ to XML](http://msdn.microsoft.com/library/f0fe21e9-ee43-4a55-b91a-0800e5782c13) упрощает программирование с использованием XML и обеспечивает работу с запросами, похожую на работу в SQL.  
+-   **Производительность** [LINQ to XML](https://msdn.microsoft.com/library/f0fe21e9-ee43-4a55-b91a-0800e5782c13) упрощает программирование с использованием XML и обеспечивает работу с запросами, похожую на работу в SQL.  
   
 -   **Расширяемость** XML-классы в .NET Framework являются расширяемыми, что было достигнуто за счет использования абстрактных базовых классов и виртуальных методов. Например, можно создать класс, производный от класса <xref:System.Xml.XmlUrlResolver>, который будет сохранять поток кэширования на локальном диске.  
   
@@ -72,7 +72,7 @@ ms.lasthandoff: 03/02/2018
  Обсуждаются параметры обработки XML-данных.  
   
  [Обработка XML-данных в памяти](../../../../docs/standard/data/xml/processing-xml-data-in-memory.md)  
- Содержит обсуждение трех моделей обработки XML-данных в памяти. [LINQ to XML](http://msdn.microsoft.com/library/f0fe21e9-ee43-4a55-b91a-0800e5782c13), класс <xref:System.Xml.XmlDocument> (основанный на модели W3C DOM) и класс <xref:System.Xml.XPath.XPathDocument> (основанный на модели данных XPath).  
+ Содержит обсуждение трех моделей обработки XML-данных в памяти. [LINQ to XML](https://msdn.microsoft.com/library/f0fe21e9-ee43-4a55-b91a-0800e5782c13), класс <xref:System.Xml.XmlDocument> (основанный на модели W3C DOM) и класс <xref:System.Xml.XPath.XPathDocument> (основанный на модели данных XPath).  
   
  [Преобразования XSLT](../../../../docs/standard/data/xml/xslt-transformations.md)  
  Описывается, как использовать обработчик XSLT.  

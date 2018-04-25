@@ -1,29 +1,29 @@
 ---
-title: "Создание скриптов таблиц стилей XSLT с помощью &lt;msxsl:script&gt;"
-ms.custom: 
+title: Создание скриптов таблиц стилей XSLT с помощью &lt;msxsl:script&gt;
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 60e2541b-0cea-4b2e-a4fa-85f4c50f1bef
-caps.latest.revision: 
+caps.latest.revision: 4
 author: mairaw
 ms.author: mairaw
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: f9e7ceb40167d970b1886aec17b93f4bcf08f631
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 01d4271eb5795e3760d289842bdfbdfa11c883fd
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="xslt-stylesheet-scripting-using-ltmsxslscriptgt"></a>Создание скриптов таблиц стилей XSLT с помощью &lt;msxsl:script&gt;
 Класс <xref:System.Xml.Xsl.XslTransform> поддерживает внедрение скриптов с помощью элемента `script`.  
@@ -55,7 +55,7 @@ ms.lasthandoff: 01/19/2018
   
  Чтобы получить свидетельство из сборки используется метод `this.GetType().Assembly.Evidence`. Чтобы получить свидетельство из универсального идентификатора ресурсов (URI) используется метод `Evidence e = XmlSecureResolver.CreateEvidenceForUrl(stylesheetURI)`.  
   
- При использовании методов <xref:System.Xml.Xsl.XslTransform.Load%2A>, которые принимают объект <xref:System.Xml.XmlResolver>, но не объект `Evidence`, зона безопасности для сборки имеет по умолчанию полный уровень доверия. Дополнительные сведения см. в статьях <xref:System.Security.SecurityZone> и [Именованные наборы разрешений](http://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3).  
+ При использовании методов <xref:System.Xml.Xsl.XslTransform.Load%2A>, которые принимают объект <xref:System.Xml.XmlResolver>, но не объект `Evidence`, зона безопасности для сборки имеет по умолчанию полный уровень доверия. Дополнительные сведения см. в статьях <xref:System.Security.SecurityZone> и [Именованные наборы разрешений](https://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3).  
   
  Функции можно объявлять внутри элемента `msxsl:script`. В следующей таблице показаны пространства имен, поддерживаемые по умолчанию. Можно использовать классы вне перечисленных пространств имен. Однако эти классы должны указываться полными именами.  
   

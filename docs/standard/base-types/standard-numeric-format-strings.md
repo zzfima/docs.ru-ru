@@ -24,11 +24,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: f042d72c76ddbf3b5eaf8923fc747325b701c9a6
-ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
+ms.openlocfilehash: 34fe406dac4cbbc0c25e43f479154fd3e398ffc2
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="standard-numeric-format-strings"></a>Строки стандартных числовых форматов
 Строки стандартных числовых форматов служат для форматирования стандартных числовых типов. Строка стандартных числовых форматов использует формат `Axx`, где:  
@@ -51,7 +51,7 @@ ms.lasthandoff: 03/28/2018
 - [Интерполированные строки](../../csharp/language-reference/tokens/interpolated.md) в C# и Visual Basic, которые предоставляют упрощенный синтаксис по сравнению со строками составного формата.
  
 > [!TIP]
->  Вы можете загрузить [служебную программу форматирования](http://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)— приложение, позволяющее применять строки формата к значениям даты и времени и числовым значениям и отображающее результирующую строку.  
+>  Вы можете загрузить [Служебную программу форматирования](https://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d), которая применяет строки формата к значениям даты и времени или числовым значениям и отображает результирующую строку.  
   
 <a name="table"></a> В следующей таблице приведены описатели стандартного числового формата и примеры выходных данных, формируемых каждым описателем формата. Дополнительные сведения о использовании строк стандартных числовых форматов см. в разделе [Примечания](#NotesStandardFormatting). Обширную демонстрацию их использования см. в разделе [Пример](#example).  
   
@@ -361,5 +361,5 @@ ms.lasthandoff: 03/28/2018
  [Custom Numeric Format Strings](../../../docs/standard/base-types/custom-numeric-format-strings.md)  
  [Типы форматирования](../../../docs/standard/base-types/formatting-types.md)  
  [Практическое руководство. Добавление к числу начальных нулей](../../../docs/standard/base-types/how-to-pad-a-number-with-leading-zeros.md)  
- [Пример. Служебная программа форматирования для .NET Framework 4](http://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)  
+ [Пример. Служебная программа форматирования для .NET Framework 4](https://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)  
  [Составное форматирование](../../../docs/standard/base-types/composite-formatting.md)

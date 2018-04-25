@@ -1,12 +1,12 @@
 ---
-title: "Числовые значения в платформе .NET Framework"
-ms.custom: 
+title: Числовые значения в платформе .NET Framework
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - SIMD
@@ -17,18 +17,18 @@ helpviewer_keywords:
 - numerics
 - BigInteger
 ms.assetid: dfebc18e-acde-4510-9fa7-9a0f4aa3bd11
-caps.latest.revision: 
+caps.latest.revision: 11
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: bd55b127f73fe1cefce9724f3a74400b5fe7488f
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 074ed60a3cbc1949eea4a8d866cdb3bba7c0f196
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="numerics-in-the-net-framework"></a>Числовые значения в платформе .NET Framework
 Платформа .NET Framework поддерживает стандартные числовые примитивные типы (целочисленные и с плавающей запятой), а также <xref:System.Numerics.BigInteger> (целочисленный тип, не имеющий теоретических верхних и нижних границ), <xref:System.Numerics.Complex> (тип для представления комплексных чисел), а также набор векторных типов с поддержкой SIMD в пространстве имен <xref:System.Numerics>.  
@@ -85,7 +85,7 @@ ms.lasthandoff: 12/23/2017
   
  Векторные типы с поддержкой SIMD реализованы в IL, что позволяет использовать их в оборудовании без поддержки SIMD и в JIT-компиляторах. Для использования инструкций SIMD 64-разрядные приложения должны быть скомпилированы с помощью нового 64-разрядного JIT-компилятора для управляемого кода, который входит в состав .NET Framework 4.6. Он обеспечивает поддержку SIMD в приложениях, предназначенных для 64-разрядных процессоров.  
   
- SIMD также можно скачать в виде [пакета NuGet](http://www.nuget.org/packages/System.Numerics.Vectors).  Пакет NuGet также содержит универсальную структуру <xref:System.Numerics.Vector%601>, которая позволяет создать вектор любого примитивного числового типа. (К примитивным числовым типам относятся все числовые типы в пространстве имен <xref:System>, за исключением <xref:System.Decimal>.) Кроме того, структура <xref:System.Numerics.Vector%601> предоставляет библиотеку удобных методов, которые можно вызывать при работе с векторами.  
+ SIMD также можно скачать в виде [пакета NuGet](https://www.nuget.org/packages/System.Numerics.Vectors).  Пакет NuGet также содержит универсальную структуру <xref:System.Numerics.Vector%601>, которая позволяет создать вектор любого примитивного числового типа. (К примитивным числовым типам относятся все числовые типы в пространстве имен <xref:System>, за исключением <xref:System.Decimal>.) Кроме того, структура <xref:System.Numerics.Vector%601> предоставляет библиотеку удобных методов, которые можно вызывать при работе с векторами.  
   
 ## <a name="see-also"></a>См. также  
  [.NET Framework Application Essentials](../../docs/standard/application-essentials.md) (Основные сведения о приложениях .NET Framework)

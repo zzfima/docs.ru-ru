@@ -1,12 +1,12 @@
 ---
-title: "Рекомендации по разработке международных приложений"
-ms.custom: 
+title: Рекомендации по разработке международных приложений
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - global applications, best practices
@@ -14,18 +14,18 @@ helpviewer_keywords:
 - globalization [.NET Framework], best practices
 - international applications [.NET Framework], best practices
 ms.assetid: f08169c7-aad8-4ec3-9a21-9ebd3b89986c
-caps.latest.revision: 
+caps.latest.revision: 20
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 1fbdbe2596f44a6efda35b8c3e3aace303d79364
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 65566d54c97db7592fdd38178d88fe2963e637bf
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="best-practices-for-developing-world-ready-applications"></a>Рекомендации по разработке международных приложений
 В этом разделе описаны рекомендации по разработке международных приложений.  
@@ -102,7 +102,7 @@ ms.lasthandoff: 01/19/2018
   
 4.  Следует задать значения для атрибутов requestEncoding, responseEncoding, fileEncoding, culture и uiCulture в следующих трех местах в приложении ASP.NET.  
   
-    -   В разделе глобализации файла Web.config. Это внешний файл приложения ASP.NET. Дополнительные сведения см. в описании [\<элемента <globalization>](http://msdn.microsoft.com/library/e2dffc8e-ebd2-439b-a2fd-e3ac5e620da7).  
+    -   В разделе глобализации файла Web.config. Это внешний файл приложения ASP.NET. Дополнительные сведения см. в описании [\<элемента <globalization>](https://msdn.microsoft.com/library/e2dffc8e-ebd2-439b-a2fd-e3ac5e620da7).  
   
     -   В директиве страницы. Обратите внимание, что когда приложение находится на странице, файл уже считан. Следовательно, уже поздно задавать атрибуты fileEncoding и requestEncoding. В директиве страницы могут задаваться только атрибуты uiCulture, Culture и responseEncoding.  
   

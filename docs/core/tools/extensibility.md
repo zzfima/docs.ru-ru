@@ -1,7 +1,7 @@
 ---
-title: "Модель расширяемости CLI .NET Core"
-description: "Узнайте, как расширить средства интерфейса командной строки (CLI)."
-keywords: "CLI, расширяемость, пользовательские команды, .NET Core"
+title: Модель расширяемости CLI .NET Core
+description: Узнайте, как расширить средства интерфейса командной строки (CLI).
+keywords: CLI, расширяемость, пользовательские команды, .NET Core
 author: blackdwarf
 ms.author: mairaw
 ms.date: 04/12/2017
@@ -10,12 +10,13 @@ ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: fffc3400-aeb9-4c07-9fea-83bc8dbdcbf3
-ms.workload: dotnetcore
-ms.openlocfilehash: 0d273510903c888f3212a57f4c28b118b73cab5c
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: 53329c302066891c240a234156c2572acc66e7ab
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="net-core-cli-tools-extensibility-model"></a>Модель расширяемости средств интерфейса командной строки .NET Core
 
@@ -82,8 +83,8 @@ ms.lasthandoff: 12/23/2017
 
 Подобные средства имеют схему зависимостей, которая никак не связана со схемой зависимостей проекта, использующего эти средства. В ходе восстановления сначала восстанавливаются зависимости проекта, а затем каждое из средств и их зависимости.
 
-Вы можете найти более подробные примеры и различные сочетания в [репозитории CLI .NET Core](https://github.com/dotnet/cli/tree/rel/1.0.1/TestAssets/TestProjects).
-Вы также можете найти [реализацию используемых средств](https://github.com/dotnet/cli/tree/rel/1.0.1/TestAssets/TestPackages) в том же репозитории.
+Вы можете найти более подробные примеры и различные сочетания в [репозитории CLI .NET Core](https://github.com/dotnet/cli/tree/release/2.1/TestAssets/TestProjects).
+Вы также можете найти [реализацию используемых средств](https://github.com/dotnet/cli/tree/release/2.1/TestAssets/TestPackages) в том же репозитории.
 
 ### <a name="custom-targets"></a>Пользовательские целевые объекты
 NuGet позволяет [упаковывать пользовательские целевые объекты MSBuild и файлы свойств](/nuget/create-packages/creating-a-package#including-msbuild-props-and-targets-in-a-package). В связи с переходом средств CLI в .NET Core на MSBuild к проектам .NET Core теперь применяется тот же механизм расширяемости. Этот тип расширяемости можно использовать для расширения процедуры сборки, для получения доступа к любым артефактам в процессе сборки (например, к созданным файлам), для проверки конфигурации, с помощью которой вызывается сборка, и т. д.

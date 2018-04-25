@@ -1,12 +1,12 @@
 ---
-title: "Введение в PLINQ"
-ms.custom: 
+title: Введение в PLINQ
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -14,22 +14,22 @@ dev_langs:
 helpviewer_keywords:
 - PLINQ queries, introduction to
 ms.assetid: eaa720d8-8999-4eb7-8df5-3c19ca61cad0
-caps.latest.revision: 
+caps.latest.revision: 22
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 6ee718737885618322c3623a80b0b091bbfc729d
-ms.sourcegitcommit: 3a96c706e4dbb4667bf3bf37edac9e1666646f93
+ms.openlocfilehash: 1148d2b245d67304071d8dd23bb1a88bdc020b8d
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="introduction-to-plinq"></a>Введение в PLINQ
 ## <a name="what-is-a-parallel-query"></a>Что такое параллельный запрос?  
- Встроенный язык запросов (LINQ) был впервые представлен в [!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)].  Он поддерживает унифицированную модель для запросов к любому источнику данных <xref:System.Collections.IEnumerable?displayProperty=nameWithType> или <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> типобезопасным образом. LINQ to Objects — это запросы LINQ, выполняемые с коллекциями в памяти (например, <xref:System.Collections.Generic.List%601>) или массивами. В этой статье предполагается, что у вас уже есть общие представления о LINQ. Дополнительные сведения см. в разделе [Встроенный язык запросов LINQ](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d).  
+ Встроенный язык запросов (LINQ) был впервые представлен в [!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)].  Он поддерживает унифицированную модель для запросов к любому источнику данных <xref:System.Collections.IEnumerable?displayProperty=nameWithType> или <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> типобезопасным образом. LINQ to Objects — это запросы LINQ, выполняемые с коллекциями в памяти (например, <xref:System.Collections.Generic.List%601>) или массивами. В этой статье предполагается, что у вас уже есть общие представления о LINQ. Дополнительные сведения см. в разделе [Встроенный язык запросов LINQ](https://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d).  
   
  Parallel LINQ (PLINQ) является параллельной реализацией шаблона LINQ. Запрос PLINQ во многом напоминает непараллельный запрос LINQ to Objects. Запросы PLINQ, как и последовательные запросы [!INCLUDE[vbteclinq](../../../includes/vbteclinq-md.md)], работают с любым источником данных <xref:System.Collections.IEnumerable> или <xref:System.Collections.Generic.IEnumerable%601> в памяти и поддерживают отложенное выполнение, т. е. выполнение только по завершении перечисления запроса. Основное различие состоит в том, что PLINQ пытается задействовать сразу все процессоры в системе. Для этого он разбивает источник данных на сегменты, а затем запрашивается каждый сегмент в отдельном рабочем потоке сразу, используя сразу несколько процессоров. Во многих случаях параллельное выполнение значительно сокращает время выполнения запроса.  
   
@@ -43,7 +43,7 @@ ms.lasthandoff: 02/27/2018
 ## <a name="the-parallelenumerable-class"></a>Класс ParallelEnumerable  
  Класс <xref:System.Linq.ParallelEnumerable?displayProperty=nameWithType> предоставляет почти все функциональные возможности PLINQ.  Этот класс и остальные типы пространства имен <xref:System.Linq?displayProperty=nameWithType> компилируются в сборку System.Core.dll. Проекты C# и Visual Basic по умолчанию в Visual Studio ссылаются на сборку и импортируют пространство имен.  
   
- <xref:System.Linq.ParallelEnumerable> содержит реализации всех стандартных операторов запроса, поддерживаемых LINQ to Objects, но не все из них пытается выполнять параллельно. Если вы не знакомы с [!INCLUDE[vbteclinq](../../../includes/vbteclinq-md.md)], обратитесь к разделу [Введение в LINQ](http://msdn.microsoft.com/library/24dddf19-12a0-4707-a4bc-eba4fa7f219e).  
+ <xref:System.Linq.ParallelEnumerable> содержит реализации всех стандартных операторов запроса, поддерживаемых LINQ to Objects, но не все из них пытается выполнять параллельно. Если вы не знакомы с [!INCLUDE[vbteclinq](../../../includes/vbteclinq-md.md)], обратитесь к разделу [Введение в LINQ](https://msdn.microsoft.com/library/24dddf19-12a0-4707-a4bc-eba4fa7f219e).  
   
  Помимо стандартных операторов запроса, класс <xref:System.Linq.ParallelEnumerable> содержит набор методов для реализации функций, характерных для параллельного выполнения. Методы, характерные для PLINQ, перечислены в следующей таблице.  
   

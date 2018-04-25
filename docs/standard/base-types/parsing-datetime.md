@@ -1,6 +1,6 @@
 ---
-title: "Как преобразовать строки в формат даты и времени"
-description: "Ознакомьтесь с методами анализа строк, представляющих даты и время, и научитесь создавать строки в формате даты и времени из отдельных строк даты и строк времени."
+title: Как преобразовать строки в формат даты и времени
+description: Ознакомьтесь с методами анализа строк, представляющих даты и время, и научитесь создавать строки в формате даты и времени из отдельных строк даты и строк времени.
 ms.date: 02/15/2018
 ms.prod: .net
 ms.technology: dotnet-standard
@@ -22,11 +22,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: a94300a879ac18d21d35dfe58ac0d9805f240a92
-ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
+ms.openlocfilehash: 6912109c11039c311067f330c3af71b15cbadc7a
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="parsing-date-and-time-strings-in-net"></a>Синтаксический анализ строк даты и времени в .NET
 
@@ -64,7 +64,7 @@ ms.lasthandoff: 03/08/2018
 > Все примеры C# в этой статье выполняются в браузере. Нажмите кнопку **Выполнить**, чтобы просмотреть выходные данные. Вы можете поэкспериментировать, изменяя их значения.
 
 > [!NOTE]
-> Эти примеры для [C#](https://github.com/dotnet/docs/samples/tree/master/snippets/csharp/how-to/conversions) и [Visual Basic](https://github.com/dotnet/docs/samples/tree/master/snippets/visualbasic/how-to/conversions) вы можете найти в репозитории документации GitHub. Вы также можете загрузить проект в виде ZIP-файла для [C#](https://github.com/dotnet/docs/samples/tree/master/snippets/csharp/how-to/conversions.zip) или [Visual Basic](https://github.com/dotnet/docs/samples/tree/master/snippets/visualbasic/how-to/conversions.zip).
+> Эти примеры для [C#](https://github.com/dotnet/samples/tree/master/snippets/csharp/how-to/conversions) и [Visual Basic](https://github.com/dotnet/samples/tree/master/snippets/visualbasic/how-to/conversions) вы можете найти в репозитории документации GitHub. Вы также можете загрузить проект в виде ZIP-файла для [C#](https://github.com/dotnet/samples/raw/master/snippets/csharp/how-to/conversions.zip) или [Visual Basic](https://github.com/dotnet/samples/raw/master/snippets/visualbasic/how-to/conversions.zip).
 
 [!code-csharp-interactive[Parsing.DateAndTime#1](../../../samples/snippets/csharp/how-to/conversions/StringToDateTime.cs#1)]
 [!code-vb[Parsing.DateAndTime#1](../../../samples/snippets/visualbasic/how-to/conversions/Program.vb#1)]

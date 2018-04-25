@@ -1,12 +1,12 @@
 ---
-title: "Асинхронный файловый ввод-вывод"
-ms.custom: 
+title: Асинхронный файловый ввод-вывод
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -23,18 +23,18 @@ helpviewer_keywords:
 - multiple I/O requests
 - data streams, synchronous streams
 ms.assetid: dbdd55e7-d6b9-4f9e-8abb-ab0edd4457f7
-caps.latest.revision: 
+caps.latest.revision: 23
 author: mairaw
 ms.author: mairaw
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: ff9ae65e47a35f4acfade1d06c703f9e1f5f6bee
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: e0c67c9b397dfcd6f6ba947c2876919693c4f472
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="asynchronous-file-io"></a>Асинхронный файловый ввод-вывод
 Асинхронные операции позволяют выполнять ресурсоемкие операции ввода-вывода без блокировки основного потока. Это соображение, связанное с производительностью, особенно важно в приложениях [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] и [!INCLUDE[desktop_appname](../../../includes/desktop-appname-md.md)] , где длительная потоковая операция может блокировать поток пользовательского интерфейса и создавать впечатление, что приложение не работает.  
@@ -49,7 +49,7 @@ ms.lasthandoff: 12/23/2017
   
  Оператор`Await` (Visual Basic) или `await` (C#), который применяется к результату асинхронного метода.  
   
- Для реализации операций асинхронного ввода-вывода используйте эти ключевые слова в сочетании с асинхронными методами, как показано в следующих примерах. Дополнительные сведения см. в разделе [Асинхронное программирование с использованием ключевых слов async и await](http://msdn.microsoft.com/library/db854f91-ccef-4035-ae4d-0911fde808c7).  
+ Для реализации операций асинхронного ввода-вывода используйте эти ключевые слова в сочетании с асинхронными методами, как показано в следующих примерах. Дополнительные сведения см. в разделе [Асинхронное программирование с использованием ключевых слов async и await](https://msdn.microsoft.com/library/db854f91-ccef-4035-ae4d-0911fde808c7).  
   
  Следующий пример демонстрирует использование двух объектов <xref:System.IO.FileStream> для асинхронного копирования файлов из одного каталога в другой. Обратите внимание, что обработчик событий <xref:System.Web.UI.WebControls.Button.Click> для элемента управления <xref:System.Windows.Controls.Button> помечается с помощью модификатора `async` , так как вызывает асинхронный метод.  
   
@@ -71,4 +71,4 @@ ms.lasthandoff: 12/23/2017
 ## <a name="see-also"></a>См. также  
  <xref:System.IO.Stream>  
  [Файловый и потоковый ввод-вывод](../../../docs/standard/io/index.md)  
- [Асинхронное программирование с использованием ключевых слов Async и Await](http://msdn.microsoft.com/library/db854f91-ccef-4035-ae4d-0911fde808c7)
+ [Асинхронное программирование с использованием ключевых слов Async и Await](https://msdn.microsoft.com/library/db854f91-ccef-4035-ae4d-0911fde808c7)

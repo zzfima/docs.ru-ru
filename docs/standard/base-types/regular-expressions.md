@@ -1,12 +1,12 @@
 ---
-title: "Регулярные выражения в .NET Framework"
-ms.custom: 
+title: Регулярные выражения в .NET Framework
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -26,18 +26,18 @@ helpviewer_keywords:
 - .NET Framework regular expressions
 - strings [.NET Framework], regular expressions
 ms.assetid: 521b3f6d-f869-42e1-93e5-158c54a6895d
-caps.latest.revision: 
+caps.latest.revision: 24
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 145e0c9a722afd9f49216058604936189c003f17
-ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
+ms.openlocfilehash: 5d0ec5572776368fa9943a87fa72280a4ebeb03d
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="net-regular-expressions"></a>Регулярные выражения в .NET
 Регулярные выражения предоставляют мощный, гибкий и эффективный способ обработки текста. Комплексная нотация сопоставления шаблонов регулярных выражений позволяет быстро анализировать большие объемы текста для поиска определенных шаблонов символов, проверять текст на соответствие предопределенному шаблону (например, адресу электронной почты), извлекать, изменять, заменять и удалять текстовые подстроки, а также добавлять извлеченные строки в коллекцию для создания отчета. Для многих приложений, которые работают со строками или анализируют большие блоки текста, регулярные выражения — незаменимый инструмент.  
@@ -63,8 +63,8 @@ ms.lasthandoff: 02/01/2018
   
  Дополнительные сведения о языке регулярных выражений см. в [кратком справочнике по элементам языка регулярных выражений](../../../docs/standard/base-types/regular-expression-language-quick-reference.md) или в одной из следующих брошюр, который вы можете скачать и распечатать:  
   
- [Краткий справочник в формате Word (DOCX)](http://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.docx);  
- [Краткий справочник в формате PDF (PDF)](http://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.pdf).  
+ [Краткий справочник в формате Word (DOCX)](https://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.docx);  
+ [Краткий справочник в формате PDF (PDF)](https://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.pdf).  
   
 ## <a name="regular-expression-examples"></a>Примеры регулярных выражений  
  Класс <xref:System.String> содержит ряд методов для поиска и замены строк, которые можно использовать для поиска строковых литералов в длинных строках. Регулярные выражения максимально полезны, если требуется найти одну из нескольких подстрок в длинной строке или определить шаблоны в строке, как показано в следующих примерах.  
@@ -131,5 +131,5 @@ ms.lasthandoff: 02/01/2018
 ## <a name="reference"></a>Ссылка  
  <xref:System.Text.RegularExpressions?displayProperty=nameWithType>  
  <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType>  
- [Краткий справочник по регулярным выражениям (скачать в формате Word)](http://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.docx)  
- [Регулярные выражения — краткий справочник (загрузить в формате PDF)](http://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.pdf)
+ [Краткий справочник по регулярным выражениям (скачать в формате Word)](https://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.docx)  
+ [Регулярные выражения — краткий справочник (загрузить в формате PDF)](https://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.pdf)

@@ -18,11 +18,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: ddd3b509b7c0c35f1c4edea99cb5a4ec6c1ac18e
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 523db9d356954a4a397b63d836018070effa9e5b
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="how-to-iterate-file-directories-with-plinq"></a>Практическое руководство. Перебор каталогов с файлами с помощью PLINQ
 В этом примере показаны два простых способа параллельного выполнения операций с каталогами файлов. Первый запрос использует метод <xref:System.IO.Directory.GetFiles%2A>, чтобы заполнить массив имен всех файлов и подкаталогов в каталоге. Этот метод не возвращает результаты, пока не заполнит весь массив, поэтому в начале его работы можно ожидать существенную задержку. Но после заполнения массива PLINQ сможет очень быстро обрабатывать его параллельно.  
@@ -44,7 +44,7 @@ ms.lasthandoff: 12/23/2017
   
  Если используется <xref:System.IO.Directory.GetFiles%2A>, следите за наличием нужных разрешений для всех каталогов в дереве. В противном случае создается исключение и результаты не возвращаются. При использовании <xref:System.IO.Directory.EnumerateDirectories%2A> в запросе PLINQ довольно трудно обрабатывать исключения ввода-вывода настолько мягко, чтобы можно было продолжить работу. Если код должен обрабатывать исключения с ошибками ввода-вывода или несанкционированного доступа, то мы рекомендуем применить другой подход, описанный в статье [Практическое руководство. Перебор каталогов с файлами с помощью параллельного класса](../../../docs/standard/parallel-programming/how-to-iterate-file-directories-with-the-parallel-class.md).  
   
- Если есть риск задержки при операциях ввода-вывода (например, при обращении к файлу по сети), попробуйте один из асинхронных подходов, которые описаны в статье [Библиотека параллельных задач и традиционное асинхронное программирование .NET Framework](../../../docs/standard/parallel-programming/tpl-and-traditional-async-programming.md) и [в этой записи блога](http://go.microsoft.com/fwlink/?LinkID=186458).  
+ Если есть риск задержки при операциях ввода-вывода (например, при обращении к файлу по сети), попробуйте один из асинхронных подходов, которые описаны в статье [Библиотека параллельных задач и традиционное асинхронное программирование .NET Framework](../../../docs/standard/parallel-programming/tpl-and-traditional-async-programming.md) и [в этой записи блога](https://blogs.msdn.microsoft.com/pfxteam/2009/08/04/parallel-extensions-and-io/).  
   
 ## <a name="see-also"></a>См. также  
  [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)

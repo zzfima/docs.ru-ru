@@ -1,12 +1,13 @@
 ---
-title: "Практическое руководство. Выгрузка домена приложения"
-ms.custom: 
+title: Практическое руководство. Выгрузка домена приложения
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-bcl
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -17,16 +18,17 @@ helpviewer_keywords:
 - application domains, unloading
 - unloading application domains
 ms.assetid: f356116d-e415-4f7c-a332-6e6a60227192
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 741ddf7c394e1c310e368fe338f71d02a0d4736d
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: e4bb36acf95a5ace9364995a209f7d624faa85c7
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-unload-an-application-domain"></a>Практическое руководство. Выгрузка домена приложения
 После завершения использования домена приложения выгрузите его с помощью метода <xref:System.AppDomain.Unload%2A?displayProperty=nameWithType>. Метод **Unload** безопасно завершает работу указанного домена приложения. В процессе выгрузки новые потоки не могут получить доступ к домену приложения, и освобождаются все структуры данных, определяемые доменом приложения.  
@@ -41,6 +43,6 @@ ms.lasthandoff: 01/19/2018
  [!code-vb[System.AppDomain.Load#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.appdomain.load/vb/source3.vb#3)]  
   
 ## <a name="see-also"></a>См. также  
- [Программирование с использованием доменов приложений](http://msdn.microsoft.com/library/bd36055b-56bd-43eb-b4d8-820c37172131)  
+ [Программирование с использованием доменов приложений](application-domains.md#programming-with-application-domains)  
  [Практическое руководство. Создание домена приложения](../../../docs/framework/app-domains/how-to-create-an-application-domain.md)  
  [Использование доменов приложений](../../../docs/framework/app-domains/use.md)

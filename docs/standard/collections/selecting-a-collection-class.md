@@ -1,12 +1,12 @@
 ---
-title: "Выбор класса коллекции"
-ms.custom: 
+title: Выбор класса коллекции
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - last-in-first-out collections
@@ -16,18 +16,18 @@ helpviewer_keywords:
 - Collections classes
 - grouping data in collections, selecting collection class
 ms.assetid: ba049f9a-ce87-4cc4-b319-3f75c8ddac8a
-caps.latest.revision: 
+caps.latest.revision: 20
 author: mairaw
 ms.author: mairaw
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 05339b829262a6b9b3a0265e4fbd444c6d586ea3
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: cede57d398930684a68ad15f3e6426939bba2e08
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="selecting-a-collection-class"></a>Выбор класса коллекции
 Внимательно относитесь к выбору класса коллекции. Неправильный тип может ограничить возможности использования коллекции. Как правило, не рекомендуется использовать типы в пространстве имен <xref:System.Collections>, если приложение не создается специально для .NET Framework версии 1.1 Универсальные и параллельные версии коллекций предпочтительны из-за повышенной безопасности типов и других усовершенствований.  
@@ -85,7 +85,7 @@ ms.lasthandoff: 12/23/2017
     -   Кроме того, можно использовать любой из универсальных классов коллекций в пространстве имен <xref:System.Collections.Generic> как строго типизированную строковую коллекцию, указав класс <xref:System.String> в качестве аргумента универсального типа.  
   
 ## <a name="linq-to-objects-and-plinq"></a>LINQ to Objects и PLINQ  
- Язык LINQ to Objects позволяет использовать запросы LINQ для доступа к объектам в памяти при условии, что тип объекта реализует интерфейс <xref:System.Collections.IEnumerable> или <xref:System.Collections.Generic.IEnumerable%601>. Запросы LINQ обеспечивают общий шаблон для доступа к данным, обычно являются более четкими и удобочитаемыми, чем стандартные циклы `foreach`, а также предоставляют возможности фильтрации, сортировки и группировки. Дополнительные сведения см. в разделе [LINQ to Objects](http://msdn.microsoft.com/library/73cafe73-37cf-46e7-bfa7-97c7eea7ced9).  
+ Язык LINQ to Objects позволяет использовать запросы LINQ для доступа к объектам в памяти при условии, что тип объекта реализует интерфейс <xref:System.Collections.IEnumerable> или <xref:System.Collections.Generic.IEnumerable%601>. Запросы LINQ обеспечивают общий шаблон для доступа к данным, обычно являются более четкими и удобочитаемыми, чем стандартные циклы `foreach`, а также предоставляют возможности фильтрации, сортировки и группировки. Дополнительные сведения см. в разделе [LINQ to Objects](https://msdn.microsoft.com/library/73cafe73-37cf-46e7-bfa7-97c7eea7ced9).  
   
  Язык PLINQ предоставляет параллельную реализацию языка LINQ to Objects, которая может обеспечить более быстрое выполнение запросов во многих сценариях за счет более эффективного использования многоядерных компьютеров. Дополнительные сведения см. в разделе [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md).  
   

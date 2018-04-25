@@ -1,5 +1,5 @@
 ---
-title: "Практическое руководство. Определение установленных версий платформы .NET Framework"
+title: Практическое руководство. Определение установленных версий платформы .NET Framework
 ms.date: 01/24/2018
 ms.prod: .net-framework
 ms.technology:
@@ -18,13 +18,14 @@ ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 0a25ba2d72588dddf0ac1f88d4de59c623e31ff6
-ms.sourcegitcommit: ba765893e3efcece67d99fd6d5ce0074b050d1d9
+ms.openlocfilehash: edf1e5a53f6f578f943cf8775a798b5681d2d9dd
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 04/09/2018
 ---
-# <a name="how-to-determine-which-net-framework-versions-are-installed"></a>Практическое руководство.Определение установленных версий платформы .NET Framework
+# <a name="how-to-determine-which-net-framework-versions-are-installed"></a>Практическое руководство. Определение установленных версий платформы .NET Framework
+
 На компьютере можно установить и запустить несколько версий платформы .NET Framework. При разработке или развертывании приложения могут потребоваться сведения о том, какие версии .NET Framework установлены на компьютере пользователя. Учтите, что платформа .NET Framework состоит из основных компонентов, версии которым присваиваются отдельно:  
   
 -   набор сборок, которые являются коллекциями типов и ресурсов, обеспечивающих функции приложений (.NET Framework и сборкам назначается один номер версии);  
@@ -47,7 +48,7 @@ ms.lasthandoff: 03/02/2018
  Сведения об обнаружении установленных обновлений для каждой версии платформы .NET Framework см. в разделе [Практическое руководство. Определение установленных платформ .NET Framework](~/docs/framework/migration-guide/how-to-determine-which-net-framework-updates-are-installed.md). Сведения об установке .NET Framework см. в разделе [Установка .NET Framework для разработчиков](../../../docs/framework/install/guide-for-developers.md).  
   
 <a name="net_a"></a>   
-#### <a name="to-find-net-framework-versions-by-viewing-the-registry-net-framework-1-4"></a>Поиск версий .NET Framework путем просмотра реестра (.NET Framework 1–4)  
+## <a name="to-find-net-framework-versions-by-viewing-the-registry-net-framework-1-4"></a>Поиск версий .NET Framework путем просмотра реестра (.NET Framework 1–4)  
   
 1.  В меню **Пуск** выберите **Выполнить**.  
   
@@ -66,7 +67,7 @@ ms.lasthandoff: 03/02/2018
     > Папка NET Framework Setup в реестре не начинается с точки.
 
 <a name="net_b"></a> 
-#### <a name="to-find-net-framework-versions-by-viewing-the-registry-net-framework-45-and-later"></a>Поиск версий .NET Framework путем просмотра реестра (.NET Framework 4.5 и более поздних версий)
+## <a name="to-find-net-framework-versions-by-viewing-the-registry-net-framework-45-and-later"></a>Поиск версий .NET Framework путем просмотра реестра (.NET Framework 4.5 и более поздних версий)
 
 1. В меню **Пуск** выберите **Выполнить**.
 
@@ -102,8 +103,9 @@ ms.lasthandoff: 03/02/2018
     |В юбилейном обновлении Windows 10 Anniversary Update: 394802<br /><br /> Во всех других версиях ОС: 394806|[!INCLUDE[net_v462](../../../includes/net-v462-md.md)]| 
     |В обновлении Windows 10 Creators Update: 460798<br/><br/> Во всех других версиях ОС: 460805 | .NET Framework 4.7 |
     |В Windows 10 Fall Creators Update: 461308<br/><br/> Во всех других версиях ОС: 461310 | .NET Framework 4.7.1 |
+    
 <a name="net_c"></a> 
-#### <a name="to-find-net-framework-versions-by-querying-the-registry-in-code-net-framework-1-4"></a>Поиск версий .NET Framework путем отправки запроса в реестр (.NET Framework 1–4)
+## <a name="to-find-net-framework-versions-by-querying-the-registry-in-code-net-framework-1-4"></a>Поиск версий .NET Framework путем отправки запроса в реестр (.NET Framework 1–4)
 
 - Используйте класс <xref:Microsoft.Win32.RegistryKey?displayProperty=nameWithType> для доступа к подразделу Software\Microsoft\NET Framework Setup\NDP\ в разделе HKEY_LOCAL_MACHINE в реестре Windows.
 
@@ -127,7 +129,7 @@ ms.lasthandoff: 03/02/2018
     ```
 
 <a name="net_d"></a> 
-#### <a name="to-find-net-framework-versions-by-querying-the-registry-in-code-net-framework-45-and-later"></a>Поиск версий .NET Framework путем отправки запроса в реестр (.NET Framework 4.5 и более поздних версий)
+## <a name="to-find-net-framework-versions-by-querying-the-registry-in-code-net-framework-45-and-later"></a>Поиск версий .NET Framework путем отправки запроса в реестр (.NET Framework 4.5 и более поздних версий)
 
 1. Наличие значения DWORD `Release` указывает, что на компьютере установлена платформа .NET Framework 4.5 или более поздней версии. Значение ключевого слова указывает на установленную версию. Чтобы проверить это ключевое слово, используйте методы <xref:Microsoft.Win32.RegistryKey.OpenBaseKey%2A> и <xref:Microsoft.Win32.RegistryKey.OpenSubKey%2A> класса <xref:Microsoft.Win32.RegistryKey?displayProperty=nameWithType> для доступа к подразделу Software\Microsoft\NET Framework Setup\NDP\v4\Full в разделе HKEY_LOCAL_MACHINE реестра Windows.
 
@@ -164,7 +166,7 @@ ms.lasthandoff: 03/02/2018
     - Проверка выполняется с самой последней до самой ранней версии.
 
 <a name="ps_a"></a> 
-#### <a name="to-check-for-a-minimum-required-net-framework-version-by-querying-the-registry-in-powershell-net-framework-45-and-later"></a>Проверка минимальной необходимой версии .NET Framework путем запроса к реестру в PowerShell (.NET Framework 4.5 и более поздние версии)
+## <a name="to-check-for-a-minimum-required-net-framework-version-by-querying-the-registry-in-powershell-net-framework-45-and-later"></a>Проверка минимальной необходимой версии .NET Framework путем запроса к реестру в PowerShell (.NET Framework 4.5 и более поздние версии)
 
 - В приведенном ниже примере проверяется значение ключевого слова `Release` для определения того, установлена ли версия .NET Framework 4.6.2 или более поздняя, вне зависимости от версии Windows (если да, возвращается значение `True`; в противном случае возвращается значение `False`).
 
@@ -186,7 +188,7 @@ ms.lasthandoff: 03/02/2018
     |.NET Framework 4.7.1|461308|
     
 <a name="clr_a"></a> 
-#### <a name="to-find-the-current-runtime-version-by-using-the-clrver-tool"></a>Поиск текущей версии среды выполнения с помощью средства Clrver
+## <a name="to-find-the-current-runtime-version-by-using-the-clrver-tool"></a>Поиск текущей версии среды выполнения с помощью средства Clrver
 
 - Для определения версий среды CLR, установленных на компьютере, можно использовать инструмент CLR Version (Clrver.exe).
 
@@ -201,7 +203,7 @@ ms.lasthandoff: 03/02/2018
      Дополнительные сведения об использовании этого инструмента см. в разделе [Clrver.exe (CLR Version Tool)](~/docs/framework/tools/clrver-exe-clr-version-tool.md).
 
 <a name="clr_b"></a> 
-#### <a name="to-find-the-current-runtime-version-by-querying-the-environment-class-in-code"></a>Поиск текущей версии среды выполнения путем запроса класса Environment в коде
+## <a name="to-find-the-current-runtime-version-by-querying-the-environment-class-in-code"></a>Поиск текущей версии среды выполнения путем запроса класса Environment в коде
 
 - Запросите извлекаемое свойство <xref:System.Environment.Version%2A?displayProperty=nameWithType>, чтобы получить объект <xref:System.Version>, определяющий версию среды выполнения, в которой в данный момент выполняется код. Можно использовать свойство <xref:System.Version.Major%2A?displayProperty=nameWithType>, чтобы получить идентификатор основного выпуска (например, "4" в случае версии 4,0), свойство <xref:System.Version.Minor%2A?displayProperty=nameWithType>, чтобы получить идентификатор дополнительного номера версии (например, "0" в случае версии 4,0), либо метод <xref:System.Object.ToString%2A?displayProperty=nameWithType>, чтобы получить всю строку версии (например, "4.0.30319.18010", как показано в следующем коде). Это свойство возвращает одно значение, отражающее версию среды выполнения, в которой в данный момент выполняется код; оно не возвращает версии сборок или другие версии среды выполнения, которые могут быть установлены на компьютере.
 
@@ -222,6 +224,7 @@ ms.lasthandoff: 03/02/2018
     ```
 
 ## <a name="see-also"></a>См. также
- [Практическое руководство. Определение установленных обновлений платформы .NET Framework](~/docs/framework/migration-guide/how-to-determine-which-net-framework-updates-are-installed.md)  
- [Установка .NET Framework для разработчиков](../../../docs/framework/install/guide-for-developers.md)  
- [Версии и зависимости](~/docs/framework/migration-guide/versions-and-dependencies.md)
+
+[Практическое руководство. Определение установленных обновлений платформы .NET Framework](~/docs/framework/migration-guide/how-to-determine-which-net-framework-updates-are-installed.md)  
+[Установка .NET Framework для разработчиков](../../../docs/framework/install/guide-for-developers.md)  
+[Версии и зависимости](~/docs/framework/migration-guide/versions-and-dependencies.md)  

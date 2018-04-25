@@ -1,5 +1,5 @@
 ---
-title: "Пошаговое руководство. Программирование приложений Office (C# и Visual Basic)"
+title: Пошаговое руководство. Программирование приложений Office (C# и Visual Basic)
 ms.date: 07/20/2015
 ms.prod: .net
 ms.technology:
@@ -13,19 +13,18 @@ helpviewer_keywords:
 - Office programming [C#]
 - Office programming [Visual Basic]
 ms.assetid: 519cff31-f80b-4f0e-a56b-26358d0f8c51
-caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 684fe023d46d3522aecd3cbd4d89e7f9ee92140f
-ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
+ms.openlocfilehash: 7108ef10333b2ec7aded1b8f768c2953283ac625
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="walkthrough-office-programming-c-and-visual-basic"></a>Пошаговое руководство. Программирование приложений Office (C# и Visual Basic)
 Visual Studio предлагает новые функции C# и Visual Basic, позволяющие улучшить программирование для Microsoft Office. В число полезных функций C# входят именованные и необязательные аргументы и возвращаемые значения типа `dynamic`. В программировании COM можно опустить ключевое слово `ref` и получить доступ к индексированным свойствам. Список функций Visual Basic включает автоматически реализуемые свойства, инструкции в лямбда-выражениях и инициализаторы коллекций.
 
-Оба языка поддерживают внедрение сведений о типах, что позволяет развертывать сборки, взаимодействующие с компонентами COM, без предварительного развертывания на компьютере основных сборок взаимодействия (PIA). Дополнительные сведения см. в разделе [Пошаговое руководство. Внедрение данных о типах из управляемых сборок](http://msdn.microsoft.com/library/b28ec92c-1867-4847-95c0-61adfe095e21).  
+Оба языка поддерживают внедрение сведений о типах, что позволяет развертывать сборки, взаимодействующие с компонентами COM, без предварительного развертывания на компьютере основных сборок взаимодействия (PIA). Дополнительные сведения см. в разделе [Пошаговое руководство. Внедрение данных о типах из управляемых сборок](https://msdn.microsoft.com/library/b28ec92c-1867-4847-95c0-61adfe095e21).  
   
 В данном пошаговом руководстве эти возможности показаны в контексте программирования для Microsoft Office, но многие из них могут оказаться полезными и в других ситуациях. В этом пошаговом руководстве вы создадите книгу Excel с помощью надстройки Excel, а затем документ Word со ссылкой на эту книгу. Наконец, вы узнаете, как включать и отключать зависимость PIA.  
   
@@ -210,8 +209,8 @@ Visual Studio предлагает новые функции C# и Visual Basic,
  [Лямбда-выражения (Visual Basic)](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)  
  [Лямбда-выражения (C#)](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)  
  [Практическое руководство. Использование индексированных свойств в программировании COM-взаимодействия](../../../csharp/programming-guide/interop/how-to-use-indexed-properties-in-com-interop-rogramming.md)  
- [Пошаговое руководство. Внедрение данных о типе из сборок для приложений Microsoft Office](http://msdn.microsoft.com/library/85b55e05-bc5e-4665-b6ae-e1ada9299fd3)  
- [Пошаговое руководство. Внедрение данных о типах из управляемых сборок](http://msdn.microsoft.com/library/b28ec92c-1867-4847-95c0-61adfe095e21)  
- [Пошаговое руководство. Создание первой надстройки VSTO для Excel](http://msdn.microsoft.com/library/a855e2be-3ecf-4112-a7f5-ec0f7fad3b5f)  
+ [Пошаговое руководство. Внедрение данных о типе из сборок для приложений Microsoft Office](https://msdn.microsoft.com/library/85b55e05-bc5e-4665-b6ae-e1ada9299fd3(v=vs.100))  
+ [Пошаговое руководство. Внедрение данных о типах из управляемых сборок](https://msdn.microsoft.com/library/b28ec92c-1867-4847-95c0-61adfe095e21)  
+ [Пошаговое руководство. Создание первой надстройки VSTO для Excel](https://msdn.microsoft.com/library/a855e2be-3ecf-4112-a7f5-ec0f7fad3b5f)  
  [COM-взаимодействие](../../../visual-basic/programming-guide/com-interop/index.md)  
  [Взаимодействие](../../../csharp/programming-guide/interop/index.md)

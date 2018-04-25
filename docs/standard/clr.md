@@ -1,5 +1,5 @@
 ---
-title: "среда CLR"
+title: среда CLR
 ms.custom: updateeachrelease
 ms.date: 10/17/2017
 ms.prod: .net
@@ -24,11 +24,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 4aa9a6d37a52d5f15643e9179060450a2d7a34c4
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 2993fbcdc1caf73147c252a0d501e65478a3d08d
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="common-language-runtime-clr"></a>Среда CLR
 .NET Framework предоставляет среду выполнения (среду CLR), которая выполняет код и предлагает службы, облегчающие процесс разработки.  
@@ -87,7 +87,7 @@ ms.lasthandoff: 01/19/2018
 |-----------|-----------------|  
 |[Процесс управляемого выполнения](../../docs/standard/managed-execution-process.md)|Описание шагов, необходимых для использования преимуществ общеязыковой среды выполнения.|  
 |[Автоматическое управление памятью](../../docs/standard/automatic-memory-management.md)|Описание выделения и освобождения памяти сборщиком мусора.|  
-|[NIB: общие сведения о платформе .NET Framework](http://msdn.microsoft.com/library/ea38ac1e-92af-4d1b-8db1-e8a5ea10ed85)|Описание ключевых понятий платформы .NET Framework: системы общих типов CTS, межъязыкового взаимодействия, управляемого выполнения, доменов приложений и сборок.|  
+|[NIB: общие сведения о платформе .NET Framework](https://msdn.microsoft.com/library/ea38ac1e-92af-4d1b-8db1-e8a5ea10ed85)|Описание ключевых понятий платформы .NET Framework: системы общих типов CTS, межъязыкового взаимодействия, управляемого выполнения, доменов приложений и сборок.|  
 |[Система общих типов CTS](../../docs/standard/base-types/common-type-system.md)|Описание того, как типы объявляются, используются и контролируются в среде выполнения в рамках поддержки межъязыковой интеграции.|  
   
 ## <a name="see-also"></a>См. также  

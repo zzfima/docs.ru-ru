@@ -1,12 +1,12 @@
 ---
-title: "Практическое руководство. Перебор каталогов с файлами с помощью параллельного класса"
-ms.custom: 
+title: Практическое руководство. Перебор каталогов с файлами с помощью параллельного класса
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -14,18 +14,18 @@ dev_langs:
 helpviewer_keywords:
 - parallel loops, how to iterate directories
 ms.assetid: 555e9f48-f53d-4774-9bcf-3e965c732ec5
-caps.latest.revision: 
+caps.latest.revision: 8
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 3ac1af7922e1bbd81f4dfcee256f5c8892294003
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 449f7c9e3dfd4c74ad67cea9cbc08104f07bc680
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="how-to-iterate-file-directories-with-the-parallel-class"></a>Практическое руководство. Перебор каталогов с файлами с помощью параллельного класса
 Во многих случаях итерацию файла можно легко параллелизовать. В статье [Практическое руководство. Перебор каталогов с файлами с помощью PLINQ](../../../docs/standard/parallel-programming/how-to-iterate-file-directories-with-plinq.md) демонстрируется самый простой способ, позволяющий выполнить эту задачу во многих сценариях. Но с ним могут возникнуть трудности, если код должен поддерживать много разных исключений, которые могут возникнуть при доступе к файловой системе. В примере ниже представлен один из подходов к решению этой проблемы. Он применяет итерацию на основе стека для просмотра всех файлов и папок в указанном каталоге и позволяет перехватывать и обрабатывать разные исключения в пользовательском коде. Разумеется, за вами остается конкретный механизм обработки исключений.  
@@ -40,7 +40,7 @@ ms.lasthandoff: 01/19/2018
   
  В этом примере используется локальная переменная `fileCount` для учета общего количества обработанных файлов. Поскольку доступ к этой переменной могут получать одновременно несколько задач, доступ к ней синхронизируется путем вызова метода <xref:System.Threading.Interlocked.Add%2A?displayProperty=nameWithType>.  
   
- Обратите внимание, что создание исключений в основном потоке не всегда приводит к остановке потоков, запущенных из метода <xref:System.Threading.Tasks.Parallel.ForEach%2A>. Чтобы остановить эти потоки, создайте в обработчиках исключений логическую переменную и проверяйте ее значение при каждой итерации параллельного цикла. Если значение указывает на созданное исключение, остановите или прервите выполнение цикла с помощью переменной <xref:System.Threading.Tasks.ParallelLoopState>. Подробнее см. статью [How to: Stop or Break from a Parallel.For Loop](http://msdn.microsoft.com/library/de52e4f1-9346-4ad5-b582-1a4d54dc7f7e) (Практическое руководство. Остановка цикла Parallel.For или выход из этого цикла).  
+ Обратите внимание, что создание исключений в основном потоке не всегда приводит к остановке потоков, запущенных из метода <xref:System.Threading.Tasks.Parallel.ForEach%2A>. Чтобы остановить эти потоки, создайте в обработчиках исключений логическую переменную и проверяйте ее значение при каждой итерации параллельного цикла. Если значение указывает на созданное исключение, остановите или прервите выполнение цикла с помощью переменной <xref:System.Threading.Tasks.ParallelLoopState>. Подробнее см. статью [How to: Stop or Break from a Parallel.For Loop](https://msdn.microsoft.com/library/de52e4f1-9346-4ad5-b582-1a4d54dc7f7e) (Практическое руководство. Остановка цикла Parallel.For или выход из этого цикла).  
   
 ## <a name="see-also"></a>См. также  
  [Параллелизм данных](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md)

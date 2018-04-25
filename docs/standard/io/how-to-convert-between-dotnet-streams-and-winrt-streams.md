@@ -1,29 +1,29 @@
 ---
-title: "Практическое руководство. Преобразование между потоками .NET Framework и потоками среды выполнения Windows"
-ms.custom: 
+title: Практическое руководство. Преобразование между потоками .NET Framework и потоками среды выполнения Windows
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 23a763ea-8348-4244-9f8c-a4280b870b47
-caps.latest.revision: 
+caps.latest.revision: 15
 author: mairaw
 ms.author: mairaw
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: d9e4c1c0b432ff44af0410b1efdc3940cd0ff19c
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 25df0b363e5c9b44ae51d14ef0c2286cbb80ced8
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="how-to-convert-between-net-framework-streams-and-windows-runtime-streams"></a>Практическое руководство. Преобразование между потоками .NET Framework и потоками среды выполнения Windows
 .NET Framework для приложений Магазина Windows — это подмножество полной платформы .NET Framework. Из-за требований к безопасности и другим аспектам в приложениях Магазина Windows нельзя использовать полный набор API платформы .NET Framework для открытия и чтения файлов. Дополнительные сведения см. в статье [Обзор .NET для приложений Магазина Windows](http://msdn.microsoft.com/library/windows/apps/br230302.aspx). Однако может потребоваться использовать API платформы .NET Framework для других операций обработки потока. Для работы с потоками может потребоваться выполнить преобразование между типом потока .NET Framework, таким как <xref:System.IO.MemoryStream> или <xref:System.IO.FileStream>, и потоком среды выполнения Windows, таким как [IInputStream](http://msdn.microsoft.com/library/windows/apps/windows.storage.streams.iinputstream.aspx), [IOutputStream](http://msdn.microsoft.com/library/windows/apps/windows.storage.streams.ioutputstream.aspx)или [IRandomAccessStream](http://msdn.microsoft.com/library/windows/apps/windows.storage.streams.irandomaccessstream.aspx).  
@@ -90,6 +90,6 @@ ms.lasthandoff: 12/23/2017
     [!code-vb[System.IO.WindowsRuntimeStreamExtensionsEx#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.io.windowsruntimestreamextensionsex/vb/mainpage.xaml.vb#2)]  
   
 ## <a name="see-also"></a>См. также  
- [Краткое руководство. Чтение и запись файлов (Windows)](http://msdn.microsoft.com/library/windows/apps/hh464978.aspx)  
+ [Краткое руководство. Чтение и запись файлов (Windows)](https://msdn.microsoft.com/library/windows/apps/hh464978.aspx)  
  [Общие сведения о платформе .NET для приложений Магазина Windows](http://msdn.microsoft.com/library/windows/apps/br230302.aspx)  
- [Поддерживаемые API .NET для приложений Магазина Windows](http://msdn.microsoft.com/library/windows/apps/br230232.aspx)
+ [Поддерживаемые API .NET для приложений Магазина Windows](https://msdn.microsoft.com/library/windows/apps/br230232.aspx)

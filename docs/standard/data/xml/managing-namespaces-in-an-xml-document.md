@@ -1,26 +1,26 @@
 ---
-title: "Управление пространствами имен в XML-документе"
-ms.custom: 
+title: Управление пространствами имен в XML-документе
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 682643fc-b848-4e42-8c0d-50deeaeb5f2a
-caps.latest.revision: 
+caps.latest.revision: 5
 author: mairaw
 ms.author: mairaw
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 7901f4bf88215f84445c1d222e6582e0a063c25a
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 211d4f2ee3f47e1defdc8a3bd4fc81618fa3fefd
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="managing-namespaces-in-an-xml-document"></a>Управление пространствами имен в XML-документе
 Пространства имен XML связывают имена элементов и атрибутов в XML-документе с пользовательскими и стандартными URI. Для создания этих связей определяются префиксы для URI пространства имен, с помощью которых затем квалифицируются имена элементов и атрибутов в XML-данных. Пространства имен предотвращают конфликты имен элементов и атрибутов, а также позволяют обрабатывать и проверять элементы и атрибуты с одним и тем же именем.  
@@ -70,10 +70,10 @@ ms.lasthandoff: 12/23/2017
 ## <a name="managing-namespaces"></a>Управление пространствами имен  
  В классе <xref:System.Xml.XmlNamespaceManager> хранится коллекция URI пространств имен и их префиксов. С его помощью можно искать, добавлять и удалять пространства имен из этой коллекции. В некоторых контекстах этот класс необходим для повышения производительности обработки XML. Например, класс <xref:System.Xml.Xsl.XsltContext> используется классом <xref:System.Xml.XmlNamespaceManager> для обеспечения поддержки XPath.  
   
- Диспетчер пространств имен не выполняет проверку пространств имен, так как предполагается, что префиксы и пространства имен уже проверены и соответствуют спецификации [W3C для пространств имен](http://www.w3.org/TR/REC-xml-names/).  
+ Диспетчер пространств имен не выполняет проверку пространств имен, так как предполагается, что префиксы и пространства имен уже проверены и соответствуют спецификации [W3C для пространств имен](https://www.w3.org/TR/REC-xml-names/).  
   
 > [!NOTE]
->  [LINQ to XML](http://msdn.microsoft.com/library/f0fe21e9-ee43-4a55-b91a-0800e5782c13) не использует <xref:System.Xml.XmlNamespaceManager> для управления пространствами имен. Дополнительные сведения об [управлении пространствами имен в случае использования LINQ to XML](http://msdn.microsoft.com/library/e3003209-3234-45be-a832-47feb7927430) см. в документации по LINQ.  
+>  [LINQ to XML](https://msdn.microsoft.com/library/f0fe21e9-ee43-4a55-b91a-0800e5782c13) не использует <xref:System.Xml.XmlNamespaceManager> для управления пространствами имен. Дополнительные сведения об [управлении пространствами имен в случае использования LINQ to XML](https://msdn.microsoft.com/library/e3003209-3234-45be-a832-47feb7927430) см. в документации по LINQ.  
   
  Вот некоторые из задач по управлению и подстановке, которые можно выполнить с помощью класса <xref:System.Xml.XmlNamespaceManager>. Дополнительные сведения и примеры см. в разделах справочника, посвященных каждому методу или свойству.  
   

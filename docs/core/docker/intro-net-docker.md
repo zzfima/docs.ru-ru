@@ -1,6 +1,6 @@
 ---
-title: "Введение в .NET и Docker"
-description: "Общие сведения о Docker и .NET Core"
+title: Введение в .NET и Docker
+description: Общие сведения о Docker и .NET Core
 keywords: .NET, .NET Core, Docker
 author: jralexander
 ms.author: johalex
@@ -14,11 +14,11 @@ manager: wpickett
 ms.custom: mvc
 ms.workload:
 - dotnetcore
-ms.openlocfilehash: dabc7c0c4a0afab8edf7d2bab410bb9635821936
-ms.sourcegitcommit: 75a180acb5d8a2dbd4a52915ce8e980749fb1d05
+ms.openlocfilehash: 75c631cf0abac543889cb7387f6fc3fdb2624512
+ms.sourcegitcommit: 68b60d38043e50104ccc90c76f8599b1ffe18346
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/24/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="introduction-to-net-and-docker"></a>Введение в .NET и Docker
 
@@ -105,15 +105,15 @@ ms.lasthandoff: 02/24/2018
 
 **.NET Framework 4.7**
 
-Пример [dotnet-framework:4.7](https://github.com/Microsoft/dotnet-framework-docker-samples/tree/master/dotnetapp-4.7) демонстрирует использование базового приложения Hello World на платформе [.NET Framework 4.7](../../framework/whats-new/index.md#v47). Также в нем показано, как создать и развернуть приложение на основе [образа Docker для .NET Framework 4.7](https://github.com/Microsoft/dotnet-framework-docker/blob/master/4.7/Dockerfile).
+Пример [dotnet-framework:4.7](https://github.com/Microsoft/dotnet-framework-docker-samples/tree/master/dotnetapp-4.7) демонстрирует использование базового приложения Hello World на платформе [.NET Framework 4.7](../../framework/whats-new/index.md#v47). Также в нем показано, как создать и развернуть приложение на основе [образа Docker для .NET Framework 4.7](https://github.com/Microsoft/dotnet-framework-docker-samples/blob/master/dotnetapp-4.7/Dockerfile).
 
 **.NET Framework 4.6.2**
 
-В примере [dotnet-framework:4.6.2](https://github.com/Microsoft/dotnet-framework-docker-samples/tree/master/dotnetapp-4.6.2) демонстрируется использование базового приложения Hello World на платформе [.NET Framework 4.6.2](../../framework/whats-new/index.md#v462). Также в нем показано, как создать и развернуть приложение на основе [образа Docker для .NET Framework 4.6.2](https://github.com/Microsoft/dotnet-framework-docker/tree/master/4.6.2)
+В примере [dotnet-framework:4.6.2](https://github.com/Microsoft/dotnet-framework-docker-samples/tree/master/dotnetapp-4.6.2) демонстрируется использование базового приложения Hello World на платформе [.NET Framework 4.6.2](../../framework/whats-new/index.md#v462). Также в нем показано, как создать и развернуть приложение на основе [образа Docker для .NET Framework 4.6.2](https://github.com/Microsoft/dotnet-framework-docker-samples/blob/master/dotnetapp-4.6.2/Dockerfile)
 
 **.NET Framework 3.5**
 
- В примере [dotnet-framework:3.5](https://github.com/Microsoft/dotnet-framework-docker-samples/tree/master/dotnetapp-3.5) демонстрируется использование базового приложения Hello World на платформе [.NET Framework 3.5](https://github.com/Microsoft/dotnet-framework-docker/tree/master/3.5). Также в нем показано, как создать и развернуть проект на основе .NET Framework 3.5 в Docker.
+ В примере [dotnet-framework:3.5](https://github.com/Microsoft/dotnet-framework-docker-samples/tree/master/dotnetapp-3.5) демонстрируется использование базового приложения Hello World на платформе [.NET Framework 3.5](https://github.com/Microsoft/dotnet-framework-docker-samples/blob/master/dotnetapp-3.5/dotnetapp-3.5/Dockerfile). Также в нем показано, как создать и развернуть проект на основе .NET Framework 3.5 в Docker.
 
 #### <a name="aspnet-core"></a>ASP.NET Core
 
@@ -133,7 +133,7 @@ ms.lasthandoff: 02/24/2018
 
 * [Образы для WCF в Docker Hub](https://hub.docker.com/r/microsoft/wcf/)
 
-* [Образы для WCF в GitHub](https://github.com/microsoft/iis-docker)
+* [Образы для WCF в GitHub](https://github.com/microsoft/wcf-docker)
 
 * [Примеры Docker для WCF с использованием .NET Full Framework 4.6.2](https://github.com/Microsoft/wcf-docker-samples)
 
@@ -141,7 +141,7 @@ ms.lasthandoff: 02/24/2018
 
 * [Образы для IIS в Docker Hub](https://hub.docker.com/r/microsoft/iis/)
 
-* [Образы для IIS в GitHub](https://github.com/microsoft/wcf-docker)
+* [Образы для IIS в GitHub](https://github.com/microsoft/iis-docker)
 
 ### <a name="interact-with-other-microsoft-stack-container-images"></a>Взаимодействие с другими образами контейнеров стека Microsoft
 
@@ -149,9 +149,7 @@ ms.lasthandoff: 02/24/2018
 
 * [Краткое руководство по запуску образа контейнера Microsoft SQL Server для Linux 2017 с помощью Docker](https://docs.microsoft.com/sql/linux/quickstart-install-connect-docker)
 
-* [Образы Microsoft SQL Server для Linux в Docker Hub](https://hub.docker.com/r/microsoft/mssql-server-windows/)
-
-* [Образы контейнеров Microsoft SQL Server для Windows в Docker Hub](https://hub.docker.com/r/microsoft/mssql-server-windows/)
+* [Образы Microsoft SQL Server для Linux в Docker Hub](https://hub.docker.com/r/microsoft/mssql-server-linux/)
 
 * [Образы для выпуска Microsoft SQL Server Express для контейнеров Windows в Docker Hub](https://hub.docker.com/r/microsoft/mssql-server-windows-express/)
 
@@ -165,9 +163,9 @@ ms.lasthandoff: 02/24/2018
 
 #### <a name="operations-management-suite-oms-linux-agent"></a>Агент Operations Management Suite (OMS) для Linux
 
-* [Обзор агента OMS для Linux](https://github.com/Microsoft/OMS-Agent-for-Linux/blob/master/docs/Docker-Instructions.md#overview)
+* [Обзор агента OMS для Linux](https://github.com/Microsoft/OMS-Agent-for-Linux/blob/master/docs/Docker-Instructions.md)
 
-* [Образы для агента OMS для Linux в Docker Hub](https://hub.docker.com/r/microsoft/vsts-agent/)
+* [Образы для агента OMS для Linux в Docker Hub](https://hub.docker.com/r/microsoft/oms/)
 
 * [Образы для агента OMS в GitHub](https://github.com/Microsoft/OMS-docker)
 
@@ -175,7 +173,7 @@ ms.lasthandoff: 02/24/2018
 
 * [Образы для Microsoft Azure CLI в Docker Hub](https://hub.docker.com/r/microsoft/azure-cli/) 
 
-* [Образы для Microsoft Azure CLI в GitHub](https://github.com/Microsoft/OMS-docker)
+* [Образы для Microsoft Azure CLI в GitHub](https://github.com/Azure/azure-cli#Docker)
 
 > [!NOTE]
 > Если у вас нет подписки Azure, [зарегистрируйте сейчас](https://azure.microsoft.com/free/?b=16.48) бесплатную учетную запись на 30 дней и получите 200 долл. США на счет в Azure, чтобы опробовать любое сочетание служб Azure.

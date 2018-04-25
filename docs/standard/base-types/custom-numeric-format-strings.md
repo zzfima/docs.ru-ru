@@ -29,11 +29,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: b33acfef1cabd3aa53fbe8947bd7adbe52d3b7a4
-ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
+ms.openlocfilehash: 1b0940432d3fd201979b537752b917d60a10d22e
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="custom-numeric-format-strings"></a>Строки настраиваемых числовых форматов
 Чтобы определить способ форматирования числовых данных, можно создать строку настраиваемого числового формата, состоящую из одного или нескольких описателей настраиваемого формата. Строка настраиваемого числового формата — это любая строка формата, не являющаяся [строкой стандартного числового формата](../../../docs/standard/base-types/standard-numeric-format-strings.md).  
@@ -41,7 +41,7 @@ ms.lasthandoff: 03/28/2018
  Строки настраиваемых числовых форматов поддерживаются некоторыми перегрузками метода `ToString` всех числовых типов. Например, можно задать строку числового формата для методов <xref:System.Int32.ToString%28System.String%29> и <xref:System.Int32.ToString%28System.String%2CSystem.IFormatProvider%29> типа <xref:System.Int32> . Строки настраиваемых числовых форматов также поддерживаются [функцией составного форматирования .NET Framework](../../../docs/standard/base-types/composite-formatting.md), используемой некоторыми методами `Write` и `WriteLine` классов <xref:System.Console> и <xref:System.IO.StreamWriter>, а также методами <xref:System.String.Format%2A?displayProperty=nameWithType> и <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType>. Функция [интерполяции строк](../../csharp/language-reference/tokens/interpolated.md) также поддерживает строки настраиваемого числового формата.  
   
 > [!TIP]
->  Вы можете загрузить [служебную программу форматирования](http://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)— приложение, позволяющее применять строки формата к значениям даты и времени и числовым значениям и отображающее результирующую строку.  
+>  Вы можете загрузить [Служебную программу форматирования](https://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d), которая применяет строки формата к значениям даты и времени или числовым значениям и отображает результирующую строку.  
   
 <a name="table"></a> В следующей таблице приведены описатели стандартного числового формата и примеры выходных данных, формируемых каждым описателем формата. Дополнительные сведения об использовании строк настраиваемого числового формата см. в разделе [Примечания](#NotesCustomFormatting) ; обширную демонстрацию их использования см. в разделе [Пример](#example) .  
   
@@ -243,4 +243,4 @@ ms.lasthandoff: 03/28/2018
  [Типы форматирования](../../../docs/standard/base-types/formatting-types.md)  
  [Standard Numeric Format Strings](../../../docs/standard/base-types/standard-numeric-format-strings.md)  
  [Практическое руководство. Добавление к числу начальных нулей](../../../docs/standard/base-types/how-to-pad-a-number-with-leading-zeros.md)  
- [Пример. Служебная программа форматирования для .NET Framework 4](http://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)
+ [Пример. Служебная программа форматирования для .NET Framework 4](https://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)

@@ -1,6 +1,6 @@
 ---
-title: "Построение деревьев выражений"
-description: "Сведения о способах построения деревьев выражений."
+title: Построение деревьев выражений
+description: Сведения о способах построения деревьев выражений.
 keywords: .NET, .NET Core
 author: BillWagner
 ms.author: wiwagn
@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 542754a9-7f40-4293-b299-b9f80241902c
-ms.openlocfilehash: c0d7bcf6e07f4a49e15e6f6f4e028eebfe82d8bf
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 7e45f566f66c129111c65a1166a6c71ff518dfc7
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="building-expression-trees"></a>Построение деревьев выражений
 
@@ -169,7 +169,7 @@ BlockExpression body = Expression.Block(
 
 Код для создания дерева выражения для функции факториала немного больше, более сложен и содержит операторы меток и прерываний и другие элементы, использования которых хотелось бы избежать при выполнении ежедневных задач по созданию кода. 
 
-Для работы в этом разделе также обновлен код посетителя для просмотра каждого узла в этом дереве выражения и записи сведений об узлах, созданных в этом примере. [Просмотреть или скачать пример кода](https://github.com/dotnet/docs/tree/master/samples/csharp/expression-trees) можно в репозитории dotnet/docs на сайте GitHub. Поэкспериментируйте со сборкой и использованием примеров кода. Инструкции по загрузке см. в разделе [Просмотр и скачивание примеров](../samples-and-tutorials/index.md#viewing-and-downloading-samples).
+Для работы в этом разделе также обновлен код посетителя для просмотра каждого узла в этом дереве выражения и записи сведений об узлах, созданных в этом примере. [Просмотреть или скачать пример кода](https://github.com/dotnet/samples/tree/master/csharp/expression-trees) можно в репозитории dotnet/docs на сайте GitHub. Поэкспериментируйте со сборкой и использованием примеров кода. Инструкции по загрузке см. в разделе [Просмотр и скачивание примеров](../samples-and-tutorials/index.md#viewing-and-downloading-samples).
 
 ## <a name="examining-the-apis"></a>Изучение API-интерфейсов
 

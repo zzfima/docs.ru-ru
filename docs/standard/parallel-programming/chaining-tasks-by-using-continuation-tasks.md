@@ -14,18 +14,18 @@ dev_langs:
 helpviewer_keywords:
 - tasks, continuations
 ms.assetid: 0b45e9a2-de28-46ce-8212-1817280ed42d
-caps.latest.revision: ''
+caps.latest.revision: 30
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: b8e21c338648d5925c8576f76dae3aae43a9ca0d
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
-ms.translationtype: MT
+ms.openlocfilehash: 64a6fd2f5cbaee17ac35d7b4bd6f08326eafac64
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="chaining-tasks-by-using-continuation-tasks"></a>Создание цепочки задач с помощью задач продолжения
 В асинхронном программировании очень распространено при завершении одной асинхронной операции вызывать вторую операцию и передавать в нее данные. В большинстве случаев это делается с помощью методов обратного вызова. В библиотеке параллельных задач эта функциональность обеспечивается *задачами продолжения*. Задача продолжения (также называемая просто продолжением) — это асинхронная задача, вызываемая другой задачей, которая называется *предшествующей*, при завершении этой предшествующей задачи.  
@@ -155,7 +155,7 @@ ms.lasthandoff: 03/26/2018
      [!code-csharp[TPL_Continuations#11](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_continuations/cs/exception2.cs#11)]
      [!code-vb[TPL_Continuations#11](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_continuations/vb/exception2.vb#11)]  
   
-     Дополнительные сведения см. в статьях [Обработка исключений](../../../docs/standard/parallel-programming/exception-handling-task-parallel-library.md) и [NIB. Практическое руководство. Обработка исключений, создаваемых задачами](http://msdn.microsoft.com/library/d6c47ec8-9de9-4880-beb3-ff19ae51565d).  
+     Дополнительные сведения см. в статьях [Обработка исключений](../../../docs/standard/parallel-programming/exception-handling-task-parallel-library.md) и [NIB. Практическое руководство. Обработка исключений, создаваемых задачами](https://msdn.microsoft.com/library/d6c47ec8-9de9-4880-beb3-ff19ae51565d).  
   
 -   Если продолжение является присоединенной дочерней задачей, созданной с использованием параметра <xref:System.Threading.Tasks.TaskContinuationOptions.AttachedToParent?displayProperty=nameWithType>, его исключения будут распространяться родительской задачей обратно в вызывающий поток, как и в случае любой другой присоединенной дочерней задачи. Дополнительные сведения см. в разделе [Присоединенные и отсоединенные дочерние задачи](../../../docs/standard/parallel-programming/attached-and-detached-child-tasks.md).  
   

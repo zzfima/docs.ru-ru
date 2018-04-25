@@ -1,12 +1,12 @@
 ---
-title: "Элементы языка регулярных выражений — краткий справочник"
-ms.custom: 
+title: Элементы языка регулярных выражений — краткий справочник
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - VS.RegularExpressionBuilder
@@ -20,18 +20,18 @@ helpviewer_keywords:
 - cheat sheet
 - .NET Framework regular expressions, language elements
 ms.assetid: 930653a6-95d2-4697-9d5a-52d11bb6fd4c
-caps.latest.revision: 
+caps.latest.revision: 56
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: a0fed14784327c6fe16f083a22471b56032b6b5d
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: b8e43264619158ed9325875d9843e322e08872a4
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="regular-expression-language---quick-reference"></a>Элементы языка регулярных выражений — краткий справочник
 <a name="top"></a> Регулярное выражение — это шаблон, который обработчик регулярных выражений пытается сопоставить с введенным текстом. Шаблон состоит из односимвольных или многосимвольных литералов, операторов или конструкций.  См. краткое описание [регулярных выражений .NET](../../../docs/standard/base-types/regular-expressions.md).  
@@ -51,8 +51,8 @@ ms.lasthandoff: 12/23/2017
   
  Мы также представили эту информацию в двух форматах, чтобы вы могли ее загрузить и распечатать для справки:  
   
- [Загрузить в формате Word (DOCX)](http://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.docx)  
- [Скачать в формате PDF (.pdf)](http://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.pdf)  
+ [Скачать в формате Word (.docx)](https://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.docx)  
+ [Скачать в формате PDF (.pdf)](https://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.pdf)  
   
 <a name="character_escapes"></a>   
 ## <a name="character-escapes"></a>Escape-знаки  
@@ -144,13 +144,13 @@ ms.lasthandoff: 12/23/2017
 |`?`|Соответствует предыдущему элементу ноль или один раз.|`"rai?n"`|"ran", "rain"|  
 |`{` *n* `}`|Предыдущий элемент повторяется ровно *n* раз.|`",\d{3}"`|",043" в "1,043.6", ",876", ",543" и ",210" в "9,876,543,210"|  
 |`{` *n* `,}`|Предыдущий элемент повторяется как минимум *n* раз.|`"\d{2,}"`|"166", "29", "1930"|  
-|`{` *n* `,` *м* `}`|Предыдущий элемент повторяется как минимум *n* раз, но не более чем *м* раз.|`"\d{3,5}"`|"166", "17668"<br /><br /> "19302" в "193024"|  
+|`{` *n* `,` *м* `}`|Предыдущий элемент повторяется как минимум *n* раз, но не более чем *m* раз.|`"\d{3,5}"`|"166", "17668"<br /><br /> "19302" в "193024"|  
 |`*?`|Предыдущий элемент не повторяется вообще или повторяется, но как можно меньшее число раз.|`\d*?\.\d`|".0", "19.9", "219.9"|  
 |`+?`|Предыдущий элемент повторяется один или несколько раз, но как можно меньшее число раз.|`"be+?"`|"be" в "been", "be" в "bent"|  
 |`??`|Предыдущий элемент не повторяется или повторяется один раз, но как можно меньшее число раз.|`"rai??n"`|"ran", "rain"|  
 |`{` *n* `}?`|Предыдущий элемент повторяется ровно *n* раз.|`",\d{3}?"`|",043" в "1,043.6", ",876", ",543" и ",210" в "9,876,543,210"|  
 |`{` *n* `,}?`|Предыдущий элемент повторяется как минимум *n* раз (как можно меньше).|`"\d{2,}?"`|"166", "29", "1930"|  
-|`{` *n* `,` *м* `}?`|Предыдущий элемент повторяется не менее *n* и не более *м* раз (как можно меньше).|`"\d{3,5}?"`|"166", "17668"<br /><br /> "193", "024" в "193024"|  
+|`{` *n* `,` *м* `}?`|Предыдущий элемент повторяется не менее *n* и не более *m* раз (как можно меньше).|`"\d{3,5}?"`|"166", "17668"<br /><br /> "193", "024" в "193024"|  
   
  [К началу](#top)  
   
@@ -232,5 +232,5 @@ ms.lasthandoff: 12/23/2017
  [Регулярные выражения](regular-expressions.md)  
  [Классы регулярных выражений](the-regular-expression-object-model.md)  
  [Примеры регулярных выражений](regular-expression-examples.md)  
- [Краткий справочник по регулярным выражениям (скачать в формате Word)](http://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.docx)  
- [Регулярные выражения — краткий справочник (загрузить в формате PDF)](http://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.pdf)
+ [Краткий справочник по регулярным выражениям (скачать в формате Word)](https://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.docx)  
+ [Регулярные выражения — краткий справочник (загрузить в формате PDF)](https://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.pdf)

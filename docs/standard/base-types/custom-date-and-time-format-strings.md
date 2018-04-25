@@ -23,11 +23,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: c54a5ec9cdbfd73bccd8f70befcfcff7cf8aac2d
-ms.sourcegitcommit: 6f967c86dde55472440f0c8669b0e910ee3c53ba
+ms.openlocfilehash: 51c16e8c1cd031e4f2b8a207c8d288b7691e7a84
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="custom-date-and-time-format-strings"></a>Строки настраиваемых форматов даты и времени
 Строки форматов даты и времени определяют текстовое представление значений <xref:System.DateTime> и <xref:System.DateTimeOffset>, получаемое после операции форматирования. Также они могут определять представление значения даты и времени, необходимое при операции синтаксического анализа для успешного преобразования строки в дату и время. Строка настраиваемого формата состоит из одного или нескольких настраиваемых описателей формата даты и времени. Любая строка, не являющаяся [строкой стандартного формата даты и времени](../../../docs/standard/base-types/standard-date-and-time-format-strings.md), воспринимается как строка настраиваемого формата даты и времени.  
@@ -35,7 +35,7 @@ ms.lasthandoff: 03/22/2018
  Строки настраиваемого формата даты и времени могут использоваться как со значением <xref:System.DateTime>, так и со значением <xref:System.DateTimeOffset>.  
   
 > [!TIP]
->  Вы можете загрузить [Служебную программу форматирования](http://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d), которая применяет строки формата к значениям даты и времени или числовым значениям и отображает результирующую строку.  
+>  Вы можете загрузить [Служебную программу форматирования](https://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d), которая применяет строки формата к значениям даты и времени или числовым значениям и отображает результирующую строку.  
   
 <a name="table"></a> В операциях форматирования строки настраиваемого формата даты и времени можно использовать с методом `ToString` экземпляра даты и времени или с методом, поддерживающим составное форматирование. В следующем примере демонстрируются оба варианта использования.  
   
@@ -702,4 +702,4 @@ ms.lasthandoff: 03/22/2018
  <xref:System.IFormatProvider?displayProperty=nameWithType>  
  [Типы форматирования](../../../docs/standard/base-types/formatting-types.md)  
  [Строки стандартных форматов даты и времени](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)  
- [Пример. Служебная программа форматирования для .NET Framework 4](http://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)
+ [Пример. Служебная программа форматирования для .NET Framework 4](https://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)

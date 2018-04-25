@@ -1,26 +1,26 @@
 ---
-title: "Объекты расширения XSLT"
-ms.custom: 
+title: Объекты расширения XSLT
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: a4ebdbad-087c-4cfe-acc0-17c48142f81a
-caps.latest.revision: 
+caps.latest.revision: 3
 author: mairaw
 ms.author: mairaw
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 18106b74c19ffdfc33176a12bec07daf2b19b17e
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 72b1605c6bc5a0f3cbc4417d043ab21bf0bb787e
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="xslt-extension-objects"></a>Объекты расширения XSLT
 Объекты расширения используются для расширения функциональности таблиц стилей. Объекты расширения обслуживаются классом <xref:System.Xml.Xsl.XsltArgumentList>.  
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/19/2018
  Объекты расширения XSLT добавляются в объект <xref:System.Xml.Xsl.XsltArgumentList> с помощью метода <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A>. В это время с объектом расширения связываются полное имя и URI-код пространства имен.  
   
 > [!NOTE]
->  Чтобы вызвать метод <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A>, необходим набор разрешений FullTrust. См. дополнительные сведения о [защите доступа к коду](http://msdn.microsoft.com/library/23a20143-241d-4fe5-9d9f-3933fd594c03) и [именованных наборов разрешений (NIB)](http://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3).  
+>  Чтобы вызвать метод <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A>, необходим набор разрешений FullTrust. См. дополнительные сведения о [защите доступа к коду](http://msdn.microsoft.com/library/23a20143-241d-4fe5-9d9f-3933fd594c03) и [именованных наборов разрешений (NIB)](https://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3).  
   
  Объекты расширения возвращают один из четырех базовых типов данных XPath: `number`, `string`, `Boolean` и `node set`.  
   

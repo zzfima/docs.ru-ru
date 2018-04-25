@@ -9,11 +9,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: 99c2f8e4807c4d18c0c798e3a737f4a88d6e62d6
-ms.sourcegitcommit: 3a96c706e4dbb4667bf3bf37edac9e1666646f93
+ms.openlocfilehash: 6570693ea09ca2b548615291ba4f2b69f6d92482
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="numbers-in-c-quickstart"></a>Краткое руководство по числам в C#
 
@@ -315,7 +315,7 @@ Console.WriteLine(c / d);
 Теперь, когда вы ознакомились с разными числовыми типами, напишите код, который позволяет вычислить площадь круга с радиусом 2,50 см. Помните, что площадь круга равна квадрату радиуса, умноженному на число пи. Подсказка: в .NET есть константа пи <xref:System.Math.PI?displayProperty=nameWithType>, которую можно использовать. 
 
 Вы должны получить ответ от 19 до 20.
-Ответ можно [просмотреть в готовом примере кода в GitHub](https://github.com/dotnet/docs/tree/master/samples/csharp/numbers-quickstart/Program.cs#L104-L106).
+Ответ можно [просмотреть в готовом примере кода в GitHub](https://github.com/dotnet/samples/tree/master/csharp/numbers-quickstart/Program.cs#L104-L106).
 
 При желании поэкспериментируйте с другими формулами. 
 

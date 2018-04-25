@@ -23,11 +23,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: e9ebd1a11684afaa143d1f016f31e0a29a3478db
-ms.sourcegitcommit: ba765893e3efcece67d99fd6d5ce0074b050d1d9
+ms.openlocfilehash: b420859380d7c3c39a7d85f94df1708d9f26bebc
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="file-and-stream-io"></a>Файловый и потоковый ввод-вывод
 Файловый и потоковый ввод-вывод относятся к передаче данных с носителя информации или на него. В .NET Framework пространства имен `System.IO` содержат типы, которые обеспечивают как синхронные, так и асинхронные операции чтения и записи для потоков и файлов. Кроме того, эти пространства имен содержат типы, выполняющие сжатие и распаковку файлов, а также типы, которые обеспечивают взаимодействие через каналы и последовательные порты.  
@@ -51,7 +51,7 @@ ms.lasthandoff: 03/02/2018
   
  Помимо использования этих классов, пользователи Visual Basic могут использовать методы и свойства, предоставляемые классом <xref:Microsoft.VisualBasic.FileIO.FileSystem?displayProperty=nameWithType> для файлового ввода-вывода.  
   
- См. разделы [Практическое руководство. Копирование каталогов](../../../docs/standard/io/how-to-copy-directories.md), [Практическое руководство. Создание списка каталогов](http://msdn.microsoft.com/library/4d2772b1-b991-4532-a8a6-6ef733277e69) и [Практическое руководство. Перечисление каталогов и файлов](../../../docs/standard/io/how-to-enumerate-directories-and-files.md).  
+ См. разделы [Практическое руководство. Копирование каталогов](../../../docs/standard/io/how-to-copy-directories.md), [Практическое руководство. Создание списка каталогов](https://msdn.microsoft.com/library/4d2772b1-b991-4532-a8a6-6ef733277e69) и [Практическое руководство. Перечисление каталогов и файлов](../../../docs/standard/io/how-to-enumerate-directories-and-files.md).  
   
 ## <a name="streams"></a>Потоки  
  Абстрактный базовый класс <xref:System.IO.Stream> поддерживает чтение и запись байтов. Все классы, представляющие потоки, являются производными от класса <xref:System.IO.Stream>. Класс <xref:System.IO.Stream> и его производные классы обеспечивают общий способ просмотра источников данных и хранилищ объектов, а также изолируют программиста от специфических особенностей операционной системы и базовых устройств.  

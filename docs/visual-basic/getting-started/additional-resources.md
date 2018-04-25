@@ -1,6 +1,6 @@
 ---
-title: "Дополнительные ресурсы для программистов, использующих Visual Basic"
-description: "В Интернете доступны ресурсы для обучения, получения ответов на вопросы и дополнительной информации о Visual Basic."
+title: Дополнительные ресурсы для программистов, использующих Visual Basic
+description: В Интернете доступны ресурсы для обучения, получения ответов на вопросы и дополнительной информации о Visual Basic.
 ms.date: 02/21/2018
 ms.prod: .net
 ms.technology:
@@ -14,11 +14,11 @@ helpviewer_keywords:
 ms.assetid: 9bfb42e9-327f-439b-935e-8884f6aca80c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9b2e9718d6f342bdd0865a9593e85683a5bf9a45
-ms.sourcegitcommit: cec0525b2121c36198379525e69aa5388266db5b
+ms.openlocfilehash: 10fe7506f2112ef15566a35c1c330a25024744f8
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="additional-resources"></a>Дополнительные ресурсы
 
@@ -38,7 +38,7 @@ ms.lasthandoff: 02/23/2018
 |Термин|Определение|
 |----------|----------------|
 |[Коллекция кодов](https://code.msdn.microsoft.com/site/search?f%5B0%5D.Type=ProgrammingLanguage&f%5B0%5D.Value=VB&f%5B0%5D.Text=VB.NET)|Скачивайте примеры приложений и другие ресурсы и делитесь ими с сообществом разработчиков.|
-|[Документация по Visual Basic](https://github.com/dotnet/docs/tree/master/samples/snippets/visualbasic)|Содержит примеры, используемые в документации по Visual Basic и .NET.|
+|[Документация по Visual Basic](https://github.com/dotnet/samples/tree/master/snippets/visualbasic)|Содержит примеры, используемые в документации по Visual Basic и .NET.|
 
 ### <a name="forums"></a>Форумы
 
