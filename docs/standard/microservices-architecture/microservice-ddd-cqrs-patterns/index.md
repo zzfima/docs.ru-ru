@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 45f29a8d19e49685f864b7ca83e466ceb1f73a62
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 8098c62ac18593d8044d52cb24c4cd8859972e68
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="tackling-business-complexity-in-a-microservice-with-ddd-and-cqrs-patterns"></a>Использование микрослужб с шаблонами DDD и CQRS для решения сложных бизнес-задач
 
@@ -37,41 +37,41 @@ DDD — это обширная тема, по которой доступно 
 
 ##### <a name="ddd-domain-driven-design"></a>DDD (проблемно-ориентированное проектирование)
 
--   **Эрик Эванс (Eric Evans). Язык предметной области**
-    [*http://domainlanguage.com/*](http://domainlanguage.com/)
+-   **Эрик Эванс (Eric Evans). Domain Language (Предметно-ориентированный язык)**
+    [*https://domainlanguage.com/*](https://domainlanguage.com/)
 
--   **Мартин Фоулер (Martin Fowler). Проблемно-ориентированное проектирование**
-    [*http://martinfowler.com/tags/domain%20driven%20design.html*](http://martinfowler.com/tags/domain%20driven%20design.html)
+-   **Мартин Фаулер (Martin Fowler). Domain-Driven Design (Предметно-ориентированное проектирование)**
+    [*https://martinfowler.com/tags/domain%20driven%20design.html*](https://martinfowler.com/tags/domain%20driven%20design.html)
 
--   **Джимми Богард (Jimmy Bogard). Развитие модели предметной области: учебник для начинающих**
+-   **Джимми Богард (Jimmy Bogard). Strengthening Your Domain: A Primer (Усиление предметной области: учебник для начинающих)**
     [*https://lostechies.com/jimmybogard/2010/02/04/strengthening-your-domain-a-primer/*](https://lostechies.com/jimmybogard/2010/02/04/strengthening-your-domain-a-primer/)
 
 ##### <a name="ddd-books"></a>Книги по DDD
 
--   **Эрик Эванс (Eric Evans). Проблемно-ориентированное проектирование: решение сложных задач в программном обеспечении**
+-   **Эрик Эванс (Eric Evans). Предметно-ориентированное проектирование: структуризация сложных программных систем**
     [*https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/*](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/)
 
--   **Эрик Эванс (Eric Evans). Справочник по проблемно-ориентированному проектированию: определения и сводки по шаблонам**
+-   **Эрик Эванс (Eric Evans). Domain-Driven Design Reference: Definitions and Pattern Summaries (Справочник по предметно-ориентированному проектированию: общие сведения об определениях и шаблонах)**
     [*https://www.amazon.com/Domain-Driven-Design-Reference-Definitions-2014-09-22/dp/B01N8YB4ZO/*](https://www.amazon.com/Domain-Driven-Design-Reference-Definitions-2014-09-22/dp/B01N8YB4ZO/)
 
--   **Вон Вернон (Vaughn Vernon). Реализация проблемно-ориентированного проектирования**
+-   **Вон Вернон (Vaughn Vernon). Реализация методов предметно-ориентированного проектирования**
     [*https://www.amazon.com/Implementing-Domain-Driven-Design-Vaughn-Vernon/dp/0321834577/*](https://www.amazon.com/Implementing-Domain-Driven-Design-Vaughn-Vernon/dp/0321834577/)
 
--   **Вон Вернон (Vaughn Vernon). Основы проблемно-ориентированного проектирования**
+-   **Вон Вернон (Vaughn Vernon). Предметно-ориентированное проектирование. Самое основное**
     [*https://www.amazon.com/Domain-Driven-Design-Distilled-Vaughn-Vernon/dp/0134434420/*](https://www.amazon.com/Domain-Driven-Design-Distilled-Vaughn-Vernon/dp/0134434420/)
 
--   **Джимми Нилссон (Jimmy Nilsson). Применение проблемно-ориентированного проектирования и шаблонов**
+-   **Джимми Нильссон (Jimmy Nilsson). Применение DDD и шаблонов проектирования**
     [*https://www.amazon.com/Applying-Domain-Driven-Design-Patterns-Examples/dp/0321268202/*](https://www.amazon.com/Applying-Domain-Driven-Design-Patterns-Examples/dp/0321268202/)
 
--   **Сезар де ла Торре (Cesar de la Torre). Руководство по N-уровневой проблемно-ориентированной архитектуре на основе .NET**
+-   **Сезар де ла Торре (Cesar de la Torre). N-Layered Domain-Oriented Architecture Guide with .NET (Руководство по N-уровневой предметно-ориентированной архитектуре на .NET)**
     [*https://www.amazon.com/N-Layered-Domain-Oriented-Architecture-Guide-NET/dp/8493903612/*](https://www.amazon.com/N-Layered-Domain-Oriented-Architecture-Guide-NET/dp/8493903612/)
 
--   **Абель Аврам (Abel Avram) и Флойд Маринеску (Floyd Marinescu). Коротко о проблемно-ориентированном проектировании**
+-   **Абель Аврам (Abel Avram) и Флойд Маринеску (Floyd Marinescu). Domain-Driven Design Quickly (Предметно-ориентированное проектирование: кратко)**
     [*https://www.amazon.com/Domain-Driven-Design-Quickly-Abel-Avram/dp/1411609255/*](https://www.amazon.com/Domain-Driven-Design-Quickly-Abel-Avram/dp/1411609255/)
 
 Обучение по DDD
 
--   **Джули Лерман (Julie Lerman) и Стив Смит (Steve Smith). Основы проблемно-ориентированного проектирования**
+-   **Джули Лерман (Julie Lerman) и Стив Смит (Steve Smith). Domain-Driven Design Fundamentals (Основы предметно-ориентированного проектирования)**
     [*http://bit.ly/PS-DDD*](http://bit.ly/PS-DDD)
 
 

@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 6281442f42b511170f83eaeb1c940a35a566e519
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 0ca69ada16fbb5a6757da96a7ea64d2113c15b6f
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="securing-net-microservices-and-web-applications"></a>Обеспечение безопасности веб-приложений и микрослужб .NET
 
@@ -136,7 +136,7 @@ else
 
 Проверка подлинности посредством удостоверения ASP.NET Core (или посредством удостоверения и внешних поставщиков проверки подлинности) подходит для многих веб-приложений, позволяющих хранить сведения о пользователе в файле cookie. Но в других ситуациях хранить и передавать данные в файлах cookie нецелесообразно.
 
-Например, в веб-API ASP.NET Core, предоставляющем конечные точки с поддержкой REST, к которым могут обращаться одностраничные приложения, собственные клиенты или даже другие веб-интерфейсы API, как правило, желательно использовать проверку подлинности посредством токена носителя. Такие приложения не работают с файлами cookie, но могут легко извлекать токен носителя и включать его в заголовок авторизации последующих запросов. Для проверки подлинности на основе токенов ASP.NET Core поддерживает несколько способов использования [OAuth 2.0](https://oauth.net/2/) и [OpenID Connect](http://openid.net/connect/).
+Например, в веб-API ASP.NET Core, предоставляющем конечные точки с поддержкой REST, к которым могут обращаться одностраничные приложения, собственные клиенты или даже другие веб-интерфейсы API, как правило, желательно использовать проверку подлинности посредством токена носителя. Такие приложения не работают с файлами cookie, но могут легко извлекать токен носителя и включать его в заголовок авторизации последующих запросов. Для проверки подлинности на основе токенов ASP.NET Core поддерживает несколько способов использования [OAuth 2.0](https://oauth.net/2/) и [OpenID Connect](https://openid.net/connect/).
 
 ## <a name="authenticating-with-an-openid-connect-or-oauth-20-identity-provider"></a>Проверка подлинности с помощью поставщика удостоверений OpenID Connect или OAuth 2.0
 
@@ -230,25 +230,25 @@ app.UseJwtBearerAuthentication(new JwtBearerOptions()
 
 ## <a name="additional-resources"></a>Дополнительные ресурсы
 
--   **Совместное использование файлов cookie приложениями**
+-   **Совместное использование файлов cookie в приложениях**
     [*https://docs.microsoft.com/aspnet/core/security/data-protection/compatibility/cookie-sharing\#sharing-authentication-cookies-between-applications*](https://docs.microsoft.com/aspnet/core/security/data-protection/compatibility/cookie-sharing#sharing-authentication-cookies-between-applications)
 
--   **Общие сведения об удостоверении**
+-   **Общие сведения об Identity**
     [*https://docs.microsoft.com/aspnet/core/security/authentication/identity*](https://docs.microsoft.com/aspnet/core/security/authentication/identity)
 
--   **Рик Андерсон (Rick Anderson). Двухфакторная проверка подлинности с использованием SMS**
+-   **Рик Андерсон (Rick Anderson). Двухфакторная проверка подлинности с помощью SMS**
     [*https://docs.microsoft.com/aspnet/core/security/authentication/2fa*](https://docs.microsoft.com/aspnet/core/security/authentication/2fa)
 
--   **Обеспечение проверки подлинности с помощью Facebook, Google и других внешних поставщиков**
+-   **Проверка подлинности Facebook, Google и других внешних поставщиков**
     [*https://docs.microsoft.com/aspnet/core/security/authentication/social/*](https://docs.microsoft.com/aspnet/core/security/authentication/social/)
 
--   **Мичелл Аникас (Michell Anicas). Введение в OAuth 2**
+-   **Мичелл Аникас (Michell Anicas). An Introduction to OAuth 2 (Введение в OAuth 2)**
     [*https://www.digitalocean.com/community/tutorials/an-introduction-to-oauth-2*](https://www.digitalocean.com/community/tutorials/an-introduction-to-oauth-2)
 
 -   **AspNet.Security.OAuth.Providers** (репозиторий GitHub для поставщиков OAuth в ASP.NET)
     [*https://github.com/aspnet-contrib/AspNet.Security.OAuth.Providers/tree/dev/src*](https://github.com/aspnet-contrib/AspNet.Security.OAuth.Providers/tree/dev/src)
 
--   **Дэнни Строкис (Danny Strockis). Интеграция Azure AD с веб-приложением ASP.NET Core**
+-   **Дэнни Строкис (Danny Strockis). Integrating Azure AD into an ASP.NET Core Web App (Интеграция Azure AD в веб-приложение ASP.NET Core)**
     [*https://azure.microsoft.com/resources/samples/active-directory-dotnet-webapp-openidconnect-aspnetcore/*](https://azure.microsoft.com/resources/samples/active-directory-dotnet-webapp-openidconnect-aspnetcore/)
 
 -   **IdentityServer4. Официальная документация**
