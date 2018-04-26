@@ -1,12 +1,12 @@
 ---
-title: "Классы знаков в регулярных выражениях"
-ms.custom: 
+title: Классы знаков в регулярных выражениях
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -17,18 +17,18 @@ helpviewer_keywords:
 - characters, matching syntax
 - .NET Framework regular expressions, character classes
 ms.assetid: 0f8bffab-ee0d-4e0e-9a96-2b4a252bb7e4
-caps.latest.revision: 
+caps.latest.revision: 58
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 98aaa5c7bbd28facf9cc06fd0d0898b72ea7dbc2
-ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
+ms.openlocfilehash: 538aa21712f1e2290fb009c24774059098c60c1e
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="character-classes-in-regular-expressions"></a>Классы знаков в регулярных выражениях
 <a name="Top"></a> Класс символов определяет набор символов, любой из которых может присутствовать во входной строке для успешного сопоставления. Язык регулярных выражений в .NET поддерживает следующие классы символов:  
@@ -58,7 +58,7 @@ ms.lasthandoff: 03/15/2018
  Платформа .NET поддерживает выражения вычитания в классах знаков, которые позволяют в результате исключения одного класса знаков из другого класса знаков определить набор знаков. Дополнительные сведения см. в разделе [Вычитание класса знаков](#CharacterClassSubtraction).  
   
 > [!NOTE]
->  Классы символов, которые определяют сопоставление символов по категориям, например [\w](#WordCharacter) для соответствия символов слов или [\p{}](#CategoryOrBlock) для соответствия категории Unicode, используют класс <xref:System.Globalization.CharUnicodeInfo> для получения сведений о категориях символов.  Начиная с [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], категории символов основаны на [Стандарте Юникода, версия 8.0.0](http://www.unicode.org/versions/Unicode8.0.0/). В версиях с [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] по [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] они основаны на [Стандарте Юникода, версия 6.3.0](http://www.unicode.org/versions/Unicode6.3.0/).  
+>  Классы символов, которые определяют сопоставление символов по категориям, например [\w](#WordCharacter) для соответствия символов слов или [\p{}](#CategoryOrBlock) для соответствия категории Unicode, используют класс <xref:System.Globalization.CharUnicodeInfo> для получения сведений о категориях символов.  Начиная с [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], категории символов основаны на [Стандарте Юникода, версия 8.0.0](https://www.unicode.org/versions/Unicode8.0.0/). В версиях с [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] по [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] они основаны на [Стандарте Юникода, версия 6.3.0](https://www.unicode.org/versions/Unicode6.3.0/).  
   
 <a name="PositiveGroup"></a>   
 ## <a name="positive-character-group--"></a>Положительная группа символов: [ ]  
@@ -408,7 +408,7 @@ ms.lasthandoff: 03/15/2018
   
 <a name="SupportedUnicodeGeneralCategories"></a>   
 ## <a name="supported-unicode-general-categories"></a>Поддерживаемые общие категории Юникода  
- В Юникоде определяются общие категории, приведенные в следующей таблице. Дополнительные сведения см. в подразделах "Формат файлов UCD" и "Значения общих категорий" в разделе [База данных символов Юникода](http://www.unicode.org/reports/tr44/).  
+ В Юникоде определяются общие категории, приведенные в следующей таблице. Дополнительные сведения см. в подразделах "Формат файлов UCD" и "Значения общих категорий" в разделе [База данных символов Юникода](https://www.unicode.org/reports/tr44/).  
   
 |Категория|Описание:|  
 |--------------|-----------------|  
