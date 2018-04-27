@@ -1,24 +1,26 @@
 ---
-title: "Корреляция сообщений"
-ms.custom: 
+title: Корреляция сообщений
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 3f62babd-c991-421f-bcd8-391655c82a1f
-caps.latest.revision: "26"
+caps.latest.revision: 26
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 95336c55b2c3e83e2bd68bb653bbaacc446d8934
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 52dd8d66a4a28b515ebfaee88c4383889839fff0
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="message-correlation"></a>Корреляция сообщений
 В этом образце показано, каким образом приложение очереди сообщений (MSMQ) может отправлять сообщения MSMQ службе [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и каким образом можно согласовывать сообщения между приложениями отправителя и получателя в сценарии "запрос-ответ". В этом образце используется привязка msmqIntegrationBinding. В данном случае служба представляет собой резидентное консольное приложение, позволяющее наблюдать за тем, как служба получает сообщения из очереди. k  
@@ -28,8 +30,8 @@ ms.lasthandoff: 12/22/2017
  Контракт службы `IOrderProcessor` определяет одностороннюю операцию службы, которую можно использовать с очередями. Сообщение MSMQ не содержит заголовка Action, поэтому автоматически соотнести различные сообщения MSMQ с контрактами операций невозможно. Поэтому в данном случае может существовать только один контракт операции. Если нужно определить для службы несколько контрактов операций, приложение должно сообщать, какой заголовок сообщения MSMQ (например, метку или correlationID) можно использовать для выбора контракта операции. Это показано в [демультиплексирование настраиваемый](../../../../docs/framework/wcf/samples/custom-demux.md).  
   
  Кроме того, сообщение MSMQ не содержит сведений о том, какие заголовки соответствуют различным параметрам контракта операции. Поэтому в данном случае в контракте операции может существовать только один параметр. Параметр имеет тип <!--zz <xref:System.ServiceModel.MSMQIntegration.MsmqMessage%601>`MsmqMessage<T>`--> , `System.ServiceModel.MSMQIntegration.MsmqMessage` , содержащее сообщение MSMQ. Тип "T" в классе `MsmqMessage<T>` представляет данные, сериализованные в тело сообщения MSMQ. В этом образце тип `PurchaseOrder` сериализован в основную часть сообщения MSMQ.  
-  
-```  
+
+```csharp
 [ServiceContract(Namespace = "http://Microsoft.ServiceModel.Samples")]  
 [ServiceKnownType(typeof(PurchaseOrder))]  
 public interface IOrderProcessor  
@@ -37,11 +39,11 @@ public interface IOrderProcessor
     [OperationContract(IsOneWay = true, Action = "*")]  
     void SubmitPurchaseOrder(MsmqMessage<PurchaseOrder> msg);  
 }  
-```  
-  
+```
+
  Операция службы обрабатывает заказ на закупку и отображает содержимое заказа и его статус в окне консоли службы. Атрибут <xref:System.ServiceModel.OperationBehaviorAttribute> настраивает операцию для включения в список в транзакции с очередью и для пометки транзакции как завершенной после завершения операции. `PurchaseOrder` содержит сведения о заказе, которые необходимо обработать службе.  
-  
-```  
+
+```csharp
 // Service class that implements the service contract.  
 public class OrderProcessorService : IOrderProcessor  
 {  
@@ -74,13 +76,13 @@ public class OrderProcessorService : IOrderProcessor
         client.Close();  
     }  
 }  
-```  
-  
+```
+
  Служба использует пользовательский клиентский метод `OrderResponseClient` для отправки сообщения MSMQ в очередь. Поскольку приложение, получающее и обрабатывающее сообщение, является приложением MSMQ, а не приложением [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], между двумя приложениями отсутствует неявный контракт службы. То есть в данном сценарии нельзя создать прокси-класс с помощью средства Svcutil.exe.  
   
  Пользовательский прокси в целом одинаков для всех приложений [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], которые используют для отправки сообщений привязку `msmqIntegrationBinding`. В отличии от других прокси, он не включает ряда операций службы. В него входит только операция отправки сообщения.  
-  
-```  
+
+```csharp
 [System.ServiceModel.ServiceContractAttribute(Namespace = "http://Microsoft.ServiceModel.Samples")]  
 public interface IOrderResponse  
 {  
@@ -108,11 +110,11 @@ public partial class OrderResponseClient : System.ServiceModel.ClientBase<IOrder
         base.Channel.SendOrderResponse(msg);  
     }  
 }  
-```  
-  
+```
+
  Служба является резидентной. При работе с транспортом интеграции MSMQ используемую очередь следует создавать заранее. Это можно сделать вручную или с помощью кода. В данном образце служба содержит код <xref:System.Messaging> для проверки наличия очереди и ее создания, если требуется. Имя очереди считывается из файла конфигурации.  
-  
-```  
+
+```csharp
 public static void Main()  
 {  
        // Get the MSMQ queue name from application settings in configuration.  
@@ -134,7 +136,7 @@ public static void Main()
             serviceHost.Close();  
       }  
 }  
-```  
+```
   
  Очередь MSMQ, в которую отправляются запросы заказов, задается в разделе appSettings файла конфигурации. Конечные точки клиента и службы задаются в разделе system.serviceModel файла конфигурации. Обе конечные точки задают привязку `msmqIntegrationbinding`.  
   
@@ -176,8 +178,8 @@ public static void Main()
 ```  
   
  Клиентское приложение использует для отправки в очередь устойчивых и транзакционных сообщений пространство имен <xref:System.Messaging>. Заказ на закупку содержится в теле сообщения.  
-  
-```  
+
+```csharp
 static void PlaceOrder()  
 {  
     //Connect to the queue  
@@ -219,8 +221,8 @@ static void PlaceOrder()
     orderMessageID = msg.Id;  
     Console.WriteLine("Placed the order, waiting for response...");  
 }  
-```  
-  
+```
+
  Очередь MSMQ, из которой получаются ответы о заказах, задается в разделе appSettings файла конфигурации, как показано в следующем образце конфигурации.  
   
 > [!NOTE]
@@ -233,8 +235,8 @@ static void PlaceOrder()
 ```  
   
  Клиентское приложение сохраняет `messageID` сообщения запроса заказа, которое было отправлено службе, и ждет от службы ответа. После получения ответа в очереди клиент согласовывает его с отправленным сообщением заказа с помощью свойства `correlationID` сообщения, которое содержит значение `messageID` сообщения заказа, которое клиент изначально отправил службе.  
-  
-```  
+
+```csharp
 static void DisplayOrderStatus()  
 {  
     MessageQueue orderResponseQueue = new   
@@ -273,8 +275,8 @@ static void DisplayOrderStatus()
     }  
   }  
 }  
-```  
-  
+```
+
  При выполнении образца действия клиента и службы отображаются в окнах консоли как службы, так и клиента. Можно видеть, как служба получает сообщения от клиента и отправляет ему ответные сообщения. Клиент отображает запросы, получаемые от службы. Нажмите клавишу ВВОД в каждом окне консоли, чтобы закрыть службу и клиент.  
   
 > [!NOTE]
@@ -319,7 +321,7 @@ static void DisplayOrderStatus()
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите на страницу [Примеры Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все примеры [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Этот образец расположен в следующем каталоге.  
+>  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) Чтобы загрузить все [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] образцов. Этот образец расположен в следующем каталоге.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\MSMQIntegration\MessageCorrelation`  
   

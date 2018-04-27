@@ -1,12 +1,13 @@
 ---
-title: "Объявление переменной в Visual Basic"
-ms.custom: 
+title: Объявление переменной в Visual Basic
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - variables [Visual Basic], declaring
@@ -24,14 +25,14 @@ helpviewer_keywords:
 - local variables [Visual Basic], declarations
 - scope [Visual Basic], variables
 ms.assetid: d8f10226-92b1-480f-9f53-df377b2d7e15
-caps.latest.revision: "31"
+caps.latest.revision: 31
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 7f7b924aed1da7db816aa5c11239e301428770b7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 8edd0b65b08efd437cc35e8f58ed7ed423736920
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="variable-declaration-in-visual-basic"></a>Объявление переменной в Visual Basic
 Можно объявить переменную, чтобы указать ее имя и характеристики. Оператор объявления переменных — [оператор Dim](../../../../visual-basic/language-reference/statements/dim-statement.md). Его местоположение и содержание определяют характеристики переменной.  
@@ -41,7 +42,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="declaration-levels"></a>Уровни объявления  
   
 ### <a name="local-and-member-variables"></a>Локальные и переменные-члены  
- Объект *локальной переменной* —, объявленная внутри процедуры. Объект *переменной-члена* является членом [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] введите; он объявлен на уровне модуля, внутри класса, структуры или модуля, но не внутри любых процедур для этого класса, структуры или модуля.  
+ Объект *локальной переменной* —, объявленная внутри процедуры. Объект *переменной-члена* является членом типа Visual Basic; он объявлен на уровне модуля, внутри класса, структуры или модуля, но не внутри любых процедур для этого класса, структуры или модуля.  
   
 ### <a name="shared-and-instance-variables"></a>Экземпляров и общие переменные  
  В классе или структуре категория переменной-члена зависит от того, является ли он является общим. Если он объявляется с [Shared](../../../../visual-basic/language-reference/modifiers/shared.md) это ключевое слово, *общей переменной*, и существует в единственном экземпляре, общим для всех экземпляров класса или структуры.  
@@ -51,15 +52,15 @@ ms.lasthandoff: 11/21/2017
 ## <a name="declaring-data-type"></a>Объявление типа данных  
  [Как](../../../../visual-basic/language-reference/statements/as-clause.md) предложение в операторе объявления можно задать тип данных или тип объекта объявление переменной. Можно указать любой из следующих типов для переменной:  
   
--   Простой тип данных, таких как `Boolean`, `Long`, или`Decimal`  
+-   Простой тип данных, таких как `Boolean`, `Long`, или `Decimal`  
   
 -   Составной тип данных, например, массив или структура.  
   
 -   Тип объекта или класс, определенный в приложении или в другом приложении  
   
--   Объект [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] класса, такие как <xref:System.Windows.Forms.Label> или<xref:System.Windows.Forms.TextBox>  
+-   Объект [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] класса, такие как <xref:System.Windows.Forms.Label> или <xref:System.Windows.Forms.TextBox>  
   
--   Тип интерфейса, такие как <xref:System.IComparable> или<xref:System.IDisposable>  
+-   Тип интерфейса, такие как <xref:System.IComparable> или <xref:System.IDisposable>  
   
  Можно объявить несколько переменных в одном операторе без повторения типа данных. В следующих инструкциях переменные `i`, `j`, и `k` объявлен как тип `Integer`, `l` и `m` как `Long`, и `x` и `y` как `Single`:  
   

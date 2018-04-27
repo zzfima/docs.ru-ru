@@ -1,11 +1,12 @@
 ---
-title: "Обработка событий (Visual Basic)"
-ms.custom: 
+title: Обработка событий (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - event handling [Visual Basic], walkthroughs
@@ -15,19 +16,19 @@ helpviewer_keywords:
 - WithEvents keyword [Visual Basic], walkthroughs
 - event handlers [Visual Basic], walkthroughs
 ms.assetid: f145b3fc-5ae0-4509-a2aa-1ff6934706bd
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: e4e31937d67d2140865a9626f79fbddc16796709
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: c1743e5f5d9dcdf83ab646407cd1fcdc77ff71cd
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="walkthrough-handling-events-visual-basic"></a>Пошаговое руководство. Обработка событий (Visual Basic)
 Это вторая из двух разделов, которые демонстрируют, как работать с событиями. Первый раздел [Пошаговое руководство: объявление и создание событий](../../../../visual-basic/programming-guide/language-features/events/walkthrough-declaring-and-raising-events.md), показано, как объявить и инициировать события. В этом разделе используется форма и класс из предыдущего примера для демонстрации способов обработки событий при их возникновении.  
   
- `Widget` Пример класса используются традиционные инструкции обработки событий. [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]имеются и другие способы работы с событиями. В качестве упражнения, можно изменить в этом примере для использования `AddHandler` и `Handles` инструкции.  
+ `Widget` Пример класса используются традиционные инструкции обработки событий. Visual Basic предоставляет другие методы для работы с событиями. В качестве упражнения, можно изменить в этом примере для использования `AddHandler` и `Handles` инструкции.  
   
 ### <a name="to-handle-the-percentdone-event-of-the-widget-class"></a>Для обработки события PercentDone класса мини-приложения  
   
@@ -66,7 +67,7 @@ ms.lasthandoff: 11/21/2017
  При нажатии кнопки **отменить** кнопки при `LongTask` работает, `Button2_Click` событие выполняется сразу после `DoEvents` оператор разрешает обработки события. Переменной уровня класса `mblnCancel` равно `True`и `mWidget_PercentDone` событий затем проверяет и устанавливает `ByRef Cancel` аргумент `True`.  
   
 ## <a name="connecting-a-withevents-variable-to-an-object"></a>Подключение к объекту переменная WithEvents  
- `Form1`Теперь настроен для обработки `Widget` событий объекта. Остается найти `Widget` где-либо.  
+ `Form1` Теперь настроен для обработки `Widget` событий объекта. Остается найти `Widget` где-либо.  
   
  При объявлении переменной `WithEvents` во время разработки, с ним связан ни один из объектов. Объект `WithEvents` переменная является так же, как и любой другой переменной объекта. Необходимо создать объект и назначить ссылку на него с `WithEvents` переменной.  
   
@@ -80,7 +81,7 @@ ms.lasthandoff: 11/21/2017
   
      [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#7](../../../../visual-basic/programming-guide/language-features/events/codesnippet/VisualBasic/walkthrough-handling-events_4.vb)]  
   
- При выполнении этого кода [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] создает `Widget` объекта и подключает его события к процедурам события, связанные с `mWidget`. Из этой точки, каждый раз, когда `Widget` вызывает его `PercentDone` событий, `mWidget_PercentDone` выполняется процедура события.  
+ При выполнении этого кода Visual Basic создает `Widget` объекта и подключает его события к процедурам события, связанные с `mWidget`. Из этой точки, каждый раз, когда `Widget` вызывает его `PercentDone` событий, `mWidget_PercentDone` выполняется процедура события.  
   
 #### <a name="to-call-the-longtask-method"></a>Для вызова метода LongTask  
   
@@ -90,7 +91,7 @@ ms.lasthandoff: 11/21/2017
   
  Прежде чем `LongTask` вызывается метод, метка отображает процент завершения должен быть инициализирован и на уровне класса `Boolean` флаг для отмены метода должно быть присвоено `False`.  
   
- `LongTask`вызывается для задачи с продолжительностью 12,2 секунды. `PercentDone` Событие возникает один раз каждые треть доли секунды. Каждый раз при возникновении события `mWidget_PercentDone` выполняется процедура события.  
+ `LongTask` вызывается для задачи с продолжительностью 12,2 секунды. `PercentDone` Событие возникает один раз каждые треть доли секунды. Каждый раз при возникновении события `mWidget_PercentDone` выполняется процедура события.  
   
  Когда `LongTask` будет сделано, `mblnCancel` проверяется на предмет `LongTask` нормально, или если он остановлен, так как `mblnCancel` было задано значение `True`. Процент завершения обновляется только в первом случае.  
   

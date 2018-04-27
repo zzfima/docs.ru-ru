@@ -1,11 +1,12 @@
 ---
-title: "Расширяющие и сужающие преобразования (Visual Basic)"
-ms.custom: 
+title: Расширяющие и сужающие преобразования (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - widening conversions [Visual Basic]
@@ -25,14 +26,14 @@ helpviewer_keywords:
 - data type conversion [Visual Basic], exceptions during conversion
 - conversions [Visual Basic], widening
 ms.assetid: 058c3152-6c28-4268-af44-2209e774f0bd
-caps.latest.revision: "27"
+caps.latest.revision: 27
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 2cf1f8d956935a9a363211abf94b4f1c2f538074
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 960b4e4c7184309b6a84247d86fb94ccb2faf877
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="widening-and-narrowing-conversions-visual-basic"></a>Расширяющие и сужающие преобразования (Visual Basic)
 Важным аспектом при преобразовании типа является результат преобразования в пределах диапазона целевого типа данных.  
@@ -59,7 +60,7 @@ ms.lasthandoff: 11/21/2017
 |[Double](../../../../visual-basic/language-reference/data-types/double-data-type.md)|`Double`|  
 |Какой-либо перечисляемый тип ([перечисления](../../../../visual-basic/language-reference/statements/enum-statement.md))|Его основного целочисленного типа и любой тип, до которого может быть расширен базовый тип.|  
 |[Char](../../../../visual-basic/language-reference/data-types/char-data-type.md)|`Char`, `String`|  
-|Массив `Char`|`Char`Массив,`String`|  
+|Массив `Char`|`Char` Массив, `String`|  
 |Любой тип|[Объект](../../../../visual-basic/language-reference/data-types/object-data-type.md)|  
 |Любой производный тип|Любой базовый тип, от которого он является производным <sup>3</sup>.|  
 |Любой тип|Любой интерфейс, который его реализует.|  
@@ -97,11 +98,11 @@ ms.lasthandoff: 11/21/2017
 ## <a name="exceptions-during-conversion"></a>Исключения при преобразовании  
  Поскольку расширяющие преобразования всегда выполняются успешно, они не создают исключений. Сужающие преобразования, если они вызывают ошибку, наиболее часто вызывать следующие исключения:  
   
--   <xref:System.InvalidCastException>— Если не определено преобразование между двумя типами  
+-   <xref:System.InvalidCastException> — Если не определено преобразование между двумя типами  
   
--   <xref:System.OverflowException>— (только для целых типов) если преобразованное значение слишком велико для типа целевого объекта  
+-   <xref:System.OverflowException> — (только для целых типов) если преобразованное значение слишком велико для типа целевого объекта  
   
- Если класс или структура определяет [функция CType](../../../../visual-basic/language-reference/functions/ctype-function.md) в качестве оператора преобразования в или из этого класса или структуры, которая `CType` может вызвать исключение, которые она считает необходимыми. Кроме того, что `CType` может вызывать [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] функции или [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] методы, которые в свою очередь, могут вызвать ряд исключений.  
+ Если класс или структура определяет [функция CType](../../../../visual-basic/language-reference/functions/ctype-function.md) в качестве оператора преобразования в или из этого класса или структуры, которая `CType` может вызвать исключение, которые она считает необходимыми. Кроме того, что `CType` может вызывать функции языка Visual Basic или [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] методы, которые в свою очередь, могут вызвать ряд исключений.  
   
 ## <a name="changes-during-reference-type-conversions"></a>Изменения в ходе преобразования типа ссылки  
  Преобразование из *ссылочному типу* копирует только указатель на значение. Само значение не копируется и не изменяется. Единственное, что можно изменить имеет тип данных переменной, содержащей указатель. В следующем примере тип данных преобразуется из производного класса к базовому классу, но, теперь обе переменные наведите указатель на объект, не изменяется.  

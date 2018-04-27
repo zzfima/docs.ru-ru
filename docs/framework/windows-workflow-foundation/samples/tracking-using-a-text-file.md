@@ -8,20 +8,20 @@ ms.suite: ''
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 56a82682-73c2-4b91-a206-4d8bb12c561b
-caps.latest.revision: ''
+caps.latest.revision: 13
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: f1d4b3f319d86dd463dabc8b71be7c76c7fef41f
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 32aab8ae875158fed62c70cbc2d7506ba6c8d3c5
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="tracking-using-a-text-file"></a>Отслеживание использования с помощью текстового файла
-В данном образце демонстрируется отслеживание расширения [!INCLUDE[wf](../../../../includes/wf-md.md)] путем создания настраиваемого участника отслеживания. Участниками отслеживания являются классы платформы .NET Framework, которые получают записи отслеживания от среды выполнения при их передаче. Можно создать участника отслеживания для транспортировки событий отслеживания в место назначения, требуемое для сценария. Например, участник отслеживания событий для Windows (ETW) предоставляется как часть [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]. Участник отслеживания в этом образце записывает записи в текстовый файл в формате XML.  
+В этом примере показано, как расширить отслеживание в Windows Workflow Foundation (WF) путем создания настраиваемого участника отслеживания. Участниками отслеживания являются классы платформы .NET Framework, которые получают записи отслеживания от среды выполнения при их передаче. Можно создать участника отслеживания для транспортировки событий отслеживания в место назначения, требуемое для сценария. Например, участник отслеживания событий для Windows (ETW) предоставляется как часть [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]. Участник отслеживания в этом образце записывает записи в текстовый файл в формате XML.  
   
 ## <a name="sample-details"></a>Подробные сведения об образце  
  Для оптимизации применимости и надежности участника отслеживания должны быть выполнены некоторые шаги для правильного подключения участника отслеживания в среду выполнения. В следующей таблице описываются классы, используемые в образце для создания участника отслеживания, который соответствует рекомендациям.  
@@ -66,7 +66,7 @@ ms.lasthandoff: 03/23/2018
   
 5.  В браузере отображается **StockPriceService** страницы, содержащей адрес wsdl локальной службы. Скопируйте этот адрес.  
   
-     Примером адреса WSDL локальной службы является http://localhost:53797/StockPriceService.xamlx?wsdl.  
+     Примером адреса wsdl локальной службы является http://localhost:53797/StockPriceService.xamlx?wsdl.  
   
 6.  В [!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)] перейдите в папку [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] (по умолчанию папкой установки является папка %SystemDrive%\Program Files\Microsoft Visual Studio 10.0). Затем перейдите в подпапку Common7\IDE\.  
   

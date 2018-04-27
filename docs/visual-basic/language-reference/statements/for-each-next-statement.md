@@ -1,10 +1,11 @@
 ---
-title: "Оператор For Each...Next (Visual Basic)"
+title: Оператор For Each...Next (Visual Basic)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - vb.ForEach
@@ -27,14 +28,14 @@ helpviewer_keywords:
 - Exit statement [Visual Basic], For Each...Next statements
 - iteration
 ms.assetid: ebce3120-95c3-42b1-b70b-fa7da40c75e2
-caps.latest.revision: "56"
+caps.latest.revision: 56
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 11601eb1caad1c6cc6d9898f590436a977a78fa1
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: b1593d279d4338ebadca803fe757a201cbcd654b
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="for-eachnext-statement-visual-basic"></a>Оператор For Each...Next (Visual Basic)
 Повторяет группу операторов для каждого элемента в коллекции.  
@@ -97,7 +98,7 @@ Next [ element ]
   
  Можно поместить любое число `Exit For` инструкций в `For Each` цикла. При использовании внутри вложенной `For Each` циклы, `Exit For` выполнение выхода из внутреннего цикла и передачи управления следующий уровень вложенности.  
   
- `Exit For`часто используется после оценки некоторого условия, например, в `If`... `Then`... `Else` структуры. Вы можете использовать `Exit For` для следующих условий:  
+ `Exit For` часто используется после оценки некоторого условия, например, в `If`... `Then`... `Else` структуры. Вы можете использовать `Exit For` для следующих условий:  
   
 -   Продолжение для выполнения итерации ненужные или невозможно. Это может быть вызвано ошибочное значение или запрос на завершение.  
   
@@ -133,7 +134,7 @@ Next [ element ]
   
  Тип данных `element` должен быть таким образом, чтобы тип данных элементов `group` может быть преобразован к нему.  
   
- Тип данных `group` должен быть ссылочного типа, который ссылается на коллекцию или перечислимый массив. Чаще всего это означает, что `group` ссылается на объект, реализующий <xref:System.Collections.IEnumerable> интерфейс `System.Collections` пространства имен или <xref:System.Collections.Generic.IEnumerable%601> интерфейс `System.Collections.Generic` пространства имен. `System.Collections.IEnumerable`Определяет <xref:System.Collections.IEnumerable.GetEnumerator%2A> метод, который возвращает объект перечислителя для коллекции. Реализует объект перечислителя `System.Collections.IEnumerator` интерфейс `System.Collections` пространства имен и предоставляет <xref:System.Collections.IEnumerator.Current%2A> свойство и <xref:System.Collections.IEnumerator.Reset%2A> и <xref:System.Collections.IEnumerator.MoveNext%2A> методы. Visual Basic использует их для перемещения по коллекции.  
+ Тип данных `group` должен быть ссылочного типа, который ссылается на коллекцию или перечислимый массив. Чаще всего это означает, что `group` ссылается на объект, реализующий <xref:System.Collections.IEnumerable> интерфейс `System.Collections` пространства имен или <xref:System.Collections.Generic.IEnumerable%601> интерфейс `System.Collections.Generic` пространства имен. `System.Collections.IEnumerable` Определяет <xref:System.Collections.IEnumerable.GetEnumerator%2A> метод, который возвращает объект перечислителя для коллекции. Реализует объект перечислителя `System.Collections.IEnumerator` интерфейс `System.Collections` пространства имен и предоставляет <xref:System.Collections.IEnumerator.Current%2A> свойство и <xref:System.Collections.IEnumerator.Reset%2A> и <xref:System.Collections.IEnumerator.MoveNext%2A> методы. Visual Basic использует их для перемещения по коллекции.  
   
 ### <a name="narrowing-conversions"></a>сужающие преобразования  
  Когда `Option Strict` равно `On`, сужающее преобразование обычно вызывает ошибки компилятора. В `For Each` инструкции, однако преобразование из элементов в `group` для `element` вычисляются и во время выполнения и ошибки компилятора, вызванные сужающие преобразования подавляются.  
@@ -149,7 +150,7 @@ Next [ element ]
   
  **Изменение коллекции.** Объект перечислителя, возвращенный <xref:System.Collections.IEnumerable.GetEnumerator%2A> обычно не позволяет изменить путем добавления, удаления, замены или изменяя порядок элементов в коллекцию. При изменении коллекции после запуска `For Each`... `Next` цикла, перечислитель становится недействительным, в результате чего следующей попытки доступа к элементу <xref:System.InvalidOperationException> исключение.  
   
- Тем не менее, эта блокировка изменения не определяются [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], но вместо этого путем реализации <xref:System.Collections.IEnumerable> интерфейса. Это можно реализовать `IEnumerable` образом, который позволяет изменять во время итерации. Если вы собираетесь производить такие динамические изменения, убедитесь, что вы понимаете характеристики `IEnumerable` реализацию на коллекцию, вы используете.  
+ Однако эта блокировка изменения не определяются по Visual Basic, а также путем реализации <xref:System.Collections.IEnumerable> интерфейса. Это можно реализовать `IEnumerable` образом, который позволяет изменять во время итерации. Если вы собираетесь производить такие динамические изменения, убедитесь, что вы понимаете характеристики `IEnumerable` реализацию на коллекцию, вы используете.  
   
  **Изменение элементов коллекции.** <xref:System.Collections.IEnumerator.Current%2A> Свойство объекта перечислителя [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md), и возвращает локальную копию каждого элемента коллекции. Это означает, что нельзя изменить непосредственно к элементам в `For Each`... `Next` цикла. Любые изменения, вносимые влияет только на локальную копию из `Current` и не отражается в базовой коллекции. Тем не менее если элемент является ссылочным типом, можно изменить члены экземпляра, на который он указывает. В следующем примере изменяется `BackColor` каждого элемента `thisControl` элемент. Не удается Однако изменять `thisControl` сам.  
   

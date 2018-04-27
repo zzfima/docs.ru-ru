@@ -1,12 +1,13 @@
 ---
-title: "Отношения типов в операциях запроса (Visual Basic)"
-ms.custom: 
+title: Отношения типов в операциях запроса (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - variable relationships [LINQ in Visual Basic]
@@ -18,14 +19,14 @@ helpviewer_keywords:
 - inferring type information [LINQ in Visual Basic]
 - relationships [LINQ in Visual Basic]
 ms.assetid: b5ff4da5-f3fd-4a8e-aaac-1cbf52fa16f6
-caps.latest.revision: "34"
+caps.latest.revision: 34
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 1b93188475dd2bb00aea044ff178028eb87e00d4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: e38f51d77869dcca8a81fdcbc70aed32c4146935
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="type-relationships-in-query-operations-visual-basic"></a>Отношения типов в операциях запроса (Visual Basic)
 Переменные, используемые в [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] запроса операции являются строго типизированными и должны быть совместимы друг с другом. Строгая типизация используется в источнике данных, в самом запросе и при выполнении запроса. На следующем рисунке показаны термины, используемые для описания [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] запроса. Дополнительные сведения о частях запроса см. в разделе [основные операции запроса (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-query-operations.md).  
@@ -35,7 +36,7 @@ ms.lasthandoff: 11/21/2017
   
  Тип переменной диапазона в запросе должен быть совместим с типом элементов в источнике данных. Тип переменной запроса должен быть совместим с последовательностью элемента, определенной в `Select` предложения. Наконец, тип элементов последовательности также должен быть совместим с типом переменной цикла, которая используется в `For Each` инструкцию, которая выполняет запрос. Строгая типизация упрощает идентификацию ошибок типов во время компиляции.  
   
- [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]делает строгую типизацию удобной за счет реализации локального определения типа, также известный как *неявное типизирование*. Функция используется в предыдущем примере, что вы увидите применяется [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] примеров и документации. В Visual Basic, определение локального типа осуществляется просто с помощью `Dim` оператор без `As` предложения. В следующем примере `city` , строго типизируется как строка.  
+ Visual Basic делает строгую типизацию удобной за счет реализации локального определения типа, также известный как *неявное типизирование*. Функция используется в предыдущем примере, что вы увидите применяется [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] примеров и документации. В Visual Basic, определение локального типа осуществляется просто с помощью `Dim` оператор без `As` предложения. В следующем примере `city` , строго типизируется как строка.  
   
  [!code-vb[VbLINQTypeRels#1](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/type-relationships-in-query-operations_1.vb)]  
   

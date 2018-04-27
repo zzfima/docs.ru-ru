@@ -1,11 +1,12 @@
 ---
-title: "Структуры и классы (Visual Basic)"
-ms.custom: 
+title: Структуры и классы (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - classes [Visual Basic], vs. structures
@@ -15,17 +16,17 @@ helpviewer_keywords:
 - structures [Visual Basic], structure variables
 - structure variables [Visual Basic]
 ms.assetid: a221e74a-ffcf-4bdc-a0f6-a088a9bf26cc
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 08e31481feac7a6184c6b29269d193c749f440ff
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: cf72fb0a7a34d45774cb9a58c037ebcb1c05288f
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="structures-and-classes-visual-basic"></a>Структуры и классы (Visual Basic)
-[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]объединяет синтаксис структур и классов, в результате чего обе сущности поддерживают большинство тех же функций. Однако существуют важные различия между структуры и классы.  
+Visual Basic объединяет синтаксис структур и классов, в результате чего обе сущности поддерживают большинство тех же функций. Однако существуют важные различия между структуры и классы.  
   
  Классы имеют преимущество ссылочных типов — ссылки более эффективна, чем передача переменной структуры со всеми данными. С другой стороны структуры не требуют выделения памяти в куче глобального.  
   
@@ -92,7 +93,7 @@ ms.lasthandoff: 11/21/2017
   
      Элементы структуры изолированы в пределах своего экземпляра. Изменения их значения не отражаются в любые другие переменные структуры, даже в других экземплярах одной и той же `Structure` объявления.  
   
--   **Равенство.** Проверки равенства двух структур должна выполняться с тестом по элементам. Две переменные объекта можно сравнивать с помощью <xref:System.Object.Equals%2A> метод. <xref:System.Object.Equals%2A>Определяет, указывают ли две переменные с тем же экземпляром.  
+-   **Равенство.** Проверки равенства двух структур должна выполняться с тестом по элементам. Две переменные объекта можно сравнивать с помощью <xref:System.Object.Equals%2A> метод. <xref:System.Object.Equals%2A> Определяет, указывают ли две переменные с тем же экземпляром.  
   
 ## <a name="see-also"></a>См. также  
  [Типы данных](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  

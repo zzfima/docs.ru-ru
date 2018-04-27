@@ -1,24 +1,25 @@
 ---
-title: "Настройка доступа к объектам через My (Visual Basic)"
+title: Настройка доступа к объектам через My (Visual Basic)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-visual-basic
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - My namespace [Visual Basic], customizing
 - My namespace
 ms.assetid: 4e8279c2-ed5b-4681-8903-8a6671874000
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: e5f5be7481ee102074fe1236b91110ee6b1d2944
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 669641a2b6ecbf988f6cad68acf52c5561b32515
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="customizing-which-objects-are-available-in-my-visual-basic"></a>Настройка доступа к объектам через My (Visual Basic)
-В этом разделе описывается, как можно выбирать, какие `My` объекты включены, задав проекта `_MYTYPE` константы условной компиляции. [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] Интегрированной среды разработки (IDE) отслеживает `_MYTYPE` константы условной компиляции для проекта, в соответствии с типом проекта.  
+В этом разделе описывается, как можно выбирать, какие `My` объекты включены, задав проекта `_MYTYPE` константы условной компиляции. Интегрированная среда разработки (IDE) Visual Studio сохраняет `_MYTYPE` константы условной компиляции для проекта, в соответствии с типом проекта.  
   
 ## <a name="predefined-mytype-values"></a>Предопределенные значения _MYTYPE  
  Необходимо использовать `/define` компилятора, возможность задания `_MYTYPE` константы условной компиляции. При указании значения для `_MYTYPE` константой, необходимо заключить строковое значение в обратная косая черта и кавычка (\\») последовательности. Например можно использовать:  
@@ -36,7 +37,7 @@ ms.lasthandoff: 11/21/2017
 |Интернет|«Web»|  
 |Библиотека веб-элементов управления|«WebControl»|  
 |Приложение Windows|«WindowsForms»|  
-|При запуске с помощью пользовательского приложения Windows`Sub Main`|«WindowsFormsWithCustomSubMain»|  
+|При запуске с помощью пользовательского приложения Windows `Sub Main`|«WindowsFormsWithCustomSubMain»|  
 |Библиотека элементов управления Windows|«Windows»|  
 |Служба Windows|«Консоль»|  
 |Empty|«Empty»|  
@@ -49,14 +50,14 @@ ms.lasthandoff: 11/21/2017
   
 |_MYTYPE|_MYAPPLICATIONTYPE|_MYCOMPUTERTYPE|_MYFORMS|_MYUSERTYPE|_MYWEBSERVICES|  
 |--------------|-------------------------|----------------------|---------------|------------------|---------------------|  
-|«Консоль»|«Консоль»|«Windows»|Не определено|«Windows»|TRUE|  
+|«Консоль»|«Консоль»|«Windows»|Не определено|«Windows»|true|  
 |«Custom»|Не определено|Не определено|Не определено|Не определено|Не определено|  
 |«Empty»|Не определено|Не определено|Не определено|Не определено|Не определено|  
-|«Web»|Не определено|«Web»|FALSE|«Web»|FALSE|  
-|«WebControl»|Не определено|«Web»|FALSE|«Web»|TRUE|  
+|«Web»|Не определено|«Web»|false|«Web»|false|  
+|«WebControl»|Не определено|«Web»|false|«Web»|true|  
 |«Windows» или «»|«Windows»|«Windows»|Не определено|«Windows»|TRUE|  
-|«WindowsForms»|«WindowsForms»|«Windows»|TRUE|«Windows»|TRUE|  
-|«WindowsFormsWithCustomSubMain»|«Консоль»|«Windows»|TRUE|«Windows»|TRUE|  
+|«WindowsForms»|«WindowsForms»|«Windows»|true|«Windows»|true|  
+|«WindowsFormsWithCustomSubMain»|«Консоль»|«Windows»|true|«Windows»|true|  
   
  По умолчанию разрешить undefined константы условной компиляции `FALSE`. Можно указать значения для неопределенных констант при компиляции проекта, чтобы переопределить поведение по умолчанию.  
   

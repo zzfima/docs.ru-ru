@@ -1,32 +1,33 @@
 ---
-title: "Ссылки на объявленные элементы (Visual Basic)"
-ms.custom: 
+title: Ссылки на объявленные элементы (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - declared elements [Visual Basic]
 - references [Visual Basic], declared elements
 - qualified names [Visual Basic]
 ms.assetid: d6301709-f4cc-4b7a-b8ba-80898f14ab46
-caps.latest.revision: "19"
+caps.latest.revision: 19
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 9b3847164b4e577a9265a746b9329218b4af928b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 86d25d42688cffbf4076c4fb42eccc3b917d1dc1
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="references-to-declared-elements-visual-basic"></a>Ссылки на объявленные элементы (Visual Basic)
-Когда код ссылается на объявленный элемент [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] компилятора соответствует имени в ссылке соответствующему объявлению с тем же именем. Если с тем же именем объявлено несколько элементов, можно управлять, какой из этих элементов — для ссылки на *соответствующие* его имя.  
+Когда код ссылается на объявленный элемент, компилятор Visual Basic соответствует имени в ссылке соответствующему объявлению с тем же именем. Если с тем же именем объявлено несколько элементов, можно управлять, какой из этих элементов — для ссылки на *соответствующие* его имя.  
   
  Компилятор пытается сопоставить ссылку имени с объявлением с *узкой областью*. Это означает, что он начинается с кода, делая ссылку и работая через последовательные уровни содержащих элементов.  
   
- В следующем примере ссылки на две переменные с тем же именем. В примере объявляются две переменные, каждая с именем `totalCount`, на разных уровнях области в модуле `container`. Если процедура `showCount` отображает `totalCount` без квалификации, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] компилятор разрешает ссылку на объявление с самой узкой областью, а именно, локальное объявление внутри `showCount`. При уточнении `totalCount` с содержащим модулем `container`, компилятор разрешает ссылку на объявление с более широкой областью.  
+ В следующем примере ссылки на две переменные с тем же именем. В примере объявляются две переменные, каждая с именем `totalCount`, на разных уровнях области в модуле `container`. Если процедура `showCount` отображает `totalCount` без указания полного имени, компилятор Visual Basic разрешает ссылку на объявление с самой узкой областью, а именно, локальное объявление внутри `showCount`. При уточнении `totalCount` с содержащим модулем `container`, компилятор разрешает ссылку на объявление с более широкой областью.  
   
 ```vb  
 ' Assume these two modules are both in the same assembly.  
@@ -199,7 +200,7 @@ Dim xDoc As xD.XmlDocument
  Неоднозначность имен можно избежать, задав все элементы, уникальные имена. Затем можно сделать ссылку на любой элемент без уточнения его имени пространства имен, модуля или класса. Кроме того, можно сократить вероятность случайной ссылки на неправильный элемент.  
   
 ## <a name="shadowing"></a>Затенение  
- Если два программных элемента имеют то же имя, один из них может скрыть, или *тени*, другой. Скрытый элемент недоступен для обращения. Вместо этого в том случае, если ваш код использует имя переопределяемый элемент [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] компилятор разрешает его скрывающий элемент. Более подробное описание с примерами см. в разделе [сокрытие в Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md).  
+ Если два программных элемента имеют то же имя, один из них может скрыть, или *тени*, другой. Скрытый элемент недоступен для обращения. Вместо этого когда ваш код использует имя скрытый элемент, компилятор Visual Basic сопоставляется с скрывающий элемент. Более подробное описание с примерами см. в разделе [сокрытие в Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md).  
   
 ## <a name="see-also"></a>См. также  
  [Имена объявленных элементов](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)  

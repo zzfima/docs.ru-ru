@@ -1,11 +1,12 @@
 ---
-title: "Процедуры операторов (Visual Basic)"
-ms.custom: 
+title: Процедуры операторов (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - Visual Basic code, procedures
@@ -17,22 +18,22 @@ helpviewer_keywords:
 - operator overloading
 - operator procedures
 ms.assetid: 8c513d38-246b-4fb7-8b75-29e1364e555b
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 865695731dd591b0c48f4416814fa97edf4ea42e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 8fba5180da6498d280fa4192937c39d3e33168e8
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="operator-procedures-visual-basic"></a>Процедуры операторов (Visual Basic)
-Процедура оператора — это последовательность [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] инструкции, определяющие поведение стандартного оператора (например, `*`, `<>`, или `And`) в классе или структуре, определенных вами. Это также называется *перегрузка операторов*.  
+Процедура оператора — это последовательность операторов Visual Basic, определяющих поведение стандартного оператора (например, `*`, `<>`, или `And`) в классе или структуре, определенных вами. Это также называется *перегрузка операторов*.  
   
 ## <a name="when-to-define-operator-procedures"></a>Когда определять процедуры оператора  
  После определения класса или структуры, можно объявлять переменные типа этого класса или структуры. Иногда такая переменная должна участвовать в операции как часть выражения. Сделать это, он должен быть операндом оператора.  
   
- [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]Определяет операторы только на его основных типах данных. Можно определить поведение оператора, если один или оба операнда имеют тип класса или структуры.  
+ Visual Basic определяет операторы только на его основных типах данных. Можно определить поведение оператора, если один или оба операнда имеют тип класса или структуры.  
   
  Дополнительные сведения см. в разделе [оператор](../../../../visual-basic/language-reference/statements/operator-statement.md).  
   

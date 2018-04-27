@@ -1,31 +1,32 @@
 ---
-title: "Документирование кода с помощью XML (Visual Basic)"
-ms.custom: 
+title: Документирование кода с помощью XML (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - XML [Visual Basic], documenting code
 - XML comments, Visual Basic
 - Visual Basic code, documenting with XML
 ms.assetid: a0d35dc7-c5f9-4d74-92ff-a1c6f28d5235
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: ddb1f366002c4f0c675c591d83aab1b31ef8f602
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
-ms.translationtype: MT
+ms.openlocfilehash: 645dd4a8a9d1c78fd54f0f31ad0efd772b671d39
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="documenting-your-code-with-xml-visual-basic"></a>Документирование кода с помощью XML (Visual Basic)
-В [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], можно выполнять документирование кода с помощью XML  
+В Visual Basic можно выполнять документирование кода с помощью XML  
   
 ## <a name="xml-documentation-comments"></a>Комментарии к XML-документации  
- [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]предоставляет простой способ автоматического создания XML-документации для проектов. Можно автоматически создавать схема XML для типов и членов, а также введите сводку, описательную документацию для каждого параметра и другие примечания. С соответствующей настройкой автоматически создается XML-документации в XML-файл с тем же именем, как проект и расширением XML. Дополнительные сведения см. в разделе [/doc](../../../visual-basic/reference/command-line-compiler/doc.md).  
+ Visual Basic предоставляет простой способ автоматического создания XML-документации для проектов. Можно автоматически создавать схема XML для типов и членов, а также введите сводку, описательную документацию для каждого параметра и другие примечания. С соответствующей настройкой автоматически создается XML-документации в XML-файл с тем же именем, как проект и расширением XML. Дополнительные сведения см. в разделе [/doc](../../../visual-basic/reference/command-line-compiler/doc.md).  
   
  XML-файл можно использовать или обрабатываться как XML. Этот файл находится в том же каталоге, что и выходной файл .exe или .dll проекта.  
   

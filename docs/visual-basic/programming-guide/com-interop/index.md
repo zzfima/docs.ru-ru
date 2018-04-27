@@ -15,11 +15,11 @@ ms.assetid: 3ffd1bdf-1b8d-47f5-87eb-75b659f64294
 caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: f3f9d7fb51198041356cfc68d49cc703dfdf78b5
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: a2c418855cd2e79c31301705706ff1b98f119a97
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="com-interop-visual-basic"></a>COM-взаимодействие (Visual Basic)
 Объектная модель компонентов (модель COM) позволяет объекту предоставлять свою функциональность другим компонентам и ведущим приложениям. COM-объекты входят в состав большей части современного программного обеспечения. Хотя сборки .NET являются наилучшим решением для новых приложений, в некоторых случаях необходимо использование COM-объектов. В этом разделе рассматриваются некоторые вопросы, связанные с созданием и использованием объектов COM с помощью Visual Basic.  
@@ -32,7 +32,7 @@ ms.lasthandoff: 04/26/2018
  Описывает, как добавлять ссылки на COM-объекты, имеющие библиотеки типов.  
   
  [Практическое руководство. Работа с элементами управления ActiveX](../../../visual-basic/programming-guide/com-interop/how-to-work-with-activex-controls.md)  
- Показывает, как использовать существующие элементы управления ActiveX для добавления возможностей в панель элементов [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)].  
+ Демонстрирует использование элементов управления ActiveX, чтобы добавить компоненты в области элементов Visual Studio.  
   
  [Пошаговое руководство. Вызов API-интерфейсов Windows](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)  
  Пошаговое описание процесса вызова API-интерфейсов, входящих в операционную систему Windows.  

@@ -1,43 +1,44 @@
 ---
-title: "Использование регулярных выражений в элементе управления MaskedTextBox в Visual Basic"
-ms.custom: 
+title: Использование регулярных выражений в элементе управления MaskedTextBox в Visual Basic
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - strings [Visual Basic], regular expressions
 - strings [Visual Basic], masked edit
 ms.assetid: 2a048fb0-7053-487d-b2c5-ffa5e22ed6f9
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 2638ed804593dd52481bd3865e1c67c5fdb2dcf9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: c72542c05123ef62a8f95afbe1bb19cb823d1f21
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="using-regular-expressions-with-the-maskedtextbox-control-in-visual-basic"></a>Использование регулярных выражений в элементе управления MaskedTextBox в Visual Basic
 В этом примере показано, как преобразование простых регулярных выражений для работы с <xref:System.Windows.Forms.MaskedTextBox> элемента управления.  
   
 ## <a name="description-of-the-masking-language"></a>Описание языка масок  
- Стандартные <xref:System.Windows.Forms.MaskedTextBox> язык маски основан на, используемой `Masked Edit` управления в [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 6.0 и должны быть знакомы пользователи, переходящие с данной платформы.  
+ Стандартные <xref:System.Windows.Forms.MaskedTextBox> язык маски основан на, используемой `Masked Edit` управления в Visual Basic 6.0 и должны быть знакомы пользователи, переходящие с данной платформы.  
   
  <xref:System.Windows.Forms.MaskedTextBox.Mask%2A> Свойство <xref:System.Windows.Forms.MaskedTextBox> элемент управления задает используемые маски ввода. Значение маски должно быть строкой, состоящей из одного или нескольких элементов маски из следующей таблицы.  
   
 |Элемент маски|Описание|Элемент регулярного выражения|  
 |---------------------|-----------------|--------------------------------|  
-|0|Любой отдельной цифре от 0 до 9. Требуется объект.|\d|  
+|0|Любой отдельной цифре от 0 до 9. Требуется объект.|\\d|  
 |9|Цифра или пробел. Необязательный элемент.|[\d]?|  
 |#|Цифра или пробел. Необязательный элемент. Если эта позиция оставлено пустым, в битовой маске, отображается как пробел. Плюс (+) и минуса (-), разрешены знаки.|[\d+-]?|  
 |L|Буква ASCII. Требуется объект.|[a-zA-Z]|  
 |?|Буква ASCII. Необязательный элемент.|[a-zA-Z]?|  
 |&|Символ. Требуется объект.|[\p{Ll}\p{Lu}\p{Lt}\p{Lm}\p{Lo}]|  
-|C|Символ. Необязательный элемент.|[\p{Ll}\p{Lu}\p{Lt}\p{Lm}\p{Lo}]?|  
+|В|Символ. Необязательный элемент.|[\p{Ll}\p{Lu}\p{Lt}\p{Lm}\p{Lo}]?|  
 |А|Буквенно-цифровых. Необязательный элемент.|\W|  
 |.|Десятичный разделитель, соответствующего языка и региональных параметров.|Недоступно.|  
 |,|Соответствующий язык и региональные параметры тысяч разделитель.|Недоступно.|  

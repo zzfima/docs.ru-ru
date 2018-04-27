@@ -1,11 +1,12 @@
 ---
-title: "Арифметические операторы в Visual Basic"
-ms.custom: 
+title: Арифметические операторы в Visual Basic
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - type safety
@@ -19,14 +20,14 @@ helpviewer_keywords:
 - Visual Basic code, operators
 - arithmetic operators [Visual Basic], about arithmetic operators
 ms.assetid: 325dac7a-ea4f-41d5-8b48-f6e904211569
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 7fec98c38eebc34a0f84e051dc7c0914f537418f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: cef1e3610d885a0f3a2bae718641f7b8ca1062dc
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="arithmetic-operators-in-visual-basic"></a>Арифметические операторы в Visual Basic
 Арифметические операторы используются для выполнения многих известных арифметических операций, включая вычисление числовых значений, представленных литералы, переменные, другие выражения, функции и вызовы свойств и константы. Также классифицируются с арифметическими операторами являются операторов сдвига, которые работают на уровне отдельных битов операндов и перетаскивать их битовых шаблонов влево или вправо.  
@@ -65,7 +66,7 @@ ms.lasthandoff: 11/21/2017
   
 |Тип данных делимого|Тип данных делителя|Значение делимого|Результат|  
 |---|---|---|---|  
-|`Double`|`Double`|0|<xref:System.Double.NaN>(математически число)|  
+|`Double`|`Double`|0|<xref:System.Double.NaN> (математически число)|  
 |`Double`|`Double`|> 0|<xref:System.Double.PositiveInfinity>|  
 |`Double`|`Double`|\< 0|<xref:System.Double.NegativeInfinity>|  
   
@@ -98,9 +99,9 @@ ms.lasthandoff: 11/21/2017
 ## <a name="type-safety"></a>Безопасность типа  
  Операнды обычно должен быть того же типа. Например, если сложение с `Integer` переменной, добавьте ее в другой `Integer` переменной и следует назначить результат переменной типа `Integer` также.  
   
- Один из способов обеспечения типобезопасного кода является использование [оператор Option Strict](../../../../visual-basic/language-reference/statements/option-strict-statement.md). Если задать `Option Strict On`, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] автоматически выполняет *типобезопасный* преобразования. Например, при попытке добавить `Integer` переменной `Double` переменной и присвойте значение `Double` переменных, операция проходит нормально, так как `Integer` значение можно преобразовать в `Double` без потери данных. Небезопасный тип преобразования, с другой стороны, вызывают ошибку компилятора с `Option Strict On`. Например, при попытке добавить `Integer` переменной `Double` переменную и присвойте значение `Integer` переменной, компилятор выдает ошибку, так как `Double` переменной не может быть неявно преобразован к типу `Integer`.  
+ Один из способов обеспечения типобезопасного кода является использование [оператор Option Strict](../../../../visual-basic/language-reference/statements/option-strict-statement.md). Если задать `Option Strict On`, Visual Basic автоматически выполняет *типобезопасный* преобразования. Например, при попытке добавить `Integer` переменной `Double` переменной и присвойте значение `Double` переменных, операция проходит нормально, так как `Integer` значение можно преобразовать в `Double` без потери данных. Небезопасный тип преобразования, с другой стороны, вызывают ошибку компилятора с `Option Strict On`. Например, при попытке добавить `Integer` переменной `Double` переменную и присвойте значение `Integer` переменной, компилятор выдает ошибку, так как `Double` переменной не может быть неявно преобразован к типу `Integer`.  
   
- Если задать `Option Strict Off`, но при этом [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] разрешает неявные сужающие преобразования вступили в силу, хотя они могут привести к потере данных или точности. По этой причине мы рекомендуем использовать `Option Strict On` при написании кода в рабочей среде. Для получения дополнительной информации см. [Widening and Narrowing Conversions](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md).  
+ Если задать `Option Strict Off`, однако позволяет Visual Basic неявные сужающие преобразования вступили в силу, хотя они могут привести к потере данных или точности. По этой причине мы рекомендуем использовать `Option Strict On` при написании кода в рабочей среде. Для получения дополнительной информации см. [Widening and Narrowing Conversions](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md).  
   
 ## <a name="see-also"></a>См. также  
  [Арифметические операторы](../../../../visual-basic/language-reference/operators/arithmetic-operators.md)  

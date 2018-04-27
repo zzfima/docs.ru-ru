@@ -16,11 +16,11 @@ ms.assetid: 72528d02-77b7-4b4c-8b9e-d12f666f92ef
 caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 63dfdf0f2fe8869577d450f21c4f12b5eec125bb
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: ab3f9d2729dec1d97dc00fac3527e492d3c5880a
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="class-39ltclassnamegt39-cannot-be-found"></a>Класс &#39; &lt;classname&gt; &#39; не найден
 Класс\<имя_класса > "не найден. Это состояние, как правило, является результатом использования несоответствующей библиотеки "Microsoft.VisualBasic.dll".  
@@ -33,7 +33,7 @@ ms.lasthandoff: 04/26/2018
   
 1.  Скомпилируйте программу еще раз, чтобы узнать, повторится ли ошибка.  
   
-2.  Если ошибка возникает снова, сохраните работу и перезапустите [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)].  
+2.  Если ошибка повторится, сохраните работу и перезапустите Visual Studio.  
   
 3.  Если ошибка не устранена, переустановите Visual Basic.  
   

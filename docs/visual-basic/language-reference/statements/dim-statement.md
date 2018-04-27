@@ -1,10 +1,11 @@
 ---
-title: "Оператор Dim (Visual Basic)"
+title: Оператор Dim (Visual Basic)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - vb.Dim
@@ -34,14 +35,14 @@ helpviewer_keywords:
 - Dim statement [Visual Basic], syntax
 - variables [Visual Basic], member and local
 ms.assetid: fae3eca1-f0b2-4400-994b-7aa58a848448
-caps.latest.revision: "72"
+caps.latest.revision: 72
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: a428f8be7b62600ca8fffd3160039c1de911e34e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 36e2d416e4653bfa6fe212b75b92ae2d90775d53
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="dim-statement-visual-basic"></a>Оператор Dim (Visual Basic)
 Объявляет и выделяет место для одной или нескольких переменных.  
@@ -57,11 +58,11 @@ Dim [ WithEvents ] variablelist
   
 -   `attributelist`  
   
-     Необязательно. В разделе [список атрибутов](../../../visual-basic/language-reference/statements/attribute-list.md).  
+     Необязательный. В разделе [список атрибутов](../../../visual-basic/language-reference/statements/attribute-list.md).  
   
 -   `accessmodifier`  
   
-     Необязательно. Ниже указаны доступные значения.  
+     Необязательный. Ниже указаны доступные значения.  
   
     -   [Public](../../../visual-basic/language-reference/modifiers/public.md)  
   
@@ -77,27 +78,27 @@ Dim [ WithEvents ] variablelist
   
 -   `Shared`  
   
-     Необязательно. В разделе [общих](../../../visual-basic/language-reference/modifiers/shared.md).  
+     Необязательный. В разделе [общих](../../../visual-basic/language-reference/modifiers/shared.md).  
   
 -   `Shadows`  
   
-     Необязательно. В разделе [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).  
+     Необязательный. В разделе [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).  
   
 -   `Static`  
   
-     Необязательно. В разделе [статических](../../../visual-basic/language-reference/modifiers/static.md).  
+     Необязательный. В разделе [статических](../../../visual-basic/language-reference/modifiers/static.md).  
   
 -   `ReadOnly`  
   
-     Необязательно. В разделе [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md).  
+     Необязательный. В разделе [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md).  
   
 -   `WithEvents`  
   
-     Необязательно. Указывает, что они объектные переменные, которые ссылаются на экземпляры класса, который может порождать события. В разделе [WithEvents](../../../visual-basic/language-reference/modifiers/withevents.md).  
+     Необязательный. Указывает, что они объектные переменные, которые ссылаются на экземпляры класса, который может порождать события. В разделе [WithEvents](../../../visual-basic/language-reference/modifiers/withevents.md).  
   
 -   `variablelist`  
   
-     Обязательный. Список переменных, объявляемых в этом операторе.  
+     Обязательно. Список переменных, объявляемых в этом операторе.  
   
      `variable [ , variable ... ]`  
   
@@ -107,12 +108,12 @@ Dim [ WithEvents ] variablelist
   
     |Отделение|Описание|  
     |---|---|  
-    |`variablename`|Обязательный. Имя переменной. В разделе [имена объявленных элементов](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).|  
-    |`boundslist`|Необязательно. Список границ для каждого измерения массива.|  
-    |`New`|Необязательно. Создает новый экземпляр класса при `Dim` выполняется инструкция.|  
-    |`datatype`|Необязательно. Тип данных переменной.|  
-    |`With`|Необязательно. Появился в списке инициализаторов объекта.|  
-    |`propertyname`|Необязательно. Имя свойства в классе становится экземпляром.|  
+    |`variablename`|Обязательно. Имя переменной. В разделе [имена объявленных элементов](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).|  
+    |`boundslist`|Необязательный. Список границ для каждого измерения массива.|  
+    |`New`|Необязательный. Создает новый экземпляр класса при `Dim` выполняется инструкция.|  
+    |`datatype`|Необязательный. Тип данных переменной.|  
+    |`With`|Необязательный. Появился в списке инициализаторов объекта.|  
+    |`propertyname`|Необязательный. Имя свойства в классе становится экземпляром.|  
     |`propinitializer`|После `propertyname` =. Выражение, которое является вычисляется и присваивается имя свойства.|  
     |`initializer`|Необязательный, если `New` не указан. Выражение, которое вычисляется и присваивается переменной при ее создании.|  
   
@@ -251,7 +252,7 @@ Dim twoDimensions(,) As Integer = {{0, 1, 2}, {10, 11, 12}}
   
  Дополнительные сведения о литералах массива см. в разделе [массивы](../../../visual-basic/programming-guide/language-features/arrays/index.md).  
   
-##  <a name="default"></a>Типы данных по умолчанию и значения  
+##  <a name="default"></a> Типы данных по умолчанию и значения  
  В следующей таблице перечислены результаты различных сочетаний заданных типов данных и инициализаторов в операторе `Dim`.  
   
 |Указан тип данных?|Указан инициализатор?|Пример|Результат|  
@@ -261,7 +262,7 @@ Dim twoDimensions(,) As Integer = {{0, 1, 2}, {10, 11, 12}}
 |Да|Нет|`Dim qty As Integer`|Переменная инициализируется со значением по умолчанию для типа данных. См. в таблице ниже в данном разделе.|  
 |Да|Да|`Dim qty  As Integer = 5`|Если тип данных инициализатора нельзя преобразовать в указанный тип данных, возникает ошибка времени компиляции.|  
   
- Если указать тип данных, но не указан инициализатор, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] инициализирует переменную со значением по умолчанию для своего типа данных. В следующей таблице представлены значения инициализации.  
+ Если указать тип данных, но не указан инициализатор, Visual Basic инициализирует переменную со значением по умолчанию для своего типа данных. В следующей таблице представлены значения инициализации.  
   
 |Тип данных|Значение по умолчанию|  
 |---|---|  
@@ -279,8 +280,8 @@ Dim twoDimensions(,) As Integer = {{0, 1, 2}, {10, 11, 12}}
 |Объявление процедуры|Переменная инициализирована|Переменная прекращает существующие|  
 |---|---|---|  
 |В модуле|Первый раз при вызове процедуры|Когда программа завершает выполнение|  
-|В классе или структуре процедура является`Shared`|Первый раз процедура вызывается на определенном экземпляре или на классе или структуре самой|Когда программа завершает выполнение|  
-|В классе или структуре не процедуры`Shared`|При первом запуске при вызове процедуры на определенном экземпляре|Если этот экземпляр освобождается для сборки мусора (GC)|  
+|В классе или структуре процедура является `Shared`|Первый раз процедура вызывается на определенном экземпляре или на классе или структуре самой|Когда программа завершает выполнение|  
+|В классе или структуре не процедуры `Shared`|При первом запуске при вызове процедуры на определенном экземпляре|Если этот экземпляр освобождается для сборки мусора (GC)|  
   
 ## <a name="attributes-and-modifiers"></a>Атрибуты и модификаторы  
  Можно применить атрибуты только для переменных-членов, а не к локальным переменным. Атрибут вносит сведения для метаданных сборки, которые не имеют смысла для временного хранения, такие как локальные переменные.  

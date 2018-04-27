@@ -1,28 +1,30 @@
 ---
-title: "Использование Автоматизации Пользовательского Интерфейса для автоматизированного тестирования"
-ms.custom: 
+title: Использование Автоматизации Пользовательского Интерфейса для автоматизированного тестирования
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-bcl
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - automated testing
 - testing, UI Automation
 - UI Automation, automated testing
 ms.assetid: 3a0435c0-a791-4ad7-ba92-a4c1d1231fde
-caps.latest.revision: "26"
+caps.latest.revision: 26
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 128af9a015d25985b7075f5b670fea36c6773267
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 6539829feacf8c9a5c9c1339df299a21ac5fe64f
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="using-ui-automation-for-automated-testing"></a>Использование Автоматизации Пользовательского Интерфейса для автоматизированного тестирования
 > [!NOTE]
@@ -50,7 +52,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="Implementing_UI_Automation"></a>   
 ### <a name="implementing-ui-automation"></a>Реализация автоматизации пользовательского интерфейса  
- Как упоминалось ранее, без единой модели, предоставляемой [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], средствам тестирования и разработчикам необходимо знать информацию о среде, чтобы представлять свойства и поведение элементов управления в этой среде. Поскольку в операционной системе [!INCLUDE[TLA2#tla_win](../../../includes/tla2sharptla-win-md.md)] может одновременно существовать несколько разных инфраструктур пользовательского интерфейса, включая [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)], [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]и [!INCLUDE[TLA#tla_wpf](../../../includes/tlasharptla-wpf-md.md)], тестирование нескольких приложений с использованием элементов управления, выглядящих одинаковыми, может оказаться чрезвычайно сложной задачей. Например, в следующей таблице перечислены относящиеся к конкретной инфраструктуре имена свойств, необходимые для извлечения имени (или текста), связанного с элементом управления "Кнопка", и приведено единственное эквивалентное свойство [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] .  
+ Как упоминалось ранее, без единой модели, предоставляемой [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], средствам тестирования и разработчикам необходимо знать информацию о среде, чтобы представлять свойства и поведение элементов управления в этой среде. Поскольку может существовать несколько разных инфраструктур пользовательского интерфейса одновременно в операционных системах Windows, включая [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)], [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)], и [!INCLUDE[TLA#tla_wpf](../../../includes/tlasharptla-wpf-md.md)], может оказаться сложной задачей, тестирование нескольких приложений с элементами управления, выглядящих одинаковыми . Например, в следующей таблице перечислены относящиеся к конкретной инфраструктуре имена свойств, необходимые для извлечения имени (или текста), связанного с элементом управления "Кнопка", и приведено единственное эквивалентное свойство [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] .  
   
 |Тип элемента управления модели автоматизации пользовательского интерфейса|Инфраструктура пользовательского интерфейса|Свойство инфраструктуры|Свойство модели автоматизации пользовательского интерфейса|  
 |--------------------------------|------------------|---------------------------------|----------------------------|  

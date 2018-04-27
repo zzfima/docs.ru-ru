@@ -16,11 +16,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: d40b59faa4d0f50e59daaa71da6127da367f008b
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: b8b3e3006072855673c37786ffb763fcd610e40c
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="building-the-windows-communication-foundation-samples"></a>Построение примеров Windows Communication Foundation
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Образцы, которые могут быть построены с использованием Visual Studio 2010 или **msbuild** команду из командной строки. В этом разделе описаны обе эти процедуры.  
@@ -39,9 +39,9 @@ ms.lasthandoff: 04/26/2018
   
 ### <a name="to-build-the-sample-using-visual-studio"></a>Сборка образца с использованием Visual Studio  
   
-1.  Если используется [!INCLUDE[wv](../../../../includes/wv-md.md)] или [!INCLUDE[lserver](../../../../includes/lserver-md.md)], Windows 7, Windows Server 2008 R2 или [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)], то необходимо запускать [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] с повышенными разрешениями. Чтобы сделать это, щелкните правой кнопкой мыши значок в меню «Пуск» и нажмите кнопку **Запуск от имени администратора**.  
+1.  Если вы используете [!INCLUDE[wv](../../../../includes/wv-md.md)], [!INCLUDE[lserver](../../../../includes/lserver-md.md)], Windows 7 или Windows Server 2008 R2 и работает [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)], необходимо запустить Visual Studio с повышенными разрешениями. Чтобы сделать это, щелкните правой кнопкой мыши значок в меню «Пуск» и нажмите кнопку **Запуск от имени администратора**.  
   
-2.  Из **файл** меню в Visual Studio щелкните **откройте**, нажмите кнопку **проект или решение**. Перейдите к языковому подкаталогу каталога, в котором установлен образец, и дважды щелкните значок файла SLN, чтобы открыть решение в [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)].  
+2.  Из **файл** меню в Visual Studio щелкните **откройте**, нажмите кнопку **проект или решение**. Перейдите во вложенную папку конкретного языка в каталоге, в котором установлен образец и дважды щелкните значок файла SLN, чтобы открыть решение в Visual Studio.  
   
 3.  В **построения** последовательно выберите пункты **Перестроить решение**. Файлы построения клиентской программы сохраняются в папке client\bin, а файлы построения служебной программы - в папке service\bin. Если служба размещена в службах IIS, файлы служебной программы также копируются в каталог servicemodelsamples и его подкаталог \bin.  
   

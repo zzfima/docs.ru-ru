@@ -1,11 +1,12 @@
 ---
-title: "Объявление и вызов событий (Visual Basic)"
-ms.custom: 
+title: Объявление и вызов событий (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - declarations [Visual Basic], events
@@ -15,14 +16,14 @@ helpviewer_keywords:
 - events [Visual Basic], raising
 - raising events [Visual Basic], walkthroughs
 ms.assetid: 8ffb3be8-097d-4d3c-b71e-04555ebda2a2
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 0bf75cfba5102be5d837af385e2d3578f78a03c0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 27db585084703607a7389f5a0aa3eba6f70dd793
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="walkthrough-declaring-and-raising-events-visual-basic"></a>Пошаговое руководство. Объявление и создание событий (Visual Basic)
 В этом пошаговом руководстве демонстрируется объявление и вызов событий для класса с именем `Widget`. После выполнения шагов можно ознакомиться с разделом дополнительное [Пошаговое руководство: обработка событий](../../../../visual-basic/programming-guide/language-features/events/walkthrough-handling-events.md), который показывает, как использовать события из `Widget` объектов для предоставления сведений о состоянии в приложении.  
@@ -36,7 +37,7 @@ ms.lasthandoff: 11/21/2017
   
 #### <a name="to-build-the-code-example-for-this-topic"></a>Для построения примера кода для этого раздела  
   
-1.  Откройте новый [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] приложение Windows проект и создать форму с именем `Form1`.  
+1.  Откройте новый проект приложения Windows в Visual Basic и создайте форму с именем `Form1`.  
   
 2.  Добавьте две кнопки и метку для `Form1`.  
   
@@ -45,7 +46,7 @@ ms.lasthandoff: 11/21/2017
     |Объект|Свойство|Параметр|  
     |------------|--------------|-------------|  
     |`Button1`|`Text`|Задача запуска|  
-    |`Button2`|`Text`|Cancel|  
+    |`Button2`|`Text`|Отмена|  
     |`Label`|`(Name)`, `Text`|lblPercentDone 0|  
   
 4.  На **проекта** меню, выберите **добавить класс** добавить класс с именем `Widget.vb` в проект.  
@@ -61,7 +62,7 @@ ms.lasthandoff: 11/21/2017
 > [!NOTE]
 >  Аргументы событий можно объявлять так же, как аргументы процедур, за следующими исключениями: события не могут иметь `Optional` или `ParamArray` аргументы и события не имеют возвращаемых значений.  
   
- `PercentDone` Событие `LongTask` метод `Widget` класса. `LongTask`принимает два аргумента: продолжительность времени симулирования методом выполнения работы и минимальный интервал времени перед `LongTask` приостанавливает свою работу, чтобы вызвать `PercentDone` событий.  
+ `PercentDone` Событие `LongTask` метод `Widget` класса. `LongTask` принимает два аргумента: продолжительность времени симулирования методом выполнения работы и минимальный интервал времени перед `LongTask` приостанавливает свою работу, чтобы вызвать `PercentDone` событий.  
   
 #### <a name="to-raise-the-percentdone-event"></a>Для вызова события PercentDone  
   

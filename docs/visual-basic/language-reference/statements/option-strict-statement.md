@@ -2,9 +2,10 @@
 title: Option Strict Statement
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - vb.Strict
@@ -16,14 +17,14 @@ helpviewer_keywords:
 - late binding [Visual Basic]
 - implicit conversions [Visual Basic]
 ms.assetid: 5883e0c1-a920-4274-8e46-b0ff047eaee5
-caps.latest.revision: "49"
+caps.latest.revision: 49
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 1a01edd918ea49c08defddb45bf23c33307e814f
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: 0e49c8f64d38b7f8d2dc1a34cf22925c15e3a505
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="option-strict-statement"></a>Option Strict Statement
 Ограничивает неявное преобразование типов данных только до расширяющегося преобразования, не разрешает позднее связывание и неявную типизацию, в результате `Object` типа.  
@@ -68,7 +69,7 @@ Option Strict { On | Off }
 ## <a name="implicit-narrowing-conversion-errors"></a>Неявные сужающие преобразования ошибок  
  Ошибки неявных сужающих преобразований возникают при наличии неявного преобразования типа данных, которое является сужающим преобразованием.  
   
- [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]можно преобразовать многих типов данных в другие типы данных. Когда значение одного типа данных преобразуется в тип данных с меньшей точностью или меньшей емкостью может произойти потеря данных. Ошибка во время выполнения возникает, если сужающее преобразование завершается сбоем. `Option Strict`обеспечивает уведомление во время компиляции сужающего преобразования, чтобы можно было избежать их. Дополнительные сведения см. в разделе [неявные и явные преобразования](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md) и [расширяющие и сужающие преобразования](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md).  
+ Visual Basic можно преобразовать многих типов данных в другие типы данных. Когда значение одного типа данных преобразуется в тип данных с меньшей точностью или меньшей емкостью может произойти потеря данных. Ошибка во время выполнения возникает, если сужающее преобразование завершается сбоем. `Option Strict` обеспечивает уведомление во время компиляции сужающего преобразования, чтобы можно было избежать их. Дополнительные сведения см. в разделе [неявные и явные преобразования](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md) и [расширяющие и сужающие преобразования](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md).  
   
  Преобразования, которые могут привести к ошибкам входят неявные преобразования, возникающие в выражениях. Дополнительные сведения см. в следующих разделах:  
   
@@ -120,7 +121,7 @@ Option Strict { On | Off }
   
 2.  На **компиляции** вкладку, задайте значение **Option Strict** поле.  
   
-###  <a name="conditions"></a>Задание конфигурации предупреждений в Интегрированной среде разработки  
+###  <a name="conditions"></a> Задание конфигурации предупреждений в Интегрированной среде разработки  
  При использовании [компиляция, конструктора проектов (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic) вместо `Option Strict` инструкции, у вас есть дополнительный контроль над условия, которые приводят к ошибкам. **Конфигурации предупреждений** раздел **компиляция** имеет параметры, которые соответствуют три условия, которые вызывают ошибку компиляции при `Option Strict` включен. Ниже приведены эти параметры.  
   
 -   **Неявное преобразование**  

@@ -1,11 +1,12 @@
 ---
-title: "Явные и неявные преобразования (Visual Basic)"
-ms.custom: 
+title: Явные и неявные преобразования (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - conversions [Visual Basic], type
@@ -26,17 +27,17 @@ helpviewer_keywords:
 - data type conversion [Visual Basic], implicit
 - implicit data type conversions [Visual Basic]
 ms.assetid: 77de1659-af8a-492c-967e-e7ef60ccce66
-caps.latest.revision: "25"
+caps.latest.revision: 25
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 6e9dd698e1cc84464cd12d33767feec960c511ca
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 9827cecce0a15d37d2ffe3ccf691404149b156fb
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="implicit-and-explicit-conversions-visual-basic"></a>Явные и неявные преобразования (Visual Basic)
-*Неявное преобразование* не требует специального синтаксиса в исходном коде. В следующем примере [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] неявно преобразует значение `k` значение с плавающей запятой одиночной точности перед назначением их `q`.  
+*Неявное преобразование* не требует специального синтаксиса в исходном коде. В следующем примере Visual Basic неявно преобразует значение `k` значение с плавающей запятой одиночной точности перед назначением их `q`.  
   
 ```  
 Dim k As Integer  
@@ -46,7 +47,7 @@ k = 432
 q = k  
 ```  
   
- *Явное преобразование* используется ключевое слово преобразования типа. [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]предоставляет несколько зарезервированных слов, которые приводят выражение в скобках для нужного типа данных. Эти ключевые слова действуют аналогично функциям, но компилятор создает встроенный код, поэтому выполнение будет несколько быстрее, чем при вызове функции.  
+ *Явное преобразование* используется ключевое слово преобразования типа. Visual Basic предоставляет несколько зарезервированных слов, которые приводят выражение в скобках для нужного типа данных. Эти ключевые слова действуют аналогично функциям, но компилятор создает встроенный код, поэтому выполнение будет несколько быстрее, чем при вызове функции.  
   
  В следующем расширении предыдущего примера `CInt` ключевое слово преобразует значение `q` обратно в целое перед назначением их `k`.  
   
@@ -62,28 +63,28 @@ k = CInt(q)
   
 |Ключевое слово преобразования типа|Преобразует выражение в тип данных|Допустимые типы данных преобразуемого выражения|  
 |---|---|---|  
-|`CBool`|[Логический тип данных](../../../../visual-basic/language-reference/data-types/boolean-data-type.md)|Любой числовой тип (включая `Byte`, `SByte`и типы перечисления), `String`,`Object`|  
-|`CByte`|[Тип данных Byte](../../../../visual-basic/language-reference/data-types/byte-data-type.md)|Любой числовой тип (включая `SByte` и типы перечисления), `Boolean`, `String`,`Object`|  
+|`CBool`|[Логический тип данных](../../../../visual-basic/language-reference/data-types/boolean-data-type.md)|Любой числовой тип (включая `Byte`, `SByte`и типы перечисления), `String`, `Object`|  
+|`CByte`|[Тип данных Byte](../../../../visual-basic/language-reference/data-types/byte-data-type.md)|Любой числовой тип (включая `SByte` и типы перечисления), `Boolean`, `String`, `Object`|  
 |`CChar`|[Тип данных Char](../../../../visual-basic/language-reference/data-types/char-data-type.md)|`String`, `Object`|  
 |`CDate`|[Тип данных Date](../../../../visual-basic/language-reference/data-types/date-data-type.md)|`String`, `Object`|  
-|`CDbl`|[Тип данных Double](../../../../visual-basic/language-reference/data-types/double-data-type.md)|Любой числовой тип (включая `Byte`, `SByte`и типы перечисления), `Boolean`, `String`,`Object`|  
-|`CDec`|[Тип данных Decimal](../../../../visual-basic/language-reference/data-types/decimal-data-type.md)|Любой числовой тип (включая `Byte`, `SByte`и типы перечисления), `Boolean`, `String`,`Object`|  
-|`CInt`|[Тип данных Integer](../../../../visual-basic/language-reference/data-types/integer-data-type.md)|Любой числовой тип (включая `Byte`, `SByte`и типы перечисления), `Boolean`, `String`,`Object`|  
-|`CLng`|[Тип данных Long](../../../../visual-basic/language-reference/data-types/long-data-type.md)|Любой числовой тип (включая `Byte`, `SByte`и типы перечисления), `Boolean`, `String`,`Object`|  
+|`CDbl`|[Тип данных Double](../../../../visual-basic/language-reference/data-types/double-data-type.md)|Любой числовой тип (включая `Byte`, `SByte`и типы перечисления), `Boolean`, `String`, `Object`|  
+|`CDec`|[Тип данных Decimal](../../../../visual-basic/language-reference/data-types/decimal-data-type.md)|Любой числовой тип (включая `Byte`, `SByte`и типы перечисления), `Boolean`, `String`, `Object`|  
+|`CInt`|[Тип данных Integer](../../../../visual-basic/language-reference/data-types/integer-data-type.md)|Любой числовой тип (включая `Byte`, `SByte`и типы перечисления), `Boolean`, `String`, `Object`|  
+|`CLng`|[Тип данных Long](../../../../visual-basic/language-reference/data-types/long-data-type.md)|Любой числовой тип (включая `Byte`, `SByte`и типы перечисления), `Boolean`, `String`, `Object`|  
 |`CObj`|[Тип данных Object](../../../../visual-basic/language-reference/data-types/object-data-type.md)|Любой тип|  
-|`CSByte`|[Тип данных SByte](../../../../visual-basic/language-reference/data-types/sbyte-data-type.md)|Любой числовой тип (включая `Byte` и типы перечисления), `Boolean`, `String`,`Object`|  
-|`CShort`|[Тип данных Short](../../../../visual-basic/language-reference/data-types/short-data-type.md)|Любой числовой тип (включая `Byte`, `SByte`и типы перечисления), `Boolean`, `String`,`Object`|  
-|`CSng`|[Тип данных Single](../../../../visual-basic/language-reference/data-types/single-data-type.md)|Любой числовой тип (включая `Byte`, `SByte`и типы перечисления), `Boolean`, `String`,`Object`|  
-|`CStr`|[Тип данных String](../../../../visual-basic/language-reference/data-types/string-data-type.md)|Любой числовой тип (включая `Byte`, `SByte`и типы перечисления), `Boolean`, `Char`, `Char` массива, `Date`,`Object`|  
+|`CSByte`|[Тип данных SByte](../../../../visual-basic/language-reference/data-types/sbyte-data-type.md)|Любой числовой тип (включая `Byte` и типы перечисления), `Boolean`, `String`, `Object`|  
+|`CShort`|[Тип данных Short](../../../../visual-basic/language-reference/data-types/short-data-type.md)|Любой числовой тип (включая `Byte`, `SByte`и типы перечисления), `Boolean`, `String`, `Object`|  
+|`CSng`|[Тип данных Single](../../../../visual-basic/language-reference/data-types/single-data-type.md)|Любой числовой тип (включая `Byte`, `SByte`и типы перечисления), `Boolean`, `String`, `Object`|  
+|`CStr`|[Тип данных String](../../../../visual-basic/language-reference/data-types/string-data-type.md)|Любой числовой тип (включая `Byte`, `SByte`и типы перечисления), `Boolean`, `Char`, `Char` массива, `Date`, `Object`|  
 |`CType`|Тип, заданный после запятой (`,`)|При преобразовании в *простейший тип данных* типов (включая массив простейших типов), то, как для соответствующих зарезервированных слов преобразования<br /><br /> При преобразовании в *составного типа*, он реализует интерфейсы и классы, от которых они наследуются<br /><br /> При преобразовании в классе или структуре, в которой имеются перегруженные `CType`, класса или структуры|  
-|`CUInt`|[Тип данных UInteger](../../../../visual-basic/language-reference/data-types/uinteger-data-type.md)|Любой числовой тип (включая `Byte`, `SByte`и типы перечисления), `Boolean`, `String`,`Object`|  
-|`CULng`|[Тип данных ULong](../../../../visual-basic/language-reference/data-types/ulong-data-type.md)|Любой числовой тип (включая `Byte`, `SByte`и типы перечисления), `Boolean`, `String`,`Object`|  
-|`CUShort`|[Тип данных UShort](../../../../visual-basic/language-reference/data-types/ushort-data-type.md)|Любой числовой тип (включая `Byte`, `SByte`и типы перечисления), `Boolean`, `String`,`Object`|  
+|`CUInt`|[Тип данных UInteger](../../../../visual-basic/language-reference/data-types/uinteger-data-type.md)|Любой числовой тип (включая `Byte`, `SByte`и типы перечисления), `Boolean`, `String`, `Object`|  
+|`CULng`|[Тип данных ULong](../../../../visual-basic/language-reference/data-types/ulong-data-type.md)|Любой числовой тип (включая `Byte`, `SByte`и типы перечисления), `Boolean`, `String`, `Object`|  
+|`CUShort`|[Тип данных UShort](../../../../visual-basic/language-reference/data-types/ushort-data-type.md)|Любой числовой тип (включая `Byte`, `SByte`и типы перечисления), `Boolean`, `String`, `Object`|  
   
 ## <a name="the-ctype-function"></a>Функция CType  
  [Функция CType](../../../../visual-basic/language-reference/functions/ctype-function.md) имеет два аргумента. Во-первых, преобразуемое выражение, а второй — класс тип или объект назначения данных. Обратите внимание, что первый аргумент должен быть выражением, а не тип.  
   
- `CType`— *встроенная функция*, то есть скомпилированный код делает преобразование, часто без создания функции вызова. Это улучшает производительность.  
+ `CType` — *встроенная функция*, то есть скомпилированный код делает преобразование, часто без создания функции вызова. Это улучшает производительность.  
   
  Сравнение `CType` с других ключевых слов преобразования типов, в разделе [оператор DirectCast](../../../../visual-basic/language-reference/operators/directcast-operator.md) и [оператор TryCast](../../../../visual-basic/language-reference/operators/trycast-operator.md).  
   
@@ -109,7 +110,7 @@ h = CType(cZ, iZone)
 ```  
   
 ### <a name="array-types"></a>Типы массивов  
- `CType`также можно преобразовывать типы данных массивов, как показано в следующем примере.  
+ `CType` также можно преобразовывать типы данных массивов, как показано в следующем примере.  
   
 ```  
 Dim v() As classV  

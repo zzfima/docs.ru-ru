@@ -18,14 +18,14 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 06ee3a1e62320aef3b1a67afe5610b13a95de375
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 1006b32d7a265c94753081eab7b2bd279ed3dbdf
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="extending-windows-workflow-foundation"></a>Расширение Windows Workflow Foundation
-Следующий раздел описывает расширение [!INCLUDE[wf](../../../includes/wf-md.md)] с помощью пользовательских действий и конструкторов в повторно размещенных средах за пределами [!INCLUDE[vs2010](../../../includes/vs2010-md.md)].  
+Следующий раздел описывает способы расширения Windows Workflow Foundation (WF) с помощью пользовательских действий и конструкторов в повторно размещенных средах за пределами [!INCLUDE[vs2010](../../../includes/vs2010-md.md)].  
   
 ## <a name="in-this-section"></a>В этом разделе  
  [Настройка конструктора рабочих процессов](../../../docs/framework/windows-workflow-foundation/customizing-the-workflow-design-experience.md)  

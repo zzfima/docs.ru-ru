@@ -1,11 +1,12 @@
 ---
-title: "Повышение типа (Visual Basic)"
-ms.custom: 
+title: Повышение типа (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - declared elements [Visual Basic], scope
@@ -16,17 +17,17 @@ helpviewer_keywords:
 - type promotion
 - declared elements [Visual Basic], visibility
 ms.assetid: 035eeb15-e4c5-4288-ab3c-6bd5d22f7051
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: f3a55c023afe7afe96f862f0b3cbbdb03a15b902
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: ddb0d61f0f1c94e8e28493d0c62afe1e09503804
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="type-promotion-visual-basic"></a>Повышение типа (Visual Basic)
-При объявлении элемента программирования в модуле, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] повышает уровень его области пространства имен, содержащего модуль. Это называется *введите рекламной акции*.  
+При объявлении элемента программирования в модуле Visual Basic повышает уровень его области до пространства имен, содержащего модуль. Это называется *введите рекламной акции*.  
   
  В следующем примере показано определение схемы модуля и двух членов этого модуля.  
   
@@ -46,7 +47,7 @@ ms.lasthandoff: 11/21/2017
   
  [!code-vb[VbVbalrDeclaredElements#3](../../../../visual-basic/programming-guide/language-features/declared-elements/codesnippet/VisualBasic/type-promotion_3.vb)]  
   
- В приведенном выше примере [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] невозможно повысить уровень класса `abc` для `thisNameSpace` , так как уже существует перечисление с тем же именем на уровне пространства имен. Чтобы получить доступ к `abcSub`, необходимо использовать полной строки `thisNamespace.thisModule.abc.abcSub`. Однако для класса `xyz` по-прежнему повышается, и имеет доступ к `xyzSub` с более короткие строки квалификации `thisNamespace.xyz.xyzSub`.  
+ В предыдущем примере, Visual Basic не может повысить уровень класса `abc` для `thisNameSpace` , так как уже существует перечисление с тем же именем на уровне пространства имен. Чтобы получить доступ к `abcSub`, необходимо использовать полной строки `thisNamespace.thisModule.abc.abcSub`. Однако для класса `xyz` по-прежнему повышается, и имеет доступ к `xyzSub` с более короткие строки квалификации `thisNamespace.xyz.xyzSub`.  
   
 ### <a name="defeat-of-type-promotion-for-partial-types"></a>Отмена повышения типа для разделяемых типов  
  Если класс или структуру в модуле использует [частичного](../../../../visual-basic/language-reference/modifiers/partial.md) ключевое слово, повышение типа автоматически отменяется для этого класса или структуры, независимо от того, имеется ли пространство имен содержит член с тем же именем. Другие элементы в модуль, по-прежнему возможно повышение типа.  

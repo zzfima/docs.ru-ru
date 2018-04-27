@@ -1,11 +1,12 @@
 ---
-title: "Практическое руководство. Вызов процедуры, возвращающей значение (Visual Basic)"
-ms.custom: 
+title: Практическое руководство. Вызов процедуры, возвращающей значение (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - procedure calls [Visual Basic], returning values
@@ -13,14 +14,14 @@ helpviewer_keywords:
 - procedures [Visual Basic], calling
 - procedures [Visual Basic], returning a value
 ms.assetid: a445127b-0f5f-465a-98fb-3e514b93d115
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: f6d408eed67fa417f42252bb49ecea28d4458382
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: cbaaa5ed17845a7ac8847786fb10111c724015ba
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-call-a-procedure-that-returns-a-value-visual-basic"></a>Практическое руководство. Вызов процедуры, возвращающей значение (Visual Basic)
 Объект `Function` процедура возвращает значение вызывающему коду. Можно вызвать, включая ее имя и аргументы либо справа от оператора присваивания или в составе выражения.  
@@ -48,7 +49,7 @@ ms.lasthandoff: 11/21/2017
 4.  Значение, возвращаемое процедурой хранится в переменной или свойстве в левой части оператора присваивания.  
   
 ## <a name="example"></a>Пример  
- В следующем примере вызывается [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] <xref:Microsoft.VisualBasic.Interaction.Environ%2A> для получения значения переменной среды операционной системы. Первая строка вызывает `Environ` внутри выражения, а вторая строка вызывает его в операторе присваивания. `Environ`принимает имя переменной в качестве единственного аргумента. Значение переменной возвращается в вызывающий код.  
+ В следующем примере вызывается метод Visual Basic <xref:Microsoft.VisualBasic.Interaction.Environ%2A> для получения значения переменной среды операционной системы. Первая строка вызывает `Environ` внутри выражения, а вторая строка вызывает его в операторе присваивания. `Environ` принимает имя переменной в качестве единственного аргумента. Значение переменной возвращается в вызывающий код.  
   
  [!code-vb[VbVbcnProcedures#7](./codesnippet/VisualBasic/how-to-call-a-procedure-that-returns-a-value_1.vb)]  
   

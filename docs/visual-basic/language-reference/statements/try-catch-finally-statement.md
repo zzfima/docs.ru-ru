@@ -1,10 +1,11 @@
 ---
-title: "Оператор Try... Catch... Finally (Visual Basic)"
+title: Оператор Try... Catch... Finally (Visual Basic)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - vb.Try...Catch...Finally
@@ -24,14 +25,14 @@ helpviewer_keywords:
 - Visual Basic code, handling errors while running
 - structured exception handling, Try...Catch...Finally statements
 ms.assetid: d6488026-ccb3-42b8-a810-0d97b9d6472b
-caps.latest.revision: "69"
+caps.latest.revision: 69
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: c297a84b37b455a4b30b1848aa9bdd30dc567ec1
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: 701475d41d24ad89e6c83796f7cc5cd4b7802a32
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="trycatchfinally-statement-visual-basic"></a>Оператор Try... Catch... Finally (Visual Basic)
 Позволяет обрабатывать некоторые или все возможные ошибки, которые могут возникать в конкретном блоке кода, не прерывая выполнение кода.  
@@ -70,17 +71,17 @@ End Try
 ## <a name="remarks"></a>Примечания  
  Если предполагается, что конкретное исключение может произойти во время соответствующего раздела кода, необходимо поместить код `Try` блокировку и использовать `Catch` блок для сохранения управления и обработки исключения, если это происходит.  
   
- Объект `Try…Catch` оператор состоит из `Try` блока, а затем по одному или нескольким `Catch` предложений, задающих обработчики для различных исключений. Если создается исключение `Try` блока [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] ищет `Catch` оператор, который обрабатывает исключение. Если соответствующий `Catch` оператор не найден, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] проверяет метод, который вызвал текущий метод, и так далее вверх по стеку вызовов. Если не `Catch` блокировка найдена, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] отображает пользователю сообщение о необработанном исключении и останавливает выполнение программы.  
+ Объект `Try…Catch` оператор состоит из `Try` блока, а затем по одному или нескольким `Catch` предложений, задающих обработчики для различных исключений. Если создается исключение `Try` блокировать, Visual Basic выполняет поиск `Catch` оператор, который обрабатывает исключение. Если соответствующий `Catch` оператор не найден, Visual Basic проверяет метод, который вызвал текущий метод, и так далее вверх по стеку вызовов. Если не `Catch` блокировка найдена, Visual Basic отображает пользователю сообщение о необработанном исключении и останавливает выполнение программы.  
   
  Можно использовать более одного `Catch` инструкции в `Try…Catch` инструкции. При этом порядок `Catch` предложений важно, поскольку они проверяются в порядке. Перехватывайте более конкретные исключения перед менее конкретными.  
   
  Следующие `Catch` бы определенные инструкции условия и будет перехватывать все исключения, производные от <xref:System.Exception> класса. Обычно следует использовать один из этих вариантов на последнем `Catch` блока в `Try...Catch...Finally` структуры после перехвата определенных исключений, предполагается, что. Поток управления никогда не может достичь `Catch` блока, который соответствует любой из этих вариантов.  
   
--   `type` — `Exception`, Например:`Catch ex As Exception`  
+-   `type` — `Exception`, Например: `Catch ex As Exception`  
   
--   Оператор не имеет `exception` переменной, например:`Catch`  
+-   Оператор не имеет `exception` переменной, например: `Catch`  
   
- При `Try…Catch…Finally` инструкции вложен в другой `Try` блока [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] сначала проверяет каждый `Catch` инструкции в внутренний `Try` блока. Если совпадений `Catch` оператор найден, поиск продолжается `Catch` операторы внешнего `Try…Catch…Finally` блока.  
+ При `Try…Catch…Finally` инструкции вложен в другой `Try` блока, Visual Basic сначала проверяет каждый `Catch` инструкции в внутренний `Try` блока. Если совпадений `Catch` оператор найден, поиск продолжается `Catch` операторы внешнего `Try…Catch…Finally` блока.  
   
  Локальные переменные из `Try` блок не доступны в `Catch` заблокирован, поскольку это отдельные блоки. Если вы хотите использовать переменную в нескольких блоках, объявите переменную за пределами `Try...Catch...Finally` структуры.  
   
@@ -108,7 +109,7 @@ End Try
 ## <a name="exception-argument"></a>Исключение аргумента  
  `Catch` Блок `exception` аргумент является экземпляром класса <xref:System.Exception> класс или класс, производный от `Exception` класса. `Exception` Ошибки, возникшей в соответствующий экземпляр класса `Try` блока.  
   
- Свойства `Exception` объекта определить причину и место возникновения исключения. Например <xref:System.Exception.StackTrace%2A> списки свойств вызванных методов, которые приводят к исключению, помогая обнаружить, где произошла ошибка в коде. <xref:System.Exception.Message%2A>Возвращает сообщение, описывающее исключение. <xref:System.Exception.HelpLink%2A>Возвращает ссылку на связанный файл справки. <xref:System.Exception.InnerException%2A>Возвращает `Exception` возвращает объект, который вызвал текущее исключение, или его `Nothing` при наличии не оригинал `Exception`.  
+ Свойства `Exception` объекта определить причину и место возникновения исключения. Например <xref:System.Exception.StackTrace%2A> списки свойств вызванных методов, которые приводят к исключению, помогая обнаружить, где произошла ошибка в коде. <xref:System.Exception.Message%2A> Возвращает сообщение, описывающее исключение. <xref:System.Exception.HelpLink%2A> Возвращает ссылку на связанный файл справки. <xref:System.Exception.InnerException%2A> Возвращает `Exception` возвращает объект, который вызвал текущее исключение, или его `Nothing` при наличии не оригинал `Exception`.  
   
 ## <a name="considerations-when-using-a-trycatch-statement"></a>Рекомендации по использованию оператора Try... Оператор catch  
  Используйте `Try…Catch` инструкции только для сигнализации вхождения программы необычных или непредвиденных событий. Для этого существуют следующие причины:  

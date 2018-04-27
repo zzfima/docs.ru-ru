@@ -1,12 +1,13 @@
 ---
-title: "Практическое руководство. Установка параметров сетки для всех форм Windows Forms"
-ms.custom: 
+title: Практическое руководство. Установка параметров сетки для всех форм Windows Forms
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-winforms
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - snap to grid [Windows Forms], Windows Forms Designer
@@ -15,19 +16,20 @@ helpviewer_keywords:
 - Windows Forms, grid options in designer
 - Windows Forms Designer
 ms.assetid: 36967466-1dfd-4fae-a7f1-7bf2cbc94048
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f4b77f77490ce3229cd2f05f2a8824f2c4784bcd
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 67f59c76066e5ff1688d39a7bf5e349d00262bc3
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="how-to-set-grid-options-for-all-windows-forms"></a>Практическое руководство. Установка параметров сетки для всех форм Windows Forms
-Освоив работу в [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] среде разработки можно задать настройки для всех форм и работы с проектами в конструкторе Windows Forms.  
+Освоив работу в среде разработки Visual Studio, можно задать настройки для всех форм и проектов, которыми вы работаете в конструкторе Windows Forms.  
   
 > [!NOTE]
 >  Отображаемые диалоговые окна и команды меню могут отличаться от описанных в справке в зависимости от текущих параметров или выпуска. Чтобы изменить параметры, выберите в меню **Сервис** пункт **Импорт и экспорт параметров** . Дополнительные сведения см. в статье [Настройка параметров разработки в Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  

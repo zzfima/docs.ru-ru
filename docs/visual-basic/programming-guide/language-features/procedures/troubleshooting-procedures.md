@@ -1,11 +1,12 @@
 ---
-title: "Устранение неполадок в процедурах (Visual Basic)"
-ms.custom: 
+title: Устранение неполадок в процедурах (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - troubleshooting Visual Basic, procedures
@@ -14,14 +15,14 @@ helpviewer_keywords:
 - troubleshooting procedures
 - procedures [Visual Basic], about procedures
 ms.assetid: 525721e8-2e02-4f75-b5d8-6b893462cf2b
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: b838644baa5ad10f1deb917cff5751a0f625fca6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 7e54c965dc15131734be2c5bcfe04ad70292bf23
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="troubleshooting-procedures-visual-basic"></a>Устранение неполадок в процедурах (Visual Basic)
 Этой странице перечислены некоторые общие проблемы, которые могут возникнуть при работе с процедурами.  
@@ -83,11 +84,11 @@ ms.lasthandoff: 11/21/2017
   
  Следующие элементы, даже если они относятся к списку параметров, не являются компонентами подписи процедуры:  
   
--   Ключевые слова модификаторов процедур, таких как `Public`, `Shared`, и`Static`  
+-   Ключевые слова модификаторов процедур, таких как `Public`, `Shared`, и `Static`  
   
 -   Имена параметров  
   
--   Ключевые слова модификаторов параметров, таких как `ByRef` и`Optional`  
+-   Ключевые слова модификаторов параметров, таких как `ByRef` и `Optional`  
   
 -   Тип данных возвращаемого значения (за исключением оператора преобразования)  
   
@@ -99,7 +100,7 @@ ms.lasthandoff: 11/21/2017
  Если происходит перегрузка процедуры с одним или несколькими [необязательно](../../../../visual-basic/language-reference/modifiers/optional.md) параметры или [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) параметр, необходимо избегать дублирования *неявные перегрузки*. Сведения см. в разделе [вопросы, связанные с перегрузкой процедур](./considerations-in-overloading-procedures.md).  
   
 ## <a name="calling-a-wrong-version-of-an-overloaded-procedure"></a>Вызов неверной версии перегруженной процедуры  
- Если процедура имеет несколько перегруженных версий, необходимо ознакомиться со всеми их списками параметров и понять, каким образом [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] разрешает вызовы между перегрузками. В противном случае можно вызвать перегрузку, отличную от предполагаемой.  
+ Если процедура имеет несколько перегруженных версий, необходимо уметь работать с их списки параметров и понять, как Visual Basic разрешает вызовы между перегрузками. В противном случае можно вызвать перегрузку, отличную от предполагаемой.  
   
  После определения перегрузки, которую требуется вызвать стараться придерживайтесь следующих правил:  
   

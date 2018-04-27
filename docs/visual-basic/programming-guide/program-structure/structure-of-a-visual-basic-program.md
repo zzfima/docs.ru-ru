@@ -1,11 +1,12 @@
 ---
-title: "Структура программы Visual Basic"
-ms.custom: 
+title: Структура программы Visual Basic
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - conditional compilation [Visual Basic], Visual Basic
@@ -13,35 +14,35 @@ helpviewer_keywords:
 - procedures [Visual Basic], structure
 - Visual Basic code, program structure
 ms.assetid: ad0c6531-d762-4c77-a700-de16b07b6119
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 136be5e2eab3ed0226e0ca471ee1d84cdc7a52d1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 5def0de1e22af39eb16489a2d4d27bdbd1853f2b
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="structure-of-a-visual-basic-program"></a>Структура программы Visual Basic
-Объект [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] программа построена из стандартных блоков. Объект *решения* состоит из одного или нескольких проектов. Объект *проекта* в свою очередь может содержать одну или несколько сборок. Каждый *сборки* компилируется из одного или нескольких исходных файлов. Объект *исходный файл* содержит определения и реализации классов, структур, модули и интерфейсы, которые в конечном счете содержит весь код.  
+Программа Visual Basic построена из стандартных блоков. Объект *решения* состоит из одного или нескольких проектов. Объект *проекта* в свою очередь может содержать одну или несколько сборок. Каждый *сборки* компилируется из одного или нескольких исходных файлов. Объект *исходный файл* содержит определения и реализации классов, структур, модули и интерфейсы, которые в конечном счете содержит весь код.  
   
- Дополнительные сведения о таких стандартных блоков [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] программы см. в разделе [решения и проекты](/visualstudio/ide/solutions-and-projects-in-visual-studio) и [сборки и глобальный кэш сборок](../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md).  
+ Дополнительные сведения об этих стандартных блоках программы на Visual Basic см. в разделе [решения и проекты](/visualstudio/ide/solutions-and-projects-in-visual-studio) и [сборки и глобальный кэш сборок](../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md).  
   
 ## <a name="file-level-programming-elements"></a>Элементы программирования уровня файла  
  При запуске проекта или файла и открыть редактор кода, вы видите часть кода, имеющуюся в правильном порядке. Любой код, написанный должны создаваться в следующей последовательности:  
   
-1.  `Option`инструкции  
+1.  `Option` Инструкции  
   
-2.  `Imports`инструкции  
+2.  `Imports` Инструкции  
   
-3.  `Namespace`инструкции и элементы уровня пространства имен  
+3.  `Namespace` инструкции и элементы уровня пространства имен  
   
  Введите инструкции в другом порядке, может привести к ошибкам компиляции.  
   
  Программа также может содержать операторы условной компиляции. Можно соединять, их в исходном файле среди инструкций предыдущей последовательности.  
   
 ### <a name="option-statements"></a>Параметры инструкции  
- `Option`Операторы устанавливают основные правила для последующего кода, способствуя предотвращению синтаксических и логических ошибок. [Оператор Option Explicit](../../../visual-basic/language-reference/statements/option-explicit-statement.md) гарантирует, что все переменные объявляются и написаны правильно, что сокращает время отладки. [Оператор Option Strict](../../../visual-basic/language-reference/statements/option-strict-statement.md) позволяет свести к минимуму потерю ошибок и данных логику, которая может возникнуть при работе с переменными различных типов данных. [Option Compare Statement](../../../visual-basic/language-reference/statements/option-compare-statement.md) указывает способа сравнения строк друг с другом на основе их `Binary` или `Text` значения.  
+ `Option` Операторы устанавливают основные правила для последующего кода, способствуя предотвращению синтаксических и логических ошибок. [Оператор Option Explicit](../../../visual-basic/language-reference/statements/option-explicit-statement.md) гарантирует, что все переменные объявляются и написаны правильно, что сокращает время отладки. [Оператор Option Strict](../../../visual-basic/language-reference/statements/option-strict-statement.md) позволяет свести к минимуму потерю ошибок и данных логику, которая может возникнуть при работе с переменными различных типов данных. [Option Compare Statement](../../../visual-basic/language-reference/statements/option-compare-statement.md) указывает способа сравнения строк друг с другом на основе их `Binary` или `Text` значения.  
   
 ### <a name="imports-statements"></a>Оператор Imports  
  Можно включить [оператор Imports (пространство имен .NET и тип)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) для импорта имена, определенные вне проекта. `Imports` Оператор разрешает коде для ссылки на классы и другие типы, определенные в импортированном пространстве имен без их уточнения. Можно использовать любое количество `Imports` соответствующих операторов. Дополнительные сведения см. в разделе [ссылки и оператор Imports](../../../visual-basic/programming-guide/program-structure/references-and-the-imports-statement.md).  
@@ -88,7 +89,7 @@ ms.lasthandoff: 11/21/2017
  Элементы данных на уровне процедуры ограничиваются локальных переменных и констант.  
   
 ## <a name="the-main-procedure"></a>Основная процедура  
- `Main` Процедура — это первый код для выполнения при загрузке приложения. `Main`служит в качестве начальной точки и общего управления для приложения. Существуют четыре вида `Main`:  
+ `Main` Процедура — это первый код для выполнения при загрузке приложения. `Main` служит в качестве начальной точки и общего управления для приложения. Существуют четыре вида `Main`:  
   
 -   `Sub Main()`  
   

@@ -16,11 +16,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 72282c62ad23ec825eab7054ab1909d07a062b45
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 20cb6c1cd7a3b06b57bce02d5c3caacc7e2e42b7
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="partial-trust-feature-compatibility"></a>Совместимость возможностей частичного доверия
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] поддерживает ограниченный набор функциональности при выполнении в частично доверенной среде. Дополнительные сведения о различных функциях, поддерживаемых при работе с частичным доверием, которые разработаны на базе определенного набора сценариев, см. в разделе [Supported Deployment Scenarios](../../../../docs/framework/wcf/feature-details/supported-deployment-scenarios.md) .  
@@ -154,7 +154,7 @@ ms.lasthandoff: 04/26/2018
 >  Во избежание переполнения файлов трассировки дублирующимися ошибками, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] отключает трассировку ресурсов и действий после первого сбоя безопасности. Существует одна трассировка исключения для каждой неудачной попытки доступа к ресурсам, которая создается при первой попытке доступа к ресурсам или при первой попытке выполнения действия.  
   
 ## <a name="wcf-service-host"></a>Узел службы WCF  
- Узел службы[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] не поддерживает частичное доверие. Если требуется использовать службу [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] в частичном доверии, шаблон проекта библиотеки служб [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] в [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] не используется для построения службы. Вместо этого создайте новый веб-сайт в [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] путем выбора шаблона веб-сайта службы [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] , который может разместить службу на веб-сервере с поддержкой частичного доверия [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] .  
+ Узел службы[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] не поддерживает частичное доверие. Если вы хотите использовать [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] службы в режиме частичного доверия, не используйте [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] шаблон проекта библиотеки служб в Visual Studio для построения службы. Вместо этого создайте новый веб-сайт в Visual Studio, выбрав [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] шаблон веб-сайта службы, который может разместить службу на веб-сервере, на котором [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] поддержкой частичного доверия.  
   
 ## <a name="other-limitations"></a>Другие ограничения  
  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] обычно ограничивается вопросами безопасности, установленными ведущим приложением. Например, если [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] размещается в приложении браузера XAML (XBAP), к нему применяются ограничения XBAP, как описано в разделе [Безопасность частичного доверия Windows Presentation Foundation](http://go.microsoft.com/fwlink/?LinkId=89138).  

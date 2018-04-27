@@ -1,12 +1,13 @@
 ---
 title: contextSwitchDeadlock MDA
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - deadlocks [.NET Framework]
@@ -19,16 +20,17 @@ helpviewer_keywords:
 - message pumping
 - context switching deadlocks
 ms.assetid: 26dfaa15-9ddb-4b0a-b6da-999bba664fa6
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 816afbae0cca18de24c11152541a509b54c119b8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 2f3ee9aef3bc824ee25e577a5dbd14aeaa210be3
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="contextswitchdeadlock-mda"></a>contextSwitchDeadlock MDA
 Помощник отладки управляемого кода `contextSwitchDeadlock` (MDA) активируется при обнаружении взаимоблокировки во время попытки перехода к контексту COM.  
@@ -54,7 +56,7 @@ ms.lasthandoff: 12/22/2017
  Чтобы определить, происходит ли ошибочная активация помощника отладки управляемого кода, отключите все точки останова, перезапустите приложение и позвольте ему выполняться без остановок. Если помощник отладки управляемого кода не активируется, вероятно, первоначальная активация была ошибочной. В этом случае отключите помощник отладки управляемого кода, чтобы не нарушать работу сеанса отладки.  
   
 > [!NOTE]
->  Этот помощник отладки управляемого кода входит в стандартный набор для [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)] и последующих версий. При включении ведущего процесса в [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] вы не можете отключить помощники отладки управляемого кода, входящие в стандартный набор. Ведущий процесс включен по умолчанию, поэтому его необходимо отключить явным образом. Сведения о том, как отключить MDA, см. в подразделе "Включение и отключение помощников отладки управляемого кода" раздела [Диагностика ошибок посредством помощников по отладке управляемого кода](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md).  
+>  Этот помощник отладки управляемого кода входит в стандартный набор для [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)] и последующих версий. При включении ведущего процесса в Visual Studio невозможно отключить Помощники отладки управляемого кода, заданные по умолчанию. Ведущий процесс включен по умолчанию, поэтому его необходимо отключить явным образом. Сведения о том, как отключить MDA, см. в подразделе "Включение и отключение помощников отладки управляемого кода" раздела [Диагностика ошибок посредством помощников по отладке управляемого кода](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md).  
   
 ## <a name="resolution"></a>Решение  
  Соблюдайте правила COM в отношении выдачи сообщений однопотокового подразделения.  

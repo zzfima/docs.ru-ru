@@ -20,21 +20,21 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 48295a187870340948b045a64b852f1e6fdc1a65
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: dfa5eb8ec1e4f9f2eeeb142670b92d5ec35ab6cf
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="how-to-detect-whether-the-net-framework-30-is-installed"></a>Практическое руководство. Проверка наличия установленной платформы .NET Framework 3.0
-Прежде чем развертывать [!INCLUDE[TLA#tla_avalonwinfx](../../../../includes/tlasharptla-avalonwinfx-md.md)] приложений в системе, их необходимо сначала убедиться, что [!INCLUDE[TLA2#tla_avalonwinfx](../../../../includes/tla2sharptla-avalonwinfx-md.md)] наличии среды выполнения. В этом разделе содержится скрипт, написанный на языке HTML/JavaScript, администраторы могут использовать для определения ли [!INCLUDE[TLA2#tla_avalonwinfx](../../../../includes/tla2sharptla-avalonwinfx-md.md)] присутствует в системе.  
+Прежде чем развертывать приложения Microsoft .NET Framework в системе, их необходимо сначала убедиться, что присутствует в среде выполнения .NET Framework. В этом разделе содержится скрипт, написанный на языке HTML/JavaScript, администраторы могут использовать для определения наличия .NET Framework в системе.  
   
 > [!NOTE]
 >  Более подробные сведения об установке, развертывании и обнаружении Microsoft .NET Framework, см. обсуждение в [развертывания Microsoft .NET Framework версии 3.0](http://go.microsoft.com/fwlink/?LinkId=96739).  
   
 <a name="content_expiration"></a>   
 ## <a name="detect-the-net-clr-user-agent-string"></a>Определить строку агента пользователя «.NET CLR»  
- Если [!INCLUDE[TLA2#tla_avalonwinfx](../../../../includes/tla2sharptla-avalonwinfx-md.md)] является установки MSI-ФАЙЛ добавляет «CLR.NET» и номер версии строки UserAgent. В следующем примере показано в скрипте, внедренном в простой HTML-страницы. В скрипте выполняется поиск строки UserAgent, чтобы определить, является ли [!INCLUDE[TLA2#tla_avalonwinfx](../../../../includes/tla2sharptla-avalonwinfx-md.md)] устанавливается и отображается сообщение о состоянии по результатам поиска.  
+ При установке .NET Framework MSI-ФАЙЛ добавляет строку UserAgent «CLR.NET» и номер версии. В следующем примере показано в скрипте, внедренном в простой HTML-страницы. Сценарий выполняет поиск строки UserAgent, чтобы определить, установлен ли .NET Framework и отображается сообщение о состоянии по результатам поиска.  
   
 ```  
 <HTML>  

@@ -1,24 +1,26 @@
 ---
-title: "Тестовый клиент WCF (WcfTestClient.exe)"
-ms.custom: 
+title: Тестовый клиент WCF (WcfTestClient.exe)
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: d4302855-677f-4640-aa90-c5d785d72fb7
-caps.latest.revision: "45"
+caps.latest.revision: 45
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 18866260c5d14cf27634afcd8391b159abac1dd1
-ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
+ms.workload:
+- dotnet
+ms.openlocfilehash: 2eb32d36b1e6710f666391f918aff68c33566ab8
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="wcf-test-client-wcftestclientexe"></a>Тестовый клиент WCF (WcfTestClient.exe)
 Тестовый клиент [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] (WcfTestClient.exe) представляет собой средство с графическим интерфейсом пользователя, позволяющее вводить тестовые параметры, отправлять их в службу и просматривать ответную реакцию службы. При совместном использовании с узлом службы [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] это обеспечивает удобную практику тестирования служб.  
@@ -172,9 +174,9 @@ ms.lasthandoff: 01/05/2018
 ## <a name="closing-wcf-test-client"></a>Закрытие тестового клиента WCF  
  Тестовый клиент [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] можно закрыть следующими способами.  
   
--   На **файл** меню, нажмите кнопку **выхода**. Кроме того, в [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] главного окна тестового клиента, щелкните **закрыть**. При выполнении любого из этих действий также завершается работа средства Service Auto Host [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] и останавливается процесс отладки [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)], если тестовый клиент [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] был запущен [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)].  
+-   На **файл** меню, нажмите кнопку **выхода**. Кроме того, в [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] главного окна тестового клиента, щелкните **закрыть**. Оба эти действия также завершить работу [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Service Auto Host и остановка отладки Visual Studio обработки, если [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] тестовый клиент был запущен с помощью Visual Studio.  
   
--   Щелкните правой кнопкой мыши **узел службы WCF** значок в области уведомлений, а затем выберите **выхода.** При этом завершается работа средства Service Auto Host [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] и тестового клиента [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], а также останавливается процесс отладки [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)].  
+-   Щелкните правой кнопкой мыши **узел службы WCF** значок в области уведомлений, а затем выберите **выхода.** Это завершает работу и [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Service Auto Host и [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] тестового клиента и остановки отладки Visual Studio процесс.  
   
 ## <a name="see-also"></a>См. также  
  [Узел службы WCF (WcfSvcHost.exe)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md)

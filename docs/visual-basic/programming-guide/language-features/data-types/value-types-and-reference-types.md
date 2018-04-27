@@ -1,11 +1,12 @@
 ---
 title: Value Types and Reference Types
-ms.custom: 
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - reference data types [Visual Basic]
@@ -16,17 +17,17 @@ helpviewer_keywords:
 - data types [Visual Basic], value types
 - data types [Visual Basic], reference types
 ms.assetid: fc82ce15-5a40-4c5c-a1e1-a556830e7391
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 2b54945d27d186771e8b5353e753afd74c56d71b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 9cbab25e4af6b96ae22fe18d0b8a8fdbc7a7c7a7
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="value-types-and-reference-types"></a>Value Types and Reference Types
-В Visual Basic типы данных реализуются на основе их классификации. [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] Типы данных могут классифицироваться в соответствии с переменной определенного типа, хранит ли собственные данные или указатель на данные. Если она хранит свои собственные данные *тип значения*; если он содержит указатель на данные в другом месте в памяти, это *ссылочному типу*.  
+В Visual Basic типы данных реализуются на основе их классификации. Типы данных Visual Basic могут классифицироваться в соответствии с переменной определенного типа, хранит ли собственные данные или указатель на данные. Если она хранит свои собственные данные *тип значения*; если он содержит указатель на данные в другом месте в памяти, это *ссылочному типу*.  
   
 ## <a name="value-types"></a>Типы значений  
  Тип данных является *тип значения* , если он содержит данные в пределах своей собственной памяти. Следующие типы значений:  
@@ -37,7 +38,7 @@ ms.lasthandoff: 11/21/2017
   
 -   Все структуры, даже если их члены являются ссылочными типами  
   
--   Перечисления, поскольку их базовый тип всегда является `SByte`, `Short`, `Integer`, `Long`, `Byte`, `UShort`, `UInteger`, или`ULong`  
+-   Перечисления, поскольку их базовый тип всегда является `SByte`, `Short`, `Integer`, `Long`, `Byte`, `UShort`, `UInteger`, или `ULong`  
   
  Каждая структура является типом значения, даже если он содержит члены ссылочного типа. По этой причине значение типы, такие как `Char` и `Integer` реализуются структуры .NET Framework.  
   
@@ -50,7 +51,7 @@ ms.lasthandoff: 11/21/2017
   
 -   Все массивы, даже если их элементы являются типами значений  
   
--   Типы классов, таких как<xref:System.Windows.Forms.Form>  
+-   Типы классов, таких как <xref:System.Windows.Forms.Form>  
   
 -   Делегаты  
   
@@ -78,7 +79,7 @@ Dim totals() As Single = New Single(8) {}
 ## <a name="working-with-the-object-data-type"></a>Работа с типом данных объекта  
  Можно назначить ссылочным типом или типом значения переменной `Object` тип данных. `Object` Переменная всегда содержит указатель на данные, а не сами данные. Однако если присвоить тип значения для `Object` переменной, он ведет себя как если бы она содержала свои собственные данные. Дополнительные сведения см. в разделе [тип данных объекта](../../../../visual-basic/language-reference/data-types/object-data-type.md).  
   
- Можно выяснить, следует ли `Object` переменная используется в качестве ссылочным типом или типом значения, передайте ее в <xref:Microsoft.VisualBasic.Information.IsReference%2A> метод в <xref:Microsoft.VisualBasic.Information> класс <xref:Microsoft.VisualBasic?displayProperty=nameWithType> пространства имен. <xref:Microsoft.VisualBasic.Information.IsReference%2A?displayProperty=nameWithType>Возвращает `True` Если содержимое `Object` переменная представляет ссылочный тип.  
+ Можно выяснить, следует ли `Object` переменная используется в качестве ссылочным типом или типом значения, передайте ее в <xref:Microsoft.VisualBasic.Information.IsReference%2A> метод в <xref:Microsoft.VisualBasic.Information> класс <xref:Microsoft.VisualBasic?displayProperty=nameWithType> пространства имен. <xref:Microsoft.VisualBasic.Information.IsReference%2A?displayProperty=nameWithType> Возвращает `True` Если содержимое `Object` переменная представляет ссылочный тип.  
   
 ## <a name="see-also"></a>См. также  
  [Типы значений, допускающие значение NULL](../../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)  

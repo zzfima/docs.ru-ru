@@ -17,11 +17,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 8bf63c59c0948dd8414232a52fc12fafa0d13aa1
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 909461811907c1eb3f494b29294db45dbbe8b01d
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="globalization-for-wpf"></a>Глобализация для WPF
 В этом разделе рассматриваются проблемы, которые следует учитывать при написании [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] приложений для глобального рынка. Элементы программирования глобализации определены в [!INCLUDE[TLA#tla_net](../../../../includes/tlasharptla-net-md.md)] в `System.Globalization`.  
@@ -180,7 +180,7 @@ ms.lasthandoff: 04/26/2018
   
 <a name="using_clickonce"></a>   
 ## <a name="using-clickonce-with-localized-applications"></a>Использование ClickOnce с локализованными приложениями  
- ClickOnce — это новая технология развертывания Windows Forms, которая будет поставляться с [!INCLUDE[TLA#tla_visualstu2005](../../../../includes/tlasharptla-visualstu2005-md.md)]. Она позволяет устанавливать и обновлять веб-приложения. При локализации приложения, которое было развернуто с помощью ClickOnce, просмотреть его можно только на локализованном языке и с соответствующими региональными параметрами. Например, если развертываемое приложение локализовано на японский его можно просматривать только на японском языке [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] не на английском языке [!INCLUDE[TLA2#tla_win](../../../../includes/tla2sharptla-win-md.md)]. Это представляет проблему, так как это очень распространенный сценарий для японских пользователей запускать английскую версию [!INCLUDE[TLA2#tla_win](../../../../includes/tla2sharptla-win-md.md)].  
+ ClickOnce — это новая технология развертывания Windows Forms, которая будет поставляться с [!INCLUDE[TLA#tla_visualstu2005](../../../../includes/tlasharptla-visualstu2005-md.md)]. Она позволяет устанавливать и обновлять веб-приложения. При локализации приложения, которое было развернуто с помощью ClickOnce, просмотреть его можно только на локализованном языке и с соответствующими региональными параметрами. Например, если развертываемое приложение локализовано на японский его можно просматривать только на японском языке [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] не на английском языке Windows. Это представляет проблему, так как это очень распространенный сценарий для японских пользователей запускать английскую версию Windows.  
   
  Чтобы решить эту проблему, можно задать резервный атрибут нейтрального языка. Разработчик приложения может при необходимости удалить ресурсы из основной сборки и указать, что ресурсы можно найти во вспомогательной сборке, соответствующей определенной культуре. Для управления этим процессом используйте <xref:System.Resources.NeutralResourcesLanguageAttribute>. Конструктор <xref:System.Resources.NeutralResourcesLanguageAttribute> имеет две сигнатуры, одна из которых принимает <xref:System.Resources.UltimateResourceFallbackLocation> параметр для указания расположения где <xref:System.Resources.ResourceManager> следует извлечь резервные ресурсы: основную сборку или вспомогательную сборку. В следующем примере показано использование атрибута. Для конечного расположения запасных, этот код вызывает <xref:System.Resources.ResourceManager> для поиска ресурсов в подкаталоге «de» каталога выполняющейся сборки.  
   

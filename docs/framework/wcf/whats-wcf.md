@@ -20,11 +20,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 1e194a0784eb27043bbd0c127cde6883b4fafb2e
-ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
+ms.openlocfilehash: 2fa6efdc61620647d5c6318746e61e09cdde7a46
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="what-is-windows-communication-foundation"></a>Что такое Windows Communication Foundation
 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] представляет платформу для построения сервисноориентированных приложений. С помощью [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]можно отправлять данные в виде асинхронных сообщений от одной конечной точки службы к другой. Конечная точка службы может входить в постоянно доступную службу, размещаемую в IIS, или представлять службу, размещаемую в приложении. Конечная точка может быть клиентом службы, которая запрашивает данные от конечной точки службы. Сообщения могут представлять одиночный символ или одно слово, отправляемое в формате XML, или иметь вид сложного потока двоичных данных. Далее представлено несколько образцов сценариев.  
@@ -80,7 +80,7 @@ ms.lasthandoff: 04/16/2018
   
 -   **Устойчивые сообщения**  
   
-     Устойчивые сообщения не теряются в случае перебоев связи. Сообщения, передаваемые по устойчивому шаблону, всегда сохраняются в базе данных. Если происходит перебой связи, база данных позволяет возобновить обмен сообщениями после восстановления соединения. Устойчивое сообщение также можно создать с помощью [!INCLUDE[wf](../../../includes/wf-md.md)]. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Workflow Services](../../../docs/framework/wcf/feature-details/workflow-services.md).  
+     Устойчивые сообщения не теряются в случае перебоев связи. Сообщения, передаваемые по устойчивому шаблону, всегда сохраняются в базе данных. Если происходит перебой связи, база данных позволяет возобновить обмен сообщениями после восстановления соединения. Можно также создать постоянное сообщение с помощью Windows Workflow Foundation (WF). [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Workflow Services](../../../docs/framework/wcf/feature-details/workflow-services.md).  
   
 -   **Транзакции**  
   
@@ -97,7 +97,7 @@ ms.lasthandoff: 04/16/2018
 ## <a name="wcf-integration-with-other-microsoft-technologies"></a>Интеграция WCF с другими технологиями Майкрософт  
  Платформа[!INCLUDE[indigo2](../../../includes/indigo2-md.md)] обладает исключительной гибкостью. и поэтому [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] применяется в ряде других продуктов Майкрософт. Владение основами [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]дает непосредственное преимущество в случае использования любых таких продуктов.  
   
- Первой технологией, используемой в сочетании с [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] , была Windows Workflow Foundation (WF). Рабочие процессы упрощают разработку приложений путем инкапсуляции этапов в рабочем процессе, как «действия». В первой версии [!INCLUDE[wf2](../../../includes/wf2-md.md)]разработчик должен был создавать узел для рабочего процесса. Следующая версия [!INCLUDE[wf2](../../../includes/wf2-md.md)] была интегрирована с [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]. Такая интеграция позволяла легко размещать любой рабочий процесс в службе [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] . Для этого автоматически выбирался тип проекта WF/WCF в [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)].  
+ Первой технологией, используемой в сочетании с [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] , была Windows Workflow Foundation (WF). Рабочие процессы упрощают разработку приложений путем инкапсуляции этапов в рабочем процессе, как «действия». В первой версии Windows Workflow Foundation разработчик должен был создавать узел для рабочего процесса. Следующая версия Windows Workflow Foundation была интегрирована с [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]. Такая интеграция позволяла легко размещать любой рабочий процесс в службе [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] . Для этого автоматически выбирался тип проекта WF/WCF в [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)].  
   
  Microsoft BizTalk Server R2 также использует [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] в качестве технологии связи. BizTalk предназначен для получения и преобразования данных из одного стандартного формата в другой. Сообщения должны доставляться в центральный ящик, где сообщение может преобразовываться по строгому сопоставления или с использованием одной из функций BizTalk, таких как подсистема рабочих процессов. Теперь BizTalk может использовать бизнес-адаптер [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] для доставки сообщений в ящик.  
   

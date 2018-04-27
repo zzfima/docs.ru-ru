@@ -19,11 +19,11 @@ ms.assetid: bf2eb779-b751-4b7c-854f-9f2161482352
 caps.latest.revision: 22
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: b1cdba0a39a932f143ac98c2514240e1696a8fe0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 3c6dff88d123f33ad4c33e91685104b760ecca3b
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="embedded-expressions-in-xml-visual-basic"></a>Встроенные выражения в XML (Visual Basic)
 Внедренные выражения позволяют создать XML-литералы, которые содержат выражения, оцениваемые во время выполнения. Для внедренного выражения используется синтаксис `<%=` `expression` `%>`, который рассматривается как синтаксис, используемый в [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)].  
@@ -43,14 +43,14 @@ ms.lasthandoff: 11/21/2017
 ## <a name="embedded-expression-location-and-validation"></a>Внедренное выражение расположение и проверка  
  Встроенные выражения могут располагаться только на определенных местах внутри выражения литералов XML. Расположение выражения определяет типы выражения значений, которые могут возвращать и как `Nothing` обрабатывается. В следующей таблице описаны допустимые расположения и типы внедренных выражений.  
   
-|Расположение в литерале|Тип выражения|Обработка`Nothing`|  
+|Расположение в литерале|Тип выражения|Обработка `Nothing`|  
 |---|---|---|  
-|Имя элемента XML|<xref:System.Xml.Linq.XName>|Ошибка|  
-|Содержимое XML-элемента|`Object`или массив`Object`|Не учитывается|  
-|Имя атрибута XML-элемента|<xref:System.Xml.Linq.XName>|Ошибка, если значение атрибута не является также`Nothing`|  
+|Имя элемента XML|<xref:System.Xml.Linq.XName>|Error|  
+|Содержимое XML-элемента|`Object` или массив `Object`|Не учитывается|  
+|Имя атрибута XML-элемента|<xref:System.Xml.Linq.XName>|Ошибка, если значение атрибута не является также `Nothing`|  
 |Значение атрибута элемента XML|`Object`|Объявление атрибута игнорируется|  
-|Атрибут XML-элемента|<xref:System.Xml.Linq.XAttribute>или коллекции<xref:System.Xml.Linq.XAttribute>|Не учитывается|  
-|Корневой элемент документа XML|<xref:System.Xml.Linq.XElement>или коллекция из одного элемента <xref:System.Xml.Linq.XElement> объекта и произвольное число <xref:System.Xml.Linq.XProcessingInstruction> и <xref:System.Xml.Linq.XComment> объектов|Не учитывается|  
+|Атрибут XML-элемента|<xref:System.Xml.Linq.XAttribute> или коллекции <xref:System.Xml.Linq.XAttribute>|Не учитывается|  
+|Корневой элемент документа XML|<xref:System.Xml.Linq.XElement> или коллекция из одного элемента <xref:System.Xml.Linq.XElement> объекта и произвольное число <xref:System.Xml.Linq.XProcessingInstruction> и <xref:System.Xml.Linq.XComment> объектов|Не учитывается|  
   
 -   Пример встроенного выражения в имя элемента XML.  
   
@@ -83,7 +83,7 @@ ms.lasthandoff: 11/21/2017
  Дополнительные сведения об использовании внедренное выражение в литерале определенного типа см. в разделе [литерала документа XML](../../../../visual-basic/language-reference/xml-literals/xml-document-literal.md), [литерала элемента XML](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md).  
   
 ## <a name="scoping-rules"></a>Правила области видимости  
- Компилятор преобразует каждый XML-литерал в вызов конструктора для соответствующего типа литерала. Текстовое содержимое и встроенные выражения в XML-литерал, передаются как аргументы в конструктор. Это означает, что все [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] элементы программирования, доступные для XML-литерала также доступны для его встроенных выражений.  
+ Компилятор преобразует каждый XML-литерал в вызов конструктора для соответствующего типа литерала. Текстовое содержимое и встроенные выражения в XML-литерал, передаются как аргументы в конструктор. Это означает, что все доступные для XML-литерала элементы программирования Visual Basic, также доступны для его встроенных выражений.  
   
  В XML-литерал можно использовать пространство имен XML, объявленные префиксы с `Imports` инструкции. Можно объявить новый префикс пространства имен XML, или переопределить существующий XML-префиксом в элементе с помощью `xmlns` атрибута. Новое пространство имен доступно потомков этого элемента, но не XML-литералов в внедренные выражения.  
   

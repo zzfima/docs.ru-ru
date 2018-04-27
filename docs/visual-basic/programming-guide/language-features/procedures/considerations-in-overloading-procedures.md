@@ -1,11 +1,12 @@
 ---
-title: "Вопросы, связанные с перегрузкой процедур (Visual Basic)"
-ms.custom: 
+title: Вопросы, связанные с перегрузкой процедур (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - signatures [Visual Basic], ParamArray arguments
@@ -31,14 +32,14 @@ helpviewer_keywords:
 - restrictions [Visual Basic], overloading procedures
 - procedures [Visual Basic], parameter lists
 ms.assetid: a2001248-10d0-42c5-b0ce-eeedc987319f
-caps.latest.revision: "26"
+caps.latest.revision: 26
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 3c9a9a4759d4ec2dd87778c49c4fd82a08c081a8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: ac4bc47f9e781f83c7930efffedd40d9c25c2ec2
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="considerations-in-overloading-procedures-visual-basic"></a>Вопросы, связанные с перегрузкой процедур (Visual Basic)
 При перегрузке процедур необходимо использовать другой *подписи* для каждой из перегруженных версий. Обычно это означает, что каждой версии необходимо указать другим списком параметров. Дополнительные сведения см. в разделе «Сигнатура» в [перегрузка процедур](./procedure-overloading.md).  
@@ -50,7 +51,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="alternatives-to-overloaded-versions"></a>Альтернативы перегруженных версий  
  Иногда имеют альтернативы перегруженных версий, особенно в том случае, если наличие аргументов является необязательным или их количество может меняться.  
   
- Имейте в виду, что необязательные аргументы могут не поддерживаться все языки, а массивы параметров ограничены [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. При создании процедуры, который должен вызываться из кода, написанного на любом из нескольких различных языков, перегруженные версии предоставляют наибольшую гибкость.  
+ Имейте в виду, что необязательные аргументы могут не поддерживаться все языки, а массивы параметров ограничены Visual Basic. При создании процедуры, который должен вызываться из кода, написанного на любом из нескольких различных языков, перегруженные версии предоставляют наибольшую гибкость.  
   
 ### <a name="overloads-and-optional-arguments"></a>Перегрузки и необязательные аргументы  
  Если вызывающий код при необходимости можно указать или пропустить один или несколько аргументов, можно определить несколько перегруженных версий или использовать дополнительные параметры.  
@@ -104,7 +105,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="implicit-overloads-for-a-paramarray-parameter"></a>Неявные перегрузки параметру ParamArray.  
  Компилятор считает, что процедура с [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) параметру принимать бесконечное число перегрузок, отличающихся друг от друга в том, что вызывающий код передает массив параметров, следующим образом:  
   
--   Одна перегрузка, когда вызывающий код не передает аргумент`ParamArray`  
+-   Одна перегрузка, когда вызывающий код не передает аргумент `ParamArray`  
   
 -   Одна перегрузка, когда вызывающий код предоставляет одномерный массив `ParamArray` тип элемента  
   

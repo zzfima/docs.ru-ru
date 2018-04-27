@@ -1,9 +1,10 @@
 ---
-title: "К сожалению, мы больше не &#39; t имеют подробные сведения об этой ошибке Visual Basic"
+title: К сожалению, мы не хотите&#39;t имеют подробные сведения об этой ошибке Visual Basic
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
+ms.technology:
+- devlang-visual-basic
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - vbc30234
@@ -3048,32 +3049,32 @@ f1_keywords:
 - bc30233
 - bc30829
 ms.assetid: 0938efc2-e205-450b-9314-99951fcbd702
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 132bb3f93ae5084df73aed56b6d1483830984928
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
-ms.translationtype: MT
+ms.openlocfilehash: 4ab447c06504d6c3bb7c51107e422b2cba1f45e3
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="sorry-we-don39t-have-specifics-on-this-visual-basic-error"></a>К сожалению, мы больше не &#39; t имеют подробные сведения об этой ошибке Visual Basic
+# <a name="sorry-we-don39t-have-specifics-on-this-visual-basic-error"></a>К сожалению, мы не хотите&#39;t имеют подробные сведения об этой ошибке Visual Basic
 Подробные сведения об этой ошибке отсутствуют. Можно выполнить поиск по номеру ошибки и тексту сообщения об ошибке в Интернете. Также можно обратиться с вопросом к другим разработчикам на следующих форумах:  
   
  [Язык Visual Basic](http://go.microsoft.com/fwlink/?LinkId=145963)  
- Форум для вопросов и общих обсуждений проблем, связанных с синтаксисом и компилятором языка [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
+ Форум для вопросов и общих обсуждений синтаксиса языка Visual Basic и компилятора.  
   
  [Взаимодействие и обновление Visual Basic](http://go.microsoft.com/fwlink/?LinkId=145966)  
- Форум предназначен для вопросов по обновлению до [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] и работе с функциями взаимодействия.  
+ Форум для вопросов о и проблемы, связанные с обновлением до Visual Basic и возможностями взаимодействия.  
   
  [Среда IDE Visual Basic](http://go.microsoft.com/fwlink/?LinkId=145971)  
  Форум предназначен для вопросов о работе в среде [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)].  
   
  [Общие вопросы Visual Basic](http://go.microsoft.com/fwlink/?LinkId=145973)  
- Форум предназначен для вопросов по работе [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] и соответствующим проблемам, которые не обсуждаются на других форумах.  
+ Форум для вопросов о и проблемы, связанные с Visual Basic, которые не обсуждаются на других форумах.  
   
  [StackOverflow](http://stackoverflow.com/questions/tagged/vb.net)  
- Форум предназначен для вопросов по работе [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] и соответствующим проблемам.  
+ Форум для вопросов о и проблемы, связанные с Visual Basic.  
   
  См. также:  
  [Дополнительные ресурсы для программистов, использующих Visual Basic](../../visual-basic/getting-started/additional-resources.md)  

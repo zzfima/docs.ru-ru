@@ -1,29 +1,29 @@
 ---
-title: "Безопасность рабочих процессов"
-ms.custom: 
+title: Безопасность рабочих процессов
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - programming [WF], workflow security
 ms.assetid: d712a566-f435-44c0-b8c0-49298e84b114
-caps.latest.revision: 
+caps.latest.revision: 13
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: dbb1d1efc0758410f12f2c669cca85b9f0e38406
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 90e9d5f3a2cff454ff7892877f012f8679b9ccac
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="workflow-security"></a>Безопасность рабочих процессов
-[!INCLUDE[wf](../../../includes/wf-md.md)] объединяется с несколькими разными технологиями, например Microsoft SQL Server и [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]. В случае неправильной настройки взаимодействие с этими технологиями может вызвать проблемы безопасности в рабочем процессе.  
+Windows Workflow Foundation (WF) интегрирована с несколькими разными технологиями, например Microsoft SQL Server и [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]. В случае неправильной настройки взаимодействие с этими технологиями может вызвать проблемы безопасности в рабочем процессе.  
   
 ## <a name="persistence-security-concerns"></a>Вопросы безопасности сохраняемости  
   
@@ -41,15 +41,15 @@ ms.lasthandoff: 12/22/2017
   
 -   Если используется большое количество дочерних действий, расположений, закладок, расширений узла и областей или используются закладки с очень большим объемом полезных нагрузок, может быть исчерпана память или во время сохранения будет выделен чрезмерно большой объем пространства базы данных. Избежать этого можно с помощью мер безопасности на уровне объекта и на уровне базы данных.  
   
--   Если используется <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>, хранилище экземпляров должно быть защищено. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][SQL Server Best Practices](http://go.microsoft.com/fwlink/?LinkId=164972).  
+-   Если используется <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>, хранилище экземпляров должно быть защищено. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [SQL Server Best Practices](http://go.microsoft.com/fwlink/?LinkId=164972).  
   
--   Конфиденциальные данные в хранилище экземпляров должны быть зашифрованы. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Шифрование SQL](http://go.microsoft.com/fwlink/?LinkId=164976).  
+-   Конфиденциальные данные в хранилище экземпляров должны быть зашифрованы. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Шифрование SQL](http://go.microsoft.com/fwlink/?LinkId=164976).  
   
 -   Так как строка подключения базы данных часто содержится в файле конфигурации, следует использовать безопасность уровня Windows (ACL) для обеспечения защиты файла конфигурации (обычно это Web.Config), а также для того, чтобы гарантировать, что сведения об имени входа и пароле не содержатся в строке подключения. В качестве альтернативы между базой данных и веб-сервером можно использовать аутентификацию Windows.  
   
 ## <a name="considerations-for-workflowservicehost"></a>Рекомендации по WorkflowServiceHost  
   
--   Конечные точки [!INCLUDE[indigo1](../../../includes/indigo1-md.md)], используемые в рабочих процессах, должны быть защищены. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Общие сведения о безопасности WCF](http://go.microsoft.com/fwlink/?LinkID=164975).  
+-   Конечные точки [!INCLUDE[indigo1](../../../includes/indigo1-md.md)], используемые в рабочих процессах, должны быть защищены. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Общие сведения о безопасности WCF](http://go.microsoft.com/fwlink/?LinkID=164975).  
   
 -   Авторизацию на уровне узлов можно реализовать с помощью <xref:System.ServiceModel.ServiceAuthorizationManager>. В разделе [How To: Создание пользовательского диспетчера авторизации для службы](http://go.microsoft.com/fwlink/?LinkId=192228) подробные сведения. Это также показано в следующем примере: [Защита служб рабочего процесса](../../../docs/framework/windows-workflow-foundation/samples/securing-workflow-services.md).  
   

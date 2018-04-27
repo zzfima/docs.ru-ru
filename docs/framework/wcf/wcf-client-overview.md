@@ -21,11 +21,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 491cbf19ac3c8f1817b12c895655ca1958972a62
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 3669260d34aac0783f2ebd735c79ced91741408a
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="wcf-client-overview"></a>Общие сведения о клиентах WCF
 В данном разделе описывается назначение клиентских приложений, способы настройки, создания и использования клиента [!INCLUDE[indigo1](../../../includes/indigo1-md.md)], а также приводятся сведения об обеспечении безопасности клиентских приложений.  
@@ -73,11 +73,11 @@ svcutil /language:vb /out:ClientCode.vb /config:app.config http://computerName/M
  Чтобы продемонстрировать использование класса <xref:System.ServiceModel.ClientBase%601>, предположим, что следующий простой контракт службы создан из приложения службы.  
   
 > [!NOTE]
->  Если используется [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] для создания клиента [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], объекты загружаются автоматически в браузер объектов при добавлении ссылки на службу в проект.  
+>  Если вы используете Visual Studio для создания вашего [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] клиента, объекты загружаются автоматически в браузер объектов при добавлении ссылки на службу в проект.  
   
  [!code-csharp[C_GeneratedCodeFiles#12](../../../samples/snippets/csharp/VS_Snippets_CFX/c_generatedcodefiles/cs/proxycode.cs#12)]  
   
- Если [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] не используется, проверьте созданный код контракта и найдите тип, расширяющий класс <xref:System.ServiceModel.ClientBase%601> и интерфейс контракта службы `ISampleService`. В этом случае такой тип выглядит как следующий код.  
+ Если вы не используете Visual Studio, проверьте созданный код контракта и найдите тип, расширяющий <xref:System.ServiceModel.ClientBase%601> и интерфейс контракта службы `ISampleService`. В этом случае такой тип выглядит как следующий код.  
   
  [!code-csharp[C_GeneratedCodeFiles#14](../../../samples/snippets/csharp/VS_Snippets_CFX/c_generatedcodefiles/cs/proxycode.cs#14)]  
   

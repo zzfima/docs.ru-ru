@@ -1,11 +1,12 @@
 ---
-title: "Определение типа объекта (Visual Basic)"
-ms.custom: 
+title: Определение типа объекта (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - classes [Visual Basic], discovering which an object belongs to
@@ -15,17 +16,17 @@ helpviewer_keywords:
 - TypeName function
 - objects [Visual Basic], type determining
 ms.assetid: d95e7ad1-cd63-41d6-9a28-d7a1380d49c1
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 9a63b5cf5941deb4dcc7518880b4dc7d0545803c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: a6d24be68ea4a9872f8f4fe89c1aabb943fbcb91
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="determining-object-type-visual-basic"></a>Определение типа объекта (Visual Basic)
-Универсальные объектные переменные (то есть переменные объявляется как `Object`) может содержать объекты любого класса. При использовании переменных типа `Object`, могут потребоваться различные действия на основе класса объекта; например, некоторые объекты могут не поддерживать определенное свойство или метод. [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]предоставляет два средства определения типа объекта, хранящегося в переменной объекта: `TypeName` функции и `TypeOf...Is` оператор.  
+Универсальные объектные переменные (то есть переменные объявляется как `Object`) может содержать объекты любого класса. При использовании переменных типа `Object`, могут потребоваться различные действия на основе класса объекта; например, некоторые объекты могут не поддерживать определенное свойство или метод. Visual Basic предоставляет два средства определения типа объекта, хранящегося в переменной объекта: `TypeName` функции и `TypeOf...Is` оператор.  
   
 ## <a name="typename-and-typeofis"></a>TypeName и TypeOf... —  
  `TypeName` Функция возвращает строку, лучшим вариантом при необходимости хранения или отображаемое имя класса объекта, как показано в следующем фрагменте кода:  
@@ -36,7 +37,7 @@ ms.lasthandoff: 11/21/2017
   
  [!code-vb[VbVbalrOOP#93](../../../../visual-basic/misc/codesnippet/VisualBasic/determining-object-type_2.vb)]  
   
- Здесь в качестве предупреждения должно быть выполнено. `TypeOf...Is` Оператор возвращает `True` , если объект имеет конкретный тип или является производным от определенного типа. Почти все в [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] выполняется с помощью объектов, содержащих некоторые элементы, которые не считаются обычно объектами, например строки и целые числа. Эти объекты являются производными и наследуют методы от <xref:System.Object>. При передаче `Integer` и вычислении с `Object`, `TypeOf...Is` оператор возвращает `True`. В следующем примере сообщается, что параметр `InParam` одновременно `Object` и `Integer`:  
+ Здесь в качестве предупреждения должно быть выполнено. `TypeOf...Is` Оператор возвращает `True` , если объект имеет конкретный тип или является производным от определенного типа. Практически все, что делается с помощью Visual Basic выполняется с помощью объектов, содержащих некоторые элементы, которые не считаются обычно объектами, например строки и целые числа. Эти объекты являются производными и наследуют методы от <xref:System.Object>. При передаче `Integer` и вычислении с `Object`, `TypeOf...Is` оператор возвращает `True`. В следующем примере сообщается, что параметр `InParam` одновременно `Object` и `Integer`:  
   
  [!code-vb[VbVbalrOOP#94](../../../../visual-basic/misc/codesnippet/VisualBasic/determining-object-type_3.vb)]  
   
