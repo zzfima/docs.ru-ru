@@ -1,54 +1,56 @@
 ---
-title: "Неустойчивое взаимодействие с использованием очереди"
-ms.custom: 
+title: Неустойчивое взаимодействие с использованием очереди
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 0d012f64-51c7-41d0-8e18-c756f658ee3d
-caps.latest.revision: "28"
+caps.latest.revision: 28
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d7af5e29faf000fe3fe86463cb4eca9dc1e5c567
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 01dc48d7df85051449c92f4e91e5d1e58d6ddb91
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
-# <a name="volatile-queued-communication"></a><span data-ttu-id="f6d49-102">Неустойчивое взаимодействие с использованием очереди</span><span class="sxs-lookup"><span data-stu-id="f6d49-102">Volatile Queued Communication</span></span>
-<span data-ttu-id="f6d49-103">В этом образце показано, как осуществлять неустойчивое взаимодействие с использованием очередей с помощью транспорта очереди сообщений (MSMQ).</span><span class="sxs-lookup"><span data-stu-id="f6d49-103">This sample demonstrates how to perform volatile queued communication over the Message Queuing (MSMQ) transport.</span></span> <span data-ttu-id="f6d49-104">В этом образце используется привязка <xref:System.ServiceModel.NetMsmqBinding>.</span><span class="sxs-lookup"><span data-stu-id="f6d49-104">This sample uses <xref:System.ServiceModel.NetMsmqBinding>.</span></span> <span data-ttu-id="f6d49-105">В данном случае служба представляет собой резидентное консольное приложение, позволяющее наблюдать за тем, как служба получает сообщения из очереди.</span><span class="sxs-lookup"><span data-stu-id="f6d49-105">The service in this case is a self-hosted console application to enable you to observe the service receiving queued messages.</span></span>  
+# <a name="volatile-queued-communication"></a><span data-ttu-id="0e98e-102">Неустойчивое взаимодействие с использованием очереди</span><span class="sxs-lookup"><span data-stu-id="0e98e-102">Volatile Queued Communication</span></span>
+<span data-ttu-id="0e98e-103">В этом образце показано, как осуществлять неустойчивое взаимодействие с использованием очередей с помощью транспорта очереди сообщений (MSMQ).</span><span class="sxs-lookup"><span data-stu-id="0e98e-103">This sample demonstrates how to perform volatile queued communication over the Message Queuing (MSMQ) transport.</span></span> <span data-ttu-id="0e98e-104">В этом образце используется привязка <xref:System.ServiceModel.NetMsmqBinding>.</span><span class="sxs-lookup"><span data-stu-id="0e98e-104">This sample uses <xref:System.ServiceModel.NetMsmqBinding>.</span></span> <span data-ttu-id="0e98e-105">В данном случае служба представляет собой резидентное консольное приложение, позволяющее наблюдать за тем, как служба получает сообщения из очереди.</span><span class="sxs-lookup"><span data-stu-id="0e98e-105">The service in this case is a self-hosted console application to enable you to observe the service receiving queued messages.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="f6d49-106">Процедура настройки и инструкции по построению для данного образца приведены в конце этого раздела.</span><span class="sxs-lookup"><span data-stu-id="f6d49-106">The setup procedure and build instructions for this sample are located at the end of this topic.</span></span>  
+>  <span data-ttu-id="0e98e-106">Процедура настройки и инструкции по построению для данного образца приведены в конце этого раздела.</span><span class="sxs-lookup"><span data-stu-id="0e98e-106">The setup procedure and build instructions for this sample are located at the end of this topic.</span></span>  
   
- <span data-ttu-id="f6d49-107">При использовании очередей клиент взаимодействует со службой посредством очереди.</span><span class="sxs-lookup"><span data-stu-id="f6d49-107">In queued communication, the client communicates to the service using a queue.</span></span> <span data-ttu-id="f6d49-108">Конкретно, клиент отправляет сообщения в очередь.</span><span class="sxs-lookup"><span data-stu-id="f6d49-108">More precisely, the client sends messages to a queue.</span></span> <span data-ttu-id="f6d49-109">Служба получает сообщения из очереди.</span><span class="sxs-lookup"><span data-stu-id="f6d49-109">The service receives messages from the queue.</span></span> <span data-ttu-id="f6d49-110">Поэтому клиенту и службе не обязательно выполняться одновременно, чтобы взаимодействовать посредством очереди.</span><span class="sxs-lookup"><span data-stu-id="f6d49-110">The service and client therefore, do not have to be running at the same time to communicate using a queue.</span></span>  
+ <span data-ttu-id="0e98e-107">При использовании очередей клиент взаимодействует со службой посредством очереди.</span><span class="sxs-lookup"><span data-stu-id="0e98e-107">In queued communication, the client communicates to the service using a queue.</span></span> <span data-ttu-id="0e98e-108">Конкретно, клиент отправляет сообщения в очередь.</span><span class="sxs-lookup"><span data-stu-id="0e98e-108">More precisely, the client sends messages to a queue.</span></span> <span data-ttu-id="0e98e-109">Служба получает сообщения из очереди.</span><span class="sxs-lookup"><span data-stu-id="0e98e-109">The service receives messages from the queue.</span></span> <span data-ttu-id="0e98e-110">Поэтому клиенту и службе не обязательно выполняться одновременно, чтобы взаимодействовать посредством очереди.</span><span class="sxs-lookup"><span data-stu-id="0e98e-110">The service and client therefore, do not have to be running at the same time to communicate using a queue.</span></span>  
   
- <span data-ttu-id="f6d49-111">При отправке сообщения без подтверждения MSMQ лишь делает все возможно для отправки сообщения в отличие от подтверждений "ровно один раз", при которых MSMQ проверяет, что сообщение было доставлено, или, если доставить его не удалось, уведомляет об этом.</span><span class="sxs-lookup"><span data-stu-id="f6d49-111">When you send a message with no assurances, MSMQ only makes a best effort to deliver the message, unlike with Exactly Once assurances where MSMQ ensures that the message gets delivered or, if it cannot be delivered, lets you know that the message cannot be delivered.</span></span>  
+ <span data-ttu-id="0e98e-111">При отправке сообщения без подтверждения MSMQ лишь делает все возможно для отправки сообщения в отличие от подтверждений "ровно один раз", при которых MSMQ проверяет, что сообщение было доставлено, или, если доставить его не удалось, уведомляет об этом.</span><span class="sxs-lookup"><span data-stu-id="0e98e-111">When you send a message with no assurances, MSMQ only makes a best effort to deliver the message, unlike with Exactly Once assurances where MSMQ ensures that the message gets delivered or, if it cannot be delivered, lets you know that the message cannot be delivered.</span></span>  
   
- <span data-ttu-id="f6d49-112">В некоторых сценариях неустойчивое сообщение может быть отправлено через очередь без подтверждения, если своевременность доставки важнее, чем возможная потеря сообщения.</span><span class="sxs-lookup"><span data-stu-id="f6d49-112">In certain scenarios, you may want to send a volatile message with no assurances over a queue, when timely delivery is more important than losing messages.</span></span> <span data-ttu-id="f6d49-113">Неустойчивые сообщения не сохраняются в случае сбоя диспетчера очереди.</span><span class="sxs-lookup"><span data-stu-id="f6d49-113">Volatile messages do not survive queue manager crashes.</span></span> <span data-ttu-id="f6d49-114">Поэтому при сбое диспетчера очереди нетранзакционная очередь, в которой содержатся неустойчивые сообщения, сохраняется, но сами сообщения исчезают, поскольку они не хранятся на диске.</span><span class="sxs-lookup"><span data-stu-id="f6d49-114">Therefore if the queue manager crashes, the non-transactional queue used to store volatile messages survives but the messages themselves do not because the messages are not stored on the disk.</span></span>  
+ <span data-ttu-id="0e98e-112">В некоторых сценариях неустойчивое сообщение может быть отправлено через очередь без подтверждения, если своевременность доставки важнее, чем возможная потеря сообщения.</span><span class="sxs-lookup"><span data-stu-id="0e98e-112">In certain scenarios, you may want to send a volatile message with no assurances over a queue, when timely delivery is more important than losing messages.</span></span> <span data-ttu-id="0e98e-113">Неустойчивые сообщения не сохраняются в случае сбоя диспетчера очереди.</span><span class="sxs-lookup"><span data-stu-id="0e98e-113">Volatile messages do not survive queue manager crashes.</span></span> <span data-ttu-id="0e98e-114">Поэтому при сбое диспетчера очереди нетранзакционная очередь, в которой содержатся неустойчивые сообщения, сохраняется, но сами сообщения исчезают, поскольку они не хранятся на диске.</span><span class="sxs-lookup"><span data-stu-id="0e98e-114">Therefore if the queue manager crashes, the non-transactional queue used to store volatile messages survives but the messages themselves do not because the messages are not stored on the disk.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="f6d49-115">Неустойчивые сообщения невозможно отправлять с помощью MSMQ без подтверждений в пределах области транзакции.</span><span class="sxs-lookup"><span data-stu-id="f6d49-115">You cannot send volatile messages with no assurances within the scope of a transaction using MSMQ.</span></span> <span data-ttu-id="f6d49-116">Кроме того, для отправки неустойчивых сообщений необходимо создавать нетранзакционные очереди.</span><span class="sxs-lookup"><span data-stu-id="f6d49-116">You also must create a non-transactional queue to send volatile messages.</span></span>  
+>  <span data-ttu-id="0e98e-115">Неустойчивые сообщения невозможно отправлять с помощью MSMQ без подтверждений в пределах области транзакции.</span><span class="sxs-lookup"><span data-stu-id="0e98e-115">You cannot send volatile messages with no assurances within the scope of a transaction using MSMQ.</span></span> <span data-ttu-id="0e98e-116">Кроме того, для отправки неустойчивых сообщений необходимо создавать нетранзакционные очереди.</span><span class="sxs-lookup"><span data-stu-id="0e98e-116">You also must create a non-transactional queue to send volatile messages.</span></span>  
   
- <span data-ttu-id="f6d49-117">В этом образце используется контракт службы `IStockTicker`, определяющий односторонние службы, которые лучше всего подходят для работы с очередями.</span><span class="sxs-lookup"><span data-stu-id="f6d49-117">The service contract in this sample is `IStockTicker` that defines one-way services that are best suited for use with queuing.</span></span>  
-  
-```  
+ <span data-ttu-id="0e98e-117">В этом образце используется контракт службы `IStockTicker`, определяющий односторонние службы, которые лучше всего подходят для работы с очередями.</span><span class="sxs-lookup"><span data-stu-id="0e98e-117">The service contract in this sample is `IStockTicker` that defines one-way services that are best suited for use with queuing.</span></span>  
+
+```csharp
 [ServiceContract(Namespace = "http://Microsoft.ServiceModel.Samples")]  
 public interface IStockTicker  
 {  
     [OperationContract(IsOneWay = true)]  
     void StockTick(string symbol, float price);  
 }  
-```  
+```
+
+ <span data-ttu-id="0e98e-118">Операция службы отображает биржевой символ и цену, как показано в следующем образце кода:</span><span class="sxs-lookup"><span data-stu-id="0e98e-118">The service operation displays the stock ticker symbol and price, as shown in the following sample code:</span></span>  
   
- <span data-ttu-id="f6d49-118">Операция службы отображает биржевой символ и цену, как показано в следующем образце кода:</span><span class="sxs-lookup"><span data-stu-id="f6d49-118">The service operation displays the stock ticker symbol and price, as shown in the following sample code:</span></span>  
-  
-```  
+```csharp
 public class StockTickerService : IStockTicker  
 {  
     public void StockTick(string symbol, float price)  
@@ -59,9 +61,9 @@ public class StockTickerService : IStockTicker
 }  
 ```  
   
- <span data-ttu-id="f6d49-119">Служба является резидентной.</span><span class="sxs-lookup"><span data-stu-id="f6d49-119">The service is self hosted.</span></span> <span data-ttu-id="f6d49-120">При работе с транспортом MSMQ используемую очередь следует создавать заранее.</span><span class="sxs-lookup"><span data-stu-id="f6d49-120">When using the MSMQ transport, the queue used must be created in advance.</span></span> <span data-ttu-id="f6d49-121">Это можно сделать вручную или с помощью кода.</span><span class="sxs-lookup"><span data-stu-id="f6d49-121">This can be done manually or through code.</span></span> <span data-ttu-id="f6d49-122">В данном образце служба содержит код для проверки наличия очереди и ее создания, если это необходимо.</span><span class="sxs-lookup"><span data-stu-id="f6d49-122">In this sample, the service contains code to check for the existence of the queue and create it if required.</span></span> <span data-ttu-id="f6d49-123">Имя очереди считывается из файла конфигурации.</span><span class="sxs-lookup"><span data-stu-id="f6d49-123">The queue name is read from the configuration file.</span></span> <span data-ttu-id="f6d49-124">Базовый адрес используется [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) для создания прокси для службы.</span><span class="sxs-lookup"><span data-stu-id="f6d49-124">The base address is used by the [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) to generate the proxy for the service.</span></span>  
-  
-```  
+ <span data-ttu-id="0e98e-119">Служба является резидентной.</span><span class="sxs-lookup"><span data-stu-id="0e98e-119">The service is self hosted.</span></span> <span data-ttu-id="0e98e-120">При работе с транспортом MSMQ используемую очередь следует создавать заранее.</span><span class="sxs-lookup"><span data-stu-id="0e98e-120">When using the MSMQ transport, the queue used must be created in advance.</span></span> <span data-ttu-id="0e98e-121">Это можно сделать вручную или с помощью кода.</span><span class="sxs-lookup"><span data-stu-id="0e98e-121">This can be done manually or through code.</span></span> <span data-ttu-id="0e98e-122">В данном образце служба содержит код для проверки наличия очереди и ее создания, если это необходимо.</span><span class="sxs-lookup"><span data-stu-id="0e98e-122">In this sample, the service contains code to check for the existence of the queue and create it if required.</span></span> <span data-ttu-id="0e98e-123">Имя очереди считывается из файла конфигурации.</span><span class="sxs-lookup"><span data-stu-id="0e98e-123">The queue name is read from the configuration file.</span></span> <span data-ttu-id="0e98e-124">Базовый адрес используется [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) для создания прокси для службы.</span><span class="sxs-lookup"><span data-stu-id="0e98e-124">The base address is used by the [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) to generate the proxy for the service.</span></span>  
+
+```csharp
 // Host the service within this EXE console application.  
 public static void Main()  
 {  
@@ -88,14 +90,14 @@ public static void Main()
         serviceHost.Close();  
     }  
 }  
-```  
-  
- <span data-ttu-id="f6d49-125">Имя очереди MSMQ задается в разделе appSettings файла конфигурации.</span><span class="sxs-lookup"><span data-stu-id="f6d49-125">The MSMQ queue name is specified in the appSettings section of the configuration file.</span></span> <span data-ttu-id="f6d49-126">Конечная точка для службы задается в разделе system.serviceModel файла конфигурации и определяет привязку `netMsmqBinding`.</span><span class="sxs-lookup"><span data-stu-id="f6d49-126">The endpoint for the service is defined in the system.serviceModel section of the configuration file and specifies the `netMsmqBinding` binding.</span></span>  
+```
+
+ <span data-ttu-id="0e98e-125">Имя очереди MSMQ задается в разделе appSettings файла конфигурации.</span><span class="sxs-lookup"><span data-stu-id="0e98e-125">The MSMQ queue name is specified in the appSettings section of the configuration file.</span></span> <span data-ttu-id="0e98e-126">Конечная точка для службы задается в разделе system.serviceModel файла конфигурации и определяет привязку `netMsmqBinding`.</span><span class="sxs-lookup"><span data-stu-id="0e98e-126">The endpoint for the service is defined in the system.serviceModel section of the configuration file and specifies the `netMsmqBinding` binding.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="f6d49-127">В имени очереди для определения локального компьютера используется точка (.), а при создании очереди с помощью <xref:System.Messaging> в пути в качестве разделителей используются символы обратной косой черты.</span><span class="sxs-lookup"><span data-stu-id="f6d49-127">The queue name uses a dot (.) for the local machine and backslash separators in its path when creating a queue using <xref:System.Messaging>.</span></span> <span data-ttu-id="f6d49-128">В адресе конечной точки [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] задается схема net.msmq:, для обозначения локального компьютера используется имя "localhost", а в пути в качестве разделителей используются символы косой черты.</span><span class="sxs-lookup"><span data-stu-id="f6d49-128">The [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] endpoint address specifies a net.msmq: scheme, uses "localhost" for the local machine and forward slashes in its path.</span></span>  
+>  <span data-ttu-id="0e98e-127">В имени очереди для определения локального компьютера используется точка (.), а при создании очереди с помощью <xref:System.Messaging> в пути в качестве разделителей используются символы обратной косой черты.</span><span class="sxs-lookup"><span data-stu-id="0e98e-127">The queue name uses a dot (.) for the local machine and backslash separators in its path when creating a queue using <xref:System.Messaging>.</span></span> <span data-ttu-id="0e98e-128">В адресе конечной точки [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] задается схема net.msmq:, для обозначения локального компьютера используется имя "localhost", а в пути в качестве разделителей используются символы косой черты.</span><span class="sxs-lookup"><span data-stu-id="0e98e-128">The [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] endpoint address specifies a net.msmq: scheme, uses "localhost" for the local machine and forward slashes in its path.</span></span>  
   
- <span data-ttu-id="f6d49-129">Подтверждения устойчивости или неустойчивости сообщений также задаются в конфигурации.</span><span class="sxs-lookup"><span data-stu-id="f6d49-129">The assurances and durability or volatility of messages are also specified in the configuration.</span></span>  
+ <span data-ttu-id="0e98e-129">Подтверждения устойчивости или неустойчивости сообщений также задаются в конфигурации.</span><span class="sxs-lookup"><span data-stu-id="0e98e-129">The assurances and durability or volatility of messages are also specified in the configuration.</span></span>  
   
 ```xml  
 <appSettings>  
@@ -114,7 +116,7 @@ public static void Main()
                 bindingConfiguration="volatileBinding"   
                 contract="Microsoft.ServiceModel.Samples.IStockTicker" />  
     ...  
-          </service>  
+    </service>  
   </services>  
   
   <bindings>  
@@ -128,9 +130,9 @@ public static void Main()
 </system.serviceModel>  
 ```  
   
- <span data-ttu-id="f6d49-130">Поскольку в этом образце поддерживающие очередь сообщения отправляются с помощью нетранзакционной очереди, передавать через эту очередь сообщения транзакций невозможно.</span><span class="sxs-lookup"><span data-stu-id="f6d49-130">Because the sample sends queued messages by using a non-transactional queue, transacted messages cannot be sent to the queue.</span></span>  
-  
-```  
+ <span data-ttu-id="0e98e-130">Поскольку в этом образце поддерживающие очередь сообщения отправляются с помощью нетранзакционной очереди, передавать через эту очередь сообщения транзакций невозможно.</span><span class="sxs-lookup"><span data-stu-id="0e98e-130">Because the sample sends queued messages by using a non-transactional queue, transacted messages cannot be sent to the queue.</span></span>  
+
+```csharp
 // Create a client.  
 Random r = new Random(137);  
   
@@ -145,9 +147,9 @@ for (int i = 0; i < 10; i++)
   
 //Closing the client gracefully cleans up resources.  
 client.Close();  
-```  
-  
- <span data-ttu-id="f6d49-131">При выполнении образца действия клиента и службы отображаются в окнах консоли как службы, так и клиента.</span><span class="sxs-lookup"><span data-stu-id="f6d49-131">When you run the sample, the client and service activities are displayed in both the service and client console windows.</span></span> <span data-ttu-id="f6d49-132">Можно видеть, как служба получает сообщения от клиента.</span><span class="sxs-lookup"><span data-stu-id="f6d49-132">You can see the service receive messages from the client.</span></span> <span data-ttu-id="f6d49-133">Нажмите клавишу ВВОД в каждом окне консоли, чтобы закрыть службу и клиент.</span><span class="sxs-lookup"><span data-stu-id="f6d49-133">Press ENTER in each console window to shut down the service and client.</span></span> <span data-ttu-id="f6d49-134">Обратите внимание, что поскольку используется очередь, клиенту и службе не обязательно быть запущенными и работать одновременно.</span><span class="sxs-lookup"><span data-stu-id="f6d49-134">Note that because queuing is in use, the client and service do not have to be up and running at the same time.</span></span> <span data-ttu-id="f6d49-135">Можно запустить клиент, выключить его, а затем запустить службу, которая все равно получит сообщения клиента.</span><span class="sxs-lookup"><span data-stu-id="f6d49-135">You can run the client, shut it down, and then start up the service and it still receives its messages.</span></span>  
+```
+
+ <span data-ttu-id="0e98e-131">При выполнении образца действия клиента и службы отображаются в окнах консоли как службы, так и клиента.</span><span class="sxs-lookup"><span data-stu-id="0e98e-131">When you run the sample, the client and service activities are displayed in both the service and client console windows.</span></span> <span data-ttu-id="0e98e-132">Можно видеть, как служба получает сообщения от клиента.</span><span class="sxs-lookup"><span data-stu-id="0e98e-132">You can see the service receive messages from the client.</span></span> <span data-ttu-id="0e98e-133">Нажмите клавишу ВВОД в каждом окне консоли, чтобы закрыть службу и клиент.</span><span class="sxs-lookup"><span data-stu-id="0e98e-133">Press ENTER in each console window to shut down the service and client.</span></span> <span data-ttu-id="0e98e-134">Обратите внимание, что поскольку используется очередь, клиенту и службе не обязательно быть запущенными и работать одновременно.</span><span class="sxs-lookup"><span data-stu-id="0e98e-134">Note that because queuing is in use, the client and service do not have to be up and running at the same time.</span></span> <span data-ttu-id="0e98e-135">Можно запустить клиент, выключить его, а затем запустить службу, которая все равно получит сообщения клиента.</span><span class="sxs-lookup"><span data-stu-id="0e98e-135">You can run the client, shut it down, and then start up the service and it still receives its messages.</span></span>  
   
 ```  
 The service is ready.  
@@ -165,19 +167,19 @@ Stock Tick zzz8:43.32
 Stock Tick zzz9:43.3  
 ```  
   
-### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="f6d49-136">Настройка, сборка и выполнение образца</span><span class="sxs-lookup"><span data-stu-id="f6d49-136">To set up, build, and run the sample</span></span>  
+### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="0e98e-136">Настройка, сборка и выполнение образца</span><span class="sxs-lookup"><span data-stu-id="0e98e-136">To set up, build, and run the sample</span></span>  
   
-1.  <span data-ttu-id="f6d49-137">Убедитесь, что вы выполнили [выполняемая однократно процедура настройки для образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span><span class="sxs-lookup"><span data-stu-id="f6d49-137">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
+1.  <span data-ttu-id="0e98e-137">Убедитесь, что вы выполнили [выполняемая однократно процедура настройки для образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span><span class="sxs-lookup"><span data-stu-id="0e98e-137">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
   
-2.  <span data-ttu-id="f6d49-138">Чтобы создать выпуск решения на языке C# или Visual Basic .NET, следуйте инструкциям в разделе [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="f6d49-138">To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
+2.  <span data-ttu-id="0e98e-138">Чтобы создать выпуск решения на языке C# или Visual Basic .NET, следуйте инструкциям в разделе [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="0e98e-138">To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
   
-3.  <span data-ttu-id="f6d49-139">Для запуска образца в конфигурации одного или нескольких компьютерах, следуйте инструкциям в [выполнение образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="f6d49-139">To run the sample in a single- or cross-machine configuration, follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).</span></span>  
+3.  <span data-ttu-id="0e98e-139">Для запуска образца в конфигурации одного или нескольких компьютерах, следуйте инструкциям в [выполнение образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="0e98e-139">To run the sample in a single- or cross-machine configuration, follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).</span></span>  
   
- <span data-ttu-id="f6d49-140">По умолчанию с привязкой <xref:System.ServiceModel.NetMsmqBinding> безопасность транспорта включена.</span><span class="sxs-lookup"><span data-stu-id="f6d49-140">By default with the <xref:System.ServiceModel.NetMsmqBinding>, transport security is enabled.</span></span> <span data-ttu-id="f6d49-141">Существует два свойства, определяющих безопасность транспорта MSMQ, <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A> и <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A> `.` по умолчанию имеет значение режима проверки подлинности `Windows` и устанавливается уровень защиты `Sign`.</span><span class="sxs-lookup"><span data-stu-id="f6d49-141">There are two pertinent properties for MSMQ transport security, <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A> and <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A>`.` By default, the authentication mode is set to `Windows` and the protection level is set to `Sign`.</span></span> <span data-ttu-id="f6d49-142">Чтобы служба MSMQ обеспечивала возможности проверки подлинности и подписывания, она должна входить в домен, а также должна быть установлена возможность интеграции MSMQ со службой каталогов Active Directory.</span><span class="sxs-lookup"><span data-stu-id="f6d49-142">For MSMQ to provide the authentication and signing feature, it must be part of a domain and the active directory integration option for MSMQ must be installed.</span></span> <span data-ttu-id="f6d49-143">Если запустить данный образец на компьютере, который не удовлетворяет этому условию, возникнет ошибка.</span><span class="sxs-lookup"><span data-stu-id="f6d49-143">If you run this sample on a computer that does not satisfy these criteria you receive an error.</span></span>  
+ <span data-ttu-id="0e98e-140">По умолчанию с привязкой <xref:System.ServiceModel.NetMsmqBinding> безопасность транспорта включена.</span><span class="sxs-lookup"><span data-stu-id="0e98e-140">By default with the <xref:System.ServiceModel.NetMsmqBinding>, transport security is enabled.</span></span> <span data-ttu-id="0e98e-141">Существует два свойства, определяющих безопасность транспорта MSMQ, <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A> и <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A> `.` по умолчанию имеет значение режима проверки подлинности `Windows` и устанавливается уровень защиты `Sign`.</span><span class="sxs-lookup"><span data-stu-id="0e98e-141">There are two pertinent properties for MSMQ transport security, <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A> and <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A>`.` By default, the authentication mode is set to `Windows` and the protection level is set to `Sign`.</span></span> <span data-ttu-id="0e98e-142">Чтобы служба MSMQ обеспечивала возможности проверки подлинности и подписывания, она должна входить в домен, а также должна быть установлена возможность интеграции MSMQ со службой каталогов Active Directory.</span><span class="sxs-lookup"><span data-stu-id="0e98e-142">For MSMQ to provide the authentication and signing feature, it must be part of a domain and the active directory integration option for MSMQ must be installed.</span></span> <span data-ttu-id="0e98e-143">Если запустить данный образец на компьютере, который не удовлетворяет этому условию, возникнет ошибка.</span><span class="sxs-lookup"><span data-stu-id="0e98e-143">If you run this sample on a computer that does not satisfy these criteria you receive an error.</span></span>  
   
-### <a name="to-run-the-sample-on-a-computer-joined-to-a-workgroup-or-without-active-directory-integration"></a><span data-ttu-id="f6d49-144">Запуск образца на компьютере, входящем в рабочую группу, или без интеграции с Active Directory</span><span class="sxs-lookup"><span data-stu-id="f6d49-144">To run the sample on a computer joined to a workgroup or without active directory integration</span></span>  
+### <a name="to-run-the-sample-on-a-computer-joined-to-a-workgroup-or-without-active-directory-integration"></a><span data-ttu-id="0e98e-144">Запуск образца на компьютере, входящем в рабочую группу, или без интеграции с Active Directory</span><span class="sxs-lookup"><span data-stu-id="0e98e-144">To run the sample on a computer joined to a workgroup or without active directory integration</span></span>  
   
-1.  <span data-ttu-id="f6d49-145">Если компьютер не входит в домен или не установлена интеграция с Active Directory, отключите безопасность транспорта, задав для режима проверки подлинности и уровня защиты значения `None`, как показано в следующем образце кода конфигурации:</span><span class="sxs-lookup"><span data-stu-id="f6d49-145">If your computer is not part of a domain or does not have active directory integration installed, turn off transport security by setting the authentication mode and protection level to `None` as shown in the following sample configuration code:</span></span>  
+1.  <span data-ttu-id="0e98e-145">Если компьютер не входит в домен или не установлена интеграция с Active Directory, отключите безопасность транспорта, задав для режима проверки подлинности и уровня защиты значения `None`, как показано в следующем образце кода конфигурации:</span><span class="sxs-lookup"><span data-stu-id="0e98e-145">If your computer is not part of a domain or does not have active directory integration installed, turn off transport security by setting the authentication mode and protection level to `None` as shown in the following sample configuration code:</span></span>  
   
     ```xml  
     <system.serviceModel>  
@@ -224,18 +226,18 @@ Stock Tick zzz9:43.3
       </system.serviceModel>  
     ```  
   
-2.  <span data-ttu-id="f6d49-146">Перед выполнением примера убедитесь, что изменена конфигурация как сервера, так и клиента.</span><span class="sxs-lookup"><span data-stu-id="f6d49-146">Ensure that you change the configuration on both the server and the client before you run the sample.</span></span>  
+2.  <span data-ttu-id="0e98e-146">Перед выполнением примера убедитесь, что изменена конфигурация как сервера, так и клиента.</span><span class="sxs-lookup"><span data-stu-id="0e98e-146">Ensure that you change the configuration on both the server and the client before you run the sample.</span></span>  
   
     > [!NOTE]
-    >  <span data-ttu-id="f6d49-147">Задание для `security mode` значения `None` эквивалентно заданию для параметров безопасности <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A>, <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A> и `Message` значения `None`.</span><span class="sxs-lookup"><span data-stu-id="f6d49-147">Setting `security mode` to `None` is equivalent to setting <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A>, <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A>, and `Message` security to `None`.</span></span>  
+    >  <span data-ttu-id="0e98e-147">Задание для `security mode` значения `None` эквивалентно заданию для параметров безопасности <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A>, <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A> и `Message` значения `None`.</span><span class="sxs-lookup"><span data-stu-id="0e98e-147">Setting `security mode` to `None` is equivalent to setting <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A>, <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A>, and `Message` security to `None`.</span></span>  
   
 > [!IMPORTANT]
->  <span data-ttu-id="f6d49-148">Образцы уже могут быть установлены на компьютере.</span><span class="sxs-lookup"><span data-stu-id="f6d49-148">The samples may already be installed on your computer.</span></span> <span data-ttu-id="f6d49-149">Перед продолжением проверьте следующий каталог (по умолчанию).</span><span class="sxs-lookup"><span data-stu-id="f6d49-149">Check for the following (default) directory before continuing.</span></span>  
+>  <span data-ttu-id="0e98e-148">Образцы уже могут быть установлены на компьютере.</span><span class="sxs-lookup"><span data-stu-id="0e98e-148">The samples may already be installed on your computer.</span></span> <span data-ttu-id="0e98e-149">Перед продолжением проверьте следующий каталог (по умолчанию).</span><span class="sxs-lookup"><span data-stu-id="0e98e-149">Check for the following (default) directory before continuing.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  <span data-ttu-id="f6d49-150">Если этот каталог не существует, перейдите на страницу [Примеры Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все примеры [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] .</span><span class="sxs-lookup"><span data-stu-id="f6d49-150">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="f6d49-151">Этот образец расположен в следующем каталоге.</span><span class="sxs-lookup"><span data-stu-id="f6d49-151">This sample is located in the following directory.</span></span>  
+>  <span data-ttu-id="0e98e-150">Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) Чтобы загрузить все [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] образцов.</span><span class="sxs-lookup"><span data-stu-id="0e98e-150">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="0e98e-151">Этот образец расположен в следующем каталоге.</span><span class="sxs-lookup"><span data-stu-id="0e98e-151">This sample is located in the following directory.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\MSMQ\Volatile`  
   
-## <a name="see-also"></a><span data-ttu-id="f6d49-152">См. также</span><span class="sxs-lookup"><span data-stu-id="f6d49-152">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="0e98e-152">См. также</span><span class="sxs-lookup"><span data-stu-id="0e98e-152">See Also</span></span>
