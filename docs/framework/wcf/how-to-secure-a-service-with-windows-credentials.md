@@ -1,13 +1,13 @@
 ---
-title: "Практическое руководство. Защита службы с использованием учетных данных Windows"
-ms.custom: 
+title: Практическое руководство. Защита службы с использованием учетных данных Windows
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,20 +15,20 @@ dev_langs:
 helpviewer_keywords:
 - WCF, security
 ms.assetid: d171b5ca-96ef-47ff-800c-c138023cf76e
-caps.latest.revision: 
+caps.latest.revision: 26
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
 ms.workload:
 - dotnet
-ms.openlocfilehash: 6a5225f25ca921407d64f579bbc7c204917ff260
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: cbe29ed57a7eee3a74166dabd2b8931e73cd2860
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-secure-a-service-with-windows-credentials"></a>Практическое руководство. Защита службы с использованием учетных данных Windows
-В этом разделе показано, как включить режим безопасности транспорта на [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] службы, который находится в домене Windows и вызывается клиентами, в том же домене. [!INCLUDE[crabout](../../../includes/crabout-md.md)]Этот сценарий в разделе [безопасность транспорта с проверкой подлинности Windows](../../../docs/framework/wcf/feature-details/transport-security-with-windows-authentication.md). Пример приложения см. в разделе [WSHttpBinding](../../../docs/framework/wcf/samples/wshttpbinding.md) образца.  
+В этом разделе показано, как включить режим безопасности транспорта на [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] службы, который находится в домене Windows и вызывается клиентами, в том же домене. [!INCLUDE[crabout](../../../includes/crabout-md.md)] Этот сценарий в разделе [безопасность транспорта с проверкой подлинности Windows](../../../docs/framework/wcf/feature-details/transport-security-with-windows-authentication.md). Пример приложения см. в разделе [WSHttpBinding](../../../docs/framework/wcf/samples/wshttpbinding.md) образца.  
   
  Начинать изучение этого раздела рекомендуется только после определения существующего интерфейса контракта и его реализации. Также можно изменять существующие службу и клиент.  
   
@@ -57,17 +57,17 @@ ms.lasthandoff: 12/22/2017
      [!code-vb[c_SecureWindowsService#1](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securewindowsservice/vb/secureservice.vb#1)]  
   
 ### <a name="using-the-binding-in-a-service"></a>Использование привязки в службе  
- Это вторая процедура, в которой показано, как использовать привязку в резидентной службе. [!INCLUDE[crabout](../../../includes/crabout-md.md)]Размещение служб см. в разделе [размещение служб](../../../docs/framework/wcf/hosting-services.md).  
+ Это вторая процедура, в которой показано, как использовать привязку в резидентной службе. [!INCLUDE[crabout](../../../includes/crabout-md.md)] Размещение служб см. в разделе [размещение служб](../../../docs/framework/wcf/hosting-services.md).  
   
 ##### <a name="to-use-a-binding-in-a-service"></a>Использование привязки в службе  
   
 1.  Вставьте код этой процедуры после кода предыдущей процедуры  
   
-2.  Создайте переменную <xref:System.Type> с именем `contractType` и присвойте ей тип интерфейса (`ICalculator`). При работе с [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] следует использовать оператор `GetType`, при использовании C# следует применить ключевое слово `typeof`.  
+2.  Создайте переменную <xref:System.Type> с именем `contractType` и присвойте ей тип интерфейса (`ICalculator`). При использовании Visual Basic, используйте `GetType` оператора; при использовании C#, используйте `typeof` ключевое слово.  
   
 3.  Создайте вторую переменную `Type` с именем `serviceType` и присвойте ей тип реализованного контракта (`Calculator`).  
   
-4.  Создайте экземпляр класса <xref:System.Uri> с именем `baseAddress` с базовым адресом службы. Базовый адрес должен иметь схему, которая сочетается с транспортом. В данном случае схема транспорта - HTTP, и адрес включает специальный универсальный код ресурса (URI) "localhost" и номер порта (8036), а также базовый адрес конечной точки ("serviceModelSamples/): http://localhost:8036/serviceModelSamples/.  
+4.  Создайте экземпляр класса <xref:System.Uri> с именем `baseAddress` с базовым адресом службы. Базовый адрес должен иметь схему, которая сочетается с транспортом. В этом случае схема транспорта-HTTP, и адрес включает специальный универсальный код ресурса (URI) «localhost» и номер порта (8036) и базовый адрес конечной точки ("serviceModelSamples /): http://localhost:8036/serviceModelSamples/.  
   
 5.  Создайте экземпляр класса <xref:System.ServiceModel.ServiceHost> с переменными `serviceType` и `baseAddress`.  
   
@@ -87,7 +87,7 @@ ms.lasthandoff: 12/22/2017
   
 ##### <a name="to-use-a-binding-in-a-client-with-code"></a>Использование привязки в клиенте с кодом  
   
-1.  Используйте средство SvcUtil.exe, чтобы создать код прокси из метаданных службы. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Как: создание клиента](../../../docs/framework/wcf/how-to-create-a-wcf-client.md). Созданный код учетной записи-посредника наследуется от класса <xref:System.ServiceModel.ClientBase%601>, благодаря чему каждый клиент гарантированно имеет все необходимые конструкторы, методы и свойства для взаимодействия со службой [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]. В данном примере созданный код включает класс `CalculatorClient`, который реализует интерфейс `ICalculator`, тем самым обеспечивая совместимость с кодом службы.  
+1.  Используйте средство SvcUtil.exe, чтобы создать код прокси из метаданных службы. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Как: создание клиента](../../../docs/framework/wcf/how-to-create-a-wcf-client.md). Созданный код учетной записи-посредника наследуется от класса <xref:System.ServiceModel.ClientBase%601>, благодаря чему каждый клиент гарантированно имеет все необходимые конструкторы, методы и свойства для взаимодействия со службой [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]. В данном примере созданный код включает класс `CalculatorClient`, который реализует интерфейс `ICalculator`, тем самым обеспечивая совместимость с кодом службы.  
   
 2.  Код этой процедуры вставляется в начало метода `Main` программы клиента.  
   
@@ -140,7 +140,7 @@ ms.lasthandoff: 12/22/2017
   
 ##### <a name="to-use-a-binding-in-a-client-with-configuration"></a>Использование привязки в клиенте с конфигурацией  
   
-1.  Используйте средство SvcUtil.exe, чтобы создать код прокси и файл конфигурации из метаданных службы. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Как: создание клиента](../../../docs/framework/wcf/how-to-create-a-wcf-client.md).  
+1.  Используйте средство SvcUtil.exe, чтобы создать код прокси и файл конфигурации из метаданных службы. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Как: создание клиента](../../../docs/framework/wcf/how-to-create-a-wcf-client.md).  
   
 2.  Замените [ \<привязки >](../../../docs/framework/configure-apps/file-schema/wcf/bindings.md) раздел созданный файл конфигурации с кодом конфигурации из предыдущего раздела.  
   

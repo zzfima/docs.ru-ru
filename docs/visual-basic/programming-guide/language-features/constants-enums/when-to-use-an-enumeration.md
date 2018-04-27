@@ -14,11 +14,11 @@ ms.assetid: e6e47b5b-3ed9-452d-a481-9c3fed88519a
 caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: a3b2937cc71c0c31bd8dce3d77fb33f48e1b5750
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 5ab152687f4f9e4ba6bd032ae7c1352f65af715f
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="when-to-use-an-enumeration-visual-basic"></a>Когда следует использовать перечисление (Visual Basic)
 Перечисления предоставляют простой способ работы с наборами связанных констант. Перечисление или `Enum`, является символическое имя для набора значений. Перечисления обрабатываются как типы данных и их можно использовать для создания наборов констант для использования с переменными и свойства.  
@@ -37,12 +37,12 @@ ms.lasthandoff: 11/21/2017
 -   Обеспечение прямой совместимости. Для перечислений код является менее вероятны, если в будущем уведомлений об изменении значения, соответствующие именам элементов.  
   
 ## <a name="naming-enumerations"></a>Именование перечислений  
- Используйте соглашение об именовании для элементов перечисления. Когда [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] встречается имя члена перечисления, может быть исключение, если то же имя содержится в других библиотеках типов. Используйте уникальный префикс для идентификации значения из приложения или компонента.  
+ Используйте соглашение об именовании для элементов перечисления. Когда Visual Basic встречает имя члена перечисления, исключение может возникать, если то же имя содержится в других библиотеках типов. Используйте уникальный префикс для идентификации значения из приложения или компонента.  
   
  При ссылке на член перечисления, вам необходимо уточнить имя члена с именем перечисления или воспользуйтесь `Imports` инструкции. Дополнительные сведения см. в разделе [перечисления и уточнение имен](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-and-name-qualification.md).  
   
 ## <a name="predefined-enumerations"></a>Предопределенные перечисления  
- [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]предоставляет ряд стандартных перечислений, таких как `FirstDayOfWeek` и `MsgBoxResult`, для упрощения кода. Список этих разделе [константы и перечисления](../../../../visual-basic/language-reference/constants-and-enumerations.md).  
+ Visual Basic предоставляет ряд стандартных перечислений, таких как `FirstDayOfWeek` и `MsgBoxResult`, для упрощения кода. Список этих разделе [константы и перечисления](../../../../visual-basic/language-reference/constants-and-enumerations.md).  
   
 ## <a name="see-also"></a>См. также  
  [Как: объявление перечисления](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-enumerations.md)  

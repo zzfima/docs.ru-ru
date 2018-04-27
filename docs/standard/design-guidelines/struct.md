@@ -24,11 +24,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 2f4a6debc25a51e3a0a83e70fc8c8f8fc55c62f5
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: dfa32112a2eb85a93cdd1e7a72d4411a3b197a1a
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="struct-design"></a>Разработка структур
 Тип значения общего назначения наиболее часто называется структурой зарезервированного слова C#. Этот раздел содержит рекомендации по общие структуры конструктора.  
@@ -47,7 +47,7 @@ ms.lasthandoff: 12/23/2017
   
  **СДЕЛАТЬ ✓** реализовать <xref:System.IEquatable%601> для типов значений.  
   
- <xref:System.Object.Equals%2A?displayProperty=nameWithType> Упаковка-преобразование вызывает метод для типов значений, и его реализация по умолчанию не очень эффективна, так как он использует отражение. <xref:System.IEquatable%601.Equals%2A>может быть гораздо более высокую производительность и может быть реализовано так, чтобы упаковка-преобразование не будет.  
+ <xref:System.Object.Equals%2A?displayProperty=nameWithType> Упаковка-преобразование вызывает метод для типов значений, и его реализация по умолчанию не очень эффективна, так как он использует отражение. <xref:System.IEquatable%601.Equals%2A> может быть гораздо более высокую производительность и может быть реализовано так, чтобы упаковка-преобразование не будет.  
   
  **X не** явным образом увеличить <xref:System.ValueType>. На самом деле большинство языков отключены.  
   
@@ -55,7 +55,7 @@ ms.lasthandoff: 12/23/2017
   
  *Фрагменты © 2005, 2009 корпорации Майкрософт. Все права защищены.*  
   
- *Перепечатываются разрешении Пирсона для образовательных учреждений, Inc. из [Framework рекомендации по проектированию: условные обозначения, стили и шаблоны для библиотеки .NET для повторного использования, 2-е издание](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina и Брэд Абрамс, опубликованные 22 октября 2008 г., Addison-Wesley Professional в составе ряда разработки Microsoft Windows.*  
+ *Перепечатываются разрешении Пирсона для образовательных учреждений, Inc. из [Framework рекомендации по проектированию: условные обозначения, стили и шаблоны для библиотеки .NET для повторного использования, 2-е издание](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina и Брэд Абрамс, опубликованные 22 октября 2008 г., Addison-Wesley Professional в составе ряда разработки Microsoft Windows.*  
   
 ## <a name="see-also"></a>См. также  
  [Рекомендации по разработке типов](../../../docs/standard/design-guidelines/type.md)  

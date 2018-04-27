@@ -1,27 +1,29 @@
 ---
-title: "Создание службы данных"
-ms.custom: 
+title: Создание службы данных
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework-oob
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 34d1d971-5e18-4c22-9bf6-d3612e27ea59
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7d890e4c2041ae4c70a79adfc0ab4141402fcd3f
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 781def411214b0804cdc094c00b2f655b6c3823d
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="creating-the-data-service"></a>Создание службы данных
 В этой задаче вы создадите образца службы данных, который использует [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] для предоставления [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] канала, который основан на образце базы данных "Борей". Задача включает следующие основные шаги.  
@@ -35,16 +37,16 @@ ms.lasthandoff: 01/19/2018
 4.  Включите доступ к службе данных.  
   
 > [!NOTE]
->  Веб-приложение [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)], создаваемое в конце этой задачи, работает на сервере разработки [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)], предоставляемом [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)]. Сервер разработки [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] поддерживает доступ только с локального компьютера. Чтобы упростить тестирование и устранение неполадок службы данных в ходе разработки, попробуйте также запустить с помощью IIS приложение со службой данных. Для получения дополнительной информации см. [How to: Develop a WCF Data Service Running on IIS](../../../../docs/framework/data/wcf/how-to-develop-a-wcf-data-service-running-on-iis.md).  
+>  [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Выполняется веб-приложение, создаваемое после завершения этой задачи [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] , предоставляемые Visual Studio Development Server. Сервер разработки [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] поддерживает доступ только с локального компьютера. Чтобы упростить тестирование и устранение неполадок службы данных в ходе разработки, попробуйте также запустить с помощью IIS приложение со службой данных. Для получения дополнительной информации см. [How to: Develop a WCF Data Service Running on IIS](../../../../docs/framework/data/wcf/how-to-develop-a-wcf-data-service-running-on-iis.md).  
   
 ### <a name="to-create-the-aspnet-web-application"></a>Создание веб-приложения ASP.NET  
   
-1.  В [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)]на **файл** последовательно выберите пункты **New**, а затем выберите **проекта**.  
+1.  В Visual Studio на **файл** выберите пункт **New**, а затем выберите **проекта**.  
   
-2.  В **новый проект** в поле либо [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] или [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] выберите **Web** шаблона, а затем выберите **веб-приложение ASP.NET**.  
+2.  В **новый проект** в поле выберите Visual Basic или Visual C# **Web** шаблона, а затем выберите **веб-приложение ASP.NET**.  
   
     > [!NOTE]
-    >  При использовании [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] Web Developer следует создавать новый узел вместо нового веб-приложения.  
+    >  Если используется среда Visual Studio Web Developer, то вместо нового веб-приложения нужно будет создать новый веб-сайт.  
   
 3.  Тип `NorthwindService` как имя проекта.  
   
@@ -68,7 +70,7 @@ ms.lasthandoff: 01/19/2018
   
 5.  Подключите модель данных в базу данных, выполнив одно из следующих действий и нажмите кнопку **Далее**:  
   
-    -   Если нет подключения к базе данных уже настроена, нажмите кнопку **новое подключение** и создать новое соединение. Дополнительные сведения см. в разделе [как: создание подключений к базам данных SQL Server](http://go.microsoft.com/fwlink/?LinkId=123631). Этот экземпляр [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] должен содержать присоединенный образец базы данных Northwind.  
+    -   Если нет подключения к базе данных уже настроена, нажмите кнопку **новое подключение** и создать новое соединение. Дополнительные сведения см. в разделе [как: создание подключений к базам данных SQL Server](http://go.microsoft.com/fwlink/?LinkId=123631). Этот экземпляр SQL Server должен содержать присоединенный образец базы данных Northwind.  
   
          \- или -  
   
@@ -79,7 +81,7 @@ ms.lasthandoff: 01/19/2018
 7.  Нажмите кнопку **Готово** для завершения работы мастера.  
   
     > [!NOTE]
-    >  Эта сформированная модель данных предоставляет свойства внешнего ключа для типов сущности. Модели данных, создаваемые с помощью [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] 2008, не содержат свойств внешнего ключа. Поэтому, прежде чем пытаться получить доступ к этой версии службы данных Northwind, необходимо обновить классы службы данных клиентских приложений, созданных для доступа к службе данных Northwind, которая была создана с помощью [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] 2008.  
+    >  Эта сформированная модель данных предоставляет свойства внешнего ключа для типов сущности. Модели данных, созданные с помощью Visual Studio 2008, не включают эти свойства внешнего ключа. В связи с этим перед получением доступа к этой версии службы данных Northwind необходимо обновить клиентские классы службы данных любого клиентского приложения для доступа к службе данных, созданного с помощью среды Visual Studio 2008.  
   
 ### <a name="to-create-the-data-service"></a>Создание службы данных  
   
@@ -89,7 +91,7 @@ ms.lasthandoff: 01/19/2018
   
 3.  Имя службы, введите `Northwind`.  
   
-     [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)]В Visual Studio для новой службы создаются файлы разметки и кодов XML. По умолчанию открывается окно редактора кода. В **обозревателе решений**, для службы будет отображаться имя Northwind с расширением. svc.cs или. svc.vb.  
+     Visual StudioVisual Studio создает файлы разметки и кодов XML для новой службы. По умолчанию открывается окно редактора кода. В **обозревателе решений**, для службы будет отображаться имя Northwind с расширением. svc.cs или. svc.vb.  
   
 4.  В коде службы данных замените комментарий `/* TODO: put your data source class name here */` в определении класса, задающего службу данных, типом контейнера сущностей модели данных, который в данном случае равен `NorthwindEntities`. Определение класса должно выглядеть следующим образом.  
   
@@ -109,7 +111,7 @@ ms.lasthandoff: 01/19/2018
     >  Клиент, пытающийся получить доступ к приложению [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)], может также получить доступ к источникам, представляемым службой данных. Для предотвращения несанкционированного доступа к ресурсам производственной службы данных необходимо также установить защиту самого приложения. Дополнительные сведения см. в разделе [Securing WCF Data Services](../../../../docs/framework/data/wcf/securing-wcf-data-services.md).  
   
 ## <a name="next-steps"></a>Следующие шаги  
- Успешно создана новая служба данных, которая предоставляет [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] канала, который основан на базе данных Northwind и включен доступ к потоку для клиентов, имеющих разрешения на [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] веб-приложения. Далее будет запущена служба данных из [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] и получают доступ к [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] веб-канала, отправляя запросы HTTP GET через веб-браузер:  
+ Успешно создана новая служба данных, которая предоставляет [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] канала, который основан на базе данных Northwind и включен доступ к потоку для клиентов, имеющих разрешения на [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] веб-приложения. Теперь запустим эту службу данных из среды Visual Studio и обратимся к каналу [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] с помощью запросов HTTP GET через веб-браузер.  
   
  [Доступ к службе из веб-браузера](../../../../docs/framework/data/wcf/accessing-the-service-from-a-web-browser-wcf-data-services-quickstart.md)  
   

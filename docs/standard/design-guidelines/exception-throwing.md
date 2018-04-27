@@ -1,30 +1,30 @@
 ---
-title: "Создание исключений"
-ms.custom: 
+title: Создание исключений
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - exceptions, throwing
 - explicitly throwing exceptions
 - throwing exceptions, design guidelines
 ms.assetid: 5388e02b-52f5-460e-a2b5-eeafe60eeebe
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 2c1fc02b64a494220070a1cfed928b616e4970c0
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 47c16ac94054fff193b1f5976fe7f04f10a39ecd
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="exception-throwing"></a>Создание исключений
 Правила исключения, описанные в этом разделе требуют хорошо определение значение сбоя в выполнении. Сбой при выполнении происходит всякий раз, когда член не может его целью (что член названия). Например если `OpenFile` метод, не может возвращать вызывающему объекту дескриптор открытого файла, он будет считаться ошибкой выполнения.  
@@ -73,7 +73,7 @@ ms.lasthandoff: 12/23/2017
   
  *Фрагменты © 2005, 2009 корпорации Майкрософт. Все права защищены.*  
   
- *Перепечатываются разрешении Пирсона для образовательных учреждений, Inc. из [Framework рекомендации по проектированию: условные обозначения, стили и шаблоны для библиотеки .NET для повторного использования, 2-е издание](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina и Брэд Абрамс, опубликованные 22 октября 2008 г., Addison-Wesley Professional в составе ряда разработки Microsoft Windows.*  
+ *Перепечатываются разрешении Пирсона для образовательных учреждений, Inc. из [Framework рекомендации по проектированию: условные обозначения, стили и шаблоны для библиотеки .NET для повторного использования, 2-е издание](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina и Брэд Абрамс, опубликованные 22 октября 2008 г., Addison-Wesley Professional в составе ряда разработки Microsoft Windows.*  
   
 ## <a name="see-also"></a>См. также  
  [Рекомендации по проектированию на основе Framework](../../../docs/standard/design-guidelines/index.md)  

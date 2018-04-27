@@ -1,12 +1,12 @@
 ---
-title: "Разработка перечислений"
-ms.custom: 
+title: Разработка перечислений
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - type design guidelines, enumerations
@@ -15,18 +15,18 @@ helpviewer_keywords:
 - class library design guidelines [.NET Framework], enumerations
 - flags enumerations
 ms.assetid: dd53c952-9d9a-4736-86ff-9540e815d545
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 3ee73e8677ca3fd48f4bb3c94bd4e15c49a564c7
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: c3e89567761367ddcd67078b138c15b982a0d666
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="enum-design"></a>Разработка перечислений
 Перечислимые типы — это особая разновидность типа значения. Существует два типа перечислений: простые перечисления и флага перечисления.  
@@ -77,7 +77,7 @@ ms.lasthandoff: 12/23/2017
   
  **X не** расширить <xref:System.Enum?displayProperty=nameWithType> напрямую.  
   
- <xref:System.Enum?displayProperty=nameWithType>Это специальный тип используется средой CLR для создания перечислений, определяемой пользователем. Большинство языков программирования предоставляют программный элемент, который предоставляет доступ к этой функции. Например, в C# `enum` определить перечисление используется ключевое слово.  
+ <xref:System.Enum?displayProperty=nameWithType> Это специальный тип используется средой CLR для создания перечислений, определяемой пользователем. Большинство языков программирования предоставляют программный элемент, который предоставляет доступ к этой функции. Например, в C# `enum` определить перечисление используется ключевое слово.  
   
 <a name="design"></a>   
 ### <a name="designing-flag-enums"></a>Разработка перечислений флагов  
@@ -87,7 +87,7 @@ ms.lasthandoff: 12/23/2017
   
  **✓ Попробуйте** предоставляет специальные перечислимых значений для часто используется сочетание флагов.  
   
- Побитовые операции сложной и не должно быть обязательным для простых задач. <xref:System.IO.FileAccess.ReadWrite>Примером может служить специальное значение.  
+ Побитовые операции сложной и не должно быть обязательным для простых задач. <xref:System.IO.FileAccess.ReadWrite> Примером может служить специальное значение.  
   
  **X ИЗБЕГАЙТЕ** Создание перечисления флага, где определенные комбинации значений являются недопустимыми.  
   
@@ -105,7 +105,7 @@ ms.lasthandoff: 12/23/2017
   
  *Фрагменты © 2005, 2009 корпорации Майкрософт. Все права защищены.*  
   
- *Перепечатываются разрешении Пирсона для образовательных учреждений, Inc. из [Framework рекомендации по проектированию: условные обозначения, стили и шаблоны для библиотеки .NET для повторного использования, 2-е издание](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina и Брэд Абрамс, опубликованные 22 октября 2008 г., Addison-Wesley Professional в составе ряда разработки Microsoft Windows.*  
+ *Перепечатываются разрешении Пирсона для образовательных учреждений, Inc. из [Framework рекомендации по проектированию: условные обозначения, стили и шаблоны для библиотеки .NET для повторного использования, 2-е издание](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina и Брэд Абрамс, опубликованные 22 октября 2008 г., Addison-Wesley Professional в составе ряда разработки Microsoft Windows.*  
   
 ## <a name="see-also"></a>См. также  
  [Рекомендации по разработке типов](../../../docs/standard/design-guidelines/type.md)  

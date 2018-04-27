@@ -17,11 +17,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 1e1c00abfec36622f5da493165259fb1786ab8d6
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: a13e5a0044c51700acce6b123688868443f635ae
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-host-and-run-a-basic-windows-communication-foundation-service"></a>Практическое руководство. Размещение и запуск базовой службы Windows Communication Foundation
 Это третий из шести шагов, необходимый для создания приложения [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]. Общие сведения обо всех шести задач см. в разделе [учебник по началу работы](../../../docs/framework/wcf/getting-started-tutorial.md) раздела.  
@@ -170,7 +170,7 @@ ms.lasthandoff: 03/26/2018
   
 ### <a name="to-verify-the-service-is-working"></a>Проверка работы службы  
   
-1.  Запустите консольное приложение GettingStartedHost с [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)]. В [!INCLUDE[wv](../../../includes/wv-md.md)] и более поздних операционных системах служба должна запускаться пользователем с правами администратора. Так как [!INCLUDE[vs_current_short](../../../includes/vs-current-short-md.md)] была запущена с правами администратора, GettingStartedHost также запускается с правами администратора. Вы также можете запустить новую командную строку с правами администратора, а затем в ней запустить service.exe.  
+1.  Запустите консольное приложение GettingStartedHost с [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)]. В [!INCLUDE[wv](../../../includes/wv-md.md)] и более поздних операционных системах служба должна запускаться пользователем с правами администратора. Так как Visual Studio была запущена с правами администратора, GettingStartedHost также запускается с правами администратора. Вы также можете запустить новую командную строку с правами администратора, а затем в ней запустить service.exe.  
   
 2.  Откройте Internet Explorer и перейдите на страницу отладки службы по адресу `http://localhost:8000/GettingStarted/CalculatorService`.  
   
@@ -424,7 +424,7 @@ End Module
 ```  
   
 > [!NOTE]
->  Подобные службы требуют разрешения на регистрацию на компьютере HTTP-адресов, на которые будет ожидаться передача данных. Учетные записи с уровнем доступа администратора имеют данное разрешение, а остальным учетным записям должно быть предоставлено разрешение на использование пространства имен HTTP. [!INCLUDE[crabout](../../../includes/crabout-md.md)] как настроить резервирование пространства имен см. в разделе [Настройка протоколов HTTP и HTTPS](../../../docs/framework/wcf/feature-details/configuring-http-and-https.md). Запуск файла service.exe на [!INCLUDE[vs_current_short](../../../includes/vs-current-short-md.md)] возможен только при наличии прав администратора.  
+>  Подобные службы требуют разрешения на регистрацию на компьютере HTTP-адресов, на которые будет ожидаться передача данных. Учетные записи с уровнем доступа администратора имеют данное разрешение, а остальным учетным записям должно быть предоставлено разрешение на использование пространства имен HTTP. [!INCLUDE[crabout](../../../includes/crabout-md.md)] как настроить резервирование пространства имен см. в разделе [Настройка протоколов HTTP и HTTPS](../../../docs/framework/wcf/feature-details/configuring-http-and-https.md). При выполнении Visual Studio, программа service.exe должна выполняться с правами администратора.  
   
  Сейчас служба запущена. Перейти к [как: создание клиента](../../../docs/framework/wcf/how-to-create-a-wcf-client.md). Сведения об устранении неполадок в разделе [Устранение неполадок учебник по началу работы](../../../docs/framework/wcf/troubleshooting-the-getting-started-tutorial.md).  
   

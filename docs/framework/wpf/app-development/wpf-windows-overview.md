@@ -1,13 +1,13 @@
 ---
-title: "Общие сведения об окнах WPF"
-ms.custom: 
+title: Общие сведения об окнах WPF
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-wpf
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -36,17 +36,17 @@ helpviewer_keywords:
 - modal dialog boxes [WPF]
 - displaying XAML pages [WPF]
 ms.assetid: 737d04ec-8861-46c3-8d44-fa11d3528d23
-caps.latest.revision: 
+caps.latest.revision: 65
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: c176f08904bac8e9c3877977c1e52afb57d5daca
-ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
+ms.openlocfilehash: ae454e54abc2c8200f33bdb0bc5537806c824074
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="wpf-windows-overview"></a>Общие сведения об окнах WPF
 Пользователи взаимодействуют с автономными приложениями [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] через окна. Основная цель окна — разместить содержимое, которое визуализирует данные и позволяет пользователям взаимодействовать с ними. Автономный [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] приложений предоставляют свои собственные окна с помощью <xref:System.Windows.Window> класса. В этом разделе описываются <xref:System.Windows.Window> перед рассмотрением основ создания и управления окнами в автономных приложений.  
@@ -282,7 +282,7 @@ ms.lasthandoff: 03/08/2018
   
  Хотя посредством механизмов, предоставляемых в областях, отличных от клиента и может явно закрыто окно, окно может быть закрыто неявно в результате поведение в других частях приложения или [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)], включая следующие:  
   
--   Пользователь выходит из системы или завершает работу [!INCLUDE[TLA2#tla_mswin](../../../../includes/tla2sharptla-mswin-md.md)].  
+-   Пользователь выполняет выход или завершение работы Windows.  
   
 -   Владелец окна закрывается (см. <xref:System.Windows.Window.Owner%2A>).  
   
@@ -315,7 +315,7 @@ ms.lasthandoff: 03/08/2018
   
 -   <xref:System.Windows.WindowStartupLocation.Manual>  
   
- Если начальное расположение указано как <xref:System.Windows.WindowStartupLocation.Manual>и <xref:System.Windows.Window.Left%2A> и <xref:System.Windows.Window.Top%2A> свойства не задано, <xref:System.Windows.Window> запросит [!INCLUDE[TLA2#tla_mswin](../../../../includes/tla2sharptla-mswin-md.md)] для расположения в.  
+ Если начальное расположение указано как <xref:System.Windows.WindowStartupLocation.Manual>и <xref:System.Windows.Window.Left%2A> и <xref:System.Windows.Window.Top%2A> свойства не задано, <xref:System.Windows.Window> запросит Windows для расположения в.  
   
 <a name="Topmost_Windows_and_Z_Order"></a>   
 ### <a name="topmost-windows-and-z-order"></a>Окна верхнего уровня и Z-порядок  

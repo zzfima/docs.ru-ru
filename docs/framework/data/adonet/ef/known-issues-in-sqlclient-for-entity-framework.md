@@ -1,38 +1,40 @@
 ---
-title: "Известные проблемы SqlClient для Entity Framework"
-ms.custom: 
+title: Известные проблемы SqlClient для Entity Framework
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 48fe4912-4d0f-46b6-be96-3a42c54780f6
-caps.latest.revision: "2"
+caps.latest.revision: 2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 3fb62e266ee6f0ca7957667d7c41fbd90dd34d32
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 8d5363ede9735ea805284638f795af67f2415ad0
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="known-issues-in-sqlclient-for-entity-framework"></a>Известные проблемы SqlClient для Entity Framework
 В данном разделе описаны известные проблемы, связанные с поставщиком данных .NET Framework для SQL Server (SqlClient).  
   
 ## <a name="trailing-spaces-in-string-functions"></a>Конечные пробелы в строковых функциях  
- [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] пропускает конечные пробелы в строковых значениях. Таким образом, передача конечных пробелов в строку может привести к непредсказуемым результатам и даже сбоям.  
+ SQL Server пропускает конечные пробелы в строковых значениях. Таким образом, передача конечных пробелов в строку может привести к непредсказуемым результатам и даже сбоям.  
   
- Если в строке имеются конечные пробелы, рекомендуется добавить в конец пробельный символ так, чтобы [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] не усекал строку. Если конечные пробелы не требуются, их следует усекать до их последующей передачи по конвейеру запросов.  
+ Если имеются конечные пробелы в строке, необходимо учесть, добавления символы пробелов в конце, чтобы SQL Server не усекал строку. Если конечные пробелы не требуются, их следует усекать до их последующей передачи по конвейеру запросов.  
   
 ## <a name="right-function"></a>RIGHT, функция  
  Если в `null`, 0`RIGHT(nvarchar(max)` или `)`, 0`RIGHT(varchar(max)` в качестве первого аргумента передается значение, отличное от `)`, а в качестве второго аргумента передается значение, равное 0, то вместо строки `NULL` будет возвращено значение типа `empty`.  
   
 ## <a name="cross-and-outer-apply-operators"></a>Операторы CROSS APPLY и OUTER APPLY  
- Операторы CROSS и OUTER APPLY появились в версии [!INCLUDE[ssVersion2005](../../../../../includes/ssversion2005-md.md)]. В некоторых случаях конвейер запросов может сформировать инструкцию Transact-SQL, содержащую операторы CROSS APPLY и OUTER APPLY. Так как некоторые внутренние поставщики, включая версии [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)], которые предшествовали [!INCLUDE[ssVersion2005](../../../../../includes/ssversion2005-md.md)], не поддерживают данные операторы, эти запросы нельзя выполнить на данных поставщиках.  
+ Операторы CROSS и OUTER APPLY появились в версии [!INCLUDE[ssVersion2005](../../../../../includes/ssversion2005-md.md)]. В некоторых случаях конвейер запросов может сформировать инструкцию Transact-SQL, содержащую операторы CROSS APPLY и OUTER APPLY. Так как некоторые внутренние поставщики, включая версии SQL Server более ранней, чем [!INCLUDE[ssVersion2005](../../../../../includes/ssversion2005-md.md)], не поддерживают данные операторы, эти запросы нельзя выполнить на данных поставщиках.  
   
  Далее показаны некоторые стандартные сценарии, которые могут привести к появлению операторов CROSS APPLY и OUTER APPLY в выходном запросе.  
   
@@ -68,7 +70,7 @@ SELECT c, (SELECT c, (SELECT c FROM AdventureWorksModel.Vendor AS c  ) As Inner2
 ```  
   
 ## <a name="server-generated-guid-identity-values"></a>Формируемые сервером значения идентификаторов GUID  
- [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] поддерживает формируемые сервером значения идентификаторов GUID, однако поставщик должен поддерживать возвращение формируемых сервером значений идентификаторов после вставки строк. Начиная с [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 2005, может возвращать формируемый сервером тип идентификатора GUID в [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] базы данных через [предложение OUTPUT](http://go.microsoft.com/fwlink/?LinkId=169400) .  
+ [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] поддерживает формируемые сервером значения идентификаторов GUID, однако поставщик должен поддерживать возвращение формируемых сервером значений идентификаторов после вставки строк. Начиная с SQL Server 2005, может возвращать формируемый сервером тип GUID базы данных SQL Server с помощью [предложение OUTPUT](http://go.microsoft.com/fwlink/?LinkId=169400) .  
   
 ## <a name="see-also"></a>См. также  
  [SqlClient для Entity Framework](../../../../../docs/framework/data/adonet/ef/sqlclient-for-the-entity-framework.md)  

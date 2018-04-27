@@ -1,24 +1,26 @@
 ---
-title: "Запросы LINQ to SQL"
-ms.custom: 
+title: Запросы LINQ to SQL
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: f4897aaa-7f44-4c20-a471-b948c2971aae
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 8c32ff4040213ce73b78f7ea0f6d56e222d55b25
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 62e6252da06201e33d6f81f3160bee063272132f
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="linq-to-sql-queries"></a>Запросы LINQ to SQL
 Запросы [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] определяются с помощью синтаксиса, используемого в [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)]. Единственное отличие заключается в том, что объекты, на которые ссылаются запросы, сопоставляются с элементами базы данных. Дополнительные сведения см. в разделе [Введение в запросы LINQ (C#)](~/docs/csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md).  
@@ -33,7 +35,7 @@ ms.lasthandoff: 01/17/2018
 |Элемент|Запрос LINQ|Запрос [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]|  
 |----------|----------------|----------------------------------------------------------------------|  
 |Тип возвращаемых данных для локальной переменной, содержащей запрос (для запросов, которые возвращают последовательности)|Универсальный тип `IEnumerable`|Универсальный тип `IQueryable`|  
-|Указание источника данных|Использует `From` ([!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)]) или `from` предложение (C#)|То же|  
+|Указание источника данных|Использует `From` (Visual Basic) или `from` предложение (C#)|То же|  
 |Фильтрация|Использует `Where` / `where` предложения|То же|  
 |Группирование|Использует `Group…By` / `groupby` предложения|То же|  
 |Выбор (проецирование)|Использует `Select` / `select` предложения|То же|  

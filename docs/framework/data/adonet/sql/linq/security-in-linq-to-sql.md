@@ -1,24 +1,26 @@
 ---
-title: "Безопасность в LINQ to SQL"
-ms.custom: 
+title: Безопасность в LINQ to SQL
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: d49787f7-414e-4c71-aa33-80a5895536b1
-caps.latest.revision: "2"
+caps.latest.revision: 2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 0ee361c27bd14f0266b2b86f315f9c091e049c12
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 96951b3b3c8a6ee93a83ba24f6c6a19c3e36381c
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="security-in-linq-to-sql"></a>Безопасность в LINQ to SQL
 При соединении с базой данных всегда присутствуют риски безопасности. Хотя в LINQ to SQL включены некоторые новые способы работы с данными в SQL Server, он не предоставляет никаких дополнительных механизмов безопасности.  
@@ -32,7 +34,7 @@ ms.lasthandoff: 01/17/2018
 ## <a name="connection-strings"></a>Строки подключения  
  При любой возможности стремитесь избегать использования паролей в строках соединения. Строка соединения не только сама по себе представляет риск, но при использовании объектно-реляционного конструктора и средства командной строки SQLMetal она может попасть в раскрытом виде в модель объектов или внешний файл сопоставления. Любой обладатель доступа к модели объектов или внешнему файлу сопоставления через файловую систему сможет увидеть пароль соединения, если он будет включен в строку соединения.  
   
- Для минимизации подобных рисков применяйте встроенную безопасность для установления доверительного соединения с [!INCLUDE[ssNoVersion](../../../../../../includes/ssnoversion-md.md)]. При таком подходе не требуется хранить пароль в строке соединения. Дополнительные сведения см. в разделе [безопасности SQL Server](../../../../../../docs/framework/data/adonet/sql/sql-server-security.md).  
+ Для минимизации подобных рисков применяйте встроенную безопасность для установления доверительного соединения с SQL Server. При таком подходе не требуется хранить пароль в строке соединения. Дополнительные сведения см. в разделе [безопасности SQL Server](../../../../../../docs/framework/data/adonet/sql/sql-server-security.md).  
   
  При отсутствии встроенной безопасности в строке соединения потребуется открытый текст пароля. Ниже приведены лучшие способы обеспечения безопасности строки соединения в порядке возрастания риска.  
   

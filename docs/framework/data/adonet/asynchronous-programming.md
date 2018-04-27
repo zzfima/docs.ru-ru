@@ -1,24 +1,26 @@
 ---
-title: "Асинхронное программирование"
+title: Асинхронное программирование
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.technology: dotnet-ado
+ms.technology:
+- dotnet-ado
 ms.topic: article
 ms.assetid: 85da7447-7125-426e-aa5f-438a290d1f77
-caps.latest.revision: "30"
+caps.latest.revision: 30
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 20e40a6705ad77dc42a70739e75abdbb058465e6
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 7dbc106b96e4e695108b6178951e3d43078467bc
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="asynchronous-programming"></a>Асинхронное программирование
 
-В данном разделе рассматривается поддержка асинхронного программирования в поставщике данных [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] для [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] (SqlClient), включая усовершенствования для поддержки функциональных возможностей асинхронного программирования, которые были введены в [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].  
+В этом разделе рассматривается поддержка асинхронного программирования в [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] поставщик данных для SQL Server (SqlClient), включая усовершенствования для поддержки функциональных возможностей асинхронного программирования, появившихся в [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].  
   
 ## <a name="legacy-asynchronous-programming"></a>Асинхронное программирование прежних версий  
  До выхода версии [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] асинхронное программирование с помощью SqlClient выполнялось с использованием следующих методов и свойства соединения `Asynchronous Processing=true`:  
@@ -637,7 +639,7 @@ namespace SqlBulkCopyAsyncCodeSample {
  Пример открывает одиночное соединение с **AdventureWorks** базы данных. С помощью объекта <xref:System.Data.SqlClient.SqlCommand> создается объект <xref:System.Data.SqlClient.SqlDataReader>. После использования модуля чтения данных открывается второй объект <xref:System.Data.SqlClient.SqlDataReader>, использующий данные из первого объекта <xref:System.Data.SqlClient.SqlDataReader> в качестве входа для предложения WHERE второго модуля чтения данных.  
   
 > [!NOTE]
->  В следующем примере используется образец **AdventureWorks** базы данных, входящий в состав [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]. Представленная в образце кода строка соединения предполагает, что база данных установлена и доступна на локальном компьютере. Измените строку соединения при необходимости в соответствии с вашей средой.  
+>  В следующем примере используется образец **AdventureWorks** базы данных в SQL Server. Представленная в образце кода строка соединения предполагает, что база данных установлена и доступна на локальном компьютере. Измените строку соединения при необходимости в соответствии с вашей средой.  
   
 ```csharp
 using System;  
@@ -709,7 +711,7 @@ class Class1 {
  Следующее приложение командной строки демонстрирует использование двух модулей <xref:System.Data.SqlClient.SqlDataReader> с тремя объектами <xref:System.Data.SqlClient.SqlCommand> и одним объектом <xref:System.Data.SqlClient.SqlConnection> с включенным режимом MARS. Первый объект команды получает список поставщиков, оценка кредитоспособности которых равна 5. Второй объект команды по идентификатору поставщика из объекта <xref:System.Data.SqlClient.SqlDataReader> загружает второй объект <xref:System.Data.SqlClient.SqlDataReader>, содержащий все продукты данного поставщика. Каждая запись продукта обрабатывается вторым модулем <xref:System.Data.SqlClient.SqlDataReader>. Для определения нового выполняется вычисление **OnOrderQty** должно быть. Затем используется третий объект команды для обновления **ProductVendor** таблицы с новым значением. Весь процесс выполняется в пределах одной транзакции, для которой в конце выполняется откат.  
   
 > [!NOTE]
->  В следующем примере используется образец **AdventureWorks** базы данных, входящий в состав [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]. Представленная в образце кода строка соединения предполагает, что база данных установлена и доступна на локальном компьютере. Измените строку соединения при необходимости в соответствии с вашей средой.  
+>  В следующем примере используется образец **AdventureWorks** базы данных в SQL Server. Представленная в образце кода строка соединения предполагает, что база данных установлена и доступна на локальном компьютере. Измените строку соединения при необходимости в соответствии с вашей средой.  
   
 ```csharp
 using System;  

@@ -1,12 +1,12 @@
 ---
-title: "Разработка с обеспечением расширяемости"
-ms.custom: 
+title: Разработка с обеспечением расширяемости
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - extending class libraries
@@ -14,18 +14,18 @@ helpviewer_keywords:
 - class library design guidelines [.NET Framework], extensibility
 - class library extensibility [.NET Framework]
 ms.assetid: 1cdb8740-871a-456c-9bd9-db96ca8d79b3
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: f21e9239199ecd36432ed8f14adb896f1799506b
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: b643c33a1418839c8aabf06d681083232e61553a
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="designing-for-extensibility"></a>Разработка с обеспечением расширяемости
 Проектирование платформу одним важным аспектом является обеспечение внимательно изучить расширяемость такой платформы. Это требует понимания издержки и прибыль, связанные с различные механизмы расширения. В этой главе помогут решить, какой из механизмов расширения — создания подкласса событий, виртуальные члены, обратные вызовы и т. д, соответствуют требованиям вашей платформы.  
@@ -42,7 +42,7 @@ ms.lasthandoff: 12/23/2017
  [Запечатывание](../../../docs/standard/design-guidelines/sealing.md)  
  *Фрагменты © 2005, 2009 корпорации Майкрософт. Все права защищены.*  
   
- *Перепечатываются разрешении Пирсона для образовательных учреждений, Inc. из [Framework рекомендации по проектированию: условные обозначения, стили и шаблоны для библиотеки .NET для повторного использования, 2-е издание](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina и Брэд Абрамс, опубликованные 22 октября 2008 г., Addison-Wesley Professional в составе ряда разработки Microsoft Windows.*  
+ *Перепечатываются разрешении Пирсона для образовательных учреждений, Inc. из [Framework рекомендации по проектированию: условные обозначения, стили и шаблоны для библиотеки .NET для повторного использования, 2-е издание](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina и Брэд Абрамс, опубликованные 22 октября 2008 г., Addison-Wesley Professional в составе ряда разработки Microsoft Windows.*  
   
 ## <a name="see-also"></a>См. также  
  [Рекомендации по проектированию на основе Framework](../../../docs/standard/design-guidelines/index.md)

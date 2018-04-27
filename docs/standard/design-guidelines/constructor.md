@@ -1,12 +1,12 @@
 ---
-title: "Разработка конструктора"
-ms.custom: 
+title: Разработка конструктора
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - member design guidelines, constructors
@@ -18,18 +18,18 @@ helpviewer_keywords:
 - default constructors
 - static constructors
 ms.assetid: b4496afe-5fa7-4bb0-85ca-70b0ef21e6fc
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 66a297ed035f5afde06913b89f1f92dee5745f48
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: d208511bd04d5daf9930ecf6cf53e7708ca4da3f
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="constructor-design"></a>Разработка конструктора
 Существует два типа конструкторов: конструкторы и конструкторы экземпляров.  
@@ -87,7 +87,7 @@ ms.lasthandoff: 12/23/2017
   
  *Фрагменты © 2005, 2009 корпорации Майкрософт. Все права защищены.*  
   
- *Перепечатываются разрешении Пирсона для образовательных учреждений, Inc. из [Framework рекомендации по проектированию: условные обозначения, стили и шаблоны для библиотеки .NET для повторного использования, 2-е издание](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina и Брэд Абрамс, опубликованные 22 октября 2008 г., Addison-Wesley Professional в составе ряда разработки Microsoft Windows.*  
+ *Перепечатываются разрешении Пирсона для образовательных учреждений, Inc. из [Framework рекомендации по проектированию: условные обозначения, стили и шаблоны для библиотеки .NET для повторного использования, 2-е издание](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina и Брэд Абрамс, опубликованные 22 октября 2008 г., Addison-Wesley Professional в составе ряда разработки Microsoft Windows.*  
   
 ## <a name="see-also"></a>См. также  
  [Правила разработки членов](../../../docs/standard/design-guidelines/member.md)  

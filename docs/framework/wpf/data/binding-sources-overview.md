@@ -1,28 +1,30 @@
 ---
-title: "Общие сведения об источниках привязки"
-ms.custom: 
+title: Общие сведения об источниках привязки
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - binding data [WPF], binding sources
 - data binding [WPF], binding source
 - binding sources [WPF]
 ms.assetid: 2df2cd11-6aac-4bdf-ab7b-ea5f464cd5ca
-caps.latest.revision: "25"
+caps.latest.revision: 25
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6b603599232a5cb4d33e2b7c9ad00e7ab3a24649
-ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
+ms.workload:
+- dotnet
+ms.openlocfilehash: 94238ba34976ad5971e7181aa3377e38ab0e4659
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="binding-sources-overview"></a>Общие сведения об источниках привязки
 В привязке данных объект источника привязки (источник) ссылается на объект, из которого вы получаете данные. В этом разделе рассматриваются типы объектов, которые можно использовать в качестве источника привязки.  
@@ -33,7 +35,7 @@ ms.lasthandoff: 01/09/2018
 ## <a name="binding-source-types"></a>Типы источников привязки  
  Привязка данных [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] поддерживает указанные далее типы источников привязки.  
   
-|Источник привязки|Описание:|  
+|Источник привязки|Описание|  
 |--------------------|-----------------|  
 |Объекты [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)].|Можно осуществить привязку к открытым свойствам, подсвойствам, а также индексаторам любого объекта [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]. Обработчик привязки использует отражение [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] для получения значений свойств. Кроме того, объекты, реализующие <xref:System.ComponentModel.ICustomTypeDescriptor> или имеют зарегистрированные <xref:System.ComponentModel.TypeDescriptionProvider> также работают с обработчиком привязки.<br /><br /> Дополнительные сведения о том, как реализовать класс, который можно использовать в качестве источника привязки, см. в разделе [Использование класса в качестве источника привязки](#classes).|  
 |динамические объекты|Можно привязать к доступные свойства и индексаторы объект, реализующий интерфейс <xref:System.Dynamic.IDynamicMetaObjectProvider> интерфейс. Если можно обратиться к члену кода, к нему можно выполнить привязку. Например, если динамический объект позволяет получить доступ к члену в коде с помощью `someObjet.AProperty`, к нему можно выполнить привязку, задав в качестве пути привязки `AProperty`.|  
@@ -55,7 +57,7 @@ ms.lasthandoff: 01/09/2018
 ### <a name="other-characteristics"></a>Другие характеристики  
  Ниже приведены другие важные замечания.  
   
--   Если вы хотите создать объект в [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], класс должен иметь конструктор по умолчанию. В некоторых языках [!INCLUDE[TLA2#tla_net](../../../../includes/tla2sharptla-net-md.md)], таких как [!INCLUDE[TLA#tla_cshrp](../../../../includes/tlasharptla-cshrp-md.md)], конструктор по умолчанию может быть уже создан.  
+-   Если вы хотите создать объект в [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], класс должен иметь конструктор по умолчанию. В некоторых [!INCLUDE[TLA2#tla_net](../../../../includes/tla2sharptla-net-md.md)] языки, например C#, конструктор по умолчанию могут быть созданы для вас.  
   
 -   Свойства, используемые в качестве свойств источника привязки, должны быть открытыми свойствами класса. Явно определенные свойства интерфейса не могут использоваться для целей привязки, также как и защищенные, закрытые или виртуальные свойства, не имеющие базовой реализации.  
   
@@ -79,7 +81,7 @@ ms.lasthandoff: 01/09/2018
   
  WPF никогда не реализует прямую привязку к коллекции. Если в качестве источника привязки указана коллекция, WPF фактически выполняет привязку к представлению коллекции по умолчанию. Сведения о представлениях по умолчанию см. в разделе [Общие сведения о привязке данных](../../../../docs/framework/wpf/data/data-binding-overview.md).  
   
- Если имеется расширенный сценарий и требуется реализовать свою собственную коллекцию, рассмотрите возможность использования <xref:System.Collections.IList> интерфейса. <xref:System.Collections.IList>предоставляет неуниверсальную коллекцию объектов, которые можно получить индивидуальный доступ по индексу, что позволяет повысить производительность.  
+ Если имеется расширенный сценарий и требуется реализовать свою собственную коллекцию, рассмотрите возможность использования <xref:System.Collections.IList> интерфейса. <xref:System.Collections.IList> предоставляет неуниверсальную коллекцию объектов, которые можно получить индивидуальный доступ по индексу, что позволяет повысить производительность.  
   
 <a name="permissions"></a>   
 ## <a name="permission-requirements-in-data-binding"></a>Требования к разрешениям в привязке данных  

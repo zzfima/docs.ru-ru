@@ -1,28 +1,28 @@
 ---
-title: "Размещение служб"
-ms.custom: 
+title: Размещение служб
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - hosting services [WCF]
 ms.assetid: 192be927-6be2-4fda-98f0-e513c4881acc
-caps.latest.revision: 
+caps.latest.revision: 31
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: b23dac1db5252d3ce2bd60e4f8525dd89d9127b0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: db4662245f348eca795440f149160a66d87c998f
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="hosting-services"></a>Размещение служб
 Для активации службы ее необходимо разместить в среде выполнения, которая создает эту службу и управляет ее контекстом и временем существования. Службы[!INCLUDE[indigo1](../../../includes/indigo1-md.md)] предназначены для выполнения в любом процессе Windows, который поддерживает управляемый код.  
@@ -34,12 +34,12 @@ ms.lasthandoff: 12/22/2017
 ## <a name="hosting-options"></a>Варианты размещения  
   
 #### <a name="self-hosting-in-a-managed-application"></a>Резидентное размещение в управляемом приложении  
- Службы[!INCLUDE[indigo2](../../../includes/indigo2-md.md)] можно разместить в любом управляемом приложении. Это наиболее гибкий вариант, поскольку он почти не требует развертывания инфраструктуры. Код службы внедряется в код управляемого приложения, после чего создается и открывается экземпляр класса <xref:System.ServiceModel.ServiceHost> , чтобы служба стала доступной. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Как: размещение службы WCF в управляемом приложении](../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md).  
+ Службы[!INCLUDE[indigo2](../../../includes/indigo2-md.md)] можно разместить в любом управляемом приложении. Это наиболее гибкий вариант, поскольку он почти не требует развертывания инфраструктуры. Код службы внедряется в код управляемого приложения, после чего создается и открывается экземпляр класса <xref:System.ServiceModel.ServiceHost> , чтобы служба стала доступной. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Как: размещение службы WCF в управляемом приложении](../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md).  
   
- Этот вариант поддерживает два распространенных сценария: службы [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] , выполняющиеся внутри консольных приложений, и функциональные клиентские приложения, например основанные на [!INCLUDE[avalon1](../../../includes/avalon1-md.md)] или формах Windows Forms (WinForms). Размещение службы [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] внутри консольного приложения обычно бывает удобным на этапе разработки приложения. В этом случае приложение легко отлаживать, удобно получать данные трассировки, чтобы узнать, что происходит внутри приложения, и удобно копировать приложение в другие расположения. Кроме того, этот вариант размещения упрощает взаимодействие функционально насыщенных клиентских приложений, таких как приложения [!INCLUDE[avalon2](../../../includes/avalon2-md.md)] и WinForms, с внешними системами. Например, одноранговый клиент для совместной работы может использовать в качестве пользовательского интерфейса [!INCLUDE[avalon2](../../../includes/avalon2-md.md)] и размещать службу [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] , позволяющую другим клиентам подключаться к нему и обмениваться с ним информацией.  
+ Этот параметр поддерживает два распространенных сценария: [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] службы, выполняющиеся внутри консольных приложений и отметить функционально насыщенные клиентские приложения, например на основе Windows Presentation Foundation (WPF) или Windows Forms (WinForms). Размещение службы [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] внутри консольного приложения обычно бывает удобным на этапе разработки приложения. В этом случае приложение легко отлаживать, удобно получать данные трассировки, чтобы узнать, что происходит внутри приложения, и удобно копировать приложение в другие расположения. Кроме того, этот вариант размещения упрощает взаимодействие функционально насыщенных клиентских приложений, таких как приложения [!INCLUDE[avalon2](../../../includes/avalon2-md.md)] и WinForms, с внешними системами. Например, одноранговый клиент для совместной работы может использовать в качестве пользовательского интерфейса [!INCLUDE[avalon2](../../../includes/avalon2-md.md)] и размещать службу [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] , позволяющую другим клиентам подключаться к нему и обмениваться с ним информацией.  
   
 #### <a name="managed-windows-services"></a>Управляемые службы Windows  
- Этот вариант размещения предполагает регистрацию домена приложения, в котором служба [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] размещается в качестве управляемой службы Windows (прежнее название - служба NT), так что время существования процесса службы контролируется диспетчером служб для служб Windows. Как и в случае резидентного размещения, в данном случае код размещения является частью приложения. Служба реализуется в качестве службы Windows и в качестве службы [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] , в результате чего она наследует классу <xref:System.ServiceProcess.ServiceBase> и интерфейсу контракта службы [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] . Таким образом, объект <xref:System.ServiceModel.ServiceHost> создается и открывается с помощью переопределенного метода <xref:System.ServiceProcess.ServiceBase.OnStart%28System.String%5B%5D%29> и закрывается с помощью переопределенного метода <xref:System.ServiceProcess.ServiceBase.OnStop> . Кроме того, необходимо реализовать класс установщика, наследующий классу <xref:System.Configuration.Install.Installer> , чтобы программу можно было устанавливать в качестве службы Windows с помощью средства Installutil.exe. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Как: размещение службы WCF в управляемой службе Windows](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-a-managed-windows-service.md). Сценарий, реализуемый с помощью варианта размещения в управляемой службе Windows, представляет собой работающую в течение продолжительного времени службу [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] , которая размещается за пределами служб IIS в защищенной среде, которая не активируется сообщениями. Вместо этого время существования службы контролируется операционной системой. Данный вариант размещения доступен во всех версиях Windows.  
+ Этот вариант размещения предполагает регистрацию домена приложения, в котором служба [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] размещается в качестве управляемой службы Windows (прежнее название - служба NT), так что время существования процесса службы контролируется диспетчером служб для служб Windows. Как и в случае резидентного размещения, в данном случае код размещения является частью приложения. Служба реализуется в качестве службы Windows и в качестве службы [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] , в результате чего она наследует классу <xref:System.ServiceProcess.ServiceBase> и интерфейсу контракта службы [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] . Таким образом, объект <xref:System.ServiceModel.ServiceHost> создается и открывается с помощью переопределенного метода <xref:System.ServiceProcess.ServiceBase.OnStart%28System.String%5B%5D%29> и закрывается с помощью переопределенного метода <xref:System.ServiceProcess.ServiceBase.OnStop> . Кроме того, необходимо реализовать класс установщика, наследующий классу <xref:System.Configuration.Install.Installer> , чтобы программу можно было устанавливать в качестве службы Windows с помощью средства Installutil.exe. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Как: размещение службы WCF в управляемой службе Windows](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-a-managed-windows-service.md). Сценарий, реализуемый с помощью варианта размещения в управляемой службе Windows, представляет собой работающую в течение продолжительного времени службу [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] , которая размещается за пределами служб IIS в защищенной среде, которая не активируется сообщениями. Вместо этого время существования службы контролируется операционной системой. Данный вариант размещения доступен во всех версиях Windows.  
   
 #### <a name="internet-information-services-iis"></a>службы IIS  
  Вариант размещения в службах IIS интегрирован с [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] и использует возможности, предоставляемые этими технологиями, например перезапуск процессов, завершение при ожидании, мониторинг работоспособности процессов и активацию с помощью сообщений. В операционных системах [!INCLUDE[wxp](../../../includes/wxp-md.md)] и [!INCLUDE[ws2003](../../../includes/ws2003-md.md)] этот вариант является предпочтительным при размещении приложений веб-служб, которым требуется высокий уровень доступности и масштабируемости. Кроме того, службы IIS обеспечивают встроенные возможности управления, которые обычно присущи серверным продуктам корпоративного уровня. Для реализации этого варианта размещения требуется правильно настроить службу IIS, но не требуется включать в приложение код размещения. [!INCLUDE[crabout](../../../includes/crabout-md.md)] настройке служб IIS для размещения службы [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] см. в разделе [How to: Host a WCF Service in IIS](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md).  

@@ -1,28 +1,28 @@
 ---
-title: "Пошаговое руководство. Использование только хранимых процедур (Visual Basic)"
-ms.custom: 
+title: Пошаговое руководство. Использование только хранимых процедур (Visual Basic)
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-ado
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - vb
 ms.assetid: 5a736a30-ba66-4adb-b87c-57d19476e862
-caps.latest.revision: 
+caps.latest.revision: 4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload:
 - dotnet
-ms.openlocfilehash: 800cc7d6a1e4aa836ebe75afcbe29a3532ee173a
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: c04fe5e81f19b89de7204ed2430c9acf08ce1647
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="walkthrough-using-only-stored-procedures-visual-basic"></a>Пошаговое руководство. Использование только хранимых процедур (Visual Basic)
 В данном пошаговом руководстве представлен основной полный сценарий [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] для получения доступа к данным с использованием только хранимых процедур. Этот метод часто используется администраторами баз данных для ограничения способов получения доступа к хранилищам данных.  
@@ -30,9 +30,9 @@ ms.lasthandoff: 01/17/2018
 > [!NOTE]
 >  Хранимые процедуры можно также использовать в приложениях [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] для переопределения поведения по умолчанию, особенно для процессов `Create`, `Update` и `Delete`. Дополнительные сведения см. в разделе [Настройка операций вставки, обновления и удалить](../../../../../../docs/framework/data/adonet/sql/linq/customizing-insert-update-and-delete-operations.md).  
   
- Для целей данного пошагового руководства будут использованы два метода, которые были сопоставлены с хранимыми процедурами в образце базы данных Northwind: CustOrdersDetail и CustOrderHist. Сопоставление осуществляется при запуске средства командной строки SQLMetal для создания файла [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)]. Дополнительные сведения см. в разделе "Предварительные требования" далее в этом руководстве.  
+ Для целей данного пошагового руководства будут использованы два метода, которые были сопоставлены с хранимыми процедурами в образце базы данных Northwind: CustOrdersDetail и CustOrderHist. Сопоставление осуществляется при запуске средства командной строки SqlMetal для создания файла Visual Basic. Дополнительные сведения см. в разделе "Предварительные требования" далее в этом руководстве.  
   
- В пошаговом руководстве не используется [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]. Пользователи среды [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] могут также воспользоваться [!INCLUDE[vs_ordesigner_short](../../../../../../includes/vs-ordesigner-short-md.md)] для реализации функций хранимых процедур. В разделе [средства LINQ to SQL в Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).  
+ В пошаговом руководстве не используется [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]. С помощью Visual Studio разработчики также могут использовать [!INCLUDE[vs_ordesigner_short](../../../../../../includes/vs-ordesigner-short-md.md)] для реализации функций хранимых процедур. В разделе [средства LINQ to SQL в Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).  
   
  [!INCLUDE[note_settings_general](../../../../../../includes/note-settings-general-md.md)]  
   
@@ -47,7 +47,7 @@ ms.lasthandoff: 01/17/2018
   
      Если база данных не установлена на компьютере разработчика, загрузите ее с веб-узла Центра загрузки Майкрософт. Инструкции см. в разделе [Загрузка примеров баз данных](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md). После загрузки базы данных скопируйте файл northwnd.mdf в папку c:\linqtest3.  
   
--   Наличие файла кода [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)], созданного из базы данных Northwind.  
+-   Наличие файла кода Visual Basic, созданного из базы данных "Борей".  
   
      Данное пошаговое руководство было написано с использованием средства SqlMetal со следующей командной строкой:  
   
@@ -58,7 +58,7 @@ ms.lasthandoff: 01/17/2018
 ## <a name="overview"></a>Обзор  
  Данное пошаговое руководство состоит из шести основных задач.  
   
--   Настройка решения [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] в среде [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)].  
+-   Настройка [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] решения в Visual Studio.  
   
 -   Добавление сборки System.Data.Linq в проект.  
   
@@ -71,11 +71,11 @@ ms.lasthandoff: 01/17/2018
 -   Запуск и тестирование приложения.  
   
 ## <a name="creating-a-linq-to-sql-solution"></a>Создание решения LINQ to SQL  
- В первой задаче создается решение [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)], которое содержит ссылки, необходимые для построения и выполнения проекта [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
+ В первой задаче создается решение Visual Studio, который содержит ссылки, необходимые для построения и запуска [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] проекта.  
   
 #### <a name="to-create-a-linq-to-sql-solution"></a>Создание решения LINQ to SQL  
   
-1.  На [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] **файл** меню, нажмите кнопку **новый проект**.  
+1.  В меню **Файл** Visual Studio выберите команду **Создать проект**.  
   
 2.  В области **Типы проектов** диалогового окна **Создать проект** разверните узел **Visual Basic**, а затем щелкните **Windows**.  
   

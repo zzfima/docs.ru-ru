@@ -1,12 +1,13 @@
 ---
-title: "Пошаговое руководство. Размещение элемента управления Win32 в WPF"
-ms.custom: 
+title: Пошаговое руководство. Размещение элемента управления Win32 в WPF
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,19 +16,20 @@ helpviewer_keywords:
 - hosting Win32 control in WPF [WPF]
 - Win32 code [WPF], WPF interoperation
 ms.assetid: a676b1eb-fc55-4355-93ab-df840c41cea0
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0795875b4d5f1a91b7c570320acb078b845ae712
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: ab80f39a15952bee8296166ea19a78498c3c1b23
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="walkthrough-hosting-a-win32-control-in-wpf"></a>Пошаговое руководство. Размещение элемента управления Win32 в WPF
-Служба [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] предоставляет среду с широкими возможностями для создания приложений. Тем не менее, если имеются существенные преимущества в [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] код, он может быть более эффективным будет повторное использование по крайней мере часть этого кода в ваш [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] приложения, а не переписывать его заново. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]предоставляет простой механизм для размещения [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] окна на [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] страницы.  
+Служба [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] предоставляет среду с широкими возможностями для создания приложений. Тем не менее, если имеются существенные преимущества в [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] код, он может быть более эффективным будет повторное использование по крайней мере часть этого кода в ваш [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] приложения, а не переписывать его заново. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] предоставляет простой механизм для размещения [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] окна на [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] страницы.  
   
  В этом разделе рассматриваются приложения, [размещения элемента управления ListBox Win32 в образце WPF](http://go.microsoft.com/fwlink/?LinkID=159998), что узлы [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] списка. Эта общая процедура может расширяться для размещения любого [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] окна.  
   
@@ -36,7 +38,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="requirements"></a>Требования  
  В этом разделе предполагается Знакомство с [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] и [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] программирования. Основные сведения о [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] программирования, в разделе [Приступая к работе](../../../../docs/framework/wpf/getting-started/index.md). Основные сведения о [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] программирования, вы должны ссылаться на любые многочисленные книги по вопросам, в частности *программирования Windows* , Чарльз Петцольд.  
   
- Поскольку пример, используемый в этом разделе реализован в [!INCLUDE[TLA#tla_cshrp](../../../../includes/tlasharptla-cshrp-md.md)], он использует [!INCLUDE[TLA#tla_pinvoke](../../../../includes/tlasharptla-pinvoke-md.md)] для доступа к [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)]. Знакомство с [!INCLUDE[TLA2#tla_pinvoke](../../../../includes/tla2sharptla-pinvoke-md.md)] является полезным, но не необходимым.  
+ Пример, используемый в этом разделе реализована на C#, делает использование [!INCLUDE[TLA#tla_pinvoke](../../../../includes/tlasharptla-pinvoke-md.md)] для доступа к [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)]. Знакомство с [!INCLUDE[TLA2#tla_pinvoke](../../../../includes/tla2sharptla-pinvoke-md.md)] является полезным, но не необходимым.  
   
 > [!NOTE]
 >  Этот учебник включает ряд примеров кода из связанного примера. Однако для удобства чтения он не содержит полный пример кода. Можно получить или просмотреть полный исходный код из [размещения элемента управления ListBox Win32 в образце WPF](http://go.microsoft.com/fwlink/?LinkID=159998).  

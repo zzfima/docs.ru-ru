@@ -1,24 +1,26 @@
 ---
-title: "Организация межбазового доступа в SQL Server"
-ms.custom: 
+title: Организация межбазового доступа в SQL Server
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 10663fb6-434c-4c81-8178-ec894b9cf895
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 2a31bddfec44ad4b33f1b595c2746d1a0e841b82
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 0f27f5bd63acbf532d3dca2a8c6fea0b1a59d659
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="enabling-cross-database-access-in-sql-server"></a>Организация межбазового доступа в SQL Server
 Межбазовые цепочки владения возникают, когда процедура в одной базе данных зависит от объектов в другой базе данных. Межбазовая цепочка владения работает так же, как цепочка владения внутри единой базы данных, но для непрерывной цепочки владения необходимо, чтобы все владельцы объекта были сопоставлены с одной учетной записью входа. Если одна учетная запись входа является владельцем исходного объекта в исходной базе данных и целевых объектов в целевых базах данных, то SQL Server не проверяет наличие разрешений в целевых объектах.  
@@ -52,14 +54,14 @@ ALTER DATABASE Database2 SET DB_CHAINING ON;
 ```  
   
 ### <a name="dynamic-sql"></a>Динамический SQL  
- Межбазовые цепочки владения неприменимы в тех случаях, когда выполняются динамически созданные инструкции SQL, если только один и тот же пользователь не присутствует в обеих базах данных. Это можно обойти в [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)], создав хранимую процедуру для доступа к данным другой базы данных и подписав эту процедуру сертификатом, существующим в обеих базах данных. Это предоставляет пользователям доступ к используемым процедурой ресурсам базы данных без предоставления им доступа к базе данных или разрешений на нее.  
+ Межбазовые цепочки владения неприменимы в тех случаях, когда выполняются динамически созданные инструкции SQL, если только один и тот же пользователь не присутствует в обеих базах данных. Это можно обойти в SQL Server, создав хранимую процедуру, которая обращается к данным в другой базе данных и подписав эту процедуру сертификатом, который существует в обеих базах данных. Это предоставляет пользователям доступ к используемым процедурой ресурсам базы данных без предоставления им доступа к базе данных или разрешений на нее.  
   
 ## <a name="external-resources"></a>Внешние ресурсы  
  Дополнительные сведения см. в следующих ресурсах.  
   
-|Ресурс|Описание:|  
+|Ресурс|Описание|  
 |--------------|-----------------|  
-|[Расширение олицетворения базы данных с помощью инструкции EXECUTE AS](http://msdn.microsoft.com/library/ms188304\(SQL.105\).aspx) и [параметр Cross DB Ownership Chaining](http://msdn.microsoft.com/library/ms188694.aspx) [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] электронной документации.|Разделы описывают, как настроить межбазовые цепочки владения между базами данных для экземпляра [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)].|  
+|[Расширение олицетворения базы данных с помощью инструкции EXECUTE AS](http://msdn.microsoft.com/library/ms188304\(SQL.105\).aspx) и [параметр Cross DB Ownership Chaining](http://msdn.microsoft.com/library/ms188694.aspx)электронная документация по SQL Server.|Описываются способы настройки межбазовые цепочки владения для экземпляра SQL Server.|  
   
 ## <a name="see-also"></a>См. также  
  [Защита приложений ADO.NET](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  

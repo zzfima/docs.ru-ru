@@ -1,12 +1,13 @@
 ---
-title: "Потоковый поставщик (службы WCF Data Services)"
-ms.custom: 
+title: Потоковый поставщик (службы WCF Data Services)
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework-oob
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -17,16 +18,17 @@ helpviewer_keywords:
 - streaming data provider [WCF Data Services]
 - WCF Data Services, streams
 ms.assetid: f0978fe4-5f9f-42aa-a5c2-df395d7c9495
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f965bc46c62742c0e2ffb0a7f8ae2e09eca5dc1c
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: bc66d4154f60e46e53de8ca72596e133dc84eb97
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="streaming-provider-wcf-data-services"></a>Потоковый поставщик (службы WCF Data Services)
 Служба данных может обеспечивать доступ к данным больших двоичных объектов. Эти двоичные данные могут представлять видео- и аудиопотоки, изображения, файлы документов или двоичные данные медиаресурсов других типов. Когда сущность в модели данных включает одно или несколько двоичных свойств, служба данных возвращает двоичные данные в кодировке base-64 в записи в канале ответа. Так как загрузка и сериализация больших объемов двоичных данных, таким образом может повлиять на производительность, [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] определяет механизм получения двоичных данных независимо от сущности, к которой он принадлежит. Это достигается отделением двоичных данных от сущности с последующим разделением их на один или несколько потоков данных.  
@@ -61,7 +63,7 @@ ms.lasthandoff: 01/19/2018
   
  Необходимо также добавить пространство имен `xmlns:m=http://schemas.microsoft.com/ado/2007/08/dataservices/metadata` либо в сущность, либо в корень EDMX- или CSDL-файла, определяющего модель данных.  
   
- [!INCLUDE[crexample](../../../../includes/crexample-md.md)]службы данных, которая использует [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] поставщика и предоставляет доступ к медиаресурсу, см. в публикации [рядов поставщика потоковой передачи: реализация потокового поставщика (часть 1)](http://go.microsoft.com/fwlink/?LinkID=198989).  
+ Пример службы данных, которая использует [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] поставщика и предоставляет доступ к медиаресурсу, см. в публикации [рядов поставщика потоковой передачи: реализация потокового поставщика (часть 1)](http://go.microsoft.com/fwlink/?LinkID=198989).  
   
  **Поставщик отражений**  
  Чтобы указать, что сущность является медиассылкой, добавьте <xref:System.Data.Services.Common.HasStreamAttribute> к классу, определяющему тип сущности в поставщике отражения.  
@@ -122,7 +124,7 @@ ms.lasthandoff: 01/19/2018
   
     -   Двоичное свойство, являющееся медиаресурсом, не должно включаться в модель данных. Все свойства, предоставляемые в модели данных, возвращаются в записи в канале ответа.  
   
-    -   Чтобы улучшить производительность при работе с большим двоичным потоком, рекомендуется создать пользовательский класс потока для хранения двоичных данных в базе данных. Этот класс возвращается посредством реализации <xref:System.Data.Services.Providers.IDataServiceStreamProvider.GetWriteStream%2A> и отправляет двоичные данные в базу данных в виде фрагментов. Для [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] базы данных, рекомендуется использовать FILESTREAM для потоковой передачи данных в базу данных при двоичных данных превышает 1 МБ.  
+    -   Чтобы улучшить производительность при работе с большим двоичным потоком, рекомендуется создать пользовательский класс потока для хранения двоичных данных в базе данных. Этот класс возвращается посредством реализации <xref:System.Data.Services.Providers.IDataServiceStreamProvider.GetWriteStream%2A> и отправляет двоичные данные в базу данных в виде фрагментов. Для базы данных SQL Server рекомендуется использовать FILESTREAM для потоковой передачи данных в базу данных, если двоичных данных превышает 1 МБ.  
   
     -   Убедитесь в том, что база данных предусматривает хранение больших двоичных потоков, получаемых используемой службой данных.  
   

@@ -1,56 +1,58 @@
 ---
-title: "Практическое руководство. Формулировка запросов-объединений и запросов векторного произведения"
-ms.custom: 
+title: Практическое руководство. Формулировка запросов-объединений и запросов векторного произведения
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: d8072ede-0521-4670-9bec-1778ceeb875b
-caps.latest.revision: "2"
+caps.latest.revision: 2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 5f652f25d04480afb3df1f623347eee23d3ed258
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 468ee54b0936afcbb548249bc714ea4b04abd3de
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="formulate-joins-and-cross-product-queries"></a>Практическое руководство. Формулировка запросов-объединений и запросов векторного произведения
 В следующем примере показано, как объединить результаты из нескольких таблиц.  
   
 ## <a name="example"></a>Пример  
- В следующем примере используется переходы по внешним ключам в `From` предложения в [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)] (`from` предложение в C#) для выбора всех заказов для клиентов в Лондоне.  
+ В следующем примере используется переходы по внешним ключам в `From` предложение в Visual Basic (`from` предложение в C#) для выбора всех заказов для клиентов в Лондоне.  
   
  [!code-csharp[DLinqQueryExamples#47](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#47)]
  [!code-vb[DLinqQueryExamples#47](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#47)]  
   
 ## <a name="example"></a>Пример  
- В следующем примере используется переходы по внешним ключам в `Where` предложения в [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)] (`where` предложение в C#) для фильтрации из за `Products` которого `Supplier` находится в США.  
+ В следующем примере используется переходы по внешним ключам в `Where` предложение в Visual Basic (`where` предложение в C#) для фильтрации из за `Products` которого `Supplier` находится в США.  
   
  [!code-csharp[DLinqQueryExamples#48](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#48)]
  [!code-vb[DLinqQueryExamples#48](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#48)]  
   
 ## <a name="example"></a>Пример  
- В следующем примере для фильтрации сотрудников, расположенных в Сиэтле, и получения списка закрепленных за ними регионов, используются переходы по внешним ключам в предложении `From` языка [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)] (предложении `from` языка C#).  
+ В следующем примере используется переходы по внешним ключам в `From` предложение в Visual Basic (`from` предложение в C#) для фильтрации сотрудников в Сиэтле и получения списка закрепленных за ними регионов.  
   
  [!code-csharp[DLinqQueryExamples#49](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#49)]  
   
 ## <a name="example"></a>Пример  
- В следующем примере используется переходы по внешним ключам в `Select` предложения в [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)] (`select` предложение в C#) для фильтрации пар сотрудников, в которых один сотрудник сообщает о другом и оба сотрудника находятся в одном `City`.  
+ В следующем примере используется переходы по внешним ключам в `Select` предложение в Visual Basic (`select` предложение в C#) для фильтрации пар сотрудников, в которых один сотрудник сообщает о другом и оба сотрудника находятся в одном `City`.  
   
  [!code-csharp[DLinqQueryExamples#50](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#50)]
  [!code-vb[DLinqQueryExamples#50](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#50)]  
   
 ## <a name="example"></a>Пример  
- Следующие [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)] примере выполняется поиск всех клиентов и заказов, гарантирует, что совпадение заказы для клиентов и гарантирует, что для каждого клиента в этом списке контактное лицо.  
+ В следующем примере Visual Basic выполняет поиск всех клиентов и заказов, гарантирует, что совпадение заказы для клиентов и гарантирует, что для каждого клиента в этом списке контактное лицо.  
   
  [!code-vb[DLinqQueryExamples#50v](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#50v)]  
   

@@ -1,12 +1,13 @@
 ---
-title: "Использование кэширования в модели автоматизации пользовательского интерфейса"
-ms.custom: 
+title: Использование кэширования в модели автоматизации пользовательского интерфейса
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-bcl
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,16 +16,17 @@ helpviewer_keywords:
 - caching, UI Automation
 - UI Automation, caching
 ms.assetid: ec722dff-6009-4279-b86a-e18d3fa94ebf
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 808ba16cbacfad2cc255ae40e2cbad3178350afc
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 2f559153190e4acb3b67acf75954260b31906c0d
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="use-caching-in-ui-automation"></a>Использование кэширования в модели автоматизации пользовательского интерфейса
 > [!NOTE]
@@ -44,9 +46,9 @@ ms.lasthandoff: 12/22/2017
   
 5.  Задайте для свойства <xref:System.Windows.Automation.CacheRequest.AutomationElementMode%2A> значение <xref:System.Windows.Automation.AutomationElementMode.None> , если хотите повысить эффективность, не получая полную ссылку на объекты. (Это сделает невозможным получение текущих значений из этих объектов.)  
   
-6.  Активируйте запрос с помощью метода <xref:System.Windows.Automation.CacheRequest.Activate%2A> в блоке `using` (`Using` в [!INCLUDE[TLA#tla_visualbnet](../../../includes/tlasharptla-visualbnet-md.md)]).  
+6.  Активируйте запрос с помощью <xref:System.Windows.Automation.CacheRequest.Activate%2A> в `using` блока (`Using` в Microsoft Visual Basic .NET).  
   
- После получения объекта <xref:System.Windows.Automation.AutomationElement> или подписки на события деактивируйте запрос с помощью <xref:System.Windows.Automation.CacheRequest.Pop%2A> (если использовался <xref:System.Windows.Automation.CacheRequest.Push%2A> ) или удалив объект, созданный <xref:System.Windows.Automation.CacheRequest.Activate%2A>. (Используйте <xref:System.Windows.Automation.CacheRequest.Activate%2A> в блоке `using` (`Using` в [!INCLUDE[TLA#tla_visualbnet](../../../includes/tlasharptla-visualbnet-md.md)]).  
+ После получения объекта <xref:System.Windows.Automation.AutomationElement> или подписки на события деактивируйте запрос с помощью <xref:System.Windows.Automation.CacheRequest.Pop%2A> (если использовался <xref:System.Windows.Automation.CacheRequest.Push%2A> ) или удалив объект, созданный <xref:System.Windows.Automation.CacheRequest.Activate%2A>. (Используйте <xref:System.Windows.Automation.CacheRequest.Activate%2A> в `using` блока (`Using` в Microsoft Visual Basic .NET).  
   
 ### <a name="cache-automationelement-properties"></a>Кэширование свойств AutomationElement  
   

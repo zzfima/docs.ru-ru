@@ -1,34 +1,34 @@
 ---
-title: "Пошаговое руководство. Создание кнопки с помощью XAML"
-ms.custom: 
+title: Пошаговое руководство. Создание кнопки с помощью XAML
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-wpf
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - buttons [WPF]
 ms.assetid: 138c41c4-1759-4bbf-8d77-77031a06a8a0
-caps.latest.revision: 
+caps.latest.revision: 13
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 5c5efa9f8787e65d59e1b544632e806bf3fbbc81
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 94ec5e56862190026b43331488cbc699fe7dfda4
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="walkthrough-create-a-button-by-using-xaml"></a>Пошаговое руководство. Создание кнопки с помощью XAML
 Цель данного руководства — сведения о создании анимированной кнопки для использования в [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] приложения. В этом пошаговом руководстве используется стиль и шаблон для создания ресурса пользовательской кнопки, которая позволяет повторно использовать код и разделять логику от объявления кнопки. В этом пошаговом руководстве приведено полностью в [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].  
   
 > [!IMPORTANT]
->  В этом пошаговом руководстве поможет выполнить шаги для создания приложения путем ввода или копирования и вставки [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] в Microsoft [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)]. Если вы предпочитаете узнать, как использовать средство разработки (Microsoft Expression Blend) для создания того же приложения см. в разделе [Создание кнопки с помощью Microsoft Expression Blend](../../../../docs/framework/wpf/controls/walkthrough-create-a-button-by-using-microsoft-expression-blend.md).  
+>  В этом пошаговом руководстве поможет выполнить шаги для создания приложения путем ввода или копирования и вставки [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] в Microsoft Visual Studio. Если вы предпочитаете узнать, как использовать средство разработки (Microsoft Expression Blend) для создания того же приложения см. в разделе [Создание кнопки с помощью Microsoft Expression Blend](../../../../docs/framework/wpf/controls/walkthrough-create-a-button-by-using-microsoft-expression-blend.md).  
   
  На следующем рисунке показана созданные кнопки.  
   
@@ -39,7 +39,7 @@ ms.lasthandoff: 12/22/2017
   
 #### <a name="to-create-a-new-wpf-project-and-add-buttons-to-the-window"></a>Чтобы создать новый проект WPF и добавить кнопки в окно  
   
-1.  Запустить[!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)].  
+1.  Запустите Visual Studio.  
   
 2.  **Создайте новый проект WPF:** на **файл** последовательно выберите пункты **New**, а затем нажмите кнопку **проекта**. Найти **приложения Windows (WPF)** шаблон и имя проекта «AnimatedButton». Это создает основу для приложения.  
   
@@ -332,7 +332,7 @@ ms.lasthandoff: 12/22/2017
   
      Нажмите клавишу F5 для запуска приложения и выберите одну из кнопок. Обратите внимание, что кнопка остается выделенной после нажатия, поскольку она по-прежнему имеет фокус. Если щелкнуть еще одну кнопку «Создать» получает фокус, во время его утрачивает последним.  
   
-4.  **Добавление анимации для** <xref:System.Windows.UIElement.MouseEnter> **и** <xref:System.Windows.UIElement.MouseLeave> **:** Далее будет добавлена анимация к триггерам. Добавьте следующую разметку в любое место `ControlTemplate.Triggers` блока.  
+4.  **Добавление анимации для** <xref:System.Windows.UIElement.MouseEnter> **и** <xref:System.Windows.UIElement.MouseLeave> **:** Далее будет добавлена анимация к триггерам.   Добавьте следующую разметку в любое место `ControlTemplate.Triggers` блока.  
   
     ```  
     <!-- Animations that start when mouse enters and leaves button. -->  

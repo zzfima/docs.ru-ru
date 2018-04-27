@@ -1,12 +1,13 @@
 ---
-title: "Практическое руководство. Диагностика проблем при выполнении заданий печати"
-ms.custom: 
+title: Практическое руководство. Диагностика проблем при выполнении заданий печати
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -17,19 +18,20 @@ helpviewer_keywords:
 - print jobs [WPF], troubleshooting
 - print jobs [WPF], diagnosing problems
 ms.assetid: b081a170-84c6-48f9-a487-5766a8d58a82
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: cd9bfb187f77f1cff344aaeabebd36aec1312e30
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 2d8650f0bc5e30ff2ccbd4c2074a00c17140e7e2
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-diagnose-problematic-print-job"></a>Практическое руководство. Диагностика проблем при выполнении заданий печати
-Администраторы сетей часто получают от пользователей жалобы на то, что задания печати не выполняются или выполняются слишком медленно. Многочисленные свойства заданий печати в [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)] [!INCLUDE[TLA#tla_winfx](../../../../includes/tlasharptla-winfx-md.md)] позволяют выполнять быструю удаленную диагностику заданий печати.  
+Администраторы сетей часто получают от пользователей жалобы на то, что задания печати не выполняются или выполняются слишком медленно. Широкий набор свойств заданий печати в [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)] платформы Microsoft .NET Framework предоставляют средства для выполнения быструю удаленную диагностику заданий печати.  
   
 ## <a name="example"></a>Пример  
  Ниже представлены основные этапы создания подобной служебной программы.  

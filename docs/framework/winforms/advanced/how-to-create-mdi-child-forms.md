@@ -1,12 +1,13 @@
 ---
-title: "Практическое руководство. Создание дочерних MDI-форм"
-ms.custom: 
+title: Практическое руководство. Создание дочерних MDI-форм
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-winforms
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -16,16 +17,17 @@ helpviewer_keywords:
 - MDI [Windows Forms], creating forms
 - child forms
 ms.assetid: 164b69bb-2eca-4339-ada3-0679eb2c6dda
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d0ee60e9b25ed4238ccdd738cd59a69876f6b55d
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: d28a7390ea3cfbd922f029d963ad3249db399177
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-create-mdi-child-forms"></a>Практическое руководство. Создание дочерних MDI-форм
 Дочерние формы MDI являются основным элементом [приложений многодокументного интерфейса (MDI)](../../../../docs/framework/winforms/advanced/multiple-document-interface-mdi-applications.md), поскольку они находятся в центре взаимодействия с пользователем.  
@@ -47,7 +49,7 @@ ms.lasthandoff: 01/19/2018
   
 4.  В **обозревателе решений**, щелкните правой кнопкой мыши проект, выберите пункт **добавить**, а затем выберите **Добавление нового элемента**.  
   
-5.  В **Добавление нового элемента** выберите **формы Windows Forms** (в [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] или в [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)]) или **приложение Windows Forms (.NET)** (в [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) из **шаблоны** области. В **имя** поле, имя формы **Form2**. Нажмите кнопку **откройте** кнопку, чтобы добавить форму в проект.  
+5.  В **Добавление нового элемента** выберите **формы Windows Forms** (в Visual Basic или Visual C#) или **приложение Windows Forms (.NET)** (в [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) из  **Шаблоны** области. В **имя** поле, имя формы **Form2**. Нажмите кнопку **откройте** кнопку, чтобы добавить форму в проект.  
   
     > [!NOTE]
     >  Дочерняя форма MDI, созданная на этом этапе, является стандартной формой Windows Forms. Таким образом, у нее есть свойство <xref:System.Windows.Forms.Form.Opacity%2A>, которое позволяет управлять прозрачностью формы. Однако свойство <xref:System.Windows.Forms.Form.Opacity%2A> предназначено для окон верхнего уровня. Его не следует использовать в дочерних формах MDI, иначе могут возникнуть проблемы с рисованием.  

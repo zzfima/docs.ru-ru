@@ -1,24 +1,26 @@
 ---
 title: FROM (Entity SQL)
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: ff3e3048-0d5d-4502-ae5c-9187fcbd0514
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 115fb8dfef46c74837d774012babdef9db915341
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 64d41359ba8a4131acb38b128238065ee2545f80
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="from-entity-sql"></a>FROM (Entity SQL)
 Указывает коллекцию, используемую в [ВЫБЕРИТЕ](../../../../../../docs/framework/data/adonet/ef/language-reference/select-entity-sql.md) инструкции.  
@@ -107,7 +109,7 @@ LOB.Customers
 >  В отличие от языка [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)], в [!INCLUDE[esql](../../../../../../includes/esql-md.md)] не требуется явный шаг для устранения вложенности.  
   
 > [!NOTE]
->  Операторы `CROSS` и `OUTER APPLY` появились в версии [!INCLUDE[ssVersion2005](../../../../../../includes/ssversion2005-md.md)]. В некоторых случаях конвейер запросов может сформировать код Transact-SQL, который содержит операторы `CROSS APPLY` и `OUTER APPLY`. Так как некоторые внутренние поставщики, включая версии [!INCLUDE[ssNoVersion](../../../../../../includes/ssnoversion-md.md)], которые предшествовали [!INCLUDE[ssVersion2005](../../../../../../includes/ssversion2005-md.md)], не поддерживают данные операторы, эти запросы нельзя выполнить на данных поставщиках.  
+>  Операторы `CROSS` и `OUTER APPLY` появились в версии [!INCLUDE[ssVersion2005](../../../../../../includes/ssversion2005-md.md)]. В некоторых случаях конвейер запросов может сформировать код Transact-SQL, который содержит операторы `CROSS APPLY` и `OUTER APPLY`. Так как некоторые внутренние поставщики, включая версии SQL Server более ранней, чем [!INCLUDE[ssVersion2005](../../../../../../includes/ssversion2005-md.md)], не поддерживают данные операторы, эти запросы нельзя выполнить на данных поставщиках.  
 >   
 >  Некоторыми типичными сценариями, которые бы могли привести к появлению операторов `CROSS APPLY` и (или) `OUTER APPLY` в выходном запросе, являются: связанный вложенный запрос с подкачкой страниц; AnyElement со связанным вложенным запросом или с коллекцией, полученной путем навигации; запросы LINQ, в которых используются методы группирования, принимающие селектор элементов; запрос, в котором явно указан оператор `CROSS APPLY` или `OUTER APPLY`; запрос с конструкцией `DEREF` для конструкции `REF`.  
   

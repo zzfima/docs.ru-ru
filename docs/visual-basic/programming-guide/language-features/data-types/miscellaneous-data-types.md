@@ -1,29 +1,30 @@
 ---
-title: "Прочие типы данных (Visual Basic)"
-ms.custom: 
+title: Прочие типы данных (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - Object data type [Visual Basic], data types
 - data types [Visual Basic], choosing
 ms.assetid: 64c71a12-9057-4dbf-baca-7379c4aada69
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: b6bb86bb6d203aa4e6bdded27a4cb78a8155ddec
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: f80aacccab4c215b3e3917cc73097080aa6b9941
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="miscellaneous-data-types-visual-basic"></a>Прочие типы данных (Visual Basic)
-[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]имеется несколько типов данных, не предназначенных для чисел или символов. Они предусмотрены для настраиваемых данных, таких как Да/нет значений, значений даты и времени и адресов объектов.  
+Visual Basic предоставляет несколько типов данных, не предназначенных для чисел или символов. Они предусмотрены для настраиваемых данных, таких как Да/нет значений, значений даты и времени и адресов объектов.  
   
- Для таблицы, сравнение side-by-side [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] типов данных в разделе [типы данных](../../../../visual-basic/language-reference/data-types/data-type-summary.md).  
+ Таблица, показывающая сравнение типы данных Visual Basic, см. [типы данных](../../../../visual-basic/language-reference/data-types/data-type-summary.md).  
   
 ## <a name="boolean-type"></a>Логический тип  
  [Тип данных Boolean](../../../../visual-basic/language-reference/data-types/boolean-data-type.md) имеет значение без знака, которое интерпретируется как `True` или `False`. Ширина данных зависит от реализации платформы. Если переменная может содержать только два значения состояния, например true или false, Да/Нет или Вкл/Выкл, объявите его как `Boolean`.  

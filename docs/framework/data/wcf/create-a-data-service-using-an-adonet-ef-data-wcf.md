@@ -1,32 +1,34 @@
 ---
-title: "Практическое руководство. Создание службы данных с использованием источника данных Entity Framework ADO.NET (службы данных WCF)"
-ms.custom: 
+title: Практическое руководство. Создание службы данных с использованием источника данных Entity Framework ADO.NET (службы данных WCF)
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework-oob
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - WCF Data Services, providers
 - WCF Data Services, Entity Framework
 ms.assetid: 6d11fec8-0108-42f5-8719-2a7866d04428
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e90b11800685707460171e5e2d250ef757979c44
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 5993837546b28742756ed4a5ec323e6f1a5ef782
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-create-a-data-service-using-an-adonet-entity-framework-data-source-wcf-data-services"></a>Практическое руководство. Создание службы данных с использованием источника данных Entity Framework ADO.NET (службы данных WCF)
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] предоставляет данные сущности в виде службы данных. Эти данные сущностей обеспечивается [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] Если источником данных является реляционной базы данных. В этом разделе будет показано создание модели данных на базе [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] в веб-приложении [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)], основанном на существующей базе данных, а также создание новой службы данных с помощью этой модели.  
+[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] предоставляет данные сущности в виде службы данных. Эти данные сущностей обеспечивается [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] Если источником данных является реляционной базы данных. В этом разделе показано, как создать [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)]-на основе модели данных в Visual Studio веб-приложения основан на существующей базы данных и использовать эту модель данных для создания новой службы данных.  
   
- Кроме того, в составе [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] предусмотрена программа командной строки, которая может создавать модель [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] за пределами проекта [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)]. Дополнительные сведения см. в разделе [как: использование EdmGen.exe для создания модели и сопоставления файлов](../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md).  
+ [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] Также предоставляет средства командной строки, можно создать [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] модели за пределами проекта Visual Studio. Дополнительные сведения см. в разделе [как: использование EdmGen.exe для создания модели и сопоставления файлов](../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md).  
   
 ### <a name="to-add-an-entity-framework-model-that-is-based-on-an-existing-database-to-an-existing-web-application"></a>Добавление модели Entity Framework на основе существующей базы данных в существующее веб-приложение  
   
@@ -59,7 +61,7 @@ ms.lasthandoff: 01/19/2018
   
 ### <a name="to-create-the-data-service-by-using-the-new-data-model"></a>Создание службы данных с использованием новой модели данных  
   
-1.  В [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] откройте EDMX-файл, представляющий модель данных.  
+1.  Откройте в Visual Studio файл EDMX, представляющий модель данных.  
   
 2.  В **браузер моделей**, щелкните правой кнопкой мыши модель, нажмите кнопку **свойства**и запишите имя контейнера сущностей.  
   
@@ -69,7 +71,7 @@ ms.lasthandoff: 01/19/2018
   
 5.  Задайте имя для службы и нажмите кнопку **ОК**.  
   
-     [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] создает метку XML и файлы с кодом для новой службы. По умолчанию открывается окно редактора кода.  
+     В Visual Studio для новой службы создаются файлы разметки и кодов XML. По умолчанию открывается окно редактора кода.  
   
 6.  В коде службы данных замените комментарий `/* TODO: put your data source class name here */` в определении класса, задающего службу данных, типом, порожденным от класса <xref:System.Data.Objects.ObjectContext> и являющимся контейнером сущностей модели данных, который был отмечен на шаге 2.  
   

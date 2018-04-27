@@ -5,14 +5,15 @@ author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/26/2017
 ms.prod: .net
+ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: ba48579735379bfc857993cd1546f5f7125101f4
-ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
+ms.openlocfilehash: ac4cd9f14f046a970b6ec41c1b176e9980a960cf
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="modernize-existing-net-applications-with-azure-cloud-and-windows-containers-v10"></a>Модернизация существующих приложений .NET с помощью облака Azure и контейнеров Windows (v1.0)
 
@@ -28,7 +29,7 @@ Redmond, Washington 98052-6399
 
 Все права защищены. Запрещается полное или частичное воспроизведение настоящей книги в любом виде или любыми средствами без письменного разрешения издателя.
 
-Эта книга доступна бесплатно в виде электронные книги (электронная книга) доступны через несколько каналов в корпорации Майкрософт, такие как http://dot.net/architecture.
+Эта книга доступна бесплатно в виде электронные книги (электронная книга) доступны через несколько каналов в корпорации Майкрософт такие как http://dot.net/architecture.
 
 Если у вас есть вопросы, связанные с этой книгой, обращайтесь по адресу [dotnet-architecture-ebooks-feedback@service.microsoft.com](mailto:dotnet-architecture-ebooks-feedback@service.microsoft.com?subject=Feedback%20for%20.NET%20Container%20&%20Microservices%20Architecture%20book)
 
@@ -36,7 +37,7 @@ Redmond, Washington 98052-6399
 
 Некоторые приведенные в книге примеры служат только для иллюстрации и являются вымышленными. Все совпадения с реальными наименованиями, людьми и любыми другими предметами являются непреднамеренными и случайными.
 
-Microsoft и товарные знаки, перечисленные на странице "Товарные знаки" на сайте http://www.microsoft.com, являются товарными знаками группы компания Майкрософт. Все другие наименования являются собственностью своих законных владельцев.
+Корпорация Майкрософт и товарные знаки, перечисленных в http://www.microsoft.com на веб-странице «Товарные знаки» являются товарными знаками группы компаний Майкрософт. Все другие наименования являются собственностью своих законных владельцев.
 
 Автор:
 > **Сезар де ла Торре** (Cesar de la Torre), старший руководитель проектов, группа разработки .NET, корпорация Майкрософт
@@ -172,11 +173,11 @@ Microsoft и товарные знаки, перечисленные на стр
 
 ### <a name="additional-resources"></a>Дополнительные ресурсы
 
-- **Жизненный цикл контейнерного приложения Docker на основе платформы и средств Майкрософт** (электронная книга, доступная для скачивания) [*https://aka.ms/dockerlifecycleebook*](https://aka.ms/dockerlifecycleebook)
+- **Помещать в контейнеры Docker жизненного цикла приложения с помощью платформы Майкрософт и средств** (загружаемая электронная книга): [*https://aka.ms/dockerlifecycleebook*](https://aka.ms/dockerlifecycleebook)
 
-- **Микрослужбы .NET: архитектура контейнерных приложений .NET** (электронная книга, доступная для скачивания): [*https://aka.ms/microservicesebook*](https://aka.ms/microservicesebook)
+- **.NET Микрослужбами: Архитектура для приложений .NET в контейнерах** (загружаемая электронная книга): [*https://aka.ms/microservicesebook*](https://aka.ms/microservicesebook)
 
-- **Проектирование современных веб-приложений с помощью ASP.NET Core и Azure** (электронная книга, доступная для скачивания): [ *https://aka.ms/webappebook*](https://aka.ms/webappebook)
+- **Проектирование архитектуры современных веб-приложений с помощью ASP.NET Core и Azure** (загружаемая электронная книга): [*https://aka.ms/webappebook*](https://aka.ms/webappebook)
 
 ## <a name="who-should-use-this-guide"></a>Кому необходимо это руководство
 

@@ -1,10 +1,11 @@
 ---
-title: "Практическое руководство. Вызов компилятора командной строки (Visual Basic)"
+title: Практическое руководство. Вызов компилятора командной строки (Visual Basic)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - command-line arguments
@@ -12,14 +13,14 @@ helpviewer_keywords:
 - Visual Basic compiler, starting
 - command line [Visual Basic], arguments
 ms.assetid: 0fd9a8f6-f34e-4c35-a49d-9b9bbd8da4a9
-caps.latest.revision: "28"
+caps.latest.revision: 28
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 5c69860ede5620272e67bde435e6e6fa08cc81bc
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: f1ccf08ba58fa6af60bd8ffd7cba79b205dc0f3d
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-invoke-the-command-line-compiler-visual-basic"></a>Практическое руководство. Вызов компилятора командной строки (Visual Basic)
 Можно вызвать компилятор командной строки, введя имя исполняемого файла в командной строке, также называется командной строки MS-DOS. Если компиляция выполняется из командной строки Windows, необходимо ввести полный путь к исполняемому файлу. Чтобы переопределить это поведение по умолчанию, можно использовать либо [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] командной строки или изменить переменную среды PATH. Оба позволяют компиляцию из любого каталога, просто введя его имя.  
@@ -54,7 +55,7 @@ ms.lasthandoff: 11/21/2017
   
 6.  Нажмите кнопку **ОК** чтобы подтвердить изменения и закрыть диалоговые окна.  
   
-     После изменения переменной среды PATH, можно запустить [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] компилятора в командной строке Windows из любого каталога на компьютере.  
+     После изменения переменной среды PATH, можно запустить компилятор Visual Basic в командной строке Windows из любого каталога на компьютере.  
   
 ### <a name="to-invoke-the-compiler-using-the-windows-command-prompt"></a>Вызов компилятора командной строки Windows  
   

@@ -1,32 +1,34 @@
 ---
-title: "Общие сведения о двусторонних возможностях в WPF"
-ms.custom: 
+title: Общие сведения о двусторонних возможностях в WPF
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Span elements [WPF]
 - bidirectional features [WPF]
 ms.assetid: fd850e25-7dba-408c-b521-8873e51dc968
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b50d98d5f02a59a013d7577f0e312e6ffde35690
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: fa2349bca86676f4dc3e1703216a2b0dc50ccd59
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="bidirectional-features-in-wpf-overview"></a>Общие сведения о двусторонних возможностях в WPF
 В отличие от любых других платформ разработки [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] имеет множество функций, поддерживающих быструю разработку двунаправленного содержимого, например, смешанных слева направо и справа оставить данные в одном документе. В то же время [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] отличный опыт, для пользователей, которым необходимы двунаправленные возможности, например арабский или иврит произношения пользователей.  
   
- В следующих разделах описаны различные возможности двунаправленного письма с примерами, иллюстрирующими способы достижения наилучшего отображения двунаправленного содержимого на экране. В большинстве примеров используется [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)], хотя можно легко применить концепции [!INCLUDE[TLA#tla_cshrp](../../../../includes/tlasharptla-cshrp-md.md)] или [!INCLUDE[TLA#tla_visualb](../../../../includes/tlasharptla-visualb-md.md)] кода.  
+ В следующих разделах описаны различные возможности двунаправленного письма с примерами, иллюстрирующими способы достижения наилучшего отображения двунаправленного содержимого на экране. В большинстве примеров используется [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)], хотя эти принципы можно легко применить в код C# или Microsoft Visual Basic.  
   
 
   
@@ -70,7 +72,7 @@ ms.lasthandoff: 12/22/2017
   
  В [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], <xref:System.Windows.Documents.FlowDocument> является универсальным [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] элемент, который может содержать сочетание текста, таблицы, изображения и другие элементы. Этот элемент используется в примерах, описанных ниже.  
   
- Добавление текста к <xref:System.Windows.Documents.FlowDocument> можно сделать более таким образом один. Простой способ сделать это — через <xref:System.Windows.Documents.Paragraph> которого является элемент уровня блока, используемый для группировки содержимого, такие как текст. Добавление текста в элементы встроенного уровня, примеры используют <xref:System.Windows.Documents.Span> и <xref:System.Windows.Documents.Run>. <xref:System.Windows.Documents.Span>Представляет элемент содержимого потока встроенного уровня, используемые для группировки других встроенных элементов, пока <xref:System.Windows.Documents.Run> — элемент предназначен для содержания цепочки неформатированного текста содержимого потока встроенного уровня. Объект <xref:System.Windows.Documents.Span> может содержать несколько <xref:System.Windows.Documents.Run> элементов.  
+ Добавление текста к <xref:System.Windows.Documents.FlowDocument> можно сделать более таким образом один. Простой способ сделать это — через <xref:System.Windows.Documents.Paragraph> которого является элемент уровня блока, используемый для группировки содержимого, такие как текст. Добавление текста в элементы встроенного уровня, примеры используют <xref:System.Windows.Documents.Span> и <xref:System.Windows.Documents.Run>. <xref:System.Windows.Documents.Span> Представляет элемент содержимого потока встроенного уровня, используемые для группировки других встроенных элементов, пока <xref:System.Windows.Documents.Run> — элемент предназначен для содержания цепочки неформатированного текста содержимого потока встроенного уровня. Объект <xref:System.Windows.Documents.Span> может содержать несколько <xref:System.Windows.Documents.Run> элементов.  
   
  Первый пример документа содержит документ, который имеет несколько сетевых совместно используемых имен; например `\\server1\folder\file.ext`. Независимо от того на каком языке написан документ, в котором содержится эта сетевая ссылка, на арабском или английском, нам хотелось бы, чтобы он выглядел всегда одинаково. Приведенный ниже рисунок показывает ссылку в арабском <xref:System.Windows.FlowDirection.RightToLeft> документа.  
   
@@ -131,7 +133,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="FlowDirectionNontext"></a>   
 ## <a name="flowdirection-with-non-text-elements"></a>Направление потока применительно к нетекстовым элементам  
- <xref:System.Windows.FlowDirection>Определяет не только как текст проходит в текстовом элементе, но также направление потока практически любого другого [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] элемента. Показано на следующем рисунке <xref:System.Windows.Controls.ToolBar> , использующий горизонтальной <xref:System.Windows.Media.LinearGradientBrush> для рисования фона его.  
+ <xref:System.Windows.FlowDirection> Определяет не только как текст проходит в текстовом элементе, но также направление потока практически любого другого [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] элемента. Показано на следующем рисунке <xref:System.Windows.Controls.ToolBar> , использующий горизонтальной <xref:System.Windows.Media.LinearGradientBrush> для рисования фона его.  
   
  **Рисунок, показывающий элемент ToolBar с градиентом слева направо**  
   
@@ -251,7 +253,7 @@ ms.lasthandoff: 12/22/2017
 |-|  
 |`<TextBlock`<br /><br /> `Name="text1" NumberSubstitution.CultureSource="Text">`<br /><br /> `1234+5679=6913`<br /><br /> `</TextBlock>`|  
   
- В соответствующем [!INCLUDE[TLA2#tla_lhcshrp](../../../../includes/tla2sharptla-lhcshrp-md.md)] кода, задайте `Language` свойство так, чтобы `"ar-SA"`.  
+ В соответствующем коде C#, набор `Language` свойство так, чтобы `"ar-SA"`.  
   
 ||  
 |-|  
@@ -263,13 +265,13 @@ ms.lasthandoff: 12/22/2017
 |-|  
 |`text1.Language =`<br /><br /> `System.Windows.Markup.XmlLanguage.GetLanguage(`<br /><br /> `System.Globalization.CultureInfo.CurrentUICulture.IetfLanguageTag);`|  
   
- <xref:System.Globalization.CultureInfo.CurrentCulture%2A>представляет текущий язык и региональные параметры, используемые текущим потоком во время выполнения.  
+ <xref:System.Globalization.CultureInfo.CurrentCulture%2A> представляет текущий язык и региональные параметры, используемые текущим потоком во время выполнения.  
   
  Окончательный [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] примере должен выглядеть следующим образом.  
   
  [!code-xaml[Numbers2#Numbers2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Numbers2/CS/Window1.xaml#numbers2)]  
   
- Окончательный [!INCLUDE[TLA#tla_cshrp](../../../../includes/tlasharptla-cshrp-md.md)] пример должен быть подобен следующему.  
+ В последнем примере C# должен быть аналогичен следующему.  
   
  [!code-csharp[NumbersCSharp#NumbersCSharp](../../../../samples/snippets/csharp/VS_Snippets_Wpf/NumbersCSharp/CSharp/Window1.xaml.cs#numberscsharp)]  
   

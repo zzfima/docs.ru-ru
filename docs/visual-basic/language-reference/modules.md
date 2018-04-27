@@ -11,14 +11,14 @@ ms.assetid: 370bfc90-e8f2-4942-bdec-9897ce605d31
 caps.latest.revision: 11
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 62fba60aa6a9f95057010997d5f427f2c66ec178
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: cd92be378894235f4753cfc52e8382a1960bd37b
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="modules-visual-basic"></a>Модули (Visual Basic)
-[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]предоставляет несколько модулей, позволяющих упростить распространенные задачи в коде, включая работу со строками, математические вычисления, получение сведений о системе, операции с файлами и каталогами и т. д. В следующей таблице перечислены модули, предоставляемые [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
+Visual Basic предоставляет несколько модулей, позволяющих упростить распространенные задачи в коде, включая работу со строками, математические вычисления, получение сведений о системе, операции с файлами и каталогами и т. д. В следующей таблице перечислены модули, предоставляемые Visual Basic.  
   
 |||  
 |---|---|  

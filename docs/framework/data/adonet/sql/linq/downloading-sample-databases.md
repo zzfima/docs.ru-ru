@@ -1,24 +1,26 @@
 ---
-title: "Загрузка примеров баз данных"
-ms.custom: 
+title: Загрузка примеров баз данных
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: ef9d69a1-9461-43fe-94bb-7c836754bcb5
-caps.latest.revision: "2"
+caps.latest.revision: 2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 3b0dccd831591946684fb0087f33563b87ee6ba7
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: dd0b29e97d36d67781c92ee24c56aed43c703261
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="downloading-sample-databases"></a>Загрузка примеров баз данных
 В ряде примеров и пошаговых руководств документации [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] используется база данных «Northwind» и выпуск SQL Server Express Edition. Эти продукты можно бесплатно загрузить в Центре загрузки Майкрософт.  
@@ -57,7 +59,7 @@ ms.lasthandoff: 01/17/2018
 6.  Следуйте указаниям по установке, содержащимся на веб-узле.  
   
 ## <a name="downloading-management-studio-express"></a>Загрузка среды Management Studio Express  
- Если требуется изменить загруженную базу данных, доступ к базе данных из **обозревателя серверов** в [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] интегрированной среды разработки (IDE) или использования Microsoft SQL Server Management Studio Express () SSMSE).  
+ Если требуется изменить загруженную базу данных, доступ к базе данных из **обозревателя серверов** в Visual Studio интегрированной среде разработки (IDE), или использовать Microsoft SQL Server Management Studio Express (SSMSE) .  
   
 #### <a name="to-download-management-studio-express"></a>Загрузка среды Management Studio Express  
   

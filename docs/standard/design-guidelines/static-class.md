@@ -1,12 +1,12 @@
 ---
-title: "Разработка статичных классов"
-ms.custom: 
+title: Разработка статичных классов
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - type design guidelines, static classes
@@ -16,18 +16,18 @@ helpviewer_keywords:
 - classes [.NET Framework], design guidelines
 - type design guidelines, classes
 ms.assetid: d67c14d8-c4dd-443f-affb-4ccae677c9b6
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 8c36bf5790d033eddb6bb7e0d910482143a9bcac
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: a6143b128442db1ac090f0b3680f94b1ac9a9cfc
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="static-class-design"></a>Разработка статичных классов
 Статический класс был определен как класс, который содержит только статические члены (Разумеется, помимо экземпляр члены, унаследованные от <xref:System.Object?displayProperty=nameWithType> и возможно закрытый конструктор). Некоторые языки предоставляют встроенную поддержку для статических классов. В C# 2.0 и более поздних версиях при объявлении класса статический Это запечатанный, абстрактный и нет членов экземпляра может быть переопределено или объявлен.  
@@ -46,7 +46,7 @@ ms.lasthandoff: 12/23/2017
   
  *Фрагменты © 2005, 2009 корпорации Майкрософт. Все права защищены.*  
   
- *Перепечатываются разрешении Пирсона для образовательных учреждений, Inc. из [Framework рекомендации по проектированию: условные обозначения, стили и шаблоны для библиотеки .NET для повторного использования, 2-е издание](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina и Брэд Абрамс, опубликованные 22 октября 2008 г., Addison-Wesley Professional в составе ряда разработки Microsoft Windows.*  
+ *Перепечатываются разрешении Пирсона для образовательных учреждений, Inc. из [Framework рекомендации по проектированию: условные обозначения, стили и шаблоны для библиотеки .NET для повторного использования, 2-е издание](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina и Брэд Абрамс, опубликованные 22 октября 2008 г., Addison-Wesley Professional в составе ряда разработки Microsoft Windows.*  
   
 ## <a name="see-also"></a>См. также  
  [Рекомендации по разработке типов](../../../docs/standard/design-guidelines/type.md)  

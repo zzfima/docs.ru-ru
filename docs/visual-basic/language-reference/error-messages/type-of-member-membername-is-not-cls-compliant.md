@@ -1,9 +1,9 @@
 ---
-title: "Тип члена &#39; &lt;membername&gt;&#39; не является CLS-совместимым"
+title: Тип члена &#39; &lt;membername&gt; &#39; не является CLS-совместимым
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - devlang-visual-basic
 ms.topic: article
@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - BC40025
 ms.assetid: adbd34bb-43d2-4266-90e7-cd1afaf49b4e
-caps.latest.revision: 
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: bc82714d25efbe9d379fff36f92261cf25a78862
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: 123d19bc3b159578edc7fdfe2a36bc8c79e962ef
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="type-of-member-39ltmembernamegt39-is-not-cls-compliant"></a>Тип члена &#39; &lt;membername&gt;&#39; не является CLS-совместимым
-Тип данных, указанный для этого элемента не является частью [независимость от языка и независимые от языка компоненты](../../../standard/language-independence-and-language-independent-components.md) (CLS). Это не ошибка в компоненте, поскольку [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] и [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] поддерживает этот тип данных. Тем не менее другой компонент, написанный в строго CLS-совместимого кода может не поддерживает этот тип данных. Такой компонент может оказаться невозможным успешно взаимодействовать с данным компонентом.  
+# <a name="type-of-member-39ltmembernamegt39-is-not-cls-compliant"></a>Тип члена &#39; &lt;membername&gt; &#39; не является CLS-совместимым
+Тип данных, указанный для этого элемента не является частью [независимость от языка и независимые от языка компоненты](../../../standard/language-independence-and-language-independent-components.md) (CLS). Это не ошибка в компоненте, поскольку [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] и Visual Basic поддерживает этот тип данных. Тем не менее другой компонент, написанный в строго CLS-совместимого кода может не поддерживает этот тип данных. Такой компонент может оказаться невозможным успешно взаимодействовать с данным компонентом.  
   
- Следующие типы данных [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] не соответствуют CLS:  
+ Следующие типы данных Visual Basic не являются CLS-совместимыми:  
   
 -   [Тип данных SByte](../../../visual-basic/language-reference/data-types/sbyte-data-type.md)  
   
@@ -47,7 +47,7 @@ ms.lasthandoff: 12/21/2017
   
 -   При взаимодействии с компонентом, который не поддерживает этот тип данных, его необходимо заменить на ближайший CLS-совместимый тип. Например, вместо `UInteger` вы можете использовать `Integer` , если вам не нужен диапазон значений, превышающий 2 147 483 647. Если вам нужен расширенный диапазон, вы можете заменить `UInteger` на `Long`.  
   
--   При взаимодействии с объектами службы автоматизации или COM-объектами помните, что длина данных некоторых типов отличается от длины данных в [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Например, данные типа `uint` часто являются 16-битными в других средах. Если вы передаете 16-разрядного аргумента такому компоненту, объявите его как `UShort` вместо `UInteger` в управляемом [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] кода.  
+-   При взаимодействии с объектами службы автоматизации или COM-объектами помните, что длина данных некоторых типов отличается от длины данных в [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Например, данные типа `uint` часто являются 16-битными в других средах. Если вы передаете 16-разрядного аргумента такому компоненту, объявите его как `UShort` вместо `UInteger` в управляемом коде Visual Basic.  
   
 ## <a name="see-also"></a>См. также  
  [Отражение](../../../framework/reflection-and-codedom/reflection.md)  

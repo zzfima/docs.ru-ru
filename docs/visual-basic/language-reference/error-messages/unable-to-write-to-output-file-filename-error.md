@@ -1,5 +1,5 @@
 ---
-title: 'Не удается записать выходной файл &#39; &lt;filename&gt;&#39;: &lt;ошибки&gt;'
+title: 'Не удалось записать в выходной файл &#39; &lt;filename&gt;&#39;: &lt;ошибки&gt;'
 ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: ''
@@ -16,13 +16,13 @@ ms.assetid: 0845b245-11bb-46fd-95ca-f6cef3c318ef
 caps.latest.revision: 10
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: d142a8c741a9f0e25b8ac3c0002d04f437bf0ca9
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: a183f81a73c3c8034d9ba7366be8b36d425263da
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="unable-to-write-to-output-file-39ltfilenamegt39-lterrorgt"></a>Не удается записать выходной файл &#39; &lt;filename&gt;&#39;: &lt;ошибки&gt;
+# <a name="unable-to-write-to-output-file-39ltfilenamegt39-lterrorgt"></a>Не удалось записать в выходной файл &#39; &lt;filename&gt;&#39;: &lt;ошибки&gt;
 Возникла проблема при создании файла.  
   
  Не удается открыть выходной файл для записи. Файл (или содержащая его папка) может быть открыт другим процессом для монопольного использования либо может иметь установленный атрибут "только для чтения".  
@@ -45,7 +45,7 @@ ms.lasthandoff: 10/18/2017
   
 3.  Если ошибка возникает снова, перезапустите компьютер.  
   
-4.  Если устранить ошибку не удается, переустановите [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
+4.  Если ошибка повторится, переустановите Visual Basic.  
   
 5.  Если после переустановки ошибка не устранена, уведомите службу технической поддержки Майкрософт.  
   

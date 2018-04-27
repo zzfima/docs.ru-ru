@@ -1,28 +1,28 @@
 ---
-title: "Образец технологии базовой сериализации"
-ms.custom: 
+title: Образец технологии базовой сериализации
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 9d824e16-08d1-4a36-bc7f-2388c1f75f34
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: c3d269b7603c63db73fdcbab91b777e69b228cc9
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 2aa2dd790a0f292175fae6c45d8bfc60859ac4ac
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="basic-serialization-technology-sample"></a>Образец технологии базовой сериализации
-[Скачать образец](http://download.microsoft.com/download/4/7/B/47B2164C-E780-4B10-8DE4-2CB5B886E0A6/Technologies/Serialization/Runtime%20Serialization/Basic.zip.exe)  
+[Скачать образец](https://download.microsoft.com/download/4/7/B/47B2164C-E780-4B10-8DE4-2CB5B886E0A6/Technologies/Serialization/Runtime%20Serialization/Basic.zip.exe)  
   
  В этом образце демонстрируется возможность среды CLR выполнять сериализацию графа объекта в поток. Для сериализации в примере могут использоваться классы <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> или <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>. Связанный список, заполненный данными, сериализируется в поток файла или десериализируется из потока файла. В любом случае этот список отображается для того, чтобы можно было видеть результаты. Связанный список является списком типа `LinkedList`, который определен в этом примере.  
   

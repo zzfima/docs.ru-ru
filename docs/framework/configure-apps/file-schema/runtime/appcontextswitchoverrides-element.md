@@ -1,7 +1,7 @@
 ---
-title: '&lt;AppContextSwitchOverrides&gt; Element'
+title: '&lt;AppContextSwitchOverrides&gt; элемент'
 ms.custom: ''
-ms.date: 03/28/2018
+ms.date: 04/19/2018
 ms.prod: .net-framework
 ms.technology:
 - dotnet-bcl
@@ -19,18 +19,18 @@ ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: a17d67a1c6143897802bb15b983a9a909fd5949c
-ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
+ms.openlocfilehash: 146416a9872a8444316c2e4a754067b82030a81d
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="ltappcontextswitchoverridesgt-element"></a>&lt;AppContextSwitchOverrides&gt; Element
+# <a name="ltappcontextswitchoverridesgt-element"></a>&lt;AppContextSwitchOverrides&gt; элемент
 Определяет один или несколько коммутаторов, используемых классом <xref:System.AppContext> для предоставления механизма отказа от новых функциональных возможностей.  
   
  \<configuration>  
  \<Среда выполнения >  
-\<AppContextSwitchOverrides>  
+\<AppContextSwitchOverrides >  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -80,12 +80,13 @@ ms.lasthandoff: 04/09/2018
 |`Switch.System.Drawing.Printing.`</br>`OptimizePrintPreview`|Элементы управления ли производительность <xref:System.Windows.Forms.PrintPreviewDialog> оптимизирован для сетевых принтеров. Дополнительные сведения см. в разделе [Обзор элемента управления PrintPreviewDialog](../../../winforms/controls/printpreviewdialog-control-overview-windows-forms.md).|.NET Framework 4.6|
 |`Switch.System.Globalization.NoAsyncCurrentCulture`|Управляет ли асинхронные операции не проходят из контекста вызывающего потока. Дополнительные сведения см. в разделе [CurrentCulture и CurrentUICulture проходят через задачи](~/docs/framework/migration-guide/retargeting/4.5.2-4.6.md#currentculture-and-currentuiculture-flow-across-tasks).|.NET Framework 4.6|  
 |`Switch.System.IdentityModel.`<br/>`DisableMultipleDNSEntriesInSANCertificate`|Элементы управления ли <xref:System.IdentityModel.Claims.X509CertificateClaimSet.FindClaims%2A?displayProperty=nameWithType> метод пытается сопоставить тип утверждения только с последней записью DNS. Дополнительные сведения см. в разделе [Устранение рисков: метод X509CertificateClaimSet.FindClaims](~/docs/framework/migration-guide/mitigation-x509certificateclaimset-findclaims-method.md).|.NET Framework 4.6.1|  
+|`Switch.System.IdentityModel.`<br/>`EnableCachedEmptyDefaultAuthorizationContext`|Определяет, следует ли разрешить AuthorizationContext.Empty для возврата изменяемого объекта.|.NET Framework 4.6|  
 |`Switch.System.IO.BlockLongPaths`|Элементы управления ли пути длиной более `MAX_PATH` throw (260 символов) <xref:System.IO.PathTooLongException>. Дополнительные сведения см. в разделе [длинные пути поддержки](~/docs/framework/migration-guide/retargeting/4.6.1-4.6.2.md#long-path-support).|.NET Framework 4.6.2|  
 |`Switch.System.IO.Compression.ZipFile.`<br/>`UseBackslash`|Использует обратной косой черты («\\«) вместо косой черты («/») как разделитель пути в <xref:System.IO.Compression.ZipArchiveEntry.FullName%2A?displayProperty=nameWithType> свойство. Дополнительные сведения см. в разделе [устранение рисков: разделитель пути ZipArchiveEntry.FullName](~/docs/framework/migration-guide/mitigation-ziparchiveentry-fullname-path-separator.md).|.NET Framework 4.6.1|  
 |`Switch.System.IO.Ports.`<br/>`DoNotCatchSerialStreamThreadExceptions`|Контролирует операционной системы исключений, возникших в фоновых потоках, созданных с помощью <xref:System.IO.Ports.SerialPort> потоки завершить процесс.|.NET Framework 4.7.1| 
 |`Switch.System.IO.`<br/>`UseLegacyPathHandling`|Управляет ли используется устаревший путь нормализации и поддерживаемых пути URI <xref:System.IO.Path.GetDirectoryName%2A?displayProperty=nameWithType> и <xref:System.IO.Path.GetPathRoot%2A?displayProperty=nameWithType> методы. Дополнительные сведения см. в разделе [устранение рисков: путь нормализации](~/docs/framework/migration-guide/mitigation-path-normalization.md) и [устранение рисков: путь двоеточие проверяет](~/docs/framework/migration-guide/mitigation-path-colon-checks.md).|.NET Framework 4.6.2|  
 |`Switch.System.`<br/>`MemberDescriptorEqualsReturnsFalseIfEquivalent`|Управляет ли тест для проверки равенства сравнивает <xref:System.ComponentModel.MemberDescriptor.Category%2A?displayProperty=nameWithType> свойства одного объекта с <xref:System.ComponentModel.MemberDescriptor.Description%2A?displayProperty=nameWithType> свойство второго объекта. Дополнительные сведения см. в разделе [неправильная реализация MemberDescriptor.Equals](~/docs/framework/migration-guide/retargeting/4.6.1-4.6.2.md#incorrect-implementation-of-memberdescriptorequals).|.NET Framework 4.6.2|  
- `Switch.System.Net.`<br/>`DontCheckCertificateEKUs`|Отключает сертификата проверки идентификатор (OID) расширенного использования ключа (EKU) объектов. Расширение расширенного использования ключа (EKU) — это коллекция идентификаторов объектов (OID), которые указывают приложения, использующие ключ.|.NET Framework 4.6|
+ `Switch.System.Net.`<br/>`DontCheckCertificateEKUs`|Отключает сертификата проверки идентификатор (OID) расширенного использования ключа (EKU) объектов. Расширение расширенного использования ключа (EKU) — это коллекция идентификаторов объекта (OID), которые указывают приложения, использующие ключ.|.NET Framework 4.6|
 |`Switch.System.Net.`<br/>`DontEnableSchSendAuxRecord`|Отключает уменьшение TLS1.0 браузера воспользоваться для SSL/TLS (BEAST), отключив использование SCH_SEND_AUX_RECORD.|.NET Framework 4.6|
 |`Switch.System.Net.`<br/>`DontEnableSchUseStrongCrypto`|Элементы управления ли <xref:System.Net.ServicePointManager?displayProperty=nameWithType> и <xref:System.Net.Security.SslStream?displayProperty=nameWithType> классы могут использовать протокол SSL 3.0. Дополнительные сведения см. в разделе [Устранение рисков. Протоколы TLS](~/docs/framework/migration-guide/mitigation-tls-protocols.md).|.NET Framework 4.6|
 |`Switch.System.Net.`<br/>`DontEnableSystemDefaultTlsVersions`|Отключает SystemDefault TLS версии, вернитесь к Tls12, Tls11, Tls значение по умолчанию.|.NET Framework 4.7|
@@ -100,10 +101,13 @@ ms.lasthandoff: 04/09/2018
 |`Switch.System.ServiceModel.`<br/>`AllowUnsignedToHeader`|Определяет, является ли `TransportWithMessageCredential` режим безопасности позволяет сообщения с неподписанным заголовок «to». Это коммутатору включаемая пользователем. Дополнительные сведения см. в разделе [изменения среды выполнения в .NET Framework 4.6.1](https://msdn.microsoft.com/library/mt592686.aspx#WCF).|.NET Framework 4.6.1| 
 |`Switch.System.ServiceModel.`<br/>`DisableAddressHeaderCollectionValidation`>|Элементы управления ли <xref:System.ServiceModel.Channels.AddressHeaderCollection.%23ctor(System.Collections.Generic.IEnumerable{System.ServiceModel.Channels.AddressHeader})> вызывает конструктор <xref:System.ArgumentException> Если один из элементов `null`.|.NET Framework 4.7.1| 
 |`Switch.System.ServiceModel.`<br />`DisableCngCertificates`|Определяет ли попытка использовать X509 сертификаты с помощью поставщика хранилища ключей CSG возникло исключение. Дополнительные сведения см. в разделе [безопасности транспорта WCF поддерживает сертификаты, сохраненных с помощью CNG](~/docs/framework/migration-guide/retargeting/4.6.1-4.6.2.md#wcf-transport-security-supports-certificates-stored-using-cng).|.NET Framework 4.6.1|
+|`Switch.System.ServiceModel.`<br/>`DisableExplicitConnectionCloseHeader`|При использовании транспорта HTTP с резидентной службы, установка этого значения в `true` заставляет игнорировать Добавление приложения WCF `Connection: close` заголовок, чтобы заголовки ответа для запроса. Установка этого значения в `false` включает добавление `Connection: close` заголовок, чтобы заголовки ответа, что приводит к закрытие сокета запроса после отправки ответа.|.NET Framework 4.6|
 |`Switch.System.ServiceModel.`<br/>`DisableOperationContextAsyncFlow`|Обрабатывает взаимоблокировок, возникающие в результате ограничение экземпляров реентерабельным службы к одному потоку за раз.|.NET Framework 4.6.2|
 |`Switch.System.ServiceModel.`<br/>`DisableUsingServicePointManagerSecurityProtocols`|Вместе с `Switch.System.Net.DontEnableSchUseStrongCrypto`, определяет, используется ли безопасность сообщений WCF TLS 1.1 и TLS 1.2.|.NET Framework 4.7 |    
+|`Switch.System.ServiceModel.`<br/>`DontEnableSystemDefaultTlsVersions`|Значение `false` задает конфигурацию по умолчанию, чтобы разрешить операционной системе для выбора протокола. Значение `true` задаются наибольший протокола, доступного по умолчанию. (Также доступно для обслуживания ветвь из предыдущей версии framework)|.NET Framework 4.7.1|
 |`Switch.System.ServiceModel.`<br/>`UseSha1InMsmqEncryptionAlgorithm`|Определяет, является ли сообщение по умолчанию алгоритм для сообщения MSMQ в WCF подписи SHA1 или SHA256.|.NET Framework 4.7.1|
 |`Switch.System.ServiceModel.`<br/>`UseSha1InPipeConnectionGetHashAlgorithm`|Определяет, использует ли WCF, SHA1 или хэш SHA256 для формирования случайных имен для именованных каналов.|.NET Framework 4.7.1|
+|`Switch.System.ServiceModel.Internals`<br/>`IncludeNullExceptionMessageInETWTrace`|Определяет, будет ли выбрасываться [NullReferenceException](xref:System.NullReferenceException) при сообщении об исключении имеет значение null.|.NET Framework 4.7|  
 |`Switch.System.ServiceProcess.`<br/>`DontThrowExceptionsOnStart`|Определяет, распространяются ли исключения, возникшие при запуске службы вызывающему объекту <xref:System.ServiceProcess.ServiceBase.Run%2A?displayProperty=nameWithType> метод.|.NET Framework 4.7.1|
 |`Switch.System.Windows.Controls.Grid.`<br/>`StarDefinitionsCanExceedAvailableSpace` |Определяет, применяется ли Windows Presentation Foundation старый алгоритм (`true`) или новый алгоритм (`false`) в выделение пространства для \*-столбцов. Дополнительные сведения см. в статье [Mitigation: Grid Control's Space Allocation to Star-columns](Mitigation:%20Grid%20Control's%20Space%20Allocation%20to%20Star-columns.md) (Устранение рисков. Выделение пространства элемента управления "сетка" для столбцов со звездочкой). |.NET Framework 4.7 |
 |`Switch.System.Windows.Controls.TabControl.`<br/>`SelectionPropertiesCanLagBehindSelectionChangedEvent`|Событие изменения ли селектора или вкладку управления всегда обновляет значение свойства выбранное значение перед созданием Выбор элементов управления.|.NET Framework 4.7.1|

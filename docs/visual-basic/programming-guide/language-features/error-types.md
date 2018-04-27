@@ -1,11 +1,12 @@
 ---
-title: "Типы ошибок (Visual Basic)"
-ms.custom: 
+title: Типы ошибок (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - exceptions, types
@@ -16,20 +17,20 @@ helpviewer_keywords:
 - run-time errors [Visual Basic], types of errors
 - syntax errors [Visual Basic], Visual Basic
 ms.assetid: 3048aabf-8c97-4e13-9150-853769cb5f6f
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: e01ed588d284a475a537a5fcf5ca506d25ca69f1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 2b3cf1307f54a5c902bf8e6379c8760c735a45e4
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="error-types-visual-basic"></a>Типы ошибок (Visual Basic)
-В [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], ошибок (также называемый *исключения*) делятся на три категории: синтаксические ошибки, ошибки времени выполнения и логические ошибки.  
+В Visual Basic, ошибок (также называемый *исключения*) делятся на три категории: синтаксические ошибки, ошибки времени выполнения и логические ошибки.  
   
 ## <a name="syntax-errors"></a>Синтаксические ошибки  
- *Синтаксические ошибки* являются те, которые отображаются во время написания кода. [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]проверяет код при вводе в **редактор кода** окна и оповещает пользователя в случае ошибки, например неправильное написание слова или неправильное использование элемента языка. Синтаксические ошибки являются наиболее распространенным типом ошибки. Их легко исправить в среде кодирования по мере их появления.  
+ *Синтаксические ошибки* являются те, которые отображаются во время написания кода. Visual Basic проверяет код при вводе в **редактор кода** окна и оповещает пользователя в случае ошибки, например неправильное написание слова или неправильное использование элемента языка. Синтаксические ошибки являются наиболее распространенным типом ошибки. Их легко исправить в среде кодирования по мере их появления.  
   
 > [!NOTE]
 >  `Option Explicit` Инструкция является одним из средств предотвращения синтаксических ошибок. Он заставляет можно объявить, заранее, все переменные для использования в приложении. Таким образом Если эти переменные используются в коде, опечатки немедленно обнаруживаются и могут быть исправлены.  

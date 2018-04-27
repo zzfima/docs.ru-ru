@@ -1,27 +1,29 @@
 ---
-title: "Развертывание приложений WPF"
-ms.custom: 
+title: Развертывание приложений WPF
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - WPF applications [WPF], deployment
 - deployment [WPF], applications
 ms.assetid: 12cadca0-b32c-4064-9a56-e6a306dcc76d
-caps.latest.revision: "27"
+caps.latest.revision: 27
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7cf0c5383728648d46427ce8fe2f5a97a736ab00
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 3beb8ee0869384f9f453023fe549b2339c126898
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="deploying-a-wpf-application-wpf"></a>Развертывание приложений WPF
 После сборки приложений [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] их необходимо развернуть. [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] и [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)] поддерживают несколько технологий развертывания. Технология развертывания, используемая для развертывания приложения [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], зависит от типа приложения. Этот раздел содержит краткое описание каждой из технологий развертывания и их использования в сочетании с требованиями к развертыванию для каждого типа приложения [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].  
@@ -93,7 +95,7 @@ ms.lasthandoff: 01/19/2018
   
  Дополнительные сведения о безопасности приложений [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] см. в разделе [Безопасность](../../../../docs/framework/wpf/security-wpf.md).  
   
- Страницы [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], содержащие только разметку, можно устанавливать в локальной файловой системе с помощью XCopy или [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)]. Эти страницы можно просматривать с помощью [!INCLUDE[TLA2#tla_iegeneric](../../../../includes/tla2sharptla-iegeneric-md.md)] или проводника [!INCLUDE[TLA2#tla_mswin](../../../../includes/tla2sharptla-mswin-md.md)].  
+ Страницы [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], содержащие только разметку, можно устанавливать в локальной файловой системе с помощью XCopy или [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)]. Эти страницы можно просматривать с помощью [!INCLUDE[TLA2#tla_iegeneric](../../../../includes/tla2sharptla-iegeneric-md.md)] или из проводника Windows.  
   
  Дополнительные сведения о XAML см. в разделе [Общие сведения о языке XAML](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md).  
   
@@ -124,7 +126,7 @@ ms.lasthandoff: 01/19/2018
   
 <a name="Installing__NET_Framework_3_0"></a>   
 ## <a name="installing-the-net-framework"></a>Установка .NET Framework  
- Для запуска приложения [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] необходимо установить на клиент платформу [!INCLUDE[TLA#tla_winfx](../../../../includes/tlasharptla-winfx-md.md)]. [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)] автоматически проверяет, установлена ли платформа [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)] на клиентском компьютере при просмотре браузерных приложений [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]. Если платформа [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)] не установлена, [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)] предлагает пользователю установить ее.  
+ Для запуска [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] приложения Microsoft .NET Framework, которые должны устанавливаться на клиентском компьютере. [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)] автоматически проверяет, установлена ли платформа [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)] на клиентском компьютере при просмотре браузерных приложений [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]. Если платформа [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)] не установлена, [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)] предлагает пользователю установить ее.  
   
  Для проверки наличия [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)] в браузере [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)] содержится приложение начальной загрузки, которое зарегистрировано в качестве резервного обработчика [!INCLUDE[TLA#tla_mime](../../../../includes/tlasharptla-mime-md.md)] для файлов содержимого со следующими расширениями: XAML, XPS, XBAP и APPLICATION. Если при попытке открыть файлы данных типов платформа [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)] не установлена на клиенте, приложение начальной загрузки запрашивает разрешение на его установку. Если разрешение не предоставляется, платформа [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)] и приложение не устанавливаются.  
   

@@ -20,11 +20,11 @@ ms.assetid: b86f3131-94ee-448f-96cd-79611e028b26
 caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: dae47988e27ed4b1a714943ce1fbffe3b815066b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 7c32ce34dc7d6cb662ebdb42a3d3431f8107687f
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="operators-and-expressions-in-visual-basic"></a>Операторы и выражения в Visual Basic
 *Оператор* представляет собой элемент кода, который выполняет операцию с одним элементом кода или несколькими, содержащими значения. К элементам значений относятся переменные, константы, литералы, свойства, возвращаемые значения из процедур `Function` и `Operator`, а также выражения.  
@@ -32,7 +32,7 @@ ms.lasthandoff: 11/21/2017
  *Выражение* представляет собой набор элементов значений в сочетании с операторами, результатом которого является новое значение. Операторы работают с элементами значений, выполняя вычисления, сравнения и другие операции.  
   
 ## <a name="types-of-operators"></a>Типы операторов  
- В [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] доступны следующие типы операторов:  
+ Visual Basic предоставляет следующие типы операторов:  
   
 -   [Арифметические операторы](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md) выполняют обычные вычисления с числовыми значениями, включая сдвиг их битовых шаблонов.  
   
@@ -69,7 +69,7 @@ ms.lasthandoff: 11/21/2017
   
  [!code-vb[VbVbalrOperators#56](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/index_1.vb)]  
   
- В приведенном выше примере [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] выполняет операции, содержащиеся в выражении из правой части оператора присваивания (`=`), а затем присваивает результирующее значение переменной `x` в левой части. С практической точки зрения в выражение можно объединять сколько угодно операторов, но следует учитывать [приоритет операторов в Visual Basic](../../../../visual-basic/language-reference/operators/operator-precedence.md) для получения желаемых результатов.  
+ В предыдущем примере, Visual Basic выполняет операции в выражении справа от оператора присваивания (`=`), затем присваивает результат переменной `x` в левой части экрана. С практической точки зрения в выражение можно объединять сколько угодно операторов, но следует учитывать [приоритет операторов в Visual Basic](../../../../visual-basic/language-reference/operators/operator-precedence.md) для получения желаемых результатов.  
   
  Дополнительные сведения и примеры см. в разделе [Перегрузка операторов в Visual Basic 2005](http://go.microsoft.com/fwlink/?LinkId=101703).  
   

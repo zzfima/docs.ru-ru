@@ -19,11 +19,11 @@ ms.assetid: a178f85b-5d54-438f-8479-40b62af6fe76
 caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 0f3c42b5134b058c010ca4c7a5ee7c24627c65fe
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 1dc5fe1addb089f3de9b4d5054f34a578b491fb0
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="xml-descendant-axis-property-visual-basic"></a>Свойство дочерней оси XML (Visual Basic)
 Предоставляет доступ к потомкам из следующих: <xref:System.Xml.Linq.XElement> объекта, <xref:System.Xml.Linq.XDocument> объекта, коллекции <xref:System.Xml.Linq.XElement> объекты или коллекции <xref:System.Xml.Linq.XDocument> объектов.  
@@ -36,21 +36,21 @@ object...<descendant>
   
 ## <a name="parts"></a>Части  
  `object`  
- Обязательный. Объект <xref:System.Xml.Linq.XElement>, объект <xref:System.Xml.Linq.XDocument>, коллекция объектов <xref:System.Xml.Linq.XElement> или коллекция объектов <xref:System.Xml.Linq.XDocument>.  
+ Обязательно. Объект <xref:System.Xml.Linq.XElement>, объект <xref:System.Xml.Linq.XDocument>, коллекция объектов <xref:System.Xml.Linq.XElement> или коллекция объектов <xref:System.Xml.Linq.XDocument>.  
   
  ...<  
- Обязательный. Обозначает начало свойства дочерней оси.  
+ Обязательно. Обозначает начало свойства дочерней оси.  
   
  `descendant`  
- Обязательный. Имя узлов-потомков для доступа к формы [`prefix``:`]`name`.  
+ Обязательно. Имя узлов-потомков для доступа к формы [`prefix``:`]`name`.  
   
 |Отделение|Описание|  
 |----------|-----------------|  
-|`prefix`|Необязательно. Префикс пространства имен XML для дочернего узла. Должно быть глобальным пространством имен XML, который определен с помощью `Imports` инструкции.|  
-|`name`|Обязательный. Локальное имя узлов-потомков. В разделе [имена объявленных элементов и атрибутов](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md).|  
+|`prefix`|Необязательный. Префикс пространства имен XML для дочернего узла. Должно быть глобальным пространством имен XML, который определен с помощью `Imports` инструкции.|  
+|`name`|Обязательно. Локальное имя узлов-потомков. В разделе [имена объявленных элементов и атрибутов](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md).|  
   
  \>  
- Обязательный. Обозначает конец свойства дочерней оси.  
+ Обязательно. Обозначает конец свойства дочерней оси.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
  Коллекция объектов <xref:System.Xml.Linq.XElement>.  
@@ -58,7 +58,7 @@ object...<descendant>
 ## <a name="remarks"></a>Примечания  
  Свойство дочерней оси XML можно использовать для доступа к узлам-потомкам по имени из <xref:System.Xml.Linq.XElement> или <xref:System.Xml.Linq.XDocument> объекта, или из коллекции <xref:System.Xml.Linq.XElement> или <xref:System.Xml.Linq.XDocument> объектов. Используйте XML `Value` свойства для доступа к значению первого дочернего узла в возвращаемой коллекции. Дополнительные сведения см. в разделе [свойство значения XML](../../../visual-basic/language-reference/xml-axis/xml-value-property.md).  
   
- [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] Компилятор преобразует свойства дочерней оси в вызовы <xref:System.Xml.Linq.XContainer.Descendants%2A> метод.  
+ Компилятор Visual Basic преобразует свойства дочерней оси в вызовы <xref:System.Xml.Linq.XContainer.Descendants%2A> метод.  
   
 ## <a name="xml-namespaces"></a>Пространства имен XML  
  Имя в свойстве дочерней оси может использовать только пространства имен XML, объявленные глобально с помощью `Imports` инструкции. Он не может использовать пространства имен XML, объявленные локально с помощью литералов XML-элемента. Дополнительные сведения см. в разделе [оператор Imports (пространство имен XML)](../../../visual-basic/language-reference/statements/imports-statement-xml-namespace.md).  

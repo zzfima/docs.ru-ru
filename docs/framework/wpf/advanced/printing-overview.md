@@ -1,12 +1,13 @@
 ---
-title: "Общие сведения о печати"
-ms.custom: 
+title: Общие сведения о печати
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -22,19 +23,20 @@ helpviewer_keywords:
 - XPSDrv-based printers
 - GDI print path [WPF]
 ms.assetid: 0de8ac41-9aa6-413d-a121-7aa6f41539b1
-caps.latest.revision: "35"
+caps.latest.revision: 35
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 91ccf1f98d9e1e2f5784246cf30995b689a0b94b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 9a36589ca670892398b4d6bb171e79a07060d458
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="printing-overview"></a>Общие сведения о печати
-В [!INCLUDE[TLA#tla_winfx](../../../../includes/tlasharptla-winfx-md.md)] разработчики приложений, использующие [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)], получают новый широкий набор [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)] печати и управления печатью. В [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)] некоторые из усовершенствований управления печатью также доступны для разработчиков, создающих приложения [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)], и разработчиков, использующих неуправляемый код. В основе этой новой функциональности лежит новый формат файла [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] и способ печати [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)].  
+В Microsoft .NET Framework, разработчики приложений с помощью [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] имеют новый набор печати и управление системой [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)]. В [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)] некоторые из усовершенствований управления печатью также доступны для разработчиков, создающих приложения [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)], и разработчиков, использующих неуправляемый код. В основе этой новой функциональности лежит новый формат файла [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] и способ печати [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)].  
   
  В этом разделе содержатся следующие подразделы.  
   
@@ -46,11 +48,11 @@ ms.lasthandoff: 12/22/2017
   
 <a name="XPS_print_path_intro"></a>   
 ## <a name="xps-print-path"></a>Способ печати XPS  
- Способ печати [!INCLUDE[TLA#tla_metro](../../../../includes/tlasharptla-metro-md.md)] — это новый компонент [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)], который переопределяет способ обработки печати в приложениях [!INCLUDE[TLA2#tla_mswin](../../../../includes/tla2sharptla-mswin-md.md)]. Поскольку [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] может заменить язык представления документов (например, RTF), формат очереди печати (например, WMF) и язык описания страницы (например, PCL или Postscript), новый способ печати поддерживает формат [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] от публикации приложения до последней обработки в драйвере печати или устройстве печати.  
+ [!INCLUDE[TLA#tla_metro](../../../../includes/tlasharptla-metro-md.md)] Печати пути — это новая [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] компонент, который переопределяет как печать обрабатывается в приложениях Windows. Поскольку [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] может заменить язык представления документов (например, RTF), формат очереди печати (например, WMF) и язык описания страницы (например, PCL или Postscript), новый способ печати поддерживает формат [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] от публикации приложения до последней обработки в драйвере печати или устройстве печати.  
   
  Способ печати [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] построен на основе модели драйвера печати [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] (XPSDrv), которая предоставляет разработчикам различные преимущества, такие как печать [!INCLUDE[TLA#tla_wys](../../../../includes/tlasharptla-wys-md.md)], улучшенная поддержка цвета и значительно повышенная производительность печати. (Дополнительные сведения о XPSDrv см в [пакете разработки драйверов Windows ](https://msdn.microsoft.com/library/windows/hardware/ff557573.aspx).)  
   
- Очередь печати принтера для документов [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] функционирует в основном так же, как в предыдущих версиях [!INCLUDE[TLA2#tla_mswin](../../../../includes/tla2sharptla-mswin-md.md)]. Однако она была усовершенствована для поддержки способа печати [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] в дополнение к существующему способу печати [!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)]. Новый способ печати использует файл очереди [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)]. Хотя драйверы принтеров пользовательского режима, написанные для предыдущих версий [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)], будут продолжать работать, [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] для использования способа печати [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] необходим драйвер принтера (XPSDrv).  
+ Операция диспетчера очереди печати для [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] документы по существу одинакова как в предыдущих версиях Windows. Однако она была усовершенствована для поддержки способа печати [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] в дополнение к существующему способу печати [!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)]. Новый способ печати использует файл очереди [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)]. Хотя драйверы принтеров пользовательского режима, написанные для предыдущих версий [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)], будут продолжать работать, [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] для использования способа печати [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] необходим драйвер принтера (XPSDrv).  
   
  Преимущества способа печати [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] являются существенными и включают следующее.  
   
@@ -155,6 +157,6 @@ ms.lasthandoff: 12/22/2017
  <xref:System.Printing.PrintQueue>  
  [Разделы практического руководства](../../../../docs/framework/wpf/advanced/printing-how-to-topics.md)  
  [Документы в WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
- [РАСШИРЕННЫЕ ХРАНИМЫЕ ПРОЦЕДУРЫ](http://www.microsoft.com/xps)  
+ [XPS](http://www.microsoft.com/xps)  
  [Сериализация и хранение документов](../../../../docs/framework/wpf/advanced/document-serialization-and-storage.md)  
  [Microsoft XPS-документов преобразователь (MXDC)](https://msdn.microsoft.com/library/windows/desktop/ff686803.aspx)

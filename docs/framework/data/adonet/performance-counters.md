@@ -1,27 +1,29 @@
 ---
-title: "Счетчики производительности в ADO.NET"
-ms.custom: 
+title: Счетчики производительности в ADO.NET
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 0b121b71-78f8-4ae2-9aa1-0b2e15778e57
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 9843d5c5edfc5ea590e4e6d0e5474a7d817e0ba6
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: a36e552392f887cd4e0f6dfac822c87f08a90af7
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="performance-counters-in-adonet"></a>Счетчики производительности в ADO.NET
 В ADO.NET 2.0 появилась расширенная поддержка счетчиков производительности, включая поддержку как <xref:System.Data.SqlClient>, так и <xref:System.Data.OracleClient>. Счетчики производительности <xref:System.Data.SqlClient> предыдущих версий ADO.NET устарели и заменены новыми счетчиками производительности, которые рассматриваются в этом разделе. Счетчики производительности ADO.NET можно использовать для контроля состояния приложения и используемых им ресурсов соединения. Показания счетчиков производительности можно отслеживать с помощью системного монитора Windows или получить к ним доступ программным путем с помощью класса <xref:System.Diagnostics.PerformanceCounter> в пространстве имен <xref:System.Diagnostics>.  
@@ -66,7 +68,7 @@ ms.lasthandoff: 01/19/2018
  В следующем приложении командной строки показан способ получения значений счетчиков производительности. Чтобы возвратить данные для всех счетчиков производительности ADO.NET, соединения должны быть открыты и активны.  
   
 > [!NOTE]
->  В этом примере используется образец **AdventureWorks** базы данных, входящий в состав [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]. Строка соединения, представленная в образце кода, предполагает, что база данных установлена и доступна на локальном компьютере с именем экземпляра SqlExpress, и что созданы имена входа SQL Server, соответствующие представленным в строках соединения. Имена входа SQL Server придется создать, если сервер использует параметры безопасности по умолчанию, разрешающие только проверку подлинности Windows. При необходимости измените строки соединения, чтобы они соответствовали среде.  
+>  В этом примере используется образец **AdventureWorks** базы данных в SQL Server. Строка соединения, представленная в образце кода, предполагает, что база данных установлена и доступна на локальном компьютере с именем экземпляра SqlExpress, и что созданы имена входа SQL Server, соответствующие представленным в строках соединения. Имена входа SQL Server придется создать, если сервер использует параметры безопасности по умолчанию, разрешающие только проверку подлинности Windows. При необходимости измените строки соединения, чтобы они соответствовали среде.  
   
 ### <a name="example"></a>Пример  
   

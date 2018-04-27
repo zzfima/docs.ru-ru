@@ -1,13 +1,13 @@
 ---
-title: "Пример. Наследование элементов управления форм Windows Forms с помощью Visual Basic"
-ms.custom: 
+title: Пример. Наследование элементов управления форм Windows Forms с помощью Visual Basic
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-winforms
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - vb
@@ -18,20 +18,20 @@ helpviewer_keywords:
 - inheritance [Windows Forms], walkthroughs
 - custom controls [Windows Forms], inheritance
 ms.assetid: fb58d7c8-b702-4478-ad31-b00cae118882
-caps.latest.revision: 
+caps.latest.revision: 16
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: b165de0d18cede275dfe8405b0266c1a909ac570
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 342ab60d4c3481d2154293fab9fb1254f937a934
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic"></a>Пример. Наследование элементов управления форм Windows Forms с помощью Visual Basic
-С помощью [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] можно создавать эффективные настраиваемые элементы управления путем *наследования*. Наследование позволяет создавать элементы управления, сохраняющие все унаследованные функциональные возможности элементов управления Windows Forms и в то же время обладающие дополнительными функциями. В этом пошаговом руководстве вы создадите простой производный элемент управления с именем `ValueButton`. Эта кнопка наследует функциональные возможности стандартных форм Windows <xref:System.Windows.Forms.Button> управления и предоставляет настраиваемое свойство `ButtonValue`.  
+С помощью Visual Basic можно создавать эффективные пользовательские элементы управления *наследования*. Наследование позволяет создавать элементы управления, сохраняющие все унаследованные функциональные возможности элементов управления Windows Forms и в то же время обладающие дополнительными функциями. В этом пошаговом руководстве вы создадите простой производный элемент управления с именем `ValueButton`. Эта кнопка наследует функциональные возможности стандартных форм Windows <xref:System.Windows.Forms.Button> управления и предоставляет настраиваемое свойство `ButtonValue`.  
   
 > [!NOTE]
 >  Отображаемые диалоговые окна и команды меню могут отличаться от описанных в справке в зависимости от текущих параметров или выпуска. Чтобы изменить параметры, выберите в меню **Сервис** пункт **Импорт и экспорт параметров** . Дополнительные сведения см. в статье [Настройка параметров разработки в Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
@@ -43,7 +43,7 @@ ms.lasthandoff: 01/19/2018
   
 1.  В меню **Файл** наведите указатель мыши на пункт **Создать** и выберите **Проект**, чтобы открыть диалоговое окно **Создание проекта**.  
   
-2.  В списке проектов [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] выберите шаблон проекта **Библиотека элементов управления Windows Forms** и введите `ValueButtonLib` в поле **Имя**.  
+2.  Выберите **Библиотека элементов управления Windows Forms** шаблон проекта из списка проектов Visual Basic, а также тип `ValueButtonLib` в **имя** поле.  
   
      Имя проекта, `ValueButtonLib`, по умолчанию также назначается корневому пространству имен. Корневое пространство имен используется для определения имен компонентов в сборке. Например, если в двух сборках содержатся компоненты с именем `ValueButton`, можно указать компонент `ValueButton`, используя `ValueButtonLib.ValueButton`. Дополнительные сведения см. в разделе [Пространства имен в Visual Basic](~/docs/visual-basic/programming-guide/program-structure/namespaces.md).  
   
@@ -107,7 +107,7 @@ ms.lasthandoff: 01/19/2018
   
 1.  В меню **Файл** наведите указатель мыши на пункт **Добавить** и выберите **Проект**, чтобы открыть диалоговое окно **Добавление нового проекта**.  
   
-2.  Выберите узел проектов [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] и щелкните **Приложение Windows Forms**.  
+2.  Выберите узел проектов Visual Basic и нажмите кнопку **приложение Windows Forms**.  
   
 3.  В поле **Имя** введите `Test`.  
   

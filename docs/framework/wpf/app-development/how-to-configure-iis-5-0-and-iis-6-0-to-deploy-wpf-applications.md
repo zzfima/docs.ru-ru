@@ -1,12 +1,13 @@
 ---
-title: "Практическое руководство. Настройка служб IIS 5.0 и IIS 6.0 для развертывания приложений WPF"
-ms.custom: 
+title: Практическое руководство. Настройка служб IIS 5.0 и IIS 6.0 для развертывания приложений WPF
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - MIME types [WPF], registering
@@ -20,16 +21,17 @@ helpviewer_keywords:
 - file extensions [WPF], registering
 - registering MIME types [WPF]
 ms.assetid: c6e8c2cb-9ba2-4e75-a0d5-180ec9639433
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 3ab1d7223299697a4be10ba5b35bc90b120603d7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 5c1b03cf39608566ed80e2288204480e77994ad7
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-configure-iis-50-and-iis-60-to-deploy-wpf-applications"></a>Практическое руководство. Настройка служб IIS 5.0 и IIS 6.0 для развертывания приложений WPF
 Приложение [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] можно разворачивать с большинства веб-серверов при условии, что они настроены с соответствующими типами [!INCLUDE[TLA#tla_mime](../../../../includes/tlasharptla-mime-md.md)]. По умолчанию [!INCLUDE[TLA#tla_iis70](../../../../includes/tlasharptla-iis70-md.md)] настроена с типами [!INCLUDE[TLA2#tla_mime](../../../../includes/tla2sharptla-mime-md.md)], в отличие от [!INCLUDE[TLA#tla_iis50](../../../../includes/tlasharptla-iis50-md.md)] и [!INCLUDE[TLA#tla_iis60](../../../../includes/tlasharptla-iis60-md.md)].  
@@ -68,9 +70,9 @@ ms.lasthandoff: 12/22/2017
 |.xps|application/vnd.ms-xpsdocument|  
   
 > [!NOTE]
->  В клиентских системах регистрация типов [!INCLUDE[TLA2#tla_mime](../../../../includes/tla2sharptla-mime-md.md)] или расширений файлов не требуется. Они регистрируются автоматически при установке [!INCLUDE[TLA#tla_winfx](../../../../includes/tlasharptla-winfx-md.md)].  
+>  В клиентских системах регистрация типов [!INCLUDE[TLA2#tla_mime](../../../../includes/tla2sharptla-mime-md.md)] или расширений файлов не требуется. Они регистрируются автоматически при установке Microsoft .NET Framework.  
   
- В следующем примере кода [!INCLUDE[TLA#tla_visualbscrpt](../../../../includes/tlasharptla-visualbscrpt-md.md)] в [!INCLUDE[TLA2#tla_iis5](../../../../includes/tla2sharptla-iis5-md.md)] автоматически добавляются необходимые типы [!INCLUDE[TLA2#tla_mime](../../../../includes/tla2sharptla-mime-md.md)]. Чтобы использовать скрипт, скопируйте код в VBS-файл на своем сервере. Затем выполните скрипт, запустив файл из командной строки или дважды щелкнув этот файл в [!INCLUDE[TLA#tla_winexpl](../../../../includes/tlasharptla-winexpl-md.md)].  
+ В следующем примере Microsoft Visual Basic Scripting Edition (VBScript) автоматически добавляет необходимые [!INCLUDE[TLA2#tla_mime](../../../../includes/tla2sharptla-mime-md.md)] типы [!INCLUDE[TLA2#tla_iis5](../../../../includes/tla2sharptla-iis5-md.md)]. Чтобы использовать скрипт, скопируйте код в VBS-файл на своем сервере. Затем выполните скрипт, запустив файл из командной строки или дважды щелкнув этот файл в [!INCLUDE[TLA#tla_winexpl](../../../../includes/tlasharptla-winexpl-md.md)].  
   
 ```  
 ' This script adds the necessary Windows Presentation Foundation MIME types   

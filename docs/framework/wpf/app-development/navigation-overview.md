@@ -1,12 +1,13 @@
 ---
-title: "Общие сведения о переходах"
-ms.custom: 
+title: Общие сведения о переходах
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -31,19 +32,20 @@ helpviewer_keywords:
 - programmatic navigation [WPF]
 - hyperlinks [WPF]
 ms.assetid: 86ad2143-606a-4e34-bf7e-51a2594248b8
-caps.latest.revision: "69"
+caps.latest.revision: 69
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 3a3b7d865a503189ebb5b3adadc7258603461c9b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 07609671d061851e6ede2f2bd90e4bee38e43159
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="navigation-overview"></a>Общие сведения о переходах
-[!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]поддерживает навигацию в стиле браузера, можно использовать в двух типов приложений: автономных приложений и [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)]. Пакет содержимого для переходов [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] предоставляет <xref:System.Windows.Controls.Page> класса. Можно переходить от одного <xref:System.Windows.Controls.Page> в другой декларативно с помощью <xref:System.Windows.Documents.Hyperlink>, или программно, с помощью <xref:System.Windows.Navigation.NavigationService>. [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] использует журнал, чтобы запоминать страницы, с которых был осуществлен переход, и чтобы переходить к ним обратно.  
+[!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] поддерживает навигацию в стиле браузера, можно использовать в двух типов приложений: автономных приложений и [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)]. Пакет содержимого для переходов [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] предоставляет <xref:System.Windows.Controls.Page> класса. Можно переходить от одного <xref:System.Windows.Controls.Page> в другой декларативно с помощью <xref:System.Windows.Documents.Hyperlink>, или программно, с помощью <xref:System.Windows.Navigation.NavigationService>. [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] использует журнал, чтобы запоминать страницы, с которых был осуществлен переход, и чтобы переходить к ним обратно.  
   
  <xref:System.Windows.Controls.Page>, <xref:System.Windows.Documents.Hyperlink>, <xref:System.Windows.Navigation.NavigationService>, и журнал формируют основу для поддержки навигации, предоставляемых [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]. В этом обзоре рассматриваются подробные сведения об этих функциях перед описанием расширенной поддержки переходов, включает переход к свободные [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] файлы, [!INCLUDE[TLA#tla_html](../../../../includes/tlasharptla-html-md.md)] файлы и объекты.  
   
@@ -118,7 +120,7 @@ ms.lasthandoff: 12/22/2017
   
 -   В коде программной части, класс должен быть `partial` класс с тем же именем, который задается параметром `x:Class` атрибута в разметке и он должен быть производным от <xref:System.Windows.Controls.Page>. Это позволяет файл кода должны быть связаны с `partial` класс, который будет создан для файла разметки при построении приложения (см. [построение приложения WPF](../../../../docs/framework/wpf/app-development/building-a-wpf-application-wpf.md)).  
   
--   В коде программной части <xref:System.Windows.Controls.Page> класс должен реализовывать конструктор, который вызывает `InitializeComponent` метод. `InitializeComponent`реализуется разметки созданный файл, `partial` класса для регистрации событий и задания свойств, которые определены в разметке.  
+-   В коде программной части <xref:System.Windows.Controls.Page> класс должен реализовывать конструктор, который вызывает `InitializeComponent` метод. `InitializeComponent` реализуется разметки созданный файл, `partial` класса для регистрации событий и задания свойств, которые определены в разметке.  
   
 > [!NOTE]
 >  При добавлении нового <xref:System.Windows.Controls.Page> в проект, использующий [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)], <xref:System.Windows.Controls.Page> реализуется с помощью разметки и кода программной части, и включает необходимую конфигурацию для создания связи между файлы разметки и кода по мере описанные здесь.  
@@ -215,7 +217,7 @@ ms.lasthandoff: 12/22/2017
 [!code-xaml[NavigationOverviewSnippets#PageThatNavigatesXAML3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/PageThatNavigatesToFragment.xaml#pagethatnavigatesxaml3)]  
   
 > [!NOTE]
->  Этот раздел описывает реализацию переходов фрагмента по умолчанию в [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]. [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]также позволяет реализовать собственную схему навигации фрагмент, который частично требует обработки <xref:System.Windows.Navigation.NavigationService.FragmentNavigation?displayProperty=nameWithType> событий.  
+>  Этот раздел описывает реализацию переходов фрагмента по умолчанию в [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]. [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] также позволяет реализовать собственную схему навигации фрагмент, который частично требует обработки <xref:System.Windows.Navigation.NavigationService.FragmentNavigation?displayProperty=nameWithType> событий.  
   
 > [!IMPORTANT]
 >  Можно перейти к фрагменту свободных [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] страниц (только для разметки [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] файлы с `Page` как корневой элемент) только в том случае, если страницы можно просмотреть с помощью [!INCLUDE[TLA2#tla_http](../../../../includes/tla2sharptla-http-md.md)].  
@@ -276,7 +278,7 @@ ms.lasthandoff: 12/22/2017
  [!code-csharp[NavigationOverviewSnippets#NSNavigationPageCODEBEHIND](../../../../samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/NSNavigationPage.xaml.cs#nsnavigationpagecodebehind)]
  [!code-vb[NavigationOverviewSnippets#NSNavigationPageCODEBEHIND](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/NavigationOverviewSnippets/VisualBasic/NSNavigationPage.xaml.vb#nsnavigationpagecodebehind)]  
   
- При <xref:System.Windows.Documents.Hyperlink> в данном <xref:System.Windows.Controls.Page> — нажатии навигации инициируется путем создания экземпляра <xref:System.Windows.Controls.Page> для перехода с помощью конструктора не по умолчанию и вызов <xref:System.Windows.Navigation.NavigationService.Navigate%2A?displayProperty=nameWithType> метод. <xref:System.Windows.Navigation.NavigationService.Navigate%2A>Представляет ссылку на объект, <xref:System.Windows.Navigation.NavigationService> , произойдет переход, а не является пакетом [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)].  
+ При <xref:System.Windows.Documents.Hyperlink> в данном <xref:System.Windows.Controls.Page> — нажатии навигации инициируется путем создания экземпляра <xref:System.Windows.Controls.Page> для перехода с помощью конструктора не по умолчанию и вызов <xref:System.Windows.Navigation.NavigationService.Navigate%2A?displayProperty=nameWithType> метод. <xref:System.Windows.Navigation.NavigationService.Navigate%2A> Представляет ссылку на объект, <xref:System.Windows.Navigation.NavigationService> , произойдет переход, а не является пакетом [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)].  
   
 #### <a name="programmatic-navigation-with-a-pack-uri"></a>Программный переход с URI типа pack  
  Если необходимо создать пакет [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] программным образом (если только определения пакета [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] во время выполнения, например), можно использовать <xref:System.Windows.Navigation.NavigationService.Navigate%2A?displayProperty=nameWithType> метода. Эти действия показаны в следующем примере.  
@@ -338,7 +340,7 @@ ms.lasthandoff: 12/22/2017
   
 -   <xref:System.Windows.Application.FragmentNavigation?displayProperty=nameWithType>  
   
- Каждый раз <xref:System.Windows.Navigation.NavigationService> вызывает событие <xref:System.Windows.Application> класс вызывает соответствующее событие. <xref:System.Windows.Controls.Frame>и <xref:System.Windows.Navigation.NavigationWindow> обеспечивают те же события, для обнаружения навигации в своих областях.  
+ Каждый раз <xref:System.Windows.Navigation.NavigationService> вызывает событие <xref:System.Windows.Application> класс вызывает соответствующее событие. <xref:System.Windows.Controls.Frame> и <xref:System.Windows.Navigation.NavigationWindow> обеспечивают те же события, для обнаружения навигации в своих областях.  
   
  В некоторых случаях <xref:System.Windows.Controls.Page> могут быть заинтересованы эти события. Например <xref:System.Windows.Controls.Page> может обрабатывать <xref:System.Windows.Navigation.NavigationService.Navigating?displayProperty=nameWithType> событие, чтобы определить необходимость отмены перехода с текущей страницы. Эти действия показаны в следующем примере.  
   
@@ -455,7 +457,7 @@ ms.lasthandoff: 12/22/2017
   
 3.  <xref:System.Windows.Controls.Page> Переход назад к.  
   
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]автоматически использует эту поддержку при использовании следующих элементов управления на <xref:System.Windows.Controls.Page>:  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] автоматически использует эту поддержку при использовании следующих элементов управления на <xref:System.Windows.Controls.Page>:  
   
 -   <xref:System.Windows.Controls.CheckBox>  
   
@@ -513,13 +515,13 @@ ms.lasthandoff: 12/22/2017
   
  Ниже перечислены некоторые из способов, которые поддерживаются файлы cookie в [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]:  
   
--   [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]Автономные приложения и [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] можно создавать и управлять файлы cookie.  
+-   [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Автономные приложения и [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] можно создавать и управлять файлы cookie.  
   
 -   Файлы cookie, которые создаются путем [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] можно получить из браузера.  
   
 -   [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] из одного домена могут создавать и совместно использовать файлы cookie.  
   
--   [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]и [!INCLUDE[TLA2#tla_html](../../../../includes/tla2sharptla-html-md.md)] страницы из того же домена можно создавать и совместно использовать файлы cookie.  
+-   [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] и [!INCLUDE[TLA2#tla_html](../../../../includes/tla2sharptla-html-md.md)] страницы из того же домена можно создавать и совместно использовать файлы cookie.  
   
 -   Файлы cookie отправляются при [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] и свободные [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] выполнение страницы веб-запросов.  
   
@@ -537,15 +539,15 @@ ms.lasthandoff: 12/22/2017
   
 <a name="The_NavigationWindow_Class"></a>   
 ## <a name="the-navigationwindow-class"></a>Класс NavigationWindow  
- К этому моменту мы рассмотрели целый ряд служб переходов, которые с наибольшей вероятностью будут использоваться для построения приложений с содержимым, допускающим переходы. Эти службы обсуждались в контексте [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)], несмотря на то, что они не ограничиваются [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]. Операционные системы и [!INCLUDE[TLA2#tla_mswin](../../../../includes/tla2sharptla-mswin-md.md)] приложений воспользоваться преимуществами опыт работы современных пользователей для включения переходов в стиле браузера в автономные приложения. Вот наиболее распространенные примеры.  
+ К этому моменту мы рассмотрели целый ряд служб переходов, которые с наибольшей вероятностью будут использоваться для построения приложений с содержимым, допускающим переходы. Эти службы обсуждались в контексте [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)], несмотря на то, что они не ограничиваются [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]. Воспользуйтесь преимуществами опыт работы современных пользователей для включения переходов в стиле браузера в автономные приложения, современных операционных систем и приложений Windows. Вот наиболее распространенные примеры.  
   
 -   **Тезаурус**: переход по вариантам слов.  
   
 -   **Обозреватель файлов**: переход по файлам и папкам.  
   
--   **Мастеры**: разбиение сложной задачи на несколько страниц, по которым можно перемещаться. Пример — мастер компонентов Windows, который обрабатывает добавление и удаление [!INCLUDE[TLA2#tla_mswin](../../../../includes/tla2sharptla-mswin-md.md)] функции.  
+-   **Мастеры**: разбиение сложной задачи на несколько страниц, по которым можно перемещаться. Например, мастер компонентов Windows, который обрабатывает добавление и удаление компонентов Windows.  
   
- Для включения переходов в стиле браузера в автономные приложения, можно использовать <xref:System.Windows.Navigation.NavigationWindow> класса. <xref:System.Windows.Navigation.NavigationWindow>является производным от <xref:System.Windows.Window> и расширяет его с такой же поддержкой навигации, [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] предоставить. Можно использовать <xref:System.Windows.Navigation.NavigationWindow> как главное окно автономного приложения или как дополнительное окно, например диалоговое окно.  
+ Для включения переходов в стиле браузера в автономные приложения, можно использовать <xref:System.Windows.Navigation.NavigationWindow> класса. <xref:System.Windows.Navigation.NavigationWindow> является производным от <xref:System.Windows.Window> и расширяет его с такой же поддержкой навигации, [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] предоставить. Можно использовать <xref:System.Windows.Navigation.NavigationWindow> как главное окно автономного приложения или как дополнительное окно, например диалоговое окно.  
   
  Для реализации <xref:System.Windows.Navigation.NavigationWindow>, как и в случае с классами самого верхнего уровня в [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] (<xref:System.Windows.Window>, <xref:System.Windows.Controls.Page>и так далее), используйте сочетание разметки и кода. Эти действия показаны в следующем примере.  
   
@@ -592,7 +594,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="Frame_in_Standalone_Applications"></a>   
 ## <a name="the-frame-class"></a>Класс Frame  
- Оба обозреватель и <xref:System.Windows.Navigation.NavigationWindow> — это окна, предоставляющие содержимое. В некоторых случаях приложения имеют содержимое, которое не обязательно должно размещаться в целом окне. Такое содержимое помещается внутрь другого содержимого. Можно вставить содержимое для навигации в другое содержимое с помощью <xref:System.Windows.Controls.Frame> класса. <xref:System.Windows.Controls.Frame>предоставляет такую же поддержку как <xref:System.Windows.Navigation.NavigationWindow> и [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)].  
+ Оба обозреватель и <xref:System.Windows.Navigation.NavigationWindow> — это окна, предоставляющие содержимое. В некоторых случаях приложения имеют содержимое, которое не обязательно должно размещаться в целом окне. Такое содержимое помещается внутрь другого содержимого. Можно вставить содержимое для навигации в другое содержимое с помощью <xref:System.Windows.Controls.Frame> класса. <xref:System.Windows.Controls.Frame> предоставляет такую же поддержку как <xref:System.Windows.Navigation.NavigationWindow> и [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)].  
   
  Следующий пример демонстрирует добавление <xref:System.Windows.Controls.Frame> для <xref:System.Windows.Controls.Page> декларативно с помощью `Frame` элемента.  
   
@@ -633,7 +635,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="Navigation_Hosts"></a>   
 ## <a name="navigation-hosts"></a>Узлы переходов  
- <xref:System.Windows.Controls.Frame>и <xref:System.Windows.Navigation.NavigationWindow> являются классами, которые известны как узлы переходов. Объект *узла навигации* является классом, можно переходить к и отображения содержимого. Чтобы добиться этого, каждый узел навигации используется собственная <xref:System.Windows.Navigation.NavigationService> и журнала. На следующем рисунке показана основная структура узла переходов.  
+ <xref:System.Windows.Controls.Frame> и <xref:System.Windows.Navigation.NavigationWindow> являются классами, которые известны как узлы переходов. Объект *узла навигации* является классом, можно переходить к и отображения содержимого. Чтобы добиться этого, каждый узел навигации используется собственная <xref:System.Windows.Navigation.NavigationService> и журнала. На следующем рисунке показана основная структура узла переходов.  
   
  ![Схемы перехода](../../../../docs/framework/wpf/app-development/media/navigationoverviewfigure15.png "NavigationOverviewFigure15")  
   
@@ -738,7 +740,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="Security"></a>   
 ## <a name="security"></a>Безопасность  
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]Поддержка навигации позволяет [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] осуществлять переходы через Интернет, а также позволяет приложениям для размещения содержимого сторонних разработчиков. Для защиты приложений и пользователей от опасных изменений [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] предоставляет широкий набор функций безопасности, которые рассматриваются в [безопасности](../../../../docs/framework/wpf/security-wpf.md) и [Безопасность частичного доверия WPF](../../../../docs/framework/wpf/wpf-partial-trust-security.md).  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Поддержка навигации позволяет [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] осуществлять переходы через Интернет, а также позволяет приложениям для размещения содержимого сторонних разработчиков. Для защиты приложений и пользователей от опасных изменений [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] предоставляет широкий набор функций безопасности, которые рассматриваются в [безопасности](../../../../docs/framework/wpf/security-wpf.md) и [Безопасность частичного доверия WPF](../../../../docs/framework/wpf/wpf-partial-trust-security.md).  
   
 ## <a name="see-also"></a>См. также  
  <xref:System.Windows.Application.SetCookie%2A>  

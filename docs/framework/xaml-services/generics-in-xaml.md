@@ -1,34 +1,34 @@
 ---
-title: "Универсальные шаблоны в XAML"
-ms.custom: 
+title: Универсальные шаблоны в XAML
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-wpf
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - generics [XAML Services]
 ms.assetid: 835bfed7-585c-4216-ae67-b674edab8b92
-caps.latest.revision: 
+caps.latest.revision: 8
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: c0e5bfb4f327028f09e8c898cf07e5fec9a5f789
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e64224edcb49d5040332b7cef9649c98cf26798b
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="generics-in-xaml"></a>Универсальные шаблоны в XAML
 Служб .NET Framework XAML, как он реализован в сборке System.Xaml обеспечивает поддержку с помощью универсальных типов среды CLR. Эта поддержка включает Указание ограничений универсальных типов в качестве аргумента типа и применение ограничения путем вызова соответствующего `Add` метод для универсальных коллекций. В этом разделе описываются аспекты использования и ссылки на универсальных типов в XAML.  
   
 ## <a name="xtypearguments"></a>x: TypeArguments  
- `x:TypeArguments`является директивой, определенной в языке XAML. Когда она используется в качестве члена типа XAML, универсальный тип, поддерживаемый `x:TypeArguments` передает аргументы универсального резервному конструктору типов ограничений. Для синтаксиса ссылки, относящиеся к службами XAML .NET Framework использование `x:TypeArguments`, включая примеры синтаксиса см. в разделе [директива x: TypeArguments](../../../docs/framework/xaml-services/x-typearguments-directive.md).  
+ `x:TypeArguments` является директивой, определенной в языке XAML. Когда она используется в качестве члена типа XAML, универсальный тип, поддерживаемый `x:TypeArguments` передает аргументы универсального резервному конструктору типов ограничений. Для синтаксиса ссылки, относящиеся к службами XAML .NET Framework использование `x:TypeArguments`, включая примеры синтаксиса см. в разделе [директива x: TypeArguments](../../../docs/framework/xaml-services/x-typearguments-directive.md).  
   
  Поскольку `x:TypeArguments` принимает строку и обладает резервированием преобразователя типов, обычно он объявляется в использовании XAML как атрибут.  
   
@@ -53,7 +53,7 @@ ms.lasthandoff: 12/22/2017
   
  В WPF и предназначенных для [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], можно использовать возможности XAML 2009 вместе с `x:TypeArguments`, но только для свободного XAML (XAML, который не является компилированной разметки). Скомпилированный с разметкой XAML и форма BAML кода XAML в настоящее время не поддерживают ключевые слова и компоненты XAML 2009.  
   
- Пользовательские рабочие процессы в [!INCLUDE[TLA#tla_workflow](../../../includes/tlasharptla-workflow-md.md)] для [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] не поддерживают универсальное использование XAML.  
+ Пользовательские рабочие процессы в Windows Workflow Foundation для [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] не поддерживают универсальное использование XAML.  
   
 ## <a name="see-also"></a>См. также  
  [Директива x:TypeArguments](../../../docs/framework/xaml-services/x-typearguments-directive.md)  

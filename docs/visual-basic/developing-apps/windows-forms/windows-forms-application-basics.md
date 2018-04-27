@@ -1,25 +1,26 @@
 ---
-title: "Основы разработки приложений Windows Forms (Visual Basic)"
+title: Основы разработки приложений Windows Forms (Visual Basic)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - Windows applications
 - Windows Forms, Visual Basic
 ms.assetid: 0b919d30-7fd6-42db-85c8-543d15312441
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 7872d3c7b19ec9cd7059cccf41e5fab50d85123b
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: aaa7fbd679eceea53a673646173dc14dc4f209bc
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="windows-forms-application-basics-visual-basic"></a>Основы разработки приложений Windows Forms (Visual Basic)
-Важной частью [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] является возможность создания приложений Windows Forms, выполняемых локально на пользовательских компьютерах. Visual Studio можно использовать для создания приложений и пользовательский интерфейс, с помощью Windows Forms. Приложение Windows Forms строится на основе классов из <xref:System.Windows.Forms> пространства имен.  
+Важной частью Visual Basic является возможность создания приложений Windows Forms, выполняемых локально на пользовательских компьютерах. Visual Studio можно использовать для создания приложений и пользовательский интерфейс, с помощью Windows Forms. Приложение Windows Forms строится на основе классов из <xref:System.Windows.Forms> пространства имен.  
   
 ## <a name="designing-windows-forms-applications"></a>Приложения проектирование Windows Forms  
  Можно создать в Windows Forms и приложения служб Windows с [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]. Дополнительные сведения см. в следующих разделах:  
@@ -52,9 +53,9 @@ ms.lasthandoff: 01/19/2018
   
 |Кому|См.|  
 |--------|---------|  
-|Создайте новое приложение Windows Forms с помощью[!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]|[Пошаговое руководство: Создание простого Windows Form](http://msdn.microsoft.com/library/2d9daec0-0543-41d0-acb1-964f685bddbb)|  
+|Создайте новое приложение Windows Forms с помощью [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]|[Пошаговое руководство: Создание простого Windows Form](http://msdn.microsoft.com/library/2d9daec0-0543-41d0-acb1-964f685bddbb)|  
 |Использование элементов управления в формах|[Практическое руководство. Добавление элементов управления в формы Windows Forms](../../../framework/winforms/controls/how-to-add-controls-to-windows-forms.md)|   
-|Создание рисунков с помощью<xref:System.Drawing>|[Приступая к программированию графики](../../../framework/winforms/advanced/getting-started-with-graphics-programming.md)|  
+|Создание рисунков с помощью <xref:System.Drawing>|[Приступая к программированию графики](../../../framework/winforms/advanced/getting-started-with-graphics-programming.md)|  
 |Создание пользовательских элементов управления|[Практическое руководство. Наследование класса UserControl](../../../framework/winforms/controls/how-to-inherit-from-the-usercontrol-class.md)|  
   
 ## <a name="displaying-and-manipulating-data"></a>Отображение и обработка данных  
@@ -77,19 +78,19 @@ ms.lasthandoff: 01/19/2018
 |Используйте окно "Источники данных"|[Пошаговое руководство. Отображение данных на форме в приложении Windows](/visualstudio/data-tools/accessing-data-in-visual-studio)|  
   
 ## <a name="deploying-applications-to-client-computers"></a>Развертывание приложений на клиентских компьютерах  
- После написания приложения необходимо отправить его пользователям, чтобы они могли установить и запустить его на своих клиентских компьютерах. С помощью [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] технологии, можно развернуть приложение из среды [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] с помощью всего нескольких щелчков и предоставлять пользователям URL-адрес приложения в Интернете. [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)]управляет всеми элементами и зависимостями в приложении и гарантирует, что приложение правильно установлен на клиентском компьютере.  
+ После написания приложения необходимо отправить его пользователям, чтобы они могли установить и запустить его на своих клиентских компьютерах. С помощью [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] технологии, можно развернуть приложение из среды [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] с помощью всего нескольких щелчков и предоставлять пользователям URL-адрес приложения в Интернете. [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] управляет всеми элементами и зависимостями в приложении и гарантирует, что приложение правильно установлен на клиентском компьютере.  
   
  Приложения [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] можно настроить так, чтобы они работали только при подключении к сети или как в сетевом, так и в автономном режиме. При указании, что приложение должно поддерживать работу в автономном режиме, [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] добавляет ссылку на приложение в каталоге пользователя **запустить** меню, чтобы пользователь смог открыть его без использования URL-адрес.  
   
- Когда вы обновляете приложение, на веб-сервере публикуется новый манифест развертывания и новая копия приложения. [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)]обнаруживает, что доступно обновление и обновляет пользовательскую установку. для обновления старых сборок написание специального требуется.  
+ Когда вы обновляете приложение, на веб-сервере публикуется новый манифест развертывания и новая копия приложения. [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] обнаруживает, что доступно обновление и обновляет пользовательскую установку. для обновления старых сборок написание специального требуется.  
   
  Общие сведения о [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] можно найти в разделе [Развертывание и безопасность технологии ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment). Пошаговые инструкции по использованию этих функций см. в следующих разделах справки:  
   
 |Кому|См.|  
 |--------|---------|  
-|Развертывание приложения с[!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)]|[Практическое руководство. Публикация приложения ClickOnce с помощью мастера публикации](/visualstudio/deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard)<br /><br /> [Разбор примера: развертывание вручную приложения ClickOnce](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)|  
+|Развертывание приложения с [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)]|[Практическое руководство. Публикация приложения ClickOnce с помощью мастера публикации](/visualstudio/deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard)<br /><br /> [Разбор примера: развертывание вручную приложения ClickOnce](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)|  
 |Обновление [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] развертывания|[Практическое руководство. Управление обновлениями для ClickOnce-приложения](/visualstudio/deployment/how-to-manage-updates-for-a-clickonce-application)|  
-|Управление безопасностью с[!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)]|[Практическое руководство. Включение параметров безопасности ClickOnce-приложений](/visualstudio/deployment/how-to-enable-clickonce-security-settings)|  
+|Управление безопасностью с [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)]|[Практическое руководство. Включение параметров безопасности ClickOnce-приложений](/visualstudio/deployment/how-to-enable-clickonce-security-settings)|  
   
 ## <a name="other-controls-and-features"></a>Другие элементы управления и возможности  
  В Windows Forms имеется множество других возможностей, которые упрощают и ускоряют реализацию общих задач, таких как создание диалоговых окон, печать, добавление справки и документации, а также локализация приложений на различных языках. Кроме того, Windows Forms применяется эффективная система безопасности [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)], что позволяет более надежные приложения для ваших клиентов.  

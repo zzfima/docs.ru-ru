@@ -1,30 +1,31 @@
 ---
-title: "Задача 1. Создание нового приложения Windows Presentation Foundation"
-ms.custom: 
+title: Задача 1. Создание нового приложения Windows Presentation Foundation
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 270eaeba-9492-4532-af9f-403ce5c9935b
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a207b09ff7124bb161678627f365a6fa4021a38d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: cd21013331e19fa9e18ad7cbee0a7bb07abaf3d2
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="task-1-create-a-new-windows-presentation-foundation-application"></a>Задача 1. Создание нового приложения Windows Presentation Foundation
-В данной задаче необходимо создать пустое приложение [!INCLUDE[avalon1](../../../includes/avalon1-md.md)], используя шаблон WPF Application Visual Studio, и добавить ссылки на соответствующие сборки рабочего процесса [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)].  
+В этой задаче будет создания пустого приложения Windows Presentation Foundation (WPF), используя шаблон WPF Application Visual Studio и добавить ссылки на соответствующие [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] сборки рабочего процесса.  
   
 ### <a name="to-create-the-wpf-application-project"></a>Создание проекта приложения WPF  
   
-1.  Откройте [!INCLUDE[vs_current_short](../../../includes/vs-current-short-md.md)] и на **файл** последовательно выберите пункты **New**, а затем нажмите кнопку **проекта**.  
+1.  Откройте Visual Studio и на **файл** последовательно выберите пункты **New**, а затем нажмите кнопку **проекта**.  
   
 2.  В **новый проект** диалогового окна выберите либо **Visual C#** или **Visual Basic** из **установленные шаблоны** на левой стороне панели поле. Если язык не отображается, разверните узел **другие языки**.  
   
@@ -36,7 +37,7 @@ ms.lasthandoff: 12/22/2017
   
 6.  Задайте имя решения **RehostingTheDesigner**.  
   
-7.  Нажмите кнопку **ОК** Создание проекта приложения. [!INCLUDE[vs_current_short](../../../includes/vs-current-short-md.md)] создает основной пользовательский интерфейс WPF для приложения и включает в него соответствующий XAML и файлы с фоновым кодом.  
+7.  Нажмите кнопку **ОК** Создание проекта приложения. Visual Studio создает основной пользовательский Интерфейс WPF для приложения и включает в него соответствующий XAML и файлы кода.  
   
 8.  Добавьте ссылки на **WorkflowModel** сборки. Для этого в **обозревателе решений**, щелкните правой кнопкой мыши **HostingApplication** проект и выберите **добавить ссылку**.  
   

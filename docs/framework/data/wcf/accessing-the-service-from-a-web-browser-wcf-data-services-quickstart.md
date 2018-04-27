@@ -1,30 +1,32 @@
 ---
-title: "Доступ к службе из веб-браузера (краткое руководство по службе данных WCF)"
-ms.custom: 
+title: Доступ к службе из веб-браузера (краткое руководство по службе данных WCF)
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework-oob
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 5a6fa180-3094-4e6e-ba2b-8c80975d18d1
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 71beb254bf258da97207f14afca73cd68c6927ca
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: c9ae96facd79ae3d268c630ff7bf8adf411eb775
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="accessing-the-service-from-a-web-browser-wcf-data-services-quickstart"></a>Доступ к службе из веб-браузера (краткое руководство по службе данных WCF)
-В этой задаче необходимо запустить [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] из [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] и отключить чтение потока в веб-браузере. Вам будет затем извлечем документ определения службы а также доступ к ресурсам службы данных, отправляя запросы HTTP GET через веб-браузер к предоставляемым ресурсам.  
+В этой задаче мы запустим службы [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] из Visual Studio и дополнительно отключим чтение канала в веб-браузере. Вам будет затем извлечем документ определения службы а также доступ к ресурсам службы данных, отправляя запросы HTTP GET через веб-браузер к предоставляемым ресурсам.  
   
 > [!NOTE]
->  По умолчанию [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] автоматически задает номер порта URI `localhost` на локальном компьютере. В данной задаче в примерах URI используется порт номер `12345`. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]как задать конкретный номер порта вашей [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] проекта см. в разделе [Создание службы данных](../../../../docs/framework/data/wcf/creating-the-data-service.md).  
+>  По умолчанию Visual Studio автоматически приписывает для URI на компьютере номер порта `localhost`. В данной задаче в примерах URI используется порт номер `12345`. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] как задать конкретный номер порта, см. в разделе проекта в Visual Studio [Создание службы данных](../../../../docs/framework/data/wcf/creating-the-data-service.md).  
   
 ### <a name="to-request-the-default-service-document-by-using-internet-explorer"></a>Запрос сервисного документа по умолчанию с помощью Internet Explorer  
   
@@ -35,7 +37,7 @@ ms.lasthandoff: 12/22/2017
     > [!NOTE]
     >  Если браузер не может отобразить канал в виде необработанных XML-данных, его все равно можно просмотреть в виде исходного кода страницы.  
   
-2.  В [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] нажмите клавишу F5 для запуска отладки приложения.  
+2.  Нажмите в Visual Studio клавишу F5 для запуска отладки приложения.  
   
 3.  Откройте веб-браузер на локальном компьютере. В адресной строке введите следующий URI:  
   

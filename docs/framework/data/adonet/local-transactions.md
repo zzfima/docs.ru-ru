@@ -1,27 +1,29 @@
 ---
-title: "Локальные транзакции"
-ms.custom: 
+title: Локальные транзакции
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 8ae3712f-ef5e-41a1-9ea9-b3d0399439f1
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 3d7865675871bafb527bb9ee85de1f96e9847402
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: d56e2a978c3b9b58eadb946ee053721435c9f2d9
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="local-transactions"></a>Локальные транзакции
 В [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] транзакции используются для связи нескольких задач, чтобы они выполнялись как одно целое. Например, пусть приложение выполняет две задачи. Во-первых, оно заносит в таблицу сведения о заказе. Во-вторых, обновляет таблицу, содержащую список товаров на складе, списывая заказанные элементы. При сбое любой задачи, затем оба будет выполнен откат изменений.  
@@ -40,7 +42,7 @@ ms.lasthandoff: 01/17/2018
 > [!NOTE]
 >  Метод `EnlistDistributedTransaction` не должен использоваться для локальной транзакции.  
   
- Область действия транзакции ограничена соединением. В следующем примере выполняется явная транзакция, состоящая из двух отдельных команд в блоке `try`. Команды выполняют инструкции INSERT для таблицы Production.ScrapReason в образце базы данных [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] AdventureWorks, которые будут зафиксированы при отсутствии исключений. При возникновении исключения код в блоке `catch` произведет откат транзакции. При отмене транзакции или обрыве соединения до выполнения транзакции она откатывается автоматически.  
+ Область действия транзакции ограничена соединением. В следующем примере выполняется явная транзакция, состоящая из двух отдельных команд в блоке `try`. Команды выполняют инструкции INSERT для таблицы Production.ScrapReason в образце базы данных AdventureWorks в SQL Server, которые будут зафиксированы при отсутствии исключений. При возникновении исключения код в блоке `catch` произведет откат транзакции. При отмене транзакции или обрыве соединения до выполнения транзакции она откатывается автоматически.  
   
 ## <a name="example"></a>Пример  
  Чтобы осуществить транзакцию, выполните указанные ниже действия.  

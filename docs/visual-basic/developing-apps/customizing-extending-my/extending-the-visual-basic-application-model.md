@@ -11,11 +11,11 @@ ms.assetid: e91d3bed-4c27-40e3-871d-2be17467c72c
 caps.latest.revision: 21
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 15e6ea1a8b2df0b8ed1b84abceee9e6be2c556f9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 5ffd882c2a1d04c29483d380e972d6ce70bdb5c4
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="extending-the-visual-basic-application-model"></a>Расширение модели приложения Visual Basic
 Можно добавить функциональные возможности модели приложения путем переопределения `Overridable` члены <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> класса. Этот метод позволяет настроить поведение модели приложения и добавлять вызовы собственных методов, как приложение запускается и завершает работу.  
@@ -25,11 +25,11 @@ ms.lasthandoff: 11/21/2017
   
  Приведенный ниже рисунок показывает последовательность вызовов модели приложения в обычных приложениях Windows Forms Visual Basic. Последовательность начинается, когда `Sub Main` вызовы процедур <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Run%2A> метод.  
   
- ![Модель приложения Visual Basic &#45; &#45; Запустите](../../../visual-basic/developing-apps/customizing-extending-my/media/vb_modelrun.gif "VB_ModelRun")  
+ ![Модель приложения Visual Basic &#45; &#45; запуска](../../../visual-basic/developing-apps/customizing-extending-my/media/vb_modelrun.gif "VB_ModelRun")  
   
  Модель приложения Visual Basic также предоставляет <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.StartupNextInstance> и <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UnhandledException> события. На следующем рисунке показан механизм возникновения этих событий.  
   
- ![Модель приложения Visual Basic &#45; &#45; Затем экземпляр](../../../visual-basic/developing-apps/customizing-extending-my/media/vb_modelnext.gif "VB_ModelNext")  
+ ![Модель приложения Visual Basic &#45; &#45; Далее экземпляра](../../../visual-basic/developing-apps/customizing-extending-my/media/vb_modelnext.gif "VB_ModelNext")  
   
  ![Необработанное исключение модели приложения Visual Basic](../../../visual-basic/developing-apps/customizing-extending-my/media/vb_unhandex.gif "VB_UnhandEx")  
   
@@ -46,11 +46,11 @@ ms.lasthandoff: 11/21/2017
   
     1.  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.ShowSplashScreen%2A>. Определяет, имеет ли приложение заставку и если это так, отображает заставку в отдельном потоке.  
   
-         <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.ShowSplashScreen%2A> Метод содержит код, отображающий splash экрана для по крайней мере указанного числа миллисекунд <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.MinimumSplashScreenDisplayTime%2A> свойство. Для применения этих функциональных возможностей, необходимо добавить экран-заставка приложения с помощью **конструктора проектов** (которая задает `My.Application.MinimumSplashScreenDisplayTime` свойство две секунды), или задать `My.Application.MinimumSplashScreenDisplayTime` свойства в методе, который переопределяет <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnInitialize%2A> или <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateSplashScreen%2A> метод. Для получения дополнительной информации см. <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.MinimumSplashScreenDisplayTime%2A>.  
+         <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.ShowSplashScreen%2A> Метод содержит код, отображающий splash экрана для по крайней мере указанного числа миллисекунд <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.MinimumSplashScreenDisplayTime%2A> свойство. Для применения этих функциональных возможностей, необходимо добавить экран-заставка приложения с помощью **конструктора проектов** (которая задает `My.Application.MinimumSplashScreenDisplayTime` свойство две секунды), или задать `My.Application.MinimumSplashScreenDisplayTime` свойства в методе, который переопределяет <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnInitialize%2A> или <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateSplashScreen%2A> метод. Дополнительные сведения см. в разделе <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.MinimumSplashScreenDisplayTime%2A>.  
   
     2.  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateSplashScreen%2A>. Позволяет разработчику создавать код, который инициализирует экран-заставка.  
   
-         По умолчанию этот метод не выполняет никаких действий. Если выбрать экран-заставку для приложения в [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] **конструктора проектов**, конструктор переопределяет <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateSplashScreen%2A> метод с помощью метода, который задает <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.SplashScreen%2A> свойства новый экземпляр экрана заставки форма.  
+         По умолчанию этот метод не выполняет никаких действий. Если выбрать экран-заставку для приложения в Visual Basic **конструктора проектов**, конструктор переопределяет <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateSplashScreen%2A> метода, задает <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.SplashScreen%2A> свойства новый экземпляр формы экрана заставки .  
   
 2.  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnStartup%2A>. Предоставляет точку расширения для вызова `Startup` событий. Последовательность запуска приложения останавливается, если эта функция возвращает `False`.  
   
@@ -62,7 +62,7 @@ ms.lasthandoff: 11/21/2017
   
     1.  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateMainForm%2A>. Позволяет разработчику создавать код, который инициализирует главной формы.  
   
-         По умолчанию этот метод не выполняет никаких действий. Тем не менее, при выборе главной формы приложения в [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] **конструктора проектов**, конструктор переопределяет <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateMainForm%2A> метода, задает <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.MainForm%2A> свойство к новому экземпляру главной формы .  
+         По умолчанию этот метод не выполняет никаких действий. Тем не менее, при выборе главной формы приложения в Visual Basic **конструктора проектов**, конструктор переопределяет <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateMainForm%2A> метода, задает <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.MainForm%2A> свойство к новому экземпляру главной формы.  
   
     2.  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.HideSplashScreen%2A>. Если приложение имеет определенную заставку, и он открыт, этот метод закрывает экран-заставка.  
   
@@ -85,11 +85,11 @@ ms.lasthandoff: 11/21/2017
  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnStartupNextInstance(Microsoft.VisualBasic.ApplicationServices.StartupNextInstanceEventArgs)> Вызовы конструктора <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UseCompatibleTextRendering%2A> свойство, чтобы определить, какой механизм отрисовки текста для форм приложения. По умолчанию <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UseCompatibleTextRendering%2A> возвращает `False`, указывающее, что использовать механизм отрисовки текста GDI, которая используется по умолчанию в [!INCLUDE[vbprvblong](~/includes/vbprvblong-md.md)]. Можно переопределить <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UseCompatibleTextRendering%2A> возвращаемое свойство `True`, который указывает, что использовать механизм отрисовки текста GDI +, используемого по умолчанию в Visual Basic .NET 2002 и Visual Basic .NET 2003.  
   
 ## <a name="configuring-the-application"></a>Настройка приложения  
- В составе [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] модель приложения <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UseCompatibleTextRendering> класс предоставляет защищенные свойства для настройки приложения. Эти свойства должны быть установлены в конструкторе реализующего класса.  
+ В рамках модели приложения Visual Basic <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UseCompatibleTextRendering> класс предоставляет защищенные свойства для настройки приложения. Эти свойства должны быть установлены в конструкторе реализующего класса.  
   
  В проекте Windows Forms по умолчанию **конструктора проектов** создает код для задания свойств с параметрами конструктора. Свойства используются только при запуске приложения; Установка их после запуска приложения не имеет эффекта.  
   
-|Свойство|Определяет|На панели приложения в конструкторе проектов|  
+|Свойство.|Определяет|На панели приложения в конструкторе проектов|  
 |---|---|---|  
 |<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.IsSingleInstance%2A>|Выполняется ли приложение в одном или нескольких экземпляров приложения.|**Создать приложение одного экземпляра** флажок|  
 |<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.EnableVisualStyles%2A>|Если приложение будет использовать визуальные стили, которые соответствуют Windows XP.|**Включить визуальные стили XP** флажок|  

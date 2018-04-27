@@ -17,11 +17,11 @@ ms.assetid: 9eafb6a4-dd9d-4866-85e8-0654c65abc44
 caps.latest.revision: 16
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 906fd2494dd952c08088b9b7e38dba4505780481
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: e8dfc091409e060e20970b0b6d6bc19b4fc2aeea
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="xml-cdata-literal-visual-basic"></a>Литеральное представление XML-раздела CDATA (Visual Basic)
 Объект литерал, представляющий <xref:System.Xml.Linq.XCData> объекта.  
@@ -34,13 +34,13 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="parts"></a>Части  
  `<![CDATA[`  
- Обязательный. Обозначает начало раздела XML CDATA.  
+ Обязательно. Обозначает начало раздела XML CDATA.  
   
  `content`  
- Обязательный. Текст содержимого для отображения в разделе XML CDATA.  
+ Обязательно. Текст содержимого для отображения в разделе XML CDATA.  
   
  `]]>`  
- Обязательный. Обозначает конец раздела.  
+ Обязательно. Обозначает конец раздела.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
  Объект <xref:System.Xml.Linq.XCData>.  
@@ -55,9 +55,9 @@ ms.lasthandoff: 11/21/2017
  Можно присвоить переменной литеральное представление CDATA XML или включить ее в литерале XML-элемента.  
   
 > [!NOTE]
->  XML-литерал может занимать несколько строк, но не использует символы продолжения строки. Это позволяет скопировать содержимое из XML-документа и вставьте его непосредственно в [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] программы.  
+>  XML-литерал может занимать несколько строк, но не использует символы продолжения строки. Это позволяет скопировать содержимое из XML-документа и вставьте его непосредственно в программу Visual Basic.  
   
- [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] Компилятор преобразует литерала CDATA XML вызов <xref:System.Xml.Linq.XCData.%23ctor%2A> конструктор.  
+ Компилятор Visual Basic литерала CDATA XML преобразуется в вызов <xref:System.Xml.Linq.XCData.%23ctor%2A> конструктор.  
   
 ## <a name="example"></a>Пример  
  В следующем примере создается раздел CDATA, содержащий текст «может содержать литеральное \<XML > теги».  

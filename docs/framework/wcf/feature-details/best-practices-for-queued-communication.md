@@ -1,27 +1,29 @@
 ---
-title: "Рекомендации по взаимодействию с использованием очередей"
-ms.custom: 
+title: Рекомендации по взаимодействию с использованием очередей
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - queues [WCF], best practices
 - best practices [WCF], queued communication
 ms.assetid: 446a6383-cae3-4338-b193-a33c14a49948
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 8c701b608071ebd9e8c29881000db8dcd2634f56
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 3834f48c407f799fc5fede17182f47652f49747f
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="best-practices-for-queued-communication"></a>Рекомендации по взаимодействию с использованием очередей
 В этом разделе приведены рекомендации по взаимодействию с использованием очередей в [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. В последующих разделах рассматриваются рекомендации с точки зрения сценариев.  
@@ -31,7 +33,7 @@ ms.lasthandoff: 12/22/2017
   
  Дополнительно можно исключить затраты на запись на диск, задав для свойства <xref:System.ServiceModel.MsmqBindingBase.Durable%2A> значение `false`.  
   
- Безопасность влияет на производительность. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Вопросы производительности](../../../../docs/framework/wcf/feature-details/performance-considerations.md).  
+ Безопасность влияет на производительность. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Вопросы производительности](../../../../docs/framework/wcf/feature-details/performance-considerations.md).  
   
 ## <a name="reliable-end-to-end-queued-messaging"></a>Надежный сквозной обмен сообщениями с использованием очередей  
  В последующих разделах приводятся рекомендации для сценариев, требующих надежного сквозного обмена сообщениями.  
@@ -47,21 +49,21 @@ ms.lasthandoff: 12/22/2017
   
  Для сквозной надежности связи не рекомендуется выключать очереди недоставленных сообщений.  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Сбоев при передаче с использованием очередей недоставленных сообщений для обработки сообщения](../../../../docs/framework/wcf/feature-details/using-dead-letter-queues-to-handle-message-transfer-failures.md).  
+ [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Использование очередей недоставленных сообщений для обработки сбоев при передаче сообщений](../../../../docs/framework/wcf/feature-details/using-dead-letter-queues-to-handle-message-transfer-failures.md).  
   
 ### <a name="use-of-poison-message-handling"></a>Использование обработки подозрительных сообщений  
  Обработка подозрительных сообщений обеспечивает возможность восстановления после сбоя при обработке сообщений.  
   
  При использовании функции обработки подозрительных сообщений убедитесь, что для свойства <xref:System.ServiceModel.MsmqBindingBase.ReceiveErrorHandling%2A> задано подходящее значение. Если свойству присвоено значение <xref:System.ServiceModel.ReceiveErrorHandling.Drop>, это означает потерю данных. С другой стороны, значение <xref:System.ServiceModel.ReceiveErrorHandling.Fault> этого свойства вызывает сбой узла службы в случае обнаружения подозрительного сообщения. При использовании MSMQ 3.0 значение <xref:System.ServiceModel.ReceiveErrorHandling.Fault> - это наилучший способ избежать потери данных и избавиться от подозрительного сообщения. При использовании MSMQ 4.0 <xref:System.ServiceModel.ReceiveErrorHandling.Move> является рекомендуемым способом. Операция <xref:System.ServiceModel.ReceiveErrorHandling.Move> обеспечивает перемещение подозрительного сообщения из очереди, чтобы служба могла продолжать обрабатывать новые сообщения. Затем служба подозрительных сообщений может отдельно обработать подозрительное сообщение.  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Обработка подозрительных сообщений](../../../../docs/framework/wcf/feature-details/poison-message-handling.md).  
+ [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Обработка подозрительных сообщений](../../../../docs/framework/wcf/feature-details/poison-message-handling.md).  
   
 ## <a name="achieving-high-throughput"></a>Достижение высокой пропускной способности  
  Чтобы добиться высокой пропускной способности в одной конечной точке, используйте перечисленные ниже средства.  
   
--   Пакетирование с поддержкой транзакций. Пакетирование с поддержкой транзакций обеспечивает возможность чтения нескольких сообщений в одной транзакции. При этом оптимизируются фиксации транзакции, что повышает общую производительность. Недостаток пакетирования заключается в том, что при сбое в одном сообщении из пакета производится откат всего пакета, и сообщения требуется обрабатывать по одному до тех пор, пока не появится возможность снова объединять их в пакет. В большинстве случаев подозрительные сообщения встречаются редко, поэтому пакетирование - это предпочтительный способ повышения производительности системы, особенно при наличии других диспетчеров ресурсов, участвующих в транзакции. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Пакетной обработки сообщений в одну транзакцию](../../../../docs/framework/wcf/feature-details/batching-messages-in-a-transaction.md).  
+-   Пакетирование с поддержкой транзакций. Пакетирование с поддержкой транзакций обеспечивает возможность чтения нескольких сообщений в одной транзакции. При этом оптимизируются фиксации транзакции, что повышает общую производительность. Недостаток пакетирования заключается в том, что при сбое в одном сообщении из пакета производится откат всего пакета, и сообщения требуется обрабатывать по одному до тех пор, пока не появится возможность снова объединять их в пакет. В большинстве случаев подозрительные сообщения встречаются редко, поэтому пакетирование - это предпочтительный способ повышения производительности системы, особенно при наличии других диспетчеров ресурсов, участвующих в транзакции. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Пакетная обработка сообщений в одну транзакцию](../../../../docs/framework/wcf/feature-details/batching-messages-in-a-transaction.md).  
   
--   Параллелизм. Параллелизм увеличивает пропускную способность, однако при этом влияет на состязание за общие ресурсы. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Параллелизма](../../../../docs/framework/wcf/samples/concurrency.md).  
+-   Параллелизм. Параллелизм увеличивает пропускную способность, однако при этом влияет на состязание за общие ресурсы. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Параллелизм](../../../../docs/framework/wcf/samples/concurrency.md).  
   
 -   Регулирование. Для получения оптимальной производительности следует регулировать количество сообщений в конвейере диспетчера. Пример того, как это сделать см. в разделе [регулирование](../../../../docs/framework/wcf/samples/throttling.md).  
   
@@ -71,18 +73,18 @@ ms.lasthandoff: 12/22/2017
   
  При использовании ферм помните, что в MSMQ 3.0 удаленные чтения в транзакциях не поддерживаются. В MSMQ 4.0 удаленные чтения в транзакциях поддерживаются.  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Пакетной обработки сообщений в одну транзакцию](../../../../docs/framework/wcf/feature-details/batching-messages-in-a-transaction.md) и [различия в возможностях очередей в Windows Vista, Windows Server 2003 и Windows XP](../../../../docs/framework/wcf/feature-details/diff-in-queue-in-vista-server-2003-windows-xp.md).  
+ [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Пакетная обработка сообщений в одну транзакцию](../../../../docs/framework/wcf/feature-details/batching-messages-in-a-transaction.md) и [различия в возможностях очередей в Windows Vista, Windows Server 2003 и Windows XP](../../../../docs/framework/wcf/feature-details/diff-in-queue-in-vista-server-2003-windows-xp.md).  
   
 ## <a name="queuing-with-unit-of-work-semantics"></a>Организация очереди с семантикой единицы работы  
  В некоторых сценариях очередь может содержать группу связанных между собой сообщений, для которых важен их порядок. В таких сценариях группу связанных сообщений следует обрабатывать вместе как одну единицу: либо все сообщения успешно обрабатываются, либо ни одно из сообщений не обрабатывается. Чтобы реализовать такое поведение, используйте сеансы с очередями.  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Группирования сообщений из очереди в сеансе](../../../../docs/framework/wcf/feature-details/grouping-queued-messages-in-a-session.md).  
+ [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Группирование сообщений в очереди в сеансе](../../../../docs/framework/wcf/feature-details/grouping-queued-messages-in-a-session.md).  
   
 ## <a name="correlating-request-reply-messages"></a>Коррелирование сообщений типа «запрос-ответ»  
  Хотя очереди обычно являются однонаправленными, в некоторых сценариях может потребоваться корреляция полученного ответа с ранее переданным запросом. Если требуется такая корреляция, рекомендуется применять свой собственный заголовок сообщения SOAP, содержащий корреляционные сведения для сообщения. Обычно отправитель добавляет этот заголовок в сообщение, а получатель, после обработки сообщения и передачи нового ответного сообщения в очередь ответов, добавляет заголовок сообщения отправителя, содержащий корреляционную информацию, чтобы отправитель мог связать ответное сообщение с сообщением запроса.  
   
 ## <a name="integrating-with-non-wcf-applications"></a>Интеграция с приложениями, не являющимися приложениями WCF  
- При интеграции служб или клиентов `MsmqIntegrationBinding` со службами и клиентами, отличными от служб и клиентов [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], используйте [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Приложение, не являющееся приложением [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], может быть приложением MSMQ, написанным с использованием System.Messaging, COM+, [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] или C++.  
+ При интеграции служб или клиентов `MsmqIntegrationBinding` со службами и клиентами, отличными от служб и клиентов [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], используйте [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Не[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] приложение может быть приложением MSMQ, написанные с использованием System.Messaging, COM +, Visual Basic или C++.  
   
  При использовании `MsmqIntegrationBinding` помните следующее:  
   

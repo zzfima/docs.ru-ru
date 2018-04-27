@@ -1,12 +1,13 @@
 ---
-title: "Практическое руководство. Считывание и установка значения текущей ячейки элемента управления DataGridView в Windows Forms"
-ms.custom: 
+title: Практическое руководство. Считывание и установка значения текущей ячейки элемента управления DataGridView в Windows Forms
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-winforms
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -16,16 +17,17 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], setting current cell
 - cells [Windows Forms], getting and setting current
 ms.assetid: b0e41e57-493a-4bd0-9376-a6f76723540c
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 75f8a96b77ffcd40a51cf484f50032f7f2e44309
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: b53d135a1d019ce20dfc8c5c2c1ba59e5968306e
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-get-and-set-the-current-cell-in-the-windows-forms-datagridview-control"></a>Практическое руководство. Считывание и установка значения текущей ячейки элемента управления DataGridView в Windows Forms
 Взаимодействие с <xref:System.Windows.Forms.DataGridView> часто требуется программно найденные ячейки, которая в данный момент активна. Кроме того, может потребоваться изменить текущую ячейку. Можно выполнять эти задачи с <xref:System.Windows.Forms.DataGridView.CurrentCell%2A> свойство.  
@@ -52,7 +54,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="compiling-the-code"></a>Компиляция кода  
  Для этого примера требуются:  
   
--   <xref:System.Windows.Forms.Button>элементы управления с именем `getCurrentCellButton` и `setCurrentCellButton`. В [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)], необходимо присоединить <xref:System.Windows.Forms.Control.Click> событий для каждой кнопки в соответствующий обработчик событий в коде.  
+-   <xref:System.Windows.Forms.Button> элементы управления с именем `getCurrentCellButton` и `setCurrentCellButton`. В Visual C# необходимо присоединить <xref:System.Windows.Forms.Control.Click> событий для каждой кнопки в соответствующий обработчик событий в коде.  
   
 -   элемент управления <xref:System.Windows.Forms.DataGridView> с именем `dataGridView1`;  
   

@@ -17,11 +17,11 @@ ms.assetid: cef4f7f8-0011-4f64-8602-795077ad4f15
 caps.latest.revision: 19
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 9ce0f2d0dff80072beefdb4f84643ea28e2cf165
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 2d2df93a46d426358988b3ad7f3161c7ae0c7b9e
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="xml-processing-instruction-literal-visual-basic"></a>Литерал инструкции обработки XML (Visual Basic)
 Объект литерал, представляющий <xref:System.Xml.Linq.XProcessingInstruction> объекта.  
@@ -34,16 +34,16 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="parts"></a>Части  
  `<?`  
- Обязательный. Обозначает начало литерала инструкции обработки XML.  
+ Обязательно. Обозначает начало литерала инструкции обработки XML.  
   
  `piName`  
- Обязательный. Имя, указывающее, какое приложение инструкции обработки. Не может начинаться с «xml» или «XML».  
+ Обязательно. Имя, указывающее, какое приложение инструкции обработки. Не может начинаться с «xml» или «XML».  
   
  `piData`  
- Необязательно. Строка, указывающая, как приложение распространяется `piName` должен обрабатывать XML-документ.  
+ Необязательный. Строка, указывающая, как приложение распространяется `piName` должен обрабатывать XML-документ.  
   
  `?>`  
- Обязательный. Обозначает конец инструкции обработки.  
+ Обязательно. Обозначает конец инструкции обработки.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
  Объект <xref:System.Xml.Linq.XProcessingInstruction>.  
@@ -59,9 +59,9 @@ ms.lasthandoff: 11/21/2017
  Можно назначить литерал инструкции обработки XML переменной или включить ее в литерал XML-документа.  
   
 > [!NOTE]
->  XML-литерал может занимать несколько строк без использования символа продолжения строки. Это позволяет скопировать содержимое из XML-документа и вставьте его непосредственно в [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] программы.  
+>  XML-литерал может занимать несколько строк без использования символа продолжения строки. Это позволяет скопировать содержимое из XML-документа и вставьте его непосредственно в программу Visual Basic.  
   
- [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] Компилятор преобразует литерала инструкции обработки XML вызов <xref:System.Xml.Linq.XProcessingInstruction.%23ctor%2A> конструктор.  
+ Компилятор Visual Basic литерала инструкции обработки XML преобразуется в вызов <xref:System.Xml.Linq.XProcessingInstruction.%23ctor%2A> конструктор.  
   
 ## <a name="example"></a>Пример  
  В следующем примере создается определение таблицы стилей для XML-документ инструкцию по обработке.  

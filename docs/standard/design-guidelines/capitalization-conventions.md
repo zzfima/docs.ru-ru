@@ -1,12 +1,12 @@
 ---
-title: "Соглашения о написании прописными буквами"
-ms.custom: 
+title: Соглашения о написании прописными буквами
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - camel-case names [.NET Framework]
@@ -15,18 +15,18 @@ helpviewer_keywords:
 - case sensitivity, capitalization conventions
 - names [.NET Framework], capitalization
 ms.assetid: 4c4ea526-9203-486f-b72d-29d61c5b3c6d
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: b36f230c9a5f8653f3e252d26fe6464bb9cac4bb
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 248a787c8858d62e77725d159e9826fabfa37ee1
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="capitalization-conventions"></a>Соглашения о написании прописными буквами
 Правила, описанные в этой главе размещать простой способ проверки с помощью варианта, при применении единообразно идентификаторы делать для типов, членов и параметров, удобном для чтения.  
@@ -113,7 +113,7 @@ ms.lasthandoff: 12/23/2017
   
  *Фрагменты © 2005, 2009 корпорации Майкрософт. Все права защищены.*  
   
- *Перепечатываются разрешении Пирсона для образовательных учреждений, Inc. из [Framework рекомендации по проектированию: условные обозначения, стили и шаблоны для библиотеки .NET для повторного использования, 2-е издание](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina и Брэд Абрамс, опубликованные 22 октября 2008 г., Addison-Wesley Professional в составе ряда разработки Microsoft Windows.*  
+ *Перепечатываются разрешении Пирсона для образовательных учреждений, Inc. из [Framework рекомендации по проектированию: условные обозначения, стили и шаблоны для библиотеки .NET для повторного использования, 2-е издание](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina и Брэд Абрамс, опубликованные 22 октября 2008 г., Addison-Wesley Professional в составе ряда разработки Microsoft Windows.*  
   
 ## <a name="see-also"></a>См. также  
  [Рекомендации по проектированию на основе Framework](../../../docs/standard/design-guidelines/index.md)  

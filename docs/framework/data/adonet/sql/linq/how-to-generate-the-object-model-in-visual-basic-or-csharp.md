@@ -1,39 +1,41 @@
 ---
-title: "Практическое руководство. Создание модели объектов в Visual Basic или C#"
-ms.custom: 
+title: Практическое руководство. Создание модели объектов в Visual Basic или C#
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: a0c73b33-5650-420c-b9dc-f49310c201ee
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: ec28b175dddb98eb035061363dd6581e796280b3
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 77d7020a985abb8ed56af4fdd9f50a98bfc478c4
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-generate-the-object-model-in-visual-basic-or-c"></a>Практическое руководство. Создание модели объектов в Visual Basic или C# #
-В [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] объектная модель используемого языка программирования сопоставляется с реляционной базой данных. Доступны два средства для автоматического создания [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)] или модель C# из метаданных существующей базы данных.  
+В [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] объектная модель используемого языка программирования сопоставляется с реляционной базой данных. Для автоматического формирования модели Visual Basic или C# из метаданных существующей базы данных доступны два средства.  
   
--   При работе в среде [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] для создания объектной модели можно использовать [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]. [!INCLUDE[vs_ordesigner_short](../../../../../../includes/vs-ordesigner-short-md.md)] Предоставляет многофункциональный пользовательский интерфейс для создания [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] объектной модели. Дополнительные сведения см. в разделе [средства Linq to SQL в Visual Studio](https://docs.microsoft.com/en-us/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).
+-   Если вы используете Visual Studio, можно использовать [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] для создания модели объекта. [!INCLUDE[vs_ordesigner_short](../../../../../../includes/vs-ordesigner-short-md.md)] Предоставляет многофункциональный пользовательский интерфейс для создания [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] объектной модели. Дополнительные сведения см. в разделе [средства Linq to SQL в Visual Studio](https://docs.microsoft.com/en-us/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).
   
 -   Средство командной строки SQLMetal. Дополнительные сведения см. в разделе [SQLMetal.exe (средство создания кода)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md).  
   
     > [!NOTE]
     >  Если существующие базы данных отсутствуют и необходимо создать базу данных из объектной модели, можно создать объектную модель с помощью редактора кода и метода <xref:System.Data.Linq.DataContext.CreateDatabase%2A>. Дополнительные сведения см. в разделе [как: динамическое создание базы данных](../../../../../../docs/framework/data/adonet/sql/linq/how-to-dynamically-create-a-database.md).  
   
- Документация по [!INCLUDE[vs_ordesigner_short](../../../../../../includes/vs-ordesigner-short-md.md)] приводятся примеры создания [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)] или C# объектной модели с помощью [!INCLUDE[vs_ordesigner_short](../../../../../../includes/vs-ordesigner-short-md.md)]. Ниже приведены примеры использования программы командной строки SQLMetal. Дополнительные сведения см. в разделе [SQLMetal.exe (средство создания кода)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md).  
+ Документация по [!INCLUDE[vs_ordesigner_short](../../../../../../includes/vs-ordesigner-short-md.md)] приведены примеры того, как создание модели объектов Visual Basic или C# с помощью [!INCLUDE[vs_ordesigner_short](../../../../../../includes/vs-ordesigner-short-md.md)]. Ниже приведены примеры использования программы командной строки SQLMetal. Дополнительные сведения см. в разделе [SQLMetal.exe (средство создания кода)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md).  
   
 ## <a name="example"></a>Пример  
- С помощью команды программы SQLMetal, представленной в следующем примере, создается код [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)] для основанной на атрибутах объектной модели базы данных "Northwind". Также отображаются хранимые процедуры и функции.  
+ Показано в следующем примере командной строки SQLMetal создает код Visual Basic основанное на атрибутах объектной модели базы данных "Борей". Также отображаются хранимые процедуры и функции.  
   
 ```  
 sqlmetal /code:northwind.vb /language:vb "c:\northwnd.mdf" /sprocs /functions  

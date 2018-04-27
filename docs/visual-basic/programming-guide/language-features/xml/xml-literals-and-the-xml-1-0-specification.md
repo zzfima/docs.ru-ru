@@ -15,14 +15,14 @@ ms.assetid: 46f046e5-293c-41a3-b893-4e5f6e32e78a
 caps.latest.revision: 13
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: c020d94e09eb255ac03df15b519b3dfa78e8e367
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 1b939fdbc0c60d84cfc51a36043e9c59dc82b241
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="xml-literals-and-the-xml-10-specification-visual-basic"></a>XML-литералы и спецификация XML 1.0 (Visual Basic)
-Синтаксис XML-литерала в [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] поддерживает большую часть спецификации языка (XML) 1.0. Дополнительные сведения о спецификации XML 1.0 см. в разделе [языка (XML) 1.0](http://go.microsoft.com/fwlink/?LinkId=73927) на сайте консорциума W3C.  
+Синтаксис XML-литерала в Visual Basic поддерживает большую часть спецификации языка (XML) 1.0. Дополнительные сведения о спецификации XML 1.0 см. в разделе [языка (XML) 1.0](http://go.microsoft.com/fwlink/?LinkId=73927) на сайте консорциума W3C.  
   
 ## <a name="what-visual-basic-does-not-support"></a>То, что Visual Basic не поддерживает  
   

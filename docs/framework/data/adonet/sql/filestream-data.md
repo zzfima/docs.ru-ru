@@ -16,11 +16,11 @@ ms.author: douglasl
 manager: craigg
 ms.workload:
 - dotnet
-ms.openlocfilehash: e25f6dceb6018b719a0a8a07822b20d85a08a012
-ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
+ms.openlocfilehash: 757c64fdc66d9c564fc151bc78fdbda23d9b6705
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="filestream-data"></a>Данные FILESTREAM
 Для двоичных данных (BLOB), хранящихся в столбце varbinary(max), появился новый атрибут хранилища FILESTREAM. До появления FILESTREAM для хранения двоичных данных была необходима специальная обработка. Неструктурированные данные, например текстовые документы, изображения и видеоролики, зачастую хранятся вне базы данных, что затрудняет работу с ними.  
@@ -28,13 +28,13 @@ ms.lasthandoff: 04/09/2018
 > [!NOTE]
 >  Для работы с данными FILESTREAM через SqlClient необходимо установить .NET Framework 3.5 с пакетом обновления 1 (SP1) или более поздней версии.  
   
- При указании для столбца varbinary(max) атрибута FILESTREAM сервер [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] сохраняет данные не в файле базы данных, а в файловой системе NTFS на локальном компьютере. Хотя эти данные хранятся отдельно, для работы с ними можно использовать те же инструкции [!INCLUDE[tsql](../../../../../includes/tsql-md.md)], что и для данных varbinary(max), хранящихся в базе данных.  
+ При указании для столбца varbinary(max) атрибута FILESTREAM сервер SQL Server сохраняет данные не в файле базы данных, а в файловой системе NTFS на локальном компьютере. Хотя эти данные хранятся отдельно, для работы с ними можно использовать те же инструкции [!INCLUDE[tsql](../../../../../includes/tsql-md.md)], что и для данных varbinary(max), хранящихся в базе данных.  
   
 ## <a name="sqlclient-support-for-filestream"></a>Поддержка атрибута FILESTREAM в SqlClient  
- Поставщик данных [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] для [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] (<xref:System.Data.SqlClient>) поддерживает чтение и запись данных FILESTREAM с помощью класса <xref:System.Data.SqlTypes.SqlFileStream>, определенного в пространстве имен <xref:System.Data.SqlTypes>. Класс `SqlFileStream` является производным от класса <xref:System.IO.Stream>, который содержит методы для чтения и записи потоков данных. При чтении из потока данные передаются в структуру данных, например в массив байтов. При записи данные передаются из структуры данных в поток.  
+ [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] Поставщик данных для SQL Server, <xref:System.Data.SqlClient>, поддерживает чтение и запись данных FILESTREAM с помощью <xref:System.Data.SqlTypes.SqlFileStream> класса, определенного в <xref:System.Data.SqlTypes> пространства имен. Класс `SqlFileStream` является производным от класса <xref:System.IO.Stream>, который содержит методы для чтения и записи потоков данных. При чтении из потока данные передаются в структуру данных, например в массив байтов. При записи данные передаются из структуры данных в поток.  
   
-### <a name="creating-the-includessnoversionincludesssnoversion-mdmd-table"></a>Создание таблицы [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]  
- Приведенная ниже инструкция [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] создает таблицу employees и вставляет в нее строку данных. После включения атрибута FILESTREAM эту таблицу можно использовать в приведенных ниже примерах кода. Ссылки на ресурсы электронной документации по [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] приведены в конце данного раздела.  
+### <a name="creating-the-sql-server-table"></a>Создание таблицы SQL Server  
+ Приведенная ниже инструкция [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] создает таблицу employees и вставляет в нее строку данных. После включения атрибута FILESTREAM эту таблицу можно использовать в приведенных ниже примерах кода. Ссылки на ресурсы электронной документации по SQL Server приведены в конце этого раздела.  
   
 ```  
 CREATE TABLE employees  
@@ -182,8 +182,8 @@ namespace FileStreamTest
   
  Еще один пример см. в разделе [способы хранения и получения двоичных данных в столбце файлового потока](http://www.codeproject.com/Articles/32216/How-to-store-and-fetch-binary-data-into-a-file-str).  
   
-## <a name="resources-in-includessnoversionincludesssnoversion-mdmd-books-online"></a>Ресурсы электронной документации по [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]  
- Полная документация по FILESTREAM содержится в указанных ниже разделах электронной документации по [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)].  
+## <a name="resources-in-sql-server-books-online"></a>Ресурсы электронной документации по SQL Server  
+ Полная документация по FILESTREAM находятся в следующих разделах электронной документации по SQL Server.  
   
 |Раздел|Описание|  
 |-----------|-----------------|  

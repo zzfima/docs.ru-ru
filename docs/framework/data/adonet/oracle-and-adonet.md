@@ -1,27 +1,29 @@
 ---
-title: "Oracle и ADO.NET"
-ms.custom: 
+title: Oracle и ADO.NET
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 8ee8e389-53cf-45cf-80bd-1df63ef34f2e
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 529c98b0ea9b9d4ec3587ce138af8af981f1e008
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 40b81df158dbad0247df76124201decae41e3267
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="oracle-and-adonet"></a>Oracle и ADO.NET
 > [!NOTE]
@@ -29,7 +31,7 @@ ms.lasthandoff: 01/17/2018
   
  В этом разделе описаны функции и правила работы, характерные для поставщика данных [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] для Oracle.  
   
- Поставщик данных [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] для Oracle обеспечивает доступ к базе данных Oracle, используя интерфейс Oracle Call (OCI), поставляемый в пакете клиентского программного обеспечения Oracle. Функциональные возможности этого поставщика данных схожи с возможностями поставщиков данных [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] для [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)], OLE DB и ODBC.  
+ Поставщик данных [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] для Oracle обеспечивает доступ к базе данных Oracle, используя интерфейс Oracle Call (OCI), поставляемый в пакете клиентского программного обеспечения Oracle. Функциональные возможности поставщика данных должен быть аналогичен [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] поставщики данных для SQL Server, OLE DB и ODBC.  
   
  Чтобы использовать поставщик данных [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] для Oracle, приложение должно содержать ссылку на пространство имен <xref:System.Data.OracleClient> следующим образом:   
   
@@ -83,7 +85,7 @@ csc /r:System.Data.OracleClient.dll
  Описывает работу с данными в ADO.NET.  
   
  [SQL Server и ADO.NET](../../../../docs/framework/data/adonet/sql/index.md)  
- Описывает процесс работы со специальными возможностями и функциями [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)].  
+ Описывает процесс работы со специальными возможностями и возможностями SQL Server.  
   
  [DbProviderFactories](../../../../docs/framework/data/adonet/dbproviderfactories.md)  
  Описывает универсальные классы, позволяющие создавать независимый от поставщика код в [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)].  

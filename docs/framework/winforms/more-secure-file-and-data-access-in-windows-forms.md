@@ -1,12 +1,13 @@
 ---
-title: "Более безопасный доступ к файлам и данным в Windows Forms"
-ms.custom: 
+title: Более безопасный доступ к файлам и данным в Windows Forms
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-winforms
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -20,16 +21,17 @@ helpviewer_keywords:
 - file access [Windows Forms]
 - security [Windows Forms], data access
 ms.assetid: 3cd3e55b-2f5e-40dd-835d-f50f7ce08967
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 335e9487468522abb3a18f51f9a089d25519e71c
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 61e4893ac32d2013b090a748078ec1e3a84ea3ac
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="more-secure-file-and-data-access-in-windows-forms"></a>Более безопасный доступ к файлам и данным в Windows Forms
 В [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] для защиты ресурсов и данных используются разрешения. То, какие данные может считывать или записывать приложение, зависит от предоставленных ему разрешений. Когда приложение работает в среде с частичным доверием, то доступ к данным может быть запрещен или может быть необходимо изменить способ доступа к данным.  
@@ -63,7 +65,7 @@ ms.lasthandoff: 01/19/2018
  В примере кода ниже метод <xref:System.Windows.Forms.OpenFileDialog.OpenFile%2A> используется для открытия указанного пользователем файла в элементе управления <xref:System.Windows.Forms.RichTextBox>. Для этого требуется разрешение <xref:System.Security.Permissions.FileDialogPermission> и связанное с ним значение перечисления <xref:System.Security.Permissions.FileDialogPermissionAttribute.Open%2A>. В примере показано, как обрабатывать исключение <xref:System.Security.SecurityException> для определения того, нужно ли отключить функцию сохранения. В этом примере требуется, чтобы форма <xref:System.Windows.Forms.Form> содержала элемент управления <xref:System.Windows.Forms.Button> с именем `ButtonOpen` и элемент управления <xref:System.Windows.Forms.RichTextBox> с именем `RtfBoxMain`.  
   
 > [!NOTE]
->  Программная логика для функции сохранения в примере не представлена.  
+>  Программная логика для возможности сохранения в примере не представлена.  
   
 ```vb  
 Private Sub ButtonOpen_Click(ByVal sender As System.Object, _  
@@ -144,7 +146,7 @@ private void ButtonOpen_Click(object sender, System.EventArgs e)
 ```  
   
 > [!NOTE]
->  В [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] убедитесь в том, что код для включения обработчика событий добавлен. Следующий код показывает, как с помощью кода из предыдущего примера включить обработчик событий: `this.ButtonOpen.Click += newSystem.Windows.Forms.EventHandler(this.ButtonOpen_Click);`  
+>  В Visual C# убедитесь, что код для включения обработчика событий добавлен. Следующий код показывает, как с помощью кода из предыдущего примера включить обработчик событий: `this.ButtonOpen.Click += newSystem.Windows.Forms.EventHandler(this.ButtonOpen_Click);`  
   
 ### <a name="other-files"></a>Другие файлы  
  Иногда необходимо считывать или записывать файлы, которые не указываются пользователем, например если требуется сохранить параметры приложения. В зонах локальной интрасети и Интернета приложение не имеет разрешения сохранять данные в локальном файле. Тем не менее приложение может сохранять данные в изолированном хранилище. Изолированное хранилище — это абстрактная секция данных (а не конкретное хранилище), содержащая один или несколько изолированных файлов хранения, называемых хранилищами, которые содержат сведения о действительных папках размещения данных. Разрешения на доступ к файлам, такие как <xref:System.Security.Permissions.FileIOPermission>, не обязательны; вместо этого класс <xref:System.Security.Permissions.IsolatedStoragePermission> управляет разрешениями для изолированного хранилища. По умолчанию приложения, запущенные в зонах локальной интрасети и Интернета, могут хранить данные с помощью изолированного хранилища. Однако такие параметры, как дисковая квота, могут меняться. Дополнительные сведения об изолированном хранилище см. в разделе [изолированное хранилище](../../../docs/standard/io/isolated-storage.md).  

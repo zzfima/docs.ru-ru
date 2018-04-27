@@ -1,27 +1,29 @@
 ---
-title: "Внешнее сопоставление"
-ms.custom: 
+title: Внешнее сопоставление
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 076606b8-d889-4ba0-b5da-ae577b146f23
-caps.latest.revision: "2"
+caps.latest.revision: 2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: ae67c80e4637281a26b15d7faa2dbdbe7171ba1c
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 99b5a37778299f541a59707708edba244ab2f806
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="external-mapping"></a>Внешнее сопоставление
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]поддерживает *внешнего сопоставления*, по которому отдельный файл XML используется для указания сопоставления между моделью данных базы данных и объектной модели процесса. Файл внешнего сопоставления имеет следующие преимущества.  
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] поддерживает *внешнего сопоставления*, по которому отдельный файл XML используется для указания сопоставления между моделью данных базы данных и объектной модели процесса. Файл внешнего сопоставления имеет следующие преимущества.  
   
 -   Код сопоставления можно хранить вне кода приложения. Этот подход уменьшает перегруженность кода приложения.  
   
@@ -46,7 +48,7 @@ ms.lasthandoff: 01/17/2018
  Следует отличать этот файл определения схемы от файла определения схемы, который используется для проверки DBML-файла. Дополнительные сведения см. в разделе [создание кода в LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)).  
   
 > [!NOTE]
->  Пользователи [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] также найдут этот файл XSD в диалоговом окне схем XML под именем "LinqToSqlMapping.xsd". Правильно использовать этот файл для проверки внешнего файла сопоставления, в разделе [как: проверка DBML- и внешних файлов сопоставления](../../../../../../docs/framework/data/adonet/sql/linq/how-to-validate-dbml-and-external-mapping-files.md).  
+>  Пользователи Visual Studio будет находить XSD-файл в диалоговом окне схем XML «Linqtosqlmapping.xsd». Правильно использовать этот файл для проверки внешнего файла сопоставления, в разделе [как: проверка DBML- и внешних файлов сопоставления](../../../../../../docs/framework/data/adonet/sql/linq/how-to-validate-dbml-and-external-mapping-files.md).  
   
 ```  
 ?<?xml version="1.0" encoding="utf-16"?>  

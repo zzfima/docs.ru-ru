@@ -1,32 +1,34 @@
 ---
-title: "Настройка операций за счет хранимых процедур"
-ms.custom: 
+title: Настройка операций за счет хранимых процедур
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: aedbecc1-c33c-4fb4-8861-fdf7e1dc6b8a
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 105f52b61d6b5c0b05bd08a9a1f6b1c07f94226d
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 5d47089092de80488fbae107da630352cb38c1d9
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="customizing-operations-by-using-stored-procedures"></a>Настройка операций за счет хранимых процедур
 Использование хранимых процедур является наиболее распространенным методом переопределения поведения по умолчанию. В примерах данного раздела показано, как можно использовать созданные оболочки методов для хранимых процедур и непосредственно вызывать хранимые процедуры.  
   
- При использовании [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] назначение хранимых процедур для настройки операций вставки, обновления и удаления можно выполнять с помощью [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)].  
+ Если вы используете Visual Studio, можно использовать [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] назначение хранимых процедур для выполнения операций вставки, обновления и удаления.  
   
 > [!NOTE]
 >  Чтобы считать значения, созданные базой данных, используются выходные параметры хранимых процедур. Если использовать выходные параметры невозможно, то вместо применения переопределений, созданных конструктором [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)], реализуйте разделяемый метод. После успешного завершения операций `INSERT` или `UPDATE` необходимо установить соответствующие значения членов, сопоставленных значениям, созданным базой данных. Дополнительные сведения см. в разделе [обязанности разработчика при переопределении поведения по умолчанию](../../../../../../docs/framework/data/adonet/sql/linq/responsibilities-of-the-developer-in-overriding-default-behavior.md).  

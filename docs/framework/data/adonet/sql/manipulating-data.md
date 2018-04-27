@@ -1,27 +1,29 @@
 ---
-title: "Управление данными"
-ms.custom: 
+title: Управление данными
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 51096a2e-8b38-4c4d-a523-799bfdb7ec69
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 65042cecc5a6841ffb9b74e471cb9f237d15373f
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: e899ef34964c8bb7ae9b827f329efe60a7f83a0c
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="manipulating-data"></a>Управление данными
 До того как был введен в действие режим MARS, для поиска решений в некоторых сценариях разработчикам приходилось использовать либо несколько соединений, либо серверные курсоры. Кроме того, при использовании нескольких соединений в случае транзакций, связанных соединений (с **sp_getbindtoken** и **sp_bindsession**) не требуются. В следующих сценариях показано использование соединения с включенным режимом MARS вместо нескольких соединений.  
@@ -33,7 +35,7 @@ ms.lasthandoff: 01/17/2018
  Пример открывает одиночное соединение с **AdventureWorks** базы данных. С помощью объекта <xref:System.Data.SqlClient.SqlCommand> создается объект <xref:System.Data.SqlClient.SqlDataReader>. После использования модуля чтения данных открывается второй объект <xref:System.Data.SqlClient.SqlDataReader>, использующий данные из первого объекта <xref:System.Data.SqlClient.SqlDataReader> в качестве входа для предложения WHERE второго модуля чтения данных.  
   
 > [!NOTE]
->  В следующем примере используется образец **AdventureWorks** базы данных, входящий в состав [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]. Представленная в образце кода строка соединения предполагает, что база данных установлена и доступна на локальном компьютере. Измените строку соединения при необходимости в соответствии с вашей средой.  
+>  В следующем примере используется образец **AdventureWorks** базы данных в SQL Server. Представленная в образце кода строка соединения предполагает, что база данных установлена и доступна на локальном компьютере. Измените строку соединения при необходимости в соответствии с вашей средой.  
   
 ```vb  
 Option Strict On  
@@ -181,7 +183,7 @@ static void Main()
  Следующее приложение командной строки демонстрирует использование двух модулей <xref:System.Data.SqlClient.SqlDataReader> с тремя объектами <xref:System.Data.SqlClient.SqlCommand> и одним объектом <xref:System.Data.SqlClient.SqlConnection> с включенным режимом MARS. Первый объект команды получает список поставщиков, оценка кредитоспособности которых равна 5. Второй объект команды по идентификатору поставщика из объекта <xref:System.Data.SqlClient.SqlDataReader> загружает второй объект <xref:System.Data.SqlClient.SqlDataReader>, содержащий все продукты данного поставщика. Каждая запись продукта обрабатывается вторым модулем <xref:System.Data.SqlClient.SqlDataReader>. Для определения нового выполняется вычисление **OnOrderQty** должно быть. Затем используется третий объект команды для обновления **ProductVendor** таблицы с новым значением. Весь процесс выполняется в пределах одной транзакции, для которой в конце выполняется откат.  
   
 > [!NOTE]
->  В следующем примере используется образец **AdventureWorks** базы данных, входящий в состав [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]. Представленная в образце кода строка соединения предполагает, что база данных установлена и доступна на локальном компьютере. Измените строку соединения при необходимости в соответствии с вашей средой.  
+>  В следующем примере используется образец **AdventureWorks** базы данных в SQL Server. Представленная в образце кода строка соединения предполагает, что база данных установлена и доступна на локальном компьютере. Измените строку соединения при необходимости в соответствии с вашей средой.  
   
 ```vb  
 Option Strict On  

@@ -1,24 +1,26 @@
 ---
-title: "Обучение с использованием пошаговых руководств"
-ms.custom: 
+title: Обучение с использованием пошаговых руководств
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: a8ae2965-6a49-4155-89b0-7fab2c488ab1
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: c49ecfec032a20090e8eca1c94efe9e1f35cce7d
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 98373ccee7f9fde178f26c62cd77acb17676c6cc
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="learning-by-walkthroughs"></a>Обучение с использованием пошаговых руководств
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Документации представлено несколько пошаговых руководств. В данном разделе рассматриваются общие вопросы пошаговых руководств (включая устранение неполадок) и предоставляются ссылки на некоторые пошаговые руководства для начинающих изучать [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
@@ -41,20 +43,20 @@ ms.lasthandoff: 01/19/2018
 ## <a name="general"></a>Общие  
  Ниже представлены общие сведения, которые касаются всех этих пошаговых руководств.  
   
--   Среда. В каждом пошаговом руководстве [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] в качестве интегрированной среды разработки используется [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)].  
+-   Среда: Каждая [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Пошаговое руководство использует в качестве интегрированной среды разработки (IDE) Visual Studio.  
   
 -   Ядро SQL. Эти пошаговые руководства предназначены для реализации с помощью SQL Server Express. Если на компьютере не установлено приложение SQL Server Express, его можно загрузить бесплатно. Дополнительные сведения см. в разделе [Загрузка примеров баз данных](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md).  
   
     > [!NOTE]
     >  В качестве строки подключения в данных пошаговых руководствах [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] используется имя файла. Простое указания имени файла является одной из удобных возможностей, которые технология [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] предоставляет пользователям SQL Server Express. Не забывайте уделять особое внимание вопросам безопасности. Дополнительные сведения см. в разделе [безопасность в LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/security-in-linq-to-sql.md).  
   
--   [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]Пошаговые руководства обычно требуется образец базы данных "Борей". Дополнительные сведения см. в разделе [Загрузка примеров баз данных](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md).  
+-   [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Пошаговые руководства обычно требуется образец базы данных "Борей". Дополнительные сведения см. в разделе [Загрузка примеров баз данных](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md).  
   
--   Диалоговые окна и команды меню, отображаемые в данных пошаговых руководствах, могут отличаться от описанных в справке в зависимости от текущих параметров или версии [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)]. Чтобы изменить параметры, выберите в меню **Сервис** пункт **Импорт и экспорт параметров** . Дополнительные сведения см. в статье [Настройка параметров разработки в Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+-   Диалоговые окна и команды меню, отображаемые в данных пошаговых руководствах могут отличаться от описанных в справке в зависимости от текущих параметров или выпуска Visual Studio. Чтобы изменить параметры, выберите в меню **Сервис** пункт **Импорт и экспорт параметров** . Дополнительные сведения см. в статье [Настройка параметров разработки в Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
   
 -   Для пошаговых руководств, в которых рассматриваются многоуровневые сценарии, сервер должен быть установлен на компьютере, отличном от компьютера разработки, и у пользователя должны быть соответствующие права доступа к этому серверу.  
   
--   Именем класса, который обычно представляет таблицу "Orders" в базе данных "Northwind", является `[Order]`. Это имя следует использовать с escape-знаком, поскольку `Order` является зарезервированным словом в [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)].  
+-   Именем класса, который обычно представляет таблицу "Orders" в базе данных "Northwind", является `[Order]`. Экранирование является обязательным, поскольку `Order` является зарезервированным словом в Visual Basic.  
   
 ## <a name="troubleshooting"></a>Устранение неполадок  
  Если у пользователя нет достаточных прав для доступа к базам данных, используемым в этих пошаговых руководствах, то во время выполнения могут возникать ошибки. Ниже приведены действия, которые могут помочь в решении наиболее распространенных проблем.  

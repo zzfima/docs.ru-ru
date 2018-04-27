@@ -1,11 +1,12 @@
 ---
-title: "Вложенные структуры управления (Visual Basic)"
-ms.custom: 
+title: Вложенные структуры управления (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - Visual Basic code, control flow
@@ -16,20 +17,20 @@ helpviewer_keywords:
 - structures [Visual Basic], nested control
 - nested control statements [Visual Basic]
 ms.assetid: cf60b061-65d9-44a8-81f2-b0bdccd23a05
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 22adf4086cd494202a540b2ec16310072329b6ca
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: f2c91bcdd741ef75417fe50b0c08bd0f9bd5ff80
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="nested-control-structures-visual-basic"></a>Вложенные структуры управления (Visual Basic)
 Можно разместить операторы управления внутри других операторов управления, например `If...Then...Else` блок `For...Next` цикла. Операторы управления, расположенных внутри другого оператора управления считается *вложенных*.  
   
 ## <a name="nesting-levels"></a>Число уровней вложения  
- Управляющие структуры в [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] могут быть вложены на всех уровнях. Это часто можно повысить читаемость вложенные структуры с помощью соответствующих отступов текст каждого из них. Редактор Интегрированная среда разработки автоматически делает это.  
+ Управляющие структуры в Visual Basic могут быть вложенными на всех уровнях. Это часто можно повысить читаемость вложенные структуры с помощью соответствующих отступов текст каждого из них. Редактор Интегрированная среда разработки автоматически делает это.  
   
  В следующем примере процедура `sumRows` складывает положительные элементы каждой строки матрицы.  
   
@@ -78,7 +79,7 @@ Next ctl
  ![Схема графика недопустимого вложения](../../../../visual-basic/programming-guide/language-features/control-flow/media/nestexampleinvalid.gif "NestExampleInvalid")  
 Недопустимое вложение структур For и With  
   
- [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] Компилятор обнаруживает такие перекрывающиеся структуры управления и сигнализирует об ошибке времени компиляции.  
+ Компилятор Visual Basic обнаруживает такие перекрывающиеся структуры управления и сигнализирует об ошибке времени компиляции.  
   
 ## <a name="see-also"></a>См. также  
  [Поток управления](../../../../visual-basic/programming-guide/language-features/control-flow/index.md)  

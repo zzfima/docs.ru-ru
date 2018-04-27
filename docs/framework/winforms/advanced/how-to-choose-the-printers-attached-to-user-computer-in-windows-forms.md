@@ -1,12 +1,13 @@
 ---
-title: "Как: Выбор принтера, подключенного к пользователя &#39; s компьютера в Windows Forms"
-ms.custom: 
+title: 'Как: Выбор принтера, подключенного к пользователю&#39;s компьютера в Windows Forms'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-winforms
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -16,18 +17,19 @@ helpviewer_keywords:
 - printing [Windows Forms], choosing printers
 - printers [Windows Forms], choosing
 ms.assetid: 63c1172b-2931-4ac0-953f-37f629494bbf
-caps.latest.revision: "19"
+caps.latest.revision: 19
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: deee6eb0bb15535425e0e90963b9bd72dc955477
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 90feca3e1efeeae45b26a747e97ad8b5b945ec56
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="how-to-choose-the-printers-attached-to-a-user39s-computer-in-windows-forms"></a>Как: Выбор принтера, подключенного к пользователя &#39; s компьютера в Windows Forms
+# <a name="how-to-choose-the-printers-attached-to-a-user39s-computer-in-windows-forms"></a>Как: Выбор принтера, подключенного к пользователю&#39;s компьютера в Windows Forms
 Часто для печати пользователям требуется выбрать принтер, отличный от используемого по умолчанию. С помощью компонента <xref:System.Windows.Forms.PrintDialog> можно разрешить пользователям выбрать один из установленных принтеров. Компонент <xref:System.Windows.Forms.PrintDialog> позволяет зафиксировать <xref:System.Windows.Forms.DialogResult> компонента <xref:System.Windows.Forms.PrintDialog> и использовать его для выбора принтера.  
   
  В следующей процедуре выбирается текстовый файл для печати на принтер по умолчанию. После этого создается экземпляр класса <xref:System.Windows.Forms.PrintDialog> .  
@@ -100,7 +102,7 @@ ms.lasthandoff: 12/22/2017
        }  
     ```  
   
-     ([!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] и [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) Поместите следующий код в конструктор формы для регистрации обработчика событий.  
+     (Visual C# и [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) поместите следующий код в конструктор формы для регистрации обработчика событий.  
   
     ```csharp  
     this.printDocument1.PrintPage += new  

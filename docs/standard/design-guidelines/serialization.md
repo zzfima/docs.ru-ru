@@ -1,26 +1,26 @@
 ---
 title: Serialization1
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: bebb27ac-9712-4196-9931-de19fc04dbac
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: dd6989e651f09a5e4d3354227a44b823b1b3ddcf
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 14b2f596245eb7f9cdcb9b3e30eeb100180cd793
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="serialization"></a>Сериализация
 Сериализация — это процесс преобразования объекта в формате, который можно легко сохранять или передавать. Например можно сериализовать объект, передавать его через Интернет с помощью протокола HTTP и десериализовать его на целевой компьютер.  
@@ -59,7 +59,7 @@ ms.lasthandoff: 12/23/2017
   
  При десериализации объектов конструкторы не вызываются. (Отсутствуют исключения для правила. Конструкторы коллекций, отмеченные <xref:System.Runtime.Serialization.CollectionDataContractAttribute> вызывается во время десериализации.) Таким образом любой логике, которая выполняется во время обычного построения должен быть реализован как один из обратные вызовы сериализации.  
   
- `OnDeserializedAttribute`является атрибутом, наиболее часто используемые обратного вызова. Кроме того, в семейство входят атрибуты <xref:System.Runtime.Serialization.OnDeserializingAttribute>, <xref:System.Runtime.Serialization.OnSerializingAttribute> и <xref:System.Runtime.Serialization.OnSerializedAttribute>. Их можно использовать для пометки обратных вызовов, которые выполняются перед десериализацией, перед сериализацией и после сериализации соответственно.  
+ `OnDeserializedAttribute` является атрибутом, наиболее часто используемые обратного вызова. Кроме того, в семейство входят атрибуты <xref:System.Runtime.Serialization.OnDeserializingAttribute>, <xref:System.Runtime.Serialization.OnSerializingAttribute> и <xref:System.Runtime.Serialization.OnSerializedAttribute>. Их можно использовать для пометки обратных вызовов, которые выполняются перед десериализацией, перед сериализацией и после сериализации соответственно.  
   
  **✓ Попробуйте** с помощью <xref:System.Runtime.Serialization.KnownTypeAttribute> для указания конкретных типов, которые должны использоваться при десериализации графа сложного объекта.  
   
@@ -110,7 +110,7 @@ public class Person : ISerializable {
   
  *Фрагменты © 2005, 2009 корпорации Майкрософт. Все права защищены.*  
   
- *Перепечатываются разрешении Пирсона для образовательных учреждений, Inc. из [Framework рекомендации по проектированию: условные обозначения, стили и шаблоны для библиотеки .NET для повторного использования, 2-е издание](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina и Брэд Абрамс, опубликованные 22 октября 2008 г., Addison-Wesley Professional в составе ряда разработки Microsoft Windows.*  
+ *Перепечатываются разрешении Пирсона для образовательных учреждений, Inc. из [Framework рекомендации по проектированию: условные обозначения, стили и шаблоны для библиотеки .NET для повторного использования, 2-е издание](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina и Брэд Абрамс, опубликованные 22 октября 2008 г., Addison-Wesley Professional в составе ряда разработки Microsoft Windows.*  
   
 ## <a name="see-also"></a>См. также  
  [Рекомендации по проектированию на основе Framework](../../../docs/standard/design-guidelines/index.md)  

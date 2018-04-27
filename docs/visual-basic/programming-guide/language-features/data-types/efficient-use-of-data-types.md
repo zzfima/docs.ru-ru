@@ -1,11 +1,12 @@
 ---
-title: "Эффективное использование типов данных (Visual Basic)"
-ms.custom: 
+title: Эффективное использование типов данных (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - performance, data type efficiency
@@ -19,14 +20,14 @@ helpviewer_keywords:
 - data types [Visual Basic], optimizing
 - ChrW function [Visual Basic], preferred to Chr
 ms.assetid: 28f5e4ba-ec24-4f37-b90a-e8ee822f778a
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 0e13a1d61aacb06eb336c39aab969847127dfc67
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 4cac585cdc3072d595d2446e1937678f9ab03335
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="efficient-use-of-data-types-visual-basic"></a>Эффективное использование типов данных (Visual Basic)
 Необъявленные переменные и переменные, объявленные типами данных назначенных `Object` тип данных. Это упрощает написание программ, но может замедлять их выполняются медленнее.  
@@ -41,7 +42,7 @@ ms.lasthandoff: 11/21/2017
 -   Это приводит к более быстрое выполнение кода.  
   
 ## <a name="most-efficient-data-types"></a>Наиболее эффективные типы данных  
- Для переменных, которые никогда не содержат дроби целочисленные типы данных более эффективны, чем Нецелочисленные типы. В [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], `Integer` и `UInteger` являются наиболее эффективный числовых типов.  
+ Для переменных, которые никогда не содержат дроби целочисленные типы данных более эффективны, чем Нецелочисленные типы. В Visual Basic `Integer` и `UInteger` являются наиболее эффективный числовых типов.  
   
  Для дробных чисел `Double` является наиболее эффективный тип данных, поскольку процессоры на современных платформах выполняют операции с плавающей запятой с двойной точностью. Тем не менее операции с `Double` не выполняются так же быстро, как и для целочисленных типов, таких как `Integer`.  
   

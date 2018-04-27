@@ -1,12 +1,12 @@
 ---
-title: "Абстракции (абстрактные типы и интерфейсы)"
-ms.custom: 
+title: Абстракции (абстрактные типы и интерфейсы)
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - interfaces [.NET Framework], abstract
@@ -14,18 +14,18 @@ helpviewer_keywords:
 - abstract types [.NET Framework]
 - types [.NET Framework], abstract
 ms.assetid: 0a632bc7-9b03-44ee-8842-c82f88672a45
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 276c5883487d8fba47d7fb80060d4c947e0f6cd6
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 2628758891d629400603c51d12ece33df0e1ff1c
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="abstractions-abstract-types-and-interfaces"></a>Абстракции (абстрактные типы и интерфейсы)
 Абстракция — это тип, который описывает контракт, но не обеспечивают полную реализацию контракта. Абстрактные классы обычно реализуются как абстрактных классов или интерфейсов, а они имеют четко определенный набор справочной документации, описывающий необходимую семантику типы, реализующие контракт. Ниже перечислены некоторые наиболее важные абстрактные классы в .NET Framework <xref:System.IO.Stream>, <xref:System.Collections.Generic.IEnumerable%601>, и <xref:System.Object>.  
@@ -46,7 +46,7 @@ ms.lasthandoff: 12/23/2017
   
  *Фрагменты © 2005, 2009 корпорации Майкрософт. Все права защищены.*  
   
- *Перепечатываются разрешении Пирсона для образовательных учреждений, Inc. из [Framework рекомендации по проектированию: условные обозначения, стили и шаблоны для библиотеки .NET для повторного использования, 2-е издание](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina и Брэд Абрамс, опубликованные 22 октября 2008 г., Addison-Wesley Professional в составе ряда разработки Microsoft Windows.*  
+ *Перепечатываются разрешении Пирсона для образовательных учреждений, Inc. из [Framework рекомендации по проектированию: условные обозначения, стили и шаблоны для библиотеки .NET для повторного использования, 2-е издание](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina и Брэд Абрамс, опубликованные 22 октября 2008 г., Addison-Wesley Professional в составе ряда разработки Microsoft Windows.*  
   
 ## <a name="see-also"></a>См. также  
  [Рекомендации по проектированию на основе Framework](../../../docs/standard/design-guidelines/index.md)  

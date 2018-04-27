@@ -1,28 +1,30 @@
 ---
-title: "Поддержка автоматизации пользовательского интерфейса для древовидного типа элемента управления"
-ms.custom: 
+title: Поддержка автоматизации пользовательского интерфейса для древовидного типа элемента управления
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-bcl
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - control types, Tree
 - Tree control type
 - UI Automation, Tree control type
 ms.assetid: 312dd04d-a86b-4072-8b12-2beeabdff5e3
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 14356089cfcef3fcd51ecd470322b04d29a989a4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 3eece614368bb35cda5d7345daebb540b1ae1d95
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="ui-automation-support-for-the-tree-control-type"></a>Поддержка автоматизации пользовательского интерфейса для древовидного типа элемента управления
 > [!NOTE]
@@ -63,7 +65,7 @@ ms.lasthandoff: 12/22/2017
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsContentElementProperty>|Да|Элемент управления "Дерево" всегда включается в представление содержимого дерева [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] .|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsControlElementProperty>|Да|Элемент управления "Дерево" всегда включается в представление элемента управления дерева [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] .|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsKeyboardFocusableProperty>|См. примечания.|Если элемент управления может получать фокус клавиатуры, он должен поддерживать это свойство.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.LabeledByProperty>|См. примечания.|Если элемент управления "Дерево" имеет связанную с ним метку, это свойство возвратит <xref:System.Windows.Automation.AutomationElement> для этой метки. В противном случае свойство возвратит пустую ссылку (`Nothing` в [!INCLUDE[TLA#tla_visualbnet](../../../includes/tlasharptla-visualbnet-md.md)]).|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.LabeledByProperty>|См. примечания.|Если элемент управления "Дерево" имеет связанную с ним метку, это свойство возвратит <xref:System.Windows.Automation.AutomationElement> для этой метки. В противном случае свойство возвратит пустую ссылку (`Nothing` в Microsoft Visual Basic .NET).|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.LocalizedControlTypeProperty>|"дерево"|Локализованная строка, соответствующая типу элемента управления List.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty>|См. примечания.|Значение свойства имени элемента управления "Дерево" обычно берется из текста метки этого элемента управления. Если текстовая метка не предусмотрена, разработчик приложения должен предоставить значение для этого свойства.|  
   

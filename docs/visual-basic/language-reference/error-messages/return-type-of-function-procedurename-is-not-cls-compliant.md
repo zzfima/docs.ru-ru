@@ -1,9 +1,9 @@
 ---
-title: "Тип возвращаемого значения функции &#39; &lt;имя_процедуры&gt;&#39; не является CLS-совместимым"
+title: Тип возвращаемого значения функции &#39; &lt;имя_процедуры&gt; &#39; не является CLS-совместимым
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - devlang-visual-basic
 ms.topic: article
@@ -13,21 +13,21 @@ f1_keywords:
 helpviewer_keywords:
 - BC40027
 ms.assetid: 33c088c7-48e7-400c-920e-6d8967e1f3fc
-caps.latest.revision: 
+caps.latest.revision: 13
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 866c0001d51a2eff75409c3918a6b6189ca294d8
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: 3b3aa178ec3a33d7edb64190d7c83d3b51483feb
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="return-type-of-function-39ltprocedurenamegt39-is-not-cls-compliant"></a>Тип возвращаемого значения функции &#39; &lt;имя_процедуры&gt;&#39; не является CLS-совместимым
+# <a name="return-type-of-function-39ltprocedurenamegt39-is-not-cls-compliant"></a>Тип возвращаемого значения функции &#39; &lt;имя_процедуры&gt; &#39; не является CLS-совместимым
 Объект `Function` процедура помечена как `<CLSCompliant(True)>` , но возвращает тип, который помечен как `<CLSCompliant(False)>`, не помечен или не квалифицирован, так как он имеет несоответствующий тип.  
   
  Для соответствия требованиям, описанным в статье [Независимость от языка и независимые от языка компоненты](../../../standard/language-independence-and-language-independent-components.md) (CLS), процедура должна использовать только типы, соответствующие CLS. Это касается типов параметров, типа возвращаемого значения и типов всех локальных переменных.  
   
- Следующие типы данных [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] не соответствуют CLS:  
+ Следующие типы данных Visual Basic не являются CLS-совместимыми:  
   
 -   [Тип данных SByte](../../../visual-basic/language-reference/data-types/sbyte-data-type.md)  
   
@@ -51,4 +51,4 @@ ms.lasthandoff: 12/21/2017
   
 -   Если `Function` процедура должна быть CLS-совместимыми, измените тип возвращаемого значения на ближайший CLS-совместимый тип. Например, вместо `UInteger` вы можете использовать `Integer` , если вам не нужен диапазон значений, превышающий 2 147 483 647. Если вам нужен расширенный диапазон, вы можете заменить `UInteger` на `Long`.  
   
--   При взаимодействии с объектами службы автоматизации или COM-объектами помните, что длина данных некоторых типов отличается от длины данных в [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Например, данные типа `int` часто являются 16-битными в других средах. Если возвращается 16-разрядное целое число такому компоненту, объявите его как `Short` вместо `Integer` в управляемом [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] кода.
+-   При взаимодействии с объектами службы автоматизации или COM-объектами помните, что длина данных некоторых типов отличается от длины данных в [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Например, данные типа `int` часто являются 16-битными в других средах. Если возвращается 16-разрядное целое число такому компоненту, объявите его как `Short` вместо `Integer` в управляемом коде Visual Basic.

@@ -1,27 +1,29 @@
 ---
-title: "Несоответствия типов SQL-CLR"
-ms.custom: 
+title: Несоответствия типов SQL-CLR
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 0a90c33f-7ed7-4501-ad5f-6224c5da8e9b
-caps.latest.revision: "2"
+caps.latest.revision: 2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 6a027bd898409708dd6800908a6736f5853058df
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 6006bb8fd1f6b49382c89acc2b55efcb035ffbf5
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sql-clr-type-mismatches"></a>Несоответствия типов SQL-CLR
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] автоматизирует большую часть преобразований между объектной моделью и SQL Server. Однако существуют ситуации, препятствующие точному преобразованию. Эти основные несоответствия между типами среды CLR и типами баз данных SQL Server перечислены в следующих разделах. Дополнительные сведения о сопоставлении конкретных типов и о преобразовании функций [сопоставление типов SQL-CLR](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md) и [типы данных и функции](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md).  
@@ -53,7 +55,7 @@ Select DateOfBirth From Customer Where CustomerId = @id
   
     -   **Символьные типы фиксированной длины**. Transact-SQL различаются категории Юникода и не в Юникоде и существует три типа в каждой категории: фиксированная длина `nchar` / `char`, переменной длины `nvarchar` / `varchar`, и большего размера `ntext` / `text`. Символьные типы фиксированной длины могут быть сопоставлены с типом CLR <xref:System.Char?displayProperty=nameWithType> для получения символов, однако они не совсем соответствуют такому же типу в преобразованиях и поведении.  
   
-    -   **Бит**. Хотя домен `bit` имеет то же число значений, что и `Nullable<Boolean>`, это два различных типа. `Bit`принимает значения `1` и `0` вместо `true` / `false`и не может использоваться в качестве эквивалента логических выражений.  
+    -   **Бит**. Хотя домен `bit` имеет то же число значений, что и `Nullable<Boolean>`, это два различных типа. `Bit` принимает значения `1` и `0` вместо `true` / `false`и не может использоваться в качестве эквивалента логических выражений.  
   
     -   **Отметка времени**. В отличие от типа CLR <xref:System.TimeSpan?displayProperty=nameWithType> тип SQL Server `TIMESTAMP` представляет созданное базой данных 8-разрядное число, уникальное для каждого обновления и не основанное на различии между значениями <xref:System.DateTime>.  
   
@@ -118,7 +120,7 @@ or col1 != col2
   
  В предыдущем случае можно получить эквивалентное поведение при создании SQL, однако преобразование может неточно отразить ваше намерение.  
   
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]не накладывает C# `null` или [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)] `nothing` семантику сравнения в SQL. Операторы сравнения синтаксически преобразуются в эквивалентные команды SQL. Семантики отражают семантики SQL в соответствии с параметрами сервера или подключения. В заданных по умолчанию параметрах SQL два значения NULL считаются неравными (хотя, чтобы изменить семантики, можно изменить эти параметры). [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] не учитывает параметры сервера в преобразовании запроса.  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] не накладывает C# `null` или Visual Basic `nothing` семантику сравнения в SQL. Операторы сравнения синтаксически преобразуются в эквивалентные команды SQL. Семантики отражают семантики SQL в соответствии с параметрами сервера или подключения. В заданных по умолчанию параметрах SQL два значения NULL считаются неравными (хотя, чтобы изменить семантики, можно изменить эти параметры). [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] не учитывает параметры сервера в преобразовании запроса.  
   
  Сравнение с литералом `null` (`nothing`) преобразуется в соответствующую версию SQL (`is null` или `is not null`).  
   
@@ -179,7 +181,7 @@ Where Col1 = Col2
     > [!NOTE]
     >  Это поведение оператора `Like` характерно только для языка C#; ключевое слово `Like` Visual Basic остается неизменным.  
   
--   Переполнение всегда проверяется в SQL, однако во избежание циклического возврата оно должно быть явно указано в C#, а не в [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)]. Даны столбцы целых чисел C1, C2 и C3, если C1+C2 хранится в C3 (Обновление T Set C3 = C1 + C2).  
+-   Переполнение всегда проверяется в SQL, но он должен быть явно указан в C# (не в Visual Basic) во избежание циклического возврата. Даны столбцы целых чисел C1, C2 и C3, если C1+C2 хранится в C3 (Обновление T Set C3 = C1 + C2).  
   
     ```  
     create table T3 (  
@@ -197,7 +199,7 @@ Where Col1 = Col2
   
 -   SQL выполняет симметричное арифметическое округление, тогда как [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] использует банковское округление. Дополнительные сведения см. в статье 196652 базы знаний.  
   
--   По умолчанию для распространенных языков символьно-строковые сравнения в SQL не зависят от регистра. В Visual Basic и C# сравнения выполняются с учетом регистра. Так, выражения `s == "Food"` (`s = "Food"` в [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)]) и `s == "Food"` могут выдавать различные результаты, если `s` имеет значение `food`.  
+-   По умолчанию для распространенных языков символьно-строковые сравнения в SQL не зависят от регистра. В Visual Basic и C# сравнения выполняются с учетом регистра. Например `s == "Food"` (`s = "Food"` в Visual Basic) и `s == "Food"` могут выдавать различные результаты, если `s` — `food`.  
   
     ```  
     -- Assume default US-English locale (case insensitive).  

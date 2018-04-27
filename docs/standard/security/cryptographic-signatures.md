@@ -1,12 +1,12 @@
 ---
-title: "Криптографические подписи"
-ms.custom: 
+title: Криптографические подписи
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -26,18 +26,18 @@ helpviewer_keywords:
 - digital signatures, verifying
 - signing XML
 ms.assetid: aa87cb7f-e608-4a81-948b-c9b8a1225783
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: mairaw
 ms.author: mairaw
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: c4e460c11e0e78d56a54da1dd178b3f8e9f381b6
-ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
+ms.openlocfilehash: 596625f229c4031b681755d538bf0a3d7b6674c8
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="cryptographic-signatures"></a>Криптографические подписи
 <a name="top"></a> Криптографические цифровые подписи используют алгоритмы с открытым ключом для обеспечения целостности данных. Если вы подписываете данные с помощью цифровой подписи, другая сторона может проверить подпись и убедиться в том, что данные поступили от вас и не были изменены после подписывания. Подробнее о цифровых подписях см. в разделе [Cryptographic Services](../../../docs/standard/security/cryptographic-services.md).  
@@ -115,7 +115,7 @@ class Class1
 ### <a name="signing-xml-files"></a>Подписывание XML-файлов  
  .NET Framework предоставляет пространство имен <xref:System.Security.Cryptography.Xml> , которое позволяет подписывать XML. Подписывание XML имеет важное значение в случае, если вы хотите убедиться в том, что XML-файл исходит от конкретного источника. Например, если вы пользуетесь службой котировки акций, которая использует XML, вы можете проверить источник XML-файла, если он подписан.  
   
- Классы в этом пространстве имен следуют [XML-Signature Syntax and Processing рекомендация](http://www.w3.org/TR/xmldsig-core/) из консорциума W3c.  
+ Классы в этом пространстве имен следуют [XML-Signature Syntax and Processing рекомендация](https://www.w3.org/TR/xmldsig-core/) из консорциума W3c.  
   
  [К началу](#top)  
   

@@ -1,25 +1,26 @@
 ---
-title: "Константы и перечисления (Visual Basic)"
+title: Константы и перечисления (Visual Basic)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-visual-basic
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - enumerations [Visual Basic]
 - constants [Visual Basic]
 - constants [Visual Basic], list of
 ms.assetid: 309c0ad5-83e4-4f96-99ea-83cd95107417
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 9fd298cc504f9e4faf5205e53ebbf2ee355a21b3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: da42d58190e8069154cd8383cf0a87e0b19f5ae4
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="constants-and-enumerations-visual-basic"></a>Константы и перечисления (Visual Basic)
-[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]предоставляет ряд предопределенных констант и перечислений для разработчиков. Константы хранят значения, которые остаются неизменными во время выполнения приложения. Перечисления — это удобный способ работать с наборами связанных констант и связывать постоянные значения с именами.  
+В Visual Basic предусмотрен ряд предопределенных констант и перечислений для разработчиков. Константы хранят значения, которые остаются неизменными во время выполнения приложения. Перечисления — это удобный способ работать с наборами связанных констант и связывать постоянные значения с именами.  
   
 ## <a name="constants"></a>Константы  
   
@@ -32,7 +33,7 @@ ms.lasthandoff: 11/21/2017
 |`DEBUG`|Объект `Boolean` значение, которое может быть задано в **свойства проекта** диалоговое окно. По умолчанию конфигурация отладки для проекта определяет `DEBUG`. Когда `DEBUG` определен, <xref:System.Diagnostics.Debug> методы класса выводят информацию в **вывода** окна. Если она не определена, <xref:System.Diagnostics.Debug> методы класса не компилируются и не формирует выходные данные отладки.|  
 |`TARGET`|Строка, представляющая тип выходных данных для проекта или параметр командной строки **/target-** параметр. Возможные значения `TARGET` являются:<br /><br /> -«winexe» для приложения Windows.<br />-«exe» для консольного приложения.<br />-«Библиотека» для библиотеки классов.<br />-«модуль» для модуля.<br />- **/Target-** может быть установлен [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] интегрированной среды разработки. Дополнительные сведения см. в разделе [/Target (Visual Basic)](../../visual-basic/reference/command-line-compiler/target.md).|  
 |`TRACE`|Объект `Boolean` значение, которое может быть задано в **свойства проекта** диалоговое окно. По умолчанию все конфигурации для проекта определяют `TRACE`. Когда `TRACE` определен, <xref:System.Diagnostics.Trace> методы класса выводят информацию в **вывода** окна. Если она не определена, <xref:System.Diagnostics.Trace> класс, методы не компилируются и нет `Trace` создаются выходные данные.|  
-|`VBC_VER`|Число, представляющее [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] версии в *основных*. *дополнительный номер* формат. Номер версии для [!INCLUDE[vbprvblong](~/includes/vbprvblong-md.md)] 8.0.|  
+|`VBC_VER`|Число, представляющее версию Visual Basic, *основных*. *дополнительный номер* формат. Номер версии для [!INCLUDE[vbprvblong](~/includes/vbprvblong-md.md)] 8.0.|  
   
 ### <a name="print-and-display-constants"></a>Константы печати и отображения  
  При вызове печати и отобразить функции, можно использовать следующие константы в коде вместо фактических значений.  
@@ -52,7 +53,7 @@ ms.lasthandoff: 11/21/2017
 |`vbVerticalTab`|Не используется в Microsoft Windows.|  
   
 ## <a name="enumerations"></a>Перечисления  
- В следующей таблице перечислены и описаны перечисления, предоставляемые [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
+ В следующей таблице перечислены и описаны перечисления, предоставляемые Visual Basic.  
   
 |Перечисление|Описание|  
 |---|---|  

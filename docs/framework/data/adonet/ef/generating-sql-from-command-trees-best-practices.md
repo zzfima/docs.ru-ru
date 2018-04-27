@@ -1,24 +1,26 @@
 ---
-title: "Создание кода SQL из деревьев команд. Рекомендации"
-ms.custom: 
+title: Создание кода SQL из деревьев команд. Рекомендации
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 71ef6a24-4c4f-4254-af3a-ffc0d855b0a8
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: d68194ab83a6606337a33668470411ed8b1c6957
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 037d1eaa8d781d012cde7a1bd3b08aa7003edd77
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="generating-sql-from-command-trees---best-practices"></a>Создание кода SQL из деревьев команд. Рекомендации
 Деревья команд выходного запроса по своей структуре близки к моделям запросов, выражаемым на языке SQL. Однако модули записи поставщика при создании кода SQL на основе дерева команд выходного запроса сталкиваются с некоторыми распространенными проблемами. Они обсуждаются в данном разделе. В следующем разделе приводится образец поставщика, показывающий решение этих проблем.  
@@ -147,7 +149,7 @@ ON b.y = d.z
  Выражения в дереве команд запроса, передаваемом [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)], могут быть использованы повторно. Не следует предполагать, что каждое выражение появляется в дереве команд запроса только один раз.  
   
 ## <a name="mapping-primitive-types"></a>Сопоставление примитивных типов  
- При сопоставлении концептуальных типов (типов модели EDM) с типами поставщика следует проводить сопоставление с самым большим типом (Int32), чтобы поместились все возможные значения. Кроме того, следует избегать сопоставления с типами, которые нельзя использовать во многих операциях, такими как типы BLOB (например, `ntext` в [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]).  
+ При сопоставлении концептуальных типов (типов модели EDM) с типами поставщика следует проводить сопоставление с самым большим типом (Int32), чтобы поместились все возможные значения. Кроме того, следует избегать сопоставления для типов, не может использоваться во многих операциях, такими как типы BLOB (например, `ntext` в SQL Server).  
   
 ## <a name="see-also"></a>См. также  
  [Создание SQL](../../../../../docs/framework/data/adonet/ef/sql-generation.md)

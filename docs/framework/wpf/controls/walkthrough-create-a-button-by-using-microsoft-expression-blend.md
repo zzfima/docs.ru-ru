@@ -1,34 +1,36 @@
 ---
-title: "Пошаговое руководство. Создание кнопки с помощью Microsoft Expression Blend"
-ms.custom: 
+title: Пошаговое руководство. Создание кнопки с помощью Microsoft Expression Blend
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - buttons [WPF]
 - converting [WPF], shape to button
 - Expression Blend [WPF Designer]
 ms.assetid: ff5037c2-bba7-4cae-8abb-6475b686c48e
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 76025da208cc0929a20c379f76106d7e101c3358
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: e029537466e836cfc103bad64d4102652162c465
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="walkthrough-create-a-button-by-using-microsoft-expression-blend"></a>Пошаговое руководство. Создание кнопки с помощью Microsoft Expression Blend
 Пошаговом руководстве описывается процесс создания [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] настраиваемая кнопка, с помощью пакета Microsoft Expression Blend.  
   
 > [!IMPORTANT]
->  Microsoft Expression Blend работает путем создания [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] , затем компилируется для получения исполняемой программы. Если вы работать и с [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] напрямую, имеется другой Пошаговое руководство, которое создает то же приложение, как это, используя [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] с [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] вместо Blend. В разделе [Создание кнопки с помощью XAML](../../../../docs/framework/wpf/controls/walkthrough-create-a-button-by-using-xaml.md) для получения дополнительной информации.  
+>  Microsoft Expression Blend работает путем создания [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] , затем компилируется для получения исполняемой программы. Если вы работать и с [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] напрямую, имеется другой Пошаговое руководство, которое создает то же приложение, как это, используя [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] с Visual Studio, а не Blend. В разделе [Создание кнопки с помощью XAML](../../../../docs/framework/wpf/controls/walkthrough-create-a-button-by-using-xaml.md) для получения дополнительной информации.  
   
  На следующем рисунке настраиваемая кнопка будет создан.  
   
@@ -73,7 +75,7 @@ ms.lasthandoff: 12/22/2017
   
      ![Диалоговое окно «Создание ресурса стиля»](../../../../docs/framework/wpf/controls/media/custom-button-blend-makebutton2.gif "custom_button_blend_MakeButton2")  
   
-     Для **имя ресурса (ключ)**выберите **применить ко всем**.  Это сделает полученного стиля и шаблона кнопки, которые применяются ко всем объектам, которые являются кнопками. Для **определения в**выберите **приложения**. Это сделает полученного стиля и шаблона кнопки области на все приложение. При установке значения в этих двух полях, стиль кнопки и шаблон применяются ко всем кнопкам в приложении, и любой кнопки, созданные в приложении будет по умолчанию использовать этот шаблон.  
+     Для **имя ресурса (ключ)** выберите **применить ко всем**.  Это сделает полученного стиля и шаблона кнопки, которые применяются ко всем объектам, которые являются кнопками. Для **определения в**выберите **приложения**. Это сделает полученного стиля и шаблона кнопки области на все приложение. При установке значения в этих двух полях, стиль кнопки и шаблон применяются ко всем кнопкам в приложении, и любой кнопки, созданные в приложении будет по умолчанию использовать этот шаблон.  
   
 ## <a name="edit-the-button-template"></a>Изменение шаблона кнопки  
  Теперь у вас есть прямоугольник, который был изменен на кнопке. В этом разделе можно изменить шаблон кнопки и дальнейшей ее внешний вид.  

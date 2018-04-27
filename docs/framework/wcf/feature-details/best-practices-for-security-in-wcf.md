@@ -1,13 +1,13 @@
 ---
-title: "Рекомендации по безопасности при использовании WCF"
-ms.custom: 
+title: Рекомендации по безопасности при использовании WCF
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,20 +15,20 @@ dev_langs:
 helpviewer_keywords:
 - best practices [WCF], security
 ms.assetid: 3639de41-1fa7-4875-a1d7-f393e4c8bd69
-caps.latest.revision: 
+caps.latest.revision: 19
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
 ms.workload:
 - dotnet
-ms.openlocfilehash: ad5e459e7dc070b9412de860048c840f677421f4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7416f8429f347d0b8dc6227415ad366b3ff63986
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="best-practices-for-security-in-wcf"></a>Рекомендации по безопасности при использовании WCF
-В следующих разделах приводятся рекомендации по созданию безопасных приложений с помощью [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]безопасность, в разделе [вопросы безопасности](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md), [вопросы безопасности для данных](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md), и [вопросы безопасности при использовании метаданных](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md).  
+В следующих разделах приводятся рекомендации по созданию безопасных приложений с помощью [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] безопасность, в разделе [вопросы безопасности](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md), [вопросы безопасности для данных](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md), и [вопросы безопасности при использовании метаданных](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md).  
   
 ## <a name="identify-services-performing-windows-authentication-with-spns"></a>Идентифицируйте службы, проходящие проверку подлинности Windows, с помощью различных SPN.  
  Службы могут идентифицироваться с помощью имен участника-пользователя (UPN) или имен участника-службы (SPN). Службы, выполняемые от имени учетных записей компьютера (например, сетевые службы), имеют идентификатор SPN, который совпадает с идентификатором компьютера, на котором они выполняются. Службы, выполняемые от имени учетных записей пользователя, имеют идентификатор UPN, совпадающий с идентификатором пользователя, от имени которого они выполняются, при этом средство `setspn` может использоваться для назначения SPN учетной записи пользователя. Настройка службы, делающая возможной идентификацию службы через SPN, и настройка подключающихся к службе клиентов на использование этого SPN, затрудняют определенные атаки. Это правило действует для привязок, использующих согласование Kerberos или SSPI.  Несмотря на это, клиенты должны указывать SPN в случае, если SSPI возвращается к NTLM.  
@@ -45,10 +45,10 @@ ms.lasthandoff: 12/22/2017
   
 -   затруднение использования перенаправленных учетных данных сертификата X509.  
   
- Общие сведения о NTLM атак перенаправления, перейдите к [http://msdn.microsoft.com/msdnmag/issues/06/09/SecureByDesign/default.aspx](http://go.microsoft.com/fwlink/?LinkId=109571).  
+ Общие сведения о NTLM атак перенаправления, перейдите к [ http://msdn.microsoft.com/msdnmag/issues/06/09/SecureByDesign/default.aspx ](http://go.microsoft.com/fwlink/?LinkId=109571).  
   
 ## <a name="always-revert-after-impersonation"></a>Всегда отменяйте изменения после олицетворения  
- При использовании интерфейсов API, которые разрешают олицетворение клиента, не забудьте вернуться к исходной идентификации. Например, при использовании <xref:System.Security.Principal.WindowsIdentity> и <xref:System.Security.Principal.WindowsImpersonationContext>, с помощью C# `using` инструкции или [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] `Using` инструкции, как показано в следующем коде. Класс <xref:System.Security.Principal.WindowsImpersonationContext> реализует интерфейс <xref:System.IDisposable>, следовательно, среда CLR автоматически возвращается к исходной идентификации после того, как код выводится из блока `using`.  
+ При использовании интерфейсов API, которые разрешают олицетворение клиента, не забудьте вернуться к исходной идентификации. Например, при использовании <xref:System.Security.Principal.WindowsIdentity> и <xref:System.Security.Principal.WindowsImpersonationContext>, с помощью C# `using` инструкции или Visual Basic`Using` инструкции, как показано в следующем коде. Класс <xref:System.Security.Principal.WindowsImpersonationContext> реализует интерфейс <xref:System.IDisposable>, следовательно, среда CLR автоматически возвращается к исходной идентификации после того, как код выводится из блока `using`.  
   
  [!code-csharp[c_SecurityBestPractices#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securitybestpractices/cs/source.cs#1)]
  [!code-vb[c_SecurityBestPractices#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securitybestpractices/vb/source.vb#1)]  
@@ -60,13 +60,13 @@ ms.lasthandoff: 12/22/2017
  Убедитесь в надежности источника метаданных и в том, что метаданные не были злонамеренно искажены. Метаданные, полученные по протоколу HTTP, передаются открытым текстом и могут быть подделаны. Если в службе используются свойства <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetEnabled%2A> и <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetUrl%2A>, для загрузки данных по протоколу HTTPS используйте URL-адрес, предоставленный разработчиком службы.  
   
 ## <a name="publish-metadata-using-security"></a>Публикуйте метаданные с использованием безопасности  
- Для предотвращения злонамеренного искажения метаданных, опубликованных службой, обеспечьте защиту конечной точки обмена метаданными с помощью безопасности на уровне транспорта или сообщений. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Публикации конечных точек метаданных](../../../../docs/framework/wcf/publishing-metadata-endpoints.md) и [как: публикация метаданных для службы в коде](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md).  
+ Для предотвращения злонамеренного искажения метаданных, опубликованных службой, обеспечьте защиту конечной точки обмена метаданными с помощью безопасности на уровне транспорта или сообщений. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Публикация конечных точек метаданных](../../../../docs/framework/wcf/publishing-metadata-endpoints.md) и [как: публикация метаданных для службы в коде](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md).  
   
 ## <a name="ensure-use-of-local-issuer"></a>Разрешите использование локального издателя  
  Если для данной привязки указаны адрес издателя и привязка, локальный издатель не применяется в конечных точках, использующих эту привязку. Клиенты, которые предполагают всегда использовать локальный издатель, должны убедиться, что они не используют такую привязку или что привязка изменена таким образом, что адрес издателя пуст.  
   
 ## <a name="saml-token-size-quotas"></a>Квоты на размер маркеров SAML  
- Когда маркеры Security Assertion Markup Language (SAML) сериализуются в сообщениях, то, независимо от того, выдаются ли они службой маркеров безопасности (STS) или предоставляются клиентами для служб как часть проверки подлинности, квота на максимальный размер сообщения должна быть достаточно большой, чтобы вместить маркер SAML и другие части сообщения. Как правило, по умолчанию квоты на размер сообщения являются достаточными. Впрочем, если большой размер токена SAML объясняется содержанием в нем сотни утверждений, может потребоваться увеличение квот для выделения места сериализованному токену. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]в разделе квоты, [вопросы безопасности для данных](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md).  
+ Когда маркеры Security Assertion Markup Language (SAML) сериализуются в сообщениях, то, независимо от того, выдаются ли они службой маркеров безопасности (STS) или предоставляются клиентами для служб как часть проверки подлинности, квота на максимальный размер сообщения должна быть достаточно большой, чтобы вместить маркер SAML и другие части сообщения. Как правило, по умолчанию квоты на размер сообщения являются достаточными. Впрочем, если большой размер токена SAML объясняется содержанием в нем сотни утверждений, может потребоваться увеличение квот для выделения места сериализованному токену. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] в разделе квоты, [вопросы безопасности для данных](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md).  
   
 ## <a name="set-securitybindingelementincludetimestamp-to-true-on-custom-bindings"></a>Задайте параметру SecurityBindingElement.IncludeTimestamp значение True в пользовательских привязках  
  При создании пользовательской привязки следует задать параметру <xref:System.ServiceModel.Channels.SecurityBindingElement.IncludeTimestamp%2A> значение `true`. В противном случае, если параметр <xref:System.ServiceModel.Channels.SecurityBindingElement.IncludeTimestamp%2A> имеет значение `false`, а клиент использует асимметричный маркер на основе ключа, например, сертификат Х509, сообщение не будет подписано.  

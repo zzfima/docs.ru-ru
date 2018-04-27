@@ -11,17 +11,17 @@ helpviewer_keywords:
 - international user interface [WPF], XAML
 - globalization [WPF]
 ms.assetid: 4571ccfe-8a60-4f06-9b37-7ac0b1c2d10f
-caps.latest.revision: ''
+caps.latest.revision: 35
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: e6f39d40284e6212715d85fece545e653ff2e60a
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 8bf63c59c0948dd8414232a52fc12fafa0d13aa1
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="globalization-for-wpf"></a>Глобализация для WPF
 В этом разделе рассматриваются проблемы, которые следует учитывать при написании [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] приложений для глобального рынка. Элементы программирования глобализации определены в [!INCLUDE[TLA#tla_net](../../../../includes/tlasharptla-net-md.md)] в `System.Globalization`.  
@@ -76,7 +76,7 @@ ms.lasthandoff: 03/26/2018
   
 <a name="intl_text"></a>   
 ### <a name="international-text"></a>Международный текст  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] включает встроенные возможности обработки для всех [!INCLUDE[TLA#tla_winfx](../../../../includes/tlasharptla-winfx-md.md)] поддерживается системах письма.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] включает встроенные возможности обработки для систем письма все поддерживаемые Microsoft .NET Framework.  
   
  В настоящее время поддерживаются следующие скрипты.  
   
@@ -158,7 +158,7 @@ ms.lasthandoff: 03/26/2018
   
 <a name="localizable_ui"></a>   
 ### <a name="localizable-user-interface"></a>Локализуемый пользовательский интерфейс  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] приложения используют [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] для определения их [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]. [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] позволяет разработчикам задавать иерархию объектов с набором свойств и определенной логикой. В основном используются [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] разработать [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] приложения, но он может использоваться для указания иерархии любых [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] объектов. Большинство разработчиков использует [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] для указания их приложения [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] и использовать язык программирования, таких как [!INCLUDE[TLA#tla_cshrp](../../../../includes/tlasharptla-cshrp-md.md)] реагировать на действия пользователя.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] приложения используют [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] для определения их [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]. [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] позволяет разработчикам задавать иерархию объектов с набором свойств и определенной логикой. В основном используются [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] разработать [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] приложения, но он может использоваться для указания иерархии любых [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] объектов. Большинство разработчиков использует [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] для указания их приложения [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] и использовать язык программирования, например C# для реагирования на действия пользователя.  
   
  С точки зрения ресурсов [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] разработанный для описания зависит от языка [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] является элементом ресурса и поэтому его формат окончательного распространения должна соответствовать локализуемые поддержка международных языков. Поскольку [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] не может обрабатывать события, многие [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] приложения содержат для этого блоки кода. Дополнительные сведения см. в разделе [Обзор XAML (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md). Код исключается и компилируется в различные двоичные файлы при [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] файл размечается в форма BAML кода XAML. Форма BAML файлов XAML, изображения и другие типы управляемых объектов ресурсов внедряются во вспомогательную сборку ресурсов, которая может быть локализована на другие языки, или в основную сборку, если локализация не требуется.  
   

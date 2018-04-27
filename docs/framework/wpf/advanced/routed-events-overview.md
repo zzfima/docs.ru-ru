@@ -1,12 +1,13 @@
 ---
-title: "Общие сведения о перенаправленных событиях"
-ms.custom: 
+title: Общие сведения о перенаправленных событиях
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -22,16 +23,17 @@ helpviewer_keywords:
 - button set [WPF], grouped
 - bubbling [WPF]
 ms.assetid: 1a2189ae-13b4-45b0-b12c-8de2e49c29d2
-caps.latest.revision: "29"
+caps.latest.revision: 29
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 22ce2611afa2a3b2b06b7d378479e5ffd2f744f9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 896f3b852c00b9c7cd031710dbdaa00974428344
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="routed-events-overview"></a>Общие сведения о перенаправленных событиях
 В этом разделе описывается понятие перенаправленных событий в [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. Здесь определяется терминология перенаправленных событий, описывается, как перенаправленные события маршрутизируются через дерево элементов, кратко описываются способы обработки перенаправленных событий, а также способы создания пользовательских перенаправленных событий.
@@ -127,12 +129,12 @@ ms.lasthandoff: 12/22/2017
   
  [!code-xaml[EventOvwSupport#SimplestSyntax](../../../../samples/snippets/csharp/VS_Snippets_Wpf/EventOvwSupport/CSharp/default.xaml#simplestsyntax)]  
   
- `b1SetColor`имя реализуемого обработчика, который содержит код, который обрабатывает <xref:System.Windows.Controls.Primitives.ButtonBase.Click> событий. `b1SetColor`должен иметь такой же сигнатурой, что <xref:System.Windows.RoutedEventHandler> делегат, который является делегата обработчика событий для <xref:System.Windows.Controls.Primitives.ButtonBase.Click> события. Первый параметр всех делегатов обработчиков перенаправленных событий указывает элемент, к которому добавляется обработчик событий, а второй параметр указывает данные для события.  
+ `b1SetColor` имя реализуемого обработчика, который содержит код, который обрабатывает <xref:System.Windows.Controls.Primitives.ButtonBase.Click> событий. `b1SetColor` должен иметь такой же сигнатурой, что <xref:System.Windows.RoutedEventHandler> делегат, который является делегата обработчика событий для <xref:System.Windows.Controls.Primitives.ButtonBase.Click> события. Первый параметр всех делегатов обработчиков перенаправленных событий указывает элемент, к которому добавляется обработчик событий, а второй параметр указывает данные для события.  
   
 [!code-csharp[EventOvwSupport#SimpleHandlerA](../../../../samples/snippets/csharp/VS_Snippets_Wpf/EventOvwSupport/CSharp/default.xaml.cs#simplehandlera)]
 [!code-vb[EventOvwSupport#SimpleHandlerA](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/EventOvwSupport/visualbasic/default.xaml.vb#simplehandlera)]  
   
- <xref:System.Windows.RoutedEventHandler>является делегатом обработчика основные перенаправленного события. Для перенаправленных событий, которые являются специализированными для определенных элементов управления или скриптов, делегаты, которые используются для обработчиков перенаправленных событий, также могут быть более специализированными, чтобы они могли передавать определенные данные события. Например, в общем сценарии ввода можно обработать <xref:System.Windows.UIElement.DragEnter> перенаправленного события. Обработчик должен реализовывать <xref:System.Windows.DragEventHandler> делегата. С помощью наиболее конкретного делегата, можно обработать <xref:System.Windows.DragEventArgs> в обработчике событий и прочитать <xref:System.Windows.DragEventArgs.Data%2A> свойство, которое содержит полезные данные буфера обмена операции перетаскивания.  
+ <xref:System.Windows.RoutedEventHandler> является делегатом обработчика основные перенаправленного события. Для перенаправленных событий, которые являются специализированными для определенных элементов управления или скриптов, делегаты, которые используются для обработчиков перенаправленных событий, также могут быть более специализированными, чтобы они могли передавать определенные данные события. Например, в общем сценарии ввода можно обработать <xref:System.Windows.UIElement.DragEnter> перенаправленного события. Обработчик должен реализовывать <xref:System.Windows.DragEventHandler> делегата. С помощью наиболее конкретного делегата, можно обработать <xref:System.Windows.DragEventArgs> в обработчике событий и прочитать <xref:System.Windows.DragEventArgs.Data%2A> свойство, которое содержит полезные данные буфера обмена операции перетаскивания.  
   
  Полный пример добавления обработчика событий к элементу с помощью [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] см. в разделе [Обработка перенаправленных событий](../../../../docs/framework/wpf/advanced/how-to-handle-a-routed-event.md).  
   
@@ -141,18 +143,18 @@ ms.lasthandoff: 12/22/2017
  [!code-csharp[EventOvwSupport#AddHandlerCode](../../../../samples/snippets/csharp/VS_Snippets_Wpf/EventOvwSupport/CSharp/default.xaml.cs#addhandlercode)]
  [!code-vb[EventOvwSupport#AddHandlerCode](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/EventOvwSupport/visualbasic/default.xaml.vb#addhandlercode)]  
   
- В следующем примере показан синтаксис оператора [!INCLUDE[TLA#tla_cshrp](../../../../includes/tlasharptla-cshrp-md.md)] ([!INCLUDE[TLA2#tla_visualb](../../../../includes/tla2sharptla-visualb-md.md)] имеет немного другой синтаксис оператора из-за обработки разыменовывания).  
+ Следующий пример показывает C# синтаксис оператора (Visual Basic имеет немного другой синтаксис оператора из-за обработки разыменовывания):  
   
  [!code-csharp[EventOvwSupport#AddHandlerPlusEquals](../../../../samples/snippets/csharp/VS_Snippets_Wpf/EventOvwSupport/CSharp/default.xaml.cs#addhandlerplusequals)]
  [!code-vb[EventOvwSupport#AddHandlerPlusEquals](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/EventOvwSupport/visualbasic/default.xaml.vb#addhandlerplusequals)]  
   
  Пример добавления обработчика событий в коде см. в разделе [Добавление обработчика событий с помощью кода](../../../../docs/framework/wpf/advanced/how-to-add-an-event-handler-using-code.md).  
   
- При использовании [!INCLUDE[TLA2#tla_visualb](../../../../includes/tla2sharptla-visualb-md.md)] можно также использовать ключевое слово `Handles`, чтобы добавить обработчик как часть объявлений обработчика. Дополнительные сведения см. в разделе [Обработка событий в Visual Basic и WPF](../../../../docs/framework/wpf/advanced/visual-basic-and-wpf-event-handling.md).  
+ Если вы используете Visual Basic, можно использовать `Handles` ключевое слово для добавления обработчиков как часть объявления обработчиков. Дополнительные сведения см. в разделе [Обработка событий в Visual Basic и WPF](../../../../docs/framework/wpf/advanced/visual-basic-and-wpf-event-handling.md).  
   
 <a name="concept_handled"></a>   
 ### <a name="the-concept-of-handled"></a>Концепция обработанных событий  
- Все перенаправленные события совместно используют общий базовый класс данных события, <xref:System.Windows.RoutedEventArgs>. <xref:System.Windows.RoutedEventArgs>Определяет <xref:System.Windows.RoutedEventArgs.Handled%2A> свойства, которое принимает логическое значение. Назначение <xref:System.Windows.RoutedEventArgs.Handled%2A> свойство — возможность любого обработчика событий в маршруте пометить перенаправленное событие как *обрабатываются*, его значение <xref:System.Windows.RoutedEventArgs.Handled%2A> для `true`. После обработки обработчиком в одном элементе в маршруте совместно используемые данные события снова предоставляются каждому прослушивателю в маршруте.  
+ Все перенаправленные события совместно используют общий базовый класс данных события, <xref:System.Windows.RoutedEventArgs>. <xref:System.Windows.RoutedEventArgs> Определяет <xref:System.Windows.RoutedEventArgs.Handled%2A> свойства, которое принимает логическое значение. Назначение <xref:System.Windows.RoutedEventArgs.Handled%2A> свойство — возможность любого обработчика событий в маршруте пометить перенаправленное событие как *обрабатываются*, его значение <xref:System.Windows.RoutedEventArgs.Handled%2A> для `true`. После обработки обработчиком в одном элементе в маршруте совместно используемые данные события снова предоставляются каждому прослушивателю в маршруте.  
   
  Значение <xref:System.Windows.RoutedEventArgs.Handled%2A> влияет на перенаправленное событие сообщил или обработки при перемещении его прохождении по маршруту. Если <xref:System.Windows.RoutedEventArgs.Handled%2A> — `true` событий данные для перенаправленного события, то обработчики, которые прослушивают перенаправляемые события на элементах, обычно больше не вызываются для этого конкретного экземпляра события. Это справедливо как для обработчиков, присоединенных к [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], так и для обработчиков, добавленных с помощью синтаксиса присоединения обработчика событий конкретного языка, например `+=` или `Handles`. Для наиболее общих сценариев обработки отметка события как обработанное, задав <xref:System.Windows.RoutedEventArgs.Handled%2A> для `true` будет «остановить» нисходящую или восходящую маршрутизацию, а также для любого события, которое обрабатывается в точке маршрута обработчиком классов маршрутизацию.  
   
@@ -200,7 +202,7 @@ ms.lasthandoff: 12/22/2017
   
  [!code-xaml[EventOvwSupport#GroupButton](../../../../samples/snippets/csharp/VS_Snippets_Wpf/EventOvwSupport/CSharp/default.xaml#groupbutton)]  
   
- Здесь является прослушивателем родительского элемента, где добавляется обработчик <xref:System.Windows.Controls.StackPanel>. Тем не менее, она добавляет обработчик перенаправленного события, который был объявлен и будет вызываться <xref:System.Windows.Controls.Button> класса (<xref:System.Windows.Controls.Primitives.ButtonBase> на самом деле, но доступен для <xref:System.Windows.Controls.Button> через наследование). <xref:System.Windows.Controls.Button>«владеет» событием, но позволяет обработчикам системы перенаправленного события для перенаправленного события, для подключения к любой <xref:System.Windows.UIElement> или <xref:System.Windows.ContentElement> прослушиватель экземпляра, в противном случае может присоединить прослушиватели для [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] события. Пространством имен xmlns по умолчанию для этих полных имен атрибутов событий обычно является пространство имен xmlns [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] по умолчанию, но можно также указать префиксные пространства имен для пользовательских перенаправленных событий. Дополнительные сведения о xmlns см. в разделе [Пространства имен XAML и сопоставление пространств имен для WPF XAML](../../../../docs/framework/wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md).  
+ Здесь является прослушивателем родительского элемента, где добавляется обработчик <xref:System.Windows.Controls.StackPanel>. Тем не менее, она добавляет обработчик перенаправленного события, который был объявлен и будет вызываться <xref:System.Windows.Controls.Button> класса (<xref:System.Windows.Controls.Primitives.ButtonBase> на самом деле, но доступен для <xref:System.Windows.Controls.Button> через наследование). <xref:System.Windows.Controls.Button> «владеет» событием, но позволяет обработчикам системы перенаправленного события для перенаправленного события, для подключения к любой <xref:System.Windows.UIElement> или <xref:System.Windows.ContentElement> прослушиватель экземпляра, в противном случае может присоединить прослушиватели для [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] события. Пространством имен xmlns по умолчанию для этих полных имен атрибутов событий обычно является пространство имен xmlns [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] по умолчанию, но можно также указать префиксные пространства имен для пользовательских перенаправленных событий. Дополнительные сведения о xmlns см. в разделе [Пространства имен XAML и сопоставление пространств имен для WPF XAML](../../../../docs/framework/wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md).  
   
 <a name="how_event_processing_works"></a>   
 ## <a name="wpf-input-events"></a>События ввода WPF  

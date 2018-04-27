@@ -1,34 +1,36 @@
 ---
-title: "Общие сведения о TextPattern модели автоматизации пользовательского интерфейса"
-ms.custom: 
+title: Общие сведения о TextPattern модели автоматизации пользовательского интерфейса
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-bcl
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - UI Automation, TextPattern class
 - TextPattern class
 - classes, TextPattern
 ms.assetid: 41787927-df1f-4f4a-aba3-641662854fc4
-caps.latest.revision: "38"
+caps.latest.revision: 38
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: dbf3e125d911a407be3b07d0ce93d5c17bd8a0b7
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 1b9504dceea6987945cfb3960f756148db9ebb8f
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="ui-automation-textpattern-overview"></a>Общие сведения о TextPattern модели автоматизации пользовательского интерфейса
 > [!NOTE]
 >  Эта документация предназначена для разработчиков .NET Framework, желающих использовать управляемые классы [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , заданные в пространстве имен <xref:System.Windows.Automation> . Последние сведения о [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]см. в разделе [API автоматизации Windows. Автоматизация пользовательского интерфейса](http://go.microsoft.com/fwlink/?LinkID=156746).  
   
- В этом обзоре описывается использование [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] для предоставления текстового содержимого, в том числе атрибутов формата и стиля, текстовых элементов управления на платформах, поддерживаемых [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]. Помимо прочих, в эти элементы управления входят [!INCLUDE[TLA#tla_winfx](../../../includes/tlasharptla-winfx-md.md)] <xref:System.Windows.Controls.TextBox> и <xref:System.Windows.Controls.RichTextBox> а также их эквиваленты [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] .  
+ В этом обзоре описывается использование [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] для предоставления текстового содержимого, в том числе атрибутов формата и стиля, текстовых элементов управления на платформах, поддерживаемых [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]. Эти элементы управления включают, но не ограничиваются Microsoft .NET Framework <xref:System.Windows.Controls.TextBox> и <xref:System.Windows.Controls.RichTextBox> , а также их [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] эквиваленты.  
   
  Предоставление текстового содержимого элемента управления осуществляется с помощью шаблона элемента управления <xref:System.Windows.Automation.TextPattern> , который представляет содержимое текстового контейнера в качестве текстового потока. В свою очередь <xref:System.Windows.Automation.TextPattern> требует поддержки класса <xref:System.Windows.Automation.Text.TextPatternRange> для предоставления атрибутов формата и стиля. <xref:System.Windows.Automation.Text.TextPatternRange> поддерживает <xref:System.Windows.Automation.TextPattern> , предоставляя непрерывный текст или несколько раздельных фрагментов текста в текстовый контейнер с коллекцией конечных точек <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.Start> и <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.End> . <xref:System.Windows.Automation.Text.TextPatternRange> поддерживает такие функциональные возможности, как выбор, сравнение, извлечение и обход.  
   
@@ -121,7 +123,7 @@ ms.lasthandoff: 01/19/2018
  Характеристика форматирования текстового диапазона (например, <xref:System.Windows.Automation.TextPattern.IsItalicAttribute> или <xref:System.Windows.Automation.TextPattern.FontNameAttribute>).  
   
  **Вырожденный диапазон**  
- Вырожденный диапазон — это пустой или содержащий нулевые символы текстовый диапазон. Применительно к целям шаблона элемента управления TextPattern точка вставки текста (или системного курсора) считается вырожденным диапазоном. Если никакой текст не выбран, метод <xref:System.Windows.Automation.TextPattern.GetSelection%2A> вернет вырожденный диапазон в точке вставки текста, а метод <xref:System.Windows.Automation.TextPattern.RangeFromPoint%2A> вернет вырожденный диапазон в качестве своей начальной точки. Методы<xref:System.Windows.Automation.TextPattern.RangeFromChild%2A> и <xref:System.Windows.Automation.TextPattern.GetVisibleRanges%2A> могут возвращать вырожденные диапазоны, когда поставщик текста не может найти текстовые диапазоны, соответствующие заданному условию. Этот вырожденный диапазон можно использовать в качестве начальной точки в поставщике текста. Методы<xref:System.Windows.Automation.Text.TextPatternRange.FindText%2A> и <xref:System.Windows.Automation.Text.TextPatternRange.FindAttribute%2A> возвращают пустую ссылку (`Nothing` в [!INCLUDE[TLA2#tla_visualbnet](../../../includes/tla2sharptla-visualbnet-md.md)]), чтобы не путать обнаруженный диапазон и вырожденный диапазон.  
+ Вырожденный диапазон — это пустой или содержащий нулевые символы текстовый диапазон. Применительно к целям шаблона элемента управления TextPattern точка вставки текста (или системного курсора) считается вырожденным диапазоном. Если никакой текст не выбран, метод <xref:System.Windows.Automation.TextPattern.GetSelection%2A> вернет вырожденный диапазон в точке вставки текста, а метод <xref:System.Windows.Automation.TextPattern.RangeFromPoint%2A> вернет вырожденный диапазон в качестве своей начальной точки. Методы<xref:System.Windows.Automation.TextPattern.RangeFromChild%2A> и <xref:System.Windows.Automation.TextPattern.GetVisibleRanges%2A> могут возвращать вырожденные диапазоны, когда поставщик текста не может найти текстовые диапазоны, соответствующие заданному условию. Этот вырожденный диапазон можно использовать в качестве начальной точки в поставщике текста. <xref:System.Windows.Automation.Text.TextPatternRange.FindText%2A> и <xref:System.Windows.Automation.Text.TextPatternRange.FindAttribute%2A> возвращать пустую ссылку (`Nothing` в Microsoft Visual Basic .NET) чтобы не путать обнаруженный диапазон и вырожденный диапазон.  
   
  **Внедренный объект**  
  В текстовой модели [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] существует два типа внедренных объектов. Они состоят из элементов с текстовым содержимым, таких как гиперссылки или таблицы, и элементов управления, таких как изображения и кнопки. Дополнительные сведения см. в разделе [Access Embedded Objects Using UI Automation](../../../docs/framework/ui-automation/access-embedded-objects-using-ui-automation.md).  
@@ -129,7 +131,7 @@ ms.lasthandoff: 01/19/2018
  **Конечная точка**  
  Абсолютная точка <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.Start> или <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.End> текстового диапазона в текстовом контейнере.  
   
- ![TextPatternRangeEndpoints &#40; начала и окончания &#41;. ] (../../../docs/framework/ui-automation/media/uia-textpattern-endpoints.PNG "UIA_TextPattern_Endpoints")  
+ ![TextPatternRangeEndpoints &#40;начала и окончания&#41;. ] (../../../docs/framework/ui-automation/media/uia-textpattern-endpoints.PNG "UIA_TextPattern_Endpoints")  
 Ниже демонстрируется задание начальной и конечной точками.  
   
  **TextRange**  

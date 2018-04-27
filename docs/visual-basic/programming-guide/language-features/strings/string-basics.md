@@ -1,28 +1,29 @@
 ---
-title: "Основы работы со строками в Visual Basic"
-ms.custom: 
+title: Основы работы со строками в Visual Basic
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - strings [Visual Basic], Like operator
 - strings [Visual Basic], Visual Basic
 - strings [Visual Basic], regular expressions
 ms.assetid: 5674418d-f00d-4f72-9f98-d15897793350
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 8881ad6ab7f28689019463abdab3b867e010d51e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 4a40435b76b0eee4f4eca15d5ba1a31cc58698ab
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="string-basics-in-visual-basic"></a>Основы работы со строками в Visual Basic
-Тип данных `String` представляет последовательность символов (каждый из которых, в свою очередь, представляет экземпляр типа данных `Char`). В этом разделе рассмотрены базовые понятия строк в [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
+Тип данных `String` представляет последовательность символов (каждый из которых, в свою очередь, представляет экземпляр типа данных `Char`). В этом разделе представлены основные понятия строк в Visual Basic.  
   
 ## <a name="string-variables"></a>Строковые переменные  
  Экземпляру строки можно назначить литеральное значение, которое представляет ряд символов. Пример:  
@@ -37,7 +38,7 @@ ms.lasthandoff: 11/21/2017
   
  [!code-vb[VbVbalrStrings#65](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/string-basics_3.vb)]  
   
- Этот код вызывает ошибку, так как компилятор завершает строку после второй пары кавычек, а остаток строки интерпретируется как код. Чтобы устранить эту проблему, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] интерпретирует два символа кавычек в строковом литерале как один символ кавычек в строке. В следующем примере показан правильный способ указания кавычек в строке:  
+ Этот код вызывает ошибку, так как компилятор завершает строку после второй пары кавычек, а остаток строки интерпретируется как код. Чтобы решить эту проблему, Visual Basic интерпретирует две кавычки в строковом литерале как один символ кавычек в строке. В следующем примере показан правильный способ указания кавычек в строке:  
   
  [!code-vb[VbVbalrStrings#66](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/string-basics_4.vb)]  
   

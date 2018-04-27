@@ -1,12 +1,13 @@
 ---
-title: "Практическое руководство. Распознавание одиночных и двойных щелчков"
-ms.custom: 
+title: Практическое руководство. Распознавание одиночных и двойных щелчков
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-winforms
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -17,16 +18,17 @@ helpviewer_keywords:
 - mouse [Windows Forms], double-click
 - mouse clicks [Windows Forms], single versus double
 ms.assetid: d836ac8c-85bc-4f3a-a761-8aee03dc682c
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4da472b4a2cb2001953758acb0f28da77f08ac70
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: b8bd383c94afb5c8bb3574e2fee80bca8c4a9143
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-distinguish-between-clicks-and-double-clicks"></a>Практическое руководство. Распознавание одиночных и двойных щелчков
 Как правило, одиночное событие *щелчок* инициирует действие пользовательского интерфейса, а событие *двойной щелчок* расширяет его. Например, одним щелчком мыши обычно выбирается элемент, а двойным щелчком мыши этот элемент изменяется. Однако события щелчков Windows Forms непросто приспособить к сценарию, в котором щелчок и двойной щелчок выполняют несовместимые действия, поскольку действие, привязанное к событию <xref:System.Windows.Forms.Control.Click> или <xref:System.Windows.Forms.Control.MouseClick>, выполняется перед действием, привязанным к событию <xref:System.Windows.Forms.Control.DoubleClick> или <xref:System.Windows.Forms.Control.MouseDoubleClick>. В этом разделе показаны два способа решения этой проблемы. Одним из решений является обработка события двойного щелчка и откат действий при обработке события щелчка. В редких случаях может потребоваться имитировать поведение при одинарном и двойном щелчке при обработке событий <xref:System.Windows.Forms.Control.MouseDown> и с помощью свойств <xref:System.Windows.Forms.SystemInformation.DoubleClickTime%2A> и <xref:System.Windows.Forms.SystemInformation.DoubleClickSize%2A> класса <xref:System.Windows.Forms.SystemInformation>. Производится измерение времени между щелчками мышью и, если второе нажатие происходит до того, как <xref:System.Windows.Forms.SystemInformation.DoubleClickTime%2A> достигнет значения и кнопка мыши была нажата, когда курсор находился в прямоугольнике, заданном <xref:System.Windows.Forms.SystemInformation.DoubleClickSize%2A>, то выполняется действие двойного щелчка; в противном случае выполняется действие щелчка.  
@@ -51,7 +53,7 @@ ms.lasthandoff: 12/22/2017
   
 -   ссылки на сборки System, System.Drawing и System.Windows.Forms.  
   
- Информацию о сборке этих примеров из командной строки для [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] или [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] можно найти в разделе [Построение из командной строки](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) или [Построение из командной строки с помощью файла csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Вы можете выполнить сборку этого примера в [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)], вставив код в новый проект.  См. также [Практическое руководство. Компиляция и выполнение откомпилированного примера кода формы Windows Forms с помощью Visual Studio](http://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
+ Сведения о построении этих примеров из командной строки для Visual Basic или Visual C# см. в разделе [построение из командной строки](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) или [построение с командной строки csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Вы можете выполнить сборку этого примера в [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)], вставив код в новый проект.  См. также [Практическое руководство. Компиляция и выполнение откомпилированного примера кода формы Windows Forms с помощью Visual Studio](http://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
   
 ## <a name="see-also"></a>См. также  
  [Ввод данных мышью в приложении Windows Forms](../../../docs/framework/winforms/mouse-input-in-a-windows-forms-application.md)

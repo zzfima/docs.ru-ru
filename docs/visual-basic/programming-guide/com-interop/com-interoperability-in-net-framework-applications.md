@@ -1,30 +1,31 @@
 ---
-title: "COM-взаимодействие в приложениях .NET Framework (Visual Basic)"
-ms.custom: 
+title: COM-взаимодействие в приложениях .NET Framework (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - interoperability, COM and .NET framework objects
 - COM interop [Visual Basic]
 - shared components
 ms.assetid: f5a72143-c268-4dff-a019-974ad940e17d
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 0c84143e22f33f572447c50e33559a52469b181a
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: 25fbde3845d378d4a2bcfc13c71124ad1bc29514
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="com-interoperability-in-net-framework-applications-visual-basic"></a>COM-взаимодействие в приложениях .NET Framework (Visual Basic)
-Если вы хотите использовать .NET Framework и COM-объектов в одном приложении, необходимо учитывать различия в расположении этих объектов в памяти. Объект .NET Framework располагается в управляемой памяти, памяти, управляемой средой CLR и при необходимости может быть перемещен средой выполнения. COM-объект находится в неуправляемой памяти и не планируется переместить в другое расположение в памяти. [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]и [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] предоставляют средства для управления взаимодействием таких управляемых и неуправляемых компонентов. Дополнительные сведения об управляемом коде см. в разделе [общеязыковая среда выполнения](../../../standard/clr.md).  
+Если вы хотите использовать .NET Framework и COM-объектов в одном приложении, необходимо учитывать различия в расположении этих объектов в памяти. Объект .NET Framework располагается в управляемой памяти, памяти, управляемой средой CLR и при необходимости может быть перемещен средой выполнения. COM-объект находится в неуправляемой памяти и не планируется переместить в другое расположение в памяти. [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] и [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] предоставляют средства для управления взаимодействием таких управляемых и неуправляемых компонентов. Дополнительные сведения об управляемом коде см. в разделе [общеязыковая среда выполнения](../../../standard/clr.md).  
   
- В дополнение к использованию объектов COM в приложениях .NET, можно также использовать [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] для разработки объектов, доступных из неуправляемого кода через COM.  
+ В дополнение к использованию объектов COM в приложениях .NET, можно также использовать Visual Basic для разработки объектов, доступных из неуправляемого кода через COM.  
   
  Ссылки на этой странице приведены сведения о взаимодействии между объектами COM и .NET Framework.  
   

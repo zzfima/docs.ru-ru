@@ -1,26 +1,27 @@
 ---
-title: "Программирование дерева элементов модели"
-ms.custom: 
+title: Программирование дерева элементов модели
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 0229efde-19ac-4bdc-a187-c6227a7bd1a5
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 83e804a3ede525510b5c46b494882656c74591b8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 497aa75214bdbbefa7f09ef56fe96926c2461ed6
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="programming-model-item-tree"></a>Программирование дерева элементов модели
-В этом образце показано, как переходить по дереву <xref:System.Activities.Presentation.Model.ModelItem>, используя привязку декларативных данных из представления дерева [!INCLUDE[avalon1](../../../../includes/avalon1-md.md)].  
+В этом примере демонстрируется переход <xref:System.Activities.Presentation.Model.ModelItem> дерева, используя привязку декларативных данных из представления дерева Windows Presentation Foundation (WPF).  
   
 ## <a name="sample-details"></a>Подробные сведения об образце  
  Дерево <xref:System.Activities.Presentation.Model.ModelItem> является абстракцией, которая используется инфраструктурой [!INCLUDE[wfd1](../../../../includes/wfd1-md.md)] для предоставления данных о базовом изменяемом экземпляре. На следующей иллюстрации показаны различные слои инфраструктуры внутри [!INCLUDE[wfd2](../../../../includes/wfd2-md.md)].  
@@ -54,7 +55,7 @@ justAdded.Properties["DisplayName"].SetValue("new name");
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите на страницу [Примеры Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все примеры [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Этот образец расположен в следующем каталоге.  
+>  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) Чтобы загрузить все [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] образцов. Этот образец расположен в следующем каталоге.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Designer\ProgrammingModelItemTree`  
   

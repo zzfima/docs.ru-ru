@@ -19,11 +19,11 @@ ms.assetid: 89a59d00-985e-4f5c-b59f-29b47bad11cb
 caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: ea4db763bbed651a01845b49395255586cb60113
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: dadb21f4985497a90cc62f98c5fb2abdd7cc2781
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="xml-child-axis-property-visual-basic"></a>Свойство дочерней оси XML (Visual Basic)
 Предоставляет доступ к дочерним элементам одного из следующих: объекта <xref:System.Xml.Linq.XElement>, объекта <xref:System.Xml.Linq.XDocument>, коллекции объектов <xref:System.Xml.Linq.XElement> или коллекции объектов <xref:System.Xml.Linq.XDocument>.  
@@ -38,10 +38,10 @@ object.<child>
   
 |Термин|Определение|  
 |---|---|  
-|`object`|Обязательный. Объект <xref:System.Xml.Linq.XElement>, объект <xref:System.Xml.Linq.XDocument>, коллекция объектов <xref:System.Xml.Linq.XElement> или коллекция объектов <xref:System.Xml.Linq.XDocument>.|  
-|.<|Обязательный. Обозначает начало свойства дочерней оси.|  
-|`child`|Обязательный. Имя дочерних узлов для доступа, формы [`prefix``:`]`name`.<br /><br /> -   `Prefix`— Необязательный параметр. Префикс пространства имен XML для дочернего узла. Должно быть глобальным пространством имен XML, определенным с помощью оператора `Imports`.<br />-   `Name`-Обязательно. Имя локального дочернего узла. В разделе [имена объявленных элементов и атрибутов](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md).|  
-|>|Обязательный. Обозначает конец свойства дочерней оси.|  
+|`object`|Обязательно. Объект <xref:System.Xml.Linq.XElement>, объект <xref:System.Xml.Linq.XDocument>, коллекция объектов <xref:System.Xml.Linq.XElement> или коллекция объектов <xref:System.Xml.Linq.XDocument>.|  
+|.<|Обязательно. Обозначает начало свойства дочерней оси.|  
+|`child`|Обязательно. Имя дочерних узлов для доступа, формы [`prefix``:`]`name`.<br /><br /> -   `Prefix` — Необязательный параметр. Префикс пространства имен XML для дочернего узла. Должно быть глобальным пространством имен XML, определенным с помощью оператора `Imports`.<br />-   `Name` -Обязательно. Имя локального дочернего узла. В разделе [имена объявленных элементов и атрибутов](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md).|  
+|>|Обязательно. Обозначает конец свойства дочерней оси.|  
   
 ## <a name="return-value"></a>Возвращаемое значение  
  Коллекция объектов <xref:System.Xml.Linq.XElement>.  
@@ -49,7 +49,7 @@ object.<child>
 ## <a name="remarks"></a>Примечания  
  Свойство дочерней оси XML можно использовать для доступа к дочерним узлам по имени из объекта <xref:System.Xml.Linq.XElement> или <xref:System.Xml.Linq.XDocument> или из коллекции объектов <xref:System.Xml.Linq.XElement> или <xref:System.Xml.Linq.XDocument>. Используйте XML-свойство `Value` для доступа к значению первого дочернего узла в возвращаемой коллекции. Дополнительные сведения см. в разделе [свойство значения XML](../../../visual-basic/language-reference/xml-axis/xml-value-property.md).  
   
- [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] Компилятор преобразует свойства дочерней оси для вызовов <xref:System.Xml.Linq.XContainer.Elements%2A> метод.  
+ Компилятор Visual Basic преобразует свойства дочерней оси для вызовов <xref:System.Xml.Linq.XContainer.Elements%2A> метод.  
   
 ## <a name="xml-namespaces"></a>Пространства имен XML  
  Имя в свойстве дочерней оси может использовать только префиксы пространства имен XML, объявленные глобально с помощью метода `Imports`. В нем нельзя использовать префиксы пространства имен XML, объявленные локально с помощью литералов XML-элемента. Дополнительные сведения см. в разделе [оператор Imports (пространство имен XML)](../../../visual-basic/language-reference/statements/imports-statement-xml-namespace.md).  

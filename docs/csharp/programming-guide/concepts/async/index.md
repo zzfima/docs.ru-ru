@@ -9,11 +9,11 @@ ms.assetid: 9bcf896a-5826-4189-8c1a-3e35fa08243a
 caps.latest.revision: 5
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: c9f2699646db17c9358f84f4c5407e7aab8b60cf
-ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
+ms.openlocfilehash: 70dd5606ba81619658eda24f8c4bfd4970d29308
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="asynchronous-programming-with-async-and-await-c"></a>Асинхронное программирование с использованием ключевых слов Async и Await (C#)
 Асинхронное программирование позволяет избежать появления узких мест производительности и увеличить общую скорость реагирования приложения. Однако традиционные методы создания асинхронных приложений могут оказаться сложными, как в плане написания кода, так и в плане отладки и обслуживания.  
@@ -98,7 +98,7 @@ string urlContents = await client.GetStringAsync();
   
     -   `void`, если вы создаете асинхронный обработчик событий.  
 
-    -   Любой другой тип, имеющий метод `GetAwaiter` (начиная с C# 7).
+    -   Любой другой тип, имеющий метод `GetAwaiter` (начиная с C# 7.0).
   
      Дополнительные сведения см. в [описании типов возвращаемого значения и параметров](#BKMK_ReturnTypesandParameters).  
   
@@ -179,7 +179,7 @@ string urlContents = await client.GetStringAsync();
   
 Используйте <xref:System.Threading.Tasks.Task> в качестве возвращаемого типа, если метод не содержит операторов return или содержит оператор return, который не возвращает операнд.  
 
-Начиная с C# 7, можно также указать любой другой возвращаемый тип при условии, что тип включает метод `GetAwaiter`. Пример такого типа — <xref:System.Threading.Tasks.ValueTask%601>. Он доступен в NuGet-пакете [System.Threading.Tasks.Extension](https://www.nuget.org/packages/System.Threading.Tasks.Extensions/).
+Начиная с C# 7.0, можно также указать любой другой тип возвращаемого значения при условии, что в нем есть метод `GetAwaiter`. Пример такого типа — <xref:System.Threading.Tasks.ValueTask%601>. Он доступен в NuGet-пакете [System.Threading.Tasks.Extension](https://www.nuget.org/packages/System.Threading.Tasks.Extensions/).
   
  В следующем примере показано объявление и вызов метода, который возвращает <xref:System.Threading.Tasks.Task%601> или <xref:System.Threading.Tasks.Task>.  
   

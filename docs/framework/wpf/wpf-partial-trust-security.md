@@ -1,12 +1,13 @@
 ---
-title: "Безопасность частичного доверия в WPF"
-ms.custom: 
+title: Безопасность частичного доверия в WPF
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -22,21 +23,22 @@ helpviewer_keywords:
 - feature security requirements [WPF]
 - managing permissions [WPF]
 ms.assetid: ef2c0810-1dbf-4511-babd-1fab95b523b5
-caps.latest.revision: "40"
+caps.latest.revision: 40
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 745a5b87119bbce3211332eee9f23d80c15c9c28
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 740146bffe869dc30bbf8e8472c30be317ce6f7c
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="wpf-partial-trust-security"></a>Безопасность частичного доверия в WPF
 <a name="introduction"></a> Как правило, интернет-приложениям следует ограничить прямой доступ к критическим системным ресурсам, чтобы избежать злонамеренного повреждения. По умолчанию [!INCLUDE[TLA#tla_html](../../../includes/tlasharptla-html-md.md)] и клиентские языки сценариев не смогут получить доступ к критическим системным ресурсам. Поскольку [!INCLUDE[TLA#tla_wpf](../../../includes/tlasharptla-wpf-md.md)] приложения, размещенные в браузере можно запускать из браузера, они должны соответствовать аналогичному набору ограничений. Для применения этих ограничений [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] использует и [!INCLUDE[TLA#tla_cas](../../../includes/tlasharptla-cas-md.md)] и [!INCLUDE[TLA#tla_clickonce](../../../includes/tlasharptla-clickonce-md.md)] (см. [стратегия безопасности WPF — безопасность платформы](../../../docs/framework/wpf/wpf-security-strategy-platform-security.md)). По умолчанию приложения, размещенные в браузере, запрашивают зоны Интернета [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] набор разрешений, независимо от того, запускаются ли они из Интернета, локальной интрасети или локального компьютера. Приложения, выполняющиеся с набором разрешений меньшим, чем полный набор, называют выполняющимися с частичным доверием.  
   
- [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]предоставляет широкий набор возможностей, чтобы убедиться, что максимально столько функциональность может использоваться безопасно при частично доверительных отношениях, а вместе с [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)], обеспечивает дополнительную поддержку для программирования в режиме частичного доверия.  
+ [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] предоставляет широкий набор возможностей, чтобы убедиться, что максимально столько функциональность может использоваться безопасно при частично доверительных отношениях, а вместе с [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)], обеспечивает дополнительную поддержку для программирования в режиме частичного доверия.  
   
  В этом разделе содержатся следующие подразделы.  
   
@@ -63,7 +65,7 @@ ms.lasthandoff: 12/22/2017
   
  В этой таблице описаны [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] возможности высокого уровня. Для получения дополнительных сведений, [!INCLUDE[TLA#tla_lhsdk](../../../includes/tlasharptla-lhsdk-md.md)] документы разрешений, необходимых для каждого элемента в [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]. Кроме того, следующие функции содержат более подробные сведения, касающиеся выполнения при частичном доверии, включая некоторые особые аспекты.  
   
--   [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)](см. [Обзор XAML (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)).  
+-   [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] (см. [Обзор XAML (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)).  
   
 -   Всплывающие окна (см. <xref:System.Windows.Controls.Primitives.Popup?displayProperty=nameWithType>).  
   
@@ -100,18 +102,18 @@ ms.lasthandoff: 12/22/2017
 > [!NOTE]
 >  Поведение, описанное в предыдущей таблице, относится к приложениям XBAP с полным доверием, не следующим модели доверенного развертывания ClickOnce.  
   
- В общем случае код, который может превышать допустимые разрешения, вероятнее всего, является общим кодом, который совместно используется автономными и браузерными приложениями. [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)]и [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] предлагают несколько технологий для таких случаев.  
+ В общем случае код, который может превышать допустимые разрешения, вероятнее всего, является общим кодом, который совместно используется автономными и браузерными приложениями. [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] и [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] предлагают несколько технологий для таких случаев.  
   
 <a name="Detecting_Permissions_using_CAS"></a>   
 ### <a name="detecting-permissions-using-cas"></a>Определение разрешений с помощью CAS  
- В некоторых случаях общий код в сборках библиотеки, используемые автономными приложениями и [!INCLUDE[TLA2#tla_xbap#plural](../../../includes/tla2sharptla-xbapsharpplural-md.md)]. В этих случаях код может выполнять функции, которые могут потребовать больше разрешений, чем позволяет набор разрешений, присвоенный приложению. Приложение может определять ли он имеет определенные разрешения с помощью [!INCLUDE[TLA#tla_winfx](../../../includes/tlasharptla-winfx-md.md)] безопасности. В частности, приложение может проверить, имеет ли он разрешение, вызвав <xref:System.Security.CodeAccessPermission.Demand%2A> метод экземпляра нужные разрешения. Это показано в следующем примере, который содержит код, запрашивающий возможность сохранить файл на локальный диск.  
+ В некоторых случаях общий код в сборках библиотеки, используемые автономными приложениями и [!INCLUDE[TLA2#tla_xbap#plural](../../../includes/tla2sharptla-xbapsharpplural-md.md)]. В этих случаях код может выполнять функции, которые могут потребовать больше разрешений, чем позволяет набор разрешений, присвоенный приложению. Приложение может определять ли он имеет определенные разрешения с помощью системы безопасности Microsoft .NET Framework. В частности, приложение может проверить, имеет ли он разрешение, вызвав <xref:System.Security.CodeAccessPermission.Demand%2A> метод экземпляра нужные разрешения. Это показано в следующем примере, который содержит код, запрашивающий возможность сохранить файл на локальный диск.  
   
  [!code-csharp[PartialTrustSecurityOverviewSnippets#DetectPermsCODE1](../../../samples/snippets/csharp/VS_Snippets_Wpf/PartialTrustSecurityOverviewSnippets/CSharp/FileHandling.cs#detectpermscode1)]
  [!code-vb[PartialTrustSecurityOverviewSnippets#DetectPermsCODE1](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PartialTrustSecurityOverviewSnippets/VisualBasic/FileHandling.vb#detectpermscode1)]  
 [!code-csharp[PartialTrustSecurityOverviewSnippets#DetectPermsCODE2](../../../samples/snippets/csharp/VS_Snippets_Wpf/PartialTrustSecurityOverviewSnippets/CSharp/FileHandling.cs#detectpermscode2)]
 [!code-vb[PartialTrustSecurityOverviewSnippets#DetectPermsCODE2](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PartialTrustSecurityOverviewSnippets/VisualBasic/FileHandling.vb#detectpermscode2)]  
   
- Если приложение не имеет нужных разрешений, вызов <xref:System.Security.CodeAccessPermission.Demand%2A> будет вызывать исключение безопасности. В противном случае разрешение будет предоставлено. `IsPermissionGranted`Инкапсулирует это поведение и возвращает `true` или `false` соответствующим образом.  
+ Если приложение не имеет нужных разрешений, вызов <xref:System.Security.CodeAccessPermission.Demand%2A> будет вызывать исключение безопасности. В противном случае разрешение будет предоставлено. `IsPermissionGranted` Инкапсулирует это поведение и возвращает `true` или `false` соответствующим образом.  
   
 <a name="Graceful_Degradation_of_Functionality"></a>   
 ### <a name="graceful-degradation-of-functionality"></a>Постепенное снижение функциональности  
@@ -131,7 +133,7 @@ ms.lasthandoff: 12/22/2017
  С помощью [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] для проверки разрешений является подходящим способом, когда необходимо проверить на основе уровнем разрешений. Тем не менее эта методика зависит от перехвата исключений в рамках нормальной обработки, что не рекомендуется в общем и может вызывать проблемы производительности. Вместо этого Если ваш [!INCLUDE[TLA#tla_xbap](../../../includes/tlasharptla-xbap-md.md)] выполняется только в пределах изолированной зоны Интернета, можно использовать <xref:System.Windows.Interop.BrowserInteropHelper.IsBrowserHosted%2A?displayProperty=nameWithType> свойство, которое возвращает значение true для [!INCLUDE[TLA#tla_xbap#plural](../../../includes/tlasharptla-xbapsharpplural-md.md)].  
   
 > [!NOTE]
->  <xref:System.Windows.Interop.BrowserInteropHelper.IsBrowserHosted%2A>только отличает ли приложение выполняется в браузере, не набор разрешений, приложение работает с.  
+>  <xref:System.Windows.Interop.BrowserInteropHelper.IsBrowserHosted%2A> только отличает ли приложение выполняется в браузере, не набор разрешений, приложение работает с.  
   
 <a name="Managing_Permissions"></a>   
 ## <a name="managing-permissions"></a>Управление разрешениями  

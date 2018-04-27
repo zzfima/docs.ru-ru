@@ -1,12 +1,13 @@
 ---
-title: "Практическое руководство. Связывание данных с элементом управления MaskedTextBox"
-ms.custom: 
+title: Практическое руководство. Связывание данных с элементом управления MaskedTextBox
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-winforms
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -17,16 +18,17 @@ helpviewer_keywords:
 - data binding [Windows Forms], MaskedTextBox control [Windows Forms]
 - MaskedTextBox control [Windows Forms], binding data
 ms.assetid: 34b29f07-e8df-48d4-b08b-53fcca524708
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: cb3fd4038634969d34be4514f4d314cf5d7513e4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 8adf445de4648c0a751a852f67a55ca9683e3469
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-bind-data-to-the-maskedtextbox-control"></a>Практическое руководство. Связывание данных с элементом управления MaskedTextBox
 Можно привязать данные к <xref:System.Windows.Forms.MaskedTextBox> управления так же, как и любым другим элементом управления Windows Forms. Тем не менее если формат данных в базе данных не соответствует формату, ожидаемому определением маски, необходимо будет изменять формат данных. Ниже показано, как это сделать с помощью <xref:System.Windows.Forms.Binding.Format> и <xref:System.Windows.Forms.Binding.Parse> события <xref:System.Windows.Forms.Binding> класса для отображения отдельных телефон и phone поля расширения базы данных в виде одного поля для редактирования.  
@@ -250,7 +252,7 @@ ms.lasthandoff: 12/22/2017
   
 ## <a name="compiling-the-code"></a>Компиляция кода  
   
--   Создание [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] или [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] проекта.  
+-   Создание проекта Visual C# или Visual Basic.  
   
 -   Добавить <xref:System.Windows.Forms.TextBox> и <xref:System.Windows.Forms.MaskedTextBox> в форму элементы управления, как описано в предыдущей процедуре.  
   

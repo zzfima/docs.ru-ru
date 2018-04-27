@@ -1,23 +1,24 @@
 ---
-title: "Прием через буфер"
-ms.custom: 
+title: Прием через буфер
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 9d46d9b9-96c9-4531-9695-ab526b4d704a
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a7a486d3fbfb520ffe3b32c392566e5147c5dfcc
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 9cd4dfcbfc9d417766615c624905f8bce2c10e54
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="buffered-receive"></a>Прием через буфер
 Этот образец показывает, как настроить и сконфигурировать функцию буфера получения в [!INCLUDE[wf](../../../../includes/wf-md.md)]. Функция буфера получения позволяет автору рабочего процесса создавать рабочий процесс, не заботясь о том, в каком порядке получаются сообщения. Возможность буфера получения осуществляет буферизацию сообщений на локальном уровне и доставляет их, как только рабочий процесс готов к их получению.  
@@ -30,7 +31,7 @@ ms.lasthandoff: 12/22/2017
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите на страницу [Примеры Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все примеры [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Этот образец расположен в следующем каталоге.  
+>  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) Чтобы загрузить все [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] образцов. Этот образец расположен в следующем каталоге.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Services\BufferedReceive`  
   
@@ -47,7 +48,7 @@ ms.lasthandoff: 12/22/2017
   
  Служба также предоставляет метаданные службы, используя для этого <xref:System.ServiceModel.Description.ServiceMetadataBehavior>.  
   
- Конечная точка клиента настраивается аналогично, с использованием <xref:System.ServiceModel.NetMsmqBinding>. Код клиента и его конфигурация формируются с помощью **добавить ссылку на службу** функция [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)]. В следующем примере в файле App.config формируется конечная точка клиента.  
+ Конечная точка клиента настраивается аналогично, с использованием <xref:System.ServiceModel.NetMsmqBinding>. Код клиента и его конфигурация формируются с помощью **добавить ссылку на службу** возможности Visual Studio. В следующем примере в файле App.config формируется конечная точка клиента.  
   
 ```xml  
 <endpoint address="net.msmq://localhost/private/LoanService/Service1.xamlx"  
@@ -95,7 +96,7 @@ ms.lasthandoff: 12/22/2017
   
 #### <a name="to-run-the-sample"></a>Выполнение образца  
   
-1.  Чтобы убедиться, что служба запущена, перейдите на страницу http://localhost/private/loanservice/service1.xamlx.  
+1.  Перейдите к http://localhost/private/loanservice/service1.xamlx чтобы убедиться, что служба запущена.  
   
 2.  Нажмите клавишу F5, чтобы запустить приложение LoanClient. После завершения рабочего процесса в папке C:\Inbox должен быть сохранен файл out.txt с результатом обмена сообщениями.  
   
@@ -114,6 +115,6 @@ ms.lasthandoff: 12/22/2017
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите на страницу [Примеры Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все примеры [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Этот образец расположен в следующем каталоге.  
+>  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) Чтобы загрузить все [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] образцов. Этот образец расположен в следующем каталоге.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Services\BufferedReceive`

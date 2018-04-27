@@ -1,12 +1,13 @@
 ---
-title: "Пример. Создание составного элемента управления с помощью Visual Basic"
-ms.custom: 
+title: Пример. Создание составного элемента управления с помощью Visual Basic
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-winforms
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -20,16 +21,17 @@ helpviewer_keywords:
 - composite controls [Windows Forms], creating
 - custom controls [Windows Forms], creating
 ms.assetid: f50e270e-4db2-409a-8319-6db6ca5c7daf
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c5c64736ff99049cb5bce84ea75a3dddd78dc5ab
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 71d1da2767ca15c4f78a4297d916f735a0ad604c
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="walkthrough-authoring-a-composite-control-with-visual-basic"></a>Пример. Создание составного элемента управления с помощью Visual Basic
 Составные элементы управления предоставляют средства для создания и повторного использования настраиваемых графических интерфейсов. Составной элемент управления — это компонент, имеющий визуальное представление. Таким образом, он может состоять из одного или нескольких элементов управления, компонентов или блоков кода Windows Forms, позволяющих расширить функциональные возможности за счет проверки введенных пользователем данных, изменения свойств отображения или выполнения других предусмотренных разработчиком действий. Составные элементы управления можно вставлять в Windows Forms точно так же, как другие элементы управления. В первой части этого пошагового руководства мы создадим простой составной элемент управления с именем `ctlClock`. Во второй части мы расширим функциональность `ctlClock` за счет наследования.  
@@ -44,7 +46,7 @@ ms.lasthandoff: 01/19/2018
   
 1.  В меню **Файл** наведите указатель мыши на пункт **Создать** и выберите **Проект**, чтобы открыть диалоговое окно **Создание проекта**.  
   
-2.  В списке проектов [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] выберите шаблон проекта **Библиотека элементов управления Windows**, введите `ctlClockLib` в поле **Имя** и нажмите кнопку **ОК**.  
+2.  В списке проектов Visual Basic выберите **библиотеки элементов управления Windows** шаблон проекта, введите `ctlClockLib` в **имя** , а затем щелкните **ОК**.  
   
      Имя проекта, `ctlClockLib`, по умолчанию также назначается корневому пространству имен. Корневое пространство имен используется для определения имен компонентов в сборке. Например, если в двух сборках содержатся компоненты с именем `ctlClock`, можно указать компонент `ctlClock`, используя `ctlClockLib.ctlClock.`.  
   

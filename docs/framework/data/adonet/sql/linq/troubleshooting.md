@@ -1,24 +1,26 @@
 ---
-title: "Устранение неполадок"
-ms.custom: 
+title: Устранение неполадок
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 8cd4401c-b12c-4116-a421-f3dcffa65670
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 56d06fa7adf2690a2cb9194342071c7814a4ec4a
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 5544540c6a27975a885bf4cd8b2e0a26183e192b
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="troubleshooting"></a>Устранение неполадок
 В данном материале представлен ряд проблем, которые могут возникнуть в приложениях [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], и даны рекомендации, как их избежать или, по крайней мере, снизить их негативное влияние.  
@@ -57,7 +59,7 @@ ms.lasthandoff: 01/17/2018
   
 -   Наличие ссылки на `System.Core.dll` и `System.Data.Linq.dll`.  
   
--   Наличие директивы `Imports` ([!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)]) или `using` (C#) для <xref:System.Linq> и <xref:System.Data.Linq>.  
+-   У вас есть `Imports` (Visual Basic) или `using` директивы (C#) для <xref:System.Linq> и <xref:System.Data.Linq>.  
   
 ## <a name="duplicatekeyexception"></a>DuplicateKeyException  
  Во время отладки [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] проекта, можно переходить через отношения сущности. Таким образом этом элементы попадают в кэш, и [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] становится их наличие. Если после этого предпринимается попытка выполнения метода <xref:System.Data.Linq.Table%601.Attach%2A>, или <xref:System.Data.Linq.Table%601.InsertOnSubmit%2A>, или аналогичного, результатом которого являются несколько строк с одинаковым ключом, создается исключение <xref:System.Data.Linq.DuplicateKeyException>.  

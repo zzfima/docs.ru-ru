@@ -1,28 +1,28 @@
 ---
-title: "Пошаговое руководство. Управление данными (Visual Basic)"
-ms.custom: 
+title: Пошаговое руководство. Управление данными (Visual Basic)
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-ado
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - vb
 ms.assetid: 1f6a54f6-ec33-452a-a37d-48122207bf14
-caps.latest.revision: 
+caps.latest.revision: 2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload:
 - dotnet
-ms.openlocfilehash: b4bc7baee8e95243cf05a52f49c37aa2d8916666
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: db11ff39eb11c40fa0f7b1bcb51245d2966cbdbe
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="walkthrough-manipulating-data-visual-basic"></a>Пошаговое руководство. Управление данными (Visual Basic)
 В данном руководстве представлен основной и полный сценарий [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] по добавлению, изменению и удалению данных в базе данных. Для добавления клиента, изменения его имени и удаления заказа следует использовать копию учебной базы данных Northwind.  
@@ -44,14 +44,14 @@ ms.lasthandoff: 01/17/2018
   
      Его можно создать либо помощью оператора [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)], либо с помощью средства SQLMetal. Данное пошаговое руководство было написано с использованием средства SQLMetal со следующей командной строкой:  
   
-     **sqlmetal /code:"c:\linqtest2\northwind.vb" /language:vb "C:\linqtest2\northwnd.mdf" /pluralize**  
+     **SQLMetal /code:"c:\linqtest2\northwind.vb» / Language: VB «C:\linqtest2\northwnd.mdf» / pluralize**  
   
      Дополнительные сведения см. в разделе [SQLMetal.exe (средство создания кода)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md).  
   
 ## <a name="overview"></a>Обзор  
  Данное пошаговое руководство состоит из шести основных задач.  
   
--   Создание решения [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] в [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)].  
+-   Создание [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] решения в Visual Studio.  
   
 -   Добавление файла кода базы данных в проект.  
   
@@ -64,11 +64,11 @@ ms.lasthandoff: 01/17/2018
 -   Отправка внесенных изменений в базу данных Northwind.  
   
 ## <a name="creating-a-linq-to-sql-solution"></a>Создание решения LINQ to SQL  
- В первой задаче создается решение [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)], которое содержит ссылки, необходимые для построения и выполнения проекта [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
+ В первой задаче создается решение Visual Studio, который содержит ссылки, необходимые для построения и запуска [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] проекта.  
   
 #### <a name="to-create-a-linq-to-sql-solution"></a>Создание решения LINQ to SQL  
   
-1.  На [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] **файл** меню, нажмите кнопку **новый проект**.  
+1.  В меню **Файл** Visual Studio выберите команду **Создать проект**.  
   
 2.  В **типов проектов** в области **новый проект** диалоговое окно, нажмите кнопку **Visual Basic**.  
   
@@ -117,7 +117,7 @@ ms.lasthandoff: 01/17/2018
   
      Объект **консоли** открывается окно.  
   
-     Закройте приложение, нажав клавишу ВВОД в **консоли** окна, или нажав **остановить отладку** на [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] **отладки** меню.  
+     Закройте приложение, нажав клавишу ВВОД в **консоли** окна, или нажав **остановить отладку** в Visual Studio **отладки** меню.  
   
 ## <a name="creating-a-new-entity"></a>Создание новой сущности  
  Создание новой сущности не представляет особых проблем. Для создания объектов (например, `Customer`) можно использовать ключевое слово `New`.  

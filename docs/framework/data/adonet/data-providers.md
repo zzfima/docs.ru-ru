@@ -1,27 +1,29 @@
 ---
-title: "Поставщики данных .NET Framework"
-ms.custom: 
+title: Поставщики данных .NET Framework
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 03a9fc62-2d24-491a-9fe6-d6bdb6dcb131
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: a78654f5c8de480b1eb38fbf25fbc923a30a0d25
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 69acb7b2fe4eafcce75a7b76305fab37dbb7d2f6
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="net-framework-data-providers"></a>Поставщики данных .NET Framework
 Поставщик данных [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] используется для установления соединения с базой данных, выполнения команд и получения результатов. Эти результаты обрабатываются непосредственно, помещаются в <xref:System.Data.DataSet> , чтобы по мере необходимости они были доступны для пользователей вместе с данными из нескольких источников, либо распределяются между уровнями. Источники данных [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] являются упрощенными и создают минимальный уровень между источником данных и кодом, увеличивая тем самым производительность без ущерба для функциональных возможностей.  
@@ -30,12 +32,12 @@ ms.lasthandoff: 01/19/2018
   
 |Поставщик данных[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] |Описание|  
 |-------------------------------------------------------------------------------|-----------------|  
-|[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Поставщик данных для [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]|Предоставляет доступ к данным для Microsoft [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]. Использует пространство имен <xref:System.Data.SqlClient> .|  
+|[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Поставщик данных для SQL Server|Предоставляет доступ к данным для Microsoft SQL Server. Использует пространство имен <xref:System.Data.SqlClient> .|  
 |Поставщик данных [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] для OLE DB|Для источников данных OLE DB. Использует пространство имен <xref:System.Data.OleDb> .|  
 |Поставщик данных [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]для ODBC|Для источников данных ODBC. Использует пространство имен <xref:System.Data.Odbc> .|  
 |Поставщик данных[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] для Oracle|Для источников данных Oracle. Источник данных [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] для Oracle поддерживает клиентское программное обеспечение версии 8.1.7 и старше и использует пространство имен <xref:System.Data.OracleClient> .|  
 |EntityClient - поставщик|Предоставляет доступ к данным для приложений модели EDM (Entity Data Model). Использует пространство имен <xref:System.Data.EntityClient> .|  
-|Поставщик данных [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] для [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] Compact 4.0.|Предоставляет доступ к данным для Microsoft [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] Compact 4.0. Использует пространство имен [System.Data.SqlServerCe](http://msdn.microsoft.com/library/system.data.sqlserverce.aspx) .|  
+|[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Поставщик данных для SQL Server Compact 4.0.|Предоставляет доступ к данным для Microsoft SQL Server Compact 4.0. Использует пространство имен [System.Data.SqlServerCe](http://msdn.microsoft.com/library/system.data.sqlserverce.aspx) .|  
   
 ## <a name="core-objects-of-net-framework-data-providers"></a>Основные объекты поставщиков данных .NET Framework  
  В следующей таблице приведены четыре основных объекта, из которых состоит поставщик данных [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] .  
@@ -59,8 +61,8 @@ ms.lasthandoff: 01/19/2018
 |`Error`|Отображает сведения, относящиеся к предупреждениям и ошибкам, возвращенным источником данных.|  
 |`ClientPermission`|Атрибуты управления доступом, поставляемые с кодом поставщика данных [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] . Базовым классом для всех объектов `ClientPermission` является <xref:System.Data.Common.DBDataPermission> .|  
   
-## <a name="net-framework-data-provider-for-includessnoversionincludesssnoversion-mdmd-sqlclient"></a>Поставщик данных .NET Framework для [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] (SqlClient)  
- Поставщик данных [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] для [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] (SqlClient) использует для взаимодействия с [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]собственный протокол. Это простой и высокопроизводительный протокол, оптимизированный для прямого доступа к [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] без добавления уровней OLE DB или ODBC. На рисунке ниже сравнивается поставщик данных [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] для [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] с поставщиком данных [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] для OLE DB. Поставщик данных [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] для OLE DB связывается с источником данных OLE DB с помощью компонента службы OLE DB, предоставляющим пулы соединений и службы транзакций, и поставщиком OLE DB для источника данных.  
+## <a name="net-framework-data-provider-for-sql-server-sqlclient"></a>Поставщик данных .NET framework для SQL Server (SqlClient)  
+ [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Поставщик данных для SQL Server (SqlClient) использует собственный протокол для взаимодействия с SQL Server. Это простой и высокопроизводительный оптимизирован для доступа к SQL Server напрямую, без дополнительного уровня OLE DB и Open Database Connectivity (ODBC). На следующем рисунке выделяет [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] поставщик данных для SQL Server с [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] поставщика данных для OLE DB. Поставщик данных [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] для OLE DB связывается с источником данных OLE DB с помощью компонента службы OLE DB, предоставляющим пулы соединений и службы транзакций, и поставщиком OLE DB для источника данных.  
   
 > [!NOTE]
 >  Поставщик данных [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] для ODBC имеет схожую архитектуру с поставщиком данных [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] для OLE DB. Например, он вызывает компонент службы ODBC.  
@@ -68,9 +70,9 @@ ms.lasthandoff: 01/19/2018
  ![Поставщики данных](../../../../docs/framework/data/adonet/media/netdataproviders-bpuedev11.gif "NETDataProviders_bpuedev11")  
 Сравнение поставщика данных .NET Framework для SQL Server и поставщика данных .NET Framework для OLE DB  
   
- Поставщик данных [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] для классов [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] находится в пространстве имен <xref:System.Data.SqlClient> .  
+ [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Поставщик данных для классов SQL Server находится в <xref:System.Data.SqlClient> пространства имен.  
   
- Поставщик данных [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] для [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] поддерживает как локальные, так и распределенные транзакции. Для распределенных транзакций поставщик данных [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] для [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]по умолчанию автоматически задействуется в транзакции и получает сведения о транзакциях из служб компонентов Windows или <xref:System.Transactions>. Дополнительные сведения см. в разделе [транзакции и параллельность](../../../../docs/framework/data/adonet/transactions-and-concurrency.md).  
+ [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Поставщик данных для SQL Server поддерживает как локальные, так и распределенные транзакции. Для распределенных транзакций [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] поставщик данных для SQL Server по умолчанию автоматически задействуется в транзакции и получает сведения о транзакциях из служб компонентов Windows или <xref:System.Transactions>. Дополнительные сведения см. в разделе [транзакции и параллельность](../../../../docs/framework/data/adonet/transactions-and-concurrency.md).  
   
  Следующий пример кода показывает, как включать в приложения пространство имен `System.Data.SqlClient` .  
   
@@ -89,7 +91,7 @@ using System.Data.SqlClient;
   
 |Драйвер|Поставщик|  
 |------------|--------------|  
-|SQLOLEDB|Поставщик OLE DB для служб [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)](Майкрософт)|  
+|SQLOLEDB|Поставщик Microsoft OLE DB для SQL Server|  
 |MSDAORA|Поставщик Microsoft OLE DB для Oracle|  
 |Microsoft.Jet.OLEDB.4.0|Поставщик OLE DB для Microsoft Jet|  
   
@@ -117,7 +119,7 @@ using System.Data.OleDb;
   
 |Драйвер|  
 |------------|  
-|[!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]|  
+|SQL Server|  
 |Microsoft ODBC для Oracle|  
 |Драйвер Microsoft Access (*.mdb)|  
   
@@ -160,10 +162,10 @@ using System.Data.OracleClient;
   
 |Поставщик|Примечания|  
 |--------------|-----------|  
-|[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Поставщик данных для [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]|Рекомендуется для приложений среднего уровня, использующих Microsoft [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)].<br /><br /> Рекомендуется для одноуровневых приложений, использующих компонент Microsoft Database Engine (MSDE) или [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)].<br /><br /> Рекомендуется использовать поставщик OLE DB для [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] (SQLOLEDB) с поставщиком данных [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] для OLE DB.|  
-|Поставщик данных [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] для OLE DB|Вместо этого поставщика для [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]рекомендуется поставщик данных [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] для [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] .<br /><br /> Рекомендуется для одноуровневых приложений, использующих базы данных Microsoft Access. Базы данных Microsoft Access не рекомендуется использовать для приложений среднего уровня.|  
-|[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]'' Поставщика данных для ODBC|Рекомендуется для приложений среднего уровня и одноуровневых приложений, использующих источники данных ODBC.|  
-|[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]'' Поставщик данных для Oracle|Рекомендуется для приложений среднего уровня и одноуровневых приложений, использующих источники данных Oracle.|  
+|[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Поставщик данных для SQL Server|Рекомендуется для одноуровневых приложений, использующих Microsoft SQL Server.<br /><br /> Рекомендуется для одноуровневых приложений, использующих Microsoft Database Engine (MSDE) или SQL Server.<br /><br /> Рекомендуется использовать поставщик OLE DB для SQL Server (SQLOLEDB) с [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] поставщика данных для OLE DB.|  
+|Поставщик данных[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] для OLE DB|Для SQL Server [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] поставщик данных для SQL Server рекомендуется использовать вместо этого поставщика.<br /><br /> Рекомендуется для одноуровневых приложений, использующих базы данных Microsoft Access. Базы данных Microsoft Access не рекомендуется использовать для приложений среднего уровня.|  
+|[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] '' Поставщика данных для ODBC|Рекомендуется для приложений среднего уровня и одноуровневых приложений, использующих источники данных ODBC.|  
+|[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] '' Поставщик данных для Oracle|Рекомендуется для приложений среднего уровня и одноуровневых приложений, использующих источники данных Oracle.|  
   
 ## <a name="entityclient-provider"></a>EntityClient - поставщик  
  Поставщик EntityClient используется для доступа к данным на основе модели EDM (Entity Data Model). В отличие от других поставщиков данных .NET этот поставщик не взаимодействует с источником данных непосредственно. Вместо этого для взаимодействия с соответствующим поставщиком данных используется язык Entity SQL. Дополнительные сведения см. в разделе [EntityClient и Entity SQL](http://msdn.microsoft.com/library/49202ab9-ac98-4b4b-a05c-140e422bf527).  

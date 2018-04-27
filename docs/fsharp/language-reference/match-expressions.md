@@ -1,22 +1,20 @@
 ---
-title: "Выражения match (F#)"
-description: "Узнайте, как выражения F # совпадения обеспечивает управление ветвлением, которое основывается на сравнении выражения с набором шаблонов."
-keywords: "visual f#, f#, функциональное программирование"
+title: 'Выражения Match (F #)'
+description: 'Узнайте, как выражения F # совпадения обеспечивает управление ветвлением, которое основывается на сравнении выражения с набором шаблонов.'
 author: cartermp
 ms.author: phcart
-ms.date: 05/16/2016
+ms.date: 04/19/2018
 ms.topic: language-reference
 ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
-ms.assetid: 8854b713-255a-408d-942a-e80ab52fd2a4
-ms.openlocfilehash: c8b9be744cfa7bc76f0d663b12abd66f8757fc56
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: f843e6fde98eae8a10235dd5cae38ffc10a4fb9f
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="match-expressions"></a>Выражения match
+# <a name="match-expressions"></a>Выражения Match
 
 `match` Выражение позволяет управлять ветвлением основывается на сравнении выражения с набором шаблонов.
 
@@ -48,7 +46,7 @@ fun arg ->
     | pattern1 [ when condition ] -> result-expression1
     | pattern2 [ when condition ] -> result-expression2
     | ...
-```    
+```
 
 Дополнительные сведения о лямбда-выражениях см. в разделе [лямбда-выражения: `fun` ключевое слово](functions/lambda-expressions-the-fun-keyword.md).
 
@@ -66,14 +64,29 @@ fun arg ->
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet4602.fs)]
 
-Обратите внимание, что поскольку значения, отличные от литералы не может использоваться в шаблоне, необходимо использовать `when` предложение, если необходимо сравнить некоторая часть входных данных со значением. Это показано в приведенном ниже коде.
+Обратите внимание, что поскольку значения, отличные от литералы не может использоваться в шаблоне, необходимо использовать `when` предложение, если необходимо сравнить некоторая часть входных данных со значением. Это показано в следующем коде:
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet4603.fs)]
 
+Обратите внимание на то, когда шаблон объединения охватывается условие, условие применяется к **все** шаблонов, а не только последний из них. Например, имеется следующий код, условие `when a > 12` относится как к `A a` и `B a`:
+
+```fsharp
+type Union =
+    | A of int
+    | B of int
+
+let foo() =
+    let test = A 42
+    match test with
+    | A a
+    | B a when a > 41 -> a // the guard applies to both patterns
+    | _ -> 1
+
+foo() // returns 42
+```
+
 ## <a name="see-also"></a>См. также
 
-[Справочник по языку F#](index.md)
-
-[Активные шаблоны](active-patterns.md)
-
-[Соответствие шаблону](pattern-matching.md)
+[Справочник по языку F#](index.md)  
+[Активные шаблоны](active-patterns.md)  
+[Соответствие шаблону](pattern-matching.md)  

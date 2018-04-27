@@ -1,11 +1,12 @@
 ---
-title: "Практическое руководство. Определение различных версий процедуры (Visual Basic)"
-ms.custom: 
+title: Практическое руководство. Определение различных версий процедуры (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - procedures [Visual Basic], defining
@@ -14,14 +15,14 @@ helpviewer_keywords:
 - procedures [Visual Basic], multiple versions
 - procedure overloading [Visual Basic], multiple versions
 ms.assetid: 71ccdd66-1b00-4b66-bee4-6926c0d696f4
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 1abeaa6806252005dd3abfab3ff60bafa0c0cef1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: e6db075e9b31355d4a0a593040b1fe7c96a0c730
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-define-multiple-versions-of-a-procedure-visual-basic"></a>Практическое руководство. Определение различных версий процедуры (Visual Basic)
 Можно определить процедуру в нескольких версиях по *перегрузка* его, используя то же имя, но другим списком параметров для каждой версии. Перегрузка предназначена для определения несколько взаимосвязанных версий процедуры, не различая их по имени.  
@@ -34,7 +35,7 @@ ms.lasthandoff: 11/21/2017
   
 2.  Перед `Sub` или `Function` ключевое слово в каждое объявление с [перегрузки](../../../../visual-basic/language-reference/modifiers/overloads.md) ключевое слово. Можно опустить `Overloads` в объявлениях, но если оно включено в одном из объявлений, необходимо включить его в каждое объявление.  
   
-3.  После каждого оператора объявления напишите код процедуры для обработки случая, когда вызывающий код предоставляет аргументы, соответствующие этой версии список параметров. У вас тестирование для параметров, который поставляет вызывающий код. [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]передает управление соответствующей версии процедуры.  
+3.  После каждого оператора объявления напишите код процедуры для обработки случая, когда вызывающий код предоставляет аргументы, соответствующие этой версии список параметров. У вас тестирование для параметров, который поставляет вызывающий код. Visual Basic передает управление соответствующей версии процедуры.  
   
 4.  Завершайте каждую процедуру с `End Sub` или `End Function` инструкцию соответствующим образом.  
   

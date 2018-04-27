@@ -1,24 +1,26 @@
 ---
-title: "Вопросы безопасности (Entity Framework)"
-ms.custom: 
+title: Вопросы безопасности (Entity Framework)
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 84758642-9b72-4447-86f9-f831fef46962
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 68b077ec6c7edd30882c9c84a10aa14060a589e8
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: d70b1a6aff3e93122b5d0fb21affdfcd13d817e6
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="security-considerations-entity-framework"></a>Вопросы безопасности (Entity Framework)
 В этом разделе приводятся сведения по безопасности, связанные с разработкой, развертыванием и запуском приложений [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. Необходимо также следовать инструкциям по созданию безопасных приложений [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)]. Дополнительные сведения см. в разделе [Общие сведения о безопасности](../../../../../docs/framework/data/adonet/security-overview.md).  
@@ -84,7 +86,7 @@ ms.lasthandoff: 01/19/2018
   
 -   <xref:System.Security.Permissions.SecurityPermission>. Разрешение <xref:System.Security.Permissions.SecurityPermissionFlag.SerializationFormatter> на сериализацию исключений с помощью интерфейса <xref:System.Runtime.Serialization.ISerializable>.  
   
--   Разрешение на открытие подключения к базе данных и выполнения команд в базе данных, таких как <xref:System.Data.SqlClient.SqlClientPermission> для [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] базы данных.  
+-   Разрешение на открытие подключения к базе данных и выполнения команд в базе данных, таких как <xref:System.Data.SqlClient.SqlClientPermission> для базы данных SQL Server.  
   
  Дополнительные сведения см. в разделе [Управление доступом для кода и ADO.NET](../../../../../docs/framework/data/adonet/code-access-security.md).  
   

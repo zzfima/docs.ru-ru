@@ -1,29 +1,31 @@
 ---
-title: "Поддержка потоковой передачи SqlClient"
-ms.custom: 
+title: Поддержка потоковой передачи SqlClient
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: c449365b-470b-4edb-9d61-8353149f5531
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: f870bab357db7a425378afcfb0bedd19b0359ce1
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: cfa672908248afa951ab3a429e437e0e2c0607c5
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sqlclient-streaming-support"></a>Поддержка потоковой передачи SqlClient
-Поддержка потоковой передачи данных между [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] и приложением (новое в [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]) поддерживает неструктурированные данные на сервере (документы, образы и файлы носителя). База данных [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] может хранить большие двоичные объекты (BLOB), но для выборки BLOB может потребоваться много памяти.  
+Поддержка SQL Server и приложения потоковой передачи данных (новые возможности [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]) поддерживает неструктурированные данные на сервере (документы, изображения и мультимедиа-файлы). База данных SQL Server может хранить большие двоичные объекты (BLOB), но выборки BLOB может потребоваться большой объем памяти.  
   
- Поддержка потоковой передачи данных в [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] и обратно упрощает написание приложений, в которых ведется потоковая передача данных, что позволяет обойтись без полной загрузки данных в память, а это приводит к менее частому появлению исключений, связанных с переполнением памяти.  
+ Поддержка от SQL-сервера потоковой передачи данных упрощает написание приложений, поток данных, не прибегая к полной загрузки данных в память, что приводит к меньшим числом исключений переполнения памяти.  
   
  Поддержка потоковой передачи данных способствует также лучшему масштабированию приложений среднего уровня, особенно в сценариях, в которых бизнес-объекты подключаются к SQL Azure для отправки, получения и обработки больших двоичных объектов.  
   
@@ -32,10 +34,10 @@ ms.lasthandoff: 01/17/2018
 >   
 >  Элементы, добавленные для поддержки потоков, используются для получения данных из запросов и передачи параметров в запросы и хранимые процедуры. Функциональные возможности потоковой передачи данных позволяют решать задачи в основных сценариях OLTP и в сценариях переноса данных, а также применимы в средах переноса данных на территории предприятия и за его пределами.  
   
-## <a name="streaming-support-from-includessnoversionincludesssnoversion-mdmd"></a>Поддержка потоковой передачи данных в [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]  
- Поддержка потоковой передачи данных из [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] привела к появлению новых функциональных возможностей в классах <xref:System.Data.Common.DbDataReader> и <xref:System.Data.SqlClient.SqlDataReader> для получения объектов <xref:System.IO.Stream>, <xref:System.Xml.XmlReader>и <xref:System.IO.TextReader> и реагирования на них.  Эти классы используются для получения данных из запросов. В результате поддержка потоковой передачи данных из [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] позволяет обеспечивать работу сценариев OLTP и применяется в средах на территории предприятия и за его пределами.  
+## <a name="streaming-support-from-sql-server"></a>Поддержка потоковой передачи данных из SQL Server  
+ Поддержка потоков из SQL Server реализованы новые возможности <xref:System.Data.Common.DbDataReader> и <xref:System.Data.SqlClient.SqlDataReader> классы для получения <xref:System.IO.Stream>, <xref:System.Xml.XmlReader>, и <xref:System.IO.TextReader> объектов и реагирования на них.  Эти классы используются для получения данных из запросов. В результате поддержка потоковой передачи из SQL Server описывает работу сценариев OLTP и применяется к локальным и удаленным сред.  
   
- В <xref:System.Data.SqlClient.SqlDataReader> были добавлены следующие элементы для включения поддержки потоковой передачи данных из [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)].  
+ Были добавлены следующие элементы <xref:System.Data.SqlClient.SqlDataReader> для включения поддержки потоковой передачи данных из SQL Server:  
   
 1.  <xref:System.Data.SqlClient.SqlDataReader.IsDBNullAsync%2A>  
   
@@ -49,7 +51,7 @@ ms.lasthandoff: 01/17/2018
   
 6.  <xref:System.Data.SqlClient.SqlDataReader.GetXmlReader%2A>  
   
- В <xref:System.Data.Common.DbDataReader> были добавлены следующие элементы для включения поддержки потоковой передачи данных из [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)].  
+ Были добавлены следующие элементы <xref:System.Data.Common.DbDataReader> для включения поддержки потоковой передачи данных из SQL Server:  
   
 1.  <xref:System.Data.Common.DbDataReader.GetFieldValue%2A>  
   
@@ -57,8 +59,8 @@ ms.lasthandoff: 01/17/2018
   
 3.  <xref:System.Data.Common.DbDataReader.GetTextReader%2A>  
   
-## <a name="streaming-support-to-includessnoversionincludesssnoversion-mdmd"></a>Поддержка потоковой передачи данных в [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]  
- Поддержка потоковой передачи данных в [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] привела к появлению новых функциональных возможностей класса <xref:System.Data.SqlClient.SqlParameter>, поэтому он может принимать и реагировать на объекты <xref:System.Xml.XmlReader>, <xref:System.IO.Stream> и <xref:System.IO.TextReader>. <xref:System.Data.SqlClient.SqlParameter> используется для передачи параметров в запросы и хранимые процедуры.  
+## <a name="streaming-support-to-sql-server"></a>Поддержка потоковой передачи данных в SQL Server  
+ Поддержка для SQL Server потоковой передачи данных реализованы новые возможности <xref:System.Data.SqlClient.SqlParameter> класса, чтобы он мог принимать и реагировать на <xref:System.Xml.XmlReader>, <xref:System.IO.Stream>, и <xref:System.IO.TextReader> объектов. <xref:System.Data.SqlClient.SqlParameter> используется для передачи параметров в запросы и хранимые процедуры.  
   
  Удаление объекта <xref:System.Data.SqlClient.SqlCommand> или вызов <xref:System.Data.SqlClient.SqlCommand.Cancel%2A> должны приводить к отмене любой потоковой операции. Если приложение передает <xref:System.Threading.CancellationToken>, отмена не гарантируется.  
   
@@ -84,7 +86,7 @@ ms.lasthandoff: 01/17/2018
   
  Объекты <xref:System.Xml.XmlReader>, <xref:System.IO.TextReader> и <xref:System.IO.Stream> будут перенесены вплоть до значения, определяемого в <xref:System.Data.SqlClient.SqlParameter.Size%2A>.  
   
-## <a name="sample----streaming-from-includessnoversionincludesssnoversion-mdmd"></a>Образец - потоковая передача из [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]  
+## <a name="sample----streaming-from-sql-server"></a>Образец - Потоковая передача из SQL Server  
  Выполните следующие шаги [!INCLUDE[tsql](../../../../includes/tsql-md.md)], чтобы построить образец базы данных.  
   
 ```  
@@ -108,13 +110,13 @@ GO
   
 -   Избегайте блокирования потока пользовательского интерфейса путем предоставления асинхронного способа извлечения больших файлов.  
   
--   Перенос большого текстового файла из [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] в [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].  
+-   Перенос большого текстового файла из SQL Server в [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].  
   
--   Перенос большого текстового XML-файла из [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] в [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].  
+-   Перенос больших XML-файл из SQL Server в [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].  
   
--   Получение данных из [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)].  
+-   Получение данных из SQL Server.  
   
--   Перенос файлов больших двоичных объектов из одной базы данных [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] в другую без нехватки памяти.  
+-   Передача больших файлов больших двоичных объектов из одной базы данных SQL Server в другую без нехватки памяти.  
   
 ```  
 using System;  
@@ -305,7 +307,7 @@ namespace StreamingFromServer {
 }  
 ```  
   
-## <a name="sample----streaming-to-includessnoversionincludesssnoversion-mdmd"></a>Образец - потоковая передача в [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]  
+## <a name="sample----streaming-to-sql-server"></a>Образец - Потоковая передача в SQL Server  
  Выполните следующие шаги [!INCLUDE[tsql](../../../../includes/tsql-md.md)], чтобы построить образец базы данных.  
   
 ```  
@@ -329,17 +331,17 @@ GO
   
  В образце демонстрируется выполнение следующих действий.  
   
--   Передача больших двоичных объектов в [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] в [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].  
+-   Передача большого двоичного ОБЪЕКТА в SQL Server в [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].  
   
--   Передача большого текстового файла в [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] в [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].  
+-   Передача большого текстового файла в SQL Server в [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].  
   
--   Использование новой асинхронной функции для передачи большого двоичного объекта.  
+-   Использование новой асинхронной возможности для передачи большого двоичного объекта.  
   
 -   Использование новой асинхронной функции и ключевого слова await для передачи большого двоичного объекта.  
   
 -   Отмена передачи большого двоичного объекта.  
   
--   Потоковая передача из одного объекта [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] в другой с помощью новой асинхронной функции.  
+-   Потоковая передача из одного сервера SQL Server к другой с помощью новой асинхронной функции.  
   
 ```  
 using System;  
@@ -461,8 +463,8 @@ namespace StreamingToServer {
 }  
 ```  
   
-## <a name="sample----streaming-from-one-includessnoversionincludesssnoversion-mdmd-to-another-includessnoversionincludesssnoversion-mdmd"></a>Образец: потоковая передача из одного объекта [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] в другой объект [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]  
- В этом примере показано, как асинхронно передавать большой двоичный объект из одного объекта [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] в другой с поддержкой отмены.  
+## <a name="sample----streaming-from-one-sql-server-to-another-sql-server"></a>Образец - Потоковая передача из одного сервера SQL Server на другой экземпляр SQL Server  
+ В этом примере показано, как асинхронно передавать большой двоичный объект из одного сервера SQL Server на другой, поддержка отмены.  
   
 ```  
 using System;  

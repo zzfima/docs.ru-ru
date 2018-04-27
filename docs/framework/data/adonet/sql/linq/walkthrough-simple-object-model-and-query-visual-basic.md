@@ -1,28 +1,28 @@
 ---
-title: "Пошаговое руководство. Простая модель объектов и простой запрос (Visual Basic)"
-ms.custom: 
+title: Пошаговое руководство. Простая модель объектов и простой запрос (Visual Basic)
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-ado
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - vb
 ms.assetid: c878e457-f715-46e4-a136-ff14d6c86018
-caps.latest.revision: 
+caps.latest.revision: 3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload:
 - dotnet
-ms.openlocfilehash: 9d72c0e1f432679f4dc818703dafb813ab8ebd19
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: d9b9f69b15b5df981ee47da9ac3c1e2eb2514beb
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="walkthrough-simple-object-model-and-query-visual-basic"></a>Пошаговое руководство. Простая модель объектов и простой запрос (Visual Basic)
 В данном пошаговом руководстве представлен основной и полный сценарий [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] с подробным объяснением выполняемых действий. В нем создается класс сущностей, который моделирует таблицу Customers в учебной базе данных Northwind. После этого создается простой запрос на получение списка клиентов, находящихся в Лондоне.  
@@ -42,7 +42,7 @@ ms.lasthandoff: 01/17/2018
 ## <a name="overview"></a>Обзор  
  Данное пошаговое руководство состоит из шести основных задач.  
   
--   Создание решения [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] в среде [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)].  
+-   Создание [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] решения в Visual Studio.  
   
 -   Сопоставление класса с таблицей базы данных.  
   
@@ -55,7 +55,7 @@ ms.lasthandoff: 01/17/2018
 -   Выполнение запроса и просмотр результатов.  
   
 ## <a name="creating-a-linq-to-sql-solution"></a>Создание решения LINQ to SQL  
- В первой задаче создается решение [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)], которое содержит ссылки, необходимые для построения и выполнения проекта [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
+ В первой задаче создается решение Visual Studio, который содержит ссылки, необходимые для построения и запуска [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] проекта.  
   
 #### <a name="to-create-a-linq-to-sql-solution"></a>Создание решения LINQ to SQL  
   

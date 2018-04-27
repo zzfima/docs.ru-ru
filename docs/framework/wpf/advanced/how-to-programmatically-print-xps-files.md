@@ -17,11 +17,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 55a9a50527df0605cb9699622a165147597a500a
-ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
+ms.openlocfilehash: 9e461a847e36277cb7d70534249a926693584b1f
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-programmatically-print-xps-files"></a>Как печатать файлы XPS программным способом
 Можно использовать перегрузку <xref:System.Printing.PrintQueue.AddJob%2A> метод печать [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] файлов без открытия <xref:System.Windows.Controls.PrintDialog> или, в принципе, все [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] вообще.  
@@ -56,11 +56,11 @@ ms.lasthandoff: 04/16/2018
   
  Если вы используете принтер XPSDrv, последнему параметру можно присвоить значение `true`. В этом случае, поскольку [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] является языком описания страниц принтера, метод отправляет файл на принтер без проверки или преобразования в другой язык описания страниц. Если имеются сомнения во время разработки ли приложение будет использовать принтер XPSDrv, можно изменить приложение для его чтения <xref:System.Printing.PrintQueue.IsXpsDevice%2A> свойство и ветвь в соответствии с его находит.  
   
- Поскольку сразу после выпуска [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)] и [!INCLUDE[TLA#tla_winfx](../../../../includes/tlasharptla-winfx-md.md)] будут доступны всего несколько принтеров XSPSDrv, принтер, который не является принтером XPSDrv, можно замаскировать. Для этого добавьте файл Pipelineconfig.xml в список файлов в следующем разделе реестра компьютера, на котором выполняется ваше приложение:  
+ Поскольку изначально будет несколько принтеров XPSDrv доступны сразу же после выпуска [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)] и Microsoft .NET Framework, может потребоваться маскировка принтера не XPSDrv как принтер XPSDrv. Для этого добавьте файл Pipelineconfig.xml в список файлов в следующем разделе реестра компьютера, на котором выполняется ваше приложение:  
   
- HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Print\Environments\Windows NT x86\Drivers\Version-3\\*\<PseudoXPSPrinter>*\DependentFiles  
+ HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Print\Environments\Windows NT x86\Drivers\Version-3\\*\<PseudoXPSPrinter>* \DependentFiles  
   
- где  *\<PseudoXPSPrinter>* — это любая очередь печати. После этого компьютер необходимо перезагрузить.  
+ где  *\<PseudoXPSPrinter>*  — это любая очередь печати. После этого компьютер необходимо перезагрузить.  
   
  Эта маскировка позволит передать `true` как последний параметр <xref:System.Printing.PrintQueue.AddJob%28System.String%2CSystem.String%2CSystem.Boolean%29> без вызова исключения, но поскольку  *\<PseudoXPSPrinter >* не представляет собой принтера XPSDrv, будет печататься только мусор.  
   

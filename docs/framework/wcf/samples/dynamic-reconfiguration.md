@@ -1,24 +1,26 @@
 ---
-title: "Динамическая реконфигурация"
-ms.custom: 
+title: Динамическая реконфигурация
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: b20786ae-cce6-4f91-b6cb-9cae116faf8b
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: cbf286891211da0e35274ff59f3bee69ebf3c9bb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 36b548ee47ed9165743bbfb1eaab5cf3bbe82bd2
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="dynamic-reconfiguration"></a>Динамическая реконфигурация
 В этом образце показана служба маршрутизации [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. Служба маршрутизации - это компонент [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], который упрощает включение маршрутизатора на основе содержимого в приложение. В этом образце стандартный образец [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Calculator применяется для связи с использованием службы маршрутизации. Этот образец показывает, как можно динамически переконфигурировать службу маршрутизации во время выполнения.  
@@ -28,7 +30,7 @@ ms.lasthandoff: 12/22/2017
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите на страницу [Примеры Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все примеры [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Этот образец расположен в следующем каталоге.  
+>  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) Чтобы загрузить все [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] образцов. Этот образец расположен в следующем каталоге.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\RoutingServices\DynamicReconfiguration`  
   
@@ -43,7 +45,7 @@ ms.lasthandoff: 12/22/2017
   
 2.  Чтобы открыть **обозревателе решений**выберите **обозревателе решений** из **представление** меню.  
   
-3.  Нажмите клавишу **F5** или **CTRL + SHIFT + B** в [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)].  
+3.  Нажмите клавишу **F5** или **CTRL + SHIFT + B** в Visual Studio.  
   
     1.  Если вы хотите автоматически загружались все необходимые проекты при нажатии клавиши **F5**, щелкните правой кнопкой мыши решение и выберите **свойства**. Выберите **запускаемый проект** узле **общие свойства** в левой области. Выберите **несколько запускаемых проектов** переключатель и задать все проекты, которые нужно иметь **запустить** действие.  
   

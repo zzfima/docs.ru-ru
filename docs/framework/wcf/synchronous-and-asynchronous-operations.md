@@ -1,12 +1,13 @@
 ---
-title: "Синхронные и асинхронные операции"
-ms.custom: 
+title: Синхронные и асинхронные операции
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,16 +16,17 @@ helpviewer_keywords:
 - service contracts [WCF], synchronous operations
 - service contracts [WCF], asynchronous operations
 ms.assetid: db8a51cb-67e6-411b-9035-e5821ed350c9
-caps.latest.revision: "24"
+caps.latest.revision: 24
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 3d108c8c84af2563e48a9f339df2a96f8218c742
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 123186dd5f0d63693c04c0857709292ce122f918
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="synchronous-and-asynchronous-operations"></a>Синхронные и асинхронные операции
 В этом разделе описывается реализация и вызов асинхронных операций службы.  
@@ -53,7 +55,7 @@ ms.lasthandoff: 12/22/2017
   
 -   Если операции вызываются на страницах ASP.NET, следует использовать асинхронные страницы.  
   
--   Если операции вызываются из любого однопотокового приложения, например приложения Windows Forms или [!INCLUDE[avalon1](../../../includes/avalon1-md.md)]. При использовании модели асинхронных вызовов на основе событий результирующее событие создается в потоке пользовательского интерфейса, в результате чего приложение получает возможность реагирования на действия пользователя, но при этом не требуется управлять несколькими потоками.  
+-   Если вы операции вызываются из любого приложения, является однопоточным, например Windows Forms или Windows Presentation Foundation (WPF). При использовании модели асинхронных вызовов на основе событий результирующее событие создается в потоке пользовательского интерфейса, в результате чего приложение получает возможность реагирования на действия пользователя, но при этом не требуется управлять несколькими потоками.  
   
 -   В общем случае при выборе между синхронным и асинхронным вызовом следует выбирать асинхронный вызов.  
   

@@ -14,11 +14,11 @@ ms.assetid: 022cd27d-d5e0-4cfe-8b97-dc018cc3355d
 caps.latest.revision: 29
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: db49a602b83940cab3f87dea17accb92a2be825d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 5397462994d5e684406c6de65c4f31d9d20eef22
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="indexers-c-programming-guide"></a>Индексаторы (Руководство по программированию в C#)
 
@@ -39,7 +39,7 @@ ms.lasthandoff: 11/21/2017
 
 Обратите внимание, что `=>` представляет тело выражения, а ключевое слово `get` не используется. 
 
-Начиная с версии C# 7, акцессоры get и set можно реализовывать в виде членов, воплощающих выражение. В этом случае необходимо указывать оба ключевых слова (`get` и `set`). Пример:
+Начиная с версии C# 7.0, методы доступа get и set можно реализовывать в виде членов с телом в виде выражения. В этом случае необходимо указывать оба ключевых слова (`get` и `set`). Пример:
 
 [!code-csharp[indexers#3](../../../../samples/snippets/csharp/programming-guide/indexers/indexer-3.cs)]  
   

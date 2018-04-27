@@ -1,27 +1,29 @@
 ---
-title: "Вопросы и ответы"
-ms.custom: 
+title: Вопросы и ответы
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 252ed666-0679-4eea-b71b-2f14117ef443
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: e09dd7cb3fc979a9be0165705247cc5a63a6b328
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: caccbb76f32c38f29fa4f49adc9b7b1c8fe4045d
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="frequently-asked-questions"></a>Вопросы и ответы
 В следующих разделах даны ответы на некоторые вопросы, которые могут возникнуть при реализации [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)].  
@@ -31,7 +33,7 @@ ms.lasthandoff: 01/17/2018
 ## <a name="cannot-connect"></a>Не удается подключиться  
  В. Не удается соединиться с базой данных.  
   
- О. Проверьте, правильно ли указана строка соединения и запущен ли экземпляр [!INCLUDE[ssNoVersion](../../../../../../includes/ssnoversion-md.md)]. Обратите внимание, что для [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] требуется включенный протокол именованных каналов. Дополнительные сведения см. в разделе [обучения с использованием пошаговых руководств](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md).  
+ О. Убедитесь в строке подключения указано правильно и что экземпляр SQL Server запущена. Обратите внимание, что для [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] требуется включенный протокол именованных каналов. Дополнительные сведения см. в разделе [обучения с использованием пошаговых руководств](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md).  
   
 ## <a name="changes-to-database-lost"></a>Потеряны изменения, внесенные в базу данных  
  В. В базу данных были внесены изменения, однако при повторном запуске приложения их там не оказалось.  
@@ -155,7 +157,7 @@ dlo.LoadWith<Order>(o => o.OrderDetails);
 ## <a name="provider-model"></a>Модель поставщика  
  В. Доступна ли модель общего поставщика?  
   
- О. Такая модель отсутствует. В настоящий момент [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] поддерживает только [!INCLUDE[ssNoVersion](../../../../../../includes/ssnoversion-md.md)] и [!INCLUDE[ssEW](../../../../../../includes/ssew-md.md)].  
+ О. Такая модель отсутствует. В настоящее время [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] поддерживает SQL Server и [!INCLUDE[ssEW](../../../../../../includes/ssew-md.md)] только.  
   
 ## <a name="sql-injection-attacks"></a>Атаки путем внедрения кода SQL  
  В. Каким образом [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] защищен от атак путем внедрения кода SQL?  
@@ -174,7 +176,7 @@ dlo.LoadWith<Order>(o => o.OrderDetails);
 3.  Проверьте значение по умолчанию <xref:System.Data.Linq.Mapping.UpdateCheck> (<xref:System.Data.Linq.Mapping.UpdateCheck.Never>), чтобы определить, является ли оно правильным для приложения.  
   
     > [!CAUTION]
-    >  При использовании [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] в [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] изменения могут быть переопределены.  
+    >  Если вы используете [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] в Visual Studio изменения могут быть перезаписаны.  
   
 ## <a name="aptca"></a>APTCA  
  В. Помечена ли сборка System.Data.Linq для использования кодом с частичным доверием?  
@@ -196,7 +198,7 @@ dlo.LoadWith<Order>(o => o.OrderDetails);
   
  О. Не пытайтесь повторно использовать экземпляры <xref:System.Data.Linq.DataContext>. Каждый <xref:System.Data.Linq.DataContext> сохраняет состояние (включая кэш идентификации) для одного определенного сеанса редактирования/запроса. Для получения новых экземпляров на основе текущего состояния базы данных используйте новый <xref:System.Data.Linq.DataContext>.  
   
- Можно по-прежнему использовать базовое объединение подключений [!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)]. Дополнительные сведения см. в разделе [SQL пулов соединений Server (ADO.NET)](../../../../../../docs/framework/data/adonet/sql-server-connection-pooling.md).  
+ Можно по-прежнему использовать базовое объединение подключений [!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)]. Дополнительные сведения см. в разделе [Пулы подключений SQL Server (ADO.NET)](../../../../../../docs/framework/data/adonet/sql-server-connection-pooling.md).  
   
 ## <a name="second-datacontext-is-not-updated"></a>Не выполняется обновление второго DataContext  
  В. Для хранения значения в базе данных использовался один экземпляр <xref:System.Data.Linq.DataContext>. Однако второй <xref:System.Data.Linq.DataContext> в той же базе данных не отражает обновленные значения. Второй экземпляр <xref:System.Data.Linq.DataContext>, вероятно, возвращает кэшированные значения.  

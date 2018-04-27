@@ -14,16 +14,16 @@ ms.assetid: c1b0f6b4-9717-426b-a3db-957e57a60764
 caps.latest.revision: 13
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: ce1cbd375af1c1d34eeaada4024da269af4d9e57
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 8f7eebce572717f38aa185942b263070e8b51753
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="introduction-to-strings-in-visual-basic"></a>Знакомство со строками в Visual Basic
-В этом разделе описываются основные принципы использования строк в [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
+В этом разделе описываются основные принципы использования строк в Visual Basic.  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Основы работы со строками](../../../../visual-basic/programming-guide/language-features/strings/string-basics.md)  
  Представляет основные принципы использования строк и строковых переменных.  
   
@@ -31,7 +31,7 @@ ms.lasthandoff: 10/18/2017
  Предоставляет несколько способов для анализа и работы со строками.  
   
  [Влияние языка и региональных параметров на строки в Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/how-culture-affects-strings.md)  
- Рассматриваются как [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] использует сведения для выполнения строковых преобразований и сравнений, язык и региональные параметры.  
+ Описывает, как Visual Basic использует сведения о культуре для выполнения строковых преобразований и сравнений.  
   
 ## <a name="see-also"></a>См. также  
  [Строки](../../../../visual-basic/programming-guide/language-features/strings/index.md)

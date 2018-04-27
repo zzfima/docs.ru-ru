@@ -1,12 +1,13 @@
 ---
-title: "Разработка и развертывание служб WCF Data Services"
-ms.custom: 
+title: Разработка и развертывание служб WCF Data Services
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework-oob
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - WCF Data Services, developing
@@ -14,16 +15,17 @@ helpviewer_keywords:
 - deploying [WCF Data Services
 - developing applications [WCF Data Services]
 ms.assetid: 6557c0e3-5aea-4f6e-bc14-77ad317a168b
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 8abe23aebefadc68268aa1dada8474336b1f87e7
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 6fbfd28931f484c5b643dad278b358e7ac2a2945
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="developing-and-deploying-wcf-data-services"></a>Разработка и развертывание служб WCF Data Services
 Этот раздел содержит сведения о разработке и развертывании [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]. Дополнительные сведения о [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], в разделе [Приступая к работе](../../../../docs/framework/data/wcf/getting-started-with-wcf-data-services.md) и [Обзор](../../../../docs/framework/data/wcf/wcf-data-services-overview.md).  
@@ -43,29 +45,29 @@ ms.lasthandoff: 01/19/2018
   
      По умолчанию службы [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] запрещают доступ к ресурсам, предоставляемым контейнером сущностей. Интерфейс <xref:System.Data.Services.DataServiceConfiguration> позволяет настроить доступ к ресурсам и операциям службы, задать поддерживаемую версию [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)], а также определить другие особенности поведения службы, такие как использование пакетирования или максимальное количество сущностей, которые могут быть возвращены в одном канале ответа. Дополнительные сведения см. в разделе [Настройка службы данных](../../../../docs/framework/data/wcf/configuring-the-data-service-wcf-data-services.md).  
   
- В этом разделе описывается в первую очередь разработка и развертывание служб данных с помощью [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)]. Сведения о гибких возможностях [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] по предоставлению данных в виде каналов [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] см. в разделе [Defining WCF Data Services](../../../../docs/framework/data/wcf/defining-wcf-data-services.md).  
+ В этом разделе описывается в первую очередь разработка и развертывание служб данных с помощью Visual Studio. Сведения о гибких возможностях [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] по предоставлению данных в виде каналов [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] см. в разделе [Defining WCF Data Services](../../../../docs/framework/data/wcf/defining-wcf-data-services.md).  
   
 ### <a name="choosing-a-development-web-server"></a>Выбор веб-сервера развертывания  
- При разработке службы данных WCF в качестве приложения [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] или веб-узла [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] с помощью [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)]имеется выбор из веб-серверов, на которых можно запускать службы данных во время разработки. Следующие веб-серверы интегрируются с [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] , что упрощает тестирование и отладку служб данных на локальном компьютере.  
+ При разработке службы данных WCF в качестве [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] приложения или [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] веб-сайта с помощью Visual Studio, имеется выбор из веб-серверов, на котором работает служба данных во время разработки. Следующие веб-серверы интегрируются с Visual Studio, чтобы упростить тестирование и отладку служб данных на локальном компьютере.  
   
 1.  **Локальный сервер служб IIS**  
   
      При создании службы данных, которая является приложением [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] или веб-узлом [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] , работающим на базе служб IIS, рекомендуется разрабатывать и тестировать службу данных с помощью IIS на локальном компьютере. Запуск службы данных в IIS упрощает трассировку HTTP-запросов во время отладки. Это также позволяет заранее определить необходимые права, которые требуются службам IIS для доступа к файлам, базам данных и другим ресурсам для службы данных. Для запуска службы данных в IIS необходимо проверить наличие и правильную настройку служб IIS и [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] , а также предоставить доступ учетным записям IIS к файловой системе и базам данных. Для получения дополнительной информации см. [How to: Develop a WCF Data Service Running on IIS](../../../../docs/framework/data/wcf/how-to-develop-a-wcf-data-service-running-on-iis.md).  
   
     > [!NOTE]
-    >  Необходимо запустить [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] с правами администратора, чтобы позволить среде разработки настроить локальный сервер IIS.  
+    >  Необходимо запустить Visual Studio с правами администратора, чтобы позволить среде разработки настроить локальный сервер IIS.  
   
 2.  **Сервер разработки Visual Studio**  
   
-     В состав[!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] входит встроенный веб-сервер, сервер разработки [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] , который является веб-сервером по умолчанию для проектов [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] . Этот веб-сервер предназначен для запуска проектов [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] на локальном компьютере во время разработки. В разделе [Краткое руководство по службам WCF Data Services](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md) показано создание службы данных, работающей на сервере разработки [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] .  
+     Visual Studio включает встроенный веб-сервер Visual Studio Development Server, который является веб-сервер по умолчанию [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] проектов. Этот веб-сервер предназначен для запуска проектов [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] на локальном компьютере во время разработки. [Краткое руководство по службам WCF Data Services](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md) показано, как создать службу данных, которая выполняется в Visual Studio Development Server.  
   
-     При разработке службы данных с помощью сервера разработки [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] следует знать о следующих ограничениях.  
+     При разработке службы данных с помощью Visual Studio Development Server необходимо учитывать следующие ограничения.  
   
     -   Доступ к этому серверу возможен только с локального компьютера.  
   
     -   Этот сервер прослушивает `localhost` и указанный порт, отличный от порта 80, который по умолчанию настроен для HTTP-сообщений. Дополнительные сведения см. в разделе [Веб-серверы в Visual Studio для веб-проектов ASP.NET](http://msdn.microsoft.com/library/31d4f588-df59-4b7e-b9ea-e1f2dd204328).  
   
-    -   На этом сервере служба данных работает в контексте текущей учетной записи пользователя. Например, при запуске пользователя уровня администратора служба данных, работающая на сервере разработки [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] , будет иметь права уровня администратора. Это может обеспечить службе данных доступ к ресурсам, для которых у нее не будет прав после развертывания на сервере служб IIS.  
+    -   На этом сервере служба данных работает в контексте текущей учетной записи пользователя. Например при запуске пользователя уровня администратора служба данных, работающая в Visual Studio Development Server будет иметь прав администратора. Это может обеспечить службе данных доступ к ресурсам, для которых у нее не будет прав после развертывания на сервере служб IIS.  
   
     -   На этом сервере отсутствуют дополнительные возможности служб IIS, такие как проверка подлинности.  
   
@@ -74,11 +76,11 @@ ms.lasthandoff: 01/19/2018
     -   У этого сервера есть проблемы с обработкой символа точки (`.`) в URL-адресах, хотя этот символ и поддерживается [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] в значениях ключа.  
   
     > [!TIP]
-    >  Хотя можно использовать сервер разработки [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] для тестирования служб данных во время разработки, следует повторно их протестировать после развертывания на производственном веб-сервере, где запущены службы IIS.  
+    >  Даже при использовании Visual Studio Development Server для тестирования служб данных во время разработки вы следует повторно их протестировать после развертывания на веб-сервере, на котором работает IIS.  
   
 3.  **Среда разработки Microsoft Azure**  
   
-     В состав средств Microsoft Azure для [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] входит интегрированный набор инструментов для развертывания служб Microsoft Azure в [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)]. С помощью этих средств можно разрабатывать службы данных, которые могут развертываться на Microsoft Azure, а также тестировать службу данных на локальном компьютере перед развертыванием. Использование этих средств при развертывании службы данных, работающей на платформе Microsoft Azure, с помощью [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] . Загрузить средства Microsoft Azure для [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] можно из [центра загрузки Майкрософт](http://go.microsoft.com/fwlink/?LinkID=201848). [!INCLUDE[crabout](../../../../includes/crabout-md.md)] разработке службы данных для запуска в Microsoft Azure см. в публикации блога [Deploying an OData Service in Microsoft Azure](http://go.microsoft.com/fwlink/?LinkId=201847).  
+     Windows Azure Tools для Visual Studio входит интегрированный набор средств для разработки служб Windows Azure в Visual Studio. С помощью этих средств можно разрабатывать службы данных, которые могут развертываться на Microsoft Azure, а также тестировать службу данных на локальном компьютере перед развертыванием. Эти средства можно используйте при разработке службы данных, работающей на платформе Windows Azure с помощью Visual Studio. Вы можете загрузить инструменты Windows Azure для Visual Studio из [центра загрузки Майкрософт](http://go.microsoft.com/fwlink/?LinkID=201848). [!INCLUDE[crabout](../../../../includes/crabout-md.md)] разработке службы данных для запуска в Microsoft Azure см. в публикации блога [Deploying an OData Service in Microsoft Azure](http://go.microsoft.com/fwlink/?LinkId=201847).  
   
 ### <a name="development-tips"></a>Советы по разработке  
  При разработке службы данных необходимо учитывать следующее:  
@@ -89,16 +91,16 @@ ms.lasthandoff: 01/19/2018
   
 -   При отладке службы данных, возможно, потребуется получать от службы данных больше сведений об ошибках, чем при нормальной работе. Дополнительные сведения об ошибках можно получить из службы данных, установив свойство <xref:System.Data.Services.DataServiceConfiguration.UseVerboseErrors%2A> в <xref:System.Data.Services.DataServiceConfiguration> значение `true` , а свойство <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A> атрибута <xref:System.ServiceModel.Description.ServiceDebugBehavior> класса службы данных — в значение `true`. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] публикацию [Debugging WCF Data Services](http://go.microsoft.com/fwlink/?LinkId=201868). Кроме того, можно включить трассировку в [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] для просмотра исключений, вызываемых уровнем сообщений HTTP. Для получения дополнительной информации см. [Configuring Tracing](../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md).  
   
--   Служба данных обычно разрабатывается как проект приложения [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] , однако можно также создать службу данных как проект веб-узла [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] в [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)]. Сведения о различиях между двумя типами проектов см. в разделе [NIB: проекты веб-приложений и проектами веб-сайтов в Visual Studio](http://msdn.microsoft.com/library/2861815e-f5a2-4378-a2f8-b8a86dc012f5).  
+-   Служба данных обычно разрабатывается как [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] проект приложения, но можно также создать службу данных как [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] проекта веб-сайта в Visual Studio. Сведения о различиях между двумя типами проектов см. в разделе [NIB: проекты веб-приложений и проектами веб-сайтов в Visual Studio](http://msdn.microsoft.com/library/2861815e-f5a2-4378-a2f8-b8a86dc012f5).  
   
--   При создании службы данных с помощью диалогового окна **Добавление нового элемента** в [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)]служба данных будет размещаться [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] в IIS. Несмотря на то что [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] и IIS используются для размещения службы данных по умолчанию, поддерживаются и другие варианты размещения. Дополнительные сведения см. в разделе [размещение служб данных](../../../../docs/framework/data/wcf/hosting-the-data-service-wcf-data-services.md).  
+-   При создании службы данных с помощью **Добавление нового элемента** диалоговое окно в Visual Studio, службы данных управляется [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] в службах IIS. Несмотря на то что [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] и IIS используются для размещения службы данных по умолчанию, поддерживаются и другие варианты размещения. Дополнительные сведения см. в разделе [размещение служб данных](../../../../docs/framework/data/wcf/hosting-the-data-service-wcf-data-services.md).  
   
 ## <a name="deploying-wcf-data-services"></a>Развертывание служб данных WCF  
- Службы данных WCF обеспечивают гибкость в выборе процесса, в котором будет размещаться служба данных. Можно развертывать службу данных с помощью [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] на следующих платформах:  
+ Службы данных WCF обеспечивают гибкость в выборе процесса, в котором будет размещаться служба данных. Visual Studio можно использовать для развертывания служб данных на следующих платформах:  
   
 -   **Веб-сервер, размещенный в службах IIS**  
   
-     Если служба данных разрабатывается как проект [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] , то его можно развернуть на веб-сервере IIS с помощью стандартной процедуры развертывания [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] .  [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] обеспечивает следующие технологии развертывания для [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)], в зависимости от вида проекта [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] , на котором размещена развертываемая служба данных.  
+     Если служба данных разрабатывается как проект [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] , то его можно развернуть на веб-сервере IIS с помощью стандартной процедуры развертывания [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] .  Visual Studio обеспечивает следующие технологии развертывания для [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)], в зависимости от типа объекта [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] службой данных, который выполняется развертывание проекта.  
   
     -   **Технологии развертывания для веб-приложений ASP.NET**  
   
@@ -114,19 +116,19 @@ ms.lasthandoff: 01/19/2018
   
         -   [XCopy](http://msdn.microsoft.com/library/4312c651-2119-49be-bbeb-ee28bdbfe71e)  
   
-     [!INCLUDE[crabout](../../../../includes/crabout-md.md)]параметры развертывания для [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] приложения, в разделе [Обзор веб-развертывания Visual Studio и ASP.NET](http://msdn.microsoft.com/library/99bd1927-b59f-4e02-87b4-55c6ba2adbc3).  
+     [!INCLUDE[crabout](../../../../includes/crabout-md.md)] параметры развертывания для [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] приложения, в разделе [Обзор веб-развертывания Visual Studio и ASP.NET](http://msdn.microsoft.com/library/99bd1927-b59f-4e02-87b4-55c6ba2adbc3).  
   
     > [!TIP]
     >  Прежде чем пытаться выполнить развертывание службы данных в IIS, обязательно протестируйте развертывание на веб-сервере, где работают службы IIS. Для получения дополнительной информации см. [How to: Develop a WCF Data Service Running on IIS](../../../../docs/framework/data/wcf/how-to-develop-a-wcf-data-service-running-on-iis.md).  
   
 -   **Microsoft Azure**  
   
-     Службу данных можно развертывать на Microsoft Azure с помощью средств Microsoft Azure для [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)]. Загрузить средства Microsoft Azure для [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] можно из [центра загрузки Майкрософт](http://go.microsoft.com/fwlink/?LinkID=201848). [!INCLUDE[crabout](../../../../includes/crabout-md.md)] развертывании службы данных в Microsoft Azure см. в публикации [Deploying an OData Service in Microsoft Azure](http://go.microsoft.com/fwlink/?LinkId=201847).  
+     Службы данных можно развернуть в Windows Azure с помощью средств Windows Azure для Visual Studio. Вы можете загрузить инструменты Windows Azure для Visual Studio из [центра загрузки Майкрософт](http://go.microsoft.com/fwlink/?LinkID=201848). [!INCLUDE[crabout](../../../../includes/crabout-md.md)] развертывании службы данных в Microsoft Azure см. в публикации [Deploying an OData Service in Microsoft Azure](http://go.microsoft.com/fwlink/?LinkId=201847).  
   
 ### <a name="deployment-considerations"></a>Требования к развертыванию  
  При разработке службы данных необходимо учитывать следующее:  
   
--   При развертывании службы данных, использующей поставщика [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] для доступа к базе данных SQL Server, можно также распространить структуры данных, данные или и то и другое. Для этого[!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] может автоматически создать в целевой базе данных скрипты (SQL-файлы), которые можно включить в пакет веб-развертывания приложения [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] . Дополнительные сведения см. в разделе [NIB: Практическое: развертывание базы данных с проектом веб-приложения](http://msdn.microsoft.com/library/683b33f1-8a3d-45cf-af6e-61ab50fc518b). Для веб-узла [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] это можно сделать с помощью **мастера публикации баз данных** в [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)]. Для получения дополнительной информации см. [Deploying a Database by Using the Database Publishing Wizard](http://msdn.microsoft.com/library/1e3682e7-8b57-4da6-a393-af9640ccf8b7).  
+-   При развертывании службы данных, использующей поставщика [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] для доступа к базе данных SQL Server, можно также распространить структуры данных, данные или и то и другое. Visual Studio может автоматически создать скрипты (SQL-файлы), чтобы сделать это в целевой базе данных, и эти скрипты можно включить в пакет веб-развертывания из [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] приложения. Дополнительные сведения см. в разделе [NIB: Практическое: развертывание базы данных с проектом веб-приложения](http://msdn.microsoft.com/library/683b33f1-8a3d-45cf-af6e-61ab50fc518b). Для [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] веб-сайта, это можно сделать помощью **мастер публикации базы данных** в Visual Studio. Для получения дополнительной информации см. [Deploying a Database by Using the Database Publishing Wizard](http://msdn.microsoft.com/library/1e3682e7-8b57-4da6-a393-af9640ccf8b7).  
   
 -   Поскольку [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] включает в себя базовую реализацию [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] , Windows Server AppFabric можно использовать для мониторинга службы данных, развернутой на IIS, работающем на Windows Server. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] использовании Windows Server AppFabric для наблюдения за службами данных см. в публикации [Tracking WCF Data Services with Windows Server AppFabri](http://go.microsoft.com/fwlink/?LinkID=202005).  
   

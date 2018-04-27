@@ -5,14 +5,15 @@ ms.prod: .net
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
+ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 7f49b19b0836636bf7656dc618ef2f181a0d7fff
-ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
+ms.openlocfilehash: 8ee1918091fe72e8606be6e7503ecd850084a4ba
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="inner-loop-development-workflow-for-docker-apps"></a>Внутренний цикл разработки рабочего процесса для Docker приложений
 
@@ -193,7 +194,7 @@ services:
 
 -   Связать веб-службы для службы redis
 
-Служба использует redis [последний открытый redis образ](https://hub.docker.com/_/redis/) извлечено из реестра Docker Hub. [redis](http://redis.io/) — это система популярным кэша для серверных приложений.
+Служба использует redis [последний открытый redis образ](https://hub.docker.com/_/redis/) извлечено из реестра Docker Hub. [redis](https://redis.io/) — это система популярным кэша для серверных приложений.
 
 ### <a name="step-5-build-and-run-your-docker-app"></a>Шаг 5: Построение и запуск приложения Docker
 

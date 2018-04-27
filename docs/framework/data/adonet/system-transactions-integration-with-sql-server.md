@@ -1,36 +1,38 @@
 ---
-title: "Интеграция System.Transactions с SQL Server"
-ms.custom: 
+title: Интеграция System.Transactions с SQL Server
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: b555544e-7abb-4814-859b-ab9cdd7d8716
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 21924441c091c53a79d4b7bf8a683f8a7c74bd07
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 06f1555c8dbbdf10e8a1d0de867ddb227cb148b6
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="systemtransactions-integration-with-sql-server"></a>Интеграция System.Transactions с SQL Server
 Платформа [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] версии 2.0 включает новую платформу транзакций, к которой можно обращаться через пространство имен <xref:System.Transactions> . Возможности работы с транзакциями в этой платформе полностью интегрированы с [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], включая [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)].  
   
  Помимо расширенных возможностей программирования, пространство имен <xref:System.Transactions> и [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] можно использовать вместе, чтобы координировать оптимизацию при работе с транзакциями. Повышаемая транзакция — это упрощенная (локальная) транзакция, которая по необходимости может быть автоматически повышена до полностью распределенной транзакции.  
   
- Начиная с [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 2.0, объект <xref:System.Data.SqlClient> поддерживает при работе с [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]повышаемые транзакции. Повышаемая транзакция не вызывает дополнительную нагрузку распределенной транзакции, если таковая не требуется. Повышаемые транзакции являются автоматическими и не требуют вмешательства разработчика.  
+ Начиная с [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 2.0 <xref:System.Data.SqlClient> поддерживает повышаемые транзакции, при работе с SQL Server. Повышаемая транзакция не вызывает дополнительную нагрузку распределенной транзакции, если таковая не требуется. Повышаемые транзакции являются автоматическими и не требуют вмешательства разработчика.  
   
- Повышаемые транзакции доступны только при использовании поставщика данных [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] для SQL Server (`SqlClient`) в сочетании с [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)].  
+ Повышаемые транзакции доступны только при использовании [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] поставщик данных для SQL Server (`SqlClient`) с SQL Server.  
   
 ## <a name="creating-promotable-transactions"></a>Создание повышаемых транзакций  
  Поставщик [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] для SQL Server обеспечивает поддержку повышаемых транзакций, которые обрабатываются с помощью классов в пространстве имен [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] <xref:System.Transactions> . Повышаемые транзакции оптимизируют работу с распределенными транзакциями за счет отсрочки создания распределенной транзакции до того момента, когда она будет необходима. Если требуется только один диспетчер ресурсов, то распределенная транзакция не создается.  
@@ -39,7 +41,7 @@ ms.lasthandoff: 01/17/2018
 >  В частично доверенном сценарии при повышении транзакции до распределенной требуется право доступа <xref:System.Transactions.DistributedTransactionPermission> .  
   
 ## <a name="promotable-transaction-scenarios"></a>Сценарии использования повышаемых транзакций  
- Как правило, для распределенных транзакций требуются значительные системные ресурсы, поскольку они управляются координатором распределенных транзакций (Майкрософт), который интегрирует все диспетчеры ресурсов, используемые в транзакции. Повышаемая транзакция является особой формой транзакции <xref:System.Transactions> , которая фактически передает работу простой транзакции [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] . Пространство имен<xref:System.Transactions>, <xref:System.Data.SqlClient>и [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] координируют работу, выполняемую при обработке транзакции, при необходимости повышая ее до полностью распределенной транзакции.  
+ Как правило, для распределенных транзакций требуются значительные системные ресурсы, поскольку они управляются координатором распределенных транзакций (Майкрософт), который интегрирует все диспетчеры ресурсов, используемые в транзакции. Повышаемая транзакция является особой формой <xref:System.Transactions> транзакцию, которая фактически передает работу простой транзакции SQL Server. <xref:System.Transactions>, <xref:System.Data.SqlClient>, и SQL Server координируют работу, выполняемую при обработке транзакции, при необходимости повышая ее до полностью распределенной транзакции.  
   
  Преимущество использования повышаемых транзакций заключается в том, что при открытии соединения с помощью активной транзакции <xref:System.Transactions.TransactionScope> и отсутствии других открытых соединений такая транзакция фиксируется как упрощенная, что позволяет избежать излишних затрат ресурсов на полностью распределенную транзакцию.  
   

@@ -1,42 +1,44 @@
 ---
-title: "Типы, перенесенные из WPF в System.Xaml"
-ms.custom: 
+title: Типы, перенесенные из WPF в System.Xaml
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - WPF XAML [XAML Services], migration to System.Xaml
 - XAML [XAML Services], System.Xaml and WPF
 - System.Xaml [XAML Services], types migrated from WPF
 ms.assetid: d79dabf5-a2ec-4e8d-a37a-67c4ba8a2b91
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 86dd2dc74903dfb889ab618622786f5349a5fb32
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: f4d4bc0b21770e5ac0c138c140334198d30a740a
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="types-migrated-from-wpf-to-systemxaml"></a>Типы, перенесенные из WPF в System.Xaml
-В [!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)] и [!INCLUDE[net_v30_long](../../../includes/net-v30-long-md.md)]как [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] , так и [!INCLUDE[TLA#tla_workflow](../../../includes/tlasharptla-workflow-md.md)] содержат реализацию языка XAML. Многие из открытых типов, которые обеспечивают расширение для реализации XAML в WPF, существовали в сборках WindowsBase PresentationCore и PresentationFramework. Аналогично, открытые типы, обеспечивающие расширение для XAML [!INCLUDE[TLA#tla_workflow](../../../includes/tlasharptla-workflow-md.md)] , существовали в сборке System.Workflow.ComponentModel. В [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]некоторые типы, связанные с XAML, перенесены в сборку System.Xaml. Общая реализация служб языка XAML в .NET Framework поддерживает многие сценарии расширения XAML, которые первоначально определялись реализацией XAML конкретной платформы, а теперь в целом поддерживаются в [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] . В этом разделе перечислены перенесенные типы и обсуждаются вопросы, относящиеся к миграции.  
+В [!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)] и [!INCLUDE[net_v30_long](../../../includes/net-v30-long-md.md)], оба [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] и Windows Workflow Foundation содержат реализацию языка XAML. Многие из открытых типов, которые обеспечивают расширение для реализации XAML в WPF, существовали в сборках WindowsBase PresentationCore и PresentationFramework. Аналогично открытые типы, которые обеспечивают расширение для Windows Workflow Foundation XAML существовали в сборке System.Workflow.ComponentModel. В [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]некоторые типы, связанные с XAML, перенесены в сборку System.Xaml. Общая реализация служб языка XAML в .NET Framework поддерживает многие сценарии расширения XAML, которые первоначально определялись реализацией XAML конкретной платформы, а теперь в целом поддерживаются в [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] . В этом разделе перечислены перенесенные типы и обсуждаются вопросы, относящиеся к миграции.  
   
 <a name="assemblies_and_namespaces"></a>   
 ## <a name="assemblies-and-namespaces"></a>Сборки и пространства имен  
  В [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] и [!INCLUDE[net_v30_short](../../../includes/net-v30-short-md.md)]типы, которые реализованы в WPF для поддержки XAML, обычно находились в пространстве имен <xref:System.Windows.Markup> . Большинство из них были включены в сборку WindowsBase.  
   
- В [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]появилось новое пространство имен <xref:System.Xaml> и новая сборка System.Xaml. Многие типы, которые первоначально были реализованы для XAML WPF, теперь предоставляются в виде точек расширения или служб для любой реализации XAML. Чтобы сделать типы доступными для более общих сценариев, они были перенесены из исходной сборки WPF в сборку System.Xaml. Это позволяет реализовать сценарии расширения XAML без включения сборок других платформ (таких как WPF и [!INCLUDE[TLA#tla_workflow](../../../includes/tlasharptla-workflow-md.md)]).  
+ В [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]появилось новое пространство имен <xref:System.Xaml> и новая сборка System.Xaml. Многие типы, которые первоначально были реализованы для XAML WPF, теперь предоставляются в виде точек расширения или служб для любой реализации XAML. Чтобы сделать типы доступными для более общих сценариев, они были перенесены из исходной сборки WPF в сборку System.Xaml. Это позволяет реализовать сценарии расширения XAML без включения сборок других платформ (таких как WPF и Windows Workflow Foundation).  
   
  Большинство типов перенесенных типов остались в пространстве имен <xref:System.Windows.Markup> . Частично это было вызвано желанием избежать нарушения сопоставлений пространств имен среды CLR в существующих реализациях для каждого файла. В результате пространство имен <xref:System.Windows.Markup> в [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] содержит смесь общих типов поддержки языка XAML (из сборки System.Xaml) и типов, связанных с реализацией XAML в WPF (из WindowsBase и других сборок WPF). Любой тип, который был перенесены в сборку System.Xaml, но ранее существовал в сборке WPF, поддерживает перенаправление типов в 4 версии сборки WPF.  
   
 ### <a name="workflow-xaml-support-types"></a>Типы поддержки XAML рабочего процесса  
- В[!INCLUDE[TLA#tla_workflow](../../../includes/tlasharptla-workflow-md.md)] также доступны типы поддержки XAML, идентичные короткие имена которых во многих случаях эквиваленты именам в WPF. Далее приводится список типов XAML [!INCLUDE[TLA#tla_workflow](../../../includes/tlasharptla-workflow-md.md)] .  
+ Windows Workflow Foundation также предлагает типы поддержки XAML, и во многих случаях идентичные короткие имена которых эквивалентов в WPF. Ниже приведен список типов поддержки Windows Workflow Foundation XAML.  
   
 -   <xref:System.Workflow.ComponentModel.Serialization.ContentPropertyAttribute>  
   
@@ -44,11 +46,11 @@ ms.lasthandoff: 12/22/2017
   
 -   <xref:System.Workflow.ComponentModel.Serialization.XmlnsPrefixAttribute>  
   
- Эти типы поддержки по-прежнему существуют в сборках [!INCLUDE[TLA#tla_workflow](../../../includes/tlasharptla-workflow-md.md)] для [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] и также могут использоваться для определенных приложений [!INCLUDE[TLA#tla_workflow](../../../includes/tlasharptla-workflow-md.md)] . Тем не менее, на них не должны ссылаться приложения и платформы, не использующие [!INCLUDE[TLA#tla_workflow](../../../includes/tlasharptla-workflow-md.md)].  
+ Эти типы поддержки по-прежнему существуют в сборках Windows Workflow Foundation для [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] и по-прежнему можно использовать для конкретных приложений Windows Workflow Foundation; тем не менее, они не должны ссылаться приложения и платформы, которые не используют Windows Workflow Foundation.  
   
 <a name="markupextension"></a>   
 ## <a name="markupextension"></a>MarkupExtension  
- В [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] и [!INCLUDE[net_v30_short](../../../includes/net-v30-short-md.md)]класс <xref:System.Windows.Markup.MarkupExtension> для WPF находился в сборке WindowsBase. Параллельный класс для [!INCLUDE[TLA#tla_workflow](../../../includes/tlasharptla-workflow-md.md)], <xref:System.Workflow.ComponentModel.Serialization.MarkupExtension>, размещался в сборке System.Workflow.ComponentModel. В [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]класс <xref:System.Windows.Markup.MarkupExtension> перенесен в сборку System.Xaml. В [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]класс <xref:System.Windows.Markup.MarkupExtension> предназначен для любого сценария расширения XAML, где используются службы XAML .NET Framework, а не только для сценариев, связанных с конкретными платформами. Если это возможно, определенные платформы или пользовательский код в платформе также должны использовать класс <xref:System.Windows.Markup.MarkupExtension> для расширения XAML.  
+ В [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] и [!INCLUDE[net_v30_short](../../../includes/net-v30-short-md.md)]класс <xref:System.Windows.Markup.MarkupExtension> для WPF находился в сборке WindowsBase. Параллельный класс для Windows Workflow Foundation <xref:System.Workflow.ComponentModel.Serialization.MarkupExtension>, размещался в сборке System.Workflow.ComponentModel. В [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]класс <xref:System.Windows.Markup.MarkupExtension> перенесен в сборку System.Xaml. В [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]класс <xref:System.Windows.Markup.MarkupExtension> предназначен для любого сценария расширения XAML, где используются службы XAML .NET Framework, а не только для сценариев, связанных с конкретными платформами. Если это возможно, определенные платформы или пользовательский код в платформе также должны использовать класс <xref:System.Windows.Markup.MarkupExtension> для расширения XAML.  
   
 <a name="markupextension_supporting_service_classes"></a>   
 ## <a name="markupextension-supporting-service-classes"></a>Вспомогательные классы службы MarkupExtension  

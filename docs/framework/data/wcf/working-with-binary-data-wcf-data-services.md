@@ -1,12 +1,13 @@
 ---
-title: "Работа с двоичными данными (службы данных WCF)"
-ms.custom: 
+title: Работа с двоичными данными (службы данных WCF)
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework-oob
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,16 +16,17 @@ helpviewer_keywords:
 - WCF Data Services, binary data
 - WCF Data Services, streams
 ms.assetid: aeccc45c-d5c5-4671-ad63-a492ac8043ac
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e02a98a327947e32acd42ccf79d922f5dff6fb6c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 99143200b8135d5737454de325a95399c62fd506
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="working-with-binary-data-wcf-data-services"></a>Работа с двоичными данными (службы данных WCF)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] Клиентская библиотека позволяет получать и обновлять двоичные данные из [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] веб-канала в одном из следующих способов:  
@@ -33,10 +35,10 @@ ms.lasthandoff: 12/22/2017
   
 -   В качестве отдельного потока двоичных данных. Этот метод рекомендуется использовать для доступа и изменения данных больших двоичных объектов, которые могут представлять фото, видео или другие типы данных с двоичной кодировкой.  
   
- [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]реализуют потоки двоичных данных по протоколу HTTP, как определено в [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]. В этот механизм двоичные данные обрабатываются как медиаресурс, отделенный, но относящиеся к сущности, которая называется медиассылкой. Дополнительные сведения см. в разделе [потокового поставщика](../../../../docs/framework/data/wcf/streaming-provider-wcf-data-services.md).  
+ [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] реализуют потоки двоичных данных по протоколу HTTP, как определено в [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]. В этот механизм двоичные данные обрабатываются как медиаресурс, отделенный, но относящиеся к сущности, которая называется медиассылкой. Дополнительные сведения см. в разделе [потокового поставщика](../../../../docs/framework/data/wcf/streaming-provider-wcf-data-services.md).  
   
 > [!TIP]
->  Пример с пошаговыми инструкциями по созданию [!INCLUDE[avalon1](../../../../includes/avalon1-md.md)] клиентского приложения, загружающего двоичные файлы изображений из [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] службы, которая хранит изображения, см. в публикации [поставщиков служб данных потоковой передачи часть 2: доступ к мультимедиа Поток ресурсов от клиента](http://go.microsoft.com/fwlink/?LinkId=201637). Загрузить образец кода для службы данных фото потока в записи блога [потоковой передачи образец службы данных](http://go.microsoft.com/fwlink/?LinkId=198988) в коллекции кода MSDN.  
+>  Пример с пошаговыми инструкциями по созданию клиентского приложения Windows Presentation Foundation (WPF), который загружает двоичные файлы изображений из [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] службы, которая хранит изображения, см. в публикации [данных служб потокового поставщика часть 2: доступ к потоку Медиаресурса с клиента](http://go.microsoft.com/fwlink/?LinkId=201637). Загрузить образец кода для службы данных фото потока в записи блога [потоковой передачи образец службы данных](http://go.microsoft.com/fwlink/?LinkId=198988) в коллекции кода MSDN.  
   
 ## <a name="entity-metadata"></a>Метаданные сущности  
  Сущность со связанным потоком медиаисточника указывается в метаданных службы данных с помощью атрибута `HasStream`, применяемого к типу сущности, который является ссылкой на данные. В следующем примере `PhotoInfo` сущность является ссылкой на носитель со связанным ресурсом мультимедиа, обозначенном `HasStream` атрибута.  
@@ -49,7 +51,7 @@ ms.lasthandoff: 12/22/2017
  Клиентская библиотека [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] предоставляет методы доступа к потокам двоичных данных из службы данных на основе [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]. При загрузке медиаресурса можно использовать URI-идентификатор медиаресурса или получить двоичный поток, непосредственно содержащий данные медиаресурса. Можно также загрузить данные медиаресурса в виде двоичного потока.  
   
 > [!TIP]
->  Пример с пошаговыми инструкциями по созданию [!INCLUDE[avalon1](../../../../includes/avalon1-md.md)] клиентского приложения, загружающего двоичные файлы изображений из [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] службы, которая хранит изображения, см. в публикации [поставщиков служб данных потоковой передачи часть 2: доступ к мультимедиа Поток ресурсов от клиента](http://go.microsoft.com/fwlink/?LinkId=201637). Загрузить образец кода для службы данных фото потока в записи блога [потоковой передачи образец службы данных](http://go.microsoft.com/fwlink/?LinkId=198988) в коллекции кода MSDN.  
+>  Пример с пошаговыми инструкциями по созданию клиентского приложения Windows Presentation Foundation (WPF), который загружает двоичные файлы изображений из [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] службы, которая хранит изображения, см. в публикации [данных служб потокового поставщика часть 2: доступ к потоку Медиаресурса с клиента](http://go.microsoft.com/fwlink/?LinkId=201637). Загрузить образец кода для службы данных фото потока в записи блога [потоковой передачи образец службы данных](http://go.microsoft.com/fwlink/?LinkId=198988) в коллекции кода MSDN.  
   
 ### <a name="getting-the-uri-of-the-binary-stream"></a>Получение URI-идентификатора двоичного потока  
  При получении определенных типов медиаресурсов, таких как изображения и другие медиафайлы, часто бывает проще использовать URI-идентификатор приложения, чем обрабатывать непосредственно источник двоичных данных. Чтобы получить URI-идентификатор потока ресурса, связанный с определенной ссылкой на данные, следует вызвать метод <xref:System.Data.Services.Client.DataServiceContext.GetReadStreamUri%2A> для экземпляра <xref:System.Data.Services.Client.DataServiceContext>, который отслеживает сущность. В этом примере показан порядок вызова метода <xref:System.Data.Services.Client.DataServiceContext.GetReadStreamUri%2A>, получающего URI-идентификатор потока медиаресурса, который используется для создания нового изображения на стороне клиента.  

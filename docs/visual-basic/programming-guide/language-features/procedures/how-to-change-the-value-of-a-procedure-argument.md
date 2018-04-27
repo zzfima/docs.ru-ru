@@ -1,11 +1,12 @@
 ---
-title: "Практическое руководство. Изменение значения аргумента процедуры (Visual Basic)"
-ms.custom: 
+title: Практическое руководство. Изменение значения аргумента процедуры (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - procedures [Visual Basic], arguments
@@ -19,19 +20,19 @@ helpviewer_keywords:
 - arguments [Visual Basic], ByRef
 - arguments [Visual Basic], changing value
 ms.assetid: 6fad2368-5da7-4c07-8bf8-0f4e65a1be67
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: ba23c8f0b4b0b6e751546019af902a6305b9ef53
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 93d9cc11e919e45fdd3b48dd2731b165f3466640
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-change-the-value-of-a-procedure-argument-visual-basic"></a>Практическое руководство. Изменение значения аргумента процедуры (Visual Basic)
 При вызове процедуры каждый аргумент соответствует одному из параметров, определенных в процедуре. В некоторых случаях код процедуры можно изменить значение базового аргумента в вызывающем коде. В других случаях процедура может изменять только его локальную копию аргумента.  
   
- При вызове процедуры, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] делает локальную копию каждого аргумента, который передается [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md). Для каждого передаваемого аргумента [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md), [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] предоставляет код процедуры прямую ссылку на элемент программирования в аргументе в вызывающем коде.  
+ При вызове процедуры Visual Basic создает локальную копию каждого аргумента, который передается [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md). Для каждого передаваемого аргумента [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md), Visual Basic предоставляет код процедуры прямую ссылку на элемент программирования в аргументе в вызывающем коде.  
   
  Если базовый элемент в вызывающем коде является изменяемым и передается аргумент `ByRef`, код процедуры можно использовать прямую ссылку, чтобы изменить значение элемента в вызывающем коде.  
   
@@ -56,9 +57,9 @@ ms.lasthandoff: 11/21/2017
   
 1.  В объявлении процедуры укажите [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) для параметра, соответствующего аргументу.  
   
-     -или-  
+     - или -  
   
-     В вызывающем коде заключите аргумент в скобки в списке аргументов. Это заставляет [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] передача аргумента по значению, даже если соответствующий параметр указывает `ByRef`.  
+     В вызывающем коде заключите аргумент в скобки в списке аргументов. Это заставляет Visual Basic для передачи аргумента по значению, даже если соответствующий параметр указывает `ByRef`.  
   
 2.  В коде процедуры используйте имя параметра для присвоения значения локальной копии аргумента. Базовое значение в вызывающий код не изменяется.  
   
@@ -80,7 +81,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="compiling-the-code"></a>Компиляция кода  
  Если переменная передается по ссылке, необходимо использовать `ByRef` ключевое слово, чтобы указать этот механизм.  
   
- Значение по умолчанию в [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] аргументы передаются по значению. Тем не менее, это хороший стиль программирования способ включения либо [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) или [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) ключевое слово с каждым объявленным параметром. Это делает код более удобным для чтения.  
+ По умолчанию в Visual Basic используется для передачи аргументов по значению. Тем не менее, это хороший стиль программирования способ включения либо [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) или [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) ключевое слово с каждым объявленным параметром. Это делает код более удобным для чтения.  
   
 ## <a name="net-framework-security"></a>Безопасность платформы .NET Framework  
  Всегда есть потенциальный риск при разрешении процедуре изменять значение базового аргумента в вызывающем коде. Убедитесь, что предполагается, что это значение, чтобы изменить и будьте готовы к проверке его допустимости перед его использованием.  

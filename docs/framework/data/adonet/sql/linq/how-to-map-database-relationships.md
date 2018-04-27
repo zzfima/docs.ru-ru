@@ -1,35 +1,37 @@
 ---
-title: "Практическое руководство. Сопоставление отношений базы данных"
-ms.custom: 
+title: Практическое руководство. Сопоставление отношений базы данных
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 538def39-8399-46fb-b02d-60ede4e050af
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: b1637fd322468f743c29605b31c3c6849bd78aa6
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: b283c2235ce0b6b407acfb52f81b15a26a3c00a0
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-map-database-relationships"></a>Практическое руководство. Сопоставление отношений базы данных
 Отношения данных, которые всегда останутся неизменными, можно закодировать в виде ссылок в классе сущностей. В учебной базе данных Northwind, всегда существует связь между заказчиками и их заказами, т.к. обычно заказчики размещают заказы.  
   
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]Определяет <xref:System.Data.Linq.Mapping.AssociationAttribute> атрибут для представления таких связей. Этот атрибут используется совместно с типами <xref:System.Data.Linq.EntitySet%601> и <xref:System.Data.Linq.EntityRef%601> для представления в базе данных связи по внешнему ключу. Дополнительные сведения см. в разделе разделе атрибут Association [сопоставления на основе атрибутов](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md).  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Определяет <xref:System.Data.Linq.Mapping.AssociationAttribute> атрибут для представления таких связей. Этот атрибут используется совместно с типами <xref:System.Data.Linq.EntitySet%601> и <xref:System.Data.Linq.EntityRef%601> для представления в базе данных связи по внешнему ключу. Дополнительные сведения см. в разделе разделе атрибут Association [сопоставления на основе атрибутов](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md).  
   
 > [!NOTE]
->  В значениях свойства Storage для атрибутов AssociationAttribute и ColumnAttribute учитывается регистр. Например, следует убедиться в том, что регистр символов в значении, использованном в атрибуте свойства AssociationAttribute.Storage, соответствует регистру символов в соответствующих именах свойств в остальном коде. Это относится ко всем языкам программирования среды .NET, даже к тем, которые обычно не учитывают регистр, включая [!INCLUDE[vb_current_short](../../../../../../includes/vb-current-short-md.md)]. Дополнительные сведения о свойстве Storage см. в разделе <xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A?displayProperty=nameWithType>.  
+>  В значениях свойства Storage для атрибутов AssociationAttribute и ColumnAttribute учитывается регистр. Например, следует убедиться в том, что регистр символов в значении, использованном в атрибуте свойства AssociationAttribute.Storage, соответствует регистру символов в соответствующих именах свойств в остальном коде. Это применяется для всех языков программирования .NET, включая те, которые обычно регистр не учитывается, включая Visual Basic. Дополнительные сведения о свойстве Storage см. в разделе <xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A?displayProperty=nameWithType>.  
   
  Большинство связей имеют тип «один ко многим», как и в примере, представленном далее в этом разделе. Отношения "один-к-одному" и "один-ко-многим" можно представить следующим образом.  
   
@@ -50,7 +52,7 @@ ms.lasthandoff: 01/17/2018
  В следующем примере отношения "один-ко-многим" класс `Customer` имеет свойство, объявляющее отношение между клиентами и их заказами.  Свойство `Orders` имеет тип <xref:System.Data.Linq.EntitySet%601>. Этот тип указывает, что данное отношение относится к виду "один-ко-многим" (один клиент - много заказов). Свойство <xref:System.Data.Linq.Mapping.AssociationAttribute.OtherKey%2A> используется для описания установки данной связи, а именно: путем указания в связанном классе имени свойства, которое будет сравниваться с существующим. В этом примере `CustomerID` сравнивается свойства, как базы данных *соединения* бы сравнить значение этого столбца.  
   
 > [!NOTE]
->  Если разработка производится в среде [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)], то можно воспользоваться [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] для создания ассоциации между классами.  
+>  Если вы используете Visual Studio, можно использовать [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] для создания ассоциации между классами.  
   
  [!code-csharp[DlinqCustomize#3](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqCustomize/cs/Program.cs#3)]
  [!code-vb[DlinqCustomize#3](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqCustomize/vb/Module1.vb#3)]  

@@ -1,11 +1,12 @@
 ---
-title: "Практическое руководство. Ссылка на COM-объект в Visual Basic"
-ms.custom: 
+title: Практическое руководство. Ссылка на COM-объект в Visual Basic
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - COM interop [Visual Basic], referencing COM objects
@@ -14,21 +15,21 @@ helpviewer_keywords:
 - COM objects, referencing
 - interop assemblies
 ms.assetid: 9c518fb4-27d9-4112-9e6a-5a7d0210af6f
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: a8ac167b40688b1d1116f148d0d5fd6afdcaada8
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: 0f6f7b4887e2cfba65da7a7a890b78c3d6a8508f
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-reference-com-objects-from-visual-basic"></a>Практическое руководство. Ссылка на COM-объект в Visual Basic
-В [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], добавление ссылок на COM-объекты, имеющие библиотеки типов необходимо создать сборку взаимодействия для COM-библиотеки. Ссылки на члены объекта COM направляются в сборку взаимодействия и пересылаются на фактическое COM-объект. Ответы из COM-объекта направляются в сборку взаимодействия и пересылаются в вашей [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] приложения.  
+В Visual Basic Добавление ссылок на COM-объекты, имеющие библиотеки типов требует создания сборки взаимодействия для COM-библиотеки. Ссылки на члены объекта COM направляются в сборку взаимодействия и пересылаются на фактическое COM-объект. Ответы из COM-объекта направляются в сборку взаимодействия и пересылаются в вашей [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] приложения.  
   
  COM-объект можно ссылаться без использования сборки взаимодействия, внедрение сведений о типах COM-объекта в сборку .NET. Чтобы внедрить сведения о типе, присвойте `Embed Interop Types` свойства `True` для ссылки на COM-объект. При компиляции с помощью компилятора командной строки используйте `/link` для создания ссылки на библиотеку COM. Дополнительные сведения см. в разделе [/Link (Visual Basic)](../../../visual-basic/reference/command-line-compiler/link.md).  
   
- [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]автоматически создает сборки взаимодействия при добавлении ссылки на библиотеку типов из интегрированной среды разработки (IDE). При работе в командной строке, можно использовать служебную программу Tlbimp для создания сборки взаимодействия вручную.  
+ Visual Basic автоматически создает сборки взаимодействия при добавлении ссылки на библиотеку типов из интегрированной среды разработки (IDE). При работе в командной строке, можно использовать служебную программу Tlbimp для создания сборки взаимодействия вручную.  
   
 ### <a name="to-add-references-to-com-objects"></a>Для добавления ссылок на COM-объекты  
   

@@ -1,24 +1,26 @@
 ---
-title: "Устранение неполадок, связанных с руководством по началу работы"
-ms.custom: 
+title: Устранение неполадок, связанных с руководством по началу работы
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 69a21511-0871-4c41-9a53-93110e84d7fd
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 55288074b35bcb00d6c6b453f1320ad40d26a5f7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: d8bc077b1ef24ecfcb4d37a9ddb8389dc705f68e
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="troubleshooting-the-getting-started-tutorial"></a>Устранение неполадок, связанных с руководством по началу работы
 В этом разделе рассматриваются наиболее распространенные проблемы, которые возникают при работе с учебником «Приступая к работе», и описываются способы их решения.  
@@ -35,11 +37,11 @@ ms.lasthandoff: 12/22/2017
   
 6.  [Компиляция клиентского приложения: «CalculatorClient» не удалось найти имя типа или пространства имен (возможно, отсутствует с помощью директивы или ссылка на сборку?)](../../../docs/framework/wcf/troubleshooting-the-getting-started-tutorial.md#BKMK_q6)  
   
-7.  [Выполнение клиента: необработанное исключение: System.ServiceModel.EndpointNotFoundException: не удалось подключиться к http://localhost: 8000/ServiceModelSamples/Service/CalculatorService. Код ошибки TCP 10061: не удалось подключиться, так как конечный компьютер отверг.](../../../docs/framework/wcf/troubleshooting-the-getting-started-tutorial.md#BKMK_q7)  
+7.  [Выполнение клиента: необработанное исключение: System.ServiceModel.EndpointNotFoundException: не удалось подключиться к http://localhost:8000/ServiceModelSamples/Service/CalculatorService. Код ошибки TCP 10061: не удалось подключиться, так как конечный компьютер отверг.](../../../docs/framework/wcf/troubleshooting-the-getting-started-tutorial.md#BKMK_q7)  
   
 <a name="BKMK_q1"></a>   
 ## <a name="i-am-unable-to-find-the-project-files-on-my-hard-drive"></a>Не удается найти файлы проекта на жестком диске.  
- [!INCLUDE[vs_current_short](../../../includes/vs-current-short-md.md)]сохраняет файлы проекта в c:\users\\< пользователя name\Documents\\< версия Visual Studio\>\Projects в [!INCLUDE[wv](../../../includes/wv-md.md)] и [!INCLUDE[win7_client_secondref](../../../includes/win7-client-secondref-md.md)]и c:\Documents and Settings\\< имя пользователя\>\My documents\\< версия Visual Studio\>\Projects в более ранних версиях Windows.  
+ Visual Studio сохраняет файлы проекта c:\users\\< пользователя name\Documents\\< версия Visual Studio\>\Projects в [!INCLUDE[wv](../../../includes/wv-md.md)] и [!INCLUDE[win7_client_secondref](../../../includes/win7-client-secondref-md.md)]и c:\Documents and Settings\\< имя пользователя \>\My documents\\< версия Visual Studio\>\Projects в более ранних версиях Windows.  
   
 <a name="BKMK_q2"></a>   
 ## <a name="attempting-to-run-the-service-application-http-could-not-register-url-http8000servicemodelsamplesservice-your-process-does-not-have-access-rights-to-this-namespace"></a>Попытка запуска служебного приложения: HTTP не удалось зарегистрировать URL-адрес http://+:8000/ServiceModelSamples/Service/. Процесс не обладает правами доступа к этому пространству имен.  
@@ -62,11 +64,11 @@ ms.lasthandoff: 12/22/2017
  Эта ошибка возникает, если в проект клиента не добавлен файл Proxy.cs или Proxy.vb.  
   
 <a name="BKMK_q7"></a>   
-## <a name="running-the-client-unhandled-exception-systemservicemodelendpointnotfoundexception-could-not-connect-to-httplocalhost8000servicemodelsamplesservicecalculatorservice-tcp-error-code-10061-no-connection-could-be-made-because-the-target-machine-actively-refused-it"></a>Выполнение клиента: необработанное исключение: System.ServiceModel.EndpointNotFoundException. Не удается подключиться к http://localhost:8000/ServiceModelSamples/Service/CalculatorService. Код ошибки TCP 10061: подключение не установлено, т. к. конечный компьютер отверг запрос на подключение.  
+## <a name="running-the-client-unhandled-exception-systemservicemodelendpointnotfoundexception-could-not-connect-to-httplocalhost8000servicemodelsamplesservicecalculatorservice-tcp-error-code-10061-no-connection-could-be-made-because-the-target-machine-actively-refused-it"></a>Выполнение клиента: необработанное исключение: System.ServiceModel.EndpointNotFoundException: не удалось подключиться к http://localhost:8000/ServiceModelSamples/Service/CalculatorService. Код ошибки TCP 10061: подключение не установлено, т. к. конечный компьютер отверг запрос на подключение.  
  Эта ошибка возникает в случае запуска клиентского приложения без запуска службы.  
   
 <a name="BKMK_q8"></a>   
-## <a name="unhandled-exception-systemservicemodelsecuritysecuritynegotiationexception-soap-security-negotiation-with-httplocalhost8000servicemodelsamplesservicecalculatorservice-for-target-httplocalhost8000servicemodelsamplesservicecalculatorservice-failed"></a>Необработанное исключение: System.ServiceModel.Security.SecurityNegotiationException: ошибка согласования безопасности SOAP с http://localhost:8000/ServiceModelSamples/Service/CalculatorService для цели http://localhost:8000/ServiceModelSamples/Service/CalculatorService  
+## <a name="unhandled-exception-systemservicemodelsecuritysecuritynegotiationexception-soap-security-negotiation-with-httplocalhost8000servicemodelsamplesservicecalculatorservice-for-target-httplocalhost8000servicemodelsamplesservicecalculatorservice-failed"></a>Необработанное исключение: System.ServiceModel.Security.SecurityNegotiationException: согласования режима безопасности SOAP с "http://localhost:8000/ServiceModelSamples/Service/CalculatorService«для целевого объекта»http://localhost:8000/ServiceModelSamples/Service/CalculatorService" не удалось  
  Эта ошибка происходит на присоединенном к домену компьютере, который не подключен к сети. Подключите компьютер к сети или отключите безопасность для клиента и для службы. Для службы замените код, создающий WSHttpBinding, на следующий.  
   
 ```  

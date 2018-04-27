@@ -16,11 +16,11 @@ ms.author: douglasl
 manager: craigg
 ms.workload:
 - dotnet
-ms.openlocfilehash: 76d8765be1dc24f4b8c457644595796680c2f2c3
-ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
+ms.openlocfilehash: 3939abaf376100e09d244afdb32662729a990ff7
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="connection-string-syntax"></a>Синтаксис строки подключения
 Каждый поставщик данных платформы .NET Framework имеет объект `Connection`, наследующий из <xref:System.Data.Common.DbConnection>, а также из свойства <xref:System.Data.Common.DbConnection.ConnectionString%2A>, зависящего от поставщика. Конкретный синтаксис строки подключения для каждого поставщика приведен в его свойстве `ConnectionString`. В следующей таблице представлен список четырех поставщиков данных, поставляемых в составе платформы .NET Framework.  
@@ -98,7 +98,7 @@ Data Source=MySqlServer\MSSQL1;"
 Кроме того, в свойстве <xref:System.Data.SqlClient.SqlConnectionStringBuilder.DataSource%2A> объекта `SqlConnectionStringBuilder` можно задать имя экземпляра при построении строки подключения. Свойство <xref:System.Data.SqlClient.SqlConnection.DataSource%2A> объекта <xref:System.Data.SqlClient.SqlConnection> доступно только для чтения.  
   
 ### <a name="type-system-version-changes"></a>Изменения версий системы типов  
- Ключевое слово `Type System Version` в <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A?displayProperty=nameWithType> указывает клиентское представление типов [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]. Дополнительные сведения о ключевом слове <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A?displayProperty=nameWithType> см. в разделе `Type System Version`.  
+ `Type System Version` Ключевое слово в <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A?displayProperty=nameWithType> указывает клиентское представление типов SQL Server. Дополнительные сведения о ключевом слове <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A?displayProperty=nameWithType> см. в разделе `Type System Version`.  
   
 ## <a name="connecting-and-attaching-to-sql-server-express-user-instances"></a>Подключение и присоединение к пользовательским экземплярам SQL Server Express  
  Пользовательские экземпляры являются одной из функций SQL Server Express. Они дают пользователям под учетной записью с минимальными правами возможность присоединить и запустить базу данных SQL Server без прав администратора. Пользовательский экземпляр выполняется с учетными данными пользователя Windows, а не службы.  
@@ -106,7 +106,7 @@ Data Source=MySqlServer\MSSQL1;"
  Дополнительные сведения о работе с пользовательскими экземплярами см. в разделе [экземпляров SQL Server Express пользователя](../../../../docs/framework/data/adonet/sql/sql-server-express-user-instances.md).  
   
 ## <a name="using-trustservercertificate"></a>Использование ключевого слова TrustServerCertificate  
- Ключевое слово `TrustServerCertificate` применяется только при соединении с экземпляром [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] с допустимым сертификатом. Если ключевому слову `TrustServerCertificate` присвоено значение `true`, то транспортный уровень будет использовать протокол SSL для шифрования канала и не пойдет по цепочке сертификатов для проверки доверия.  
+ `TrustServerCertificate` Ключевое слово может использоваться только при подключении к экземпляру SQL Server с действительным сертификатом. Если ключевому слову `TrustServerCertificate` присвоено значение `true`, то транспортный уровень будет использовать протокол SSL для шифрования канала и не пойдет по цепочке сертификатов для проверки доверия.  
   
 ```  
 "TrustServerCertificate=true;"   

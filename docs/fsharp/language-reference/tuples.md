@@ -1,7 +1,7 @@
 ---
-title: "Кортежи (F#)"
-description: "Дополнительные сведения о кортежа, группирование неименованных, но упорядоченных значений, возможно различных типов F #."
-keywords: "visual f#, f#, функциональное программирование"
+title: Кортежи (F#)
+description: 'Дополнительные сведения о кортежа, группирование неименованных, но упорядоченных значений, возможно различных типов F #.'
+keywords: visual f#, f#, функциональное программирование
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 35069073-9a82-410f-8dea-912e2a152e6d
-ms.openlocfilehash: 996566f2baaea8ab01e5c80e53caea82e9684714
-ms.sourcegitcommit: d95a91d685565f4d95c8773b558752864a6a3d7e
+ms.openlocfilehash: e0a5e5eb08e13bd5cbe9f88a47d4cf4bba19ea22
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="tuples"></a>Кортежи
 
@@ -89,7 +89,7 @@ int * float * string
 
 ## <a name="interoperation-with-c-tuples"></a>Взаимодействие с C# кортежи
 
-Язык C# 7 введены кортежей.  Кортежи в C# являются структурами и эквивалентны кортежей структуры в языке F #.  Если требуется взаимодействие с C#, необходимо использовать структуры кортежей.
+Язык C# 7.0 введены кортежей.  Кортежи в C# являются структурами и эквивалентны кортежей структуры в языке F #.  Если требуется взаимодействие с C#, необходимо использовать структуры кортежей.
 
 Это легко сделать.  Например предположим, что у вас есть передать кортеж класса C# и затем использовать его результат, который также является кортеж:
 
@@ -130,7 +130,7 @@ let struct (newX, newY) = Example.AddOneToXAndY(struct (1, 2))
 
 ### <a name="compiled-form-of-struct-tuples"></a>Скомпилированные формы кортежей структуры
 
-Кортежи структуры (например, `struct (x, y)`), существенно отличающуюся от кортежей ссылки.  Они компилируются в <xref:System.ValueTuple> типа, перегружены арность или число параметров типа.  Они эквивалентны [C# 7 кортежей](../../csharp/tuples.md) и [кортежей 2017 г. Visual Basic](../../visual-basic/programming-guide/language-features/data-types/tuples.md)и взаимодействовать в обоих направлениях.
+Кортежи структуры (например, `struct (x, y)`), существенно отличающуюся от кортежей ссылки.  Они компилируются в <xref:System.ValueTuple> типа, перегружены арность или число параметров типа.  Они эквивалентны [кортежей 7.0 C#](../../csharp/tuples.md) и [кортежей 2017 г. Visual Basic](../../visual-basic/programming-guide/language-features/data-types/tuples.md)и взаимодействовать в обоих направлениях.
 
 ## <a name="see-also"></a>См. также
 [Справочник по языку F#](index.md)

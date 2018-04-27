@@ -1,12 +1,13 @@
 ---
-title: "Общие сведения о входных данных"
-ms.custom: 
+title: Общие сведения о входных данных
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -31,16 +32,17 @@ helpviewer_keywords:
 - focus [WPF]
 - mouse position [WPF]
 ms.assetid: ee5258b7-6567-415a-9b1c-c0cbe46e79ef
-caps.latest.revision: "50"
+caps.latest.revision: 50
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 910eed7c1786730a3ffce5add995e543021f4759
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: b10890cc433e1adf72b7e26c91e919bd239942b8
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="input-overview"></a>Общие сведения о входных данных
 Подсистема <a name="introduction"></a>[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] предоставляет мощный [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] для получения входных данных от разнообразных устройств, включая мышь, клавиатуру, сенсорный экран и перо. В этом разделе описываются службы, предоставляемые [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], и объясняется архитектура систем ввода.  
@@ -70,7 +72,7 @@ ms.lasthandoff: 12/22/2017
  <xref:System.Windows.Input.Mouse> И <xref:System.Windows.Input.Keyboard> классы рассматриваются более подробно в этом обзоре.  
   
 ### <a name="stylus-input"></a>Ввод с помощью пера  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]имеет встроенную поддержку <xref:System.Windows.Input.Stylus>.  <xref:System.Windows.Input.Stylus> — Популярный по рукописный ввод [!INCLUDE[TLA#tla_tpc](../../../../includes/tlasharptla-tpc-md.md)].  Приложения [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] могут обрабатывать перо как мышь с помощью [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] мыши, но [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] также предоставляет перо как абстрактное устройство, использующее модель, аналогичную клавиатуре и мыши.  Все связанные с пером [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] содержат слово Stylus.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] имеет встроенную поддержку <xref:System.Windows.Input.Stylus>.  <xref:System.Windows.Input.Stylus> — Популярный по рукописный ввод [!INCLUDE[TLA#tla_tpc](../../../../includes/tlasharptla-tpc-md.md)].  Приложения [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] могут обрабатывать перо как мышь с помощью [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] мыши, но [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] также предоставляет перо как абстрактное устройство, использующее модель, аналогичную клавиатуре и мыши.  Все связанные с пером [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] содержат слово Stylus.  
   
  Поскольку перо может действовать как мышь, приложения, поддерживающие только ввод с помощью мыши, по-прежнему могут автоматически получать определенный уровень поддержки пера. При использовании пера таким образом приложение получает возможность обработать соответствующее событие пера, а затем обрабатывает соответствующее событие мыши. Кроме того, через абстрактное устройство «перо» доступны также службы более высокого уровня, например рукописный ввод.  Дополнительные сведения о рукописном вводе см. в разделе [Начало работы с рукописным вводом](../../../../docs/framework/wpf/advanced/getting-started-with-ink.md).  
   
@@ -84,7 +86,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="handling_input_events"></a>   
 ## <a name="handling-input-events"></a>Обработка событий ввода  
- Для получения входных данных в элементе обработчик событий должен быть связан с данным конкретным событием.  В [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] это осуществляется напрямую: вы указываете имя события в качестве атрибута элемента, который будет перехватывать это событие.  Затем в качестве значения этого атрибута вы задаете имя обработчика событий, который можно определить на основе делегата.  Этот обработчик событий должен быть написан в коде, например на [!INCLUDE[TLA#tla_cshrp](../../../../includes/tlasharptla-cshrp-md.md)], и может быть включен в файл кода программной части.  
+ Для получения входных данных в элементе обработчик событий должен быть связан с данным конкретным событием.  В [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] это осуществляется напрямую: вы указываете имя события в качестве атрибута элемента, который будет перехватывать это событие.  Затем в качестве значения этого атрибута вы задаете имя обработчика событий, который можно определить на основе делегата.  Обработчик событий должен быть прописан в коде, например C# и может быть включено в файл кода.  
   
  События клавиатуры возникают, когда операционная система сообщает о действиях клавиш, которые происходят, когда фокус клавиатуры находится в элементе. События мыши и пера делятся на две категории: события, сообщающие об изменениях положения указателя относительно элемента, и события, сообщающие об изменениях состояния кнопок устройства.  
   
@@ -330,7 +332,7 @@ ms.lasthandoff: 12/22/2017
 ### <a name="keyboard-focus"></a>Фокус клавиатуры  
  Фокус клавиатуры относится к элементу, получающему ввод с клавиатуры.  На всем рабочем столе может быть только один элемент, в котором находится фокус клавиатуры.  В [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], элемент, имеющий фокус будет иметь <xref:System.Windows.IInputElement.IsKeyboardFocused%2A> значение `true`.  Статический <xref:System.Windows.Input.Keyboard> метод <xref:System.Windows.Input.Keyboard.FocusedElement%2A> возвращает элемент, который в данный момент имеет фокус клавиатуры.  
   
- Фокус клавиатуры можно получить, — перехода к элементу или щелкнув мышью определенных элементов, такие как <xref:System.Windows.Controls.TextBox>.  Фокус клавиатуры также могут быть получены программно с помощью <xref:System.Windows.Input.Keyboard.Focus%2A> метод <xref:System.Windows.Input.Keyboard> класса.  <xref:System.Windows.Input.Keyboard.Focus%2A>пытается перевести фокус клавиатуры указанного элемента.  Элемент, возвращаемый <xref:System.Windows.Input.Keyboard.Focus%2A> элемент, который в данный момент имеет фокус клавиатуры.  
+ Фокус клавиатуры можно получить, — перехода к элементу или щелкнув мышью определенных элементов, такие как <xref:System.Windows.Controls.TextBox>.  Фокус клавиатуры также могут быть получены программно с помощью <xref:System.Windows.Input.Keyboard.Focus%2A> метод <xref:System.Windows.Input.Keyboard> класса.  <xref:System.Windows.Input.Keyboard.Focus%2A> пытается перевести фокус клавиатуры указанного элемента.  Элемент, возвращаемый <xref:System.Windows.Input.Keyboard.Focus%2A> элемент, который в данный момент имеет фокус клавиатуры.  
   
  Чтобы элемент получает фокус клавиатуры <xref:System.Windows.UIElement.Focusable%2A> свойство и <xref:System.Windows.UIElement.IsVisible%2A> свойства должно быть присвоено **true**.  Некоторые классы, такие как <xref:System.Windows.Controls.Panel>, имеют <xref:System.Windows.UIElement.Focusable%2A> значение `false` по умолчанию; таким образом, может потребоваться присвоить этому свойству значение `true` Если этот элемент, чтобы иметь возможность получать фокус.  
   
@@ -375,11 +377,11 @@ ms.lasthandoff: 12/22/2017
 ## <a name="commands"></a>Команды  
  Команды позволяют обрабатывать входные данные на более семантическом уровне по сравнению с устройствами ввода.  Команды — это простые директивы, такие как `Cut`, `Copy`, `Paste` или `Open`.  Команды удобно использовать для централизации командной логики.  Та же команда может осуществляться из <xref:System.Windows.Controls.Menu>на <xref:System.Windows.Controls.ToolBar>, или с помощью сочетания клавиш. Команды также предоставляют механизм для отключения элементов управления, когда команда становится недоступной.  
   
- <xref:System.Windows.Input.RoutedCommand>— [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] реализация <xref:System.Windows.Input.ICommand>.  Когда <xref:System.Windows.Input.RoutedCommand> выполняется, <xref:System.Windows.Input.CommandManager.PreviewExecuted> и <xref:System.Windows.Input.CommandManager.Executed> событие для целевого объекта команды, какие проходят и поднимаются по дереву элементов, таких как другие входные данные.  Если целевой объект команды не задан, в качестве целевого объекта будет использоваться элемент с фокусом клавиатуры.  Логику, которая выполняет команду присоединяется к <xref:System.Windows.Input.CommandBinding>.  Когда <xref:System.Windows.Input.CommandManager.Executed> событий достигает <xref:System.Windows.Input.CommandBinding> для указанной команды, <xref:System.Windows.Input.ExecutedRoutedEventHandler> на <xref:System.Windows.Input.CommandBinding> вызывается.  Этот обработчик выполняет действие команды.  
+ <xref:System.Windows.Input.RoutedCommand> — [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] реализация <xref:System.Windows.Input.ICommand>.  Когда <xref:System.Windows.Input.RoutedCommand> выполняется, <xref:System.Windows.Input.CommandManager.PreviewExecuted> и <xref:System.Windows.Input.CommandManager.Executed> событие для целевого объекта команды, какие проходят и поднимаются по дереву элементов, таких как другие входные данные.  Если целевой объект команды не задан, в качестве целевого объекта будет использоваться элемент с фокусом клавиатуры.  Логику, которая выполняет команду присоединяется к <xref:System.Windows.Input.CommandBinding>.  Когда <xref:System.Windows.Input.CommandManager.Executed> событий достигает <xref:System.Windows.Input.CommandBinding> для указанной команды, <xref:System.Windows.Input.ExecutedRoutedEventHandler> на <xref:System.Windows.Input.CommandBinding> вызывается.  Этот обработчик выполняет действие команды.  
   
  Дополнительные сведения о системе команд см. в разделе [Общие сведения о системе команд](../../../../docs/framework/wpf/advanced/commanding-overview.md).  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]предоставляет библиотеку общих команд, которые состоит из <xref:System.Windows.Input.ApplicationCommands>, <xref:System.Windows.Input.MediaCommands>, <xref:System.Windows.Input.ComponentCommands>, <xref:System.Windows.Input.NavigationCommands>, и <xref:System.Windows.Documents.EditingCommands>, или определить собственные.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] предоставляет библиотеку общих команд, которые состоит из <xref:System.Windows.Input.ApplicationCommands>, <xref:System.Windows.Input.MediaCommands>, <xref:System.Windows.Input.ComponentCommands>, <xref:System.Windows.Input.NavigationCommands>, и <xref:System.Windows.Documents.EditingCommands>, или определить собственные.  
   
  В следующем примере показано, как настроить <xref:System.Windows.Controls.MenuItem> так, что при его выборе вызывается <xref:System.Windows.Input.ApplicationCommands.Paste%2A> на <xref:System.Windows.Controls.TextBox>, исходя из <xref:System.Windows.Controls.TextBox> фокус клавиатуры.  
   

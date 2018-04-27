@@ -1,11 +1,12 @@
 ---
-title: "Практическое руководство. Передача аргументов в процедуру (Visual Basic)"
-ms.custom: 
+title: Практическое руководство. Передача аргументов в процедуру (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - arguments [Visual Basic], passing to procedures
@@ -17,14 +18,14 @@ helpviewer_keywords:
 - procedures [Visual Basic], calling
 - argument passing [Visual Basic], procedures
 ms.assetid: 08723588-3890-4ddc-8249-79e049e0f241
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 3debb4fa6e7b15f9c321ef207d0cc04181a98da2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 1e8f8e438dc749e7f5f0d33aeaa26dfbcf4c29f3
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-pass-arguments-to-a-procedure-visual-basic"></a>Практическое руководство. Передача аргументов в процедуру (Visual Basic)
 При вызове процедуры следовать имя процедуры со списком аргументов в скобки. Необходимо указать аргумент, соответствующий каждому обязательному параметру определяемого этой процедурой, и при необходимости можно указать дополнительные аргументы для `Optional` параметров. Если не указать `Optional` параметра в вызове, необходимо включить запятую, чтобы отметить его место в списке аргументов, если указываются все последующие аргументы.  
@@ -45,7 +46,7 @@ ms.lasthandoff: 11/21/2017
   
 5.  Если не указан аргумент для `Optional` параметр и в списке параметров после него имеется еще один параметр, можно отметить место пропущенный аргумент по Лишняя запятая в списке аргументов.  
   
-     В следующем примере вызывается [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A> функции.  
+     В следующем примере вызывается метод Visual Basic <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A> функции.  
   
      [!code-vb[VbVbcnProcedures#34](./codesnippet/VisualBasic/how-to-pass-arguments-to-a-procedure_1.vb)]  
   
@@ -53,7 +54,8 @@ ms.lasthandoff: 11/21/2017
   
      Вторая запятая в списке аргументов отмечает место пропущенного второго параметра, а последняя строка передается необязательный третий параметр `MsgBox`, содержит текст, отображаемый в заголовке окна.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также
+
  [Подпрограммы](./sub-procedures.md)  
  [Процедуры функций](./function-procedures.md)  
  [Процедуры свойств](./property-procedures.md)  
@@ -63,4 +65,4 @@ ms.lasthandoff: 11/21/2017
  [Рекурсивные процедуры](./recursive-procedures.md)  
  [Перегрузка процедур](./procedure-overloading.md)  
  [Объекты и классы](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)  
- [Объектно-ориентированное программирование](http://msdn.microsoft.com/library/1cf6e655-3f30-45f1-9a5d-4a88ca24a1c2)
+ [Object-Oriented Programming (Visual Basic)](../../concepts/object-oriented-programming.md) (Объектно-ориентированное программирование на языке Visual Basic)  

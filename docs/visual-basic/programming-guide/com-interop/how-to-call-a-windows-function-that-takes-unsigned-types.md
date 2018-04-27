@@ -1,11 +1,12 @@
 ---
-title: "Практическое руководство. Вызов функции Windows, принимающей значение беззнакового типа (Visual Basic)"
-ms.custom: 
+title: Практическое руководство. Вызов функции Windows, принимающей значение беззнакового типа (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - Windows functions [Visual Basic], calling
@@ -20,21 +21,21 @@ helpviewer_keywords:
 - data types [Visual Basic], numeric
 - unsigned types [Visual Basic], using
 ms.assetid: c2c0e712-8dc2-43b9-b4c6-345fbb02e7ce
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 78e6789e7def5deeb8394e3aefecfdc187ec6ef6
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: dd0738300ec846041e78f19836f29e7adff1c821
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-call-a-windows-function-that-takes-unsigned-types-visual-basic"></a>Практическое руководство. Вызов функции Windows, принимающей значение беззнакового типа (Visual Basic)
-При использовании класса, модуля или структуры, имеющих члены типов целое число без знака, доступ к этим членам с помощью [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
+При использовании класса, модуля или структуры, имеющих члены беззнаковых целых типов можно получить доступ к этим членам с помощью Visual Basic.  
   
 ### <a name="to-call-a-windows-function-that-takes-an-unsigned-type"></a>Для вызова функции Windows, которая принимает тип без знака  
   
-1.  Используйте [инструкции Declare](../../../visual-basic/language-reference/statements/declare-statement.md) сообщить [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] библиотеку, в которой содержится функция его имя, что последовательность вызова и как преобразовать строки при его вызове.  
+1.  Используйте [инструкции Declare](../../../visual-basic/language-reference/statements/declare-statement.md) нужно сообщить Visual Basic, какая из библиотек содержит функцию его имя, что последовательность вызова и как преобразовать строки при его вызове.  
   
 2.  В `Declare` инструкции, используйте `UInteger`, `ULong`, `UShort`, или `Byte` соответствующим образом для каждого параметра с типом без знака.  
   

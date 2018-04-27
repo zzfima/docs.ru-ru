@@ -16,14 +16,14 @@ ms.assetid: f5e82c6e-3500-452b-bdb8-78f0d5477604
 caps.latest.revision: 16
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: f928a01424853dc7e3637f49cc3af4108c5afb5b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 47c7af031b2169d1a259a8f96f5485bcb354aa25
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="visual-basic-runtime-library-members"></a>Члены библиотеки времени выполнения Visual Basic
-`Microsoft.VisualBasic` Пространство имен содержит классы, модули, константы и перечисления, которые составляют [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] библиотеки времени выполнения. Эти члены библиотеки предоставляют процедуры, свойства и значения констант, которые можно использовать в коде. Каждый модуль и класс предоставляет конкретную категорию функциональных возможностей.  
+`Microsoft.VisualBasic` Пространство имен содержит классы, модули, константы и перечисления, которые составляют библиотеку времени выполнения Visual Basic. Эти члены библиотеки предоставляют процедуры, свойства и значения констант, которые можно использовать в коде. Каждый модуль и класс предоставляет конкретную категорию функциональных возможностей.  
   
 ## <a name="microsoftvisualbasiccollection-class"></a>Класс Microsoft.VisualBasic.Collection  
   
@@ -197,7 +197,7 @@ ms.lasthandoff: 11/21/2017
 |<xref:Microsoft.VisualBasic.VBMath.Randomize%2A>|<xref:Microsoft.VisualBasic.VBMath.Rnd%2A>|||  
   
 ## <a name="microsoftvisualbasic-constants-and-enumerations"></a>Microsoft.VisualBasic константы и перечисления  
- `Microsoft.VisualBasic` Пространство имен предоставляет константы и перечисления в рамках [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] библиотеки времени выполнения. Эти константы можно использовать в коде. Каждое перечисление предоставляет конкретную категорию функциональных возможностей. Дополнительные сведения см. в разделе [константы и перечисления](../../visual-basic/language-reference/constants-and-enumerations.md).  
+ `Microsoft.VisualBasic` Пространство имен предоставляет константы и перечисления как часть библиотеки времени выполнения Visual Basic. Эти константы можно использовать в коде. Каждое перечисление предоставляет конкретную категорию функциональных возможностей. Дополнительные сведения см. в разделе [константы и перечисления](../../visual-basic/language-reference/constants-and-enumerations.md).  
   
 ## <a name="see-also"></a>См. также  
  [Константы и перечисления](../../visual-basic/language-reference/constants-and-enumerations.md)  

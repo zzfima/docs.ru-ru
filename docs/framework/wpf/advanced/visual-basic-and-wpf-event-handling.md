@@ -1,30 +1,32 @@
 ---
-title: "Обработка событий в Visual Basic и WPF"
-ms.custom: 
+title: Обработка событий в Visual Basic и WPF
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Visual Basic [WPF], event handlers
 - event handlers [WPF], Visual Basic
 ms.assetid: ad4eb9aa-3afc-4a71-8cf6-add3fbea54a1
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ed10e52c59112714a500fe52ccf5b398c14a97b7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: f61b63e7f80ec779d03c230bd4f24eed00098242
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="visual-basic-and-wpf-event-handling"></a>Обработка событий в Visual Basic и WPF
-Для [!INCLUDE[TLA#tla_visualbnet](../../../../includes/tlasharptla-visualbnet-md.md)] языка в частности, можно использовать конкретного языка `Handles` ключевое слово для связи с экземплярами, вместо присоединения обработчиков событий с атрибутами или с помощью обработчиков событий <xref:System.Windows.UIElement.AddHandler%2A> метод. Однако метод присоединения обработчиков к экземплярам `Handles` имеет некоторые ограничения, так как синтаксис `Handles` не поддерживает некоторые возможности перенаправленных событий системы событий [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
+Для языка Microsoft Visual Basic .NET в частности, можно использовать конкретного языка `Handles` ключевое слово для связи с экземплярами, вместо присоединения обработчиков событий с атрибутами или с помощью обработчиков событий <xref:System.Windows.UIElement.AddHandler%2A> метод. Однако метод присоединения обработчиков к экземплярам `Handles` имеет некоторые ограничения, так как синтаксис `Handles` не поддерживает некоторые возможности перенаправленных событий системы событий [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
   
 ## <a name="using-handles-in-a-wpf-application"></a>Использование ключевого слова Handles в приложениях WPF  
  Все обработчики событий, которые подключены к экземплярам и событиям с помощью `Handles`, должны быть определены внутри объявления частичного класса экземпляра, который также является требованием для обработчиков событий, назначенных с помощью значений атрибутов в элементах. Можно указать только `Handles` для элемента на страницу, с которой <xref:System.Windows.FrameworkContentElement.Name%2A> значение свойства (или [директива x: Name](../../../../docs/framework/xaml-services/x-name-directive.md) объявлен). Это вызвано <xref:System.Windows.FrameworkContentElement.Name%2A> в [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] создает ссылку на экземпляр, который необходим для поддержки *Instance.Event* формат ссылки на необходимые `Handles` синтаксиса. Единственный элемент, который может использоваться для `Handles` без <xref:System.Windows.FrameworkContentElement.Name%2A> ссылка является экземпляр корневого элемента, который определяет разделяемый класс.  
@@ -45,7 +47,7 @@ ms.lasthandoff: 12/22/2017
  `Handles` не может присоединить обработчики, вызывающиеся для событий, которые уже отмечены как обрабатываемые. Вместо этого необходимо использовать код и вызвать `handledEventsToo` перегруженная версия <xref:System.Windows.UIElement.AddHandler%28System.Windows.RoutedEvent%2CSystem.Delegate%2CSystem.Boolean%29>.  
   
 > [!NOTE]
->  Не используйте синтаксис `Handles` в коде [!INCLUDE[vb_current_short](../../../../includes/vb-current-short-md.md)], если требуется задать обработчик событий для того же события в XAML. В таком случае обработчик событий вызывается дважды.  
+>  Не используйте `Handles` синтаксиса в коде Visual Basic, если задать обработчик событий для того же события в XAML. В таком случае обработчик событий вызывается дважды.  
   
 ## <a name="how-wpf-implements-handles-functionality"></a>Как в WPF реализуются функциональные возможности ключевого слова Handles  
  При [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] компиляции страницы промежуточный файл объявляет `Friend` `WithEvents` ссылки на каждый элемент на страницу, с которой <xref:System.Windows.FrameworkContentElement.Name%2A> набор свойств (или [директива x: Name](../../../../docs/framework/xaml-services/x-name-directive.md) объявлен). Каждый именованный экземпляр является потенциальным элементом, который можно присвоить обработчику с помощью `Handles`.  

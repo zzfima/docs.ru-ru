@@ -1,27 +1,29 @@
 ---
-title: "Трассировка данных в ADO.NET"
-ms.custom: 
+title: Трассировка данных в ADO.NET
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: a6a752a5-d2a9-4335-a382-b58690ccb79f
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: df958982739c7ab2fd7aba42918b919c25d86829
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 377c69feda356aee9e11720cf12c9c97158d45a7
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="data-tracing-in-adonet"></a>Трассировка данных в ADO.NET
-В ADO.NET появились новые встроенные функции трассировки данных, которые поддерживаются поставщиками данных .NET для [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)], Oracle, OLE DB, ODBC и ADO.NET <xref:System.Data.DataSet>, а также сетевые протоколы [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)].  
+ADO.NET появились новые встроенные функции трассировки данных, поддерживаемые поставщиками данных .NET для SQL Server, Oracle, OLE DB и ODBC, а также ADO.NET <xref:System.Data.DataSet>и сетевые протоколы SQL Server.  
   
  Трассировка вызовов API-интерфейсов для доступа к данным может помочь в выявлении следующих проблем:  
   
@@ -40,7 +42,7 @@ ms.lasthandoff: 01/17/2018
  Дополнительные сведения об установке и настройке управляемой трассировки в ADO.NET см. в разделе [трассировка доступа к данным](http://msdn.microsoft.com/library/hh880086.aspx).  
   
 ## <a name="accessing-diagnostic-information-in-the-extended-events-log"></a>Доступ к диагностической информации в расширенном журнале событий  
- В [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] поставщик данных для [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)], трассировка доступа к данным ([трассировка доступа к данным](http://msdn.microsoft.com/library/hh880086.aspx)) был обновлен, чтобы упростить его сопоставление событий клиентов с диагностической информацией — ошибками соединения, от сервера подключения кольцевого буфера и приложение сведениями о производительности в журнале расширенных событий. Сведения о чтении журнала расширенных событий см. в разделе [Просмотр данных сеанса события](http://msdn.microsoft.com/library/hh710068\(SQL.110\).aspx).  
+ В [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] поставщика данных для SQL Server, доступ к данным трассировки ([трассировка доступа к данным](http://msdn.microsoft.com/library/hh880086.aspx)) был обновлен, чтобы упростить его сопоставление событий клиентов с диагностической информацией — ошибками соединения, из Подключение сервера кольца буфера и приложения данные производительности в журнале расширенных событий. Сведения о чтении журнала расширенных событий см. в разделе [Просмотр данных сеанса события](http://msdn.microsoft.com/library/hh710068\(SQL.110\).aspx).  
   
  Для операций соединения ADO.NET передает идентификатор соединения клиента. При сбое соединения, можно получить доступ к кольцевой буфер связи ([Устранение неполадок подключения в SQL Server 2008 с помощью кольцевого буфера подключения](http://go.microsoft.com/fwlink/?LinkId=207752)) и найти `ClientConnectionID` и получить диагностические сведения Ошибка подключения. Идентификаторы соединения клиента регистрируются в кольцевом буфере только при возникновении ошибки. (Если установление соединения завершилось неудачно перед отправкой пакета предварительного согласования, то идентификатор соединения клиента не будет сформирован.) Идентификатор соединения клиента - это 16-байтное значение идентификатора GUID. Можно также найти идентификатор соединения клиента в расширенном выводе целевых событий, если целевое действие `client_connection_id` добавляется в события в расширенном сеансе событий. Если необходима дополнительная помощь по устранению неполадок драйвера клиента, можно включить трассировку для доступа к данным, повторно запустить команду соединения и проверить поле `ClientConnectionID` в трассировке доступа к данным.  
   

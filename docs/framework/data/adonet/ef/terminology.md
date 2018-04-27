@@ -1,24 +1,26 @@
 ---
-title: "Терминология платформы Entity Framework"
-ms.custom: 
+title: Терминология платформы Entity Framework
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: fa2a1bd1-6118-487b-8673-eebc66b92945
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: a2d55319b5463b2c9624fe22e7a16235c3d57614
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: cd85760e219e810c089ebe88c8295d79ebaf0944
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="entity-framework-terminology"></a>Терминология платформы Entity Framework
 В этом разделе определены термины, которые часто встречаются в [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] документации. Даны ссылки на соответствующие разделы, содержащие дополнительные сведения.  
@@ -55,7 +57,7 @@ ms.lasthandoff: 01/19/2018
 |независимое сопоставление|Сопоставленение между сущностями, представляемое и отслеживаемое независимым объектом.|  
 |клавиша|Атрибут типа сущности, который указывает, какое свойство или набор свойств используется для определения уникальных экземпляров типа сущности. Представлен на уровне объектов классом <xref:System.Data.EntityKey>.<br /><br /> Дополнительные сведения см. в разделе [элемент Key (CSDL)](http://msdn.microsoft.com/library/0cdb1402-dbc7-4a04-a11e-5729cdf7431b) и [ключ сущности](../../../../../docs/framework/data/adonet/entity-key.md).|  
 |отложенная загрузка|Когда запрос возвращает объекты, связанные объекты не загружаются. Вместо этого они загружаются автоматически, когда производится доступ к свойству навигации.|  
-|[!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)]|Синтаксис запроса, который определяет набор операторов запроса, обеспечивающих операции просмотра, фильтрации и проекции, выражаемые прямым, декларативным способом в [!INCLUDE[csprcs](../../../../../includes/csprcs-md.md)] и [!INCLUDE[vbprvb](../../../../../includes/vbprvb-md.md)].<br /><br /> Дополнительные сведения см. в разделе [LINQ to Entities](../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md).|  
+|[!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)]|Синтаксис запроса, который определяет набор операторов запроса, которые позволяет выполнять операции обхода, фильтрации и проекции, выражаемые прямым, декларативным способом в Visual C# и Visual Basic.<br /><br /> Дополнительные сведения см. в разделе [LINQ to Entities](../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md).|  
 |сопоставление|Спецификация соответствий между элементами в концептуальной модели и элементами в модели хранения.<br /><br /> Дополнительные сведения см. в разделе [спецификация MSL](../../../../../docs/framework/data/adonet/ef/language-reference/msl-specification.md).|  
 |MSL-файл|XML-файл, содержащий сопоставление концептуальной модели и модели хранения, описанное на языке MSL.|  
 |MSL (язык определения соответствий)|Основанный на XML язык, используемый для сопоставления элементов, определенных в концептуальной модели, элементам в модели хранилища.<br /><br /> Дополнительные сведения см. в разделе [спецификация MSL](../../../../../docs/framework/data/adonet/ef/language-reference/msl-specification.md).|  
@@ -64,7 +66,7 @@ ms.lasthandoff: 01/19/2018
 |несколько наборов сущностей на тип|Возможность определить тип сущности в более чем одном наборе сущностей.<br /><br /> Дополнительные сведения см. в разделе [элемент EntitySet (CSDL)](http://msdn.microsoft.com/library/ec56db77-718d-4c0e-adc9-f1d33c896287) и [как: определить модель с несколько наборов сущностей на тип](http://msdn.microsoft.com/library/61aa4fca-5ac0-4f47-9bc8-46e8c2965ef7).|  
 |свойство навигации|Свойство типа сущности, которое представляет связь с другим типом сущности, как определено ассоциацией. Свойства навигации используются, чтобы возвратить связанные объекты как <xref:System.Data.Objects.DataClasses.EntityCollection%601> или <xref:System.Data.Objects.DataClasses.EntityReference%601>, в зависимости от кратности другого элемента сопоставления.<br /><br /> Дополнительные сведения см. в разделе [элемент NavigationProperty (язык CSDL)](http://msdn.microsoft.com/library/5829a238-a50e-4c81-901d-7b54fc00f27e) и [свойство навигации](../../../../../docs/framework/data/adonet/navigation-property.md).|  
 |путь запроса|Строковое представление пути, которое показывает, какие связанные объекты будут возвращены при выполнении запроса объектов. Путь запроса определяется путем вызова метода <xref:System.Data.Objects.ObjectQuery%601.Include%2A> объекта <xref:System.Data.Objects.ObjectQuery%601>.<br /><br /> Дополнительные сведения см. в разделе [загрузка связанных объектов](http://msdn.microsoft.com/library/452347d2-7b3b-44cd-9001-231299a28cb1).|  
-|контекст объекта|Представляет контейнер сущностей, определенный в концептуальной модели. Содержит соединение с базовым источником данных и предоставляет такие службы, как отслеживание изменений и разрешение идентификаторов. Контекст объекта представлен экземпляром класса <xref:System.Data.Objects.ObjectContext> или `DbContext`.<br /><br /> `DbContext`является частью [Entity Framework 5.0](http://go.microsoft.com/fwlink/?LinkId=234900). Платформа Entity Framework 5.0 не является частью платформы .NET Framework, но построена на .NET Framework 4.5. Платформа Entity Framework 5.0 доступна в виде [«Entity Framework»](http://go.microsoft.com/fwlink/?LinkID=215714)[NuGet](http://go.microsoft.com/fwlink/?LinkId=232488) пакета. Дополнительные сведения см. в разделе [Entity Framework выпуски и управление версиями](http://go.microsoft.com/fwlink/?LinkId=234899).|  
+|контекст объекта|Представляет контейнер сущностей, определенный в концептуальной модели. Содержит соединение с базовым источником данных и предоставляет такие службы, как отслеживание изменений и разрешение идентификаторов. Контекст объекта представлен экземпляром класса <xref:System.Data.Objects.ObjectContext> или `DbContext`.<br /><br /> `DbContext` является частью [Entity Framework 5.0](http://go.microsoft.com/fwlink/?LinkId=234900). Платформа Entity Framework 5.0 не является частью платформы .NET Framework, но построена на .NET Framework 4.5. Платформа Entity Framework 5.0 доступна в виде [«Entity Framework»](http://go.microsoft.com/fwlink/?LinkID=215714)[NuGet](http://go.microsoft.com/fwlink/?LinkId=232488) пакета. Дополнительные сведения см. в разделе [Entity Framework выпуски и управление версиями](http://go.microsoft.com/fwlink/?LinkId=234899).|  
 |уровень объектов|Типы сущностей и определения контекста объектов, используемых платформой Entity Framework.|  
 |запросы объектов|Запрос, выполняемый в контексте объекта на концептуальной модели, возвращающий данные как объекты.<br /><br /> Дополнительные сведения см. в разделе [запросов объектов](http://msdn.microsoft.com/library/0768033c-876f-471d-85d5-264884349276).|  
 |объектно-реляционное сопоставление|Метод преобразования данных из реляционной базы данных в типы данных, которые могут быть использованы в объектно-ориентированных приложениях.<br /><br /> Платформа [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] обеспечивает объектно-реляционное сопоставление, которое сопоставляет реляционные данные, определенные в модели хранения, с типами данных, определенными в концептуальной модели.<br /><br /> Дополнительные сведения см. в разделе [моделирования и сопоставления](../../../../../docs/framework/data/adonet/ef/modeling-and-mapping.md).|  

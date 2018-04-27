@@ -1,24 +1,26 @@
 ---
-title: "Пример потоковой передачи каналов"
-ms.custom: 
+title: Пример потоковой передачи каналов
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 1f1228c0-daaa-45f0-b93e-c4a158113744
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e3d2de4dd5510b212e030ea537cea0be3dce24f0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 24dfd6c7eb2c1df6605d03bfb99cc82c0a489377
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="streaming-feeds-sample"></a>Пример потоковой передачи каналов
 В этом образце показано, как управлять веб-каналами синдикации, содержащими большое число элементов. На стороне сервера этот пример показывает, как откладывать создание отдельных объектов <xref:System.ServiceModel.Syndication.SyndicationItem> в веб-канале до момента записи элемента в сетевой поток.  
@@ -27,7 +29,7 @@ ms.lasthandoff: 12/22/2017
   
  Для лучшей демонстрации возможности потоковой передачи API синдикации в этом образце используется достаточно нереальный сценарий, при котором сервер предоставляет веб-канал с бесконечным числом элементов. В этом случае сервер продолжает создавать в веб-канале новые элементы, пока он не определит, что клиент не прочитал из веб-канала заданное число элементов (по умолчанию - 10). Для простоты клиент и служба реализованы в одном процессе и используют общий объект `ItemCounter` для отслеживания числа элементов, созданных клиентом. Тип `ItemCounter` нужен лишь для того, чтобы пример можно было верно завершить, и не является ключевым элементом демонстрируемого сценария.  
   
- Демонстрационный использует [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] итераторы (с помощью `yield``return` слова). [!INCLUDE[crabout](../../../../includes/crabout-md.md)] итераторах см. в разделе «Использование итераторов» библиотеки MSDN.  
+ Демонстрационный делает использование Visual C# итераторы (с помощью `yield``return` слова). [!INCLUDE[crabout](../../../../includes/crabout-md.md)] итераторах см. в разделе «Использование итераторов» библиотеки MSDN.  
   
 ## <a name="service"></a>Служба  
  Служба реализует базовый контракт <xref:System.ServiceModel.Web.WebGetAttribute>, состоящий из одной операции, как показано в следующем примере кода.  
@@ -125,7 +127,7 @@ private IEnumerable<SyndicationItem> DelayReadItems(XmlReader reader, Syndicatio
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите на страницу [Примеры Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все примеры [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Этот образец расположен в следующем каталоге.  
+>  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) Чтобы загрузить все [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] образцов. Этот образец расположен в следующем каталоге.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Syndication\StreamingFeeds`  
   

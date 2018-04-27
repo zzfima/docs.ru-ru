@@ -13,14 +13,14 @@ ms.assetid: 42c30017-19d0-442e-87a2-850b66ddc3df
 caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 16079ad7854630f68ecb6fd9fb3b640a440fe69b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: a4bfab2f6f06cbe1ac971fc21d53a7336ad03c58
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="visual-basic-language-specification"></a>Спецификация языка Visual Basic
-Спецификация языка [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] — это достоверный источник, позволяющий получить ответы на все вопросы о грамматике и синтаксисе [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. Она содержит подробные сведения о языке, включая многие аспекты, не охваченные в справочной документации по [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
+Спецификация языка Visual Basic — Авторитетный источник для получения ответов на все вопросы о грамматике Visual Basic и синтаксисе. Она содержит подробные сведения о языке, включая многие моменты, которые не описаны в справочной документации по Visual Basic.  
   
  Спецификация доступна в [Центре загрузки Майкрософт](http://go.microsoft.com/fwlink/?LinkId=188623).  
   
@@ -32,4 +32,4 @@ ms.lasthandoff: 10/18/2017
  [Справочник по языку Visual Basic](../../../visual-basic/language-reference/index.md)
 
 >[!div class="step-by-step"]
-[Далее](../../../../_vblang/spec/introduction.md)
+[Вперед](../../../../_vblang/spec/introduction.md)

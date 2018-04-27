@@ -1,13 +1,13 @@
 ---
-title: "Построение приложения WPF"
-ms.custom: 
+title: Построение приложения WPF
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-wpf
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - WPF application [WPF], building
 ms.assetid: a58696fd-bdad-4b55-9759-136dfdf8b91c
-caps.latest.revision: 
+caps.latest.revision: 45
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 87fc77aaa95e2d2de4b0c6eb75484ab9b4006c31
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 054f6cd6ae71428aca6b99eb510b2ac34fc6c4b6
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="building-a-wpf-application-wpf"></a>Построение приложения WPF
 Приложения [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] могут быть построены как исполняемые файлы (.exe), библиотеки (.dll) или сочетание двух типов сборок в [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]. В этом разделе даются вводные сведения для построения приложений [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] и описываются основные шаги процесса построения.  
@@ -77,7 +77,7 @@ ms.lasthandoff: 01/19/2018
   
 3.  Создается представление CodeDOM нового разделяемого класса и копируется в папку obj\Release.  
   
- Кроме того, создается отдельный языковой файл кода для каждого файла [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. Например, для страницы Page1.xaml в проекте [!INCLUDE[TLA2#tla_visualb](../../../../includes/tla2sharptla-visualb-md.md)] создается файл Page1.g.vb; для страницы Page1.xaml в проекте [!INCLUDE[TLA2#tla_cshrp](../../../../includes/tla2sharptla-cshrp-md.md)] создается файл Page1.g.cs. ".g" в имени файла указывает, что это файл созданного кода, который имеет объявление разделяемого класса для элемента верхнего уровня файла разметки (например, `Page` или `Window`). Класс объявляется с модификатором `partial` в [!INCLUDE[TLA2#tla_cshrp](../../../../includes/tla2sharptla-cshrp-md.md)] (`Extends` в [!INCLUDE[TLA2#tla_visualb](../../../../includes/tla2sharptla-visualb-md.md)]) для указания, что существует другое объявление класса в другом месте, обычно в файле кода программной части Page1.xaml.cs.  
+ Кроме того, создается отдельный языковой файл кода для каждого файла [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. Например для страницы Page1.xaml в проекте Visual Basic, создается Page1.g.vb; для страницы Page1.xaml в проекте C# создается Page1.g.cs. ".g" в имени файла указывает, что это файл созданного кода, который имеет объявление разделяемого класса для элемента верхнего уровня файла разметки (например, `Page` или `Window`). Класс объявляется с `partial` модификатор в C# (`Extends` в Visual Basic) для указания есть другое объявление класса в других местах, обычно в коде программной файл Page1.xaml.cs.  
   
  Частичный класс расширяется от соответствующего базового класса (например, <xref:System.Windows.Controls.Page> для страницы) и реализует <xref:System.Windows.Markup.IComponentConnector?displayProperty=nameWithType> интерфейса. <xref:System.Windows.Markup.IComponentConnector> Интерфейс содержит методы для инициализации компонента и связывания имен и событий элемента в его содержимого. Следовательно, в созданном файле кода имеется реализация метода, подобная следующей:  
   
@@ -137,7 +137,7 @@ End Sub
   
  Эти файлы манифеста всегда создаются для [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]. Для установленных приложений они не создаются, если в файле проекта не будет задано свойство `GenerateManifests` со значением `true`.  
   
- [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]получить два дополнительных высокоприоритетных разрешения, назначенные типичные приложения зоны Интернета: <xref:System.Security.Permissions.WebBrowserPermission> и <xref:System.Security.Permissions.MediaPermission>. Система сборки [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] объявляет эти разрешения в манифесте приложения.  
+ [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] получить два дополнительных высокоприоритетных разрешения, назначенные типичные приложения зоны Интернета: <xref:System.Security.Permissions.WebBrowserPermission> и <xref:System.Security.Permissions.MediaPermission>. Система сборки [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] объявляет эти разрешения в манифесте приложения.  
   
 <a name="Incremental_Build_Support"></a>   
 ## <a name="incremental-build-support"></a>Добавочная сборка  

@@ -18,14 +18,14 @@ ms.assetid: 294e0736-ff1e-498e-af83-6db71ed41a72
 caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 54712deb8bb2a5ed1e7b1f5fb8aa073dcdaf76d6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 7815d4c9fddc4e760c7495ef7a2509c55141e96e
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="recommended-xml-tags-for-documentation-comments-visual-basic"></a>Рекомендуется использовать XML-теги для комментариев документации (Visual Basic)
-[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] Компилятор может обработать комментарии в коде в XML-файл. Дополнительные средства можно использовать для обработки XML-файла в документации.  
+Компилятор Visual Basic может обработать комментарии в коде в XML-файл. Дополнительные средства можно использовать для обработки XML-файла в документации.  
   
  Комментарии XML разрешены в конструкциях кода, таких как типы и члены типов. Для разделяемых типов только одна часть типа может содержать комментарии XML, несмотря на то, что нет никаких ограничений на комментирование его членов.  
   

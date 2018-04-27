@@ -1,11 +1,12 @@
 ---
-title: "Разрешение перегрузки (Visual Basic)"
-ms.custom: 
+title: Разрешение перегрузки (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - Visual Basic code, procedures
@@ -16,17 +17,17 @@ helpviewer_keywords:
 - signatures [Visual Basic], procedure
 - overloads [Visual Basic], resolution
 ms.assetid: 766115d1-4352-45fb-859f-6063e0de0ec0
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 7eb71b69496e27b664fe297e9e5f105b360ce01d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: e62560d853c95bc4bba6ba829d8579ee4388858e
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="overload-resolution-visual-basic"></a>Разрешение перегрузки (Visual Basic)
-Когда [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] компилятор обнаруживает вызов процедуры, которая определена в нескольких перегруженных версиях, компилятор должен решить, какую из перегрузок для вызова. Это делается путем выполнения следующих шагов:  
+Когда компилятор Visual Basic обнаруживает вызов процедуры, которая определена в нескольких перегруженных версиях, компилятор должен решить, какую из перегрузок метода для вызова. Это делается путем выполнения следующих шагов:  
   
 1.  **Специальные возможности.** Это устраняет ни одной перегрузке с уровнем доступа, который предотвращает его вызов вызывающий код.  
   

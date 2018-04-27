@@ -1,23 +1,24 @@
 ---
-title: "Процесс найма"
-ms.custom: 
+title: Процесс найма
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: d5fcacbb-c884-4b37-a5d6-02b1b8eec7b4
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 30cad662a9cca679f7e8ce720cfde3d369b9ba60
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 8cfa23ab5f36b3a40de107a546dd4700a4523595
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="hiring-process"></a>Процесс найма
 Этот образец демонстрирует, как реализовать бизнес-процесс, используя действия обмена сообщениями и два рабочих процесса, размещенные как службы рабочих процессов. Эти рабочие процессы входят в ИT-инфраструктуру вымышленной компании Contoso, Inc.  
@@ -63,7 +64,7 @@ ms.lasthandoff: 12/22/2017
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите на страницу [Примеры Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все примеры [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Этот образец расположен в следующем каталоге.  
+>  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) Чтобы загрузить все [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] образцов. Этот образец расположен в следующем каталоге.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Application\HiringProcess`  
   
@@ -129,7 +130,7 @@ ms.lasthandoff: 12/22/2017
 |Настраиваемое отслеживание|Этот образец содержит настраиваемого участника отслеживания, который сохраняет журнал `HiringRequestProcess` (он записывает, какие действия выполнены, кем и когда). Исходный код находится в папке Tracking службы HiringRequestService.|HiringRequestService|  
 |Отслеживание трассировки событий Windows|Предоставляемое системой отслеживание трассировки событий Windows настраивается в файле App.config в службе HiringRequestService.|HiringRequestService|  
 |Сочетание действий|В определении процесса используется свободное сочетание действий <xref:System.Activities.Activity>. Flowchart содержит несколько действий Sequence и Parallel, которые одновременно содержат другие действия (и так далее).|HiringRequestService|  
-|Параллельные действия|-   <xref:System.Activities.Statements.ParallelForEach%601>используется для регистрации в папке «Входящие» главы компании и менеджерами по Персоналу параллельно (ожидает этапе одобрения двумя менеджерами по Персоналу).<br />-   <xref:System.Activities.Statements.Parallel>используется для выполнения некоторых задач очистки в шагах завершено» и «отклонено|HiringRequestService|  
+|Параллельные действия|-   <xref:System.Activities.Statements.ParallelForEach%601> используется для регистрации в папке «Входящие» главы компании и менеджерами по Персоналу параллельно (ожидает этапе одобрения двумя менеджерами по Персоналу).<br />-   <xref:System.Activities.Statements.Parallel> используется для выполнения некоторых задач очистки в шагах завершено» и «отклонено|HiringRequestService|  
 |Отмена модели|Flowchart использует <xref:System.Activities.Statements.CancellationScope> для создания режима отмены (в данном случае он выполняет очистку).|HiringRequestService|  
 |Участник Customer Persistence|`HiringRequestPersistenceParticipant` сохраняет данные из переменной рабочего процесса в таблицу, хранящуюся в базе данных персонала Contoso.|HiringRequestService|  
 |Службы рабочего процесса|`ResumeRequestService` реализована с помощью служб рабочего процесса. Определение рабочего процесса и данные службы содержатся в ResumeRequestService.xamlx. Служба настроена на использование сохраняемости и отслеживания.|ResumeRequestService|  
@@ -141,13 +142,13 @@ ms.lasthandoff: 12/22/2017
 ## <a name="data-storage"></a>Хранилище данных  
  Данные хранятся в базе данных SQL Server `ContosoHR` (скрипт для создания этой базы данных находится в папке `DbSetup`). Экземпляры рабочего процесса хранятся в базе данных SQL Server `InstanceStore` (скрипт для создания хранилища экземпляров является частью распространения [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)]).  
   
- Обе базы данных создаются путем запуска скрипта Setup.cmd из командной строки [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)].  
+ Обе базы данных создаются путем запуска скрипта Setup.cmd из командной строки Visual Studio.  
   
 ## <a name="running-the-sample"></a>Выполнение образца  
   
 #### <a name="to-create-the-databases"></a>Создание баз данных  
   
-1.  Откройте командную строку [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)].  
+1.  Откройте командную строку Visual Studio.  
   
 2.  Перейдите в папку образца.  
   
@@ -157,7 +158,7 @@ ms.lasthandoff: 12/22/2017
   
 #### <a name="to-set-up-the-solution-for-execution"></a>Настройка решения для выполнения  
   
-1.  Запустите [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] от имени администратора. Откройте HiringRequest.sln.  
+1.  Запустите Visual Studio от имени администратора. Откройте HiringRequest.sln.  
   
 2.  Щелкните правой кнопкой мыши решение в **обозревателе решений** и выберите **свойства**.  
   
@@ -221,7 +222,7 @@ ms.lasthandoff: 12/22/2017
   
 ## <a name="troubleshooting"></a>Устранение неполадок  
   
-1.  Необходимо запустить [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] с правами администратора.  
+1.  Убедитесь, что Visual Studio выполняется с правами администратора.  
   
 2.  Если решение не было построено, то проверьте следующее.  
   
@@ -237,7 +238,7 @@ ms.lasthandoff: 12/22/2017
   
         2.  Щелкните правой кнопкой мыши **Contoso** и выберите **ссылки на веб-службы обновления**.  
   
-        3.  Перестройте решение, для этого нажмите клавиши CTRL+SHIFT+B в [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)].  
+        3.  Пересоберите решение, нажав клавиши CTRL + SHIFT + B в Visual Studio.  
   
 ## <a name="uninstalling"></a>Удаление  
   

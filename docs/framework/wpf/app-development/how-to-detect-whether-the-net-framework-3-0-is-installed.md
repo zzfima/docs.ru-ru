@@ -1,34 +1,36 @@
 ---
-title: "Практическое руководство. Проверка наличия установленной платформы .NET Framework 3.0"
-ms.custom: 
+title: Практическое руководство. Проверка наличия установленной платформы .NET Framework 3.0
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - WinFX Runtime user-agent string
 - presence of WPT [WPF], detecting
 - detecting WPF presence [WPF]
 ms.assetid: 7f71d652-1749-4379-945a-aa2e3994cb43
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6990ca4bff7c8756f8d7f25ff0153b3a5d41a4f2
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 48295a187870340948b045a64b852f1e6fdc1a65
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-detect-whether-the-net-framework-30-is-installed"></a>Практическое руководство. Проверка наличия установленной платформы .NET Framework 3.0
 Прежде чем развертывать [!INCLUDE[TLA#tla_avalonwinfx](../../../../includes/tlasharptla-avalonwinfx-md.md)] приложений в системе, их необходимо сначала убедиться, что [!INCLUDE[TLA2#tla_avalonwinfx](../../../../includes/tla2sharptla-avalonwinfx-md.md)] наличии среды выполнения. В этом разделе содержится скрипт, написанный на языке HTML/JavaScript, администраторы могут использовать для определения ли [!INCLUDE[TLA2#tla_avalonwinfx](../../../../includes/tla2sharptla-avalonwinfx-md.md)] присутствует в системе.  
   
 > [!NOTE]
->  Более подробные сведения об установке, развертывании и обнаружении [!INCLUDE[TLA#tla_winfx](../../../../includes/tlasharptla-winfx-md.md)], см. обсуждение в [развертывания Microsoft .NET Framework версии 3.0](http://go.microsoft.com/fwlink/?LinkId=96739).  
+>  Более подробные сведения об установке, развертывании и обнаружении Microsoft .NET Framework, см. обсуждение в [развертывания Microsoft .NET Framework версии 3.0](http://go.microsoft.com/fwlink/?LinkId=96739).  
   
 <a name="content_expiration"></a>   
 ## <a name="detect-the-net-clr-user-agent-string"></a>Определить строку агента пользователя «.NET CLR»  

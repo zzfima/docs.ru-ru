@@ -1,30 +1,31 @@
 ---
-title: "Пошаговые руководства и технические получить обзор работы"
-description: "Модернизировать существующие приложения .NET с облако Azure и контейнеров Windows | Пошаговые руководства и технические получить обзор работы"
+title: Пошаговые руководства и технические получить обзор работы
+description: Модернизировать существующие приложения .NET с облако Azure и контейнеров Windows | Пошаговые руководства и технические получить обзор работы
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/26/2017
 ms.prod: .net
+ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 6a2abda3949c1fffc4d731b01e35e58e7c56dac0
-ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
+ms.openlocfilehash: 0bad7e3afbdf3e55c447319b3756f2235b9e0a19
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="walkthroughs-and-technical-get-started-overview"></a>Пошаговые руководства и технические получить обзор работы
 
 Для ограничения размера эта электронная книга, дополнительную техническую документацию и полный пошаговые руководства были доступны в репозитории GitHub. Online ряд пошаговых руководств, описанный в этой главе описываются пошаговые установки нескольких сред, которые основаны на контейнеры Windows и развертывания в Azure.
 
-Что каждого пошагового руководства о его целями и высокоуровневые концепции и предоставляет схему задачи, которые участвуют в следующих разделах. Вы можете получить пошаговые руководства, сами в *eShopModernizing* wiki репозитория GitHub приложений на [https://github.com/dotnet-architecture/eShopModernizing/wiki](https://github.com/dotnet-architecture/eShopModernizing/wiki).
+Что каждого пошагового руководства о его целями и высокоуровневые концепции и предоставляет схему задачи, которые участвуют в следующих разделах. Вы можете получить пошаговые руководства, сами в *eShopModernizing* wiki репозитория GitHub приложений на [ https://github.com/dotnet-architecture/eShopModernizing/wiki ](https://github.com/dotnet-architecture/eShopModernizing/wiki).
 
 ## <a name="technical-walkthrough-list"></a>Список примеров технические
 
 Следующие пошаговые руководства работы get содержат согласованное и комплексное техническое руководство для образца приложения, которые можно точности прогнозов и с помощью контейнеры shift, а затем переместите с помощью нескольких вариантов развертывания в Azure.
 
-Для каждой из указанных ниже пошаговых руководствах используется новый образец eShopLegacy и eShopModernizing приложений, которые можно найти на github на сайте [https://github.com/dotnet-architecture/eShopModernizing](https://github.com/dotnet-architecture/eShopModernizing).
+Для каждой из указанных ниже пошаговых руководствах используется новый образец eShopLegacy и eShopModernizing приложений, которые можно найти на github на сайте [ https://github.com/dotnet-architecture/eShopModernizing ](https://github.com/dotnet-architecture/eShopModernizing).
 
 - **Обзор приложений прежних версий eShop**
 
@@ -66,7 +67,7 @@ ms.lasthandoff: 03/08/2018
 
 ![Приложения ASP.NET MVC и веб-форм ASP.NET (существующих устаревших технологии)](./media/image5-2.png)
 
-> **Рис. 5-2.** Приложения ASP.NET MVC и веб-форм ASP.NET (существующих устаревших технологии)
+> **Рис. 5-2.** Приложения ASP.NET MVC и веб-форм ASP.NET (существующих устаревших технологии)
 
 Это веб-приложений, которые используются для просмотра и изменения записей каталога. Тот факт, что оба приложения поставлять же бизнеса и функциональные возможности не просто для сравнения. Вы увидите аналогичный процесс изменения для приложений, созданных с помощью платформы ASP.NET MVC и веб-форм ASP.NET.
 
@@ -112,7 +113,7 @@ ms.lasthandoff: 03/08/2018
 
 > ![Схема упрощенной архитектуры приложений в контейнерах в среде разработки](./media/image5-3.png)
 >
-> **Рис.** Схема упрощенной архитектуры приложений в контейнерах в среде разработки
+> **Рис. 5-3.** Схема упрощенной архитектуры приложений в контейнерах в среде разработки
 
 ### <a name="benefits"></a>Преимущества
 
@@ -126,7 +127,7 @@ ms.lasthandoff: 03/08/2018
 
 ### <a name="next-steps"></a>Следующие шаги
 
-Просмотр этого содержимого углубленные на вики-сайте GitHub: [https://github.com/dotnet-architecture/eShopModernizing/wiki/02.-How-to-containerize-the-.NET-Framework-web-apps-with-Windows-Containers-and-Docker](https://github.com/dotnet-architecture/eShopModernizing/wiki/02.-How-to-containerize-the-.NET-Framework-web-apps-with-Windows-Containers-and-Docker)
+Это содержимое более подробное изучение на вики-сайте GitHub. [https://github.com/dotnet-architecture/eShopModernizing/wiki/02.-How-to-containerize-the-.NET-Framework-web-apps-with-Windows-Containers-and-Docker](https://github.com/dotnet-architecture/eShopModernizing/wiki/02.-How-to-containerize-the-.NET-Framework-web-apps-with-Windows-Containers-and-Docker)
 
 ## <a name="walkthrough-3-deploy-your-windows-containers-based-app-to-azure-vms"></a>Пример 3: Развертывание приложения Windows контейнеры на виртуальных машинах Azure
 
@@ -152,13 +153,13 @@ ms.lasthandoff: 03/08/2018
 
 ![Развертывание на Виртуальной машине Azure из разработки ПК через подключение подсистемы Docker](./media/image5-4.png)
 
-> **Рис.** Развертывание на Виртуальной машине Azure из разработки ПК через подключение подсистемы Docker
+> **Рис. 5-4.** Развертывание на Виртуальной машине Azure из разработки ПК через подключение подсистемы Docker
 
 #### <a name="scenario-b-deploy-to-an-azure-vm-through-a-docker-registry"></a>Сценарий б. развертывание на Виртуальной машине Azure через реестр Docker
 
 ![Развертывание на Виртуальной машине Azure через реестр Docker](./media/image5-5.png)
 
-> **Рис.** Развертывание на Виртуальной машине Azure через реестр Docker
+> **Рис. 5-5.** Развертывание на Виртуальной машине Azure через реестр Docker
 
 #### <a name="scenario-c-deploy-to-an-azure-vm-from-cicd-pipelines-in-visual-studio-team-services"></a>Сценарий C: развертывание на Виртуальной машине Azure из элемента конфигурации/CD конвейеры в Visual Studio Team Services
 
@@ -208,13 +209,13 @@ Azure виртуальные машины для контейнеров Windows 
 
 ![Развертывание непосредственно на кластере Kubernetes из среды разработки](./media/image5-7.png)
 
-> **Рис.** Развертывание непосредственно на кластере Kubernetes из среды разработки
+> **Рис. 5-7.** Развертывание непосредственно на кластере Kubernetes из среды разработки
 
 #### <a name="scenario-b-deploy-to-a-kubernetes-cluster-from-cicd-pipelines-in-team-services"></a>Сценарий б. развертывание кластера Kubernetes из элемента конфигурации/CD конвейеров в Team Services
 
 ![Развертывание кластера Kubernetes из элемента конфигурации/CD конвейеры в Team Services](./media/image5-8.png)
 
-> **Рис.** Развертывание кластера Kubernetes из элемента конфигурации/CD конвейеры в Team Services
+> **Рис. 5-8.** Развертывание кластера Kubernetes из элемента конфигурации/CD конвейеры в Team Services
 
 ### <a name="benefits"></a>Преимущества
 
@@ -240,7 +241,7 @@ Azure виртуальные машины для контейнеров Windows 
 
 ## <a name="next-steps"></a>Следующие шаги
 
-Просмотр этого содержимого углубленные на вики-сайте GitHub: [https://github.com/dotnet-architecture/eShopModernizing/wiki/04.-How-to-deploy-your-Windows-Containers-based-apps-into-Kubernetes-in-Azure-Container-Service-() Including-C-CD)](https://github.com/dotnet-architecture/eShopModernizing/wiki/04.-How-to-deploy-your-Windows-Containers-based-apps-into-Kubernetes-in-Azure-Container-Service-(Including-C-CD))
+Это содержимое более подробное изучение на вики-сайте GitHub. [https://github.com/dotnet-architecture/eShopModernizing/wiki/04.-How-to-deploy-your-Windows-Containers-based-apps-into-Kubernetes-in-Azure-Container-Service-(Including-C-CD)](https://github.com/dotnet-architecture/eShopModernizing/wiki/04.-How-to-deploy-your-Windows-Containers-based-apps-into-Kubernetes-in-Azure-Container-Service-(Including-C-CD))
 
 ## <a name="walkthrough-5-deploy-your-windows-containers-based-apps-to-azure-service-fabric"></a>Пошаговое руководство по 5 развертывания приложений на основе контейнеров Windows для Azure Service Fabric
 
@@ -268,13 +269,13 @@ Azure виртуальные машины для контейнеров Windows 
 
 ![Развертывание непосредственно к кластеру Service Fabric из среды разработки](./media/image5-9.png)
 
-> **Рис. 5-9.** Развертывание непосредственно к кластеру Service Fabric из среды разработки
+> **Рис. 5-9.** Развертывание непосредственно к кластеру Service Fabric из среды разработки
 
 ### <a name="scenario-b-deploy-to-a-service-fabric-cluster-from-cicd-pipelines-in-team-services"></a>Сценарий б. развертывание кластера Service Fabric из элемента конфигурации/CD конвейеров в Team Services
 
 ![Развертывание кластера Service Fabric из элемента конфигурации/CD конвейеры в Visual Studio Team Services](./media/image5-10.png)
 
-> **Рис. 5-10.** Развертывание кластера Service Fabric из элемента конфигурации/CD конвейеры в Visual Studio Team Services
+> **Рис. 5-10.** Развертывание кластера Service Fabric из элемента конфигурации/CD конвейеры в Visual Studio Team Services
 
 ## <a name="benefits"></a>Преимущества
 

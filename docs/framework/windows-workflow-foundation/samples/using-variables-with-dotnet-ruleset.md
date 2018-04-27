@@ -1,23 +1,24 @@
 ---
-title: "Использование переменных с набором правил из .NET Framework 3.5"
-ms.custom: 
+title: Использование переменных с набором правил из .NET Framework 3.5
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 27b56249-22fe-4252-840f-74c0d6c7a6b3
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 2656cc5d8add0027d6bf038d5de735ebccd2d96d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 216136ba084505947b5ab3c985284d704cb5872f
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="using-variables-with-a-net-framework-35-ruleset"></a>Использование переменных с набором правил из .NET Framework 3.5
 В этом образце демонстрируется создание рабочего процесса, использующего действие <xref:System.Activities.Statements.Interop> для интеграции настраиваемого действия, записанного в [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)] с применением политики и правил. Рабочий процесс передает данные для пользовательского действия, привязывая переменные к свойствам зависимостей, предоставляемым настраиваемым действием.  
@@ -26,7 +27,7 @@ ms.lasthandoff: 12/22/2017
   
 #### <a name="to-examine-travelrulelibrary"></a>Проверка TravelRuleLibrary  
   
-1.  Откройте файл решения InteropWith35RuleSet.sln в среде [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)].  
+1.  Откройте файл решения InteropWith35RuleSet.sln в Visual Studio.  
   
 2.  Откройте TravelRuleSet.cs в конструкторе рабочих процессов.  
   
@@ -38,7 +39,7 @@ ms.lasthandoff: 12/22/2017
   
 4.  Щелкните правой кнопкой мыши `DiscountPolicy` и выберите **Просмотр кода** для просмотра побочного C# кода для действия.  
   
-     Проверьте значения свойства зависимости для `DiscountLevel`. Это эквивалентно аргументам в [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)]. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]аргументы, в разделе [переменных и аргументов](../../../../docs/framework/windows-workflow-foundation/variables-and-arguments.md).  
+     Проверьте значения свойства зависимости для `DiscountLevel`. Это эквивалентно аргументам в [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)]. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] аргументы, в разделе [переменных и аргументов](../../../../docs/framework/windows-workflow-foundation/variables-and-arguments.md).  
   
 ## <a name="interopwith35ruleset"></a>InteropWith35RuleSet  
  Это проект последовательного рабочего процесса, использующий действие <xref:System.Activities.Statements.Interop> для интеграции с пользовательским набором правил, создаваемым в проекте `TravelRuleLibrary`. Переменные создаются при действии верхнего уровня <xref:System.Activities.Statements.Sequence>. Действие <xref:System.Activities.Statements.Interop> используется для интеграции с действием `TravelRuleSet`. Переменные, объявленные в <xref:System.Activities.Statements.Sequence>, используются для привязки к свойствам зависимости.  
@@ -56,6 +57,6 @@ ms.lasthandoff: 12/22/2017
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите на страницу [Примеры Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все примеры [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Этот образец расположен в следующем каталоге.  
+>  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) Чтобы загрузить все [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] образцов. Этот образец расположен в следующем каталоге.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Built-InActivities\InteropWith35RuleSet`

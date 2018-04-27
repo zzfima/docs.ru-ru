@@ -1,12 +1,13 @@
 ---
-title: "Поддержка шаблонов элементов управления в поставщике модели автоматизации пользовательского интерфейса"
-ms.custom: 
+title: Поддержка шаблонов элементов управления в поставщике модели автоматизации пользовательского интерфейса
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-bcl
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,16 +16,17 @@ helpviewer_keywords:
 - control patterns, supporting in UI Automation provider
 - UI Automation, supporting control patterns in provider
 ms.assetid: 0d635c35-ffa8-4dc8-bbc9-12fcd5445776
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 9e85aa2fe36ad6fab59ae071a662755219ccbbb8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: c66df9103b1edb43490a7e1a6a9d1a3cc87bfc28
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="support-control-patterns-in-a-ui-automation-provider"></a>Поддержка шаблонов элементов управления в поставщике модели автоматизации пользовательского интерфейса
 > [!NOTE]
@@ -36,7 +38,7 @@ ms.lasthandoff: 12/22/2017
   
 1.  Реализуйте соответствующие интерфейсы для шаблонов элементов управления, которые должен поддерживать элемент, таких как <xref:System.Windows.Automation.Provider.IInvokeProvider> для <xref:System.Windows.Automation.InvokePattern>.  
   
-2.  Возвращает объект, содержащий реализацию каждого интерфейса элемента управления в реализации<xref:System.Windows.Automation.Provider.IRawElementProviderSimple.GetPatternProvider%2A?displayProperty=nameWithType>  
+2.  Возвращает объект, содержащий реализацию каждого интерфейса элемента управления в реализации <xref:System.Windows.Automation.Provider.IRawElementProviderSimple.GetPatternProvider%2A?displayProperty=nameWithType>  
   
 ## <a name="example"></a>Пример  
  В следующем примере показана реализация <xref:System.Windows.Automation.Provider.ISelectionProvider> для пользовательского списка с поддержкой единственного выбора. Он возвращает три свойства и получает текущий выбранный элемент.  
@@ -45,7 +47,7 @@ ms.lasthandoff: 12/22/2017
  [!code-vb[UIAFragmentProvider_snip#119](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UIAFragmentProvider_snip/VisualBasic/ListPattern.vb#119)]  
   
 ## <a name="example"></a>Пример  
- В следующем примере показана реализация метода <xref:System.Windows.Automation.Provider.IRawElementProviderSimple.GetPatternProvider%2A> , который возвращает класс, реализующий <xref:System.Windows.Automation.Provider.ISelectionProvider>. Большинство элементов управления "Список" будут также поддерживать и другие шаблоны, но в данном примере возвращается пустая ссылка (`Nothing` в [!INCLUDE[TLA#tla_visualbnet](../../../includes/tlasharptla-visualbnet-md.md)]) для всех остальных идентификаторов шаблонов.  
+ В следующем примере показана реализация метода <xref:System.Windows.Automation.Provider.IRawElementProviderSimple.GetPatternProvider%2A> , который возвращает класс, реализующий <xref:System.Windows.Automation.Provider.ISelectionProvider>. Большинство элементов управления полей списка будут поддерживать другие шаблоны, также, но в этом примере возвращается пустая ссылка (`Nothing` в Microsoft Visual Basic .NET) возвращается для всех остальных идентификаторов шаблонов.  
   
  [!code-csharp[UIAFragmentProvider_snip#120](../../../samples/snippets/csharp/VS_Snippets_Wpf/UIAFragmentProvider_snip/CSharp/ListFragment.cs#120)]
  [!code-vb[UIAFragmentProvider_snip#120](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UIAFragmentProvider_snip/VisualBasic/ListFragment.vb#120)]  

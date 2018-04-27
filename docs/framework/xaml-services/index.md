@@ -20,17 +20,17 @@ ms.author: wpickett
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 458b4c94d26b7bc083c5d31fcbccf05b42bba52e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1548f74cab4589690e49517cdf96144fb6515693
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="xaml-services"></a>Службы XAML
 В этом разделе описываются возможности набора технологий, называются службами XAML платформы .NET Framework. Большинство служб и интерфейсов API, описанных находятся в сборке System.Xaml, которая представляет собой сборку предварен [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] набор основных сборок .NET. Службы включают в себя средства чтения и записи, классы схемы и поддержка схемы, фабрики, присвоение атрибутов классов, встроенной поддержки языка XAML и другие возможности языка XAML.  
   
 ## <a name="about-this-documentation"></a>О данной документации  
- Основная документация для служб XAML .NET Framework предполагает, что опыт разработки в язык XAML и его применения для конкретной платформы, например [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] или [!INCLUDE[TLA#tla_workflow](../../../includes/tlasharptla-workflow-md.md)], или определенной технологической области, функций для Пример возможностей настройки построения в <xref:Microsoft.Build.Framework.XamlTypes>. В этой документации не пытаться объяснить основы XAML как языка разметки, Терминология синтаксиса XAML и другие вводные сведения. Вместо этого в этой документации уделяется конкретному использованию служб XAML .NET Framework, для которых включено в библиотеке сборки System.Xaml. Большинство этих API-интерфейсов предназначено для сценариев интеграции языка XAML и расширяемость. Сюда относятся следующие:  
+ Основная документация для служб XAML .NET Framework предполагает, что опыт разработки в язык XAML и его применения для конкретной платформы, например [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] Windows Workflow Foundation, или функция определенной технологии область, например возможностей настройки построения в <xref:Microsoft.Build.Framework.XamlTypes>. В этой документации не пытаться объяснить основы XAML как языка разметки, Терминология синтаксиса XAML и другие вводные сведения. Вместо этого в этой документации уделяется конкретному использованию служб XAML .NET Framework, для которых включено в библиотеке сборки System.Xaml. Большинство этих API-интерфейсов предназначено для сценариев интеграции языка XAML и расширяемость. Сюда относятся следующие:  
   
 -   Расширение возможностей базовых средств чтения и записи XAML (непосредственная обработка потока узлов XAML производного чтения или записи XAML).  
   
@@ -49,7 +49,7 @@ ms.lasthandoff: 12/22/2017
  Если вы ищете вводный материал на языке XAML, можно попробовать [Обзор XAML (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md). Этом разделе описывается XAML для аудитории, новые для обоих [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] и с использованием разметки XAML и возможностей языка XAML. Другим полезным документ является вводный материал в [спецификации языка XAML](http://go.microsoft.com/fwlink/?LinkId=114525).  
   
 ## <a name="net-framework-xaml-services-and-systemxaml-in-the-net-architecture"></a>Службы XAML .NET framework и System.Xaml в архитектуре .NET  
- В предыдущих версиях [!INCLUDE[TLA#tla_netframewk](../../../includes/tlasharptla-netframewk-md.md)], поддержка возможностей языка XAML была реализована с платформ на основе [!INCLUDE[TLA#tla_netframewk](../../../includes/tlasharptla-netframewk-md.md)] ([!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], [!INCLUDE[TLA#tla_workflow](../../../includes/tlasharptla-workflow-md.md)] и [!INCLUDE[vsindigo](../../../includes/vsindigo-md.md)]) и поэтому менялись в его поведение и API, использующихся в зависимости от того, что конкретной платформы, которую вы использовали. Это включены XAML синтаксического анализа и объект graph механизм создания, встроенные функции языка XAML, поддержка сериализации и т. д.  
+ В предыдущих версиях [!INCLUDE[TLA#tla_netframewk](../../../includes/tlasharptla-netframewk-md.md)], поддержка возможностей языка XAML была реализована с платформ на основе [!INCLUDE[TLA#tla_netframewk](../../../includes/tlasharptla-netframewk-md.md)] ([!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], Windows Workflow Foundation и [!INCLUDE[vsindigo](../../../includes/vsindigo-md.md)]) и поэтому менялись в его поведение и используемый API в зависимости от какой конкретной платформы вы использовали. Это включены XAML синтаксического анализа и объект graph механизм создания, встроенные функции языка XAML, поддержка сериализации и т. д.  
   
  В [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], объем необходимых для поддержки возможностей языка XAML для определения служб XAML .NET Framework и в сборке System.Xaml. Это включает базовые классы для чтения и записи XAML. Наиболее важные компонент, добавленный в службах XAML .NET Framework, который не был представлен в некоторых реализациях XAML для отдельных является представление системы типов для XAML. Представление системы типов XAML представляется в объектно ориентированным способом, где возможности XAML без учета зависимости от конкретных возможностей платформы.  
   
@@ -68,11 +68,11 @@ ms.lasthandoff: 12/22/2017
   
 -   Запуск с представлением XAML, в формате XML с кодировкой UTF и сохранен как текстовый файл.  
   
--   Загрузить этот XAML в <xref:System.Xaml.XamlXmlReader>. <xref:System.Xaml.XamlXmlReader>— <xref:System.Xaml.XamlReader> подкласс.  
+-   Загрузить этот XAML в <xref:System.Xaml.XamlXmlReader>. <xref:System.Xaml.XamlXmlReader> — <xref:System.Xaml.XamlReader> подкласс.  
   
 -   Результатом является поток узлов XAML. Можно получить доступ к отдельным узлам потока узлов XAML с помощью <xref:System.Xaml.XamlXmlReader>  /  <xref:System.Xaml.XamlReader> API. Наиболее типичной операцией является перебор потока узлов XAML, обработки каждого узла, используя «текущей записи» метафоры.  
   
--   Передать полученные узлы из потока узлов XAML для <xref:System.Xaml.XamlObjectWriter> API. <xref:System.Xaml.XamlObjectWriter>— <xref:System.Xaml.XamlWriter> подкласс.  
+-   Передать полученные узлы из потока узлов XAML для <xref:System.Xaml.XamlObjectWriter> API. <xref:System.Xaml.XamlObjectWriter> — <xref:System.Xaml.XamlWriter> подкласс.  
   
 -   <xref:System.Xaml.XamlObjectWriter> Записывает граф объектов, один объект за раз в соответствии с ходом выполнения с помощью исходного потока узлов XAML. Это делается с помощью контекста схемы XAML и реализации, которая может получить доступ к сборок и типов система резервных типов и инфраструктуры.  
   
@@ -82,11 +82,11 @@ ms.lasthandoff: 12/22/2017
   
 -   Начните с графа объектов всего приложения во время выполнения, содержимого пользовательского интерфейса и состояния времени выполнения или меньшего сегмента объектного представления всего приложения во время выполнения.  
   
--   Из логического начала объекта, например корень приложения или корень документа, загрузить объекты в <xref:System.Xaml.XamlObjectReader>. <xref:System.Xaml.XamlObjectReader>— <xref:System.Xaml.XamlReader> подкласс.  
+-   Из логического начала объекта, например корень приложения или корень документа, загрузить объекты в <xref:System.Xaml.XamlObjectReader>. <xref:System.Xaml.XamlObjectReader> — <xref:System.Xaml.XamlReader> подкласс.  
   
 -   Результатом является поток узлов XAML. Можно получить доступ к отдельным узлам потока узлов XAML с помощью <xref:System.Xaml.XamlObjectReader> и <xref:System.Xaml.XamlReader> API. Наиболее типичной операцией является перебор потока узлов XAML, обработки каждого узла, используя «текущей записи» метафоры.  
   
--   Передать полученные узлы из потока узлов XAML для <xref:System.Xaml.XamlXmlWriter> API. <xref:System.Xaml.XamlXmlWriter>— <xref:System.Xaml.XamlWriter> подкласс.  
+-   Передать полученные узлы из потока узлов XAML для <xref:System.Xaml.XamlXmlWriter> API. <xref:System.Xaml.XamlXmlWriter> — <xref:System.Xaml.XamlWriter> подкласс.  
   
 -   <xref:System.Xaml.XamlXmlWriter> Записывает XAML в XML UTF кодировки. Можно сохранить как текстовый файл, как поток или в других формах.  
   
@@ -101,16 +101,16 @@ ms.lasthandoff: 12/22/2017
   
 -   Различные сигнатуры метода <xref:System.Xaml.XamlServices.Save%2A> сохраняют граф объектов и выдают результат в виде потока, файла или <xref:System.Xml.XmlWriter> / <xref:System.IO.TextWriter> экземпляра.  
   
--   <xref:System.Xaml.XamlServices.Transform%2A>Преобразует XAML, связывая путь загрузки и сохранения пути в ходе одной операции. Другой контекст схемы или другая система резервных типов могут быть использованы для <xref:System.Xaml.XamlReader> и <xref:System.Xaml.XamlWriter>, что повлияет на преобразование полученного XAML-кода.  
+-   <xref:System.Xaml.XamlServices.Transform%2A> Преобразует XAML, связывая путь загрузки и сохранения пути в ходе одной операции. Другой контекст схемы или другая система резервных типов могут быть использованы для <xref:System.Xaml.XamlReader> и <xref:System.Xaml.XamlWriter>, что повлияет на преобразование полученного XAML-кода.  
   
  Дополнительные сведения об использовании <xref:System.Xaml.XamlServices>, в разделе [класс XAMLServices и Basic XAML чтения или записи с](../../../docs/framework/xaml-services/xamlservices-class-and-basic-xaml-reading-or-writing.md).  
   
 ## <a name="xaml-type-system"></a>Системе типов XAML  
  В системе типов XAML предоставляет интерфейсы API, которые требуются для работы с заданным отдельным узлом потока узлов XAML.  
   
- <xref:System.Xaml.XamlType>является представлением объекта — что обрабатывается между начальным и конечным узлами объекта.  
+ <xref:System.Xaml.XamlType> является представлением объекта — что обрабатывается между начальным и конечным узлами объекта.  
   
- <xref:System.Xaml.XamlMember>является представлением элемента объекта — что обрабатывается между начальным и конечным узлами члена.  
+ <xref:System.Xaml.XamlMember> является представлением элемента объекта — что обрабатывается между начальным и конечным узлами члена.  
   
  API-интерфейсы, такие как <xref:System.Xaml.XamlType.GetAllMembers%2A> и <xref:System.Xaml.XamlType.GetMember%2A> и <xref:System.Xaml.XamlMember.DeclaringType%2A> передают связи между <xref:System.Xaml.XamlType> и <xref:System.Xaml.XamlMember>.  
   

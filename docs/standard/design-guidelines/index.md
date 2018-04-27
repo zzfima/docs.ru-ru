@@ -20,11 +20,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: c48b3cbaae4155a894ba77263505b2ca85238427
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: c54ec4a5cc3c4bef1e6460b2c9971af4e2af983a
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="framework-design-guidelines"></a>Рекомендации по разработке платформы
 Этот раздел содержит рекомендации по разработке библиотек, которые расширяют и взаимодействия с платформой .NET Framework. Цель — помочь разработчикам библиотек гарантировать согласованность API и удобства использования, предоставляя унифицированную модель программирования, не зависящий от языка программирования, который используется для разработки. Корпорация Майкрософт рекомендует следовать этим правилам при разработке классов и компонентов, расширяющих возможности .NET Framework. Несогласованные библиотеки конструктора отрицательно влияет на производительность и не рекомендует внедрения.  
@@ -57,9 +57,9 @@ ms.lasthandoff: 01/19/2018
   
  *Фрагменты © 2005, 2009 корпорации Майкрософт. Все права защищены.*  
   
- *Перепечатываются разрешении Пирсона для образовательных учреждений, Inc. из [Framework рекомендации по проектированию: условные обозначения, стили и шаблоны для библиотеки .NET для повторного использования, 2-е издание](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina и Брэд Абрамс, опубликованные 22 октября 2008 г., Addison-Wesley Professional в составе ряда разработки Microsoft Windows.*  
+ *Перепечатываются разрешении Пирсона для образовательных учреждений, Inc. из [Framework рекомендации по проектированию: условные обозначения, стили и шаблоны для библиотеки .NET для повторного использования, 2-е издание](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina и Брэд Абрамс, опубликованные 22 октября 2008 г., Addison-Wesley Professional в составе ряда разработки Microsoft Windows.*  
   
 ## <a name="see-also"></a>См. также  
  [Обзор набора средств Visual Studio для Unity](../../../docs/framework/get-started/overview.md)  
- [Стратегия для платформы .NET Framework](http://msdn.microsoft.com/library/0b46b7c6-9163-4f99-8e58-0d1ee7da8c67)  
+ [Стратегия для платформы .NET Framework](https://msdn.microsoft.com/library/0b46b7c6-9163-4f99-8e58-0d1ee7da8c67)  
  [Руководство по разработке](../../../docs/framework/development-guide.md)

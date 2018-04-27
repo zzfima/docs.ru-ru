@@ -1,12 +1,13 @@
 ---
-title: "Импорт схемы для создания классов"
-ms.custom: 
+title: Импорт схемы для создания классов
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,16 +16,17 @@ helpviewer_keywords:
 - WCF, schema import and export
 - XsdDataContractImporter class
 ms.assetid: b9170583-8c34-43bd-97bb-6c0c8dddeee0
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a872fbd5be56fed3d01481d1740c70932fd60c06
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 7fc755ff7f1b6c583a1e9aa1bc209495563812f0
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="importing-schema-to-generate-classes"></a>Импорт схемы для создания классов
 Чтобы создать классы из схем, которые могут использоваться в [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], используйте класс <xref:System.Runtime.Serialization.XsdDataContractImporter>. В данном разделе описывается процесс и параметры импорта.  
@@ -77,7 +79,7 @@ ms.lasthandoff: 12/22/2017
   
  [!code-xml[c_SchemaImportExport#10](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_schemaimportexport/common/source.config#10)]  
   
- В следующем примере используется свойство `Namespaces` для сопоставления пространства имен "http://schemas.contoso.com/carSchema" и "Contoso.Cars".  
+ В следующем примере используется `Namespaces` свойство для сопоставления "http://schemas.contoso.com/carSchema" и «Contoso.Cars» пространство имен.  
   
  [!code-csharp[c_SchemaImportExport#8](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_schemaimportexport/cs/source.cs#8)]
  [!code-vb[c_SchemaImportExport#8](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_schemaimportexport/vb/source.vb#8)]  
@@ -95,7 +97,7 @@ ms.lasthandoff: 12/22/2017
 #### <a name="adding-data-binding-support-enabledatabinding-or-the-enabledatabinding-switch"></a>Добавление поддержки привязки данных (EnableDataBinding или коммутатор /enableDataBinding)  
  Это соответствует **/enableDataBinding** в средстве Svcutil.exe.  
   
- Иногда возникает необходимость привязать созданные из схемы типы к компонентам графического пользовательского интерфейса, чтобы при каждом обновлении экземпляров этих типов автоматически обновлялся пользовательский интерфейс. Объект `XsdDataContractImporter` может создавать типы, реализующие интерфейс <xref:System.ComponentModel.INotifyPropertyChanged> способом, обеспечивающим вызов события при любом изменении свойства. При создании типов для использования в среде программирования пользовательского интерфейса клиента, поддерживающей этот интерфейс (например, [!INCLUDE[avalon1](../../../../includes/avalon1-md.md)]), присвойте свойству <xref:System.Runtime.Serialization.ImportOptions.EnableDataBinding%2A> значение `true`, чтобы включить эту функцию.  
+ Иногда возникает необходимость привязать созданные из схемы типы к компонентам графического пользовательского интерфейса, чтобы при каждом обновлении экземпляров этих типов автоматически обновлялся пользовательский интерфейс. Объект `XsdDataContractImporter` может создавать типы, реализующие интерфейс <xref:System.ComponentModel.INotifyPropertyChanged> способом, обеспечивающим вызов события при любом изменении свойства. При создании типов для использования в среде программирования пользовательского интерфейса клиента, который поддерживает этот интерфейс (таких как Windows Presentation Foundation (WPF)), задать <xref:System.Runtime.Serialization.ImportOptions.EnableDataBinding%2A> свойства `true` для включения этой функции.  
   
  В следующем примере показан класс `Vehicle`, при создании которого параметр импорта <xref:System.Runtime.Serialization.ImportOptions.EnableDataBinding%2A> был установлен на значение `true`.  
   
@@ -112,7 +114,7 @@ ms.lasthandoff: 12/22/2017
  [!code-xml[C_SchemaImportExport#12](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_schemaimportexport/common/source.config#12)]  
   
 > [!NOTE]
->  Любая ассоциация может также считаться списком. Например, указанную выше ассоциацию можно рассматривать как список сложных объектов `city` с двумя полями (полем строки и целочисленным полем). Оба шаблона имеют представление в схеме XSD. Список и ассоциацию невозможно различить, поэтому такие шаблоны всегда обрабатываются как списки, если в схеме отсутствует специальная заметка, характерная для [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. В заметке указывается, что данный шаблон представляет ассоциацию. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Справочник по схеме контрактов данных](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md).  
+>  Любая ассоциация может также считаться списком. Например, указанную выше ассоциацию можно рассматривать как список сложных объектов `city` с двумя полями (полем строки и целочисленным полем). Оба шаблона имеют представление в схеме XSD. Список и ассоциацию невозможно различить, поэтому такие шаблоны всегда обрабатываются как списки, если в схеме отсутствует специальная заметка, характерная для [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. В заметке указывается, что данный шаблон представляет ассоциацию. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Справочник по схеме контрактов данных](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md).  
   
  Как правило, список импортируется как контракт данных коллекции, наследуемый от универсального списка, или как массив [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] в зависимости от того, используется ли в схеме стандартный шаблон именования коллекций. Это описывается более подробно в [типы коллекций в контрактах данных](../../../../docs/framework/wcf/feature-details/collection-types-in-data-contracts.md). Обычно ассоциации импортируются либо в виде <xref:System.Collections.Generic.Dictionary%602>, либо в виде контракта данных коллекции, наследуемого от объекта словаря. Например, рассмотрим следующую схему.  
   
@@ -159,7 +161,7 @@ ms.lasthandoff: 12/22/2017
   
 ##### <a name="design-considerations"></a>Вопросы проектирования  
   
--   Возможно, будет трудно работать со слабо типизированным XML-представлением напрямую. При работе со схемой, не совместимой с контрактами данных строго типизированным способом, рекомендуется использовать альтернативный модуль сериализации, такой как <xref:System.Xml.Serialization.XmlSerializer>. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][С помощью класса XmlSerializer](../../../../docs/framework/wcf/feature-details/using-the-xmlserializer-class.md).  
+-   Возможно, будет трудно работать со слабо типизированным XML-представлением напрямую. При работе со схемой, не совместимой с контрактами данных строго типизированным способом, рекомендуется использовать альтернативный модуль сериализации, такой как <xref:System.Xml.Serialization.XmlSerializer>. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [С помощью класса XmlSerializer](../../../../docs/framework/wcf/feature-details/using-the-xmlserializer-class.md).  
   
 -   Некоторые конструкции схемы невозможно импортировать с помощью <xref:System.Runtime.Serialization.XsdDataContractImporter>, даже если свойству <xref:System.Runtime.Serialization.ImportOptions.ImportXmlType%2A> присвоено значение `true`. В таких случаях также рекомендуется использовать <xref:System.Xml.Serialization.XmlSerializer>.  
   
@@ -188,7 +190,7 @@ ms.lasthandoff: 12/22/2017
   
 -   Свойство <xref:System.Runtime.Serialization.ImportOptions.CodeProvider%2A>. Укажите класс <xref:System.CodeDom.Compiler.CodeDomProvider>, используемый для создания кода для созданных классов. Механизм импорта пытается избежать функций, не поддерживаемых классом <xref:System.CodeDom.Compiler.CodeDomProvider>. Если для свойства <xref:System.Runtime.Serialization.ImportOptions.CodeProvider%2A> значение не задано, используется полный набор функций [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] без ограничений.  
   
--   Свойство <xref:System.Runtime.Serialization.ImportOptions.DataContractSurrogate%2A>. С помощью этого свойства можно указать реализацию <xref:System.Runtime.Serialization.IDataContractSurrogate>. В реализации <xref:System.Runtime.Serialization.IDataContractSurrogate> настраивается процесс импорта. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Суррогаты контракта данных](../../../../docs/framework/wcf/extending/data-contract-surrogates.md). По умолчанию суррогат не используется.  
+-   Свойство <xref:System.Runtime.Serialization.ImportOptions.DataContractSurrogate%2A>. С помощью этого свойства можно указать реализацию <xref:System.Runtime.Serialization.IDataContractSurrogate>. В реализации <xref:System.Runtime.Serialization.IDataContractSurrogate> настраивается процесс импорта. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Суррогаты контрактов данных](../../../../docs/framework/wcf/extending/data-contract-surrogates.md). По умолчанию суррогат не используется.  
   
 ## <a name="see-also"></a>См. также  
  <xref:System.Runtime.Serialization.DataContractSerializer>  

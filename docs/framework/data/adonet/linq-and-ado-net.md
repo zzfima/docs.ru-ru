@@ -1,33 +1,35 @@
 ---
-title: "LINQ и ADO.NET"
-ms.custom: 
+title: LINQ и ADO.NET
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: bf0c8f93-3ff7-49f3-8aed-f2b7ac938dec
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: b020b3df627fcb220f4227d76fdf8eb3d60e80e4
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: be91650c7c06a3bdb5410166cc560ffc9a65d542
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="linq-and-adonet"></a>LINQ и ADO.NET
-В настоящее время многие разработчики бизнес-приложений должны использовать два (или более) языка программирования: язык высокого уровня для бизнес-логики и уровней представления (такой как [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] или [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)]) и язык запросов для взаимодействия с базой данных (такой как [!INCLUDE[tsql](../../../../includes/tsql-md.md)]). Для эффективной работы разработчик должен хорошо владеть несколькими языками, кроме того, возникают несоответствия между языками в среде разработки. Например, приложение, которое использует API для доступа к данным, чтобы выполнить запрос к базе данных, указывает запрос как строковый литерал в кавычках. Такая строка запроса не читается компилятором и не проверяется на наличие синтаксических ошибок или наличие используемых строк или столбцов. Нет проверки соответствия типов параметров запроса и технологии `IntelliSense`.  
+В настоящее время многие разработчики бизнес необходимо использовать два (или более) языках программирования: язык высокого уровня для бизнес логики и уровней представления (например, Visual C# или Visual Basic) и язык запросов для взаимодействия с базой данных (например, [!INCLUDE[tsql](../../../../includes/tsql-md.md)]). Для эффективной работы разработчик должен хорошо владеть несколькими языками, кроме того, возникают несоответствия между языками в среде разработки. Например, приложение, которое использует API для доступа к данным, чтобы выполнить запрос к базе данных, указывает запрос как строковый литерал в кавычках. Такая строка запроса не читается компилятором и не проверяется на наличие синтаксических ошибок или наличие используемых строк или столбцов. Нет проверки соответствия типов параметров запроса и технологии `IntelliSense`.  
   
  [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] позволяет разработчикам формировать в программном коде запросы, основанные на наборах, без использования дополнительного языка запросов. Можно писать запросы [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] к различным перечислимым источникам данных (источникам данных, которые реализуют интерфейс <xref:System.Collections.IEnumerable>), таким как хранимые в памяти структуры данных, XML-документы, базы данных SQL и объекты <xref:System.Data.DataSet>. Несмотря на то что эти перечислимые источники данных реализованы различными способами, во всех них используется одинаковый синтаксис и языковые конструкции. Из-за того что запросы могут быть сформированы на языке программирования, нет необходимости использовать другой язык запросов, внедренный в виде строковых литералов, которые не могут быть проверены компилятором. Встраивание запросов в язык программирования позволяет программистам, использующим среду [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)], быть более продуктивными, предоставляя им проверку синтаксиса и соответствия типов во время компиляции и возможности технологии `IntelliSense`. Эти функции уменьшают затраты на отладку запросов и поиск ошибок.  
   
  Передача данных из таблиц SQL в объекты в памяти часто бывает сложной и способствует совершению ошибок. Поставщик [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)], реализованный в [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] и [!INCLUDE[vbtecdlinq](../../../../includes/vbtecdlinq-md.md)], преобразует исходные данные в данные, основанные на коллекции объектов, реализующих интерфейс <xref:System.Collections.IEnumerable>. Программист всегда видит данные как коллекции <xref:System.Collections.IEnumerable> как при запросе, так и при обновлении. Для написания запросов к этим коллекциям предоставлена полная поддержка технологии `IntelliSense`.  
   
- Существуют три отдельные технологии ADO.NET [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)]: [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)], [!INCLUDE[vbtecdlinq](../../../../includes/vbtecdlinq-md.md)] и [!INCLUDE[linq_entities](../../../../includes/linq-entities-md.md)]. Технология [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] обеспечивает расширенные и оптимизированные запросы к <xref:System.Data.DataSet>, [!INCLUDE[vbtecdlinq](../../../../includes/vbtecdlinq-md.md)] позволяет запрашивать непосредственно схемы базы данных [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)], а [!INCLUDE[linq_entities](../../../../includes/linq-entities-md.md)] позволяет выполнять запросы к [!INCLUDE[adonet_edm](../../../../includes/adonet-edm-md.md)].  
+ Существуют три отдельные технологии ADO.NET [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)]: [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)], [!INCLUDE[vbtecdlinq](../../../../includes/vbtecdlinq-md.md)] и [!INCLUDE[linq_entities](../../../../includes/linq-entities-md.md)]. [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] предоставляет расширенные и оптимизированные запросы через <xref:System.Data.DataSet> и [!INCLUDE[vbtecdlinq](../../../../includes/vbtecdlinq-md.md)] позволяет напрямую запрашивать схемы баз данных SQL Server, и [!INCLUDE[linq_entities](../../../../includes/linq-entities-md.md)] позволяет выполнять запросы [!INCLUDE[adonet_edm](../../../../includes/adonet-edm-md.md)].  
   
  На следующей схеме даны общие сведения о связи технологий ADO.NET LINQ с высокоуровневыми языками программирования и источниками данных с поддержкой LINQ.  
   

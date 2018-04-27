@@ -16,17 +16,17 @@ helpviewer_keywords:
 - impersonation [WCF]
 - delegation [WCF]
 ms.assetid: 110e60f7-5b03-4b69-b667-31721b8e3152
-caps.latest.revision: ''
+caps.latest.revision: 40
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 6319a9793698e12a984c875670d71b2cbb0b00ba
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5c1acfdfdbac2660fd4de7ec391c94b39890f669
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="delegation-and-impersonation-with-wcf"></a>Делегирование и олицетворение с использованием WCF
 *Олицетворение* - это стандартная техника, которую службы используют для ограничения клиентского доступа к ресурсам домена службы. В роли ресурсов домена службы могут выступать ресурсы компьютера, например локальные файлы (олицетворение), или ресурсы, расположенные на другом компьютере, например общая папка (делегирование). Пример приложения см. в разделе [Impersonating the Client](../../../../docs/framework/wcf/samples/impersonating-the-client.md). Пример использования олицетворения см. в разделе [Практическое руководство. Олицетворение клиента в рамках службы](../../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md).  
@@ -70,7 +70,7 @@ ms.lasthandoff: 12/22/2017
  Уровень олицетворения клиента службой зависит от привилегий, доступных учетной записи при попытке олицетворения, используемого типа олицетворения и, возможно, от уровня олицетворения, разрешенного клиентом.  
   
 > [!NOTE]
->  Если клиент и служба выполняются на одном компьютере и клиент выполняется от имени системной учетной записи (например, `Local System` или `Network Service`), клиент невозможно олицетворить, если установлен безопасный сеанс с маркерами контекста безопасности с отслеживанием состояния. Приложения Windows Form и консольные приложения обычно выполняются от имени учетной записи находящегося в системе пользователя, поэтому эту учетную запись можно олицетворять по умолчанию. Если же клиент представляет собой страницу [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] , которая размещена в службах [!INCLUDE[iis601](../../../../includes/iis601-md.md)] или [!INCLUDE[iisver](../../../../includes/iisver-md.md)], то клиент по умолчанию выполняется от имени учетной записи `Network Service` . Все предоставляемые системой привязки, поддерживающие защищенные сеансы, по умолчанию используют маркеры контекста безопасности с отслеживанием состояния. Но если клиент является страницей [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] и используются защищенные сеансы с токенами контекста безопасности с отслеживанием состояния, в клиенте невозможно использовать олицетворение. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]использовании маркеров SCT с отслеживанием состояния в безопасном сеансе см [как: создание токена контекста безопасности для безопасного сеанса](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md).  
+>  Если клиент и служба выполняются на одном компьютере и клиент выполняется от имени системной учетной записи (например, `Local System` или `Network Service`), клиент невозможно олицетворить, если установлен безопасный сеанс с маркерами контекста безопасности с отслеживанием состояния. Приложения Windows Form и консольные приложения обычно выполняются от имени учетной записи находящегося в системе пользователя, поэтому эту учетную запись можно олицетворять по умолчанию. Если же клиент представляет собой страницу [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] , которая размещена в службах [!INCLUDE[iis601](../../../../includes/iis601-md.md)] или [!INCLUDE[iisver](../../../../includes/iisver-md.md)], то клиент по умолчанию выполняется от имени учетной записи `Network Service` . Все предоставляемые системой привязки, поддерживающие защищенные сеансы, по умолчанию используют маркеры контекста безопасности с отслеживанием состояния. Но если клиент является страницей [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] и используются защищенные сеансы с токенами контекста безопасности с отслеживанием состояния, в клиенте невозможно использовать олицетворение. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] использовании маркеров SCT с отслеживанием состояния в безопасном сеансе см [как: создание токена контекста безопасности для безопасного сеанса](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md).  
   
 ## <a name="impersonation-in-a-service-method-declarative-model"></a>Олицетворение в методе службы: декларативная модель  
  Большинство сценариев олицетворения предполагают выполнение метода службы в контексте вызывающего объекта. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] предоставляет функцию олицетворения, упрощающую выполнение данного процесса и позволяющую пользователю задать требование олицетворения в атрибуте <xref:System.ServiceModel.OperationBehaviorAttribute> . Например, в следующем фрагменте кода инфраструктура [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] олицетворяет вызывающий объект перед вызовом метода `Hello` . Все попытки обратиться к собственным ресурсам внутри метода `Hello` окажутся успешными только в том случае, если список управления доступом (ACL) ресурса дает права на доступ вызывающему объекту. Чтобы включить олицетворение, присвойте свойству <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A> одно из значений перечисления <xref:System.ServiceModel.ImpersonationOption>: <xref:System.ServiceModel.ImpersonationOption.Required?displayProperty=nameWithType> или <xref:System.ServiceModel.ImpersonationOption.Allowed?displayProperty=nameWithType>, как показано в следующем примере.  
@@ -84,13 +84,13 @@ ms.lasthandoff: 12/22/2017
  Инфраструктура [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] может олицетворять вызывающий объект, только если вызывающий объект проходит проверку подлинности с учетными данными, которые можно сопоставить с учетной записью пользователя Windows. Если служба настроена на прохождение проверки подлинности с использованием учетных данных, которые невозможно сопоставить с учетной записью Windows, метод службы не выполняется.  
   
 > [!NOTE]
->  В [!INCLUDE[wxp](../../../../includes/wxp-md.md)]происходит сбой олицетворения, если создается маркер контекста безопасности с отслеживанием состояния, что приводит к появлению исключения <xref:System.InvalidOperationException>. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Неподдерживаемые сценарии](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md).  
+>  В [!INCLUDE[wxp](../../../../includes/wxp-md.md)]происходит сбой олицетворения, если создается маркер контекста безопасности с отслеживанием состояния, что приводит к появлению исключения <xref:System.InvalidOperationException>. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Неподдерживаемые сценарии](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md).  
   
 ## <a name="impersonation-in-a-service-method-imperative-model"></a>Олицетворение в методе службы: императивная модель  
  Иногда вызывающему объекту требуется олицетворять не весь метод службы, а лишь его часть. В этом случае необходимо получить удостоверение Windows вызывающего объекта внутри метода службы и императивно выполнить олицетворение. Для этого необходимо с помощью свойства <xref:System.ServiceModel.ServiceSecurityContext.WindowsIdentity%2A> объекта <xref:System.ServiceModel.ServiceSecurityContext> возвратить экземпляр класса <xref:System.Security.Principal.WindowsIdentity> и вызвать метод <xref:System.Security.Principal.WindowsIdentity.Impersonate%2A> перед использованием этого экземпляра.  
   
 > [!NOTE]
->  Для автоматической отмены действия олицетворения следует воспользоваться оператором [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)]`Using` или `using` в C#. Если этот оператор не используется или если используется язык программирования, отличный от [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] и C#, необходимо обязательно вернуть прежний уровень олицетворения. В противном случае возникнет угроза атаки типа «отказ в обслуживании» или «несанкционированное получение прав».  
+>  Убедитесь, что используется Visual Basic`Using` инструкции или C# `using` для автоматической отмены действия олицетворения. Если этот оператор не используется или если используется язык программирования, отличный от Visual Basic или C#, необходимо обязательно вернуть прежний уровень олицетворения. В противном случае возникнет угроза атаки типа «отказ в обслуживании» или «несанкционированное получение прав».  
   
  [!code-csharp[c_ImpersonationAndDelegation#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_impersonationanddelegation/cs/source.cs#2)]
  [!code-vb[c_ImpersonationAndDelegation#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_impersonationanddelegation/vb/source.vb#2)]  

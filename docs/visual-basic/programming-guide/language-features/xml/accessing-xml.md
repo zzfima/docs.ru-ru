@@ -1,12 +1,13 @@
 ---
-title: "Доступ к XML в Visual Basic"
-ms.custom: 
+title: Доступ к XML в Visual Basic
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - LINQ to XML [Visual Basic], accessing XML
@@ -15,19 +16,19 @@ helpviewer_keywords:
 - XML [Visual Basic], axis properties
 - XML [Visual Basic], accessing
 ms.assetid: c47f88b2-3cbc-4bb1-b4b9-be60f71ffc6a
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 79c7b8a94731e151a803a041d91dd1e240ddeb97
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 064e4b224d37172b8f79e57c73164b90186ef922
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="accessing-xml-in-visual-basic"></a>Доступ к XML в Visual Basic
-[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]предоставляет свойства оси XML для доступа и перемещения по [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] структуры. Эти свойства используют специальный синтаксис для доступа к элементам и атрибутам, указав имена XML.  
+Visual Basic предоставляет свойства оси XML для доступа и перемещения по [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] структуры. Эти свойства используют специальный синтаксис для доступа к элементам и атрибутам, указав имена XML.  
   
- В следующей таблице перечислены возможности языка, которые позволяют получить доступ к XML-элементов и атрибутов в [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
+ В следующей таблице перечислены возможности языка, которые позволяют получить доступ к XML-элементы и атрибуты в Visual Basic.  
   
 ### <a name="xml-axis-properties"></a>Свойства оси XML  
   
@@ -37,9 +38,9 @@ ms.lasthandoff: 10/18/2017
 |*ось атрибутов*|`phone.@type`|Возвращает все `type` атрибуты `phone` элемента.|  
 |*оси-потомка*|`contacts...<name>`|Возвращает все `name` элементы `contacts` элемент, независимо от того, насколько глубоко в иерархии.|  
 |*индексатор расширения*|`contacts...<name>(0)`|Возвращает первый `name` элемента последовательности.|  
-|*value*|`contacts...<name>.Value`|Возвращает строковое представление первого объекта в последовательности, или `Nothing` Если последовательность пуста.|  
+|*значение*|`contacts...<name>.Value`|Возвращает строковое представление первого объекта в последовательности, или `Nothing` Если последовательность пуста.|  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Практическое руководство. Доступ к элементам-потомкам XML](../../../../visual-basic/programming-guide/language-features/xml/how-to-access-xml-descendant-elements.md)  
  Показано, как использовать свойство дочерней оси для доступа ко всем элементам XML, которые имеют указанное имя и расположены под указанным элементом XML.  
   

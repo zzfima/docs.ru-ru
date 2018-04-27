@@ -13,11 +13,11 @@ helpviewer_keywords:
 ms.assetid: 84a0b670-33ae-44c4-a46a-b90388809317
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bb1cc114c2882aa82787f94a271dd7684c716b01
-ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
+ms.openlocfilehash: 195d4b8f8e88d22e63c29ab9152399eb5c4a19df
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="-recurse"></a>-recurse
 Компилирует файлы с исходным кодом во всех дочерних папках указанного каталога или каталога проекта.  
@@ -42,13 +42,13 @@ ms.lasthandoff: 03/22/2018
 >  `-recurse` Параметр недоступен в среде разработки Visual Studio; она доступна только при компиляции из командной строки.  
   
 ## <a name="example"></a>Пример  
- Следующая команда компилирует все [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] файлы в текущем каталоге.  
+ Следующая команда компилирует все файлы Visual Basic в текущем каталоге.  
   
 ```console
 vbc *.vb  
 ```  
   
- Следующая команда компилирует все [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] файлы в `Test\ABC` каталога и любые каталоги под ним, а затем создает `Test.ABC.dll`.  
+ Следующая команда компилирует все файлы Visual Basic в `Test\ABC` каталога и любые каталоги под ним, а затем создает `Test.ABC.dll`.  
   
 ```console
 vbc -target:library -out:Test.ABC.dll -recurse:Test\ABC\*.vb  

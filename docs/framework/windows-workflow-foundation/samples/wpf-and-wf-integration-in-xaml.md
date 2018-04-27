@@ -1,26 +1,27 @@
 ---
-title: "Интеграция WPF и WF в XAML"
-ms.custom: 
+title: Интеграция WPF и WF в XAML
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: a4f53b48-fc90-4315-bca0-ba009562f488
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 327efb0b829e2628328d2e324c0736f8cb423b75
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 0447df0e6d4f14a4171a315858f992ad23d69373
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="wpf-and-wf-integration-in-xaml"></a>Интеграция WPF и WF в XAML
-Этот образец демонстрирует, как создать приложение, которое использует функциональность [!INCLUDE[avalon1](../../../../includes/avalon1-md.md)] и [!INCLUDE[wf](../../../../includes/wf-md.md)] в единственном документе XAML. Для этого в образце используется расширяемость XAML и [!INCLUDE[wf](../../../../includes/wf-md.md)].  
+В этом примере показано, как создать приложение, использующее Windows Presentation Foundation (WPF) и [!INCLUDE[wf](../../../../includes/wf-md.md)] функций в одном документе XAML. Для этого в образце используется расширяемость XAML и [!INCLUDE[wf](../../../../includes/wf-md.md)].  
   
 ## <a name="sample-details"></a>Подробные сведения об образце  
  Файл ShowWindow.xaml десериализуется в действие <xref:System.Activities.Statements.Sequence> с двумя строковыми переменными, которыми управляют действия последовательности: `ShowWindow` и `WriteLine`. Действие <xref:System.Activities.Statements.WriteLine> выводит в окно консоли выражение, которое оно назначает свойству <xref:System.Activities.Statements.WriteLine.Text%2A>. Действие `ShowWindow` отображает окно [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)] как часть его логики выполнения. Контекст <xref:System.Activities.ActivityContext.DataContext%2A> окна включает переменные, объявленные в последовательности. В элементах управления окна, объявленных в действии `ShowWindow`, используется привязка данных для управления этими переменными. Наконец, окно содержит элемент управления в виде кнопки. Событие `Click` для кнопки обрабатывается с помощью <xref:System.Activities.ActivityDelegate> с именем `MarkupExtension`, содержащего действие `CloseWindow`. `MarkUpExtension` вызывает содержащееся действие, которое предоставляет в качестве контекста любые объекты, обозначенные `x:Name`, а также <xref:System.Activities.ActivityContext.DataContext%2A> содержащего окна. Таким образом, окно `CloseWindow.InArgument<Window>` может быть привязано с использованием выражения, которое ссылается на имя окна.  
@@ -51,6 +52,6 @@ ms.lasthandoff: 12/22/2017
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите на страницу [Примеры Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все примеры [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Этот образец расположен в следующем каталоге.  
+>  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) Чтобы загрузить все [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] образцов. Этот образец расположен в следующем каталоге.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\WPFWFIntegration`

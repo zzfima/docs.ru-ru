@@ -1,12 +1,12 @@
 ---
-title: "Правила разработки членов"
-ms.custom: 
+title: Правила разработки членов
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - member design guidelines [.NET Framework], about member design guidelines
@@ -14,18 +14,18 @@ helpviewer_keywords:
 - class library design guidelines [.NET Framework], members
 - member design guidelines [.NET Framework]
 ms.assetid: 0ce93180-1d7b-4f8c-9306-f828b2d66b8f
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: ae69b77098c7f2e1de83eedd40cf0f0da9473326
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 8f4e33735a934b1ac41c34ccb9698c172ada28e1
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="member-design-guidelines"></a>Правила разработки членов
 Методы, свойства, события, конструкторы и поля называются членами. Члены могут в конечном счете средства, с помощью которого framework функциональность предоставляется пользователям платформы.  
@@ -45,7 +45,7 @@ ms.lasthandoff: 12/23/2017
  [Разработка параметров](../../../docs/standard/design-guidelines/parameter-design.md)  
  *Фрагменты © 2005, 2009 корпорации Майкрософт. Все права защищены.*  
   
- *Перепечатываются разрешении Пирсона для образовательных учреждений, Inc. из [Framework рекомендации по проектированию: условные обозначения, стили и шаблоны для библиотеки .NET для повторного использования, 2-е издание](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina и Брэд Абрамс, опубликованные 22 октября 2008 г., Addison-Wesley Professional в составе ряда разработки Microsoft Windows.*  
+ *Перепечатываются разрешении Пирсона для образовательных учреждений, Inc. из [Framework рекомендации по проектированию: условные обозначения, стили и шаблоны для библиотеки .NET для повторного использования, 2-е издание](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina и Брэд Абрамс, опубликованные 22 октября 2008 г., Addison-Wesley Professional в составе ряда разработки Microsoft Windows.*  
   
 ## <a name="see-also"></a>См. также  
  [Рекомендации по проектированию на основе Framework](../../../docs/standard/design-guidelines/index.md)

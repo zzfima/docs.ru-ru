@@ -1,27 +1,29 @@
 ---
-title: "Привязка данных в клиенте Windows Presentation Foundation"
-ms.custom: 
+title: Привязка данных в клиенте Windows Presentation Foundation
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: bb8c8293-5973-4aef-9b07-afeff5d3293c
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 55e60aaba0ebba57668f91d692ce774bd0ef0115
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: d10591866e11bd9e5ae707a0c17c3e293d7f4f71
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="data-binding-in-a-windows-presentation-foundation-client"></a>Привязка данных в клиенте Windows Presentation Foundation
-Этот образец демонстрирует использование привязки данных в клиенте Windows Presentation Foundation (WPF). В образце используется служба [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], которая случайным образом формирует массив альбомов для возвращения клиенту. Каждый альбом имеет имя, цену и список дорожек в альбоме. Каждая дорожка в альбоме имеет имя и длительность. Информация, возвращаемая службой, автоматически привязывается к пользовательскому интерфейсу, предоставляемому клиентом [!INCLUDE[avalon1](../../../../includes/avalon1-md.md)].  
+Этот образец демонстрирует использование привязки данных в клиенте Windows Presentation Foundation (WPF). В образце используется служба [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], которая случайным образом формирует массив альбомов для возвращения клиенту. Каждый альбом имеет имя, цену и список дорожек в альбоме. Каждая дорожка в альбоме имеет имя и длительность. Сведения, возвращаемые службой, автоматически привязывается к пользовательскому интерфейсу (UI), имеющихся в клиенте Windows Presentation Foundation (WPF).  
   
 > [!NOTE]
 >  Процедура настройки и инструкции по построению для данного образца приведены в конце этого раздела.  
@@ -89,7 +91,7 @@ void client_GetAlbumListCompleted(object sender, GetAlbumListCompletedEventArgs 
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите на страницу [Примеры Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все примеры [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Этот образец расположен в следующем каталоге.  
+>  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) Чтобы загрузить все [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] образцов. Этот образец расположен в следующем каталоге.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\DataBinding\WPFDataBinding`  
   

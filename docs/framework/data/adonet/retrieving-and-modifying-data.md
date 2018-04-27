@@ -1,24 +1,26 @@
 ---
-title: "Извлечение и изменение данных в ADO.NET"
-ms.custom: 
+title: Извлечение и изменение данных в ADO.NET
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 722e7f87-3691-46c6-87e8-7d159722d675
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: ff937e619d449fbfbedb234749292b6acc4bdf50
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 05760e7295606f700f72e5a3af14e395bcc5d820
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="retrieving-and-modifying-data-in-adonet"></a>Извлечение и изменение данных в ADO.NET
 Основной функцией любого приложения базы данных является соединение с источником данных и извлечение данных, которые он содержит. Поставщики данных .NET Framework для ADO.NET служат в качестве моста между приложением и источником данных, что позволяет выполнять команды и получать данные с помощью **DataReader** или **DataAdapter** . Ключевой функцией любого приложения базы данных является возможность обновления данных, хранимых в базе данных. В ADO.NET обновление данных включает использование **DataAdapter** и <xref:System.Data.DataSet>, и **команда** объектов; может также включать использование транзакций.  
@@ -43,7 +45,7 @@ ms.lasthandoff: 01/17/2018
  Содержит разделы, в которых описывается выполнение локальных транзакций, распределенных транзакций и работа с оптимистичным параллелизмом.  
   
  [Извлечение идентификации или значений автонумерации](../../../../docs/framework/data/adonet/retrieving-identity-or-autonumber-values.md)  
- Пример сопоставления значений, созданных для **удостоверение** столбца в [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] таблицы или для **Autonumber** в таблицы Microsoft Access, со столбцом вставленной строки в таблице. Рассматривается слияние значений идентификаторов в объекте `DataTable`.  
+ Пример сопоставления значений, созданных для **удостоверение** столбца в таблице SQL Server или для **Autonumber** в таблицы Microsoft Access, со столбцом вставленной строки в таблице. Рассматривается слияние значений идентификаторов в объекте `DataTable`.  
   
  [Извлечение двоичных данных](../../../../docs/framework/data/adonet/retrieving-binary-data.md)  
  Описывается извлечение двоичных данных или крупных структур данных с помощью `CommandBehavior`.`SequentialAccess` для изменения поведения по умолчанию `DataReader`.  
@@ -67,7 +69,7 @@ ms.lasthandoff: 01/17/2018
  Описывает поддержку [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] для асинхронного программирования.  
   
  [Поддержка потоковой передачи SqlClient](../../../../docs/framework/data/adonet/sqlclient-streaming-support.md)  
- Описывает, как создавать приложения с потоком данных из [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] без полной загрузки в память.  
+ Описывается порядок написания приложений, поток данных из SQL Server без необходимости его полной загрузки в память.  
   
 ## <a name="see-also"></a>См. также  
  [Сопоставления типов данных в ADO.NET](../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md)  

@@ -1,18 +1,19 @@
 ---
-title: "Точность прогноза и переместить существующие приложения Azure IaaS"
-description: "Модернизировать существующие приложения .NET с облако Azure и контейнеров Windows."
+title: Точность прогноза и переместить существующие приложения Azure IaaS
+description: Модернизировать существующие приложения .NET с облако Azure и контейнеров Windows.
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/26/2017
 ms.prod: .net
+ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 6811da4b59531e27f2d832c102d37ba1383b15ab
-ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
+ms.openlocfilehash: d7922ad3a3cd5346f81008e1841a55b5e3663832
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="lift-and-shift-existing-apps-azure-iaas"></a>Точность прогноза и переместить существующие приложения Azure IaaS
 
@@ -26,7 +27,7 @@ ms.lasthandoff: 03/08/2018
 
 ![Позиционирование инфраструктуры готовую для облачных приложений](./media/image2-1.png)
 
-> **Рис. 2-1.** Позиционирование инфраструктуры готовую для облачных приложений
+> **Рис. 2-1.** Позиционирование инфраструктуры готовую для облачных приложений
 
 ## <a name="why-migrate-existing-net-web-applications-to-azure-iaas"></a>Почему необходимо выполнить миграцию существующих веб-приложений .NET в Azure IaaS
 
@@ -88,7 +89,7 @@ Site Recovery также созданы специально для гибрид
 
 - **Azure переноса таблицы данных**
 
-    [https://aka.ms/azuremigration\_datasheet](https://aka.ms/azuremigration\_datasheet)
+    [https://aka.ms/azuremigration\_Таблицы данных](https://aka.ms/azuremigration\_datasheet)
 
 - **Перенос в Azure**
 

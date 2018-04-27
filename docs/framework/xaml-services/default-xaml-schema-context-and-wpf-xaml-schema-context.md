@@ -1,24 +1,26 @@
 ---
-title: "Контекст схемы языка XAML по умолчанию и контекст схемы языка XAML WPF"
-ms.custom: 
+title: Контекст схемы языка XAML по умолчанию и контекст схемы языка XAML WPF
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 04e06a15-09b3-4210-9bdf-9a64c2eccb83
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 9ee7c83868934f1a524bb0068ea5e749e6cbfab4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: ec5e29ae9022470f8b583dc1b673a0b93040c862
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="default-xaml-schema-context-and-wpf-xaml-schema-context"></a>Контекст схемы языка XAML по умолчанию и контекст схемы языка XAML WPF
 Контекст схемы XAML представляет собой концептуальную сущность, который определяет, каким образом рабочей среды XAML, который использует определенный словарь XAML взаимодействует с поведением записи объектов, включая порядок разрешения сопоставлений типов, как сборки загружаются, как определенные средства чтения и записи параметры интерпретируются. В этом разделе описываются функции служб XAML .NET Framework и контекст схемы XAML по умолчанию, которая основана на системе типов среды CLR. Кроме того, в этом разделе описывается контекст схемы XAML, который используется для WPF.  
@@ -35,7 +37,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="wpf-xaml-schema-context"></a>Контекст схемы XAML WPF  
  Контекст схемы WPF XAML описан в данном разделе, так как реализация WPF приведена иллюстрация интересных возможностей, которые можно получить путем реализации контекста схемы XAML не по умолчанию. Кроме того концепции контекста схемы XAML не рассматривается сильно в документации по WPF, который обращается WPF XAML; поведение, которое обеспечивает контекст схемы XAML может быть только полного понимания описание того, как работает контекст схемы XAML по умолчанию. Контекст схемы XAML в WPF реализует следующее поведение.  
   
- **Переопределяет уточняющего запроса:** WPF имеется несколько моделей содержимого для XAML там, где имеются свойства содержимого XAML, работающие без, <xref:System.Windows.Markup.ContentPropertyAttribute> атрибутами. <xref:System.Xaml.XamlType.LookupContentProperty%2A>переопределения для WPF реализации этого поведения.  
+ **Переопределяет уточняющего запроса:** WPF имеется несколько моделей содержимого для XAML там, где имеются свойства содержимого XAML, работающие без, <xref:System.Windows.Markup.ContentPropertyAttribute> атрибутами. <xref:System.Xaml.XamlType.LookupContentProperty%2A> переопределения для WPF реализации этого поведения.  
   
  **Задержка для выражений WPF:** WPF функции несколько классов выражение, значение отложить, пока не станет доступен контекст среды выполнения. Кроме того расширение шаблона — поведение во время выполнения, который основывается на методиках отсрочки.  
   
@@ -68,7 +70,7 @@ ms.lasthandoff: 12/22/2017
     -   Если имя не определено в сопоставлении, вызовите <xref:System.Reflection.Assembly.LoadWithPartialName%2A?displayProperty=nameWithType>.  
   
 #### <a name="xamlbuildtask"></a>XamlBuildTask  
- `XamlBuildTask`используется для [!INCLUDE[vsindigo](../../../includes/vsindigo-md.md)] и [!INCLUDE[TLA#tla_workflow](../../../includes/tlasharptla-workflow-md.md)].  
+ `XamlBuildTask` используется для [!INCLUDE[vsindigo](../../../includes/vsindigo-md.md)] и Windows Workflow Foundation.  
   
  Обратите внимание, что в ссылки на сборку `XamlBuildTask` всегда являются полными.  
   

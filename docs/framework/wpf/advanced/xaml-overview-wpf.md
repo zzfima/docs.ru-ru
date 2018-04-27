@@ -1,12 +1,13 @@
 ---
-title: "Обзор XAML (WPF)"
-ms.custom: 
+title: Обзор XAML (WPF)
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -26,16 +27,17 @@ helpviewer_keywords:
 - Extensible Application Markup Language (see XAML)
 - attribute syntax [XAML]
 ms.assetid: a80db4cd-dd0f-479f-a45f-3740017c22e4
-caps.latest.revision: "57"
+caps.latest.revision: 57
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ce83713d2483320569bde0d5c9a677f0b357ebf2
-ms.sourcegitcommit: c3ebb11a66e85a465c9ba2c42592222630b7ff9e
+ms.workload:
+- dotnet
+ms.openlocfilehash: 87785d6bba58442a1a5ad27f5304aa63e16c1aa9
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="xaml-overview-wpf"></a>Обзор XAML (WPF)
 В этом разделе описаны возможности языка XAML и показано, как использовать язык XAML для написания приложений [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. В частности, в этом разделе описывается реализация XAML в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Сам язык XAML — это более широкое понятие языка, чем [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
@@ -146,7 +148,7 @@ ms.lasthandoff: 01/25/2018
   
  Здесь каждого <xref:System.Windows.Controls.Button> является дочерним элементом элемента <xref:System.Windows.Controls.StackPanel>. Это рациональная и интуитивно понятная разметка, в которой опущены два тега по двум разным причинам.  
   
--   **Пропущенный элемент свойства StackPanel.Children:** <xref:System.Windows.Controls.StackPanel> является производным от <xref:System.Windows.Controls.Panel>. <xref:System.Windows.Controls.Panel>Определяет <xref:System.Windows.Controls.Panel.Children%2A?displayProperty=nameWithType> свойства содержимого XAML.  
+-   **Пропущенный элемент свойства StackPanel.Children:** <xref:System.Windows.Controls.StackPanel> является производным от <xref:System.Windows.Controls.Panel>. <xref:System.Windows.Controls.Panel> Определяет <xref:System.Windows.Controls.Panel.Children%2A?displayProperty=nameWithType> свойства содержимого XAML.  
   
 -   **Пропущенный элемент объекта UIElementCollection:** <xref:System.Windows.Controls.Panel.Children%2A?displayProperty=nameWithType> свойство принимает тип <xref:System.Windows.Controls.UIElementCollection>, который реализует <xref:System.Collections.IList>. Тег элемента коллекции можно опустить, на основе правил XAML для обработки коллекций, такие как <xref:System.Collections.IList>. (В этом случае <xref:System.Windows.Controls.UIElementCollection> фактически не может быть создан, поскольку он не предоставляет конструктор по умолчанию, и поэтому <xref:System.Windows.Controls.UIElementCollection> показан закомментированным элемент объекта).  
   
@@ -192,7 +194,7 @@ ms.lasthandoff: 01/25/2018
 ## <a name="type-converters"></a>Преобразователи типов  
  В разделе [Краткое описание синтаксиса XAML](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md#xaml_syntax_in_brief) было отмечено, что необходимо обеспечить возможность задать значение атрибута строкой. Основная, исходная обработка преобразования строк в другие типы объектов или простые значения основана на <xref:System.String> сами типы, в дополнение к собственной обработки для определенных типов, таких как <xref:System.DateTime> или <xref:System.Uri>. Но многие типы [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] или члены этих типов расширяют основное поведение обработки атрибутов строк таким образом, что экземпляры более сложных типов объектов могут быть заданы как строки и атрибуты.  
   
- <xref:System.Windows.Thickness> Структуры является примером типа, для которого включено преобразование типа для использований XAML. <xref:System.Windows.Thickness>Указывает измерения в рамках вложенного прямоугольника и используется в качестве значения для свойств, таких как <xref:System.Windows.FrameworkElement.Margin%2A>. Размещая преобразователя типов на <xref:System.Windows.Thickness>, все свойства, использующие <xref:System.Windows.Thickness> легче указать в XAML, так как они могут быть указаны как атрибуты. В следующем примере используется синтаксис преобразования и атрибут типа для предоставления значения для <xref:System.Windows.FrameworkElement.Margin%2A>:  
+ <xref:System.Windows.Thickness> Структуры является примером типа, для которого включено преобразование типа для использований XAML. <xref:System.Windows.Thickness> Указывает измерения в рамках вложенного прямоугольника и используется в качестве значения для свойств, таких как <xref:System.Windows.FrameworkElement.Margin%2A>. Размещая преобразователя типов на <xref:System.Windows.Thickness>, все свойства, использующие <xref:System.Windows.Thickness> легче указать в XAML, так как они могут быть указаны как атрибуты. В следующем примере используется синтаксис преобразования и атрибут типа для предоставления значения для <xref:System.Windows.FrameworkElement.Margin%2A>:  
   
  [!code-xaml[XAMLOvwSupport#MarginTCE](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page7.xaml#margintce)]  
   
@@ -260,7 +262,7 @@ ms.lasthandoff: 01/25/2018
   
 <a name="events_and_xaml_codebehind"></a>   
 ## <a name="events-and-xaml-code-behind"></a>События и код программной части XAML  
- В большинстве приложений [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] содержатся как разметка XAML, так и код программной части. В проекте XAML-код записывается как файл с расширением `.xaml`, а для записи файла с кодом программной части используется язык [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)], например [!INCLUDE[TLA#tla_visualb](../../../../includes/tlasharptla-visualb-md.md)] или [!INCLUDE[TLA#tla_cshrp](../../../../includes/tlasharptla-cshrp-md.md)]. При компиляции разметки в файле XAML (в составе модели приложений и программирования WPF) расположение файла кода программной части для файла XAML определяется путем указания пространства имен и класса как атрибута `x:Class` корневого элемента XAML-кода.  
+ В большинстве приложений [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] содержатся как разметка XAML, так и код программной части. В рамках проекта XAML записывается как `.xaml` файла и [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] языка, например Microsoft Visual Basic или C# используется для записи в файл кода. При компиляции разметки в файле XAML (в составе модели приложений и программирования WPF) расположение файла кода программной части для файла XAML определяется путем указания пространства имен и класса как атрибута `x:Class` корневого элемента XAML-кода.  
   
  В приведенных примерах было использовано несколько кнопок, но ни с одной из этих кнопок не было ассоциировано логическое поведение. Первичным механизмом добавления поведения для объектного элемента на уровне приложения является использование существующего события элементного класса и написание специального обработчика для этого события, которое вызывается при возникновении этого события во время выполнения. Имя события и имя обработчика для использования указываются в разметке, тогда как код, который реализует обработчик, определен в коде программной части.  
   
@@ -314,7 +316,7 @@ ms.lasthandoff: 01/25/2018
   
 <a name="base_classes_and_xaml"></a>   
 ## <a name="base-types-and-xaml"></a>Базовые типы и язык XAML  
- Базовая платформа XAML WPF и его пространство имен XAML представляют собой коллекцию типов, которые соответствуют объектам [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)], а также элементы разметки для XAML. Однако не все классы могут сопоставляться с элементами. Абстрактные классы, такие как <xref:System.Windows.Controls.Primitives.ButtonBase>, и некоторые неабстрактные базовые классы используются для наследования в [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] модели объектов. Базовые классы, включая абстрактные, по-прежнему важны для разработки XAML, так как каждый из элементов XAML наследует члены некоторого базового класса в своей иерархии. Часто эти члены включают в себя свойства, которые можно задать в качестве атрибутов в элементе или событий, которые могут быть обработаны. <xref:System.Windows.FrameworkElement>— конкретный базовый [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] класс [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] на уровне framework WPF. При проектировании [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)], будут использовать различные фигуры, панели, decorator или классы элементов управления, где все являются производными от <xref:System.Windows.FrameworkElement>. Связанный базовый класс, <xref:System.Windows.FrameworkContentElement>, поддерживает ориентированные на элементы, которые работают подходит для представления макета потока, используя [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] , намеренно дублирующие [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] в <xref:System.Windows.FrameworkElement>. Сочетание атрибутов на уровне элементов и объектной модели [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] обеспечивает набор общих свойств, которые можно задать для большинства конкретных элементов XAML, независимо от типа элемента XAML и его базового типа.  
+ Базовая платформа XAML WPF и его пространство имен XAML представляют собой коллекцию типов, которые соответствуют объектам [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)], а также элементы разметки для XAML. Однако не все классы могут сопоставляться с элементами. Абстрактные классы, такие как <xref:System.Windows.Controls.Primitives.ButtonBase>, и некоторые неабстрактные базовые классы используются для наследования в [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] модели объектов. Базовые классы, включая абстрактные, по-прежнему важны для разработки XAML, так как каждый из элементов XAML наследует члены некоторого базового класса в своей иерархии. Часто эти члены включают в себя свойства, которые можно задать в качестве атрибутов в элементе или событий, которые могут быть обработаны. <xref:System.Windows.FrameworkElement> — конкретный базовый [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] класс [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] на уровне framework WPF. При проектировании [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)], будут использовать различные фигуры, панели, decorator или классы элементов управления, где все являются производными от <xref:System.Windows.FrameworkElement>. Связанный базовый класс, <xref:System.Windows.FrameworkContentElement>, поддерживает ориентированные на элементы, которые работают подходит для представления макета потока, используя [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] , намеренно дублирующие [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] в <xref:System.Windows.FrameworkElement>. Сочетание атрибутов на уровне элементов и объектной модели [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] обеспечивает набор общих свойств, которые можно задать для большинства конкретных элементов XAML, независимо от типа элемента XAML и его базового типа.  
   
 <a name="xaml_security"></a>   
 ## <a name="xaml-security"></a>Безопасность в XAML  
@@ -332,7 +334,7 @@ ms.lasthandoff: 01/25/2018
   
  Если вы еще не сделано, выполните упражнения из раздела руководства [Пошаговое руководство: My первого классического приложения WPF](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md). При создании приложения, ориентированного на разметку и описанного в руководстве, упражнения помогут лучше осознать многие понятия, описанные в этом разделе.  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]использует конкретную модель приложения на основе <xref:System.Windows.Application> класса. Дополнительные сведения см. в разделе [Общие сведения об управлении приложением](../../../../docs/framework/wpf/app-development/application-management-overview.md).  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] использует конкретную модель приложения на основе <xref:System.Windows.Application> класса. Дополнительные сведения см. в разделе [Общие сведения об управлении приложением](../../../../docs/framework/wpf/app-development/application-management-overview.md).  
   
  В разделе [Построение приложения WPF](../../../../docs/framework/wpf/app-development/building-a-wpf-application-wpf.md) представлены дополнительные сведения о том, как построить включающие XAML приложения из командной строки и в [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)].  
   

@@ -1,26 +1,26 @@
 ---
-title: "Сопоставления типов данных SQL Server"
-ms.custom: 
+title: Сопоставления типов данных SQL Server
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-ado
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: fafdc31a-f435-4cd3-883f-1dfadd971277
-caps.latest.revision: 
+caps.latest.revision: 8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload:
 - dotnet
-ms.openlocfilehash: 812b953935d17320d83e3752d8c7fd600af15533
-ms.sourcegitcommit: c3957fdb990060559d73cca44ab3e2c7b4d049c0
+ms.openlocfilehash: e1af00ba0a1f631868711f191c028a04c5e0441a
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sql-server-data-type-mappings"></a>Сопоставления типов данных SQL Server
 В SQL Server и .NET Framework используются различные системы типов. Например, максимальная разрядность структуры .NET Framework <xref:System.Decimal> составляет 28, в то время как максимальная разрядность десятичных и числовых типов данных SQL Server - 38. Чтобы обеспечить целостность данных при чтении и записи, объект <xref:System.Data.SqlClient.SqlDataReader> предоставляет характерные для SQL Server типизированные методы доступа, возвращающие объекты <xref:System.Data.SqlTypes>, а также методы доступа, возвращающие типы .NET Framework. Типы данных SQL Server и .NET Framework также представлены перечислениями в классах <xref:System.Data.DbType> и <xref:System.Data.SqlDbType>, которые можно использовать при указании типов данных <xref:System.Data.SqlClient.SqlParameter>.  
@@ -65,8 +65,8 @@ ms.lasthandoff: 03/05/2018
 <sup>1</sup> не удается задать `DbType` свойство `SqlParameter` для `SqlDbType.Date`.  
 <sup>2</sup> используйте конкретный типизированный метод доступа, если известен базовый тип `sql_variant`.  
   
-## <a name="includessnoversionincludesssnoversion-mdmd-books-online-reference"></a>[!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] Ссылка на раздел электронной документации  
- Дополнительные сведения о [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] типов данных в разделе [типы данных (СУБД)](http://go.microsoft.com/fwlink/?LinkID=107468).  
+## <a name="sql-server-books-online-reference"></a>Ссылка на раздел электронной документации по SQL Server  
+ Дополнительные сведения о типах данных SQL Server см. в разделе [типы данных (СУБД)](http://go.microsoft.com/fwlink/?LinkID=107468).  
   
 ## <a name="see-also"></a>См. также  
  [Типы данных SQL Server и ADO.NET](../../../../docs/framework/data/adonet/sql/sql-server-data-types.md)  

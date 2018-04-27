@@ -1,12 +1,13 @@
 ---
-title: "Практическое руководство. Определение возможности печати в заданное время суток"
-ms.custom: 
+title: Практическое руководство. Определение возможности печати в заданное время суток
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -17,23 +18,24 @@ helpviewer_keywords:
 - printers [WPF], availability
 - print jobs [WPF], timing
 ms.assetid: 7e9c8ec1-abf6-4b3d-b1c6-33b35d3c4063
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ef9da205792823b7069024c5e4a3e9ac80d60a24
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: eef74cfa290614e530fa22a34533c7924d4af1b4
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-discover-whether-a-print-job-can-be-printed-at-this-time-of-day"></a>Практическое руководство. Определение возможности печати в заданное время суток
 Очереди печати не всегда доступны на 24 часа в сутки. Они имеют свойства времени начала и окончания, можно задать, чтобы сделать недоступным в определенное время дня. Эта функция используется, например, чтобы зарезервировать принтер для монопольного использования определенным отделом после 17: 00. Этот отдел будет иметь другой очереди обслуживания принтера от других отделов используйте. Будет иметь значение в очередь для других отделов станет недоступной после 17: 00, пока очередь для привилегированного отдела может быть задано равным доступны в любое время.  
   
  Кроме того задания печати, сами можно задать для печати только в указанный промежуток времени.  
   
- <xref:System.Printing.PrintQueue> И <xref:System.Printing.PrintSystemJobInfo> классы представлены в [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)] из [!INCLUDE[TLA#tla_winfx](../../../../includes/tlasharptla-winfx-md.md)] предоставляют средства для удаленной проверки, является ли данное задание печати можно напечатать из данной очереди в настоящее время.  
+ <xref:System.Printing.PrintQueue> И <xref:System.Printing.PrintSystemJobInfo> классы представлены в [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)] платформы Microsoft .NET Framework предоставляют средства для удаленной проверки, является ли данное задание печати можно напечатать из данной очереди в настоящее время.  
   
 ## <a name="example"></a>Пример  
  В приведенном ниже примере — это пример, можно диагностировать проблемы с задание печати.  
@@ -79,7 +81,7 @@ ms.lasthandoff: 12/22/2017
  [!code-csharp[DiagnoseProblematicPrintJob#PrintQueueStartUntil](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CSharp/Program.cs#printqueuestartuntil)]
  [!code-vb[DiagnoseProblematicPrintJob#PrintQueueStartUntil](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/visualbasic/program.vb#printqueuestartuntil)]  
   
- **TimeConverter.ConvertToLocalHumanReadableTime** (представленных в следующем примере кода) метод не использует методы, появившиеся в [!INCLUDE[TLA#tla_winfx](../../../../includes/tlasharptla-winfx-md.md)], поэтому краткое описание. Этот метод имеет задачу двойного преобразования: он должен принимать целое число минут после полуночи выражения и преобразовать его в удобное для восприятия времени, и его необходимо преобразовать в местное время. Это делается путем первоначального создания <xref:System.DateTime> объекта, устанавливается значение полуночи в формате UTC, а затем использует <xref:System.DateTime.AddMinutes%2A> метод, чтобы добавить минут, которые были переданы в метод. Возвращает новый <xref:System.DateTime> содержащий исходное время, которое было передано в метод. <xref:System.DateTime.ToLocalTime%2A> Метод затем преобразует это в местное время.  
+ **TimeConverter.ConvertToLocalHumanReadableTime** метод (представленных в следующем примере кода) не использует все методы, появившиеся в Microsoft .NET Framework, поэтому краткое описание. Этот метод имеет задачу двойного преобразования: он должен принимать целое число минут после полуночи выражения и преобразовать его в удобное для восприятия времени, и его необходимо преобразовать в местное время. Это делается путем первоначального создания <xref:System.DateTime> объекта, устанавливается значение полуночи в формате UTC, а затем использует <xref:System.DateTime.AddMinutes%2A> метод, чтобы добавить минут, которые были переданы в метод. Возвращает новый <xref:System.DateTime> содержащий исходное время, которое было передано в метод. <xref:System.DateTime.ToLocalTime%2A> Метод затем преобразует это в местное время.  
   
  [!code-cpp[DiagnoseProblematicPrintJob#TimeConverter](../../../../samples/snippets/cpp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CPP/Program.cpp#timeconverter)]
  [!code-csharp[DiagnoseProblematicPrintJob#TimeConverter](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CSharp/Program.cs#timeconverter)]

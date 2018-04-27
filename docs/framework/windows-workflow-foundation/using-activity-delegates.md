@@ -1,23 +1,24 @@
 ---
-title: "Использование делегатов действий"
-ms.custom: 
+title: Использование делегатов действий
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: e33cf876-8979-440b-9b23-4a12d1139960
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 82aafd49528e7ce36f9cf09b7402e65d0844f797
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: efec9885ae804263f7ae4c6d1d5c3bc4f39831c9
+ms.sourcegitcommit: 68b60d38043e50104ccc90c76f8599b1ffe18346
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="using-activity-delegates"></a>Использование делегатов действий
 Делегаты действий позволяют создателям действий предоставлять обратные вызовы с определенными сигнатурами, для которых пользователи действия могут предоставить обработчики, основанные на действиях. Доступны два типа делегатов действия: <xref:System.Activities.ActivityAction%601> используется для определения делегатов действий, которые не возвращают значение, а <xref:System.Activities.ActivityFunc%601> используется для определения делегатов действий, которые возвращают значение.  
@@ -37,7 +38,7 @@ ms.lasthandoff: 12/22/2017
   
  [!code-csharp[CFX_ActivityExample#7](../../../samples/snippets/csharp/VS_Snippets_CFX/CFX_ActivityExample/cs/Program.cs#7)]  
   
- [!INCLUDE[crabout](../../../includes/crabout-md.md)]инициализаторах объектов см. в разделе [как: инициализация объектов без вызова конструктора (руководство по программированию на C#)](http://go.microsoft.com/fwlink/?LinkId=161015) и [как: объявление объекта с помощью инициализатора объектов](http://go.microsoft.com/fwlink/?LinkId=161016).  
+ [!INCLUDE[crabout](../../../includes/crabout-md.md)] инициализаторах объектов см. в разделе [как: инициализация объектов без вызова конструктора (руководство по программированию на C#)](http://go.microsoft.com/fwlink/?LinkId=161015) и [как: объявление объекта с помощью инициализатора объектов](http://go.microsoft.com/fwlink/?LinkId=161016).  
   
  В следующем примере действие <xref:System.Activities.Statements.TryCatch> используется в рабочем процессе. <xref:System.ApplicationException> вызывается рабочим процессом и обрабатывается действием <xref:System.Activities.Statements.Catch%601>. Обработчик <xref:System.Activities.Statements.Catch%601> действия операции действия является <xref:System.Activities.Statements.WriteLine> действия и сведения об исключениях передаются в него с помощью `ex` <xref:System.Activities.DelegateInArgument%601>.  
   
@@ -62,7 +63,7 @@ ms.lasthandoff: 12/22/2017
   
  [!code-csharp[CFX_ActivityExample#4](../../../samples/snippets/csharp/VS_Snippets_CFX/CFX_ActivityExample/cs/Program.cs#4)]  
   
- Чтобы использовать действие `TextGenerator` с действием `WriteRandomText`, задайте его в виде <xref:System.Activities.ActivityDelegate.Handler%2A>.  
+ Чтобы использовать действие `TextGenerator` с действием `WriteFillerText`, задайте его в виде <xref:System.Activities.ActivityDelegate.Handler%2A>.  
   
  [!code-csharp[CFX_ActivityExample#5](../../../samples/snippets/csharp/VS_Snippets_CFX/CFX_ActivityExample/cs/Program.cs#5)]  
   

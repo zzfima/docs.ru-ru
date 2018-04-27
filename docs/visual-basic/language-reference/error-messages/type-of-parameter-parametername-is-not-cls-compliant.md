@@ -1,9 +1,9 @@
 ---
-title: "Тип параметра &#39; &lt;имя_параметра&gt;&#39; не является CLS-совместимым"
+title: Тип параметра &#39; &lt;имя_параметра&gt; &#39; не является CLS-совместимым
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - devlang-visual-basic
 ms.topic: article
@@ -13,21 +13,21 @@ f1_keywords:
 helpviewer_keywords:
 - BC40028
 ms.assetid: dfa1f6f9-bb88-44ad-b85f-149144363d41
-caps.latest.revision: 
+caps.latest.revision: 11
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 1c017e5e6791f6a41ab8137c549a30b76713cb7c
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: d34de9e5914b02a0e878b87e786b81a5940a6d85
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="type-of-parameter-39ltparameternamegt39-is-not-cls-compliant"></a>Тип параметра &#39; &lt;имя_параметра&gt;&#39; не является CLS-совместимым
+# <a name="type-of-parameter-39ltparameternamegt39-is-not-cls-compliant"></a>Тип параметра &#39; &lt;имя_параметра&gt; &#39; не является CLS-совместимым
 Процедура помечена как `<CLSCompliant(True)>` , но объявляет параметр с типом, который помечен как `<CLSCompliant(False)>`, не помечен или не квалифицирован, так как он имеет несоответствующий тип.  
   
  Для соответствия требованиям, описанным в статье [Независимость от языка и независимые от языка компоненты](../../../standard/language-independence-and-language-independent-components.md) (CLS), процедура должна использовать только типы, соответствующие CLS. Это касается типов параметров, типа возвращаемого значения и типов всех локальных переменных.  
   
- Следующие типы данных [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] не соответствуют CLS:  
+ Следующие типы данных Visual Basic не являются CLS-совместимыми:  
   
 -   [Тип данных SByte](../../../visual-basic/language-reference/data-types/sbyte-data-type.md)  
   
@@ -51,4 +51,4 @@ ms.lasthandoff: 12/21/2017
   
 -   Если процедура должна быть CLS-совместимыми, измените тип этого параметра на ближайший CLS-совместимый тип. Например, вместо `UInteger` вы можете использовать `Integer` , если вам не нужен диапазон значений, превышающий 2 147 483 647. Если вам нужен расширенный диапазон, вы можете заменить `UInteger` на `Long`.  
   
--   При взаимодействии с объектами службы автоматизации или COM-объектами помните, что длина данных некоторых типов отличается от длины данных в [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Например, данные типа `int` часто являются 16-битными в других средах. Если вы принимаете 16-битное целое число из таких компонентов, объявите его как `Short` (а не `Integer`) в управляемом коде [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].
+-   При взаимодействии с объектами службы автоматизации или COM-объектами помните, что длина данных некоторых типов отличается от длины данных в [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Например, данные типа `int` часто являются 16-битными в других средах. Если вы принимаете 16-разрядное целое из таких компонентов, объявите его как `Short` вместо `Integer` в управляемом коде Visual Basic.

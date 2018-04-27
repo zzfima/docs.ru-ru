@@ -1,22 +1,23 @@
 ---
-title: "Секционирование данных (Visual Basic)"
-ms.custom: 
+title: Секционирование данных (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 69c59379-b66e-422c-b324-5b5c07760ef7
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 0ea305a67765e1b11ceebbf65c48a685024a41f3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 01e4e6d6db07a520b97911de5388b8e42b7e1acc
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="partitioning-data-visual-basic"></a>Секционирование данных (Visual Basic)
 Секционированием в LINQ называют операцию разделения входной последовательности на два раздела без изменения порядка элементов, а затем возвращения одного из разделов.  
@@ -38,23 +39,23 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="query-expression-syntax-examples"></a>Примеры синтаксиса выражений запросов  
   
-### <a name="skip"></a>Пропустить  
- Следующий пример кода использует `Skip` предложения в [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] для пропуска первых четырех строк в массиве строк перед возвращением оставшихся строк в массиве.  
+### <a name="skip"></a>Skip  
+ Следующий пример кода использует `Skip` предложение в Visual Basic для пропуска первых четырех строк в массиве строк перед возвращением оставшихся строк в массиве.  
   
  [!code-vb[CsLINQPartitioning#1](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/partitioning-data_1.vb)]  
   
 ### <a name="skipwhile"></a>SkipWhile  
- Следующий пример кода использует `Skip While` предложения в [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] для пропуска строк в массиве, начинающихся с буквы «». Возвращаются оставшиеся строки в массиве.  
+ Следующий пример кода использует `Skip While` предложения в Visual Basic для пропуска строк в массиве во время первой буквой строки «». Возвращаются оставшиеся строки в массиве.  
   
  [!code-vb[CsLINQPartitioning#2](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/partitioning-data_2.vb)]  
   
 ### <a name="take"></a>Take  
- Следующий пример кода использует `Take` предложения в [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] для возврата первых двух строк в массиве строк.  
+ Следующий пример кода использует `Take` предложение в Visual Basic для возврата первых двух строк в массиве строк.  
   
  [!code-vb[CsLINQPartitioning#3](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/partitioning-data_3.vb)]  
   
 ### <a name="takewhile"></a>TakeWhile  
- Следующий пример кода использует `Take While` предложения в [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] для получения строк из массива, тогда как длина строки меньше пяти.  
+ Следующий пример кода использует `Take While` предложение в Visual Basic для получения строк из массива, тогда как длина строки меньше пяти.  
   
  [!code-vb[CsLINQPartitioning#4](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/partitioning-data_4.vb)]  
   

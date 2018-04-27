@@ -1,13 +1,13 @@
 ---
-title: "Общие сведения об управлении приложением"
-ms.custom: 
+title: Общие сведения об управлении приложением
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-wpf
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - application management [WPF]
 ms.assetid: 32b1c054-5aca-423b-b4b5-ed8dc4dc637d
-caps.latest.revision: 
+caps.latest.revision: 56
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: a881793c50a4ce506e752774e70e0904e30525c1
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 96a1ae8dce80588b296d9ab7fc9dff60fb7a04f0
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="application-management-overview"></a>Общие сведения об управлении приложением
 Все приложения имеют тенденцию совместно использовать общий набор функциональных возможностей, который применяется к реализации приложения и управлению им. Этот раздел содержит обзор функций в <xref:System.Windows.Application> класс для создания и управления приложениями.  
@@ -128,7 +128,7 @@ ms.lasthandoff: 01/19/2018
  [!code-csharp[ApplicationManagementOverviewSnippets#GetCurrentAppCODE](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ApplicationManagementOverviewSnippets/CSharp/MainWindow.xaml.cs#getcurrentappcode)]
  [!code-vb[ApplicationManagementOverviewSnippets#GetCurrentAppCODE](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ApplicationManagementOverviewSnippets/VisualBasic/MainWindow.xaml.vb#getcurrentappcode)]  
   
- <xref:System.Windows.Application.Current%2A>Возвращает ссылку на экземпляр <xref:System.Windows.Application> класса. Если требуется ссылку на ваш <xref:System.Windows.Application> производного класса, необходимо привести значение <xref:System.Windows.Application.Current%2A> свойства, как показано в следующем примере.  
+ <xref:System.Windows.Application.Current%2A> Возвращает ссылку на экземпляр <xref:System.Windows.Application> класса. Если требуется ссылку на ваш <xref:System.Windows.Application> производного класса, необходимо привести значение <xref:System.Windows.Application.Current%2A> свойства, как показано в следующем примере.  
   
  [!code-csharp[ApplicationManagementOverviewSnippets#GetSTCurrentAppCODE](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ApplicationManagementOverviewSnippets/CSharp/MainWindow.xaml.cs#getstcurrentappcode)]
  [!code-vb[ApplicationManagementOverviewSnippets#GetSTCurrentAppCODE](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ApplicationManagementOverviewSnippets/VisualBasic/MainWindow.xaml.vb#getstcurrentappcode)]  
@@ -159,7 +159,7 @@ ms.lasthandoff: 01/19/2018
   
 <a name="Showing_a_User_Interface"></a>   
 ### <a name="showing-a-user-interface"></a>Отображение пользовательского интерфейса  
- Большинство автономных [!INCLUDE[TLA2#tla_mswin](../../../../includes/tla2sharptla-mswin-md.md)] приложений откройте <xref:System.Windows.Window> когда начинается выполнение. <xref:System.Windows.Application.Startup> Обработчик событий — одно расположение, из которого можно сделать это, как показано в следующем примере кода.  
+ Большинство автономных приложений Windows откройте <xref:System.Windows.Window> когда начинается выполнение. <xref:System.Windows.Application.Startup> Обработчик событий — одно расположение, из которого можно сделать это, как показано в следующем примере кода.  
   
  [!code-xaml[AppShowWindowHardSnippets#StartupEventMARKUP](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AppShowWindowHardSnippets/CSharp/App.xaml#startupeventmarkup)]  
   
@@ -195,7 +195,7 @@ ms.lasthandoff: 01/19/2018
   
 <a name="Processing_Command_Line_Arguments"></a>   
 ### <a name="processing-command-line-arguments"></a>Обработка аргументов командной строки  
- В [!INCLUDE[TLA2#tla_mswin](../../../../includes/tla2sharptla-mswin-md.md)], автономные приложения можно запустить из командной строки или с рабочего стола. В обоих случаях аргументы командной строки могут быть переданы приложению. В приведенном ниже примере показано приложение, которое запускается с одним аргументом командной строки /StartMinimized:  
+ В Windows автономные приложения можно запустить из командной строки или с рабочего стола. В обоих случаях аргументы командной строки могут быть переданы приложению. В приведенном ниже примере показано приложение, которое запускается с одним аргументом командной строки /StartMinimized:  
   
  `wpfapplication.exe /StartMinimized`  
   
@@ -208,11 +208,11 @@ ms.lasthandoff: 01/19/2018
   
  Код обрабатывает <xref:System.Windows.Application.Startup> для проверки ли **/StartMinimized** предоставленный аргумент командной строки, в этом случае он открывает главное окно с <xref:System.Windows.WindowState> из <xref:System.Windows.WindowState.Minimized>. Обратите внимание, что поскольку <xref:System.Windows.Window.WindowState%2A> свойство должно быть задано программным путем, главный <xref:System.Windows.Window> должен открываться явно в коде.  
   
- [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]не удается получить и обработать аргументы командной строки, так как они запускаются с помощью [!INCLUDE[TLA#tla_clickonce](../../../../includes/tlasharptla-clickonce-md.md)] развертывания (см. [развертывания приложения WPF](../../../../docs/framework/wpf/app-development/deploying-a-wpf-application-wpf.md)). Однако они могут извлекать и обрабатывать строковые параметры запроса из URL-адресов, которые используются для их запуска.  
+ [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] не удается получить и обработать аргументы командной строки, так как они запускаются с помощью [!INCLUDE[TLA#tla_clickonce](../../../../includes/tlasharptla-clickonce-md.md)] развертывания (см. [развертывания приложения WPF](../../../../docs/framework/wpf/app-development/deploying-a-wpf-application-wpf.md)). Однако они могут извлекать и обрабатывать строковые параметры запроса из URL-адресов, которые используются для их запуска.  
   
 <a name="Application_Activation_and_Deactivation"></a>   
 ### <a name="application-activation-and-deactivation"></a>Активация и отключение приложения  
- [!INCLUDE[TLA2#tla_mswin](../../../../includes/tla2sharptla-mswin-md.md)] позволяет пользователям переключаться между приложениями. Наиболее простой способ — использовать клавиши ALT+TAB. Приложение может быть переключено, только если оно содержит видимое <xref:System.Windows.Window> , может выбрать пользователь. Выбранный в данный момент <xref:System.Windows.Window> — *активного окна* (также известный как *окно переднего плана*) и <xref:System.Windows.Window> , получающий ввод данных пользователем. Приложение с активным окном *активного приложения* (или *активным*). Приложение становится активным в указанных ниже случаях.  
+ Windows пользователи могут переключаться между приложениями. Наиболее простой способ — использовать клавиши ALT+TAB. Приложение может быть переключено, только если оно содержит видимое <xref:System.Windows.Window> , может выбрать пользователь. Выбранный в данный момент <xref:System.Windows.Window> — *активного окна* (также известный как *окно переднего плана*) и <xref:System.Windows.Window> , получающий ввод данных пользователем. Приложение с активным окном *активного приложения* (или *активным*). Приложение становится активным в указанных ниже случаях.  
   
 -   Он запускается и показывает <xref:System.Windows.Window>.  
   
@@ -248,14 +248,14 @@ ms.lasthandoff: 01/19/2018
   
 -   Пользователь закрывает главный <xref:System.Windows.Window>.  
   
--   Пользователь завершает [!INCLUDE[TLA2#tla_mswin](../../../../includes/tla2sharptla-mswin-md.md)] сеанс выходом или завершает работу.  
+-   Пользователь завершает сеанс Windows с выходом из системы или завершает работу.  
   
 -   Выполнено специальное условие для приложения.  
   
  Для управления завершением работы приложения, <xref:System.Windows.Application> предоставляет <xref:System.Windows.Application.Shutdown%2A> метода <xref:System.Windows.Application.ShutdownMode%2A> свойство и <xref:System.Windows.Application.SessionEnding> и <xref:System.Windows.Application.Exit> события.  
   
 > [!NOTE]
->  <xref:System.Windows.Application.Shutdown%2A>может вызываться только из приложений, имеющих <xref:System.Security.Permissions.UIPermission>. Автономный [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] приложения всегда имеют такое разрешение. Однако [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] не работает в изолированной среде безопасности частичного доверия зоны Интернета.  
+>  <xref:System.Windows.Application.Shutdown%2A> может вызываться только из приложений, имеющих <xref:System.Security.Permissions.UIPermission>. Автономный [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] приложения всегда имеют такое разрешение. Однако [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] не работает в изолированной среде безопасности частичного доверия зоны Интернета.  
   
 #### <a name="shutdown-mode"></a>Режим завершения работы  
  Большинство приложений завершают работу при закрытии главного окна или всех окон. Иногда, однако, другие условия конкретного приложения могут определить, когда приложение завершает работу. Можно указать условия, при которых приложение завершит работу, задав <xref:System.Windows.Application.ShutdownMode%2A> с одним из следующих <xref:System.Windows.ShutdownMode> значения перечисления:  
@@ -273,10 +273,10 @@ ms.lasthandoff: 01/19/2018
  При наличии условия завершения работы приложения, следует установить <xref:System.Windows.Application.ShutdownMode%2A> для <xref:System.Windows.ShutdownMode.OnExplicitShutdown>. В этом случае он будет необходимо завершить работу приложения путем явного вызова <xref:System.Windows.Application.Shutdown%2A> метода; в противном случае приложение будет продолжать работать даже в случае закрытия всех окон. Обратите внимание, что <xref:System.Windows.Application.Shutdown%2A> вызывается неявно при <xref:System.Windows.Application.ShutdownMode%2A> либо <xref:System.Windows.ShutdownMode.OnLastWindowClose> или <xref:System.Windows.ShutdownMode.OnMainWindowClose>.  
   
 > [!NOTE]
->  <xref:System.Windows.Application.ShutdownMode%2A>может принимать значения от [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)], но учитывается; [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] всегда завершает работу при его переходе в браузере или в случаях, когда браузер, в котором размещается [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] закрыт. Дополнительные сведения см. в разделе [Общие сведения о переходах](../../../../docs/framework/wpf/app-development/navigation-overview.md).  
+>  <xref:System.Windows.Application.ShutdownMode%2A> может принимать значения от [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)], но учитывается; [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] всегда завершает работу при его переходе в браузере или в случаях, когда браузер, в котором размещается [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] закрыт. Дополнительные сведения см. в разделе [Общие сведения о переходах](../../../../docs/framework/wpf/app-development/navigation-overview.md).  
   
 #### <a name="session-ending"></a>Завершение сеанса  
- Завершение работы условия, которые описаны в документах <xref:System.Windows.Application.ShutdownMode%2A> свойства конкретного приложения. Однако в некоторых случаях приложение может завершить работу в результате выполнения внешнего условия. Наиболее распространенные внешнее условие возникает, когда пользователь завершает [!INCLUDE[TLA2#tla_mswin](../../../../includes/tla2sharptla-mswin-md.md)] сеанса с помощью следующих действий:  
+ Завершение работы условия, которые описаны в документах <xref:System.Windows.Application.ShutdownMode%2A> свойства конкретного приложения. Однако в некоторых случаях приложение может завершить работу в результате выполнения внешнего условия. Наиболее распространенные внешних состояние возникает, когда пользователь завершает сеанс Windows при выполнении следующих действий:  
   
 -   выход из системы;  
   
@@ -286,17 +286,17 @@ ms.lasthandoff: 01/19/2018
   
 -   спящий режим.  
   
- Чтобы определить, когда [!INCLUDE[TLA2#tla_mswin](../../../../includes/tla2sharptla-mswin-md.md)] окончания сеанса может обрабатывать <xref:System.Windows.Application.SessionEnding> события, как показано в следующем примере.  
+ Чтобы обнаружить при завершении сеанса Windows, можно обрабатывать <xref:System.Windows.Application.SessionEnding> события, как показано в следующем примере.  
   
  [!code-xaml[ApplicationSessionEndingSnippets#HandlingSessionEndingXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ApplicationSessionEndingSnippets/CSharp/App.xaml#handlingsessionendingxaml)]  
   
  [!code-csharp[ApplicationSessionEndingSnippets#HandlingSessionEndingCODEBEHIND](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ApplicationSessionEndingSnippets/CSharp/App.xaml.cs#handlingsessionendingcodebehind)]
  [!code-vb[ApplicationSessionEndingSnippets#HandlingSessionEndingCODEBEHIND](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ApplicationSessionEndingSnippets/visualbasic/application.xaml.vb#handlingsessionendingcodebehind)]  
   
- В этом примере код проверяет <xref:System.Windows.SessionEndingCancelEventArgs.ReasonSessionEnding%2A> свойство, чтобы определить, как [!INCLUDE[TLA2#tla_mswin](../../../../includes/tla2sharptla-mswin-md.md)] сессии. Он использует это значение, чтобы отобразить сообщение подтверждения для пользователя. Если пользователь не требуется завершать сеанс, код задает <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> для `true` для предотвращения [!INCLUDE[TLA2#tla_mswin](../../../../includes/tla2sharptla-mswin-md.md)] завершение сеанса.  
+ В этом примере код проверяет <xref:System.Windows.SessionEndingCancelEventArgs.ReasonSessionEnding%2A> свойства, чтобы определить, каким образом Windows сессии. Он использует это значение, чтобы отобразить сообщение подтверждения для пользователя. Если пользователь не требуется завершать сеанс, код задает <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> для `true` чтобы предотвратить завершение сеанса Windows.  
   
 > [!NOTE]
->  <xref:System.Windows.Application.SessionEnding>вызывается для [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)].  
+>  <xref:System.Windows.Application.SessionEnding> вызывается для [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)].  
   
 #### <a name="exit"></a>Exit  
  При завершении работы приложения может возникнуть необходимость выполнить окончательную обработку, например сохранение состояния приложения. В подобных случаях можно обрабатывать <xref:System.Windows.Application.Exit> событий.  
@@ -311,7 +311,7 @@ ms.lasthandoff: 01/19/2018
   
  Полный пример см. в разделе [сохранения и восстановления свойства через области приложения сеансов приложения](../../../../docs/framework/wpf/app-development/persist-and-restore-application-scope-properties.md).  
   
- <xref:System.Windows.Application.Exit>могут быть обработаны как для автономных приложений и [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]. Для [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)], <xref:System.Windows.Application.Exit> вызывается в следующих случаях:  
+ <xref:System.Windows.Application.Exit> могут быть обработаны как для автономных приложений и [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]. Для [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)], <xref:System.Windows.Application.Exit> вызывается в следующих случаях:  
   
 -   [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] Перехода на другую.  
   
@@ -320,7 +320,7 @@ ms.lasthandoff: 01/19/2018
 -   Закрывается браузер.  
   
 #### <a name="exit-code"></a>Код выхода  
- Приложения, как правило, запускаются операционной системой в ответ на запрос пользователя. Однако приложение может быть запущено другим приложением для выполнения определенной задачи. При завершении работы запущенного приложения приложению, которое его запустило, может понадобиться выяснить условие, при котором запущенное приложение завершает работу. В таких ситуациях [!INCLUDE[TLA2#tla_mswin](../../../../includes/tla2sharptla-mswin-md.md)] позволяет приложениям вернуть код выхода приложения при завершении работы. По умолчанию [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] приложения возвращать значение кода выхода 0.  
+ Приложения, как правило, запускаются операционной системой в ответ на запрос пользователя. Однако приложение может быть запущено другим приложением для выполнения определенной задачи. При завершении работы запущенного приложения приложению, которое его запустило, может понадобиться выяснить условие, при котором запущенное приложение завершает работу. В таких ситуациях Windows позволяет приложениям вернуть код выхода приложения при завершении работы. По умолчанию [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] приложения возвращать значение кода выхода 0.  
   
 > [!NOTE]
 >  При отладке из [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)], код завершения приложения отображается в **вывода** окна, когда приложение завершает работу, в сообщении, выглядит следующим образом:  
@@ -351,7 +351,7 @@ ms.lasthandoff: 01/19/2018
   
 -   попытка продолжить выполнение приложения;  
   
--   Запись подробных, понятных разработчику особых сведений в [!INCLUDE[TLA2#tla_mswin](../../../../includes/tla2sharptla-mswin-md.md)] журнала событий.  
+-   Запись подробных, понятных разработчику особых сведений в журнале событий Windows.  
   
  Реализация этой поддержки зависит от возможности обнаружить необработанные исключения, который является то, что <xref:System.Windows.Application.DispatcherUnhandledException> для события.  
   

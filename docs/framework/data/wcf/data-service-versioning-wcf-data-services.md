@@ -1,28 +1,30 @@
 ---
-title: "Управление версиями службы данных (службы WCF Data Services)"
-ms.custom: 
+title: Управление версиями службы данных (службы WCF Data Services)
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework-oob
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - versioning, WCF Data Services
 - versioning [WCF Data Services]
 - WCF Data Services, versioning
 ms.assetid: e3e899cc-7f25-4f67-958f-063f01f79766
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 73e394c4d0a7f78fca7c8c70f68bfc16da556d8d
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: d795008e014deaa126dac1bb978ac825f2536208
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="data-service-versioning-wcf-data-services"></a>Управление версиями службы данных (службы WCF Data Services)
 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] Позволяет создавать службы данных, чтобы клиенты могут обращаться к данным как ресурсам по идентификатору URI, основанные на модели данных. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] также поддерживает определение операций службы. После первоначального развертывания служб и, возможно, несколько раз на протяжении времени их существования возникает потребность в изменении этих служб. Причин тому немало: изменяющиеся потребности бизнеса, требования информационных технологий или необходимость решить какие-либо другие проблемы. При внесении изменений в существующую службу данных необходимо принять решение, следует ли определить новую версию службы данных и как оптимальным способом свести к минимуму воздействие на существующие клиентские приложения. Этот раздел содержит указания о том, когда и как следует создавать новую версию службы данных. В нем также описывается, как [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] обеспечивает обмен между клиентами и службами данных, которые поддерживают разные версии протокола [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)].  
@@ -64,7 +66,7 @@ ms.lasthandoff: 01/19/2018
 ## <a name="odata-protocol-versions"></a>Версии протокола OData  
  Как новые версии [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] , выпуска, клиентские приложения возможно, не использует ту же версию [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] протокол, поддерживаемый службой данных. Старое клиентское приложение может получить доступ к службе данных, поддерживающей новую версию [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]. Клиентское приложение также могут использовать более новую версию [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] клиентской библиотеки, которая поддерживает более новой версии [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] , чем служба данных, к которому имеет доступ.  
   
- [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]использует поддержки, обеспечиваемой [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] для обработки таких сценариев управления версиями. Имеется также поддержка создания и использования метаданных модели данных для создания классов службы данных клиента, когда клиент использует другую версию [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] чем служба данных использует. Дополнительные сведения см. в разделе [OData: управление версиями протокола](http://go.microsoft.com/fwlink/?LinkId=186071).  
+ [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] использует поддержки, обеспечиваемой [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] для обработки таких сценариев управления версиями. Имеется также поддержка создания и использования метаданных модели данных для создания классов службы данных клиента, когда клиент использует другую версию [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] чем служба данных использует. Дополнительные сведения см. в разделе [OData: управление версиями протокола](http://go.microsoft.com/fwlink/?LinkId=186071).  
   
 ### <a name="version-negotiation"></a>Согласование версий  
  Служба данных может быть настроена для определения самую новую версию [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] протокол, который будет использоваться службой, независимо от версии, запрашиваемый клиентом. Это можно сделать, указав <xref:System.Data.Services.Common.DataServiceProtocolVersion> значение для <xref:System.Data.Services.DataServiceBehavior.MaxProtocolVersion%2A> свойство <xref:System.Data.Services.DataServiceBehavior> используется службой данных. Дополнительные сведения см. в разделе [Настройка службы данных](../../../../docs/framework/data/wcf/configuring-the-data-service-wcf-data-services.md).  
@@ -75,14 +77,14 @@ ms.lasthandoff: 01/19/2018
   
 |Версия протокола [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]|Поддержка введена в...|  
 |-----------------------------------------------------------------------------------|----------------------------|  
-|Версия 1|-   [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)]Пакет обновления 1 (SP1)<br />-   [!INCLUDE[silverlight](../../../../includes/silverlight-md.md)]версия 3|  
-|Версия 2|-   [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)]<br />-Обновление [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] SP1. Можно загрузить и установить это обновление [центра загрузки Майкрософт](http://go.microsoft.com/fwlink/?LinkId=158125).<br />-   [!INCLUDE[silverlight](../../../../includes/silverlight-md.md)]версии 4|  
+|Версия 1|-   [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] Пакет обновления 1 (SP1)<br />-   [!INCLUDE[silverlight](../../../../includes/silverlight-md.md)] версия 3|  
+|Версия 2|-   [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)]<br />-Обновление [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] SP1. Можно загрузить и установить это обновление [центра загрузки Майкрософт](http://go.microsoft.com/fwlink/?LinkId=158125).<br />-   [!INCLUDE[silverlight](../../../../includes/silverlight-md.md)] версии 4|  
 |Версия 3|— Можно загрузить и установить предварительную версию, которая поддерживает [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] версии 3 из [центра загрузки Майкрософт](http://go.microsoft.com/fwlink/?LinkId=203885).|  
   
 ### <a name="metadata-versions"></a>Версии метаданных  
- По умолчанию службы [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] для представления модели данных используют CSDL версии 1.1. Это всегда справедливо для моделей данных, основанных на поставщике отражения или на специализированном поставщике служб данных. Но если модель данных определена с помощью платформы [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)], возвращаемая версия CSDL та же, что и версия, используемая платформой [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)]. Версия CSDL определяется пространство имен [элемент схемы](http://msdn.microsoft.com/library/396074d8-f99c-4f50-a073-68bce848224f). [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]спецификации [ \[MC-CSDL\]: формат файла определения концептуальной схемы](http://go.microsoft.com/fwlink/?LinkId=159072).  
+ По умолчанию службы [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] для представления модели данных используют CSDL версии 1.1. Это всегда справедливо для моделей данных, основанных на поставщике отражения или на специализированном поставщике служб данных. Но если модель данных определена с помощью платформы [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)], возвращаемая версия CSDL та же, что и версия, используемая платформой [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)]. Версия CSDL определяется пространство имен [элемент схемы](http://msdn.microsoft.com/library/396074d8-f99c-4f50-a073-68bce848224f). [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] спецификации [ \[MC-CSDL\]: формат файла определения концептуальной схемы](http://go.microsoft.com/fwlink/?LinkId=159072).  
   
- Элемент `DataServices` возвращаемых метаданных содержит также атрибут `DataServiceVersion`, имеющий то же значение, что и заголовок `DataServiceVersion` в ответном сообщении. Клиентские приложения, такие как **добавить ссылку на службу** диалоговое окно в [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)], эти сведения можно использовать для создания клиентские классы службы данных, правильно работающих с версией [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] , где размещена служба данных. Дополнительные сведения см. в разделе [OData: управление версиями протокола](http://go.microsoft.com/fwlink/?LinkId=186071).  
+ Элемент `DataServices` возвращаемых метаданных содержит также атрибут `DataServiceVersion`, имеющий то же значение, что и заголовок `DataServiceVersion` в ответном сообщении. Клиентские приложения, такие как **добавить ссылку на службу** диалоговое окно в Visual Studio, используйте эти сведения для создания клиента службы данных классов, которые работают правильно с версией [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] , где размещена служба данных. Дополнительные сведения см. в разделе [OData: управление версиями протокола](http://go.microsoft.com/fwlink/?LinkId=186071).  
   
 ## <a name="see-also"></a>См. также  
  [Поставщики служб данных](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md)  

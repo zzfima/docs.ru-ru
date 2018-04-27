@@ -1,27 +1,29 @@
 ---
-title: "Кэширование в клиентах автоматизации пользовательского интерфейса"
-ms.custom: 
+title: Кэширование в клиентах автоматизации пользовательского интерфейса
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-bcl
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - UI Automation caching in clients
 - caching, UI Automation clients
 ms.assetid: 94c15031-4975-43cc-bcd5-c9439ed21c9c
-caps.latest.revision: "24"
+caps.latest.revision: 24
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: cce1890357f5781f1772b6a0aa583e493e2cfa8b
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 5bbd54d4e1e8a6a1eae52f50696aecddd1f8bd8a
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="caching-in-ui-automation-clients"></a>Кэширование в клиентах автоматизации пользовательского интерфейса
 > [!NOTE]
@@ -67,7 +69,7 @@ ms.lasthandoff: 01/19/2018
 ## <a name="activating-the-cacherequest"></a>Активация CacheRequest  
  Кэширование выполняется, только когда объекты <xref:System.Windows.Automation.AutomationElement> извлекаются при активном <xref:System.Windows.Automation.CacheRequest> для текущего потока. Существует два способа активации <xref:System.Windows.Automation.CacheRequest>.  
   
- Обычно вызывается метод <xref:System.Windows.Automation.CacheRequest.Activate%2A>. Этот метод возвращает объект, реализующий <xref:System.IDisposable>. Запрос остается активным, пока объект <xref:System.IDisposable> существует. Самым простым способом управления временем существования объекта является заключение вызова в блок `using` ([!INCLUDE[TLA#tla_cshrp](../../../includes/tlasharptla-cshrp-md.md)]) или `Using` ([!INCLUDE[TLA2#tla_visualb](../../../includes/tla2sharptla-visualb-md.md)]). Это гарантирует, что запрос будет извлекаться из стека, даже если возникнет исключение.  
+ Обычно вызывается метод <xref:System.Windows.Automation.CacheRequest.Activate%2A>. Этот метод возвращает объект, реализующий <xref:System.IDisposable>. Запрос остается активным, пока объект <xref:System.IDisposable> существует. Самым простым способом управления временем существования объекта является заключение вызова в `using` (C#) или `Using` блока (Visual Basic). Это гарантирует, что запрос будет извлекаться из стека, даже если возникнет исключение.  
   
  Другим способом, который подходит, когда требуется вкладывать запросы кэширования, является вызов метода <xref:System.Windows.Automation.CacheRequest.Push%2A>. Этот вызов помещает запрос в стек и активирует его. Запрос остается активным, пока он не будет удален из стека методом <xref:System.Windows.Automation.CacheRequest.Pop%2A>. Запрос становится временно неактивным, если другой запрос помещается в стек; активен только верхний запрос в стеке.  
   

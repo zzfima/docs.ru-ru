@@ -12,11 +12,11 @@ ms.assetid: 6685467b-28fa-4cde-9516-f0e00ad08911
 caps.latest.revision: 36
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: e53ba3e1134b09edcc87a0421b7699bcf3bb1d39
-ms.sourcegitcommit: d95a91d685565f4d95c8773b558752864a6a3d7e
+ms.openlocfilehash: 58e63d95c2f10329f85d6150b58f196294de38d1
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="get-started-with-visual-basic"></a>Начало работы с Visual Basic
 Этот раздел документации помогает начать разработку приложений на Visual Basic.  
@@ -55,10 +55,10 @@ ms.lasthandoff: 03/12/2018
  Ссылки на страницы, знакомящие с основами объектно-ориентированного программирования и описывающие порядок создания собственных объектов и их использования для упрощения программирования.  
   
  [Примеры](../../visual-basic/sample-applications.md)  
- Ссылки на примеры кода в [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
+ Ссылки на примеры кода в Visual Basic.  
   
  [Пошаговые руководства](../../visual-basic/walkthroughs.md)  
- Перечень страниц справки, демонстрирующих различные аспекты языка [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
+ Перечень страниц справки, демонстрирующих различные аспекты языка Visual Basic.  
   
  [Обращайтесь к нам](/visualstudio/ide/talk-to-us)  
  Способы получения поддержки и обеспечения обратной связи.  
@@ -66,7 +66,7 @@ ms.lasthandoff: 03/12/2018
  [Visual Studio](/visualstudio/)  
  Ссылки на документацию по [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)].  
   
- [C#](../../csharp/index.md) Ссылки на документацию по разработке приложений с помощью [!INCLUDE[csprcs](~/includes/csprcs-md.md)].  
+ [C#](../../csharp/index.md) Ссылки на документацию по разработке приложений с помощью Visual C#.  
   
  [Visual C++](/cpp/)  
  Ссылки на документацию по Visual C++.  

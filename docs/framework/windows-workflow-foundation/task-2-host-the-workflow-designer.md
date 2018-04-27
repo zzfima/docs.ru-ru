@@ -8,20 +8,20 @@ ms.suite: ''
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 0a29b138-270d-4846-b78e-2b875e34e501
-caps.latest.revision: ''
+caps.latest.revision: 19
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 991f3d25a81e90ab779936c993ec7dd09a71b794
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 15fa4372f4a110577f055d0e3c22977d0f5417bb
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="task-2-host-the-workflow-designer"></a>Задание 2. Размещение конструктора рабочих процессов
-В этом разделе описана процедура по размещению экземпляра [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] в приложении [!INCLUDE[avalon1](../../../includes/avalon1-md.md)].  
+В этом разделе описана процедура по размещению экземпляра [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] в приложении Windows Presentation Foundation (WPF).  
   
  Процедура выполняет настройку **сетки** управления, который содержит конструктор, программным образом создает экземпляр <xref:System.Activities.Presentation.WorkflowDesigner> , содержащий значение по умолчанию <xref:System.Activities.Statements.Sequence> действия, регистрирует метаданные конструктора, чтобы предоставить Поддержка конструктора для всех встроенных действий и узлы [!INCLUDE[wfd2](../../../includes/wfd2-md.md)] в [!INCLUDE[avalon2](../../../includes/avalon2-md.md)] приложения.  
   

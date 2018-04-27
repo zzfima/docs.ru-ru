@@ -1,24 +1,26 @@
 ---
-title: "Пошаговое руководство. Управление данными (C#)"
-ms.custom: 
+title: Пошаговое руководство. Управление данными (C#)
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 24adfbe0-0ad6-449f-997d-8808e0770d2e
-caps.latest.revision: "2"
+caps.latest.revision: 2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 60724967cccd1209aeec1bf53b4e6d4fa5051996
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: d1851bd4c358b96cc9b49f274b31f5f69d9b8d7b
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="walkthrough-manipulating-data-c"></a>Пошаговое руководство. Управление данными (C#)
 В данном руководстве представлен основной и полный сценарий [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] по добавлению, изменению и удалению данных в базе данных. Для добавления клиента, изменения его имени и удаления заказа следует использовать копию учебной базы данных Northwind.  
@@ -40,14 +42,14 @@ ms.lasthandoff: 01/17/2018
   
      Его можно создать либо помощью оператора [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)], либо с помощью средства SQLMetal. Данное пошаговое руководство было написано с использованием средства SQLMetal со следующей командной строкой:  
   
-     **sqlmetal /code:"c:\linqtest6\northwind.cs" /language:csharp "C:\linqtest6\northwnd.mdf" /pluralize**  
+     **SQLMetal /code:"c:\linqtest6\northwind.cs» /language:csharp «C:\linqtest6\northwnd.mdf» / pluralize**  
   
      Дополнительные сведения см. в разделе [SQLMetal.exe (средство создания кода)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md).  
   
 ## <a name="overview"></a>Обзор  
  Данное пошаговое руководство состоит из шести основных задач.  
   
--   Создание решения [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] в [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)].  
+-   Создание [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] решения в Visual Studio.  
   
 -   Добавление файла кода базы данных в проект.  
   
@@ -60,11 +62,11 @@ ms.lasthandoff: 01/17/2018
 -   Отправка внесенных изменений в базу данных Northwind.  
   
 ## <a name="creating-a-linq-to-sql-solution"></a>Создание решения LINQ to SQL  
- В первой задаче создается решение [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)], которое содержит ссылки, необходимые для построения и выполнения проекта [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
+ В первой задаче создается решение Visual Studio, который содержит ссылки, необходимые для построения и запуска [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] проекта.  
   
 #### <a name="to-create-a-linq-to-sql-solution"></a>Создание решения LINQ to SQL  
   
-1.  На [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] **файл** последовательно выберите пункты **New**, а затем нажмите кнопку **проекта**.  
+1.  В Visual Studio **файл** последовательно выберите пункты **New**, а затем нажмите кнопку **проекта**.  
   
 2.  В **типов проектов** в области **новый проект** диалоговое окно, нажмите кнопку **Visual C#**.  
   
@@ -115,7 +117,7 @@ ms.lasthandoff: 01/17/2018
   
      Объект **консоли** открывается окно.  
   
-     Можно закрыть приложение, нажав клавишу ВВОД в **консоли** окна, или нажав **остановить отладку** на [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] **отладки** меню.  
+     Можно закрыть приложение, нажав клавишу ВВОД в **консоли** окна, или нажав **остановить отладку** в Visual Studio **отладки** меню.  
   
 ## <a name="creating-a-new-entity"></a>Создание новой сущности  
  Создание новой сущности не представляет особых проблем. Для создания объектов (например, `Customer`) можно использовать ключевое слово `new`.  

@@ -1,30 +1,32 @@
 ---
-title: "Код программной части и XAML в WPF"
-ms.custom: 
+title: Код программной части и XAML в WPF
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - XAML [WPF], code-behind
 - code-behind files [WPF], XAML
 ms.assetid: 9df6d3c9-aed3-471c-af36-6859b19d999f
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 19c7c2cdd49663a57a4184027fd7d6ad8fcd7656
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 9c28a501996e4f2cc25e9e280b2f63e1c0c67051
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="code-behind-and-xaml-in-wpf"></a>Код программной части и XAML в WPF
-<a name="introduction"></a>Выделенный код — это термин, используемый для описания кода, который объединяется с объектами, определенными разметкой, при [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] страницы, скомпилированного с разметкой. В этом разделе описываются требования для кода, а также альтернативный механизм встроенного кода для кода в [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].  
+<a name="introduction"></a> Выделенный код — это термин, используемый для описания кода, который объединяется с объектами, определенными разметкой, при [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] страницы, скомпилированного с разметкой. В этом разделе описываются требования для кода, а также альтернативный механизм встроенного кода для кода в [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].  
   
  В этом разделе содержатся следующие подразделы.  
   
@@ -57,11 +59,11 @@ ms.lasthandoff: 12/22/2017
   
 -   Обработчик должен соответствовать делегату для соответствующего события в системе резервных типов.  
   
--   Для [!INCLUDE[TLA#tla_visualb](../../../../includes/tlasharptla-visualb-md.md)] языка в частности, можно использовать конкретного языка `Handles` ключевое слово, чтобы связать обработчики с экземплярами и событиями в объявлении обработчика, вместо присоединения обработчиков с атрибутами в [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. Однако этот метод имеет некоторые ограничения, так как `Handles` ключевое слово не поддерживает все особые функции [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] системы событий, такие как определенные сценарии перенаправленных событий или вложенные события. Дополнительные сведения см. в разделе [Visual Basic и обработка событий WPF](../../../../docs/framework/wpf/advanced/visual-basic-and-wpf-event-handling.md).  
+-   Для языка Microsoft Visual Basic в частности, можно использовать конкретного языка `Handles` ключевое слово, чтобы связать обработчики с экземплярами и событиями в объявлении обработчика, вместо присоединения обработчиков с атрибутами в [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. Однако этот метод имеет некоторые ограничения, так как `Handles` ключевое слово не поддерживает все особые функции [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] системы событий, такие как определенные сценарии перенаправленных событий или вложенные события. Дополнительные сведения см. в разделе [Visual Basic и обработка событий WPF](../../../../docs/framework/wpf/advanced/visual-basic-and-wpf-event-handling.md).  
   
 <a name="x_Code"></a>   
 ## <a name="xcode"></a>x: Code  
- [x: Code](../../../../docs/framework/xaml-services/x-code-intrinsic-xaml-type.md) определен элемент директивы в [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. `x:Code` Директива может содержать встроенный программный код. Код, определенный встроенным может взаимодействовать с [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] на одной странице. В следующем примере показан встроенный [!INCLUDE[TLA2#tla_cshrp](../../../../includes/tla2sharptla-cshrp-md.md)] кода. Обратите внимание, что код внутри `x:Code` элемент, и что код должен быть заключен в `<CDATA[`... `]]>` Чтобы избежать содержимого для [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)], после чего [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] процессора (либо Интерпретация [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] схемы или [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] схемы) не будет пытаться интерпретировать содержимое буквально как [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)].  
+ [x: Code](../../../../docs/framework/xaml-services/x-code-intrinsic-xaml-type.md) определен элемент директивы в [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. `x:Code` Директива может содержать встроенный программный код. Код, определенный встроенным может взаимодействовать с [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] на одной странице. В следующем примере показано встроенного кода C#. Обратите внимание, что код внутри `x:Code` элемент, и что код должен быть заключен в `<CDATA[`... `]]>` Чтобы избежать содержимого для [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)], после чего [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] процессора (либо Интерпретация [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] схемы или [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] схемы) не будет пытаться интерпретировать содержимое буквально как [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)].  
   
  [!code-xaml[XAMLOvwSupport#ButtonWithInlineCode](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page4.xaml#buttonwithinlinecode)]  
   

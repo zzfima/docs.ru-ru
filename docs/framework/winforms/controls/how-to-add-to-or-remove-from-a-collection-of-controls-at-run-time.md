@@ -1,12 +1,13 @@
 ---
-title: "Практическое руководство. Добавление или удаление элемента в коллекции элементов управления во время выполнения"
-ms.custom: 
+title: Практическое руководство. Добавление или удаление элемента в коллекции элементов управления во время выполнения
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-winforms
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -19,16 +20,17 @@ helpviewer_keywords:
 - run time [Windows Forms], adding controls
 - controls [Windows Forms], removing using collections
 ms.assetid: 771bf895-3d5f-469b-a324-3528f343657e
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 548ca8d682ffea6f2afa03124719a1bb5097a2fb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: b34863e7846f75c5dc9a8af24591522e37252f4c
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-add-to-or-remove-from-a-collection-of-controls-at-run-time"></a>Практическое руководство. Добавление или удаление элемента в коллекции элементов управления во время выполнения
 Общие задачи при разработке приложения Добавление элементов управления в и удаление элементов управления из любого контейнерного элемента управления в формах (например, <xref:System.Windows.Forms.Panel> или <xref:System.Windows.Forms.GroupBox> управления или в саму форму). Во время разработки элементы управления можно перетаскивать непосредственно на панель или в группу. Во время выполнения эти элементы управления поддерживают коллекцию `Controls`, которая отслеживает размещенные в них элементы управления.  
@@ -77,7 +79,7 @@ ms.lasthandoff: 12/22/2017
   
 ### <a name="to-remove-controls-from-a-collection-programmatically"></a>Программное удаление элементов управления из коллекции  
   
-1.  Удалите обработчик событий из события. В [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] используйте ключевое слово [оператор RemoveHandler](~/docs/visual-basic/language-reference/statements/removehandler-statement.md), в [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] используйте [Оператор -= (Справочник по C#)](~/docs/csharp/language-reference/operators/subtraction-assignment-operator.md).  
+1.  Удалите обработчик событий из события. В Visual Basic, используйте [оператор RemoveHandler](~/docs/visual-basic/language-reference/statements/removehandler-statement.md) ключевого слова; в Visual C# используйте [-= (Справочник по C#) оператор](~/docs/csharp/language-reference/operators/subtraction-assignment-operator.md).  
   
 2.  Используйте метод `Remove` для удаления требуемого элемента управления из коллекции `Controls` панели.  
   

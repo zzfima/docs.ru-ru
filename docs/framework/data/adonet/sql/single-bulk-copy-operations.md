@@ -1,27 +1,29 @@
 ---
-title: "Отдельные операции массового копирования"
-ms.custom: 
+title: Отдельные операции массового копирования
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 5e7ff0be-3f23-4996-a92c-bd54d65c3836
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 961981fcdf9709a336d76df99c8f65448e76b98a
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 37402672a6df808cb5e1c2424817fd9ce749cc82
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="single-bulk-copy-operations"></a>Отдельные операции массового копирования
 Самый простой способ выполнения операции массового копирования в SQL Server заключается в выполнении одной операции для базы данных. По умолчанию операция массового копирования выполняется как изолированная, без использования транзакции и без возможности отката.  
@@ -51,7 +53,7 @@ ms.lasthandoff: 01/17/2018
 >  Рекомендуется, чтобы типы данных исходного и целевого столбца были одинаковыми. Если типы данных не совпадают, **SqlBulkCopy** попытается преобразовать каждое исходное значение в целевой тип данных, с помощью правил, применяемых методом <xref:System.Data.SqlClient.SqlParameter.Value%2A>. Преобразования могут ухудшать производительность, а также приводить к непредвиденным ошибкам. Например, в большинстве случаев тип данных `Double` можно преобразовать в тип данных `Decimal`, однако иногда это невозможно.  
   
 ## <a name="example"></a>Пример  
- Следующее приложение командной строки демонстрирует, как загружать данные при помощи класса <xref:System.Data.SqlClient.SqlBulkCopy>. В этом примере <xref:System.Data.SqlClient.SqlDataReader> используется для копирования данных из **Production.Product** в таблицу [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] **AdventureWorks** базы данных в аналогичную таблицу в той же базе данных.  
+ Следующее приложение командной строки демонстрирует, как загружать данные при помощи класса <xref:System.Data.SqlClient.SqlBulkCopy>. В этом примере <xref:System.Data.SqlClient.SqlDataReader> используется для копирования данных из **Production.Product** таблицы в SQL Server**AdventureWorks** базы данных в аналогичную таблицу в той же базе данных.  
   
 > [!IMPORTANT]
 >  Этот образец не запустится, пока вы не создадите рабочие таблицы, как описано в [пример настройки массового копирования](../../../../../docs/framework/data/adonet/sql/bulk-copy-example-setup.md). Данный код предназначен для демонстрации синтаксиса использования **SqlBulkCopy** только. Если исходная и целевая таблицы расположены в одном и том же экземпляре SQL Server, легче и быстрее использовать для копирования данных инструкцию `INSERT … SELECT` языка Transact-SQL.  

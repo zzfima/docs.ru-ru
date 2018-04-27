@@ -1,11 +1,12 @@
 ---
-title: "Практическое руководство. Защита аргумента процедуры от изменения значения (Visual Basic)"
-ms.custom: 
+title: Практическое руководство. Защита аргумента процедуры от изменения значения (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - procedures [Visual Basic], arguments
@@ -20,17 +21,17 @@ helpviewer_keywords:
 - arguments [Visual Basic], ByRef
 - arguments [Visual Basic], changing value
 ms.assetid: d2b7c766-ce16-4d2c-8d79-3fc0e7ba2227
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 7975cbbc38c39223a4af5c87ac6bb090be548f2d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 59c0486bd9543167e4c17a3109c4b89b3502e80e
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-protect-a-procedure-argument-against-value-changes-visual-basic"></a>Практическое руководство. Защита аргумента процедуры от изменения значения (Visual Basic)
-Если процедура объявляет параметр как [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md), [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] предоставляет код процедуры прямую ссылку на элемент программирования в аргументе в вызывающем коде. Это позволяет процедуре для изменения значения, содержащегося в аргументе в вызывающем коде. В некоторых случаях вызывающий код может потребоваться защитить от таких изменений.  
+Если процедура объявляет параметр как [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md), Visual Basic предоставляет код процедуры прямую ссылку на элемент программирования в аргументе в вызывающем коде. Это позволяет процедуре для изменения значения, содержащегося в аргументе в вызывающем коде. В некоторых случаях вызывающий код может потребоваться защитить от таких изменений.  
   
  Всегда можно защитить аргумент от изменений, объявив соответствующий параметр [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) в процедуре. Если вы хотите иметь возможность изменять данный аргумент, в некоторых случаях, но не другие, его можно объявить `ByRef` и позволить вызывающему коду определять механизм передачи в каждом вызове. Это делается путем заключения соответствующего аргумента в круглые скобки, чтобы передать его по значению или не заключать в круглые скобки, чтобы передать его по ссылке. Дополнительные сведения см. в разделе [как: Принудительная передача аргумента передается значение](./how-to-force-an-argument-to-be-passed-by-value.md).  
   
@@ -48,7 +49,7 @@ ms.lasthandoff: 11/21/2017
  Второй `MsgBox` вызове отображается «после замены(n): 11, 21, 31, 41». Поскольку `n` передается `ByVal`, `replace` не может изменить переменную `n` в вызывающем коде, присвоив ей новый массив. Когда `replace` создает новый экземпляр массива `k` и присваивает его локальной переменной `a`, он теряет ссылку на `n` передается в вызывающий код. Когда он изменяет элементы `a`, только локальный массив `k` зависит. Таким образом `replace` не увеличивает значения из массива `n` в вызывающем коде.  
   
 ## <a name="compiling-the-code"></a>Компиляция кода  
- Значение по умолчанию в [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] аргументы передаются по значению. Тем не менее, это хороший стиль программирования способ включения либо [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) или [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) ключевое слово с каждым объявленным параметром. Это делает код более удобным для чтения.  
+ По умолчанию в Visual Basic используется для передачи аргументов по значению. Тем не менее, это хороший стиль программирования способ включения либо [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) или [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) ключевое слово с каждым объявленным параметром. Это делает код более удобным для чтения.  
   
 ## <a name="see-also"></a>См. также  
  [Процедуры](./index.md)  

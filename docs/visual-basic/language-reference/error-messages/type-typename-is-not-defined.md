@@ -1,5 +1,5 @@
 ---
-title: Тип &#39; &lt;typename&gt;&#39; не определен
+title: Тип &#39; &lt;typename&gt; &#39; не определен
 ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: ''
@@ -16,13 +16,13 @@ ms.assetid: b0faf204-57fd-44de-8c05-9db027eea663
 caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 68eb37f43600c51dc9117c3785a12e3c8ede1965
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 7c3efbcabf1e40c7f550b5f54d16e697561cf82c
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="type-39lttypenamegt39-is-not-defined"></a>Тип &#39; &lt;typename&gt;&#39; не определен
+# <a name="type-39lttypenamegt39-is-not-defined"></a>Тип &#39; &lt;typename&gt; &#39; не определен
 Инструкция представляет собой ссылку на тип, который не был определен. Можно определить тип в операторе объявления например `Enum`, `Structure`, `Class`, или `Interface`.  
   
  **Идентификатор ошибки:** BC30002  
@@ -35,7 +35,7 @@ ms.lasthandoff: 11/21/2017
   
 -   Убедитесь, что пространство имен типа не переопределено в проекте. Если это так, используйте `Global` ключевое слово, чтобы указать полное имя типа. Например, если проект определяет пространство имен с именем `System`, <xref:System.Object?displayProperty=nameWithType> тип недоступен, если он не является полностью соответствовать `Global` ключевое слово: `Global.System.Object`.  
   
--   Если тип определен, но библиотека объектов или библиотеки типов, в которой определен не зарегистрирован в [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], нажмите кнопку **добавить ссылку** на **проекта** меню, а затем выберите нужный объект Библиотека или библиотеки типов.  
+-   Если тип определен, но библиотека объектов или библиотеки типов, в которой определен не зарегистрирован в Visual Basic, щелкните **добавить ссылку** на **проекта** меню, а затем выберите нужный объект Библиотека или библиотеки типов.  
   
 -   Убедитесь, что тип в сборке, которая является частью целевого профиля .NET Framework. Дополнительные сведения см. в разделе [Устранение неполадок, связанных с настройкой для определенных версий платформы .NET Framework](/visualstudio/msbuild/troubleshooting-dotnet-framework-targeting-errors).  
   

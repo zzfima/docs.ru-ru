@@ -1,24 +1,26 @@
 ---
-title: "SQL Server Compact и LINQ to SQL"
-ms.custom: 
+title: SQL Server Compact и LINQ to SQL
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 59022359-a5a2-4c42-9a6a-5c0259c3ad17
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 24f620319cd469538cf4454be7caffececdf9213
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 0363806c0fc1c3a60da8c26d1f92a724e9950624
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sql-server-compact-and-linq-to-sql"></a>SQL Server Compact и LINQ to SQL
 SQL Server Compact — база данных по умолчанию, устанавливается вместе с Visual Studio. Дополнительные сведения см. в разделе [PAVE по с помощью SQL Server Compact (Visual Studio)](http://msdn.microsoft.com/library/13320dd1-94e5-4077-bf76-8df253695ccc).  
@@ -26,13 +28,13 @@ SQL Server Compact — база данных по умолчанию, устан
  В этом разделе описаны основные отличия в использовании, конфигурации, наборы функций и области [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] поддержки.  
   
 ## <a name="characteristics-of-sql-server-compact-in-relation-to-linq-to-sql"></a>Характеристики SQL Server Compact относительно LINQ to SQL  
- По умолчанию SQL Server Compact устанавливаются для всех [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] выпуски и поэтому доступна на компьютере разработчика для использования с [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]. Однако развертывание приложения, использующего SQL Server Compact и [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] отличается от [!INCLUDE[ssNoVersion](../../../../../../includes/ssnoversion-md.md)] приложения. SQL Server Compact не является частью платформы .NET Framework. Этот компонент должен быть упакован в состав приложения или загружен отдельно с веб-сайта Майкрософт.  
+ По умолчанию SQL Server Compact устанавливается для всех выпусков Visual Studio и поэтому доступна на компьютере разработки для использования с [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]. Однако развертывание приложения, использующего SQL Server Compact и [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] отличается от поведения для приложения SQL Server. SQL Server Compact не является частью платформы .NET Framework. Этот компонент должен быть упакован в состав приложения или загружен отдельно с веб-сайта Майкрософт.  
   
  Обратите внимание на следующие характеристики.  
   
 -   SQL Server Compact упаковывается в виде DLL-файла, который может использоваться непосредственно в файлах базы данных (расширение SDF).  
   
--   SQL Server Compact выполняется в том же процессе, что и клиентское приложение. Эффективность взаимодействия с SQL Server Compact, поэтому может быть значительно выше, чем с [!INCLUDE[ssNoVersion](../../../../../../includes/ssnoversion-md.md)]. С другой стороны SQL Server Compact требуется взаимодействие управляемого и неуправляемого кода с сопутствующими расходами.  
+-   SQL Server Compact выполняется в том же процессе, что и клиентское приложение. Эффективность взаимодействия с SQL Server Compact, поэтому может быть значительно выше, чем взаимодействие с SQL Server. С другой стороны SQL Server Compact требуется взаимодействие управляемого и неуправляемого кода с сопутствующими расходами.  
   
 -   Устанавливается малый размер SQL Server Compact библиотеки DLL. Данная возможность сокращает общий размер приложения.  
   
@@ -41,7 +43,7 @@ SQL Server Compact — база данных по умолчанию, устан
 -   [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] не поддерживает SQL Server Compact.  
   
 ## <a name="feature-set"></a>Набор возможностей  
- Набор компонентов SQL Server Compact гораздо проще, чем набор функциональных возможностей [!INCLUDE[ssNoVersion](../../../../../../includes/ssnoversion-md.md)] одним из следующих способов, которые могут повлиять на [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] приложений:  
+ Набор компонентов SQL Server Compact гораздо проще, чем набор функций SQL Server одним из следующих способов, которые могут повлиять на [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] приложений:  
   
 -   SQL Server Compact не поддерживает хранимые процедуры или представления.  
   

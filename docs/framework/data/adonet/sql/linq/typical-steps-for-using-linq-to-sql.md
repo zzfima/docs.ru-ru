@@ -1,24 +1,26 @@
 ---
-title: "Стандартная последовательность действий при использовании LINQ to SQL"
-ms.custom: 
+title: Стандартная последовательность действий при использовании LINQ to SQL
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 9a88bd51-bd74-48f7-a9b1-f650e8d55a3e
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 3aedef610d8ad3f743b346a46059b15d917cf7ca
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 31daf8ee10334327070cb5bfc4068bc80e1d7ea4
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="typical-steps-for-using-linq-to-sql"></a>Стандартная последовательность действий при использовании LINQ to SQL
 Чтобы реализовать приложение [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], выполните действия, описанные в этом разделе. Обратите внимание, что многие их этих действий являются необязательными. В большинстве случаев можно использовать объектную модель в состоянии, установленном по умолчанию.  
@@ -33,7 +35,7 @@ ms.lasthandoff: 01/17/2018
   
 -   Конструктор [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]  
   
-     Этот конструктор предоставляет многофункциональный пользовательский интерфейс для создания объектной модели из существующей базы данных. Данное средство, являющееся частью интегрированной среды разработки [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)], лучше всего подходит для баз данных небольшого или среднего размера.  
+     Этот конструктор предоставляет многофункциональный пользовательский интерфейс для создания объектной модели из существующей базы данных. Этот инструмент входит в состав интегрированной среды разработки Visual Studio и лучше всего подходит для баз данных небольшого или среднего размера.  
   
 -   Средство создания кода SQLMetal  
   
@@ -41,13 +43,13 @@ ms.lasthandoff: 01/17/2018
   
 -   Редактор кода  
   
-     Можно написать собственный код с помощью редактора кода [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] или другого редактора кода. Этот подход может привести к большому числу ошибок, поэтому при наличии существующей базы данных, которую можно использовать для создания модели с помощью [!INCLUDE[vs_ordesigner_short](../../../../../../includes/vs-ordesigner-short-md.md)] или программы SQLMetal, использовать его не рекомендуется. Однако редактор кода становится ценным инструментом, когда требуется уточнить или изменить код, уже созданный с помощью других средств. Дополнительные сведения см. в разделе [как: Настройка классов сущностей с помощью редактора кода](../../../../../../docs/framework/data/adonet/sql/linq/how-to-customize-entity-classes-by-using-the-code-editor.md).  
+     Можно написать собственный код с помощью редактора кода Visual Studio или другого редактора. Этот подход может привести к большому числу ошибок, поэтому при наличии существующей базы данных, которую можно использовать для создания модели с помощью [!INCLUDE[vs_ordesigner_short](../../../../../../includes/vs-ordesigner-short-md.md)] или программы SQLMetal, использовать его не рекомендуется. Однако редактор кода становится ценным инструментом, когда требуется уточнить или изменить код, уже созданный с помощью других средств. Дополнительные сведения см. в разделе [как: Настройка классов сущностей с помощью редактора кода](../../../../../../docs/framework/data/adonet/sql/linq/how-to-customize-entity-classes-by-using-the-code-editor.md).  
   
 ### <a name="2-select-the-kind-of-code-you-want-to-generate"></a>2. Выбор типа кода, который требуется создать.  
   
--   Файл с исходным кодом на языке C# или [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)] для сопоставления на основе атрибутов.  
+-   C# или Visual Basic файл исходного кода для сопоставления на основе атрибутов.  
   
-     Затем этот файл с исходным кодом необходимо включить в проект [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)]. Дополнительные сведения см. в разделе [сопоставления на основе атрибутов](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md).  
+     Затем этот файл кода необходимо включить в проект Visual Studio. Дополнительные сведения см. в разделе [сопоставления на основе атрибутов](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md).  
   
 -   XML-файл для внешнего сопоставления.  
   

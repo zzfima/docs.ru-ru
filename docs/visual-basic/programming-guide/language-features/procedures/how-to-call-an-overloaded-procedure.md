@@ -1,11 +1,12 @@
 ---
-title: "Практическое руководство. Вызов перегруженной процедуры (Visual Basic)"
-ms.custom: 
+title: Практическое руководство. Вызов перегруженной процедуры (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - Visual Basic code, procedures
@@ -14,14 +15,14 @@ helpviewer_keywords:
 - procedures [Visual Basic], multiple versions
 - procedure calls [Visual Basic], overloaded
 ms.assetid: 3bb331fb-f6bc-406f-9ca0-9609b497014c
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: ff5967c1b09ad59f249297b1cf0a4ed900faf4a1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 5eca03de6b6dd2ca2b992196b1ae224f8fbf5068
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-call-an-overloaded-procedure-visual-basic"></a>Практическое руководство. Вызов перегруженной процедуры (Visual Basic)
 Преимущество перегрузки процедуры заключается в гибкости вызова. Вызывающий код может получить сведения, необходимые для передачи в процедуру, а затем вызвать одну процедуры по имени, независимо от того, какие аргументы, она передает.  
@@ -32,7 +33,7 @@ ms.lasthandoff: 11/21/2017
   
 2.  Создайте вызов процедуры обычным способом, представляя данные в списке аргументов. Убедитесь, что аргументы соответствуют списку параметров в одной из версий, определенное для этой процедуры.  
   
-3.  Необходимо определить, какую версию процедуры необходимо вызвать. [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]передает управление версии, который соответствует списку аргументов.  
+3.  Необходимо определить, какую версию процедуры необходимо вызвать. Visual Basic передает управление в версию, которая соответствует списку аргументов.  
   
      В следующем примере вызывается `post` объявление процедуры в [как: определить несколько версий процедуры](./how-to-define-multiple-versions-of-a-procedure.md). Она получает идентификатор клиента, определяет, является ли он `String` или `Integer`, а затем в любом случае вызывает ту же процедуру.  
   

@@ -1,27 +1,29 @@
 ---
-title: "Настройка параметров и типы данных параметров"
-ms.custom: 
+title: Настройка параметров и типы данных параметров
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 537d8a2c-d40b-4000-83eb-bc1fcc93f707
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: a71ba7ed12196184b7e826ed70c92a9873efdb0c
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: cdb6efb428f5c096178895f95fe1256846e9c1e5
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="configuring-parameters-and-parameter-data-types"></a>Настройка параметров и типы данных параметров
 Объекты команды используют параметры для передачи значений в выражения SQL или хранимые процедуры, обеспечивая проверку типов и правильности. В отличие от текста команд, входные параметры обрабатываются как буквенные значения, а не как исполняемый код. Это помогает защищаться от атак путем внедрения кода SQL, при которых злоумышленник вставляет в инструкцию SQL команду, ставящую под угрозу безопасность сервера.  
@@ -90,7 +92,7 @@ ms.lasthandoff: 01/17/2018
 >  Преобразования из типа decimal в другие типы являются сужающими. Они округляют десятичное значение до ближайшего целого в направлении нуля. Если результат преобразования нельзя представить в целевом типе, возникает исключение <xref:System.OverflowException> .  
   
 > [!NOTE]
->  При передаче на сервер значения null в качестве параметра необходимо указать значение <xref:System.DBNull>, а не `null` (`Nothing` в [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)]). В системе значение null - это пустой объект, не имеющий значения. Для представления значений null используется тип<xref:System.DBNull> . Дополнительные сведения о значении NULL базы данных см. в разделе [Handling Null Values](../../../../docs/framework/data/adonet/sql/handling-null-values.md).  
+>  При отправке значения параметра null на сервер, необходимо указать <xref:System.DBNull>, а не `null` (`Nothing` в Visual Basic). В системе значение null - это пустой объект, не имеющий значения. Для представления значений null используется тип<xref:System.DBNull> . Дополнительные сведения о значении NULL базы данных см. в разделе [Handling Null Values](../../../../docs/framework/data/adonet/sql/handling-null-values.md).  
   
 ## <a name="deriving-parameter-information"></a>Выведение информации о параметрах  
  Информацию о параметрах можно вывести из хранимой процедуры с помощью класса `DbCommandBuilder` . Оба класса, `SqlCommandBuilder` и `OleDbCommandBuilder` , обеспечивают статический метод `DeriveParameters`, который автоматически заполняет коллекцию параметров объекта команд, использующего информацию о параметрах от хранимой процедуры. Обратите внимание, что метод `DeriveParameters` перезаписывает существующую информацию о параметрах для команды.  

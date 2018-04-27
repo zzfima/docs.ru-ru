@@ -1,11 +1,11 @@
 ---
-title: "Сериализация XML с использованием XML-веб-служб"
-ms.custom: 
+title: Сериализация XML с использованием XML-веб-служб
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -23,24 +23,24 @@ helpviewer_keywords:
 - literal XML serialization
 - serialization, attributes
 ms.assetid: a416192f-8102-458e-bc0a-0b8f3f784da9
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 12ab7f98036f61b0d9100f99ba3fad2388f62210
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: b07d86bbcc646141e067342d5e4340bdc4b39757
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="xml-serialization-with-xml-web-services"></a>Сериализация XML с использованием XML-веб-служб
-Сериализация XML является базовым механизмом передачи, применяемом в архитектуре XML-веб-служб, и выполняется с использованием класса <xref:System.Xml.Serialization.XmlSerializer>. Для управления кодом XML, созданным XML-веб-службой, для классов, возвращаемых значений, параметров и полей файла, используемых для создания XML-веб-службы (файл ASMX), можно применять атрибуты, указанные в разделах [Атрибуты управления сериализацией XML](../../../docs/standard/serialization/attributes-that-control-xml-serialization.md) и [Атрибуты управления сериализацией с кодировкой SOAP](../../../docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md). Дополнительные сведения о создании XML-веб-службы см. в разделе [XML-веб-службы с использованием ASP.NET](http://msdn.microsoft.com/library/01dfc27c-c68e-4910-a0aa-5e4c2a766b0c).  
+Сериализация XML является базовым механизмом передачи, применяемом в архитектуре XML-веб-служб, и выполняется с использованием класса <xref:System.Xml.Serialization.XmlSerializer>. Для управления кодом XML, созданным XML-веб-службой, для классов, возвращаемых значений, параметров и полей файла, используемых для создания XML-веб-службы (файл ASMX), можно применять атрибуты, указанные в разделах [Атрибуты управления сериализацией XML](../../../docs/standard/serialization/attributes-that-control-xml-serialization.md) и [Атрибуты управления сериализацией с кодировкой SOAP](../../../docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md). Дополнительные сведения о создании XML-веб-службы см. в разделе [XML-веб-службы с использованием ASP.NET](https://msdn.microsoft.com/library/01dfc27c-c68e-4910-a0aa-5e4c2a766b0c).  
   
 ## <a name="literal-and-encoded-styles"></a>Литеральный и кодированный стили  
- Код XML, создаваемый XML-веб-службой, можно отформатировать двумя способами: литерально или кодированно. Дополнительные сведения см. в разделе [Настройка форматирования сообщения SOAP](http://msdn.microsoft.com/library/1d777288-c0d9-4e6a-b638-f010da031952). Поэтому для управления XML-сериализацией предусмотрено два набора атрибутов. Атрибуты, указанные в разделе [Атрибуты управления сериализацией XML](../../../docs/standard/serialization/attributes-that-control-xml-serialization.md), предназначены для управления литеральным стилем XML. Атрибуты, указанные в разделе [Атрибуты управления сериализацией с кодировкой SOAP](../../../docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md), управляют кодированным стилем. Путем выборочного применения таких атрибутов можно настроить приложение на возврат одного или обоих стилей. Кроме того, эти атрибуты применимы (в соответствующих случаях) к возвращаемым значениям и параметрам.  
+ Код XML, создаваемый XML-веб-службой, можно отформатировать двумя способами: литерально или кодированно. Дополнительные сведения см. в разделе [Настройка форматирования сообщения SOAP](https://msdn.microsoft.com/library/1d777288-c0d9-4e6a-b638-f010da031952). Поэтому для управления XML-сериализацией предусмотрено два набора атрибутов. Атрибуты, указанные в разделе [Атрибуты управления сериализацией XML](../../../docs/standard/serialization/attributes-that-control-xml-serialization.md), предназначены для управления литеральным стилем XML. Атрибуты, указанные в разделе [Атрибуты управления сериализацией с кодировкой SOAP](../../../docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md), управляют кодированным стилем. Путем выборочного применения таких атрибутов можно настроить приложение на возврат одного или обоих стилей. Кроме того, эти атрибуты применимы (в соответствующих случаях) к возвращаемым значениям и параметрам.  
   
 ### <a name="example-of-using-both-styles"></a>Пример использования обоих стилей.  
  При создании XML-веб-службы для методов можно использовать оба набора атрибутов. В следующем примере кода класс с именем `MyService` содержит два метода XML-веб-служб: `MyLiteralMethod` и `MyEncodedMethod`. Оба метода выполняют одну и ту же функцию: возвращение экземпляра класса `Order`. В классе `Order` оба атрибута <xref:System.Xml.Serialization.XmlTypeAttribute> и <xref:System.Xml.Serialization.SoapTypeAttribute> применяются к полю `OrderID`, и свойство `ElementName` обоих атрибутов имеет разные значения.  

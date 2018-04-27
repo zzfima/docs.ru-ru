@@ -5,14 +5,15 @@ ms.prod: .net
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/19/2017
+ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 92bfd4516866fe82408dd3dd341a13db0ee216c0
-ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
+ms.openlocfilehash: 59c03755bebce98e018f56fc7213b00a0d3eae38
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="orchestrating-microservices-and-multicontainer-applications-for-high-scalability-and-availability"></a>Оркестрация микрослужбами и multicontainer приложений высокий уровень масштабируемости и доступности
 
@@ -104,7 +105,7 @@ ms.lasthandoff: 04/16/2018
     <https://docs.mesosphere.com/1.7/overview/>
 
 -   Kubernetes (официальный сайт):  
-    <http://kubernetes.io/>
+    <https://kubernetes.io/>
 
 ## <a name="using-service-fabric"></a>С помощью Service Fabric
 
@@ -178,7 +179,7 @@ Service Fabric предоставляет два масштабных решен
 
 У служб с отслеживанием состояния есть недостатки. Уровень сложности, что позволяет масштабировать ресурсов. Функциональность, которая обычно реализовывалась бы в рамках внешней базы данных, должна обрабатывать такие операции, как репликация данных между микрослужбами с отслеживанием состояния и секционирование данных. Тем не менее, это одна из областей, где orchestrator, например [Service Fabric](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-services-platform-architecture) с его [надежных служб с отслеживанием состояния](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-services-introduction#when-to-use-reliable-services-apis) помогут наиболее — за счет упрощения разработки и жизненного цикла с отслеживанием состояния с помощью микрослужбами [надежные API служб](https://docs.microsoft.com/azure/service-fabric/service-fabric-work-with-reliable-collections) и [службы Reliable Actor](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-actors-introduction).
 
-К другим платформам микрослужб, которые допускают использование служб с отслеживанием состояния и поддерживают шаблон субъекта, повышая отказоустойчивость и снижая задержки при взаимодействии между бизнес-логикой и данными, относятся Microsoft [Orleans](https://github.com/dotnet/orleans) от Microsoft Research и [Akka.NET](http://getakka.net/). В настоящее время идет работа над улучшением поддержки Docker в обеих этих платформах.
+К другим платформам микрослужб, которые допускают использование служб с отслеживанием состояния и поддерживают шаблон субъекта, повышая отказоустойчивость и снижая задержки при взаимодействии между бизнес-логикой и данными, относятся Microsoft [Orleans](https://github.com/dotnet/orleans) от Microsoft Research и [Akka.NET](https://getakka.net/). В настоящее время идет работа над улучшением поддержки Docker в обеих этих платформах.
 
 Учтите, что контейнеры Docker сами по себе не поддерживают отслеживание состояния. Чтобы реализовать службу с отслеживанием состояния, вам потребуется одна из высокоуровневых платформ, указанных выше. Однако на момент написания этой статьи с отслеживанием состояния службы в Service Fabric не поддерживается как контейнеры, только как обычный микрослужбами. Надежные службы поддержки в контейнерах, будут доступны в будущих версиях Service Fabric.
 

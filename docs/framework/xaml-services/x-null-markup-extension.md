@@ -20,17 +20,17 @@ helpviewer_keywords:
 - x:Null markup extension [XAML Services]
 - XAML [XAML Services], x:Null markup extension
 ms.assetid: 2e3ccc21-4996-481d-91b5-3910d8b3bfa3
-caps.latest.revision: ''
+caps.latest.revision: 20
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 5b10d759a4f79eabe973a0fcd60736428e46f659
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8f176598db00c57159bf351ea5d9ec428c5c04bc
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="xnull-markup-extension"></a>Расширение разметки x:NULL
 Указывает `null` как значение для элемента XAML.  
@@ -42,7 +42,7 @@ ms.lasthandoff: 12/22/2017
 ```  
   
 ## <a name="remarks"></a>Примечания  
- Ключевое слово для пустую ссылку в [!INCLUDE[TLA#tla_cshrp](../../../includes/tlasharptla-cshrp-md.md)] и [!INCLUDE[TLA#tla_cpp](../../../includes/tlasharptla-cpp-md.md)] имеет значение null. [!INCLUDE[TLA#tla_visualb](../../../includes/tlasharptla-visualb-md.md)] Ключевое слово для пустая ссылка является `Nothing`, а всегда используют `{x:Null}` как использование XAML независимо от того, какой язык кода, нужно связать с XAML.  
+ Ключевое слово для пустую ссылку в C# и [!INCLUDE[TLA#tla_cpp](../../../includes/tlasharptla-cpp-md.md)] имеет значение null. Ключевое слово Microsoft Visual Basic для пустая ссылка является `Nothing`, а всегда используют `{x:Null}` как использование XAML независимо от того, какой язык кода, нужно связать с XAML.  
   
  `x:Null` Расширение разметки получает отсутствуют задаваемые свойства.  
   

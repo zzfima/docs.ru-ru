@@ -19,11 +19,11 @@ ms.assetid: 7a4777e1-0618-4de9-9510-fb9ace2bf4db
 caps.latest.revision: 23
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: a286c70f57128d0406b3a300610fea5e1c44b32d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 9968e5de0f8cb45fb896ba43c80d9c9a3ab8ef08
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="xml-attribute-axis-property-visual-basic"></a>Свойство оси атрибута XML (Visual Basic)
 Предоставляет доступ к значению атрибута для <xref:System.Xml.Linq.XElement> объекта или первый элемент в коллекцию <xref:System.Xml.Linq.XElement> объектов.  
@@ -38,24 +38,24 @@ object.@<attribute>
   
 ## <a name="parts"></a>Части  
  `object`  
- Обязательный. <xref:System.Xml.Linq.XElement> Объект или коллекцию <xref:System.Xml.Linq.XElement> объектов.  
+ Обязательно. <xref:System.Xml.Linq.XElement> Объект или коллекцию <xref:System.Xml.Linq.XElement> объектов.  
   
  .@  
- Обязательный. Обозначает начало свойства оси атрибута.  
+ Обязательно. Обозначает начало свойства оси атрибута.  
   
  <  
- Необязательно. Обозначает начало имени атрибута при `attribute` не является допустимым идентификатором в [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
+ Необязательный. Обозначает начало имени атрибута при `attribute` не является допустимым идентификатором в Visual Basic.  
   
  `attribute`  
- Обязательный. Имя атрибута для доступа к формы [`prefix`:]`name`.  
+ Обязательно. Имя атрибута для доступа к формы [`prefix`:]`name`.  
   
 |Отделение|Описание|  
 |----------|-----------------|  
-|`prefix`|Необязательно. Префикс пространства имен XML для атрибута. Должно быть глобальным пространством имен XML, определенным с помощью оператора `Imports`.|  
-|`name`|Обязательный. Имя локального атрибута. В разделе [имена объявленных элементов и атрибутов](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md).|  
+|`prefix`|Необязательный. Префикс пространства имен XML для атрибута. Должно быть глобальным пространством имен XML, определенным с помощью оператора `Imports`.|  
+|`name`|Обязательно. Имя локального атрибута. В разделе [имена объявленных элементов и атрибутов](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md).|  
   
  \>  
- Необязательно. Обозначает конец имени атрибута при `attribute` не является допустимым идентификатором в [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
+ Необязательный. Обозначает конец имени атрибута при `attribute` не является допустимым идентификатором в Visual Basic.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
  Строка, содержащая значение `attribute`. Если имя атрибута не существует, `Nothing` возвращается.  
@@ -65,7 +65,7 @@ object.@<attribute>
   
  При ссылке на XML-атрибутов с помощью идентификатора @, значение атрибута возвращается в виде строки, и необходимо явно указать <xref:System.Xml.Linq.XAttribute.Value%2A> свойство.  
   
- Правила именования для XML-атрибутов отличаются от правила именования для [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] идентификаторы. Чтобы получить доступ к XML-атрибут, который имеет имя, которое не является допустимым идентификатором Visual Basic, заключите имя в угловые скобки (\< и >).  
+ Правила именования для XML-атрибутов отличаются от правилам именования идентификаторов Visual Basic. Чтобы получить доступ к XML-атрибут, который имеет имя, которое не является допустимым идентификатором Visual Basic, заключите имя в угловые скобки (\< и >).  
   
 ## <a name="xml-namespaces"></a>Пространства имен XML  
  Имя в свойство оси атрибута можно использовать только префиксы пространства имен XML, объявленные глобально с помощью `Imports` инструкции. В нем нельзя использовать префиксы пространства имен XML, объявленные локально с помощью литералов XML-элемента. Дополнительные сведения см. в разделе [оператор Imports (пространство имен XML)](../../../visual-basic/language-reference/statements/imports-statement-xml-namespace.md).  
@@ -97,7 +97,7 @@ object.@<attribute>
 ```  
   
 ## <a name="example"></a>Пример  
- В следующем примере используется синтаксис угловых скобок, необходимо получить значение атрибута XML с именем `number-type`, который не является допустимым идентификатором в [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
+ В следующем примере используется синтаксис угловых скобок, необходимо получить значение атрибута XML с именем `number-type`, который не является допустимым идентификатором в Visual Basic.  
   
  [!code-vb[VbXMLSamples#13](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-attribute-axis-property_3.vb)]  
   

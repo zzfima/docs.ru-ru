@@ -1,18 +1,19 @@
 ---
-title: "Построение гибких служб готов для облака. Принять временные сбои в облаке"
-description: "Архитектура Микрослужбами .NET для приложений .NET в контейнерах | Построение гибких служб готов для облака. Принять временные сбои в облаке"
+title: Построение гибких служб готов для облака. Принять временные сбои в облаке
+description: Архитектура Микрослужбами .NET для приложений .NET в контейнерах | Построение гибких служб готов для облака. Принять временные сбои в облаке
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/26/2017
 ms.prod: .net
+ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: df452c9fbf1c16603efcec40844b55810bd5d2d4
-ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
+ms.openlocfilehash: 0ac1d67a5b5b9a19f47c1d20eeb446977466510f
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud"></a>Построение гибких служб готов для облака: принятию временные сбои в облаке
 
@@ -52,11 +53,11 @@ ms.lasthandoff: 03/08/2018
 
 -   **Entity Framework подключения устойчивости и логика повторных попыток (версия 6 и более поздние версии)**
 
-    [https://MSDN.Microsoft.com/library/dn456835 (v=vs.113).aspx](https://msdn.microsoft.com/library/dn456835(v=vs.113).aspx)
+    [https://msdn.microsoft.com/library/dn456835(v=vs.113).aspx](https://msdn.microsoft.com/library/dn456835(v=vs.113).aspx)
 
 -   **Блок приложения обработки временных сбоев**
 
--   [https://MSDN.Microsoft.com/library/hh680934 (v=pandp.50).aspx](https://msdn.microsoft.com/library/hh680934(v=pandp.50).aspx)
+-   [https://msdn.microsoft.com/library/hh680934(v=pandp.50).aspx](https://msdn.microsoft.com/library/hh680934(v=pandp.50).aspx)
 
 -   **Библиотека Polly для гибкой взаимодействие по протоколу HTTP**
 

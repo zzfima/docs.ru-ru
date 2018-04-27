@@ -1,25 +1,25 @@
 ---
 title: XML Schema Definition Tool (Xsd.exe)
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: a6e6e65c-347f-4494-9457-653bf29baac2
-caps.latest.revision: 
+caps.latest.revision: 7
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 0e6407fc8da8695da47165ae0ea2c2c6d863ec23
-ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
+ms.openlocfilehash: 08e612ccc55cf85929d0b16217259d73510bc15e
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="xml-schema-definition-tool-xsdexe"></a>XML Schema Definition Tool (Xsd.exe)
 Инструмент определения схемы XML (Xsd.exe) создает схему XML или классы CLR из файлов XDR, XML и XSD либо из классов в сборке среды выполнения.  
@@ -47,7 +47,7 @@ xsd {file.dll | file.exe} [/outputdir:directory] [/type:typename [...]][/paramet
 |Параметр|Описание|  
 |------------|-----------------|  
 |**/h**[**elp**]|Отображает синтаксис команд и параметров программы.|  
-|**/o**[**utputdir**]**:***directory*|Задает каталог выходных файлов. Этот аргумент отображается только один раз. Значением по умолчанию является текущий каталог.|  
+|**/ o**[**utputdir**] **: *** каталога*|Задает каталог выходных файлов. Этот аргумент отображается только один раз. Значением по умолчанию является текущий каталог.|  
 |**/?**|Отображает синтаксис команд и параметров программы.|  
 |**/P[arameters]:** *file.xml*|Считывает параметры различных режимов операций из указанного XML-файла. Краткая форма "/p:". Дополнительные сведения см. в разделе "Примечания".|  
   
@@ -63,11 +63,11 @@ xsd {file.dll | file.exe} [/outputdir:directory] [/type:typename [...]][/paramet
   
 |Параметр|Описание|  
 |------------|-----------------|  
-|**/e**[**lement**]**:***element*|Определяет элемент в схеме, для которого создается код. По умолчанию все элементы имеют тип. Этот аргумент можно задать несколько раз.|  
+|**/e**[**элементам**] **: *** элемент*|Определяет элемент в схеме, для которого создается код. По умолчанию все элементы имеют тип. Этот аргумент можно задать несколько раз.|  
 |**/enableDataBinding**|Реализует интерфейс <xref:System.ComponentModel.INotifyPropertyChanged> для всех созданных типов для обеспечения привязки данных. Краткая форма: `/edb`.|  
-|**/enableLinqDataSet**|(Краткая форма: `/eld`.) Указывает, что созданный набор данных можно запросить с помощью LINQ to DataSet. Этот параметр используется только при указании параметра /dataset. Дополнительные сведения см. в разделах [Общие сведения о LINQ to DataSet](../../../docs/framework/data/adonet/linq-to-dataset-overview.md) и [Запрос к типизированным объектам DataSet](../../../docs/framework/data/adonet/querying-typed-datasets.md). Общие сведения об использовании LINQ см. в разделе [LINQ](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d).|  
+|**/enableLinqDataSet**|(Краткая форма: `/eld`.) Указывает, что созданный набор данных можно запросить с помощью LINQ to DataSet. Этот параметр используется только при указании параметра /dataset. Дополнительные сведения см. в разделах [Общие сведения о LINQ to DataSet](../../../docs/framework/data/adonet/linq-to-dataset-overview.md) и [Запрос к типизированным объектам DataSet](../../../docs/framework/data/adonet/querying-typed-datasets.md). Общие сведения об использовании LINQ см. в разделе [LINQ](https://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d).|  
 |**/f**[**ields**]|Создает поля вместо свойств. По умолчанию создаются свойства.|  
-|**/l**[**anguage**]**:***language*|Задает используемый язык программирования. Доступный выбор: `CS` (C#, по умолчанию), `VB` (Visual Basic), `JS` (JScript) или `VJS` (Visual J#). Также можно указать полное имя класса, реализующего <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType>|  
+|**/l**[**anguage**] **: *** языка*|Задает используемый язык программирования. Доступный выбор: `CS` (C#, по умолчанию), `VB` (Visual Basic), `JS` (JScript) или `VJS` (Visual J#). Также можно указать полное имя класса, реализующего <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType>|  
 |**/n**[**amespace**]**:***namespace*|Определяет пространство имен среды выполнения для создаваемых типов. Пространство имен по умолчанию — `Schemas`.|  
 |**/nologo**|Отключает баннер.|  
 |**/order**|Создает явные идентификаторы порядка для всех примитивных членов.|  
@@ -78,7 +78,7 @@ xsd {file.dll | file.exe} [/outputdir:directory] [/type:typename [...]][/paramet
   
 |Параметр|Описание|  
 |------------|-----------------|  
-|**/t**[**ype**]**:***typename*|Задает имя типа, для которого следует создать схему. Можно указать несколько аргументов типа. Если *имя_типа* не указывает пространство имен, Xsd.exe сопоставляет все типы в сборке с указанным типом. Если *имя_типа* задает пространство имен, сопоставляется только этот тип. Если *имя_типа* заканчивается знаком звездочки (\*), средство сопоставляет все типы, которые начинаются со строки, предшествующей знаку звездочки (\*). Если параметр `/type` не задан, Xsd.exe создает схемы для всех типов в сборке.|  
+|**/t**[**тип**] **: *** typename*|Задает имя типа, для которого следует создать схему. Можно указать несколько аргументов типа. Если *имя_типа* не указывает пространство имен, Xsd.exe сопоставляет все типы в сборке с указанным типом. Если *имя_типа* задает пространство имен, сопоставляется только этот тип. Если *имя_типа* заканчивается знаком звездочки (\*), средство сопоставляет все типы, которые начинаются со строки, предшествующей знаку звездочки (\*). Если параметр `/type` не задан, Xsd.exe создает схемы для всех типов в сборке.|  
   
 ## <a name="remarks"></a>Примечания  
  В следующей таблице показаны операции, выполняемые Xsd.exe.  
@@ -240,4 +240,4 @@ xsd myAssembly.dll
  [Командные строки](../../../docs/framework/tools/developer-command-prompt-for-vs.md)  
  [Общие сведения о LINQ to DataSet](../../../docs/framework/data/adonet/linq-to-dataset-overview.md)  
  [Запрос к типизированным объектам DataSet](../../../docs/framework/data/adonet/querying-typed-datasets.md)  
- [Встроенный язык запросов LINQ](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)
+ [Встроенный язык запросов LINQ](https://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)

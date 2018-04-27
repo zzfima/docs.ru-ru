@@ -1,40 +1,42 @@
 ---
-title: "Краткое руководство (службы данных WCF)"
-ms.custom: 
+title: Краткое руководство (службы данных WCF)
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework-oob
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - WCF Data Services, quick-start example
 - WCF Data Services, Entity Data Model (EDM) service
 ms.assetid: 7b18ca1e-d4d6-4c7a-afb9-ce3cebb98a8d
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: fa6711ef5591110c74a1da95358aac4d8a8da655
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: cf23c6f86900fd94d269e77dcefb05da0ace5ea0
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="quickstart-wcf-data-services"></a>Краткое руководство (службы данных WCF)
 Это краткое руководство поможет вам ознакомиться с [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] и [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] через последовательность задач, которые поддерживают подразделы [Приступая к работе](../../../../docs/framework/data/wcf/getting-started-with-wcf-data-services.md).  
   
 ## <a name="what-you-will-learn"></a>Новые знания  
- Первая задача краткого руководства показывает, как создать службу данных для предоставления канала [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] из образца базы данных Northwind. В последующих разделах будет открыт доступ к каналу [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] с помощью веб-браузера и создано клиентское приложение [!INCLUDE[avalon1](../../../../includes/avalon1-md.md)] , использующее канал [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] посредством клиентских библиотек.  
+ Первая задача краткого руководства показывает, как создать службу данных для предоставления канала [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] из образца базы данных Northwind. В последующих разделах будет осуществлен доступ к каналу [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] с помощью веб-браузера и создано клиентское приложение Windows Presentation Foundation (WPF), получающее доступ к каналу [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] с помощью клиентских библиотек.  
   
 ## <a name="prerequisites"></a>Предварительные требования  
  Чтобы выполнить задания данного краткого руководства, установите следующие компоненты:  
   
 -   [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].  
   
--   Экземпляр [!INCLUDE[msCoName](../../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]. В том числе SQL Server Express, входящий в установку по умолчанию [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)].  
+-   Экземпляр [!INCLUDE[msCoName](../../../../includes/msconame-md.md)] SQL Server. В том числе SQL Server Express, входящий в установку по умолчанию Visual Studio.  
   
 -   Наличие учебной базы данных Northwind. Чтобы скачать этот образец базы данных, см. страницу скачивания [Sample Databases for SQL Server](http://go.microsoft.com/fwlink/?linkid=24758)(Образцы баз данных для SQL Server).  
   
@@ -43,7 +45,7 @@ ms.lasthandoff: 12/22/2017
  Определите приложение [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] , определите модель данных, создайте службу данных и включите доступ к ресурсам.  
   
  [Доступ к службе из веб-браузера](../../../../docs/framework/data/wcf/accessing-the-service-from-a-web-browser-wcf-data-services-quickstart.md)  
- Запустите службу из среды [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] и обратитесь к ней с помощью запросов HTTP GET через веб-браузер для получения доступа к предоставляемым каналам.  
+ Запустите службу из среды Visual Studio и обратитесь к ней с помощью запросов HTTP GET через веб-браузер для получения доступа к предоставляемым каналам.  
   
  [Создание клиентского приложения .NET Framework](../../../../docs/framework/data/wcf/creating-the-dotnet-client-application-wcf-data-services-quickstart.md)  
  Создайте клиентское приложение [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)] для использования канала [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] , свяжите данные с элементами управления Windows, измените данные в связанных элементах управления и отправьте изменения обратно в службу данных.  

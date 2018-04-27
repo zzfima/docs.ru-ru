@@ -1,11 +1,12 @@
 ---
-title: "Практическое руководство. Получение значения из свойства (Visual Basic)"
-ms.custom: 
+title: Практическое руководство. Получение значения из свойства (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - property values [Visual Basic]
@@ -14,29 +15,29 @@ helpviewer_keywords:
 - Visual Basic code, properties
 - properties [Visual Basic], values
 ms.assetid: 3954423e-6ab7-4a4c-b55c-a8d27be47891
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 6cde5408ea09398a79a3da01ae9b2d0202c58eaf
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 7161052b9d9b388d8da8bd421c3b220f15037805
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-get-a-value-from-a-property-visual-basic"></a>Практическое руководство. Получение значения из свойства (Visual Basic)
 Получить значение свойства, включая имя свойства в выражении.  
   
- Свойство `Get` процедура получает значение, но вы не вызывается явно. Свойство так же, как переменную. [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]делает вызовы процедур свойств.  
+ Свойство `Get` процедура получает значение, но вы не вызывается явно. Свойство так же, как переменную. Visual Basic выполняет вызовы процедур свойств.  
   
 ### <a name="to-retrieve-a-value-from-a-property"></a>Для извлечения значения из свойства  
   
 1.  Используйте имя свойства в выражении так же, как имя переменной. Можно использовать свойство везде, где можно использовать переменную или константу.  
   
-     -или-  
+     - или -  
   
      Используйте имя свойства после равенства (`=`) войти в операторе присваивания.  
   
-     В следующем примере считывается значение [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] `Now` свойства, неявно вызывая его `Get` процедуры.  
+     В следующем примере считывается значение Visual Basic `Now` свойства, неявно вызывая его `Get` процедуры.  
   
      [!code-vb[VbVbalrDateProperties#4](./codesnippet/VisualBasic/how-to-get-a-value-from-a-property_1.vb)]  
   

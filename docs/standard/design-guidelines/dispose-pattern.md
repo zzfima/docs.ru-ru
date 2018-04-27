@@ -1,12 +1,12 @@
 ---
-title: "Шаблон ликвидации"
-ms.custom: 
+title: Шаблон ликвидации
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Dispose method
@@ -15,18 +15,18 @@ helpviewer_keywords:
 - customizing Dispose method name
 - Finalize method
 ms.assetid: 31a6c13b-d6a2-492b-9a9f-e5238c983bcb
-caps.latest.revision: 
+caps.latest.revision: 22
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: e0c2e74afea8a0cb5a0e187f05511eabe0527b90
-ms.sourcegitcommit: 08684dd61444c2f072b89b926370f750e456fca1
+ms.openlocfilehash: cb83b943a03eadd760d0080b1c9920e2c1e78cce
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="dispose-pattern"></a>Шаблон ликвидации
 Все программы получить один или несколько системных ресурсов, таких как память, дескрипторы системы или подключения к базе данных в процессе их выполнения. Разработчикам нужно соблюдать осторожность при использовании таких системных ресурсов, так как они должны быть освобождены после их получения и использования.  
@@ -287,7 +287,7 @@ public class ComplexResourceHolder : IDisposable {
   
  *Фрагменты © 2005, 2009 корпорации Майкрософт. Все права защищены.*  
   
- *Перепечатываются разрешении Пирсона для образовательных учреждений, Inc. из [Framework рекомендации по проектированию: условные обозначения, стили и шаблоны для библиотеки .NET для повторного использования, 2-е издание](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina и Брэд Абрамс, опубликованные 22 октября 2008 г., Addison-Wesley Professional в составе ряда разработки Microsoft Windows.*  
+ *Перепечатываются разрешении Пирсона для образовательных учреждений, Inc. из [Framework рекомендации по проектированию: условные обозначения, стили и шаблоны для библиотеки .NET для повторного использования, 2-е издание](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina и Брэд Абрамс, опубликованные 22 октября 2008 г., Addison-Wesley Professional в составе ряда разработки Microsoft Windows.*  
   
 ## <a name="see-also"></a>См. также  
  <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType>  

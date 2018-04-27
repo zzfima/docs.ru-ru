@@ -1,30 +1,30 @@
 ---
-title: "Кроссплатформенная разработка с переносной библиотекой классов"
-ms.custom: 
+title: Кроссплатформенная разработка с переносной библиотекой классов
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Portable Class Library [.NET Framework]
 - targeting multiple platforms
 - multiple platforms, targeting
 ms.assetid: c31e1663-c164-4e65-b66d-d3aa8750a154
-caps.latest.revision: "95"
+caps.latest.revision: 95
 author: mairaw
 ms.author: mairaw
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: ea0a111727093cb65a98e48255b06b3c4516d258
-ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
+ms.openlocfilehash: 4e6b853c3548f27bbb4056f7d59d51a6964e0d91
+ms.sourcegitcommit: 68b60d38043e50104ccc90c76f8599b1ffe18346
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="cross-platform-development-with-the-portable-class-library"></a>Кроссплатформенная разработка с переносной библиотекой классов
 Тип проекта "Переносимая библиотека классов .NET Framework" в Visual Studio позволяет быстро и легко создавать межплатформенные приложения и библиотеки для платформ Майкрософт.  
@@ -38,7 +38,7 @@ ms.lasthandoff: 01/09/2018
  Visual Studio предоставляет шаблоны, которые облегчают разработку с использованием переносимой библиотеки классов. В зависимости от используемой версии Visual Studio доступные шаблоны и меню могут отличаться от тех, что описаны в этой статье.  
   
 > [!WARNING]
->  [Visual Studio 2013 с обновлением 2](http://go.microsoft.com/fwlink/p/?LinkId=393658) включает обновления для шаблонов переносимой библиотеки классов. При наличии более ранней версии Visual Studio и Visual Studio 2013 установлен на том же компьютере, и вы установили обновление 2, чтобы изменения **требуемой версии .NET Framework** вариантов, которые будут применяться к обеим версиям Visual Studio.  
+>  Visual Studio 2013 с обновлением 2 содержит обновления для шаблонов переносимой библиотеки классов. При наличии более ранней версии Visual Studio и Visual Studio 2013 установлен на том же компьютере, и вы установили обновление 2, чтобы изменения **требуемой версии .NET Framework** вариантов, которые будут применяться к обеим версиям Visual Studio.  
   
  В этом разделе.  
   
@@ -59,10 +59,10 @@ ms.lasthandoff: 01/09/2018
 |-----------------------|---------------------------------------------------|  
 |Visual Studio 2010 Professional, Premium или Ultimate|Да, при установке [Portable Library Tools](https://marketplace.visualstudio.com/items?itemName=BCLTeam.PortableLibraryTools2).|  
 |Версии Visual Studio Express 2010|Нет.|  
-|Visual Studio 2012 Professional, Premium или Ultimate|Да. Техническая поддержка по телефону, установите [Windows Phone SDK 8.0](http://go.microsoft.com/fwlink/?LinkId=265772).|  
+|Visual Studio 2012 Professional, Premium или Ultimate|Да. Для поддержки Windows Phone 8.0, установить [Windows Phone SDK 8.0](https://www.microsoft.com/download/details.aspx?id=35471).|  
 |Версии Visual Studio Express 2012|Нет.|  
-|Visual Studio 2013 Professional, Premium или Ultimate|Да. Поддержка Windows Phone 8.1 установите [Visual Studio 2013 с обновлением 2](http://go.microsoft.com/fwlink/p/?LinkId=393658).|  
-|Visual Studio Express 2013 для Windows|Да, при установке [последнюю версию Visual Studio Express](http://go.microsoft.com/fwlink/p/?LinkId=394629), которой включающая обновление 2, или добавьте [Visual Studio 2013 с обновлением 2](http://go.microsoft.com/fwlink/p/?LinkId=393658).|  
+|Visual Studio 2013 Professional, Premium или Ultimate|Да. Поддержка Windows Phone 8.1 установите [последнюю версию Visual Studio 2013](https://www.visualstudio.com/vs/older-downloads/).|  
+|Visual Studio Community 2013 для Windows|Да, при установке [последнюю версию Visual Studio Community 2013](https://www.visualstudio.com/vs/older-downloads/), включая обновление 2.|  
   
 <a name="create_pcl"></a>   
 ## <a name="creating-a-portable-class-library-project"></a>Создание проекта переносимой библиотеки классов  
@@ -152,10 +152,10 @@ ms.lasthandoff: 01/09/2018
   
  ➊ Требуется [Microsoft Async](https://www.nuget.org/packages/Microsoft.Bcl.Async/) пакета  
  ➋ Требуется [Microsoft Compression](https://www.nuget.org/packages/Microsoft.Bcl.Compression) пакета  
- ➌ Требуется [клиентских библиотек HTTP Майкрософт](http://www.nuget.org/packages/Microsoft.Net.Http) пакета  
+ ➌ Требуется [клиентских библиотек HTTP Майкрософт](https://www.nuget.org/packages/Microsoft.Net.Http) пакета  
   
 > [!WARNING]
->  Могут возникнуть ошибки при ссылке на [Microsoft Compression](https://www.nuget.org/packages/Microsoft.Bcl.Compression) и [клиентских библиотек HTTP Майкрософт](http://www.nuget.org/packages/Microsoft.Net.Http) пакетов из переносимой библиотеки, используемой приложением Windows Phone Silverlight 8.1. Дополнительные сведения см. в разделе [совместимость платформ и критические изменения для приложений Windows Phone Silverlight 8.1](http://go.microsoft.com/fwlink/p/?LinkId=394744).  
+>  Могут возникнуть ошибки при ссылке на [Microsoft Compression](https://www.nuget.org/packages/Microsoft.Bcl.Compression) и [клиентских библиотек HTTP Майкрософт](https://www.nuget.org/packages/Microsoft.Net.Http) пакетов из переносимой библиотеки, используемой приложением Windows Phone Silverlight 8.1. Дополнительные сведения см. в разделе [совместимость платформ и критические изменения для приложений Windows Phone Silverlight 8.1](/previous-versions/windows/apps/dn642084(v=vs.105)).  
   
 <a name="members"></a>   
 ## <a name="supported-types-and-members"></a>Поддерживаемые типы и члены  
@@ -197,7 +197,7 @@ ms.lasthandoff: 01/09/2018
  При создании приложения Магазина Windows или Windows Phone, которое ссылается на сборку переносимой библиотеки классов, все необходимые компоненты для развертывания приложения уже включены в пакет приложения, другие действия не требуются.  
   
 ### <a name="deploying-a-net-framework-app"></a>Развертывание приложения .NET Framework  
- При развертывании приложения .NET Framework, в котором имеется ссылка на сборку переносимой библиотеки классов, необходимо задать зависимость от нужной версии платформы .NET Framework. Задание этой зависимости обеспечивает установку нужной версии вместе с приложением. Если целевой платформы .NET Framework 4 или более поздней версии, на компьютере должен быть .NET Framework 4 с [обновление](http://go.microsoft.com/fwlink/?LinkId=210824), обновлением 4.0.3 для .NET Framework 4 или .NET Framework 4.5.  
+ При развертывании приложения .NET Framework, в котором имеется ссылка на сборку переносимой библиотеки классов, необходимо задать зависимость от нужной версии платформы .NET Framework. Задание этой зависимости обеспечивает установку нужной версии вместе с приложением. Если целевой платформы .NET Framework 4 или более поздней версии, на компьютере должен быть .NET Framework 4 с [обновление](https://www.microsoft.com/download/details.aspx?id=3556), обновлением 4.0.3 для .NET Framework 4 или .NET Framework 4.5.  
   
 -   Чтобы создать зависимость с развертыванием ClickOnce: В **обозревателе решений**, выберите узел проекта для проекта, необходимо опубликовать. (Это проект, в котором имеется ссылка на проект переносимой библиотеки классов.) В строке меню выберите **проекта**, **свойства**и нажмите кнопку **публикации** вкладки. На **публикации** выберите **необходимых компонентов**. Отметьте требуемую версию платформы .NET Framework (или обновление платформы .NET Framework 4) как необходимый компонент.  
   
@@ -217,9 +217,9 @@ ms.lasthandoff: 01/09/2018
     <param name="background" value="white" />  
     <param name="minRuntimeVersion" value="4.0.60129.0" />  
     <param name="autoUpgrade" value="true" />  
-    <a href="http://go.microsoft.com/fwlink/?LinkID=149156&v=4.0.50826.0"   
+    <a href="https://www.microsoft.com/getsilverlight/get-started/install/"   
              style="text-decoration:none">  
-      <img src=http://go.microsoft.com/fwlink/?LinkId=161376  
+      <img src=http://download.microsoft.com/download/5/1/6/5165823D-1D79-4871-8AC2-42DDDB94A5C2/PNGs/SLMedallion_ENU.png  
              alt="Get Microsoft Silverlight" style="border-style:none"/>  
     </a>  
   </object>  

@@ -1,36 +1,38 @@
 ---
-title: "Указание значений XML как параметров"
-ms.custom: 
+title: Указание значений XML как параметров
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 2c4d08b8-fc29-4614-97fa-29c8ff7ca5b3
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 7514d2d19b6691fc5a25e17e7ad483d108fe4aa2
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: dace7c3adc1b7a55c8c945e82399828ce16f1bb0
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="specifying-xml-values-as-parameters"></a>Указание значений XML как параметров
-Если запрос требует параметр, значение которого является XML-строка, разработчики могут передать это значение с помощью экземпляра **SqlXml** тип данных. Это не составляет никакой сложности, поскольку XML-столбцы в [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] принимают значения параметров точно так же, как другие типы данных.  
+Если запрос требует параметр, значение которого является XML-строка, разработчики могут передать это значение с помощью экземпляра **SqlXml** тип данных. Это не составляет никакой сложности, поскольку Столбцы XML в SQL Server принимает значения параметров точно так же, как и других типов данных.  
   
 ## <a name="example"></a>Пример  
  Следующее консольное приложение создает новую таблицу в **AdventureWorks** базы данных. Новая таблица содержит столбец с именем **SalesID** и XML-столбец с именем **SalesInfo**.  
   
 > [!NOTE]
->  **AdventureWorks** образца базы данных не устанавливается по умолчанию при установке [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]. Чтобы установить его, запустите программу установки SQL Server.  
+>  **AdventureWorks** образца базы данных не устанавливается по умолчанию при установке SQL Server. Чтобы установить его, запустите программу установки SQL Server.  
   
  Пример подготавливает объект <xref:System.Data.SqlClient.SqlCommand>, чтобы вставить строку в новую таблицу. Сохраненный файл предоставляет XML-данные, необходимые для **SalesInfo** столбца.  
   

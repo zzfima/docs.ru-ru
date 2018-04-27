@@ -1,13 +1,13 @@
 ---
-title: "Практическое руководство. Получение свойств объекта системы печати без отражения"
-ms.custom: 
+title: Практическое руководство. Получение свойств объекта системы печати без отражения
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-wpf
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - PrintSystemObject [WPF], getting properties
 ms.assetid: 43560f28-183d-41c1-b9d1-de7c2552273e
-caps.latest.revision: 
+caps.latest.revision: 6
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 7d93919f691b51d5f177b074e5d9cef2c140458e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5f1aa6025c2b8a00dd170a674a1bdea25d76a9a1
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-get-print-system-object-properties-without-reflection"></a>Практическое руководство. Получение свойств объекта системы печати без отражения
 Использование отражения для перечисления свойств (и типов этих свойств) в объекте может снизить производительность приложения. <xref:System.Printing.IndexedProperties> Пространство имен служит для передачи этой информации с помощью отражения.  
@@ -33,7 +33,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="example"></a>Пример  
  Ниже приведены действия по созданию.  
   
-1.  Создайте экземпляр типа. В следующем примере тип — <xref:System.Printing.PrintQueue> , поставляемый с [!INCLUDE[TLA#tla_winfx](../../../../includes/tlasharptla-winfx-md.md)], но почти те же код должен работать для типов, производных от <xref:System.Printing.PrintSystemObject>.  
+1.  Создайте экземпляр типа. В следующем примере тип — <xref:System.Printing.PrintQueue> подойдет тип, который поставляется вместе с Microsoft .NET Framework, но код почти те же типы, производные от <xref:System.Printing.PrintSystemObject>.  
   
 2.  Создание <xref:System.Printing.IndexedProperties.PrintPropertyDictionary> по типу <xref:System.Printing.PrintSystemObject.PropertiesCollection%2A>. <xref:System.Collections.DictionaryEntry.Value%2A> Каждой записи в этом словаре является объектом одного из типов, производных от <xref:System.Printing.IndexedProperties.PrintProperty>.  
   

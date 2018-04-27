@@ -15,14 +15,14 @@ ms.assetid: 3ffd1bdf-1b8d-47f5-87eb-75b659f64294
 caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 58568b541c43a35f093c45f5ad0efe978b642c91
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: f3f9d7fb51198041356cfc68d49cc703dfdf78b5
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="com-interop-visual-basic"></a>COM-взаимодействие (Visual Basic)
-Объектная модель компонентов (модель COM) позволяет объекту предоставлять свою функциональность другим компонентам и ведущим приложениям. COM-объекты входят в состав большей части современного программного обеспечения. Хотя сборки .NET являются наилучшим решением для новых приложений, в некоторых случаях необходимо использование COM-объектов. В этом разделе освещаются некоторые вопросы, связанные с созданием и использованием COM-объектов в [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
+Объектная модель компонентов (модель COM) позволяет объекту предоставлять свою функциональность другим компонентам и ведущим приложениям. COM-объекты входят в состав большей части современного программного обеспечения. Хотя сборки .NET являются наилучшим решением для новых приложений, в некоторых случаях необходимо использование COM-объектов. В этом разделе рассматриваются некоторые вопросы, связанные с созданием и использованием объектов COM с помощью Visual Basic.  
   
 ## <a name="in-this-section"></a>В этом разделе  
  [Знакомство с COM-взаимодействием](../../../visual-basic/programming-guide/com-interop/introduction-to-com-interop.md)  

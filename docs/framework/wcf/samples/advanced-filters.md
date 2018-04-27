@@ -1,24 +1,26 @@
 ---
-title: "Дополнительные фильтры"
-ms.custom: 
+title: Дополнительные фильтры
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 8d81590f-e036-4f96-824a-4a187f462764
-caps.latest.revision: "23"
+caps.latest.revision: 23
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 357b57bb39ca31b48d21cb83209a72d0b3d12a62
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: a374765317751a5adc241941a0c0dc613a3ea2cc
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="advanced-filters"></a>Дополнительные фильтры
 В этом образце демонстрируется служба маршрутизации [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. Служба маршрутизации - это компонент [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], который упрощает включение маршрутизатора на основе содержимого в приложение. 'В этом образце стандартный образец [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Calculator применяется для связи с использованием службы маршрутизации В этом образце показано определение логики маршрутизации на основе содержимого посредством использования фильтров сообщений и таблиц фильтров сообщений.  
@@ -28,7 +30,7 @@ ms.lasthandoff: 12/22/2017
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите на страницу [Примеры Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все примеры [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Этот образец расположен в следующем каталоге.  
+>  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) Чтобы загрузить все [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] образцов. Этот образец расположен в следующем каталоге.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\RoutingServices\AdvancedFilters`  
   
@@ -60,7 +62,7 @@ XPathMessageFilter xpathFilter = new XPathMessageFilter("/s12:Envelope/s12:Heade
 EndpointNameMessageFilter endpointNameFilter = new EndpointNameMessageFilter("calculatorEndpoint");  
 ```  
   
- Третьим фильтром является <xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter>. Этому фильтру соответствует любое сообщение, поступающее в конечную точку, адрес которой соответствует указанному префиксу адреса (или передней части). В этом примере задан префикс адреса «http://localhost/routingservice/router/rounding/». Это значит, что любое входящее сообщение, адресованное на «http://localhost/routingservice/router/rounding/*», соответствует этому фильтру. В этом случае это сообщения, поступающие в конечную точку округляющего калькулятора с адресом «http://localhost/routingservice/router/rounding/calculator».  
+ Третьим фильтром является <xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter>. Этому фильтру соответствует любое сообщение, поступающее в конечную точку, адрес которой соответствует указанному префиксу адреса (или передней части). В этом примере определяется префикс адреса «http://localhost/routingservice/router/rounding/». Это означает, что любые входящие сообщения, адресованные «http://localhost/routingservice/router/rounding/*» соответствует этому фильтру. В этом случае это сообщения, которые отображаются на конечную точку Округляющего калькулятора, который имеет адрес «http://localhost/routingservice/router/rounding/calculator».  
   
 ```  
 PrefixEndpointAddressMessageFilter prefixAddressFilter = new PrefixEndpointAddressMessageFilter(new EndpointAddress("http://localhost/routingservice/router/rounding/"));  
@@ -91,7 +93,7 @@ RoundRobinMessageFilter roundRobinFilter2 = new RoundRobinMessageFilter("group1"
   
 2.  Чтобы открыть **обозревателе решений**выберите **обозревателе решений** из **представление** меню.  
   
-3.  Нажмите клавишу F5 или сочетание клавиш CTRL+SHIFT+B в среде [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)].  
+3.  В Visual Studio, нажмите клавишу F5 или CTRL + SHIFT + B.  
   
     1.  Если вы хотите автоматически загружались все необходимые проекты при нажатии клавиши F5, щелкните правой кнопкой мыши решение и выберите **свойства**. Выберите **запускаемый проект** узле **общие свойства** в левой области. Выберите **несколько запускаемых проектов** переключатель и задать все проекты, которые нужно иметь **запустить** действие.  
   

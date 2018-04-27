@@ -1,12 +1,12 @@
 ---
-title: "Исключения и производительность"
-ms.custom: 
+title: Исключения и производительность
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - tester-doer pattern
@@ -15,18 +15,18 @@ helpviewer_keywords:
 - exceptions, performance
 - throwing exceptions, performance
 ms.assetid: 3ad6aad9-08e6-4232-b336-0e301f2493e6
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 9a876a818086e0d54251f53a1e8f83cc74a574ae
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 7972cf7d63ee22e791d46046f30c9be467cc758e
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="exceptions-and-performance"></a>Исключения и производительность
 Одна из распространенных проблем, связанных с исключениями установлено, если они используются для кода, который регулярно завершается с ошибкой, производительность реализации неприемлемо. Это обоснованное предположение. При создании исключения члена, ее производительность может быть порядков медленнее. Тем не менее можно добиться оптимальной производительности, предназначенных только для исключение рекомендации, которые запрещено использовать коды ошибок. Два шаблона, описанные в этом разделе касаются способов это сделать.  
@@ -81,7 +81,7 @@ public struct DateTime {
   
  *Фрагменты © 2005, 2009 корпорации Майкрософт. Все права защищены.*  
   
- *Перепечатываются разрешении Пирсона для образовательных учреждений, Inc. из [Framework рекомендации по проектированию: условные обозначения, стили и шаблоны для библиотеки .NET для повторного использования, 2-е издание](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina и Брэд Абрамс, опубликованные 22 октября 2008 г., Addison-Wesley Professional в составе ряда разработки Microsoft Windows.*  
+ *Перепечатываются разрешении Пирсона для образовательных учреждений, Inc. из [Framework рекомендации по проектированию: условные обозначения, стили и шаблоны для библиотеки .NET для повторного использования, 2-е издание](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina и Брэд Абрамс, опубликованные 22 октября 2008 г., Addison-Wesley Professional в составе ряда разработки Microsoft Windows.*  
   
 ## <a name="see-also"></a>См. также  
  [Рекомендации по проектированию на основе Framework](../../../docs/standard/design-guidelines/index.md)  

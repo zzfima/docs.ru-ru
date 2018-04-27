@@ -1,28 +1,29 @@
 ---
-title: "Пробелы в XML-литералах (Visual Basic)"
-ms.custom: 
+title: Пробелы в XML-литералах (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - white space [XML in Visual Basic]
 - XML literals [Visual Basic], white space
 ms.assetid: dfe3a9ff-d69a-418e-a6b5-476f4ed84219
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: d8587abb98fe33ab2c5a0cef6cea76049a00909e
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: e6d23aa54b150748aac9aa955f4bd86ee88358ea
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="white-space-in-xml-literals-visual-basic"></a>Пробелы в XML-литералах (Visual Basic)
-[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] Компилятор включает только значимые пробелы символы из XML-литерала при создании [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] объекта. Незначащие пробелы не включены.  
+Компилятор Visual Basic включает только значимые пробелы символы из XML-литерала при создании [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] объекта. Незначащие пробелы не включены.  
   
 ## <a name="significant-and-insignificant-white-space"></a>Значащие и незначащие пробелы  
  Пробелы в XML-литералах значимыми являются только в трех областях:  
@@ -38,7 +39,7 @@ ms.lasthandoff: 10/18/2017
  Чтобы включить незначащие пробелы в XML-литерал, используйте внедренное выражение, содержит строковый литерал с пробелом.  
   
 > [!NOTE]
->  Если `xml:space` атрибут появляется в XML-литерал, элемент [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] компилятор включает атрибут в <xref:System.Xml.Linq.XElement> объект, но добавление этого атрибута не изменяет способ обработки пробелов компилятором.  
+>  Если `xml:space` атрибут отображается в литерале XML-элемента, компилятор Visual Basic включает атрибут в <xref:System.Xml.Linq.XElement> объект, но добавление этого атрибута не изменяет способ обработки пробелов компилятором.  
   
 ## <a name="examples"></a>Примеры  
  Следующий пример содержит два элемента XML, внешнее и внутреннее. Оба этих элемента содержат пробелы в текстовом содержимом. Свободное пространство на внешний элемент не важна, так как он содержит только пробелы и XML-элемента. Пробелы в внутреннего элемента имеет значение, поскольку он содержит пробелы и текст.  

@@ -16,11 +16,11 @@ helpviewer_keywords:
 ms.assetid: db7cfa59-c315-401c-a59b-0daf355343d6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 82a0adc9e821df3a789cf19e798d4bad9e9a69e3
-ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
+ms.openlocfilehash: f07fc7988c4329397e464f05d334648e98cb129d
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="-netcf"></a>-netcf
 Задает для компилятора целевой объект [!INCLUDE[Compact](~/includes/compact-md.md)].  
@@ -32,12 +32,12 @@ ms.lasthandoff: 03/22/2018
 ```  
   
 ## <a name="remarks"></a>Примечания  
- `-netcf` Предписывает [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] компилятору целевой [!INCLUDE[Compact](~/includes/compact-md.md)] вместо полного [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Функциональные возможности языка, присутствует только в полной [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] отключена.  
+ `-netcf` Заставляет компилятор Visual Basic целевой [!INCLUDE[Compact](~/includes/compact-md.md)] вместо полного [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Функциональные возможности языка, присутствует только в полной [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] отключена.  
   
  `-netcf` Параметр предназначен для использования с [- sdkpath](../../../visual-basic/reference/command-line-compiler/sdkpath.md). Языковые возможности, отключенные по `-netcf` являются те же функции языка, отсутствует в файлах `-sdkpath`.  
   
 > [!NOTE]
->  `-netcf` Параметр недоступен в среде разработки Visual Studio; она доступна только при компиляции из командной строки. `-netcf` Параметр задан, если [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] загрузке проекта устройства.  
+>  `-netcf` Параметр недоступен в среде разработки Visual Studio; она доступна только при компиляции из командной строки. `-netcf` Был установлен при загрузке проекта Visual Basic устройства.  
   
  `-netcf` Параметр изменяет следующих возможностей языка:  
   
@@ -53,7 +53,7 @@ ms.lasthandoff: 03/22/2018
   
      [!code-vb[VbVbalrCompiler#36](../../../visual-basic/reference/command-line-compiler/codesnippet/VisualBasic/netcf_3.vb)]  
   
--   Использование ключевых слов Visual Basic 6.0, которые были удалены из [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] создает различные ошибки при `-netcf` используется. Это влияет на сообщения об ошибках для следующих ключевых слов:  
+-   Использование ключевых слов Visual Basic 6.0, которые были удалены из Visual Basic создает различные ошибки при `-netcf` используется. Это влияет на сообщения об ошибках для следующих ключевых слов:  
   
     -   `Open`  
   

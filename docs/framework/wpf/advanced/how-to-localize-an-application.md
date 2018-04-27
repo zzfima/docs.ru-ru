@@ -1,9 +1,10 @@
 ---
-title: "Практическое руководство. Локализация приложения"
+title: Практическое руководство. Локализация приложения
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -16,12 +17,13 @@ ms.assetid: 5001227e-9326-48a4-9dcd-ba1b89ee6653
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 83ed8ee8b8bfd9c3d6dadfedad8889af10a86466
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 3c5621de2a2d10e67f45fa2d6980cb84c388630f
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-localize-an-application"></a>Практическое руководство. Локализация приложения
 В этом учебнике рассматривается создание локализованного приложения с помощью средства LocBaml.  
@@ -88,7 +90,7 @@ ms.lasthandoff: 12/22/2017
 <a name="build_locbaml"></a>   
 ## <a name="build-the-locbaml-tool"></a>Построение средства LocBaml  
   
-1.  Все файлы, необходимые для построения LocBaml, находятся в примерах [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Загрузить [!INCLUDE[TLA#tla_lhcshrp](../../../../includes/tlasharptla-lhcshrp-md.md)] файлов из [LocBaml Tool Sample](http://go.microsoft.com/fwlink/?LinkID=160016).  
+1.  Все файлы, необходимые для построения LocBaml, находятся в примерах [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Загрузите файлы с [LocBaml Tool Sample](http://go.microsoft.com/fwlink/?LinkID=160016).  
   
 2.  Из командной строки запустите файл проекта (locbaml.csproj), чтобы построить это средство:  
   
@@ -195,7 +197,7 @@ ms.lasthandoff: 12/22/2017
   
 7.  Чтобы протестировать новую вспомогательную сборку, необходимо изменить язык и региональные параметры, с которыми будет выполняться приложение. Это можно сделать одним из двух способов.  
   
-    -   Изменить региональные параметры операционной системы (**запустить** &#124; **Панель управления** &#124; **Язык и региональные стандарты**).  
+    -   Изменить региональные параметры операционной системы (**запустить** &#124; **панели управления** &#124; **язык и региональные стандарты**).  
   
     -   В своем приложении добавьте в файл App.xaml.cs следующий код:  
   

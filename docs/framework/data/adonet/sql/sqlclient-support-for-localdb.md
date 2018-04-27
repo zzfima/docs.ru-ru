@@ -1,30 +1,32 @@
 ---
-title: "Поддержка SqlClient LocalDB"
-ms.custom: 
+title: Поддержка SqlClient LocalDB
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: cf796898-5575-46f2-ae6e-21e5aa8c4123
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: a3d643ac386aebf51673f937b3f47e73c749b78f
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: e2564e49a90a1c8fd9fe2cc000ebf648cf90b4e7
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sqlclient-support-for-localdb"></a>Поддержка SqlClient LocalDB
-Начиная с версии [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] с кодовым наименованием Denali, будет доступна упрощенная версия [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)], именуемая LocalDB. В этом разделе описывается, как установить подключение к базе данных LocalDB.  
+Начиная с SQL Server с кодовым названием Denali, облегченная версия SQL Server, называемая LocalDB, будут доступны. В этом разделе описывается, как установить подключение к базе данных LocalDB.  
   
 ## <a name="remarks"></a>Примечания  
- Дополнительные сведения о LocalDB, включая установку и настройку экземпляра LocalDB, см. в электронной документации по [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] .  
+ Дополнительные сведения о LocalDB, включая установку и настройку экземпляра LocalDB в разделе электронной документации по SQL Server.  
   
  Обзор возможностей LocalDB:  
   
@@ -42,7 +44,7 @@ ms.lasthandoff: 01/17/2018
   
  Указание`User Instance=True` недопустимо, если производится соединение с базой данных LocalDB.  
   
- Базу данных LocalDB можно скачать из [пакета дополнительных компонентов Microsoft SQL Server 2012](http://www.microsoft.com/download/en/details.aspx?id=29065). Если необходимо изменение данных в экземпляре LocalDB с помощью программы sqlcmd.exe, то необходимо пользоваться версией sqlcmd из [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 2012. Эту программу можно также получить из пакета дополнительных компонентов [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 2012.  
+ Базу данных LocalDB можно скачать из [пакета дополнительных компонентов Microsoft SQL Server 2012](http://www.microsoft.com/download/en/details.aspx?id=29065). Если вы будете использовать sqlcmd.exe для изменения данных в экземпляре LocalDB, необходимо будет sqlcmd из SQL Server 2012 можно также получить из пакета дополнительных компонентов SQL Server 2012.  
   
 ## <a name="programmatically-create-a-named-instance"></a>Создание именованного экземпляра программным путем  
  В приложении можно создать именованный экземпляр и определить базу данных следующим образом.  

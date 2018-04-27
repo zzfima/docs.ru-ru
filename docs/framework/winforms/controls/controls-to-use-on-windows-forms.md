@@ -1,33 +1,35 @@
 ---
-title: "Элементы управления для использования в формах Windows Forms"
-ms.custom: 
+title: Элементы управления для использования в формах Windows Forms
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-winforms
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - controls [Windows Forms]
 - Windows Forms controls, list of
 ms.assetid: dec51976-eae0-4398-a537-20bca7974722
-caps.latest.revision: "28"
+caps.latest.revision: 28
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 9958af954675784e9cbdec4c26605fb83ffa0005
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 6454d7ead50c96ed4f92b2b9d53e7b9bbb4a84f8
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="controls-to-use-on-windows-forms"></a>Элементы управления для использования в формах Windows Forms
 Ниже приведен алфавитный список элементов управления и компонентов, используемых в формах Windows Forms. Помимо элементов управления Windows Forms, описанных в этом разделе, в формы Windows Forms можно добавлять элементы управления ActiveX и пользовательские элементы управления. Если вам не удается найти нужный элемент управления в этом списке, вы можете создать свой собственный. См. раздел [Создание элементов управления Windows Forms во время разработки](../../../../docs/framework/winforms/controls/developing-windows-forms-controls-at-design-time.md). Дополнительные сведения о выборе необходимого элемента управления см. в разделе [Функциональная классификация элементов управления Windows Forms](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md).  
   
 > [!NOTE]
->  Элементы управления [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] основаны на классах, предоставляемых [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)].  
+>  Элементы управления Visual Basic, основанные на классах, предоставляемые [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)].  
   
 ## <a name="in-this-section"></a>В этом разделе  
  [Функциональная классификация элементов управления Windows Forms](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md)  

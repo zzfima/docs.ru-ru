@@ -10,37 +10,37 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 3bb65d38-cce2-46f5-b979-e5c505e95e10
-caps.latest.revision: ''
+caps.latest.revision: 25
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload:
 - dotnet
-ms.openlocfilehash: fb23f329906e21f3d8558139075c5f575f2f13bd
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: a636734958cd73a2f158d3f25cbbe448ff703612
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="what39s-new-in-adonet"></a>Что&#39;новые возможности ADO.NET
 В [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] в [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] предоставляются следующие новые возможности.  
   
 ## <a name="sqlclient-data-provider"></a>Поставщик данных SqlClient  
- Ниже перечислены новые возможности поставщика данных [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] для [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] в [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].  
+ Ниже перечислены новые возможности в [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] поставщик данных для SQL Server в [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]:  
   
 -   Ключевые слова строки подключения ConnectRetryCount и ConnectRetryInterval (<xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>) позволяют управлять функцией устойчивости бездействующего соединения.  
   
--   Поддержка потоков из [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] в приложение поддерживает сценарии, в которых данные на сервере не структурированы.  В разделе [поддержка потоковой передачи SqlClient](../../../../docs/framework/data/adonet/sqlclient-streaming-support.md) для получения дополнительной информации.  
+-   Поддержка потоков из SQL Server в приложение поддерживает сценарии, где неструктурированные данные на сервере.  В разделе [поддержка потоковой передачи SqlClient](../../../../docs/framework/data/adonet/sqlclient-streaming-support.md) для получения дополнительной информации.  
   
 -   Добавлена поддержка для асинхронного программирования.  В разделе [асинхронное программирование](../../../../docs/framework/data/adonet/asynchronous-programming.md) для получения дополнительной информации.  
   
 -   Ошибки соединения теперь будут отображаться в журнале расширенных событий. Дополнительные сведения см. в разделе [Трассировка данных в ADO.NET](../../../../docs/framework/data/adonet/data-tracing.md).  
   
--   SqlClient теперь имеет поддержку высокого уровня доступности для [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)], функции аварийного восстановления и AlwaysOn. Дополнительные сведения см. в разделе [поддержка SqlClient для высокого уровня доступности и аварийного восстановления](../../../../docs/framework/data/adonet/sql/sqlclient-support-for-high-availability-disaster-recovery.md).  
+-   SqlClient теперь имеет поддержка SQL Server высокой доступности и возможности аварийного восстановления и AlwaysOn. Дополнительные сведения см. в разделе [поддержка SqlClient для высокого уровня доступности и аварийного восстановления](../../../../docs/framework/data/adonet/sql/sqlclient-support-for-high-availability-disaster-recovery.md).  
   
--   Пароли могут быть переданы как <xref:System.Security.SecureString> при использовании проверки подлинности [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]. Дополнительные сведения см. в разделе <xref:System.Data.SqlClient.SqlCredential>.  
+-   Пароль может быть передан как <xref:System.Security.SecureString> при использовании проверки подлинности SQL Server. Дополнительные сведения см. в разделе <xref:System.Data.SqlClient.SqlCredential>.  
   
--   При `TrustServerCertificate`, равном false, и `Encrypt`, равном true, имя (или IP-адрес) сервера из SSL-сертификата [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] должно точно соответствовать имени (или IP-адресу) сервера, указанному в строке подключения. В противном случае соединение не будет установлено. Дополнительные сведения см. в описании параметра соединения `Encrypt` в <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>.  
+-   Когда `TrustServerCertificate` имеет значение false и `Encrypt` имеет значение true, имя сервера (или IP-адрес) в SQL Server SSL-сертификата должно совпадать сервера имя (или IP-адрес) указан в строке подключения. В противном случае соединение не будет установлено. Дополнительные сведения см. в описании параметра соединения `Encrypt` в <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>.  
   
      Если это изменение приведет к тому, что в существующем приложении подключение больше не будет устанавливаться, можно внести исправления в приложение с помощью одного из следующих способов.  
   

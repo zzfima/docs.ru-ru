@@ -16,11 +16,11 @@ helpviewer_keywords:
 ms.assetid: fec8a3f1-b791-4a37-8af7-344859f8212d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 53362c2eb5517d9230ea88975745315d6db7f1ba
-ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
+ms.openlocfilehash: 5a25755bcbb8d42124cde531f641a611202ae5a1
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="-sdkpath"></a>-sdkpath
 Указывает расположение библиотек mscorlib.dll и Microsoft.VisualBasic.dll.  
@@ -36,10 +36,10 @@ ms.lasthandoff: 03/22/2018
  Каталог, содержащий версии mscorlib.dll и Microsoft.VisualBasic.dll, используемые при компиляции. Этот путь не проверяется до загрузки. Заключите имя каталога в кавычки (» «), если он содержит пробелы.  
   
 ## <a name="remarks"></a>Примечания  
- При выборе этого параметра [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] компилятора для загрузки библиотеки mscorlib.dll и Microsoft.VisualBasic.dll файлов из расположения не по умолчанию. `-sdkpath` Параметр был разработан для использования с [- netcf](../../../visual-basic/reference/command-line-compiler/netcf.md). [!INCLUDE[Compact](~/includes/compact-md.md)] Применяются различные версии поддерживаемых библиотек, чтобы избежать использования типы и функции языка, не найден на устройствах.  
+ Этот параметр указывает компилятору Visual Basic для загрузки библиотеки mscorlib.dll и Microsoft.VisualBasic.dll файлов из расположения не по умолчанию. `-sdkpath` Параметр был разработан для использования с [- netcf](../../../visual-basic/reference/command-line-compiler/netcf.md). [!INCLUDE[Compact](~/includes/compact-md.md)] Применяются различные версии поддерживаемых библиотек, чтобы избежать использования типы и функции языка, не найден на устройствах.  
   
 > [!NOTE]
->  `-sdkpath` Параметр недоступен в среде разработки Visual Studio; она доступна только при компиляции из командной строки. `-sdkpath` Параметр задан, если [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] загрузке проекта устройства.  
+>  `-sdkpath` Параметр недоступен в среде разработки Visual Studio; она доступна только при компиляции из командной строки. `-sdkpath` Был установлен при загрузке проекта Visual Basic устройства.  
   
  Можно указать, что компилятор должен выполнять компиляцию без ссылки на библиотеку времени выполнения Visual Basic с помощью `-vbruntime` параметр компилятора. Дополнительные сведения см. в разделе [- vbruntime](../../../visual-basic/reference/command-line-compiler/vbruntime.md).  
   

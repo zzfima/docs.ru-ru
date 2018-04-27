@@ -19,15 +19,15 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 1d2a79a05f18fecf4e008aa6a95d359c719e854b
-ms.sourcegitcommit: f28752eab00d2bd97e971542c0f49ce63cfbc239
+ms.openlocfilehash: 00161608997abc14202775c06ecfb283d8d67013
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="application-development"></a>Разработка приложений
 <a name="introduction"></a>
-[!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]— Это платформа представления, который может использоваться для разработки следующих типов приложений:  
+[!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] — Это платформа представления, который может использоваться для разработки следующих типов приложений:  
   
 -   автономные приложения (традиционные приложения [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)], созданные как исполняемые сборки, которые устанавливаются и запускаются с клиентского компьютера);  
   
@@ -70,7 +70,7 @@ ms.lasthandoff: 01/29/2018
   
 <a name="WPF_Application_Resource__Content__and_Data_Files"></a>   
 ## <a name="wpf-application-resource-content-and-data-files"></a>Ресурсы, Содержимое и Файлы данных WPF-приложения  
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] расширяет основную поддержку внедренных ресурсов в [!INCLUDE[TLA#tla_winfx](../../../../includes/tlasharptla-winfx-md.md)], обеспечивая поддержку трех типов неисполняемых файлов данных: ресурсов, содержимого и данных. Дополнительные сведения см. в разделе [Файлы ресурсов, содержимого и данных WPF-приложения](../../../../docs/framework/wpf/app-development/wpf-application-resource-content-and-data-files.md).  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] расширяет поддержку основных компонентов в Microsoft .NET Framework для внедренных ресурсов с поддержкой для трех типов данных не является исполняемым файлам: ресурсов, содержимого и данных. Дополнительные сведения см. в разделе [Файлы ресурсов, содержимого и данных WPF-приложения](../../../../docs/framework/wpf/app-development/wpf-application-resource-content-and-data-files.md).  
   
  Ключевым компонентом поддержки неисполняемых файлов данных WPF является возможность их идентификации и загрузки с помощью уникального [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]. Дополнительные сведения см. в разделе [URI типа "pack" в WPF](../../../../docs/framework/wpf/app-development/pack-uris-in-wpf.md).  
   
@@ -90,7 +90,7 @@ ms.lasthandoff: 01/29/2018
   
  <xref:System.Windows.Window> поддерживает возможность создать особый тип окна, известный как диалоговое окно. Можно создавать модальные и немодальные типы диалоговых окон.  
   
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] предоставляет три стандартных диалоговых окна [!INCLUDE[TLA2#tla_mswin](../../../../includes/tla2sharptla-mswin-md.md)]: <xref:Microsoft.Win32.OpenFileDialog>, <xref:Microsoft.Win32.SaveFileDialog>, и <xref:System.Windows.Controls.PrintDialog>, чтобы упростить работу, предоставить возможность повторного использования кода и обеспечить согласованность пользовательского интерфейса в разных приложениях.  
+ Для удобства и преимущества возможность повторного использования и согласованного пользовательского интерфейса между приложениями [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] предоставляет три общих диалоговых окон Windows: <xref:Microsoft.Win32.OpenFileDialog>, <xref:Microsoft.Win32.SaveFileDialog>, и <xref:System.Windows.Controls.PrintDialog>.  
   
  Окно сообщения представляет собой особый тип диалогового окна для отображения важной текстовой информации для пользователей и задания простых вопросов (да, нет, ОК, отмена). Класс <xref:System.Windows.MessageBox> используется для создания и отображения окон сообщений.  
   
@@ -135,7 +135,7 @@ ms.lasthandoff: 01/29/2018
 <a name="related_topics"></a>   
 ## <a name="related-topics"></a>См. также  
   
-|Заголовок|Описание:|  
+|Заголовок|Описание|  
 |-----------|-----------------|  
 |[Общие сведения об управлении приложением](../../../../docs/framework/wpf/app-development/application-management-overview.md)|Общие сведения о классе <xref:System.Windows.Application>, включая управление временем существования приложения, окнами, ресурсами приложений и навигацией.|  
 |[Windows в WPF](../../../../docs/framework/wpf/app-development/windows-in-wpf-applications.md)|Сведения об управлении окнами в приложении, включая способы использования класса <xref:System.Windows.Window> и диалоговых окон.|  

@@ -1,30 +1,31 @@
 ---
-title: "Использование редактора настраиваемых выражений"
-ms.custom: 
+title: Использование редактора настраиваемых выражений
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 0901b58b-e037-44a8-8281-f6f54361cfca
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 5ae60b8267e60d880ccdc156566b489163d2e686
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 5388ed3f55d97f3282a710ac59fe36cfb32fa49c
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="using-a-custom-expression-editor"></a>Использование редактора настраиваемых выражений
 Чтобы получить расширенные или упрощенные возможности редактирования выражений, можно реализовать настраиваемый редактор выражений. Редактор настраиваемых выражений может потребоваться в следующих случаях.  
   
 -   Чтобы обеспечить поддержку IntelliSense и других функций расширенного редактирования во вновь размещенном конструкторе рабочих процессов. Эта функция должна быть предоставлена, поскольку редактор выражений по умолчанию [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] не может быть использован во вновь размещенных приложениях.  
   
--   Чтобы упростить редактирование выражений для пользователей, бизнес-аналитиков, чтобы им не приходилось, например, изучать [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] или работать с выражениями [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)].  
+-   Чтобы упростить редактирование выражений для пользователей бизнес-аналитиков, чтобы они не так, например, требуются для изучение Visual Basic или работать с выражения Visual Basic.  
   
  Для реализации редактора настраиваемых выражений требуется выполнить три основных шага.  
   

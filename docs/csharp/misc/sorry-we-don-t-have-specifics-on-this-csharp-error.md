@@ -1,5 +1,5 @@
 ---
-title: "К сожалению, мы больше не &#39; t имеют подробные сведения об этой ошибке C#"
+title: К сожалению, мы не хотите&#39;t имеют подробные сведения об этой ошибке C#
 ms.date: 07/20/2015
 ms.prod: .net
 ms.technology:
@@ -886,29 +886,29 @@ f1_keywords:
 helpviewer_keywords:
 - errors [C#], additional information
 ms.assetid: 48320e4a-6e17-45a6-9966-88c6ec89bd2f
-caps.latest.revision: 
+caps.latest.revision: 15
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 5f6224f661aff817b4314d832fcc2ff3938644c0
-ms.sourcegitcommit: 973a12d1e6962cd9a9c263fbfaad040ec8267fe9
+ms.openlocfilehash: 4aeea86778b44cbe8e71ed64ee5a3a3a1618cccd
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/22/2018
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="sorry-we-don39t-have-specifics-on-this-c-error"></a>К сожалению, мы больше не &#39; t имеют подробные сведения об этой ошибке C#
+# <a name="sorry-we-don39t-have-specifics-on-this-c-error"></a>К сожалению, мы не хотите&#39;t имеют подробные сведения об этой ошибке C#
 Подробные сведения об этой ошибке отсутствуют. Можно выполнить поиск по номеру ошибки и тексту сообщения об ошибке в Интернете. Или вы можете запросить другим разработчикам на следующих форумах:  
   
  [Язык Visual C#](https://social.msdn.microsoft.com/Forums/en-US/home?forum=csharplanguage)  
- Форум для вопросов и общих обсуждений проблем, связанных с синтаксисом и компилятором языка [!INCLUDE[csprcs](~/includes/csprcs-md.md)].  
+ Форум для вопросов и общих обсуждений синтаксиса языка Visual C# и компилятора.  
   
  [Visual C# IDE](https://social.msdn.microsoft.com/Forums/en-US/home?forum=csharpide)  
  Форум предназначен для вопросов о работе в среде [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)].  
   
  [Общие сведения о Visual C#](https://social.msdn.microsoft.com/Forums/vstudio/en-US/home?forum=csharpgeneral)  
- Форум предназначен для вопросов по работе [!INCLUDE[csprcs](~/includes/csprcs-md.md)] и соответствующим проблемам, которые не обсуждаются на других форумах.  
+ Форум для вопросов о и выдает с Visual C#, которые не обсуждаются на других форумах.  
   
  [StackOverflow](http://stackoverflow.com/questions/tagged/c%23)  
- Форум предназначен для вопросов по работе [!INCLUDE[csprcs](~/includes/csprcs-md.md)] и соответствующим проблемам.  
+ Форум для вопросов о и выдает с Visual C#.  
   
  См. также:  
  [Дополнительные ресурсы для программистов Visual C#](../../csharp/getting-started/additional-resources.md)  

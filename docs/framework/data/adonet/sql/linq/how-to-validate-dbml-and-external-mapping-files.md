@@ -1,27 +1,29 @@
 ---
-title: "Практическое руководство. Проверка внешних файлов сопоставления и DBML-файлов"
-ms.custom: 
+title: Практическое руководство. Проверка внешних файлов сопоставления и DBML-файлов
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: d9ea37f5-0a9e-4401-8fc3-1e6fd44c49f9
-caps.latest.revision: "2"
+caps.latest.revision: 2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 7724586c33c19654c3657a5a4604a3c74f2c8756
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 4d3fc297078c9f6c1ac8b2d8a498050f294a5437
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-validate-dbml-and-external-mapping-files"></a>Практическое руководство. Проверка внешних файлов сопоставления и DBML-файлов
-После внесения изменений во внешние файлы сопоставлений и DBML-файлы их необходимо проверить на соответствие определениям схемы. Этот раздел предоставляет пользователям [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] шаги по реализации процесса проверки.  
+После внесения изменений во внешние файлы сопоставлений и DBML-файлы их необходимо проверить на соответствие определениям схемы. Этот раздел предоставляет пользователям Visual Studio шаги по реализации процесса проверки.  
   
  [!INCLUDE[note_settings_general](../../../../../../includes/note-settings-general-md.md)]  
   
@@ -56,7 +58,7 @@ ms.lasthandoff: 01/17/2018
      Проверьте, не было ли создано ошибок, предупреждений или сообщений. Если ошибки, предупреждения или сообщения отсутствуют, XML-файл соответствует определению схемы.  
   
 ## <a name="alternate-method-for-supplying-schema-definition"></a>Альтернативный метод получения определения схемы  
- Если по некоторым причинам соответствующий XSD-файл не отображается в **XML-схем** диалоговое окно, можно загрузить XSD-файл из раздела справки. С помощью описанных ниже действий можно сохранить загруженный файл в формате Юникод, который требуется для редактора XML среды [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)].  
+ Если по некоторым причинам соответствующий XSD-файл не отображается в **XML-схем** диалоговое окно, можно загрузить XSD-файл из раздела справки. Следующие шаги помогут сохранить загруженный файл в формате Юникод, требуется по XML-редакторе Visual Studio.  
   
 #### <a name="to-copy-a-schema-definition-file-from-a-help-topic"></a>Копирование файла определения схемы из раздела справки  
   

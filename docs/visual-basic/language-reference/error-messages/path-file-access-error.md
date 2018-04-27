@@ -13,11 +13,11 @@ ms.assetid: 6ce3a161-7316-46bd-a785-0d50e5414020
 caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 2c86d46c884617be152a5954426e9ddd6ef61651
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: bff3ec554a594e99bc65e5cd8df28a056dcc1ebd
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="pathfile-access-error"></a>Ошибка доступа к пути/файлу
 Во время операции доступа к файлам или доступа к диску операционной системы не может сделать соединение между путь и имя файла.  
@@ -30,7 +30,7 @@ ms.lasthandoff: 10/18/2017
   
 3.  Убедитесь, что не была предпринята попытка открыть файл только для чтения в режиме `Output` или `Append` режиме. Если это так, откройте файл в `Input` режиме или измените атрибут только для чтения файла.  
   
-4.  Убедитесь, что не была предпринята попытка изменить [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] проекта в рамках базы данных или документа.  
+4.  Убедитесь, что не была предпринята попытка изменить проект Visual Basic в пределах базы данных или документа.  
   
 ## <a name="see-also"></a>См. также  
  [Типы ошибок](../../../visual-basic/programming-guide/language-features/error-types.md)

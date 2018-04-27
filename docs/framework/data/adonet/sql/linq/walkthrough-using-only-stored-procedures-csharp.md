@@ -1,24 +1,26 @@
 ---
-title: "Пошаговое руководство. Применение только хранимых процедур (C#)"
-ms.custom: 
+title: Пошаговое руководство. Применение только хранимых процедур (C#)
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: ecde4bf2-fa4d-4252-b5e4-96a46b9e097d
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: befc1cbafa7e2ab0a6f6ceeddf1170090f13f92d
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 4c13e4c12abf17f995bb819ddd7d6337407e3b28
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="walkthrough-using-only-stored-procedures-c"></a>Пошаговое руководство. Применение только хранимых процедур (C#)
 В данном пошаговом руководстве представлен основной полный сценарий [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] для получения доступа к данным, выполняя только хранимые процедуры. Этот метод часто используется администраторами баз данных для ограничения способов получения доступа к хранилищам данных.  
@@ -28,7 +30,7 @@ ms.lasthandoff: 01/17/2018
   
  Для целей данного пошагового руководства будут использованы два метода, которые были сопоставлены с хранимыми процедурами в образце базы данных Northwind: CustOrdersDetail и CustOrderHist. Сопоставление осуществляется при запуске программы командной строки SQLMetal для создания файла C#. Дополнительные сведения см. в разделе "Предварительные требования" далее в этом руководстве.  
   
- В пошаговом руководстве не используется [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]. Пользователи среды [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] могут также воспользоваться [!INCLUDE[vs_ordesigner_short](../../../../../../includes/vs-ordesigner-short-md.md)] для реализации функций хранимых процедур. В разделе [средства LINQ to SQL в Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).  
+ В пошаговом руководстве не используется [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]. С помощью Visual Studio разработчики также могут использовать [!INCLUDE[vs_ordesigner_short](../../../../../../includes/vs-ordesigner-short-md.md)] для реализации функций хранимых процедур. В разделе [средства LINQ to SQL в Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).  
   
  [!INCLUDE[note_settings_general](../../../../../../includes/note-settings-general-md.md)]  
   
@@ -54,7 +56,7 @@ ms.lasthandoff: 01/17/2018
 ## <a name="overview"></a>Обзор  
  Данное пошаговое руководство состоит из шести основных задач.  
   
--   Настройка решения [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] в среде [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)].  
+-   Настройка [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] решения в Visual Studio.  
   
 -   Добавление сборки System.Data.Linq в проект.  
   
@@ -67,11 +69,11 @@ ms.lasthandoff: 01/17/2018
 -   Запуск и тестирование приложения.  
   
 ## <a name="creating-a-linq-to-sql-solution"></a>Создание решения LINQ to SQL  
- В первой задаче создается решение [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)], которое содержит ссылки, необходимые для построения и выполнения проекта [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
+ В первой задаче создается решение Visual Studio, который содержит ссылки, необходимые для построения и запуска [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] проекта.  
   
 #### <a name="to-create-a-linq-to-sql-solution"></a>Создание решения LINQ to SQL  
   
-1.  На [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] **файл** последовательно выберите пункты **New**, а затем нажмите кнопку **проекта**.  
+1.  В Visual Studio **файл** последовательно выберите пункты **New**, а затем нажмите кнопку **проекта**.  
   
 2.  В **типов проектов** в области **новый проект** диалоговое окно, нажмите кнопку **Visual C#**.  
   

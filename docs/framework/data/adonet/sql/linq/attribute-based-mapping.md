@@ -1,31 +1,33 @@
 ---
-title: "Сопоставление, основанное на атрибутах"
-ms.custom: 
+title: Сопоставление, основанное на атрибутах
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 6dd89999-f415-4d61-b8c8-237d23d7924e
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: a7a66b165e5bcfc605842b96295ae1721e7b3af5
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 49969af962db9fb533ad316622af42104438be7d
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="attribute-based-mapping"></a>Сопоставление, основанное на атрибутах
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]сопоставляет базу данных SQL Server для [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] объектной модели, либо путем применения атрибутов или с помощью внешнего файла сопоставления. В этом разделе представлен подход на основе атрибутов.  
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] сопоставляет базу данных SQL Server для [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] объектной модели, либо путем применения атрибутов или с помощью внешнего файла сопоставления. В этом разделе представлен подход на основе атрибутов.  
   
  В своей самой простой форме [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] сопоставляет базу данных с <xref:System.Data.Linq.DataContext>, таблицу с классом, а столбцы и связи - со свойствами этих классов. Атрибуты также можно использовать для сопоставления иерархии наследования в объектной модели. Дополнительные сведения см. в разделе [как: Создание модели объектов в Visual Basic или C#](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md).  
   
- Разработчики, использующие [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] обычно выполняют сопоставление на основе атрибутов с помощью [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]. Можно также использовать программу командной строки SQLMetal или вручную написать код атрибутов самостоятельно. Дополнительные сведения см. в разделе [как: Создание модели объектов в Visual Basic или C#](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md).  
+ Разработчики, обычно с помощью Visual Studio выполняют сопоставление на основе атрибутов с помощью [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]. Можно также использовать программу командной строки SQLMetal или вручную написать код атрибутов самостоятельно. Дополнительные сведения см. в разделе [как: Создание модели объектов в Visual Basic или C#](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md).  
   
 > [!NOTE]
 >  Сопоставление можно также выполнять с помощью внешнего файла XML. Дополнительные сведения см. в разделе [внешнего сопоставления](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md).  
@@ -72,7 +74,7 @@ ms.lasthandoff: 01/17/2018
  Для получения дополнительной информации см. <xref:System.Data.Linq.Mapping.ColumnAttribute>.  
   
 > [!NOTE]
->  В значениях свойства Storage для атрибутов AssociationAttribute и ColumnAttribute учитывается регистр. Например, следует убедиться в том, что регистр символов в значении, использованном в атрибуте свойства AssociationAttribute.Storage, соответствует регистру символов в соответствующих именах свойств в остальном коде. Это относится ко всем языкам программирования среды .NET, даже к тем, которые обычно не учитывают регистр, включая [!INCLUDE[vb_current_short](../../../../../../includes/vb-current-short-md.md)]. Дополнительные сведения о свойстве Storage см. в разделе <xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A?displayProperty=nameWithType>.  
+>  В значениях свойства Storage для атрибутов AssociationAttribute и ColumnAttribute учитывается регистр. Например, следует убедиться в том, что регистр символов в значении, использованном в атрибуте свойства AssociationAttribute.Storage, соответствует регистру символов в соответствующих именах свойств в остальном коде. Это применяется для всех языков программирования .NET, включая те, которые обычно регистр не учитывается, включая Visual Basic. Дополнительные сведения о свойстве Storage см. в разделе <xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A?displayProperty=nameWithType>.  
   
 ## <a name="associationattribute-attribute"></a>Атрибут AssociationAttribute  
  Применяйте этот атрибут для указания свойства, которое будет представлять связь в базе данных, такую как отношение внешнего и первичного ключей. Дополнительные сведения о связях см. в разделе [как: сопоставление связей базы данных](../../../../../../docs/framework/data/adonet/sql/linq/how-to-map-database-relationships.md).  
@@ -91,7 +93,7 @@ ms.lasthandoff: 01/17/2018
  Для получения дополнительной информации см. <xref:System.Data.Linq.Mapping.AssociationAttribute>.  
   
 > [!NOTE]
->  В значениях свойства Storage для атрибутов AssociationAttribute и ColumnAttribute учитывается регистр. Например, следует убедиться в том, что регистр символов в значении, использованном в атрибуте свойства AssociationAttribute.Storage, соответствует регистру символов в соответствующих именах свойств в остальном коде. Это относится ко всем языкам программирования среды .NET, даже к тем, которые обычно не учитывают регистр, включая [!INCLUDE[vb_current_short](../../../../../../includes/vb-current-short-md.md)]. Дополнительные сведения о свойстве Storage см. в разделе <xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A?displayProperty=nameWithType>.  
+>  В значениях свойства Storage для атрибутов AssociationAttribute и ColumnAttribute учитывается регистр. Например, следует убедиться в том, что регистр символов в значении, использованном в атрибуте свойства AssociationAttribute.Storage, соответствует регистру символов в соответствующих именах свойств в остальном коде. Это применяется для всех языков программирования .NET, включая те, которые обычно регистр не учитывается, включая Visual Basic. Дополнительные сведения о свойстве Storage см. в разделе <xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A?displayProperty=nameWithType>.  
   
 ## <a name="inheritancemappingattribute-attribute"></a>Атрибут InheritanceMappingAttribute  
  Применяйте этот атрибут для сопоставления иерархии наследования.  

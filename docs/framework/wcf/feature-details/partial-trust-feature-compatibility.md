@@ -10,17 +10,17 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: a36a540b-1606-4e63-88e0-b7c59e0e6ab7
-caps.latest.revision: ''
+caps.latest.revision: 75
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 1950a0c4015658affb0b9fa0d7c87a062865144b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 72282c62ad23ec825eab7054ab1909d07a062b45
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="partial-trust-feature-compatibility"></a>Совместимость возможностей частичного доверия
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] поддерживает ограниченный набор функциональности при выполнении в частично доверенной среде. Дополнительные сведения о различных функциях, поддерживаемых при работе с частичным доверием, которые разработаны на базе определенного набора сценариев, см. в разделе [Supported Deployment Scenarios](../../../../docs/framework/wcf/feature-details/supported-deployment-scenarios.md) .  
@@ -105,7 +105,7 @@ ms.lasthandoff: 12/22/2017
   
 -   Проверить, что при развертывании приложения в качестве приложения с полным доверием, которое не может изменяться пользователям, параметры управления доступом для кода разрешают выполнение приложения в среде с частичным доверием. Если это так, поведение не выполняется и исключение не создается. Чтобы обеспечить это, в разделе **levelfinal** с помощью [Caspol.exe (средство политики безопасности доступа кода)](../../../../docs/framework/tools/caspol-exe-code-access-security-policy-tool.md).  
   
- [!INCLUDE[crexample](../../../../includes/crexample-md.md)] общего поведения см. в разделе [Практическое руководство. Блокировка конечных точек в среде предприятия](../../../../docs/framework/wcf/extending/how-to-lock-down-endpoints-in-the-enterprise.md).  
+ Пример общее поведение разделе [как: блокировки работу конечных точек на предприятии](../../../../docs/framework/wcf/extending/how-to-lock-down-endpoints-in-the-enterprise.md).  
   
 ## <a name="configuration"></a>Конфигурация  
  За одним исключением, частично доверенный код может загружать разделы конфигурации [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] только из локального файла `app.config` . Для загрузки разделов конфигурации [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] , которые ссылаются на разделы [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] в файле machine.config или корневом файле web.config, требуется разрешение ConfigurationPermission(Unrestricted). Без данного разрешения ссылки на разделы конфигурации [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] (поведения, привязки), которые находятся не в локальном файле конфигурации, приводят к возникновению исключения при загрузке конфигурации.  

@@ -1,28 +1,30 @@
 ---
-title: "Код XAML и пользовательские классы для WPF"
-ms.custom: 
+title: Код XAML и пользовательские классы для WPF
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - custom classes in XAML [WPF]
 - XAML [WPF], custom classes
 - classes [WPF], custom classes in XAML
 ms.assetid: e7313137-581e-4a64-8453-d44e15a6164a
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: da599afc94fba617d4df17c57679d8ee4bb05c61
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: a7aa7ffe38f1fbd7de71dbc95ae12b8faca6e356
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="xaml-and-custom-classes-for-wpf"></a>Код XAML и пользовательские классы для WPF
 Реализация языка XAML в платформах [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] поддерживает возможность определения пользовательского класса или структуры на любом языке [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] и последующего доступа к этому классу с помощью разметки XAML. В одном файле разметки можно использовать сочетание определенных в [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] типов и пользовательских типов, обычно сопоставляя пользовательские типы с префиксом пространства имен XAML. В этом разделе обсуждаются требования, которым должен соответствовать пользовательский класс, чтобы его можно было использовать в качестве элемента XAML.  
@@ -70,7 +72,7 @@ ms.lasthandoff: 12/22/2017
  Примеры свойств, где синтаксис атрибута разрешен, но синтаксис элемента свойства, содержащего элемент объекта запрещен XAML имеют различные свойства, принимающие <xref:System.Windows.Input.Cursor> типа. <xref:System.Windows.Input.Cursor> Класс имеет выделенный преобразователь типа <xref:System.Windows.Input.CursorConverter>, но не предоставляет конструктор по умолчанию, поэтому <xref:System.Windows.FrameworkElement.Cursor%2A> свойство можно задать только с помощью синтаксиса атрибутов, даже если фактический <xref:System.Windows.Input.Cursor> тип является ссылочным типом.  
   
 ### <a name="per-property-type-converters"></a>Преобразователь типа каждого свойства  
- В качестве альтернативы само свойство может объявлять преобразователь типов на уровне свойств. Это позволяет «мини-язык», который создает объекты типа встроенного свойства путем обработки входящих строковых значений атрибута в качестве входного для <xref:System.ComponentModel.TypeConverter.ConvertFrom%2A> операции на основе соответствующего типа. Обычно это делается для предоставления удобного метода доступа, а не как единственное средство для задания свойства в XAML. Кроме того, можно также применять преобразователь типов для атрибутов, если необходимо использовать существующие типы [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)], которые не предоставляют конструктор по умолчанию или преобразователь типов атрибутов. Примеры из [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] API — это определенные свойства, которые принимают <xref:System.Globalization.CultureInfo> типа. В этом случае [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] используется существующий [!INCLUDE[TLA#tla_winfx](../../../../includes/tlasharptla-winfx-md.md)] <xref:System.Globalization.CultureInfo> тип для лучшего сценариев миграции, использованных в предыдущих версиях среды, но <xref:System.Globalization.CultureInfo> тип не поддерживает необходимые конструкторы или преобразование типа для использования в качестве значения свойства XAML непосредственно на уровне типа.  
+ В качестве альтернативы само свойство может объявлять преобразователь типов на уровне свойств. Это позволяет «мини-язык», который создает объекты типа встроенного свойства путем обработки входящих строковых значений атрибута в качестве входного для <xref:System.ComponentModel.TypeConverter.ConvertFrom%2A> операции на основе соответствующего типа. Обычно это делается для предоставления удобного метода доступа, а не как единственное средство для задания свойства в XAML. Кроме того, можно также применять преобразователь типов для атрибутов, если необходимо использовать существующие типы [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)], которые не предоставляют конструктор по умолчанию или преобразователь типов атрибутов. Примеры из [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] API — это определенные свойства, которые принимают <xref:System.Globalization.CultureInfo> типа. В этом случае [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] использовать существующие Microsoft .NET Framework <xref:System.Globalization.CultureInfo> тип для лучшего сценариев миграции, использованных в предыдущих версиях среды, но <xref:System.Globalization.CultureInfo> не поддерживает необходимый тип конструкторы или преобразование типов на уровне типа можно использовать в качестве значения свойства XAML напрямую.  
   
  При каждом предоставлении свойства, использующего XAML (особенно в том случае, если вы являетесь автором элемента управления), настоятельно рекомендуем резервировать это свойство с помощью свойства зависимости. Это особенно верно, если используется существующий [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] реализации процессора XAML, так как можно повысить производительность с помощью <xref:System.Windows.DependencyProperty> резервное. Свойство зависимости предоставит возможности системы свойств для данного свойства, которые пользователи ожидают от доступного в XAML свойства. В число этих возможностей входят анимация, привязка данных и поддержка стилей. Дополнительные сведения см. в разделах [Пользовательские свойства зависимостей](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md) и [Загрузка кода XAML и свойства зависимостей](../../../../docs/framework/wpf/advanced/xaml-loading-and-dependency-properties.md).  
   

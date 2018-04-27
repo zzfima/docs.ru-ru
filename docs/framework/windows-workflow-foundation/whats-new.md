@@ -11,17 +11,17 @@ helpviewer_keywords:
 - Windows Workflow Foundation [WF], what's new
 - WF [WF], what's new
 ms.assetid: 11f96014-001e-41a0-bcc2-d0684a52fa43
-caps.latest.revision: ''
+caps.latest.revision: 29
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 9c5026c7c3e90afa843b819fb51d7a4a7c8249a0
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 93915e8eeb46d91140198c2d51f88535a93a28cc
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="what39s-new-in-windows-workflow-foundation"></a>Что&#39;новые возможности Windows Workflow Foundation
 В сравнении с предыдущими версиями [!INCLUDE[wf](../../../includes/wf-md.md)] в [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)] изменяет несколько принципов разработки. Теперь рабочие процессы стало еще проще создавать, выполнять и поддерживать, а также реализовывать узел с новыми функциями. [!INCLUDE[crabout](../../../includes/crabout-md.md)] перенос .NET 3.0 и .NET 3.5 приложений рабочих процессов, чтобы использовать последнюю версию в разделе [руководство по миграции](../../../docs/framework/windows-workflow-foundation/migration-guidance.md).  
@@ -66,4 +66,4 @@ ms.lasthandoff: 03/23/2018
 -   Для возобновления ожидающего рабочего процесса теперь используется объект <xref:System.Activities.Bookmark>.  
   
 ## <a name="easier-ability-to-extend-wf-designer-experience"></a>Более удобное расширение среды проектирования WF Designer  
- Новый WF Designer построен на основе [!INCLUDE[avalon1](../../../includes/avalon1-md.md)], он обеспечивает более удобную модель для повторного размещения WF Designer за пределами Visual Studio, а также обеспечивает более простые механизмы для создания конструкторов пользовательских действий. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Настройка конструктора рабочих процессов](../../../docs/framework/windows-workflow-foundation/customizing-the-workflow-design-experience.md).
+ Новый WF Designer построен на Windows Presentation Foundation (WPF) и обеспечивает более удобную модель для повторного размещения WF Designer за пределами Visual Studio также обеспечивает более простые механизмы для создания пользовательских конструкторов действий. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Настройка конструктора рабочих процессов](../../../docs/framework/windows-workflow-foundation/customizing-the-workflow-design-experience.md).
