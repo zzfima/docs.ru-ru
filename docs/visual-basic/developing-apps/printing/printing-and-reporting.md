@@ -1,41 +1,42 @@
 ---
-title: "Печать и отчеты (Visual Basic)"
+title: Печать и отчеты (Visual Basic)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 ms.assetid: 92997b65-0279-4889-8db7-32cb6708be9c
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: e51ca5482a87dca1661f8b7d78272b70da676359
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 1bcb8d0101bb558d64208ff8b2df72238a968adb
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="printing-and-reporting-visual-basic"></a><span data-ttu-id="77270-102">Печать и отчеты (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="77270-102">Printing and Reporting (Visual Basic)</span></span>
-[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]<span data-ttu-id="77270-103">предоставляет ряд возможностей для печати и создания отчетов.</span><span class="sxs-lookup"><span data-stu-id="77270-103"> offers several options for printing and reporting.</span></span> <span data-ttu-id="77270-104">В следующих разделах приводятся общие сведения и ссылки на документацию, относящуюся к печати и создания отчетов.</span><span class="sxs-lookup"><span data-stu-id="77270-104">The following topics provide overviews and links to the relevant documentation related to printing and reporting.</span></span>  
+# <a name="printing-and-reporting-visual-basic"></a><span data-ttu-id="643ff-102">Печать и отчеты (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="643ff-102">Printing and Reporting (Visual Basic)</span></span>
+<span data-ttu-id="643ff-103">Visual Basic предоставляет ряд возможностей для печати и создания отчетов.</span><span class="sxs-lookup"><span data-stu-id="643ff-103">Visual Basic offers several options for printing and reporting.</span></span> <span data-ttu-id="643ff-104">В следующих разделах приводятся общие сведения и ссылки на документацию, относящуюся к печати и создания отчетов.</span><span class="sxs-lookup"><span data-stu-id="643ff-104">The following topics provide overviews and links to the relevant documentation related to printing and reporting.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="77270-105">Содержание</span><span class="sxs-lookup"><span data-stu-id="77270-105">In This Section</span></span>  
- [<span data-ttu-id="77270-106">Компонент PrintForm</span><span class="sxs-lookup"><span data-stu-id="77270-106">PrintForm Component</span></span>](../../../visual-basic/developing-apps/printing/printform-component.md)  
- <span data-ttu-id="77270-107">Общие сведения о `PrintForm` компонент, который позволяет печатать содержимое формы.</span><span class="sxs-lookup"><span data-stu-id="77270-107">Provides an overview of the `PrintForm` component that enables printing the contents of a form.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="643ff-105">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="643ff-105">In This Section</span></span>  
+ [<span data-ttu-id="643ff-106">Компонент PrintForm</span><span class="sxs-lookup"><span data-stu-id="643ff-106">PrintForm Component</span></span>](../../../visual-basic/developing-apps/printing/printform-component.md)  
+ <span data-ttu-id="643ff-107">Общие сведения о `PrintForm` компонент, который позволяет печатать содержимое формы.</span><span class="sxs-lookup"><span data-stu-id="643ff-107">Provides an overview of the `PrintForm` component that enables printing the contents of a form.</span></span>  
   
- [<span data-ttu-id="77270-108">Практическое руководство. Печать прокручиваемой формы</span><span class="sxs-lookup"><span data-stu-id="77270-108">How to: Print a Scrollable Form</span></span>](../../../visual-basic/developing-apps/printing/how-to-print-a-scrollable-form.md)  
- <span data-ttu-id="77270-109">Описание печати прокручиваемой формы с помощью `PrintForm` компонента.</span><span class="sxs-lookup"><span data-stu-id="77270-109">Explains how to print a scrollable form by using the `PrintForm` component.</span></span>  
+ [<span data-ttu-id="643ff-108">Практическое руководство. Печать прокручиваемой формы</span><span class="sxs-lookup"><span data-stu-id="643ff-108">How to: Print a Scrollable Form</span></span>](../../../visual-basic/developing-apps/printing/how-to-print-a-scrollable-form.md)  
+ <span data-ttu-id="643ff-109">Описание печати прокручиваемой формы с помощью `PrintForm` компонента.</span><span class="sxs-lookup"><span data-stu-id="643ff-109">Explains how to print a scrollable form by using the `PrintForm` component.</span></span>  
   
- [<span data-ttu-id="77270-110">Практическое руководство. Печать клиентской и неклиентской области формы</span><span class="sxs-lookup"><span data-stu-id="77270-110">How to: Print Client and Non-Client Areas of a Form</span></span>](../../../visual-basic/developing-apps/printing/how-to-print-client-and-non-client-areas-of-a-form.md)  
- <span data-ttu-id="77270-111">Описание печати клиента и неклиентской области формы с помощью `PrintForm` компонента.</span><span class="sxs-lookup"><span data-stu-id="77270-111">Explains how to print both the client and non-client areas of a form by using the `PrintForm` component.</span></span>  
+ [<span data-ttu-id="643ff-110">Практическое руководство. Печать клиентской и неклиентской области формы</span><span class="sxs-lookup"><span data-stu-id="643ff-110">How to: Print Client and Non-Client Areas of a Form</span></span>](../../../visual-basic/developing-apps/printing/how-to-print-client-and-non-client-areas-of-a-form.md)  
+ <span data-ttu-id="643ff-111">Описание печати клиента и неклиентской области формы с помощью `PrintForm` компонента.</span><span class="sxs-lookup"><span data-stu-id="643ff-111">Explains how to print both the client and non-client areas of a form by using the `PrintForm` component.</span></span>  
   
- [<span data-ttu-id="77270-112">Практическое руководство. Печать клиентской области формы</span><span class="sxs-lookup"><span data-stu-id="77270-112">How to: Print the Client Area of a Form</span></span>](../../../visual-basic/developing-apps/printing/how-to-print-the-client-area-of-a-form.md)  
- <span data-ttu-id="77270-113">Описание печати клиентской области формы с помощью `PrintForm` компонента.</span><span class="sxs-lookup"><span data-stu-id="77270-113">Explains how to print the client area of a form by using the `PrintForm` component.</span></span>  
+ [<span data-ttu-id="643ff-112">Практическое руководство. Печать клиентской области формы</span><span class="sxs-lookup"><span data-stu-id="643ff-112">How to: Print the Client Area of a Form</span></span>](../../../visual-basic/developing-apps/printing/how-to-print-the-client-area-of-a-form.md)  
+ <span data-ttu-id="643ff-113">Описание печати клиентской области формы с помощью `PrintForm` компонента.</span><span class="sxs-lookup"><span data-stu-id="643ff-113">Explains how to print the client area of a form by using the `PrintForm` component.</span></span>  
   
- [<span data-ttu-id="77270-114">Практическое руководство. Печать формы с помощью компонента PrintForm</span><span class="sxs-lookup"><span data-stu-id="77270-114">How to: Print a Form by Using the PrintForm Component</span></span>](../../../visual-basic/developing-apps/printing/how-to-print-a-form-by-using-the-printform-component.md)  
- <span data-ttu-id="77270-115">Описание печати основной формы с помощью `PrintForm` компонента.</span><span class="sxs-lookup"><span data-stu-id="77270-115">Explains how to print a basic form by using the `PrintForm` component.</span></span>  
+ [<span data-ttu-id="643ff-114">Практическое руководство. Печать формы с помощью компонента PrintForm</span><span class="sxs-lookup"><span data-stu-id="643ff-114">How to: Print a Form by Using the PrintForm Component</span></span>](../../../visual-basic/developing-apps/printing/how-to-print-a-form-by-using-the-printform-component.md)  
+ <span data-ttu-id="643ff-115">Описание печати основной формы с помощью `PrintForm` компонента.</span><span class="sxs-lookup"><span data-stu-id="643ff-115">Explains how to print a basic form by using the `PrintForm` component.</span></span>  
   
- [<span data-ttu-id="77270-116">Развертывание приложений, ссылающихся на компонент PrintForm</span><span class="sxs-lookup"><span data-stu-id="77270-116">Deploying Applications That Reference the PrintForm Component</span></span>](../../../visual-basic/developing-apps/printing/deploying-applications-that-reference-the-printform-component.md)  
- <span data-ttu-id="77270-117">Описание развертывания `PrintForm` компонент вместе с приложением.</span><span class="sxs-lookup"><span data-stu-id="77270-117">Discusses how to deploy the `PrintForm` component together with an application.</span></span>  
+ [<span data-ttu-id="643ff-116">Развертывание приложений, ссылающихся на компонент PrintForm</span><span class="sxs-lookup"><span data-stu-id="643ff-116">Deploying Applications That Reference the PrintForm Component</span></span>](../../../visual-basic/developing-apps/printing/deploying-applications-that-reference-the-printform-component.md)  
+ <span data-ttu-id="643ff-117">Описание развертывания `PrintForm` компонент вместе с приложением.</span><span class="sxs-lookup"><span data-stu-id="643ff-117">Discusses how to deploy the `PrintForm` component together with an application.</span></span>  
   
- [<span data-ttu-id="77270-118">Добавление печатаемых отчетов в приложения Visual Studio</span><span class="sxs-lookup"><span data-stu-id="77270-118">Adding Printable Reports to Visual Studio Applications</span></span>](../../../visual-basic/developing-apps/printing/adding-printable-reports-to-visual-studio-applications.md)  
- <span data-ttu-id="77270-119">Описывает параметры, доступные для создания отчетов.</span><span class="sxs-lookup"><span data-stu-id="77270-119">Discusses options available for writing reports.</span></span>
+ [<span data-ttu-id="643ff-118">Добавление печатаемых отчетов в приложения Visual Studio</span><span class="sxs-lookup"><span data-stu-id="643ff-118">Adding Printable Reports to Visual Studio Applications</span></span>](../../../visual-basic/developing-apps/printing/adding-printable-reports-to-visual-studio-applications.md)  
+ <span data-ttu-id="643ff-119">Описывает параметры, доступные для создания отчетов.</span><span class="sxs-lookup"><span data-stu-id="643ff-119">Discusses options available for writing reports.</span></span>

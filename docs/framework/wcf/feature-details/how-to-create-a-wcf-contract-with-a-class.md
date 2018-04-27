@@ -1,54 +1,56 @@
 ---
-title: "Практическое руководство. Создание контракта Windows Communication Foundation с помощью класса"
-ms.custom: 
+title: Практическое руководство. Создание контракта Windows Communication Foundation с помощью класса
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 1ad69393-3915-4e7f-9b91-b6fc59c6f5ba
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 44418d9d7ec88ea5cd340312fd1ebe42ef8d20a5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: aa09e1900b0709130cb4c58240c38d1bd5d1d92d
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="how-to-create-a-windows-communication-foundation-contract-with-a-class"></a><span data-ttu-id="d3a44-102">Практическое руководство. Создание контракта Windows Communication Foundation с помощью класса</span><span class="sxs-lookup"><span data-stu-id="d3a44-102">How to: Create a Windows Communication Foundation Contract with a Class</span></span>
-<span data-ttu-id="d3a44-103">Контракты [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] рекомендуется создавать с помощью интерфейсов.</span><span class="sxs-lookup"><span data-stu-id="d3a44-103">The preferred way of creating a [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] contract is by using an interface.</span></span> [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<span data-ttu-id="d3a44-104">[Как: определение контракта службы](../../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md).</span><span class="sxs-lookup"><span data-stu-id="d3a44-104"> [How to: Define a Service Contract](../../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md).</span></span> <span data-ttu-id="d3a44-105">Описанный здесь альтернативный способ предполагает создание класса и последующее применение атрибута <xref:System.ServiceModel.ServiceContractAttribute> непосредственно к классу, а атрибута <xref:System.ServiceModel.OperationContractAttribute> к каждому из методов класса, являющихся частью контракта.</span><span class="sxs-lookup"><span data-stu-id="d3a44-105">An alternative, outlined here, is to create a class and then apply the <xref:System.ServiceModel.ServiceContractAttribute> attribute to the class directly and the <xref:System.ServiceModel.OperationContractAttribute> attribute to each of the methods in the class that are part of the contract.</span></span>  
+# <a name="how-to-create-a-windows-communication-foundation-contract-with-a-class"></a><span data-ttu-id="8a218-102">Практическое руководство. Создание контракта Windows Communication Foundation с помощью класса</span><span class="sxs-lookup"><span data-stu-id="8a218-102">How to: Create a Windows Communication Foundation Contract with a Class</span></span>
+<span data-ttu-id="8a218-103">Контракты [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] рекомендуется создавать с помощью интерфейсов.</span><span class="sxs-lookup"><span data-stu-id="8a218-103">The preferred way of creating a [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] contract is by using an interface.</span></span> [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<span data-ttu-id="8a218-104"> [Как: определение контракта службы](../../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md).</span><span class="sxs-lookup"><span data-stu-id="8a218-104"> [How to: Define a Service Contract](../../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md).</span></span> <span data-ttu-id="8a218-105">Описанный здесь альтернативный способ предполагает создание класса и последующее применение атрибута <xref:System.ServiceModel.ServiceContractAttribute> непосредственно к классу, а атрибута <xref:System.ServiceModel.OperationContractAttribute> к каждому из методов класса, являющихся частью контракта.</span><span class="sxs-lookup"><span data-stu-id="8a218-105">An alternative, outlined here, is to create a class and then apply the <xref:System.ServiceModel.ServiceContractAttribute> attribute to the class directly and the <xref:System.ServiceModel.OperationContractAttribute> attribute to each of the methods in the class that are part of the contract.</span></span>  
   
 > [!WARNING]
->  <span data-ttu-id="d3a44-106">`[ServiceContract]` и `[ServiceContractAttribute]` выполняют то же самое.</span><span class="sxs-lookup"><span data-stu-id="d3a44-106">`[ServiceContract]` and `[ServiceContractAttribute]` do the same thing.</span></span> <span data-ttu-id="d3a44-107">То же верно для `[OperationContract]` и `[OperationContractAttribute]`.</span><span class="sxs-lookup"><span data-stu-id="d3a44-107">The same thing it true for `[OperationContract]` and `[OperationContractAttribute]`.</span></span> <span data-ttu-id="d3a44-108">В каждом случае первое является сокращением для обозначения предыдущего контракта.</span><span class="sxs-lookup"><span data-stu-id="d3a44-108">In each case the former is shorthand for the latter.</span></span>  
+>  <span data-ttu-id="8a218-106">`[ServiceContract]` и `[ServiceContractAttribute]` выполняют то же самое.</span><span class="sxs-lookup"><span data-stu-id="8a218-106">`[ServiceContract]` and `[ServiceContractAttribute]` do the same thing.</span></span> <span data-ttu-id="8a218-107">То же верно для `[OperationContract]` и `[OperationContractAttribute]`.</span><span class="sxs-lookup"><span data-stu-id="8a218-107">The same thing it true for `[OperationContract]` and `[OperationContractAttribute]`.</span></span> <span data-ttu-id="8a218-108">В каждом случае первое является сокращением для обозначения предыдущего контракта.</span><span class="sxs-lookup"><span data-stu-id="8a218-108">In each case the former is shorthand for the latter.</span></span>  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="d3a44-109">контракты службы см. в разделе [проектирование контрактов службы](../../../../docs/framework/wcf/designing-service-contracts.md).</span><span class="sxs-lookup"><span data-stu-id="d3a44-109"> service contracts, see [Designing Service Contracts](../../../../docs/framework/wcf/designing-service-contracts.md).</span></span>  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="8a218-109"> контракты службы см. в разделе [проектирование контрактов службы](../../../../docs/framework/wcf/designing-service-contracts.md).</span><span class="sxs-lookup"><span data-stu-id="8a218-109"> service contracts, see [Designing Service Contracts](../../../../docs/framework/wcf/designing-service-contracts.md).</span></span>  
   
-### <a name="creating-a-windows-communication-foundation-contract-with-a-class"></a><span data-ttu-id="d3a44-110">Создание контракта Windows Communication Foundation с помощью класса</span><span class="sxs-lookup"><span data-stu-id="d3a44-110">Creating a Windows Communication Foundation contract with a class</span></span>  
+### <a name="creating-a-windows-communication-foundation-contract-with-a-class"></a><span data-ttu-id="8a218-110">Создание контракта Windows Communication Foundation с помощью класса</span><span class="sxs-lookup"><span data-stu-id="8a218-110">Creating a Windows Communication Foundation contract with a class</span></span>  
   
-1.  <span data-ttu-id="d3a44-111">Создайте новый класс с использованием языка [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)], C# или другого языка среды CLR.</span><span class="sxs-lookup"><span data-stu-id="d3a44-111">Create a new class using [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)], C#, or any other common language runtime language.</span></span>  
+1.  <span data-ttu-id="8a218-111">Создайте новый класс с помощью Visual Basic, C# или любые другие языка среды CLR.</span><span class="sxs-lookup"><span data-stu-id="8a218-111">Create a new class using Visual Basic, C#, or any other common language runtime language.</span></span>  
   
-2.  <span data-ttu-id="d3a44-112">Примените класс <xref:System.ServiceModel.ServiceContractAttribute> к созданному классу.</span><span class="sxs-lookup"><span data-stu-id="d3a44-112">Apply the <xref:System.ServiceModel.ServiceContractAttribute> class to the class.</span></span>  
+2.  <span data-ttu-id="8a218-112">Примените класс <xref:System.ServiceModel.ServiceContractAttribute> к созданному классу.</span><span class="sxs-lookup"><span data-stu-id="8a218-112">Apply the <xref:System.ServiceModel.ServiceContractAttribute> class to the class.</span></span>  
   
-3.  <span data-ttu-id="d3a44-113">Создайте методы класса.</span><span class="sxs-lookup"><span data-stu-id="d3a44-113">Create methods in the class.</span></span>  
+3.  <span data-ttu-id="8a218-113">Создайте методы класса.</span><span class="sxs-lookup"><span data-stu-id="8a218-113">Create methods in the class.</span></span>  
   
-4.  <span data-ttu-id="d3a44-114">Примените класс <xref:System.ServiceModel.OperationContractAttribute> к каждому методу, который требуется предоставить в рамках открытого контракта [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].</span><span class="sxs-lookup"><span data-stu-id="d3a44-114">Apply the <xref:System.ServiceModel.OperationContractAttribute> class to each method that must be exposed as part of the public [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] contract.</span></span>  
+4.  <span data-ttu-id="8a218-114">Примените класс <xref:System.ServiceModel.OperationContractAttribute> к каждому методу, который требуется предоставить в рамках открытого контракта [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].</span><span class="sxs-lookup"><span data-stu-id="8a218-114">Apply the <xref:System.ServiceModel.OperationContractAttribute> class to each method that must be exposed as part of the public [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] contract.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="d3a44-115">Пример</span><span class="sxs-lookup"><span data-stu-id="d3a44-115">Example</span></span>  
- <span data-ttu-id="d3a44-116">В следующем примере кода показан класс, определяющий контракт службы.</span><span class="sxs-lookup"><span data-stu-id="d3a44-116">The following code example shows a class that defines a service contract.</span></span>  
+## <a name="example"></a><span data-ttu-id="8a218-115">Пример</span><span class="sxs-lookup"><span data-stu-id="8a218-115">Example</span></span>  
+ <span data-ttu-id="8a218-116">В следующем примере кода показан класс, определяющий контракт службы.</span><span class="sxs-lookup"><span data-stu-id="8a218-116">The following code example shows a class that defines a service contract.</span></span>  
   
  [!code-csharp[c_HowTo_CreateContractWithClass#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_createcontractwithclass/cs/source.cs#1)]
  [!code-vb[c_HowTo_CreateContractWithClass#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_createcontractwithclass/vb/source.vb#1)]  
   
- <span data-ttu-id="d3a44-117">Методы, к которым применен класс <xref:System.ServiceModel.OperationContractAttribute>, по умолчанию используют шаблон обмена сообщениями «запрос-ответ».</span><span class="sxs-lookup"><span data-stu-id="d3a44-117">The methods that have the <xref:System.ServiceModel.OperationContractAttribute> class applied use a request-reply message pattern by default.</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="d3a44-118">Этот шаблон, в разделе [как: Создание контракта типа запрос-ответ](../../../../docs/framework/wcf/feature-details/how-to-create-a-request-reply-contract.md).</span><span class="sxs-lookup"><span data-stu-id="d3a44-118"> this message pattern, see [How to: Create a Request-Reply Contract](../../../../docs/framework/wcf/feature-details/how-to-create-a-request-reply-contract.md).</span></span> <span data-ttu-id="d3a44-119">Кроме того, можно создать и использовать другие шаблоны сообщений путем задания свойств атрибута.</span><span class="sxs-lookup"><span data-stu-id="d3a44-119">You can also create and use other message patterns by setting properties of the attribute.</span></span> <span data-ttu-id="d3a44-120">Дополнительные примеры см. в разделе [как: создать односторонний контракт](../../../../docs/framework/wcf/feature-details/how-to-create-a-one-way-contract.md) и [как: создание дуплексного контракта](../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md).</span><span class="sxs-lookup"><span data-stu-id="d3a44-120">For more examples, see [How to: Create a One-Way Contract](../../../../docs/framework/wcf/feature-details/how-to-create-a-one-way-contract.md) and [How to: Create a Duplex Contract](../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md).</span></span>  
+ <span data-ttu-id="8a218-117">Методы, к которым применен класс <xref:System.ServiceModel.OperationContractAttribute>, по умолчанию используют шаблон обмена сообщениями «запрос-ответ».</span><span class="sxs-lookup"><span data-stu-id="8a218-117">The methods that have the <xref:System.ServiceModel.OperationContractAttribute> class applied use a request-reply message pattern by default.</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="8a218-118"> Этот шаблон, в разделе [как: Создание контракта типа запрос-ответ](../../../../docs/framework/wcf/feature-details/how-to-create-a-request-reply-contract.md).</span><span class="sxs-lookup"><span data-stu-id="8a218-118"> this message pattern, see [How to: Create a Request-Reply Contract](../../../../docs/framework/wcf/feature-details/how-to-create-a-request-reply-contract.md).</span></span> <span data-ttu-id="8a218-119">Кроме того, можно создать и использовать другие шаблоны сообщений путем задания свойств атрибута.</span><span class="sxs-lookup"><span data-stu-id="8a218-119">You can also create and use other message patterns by setting properties of the attribute.</span></span> <span data-ttu-id="8a218-120">Дополнительные примеры см. в разделе [как: создать односторонний контракт](../../../../docs/framework/wcf/feature-details/how-to-create-a-one-way-contract.md) и [как: создание дуплексного контракта](../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md).</span><span class="sxs-lookup"><span data-stu-id="8a218-120">For more examples, see [How to: Create a One-Way Contract](../../../../docs/framework/wcf/feature-details/how-to-create-a-one-way-contract.md) and [How to: Create a Duplex Contract](../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d3a44-121">См. также</span><span class="sxs-lookup"><span data-stu-id="d3a44-121">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="8a218-121">См. также</span><span class="sxs-lookup"><span data-stu-id="8a218-121">See Also</span></span>  
  <xref:System.ServiceModel.ServiceContractAttribute>  
  <xref:System.ServiceModel.OperationContractAttribute>

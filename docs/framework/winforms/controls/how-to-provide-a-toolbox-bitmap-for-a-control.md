@@ -1,12 +1,13 @@
 ---
-title: "Практическое руководство. Предоставление точечного рисунка панели элементов для элемента управления"
-ms.custom: 
+title: Практическое руководство. Предоставление точечного рисунка панели элементов для элемента управления
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-winforms
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -16,25 +17,26 @@ helpviewer_keywords:
 - custom controls [Windows Forms], Toolbox bitmaps
 - bitmaps [Windows Forms], custom controls
 ms.assetid: 0ed0840a-616d-41ba-a27d-3573241932ad
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 446e0f830e916e7f4118a7374c66f238a60fda02
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 5d34cbb88805d9c034df61aba89ebd7bb224b1da
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="how-to-provide-a-toolbox-bitmap-for-a-control"></a><span data-ttu-id="b2694-102">Практическое руководство. Предоставление точечного рисунка панели элементов для элемента управления</span><span class="sxs-lookup"><span data-stu-id="b2694-102">How to: Provide a Toolbox Bitmap for a Control</span></span>
-<span data-ttu-id="b2694-103">Если вы хотите иметь специальный значок для элемента управления отображаются в **элементов**, можно указать конкретный образ с помощью <xref:System.Drawing.ToolboxBitmapAttribute>.</span><span class="sxs-lookup"><span data-stu-id="b2694-103">If you want to have a special icon for your control appear in the **Toolbox**, you can specify a particular image by using the <xref:System.Drawing.ToolboxBitmapAttribute>.</span></span> <span data-ttu-id="b2694-104">Он представляет собой *атрибут* — особый вид классов, который можно прикреплять к другим классам.</span><span class="sxs-lookup"><span data-stu-id="b2694-104">This class is an *attribute*, a special kind of class you can attach to other classes.</span></span> <span data-ttu-id="b2694-105">Дополнительные сведения об атрибутах см. в разделе [НЕ В СБОРКЕ. Обзор атрибутов в Visual Basic](http://msdn.microsoft.com/library/0d0cff64-892d-4f57-83bd-bef388553d4f) для [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] и [Атрибуты](http://msdn.microsoft.com/library/ae334cee-d96c-4243-a5e3-06dd7fcaf205) для [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)].</span><span class="sxs-lookup"><span data-stu-id="b2694-105">For more information about attributes, see [NOT IN BUILD: Attributes Overview in Visual Basic](http://msdn.microsoft.com/library/0d0cff64-892d-4f57-83bd-bef388553d4f) for [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] and [Attributes](http://msdn.microsoft.com/library/ae334cee-d96c-4243-a5e3-06dd7fcaf205) for [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)].</span></span>  
+# <a name="how-to-provide-a-toolbox-bitmap-for-a-control"></a><span data-ttu-id="e2768-102">Практическое руководство. Предоставление точечного рисунка панели элементов для элемента управления</span><span class="sxs-lookup"><span data-stu-id="e2768-102">How to: Provide a Toolbox Bitmap for a Control</span></span>
+<span data-ttu-id="e2768-103">Если вы хотите иметь специальный значок для элемента управления отображаются в **элементов**, можно указать конкретный образ с помощью <xref:System.Drawing.ToolboxBitmapAttribute>.</span><span class="sxs-lookup"><span data-stu-id="e2768-103">If you want to have a special icon for your control appear in the **Toolbox**, you can specify a particular image by using the <xref:System.Drawing.ToolboxBitmapAttribute>.</span></span> <span data-ttu-id="e2768-104">Он представляет собой *атрибут* — особый вид классов, который можно прикреплять к другим классам.</span><span class="sxs-lookup"><span data-stu-id="e2768-104">This class is an *attribute*, a special kind of class you can attach to other classes.</span></span> <span data-ttu-id="e2768-105">Дополнительные сведения об атрибутах см. в разделе [не в СБОРКЕ: Обзор атрибутов в Visual Basic](http://msdn.microsoft.com/library/0d0cff64-892d-4f57-83bd-bef388553d4f) для Visual Basic и [атрибуты](http://msdn.microsoft.com/library/ae334cee-d96c-4243-a5e3-06dd7fcaf205) для Visual C#.</span><span class="sxs-lookup"><span data-stu-id="e2768-105">For more information about attributes, see [NOT IN BUILD: Attributes Overview in Visual Basic](http://msdn.microsoft.com/library/0d0cff64-892d-4f57-83bd-bef388553d4f) for Visual Basic and [Attributes](http://msdn.microsoft.com/library/ae334cee-d96c-4243-a5e3-06dd7fcaf205) for Visual C#.</span></span>  
   
- <span data-ttu-id="b2694-106">С помощью <xref:System.Drawing.ToolboxBitmapAttribute>, можно указать строку, которая указывает путь и имя файла для точечного рисунка 16 x 16 пикселей.</span><span class="sxs-lookup"><span data-stu-id="b2694-106">Using the <xref:System.Drawing.ToolboxBitmapAttribute>, you can specify a string that indicates the path and file name for a 16 by 16 pixel bitmap.</span></span> <span data-ttu-id="b2694-107">Это изображение появится рядом с элементом управления при добавлении на **панель элементов**.</span><span class="sxs-lookup"><span data-stu-id="b2694-107">This bitmap then appears next to your control when added to the **Toolbox**.</span></span> <span data-ttu-id="b2694-108">Можно также указать <xref:System.Type>, в этом случае загружается растровое изображение, связанное с этим типом.</span><span class="sxs-lookup"><span data-stu-id="b2694-108">You can also specify a <xref:System.Type>, in which case the bitmap associated with that type is loaded.</span></span> <span data-ttu-id="b2694-109">Если заданы оба <xref:System.Type> и строку, элемент управления выполняет поиск ресурса изображения с именем, указанным в параметре строки в сборке, содержащей тип, заданный параметром <xref:System.Type> параметр.</span><span class="sxs-lookup"><span data-stu-id="b2694-109">If you specify both a <xref:System.Type> and a string, the control searches for an image resource with the name specified by the string parameter in the assembly containing the type specified by the <xref:System.Type> parameter.</span></span>  
+ <span data-ttu-id="e2768-106">С помощью <xref:System.Drawing.ToolboxBitmapAttribute>, можно указать строку, которая указывает путь и имя файла для точечного рисунка 16 x 16 пикселей.</span><span class="sxs-lookup"><span data-stu-id="e2768-106">Using the <xref:System.Drawing.ToolboxBitmapAttribute>, you can specify a string that indicates the path and file name for a 16 by 16 pixel bitmap.</span></span> <span data-ttu-id="e2768-107">Это изображение появится рядом с элементом управления при добавлении на **панель элементов**.</span><span class="sxs-lookup"><span data-stu-id="e2768-107">This bitmap then appears next to your control when added to the **Toolbox**.</span></span> <span data-ttu-id="e2768-108">Можно также указать <xref:System.Type>, в этом случае загружается растровое изображение, связанное с этим типом.</span><span class="sxs-lookup"><span data-stu-id="e2768-108">You can also specify a <xref:System.Type>, in which case the bitmap associated with that type is loaded.</span></span> <span data-ttu-id="e2768-109">Если заданы оба <xref:System.Type> и строку, элемент управления выполняет поиск ресурса изображения с именем, указанным в параметре строки в сборке, содержащей тип, заданный параметром <xref:System.Type> параметр.</span><span class="sxs-lookup"><span data-stu-id="e2768-109">If you specify both a <xref:System.Type> and a string, the control searches for an image resource with the name specified by the string parameter in the assembly containing the type specified by the <xref:System.Type> parameter.</span></span>  
   
-### <a name="to-specify-a-toolbox-bitmap-for-your-control"></a><span data-ttu-id="b2694-110">Указание растрового изображения для отображения элемента управления на панели элементов</span><span class="sxs-lookup"><span data-stu-id="b2694-110">To specify a Toolbox bitmap for your control</span></span>  
+### <a name="to-specify-a-toolbox-bitmap-for-your-control"></a><span data-ttu-id="e2768-110">Указание растрового изображения для отображения элемента управления на панели элементов</span><span class="sxs-lookup"><span data-stu-id="e2768-110">To specify a Toolbox bitmap for your control</span></span>  
   
-1.  <span data-ttu-id="b2694-111">Добавить <xref:System.Drawing.ToolboxBitmapAttribute> объявление класса элемента управления перед `Class` ключевое слово для [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)]и перед объявлением класса для [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)].</span><span class="sxs-lookup"><span data-stu-id="b2694-111">Add the <xref:System.Drawing.ToolboxBitmapAttribute> to the class declaration of your control before the `Class` keyword for [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)], and above the class declaration for [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)].</span></span>  
+1.  <span data-ttu-id="e2768-111">Добавить <xref:System.Drawing.ToolboxBitmapAttribute> объявление класса элемента управления перед `Class` ключевое слово для visual Basic и выше объявления класса для Visual C#.</span><span class="sxs-lookup"><span data-stu-id="e2768-111">Add the <xref:System.Drawing.ToolboxBitmapAttribute> to the class declaration of your control before the `Class` keyword for visual Basic, and above the class declaration for Visual C#.</span></span>  
   
     ```vb  
     ' Specifies the bitmap associated with the Button type.  
@@ -69,14 +71,14 @@ ms.lasthandoff: 01/19/2018
     }  
     ```  
   
-2.  <span data-ttu-id="b2694-112">Перестройте проект.</span><span class="sxs-lookup"><span data-stu-id="b2694-112">Rebuild the project.</span></span>  
+2.  <span data-ttu-id="e2768-112">Перестройте проект.</span><span class="sxs-lookup"><span data-stu-id="e2768-112">Rebuild the project.</span></span>  
   
     > [!NOTE]
-    >  <span data-ttu-id="b2694-113">Для автоматически созданных элементов управления и компонентов растровое изображение на панели элементов не отображается.</span><span class="sxs-lookup"><span data-stu-id="b2694-113">The bitmap does not appear in the Toolbox for autogenerated controls and components.</span></span> <span data-ttu-id="b2694-114">Чтобы увидеть растровое изображение, перезагрузите элемент управления с помощью диалогового окна **Выбор элементов панели элементов**.</span><span class="sxs-lookup"><span data-stu-id="b2694-114">To see the bitmap, reload the control by using the **Choose Toolbox Items** dialog box.</span></span> <span data-ttu-id="b2694-115">Дополнительные сведения см. в разделе [Пошаговое руководство. Автоматическое заполнение панели элементов пользовательскими компонентами](../../../../docs/framework/winforms/controls/walkthrough-automatically-populating-the-toolbox-with-custom-components.md).</span><span class="sxs-lookup"><span data-stu-id="b2694-115">For more information, see [Walkthrough: Automatically Populating the Toolbox with Custom Components](../../../../docs/framework/winforms/controls/walkthrough-automatically-populating-the-toolbox-with-custom-components.md).</span></span>  
+    >  <span data-ttu-id="e2768-113">Для автоматически созданных элементов управления и компонентов растровое изображение на панели элементов не отображается.</span><span class="sxs-lookup"><span data-stu-id="e2768-113">The bitmap does not appear in the Toolbox for autogenerated controls and components.</span></span> <span data-ttu-id="e2768-114">Чтобы увидеть растровое изображение, перезагрузите элемент управления с помощью диалогового окна **Выбор элементов панели элементов**.</span><span class="sxs-lookup"><span data-stu-id="e2768-114">To see the bitmap, reload the control by using the **Choose Toolbox Items** dialog box.</span></span> <span data-ttu-id="e2768-115">Дополнительные сведения см. в разделе [Пошаговое руководство. Автоматическое заполнение панели элементов пользовательскими компонентами](../../../../docs/framework/winforms/controls/walkthrough-automatically-populating-the-toolbox-with-custom-components.md).</span><span class="sxs-lookup"><span data-stu-id="e2768-115">For more information, see [Walkthrough: Automatically Populating the Toolbox with Custom Components](../../../../docs/framework/winforms/controls/walkthrough-automatically-populating-the-toolbox-with-custom-components.md).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b2694-116">См. также</span><span class="sxs-lookup"><span data-stu-id="b2694-116">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="e2768-116">См. также</span><span class="sxs-lookup"><span data-stu-id="e2768-116">See Also</span></span>  
  <xref:System.Drawing.ToolboxBitmapAttribute>  
- [<span data-ttu-id="b2694-117">Пошаговое руководство. Автоматическое заполнение панели элементов пользовательскими компонентами</span><span class="sxs-lookup"><span data-stu-id="b2694-117">Walkthrough: Automatically Populating the Toolbox with Custom Components</span></span>](../../../../docs/framework/winforms/controls/walkthrough-automatically-populating-the-toolbox-with-custom-components.md)  
- [<span data-ttu-id="b2694-118">Создание элементов управления Windows Forms во время разработки</span><span class="sxs-lookup"><span data-stu-id="b2694-118">Developing Windows Forms Controls at Design Time</span></span>](../../../../docs/framework/winforms/controls/developing-windows-forms-controls-at-design-time.md)  
- [<span data-ttu-id="b2694-119">Атрибуты (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b2694-119">Attributes (Visual Basic)</span></span>](~/docs/visual-basic/language-reference/attributes.md)  
- [<span data-ttu-id="b2694-120">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="b2694-120">Attributes</span></span>](http://msdn.microsoft.com/library/ae334cee-d96c-4243-a5e3-06dd7fcaf205)
+ [<span data-ttu-id="e2768-117">Пошаговое руководство. Автоматическое заполнение панели элементов пользовательскими компонентами</span><span class="sxs-lookup"><span data-stu-id="e2768-117">Walkthrough: Automatically Populating the Toolbox with Custom Components</span></span>](../../../../docs/framework/winforms/controls/walkthrough-automatically-populating-the-toolbox-with-custom-components.md)  
+ [<span data-ttu-id="e2768-118">Создание элементов управления Windows Forms во время разработки</span><span class="sxs-lookup"><span data-stu-id="e2768-118">Developing Windows Forms Controls at Design Time</span></span>](../../../../docs/framework/winforms/controls/developing-windows-forms-controls-at-design-time.md)  
+ [<span data-ttu-id="e2768-119">Атрибуты (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e2768-119">Attributes (Visual Basic)</span></span>](~/docs/visual-basic/language-reference/attributes.md)  
+ [<span data-ttu-id="e2768-120">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="e2768-120">Attributes</span></span>](http://msdn.microsoft.com/library/ae334cee-d96c-4243-a5e3-06dd7fcaf205)

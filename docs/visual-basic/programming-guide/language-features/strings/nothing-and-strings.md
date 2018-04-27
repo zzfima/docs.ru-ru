@@ -14,21 +14,21 @@ ms.assetid: 261380af-2024-4ecf-823b-43b1034d92cd
 caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 6ce9f81f23f50e38f6b1ad5e638e8c6ac026e992
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: d7693e712884a500495e4573900e7d9a049c2879
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="nothing-and-strings-in-visual-basic"></a><span data-ttu-id="3894f-102">Nothing и строки в Visual Basic</span><span class="sxs-lookup"><span data-stu-id="3894f-102">Nothing and Strings in Visual Basic</span></span>
-<span data-ttu-id="3894f-103">[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] Среды выполнения и [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] оценки `Nothing` по-разному когда дело доходит до строки.</span><span class="sxs-lookup"><span data-stu-id="3894f-103">The [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] runtime and the [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] evaluate `Nothing` differently when it comes to strings.</span></span>  
+# <a name="nothing-and-strings-in-visual-basic"></a><span data-ttu-id="333d3-102">Nothing и строки в Visual Basic</span><span class="sxs-lookup"><span data-stu-id="333d3-102">Nothing and Strings in Visual Basic</span></span>
+<span data-ttu-id="333d3-103">Среда выполнения Visual Basic и [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] оценки `Nothing` по-разному когда дело доходит до строки.</span><span class="sxs-lookup"><span data-stu-id="333d3-103">The Visual Basic runtime and the [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] evaluate `Nothing` differently when it comes to strings.</span></span>  
   
-## <a name="visual-basic-runtime-and-the-net-framework"></a><span data-ttu-id="3894f-104">Среда выполнения Visual Basic и .NET Framework</span><span class="sxs-lookup"><span data-stu-id="3894f-104">Visual Basic Runtime and the .NET Framework</span></span>  
- <span data-ttu-id="3894f-105">Рассмотрим следующий пример.</span><span class="sxs-lookup"><span data-stu-id="3894f-105">Consider the following example:</span></span>  
+## <a name="visual-basic-runtime-and-the-net-framework"></a><span data-ttu-id="333d3-104">Среда выполнения Visual Basic и .NET Framework</span><span class="sxs-lookup"><span data-stu-id="333d3-104">Visual Basic Runtime and the .NET Framework</span></span>  
+ <span data-ttu-id="333d3-105">Рассмотрим следующий пример.</span><span class="sxs-lookup"><span data-stu-id="333d3-105">Consider the following example:</span></span>  
   
  [!code-vb[VbVbalrStrings#47](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/nothing-and-strings_1.vb)]  
   
- <span data-ttu-id="3894f-106">[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] Выполнения обычно проверяет `Nothing` как пустая строка (»»).</span><span class="sxs-lookup"><span data-stu-id="3894f-106">The [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] runtime usually evaluates `Nothing` as an empty string ("").</span></span> <span data-ttu-id="3894f-107">[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] — Нет, однако и создается исключение при попытке выполнить операцию строки на `Nothing`.</span><span class="sxs-lookup"><span data-stu-id="3894f-107">The [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] does not, however, and throws an exception whenever an attempt is made to perform a string operation on `Nothing`.</span></span>  
+ <span data-ttu-id="333d3-106">Среда выполнения Visual Basic обычно расценивает `Nothing` как пустая строка (»»).</span><span class="sxs-lookup"><span data-stu-id="333d3-106">The Visual Basic runtime usually evaluates `Nothing` as an empty string ("").</span></span> <span data-ttu-id="333d3-107">[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] — Нет, однако и создается исключение при попытке выполнить операцию строки на `Nothing`.</span><span class="sxs-lookup"><span data-stu-id="333d3-107">The [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] does not, however, and throws an exception whenever an attempt is made to perform a string operation on `Nothing`.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="3894f-108">См. также</span><span class="sxs-lookup"><span data-stu-id="3894f-108">See Also</span></span>  
- [<span data-ttu-id="3894f-109">Знакомство со строками в Visual Basic</span><span class="sxs-lookup"><span data-stu-id="3894f-109">Introduction to Strings in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/strings/introduction-to-strings.md)
+## <a name="see-also"></a><span data-ttu-id="333d3-108">См. также</span><span class="sxs-lookup"><span data-stu-id="333d3-108">See Also</span></span>  
+ [<span data-ttu-id="333d3-109">Знакомство со строками в Visual Basic</span><span class="sxs-lookup"><span data-stu-id="333d3-109">Introduction to Strings in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/strings/introduction-to-strings.md)
