@@ -27,18 +27,18 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 6d17b2b982def283021bbd5d0ba7ab1e40ecf4e4
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 9e672215ac7b381175303c62f24c3881a2cce693
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="how-to-run-an-operation-in-the-background"></a>Практическое руководство. Фоновое выполнение операции
 Если какая-либо операция будет выполняться в течение долгого времени и при этом требуется не допустить задержек в работе пользовательского интерфейса, можно использовать класс <xref:System.ComponentModel.BackgroundWorker> для выполнения операции в другом потоке.  
   
  В примере ниже показано, как запустить операцию, занимающую длительное время, в фоновом режиме. В форме есть кнопки **Пуск** и **Отмена**. Кнопка **Пуск** служит для запуска асинхронной операции. Кнопка **Отмена** служит для остановки асинхронной операции. Результат каждой операции выводится в элементе <xref:System.Windows.Forms.MessageBox>.  
   
- В [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] предусмотрена расширенная поддержка этой задачи.  
+ В Visual Studio предусмотрена расширенная поддержка данной задачи.  
   
  См. также раздел [Пошаговое руководство. Фоновое выполнение операции](http://msdn.microsoft.com/library/ms233672\(v=vs.110\)).  
   
@@ -51,7 +51,7 @@ ms.lasthandoff: 04/26/2018
   
 -   ссылки на сборки System, System.Drawing и System.Windows.Forms.  
   
- Сведения о построении этого примера из командной строки для Visual Basic или Visual C# см. в разделе [построение из командной строки](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) или [построение с командной строки csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Чтобы выполнить сборку этого примера в [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] , можно также вставить код в новый проект.  См. также [Практическое руководство. Компиляция и выполнение откомпилированного примера кода формы Windows Forms с помощью Visual Studio](http://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
+ Сведения о построении этого примера из командной строки для Visual Basic или Visual C# см. в разделе [построение из командной строки](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) или [построение с командной строки csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Можно также построить этот пример, в Visual Studio, вставив код в новый проект.  См. также [Практическое руководство. Компиляция и выполнение откомпилированного примера кода формы Windows Forms с помощью Visual Studio](http://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
   
 ## <a name="see-also"></a>См. также  
  <xref:System.ComponentModel.BackgroundWorker>  

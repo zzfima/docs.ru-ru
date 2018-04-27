@@ -1,12 +1,13 @@
 ---
-title: "Стратегия безопасности WPF — безопасность платформы"
-ms.custom: 
+title: Стратегия безопасности WPF — безопасность платформы
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -24,16 +25,17 @@ helpviewer_keywords:
 - Windows Presentation Foundation [WPF], about security model
 - security model [WPF], operating system
 ms.assetid: 2a39a054-3e2a-4659-bcb7-8bcea490ba31
-caps.latest.revision: "30"
+caps.latest.revision: 30
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b40a4f1ba28559ee35dff9866539476e55cbd0fd
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: c3c1654bd63d59bf6588b1dc18593ef7a33f37c0
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="wpf-security-strategy---platform-security"></a>Стратегия безопасности WPF — безопасность платформы
 Хотя [!INCLUDE[TLA#tla_wpf](../../../includes/tlasharptla-wpf-md.md)] предоставляет множество служб безопасности, предусмотрена также возможность использования функций безопасности базовой платформы, включая операционную систему, [!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)] и [!INCLUDE[TLA2#tla_ie](../../../includes/tla2sharptla-ie-md.md)]. Эти уровни объединяются для обеспечения в [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] надежной модели безопасности с глубокой защитой, которая пытается исключить любые точки сбоя, как показано на следующем рисунке.  
@@ -46,11 +48,11 @@ ms.lasthandoff: 12/22/2017
   
 <a name="Operating_System_Security"></a>   
 ## <a name="operating-system-security"></a>Безопасность операционной системы  
- Минимальный уровень операционной системы, требуемой для [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] — [!INCLUDE[TLA2#tla_winxpsp2](../../../includes/tla2sharptla-winxpsp2-md.md)]. Ядро [!INCLUDE[TLA2#tla_winxpsp2](../../../includes/tla2sharptla-winxpsp2-md.md)] предоставляет разные функций безопасности, которые формируют основу безопасности для всех приложений [!INCLUDE[TLA2#tla_win](../../../includes/tla2sharptla-win-md.md)], включая приложения, созданные с помощью [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]. [!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)] включает в себя функции безопасности [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] и расширяет их возможности. В этом разделе рассматривается широкий спектр этих функций безопасности, которые важны для [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)], а также интеграция [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] с ними для обеспечения дальнейшей глубокой защиты.  
+ Минимальный уровень операционной системы, требуемой для [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] — [!INCLUDE[TLA2#tla_winxpsp2](../../../includes/tla2sharptla-winxpsp2-md.md)]. Ядро [!INCLUDE[TLA2#tla_winxpsp2](../../../includes/tla2sharptla-winxpsp2-md.md)] предоставляет несколько функций безопасности, которые формируют основу безопасности для всех приложений Windows, включая те, созданного с помощью [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]. [!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)] включает в себя функции безопасности [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] и расширяет их возможности. В этом разделе рассматривается широкий спектр этих функций безопасности, которые важны для [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)], а также интеграция [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] с ними для обеспечения дальнейшей глубокой защиты.  
   
 <a name="Microsoft_Windows_XP_Service_Pack_2__SP2_"></a>   
-### <a name="microsoft-windows-xp-service-pack-2-sp2"></a>Пакет обновления 2 (SP2) для Microsoft Windows XP  
- В дополнение к общему обзору и усилению [!INCLUDE[TLA2#tla_win](../../../includes/tla2sharptla-win-md.md)] существуют три ключевых компонента из [!INCLUDE[TLA2#tla_winxpsp2](../../../includes/tla2sharptla-winxpsp2-md.md)], которые будут рассмотрены в этом разделе.  
+### <a name="microsoft-windows-xp-service-pack-2-sp2"></a>Microsoft Windows XP с пакетом обновления 2 (SP2)  
+ В дополнение к общему обзору и усилению Windows, существует три ключевых возможности из [!INCLUDE[TLA2#tla_winxpsp2](../../../includes/tla2sharptla-winxpsp2-md.md)] , мы обсудим в этом разделе:  
   
 -   Компиляция /GS  
   
@@ -73,7 +75,7 @@ ms.lasthandoff: 12/22/2017
  Пользователи [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] в [!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)] получают преимущества дополнительных улучшений безопасности операционной системы, включая доступ пользователей с наименьшими привилегиями, проверки целостности кода и ограничение привилегий.  
   
 #### <a name="user-account-control-uac"></a>Контроль учетных записей (UAC)  
- В настоящее время пользователи [!INCLUDE[TLA2#tla_win](../../../includes/tla2sharptla-win-md.md)] предпочитают работать с правами администратора, поскольку многие приложения требуют такие права для установки или выполнения. Одним из примеров является возможность записи в реестр параметров приложения по умолчанию.  
+ В настоящее время пользователи Windows, как правило, для запуска с правами администратора, поскольку многие приложения требуют их для установки или выполнения или оба. Одним из примеров является возможность записи в реестр параметров приложения по умолчанию.  
   
  Работа с правами администратора в действительности означает, что приложения выполняются из процессов, которым предоставлены права администратора. Влияние этого на безопасность заключается в том, что любой вредоносный код, перехвативший процесс с правами администратора, автоматически наследует эти права, включая доступ к критически важным системным ресурсам.  
   
@@ -174,18 +176,18 @@ ms.lasthandoff: 12/22/2017
   
  Для этого необходимо, чтобы [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] предоставлялись повышенные привилегии с одновременным запретом набору разрешений зоны Интернета несущего домена приложения распоряжаться этими привилегиями.  
   
- [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]делает это с помощью **Assert** метод разрешения. В следующем примере кода показано, как это происходит.  
+ [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] делает это с помощью **Assert** метод разрешения. В следующем примере кода показано, как это происходит.  
   
  [!code-csharp[WPFPlatformSecuritySnippets#Permission](../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFPlatformSecuritySnippets/CSharp/Page1.xaml.cs#permission)]
  [!code-vb[WPFPlatformSecuritySnippets#Permission](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFPlatformSecuritySnippets/VisualBasic/Page1.xaml.vb#permission)]  
   
  **Assert** предотвращает неограниченные права, необходимые для [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] из Интернета ограниченных разрешениями зоны [!INCLUDE[TLA2#tla_winfxwebapp](../../../includes/tla2sharptla-winfxwebapp-md.md)].  
   
- С точки зрения платформы [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] несет ответственность за использование **Assert** правильно; неправильное использование **Assert** может позволить вредоносный код может повышать уровень привилегий. Следовательно, важно только вызвать **Assert** , если это требуется, и чтобы обеспечить "песочницу", ограничения остаются без изменений. Например, изолированному коду не разрешается открывать случайные файлы, но разрешается использовать шрифты. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]позволяет изолированным приложениям использовать функциональную возможность шрифта путем вызова **Assert**, а также для [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] для чтения файлов, которые содержат эти шрифты, от имени изолированного приложения.  
+ С точки зрения платформы [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] несет ответственность за использование **Assert** правильно; неправильное использование **Assert** может позволить вредоносный код может повышать уровень привилегий. Следовательно, важно только вызвать **Assert** , если это требуется, и чтобы обеспечить "песочницу", ограничения остаются без изменений. Например, изолированному коду не разрешается открывать случайные файлы, но разрешается использовать шрифты. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] позволяет изолированным приложениям использовать функциональную возможность шрифта путем вызова **Assert**, а также для [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] для чтения файлов, которые содержат эти шрифты, от имени изолированного приложения.  
   
 <a name="ClickOnce_Deployment"></a>   
 ### <a name="clickonce-deployment"></a>развертывание ClickOnce  
- [!INCLUDE[TLA#tla_clickonce](../../../includes/tlasharptla-clickonce-md.md)]— это комплексный развертывания технология, которая входит в состав [!INCLUDE[TLA2#tla_winfx](../../../includes/tla2sharptla-winfx-md.md)]и интегрируется с [!INCLUDE[TLA#tla_visualstu](../../../includes/tlasharptla-visualstu-md.md)] (см. [Общие сведения о развертывании ClickOnce](http://msdn.microsoft.com/library/142dbbz4.aspx) подробные сведения). Автономные приложения [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] могут развертываться с помощью [!INCLUDE[TLA#tla_clickonce](../../../includes/tlasharptla-clickonce-md.md)], тогда как браузерные приложения необходимо развертывать с помощью [!INCLUDE[TLA2#tla_clickonce](../../../includes/tla2sharptla-clickonce-md.md)].  
+ [!INCLUDE[TLA#tla_clickonce](../../../includes/tlasharptla-clickonce-md.md)] — это комплексный развертывания технология, которая входит в состав [!INCLUDE[TLA2#tla_winfx](../../../includes/tla2sharptla-winfx-md.md)]и интегрируется с [!INCLUDE[TLA#tla_visualstu](../../../includes/tlasharptla-visualstu-md.md)] (см. [Общие сведения о развертывании ClickOnce](http://msdn.microsoft.com/library/142dbbz4.aspx) подробные сведения). Автономные приложения [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] могут развертываться с помощью [!INCLUDE[TLA#tla_clickonce](../../../includes/tlasharptla-clickonce-md.md)], тогда как браузерные приложения необходимо развертывать с помощью [!INCLUDE[TLA2#tla_clickonce](../../../includes/tla2sharptla-clickonce-md.md)].  
   
  Приложения, развернутые с помощью [!INCLUDE[TLA2#tla_clickonce](../../../includes/tla2sharptla-clickonce-md.md)], приобретают дополнительный уровень безопасности посредством [!INCLUDE[TLA#tla_cas](../../../includes/tlasharptla-cas-md.md)]; в сущности, приложения, развернутые с помощью [!INCLUDE[TLA#tla_clickonce](../../../includes/tlasharptla-clickonce-md.md)], запрашивают разрешения, которые им необходимы. Им предоставляются только разрешения, не расширяющие набор разрешений для зоны, в которой развертывается приложения. За счет ограничения набора разрешений только теми, которые необходимы, даже если они меньше, чем разрешения, предоставляемые набором разрешений зоны запуска, можно до минимума сократить количество ресурсов, к которым приложение имеет доступ. Таким образом, уменьшается вероятность повреждений на клиентском компьютере в случае перехвата приложения.  
   
@@ -211,7 +213,7 @@ ms.lasthandoff: 12/22/2017
   
  В некоторых случаях ненадежные веб-сайты пытаются обмануть пользователей путем имитации установки [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] или многократного отображения диалогового окна установки [!INCLUDE[TLA#tla_actx](../../../includes/tlasharptla-actx-md.md)], даже если пользователь отменяет его. Возможно, что с помощью этих методов значительное число пользователей обманным путем заставили принять неверные решения, что привело к установке шпионских программ.  
   
- В [!INCLUDE[TLA2#tla_ie6sp2](../../../includes/tla2sharptla-ie6sp2-md.md)] предусмотрено несколько возможностей для устранения таких проблем, которые связаны с концепцией пользовательской инициации. [!INCLUDE[TLA2#tla_ie6sp2](../../../includes/tla2sharptla-ie6sp2-md.md)]Определяет, когда пользователь нажал на ссылку или элемент страницы перед действием, которое называется *инициации пользователем*и обрабатывает его иначе, чем если аналогичное действие вместо инициируется с помощью скрипта на странице. Например [!INCLUDE[TLA2#tla_ie6sp2](../../../includes/tla2sharptla-ie6sp2-md.md)] включает в себя **всплывающих** который обнаруживает, когда пользователь нажимает кнопку, предшествующую странице, создающей всплывающее окно. Это позволяет [!INCLUDE[TLA2#tla_ie6sp2](../../../includes/tla2sharptla-ie6sp2-md.md)] разрешать наиболее безвредные всплывающие окна и запрещать всплывающие окна, которые пользователи не запрашивают и не хотят. Заблокированные всплывающие окна содержатся внизу новой **панель информации**, который позволяет пользователю вручную переопределить блокирование и просмотр всплывающих окон.  
+ В [!INCLUDE[TLA2#tla_ie6sp2](../../../includes/tla2sharptla-ie6sp2-md.md)] предусмотрено несколько возможностей для устранения таких проблем, которые связаны с концепцией пользовательской инициации. [!INCLUDE[TLA2#tla_ie6sp2](../../../includes/tla2sharptla-ie6sp2-md.md)] Определяет, когда пользователь нажал на ссылку или элемент страницы перед действием, которое называется *инициации пользователем*и обрабатывает его иначе, чем если аналогичное действие вместо инициируется с помощью скрипта на странице. Например [!INCLUDE[TLA2#tla_ie6sp2](../../../includes/tla2sharptla-ie6sp2-md.md)] включает в себя **всплывающих** который обнаруживает, когда пользователь нажимает кнопку, предшествующую странице, создающей всплывающее окно. Это позволяет [!INCLUDE[TLA2#tla_ie6sp2](../../../includes/tla2sharptla-ie6sp2-md.md)] разрешать наиболее безвредные всплывающие окна и запрещать всплывающие окна, которые пользователи не запрашивают и не хотят. Заблокированные всплывающие окна содержатся внизу новой **панель информации**, который позволяет пользователю вручную переопределить блокирование и просмотр всплывающих окон.  
   
  Одну и ту же логику инициации пользователем применяется к **откройте**/**Сохранить** запросов безопасности. Диалоговые окна установки [!INCLUDE[TLA2#tla_actx](../../../includes/tla2sharptla-actx-md.md)] всегда перехватываются панелью информации, если только они не представляют собой обновление установленного ранее элемента управления. Эти меры комбинируются для предоставления пользователям более безопасного и более управляемого взаимодействия, поскольку они защищаются от веб-сайтов, которые беспокоят их установкой нежелательного либо вредоносного программного обеспечения.  
   

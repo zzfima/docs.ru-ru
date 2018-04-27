@@ -1,28 +1,28 @@
 ---
-title: "Безопасность сообщений с использованием механизмов Windows"
-ms.custom: 
+title: Безопасность сообщений с использованием механизмов Windows
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - WS Security
 ms.assetid: d2221d1c-c9cb-48d1-b044-a3b4445c7f05
-caps.latest.revision: 
+caps.latest.revision: 34
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
 ms.workload:
 - dotnet
-ms.openlocfilehash: c8bb8d0506dd535a312bd8df8954c8143d9543ae
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d42f266e51f6d5dd8c772d674736adc729b2ac2c
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="message-security-windows"></a>Безопасность сообщений с использованием механизмов Windows
 В этом образце показывается, как настраивать привязку <xref:System.ServiceModel.WSHttpBinding> для использования безопасности на уровне сообщений с проверкой подлинности Windows. Этот пример построен на [Приступая к работе](../../../../docs/framework/wcf/samples/getting-started-sample.md). В этом образце служба размещается в службах IIS, а клиентом является консольное приложение (EXE).  
@@ -75,15 +75,15 @@ ms.lasthandoff: 12/22/2017
 ```  
   
  Исходный код службы был изменен, чтобы показать, как можно использовать <xref:System.ServiceModel.OperationContext.ServiceSecurityContext%2A> для доступа к идентификатору вызывающего объекта.  
-  
-```  
+
+```csharp
 public string GetCallerIdentity()  
 {  
     // The Windows identity of the caller can be accessed on the ServiceSecurityContext.WindowsIdentity.  
     return OperationContext.Current.ServiceSecurityContext.WindowsIdentity.Name;  
 }  
-```  
-  
+```
+
  При выполнении примера запросы и ответы операций отображаются в окне консоли клиента. Первый вызываемый метод - `GetCallerIdentity` - возвращает имя идентификатора вызывающего объекта для клиента. Чтобы закрыть клиент, нажмите клавишу ВВОД в окне консоли.  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Настройка, сборка и выполнение образца  

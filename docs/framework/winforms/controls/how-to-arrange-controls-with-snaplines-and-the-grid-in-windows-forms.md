@@ -1,13 +1,13 @@
 ---
-title: "Практическое руководство. Упорядочение элементов управления с помощью линий привязки и сетки в формах Windows Forms"
-ms.custom: 
+title: Практическое руководство. Упорядочение элементов управления с помощью линий привязки и сетки в формах Windows Forms
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-winforms
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - GridSize
@@ -16,20 +16,20 @@ helpviewer_keywords:
 - Windows Forms, grid options in designer
 - controls [Windows Forms], aligning
 ms.assetid: bb54bce5-880f-4a36-af68-8cf92058dc1c
-caps.latest.revision: 
+caps.latest.revision: 10
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 166ccba959bd9facb8e24d580d47577a0c8746a8
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 3f7467abe6669b88e1a55851fd745c2dcb56c150
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="how-to-arrange-controls-with-snaplines-and-the-grid-in-windows-forms"></a>Практическое руководство. Упорядочение элементов управления с помощью линий привязки и сетки в формах Windows Forms
-С помощью возможности макета элемента [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)], можно точно указать расположение элементов управления на форме. Элементы управления, добавляемых на форму или перемещен в форме автоматически выравниваются в строки и столбцы сетки в конструкторе Windows Forms, или можно выравнивать элементы управления с помощью линий привязки.  
+Используя возможности макета элемента Visual Studio, можно точно указать расположение элементов управления на форме. Элементы управления, добавляемых на форму или перемещен в форме автоматически выравниваются в строки и столбцы сетки в конструкторе Windows Forms, или можно выравнивать элементы управления с помощью линий привязки.  
   
 > [!NOTE]
 >  Отображаемые диалоговые окна и команды меню могут отличаться от описанных в справке в зависимости от текущих параметров или выпуска. Чтобы изменить параметры, выберите в меню **Сервис** пункт **Импорт и экспорт параметров** . Дополнительные сведения см. в статье [Настройка параметров разработки в Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  

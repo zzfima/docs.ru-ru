@@ -1,27 +1,29 @@
 ---
-title: "Общие сведения о поставщиках автоматизации пользовательского интерфейса"
-ms.custom: 
+title: Общие сведения о поставщиках автоматизации пользовательского интерфейса
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-bcl
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - UI Automation, providers
 - providers, UI Automation
 ms.assetid: 859557b8-51e1-4d15-92e8-318d2dcdb2f7
-caps.latest.revision: "38"
+caps.latest.revision: 38
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: dc5cb5749bbfe06fd3a1bbe3537b28c7bbfa295d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: a8279b8c2c39ce37fa9e3af55a6b079e8202b3ff
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="ui-automation-providers-overview"></a>Общие сведения о поставщиках автоматизации пользовательского интерфейса
 > [!NOTE]
@@ -38,12 +40,12 @@ ms.lasthandoff: 12/22/2017
  Поставщики автоматизации пользовательского интерфейса делятся на две категории: поставщики на стороне клиента и поставщики на стороне сервера.  
   
 ### <a name="client-side-providers"></a>Поставщики на стороне клиента  
- Поставщики на стороне клиента реализуются клиентами автоматизации пользовательского интерфейса для взаимодействия с приложением, которое не поддерживает или не полностью поддерживает [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]. Поставщики на стороне клиента обычно взаимодействуют с сервером через границу процесса путем отправки и получения сообщений [!INCLUDE[TLA2#tla_win](../../../includes/tla2sharptla-win-md.md)] .  
+ Поставщики на стороне клиента реализуются клиентами автоматизации пользовательского интерфейса для взаимодействия с приложением, которое не поддерживает или не полностью поддерживает [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]. Поставщики на стороне клиента обычно взаимодействуют с сервером через границу процесса путем отправки и получения сообщений Windows.  
   
- Поскольку поставщики автоматизации пользовательского интерфейса для элементов управления в приложениях [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)], [!INCLUDE[TLA2#tla_winforms](../../../includes/tla2sharptla-winforms-md.md)], или [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] предоставляются в рамках операционной системы, клиентским приложениям редко требуется реализовывать свои собственные поставщики, и в этом обзоре они не рассматривается.  
+ Поскольку поставщики автоматизации пользовательского интерфейса для элементов управления в [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)], Windows Forms или [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] приложений предоставляется как часть операционной системы, клиентским приложениям редко требуется реализовывать свои собственные поставщики и не рассматривается в этом обзоре Далее.  
   
 ### <a name="server-side-providers"></a>Поставщики на стороне сервера  
- Поставщики на стороне сервера реализуются пользовательскими элементами управления или приложениями , основанными на инфраструктуре пользовательского интерфейса, отличной от [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)], [!INCLUDE[TLA2#tla_winforms](../../../includes/tla2sharptla-winforms-md.md)]или [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)].  
+ Поставщики на стороне сервера реализуются пользовательскими элементами управления или приложениями, основанными на инфраструктуре пользовательского интерфейса, отличной от [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)], Windows Forms или [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)].  
   
  Поставщики на стороне сервера взаимодействуют с клиентскими приложениями через границу процесса, предоставляя интерфейсы для базовой системы [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , которая в свою очередь обслуживает запросы от клиентов.  
   

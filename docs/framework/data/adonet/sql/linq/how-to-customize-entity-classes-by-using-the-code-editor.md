@@ -16,16 +16,16 @@ ms.author: douglasl
 manager: craigg
 ms.workload:
 - dotnet
-ms.openlocfilehash: 3e518a18787a7faa1d3e501d5941fae70daf8b9d
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: f57b07d03297347561b6b2e2634038aa1f29bc40
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="how-to-customize-entity-classes-by-using-the-code-editor"></a>Практическое руководство. Настройка классов сущностей с использованием редактора кода
 С помощью Visual Studio разработчики могут использовать [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] для создания или настройки своих классов сущностей.  
   
- Можно также воспользоваться редактором кода [!INCLUDE[vsprvs](../../../../../../includes/vsprvs-md.md)] для написания своего кода сопоставления или для настройки уже сформированного кода. Дополнительные сведения см. в разделе [сопоставления на основе атрибутов](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md).  
+ Кроме того, можно использовать в редакторе кода Visual Studio для написания своего кода сопоставления или для настройки уже сформированного кода. Дополнительные сведения см. в разделе [сопоставления на основе атрибутов](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md).  
   
  В подразделах данного раздела описаны способы настройки объектной модели.  
   

@@ -3052,11 +3052,11 @@ ms.assetid: 0938efc2-e205-450b-9314-99951fcbd702
 caps.latest.revision: 21
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 4ab447c06504d6c3bb7c51107e422b2cba1f45e3
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
-ms.translationtype: HT
+ms.openlocfilehash: 2af9ad571f1e89c11d3aafc118124093d1246f19
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="sorry-we-don39t-have-specifics-on-this-visual-basic-error"></a>К сожалению, мы не хотите&#39;t имеют подробные сведения об этой ошибке Visual Basic
 Подробные сведения об этой ошибке отсутствуют. Можно выполнить поиск по номеру ошибки и тексту сообщения об ошибке в Интернете. Также можно обратиться с вопросом к другим разработчикам на следующих форумах:  
@@ -3068,7 +3068,7 @@ ms.lasthandoff: 04/26/2018
  Форум для вопросов о и проблемы, связанные с обновлением до Visual Basic и возможностями взаимодействия.  
   
  [Среда IDE Visual Basic](http://go.microsoft.com/fwlink/?LinkId=145971)  
- Форум предназначен для вопросов о работе в среде [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)].  
+ Форум для вопросов о работе в среде Visual Studio.  
   
  [Общие вопросы Visual Basic](http://go.microsoft.com/fwlink/?LinkId=145973)  
  Форум для вопросов о и проблемы, связанные с Visual Basic, которые не обсуждаются на других форумах.  

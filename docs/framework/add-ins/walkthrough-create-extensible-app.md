@@ -1,12 +1,13 @@
 ---
-title: "Пошаговое руководство. Создание расширяемого приложения"
-ms.custom: 
+title: Пошаговое руководство. Создание расширяемого приложения
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -18,16 +19,17 @@ helpviewer_keywords:
 - add-in-side adapter [.NET Framework]
 - contracts for add-in pipelines [.NET Framework]
 ms.assetid: 694a33c5-a040-450d-aed5-ac49fc88ce61
-caps.latest.revision: "32"
+caps.latest.revision: 32
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 5cee99346d19c632739bcc6540c43f1a35217a2f
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 8946e30ac9d7a224af7801bc721e7d9cf6e1fab0
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="walkthrough-creating-an-extensible-application"></a>Пошаговое руководство. Создание расширяемого приложения
 В этом пошаговом руководстве описывается создание конвейера надстройки, выполняющий функции простого калькулятора. Здесь не показаны реальном сценарии; Вместо этого он демонстрирует основные функциональные возможности конвейера и как надстройка может предоставлять службы для узла.  
@@ -61,14 +63,14 @@ ms.lasthandoff: 01/19/2018
 ## <a name="prerequisites"></a>Предварительные требования  
  Для выполнения данного пошагового руководства необходимо следующее:  
   
--   [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)].  
+-   Visual Studio.  
   
 ## <a name="creating-a-visual-studio-solution"></a>Создание решения Visual Studio  
- Используйте решение в [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] проект сегментов конвейера.  
+ Используйте решение в Visual Studio, чтобы разместить проекты сегментов конвейера.  
   
 #### <a name="to-create-the-pipeline-solution"></a>Чтобы создать решение конвейера  
   
-1.  В [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)], создайте новый проект с именем `Calc1Contract`. Он должен быть основан на **библиотеки классов** шаблона.  
+1.  В Visual Studio создайте новый проект с именем `Calc1Contract`. Он должен быть основан на **библиотеки классов** шаблона.  
   
 2.  Присвойте решению имя `CalculatorV1`.  
   

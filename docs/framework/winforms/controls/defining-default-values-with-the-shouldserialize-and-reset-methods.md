@@ -1,12 +1,13 @@
 ---
-title: "Определение значений по умолчанию с помощью методов ShouldSerialize и Reset"
-ms.custom: 
+title: Определение значений по умолчанию с помощью методов ShouldSerialize и Reset
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-winforms
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,19 +16,20 @@ helpviewer_keywords:
 - custom controls [Windows Forms], property methods
 - ShouldPersist method
 ms.assetid: 7b6c5e00-3771-46b4-9142-5a80d5864a5e
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a654fef461d92c4b93db131e303bb07a1e839d34
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: a28cd84c88cd7434eaca3fdaa7b4406006c44dad
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="defining-default-values-with-the-shouldserialize-and-reset-methods"></a>Определение значений по умолчанию с помощью методов ShouldSerialize и Reset
-`ShouldSerialize`и `Reset` — необязательные методы, которые могут использоваться для свойства, в том случае, если свойство не имеет значения по умолчанию. Если свойство имеет значение по умолчанию, необходимо применить <xref:System.ComponentModel.DefaultValueAttribute> и вместо этого укажите значение по умолчанию для конструктора класса атрибутов. Любой из этих механизмов обеспечивает следующие возможности в конструкторе:  
+`ShouldSerialize` и `Reset` — необязательные методы, которые могут использоваться для свойства, в том случае, если свойство не имеет значения по умолчанию. Если свойство имеет значение по умолчанию, необходимо применить <xref:System.ComponentModel.DefaultValueAttribute> и вместо этого укажите значение по умолчанию для конструктора класса атрибутов. Любой из этих механизмов обеспечивает следующие возможности в конструкторе:  
   
 -   Свойство позволяет получить визуальное представление в браузере свойств, если он был изменен со значения по умолчанию.  
   
@@ -53,9 +55,9 @@ public void ResetMyFont() {
 ```  
   
 > [!NOTE]
->  Если свойство не имеет `Reset` метод, не помеченный <xref:System.ComponentModel.DefaultValueAttribute>и не имеет значения по умолчанию, указанного в его объявлении `Reset` для этого свойства отключен в контекстном меню **свойства** окно конструктора Windows Forms в [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)].  
+>  Если свойство не имеет `Reset` метод, не помеченный <xref:System.ComponentModel.DefaultValueAttribute>и не имеет значения по умолчанию, указанного в его объявлении `Reset` для этого свойства отключен в контекстном меню **свойства** окно конструктора Windows Forms в Visual Studio.  
   
- Конструкторы, такие как [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] использовать `ShouldSerialize` *PropertyName* метода проверьте, изменено ли значение свойства по умолчанию, и писать код в форме, только если свойство изменяется, что позволяет более эффективно Создание кода. Пример:  
+ Конструкторы, такой как Visual Studio используют `ShouldSerialize` *PropertyName* метода проверьте, изменено ли значение свойства по умолчанию, и писать код в форме, только если свойство изменяется, что позволяет более эффективный код поколение. Пример:  
   
 ```vb  
 'Returns true if the font has changed; otherwise, returns false.  

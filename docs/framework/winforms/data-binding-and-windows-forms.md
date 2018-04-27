@@ -1,12 +1,13 @@
 ---
-title: "Привязка данных и Windows Forms"
-ms.custom: 
+title: Привязка данных и Windows Forms
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-winforms
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - master-details lists
@@ -19,16 +20,17 @@ helpviewer_keywords:
 - Windows Forms controls, data binding
 - data-bound controls [Windows Forms], Windows Forms
 ms.assetid: 419aac5e-819b-4aad-88b0-73a2f8c0bd27
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f2a4d023600456adf1e14b801ee6c24fd0a2348c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: db0e3ad5602d7ee608299bc5b9c5c85b860cab7d
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="data-binding-and-windows-forms"></a>Привязка данных и Windows Forms
 В Windows Forms можно выполнить привязку не только к традиционным источникам данных, но и к практически к любой структуре, содержащий данные. Можно выполнить привязку к массиву значений, который рассчитывается во время выполнения, считывается из файла или является производным от значений других элементов управления.  
@@ -48,7 +50,7 @@ ms.lasthandoff: 12/22/2017
   
 |Тип привязки данных|Описание|  
 |--------------------------|-----------------|  
-|Простая привязка данных|Возможность привязки элемента управления к одному элементу данных, например к значению в столбце таблицы набора данных. Это тип привязки характерен для элементов управления, таких как <xref:System.Windows.Forms.TextBox> или <xref:System.Windows.Forms.Label>, которые обычно отображают одно значение. По сути, любое свойство в элементе управления можно привязать к полю в базе данных. В [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] эта возможность поддерживается довольно широко.<br /><br /> Дополнительные сведения:<br /><br /> -   [Интерфейсы, относящиеся к привязке данных](../../../docs/framework/winforms/interfaces-related-to-data-binding.md)<br />-   [Как: переход между данными в Windows Forms](../../../docs/framework/winforms/how-to-navigate-data-in-windows-forms.md)<br />-   [Как: Создание элемента управления простой привязкой в форме Windows](../../../docs/framework/winforms/how-to-create-a-simple-bound-control-on-a-windows-form.md)|  
+|Простая привязка данных|Возможность привязки элемента управления к одному элементу данных, например к значению в столбце таблицы набора данных. Это тип привязки характерен для элементов управления, таких как <xref:System.Windows.Forms.TextBox> или <xref:System.Windows.Forms.Label>, которые обычно отображают одно значение. По сути, любое свойство в элементе управления можно привязать к полю в базе данных. Имеется расширенная поддержка этой возможности в Visual Studio.<br /><br /> Дополнительные сведения:<br /><br /> -   [Интерфейсы, относящиеся к привязке данных](../../../docs/framework/winforms/interfaces-related-to-data-binding.md)<br />-   [Как: переход между данными в Windows Forms](../../../docs/framework/winforms/how-to-navigate-data-in-windows-forms.md)<br />-   [Как: Создание элемента управления простой привязкой в форме Windows](../../../docs/framework/winforms/how-to-create-a-simple-bound-control-on-a-windows-form.md)|  
 |Сложная привязка данных|Возможность привязки элемента управления к нескольким элементам данных, обычно к нескольким записям в базе данных. Сложная привязка также называется привязкой на основе списка. Примеры элементов управления, которые поддерживают сложную привязку, — <xref:System.Windows.Forms.DataGridView>, <xref:System.Windows.Forms.ListBox> и <xref:System.Windows.Forms.ComboBox>. Пример сложной привязки данных см. в разделе [как: привязка к данным Windows Forms ComboBox или ListBox-элемент управления](../../../docs/framework/winforms/controls/how-to-bind-a-windows-forms-combobox-or-listbox-control-to-data.md).|  
   
 ## <a name="bindingsource-component"></a>Компонент BindingSource  

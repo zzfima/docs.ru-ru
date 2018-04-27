@@ -13,11 +13,11 @@ helpviewer_keywords:
 ms.assetid: 9e3191b4-90db-41c8-966a-28036fd20005
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 79b51117197f28cec21671eea4dd7b7f2f1cc306
-ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
+ms.openlocfilehash: 901ea984a8e8e90329953a8936e68f2fc07f8847
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="-win32manifest-visual-basic"></a>-win32manifest (Visual Basic)
 Определяет пользовательский файл манифеста приложения Win32 для внедрения в переносимый исполняемый файл проекта (PE-файл).  
@@ -48,7 +48,7 @@ ms.lasthandoff: 03/22/2018
   
 2.  Вы предоставляете пользовательский манифест, не определяющий запрошенный уровень выполнения.  
   
- [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] создает стандартный файл с расширением MANIFEST и сохраняет его в каталоги отладки и выпуска вместе с исполняемым файлом. Можно просмотреть или изменить стандартный файл app.manifest, щелкнув **параметры UAC представления** на **приложения** вкладку в конструкторе проектов. Дополнительные сведения см. в разделе [Application Page, Project Designer (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic).  
+ Visual Studio создает файл манифеста по умолчанию и сохраняет его в каталоге отладки и выпуска наряду с исполняемым файлом. Можно просмотреть или изменить стандартный файл app.manifest, щелкнув **параметры UAC представления** на **приложения** вкладку в конструкторе проектов. Дополнительные сведения см. в разделе [Application Page, Project Designer (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic).  
   
  Можно предоставить манифест приложения в качестве пользовательского шага после построения или как часть файла ресурсов Win32 с помощью `-nowin32manifest` параметр. Этот же параметр можно использовать, если вы хотите, чтобы ваше приложение требовало виртуализации файлов или реестров в Windows Vista. Это не позволит компилятору создать и внедрить манифест по умолчанию в PE-файле.  
   

@@ -16,11 +16,11 @@ ms.assetid: 2e7eb2b9-eda6-4bdb-95cc-72c7f0be7528
 caps.latest.revision: 11
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 61a5c6b753b8aa70905027bc1449739769cd8da5
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 59288ba7b4cec34cd2266d66aa931e92598e819a
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="unable-to-emit-assembly-lterror-messagegt"></a>Не удается создать сборку: &lt;сообщение об ошибке&gt;
 Компилятор Visual Basic вызывает компоновщик сборок (Al.exe, который также называется Alink) для создания сборки с манифестом, при этом Компоновщик сообщает об ошибке на этапе вывода создания сборки.  
@@ -61,7 +61,7 @@ ms.lasthandoff: 04/26/2018
   
      Используйте двойные кавычки ("), если путь или файл содержат пробелы.  
   
-6.  В [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] добавьте в созданный файл ссылку на сборку .NET.  
+6.  В Visual Studio добавьте ссылку на сборку .NET в только что созданный файл.  
   
 ## <a name="see-also"></a>См. также  
  

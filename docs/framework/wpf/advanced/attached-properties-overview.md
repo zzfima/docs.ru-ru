@@ -1,13 +1,13 @@
 ---
-title: "Общие сведения о вложенных свойствах зависимостей"
-ms.custom: 
+title: Общие сведения о вложенных свойствах зависимостей
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-wpf
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - attached properties [WPF Designer]
 ms.assetid: 75928354-dc01-47e8-a018-8409aec1f32d
-caps.latest.revision: 
+caps.latest.revision: 28
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 2d1d0eb55e75cd450d55b69aadca9c60e157eb09
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ceba94d80ca66ab228804ffff2a5b8f89a68d7c4
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="attached-properties-overview"></a>Общие сведения о вложенных свойствах зависимостей
 Присоединенное свойство — это понятие, определяемое языком XAML. Присоединенное свойство предназначено для использования в качестве типа глобального свойства, которое может быть задано для любого объекта. В [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] присоединенные свойства обычно определяются как особая форма свойства зависимости, не имеющего обычной "оболочки" свойства.  
@@ -67,7 +67,7 @@ ms.lasthandoff: 12/22/2017
 ### <a name="an-example-of-a-parent-defined-attached-property"></a>Пример присоединенного свойства, определенного родительским элементом  
  Наиболее типичный сценарий, в котором [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] определяет присоединенное свойство, — когда родительский элемент поддерживает коллекцию дочерних элементов, а также реализует поведение, для которого особенности поведения передаются отдельно для каждого дочернего элемента.  
   
- <xref:System.Windows.Controls.DockPanel>Определяет <xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType> вложенное свойство зависимостей, и <xref:System.Windows.Controls.DockPanel> имеет код уровня класса как часть логики отрисовки (в частности, <xref:System.Windows.Controls.DockPanel.MeasureOverride%2A> и <xref:System.Windows.Controls.DockPanel.ArrangeOverride%2A>). Объект <xref:System.Windows.Controls.DockPanel> экземпляр будет всегда проверять ли все его непосредственные дочерние элементы задано значение для <xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType>. В таком случае эти значения становятся входными данными для логики отображения, применяемой к соответствующему дочернему элементу. Вложенные <xref:System.Windows.Controls.DockPanel> экземпляров каждого обрабатывать свои собственные коллекции непосредственных дочерних элементов, но это поведение зависит от реализации на то, как <xref:System.Windows.Controls.DockPanel> процессов <xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType> значения. Теоретически возможно наличие присоединенных свойств, оказывающих влияние на элементы за пределами непосредственного родителя. Если <xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType> вложенное свойство установлено для элемента, который не имеет <xref:System.Windows.Controls.DockPanel> возникает родительского элемента для обработки его, ошибка или исключение. Это просто означает, что было задано значение глобального свойства, но оно не имеет текущего <xref:System.Windows.Controls.DockPanel> родителя, который может использовать эту информацию.  
+ <xref:System.Windows.Controls.DockPanel> Определяет <xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType> вложенное свойство зависимостей, и <xref:System.Windows.Controls.DockPanel> имеет код уровня класса как часть логики отрисовки (в частности, <xref:System.Windows.Controls.DockPanel.MeasureOverride%2A> и <xref:System.Windows.Controls.DockPanel.ArrangeOverride%2A>). Объект <xref:System.Windows.Controls.DockPanel> экземпляр будет всегда проверять ли все его непосредственные дочерние элементы задано значение для <xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType>. В таком случае эти значения становятся входными данными для логики отображения, применяемой к соответствующему дочернему элементу. Вложенные <xref:System.Windows.Controls.DockPanel> экземпляров каждого обрабатывать свои собственные коллекции непосредственных дочерних элементов, но это поведение зависит от реализации на то, как <xref:System.Windows.Controls.DockPanel> процессов <xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType> значения. Теоретически возможно наличие присоединенных свойств, оказывающих влияние на элементы за пределами непосредственного родителя. Если <xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType> вложенное свойство установлено для элемента, который не имеет <xref:System.Windows.Controls.DockPanel> возникает родительского элемента для обработки его, ошибка или исключение. Это просто означает, что было задано значение глобального свойства, но оно не имеет текущего <xref:System.Windows.Controls.DockPanel> родителя, который может использовать эту информацию.  
   
 <a name="attached_properties_code"></a>   
 ## <a name="attached-properties-in-code"></a>Присоединенные свойства в коде  
@@ -106,7 +106,7 @@ ms.lasthandoff: 12/22/2017
  Определить вложенное свойство как свойство зависимости, объявив `public` `static` `readonly` поле типа <xref:System.Windows.DependencyProperty>. Это поле определяется с помощью возвращаемого значения <xref:System.Windows.DependencyProperty.RegisterAttached%2A> метод. Имя поля должно совпадать с именем присоединенного свойства с добавлением строки `Property`, чтобы следовать установленному шаблону [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] именования идентифицирующих полей по свойствам, которые они представляют. Поставщик присоединенного свойства также должен предоставлять статические методы `Get`*ИмяСвойства* и `Set`*ИмяСвойства* как методы доступа для присоединенных свойств. В противном случае это приведет к формированию системы свойств, которая не сможет использовать присоединенное свойство.  
   
 > [!NOTE]
->  Если опустить метод доступа get присоединенного свойства, привязка данных для этого свойства не будет работать в средствах разработки, таких как [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] и Expression Blend.  
+>  Если опустить метод доступа get присоединенного свойства, привязка данных для этого свойства не будет работать в средствах разработки, таких как Visual Studio и Expression Blend.  
   
 #### <a name="the-get-accessor"></a>Метод доступа get  
  Сигнатура для метода доступа `Get`*ИмяСвойства* должна быть следующей.  

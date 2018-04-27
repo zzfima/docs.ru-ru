@@ -1,24 +1,26 @@
 ---
-title: "Вопросы миграции (Entity Framework)"
-ms.custom: 
+title: Вопросы миграции (Entity Framework)
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: c85b6fe8-cc32-4642-8f0a-dc0e5a695936
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 8e4c1b06e5a3a7717b99379fd9bca2c5a8a14a6a
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: c31d7d481d5016b8f2d440f8a727e5bfcf66717c
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="migration-considerations-entity-framework"></a>Вопросы миграции (Entity Framework)
 Платформа [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] Entity Framework предоставляет существующим приложениям ряд преимуществ. Наиболее важным из них является возможность использования концептуальной модели для отделения структур данных, используемых приложением, от схемы в источнике данных. Это позволяет в дальнейшем значительно упростить внесение изменений в модель хранения или сам источник данных, устранив необходимость внесения соответствующих изменений в приложение. Дополнительные сведения о преимуществах использования [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)], в разделе [Общие сведения об Entity Framework](../../../../../docs/framework/data/adonet/ef/overview.md) и [модели EDM](../../../../../docs/framework/data/adonet/entity-data-model.md).  
@@ -44,7 +46,7 @@ ms.lasthandoff: 01/19/2018
   
 1.  Обновление приложения.  
   
-     В проект, созданный с помощью более ранней версии [!INCLUDE[vsprvs](../../../../../includes/vsprvs-md.md)] и [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] должны быть обновлены для использования [!INCLUDE[vsOrcas](../../../../../includes/vsorcas-md.md)] SP1 и [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] начиная с версии 3.5 с пакетом обновления 1.  
+     В проект, созданный с помощью более ранней версии Visual Studio и [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] должны быть обновлены для использования [!INCLUDE[vsOrcas](../../../../../includes/vsorcas-md.md)] SP1 и [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] начиная с версии 3.5 с пакетом обновления 1.  
   
 2.  Определение моделей и сопоставлений.  
   
@@ -59,15 +61,15 @@ ms.lasthandoff: 01/19/2018
   
      В платформе [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] для выполнения запросов к концептуальной модели используется специальный формат строки соединения. В нее инкапсулированы сведения о файлах модели и сопоставления, а также о соединении с источником данных. Дополнительные сведения см. в разделе [как: определение строки соединения](../../../../../docs/framework/data/adonet/ef/how-to-define-the-connection-string.md).  
   
-4.  Настройка проекта [!INCLUDE[vsprvs](../../../../../includes/vsprvs-md.md)].  
+4.  Настройка проекта Visual Studio.  
   
-     Ссылки на сборки платформы [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] и файлы модели и сопоставления должны быть добавлены в проект [!INCLUDE[vsprvs](../../../../../includes/vsprvs-md.md)]. Можно также добавить в проект файлы сопоставления, чтобы выполнялось их развертывание в каталоге, указанном в строке соединения. Дополнительные сведения см. в разделе [как: вручную настроить проект Entity Framework](http://msdn.microsoft.com/library/73f6ae1d-b3b2-4577-aebd-ad5a75954e9e).  
+     Ссылки на [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] сборки и модели и сопоставления файлов, которые необходимо добавить в проект Visual Studio. Можно также добавить в проект файлы сопоставления, чтобы выполнялось их развертывание в каталоге, указанном в строке соединения. Дополнительные сведения см. в разделе [как: вручную настроить проект Entity Framework](http://msdn.microsoft.com/library/73f6ae1d-b3b2-4577-aebd-ad5a75954e9e).  
   
 ## <a name="considerations-for-applications-with-existing-objects"></a>Приложения с существующими объектами  
  Начиная с [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] версии 4, [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] поддерживает традиционные объекты среды CLR (POCO), которые называются также объектами, игнорирующими сохраняемость. В большинстве случаев существующие объекты могут работать с [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] при внесении незначительных изменений. Дополнительные сведения см. в разделе [работа с сущностями POCO](http://msdn.microsoft.com/library/5e0fb82a-b6d1-41a1-b37b-c12db61629d3). Можно также перенести приложение [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] и использовать классы данных, сформированные средствами платформы Entity Framework. Дополнительные сведения см. в разделе [как: использовать мастер моделей EDM](http://msdn.microsoft.com/library/dadb058a-c5d9-4c5c-8b01-28044112231d).  
   
 ## <a name="considerations-for-applications-that-use-adonet-providers"></a>Приложения, использующие поставщики ADO.NET  
- [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)]Поставщики, например, SqlClient, позволяют запрашивать источник данных для возвращения табличных данных. Данные также могут быть загружены в [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] набора данных. В следующем списке приведены соображения по обновлению приложений, пользующихся существующими поставщиками [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)].  
+ [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] Поставщики, например, SqlClient, позволяют запрашивать источник данных для возвращения табличных данных. Данные также могут быть загружены в [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] набора данных. В следующем списке приведены соображения по обновлению приложений, пользующихся существующими поставщиками [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)].  
   
  Отображение табличных данных с помощью модуля чтения данных.  
  Можно попробовать выполнить [!INCLUDE[esql](../../../../../includes/esql-md.md)] запросов с помощью поставщика EntityClient и перечисление по возвращенному <xref:System.Data.EntityClient.EntityDataReader> объекта. Этим способом следует пользоваться только в том случае, если приложение отображает табличные данные с помощью модуля чтения данных и не нуждается в предоставляемых [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] возможностях по материализации данных в объекты, отслеживанию изменений и выполнению обновлений. Можно продолжать пользоваться существующим кодом доступа к данным, который выполняет обновления источника данных, но пользоваться для этого соединением, доступным через свойство <xref:System.Data.EntityClient.EntityConnection.StoreConnection%2A> объекта <xref:System.Data.EntityClient.EntityConnection>. Дополнительные сведения см. в разделе [поставщик EntityClient для Entity Framework](../../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md).  
@@ -104,7 +106,7 @@ ms.lasthandoff: 01/19/2018
  Если в приложении необходимо предусмотреть возможность запрашивать XML-данных, то можно воспользоваться преимуществами запросов LINQ на основе применения LINQ to XML. Дополнительные сведения см. в разделе [LINQ to XML](http://msdn.microsoft.com/library/f0fe21e9-ee43-4a55-b91a-0800e5782c13).  
   
  Приложения, сохраняющие состояние.  
- [!INCLUDE[vstecasp](../../../../../includes/vstecasp-md.md)]Веб-приложений часто необходимо поддерживать состояние веб-страницы или сеанса пользователя. Объекты в <xref:System.Data.Objects.ObjectContext> экземпляр хранятся в состоянии просмотра на клиенте или в состоянии сеанса на сервере и позднее извлекаются и повторно присоединить к новому контексту объекта. Дополнительные сведения см. в разделе [присоединение и отсоединение объектов](http://msdn.microsoft.com/library/41d5c1ef-1b78-4502-aa10-7e1438d62d23).  
+ [!INCLUDE[vstecasp](../../../../../includes/vstecasp-md.md)] Веб-приложений часто необходимо поддерживать состояние веб-страницы или сеанса пользователя. Объекты в <xref:System.Data.Objects.ObjectContext> экземпляр хранятся в состоянии просмотра на клиенте или в состоянии сеанса на сервере и позднее извлекаются и повторно присоединить к новому контексту объекта. Дополнительные сведения см. в разделе [присоединение и отсоединение объектов](http://msdn.microsoft.com/library/41d5c1ef-1b78-4502-aa10-7e1438d62d23).  
   
 ## <a name="see-also"></a>См. также  
  [Требования к развертыванию](../../../../../docs/framework/data/adonet/ef/deployment-considerations.md)  

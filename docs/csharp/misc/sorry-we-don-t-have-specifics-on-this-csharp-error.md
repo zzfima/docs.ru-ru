@@ -889,11 +889,11 @@ ms.assetid: 48320e4a-6e17-45a6-9966-88c6ec89bd2f
 caps.latest.revision: 15
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 4aeea86778b44cbe8e71ed64ee5a3a3a1618cccd
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: c6cabc4c619e6ace4c376fd125e7531f10bf9b88
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="sorry-we-don39t-have-specifics-on-this-c-error"></a>К сожалению, мы не хотите&#39;t имеют подробные сведения об этой ошибке C#
 Подробные сведения об этой ошибке отсутствуют. Можно выполнить поиск по номеру ошибки и тексту сообщения об ошибке в Интернете. Или вы можете запросить другим разработчикам на следующих форумах:  
@@ -902,7 +902,7 @@ ms.lasthandoff: 04/26/2018
  Форум для вопросов и общих обсуждений синтаксиса языка Visual C# и компилятора.  
   
  [Visual C# IDE](https://social.msdn.microsoft.com/Forums/en-US/home?forum=csharpide)  
- Форум предназначен для вопросов о работе в среде [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)].  
+ Форум для вопросов о работе в среде Visual Studio.  
   
  [Общие сведения о Visual C#](https://social.msdn.microsoft.com/Forums/vstudio/en-US/home?forum=csharpgeneral)  
  Форум для вопросов о и выдает с Visual C#, которые не обсуждаются на других форумах.  

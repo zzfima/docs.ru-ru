@@ -1,29 +1,30 @@
 ---
-title: "Знакомство с COM-взаимодействием (Visual Basic)"
-ms.custom: 
+title: Знакомство с COM-взаимодействием (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - interop assemblies
 - COM interop [Visual Basic], about COM interop
 ms.assetid: 8bd62e68-383d-407f-998b-29aa0ce0fd67
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 39a4245b51c1199a6aeb0c23282b1917f51164d2
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: 5a13fabd729218dc2a980b9c63e153d17a140cce
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="introduction-to-com-interop-visual-basic"></a>Знакомство с COM-взаимодействием (Visual Basic)
 Модель объектов компонентов (COM) позволяет объекту предоставлять его функциональность другим компонентам и приложениям хоста. Хотя COM-объекты были основой программирования в течение многих лет в Windows, приложений, предназначенных для общеязыковой среды выполнения (CLR), имеют много преимуществ.  
   
- [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]приложения будут заменят разработанные с применением COM. До этого времени может потребоваться использовать или создавать объекты COM с помощью [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]. Взаимодействие с COM, или *COM-взаимодействия*, позволяет использовать существующие объекты COM при постепенном переходе [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] в своем темпе.  
+ [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] приложения будут заменят разработанные с применением COM. До этого времени может потребоваться использовать или создавать объекты COM с помощью Visual Studio. Взаимодействие с COM, или *COM-взаимодействия*, позволяет использовать существующие объекты COM при постепенном переходе [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] в своем темпе.  
   
  С помощью [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] для создания компонентов COM, можно использовать COM-взаимодействие без регистрации. Это позволяет контролировать, какая версия библиотеки DLL будет включаться при более чем одной версии установлена на компьютере и позволяет конечным пользователям использовать XCOPY или FTP скопировать приложение в соответствующий каталог на своем компьютере когда может быть выполнена. Дополнительные сведения см. в разделе [COM-взаимодействия без регистрации](http://msdn.microsoft.com/library/90f308b9-82dc-414a-bce1-77e0155e56bd).  
   
@@ -49,7 +50,7 @@ ms.lasthandoff: 12/21/2017
  Дополнительные сведения о сборках и манифестов сборки см. в разделе [сборки и глобальный кэш сборок](../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md).  
   
 ### <a name="importing-and-exporting-type-libraries"></a>Импорт и экспорт библиотеки типов  
- [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]содержит программу Tlbimp, которая позволяет импортировать информацию из библиотеки типов в [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] приложения. Можно создавать библиотеки типов из сборки с помощью программы Tlbexp.  
+ Visual Studio содержит программу Tlbimp, которая позволяет импортировать информацию из библиотеки типов в [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] приложения. Можно создавать библиотеки типов из сборки с помощью программы Tlbexp.  
   
  Сведения о Tlbimp и Tlbexp см. в разделе [Tlbimp.exe (программа импорта библиотек типов)](../../../framework/tools/tlbimp-exe-type-library-importer.md) и [Tlbexp.exe (программа экспорта библиотек типов)](http://msdn.microsoft.com/library/a487d61b-d166-467b-a7ca-d8b52fbff42d).  
   

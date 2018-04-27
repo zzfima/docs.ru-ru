@@ -12,11 +12,11 @@ ms.assetid: b595ea44-a712-4625-a761-190c64f59bbe
 caps.latest.revision: 10
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 15b6e21e769c90e23e66e4f87b37f74462423985
-ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
+ms.openlocfilehash: f49a5ef8dd4e36c9ab055ca01dc25ed05b083349
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="deploying-applications-that-reference-the-printform-component-visual-basic"></a>Развертывание приложений, ссылающихся на компонент PrintForm (Visual Basic)
 Если требуется развернуть приложение, которое ссылается на компонент <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> , этот компонент должен быть установлен на целевом компьютере.  
@@ -26,7 +26,7 @@ ms.lasthandoff: 04/10/2018
 ## <a name="installing-the-printform-as-a-prerequisite"></a>Установка PrintForm в качестве необходимого компонента  
  Для успешного развертывания приложения необходимо также развернуть все компоненты, на которые ссылается приложение. Процесс установки необходимых компонентов называется *начальной загрузкой*.  
   
- Когда компонент <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> установлен на компьютере разработчика, пакет начального загрузчика Microsoft Visual Basic Power Packs добавляется в каталог начального загрузчика [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] . Этот пакет доступен при добавлении необходимых компонентов для [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] или для развертывания установщика Windows.  
+ Когда <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> компонент установлен на компьютере разработчика, пакет начального загрузчика Microsoft Visual Basic Power Packs добавляется в папку начального загрузчика Visual Studio. Этот пакет доступен при добавлении необходимых компонентов для [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] или для развертывания установщика Windows.  
   
  По умолчанию компоненты начальной загрузки развертываются из расположения пакета установки. Кроме того, можно выбрать для развертывания этих компонентов URL-адрес или общую папку, откуда пользователь сможет скачать их при необходимости.  
   

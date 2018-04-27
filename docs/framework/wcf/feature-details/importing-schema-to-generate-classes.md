@@ -22,11 +22,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 7fc755ff7f1b6c583a1e9aa1bc209495563812f0
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 43eaa4ffe562cf1dde5abd7e7540125dcf383732
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="importing-schema-to-generate-classes"></a>Импорт схемы для создания классов
 Чтобы создать классы из схем, которые могут использоваться в [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], используйте класс <xref:System.Runtime.Serialization.XsdDataContractImporter>. В данном разделе описывается процесс и параметры импорта.  
@@ -154,7 +154,7 @@ ms.lasthandoff: 04/26/2018
  `ReferencedTypes` Свойство соответствует свойству **/reference** в определенных режимах работы средства Svcutil.exe.  
   
 > [!NOTE]
->  Если программа Svcutil.exe или (в [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)]) **добавить ссылку на службу** , все типы в библиотеке MsCorLib.dll ссылки на создаются автоматически.  
+>  Если программа Svcutil.exe или (в Visual Studio) **добавить ссылку на службу** , все типы в библиотеке MsCorLib.dll ссылки на создаются автоматически.  
   
 #### <a name="import-options-importing-non-datacontract-schema-as-ixmlserializable-types"></a>Параметры импорта. Импорт схемы, отличной от DataContract, в виде типов IXmlSerializable  
  Объект <xref:System.Runtime.Serialization.XsdDataContractImporter> поддерживает ограниченное подмножество схемы. При наличии неподдерживаемых конструкций схемы (например, атрибутов XML) попытка импорта заканчивается с ошибкой, и возникает исключение. Однако, если присвоить свойству <xref:System.Runtime.Serialization.ImportOptions.ImportXmlType%2A> значение `true`, диапазон поддерживаемых схем увеличится. При выборе значения `true` объект <xref:System.Runtime.Serialization.XsdDataContractImporter> создает типы, реализующие интерфейс <xref:System.Xml.Serialization.IXmlSerializable>. Это обеспечивает прямой доступ к XML-представлению этих типов.  

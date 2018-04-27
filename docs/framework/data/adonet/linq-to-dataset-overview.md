@@ -1,36 +1,38 @@
 ---
-title: "Общие сведения о LINQ to DataSet"
-ms.custom: 
+title: Общие сведения о LINQ to DataSet
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: dc20a8fb-03f6-4b68-9c2b-7f7299e3070b
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 0295ff475367b0867ff0a5b0dd85f7a686e343bc
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 3e030ca62625e2b8870cf0eeb5694f4b889b3a7e
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="linq-to-dataset-overview"></a>Общие сведения о LINQ to DataSet
 Класс <xref:System.Data.DataSet> является одним из наиболее распространенных компонентов [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]. Это ключевой элемент модели автономного программирования, основанной на [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)], он позволяет явно кэшировать данные из различных источников данных. Для уровня представления <xref:System.Data.DataSet> тесно интегрирован с элементами управления графическим интерфейсом привязки данных. Для среднего уровня он предоставляет кэш, который защищает реляционную форму данных и включает в себя быстрые простые службы запросов и навигации по иерархии. Распространенным приемом, используемым для уменьшения количества запросов к базе данных является использование <xref:System.Data.DataSet> для кэширования на среднем уровне. Например, рассмотрим данными [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] веб-приложения. Обычно значительная часть данных приложения изменяется нечасто и остается неизменной во время сеанса пользователя. Эти данные могут сохраняться в памяти веб-сервера, что сократит число запросов к базе данных и ускорит взаимодействие с пользователями. Другим полезным аспектом <xref:System.Data.DataSet> является то, что приложения могут переносить подмножества данных из одного или нескольких источников данных в пространстве приложения. Затем приложение может работать с данными в памяти как с реляционными данными.  
   
  Объект <xref:System.Data.DataSet> имеет ограниченные возможности запросов. Метод <xref:System.Data.DataTable.Select%2A> можно использовать для фильтрации и сортировки, а методы <xref:System.Data.DataRow.GetChildRows%2A> и <xref:System.Data.DataRow.GetParentRow%2A> - для навигации по иерархии. Для более сложных операций необходимо писать пользовательские запросы. Это может снизить производительность приложений и создать трудности при их сопровождении.  
   
- [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] упрощает и ускоряет запросы к данным, кэшированным в объекте <xref:System.Data.DataSet>. Эти запросы выражены на языке программирования, а не в виде строковых литералов, внедренных в код приложения. Это означает, что разработчикам не придется изучать отдельный язык запросов. Кроме того [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] позволяет [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] разработчикам работать более продуктивно, поскольку [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] интегрированная среда разработки предоставляет проверку синтаксиса во время компиляции, статическую типизацию и поддержку технологии IntelliSense для [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)]. Технология [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] также может использоваться для запросов к данным, находящимся в одном или нескольких источниках. Это делает возможными много сценариев, требующих гибкости в представлении и управлении данными. В частности, этот метод обработки требуется для универсальных приложений отчетности, анализа и бизнес-аналитики.  
+ [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] упрощает и ускоряет запросы к данным, кэшированным в объекте <xref:System.Data.DataSet>. Эти запросы выражены на языке программирования, а не в виде строковых литералов, внедренных в код приложения. Это означает, что разработчикам не придется изучать отдельный язык запросов. Кроме того [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] разработчики Visual Studio повышает эффективность, так как интегрированная среда разработки Visual Studio обеспечивает проверку синтаксиса во время компиляции, статическую типизацию и поддержку технологии IntelliSense для [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)]. Технология [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] также может использоваться для запросов к данным, находящимся в одном или нескольких источниках. Это делает возможными много сценариев, требующих гибкости в представлении и управлении данными. В частности, этот метод обработки требуется для универсальных приложений отчетности, анализа и бизнес-аналитики.  
   
 ## <a name="querying-datasets-using-linq-to-dataset"></a>Запросы к наборам данных с помощью LINQ to DataSet  
- Перед запросом к объекту <xref:System.Data.DataSet> с помощью [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] нужно поместить в объект <xref:System.Data.DataSet> данные. Существует несколько способов для загрузки данных в <xref:System.Data.DataSet>, например, с помощью <xref:System.Data.Common.DataAdapter> класса или [LINQ to SQL](../../../../docs/framework/data/adonet/sql/linq/index.md). После загрузки данных в <xref:System.Data.DataSet> объекта, можно выполнять запросы. Подготовка запросов с помощью [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] похожа на работу с [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] с другими [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)]-источниками данных, поддерживающих. [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)]запросы могут выполняться к одиночным таблицам <xref:System.Data.DataSet> или для нескольких таблиц с помощью <xref:System.Linq.Enumerable.Join%2A> и <xref:System.Linq.Enumerable.GroupJoin%2A> стандартных операторов запроса.  
+ Перед запросом к объекту <xref:System.Data.DataSet> с помощью [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] нужно поместить в объект <xref:System.Data.DataSet> данные. Существует несколько способов для загрузки данных в <xref:System.Data.DataSet>, например, с помощью <xref:System.Data.Common.DataAdapter> класса или [LINQ to SQL](../../../../docs/framework/data/adonet/sql/linq/index.md). После загрузки данных в <xref:System.Data.DataSet> объекта, можно выполнять запросы. Подготовка запросов с помощью [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] похожа на работу с [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] с другими [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)]-источниками данных, поддерживающих. [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] запросы могут выполняться к одиночным таблицам <xref:System.Data.DataSet> или для нескольких таблиц с помощью <xref:System.Linq.Enumerable.Join%2A> и <xref:System.Linq.Enumerable.GroupJoin%2A> стандартных операторов запроса.  
   
- [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)]запросы поддерживаются к типизированным и нетипизированным <xref:System.Data.DataSet> объектов. Если схема <xref:System.Data.DataSet> известна во время разработки приложения, рекомендуется использование типизированного <xref:System.Data.DataSet>. В типизированном <xref:System.Data.DataSet> в таблицах и строках есть типизированные члены для каждого столбца, которые делают запросы проще и более читаемыми.  
+ [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] запросы поддерживаются к типизированным и нетипизированным <xref:System.Data.DataSet> объектов. Если схема <xref:System.Data.DataSet> известна во время разработки приложения, рекомендуется использование типизированного <xref:System.Data.DataSet>. В типизированном <xref:System.Data.DataSet> в таблицах и строках есть типизированные члены для каждого столбца, которые делают запросы проще и более читаемыми.  
   
  Помимо стандартных операторов запроса реализован в библиотеке System.Core.dll [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] добавляет некоторые <xref:System.Data.DataSet>-определенными расширениями, которые упрощают запрос для набора <xref:System.Data.DataRow> объектов. Эти специфичные для <xref:System.Data.DataSet> расширения включают в себя операторы для сравнения последовательностей строк, а также методы, обеспечивающие доступ к значениям столбцов <xref:System.Data.DataRow>.  
   

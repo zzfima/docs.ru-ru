@@ -20,17 +20,17 @@ helpviewer_keywords:
 - drag-and-drop [WPF], events
 - drop targets [WPF], drag-and-drop
 ms.assetid: 1a5b27b0-0ac5-4cdf-86c0-86ac0271fa64
-caps.latest.revision: ''
+caps.latest.revision: 31
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: b7a69a4dcd5fc39b700bf9c3404e70d581509ebc
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: fe34933c19e7f8a50d144cad99b99decbd501965
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="drag-and-drop-overview"></a>Общие сведения о перетаскивании
 В этой статье приведены общие сведения о поддержке перетаскивания в приложениях [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. Перетаскиванием обычно называют метод передачи данных, который реализуется с помощью мыши (или другого указывающего устройства) для выбора одного или нескольких объектов и перетаскивания их в цель перетаскивания в [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)].  
@@ -44,7 +44,7 @@ ms.lasthandoff: 03/26/2018
   
  Конкретные действия, выполняемые во время операции перетаскивания, зависят от приложения и часто определяются контекстом.  Например, при перетаскивании выбранных файлов из одной папки в другую на одном запоминающем устройстве эти файлы по умолчанию перемещаются, тогда как при перетаскивании файлов из общего ресурса [!INCLUDE[TLA#tla_unc](../../../../includes/tlasharptla-unc-md.md)] в локальную папку эти файлы по умолчанию копируются.  
   
- В средствах перетаскивания, предоставляемых [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], предусмотрена высокая гибкость и возможность настройки с целью поддержки различных сценариев перетаскивания.  Перетаскивание поддерживает управление объектами в рамках одного приложения или в разных приложениях. Также полностью поддерживается перетаскивание между приложениями [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] и другими приложениями [!INCLUDE[TLA2#tla_win](../../../../includes/tla2sharptla-win-md.md)].  
+ В средствах перетаскивания, предоставляемых [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], предусмотрена высокая гибкость и возможность настройки с целью поддержки различных сценариев перетаскивания.  Перетаскивание поддерживает управление объектами в рамках одного приложения или в разных приложениях. Перетаскивание мышью между [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] приложений и других приложений Windows также полностью поддерживается.  
   
  В [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] любые элементы <xref:System.Windows.UIElement> или <xref:System.Windows.ContentElement> могут участвовать в операциях перетаскивания. События и методы, необходимые для операций перетаскивания, определяются в классе <xref:System.Windows.DragDrop>. Классы <xref:System.Windows.UIElement> и <xref:System.Windows.ContentElement> содержат псевдонимы для вложенных событий <xref:System.Windows.DragDrop>, чтобы эти события отображались в списке членов класса, когда <xref:System.Windows.UIElement> или <xref:System.Windows.ContentElement> наследуется как базовый элемент. Обработчики событий, связанные с этими событиями, присоединяются к основному вложенному событию <xref:System.Windows.DragDrop> и получают один и тот же экземпляр данных события. Дополнительные сведения см. в описании события <xref:System.Windows.UIElement.Drop?displayProperty=nameWithType>.  
   

@@ -1,24 +1,26 @@
 ---
-title: "Обработка подозрительных сообщений в MSMQ 4.0"
-ms.custom: 
+title: Обработка подозрительных сообщений в MSMQ 4.0
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: ec8d59e3-9937-4391-bb8c-fdaaf2cbb73e
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 32d7c7a93636cbe0086cfbcb5fd1e401a2f013fb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 6f2361ed862986d2490968ae422b9b1313eedea3
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="poison-message-handling-in-msmq-40"></a>Обработка подозрительных сообщений в MSMQ 4.0
 В этом образце демонстрируется обработка подозрительных сообщений в службе. Этот пример построен на [транзакции привязки MSMQ](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md) образца. В этом образце используется привязка `netMsmqBinding`. Служба представляет собой резидентное консольное приложение, позволяющее наблюдать за получением службой сообщений из очереди.  
@@ -49,19 +51,19 @@ ms.lasthandoff: 12/22/2017
  В этом образце демонстрируется использование команды `Move` для перемещения опасного сообщения о сбое. Команда `Move` перемещает сообщение во вложенную очередь подозрительных сообщений.  
   
  Контракт службы `IOrderProcessor` определяет одностороннюю службу, которую можно использовать с очередями.  
-  
-```  
+
+```csharp
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
 public interface IOrderProcessor  
 {  
     [OperationContract(IsOneWay = true)]  
     void SubmitPurchaseOrder(PurchaseOrder po);  
 }  
-```  
-  
+```
+
  Операция службы отображает сообщение о том, что она обрабатывает заказ. Чтобы продемонстрировать возможность обработки подозрительных сообщений, операция службы `SubmitPurchaseOrder` создает исключение для отката транзакции в случайно выбранном вызове службы. В результате сообщение помещается обратно в очередь. В конечном счете это сообщение помечается как подозрительное. Конфигурация настроена для перемещения подозрительного сообщения во вложенную очередь подозрительных сообщений.  
-  
-```  
+
+```csharp
 // Service class that implements the service contract.  
 // Added code to write output to the console window.  
 public class OrderProcessorService : IOrderProcessor  
@@ -127,8 +129,8 @@ public class OrderProcessorService : IOrderProcessor
   
     }  
 }  
-```  
-  
+```
+
  Конфигурация службы включает следующие свойства подозрительных сообщений: `receiveRetryCount`, `maxRetryCycles`, `retryCycleDelay` и `receiveErrorHandling`, как показано в следующем файле конфигурации.  
   
 ```xml  
@@ -171,8 +173,8 @@ public class OrderProcessorService : IOrderProcessor
  Сообщения в очереди подозрительных сообщений - это сообщения, адресованные обрабатывающей сообщение службе, которая может отличаться от конечной точки службы подозрительных сообщений. Поэтому при выполнении службой подозрительных сообщений считывания сообщений из очереди уровень канала [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] находит несоответствие конечных точек и не отправляет сообщение. В этом случае сообщение адресуется службе, обрабатывающей заказы, но получает его служба подозрительных сообщений. Чтобы продолжать получать сообщение, даже если оно адресовано другой конечной точке, необходимо добавить поведение `ServiceBehavior` для фильтрации адресов, в котором критерием соответствия будет соответствие любой конечной точке службы, которой адресовано сообщение. Это необходимо для успешной обработки сообщений, считываемых из очереди подозрительных сообщений.  
   
  Реализация самой службы подозрительных сообщений очень похожа на реализацию службы. Она реализует контракт и обрабатывает заказы. Ниже приведен пример кода.  
-  
-```  
+
+```csharp
 // Service class that implements the service contract.  
 // Added code to write output to the console window.  
 [ServiceBehavior(AddressFilterMode=AddressFilterMode.Any)]  
@@ -215,8 +217,8 @@ public class OrderProcessorService : IOrderProcessor
             serviceHost.Close();  
         }  
     }  
-```  
-  
+```
+
  В отличие от службы обработки заказов, которая считывает сообщения из очереди заказов, служба подозрительных сообщений считывает сообщения из вложенной очереди подозрительных сообщений. Очередь подозрительных сообщений вложена в основную очередь, называется "poison" и автоматически создается MSMQ. Для доступа к этой очереди следует указать имя основной очереди, ввести символ ";", а затем имя вложенной очереди, в данном случае - "poison", как показано в следующем образце конфигурации.  
   
 > [!NOTE]
@@ -325,14 +327,14 @@ Processing Purchase Order: 23e0b991-fbf9-4438-a0e2-20adf93a4f89
     > [!NOTE]
     >  Задание для `security mode` значения `None` эквивалентно заданию для параметров безопасности `MsmqAuthenticationMode`, `MsmqProtectionLevel` и `Message` значения `None`.  
   
-3.  Чтобы обеспечить обмен метаданными, необходимо зарегистрировать URL-адрес с привязкой http. Это требует выполнения службы в командном окне с повышенными привилегиями. В противном случае возникает исключение, например: Unhandled Exception: System.ServiceModel.AddressAccessDeniedException: HTTP could not register URL http://+:8000/ServiceModelSamples/service/ (необработанное исключение: System.ServiceModel.AddressAccessDeniedException: HTTP не удалось зарегистрировать URL-адрес http://+:8000/ServiceModelSamples/service/). Текущий процесс не имеет прав доступа к этому пространству имен (см. http://go.microsoft.com/fwlink/?LinkId=70353 для получения более подробной информации). ---> System.Net.HttpListenerException: отказано в доступе.  
+3.  Чтобы обеспечить обмен метаданными, необходимо зарегистрировать URL-адрес с привязкой http. Это требует выполнения службы в командном окне с повышенными привилегиями. В противном случае возникает исключение, например: необработанное исключение: System.ServiceModel.AddressAccessDeniedException: HTTP не удалось зарегистрировать URL-адрес http://+:8000/ServiceModelSamples/service/. Процесс имеет права доступа к этому пространству имен (в разделе http://go.microsoft.com/fwlink/?LinkId=70353 подробные сведения). ---> System.Net.HttpListenerException: отказано в доступе.  
   
 > [!IMPORTANT]
 >  Образцы уже могут быть установлены на компьютере. Перед продолжением проверьте следующий каталог (по умолчанию).  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите на страницу [Примеры Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все примеры [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Этот образец расположен в следующем каталоге.  
+>  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) Чтобы загрузить все [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] образцов. Этот образец расположен в следующем каталоге.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\MSMQ\Poison\MSMQ4`  
   

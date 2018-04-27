@@ -1,8 +1,9 @@
 ---
-title: "Поддержка двунаправленного письма для приложений Windows Forms"
+title: Поддержка двунаправленного письма для приложений Windows Forms
 ms.date: 09/30/2017
 ms.prod: .net-framework
-ms.technology: dotnet-winforms
+ms.technology:
+- dotnet-winforms
 ms.topic: article
 helpviewer_keywords:
 - globalization [Windows Forms], bi-directional support in Windows
@@ -13,15 +14,16 @@ helpviewer_keywords:
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a8ae0e958c842c2f3cf3fbb788cad1cde6e6cc2b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: d670fedb2fe693a871de8f0147b81b97b4958853
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="bi-directional-support-for-windows-forms-applications"></a>Поддержка двунаправленного письма для приложений Windows Forms
-[!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] можно использовать для создания приложений Windows, поддерживающих двунаправленное письмо (справа налево), например арабский язык или иврит. Сюда входят стандартные формы, диалоговые окна, MDI-формы и все элементы управления, с которыми можно работать в этих формах, то есть все объекты в пространстве имен <xref:System.Windows.Forms.Control>.  
+Visual Studio можно использовать для создания приложений Windows, которые поддерживают двунаправленным письмом (справа налево), например арабский или иврит. Сюда входят стандартные формы, диалоговые окна, MDI-формы и все элементы управления, с которыми можно работать в этих формах, то есть все объекты в пространстве имен <xref:System.Windows.Forms.Control>.  
   
 ## <a name="culture-support"></a>Поддержка языка и региональных параметров  
  Язык и региональные параметры, в том числе язык и региональные параметры пользовательского интерфейса, определяют способы обработки приложением дат, времени, валют и других данных. Поддержка языка и региональных параметров, в том числе языка и региональных параметров пользовательского интерфейса, для языков с двунаправленным письмом соответствует поддержке для любых других языков.   См. также разделы [Классы, соответствующие определенному языку и региональным параметрам, для глобальных форм Windows Forms и Web Forms](http://msdn.microsoft.com/library/94ye9x8c\(v=vs.110\)) или [Классы, соответствующие определенному языку и региональным параметрам, для глобальных форм Windows Forms и Web Forms](http://msdn.microsoft.com/library/94ye9x8c\(v=vs.120\))  
@@ -122,5 +124,5 @@ ms.lasthandoff: 12/22/2017
  Некоторые элементы управления запечатаны. Как следствие, из них нельзя наследовать новый элемент управления. К ним относятся элементы управления <xref:System.Windows.Forms.ImageList> и <xref:System.Windows.Forms.ProgressBar>.  
   
 ## <a name="see-also"></a>См. также  
- [Поддержка двунаправленного письма в веб-приложений ASP.NET](http://msdn.microsoft.com/library/5576f9b1-9b86-41ef-8354-092d366bcd03)  
+ [Двухсторонний режим для веб-приложений ASP.NET](http://msdn.microsoft.com/library/5576f9b1-9b86-41ef-8354-092d366bcd03)  
  [Глобализация Windows Forms](../../../../docs/framework/winforms/advanced/globalizing-windows-forms.md)

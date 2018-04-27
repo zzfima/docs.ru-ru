@@ -1,29 +1,30 @@
 ---
-title: "Использование отслеживания для устранения неполадок приложений"
-ms.custom: 
+title: Использование отслеживания для устранения неполадок приложений
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 8851adde-c3c2-4391-9523-d8eb831490af
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: bb8971c344ff24120b5f85dceb518b0944bd5feb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: adc9a159b8887b0198cf19891f73fdee2a48437b
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="using-tracking-to-troubleshoot-applications"></a>Использование отслеживания для устранения неполадок приложений
-[!INCLUDE[wf](../../../includes/wf-md.md)] позволяет отслеживать данные, связанные с рабочим процессом, для последующей передачи подробных сведений в выполнение приложения [!INCLUDE[wf2](../../../includes/wf2-md.md)] или службы. Узлы [!INCLUDE[wf2](../../../includes/wf2-md.md)] могут захватывать события рабочего процесса во время выполнения экземпляра рабочего процесса. Если в рабочем процессе возникают ошибки или исключения, можно использовать данные отслеживания [!INCLUDE[wf2](../../../includes/wf2-md.md)] для устранения неполадок обработки.  
+Windows Workflow Foundation (WF) позволяет отслеживать сведения о рабочем процессе для предоставления сведений в выполнение Windows Workflow Foundation приложения или службы. Узлы Windows Workflow Foundation, могут захватывать события рабочего процесса во время выполнения экземпляра рабочего процесса. Если рабочий процесс приводит к возникновению ошибки или исключения, можно использовать данные отслеживания для устранения неполадок обработки Windows Workflow Foundation.  
   
 ## <a name="troubleshooting-a-wf-using-wf-tracking"></a>Устранение неполадок WF с помощью отслеживания WF  
- Для обнаружения ошибок при обработке действия [!INCLUDE[wf2](../../../includes/wf2-md.md)] можно включить отслеживание с профилем отслеживания, в ходе которого запрашиваются записи <xref:System.Activities.Tracking.ActivityStateRecord> с состоянием ошибки (Faulted). Соответствующий запрос задан в следующем коде.  
+ Для обнаружения ошибок при обработке действия Windows Workflow Foundation, можно включить отслеживание с профилем отслеживания, который запрашивает <xref:System.Activities.Tracking.ActivityStateRecord> в состоянии Faulted. Соответствующий запрос задан в следующем коде.  
   
 ```xml  
 <activityStateQueries>  
@@ -55,9 +56,9 @@ ms.lasthandoff: 12/22/2017
 </workflowInstanceQueries>  
 ```  
   
- Когда экземпляр рабочего процесса встречает необработанное исключение, создается объект <xref:System.Activities.Tracking.WorkflowInstanceUnhandledExceptionRecord>, если отслеживание [!INCLUDE[wf2](../../../includes/wf2-md.md)] включено.  
+ Когда экземпляр рабочего процесса обнаруживается необработанное исключение, <xref:System.Activities.Tracking.WorkflowInstanceUnhandledExceptionRecord> объект создается в том случае, если включено отслеживание Windows Workflow Foundation.  
   
- Эта запись отслеживания содержит сведения об ошибке в виде стека исключений. Она содержит сведения об источнике ошибки (например, о действии), где произошел сбой, вызвавший необработанное исключение. Чтобы подписаться на события, связанные с ошибками, из [!INCLUDE[wf2](../../../includes/wf2-md.md)], включите отслеживание, добавив участника отслеживания. Настройте участника с профилем отслеживания, запрашивающим запись `ActivityStateQuery (state="Faulted")`, <xref:System.Activities.Tracking.FaultPropagationRecord> и `WorkflowInstanceQuery (state="UnhandledException")`.  
+ Эта запись отслеживания содержит сведения об ошибке в виде стека исключений. Она содержит сведения об источнике ошибки (например, действие), произошел сбой, вызвавший необработанное исключение. Чтобы подписаться на события ошибок с Windows Workflow Foundation, включите отслеживание путем добавления участника отслеживания. Настройте участника с профилем отслеживания, запрашивающим запись `ActivityStateQuery (state="Faulted")`, <xref:System.Activities.Tracking.FaultPropagationRecord> и `WorkflowInstanceQuery (state="UnhandledException")`.  
   
  Если отслеживание включено с использованием участника отслеживания ETW, события ошибок создаются в сеансе ETW. События можно просмотреть с помощью средства «Просмотр событий». Это можно найти в узле **Просмотр событий -> приложений и журналы служб -> Майкрософт -> Windows -> сервер приложений-приложения** в канале аналитики.  
   

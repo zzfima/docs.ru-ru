@@ -1,12 +1,13 @@
 ---
-title: "Вопросы, связанные с макетом элемента WindowsFormsHost"
-ms.custom: 
+title: Вопросы, связанные с макетом элемента WindowsFormsHost
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Windows Forms [WPF], interoperability with
@@ -16,33 +17,34 @@ helpviewer_keywords:
 - dynamic layout [WPF interoperability]
 - device-independent pixels
 ms.assetid: 3c574597-bbde-440f-95cc-01371f1a5d9d
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 895185797ebdef2145caec4c1c5ac26e3688c463
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: b915d3cdaebc862534c2ba6bd006d3b447e2a651
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="layout-considerations-for-the-windowsformshost-element"></a>Вопросы, связанные с макетом элемента WindowsFormsHost
 В этом разделе описывается как <xref:System.Windows.Forms.Integration.WindowsFormsHost> элемент взаимодействует с [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] система макета.  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]и [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] поддерживают разные, но похожую логику для изменения размера и размещения элементов на форму или страницу. При создании гибридного пользовательского интерфейса (UI), на котором размещена [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] элементы управления в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], <xref:System.Windows.Forms.Integration.WindowsFormsHost> элемент объединяет две схемы макета.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] и [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] поддерживают разные, но похожую логику для изменения размера и размещения элементов на форму или страницу. При создании гибридного пользовательского интерфейса (UI), на котором размещена [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] элементы управления в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], <xref:System.Windows.Forms.Integration.WindowsFormsHost> элемент объединяет две схемы макета.  
   
 ## <a name="differences-in-layout-between-wpf-and-windows-forms"></a>Различия в макет WPF и Windows Forms  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]используя макет зависящая от разрешения. Все [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] измерения макета задаются с помощью *аппаратно независимых пикселях*. Аппаратно независимый пиксель — одну девяносто шестую дюйма размера и разрешения, чтобы получить аналогичные результаты независимо от того, вы отрисовывают монитор 72 dpi или на принтер 19200 dpi.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] используя макет зависящая от разрешения. Все [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] измерения макета задаются с помощью *аппаратно независимых пикселях*. Аппаратно независимый пиксель — одну девяносто шестую дюйма размера и разрешения, чтобы получить аналогичные результаты независимо от того, вы отрисовывают монитор 72 dpi или на принтер 19200 dpi.  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]также основана на *динамический макет*. Это означает, что элемент пользовательского интерфейса располагается на формы или страницы в соответствии с его содержимым, родительского контейнера макета и доступным размером экрана. Динамический макет упрощает локализацию, автоматически изменяя размер и положение элементов пользовательского интерфейса, когда строки, содержащиеся в них изменения длины.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] также основана на *динамический макет*. Это означает, что элемент пользовательского интерфейса располагается на формы или страницы в соответствии с его содержимым, родительского контейнера макета и доступным размером экрана. Динамический макет упрощает локализацию, автоматически изменяя размер и положение элементов пользовательского интерфейса, когда строки, содержащиеся в них изменения длины.  
   
  Макет в [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] зависящие от устройства, и скорее всего, будут статическими. Как правило [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] элементы управления расположены точно на форме с использованием измерений, указанных в пикселях оборудования. Тем не менее [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] поддерживает некоторые возможности динамического макета, показанных в следующей таблице.  
   
-|Функция разметки|Описание:|  
+|Функция разметки|Описание|  
 |--------------------|-----------------|  
 |Автоматическое изменение размера|Некоторые [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] размера элементов управления, целью верного отображения их содержимого. Дополнительные сведения см. в разделе [Общие](../../../../docs/framework/winforms/controls/autosize-property-overview.md).|  
-|Привязка и закрепление|[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]элементы управления поддерживают размещение и изменение размера, основанное на родительском контейнере. Дополнительные сведения см. в разделах <xref:System.Windows.Forms.Control.Anchor%2A?displayProperty=nameWithType> и <xref:System.Windows.Forms.Control.Dock%2A?displayProperty=nameWithType>.|  
+|Привязка и закрепление|[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] элементы управления поддерживают размещение и изменение размера, основанное на родительском контейнере. Дополнительные сведения см. в разделах <xref:System.Windows.Forms.Control.Anchor%2A?displayProperty=nameWithType> и <xref:System.Windows.Forms.Control.Dock%2A?displayProperty=nameWithType>.|  
 |Автоматическое масштабирование|Контейнерные элементы управления изменение размера себя и своих дочерних элементов, на основе разрешения устройства вывода или размер в пикселях шрифт контейнера по умолчанию. Дополнительные сведения см. в разделе [автоматическое масштабирование в Windows Forms](../../../../docs/framework/winforms/automatic-scaling-in-windows-forms.md).|  
 |Контейнеры макета|<xref:System.Windows.Forms.FlowLayoutPanel> И <xref:System.Windows.Forms.TableLayoutPanel> элементы управления упорядочить их дочерние элементы управления и размер самостоятельно, в зависимости от их содержимого.|  
   
@@ -55,7 +57,7 @@ ms.lasthandoff: 12/22/2017
   
 -   В большинстве случаев элементы управления [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] не поддерживают пропорциональное масштабирование. Несмотря на то, что общий размер элемента управления масштабируется, дочерние элементы управления и компоненты элемента управления могут изменять размеры не так, как ожидается. Это ограничение зависит от поддержки масштабирования каждым элементом управления [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]. Кроме того, нельзя масштабировать [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] элементов управления до размера 0 пикселей.  
   
--   [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]элементы управления поддерживают автоматическое масштабирование, в котором формы будут автоматически изменены и его элементы управления, в зависимости от размера шрифта. В пользовательском интерфейсе [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] изменение размера шрифта не влечет за собой изменение размера всего макета, хотя отдельные элементы могут динамически изменять размер.  
+-   [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] элементы управления поддерживают автоматическое масштабирование, в котором формы будут автоматически изменены и его элементы управления, в зависимости от размера шрифта. В пользовательском интерфейсе [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] изменение размера шрифта не влечет за собой изменение размера всего макета, хотя отдельные элементы могут динамически изменять размер.  
   
 ### <a name="z-order"></a>Z-порядок  
  В пользовательском интерфейсе [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] можно изменить z-порядок элементов для контроля поведения перекрывания. Вложенный элемент управления [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] рисуется в отдельном HWND, причем он всегда рисуется поверх элементов [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
@@ -74,13 +76,13 @@ ms.lasthandoff: 12/22/2017
   
  Во всех остальных случаях требуется масштабирование системы координат. Размещаемый элемент управления не изменяется. Вместо этого <xref:System.Windows.Forms.Integration.WindowsFormsHost> элемент пытается масштабировать размещенного элемента управления и всех его дочерних элементов управления. Поскольку [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] не полностью поддерживает масштабирование, <xref:System.Windows.Forms.Integration.WindowsFormsHost> элемент масштабируется до степени, поддерживаемой определенными элементами управления.  
   
- Переопределить <xref:System.Windows.Forms.Integration.WindowsFormsHost.ScaleChild%2A> метод для предоставления пользовательского поведения масштабирования для размещаемого [!INCLUDE[TLA2#tla_winforms](../../../../includes/tla2sharptla-winforms-md.md)] элемента управления.  
+ Переопределить <xref:System.Windows.Forms.Integration.WindowsFormsHost.ScaleChild%2A> метод для предоставления пользовательского поведения масштабирования для размещенного элемента управления Windows Forms.  
   
  Дополнение к масштабированию, <xref:System.Windows.Forms.Integration.WindowsFormsHost> элемент обрабатывает случаи округления и переполнения, как описано в следующей таблице.  
   
-|Проблема преобразования|Описание:|  
+|Проблема преобразования|Описание|  
 |----------------------|-----------------|  
-|Округление|[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]аппаратно независимый пиксель измерения задаются в виде `double`, и [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] оборудования пикселах задаются в виде `int`. В случаях, где `double`-измерения, основанные на преобразуются в `int`-на основе измерений, <xref:System.Windows.Forms.Integration.WindowsFormsHost> элемент использует стандартное округление, поэтому дробные значения меньше 0,5 округляются до 0.|  
+|Округление|[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] аппаратно независимый пиксель измерения задаются в виде `double`, и [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] оборудования пикселах задаются в виде `int`. В случаях, где `double`-измерения, основанные на преобразуются в `int`-на основе измерений, <xref:System.Windows.Forms.Integration.WindowsFormsHost> элемент использует стандартное округление, поэтому дробные значения меньше 0,5 округляются до 0.|  
 |Переполнение|При <xref:System.Windows.Forms.Integration.WindowsFormsHost> преобразует элемент из `double` значения `int` значения, возможна переполнения. Значения, превышающие <xref:System.Int32.MaxValue> присваиваются <xref:System.Int32.MaxValue>.|  
   
 ### <a name="layout-related-properties"></a>Свойства, связанные с макетом  
@@ -90,7 +92,7 @@ ms.lasthandoff: 12/22/2017
  Изменения макета в размещаемом [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] управления распространяются на [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] для запуска обновлений макета. <xref:System.Windows.UIElement.InvalidateMeasure%2A> Метод <xref:System.Windows.Forms.Integration.WindowsFormsHost> гарантирует, что изменения макета в размещенном элементе управления вызывают [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] запуск обработчика макета.  
   
 ### <a name="continuously-sized-windows-forms-controls"></a>Постоянно размера элементов управления Windows Forms  
- [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]элементы управления, которые поддерживают непрерывное масштабирование, полностью взаимодействуют с [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] система макета. <xref:System.Windows.Forms.Integration.WindowsFormsHost> Элемент использует <xref:System.Windows.FrameworkElement.MeasureOverride%2A> и <xref:System.Windows.FrameworkElement.ArrangeOverride%2A> методы обычным для определения размеров и расположения размещенного [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] элемента управления.  
+ [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] элементы управления, которые поддерживают непрерывное масштабирование, полностью взаимодействуют с [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] система макета. <xref:System.Windows.Forms.Integration.WindowsFormsHost> Элемент использует <xref:System.Windows.FrameworkElement.MeasureOverride%2A> и <xref:System.Windows.FrameworkElement.ArrangeOverride%2A> методы обычным для определения размеров и расположения размещенного [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] элемента управления.  
   
 ### <a name="sizing-algorithm"></a>Алгоритм изменения размера  
  <xref:System.Windows.Forms.Integration.WindowsFormsHost> Элемент использует следующую процедуру для определения размера размещенного элемента управления:  

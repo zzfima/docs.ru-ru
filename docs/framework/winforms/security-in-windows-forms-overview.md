@@ -1,12 +1,13 @@
 ---
-title: "Общие сведения о безопасности в Windows Forms"
-ms.custom: 
+title: Общие сведения о безопасности в Windows Forms
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-winforms
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - code access security [Windows Forms], Windows Forms
@@ -15,16 +16,17 @@ helpviewer_keywords:
 - security [Windows Forms], about security
 - access control [Windows Forms], Windows Forms
 ms.assetid: 4810dc9f-ea23-4ce1-8ea1-657f0ff1d820
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e56ae77a36ce0000fd518a3324ab5e5b8409d1d4
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 57f46620e7b98bb1a4c120684075dbe065db9714
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="security-in-windows-forms-overview"></a>Общие сведения о безопасности в Windows Forms
 До выпуска [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] весь код, выполняемый на компьютере пользователя, имел те же права и разрешения на доступ к ресурсам, которыми обладал пользователь компьютера. Например, если пользователю был разрешен доступ к файловой системе, то код также получал доступ к файловой системе Если пользователю был разрешен доступ к базе данных, то и коду предоставлялся доступ к ней. Наличие таких прав или разрешений может быть допустимо для кода в исполняемых файлах, которые пользователь собственноручно установил на локальном компьютере, но оно неприемлемо в тех случаях, когда речь идет о потенциально вредоносном коде, поступившем из Интернета или локальной интрасети. Такой код не должен получать доступ к ресурсам компьютера пользователя без его разрешения.  
@@ -60,11 +62,11 @@ ms.lasthandoff: 01/19/2018
   
  При запросе необязательных разрешений необходимо обработать исключения безопасности, которые могут возникнуть, если приложение выполнит действие, требующее разрешений, которые не были предоставлены. Корректная обработка исключения <xref:System.Security.SecurityException> гарантирует, что приложение будет продолжать работать. Приложение может использовать исключения для определения того, следует ли отключить ту или иную возможность для пользователя. Например, приложение может отключить команду меню **Сохранить**, если не предоставлено соответствующее разрешение.  
   
- Иногда трудно определить, запрошены ли все необходимые разрешения. Например, вызов метода, который на первый взгляд выглядит вполне безобидно, может во время выполнения в какой-то момент обращаться к файловой системе. Если не выполнить развертывание приложения со всеми требуемыми разрешениями, оно может работать корректно при отладке, но отказать при развертывании. И в пакете [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)] SDK, и в среде [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)] имеются средства для определения разрешений, необходимых приложению: программа командной строки MT.exe и функция вычисления разрешений [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] соответственно.  
+ Иногда трудно определить, запрошены ли все необходимые разрешения. Например, вызов метода, который на первый взгляд выглядит вполне безобидно, может во время выполнения в какой-то момент обращаться к файловой системе. Если не выполнить развертывание приложения со всеми требуемыми разрешениями, оно может работать корректно при отладке, но отказать при развертывании. Оба [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)] SDK и [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)] имеются средства для расчета разрешений, необходимых приложению: MT.exe командной строки и функция вычисления разрешений, Visual Studio, соответственно.  
   
  Дополнительные функции обеспечения безопасности Windows Forms описаны в представленных ниже разделах.  
   
-|Раздел|Описание:|  
+|Раздел|Описание|  
 |-----------|-----------------|  
 |-   [Более безопасный доступ к файлам и данным в Windows Forms](../../../docs/framework/winforms/more-secure-file-and-data-access-in-windows-forms.md)|Описание доступа к файлам и данным в среде с частичным доверием.|  
 |-   [Более безопасная печать в Windows Forms](../../../docs/framework/winforms/more-secure-printing-in-windows-forms.md)|Описание доступа к возможностям печати в среде с частичным доверием.|  
@@ -86,12 +88,12 @@ ms.lasthandoff: 01/19/2018
   
  Выбор технологии зависит от среды развертывания. Подробнее см. в разделе [Выбор стратегии развертывания ClickOnce](/visualstudio/deployment/choosing-a-clickonce-deployment-strategy).  
   
- По умолчанию приложения [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)], развернутые с помощью либо [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)], либо средств пакета [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)] SDK (Mage.exe и MageUI.exe), настроены на запуск на клиентском компьютере с полным доверием. При развертывании приложения с помощью частичного доверия или с помощью только некоторых дополнительных разрешений необходимо изменить эту настройку по умолчанию. Это можно сделать с помощью [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] или средства MageUI.exe пакета [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)] SDK при настройке развертывания. Подробнее об использовании средства MageUI.exe см. в разделе "Пошаговое руководство. Развертывание приложения ClickOnce из командной строки".  См. также разделы [Практическое руководство. Установка пользовательских разрешений для приложения ClickOnce](http://msdn.microsoft.com/library/hafybdaa\(v=vs.110\)) или [Практическое руководство. Установка пользовательских разрешений для приложения ClickOnce](http://msdn.microsoft.com/library/hafybdaa\(v=vs.120\)).  
+ По умолчанию [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] приложения, развернутые с помощью Visual Studio или [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)] средств пакета SDK (Mage.exe и MageUI.exe), настроенных для запуска на клиентском компьютере с полным доверием. При развертывании приложения с помощью частичного доверия или с помощью только некоторых дополнительных разрешений необходимо изменить эту настройку по умолчанию. Это можно сделать с помощью Visual Studio или [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)] SDK средства MageUI.exe при настройке развертывания. Подробнее об использовании средства MageUI.exe см. в разделе "Пошаговое руководство. Развертывание приложения ClickOnce из командной строки".  См. также разделы [Практическое руководство. Установка пользовательских разрешений для приложения ClickOnce](http://msdn.microsoft.com/library/hafybdaa\(v=vs.110\)) или [Практическое руководство. Установка пользовательских разрешений для приложения ClickOnce](http://msdn.microsoft.com/library/hafybdaa\(v=vs.120\)).  
   
  Подробнее об аспектах безопасности [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] и повышении уровня разрешений см. в разделе [Развертывание и защита приложений ClickOnce](/visualstudio/deployment/securing-clickonce-applications). Подробнее о развертывании доверенных приложений см. в разделе [Общие сведения о развертывании доверенных приложений](/visualstudio/deployment/trusted-application-deployment-overview).  
   
 ### <a name="testing-the-application"></a>Тестирование приложения  
- Если приложение Windows Forms развернуто с помощью [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)], вы можете включить отладку в среде с частичным доверием или с ограниченным набором разрешений из среды разработки.  См. также разделы [Практическое руководство. Отладка приложения ClickOnce с ограниченными разрешениями](http://msdn.microsoft.com/library/593zkfdf\(v=vs.110\)) или [Практическое руководство. Отладка приложения ClickOnce с ограниченными разрешениями](http://msdn.microsoft.com/library/593zkfdf\(v=vs.120\)).  
+ Если вы развернули приложение Windows Forms с помощью Visual Studio, можно включить отладку в режиме частичного доверия или с ограниченным набором разрешений из среды разработки.  См. также разделы [Практическое руководство. Отладка приложения ClickOnce с ограниченными разрешениями](http://msdn.microsoft.com/library/593zkfdf\(v=vs.110\)) или [Практическое руководство. Отладка приложения ClickOnce с ограниченными разрешениями](http://msdn.microsoft.com/library/593zkfdf\(v=vs.120\)).  
   
 ## <a name="see-also"></a>См. также  
  [Безопасность Windows Forms](../../../docs/framework/winforms/windows-forms-security.md)  

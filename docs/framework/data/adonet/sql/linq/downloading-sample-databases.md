@@ -16,11 +16,11 @@ ms.author: douglasl
 manager: craigg
 ms.workload:
 - dotnet
-ms.openlocfilehash: dd0b29e97d36d67781c92ee24c56aed43c703261
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: c4f18bc3e078a03795037f77505aa2533f1e853e
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="downloading-sample-databases"></a>Загрузка примеров баз данных
 В ряде примеров и пошаговых руководств документации [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] используется база данных «Northwind» и выпуск SQL Server Express Edition. Эти продукты можно бесплатно загрузить в Центре загрузки Майкрософт.  
@@ -42,7 +42,7 @@ ms.lasthandoff: 04/26/2018
      По умолчанию база данных устанавливается в *диск*: \SQL Server 2000 Sample Databases.  
   
 ## <a name="downloading-sql-server-express-edition"></a>Загрузка SQL Server Express Edition  
- SQL Server Express Edition доступен бесплатно и его можно распространять вместе с приложениями. При использовании среды [!INCLUDE[vsprvs](../../../../../../includes/vsprvs-md.md)] SQL Server Express Edition включается в версию Pro и более поздние версии.  
+ SQL Server Express Edition доступен бесплатно и его можно распространять вместе с приложениями. Если вы используете Visual Studio, SQL Server Express Edition включается в Pro и более поздние версии.  
   
 #### <a name="to-download-and-install-sql-server-express-edition"></a>Загрузка и установка выпуска SQL Server Express  
   

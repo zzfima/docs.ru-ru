@@ -1,30 +1,13 @@
----
-title: "Библиотека действий"
-ms.custom: 
-ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
-ms.assetid: 5323e9d4-71d6-47eb-bfa6-31feac62044d
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 99d8fba848129156d94e54d1da7d08122ccfa735
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ ---
+Заголовок: ms.custom «Библиотека действий»:»» ms.date: ms.prod «03/30/2017 г.»: ms.reviewer «.net framework»:»» ms.suite:»» ms.tgt_pltfrm:»» ms.topic: «статьи «ms.assetid: 5323e9d4-71d6-47eb-bfa6-31feac62044d caps.latest.revision: 7 Автор: «dotnet роботов "ms.author: «dotnetcontent» диспетчер: ms.workload «wpickett»: 
+  - «dotnet»
 ---
 # <a name="activity-library"></a>Библиотека действий
-Образцы в этом разделе демонстрируют дополнительные пользовательские действия в [!INCLUDE[wf](../../../../includes/wf-md.md)].  
+Этот раздел содержит образцы, демонстрирующие дополнительные пользовательские действия в Windows Workflow Foundation (WF).  
   
 ## <a name="in-this-section"></a>В этом разделе  
  [Действие политики в .NET Framework 4.5](../../../../docs/framework/windows-workflow-foundation/samples/policy-activity-in-net-framework-4-5.md)  
- Демонстрирует, как действие Policy4 позволяет использовать объекты [!INCLUDE[wf2](../../../../includes/wf2-md.md)] в объектах [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] (WF 3.5) <xref:System.Workflow.Activities.Rules.RuleSet> в [!INCLUDE[wf2](../../../../includes/wf2-md.md)] в [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] (WF 4.5) непосредственно, посредством применения правил, установленных в WF 3.5.  
+ Демонстрирует, как действие Policy4 позволяет Windows Workflow Foundation в [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] (WF 3.5) <xref:System.Workflow.Activities.Rules.RuleSet> объектов для использования в Windows Workflow Foundation в [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] (WF 4.5) непосредственно с помощью этого обработчик правил, установленных в WF 3.5.  
   
  [Настраиваемое действие для переключения в диапазоне значений](../../../../docs/framework/windows-workflow-foundation/samples/custom-activity-to-switch-on-a-range-of-values.md)  
  Демонстрирует создание настраиваемого действия, которое расширяет использование утверждения <xref:System.Activities.Statements.Switch%601>.  
@@ -57,7 +40,7 @@ ms.lasthandoff: 12/22/2017
  Демонстрирует, что действие `ThrottleParallelForEach` аналогично действию <xref:System.Activities.Statements.ParallelForEach%601> за одним исключением, которое позволяет настроить фактор одновременности для ограничения количества одновременно выполняющихся ветвей.  
   
  [Действия с сущностями](../../../../docs/framework/windows-workflow-foundation/samples/entity-activities.md)  
- Демонстрирует способ использования ADO.NET Entity Framework с [!INCLUDE[wf2](../../../../includes/wf2-md.md)] для упрощения доступа к данным.  
+ Демонстрирует использование платформы ADO.NET Entity Framework с Windows Workflow Foundation для упрощения доступа к данным.  
   
  [Действия доступа к базе данных](../../../../docs/framework/windows-workflow-foundation/samples/database-access-activities.md)  
  Демонстрируется создание действий, позволяющих доступ к базам данных, чтобы вернуть или изменить сведения, а также использовать [ADO.NET](http://go.microsoft.com/fwlink/?LinkId=166081) для доступа к базе данных.  
@@ -66,7 +49,7 @@ ms.lasthandoff: 12/22/2017
  Демонстрирует способ записи пользовательского действия, которое удаляет другие действия из пути выполнения посредством преобразования их в комментарии.  
   
  [Реализованное действие политики в .NET Framework 4.5](../../../../docs/framework/windows-workflow-foundation/samples/externalized-policy-activity-in-net-framework-4-5.md)  
- Демонстрирует, как с помощью действия ExternalizedPolicy4 можно непосредственно выполнять существующие объекты [!INCLUDE[wf2](../../../../includes/wf2-md.md)] в [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] (WF 3.5) <xref:System.Workflow.Activities.Rules.RuleSet> в [!INCLUDE[wf2](../../../../includes/wf2-md.md)] в [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] (WF 4.5), используя для этого обработчик правил, входящий в комплект поставки WF 3.5.  
+ Демонстрирует, как действия ExternalizedPolicy4 можно выполнять существующие Windows Workflow Foundation в [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] (WF 3.5) <xref:System.Workflow.Activities.Rules.RuleSet> объектов в Windows Workflow Foundation в [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] (WF 4.5) непосредственно с помощью правила ядра, поставляется в WF 3.5.  
   
  [Действие NoPersistScope](../../../../docs/framework/windows-workflow-foundation/samples/nopersistscope-activity.md)  
  Демонстрирует способ обработки несериализуемого и высвобождаемого состояния в рабочем процессе.  

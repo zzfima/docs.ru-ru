@@ -1,23 +1,24 @@
 ---
-title: "Процесс корпоративных закупок"
-ms.custom: 
+title: Процесс корпоративных закупок
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: a5e57336-4290-41ea-936d-435593d97055
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: bbbed0209eec95ec452385b6c78b1beb2ddfcd75
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 451698d92c47c32b45e08bdef7e88e8f04b90ed3
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="corporate-purchase-process"></a>Процесс корпоративных закупок
 Этот образец показывает, как создать очень простой запрос предложений на основе процесса покупки с автоматическим выбором наилучшего предложения. В нем совместно применяются операторы <xref:System.Activities.Statements.Parallel>, <xref:System.Activities.Statements.ParallelForEach%601> и <xref:System.Activities.Statements.ForEach%601>, а также пользовательское действие для создания рабочего потока, который представляет процесс.  
@@ -53,12 +54,12 @@ ms.lasthandoff: 12/22/2017
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите на страницу [Примеры Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все примеры [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Этот образец расположен в следующем каталоге.  
+>  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) Чтобы загрузить все [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] образцов. Этот образец расположен в следующем каталоге.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Application\PurchaseProcess`  
   
 ## <a name="description-of-the-process"></a>Описание процесса  
- В этом образце показана реализация программы [!INCLUDE[wf](../../../../includes/wf-md.md)] для сбора предложений от поставщиков в интересах типичной компании.  
+ В этом примере показана реализация программы Windows Workflow Foundation (WF) для сбора предложений от поставщиков в интересах типичной компании.  
   
 1.  Сотрудник компании X создает запрос предложений.  
   

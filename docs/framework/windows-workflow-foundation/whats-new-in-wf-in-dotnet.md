@@ -14,17 +14,17 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: b57cf990f9fdf987f4cc414cb42db6cf9fe0da21
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 4aa77a0135cea18847c4d4425171b0bdcf447988
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="what39s-new-in-windows-workflow-foundation-in-net-45"></a>Что&#39;новые возможности Windows Workflow Foundation в .NET 4.5
-[!INCLUDE[wf](../../../includes/wf-md.md)] в [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] содержит множество новых функций, включая новые действия, возможности конструктора и модели разработки рабочих процессов. Многие, хотя и не все, новые функции рабочего процесса, представленные в [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], поддерживаются в повторно размещенном конструкторе рабочих процессов. [!INCLUDE[crabout](../../../includes/crabout-md.md)] новые возможности, которые поддерживаются, см. [поддержке новых функций Workflow Foundation 4.5 в конструкторе рабочих процессов, повторно размещенными](../../../docs/framework/windows-workflow-foundation/wf-features-in-the-rehosted-workflow-designer.md). [!INCLUDE[crabout](../../../includes/crabout-md.md)] перенос .NET 3.0 и .NET 3.5 приложений рабочих процессов, чтобы использовать последнюю версию в разделе [руководство по миграции](../../../docs/framework/windows-workflow-foundation/migration-guidance.md). В этом разделе содержится общее описание новых возможностей рабочего процесса, представленных в [!INCLUDE[net_v45](../../../includes/net-v45-md.md)].  
+Windows Workflow Foundation (WF) в [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] содержит множество новых функций, включая новые действия, возможности конструктора и модели разработки рабочего процесса. Многие, хотя и не все, новые функции рабочего процесса, представленные в [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], поддерживаются в повторно размещенном конструкторе рабочих процессов. [!INCLUDE[crabout](../../../includes/crabout-md.md)] новые возможности, которые поддерживаются, см. [поддержке новых функций Workflow Foundation 4.5 в конструкторе рабочих процессов, повторно размещенными](../../../docs/framework/windows-workflow-foundation/wf-features-in-the-rehosted-workflow-designer.md). [!INCLUDE[crabout](../../../includes/crabout-md.md)] перенос .NET 3.0 и .NET 3.5 приложений рабочих процессов, чтобы использовать последнюю версию в разделе [руководство по миграции](../../../docs/framework/windows-workflow-foundation/migration-guidance.md). В этом разделе содержится общее описание новых возможностей рабочего процесса, представленных в [!INCLUDE[net_v45](../../../includes/net-v45-md.md)].  
   
 > [!WARNING]
->  Новые функции [!INCLUDE[wf2](../../../includes/wf2-md.md)], представленные в [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], недоступны для проектов, ориентированных на предыдущие версии платформы .NET Framework. Если проект, ориентированный на [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], переориентируется на предыдущую версию платформы .NET Framework, может возникнуть несколько проблем.  
+>  Новые функции Windows Workflow Foundation, представленные в [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] недоступны для проектов, предназначенных для предыдущих версий платформы. Если проект, ориентированный на [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], переориентируется на предыдущую версию платформы .NET Framework, может возникнуть несколько проблем.  
 >   
 >  -   Выражения C# заменяются в конструкторе сообщение **значение, заданное в XAML**.  
 > -   Возникнут многие ошибки сборки, включая следующую.  

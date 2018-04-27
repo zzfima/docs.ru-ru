@@ -14,17 +14,17 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 999c18f20264a71cf73bbd5afd352ad3104a03e8
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: a11a1cddbb5b65bf174cabe7774ad62791657f54
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="support-for-new-workflow-foundation-45-features-in-the-rehosted-workflow-designer"></a>Поддержка новых возможностей Workflow Foundation 4.5 во вновь размещенном конструкторе рабочих процессов
-В [!INCLUDE[wf](../../../includes/wf-md.md)] на платформе [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] появилось множество новых функций, в том числе некоторые улучшения работы конструктора рабочих процессов. В этом разделе подробно описываются те возможности, которые поддерживаются в повторно размещенном конструкторе, и те, которые в настоящее время не поддерживаются.  
+Windows Workflow Foundation (WF) в [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] появилось множество новых функций, в том числе некоторые улучшения работы конструктора рабочих процессов. В этом разделе подробно описываются те возможности, которые поддерживаются в повторно размещенном конструкторе, и те, которые в настоящее время не поддерживаются.  
   
 > [!NOTE]
->  Список всех нового [!INCLUDE[wf](../../../includes/wf-md.md)] функций, представленных в [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], включая те, которые не связаны с повторное размещение конструктора, в разделе [новые возможности Windows Workflow Foundation в .NET 4.5](../../../docs/framework/windows-workflow-foundation/whats-new-in-wf-in-dotnet.md).  
+>  Список новых возможностей Windows Workflow Foundation (WF), представленных в [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], включая те, которые не связаны с повторное размещение конструктора, в разделе [новые возможности Windows Workflow Foundation в .NET 4.5](../../../docs/framework/windows-workflow-foundation/whats-new-in-wf-in-dotnet.md).  
   
 ## <a name="activities"></a>Действия  
  Встроенная библиотека действий содержит новые действия, а также новые функции для существующих действий. Все эти действия поддерживаются в повторно размещенном конструкторе. Дополнительные сведения об этих новых действиях см. в разделе [действия](../../../docs/framework/windows-workflow-foundation/whats-new-in-wf-in-dotnet.md#BKMK_NewActivities) раздел [новые возможности Windows Workflow Foundation в .NET 4.5](../../../docs/framework/windows-workflow-foundation/whats-new-in-wf-in-dotnet.md).  

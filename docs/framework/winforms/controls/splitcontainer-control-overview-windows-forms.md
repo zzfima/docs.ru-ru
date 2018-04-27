@@ -1,36 +1,36 @@
 ---
-title: "Общие сведения об элементе управления SplitContainer (Windows Forms)"
-ms.custom: 
+title: Общие сведения об элементе управления SplitContainer (Windows Forms)
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-winforms
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - SplitContainer
 helpviewer_keywords:
 - SplitContainer control [Windows Forms], about SplitContainer control
 ms.assetid: 6de5a5f7-97a5-402d-be6d-7e2785483db5
-caps.latest.revision: 
+caps.latest.revision: 11
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 7d2e538241cca8288158628df777895fae9aa756
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: a553ea1b6dae24b4a0c3bd169edccbd9b52c5203
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="splitcontainer-control-overview-windows-forms"></a>Общие сведения об элементе управления SplitContainer (Windows Forms)
 Элемент управления Windows Forms <xref:System.Windows.Forms.SplitContainer> состоит из двух панелей, разделенных подвижной полосой. При наведении указателя мыши на полосу его форма изменяется, показывая, что полоса является перемещаемой.  
   
 > [!IMPORTANT]
->  В **элементов**, <xref:System.Windows.Forms.SplitContainer> элемент управления заменяет <xref:System.Windows.Forms.Splitter> , присутствующий в предыдущей версии [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)]. Элемент управления <xref:System.Windows.Forms.SplitContainer> намного предпочтительнее, чем элемент управления <xref:System.Windows.Forms.Splitter>. <xref:System.Windows.Forms.Splitter> Класс по-прежнему включен в [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] для обеспечения совместимости с существующими приложениями, но настоятельно рекомендуется использовать <xref:System.Windows.Forms.SplitContainer> управления для новых проектов.  
+>  В **элементов**, <xref:System.Windows.Forms.SplitContainer> элемент управления заменяет <xref:System.Windows.Forms.Splitter> , присутствующий в предыдущей версии Visual Studio. Элемент управления <xref:System.Windows.Forms.SplitContainer> намного предпочтительнее, чем элемент управления <xref:System.Windows.Forms.Splitter>. <xref:System.Windows.Forms.Splitter> Класс по-прежнему включен в [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] для обеспечения совместимости с существующими приложениями, но настоятельно рекомендуется использовать <xref:System.Windows.Forms.SplitContainer> управления для новых проектов.  
   
  С <xref:System.Windows.Forms.SplitContainer> элемента управления, можно создавать сложные пользовательские интерфейсы; часто выбор на одной панели определяет объекты, отображаемые на панели «». Такой подход является весьма эффективным для отображения и просмотра информации. Две панели для сбора информации в областях и панель или «, «разделитель упрощают изменение размера панелей.  
   
@@ -51,7 +51,7 @@ ms.lasthandoff: 01/19/2018
   
 ## <a name="commonly-used-properties-methods-and-events"></a>Часто используемые свойства, методы и события  
   
-|name|Описание:|  
+|name|Описание|  
 |----------|-----------------|  
 |Свойство <xref:System.Windows.Forms.SplitContainer.FixedPanel%2A>|Определяет, какая панель останется тем же размером после <xref:System.Windows.Forms.SplitContainer> размер элемента управления.|  
 |Свойство <xref:System.Windows.Forms.SplitContainer.IsSplitterFixed%2A>|Определяет, если разделитель может быть перемещен с помощью клавиатуры или мыши.|  

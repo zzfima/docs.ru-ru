@@ -1,24 +1,26 @@
 ---
-title: "Загрузка примеров баз данных (LINQ to DataSet)"
-ms.custom: 
+title: Загрузка примеров баз данных (LINQ to DataSet)
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: eb42a7af-d410-4b7f-b4a8-13c72ce6fd09
-caps.latest.revision: "2"
+caps.latest.revision: 2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: c8c1c2dabb13393764ca8b1fd9c1a717b9e2527e
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 8e19e51ecf4868d0d49e26b4aafd7e8b3840992d
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="downloading-sample-databases-linq-to-dataset"></a>Загрузка примеров баз данных (LINQ to DataSet)
 Примеры и пошаговые руководства в [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] документации используется образец базы данных AdventureWorks. Этот продукт можно бесплатно загрузить с веб-сайта загрузки Майкрософт. Образцы и пошаговые руководства в документации по [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] используют в качестве хранилища данных SQL Server. Вместо SQL Server можно использовать SQL Server Express Edition, который доступен для бесплатной загрузки.  
@@ -74,7 +76,7 @@ ms.lasthandoff: 01/17/2018
      Если файлы были установлены на другой диск или в другой каталог, нужно исправить соответствующие пути перед выполнением хранимой процедуры `sp_attach_db`.  
   
 ## <a name="downloading-sql-server-express-edition"></a>Загрузка SQL Server Express Edition  
- Примеры и пошаговые руководства в [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] раздела, используемая в качестве хранилища данных SQL Server 2005, но можно изменить, чтобы вместо этого используйте SQL Server Express Edition,. SQL Server Express Edition доступен бесплатно и его можно распространять вместе с приложениями. Если используется среда [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)], то SQL Server Express входит в состав выпуска Pro и выпусков с более широкими возможностями.  
+ Примеры и пошаговые руководства в [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] раздела, используемая в качестве хранилища данных SQL Server 2005, но можно изменить, чтобы вместо этого используйте SQL Server Express Edition,. SQL Server Express Edition доступен бесплатно и его можно распространять вместе с приложениями. При использовании Visual Studio, SQL Server Express Edition включается в выпусках Pro и более поздних версий.  
   
 #### <a name="to-download-and-install-sql-server-express-edition"></a>Загрузка и установка выпуска SQL Server Express  
   

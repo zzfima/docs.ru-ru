@@ -16,11 +16,11 @@ ms.assetid: a0d35dc7-c5f9-4d74-92ff-a1c6f28d5235
 caps.latest.revision: 17
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 645dd4a8a9d1c78fd54f0f31ad0efd772b671d39
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
-ms.translationtype: HT
+ms.openlocfilehash: d132fa514008d072158a0e6bedaff511c55b18c0
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="documenting-your-code-with-xml-visual-basic"></a>Документирование кода с помощью XML (Visual Basic)
 В Visual Basic можно выполнять документирование кода с помощью XML  
@@ -40,7 +40,7 @@ ms.lasthandoff: 04/26/2018
   
     -   Атрибут `cref` может быть присоединен к любому тегу для предоставления ссылки на элемент кода. Компилятор проверяет, что этот элемент кода существует. Если проверка завершается ошибкой, компилятор выдает предупреждение. Компилятор также учитывает любые `Imports` инструкции при поиске типа, описанного в `cref` атрибута.  
   
-    -   \<Сводки > тег используется технологией IntelliSense в [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] для отображения дополнительных сведений о тип или член.  
+    -   \<Сводки > тег используется технологией IntelliSense в Visual Studio для отображения дополнительных сведений о тип или член.  
   
 ## <a name="related-sections"></a>Связанные разделы  
  Дополнительные сведения о создании XML-файла в комментарии документации в следующих разделах:  

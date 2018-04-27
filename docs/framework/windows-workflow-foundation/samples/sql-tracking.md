@@ -1,26 +1,27 @@
 ---
-title: "Отслеживание SQL"
-ms.custom: 
+title: Отслеживание SQL
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: bcaebeb1-b9e5-49e8-881b-e49af66fd341
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6bd8fbe1a29793778d93eeca64b185079d706f3e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 2eeb5cf57e6efac77de4a76fe8131189273d5438
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="sql-tracking"></a>Отслеживание SQL
-Этот образец показывает, как создать настраиваемый участник отслеживания SQL, который вносит записи отслеживания в базу данных SQL. [!INCLUDE[wf](../../../../includes/wf-md.md)] предоставляет отслеживание рабочего процесса для обеспечения видимости выполнения экземпляра рабочего процесса. Среда выполнения отслеживания выдает записи отслеживания рабочего процесса в ходе его выполнения. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]рабочий процесс отслеживания, в разделе [отслеживание и трассировка рабочих процессов](../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md).  
+Этот образец показывает, как создать настраиваемый участник отслеживания SQL, который вносит записи отслеживания в базу данных SQL. Windows Workflow Foundation (WF) предоставляет отслеживания рабочего процесса для обеспечения видимости выполнения экземпляра рабочего процесса. Среда выполнения отслеживания выдает записи отслеживания рабочего процесса в ходе его выполнения. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] рабочий процесс отслеживания, в разделе [отслеживание и трассировка рабочих процессов](../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md).  
   
 #### <a name="to-use-this-sample"></a>Использование этого образца  
   
@@ -43,7 +44,7 @@ ms.lasthandoff: 12/22/2017
   
 7.  В браузере отображается страница StockPriceService, содержащая адрес WSDL локальной службы. Скопируйте этот адрес.  
   
-     Примером адреса WSDL локальной службы является http://localhost:53797/StockPriceService.xamlx?wsdl.  
+     Примером адреса WSDL локальной службы является http://localhost:65193/StockPriceService.xamlx?wsdl.  
   
 8.  С помощью [!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)] запустите клиент тестирования WCF (WcfTestClient.exe). Этот файл размещается в каталоге Microsoft Visual Studio 10.0\Common7\IDE.  
   
@@ -51,7 +52,7 @@ ms.lasthandoff: 12/22/2017
   
 10. В тестовом клиенте WCF дважды щелкните **GetStockPrice**. При этом откроется `GetStockPrice` операцию, которая принимает один параметр типа в значение `Contoso` и нажмите кнопку **Invoke**.  
   
-11. Выданные записи отслеживания будут записаны в базу данных SQL. Чтобы просмотреть записи отслеживания, откройте базу данных TrackingSample в среде SQL Management Studio и перейдите в раздел просмотра таблиц. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]SQL Server Management Studio, в разделе [Знакомство с SQL Server Management Studio](http://go.microsoft.com/fwlink/?LinkId=165645). SQL Server 2008 Management Studio Express можно загрузить [здесь](http://go.microsoft.com/fwlink/?LinkId=180520). Применение запроса select для таблиц выводит соответствующие данные записей отслеживания, хранимых в соответствующих таблицах.  
+11. Выданные записи отслеживания будут записаны в базу данных SQL. Чтобы просмотреть записи отслеживания, откройте базу данных TrackingSample в среде SQL Management Studio и перейдите в раздел просмотра таблиц. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] SQL Server Management Studio, в разделе [Знакомство с SQL Server Management Studio](http://go.microsoft.com/fwlink/?LinkId=165645). SQL Server 2008 Management Studio Express можно загрузить [здесь](http://go.microsoft.com/fwlink/?LinkId=180520). Применение запроса select для таблиц выводит соответствующие данные записей отслеживания, хранимых в соответствующих таблицах.  
   
 #### <a name="to-uninstall-the-sample"></a>Удаление образца  
   
@@ -65,7 +66,7 @@ ms.lasthandoff: 12/22/2017
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите на страницу [Примеры Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все примеры [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Этот образец расположен в следующем каталоге.  
+>  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) Чтобы загрузить все [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] образцов. Этот образец расположен в следующем каталоге.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Tracking\SqlTracking`  
   

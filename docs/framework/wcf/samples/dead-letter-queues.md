@@ -1,24 +1,26 @@
 ---
-title: "Очереди недоставленных сообщений"
-ms.custom: 
+title: Очереди недоставленных сообщений
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: ff664f33-ad02-422c-9041-bab6d993f9cc
-caps.latest.revision: "35"
+caps.latest.revision: 35
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 09a41abc8bc9fc3469ba35d7c7cfbe85d05ca174
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 9892579633103f1e7a6612c09865c91c559df34c
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="dead-letter-queues"></a>Очереди недоставленных сообщений
 В этом образце показано, как обрабатывать недоставленные сообщения. Он основан на [транзакции привязки MSMQ](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md) образца. В этом примере используется привязка `netMsmqBinding`. Служба представляет собой резидентное консольное приложение, позволяющее наблюдать за получением службой сообщений из очереди.  
@@ -50,21 +52,21 @@ ms.lasthandoff: 12/22/2017
  Клиентское приложение может после этого выполнить чтение сообщений из очереди недоставленных сообщений и попытаться повторно отправить сообщение или исправить ошибку, из-за которой сообщение оказалось в очереди недоставленных сообщений, и отправить его. В этом образце клиент отображает сообщение об ошибке.  
   
  Контракт службы - `IOrderProcessor`, как показано в следующем образце кода.  
-  
-```  
+
+```csharp
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
 public interface IOrderProcessor  
 {  
     [OperationContract(IsOneWay = true)]  
     void SubmitPurchaseOrder(PurchaseOrder po);  
 }  
-```  
-  
+```
+
  Код службы в образце аналогично [транзакции привязки MSMQ](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md).  
   
  Связь с службой осуществляется в области транзакции. Служба выполняет чтение сообщений из очереди, выполняет операцию и отображает результаты операции. Также приложение создает очередь недоставленных сообщений.  
-  
-```  
+
+```csharp
 //The service contract is defined in generatedClient.cs, generated from the service by the svcutil tool.  
   
 //Client implementation code.  
@@ -117,8 +119,8 @@ class Client
         Console.ReadLine();  
     }  
 }  
-```  
-  
+```
+
  В конфигурации клиента задается короткий срок, в течение которого сообщение должно достичь службы. Если за указанное время сообщение передать не удается, его срок жизни истекает и оно помещается в очередь недоставленных сообщений.  
   
 > [!NOTE]
@@ -163,8 +165,8 @@ class Client
 >  Очередь недоставленных сообщений - это клиентская очередь, локальная для диспетчера очереди клиента.  
   
  Реализация службы недоставленных сообщений ищет причину, по которой сообщение не было доставлено, и принимает меры по исправлению ошибки. Причина ошибки доставки сообщения содержится в двух перечислениях: <xref:System.ServiceModel.Channels.MsmqMessageProperty.DeliveryFailure%2A> и <xref:System.ServiceModel.Channels.MsmqMessageProperty.DeliveryStatus%2A>. Объект <xref:System.ServiceModel.Channels.MsmqMessageProperty> можно извлечь из объекта <xref:System.ServiceModel.OperationContext>, как показано в следующем образце кода.  
-  
-```  
+
+```csharp
 public void SubmitPurchaseOrder(PurchaseOrder po)  
 {  
     Console.WriteLine("Submitting purchase order did not succed ", po);  
@@ -176,15 +178,15 @@ public void SubmitPurchaseOrder(PurchaseOrder po)
     Console.WriteLine("Message Delivery Failure: {0}",   
                                                mqProp.DeliveryFailure);  
     Console.WriteLine();  
-    ….  
-}  
-```  
-  
+    …  
+}
+```
+
  Сообщения в очереди недоставленных сообщений - это сообщения, адресованные службе, обрабатывающей сообщение. Поэтому при выполнении службой недоставленных сообщений чтения сообщений из очереди уровень канала [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] находит несоответствие конечных точек и не отправляет сообщение. В этом случае сообщение адресуется службе, обрабатывающей заказы, но доставляется оно службе недоставленных сообщений. Для получения сообщений, адресованных другой конечной точке, в `ServiceBehavior` задается фильтр адресов, соответствующий любому адресу. Это необходимо для успешной обработки сообщений, считываемых из очереди недоставленных сообщений.  
   
  В этом образце служба недоставленных сообщений повторно отправляет сообщение, если причина ошибки заключалась в истечении срока жизни сообщения. Для любых других причин она отображает сообщение об ошибке доставки, как показано в следующем образце кода:  
-  
-```  
+
+```csharp
 // Service class that implements the service contract.  
 // Added code to write output to the console window.  
 [ServiceBehavior(InstanceContextMode=InstanceContextMode.Single, ConcurrencyMode=ConcurrencyMode.Single, AddressFilterMode=AddressFilterMode.Any)]  
@@ -237,8 +239,8 @@ public class PurchaseOrderDLQService : IOrderProcessor
         }  
     }  
 }   
-```  
-  
+```
+
  В следующем образце показана конфигурация для недоставленного сообщения:  
   
 ```xml  
@@ -368,7 +370,7 @@ Processing Purchase Order: 97897eff-f926-4057-a32b-af8fb11b9bf9
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите на страницу [Примеры Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все примеры [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Этот образец расположен в следующем каталоге.  
+>  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) Чтобы загрузить все [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] образцов. Этот образец расположен в следующем каталоге.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\MSMQ\DeadLetter`  
   

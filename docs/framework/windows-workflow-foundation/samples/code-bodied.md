@@ -1,23 +1,24 @@
 ---
-title: "Образцы в коде"
-ms.custom: 
+title: Образцы в коде
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 5bfb2d95-9092-4551-9c59-bd8f0a37225e
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 1e9c0cecbf398fb024bda672cf9085e9c779d620
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 1a07ef581459585f0418cdd24660b8064d0f51b0
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="code-bodied"></a>Образцы в коде
 В этом разделе содержатся образцы настраиваемых действий, созданные декларативно в коде.  
@@ -39,7 +40,7 @@ ms.lasthandoff: 12/22/2017
  В этом образце показано, как разработать настраиваемое действие <xref:System.Activities.CodeActivity>, которое использует <xref:System.Activities.AsyncCodeActivityContext> для асинхронного выполнения работы вне рабочего процесса. 
   
  [Пользовательское действие Hello World](../../../../docs/framework/windows-workflow-foundation/samples/hello-world-custom-activity.md)  
- В этом образце показано несколько ключевых возможностей [!INCLUDE[wf](../../../../includes/wf-md.md)], включая создание простого настраиваемого действия.  
+ В этом образце показано несколько ключевых возможностей для Windows Workflow Foundation (WF), включая создание простого настраиваемого действия.  
   
  [Динамические аргументы](../../../../docs/framework/windows-workflow-foundation/samples/dynamic-arguments.md)  
  В этом образце показано, как реализовать действие, аргументы которого определяются объектом-получателем, а не автором действия.

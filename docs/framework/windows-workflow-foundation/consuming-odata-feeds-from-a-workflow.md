@@ -14,17 +14,17 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 9a01be08367fac1f7713f5db4953f67b0d32e073
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2057e2b1c03a1ebcd68d7d59be8839171305707f
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="consuming-odata-feeds-from-a-workflow"></a>Использование каналов OData из рабочего процесса
 Службы WCF Data Services являются компонентом [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] , который позволяет создавать службы, использующие протокол Open Data Protocol (OData) для передачи и получения данных через Интернет или интрасеть с помощью семантики передачи репрезентативного состояния (REST). OData предоставляет доступ к данным в виде ресурсов, которые адресуются по URI. Со службами данных, основанными на OData, может взаимодействовать любое приложение, которое способно отправить HTTP-запрос и обработать канал OData, возвращаемый службой данных. Кроме того, службы данных WCF включают в себя клиентские библиотеки, расширяющие программные возможности для доступа к каналам OData из приложений [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] . В этом разделе представлены общие сведения об использовании каналов OData в рабочем процессе как с клиентскими библиотеками, так и без них.  
   
 ## <a name="using-the-sample-northwind-odata-service"></a>Использование образца службы OData «Борей»  
- В примерах в этом разделе используется образец службы данных "Борей", доступный по адресу [http://services.odata.org/Northwind/Northwind.svc/](http://go.microsoft.com/fwlink/?LinkID=187426). Эта служба поставляется в составе [пакета SDK OData](http://go.microsoft.com/fwlink/?LinkID=185248) и предоставляет доступ только для чтения к образцу базы данных "Борей". Если необходим доступ для чтения или локальная служба данных WCF, то можно выполнить действия, описанные в [кратком руководстве по службам данных WCF](http://go.microsoft.com/fwlink/?LinkID=131076) , чтобы создать локальную службу OData, обеспечивающую доступ к базе данных "Борей". При выполнении инструкций, описанных в кратком руководстве, необходимо заменить локальный URI на тот, который указан в коде в этом разделе.  
+ В примерах в этом разделе используется образец службы данных Northwind в [ http://services.odata.org/Northwind/Northwind.svc/ ](http://go.microsoft.com/fwlink/?LinkID=187426). Эта служба поставляется в составе [пакета SDK OData](http://go.microsoft.com/fwlink/?LinkID=185248) и предоставляет доступ только для чтения к образцу базы данных "Борей". Если необходим доступ для чтения или локальная служба данных WCF, то можно выполнить действия, описанные в [кратком руководстве по службам данных WCF](http://go.microsoft.com/fwlink/?LinkID=131076) , чтобы создать локальную службу OData, обеспечивающую доступ к базе данных "Борей". При выполнении инструкций, описанных в кратком руководстве, необходимо заменить локальный URI на тот, который указан в коде в этом разделе.  
   
 ## <a name="consuming-an-odata-feed-using-the-client-libraries"></a>Использование каналов OData с применением клиентских библиотек  
  В состав служб данных WCF входят клиентские библиотеки, обеспечивающие возможность использования каналов OData из [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] и клиентских приложений. Эти библиотеки упрощают отправку и получение сообщений HTTP. Кроме того, они преобразуют полезные данные сообщений в объекты CLR, представляющие данные сущностей. Клиентские библиотеки содержат два базовых класса: <xref:System.Data.Services.Client.DataServiceContext> и <xref:System.Data.Services.Client.DataServiceQuery%601>. Эти классы позволяют отправлять запросы к службе данных и работать с возвращенными данными сущностей как с объектами CLR. В этом разделе описаны два подхода к созданию действий, в которых используются клиентские библиотеки.  
@@ -37,13 +37,13 @@ ms.lasthandoff: 12/22/2017
  Обратите внимание, что эта служба не предоставляет доступ к операциям службы, а в списке **Службы** имеются элементы, представляющие сущности, предоставляемые службой данных «Борей». При добавлении ссылки на службу для этих сущностей будут созданы классы, которые будут использоваться в клиентском коде. В примерах в этом разделе для выполнения запросов используются эти классы, а также `NorthwindEntities` .  
   
 > [!NOTE]
->  [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Создание клиентской библиотеки службы данных (службы данных WCF)](http://go.microsoft.com/fwlink/?LinkID=191611).  
+>  [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Создание клиентской библиотеки службы данных (службы данных WCF)](http://go.microsoft.com/fwlink/?LinkID=191611).  
   
 ### <a name="using-asynchronous-methods"></a>Использование асинхронных методов  
- Для разрешения возможных проблем с задержками, которые могут произойти при обращении к ресурсам через Интернет, рекомендуется производить обращения к службам данных WCF асинхронно. Клиентские библиотеки служб данных WCF включают в себя асинхронные методы для вызова запросов, а [!INCLUDE[wf](../../../includes/wf-md.md)] предоставляет класс <xref:System.Activities.AsyncCodeActivity> для создания асинхронных действий. Можно написать действия, производные от<xref:System.Activities.AsyncCodeActivity> , чтобы пользоваться всеми преимуществами классов [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] с асинхронными методами, или код, выполняемый асинхронно, можно поместить в метод и вызывать с помощью делегата. В этом разделе приводятся два примера действия, являющегося производным от <xref:System.Activities.AsyncCodeActivity> , - одно из них использует асинхронные методы клиентских библиотек служб данных WCF, а второе - делегат.  
+ Для разрешения возможных проблем с задержками, которые могут произойти при обращении к ресурсам через Интернет, рекомендуется производить обращения к службам данных WCF асинхронно. Библиотеки клиента служб данных WCF включают в себя асинхронные методы для вызова запросов, и Windows Workflow Foundation (WF) предоставляет <xref:System.Activities.AsyncCodeActivity> класс для создания асинхронных действий. Можно написать действия, производные от<xref:System.Activities.AsyncCodeActivity> , чтобы пользоваться всеми преимуществами классов [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] с асинхронными методами, или код, выполняемый асинхронно, можно поместить в метод и вызывать с помощью делегата. В этом разделе приводятся два примера действия, являющегося производным от <xref:System.Activities.AsyncCodeActivity> , - одно из них использует асинхронные методы клиентских библиотек служб данных WCF, а второе - делегат.  
   
 > [!NOTE]
->  [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Асинхронные операции (службы данных WCF)](http://go.microsoft.com/fwlink/?LinkId=193396) и [создание асинхронных действий](../../../docs/framework/windows-workflow-foundation/creating-asynchronous-activities-in-wf.md).  
+>  [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Асинхронные операции (службы данных WCF)](http://go.microsoft.com/fwlink/?LinkId=193396) и [создание асинхронных действий](../../../docs/framework/windows-workflow-foundation/creating-asynchronous-activities-in-wf.md).  
   
 ### <a name="using-client-library-asynchronous-methods"></a>Использование асинхронных методов клиентских библиотек  
  Класс <xref:System.Data.Services.Client.DataServiceQuery%601> предусматривает методы <xref:System.Data.Services.Client.DataServiceQuery%601.BeginExecute%2A> и <xref:System.Data.Services.Client.DataServiceQuery%601.EndExecute%2A> для асинхронных запросов службы OData. Эти методы могут быть вызваны из переопределений <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> и <xref:System.Activities.AsyncCodeActivity.EndExecute%2A> класса, производного от <xref:System.Activities.AsyncCodeActivity> . Когда переопределение <xref:System.Activities.AsyncCodeActivity> <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> возвращает управление, рабочий процесс может перейти в состояние простоя (при этом он не будет сохранен), а после завершения асинхронных операций <xref:System.Activities.AsyncCodeActivity.EndExecute%2A> вызывается средой выполнения.  
@@ -78,7 +78,7 @@ ms.lasthandoff: 12/22/2017
  В следующем примере определяется действие `ListCustomers` . Это действие отправляет запрос к образцу службы данных «Борей» и возвращает список `List<Customer>` , содержащий всех клиентов в базе данных «Борей». Асинхронные операции выполняются методом `GetCustomers` . Этот метод отправляет запрос к службе для всех клиентов, а затем копирует их в `List<Customer>`. После этого выполняется проверка для подтверждения разбиения на страницы результатов. Если результаты разбиты на страницы, то отправляется запрос к службе для получения следующей страницы результатов, они добавляются к списку и эти операции выполняются до получения всех данных клиентов.  
   
 > [!NOTE]
->  [!INCLUDE[crabout](../../../includes/crabout-md.md)]разбиении на страницы в службах данных WCF см. в разделе. [Практическое руководство. Загрузка результатов, разбитых на страницы (службы данных WCF)](http://go.microsoft.com/fwlink/?LinkId=193452).  
+>  [!INCLUDE[crabout](../../../includes/crabout-md.md)] разбиении на страницы в службах данных WCF см. в разделе. [Практическое руководство. Загрузка результатов, разбитых на страницы (службы данных WCF)](http://go.microsoft.com/fwlink/?LinkId=193452).  
   
  После добавления всех клиентов возвращается список. Метод `GetCustomers` указывается в переопределении действия <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> . Поскольку у метода имеется возвращаемое значение, то для его указания создается `Func<string, List<Customer>>` .  
   
@@ -111,7 +111,7 @@ ms.lasthandoff: 12/22/2017
   
  **Возвращенные необработанные данные:**  
 **\<? версия xml = «1.0» encoding = «utf-8» standalone = «yes»? >**   
-**\<ContactName xmlns = «http://schemas.microsoft.com/ado/2007/08/dataservices» > Maria Anders\</ContactName >** в рабочем процессе код из этого примера может быть включен в <xref:System.Activities.CodeActivity.Execute%2A> переопределение <xref:System.Activities.CodeActivity>-настраиваемого действия на основе, но те же функциональные возможности, также может быть выполнено с помощью <xref:System.Activities.Expressions.InvokeMethod%601> действия. Действие <xref:System.Activities.Expressions.InvokeMethod%601> позволяет создателю рабочего процесса вызывать статические методы и методы экземпляра класса. Кроме того, поддерживается асинхронный вызов указанного метода. В следующем примере действие <xref:System.Activities.Expressions.InvokeMethod%601> настраивается для вызова метода <xref:System.Net.WebClient.DownloadString%2A> класса <xref:System.Net.WebClient> и возвращает список клиентов.  
+**\<ContactName xmlns =»http://schemas.microsoft.com/ado/2007/08/dataservices«> Maria Anders\</ContactName >** в рабочем процессе код из этого примера может быть включен в <xref:System.Activities.CodeActivity.Execute%2A> переопределение <xref:System.Activities.CodeActivity>-на основе пользовательского действия, но одинаковыми функциональные возможности можно также с помощью <xref:System.Activities.Expressions.InvokeMethod%601> действия. Действие <xref:System.Activities.Expressions.InvokeMethod%601> позволяет создателю рабочего процесса вызывать статические методы и методы экземпляра класса. Кроме того, поддерживается асинхронный вызов указанного метода. В следующем примере действие <xref:System.Activities.Expressions.InvokeMethod%601> настраивается для вызова метода <xref:System.Net.WebClient.DownloadString%2A> класса <xref:System.Net.WebClient> и возвращает список клиентов.  
   
  [!code-csharp[CFX_WCFDataServicesActivityExample#3](../../../samples/snippets/csharp/VS_Snippets_CFX/CFX_WCFDataServicesActivityExample/cs/Program.cs#3)]  
   
@@ -125,22 +125,22 @@ ms.lasthandoff: 12/22/2017
 **Возвращенные необработанные данные:**   
 **\<? версия xml = «1.0» encoding = «utf-8» standalone = «yes»? >**   
 **\<веб-канала**   
- **XML: Base = «http://services.odata.org/Northwind/Northwind.svc/»**  
- **xmlns:d = «http://schemas.microsoft.com/ado/2007/08/dataservices»**  
- **xmlns:m = «http://schemas.microsoft.com/ado/2007/08/dataservices/metadata»**  
- **xmlns = «http://www.w3.org/2005/Atom» >**  
+ **XML: Base =»http://services.odata.org/Northwind/Northwind.svc/"**  
+ **xmlns:d =»http://schemas.microsoft.com/ado/2007/08/dataservices"**  
+ **xmlns:m =»http://schemas.microsoft.com/ado/2007/08/dataservices/metadata"**  
+ **xmlns =»http://www.w3.org/2005/Atom«>**  
  **\<Тип Title = «text» > заказы \< /title >**  
- **\<id>http://services.odata.org/Northwind/Northwind.svc/Customers('ALFKI')/Orders\</id>**  
+ **\<Идентификатор >http://services.odata.org/Northwind/Northwind.svc/Customers(«ALFKI») и упорядочивает\</id >**  
  **\<Обновить > 2010-05-19T19:37:07Z\</ обновить >**  
  **\<связать rel = «self» title = «Orders» href = «Orders» / >**  
  **\<запись >**  
- **\<id>http://services.odata.org/Northwind/Northwind.svc/Orders(10643)\</id>**  
+ **\<Идентификатор >http://services.odata.org/Northwind/Northwind.svc/Orders(10643)\</id >**  
  **\<Тип Title = «text» > \< /title >**  
  **\<Обновить > 2010-05-19T19:37:07Z\</ обновить >**  
  **\<Автор >**  
  **\<имя / >**  
  **\</ author >**  
  **\<связать rel = «edit» title = «Order» href="Orders(10643)» / >**  
- **\<связать rel = «http://schemas.microsoft.com/ado/2007/08/dataservices/related/Customer»**  
+ **\<связать rel =»http://schemas.microsoft.com/ado/2007/08/dataservices/related/Customer"**  
  **Тип =» приложения/atom + xml; введите = запись» title = «Customer» href = «Заказы (10643) или клиента» / >**  
 **...**  В этом примере представлен один метод, который разработчики приложений рабочих процессов могут использовать для работы с необработанными данными, полученными от службы OData. [!INCLUDE[crabout](../../../includes/crabout-md.md)] доступе к службам данных WCF с использованием URI см. в разделах [Доступ к ресурсам службы данных (службы данных WCF)](http://go.microsoft.com/fwlink/?LinkId=193397) и [OData: URI Conventions (OData: соглашения по URI)](http://go.microsoft.com/fwlink/?LinkId=185564).

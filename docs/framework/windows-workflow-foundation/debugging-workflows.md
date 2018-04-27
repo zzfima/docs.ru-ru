@@ -14,11 +14,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 788cc6b25e4faa8a680f5ec23d88a5d18d0a7c87
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 866fe3ebcec295b57444f937b3b6fd6677bfe0f4
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="debugging-workflows"></a>Отладка рабочих процессов
 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] обеспечивает несколько возможностей отладки выполняемых рабочих процессов из среды разработки. Отладку рабочих процессов можно выполнять в конструкторе, XAML или в коде.  
@@ -36,7 +36,7 @@ ms.lasthandoff: 04/26/2018
  Отладка рабочих процессов поддерживает также использование инфраструктуры Visual Studio для присоединения к процессу. Это позволяет автору рабочего процесса выполнять отладку рабочего процесса, запущенного в другой среде узла, например в службах IIS 7.0.  
   
 ## <a name="remote-debugging"></a>Remote Debugging  
- [!INCLUDE[wf](../../../includes/wf-md.md)] Удаленная отладка работает так же, как у удаленной отладки для других компонентов Visual Studio. Сведения об использовании удаленной отладки см. в разделе [как: Включение удаленной отладки](http://go.microsoft.com/fwlink/?LinkId=196257).  
+ Удаленная отладка в Windows Workflow Foundation (WF) работает так же, как у удаленной отладки для других компонентов Visual Studio. Сведения об использовании удаленной отладки см. в разделе [как: Включение удаленной отладки](http://go.microsoft.com/fwlink/?LinkId=196257).  
   
 > [!NOTE]
 >  Если приложение рабочего процесса предназначено x86 архитектуры, а размещается на компьютере под управлением 64-разрядной операционной системы, удаленная отладка не будет работать, если не установлена среда Visual Studio на удаленном компьютере или изменении целевой для приложения рабочего процесса **Любой ЦП**.  

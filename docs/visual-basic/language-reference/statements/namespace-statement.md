@@ -21,18 +21,18 @@ ms.assetid: a31fbd95-9ace-4c3d-bbb1-51222a2272b2
 caps.latest.revision: 39
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 9863286a8eda2559ab678c77a81cc7d6063c3e3d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 90eb33bdbc01afc983869c919f9d7b2feab44037
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="namespace-statement"></a>Оператор Namespace
 Объявляет имя пространства имен и вызывает исходный код ниже объявления для компиляции в этом пространстве имен.  
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```vb  
 Namespace [Global.] { name | name.name }  
     [ componenttypes ]  
 End Namespace  
@@ -40,13 +40,13 @@ End Namespace
   
 ## <a name="parts"></a>Части  
  Global  
- Необязательно. Позволяет определить пространство имен из корневого пространства имен проекта. В разделе [пространства имен в Visual Basic](../../../visual-basic/programming-guide/program-structure/namespaces.md).  
+ Необязательный. Позволяет определить пространство имен из корневого пространства имен проекта. В разделе [пространства имен в Visual Basic](../../../visual-basic/programming-guide/program-structure/namespaces.md).  
   
  `name`  
- Обязательный. Уникальное имя, которое определяет пространство имен. Должен быть допустимым идентификатором Visual Basic. Дополнительные сведения см. в разделе [имена объявленных элементов](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).  
+ Обязательно. Уникальное имя, которое определяет пространство имен. Должен быть допустимым идентификатором Visual Basic. Дополнительные сведения см. в разделе [имена объявленных элементов](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).  
   
  `componenttypes`  
- Необязательно. Элементы, составляющие пространство имен. Возможные, но не ограничиваются, перечисления, структуры, интерфейсы, классы, модули, делегаты и другие пространства имен.  
+ Необязательный. Элементы, составляющие пространство имен. Возможные, но не ограничиваются, перечисления, структуры, интерфейсы, классы, модули, делегаты и другие пространства имен.  
   
  `End Namespace`  
  Завершает `Namespace` блока.  

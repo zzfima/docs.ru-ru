@@ -1,13 +1,13 @@
 ---
-title: "Использование класса XmlSerializer"
-ms.custom: 
+title: Использование класса XmlSerializer
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - XmlSerializer [WCF], using
 ms.assetid: c680602d-39d3-44f1-bf22-8e6654ad5069
-caps.latest.revision: 
+caps.latest.revision: 26
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: bc1ede649a68747461882dfe607214bfb06b2ec3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c541c44f0043000ccd4e7edb0d38eba2c66d0844
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="using-the-xmlserializer-class"></a>Использование класса XmlSerializer
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] может использовать две разные технологии сериализации для преобразования данных в приложении в XML-код, который передается между клиентами и службами - этот процесс называется сериализацией.  
@@ -45,12 +45,12 @@ ms.lasthandoff: 12/22/2017
   
  Множество типов [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] попадает в последние две категории и поэтому является сериализуемым. Массивы сериализуемых типов также являются сериализуемыми. Полный список см. в разделе [указание входящий трафик передачи данных в контрактах служб](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md).  
   
- Рекомендуемым способом написания новых служб <xref:System.Runtime.Serialization.DataContractSerializer> является использование [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] совместно с типами контракта данных. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Использование контрактов данных](../../../../docs/framework/wcf/feature-details/using-data-contracts.md).  
+ Рекомендуемым способом написания новых служб <xref:System.Runtime.Serialization.DataContractSerializer> является использование [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] совместно с типами контракта данных. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Использование контрактов данных](../../../../docs/framework/wcf/feature-details/using-data-contracts.md).  
   
 ## <a name="when-to-use-the-xmlserializer-class"></a>Когда использовать класс XmlSerializer  
  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] также поддерживает класс <xref:System.Xml.Serialization.XmlSerializer>. Класс <xref:System.Xml.Serialization.XmlSerializer> не является уникальным в [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Это тот же модуль сериализации, который используется в веб-службах [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]. Класс <xref:System.Xml.Serialization.XmlSerializer> поддерживает более узкий набор типов по сравнению с классом <xref:System.Runtime.Serialization.DataContractSerializer>, но позволяет более четко контролировать получаемый XML-код и более полно поддерживает стандарт языка определения схемы XML (XSD). Кроме того, данный класс не требует никаких декларативных атрибутов на сериализуемых типах. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] в разделе «Сериализация XML» документации по [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]. Класс <xref:System.Xml.Serialization.XmlSerializer> не поддерживает типы контрактов данных.  
   
- Если программа Svcutil.exe или **добавить ссылку на службу** компонентов в [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] для создания кода клиента для службы сторонних разработчиков или для доступа к схеме сторонних разработчиков, для вас автоматически выбирается соответствующий сериализатор. Если схема не совместима с <xref:System.Runtime.Serialization.DataContractSerializer>, выбирается <xref:System.Xml.Serialization.XmlSerializer>.  
+ Если программа Svcutil.exe или **добавить ссылку на службу** для вас автоматически включена функция в Visual Studio для создания кода клиента для службы сторонних разработчиков или для доступа к схеме сторонних разработчиков, соответствующий сериализатор. Если схема не совместима с <xref:System.Runtime.Serialization.DataContractSerializer>, выбирается <xref:System.Xml.Serialization.XmlSerializer>.  
   
 ## <a name="manually-switching-to-the-xmlserializer"></a>Ручное переключение на XmlSerializer  
  Иногда может понадобиться ручное переключение на <xref:System.Xml.Serialization.XmlSerializer>. Это происходит, например, в следующих случаях:  
@@ -133,11 +133,11 @@ ms.lasthandoff: 12/22/2017
 ### <a name="schema-considerations-for-ixmlserializable-content-types"></a>Замечания по схемам для типов содержимого IXmlSerializable  
  При экспорте схемы и типа содержимого `IXmlSerializable` вызывается метод поставщика схемы. <xref:System.Xml.Schema.XmlSchemaSet> передается в метод поставщика схемы. Метод может добавить любую допустимую схему в набор схем. Набор схем содержит схему, которая уже была известна на момент экспорта схемы. Если метод поставщика схем должен добавить элемент в набор схем, он должен определить, имеется ли в наборе схема <xref:System.Xml.Schema.XmlSchema> с соответствующим пространством имен. Если это так, метод поставщика схемы должен добавить новый элемент в существующую схему `XmlSchema`. В противном случае, метод создает новый экземпляр `XmlSchema`. Это важно, если используются массивы типов `IXmlSerializable`. Например, если есть тип `IXmlSerializable`, который экспортируется как тип "A" в пространстве имен "Б", возможно, что к моменту вызова метода поставщика схем, набор схем уже содержит схему для "Б" для удержания типа "ArrayOfA".  
   
- Кроме добавления типов в <xref:System.Xml.Schema.XmlSchemaSet>, метод поставщика схемы для типов содержимого должен возвратить ненулевое значение. Метод может возвратить <xref:System.Xml.XmlQualifiedName>, указывающий имя типа схемы, которая будет использоваться для заданного типа `IXmlSerializable`. Полное имя также служит именем контракта данных и пространством имен для типа. Не разрешается возвращать тип, не существующий в наборе схем, немедленно при возврате метода поставщика. Однако предполагается, что к моменту экспорта всех типов (метод <xref:System.Runtime.Serialization.XsdDataContractExporter.Export%2A> вызывается для всех соответствующих типов <xref:System.Runtime.Serialization.XsdDataContractExporter> и выполняется доступ к свойству <xref:System.Runtime.Serialization.XsdDataContractExporter.Schemas%2A>) тип существует в наборе схем. Доступ к свойству `Schemas` до того, как были выполнены все соответствующие вызовы `Export`, может привести к созданию исключения <xref:System.Xml.Schema.XmlSchemaException>. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]процесс экспорта. в разделе [Экспорт схем из классов](../../../../docs/framework/wcf/feature-details/exporting-schemas-from-classes.md).  
+ Кроме добавления типов в <xref:System.Xml.Schema.XmlSchemaSet>, метод поставщика схемы для типов содержимого должен возвратить ненулевое значение. Метод может возвратить <xref:System.Xml.XmlQualifiedName>, указывающий имя типа схемы, которая будет использоваться для заданного типа `IXmlSerializable`. Полное имя также служит именем контракта данных и пространством имен для типа. Не разрешается возвращать тип, не существующий в наборе схем, немедленно при возврате метода поставщика. Однако предполагается, что к моменту экспорта всех типов (метод <xref:System.Runtime.Serialization.XsdDataContractExporter.Export%2A> вызывается для всех соответствующих типов <xref:System.Runtime.Serialization.XsdDataContractExporter> и выполняется доступ к свойству <xref:System.Runtime.Serialization.XsdDataContractExporter.Schemas%2A>) тип существует в наборе схем. Доступ к свойству `Schemas` до того, как были выполнены все соответствующие вызовы `Export`, может привести к созданию исключения <xref:System.Xml.Schema.XmlSchemaException>. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] процесс экспорта. в разделе [Экспорт схем из классов](../../../../docs/framework/wcf/feature-details/exporting-schemas-from-classes.md).  
   
  Метод поставщика схемы также может возвратить тип <xref:System.Xml.Schema.XmlSchemaType> для использования. Тип может быть или не быть анонимным. Если тип анонимный, схема для типа `IXmlSerializable` экспортируется как анонимный тип при каждом использовании типа `IXmlSerializable` в качестве элемента данных. Тип `IXmlSerializable` все еще имеет контракт данных и пространство имен. (Это определить, как описано в [имена контрактов данных](../../../../docs/framework/wcf/feature-details/data-contract-names.md) за исключением того, что <xref:System.Runtime.Serialization.DataContractAttribute> атрибут не может использоваться для пользовательского имени.) Если тип не анонимный, он должен быть одним из типов в наборе схем `XmlSchemaSet`. Данный случай эквивалентен возврату `XmlQualifiedName` типа.  
   
- Кроме того, для типа экспортируется глобальное объявление элемента. Если к типу не применен атрибут <xref:System.Xml.Serialization.XmlRootAttribute>, то элемент имеет те же имя и пространство имен, что и контракт данных, а его свойство nillable имеет значение `true`. Единственным исключением является схема пространства имен ("http://www.w3.org/2001/XMLSchema") - если контракт данных типа находится в данном пространстве имен, соответствующий глобальный элемент находится в пустом пространстве имен, поскольку добавлять новые элементы в схему пространства имен запрещается. Если тип имеет применяемый к нему атрибут `XmlRootAttribute`, глобальное объявление элемента экспортируется с помощью свойств <xref:System.Xml.Serialization.XmlRootAttribute.ElementName%2A>, <xref:System.Xml.Serialization.XmlRootAttribute.Namespace%2A> и <xref:System.Xml.Serialization.XmlRootAttribute.IsNullable%2A>. Значениями по умолчанию при применении атрибута `XmlRootAttribute` являются имя контракта данных, пустое пространство имен, а свойство «nillable» имеет значение `true`.  
+ Кроме того, для типа экспортируется глобальное объявление элемента. Если к типу не применен атрибут <xref:System.Xml.Serialization.XmlRootAttribute>, то элемент имеет те же имя и пространство имен, что и контракт данных, а его свойство nillable имеет значение `true`. Единственным исключением является схема пространства имен («http://www.w3.org/2001/XMLSchema») — Если контракт данных типа в этом пространстве имен, соответствующий глобальный элемент находится в пустом пространстве имен, поскольку запрещена для добавления новых элементов к пространству имен схемы. Если тип имеет применяемый к нему атрибут `XmlRootAttribute`, глобальное объявление элемента экспортируется с помощью свойств <xref:System.Xml.Serialization.XmlRootAttribute.ElementName%2A>, <xref:System.Xml.Serialization.XmlRootAttribute.Namespace%2A> и <xref:System.Xml.Serialization.XmlRootAttribute.IsNullable%2A>. Значениями по умолчанию при применении атрибута `XmlRootAttribute` являются имя контракта данных, пустое пространство имен, а свойство «nillable» имеет значение `true`.  
   
  Те же правила объявления глобального элемента применяются и к устаревшим типам наборов данных. Важно отметить, что `XmlRootAttribute` не может переопределить объявления глобальных элементов, добавленных с помощью пользовательского кода или добавленных в набор схем `XmlSchemaSet` с помощью метода поставщика схем или посредством метода `GetSchema` для устаревших типов наборов данных.  
   
@@ -150,7 +150,7 @@ ms.lasthandoff: 12/22/2017
   
 -   Реализация `ReadXml` не должна прочитывать элемент программы-оболочки. Как правило, реализация прочитывает один элемент, создаваемый методом `WriteXml`.  
   
--   При регулярной сериализации типа элемента (например, как элемента данных в контракте данных) сериализатор, как и в случае с типами содержимого, выводит элемент программы-оболочки до вызова метода `WriteXml`. Однако при сериализации типа элемента на верхнем уровне сериализатор обычно не выводит элемент-оболочку в окружение элемента, который записывается методом `WriteXml`, кроме случая, когда корневое имя и пространство имен явно заданы при конструировании сериализатора в конструкторах `DataContractSerializer` или `NetDataContractSerializer`. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Сериализации и десериализации](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md).  
+-   При регулярной сериализации типа элемента (например, как элемента данных в контракте данных) сериализатор, как и в случае с типами содержимого, выводит элемент программы-оболочки до вызова метода `WriteXml`. Однако при сериализации типа элемента на верхнем уровне сериализатор обычно не выводит элемент-оболочку в окружение элемента, который записывается методом `WriteXml`, кроме случая, когда корневое имя и пространство имен явно заданы при конструировании сериализатора в конструкторах `DataContractSerializer` или `NetDataContractSerializer`. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Сериализация и десериализация](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md).  
   
 -   При сериализации типа элемента на верхнем уровне без указания корневого имени и пространства имен во время создания <xref:System.Runtime.Serialization.XmlObjectSerializer.WriteStartObject%2A> и <xref:System.Runtime.Serialization.XmlObjectSerializer.WriteEndObject%2A> обычно не выполняют никаких операций, а <xref:System.Runtime.Serialization.XmlObjectSerializer.WriteObjectContent%2A> вызывает `WriteXml`. В данном режиме сериализуемый объект не может иметь значение `null` и не может быть назначен полиморфно. Кроме того, не может быть включено сохранение графов объектов и не может использоваться `NetDataContractSerializer`.  
   

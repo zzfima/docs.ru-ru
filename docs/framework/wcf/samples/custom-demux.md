@@ -1,24 +1,26 @@
 ---
-title: "Пользовательское демультиплексирование"
-ms.custom: 
+title: Пользовательское демультиплексирование
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: fc54065c-518e-4146-b24a-0fe00038bfa7
-caps.latest.revision: "41"
+caps.latest.revision: 41
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 540469571f06f9c2ab38f9754a40aae5a3c3b267
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 45184c2d884347baef4090ed496e22e77aab5423
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="custom-demux"></a>Пользовательское демультиплексирование
 В этом примере показано, как можно сопоставлять заголовки сообщений MSMQ с различными операциями служб, чтобы [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] служб, использующих <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> не ограничены использованием одной операции службы, как показано в [служба очереди сообщений Windows Communication Foundation](../../../../docs/framework/wcf/samples/message-queuing-to-wcf.md) и [Windows Communication Foundation для Message Queuing](../../../../docs/framework/wcf/samples/wcf-to-message-queuing.md) образцов.  
@@ -26,8 +28,8 @@ ms.lasthandoff: 12/22/2017
  В данном образце служба представляет собой резидентное консольное приложение, позволяющее наблюдать службу, получающую сообщения из очереди.  
   
  Контракт службы `IOrderProcessor` определяет одностороннюю службу, которую можно использовать с очередями.  
-  
-```  
+
+```csharp
 [ServiceContract]  
 [KnownType(typeof(PurchaseOrder))]  
 [KnownType(typeof(String))]  
@@ -39,11 +41,11 @@ public interface IOrderProcessor
     [OperationContract(IsOneWay = true, Name = "CancelPurchaseOrder")]  
     void CancelPurchaseOrder(MsmqMessage<string> ponumber);  
 }  
-```  
-  
+```
+
  У сообщения MSMQ нет заголовка Action. Из-за этого автоматически соотнести различные сообщения MSMQ с контрактами операций невозможно. Поэтому может существовать только один контракт операции. Чтобы преодолеть это ограничение, служба реализует метод <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector.SelectOperation%2A> интерфейса <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector>. Метод <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector.SelectOperation%2A> позволяет службе сопоставить данный заголовок сообщения определенной операции службы. В этом образце метка заголовка сообщения сопоставляется операциям службы. Параметр `Name` контракта операции определяет, какую операцию службы следует выполнить для данной метки сообщения. Например, если метка заголовка сообщения содержит "SubmitPurchaseOrder", вызывается операция службы "SubmitPurchaseOrder".  
-  
-```  
+
+```csharp
 public class OperationSelector : IDispatchOperationSelector  
 {  
     public string SelectOperation(ref System.ServiceModel.Channels.Message message)  
@@ -52,29 +54,29 @@ public class OperationSelector : IDispatchOperationSelector
         return property.Label;  
     }  
 }  
-```  
-  
+```
+
  Служба должна реализовывать метод <xref:System.ServiceModel.Description.IContractBehavior.ApplyDispatchBehavior%28System.ServiceModel.Description.ContractDescription%2CSystem.ServiceModel.Description.ServiceEndpoint%2CSystem.ServiceModel.Dispatcher.DispatchRuntime%29> интерфейса <xref:System.ServiceModel.Description.IContractBehavior>, как показано в следующем образце кода. Это применяет пользовательский `OperationSelector` к среде выполнения инфраструктуры службы.  
-  
-```  
+
+```csharp
 void IContractBehavior.ApplyDispatchBehavior(ContractDescription description, ServiceEndpoint endpoint, DispatchRuntime dispatch)  
 {  
     dispatch.OperationSelector = new OperationSelector();  
 }  
-```  
-  
+```
+
  Перед тем как попасть к OperationSelector, сообщение должно пройти через свойство <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.ContractFilter%2A> диспетчера. По умолчанию сообщение отклоняется, если его действие не обнаружено ни в одном контракте, реализованном службой. Чтобы избежать этого, реализуем поведение <xref:System.ServiceModel.Description.IEndpointBehavior> с именем `MatchAllFilterBehavior`, позволяющее любым сообщениям проходить через фильтр `ContractFilter`, применяя <xref:System.ServiceModel.Dispatcher.MatchAllMessageFilter> следующим образом.  
-  
-```  
+
+```csharp
 public void ApplyDispatchBehavior(ServiceEndpoint serviceEndpoint, EndpointDispatcher endpointDispatcher)  
 {  
     endpointDispatcher.ContractFilter = new MatchAllMessageFilter();  
 }  
-```  
+```
   
  При получении сообщения службой используются сведения, содержащиеся в метке заголовка, и выполняется соответствующая операция службы. Тело сообщения десериализуется в объект `PurchaseOrder`, как показано в следующем образце кода.  
-  
-```  
+
+```csharp
 [OperationBehavior(TransactionScopeRequired = true, TransactionAutoComplete = true)]  
 public void SubmitPurchaseOrder(MsmqMessage<PurchaseOrder> msg)  
 {  
@@ -83,11 +85,11 @@ public void SubmitPurchaseOrder(MsmqMessage<PurchaseOrder> msg)
     po.Status = (OrderStates)statusIndexer.Next(3);  
     Console.WriteLine("Processing {0} ", po);  
 }  
-```  
-  
+```
+
  Служба является резидентной. При работе с MSMQ используемую очередь следует создавать заранее. Это можно сделать вручную или с помощью кода. В данном образце служба содержит код для проверки наличия очереди и ее создания, если очереди нет. Имя очереди считывается из файла конфигурации.  
-  
-```  
+
+```csharp
 public static void Main()  
 {  
     // Get MSMQ queue name from app settings in configuration  
@@ -115,8 +117,8 @@ public static void Main()
         serviceHost.Close();  
     }  
 }  
-```  
-  
+```
+
  Имя очереди MSMQ задается в разделе appSettings файла конфигурации.  
   
 > [!NOTE]
@@ -200,7 +202,7 @@ Purchase Order 28fc457a-1a56-4fe0-9dde-156965c21ed6 is canceled
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите на страницу [Примеры Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все примеры [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Этот образец расположен в следующем каталоге.  
+>  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) Чтобы загрузить все [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] образцов. Этот образец расположен в следующем каталоге.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\MSMQIntegration\CustomDemux`  
   

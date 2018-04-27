@@ -1,33 +1,34 @@
 ---
-title: "Процесс утверждения документа"
-ms.custom: 
+title: Процесс утверждения документа
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 9b240937-76a7-45cd-8823-7f82c34d03bd
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6b46597e16156db3d36fef97040104d8497294ca
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 45a6a6b2cd3bf790c8170cef6a6111ee7dd0b27b
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="document-approval-process"></a>Процесс утверждения документа
-В данном образце демонстрируется, как совместно использовать функции [!INCLUDE[wf](../../../../includes/wf-md.md)] и [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. Вместе они реализуют сценарий утверждения документов. Клиентское приложение может представлять документы на утверждение и утверждать документы. Диспетчер утверждений облегчает взаимодействие между клиентами и обеспечивает соблюдение порядка утверждения. Утверждение - это рабочий процесс, который может выполняться несколькими способами. Поддерживается единичное утверждение, утверждение кворумом (частью группы утверждающих) и составное утверждение, состоящее из утверждения кворумом и следующего за ним единичного утверждения.  
+В этом примере демонстрируется использование из многих Windows Workflow Foundation (WF) и [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] совместно. Вместе они реализуют сценарий утверждения документов. Клиентское приложение может представлять документы на утверждение и утверждать документы. Диспетчер утверждений облегчает взаимодействие между клиентами и обеспечивает соблюдение порядка утверждения. Утверждение - это рабочий процесс, который может выполняться несколькими способами. Поддерживается единичное утверждение, утверждение кворумом (частью группы утверждающих) и составное утверждение, состоящее из утверждения кворумом и следующего за ним единичного утверждения.  
   
 > [!IMPORTANT]
 >  Образцы уже могут быть установлены на компьютере. Перед продолжением проверьте следующий каталог (по умолчанию).  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите на страницу [Примеры Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все примеры [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Этот образец расположен в следующем каталоге.  
+>  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) Чтобы загрузить все [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] образцов. Этот образец расположен в следующем каталоге.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Application\DocumentApprovalProcess`  
   

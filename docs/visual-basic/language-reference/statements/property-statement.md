@@ -2,9 +2,10 @@
 title: Property Statement
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - vb.PropertySet
@@ -16,21 +17,21 @@ helpviewer_keywords:
 - property procedures [Visual Basic], Property statements
 - Property keyword [Visual Basic]
 ms.assetid: 3155edaf-8ebd-45c6-9cef-11d5d2dc8d38
-caps.latest.revision: "41"
+caps.latest.revision: 41
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: af4666ecb059f141480be2295055644537819293
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 558b62dd8c676532355ef12134ad8cb803b70796
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="property-statement"></a>Property Statement
 Объявляет имя свойства и процедуры свойств, используемых для хранения и извлечения значения свойства.  
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```vb  
 [ <attributelist> ] [ Default ] [ accessmodifier ]   
 [ propertymodifiers ] [ Shared ] [ Shadows ] [ ReadOnly | WriteOnly ] [ Iterator ]  
 Property name ( [ parameterlist ] ) [ As returntype ] [ Implements implementslist ]  
@@ -51,11 +52,11 @@ Property name ( [ parameterlist ] ) [ As returntype ] [ Implements implementslis
   
 -   `attributelist`  
   
-     Необязательно. Список атрибутов, которые применяются к этому свойству или `Get` или `Set` процедуры. В разделе [список атрибутов](../../../visual-basic/language-reference/statements/attribute-list.md).  
+     Необязательный. Список атрибутов, которые применяются к этому свойству или `Get` или `Set` процедуры. В разделе [список атрибутов](../../../visual-basic/language-reference/statements/attribute-list.md).  
   
 -   `Default`  
   
-     Необязательно. Указывает, что это свойство является свойством по умолчанию для класса или структуры, в которой она определена. Свойства по умолчанию, должен принимать параметры и можно задавать и получать без указания имени свойства. Если объявляется свойство как `Default`, нельзя использовать `Private` для свойства или любой из его процедур.  
+     Необязательный. Указывает, что это свойство является свойством по умолчанию для класса или структуры, в которой она определена. Свойства по умолчанию, должен принимать параметры и можно задавать и получать без указания имени свойства. Если объявляется свойство как `Default`, нельзя использовать `Private` для свойства или любой из его процедур.  
   
 -   `accessmodifier`  
   
@@ -75,7 +76,7 @@ Property name ( [ parameterlist ] ) [ As returntype ] [ Implements implementslis
   
 -   `propertymodifiers`  
   
-     Необязательно. Ниже указаны доступные значения.  
+     Необязательный. Ниже указаны доступные значения.  
   
     -   [Перегрузки](../../../visual-basic/language-reference/modifiers/overloads.md)  
   
@@ -93,31 +94,31 @@ Property name ( [ parameterlist ] ) [ As returntype ] [ Implements implementslis
   
 -   `Shared`  
   
-     Необязательно. В разделе [общих](../../../visual-basic/language-reference/modifiers/shared.md).  
+     Необязательный. В разделе [общих](../../../visual-basic/language-reference/modifiers/shared.md).  
   
 -   `Shadows`  
   
-     Необязательно. В разделе [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).  
+     Необязательный. В разделе [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).  
   
 -   `ReadOnly`  
   
-     Необязательно. В разделе [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md).  
+     Необязательный. В разделе [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md).  
   
 -   `WriteOnly`  
   
-     Необязательно. В разделе [WriteOnly](../../../visual-basic/language-reference/modifiers/writeonly.md).  
+     Необязательный. В разделе [WriteOnly](../../../visual-basic/language-reference/modifiers/writeonly.md).  
   
 -   `Iterator`  
   
-     Необязательно. В разделе [итератор](../../../visual-basic/language-reference/modifiers/iterator.md).  
+     Необязательный. В разделе [итератор](../../../visual-basic/language-reference/modifiers/iterator.md).  
   
 -   `name`  
   
-     Обязательный. Имя свойства. В разделе [имена объявленных элементов](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).  
+     Обязательно. Имя свойства. В разделе [имена объявленных элементов](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).  
   
 -   `parameterlist`  
   
-     Необязательно. Список имен локальных переменных, представляющих параметры этого свойства и возможные дополнительные параметры `Set` процедуры. В разделе [список параметров](../../../visual-basic/language-reference/statements/parameter-list.md).  
+     Необязательный. Список имен локальных переменных, представляющих параметры этого свойства и возможные дополнительные параметры `Set` процедуры. В разделе [список параметров](../../../visual-basic/language-reference/statements/parameter-list.md).  
   
 -   `returntype`  
   
@@ -125,7 +126,7 @@ Property name ( [ parameterlist ] ) [ As returntype ] [ Implements implementslis
   
 -   `Implements`  
   
-     Необязательно. Указывает, что это свойство реализует один или несколько свойств, каждая из которых определена в интерфейс, реализуемый это свойство классом или структурой. В разделе [реализует оператор](../../../visual-basic/language-reference/statements/implements-statement.md).  
+     Необязательный. Указывает, что это свойство реализует один или несколько свойств, каждая из которых определена в интерфейс, реализуемый это свойство классом или структурой. В разделе [реализует оператор](../../../visual-basic/language-reference/statements/implements-statement.md).  
   
 -   `implementslist`  
   
@@ -139,16 +140,16 @@ Property name ( [ parameterlist ] ) [ As returntype ] [ Implements implementslis
   
     |Отделение|Описание|  
     |---|---|  
-    |`interface`|Обязательный. Имя интерфейса, реализуемого этим свойством, содержащего класса или структуры.|  
-    |`definedname`|Обязательный. Имя, с помощью которого это свойство определено в `interface`.|  
+    |`interface`|Обязательно. Имя интерфейса, реализуемого этим свойством, содержащего класса или структуры.|  
+    |`definedname`|Обязательно. Имя, с помощью которого это свойство определено в `interface`.|  
   
 -   `Get`  
   
-     Необязательно. Требуется, если свойство помечено как `WriteOnly`. Запускает `Get` свойство процедуру, которая используется для возврата значения свойства.  
+     Необязательный. Требуется, если свойство помечено как `WriteOnly`. Запускает `Get` свойство процедуру, которая используется для возврата значения свойства.  
   
 -   `statements`  
   
-     Необязательно. Блок операторов для работы в рамках `Get` или `Set` процедуры.  
+     Необязательный. Блок операторов для работы в рамках `Get` или `Set` процедуры.  
   
 -   `End Get`  
   
@@ -156,7 +157,7 @@ Property name ( [ parameterlist ] ) [ As returntype ] [ Implements implementslis
   
 -   `Set`  
   
-     Необязательно. Требуется, если свойство помечено как `ReadOnly`. Запускает `Set` свойство процедуру, которая используется для хранения значения свойства.  
+     Необязательный. Требуется, если свойство помечено как `ReadOnly`. Запускает `Set` свойство процедуру, которая используется для хранения значения свойства.  
   
 -   `End Set`  
   

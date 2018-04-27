@@ -1,27 +1,29 @@
 ---
-title: "Оптимизация производительности: привязка данных"
-ms.custom: 
+title: 'Оптимизация производительности: привязка данных'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - binding data [WPF], performance
 - data binding [WPF], performance
 ms.assetid: 1506a35d-c009-43db-9f1e-4e230ad5be73
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c420748a9361655eeb2df33ce8426d9f167d3414
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 4b21089ea3f3aef8a934c78187b30f2576b8d39b
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="optimizing-performance-data-binding"></a>Оптимизация производительности: привязка данных
 Привязка данных [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] предоставляет приложениям простой и последовательный способ представления данных и взаимодействия с ними. Можно связывать элементы с данными из различных источников данных в виде объектов [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] и [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)].  
@@ -34,7 +36,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="how-data-binding-references-are-resolved"></a>Как разрешаются ссылки для привязки данных  
  Прежде чем обсуждать вопросы производительности привязки данных, стоит изучить, как механизм привязки данных [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] разрешает ссылки на объекты для привязки.  
   
- Источником привязки данных [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] может быть любой объект [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]. Можно выполнять привязку к свойствам, вложенным свойствам или индексаторам объекта [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]. Ссылки привязки разрешаются с помощью [!INCLUDE[TLA#tla_avalonwinfx](../../../../includes/tlasharptla-avalonwinfx-md.md)] отражения или <xref:System.ComponentModel.ICustomTypeDescriptor>. Ниже приведены три метода для разрешения ссылок на объекты для привязки.  
+ Источником привязки данных [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] может быть любой объект [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]. Можно выполнять привязку к свойствам, вложенным свойствам или индексаторам объекта [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]. Ссылки привязки разрешаются с помощью отражения либо Microsoft .NET Framework или <xref:System.ComponentModel.ICustomTypeDescriptor>. Ниже приведены три метода для разрешения ссылок на объекты для привязки.  
   
  Первый метод включает использование отражения. В этом случае <xref:System.Reflection.PropertyInfo> объект используется для обнаружения атрибуты свойства и обеспечивает доступ к метаданным свойства. При использовании <xref:System.ComponentModel.ICustomTypeDescriptor> интерфейс, механизм привязки данных использует этот интерфейс для доступа к значениям свойств. <xref:System.ComponentModel.ICustomTypeDescriptor> Интерфейс особенно полезна в случаях, когда объект не имеют постоянного набора свойств.  
   
@@ -51,7 +53,7 @@ ms.lasthandoff: 12/22/2017
 |**Привязка свойства Text объекта TextBlock**|**Время привязки (мс)**|**Время отрисовки — включает привязку (мс)**|  
 |--------------------------------------------------|-----------------------------|--------------------------------------------------|  
 |К свойству объекта [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]|115|314|  
-|К свойству [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] объекта, который реализует<xref:System.ComponentModel.INotifyPropertyChanged>|115|305|  
+|К свойству [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] объекта, который реализует <xref:System.ComponentModel.INotifyPropertyChanged>|115|305|  
 |Чтобы <xref:System.Windows.DependencyProperty> из <xref:System.Windows.DependencyObject>.|90|263|  
   
 <a name="Binding_to_Large_CLR_Objects"></a>   
@@ -74,7 +76,7 @@ ms.lasthandoff: 12/22/2017
 |**Привязка данных ItemsSource**|**Время обновления для 1 элемента (мс)**|  
 |--------------------------------------|---------------------------------------|  
 |Чтобы [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] <xref:System.Collections.Generic.List%601> объекта|1656|  
-|Для<xref:System.Collections.ObjectModel.ObservableCollection%601>|20|  
+|Для <xref:System.Collections.ObjectModel.ObservableCollection%601>|20|  
   
 <a name="Binding_IList_to_ItemsControl_not_IEnumerable"></a>   
 ## <a name="bind-ilist-to-itemscontrol-not-ienumerable"></a>Привязка IList к ItemsControl не IEnumerable  

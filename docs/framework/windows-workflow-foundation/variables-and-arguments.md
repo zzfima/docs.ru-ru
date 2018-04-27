@@ -1,26 +1,27 @@
 ---
-title: "Переменные и аргументы"
-ms.custom: 
+title: Переменные и аргументы
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: d03dbe34-5b2e-4f21-8b57-693ee49611b8
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d01c31cce9aa6ae6d87773fc8e616e0e08bbd8c8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: c81d05120f8cf0decc7c6036e2a722ba6271dab8
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="variables-and-arguments"></a>Переменные и аргументы
-В [!INCLUDE[wf](../../../includes/wf-md.md)] переменные представляют хранилище данных, а аргументы, представляют поток данных в действие и из действия. Действие имеет набор аргументов, которые составляют сигнатуру действия. Действие может также поддерживать список переменных, к которым разработчик может добавлять или удалять переменные при разработке рабочего процесса. Привязка аргумента выполнена с помощью выражения, возвращающего значение.  
+В Windows Workflow Foundation (WF), переменные представляют хранилище данных, а аргументы представляют поток данных в действие и из действия. Действие имеет набор аргументов, которые составляют сигнатуру действия. Действие может также поддерживать список переменных, к которым разработчик может добавлять или удалять переменные при разработке рабочего процесса. Привязка аргумента выполнена с помощью выражения, возвращающего значение.  
   
 ## <a name="variables"></a>Переменные  
  Переменные представляют собой место хранения данных. Переменные объявляются в составе определения рабочего процесса. Переменные принимают значения во время выполнения, и эти значения сохраняются как часть состояния экземпляра рабочего процесса. Определение переменной указывает тип переменной и, возможно, имя. В следующем коде показано, как объявить переменную, присвоить ей значение с помощью действия <xref:System.Activities.Statements.Assign%601>, а затем отобразить ее значение на консоли с помощью действия <xref:System.Activities.Statements.WriteLine>.  
@@ -77,7 +78,7 @@ Variable<string> var = new Variable<string>
   
 2.  При вызове <xref:System.Activities.InOutArgument%601.Set%2A> среда выполнения немедленно задает значение.  
   
-3.  Для аргументов может быть дополнительно задан их <xref:System.Activities.Argument.EvaluationOrder%2A>. <xref:System.Activities.Argument.EvaluationOrder%2A> - отсчитываемое от нуля значение, которое указывает порядок вычисления аргумента. По умолчанию порядок вычисления аргумента не указан и равен значению <xref:System.Activities.Argument.UnspecifiedEvaluationOrder>. Свойству <xref:System.Activities.Argument.EvaluationOrder%2A> задайте значение, большее или равное нулю, чтобы указать порядок вычисления для этого аргумента. [!INCLUDE[wf2](../../../includes/wf2-md.md)] вычисляет аргументы в заданном порядке вычисления, в убывающем порядке. Следует отметить, что аргументы с незаданным порядком вычисления вычисляются до вычисления аргументов, порядок вычисления которых задан.  
+3.  Для аргументов может быть дополнительно задан их <xref:System.Activities.Argument.EvaluationOrder%2A>. <xref:System.Activities.Argument.EvaluationOrder%2A> - отсчитываемое от нуля значение, которое указывает порядок вычисления аргумента. По умолчанию порядок вычисления аргумента не указан и равен значению <xref:System.Activities.Argument.UnspecifiedEvaluationOrder>. Свойству <xref:System.Activities.Argument.EvaluationOrder%2A> задайте значение, большее или равное нулю, чтобы указать порядок вычисления для этого аргумента. Windows Workflow Foundation вычисляет аргументы в заданном порядке вычисления в возрастающем порядке. Следует отметить, что аргументы с незаданным порядком вычисления вычисляются до вычисления аргументов, порядок вычисления которых задан.  
   
  Создатель действия для предоставления доступа к аргументам действия может использовать механизм со строгой типизацией. Для этого объявляются свойства типа <xref:System.Activities.InArgument%601>, <xref:System.Activities.OutArgument%601> и <xref:System.Activities.InOutArgument%601>. Благодаря этому для создателя действия обеспечивается возможность установки определенного контракта, касающегося потока данных в действие и из действия.  
   
@@ -151,4 +152,4 @@ public sealed class Add : CodeActivity<int>
 }  
 ```  
   
- [!INCLUDE[crabout](../../../includes/crabout-md.md)]Работа с аргументов, переменных и выражений в коде, в разделе [разработки рабочих процессов, действий и выражений с помощью императивного кода](../../../docs/framework/windows-workflow-foundation/authoring-workflows-activities-and-expressions-using-imperative-code.md) и [необходимые аргументы и групп перегруженных вариантов](../../../docs/framework/windows-workflow-foundation/required-arguments-and-overload-groups.md).
+ [!INCLUDE[crabout](../../../includes/crabout-md.md)] Работа с аргументов, переменных и выражений в коде, в разделе [разработки рабочих процессов, действий и выражений с помощью императивного кода](../../../docs/framework/windows-workflow-foundation/authoring-workflows-activities-and-expressions-using-imperative-code.md) и [необходимые аргументы и групп перегруженных вариантов](../../../docs/framework/windows-workflow-foundation/required-arguments-and-overload-groups.md).

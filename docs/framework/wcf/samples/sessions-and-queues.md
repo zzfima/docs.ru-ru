@@ -1,24 +1,26 @@
 ---
-title: "Сеансы и очереди"
-ms.custom: 
+title: Сеансы и очереди
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 47d7c5c2-1e6f-4619-8003-a0ff67dcfbd6
-caps.latest.revision: "27"
+caps.latest.revision: 27
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0de2668eb03a658632bb8a18c711f780b333e86b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: f1aeaa72937d23a321eb615ad8b1eb4ec1e7b48e
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="sessions-and-queues"></a>Сеансы и очереди
 В этом образце показано, как отправлять и принимать набор связанных сообщений при взаимодействии с использованием очередей с помощью транспорта очереди сообщений (MSMQ). В этом примере используется привязка `netMsmqBinding`. Служба представляет собой резидентное консольное приложение, позволяющее наблюдать за получением службой сообщений из очереди.  
@@ -31,7 +33,7 @@ ms.lasthandoff: 12/22/2017
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите на страницу [Примеры Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все примеры [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Этот образец расположен в следующем каталоге.  
+>  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) Чтобы загрузить все [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] образцов. Этот образец расположен в следующем каталоге.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\MSMQ\Session`  
   
@@ -42,8 +44,8 @@ ms.lasthandoff: 12/22/2017
  В этом образце клиент отправляет ряд сообщений в службу как часть сеанса в рамках одной транзакции.  
   
  Контракт службы `IOrderTaker` определяет одностороннюю службу, которую можно использовать с очередями. Класс <xref:System.ServiceModel.SessionMode>, использованный в контракте, показанном в следующем образце кода, означает, что сообщения являются частью сеанса.  
-  
-```  
+
+```csharp
 [ServiceContract(Namespace = "http://Microsoft.ServiceModel.Samples", SessionMode=SessionMode.Required)]  
 public interface IOrderTaker  
 {  
@@ -56,11 +58,11 @@ public interface IOrderTaker
     [OperationContract(IsOneWay = true)]  
     void EndPurchaseOrder();  
 }  
-```  
-  
+```
+
  Служба определяет операции службы таким образом, что первая операция зачисляется в транзакцию, но не завершает транзакцию автоматически. Последующие операции также зачисляются в эту же транзакцию, но не производят ее автоматического завершения. Последняя операция в сеансе автоматически завершает транзакцию. Таким образом, одна и та же транзакция используется для вызова нескольких операций в контракте службы. Если любая из операций вызывает исключение, производится откат транзакции и сеанс возвращается в очередь. После успешного завершения последней операции производится фиксация транзакции. В службе значение `PerSession` параметра <xref:System.ServiceModel.InstanceContextMode> используется для того, чтобы все сообщения в сеансе получались одним экземпляром службы.  
-  
-```  
+
+```csharp
 [ServiceBehavior(InstanceContextMode=InstanceContextMode.PerSession)]  
 public class OrderTakerService : IOrderTaker  
 {  
@@ -92,11 +94,11 @@ public class OrderTakerService : IOrderTaker
        Console.WriteLine(po.ToString());  
     }  
 }  
-```  
-  
+```
+
  Служба является резидентной. При работе с транспортом MSMQ используемую очередь следует создавать заранее. Это можно сделать вручную или с помощью кода. В данном образце служба содержит код <xref:System.Messaging> для проверки наличия очереди и ее создания, если требуется. Имя очереди считывается из файла конфигурации с помощью класса <xref:System.Configuration.ConfigurationManager.AppSettings%2A>.  
-  
-```  
+
+```csharp
 // Host the service within this EXE console application.  
 public static void Main()  
 {  
@@ -123,8 +125,8 @@ public static void Main()
         serviceHost.Close();   
     }  
 }  
-```  
-  
+```
+
  Имя очереди MSMQ задается в разделе appSettings файла конфигурации. Конечная точка для службы задается в разделе system.serviceModel файла конфигурации и определяет привязку `netMsmqBinding`.  
   
 ```xml  
@@ -150,8 +152,8 @@ public static void Main()
 ```  
   
  Клиент создает область транзакции. Все сообщения в сеансе отправляются в очередь в области транзакции, поэтому она обрабатывается как единый модуль, в котором все сообщения завершаются успехом или сбоем. Транзакция фиксируется путем вызова метода <xref:System.Transactions.TransactionScope.Complete%2A>.  
-  
-```  
+
+```csharp
 //Create a transaction scope.  
 using (TransactionScope scope = new TransactionScope(TransactionScopeOption.Required))  
 {  
@@ -178,8 +180,8 @@ using (TransactionScope scope = new TransactionScope(TransactionScopeOption.Requ
     // Complete the transaction.  
     scope.Complete();  
 }  
-```  
-  
+```
+
 > [!NOTE]
 >  Можно использовать только одну транзакцию для всех сообщений в сеансе, и все сообщения в сеансе должны быть отправлены до фиксации транзакции. При закрытии клиента сеанс также закрывается. Поэтому для отправки всех сообщений в сеансе в очередь клиент должен быть закрыт до завершения транзакции.  
   

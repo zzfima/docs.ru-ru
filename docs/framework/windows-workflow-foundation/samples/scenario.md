@@ -14,14 +14,14 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 60f6571d7702236ee24c0cb9da2aa4121feddcf0
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: ecf45e4d40c305c5e324d3ab8469ff24f5a092ef
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="scenario"></a>Сценарий
-Данный раздел содержит примеры сценариев [!INCLUDE[wf](../../../../includes/wf-md.md)].  
+Этот раздел содержит примеры сценариев Windows Workflow Foundation (WF).  
   
 ## <a name="in-this-section"></a>В этом разделе  
  [Библиотека действий](../../../../docs/framework/windows-workflow-foundation/samples/activity-library.md)  
@@ -40,7 +40,7 @@ ms.lasthandoff: 04/26/2018
  Показывает, как реализовать сценарий простого контрольного таймера с помощью сочетания действий <xref:System.Activities.Statements.Flowchart> и <xref:System.Activities.Statements.Pick>.  
   
  [Интеграция WPF и WF в XAML](../../../../docs/framework/windows-workflow-foundation/samples/wpf-and-wf-integration-in-xaml.md)  
- Демонстрирует создание приложения, использующего Windows Presentation Foundation (WPF) и [!INCLUDE[wf](../../../../includes/wf-md.md)] функций в одном документе XAML. Для этого в образце используется расширяемость XAML и [!INCLUDE[wf](../../../../includes/wf-md.md)].  
+ Показано, как создать приложение, которое использует функции Windows Presentation Foundation (WPF) и Windows Workflow Foundation (WF) в одном документе XAML. Для этого в образце используется расширяемость Windows Workflow Foundation (WF) и XAML.  
   
  [Набор средств внешнего набора правил](../../../../docs/framework/windows-workflow-foundation/samples/external-ruleset-toolkit.md)  
  Демонстрирует, как управлять и изменять наборы правил в базе данных, а также как осуществлять доступ к этим наборам правил из рабочего процесса во время выполнения.

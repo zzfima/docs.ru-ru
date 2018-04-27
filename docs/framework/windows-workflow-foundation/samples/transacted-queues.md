@@ -1,26 +1,27 @@
 ---
-title: "Транзакционные очереди"
-ms.custom: 
+title: Транзакционные очереди
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: b1b011dd-5e0b-482c-9bb0-9d8727038f14
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: fa475ac31287cebe173df255380b1f34d9af2567
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 628e91589ad32a2646316401c7b2ddb31b13eace
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="transacted-queues"></a>Транзакционные очереди
-Этот образец показывает, как объединить очереди и транзакции в [!INCLUDE[wf](../../../../includes/wf-md.md)], чтобы создать надежные и масштабируемые службы. Объект <!--zz <xref:System.Activities.TransactionScope>--> `System.Activities.TransactionScope` используется в рабочем потоке клиента для отправки сообщения в очередь в рамках транзакции с использованием <xref:System.ServiceModel.NetMsmqBinding>. Область <xref:System.ServiceModel.Activities.TransactedReceiveScope> используется на сервере для получения сообщений из очереди и обновления состояния рабочего процесса в рамках той же транзакции.  
+В этом примере показано, как объединить очереди и транзакции в Windows Workflow Foundation (WF) для создания надежные и масштабируемые службы. Объект <!--zz <xref:System.Activities.TransactionScope>--> `System.Activities.TransactionScope` используется в рабочем потоке клиента для отправки сообщения в очередь в рамках транзакции с использованием <xref:System.ServiceModel.NetMsmqBinding>. Область <xref:System.ServiceModel.Activities.TransactedReceiveScope> используется на сервере для получения сообщений из очереди и обновления состояния рабочего процесса в рамках той же транзакции.  
   
 ## <a name="demonstrates"></a>Демонстрации  
  Объекты <xref:System.Activities.Statements.TransactionScope>, <xref:System.ServiceModel.Activities.TransactedReceiveScope>, <xref:System.ServiceModel.NetMsmqBinding>, <xref:System.ServiceModel.Activities.Receive>, а также корреляция на основе содержимого.  
@@ -30,7 +31,7 @@ ms.lasthandoff: 12/22/2017
   
  После завершения работы клиента служба настраивается и размещается. Как только служба открывается, она начинает обработку сообщений, которые были уже помещены в очередь. Получение и обработка каждого сообщения происходит в рамках одной и той же серверной транзакции. В этом образце первым полученным сообщением является запрос `CreateAccount`, который создает экземпляр и инициализирует корреляцию содержимого на основе имени учетной записи, переданной как часть сообщения запроса. Для моделирования разновидности службы, которая могла бы встретиться в реальном мире, ниже приведены два действия <xref:System.ServiceModel.Activities.TransactedReceiveScope>, которые обрабатывают сообщения `AddPoints` и `UsePoints`, помещенные в параллельные ветви цикла `while`, чтобы с их помощью можно было неоднократно обрабатывать указанные сообщения в любом порядке.  
   
- Каждый из объектов <xref:System.Activities.Statements.TransactionScope> и <xref:System.ServiceModel.Activities.TransactedReceiveScope> имеет неявную точку сохраняемости в конце своей области, поэтому использование этих действий в [!INCLUDE[wf1](../../../../includes/wf1-md.md)] в сочетании с очередями представляет собой надежный способ перемещения рабочего процесса из одного согласованного состояния в следующее с гарантией того, что сообщения никогда не потеряются.  
+ <xref:System.Activities.Statements.TransactionScope>и <xref:System.ServiceModel.Activities.TransactedReceiveScope> имеют Неявная точка сохранения в конце своей области, поэтому использование этих действий в [!INCLUDE[wf1](../../../../includes/wf1-md.md)] в сочетании с очередями – надежный способ перемещения рабочего процесса из одного состояния к другому, гарантируя, что сообщения, никогда не теряются.  
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>Настройка, сборка и выполнение образца  
   
@@ -38,13 +39,13 @@ ms.lasthandoff: 12/22/2017
   
 2.  Убедитесь, что MSDTC работает, выполнив следующую команду в командной строке. `net start msdtc`  
   
-3.  Откомпилируйте проект и откройте исполняемый файл или откройте проект в [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] и выберите параметр запуска в меню отладки. Сначала создается очередь, затем запускается клиент и выводит сообщения в очередь, и, наконец, запускается служба, и производится обработка сообщений. Чтобы выйти из программы, нажмите клавишу ВВОД.  
+3.  Скомпилируйте проект и откройте исполняемый файл или откройте проект в [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] и выберите параметр запуска в меню "Отладка". Сначала создается очередь, затем запускается клиент и выводит сообщения в очередь, и, наконец, запускается служба, и производится обработка сообщений. Чтобы выйти из программы, нажмите клавишу ВВОД.  
   
 > [!IMPORTANT]
 >  Образцы уже могут быть установлены на компьютере. Перед продолжением проверьте следующий каталог (по умолчанию).  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите на страницу [Примеры Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все примеры [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Этот образец расположен в следующем каталоге.  
+>  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) Чтобы загрузить все [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] образцов. Этот образец расположен в следующем каталоге.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\Transactions\TransactedQueues`

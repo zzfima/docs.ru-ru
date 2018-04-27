@@ -1,23 +1,24 @@
 ---
-title: "Действие Property Promotion"
-ms.custom: 
+title: Действие Property Promotion
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 802196b7-1159-4c05-b41b-d3bfdfcc88d9
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 244cea33b684a8674681c4d1974d5d857c4c402b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 12f7aa4bd10a22a3cd3ea361e32016b95e41e46b
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="property-promotion-activity"></a>Действие Property Promotion
 Этот образец представляет собой законченное решение, в котором средства повышения уровня <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> встраиваются непосредственно в среду разработки рабочих процессов. Предоставляется коллекция элементов конфигурации, действий рабочего процесса и расширений рабочих процессов, которая позволяет упростить использование средства повышения уровня. Кроме того, этот образец включает простой рабочий процесс, в котором демонстрируется использование этой коллекции.  
@@ -109,7 +110,7 @@ go
  Порядок элементов `promotedValue` коррелирует с размещением свойств с повышенным уровнем в представлении `InstancePromotedProperties`. `Count` - первый элемент `promotedValue`. В результате он сопоставляется со столбцом `Value1` в представлении `InstancePromotedProperties`. `LastIncrementedAt` - второй элемент `promotedValue`. В результате он сопоставляется со столбцом `Value2` в представлении `InstancePromotedProperties`.  
   
 #### <a name="using-the-promotevalue-activity"></a>Использование действия PromoteValue  
- Изучите файл CounterService.xamlx в конструкторе [!INCLUDE[wf2](../../../../includes/wf2-md.md)]. Обратите внимание, что в определении WF имеются два специальных действия - `PromoteValue<DateTime>` и `PromoteValue<Int32>`.  
+ Изучите файл CounterService.xamlx в конструкторе Windows Workflow Foundation. Обратите внимание, что в определении WF имеются два специальных действия - `PromoteValue<DateTime>` и `PromoteValue<Int32>`.  
   
  В действии `PromoteValue<Int32>` член `Name` определен как `Count`. Этот объект согласуется с первым элементом `promotedValue` в конфигурации и имеет свое значение `Value`, определенное как переменная рабочего процесса `Counter`. При сохранении этого рабочего процесса переменная рабочего процесса `Counter` сохраняется как свойство с повышенным уровнем в столбце `Value1` представления `InstancePromotedProperties`.  
   
@@ -196,7 +197,7 @@ public class SqlWorkflowInstanceStorePromotionBehavior :
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите на страницу [Примеры Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все примеры [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Этот образец находится в следующем каталоге:  
+>  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) Чтобы загрузить все [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] образцов. Этот образец находится в следующем каталоге:  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Persistence\PropertyPromotionActivity`  
   
