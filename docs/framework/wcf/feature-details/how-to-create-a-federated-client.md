@@ -1,12 +1,13 @@
 ---
-title: "Практическое руководство. Создание федеративного клиента"
-ms.custom: 
+title: Практическое руководство. Создание федеративного клиента
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,21 +16,22 @@ helpviewer_keywords:
 - WCF, federation
 - federation
 ms.assetid: 56ece47e-98bf-4346-b92b-fda1fc3b4d9c
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7fda534d591ae5142fb732607c7e248ef3cc71bc
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 38436a83bf58c4903a931ecafebf922800d230c1
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="how-to-create-a-federated-client"></a>Практическое руководство. Создание федеративного клиента
 В [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], создает клиент для *федеративной службы* состоит из трех основных этапов:  
   
-1.  Настройка [ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) или аналогичной пользовательской привязки. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Создание соответствующую привязку, в разделе [как: создание WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md). Кроме того, запустите [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) для конечной точки метаданных службы федерации для создания файла конфигурации для взаимодействия с федеративной службы и один или несколько службы маркеров безопасности.  
+1.  Настройка [ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) или аналогичной пользовательской привязки. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Создание соответствующую привязку, в разделе [как: создание WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md). Кроме того, запустите [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) для конечной точки метаданных службы федерации для создания файла конфигурации для взаимодействия с федеративной службы и один или несколько службы маркеров безопасности.  
   
 2.  Задайте свойства <xref:System.ServiceModel.Security.IssuedTokenClientCredential>, управляющие различными аспектами взаимодействия клиента со службой маркеров безопасности.  
   
@@ -38,7 +40,7 @@ ms.lasthandoff: 12/22/2017
 > [!NOTE]
 >  Исключение <xref:System.Security.Cryptography.CryptographicException> может возникнуть, если клиент использует олицетворенные учетные данные, привязку <xref:System.ServiceModel.WSFederationHttpBinding> или выданный пользовательский маркер и асимметричные ключи. Асимметричные ключи используются с привязкой <xref:System.ServiceModel.WSFederationHttpBinding> и выданными пользовательскими маркерами, если для свойств <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.IssuedKeyType%2A> и <xref:System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters.KeyType%2A> соответственно задано значение <xref:System.IdentityModel.Tokens.SecurityKeyType.AsymmetricKey>. Исключение <xref:System.Security.Cryptography.CryptographicException> возникает, когда клиент пытается отправить сообщение, а для идентификации, которую олицетворяет клиент, отсутствует профиль пользователя. Чтобы подавить эту проблему, перед отправкой сообщения войдите в систему на клиентском компьютере или вызовите метод `LoadUserProfile`.  
   
- В этом разделе приведены подробные сведения об этих процедурах. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Создание соответствующую привязку, в разделе [как: создание WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)]как работает федеративной службы, в разделе [федерации](../../../../docs/framework/wcf/feature-details/federation.md).  
+ В этом разделе приведены подробные сведения об этих процедурах. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Создание соответствующую привязку, в разделе [как: создание WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)] как работает федеративной службы, в разделе [федерации](../../../../docs/framework/wcf/feature-details/federation.md).  
   
 ### <a name="to-generate-and-examine-the-configuration-for-a-federated-service"></a>Создание и проверка конфигурации для федеративной службы  
   
@@ -163,13 +165,13 @@ ms.lasthandoff: 12/22/2017
 ## <a name="localissuer-required"></a>Требуется LocalIssuer  
  Если требуется, чтобы клиенты всегда использовали локального издателя, обратите внимание на следующее: выходные данные средства Svcutil.exe по умолчанию задают, что локальный издатель не используется, если в предпоследней службе маркеров безопасности в цепочке указан адрес издателя или адрес метаданных издателя.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Установка <xref:System.ServiceModel.Security.IssuedTokenClientCredential.LocalIssuerAddress%2A>, <xref:System.ServiceModel.Security.IssuedTokenClientCredential.LocalIssuerBinding%2A>, и <xref:System.ServiceModel.Security.IssuedTokenClientCredential.LocalIssuerChannelBehaviors%2A> свойства <xref:System.ServiceModel.Security.IssuedTokenClientCredential> см. в описании [как: Настройка локального издателя](../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md).  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Установка <xref:System.ServiceModel.Security.IssuedTokenClientCredential.LocalIssuerAddress%2A>, <xref:System.ServiceModel.Security.IssuedTokenClientCredential.LocalIssuerBinding%2A>, и <xref:System.ServiceModel.Security.IssuedTokenClientCredential.LocalIssuerChannelBehaviors%2A> свойства <xref:System.ServiceModel.Security.IssuedTokenClientCredential> см. в описании [как: Настройка локального издателя](../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md).  
   
 ## <a name="scoped-certificates"></a>Сертификаты с областью действия  
  Если требуется задать сертификаты службы для взаимодействия с любыми службами маркеров безопасности (обычно в связи с тем, что не используется согласование сертификатов), их можно задать с помощью свойства <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential.ScopedCertificates%2A> класса <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential>. Метод <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential.SetDefaultCertificate%2A> принимает в качестве параметров <xref:System.Uri> и <xref:System.Security.Cryptography.X509Certificates.X509Certificate2>. Указанный сертификат используется при взаимодействии с конечными точками по указанному универсальному коду ресурса (URI). В качестве альтернативы можно с помощью метода <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential.SetScopedCertificate%2A> добавить сертификат в коллекцию, возвращаемую свойством <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential.ScopedCertificates%2A>.  
   
 > [!NOTE]
->  Концепция сертификатов клиента, область действия которых ограничена только определенным универсальным кодом ресурса (URI), применима только к приложениям, производящим исходящие вызовы служб, предоставляющих конечные точки по этим универсальным кодам ресурса (URI). Не применяется к сертификатам, используемым для подписывания изданных маркеров, таких как настроенные на сервере в коллекции, возвращенной <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.KnownCertificates%2A> из <xref:System.ServiceModel.Security.IssuedTokenServiceCredential> класса. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Как: настройте учетные данные для службы федерации](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md).  
+>  Концепция сертификатов клиента, область действия которых ограничена только определенным универсальным кодом ресурса (URI), применима только к приложениям, производящим исходящие вызовы служб, предоставляющих конечные точки по этим универсальным кодам ресурса (URI). Не применяется к сертификатам, используемым для подписывания изданных маркеров, таких как настроенные на сервере в коллекции, возвращенной <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.KnownCertificates%2A> из <xref:System.ServiceModel.Security.IssuedTokenServiceCredential> класса. Дополнительные сведения см. в разделе [как: Настройка учетных данных службы федерации](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md).  
   
 ## <a name="see-also"></a>См. также  
  [Пример федерации](../../../../docs/framework/wcf/samples/federation-sample.md)  

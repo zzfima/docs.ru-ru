@@ -1,27 +1,29 @@
 ---
-title: "Размещение службы рабочего процесса"
-ms.custom: 
+title: Размещение службы рабочего процесса
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 2d55217e-8697-4113-94ce-10b60863342e
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c4a18289fcc5f6dfd68f13a006223d5870d3cd4f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: e9f8d38b97a422d2d59e2dea05d53cf6f9684d99
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="hosting-workflow-services"></a>Размещение службы рабочего процесса
-Для обработки входящих сообщений служба рабочих процессов должна быть размещена. Службы рабочих процессов используют инфраструктуру обмена сообщениями [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] и поэтому также требуют размещения. Подобно службам [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], службы рабочего процесса могут размещаться в любом управляемом приложении, в службах IIS или в службах активации процесса Windows (WAS). Кроме того, службы рабочего процесса могут размещаться в фабрике приложений Windows Server. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Фабрика приложений Windows Server см. в разделе [документации Windows Server App Fabric](http://go.microsoft.com/fwlink/?LinkId=193037), [функции размещения AppFabric](http://go.microsoft.com/fwlink/?LinkId=196494), и [размещения AppFabric](http://go.microsoft.com/fwlink/?LinkId=196495). [!INCLUDE[crabout](../../../../includes/crabout-md.md)]различные способы узла [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] служб см. в разделе [размещение служб](../../../../docs/framework/wcf/hosting-services.md).  
+Для обработки входящих сообщений служба рабочих процессов должна быть размещена. Службы рабочих процессов используют инфраструктуру обмена сообщениями [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] и поэтому также требуют размещения. Подобно службам [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], службы рабочего процесса могут размещаться в любом управляемом приложении, в службах IIS или в службах активации процесса Windows (WAS). Кроме того, службы рабочего процесса могут размещаться в фабрике приложений Windows Server. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Фабрика приложений Windows Server см. в разделе [документации Windows Server App Fabric](http://go.microsoft.com/fwlink/?LinkId=193037), [функции размещения AppFabric](http://go.microsoft.com/fwlink/?LinkId=196494), и [размещения AppFabric](http://go.microsoft.com/fwlink/?LinkId=196495). [!INCLUDE[crabout](../../../../includes/crabout-md.md)] различные способы узла [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] служб см. в разделе [размещение служб](../../../../docs/framework/wcf/hosting-services.md).  
   
 ## <a name="hosting-in-a-managed-application"></a>Размещение в управляемом приложении  
  Размещение службы рабочего процесса в управляемом приложении производится с помощью класса <xref:System.ServiceModel.Activities.WorkflowServiceHost>. Конструктор <xref:System.ServiceModel.Activities.WorkflowServiceHost> позволяет указать одноэлементный экземпляр службы рабочих процессов, определить службу рабочих процессов или действие, которое использует действия обмена сообщениями рабочих процессов. Вызов <<!--zz xref:System.ServiceModel.Activities.WorkflowServiceHost.Open%2A--> `System.ServiceModel.Activities.WorkflowServiceHost.Open`> приводит к служба начинает прослушивать входящие сообщения.  
@@ -56,13 +58,13 @@ ms.lasthandoff: 12/22/2017
  Xamlx-файл, определяющий службу рабочего процесса должен содержать <`Service`> корневой элемент или корневой элемент, который содержит тип, производный от <xref:System.Workflow.ComponentModel.Activity>. При использовании шаблона действий [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] создается XAMLX-файл. При использовании шаблона службы WCF Workflow Service создается XAMLX-файл.  
   
 ## <a name="hosting-workflow-services-under-windows-server-app-fabric"></a>Размещение служб рабочего процесса в фабрике приложений Windows Server  
- Размещение службы рабочего процесса в фабрике приложений Windows Server осуществляется аналогично ее размещению на веб-сервере IIS/WAS. Единственное отличие состоит в том, что установлена фабрика приложений Windows Server. Фабрика приложений Windows Server добавляет в диспетчер IIS дополнительные средства, такие как командлеты powershell. Эти средства упрощают развертывание, управление и наблюдение за службами рабочего процесса и службами WCF. . [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Фабрика приложений Windows Server см. в разделе [Windows Server App Fabric](http://go.microsoft.com/fwlink/?LinkId=193037)  
+ Размещение службы рабочего процесса в фабрике приложений Windows Server осуществляется аналогично ее размещению на веб-сервере IIS/WAS. Единственное отличие состоит в том, что установлена фабрика приложений Windows Server. Фабрика приложений Windows Server добавляет в диспетчер IIS дополнительные средства, такие как командлеты powershell. Эти средства упрощают развертывание, управление и наблюдение за службами рабочего процесса и службами WCF. . [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Фабрика приложений Windows Server см. в разделе [Windows Server App Fabric](http://go.microsoft.com/fwlink/?LinkId=193037)  
   
 ## <a name="referencing-custom-activities"></a>Ссылки на пользовательские действия  
  Необходимо добавить ссылки на пользовательские действия <`Assemblies`> раздела <`System.Web.Compilation`>, чтобы они загружаются в домен приложения и десериализатор XAML смогут найти типы. Эти параметры могут быть указаны на уровне приложения или в корневом файле Web.config, если необходимо применять их ко всем приложениям компьютера.  
   
 ## <a name="deployment"></a>Развертывание  
- Для облегчения задачи развертывания создается инструмент веб-развертывания. Инструмент позволяет переносить приложения между IIS 6.0 и IIS 7.0, выполнять синхронизацию ферм серверов, а также упаковывать, архивировать и развертывать веб-приложения. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Средство развертывания MS](http://go.microsoft.com/fwlink/?LinkId=178690)  
+ Для облегчения задачи развертывания создается инструмент веб-развертывания. Инструмент позволяет переносить приложения между IIS 6.0 и IIS 7.0, выполнять синхронизацию ферм серверов, а также упаковывать, архивировать и развертывать веб-приложения. Дополнительные сведения см. в разделе [MS инструмента "Развертывание"](http://go.microsoft.com/fwlink/?LinkId=178690)  
   
 ## <a name="see-also"></a>См. также  
  [Внутренние особенности размещения службы рабочего процесса](../../../../docs/framework/wcf/feature-details/workflow-service-host-internals.md)  

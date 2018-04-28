@@ -1,24 +1,26 @@
 ---
-title: "Неподдерживаемые сценарии"
-ms.custom: 
+title: Неподдерживаемые сценарии
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 72027d0f-146d-40c5-9d72-e94392c8bb40
-caps.latest.revision: "43"
+caps.latest.revision: 43
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 96ae88fd29391bf173da33398dfb41b3a06441ba
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 7738eba66619e8a312ed2f9bd43142dbb097b259
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="unsupported-scenarios"></a>Неподдерживаемые сценарии
 По различным причинам [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] не поддерживает некоторые сценарии безопасности. Например, в операционной системе [!INCLUDE[wxp](../../../../includes/wxp-md.md)] не реализованы протоколы проверки подлинности SSPI и Kerberos, поэтому [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] не поддерживает на этой платформе выполнение служб с проверкой подлинности Windows. При использовании [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] в ОС Windows XP Home Edition поддерживаются другие механизмы проверки подлинности, такие как проверка имени пользователя и пароля и встроенная проверка подлинности HTTP/HTTPS.  
@@ -39,7 +41,7 @@ ms.lasthandoff: 12/22/2017
   
 -   Создан маркер контекста безопасности с отслеживанием состояния (SCT) (по умолчанию создание отключено).  
   
- Маркер SCT с отслеживанием состояния создается только с использованием пользовательской привязки. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Как: создать контекст безопасности для безопасного сеанса маркера](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md).) В коде маркер включается путем создания элемента привязки безопасности (<xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> или <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement>) с помощью метода <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateSspiNegotiationBindingElement%28System.Boolean%29?displayProperty=nameWithType> или <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateSecureConversationBindingElement%28System.ServiceModel.Channels.SecurityBindingElement%2CSystem.Boolean%29?displayProperty=nameWithType> и присвоения параметру `requireCancellation` значения `false`. Параметр относится к кэшированию маркера SCT. Задание значения `false` включает функцию маркера SCT с отслеживанием состояния.  
+ Маркер SCT с отслеживанием состояния создается только с использованием пользовательской привязки. Дополнительные сведения см. в разделе [как: создание токена контекста безопасности для безопасного сеанса](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md).) В коде маркер включается путем создания элемента привязки безопасности (<xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> или <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement>) с помощью метода <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateSspiNegotiationBindingElement%28System.Boolean%29?displayProperty=nameWithType> или <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateSecureConversationBindingElement%28System.ServiceModel.Channels.SecurityBindingElement%2CSystem.Boolean%29?displayProperty=nameWithType> и присвоения параметру `requireCancellation` значения `false`. Параметр относится к кэшированию маркера SCT. Задание значения `false` включает функцию маркера SCT с отслеживанием состояния.  
   
  Кроме того, в конфигурации, маркер включается путем создания <`customBinding`>, добавив <`security`> элемент, а параметр `authenticationMode` атрибут SecureConversation и `requireSecurityContextCancellation` атрибут `true`.  
   
@@ -53,10 +55,10 @@ ms.lasthandoff: 12/22/2017
  Если олицетворенный контекст не имеет прав доступа для загрузки сборки и если это первая попытка загрузки этой сборки в среде CLR для этого домена приложения, в <xref:System.AppDomain> кэшируется ошибка. Последующие попытки загрузки сборки (или сборок) также окажутся неудачными, даже если олицетворение отменено, а восстановленный контекст имеет права доступа для загрузки сборки. Это обусловлено тем, что в среде CLR не производится повторная попытка загрузки после изменения контекста пользователя. Для восстановления после сбоя необходимо повторно запустить домен приложения.  
   
 > [!NOTE]
->  Свойство <xref:System.ServiceModel.Security.WindowsClientCredential.AllowedImpersonationLevel%2A> класса <xref:System.ServiceModel.Security.WindowsClientCredential> имеет значение по умолчанию <xref:System.Security.Principal.TokenImpersonationLevel.Identification>. В большинстве случаев контекст олицетворения уровня идентификации не имеет прав на загрузку дополнительных сборок. Это значение по умолчанию, поэтому необходимо учитывать это очень распространенное условие. Олицетворение на уровне идентификации также происходит, когда процесс олицетворения не имеет привилегии `SeImpersonate`. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Делегирования и олицетворения](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).  
+>  Свойство <xref:System.ServiceModel.Security.WindowsClientCredential.AllowedImpersonationLevel%2A> класса <xref:System.ServiceModel.Security.WindowsClientCredential> имеет значение по умолчанию <xref:System.Security.Principal.TokenImpersonationLevel.Identification>. В большинстве случаев контекст олицетворения уровня идентификации не имеет прав на загрузку дополнительных сборок. Это значение по умолчанию, поэтому необходимо учитывать это очень распространенное условие. Олицетворение на уровне идентификации также происходит, когда процесс олицетворения не имеет привилегии `SeImpersonate`. Дополнительные сведения см. в разделе [делегирования и олицетворения](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).  
   
 ### <a name="delegation-requires-credential-negotiation"></a>Для делегирования требуется согласование учетных данных  
- Для использования протокола проверки подлинности Kerberos с делегированием необходимо реализовать протокол Kerberos с согласованием учетных данных (иногда называется многоступенчатой проверкой подлинности Kerberos). Если проверка подлинности Kerberos реализована без согласования учетных данных (иногда называется одноступенчатой проверкой подлинности Kerberos), возникает исключение. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]как реализовать согласование учетных данных см. в разделе [Отладка ошибок проверки подлинности Windows](../../../../docs/framework/wcf/feature-details/debugging-windows-authentication-errors.md).  
+ Для использования протокола проверки подлинности Kerberos с делегированием необходимо реализовать протокол Kerberos с согласованием учетных данных (иногда называется многоступенчатой проверкой подлинности Kerberos). Если проверка подлинности Kerberos реализована без согласования учетных данных (иногда называется одноступенчатой проверкой подлинности Kerberos), возникает исключение. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] как реализовать согласование учетных данных см. в разделе [Отладка ошибок проверки подлинности Windows](../../../../docs/framework/wcf/feature-details/debugging-windows-authentication-errors.md).  
   
 ## <a name="cryptography"></a>Шифрование  
   
@@ -81,18 +83,18 @@ ms.lasthandoff: 12/22/2017
   
 -   Сделайте платформозависимый вызов `p/invoke` функции `CertGetCertificateContextProperty` и проверьте свойство `dwProvType` возвращенного объекта `CertGetCertificateContextProperty`.  
   
--   Используйте `certutil` команду из командной строки для запроса сертификатов. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Задачи Certutil для устранения неполадок сертификатов](http://go.microsoft.com/fwlink/?LinkId=120056).  
+-   Используйте `certutil` команду из командной строки для запроса сертификатов. Дополнительные сведения см. в разделе [Задачи Certutil для устранения неполадок сертификатов](http://go.microsoft.com/fwlink/?LinkId=120056).  
   
 ## <a name="message-security-fails-if-using-aspnet-impersonation-and-aspnet-compatibility-is-required"></a>Сбой безопасности сообщений при использовании олицетворения ASP.NET и режима совместимости ASP.NET  
  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] не поддерживает следующую комбинацию параметров, поскольку в этом случае может не выполняться проверка подлинности клиента.  
   
 -   Включено олицетворение [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]. Это можно сделать в файле Web.config, настроив `impersonate` атрибут <`identity`> элемент `true`.  
   
--   [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]включен режим совместимости, задав `aspNetCompatibilityEnabled` атрибут [ \<serviceHostingEnvironment >](../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md) для `true`.  
+-   [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] включен режим совместимости, задав `aspNetCompatibilityEnabled` атрибут [ \<serviceHostingEnvironment >](../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md) для `true`.  
   
 -   Используется режим безопасности сообщения.  
   
- Временное решение - отключить режим совместимости [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]. Либо, если требуется режим совместимости [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)], отключить функцию олицетворения [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] и использовать вместо нее олицетворение, предусмотренное в [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Делегирования и олицетворения](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).  
+ Временное решение - отключить режим совместимости [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]. Либо, если требуется режим совместимости [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)], отключить функцию олицетворения [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] и использовать вместо нее олицетворение, предусмотренное в [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Дополнительные сведения см. в разделе [делегирования и олицетворения](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).  
   
 ## <a name="ipv6-literal-address-failure"></a>Ошибка литерального адреса IPv6  
  Если клиент и служба находятся на одном компьютере, а для службы используются литеральные адреса IPv6, происходит сбой запросов безопасности.  
@@ -106,7 +108,7 @@ ms.lasthandoff: 12/22/2017
   
 -   http://localhost/CalculatorService/service (служба)  
   
--   http://localhost/CalculatorService/issue_ticket (служба маркеров безопасности)  
+-   http://localhost/CalculatorService/issue_ticket (STS)  
   
 -   http://localhost/CalculatorService/mex (конечная точка метаданных)  
   

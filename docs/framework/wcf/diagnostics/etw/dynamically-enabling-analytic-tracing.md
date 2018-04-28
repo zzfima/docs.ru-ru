@@ -1,42 +1,44 @@
 ---
-title: "Динамическое включение аналитического отслеживания"
-ms.custom: 
+title: Динамическое включение аналитического отслеживания
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 58b63cfc-307a-427d-b69d-9917ff9f44ac
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 18dda3f63a12a9f9a2320f413137943e5864ad27
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: d070c66eebbf1a067254c38c6e5bfc7f40742863
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="dynamically-enabling-analytic-tracing"></a>Динамическое включение аналитического отслеживания
 Средства, поставляемые в составе ОС Windows, позволяют включать или отключать динамическую трассировку с использованием трассировки событий Windows (ETW). Аналитическая трассировка может быть включена и отключена динамически, без изменения файла Web.config приложения или перезапуска службы для всех служб [!INCLUDE[netfx_current_long](../../../../../includes/netfx-current-long-md.md)] [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] . Это дает возможность не останавливать работу приложения, создающего события трассировки.  
   
  Параметры трассировки[!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] могут быть настроены таким же способом. Например, можно, не останавливая приложение, изменить степень серьезности со значения **Ошибки** на **Сведения** . Это можно сделать с помощью следующих средств.  
   
--   **Logman** - средство командной строки, предназначенное для настройки, управления и запроса данных трассировки. [!INCLUDE[crdefault](../../../../../includes/crdefault-md.md)][Logman Create Trace](http://go.microsoft.com/fwlink/?LinkId=165426) и [Logman Update Trace](http://go.microsoft.com/fwlink/?LinkId=165427).  
+-   **Logman** - средство командной строки, предназначенное для настройки, управления и запроса данных трассировки. Дополнительные сведения см. в разделе [Logman создания трассировки](http://go.microsoft.com/fwlink/?LinkId=165426) и [Logman Update Trace](http://go.microsoft.com/fwlink/?LinkId=165427).  
   
--   **EventViewer** - графическое средство Windows для просмотра результатов трассировки. [!INCLUDE[crdefault](../../../../../includes/crdefault-md.md)][Службы WCF и трассировки событий Windows](../../../../../docs/framework/wcf/samples/wcf-services-and-event-tracing-for-windows.md) и [средство просмотра событий](http://go.microsoft.com/fwlink/?LinkId=165428).  
+-   **EventViewer** - графическое средство Windows для просмотра результатов трассировки. Дополнительные сведения см. в разделе [службы WCF и трассировки событий Windows](../../../../../docs/framework/wcf/samples/wcf-services-and-event-tracing-for-windows.md) и [средство просмотра событий](http://go.microsoft.com/fwlink/?LinkId=165428).  
   
--   **Системный монитор** - графическое средство управления Windows, которое использует счетчики для наблюдения за счетчиками трассировки и ее влиянием на производительность. [!INCLUDE[crdefault](../../../../../includes/crdefault-md.md)][Создание группы сборщиков данных вручную](http://go.microsoft.com/fwlink/?LinkId=165429).  
+-   **Системный монитор** - графическое средство управления Windows, которое использует счетчики для наблюдения за счетчиками трассировки и ее влиянием на производительность. Дополнительные сведения см. в разделе [данных сборщика задать вручную создать](http://go.microsoft.com/fwlink/?LinkId=165429).  
   
 ### <a name="keywords"></a>Ключевые слова  
  С использованием класса <xref:System.ServiceModel.Activation.Configuration.ServiceModelActivationSectionGroup.Diagnostics%2A> трассировка сообщений платформы .NET Framework в общем случае подлежит фильтрации по степени серьезности («Ошибки», «Предупреждения», «Сведения»). Трассировка событий Windows поддерживает концепцию уровня серьезности, а также вводит новый, более гибкий механизм фильтрации по ключевым словам. Ключевые слова - это произвольные текстовые значения, которые позволяют событиям трассировки предоставлять дополнительный контекст о значении события.  
   
  Для аналитической трассировки [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] каждый из уровней трассировки содержит два типа ключевых слов. Во-первых, каждое событие имеет одно или несколько ключевых слов сценариев. Они указывают на сценарий, для которого предназначено данное событие. Существует три ключевых слова сценариев. Каждое из них предназначено для определенной цели, как показано в следующей таблице. Фильтрация по ключевым словам может быть изменена динамически, без нарушения работы службы [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] . Это означает, что можно динамически изменить текущий сценарий трассировки и количество собираемых сведений. Например, можно установить `HealthMonitoring` в значение `Troubleshooting` и увеличить частоту событий трассировки.  
   
-|Ключевое слово|Описание:|  
+|Ключевое слово|Описание|  
 |-------------|-----------------|  
 |`HealthMonitoring`|Очень простая минимальная трассировка, которая позволяет наблюдать за активностью службы.|  
 |`EndToEndMonitoring`|Для поддержки трассировки потока сообщений используются события.|  
@@ -44,7 +46,7 @@ ms.lasthandoff: 12/22/2017
   
  Вторая группа ключевых слов определяет, каким из компонентов [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] создано данное событие.  
   
-|Ключевое слово|Описание:|  
+|Ключевое слово|Описание|  
 |-------------|-----------------|  
 |`UserEvents`|События, которые созданы пользовательским кодом, а не [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)].|  
 |`ServiceModel`|События, которые созданы средой выполнения [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] .|  

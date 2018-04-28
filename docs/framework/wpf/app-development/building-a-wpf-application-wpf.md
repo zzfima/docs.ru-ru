@@ -21,11 +21,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 054f6cd6ae71428aca6b99eb510b2ac34fc6c4b6
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: b7003756e5c805c21fc5f4013deccf64b5ba8811
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="building-a-wpf-application-wpf"></a>Построение приложения WPF
 Приложения [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] могут быть построены как исполняемые файлы (.exe), библиотеки (.dll) или сочетание двух типов сборок в [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]. В этом разделе даются вводные сведения для построения приложений [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] и описываются основные шаги процесса построения.  
@@ -51,7 +51,7 @@ ms.lasthandoff: 04/26/2018
 ### <a name="pre-build-initializations"></a>Инициализации перед сборкой  
  Перед сборкой [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] определяет расположение важных инструментов и библиотек, включая следующие.  
   
--   [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)].  
+-   .NET Framework.  
   
 -   Каталоги [!INCLUDE[TLA2#tla_wcsdk](../../../../includes/tla2sharptla-wcsdk-md.md)].  
   
@@ -63,7 +63,7 @@ ms.lasthandoff: 04/26/2018
   
 <a name="Resolving_references"></a>   
 ### <a name="resolving-references"></a>Разрешение ссылок  
- Процесс сборки находит и привязывает сборки, которые требуются для выполнения сборки проекта приложения. Эта логика содержится в задаче `ResolveAssemblyReference`. Все сборки, объявленные как `Reference` в файле проекта, предоставляются в задачу вместе с информацией о путях поиска и метаданными в сборках, уже установленных в системе. Задача ищет сборки и использует метаданные установленной сборки для фильтрации этих основных сборок [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], которые не должны отображаться в манифестах выходных данных. Это позволяет избежать избыточных сведений в манифесте ClickOnce. Например, так как PresentationFramework.dll может считаться представителем приложения, сборка которого выполнена в [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] и для WPF, и к тому же все сборки [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] существуют в одном месте на каждом компьютере, на котором установлена платформа [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)], нет необходимости включать в манифесты все сведения обо всех ссылочных сборках [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)].  
+ Процесс сборки находит и привязывает сборки, которые требуются для выполнения сборки проекта приложения. Эта логика содержится в задаче `ResolveAssemblyReference`. Все сборки, объявленные как `Reference` в файле проекта, предоставляются в задачу вместе с информацией о путях поиска и метаданными в сборках, уже установленных в системе. Задача ищет сборки и использует метаданные установленной сборки для фильтрации этих основных сборок [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], которые не должны отображаться в манифестах выходных данных. Это позволяет избежать избыточных сведений в манифесте ClickOnce. Например, так как PresentationFramework.dll может считаться представителем приложения, построенного на и для [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] и, кроме того с момента все [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] сборки существует в том же расположении на каждом компьютере с .NET Framework установлен, нет необходимости включать все сведения о всех ссылочных сборок .NET Framework в манифестах.  
   
 <a name="Markup_Compilation___Pass_1"></a>   
 ### <a name="markup-compilationpass-1"></a>Компиляция разметки — шаг 1  

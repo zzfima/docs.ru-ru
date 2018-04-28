@@ -1,24 +1,26 @@
 ---
-title: "Модели транзакций"
-ms.custom: 
+title: Модели транзакций
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 48a8bc1b-128b-4cf1-a421-8cc73223c340
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 782a6b5bdb206d285d619b8085993b591785aca5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: ab3baf8cc0bb6af951f6f3e6396b7545d0c6b301
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="transaction-models"></a>Модели транзакций
 В этом разделе описывается связь между моделями программирования транзакций и компонентами инфраструктуры, предоставляемыми корпорацией Microsoft.  
@@ -35,13 +37,13 @@ ms.lasthandoff: 12/22/2017
 ## <a name="systemtransactions-transactions"></a>Транзакции System.Transactions  
  Пространство имен <xref:System.Transactions> предоставляет как модель явного программирования, основанную на классе <xref:System.Transactions.Transaction>, так и модель неявного программирования, использующая класс <xref:System.Transactions.TransactionScope>, в котором транзакции автоматически управляются инфраструктурой.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]как создавать приложения с поддержкой транзакций с помощью этих двух моделях см. в разделе [Создание транзакционного приложения](http://go.microsoft.com/fwlink/?LinkId=94947).  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)] как создавать приложения с поддержкой транзакций с помощью этих двух моделях см. в разделе [Создание транзакционного приложения](http://go.microsoft.com/fwlink/?LinkId=94947).  
   
  В службе или приложении [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] пространство имен <xref:System.Transactions> предоставляет модель программирования для создания транзакций в клиентском приложении и для явного взаимодействия с транзакциями, когда это необходимо, в пределах службы.  
   
 ## <a name="msdtc-transactions"></a>Транзакции MSDTC  
  Координатор распределенных транзакций (Майкрософт) (MSDTC) представляет собой диспетчер транзакций, обеспечивающий поддержку распределенных транзакций.  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Справочник по программированию DTC](http://go.microsoft.com/fwlink/?LinkId=94948).  
+ Дополнительные сведения см. в разделе [Справочник по программированию DTC](http://go.microsoft.com/fwlink/?LinkId=94948).  
   
  В службе или приложении [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] MSDTC обеспечивает инфраструктуру для координации транзакций, созданных в клиенте или службе.

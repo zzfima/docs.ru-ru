@@ -1,13 +1,13 @@
 ---
-title: "Практическое руководство. Создание пользовательской привязки с использованием элемента SecurityBindingElement"
-ms.custom: 
+title: Практическое руководство. Создание пользовательской привязки с использованием элемента SecurityBindingElement
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,20 +15,20 @@ dev_langs:
 helpviewer_keywords:
 - security [WCF], creating custom bindings
 ms.assetid: 203a9f9e-3a73-427c-87aa-721c56265b29
-caps.latest.revision: 
+caps.latest.revision: 19
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
 ms.workload:
 - dotnet
-ms.openlocfilehash: e230c02d53f8222034dfd79872cde9c540c31963
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3dc83697a27bf99a63305bf89a57fbcb4d459b45
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="how-to-create-a-custom-binding-using-the-securitybindingelement"></a>Практическое руководство. Создание пользовательской привязки с использованием элемента SecurityBindingElement
-В [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] предусмотрено несколько предоставляемых системой привязок, подлежащих настройке, однако не способных в полной мере обеспечить гибкость настройки всех параметров безопасности, поддерживаемых [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. В этом разделе описывается создание пользовательской привязки непосредственно из отдельных элементов привязки с рассмотрением некоторых из параметров безопасности, которые могут быть заданы при создании такой привязки. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]создании пользовательских привязок см. в разделе [расширение привязок](../../../../docs/framework/wcf/extending/extending-bindings.md).  
+В [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] предусмотрено несколько предоставляемых системой привязок, подлежащих настройке, однако не способных в полной мере обеспечить гибкость настройки всех параметров безопасности, поддерживаемых [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. В этом разделе описывается создание пользовательской привязки непосредственно из отдельных элементов привязки с рассмотрением некоторых из параметров безопасности, которые могут быть заданы при создании такой привязки. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] создании пользовательских привязок см. в разделе [расширение привязок](../../../../docs/framework/wcf/extending/extending-bindings.md).  
   
 > [!WARNING]
 >  <xref:System.ServiceModel.Channels.SecurityBindingElement> не поддерживает форму канала <xref:System.ServiceModel.Channels.IDuplexSessionChannel>, которая по умолчанию используется формами каналов TCP-транспорта, если свойство <xref:System.ServiceModel.TransferMode> имеет значение <xref:System.ServiceModel.TransferMode.Buffered>. Необходимо задать свойству <xref:System.ServiceModel.TransferMode> значение <xref:System.ServiceModel.TransferMode.Streamed> для использования элемента <xref:System.ServiceModel.Channels.SecurityBindingElement> в этом сценарии.  
@@ -88,9 +88,9 @@ ms.lasthandoff: 12/22/2017
 |||SSL или Windows StreamSecurityBindingElement|SSL или Windows StreamSecurityBindingElement|SSL или Windows StreamSecurityBindingElement|  
 |||TcpTransportBindingElement|TcpTransportBindingElement|TcpTransportBindingElement|  
   
- Обратите внимание, что у элементов привязки безопасности имеется ряд настраиваемых параметров. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Режимы проверки подлинности SecurityBindingElement](../../../../docs/framework/wcf/feature-details/securitybindingelement-authentication-modes.md).  
+ Обратите внимание, что у элементов привязки безопасности имеется ряд настраиваемых параметров. Дополнительные сведения см. в разделе [режимы проверки подлинности SecurityBindingElement](../../../../docs/framework/wcf/feature-details/securitybindingelement-authentication-modes.md).  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Безопасные диалоги и безопасные сеансы](../../../../docs/framework/wcf/feature-details/secure-conversations-and-secure-sessions.md).  
+ Дополнительные сведения см. в разделе [Secure диалоги и безопасные сеансы](../../../../docs/framework/wcf/feature-details/secure-conversations-and-secure-sessions.md).  
   
 ## <a name="procedures"></a>Процедуры  
   
@@ -112,7 +112,7 @@ ms.lasthandoff: 12/22/2017
   
 ## <a name="example"></a>Пример  
   
-### <a name="description"></a>Описание:  
+### <a name="description"></a>Описание  
  Следующий пример кода представляет собой полноценную функцию для создания пользовательской привязки с использованием класса <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>.  
   
 ### <a name="code"></a>Код  

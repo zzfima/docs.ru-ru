@@ -1,27 +1,29 @@
 ---
-title: "Overview1 безопасности"
-ms.custom: 
+title: Overview1 безопасности
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Windows Communication Foundation, security
 - WCF, security
 ms.assetid: f478c80d-792d-4e7a-96bd-a2ff0b6f65f9
-caps.latest.revision: "37"
+caps.latest.revision: 37
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: c4c6ecbfc3407e3ebc321e92cd9e78dc2d80a3a6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: a50b3d3ec2a99d53bc7d5817f3ed530ef92d474b
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="security-overview"></a>Общие сведения о безопасности
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] - платформа распределенного программирования на основе технологии SOAP, и защита сообщений между клиентами и службами является важным компонентом защиты данных. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] обеспечивает универсальную и гибкую платформу для безопасного обмена сообщениями на основе существующей инфраструктуры безопасности и зарекомендовавших себя стандартов безопасности для сообщений SOAP.  
@@ -96,7 +98,7 @@ ms.lasthandoff: 12/22/2017
   
 -   *Режим безопасности сообщения*, в то же время, использует протокол WS-Security (и другие спецификации) для обеспечения безопасности передачи. Поскольку средства обеспечения безопасности сообщений применяются непосредственно для сообщений SOAP и содержатся в конвертах SOAP (вместе с данными приложений), этот режим имеет преимущества независимости от транспортного протокола, большей степени расширяемости и обеспечения сквозной безопасности (а не только на участке "точка-точка"); недостаток этого режима в том, что он в несколько раз медленнее режима безопасности транспорта, так как имеет дело с основанным на XML характером сообщений SOAP.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Эти различия в разделе [Защита служб и клиентов](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md).  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Эти различия в разделе [Защита служб и клиентов](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md).  
   
  В третьем режиме безопасности используются оба описанных выше режима. Этот режим имеет преимущества обоих предыдущих режимов и называется `TransportWithMessageCredential`. В этом режиме средства обеспечения безопасности сообщений используются для проверки подлинности клиента, а средства обеспечения безопасности транспорта - для проверки подлинности сервера и обеспечения конфиденциальности и целостности сообщений. Благодаря этому режим безопасности `TransportWithMessageCredential` имеет почти такую же скорость, как режим безопасности транспорта, и обеспечивает расширяемость проверки подлинности клиента таким же способом, как режим безопасности сообщений. Однако, в отличие от режима безопасности сообщений, он не обеспечивает полную сквозную безопасность.  
   
@@ -106,7 +108,7 @@ ms.lasthandoff: 12/22/2017
  В [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], функции управления доступом реализуются посредством интеграции с общеязыковой среды выполнения (CLR) <xref:System.Security.Permissions.PrincipalPermissionAttribute> и с помощью набора интерфейсов API, называемого *модель удостоверения*. Дополнительные сведения об управлении доступом и авторизации на основе утверждений см. в разделе [расширение безопасности](../../../../docs/framework/wcf/extending/extending-security.md).  
   
 ### <a name="auditing"></a>Аудит  
- *Аудит* ведение журналов событий безопасности в журнал событий Windows. Можно регистрировать такие связанные с безопасностью события, как положительные и отрицательные результаты проверки подлинности. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Аудита](../../../../docs/framework/wcf/feature-details/auditing-security-events.md). Для программирования сведения см. в разделе [как: события аудита безопасности](../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md).  
+ *Аудит* ведение журналов событий безопасности в журнал событий Windows. Можно регистрировать такие связанные с безопасностью события, как положительные и отрицательные результаты проверки подлинности. Дополнительные сведения см. в разделе [аудита](../../../../docs/framework/wcf/feature-details/auditing-security-events.md). Для программирования сведения см. в разделе [как: события аудита безопасности](../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md).  
   
 ## <a name="see-also"></a>См. также  
  <xref:System.Security.Permissions.PrincipalPermissionAttribute>  

@@ -1,28 +1,28 @@
 ---
-title: "Суррогаты контрактов данных"
-ms.custom: 
+title: Суррогаты контрактов данных
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - data contracts [WCF], surrogates
 ms.assetid: 8c31134c-46c5-4ed7-94af-bab0ac0dfce5
-caps.latest.revision: 
+caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: f6fcae1989b75a668fd6ff38596b06feca7be9e8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e6b372b998d7b3a91189032947a9ad8c68074b5d
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="data-contract-surrogates"></a>Суррогаты контрактов данных
 Контракт данных *символов-заместителей* является дополнительным, встроенная в модель контракта данных. Эта возможность предназначена для настройки и подстановки типов, когда необходимо изменить способ сериализации типа, десериализации или преобразования типа в метаданные. Например, суррогат может использоваться в сценариях, когда для типа не задан контракт данных, поля и свойства не помечены атрибутом <xref:System.Runtime.Serialization.DataMemberAttribute> или пользователи хотят динамически создавать вариации схемы.  
@@ -75,7 +75,7 @@ ms.lasthandoff: 12/22/2017
   
  Параметр `targetType` относится к объявленному типу элемента. Этот параметр является суррогатным типом, возвращенным методом <xref:System.Runtime.Serialization.IDataContractSurrogate.GetDataContractType%2A>. Сериализатор не требует, чтобы возвращенный объект можно было назначить этому типу. `obj` Представляет собой объект для сериализации и будут преобразованы в свой суррогат, при необходимости. Этот метод возвращает входной объект, если суррогатный не обрабатывает этот объект. В противном случае возвращается новый суррогатный объект. Суррогат не вызывается, если объект пустой. Метод позволяет определить несколько суррогатных сопоставлений для различных экземпляров.  
   
- При создании объекта <xref:System.Runtime.Serialization.DataContractSerializer> можно задать для него сохранение ссылок на объекты. ([!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Сериализации и десериализации](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md).) Это можно сделать, указав для параметра `preserveObjectReferences` в его конструкторе значение `true`. В таком случае суррогат вызывается для объекта только один раз, так как все последующие сериализации просто записывают в поток ссылку. Если параметр `preserveObjectReferences` имеет значение `false`, суррогат вызывается для каждого вхождения экземпляра.  
+ При создании объекта <xref:System.Runtime.Serialization.DataContractSerializer> можно задать для него сохранение ссылок на объекты. (Дополнительные сведения см. в разделе [сериализации и десериализации](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md).) Это можно сделать, указав для параметра `preserveObjectReferences` в его конструкторе значение `true`. В таком случае суррогат вызывается для объекта только один раз, так как все последующие сериализации просто записывают в поток ссылку. Если параметр `preserveObjectReferences` имеет значение `false`, суррогат вызывается для каждого вхождения экземпляра.  
   
  Если тип экземпляра, подвергающегося сериализации, отличается от объявленного типа, сведения о типе записываются в поток (например `xsi:type`), чтобы экземпляр затем можно было десериализовать. Это происходит независимо от того, является объект суррогатным, или нет.  
   
@@ -144,7 +144,7 @@ ms.lasthandoff: 12/22/2017
 ### <a name="getknowncustomdatatypes-method"></a>Метод GetKnownCustomDataTypes  
  Этот метод получает определенные типы пользовательских данных из схемы. Этот метод является необязательным для импорта схем.  
   
- Этот метод вызывается в начале экспорта или импорта схемы. Метод возвращает типы пользовательских данных, которые используются в экспортируемой или импортируемой схеме. Методу передается объект <xref:System.Collections.ObjectModel.Collection%601> (параметр `customDataTypes`), который представляет собой коллекцию типов. Метод добавляет дополнительные известные типы в эту коллекцию. Известные типы пользовательских данных необходимы для сериализации и десериализации пользовательских данных при помощи <xref:System.Runtime.Serialization.DataContractSerializer>. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Известные типы контрактов данных](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md).  
+ Этот метод вызывается в начале экспорта или импорта схемы. Метод возвращает типы пользовательских данных, которые используются в экспортируемой или импортируемой схеме. Методу передается объект <xref:System.Collections.ObjectModel.Collection%601> (параметр `customDataTypes`), который представляет собой коллекцию типов. Метод добавляет дополнительные известные типы в эту коллекцию. Известные типы пользовательских данных необходимы для сериализации и десериализации пользовательских данных при помощи <xref:System.Runtime.Serialization.DataContractSerializer>. Дополнительные сведения см. в разделе [известные типы контрактов данных](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md).  
   
 ## <a name="implementing-a-surrogate"></a>Реализация суррогата  
  Чтобы использовать суррогат контракта данных в [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], необходимо следовать определенным процедурам.  

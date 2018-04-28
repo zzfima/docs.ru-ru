@@ -1,12 +1,13 @@
 ---
-title: "Практическое руководство. Создание службы маркеров безопасности"
-ms.custom: 
+title: Практическое руководство. Создание службы маркеров безопасности
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,33 +16,34 @@ helpviewer_keywords:
 - WCF, federation
 - federation
 ms.assetid: 98e82101-4cff-4bb8-a220-f7abed3556e5
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 53ae64af0612cb905a2342491761b1e27ef19c06
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: e043b9b9a3b09bec0d7484fb732e33571b5aaf0c
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="how-to-create-a-security-token-service"></a>Практическое руководство. Создание службы маркеров безопасности
 Служба маркеров безопасности реализует протокол, определенный в спецификации WS-Trust. Данный протокол определяет форматы сообщения и шаблоны обмена сообщениями для выпуска, обновления, отмены и проверки маркеров безопасности. Данная служба маркеров безопасности дает одну или несколько из данных возможностей. В данном разделе рассматривается наиболее общий сценарий: реализация выпуска маркера.  
   
 ## <a name="issuing-tokens"></a>Выпуск маркеров  
- WS-Trust определяет форматы сообщения на основе элемента схемы `RequestSecurityToken` языка определения схемы XML (XSD) и элемента схемы XSD `RequestSecurityTokenResponse` для выпуска маркера. Кроме того, WS-Trust определяет связанные универсальные коды ресурса (URI). Универсальным кодом ресурса (URI) действия, связанным с сообщением `RequestSecurityToken`, является http://schemas.xmlsoap.org/ws/2005/02/trust/RST/Issue. Универсальным кодом ресурса действия, связанным с сообщением `RequestSecurityTokenResponse` является http://schemas.xmlsoap.org/ws/2005/02/trust/RSTR/Issue.  
+ WS-Trust определяет форматы сообщения на основе элемента схемы `RequestSecurityToken` языка определения схемы XML (XSD) и элемента схемы XSD `RequestSecurityTokenResponse` для выпуска маркера. Кроме того, WS-Trust определяет связанные универсальные коды ресурса (URI). Действие, URI, связанный с `RequestSecurityToken` сообщение http://schemas.xmlsoap.org/ws/2005/02/trust/RST/Issue. Действие, URI, связанный с `RequestSecurityTokenResponse` сообщение http://schemas.xmlsoap.org/ws/2005/02/trust/RSTR/Issue.  
   
 ### <a name="request-message-structure"></a>Структура сообщения с запросом  
  Структура сообщения с запросом на выпуск обычно состоит из следующих элементов.  
   
--   Тип запроса универсального кода ресурса (URI) со значением http://schemas.xmlsoap.org/ws/2005/02/trust/Issue.  
+-   Запрос введите URI со значением http://schemas.xmlsoap.org/ws/2005/02/trust/Issue.  
   
--   Универсальный код ресурса (URI) типа маркера. Для маркеров языка SAML 1.1 значением данного универсального кода ресурса (URI) является http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.1#SAMLV1.1.  
+-   Универсальный код ресурса (URI) типа маркера. Для маркеров безопасности утверждения Markup Language (SAML) 1.1 значением данного универсального кода Ресурса является http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.1#SAMLV1.1.  
   
 -   Значение размера ключа, указывающее количество битов в ключе, связанное с выпущенным маркером.  
   
--   Универсальный код ресурса (URI) типа ключа. Для симметричных ключей значением данного универсального кода ресурсов (URI) является http://schemas.xmlsoap.org/ws/2005/02/trust/SymmetricKey.  
+-   Универсальный код ресурса (URI) типа ключа. Для симметричных ключей значением данного универсального кода Ресурса является http://schemas.xmlsoap.org/ws/2005/02/trust/SymmetricKey.  
   
  Кроме того, может присутствовать несколько других элементов.  
   
@@ -109,7 +111,7 @@ ms.lasthandoff: 12/22/2017
  [!code-csharp[c_CreateSTS#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_creatests/cs/source.cs#4)]
  [!code-vb[c_CreateSTS#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_creatests/vb/source.vb#4)]  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Пример федерации](../../../../docs/framework/wcf/samples/federation-sample.md).  
+ Дополнительные сведения см. в разделе [пример федерации](../../../../docs/framework/wcf/samples/federation-sample.md).  
   
 ## <a name="creating-response-messages"></a>Создание ответных сообщений  
  После обработки службой маркеров безопасности запроса на выпуск и создания для выпуска маркера и ключа проверки должно быть создано ответное сообщение, включающее, по крайней мере, запрошенный маркер, маркер проверки и ссылки выпущенного маркера. Выпущенный маркер обычно является маркером <xref:System.IdentityModel.Tokens.SamlSecurityToken>, созданным из <xref:System.IdentityModel.Tokens.SamlAssertion>, как показано в следующем примере.  
@@ -122,7 +124,7 @@ ms.lasthandoff: 12/22/2017
  [!code-csharp[c_CreateSTS#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_creatests/cs/source.cs#6)]
  [!code-vb[c_CreateSTS#6](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_creatests/vb/source.vb#6)]  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]как создавать маркер проверки клиента и токен безопасности службы и предоставляет материал ключа для общего ключа см. в разделе [пример федерации](../../../../docs/framework/wcf/samples/federation-sample.md).  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)] как создавать маркер проверки клиента и токен безопасности службы и предоставляет материал ключа для общего ключа см. в разделе [пример федерации](../../../../docs/framework/wcf/samples/federation-sample.md).  
   
  Ссылки выпущенного ключа создаются путем создания экземпляров класса <xref:System.IdentityModel.Tokens.SecurityKeyIdentifierClause>.  
   

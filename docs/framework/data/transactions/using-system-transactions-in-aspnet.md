@@ -1,23 +1,24 @@
 ---
-title: "Использование инфраструктуры System.Transactions в среде ASP.NET"
-ms.custom: 
+title: Использование инфраструктуры System.Transactions в среде ASP.NET
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 1982c300-7ea6-4242-95ed-dc28ccfacac9
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c94cd0a6cdddc4b49a59d6420d2ec28864285aa8
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 1c20905c8eafb1ac31702a46878e517ac090e484
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="using-systemtransactions-in-aspnet"></a>Использование инфраструктуры System.Transactions в среде ASP.NET
 В этом разделе описывается, как можно эффективно использовать пространство имен <xref:System.Transactions> в приложении [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] .  
@@ -27,7 +28,7 @@ ms.lasthandoff: 01/19/2018
   
  Разрешение<xref:System.Transactions.DistributedTransactionPermission> запрашивается при каждой передаче управления транзакцией координатору распределенных транзакций (Майкрософт) (MSDTC). В этом сценарии используются ресурсы, общие для всего процесса, и прежде всего один глобальный ресурс, зарезервированный в журнале MSDTC, например внешнее веб-приложение для взаимодействия с базой данных или приложение, использующее базу данных в рамках предоставляемых им служб.  
   
- [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] имеет собственный набор уровней доверия, с которыми при помощи файлов политики связан определенный набор разрешений. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Уровни доверия ASP.NET и файлы политики](http://msdn.microsoft.com/library/f897c794-10d3-414c-86b7-59b66564bbf1). После первоначальной установки пакета Windows SDK ни один из файлов политики [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] по умолчанию не связан с разрешением <xref:System.Transactions.DistributedTransactionPermission>. Поэтому передачу управления транзакцией приложения [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] координатору MSDTC выполнить не удается: возникает исключение <xref:System.Security.SecurityException> при запросе разрешения <xref:System.Transactions.DistributedTransactionPermission>. Чтобы обеспечить передачу транзакции на следующий уровень иерархии среды [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] с частичным уровнем доверия, необходимо предоставить разрешение <xref:System.Transactions.DistributedTransactionPermission> для уровней доверия по умолчанию, у которых есть разрешение <xref:System.Data.SqlClient.SqlClientPermission>. Можно настроить пользовательский уровень доверия и файл политики для его поддержки или изменить файлы политики по умолчанию **Web_hightrust.config** и **Web_mediumtrust.config**.  
+ [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] имеет собственный набор уровней доверия, с которыми при помощи файлов политики связан определенный набор разрешений. Дополнительные сведения см. в разделе [ASP.NET уровни доверия и файлы политики](http://msdn.microsoft.com/library/f897c794-10d3-414c-86b7-59b66564bbf1). После первоначальной установки пакета Windows SDK ни один из файлов политики [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] по умолчанию не связан с разрешением <xref:System.Transactions.DistributedTransactionPermission>. Поэтому передачу управления транзакцией приложения [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] координатору MSDTC выполнить не удается: возникает исключение <xref:System.Security.SecurityException> при запросе разрешения <xref:System.Transactions.DistributedTransactionPermission>. Чтобы обеспечить передачу транзакции на следующий уровень иерархии среды [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] с частичным уровнем доверия, необходимо предоставить разрешение <xref:System.Transactions.DistributedTransactionPermission> для уровней доверия по умолчанию, у которых есть разрешение <xref:System.Data.SqlClient.SqlClientPermission>. Можно настроить пользовательский уровень доверия и файл политики для его поддержки или изменить файлы политики по умолчанию **Web_hightrust.config** и **Web_mediumtrust.config**.  
   
  Чтобы изменить файлы политики, добавьте **SecurityClass** элемент для **разрешения DistributedTransactionPermission** для **SecurityClasses** элемента под  **Сохранить** элемент и добавьте соответствующий **IPermission** элемента под [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] **NamedPermissionSet** для System.Transactions. Это показано в следующем файле конфигурации.  
   
@@ -50,7 +51,7 @@ ms.lasthandoff: 01/19/2018
 </PermissionSet>  
 ```  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)][!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] политики безопасности в разделе [элемент securityPolicy (схема параметров ASP.NET)](http://msdn.microsoft.com/library/469d8d22-d263-46bb-8400-40d8d027faba).  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)] [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] политика безопасности в разделе [элемент securityPolicy (схема параметров ASP.NET)](http://msdn.microsoft.com/library/469d8d22-d263-46bb-8400-40d8d027faba).  
   
 ## <a name="dynamic-compilation"></a>Динамическая компиляция  
  Чтобы импортировать и использовать <xref:System.Transactions> в приложении [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] , динамически компилируемом во время доступа, в файле конфигурации необходимо указать ссылку на сборку <xref:System.Transactions> . В частности, ссылку необходимо добавить в раздел **compilation**/**assemblies** корневого файла конфигурации по умолчанию **Web.config** или файла конфигурации конкретного веб-приложения. В следующем примере это показано.  
@@ -67,7 +68,7 @@ ms.lasthandoff: 01/19/2018
 </configuration>  
 ```  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][добавьте элемент для сборки для компиляции (схема параметров ASP.NET)](http://msdn.microsoft.com/library/602197e8-108d-4249-b752-ba2a318f75e4).  
+ Дополнительные сведения см. в разделе [добавьте элемент для сборки для компиляции (схема параметров ASP.NET)](http://msdn.microsoft.com/library/602197e8-108d-4249-b752-ba2a318f75e4).  
   
 ## <a name="see-also"></a>См. также  
  [Уровни доверия ASP.NET и файлы политики](http://msdn.microsoft.com/library/f897c794-10d3-414c-86b7-59b66564bbf1)  

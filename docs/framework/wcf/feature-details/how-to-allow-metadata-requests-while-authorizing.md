@@ -1,13 +1,13 @@
 ---
-title: "Практическое руководство. Разрешение запросов метаданных в процессе авторизации"
-ms.custom: 
+title: Практическое руководство. Разрешение запросов метаданных в процессе авторизации
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,22 +15,22 @@ dev_langs:
 helpviewer_keywords:
 - allowing metadata requests while authorizing [WCF]
 ms.assetid: 90cec34f-b619-452b-a056-8b1c0de49d05
-caps.latest.revision: 
+caps.latest.revision: 9
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 7661cf3c0f13ebf2f077318e022e8f5fd115e2a1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6b0b331da49fca7be5106610e4b6f144220cc849
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="how-to-allow-metadata-requests-while-authorizing"></a>Практическое руководство. Разрешение запросов метаданных в процессе авторизации
 В процессе настраиваемой авторизации может потребоваться разрешить обработку запроса для метаданных. Следующий раздел содержит пошаговое руководство для проверки такого запроса.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)][!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] авторизации, в разделе [авторизации](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md).  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)] [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] авторизация, в разделе [авторизации](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md).  
   
 ### <a name="to-allow-metadata-requests-during-authorization"></a>Разрешение запросов метаданных в процессе авторизации  
   
@@ -40,7 +40,7 @@ ms.lasthandoff: 12/22/2017
   
 3.  При переопределении проверяются имя контракта, пространство имен и действие, как показано в следующем примере. При выполнении этих условий возвращается логическое значение `true.`  
   
-4.  Используйте точку расширения для использования класса. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Как: Создание пользовательского диспетчера авторизации для службы](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md).  
+4.  Используйте точку расширения для использования класса. Дополнительные сведения см. в разделе [как: Создание пользовательского диспетчера авторизации для службы](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md).  
   
 ## <a name="example"></a>Пример  
  В следующем примере показано переопределение метода <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A>.  

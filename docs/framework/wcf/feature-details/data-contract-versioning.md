@@ -1,12 +1,13 @@
 ---
-title: "Управление версиями контракта данных"
-ms.custom: 
+title: Управление версиями контракта данных
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -16,16 +17,17 @@ helpviewer_keywords:
 - versioning [WCF]
 - data contracts [WCF], versioning
 ms.assetid: 4a0700cb-5f5f-4137-8705-3a3ecf06461f
-caps.latest.revision: "35"
+caps.latest.revision: 35
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e9773725a0d4626a8488249ead6440ad67a2a14a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: f232cb1cf98fe01aa0542c2a4b459fb7fc7b5089
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="data-contract-versioning"></a>Управление версиями контракта данных
 По мере развития приложений может возникнуть необходимость в изменении контрактов данных, используемых службами. В данном разделе описано, как создавать версии контрактов данных. В этом разделе описываются механизмы создания версий контрактов данных. Полный обзор и руководство по управлению версиями см. в разделе [рекомендации: управление версиями контракта данных](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md).  
@@ -114,16 +116,16 @@ ms.lasthandoff: 12/22/2017
   
  Многие изменения, считающиеся некритическими, на самом деле являются критическими, если требуется строгое соответствие схеме. В предыдущем примере экземпляр `CarV1`, содержащий только элемент `Model`, пройдет проверку по схеме `CarV2` (содержащую элементы `Model` и `Horsepower`, оба необязательные). Однако обратное неверно: экземпляр `CarV2` не пройдет проверку по схеме `CarV1`.  
   
- Следует учитывать возможность круговой передачи. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]«Замечания по схемам» раздела [прямой совместимостью контракты данных](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md).  
+ Следует учитывать возможность круговой передачи. Дополнительные сведения см. в подразделе «Замечания по схемам» [прямой совместимостью контракты данных](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md).  
   
 ### <a name="other-permitted-changes"></a>Другие разрешенные изменения  
- Реализация интерфейса <xref:System.Runtime.Serialization.IExtensibleDataObject> является некритическим изменением. Однако для версий типа, предшествующих версии, в которой был реализован интерфейс <xref:System.Runtime.Serialization.IExtensibleDataObject>, поддержка кругового пути отсутствует. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Контракты данных, совместимые с любыми будущими](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md).  
+ Реализация интерфейса <xref:System.Runtime.Serialization.IExtensibleDataObject> является некритическим изменением. Однако для версий типа, предшествующих версии, в которой был реализован интерфейс <xref:System.Runtime.Serialization.IExtensibleDataObject>, поддержка кругового пути отсутствует. Дополнительные сведения о создании контрактов данных, обладающих прямой совместимостью, см. в разделе [Контракты данных, совместимые с любыми будущими изменениями](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md).  
   
 ## <a name="enumerations"></a>Перечисления  
- Добавление или удаление члена перечисления - это критическое изменение. Изменение имени члена перечисления также является критическим изменением, за исключением случая, когда с помощью атрибута `EnumMemberAtttribute` имя контракта оставлено таким же, как и в старой версии. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Типы перечислений в контрактах данных](../../../../docs/framework/wcf/feature-details/enumeration-types-in-data-contracts.md).  
+ Добавление или удаление члена перечисления - это критическое изменение. Изменение имени члена перечисления также является критическим изменением, за исключением случая, когда с помощью атрибута `EnumMemberAtttribute` имя контракта оставлено таким же, как и в старой версии. Дополнительные сведения см. в разделе [типы перечислений в контрактах данных](../../../../docs/framework/wcf/feature-details/enumeration-types-in-data-contracts.md).  
   
 ## <a name="collections"></a>Коллекции  
- Большинство изменений коллекций являются некритическими, так как в модели контракта данных большинство типов коллекции взаимозаменяемы. Однако преобразование стандартной коллекции в настраиваемую или наоборот является критическим изменением. Итак, изменение параметров настройки коллекции является весьма важным. Сюда относится изменение ее имени контракта данных и пространства имен, имени повторяющегося элемента, имени ключевого элемента и имени элемента значения. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]настройке коллекции см. в разделе [типы коллекций в контрактах данных](../../../../docs/framework/wcf/feature-details/collection-types-in-data-contracts.md).  
+ Большинство изменений коллекций являются некритическими, так как в модели контракта данных большинство типов коллекции взаимозаменяемы. Однако преобразование стандартной коллекции в настраиваемую или наоборот является критическим изменением. Итак, изменение параметров настройки коллекции является весьма важным. Сюда относится изменение ее имени контракта данных и пространства имен, имени повторяющегося элемента, имени ключевого элемента и имени элемента значения. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] настройке коллекции см. в разделе [типы коллекций в контрактах данных](../../../../docs/framework/wcf/feature-details/collection-types-in-data-contracts.md).  
 Конечно, изменение контракта данных содержимого коллекции (например, переход со списка целых чисел на список строк) является важным изменением.  
   
 ## <a name="see-also"></a>См. также  

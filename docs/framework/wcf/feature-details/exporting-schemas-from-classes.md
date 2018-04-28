@@ -1,12 +1,13 @@
 ---
-title: "Экспорт схем из классов"
-ms.custom: 
+title: Экспорт схем из классов
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - WCF, schema import and export
@@ -15,16 +16,17 @@ helpviewer_keywords:
 - XsdDataContractExporter class
 - XsdDataContractImporter class
 ms.assetid: bb57b962-70c1-45a9-93d5-e721e340a13f
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 01e841e76c4a6cf06169113422921367d671ea98
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: d9e63223fce7f86b0cf2a64ba4e7aa2e54ca6219
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="exporting-schemas-from-classes"></a>Экспорт схем из классов
 Чтобы создать схемы языка определения схемы XML (XSD) из классов, используемых в модели контракта данных, используйте класс <xref:System.Runtime.Serialization.XsdDataContractExporter> . В данном разделе описывается процесс создания схем.  
@@ -54,9 +56,9 @@ ms.lasthandoff: 12/22/2017
 ## <a name="export-options"></a>Параметры экспорта  
  Можно присвоить свойство <xref:System.Runtime.Serialization.XsdDataContractExporter.Options%2A> объекта <xref:System.Runtime.Serialization.XsdDataContractExporter> экземпляру класса <xref:System.Runtime.Serialization.ExportOptions> для управления различными аспектами процесса экспорта. В частности, можно задать следующие параметры.  
   
--   <xref:System.Runtime.Serialization.ExportOptions.KnownTypes%2A>. В этой коллекции `Type` представлены известные типы для экспортируемых типов. ([!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Известные типы контрактов данных](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md).) Эти известные типы экспортируются при каждом вызове метода `Export` в дополнение к типам, передаваемым в метод `Export`.  
+-   <xref:System.Runtime.Serialization.ExportOptions.KnownTypes%2A>. В этой коллекции `Type` представлены известные типы для экспортируемых типов. (Дополнительные сведения см. в разделе [известные типы контрактов данных](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md).) Эти известные типы экспортируются при каждом вызове метода `Export` в дополнение к типам, передаваемым в метод `Export`.  
   
--   <xref:System.Runtime.Serialization.ExportOptions.DataContractSurrogate%2A>. С помощью этого свойства можно указать <xref:System.Runtime.Serialization.IDataContractSurrogate> для настройки процесса экспорта. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Суррогаты контракта данных](../../../../docs/framework/wcf/extending/data-contract-surrogates.md). По умолчанию суррогат не используется.  
+-   <xref:System.Runtime.Serialization.ExportOptions.DataContractSurrogate%2A>. С помощью этого свойства можно указать <xref:System.Runtime.Serialization.IDataContractSurrogate> для настройки процесса экспорта. Дополнительные сведения см. в разделе [суррогаты контрактов данных](../../../../docs/framework/wcf/extending/data-contract-surrogates.md). По умолчанию суррогат не используется.  
   
 ## <a name="helper-methods"></a>Вспомогательные методы  
  Помимо выполнения основной задачи, заключающейся в экспорте схемы, экспортер `XsdDataContractExporter` предлагает несколько полезных вспомогательных методов, предоставляющих сведения о типах. К ним относятся следующие методы.  

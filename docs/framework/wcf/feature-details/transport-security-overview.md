@@ -13,17 +13,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 00959326-aa9d-44d0-af61-54933d4adc7f
-caps.latest.revision: ''
+caps.latest.revision: 23
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
 ms.workload:
 - dotnet
-ms.openlocfilehash: 71325089f2c72f6f01b2179bd150d21a98b3a8e2
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 5619041ccf4ce4d899f3c9a478d125a1a2d8d32a
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="transport-security-overview"></a>Общие сведения о безопасности транспорта
 Механизмы обеспечения безопасности транспорта в [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] зависят от привязки и используемого транспорта. Например, при использовании класса <xref:System.ServiceModel.WSHttpBinding> транспортом является протокол HTTP и в качестве основного механизма защиты транспорта применяется протокол SSL через HTTP, обычно называемый HTTPS. В данном разделе рассматриваются основные механизмы обеспечения безопасности транспорта, которые используются в привязках, предусмотренных в системе [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
@@ -72,10 +72,10 @@ ms.lasthandoff: 03/26/2018
  Соответствует встроенной проверке подлинности Windows в IIS. При задании этого значения также предполагается, что сервер находится в домене Windows, в котором для взаимодействия с контроллером домена используется протокол Kerberos. Если сервер не находится в домене с поддержкой Kerberos или происходит сбой системы Kerberos, можно использовать значение NTLM, описанное в следующем разделе. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] [!INCLUDE[iis601](../../../../includes/iis601-md.md)], в разделе [встроенную проверку подлинности Windows в службах IIS 6.0](http://go.microsoft.com/fwlink/?LinkId=88597). [!INCLUDE[crabout](../../../../includes/crabout-md.md)] [!INCLUDE[iisver](../../../../includes/iisver-md.md)], в разделе [бета-версия IIS 7.0: Настройка сертификатов сервера в IIS 7.0](http://go.microsoft.com/fwlink/?LinkId=88595).  
   
 #### <a name="ntlm"></a>NTLM  
- Это позволяет серверу использовать NTLM для проверки подлинности в случае сбоя протокола Kerberos. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Настройка служб IIS в [!INCLUDE[iis601](../../../../includes/iis601-md.md)], в разделе [Принудительная проверка подлинности NTLM](http://go.microsoft.com/fwlink/?LinkId=88598). Для [!INCLUDE[iisver](../../../../includes/iisver-md.md)] проверка подлинности Windows включает проверку подлинности NTLM. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [IIS 7.0 бета-версия: Настройка сертификатов сервера в IIS 7.0](http://go.microsoft.com/fwlink/?LinkID=88595).  
+ Это позволяет серверу использовать NTLM для проверки подлинности в случае сбоя протокола Kerberos. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Настройка служб IIS в [!INCLUDE[iis601](../../../../includes/iis601-md.md)], в разделе [Принудительная проверка подлинности NTLM](http://go.microsoft.com/fwlink/?LinkId=88598). Для [!INCLUDE[iisver](../../../../includes/iisver-md.md)] проверка подлинности Windows включает проверку подлинности NTLM. Дополнительные сведения см. в разделе [бета-версия IIS 7.0: Настройка сертификатов сервера в IIS 7.0](http://go.microsoft.com/fwlink/?LinkID=88595).  
   
 ## <a name="wshttpbinding"></a>WsHttpBinding  
- Класс <xref:System.ServiceModel.WSHttpBinding> предназначен для взаимодействия со службами, реализующими спецификации WS-*. Безопасность транспорта для этой привязки обеспечивается посредством протокола SSL по протоколам HTTP или HTTPS. Чтобы создать приложение [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], использующее SSL, для размещения этого приложения используйте IIS. В случае создания резидентного приложения используйте средство HttpCfg.exe для привязки сертификата X.509 к конкретному порту на компьютере. Номер порта указывается в качестве компонента приложения [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] как адрес конечной точки. При использовании транспортного режима адрес конечной точки должен включать протокол HTTPS; в противном случае во время выполнения будет вызвано исключение. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Безопасность транспорта HTTP](../../../../docs/framework/wcf/feature-details/http-transport-security.md).  
+ Класс <xref:System.ServiceModel.WSHttpBinding> предназначен для взаимодействия со службами, реализующими спецификации WS-*. Безопасность транспорта для этой привязки обеспечивается посредством протокола SSL по протоколам HTTP или HTTPS. Чтобы создать приложение [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], использующее SSL, для размещения этого приложения используйте IIS. В случае создания резидентного приложения используйте средство HttpCfg.exe для привязки сертификата X.509 к конкретному порту на компьютере. Номер порта указывается в качестве компонента приложения [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] как адрес конечной точки. При использовании транспортного режима адрес конечной точки должен включать протокол HTTPS; в противном случае во время выполнения будет вызвано исключение. Дополнительные сведения см. в разделе [безопасности транспорта HTTP](../../../../docs/framework/wcf/feature-details/http-transport-security.md).  
   
  Для проверки подлинности клиента присвойте свойству <xref:System.ServiceModel.HttpTransportSecurity.ClientCredentialType%2A> класса <xref:System.ServiceModel.HttpTransportSecurity> одно из значений перечисления <xref:System.ServiceModel.HttpClientCredentialType>. Значения перечисления идентичны типам учетных данных клиентов для класса <xref:System.ServiceModel.BasicHttpBinding> и должны размещаться службами IIS.  
   

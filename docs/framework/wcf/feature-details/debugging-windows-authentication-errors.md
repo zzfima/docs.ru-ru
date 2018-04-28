@@ -1,12 +1,13 @@
 ---
-title: "Отладка ошибок проверки подлинности Windows"
-ms.custom: 
+title: Отладка ошибок проверки подлинности Windows
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,16 +16,17 @@ helpviewer_keywords:
 - WCF, authentication
 - WCF, Windows authentication
 ms.assetid: 181be4bd-79b1-4a66-aee2-931887a6d7cc
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b24d5a8ebccbd454579394a986614e0d40d8d0e6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: e6efcb5097729ac5f096e78883e9bc49598c9a37
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="debugging-windows-authentication-errors"></a>Отладка ошибок проверки подлинности Windows
 При использовании в качестве механизма обеспечения безопасности проверки подлинности Windows процессы безопасности обрабатываются интерфейсом поставщика поддержки безопасности SSPI. Если на уровне SSPI происходят ошибки безопасности, они регистрируются на уровне [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. В этом разделе описаны общие принципы и некоторые вопросы, помогающие диагностировать такие ошибки.  
@@ -73,11 +75,11 @@ ms.lasthandoff: 12/22/2017
 ### <a name="kerberos-protocol"></a>Протокол Kerberos  
   
 #### <a name="spnupn-problems-with-the-kerberos-protocol"></a>Проблемы SPN/UPN, возникающие при использовании протокола Kerberos  
- Если при проверке подлинности Windows используется протокол Kerberos, или он выбирается с помощью интерфейса SSPI, URL-адрес, используемый конечной точкой клиента, должен включать полное доменное имя узла службы внутри URL-адреса службы. Предполагается, что учетная запись, под которой выполняется служба имеет доступ к ключу службы имя участника (SPN) компьютера (по умолчанию), который создается при добавлении компьютера в домен Active Directory, что чаще всего осуществляется путем запуска службы в группе Учетная запись сетевой службы. Если у службы нет доступа к ключу имени участника-службы этого компьютера, необходимо предоставить правильное имя участника-службы или имя участника-пользователя (UPN) учетной записи, под которой выполняется служба в удостоверении конечной точки клиента. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]как [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] работает с имени участника-службы и имя участника-пользователя, в разделе [службы удостоверений и проверки подлинности](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
+ Если при проверке подлинности Windows используется протокол Kerberos, или он выбирается с помощью интерфейса SSPI, URL-адрес, используемый конечной точкой клиента, должен включать полное доменное имя узла службы внутри URL-адреса службы. Предполагается, что учетная запись, под которой выполняется служба имеет доступ к ключу службы имя участника (SPN) компьютера (по умолчанию), который создается при добавлении компьютера в домен Active Directory, что чаще всего осуществляется путем запуска службы в группе Учетная запись сетевой службы. Если у службы нет доступа к ключу имени участника-службы этого компьютера, необходимо предоставить правильное имя участника-службы или имя участника-пользователя (UPN) учетной записи, под которой выполняется служба в удостоверении конечной точки клиента. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] как [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] работает с имени участника-службы и имя участника-пользователя, в разделе [службы удостоверений и проверки подлинности](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
   
  В сценариях с балансировкой нагрузки, например при использовании веб-ферм или веб-садов, распространена практика определения уникальной учетной записи для каждого из приложений, назначения этой учетной записи имени участника-службы и контроль за тем, чтобы все службы приложения выполнялись от имени этой учетной записи.  
   
- Чтобы получить для учетной записи службы имя участника-службы, нужны права администратора домена Active Directory. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Дополнение технической Kerberos для Windows](http://go.microsoft.com/fwlink/?LinkID=88330).  
+ Чтобы получить для учетной записи службы имя участника-службы, нужны права администратора домена Active Directory. Дополнительные сведения см. в разделе [техническое дополнение Kerberos для Windows](http://go.microsoft.com/fwlink/?LinkID=88330).  
   
 #### <a name="kerberos-protocol-direct-requires-the-service-to-run-under-a-domain-machine-account"></a>Для непосредственного применения протокола Kerberos необходимо, чтобы служба выполнялась от имени учетной записи компьютера домена  
  Такая ситуация возникает, когда свойство `ClientCredentialType` имеет значение `Windows`, а свойство <xref:System.ServiceModel.MessageSecurityOverHttp.NegotiateServiceCredential%2A> - `false`, как показано в следующем примере кода.  
@@ -132,7 +134,7 @@ ms.lasthandoff: 12/22/2017
  [!code-csharp[C_DebuggingWindowsAuth#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_debuggingwindowsauth/cs/source.cs#6)]
  [!code-vb[C_DebuggingWindowsAuth#6](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_debuggingwindowsauth/vb/source.vb#6)]  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]олицетворение, в разделе [делегирования и олицетворения](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)] олицетворение, в разделе [делегирования и олицетворения](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).  
   
  Либо клиент может выполняться в качестве службы Windows от имени встроенной учетной записи SYSTEM.  
   

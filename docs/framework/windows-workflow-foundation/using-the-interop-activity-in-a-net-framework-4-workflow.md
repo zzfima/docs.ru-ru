@@ -1,23 +1,24 @@
 ---
-title: "Использование действия «Interop» в рабочем процессе платформы .NET Framework 4"
-ms.custom: 
+title: Использование действия «Interop» в рабочем процессе платформы .NET Framework 4
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 9bb747f0-eb33-4f70-84cd-317382372dcd
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0a02d6dbc7c6f6583a174bd10853d8c8070ac273
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: ebef74097d22c9624a29470f4cda231bbb32fe90
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="using-the-interop-activity-in-a-net-framework-4-workflow"></a>Использование действия «Interop» в рабочем процессе платформы .NET Framework 4
 Действия, созданные в [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] или в [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)], могут использоваться в рабочем процессе [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] посредством использования действия <xref:System.Activities.Statements.Interop>. В этом разделе приведены общие сведения об использовании действия <xref:System.Activities.Statements.Interop>.  
@@ -370,10 +371,10 @@ Rule3: IF this.DiscountPercent > 0
 |Возможность правил|Документация|  
 |-------------------|-------------------|  
 |Общие сведения о правилах|[Введение в обработчик правил Windows Workflow Foundation](http://go.microsoft.com/fwlink/?LinkID=152836)|  
-|RuleSet|[Использование наборов правил в рабочих процессах](http://go.microsoft.com/fwlink/?LinkId=178516) и<xref:System.Workflow.Activities.Rules.RuleSet>|  
+|RuleSet|[Использование наборов правил в рабочих процессах](http://go.microsoft.com/fwlink/?LinkId=178516) и <xref:System.Workflow.Activities.Rules.RuleSet>|  
 |Оценка правил|[Вычисление правил в наборы правил](http://go.microsoft.com/fwlink/?LinkId=178517)|  
 |Цепочки правил|[Прямой цепочки управления](http://go.microsoft.com/fwlink/?LinkId=178518) и [прямые логические цепочки правил](http://go.microsoft.com/fwlink/?LinkId=178519)|  
 |Обработка коллекций в правилах|[Обработка коллекций в правилах](http://go.microsoft.com/fwlink/?LinkId=178520)|  
-|Использование действия PolicyActivity|[Использование действия PolicyActivity](http://go.microsoft.com/fwlink/?LinkId=178521) и<xref:System.Workflow.Activities.PolicyActivity>|  
+|Использование действия PolicyActivity|[Использование действия PolicyActivity](http://go.microsoft.com/fwlink/?LinkId=178521) и <xref:System.Workflow.Activities.PolicyActivity>|  
   
- Рабочие процессы, созданные в [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)], используют не все предоставляемые в [!INCLUDE[wf1](../../../includes/wf1-md.md)] возможности правил, например они не реализуют декларативные условия действий и условные действия, такие как <xref:System.Workflow.Activities.ConditionedActivityGroup> и <xref:System.Workflow.Activities.ReplicatorActivity>. При необходимости можно воспользоваться этими функциональными возможностями в рабочих процессах, созданных с помощью [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] и [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)]. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Руководство по миграции](../../../docs/framework/windows-workflow-foundation/migration-guidance.md).
+ Рабочие процессы, созданные в [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)], используют не все предоставляемые в [!INCLUDE[wf1](../../../includes/wf1-md.md)] возможности правил, например они не реализуют декларативные условия действий и условные действия, такие как <xref:System.Workflow.Activities.ConditionedActivityGroup> и <xref:System.Workflow.Activities.ReplicatorActivity>. При необходимости можно воспользоваться этими функциональными возможностями в рабочих процессах, созданных с помощью [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] и [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)]. Дополнительные сведения см. в разделе [руководство по миграции](../../../docs/framework/windows-workflow-foundation/migration-guidance.md).

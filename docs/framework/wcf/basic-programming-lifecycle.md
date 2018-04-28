@@ -1,28 +1,28 @@
 ---
-title: "Базовый жизненный цикл программирования"
-ms.custom: 
+title: Базовый жизненный цикл программирования
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - service creation [WCF]
 ms.assetid: 7cf21bfe-23bd-46aa-8033-609f851dbf76
-caps.latest.revision: 
+caps.latest.revision: 36
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 4f5c45cad0b1e4ae1aa6b1963e9acdab47cd9203
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ff735a8caf1fbaff636f94eee366b20c33d8f331
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="basic-programming-lifecycle"></a>Базовый жизненный цикл программирования
 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] позволяет приложениям обмениваться информацией не только в пределах одного компьютера, но и через Интернет, даже если они выполняются на различных платформах. В этом разделе приводятся задачи, которые необходимо выполнить при создании приложения [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]. Рабочий пример приложения см. в разделе [учебник по началу работы](../../../docs/framework/wcf/getting-started-tutorial.md).  
@@ -30,15 +30,15 @@ ms.lasthandoff: 12/22/2017
 ## <a name="the-basic-tasks"></a>Основные задачи  
  Необходимо выполнить следующие основные задачи в указанном порядке:  
   
-1.  Определите контракт службы. В контракте службы указывается ее сигнатура, отправляемые и получаемые ей данные и прочие данные, требуемые контрактом. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Проектирование контрактов службы](../../../docs/framework/wcf/designing-service-contracts.md).  
+1.  Определите контракт службы. В контракте службы указывается ее сигнатура, отправляемые и получаемые ей данные и прочие данные, требуемые контрактом. Дополнительные сведения см. в разделе [проектирование контрактов службы](../../../docs/framework/wcf/designing-service-contracts.md).  
   
-2.  Реализуйте контракт. Для реализации контракта службы создайте класс, который реализует этот контракт, и укажите пользовательские режимы работы, которые должна иметь среда выполнения. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Реализация контрактов службы](../../../docs/framework/wcf/implementing-service-contracts.md).  
+2.  Реализуйте контракт. Для реализации контракта службы создайте класс, который реализует этот контракт, и укажите пользовательские режимы работы, которые должна иметь среда выполнения. Дополнительные сведения см. в разделе [реализация контрактов службы](../../../docs/framework/wcf/implementing-service-contracts.md).  
   
-3.  Настройте службу, указав конечные точки и определив прочие сведения о режимах работы. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Настройка служб](../../../docs/framework/wcf/configuring-services.md).  
+3.  Настройте службу, указав конечные точки и определив прочие сведения о режимах работы. Дополнительные сведения см. в разделе [Настройка службы](../../../docs/framework/wcf/configuring-services.md).  
   
-4.  Разместите службу. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Услуг](../../../docs/framework/wcf/hosting-services.md).  
+4.  Разместите службу. Дополнительные сведения см. в разделе [размещение служб](../../../docs/framework/wcf/hosting-services.md).  
   
-5.  Создайте клиентское приложение. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Создание клиентов](../../../docs/framework/wcf/building-clients.md).  
+5.  Создайте клиентское приложение. Дополнительные сведения см. в разделе [Создание клиентов](../../../docs/framework/wcf/building-clients.md).  
   
  Несмотря на то что подразделы этого раздела приведены именно в таком порядке, некоторые сценарии не начинаются с самого начала. Например, если требуется создать клиент для существующей службы, следует начать с шага 5. При создании службы, которая будет использоваться другими службами, можно пропустить шаг 5.  
   

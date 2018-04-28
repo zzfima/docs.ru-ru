@@ -1,20 +1,17 @@
 ---
-title: "Циклы: выражение while...do (F#)"
-description: "В разделе как while... выполните выражение используется для выполнения итерации (в цикле), пока заданное проверяемое условие имеет значение true."
-keywords: "visual f#, f#, функциональное программирование"
+title: 'Циклы: выражение while...do (F#)'
+description: В разделе как while... выполните выражение используется для выполнения итерации (в цикле), пока заданное проверяемое условие имеет значение true.
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 0416ffca-7ed9-4aff-9493-e001fdba8c9b
-ms.openlocfilehash: 5f10fda84a5e748856eb7b2c63ad46cc1fba44bb
-ms.sourcegitcommit: 8ed4ebc15b5ef89d06a7507dc9d5e306e30accf7
+ms.openlocfilehash: 847f99faab42c8805bd788e42e3f24ad6369ba52
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="loops-whiledo-expression"></a>Циклы: выражение while...do
 

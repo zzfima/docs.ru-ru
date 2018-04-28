@@ -12,24 +12,24 @@ ms.topic: article
 helpviewer_keywords:
 - certificates [WCF], retrieving thumbprint
 ms.assetid: da3101aa-78cd-4c34-9652-d1f24777eeab
-caps.latest.revision: ''
+caps.latest.revision: 15
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 8f6d00d31023aa8d6dbfec4a8306f1cb9da17c74
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0fe3635b73e17123e410f43efc8d382e0df85641
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="how-to-retrieve-the-thumbprint-of-a-certificate"></a>Практическое руководство. Извлечение отпечатка сертификата
 При написании приложения [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] , использующего для проверки подлинности сертификат X.509, часто возникает необходимость задать утверждения из сертификата Например, при использовании перечисления <xref:System.Security.Cryptography.X509Certificates.X509FindType.FindByThumbprint> в методе <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A> необходимо указать утверждение отпечатка. Чтобы найти значение утверждения, необходимо выполнить два действия. Сначала необходимо открыть оснастку сертификатов консоли управления (MMC). (См. раздел [Практическое руководство. Просмотр сертификатов с помощью оснастки консоли MMC](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md)). После этого, как описано в этом разделе, необходимо найти соответствующий сертификат и скопировать его отпечаток (или другие значения утверждений).  
   
  Если сертификат используется для проверки подлинности службы, важно запомнить значение столбца **Кому выдан** (первый столбец консоли). При использовании для защиты транспорта протокола SSL одним из первых шагов является сравнение базового адреса универсального кода ресурса (URI) службы со значением поля **Кому выдан** . Значения должны совпадать, в противном случае процесс проверки подлинности будет прерван.  
   
- Кроме того, можно с помощью средства Makecert.exe из пакета SDK для [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] создать временные сертификаты для использования только на этапе разработки. Однако по умолчанию такой сертификат не выдается центром сертификации и не может использоваться в рабочей среде. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Как: создание временных сертификатов для использования во время разработки](../../../../docs/framework/wcf/feature-details/how-to-create-temporary-certificates-for-use-during-development.md).  
+ Кроме того, можно с помощью средства Makecert.exe из пакета SDK для [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] создать временные сертификаты для использования только на этапе разработки. Однако по умолчанию такой сертификат не выдается центром сертификации и не может использоваться в рабочей среде. Дополнительные сведения см. в разделе [как: создание временных сертификатов для использования во время разработки](../../../../docs/framework/wcf/feature-details/how-to-create-temporary-certificates-for-use-during-development.md).  
   
 ### <a name="to-retrieve-a-certificates-thumbprint"></a>Извлечение отпечатка сертификата  
   

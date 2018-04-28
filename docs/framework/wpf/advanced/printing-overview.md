@@ -29,11 +29,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 8694c646cabfd6637325035e563298b0619dac14
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: 639e1bbac049e4186faa2b243200f7ef544add38
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="printing-overview"></a>Общие сведения о печати
 В Microsoft .NET Framework, разработчики приложений с помощью [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] имеют новый набор печати и управление системой [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)]. В [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)] некоторые из усовершенствований управления печатью также доступны для разработчиков, создающих приложения [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)], и разработчиков, использующих неуправляемый код. В основе этой новой функциональности лежит новый формат файла [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] и способ печати [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)].  
@@ -60,7 +60,7 @@ ms.lasthandoff: 04/27/2018
   
 -   Встроенная поддержка дополнительных цветовых профилей, включая 32 бита на канал (bpc), CMYK, именованные цвета, n-краски и встроенную поддержку прозрачности и градиентов.  
   
--   Улучшенная производительность печати для приложений на основе [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)] и [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)].  
+-   Улучшенная производительность печати для обоих .NET Framework и [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] приложений на основе.  
   
 -   Формат [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] отраслевого стандарта  
   
@@ -73,7 +73,7 @@ ms.lasthandoff: 04/27/2018
 -   Расширяемый конвейер фильтра. Конвейер фильтра драйвера принтера [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] (XPSDrv) был разработан для включения как прямой, так и масштабируемой печати документов [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)]. (Уточняющий запрос» XPSDrv» в [Windows Driver Kit](https://msdn.microsoft.com/library/windows/hardware/ff557573.aspx).)  
   
 ### <a name="print-path-architecture"></a>Архитектура способа печати  
- Хотя оба [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] и [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)] приложения поддерживают [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)], [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] и использовать в приложениях Windows Forms [!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)] для [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] преобразования для создания [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] форматированное содержимое для [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] драйвера принтера (XPSDrv). Эти приложения не обязаны использовать способ печати [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)], и можно продолжать использовать печать на основе [!INCLUDE[TLA#tla_emf](../../../../includes/tlasharptla-emf-md.md)]. Однако большинство функций и усовершенствований [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] доступно только приложениям, предназначенным для способа печати [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)].  
+ Хотя оба [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] и приложениями .NET Framework поддерживают [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)], [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] и использовать в приложениях Windows Forms [!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)] для [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] преобразования для создания [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] форматированное содержимое для [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)]драйвер принтера (XPSDrv). Эти приложения не обязаны использовать способ печати [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)], и можно продолжать использовать печать на основе [!INCLUDE[TLA#tla_emf](../../../../includes/tlasharptla-emf-md.md)]. Однако большинство функций и усовершенствований [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] доступно только приложениям, предназначенным для способа печати [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)].  
   
  Чтобы включить использование принтеров на основе XPSDrv [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] приложения Windows Forms и [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] драйвер принтера (XPSDrv) поддерживает преобразование [!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)] для [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] формат. Модель XPSDrv также предоставляет преобразователь для [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] в формат [!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)], чтобы приложения [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] могли печатать документы [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)]. Для [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] приложений, преобразование [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] для [!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)] формата выполняется автоматически <xref:System.Windows.Xps.XpsDocumentWriter.Write%2A> и <xref:System.Windows.Xps.XpsDocumentWriter.WriteAsync%2A> методы <xref:System.Windows.Xps.XpsDocumentWriter> каждый раз, когда целевой очереди печати операции записи не имеет драйвер XPSDrv. (Не удается выполнить печать в приложениях Windows Forms [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] документы.)  
   

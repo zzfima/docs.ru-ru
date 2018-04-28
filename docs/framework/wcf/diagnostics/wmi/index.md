@@ -16,11 +16,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 3df15e80a550857adbfbf30ebf8b6ef902426a1a
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: e8fd88edd711513d1b143029d8088401c9945d13
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="using-windows-management-instrumentation-for-diagnostics"></a>Использование Windows Management Instrumentation для диагностики
 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] предоставляет данные проверки службы в среде выполнения с помощью поставщика инструментария управления Windows (WMI) [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)].  
@@ -160,7 +160,7 @@ ms.lasthandoff: 04/26/2018
 Whoami /user  
 ```  
   
- Это позволит получить идентификатор безопасности текущего пользователя, однако такой метод нельзя использовать, чтобы получить идентификатор безопасности любого пользователя. Другой способ получения идентификатора безопасности является использование [getsid.exe](http://go.microsoft.com/fwlink/?LinkId=186467) средства из [Windows 2000 Resource Kit Tools для выполнения административных задач](http://go.microsoft.com/fwlink/?LinkId=178660). Эта программа сравнивает идентификаторы безопасности двух пользователей (локальных или пользователей домена) и помимо прочего выводит два идентификатора в командную строку. [!INCLUDE[crdefault](../../../../../includes/crdefault-md.md)] [Известные идентификаторы безопасности](http://go.microsoft.com/fwlink/?LinkId=186468).  
+ Это позволит получить идентификатор безопасности текущего пользователя, однако такой метод нельзя использовать, чтобы получить идентификатор безопасности любого пользователя. Другой способ получения идентификатора безопасности является использование [getsid.exe](http://go.microsoft.com/fwlink/?LinkId=186467) средства из [Windows 2000 Resource Kit Tools для выполнения административных задач](http://go.microsoft.com/fwlink/?LinkId=178660). Эта программа сравнивает идентификаторы безопасности двух пользователей (локальных или пользователей домена) и помимо прочего выводит два идентификатора в командную строку. Дополнительные сведения см. в разделе [хорошо известные идентификаторы безопасности](http://go.microsoft.com/fwlink/?LinkId=186468).  
   
 ## <a name="accessing-remote-wmi-object-instances"></a>Доступ к экземплярам удаленных объектов WMI  
  Если требуется получить доступ к экземплярам инструментария управления Windows [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] с удаленного компьютера, необходимо разрешить конфиденциальность пакета в используемых для доступа средствах. В следующем разделе описывается, как это можно сделать с помощью WMI CIM Studio, тестера инструментария управления Windows или .NET SDK 2.0.  

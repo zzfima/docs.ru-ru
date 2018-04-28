@@ -1,20 +1,17 @@
 ---
 title: Функции (F#)
 description: 'Дополнительные сведения о функции в F # и как F # поддерживает распространенных конструкций функционального программирования.'
-keywords: visual f#, f#, функциональное программирование
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 6dea2c3e-2f9d-4c9d-97a2-d8f9a72b6f4c
-ms.openlocfilehash: adb2b0b3680c97582dfefda41c43735f9f09e6c9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4cdab85dd63cc74a4c6e7abf660f8f32cc088120
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="functions"></a>Функции
 
@@ -115,7 +112,7 @@ let vol = cylinderVolume 2.0 3.0
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet107.fs)]
     
 ## <a name="recursive-functions"></a>Рекурсивные функции
-*Рекурсивными* называются функциями, которые вызывают сами себя. Для них нужно указать ключевое слово **rec**, следующее за ключевым словом **let**. Вызов рекурсивной функции в теле функции выполняется так же, как и для любой другой функции. Следующая рекурсивная функция вычисляет  *n* Фибоначчи. Последовательность чисел Фибоначчи известна с античных времен. В ней каждый последующий элемент равен сумме двух предыдущих чисел.
+*Рекурсивными* называются функциями, которые вызывают сами себя. Для них нужно указать ключевое слово **rec**, следующее за ключевым словом **let**. Вызов рекурсивной функции в теле функции выполняется так же, как и для любой другой функции. Следующая рекурсивная функция вычисляет *n*-ое число Фибоначчи. Последовательность чисел Фибоначчи известна с античных времен. В ней каждый последующий элемент равен сумме двух предыдущих чисел.
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet108.fs)]
 

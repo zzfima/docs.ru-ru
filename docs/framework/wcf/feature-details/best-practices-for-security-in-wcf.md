@@ -21,11 +21,11 @@ ms.author: bruceper
 manager: mbaldwin
 ms.workload:
 - dotnet
-ms.openlocfilehash: 7416f8429f347d0b8dc6227415ad366b3ff63986
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 19bb6d4a172568611f73e3a50d0c526016c65aac
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="best-practices-for-security-in-wcf"></a>Рекомендации по безопасности при использовании WCF
 В следующих разделах приводятся рекомендации по созданию безопасных приложений с помощью [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] безопасность, в разделе [вопросы безопасности](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md), [вопросы безопасности для данных](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md), и [вопросы безопасности при использовании метаданных](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md).  
@@ -60,7 +60,7 @@ ms.lasthandoff: 04/26/2018
  Убедитесь в надежности источника метаданных и в том, что метаданные не были злонамеренно искажены. Метаданные, полученные по протоколу HTTP, передаются открытым текстом и могут быть подделаны. Если в службе используются свойства <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetEnabled%2A> и <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetUrl%2A>, для загрузки данных по протоколу HTTPS используйте URL-адрес, предоставленный разработчиком службы.  
   
 ## <a name="publish-metadata-using-security"></a>Публикуйте метаданные с использованием безопасности  
- Для предотвращения злонамеренного искажения метаданных, опубликованных службой, обеспечьте защиту конечной точки обмена метаданными с помощью безопасности на уровне транспорта или сообщений. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Публикация конечных точек метаданных](../../../../docs/framework/wcf/publishing-metadata-endpoints.md) и [как: публикация метаданных для службы в коде](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md).  
+ Для предотвращения злонамеренного искажения метаданных, опубликованных службой, обеспечьте защиту конечной точки обмена метаданными с помощью безопасности на уровне транспорта или сообщений. Дополнительные сведения см. в разделе [публикация конечных точек метаданных](../../../../docs/framework/wcf/publishing-metadata-endpoints.md) и [как: публикация метаданных для службы с помощью кода](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md).  
   
 ## <a name="ensure-use-of-local-issuer"></a>Разрешите использование локального издателя  
  Если для данной привязки указаны адрес издателя и привязка, локальный издатель не применяется в конечных точках, использующих эту привязку. Клиенты, которые предполагают всегда использовать локальный издатель, должны убедиться, что они не используют такую привязку или что привязка изменена таким образом, что адрес издателя пуст.  

@@ -17,17 +17,17 @@ helpviewer_keywords:
 - data contracts [WCF], collection types
 - collection types [WCF]
 ms.assetid: 9b45b28e-0a82-4ea3-8c33-ec0094aff9d5
-caps.latest.revision: ''
+caps.latest.revision: 19
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: e74bd7d90d5653890fd5cf48e76c81d0227c6172
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 528c1661b99ff5f50d42bb7a42371c302e335c90
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="collection-types-in-data-contracts"></a>Типы коллекций в контрактах данных
 Под *коллекцией* понимается список элементов определенного типа. В [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]такие списки могут быть представлены с помощью массивов или других типов (универсальный список, универсальные <xref:System.ComponentModel.BindingList%601>, <xref:System.Collections.Specialized.StringCollection>или <xref:System.Collections.ArrayList>). Например, в коллекции может содержаться список адресов конкретного клиента. Такие коллекции называются *коллекциями списков*, независимо от их фактического типа.  
@@ -40,7 +40,7 @@ ms.lasthandoff: 03/26/2018
   
  Дополнительные требования к типам коллекций, такие как наличие метода с названием `Add` и конструктора по умолчанию, подробно обсуждаются в следующих разделах. Этим обеспечивается возможность как сериализации, так и десериализации таких типов коллекций. Это означает, что некоторые коллекции не поддерживаются напрямую, например универсальные коллекции <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> (поскольку у них нет конструктора по умолчанию). Тем не менее, информацию о том, как обойти эти ограничения, см. далее в разделе «Использование типов интерфейса и коллекций только для чтения».  
   
- Типы, содержащиеся в коллекциях, должны быть контрактными данными, либо сериализуемые другим способом. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Типы, поддерживаемые сериализатором контракта данных](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md).  
+ Типы, содержащиеся в коллекциях, должны быть контрактными данными, либо сериализуемые другим способом. Дополнительные сведения см. в разделе [типы, поддерживаемые сериализатором контракта данных](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md).  
   
  [!INCLUDE[crabout](../../../../includes/crabout-md.md)] том, что считается, а что не считается действительной коллекцией, а также о том, каким образом сериализуются коллекции, см. информацию о сериализации коллекций в разделе «Расширенные правила коллекций» далее.  
   
@@ -152,7 +152,7 @@ ms.lasthandoff: 03/26/2018
 </cust_list>  
 ```  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] в разделе «Расширенные правила коллекции» далее.  
+ Дополнительные сведения см. в разделе «Расширенные правила коллекции» далее в этом разделе.  
   
 ### <a name="customizing-the-repeating-element-name-in-list-collections"></a>Настройка имени повторяющегося элемента в коллекциях списков  
  Коллекции списков содержат повторяющиеся записи. Обычно каждая повторяющаяся запись представляется как элемент с именем, соответствующим имени контракта данных типа, содержащегося в коллекции.  

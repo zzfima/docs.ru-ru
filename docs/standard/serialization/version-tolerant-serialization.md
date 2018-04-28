@@ -15,18 +15,18 @@ helpviewer_keywords:
 - BinaryFormatter class, samples
 - serialization, attributes
 ms.assetid: bea0ffe3-2708-4a16-ac7d-e586ed6b8e8d
-caps.latest.revision: ''
+caps.latest.revision: 9
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 46a6ccde7c978fe18737c6ae8733dd2e1e1ec858
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 06df765a6b4e2d4e5450f706a5e84f5481ba039a
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="version-tolerant-serialization"></a>Независимая от версий сериализация
 В платформе .NET Framework версий 1.0 и 1.1 создание сериализуемых типов, которые можно повторно использовать от одной версии приложения к другой, было проблематичным. Если тип был изменен путем добавления дополнительных полей, возникала следующая проблема:  
@@ -265,7 +265,7 @@ End Class
 ```  
   
 ## <a name="serializationbinder"></a>SerializationBinder  
- Некоторым пользователям может понадобиться выбирать классы для сериализации и десериализации, поскольку на сервере и клиенте требуются разные версии класса. Класс <xref:System.Runtime.Serialization.SerializationBinder> является абстрактным классом, который используется для управления фактическими типами, применяемыми при сериализации и десериализации.  Чтобы использовать этот класс, создайте класс, производный от <xref:System.Runtime.Serialization.SerializationBinder>, и переопределите методы <xref:System.Runtime.Serialization.SerializationBinder.BindToName%2A> и <xref:System.Runtime.Serialization.SerializationBinder.BindToType%2A>. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Управление сериализацией и десериализацией с помощью SerializationBinder](../../../docs/framework/wcf/feature-details/controlling-serialization-and-deserialization-with-serializationbinder.md).  
+ Некоторым пользователям может понадобиться выбирать классы для сериализации и десериализации, поскольку на сервере и клиенте требуются разные версии класса. Класс <xref:System.Runtime.Serialization.SerializationBinder> является абстрактным классом, который используется для управления фактическими типами, применяемыми при сериализации и десериализации.  Чтобы использовать этот класс, создайте класс, производный от <xref:System.Runtime.Serialization.SerializationBinder>, и переопределите методы <xref:System.Runtime.Serialization.SerializationBinder.BindToName%2A> и <xref:System.Runtime.Serialization.SerializationBinder.BindToType%2A>. Дополнительные сведения см. в разделе [Управление сериализацией и десериализацией с помощью SerializationBinder](../../../docs/framework/wcf/feature-details/controlling-serialization-and-deserialization-with-serializationbinder.md).  
   
 ## <a name="best-practices"></a>Рекомендации  
  Чтобы обеспечить правильное управление версиями, соблюдайте следующие правила при изменении типа от версии к версии:  

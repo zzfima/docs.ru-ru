@@ -1,28 +1,28 @@
 ---
-title: "Настройка ведения журналов сообщений"
-ms.custom: 
+title: Настройка ведения журналов сообщений
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - message logging [WCF]
 ms.assetid: 0ff4c857-8f09-4b85-9dc0-89084706e4c9
-caps.latest.revision: 
+caps.latest.revision: 40
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: a867d5f85177ad9a19a5766c65a8f1f98c04cd17
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 63bdbc68851ace71b3afef30e274b9821ed1ad5f
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="configuring-message-logging"></a>Настройка ведения журналов сообщений
 В этом разделе описывается, как настроить ведение журнала сообщений для различных сценариев.  
@@ -58,7 +58,7 @@ ms.lasthandoff: 12/22/2017
 </system.serviceModel>  
 ```  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]параметры ведения журнала сообщений см. в разделе [рекомендуемые параметры для трассировки и ведения журнала сообщений](../../../../docs/framework/wcf/diagnostics/tracing/recommended-settings-for-tracing-and-message-logging.md).  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)] параметры ведения журнала сообщений см. в разделе [рекомендуемые параметры для трассировки и ведения журнала сообщений](../../../../docs/framework/wcf/diagnostics/tracing/recommended-settings-for-tracing-and-message-logging.md).  
   
  С помощью элемента `add` можно задать имя и тип прослушивателя, который требуется использовать. В данном примере прослушиватель с именем «messages» добавляет стандартный прослушиватель трассировки .NET Framework (`System.Diagnostics.XmlWriterTraceListener`) в качестве используемого типа. Если используется прослушиватель `System.Diagnostics.XmlWriterTraceListener`, необходимо задать расположение выходного файла и имя файла конфигурации. Для этого нужно присвоить свойству `initializeData` имя файла журнала. В противном случае система создает исключение. Кроме того, можно реализовать пользовательский прослушиватель, который выводит журналы в файл по умолчанию.  
   
@@ -73,7 +73,7 @@ ms.lasthandoff: 12/22/2017
 <source name="System.ServiceModel.MessageLogging" switchValue="Verbose">  
 ```  
   
- Если требуется отключить источник трассировки, следует использовать атрибуты `logMessagesAtServiceLevel`, `logMalformedMessages` и `logMessagesAtTransportLevel` элемента `messageLogging`. Все эти атрибуты должны иметь значение `false`. Для этого можно воспользоваться файлом конфигурации, приведенным в последнем примере кода, пользовательским интерфейсом редактора конфигурации или инструментарием WMI. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]средство редактирования конфигурации, в разделе [средство редактирования конфигурации (SvcConfigEditor.exe)](../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)]WMI, в разделе [с помощью Windows Management Instrumentation для диагностики](../../../../docs/framework/wcf/diagnostics/wmi/index.md).  
+ Если требуется отключить источник трассировки, следует использовать атрибуты `logMessagesAtServiceLevel`, `logMalformedMessages` и `logMessagesAtTransportLevel` элемента `messageLogging`. Все эти атрибуты должны иметь значение `false`. Для этого можно воспользоваться файлом конфигурации, приведенным в последнем примере кода, пользовательским интерфейсом редактора конфигурации или инструментарием WMI. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] средство редактирования конфигурации, в разделе [средство редактирования конфигурации (SvcConfigEditor.exe)](../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)] WMI, в разделе [с помощью Windows Management Instrumentation для диагностики](../../../../docs/framework/wcf/diagnostics/wmi/index.md).  
   
 ## <a name="logging-levels-and-options"></a>Уровни и параметры ведения журнала  
  Для входящих сообщений регистрация в журнале осуществляется сразу после формирования сообщения, непосредственно перед попаданием сообщения в пользовательский код на уровне службы и при обнаружении неправильно сформированных сообщений.  
@@ -107,7 +107,7 @@ ms.lasthandoff: 12/22/2017
   
  Если в файле конфигурации не задан прослушиватель трассировки, в журнал ничего не записывается независимо от установленного уровня ведения журнала.  
   
- Параметры ведения журнала, например описанные в этом разделе атрибуты, можно изменить во время выполнения с помощью инструментария управления Windows (WMI). Это можно сделать путем обращения к [AppDomainInfo](../../../../docs/framework/wcf/diagnostics/wmi/appdomaininfo.md) экземпляр, который обеспечивает доступ к следующим логическим свойствам: `LogMessagesAtServiceLevel`, `LogMessagesAtTransportLevel`, и `LogMalformedMessages`. Поэтому, если в файле конфигурации прослушиватель трассировки настроен на ведение журнала, но эти параметры имеют значение `false`, можно впоследствии изменить их значения на `true`, когда приложение будет выполняться. В результате ведение журнала будет включено во время выполнения. Аналогично, если ведение журнала было включено в файле конфигурации, его можно отключить во время выполнения с помощью инструментария WMI. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][С помощью инструментария WMI для диагностики](../../../../docs/framework/wcf/diagnostics/wmi/index.md).  
+ Параметры ведения журнала, например описанные в этом разделе атрибуты, можно изменить во время выполнения с помощью инструментария управления Windows (WMI). Это можно сделать путем обращения к [AppDomainInfo](../../../../docs/framework/wcf/diagnostics/wmi/appdomaininfo.md) экземпляр, который обеспечивает доступ к следующим логическим свойствам: `LogMessagesAtServiceLevel`, `LogMessagesAtTransportLevel`, и `LogMalformedMessages`. Поэтому, если в файле конфигурации прослушиватель трассировки настроен на ведение журнала, но эти параметры имеют значение `false`, можно впоследствии изменить их значения на `true`, когда приложение будет выполняться. В результате ведение журнала будет включено во время выполнения. Аналогично, если ведение журнала было включено в файле конфигурации, его можно отключить во время выполнения с помощью инструментария WMI. Дополнительные сведения см. в разделе [с помощью Windows Management Instrumentation для диагностики](../../../../docs/framework/wcf/diagnostics/wmi/index.md).  
   
  Поле `source` в журнале сообщений определяет контекст, в котором регистрируется сообщение: отправка или получение сообщения с запросом, запрос-ответ или односторонний запрос, модель службы или транспортный уровень, либо сформированное сообщение неправильного формата.  
   

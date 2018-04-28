@@ -1,13 +1,13 @@
 ---
-title: "Задание адреса конечной точки"
-ms.custom: 
+title: Задание адреса конечной точки
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - endpoints [WCF], addressing
 ms.assetid: ac24f5ad-9558-4298-b168-c473c68e819b
-caps.latest.revision: 
+caps.latest.revision: 41
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 403ff897de4dc9ee95a854d9658bdee344755d59
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 09a3bf2d552b49e36375210e3036e344a9702405
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="specifying-an-endpoint-address"></a>Задание адреса конечной точки
 Вся связь со службой [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] осуществляется через ее конечные точки. Каждая конечная точка службы <xref:System.ServiceModel.Description.ServiceEndpoint> содержит адрес <xref:System.ServiceModel.Description.ServiceEndpoint.Address%2A>, привязку <xref:System.ServiceModel.Description.ServiceEndpoint.Binding%2A> и контракт <xref:System.ServiceModel.Description.ServiceEndpoint.Contract%2A>. В контракте задается, какие операции доступны. Привязка определяет, как осуществлять взаимодействие со службой, а адрес показывает, где можно найти службу. Каждая конечная точка должна иметь уникальный адрес. Адрес конечной точки представляется классом <xref:System.ServiceModel.EndpointAddress>, содержащим универсальный код ресурса (URI), который, в свою очередь, обозначает адрес службы, <xref:System.ServiceModel.EndpointAddress.Identity%2A>, представляющий удостоверение безопасности службы и коллекцию необязательных заголовков <xref:System.ServiceModel.EndpointAddress.Headers%2A>. Необязательные заголовки содержат более подробную информацию для идентификации конечной точки и взаимодействия с ней. Например, в заголовках может содержаться информация о том, как следует обрабатывать входящее сообщение, куда конечная точка должна отправить ответное сообщение или какой экземпляр службы необходимо использовать для обработки входящего сообщения от конкретного пользователя, если доступно несколько экземпляров.  
@@ -33,7 +33,7 @@ ms.lasthandoff: 01/19/2018
 ## <a name="definition-of-an-endpoint-address"></a>Определение адреса конечной точки  
  В [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] адрес <xref:System.ServiceModel.EndpointAddress> моделирует ссылку на конечную точку (EPR) согласно определению в стандарте WS-Addressing.  
   
- Универсальный код ресурса (URI) адреса для большинства видов транспорта состоит из четырех частей. Например, код "http://www.fabrikam.com:322/mathservice.svc/secureEndpoint" состоит из следующих четырех частей.  
+ Универсальный код ресурса (URI) адреса для большинства видов транспорта состоит из четырех частей. Например, этот URI «http://www.fabrikam.com:322/mathservice.svc/secureEndpoint» состоит из следующих четырех частей:  
   
 -   Схема: http:  
   
@@ -49,7 +49,7 @@ ms.lasthandoff: 01/19/2018
   
  В [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] существует два способа задания адресов конечных точек для службы. Можно задать абсолютный адрес для каждой конечной точки, связанной со службой, или указать базовый адрес для узла службы <xref:System.ServiceModel.ServiceHost>, а затем задать адрес для каждой связанной с этой службой конечной точки, которая определяется относительно этого базового адреса. Любой из этих методов можно использовать для задания адресов конечных точек для службы как в конфигурации, так и в коде. Если не указывать относительный адрес, служба использует базовый адрес. Можно указать несколько базовых адресов для службы, однако для каждого транспорта каждая служба может иметь только один базовый адрес. Если имеется несколько конечных точек, настроенных по разным привязкам, каждая из них должна иметь уникальный адрес. Конечные точки, использующие одну привязку, но разные контракты, могут иметь один и тот же адрес.  
   
- При размещении в службах IIS управление экземпляром <xref:System.ServiceModel.ServiceHost> не осуществляется пользователем. При размещении в службах IIS базовый адрес - это всегда адрес службы, указанный в файле SVC. Следовательно, для конечных точек служб, размещенных в IIS, следует использовать относительные адреса. Указание полного адреса конечной точки может привести к ошибкам при развертывании службы. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Развертывание службы WCF, размещенной в IIS](../../../docs/framework/wcf/feature-details/deploying-an-internet-information-services-hosted-wcf-service.md).  
+ При размещении в службах IIS управление экземпляром <xref:System.ServiceModel.ServiceHost> не осуществляется пользователем. При размещении в службах IIS базовый адрес - это всегда адрес службы, указанный в файле SVC. Следовательно, для конечных точек служб, размещенных в IIS, следует использовать относительные адреса. Указание полного адреса конечной точки может привести к ошибкам при развертывании службы. Дополнительные сведения см. в разделе [развертывание службы WCF, Internet Information Services-Hosted](../../../docs/framework/wcf/feature-details/deploying-an-internet-information-services-hosted-wcf-service.md).  
   
 ## <a name="defining-endpoint-addresses-in-configuration"></a>Определение адреса конечной точки в конфигурации  
  Для определения конечной точки в файле конфигурации, используйте [ \<endpoint >](http://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) элемента.  
@@ -58,7 +58,7 @@ ms.lasthandoff: 01/19/2018
   
  Когда <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A> вызова (то есть, когда ведущее приложение пытается запустить службу), система выполняет поиск [ \<службы >](../../../docs/framework/configure-apps/file-schema/wcf/service.md) элемент с атрибутом name, указывающее «UE. Samples.HelloService». Если [ \<службы >](../../../docs/framework/configure-apps/file-schema/wcf/service.md) найден элемент, система загружает указанный класс и создает конечные точки, с помощью конечных точек, содержащиеся в файле конфигурации. Благодаря такому механизму можно загружать и запускать службу с двумя строками кода, при этом не указывая привязку и адрес в коде. Преимуществом этого подхода является отсутствие необходимости в повторной компиляции или повторном развертывании приложения при внесении этих изменений.  
   
- Необязательные заголовки, объявляются в [ \<заголовки >](../../../docs/framework/configure-apps/file-schema/wcf/headers-element.md). Ниже приведен пример элементов, используемых для задания конечных точек службы в файле конфигурации, различающем два заголовка: клиентов типа "Gold" из «http://tempuri1.org/» и клиентов типа "Standard" из «http://tempuri2.org/». Вызов этой службы клиент должен иметь соответствующую [ \<заголовки >](../../../docs/framework/configure-apps/file-schema/wcf/headers-element.md) в файле конфигурации.  
+ Необязательные заголовки, объявляются в [ \<заголовки >](../../../docs/framework/configure-apps/file-schema/wcf/headers-element.md). Ниже приведен пример элементов, используемых для указания конечные точки службы в файл конфигурации, различающем два заголовка: «Gold» клиенты из http://tempuri1.org/ и «Standard» клиентов из http://tempuri2.org/. Вызов этой службы клиент должен иметь соответствующую [ \<заголовки >](../../../docs/framework/configure-apps/file-schema/wcf/headers-element.md) в файле конфигурации.  
   
  [!code-xml[S_UEHelloWorld#1](../../../samples/snippets/common/VS_Snippets_CFX/s_uehelloworld/common/serviceapp.config#1)]  
   

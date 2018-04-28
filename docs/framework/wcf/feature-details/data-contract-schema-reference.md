@@ -12,23 +12,23 @@ ms.topic: article
 helpviewer_keywords:
 - data contracts [WCF], schema reference
 ms.assetid: 9ebb0ebe-8166-4c93-980a-7c8f1f38f7c0
-caps.latest.revision: ''
+caps.latest.revision: 24
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 57ccc812aab5df0a9acd99bdcde327d56e4bad8d
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 739046945a019541f279b15d2d1b945f526861fb
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="data-contract-schema-reference"></a>Справочник по схеме контрактов данных
 В данном разделе описывается подмножество схемы XML (XSD), используемое <xref:System.Runtime.Serialization.DataContractSerializer> для описания типов среды CLR, применяемых для сериализации XML.  
   
 ## <a name="datacontractserializer-mappings"></a>DataContractSerializer - сопоставления  
- `DataContractSerializer` Сопоставляет типы CLR с XSD при экспорте метаданных из [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] службы через конечную точку метаданных или [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md). [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Сериализатор контракта данных](../../../../docs/framework/wcf/feature-details/data-contract-serializer.md).  
+ `DataContractSerializer` Сопоставляет типы CLR с XSD при экспорте метаданных из [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] службы через конечную точку метаданных или [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md). Дополнительные сведения см. в разделе [сериализатор контракта данных](../../../../docs/framework/wcf/feature-details/data-contract-serializer.md).  
   
  `DataContractSerializer` также сопоставляет типы XSD типам среды CLR, когда для доступа к документам WSDL или XSD и создания контрактов данных для служб или клиентов используется Svcutil.exe.  
   

@@ -1,24 +1,26 @@
 ---
-title: "Практическое руководство. Создание транзакционной службы"
-ms.custom: 
+title: Практическое руководство. Создание транзакционной службы
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 1bd2e4ed-a557-43f9-ba98-4c70cb75c154
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4a61c1c4aeba63baee3c5e2ba5110710ed9f45f2
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 9e39ecd346b5d5fb4113fd17abe9bde715a12aa4
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="how-to-create-a-transactional-service"></a>Практическое руководство. Создание транзакционной службы
 В этом примере показаны различные аспекты создания транзакционной службы и использования инициируемых клиентом транзакций для координации операций службы.  
@@ -76,7 +78,7 @@ ms.lasthandoff: 01/19/2018
     }  
     ```  
   
-3.  Настройте привязки в файле конфигурации, указав, что контекст транзакций должен передаваться, и необходимые для этого протоколы. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Конфигурация транзакции ServiceModel](../../../../docs/framework/wcf/feature-details/servicemodel-transaction-configuration.md). В частности тип привязки задается в атрибуте `binding` элемента конечной точки. [ \<Endpoint >](http://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) элемент содержит `bindingConfiguration` атрибут, ссылающийся на конфигурацию привязки с именем `transactionalOleTransactionsTcpBinding`, как показано в следующем образце конфигурации.  
+3.  Настройте привязки в файле конфигурации, указав, что контекст транзакций должен передаваться, и необходимые для этого протоколы. Дополнительные сведения см. в разделе [конфигурация транзакции ServiceModel](../../../../docs/framework/wcf/feature-details/servicemodel-transaction-configuration.md). В частности тип привязки задается в атрибуте `binding` элемента конечной точки. [ \<Endpoint >](http://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) элемент содержит `bindingConfiguration` атрибут, ссылающийся на конфигурацию привязки с именем `transactionalOleTransactionsTcpBinding`, как показано в следующем образце конфигурации.  
   
     ```xml  
     <service name="CalculatorService">  

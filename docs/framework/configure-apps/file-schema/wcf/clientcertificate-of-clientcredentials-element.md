@@ -1,24 +1,26 @@
 ---
-title: "&lt;clientCertificate&gt; элемента &lt;clientCredentials&gt;"
-ms.custom: 
+title: '&lt;clientCertificate&gt; элемента &lt;clientCredentials&gt;'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 3b3fa000-3434-4142-a178-11903bdd2c5d
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 1b5603ad7402e46f8b977fe21b0ad1d43c4bfbf8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 9c5616aab5cb54e94a62370ad682eaa55eceb8ef
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="ltclientcertificategt-of-ltclientcredentialsgt-element"></a>&lt;clientCertificate&gt; элемента &lt;clientCredentials&gt;
 Определяет сертификат X.509, используемый для проверки подлинности клиента по отношению к службе.  
@@ -57,12 +59,12 @@ X509FindType="FindByThumbPrint/FindBySubjectName/FindBySubjectDistinguishedName/
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
 |[\<clientCredentials >](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)|Задает учетные данные, используемые для проверки подлинности клиента при подключении к службе.|  
   
 ## <a name="remarks"></a>Примечания  
- Этот элемент конфигурации указывает сертификат, используемый для проверки подлинности клиента с помощью этого элемента. [!INCLUDE[crdefault](../../../../../includes/crdefault-md.md)][Как: укажите значений учетных данных клиента](../../../../../docs/framework/wcf/how-to-specify-client-credential-values.md).  
+ Этот элемент конфигурации указывает сертификат, используемый для проверки подлинности клиента с помощью этого элемента. Дополнительные сведения см. в разделе [как: задание значений учетных данных клиента](../../../../../docs/framework/wcf/how-to-specify-client-credential-values.md).  
   
 ## <a name="see-also"></a>См. также  
  <xref:System.ServiceModel.Configuration.ClientCredentialsElement>  

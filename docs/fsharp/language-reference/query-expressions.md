@@ -1,20 +1,17 @@
 ---
-title: "Выражения запросов (F#)"
-description: "Дополнительные сведения о поддержке выражения запроса LINQ в языке F #."
-keywords: "visual f#, f#, функциональное программирование"
+title: Выражения запросов (F#)
+description: 'Дополнительные сведения о поддержке выражения запроса LINQ в языке F #.'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 35df2d80-e6d2-4873-b2de-9b45b9e9e650
-ms.openlocfilehash: 20ea7ef820dd295497ed996ce10e5a594d021f7e
-ms.sourcegitcommit: 39b65a49271e082add68cb737b48fdbe09d24718
+ms.openlocfilehash: 81b81d25b8c0d8656dedffd2f8ec7a8297ef7191
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/30/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="query-expressions"></a>Выражения запросов
 
@@ -680,7 +677,7 @@ query {
 </code></pre>
 
 </td></tr><tr><td>
-<code>IN</code>набор указанных значений<br/>
+<code>IN</code> набор указанных значений<br/>
 
 <pre><code class="lang-sql">SELECT *
 FROM Student
@@ -721,7 +718,7 @@ query {
 </code></pre>
 
 </td></tr><tr><td>
-<code>LIKE</code>с шаблоном соответствовать набору.<br/>
+<code>LIKE</code> с шаблоном соответствовать набору.<br/>
 
 <pre><code class="lang-sql">-- '[abc]%' matches strings where the first character is
 -- 'a', 'b', 'c', 'A', 'B', or 'C'
@@ -738,7 +735,7 @@ WHERE Student.Name LIKE '[abc]%'
 </code></pre>
 
 </td></tr><tr><td>
-<code>LIKE</code>с шаблоном набор исключений.<br/>
+<code>LIKE</code> с шаблоном набор исключений.<br/>
 
 <pre><code class="lang-sql">-- '[^abc]%' matches strings where the first character is
 -- not 'a', 'b', 'c', 'A', 'B', or 'C'
@@ -757,7 +754,7 @@ query {
 </code></pre>
 
 </td></tr><tr><td>
-<code>LIKE</code>на одном поле, но выберите другое поле.<br/>
+<code>LIKE</code> на одном поле, но выберите другое поле.<br/>
 
 <pre><code class="lang-sql">SELECT StudentID AS ID FROM Student
 WHERE Student.Name LIKE '[^abc]%'
@@ -807,7 +804,7 @@ query {
 }
 </code></pre>
 
-</td></tr><tr><td><code>LEFT JOIN</code>с двумя таблицами.<br/>
+</td></tr><tr><td><code>LEFT JOIN</code> с двумя таблицами.<br/>
 
 <pre><code class="lang-sql">SELECT * FROM Student
 LEFT JOIN CourseSelection
@@ -826,7 +823,7 @@ query {
 }
 </code></pre>
 
-</td></tr><tr><td><code>JOIN</code>с помощью<code>COUNT</code><br/>
+</td></tr><tr><td><code>JOIN</code> с помощью <code>COUNT</code><br/>
 
 <pre><code class="lang-sql">SELECT COUNT( * ) FROM Student
 JOIN CourseSelection
@@ -909,7 +906,7 @@ query {
 }
 </code></pre>
 
-</td></tr><tr><td><code>OR</code>При упорядочении<br/>
+</td></tr><tr><td><code>OR</code> При упорядочении<br/>
 
 <pre><code class="lang-sql">SELECT * FROM Student
 WHERE Student.Age = 12 OR Student.Age = 13
@@ -949,7 +946,7 @@ query {
 }
 </code></pre>
 
-</td></tr><tr><td><code>UNION</code>двух запросов.<br/>
+</td></tr><tr><td><code>UNION</code> двух запросов.<br/>
 
 <pre><code class="lang-sql">SELECT * FROM Student
 UNION
@@ -998,7 +995,7 @@ let query2 =
 query1.Intersect(query2)
 </code></pre>
 
-</td></tr><tr><td><code>CASE</code>условие.<br/>
+</td></tr><tr><td><code>CASE</code> условие.<br/>
 
 <pre><code class="lang-sql">SELECT student.StudentID,
 CASE Student.Age

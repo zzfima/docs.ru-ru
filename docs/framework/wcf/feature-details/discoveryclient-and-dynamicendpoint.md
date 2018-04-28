@@ -1,24 +1,26 @@
 ---
-title: "DiscoveryClient и DynamicEndpoint"
-ms.custom: 
+title: DiscoveryClient и DynamicEndpoint
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 7cd418f0-0eab-48d1-a493-7eb907867ec3
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6e3ac334d53480ba8b63cc8e8f117dd74315963c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: c652e58b20a6fe836e647ed07c6a84328ee4631e
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="discoveryclient-and-dynamicendpoint"></a>DiscoveryClient и DynamicEndpoint
 <xref:System.ServiceModel.Discovery.DiscoveryClient> и <xref:System.ServiceModel.Discovery.DynamicEndpoint> представляют собой два класса, используемые на стороне клиента для поиска служб. <xref:System.ServiceModel.Discovery.DiscoveryClient> предоставляет список служб, соответствующих конкретному набору требований, и позволяет подключиться к службам. <xref:System.ServiceModel.Discovery.DynamicEndpoint> выполняет те же функции и, кроме того, автоматически подключается к одной из найденных служб. Все конечные точки могут быть преобразованы в <xref:System.ServiceModel.Discovery.DynamicEndpoint>, условие поиска также может быть добавлено в конфигурацию, поэтому <xref:System.ServiceModel.Discovery.DynamicEndpoint> полезен в случаях, когда в решении необходима функция обнаружения, но изменения логики клиента нежелательны (нужно лишь изменить конечные точки). С другой стороны, <xref:System.ServiceModel.Discovery.DiscoveryClient> можно использовать для более точного контроля над операцией поиска. Использование и преимущества каждого класса уточняются далее.  
@@ -90,7 +92,7 @@ static void discoveryClient_FindCompleted(object sender, FindCompletedEventArgs 
         }  
 ```  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Выполнение асинхронных поиска вызовов см. в разделе [асинхронного поиска](../../../../docs/framework/wcf/samples/asynchronous-find-sample.md).  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Выполнение асинхронных поиска вызовов см. в разделе [асинхронного поиска](../../../../docs/framework/wcf/samples/asynchronous-find-sample.md).  
   
  Для поиска службы по ее адресу конечной точки используйте методы <xref:System.ServiceModel.Discovery.DiscoveryClient.Resolve%2A> и <xref:System.ServiceModel.Discovery.DiscoveryClient.ResolveAsync%28System.ServiceModel.Discovery.ResolveCriteria%29>. Это может оказаться полезным в тех случаях, когда конечная точка не может быть адресована через сеть. Метод Resolve принимает экземпляр <xref:System.ServiceModel.Discovery.ResolveCriteria>, что позволяет задать разрешаемый адрес конечной точки, максимальную продолжительность операции разрешения, набор расширений. В следующем примере показано, каким образом производится разрешение службы с помощью метода <xref:System.ServiceModel.Discovery.DiscoveryClient.Resolve%2A>.  
   
@@ -102,7 +104,7 @@ EndpointAddress newEp = response.EndpointDiscoveryMetadata.Address;
 ```  
   
 ## <a name="dynamicendpoint"></a>DynamicEndpoint  
- <xref:System.ServiceModel.Discovery.DynamicEndpoint>— Это стандартная конечная точка ([!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [стандартные конечные точки](../../../../docs/framework/wcf/feature-details/standard-endpoints.md)) который выполняет обнаружение и автоматически выбирает соответствующий службы. Необходимо всего лишь создать <xref:System.ServiceModel.Discovery.DynamicEndpoint>, передав ей искомый контракт и используемую привязку, и передать экземпляр <xref:System.ServiceModel.Discovery.DynamicEndpoint> клиенту WCF. В следующем примере показано создание и использование <xref:System.ServiceModel.Discovery.DynamicEndpoint> для вызова службы калькулятора. Поиск выполняется при каждом открытии клиента. Любой конечной точки, определенные в конфигурации также может быть преобразован в <xref:System.ServiceModel.Discovery.DynamicEndpoint> путем добавления `kind ="dynamicEndpoint"` атрибута к элементу конфигурации конечной точки.  
+ <xref:System.ServiceModel.Discovery.DynamicEndpoint> — Это стандартная конечная точка (Дополнительные сведения см. в разделе [стандартные конечные точки](../../../../docs/framework/wcf/feature-details/standard-endpoints.md)) который выполняет обнаружение и автоматически выбирает соответствующий службы. Необходимо всего лишь создать <xref:System.ServiceModel.Discovery.DynamicEndpoint>, передав ей искомый контракт и используемую привязку, и передать экземпляр <xref:System.ServiceModel.Discovery.DynamicEndpoint> клиенту WCF. В следующем примере показано создание и использование <xref:System.ServiceModel.Discovery.DynamicEndpoint> для вызова службы калькулятора. Поиск выполняется при каждом открытии клиента. Любой конечной точки, определенные в конфигурации также может быть преобразован в <xref:System.ServiceModel.Discovery.DynamicEndpoint> путем добавления `kind ="dynamicEndpoint"` атрибута к элементу конфигурации конечной точки.  
   
 ```  
 DynamicEndpoint dynamicEndpoint = new DynamicEndpoint(ContractDescription.GetContract(typeof(ICalculatorService)), new WSHttpBinding());  

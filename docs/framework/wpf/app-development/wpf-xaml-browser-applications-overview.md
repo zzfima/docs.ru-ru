@@ -1,12 +1,13 @@
 ---
-title: "Общие сведения о приложениях браузера WPF XAML"
-ms.custom: 
+title: Общие сведения о приложениях браузера WPF XAML
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -17,20 +18,21 @@ helpviewer_keywords:
 - XAML browser applications (XBAP)
 - browser-hosted applications [WPF]
 ms.assetid: 3a7a86a8-75d5-4898-96b9-73da151e5e16
-caps.latest.revision: "47"
+caps.latest.revision: 47
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0f4f410f0f6c209dbc43642a15ae85a788390f4a
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 0afdce00cc169a5be9224a7b675e4666c1349bd5
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="wpf-xaml-browser-applications-overview"></a>Общие сведения о приложениях браузера WPF XAML
 <a name="introduction"></a>
-[!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)]объединяет возможности веб-приложений и многофункциональных клиентских приложений. Как веб-приложения, XBAP можно развертывать на веб-сервере и запускать из Internet Explorer или Firefox. Как многофункциональные клиентские приложения, XBAP могут использовать все возможности [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Кроме того, XBAP разрабатываются аналогично многофункциональным клиентским приложениям. Этот раздел содержит простое, общее введение в разработку XBAP и показывает, чем она отличается от разработки стандартных многофункциональных клиентов.  
+[!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] объединяет возможности веб-приложений и многофункциональных клиентских приложений. Как веб-приложения, XBAP можно развертывать на веб-сервере и запускать из Internet Explorer или Firefox. Как многофункциональные клиентские приложения, XBAP могут использовать все возможности [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Кроме того, XBAP разрабатываются аналогично многофункциональным клиентским приложениям. Этот раздел содержит простое, общее введение в разработку XBAP и показывает, чем она отличается от разработки стандартных многофункциональных клиентов.  
   
  В этом разделе содержатся следующие подразделы.  
   
@@ -57,13 +59,13 @@ ms.lasthandoff: 01/19/2018
 ## <a name="deploying-an-xbap"></a>Развертывание XBAP  
  При построении XBAP создаются следующие три файла:  
   
-|Файл|Описание:|  
+|Файл|Описание|  
 |----------|-----------------|  
 |Исполняемый файл (.EXE)|Содержит скомпилированный код и имеет расширение EXE.|  
 |Манифест приложения (.MANIFEST)|Содержит метаданные, связанные с приложением, и имеет расширение MANIFEST.|  
 |Манифест развертывания (.XBAP)|Содержит сведения, которые [!INCLUDE[TLA#tla_clickonce](../../../../includes/tlasharptla-clickonce-md.md)] использует для развертывания приложения, и имеет расширение XBAP.|  
   
- XBAP развертывается на веб-сервере, например [!INCLUDE[TLA#tla_iis50](../../../../includes/tlasharptla-iis50-md.md)] или более поздней версии. Устанавливать [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)] на веб-сервер необязательно, но нужно зарегистрировать типы [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] [!INCLUDE[TLA#tla_mime](../../../../includes/tlasharptla-mime-md.md)] и расширения имен файлов. Дополнительные сведения см. в разделе [Практическое руководство. Настройка служб IIS 5.0 и IIS 6.0 для развертывания приложений WPF](../../../../docs/framework/wpf/app-development/how-to-configure-iis-5-0-and-iis-6-0-to-deploy-wpf-applications.md).  
+ XBAP развертывается на веб-сервере, например [!INCLUDE[TLA#tla_iis50](../../../../includes/tlasharptla-iis50-md.md)] или более поздней версии. Необходимо установить .NET Framework на веб-сервере, но необходимо зарегистрировать [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] [!INCLUDE[TLA#tla_mime](../../../../includes/tlasharptla-mime-md.md)] типы и расширения имен файлов. Дополнительные сведения см. в разделе [Практическое руководство. Настройка служб IIS 5.0 и IIS 6.0 для развертывания приложений WPF](../../../../docs/framework/wpf/app-development/how-to-configure-iis-5-0-and-iis-6-0-to-deploy-wpf-applications.md).  
   
  Чтобы подготовить XBAP для развертывания, скопируйте файл EXE и связанные с ним манифесты на веб-сервер. Создайте HTML-страницу, содержащую гиперссылку, чтобы открыть манифест развертывания, который является файлом с расширением XBAP. Когда пользователь щелкает ссылку на файл XBAP, [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)] автоматически обрабатывает механизм загрузки и запуска приложения. В следующем примере кода показана HTML-страница, которая содержит гиперссылку, указывающую на XBAP.  
   
@@ -152,7 +154,7 @@ ms.lasthandoff: 01/19/2018
   
 -   Настраиваемый элемент управления ActiveX может испытывать проблемы со связью, поскольку приложение WPF выполняется в отдельном потоке.  
   
--   <xref:System.Windows.Interop.HwndHost.MessageHook>не возникает, поскольку <xref:System.Windows.Interop.HwndHost> невозможно определить подкласс окно работает в другой поток или процесс.  
+-   <xref:System.Windows.Interop.HwndHost.MessageHook> не возникает, поскольку <xref:System.Windows.Interop.HwndHost> невозможно определить подкласс окно работает в другой поток или процесс.  
   
 ### <a name="creating-a-full-trust-xbap"></a>Создание XBAP с полным доверием  
  Если XBAP требует полного доверия, проект можно изменить, предоставив ему соответствующее разрешение. Чтобы предоставить полное доверие, необходимо выполнить указанные ниже действия.  

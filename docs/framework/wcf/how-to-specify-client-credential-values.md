@@ -1,27 +1,29 @@
 ---
-title: "Практическое руководство. Задание значений учетных данных клиента"
-ms.custom: 
+title: Практическое руководство. Задание значений учетных данных клиента
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 82293d7f-471a-4549-8f19-0be890e7b074
-caps.latest.revision: "28"
+caps.latest.revision: 28
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: cd818a2342ff5b44e4e8ab1b237f7c657d3bf438
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 35244032a36af8d3d23fd9d88006ea032a99b44b
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="how-to-specify-client-credential-values"></a>Практическое руководство. Задание значений учетных данных клиента
 Используя [!INCLUDE[indigo1](../../../includes/indigo1-md.md)], служба может указать способ проверки подлинности клиента в службе. Например, в службе можно указать, что клиент проходит проверку подлинности с помощью сертификата.  
@@ -32,7 +34,7 @@ ms.lasthandoff: 12/22/2017
   
 2.  Откройте XML-файл конфигурации. Если используется программа Svcutil.exe, то по умолчанию файл имеет имя Output.config.  
   
-3.  Найти  **\<безопасности >** элемент с **режим** атрибут (**< режим безопасности =** `MessageOrTransport`  **>**  где `MessageOrTransport` задан один из режимов безопасности.  
+3.  Найти  **\<безопасности >** элемент с **режим** атрибут (**< режим безопасности =** `MessageOrTransport` **>** где `MessageOrTransport` задан один из режимов безопасности.  
   
 4.  Найдите дочерний элемент, соответствующий значению режима. Например, если включен режим **сообщение**, найти  **\<сообщения >** элемента, содержащегося в  **\<безопасности >** элемента.  
   
@@ -50,7 +52,7 @@ ms.lasthandoff: 12/22/2017
 ```  
   
 ## <a name="example-tcp-transport-mode-with-certificate-as-client-credential"></a>Пример: транспортный режим TCP с сертификатом в качестве учетных данных клиента  
- В этом примере в качестве режима безопасности задается Transport, а в качестве значения учетных данных клиента - сертификат X.509. В следующих процедурах показано, как задать значение учетных данных клиента в коде клиента и в конфигурации. Предполагается, что используется [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) для возврата метаданных (код и конфигурация) из службы. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Как: создание клиента](../../../docs/framework/wcf/how-to-create-a-wcf-client.md).  
+ В этом примере в качестве режима безопасности задается Transport, а в качестве значения учетных данных клиента - сертификат X.509. В следующих процедурах показано, как задать значение учетных данных клиента в коде клиента и в конфигурации. Предполагается, что используется [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) для возврата метаданных (код и конфигурация) из службы. Дополнительные сведения см. в разделе [как: создание клиента](../../../docs/framework/wcf/how-to-create-a-wcf-client.md).  
   
 #### <a name="to-specify-the-client-credential-value-on-the-client-in-code"></a>Указание значения учетных данных клиента в коде клиента  
   
@@ -73,7 +75,7 @@ ms.lasthandoff: 12/22/2017
   
 3.  Добавить [ \<clientCertificate >](../../../docs/framework/configure-apps/file-schema/wcf/clientcertificate-of-servicecredentials.md) элемент [ \<clientCredentials >](../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md) элемента.  
   
-4.  Присвойте соответствующие значения следующим атрибутам: `storeLocation`, `storeName`, `x509FindType` и `findValue`, как показано в следующем коде. [!INCLUDE[crabout](../../../includes/crabout-md.md)]сертификаты, в разделе [работа с сертификатами](../../../docs/framework/wcf/feature-details/working-with-certificates.md).  
+4.  Присвойте соответствующие значения следующим атрибутам: `storeLocation`, `storeName`, `x509FindType` и `findValue`, как показано в следующем коде. [!INCLUDE[crabout](../../../includes/crabout-md.md)] сертификаты, в разделе [работа с сертификатами](../../../docs/framework/wcf/feature-details/working-with-certificates.md).  
   
     ```xml  
     <behaviors>  

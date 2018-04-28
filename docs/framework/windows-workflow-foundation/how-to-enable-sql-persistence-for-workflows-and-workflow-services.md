@@ -1,31 +1,32 @@
 ---
-title: "Как включить сохраняемость SQL для рабочих процессов и служб рабочих процессов"
-ms.custom: 
+title: Как включить сохраняемость SQL для рабочих процессов и служб рабочих процессов
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: ca7bf77f-3e5d-4b23-b17a-d0b60f46411d
-caps.latest.revision: "36"
+caps.latest.revision: 36
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 60fac3cba4da35b5146f777abd912ad15f0f29eb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 5d687c00edd9d495f3b7715474d7eb2e107c23f0
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="how-to-enable-sql-persistence-for-workflows-and-workflow-services"></a>Как включить сохраняемость SQL для рабочих процессов и служб рабочих процессов
 В данном разделе описано, как настроить возможность хранилища экземпляров рабочих процессов SQL для включения сохраняемости рабочих процессов и служб рабочих процессов программно и с помощью файла конфигурации.  
   
- Windows Server App Fabric упрощает процесс настройки сохраняемости. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Сохраняемости конфигурация фабрики приложения](http://go.microsoft.com/fwlink/?LinkId=201204)  
+ Windows Server App Fabric упрощает процесс настройки сохраняемости. Дополнительные сведения см. в разделе [настройки сохраняемости App Fabric](http://go.microsoft.com/fwlink/?LinkId=201204)  
   
  Перед использованием возможности хранилища экземпляров рабочих процессов SQL необходимо создать базу данных, которая используется возможностью для сохранения экземпляров рабочих процессов. Программа установки [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] копирует файлы скрипта SQL, связанные с функцией хранилища экземпляров рабочих процессов SQL, в папку %WINDIR%\Microsoft.NET\Framework\v4.xxx\SQL\EN. Выполните эти файлы скрипта в базе данных SQL Server 2005 или SQL Server 2008, которая должна использоваться в хранилище экземпляров рабочих процессов SQL для сохранения экземпляров рабочих процессов. Сначала запустите файл SqlWorkflowInstanceStoreSchema.sql, а затем файл SqlWorkflowInstanceStoreLogic.sql.  
   
@@ -40,7 +41,7 @@ ms.lasthandoff: 12/22/2017
 >   
 >  System.Data.SqlClient.SqlException: не удается найти хранимую процедуру System.Activities.DurableInstancing.CreateLockOwner  
   
- В следующих разделах описывается включение сохраняемости для рабочих процессов и служб рабочих процессов с использованием хранилища экземпляров рабочих процессов SQL. [!INCLUDE[crabout](../../../includes/crabout-md.md)]Свойства хранилища экземпляров рабочих процессов SQL, в разделе [свойства экземпляра рабочего процесса SQL хранилище](../../../docs/framework/windows-workflow-foundation/properties-of-sql-workflow-instance-store.md).  
+ В следующих разделах описывается включение сохраняемости для рабочих процессов и служб рабочих процессов с использованием хранилища экземпляров рабочих процессов SQL. [!INCLUDE[crabout](../../../includes/crabout-md.md)] Свойства хранилища экземпляров рабочих процессов SQL, в разделе [свойства экземпляра рабочего процесса SQL хранилище](../../../docs/framework/windows-workflow-foundation/properties-of-sql-workflow-instance-store.md).  
   
 ## <a name="enabling-persistence-for-self-hosted-workflows-that-use-workflowapplication"></a>Включение сохраняемости для резидентных рабочих процессов, которые используют WorkflowApplication  
  Можно включить сохраняемость для резидентных рабочих процессов, которые программно используют <xref:System.Activities.WorkflowApplication> с помощью объектной модели <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>. Шаги, необходимые для выполнения этой задачи, содержатся в следующей процедуре.  

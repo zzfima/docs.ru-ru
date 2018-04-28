@@ -21,11 +21,11 @@ ms.author: bruceper
 manager: mbaldwin
 ms.workload:
 - dotnet
-ms.openlocfilehash: cbe29ed57a7eee3a74166dabd2b8931e73cd2860
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: c754a4ec57751b2ca5a809c771b2fb5235ec0510
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="how-to-secure-a-service-with-windows-credentials"></a>Практическое руководство. Защита службы с использованием учетных данных Windows
 В этом разделе показано, как включить режим безопасности транспорта на [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] службы, который находится в домене Windows и вызывается клиентами, в том же домене. [!INCLUDE[crabout](../../../includes/crabout-md.md)] Этот сценарий в разделе [безопасность транспорта с проверкой подлинности Windows](../../../docs/framework/wcf/feature-details/transport-security-with-windows-authentication.md). Пример приложения см. в разделе [WSHttpBinding](../../../docs/framework/wcf/samples/wshttpbinding.md) образца.  
@@ -87,7 +87,7 @@ ms.lasthandoff: 04/26/2018
   
 ##### <a name="to-use-a-binding-in-a-client-with-code"></a>Использование привязки в клиенте с кодом  
   
-1.  Используйте средство SvcUtil.exe, чтобы создать код прокси из метаданных службы. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Как: создание клиента](../../../docs/framework/wcf/how-to-create-a-wcf-client.md). Созданный код учетной записи-посредника наследуется от класса <xref:System.ServiceModel.ClientBase%601>, благодаря чему каждый клиент гарантированно имеет все необходимые конструкторы, методы и свойства для взаимодействия со службой [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]. В данном примере созданный код включает класс `CalculatorClient`, который реализует интерфейс `ICalculator`, тем самым обеспечивая совместимость с кодом службы.  
+1.  Используйте средство SvcUtil.exe, чтобы создать код прокси из метаданных службы. Дополнительные сведения см. в разделе [как: создание клиента](../../../docs/framework/wcf/how-to-create-a-wcf-client.md). Созданный код учетной записи-посредника наследуется от класса <xref:System.ServiceModel.ClientBase%601>, благодаря чему каждый клиент гарантированно имеет все необходимые конструкторы, методы и свойства для взаимодействия со службой [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]. В данном примере созданный код включает класс `CalculatorClient`, который реализует интерфейс `ICalculator`, тем самым обеспечивая совместимость с кодом службы.  
   
 2.  Код этой процедуры вставляется в начало метода `Main` программы клиента.  
   
@@ -140,7 +140,7 @@ ms.lasthandoff: 04/26/2018
   
 ##### <a name="to-use-a-binding-in-a-client-with-configuration"></a>Использование привязки в клиенте с конфигурацией  
   
-1.  Используйте средство SvcUtil.exe, чтобы создать код прокси и файл конфигурации из метаданных службы. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Как: создание клиента](../../../docs/framework/wcf/how-to-create-a-wcf-client.md).  
+1.  Используйте средство SvcUtil.exe, чтобы создать код прокси и файл конфигурации из метаданных службы. Дополнительные сведения см. в разделе [как: создание клиента](../../../docs/framework/wcf/how-to-create-a-wcf-client.md).  
   
 2.  Замените [ \<привязки >](../../../docs/framework/configure-apps/file-schema/wcf/bindings.md) раздел созданный файл конфигурации с кодом конфигурации из предыдущего раздела.  
   

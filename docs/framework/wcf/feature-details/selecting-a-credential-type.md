@@ -1,26 +1,26 @@
 ---
-title: "Выбор типа учетных данных"
-ms.custom: 
+title: Выбор типа учетных данных
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: bf707063-3f30-4304-ab53-0e63413728a8
-caps.latest.revision: 
+caps.latest.revision: 25
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 9e6b3d84db619ba1b4b5785b134cfe87d1b15cdc
-ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
+ms.openlocfilehash: 9858475520b949d5b9ee62ecdc0994bbb9398953
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="selecting-a-credential-type"></a>Выбор типа учетных данных
 *Учетные данные* данные [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] использует для подтверждения заявленной идентификации или возможностей. Например, паспорт - это документ, выданный властями, в котором содержатся учетные данные, подтверждающие гражданство страны или региона. В [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] используются учетные данные различных видов, например маркеры имен пользователей и сертификаты X.509. В этом разделе рассматриваются учетные данные, их использование в [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] и выбор правильных учетных данных для приложения.  
@@ -55,7 +55,7 @@ ms.lasthandoff: 02/01/2018
 |Windows|Позволяет проводить обмен сообщениями SOAP в рамках контекста безопасности, созданного с использованием учетных данных Windows.|  
 |Username|Позволяет службе запрашивать проверку подлинности клиента на основе учетных данных типа «имя пользователя». Обратите внимание, что [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] не допускает каких-либо криптографических операций для имен пользователя, таких как создание сигнатуры или шифрование данных. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] гарантирует безопасность транспорта при использовании учетных данных имени пользователя.|  
 |Сертификат|Позволяет службе запрашивать проверку подлинности клиента с помощью сертификата X.509.|  
-|Issued Token|Пользовательский тип маркера, настроенный в соответствии с политикой безопасности. Тип маркера по умолчанию - маркер языка SAML (Security Assertions Markup Language). Маркер выдается службой маркеров безопасности. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Федерация и выданные маркеры](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md).|  
+|Issued Token|Пользовательский тип маркера, настроенный в соответствии с политикой безопасности. Тип маркера по умолчанию - маркер языка SAML (Security Assertions Markup Language). Маркер выдается службой маркеров безопасности. Дополнительные сведения см. в разделе [Федерация и выданные маркеры](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md).|  
   
 ### <a name="negotiation-model-of-service-credentials"></a>Модель согласования учетных данных служб  
  *Согласование* — это процесс установления доверительных отношений между клиентом и службой счет обмена учетными данными. Этот процесс выполняется между клиентом и службой последовательно, чтобы раскрывать только те сведения, которые нужны для следующего этапа процесса согласования. Обычно в результате согласования клиент получает учетные данные службы, которые используются при последующих операциях.  
@@ -77,7 +77,7 @@ ms.lasthandoff: 02/01/2018
  Методы задания значений учетных данных при программировании службы и клиента несколько различаются.  
   
 ### <a name="setting-service-credentials"></a>Задание учетных данных службы  
- При использовании режима транспорта и HTTP в качестве транспорта нужно использовать службы IIS или настраивать порт с сертификатом. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Общие сведения о безопасности транспорта](../../../../docs/framework/wcf/feature-details/transport-security-overview.md) и [безопасность транспорта HTTP](../../../../docs/framework/wcf/feature-details/http-transport-security.md).  
+ При использовании режима транспорта и HTTP в качестве транспорта нужно использовать службы IIS или настраивать порт с сертификатом. Дополнительные сведения см. в разделе [Общие сведения о безопасности транспорта](../../../../docs/framework/wcf/feature-details/transport-security-overview.md) и [безопасности транспорта HTTP](../../../../docs/framework/wcf/feature-details/http-transport-security.md).  
   
  Для указания учетных данных для службы в коде создайте экземпляр класса <xref:System.ServiceModel.ServiceHost> и задайте соответствующие учетные данные с помощью класса <xref:System.ServiceModel.Description.ServiceCredentials>, доступ к которому осуществляется через свойство <xref:System.ServiceModel.ServiceHostBase.Credentials%2A>.  
   

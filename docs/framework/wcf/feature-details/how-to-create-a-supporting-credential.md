@@ -1,30 +1,32 @@
 ---
-title: "Практическое руководство. Создание подтверждающих учетных данных"
-ms.custom: 
+title: Практическое руководство. Создание подтверждающих учетных данных
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: d0952919-8bb4-4978-926c-9cc108f89806
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4afad13300e2eb50a9625a5991bc8cb724c21dd6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: e74ba51306ba8761d916f580b21de9b3ba9cb7f4
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="how-to-create-a-supporting-credential"></a>Практическое руководство. Создание подтверждающих учетных данных
 Некоторые пользовательские схемы безопасности требуют нескольких учетных данных. Например, служба может потребовать от клиента не только имя пользователя и пароль, но и учетные данные, доказывающие, что возраст клиента старше 18 лет. Вторые учетные данные являются *вспомогательными учетными данными*. В этом разделе объясняется, как реализовать эти учетные данные в клиенте [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
   
 > [!NOTE]
->  Спецификация для поддержки учетных данных является частью спецификации WS-SecurityPolicy. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Спецификации безопасности веб-служб](http://go.microsoft.com/fwlink/?LinkId=88537).  
+>  Спецификация для поддержки учетных данных является частью спецификации WS-SecurityPolicy. Дополнительные сведения см. в разделе [спецификации безопасности веб-служб](http://go.microsoft.com/fwlink/?LinkId=88537).  
   
 ## <a name="supporting-tokens"></a>Вспомогательные маркеры  
  Вкратце, при использовании безопасности сообщений *основные учетные данные* всегда используется для защиты сообщения (например, сертификат X.509 или билет Kerberos).  
@@ -46,7 +48,7 @@ ms.lasthandoff: 12/22/2017
 |Подписанный и шифрующий|Подписанные, зашифрованные вспомогательные маркеры - это подписанные вспомогательные маркеры, которые шифруются при появлении в `wsse:SecurityHeader`.|  
   
 ## <a name="programming-supporting-credentials"></a>Программирование вспомогательных учетных данных  
- Чтобы создать службу, использующую поддерживающих маркеров, необходимо создать [ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md). ([!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Как: Создание пользовательской привязки, с использованием элемента SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md).)  
+ Чтобы создать службу, использующую поддерживающих маркеров, необходимо создать [ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md). (Дополнительные сведения см. в разделе [как: создайте пользовательские привязки с использованием элемента SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md).)  
   
  Первым шагом в создании пользовательской привязки является создание элемента привязки безопасности одного из трех следующих типов.  
   

@@ -1,20 +1,18 @@
 ---
-title: "Исключения: функция raise (F#)"
-description: "Узнайте, как используется функция F # «raise» указывает, что произошла ошибка или исключительное состояние."
-keywords: "visual f#, f#, функциональное программирование"
+title: 'Исключения: функция raise (F#)'
+description: 'Узнайте, как используется функция F # «raise» указывает, что произошла ошибка или исключительное состояние.'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
 ms.assetid: b00da469-4789-4cdd-9f77-7a2e29f28637
-ms.openlocfilehash: dc524a06d075b982a6aa1fd266769bfc7d883517
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 6bc62b13467b8cf4cfcb22f7d4a5f3464236f6d1
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="exceptions-the-raise-function"></a>Исключения: функция raise
 

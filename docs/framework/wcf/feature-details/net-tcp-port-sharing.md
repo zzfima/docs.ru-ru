@@ -1,27 +1,29 @@
 ---
-title: "Совместное использование портов Net.TCP"
-ms.custom: 
+title: Совместное использование портов Net.TCP
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - port activation [WCF]
 - port sharing [WCF]
 ms.assetid: f13692ee-a179-4439-ae72-50db9534eded
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 013c9e963ca75cc612d869a55b33d69aebbcad33
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: c7abf272cb1d069b0fbdcd561256580de5a82c29
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="nettcp-port-sharing"></a>Совместное использование портов Net.TCP
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] предоставляет новый сетевой протокол на базе TCP (net.tcp://) для высокопроизводительного обмена данными. Кроме того, в [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] введен новый системный компонент: служба совместного использования портов Net.TCP, позволяющая разделять порты net.tcp между несколькими пользовательскими процессами.  
@@ -49,12 +51,12 @@ ms.lasthandoff: 12/22/2017
  При открытии службы [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], работающей через совместное использование портов net.tcp://, инфраструктура TCP транспорта [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] не открывает непосредственно TCP-сокет в процессе приложения. Вместо этого транспортная инфраструктура регистрирует универсальный код ресурса (URI) базового адреса службы в службе совместного использования портов Net.TCP и ожидает, чтобы служба совместного использования портов прослушивала сообщения от ее имени.  Служба совместного использования портов отправляет сообщения, адресованные службе приложения, по мере их поступления.  
   
 ## <a name="installing-port-sharing"></a>Установка совместного использования портов  
- Служба совместного использования портов Net.TCP доступна во всех операционных системах, поддерживающих [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)], однако эта служба не включена по умолчанию. Из соображений безопасности администратор должен вручную включить службу совместного использования Net.TCP перед первым использованием. Служба совместного использования портов Net.TCP предоставляет параметры конфигурации, которые позволяют манипулировать некоторыми характеристиками сетевых сокетов, принадлежащих службе совместного использования портов. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Как: Включение службы совместного использования портов Net.TCP](../../../../docs/framework/wcf/feature-details/how-to-enable-the-net-tcp-port-sharing-service.md).  
+ Служба совместного использования портов Net.TCP доступна во всех операционных системах, поддерживающих [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)], однако эта служба не включена по умолчанию. Из соображений безопасности администратор должен вручную включить службу совместного использования Net.TCP перед первым использованием. Служба совместного использования портов Net.TCP предоставляет параметры конфигурации, которые позволяют манипулировать некоторыми характеристиками сетевых сокетов, принадлежащих службе совместного использования портов. Дополнительные сведения см. в разделе [как: Включение службы совместного использования портов Net.TCP](../../../../docs/framework/wcf/feature-details/how-to-enable-the-net-tcp-port-sharing-service.md).  
   
 ## <a name="using-nettcp-port-sharing-in-an-application"></a>Включение совместного использования портов Net.TCP в приложении  
  Самый простой способ совместно использовать порты net.tcp:// в приложении [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] - предоставить службу с помощью привязки <xref:System.ServiceModel.NetTcpBinding> и затем включить службу совместного использования портов Net.TCP с помощью свойства <xref:System.ServiceModel.NetTcpBinding.PortSharingEnabled%2A>.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]как это сделать, см. [как: Настройка службы WCF на совместное использование портов](../../../../docs/framework/wcf/feature-details/how-to-configure-a-wcf-service-to-use-port-sharing.md).  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)] как это сделать, см. [как: Настройка службы WCF на совместное использование портов](../../../../docs/framework/wcf/feature-details/how-to-configure-a-wcf-service-to-use-port-sharing.md).  
   
 ## <a name="security-implications-of-port-sharing"></a>Проблемы безопасности, связанные с совместным использованием портов  
  Хотя служба совместного использования портов Net.TCP предусматривает уровень обработки между приложениями и сетью, приложения, совместно использующие порты, все равно необходимо защищать так, как если бы они непосредственно прослушивали сеть. В частности, в приложениях, совместно использующих порты, необходимо оценивать привилегии процессов, в которых они выполняются. Имеет смысл рассмотреть возможность выполнения приложения от имени встроенной учетной записи Network Service, которая выполняется с минимально необходимым для обмена данными по сети набором привилегий.  

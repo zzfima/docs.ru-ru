@@ -1,26 +1,26 @@
 ---
-title: "Сохраняемость рабочего процесса"
-ms.custom: 
+title: Сохраняемость рабочего процесса
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - programming [WF], persistence
 ms.assetid: 39e69d1f-b771-4c16-9e18-696fa43b65b2
-caps.latest.revision: 
+caps.latest.revision: 26
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 9e65f07fc01d0d364d7271c4f1378b968b687881
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d2278762895978f90d80977f9e538b0e10a4f3f8
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="workflow-persistence"></a>Сохраняемость рабочего процесса
 Сохраняемость рабочего процесса - это постоянное отслеживание состояний экземпляра рабочего процесса независимо от выполняемого процесса или данных компьютера. Делается это для обеспечения хорошо известной точки восстановления для экземпляра рабочего процесса в случае сбоя системы или сохранения памяти путем выгрузки экземпляров рабочих процессов, которые в настоящий момент не выполняют активных действий, или переноса состояния экземпляра рабочего процесса с одного узла на другой узел в ферме серверов.  
@@ -33,7 +33,7 @@ ms.lasthandoff: 12/22/2017
   
  Для сохранения и загрузки данных приложения вместе со сведениями, относящимися к экземпляру рабочего процесса, можно создать участников сохраняемости, расширяющих класс <xref:System.Activities.Persistence.PersistenceParticipant>. Участник сохраняемости принимает участие в процессе сохраняемости и сохраняет пользовательские сериализуемые данные в хранилище сохраняемости, загружает данные из хранилища экземпляров в память и выполняет любую дополнительную логику в транзакции сохраняемости. Дополнительные сведения см. в разделе [участников сохраняемости](../../../docs/framework/windows-workflow-foundation/persistence-participants.md).  
   
- Windows Server App Fabric упрощает процесс настройки сохраняемости. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Понятия сохраняемости с Windows Server App Fabric](http://go.microsoft.com/fwlink/?LinkId=201200)  
+ Windows Server App Fabric упрощает процесс настройки сохраняемости. Дополнительные сведения см. в разделе [основные понятия сохраняемости с Windows Server App Fabric](http://go.microsoft.com/fwlink/?LinkId=201200)  
   
 ## <a name="implicit-persistence-points"></a>Неявные точки сохранения  
  В следующем списке содержатся примеры условий, при которых рабочий процесс сохраняется, если хранилище экземпляров связано с рабочим процессом.  

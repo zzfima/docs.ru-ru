@@ -1,27 +1,29 @@
 ---
-title: "Использование класса сообщений"
-ms.custom: 
+title: Использование класса сообщений
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: d1d62bfb-2aa3-4170-b6f8-c93d3afdbbed
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 5c3e33f4db403fdc4ad1d4efd14282fe2beac8dc
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: c63a0a88997a1c35b24562bcca3e0fdb40ebfd41
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="using-the-message-class"></a>Использование класса сообщений
 Класс <xref:System.ServiceModel.Channels.Message> является основой [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. Все взаимодействие между клиентами и службами в конечном итоге приводит к отправке и получению экземпляров класса <xref:System.ServiceModel.Channels.Message>.  
@@ -172,7 +174,7 @@ ms.lasthandoff: 12/22/2017
   
  Метод <xref:System.ServiceModel.Channels.MessageHeaders.FindHeader%2A> позволяет извлечь определенный заголовок. Этот метод использует для нахождения заголовка его имя и пространство имен и возвращает его индекс. Если заголовок встречается более одного раза, создается исключение. Если заголовок не найден, возвращается -1.  
   
- В модели заголовков SOAP заголовки могут иметь значение `Actor`, которое задает законного получателя заголовка. Основная перегрузка метода `FindHeader` осуществляет только поиск заголовков, предназначенных для конечного получателя сообщения. Другая перегрузка метода позволяет указать, какие значения `Actor` необходимо включить в поиск. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] в спецификации языка SOAP.  
+ В модели заголовков SOAP заголовки могут иметь значение `Actor`, которое задает законного получателя заголовка. Основная перегрузка метода `FindHeader` осуществляет только поиск заголовков, предназначенных для конечного получателя сообщения. Другая перегрузка метода позволяет указать, какие значения `Actor` необходимо включить в поиск. Дополнительные сведения см. в спецификации SOAP.  
   
  Метод <xref:System.ServiceModel.Channels.MessageHeaders.CopyTo%28System.ServiceModel.Channels.MessageHeaderInfo%5B%5D%2CSystem.Int32%29> предоставляется для копирования заголовков из коллекции <xref:System.ServiceModel.Channels.MessageHeaders> в массив объектов <xref:System.ServiceModel.Channels.MessageHeaderInfo>.  
   

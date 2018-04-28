@@ -1,24 +1,26 @@
 ---
-title: "Устранение неполадок корреляции"
-ms.custom: 
+title: Устранение неполадок корреляции
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 98003875-233d-4512-a688-4b2a1b0b5371
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 76b6178d3190165e711f46af60a6541a82ad0bd7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 5bdf111e6802692aef893cf9dcae88f0f51aa467
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="troubleshooting-correlation"></a>Устранение неполадок корреляции
 Корреляция позволяет сопоставлять сообщения службы рабочего процесса друг с другом и с нужным экземпляром рабочего процесса. Если же корреляция настроена неправильно, то сообщения не будут приниматься и приложения будут работать неправильно. В этом разделе даны общие сведения о нескольких методах устранения неполадок корреляции, а также перечислен ряд распространенных проблем, которые возникают при использовании корреляции.  
@@ -89,7 +91,7 @@ host.WorkflowExtensions.Add(new ConsoleTrackingParticipant());
   
  Участник отслеживания, такой как ConsoleTrackingParticipant, удобен для резидентных служб рабочего процесса с окном консоли. Для службы веб сервере, должен ли использоваться участника отслеживания, который записывает сведения трассировки в постоянное хранилище, например встроенной <xref:System.Activities.Tracking.EtwTrackingParticipant>, или своего собственного участника отслеживания, записывает сведения в файл, например `TextWriterTrackingParticpant` из [ Отслеживание с помощью текстового файла](../../../../docs/framework/windows-workflow-foundation/samples/tracking-using-a-text-file.md) образца.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Отслеживание и настройка отслеживания для службы рабочего процесса на веб сервере, в разделе [отслеживание и трассировка рабочих процессов](../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md), [Настройка отслеживания для рабочего процесса](../../../../docs/framework/windows-workflow-foundation/configuring-tracking-for-a-workflow.md)и [Трассировка &#91; Образцы WF &#93; ](../../../../docs/framework/windows-workflow-foundation/samples/tracking.md) образцов.  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Отслеживание и настройка отслеживания для службы рабочего процесса на веб сервере, в разделе [отслеживание и трассировка рабочих процессов](../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md), [Настройка отслеживания для рабочего процесса](../../../../docs/framework/windows-workflow-foundation/configuring-tracking-for-a-workflow.md)и [отслеживания &#91;WF Образцы&#93; ](../../../../docs/framework/windows-workflow-foundation/samples/tracking.md) образцов.  
   
 ## <a name="use-wcf-tracing"></a>Использование трассировки WCF  
  Трассировка WCF отслеживает поток входящих и исходящих сообщений для службы рабочего процесса. Данные такой трассировки удобны при устранении неполадок корреляции, особенно для корреляции по содержимому. Чтобы включить трассировку, укажите нужные прослушиватели трассировки в разделе `system.diagnostics` файла `web.config` для службы рабочего процесса, размещенной на веб-сервере, или файла `app.config` для резидентной службы рабочего процесса. Чтобы включить содержимое сообщений в файл трассировки, укажите значение `true` для атрибута `logEntireMessage` в элементе `messageLogging` в разделе `diagnostics` объекта `system.serviceModel`. В следующем примере для данных трассировки, включая содержимое сообщений, задается запись в файл с именем `service.svclog`.  
@@ -127,7 +129,7 @@ host.WorkflowExtensions.Add(new ConsoleTrackingParticipant());
 </configuration>  
 ```  
   
- Чтобы просмотреть сведения трассировки, которая содержится в `service.svclog`, [программы Service Trace Viewer (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md) используется. Оно особенно полезно при устранении неполадок корреляции по содержимому, поскольку можно просматривать содержимое сообщений, точно определять переданные данные и проверять соответствие <xref:System.ServiceModel.CorrelationQuery> для корреляции по содержимому. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]WCF см. трассировки, [программы Service Trace Viewer (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md), [Настройка трассировки](../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md), и [с помощью трассировки для устранения неполадок приложения](../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md).  
+ Чтобы просмотреть сведения трассировки, которая содержится в `service.svclog`, [программы Service Trace Viewer (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md) используется. Оно особенно полезно при устранении неполадок корреляции по содержимому, поскольку можно просматривать содержимое сообщений, точно определять переданные данные и проверять соответствие <xref:System.ServiceModel.CorrelationQuery> для корреляции по содержимому. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] WCF см. трассировки, [программы Service Trace Viewer (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md), [Настройка трассировки](../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md), и [с помощью трассировки для устранения неполадок приложения](../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md).  
   
 ## <a name="common-context-exchange-correlation-issues"></a>Распространенные проблемы корреляции обмена контекстом  
  Для правильной работы некоторых типов корреляции необходимо использовать определенный тип привязки. Примерами служат корреляция по схеме «запрос-ответ», где требуется двусторонняя привязка, такая как <xref:System.ServiceModel.BasicHttpBinding>, и корреляция обмена контекстом, для которой требуется привязка на основе контекста, такая как <xref:System.ServiceModel.BasicHttpContextBinding>. Большинство привязок поддерживают двусторонние операции, поэтому проблема совместимости редко возникает для корреляции по схеме «запрос-ответ», однако существует лишь небольшое число привязок на основе контекста, включая <xref:System.ServiceModel.BasicHttpContextBinding>, <xref:System.ServiceModel.WSHttpContextBinding> и <xref:System.ServiceModel.NetTcpContextBinding>. Если не используется одна из этих привязок, то первый вызов службы рабочего процесса завершится успешно, однако последующие вызовы завершатся ошибкой со следующим исключением <xref:System.ServiceModel.FaultException>.  
@@ -141,7 +143,7 @@ supports the context protocol and has a valid context initialized.
   
  Данные контекста, используемые для корреляции контекста, можно вернуть из <xref:System.ServiceModel.Activities.SendReply> в действие <xref:System.ServiceModel.Activities.Receive>, которое инициализирует корреляцию контекста, если используется двусторонняя операция, или указать в вызывающем объекте в случае односторонней операции. Если контекст не отправляется вызывающим объектом и не возвращается службой рабочего процесса, то при вызове последующей операции будет возвращаться исключение <xref:System.ServiceModel.FaultException>, описанное ранее.  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Обмен контекстом](../../../../docs/framework/wcf/feature-details/context-exchange-correlation.md).  
+ Дополнительные сведения см. в разделе [обмен контекстом](../../../../docs/framework/wcf/feature-details/context-exchange-correlation.md).  
   
 ## <a name="common-request-reply-correlation-issues"></a>Распространенные проблемы корреляции по схеме «запрос-ответ»  
  Корреляция запросов и ответов используется с <xref:System.ServiceModel.Activities.Receive> / <xref:System.ServiceModel.Activities.SendReply> пары для реализации двусторонней операции в службе рабочего процесса и с <xref:System.ServiceModel.Activities.Send> / <xref:System.ServiceModel.Activities.ReceiveReply> пары, вызывающей двустороннюю операцию в другой веб- Служба. При вызове двусторонней операции в службе WCF служба может быть либо традиционной, основанной на коде службой [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], либо службой рабочего процесса. Для корреляции «запрос-ответ» необходимо использовать двустороннюю привязку, такую как <xref:System.ServiceModel.BasicHttpBinding>, и операции должны быть двусторонними.  
@@ -176,7 +178,7 @@ SendReply ReplyToStartOrder = new SendReply
   
  Между не допускается использование сохраняемости <xref:System.ServiceModel.Activities.Receive> / <xref:System.ServiceModel.Activities.SendReply> пары или <xref:System.ServiceModel.Activities.Send> / <xref:System.ServiceModel.Activities.ReceiveReply> пары. Создается зона несохраняемости, которая существует до завершения обоих действий. Если действие, например действие Delay, находится в этой зоне несохраняемости и вызывает переход рабочего процесса в состояние бездействия, рабочий поток не будет сохранен, даже если узел настроен на сохранение рабочих потоков после их перехода в состояние бездействия. Если действие, например действие Persist, пытается выполнить явное сохранение в зоне несохраняемости, формируется неустранимое исключение, выполнение рабочего процесса прерывается, а вызывающему возвращается исключение <xref:System.ServiceModel.FaultException>. Сообщение о неустранимом исключении: «System.InvalidOperationException: действия Persist не могут содержаться в блоках несохраняемости». Это исключение не возвращается вызывающему, его можно обнаружить, если включено отслеживание. Сообщение об исключении <xref:System.ServiceModel.FaultException>, возвращаемое вызывающему: «Операцию выполнить не удалось, потому что рабочий процесс '5836145b-7da2-49d0-a052-a49162adeab6' завершился».  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Корреляция запросов и ответов в разделе [запрос-ответ](../../../../docs/framework/wcf/feature-details/request-reply-correlation.md).  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Корреляция запросов и ответов в разделе [запрос-ответ](../../../../docs/framework/wcf/feature-details/request-reply-correlation.md).  
   
 ## <a name="common-content-correlation-issues"></a>Распространенные проблемы корреляции по содержимому  
  Корреляция по содержимому применяется, если служба рабочего процесса получает несколько сообщений, а нужный экземпляр определяется по некоторому фрагменту данных в передаваемых сообщениях. При корреляции по содержимому такие данные в сообщении, например номер заказчика или идентификатор заказа, используются для маршрутизации сообщений в нужный экземпляр рабочего процесса. В этом разделе описан ряд распространенных проблем, которые возникают при использовании корреляции по содержимому.  
@@ -261,4 +263,4 @@ sm:header()/tempuri:CartId
 </Receive>  
 ```  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Корреляция по содержимому, в разделе [на основе содержимого](../../../../docs/framework/wcf/feature-details/content-based-correlation.md) и [коррелированных калькулятора](../../../../docs/framework/windows-workflow-foundation/samples/correlated-calculator.md) образца.
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Корреляция по содержимому, в разделе [на основе содержимого](../../../../docs/framework/wcf/feature-details/content-based-correlation.md) и [коррелированных калькулятора](../../../../docs/framework/windows-workflow-foundation/samples/correlated-calculator.md) образца.

@@ -1,23 +1,24 @@
 ---
-title: "Оптимальные методы сохраняемости"
-ms.custom: 
+title: Оптимальные методы сохраняемости
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 6974c5a4-1af8-4732-ab53-7d694608a3a0
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 408257d9ec51e9d60cb899c16cbef3a26cdc609f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: cfea5b8728774a4e788f3f0d866c6741d5b0bbe9
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="persistence-best-practices"></a>Оптимальные методы сохраняемости
 В настоящем документе приведены лучшие методики по проектированию и настройке рабочих процессов, касающиеся сохраняемости рабочих процессов.  
@@ -31,7 +32,7 @@ ms.lasthandoff: 12/22/2017
   
  Если рабочий процесс занят в течение продолжительного времени, рекомендуется регулярно сохранять экземпляр этого рабочего процесса на протяжении периода его занятости. Это можно обеспечить, добавляя действия <xref:System.Activities.Statements.Persist> по всей последовательности действий, которые поддерживают экземпляр рабочего процесса в состоянии занятости. Благодаря этому очистка памяти в домене приложения, сбои узла или сбои компьютера не вынуждают систему выполнять откат к началу периода занятости. Следует учитывать, что добавление действий <xref:System.Activities.Statements.Persist> к применяемым рабочим процессам приводит к снижению производительности.  
   
- Применение Windows Server App Fabric весьма способствует упрощению настройки и использования сохраняемости. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Сохраняемости фабрики приложений Windows Server](http://go.microsoft.com/fwlink/?LinkID=201200&clcid=0x409)  
+ Применение Windows Server App Fabric весьма способствует упрощению настройки и использования сохраняемости. Дополнительные сведения см. в разделе [сохраняемости фабрики приложений Windows Server](http://go.microsoft.com/fwlink/?LinkID=201200&clcid=0x409)  
   
 ## <a name="configuration-of-scalability-parameters"></a>Настройка параметров масштабируемости  
  Требования к масштабируемости и производительности определяют значения следующих параметров:  

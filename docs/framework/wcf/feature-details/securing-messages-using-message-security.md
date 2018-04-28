@@ -1,24 +1,26 @@
 ---
-title: "Защита сообщений с использованием средств обеспечения безопасности сообщений"
-ms.custom: 
+title: Защита сообщений с использованием средств обеспечения безопасности сообщений
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: a17ebe67-836b-4c52-9a81-2c3d58e225ee
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: be727fe2b69258a058ba99dc8aa40ae148d3dd99
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: be9d55e508308f23e70be81ac0d4fe0dfd0ea9cd
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="securing-messages-using-message-security"></a>Защита сообщений с использованием средств обеспечения безопасности сообщений
 В этом разделе рассматриваются механизмы обеспечения безопасности сообщений [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] при использовании <xref:System.ServiceModel.NetMsmqBinding>.  
@@ -52,7 +54,7 @@ ms.lasthandoff: 12/22/2017
   
  Так как очереди отключены от сети, клиент и служба могут быть не подключены к сети одновременно. В таком случае клиент и служба должны обмениваться сертификатами по внештатному каналу. В частности, на основании наличия сертификата службы (который может быть привязан к центру сертификации) в доверенном хранилище клиент должен заключить, что взаимодействие осуществляется с нужной службой. Для проверки подлинности клиента служба использует сертификат X.509, прикрепленный к сообщению, для сопоставления его сертификату проверки подлинности клиента в хранилище. Аналогичным образом сертификат должен быть привязан к центру сертификации.  
   
- На компьютере под управлением Windows имеется несколько типов хранилищ сертификатов. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]различные хранилища, в разделе [хранилища сертификатов](http://go.microsoft.com/fwlink/?LinkId=87787).  
+ На компьютере под управлением Windows имеется несколько типов хранилищ сертификатов. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] различные хранилища, в разделе [хранилища сертификатов](http://go.microsoft.com/fwlink/?LinkId=87787).  
   
 ### <a name="windows"></a>Windows  
  Тип учетных данных сообщений Windows использует протокол Kerberos.  
@@ -63,7 +65,7 @@ ms.lasthandoff: 12/22/2017
   
  Обратите внимание, что при использовании этого типа учетных данных служба должна запускаться из учетной записи службы (SERVICE).  
   
- Протокол Kerberos используется по умолчанию при выборе учетных данных сообщения. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Изучение Kerberos, протокол для распределенной безопасности Windows 2000](http://go.microsoft.com/fwlink/?LinkId=87790).  
+ Протокол Kerberos используется по умолчанию при выборе учетных данных сообщения. Дополнительные сведения см. в разделе [изучение Kerberos-протокола распределенной безопасности в Windows 2000](http://go.microsoft.com/fwlink/?LinkId=87790).  
   
 ### <a name="username-password"></a>Имя пользователя и пароль  
  С помощью этого свойства клиент может проверить подлинность сервера, используя имя пользователя и пароль в заголовке безопасности сообщения.  

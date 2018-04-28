@@ -1,24 +1,26 @@
 ---
-title: "Образец элемента привязки для обнаружения"
-ms.custom: 
+title: Образец элемента привязки для обнаружения
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: af513015-85bf-417b-8729-1bdff77ff6d6
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: dbbaefbd32048924434342dc3f902c99a3c2448c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 624209221dc8c2745afa6b4db20df6e47c7374f1
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="discovery-binding-element-sample"></a>Образец элемента привязки для обнаружения
 Данный образец демонстрирует использование клиентского элемента привязки обнаружения для обнаружения службы. Эта функция позволяет разработчикам добавлять клиентский канал обнаружения к клиентскому стеку каналов, в результате чего модель программирования становится намного интуитивно понятнее. Если соответствующий канал открыт, адрес службы разрешается в процессе обнаружения. Данный образец состоит из следующих проектов.  
@@ -34,7 +36,7 @@ ms.lasthandoff: 12/22/2017
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите на страницу [Примеры Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все примеры [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Этот образец расположен в следующем каталоге.  
+>  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) Чтобы загрузить все [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] образцов. Этот образец расположен в следующем каталоге.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Discovery\DiscoveryBindingElement`  
   
@@ -93,7 +95,7 @@ static CustomBinding CreateCustomBindingWithDiscoveryElement()
             return customBinding; }  
 ```  
   
- После создания экземпляра <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement> разработчик указывает критерии, используемые при поиске службы. В данном случае критерием обнаружения является тип `ICalculatorService`. Кроме того, разработчик указывает поставщика <xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider>, который возвращает конечную точку <xref:System.ServiceModel.Discovery.DiscoveryEndpoint>, указывающую место поиска служб. Поставщик <xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider> возвращает новый экземпляр конечной точки <xref:System.ServiceModel.Discovery.DiscoveryEndpoint>. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Использование пользовательской привязки для клиентского канала обнаружения](../../../../docs/framework/wcf/feature-details/using-a-custom-binding-with-the-discovery-client-channel.md).  
+ После создания экземпляра <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement> разработчик указывает критерии, используемые при поиске службы. В данном случае критерием обнаружения является тип `ICalculatorService`. Кроме того, разработчик указывает поставщика <xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider>, который возвращает конечную точку <xref:System.ServiceModel.Discovery.DiscoveryEndpoint>, указывающую место поиска служб. Поставщик <xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider> возвращает новый экземпляр конечной точки <xref:System.ServiceModel.Discovery.DiscoveryEndpoint>. Дополнительные сведения см. в разделе [использование пользовательскими привязками клиентского канала обнаружения](../../../../docs/framework/wcf/feature-details/using-a-custom-binding-with-the-discovery-client-channel.md).  
   
 ```  
 // Extend DiscoveryEndpointProvider class to change the default DiscoveryEndpoint  

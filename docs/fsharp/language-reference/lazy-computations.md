@@ -1,20 +1,17 @@
 ---
-title: "Отложенные вычисления (F#)"
-description: "Узнайте, как F # отложенные вычисления могут повысить производительность приложений и библиотек."
-keywords: "visual f#, f#, функциональное программирование"
+title: Отложенные вычисления (F#)
+description: 'Узнайте, как F # отложенные вычисления могут повысить производительность приложений и библиотек.'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 3499293e-1d53-4b02-b764-f687fbdaa7fe
-ms.openlocfilehash: 984c96ab68a8919e2382eefe8260b07f191027dd
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 72dc5a14a845b52ae2512314d730516ca0cf4b9d
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="lazy-computations"></a>Отложенные вычисления
 
@@ -32,7 +29,7 @@ let identifier = lazy ( expression )
 
 Отложенные вычисления позволяют повысить производительность, ограничивая выполнение вычислений только ситуаций, в которых потребуется результат.
 
-Чтобы принудительно выполнить вычисления, вызовите метод `Force`. `Force`вызывает выполнение вычисления только один раз. Последующие вызовы `Force` возвращают же результат, но не выполняется никакой код.
+Чтобы принудительно выполнить вычисления, вызовите метод `Force`. `Force` вызывает выполнение вычисления только один раз. Последующие вызовы `Force` возвращают же результат, но не выполняется никакой код.
 
 Следующий код иллюстрирует использование отложенного вычисления и использования `Force`. В этом коде тип `result` — `Lazy<int>`и `Force` возвращает `int`.
 

@@ -1,12 +1,13 @@
 ---
-title: "Безопасность (WPF)"
-ms.custom: 
+title: Безопасность (WPF)
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - XAML files [WPF], sandbox behavior
@@ -20,23 +21,24 @@ helpviewer_keywords:
 - XBAP security [WPF]
 - Internet Explorer security settings [WPF]
 ms.assetid: ee1baea0-3611-4e36-9ad6-fcd5205376fb
-caps.latest.revision: "38"
+caps.latest.revision: 38
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: fae5c8553cc395268b1c6afb1b64727014756975
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 134efba11742ab9cc8da2dfab77c233b52f1bcf1
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="security-wpf"></a>Безопасность (WPF)
-<a name="introduction"></a>При разработке [!INCLUDE[TLA#tla_wpf](../../../includes/tlasharptla-wpf-md.md)] автономных приложений и приложений, размещенных в веб-браузере, необходимо учитывать модели безопасности. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]Автономные приложения выполняются с неограниченными разрешениями ( [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] **FullTrust** набор разрешений) независимо от способа развертывания с помощью установщика Windows (.msi) XCopy, или [!INCLUDE[TLA2#tla_clickonce](../../../includes/tla2sharptla-clickonce-md.md)]. Развертывание автономных приложений WPF с частичным доверием с помощью ClickOnce не поддерживается. Тем не менее, ведущее приложение с полным доверием можно создать с частичным доверием <xref:System.AppDomain> с помощью модели надстроек .NET Framework. Дополнительные сведения см. в разделе [Общие сведения о надстройках WPF](../../../docs/framework/wpf/app-development/wpf-add-ins-overview.md).  
+<a name="introduction"></a> При разработке [!INCLUDE[TLA#tla_wpf](../../../includes/tlasharptla-wpf-md.md)] автономных приложений и приложений, размещенных в веб-браузере, необходимо учитывать модели безопасности. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] Автономные приложения выполняются с неограниченными разрешениями ( [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] **FullTrust** набор разрешений) независимо от способа развертывания с помощью установщика Windows (.msi) XCopy, или [!INCLUDE[TLA2#tla_clickonce](../../../includes/tla2sharptla-clickonce-md.md)]. Развертывание автономных приложений WPF с частичным доверием с помощью ClickOnce не поддерживается. Тем не менее, ведущее приложение с полным доверием можно создать с частичным доверием <xref:System.AppDomain> с помощью модели надстроек .NET Framework. Дополнительные сведения см. в разделе [Общие сведения о надстройках WPF](../../../docs/framework/wpf/app-development/wpf-add-ins-overview.md).  
   
- [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]размещенные приложения, размещенные в браузере на [!INCLUDE[TLA#tla_iegeneric](../../../includes/tlasharptla-iegeneric-md.md)] или Firefox, и может быть как [!INCLUDE[TLA#tla_xbap#plural](../../../includes/tlasharptla-xbapsharpplural-md.md)] или свободно [!INCLUDE[TLA#tla_xaml](../../../includes/tlasharptla-xaml-md.md)] документы, Дополнительные сведения см. в разделе [Обзор приложений браузера XAML WPF](../../../docs/framework/wpf/app-development/wpf-xaml-browser-applications-overview.md).  
+ [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] размещенные приложения, размещенные в браузере на [!INCLUDE[TLA#tla_iegeneric](../../../includes/tlasharptla-iegeneric-md.md)] или Firefox, и может быть как [!INCLUDE[TLA#tla_xbap#plural](../../../includes/tlasharptla-xbapsharpplural-md.md)] или свободно [!INCLUDE[TLA#tla_xaml](../../../includes/tlasharptla-xaml-md.md)] документы, Дополнительные сведения см. в разделе [Обзор приложений браузера XAML WPF](../../../docs/framework/wpf/app-development/wpf-xaml-browser-applications-overview.md).  
   
- [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]выполнение приложений веб-браузера в песочнице с частичным уровнем доверия по умолчанию, который ограничен по умолчанию [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] **Internet** набора разрешений зоны. Это эффективно изолирует [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] от клиентского компьютера таким же образом, можно ожидать обычные веб-приложения, чтобы изолировать приложения, размещенные в браузере. Приложение XBAP может повысить привилегии вплоть до полного доверия в зависимости от зоны безопасности URL-адреса развертывания и конфигурации безопасности клиента. Дополнительные сведения см. в разделе [Безопасность частичного доверия в WPF](../../../docs/framework/wpf/wpf-partial-trust-security.md).  
+ [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] выполнение приложений веб-браузера в песочнице с частичным уровнем доверия по умолчанию, который ограничен по умолчанию [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] **Internet** набора разрешений зоны. Это эффективно изолирует [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] от клиентского компьютера таким же образом, можно ожидать обычные веб-приложения, чтобы изолировать приложения, размещенные в браузере. Приложение XBAP может повысить привилегии вплоть до полного доверия в зависимости от зоны безопасности URL-адреса развертывания и конфигурации безопасности клиента. Дополнительные сведения см. в разделе [Безопасность частичного доверия в WPF](../../../docs/framework/wpf/wpf-partial-trust-security.md).  
   
  Здесь описывается модель безопасности для [!INCLUDE[TLA#tla_wpf](../../../includes/tlasharptla-wpf-md.md)] автономные и приложения, размещенные в браузере.  
   
@@ -68,7 +70,7 @@ ms.lasthandoff: 12/22/2017
 ### <a name="application-navigation-security"></a>Безопасность навигации в приложениях  
  Переход в приложении считается безопасным, если его можно с помощью пакета [!INCLUDE[TLA2#tla_uri](../../../includes/tla2sharptla-uri-md.md)], который поддерживает четыре типа содержимого:  
   
-|Тип содержимого|Описание:|Пример URI|  
+|Тип содержимого|Описание|Пример URI|  
 |------------------|-----------------|-----------------|  
 |Ресурс|Файлы, добавленные в проект с типом построения **ресурсов**.|`pack://application:,,,/MyResourceFile.xaml`|  
 |Content|Файлы, добавленные в проект с типом построения **содержимого**.|`pack://application:,,,/MyContentFile.xaml`|  
@@ -100,9 +102,9 @@ ms.lasthandoff: 12/22/2017
 ## <a name="web-browsing-software-security-settings"></a>Параметры безопасности программного обеспечения для просмотра веб-страниц  
  Параметры безопасности компьютера определяют уровень доступа, который предоставляется программному обеспечению для просмотра веб-страниц. Веб-обозреватель включает все приложение или компонент, который использует [WinINet](http://go.microsoft.com/fwlink/?LinkId=179379) или [UrlMon](http://go.microsoft.com/fwlink/?LinkId=179383) API, в том числе Internet Explorer и PresentationHost.exe.  
   
- [!INCLUDE[TLA2#tla_iegeneric](../../../includes/tla2sharptla-iegeneric-md.md)]предоставляет механизм, с помощью которого можно настроить функциональные возможности которого может выполняться в [!INCLUDE[TLA2#tla_iegeneric](../../../includes/tla2sharptla-iegeneric-md.md)], включая следующие:  
+ [!INCLUDE[TLA2#tla_iegeneric](../../../includes/tla2sharptla-iegeneric-md.md)] предоставляет механизм, с помощью которого можно настроить функциональные возможности которого может выполняться в [!INCLUDE[TLA2#tla_iegeneric](../../../includes/tla2sharptla-iegeneric-md.md)], включая следующие:  
   
--   компоненты, зависящие от [!INCLUDE[TLA2#tla_winfx](../../../includes/tla2sharptla-winfx-md.md)];  
+-   .NET framework относящиеся компоненты  
   
 -   элементы управления ActiveX и подключаемые модули;  
   
@@ -131,7 +133,7 @@ ms.lasthandoff: 12/22/2017
 > [!NOTE]
 >  К диалоговому окну "Свойства обозревателя" можно также перейти из Internet Explorer. Нажмите кнопку **средства** и нажмите кнопку **обозревателя**.  
   
- Начиная с [!INCLUDE[TLA#tla_ie7](../../../includes/tlasharptla-ie7-md.md)], специально для следующих параметров безопасности [!INCLUDE[TLA2#tla_winfx](../../../includes/tla2sharptla-winfx-md.md)] входят:  
+ Начиная с [!INCLUDE[TLA#tla_ie7](../../../includes/tlasharptla-ie7-md.md)], включены следующие параметры безопасности специально для .NET Framework:  
   
 -   **Свободный XAML**. Элементы управления ли [!INCLUDE[TLA2#tla_iegeneric](../../../includes/tla2sharptla-iegeneric-md.md)] можно перейти, отменив [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] файлов. (Варианты: "Включить", "Отключить" и "Запрашивать".)  
   
@@ -231,7 +233,7 @@ ms.lasthandoff: 12/22/2017
   
  Тем не менее, существует возможность уязвимости безопасности сборки APTCA после установки в [!INCLUDE[TLA2#tla_gac](../../../includes/tla2sharptla-gac-md.md)]. После обнаружения уязвимости безопасности издатели сборок могут создавать обновления безопасности для решения проблем существующих установок и защиты установок, которые могут выполняться после выявления проблемы. Одним из вариантов обновления является удаление сборки, хотя это может нарушить работу других полностью доверенных клиентских приложений, использующих сборку.  
   
- [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]предоставляет механизм, с помощью которого можно отключить сборку APTCA, для частично доверенных [!INCLUDE[TLA2#tla_xbap#plural](../../../includes/tla2sharptla-xbapsharpplural-md.md)] без удаления сборки APTCA.  
+ [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] предоставляет механизм, с помощью которого можно отключить сборку APTCA, для частично доверенных [!INCLUDE[TLA2#tla_xbap#plural](../../../includes/tla2sharptla-xbapsharpplural-md.md)] без удаления сборки APTCA.  
   
  Чтобы отключить сборку APTCA, необходимо создать специальный раздел реестра.  
   
@@ -252,7 +254,7 @@ ms.lasthandoff: 12/22/2017
  Если сборку необходимо отключить для клиентских приложений с частичным доверием, можно написать обновление, создающее раздел реестра и значение.  
   
 > [!NOTE]
->  Основные [!INCLUDE[TLA2#tla_winfx](../../../includes/tla2sharptla-winfx-md.md)] сборки не затрагиваются отключены таким образом, поскольку они необходимы для запуска управляемых приложений. Поддержка отключения сборок APTCA в основном ориентирована на сторонние приложения.  
+>  Базовые сборки .NET Framework не затрагивается отключения их таким образом, так как они необходимы для запуска управляемых приложений. Поддержка отключения сборок APTCA в основном ориентирована на сторонние приложения.  
   
 <a name="LooseContentSandboxing"></a>   
 ## <a name="sandbox-behavior-for-loose-xaml-files"></a>Режим песочницы для свободных файлов XAML  

@@ -1,34 +1,36 @@
 ---
-title: "Как предоставить доступ к каналу в форматах Atom и RSS"
-ms.custom: 
+title: Как предоставить доступ к каналу в форматах Atom и RSS
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: fe374932-67f5-487d-9325-f868812b92e4
-caps.latest.revision: "23"
+caps.latest.revision: 23
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6584f71450917669024c965c121edebb7dffc677
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 5a2ca8d6ce6cf907538c534f97300e418f5e825f
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="how-to-expose-a-feed-as-both-atom-and-rss"></a>Как предоставить доступ к каналу в форматах Atom и RSS
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] позволяет создавать службу, предоставляющую веб-канал синдикации. В этом разделе рассматривается процесс создания службы синдикации, предоставляющей веб-канал синдикации с помощью Atom 1.0 и RSS 2.0. Эта служба предоставляет одну конечную точку, которая может вернуть любой формат синдикации. В целях упрощения в данном образце используется резидентная служба. В рабочей среде служба такого типа размещается в IIS или WAS. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]разные [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] варианты размещения, в разделе [размещения](../../../../docs/framework/wcf/feature-details/hosting.md).  
+[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] позволяет создавать службу, предоставляющую веб-канал синдикации. В этом разделе рассматривается процесс создания службы синдикации, предоставляющей веб-канал синдикации с помощью Atom 1.0 и RSS 2.0. Эта служба предоставляет одну конечную точку, которая может вернуть любой формат синдикации. В целях упрощения в данном образце используется резидентная служба. В рабочей среде служба такого типа размещается в IIS или WAS. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] разные [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] варианты размещения, в разделе [размещения](../../../../docs/framework/wcf/feature-details/hosting.md).  
   
 ### <a name="to-create-a-basic-syndication-service"></a>Создание базовой службы синдикации  
   
-1.  Определите контракт службы с помощью интерфейса, отмеченного атрибутом <xref:System.ServiceModel.Web.WebGetAttribute>. Каждая операция, предоставляемая как веб-канал синдикации, возвращает объект <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter>. Обратите внимание на параметры для <xref:System.ServiceModel.Web.WebGetAttribute>. `UriTemplate` указывает URL-адрес, используемый для вызова этой операции службы. Строка для этого параметра содержит литералы и переменные в фигурных скобках ({*формат*}). Эта переменная соответствует параметру `format` операции службы. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] <xref:System.UriTemplate>. `BodyStyle` влияет на способ записи сообщений, отправляемых и получаемых этой операцией службы. <xref:System.ServiceModel.Web.WebMessageBodyStyle.Bare> указывает, что данные, отправляемые и получаемые этой операцией службы, не заключаются в оболочку из XML-элементов, определенных в инфраструктуре. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] <xref:System.ServiceModel.Web.WebMessageBodyStyle>.  
+1.  Определите контракт службы с помощью интерфейса, отмеченного атрибутом <xref:System.ServiceModel.Web.WebGetAttribute>. Каждая операция, предоставляемая как веб-канал синдикации, возвращает объект <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter>. Обратите внимание на параметры для <xref:System.ServiceModel.Web.WebGetAttribute>. `UriTemplate` указывает URL-адрес, используемый для вызова этой операции службы. Строка для этого параметра содержит литералы и переменные в фигурных скобках ({*формат*}). Эта переменная соответствует параметру `format` операции службы. Дополнительные сведения см. в разделе <xref:System.UriTemplate>. `BodyStyle` влияет на способ записи сообщений, отправляемых и получаемых этой операцией службы. <xref:System.ServiceModel.Web.WebMessageBodyStyle.Bare> указывает, что данные, отправляемые и получаемые этой операцией службы, не заключаются в оболочку из XML-элементов, определенных в инфраструктуре. Дополнительные сведения см. в разделе <xref:System.ServiceModel.Web.WebMessageBodyStyle>.  
   
      [!code-csharp[htAtomRss#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/htatomrss/cs/program.cs#0)]
      [!code-vb[htAtomRss#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htatomrss/vb/program.vb#0)]  

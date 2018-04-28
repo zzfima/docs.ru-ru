@@ -38,11 +38,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 07609671d061851e6ede2f2bd90e4bee38e43159
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 7c84c5742fcbb0d1554bd6fc379fc44f3b9cb055
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="navigation-overview"></a>Общие сведения о переходах
 [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] поддерживает навигацию в стиле браузера, можно использовать в двух типов приложений: автономных приложений и [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)]. Пакет содержимого для переходов [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] предоставляет <xref:System.Windows.Controls.Page> класса. Можно переходить от одного <xref:System.Windows.Controls.Page> в другой декларативно с помощью <xref:System.Windows.Documents.Hyperlink>, или программно, с помощью <xref:System.Windows.Navigation.NavigationService>. [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] использует журнал, чтобы запоминать страницы, с которых был осуществлен переход, и чтобы переходить к ним обратно.  
@@ -89,7 +89,7 @@ ms.lasthandoff: 04/26/2018
   
 <a name="CreatingAXAMLPage"></a>   
 ### <a name="implementing-a-page"></a>Реализация страницы  
- В [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], можно перейти к несколько типов содержимого, которые включают [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)] объектов, пользовательских объектов, значений перечисления, пользовательские элементы управления, [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] файлы, и [!INCLUDE[TLA#tla_html](../../../../includes/tlasharptla-html-md.md)] файлов. Тем не менее, можно найти что наиболее распространенным и удобным способом упаковки содержимого — с помощью <xref:System.Windows.Controls.Page>. Кроме того <xref:System.Windows.Controls.Page> реализует особые возможности перехода в целях улучшения их внешнего вида и упрощения разработки.  
+ В [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], можно перейти к несколько типов содержимого, которые являются объектами .NET Framework, пользовательских объектов, значений перечисления, пользовательские элементы управления, [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] файлы, и [!INCLUDE[TLA#tla_html](../../../../includes/tlasharptla-html-md.md)] файлов. Тем не менее, можно найти что наиболее распространенным и удобным способом упаковки содержимого — с помощью <xref:System.Windows.Controls.Page>. Кроме того <xref:System.Windows.Controls.Page> реализует особые возможности перехода в целях улучшения их внешнего вида и упрощения разработки.  
   
  С помощью <xref:System.Windows.Controls.Page>, можно декларативно реализовать доступную для перехода страницу [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] содержимого с помощью разметки следующим образом.  
   

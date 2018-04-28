@@ -1,24 +1,26 @@
 ---
-title: "Очереди в WCF"
-ms.custom: 
+title: Очереди в WCF
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: e98d76ba-1acf-42cd-b137-0f8214661112
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 3c50bbc54d56d3fdc7a848af0e77cfbb2c15c9bb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 01dc36c73d9e668dd98cb5ba8b275d3d5177ba61
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="queuing-in-wcf"></a>Очереди в WCF
 В данном разделе описывается применение взаимодействия с использованием очередей в [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
@@ -49,12 +51,12 @@ ms.lasthandoff: 12/22/2017
   
  Кроме того, очереди MSMQ можно защищать с помощью удостоверений Windows, зарегистрированных в службе каталогов Active Directory. При установке MSMQ можно установить интеграцию с Active Directory, для чего компьютер должен входить в домен Windows.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]MSMQ, в разделе [Установка Message Queuing (MSMQ)](../../../../docs/framework/wcf/samples/installing-message-queuing-msmq.md).  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)] MSMQ, в разделе [Установка Message Queuing (MSMQ)](../../../../docs/framework/wcf/samples/installing-message-queuing-msmq.md).  
   
 ### <a name="netmsmqbinding"></a>NetMsmqBinding  
  [ \<NetMsmqBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/netmsmqbinding.md) является привязке с очередью [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] предоставляет для двух [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] конечные точки для взаимодействия с помощью MSMQ. Поэтому привязка предоставляет свойства, имеющие отношение к MSMQ. Тем не менее в `NetMsmqBinding` доступны не все функции и свойства MSMQ. Компактная привязка `NetMsmqBinding` содержит оптимальный набор функций, которого должно быть достаточно для большинства пользователей.  
   
- В `NetMsmqBinding` в виде свойств привязок объявлены базовые принципы работы с очередями, рассмотренные выше. Эти свойства, в свою очередь, определяют, каким образом сообщения должны передаваться и отправляться с использованием MSMQ. Описание категорий свойств содержится в приведенных ниже разделах. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] основные разделы, более полно описывающие конкретные свойства.  
+ В `NetMsmqBinding` в виде свойств привязок объявлены базовые принципы работы с очередями, рассмотренные выше. Эти свойства, в свою очередь, определяют, каким образом сообщения должны передаваться и отправляться с использованием MSMQ. Описание категорий свойств содержится в приведенных ниже разделах. Дополнительные сведения см. в разделе Основные разделы, более полно описывающие конкретные свойства.  
   
 #### <a name="exactlyonce-and-durable-properties"></a>Свойства ExactlyOnce и Durable  
  От значений свойств `ExactlyOnce` и `Durable` зависит то, каким образом сообщения передаются между очередями.  
@@ -77,17 +79,17 @@ ms.lasthandoff: 12/22/2017
   
  У привязок имеются следующие важные свойства.  
   
--   `DeadLetterQueue`. Это свойство является перечислением, которое указывает, запрошена ли очередь недоставленных сообщений. Кроме того, в перечислении содержится тип очереди недоставленных сообщений, если она запрошена. Значениями являются `None`, `System` и `Custom`. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Интерпретация этих свойств в разделе [с использованием очередей недоставленных сообщений для обработки ошибок передачи сообщений](../../../../docs/framework/wcf/feature-details/using-dead-letter-queues-to-handle-message-transfer-failures.md)  
+-   `DeadLetterQueue`. Это свойство является перечислением, которое указывает, запрошена ли очередь недоставленных сообщений. Кроме того, в перечислении содержится тип очереди недоставленных сообщений, если она запрошена. Значениями являются `None`, `System` и `Custom`. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Интерпретация этих свойств в разделе [с использованием очередей недоставленных сообщений для обработки ошибок передачи сообщений](../../../../docs/framework/wcf/feature-details/using-dead-letter-queues-to-handle-message-transfer-failures.md)  
   
 -   `CustomDeadLetterQueue`. Это свойство представляет собой универсальный код ресурса (URI) очереди недоставленных сообщений конкретного приложения. Требуется, если `DeadLetterQueue`.`Custom` выбирается.  
   
 #### <a name="poison-message-handling-properties"></a>Свойства обработки подозрительных сообщений  
- Когда служба получает сообщение из целевой очереди в рамках транзакции, служба может по какой-либо причине не обработать это сообщение. В этом случае сообщение возвращается в очередь, чтобы быть считанными снова. Для обработки сообщений, которые часто вызывают сбои, в привязке можно настроить набор свойств обработки подозрительных сообщений. Есть четыре свойства: `ReceiveRetryCount`, `MaxRetryCycles`, `RetryCycleDelay` и `ReceiveErrorHandling`. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Эти свойства в разделе [обработка подозрительных сообщений](../../../../docs/framework/wcf/feature-details/poison-message-handling.md).  
+ Когда служба получает сообщение из целевой очереди в рамках транзакции, служба может по какой-либо причине не обработать это сообщение. В этом случае сообщение возвращается в очередь, чтобы быть считанными снова. Для обработки сообщений, которые часто вызывают сбои, в привязке можно настроить набор свойств обработки подозрительных сообщений. Есть четыре свойства: `ReceiveRetryCount`, `MaxRetryCycles`, `RetryCycleDelay` и `ReceiveErrorHandling`. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Эти свойства в разделе [обработка подозрительных сообщений](../../../../docs/framework/wcf/feature-details/poison-message-handling.md).  
   
 #### <a name="security-properties"></a>Свойства безопасности  
- Служба MSMQ реализует собственную модель безопасности, например списки управления доступом в очереди или отправку прошедших проверку подлинности сообщений. В привязке `NetMsmqBinding` эти свойства безопасности реализованы как часть параметров безопасности транспорта. В привязке имеется два свойства для обеспечения безопасности транспорта: `MsmqAuthenticationMode` и `MsmqProtectionLevel`. Значения этих свойств зависят от настройки MSMQ. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Защита сообщений с использованием безопасности транспорта](../../../../docs/framework/wcf/feature-details/securing-messages-using-transport-security.md).  
+ Служба MSMQ реализует собственную модель безопасности, например списки управления доступом в очереди или отправку прошедших проверку подлинности сообщений. В привязке `NetMsmqBinding` эти свойства безопасности реализованы как часть параметров безопасности транспорта. В привязке имеется два свойства для обеспечения безопасности транспорта: `MsmqAuthenticationMode` и `MsmqProtectionLevel`. Значения этих свойств зависят от настройки MSMQ. Дополнительные сведения см. в разделе [защита безопасность транспорта с помощью сообщений](../../../../docs/framework/wcf/feature-details/securing-messages-using-transport-security.md).  
   
- Помимо безопасности транспорта само сообщение SOAP можно также защитить с помощью механизмов защиты сообщений. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Защита сообщений с помощью безопасности сообщений](../../../../docs/framework/wcf/feature-details/securing-messages-using-message-security.md).  
+ Помимо безопасности транспорта само сообщение SOAP можно также защитить с помощью механизмов защиты сообщений. Дополнительные сведения см. в разделе [защита безопасность сообщений с помощью сообщений](../../../../docs/framework/wcf/feature-details/securing-messages-using-message-security.md).  
   
  `MsmqTransportSecurity` также реализует два свойства: `MsmqEncryptionAlgorithm` и `MsmqHashAlgorithm`. Это перечисления различных алгоритмов, позволяющее задать шифрование при передаче сообщений между очередями и хэширование сигнатур.  
   
@@ -100,7 +102,7 @@ ms.lasthandoff: 12/22/2017
   
 -   `QueueTransferProtocol`: перечисление протокола, используемого для обмена сообщениями между очередями. Служба MSMQ реализует собственный протокол передачи сообщений между очередями, а также протокол на базе SOAP (SRMP). Протокол SRMP используется при передаче сообщений между очередями с помощью протокола HTTP. Если сообщения между очередями передаются с помощью протокола HTTPS, используется протокол SRMP;  
   
--   `UseActiveDirectory`: логическое значение, указывающее, следует ли использовать для разрешения адресов очередей службу каталогов Active Directory. По умолчанию этот режим отключен. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Конечных точек и адресация очереди службы](../../../../docs/framework/wcf/feature-details/service-endpoints-and-queue-addressing.md).  
+-   `UseActiveDirectory`: логическое значение, указывающее, следует ли использовать для разрешения адресов очередей службу каталогов Active Directory. По умолчанию этот режим отключен. Дополнительные сведения см. в разделе [конечные точки служб и адресация очереди](../../../../docs/framework/wcf/feature-details/service-endpoints-and-queue-addressing.md).  
   
 ### <a name="msmqintegrationbinding"></a>MsmqIntegrationBinding  
  Привязка `MsmqIntegrationBinding` используется в тех случаях, когда конечная точка [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] должна взаимодействовать с существующим приложением MSMQ, написанном с использованием C, C++, COM или интерфейсов API System.Messaging.  

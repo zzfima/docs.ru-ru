@@ -18,18 +18,18 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 5f1c7449372ad012280b360c09017a15733fb95b
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: 46bafbb0063f72b56f647caaa9dd0fa2944f3298
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="configuring-services-using-configuration-files"></a>Настройка служб с использованием файлов конфигурации
 Настройка службы [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] с помощью файла конфигурации обеспечивает гибкость предоставления данных по конечной точке и поведению службы непосредственно в точке развертывания, а не во время разработки. В этой теме представлено описание основных доступных методов.  
   
  Службу [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] можно настроить с помощью технологии конфигурации [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] . Чаще всего элементы XML добавляются в файл Web.config для узла служб IIS, на котором размещена служба [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] . Эти элементы позволяют изменять данные, такие как адреса конечных точек (фактические адреса, используемые для взаимодействия со службой), по схеме компьютер-компьютер. Кроме того, [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] включает в себя несколько предоставляемых системой элементов, которые позволяют быстро выбрать для службы самые основные функции. Начиная с версии [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)], в [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] входит новая модель конфигурации по умолчанию, которая обладает упрощенными требованиями к настройке [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] . Если для службы не указана конфигурация [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] , то среда выполнения автоматически выполняет настройку службы, указывая некоторые стандартные конечные точки, привязку и поведение по умолчанию. На практике запись конфигурации является основной частью процесса программирования приложений [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] .  
   
- [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Настройка привязок для служб](../../../docs/framework/wcf/configuring-bindings-for-wcf-services.md). Список наиболее часто используемые элементы, см. в разделе [привязка, предоставляемая системой](../../../docs/framework/wcf/system-provided-bindings.md). [!INCLUDE[crabout](../../../includes/crabout-md.md)] о конечных точках по умолчанию, привязках и режимах работы см. в разделах [Simplified Configuration](../../../docs/framework/wcf/simplified-configuration.md) и [Simplified Configuration for WCF Services](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
+ Дополнительные сведения см. в разделе [Настройка привязок для служб](../../../docs/framework/wcf/configuring-bindings-for-wcf-services.md). Список наиболее часто используемые элементы, см. в разделе [привязка, предоставляемая системой](../../../docs/framework/wcf/system-provided-bindings.md). [!INCLUDE[crabout](../../../includes/crabout-md.md)] о конечных точках по умолчанию, привязках и режимах работы см. в разделах [Simplified Configuration](../../../docs/framework/wcf/simplified-configuration.md) и [Simplified Configuration for WCF Services](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
   
 > [!IMPORTANT]
 >  При развертывании сценариев параллельного выполнения, в которых развернуты две различные версии службы, необходимо указывать частичные имена сборок, на которые ссылаются файлы конфигурации. Это связано с тем, что файл конфигурации совместно используется всеми версиями службы, которые могут выполняться под управлением различных версий платформы .NET Framework.  

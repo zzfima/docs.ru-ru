@@ -1,24 +1,26 @@
 ---
-title: "Развертывание службы WCF, размещенной в IIS"
-ms.custom: 
+title: Развертывание службы WCF, размещенной в IIS
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 04ebd329-3fbd-44c3-b3ab-1de3517e27d7
-caps.latest.revision: "30"
+caps.latest.revision: 30
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 869e3b81e94e6efaa8d6cd9f4f021b52b6b43f48
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: ca37e8b3f59875ed912c02d0a8237a040bf79518
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="deploying-an-internet-information-services-hosted-wcf-service"></a>Развертывание службы WCF, размещенной в IIS
 Процесс разработки и развертывания службы [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] , которая размещается в службах IIS, состоит из следующих задач.  
@@ -46,7 +48,7 @@ ms.lasthandoff: 12/22/2017
   
 -   Windows 7:  
   
- Наконец, необходимо убедиться в том, что среда ASP.NET настроена для использования платформы .NET Framework 4. Для этого запустите средство ASPNET_Regiis с параметром -i. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Средство регистрации ASP.NET IIS](http://go.microsoft.com/fwlink/?LinkId=201186)  
+ Наконец, необходимо убедиться в том, что среда ASP.NET настроена для использования платформы .NET Framework 4. Для этого запустите средство ASPNET_Regiis с параметром -i. Дополнительные сведения см. в разделе [средство регистрации IIS ASP.NET](http://go.microsoft.com/fwlink/?LinkId=201186)  
   
 ## <a name="create-a-new-iis-application-or-reuse-an-existing-aspnet-application"></a>Создание нового приложения служб IIS или повторное использование существующего приложения ASP.NET  
  Службы [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] , размещенные в IIS, должны находиться в приложении IIS. Можно создать новое приложение IIS только для размещения служб [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] . Можно также развернуть службу [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] в существующее приложение, в котором уже размещено содержимое [!INCLUDE[vstecasplong](../../../../includes/vstecasplong-md.md)] (например, страницы ASPX и веб-службы ASP.NET [ASMX]). [!INCLUDE[crabout](../../../../includes/crabout-md.md)] этих возможностях см. в разделах "Совместное размещение служб WCF вместе с ASP.NET" и "Размещение служб WCF в режиме совместимости с ASP.NET" в [WCF Services and ASP.NET](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md).  
@@ -89,21 +91,21 @@ new ServiceHost( typeof( MyNamespace.MyServiceImplementationTypeName ) );
 -   Приложениям, использующим [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] службы за пределами служб IIS, могут управлять базовый адрес в них служб, передавая набор базы адресов URI для <xref:System.ServiceModel.ServiceHost> конструктора или путем ввода [ \<узла >](../../../../docs/framework/configure-apps/file-schema/wcf/host.md) элемент конфигурации службы. Службы, размещенные в IIS, не могут управлять своими базовыми адресами; базовым адресом службы, размещенной в IIS, является адрес ее SVC-файла.  
   
 ### <a name="endpoint-addresses-for-iis-hosted-services"></a>Адреса конечных точек для служб, размещенных в IIS  
- Будучи размещенными в IIS, адреса конечных точек всегда считаются относительными для адреса SVC-файла, представляющего службу. Например, если базовым адресом службы [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] является адрес http://localhost/Application1/MyService.svc со следующей конфигурацией конечной точки.  
+ Будучи размещенными в IIS, адреса конечных точек всегда считаются относительными для адреса SVC-файла, представляющего службу. Например если базовый адрес [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] служба http://localhost/Application1/MyService.svc со следующей конфигурацией конечной точки.  
   
 ```xml  
 <endpoint address="anotherEndpoint" .../>  
 ```  
   
- Эта конфигурация предоставляет конечную точку, которая может быть достигнута по адресу "http://localhost/Application1/MyService.svc/anotherEndpoint".  
+ Это обеспечивает конечную точку, которая может быть достигнута по «http://localhost/Application1/MyService.svc/anotherEndpoint».  
   
- Аналогично, элемент конфигурации конечной точки, в котором в качестве относительного адреса используется пустая строка, обеспечивает конечную точку, достижимую по адресу http://localhost/Application1/MyService.svc, который является базовым адресом.  
+ Аналогично, элемент конфигурации конечной точки, используется пустая строка, как относительный адрес предоставляет конечную точку, достижимую по http://localhost/Application1/MyService.svc, который является базовым адресом.  
   
 ```xml  
 <endpoint address="" ... />  
 ```  
   
- Для конечных точек служб, размещенных в IIS, следует всегда использовать относительные адреса. Предоставление полного адреса конечной точки (например, http://localhost/MyService.svc) может привести к ошибкам при развертывании службы, если адрес конечной точки не соответствует IIS-приложению, в котором размещается служба, представляющая эту конечную точку. Использование относительных адресов конечных точек для размещенных служб позволяет избежать таких потенциальных конфликтов.  
+ Для конечных точек служб, размещенных в IIS, следует всегда использовать относительные адреса. Предоставление адреса конечной точки с полным (например, http://localhost/MyService.svc) может привести к ошибкам при развертывании службы, если адрес конечной точки для приложения IIS, на котором размещена служба, представляющая эту конечную точку. Использование относительных адресов конечных точек для размещенных служб позволяет избежать таких потенциальных конфликтов.  
   
 ### <a name="available-transports"></a>Доступные типы транспорта  
  Службы[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] , размещенные в IIS 5.1 и [!INCLUDE[iis601](../../../../includes/iis601-md.md)] , могут использовать связь только по протоколу HTTP. В этих платформах IIS настройка размещенной службы на использование привязки, отличной от HTTP, приводит к ошибке во время активации службы. Для [!INCLUDE[iisver](../../../../includes/iisver-md.md)]поддерживается транспорт HTTP, Net.TCP, Net.Pipe, Net.MSMQ и msmq.formatname для обратной совместимости с существующими приложениями MSMQ.  

@@ -14,11 +14,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 4ca32eb9543498279448617e33169ddd22882702
-ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
+ms.openlocfilehash: 9a215be76002b9e8fca8ac4a9073885b3b30a97b
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="serializing-workflows-and-activities-to-and-from-xaml"></a>Сериализация рабочих процессов и действий в XAML и обратно
 Кроме компиляции в содержащиеся в сборках типы определения рабочих процессов также могут быть сериализованы в XAML. Такие сериализованные определения могут быть загружены повторно для редактирования или просмотра, переданы в систему сборки для компиляции или загружены и вызваны. В этом разделе представлены общие сведения о сериализации определений рабочих процессов и работе с определениями рабочих процессов языка XAML.  
@@ -28,7 +28,7 @@ ms.lasthandoff: 04/09/2018
   
  [!code-csharp[CFX_WorkflowApplicationExample#41](../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#41)]  
   
- Каждый экземпляр <xref:System.Activities.DynamicActivityProperty> представляет собой один входной аргумент для рабочего процесса, а класс <xref:System.Activities.ActivityBuilder.Implementation%2A> содержит действия, которые образуют логику рабочего процесса. Обратите внимание, что выражения правостороннего значения в этом примере - это выражения Visual Basic. Лямбда-выражения не могут быть сериализованы в языке XAML, если не используется <xref:System.Activities.Expressions.ExpressionServices.Convert%2A>. Если сериализованные рабочие процессы будут открыты или отредактированы в конструкторе рабочих процессов, то следует использовать выражения Visual Basic. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Разработка рабочих процессов, действий и выражений с помощью императивного кода](../../../docs/framework/windows-workflow-foundation/authoring-workflows-activities-and-expressions-using-imperative-code.md).  
+ Каждый экземпляр <xref:System.Activities.DynamicActivityProperty> представляет собой один входной аргумент для рабочего процесса, а класс <xref:System.Activities.ActivityBuilder.Implementation%2A> содержит действия, которые образуют логику рабочего процесса. Обратите внимание, что выражения правостороннего значения в этом примере - это выражения Visual Basic. Лямбда-выражения не могут быть сериализованы в языке XAML, если не используется <xref:System.Activities.Expressions.ExpressionServices.Convert%2A>. Если сериализованные рабочие процессы будут открыты или отредактированы в конструкторе рабочих процессов, то следует использовать выражения Visual Basic. Дополнительные сведения см. в разделе [разработки рабочих процессов, действий и выражений с помощью императивного кода](../../../docs/framework/windows-workflow-foundation/authoring-workflows-activities-and-expressions-using-imperative-code.md).  
   
  Для сериализации определения рабочего процесса, представленного экземпляром <xref:System.Activities.ActivityBuilder> в языке XAML, используйте класс <xref:System.Activities.XamlIntegration.ActivityXamlServices>, чтобы создать <xref:System.Xaml.XamlWriter>, и затем класс <xref:System.Xaml.XamlServices>, чтобы сериализовать определение рабочего процесса с помощью <xref:System.Xaml.XamlWriter>. <xref:System.Activities.XamlIntegration.ActivityXamlServices> содержит методы для сопоставления экземпляров <xref:System.Activities.ActivityBuilder> с языка XAML и обратно, а также для загрузки рабочих процессов XAML и получения <xref:System.Activities.DynamicActivity>, которое впоследствии можно вызвать. В следующем примере экземпляр <xref:System.Activities.ActivityBuilder> из предыдущего примера сериализуется в строку, а также сохраняется в файл.  
   
@@ -97,7 +97,7 @@ ActivityXamlServicesSettings settings = new ActivityXamlServicesSettings
 DynamicActivity<int> wf = ActivityXamlServices.Load(new StringReader(serializedAB), settings) as DynamicActivity<int>;  
 ```  
   
- [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Выражения C#](../../../docs/framework/windows-workflow-foundation/csharp-expressions.md).  
+ Дополнительные сведения см. в разделе [выражения C#](../../../docs/framework/windows-workflow-foundation/csharp-expressions.md).  
   
  Определение сериализованного рабочего процесса, также могут быть загружены в <xref:System.Activities.ActivityBuilder> экземпляра с помощью <xref:System.Activities.XamlIntegration.ActivityXamlServices> <xref:System.Activities.XamlIntegration.ActivityXamlServices.CreateBuilderReader%2A> метод. После загрузки сериализованного рабочего процесса в экземпляр <xref:System.Activities.ActivityBuilder> процесс можно просматривать и изменять. Это может быть полезно разработчикам пользовательских конструкторов рабочих процессов, а также реализует механизм сохранения и повторной загрузки определений рабочих процессов во время конструирования. В следующем примере загружается определение сериализованного рабочего процесса из предыдущего примера, после чего выполняется просмотр его свойств.  
   

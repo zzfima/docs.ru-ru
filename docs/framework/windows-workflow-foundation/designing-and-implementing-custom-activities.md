@@ -1,29 +1,30 @@
 ---
-title: "Разработка и реализация настраиваемых действий"
-ms.custom: 
+title: Разработка и реализация настраиваемых действий
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 4e30e63d-6e33-4842-a7a4-ce807cef1fad
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d162635a82027d1aaa46545dabad3e103d0f339c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: bafa54764ba8b02dd05cadd65c3f3cbc64c4b081
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="designing-and-implementing-custom-activities"></a>Разработка и реализация настраиваемых действий
 Настраиваемые действия в [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] создаются либо посредством сборки системных действий в составные действия, либо путем создания новых типов, производных от <xref:System.Activities.CodeActivity>, <xref:System.Activities.AsyncCodeActivity> или <xref:System.Activities.NativeActivity>. В этом разделе описываются способы создания пользовательских действий обоими способами.  
   
 > [!IMPORTANT]
->  Настраиваемые действия по умолчанию отображаются в конструкторе рабочих процессов в виде простого прямоугольника с именем действия. Для создания настраиваемого визуального представления действия в конструкторе рабочих процессов также необходимо создать пользовательский конструктор. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Использование шаблонов и конструкторов настраиваемых действий](../../../docs/framework/windows-workflow-foundation/using-custom-activity-designers-and-templates.md).  
+>  Настраиваемые действия по умолчанию отображаются в конструкторе рабочих процессов в виде простого прямоугольника с именем действия. Для создания настраиваемого визуального представления действия в конструкторе рабочих процессов также необходимо создать пользовательский конструктор. Дополнительные сведения см. в разделе [с помощью пользовательских конструкторов действий и шаблоны](../../../docs/framework/windows-workflow-foundation/using-custom-activity-designers-and-templates.md).  
   
 ## <a name="in-this-section"></a>В этом разделе  
  [Параметры разработки действий](../../../docs/framework/windows-workflow-foundation/activity-authoring-options-in-wf.md)  

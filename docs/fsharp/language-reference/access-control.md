@@ -1,20 +1,17 @@
 ---
-title: "Управление доступом (F#)"
-description: "Узнайте, как для управления доступом к элементов программирования, таких как типы, методы и функции в языке F #."
-keywords: "visual f#, f#, функциональное программирование"
+title: Управление доступом (F#)
+description: 'Узнайте, как для управления доступом к элементов программирования, таких как типы, методы и функции в языке F #.'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 955b06fe-d1cd-431d-8db6-93e83b697453
-ms.openlocfilehash: a02e20a585a0456577901f2762a0eeb0e3ecd2f0
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: fee5f719904b61c3082d56f73448defdea39f472
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="access-control"></a>Управление доступом
 
@@ -25,11 +22,11 @@ ms.lasthandoff: 10/18/2017
 В языке F # описатели управления доступом `public`, `internal`, и `private` может применяться к модули, типы, методы, определений значений, функций, свойств и явные поля.
 
 
-- `public`Указывает, что сущность может осуществляться все вызывающие объекты.
+- `public` Указывает, что сущность может осуществляться все вызывающие объекты.
 
-- `internal`Указывает, что сущность может осуществляться только из той же сборки.
+- `internal` Указывает, что сущность может осуществляться только из той же сборки.
 
-- `private`Указывает, что сущность может осуществляться только из включающего ее типа или модуля.
+- `private` Указывает, что сущность может осуществляться только из включающего ее типа или модуля.
 
 
 >[!NOTE] 

@@ -1,20 +1,17 @@
 ---
-title: "Настройка проектов (F #)"
-description: "Сведения об использовании конструктора проектов, при работе с проектами F # в Visual Studio."
-keywords: "visual f#, f#, функциональное программирование"
+title: 'Настройка проектов (F #)'
+description: 'Сведения об использовании конструктора проектов, при работе с проектами F # в Visual Studio.'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 8b2ed206-34e4-4256-a6ce-0c2499561165
-ms.openlocfilehash: f56fed1e16b4de1d97766f37cb1c72297d5502d5
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: eac5b61d6b61d2aa1cb7b1606d60995a0355e975
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="configuring-projects-in-visual-studio"></a>Настройка проектов в Visual Studio
 
@@ -28,9 +25,9 @@ ms.lasthandoff: 12/09/2017
 
 |Страницы конструктора проектов|Связанные ссылки|Описание|
 |---------------------|-------------|-----------|
-|`Application`|[Страницы приложения, конструктор проектов &#40; C# 35; &#41;](https://msdn.microsoft.com/library/ms247046.aspx)|Позволяет указать параметры на уровне приложения и свойства, например при создании библиотеку или исполняемый файл, какая версия .NET Framework предназначен для приложения и сведения о котором файлы ресурсов, приложение использует хранятся.|
-|`Build`|[Построение &#40; страницы, конструктор проектов C# 35; &#41;](https://msdn.microsoft.com/library/kb4wyys2.aspx)|Позволяет управлять как код компилируется.|
-|`Build Events`|[Построение &#40; события страницы, конструктор проектов C# 35; &#41;](https://msdn.microsoft.com/library/kb4wyys2.aspx)|Можно указать команды, выполняемые до или после компиляции.|
+|`Application`|[Страница "приложение" в конструкторе проектов &#40;C&#35;&#41;](https://msdn.microsoft.com/library/ms247046.aspx)|Позволяет указать параметры на уровне приложения и свойства, например при создании библиотеку или исполняемый файл, какая версия .NET Framework предназначен для приложения и сведения о котором файлы ресурсов, приложение использует хранятся.|
+|`Build`|[Страница построения, конструктор проектов &#40;C&#35;&#41;](https://msdn.microsoft.com/library/kb4wyys2.aspx)|Позволяет управлять как код компилируется.|
+|`Build Events`|[Страница событий построения, конструктор проектов &#40;C&#35;&#41;](https://msdn.microsoft.com/library/kb4wyys2.aspx)|Можно указать команды, выполняемые до или после компиляции.|
 |`Debug`|[Страница "Отладка" в конструкторе проектов](https://msdn.microsoft.com/library/2wcdezs5.aspx)|Позволяет управлять выполнением приложения во время отладки. Сюда входят новые Командная строка и начальный каталог приложения является, а также особые, необходимо включить, такие как машинный код и SQL режимы отладки.|
 |`Reference Paths`|[Управление ссылками в проекте](/visualstudio/ide/managing-references-in-a-project)|Позволяет указать место для поиска сборок, от которого зависит данный код.|
 

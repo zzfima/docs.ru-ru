@@ -1,24 +1,26 @@
 ---
-title: "Практическое руководство. Добавление конечной точки ASP.NET AJAX без использования конфигурации"
-ms.custom: 
+title: Практическое руководство. Добавление конечной точки ASP.NET AJAX без использования конфигурации
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: b05c1742-8d0a-4673-9d71-725b18a3008e
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7b90ecd94f439472c89d0c075c8b7486abeacf38
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: d82febd776bfc51e3e9725701253ed19996349b5
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="how-to-add-an-aspnet-ajax-endpoint-without-using-configuration"></a>Практическое руководство. Добавление конечной точки ASP.NET AJAX без использования конфигурации
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] позволяет создать службу, предоставляющую конечную точку с поддержкой ASP.NET AJAX, которую можно вызвать из кода JavaScript на веб-сайте клиента. Для создания этой конечной точки можно воспользоваться либо файлом конфигурации (как и для всех остальных конечных точек WCF), либо методом, не требующим никаких элементов конфигурации. В этом разделе показано решение этой задачи вторым методом.  
@@ -81,7 +83,7 @@ ms.lasthandoff: 12/22/2017
     %>  
     ```  
   
-2.  Создайте службу и вызовите ее из клиента. Internet Information Services (IIS) активирует данную службу при вызове. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Размещение в службах IIS, в разделе [как: размещение службы WCF в IIS](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md).  
+2.  Создайте службу и вызовите ее из клиента. Internet Information Services (IIS) активирует данную службу при вызове. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Размещение в службах IIS, в разделе [как: размещение службы WCF в IIS](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md).  
   
 ### <a name="to-call-the-service"></a>Вызов службы  
   
@@ -103,7 +105,7 @@ ms.lasthandoff: 12/22/2017
   
  `<serviceHostingEnvironment aspNetCompatibilityEnabled="true" /> </system.serviceModel>`  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][службы WCF и ASP.NET](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md) раздела.  
+ Дополнительные сведения см. в разделе [службы WCF и ASP.NET](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md) раздела.  
   
  Класс <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory> наследуется от класса <xref:System.ServiceModel.Activation.ServiceHostFactory>. Подробное описание механизма фабрики узла службы см. в разделе [расширение ServiceHostFactory размещения с помощью](../../../../docs/framework/wcf/extending/extending-hosting-using-servicehostfactory.md) раздела.  
   

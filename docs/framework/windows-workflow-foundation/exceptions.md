@@ -1,23 +1,24 @@
 ---
-title: "Исключения"
-ms.custom: 
+title: Исключения
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 065205cc-52dd-4f30-9578-b17d8d113136
-caps.latest.revision: "26"
+caps.latest.revision: 26
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: bf2c6e12dac2130a26aa01efc21b8f58f509294a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 9e78546a10e1a8cdff780c44898fd209ca829c6c
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="exceptions"></a>Исключения
 Рабочие процессы могут использовать действие <xref:System.Activities.Statements.TryCatch> для обработки исключений, возникающих в ходе выполнения рабочего процесса. Эти исключения обрабатываются либо вызываются повторно при помощи действия <xref:System.Activities.Statements.Rethrow>. Действия в разделе <xref:System.Activities.Statements.TryCatch.Finally%2A> выполняются при завершении либо раздела <xref:System.Activities.Statements.TryCatch.Try%2A>, либо раздела <xref:System.Activities.Statements.TryCatch.Catches%2A>. Рабочие процессы, размещаемые <xref:System.Activities.WorkflowApplication> экземпляра можно также использовать <xref:System.Activities.WorkflowApplication.OnUnhandledException%2A> обработчик событий для обработки исключений, которые не обрабатываются <xref:System.Activities.Statements.TryCatch> действия.  
@@ -58,7 +59,7 @@ ms.lasthandoff: 12/22/2017
 -   Исключение, не обработанное более высоким уровнем <xref:System.Activities.Statements.TryCatch>, покидает корневой элемент рабочего процесса, и рабочий процесс используется для отмены вместо завершения или прерывания транзакции. Рабочие процессы, размещенные с помощью <xref:System.Activities.WorkflowApplication>, могут настроить это путем обработки <xref:System.Activities.WorkflowApplication.OnUnhandledException%2A>, после чего будет возвращено значение <xref:System.Activities.UnhandledExceptionAction.Cancel>. Пример обработки <xref:System.Activities.WorkflowApplication.OnUnhandledException%2A> приведен ранее в этом разделе. Службы Workflow Services можно настроить, используя <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionBehavior> и задавая <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionAction.Cancel>. Пример настройки <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionBehavior>, в разделе [расширяемость узла службы рабочего процесса](../../../docs/framework/wcf/feature-details/workflow-service-host-extensibility.md).  
   
 ## <a name="exception-handling-versus-compensation"></a>Обработка исключений и компенсация  
- Отличие между обработкой исключений и компенсацией заключается в том, что обработка исключений имеет место во время выполнения действия. Компенсация имеет место после успешного завершения действия. Обработка исключений предоставляет возможность выполнить очистку после того, как действие вызывает исключение, в то время как компенсация обеспечивает механизм, с помощью которого можно отменить успешно завершенную работу ранее завершенного действия. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Компенсации](../../../docs/framework/windows-workflow-foundation/compensation.md).  
+ Отличие между обработкой исключений и компенсацией заключается в том, что обработка исключений имеет место во время выполнения действия. Компенсация имеет место после успешного завершения действия. Обработка исключений предоставляет возможность выполнить очистку после того, как действие вызывает исключение, в то время как компенсация обеспечивает механизм, с помощью которого можно отменить успешно завершенную работу ранее завершенного действия. Дополнительные сведения см. в разделе [компенсации](../../../docs/framework/windows-workflow-foundation/compensation.md).  
   
 ## <a name="see-also"></a>См. также  
  <xref:System.Activities.Statements.TryCatch>  

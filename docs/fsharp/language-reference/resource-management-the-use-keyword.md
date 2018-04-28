@@ -1,20 +1,17 @@
 ---
-title: "Управление ресурсами: ключевое слово use (F#)"
-description: "Дополнительные сведения о F # ключевое слово «use» и «использование» функции, который может управлять инициализацией и освобождением ресурсов."
-keywords: "visual f#, f#, функциональное программирование"
+title: 'Управление ресурсами: ключевое слово use (F#)'
+description: 'Дополнительные сведения о F # ключевое слово «use» и «использование» функции, который может управлять инициализацией и освобождением ресурсов.'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 00c3040e-859f-4dad-a7b5-7b8d44dc232c
-ms.openlocfilehash: d4e8626f07f1c77e52e8fabd5ccc07dbf1fa8ddd
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 0e134bf5b302911324dd224316941fee693b787b
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="resource-management-the-use-keyword"></a>Управление ресурсами: ключевое слово use
 
@@ -44,7 +41,7 @@ ms.lasthandoff: 10/18/2017
 ## <a name="using-function"></a>с помощью функции
 `using` Функция имеет следующий вид:
 
-`using`(*expression1*) *функции или лямбда*
+`using` (*expression1*) *функции или лямбда*
 
 В `using` выражение, *expression1* создает объект, который должен быть удален. Результат *expression1* (объект, который необходимо освободить) становится аргумент *значение*в *функции или лямбда*, который является либо функцию, ожидающую один оставшийся аргумент типа, который соответствует значению, полученных при *expression1*, или лямбда-выражение, которое ожидает аргумент этого типа. В конце выполнения функции среда выполнения вызывает `Dispose` и освобождает ресурсы (пока значение `null`, в этом случае попытка вызова Dispose не предпринимается).
 
@@ -56,7 +53,7 @@ ms.lasthandoff: 10/18/2017
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6303.fs)]
 
-Обратите внимание, что функция может быть функцией, которая уже применены некоторые аргументы. Это показано в следующем примере кода. Он создает файл, содержащий строку `XYZ`.
+Обратите внимание, что функция может быть функцией, которая уже применены некоторые аргументы. Это действие представлено в следующем примере кода: Он создает файл, содержащий строку `XYZ`.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6304.fs)]
 

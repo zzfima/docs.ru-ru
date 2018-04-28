@@ -21,11 +21,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: c541c44f0043000ccd4e7edb0d38eba2c66d0844
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: 15e958a3bfe4dfdeebfaaad83130a604c56932c7
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="using-the-xmlserializer-class"></a>Использование класса XmlSerializer
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] может использовать две разные технологии сериализации для преобразования данных в приложении в XML-код, который передается между клиентами и службами - этот процесс называется сериализацией.  
@@ -45,10 +45,10 @@ ms.lasthandoff: 04/27/2018
   
  Множество типов [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] попадает в последние две категории и поэтому является сериализуемым. Массивы сериализуемых типов также являются сериализуемыми. Полный список см. в разделе [указание входящий трафик передачи данных в контрактах служб](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md).  
   
- Рекомендуемым способом написания новых служб <xref:System.Runtime.Serialization.DataContractSerializer> является использование [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] совместно с типами контракта данных. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Использование контрактов данных](../../../../docs/framework/wcf/feature-details/using-data-contracts.md).  
+ Рекомендуемым способом написания новых служб <xref:System.Runtime.Serialization.DataContractSerializer> является использование [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] совместно с типами контракта данных. Дополнительные сведения см. в разделе [использование контрактов данных](../../../../docs/framework/wcf/feature-details/using-data-contracts.md).  
   
 ## <a name="when-to-use-the-xmlserializer-class"></a>Когда использовать класс XmlSerializer  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] также поддерживает класс <xref:System.Xml.Serialization.XmlSerializer>. Класс <xref:System.Xml.Serialization.XmlSerializer> не является уникальным в [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Это тот же модуль сериализации, который используется в веб-службах [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]. Класс <xref:System.Xml.Serialization.XmlSerializer> поддерживает более узкий набор типов по сравнению с классом <xref:System.Runtime.Serialization.DataContractSerializer>, но позволяет более четко контролировать получаемый XML-код и более полно поддерживает стандарт языка определения схемы XML (XSD). Кроме того, данный класс не требует никаких декларативных атрибутов на сериализуемых типах. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] в разделе «Сериализация XML» документации по [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]. Класс <xref:System.Xml.Serialization.XmlSerializer> не поддерживает типы контрактов данных.  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] также поддерживает класс <xref:System.Xml.Serialization.XmlSerializer>. Класс <xref:System.Xml.Serialization.XmlSerializer> не является уникальным в [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Это тот же модуль сериализации, который используется в веб-службах [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]. Класс <xref:System.Xml.Serialization.XmlSerializer> поддерживает более узкий набор типов по сравнению с классом <xref:System.Runtime.Serialization.DataContractSerializer>, но позволяет более четко контролировать получаемый XML-код и более полно поддерживает стандарт языка определения схемы XML (XSD). Кроме того, данный класс не требует никаких декларативных атрибутов на сериализуемых типах. Дополнительные сведения см. в разделе XML-сериализации в [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] документации. Класс <xref:System.Xml.Serialization.XmlSerializer> не поддерживает типы контрактов данных.  
   
  Если программа Svcutil.exe или **добавить ссылку на службу** для вас автоматически включена функция в Visual Studio для создания кода клиента для службы сторонних разработчиков или для доступа к схеме сторонних разработчиков, соответствующий сериализатор. Если схема не совместима с <xref:System.Runtime.Serialization.DataContractSerializer>, выбирается <xref:System.Xml.Serialization.XmlSerializer>.  
   
@@ -150,7 +150,7 @@ ms.lasthandoff: 04/27/2018
   
 -   Реализация `ReadXml` не должна прочитывать элемент программы-оболочки. Как правило, реализация прочитывает один элемент, создаваемый методом `WriteXml`.  
   
--   При регулярной сериализации типа элемента (например, как элемента данных в контракте данных) сериализатор, как и в случае с типами содержимого, выводит элемент программы-оболочки до вызова метода `WriteXml`. Однако при сериализации типа элемента на верхнем уровне сериализатор обычно не выводит элемент-оболочку в окружение элемента, который записывается методом `WriteXml`, кроме случая, когда корневое имя и пространство имен явно заданы при конструировании сериализатора в конструкторах `DataContractSerializer` или `NetDataContractSerializer`. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Сериализация и десериализация](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md).  
+-   При регулярной сериализации типа элемента (например, как элемента данных в контракте данных) сериализатор, как и в случае с типами содержимого, выводит элемент программы-оболочки до вызова метода `WriteXml`. Однако при сериализации типа элемента на верхнем уровне сериализатор обычно не выводит элемент-оболочку в окружение элемента, который записывается методом `WriteXml`, кроме случая, когда корневое имя и пространство имен явно заданы при конструировании сериализатора в конструкторах `DataContractSerializer` или `NetDataContractSerializer`. Дополнительные сведения см. в разделе [сериализации и десериализации](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md).  
   
 -   При сериализации типа элемента на верхнем уровне без указания корневого имени и пространства имен во время создания <xref:System.Runtime.Serialization.XmlObjectSerializer.WriteStartObject%2A> и <xref:System.Runtime.Serialization.XmlObjectSerializer.WriteEndObject%2A> обычно не выполняют никаких операций, а <xref:System.Runtime.Serialization.XmlObjectSerializer.WriteObjectContent%2A> вызывает `WriteXml`. В данном режиме сериализуемый объект не может иметь значение `null` и не может быть назначен полиморфно. Кроме того, не может быть включено сохранение графов объектов и не может использоваться `NetDataContractSerializer`.  
   

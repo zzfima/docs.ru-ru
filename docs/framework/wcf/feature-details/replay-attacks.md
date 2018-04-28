@@ -1,24 +1,26 @@
 ---
-title: "Атаки с повторением"
-ms.custom: 
+title: Атаки с повторением
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 7a17e040-93cd-4432-81b9-9f62fec78c8f
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: df2a7a78e876ec3228491569c918ad9add2e080d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 4e827c51378b9f75835b9b98280b4995d2cae2fc
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="replay-attacks"></a>Атаки с повторением
 Объект *атака воспроизведения* возникает, когда злоумышленник копирует поток сообщений между двумя сторонами и воспроизводит его для одного или нескольких сторон. Если не приняты ответные меры, атакованные компьютеры обрабатывают этот поток как допустимые сообщения, что приводит к ряду негативных последствий, таких как повторные заказы одного элемента.  
@@ -43,7 +45,7 @@ ms.lasthandoff: 12/22/2017
   
  Возможные способы борьбы с этими угрозами  
   
--   Использование безопасности режима сообщений с маркерами контекста безопасности с отслеживанием состояния (как с включенным, так и с отключенным безопасным диалогом). [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Как: создать контекст безопасности для безопасного сеанса маркера](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md).  
+-   Использование безопасности режима сообщений с маркерами контекста безопасности с отслеживанием состояния (как с включенным, так и с отключенным безопасным диалогом). Дополнительные сведения см. в разделе [как: создание токена контекста безопасности для безопасного сеанса](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md).  
   
 -   Настройка службы для использования безопасности уровня транспорта.  
   

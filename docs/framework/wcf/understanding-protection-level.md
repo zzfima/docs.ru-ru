@@ -1,12 +1,13 @@
 ---
-title: "Основные сведения об уровне защиты"
-ms.custom: 
+title: Основные сведения об уровне защиты
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,16 +16,17 @@ helpviewer_keywords:
 - WCF, security
 - ProtectionLevel property
 ms.assetid: 0c034608-a1ac-4007-8287-b1382eaa8bf2
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c379cf39f30bf7e75907dba5fb06ba4e3862e299
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 4b079d7f6e22f0c1904433c2822b92da91923ef2
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="understanding-protection-level"></a>Основные сведения об уровне защиты
 Свойство `ProtectionLevel` обнаруживается во многих классах, например в классах <xref:System.ServiceModel.ServiceContractAttribute> и <xref:System.ServiceModel.OperationContractAttribute>. Это свойство определяет, как защищается часть сообщения (или все сообщение). В данном разделе рассматривается эта функция [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] и принцип ее работы.  
@@ -84,7 +86,7 @@ ms.lasthandoff: 12/22/2017
  Чтобы запрограммировать `ProtectionLevel` в любом месте иерархии, задайте для этого свойства соответствующее значение при применении атрибута. Примеры см. в разделе [как: Установка свойства ProtectionLevel](../../../docs/framework/wcf/how-to-set-the-protectionlevel-property.md).  
   
 > [!NOTE]
->  Чтобы задать данное свойство в контрактах сбоев и сообщений, необходимо понимать работу этих возможностей. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Как: Установка свойства ProtectionLevel](../../../docs/framework/wcf/how-to-set-the-protectionlevel-property.md) и [использование контрактов сообщений](../../../docs/framework/wcf/feature-details/using-message-contracts.md).  
+>  Чтобы задать данное свойство в контрактах сбоев и сообщений, необходимо понимать работу этих возможностей. Дополнительные сведения см. в разделе [как: Установка свойства ProtectionLevel](../../../docs/framework/wcf/how-to-set-the-protectionlevel-property.md) и [использование контрактов сообщений](../../../docs/framework/wcf/feature-details/using-message-contracts.md).  
   
 ## <a name="ws-addressing-dependency"></a>Зависимость от WS-Addressing  
  В большинстве случаев с помощью [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) для создания клиента гарантирует, что клиент и служба контракты идентичны. Однако одинаковые на первый взгляд контракты могут приводить к вызову клиентом исключения. Это происходит всякий раз, когда привязка не поддерживает спецификацию WS-Addressing и в контракте определено несколько уровней защиты. Например, это происходит при использовании класса <xref:System.ServiceModel.BasicHttpBinding>, не поддерживающего данную спецификацию, или при создании пользовательской привязки, которая не поддерживает WS-Addressing. Чтобы в одном контракте разрешить разные уровни защиты, функция `ProtectionLevel` полагается на спецификацию WS-Addressing. Если привязка не поддерживает спецификацию WS-Addressing, для всех уровней задается один и тот же уровень защиты. В качестве фактического уровня защиты для всех областей в контракте задается уровень самой мощной защиты, используемый в контракте.  

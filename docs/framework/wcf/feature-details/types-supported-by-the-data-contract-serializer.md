@@ -1,50 +1,50 @@
 ---
-title: "Типы, поддерживаемые сериализатором контракта данных"
-ms.custom: 
+title: Типы, поддерживаемые сериализатором контракта данных
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - serialization [WCF], supported types
 ms.assetid: 7381b200-437a-4506-9556-d77bf1bc3f34
-caps.latest.revision: 
+caps.latest.revision: 24
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 98eb46e0f31995efe7db177d90691a9f59288590
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c53a11408254dc3c5f2abfb7d5d45305d3429280
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="types-supported-by-the-data-contract-serializer"></a>Типы, поддерживаемые сериализатором контракта данных
 В[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] в качестве модуля сериализации по умолчанию для преобразования данных в формат XML и обратно используется <xref:System.Runtime.Serialization.DataContractSerializer> . Сериализатор <xref:System.Runtime.Serialization.DataContractSerializer> предназначен для сериализации типов *контрактов данных* . Однако поддерживаются и многие другие типы, которые можно рассматривать как неявные контракты данных. Полный список сериализуемых типов приведен ниже.  
   
 -   Все открытые типы, имеющие конструктор без параметров.  
   
--   Типы контрактов данных. К этим типам применен атрибут <xref:System.Runtime.Serialization.DataContractAttribute> . Как правило, создавать новые пользовательские типы, представляющие бизнес-объекты, следует в виде типов контрактов данных. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Использование контрактов данных](../../../../docs/framework/wcf/feature-details/using-data-contracts.md) и [сериализуемые типы](../../../../docs/framework/wcf/feature-details/serializable-types.md).  
+-   Типы контрактов данных. К этим типам применен атрибут <xref:System.Runtime.Serialization.DataContractAttribute> . Как правило, создавать новые пользовательские типы, представляющие бизнес-объекты, следует в виде типов контрактов данных. Дополнительные сведения см. в разделе [использование контрактов данных](../../../../docs/framework/wcf/feature-details/using-data-contracts.md) и [сериализуемые типы](../../../../docs/framework/wcf/feature-details/serializable-types.md).  
   
--   Типы коллекций. Эти типы представляют списки данных. Это могут быть обычные массивы типов или типы коллекций, например, <xref:System.Collections.ArrayList> и <xref:System.Collections.Generic.Dictionary%602>. Для настройки сериализации таких типов можно использовать атрибут <xref:System.Runtime.Serialization.CollectionDataContractAttribute> , однако это не является обязательным. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Типы коллекций в контрактах данных](../../../../docs/framework/wcf/feature-details/collection-types-in-data-contracts.md).  
+-   Типы коллекций. Эти типы представляют списки данных. Это могут быть обычные массивы типов или типы коллекций, например, <xref:System.Collections.ArrayList> и <xref:System.Collections.Generic.Dictionary%602>. Для настройки сериализации таких типов можно использовать атрибут <xref:System.Runtime.Serialization.CollectionDataContractAttribute> , однако это не является обязательным. Дополнительные сведения см. в разделе [типы коллекций в контрактах данных](../../../../docs/framework/wcf/feature-details/collection-types-in-data-contracts.md).  
   
--   Типы перечисления. Перечисления, включая перечисления флагов, могут быть сериализованы. Типы перечисления также можно пометить атрибутом <xref:System.Runtime.Serialization.DataContractAttribute> . В этом случае каждый член, участвующий в сериализации, должен быть помечен атрибутом <xref:System.Runtime.Serialization.EnumMemberAttribute> . Все непомеченные члены не сериализуются. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Типы перечислений в контрактах данных](../../../../docs/framework/wcf/feature-details/enumeration-types-in-data-contracts.md).  
+-   Типы перечисления. Перечисления, включая перечисления флагов, могут быть сериализованы. Типы перечисления также можно пометить атрибутом <xref:System.Runtime.Serialization.DataContractAttribute> . В этом случае каждый член, участвующий в сериализации, должен быть помечен атрибутом <xref:System.Runtime.Serialization.EnumMemberAttribute> . Все непомеченные члены не сериализуются. Дополнительные сведения см. в разделе [типы перечислений в контрактах данных](../../../../docs/framework/wcf/feature-details/enumeration-types-in-data-contracts.md).  
   
 -   Типы-примитивы .NET Framework. Все следующие типы, встроенные в .NET Framework, могут быть сериализованы и считаются типами-примитивами: <xref:System.Byte>, <xref:System.SByte>, <xref:System.Int16>, <xref:System.Int32>, <xref:System.Int64>, <xref:System.UInt16>, <xref:System.UInt32>, <xref:System.UInt64>, <xref:System.Single>, <xref:System.Double>, <xref:System.Boolean>, <xref:System.Char>, <xref:System.Decimal>, <xref:System.Object>и <xref:System.String>.  
   
 -   Другие типы-примитивы. Следующие типы не являются примитивами в .NET Framework, но обрабатываются как примитивы в сериализованной форме XML: <xref:System.DateTime>, <xref:System.DateTimeOffset>, <xref:System.TimeSpan>, <xref:System.Guid>, <xref:System.Uri>, <xref:System.Xml.XmlQualifiedName>и массив <xref:System.Byte>.  
   
     > [!NOTE]
-    >  В отличие от других типов-примитивов тип <xref:System.DateTimeOffset> не является по умолчанию известным типом. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Известные типы контрактов данных](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)).  
+    >  В отличие от других типов-примитивов тип <xref:System.DateTimeOffset> не является по умолчанию известным типом. Дополнительные сведения см. в разделе [известные типы контрактов данных](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)).  
   
 -   Типы, помеченные с помощью атрибута <xref:System.SerializableAttribute> . В эту категорию попадают многие типы из библиотеки базовых классов [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] . Сериализатор <xref:System.Runtime.Serialization.DataContractSerializer> обеспечивает полную поддержку этой модели программирования сериализации, используемой в удаленном взаимодействии .NET Framework в <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>и <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>, включая поддержку интерфейса <xref:System.Runtime.Serialization.ISerializable> .  
   
--   Типы, представляющие исходный XML, и типы, представляющие реляционные данные [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] . Типы <xref:System.Xml.XmlElement> и массив элементов <xref:System.Xml.XmlNode> поддерживаются для прямого представления XML. Кроме того, поддерживаются типы, реализующие интерфейс <xref:System.Xml.Serialization.IXmlSerializable> , включая связанный атрибут <xref:System.Xml.Serialization.XmlSchemaProviderAttribute> и типы <xref:System.Xml.Linq.XDocument> и <xref:System.Xml.Linq.XElement> . Сериализатор [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]<xref:System.Data.DataTable> и <xref:System.Data.DataSet> (а также его наследуемые типизированные классы) реализуют интерфейс <xref:System.Xml.Serialization.IXmlSerializable> и поэтому тоже попадают в эту категорию. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Типы XML и ADO.NET в контрактах данных](../../../../docs/framework/wcf/feature-details/xml-and-ado-net-types-in-data-contracts.md).  
+-   Типы, представляющие исходный XML, и типы, представляющие реляционные данные [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] . Типы <xref:System.Xml.XmlElement> и массив элементов <xref:System.Xml.XmlNode> поддерживаются для прямого представления XML. Кроме того, поддерживаются типы, реализующие интерфейс <xref:System.Xml.Serialization.IXmlSerializable> , включая связанный атрибут <xref:System.Xml.Serialization.XmlSchemaProviderAttribute> и типы <xref:System.Xml.Linq.XDocument> и <xref:System.Xml.Linq.XElement> . Сериализатор [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]<xref:System.Data.DataTable> и <xref:System.Data.DataSet> (а также его наследуемые типизированные классы) реализуют интерфейс <xref:System.Xml.Serialization.IXmlSerializable> и поэтому тоже попадают в эту категорию. Дополнительные сведения см. в разделе [типы XML и ADO.NET в контрактах данных](../../../../docs/framework/wcf/feature-details/xml-and-ado-net-types-in-data-contracts.md).  
   
 ## <a name="limitations-of-using-certain-types-in-partial-trust-mode"></a>Ограничения по использованию определенных типов в режиме частичного доверия  
  Ниже приведен список ограничений при использовании некоторых типов в режиме частичного доверия.  

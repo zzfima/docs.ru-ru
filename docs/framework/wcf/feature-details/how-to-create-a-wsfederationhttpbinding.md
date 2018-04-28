@@ -1,12 +1,13 @@
 ---
-title: "Практическое руководство. Создание WSFederationHttpBinding"
-ms.custom: 
+title: Практическое руководство. Создание WSFederationHttpBinding
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,16 +16,17 @@ helpviewer_keywords:
 - WCF, federation
 - federation
 ms.assetid: e54897d7-aa6c-46ec-a278-b2430c8c2e10
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 22322c7b8cd03abcf3a98c49b9d43125b37d956d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 8962564bbefc3f43261a2979ae9765369b211f15
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="how-to-create-a-wsfederationhttpbinding"></a>Практическое руководство. Создание WSFederationHttpBinding
 В [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], <xref:System.ServiceModel.WSFederationHttpBinding> класса ([\<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) в конфигурации) предоставляет механизм для предоставления федеративной службы. т. е. к службе, требующей проверки подлинности клиентов с использованием маркера безопасности, выданного службой маркеров безопасности. В этом разделе показано, как настраивать привязку <xref:System.ServiceModel.WSFederationHttpBinding> в коде и в конфигурации. После создания привязки можно настроить конечную точку на использование этой привязки.  
@@ -44,9 +46,9 @@ ms.lasthandoff: 12/22/2017
   
      Если тип маркера не задан, клиенты создают маркеры безопасности запросов (RST) WS-Trust без универсального кода ресурса (URI) типа маркера, а служба по умолчанию ожидает проверки подлинности клиента с использованием маркера SAML 1.1.  
   
-     Универсальный код ресурса (URI) маркера SAML 1.1: "http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.1#SAMLV1.1".  
+     URI для маркера SAML 1.1 «http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.1#SAMLV1.1».  
   
-4.  Необязательно. В федеративных службах присвойте свойству <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.IssuerMetadataAddress%2A> URL-адрес метаданных службы маркеров безопасности. Конечная точка метаданных позволяет клиентам службы выбрать соответствующую пару «привязка - конечная точка», если служба настроена на публикацию метаданных. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Публикация метаданных, в разделе [публикация метаданных](../../../../docs/framework/wcf/feature-details/publishing-metadata.md).  
+4.  Необязательный. В федеративных службах присвойте свойству <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.IssuerMetadataAddress%2A> URL-адрес метаданных службы маркеров безопасности. Конечная точка метаданных позволяет клиентам службы выбрать соответствующую пару «привязка - конечная точка», если служба настроена на публикацию метаданных. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Публикация метаданных, в разделе [публикация метаданных](../../../../docs/framework/wcf/feature-details/publishing-metadata.md).  
   
  Можно также задать другие свойства, в том числе тип ключа, используемого в качестве ключа проверки в выданном маркере, набор алгоритмов для взаимодействия между клиентом и службой, необходимость согласования или явного задания учетных данных службы, конкретные утверждения, которые служба ожидает получить в выданном маркере, а также любые дополнительные элементы XML, которые необходимо добавить в запрос, отправляемый клиентом службе маркеров безопасности.  
   
@@ -63,7 +65,7 @@ ms.lasthandoff: 12/22/2017
   
 4.  Задать <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.IssuedKeyType%2A> свойства <xref:System.IdentityModel.Tokens.SecurityKeyType> `SymmetricKey` или.`AsymmetricKey` При необходимости.  
   
-5.  Присвойте свойству <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.IssuedTokenType%2A> соответствующее значение. Если значение не задано, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] использует значение по умолчанию "http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.1#SAMLV1.1", что соответствует маркерам SAML 1.1.  
+5.  Присвойте свойству <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.IssuedTokenType%2A> соответствующее значение. Если значение не задано, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] по умолчанию используется значение «http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.1#SAMLV1.1», которой соответствует маркерам SAML 1.1.  
   
 6.  Является обязательным для клиента, если не задан локальный издатель; для службы является необязательным. Создайте объект <xref:System.ServiceModel.EndpointAddress>, содержащий адрес и сведения об удостоверении службы маркеров безопасности и присвойте экземпляр <xref:System.ServiceModel.EndpointAddress> свойству <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.IssuerAddress%2A>.  
   
@@ -99,9 +101,9 @@ ms.lasthandoff: 12/22/2017
   
 11. Необязательно. Добавьте дочерний элемент `<identity>` и задайте удостоверение службы маркеров безопасности.  
   
-12. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Службы удостоверений и проверки подлинности](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
+12. Дополнительные сведения см. в разделе [службы удостоверений и проверки подлинности](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
   
-13. Является обязательным для клиента, если не задан локальный издатель; для службы не используется. Создание [ \<привязки >](../../../../docs/framework/misc/binding.md) элемента в разделе привязки, который может использоваться для взаимодействия со службой маркеров безопасности. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Создание привязки, в разделе [как: задание привязки службы в конфигурации](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md).  
+13. Является обязательным для клиента, если не задан локальный издатель; для службы не используется. Создание [ \<привязки >](../../../../docs/framework/misc/binding.md) элемента в разделе привязки, который может использоваться для взаимодействия со службой маркеров безопасности. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Создание привязки, в разделе [как: задание привязки службы в конфигурации](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md).  
   
 14. Укажите привязку, созданную на предыдущем этапе, задав атрибуты `binding` и `bindingConfiguration` элемента `<issuer>`.  
   

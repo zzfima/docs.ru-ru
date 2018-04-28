@@ -1,20 +1,17 @@
 ---
-title: "Литералы (F#)"
-description: "Дополнительные сведения о типах литералов в языке F #."
-keywords: "visual f#, f#, функциональное программирование"
+title: Литералы (F#)
+description: 'Дополнительные сведения о типах литералов в языке F #.'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 4b1d6e9d-f933-4cd4-966d-d643152c27e4
-ms.openlocfilehash: 6bb1f233b6846e226c4e73aee00b8cf77735fe2d
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 961d6a10122c5d5c691d394efa8d2b7b31a80453
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="literals"></a>Литералы
 
@@ -44,10 +41,10 @@ ms.lasthandoff: 10/18/2017
 |bigint|целое число, не ограничиваясь 64-разрядное представление|I|`9999999999999999999999999999I`|
 |decimal|дробное число, представленное в виде с фиксированной запятой или рациональное число|M или m|`0.7833M` или `0.7833m`|
 |Char|символ Юникода|Нет|`'a'`|
-|Строка|Строка Юникода|Нет|`"text\n"`<br /><br />или<br /><br />`@"c:\filename"`<br /><br />или<br /><br />`"""<book title="Paradise Lost">"""`<br /><br />или<br /><br />`"string1" + "string2"`<br /><br />См. также [строки](Strings.md).|
-|byte|Символ ASCII|B|`'a'B`|
-|byte[]|Строка ASCII|B|`"text"B`|
-|String или byte]|буквальная строка|префикс @|`@"\\server\share"`(Юникод)<br /><br />`@"\\server\share"B`(ASCII)|
+|String|Строка Юникода|Нет|`"text\n"`<br /><br />или<br /><br />`@"c:\filename"`<br /><br />или<br /><br />`"""<book title="Paradise Lost">"""`<br /><br />или<br /><br />`"string1" + "string2"`<br /><br />См. также [строки](Strings.md).|
+|byte|Символ ASCII|С|`'a'B`|
+|byte[]|Строка ASCII|С|`"text"B`|
+|String или byte]|буквальная строка|префикс @|`@"\\server\share"` (Юникод)<br /><br />`@"\\server\share"B` (ASCII)|
 
 ## <a name="remarks"></a>Примечания
 Строки в Юникоде может содержать явные кодировки, которые можно задать с помощью `\u` следуют 16-разрядное шестнадцатеричное или кодировки UTF-32, можно указать с помощью `\U` следуют 32-разрядных шестнадцатеричный код, который представляет строку в Юникоде суррогатная пара.

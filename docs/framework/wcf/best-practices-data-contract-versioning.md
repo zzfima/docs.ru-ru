@@ -1,12 +1,13 @@
 ---
-title: "Рекомендации. Управление версиями контракта данных"
-ms.custom: 
+title: Рекомендации. Управление версиями контракта данных
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - data contracts
@@ -14,19 +15,20 @@ helpviewer_keywords:
 - best practices [WCF], data contract versioning
 - Windows Communication Foundation, data contracts
 ms.assetid: bf0ab338-4d36-4e12-8002-8ebfdeb346cb
-caps.latest.revision: "24"
+caps.latest.revision: 24
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 78373d482aaaa0121a6c2708f543188d9cc9464d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: dfb3d781a570db6a929a7d984aa45c224dda66bd
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="best-practices-data-contract-versioning"></a>Рекомендации. Управление версиями контракта данных
-В данном разделе приводятся рекомендации по созданию контрактов данных, которые можно легко развить со временем. [!INCLUDE[crabout](../../../includes/crabout-md.md)]контракты данных, см. в разделах [использование контрактов данных](../../../docs/framework/wcf/feature-details/using-data-contracts.md).  
+В данном разделе приводятся рекомендации по созданию контрактов данных, которые можно легко развить со временем. [!INCLUDE[crabout](../../../includes/crabout-md.md)] контракты данных, см. в разделах [использование контрактов данных](../../../docs/framework/wcf/feature-details/using-data-contracts.md).  
   
 ## <a name="note-on-schema-validation"></a>Замечания по проверке схемы  
  При обсуждении управления версиями контрактов данных важно отметить, что схема контракта данных, экспортированная службой [!INCLUDE[indigo1](../../../includes/indigo1-md.md)], не обеспечивает поддержку управления версиями, за исключением того, что элементы отмечаются как необязательные по умолчанию.  
@@ -46,7 +48,7 @@ ms.lasthandoff: 12/22/2017
   
  Несмотря на то что в этих примерах имена изменены (добавлена цифра "2"), рекомендуется изменять пространства имен вместо имен путем добавления новых пространств имен с номером или датой версии. Например, контракт данных `http://schemas.contoso.com/2005/05/21/PurchaseOrder` изменится на контракт данных `http://schemas.contoso.com/2005/10/14/PurchaseOrder`.  
   
- [!INCLUDE[crdefault](../../../includes/crdefault-md.md)]Советы и рекомендации: [управление версиями службы](../../../docs/framework/wcf/service-versioning.md).  
+ Дополнительные сведения см.: [управление версиями службы](../../../docs/framework/wcf/service-versioning.md).  
   
  Иногда необходимо обеспечить строгое соответствие схеме для сообщений, отправляемых приложением, но нельзя полагаться на то, что входящие сообщения строго соответствуют схеме. В это случае существует опасность того, что входящее сообщение может содержать лишние данные. Лишние значение сохраняются и возвращаются службой [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], что приводит к отправке сообщений с недействительной схемой. Чтобы избежать этой проблемы, необходимо выключить функцию полной совместимости версий. Это можно сделать двумя способами.  
   
@@ -54,7 +56,7 @@ ms.lasthandoff: 12/22/2017
   
 -   Примените атрибут <xref:System.ServiceModel.ServiceBehaviorAttribute> к своему контракту службы, в котором свойству <xref:System.ServiceModel.ServiceBehaviorAttribute.IgnoreExtensionDataObject%2A> присвоено значение `true`.  
   
- [!INCLUDE[crabout](../../../includes/crabout-md.md)]Полная совместимость версий, в разделе [прямой совместимостью контракты данных](../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md).  
+ [!INCLUDE[crabout](../../../includes/crabout-md.md)] Полная совместимость версий, в разделе [прямой совместимостью контракты данных](../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md).  
   
 ## <a name="versioning-when-schema-validation-is-not-required"></a>Управление версиями при отсутствии необходимости в проверке схемы  
  Строгое соответствие схеме требуется редко. Множество платформ допускают наличие дополнительных элементов, не описанных в схеме. До тех пор, пока это которая допустима полный набор возможностей описывается в [управление версиями контракта данных](../../../docs/framework/wcf/feature-details/data-contract-versioning.md) и [прямой совместимостью контракты данных](../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md) может использоваться. Рекомендуется соблюдать следующее.  
@@ -65,9 +67,9 @@ ms.lasthandoff: 12/22/2017
   
 2.  Использование наследования вместе с контрактами данных допускается, если наследование не используется как механизм управления версиями и выполняются определенные правила. Если тип наследуется от определенного базового типа, он не должен наследоваться от другого базового типа в будущей версии (за исключением случаев, когда у них одинаковые контракты данных). Существует одно исключение из этого: можно вставить тип в иерархию между типом контракта данных и его базовым типом, но только если в нем не содержится членов данных с такими же именами, как у других членов в любых возможных версиях других типов в иерархии. Как правило, использование членов данных с одинаковыми именами на разных уровнях одной и той же иерархии наследования может привести к серьезным проблемам с управлением версиями. Этого следует избегать.  
   
-3.  Начиная с первой версии контракта данных, всегда реализуйте <xref:System.Runtime.Serialization.IExtensibleDataObject> для включения полной совместимости версий. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Контракты данных, совместимые с любыми будущими](../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md). Если имеется одна или несколько версий типа без реализации этого интерфейса, реализуйте его в следующей версии типа.  
+3.  Начиная с первой версии контракта данных, всегда реализуйте <xref:System.Runtime.Serialization.IExtensibleDataObject> для включения полной совместимости версий. Дополнительные сведения о создании контрактов данных, обладающих прямой совместимостью, см. в разделе [Контракты данных, совместимые с любыми будущими изменениями](../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md). Если имеется одна или несколько версий типа без реализации этого интерфейса, реализуйте его в следующей версии типа.  
   
-4.  В более поздних версиях не изменяйте имя или пространство имен контракта данных. При изменении имени или пространства имен базового типа контракта данных обязательно сохраните имя и пространство имен контракта данных с помощью соответствующих механизмов, таких как свойство <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A> атрибута <xref:System.Runtime.Serialization.DataContractAttribute>. [!INCLUDE[crabout](../../../includes/crabout-md.md)]именование, в разделе [имена контрактов данных](../../../docs/framework/wcf/feature-details/data-contract-names.md).  
+4.  В более поздних версиях не изменяйте имя или пространство имен контракта данных. При изменении имени или пространства имен базового типа контракта данных обязательно сохраните имя и пространство имен контракта данных с помощью соответствующих механизмов, таких как свойство <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A> атрибута <xref:System.Runtime.Serialization.DataContractAttribute>. [!INCLUDE[crabout](../../../includes/crabout-md.md)] именование, в разделе [имена контрактов данных](../../../docs/framework/wcf/feature-details/data-contract-names.md).  
   
 5.  В более поздних версиях не изменяйте имена членов данных. При изменении имени поля, свойства или базового события члена данных используйте свойство `Name` атрибута <xref:System.Runtime.Serialization.DataMemberAttribute>, чтобы сохранить существующее имя члена данных.  
   
@@ -79,7 +81,7 @@ ms.lasthandoff: 12/22/2017
   
     1.  Для свойства <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> всегда следует сохранять значение по умолчанию `false`.  
   
-    2.  Если значение по умолчанию `null` или нуль для члена неприемлемо, то необходимо предусмотреть метод обратного вызова с использованием <xref:System.Runtime.Serialization.OnDeserializingAttribute> для обеспечения разумного значения по умолчанию при отсутствии члена во входящем потоке. [!INCLUDE[crabout](../../../includes/crabout-md.md)]обратный вызов, в разделе [обратных вызовов независимой от версий сериализации](../../../docs/framework/wcf/feature-details/version-tolerant-serialization-callbacks.md).  
+    2.  Если значение по умолчанию `null` или нуль для члена неприемлемо, то необходимо предусмотреть метод обратного вызова с использованием <xref:System.Runtime.Serialization.OnDeserializingAttribute> для обеспечения разумного значения по умолчанию при отсутствии члена во входящем потоке. [!INCLUDE[crabout](../../../includes/crabout-md.md)] обратный вызов, в разделе [обратных вызовов независимой от версий сериализации](../../../docs/framework/wcf/feature-details/version-tolerant-serialization-callbacks.md).  
   
     3.  Свойство `Order` атрибута `DataMemberAttribute` необходимо использовать для гарантии того, что все только что добавленные члены данных отображаются после существующих членов данных. Рекомендуемый способ выполнения этого заключается в следующем: значение свойству `Order` не должно быть присвоено ни для одного члена данных в первой версии контракта данных. Для всех элементов данных, добавленных в версии 2 контракта данных, свойство `Order` должно иметь значение 2. Для всех элементов данных, добавленных в версии 3 контракта данных, свойство `Order` должно иметь значение 3 и так далее Допускается задание нескольких членов данных одному номеру свойства `Order`.  
   

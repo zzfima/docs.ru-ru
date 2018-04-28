@@ -14,11 +14,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 4aa77a0135cea18847c4d4425171b0bdcf447988
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: fa529ddbdfa05ce876c99efd4a717c6136cf6686
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="what39s-new-in-windows-workflow-foundation-in-net-45"></a>Что&#39;новые возможности Windows Workflow Foundation в .NET 4.5
 Windows Workflow Foundation (WF) в [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] содержит множество новых функций, включая новые действия, возможности конструктора и модели разработки рабочего процесса. Многие, хотя и не все, новые функции рабочего процесса, представленные в [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], поддерживаются в повторно размещенном конструкторе рабочих процессов. [!INCLUDE[crabout](../../../includes/crabout-md.md)] новые возможности, которые поддерживаются, см. [поддержке новых функций Workflow Foundation 4.5 в конструкторе рабочих процессов, повторно размещенными](../../../docs/framework/windows-workflow-foundation/wf-features-in-the-rehosted-workflow-designer.md). [!INCLUDE[crabout](../../../includes/crabout-md.md)] перенос .NET 3.0 и .NET 3.5 приложений рабочих процессов, чтобы использовать последнюю версию в разделе [руководство по миграции](../../../docs/framework/windows-workflow-foundation/migration-guidance.md). В этом разделе содержится общее описание новых возможностей рабочего процесса, представленных в [!INCLUDE[net_v45](../../../includes/net-v45-md.md)].  
@@ -40,7 +40,7 @@ Windows Workflow Foundation (WF) в [!INCLUDE[net_v45](../../../includes/net-v45
   
 -   Введено динамическое обновление, которое позволяет обновить определение сохраненного экземпляра рабочего процесса. Дополнительные сведения см. в разделе [динамическое обновление](../../../docs/framework/windows-workflow-foundation/dynamic-update.md) и [как: обновление определения экземпляра рабочего процесса запущен](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md).  
   
--   Предоставляется скрипт базы данных SqlWorkflowInstanceStoreSchemaUpgrade.sql для обновления баз данных сохраняемости, созданных с помощью скриптов базы данных [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]. Этот скрипт обновляет базы данных сохраняемости [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] для поддержки новых возможностей управления версиями, представленных в [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]. Сохраняемые экземпляры рабочих процессов в базе данных получают значения управления версиями по умолчанию и могут участвовать в параллельном выполнении и динамическом обновлении. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Обновление баз данных сохраняемости .NET Framework 4 для поддержки управления версиями рабочего процесса](../../../docs/framework/windows-workflow-foundation/using-workflowidentity-and-versioning.md#UpdatingWF4PersistenceDatabases).  
+-   Предоставляется скрипт базы данных SqlWorkflowInstanceStoreSchemaUpgrade.sql для обновления баз данных сохраняемости, созданных с помощью скриптов базы данных [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]. Этот скрипт обновляет базы данных сохраняемости [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] для поддержки новых возможностей управления версиями, представленных в [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]. Сохраняемые экземпляры рабочих процессов в базе данных получают значения управления версиями по умолчанию и могут участвовать в параллельном выполнении и динамическом обновлении. Дополнительные сведения см. в разделе [обновление .NET Framework 4 баз данных сохраняемости для поддержки управления версиями рабочего процесса](../../../docs/framework/windows-workflow-foundation/using-workflowidentity-and-versioning.md#UpdatingWF4PersistenceDatabases).  
   
 ##  <a name="BKMK_NewActivities"></a> Действия  
  Встроенная библиотека действий содержит новые действия, а также новые возможности для существующих действий.  

@@ -1,20 +1,17 @@
 ---
-title: "Циклы: выражение for...in (F#)"
-description: "В разделе как for. F #.. в выражении циклов конструкция используется для прохода по совпадений шаблона в перечислимой коллекции."
-keywords: "visual f#, f#, функциональное программирование"
+title: 'Циклы: выражение for...in (F#)'
+description: 'В разделе как for. F #.. в выражении циклов конструкция используется для прохода по совпадений шаблона в перечислимой коллекции.'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: f54e3228-4aec-4d0a-ae37-bc3376508284
-ms.openlocfilehash: d86aeb3bdd975261e59004d636354a740bd95c47
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: eaf0f4fc6419d8e0bff46795120ee5e42c4efe1d
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="loops-forin-expression"></a>Циклы: выражение for...in
 
@@ -138,7 +135,7 @@ a b c d e f g h i j k l m n o p q r s t u v w x y z
 Number of elements in list1: 5
 ```
 
-`Note`Можно использовать `for...in` в выражениях последовательности и других вычислительных выражениях, при этом настроенную версию `for...in` используется выражение. Дополнительные сведения см. в разделе [последовательности](sequences.md), [асинхронные рабочие потоки](asynchronous-workflows.md), и [вычислительных выражениях](computation-expressions.md).
+`Note` Можно использовать `for...in` в выражениях последовательности и других вычислительных выражениях, при этом настроенную версию `for...in` используется выражение. Дополнительные сведения см. в разделе [последовательности](sequences.md), [асинхронные рабочие потоки](asynchronous-workflows.md), и [вычислительных выражениях](computation-expressions.md).
 
 
 ## <a name="see-also"></a>См. также

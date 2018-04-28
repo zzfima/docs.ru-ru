@@ -1,24 +1,26 @@
 ---
-title: "Поддерживаемые сценарии развертывания"
-ms.custom: 
+title: Поддерживаемые сценарии развертывания
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 3399f208-3504-4c70-a22e-a7c02a8b94a6
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 3e6039567e4fad7fe4c014665dd3ae0c3082a9d0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 82fa7e1b9619502dfdd27d2de29a502bec0af4f4
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="supported-deployment-scenarios"></a>Поддерживаемые сценарии развертывания
 Подмножество функций [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] , которые поддерживаются для использования в частично доверенных приложениях, предназначено для обеспечения соответствия требованиям некоторых (но не всех) сценариев использования [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. На сервере [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] соответствует требованиям поставщиков услуг совместного размещения в сети Интернет, выполняющих сторонние приложения с наборами разрешений среднего уровня доверия [!INCLUDE[vstecasplong](../../../../includes/vstecasplong-md.md)] в целях безопасности. На клиенте поддержка частичного доверия [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] реализуется с целью обеспечения соответствия требованиям таких технологий развертывания, как [развертывание ClickOnce](http://go.microsoft.com/fwlink/?LinkId=83712) или технология приложения браузера XAML [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)], обеспечивающих беспрепятственное и безопасное развертывание классических приложений с ненадежных узлов.  
@@ -35,7 +37,7 @@ ms.lasthandoff: 12/22/2017
  Дополнительные сведения о различных функциях, поддерживаемых в этих наборах разрешений, см. в разделе [Partial Trust Feature Compatibility](../../../../docs/framework/wcf/feature-details/partial-trust-feature-compatibility.md).  
   
 ## <a name="partial-trust-on-the-server"></a>Частичное доверие на сервере  
- Многие коммерческие поставщики услуг размещения веб-приложений [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] требуют, чтобы выполняемые на их серверах приложения запускались с набором разрешений среднего уровня доверия [!INCLUDE[vstecasplong](../../../../includes/vstecasplong-md.md)] . [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]службы могут работать в таких средах, если они используют <xref:System.ServiceModel.BasicHttpBinding>, <xref:System.ServiceModel.WebHttpBinding>, или <<!--zz xref:System.ServiceModel.WsHttpBinding --> `xref:System.ServiceModel.WsHttpBinding`> Безопасность на уровне транспорта.  
+ Многие коммерческие поставщики услуг размещения веб-приложений [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] требуют, чтобы выполняемые на их серверах приложения запускались с набором разрешений среднего уровня доверия [!INCLUDE[vstecasplong](../../../../includes/vstecasplong-md.md)] . [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] службы могут работать в таких средах, если они используют <xref:System.ServiceModel.BasicHttpBinding>, <xref:System.ServiceModel.WebHttpBinding>, или <<!--zz xref:System.ServiceModel.WsHttpBinding --> `xref:System.ServiceModel.WsHttpBinding`> Безопасность на уровне транспорта.  
   
  Службы[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] , выполняемые в средах размещения со средним уровнем доверия, могут действовать как службы промежуточного уровня, отправляя сообщения на другие серверы в ответ на запросы клиента. На сервере поддерживаются промежуточные сценарии, если среда размещения предоставила приложению соответствующее разрешение <xref:System.Net.WebPermission> на отправку исходящих запросов на требуемый сервер.  
   
@@ -43,7 +45,7 @@ ms.lasthandoff: 12/22/2017
   
  Службы рабочего процесса требуют наличия разрешений полного доверия, их невозможно использовать в частично доверенных приложениях.  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [How to: Use Medium Trust in ASP.NET 2.0](http://go.microsoft.com/fwlink/?LinkId=84603).  
+ Дополнительные сведения см. в разделе [как: использование среднего уровня доверия в ASP.NET 2.0](http://go.microsoft.com/fwlink/?LinkId=84603).  
   
 ## <a name="partial-trust-on-the-client"></a>Частичное доверие на клиенте  
  Необходимо предпринять определенные дополнительные меры безопасности при загрузке и запуске кода с ненадежных веб-сайтов Интернета. Технология [развертывания ClickOnce](http://go.microsoft.com/fwlink/?LinkId=83712) и технология приложения браузера XAML [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)](XBAP) используют частичное доверие для предоставления ограниченных разрешений (в зоне Интернета) ненадежному коду.  

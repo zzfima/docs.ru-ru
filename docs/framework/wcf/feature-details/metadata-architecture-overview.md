@@ -1,28 +1,28 @@
 ---
-title: "Общие сведения об архитектуре метаданных"
-ms.custom: 
+title: Общие сведения об архитектуре метаданных
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - metadata [WCF], overview
 ms.assetid: 1d37645e-086d-4d68-a358-f3c5b6e8205e
-caps.latest.revision: 
+caps.latest.revision: 24
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: a8890cc05ec6b0b889dafcb787e216b50a681876
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: bce838d9584480028c7b02d1ba19547fe208bf2c
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="metadata-architecture-overview"></a>Общие сведения об архитектуре метаданных
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] обеспечивает широкие возможности для экспорта, публикации, получения и импорта метаданных служб. Службы [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] используют метаданные для описания взаимодействия с конечными точками служб, чтобы такие средства, как Svcutil.exe, могли автоматически создавать клиентский код для обращения к службе.  
@@ -39,7 +39,7 @@ ms.lasthandoff: 12/22/2017
   
 -   Экземпляр <xref:System.ServiceModel.Description.MetadataLocation>.  
   
- Экземпляры <xref:System.ServiceModel.Description.MetadataReference?displayProperty=nameWithType> указывают на другую конечную точку обмена метаданными (MEX), а экземпляры <xref:System.ServiceModel.Description.MetadataLocation?displayProperty=nameWithType> указывают на документ метаданных, используя URL-адрес HTTP. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] поддерживает использование документов WSDL для описания конечных точек службы, контрактов службы, привязок, шаблонов обмена сообщениями, сообщений и сообщений об ошибках, реализуемых службой. Используемые службой типы данных описываются в документах WSDL с помощью схемы XML. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Импорт и Экспорт схемы](../../../../docs/framework/wcf/feature-details/schema-import-and-export.md). С помощью [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] можно экспортировать и импортировать расширения WSDL для поведения службы, поведений контракта и элементов привязки, расширяющих функциональные возможности службы. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Экспорт пользовательских метаданных для расширения WCF](../../../../docs/framework/wcf/extending/exporting-custom-metadata-for-a-wcf-extension.md).  
+ Экземпляры <xref:System.ServiceModel.Description.MetadataReference?displayProperty=nameWithType> указывают на другую конечную точку обмена метаданными (MEX), а экземпляры <xref:System.ServiceModel.Description.MetadataLocation?displayProperty=nameWithType> указывают на документ метаданных, используя URL-адрес HTTP. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] поддерживает использование документов WSDL для описания конечных точек службы, контрактов службы, привязок, шаблонов обмена сообщениями, сообщений и сообщений об ошибках, реализуемых службой. Используемые службой типы данных описываются в документах WSDL с помощью схемы XML. Дополнительные сведения см. в разделе [Импорт и Экспорт схемы](../../../../docs/framework/wcf/feature-details/schema-import-and-export.md). С помощью [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] можно экспортировать и импортировать расширения WSDL для поведения службы, поведений контракта и элементов привязки, расширяющих функциональные возможности службы. Дополнительные сведения см. в разделе [экспорт пользовательских метаданных для расширения WCF](../../../../docs/framework/wcf/extending/exporting-custom-metadata-for-a-wcf-extension.md).  
   
 ## <a name="exporting-service-metadata"></a>Экспорт метаданных службы  
  В [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], *экспорта метаданных* — это процесс описания конечных точек службы и проецирования их в параллельное, стандартизованное представление, позволяющее клиентам понять, как использовать службу. Для экспорта метаданных из экземпляров <xref:System.ServiceModel.Description.ServiceEndpoint> используется реализация абстрактного класса <xref:System.ServiceModel.Description.MetadataExporter>. Реализация <xref:System.ServiceModel.Description.MetadataExporter?displayProperty=nameWithType> создает метаданные, которые инкапсулируются в экземпляр <xref:System.ServiceModel.Description.MetadataSet>.  
@@ -59,7 +59,7 @@ ms.lasthandoff: 12/22/2017
   
  Чтобы добавить конечные точки метаданных, использующие протокол MEX, добавьте в узел службы, использовать Контракт службы с именем IMetadataExchange конечных точек службы.[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Определяет <xref:System.ServiceModel.Description.IMetadataExchange> интерфейс с именем этого контракта службы. Конечные точки WS-Metadata Exchange (или конечные точки MEX) могут использовать одну из четырех привязок по умолчанию, предоставляемых статическими методами производства в классе <xref:System.ServiceModel.Description.MetadataExchangeBindings> для сопоставления с привязками по умолчанию, используемыми средствами [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], например Svcutil.exe. Настраивать конечные точки метаданных MEX также можно с помощью пользовательской привязки.  
   
- <xref:System.ServiceModel.Description.ServiceMetadataBehavior> использует <xref:System.ServiceModel.Description.WsdlExporter?displayProperty=nameWithType> для экспорта метаданных для всех конечных точек службы. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Экспорт метаданных из службы, в разделе [Экспорт и импорт метаданных](../../../../docs/framework/wcf/feature-details/exporting-and-importing-metadata.md).  
+ <xref:System.ServiceModel.Description.ServiceMetadataBehavior> использует <xref:System.ServiceModel.Description.WsdlExporter?displayProperty=nameWithType> для экспорта метаданных для всех конечных точек службы. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Экспорт метаданных из службы, в разделе [Экспорт и импорт метаданных](../../../../docs/framework/wcf/feature-details/exporting-and-importing-metadata.md).  
   
  Класс <xref:System.ServiceModel.Description.ServiceMetadataBehavior> расширяет узел службы, добавляя экземпляр <xref:System.ServiceModel.Description.ServiceMetadataExtension> в качестве расширения узла службы. Расширение <xref:System.ServiceModel.Description.ServiceMetadataExtension?displayProperty=nameWithType> обеспечивает реализацию протоколов публикации метаданных. Расширение <xref:System.ServiceModel.Description.ServiceMetadataExtension?displayProperty=nameWithType> также можно использовать для получения метаданных службы во время выполнения, обратившись к свойству <xref:System.ServiceModel.Description.ServiceMetadataExtension.Metadata%2A>.  
   

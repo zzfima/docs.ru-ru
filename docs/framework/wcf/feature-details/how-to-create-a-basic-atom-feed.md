@@ -1,27 +1,29 @@
 ---
-title: "Практическое руководство. Создание базового канала Atom"
-ms.custom: 
+title: Практическое руководство. Создание базового канала Atom
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 6e0cacc1-9b11-4665-adb7-577a62626fd6
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 51a42e9b954fba7ccd58d74248fb65dc2b57a76b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 26e5bf0771e3b8d700efeaf4f63b9866534db68a
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="how-to-create-a-basic-atom-feed"></a>Практическое руководство. Создание базового канала Atom
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] позволяет создавать службу, предоставляющую веб-канал синдикации. В этом разделе рассматривается процесс создания службы синдикации, предоставляющей веб-канал синдикации Atom.  
@@ -34,7 +36,7 @@ ms.lasthandoff: 12/22/2017
      [!code-vb[htAtomBasic#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htatombasic/vb/program.vb#0)]  
   
     > [!NOTE]
-    >  Все операции службы, которые применяют атрибут <xref:System.ServiceModel.Web.WebGetAttribute>, сопоставляются с запросами HTTP GET. Чтобы сопоставить операцию с другим методом HTTP, используйте <xref:System.ServiceModel.Web.WebInvokeAttribute>. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Как: Создание веб-службы HTTP WCF основные](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-wcf-web-http-service.md).  
+    >  Все операции службы, которые применяют атрибут <xref:System.ServiceModel.Web.WebGetAttribute>, сопоставляются с запросами HTTP GET. Чтобы сопоставить операцию с другим методом HTTP, используйте <xref:System.ServiceModel.Web.WebInvokeAttribute>. Дополнительные сведения см. в разделе [как: Создание базовой службы WCF Web HTTP](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-wcf-web-http-service.md).  
   
 2.  Реализуйте контракт службы.  
   
@@ -75,7 +77,7 @@ ms.lasthandoff: 12/22/2017
   
 ### <a name="to-call-getblog-with-an-http-get"></a>Вызов GetBlog() c HTTP GET  
   
-1.  Откройте Internet Explorer, введите URL-адрес http://localhost:8000/BlogService/GetBlog и нажмите клавишу ВВОД.  
+1.  Откройте Internet Explorer, введите следующий URL-адрес и нажмите клавишу ВВОД: http://localhost:8000/BlogService/GetBlog  
   
      URL-адрес содержит базовый адрес службы (http://localhost:8000/BlogService), относительный адрес конечной точки и вызываемую операцию службы.  
   

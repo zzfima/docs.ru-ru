@@ -1,33 +1,35 @@
 ---
-title: "Вопросы безопасности при использовании метаданных"
-ms.custom: 
+title: Вопросы безопасности при использовании метаданных
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: e78ef8ab-4f63-4656-ab93-b1deab2666d5
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 098b31e479322d9de3a299f06652e819a5388c42
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: d033a3e22def60c5d82191fd7fcc93bd67f4548b
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="security-considerations-with-metadata"></a>Вопросы безопасности при использовании метаданных
 При использовании в [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] функций метаданных следует помнить об обеспечении безопасности публикации, извлечения и использования метаданных служб.  
   
 ## <a name="when-to-publish-metadata"></a>В каких случаях следует публиковать метаданные  
- По умолчанию службы [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] не публикуют метаданные. Публикация метаданных для [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] службы, необходимо явно включить публикацию метаданных, добавив конечные точки метаданных службы (в разделе [публикация метаданных](../../../../docs/framework/wcf/feature-details/publishing-metadata.md)). Если публикацию метаданных оставить отключенной, это уменьшит возможности для атаки на службу и снизит риск непреднамеренного раскрытия информации. Не все службы должны публиковать метаданные. Если публиковать метаданные не требуется, подумайте о том, чтобы отключить их. Обратите внимание, что по-прежнему можно создавать метаданные и код клиента непосредственно из службы сборок с помощью [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)]с помощью Svcutil.exe для экспорта метаданных, в разделе [как: использование Svcutil.exe для экспорта метаданных из компилированного кода службы](../../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-export-metadata-from-compiled-service-code.md).  
+ По умолчанию службы [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] не публикуют метаданные. Публикация метаданных для [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] службы, необходимо явно включить публикацию метаданных, добавив конечные точки метаданных службы (в разделе [публикация метаданных](../../../../docs/framework/wcf/feature-details/publishing-metadata.md)). Если публикацию метаданных оставить отключенной, это уменьшит возможности для атаки на службу и снизит риск непреднамеренного раскрытия информации. Не все службы должны публиковать метаданные. Если публиковать метаданные не требуется, подумайте о том, чтобы отключить их. Обратите внимание, что по-прежнему можно создавать метаданные и код клиента непосредственно из службы сборок с помощью [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)] с помощью Svcutil.exe для экспорта метаданных, в разделе [как: использование Svcutil.exe для экспорта метаданных из компилированного кода службы](../../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-export-metadata-from-compiled-service-code.md).  
   
 ## <a name="publishing-metadata-using-a-secure-binding"></a>Публикация метаданных с помощью безопасной привязки  
- Привязки метаданных, предоставляемые [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] по умолчанию, не являются безопасными и разрешают анонимный доступ к метаданным. Метаданные службы [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], публикуемые ею, содержат подробное описание службы и могут (преднамеренно или нет) содержать конфиденциальные сведения. Например, метаданные службы могут содержать сведения об операциях инфраструктуры, которые не должны распространяться публично. Чтобы защитить метаданные службы от несанкционированного доступа, можно воспользоваться безопасной привязкой конечной точки метаданных. Конечные точки метаданных отвечают на HTTP-запросы GET, которые могут использовать для защиты метаданных протокол SSL. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Как: защита конечных точек метаданных](../../../../docs/framework/wcf/feature-details/how-to-secure-metadata-endpoints.md).  
+ Привязки метаданных, предоставляемые [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] по умолчанию, не являются безопасными и разрешают анонимный доступ к метаданным. Метаданные службы [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], публикуемые ею, содержат подробное описание службы и могут (преднамеренно или нет) содержать конфиденциальные сведения. Например, метаданные службы могут содержать сведения об операциях инфраструктуры, которые не должны распространяться публично. Чтобы защитить метаданные службы от несанкционированного доступа, можно воспользоваться безопасной привязкой конечной точки метаданных. Конечные точки метаданных отвечают на HTTP-запросы GET, которые могут использовать для защиты метаданных протокол SSL. Дополнительные сведения см. в разделе [как: защита конечных точек метаданных](../../../../docs/framework/wcf/feature-details/how-to-secure-metadata-endpoints.md).  
   
  Кроме того, защита конечных точек метаданных позволяет запрашивающей стороне безопасным образом получать метаданные службы, не опасаясь, что они будут искажены или подделаны.  
   

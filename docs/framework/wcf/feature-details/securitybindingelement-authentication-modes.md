@@ -1,27 +1,29 @@
 ---
-title: "Режимы проверки подлинности SecurityBindingElement"
-ms.custom: 
+title: Режимы проверки подлинности SecurityBindingElement
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 12300bf4-c730-4405-9f65-d286f68b5a43
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 05b44d9972a393b36a97fd5afcb6581229332df9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 8ca854d6b0431b5fe4972972d9d39de934f64b4d
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="securitybindingelement-authentication-modes"></a>Режимы проверки подлинности SecurityBindingElement
 В [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] имеется несколько режимов, с помощью которых клиенты и службы проверяют подлинность друг друга. Для этих режимов проверки подлинности можно создать привязки безопасности с помощью статических методов класса <xref:System.ServiceModel.Channels.SecurityBindingElement> или с помощью конфигурации. В этом разделе кратко описано 18 режимов проверки подлинности.  
@@ -60,7 +62,7 @@ ms.lasthandoff: 12/22/2017
      [!code-csharp[c_CustomBindingsAuthMode#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_custombindingsauthmode/cs/source.cs#3)]
      [!code-vb[c_CustomBindingsAuthMode#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_custombindingsauthmode/vb/source.vb#3)]  
   
-3.  С помощью элемента привязки создайте пользовательскую привязку. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Пользовательские привязки](../../../../docs/framework/wcf/extending/custom-bindings.md).  
+3.  С помощью элемента привязки создайте пользовательскую привязку. Дополнительные сведения см. в разделе [пользовательские привязки](../../../../docs/framework/wcf/extending/custom-bindings.md).  
   
 ## <a name="mode-descriptions"></a>Описание режимов  
   
@@ -89,7 +91,7 @@ ms.lasthandoff: 12/22/2017
  В этом режиме проверка подлинности клиента на стороне службы осуществляется с использованием билета Kerberos. Этот же билет обеспечивает проверку подлинности сервера. Элементом привязки безопасности является элемент `SymmetricSecurityBindingElement`, возвращаемый методом <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateKerberosBindingElement%2A>. Можно также задать для атрибута `authenticationMode` значение `Kerberos`.  
   
 > [!NOTE]
->  Для использования этого режима проверки подлинности учетная запись службы должна быть связана с именем участника-службы (SPN). Для этого запустите службу от имени учетной записи NETWORK SERVICE или LOCAL SYSTEM. Для создания для учетной записи службы имени участника-службы также можно воспользоваться средством SetSpn.exe. В обоих случаях клиент должен указывать правильное имя участника-службы в [ \<servicePrincipalName >](../../../../docs/framework/configure-apps/file-schema/wcf/serviceprincipalname.md) элемент, или с помощью <xref:System.ServiceModel.EndpointAddress> конструктор. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Службы удостоверений и проверки подлинности](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
+>  Для использования этого режима проверки подлинности учетная запись службы должна быть связана с именем участника-службы (SPN). Для этого запустите службу от имени учетной записи NETWORK SERVICE или LOCAL SYSTEM. Для создания для учетной записи службы имени участника-службы также можно воспользоваться средством SetSpn.exe. В обоих случаях клиент должен указывать правильное имя участника-службы в [ \<servicePrincipalName >](../../../../docs/framework/configure-apps/file-schema/wcf/serviceprincipalname.md) элемент, или с помощью <xref:System.ServiceModel.EndpointAddress> конструктор. Дополнительные сведения см. в разделе [службы удостоверений и проверки подлинности](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
   
 > [!NOTE]
 >  При использовании режима проверки подлинности `Kerberos` уровни олицетворения <xref:System.Security.Principal.TokenImpersonationLevel.Anonymous> и <xref:System.Security.Principal.TokenImpersonationLevel.Delegation> не поддерживаются.  
@@ -98,7 +100,7 @@ ms.lasthandoff: 12/22/2017
  В этом режиме проверка подлинности клиента на стороне службы осуществляется с использованием билета Kerberos. Маркер Kerberos доступен на уровне SOAP в качестве разрешающего вспомогательного маркера, т. е. маркера, которым подписана подпись сообщения. Служба проходит проверку подлинности с использованием сертификата X.509 на транспортном уровне. Элементом привязки безопасности является элемент `TransportSecurityBindingElement`, возвращаемый методом <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateKerberosOverTransportBindingElement%2A>. Можно также задать для атрибута `authenticationMode` значение `KerberosOverTransport`.  
   
 > [!NOTE]
->  Для использования этого режима проверки подлинности учетная запись службы должна быть связана с именем участника-службы (SPN). Для этого запустите службу от имени учетной записи NETWORK SERVICE или LOCAL SYSTEM. Для создания для учетной записи службы имени участника-службы также можно воспользоваться средством SetSpn.exe. В обоих случаях клиент должен указывать правильное имя участника-службы в [ \<servicePrincipalName >](../../../../docs/framework/configure-apps/file-schema/wcf/serviceprincipalname.md) элемент, или с помощью <xref:System.ServiceModel.EndpointAddress> конструктор. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Службы удостоверений и проверки подлинности](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
+>  Для использования этого режима проверки подлинности учетная запись службы должна быть связана с именем участника-службы (SPN). Для этого запустите службу от имени учетной записи NETWORK SERVICE или LOCAL SYSTEM. Для создания для учетной записи службы имени участника-службы также можно воспользоваться средством SetSpn.exe. В обоих случаях клиент должен указывать правильное имя участника-службы в [ \<servicePrincipalName >](../../../../docs/framework/configure-apps/file-schema/wcf/serviceprincipalname.md) элемент, или с помощью <xref:System.ServiceModel.EndpointAddress> конструктор. Дополнительные сведения см. в разделе [службы удостоверений и проверки подлинности](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
   
 ### <a name="mutualcertificate"></a>MutualCertificate  
  В этом режиме проверка подлинности клиента осуществляется с использованием сертификата X.509, который доступен на уровне SOAP в качестве разрешающего вспомогательного маркера, т. е. маркера, которым подписана подпись сообщения. Служба также проходит проверку подлинности с использованием сертификата X.509. Элементом привязки безопасности является элемент `SymmetricSecurityBindingElement`, возвращаемый методом <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateMutualCertificateBindingElement%2A>. Можно также задать для атрибута `authenticationMode` значение `MutualCertificate`.  

@@ -1,13 +1,13 @@
 ---
-title: "Настройка службы данных (службы данных WCF)"
-ms.custom: 
+title: Настройка службы данных (службы данных WCF)
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework-oob
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,20 +15,20 @@ dev_langs:
 helpviewer_keywords:
 - WCF Data Services, configuring
 ms.assetid: 59efd4c8-cc7a-4800-a0a4-d3f8abe6c55c
-caps.latest.revision: 
+caps.latest.revision: 10
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: d9dd82926385ee97b05694d954b94d7821a1e638
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 7c3c82e1e4460e82dd7e6bd88771eae96f132c8e
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="configuring-the-data-service-wcf-data-services"></a>Настройка службы данных (службы данных WCF)
-С [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], можно создавать службы данных, которые предоставляют [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] веб-каналов. В этих каналах могут находиться данные из различных источников данных. [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]использует поставщики данных для предоставления этих данных в виде [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] веб-канала. В число таких поставщиков входят [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)], поставщик отражения, а также набор пользовательских интерфейсов поставщиков служб данных. Реализация поставщика определяет модель данных для службы. Дополнительные сведения см. в разделе [поставщики служб данных](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md).  
+С [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], можно создавать службы данных, которые предоставляют [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] веб-каналов. В этих каналах могут находиться данные из различных источников данных. [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] использует поставщики данных для предоставления этих данных в виде [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] веб-канала. В число таких поставщиков входят [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)], поставщик отражения, а также набор пользовательских интерфейсов поставщиков служб данных. Реализация поставщика определяет модель данных для службы. Дополнительные сведения см. в разделе [поставщики служб данных](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md).  
   
  В [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] служба данных является классом, унаследованным от класса <xref:System.Data.Services.DataService%601>, в котором тип службы данных является контейнером сущностей моделей данных. Этот контейнер сущностей имеет одно или несколько свойств, возвращающих интерфейс <xref:System.Linq.IQueryable%601>, которые используются для доступа к наборам сущностей модели данных.  
   
@@ -49,10 +49,10 @@ ms.lasthandoff: 01/19/2018
 |<xref:System.Data.Services.DataServiceBehavior.InvokeInterceptorsOnLinkDelete%2A>|Позволяет указать, следует ли вызывать перехватчиков зарегистрированных изменений для связанных сущностей при удалении ссылки связи между двумя сущностями.|  
 |<xref:System.Data.Services.DataServiceConfiguration.MaxBatchCount%2A>|Позволяет ограничить число наборов изменений и операций запросов, разрешенных в одном пакете. Дополнительные сведения см. в разделе [OData: пакета](http://go.microsoft.com/fwlink/?LinkId=185602) и [операциями пакетной обработки](../../../../docs/framework/data/wcf/batching-operations-wcf-data-services.md).|  
 |<xref:System.Data.Services.DataServiceConfiguration.MaxChangesetCount%2A>|Позволяет ограничить количество изменений, которые могут быть включены в один набор изменений. Дополнительные сведения см. в разделе [как: включить разбиение на страницы из результатов службы данных](../../../../docs/framework/data/wcf/how-to-enable-paging-of-data-service-results-wcf-data-services.md).|  
-|<xref:System.Data.Services.DataServiceConfiguration.MaxExpandCount%2A>|Позволяет ограничить размер ответа путем ограничения количества связанных сущностей, которые могут быть включены в один запрос при использовании оператора запроса `$expand`. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]в разделе [OData: соглашения URI](http://go.microsoft.com/fwlink/?LinkId=185564) и [загрузка отложенного содержимого](../../../../docs/framework/data/wcf/loading-deferred-content-wcf-data-services.md).|  
-|<xref:System.Data.Services.DataServiceConfiguration.MaxExpandDepth%2A>|Позволяет ограничить размер ответа путем ограничения глубины графа связанных сущностей, которые могут быть включены в один запрос при использовании оператора запроса `$expand`. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]в разделе [OData: соглашения URI](http://go.microsoft.com/fwlink/?LinkId=185564) и [загрузка отложенного содержимого](../../../../docs/framework/data/wcf/loading-deferred-content-wcf-data-services.md).|  
+|<xref:System.Data.Services.DataServiceConfiguration.MaxExpandCount%2A>|Позволяет ограничить размер ответа путем ограничения количества связанных сущностей, которые могут быть включены в один запрос при использовании оператора запроса `$expand`. Дополнительные сведения см. в разделе [OData: соглашения URI](http://go.microsoft.com/fwlink/?LinkId=185564) и [загрузка отложенного содержимого](../../../../docs/framework/data/wcf/loading-deferred-content-wcf-data-services.md).|  
+|<xref:System.Data.Services.DataServiceConfiguration.MaxExpandDepth%2A>|Позволяет ограничить размер ответа путем ограничения глубины графа связанных сущностей, которые могут быть включены в один запрос при использовании оператора запроса `$expand`. Дополнительные сведения см. в разделе [OData: соглашения URI](http://go.microsoft.com/fwlink/?LinkId=185564) и [загрузка отложенного содержимого](../../../../docs/framework/data/wcf/loading-deferred-content-wcf-data-services.md).|  
 |<xref:System.Data.Services.DataServiceConfiguration.MaxObjectCountOnInsert%2A>|Позволяет ограничить количество вставляемых сущностей, которые могут содержаться в одном запросе POST.|  
-|<xref:System.Data.Services.DataServiceBehavior.MaxProtocolVersion%2A>|Определяет версию протокола Atom, используемую службой данных. Если свойству <xref:System.Data.Services.DataServiceBehavior.MaxProtocolVersion%2A> присвоено значение, которое меньше максимального значения <xref:System.Data.Services.Common.DataServiceProtocolVersion>, то последние функции [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] становятся недоступными для клиентов, обращающихся к службе данных. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Управление версиями службы данных](../../../../docs/framework/data/wcf/data-service-versioning-wcf-data-services.md).|  
+|<xref:System.Data.Services.DataServiceBehavior.MaxProtocolVersion%2A>|Определяет версию протокола Atom, используемую службой данных. Если свойству <xref:System.Data.Services.DataServiceBehavior.MaxProtocolVersion%2A> присвоено значение, которое меньше максимального значения <xref:System.Data.Services.Common.DataServiceProtocolVersion>, то последние функции [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] становятся недоступными для клиентов, обращающихся к службе данных. Дополнительные сведения см. в разделе [управление версиями службы данных](../../../../docs/framework/data/wcf/data-service-versioning-wcf-data-services.md).|  
 |<xref:System.Data.Services.DataServiceConfiguration.MaxResultsPerCollection%2A>|Позволяет ограничить размер ответа путем ограничения количества сущностей в каждом наборе сущностей, возвращаемом в виде канала данных.|  
 |<xref:System.Data.Services.DataServiceConfiguration.RegisterKnownType%2A>|Добавляет тип данных в список типов, распознаваемых службой данных.|  
 |<xref:System.Data.Services.DataServiceConfiguration.SetEntitySetAccessRule%2A>|Задает права доступа для ресурсов набора сущностей, доступных в службе данных. Значение «звездочка» (`*`) может использоваться в параметре имени для задания доступа того же уровня для всех остальных наборов сущностей. Для предоставления минимального уровня прав доступа к ресурсам службы данных, необходимым клиентским приложениям рекомендуется задавать доступ к наборам сущностей. Дополнительные сведения см. в разделе [Securing WCF Data Services](../../../../docs/framework/data/wcf/securing-wcf-data-services.md). Примеры минимальных прав доступа для выполнения данного действия URI и HTTP, см. в таблице в [минимальные требования для доступа к ресурсам](../../../../docs/framework/data/wcf/configuring-the-data-service-wcf-data-services.md#accessRequirements) раздела.|  
@@ -68,7 +68,7 @@ ms.lasthandoff: 01/19/2018
 |------------------|-----------|--------------|-------------|------------|-----------|  
 |`/Customers`|<xref:System.Data.Services.EntitySetRights.ReadMultiple>|Не поддерживается|Не поддерживается|<xref:System.Data.Services.EntitySetRights.WriteAppend>|Не поддерживается|  
 |`/Customers('ALFKI')`|<xref:System.Data.Services.EntitySetRights.ReadSingle>|<xref:System.Data.Services.EntitySetRights.ReadSingle> и <xref:System.Data.Services.EntitySetRights.WriteDelete>.|<xref:System.Data.Services.EntitySetRights.ReadSingle> и <xref:System.Data.Services.EntitySetRights.WriteMerge>.|Н/Д|<xref:System.Data.Services.EntitySetRights.ReadSingle> и <xref:System.Data.Services.EntitySetRights.WriteReplace>.|  
-|`/Customers('ALFKI')/Orders`|`Customers`: <xref:System.Data.Services.EntitySetRights.ReadSingle><br /><br /> - и -<br /><br /> `Orders`: <xref:System.Data.Services.EntitySetRights.ReadMultiple>|Не поддерживается|Не поддерживается|`Customers`: <xref:System.Data.Services.EntitySetRights.ReadSingle> и <xref:System.Data.Services.EntitySetRights.WriteMerge> или <xref:System.Data.Services.EntitySetRights.WriteReplace><br /><br /> - и -<br /><br /> `Orders``:` и<xref:System.Data.Services.EntitySetRights.WriteAppend>|Не поддерживается|  
+|`/Customers('ALFKI')/Orders`|`Customers`: <xref:System.Data.Services.EntitySetRights.ReadSingle><br /><br /> - и -<br /><br /> `Orders`: <xref:System.Data.Services.EntitySetRights.ReadMultiple>|Не поддерживается|Не поддерживается|`Customers`: <xref:System.Data.Services.EntitySetRights.ReadSingle> и <xref:System.Data.Services.EntitySetRights.WriteMerge> или <xref:System.Data.Services.EntitySetRights.WriteReplace><br /><br /> - и -<br /><br /> `Orders` `:` и <xref:System.Data.Services.EntitySetRights.WriteAppend>|Не поддерживается|  
 |`/Customers('ALFKI')/Orders(10643)`|`Customers`: <xref:System.Data.Services.EntitySetRights.ReadSingle><br /><br /> - и -<br /><br /> `Orders`: <xref:System.Data.Services.EntitySetRights.ReadSingle>|`Customers`: <xref:System.Data.Services.EntitySetRights.ReadSingle><br /><br /> - и -<br /><br /> `Orders`: <xref:System.Data.Services.EntitySetRights.ReadSingle> и <xref:System.Data.Services.EntitySetRights.WriteDelete>|`Customers`: <xref:System.Data.Services.EntitySetRights.ReadSingle><br /><br /> - и -<br /><br /> `Orders`: <xref:System.Data.Services.EntitySetRights.ReadSingle> и <xref:System.Data.Services.EntitySetRights.WriteMerge>|Не поддерживается|`Customers`: <xref:System.Data.Services.EntitySetRights.ReadSingle><br /><br /> - и -<br /><br /> `Orders`: <xref:System.Data.Services.EntitySetRights.ReadSingle> и <xref:System.Data.Services.EntitySetRights.WriteReplace>|  
 |`/Orders(10643)/Customer`|`Customers`: <xref:System.Data.Services.EntitySetRights.ReadSingle><br /><br /> - и -<br /><br /> `Orders`: <xref:System.Data.Services.EntitySetRights.ReadSingle>|`Customers`: <xref:System.Data.Services.EntitySetRights.ReadSingle> и <xref:System.Data.Services.EntitySetRights.WriteDelete><br /><br /> - и -<br /><br /> `Orders`: <xref:System.Data.Services.EntitySetRights.ReadSingle>|`Customers`: <xref:System.Data.Services.EntitySetRights.ReadSingle> и <xref:System.Data.Services.EntitySetRights.WriteMerge>;<br /><br /> - и -<br /><br /> `Orders`: <xref:System.Data.Services.EntitySetRights.ReadSingle>|`Customers`: <xref:System.Data.Services.EntitySetRights.WriteAppend><br /><br /> - и -<br /><br /> `Orders`: <xref:System.Data.Services.EntitySetRights.WriteAppend> и <xref:System.Data.Services.EntitySetRights.ReadSingle>|Не поддерживается|  
 |`/Customers('ALFKI')/$links/Orders`|`Customers`: <xref:System.Data.Services.EntitySetRights.ReadSingle><br /><br /> - и -<br /><br /> `Orders`: <xref:System.Data.Services.EntitySetRights.ReadMultiple>|Не поддерживается|Не поддерживается|`Customers`: <xref:System.Data.Services.EntitySetRights.ReadSingle> и <xref:System.Data.Services.EntitySetRights.WriteMerge> или <xref:System.Data.Services.EntitySetRights.WriteReplace><br /><br /> - и -<br /><br /> `Orders`: <xref:System.Data.Services.EntitySetRights.ReadSingle>|Не поддерживается|  

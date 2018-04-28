@@ -16,16 +16,16 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 1e81a8eb27725edeccf3e5c7489109ba47b70dec
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 4e2afa9e868c1f561aed699a2bdf7d09c17898b3
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="hosting-in-a-managed-application"></a>Размещение в управляемом приложении
 Службы[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] можно разместить в любом приложении [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] . Резидентное размещение служб - самый гибкий вариант размещения, так как в этом случае требуется минимальное развертывание инфраструктуры. Однако это и наименее надежный вариант размещения, так как управляемые приложения не предоставляют дополнительные функции размещения и управления, как другие варианты размещения в [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], такие как службы IIS и службы Windows.  
   
- Для создания резидентной службы необходимо создать и открыть экземпляр узла службы <xref:System.ServiceModel.ServiceHost>, который запускает службу, ожидающую сообщений. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Как: размещение службы WCF в управляемом приложении](../../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md).  
+ Для создания резидентной службы необходимо создать и открыть экземпляр узла службы <xref:System.ServiceModel.ServiceHost>, который запускает службу, ожидающую сообщений. Дополнительные сведения см. в разделе [как: размещение службы WCF в приложениях, управляемых](../../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md).  
   
  Полный пример определения контракта, реализации контракта и размещения службы внутри управляемого приложения в разделе [учебник по началу работы](../../../../docs/framework/wcf/getting-started-tutorial.md) и [резидентной](../../../../docs/framework/wcf/samples/self-host.md).  
   

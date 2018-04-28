@@ -1,12 +1,13 @@
 ---
-title: "Известные типы контрактов данных"
-ms.custom: 
+title: Известные типы контрактов данных
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -16,23 +17,24 @@ helpviewer_keywords:
 - KnownTypeAttribute [WCF]
 - KnownTypes [WCF]
 ms.assetid: 1a0baea1-27b7-470d-9136-5bbad86c4337
-caps.latest.revision: "42"
+caps.latest.revision: 42
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 24d26358c0bf0440b2fbba143629a0e4bda21cec
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: c9c180a0f1544fa187ddb53ec79a47f908c298d7
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="data-contract-known-types"></a>Известные типы контрактов данных
 Класс <xref:System.Runtime.Serialization.KnownTypeAttribute> позволяет заранее задавать типы, которые следует рассматривать при десериализации. Рабочий пример см. в разделе [Known Types](../../../../docs/framework/wcf/samples/known-types.md) .  
   
  Обычно при передаче параметров и возвращаемых значений между клиентом и службой обе конечные точки совместно используют все контракты данных, относящиеся к передаваемым данным. Однако в следующих ситуациях это не так:  
   
--   Контракт отправляемых данных унаследован из контракта ожидаемых данных. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] подраздел, посвященный наследованию, в разделе [Data Contract Equivalence](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md)). В этом случае контракт передаваемых данных отличается от контракта данных, ожидаемого принимающей конечной точкой;  
+-   Контракт отправляемых данных унаследован из контракта ожидаемых данных. Дополнительные сведения см. в разделе о наследования в [эквивалентность контрактов данных](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md)). В этом случае контракт передаваемых данных отличается от контракта данных, ожидаемого принимающей конечной точкой;  
   
 -   объявленный тип передаваемых данных является интерфейсом, а не классом, структурой или перечислением. Поэтому невозможно заранее знать, какой именно из реализуемых этим интерфейсом типов будет передан, а следовательно принимающая конечная точка не может заранее определить контракт передаваемых данных;  
   

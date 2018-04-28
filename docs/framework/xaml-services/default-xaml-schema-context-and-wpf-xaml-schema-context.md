@@ -16,11 +16,11 @@ ms.author: wpickett
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: ec5e29ae9022470f8b583dc1b673a0b93040c862
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: ae7bd21f7dcb60f8cec3e9e4592969c63234cf13
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="default-xaml-schema-context-and-wpf-xaml-schema-context"></a>Контекст схемы языка XAML по умолчанию и контекст схемы языка XAML WPF
 Контекст схемы XAML представляет собой концептуальную сущность, который определяет, каким образом рабочей среды XAML, который использует определенный словарь XAML взаимодействует с поведением записи объектов, включая порядок разрешения сопоставлений типов, как сборки загружаются, как определенные средства чтения и записи параметры интерпретируются. В этом разделе описываются функции служб XAML .NET Framework и контекст схемы XAML по умолчанию, которая основана на системе типов среды CLR. Кроме того, в этом разделе описывается контекст схемы XAML, который используется для WPF.  
@@ -70,7 +70,7 @@ ms.lasthandoff: 04/26/2018
     -   Если имя не определено в сопоставлении, вызовите <xref:System.Reflection.Assembly.LoadWithPartialName%2A?displayProperty=nameWithType>.  
   
 #### <a name="xamlbuildtask"></a>XamlBuildTask  
- `XamlBuildTask` используется для [!INCLUDE[vsindigo](../../../includes/vsindigo-md.md)] и Windows Workflow Foundation.  
+ `XamlBuildTask` используется для Windows Communication Foundation (WCF) и Windows Workflow Foundation.  
   
  Обратите внимание, что в ссылки на сборку `XamlBuildTask` всегда являются полными.  
   

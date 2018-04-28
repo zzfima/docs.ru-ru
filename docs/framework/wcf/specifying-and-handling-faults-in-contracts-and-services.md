@@ -1,28 +1,28 @@
 ---
-title: "Задание и обработка сбоев в контрактах и службах"
-ms.custom: 
+title: Задание и обработка сбоев в контрактах и службах
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - handling faults [WCF]
 ms.assetid: a9696563-d404-4905-942d-1e0834c26dea
-caps.latest.revision: 
+caps.latest.revision: 22
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 57fc01b77379389ca4d86d241ec8f3d672b519b6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 70f8c1f89a5570f5b77eaba1bf72c42706d88947
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="specifying-and-handling-faults-in-contracts-and-services"></a>Задание и обработка сбоев в контрактах и службах
 Приложения [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] обрабатывают ошибки, сопоставляя объекты управляемых исключений с объектами ошибок SOAP и наоборот. В подразделах этого раздела описывается, как разрабатывать контракты, чтобы представлять ошибки в виде пользовательских ошибок SOAP, как возвращать эти ошибки в реализации службы, и как клиенты могут перехватывать такие ошибки.  
@@ -47,12 +47,12 @@ ms.lasthandoff: 12/22/2017
 ## <a name="map-exceptions-to-soap-faults"></a>Сопоставление исключений с ошибками SOAP  
  Первым шагом в создании операции, обрабатывающей ошибки, является определение условий, при которых клиентское приложение должно быть проинформировано об ошибках. Для некоторых операций имеются ошибки, относящиеся к их функциональности. Например, операция `PurchaseOrder` может возвратить конкретную информацию клиенту, которому больше не разрешено размещать заказ на покупку. В других случаях, например в службе `Calculator`, более общая ошибка SOAP `MathFault` может описать все условия ошибки во всей службе. После определения ошибок клиентов может быть создана пользовательская ошибка SOAP. Кроме того, можно отметить, что операция возвращает данную эту ошибку при возникновении соответствующей ошибки.  
   
- [!INCLUDE[crabout](../../../includes/crabout-md.md)]Этот шаг по разработке службы или клиента, в разделе [определение и указание ошибок](../../../docs/framework/wcf/defining-and-specifying-faults.md).  
+ [!INCLUDE[crabout](../../../includes/crabout-md.md)] Этот шаг по разработке службы или клиента, в разделе [определение и указание ошибок](../../../docs/framework/wcf/defining-and-specifying-faults.md).  
   
 ## <a name="clients-and-services-handle-soap-faults-as-exceptions"></a>Клиенты и службы обрабатывают ошибки SOAP в виде исключений  
  Идентификация ошибок операции, определение пользовательских ошибок SOAP и пометка операций, которые возвращают эти ошибки, являются первыми шагами для успешной обработки ошибок в приложениях [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]. Следующий шаг заключается в надлежащей реализации отправки и получения этих ошибок. Обычно службы отправляют сообщения об ошибках, чтобы информировать клиентские приложения, но дуплексные клиенты также могут отправлять службам сообщения об ошибках протокола SOAP.  
   
- [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Отправки и получения ошибки](../../../docs/framework/wcf/sending-and-receiving-faults.md).  
+ Дополнительные сведения см. в разделе [отправка и получение ошибки](../../../docs/framework/wcf/sending-and-receiving-faults.md).  
   
 ## <a name="undeclared-soap-faults-and-debugging"></a>Необъявленные ошибки протокола SOAP и отладка  
  Объявленные ошибки протокола SOAP очень полезны для построения надежных распределенных приложений с возможностью взаимодействия. Однако в некоторых случаях для службы (или дуплексного клиента) полезно отправлять необъявленную ошибку SOAP, которая не упоминается для данной операции в языке WSDL. Например, при разработке службы могут произойти непредвиденные ситуации, в которых для отладки понадобится отправить информацию обратно клиенту. Кроме того, для свойства <xref:System.ServiceModel.ServiceBehaviorAttribute.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> или <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> можно задать значение `true`, чтобы разрешить клиентам [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] получать информацию о внутренних исключениях операции службы. Отправка отдельных ошибок и задание свойств отладки поведения описаны в [отправка и получение ошибки](../../../docs/framework/wcf/sending-and-receiving-faults.md).  

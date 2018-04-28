@@ -1,27 +1,29 @@
 ---
-title: "Вопросы безопасности для данных"
-ms.custom: 
+title: Вопросы безопасности для данных
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: a7eb98da-4a93-4692-8b59-9d670c79ffb2
-caps.latest.revision: "23"
+caps.latest.revision: 23
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: bb7a40bc38a3fdf3f7be2b31e30e768e26be2d15
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: aa0692c130fdfcf3685c152cdcb73a07d041ab9b
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="security-considerations-for-data"></a>Вопросы безопасности для данных
 При работе с данными в [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]следует учитывать ряд категорий угроз. В следующей таблице представлен список наиболее важных классов угроз, относящихся к обработке данных. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] предоставляет средства для борьбы с такими угрозами.  
@@ -44,7 +46,7 @@ ms.lasthandoff: 12/22/2017
   
  Следует гарантировать, что вредоносный код не попадет в систему в разных точках расширяемости. Это особенно уместно в случае частичного доверия, когда ведется работа с частично доверенными сборками или создаются компоненты, используемые частично доверенным кодом. Дополнительные сведения см. далее в разделе "Угрозы частично доверенных компонентов".  
   
- Обратите внимание, что при частичном доверии инфраструктура сериализации контракта данных поддерживает только ограниченный набор модели программирования контрактов данных (например элементы закрытых данных или типы, использующие атрибуты <xref:System.SerializableAttribute> , не поддерживаются). [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Частичного доверия](../../../../docs/framework/wcf/feature-details/partial-trust.md).  
+ Обратите внимание, что при частичном доверии инфраструктура сериализации контракта данных поддерживает только ограниченный набор модели программирования контрактов данных (например элементы закрытых данных или типы, использующие атрибуты <xref:System.SerializableAttribute> , не поддерживаются). Дополнительные сведения см. в разделе [частичного доверия](../../../../docs/framework/wcf/feature-details/partial-trust.md).  
   
 ## <a name="avoiding-unintentional-information-disclosure"></a>Предупреждение ненамеренного раскрытия информации  
  При разработке сериализуемых типов с учетом безопасности следует обратить внимание на проблему раскрытия информации.  
@@ -121,7 +123,7 @@ ms.lasthandoff: 12/22/2017
 ### <a name="slow-stream-attacks"></a>Атаки типа "медленная потоковая передача"  
  Класс атак типа "отказ в обслуживании" при потоковой передаче не относится к потреблению памяти. Вместо этого при такой атаке происходит замедление работы отправителя или получателя данных. По мере ожидания отправки или получения данных истощаются такие ресурсы, как потоки и доступные подключения. Такая ситуация может возникнуть либо в результате вредоносной атаки, либо вследствие допустимого отправителя/получателя с медленным сетевым подключением.  
   
- Чтобы устранить такие атаки, следует правильно задать значения времени ожидания транспорта. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Квоты транспорта](../../../../docs/framework/wcf/feature-details/transport-quotas.md). Кроме того, запрещается использовать синхронные операции `Read` или `Write` во время работы с потоками в [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ Чтобы устранить такие атаки, следует правильно задать значения времени ожидания транспорта. Дополнительные сведения см. в разделе [квоты транспорта](../../../../docs/framework/wcf/feature-details/transport-quotas.md). Кроме того, запрещается использовать синхронные операции `Read` или `Write` во время работы с потоками в [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
   
 ## <a name="using-xml-safely"></a>Безопасное использование XML  
   
@@ -177,7 +179,7 @@ ms.lasthandoff: 12/22/2017
   
  Свойства <xref:System.Xml.XmlDictionaryReaderQuotas.MaxNameTableCharCount%2A>, `MaxStringContentLength`и `MaxArrayLength` ограничивают только потребление памяти. Как правило, они не требуются для устранения каких-либо угроз непотокового использования, поскольку выделение памяти уже ограничено `MaxReceivedMessageSize`. Однако `MaxReceivedMessageSize` учитывает байты предварительного расширения. При использовании двоичного кодирования потребление памяти потенциально может выйти за рамки `MaxReceivedMessageSize`, ограничиваясь только <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement.MaxSessionSize%2A>. По этой причине, если используется двоичное кодирование, важно всегда задавать все квоты средства чтения (особенно <xref:System.Xml.XmlDictionaryReaderQuotas.MaxStringContentLength%2A>).  
   
- При использовании двоичного кодирования наряду с <xref:System.Runtime.Serialization.DataContractSerializer>возможно неправильное использование интерфейса `IExtensibleDataObject` , что может вызвать атаку типа "расширение словаря". По существу этот интерфейс предоставляет неограниченное пространство для произвольных данных, не являющихся частью контракта. Если невозможно задать достаточно низкие квоты, чтобы произведение `MaxSessionSize` и `MaxReceivedMessageSize` не представляло бы проблемы, при использовании двоичного кодирования отключите функцию `IExtensibleDataObject` . Задайте для свойства `IgnoreExtensionDataObject` значение `true` для атрибута `ServiceBehaviorAttribute` . В качестве альтернативы можно не реализовывать интерфейс `IExtensibleDataObject` . [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Контракты данных, совместимые с любыми будущими](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md).  
+ При использовании двоичного кодирования наряду с <xref:System.Runtime.Serialization.DataContractSerializer>возможно неправильное использование интерфейса `IExtensibleDataObject` , что может вызвать атаку типа "расширение словаря". По существу этот интерфейс предоставляет неограниченное пространство для произвольных данных, не являющихся частью контракта. Если невозможно задать достаточно низкие квоты, чтобы произведение `MaxSessionSize` и `MaxReceivedMessageSize` не представляло бы проблемы, при использовании двоичного кодирования отключите функцию `IExtensibleDataObject` . Задайте для свойства `IgnoreExtensionDataObject` значение `true` для атрибута `ServiceBehaviorAttribute` . В качестве альтернативы можно не реализовывать интерфейс `IExtensibleDataObject` . Дополнительные сведения о создании контрактов данных, обладающих прямой совместимостью, см. в разделе [Контракты данных, совместимые с любыми будущими изменениями](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md).  
   
 ### <a name="quotas-summary"></a>Сводка по квотам  
  В следующей таблице приводятся сводные правила использования квот.  
@@ -259,7 +261,7 @@ ms.lasthandoff: 12/22/2017
   
 -   Когда <xref:System.Runtime.Serialization.DataContractSerializer> десериализует большинство классов, конструкторы не работают. Поэтому не следует полагаться на какое-либо управление состоянием, осуществленное в конструкторе.  
   
--   Чтобы убедиться в действительном состоянии объекта, используйте обратные вызовы. Обратный вызов, отмеченный атрибутом <xref:System.Runtime.Serialization.OnDeserializedAttribute> , особенно полезен, поскольку он запускается по завершении сериализации и позволяет изучить и исправить общее состояние. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Обратных вызовов независимой от версий сериализации](../../../../docs/framework/wcf/feature-details/version-tolerant-serialization-callbacks.md).  
+-   Чтобы убедиться в действительном состоянии объекта, используйте обратные вызовы. Обратный вызов, отмеченный атрибутом <xref:System.Runtime.Serialization.OnDeserializedAttribute> , особенно полезен, поскольку он запускается по завершении сериализации и позволяет изучить и исправить общее состояние. Дополнительные сведения см. в разделе [обратных вызовов независимой от версий сериализации](../../../../docs/framework/wcf/feature-details/version-tolerant-serialization-callbacks.md).  
   
 -   Не создавайте типы контрактов данных, полагаясь на какой-либо определенный порядок, в котором требуется вызов методов задания свойств.  
   
@@ -267,10 +269,10 @@ ms.lasthandoff: 12/22/2017
   
 -   Чтобы гарантировать наличие данных с учетом обеспечения безопасности состояния, не следует полагаться на свойство <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> атрибута `DataMemberAttribute` . Данные всегда могут быть `null`, `zero` или `invalid`.  
   
--   Никогда не доверяйте графу объекта, десериализованному из источника ненадежных данных, не определив сначала его действительность. Каждый отдельный объект может находиться в согласованном состоянии, однако весь граф объекта в таком состоянии может и не находиться. Более того, даже если выключен режим сохранения графа объекта, десериализованный граф может содержать несколько ссылок на небольшой объект или содержать циклические ссылки. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Сериализации и десериализации](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md).  
+-   Никогда не доверяйте графу объекта, десериализованному из источника ненадежных данных, не определив сначала его действительность. Каждый отдельный объект может находиться в согласованном состоянии, однако весь граф объекта в таком состоянии может и не находиться. Более того, даже если выключен режим сохранения графа объекта, десериализованный граф может содержать несколько ссылок на небольшой объект или содержать циклические ссылки. Дополнительные сведения см. в разделе [сериализации и десериализации](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md).  
   
 ### <a name="using-the-netdatacontractserializer-securely"></a>Безопасное использование NetDataContractSerializer  
- <xref:System.Runtime.Serialization.NetDataContractSerializer> представляет собой ядро сериализации, использующее тесное соединение с типами. Это аналогично <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> и <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>. То есть он определяет, какой тип следует создать посредством чтения имени сборки и типа [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] из входящих данных. Несмотря на то что он входит в состав [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], не существует надежного метода подключения этого ядра сериализации; необходимо написать пользовательский код. `NetDataContractSerializer` предусмотрен в основном для упрощения перехода от удаленного доступа [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] к [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] соответствующий раздел в [Serialization and Deserialization](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md).  
+ <xref:System.Runtime.Serialization.NetDataContractSerializer> представляет собой ядро сериализации, использующее тесное соединение с типами. Это аналогично <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> и <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>. То есть он определяет, какой тип следует создать посредством чтения имени сборки и типа [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] из входящих данных. Несмотря на то что он входит в состав [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], не существует надежного метода подключения этого ядра сериализации; необходимо написать пользовательский код. `NetDataContractSerializer` предусмотрен в основном для упрощения перехода от удаленного доступа [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] к [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Дополнительные сведения см. в разделе соответствующий раздел в [сериализации и десериализации](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md).  
   
  Поскольку само сообщение может указывать любой тип, который можно загрузить, механизм <xref:System.Runtime.Serialization.NetDataContractSerializer> по своей природе небезопасен и должен использоваться только с надежными данными. Его безопасность можно обеспечить, написав безопасный связыватель с ограничением типов, который разрешает загрузку только безопасных типов (с использованием свойства <xref:System.Runtime.Serialization.NetDataContractSerializer.Binder%2A> ).  
   

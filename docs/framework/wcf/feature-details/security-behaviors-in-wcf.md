@@ -1,24 +1,26 @@
 ---
-title: "Поведения безопасности в WCF"
-ms.custom: 
+title: Поведения безопасности в WCF
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 513232c0-39fd-4409-bda6-5ebd5e0ea7b0
-caps.latest.revision: "23"
+caps.latest.revision: 23
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 19d67d99ddf6bab69aa1e5f993917142a4378105
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 98323b4d29b68d57d3c01e9a007b5f0f9fc08377
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="security-behaviors-in-wcf"></a>Поведения безопасности в WCF
 В [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] поведения изменяют порядок работы во время выполнения на уровне службы или на уровне конечной точки. ([!INCLUDE[crabout](../../../../includes/crabout-md.md)] поведений см в разделе [указание поведения службы во время выполнения](../../../../docs/framework/wcf/specifying-service-run-time-behavior.md).) *Поведения безопасности* позволяют управлять учетными данными, проверкой подлинности, авторизацией и журналами аудита. Поведения можно использовать путем программирования или через конфигурацию. В этом разделе основное внимание уделяется настройке следующих поведений, связанных с функциями безопасности:  
@@ -64,10 +66,10 @@ ms.lasthandoff: 12/22/2017
 ### <a name="servicecertificate-element"></a>\<serviceCertificate > элемента  
  Этот элемент используется для задания сертификата X.509, который используется для проверки подлинности службы при подключении к клиентам в режиме безопасности сообщений. Если используется сертификат, который периодически обновляется, то его отпечаток изменяется. В этом случае следует использовать имя субъекта в виде `X509FindType`, поскольку сертификат может быть выдан повторно с тем же именем субъекта.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]с помощью элемента, в разделе [как: задание значений учетных данных клиента](../../../../docs/framework/wcf/how-to-specify-client-credential-values.md).  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)] с помощью элемента, в разделе [как: задание значений учетных данных клиента](../../../../docs/framework/wcf/how-to-specify-client-credential-values.md).  
   
 ### <a name="certificate-of-clientcertificate-element"></a>\<сертификат > из \<clientCertificate > элемента  
- Используйте [ \<сертификата >](../../../../docs/framework/configure-apps/file-schema/wcf/certificate-of-clientcertificate-element.md) элемент, если служба должна получить клиентский сертификат заранее для безопасного обмена данными с клиентом. Это характерно для дуплексного обмена данными. В более распространенном варианте "запрос/ответ" клиент включает сертификат в запрос, который используется службой для обеспечения безопасности отклика, направляемого назад клиенту. Однако при дуплексном обмене данными запросы и ответы не используются. Служба не может логически вывести сертификат клиента из передаваемых данных, поэтому служба должна заранее получить сертификат клиента, чтобы обеспечить безопасность сообщений для клиента. Необходимо получить сертификат клиента при согласовании вне диапазона и указать сертификат с помощью этого элемента. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]дуплексные службы в разделе [как: создание дуплексного контракта](../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md).  
+ Используйте [ \<сертификата >](../../../../docs/framework/configure-apps/file-schema/wcf/certificate-of-clientcertificate-element.md) элемент, если служба должна получить клиентский сертификат заранее для безопасного обмена данными с клиентом. Это характерно для дуплексного обмена данными. В более распространенном варианте "запрос/ответ" клиент включает сертификат в запрос, который используется службой для обеспечения безопасности отклика, направляемого назад клиенту. Однако при дуплексном обмене данными запросы и ответы не используются. Служба не может логически вывести сертификат клиента из передаваемых данных, поэтому служба должна заранее получить сертификат клиента, чтобы обеспечить безопасность сообщений для клиента. Необходимо получить сертификат клиента при согласовании вне диапазона и указать сертификат с помощью этого элемента. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] дуплексные службы в разделе [как: создание дуплексного контракта](../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md).  
   
 ### <a name="authentication-of-clientcertificate-element"></a>\<Проверка подлинности > из \<clientCertificate > элемента  
  [ \<Проверки подлинности >](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-clientcertificate-element.md) элемент позволяет настраивать способ проверки подлинности клиентов. Для атрибута `CertificateValidationMode` можно задать значение `None`, `ChainTrust`, `PeerOrChainTrust`, `PeerTrust` или `Custom`. По умолчанию имеет значение уровень `ChainTrust`, которое указывает, что каждый сертификат должен находиться в иерархии сертификатов, заканчивающейся *корневой центр* в верхней части цепочки. Это наиболее безопасный режим. Также можно установить значение `PeerOrChainTrust`, в этом случае будут приниматься как самостоятельно выдаваемые сертификаты (доверие одноранговой группы), так и сертификаты, которые находятся в цепи доверия. Данное значение используется при разработке и отладке клиентов и служб, так как самостоятельно выданные сертификаты не нужно приобретать у доверенного центра сертификации. При развертывании клиента вместо этого значения следует использовать значение `ChainTrust`. Также можно установить значение `Custom`. При установке значения `Custom` необходимо также задать атрибут `CustomCertificateValidatorType` для сборки и тип, который используется при проверке сертификата. Для создания собственного пользовательского модуля проверки необходимо наследование от абстрактного класса <xref:System.IdentityModel.Selectors.X509CertificateValidator>.  
@@ -93,9 +95,9 @@ ms.lasthandoff: 12/22/2017
   
 -   Задайте набор допустимых универсальных кодов ресурса (URI), добавив их в данную коллекцию. Чтобы сделать это, вставьте [ \<Добавить >](../../../../docs/framework/configure-apps/file-schema/wcf/add-of-allowedaudienceuris.md) для каждого универсального кода Ресурса  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator>.  
+ Дополнительные сведения см. в разделе <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator>.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]с помощью данного элемента конфигурации в разделе [как: Настройка учетных данных службы федерации](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md).  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)] с помощью данного элемента конфигурации в разделе [как: Настройка учетных данных службы федерации](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md).  
   
 #### <a name="allowing-anonymous-cardspace-users"></a>Разрешение анонимных пользователей CardSpace  
  Если для атрибута `AllowUntrustedRsaIssuers` элемента `<IssuedTokenAuthentication>` явно задано значение `true`, любой клиент может представить самостоятельно выданный маркер, подписанный произвольной парой ключей RSA. Поставщик является *ненадежных* поскольку ключ имеет никакие данные издателя, связанные с ним. Пользователь [!INCLUDE[infocard](../../../../includes/infocard-md.md)] может создать самостоятельно изданную карту, содержащую самостоятельно предоставленные утверждения идентификации. Эту возможность следует использовать с осторожностью. Используя эту функцию, считайте открытый ключ RSA просто более безопасным паролем, который должен храниться в базе данных вместе с именем пользователя. Прежде чем разрешить клиенту доступ к службе, проверьте представленный клиентом открытый ключ RSA, сравнив его с хранящимся открытым ключом для указанного имени пользователя. Это подразумевает, что организован процесс регистрации, в котором пользователи могут регистрировать свои имена пользователя и связывать их с самостоятельно изданными открытыми ключами RSA.  
@@ -103,7 +105,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="client-credentials"></a>Учетные данные клиента  
  Учетные данные клиента используются для проверки подлинности клиента при подключении к службам в случаях, когда требуется взаимная проверка подлинности. Данный раздел можно использовать для задания сертификатов служб для сценариев, где клиент должен обеспечить защиту сообщений, передаваемых службе, с помощью сертификатов службы.  
   
- В рамках сценария федерации также можно настроить в клиенте использование токенов, выданных службой токенов безопасности или локальным источником токенов. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]федеративных сценариев, в разделе [Федерация и выданные маркеры](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md). Все учетные данные клиента будут расположены в [ \<endpointBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/endpointbehaviors.md), как показано в следующем коде.  
+ В рамках сценария федерации также можно настроить в клиенте использование токенов, выданных службой токенов безопасности или локальным источником токенов. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] федеративных сценариев, в разделе [Федерация и выданные маркеры](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md). Все учетные данные клиента будут расположены в [ \<endpointBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/endpointbehaviors.md), как показано в следующем коде.  
   
 ```xml  
 <behaviors>  
@@ -126,16 +128,16 @@ ms.lasthandoff: 12/22/2017
 ```  
   
 #### <a name="clientcertifictate-element"></a>\<clientCertifictate > элемент  
- Задает сертификат, используемый для проверки подлинности клиента с помощью этого элемента. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Как: укажите значений учетных данных клиента](../../../../docs/framework/wcf/how-to-specify-client-credential-values.md).  
+ Задает сертификат, используемый для проверки подлинности клиента с помощью этого элемента. Дополнительные сведения см. в разделе [как: задание значений учетных данных клиента](../../../../docs/framework/wcf/how-to-specify-client-credential-values.md).  
   
 #### <a name="httpdigest"></a>\<httpDigest >  
- Эта возможность должна быть включена с помощью Active Directory в Windows и службах IIS. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Дайджест-проверка подлинности в IIS 6.0](http://go.microsoft.com/fwlink/?LinkId=88443).  
+ Эта возможность должна быть включена с помощью Active Directory в Windows и службах IIS. Дополнительные сведения см. в разделе [дайджест-проверка подлинности в IIS 6.0](http://go.microsoft.com/fwlink/?LinkId=88443).  
   
 #### <a name="issuedtoken-element"></a>\<issuedToken > элемент  
  [ \<IssuedToken >](../../../../docs/framework/configure-apps/file-schema/wcf/issuedtoken.md) содержит элементы, используемые для настройки локального издателя маркеров, или поведения, используемые со службой маркеров безопасности. Инструкции по настройке клиента для использования локального издателя см. в разделе [как: Настройка локального издателя](../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md).  
   
 #### <a name="localissueraddress"></a>\<localIssuerAddress >  
- Задает адрес службы маркеров безопасности по умолчанию. Этот адрес используется, если <xref:System.ServiceModel.WSFederationHttpBinding> не предоставляет URL-адрес для службы маркеров безопасности или если адрес издателя федеративной привязки имеет значение http://schemas.microsoft.com/2005/12/ServiceModel/Addressing/Anonymous либо `null`. В этих случаях необходимо настроить объект <xref:System.ServiceModel.Description.ClientCredentials> с использованием адреса локального издателя и привязки, с помощью которой будет осуществляться взаимодействие с этим издателем.  
+ Задает адрес службы маркеров безопасности по умолчанию. Этот параметр используется при <xref:System.ServiceModel.WSFederationHttpBinding> не предоставляет URL-адрес для службы маркеров безопасности или адрес издателя федеративной привязки имеет http://schemas.microsoft.com/2005/12/ServiceModel/Addressing/Anonymous или `null`. В этих случаях необходимо настроить объект <xref:System.ServiceModel.Description.ClientCredentials> с использованием адреса локального издателя и привязки, с помощью которой будет осуществляться взаимодействие с этим издателем.  
   
 #### <a name="issuerchannelbehaviors"></a>\<issuerChannelBehaviors >  
  Используйте [ \<issuerChannelBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/issuerchannelbehaviors-element.md) добавление [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] поведений клиента, используемых при обмене данными со службой маркеров безопасности. Определение поведения клиента в [ \<endpointBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/endpointbehaviors.md) раздела. С помощью определенного поведения, добавьте <`add`> элемента `<issuerChannelBehaviors>` элемент с двумя атрибутами. Задайте в атрибуте `issuerAddress` URL-адрес службы маркеров безопасности, а в атрибуте `behaviorConfiguration` - имя определенного поведения конечной точки, как показано в следующем примере.  
@@ -155,9 +157,9 @@ ms.lasthandoff: 12/22/2017
   
  Используйте [ \<scopedCertificates >](../../../../docs/framework/configure-apps/file-schema/wcf/scopedcertificates-element.md) и [ \<Добавить >](../../../../docs/framework/configure-apps/file-schema/wcf/add-of-scopedcertificates-element.md) для задания сертификатов служб, связанных с отдельными службами. Элемент `<add>` содержит атрибут `targetUri`, который служит для связывания сертификата со службой.  
   
- [ \<Проверки подлинности >](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-servicecertificate-element.md) элемент указывает уровень доверия, который используется для проверки подлинности сертификатов. По умолчанию для уровня устанавливается значение ChainTrust, указывающее, что каждый сертификат должен находиться в иерархии сертификатов, которая на самом верху цепи завершается доверенным центром сертификации. Это наиболее безопасный режим. Также можно установить значение PeerOrChainTrust. В этом случае будут приниматься как самостоятельно выдаваемые сертификаты (доверие одноранговой группы), так и сертификаты, которые находятся в цепочке доверия. Данное значение используется при разработке и отладке клиентов и служб, так как самостоятельно выданные сертификаты не нужно приобретать у доверенного центра сертификации. При развертывании клиента вместо этого значения следует использовать значение "ChainTrust". Также можно задать значение "Custom" или "None". Чтобы использовать значение "Custom", необходимо также установить для атрибута `CustomCertificateValidatorType` значение сборки и типа, которые используются при проверке сертификата. Для создания собственного пользовательского модуля проверки необходимо наследование от абстрактного класса <xref:System.IdentityModel.Selectors.X509CertificateValidator>. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Как: создание службы, использующей пользовательский сертификат проверяющий элемент управления](../../../../docs/framework/wcf/extending/how-to-create-a-service-that-employs-a-custom-certificate-validator.md).  
+ [ \<Проверки подлинности >](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-servicecertificate-element.md) элемент указывает уровень доверия, который используется для проверки подлинности сертификатов. По умолчанию для уровня устанавливается значение ChainTrust, указывающее, что каждый сертификат должен находиться в иерархии сертификатов, которая на самом верху цепи завершается доверенным центром сертификации. Это наиболее безопасный режим. Также можно установить значение PeerOrChainTrust. В этом случае будут приниматься как самостоятельно выдаваемые сертификаты (доверие одноранговой группы), так и сертификаты, которые находятся в цепочке доверия. Данное значение используется при разработке и отладке клиентов и служб, так как самостоятельно выданные сертификаты не нужно приобретать у доверенного центра сертификации. При развертывании клиента вместо этого значения следует использовать значение "ChainTrust". Также можно задать значение "Custom" или "None". Чтобы использовать значение "Custom", необходимо также установить для атрибута `CustomCertificateValidatorType` значение сборки и типа, которые используются при проверке сертификата. Для создания собственного пользовательского модуля проверки необходимо наследование от абстрактного класса <xref:System.IdentityModel.Selectors.X509CertificateValidator>. Дополнительные сведения см. в разделе [как: создание службы, использующей пользовательское средство проверки сертификатов](../../../../docs/framework/wcf/extending/how-to-create-a-service-that-employs-a-custom-certificate-validator.md).  
   
- [ \<Проверки подлинности >](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-servicecertificate-element.md) элемент включает в себя `RevocationMode` атрибут, указывающий способ проверки отозванных сертификатов. По умолчанию используется значение online, которое указывает, что проверка отзыва сертификата выполняется автоматически. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Работа с сертификатами](../../../../docs/framework/wcf/feature-details/working-with-certificates.md).  
+ [ \<Проверки подлинности >](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-servicecertificate-element.md) элемент включает в себя `RevocationMode` атрибут, указывающий способ проверки отозванных сертификатов. По умолчанию используется значение online, которое указывает, что проверка отзыва сертификата выполняется автоматически. Дополнительные сведения см. в разделе [работа с сертификатами](../../../../docs/framework/wcf/feature-details/working-with-certificates.md).  
   
 ## <a name="serviceauthorization"></a>ServiceAuthorization  
  [ \<ServiceAuthorization >](../../../../docs/framework/configure-apps/file-schema/wcf/serviceauthorization-element.md) элемент содержит элементы, влияющие на авторизацию, поставщики пользовательских ролей и олицетворение.  
@@ -199,7 +201,7 @@ ms.lasthandoff: 12/22/2017
 ```  
   
 ## <a name="configuring-security-audits"></a>Настройка аудита безопасности  
- Используйте [ \<serviceSecurityAudit >](../../../../docs/framework/configure-apps/file-schema/wcf/servicesecurityaudit.md) для указания записи журнала и какие типы событий в журнал. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Аудита](../../../../docs/framework/wcf/feature-details/auditing-security-events.md).  
+ Используйте [ \<serviceSecurityAudit >](../../../../docs/framework/configure-apps/file-schema/wcf/servicesecurityaudit.md) для указания записи журнала и какие типы событий в журнал. Дополнительные сведения см. в разделе [аудита](../../../../docs/framework/wcf/feature-details/auditing-security-events.md).  
   
 ```xml  
 <system.serviceModel>  
@@ -215,7 +217,7 @@ ms.lasthandoff: 12/22/2017
 ```  
   
 ## <a name="secure-metadata-exchange"></a>Безопасный обмен метаданными  
- Экспорт метаданных в клиенты удобен для разработчиков служб и клиентов, так как позволяет загружать конфигурацию и код клиента. Для снижения подверженности службы действиям недобросовестных пользователей перенос можно защитить с помощью механизма SSL по протоколу HTTP (HTTPS). Для этого необходимо вначале выполнить привязку подходящего сертификата X.509 к конкретному порту компьютера, на котором размещена служба. ([!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Работа с сертификатами](../../../../docs/framework/wcf/feature-details/working-with-certificates.md).) Во-вторых, добавьте [ \<serviceMetadata >](../../../../docs/framework/configure-apps/file-schema/wcf/servicemetadata.md) конфигурации службы и установите `HttpsGetEnabled` атрибут `true`. После этого следует присвоить атрибуту `HttpsGetUrl` URL-адрес конечной точки метаданных службы, как показано в следующем примере.  
+ Экспорт метаданных в клиенты удобен для разработчиков служб и клиентов, так как позволяет загружать конфигурацию и код клиента. Для снижения подверженности службы действиям недобросовестных пользователей перенос можно защитить с помощью механизма SSL по протоколу HTTP (HTTPS). Для этого необходимо вначале выполнить привязку подходящего сертификата X.509 к конкретному порту компьютера, на котором размещена служба. (Дополнительные сведения см. в разделе [работа с сертификатами](../../../../docs/framework/wcf/feature-details/working-with-certificates.md).) Во-вторых, добавьте [ \<serviceMetadata >](../../../../docs/framework/configure-apps/file-schema/wcf/servicemetadata.md) конфигурации службы и установите `HttpsGetEnabled` атрибут `true`. После этого следует присвоить атрибуту `HttpsGetUrl` URL-адрес конечной точки метаданных службы, как показано в следующем примере.  
   
 ```xml  
 <behaviors>  

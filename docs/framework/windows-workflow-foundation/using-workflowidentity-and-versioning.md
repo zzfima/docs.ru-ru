@@ -1,23 +1,24 @@
 ---
-title: "Использование WorkflowIdentity и управления версиями"
-ms.custom: 
+title: Использование WorkflowIdentity и управления версиями
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: b8451735-8046-478f-912b-40870a6c0c3a
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 02620abf421256b53fb5919b39f441f7346a2e7c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: bc527fe59468544cf94256d100a1f90dd3cd44dd
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="using-workflowidentity-and-versioning"></a>Использование WorkflowIdentity и управления версиями
 <xref:System.Activities.WorkflowIdentity> предоставляет разработчикам приложений рабочих процессов способ связать имя и <xref:System.Version> с определением рабочего процесса, а также связать эти сведения с сохраненным экземпляром рабочего процесса. Эти идентификационные данные могут быть использованы разработчиками приложений рабочего процесса для поддержки таких сценариев, как параллельное выполнение нескольких версий определения рабочего процесса, и являются ключевым элементом для других функциональных возможностей, таких как динамическое обновление. В этом разделе представлены общие сведения об использовании <xref:System.Activities.WorkflowIdentity> с размещением <xref:System.Activities.WorkflowApplication>. Сведения о выполнении side-by-side определения рабочего процесса в службе рабочего процесса см. в разделе [параллельное управление версиями в WorkflowServiceHost](../../../docs/framework/wcf/feature-details/side-by-side-versioning-in-workflowservicehost.md). Сведения о динамическом обновлении см. в разделе [динамического обновления](../../../docs/framework/windows-workflow-foundation/dynamic-update.md).  
@@ -32,7 +33,7 @@ ms.lasthandoff: 12/22/2017
   
     -   [Чтобы обновить схему базы данных](../../../docs/framework/windows-workflow-foundation/using-workflowidentity-and-versioning.md#ToUpgrade)  
   
-##  <a name="UsingWorkflowIdentity"></a>Использование WorkflowIdentity  
+##  <a name="UsingWorkflowIdentity"></a> Использование WorkflowIdentity  
  Чтобы использовать <xref:System.Activities.WorkflowIdentity>, создайте экземпляр, настройте его и свяжите с экземпляром <xref:System.Activities.WorkflowApplication>. В экземпляре <xref:System.Activities.WorkflowIdentity> содержатся три элемента информации для идентификации. <xref:System.Activities.WorkflowIdentity.Name%2A> и <xref:System.Activities.WorkflowIdentity.Version%2A> содержат имя и <xref:System.Version> и являются обязательными, а <xref:System.Activities.WorkflowIdentity.Package%2A> является необязательным и может использоваться для указания дополнительной строки с информацией (например, именем сборки или другими полезными сведениями). <xref:System.Activities.WorkflowIdentity> уникален, если какое-либо из его трех свойств отличается от другого <xref:System.Activities.WorkflowIdentity>.  
   
 > [!IMPORTANT]
@@ -87,13 +88,13 @@ wfApp.Load(instanceId);
  Если предыдущий код выполняется, выдается исключение <xref:System.Activities.VersionMismatchException>.  
   
  **Параметр WorkflowIdentity ("MortgageWorkflow v1. Версия = 1.0.0.0") загруженного экземпляра не соответствует WorkflowIdentity (" MortgageWorkflow v2. Версия = 2.0.0.0") из предоставленного определения рабочего процесса. Экземпляр можно загрузить с помощью другого определения или обновить с помощью динамического обновления.**  
-###  <a name="SxS"></a>Выполнение Side-by-side, с помощью WorkflowIdentity  
+###  <a name="SxS"></a> Выполнение Side-by-side, с помощью WorkflowIdentity  
  Метод <xref:System.Activities.WorkflowIdentity> можно использовать, чтобы облегчить параллельное выполнение нескольких версий рабочего процесса. Одним из типичных сценариев является изменение бизнес-требований в длительном рабочем процессе. Несколько экземпляров рабочего процесса могут выполняться при развертывании обновленной версии. Ведущее приложение можно настроить для использования обновленного определения рабочего процесса при запуске новых экземпляров. Обязанностью ведущего приложения является предоставление правильного определения рабочего процесса при возобновлении экземпляров. <xref:System.Activities.WorkflowIdentity> можно использовать для определения и предоставления соответствующего определения рабочего процесса при возобновлении экземпляров рабочего процесса.  
   
  Для получения <xref:System.Activities.WorkflowIdentity> сохраненного экземпляра рабочего процесса используется метод <xref:System.Activities.WorkflowApplication.GetInstance%2A>. Метод <xref:System.Activities.WorkflowApplication.GetInstance%2A> принимает <xref:System.Activities.WorkflowApplication.Id%2A> сохраненного экземпляра рабочего процесса и <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>, который содержит сохраненный экземпляр и возвращает <xref:System.Activities.WorkflowApplicationInstance>. Объект <xref:System.Activities.WorkflowApplicationInstance> содержит сведения о сохраненном экземпляре рабочего процесса, включая связанный с ним <xref:System.Activities.WorkflowIdentity>. Связанный объект <xref:System.Activities.WorkflowIdentity> может использоваться ведущим приложением, чтобы указать правильное определение рабочего процесса при загрузке и возобновлении экземпляра рабочего процесса.  
   
 > [!NOTE]
->  Значение NULL для <xref:System.Activities.WorkflowIdentity> допустимо и может использоваться основным приложением для сопоставления экземпляров, которые были сохранены без связанного объекта <xref:System.Activities.WorkflowIdentity> в правильном определении рабочего процесса. Этот сценарий может возникнуть, когда приложение рабочего процесса изначально не было написано с использованием управления версиями рабочего процесса или если приложение обновлено с версии [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Обновление баз данных сохраняемости .NET Framework 4 для поддержки управления версиями рабочего процесса](../../../docs/framework/windows-workflow-foundation/using-workflowidentity-and-versioning.md#UpdatingWF4PersistenceDatabases).  
+>  Значение NULL для <xref:System.Activities.WorkflowIdentity> допустимо и может использоваться основным приложением для сопоставления экземпляров, которые были сохранены без связанного объекта <xref:System.Activities.WorkflowIdentity> в правильном определении рабочего процесса. Этот сценарий может возникнуть, когда приложение рабочего процесса изначально не было написано с использованием управления версиями рабочего процесса или если приложение обновлено с версии [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]. Дополнительные сведения см. в разделе [обновление .NET Framework 4 баз данных сохраняемости для поддержки управления версиями рабочего процесса](../../../docs/framework/windows-workflow-foundation/using-workflowidentity-and-versioning.md#UpdatingWF4PersistenceDatabases).  
   
  В следующем примере `Dictionary<WorkflowIdentity, Activity>` используется для связывания <xref:System.Activities.WorkflowIdentity> экземпляры с их соответствующими определениями рабочих процессов и рабочий процесс запускается с помощью `MortgageWorkflow` определения рабочего процесса, связанного с `identityV1` <xref:System.Activities.WorkflowIdentity>.  
   
@@ -148,13 +149,13 @@ wfApp.Load(instance);
 // Resume the workflow...  
 ```  
   
-##  <a name="UpdatingWF4PersistenceDatabases"></a>Обновление баз данных .NET Framework 4 сохраняемости, для поддержки управления версиями рабочего процесса  
+##  <a name="UpdatingWF4PersistenceDatabases"></a> Обновление баз данных .NET Framework 4 сохраняемости, для поддержки управления версиями рабочего процесса  
  Предоставляется скрипт базы данных SqlWorkflowInstanceStoreSchemaUpgrade.sql для обновления баз данных сохраняемости, созданных с помощью скриптов базы данных [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]. Этот скрипт обновляет базы данных для поддержки новых возможностей управления версиями, представленных в [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]. Все сохраняемые экземпляры рабочих процессов в базах данных получают значения управления версиями по умолчанию и затем могут участвовать в параллельном выполнении и динамическом обновлении.  
   
  Если приложение рабочего процесса [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] пытается выполнить любые операции сохраняемости, которые используют новые функции управления версиями в долговременной базе данных, которая не была обновлена с применением указанного скрипта, то выдается исключение <xref:System.Runtime.DurableInstancing.InstancePersistenceCommandException> с сообщением, аналогичным следующему.  
   
  **Хранилище SqlWorkflowInstanceStore содержит версию базы данных "4.0.0.0». Команда InstancePersistenceCommand «System.Activities.DurableInstancing.CreateWorkflowOwnerWithIdentityCommand» не может быть выполнена для этой версии базы данных.  Обновите базу данных для "4.5.0.0».**  
-###  <a name="ToUpgrade"></a>Чтобы обновить схему базы данных  
+###  <a name="ToUpgrade"></a> Чтобы обновить схему базы данных  
   
 1.  Откройте SQL Server Management Studio и подключитесь к серверу долговременной базы данных, например **. \SQLEXPRESS**.  
   

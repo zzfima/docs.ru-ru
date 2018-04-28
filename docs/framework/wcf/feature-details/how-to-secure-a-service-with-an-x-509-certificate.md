@@ -1,36 +1,38 @@
 ---
-title: "Практическое руководство. Защита службы с использованием сертификата X.509"
-ms.custom: 
+title: Практическое руководство. Защита службы с использованием сертификата X.509
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 2d06c2aa-d0d7-4e5e-ad7e-77416aa1c10b
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: e1ad7cd844ffbd3f45517f7d812ad3f5fa1ae3c3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 31028b6fe2cc34a9ae5cabe410bef0d753fd9436
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="how-to-secure-a-service-with-an-x509-certificate"></a>Практическое руководство. Защита службы с использованием сертификата X.509
 Защита службы с помощью сертификата X.509 - стандартный прием, используемый в большинстве привязок [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. В этом разделе описывается порядок настройки резидентной службы с сертификатом X.509.  
   
- Предварительным условием является наличие действительного сертификата, который можно использовать для проверки подлинности сервера. Сертификат должен быть выдан серверу доверенным центром сертификации. Если сертификат недействителен, ни один клиент, пытающийся воспользоваться службой, не будет доверять этой службе, следовательно, соединение установлено не будет. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]с помощью сертификатов, в разделе [работа с сертификатами](../../../../docs/framework/wcf/feature-details/working-with-certificates.md).  
+ Предварительным условием является наличие действительного сертификата, который можно использовать для проверки подлинности сервера. Сертификат должен быть выдан серверу доверенным центром сертификации. Если сертификат недействителен, ни один клиент, пытающийся воспользоваться службой, не будет доверять этой службе, следовательно, соединение установлено не будет. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] с помощью сертификатов, в разделе [работа с сертификатами](../../../../docs/framework/wcf/feature-details/working-with-certificates.md).  
   
 ### <a name="to-configure-a-service-with-a-certificate-using-code"></a>Настройка службы с сертификатом в коде  
   
-1.  Создайте контракт службы и реализованную службу. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Проектирование и реализация служб](../../../../docs/framework/wcf/designing-and-implementing-services.md).  
+1.  Создайте контракт службы и реализованную службу. Дополнительные сведения см. в разделе [проектирование и реализация служб](../../../../docs/framework/wcf/designing-and-implementing-services.md).  
   
 2.  Создайте экземпляр класса <xref:System.ServiceModel.WSHttpBinding> и установите для него режим безопасности <xref:System.ServiceModel.SecurityMode.Message>, как показано в следующем коде.  
   

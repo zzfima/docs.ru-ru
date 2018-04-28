@@ -1,24 +1,26 @@
 ---
-title: "Транспорт: TCP-взаимодействие WSE 3.0"
-ms.custom: 
+title: 'Транспорт: TCP-взаимодействие WSE 3.0'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 5f7c3708-acad-4eb3-acb9-d232c77d1486
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 63641f7a99b7c567e871d6a67dd72380f0c077ed
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 510d523cea78aa16a16adc8572c839e95059c068
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="transport-wse-30-tcp-interoperability"></a>Транспорт: TCP-взаимодействие WSE 3.0
 В примере транспорта взаимодействия TCP WSE 3.0 демонстрируется реализация дуплексного сеанса TCP в виде пользовательского транспорта [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. Также демонстрируется использование расширяемости уровня канала для создания интерфейса по сети с существующими развернутыми системами. Следующие шаги показывают, как построить этот пользовательский транспорт [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
@@ -31,7 +33,7 @@ ms.lasthandoff: 12/22/2017
   
 4.  Убедитесь, что все исключения, связанные с сетью, нормализованы в соответствующий класс, унаследованный от <xref:System.ServiceModel.CommunicationException>.  
   
-5.  Добавьте элемент привязки, добавляющий пользовательский транспорт в стек каналов. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Добавление элемента привязки.]  
+5.  Добавьте элемент привязки, добавляющий пользовательский транспорт в стек каналов. Дополнительные сведения см. в разделе [Добавление элемента привязки].  
   
 ## <a name="creating-iduplexsessionchannel"></a>Создание IDuplexSessionChannel  
  Первый этап создания транспорта взаимодействия TCP WSE 3.0 - это реализация интерфейса <xref:System.ServiceModel.Channels.IDuplexSessionChannel> на основе класса <xref:System.Net.Sockets.Socket>. Интерфейс `WseTcpDuplexSessionChannel` является производным от интерфейса <xref:System.ServiceModel.Channels.ChannelBase>. Логика передачи сообщения состоит из двух основных частей: (1) кодирование сообщения в байты и (2) кадрирование этих байтов и передача их по сети.  
@@ -63,7 +65,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="channel-factory"></a>Фабрика каналов  
  Следующий этап создания транспорта TCP - реализация <xref:System.ServiceModel.Channels.IChannelFactory> для каналов клиентов.  
   
--   `WseTcpChannelFactory`является производным от <xref:System.ServiceModel.Channels.ChannelFactoryBase> \<IDuplexSessionChannel >. Это фабрика, которая переопределяет `OnCreateChannel` для создания каналов клиентов.  
+-   `WseTcpChannelFactory` является производным от <xref:System.ServiceModel.Channels.ChannelFactoryBase> \<IDuplexSessionChannel >. Это фабрика, которая переопределяет `OnCreateChannel` для создания каналов клиентов.  
   
  `protected override IDuplexSessionChannel OnCreateChannel(EndpointAddress remoteAddress, Uri via)`  
   
@@ -73,7 +75,7 @@ ms.lasthandoff: 12/22/2017
   
  `}`  
   
--   `ClientWseTcpDuplexSessionChannel`Добавляет логику в базовый `WseTcpDuplexSessionChannel` для подключения к серверу TCP в `channel.Open` времени. Сначала имя узла разрешается в IP-адрес, как показано в следующем коде.  
+-   `ClientWseTcpDuplexSessionChannel` Добавляет логику в базовый `WseTcpDuplexSessionChannel` для подключения к серверу TCP в `channel.Open` времени. Сначала имя узла разрешается в IP-адрес, как показано в следующем коде.  
   
  `hostEntry = Dns.GetHostEntry(Via.Host);`  
   
@@ -90,7 +92,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="channel-listener"></a>Прослушиватель канала  
  Следующий этап создания транспорта TCP - реализация <xref:System.ServiceModel.Channels.IChannelListener> для приема каналов сервера.  
   
--   `WseTcpChannelListener`является производным от <xref:System.ServiceModel.Channels.ChannelListenerBase> \<IDuplexSessionChannel > и переопределений [Begin] Open и On [Begin] Close для управления временем существования его прослушивающих сокетов. В OnOpen создается сокет для прослушивания по IP_ANY. Более сложные реализации могут создавать второй сокет для прослушивания также и по IPv6. Они могут также допускать задание IP-адреса в имени узла.  
+-   `WseTcpChannelListener` является производным от <xref:System.ServiceModel.Channels.ChannelListenerBase> \<IDuplexSessionChannel > и переопределений [Begin] Open и On [Begin] Close для управления временем существования его прослушивающих сокетов. В OnOpen создается сокет для прослушивания по IP_ANY. Более сложные реализации могут создавать второй сокет для прослушивания также и по IPv6. Они могут также допускать задание IP-адреса в имени узла.  
   
  `IPEndPoint localEndpoint = new IPEndPoint(IPAddress.Any, uri.Port);`  
   

@@ -1,24 +1,26 @@
 ---
-title: "Действия обмена сообщениями"
-ms.custom: 
+title: Действия обмена сообщениями
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 8498f215-1823-4aba-a6e1-391407f8c273
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 8ba5d49f357fe1cf56a45f733e91c1dbc2208736
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 8db31e8559d22e35f0d754a44ce425e144487296
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="messaging-activities"></a>Действия обмена сообщениями
 Действия обмена сообщениями позволяют рабочим процессам отправлять или получать сообщения WCF. Добавляя действия обмена сообщениями в рабочий процесс, можно моделировать шаблоны обмена сообщениями любого уровня сложности.  
@@ -48,7 +50,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="messaging-activities-and-message-exchange-patterns"></a>Действия обмена сообщениями и шаблоны обмена сообщениями  
  В шаблоне обмена сообщениями «датаграмма» участвуют клиент, отправляющий сообщение, и служба, получающая его. Если клиент - это рабочий процесс, то следует использовать действие <xref:System.ServiceModel.Activities.Send> для отправки сообщения. Для получения этого сообщения в рабочем процессе следует использовать действие <xref:System.ServiceModel.Activities.Receive>. Действия <xref:System.ServiceModel.Activities.Send> и <xref:System.ServiceModel.Activities.Receive> имеют свойство с именем `Content`. Это свойство содержит отправляемые или получаемые данные. При реализации шаблона обмена сообщениями «запрос-ответ» клиент и службы используют пары действий. Клиент использует действие <xref:System.ServiceModel.Activities.Send> для отправки сообщения и действие <xref:System.ServiceModel.Activities.ReceiveReply> для получения ответа от службы. Эти два действия связаны друг с другом свойством <xref:System.ServiceModel.Activities.ReceiveReply.Request%2A>. Значение этого свойства - действие <xref:System.ServiceModel.Activities.Send>, отправившее исходное сообщение. Служба также использует пару связанных действий: <xref:System.ServiceModel.Activities.Receive> и <xref:System.ServiceModel.Activities.SendReply>. Эти два действия связаны свойством <xref:System.ServiceModel.Activities.SendReply.Request%2A>. Значение этого свойства - действие <xref:System.ServiceModel.Activities.Receive>, получившее исходное сообщение. Действия <xref:System.ServiceModel.Activities.ReceiveReply> и <xref:System.ServiceModel.Activities.SendReply>, как и действия <xref:System.ServiceModel.Activities.Send> и <xref:System.ServiceModel.Activities.Receive>, позволяют отправить экземпляр <xref:System.ServiceModel.Channels.Message> или тип контракта сообщения.  
   
- Поскольку рабочие процессы выполняются в течении долгого времени, очень важно, чтобы шаблон обмена сообщениями «дуплекс» также поддерживал долговременные диалоги. Для поддержки долговременных диалогов клиенты, инициирующие диалоги, должны предоставлять службу с возможностью ее повторного вызова позднее, когда данные станут доступны. Например, заказ на покупку подается на одобрение менеджера, но он может быть обработан спустя день, неделю или даже год; рабочий процесс, управляющий заказом на покупку должен иметь возможность продолжить работу с ним после получения одобрения. Шаблон обмена сообщениями «дуплекс» поддерживается в рабочих процессах, использующих корреляцию. Для реализации шаблона «дуплекс» следует использовать действия <xref:System.ServiceModel.Activities.Send> и <xref:System.ServiceModel.Activities.Receive>. На <xref:System.ServiceModel.Activities.Receive> действия, инициализировать корреляцию с использованием значения специального ключа <!--zz <xref:System.ServiceModel.Activities.CorrelationHandle.CallbackHandleName%2A>--> `System.ServiceModel.Activities.CorrelationHandle.CallbackHandleName`. В действии <xref:System.ServiceModel.Activities.Send> задайте дескриптор взаимосвязи как значение свойства <xref:System.ServiceModel.Activities.Send.CorrelatesWith%2A>. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Сохраняемый дуплекс](../../../../docs/framework/wcf/feature-details/durable-duplex-correlation.md).  
+ Поскольку рабочие процессы выполняются в течении долгого времени, очень важно, чтобы шаблон обмена сообщениями «дуплекс» также поддерживал долговременные диалоги. Для поддержки долговременных диалогов клиенты, инициирующие диалоги, должны предоставлять службу с возможностью ее повторного вызова позднее, когда данные станут доступны. Например, заказ на покупку подается на одобрение менеджера, но он может быть обработан спустя день, неделю или даже год; рабочий процесс, управляющий заказом на покупку должен иметь возможность продолжить работу с ним после получения одобрения. Шаблон обмена сообщениями «дуплекс» поддерживается в рабочих процессах, использующих корреляцию. Для реализации шаблона «дуплекс» следует использовать действия <xref:System.ServiceModel.Activities.Send> и <xref:System.ServiceModel.Activities.Receive>. На <xref:System.ServiceModel.Activities.Receive> действия, инициализировать корреляцию с использованием значения специального ключа <!--zz <xref:System.ServiceModel.Activities.CorrelationHandle.CallbackHandleName%2A>--> `System.ServiceModel.Activities.CorrelationHandle.CallbackHandleName`. В действии <xref:System.ServiceModel.Activities.Send> задайте дескриптор взаимосвязи как значение свойства <xref:System.ServiceModel.Activities.Send.CorrelatesWith%2A>. Дополнительные сведения см. в разделе [устойчивый дуплекс](../../../../docs/framework/wcf/feature-details/durable-duplex-correlation.md).  
   
 > [!NOTE]
 >  Реализация рабочего процесса двусторонней корреляции обратного вызова («устойчивый дуплекс») предназначена для работы с долговременными диалогами. Это не то же самое, что «дуплекс» WCF с контрактами обратного вызова, в которых диалоги являются кратковременными (на время существования канала).  
@@ -112,7 +114,7 @@ Request = rcv
  To make setting up a request/response MEP on the client and service easier, [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] provides two messaging activity templates. <xref:System.ServiceModel.Activities.Design.ReceiveAndSendReply> is used on the service and <xref:System.ServiceModel.Activities.Design.SendAndReceiveReply> is used on the client. In both cases the templates add the appropriate messaging activities to your workflow. On the service, the <xref:System.ServiceModel.Activities.Design.ReceiveAndSendReply> adds a <xref:System.ServiceModel.Activities.Receive> activity followed by a <xref:System.ServiceModel.Activities.SendReply> activity. The <xref:System.ServiceModel.Activities.SendReply.Request> property is automatically set to the <xref:System.ServiceModel.Activities.Receive> activity. On the client, the <xref:System.ServiceModel.Activities.Design.SendAndReceiveReply> adds a <xref:System.ServiceModel.Activities.Send> activity followed by a <xref:System.ServiceModel.Activities.ReceiveReply>. The <xref:System.ServiceModel.Activities.ReceiveReply.Request%2A> property is automatically set to the <xref:System.ServiceModel.Activities.Send> activity. To use these templates, just drag and drop the appropriate template onto your workflow.  
 -->
 ## <a name="messaging-activities-and-transactions"></a>Действия обмена сообщениями и транзакции  
- При вызове службы рабочего процесса может быть полезно выделить для операции службы транзакцию. Чтобы сделать это, поместите действие <xref:System.ServiceModel.Activities.Receive> в действие <xref:System.ServiceModel.Activities.TransactedReceiveScope>. Действие <xref:System.ServiceModel.Activities.TransactedReceiveScope> содержит действие `Receive` и текст. Транзакция, выделяемая службе, остается внешней в течение выполнения текста <xref:System.ServiceModel.Activities.TransactedReceiveScope>. Транзакция завершает работу, когда заканчивается выполнение основной части. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]рабочие процессы и транзакции. в разделе [транзакции рабочих процессов](../../../../docs/framework/windows-workflow-foundation/workflow-transactions.md).  
+ При вызове службы рабочего процесса может быть полезно выделить для операции службы транзакцию. Чтобы сделать это, поместите действие <xref:System.ServiceModel.Activities.Receive> в действие <xref:System.ServiceModel.Activities.TransactedReceiveScope>. Действие <xref:System.ServiceModel.Activities.TransactedReceiveScope> содержит действие `Receive` и текст. Транзакция, выделяемая службе, остается внешней в течение выполнения текста <xref:System.ServiceModel.Activities.TransactedReceiveScope>. Транзакция завершает работу, когда заканчивается выполнение основной части. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] рабочие процессы и транзакции. в разделе [транзакции рабочих процессов](../../../../docs/framework/windows-workflow-foundation/workflow-transactions.md).  
   
 ## <a name="see-also"></a>См. также  
  [Как отправлять и получают сообщения об ошибках в службах рабочих процессов](http://go.microsoft.com/fwlink/?LinkId=189151)  

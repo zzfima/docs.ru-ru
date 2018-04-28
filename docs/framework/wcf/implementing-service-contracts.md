@@ -1,28 +1,28 @@
 ---
-title: "Реализация контрактов служб"
-ms.custom: 
+title: Реализация контрактов служб
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - implementing service contracts [WCF]
 ms.assetid: aefb6f56-47e3-4f24-ab0a-9bc07bf9885f
-caps.latest.revision: 
+caps.latest.revision: 17
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 1b4085e23120ad654121f33111eda68276259096
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2a9c34f67de6f4f8b4a8d22dac7e8bf1c9555498
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="implementing-service-contracts"></a>Реализация контрактов служб
 Служба - это класс, который предоставляет клиентам имеющиеся функциональные возможности в одной или нескольких конечных точках. Для создания службы необходимо создать класс, реализующий контракт [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]. Это можно сделать одним из двух способов. Во-первых, можно определить контракт отдельно в качестве интерфейса, а затем создать класс, реализующий этот интерфейс. Во-вторых, можно непосредственно создать класс и контракт, разместив атрибут <xref:System.ServiceModel.ServiceContractAttribute> в самом классе, а атрибут <xref:System.ServiceModel.OperationContractAttribute> - в методах, доступных клиентам службы.  
@@ -66,9 +66,9 @@ class MathService
   
  Обратите внимание, что описанные службы предоставляют разные контракты, так как имена контрактов различаются. В первом случае предоставленный контракт называется "`IMath`", а во втором - "`MathService`".  
   
- Некоторые свойства (такие как параллелизм и создание экземпляров) можно задать на уровне реализации службы и операции. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Проектирование и реализация служб](../../../docs/framework/wcf/designing-and-implementing-services.md).  
+ Некоторые свойства (такие как параллелизм и создание экземпляров) можно задать на уровне реализации службы и операции. Дополнительные сведения см. в разделе [проектирование и реализация служб](../../../docs/framework/wcf/designing-and-implementing-services.md).  
   
- После реализации контракта службы необходимо создать для службы одну или более конечных точек. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Общие сведения о создании конечной точки](../../../docs/framework/wcf/endpoint-creation-overview.md). [!INCLUDE[crabout](../../../includes/crabout-md.md)]Запуск службы см. в разделе [размещение служб](../../../docs/framework/wcf/hosting-services.md).  
+ После реализации контракта службы необходимо создать для службы одну или более конечных точек. Дополнительные сведения см. в разделе [Общие сведения о создании конечной точки](../../../docs/framework/wcf/endpoint-creation-overview.md). [!INCLUDE[crabout](../../../includes/crabout-md.md)] Запуск службы см. в разделе [размещение служб](../../../docs/framework/wcf/hosting-services.md).  
   
 ## <a name="see-also"></a>См. также  
  [Проектирование и реализация служб](../../../docs/framework/wcf/designing-and-implementing-services.md)  

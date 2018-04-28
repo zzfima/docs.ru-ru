@@ -1,9 +1,7 @@
 ---
 title: Оператор Mod (Visual Basic)
-ms.date: 07/20/2015
+ms.date: 04/24/2018
 ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - devlang-visual-basic
 ms.topic: article
@@ -18,14 +16,13 @@ helpviewer_keywords:
 - arithmetic operators [Visual Basic], Mod
 - math operators [Visual Basic]
 ms.assetid: 6ff7e40e-cec8-4c77-bff6-8ddd2791c25b
-caps.latest.revision: 22
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 5464b57c993e5703c09529b527a7bc714e045870
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: rpetrusha
+ms.author: ronpet
+ms.openlocfilehash: cf0889cbea609b4555581fbf67cd0cba1ea889d0
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="mod-operator-visual-basic"></a>Оператор Mod (Visual Basic)
 Делит два числа и возвращает только остаток.  
@@ -38,17 +35,39 @@ number1 Mod number2
   
 ## <a name="parts"></a>Части  
  `number1`  
- Обязательный. Произвольное числовое выражение.  
+ Обязательно. Произвольное числовое выражение.  
   
  `number2`  
- Обязательный. Произвольное числовое выражение.  
+ Обязательно. Произвольное числовое выражение.  
   
 ## <a name="supported-types"></a>Поддерживаемые типы  
  Все числовые типы. Сюда входят типы без знака и с плавающей запятой и `Decimal`.  
   
-## <a name="result"></a>Результат  
- Результат — остаток после `number1` делится на `number2`. Например, выражение `14 Mod 4` равно 2.  
-  
+## <a name="result"></a>Результат
+
+Результат — остаток после `number1` делится на `number2`. Например, выражение `14 Mod 4` равно 2.  
+
+> [!NOTE]
+> Есть разница между *остаток* и *модуля* в математике с различные результаты для отрицательных чисел. `Mod` Оператор в Visual Basic .NET Framework `op_Modulus` оператор и базовой [rem]<xref:System.Reflection.Emit.OpCodes.Rem> все операции остатка инструкции IL.
+
+Результат `Mod` операция сохраняет знаком делимого, `number1`, и поэтому он может быть положительным или отрицательным. Результат всегда находится в диапазоне (-`number2`, `number2`), за исключением. Пример:
+
+```vb
+Public Module Example
+   Public Sub Main()
+      Console.WriteLine($" 8 Mod  3 = {8 Mod 3}")
+      Console.WriteLine($"-8 Mod  3 = {-8 Mod 3}")
+      Console.WriteLine($" 8 Mod -3 = {8 Mod -3}")
+      Console.WriteLine($"-8 Mod -3 = {-8 Mod -3}")
+   End Sub
+End Module
+' The example displays the following output:
+'       8 Mod  3 = 2
+'      -8 Mod  3 = -2
+'       8 Mod -3 = 2
+'      -8 Mod -3 = -2
+```
+
 ## <a name="remarks"></a>Примечания  
  Если параметр `number1` или `number2` имеет значение с плавающей запятой с плавающей запятой остаток от деления возвращается. Тип данных результата — наименьший тип данных, который может содержать все возможные значения, которые являются результатом деления с типами данных `number1` и `number2`.  
   
@@ -71,7 +90,7 @@ number1 Mod number2
  `a - (b * Fix(a / b))`  
   
 ## <a name="floating-point-imprecision"></a>С плавающей запятой неточности  
- При работе с числами с плавающей запятой, помните, что они не всегда имеют точное представление в памяти. Это может привести к непредвиденным результатам определенных операций, таких как значение сравнения и `Mod` оператор. Дополнительные сведения см. в разделе [Устранение неполадок типы данных](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md).  
+ При работе с числами с плавающей запятой, помните, что они не всегда имеют точное десятичное представление в памяти. Это может привести к непредвиденным результатам определенных операций, таких как значение сравнения и `Mod` оператор. Дополнительные сведения см. в разделе [Устранение неполадок типы данных](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md).  
   
 ## <a name="overloading"></a>Перегрузка  
  `Mod` Оператор может быть *перегружены*, что означает, что класс или структура может переопределить его поведение. Если код применяет `Mod` к экземпляру класса или структуры, включающей такие перегрузки, убедитесь, что его переопределенное. Дополнительные сведения см. в разделе [процедуры оператора](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  

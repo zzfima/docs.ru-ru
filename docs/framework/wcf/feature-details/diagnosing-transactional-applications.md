@@ -1,30 +1,32 @@
 ---
-title: "Диагностика транзакционных приложений"
-ms.custom: 
+title: Диагностика транзакционных приложений
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 4a993492-1088-4d10-871b-0c09916af05f
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0826881bac88f2bfa933ae71b798186dafc55303
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: a730daeadbed0f7453b8312612c096846d4e2cda
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="diagnosing-transactional-applications"></a>Диагностика транзакционных приложений
 В этом разделе рассматривается использование функции управления и диагностики [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] для устранения неполадок транзакционного приложения.  
   
 ## <a name="performance-counters"></a>Счетчики производительности  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] обеспечивает стандартный набор счетчиков производительности для измерения производительности транзакционного приложения. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Счетчики производительности](../../../../docs/framework/wcf/diagnostics/performance-counters/index.md).  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] обеспечивает стандартный набор счетчиков производительности для измерения производительности транзакционного приложения. Дополнительные сведения см. в разделе [Счетчики производительности](../../../../docs/framework/wcf/diagnostics/performance-counters/index.md).  
   
  Счетчики производительности группируются по трем различным уровням области действия: служба, конечная точка и операция, как описано в приведенных далее таблицах.  
   
@@ -56,7 +58,7 @@ ms.lasthandoff: 12/22/2017
 |Количество поступивших транзакций в секунду|Количество транзакций в операциях для данной конечной точки за каждую секунду. Значение этого счетчика увеличивается каждый раз, когда в сообщении, отправленном на эту конечную точку, содержится транзакция.|  
   
 ## <a name="windows-management-instrumentation"></a>Инструментарий управления Windows (WMI)  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] предоставляет данные проверки службы во время выполнения с помощью поставщика инструментария управления Windows (WMI) [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]доступ к данным WMI, в разделе [с помощью Windows Management Instrumentation для диагностики](../../../../docs/framework/wcf/diagnostics/wmi/index.md).  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] предоставляет данные проверки службы во время выполнения с помощью поставщика инструментария управления Windows (WMI) [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] доступ к данным WMI, в разделе [с помощью Windows Management Instrumentation для диагностики](../../../../docs/framework/wcf/diagnostics/wmi/index.md).  
   
  Ряд свойств WMI только для чтения показывает применяемые в службе параметры транзакции. В приведенных ниже таблицах перечислены эти параметры.  
   
@@ -100,7 +102,7 @@ ms.lasthandoff: 12/22/2017
   
 -   Стандартная трассировка [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]  
   
-     Трассировка этого типа аналогична трассировке любого другого приложения [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Настройка трассировки](../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md).  
+     Трассировка этого типа аналогична трассировке любого другого приложения [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Для получения дополнительной информации см. [Configuring Tracing](../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md).  
   
 -   Трассировка WS-AtomicTransaction  
   

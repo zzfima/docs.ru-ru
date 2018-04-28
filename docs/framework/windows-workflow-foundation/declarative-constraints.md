@@ -1,23 +1,24 @@
 ---
-title: "Декларативные ограничения"
-ms.custom: 
+title: Декларативные ограничения
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 67001ed1-7f4d-4ada-ae57-a31176901a53
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a11c62c7011d7ffb13ed0d0ebf060a3cbeb7d7f8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: f5ab784498805473830b46962d9e02591fc3eace
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="declarative-constraints"></a>Декларативные ограничения
 Декларативные ограничения - это мощный метод проверки допустимости действия и его связей с другими действиями. Ограничения для действий настраиваются во время процесса создания, однако дополнительные ограничения также могут задаваться ведущим приложением рабочего процесса. В этом разделе приводятся общие сведения об использовании декларативных ограничений для обеспечения проверки допустимости действий.  
@@ -146,7 +147,7 @@ public sealed class CreateState : CodeActivity
 }  
 ```  
   
- [!INCLUDE[crdefault](../../../includes/crdefault-md.md)]Windows Workflow Foundation [проверки](../../../docs/framework/windows-workflow-foundation/samples/validation.md) образцов.  
+ Дополнительные сведения см. в разделе Windows Workflow Foundation [проверки](../../../docs/framework/windows-workflow-foundation/samples/validation.md) образцов.  
   
 ## <a name="additional-constraints"></a>Дополнительные ограничения  
  Авторы ведущих приложений рабочих процессов могут задавать дополнительные ограничения проверки допустимости для действий в рабочем процессе, создавая ограничения и добавляя их к словарю <xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A> экземпляра <xref:System.Activities.Validation.ValidationSettings>. Каждый элемент в <xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A> содержит тип действия, к которому применяются ограничения, а также список дополнительных ограничений для этого типа действия. При вызове проверки допустимости для рабочего процесса каждое действие указанного типа, включая производные классы, проверяется на соответствие ограничениям. В этом примере ограничение `ActivityDisplayNameIsNotSetWarning` из предыдущего раздела применяется ко всем действиям в рабочем процессе.  
@@ -187,4 +188,4 @@ else
 }  
 ```  
   
- Если свойство <xref:System.Activities.Validation.ValidationSettings.OnlyUseAdditionalConstraints%2A> у <xref:System.Activities.Validation.ValidationSettings> имеет значение `true`, то при вызове проверки допустимости путем вызова <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A> выполняется проверка только дополнительных ограничений. Это может быть полезно при проверке рабочих процессов по отдельным конфигурациям проверки. Необходимо отметить, что при вызове рабочего процесса выполняется проверка логики проверки, настроенной в рабочем процессе; для запуска рабочего процесса проверка должна быть пройдена успешно. [!INCLUDE[crabout](../../../includes/crabout-md.md)]вызов проверки, в разделе [вызова проверки действия](../../../docs/framework/windows-workflow-foundation/invoking-activity-validation.md).
+ Если свойство <xref:System.Activities.Validation.ValidationSettings.OnlyUseAdditionalConstraints%2A> у <xref:System.Activities.Validation.ValidationSettings> имеет значение `true`, то при вызове проверки допустимости путем вызова <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A> выполняется проверка только дополнительных ограничений. Это может быть полезно при проверке рабочих процессов по отдельным конфигурациям проверки. Необходимо отметить, что при вызове рабочего процесса выполняется проверка логики проверки, настроенной в рабочем процессе; для запуска рабочего процесса проверка должна быть пройдена успешно. [!INCLUDE[crabout](../../../includes/crabout-md.md)] вызов проверки, в разделе [вызова проверки действия](../../../docs/framework/windows-workflow-foundation/invoking-activity-validation.md).

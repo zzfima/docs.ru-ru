@@ -1,24 +1,26 @@
 ---
-title: "Использование арбитра контрактов данных"
-ms.custom: 
+title: Использование арбитра контрактов данных
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 2e68a16c-36f0-4df4-b763-32021bff2b89
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 28bba68c985191b69fea3b7ab85812917a827b30
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 20ef713c67ee21aa8f7a92975bc6e6ce8798a087
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="using-a-data-contract-resolver"></a>Использование арбитра контрактов данных
 Арбитр контрактов данных позволяет динамически настраивать известные типы. Известные типы необходимы для сериализации или десериализации типов, не предусмотренных контрактом данных. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] об известных типах см. в разделе [Data Contract Known Types](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md). Известные типы обычно задаются статически. Это означает, что при реализации операции необходимо знать все типы, которые могут быть переданы операции. Существуют сценарии, в которых это не так, и важно иметь возможность динамического задания типов.  
@@ -96,7 +98,7 @@ if (serializerBehavior == null)
 SerializerBehavior.DataContractResolver = new MyCustomerResolver();  
 ```  
   
- Сопоставитель контрактов данных можно задать декларативно, реализовав атрибут, применяемый к службе.  [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][KnownAssemblyAttribute](../../../../docs/framework/wcf/samples/knownassemblyattribute.md) образца. Этот образец реализует атрибут с именем «KnownAssembly», добавляющий пользовательский арбитр контрактов данных для поведения службы.  
+ Сопоставитель контрактов данных можно задать декларативно, реализовав атрибут, применяемый к службе.  Дополнительные сведения см. в разделе [KnownAssemblyAttribute](../../../../docs/framework/wcf/samples/knownassemblyattribute.md) образца. Этот образец реализует атрибут с именем «KnownAssembly», добавляющий пользовательский арбитр контрактов данных для поведения службы.  
   
 ## <a name="see-also"></a>См. также  
  [Известные типы контрактов данных](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)  

@@ -10,17 +10,17 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 27f8f545-cc44-412a-b104-617e0781b803
-caps.latest.revision: ''
+caps.latest.revision: 9
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 9eedf84d1dccb8bc2540aca7e6bd338b4e58326d
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 3f48de4b4073a6b34671b3eab5e07890790c71ce
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="generating-a-wcf-client-from-service-metadata"></a>Создание клиента WCF из метаданных службы
 В этом разделе рассматривается использование различных ключей в Svcutil.exe для формирования клиентов из документов метаданных.  
@@ -50,9 +50,9 @@ svcutil.exe [/t:code]  <metadataDocumentPath>* | <url>* | <epr>
   
 |Параметр|Описание|  
 |------------|-----------------|  
-|**/serializer:Auto**|Автоматически выбирает сериализатор. Выбираемый сериализатор - `DataContract`. Если использовать этот сериализатор не удается, используется сериализатор `XmlSerializer`.<br /><br /> Сокращенная форма: `/ser:Auto`|  
-|**/serializer:DataContractSerializer**|Формирует типы данных, использующих для сериализации и десериализации сериализатор `DataContract`.<br /><br /> Краткая форма: `/ser:DataContractSerializer`|  
-|**/serializer:XmlSerializer**|Формирует типы данных, использующих для сериализации и десериализации сериализатор `XmlSerializer`.<br /><br /> Краткая форма: `/ser:XmlSerializer`|  
+|**/Serializer:auto**|Автоматически выбирает сериализатор. Выбираемый сериализатор - `DataContract`. Если использовать этот сериализатор не удается, используется сериализатор `XmlSerializer`.<br /><br /> Сокращенная форма: `/ser:Auto`|  
+|**/Serializer:DataContractSerializer**|Формирует типы данных, использующих для сериализации и десериализации сериализатор `DataContract`.<br /><br /> Краткая форма: `/ser:DataContractSerializer`|  
+|**/ Serializer: XmlSerializer**|Формирует типы данных, использующих для сериализации и десериализации сериализатор `XmlSerializer`.<br /><br /> Краткая форма: `/ser:XmlSerializer`|  
 |**/importXmlTypes**|Настраивает сериализатор `DataContract` на импорт типов, отличных от `DataContract`, в виде типов `IXmlSerializable`.<br /><br /> Краткая форма: `/ixt`|  
 |**/dataContractOnly**|Формирует код только для типов `DataContract`. Формируются типы `ServiceContract`.<br /><br /> Для этого параметра следует задавать только локальные файлы метаданных.<br /><br /> Краткая форма: `/dconly`|  
   
@@ -60,13 +60,13 @@ svcutil.exe [/t:code]  <metadataDocumentPath>* | <url>* | <epr>
   
 |Параметр|Описание|  
 |------------|-----------------|  
-|**/language:\<language>**|Задает язык программирования, используемый для создания кода. Необходимо задать либо имя языка, зарегистрированное в файле Machine.config, либо полное имя класса, наследуемого от <xref:System.CodeDom.Compiler.CodeDomProvider>.<br /><br /> Значения: c#, cs, csharp, vb, vbs, visualbasic, vbscript, javascript, c++, mc, cpp<br /><br /> По умолчанию: csharp<br /><br /> Краткая форма: `/l`<br /><br /> [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Класс CodeDomProvider](http://go.microsoft.com/fwlink/?LinkId=94778).|  
+|**/ Language:\<язык >**|Задает язык программирования, используемый для создания кода. Необходимо задать либо имя языка, зарегистрированное в файле Machine.config, либо полное имя класса, наследуемого от <xref:System.CodeDom.Compiler.CodeDomProvider>.<br /><br /> Значения: c#, cs, csharp, vb, vbs, visualbasic, vbscript, javascript, c++, mc, cpp<br /><br /> По умолчанию: csharp<br /><br /> Краткая форма: `/l`<br /><br /> Дополнительные сведения см. в разделе [класс CodeDomProvider](http://go.microsoft.com/fwlink/?LinkId=94778).|  
   
 ## <a name="choosing-a-namespace-for-the-client"></a>Выбор пространства имен для клиента  
   
 |Параметр|Описание|  
 |------------|-----------------|  
-|**/namespace:\<string,string>**|Задает сопоставление между элементом `targetNamespace` WSDL или схемы XML и пространством имен среды CLR. При использовании в качестве значения элемента `targetNamespace` подстановочного знака (*) все элементы `targetNamespaces` сопоставляются без явного сопоставления данному пространству имен среды CLR.<br /><br /> Чтобы гарантировать, что имя контракта сообщения не конфликтует с именем операции, либо дополните ссылку на тип двойными двоеточиями (`::`), либо убедитесь, что имена уникальны.<br /><br /> По умолчанию: для типов `DataContracts` выводится из целевого пространства имен документа схемы. Для всех остальных создаваемых типов используется пространство имен по умолчанию.<br /><br /> Краткая форма: `/n`|  
+|**/ namespace:\<строка, строка >**|Задает сопоставление между элементом `targetNamespace` WSDL или схемы XML и пространством имен среды CLR. При использовании в качестве значения элемента `targetNamespace` подстановочного знака (*) все элементы `targetNamespaces` сопоставляются без явного сопоставления данному пространству имен среды CLR.<br /><br /> Чтобы гарантировать, что имя контракта сообщения не конфликтует с именем операции, либо дополните ссылку на тип двойными двоеточиями (`::`), либо убедитесь, что имена уникальны.<br /><br /> По умолчанию: для типов `DataContracts` выводится из целевого пространства имен документа схемы. Для всех остальных создаваемых типов используется пространство имен по умолчанию.<br /><br /> Краткая форма: `/n`|  
   
 ## <a name="choosing-a-data-binding"></a>Выбор привязки данных  
   
@@ -78,7 +78,7 @@ svcutil.exe [/t:code]  <metadataDocumentPath>* | <url>* | <epr>
   
 |Параметр|Описание|  
 |------------|-----------------|  
-|**/config:\<configFile>**|Задает имя файла для формируемого файла конфигурации.<br /><br /> По умолчанию: output.config|  
+|**/ config:\<configFile >**|Задает имя файла для формируемого файла конфигурации.<br /><br /> По умолчанию: output.config|  
 |**/mergeConfig**|Объединяет созданную конфигурацию с существующим файлом (вместо его перезаписи).|  
 |**/noConfig**|Запрещает создавать файлы конфигурации.|  
   

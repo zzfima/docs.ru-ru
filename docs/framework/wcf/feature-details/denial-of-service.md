@@ -1,28 +1,28 @@
 ---
-title: "Отказ в обслуживании"
-ms.custom: 
+title: Отказ в обслуживании
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - denial of service [WCF]
 ms.assetid: dfb150f3-d598-4697-a5e6-6779e4f9b600
-caps.latest.revision: 
+caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 5d5f67790abad5dcf6311de1817b4ea093e703d9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fb9f542d931f5febc2c04d1b0e093cc20f487c57
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="denial-of-service"></a>Отказ в обслуживании
 Если система перегружена так, что не удается обрабатывать сообщения, или сообщения обрабатываются слишком медленно, происходит отказ в обслуживании.  
@@ -57,7 +57,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="auditing-event-log-can-be-filled"></a>Возможно переполнение журнала событий аудита  
  Если злоумышленник знает о том, что включен аудит, он может отправлять недопустимые сообщения, приводящие к внесению записей аудита в журнал. Если это приводит к заполнению журнала аудита, система аудита дает сбой.  
   
- Для решения этой проблемы задайте свойству <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A> значение `true` и используйте свойства средства «Просмотр событий» для управления поведением аудита. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]с помощью средства просмотра событий для просмотра и управления журналами событий, в разделе [средство просмотра событий](http://go.microsoft.com/fwlink/?LinkId=186123). [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Аудита](../../../../docs/framework/wcf/feature-details/auditing-security-events.md).  
+ Для решения этой проблемы задайте свойству <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A> значение `true` и используйте свойства средства «Просмотр событий» для управления поведением аудита. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] с помощью средства просмотра событий для просмотра и управления журналами событий, в разделе [средство просмотра событий](http://go.microsoft.com/fwlink/?LinkId=186123). Дополнительные сведения см. в разделе [аудита](../../../../docs/framework/wcf/feature-details/auditing-security-events.md).  
   
 ## <a name="invalid-implementations-of-iauthorizationpolicy-can-cause-service-hangs"></a>Недопустимые реализации интерфейса IAuthorizationPolicy могут привести к зависанию службы  
  Вызов метода <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%2A> неверной реализации интерфейса <xref:System.IdentityModel.Policy.IAuthorizationPolicy> может вызвать зависание службы.  
@@ -74,7 +74,7 @@ ms.lasthandoff: 12/22/2017
   
  Чтобы обойти эту проблему, ссылку именно тот сертификат для использования с помощью более точного критерия поиска на [ \<serviceCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md). Например, используйте параметр <xref:System.Security.Cryptography.X509Certificates.X509FindType.FindByThumbprint> и задавайте сертификат по его уникальному отпечатку (хэшу).  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]функции авторегистрации см. в разделе [автоматической регистрации сертификатов в Windows Server 2003](http://go.microsoft.com/fwlink/?LinkId=95166).  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)] функции авторегистрации см. в разделе [автоматической регистрации сертификатов в Windows Server 2003](http://go.microsoft.com/fwlink/?LinkId=95166).  
   
 ## <a name="last-of-multiple-alternative-subject-names-used-for-authorization"></a>Последнее из нескольких альтернативных имен субъекта, используемое для авторизации  
  В редком случае, когда сертификат X.509 содержит несколько альтернативных имен субъектов, и авторизация выполняется с использованием альтернативного имени субъекта, авторизация может завершиться сбоем.  
@@ -88,7 +88,7 @@ ms.lasthandoff: 12/22/2017
  Когда клиент успешно проходит проверку подлинности на стороне службы и устанавливается безопасный сеанс для службы, служба отслеживает этот сеанс, пока клиент не отменит его, или пока срок действия сеанса не истечет. Каждый установленный сеанс учитывается службой относительно максимального числа одновременных активных сеансов. Когда будет достигнут этот предел, клиенты, пытающие создать сеансы для связи с этой службой, будут отклоняться, пока один или несколько активных сеансов не истекут или не будут отменены клиентом. У клиента может быть установлено несколько сеансов связи со службой, и все они учитываются при сравнении с предельным значением.  
   
 > [!NOTE]
->  При использовании сеансов с отслеживанием состояния предыдущий абзац неприменим. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]сеансов с отслеживанием состояния в разделе [как: создание токена контекста безопасности для безопасного сеанса](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md).  
+>  При использовании сеансов с отслеживанием состояния предыдущий абзац неприменим. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] сеансов с отслеживанием состояния в разделе [как: создание токена контекста безопасности для безопасного сеанса](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md).  
   
  Чтобы избежать этого, задайте максимальное число активных сеансов и максимальное время существования сеанса с помощью свойства <xref:System.ServiceModel.Channels.SecurityBindingElement> класса <xref:System.ServiceModel.Channels.SecurityBindingElement>.  
   

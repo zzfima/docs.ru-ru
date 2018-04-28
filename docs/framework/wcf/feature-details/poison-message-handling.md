@@ -10,17 +10,17 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 8d1c5e5a-7928-4a80-95ed-d8da211b8595
-caps.latest.revision: ''
+caps.latest.revision: 29
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 8202c9f715944c6d556c0023444475838cfd5eab
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 14b3eebb83115617ce32ab0ff45184cd6754e58c
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="poison-message-handling"></a>Обработка подозрительных сообщений
 Объект *подозрительное сообщение* — это сообщение, для которого превышено максимальное число попыток доставки в приложение. Такая ситуация может возникнуть, если приложение с очередью не может обработать сообщение из-за ошибок. Чтобы отвечать требованиям надежности, приложение с очередью получает сообщения транзакционно. Прерывание транзакции, в которой получено очередное сообщение, приводит к тому, что сообщение остается в очереди и новая попытка доставить его предпринимается в новой транзакции. Если причина прерывания транзакции не устранена, принимающее приложение может зациклиться, получая и прерывая прием одного и того же сообщения, до достижения максимального числа попыток доставки и пометки сообщения как подозрительного.  
@@ -75,7 +75,7 @@ ms.lasthandoff: 03/26/2018
 ## <a name="best-practice-handling-msmqpoisonmessageexception"></a>Рекомендации. Обработка исключения MsmqPoisonMessageException  
  Когда служба определяет, что сообщение подозрительно, транспорт очереди создает исключение <xref:System.ServiceModel.MsmqPoisonMessageException>, содержащее `LookupId` подозрительного сообщения.  
   
- Принимающее приложение может реализовывать интерфейс <xref:System.ServiceModel.Dispatcher.IErrorHandler> для обработки всех необходимых ошибок. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Повышение управляемости обработки ошибок и отчетность](../../../../docs/framework/wcf/samples/extending-control-over-error-handling-and-reporting.md).  
+ Принимающее приложение может реализовывать интерфейс <xref:System.ServiceModel.Dispatcher.IErrorHandler> для обработки всех необходимых ошибок. Дополнительные сведения см. в разделе [расширение управления через обработка ошибок и отчеты](../../../../docs/framework/wcf/samples/extending-control-over-error-handling-and-reporting.md).  
   
  Приложению может требоваться определенная автоматическая обработка подозрительных сообщений, перемещающая подозрительные сообщения в очередь подозрительных сообщений, чтобы служба могла получить доступ к оставшимся сообщениям в очереди. Использование механизма обработчика ошибок для ожидания возникновения исключений, связанных с подозрительными сообщениями, возможно только если параметр <xref:System.ServiceModel.Configuration.MsmqBindingElementBase.ReceiveErrorHandling%2A> имеет значение <xref:System.ServiceModel.ReceiveErrorHandling.Fault>. Пример подозрительного сообщения для MSMQ 3.0 иллюстрирует такое поведение. Далее описаны основные шаги, которые необходимо предпринять для обработки подозрительных сообщений, также даны рекомендации.  
   

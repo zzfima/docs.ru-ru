@@ -1,28 +1,28 @@
 ---
-title: "Общие сведения об аналитическом отслеживании"
-ms.custom: 
+title: Общие сведения об аналитическом отслеживании
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - analytic tracing [WCF], overview
 ms.assetid: ae55e9cc-0809-442f-921f-d644290ebf15
-caps.latest.revision: 
+caps.latest.revision: 22
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 3492821d56f7089c2aa53bba566690ded02f8a5b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c29065ebe03617e288d7ebde3dc6b42cbfcf6061
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="analytic-tracing-overview"></a>Общие сведения об аналитическом отслеживании
 Аналитическая трассировка платформы [!INCLUDE[netfx_current_long](../../../../../includes/netfx-current-long-md.md)] - это набор высокопроизводительных функций с низкой детализацией, добавляемый к трассировке событий Windows (ETW). Трассировка событий Windows работает на уровне ядра, что значительно снижает издержки операций трассировки. Она эффективно буферизует события режима пользователя и ядра и позволяет динамически включать ведение журнала, при этом не требуется перезагружать службу. После их создания и получения данные трассировки отображаются в журналах событий.  
@@ -54,10 +54,10 @@ ms.lasthandoff: 12/22/2017
  `ServiceModelReg.exe -i -c:etw`  
   
 ### <a name="dynamic-configuration"></a>Динамическая конфигурация  
- С помощью инфраструктуры ETW трассировку можно включать и настраивать динамически, используя стандартные средства Windows. [!INCLUDE[crdefault](../../../../../includes/crdefault-md.md)][Динамическое включение аналитического отслеживания](../../../../../docs/framework/wcf/diagnostics/etw/dynamically-enabling-analytic-tracing.md).  
+ С помощью инфраструктуры ETW трассировку можно включать и настраивать динамически, используя стандартные средства Windows. Дополнительные сведения см. в разделе [динамически Включение аналитической трассировки](../../../../../docs/framework/wcf/diagnostics/etw/dynamically-enabling-analytic-tracing.md).  
   
 ### <a name="message-flow-tracing"></a>Трассировка потока сообщений  
  [!INCLUDE[crabout](../../../../../includes/crabout-md.md)] том, как включить трассировку потока сообщений, см. в разделе [Configuring Message Flow Tracing](../../../../../docs/framework/wcf/diagnostics/etw/configuring-message-flow-tracing.md).  
   
 ### <a name="keywords"></a>Ключевые слова  
- Ключевые слова используются, чтобы фильтровать сообщения трассировки и определять, какой компонент [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] создал данное событие. [!INCLUDE[crdefault](../../../../../includes/crdefault-md.md)][Динамическое включение аналитического отслеживания](../../../../../docs/framework/wcf/diagnostics/etw/dynamically-enabling-analytic-tracing.md).
+ Ключевые слова используются, чтобы фильтровать сообщения трассировки и определять, какой компонент [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] создал данное событие. Дополнительные сведения см. в разделе [динамически Включение аналитической трассировки](../../../../../docs/framework/wcf/diagnostics/etw/dynamically-enabling-analytic-tracing.md).

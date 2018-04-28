@@ -17,11 +17,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 605e1401eb2f2fdee7bb39c6636c0245154041a4
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: 6604c4fccec50369d83cede58ff2931c2015c5b9
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="what39s-new-in-windows-workflow-foundation"></a>Что&#39;новые возможности Windows Workflow Foundation
 Windows Workflow Foundation (WF) в [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)] изменяет несколько принципов разработки из предыдущих версий. Теперь рабочие процессы стало еще проще создавать, выполнять и поддерживать, а также реализовывать узел с новыми функциями. [!INCLUDE[crabout](../../../includes/crabout-md.md)] перенос .NET 3.0 и .NET 3.5 приложений рабочих процессов, чтобы использовать последнюю версию в разделе [руководство по миграции](../../../docs/framework/windows-workflow-foundation/migration-guidance.md).  
@@ -44,7 +44,7 @@ Windows Workflow Foundation (WF) в [!INCLUDE[netfx40_long](../../../includes/ne
 -   Новые действия для обмена сообщениями, такие как <xref:System.ServiceModel.Activities.SendContent> и <xref:System.ServiceModel.Activities.ReceiveReply>.  
   
 ## <a name="explicit-activity-data-model"></a>Явная модель данных действия  
- [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] включает новые варианты хранения и перемещения данных. Данные можно сохранить в действии при помощи переменной <xref:System.Activities.Variable>. При перемещении данных в действие и из него для определения направления перемещения данных используются специальные типы аргументов. Такими типами являются <xref:System.Activities.InArgument>, <xref:System.Activities.InOutArgument> и <xref:System.Activities.OutArgument>. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Модель данных Windows Workflow Foundation](../../../docs/framework/windows-workflow-foundation/data-model.md).  
+ [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] включает новые варианты хранения и перемещения данных. Данные можно сохранить в действии при помощи переменной <xref:System.Activities.Variable>. При перемещении данных в действие и из него для определения направления перемещения данных используются специальные типы аргументов. Такими типами являются <xref:System.Activities.InArgument>, <xref:System.Activities.InOutArgument> и <xref:System.Activities.OutArgument>. Дополнительные сведения см. в разделе [модель данных Windows Workflow Foundation](../../../docs/framework/windows-workflow-foundation/data-model.md).  
   
 ## <a name="enhanced-hosting-persistence-and-tracking-options"></a>Улучшенные варианты размещения на узле, сохраняемости и отслеживания  
  [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] содержит следующие усовершенствования сохраняемости.  
@@ -66,4 +66,4 @@ Windows Workflow Foundation (WF) в [!INCLUDE[netfx40_long](../../../includes/ne
 -   Для возобновления ожидающего рабочего процесса теперь используется объект <xref:System.Activities.Bookmark>.  
   
 ## <a name="easier-ability-to-extend-wf-designer-experience"></a>Более удобное расширение среды проектирования WF Designer  
- Новый WF Designer построен на Windows Presentation Foundation (WPF) и обеспечивает более удобную модель для повторного размещения WF Designer за пределами Visual Studio также обеспечивает более простые механизмы для создания пользовательских конструкторов действий. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Настройка конструктора рабочих процессов](../../../docs/framework/windows-workflow-foundation/customizing-the-workflow-design-experience.md).
+ Новый WF Designer построен на Windows Presentation Foundation (WPF) и обеспечивает более удобную модель для повторного размещения WF Designer за пределами Visual Studio также обеспечивает более простые механизмы для создания пользовательских конструкторов действий. Дополнительные сведения см. в разделе [Настройка конструктора рабочих процессов](../../../docs/framework/windows-workflow-foundation/customizing-the-workflow-design-experience.md).

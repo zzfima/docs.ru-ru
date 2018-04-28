@@ -1,20 +1,17 @@
 ---
-title: "Исключения: выражение try...with (F#)"
-description: "Сведения об использовании выражения F # «try... with» для обработки исключений."
-keywords: "visual f#, f#, функциональное программирование"
+title: 'Исключения: выражение try...with (F#)'
+description: 'Сведения об использовании выражения F # «try... with» для обработки исключений.'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 36721076-95cd-4636-ae43-79dd512bee6c
-ms.openlocfilehash: 163dfab49d4aaf23123800246fae2cad33e2257c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 06e40b79fc1958918dc0615ce9d1004e0a6e74a5
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="exceptions-the-trywith-expression"></a>Исключения: выражение try...with
 
@@ -49,7 +46,7 @@ with
 |:? *Тип исключения*|Соответствует указанному типу исключения .NET.|
 |:? *Тип исключения* как *идентификатор*|Соответствует указанному типу исключения .NET, но присваивает исключению именованное значение.|
 |*имя исключения*(*аргументы*)|Соответствует типу исключения F # и привязывает аргументы.|
-|*identifier*|Соответствует любому исключению и привязывает имя объекта исключения. Эквивалентно **:? System.Exception как***идентификатор*|
+|*identifier*|Соответствует любому исключению и привязывает имя объекта исключения. Эквивалентно **:? System.Exception как *** идентификатор*|
 |*Идентификатор* при *условие*|Соответствует любому исключению, если условие истинно.|
 
 ## <a name="examples"></a>Примеры

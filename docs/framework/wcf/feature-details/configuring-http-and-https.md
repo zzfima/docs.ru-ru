@@ -1,28 +1,28 @@
 ---
-title: "Настройка HTTP и HTTPS"
-ms.custom: 
+title: Настройка HTTP и HTTPS
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - configuring HTTP [WCF]
 ms.assetid: b0c29a86-bc0c-41b3-bc1e-4eb5bb5714d4
-caps.latest.revision: 
+caps.latest.revision: 17
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 50d4f92273a3e105fb83705bc138b06350910ccf
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8d3317cd4bba7c9935bd7555f16599dc94725fbd
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="configuring-http-and-https"></a>Настройка HTTP и HTTPS
 Службы и клиенты WCF могут взаимодействовать по протоколам HTTP и HTTPS. Параметры HTTP/HTTPS задаются с помощью служб IIS или посредством использования средства командной строки. Когда служба WCF размещается в службах IIS, параметры HTTP или HTTPS можно задать в службах IIS (с помощью средства inetmgr.exe). Если служба WCF является резидентной, параметры HTTP или HTTPS задаются с помощью средства командной строки.  
@@ -31,7 +31,7 @@ ms.lasthandoff: 12/22/2017
   
  Выбор средства настройки параметров HTTP зависит от операционной системы компьютера.  
   
- При выполнении [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] или [!INCLUDE[wxp](../../../../includes/wxp-md.md)], используйте средство HttpCfg.exe. [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] автоматически устанавливает этот инструмент. При выполнении [!INCLUDE[wxp](../../../../includes/wxp-md.md)], можно загрузить инструмент по [средства для поддержки Windows XP Service Pack 2](http://go.microsoft.com/fwlink/?LinkId=88606). [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Обзор Httpcfg](http://go.microsoft.com/fwlink/?LinkId=88605).  
+ При выполнении [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] или [!INCLUDE[wxp](../../../../includes/wxp-md.md)], используйте средство HttpCfg.exe. [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] автоматически устанавливает этот инструмент. При выполнении [!INCLUDE[wxp](../../../../includes/wxp-md.md)], можно загрузить инструмент по [средства для поддержки Windows XP Service Pack 2](http://go.microsoft.com/fwlink/?LinkId=88606). Дополнительные сведения см. в разделе [Обзор Httpcfg](http://go.microsoft.com/fwlink/?LinkId=88605).  
   
  При работе в [!INCLUDE[wv](../../../../includes/wv-md.md)] или Windows 7 эти параметры можно задать с помощью средства Netsh.exe.  
   

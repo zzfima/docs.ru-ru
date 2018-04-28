@@ -10,17 +10,17 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 5cbbe03f-4a9e-4d44-9e02-c5773239cf52
-caps.latest.revision: ''
+caps.latest.revision: 24
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: ac77fe2c83828d2cc9473417d2b29b2d2e540923
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: b0fedb812cee5cfa1e4c2ff921a78beb2a6c1beb
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="uritemplate-and-uritemplatetable"></a>UriTemplate и UriTemplateTable
 Веб-разработчикам необходима возможность описания формы и структуры универсальных кодов ресурса (URI), на которые отвечают их службы. В [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] появились два новых класса, позволяющие разработчикам контролировать свои URI. Классы <xref:System.UriTemplate> и <xref:System.UriTemplateTable> формируют основу модуля отправки данных на основе URI, который используется в [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Эти классы могут также использоваться сами по себе, позволяя разработчиками воспользоваться преимуществами шаблонов и механизма сопоставления универсального кода ресурса (URI) без реализации службы [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
@@ -51,7 +51,7 @@ ms.lasthandoff: 03/26/2018
   
  Свойство <xref:System.UriTemplate.PathSegmentVariableNames%2A> содержит коллекцию имен переменных, используемых в сегментах пути в строке шаблона.  
   
- Метод <xref:System.UriTemplate.IsEquivalentTo%28System.UriTemplate%29> принимает <xref:System.UriTemplate> в качестве параметра и возвращает логическое значение, указывающее, являются ли два шаблона эквивалентными. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] подраздел «Эквивалентность шаблонов» далее в этом разделе.  
+ Метод <xref:System.UriTemplate.IsEquivalentTo%28System.UriTemplate%29> принимает <xref:System.UriTemplate> в качестве параметра и возвращает логическое значение, указывающее, являются ли два шаблона эквивалентными. Дополнительные сведения см. раздел эквивалентность шаблонов далее в этом разделе.  
   
  Класс <xref:System.UriTemplate> предназначен для работы с любой схемой URI, соблюдающей грамматику URI HTTP. Ниже приведены примеры поддерживаемых схем URI.  
   
@@ -94,7 +94,7 @@ ms.lasthandoff: 03/26/2018
   
 -   "{shoe}/boat"  
   
--   "{shoe}/{boat}/bed/{quilt}"  
+-   «{shoe} / {boat} /bed/ {quilt}»  
   
 -   «shoe / {boat}»  
   
@@ -137,7 +137,7 @@ ms.lasthandoff: 03/26/2018
   
  Ниже приведены примеры недопустимых составных сегментов пути.  
   
--   /{} - переменная должна иметь имя.  
+-   /{} -Переменная должна иметь имя.  
   
 -   /{shoe}{boat} - переменные должны разделяться литералом.  
   
@@ -202,7 +202,7 @@ foreach (string key in m1.BoundVariables.AllKeys)
 ```  
   
 > [!NOTE]
->  URI вида http://localhost:8000/// не соответствует шаблону, указанному в приведенном выше коде, в отличие от URI вида http://localhost:8000/.  
+>  URI, таких как http://localhost:8000/// соответствует шаблону, однако перечисленные в вышеприведенном коде в URI, таких как http://localhost:8000/ does.  
   
  В следующем коде показано, как обрабатываются значения переменных по умолчанию при создании универсального кода ресурса (URI) с помощью шаблона.  
   

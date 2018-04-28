@@ -1,20 +1,17 @@
 ---
-title: "Массивы (F#)"
-description: "Узнайте, как создать и использовать массивы в языке F #."
-keywords: "visual f#, f#, функциональное программирование"
+title: Массивы (F#)
+description: 'Узнайте, как создать и использовать массивы в языке F #.'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 61fa9084-abdc-4cf5-8213-91ec1211866b
-ms.openlocfilehash: 7c9d8405230f4d765d3afdeaa154ddc598d0d1ec
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 650321e864556ff0ba8591e09ffa34877c8a39b7
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="arrays"></a>Массивы
 
@@ -68,7 +65,7 @@ ms.lasthandoff: 10/18/2017
 Модуль библиотеки [ `Microsoft.FSharp.Collections.Array` ](https://msdn.microsoft.com/library/0cda8040-9396-40dd-8dcd-cf48542165a1) поддерживает операции над одномерные массивы. Модули `Array2D`, `Array3D`, и `Array4D` содержат функции, поддерживающие операции над массивами двух, трех и четырех измерений соответственно. Можно создать массивы ранга более 4 с помощью <xref:System.Array?displayProperty=nameWithType>.
 
 ### <a name="simple-functions"></a>Простые функции
-[`Array.get`](https://msdn.microsoft.com/library/dd93e85d-7e80-4d76-8de0-b6d45bcf07bc)Возвращает элемент. [`Array.length`](https://msdn.microsoft.com/library/0d775b6a-4a8f-4bd1-83e5-843b3251725f)предоставляет длину массива. [`Array.set`](https://msdn.microsoft.com/library/847edc0d-4dc5-4a39-98c7-d4320c60e790)Задает элемент с указанным значением. В следующем примере кода показано использование этих функций.
+[`Array.get`](https://msdn.microsoft.com/library/dd93e85d-7e80-4d76-8de0-b6d45bcf07bc) Возвращает элемент. [`Array.length`](https://msdn.microsoft.com/library/0d775b6a-4a8f-4bd1-83e5-843b3251725f) предоставляет длину массива. [`Array.set`](https://msdn.microsoft.com/library/847edc0d-4dc5-4a39-98c7-d4320c60e790) Задает элемент с указанным значением. В следующем примере кода показано использование этих функций.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/arrays/snippet9.fs)]
 
@@ -80,7 +77,7 @@ ms.lasthandoff: 10/18/2017
 
 ### <a name="functions-that-create-arrays"></a>Функции, создающие массивы
 
-Несколько функций создают массивы, не требуя существующего массива. [`Array.empty`](https://msdn.microsoft.com/library/c3694b92-1c16-4c54-9bf2-fe398fadce32)Создает новый массив, который не содержит какие-либо элементы. [`Array.create`](https://msdn.microsoft.com/library/e848c8d6-1142-4080-9727-8dacc26066be)Создает массив указанного размера и задает для всех элементов указанные значения. [`Array.init`](https://msdn.microsoft.com/library/ee898089-63b0-40aa-910c-5ae7e32f6665)Создает массив заданного измерения и функции для создания элементов. [`Array.zeroCreate`](https://msdn.microsoft.com/library/fa5b8e7a-1b5b-411c-8622-b58d7a14d3b2)Создает массив, элементы которого присваивается нулевое значение для типа массива. Следующий код демонстрирует эти функции.
+Несколько функций создают массивы, не требуя существующего массива. [`Array.empty`](https://msdn.microsoft.com/library/c3694b92-1c16-4c54-9bf2-fe398fadce32) Создает новый массив, который не содержит какие-либо элементы. [`Array.create`](https://msdn.microsoft.com/library/e848c8d6-1142-4080-9727-8dacc26066be) Создает массив указанного размера и задает для всех элементов указанные значения. [`Array.init`](https://msdn.microsoft.com/library/ee898089-63b0-40aa-910c-5ae7e32f6665) Создает массив заданного измерения и функции для создания элементов. [`Array.zeroCreate`](https://msdn.microsoft.com/library/fa5b8e7a-1b5b-411c-8622-b58d7a14d3b2) Создает массив, элементы которого присваивается нулевое значение для типа массива. Следующий код демонстрирует эти функции.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/arrays/snippet91.fs)]
 
@@ -92,7 +89,7 @@ Area of floats set to 5.0: [|5.0; 5.0; 5.0; 5.0; 5.0; 5.0; 5.0; 5.0; 5.0; 5.0|]
 Array of squares: [|0; 1; 4; 9; 16; 25; 36; 49; 64; 81|]
 ```
 
-[`Array.copy`](https://msdn.microsoft.com/library/9d0202f1-1ea0-475e-9d66-4f8ccc3c5b5f)Создает новый массив, содержащий элементы, скопированные из существующего массива. Обратите внимание, что копия — это неполная копия, это означает, что если тип элемента является типом ссылки, копируется только ссылка, не базовый объект. Это показано в следующем примере кода.
+[`Array.copy`](https://msdn.microsoft.com/library/9d0202f1-1ea0-475e-9d66-4f8ccc3c5b5f) Создает новый массив, содержащий элементы, скопированные из существующего массива. Обратите внимание, что копия — это неполная копия, это означает, что если тип элемента является типом ссылки, копируется только ссылка, не базовый объект. Это показано в следующем примере кода.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/arrays/snippet11.fs)]
 
@@ -105,7 +102,7 @@ Array of squares: [|0; 1; 4; 9; 16; 25; 36; 49; 64; 81|]
 
 Строка `Test1` появляется только в первом массиве, так как операция создания нового элемента перезаписывает ссылку в `firstArray` , но не влияет на исходную ссылку на пустую строку, которая все еще присутствуют в `secondArray`. Строка `Test2` появляется в обоих массивов, поскольку `Insert` операции <xref:System.Text.StringBuilder?displayProperty=nameWithType> тип влияет на базовый <xref:System.Text.StringBuilder?displayProperty=nameWithType> объекта, на которую ссылается оба массива.
 
-[`Array.sub`](https://msdn.microsoft.com/library/40fb12ba-41d7-4ef0-b33a-56727deeef9d)Создает новый массив из массива. Укажите диапазоны, предоставляя начальный индекс и длину. В следующем коде показано использование функции `Array.sub`.
+[`Array.sub`](https://msdn.microsoft.com/library/40fb12ba-41d7-4ef0-b33a-56727deeef9d) Создает новый массив из массива. Укажите диапазоны, предоставляя начальный индекс и длину. В следующем коде показано использование функции `Array.sub`.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/arrays/snippet12.fs)]
 
@@ -114,7 +111,7 @@ Array of squares: [|0; 1; 4; 9; 16; 25; 36; 49; 64; 81|]
 ```
 [|5; 6; 7; 8; 9; 10; 11; 12; 13; 14|]
 ```
-[`Array.append`](https://msdn.microsoft.com/library/08836310-5036-4474-b9a2-2c73e2293911)Создает новый массив, объединяя два существующих массива.
+[`Array.append`](https://msdn.microsoft.com/library/08836310-5036-4474-b9a2-2c73e2293911) Создает новый массив, объединяя два существующих массива.
 
 В следующем коде показано **Array.append**.
 
@@ -126,7 +123,7 @@ Array of squares: [|0; 1; 4; 9; 16; 25; 36; 49; 64; 81|]
 [|1; 2; 3; 4; 5; 6|]
 ```
 
-[`Array.choose`](https://msdn.microsoft.com/library/f5c8a5e2-637f-44d4-b35c-be96a6618b09)Выбор элементов в массиве, включаемых в новый массив. В следующем коде показано `Array.choose`. Обратите внимание, что тип элемента массива не совпадает с типом значения, возвращаемого в параметр типа. В этом примере тип элемента — это `int` результат полиномиальной функции, а параметр `elem*elem - 1`, как число с плавающей запятой.
+[`Array.choose`](https://msdn.microsoft.com/library/f5c8a5e2-637f-44d4-b35c-be96a6618b09) Выбор элементов в массиве, включаемых в новый массив. В следующем коде показано `Array.choose`. Обратите внимание, что тип элемента массива не совпадает с типом значения, возвращаемого в параметр типа. В этом примере тип элемента — это `int` результат полиномиальной функции, а параметр `elem*elem - 1`, как число с плавающей запятой.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/arrays/snippet14.fs)]
 
@@ -136,7 +133,7 @@ Array of squares: [|0; 1; 4; 9; 16; 25; 36; 49; 64; 81|]
 [|3.0; 15.0; 35.0; 63.0; 99.0|]
 ```
 
-[`Array.collect`](https://msdn.microsoft.com/library/c3b60c3b-9455-48c9-bc2b-e88f0434342a)Выполняет указанную функцию к каждому элементу существующего массива и собирает элементы, создаваемые функцией и объединяет их в новый массив. В следующем коде показано `Array.collect`.
+[`Array.collect`](https://msdn.microsoft.com/library/c3b60c3b-9455-48c9-bc2b-e88f0434342a) Выполняет указанную функцию к каждому элементу существующего массива и собирает элементы, создаваемые функцией и объединяет их в новый массив. В следующем коде показано `Array.collect`.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/arrays/snippet15.fs)]
 
@@ -146,7 +143,7 @@ Array of squares: [|0; 1; 4; 9; 16; 25; 36; 49; 64; 81|]
 [|0; 1; 0; 1; 2; 3; 4; 5; 0; 1; 2; 3; 4; 5; 6; 7; 8; 9; 10|]
 ```
 
-[`Array.concat`](https://msdn.microsoft.com/library/f7219b79-1ec8-4a25-96b1-edbedb358302)Получает последовательность массивов и объединяет их в одном массиве. В следующем коде показано `Array.concat`.
+[`Array.concat`](https://msdn.microsoft.com/library/f7219b79-1ec8-4a25-96b1-edbedb358302) Получает последовательность массивов и объединяет их в одном массиве. В следующем коде показано `Array.concat`.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/arrays/snippet16.fs)]
 
@@ -157,7 +154,7 @@ Array of squares: [|0; 1; 4; 9; 16; 25; 36; 49; 64; 81|]
 (3, 2, 6); (3, 3, 9)|]
 ```
 
-[`Array.filter`](https://msdn.microsoft.com/library/b885b214-47fc-4639-9664-b8c183a39ede)использует функцию логическое условие и создает новый массив, содержащий только те элементы входного массива, для которого условие имеет значение true. В следующем коде показано `Array.filter`.
+[`Array.filter`](https://msdn.microsoft.com/library/b885b214-47fc-4639-9664-b8c183a39ede) использует функцию логическое условие и создает новый массив, содержащий только те элементы входного массива, для которого условие имеет значение true. В следующем коде показано `Array.filter`.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/arrays/snippet17.fs)]
 
@@ -167,7 +164,7 @@ Array of squares: [|0; 1; 4; 9; 16; 25; 36; 49; 64; 81|]
 [|2; 4; 6; 8; 10|]
 ```
 
-[`Array.rev`](https://msdn.microsoft.com/library/1bbf822c-763b-4794-af21-97d2e48ef709)Создает новый массив, изменяя порядок существующего массива. В следующем коде показано `Array.rev`.
+[`Array.rev`](https://msdn.microsoft.com/library/1bbf822c-763b-4794-af21-97d2e48ef709) Создает новый массив, изменяя порядок существующего массива. В следующем коде показано `Array.rev`.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/arrays/snippet18.fs)]  
 
@@ -334,7 +331,7 @@ false
 
 ### <a name="searching-arrays"></a>Поиск в массивах
 
-[`Array.find`](https://msdn.microsoft.com/library/db6d920a-de19-4520-85a4-d83de77c1b33)принимает логическую функцию и возвращает первый элемент, для которых функция возвращает `true`, или вызывает <xref:System.Collections.Generic.KeyNotFoundException?displayProperty=nameWithType> Если найден ни один элемент, удовлетворяющий условию. [`Array.findIndex`](https://msdn.microsoft.com/library/5ae3a8f9-7b8f-44ea-a740-d5700f4d899f)Подобно `Array.find`, за исключением того, что она возвращает индекс элемента, а не сам элемент.
+[`Array.find`](https://msdn.microsoft.com/library/db6d920a-de19-4520-85a4-d83de77c1b33) принимает логическую функцию и возвращает первый элемент, для которых функция возвращает `true`, или вызывает <xref:System.Collections.Generic.KeyNotFoundException?displayProperty=nameWithType> Если найден ни один элемент, удовлетворяющий условию. [`Array.findIndex`](https://msdn.microsoft.com/library/5ae3a8f9-7b8f-44ea-a740-d5700f4d899f) Подобно `Array.find`, за исключением того, что она возвращает индекс элемента, а не сам элемент.
 
 В следующем коде используется `Array.find` и `Array.findIndex` для поиска числа, которое одновременно является точным квадратом и точным кубом.
 
@@ -346,7 +343,7 @@ false
 The first element that is both a square and a cube is 64 and its index is 62.
 ```
 
-[`Array.tryFind`](https://msdn.microsoft.com/library/7bd65f6c-df77-454c-ac3a-6f7baecec9d9)Подобно `Array.find`, за исключением того, что ее результат имеет тип параметра и возвращает `None` , если элемент не найден. `Array.tryFind`следует использовать вместо `Array.find` Если вы не знаете ли соответствующий элемент в массиве. Аналогичным образом [ `Array.tryFindIndex` ](https://msdn.microsoft.com/library/da82f7fe-95e9-4fd5-a924-cd3c9d10618a) подобно [ `Array.findIndex` ](https://msdn.microsoft.com/library/5ae3a8f9-7b8f-44ea-a740-d5700f4d899f) за исключением того, что тип параметра является возвращаемым значением. Если элемент не найден, параметр — `None`.
+[`Array.tryFind`](https://msdn.microsoft.com/library/7bd65f6c-df77-454c-ac3a-6f7baecec9d9) Подобно `Array.find`, за исключением того, что ее результат имеет тип параметра и возвращает `None` , если элемент не найден. `Array.tryFind` следует использовать вместо `Array.find` Если вы не знаете ли соответствующий элемент в массиве. Аналогичным образом [ `Array.tryFindIndex` ](https://msdn.microsoft.com/library/da82f7fe-95e9-4fd5-a924-cd3c9d10618a) подобно [ `Array.findIndex` ](https://msdn.microsoft.com/library/5ae3a8f9-7b8f-44ea-a740-d5700f4d899f) за исключением того, что тип параметра является возвращаемым значением. Если элемент не найден, параметр — `None`.
 
 В следующем коде показано использование функции `Array.tryFind`. Этот код зависит от предыдущего кода.
 
@@ -380,7 +377,7 @@ Found an element 4096 with square root 64 and cube root 16.
 
 Используйте [ `Array.max` ](https://msdn.microsoft.com/library/f03fbda0-fce6-40e2-a85d-79c9d81f710b) или [ `Array.min` ](https://msdn.microsoft.com/library/d6b3da5f-bac0-4355-9846-4b72d95bc3fd) получить максимальный и минимальный элемент, если его поддерживает тип элемента. Аналогичным образом [ `Array.maxBy` ](https://msdn.microsoft.com/library/18dbe7c5-482e-4766-8e01-12a76f847045) и [ `Array.minBy` ](https://msdn.microsoft.com/library/24091583-be78-4cc9-9fab-de6d7506af4f) позволяют функции сначала, например для преобразования в тип, поддерживающий сравнение.
 
-[`Array.sum`](https://msdn.microsoft.com/library/4ffdb8c8-cd94-4b0b-9e5c-a7c9c17963c2)Добавляет элементы массива, и [ `Array.sumBy` ](https://msdn.microsoft.com/library/41698ba6-1adc-4169-8cc5-7a0e3f8de56b) вызывает функцию для каждого элемента и складывает результаты.
+[`Array.sum`](https://msdn.microsoft.com/library/4ffdb8c8-cd94-4b0b-9e5c-a7c9c17963c2) Добавляет элементы массива, и [ `Array.sumBy` ](https://msdn.microsoft.com/library/41698ba6-1adc-4169-8cc5-7a0e3f8de56b) вызывает функцию для каждого элемента и складывает результаты.
 
 Чтобы выполнить функцию для каждого элемента массива без сохранения возвращаемого значения, используйте [ `Array.iter` ](https://msdn.microsoft.com/library/94eba0f1-ecd7-459f-b89f-ed2a2923e516). Функция двумя массивами одинаковой длины, используйте [ `Array.iter2` ](https://msdn.microsoft.com/library/018aa9b9-f186-4142-be8a-a62462794fdc). Если необходимо сохранить массив результатов функции использовать [ `Array.map` ](https://msdn.microsoft.com/library/38cbe824-0480-47be-85fd-df3afdd97a45) или [ `Array.map2` ](https://msdn.microsoft.com/library/bb7aafe8-4a1f-45b9-92fc-1af9eafbea5c), работающему над двумя массивами одновременно.
 
@@ -392,7 +389,7 @@ Found an element 4096 with square root 64 and cube root 16.
 
 ### <a name="modifying-arrays"></a>Изменение массивов
 
-[`Array.set`](https://msdn.microsoft.com/library/847edc0d-4dc5-4a39-98c7-d4320c60e790)Задает элемент с указанным значением. [`Array.fill`](https://msdn.microsoft.com/library/c83c9886-81d9-44f9-a195-61c7b87f7df2)Задает диапазон элементов в массиве, с указанным значением. Ниже приведен пример `Array.fill`.
+[`Array.set`](https://msdn.microsoft.com/library/847edc0d-4dc5-4a39-98c7-d4320c60e790) Задает элемент с указанным значением. [`Array.fill`](https://msdn.microsoft.com/library/c83c9886-81d9-44f9-a195-61c7b87f7df2) Задает диапазон элементов в массиве, с указанным значением. Ниже приведен пример `Array.fill`.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/arrays/snippet28.fs)]
 
@@ -406,7 +403,7 @@ Found an element 4096 with square root 64 and cube root 16.
 
 ### <a name="converting-to-and-from-other-types"></a>Преобразование в и из других типов
 
-[`Array.ofList`](https://msdn.microsoft.com/library/e7225239-f561-45a4-b0b5-69a1cdcae78b)Создает массив из списка. [`Array.ofSeq`](https://msdn.microsoft.com/library/6bedf5e0-4b22-46da-b09c-6aa09eff220c)Создает массив из последовательности. [`Array.toList`](https://msdn.microsoft.com/library/4deff724-0be4-4688-92e7-9d67a1097786)и [ `Array.toSeq` ](https://msdn.microsoft.com/library/ac28dbab-406c-4fe0-ab08-c1ce5e247af4) на эти другие типы коллекций выполнить преобразование из типа массива.
+[`Array.ofList`](https://msdn.microsoft.com/library/e7225239-f561-45a4-b0b5-69a1cdcae78b) Создает массив из списка. [`Array.ofSeq`](https://msdn.microsoft.com/library/6bedf5e0-4b22-46da-b09c-6aa09eff220c) Создает массив из последовательности. [`Array.toList`](https://msdn.microsoft.com/library/4deff724-0be4-4688-92e7-9d67a1097786) и [ `Array.toSeq` ](https://msdn.microsoft.com/library/ac28dbab-406c-4fe0-ab08-c1ce5e247af4) на эти другие типы коллекций выполнить преобразование из типа массива.
 
 ### <a name="sorting-arrays"></a>Сортировка массивов
 
@@ -414,7 +411,7 @@ Found an element 4096 with square root 64 and cube root 16.
 
 ### <a name="arrays-and-tuples"></a>Массивы и кортежи
 
-Функции [ `Array.zip` ](https://msdn.microsoft.com/library/23e086b8-b266-4db2-8b68-e88e6a8e2187) и [ `Array.unzip` ](https://msdn.microsoft.com/library/a529b47c-2e2b-4f79-ad44-c578432d2f48) преобразуют массивы пар кортежей в кортежи массивов и наоборот. [`Array.zip3`](https://msdn.microsoft.com/library/1745744a-d2ca-4c3e-b825-3f15d9f4000d)и [ `Array.unzip3` ](https://msdn.microsoft.com/library/bc3e6db0-f334-444f-8c30-813942880677) похожи за тем исключением, что они работают с кортежей из трех элементов или трех массивов.
+Функции [ `Array.zip` ](https://msdn.microsoft.com/library/23e086b8-b266-4db2-8b68-e88e6a8e2187) и [ `Array.unzip` ](https://msdn.microsoft.com/library/a529b47c-2e2b-4f79-ad44-c578432d2f48) преобразуют массивы пар кортежей в кортежи массивов и наоборот. [`Array.zip3`](https://msdn.microsoft.com/library/1745744a-d2ca-4c3e-b825-3f15d9f4000d) и [ `Array.unzip3` ](https://msdn.microsoft.com/library/bc3e6db0-f334-444f-8c30-813942880677) похожи за тем исключением, что они работают с кортежей из трех элементов или трех массивов.
 
 ## <a name="parallel-computations-on-arrays"></a>Параллельные вычисления с массивами
 

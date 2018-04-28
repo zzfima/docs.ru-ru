@@ -1,12 +1,13 @@
 ---
-title: "Практическое руководство. Настройка порта с использованием SSL-сертификата"
-ms.custom: 
+title: Практическое руководство. Настройка порта с использованием SSL-сертификата
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -16,23 +17,24 @@ helpviewer_keywords:
 - WCF, security mode
 - WCF, security
 ms.assetid: b8abcc8e-a5f5-4317-aca5-01e3c40ab24d
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 3fbd3b640e90ecf0ff5857bd33465e8c60135eac
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: bbf3d4b9888d07a89d1b6a8225a7f7415e8c67cc
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="how-to-configure-a-port-with-an-ssl-certificate"></a>Практическое руководство. Настройка порта с использованием SSL-сертификата
-При создании резидентной службы [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] с классом <xref:System.ServiceModel.WSHttpBinding>, использующим безопасность транспорта, нужно также настроить порт с сертификатом X.509. При создании нерезидентной службы можно разместить ее в службах IIS. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Безопасность транспорта HTTP](../../../../docs/framework/wcf/feature-details/http-transport-security.md).  
+При создании резидентной службы [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] с классом <xref:System.ServiceModel.WSHttpBinding>, использующим безопасность транспорта, нужно также настроить порт с сертификатом X.509. При создании нерезидентной службы можно разместить ее в службах IIS. Дополнительные сведения см. в разделе [безопасности транспорта HTTP](../../../../docs/framework/wcf/feature-details/http-transport-security.md).  
   
  Выбор средства для настройки порта зависит от операционной системы компьютера.  
   
- При работе в [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] или [!INCLUDE[wxp](../../../../includes/wxp-md.md)] следует использовать средство HttpCfg.exe. Это средство установлено в [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]. С [!INCLUDE[wxp](../../../../includes/wxp-md.md)], можно загрузить инструмент по [средства для поддержки Windows XP Service Pack 2](http://go.microsoft.com/fwlink/?LinkId=88606). [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Обзор Httpcfg](http://go.microsoft.com/fwlink/?LinkId=88605). [Документации по средствам поддержки Windows](http://go.microsoft.com/fwlink/?LinkId=94840) описывается синтаксис средства Httpcfg.exe.  
+ При работе в [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] или [!INCLUDE[wxp](../../../../includes/wxp-md.md)] следует использовать средство HttpCfg.exe. Это средство установлено в [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]. С [!INCLUDE[wxp](../../../../includes/wxp-md.md)], можно загрузить инструмент по [средства для поддержки Windows XP Service Pack 2](http://go.microsoft.com/fwlink/?LinkId=88606). Дополнительные сведения см. в разделе [Обзор Httpcfg](http://go.microsoft.com/fwlink/?LinkId=88605). [Документации по средствам поддержки Windows](http://go.microsoft.com/fwlink/?LinkId=94840) описывается синтаксис средства Httpcfg.exe.  
   
  При работе в [!INCLUDE[wv](../../../../includes/wv-md.md)] следует использовать установленное средство Netsh.exe.  
   
@@ -66,9 +68,9 @@ ms.lasthandoff: 12/22/2017
   
 ### <a name="to-get-a-certificates-thumbprint"></a>Возвращение отпечатка сертификата  
   
-1.  С помощью оснастки MMC найдите сертификат X.509, который используется для проверки подлинности клиента. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Как: Просмотр сертификатов с помощью оснастки MMC](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md).  
+1.  С помощью оснастки MMC найдите сертификат X.509, который используется для проверки подлинности клиента. Дополнительные сведения см. в разделе [как: Просмотр сертификатов с помощью оснастки MMC](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md).  
   
-2.  Получите доступ к отпечатку сертификата. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Как: извлечение отпечатка сертификата](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md).  
+2.  Получите доступ к отпечатку сертификата. Дополнительные сведения см. в разделе [как: извлечение отпечатка сертификата](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md).  
   
 3.  Скопируйте отпечаток сертификата в текстовый редактор, например "Блокнот".  
   

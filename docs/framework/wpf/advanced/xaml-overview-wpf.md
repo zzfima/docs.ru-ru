@@ -33,11 +33,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 87785d6bba58442a1a5ad27f5304aa63e16c1aa9
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: ec0c7645d4d6a1affe78e23a9498ea5f5f8d5235
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="xaml-overview-wpf"></a>Обзор XAML (WPF)
 В этом разделе описаны возможности языка XAML и показано, как использовать язык XAML для написания приложений [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. В частности, в этом разделе описывается реализация XAML в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Сам язык XAML — это более широкое понятие языка, чем [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
@@ -46,7 +46,7 @@ ms.lasthandoff: 04/26/2018
   
 <a name="what_is_xaml"></a>   
 ## <a name="what-is-xaml"></a>Что это такое язык XAML?  
- XAML — это декларативный язык разметки. С точки зрения модели программирования [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)] язык XAML упрощает создание [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] для приложения [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)]. Можно создать видимые элементы [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] в декларативной XAML-разметке, а затем отделить определение [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] от логики времени выполнения, используя файлы кода программной части, присоединенные к разметке с помощью определений разделяемых классов. Язык XAML напрямую представляет создание экземпляров объектов в конкретном наборе резервных типов, определенных в сборках. В этом заключается его отличие от большинства других языков разметки, которые, как правило, представляют собой интерпретируемые языки без прямой связи с системой резервных типов. Язык XAML обеспечивает рабочий процесс, позволяющий нескольким участникам разрабатывать [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] и логику приложения, используя потенциально различные средства.  
+ XAML — это декларативный язык разметки. Применительно к модели программирования .NET Framework XAML упрощает создание [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] для приложения .NET Framework. Можно создать видимые элементы [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] в декларативной XAML-разметке, а затем отделить определение [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] от логики времени выполнения, используя файлы кода программной части, присоединенные к разметке с помощью определений разделяемых классов. Язык XAML напрямую представляет создание экземпляров объектов в конкретном наборе резервных типов, определенных в сборках. В этом заключается его отличие от большинства других языков разметки, которые, как правило, представляют собой интерпретируемые языки без прямой связи с системой резервных типов. Язык XAML обеспечивает рабочий процесс, позволяющий нескольким участникам разрабатывать [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] и логику приложения, используя потенциально различные средства.  
   
  При представлении в виде текста файлы XAML являются XML-файлами, которые обычно имеют расширение `.xaml`. Файлы можно сохранять в любой кодировке, поддерживаемой XML, но обычно используется кодировка UTF-8.  
   

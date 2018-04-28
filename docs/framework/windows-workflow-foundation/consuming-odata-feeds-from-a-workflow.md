@@ -14,11 +14,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 2057e2b1c03a1ebcd68d7d59be8839171305707f
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: 09eb22c0c4bfaf549bd18cccae0c84957e730aa6
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="consuming-odata-feeds-from-a-workflow"></a>Использование каналов OData из рабочего процесса
 Службы WCF Data Services являются компонентом [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] , который позволяет создавать службы, использующие протокол Open Data Protocol (OData) для передачи и получения данных через Интернет или интрасеть с помощью семантики передачи репрезентативного состояния (REST). OData предоставляет доступ к данным в виде ресурсов, которые адресуются по URI. Со службами данных, основанными на OData, может взаимодействовать любое приложение, которое способно отправить HTTP-запрос и обработать канал OData, возвращаемый службой данных. Кроме того, службы данных WCF включают в себя клиентские библиотеки, расширяющие программные возможности для доступа к каналам OData из приложений [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] . В этом разделе представлены общие сведения об использовании каналов OData в рабочем процессе как с клиентскими библиотеками, так и без них.  
@@ -37,13 +37,13 @@ ms.lasthandoff: 04/27/2018
  Обратите внимание, что эта служба не предоставляет доступ к операциям службы, а в списке **Службы** имеются элементы, представляющие сущности, предоставляемые службой данных «Борей». При добавлении ссылки на службу для этих сущностей будут созданы классы, которые будут использоваться в клиентском коде. В примерах в этом разделе для выполнения запросов используются эти классы, а также `NorthwindEntities` .  
   
 > [!NOTE]
->  [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Создание клиентской библиотеки службы данных (службы данных WCF)](http://go.microsoft.com/fwlink/?LinkID=191611).  
+>  Дополнительные сведения см. в разделе [Создание клиентской библиотеки службы данных (службы данных WCF)](http://go.microsoft.com/fwlink/?LinkID=191611).  
   
 ### <a name="using-asynchronous-methods"></a>Использование асинхронных методов  
  Для разрешения возможных проблем с задержками, которые могут произойти при обращении к ресурсам через Интернет, рекомендуется производить обращения к службам данных WCF асинхронно. Библиотеки клиента служб данных WCF включают в себя асинхронные методы для вызова запросов, и Windows Workflow Foundation (WF) предоставляет <xref:System.Activities.AsyncCodeActivity> класс для создания асинхронных действий. Можно написать действия, производные от<xref:System.Activities.AsyncCodeActivity> , чтобы пользоваться всеми преимуществами классов [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] с асинхронными методами, или код, выполняемый асинхронно, можно поместить в метод и вызывать с помощью делегата. В этом разделе приводятся два примера действия, являющегося производным от <xref:System.Activities.AsyncCodeActivity> , - одно из них использует асинхронные методы клиентских библиотек служб данных WCF, а второе - делегат.  
   
 > [!NOTE]
->  [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Асинхронные операции (службы данных WCF)](http://go.microsoft.com/fwlink/?LinkId=193396) и [создание асинхронных действий](../../../docs/framework/windows-workflow-foundation/creating-asynchronous-activities-in-wf.md).  
+>  Дополнительные сведения см. в разделе [асинхронные операции (службы данных WCF)](http://go.microsoft.com/fwlink/?LinkId=193396) и [создание асинхронных действий](../../../docs/framework/windows-workflow-foundation/creating-asynchronous-activities-in-wf.md).  
   
 ### <a name="using-client-library-asynchronous-methods"></a>Использование асинхронных методов клиентских библиотек  
  Класс <xref:System.Data.Services.Client.DataServiceQuery%601> предусматривает методы <xref:System.Data.Services.Client.DataServiceQuery%601.BeginExecute%2A> и <xref:System.Data.Services.Client.DataServiceQuery%601.EndExecute%2A> для асинхронных запросов службы OData. Эти методы могут быть вызваны из переопределений <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> и <xref:System.Activities.AsyncCodeActivity.EndExecute%2A> класса, производного от <xref:System.Activities.AsyncCodeActivity> . Когда переопределение <xref:System.Activities.AsyncCodeActivity> <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> возвращает управление, рабочий процесс может перейти в состояние простоя (при этом он не будет сохранен), а после завершения асинхронных операций <xref:System.Activities.AsyncCodeActivity.EndExecute%2A> вызывается средой выполнения.  

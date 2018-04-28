@@ -1,24 +1,26 @@
 ---
-title: "Автономная сериализация JSON"
-ms.custom: 
+title: Автономная сериализация JSON
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 312bd7b2-1300-4b12-801e-ebe742bd2287
-caps.latest.revision: "32"
+caps.latest.revision: 32
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 8583ac00f1216e68f95c3d41d8c896b555d0aa8d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 1a0a11d613ffb8f71437edd73a8be64fb5f55a4c
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="stand-alone-json-serialization"></a>Автономная сериализация JSON
 JSON (JavaScript Object Notation, объектная нотация JavaScript) - формат данных, предназначенный специально для использования JavaScript-кодом, выполняемым на веб-страницах внутри браузера. Этот формат данных используется по умолчанию в службах ASP.NET AJAX, созданных в [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
@@ -38,7 +40,7 @@ JSON (JavaScript Object Notation, объектная нотация JavaScript) 
 |<xref:System.Enum>|Число|См. раздел «Перечисления и JSON» ниже.|  
 |<xref:System.Boolean>|Boolean|--|  
 |<xref:System.String>, <xref:System.Char>|String|--|  
-|<xref:System.TimeSpan>, <xref:System.Guid>, <xref:System.Uri>|String|Формат этих типов в JSON идентичен формату в XML (а именно: TimeSpan имеет формат длительности, описанный в ISO 8601, GUID имеет формат «12345678-ABCD-ABCD-ABCD-1234567890AB», а URI представляется в форме исходной строки, например «http://www.example.com»). Точные сведения в разделе [Справочник по схеме контрактов данных](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md).|  
+|<xref:System.TimeSpan>, <xref:System.Guid>, <xref:System.Uri>|String|Формат этих типов в JSON является такой же, как XML (по существу, интервал времени в формате ISO 8601 длительности GUID в формате «12345678-ABCD-ABCD-ABCD-1234567890AB» и URI в виде строки, такие как «http://www.example.com»). Точные сведения в разделе [Справочник по схеме контрактов данных](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md).|  
 |<xref:System.Xml.XmlQualifiedName>|String|Формат - «имя:пространство_имен» (все до первого двоеточия является именем). Имя или пространство имен может отсутствовать. При отсутствии пространства имен можно также опустить двоеточие.|  
 |<xref:System.Array> типа <xref:System.Byte>|Массив чисел|Каждое число представляет значение одного байта.|  
 |<xref:System.DateTime>|DateTime или String|См. раздел «Даты-времена и JSON» ниже.|  
@@ -51,7 +53,7 @@ JSON (JavaScript Object Notation, объектная нотация JavaScript) 
 |Значение `Null` для любого типа|Null|Типы, допускающие значение null, также поддерживаются и сопоставляются с JSON так же, как и типы, не допускающие значение null.|  
   
 ### <a name="enumerations-and-json"></a>Перечисления и JSON  
- Значения элементов перечислений в JSON рассматриваются как числа в отличие от контрактов данных, куда они включаются как имена элементов. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Работа, контракта данных. в разделе [типы перечислений в контрактах данных](../../../../docs/framework/wcf/feature-details/enumeration-types-in-data-contracts.md).  
+ Значения элементов перечислений в JSON рассматриваются как числа в отличие от контрактов данных, куда они включаются как имена элементов. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Работа, контракта данных. в разделе [типы перечислений в контрактах данных](../../../../docs/framework/wcf/feature-details/enumeration-types-in-data-contracts.md).  
   
 -   Например, в случае перечисления `public enum Color {red, green, blue, yellow, pink}` при сериализации члена `yellow` получается число 3, а не строка "yellow".  
   
@@ -117,7 +119,7 @@ JSON (JavaScript Object Notation, объектная нотация JavaScript) 
  Подробное описание работы полиморфной сериализации и некоторых ограничений, которые необходимо принимать во внимание при ее использовании, см. в разделе "Дополнительные сведения для опытных пользователей" ниже.  
   
 ### <a name="versioning"></a>Управление версиями  
- Функции управления версиями контрактов данных, включая интерфейс <xref:System.Runtime.Serialization.IExtensibleDataObject>, полностью поддерживаются в JSON. Кроме того, в большинстве случаев можно десериализовать тип в один формат (например, XML) и затем сериализовать его в другой формат (например, JSON) и при этом сохранить данные в <xref:System.Runtime.Serialization.IExtensibleDataObject>. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Контракты данных, совместимые с любыми будущими](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md). Следует помнить, что JSON не придает значения порядку, поэтому любая информация о порядке будет потеряна. Кроме того, JSON не поддерживает множественные пары "ключ/значение" с одним и тем же именем ключа. Наконец, все операции над объектом <xref:System.Runtime.Serialization.IExtensibleDataObject> по своей природе полиморфны - то есть, их производные типы присваиваются типу <xref:System.Object>, базовому типу для всех типов.  
+ Функции управления версиями контрактов данных, включая интерфейс <xref:System.Runtime.Serialization.IExtensibleDataObject>, полностью поддерживаются в JSON. Кроме того, в большинстве случаев можно десериализовать тип в один формат (например, XML) и затем сериализовать его в другой формат (например, JSON) и при этом сохранить данные в <xref:System.Runtime.Serialization.IExtensibleDataObject>. Дополнительные сведения о создании контрактов данных, обладающих прямой совместимостью, см. в разделе [Контракты данных, совместимые с любыми будущими изменениями](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md). Следует помнить, что JSON не придает значения порядку, поэтому любая информация о порядке будет потеряна. Кроме того, JSON не поддерживает множественные пары "ключ/значение" с одним и тем же именем ключа. Наконец, все операции над объектом <xref:System.Runtime.Serialization.IExtensibleDataObject> по своей природе полиморфны - то есть, их производные типы присваиваются типу <xref:System.Object>, базовому типу для всех типов.  
   
 ## <a name="json-in-urls"></a>JSON в URL-адресах  
  При использовании конечных точек ASP.NET AJAX с командой GET HTTP (с помощью атрибута <xref:System.ServiceModel.Web.WebGetAttribute>), входящие параметры присутствуют в URL-адресе запроса, а не в теле сообщения. JSON поддерживается даже в URL-АДРЕСЕ запроса, поэтому, если какая-либо операция, которая принимает `Int` именем «number» и `Person` сложный тип с именем «p», URL-адрес может напоминать следующий URL-адрес.  
@@ -192,13 +194,13 @@ http://example.com/myservice.svc/MyOperation?number=7&p={"name":"John","age":42}
  Члены данных с именем "__type" запрещены из-за потенциального конфликта с намеком на тип.  
   
 #### <a name="reducing-the-size-of-type-hints"></a>Уменьшение размера намеков на тип  
- Для уменьшения размера сообщений JSON префикс пространства имен контракта данных по умолчанию (http://schemas.datacontract.org/2004/07/) заменяется символом "#". (Чтобы эта замена обратимое, используется escape-правило: Если пространство имен начинается с «#» или "\\" символы, к ним добавляется дополнительный «\\» символ). Таким образом, если "Circle" - тип в пространстве имен .NET "MyApp.Shapes", его пространство имен контракта данных по умолчанию будет http://schemas.datacontract.org/2004/07/MyApp. Shapes, а его JSON-представление будет иметь следующий вид.  
+ Чтобы уменьшить размер JSON сообщений, префикс пространства имен контракта данных по умолчанию (http://schemas.datacontract.org/2004/07/) заменяется символом «#». (Чтобы эта замена обратимое, используется escape-правило: Если пространство имен начинается с «#» или "\\" символы, к ним добавляется дополнительный «\\» символ). Таким образом, если «Circle» является типом в пространстве имен .NET «MyApp.Shapes», его пространство имен контракта данных по умолчанию — http://schemas.datacontract.org/2004/07/MyApp. Shapes, а его JSON-представление будет иметь следующий вид.  
   
 ```json  
 {"__type":"Circle:#MyApp.Shapes","x":50,"y":70,"radius":10}  
 ```  
   
- И усеченное (#MyApp.Shapes), и полное (http://schemas.datacontract.org/2004/07/MyApp.Shapes) имена распознаются при десериализации.  
+ Усеченное (#MyApp.Shapes) и полный (http://schemas.datacontract.org/2004/07/MyApp.Shapes) имена распознаются при десериализации.  
   
 #### <a name="type-hint-position-in-json-objects"></a>Положение намека на тип в объектах JSON  
  Обратите внимание, что намек на тип в JSON-представлении должен стоять на первом месте. Это единственный случай, когда порядок пар "ключ/значение" в обработке JSON имеет значение. Например, следующий способ задания намека на тип допустимым не является.  
@@ -256,7 +258,7 @@ http://example.com/myservice.svc/MyOperation?number=7&p={"name":"John","age":42}
   
  При десериализации обратно в <xref:System.Object>:  
   
--   `Shape`должен быть в списке известных типов. Наличие <xref:System.Collections.Generic.List%601> типа `Shape` в списке известных типов не оказывает влияния. Обратите внимание, что необходимо добавить `Shape` для известных типов при сериализации в данном случае - это выполняется автоматически.  
+-   `Shape` должен быть в списке известных типов. Наличие <xref:System.Collections.Generic.List%601> типа `Shape` в списке известных типов не оказывает влияния. Обратите внимание, что необходимо добавить `Shape` для известных типов при сериализации в данном случае - это выполняется автоматически.  
   
 -   Коллекция десериализуется как <xref:System.Array> типа <xref:System.Object> , содержащий `Shape` экземпляров.  
   

@@ -1,27 +1,29 @@
 ---
-title: "Повышение привилегий"
-ms.custom: 
+title: Повышение привилегий
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - elevation of privilege [WCF]
 - security [WCF], elevation of privilege
 ms.assetid: 146e1c66-2a76-4ed3-98a5-fd77851a06d9
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4225460698d36b3b56b9b0b03cde34e4502b13c9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 6d93a8ae074e4016d7d8ec4b8734f0d14ead938f
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="elevation-of-privilege"></a>Повышение привилегий
 *Несанкционированное получение прав* полученный в результате, когда злоумышленник права по сравнению с были предоставлены изначально. Например, злоумышленник, ранее имевший разрешение «только для чтения», может каким-либо образом расширить его до уровня «чтение и запись».  
@@ -29,7 +31,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="trusted-sts-should-sign-saml-token-claims"></a>Доверенная служба маркеров безопасности должна подписывать утверждения маркеров SAML  
  Маркер языка SAML (Security Assertions Markup Language) - это универсальный маркер XML, являющийся типом по умолчанию для выдаваемых маркеров. Маркер SAML может создаваться при обмене данными службой маркеров безопасности, которой веб-служба доверяет. Маркеры SAML содержат утверждения в операторах. Злоумышленник может скопировать утверждения из действительного маркера, создать новый маркер SAML и подписать его именем другого издателя. Идея состоит в том, чтобы проверить, проверяет ли сервер издателей, и, если сервер этого не делает, создать маркеры SAML, расширяющие права по сравнению с правами, которые выдаются доверенной службой маркеров безопасности.  
   
- Класс <xref:System.IdentityModel.Tokens.SamlAssertion> проверяет цифровые подписи в токене SAML, и класс <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator> по умолчанию требует, чтобы токены SAML были подписаны сертификатом X.509, если свойство <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.CertificateValidationMode%2A> класса <xref:System.ServiceModel.Security.IssuedTokenServiceCredential> имеет значение <xref:System.ServiceModel.Security.X509CertificateValidationMode.ChainTrust>. Одного использования режима `ChainTrust` недостаточно, чтобы определить, является ли издатель токена SAML доверенным. Службы, которым требуется более детальная модель управления безопасностью, могут использовать политики авторизации и принудительного применения для проверки издателей наборов утверждений, создаваемых при проверке подлинности токенов, или использовать параметры проверки X.509 в <xref:System.ServiceModel.Security.IssuedTokenServiceCredential> для ограничения набора разрешенных сертификатов подписи. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Управление утверждениями и авторизацией с помощью модели удостоверения](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md) и [Федерация и выданные маркеры](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md).  
+ Класс <xref:System.IdentityModel.Tokens.SamlAssertion> проверяет цифровые подписи в токене SAML, и класс <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator> по умолчанию требует, чтобы токены SAML были подписаны сертификатом X.509, если свойство <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.CertificateValidationMode%2A> класса <xref:System.ServiceModel.Security.IssuedTokenServiceCredential> имеет значение <xref:System.ServiceModel.Security.X509CertificateValidationMode.ChainTrust>. Одного использования режима `ChainTrust` недостаточно, чтобы определить, является ли издатель токена SAML доверенным. Службы, которым требуется более детальная модель управления безопасностью, могут использовать политики авторизации и принудительного применения для проверки издателей наборов утверждений, создаваемых при проверке подлинности токенов, или использовать параметры проверки X.509 в <xref:System.ServiceModel.Security.IssuedTokenServiceCredential> для ограничения набора разрешенных сертификатов подписи. Дополнительные сведения см. в разделе [управление утверждениями и авторизацией с помощью модели удостоверения](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md) и [Федерация и выданные маркеры](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md).  
   
 ## <a name="switching-identity-without-a-security-context"></a>Смена удостоверения без контекста безопасности  
  Приведенные ниже сведения относятся только к [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)].  

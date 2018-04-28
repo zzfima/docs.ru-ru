@@ -21,11 +21,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 6fbfd28931f484c5b643dad278b358e7ac2a2945
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: d20d4c39a6cca744ac981d1a143d2847d9b20e5a
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="developing-and-deploying-wcf-data-services"></a>Разработка и развертывание служб WCF Data Services
 Этот раздел содержит сведения о разработке и развертывании [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]. Дополнительные сведения о [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], в разделе [Приступая к работе](../../../../docs/framework/data/wcf/getting-started-with-wcf-data-services.md) и [Обзор](../../../../docs/framework/data/wcf/wcf-data-services-overview.md).  
@@ -89,7 +89,7 @@ ms.lasthandoff: 04/26/2018
   
 -   Программа проверки HTTP может быть очень полезной при развертывании службы данных, позволяя проверять содержимое сообщений запросов и ответов. Любой планировщик сетевых пакетов, способный отображать необработанные пакеты, можно использовать для проверки HTTP-запросов к службе данных и ответов от нее.  
   
--   При отладке службы данных, возможно, потребуется получать от службы данных больше сведений об ошибках, чем при нормальной работе. Дополнительные сведения об ошибках можно получить из службы данных, установив свойство <xref:System.Data.Services.DataServiceConfiguration.UseVerboseErrors%2A> в <xref:System.Data.Services.DataServiceConfiguration> значение `true` , а свойство <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A> атрибута <xref:System.ServiceModel.Description.ServiceDebugBehavior> класса службы данных — в значение `true`. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] публикацию [Debugging WCF Data Services](http://go.microsoft.com/fwlink/?LinkId=201868). Кроме того, можно включить трассировку в [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] для просмотра исключений, вызываемых уровнем сообщений HTTP. Для получения дополнительной информации см. [Configuring Tracing](../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md).  
+-   При отладке службы данных, возможно, потребуется получать от службы данных больше сведений об ошибках, чем при нормальной работе. Дополнительные сведения об ошибках можно получить из службы данных, установив свойство <xref:System.Data.Services.DataServiceConfiguration.UseVerboseErrors%2A> в <xref:System.Data.Services.DataServiceConfiguration> значение `true` , а свойство <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A> атрибута <xref:System.ServiceModel.Description.ServiceDebugBehavior> класса службы данных — в значение `true`. Дополнительные сведения см. в публикации [Debugging WCF Data Services](http://go.microsoft.com/fwlink/?LinkId=201868). Кроме того, можно включить трассировку в [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] для просмотра исключений, вызываемых уровнем сообщений HTTP. Для получения дополнительной информации см. [Configuring Tracing](../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md).  
   
 -   Служба данных обычно разрабатывается как [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] проект приложения, но можно также создать службу данных как [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] проекта веб-сайта в Visual Studio. Сведения о различиях между двумя типами проектов см. в разделе [NIB: проекты веб-приложений и проектами веб-сайтов в Visual Studio](http://msdn.microsoft.com/library/2861815e-f5a2-4378-a2f8-b8a86dc012f5).  
   

@@ -1,24 +1,26 @@
 ---
-title: "Устранение неполадок обмена сообщениями с использованием очередей"
-ms.custom: 
+title: Устранение неполадок обмена сообщениями с использованием очередей
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: a5f2836f-018d-42f5-a571-1e97e64ea5b0
-caps.latest.revision: "19"
+caps.latest.revision: 19
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a35de5ea587ad77a13105442f0c47344638b611c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: d7de2912029efb61135d5329f186ed2c1ca95840
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="troubleshooting-queued-messaging"></a>Устранение неполадок обмена сообщениями с использованием очередей
 Данный раздел содержит наиболее распространенные вопросы и справку по устранению неполадок при использовании очередей в [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
@@ -46,7 +48,7 @@ ms.lasthandoff: 12/22/2017
   
 -   Удаленные чтения в транзакциях поддерживаются только MSMQ 4.0.  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Различия в возможностях очередей в Windows Vista, Windows Server 2003 и Windows XP](../../../../docs/framework/wcf/feature-details/diff-in-queue-in-vista-server-2003-windows-xp.md).  
+ Дополнительные сведения см. в разделе [различия в возможностях очередей в Windows Vista, Windows Server 2003 и Windows XP](../../../../docs/framework/wcf/feature-details/diff-in-queue-in-vista-server-2003-windows-xp.md).  
   
  **Вопрос** можно ли использовать MSMQ 3.0 на одной стороне взаимодействия с использованием очередей, а MSMQ 4.0 на другой стороне?  
   

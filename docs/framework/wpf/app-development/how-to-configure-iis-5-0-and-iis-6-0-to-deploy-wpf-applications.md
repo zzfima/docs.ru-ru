@@ -27,11 +27,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 5c1b03cf39608566ed80e2288204480e77994ad7
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: edc4bc985f7117dc66d29053d62a283d67b01a85
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="how-to-configure-iis-50-and-iis-60-to-deploy-wpf-applications"></a>Практическое руководство. Настройка служб IIS 5.0 и IIS 6.0 для развертывания приложений WPF
 Приложение [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] можно разворачивать с большинства веб-серверов при условии, что они настроены с соответствующими типами [!INCLUDE[TLA#tla_mime](../../../../includes/tlasharptla-mime-md.md)]. По умолчанию [!INCLUDE[TLA#tla_iis70](../../../../includes/tlasharptla-iis70-md.md)] настроена с типами [!INCLUDE[TLA2#tla_mime](../../../../includes/tla2sharptla-mime-md.md)], в отличие от [!INCLUDE[TLA#tla_iis50](../../../../includes/tlasharptla-iis50-md.md)] и [!INCLUDE[TLA#tla_iis60](../../../../includes/tlasharptla-iis60-md.md)].  
@@ -40,7 +40,7 @@ ms.lasthandoff: 04/26/2018
   
   
 > [!NOTE]
->  Вы можете проверить строку *UserAgent* в реестре, чтобы определить, установлена ли в системе платформа [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)]. Подробные сведения и скрипт, проверяющий по строке *UserAgent* наличие в системе установленной платформы [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)], см. в разделе [Проверка наличия установленной платформы .NET Framework 3.0](../../../../docs/framework/wpf/app-development/how-to-detect-whether-the-net-framework-3-0-is-installed.md).  
+>  Вы можете проверить *UserAgent* строки в реестр, чтобы определить, имеет ли системы .NET Framework установлена. Дополнительные сведения и скрипт, который проверяет *UserAgent* строку, чтобы определить, установлена ли в системе .NET Framework см. в разделе [обнаружить ли .NET Framework 3.0 не установлена](../../../../docs/framework/wpf/app-development/how-to-detect-whether-the-net-framework-3-0-is-installed.md).  
   
 <a name="content_expiration"></a>   
 ## <a name="adjust-the-content-expiration-setting"></a>Настройка параметра срока действия содержимого  

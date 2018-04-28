@@ -1,26 +1,27 @@
 ---
-title: "Хранилища экземпляров"
-ms.custom: 
+title: Хранилища экземпляров
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: f2629668-0923-4987-b943-67477131c1e0
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 63cfe130e841ce073f794db6494fa8e97364d476
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: a41c25dc3c664715bd9e811d6a21a6e3600aa8a5
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="instance-stores"></a>Хранилища экземпляров
-Хранилище экземпляров - это логический контейнер для экземпляров. Здесь хранятся данные и метаданные экземпляра. Хранилище экземпляров не предполагает выделения физического пространства. Хранилище экземпляра может содержать постоянные сведения в базе данных SQL Server или непостоянные сведения о состоянии в памяти. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] поставляется с хранилищем экземпляров рабочего процесса SQL - конкретной реализацией хранилища экземпляров, которая позволяет рабочему процессу хранить данные и метаданные в базе данных SQL Server 2005 или SQL Server 2008. Кроме того, Windows Server App Fabric также предоставляет конкретную реализацию хранилища экземпляров. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Windows Server хранилище экземпляров, запроса и поставщики управления](http://go.microsoft.com/fwlink/?LinkID=201201&clcid=0x409).  
+Хранилище экземпляров - это логический контейнер для экземпляров. Здесь хранятся данные и метаданные экземпляра. Хранилище экземпляров не предполагает выделения физического пространства. Хранилище экземпляра может содержать постоянные сведения в базе данных SQL Server или непостоянные сведения о состоянии в памяти. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] поставляется с хранилищем экземпляров рабочего процесса SQL - конкретной реализацией хранилища экземпляров, которая позволяет рабочему процессу хранить данные и метаданные в базе данных SQL Server 2005 или SQL Server 2008. Кроме того, Windows Server App Fabric также предоставляет конкретную реализацию хранилища экземпляров. Дополнительные сведения см. в разделе [Windows Server хранилище экземпляров, запроса и поставщики управления](http://go.microsoft.com/fwlink/?LinkID=201201&clcid=0x409).  
   
  API сохраняемости - это интерфейс между узлом и хранилищем экземпляров, позволяющим узлу отправлять запросы на команды (например, <xref:System.Activities.DurableInstancing.LoadWorkflowCommand> и <xref:System.Activities.DurableInstancing.SaveWorkflowCommand>) в хранилище экземпляров. Конкретная реализация данного API-интерфейса называется поставщиком сохраняемости. Поставщик сохраняемости получает запросы от узла и изменяет хранилище экземпляров.  
   

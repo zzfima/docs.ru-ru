@@ -1,13 +1,13 @@
 ---
-title: "Практическое руководство. Использование средств обеспечения безопасности транспорта и учетных данных сообщения"
-ms.custom: 
+title: Практическое руководство. Использование средств обеспечения безопасности транспорта и учетных данных сообщения
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,20 +15,20 @@ dev_langs:
 helpviewer_keywords:
 - TransportWithMessageCredentials
 ms.assetid: 6cc35346-c37a-4859-b82b-946c0ba6e68f
-caps.latest.revision: 
+caps.latest.revision: 11
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
 ms.workload:
 - dotnet
-ms.openlocfilehash: 70575732e7840d243373fd1512f788c776f17ceb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fad7970711435cdabecd883f5e1dc44c64bd2c93
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="how-to-use-transport-security-and-message-credentials"></a>Практическое руководство. Использование средств обеспечения безопасности транспорта и учетных данных сообщения
-Механизм защиты службы с помощью учетных данных транспорта и учетных данных сообщения использует лучшие возможности режимов безопасности транспорта (TLS) и сообщений (MLS) в [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. В общих словах, TLS обеспечивает целостность и конфиденциальность, а MLS предоставляет различные учетные данные, которые невозможно использовать в строгих механизмах обеспечения безопасности транспорта. В этом разделе приведены основные этапы реализации транспорта с учетными данными сообщения с помощью привязок <xref:System.ServiceModel.WSHttpBinding> и <xref:System.ServiceModel.NetTcpBinding>. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Настройка режима безопасности, в разделе [как: режим безопасности](../../../../docs/framework/wcf/how-to-set-the-security-mode.md).  
+Механизм защиты службы с помощью учетных данных транспорта и учетных данных сообщения использует лучшие возможности режимов безопасности транспорта (TLS) и сообщений (MLS) в [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. В общих словах, TLS обеспечивает целостность и конфиденциальность, а MLS предоставляет различные учетные данные, которые невозможно использовать в строгих механизмах обеспечения безопасности транспорта. В этом разделе приведены основные этапы реализации транспорта с учетными данными сообщения с помощью привязок <xref:System.ServiceModel.WSHttpBinding> и <xref:System.ServiceModel.NetTcpBinding>. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Настройка режима безопасности, в разделе [как: режим безопасности](../../../../docs/framework/wcf/how-to-set-the-security-mode.md).  
   
  При задании режима безопасности`TransportWithMessageCredential` транспорт определяет фактический механизм, обеспечивающий безопасность на транспортном уровне. В случае HTTP таким механизмом является SSL по HTTP (HTTPS); в случае TCP таким механизмом является SSL по TCP или Windows.  
   
@@ -38,11 +38,11 @@ ms.lasthandoff: 12/22/2017
   
 ### <a name="to-use-the-wshttpbinding-with-a-certificate-for-transport-security-in-code"></a>Использование привязки WSHttpBinding с сертификатом для обеспечения безопасности транспорта (в коде)  
   
-1.  Воспользуйтесь средством HttpCfg.exe для привязки SSL-сертификата к порту на компьютере. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Как: Настройка порта с SSL-сертификата](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md).  
+1.  Воспользуйтесь средством HttpCfg.exe для привязки SSL-сертификата к порту на компьютере. Дополнительные сведения см. в разделе [как: Настройка порта с SSL-сертификата](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md).  
   
 2.  Создайте экземпляр класса <xref:System.ServiceModel.WSHttpBinding> и задайте для свойства <xref:System.ServiceModel.WSHttpSecurity.Mode%2A> значение <xref:System.ServiceModel.SecurityMode.TransportWithMessageCredential>.  
   
-3.  Присвойте свойству <xref:System.ServiceModel.HttpTransportSecurity.ClientCredentialType%2A> соответствующее значение. ([!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [При выборе типа учетных данных](../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md).) В следующем коде используется значение <xref:System.ServiceModel.MessageCredentialType.Certificate>.  
+3.  Присвойте свойству <xref:System.ServiceModel.HttpTransportSecurity.ClientCredentialType%2A> соответствующее значение. (Дополнительные сведения см. в разделе [при выборе типа учетных данных](../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md).) В следующем коде используется значение <xref:System.ServiceModel.MessageCredentialType.Certificate>.  
   
 4.  Создайте экземпляр класса <xref:System.Uri> с соответствующим базовым адресом. Обратите внимание, что адрес должен использовать схему "HTTPS" и содержать фактическое имя компьютера и номер порта, к которому привязан SSL-сертификат. (Кроме того, базовый адрес можно задать в конфигурации.)  
   
@@ -97,7 +97,7 @@ ms.lasthandoff: 12/22/2017
   
 #### <a name="to-use-the-wshttpbinding"></a>Использование привязки WSHttpBinding  
   
-1.  Задайте для компьютера SSL-сертификат, привязанный к порту. ([!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Как: Настройка порта SSL-сертификат,](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)). Не нужно задавать <`transport`> значение элемента в этой конфигурации.  
+1.  Задайте для компьютера SSL-сертификат, привязанный к порту. (Дополнительные сведения см. в разделе [как: Настройка порта SSL-сертификат,](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)). Не нужно задавать <`transport`> значение элемента в этой конфигурации.  
   
 2.  Задайте тип учетных данных клиента для MLS. В следующем примере задается `clientCredentialType` атрибут <`message`> элемент `UserName`.  
   

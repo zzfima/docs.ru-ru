@@ -1,24 +1,26 @@
 ---
 title: '&lt;serviceMetadata&gt;'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 2b4c3b4c-31d4-4908-a9b7-5bb411c221f2
-caps.latest.revision: "28"
+caps.latest.revision: 28
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 26dd46cc8915dffdafe211a33ea80e8e46d5acf5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: b0b98c637c98c75aab5009f9a2f35b8ce6b90012
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="ltservicemetadatagt"></a>&lt;serviceMetadata&gt;
 Задает публикацию метаданных службы и связанных сведений.  
@@ -54,11 +56,11 @@ ms.lasthandoff: 12/22/2017
 |externalMetadataLocation|Универсальный код ресурса (URI), содержащий местоположение WSDL-файла, возвращаемый пользователю в ответ на запросы WSDL и MEX, вместо автоматически создаваемых WSDL. Если атрибут не задан, по умолчанию возвращается WSDL. Значение по умолчанию - пустая строка.|  
 |httpGetBinding|Строковое значение, в котором указывается тип привязки, используемой для загрузки метаданных посредством HTTP GET. Этот параметр является необязательным. Если он не указан, то будут использоваться привязки по умолчанию.<br /><br /> Поддерживаются только привязки с внутренними элементами привязки, поддерживающими <xref:System.ServiceModel.Channels.IReplyChannel>. Кроме этого, свойство <xref:System.ServiceModel.Channels.MessageVersion> привязки должно иметь значение <xref:System.ServiceModel.Channels.MessageVersion.None%2A>.|  
 |httpGetBindingConfiguration|Строка, задающая имя привязки, указанной атрибутом `httpGetBinding`, который ссылается на дополнительные сведения конфигурации этой привязки. Такое же имя должно быть задано в разделе `<bindings>`.|  
-|httpGetEnabled|Логическое значение, указывающее, следует ли опубликовывать метаданные службы для извлечения с помощью запроса HTTP-GET. Значение по умолчанию — `false`.<br /><br /> Если атрибут httpGetUrl не указан, адрес, по которому публикуются метаданные, - это адрес службы плюс «?wsdl». Например, если адрес службы - "http://localhost:8080/CalculatorService", то адрес метаданных HTTP/Get будет иметь вид "http://localhost:8080/CalculatorService?wsdl".<br /><br /> Если это свойство имеет `false`, или адрес службы не основан на HTTP или HTTPS, «? wsdl» игнорируется.|  
+|httpGetEnabled|Логическое значение, указывающее, следует ли опубликовывать метаданные службы для извлечения с помощью запроса HTTP-GET. Значение по умолчанию — `false`.<br /><br /> Если атрибут httpGetUrl не указан, адрес, по которому публикуются метаданные, - это адрес службы плюс «?wsdl». Например, если адресом службы является «http://localhost:8080/CalculatorService«, то адрес метаданных HTTP/Get будет»http://localhost:8080/CalculatorService?wsdl».<br /><br /> Если это свойство имеет `false`, или адрес службы не основан на HTTP или HTTPS, «? wsdl» игнорируется.|  
 |httpGetUrl|URI, указывающий адрес, по которому метаданные публикуются для извлечения с использованием запроса HTTP-GET. Если указан относительный URI, то он будет обрабатываться относительно базового адреса службы.|  
 |httpsGetBinding|Строковое значение, в котором указывается тип привязки, используемой для загрузки метаданных посредством HTTPS GET. Этот параметр является необязательным. Если он не указан, то будут использоваться привязки по умолчанию.<br /><br /> Поддерживаются только привязки с внутренними элементами привязки, поддерживающими <xref:System.ServiceModel.Channels.IReplyChannel>. Кроме этого, свойство <xref:System.ServiceModel.Channels.MessageVersion> привязки должно иметь значение <xref:System.ServiceModel.Channels.MessageVersion.None%2A>.|  
 |httpsGetBindingConfiguration|Строка, задающая имя привязки, указанной атрибутом `httpsGetBinding`, который ссылается на дополнительные сведения конфигурации этой привязки. Такое же имя должно быть задано в разделе `<bindings>`.|  
-|httpsGetEnabled|Логическое значение, указывающее, следует ли опубликовывать метаданные службы для извлечения с помощью запроса HTTPS-GET. Значение по умолчанию — `false`.<br /><br /> Если атрибут httpsGetUrl не указан, адрес, по которому публикуются метаданные, - это адрес службы плюс «?wsdl». Например, если адрес службы - "https://localhost:8080/CalculatorService", то адрес метаданных HTTPS/Get будет иметь вид "https://localhost:8080/CalculatorService?wsdl".<br /><br /> Если это свойство имеет `false`, или адрес службы не основан на HTTP или HTTPS, «? wsdl» игнорируется.|  
+|httpsGetEnabled|Логическое значение, указывающее, следует ли опубликовывать метаданные службы для извлечения с помощью запроса HTTPS-GET. Значение по умолчанию — `false`.<br /><br /> Если атрибут httpsGetUrl не указан, адрес, по которому публикуются метаданные, - это адрес службы плюс «?wsdl». Например, если адресом службы является «https://localhost:8080/CalculatorService«, то адрес метаданных HTTP/Get будет»https://localhost:8080/CalculatorService?wsdl».<br /><br /> Если это свойство имеет `false`, или адрес службы не основан на HTTP или HTTPS, «? wsdl» игнорируется.|  
 |httpsGetUrl|URI, указывающий адрес, по которому метаданные публикуются для извлечения с использованием запроса HTTPS-GET.|  
 |policyVersion|Строка, указывающая версию используемой спецификации Web Services Policy. Это атрибут типа <xref:System.ServiceModel.Description.PolicyVersion>.|  
   
@@ -67,7 +69,7 @@ ms.lasthandoff: 12/22/2017
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
 |[\<поведение >](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|Указывает элемент поведения.|  
   
@@ -78,7 +80,7 @@ ms.lasthandoff: 12/22/2017
   
  Дополнительные атрибуты `httpGetBinding` и `httpsGetBinding` позволяют настроить привязки, используемые для извлечения метаданных посредством HTTP-GET (или HTTPS-GET). Если они не заданы, для извлечения метаданных применяются привязки по умолчанию (`HttpTransportBindingElement` для HTTP и `HttpsTransportBindingElement` для HTTPS). Обратите внимание, что эти атрибуты нельзя использовать вместе со встроенными привязками WCF. Поддерживаются только привязки с внутренними элементами привязки, поддерживающими <xref:System.ServiceModel.Channels.IReplyChannel>. Кроме этого, свойство <xref:System.ServiceModel.Channels.MessageVersion> привязки должно иметь значение <xref:System.ServiceModel.Channels.MessageVersion.None%2A>.  
   
- Для снижения подверженности службы действиям недобросовестных пользователей перенос можно защитить с помощью механизма SSL по протоколу HTTP (HTTPS). Для этого необходимо вначале выполнить привязку подходящего сертификата X.509 к конкретному порту компьютера, на котором размещена служба. ([!INCLUDE[crdefault](../../../../../includes/crdefault-md.md)] [Работа с сертификатами](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md).) Затем необходимо добавить этот элемент в конфигурацию службы и задать атрибуту `httpsGetEnabled` значение `true`. После этого следует присвоить атрибуту `httpsGetUrl` URL-адрес конечной точки метаданных службы, как показано в следующем примере.  
+ Для снижения подверженности службы действиям недобросовестных пользователей перенос можно защитить с помощью механизма SSL по протоколу HTTP (HTTPS). Для этого необходимо вначале выполнить привязку подходящего сертификата X.509 к конкретному порту компьютера, на котором размещена служба. (Дополнительные сведения см. в разделе [работа с сертификатами](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md).) Затем необходимо добавить этот элемент в конфигурацию службы и задать атрибуту `httpsGetEnabled` значение `true`. После этого следует присвоить атрибуту `httpsGetUrl` URL-адрес конечной точки метаданных службы, как показано в следующем примере.  
   
 ```xml
 <behaviors>  
@@ -92,7 +94,7 @@ ms.lasthandoff: 12/22/2017
 ```  
   
 ## <a name="example"></a>Пример  
- Следующий пример настроить службу для предоставления метаданных с помощью \<serviceMetadata > элемент. Здесь также настраивается конечная точка предоставления доступа к контракту `IMetadataExchange` как реализации протокола WS-MetadataExchange (MEX). В примере используется привязка `mexHttpBinding`, являющаяся удобной стандартной привязкой, эквивалентной привязке `wsHttpBinding` с режимом безопасности `None`. Относительный адрес «mex» используется в конечной точке, которая при разрешении относительно базового адреса службы приводит к созданию адреса конечной точки http://localhost/servicemodelsamples/service.svc/mex.  
+ Следующий пример настроить службу для предоставления метаданных с помощью \<serviceMetadata > элемент. Здесь также настраивается конечная точка предоставления доступа к контракту `IMetadataExchange` как реализации протокола WS-MetadataExchange (MEX). В примере используется привязка `mexHttpBinding`, являющаяся удобной стандартной привязкой, эквивалентной привязке `wsHttpBinding` с режимом безопасности `None`. Относительный адрес «MEX» используется в конечной точке, которая при разрешении со службами базовый адрес приводит к созданию адреса конечной точки http://localhost/servicemodelsamples/service.svc/mex.  
   
 ```xml
 <configuration>  

@@ -21,11 +21,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 3669260d34aac0783f2ebd735c79ced91741408a
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: b0042d9b90066553d6fc962bba1b7a7b990ca242
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="wcf-client-overview"></a>Общие сведения о клиентах WCF
 В данном разделе описывается назначение клиентских приложений, способы настройки, создания и использования клиента [!INCLUDE[indigo1](../../../includes/indigo1-md.md)], а также приводятся сведения об обеспечении безопасности клиентских приложений.  
@@ -83,7 +83,7 @@ svcutil /language:vb /out:ClientCode.vb /config:app.config http://computerName/M
   
  Этот класс можно создать как локальный объект с использованием одного из конструкторов, который настроен и используется для подключения к службе, принадлежащей к типу `ISampleService`.  
   
- Рекомендуется сначала создать объект клиента [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], затем использовать и закрыть его внутри одного блока try/catch. Не следует использовать `using` инструкции (`Using` в Visual Basic), так как она может маскировать исключения в некоторых режимах сбоя. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] в следующих разделах, а также как [как избежать проблем при использовании операторов](../../../docs/framework/wcf/samples/avoiding-problems-with-the-using-statement.md).  
+ Рекомендуется сначала создать объект клиента [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], затем использовать и закрыть его внутри одного блока try/catch. Не следует использовать `using` инструкции (`Using` в Visual Basic), так как она может маскировать исключения в некоторых режимах сбоя. Дополнительные сведения см. в следующих разделах в том числе в [как избежать проблем при использовании операторов](../../../docs/framework/wcf/samples/avoiding-problems-with-the-using-statement.md).  
   
 ### <a name="contracts-bindings-and-addresses"></a>Контракты, привязки и адреса  
  Перед созданием объекта клиента [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] его необходимо настроить. В частности, он должен иметь службы *конечная точка* для использования. Конечная точка - это комбинация контракта службы, привязки и адреса. ([!INCLUDE[crabout](../../../includes/crabout-md.md)] конечных точек, в разделе [конечные точки: адреса, привязки и контракты](../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md).) Как правило, эта информация содержится в [ \<endpoint >](../../../docs/framework/configure-apps/file-schema/wcf/endpoint-of-client.md) элемент в файле конфигурации приложения клиента, такие как средство Svcutil.exe, приводит к возникновению ошибки, и загружается автоматически при создании клиента объект. Оба типа клиента [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] также имеют перегрузки, которые позволяют указывать эту информацию программными средствами.  
@@ -140,7 +140,7 @@ Namespace Microsoft.ServiceModel.Samples
 End Interface  
 ```  
   
- Можно вызвать операции, создав объект клиента [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] и вызвав его методы, как показано в следующим примере кода. Обратите внимание, что открытие, вызов и закрытие объекта клиента [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] выполняется в пределах одного блока try/catch. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Доступ к службам с помощью клиента WCF](../../../docs/framework/wcf/feature-details/accessing-services-using-a-client.md) и [как избежать проблем при использовании операторов](../../../docs/framework/wcf/samples/avoiding-problems-with-the-using-statement.md).  
+ Можно вызвать операции, создав объект клиента [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] и вызвав его методы, как показано в следующим примере кода. Обратите внимание, что открытие, вызов и закрытие объекта клиента [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] выполняется в пределах одного блока try/catch. Дополнительные сведения см. в разделе [получение служб с помощью клиента WCF](../../../docs/framework/wcf/feature-details/accessing-services-using-a-client.md) и [как избежать проблем при использовании операторов](../../../docs/framework/wcf/samples/avoiding-problems-with-the-using-statement.md).  
   
  [!code-csharp[C_GeneratedCodeFiles#20](../../../samples/snippets/csharp/VS_Snippets_CFX/c_generatedcodefiles/cs/proxycode.cs#20)]  
   
@@ -167,7 +167,7 @@ End Interface
   
  Дуплексные объекты клиента [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] функционируют как их недуплексные аналоги, за исключением того, что они предоставляют функциональные возможности, необходимые для поддержки обратных вызовов, включая конфигурацию службы обратного вызова.  
   
- Например, невозможно управлять различными аспектами поведения среды выполнения объекта обратного вызова, используя свойства атрибута <xref:System.ServiceModel.CallbackBehaviorAttribute?displayProperty=nameWithType> класса обратного вызова. Еще одним примером является использование класса <xref:System.ServiceModel.Description.CallbackDebugBehavior?displayProperty=nameWithType> для включения возвращения сведений об исключениях в службы, вызывающие объект обратного вызова. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Дуплексные службы](../../../docs/framework/wcf/feature-details/duplex-services.md). Полный пример см. в разделе [дуплексного](../../../docs/framework/wcf/samples/duplex.md).  
+ Например, невозможно управлять различными аспектами поведения среды выполнения объекта обратного вызова, используя свойства атрибута <xref:System.ServiceModel.CallbackBehaviorAttribute?displayProperty=nameWithType> класса обратного вызова. Еще одним примером является использование класса <xref:System.ServiceModel.Description.CallbackDebugBehavior?displayProperty=nameWithType> для включения возвращения сведений об исключениях в службы, вызывающие объект обратного вызова. Дополнительные сведения см. в разделе [дуплексные службы](../../../docs/framework/wcf/feature-details/duplex-services.md). Полный пример см. в разделе [дуплексного](../../../docs/framework/wcf/samples/duplex.md).  
   
  На компьютерах под управлением ОС Windows XP с запущенными службами IIS 5.1 дуплексные клиенты должны задавать базовый адрес клиента с помощью класса <xref:System.ServiceModel.WSDualHttpBinding?displayProperty=nameWithType>, в противном случае возникает исключение. В следующем примере кода показано, как это сделать в коде.  
   
@@ -179,7 +179,7 @@ End Interface
  [!code-csharp[S_DualHttp#134](../../../samples/snippets/csharp/VS_Snippets_CFX/s_dualhttp/cs/program.cs#134)]  
   
 ## <a name="calling-services-asynchronously"></a>Вызов служб асинхронно  
- Способ вызова операций полностью зависит от разработчика клиента. Это объясняется тем, что сообщения, составляющие операцию, можно сопоставить синхронному или асинхронному методу с использованием управляемого кода. Следовательно, если необходимо создать клиент, который вызывает операции асинхронно, можно использовать Svcutil.exe для создания асинхронного кода клиента с помощью параметра `/async`. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Как: асинхронный вызов операций службы](../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md).  
+ Способ вызова операций полностью зависит от разработчика клиента. Это объясняется тем, что сообщения, составляющие операцию, можно сопоставить синхронному или асинхронному методу с использованием управляемого кода. Следовательно, если необходимо создать клиент, который вызывает операции асинхронно, можно использовать Svcutil.exe для создания асинхронного кода клиента с помощью параметра `/async`. Дополнительные сведения см. в разделе [как: асинхронно вызывать операции службы](../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md).  
   
 ## <a name="calling-services-using-wcf-client-channels"></a>Вызов служб с использованием клиентских каналов WCF  
  Типы клиентов [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] расширяют класс <xref:System.ServiceModel.ClientBase%601>, который наследуется от интерфейса <xref:System.ServiceModel.IClientChannel?displayProperty=nameWithType>, чтобы предоставить систему базовых каналов. Можно вызвать службы с помощью целевого контракта службы с классом <xref:System.ServiceModel.ChannelFactory%601?displayProperty=nameWithType>. Дополнительные сведения см. в разделе [Клиентская архитектура технологии WCF](../../../docs/framework/wcf/feature-details/client-architecture.md).  

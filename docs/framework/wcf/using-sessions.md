@@ -1,13 +1,13 @@
 ---
-title: "Использование сеансов"
-ms.custom: 
+title: Использование сеансов
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - sessions [WCF]
 ms.assetid: 864ba12f-3331-4359-a359-6d6d387f1035
-caps.latest.revision: 
+caps.latest.revision: 32
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: f5f6df22918dedf32738a8cb9d73af2e625923a4
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 9f6a6a819b4667bc60ab0abb575d6fff397d67fe
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="using-sessions"></a>Использование сеансов
 В приложениях [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] *сеанс* объединяет группу сообщений в диалоге. Сеансы в[!INCLUDE[indigo2](../../../includes/indigo2-md.md)] отличаются от объектов сеансов, имеющихся в приложениях [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] , поддерживают различные виды поведения, а также управляются разными способами. В этом разделе описаны возможности приложений [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] , обеспечиваемые сеансами, и способы их использования.  
@@ -75,13 +75,13 @@ ms.lasthandoff: 01/19/2018
   
  [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] обеспечивает следующие типы поведения приложений, основанные на сеансах:  
   
--   Элемент <xref:System.ServiceModel.Channels.SecurityBindingElement?displayProperty=nameWithType> поддерживает основанные на безопасности сеансы, в которых обе стороны, обменивающиеся информацией, согласовали определенный безопасный диалог. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Защита служб](../../../docs/framework/wcf/securing-services.md). Например, привязка <xref:System.ServiceModel.WSHttpBinding?displayProperty=nameWithType>, содержащая поддержку как безопасных, так и надежных сеансов, по умолчанию использует только безопасный сеанс, шифрующий сообщения и защищающий их цифровой подписью.  
+-   Элемент <xref:System.ServiceModel.Channels.SecurityBindingElement?displayProperty=nameWithType> поддерживает основанные на безопасности сеансы, в которых обе стороны, обменивающиеся информацией, согласовали определенный безопасный диалог. Дополнительные сведения см. в разделе [Защита служб](../../../docs/framework/wcf/securing-services.md). Например, привязка <xref:System.ServiceModel.WSHttpBinding?displayProperty=nameWithType>, содержащая поддержку как безопасных, так и надежных сеансов, по умолчанию использует только безопасный сеанс, шифрующий сообщения и защищающий их цифровой подписью.  
   
 -   Привязка <xref:System.ServiceModel.NetTcpBinding?displayProperty=nameWithType> поддерживает сеансы, основанные на TCP/IP, что обеспечивает корреляцию всех сообщений по подключению на уровне сокетов.  
   
--   Элемент <xref:System.ServiceModel.Channels.ReliableSessionBindingElement?displayProperty=nameWithType>, реализующий спецификацию WS-ReliableMessaging, обеспечивает поддержку надежных сеансов, в которых можно настроить отправку сообщений в определенном порядке и только один раз, что гарантирует получение сообщений, даже когда при диалоге они проходят через несколько узлов. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Надежные сеансы](../../../docs/framework/wcf/feature-details/reliable-sessions.md).  
+-   Элемент <xref:System.ServiceModel.Channels.ReliableSessionBindingElement?displayProperty=nameWithType>, реализующий спецификацию WS-ReliableMessaging, обеспечивает поддержку надежных сеансов, в которых можно настроить отправку сообщений в определенном порядке и только один раз, что гарантирует получение сообщений, даже когда при диалоге они проходят через несколько узлов. Дополнительные сведения см. в разделе [надежные сеансы](../../../docs/framework/wcf/feature-details/reliable-sessions.md).  
   
--   Привязка <xref:System.ServiceModel.NetMsmqBinding?displayProperty=nameWithType> обеспечивает сеансы датаграммы MSMQ. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Очереди в WCF](../../../docs/framework/wcf/feature-details/queues-in-wcf.md).  
+-   Привязка <xref:System.ServiceModel.NetMsmqBinding?displayProperty=nameWithType> обеспечивает сеансы датаграммы MSMQ. Дополнительные сведения см. в разделе [очереди в WCF](../../../docs/framework/wcf/feature-details/queues-in-wcf.md).  
   
  Установка свойства <xref:System.ServiceModel.ServiceContractAttribute.SessionMode%2A> указывает о том, что для контракта требуется сеанс, но не задает тип этого сеанса.  
   
@@ -130,7 +130,7 @@ ms.lasthandoff: 01/19/2018
   
 -   <xref:System.ServiceModel.ICommunicationObject.Open%2A?displayProperty=nameWithType> для канала, возвращенного при вызове <xref:System.ServiceModel.ChannelFactory%601.CreateChannel%2A?displayProperty=nameWithType>.  
   
--   <xref:System.ServiceModel.ClientBase%601.Open%2A?displayProperty=nameWithType>на [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] объект клиента, созданные [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md).  
+-   <xref:System.ServiceModel.ClientBase%601.Open%2A?displayProperty=nameWithType> на [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] объект клиента, созданные [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md).  
   
 -   Инициирующей операции для клиентского объекта [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] любого типа (по умолчанию все операции являются инициирующими). При вызове первой операции клиентский объект [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] автоматически открывает канал и инициирует сеанс.  
   
@@ -144,10 +144,10 @@ ms.lasthandoff: 01/19/2018
   
  Примеры см. в разделе [How to: Create a Service That Requires Sessions](../../../docs/framework/wcf/feature-details/how-to-create-a-service-that-requires-sessions.md) , а также в примерах из разделов [Default Service Behavior](../../../docs/framework/wcf/samples/default-service-behavior.md) и [Instancing](../../../docs/framework/wcf/samples/instancing.md) .  
   
- [!INCLUDE[crabout](../../../includes/crabout-md.md)]клиентах и сеансах см. в разделе [получение служб с помощью клиента WCF](../../../docs/framework/wcf/feature-details/accessing-services-using-a-client.md).  
+ [!INCLUDE[crabout](../../../includes/crabout-md.md)] клиентах и сеансах см. в разделе [получение служб с помощью клиента WCF](../../../docs/framework/wcf/feature-details/accessing-services-using-a-client.md).  
   
 ## <a name="sessions-interact-with-instancecontext-settings"></a>Сеансы взаимодействуют с параметрами InstanceContext  
- Перечисление <xref:System.ServiceModel.SessionMode> контракта взаимодействует со свойством <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A?displayProperty=nameWithType>, управляющим связью между каналами и определенными объектами службы. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Сеансы, экземпляры и параллелизм](../../../docs/framework/wcf/feature-details/sessions-instancing-and-concurrency.md).  
+ Перечисление <xref:System.ServiceModel.SessionMode> контракта взаимодействует со свойством <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A?displayProperty=nameWithType>, управляющим связью между каналами и определенными объектами службы. Дополнительные сведения см. в разделе [сеансы, создания и параллелизм](../../../docs/framework/wcf/feature-details/sessions-instancing-and-concurrency.md).  
   
 ### <a name="sharing-instancecontext-objects"></a>Совместное использование объектов InstanceContext  
  Также можно задать для каждого вызова или канала, основанного на сеансе, с каким именно объектом <xref:System.ServiceModel.InstanceContext> он будет ассоциирован, самостоятельно назначив ассоциацию. Полный пример см. в разделе [InstanceContextSharing](http://msdn.microsoft.com/library/4a6a46d7-b7d7-4bb5-a0dd-03ffa3cbc230).  
