@@ -1,21 +1,19 @@
 ---
 title: Переход с DNX на интерфейс CLI .NET Core
 description: Переход от средств DNX к средствам CLI .NET Core.
-keywords: .NET, .NET Core
 author: blackdwarf
 ms.author: mairaw
 ms.date: 06/20/2016
-ms.topic: article
-ms.prod: .net-core
+ms.topic: conceptual
+ms.prod: dotnet-core
 ms.devlang: dotnet
-ms.assetid: c0d70120-78c8-4d26-bb3c-801f42fc2366
 ms.workload:
 - dotnetcore
-ms.openlocfilehash: dba38de28dc15147e5bcc5bf4cede9f4dd5fca62
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
-ms.translationtype: MT
+ms.openlocfilehash: a3832221c2ea8d70415c155b25cfb3523589b1f7
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="migrating-from-dnx-to-net-core-cli-projectjson"></a>Переход с DNX на интерфейс CLI .NET Core (project.json)
 
@@ -55,7 +53,7 @@ DNVM (сокращение от *DotNet Version Manager*, диспетчер в�
 В таблице ниже приведены команды DNX и DNU и их аналоги в CLI.
 
 
-| Команда DNX                       | Команда CLI       | Описание                                                                                                       |
+| Команда DNX                       | Команда CLI       | Описание:                                                                                                       |
 |--------------------------------   |----------------   |-----------------------------------------------------------------------------------------------------------------  |
 | dnx run                           | dotnet run        | Выполнение кода из источника.                                                                                             |
 | dnu build                         | dotnet build      | Сборка двоичного файла с кодом на языке IL.                                                                                  |

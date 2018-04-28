@@ -10,6 +10,5 @@
 ## [Универсальные делегаты](generic-delegates.md)
 ## [Различия между шаблонами языка C++ и универсальными шаблонами языка C#](differences-between-cpp-templates-and-csharp-generics.md)
 ## [Универсальные типы во время выполнения](generics-in-the-run-time.md)
-## [Универсальные шаблоны в библиотеке классов платформы .NET Framework](generics-in-the-net-framework-class-library.md)
 ## [Универсальные типы и отражение](generics-and-reflection.md)
 ## [Универсальные шаблоны и атрибуты](generics-and-attributes.md)

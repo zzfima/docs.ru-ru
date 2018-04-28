@@ -1,21 +1,19 @@
 ---
 title: Создание пользовательского шаблона для команды dotnet new
 description: В этом учебнике вы узнаете, как создать пользовательский шаблон для команды dotnet new.
-keywords: .NET, .NET Core, шаблон, создание шаблонов, учебник, dotnet new
 author: guardrex
 ms.author: mairaw
 ms.date: 08/12/2017
-ms.topic: article
-ms.prod: .net-core
+ms.topic: conceptual
+ms.prod: dotnet-core
 ms.devlang: dotnet
-ms.assetid: 519b910a-6efe-4394-9b81-0546aa3e7462
 ms.workload:
 - dotnetcore
-ms.openlocfilehash: 7830a437b46d2080efc65f43f9112503add4c305
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
-ms.translationtype: MT
+ms.openlocfilehash: 9ff58634daa6d51c10df9a3c9a1af0fd6420c69c
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="create-a-custom-template-for-dotnet-new"></a>Создание пользовательского шаблона для команды dotnet new
 
@@ -74,7 +72,7 @@ ms.lasthandoff: 03/26/2018
 
 1. Внутри элемента **\<packageTypes>** в файле *NUSPEC* добавьте элемент **\<packageType>** с атрибутом `name`, имеющим значение `Template`. Папка *content* и файл *NUSPEC* должны находиться в одном каталоге. В таблице ниже приведен минимальный набор элементов файла *NUSPEC*, необходимых для создания шаблона как пакета NuGet.
 
-   | Элемент            | Тип   | Описание |
+   | Элемент            | Тип   | Описание: |
    | ------------------ | ------ | ----------- |
    | **\<authors>**     | string | Разделенный запятыми список авторов пакетов, совпадающих с именами профилей на сайте nuget.org. Авторы отображаются в коллекции NuGet на сайте nuget.org и используются для перекрестных ссылок на пакеты тех же авторов. |
    | **\<description>** | string | Подробное описание пакета для отображения пользовательского интерфейса. |

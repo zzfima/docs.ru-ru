@@ -1,18 +1,19 @@
 ---
-title: "Команда dotnet nuget-delete — CLI .NET Core"
-description: "Команда dotnet-nuget-delete удаляет пакет с сервера или из списка."
+title: Команда dotnet nuget-delete — CLI .NET Core
+description: Команда dotnet-nuget-delete удаляет пакет с сервера или из списка.
 author: karann-msft
 ms.author: mairaw
 ms.date: 08/14/2017
-ms.topic: article
-ms.prod: .net-core
+ms.topic: conceptual
+ms.prod: dotnet-core
 ms.technology: dotnet-cli
-ms.workload: dotnetcore
-ms.openlocfilehash: 3c09556fe90a5c447b181bc1ac5b36f014399e4f
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: 1e81501d526ae92336b808f98c7c192b55e89f98
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="dotnet-nuget-delete"></a>dotnet nuget delete
 

@@ -1,18 +1,19 @@
 ---
-title: "Команда dotnet add package — CLI .NET Core"
-description: "Команду dotnet add package удобно использовать для добавления ссылки на пакет NuGet в проект."
+title: Команда dotnet add package — CLI .NET Core
+description: Команду dotnet add package удобно использовать для добавления ссылки на пакет NuGet в проект.
 author: mairaw
 ms.author: mairaw
 ms.date: 08/11/2017
-ms.topic: article
-ms.prod: .net-core
+ms.topic: conceptual
+ms.prod: dotnet-core
 ms.technology: dotnet-cli
-ms.workload: dotnetcore
-ms.openlocfilehash: 3b372b55cbdd8e0e6cc6a6b1089915e0da802489
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: 3a8752ff83e069d21ebbda346efef34b17360e3b
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="dotnet-add-package"></a>dotnet add package
 
