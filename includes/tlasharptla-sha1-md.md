@@ -1,1 +1,1 @@
-Алгоритм SHA (Secure Hash Algorithm) версии 1.0 (SHA1)
+<span data-ttu-id="3587e-101">Алгоритм SHA (Secure Hash Algorithm) версии 1.0 (SHA1)</span><span class="sxs-lookup"><span data-stu-id="3587e-101">Secure Hash Algorithm version 1.0 (SHA1)</span></span>

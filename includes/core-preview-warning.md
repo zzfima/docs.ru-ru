@@ -1,2 +1,2 @@
 > [!WARNING]
-> Эта статья относится к пакету .NET Core SDK 2.0 (предварительная версия 2).
+> <span data-ttu-id="541b5-101">Эта статья относится к пакету .NET Core SDK 2.0 (предварительная версия 2).</span><span class="sxs-lookup"><span data-stu-id="541b5-101">This topic applies to .NET Core SDK 2.0 Preview 2.</span></span>

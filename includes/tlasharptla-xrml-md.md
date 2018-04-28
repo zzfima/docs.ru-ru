@@ -1,1 +1,1 @@
-Язык XrML (Extensible Rights Markup Language)
+<span data-ttu-id="f9105-101">Язык XrML (Extensible Rights Markup Language)</span><span class="sxs-lookup"><span data-stu-id="f9105-101">Extensible Rights Markup Language (XrML)</span></span>

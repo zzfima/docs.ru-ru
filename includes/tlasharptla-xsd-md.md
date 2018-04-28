@@ -1,1 +1,1 @@
-Определение схемы XML (XSD)
+<span data-ttu-id="c8c61-101">Определение схемы XML (XSD)</span><span class="sxs-lookup"><span data-stu-id="c8c61-101">XML Schema Definition (XSD)</span></span>

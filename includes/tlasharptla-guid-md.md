@@ -1,1 +1,1 @@
-глобальный уникальный идентификатор (GUID)
+<span data-ttu-id="c463c-101">глобальный уникальный идентификатор (GUID)</span><span class="sxs-lookup"><span data-stu-id="c463c-101">globally unique identifier (GUID)</span></span>

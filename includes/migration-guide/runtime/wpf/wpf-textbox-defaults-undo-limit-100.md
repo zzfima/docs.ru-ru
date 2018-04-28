@@ -1,0 +1,11 @@
+### <a name="wpf-textbox-defaults-to-undo-limit-of-100"></a><span data-ttu-id="e9a94-101">Ограничение отмены по умолчанию для текстового поля WPF равно 100</span><span class="sxs-lookup"><span data-stu-id="e9a94-101">WPF TextBox defaults to undo limit of 100</span></span>
+
+|   |   |
+|---|---|
+|<span data-ttu-id="e9a94-102">Подробные сведения</span><span class="sxs-lookup"><span data-stu-id="e9a94-102">Details</span></span>|<span data-ttu-id="e9a94-103">В .NET 4.5 ограничение отмены по умолчанию для текстового поля WPF равно 100 (в отличие от неограниченного в .NET 4.0).</span><span class="sxs-lookup"><span data-stu-id="e9a94-103">In .NET 4.5, the default undo limit for a WPF textbox is 100 (as opposed to being unlimited in .NET 4.0)</span></span>|
+|<span data-ttu-id="e9a94-104">Предложение</span><span class="sxs-lookup"><span data-stu-id="e9a94-104">Suggestion</span></span>|<span data-ttu-id="e9a94-105">Если ограничение отмены, равное 100, слишком низкое, ограничение можно задать явным образом с помощью свойства <xref:System.Windows.Controls.Primitives.TextBoxBase.UndoLimit></span><span class="sxs-lookup"><span data-stu-id="e9a94-105">If an undo limit of 100 is too low, the limit can be set explicitly with <xref:System.Windows.Controls.Primitives.TextBoxBase.UndoLimit></span></span>|
+|<span data-ttu-id="e9a94-106">Область</span><span class="sxs-lookup"><span data-stu-id="e9a94-106">Scope</span></span>|<span data-ttu-id="e9a94-107">Пограничный случай</span><span class="sxs-lookup"><span data-stu-id="e9a94-107">Edge</span></span>|
+|<span data-ttu-id="e9a94-108">Версия</span><span class="sxs-lookup"><span data-stu-id="e9a94-108">Version</span></span>|<span data-ttu-id="e9a94-109">4.5</span><span class="sxs-lookup"><span data-stu-id="e9a94-109">4.5</span></span>|
+|<span data-ttu-id="e9a94-110">Тип</span><span class="sxs-lookup"><span data-stu-id="e9a94-110">Type</span></span>|<span data-ttu-id="e9a94-111">Среда выполнения</span><span class="sxs-lookup"><span data-stu-id="e9a94-111">Runtime</span></span>|
+|<span data-ttu-id="e9a94-112">Затронутые API</span><span class="sxs-lookup"><span data-stu-id="e9a94-112">Affected APIs</span></span>|<ul><li><xref:System.Windows.Controls.TextBox?displayProperty=nameWithType></li></ul>|
+

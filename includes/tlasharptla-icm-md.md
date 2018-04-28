@@ -1,1 +1,1 @@
-ICM (Image Color Management — управление цветом изображений)
+<span data-ttu-id="41b53-101">ICM (Image Color Management — управление цветом изображений)</span><span class="sxs-lookup"><span data-stu-id="41b53-101">Image Color Management (ICM)</span></span>

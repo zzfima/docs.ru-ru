@@ -1,1 +1,1 @@
-редактор метода ввода (IME)
+<span data-ttu-id="7ba4d-101">редактор метода ввода (IME)</span><span class="sxs-lookup"><span data-stu-id="7ba4d-101">Input Method Editor (IME)</span></span>

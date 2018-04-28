@@ -1,1 +1,1 @@
-Точечный рисунок (BMP)
+<span data-ttu-id="3c6ba-101">Точечный рисунок (BMP)</span><span class="sxs-lookup"><span data-stu-id="3c6ba-101">Bitmap (BMP)</span></span>
