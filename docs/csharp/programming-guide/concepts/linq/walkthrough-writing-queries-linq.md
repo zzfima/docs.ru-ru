@@ -1,11 +1,12 @@
 ---
-title: "Пошаговое руководство. Написание запросов на C# (LINQ)"
-ms.custom: 
+title: Пошаговое руководство. Написание запросов на C# (LINQ)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-csharp
 ms.topic: get-started-article
 helpviewer_keywords:
 - LINQ [C#], walkthroughs
@@ -13,7 +14,7 @@ helpviewer_keywords:
 - queries [LINQ in C#], writing
 - writing LINQ queries
 ms.assetid: 2962a610-419a-4276-9ec8-4b7f2af0c081
-caps.latest.revision: "32"
+caps.latest.revision: 32
 author: BillWagner
 ms.author: wiwagn
 ms.openlocfilehash: 8db1b59bd8de523ae74ca198302f814c2d43f25a
@@ -71,7 +72,7 @@ ms.lasthandoff: 12/09/2017
   
 #### <a name="to-create-a-simple-query"></a>Создание простого запроса  
   
--   В методе `Main` приложения создайте простой запрос, при выполнении которого будет возвращаться список учащихся, набравших в результате тестирования больше 90 баллов. Поскольку выбран весь объект `Student`, запрос имеет тип `IEnumerable<Student>`. Несмотря на то, что код можно также набрать напрямую, используя ключевое слово [var](../../../../csharp/language-reference/keywords/var.md), для демонстрации результатов применяется неявная типизация. (Дополнительные сведения о `var` см. в разделе [Неявно типизированные локальные переменные](../../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md).)  
+-   В методе `Main` приложения создайте простой запрос, при выполнении которого будет возвращаться список учащихся, набравших в первом тесте больше 90 баллов. Поскольку выбран весь объект `Student`, запрос имеет тип `IEnumerable<Student>`. Несмотря на то, что код можно также набрать напрямую, используя ключевое слово [var](../../../../csharp/language-reference/keywords/var.md), для демонстрации результатов применяется неявная типизация. (Дополнительные сведения о `var` см. в разделе [Неявно типизированные локальные переменные](../../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md).)  
   
      Кроме того переменная диапазона в запросе, `student`, служит ссылкой на каждый объект `Student` в источнике и предоставляет доступ к каждому объекту.  
   
