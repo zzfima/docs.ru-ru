@@ -1,29 +1,30 @@
 ---
-title: "Визуальное отслеживание рабочего процесса"
-ms.custom: 
+title: Визуальное отслеживание рабочего процесса
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 0143448f-2044-40a0-8a3d-941f6d12468b
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 687cc2acbff7c85b89c4502fff863e48dada97de
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 6bf9a053eaf21f1e0612ea7b91c79755b9ef0e29
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="visual-workflow-tracking"></a>Визуальное отслеживание рабочего процесса
 В этом образце показано, как подготовить приложение для визуального отслеживания рабочих процессов с использованием функции отладки, доступной через [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)].  
   
 ## <a name="sample-details"></a>Подробные сведения об образце  
- Приложение запускает простой рабочий процесс блок-схемы (определенной в файле Workflow.xaml) и повторно размещает конструктор рабочих процессов для отображения рабочего процесса, выполняемого в настоящий момент. По мере выполнения рабочего процесса действие, выполняемое в настоящий момент, отображается с желтым контуром и стрелкой отладки. Кроме того, записи отслеживания, создаваемые рабочим процессом, также отображаются в окне приложения. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]рабочий процесс отслеживания, в разделе [отслеживание и трассировка рабочих процессов](../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)]повторное размещение конструктора рабочих процессов, в разделе [повторное размещение конструктора рабочих процессов](../../../../docs/framework/windows-workflow-foundation/rehosting-the-workflow-designer.md).  
+ Приложение запускает простой рабочий процесс блок-схемы (определенной в файле Workflow.xaml) и повторно размещает конструктор рабочих процессов для отображения рабочего процесса, выполняемого в настоящий момент. По мере выполнения рабочего процесса действие, выполняемое в настоящий момент, отображается с желтым контуром и стрелкой отладки. Кроме того, записи отслеживания, создаваемые рабочим процессом, также отображаются в окне приложения. Дополнительные сведения об отслеживании рабочих процессов см. в разделе [отслеживание и трассировка рабочих процессов](../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md). Дополнительные сведения о повторном размещении в конструкторе рабочих процессов см. в разделе [повторное размещение конструктора рабочих процессов](../../../../docs/framework/windows-workflow-foundation/rehosting-the-workflow-designer.md).  
   
  Симулятор рабочих процессов работает за счет двух словарей. Один из словарей содержит сопоставление между объектом действия, исполняемого в настоящий момент, и номером XAML-строки, в которой запускается действие. Другой словарь содержит сопоставление между идентификатором экземпляра действия и объектом действия. Когда при помощи настраиваемого профиля отслеживания создаются записи отслеживания, приложение определяет идентификатор экземпляра действия, исполняемого в настоящий момент, и сопоставляет его с файлом XAML, который запустил действие. После этого вновь размещенный конструктор рабочих процессов выделяет действие в области конструктора и использует такой же метод, что и отладчик рабочих процессов, при этом вокруг действия появляется желтый контур, а в левой части конструктора - желтая стрелка.  
   
@@ -46,6 +47,6 @@ ms.lasthandoff: 12/22/2017
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите на страницу [Примеры Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все примеры [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Этот образец расположен в следующем каталоге.  
+>  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) Чтобы загрузить все [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] образцов. Этот образец расположен в следующем каталоге.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Application\VisualWorkflowTracking`

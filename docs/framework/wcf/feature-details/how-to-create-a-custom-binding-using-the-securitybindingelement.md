@@ -21,14 +21,14 @@ ms.author: bruceper
 manager: mbaldwin
 ms.workload:
 - dotnet
-ms.openlocfilehash: 3dc83697a27bf99a63305bf89a57fbcb4d459b45
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 80fd6163db1b7b168be4e19b01c8eb9f15865f04
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-create-a-custom-binding-using-the-securitybindingelement"></a>Практическое руководство. Создание пользовательской привязки с использованием элемента SecurityBindingElement
-В [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] предусмотрено несколько предоставляемых системой привязок, подлежащих настройке, однако не способных в полной мере обеспечить гибкость настройки всех параметров безопасности, поддерживаемых [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. В этом разделе описывается создание пользовательской привязки непосредственно из отдельных элементов привязки с рассмотрением некоторых из параметров безопасности, которые могут быть заданы при создании такой привязки. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] создании пользовательских привязок см. в разделе [расширение привязок](../../../../docs/framework/wcf/extending/extending-bindings.md).  
+В [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] предусмотрено несколько предоставляемых системой привязок, подлежащих настройке, однако не способных в полной мере обеспечить гибкость настройки всех параметров безопасности, поддерживаемых [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. В этом разделе описывается создание пользовательской привязки непосредственно из отдельных элементов привязки с рассмотрением некоторых из параметров безопасности, которые могут быть заданы при создании такой привязки. Дополнительные сведения о создании настраиваемых привязок см. в разделе [расширение привязок](../../../../docs/framework/wcf/extending/extending-bindings.md).  
   
 > [!WARNING]
 >  <xref:System.ServiceModel.Channels.SecurityBindingElement> не поддерживает форму канала <xref:System.ServiceModel.Channels.IDuplexSessionChannel>, которая по умолчанию используется формами каналов TCP-транспорта, если свойство <xref:System.ServiceModel.TransferMode> имеет значение <xref:System.ServiceModel.TransferMode.Buffered>. Необходимо задать свойству <xref:System.ServiceModel.TransferMode> значение <xref:System.ServiceModel.TransferMode.Streamed> для использования элемента <xref:System.ServiceModel.Channels.SecurityBindingElement> в этом сценарии.  

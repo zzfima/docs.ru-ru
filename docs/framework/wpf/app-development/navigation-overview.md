@@ -38,14 +38,14 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 7c84c5742fcbb0d1554bd6fc379fc44f3b9cb055
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: bf7ec6cc18461a906e889a997968677d0c63df20
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="navigation-overview"></a>Общие сведения о переходах
-[!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] поддерживает навигацию в стиле браузера, можно использовать в двух типов приложений: автономных приложений и [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)]. Пакет содержимого для переходов [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] предоставляет <xref:System.Windows.Controls.Page> класса. Можно переходить от одного <xref:System.Windows.Controls.Page> в другой декларативно с помощью <xref:System.Windows.Documents.Hyperlink>, или программно, с помощью <xref:System.Windows.Navigation.NavigationService>. [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] использует журнал, чтобы запоминать страницы, с которых был осуществлен переход, и чтобы переходить к ним обратно.  
+Windows Presentation Foundation (WPF) поддерживает переходов в стиле браузера, можно использовать в приложениях двух типов: автономных приложений и [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)]. Пакет содержимого для переходов [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] предоставляет <xref:System.Windows.Controls.Page> класса. Можно переходить от одного <xref:System.Windows.Controls.Page> в другой декларативно с помощью <xref:System.Windows.Documents.Hyperlink>, или программно, с помощью <xref:System.Windows.Navigation.NavigationService>. [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] использует журнал, чтобы запоминать страницы, с которых был осуществлен переход, и чтобы переходить к ним обратно.  
   
  <xref:System.Windows.Controls.Page>, <xref:System.Windows.Documents.Hyperlink>, <xref:System.Windows.Navigation.NavigationService>, и журнал формируют основу для поддержки навигации, предоставляемых [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]. В этом обзоре рассматриваются подробные сведения об этих функциях перед описанием расширенной поддержки переходов, включает переход к свободные [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] файлы, [!INCLUDE[TLA#tla_html](../../../../includes/tlasharptla-html-md.md)] файлы и объекты.  
   

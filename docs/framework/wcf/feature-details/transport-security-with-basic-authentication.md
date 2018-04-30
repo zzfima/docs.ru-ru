@@ -1,30 +1,32 @@
 ---
-title: "Безопасность транспорта с обычной проверкой подлинности"
-ms.custom: 
+title: Безопасность транспорта с обычной проверкой подлинности
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: b54f491d-196b-4279-876c-76b83ec0442c
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: fe6b996c37e66f41c3946b8ef3437f8fa82c5201
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 7430767c80515d14ae23e17ae2b94e0acc97ff30
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="transport-security-with-basic-authentication"></a>Безопасность транспорта с обычной проверкой подлинности
-На следующем рисунке показаны служба и клиент [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. Серверу требуется действительный сертификат X.509, который можно использовать для протокола SSL, а клиенты должны доверять сертификату сервера. Кроме того, у веб-службы уже имеется сертификат SSL, который можно использовать. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Включение обычной проверки подлинности в Internet Information Services (IIS), в разделе [http://go.microsoft.com/fwlink/?LinkId=83822](http://go.microsoft.com/fwlink/?LinkId=83822).  
+На следующем рисунке показаны служба и клиент [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. Серверу требуется действительный сертификат X.509, который можно использовать для протокола SSL, а клиенты должны доверять сертификату сервера. Кроме того, у веб-службы уже имеется сертификат SSL, который можно использовать. Дополнительные сведения о включении обычной проверки подлинности в Internet Information Services (IIS) см. в разделе [ http://go.microsoft.com/fwlink/?LinkId=83822 ](http://go.microsoft.com/fwlink/?LinkId=83822).  
   
  ![Безопасность транспорта с обычной проверкой подлинности](../../../../docs/framework/wcf/feature-details/media/securedbyusername.gif "SecuredbyUsername")  
   

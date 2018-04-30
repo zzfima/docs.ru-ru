@@ -1,27 +1,29 @@
 ---
-title: "Переопределение идентификатора службы для проверки подлинности"
-ms.custom: 
+title: Переопределение идентификатора службы для проверки подлинности
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: d613a22b-07d7-41a4-bada-1adc653b9b5d
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e1f8f6bd4d8661393bc849405a8668341f65f8d5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: f5383a1d241134318ce48c8c0c9f39f831396730
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="overriding-the-identity-of-a-service-for-authentication"></a>Переопределение идентификатора службы для проверки подлинности
 Как правило, нет необходимости задавать удостоверение в службе, поскольку выбор типа учетных данных клиента определяет тип удостоверения, предоставляемого в метаданных службы. Например, следующий код конфигурации используется [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) элемент и задает `clientCredentialType` атрибут Windows.  
@@ -32,12 +34,12 @@ ms.lasthandoff: 12/22/2017
   
   
   
- Образец приложения, демонстрирующий удостоверение, в разделе [образец идентификации службы](../../../../docs/framework/wcf/samples/service-identity-sample.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)]удостоверения службы см. в разделе [службы удостоверений и проверки подлинности](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
+ Образец приложения, демонстрирующий удостоверение, в разделе [образец идентификации службы](../../../../docs/framework/wcf/samples/service-identity-sample.md). Дополнительные сведения об удостоверении службы см. в разделе [службы удостоверений и проверки подлинности](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
   
 ## <a name="kerberos-authentication-and-identity"></a>Проверка подлинности Kerberos и удостоверение  
  По умолчанию, когда служба настроена для использования учетных данных Windows [ \<удостоверение >](../../../../docs/framework/configure-apps/file-schema/wcf/identity.md) элемент, содержащий [ \<userPrincipalName >](../../../../docs/framework/configure-apps/file-schema/wcf/userprincipalname.md) или [ \<servicePrincipalName >](../../../../docs/framework/configure-apps/file-schema/wcf/serviceprincipalname.md) элемент создается в WSDL. Если служба выполняется под `LocalSystem`, `LocalService`, или `NetworkService` учетной записи, имя участника (SPN) создается по умолчанию в виде службы `host/` \< *hostname*> так как Эти учетные записи имеют доступ к данным компьютера имя участника-службы. Если служба выполняется под другой учетной записи, [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] создает имя участника-пользователя в виде \< *username*>@<*domainName*`>`. Это происходит потому, что проверка подлинности Kerberos требует предоставления клиенту имени участника-пользователя или имени участника-службы для проверки подлинности службы.  
   
- Также для регистрации дополнительного имени участника-службы с учетной записью службы в домене можно использовать средство Setspn.exe. В этом случае имя участника-службы можно использовать в качестве удостоверения службы. Загрузить средство [инструмент из комплекта ресурсов Windows 2000: Setspn.exe](http://go.microsoft.com/fwlink/?LinkId=91752). [!INCLUDE[crabout](../../../../includes/crabout-md.md)]средство, в разделе [Общие сведения о Setspn](http://go.microsoft.com/fwlink/?LinkId=61374).  
+ Также для регистрации дополнительного имени участника-службы с учетной записью службы в домене можно использовать средство Setspn.exe. В этом случае имя участника-службы можно использовать в качестве удостоверения службы. Загрузить средство [инструмент из комплекта ресурсов Windows 2000: Setspn.exe](http://go.microsoft.com/fwlink/?LinkId=91752). Дополнительные сведения об этом средстве см. в разделе [Общие сведения о Setspn](http://go.microsoft.com/fwlink/?LinkId=61374).  
   
 > [!NOTE]
 >  Чтобы использовать тип учетных данных Windows без согласования, учетная запись пользователя службы должна иметь доступ к имени участника службы (SPN), зарегистрированному с доменом Active Directory. Это можно сделать следующими способами:  
@@ -46,7 +48,7 @@ ms.lasthandoff: 12/22/2017
   
 -   Запустите службу из любой учетной записи домена Active Directory. В данном случае с помощью служебного средства Setspn.exe необходимо установить имя участника-службы для этой учетной записи домена. Создав SPN для учетной записи службы, настройте [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] на публикацию этого имени участника-службы в клиентах службы через ее метаданные (WSDL). Для этого нужно настроить удостоверение конечной точки для предоставляемой конечной точки в файле конфигурации приложения или в коде.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Имена участников-служб, протокол Kerberos и Active Directory в разделе [техническое дополнение Kerberos для Windows](http://go.microsoft.com/fwlink/?LinkId=88330).  
+ Дополнительные сведения об именах SPN, протокол Kerberos и Active Directory см. в разделе [техническое дополнение Kerberos для Windows](http://go.microsoft.com/fwlink/?LinkId=88330).  
   
 ### <a name="when-spn-or-upn-equals-the-empty-string"></a>Если имя участника-службы или имя участника-пользователя равно пустой строке  
  Если задать имя участника-службы или имя участника-пользователя равным пустой строке, возможны разные варианты развития событий в зависимости от используемых уровня безопасности и режима проверки подлинности.  

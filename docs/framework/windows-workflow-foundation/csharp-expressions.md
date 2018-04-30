@@ -14,11 +14,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 17528db182676ae69694c4e416ee10bff1ae6ef2
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: 32fb7be6f8c465994b40814a94efd95d42a481da
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="c-expressions"></a>Выражения C#
 Начиная с [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], выражения C# поддерживаются в Windows Workflow Foundation (WF). Новые проекты рабочих процессов C#, созданные в [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)], компилируемые для [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], используют выражения на языке C#, а проекты рабочих процессов Visual Basic используют выражения Visual Basic. Существующие проекты рабочих процессов [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], использующих выражения Visual Basic, поддерживаются, и их можно перенести в [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] независимо от языка проекта. В этом разделе приведены общие сведения о выражениях на языке C# в [!INCLUDE[wf1](../../../includes/wf1-md.md)].  
@@ -45,7 +45,7 @@ ms.lasthandoff: 04/27/2018
  ![Автоматически созданное действие sequence](../../../docs/framework/windows-workflow-foundation/media/autosurround2.png "AutoSurround2")  
   
 > [!NOTE]
->  Выражения C# поддерживаются только в Visual Studio и не поддерживается в повторно размещенном конструкторе рабочих процессов. [!INCLUDE[crabout](../../../includes/crabout-md.md)] новые возможности WF45 поддерживается в повторно размещенном конструкторе см. [поддержке новых функций Workflow Foundation 4.5 в конструкторе рабочих процессов, повторно размещенными](../../../docs/framework/windows-workflow-foundation/wf-features-in-the-rehosted-workflow-designer.md).  
+>  Выражения C# поддерживаются только в Visual Studio и не поддерживается в повторно размещенном конструкторе рабочих процессов. Дополнительные сведения о новых возможностях WF45 поддерживается в повторно размещенном конструкторе см. в разделе [поддержке новых функций Workflow Foundation 4.5 в конструкторе рабочих процессов, повторно размещенными](../../../docs/framework/windows-workflow-foundation/wf-features-in-the-rehosted-workflow-designer.md).  
   
 ####  <a name="BackwardCompat"></a> Обратная совместимость  
  Выражения Visual Basic поддерживаются в существующих проектах рабочего процесса [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] C#, перенесенных в [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]. При просмотре выражений Visual Basic в конструкторе рабочих процессов, текст существующего выражения Visual Basic заменяется **значение, заданное в XAML**, если выражение Visual Basic имеет допустимый синтаксис C#. Если выражение Visual Basic имеет допустимый синтаксис C#, то отображается выражение. Чтобы обновить выражение Visual Basic до C#, следует отредактировать его в конструкторе рабочих процессов и указать эквивалентное выражение C#. Преобразование выражений Visual Basic в C# не является обязательным, но после обновления выражений в конструкторе рабочих процессов они преобразуется в C# и не могут быть восстановлены в виде выражений Visual Basic.  
@@ -195,7 +195,7 @@ static void CompileExpressions(DynamicActivity dynamicActivity)
   
 -   `CompiledExpressionInvoker.SetCompiledExpressionRootForImplementation` вызывается вместо `CompiledExpressionInvoker.SetCompiledExpressionRoot`.  
   
- [!INCLUDE[crabout](../../../includes/crabout-md.md)] Работа с выражениями в коде, в разделе [разработки рабочих процессов, действий и выражений с помощью императивного кода](../../../docs/framework/windows-workflow-foundation/authoring-workflows-activities-and-expressions-using-imperative-code.md).  
+ Дополнительные сведения о работе с выражениями в коде см. в разделе [разработки рабочих процессов, действий и выражений с помощью императивного кода](../../../docs/framework/windows-workflow-foundation/authoring-workflows-activities-and-expressions-using-imperative-code.md).  
   
 ###  <a name="XamlWorkflows"></a> Выражения на языке C# в рабочих процессах языка XAML  
  Выражения на языке C# поддерживаются в рабочих процессах языка XAML. Скомпилированные рабочие процессы языка XAML компилируются в тип, свободные рабочие процессы языка XAML загружаются средой выполнения и компилируются в дерево действий при выполнении рабочего процесса.  
@@ -219,7 +219,7 @@ ActivityXamlServicesSettings settings = new ActivityXamlServicesSettings
 DynamicActivity<int> wf = ActivityXamlServices.Load(new StringReader(serializedAB), settings) as DynamicActivity<int>;  
 ```  
   
- [!INCLUDE[crabout](../../../includes/crabout-md.md)] Работа с рабочими процессами XAML см. [сериализация рабочих процессов и действий в XAML и обратно](../../../docs/framework/windows-workflow-foundation/serializing-workflows-and-activities-to-and-from-xaml.md).  
+ Дополнительные сведения о работе с рабочими процессами XAML см. в разделе [сериализация рабочих процессов и действий в XAML и обратно](../../../docs/framework/windows-workflow-foundation/serializing-workflows-and-activities-to-and-from-xaml.md).  
   
 ###  <a name="WFServices"></a> Выражения на языке C# в службах рабочих процессов XAMLX  
  Выражения на языке C# поддерживаются в службах рабочих процессов XAMLX. Если служба рабочего процесса размещается в IIS или WAS, то дополнительные действия не требуются. Но если служба рабочих процессов языка XAML является резидентной, то выражения C# необходимо скомпилировать. Для компиляции выражений C# в резидентной службе рабочего процесса XAMLX, сначала загрузите файл XAMLX в `WorkflowService`, а затем передайте `Body` из `WorkflowService` для `CompileExpressions` методом, описанным в предыдущем [с помощью C# выражения в рабочих процессах](../../../docs/framework/windows-workflow-foundation/csharp-expressions.md#CodeWorkflows) раздела. В следующем примере загружается служба рабочих процессов XAMLX, компилируются выражения на языке C#, затем открывается служба рабочих процессов, которая начинает ожидать запросы.  

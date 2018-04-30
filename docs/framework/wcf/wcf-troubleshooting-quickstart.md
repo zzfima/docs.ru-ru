@@ -19,11 +19,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 490b756a9beae09b20a36d3fc6a20c85aad76618
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 24ca6899e6ac2bb316c0543932d70abc13626aa2
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="wcf-troubleshooting-quickstart"></a>Примеры устранения неполадок WCF
 В этом разделе приведено несколько известных проблем, с которыми столкнулись пользователи при разработке клиентов и служб WCF. Если проблема, с которой столкнулись вы, отсутствует в этом списке, рекомендуется настроить трассировку для данной службы. При этом будет создан файл трассировки, который можно просмотреть с помощью средства просмотра файлов трассировки и получить подробные сведения об исключениях, которые могут возникать в службе. Дополнительные сведения о настройке трассировки см. в разделе [Configuring Tracing](../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md). Дополнительные сведения о средстве просмотра файлов трассировки см. в разделе [Service Trace Viewer Tool (SvcTraceViewer.exe)](../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md).  
@@ -64,7 +64,7 @@ ms.lasthandoff: 04/28/2018
   
 <a name="BKMK_q1"></a>   
 ## <a name="sometimes-i-receive-a-messagesecurityexception-on-the-second-request-if-my-client-is-idle-for-a-while-after-the-first-request-what-is-happening"></a>Иногда при втором запросе возникает исключение MessageSecurityException, если клиент бездействует некоторое время после первого запроса. В чем причина?  
- Сбой второго запроса может произойти по двум причинам: (1) истекло время ожидания сеанса или (2) перезапущен веб-сервер, на котором размещена служба. В первом случае сеанс действителен до того, как истечет время ожидания службы. Если служба не получает запрос от клиента в течение времени, заданного в привязке службы (<xref:System.ServiceModel.Channels.Binding.ReceiveTimeout%2A>), служба завершает сеанс безопасности. Последующие сообщения клиента приводят к исключению <xref:System.ServiceModel.Security.MessageSecurityException>. Клиент должен повторно установить безопасный сеанс со службой, чтобы отправлять будущие сообщения, или использовать маркер контекста безопасности с отслеживанием состояния. Токены контекста безопасности с отслеживанием состояния также позволяют защитить сеанс во время перезапуска веб-сервера. [!INCLUDE[crabout](../../../includes/crabout-md.md)] использовании токенов контекста с отслеживанием состояния безопасности в безопасном сеансе см [как: создание токена контекста безопасности для безопасного сеанса](../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md). Кроме того, можно отключить безопасные сеансы. При использовании [ \<wsHttpBinding >](../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) привязки, можно задать `establishSecurityContext` свойства `false` Чтобы отключить безопасные сеансы. Чтобы отключить безопасные сеансы для других привязок, необходимо создать пользовательскую привязку. Подробные сведения о создании пользовательской привязки см. в разделе [How to: Create a Custom Binding Using the SecurityBindingElement](../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md). Перед применением этих параметров необходимо разобраться с требованиями безопасности приложения.  
+ Сбой второго запроса может произойти по двум причинам: (1) истекло время ожидания сеанса или (2) перезапущен веб-сервер, на котором размещена служба. В первом случае сеанс действителен до того, как истечет время ожидания службы. Если служба не получает запрос от клиента в течение времени, заданного в привязке службы (<xref:System.ServiceModel.Channels.Binding.ReceiveTimeout%2A>), служба завершает сеанс безопасности. Последующие сообщения клиента приводят к исключению <xref:System.ServiceModel.Security.MessageSecurityException>. Клиент должен повторно установить безопасный сеанс со службой, чтобы отправлять будущие сообщения, или использовать маркер контекста безопасности с отслеживанием состояния. Токены контекста безопасности с отслеживанием состояния также позволяют защитить сеанс во время перезапуска веб-сервера. Дополнительные сведения об использовании токенов контекста с отслеживанием состояния безопасности в безопасном сеансе см. в разделе [как: создание токена контекста безопасности для безопасного сеанса](../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md). Кроме того, можно отключить безопасные сеансы. При использовании [ \<wsHttpBinding >](../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) привязки, можно задать `establishSecurityContext` свойства `false` Чтобы отключить безопасные сеансы. Чтобы отключить безопасные сеансы для других привязок, необходимо создать пользовательскую привязку. Подробные сведения о создании пользовательской привязки см. в разделе [How to: Create a Custom Binding Using the SecurityBindingElement](../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md). Перед применением этих параметров необходимо разобраться с требованиями безопасности приложения.  
   
 <a name="BKMK_q2"></a>   
 ## <a name="my-service-starts-to-reject-new-clients-after-about-10-clients-are-interacting-with-it-what-is-happening"></a>Когда со службой взаимодействует около 10 клиентов, она отклоняет подключение новых клиентов. В чем причина?  
@@ -145,7 +145,7 @@ public class MyServiceHost : ServiceHost
   
     4.  Зарегистрируйте в домене новое имя участника службы (SPN) с помощью программы SetSPN. Обратите внимание, что для этого потребуются права администратора домена.  
   
- [!INCLUDE[crabout](../../../includes/crabout-md.md)] протоколе Kerberos см. в разделе [Security Concepts Used in WCF](../../../docs/framework/wcf/feature-details/security-concepts-used-in-wcf.md) и:  
+ Дополнительные сведения о протоколе Kerberos см. в разделе [основные понятия безопасности, используемые в WCF](../../../docs/framework/wcf/feature-details/security-concepts-used-in-wcf.md) и:  
   
 -   [Отладка ошибок проверки подлинности Windows](../../../docs/framework/wcf/feature-details/debugging-windows-authentication-errors.md)  
   
@@ -175,7 +175,7 @@ public class MyServiceHost : ServiceHost
   
  В этом случае необходимо предоставить учетной записи процесса права доступа для чтения файла с закрытым ключом. Например, если рабочий процесс IIS выполняется в учетной записи Бориса, ему необходимо предоставить права доступа для чтения файла, содержащего закрытый ключ.  
   
- [!INCLUDE[crabout](../../../includes/crabout-md.md)] том, как предоставить нужной учетной записи пользователя доступ к файлу с закрытым ключом для конкретного сертификата X.509, см. разделе [How to: Make X.509 Certificates Accessible to WCF](../../../docs/framework/wcf/feature-details/how-to-make-x-509-certificates-accessible-to-wcf.md).  
+ Дополнительные сведения о том, как для предоставления доступа учетной записи пользователя к файлу, содержащему закрытый ключ для конкретного сертификата X.509 см. в разделе [как: сделать сертификатам X.509 для WCF](../../../docs/framework/wcf/feature-details/how-to-make-x-509-certificates-accessible-to-wcf.md).  
   
 <a name="BKMK_q88"></a>   
 ## <a name="i-changed-the-first-parameter-of-an-operation-from-uppercase-to-lowercase-now-my-client-throws-an-exception-whats-happening"></a>В имени первого параметра операции прописные буквы были заменены на строчные, и теперь в клиенте выдается исключение. В чем причина?  

@@ -19,11 +19,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 4d5caa913a49205c387c22a615b2b8da2dba0a77
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 2343ebe5a2a029ddb40da98d28f5c442aa7b6962
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="serialization-and-deserialization"></a>Сериализация и десериализация
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] включает новый модуль сериализации - <xref:System.Runtime.Serialization.DataContractSerializer>. Сериализатор <xref:System.Runtime.Serialization.DataContractSerializer> преобразует объекты [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] в формат XML и обратно. В данном разделе объясняется, как работает сериализатор.  
@@ -54,7 +54,7 @@ ms.lasthandoff: 04/28/2018
  [!code-vb[c_StandaloneDataContractSerializer#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_standalonedatacontractserializer/vb/source.vb#2)]  
   
 ### <a name="specifying-known-types"></a>Задание известных типов  
- Если в сериализуемых типах, которые еще не были обработаны с помощью атрибута <xref:System.Runtime.Serialization.KnownTypeAttribute> или какого-либо другого механизма, применяется полиморфизм, то конструктору сериализатора с помощью параметра `knownTypes` необходимо передать список возможных известных типов. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] об известных типах см. в разделе [Data Contract Known Types](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md).  
+ Если в сериализуемых типах, которые еще не были обработаны с помощью атрибута <xref:System.Runtime.Serialization.KnownTypeAttribute> или какого-либо другого механизма, применяется полиморфизм, то конструктору сериализатора с помощью параметра `knownTypes` необходимо передать список возможных известных типов. Дополнительные сведения об известных типах см. в разделе [известные типы контрактов данных](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md).  
   
  В следующем примере продемонстрирован класс `LibraryPatron`, который включает коллекцию указанного типа `LibraryItem`. Второй класс определяет тип `LibraryItem` . Третий и четвертый классы (`Book` и `Newspaper`) наследуются от класса `LibraryItem` .  
   
@@ -267,7 +267,7 @@ ms.lasthandoff: 04/28/2018
   
 -   Методы <xref:System.Runtime.Serialization.NetDataContractSerializer.Serialize%2A> и <xref:System.Runtime.Serialization.NetDataContractSerializer.Deserialize%2A> представляют собой псевдонимы для методов <xref:System.Runtime.Serialization.XmlObjectSerializer.WriteObject%2A> и <xref:System.Runtime.Serialization.XmlObjectSerializer.ReadObject%2A> . Они предоставляют более последовательную модель программирования с двоичной сериализацией или сериализацией SOAP.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Эти функции в разделе [двоичной сериализации](../../../../docs/standard/serialization/binary-serialization.md).  
+ Дополнительные сведения об этих функциях см. в разделе [двоичной сериализации](../../../../docs/standard/serialization/binary-serialization.md).  
   
  Форматы XML, используемые сериализаторами `NetDataContractSerializer` и `DataContractSerializer` , как правило, не совместимы. Следовательно, возможность сериализации с помощью одного из них и десериализации с помощью другого не поддерживается.  
   

@@ -22,11 +22,11 @@ ms.author: bruceper
 manager: mbaldwin
 ms.workload:
 - dotnet
-ms.openlocfilehash: e043b9b9a3b09bec0d7484fb732e33571b5aaf0c
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 827fef90a6277387ceac1c8f1d6df00a69a5d612
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-create-a-security-token-service"></a>Практическое руководство. Создание службы маркеров безопасности
 Служба маркеров безопасности реализует протокол, определенный в спецификации WS-Trust. Данный протокол определяет форматы сообщения и шаблоны обмена сообщениями для выпуска, обновления, отмены и проверки маркеров безопасности. Данная служба маркеров безопасности дает одну или несколько из данных возможностей. В данном разделе рассматривается наиболее общий сценарий: реализация выпуска маркера.  
@@ -124,7 +124,7 @@ ms.lasthandoff: 04/28/2018
  [!code-csharp[c_CreateSTS#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_creatests/cs/source.cs#6)]
  [!code-vb[c_CreateSTS#6](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_creatests/vb/source.vb#6)]  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] как создавать маркер проверки клиента и токен безопасности службы и предоставляет материал ключа для общего ключа см. в разделе [пример федерации](../../../../docs/framework/wcf/samples/federation-sample.md).  
+ Дополнительные сведения о том, как создать маркер проверки, когда клиент и служба маркеров безопасности предоставляет материал ключа для общего ключа см. в разделе [пример федерации](../../../../docs/framework/wcf/samples/federation-sample.md).  
   
  Ссылки выпущенного ключа создаются путем создания экземпляров класса <xref:System.IdentityModel.Tokens.SecurityKeyIdentifierClause>.  
   

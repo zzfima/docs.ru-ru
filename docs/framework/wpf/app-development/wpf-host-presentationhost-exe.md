@@ -1,40 +1,42 @@
 ---
-title: "Ведущее приложение WPF (PresentationHost.exe)"
-ms.custom: 
+title: Ведущее приложение WPF (PresentationHost.exe)
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - WPF Host application [WPF]
 - PresentationHost.exe
 ms.assetid: 3215bfa1-722c-4ac8-a7c5-bdd02d30afbd
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 1c5a9df438353701932a3e732d6df28b08402ee8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 1cd9586564d79d3c4ef1425eec1499b9b3143ff3
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="wpf-host-presentationhostexe"></a>Ведущее приложение WPF (PresentationHost.exe)
-[!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] Ведущее приложение (PresentationHost.exe) — это приложение, которое позволяет размещать приложения [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] в совместимых браузерах (включая [!INCLUDE[TLA#tla_ie6](../../../../includes/tlasharptla-ie6-md.md)] и более поздние версии). По умолчанию ведущее приложение [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] регистрируется в качестве оболочки и обработчика [!INCLUDE[TLA2#tla_mime](../../../../includes/tla2sharptla-mime-md.md)] для размещенного в браузере [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] содержимого, которое включает:  
+Windows Presentation Foundation (WPF) узла (PresentationHost.exe) — приложение, которое позволяет [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] размещение приложений можно осуществлять в совместимых браузерах (включая [!INCLUDE[TLA#tla_ie6](../../../../includes/tlasharptla-ie6-md.md)] и более поздние версии). По умолчанию Windows Presentation Foundation (WPF) узла зарегистрирован в качестве оболочки и [!INCLUDE[TLA2#tla_mime](../../../../includes/tla2sharptla-mime-md.md)] обработчик Браузерные [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] содержимое, которое содержит:  
   
 -   Свободные (нескомпилированные) файлы [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] (.xaml).  
   
 -   [!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)] (.xbap).  
   
- Для файлов этих типов ведущее приложение [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]:  
+ Для файлов этих типов узлов Windows Presentation Foundation (WPF).  
   
--   Запускает зарегистрированный обработчик [!INCLUDE[TLA2#tla_html](../../../../includes/tla2sharptla-html-md.md)] для размещения содержимого [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)].  
+-   Запускает зарегистрированный [!INCLUDE[TLA2#tla_html](../../../../includes/tla2sharptla-html-md.md)] обработчик для размещения содержимого Windows Presentation Foundation (WPF).  
   
--   Загружает правильные версии требуемых сборок [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] и [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)].  
+-   Загружает нужные версии необходимых [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] и сборок Windows Presentation Foundation (WPF).  
   
 -   Обеспечивает наличие соответствующих уровней разрешений для зоны развертывания.  
   
@@ -45,7 +47,7 @@ ms.lasthandoff: 12/22/2017
   
 ## <a name="parameters"></a>Параметры  
   
-|Параметр|Описание:|  
+|Параметр|Описание|  
 |---------------|-----------------|  
 |filename|Путь к файлу, который нужно активировать. Также может быть [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)].|  
 |-debug|При активации приложения не фиксирует его в хранилище и не запускает из хранилища. Работает только при активации локального файла.|  

@@ -14,11 +14,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 861e0c9eb4e9afa5f9924160efed428d565bac4e
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: 2ed51d14c56358e283d6c014f036a8aff73d2bfe
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="compensation"></a>Компенсация
 Компенсация в Windows Workflow Foundation (WF) — это механизм, с помощью которого ранее Завершенная работа может быть отменено или компенсированы (следующие логикой, определенной для приложения) при привели к возникновению ошибки. В данном разделе описывается применение компенсации в рабочих процессах.  
@@ -27,7 +27,7 @@ ms.lasthandoff: 04/27/2018
  Транзакция позволяет объединить несколько операций в одну единицу работы. Использование транзакции дает приложению возможность прерывать (откатывать) все изменения, выполненные в транзакции, если во время выполнения какой-либо части обработки транзакции возникнет ошибка. Однако использование транзакций может быть неприемлемо, если работа является долговременной. Пусть, например, приложение планирования путешествия реализовано как рабочий процесс. Шагами рабочего процесса могут быть заказ авиабилетов, ожидание подтверждения диспетчера и, наконец, оплата билета. Этот процесс может занять несколько дней, и включение шагов заказа и оплаты авиабилетов в одну транзакцию непрактично. Если позднее в процессе произойдет ошибка, в таком сценарии можно воспользоваться компенсацией для отмены шага заказа в рабочем процессе.  
   
 > [!NOTE]
->  В этом разделе описывается компенсация в рабочих процессах. [!INCLUDE[crabout](../../../includes/crabout-md.md)] транзакции в рабочих процессах, видеть [транзакции](../../../docs/framework/windows-workflow-foundation/workflow-transactions.md) и <xref:System.Activities.Statements.TransactionScope>. [!INCLUDE[crabout](../../../includes/crabout-md.md)] транзакциях см. в разделах <xref:System.Transactions?displayProperty=nameWithType> и <xref:System.Transactions.Transaction?displayProperty=nameWithType>.  
+>  В этом разделе описывается компенсация в рабочих процессах. Дополнительные сведения о транзакциях в рабочих процессах см. в разделе [транзакции](../../../docs/framework/windows-workflow-foundation/workflow-transactions.md) и <xref:System.Activities.Statements.TransactionScope>. Дополнительные сведения о транзакциях см. в разделе <xref:System.Transactions?displayProperty=nameWithType> и <xref:System.Transactions.Transaction?displayProperty=nameWithType>.  
   
 ## <a name="using-compensableactivity"></a>Использование действия CompensableActivity  
  <xref:System.Activities.Statements.CompensableActivity> - это базовое действие компенсации в [!INCLUDE[wf1](../../../includes/wf1-md.md)]. Все выполняющие работу действия, для которых может понадобиться выполнить компенсацию, помещаются в элемент <xref:System.Activities.Statements.CompensableActivity.Body%2A> действия <xref:System.Activities.Statements.CompensableActivity>. В данном примере шаг бронирования при покупке авиабилета размещен в элементе <xref:System.Activities.Statements.CompensableActivity.Body%2A> действия <xref:System.Activities.Statements.CompensableActivity>, а отмена бронирования помещается в обработчик <xref:System.Activities.Statements.CompensableActivity.CompensationHandler%2A>. Сразу за действием <xref:System.Activities.Statements.CompensableActivity> в рабочем процессе идут два действия, ожидающие одобрения от диспетчера и выполняющие шаг приобретения билета. Если состояние ошибки вызывает отмену рабочего процесса после успешного завершения работы действия <xref:System.Activities.Statements.CompensableActivity>, то действия в обработчике <xref:System.Activities.Statements.CompensableActivity.CompensationHandler%2A> планируются к выполнению, а полет отменяется.  
@@ -177,7 +177,7 @@ Activity wf = new Sequence()
 **Необработанное исключение рабочего процесса:**   
 **System.ApplicationException: Смоделированное состояние ошибки в рабочем процессе.**   
 **CancelCreditCard: Отмена кредитной карте.**   
-**Рабочий процесс успешно выполнен с состоянием: отменено.**  [!INCLUDE[crabout](../../../includes/crabout-md.md)] Отмена, см. [отмены](../../../docs/framework/windows-workflow-foundation/modeling-cancellation-behavior-in-workflows.md).  
+**Рабочий процесс успешно выполнен с состоянием: отменено.**  Дополнительные сведения об отмене см. в разделе [отмены](../../../docs/framework/windows-workflow-foundation/modeling-cancellation-behavior-in-workflows.md).  
   
 ### <a name="explicit-compensation-using-the-compensate-activity"></a>Явная компенсация с использованием действия компенсации  
  В предыдущем разделе была описана неявная компенсация. Неявная компенсация может использоваться в простых сценариях, но если требуется более явный контроль над планированием обработки компенсации, можно использовать действие <xref:System.Activities.Statements.Compensate>. Для инициации процесса компенсации с применением действия <xref:System.Activities.Statements.Compensate> используется маркер <xref:System.Activities.Statements.CompensationToken> действия <xref:System.Activities.Statements.CompensableActivity>, для которого необходимо провести компенсацию. Действие <xref:System.Activities.Statements.Compensate> может использоваться для запуска компенсации для любого выполненного действия <xref:System.Activities.Statements.CompensableActivity>, которое не было подтверждено или компенсировано. Например, действие <xref:System.Activities.Statements.Compensate> может использоваться в разделе <xref:System.Activities.Statements.TryCatch.Catches%2A> действия <xref:System.Activities.Statements.TryCatch> или в любой момент после завершения действия <xref:System.Activities.Statements.CompensableActivity>. В данном примере действие <xref:System.Activities.Statements.Compensate> используется в разделе <xref:System.Activities.Statements.TryCatch.Catches%2A> действия <xref:System.Activities.Statements.TryCatch> для обращения действия <xref:System.Activities.Statements.CompensableActivity>.  

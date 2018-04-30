@@ -24,16 +24,16 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 55cd4b928c640f506e058f6a441189842bc9b8a3
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: cada24098f5800f56d7dd50119c3fe3394ba14cd
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-enable-message-replay-detection"></a>Практическое руководство. Включение обнаружения повтора сообщений
 Атака воспроизведения заключается в том, что злоумышленник копирует поток сообщений между двумя сторонами и воспроизводит его для одной или нескольких сторон. Если не приняты ответные меры, атакованные компьютеры обрабатывают этот поток как надлежащие сообщения, что приводит к ряду негативных последствий, таких как повторные заказы одного элемента.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] обнаружение воспроизведения сообщений см. в разделе [обнаружения воспроизведения сообщений](http://go.microsoft.com/fwlink/?LinkId=88536).  
+ Дополнительные сведения о обнаружения повтора сообщений см. в разделе [обнаружения воспроизведения сообщений](http://go.microsoft.com/fwlink/?LinkId=88536).  
   
  В следующей процедуре показаны различные свойства, с помощью которых можно управлять обнаружением воспроизведения, используя [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
   

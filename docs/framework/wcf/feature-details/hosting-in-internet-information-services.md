@@ -1,28 +1,28 @@
 ---
-title: "Размещение в службах IIS"
-ms.custom: 
+title: Размещение в службах IIS
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - hosting services [WCF], IIS
 ms.assetid: ddae14e8-143c-442d-b660-2046809b2d43
-caps.latest.revision: 
+caps.latest.revision: 13
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 988216447e47345b6d863de6e46d0de9a025f068
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b933626c2f3f5ee7121d141d3704376efeb54ba5
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="hosting-in-internet-information-services"></a>Размещение в службах IIS
 Один из вариантов размещения служб [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] - внутри приложения IIS. Эта модель размещения похожа на модель, используемую [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] и веб-службами ASP.NET (ASMX).  
@@ -34,7 +34,7 @@ ms.lasthandoff: 12/22/2017
   
 -   [!INCLUDE[iis601](../../../../includes/iis601-md.md)] в [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]. В службах [!INCLUDE[iis601](../../../../includes/iis601-md.md)] реализована расширенная модель процессов, которая обеспечивает лучшую масштабируемость, надежность и изоляцию приложений. Эта среда подходит для развертывания служб [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], использующих только транспорт HTTP, в рабочей среде.  
   
--   IIS 7.0 в [!INCLUDE[wv](../../../../includes/wv-md.md)] и [!INCLUDE[lserver](../../../../includes/lserver-md.md)]. Службы IIS 7.0 реализуют такую же расширенную модель процессов, как и [!INCLUDE[iis601](../../../../includes/iis601-md.md)], но используют службу активации Windows (WAS) для обеспечения поддержки активации и сетевого взаимодействия с помощью протоколов, отличных от HTTP. Эта среда подходит для разработки служб [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], которые взаимодействуют с помощью любых сетевых протоколов, поддерживаемых [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] (включая HTTP, net.tcp, net.pipe и net.msmq). [!INCLUDE[crabout](../../../../includes/crabout-md.md)]В разделе [размещение в службе активации процессов Windows](../../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md).  
+-   IIS 7.0 в [!INCLUDE[wv](../../../../includes/wv-md.md)] и [!INCLUDE[lserver](../../../../includes/lserver-md.md)]. Службы IIS 7.0 реализуют такую же расширенную модель процессов, как и [!INCLUDE[iis601](../../../../includes/iis601-md.md)], но используют службу активации Windows (WAS) для обеспечения поддержки активации и сетевого взаимодействия с помощью протоколов, отличных от HTTP. Эта среда подходит для разработки служб [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], которые взаимодействуют с помощью любых сетевых протоколов, поддерживаемых [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] (включая HTTP, net.tcp, net.pipe и net.msmq). Дополнительные сведения об АКТИВАЦИИ см. в разделе [размещение в службе активации процессов Windows](../../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md).  
   
 -   [Windows Server AppFabric](http://go.microsoft.com/fwlink/?LinkId=196496) работает с [!INCLUDE[iisver](../../../../includes/iisver-md.md)] и активации процессов Windows Service (WAS) для предоставления полнофункциональных приложений размещения среды для служб NET4 WCF и WF. К ее преимуществам относятся управление жизненным циклом, перезапуск процессов, совместное размещение, быстрая защита от сбоев, обработка потерянных процессов, активация по запросу и наблюдение за работоспособностью. Дополнительные сведения см. в разделе [функции размещения AppFabric](http://go.microsoft.com/fwlink/?LinkId=196494) и [размещения AppFabric](http://go.microsoft.com/fwlink/?LinkId=196495).  
   
@@ -49,7 +49,7 @@ ms.lasthandoff: 12/22/2017
   
 -   службы [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], размещаемые в IIS, используют ту же модель динамической компиляции, что и [!INCLUDE[vstecasplong](../../../../includes/vstecasplong-md.md)], что упрощает разработку и развертывание размещенных служб.  
   
- При принятии решения о размещении служб [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] в IIS важно помнить, что в версиях IIS 5.1 и [!INCLUDE[iis601](../../../../includes/iis601-md.md)] можно использовать для взаимодействия только протокол HTTP. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Выбор среды размещения, в разделе [размещение служб](../../../../docs/framework/wcf/hosting-services.md).  
+ При принятии решения о размещении служб [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] в IIS важно помнить, что в версиях IIS 5.1 и [!INCLUDE[iis601](../../../../includes/iis601-md.md)] можно использовать для взаимодействия только протокол HTTP. Дополнительные сведения о выборе среды размещения см. в разделе [размещение служб](../../../../docs/framework/wcf/hosting-services.md).  
   
 ## <a name="deploying-an-iis-hosted-wcf-service"></a>Развертывание службы WCF, размещаемой в IIS  
  Процесс разработки и развертывания службы [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], размещаемой в IIS, состоит из следующих задач.  

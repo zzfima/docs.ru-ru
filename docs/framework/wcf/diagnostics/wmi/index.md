@@ -16,17 +16,17 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: e8fd88edd711513d1b143029d8088401c9945d13
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 2e01418844db4197cea2f9292f72b9089e77a596
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="using-windows-management-instrumentation-for-diagnostics"></a>Использование Windows Management Instrumentation для диагностики
 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] предоставляет данные проверки службы в среде выполнения с помощью поставщика инструментария управления Windows (WMI) [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)].  
   
 ## <a name="enabling-wmi"></a>Реализация WMI  
- Инструментарий WMI - это реализованный корпорацией Майкрософт стандарт управления предприятием через Интернет (WBEM). [!INCLUDE[crabout](../../../../../includes/crabout-md.md)] см. в пакете WMI SDK [инструментария управления Windows](https://msdn.microsoft.com/library/aa394582.aspx). WBEM является отраслевым стандартом предоставления приложениями инструментария управления для внешних средств управления.  
+ Инструментарий WMI - это реализованный корпорацией Майкрософт стандарт управления предприятием через Интернет (WBEM). Дополнительные сведения о пакете WMI SDK см. в разделе [инструментария управления Windows](https://msdn.microsoft.com/library/aa394582.aspx). WBEM является отраслевым стандартом предоставления приложениями инструментария управления для внешних средств управления.  
   
  Поставщик инструментария WMI - это компонент, предоставляющий инструментарий в среде выполнения с помощью совместимого с WBEM интерфейса. Он состоит из набора объектов инструментария WMI, имеющих пары атрибут/значение. Пары могут быть нескольких простых типов. Средства управления могут подключаться к службам через интерфейс во время выполнения. [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] предоставляет атрибуты служб, такие как адреса, привязки, поведения и прослушиватели.  
   

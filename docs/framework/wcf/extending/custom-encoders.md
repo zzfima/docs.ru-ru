@@ -1,24 +1,26 @@
 ---
-title: "Пользовательские кодировщики"
-ms.custom: 
+title: Пользовательские кодировщики
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: fa0e1d7f-af36-4bf4-aac9-cd4eab95bc4f
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f1c8223ea7900ba0a89ee2c5c48895a1782d18a0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 90926fd334eb5ccef3a63f637d5273c408c0c13e
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="custom-encoders"></a>Пользовательские кодировщики
 В данном разделе рассматривается процесс создания пользовательских кодировщиков.  
@@ -34,7 +36,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="system-provided-encoders"></a>Кодировщики, предоставляемые системой  
  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] предлагает несколько привязок, предоставляемых системой, которые разработаны для использования с самыми общими сценариями приложения. Каждая из этих привязок содержит транспорт, кодировщик сообщений и другие параметры (например, безопасность). В данном разделе описывается, как расширить кодировщики сообщений `Text`, `Binary` и `MTOM`, содержащиеся в [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], или создать собственный пользовательский кодировщик. Кодировщик текстовых сообщений поддерживает как кодирование на простом языке XML, так и кодирование SOAP. Режим кодирования на простом языке XML кодировщика текстовых сообщений называется кодировщиком POX ("plain old XML"), что позволяет отличить его от текстового кодирования SOAP.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]сочетания элементов привязки, предоставляемые привязок, предоставляемых системой, см. в соответствующий подраздел в [выбор транспорта](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md).  
+ Дополнительные сведения о сочетаниях элементов привязки, предоставляемые системой привязки, предоставляемые в соответствующий подраздел в разделе [выбор транспорта](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md).  
   
 ## <a name="how-to-work-with-system-provided-encoders"></a>Принцип работы с кодировщиками, предоставляемыми системой  
  Кодирование добавляется в привязку с помощью класса, унаследованного от класса <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>.  
@@ -45,7 +47,7 @@ ms.lasthandoff: 12/22/2017
   
 -   <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>. Представляет собой элемент привязки, указывающий кодирование символов и управление версиями сообщений для сообщений XML в двоичном формате. Этот параметр кодирования самый эффективный, но наименее подходящий для взаимодействия, поскольку он поддерживается только конечными точками [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
   
--   <<!--zz xref:System.ServiceModel.Channels.MTOMMessageEncodingBindingElement -->`System.ServiceModel.Channels.MTOMMessageEncodingBindingElement`>: представляет элемент привязки, задающий кодировку и управление версиями сообщений для сообщения с использованием кодировки механизм оптимизации передачи сообщений (MTOM). MTOM - это эффективная технология передачи двоичных данных в сообщениях [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Кодировщик MTOM пытается обеспечить баланс между эффективностью и взаимодействием. Кодирование MTOM передает большую часть XML-данных в текстовой форме, но оптимизирует большие блоки двоичных данных путем передачи их в исходном виде, без преобразования в текст.  
+-   <<!--zz xref:System.ServiceModel.Channels.MTOMMessageEncodingBindingElement --> `System.ServiceModel.Channels.MTOMMessageEncodingBindingElement`>: представляет элемент привязки, задающий кодировку и управление версиями сообщений для сообщения с использованием кодировки механизм оптимизации передачи сообщений (MTOM). MTOM - это эффективная технология передачи двоичных данных в сообщениях [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Кодировщик MTOM пытается обеспечить баланс между эффективностью и взаимодействием. Кодирование MTOM передает большую часть XML-данных в текстовой форме, но оптимизирует большие блоки двоичных данных путем передачи их в исходном виде, без преобразования в текст.  
   
  Элемент привязки создает двоичную, MTOM или текстовую фабрику <xref:System.ServiceModel.Channels.MessageEncoderFactory>. Фабрика создает двоичный, MTOM или текстовый экземпляр <xref:System.ServiceModel.Channels.MessageEncoderFactory>. Обычно существует только один экземпляр. Однако при использовании сеансов для каждого сеанса могут предоставляться разные кодировщики. Двоичный кодировщик использует это для координации динамических словарей (см. раздел "Инфраструктура XML").  
   

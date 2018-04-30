@@ -1,27 +1,29 @@
 ---
-title: "Клиентская архитектура"
-ms.custom: 
+title: Клиентская архитектура
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 02624403-0d77-41cb-9a86-ab55e98c7966
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6418c3b5c82ac42fb7e6d3ce85913896a3f76442
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 12db0d4f5717287439b66810e6354b12a4c68b77
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="client-architecture"></a>Клиентская архитектура
-Для вызова операций службы приложения используют клиентские объекты [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. В этом разделе рассматриваются клиентские объекты [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], клиентские каналы [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] и их взаимосвязи с базовой архитектурой каналов. Для получения общих сведений о [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] клиентские объекты в разделе [Общие сведения о клиенте WCF](../../../../docs/framework/wcf/wcf-client-overview.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)]уровень канала в разделе [расширение уровня каналов](../../../../docs/framework/wcf/extending/extending-the-channel-layer.md).  
+Для вызова операций службы приложения используют клиентские объекты [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. В этом разделе рассматриваются клиентские объекты [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], клиентские каналы [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] и их взаимосвязи с базовой архитектурой каналов. Для получения общих сведений о [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] клиентские объекты в разделе [Общие сведения о клиенте WCF](../../../../docs/framework/wcf/wcf-client-overview.md). Дополнительные сведения о уровень канала см. в разделе [расширение уровня каналов](../../../../docs/framework/wcf/extending/extending-the-channel-layer.md).  
   
 ## <a name="overview"></a>Обзор  
  Во время выполнения модели службы создаются клиенты [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], в состав которых входят следующие компоненты.  
@@ -48,7 +50,7 @@ ms.lasthandoff: 12/22/2017
   
  В отношении фабрик каналов необходимо иметь в виду, что они создают новые экземпляры клиентских каналов для предоставленной им конфигурации до вызова метода <xref:System.ServiceModel.ChannelFactory%601.CreateChannel%2A?displayProperty=nameWithType>. Если вызывается <xref:System.ServiceModel.ChannelFactory%601.CreateChannel%2A> (или <xref:System.ServiceModel.ClientBase%601.Open%2A?displayProperty=nameWithType>, <xref:System.ServiceModel.ClientBase%601.CreateChannel%2A?displayProperty=nameWithType> либо любая операция для клиентского объекта [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]), невозможно изменить фабрику каналов и надеяться на получение каналов к различным экземплярам службы даже в случае простого изменения целевого адреса конечной точки. Если требуется создать клиентский объект или клиентский канал с другой конфигурацией, сначала необходимо создать новую фабрику каналов.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]различные проблемы, с помощью [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] клиентских объектов и [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] клиентские каналы, в разделе [получение служб с помощью клиента WCF](../../../../docs/framework/wcf/feature-details/accessing-services-using-a-client.md).  
+ Дополнительные сведения о различных проблем, с помощью [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] клиентских объектов и [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] клиентские каналы, в разделе [получение служб с помощью клиента WCF](../../../../docs/framework/wcf/feature-details/accessing-services-using-a-client.md).  
   
  В следующих двух разделах описываются создание и использование объектов клиентских каналов [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
   

@@ -16,17 +16,17 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: c9ae96facd79ae3d268c630ff7bf8adf411eb775
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 5550e97d97adf28a84566c5d7936369656c65e43
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="accessing-the-service-from-a-web-browser-wcf-data-services-quickstart"></a>Доступ к службе из веб-браузера (краткое руководство по службе данных WCF)
 В этой задаче мы запустим службы [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] из Visual Studio и дополнительно отключим чтение канала в веб-браузере. Вам будет затем извлечем документ определения службы а также доступ к ресурсам службы данных, отправляя запросы HTTP GET через веб-браузер к предоставляемым ресурсам.  
   
 > [!NOTE]
->  По умолчанию Visual Studio автоматически приписывает для URI на компьютере номер порта `localhost`. В данной задаче в примерах URI используется порт номер `12345`. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] как задать конкретный номер порта, см. в разделе проекта в Visual Studio [Создание службы данных](../../../../docs/framework/data/wcf/creating-the-data-service.md).  
+>  По умолчанию Visual Studio автоматически приписывает для URI на компьютере номер порта `localhost`. В данной задаче в примерах URI используется порт номер `12345`. Дополнительные сведения о том, как задать конкретный номер порта в проекте Visual Studio в разделе [Создание службы данных](../../../../docs/framework/data/wcf/creating-the-data-service.md).  
   
 ### <a name="to-request-the-default-service-document-by-using-internet-explorer"></a>Запрос сервисного документа по умолчанию с помощью Internet Explorer  
   

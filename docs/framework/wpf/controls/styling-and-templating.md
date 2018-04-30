@@ -1,12 +1,13 @@
 ---
-title: "Стилизация и использование шаблонов"
-ms.custom: 
+title: Стилизация и использование шаблонов
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -22,16 +23,17 @@ helpviewer_keywords:
 - styles [WPF], triggers
 - styles [WPF], event triggers
 ms.assetid: 481765e5-5467-4a75-9f7b-e10e2ac410d9
-caps.latest.revision: "34"
+caps.latest.revision: 34
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c33739d0e753146ffdc8b825d88c6ca7ba63fa1a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 7aafd709bfc1da63d11a56ada59aedf0ada12f3a
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="styling-and-templating"></a>Стилизация и использование шаблонов
 Стилизация и использование шаблонов [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] относятся к набору возможностей (стили, шаблоны, триггеры и раскадровки), которые позволяют разработчикам и дизайнерам создавать визуально привлекательные эффекты, а также создавать согласованный внешний вид своих продуктов. Несмотря на то что разработчики и дизайнеры могут создавать внешний вид отдельно для каждого приложения, надежная модель стилизации и использования шаблонов необходима для поддержки и совместного использования внешнего вида как внутри одного приложения, так и в ряде приложений. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] предоставляет такую модель.  
@@ -181,15 +183,15 @@ ms.lasthandoff: 12/22/2017
  ![Пример стилизации (снимок экрана)](../../../../docs/framework/wpf/controls/media/stylingintro-eventtriggers.png "StylingIntro_EventTriggers")  
   
 ### <a name="multitriggers-datatriggers-and-multidatatriggers"></a>Объекты MultiTrigger, DataTrigger и MultiDataTrigger  
- В дополнение к <xref:System.Windows.Trigger> и <xref:System.Windows.EventTrigger>, существуют другие типы триггеров. <xref:System.Windows.MultiTrigger>позволяет задавать значения свойств на основе нескольких условий. Вы используете <xref:System.Windows.DataTrigger> и <xref:System.Windows.MultiDataTrigger> при свойство условия с привязкой к данным.  
+ В дополнение к <xref:System.Windows.Trigger> и <xref:System.Windows.EventTrigger>, существуют другие типы триггеров. <xref:System.Windows.MultiTrigger> позволяет задавать значения свойств на основе нескольких условий. Вы используете <xref:System.Windows.DataTrigger> и <xref:System.Windows.MultiDataTrigger> при свойство условия с привязкой к данным.  
   
 <a name="styling_themes"></a>   
 ## <a name="shared-resources-and-themes"></a>Общие ресурсы и темы  
- Типичное приложение [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] может иметь несколько ресурсов пользовательского интерфейса, которые применяются в рамках всего приложения. В совокупности этот набор ресурсов можно рассматривать как тему приложения. [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]предоставляет поддержку для упаковки ресурсов пользовательского интерфейса как тему с помощью словаря ресурсов, который инкапсулируется в качестве <xref:System.Windows.ResourceDictionary> класса.  
+ Типичное приложение Windows Presentation Foundation (WPF) может иметь несколько ресурсов пользовательского интерфейса (UI), которые применяются во всем приложении. В совокупности этот набор ресурсов можно рассматривать как тему приложения. Windows Presentation Foundation (WPF) предоставляет поддержку для упаковки ресурсов пользовательского интерфейса как тему с помощью словаря ресурсов, который инкапсулируется в качестве <xref:System.Windows.ResourceDictionary> класса.  
   
- Темы [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] задаются с помощью механизмов стилизации и использования шаблонов, которые [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] предоставляет для настройки отображения любого элемента.  
+ Темы Windows Presentation Foundation (WPF) определяются с помощью механизмов стилизации и шаблонов, предоставляющую Windows Presentation Foundation (WPF) для настройки отображения любого элемента.  
   
- Ресурсы темы [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] хранятся в словарях внедренных ресурсов. Эти словари ресурсов должны быть внедрены в подписанную сборку и могут быть внедрены либо в ту же сборку, что и сам код, либо в параллельную сборку. В случае библиотеки PresentationFramework.dll (сборки, содержащей элементы управления[!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]) ресурсы тем находятся в ряде параллельных сборок.  
+ Ресурсы темы Windows Presentation Foundation (WPF), хранятся в словарях внедренных ресурсов. Эти словари ресурсов должны быть внедрены в подписанную сборку и могут быть внедрены либо в ту же сборку, что и сам код, либо в параллельную сборку. В случае PresentationFramework.dll сборку, которая содержит элементы управления Windows Presentation Foundation (WPF), ресурсы тем находятся в ряд side-by-side сборки.  
   
  Тема становится последним местом поиска стиля элемента. Как правило, процесс поиска начинается с прохода вверх по дереву элементов в поисках соответствующего ресурса, затем выполняется поиск в коллекции ресурсов приложения и, наконец, в последнюю очередь осуществляется запрос к системе. Это дает разработчикам приложений возможность переопределить стиль для любого объекта на уровне дерева или приложения до достижения темы.  
   

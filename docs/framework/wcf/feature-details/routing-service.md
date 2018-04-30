@@ -1,24 +1,26 @@
 ---
-title: "Служба маршрутизации"
-ms.custom: 
+title: Служба маршрутизации
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: ca7c216a-5141-4132-8193-102c181d2eba
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a7214a14b11ae1f91906c8d2140bc82836988390
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 8ff2a99bc06ab0de2aedce98ea029f484e47053f
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="routing-service"></a>Служба маршрутизации
 Служба маршрутизации является универсальным посредником протокола SOAP, действующим в качестве маршрутизатора сообщений. Основной функцией службы маршрутизации является возможность перенаправлять сообщения, исходя из их содержимого, благодаря чему сообщение можно переслать конечной точке клиента в зависимости от значения в самом сообщении, находящемся в заголовке или в тексте сообщения.  
@@ -98,12 +100,12 @@ ms.lasthandoff: 12/22/2017
   
  Если служба маршрутизации обнаружила исключение <xref:System.ServiceModel.CommunicationException> при попытке отправки сообщения, то будет выполнена обработка ошибок.  Эти исключения обычно указывают на то, что при попытке связаться с определенной конечной точкой клиента была обнаружена проблема, например <xref:System.ServiceModel.EndpointNotFoundException>, <xref:System.ServiceModel.ServerTooBusyException> или <xref:System.ServiceModel.CommunicationObjectFaultedException>.  Код обработки ошибок также перехватит и попытается повторить отправку при **TimeoutException** происходит, это другой общее исключение, которое не является производным от **CommunicationException**.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Ошибка при обработке см. в разделе [маршрутизации Введение](../../../../docs/framework/wcf/feature-details/routing-introduction.md).  
+ Дополнительные сведения об обработке ошибок см. в разделе [маршрутизации Введение](../../../../docs/framework/wcf/feature-details/routing-introduction.md).  
   
 ## <a name="backup-endpoints"></a>Резервные конечные точки  
  Помимо целевых клиентских конечных точек, связанных с определениями фильтров в таблице фильтров, можно создать также список резервных конечных точек. В случае ошибки передачи данных будет выполнена маршрутизация сообщения к этим резервным конечным точкам. Если для записи фильтра определен резервный список, то при возникновении ошибки служба маршрутизации попытается отправить сообщение к первой конечной точке из этого списка. Если передача данных завершилась ошибкой, то служба пытается отправить сообщение следующей конечной точке. Этот процесс продолжается до тех пор, пока операция не будет выполнена успешно, пока не будет возвращена ошибка, не связанная с передачей данных, либо до конца резервного списка.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]резервное копирование конечных точек см. в разделе [маршрутизации Введение](../../../../docs/framework/wcf/feature-details/routing-introduction.md) и [фильтры сообщений](../../../../docs/framework/wcf/feature-details/message-filters.md).  
+ Дополнительные сведения о резервных конечных точек см. в разделе [маршрутизации Введение](../../../../docs/framework/wcf/feature-details/routing-introduction.md) и [фильтры сообщений](../../../../docs/framework/wcf/feature-details/message-filters.md).  
   
 ## <a name="streaming"></a>Потоковые операторы  
  Служба маршрутизации может успешно передавать сообщения, если задать привязку для поддержки потоковой передачи.  Однако существуют определенные условия, при которых сообщения необходимо помещать в буфер.  

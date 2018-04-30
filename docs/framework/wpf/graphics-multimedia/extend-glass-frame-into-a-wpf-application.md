@@ -18,20 +18,20 @@ helpviewer_keywords:
 - extending glass frames into applications [WPF]
 - glass frames [WPF], extending into applications
 ms.assetid: 74388a3a-4b69-4a9d-ba1f-e107636bd660
-caps.latest.revision: ''
+caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: aad070bca408fc608eb000948c1b942d08f02018
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 03a2b8c6184a6cb79d1e42598a65972a08718e10
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="extend-glass-frame-into-a-wpf-application"></a>Использование стеклянной рамки в приложении WPF
-В этом разделе показано, как расширить стеклянную рамку [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)] в клиентской области приложения [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)].  
+В этом разделе показано, как расширить [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)] стеклянной рамки в клиентскую область приложения Windows Presentation Foundation (WPF).  
   
 > [!NOTE]
 >  Этот пример будет работать только на компьютере под управлением [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)], где работает диспетчер окон рабочего стола (DWM) с включенным эффектом прозрачного стекла. [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)] Home Basic edition не поддерживает эффект прозрачного стекла. Области, которые обычно отображаются с эффектом прозрачного стекла, в других выпусках [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)] отображаются непрозрачными.  

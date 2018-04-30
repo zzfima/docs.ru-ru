@@ -1,12 +1,13 @@
 ---
 title: '&lt;declaredTypes&gt;'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - dataContractSerializer element
@@ -15,16 +16,17 @@ helpviewer_keywords:
 - KnownTypes
 - <declaredTypes> element
 ms.assetid: f35184e4-9d9e-4d37-8fb4-d5b58220eb3e
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 3066ee9247e69c746c28251b975bb80425ccbc8f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: a1cd7d446b0d86e1f38e38afeee03161278afed7
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="ltdeclaredtypesgt"></a>&lt;declaredTypes&gt;
 Содержит известные типы, которые <xref:System.Runtime.Serialization.DataContractSerializer> использует при десериализации.  
@@ -61,18 +63,18 @@ ms.lasthandoff: 12/22/2017
   
 ### <a name="child-elements"></a>Дочерние элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
 |[\<add>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-declaredtypes-element.md)|Добавляет типы, для которых необходимы известные типы.|  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
 |[\<dataContractSerializer >](../../../../../docs/framework/configure-apps/file-schema/wcf/datacontractserializer-of-system-runtime-serialization.md)|Содержит данные конфигурации для <xref:System.Runtime.Serialization.DataContractSerializer>.|  
   
 ## <a name="remarks"></a>Примечания  
- [!INCLUDE[crabout](../../../../../includes/crabout-md.md)]известных типах см. в разделе [известные типы контрактов данных](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md) и <xref:System.Runtime.Serialization.DataContractSerializer>.  
+ Дополнительные сведения об известных типах см. в разделе [известные типы контрактов данных](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md) и <xref:System.Runtime.Serialization.DataContractSerializer>.  
   
 ## <a name="example"></a>Пример  
  Приведенный ниже код XML показывает объявленные типы и известные типы, добавленные к `DataContractSerializer` элемента. В этом примере показаны три добавляемых типа. Первый тип - это пользовательский тип с именем «Orders», использующий известный тип с именем «Item». Второй объявленный тип - это <xref:System.Collections.Generic.List%601>, использующий `Item` в качестве известного типа. Наконец, третий объявленный тип - это <xref:System.Collections.Generic.Dictionary%602>. Тип класса <xref:System.Collections.Generic.Dictionary%602> является универсальным типом с двумя параметрами типов. Первый представляет ключ, а второй представляет значение. В следующем примере параметр второго типа <xref:System.Collections.Generic.List%601> (значение) добавляется к списку известных типов. Чтобы задать параметр типа для использования в известном типе, необходимо использовать атрибут `index`. В данном примере тип значения указан атрибутом индекса, для которого задано значение 1 (коллекция начинается с нуля).  

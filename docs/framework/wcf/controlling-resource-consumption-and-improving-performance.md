@@ -1,24 +1,26 @@
 ---
-title: "Управление потреблением ресурсов и повышение производительности"
-ms.custom: 
+title: Управление потреблением ресурсов и повышение производительности
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 9a829669-5f76-4c88-80ec-92d0c62c0660
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ecb8ae5edfb35ccaffecbfb4e960d3f4a46bad0e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 6e864e0a90dbb46f440e2eba2b676413c72e0da9
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="controlling-resource-consumption-and-improving-performance"></a>Управление потреблением ресурсов и повышение производительности
 В данном разделе описано несколько свойств разных областей архитектуры [!INCLUDE[indigo1](../../../includes/indigo1-md.md)], которые служат для контроля за потреблением ресурсов и влияют на метрики производительности.  
@@ -55,7 +57,7 @@ ms.lasthandoff: 12/22/2017
  [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) может повысить производительность при запуске этих приложений путем создания кода необходимости сериализации из компилированных сборок для приложения. Дополнительные сведения см. в разделе [как: улучшения запуска время клиентских приложений WCF с помощью класса XmlSerializer](../../../docs/framework/wcf/feature-details/startup-time-of-wcf-client-applications-using-the-xmlserializer.md).  
   
 ## <a name="performance-issues-when-hosting-wcf-services-under-aspnet"></a>Проблемы производительности при размещении служб WCF под ASP.NET  
- Когда служба WCF размещается под IIS и ASP.NET, параметры конфигурации IIS и ASP.NET могут повлиять на пропускную способность и объем занимаемой службой WCF памяти.  [!INCLUDE[crabout](../../../includes/crabout-md.md)]Производительность ASP.NET. в разделе [повышение производительности ASP.NET](http://go.microsoft.com/fwlink/?LinkId=186462).  Есть один параметр, использование которого может иметь непредвиденные последствия. Это <xref:System.Web.Configuration.ProcessModelSection.MinWorkerThreads%2A>, который является свойством <xref:System.Web.Configuration.ProcessModelSection>. Если приложение имеет фиксированное или небольшое количество клиентов, изменение параметра <xref:System.Web.Configuration.ProcessModelSection.MinWorkerThreads%2A> на 2 может обеспечить повышение пропускной способности на многопроцессорных компьютерах с близким к 100% использованием ЦП. За такое увеличение производительности приходится платить: оно также влечет за собой повышение использования памяти, что может снизить масштабируемость.  
+ Когда служба WCF размещается под IIS и ASP.NET, параметры конфигурации IIS и ASP.NET могут повлиять на пропускную способность и объем занимаемой службой WCF памяти.  Дополнительные сведения о производительности ASP.NET см. в разделе [повышение производительности ASP.NET](http://go.microsoft.com/fwlink/?LinkId=186462).  Есть один параметр, использование которого может иметь непредвиденные последствия. Это <xref:System.Web.Configuration.ProcessModelSection.MinWorkerThreads%2A>, который является свойством <xref:System.Web.Configuration.ProcessModelSection>. Если приложение имеет фиксированное или небольшое количество клиентов, изменение параметра <xref:System.Web.Configuration.ProcessModelSection.MinWorkerThreads%2A> на 2 может обеспечить повышение пропускной способности на многопроцессорных компьютерах с близким к 100% использованием ЦП. За такое увеличение производительности приходится платить: оно также влечет за собой повышение использования памяти, что может снизить масштабируемость.  
   
 ## <a name="see-also"></a>См. также  
  [Администрирование и диагностика](../../../docs/framework/wcf/diagnostics/index.md)  

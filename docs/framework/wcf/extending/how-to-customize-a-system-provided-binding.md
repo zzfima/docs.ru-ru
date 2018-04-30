@@ -1,34 +1,36 @@
 ---
-title: "Практическое руководство. Изменение привязки, предоставляемой системой"
-ms.custom: 
+title: Практическое руководство. Изменение привязки, предоставляемой системой
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: f8b97862-e8bb-470d-8b96-07733c21fe26
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a9b048b5c57d174ac921793ee8677622b88a0595
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 1d70a4c4234047e7410ae4f631e48595a0859f37
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-customize-a-system-provided-binding"></a>Практическое руководство. Изменение привязки, предоставляемой системой
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] содержит несколько привязок, предоставляемых системой, которые позволяют настраивать некоторые свойства базовых элементов привязки, но не все свойства. В данном разделе показано, как задать свойства в элементах привязки, чтобы создать пользовательскую привязку.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]как непосредственно создать и настроить элементы привязки без использования системных привязок см. в разделе [пользовательские привязки](../../../../docs/framework/wcf/extending/custom-bindings.md).  
+ Дополнительные сведения о том, как непосредственно создать и настроить элементы привязки без использования системных привязок см. в разделе [пользовательские привязки](../../../../docs/framework/wcf/extending/custom-bindings.md).  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Создание и расширение пользовательских привязок. в разделе [расширение привязок](../../../../docs/framework/wcf/extending/extending-bindings.md).  
+ Дополнительные сведения о создании и расширении пользовательских привязок см. в разделе [расширение привязок](../../../../docs/framework/wcf/extending/extending-bindings.md).  
   
  В [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] все привязки состоят из *элементов привязки*. Каждый элемент привязки наследуется от класса <xref:System.ServiceModel.Channels.BindingElement>. Привязки, предоставляемые системой, такие как <xref:System.ServiceModel.BasicHttpBinding>, создают и настраивают собственные элементы привязки. В данном разделе показано, как получить доступ и изменить свойства этих элементов привязки, которые не предоставляются непосредственно в привязке, в частности, класс <xref:System.ServiceModel.BasicHttpBinding>.  
   

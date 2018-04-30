@@ -1,30 +1,32 @@
 ---
-title: "Практическое руководство. Создание службы, для которой требуются сеансы"
-ms.custom: 
+title: Практическое руководство. Создание службы, для которой требуются сеансы
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 8a7613ef-0df9-47c3-b8dc-47f42cb1fd8b
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 1fba00b6b8aed8e27d5f16612bb77191f6674abe
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 9fdf104c46757c7cf41082a2a0e134527b75b238
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-create-a-service-that-requires-sessions"></a>Практическое руководство. Создание службы, для которой требуются сеансы
-Сеансы создают общее состояние между двумя и более конечными точками, что обеспечивает полезные возможности, такие как обратные вызовы, безопасность по всем участкам передачи и ассоциации между клиентами и экземплярами служб. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]сеансы в [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] приложения, см. [с использованием сеансов](../../../../docs/framework/wcf/using-sessions.md).  
+Сеансы создают общее состояние между двумя и более конечными точками, что обеспечивает полезные возможности, такие как обратные вызовы, безопасность по всем участкам передачи и ассоциации между клиентами и экземплярами служб. Дополнительные сведения о сеансах в [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] приложения, см. [с использованием сеансов](../../../../docs/framework/wcf/using-sessions.md).  
   
 ### <a name="to-specify-that-a-contract-require-its-binding-to-support-sessions"></a>Указание требования контракта о необходимости поддержки сеанса его привязкой  
   

@@ -1,24 +1,26 @@
 ---
-title: "Передача формы"
-ms.custom: 
+title: Передача формы
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: fa6f84f9-2e07-4e3c-92d0-a245308b7dff
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: fe1be9177f3e811a3037377360f46f42904d5af3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 31d2ebbdb6f899390d7b3af485c1583fb80ae6dc
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="form-post"></a>Передача формы
 Данный образец демонстрирует расширение программной модели WCF REST для поддержки новых форматов входящих запросов. Образец также содержит реализацию модуля форматирования, который может десериализовать запрос из передачи формы HTML методом POST в тип [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]. Кроме того, образец использует шаблон T4 для возврата страницы HTML, которая предоставляет форму HTML, дающую пользователям возможность возвращать данные в службу WCF REST.  
@@ -38,7 +40,7 @@ ms.lasthandoff: 12/22/2017
   
  Этот проект консольного приложения расширяет [базовой службы ресурсов](../../../../docs/framework/wcf/samples/basic-resource-service.md) образца. В образце базовой службы ресурсов показано, как предоставить доступ к ресурсу с использованием модели программирования WCF REST. В образце базовой службы ресурсов доступ к коллекции клиентских ресурсов предоставляется образом, позволяющим создавать, извлекать, обновлять и удалять клиентов в коллекции. В образце базовой службы ресурсов используются только два непосредственно поддерживаемых формата входящих запросов - XML и JSON.  
   
- Консольное приложение в этом образце формы использует пользовательский модуль форматирования в библиотеке HtmlFormProcessing, что дает пользователям возможность создавать клиентов, отправляя запрос из формы HTML с помощью браузера. Кроме того, добавляется операция, которая возвращает страницу HTML, содержащую форму для публикации в службе. Эта страница HTML формируется с использованием предварительно обработанного шаблона T4, который состоит из TT-файла и автоматически формируемого файла CS. TT-файл позволяет разработчику записывать ответ в виде шаблона, содержащего переменные и управляющие структуры. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]T4 см. в разделе [Создание артефактов с помощью текстовых шаблонов](http://go.microsoft.com/fwlink/?LinkId=178139).  
+ Консольное приложение в этом образце формы использует пользовательский модуль форматирования в библиотеке HtmlFormProcessing, что дает пользователям возможность создавать клиентов, отправляя запрос из формы HTML с помощью браузера. Кроме того, добавляется операция, которая возвращает страницу HTML, содержащую форму для публикации в службе. Эта страница HTML формируется с использованием предварительно обработанного шаблона T4, который состоит из TT-файла и автоматически формируемого файла CS. TT-файл позволяет разработчику записывать ответ в виде шаблона, содержащего переменные и управляющие структуры. Дополнительные сведения о T4 см. в разделе [Создание артефактов с помощью текстовых шаблонов](http://go.microsoft.com/fwlink/?LinkId=178139).  
   
 #### <a name="to-run-the-sample"></a>Выполнение образца  
   
@@ -63,6 +65,6 @@ ms.lasthandoff: 12/22/2017
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите на страницу [Примеры Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все примеры [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Этот образец расположен в следующем каталоге.  
+>  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) Чтобы загрузить все [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] образцов. Этот образец расположен в следующем каталоге.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Web\FormPost`

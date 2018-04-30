@@ -1,52 +1,54 @@
 ---
-title: "Аналитическая трассировка WCF"
-ms.custom: 
+title: Аналитическая трассировка WCF
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 6029c7c7-3515-4d36-9d43-13e8f4971790
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 37dea97db8816f68f0331580cfa21daed7f69914
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 57e3ee18848031bce8ffbb54d26353fe36ee1def
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="wcf-analytic-tracing"></a>Аналитическая трассировка WCF
 Этот пример демонстрирует способы добавления собственных событий трассировки к потоку аналитически отслеживаемых событий, которые [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] записывает в трассировке событий Windows в [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]. Аналитически отслеживаемые события предназначены для упрощения добавления видимости в службы без ущерба для производительности. Этот образец показывает, как с помощью интерфейсов <xref:System.Diagnostics.Eventing?displayProperty=nameWithType> API писать события, которые интегрируются со службами [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] об интерфейсах <xref:System.Diagnostics.Eventing?displayProperty=nameWithType> API см. в разделе <xref:System.Diagnostics.Eventing?displayProperty=nameWithType>.  
+ Дополнительные сведения о <xref:System.Diagnostics.Eventing?displayProperty=nameWithType> API см. в разделе <xref:System.Diagnostics.Eventing?displayProperty=nameWithType>.  
   
  Дополнительные сведения о трассировке событий в Windows см. в разделе [улучшения отладки и настройки производительности с помощью ETW](http://go.microsoft.com/fwlink/?LinkId=166488).  
   
 ## <a name="disposing-eventprovider"></a>Удаление EventProvider  
- В этом образце используется класс <xref:System.Diagnostics.Eventing.EventProvider?displayProperty=nameWithType>, который реализует <xref:System.IDisposable?displayProperty=nameWithType>. При реализации трассировки для службы [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], вероятнее всего, во время существования службы будут использоваться ресурсы <xref:System.Diagnostics.Eventing.EventProvider>. По этой причине, а также для удобочитаемости, этот образец никогда не удаляет упакованный <xref:System.Diagnostics.Eventing.EventProvider>. Если по какой-либо причине ваша служба имеет другие требования для трассировки и вы должны удалить этот ресурс, то вы должны изменить этот пример в соответствии с подходящими рекомендациями по удалению неуправляемых ресурсов. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]освобождение неуправляемых ресурсов, в разделе [метода](http://go.microsoft.com/fwlink/?LinkId=166436).  
+ В этом образце используется класс <xref:System.Diagnostics.Eventing.EventProvider?displayProperty=nameWithType>, который реализует <xref:System.IDisposable?displayProperty=nameWithType>. При реализации трассировки для службы [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], вероятнее всего, во время существования службы будут использоваться ресурсы <xref:System.Diagnostics.Eventing.EventProvider>. По этой причине, а также для удобочитаемости, этот образец никогда не удаляет упакованный <xref:System.Diagnostics.Eventing.EventProvider>. Если по какой-либо причине ваша служба имеет другие требования для трассировки и вы должны удалить этот ресурс, то вы должны изменить этот пример в соответствии с подходящими рекомендациями по удалению неуправляемых ресурсов. Дополнительные сведения об уничтожении неуправляемых ресурсов см. в разделе [метода](http://go.microsoft.com/fwlink/?LinkId=166436).  
   
 ## <a name="self-hosting-vs-web-hosting"></a>Резидентное размещение в сравнении с размещением на веб-узле  
- Для служб, размещенных на веб сервере аналитически отслеживаемые трассировки WCF предоставляют поле «hostreference», которое используется для идентификации службы, выдающей трассировки. В этой модели могут участвовать расширяемые пользовательские трассировки, а в данном образце демонстрируются рекомендации, как это сделать. Формат веб-узел ссылки, когда канал "&#124;" в результате имеется символ строка может быть одним из следующих:  
+ Для служб, размещенных на веб сервере аналитически отслеживаемые трассировки WCF предоставляют поле «hostreference», которое используется для идентификации службы, выдающей трассировки. В этой модели могут участвовать расширяемые пользовательские трассировки, а в данном образце демонстрируются рекомендации, как это сделать. Формат веб-узел ссылки, когда канал "&#124;" имеется символ в результате строка может быть одним из следующих:  
   
 -   Если приложение находится не в корне.  
   
-     \<Имя сайта >\<ApplicationVirtualPath > &#124;\< ServiceVirtualPath > &#124; \<ServiceName >  
+     \<Имя сайта >\<ApplicationVirtualPath >&#124;\<ServiceVirtualPath >&#124;\<ServiceName >  
   
 -   Если приложение находится в корне.  
   
-     \<Имя сайта > &#124; \<ServiceVirtualPath > &#124; \<ServiceName >  
+     \<Имя сайта >&#124;\<ServiceVirtualPath >&#124;\<ServiceName >  
   
  Для резидентных служб [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]в аналитической трассировки не заполняют поле «hostreference». В этом образце класс `WCFUserEventProvider` ведет себя согласованно при использовании резидентной службой.  
   
 ## <a name="custom-event-details"></a>Данные пользовательских событий  
  Манифест поставщика событий для трассировки событий Windows [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] определяет три события, которые предназначены для выдачи авторами служб [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] из кода службы. В следующей таблице приведена разбивка этих трех событий.  
   
-|событие|Описание:|Идентификатор события|  
+|событие|Описание|Идентификатор события|  
 |-----------|-----------------|--------------|  
 |UserDefinedInformationEventOccurred|Это событие выдается, когда в службе происходит что-то примечательное, что не является проблемой. Например, можно выдать событие после успешного вызова базы данных.|301|  
 |UserDefinedWarningOccurred|Это событие выдается, когда возникает проблема, которая в будущем может привести к сбою. Например, можно выдавать событие предупреждения, когда вызов базы данных завершается неудачей, но удалось выполнить восстановление, переключившись на резервное хранилище данных.|302|  
@@ -124,7 +126,7 @@ ms.lasthandoff: 12/22/2017
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите на страницу [Примеры Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все примеры [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Этот образец расположен в следующем каталоге.  
+>  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) Чтобы загрузить все [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] образцов. Этот образец расположен в следующем каталоге.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\ETWTrace`  
   

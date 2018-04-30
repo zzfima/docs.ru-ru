@@ -1,12 +1,13 @@
 ---
-title: "Определение и задание сбоев"
-ms.custom: 
+title: Определение и задание сбоев
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,19 +16,20 @@ helpviewer_keywords:
 - handling faults [WCF], specifying
 - handling faults [WCF], defining
 ms.assetid: c00c84f1-962d-46a7-b07f-ebc4f80fbfc1
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 713b9594ac628c2c256e8592d3894feee8029332
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 6c200ad587d437875f510adc4f05b30bdb7ab089
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="defining-and-specifying-faults"></a>Определение и задание сбоев
-Ошибки SOAP передают сведения об ошибке от службы клиенту и, в дуплексном случае, от клиента службе совместимым способом. В этом разделе описано, как и когда можно определить содержимое пользовательских ошибок и задать операции, которые могут возвратить это содержимое. [!INCLUDE[crabout](../../../includes/crabout-md.md)]Служба или дуплексный клиент может отправлять такие ошибки и как клиент или служба приложение обрабатывает эти ошибки, разделе [отправка и получение ошибки](../../../docs/framework/wcf/sending-and-receiving-faults.md). Общие сведения для обработки ошибок в [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] приложения, см. [указание и обработка сбоев в контрактах и службах](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md).  
+Ошибки SOAP передают сведения об ошибке от службы клиенту и, в дуплексном случае, от клиента службе совместимым способом. В этом разделе описано, как и когда можно определить содержимое пользовательских ошибок и задать операции, которые могут возвратить это содержимое. Дополнительные сведения о том, как служба или дуплексный клиент могут отправлять такие ошибки и как клиент или служба приложение обрабатывает эти ошибки см. в разделе [отправка и получение ошибки](../../../docs/framework/wcf/sending-and-receiving-faults.md). Общие сведения для обработки ошибок в [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] приложения, см. [указание и обработка сбоев в контрактах и службах](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md).  
   
 ## <a name="overview"></a>Обзор  
  Объявленные ошибки SOAP - это ошибки, в которых в операции имеется атрибут <xref:System.ServiceModel.FaultContractAttribute?displayProperty=nameWithType>, указывающий пользовательский тип ошибки SOAP. Необъявленные ошибки SOAP - это ошибки, не указанные в контракте операции. Изучение этого раздела поможет определять такие состояния ошибки и создать для своей службы контракт ошибок, который может использоваться клиентами для правильной обработки состояния ошибки при уведомлении о пользовательской ошибке SOAP. Необходимо решить следующие основные задачи (порядок имеет значение):  
@@ -77,7 +79,7 @@ End Class
  [!code-csharp[Faults#2](../../../samples/snippets/csharp/VS_Snippets_CFX/faults/cs/service.cs#2)]
  [!code-vb[Faults#2](../../../samples/snippets/visualbasic/VS_Snippets_CFX/faults/vb/service.vb#2)]  
   
- [!INCLUDE[crabout](../../../includes/crabout-md.md)]является сериализуемым, как обеспечить данных см. в разделе [указание входящий трафик передачи данных в контрактах служб](../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md). Список сериализации технической поддержки, <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType> предоставляет, см. [типы, поддерживаемые сериализатором контракта данных](../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md).  
+ Дополнительные сведения о том, как обеспечить данных может быть сериализован см. в разделе [указание входящий трафик передачи данных в контрактах служб](../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md). Список сериализации технической поддержки, <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType> предоставляет, см. [типы, поддерживаемые сериализатором контракта данных](../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md).  
   
 ### <a name="mark-operations-to-establish-the-fault-contract"></a>Разметка операций для установления контракта ошибок  
  После определения сериализуемой структуры данных, которая возвращается как часть пользовательской ошибки SOAP, нужно отметить контракт операции, как создающий ошибку SOAP этого типа. Для этого следует использовать атрибут <xref:System.ServiceModel.FaultContractAttribute?displayProperty=nameWithType> и передать тип созданного пользовательского типа данных. В следующем примере кода показано, как с помощью атрибута <xref:System.ServiceModel.FaultContractAttribute> указать, что операция `Divide` может возвращать ошибку SOAP типа `MathFault`. Другие математические операции теперь тоже могут указывать, что могут вернуть ошибку `MathFault`.  

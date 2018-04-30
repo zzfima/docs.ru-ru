@@ -14,14 +14,14 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 7085b9069235de7cd8754937f9f6facdf60cd5b3
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: f131d644d58359cec305b83c136e6fe7f68a1b93
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="externalized-policy-activity-in-net-framework-45"></a>Реализованное действие политики в .NET Framework 4.5
-В этом примере демонстрируется, как действия ExternalizedPolicy4 можно выполнять существующие [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] Windows Workflow Foundation (WF 3.5) <xref:System.Workflow.Activities.Rules.RuleSet> объекты в [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] Windows Workflow Foundation (WF 4.5) непосредственно с помощью модуля правил поставляется в WF 3.5. Используя это действие, можно создавать и выполнять любой существующий набор правил <xref:System.Workflow.Activities.Rules.RuleSet> WF 3.5. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Прочтите рассматривается как часть Windows Workflow Foundation, обработчик правил WF 3.5 [введение в обработчик правил Windows Workflow Foundation](http://go.microsoft.com/fwlink/?LinkId=166079). [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Перенос правил [!INCLUDE[wf1](../../../../includes/wf1-md.md)] в [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)], прочитайте руководство по миграции на [руководство по миграции](../../../../docs/framework/windows-workflow-foundation/migration-guidance.md).  
+В этом примере демонстрируется, как действия ExternalizedPolicy4 можно выполнять существующие [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] Windows Workflow Foundation (WF 3.5) <xref:System.Workflow.Activities.Rules.RuleSet> объекты в [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] Windows Workflow Foundation (WF 4.5) непосредственно с помощью модуля правил поставляется в WF 3.5. Используя это действие, можно создавать и выполнять любой существующий набор правил <xref:System.Workflow.Activities.Rules.RuleSet> WF 3.5. Дополнительные сведения об обработчике правил WF 3.5, входящей в состав Windows Workflow Foundation [введение в обработчик правил Windows Workflow Foundation](http://go.microsoft.com/fwlink/?LinkId=166079). Дополнительные сведения о миграции правил [!INCLUDE[wf1](../../../../includes/wf1-md.md)] в [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)], прочитайте руководство по миграции на [руководство по миграции](../../../../docs/framework/windows-workflow-foundation/migration-guidance.md).  
   
 ## <a name="projects-in-this-sample"></a>Проекты в этом образце  
   

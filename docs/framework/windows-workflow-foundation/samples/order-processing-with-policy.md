@@ -1,23 +1,24 @@
 ---
-title: "Обработка заказов с помощью политики"
-ms.custom: 
+title: Обработка заказов с помощью политики
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 66833724-dc36-4fad-86b0-59ffeaa3ba6a
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d86c7890af651ba9f0ee0ec2a1763f9c579bac89
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: f99db44a636a5255990f734d34266b3b2e4a678b
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="order-processing-with-policy"></a>Обработка заказов с помощью политики
 В данном образце политики обработки заказов продемонстрированы некоторые ключевые функции, представленные в [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] платформы Windows Workflow Foundation (WF). В обработчике правил WF реализованы следующие новые функции:  
@@ -34,7 +35,7 @@ ms.lasthandoff: 12/22/2017
  В данном образце демонстрируется проект `OrderProcessingPolicy`, в котором вводится заказ клиента, состоящий из нумерованного списка доступных элементов и почтового индекса. Обработка заказа выполняется успешно, если обе записи верны, в противном случае политика создает объекты ошибок, используя перегруженный оператор `+` и предварительно определенный метод расширения, чтобы информировать пользователей об ошибках.  
   
 > [!NOTE]
->  [!INCLUDE[crabout](../../../../includes/crabout-md.md)]методах расширения см. в разделе [спецификация C# версии 3.0](http://go.microsoft.com/fwlink/?LinkId=95402).  
+>  Дополнительные сведения о методах расширения см. в разделе [спецификация C# версии 3.0](http://go.microsoft.com/fwlink/?LinkId=95402).  
   
  Образец включает следующие проекты:  
   
@@ -150,6 +151,6 @@ Another Order? (Y/N): n
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите на страницу [Примеры Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все примеры [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Этот образец находится в следующем каталоге:  
+>  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) Чтобы загрузить все [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] образцов. Этот образец находится в следующем каталоге:  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Rules\Policy\OrderProcessingPolicy`

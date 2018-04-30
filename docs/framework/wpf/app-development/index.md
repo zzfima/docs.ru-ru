@@ -19,15 +19,14 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 00161608997abc14202775c06ecfb283d8d67013
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 22d0b54fa6e75e47fa62b6323c64ec86ddd07008
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="application-development"></a>Разработка приложений
-<a name="introduction"></a>
-[!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] — Это платформа представления, который может использоваться для разработки следующих типов приложений:  
+<a name="introduction"></a> Windows Presentation Foundation (WPF) — это платформа представления, который может использоваться для разработки следующих типов приложений:  
   
 -   автономные приложения (традиционные приложения [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)], созданные как исполняемые сборки, которые устанавливаются и запускаются с клиентского компьютера);  
   

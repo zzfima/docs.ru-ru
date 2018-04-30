@@ -19,11 +19,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: ccbc8c6fa638c674dea28c312b2dedbc9d41968a
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: f5a096fd6e052fc744af5cee1ab0d322e1daafe6
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-create-temporary-certificates-for-use-during-development"></a>Практическое руководство. Создание временных сертификатов для использования во время разработки
 При разработке безопасной службы или клиента с помощью [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]часто необходимо использовать сертификат X.509 в качестве учетных данных. Обычно этот сертификат является частью цепи сертификатов, корневой центр которых находится в хранилище «Доверенные корневые центры сертификации» на компьютере. Наличие цепи сертификатов позволяет ограничить набор сертификатов, корневой центр которых, как правило, принадлежит организации или подразделению. Для эмуляции этого во время разработки можно создать два сертификата, чтобы выполнить требования безопасности. Первый сертификат является самозаверяющим и помещается в хранилище «Доверенные корневые центры сертификации». Второй сертификат создается из первого и помещается как в хранилище «Личное» на локальном компьютере, так и в хранилище «Личное» текущего пользователя. В этом разделе описывается процедура создания этих двух сертификатов с помощью [инструмента для создания сертификатов (MakeCert.exe)](http://go.microsoft.com/fwlink/?LinkId=248185)в пакете SDK [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] .  
@@ -33,7 +33,7 @@ ms.lasthandoff: 04/28/2018
 >   
 >  По умолчанию [Makecert.exe (средство создания сертификатов)](http://msdn.microsoft.com/library/b0343f8e-9c41-4852-a85c-f8a0c408cf0d) создает сертификаты, корневой центр которых называется «корневое агентство **.»** Поскольку «Корневое агентство» не является хранилищем «Доверенные корневые центры сертификации», сертификаты не защищены. Создание самозаверяющего сертификата, помещенного в хранилище «Доверенные корневые центры сертификации», позволяет создать среду разработки, более точно моделирующую среду развертывания.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] создании и использовании сертификатов см. в разделе [Working with Certificates](../../../../docs/framework/wcf/feature-details/working-with-certificates.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)] использовании сертификата в качестве учетных данных см. в разделе [Securing Services and Clients](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md). Руководство по использованию технологии Microsoft Authenticode см. в разделе, посвященном [общим сведениям и учебникам по Authenticode](http://go.microsoft.com/fwlink/?LinkId=88919).  
+ Дополнительные сведения о создании и использовании сертификатов см. в разделе [работа с сертификатами](../../../../docs/framework/wcf/feature-details/working-with-certificates.md). Дополнительные сведения об использовании сертификата в качестве учетных данных см. в разделе [Защита служб и клиентов](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md). Руководство по использованию технологии Microsoft Authenticode см. в разделе, посвященном [общим сведениям и учебникам по Authenticode](http://go.microsoft.com/fwlink/?LinkId=88919).  
   
 ### <a name="to-create-a-self-signed-root-authority-certificate-and-export-the-private-key"></a>Создание самозаверяющего сертификата корневого центра и экспорт закрытого ключа  
   

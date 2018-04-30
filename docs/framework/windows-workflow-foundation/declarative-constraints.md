@@ -14,11 +14,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: f5ab784498805473830b46962d9e02591fc3eace
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 4406bbbe7780fabc8872718ca21e8d755ea85c59
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="declarative-constraints"></a>Декларативные ограничения
 Декларативные ограничения - это мощный метод проверки допустимости действия и его связей с другими действиями. Ограничения для действий настраиваются во время процесса создания, однако дополнительные ограничения также могут задаваться ведущим приложением рабочего процесса. В этом разделе приводятся общие сведения об использовании декларативных ограничений для обеспечения проверки допустимости действий.  
@@ -188,4 +188,4 @@ else
 }  
 ```  
   
- Если свойство <xref:System.Activities.Validation.ValidationSettings.OnlyUseAdditionalConstraints%2A> у <xref:System.Activities.Validation.ValidationSettings> имеет значение `true`, то при вызове проверки допустимости путем вызова <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A> выполняется проверка только дополнительных ограничений. Это может быть полезно при проверке рабочих процессов по отдельным конфигурациям проверки. Необходимо отметить, что при вызове рабочего процесса выполняется проверка логики проверки, настроенной в рабочем процессе; для запуска рабочего процесса проверка должна быть пройдена успешно. [!INCLUDE[crabout](../../../includes/crabout-md.md)] вызов проверки, в разделе [вызова проверки действия](../../../docs/framework/windows-workflow-foundation/invoking-activity-validation.md).
+ Если свойство <xref:System.Activities.Validation.ValidationSettings.OnlyUseAdditionalConstraints%2A> у <xref:System.Activities.Validation.ValidationSettings> имеет значение `true`, то при вызове проверки допустимости путем вызова <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A> выполняется проверка только дополнительных ограничений. Это может быть полезно при проверке рабочих процессов по отдельным конфигурациям проверки. Необходимо отметить, что при вызове рабочего процесса выполняется проверка логики проверки, настроенной в рабочем процессе; для запуска рабочего процесса проверка должна быть пройдена успешно. Дополнительные сведения о вызове метода проверки см. в разделе [вызова проверки действия](../../../docs/framework/windows-workflow-foundation/invoking-activity-validation.md).

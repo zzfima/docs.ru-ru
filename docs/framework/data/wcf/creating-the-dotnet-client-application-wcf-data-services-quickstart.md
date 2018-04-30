@@ -1,27 +1,29 @@
 ---
-title: "Создание клиентского приложения .NET Framework (краткое руководство по службам данных WCF)"
-ms.custom: 
+title: Создание клиентского приложения .NET Framework (краткое руководство по службам данных WCF)
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework-oob
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 41ade767-eeab-437d-9121-9797e8fb8045
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 563d08a5907c8248a74ba992de17ac3dd0679827
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 0bdbb88cc3070c68c540a09ab0d6ce41f790d1c3
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="creating-the-net-framework-client-application-wcf-data-services-quickstart"></a>Создание клиентского приложения .NET Framework (краткое руководство по службам данных WCF)
 Это последняя задача [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] краткое руководство. В этой задаче будет добавить в решение консольное приложение, добавьте ссылку на [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] веб-канала в новое клиентское приложение, а доступ [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] веб-канала из клиентского приложения с помощью сформированных клиентских классов службы данных и клиента библиотеки.  
@@ -89,7 +91,7 @@ ms.lasthandoff: 12/22/2017
     >  Эта версия приложения NorthwindClient не поддерживает добавление и удаление сущностей.  
   
 ## <a name="next-steps"></a>Следующие шаги  
- Итак, мы успешно создали клиентское приложение, обращающееся к образцу канала Northwind [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]. Также мы ознакомились с кратким руководством по службам [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]доступ к [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] канала из [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] приложения, в разделе [клиентскую библиотеку служб данных WCF](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md).  
+ Итак, мы успешно создали клиентское приложение, обращающееся к образцу канала Northwind [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]. Также мы ознакомились с кратким руководством по службам [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]. Дополнительные сведения о доступе к [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] канала из [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] приложения, в разделе [клиентскую библиотеку служб данных WCF](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md).  
   
 ## <a name="see-also"></a>См. также  
  [Начало работы](../../../../docs/framework/data/wcf/getting-started-with-wcf-data-services.md)  

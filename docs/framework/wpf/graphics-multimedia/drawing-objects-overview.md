@@ -1,12 +1,13 @@
 ---
-title: "Обзор объектов Drawing"
-ms.custom: 
+title: Обзор объектов Drawing
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - ImageDrawing objects [WPF]
@@ -16,16 +17,17 @@ helpviewer_keywords:
 - Drawing objects [WPF]
 - DrawingGroup objects [WPF]
 ms.assetid: 9b5ce5c0-e204-4320-a7a8-0b2210d62f88
-caps.latest.revision: "25"
+caps.latest.revision: 25
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c9b77b47a3f3ade27f2ba86304b1868a8d388482
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 3672e4b1deacd8fb50a5318270854daae9c74761
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="drawing-objects-overview"></a>Обзор объектов Drawing
 В этом разделе описываются <xref:System.Windows.Media.Drawing> объектов и описывается, как их использовать для эффективного рисования фигур, точечных рисунков, текста и мультимедиа. Используйте <xref:System.Windows.Media.Drawing> объектов при создании коллекции картинок, рисование с <xref:System.Windows.Media.DrawingBrush>, или используйте <xref:System.Windows.Media.Visual> объектов.  
@@ -36,17 +38,17 @@ ms.lasthandoff: 01/19/2018
 ## <a name="what-is-a-drawing-object"></a>Что такое объект-рисунок?  
  Объект <xref:System.Windows.Media.Drawing> описывает отображаемое содержимое, например фигуры, растрового изображения, видео или строка текста. Различные типы рисунков описывают различные типы содержимого. Ниже приведен список различных типов объектов-рисунков.  
   
--   <xref:System.Windows.Media.GeometryDrawing>— Выводит фигуру.  
+-   <xref:System.Windows.Media.GeometryDrawing> — Выводит фигуру.  
   
--   <xref:System.Windows.Media.ImageDrawing>— Выводит изображение.  
+-   <xref:System.Windows.Media.ImageDrawing> — Выводит изображение.  
   
--   <xref:System.Windows.Media.GlyphRunDrawing>— Выводит текст.  
+-   <xref:System.Windows.Media.GlyphRunDrawing> — Выводит текст.  
   
--   <xref:System.Windows.Media.VideoDrawing>— Воспроизводит файл аудио и видео.  
+-   <xref:System.Windows.Media.VideoDrawing> — Воспроизводит файл аудио и видео.  
   
--   <xref:System.Windows.Media.DrawingGroup>— Выводит другие рисунки. Для объединения рисунков в один составной используйте группирование рисунков.  
+-   <xref:System.Windows.Media.DrawingGroup> — Выводит другие рисунки. Для объединения рисунков в один составной используйте группирование рисунков.  
   
- <xref:System.Windows.Media.Drawing>объекты являются универсальными. Существует множество способов, которые можно использовать <xref:System.Windows.Media.Drawing> объекта.  
+ <xref:System.Windows.Media.Drawing> объекты являются универсальными. Существует множество способов, которые можно использовать <xref:System.Windows.Media.Drawing> объекта.  
   
 -   Отображаются как изображение с помощью <xref:System.Windows.Media.DrawingImage> и <xref:System.Windows.Controls.Image> элемента управления.  
   
@@ -86,7 +88,7 @@ ms.lasthandoff: 01/19/2018
   
  В следующем примере изображение рисуется в прямоугольнике, расположенном в точке (75,75) и имеющем размер 100 на 100 пикселей. На следующем рисунке показана <xref:System.Windows.Media.ImageDrawing> созданный в примере. Серая рамка был добавлен для отображения границы <xref:System.Windows.Media.ImageDrawing>.  
   
- ![100 на 100, нарисованная в ImageDrawing &#40; 75,75 &#41; ] (../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-simple-imagedrawing-offset.png "graphicsmm_simple_imagedrawing_offset")  
+ ![100 на 100, нарисованная в ImageDrawing &#40;75,75&#41;](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-simple-imagedrawing-offset.png "graphicsmm_simple_imagedrawing_offset")  
 ImageDrawing размером 100 на 100  
   
  [!code-csharp[DrawingMiscSnippets_snip#ImageDrawing100by100Inline](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/ImageDrawingExample.cs#imagedrawing100by100inline)]
@@ -180,7 +182,7 @@ ImageDrawing размером 100 на 100
  [!code-csharp[DrawingMiscSnippets_snip#GraphicsMMSimpleDrawingGroupExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/DrawingGroupExample.cs#graphicsmmsimpledrawinggroupexample)]
  [!code-xaml[DrawingMiscSnippets_snip#GraphicsMMSimpleDrawingGroupExample](../../../../samples/snippets/xaml/VS_Snippets_Wpf/DrawingMiscSnippets_snip/XAML/DrawingGroupExample.xaml#graphicsmmsimpledrawinggroupexample)]  
   
- Объект <xref:System.Windows.Media.DrawingGroup> также позволяет применять маски непрозрачности, преобразования, эффекты растрового изображения и другие операции к его содержимому. <xref:System.Windows.Media.DrawingGroup>операции, применяются в следующем порядке: <xref:System.Windows.Media.DrawingGroup.OpacityMask%2A>, <xref:System.Windows.Media.DrawingGroup.Opacity%2A>, <xref:System.Windows.Media.DrawingGroup.BitmapEffect%2A>, <xref:System.Windows.Media.DrawingGroup.ClipGeometry%2A>, <xref:System.Windows.Media.DrawingGroup.GuidelineSet%2A>, а затем <xref:System.Windows.Media.DrawingGroup.Transform%2A>.  
+ Объект <xref:System.Windows.Media.DrawingGroup> также позволяет применять маски непрозрачности, преобразования, эффекты растрового изображения и другие операции к его содержимому. <xref:System.Windows.Media.DrawingGroup> операции, применяются в следующем порядке: <xref:System.Windows.Media.DrawingGroup.OpacityMask%2A>, <xref:System.Windows.Media.DrawingGroup.Opacity%2A>, <xref:System.Windows.Media.DrawingGroup.BitmapEffect%2A>, <xref:System.Windows.Media.DrawingGroup.ClipGeometry%2A>, <xref:System.Windows.Media.DrawingGroup.GuidelineSet%2A>, а затем <xref:System.Windows.Media.DrawingGroup.Transform%2A>.  
   
  Ниже показан порядок, в котором <xref:System.Windows.Media.DrawingGroup> применяются операции.  
   
@@ -189,7 +191,7 @@ ImageDrawing размером 100 на 100
   
  В следующей таблице описаны свойства, можно использовать для управления <xref:System.Windows.Media.DrawingGroup> содержимое объекта.  
   
-|Свойство.|Описание:|Рисунки|  
+|Свойство.|Описание|Рисунки|  
 |--------------|-----------------|------------------|  
 |<xref:System.Windows.Media.DrawingGroup.OpacityMask%2A>|Изменяет непрозрачность отдельные фрагменты <xref:System.Windows.Media.DrawingGroup> содержимое. Пример см. в разделе [Практическое руководство. Управление прозрачностью рисунка](http://msdn.microsoft.com/library/68580652-7d32-4d27-93cc-a5148cf4d5ee).|![DrawingGroup с маской непрозрачности ](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-opmask.png "graphicsmm_opmask")|  
 |<xref:System.Windows.Media.DrawingGroup.Opacity%2A>|Однородно изменяет непрозрачность <xref:System.Windows.Media.DrawingGroup> содержимое. Это свойство используется, чтобы сделать <xref:System.Windows.Media.Drawing> прозрачным или полупрозрачным. Пример см. в разделе [Практическое руководство. Применение маски непрозрачности к рисунку](http://msdn.microsoft.com/library/d77b420b-9be2-479c-a45e-82f4da30eb9f).|![DrawingGroups с различными параметрами прозрачности ](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-opacity.png "graphicsmm_opacity")|  
@@ -232,7 +234,7 @@ GeometryDrawing с DrawingBrush
 ## <a name="drawingcontext-objects"></a>Объекты DrawingContext  
  <xref:System.Windows.Media.DrawingContext> Позволяет заполнять <xref:System.Windows.Media.Visual> или <xref:System.Windows.Media.Drawing> визуальное содержимое. Использовать многие такие объекты более низкого уровня графики <xref:System.Windows.Media.DrawingContext> , так как он очень эффективно описывает графическое содержимое.  
   
- Несмотря на то что <xref:System.Windows.Media.DrawingContext> методы рисования выглядеть методы рисования <xref:System.Drawing.Graphics?displayProperty=nameWithType> типа, они фактически сильно отличаются. <xref:System.Windows.Media.DrawingContext>— используется с сохраненного режима графической системы, а <xref:System.Drawing.Graphics?displayProperty=nameWithType> тип используется в режиме интерпретации система графики. При использовании <xref:System.Windows.Media.DrawingContext> команд рисования объекта, фактически хранится набор инструкций отрисовки (хотя точный механизм хранения зависит от типа объекта, предоставляющего <xref:System.Windows.Media.DrawingContext>), будет использоваться позже по графику системы; Рисование не выполняется на экране в режиме реального времени. Дополнительную информацию о том, как работает графическая система [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)], см. в разделе [Общие сведения об отрисовке графики WPF](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md).  
+ Несмотря на то что <xref:System.Windows.Media.DrawingContext> методы рисования выглядеть методы рисования <xref:System.Drawing.Graphics?displayProperty=nameWithType> типа, они фактически сильно отличаются. <xref:System.Windows.Media.DrawingContext> — используется с сохраненного режима графической системы, а <xref:System.Drawing.Graphics?displayProperty=nameWithType> тип используется в режиме интерпретации система графики. При использовании <xref:System.Windows.Media.DrawingContext> команд рисования объекта, фактически хранится набор инструкций отрисовки (хотя точный механизм хранения зависит от типа объекта, предоставляющего <xref:System.Windows.Media.DrawingContext>), будет использоваться позже по графику системы; Рисование не выполняется на экране в режиме реального времени. Дополнительные сведения о работе системы графики Windows Presentation Foundation (WPF) см. в разделе [Обзор отрисовки графики WPF](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md).  
   
  Вы нельзя непосредственно создать экземпляр <xref:System.Windows.Media.DrawingContext>; тем не менее, можно получить контекст рисования из определенных методов, таких как <xref:System.Windows.Media.DrawingGroup.Open%2A?displayProperty=nameWithType> и <xref:System.Windows.Media.DrawingVisual.RenderOpen%2A?displayProperty=nameWithType>.  
   

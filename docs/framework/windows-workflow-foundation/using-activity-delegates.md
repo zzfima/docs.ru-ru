@@ -14,11 +14,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: efec9885ae804263f7ae4c6d1d5c3bc4f39831c9
-ms.sourcegitcommit: 68b60d38043e50104ccc90c76f8599b1ffe18346
+ms.openlocfilehash: a8b30882ef2e75f21c3b90d0e13ff06b52fe5229
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="using-activity-delegates"></a>Использование делегатов действий
 Делегаты действий позволяют создателям действий предоставлять обратные вызовы с определенными сигнатурами, для которых пользователи действия могут предоставить обработчики, основанные на действиях. Доступны два типа делегатов действия: <xref:System.Activities.ActivityAction%601> используется для определения делегатов действий, которые не возвращают значение, а <xref:System.Activities.ActivityFunc%601> используется для определения делегатов действий, которые возвращают значение.  
@@ -38,7 +38,7 @@ ms.lasthandoff: 04/20/2018
   
  [!code-csharp[CFX_ActivityExample#7](../../../samples/snippets/csharp/VS_Snippets_CFX/CFX_ActivityExample/cs/Program.cs#7)]  
   
- [!INCLUDE[crabout](../../../includes/crabout-md.md)] инициализаторах объектов см. в разделе [как: инициализация объектов без вызова конструктора (руководство по программированию на C#)](http://go.microsoft.com/fwlink/?LinkId=161015) и [как: объявление объекта с помощью инициализатора объектов](http://go.microsoft.com/fwlink/?LinkId=161016).  
+ Дополнительные сведения об инициализаторах объектов см. в разделе [как: инициализация объектов без вызова конструктора (руководство по программированию на C#)](http://go.microsoft.com/fwlink/?LinkId=161015) и [как: объявление объекта с помощью инициализатора объектов](http://go.microsoft.com/fwlink/?LinkId=161016).  
   
  В следующем примере действие <xref:System.Activities.Statements.TryCatch> используется в рабочем процессе. <xref:System.ApplicationException> вызывается рабочим процессом и обрабатывается действием <xref:System.Activities.Statements.Catch%601>. Обработчик <xref:System.Activities.Statements.Catch%601> действия операции действия является <xref:System.Activities.Statements.WriteLine> действия и сведения об исключениях передаются в него с помощью `ex` <xref:System.Activities.DelegateInArgument%601>.  
   

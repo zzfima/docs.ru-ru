@@ -14,11 +14,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: c81d05120f8cf0decc7c6036e2a722ba6271dab8
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: 66b11dda1b245fa88548cf70268a6ca10ee27708
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="variables-and-arguments"></a>Переменные и аргументы
 В Windows Workflow Foundation (WF), переменные представляют хранилище данных, а аргументы представляют поток данных в действие и из действия. Действие имеет набор аргументов, которые составляют сигнатуру действия. Действие может также поддерживать список переменных, к которым разработчик может добавлять или удалять переменные при разработке рабочего процесса. Привязка аргумента выполнена с помощью выражения, возвращающего значение.  
@@ -152,4 +152,4 @@ public sealed class Add : CodeActivity<int>
 }  
 ```  
   
- [!INCLUDE[crabout](../../../includes/crabout-md.md)] Работа с аргументов, переменных и выражений в коде, в разделе [разработки рабочих процессов, действий и выражений с помощью императивного кода](../../../docs/framework/windows-workflow-foundation/authoring-workflows-activities-and-expressions-using-imperative-code.md) и [необходимые аргументы и групп перегруженных вариантов](../../../docs/framework/windows-workflow-foundation/required-arguments-and-overload-groups.md).
+ Дополнительные сведения о работе с аргументов, переменных и выражений в коде см. в разделе [разработки рабочих процессов, действий и выражений с помощью императивного кода](../../../docs/framework/windows-workflow-foundation/authoring-workflows-activities-and-expressions-using-imperative-code.md) и [необходимые аргументы и групп перегруженных вариантов](../../../docs/framework/windows-workflow-foundation/required-arguments-and-overload-groups.md).

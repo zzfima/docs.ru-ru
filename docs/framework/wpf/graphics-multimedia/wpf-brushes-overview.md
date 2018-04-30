@@ -1,13 +1,13 @@
 ---
-title: "Общие сведения о кистях WPF"
-ms.custom: 
+title: Общие сведения о кистях WPF
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-wpf
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - brushes [WPF], about brushes
 ms.assetid: ecea1955-420b-45c6-bf43-c1404c072c41
-caps.latest.revision: 
+caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: ec7e566e6f56c215bbaeafdfb5c5e97cc0add0bf
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1ef53da1febd6a49af8404e5889a728a1b7c649b
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="wpf-brushes-overview"></a>Общие сведения о кистях WPF
 Все элементы, видимые на экране отображается, так как они нарисованы кистью. Например кисть используется для описания фона кнопки, основного цвета текста и заполнения фигуры. В этом разделе представлены понятия, рисования с помощью [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] кисти и приводятся примеры. Кисти позволяют заполнять объекты [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] различными изображениями, начиная с просто сплошного цвета и заканчивая сложными наборами шаблонов и изображений.  
@@ -142,7 +142,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="paintwithpredefinedbrushesandsystemcolors"></a>   
 ## <a name="paint-using-predefined-and-system-brushes"></a>С помощью готовых и системные кисти рисования  
- Для удобства [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] предоставляет набор предопределенных, и система кистей, можно использовать для рисования объектов.  
+ Для удобства Windows Presentation Foundation (WPF) предоставляет набор предопределенных, и система кистей, можно использовать для рисования объектов.  
   
 -   Список доступных готовых кистей см. в разделе <xref:System.Windows.Media.Brushes> класса. Пример, демонстрирующий использование готовой кисти см. в разделе [закрасить область сплошным цветом](../../../../docs/framework/wpf/graphics-multimedia/how-to-paint-an-area-with-a-solid-color.md).  
   
@@ -150,7 +150,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="commonbrushfeatures"></a>   
 ## <a name="common-brush-features"></a>Общие средства кисти  
- <xref:System.Windows.Media.Brush>объекты предоставляют <xref:System.Windows.Media.Brush.Opacity%2A> свойство, которое может использоваться для сделать кисти прозрачным или полупрозрачным. <xref:System.Windows.Media.Brush.Opacity%2A> Значение 0, делает кисть полностью прозрачной, а <xref:System.Windows.Media.Brush.Opacity%2A> значение 1, делает кисть полностью непрозрачна. В следующем примере используется <xref:System.Windows.Media.Brush.Opacity%2A> свойства <xref:System.Windows.Media.SolidColorBrush> непрозрачности 25 процентов.  
+ <xref:System.Windows.Media.Brush> объекты предоставляют <xref:System.Windows.Media.Brush.Opacity%2A> свойство, которое может использоваться для сделать кисти прозрачным или полупрозрачным. <xref:System.Windows.Media.Brush.Opacity%2A> Значение 0, делает кисть полностью прозрачной, а <xref:System.Windows.Media.Brush.Opacity%2A> значение 1, делает кисть полностью непрозрачна. В следующем примере используется <xref:System.Windows.Media.Brush.Opacity%2A> свойства <xref:System.Windows.Media.SolidColorBrush> непрозрачности 25 процентов.  
   
  [!code-xaml[BrushOverviewExamples_snip#OpacityExample1XAML](../../../../samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/OpacityExample.xaml#opacityexample1xaml)]  
   

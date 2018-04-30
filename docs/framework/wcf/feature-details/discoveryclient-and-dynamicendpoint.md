@@ -16,11 +16,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: c652e58b20a6fe836e647ed07c6a84328ee4631e
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 3e7c8c5700159b5568a5a455b21f738d1be43dfe
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="discoveryclient-and-dynamicendpoint"></a>DiscoveryClient и DynamicEndpoint
 <xref:System.ServiceModel.Discovery.DiscoveryClient> и <xref:System.ServiceModel.Discovery.DynamicEndpoint> представляют собой два класса, используемые на стороне клиента для поиска служб. <xref:System.ServiceModel.Discovery.DiscoveryClient> предоставляет список служб, соответствующих конкретному набору требований, и позволяет подключиться к службам. <xref:System.ServiceModel.Discovery.DynamicEndpoint> выполняет те же функции и, кроме того, автоматически подключается к одной из найденных служб. Все конечные точки могут быть преобразованы в <xref:System.ServiceModel.Discovery.DynamicEndpoint>, условие поиска также может быть добавлено в конфигурацию, поэтому <xref:System.ServiceModel.Discovery.DynamicEndpoint> полезен в случаях, когда в решении необходима функция обнаружения, но изменения логики клиента нежелательны (нужно лишь изменить конечные точки). С другой стороны, <xref:System.ServiceModel.Discovery.DiscoveryClient> можно использовать для более точного контроля над операцией поиска. Использование и преимущества каждого класса уточняются далее.  
@@ -92,7 +92,7 @@ static void discoveryClient_FindCompleted(object sender, FindCompletedEventArgs 
         }  
 ```  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Выполнение асинхронных поиска вызовов см. в разделе [асинхронного поиска](../../../../docs/framework/wcf/samples/asynchronous-find-sample.md).  
+ Дополнительные сведения об асинхронных поиска вызовов см. в разделе [асинхронного поиска](../../../../docs/framework/wcf/samples/asynchronous-find-sample.md).  
   
  Для поиска службы по ее адресу конечной точки используйте методы <xref:System.ServiceModel.Discovery.DiscoveryClient.Resolve%2A> и <xref:System.ServiceModel.Discovery.DiscoveryClient.ResolveAsync%28System.ServiceModel.Discovery.ResolveCriteria%29>. Это может оказаться полезным в тех случаях, когда конечная точка не может быть адресована через сеть. Метод Resolve принимает экземпляр <xref:System.ServiceModel.Discovery.ResolveCriteria>, что позволяет задать разрешаемый адрес конечной точки, максимальную продолжительность операции разрешения, набор расширений. В следующем примере показано, каким образом производится разрешение службы с помощью метода <xref:System.ServiceModel.Discovery.DiscoveryClient.Resolve%2A>.  
   

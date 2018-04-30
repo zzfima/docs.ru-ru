@@ -1,27 +1,29 @@
 ---
-title: "Размещение в приложении службы Windows"
-ms.custom: 
+title: Размещение в приложении службы Windows
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: f4199998-27f3-4dd9-aee4-0a4addfa9f24
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d1a39162097c21f20c0dd04f3911442602871436
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: c1f0d2336c2682bd525a66c6e5b12ce2d17ad219
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="hosting-in-a-windows-service-application"></a>Размещение в приложении службы Windows
-Службы Windows (ранее называвшиеся службами Windows NT) обеспечивают модель процессов, особенно подходящую для приложений, которые должны существовать в длительно исполняемом файле и не отображают никакой формы пользовательского интерфейса. Временем существования процессов приложений служб Windows управляет диспетчер служб, который позволяет запускать, останавливать и приостанавливать приложения служб Windows. Можно настроить автоматический запуск при запуске компьютера, сделав его подходящей средой размещения для приложения «always on» процесс службы Windows. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Приложения служб Windows, в разделе [приложения служб Windows](http://go.microsoft.com/fwlink/?LinkId=89450).  
+Службы Windows (ранее называвшиеся службами Windows NT) обеспечивают модель процессов, особенно подходящую для приложений, которые должны существовать в длительно исполняемом файле и не отображают никакой формы пользовательского интерфейса. Временем существования процессов приложений служб Windows управляет диспетчер служб, который позволяет запускать, останавливать и приостанавливать приложения служб Windows. Можно настроить автоматический запуск при запуске компьютера, сделав его подходящей средой размещения для приложения «always on» процесс службы Windows. Дополнительные сведения о служебных приложений Windows см. в разделе [приложения служб Windows](http://go.microsoft.com/fwlink/?LinkId=89450).  
   
  Приложения, содержащие длительно исполняемые службы [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], используют многие характеристики совместно со службами Windows. В частности, службы [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] - это длительно исполняемые серверные файлы, которые непосредственно не взаимодействуют с пользователем и, следовательно, не реализуют никакой формы пользовательского интерфейса. По существу размещение служб [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] в приложениях служб Windows является одной из возможностей создания надежных, длительно работающих приложений [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
   

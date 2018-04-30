@@ -16,11 +16,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 1a0a11d613ffb8f71437edd73a8be64fb5f55a4c
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 4d3c7234c25b0a968ca67b58a560e8c8b55bb73d
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="stand-alone-json-serialization"></a>Автономная сериализация JSON
 JSON (JavaScript Object Notation, объектная нотация JavaScript) - формат данных, предназначенный специально для использования JavaScript-кодом, выполняемым на веб-страницах внутри браузера. Этот формат данных используется по умолчанию в службах ASP.NET AJAX, созданных в [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
@@ -53,7 +53,7 @@ JSON (JavaScript Object Notation, объектная нотация JavaScript) 
 |Значение `Null` для любого типа|Null|Типы, допускающие значение null, также поддерживаются и сопоставляются с JSON так же, как и типы, не допускающие значение null.|  
   
 ### <a name="enumerations-and-json"></a>Перечисления и JSON  
- Значения элементов перечислений в JSON рассматриваются как числа в отличие от контрактов данных, куда они включаются как имена элементов. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Работа, контракта данных. в разделе [типы перечислений в контрактах данных](../../../../docs/framework/wcf/feature-details/enumeration-types-in-data-contracts.md).  
+ Значения элементов перечислений в JSON рассматриваются как числа в отличие от контрактов данных, куда они включаются как имена элементов. Дополнительные сведения о обработки контракта данных см. в разделе [типы перечислений в контрактах данных](../../../../docs/framework/wcf/feature-details/enumeration-types-in-data-contracts.md).  
   
 -   Например, в случае перечисления `public enum Color {red, green, blue, yellow, pink}` при сериализации члена `yellow` получается число 3, а не строка "yellow".  
   

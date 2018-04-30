@@ -1,28 +1,30 @@
 ---
-title: "Односторонние службы"
-ms.custom: 
+title: Односторонние службы
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Windows Communication Foundation [WCF], one-way service contracts
 - WCF [WCF], one-way service contracts
 - service contracts [WCF], defining one-way
 ms.assetid: 19053a36-4492-45a3-bfe6-0365ee0205a3
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0d023d3623777a93cf72715410aed87fe8a63ee5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 380f6a10994c7eb69f4a59b222aa2d422151f247
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="one-way-services"></a>Односторонние службы
 По умолчанию операция службы выполняется по шаблону "запрос-ответ". В соответствии с шаблоном "запрос-ответ" клиент ждет ответного сообщения, даже если операция службы представлена в коде в виде метода `void`. В случае односторонних операций передается только одно сообщение. Получатель не отправляет ответное сообщение, а отправитель не ожидает получения этого сообщения.  
@@ -31,7 +33,7 @@ ms.lasthandoff: 12/22/2017
   
 -   Если клиент должен вызывать операции и не зависит от результата выполнения этих операций на уровне операций.  
   
--   При использовании класса <xref:System.ServiceModel.NetMsmqBinding> или <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>. ([!INCLUDE[crabout](../../../../includes/crabout-md.md)] этот сценарий в разделе [очереди в WCF](../../../../docs/framework/wcf/feature-details/queues-in-wcf.md).)  
+-   При использовании класса <xref:System.ServiceModel.NetMsmqBinding> или <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>. (Дополнительные сведения об этом сценарии см. в разделе [очереди в WCF](../../../../docs/framework/wcf/feature-details/queues-in-wcf.md).)  
   
  Если операция является односторонней, ответное сообщение, в котором могут передаваться сведения об ошибке, клиенту не отправляется. Условия возникновения ошибок можно определять с помощью функций соответствующей привязки, например надежных сеансов, или посредством разработки дуплексного контракта службы, который использует две односторонних операции - односторонний контракт от клиента к службе для вызова операции службы и еще один односторонний контракт между службой и клиентом, чтобы служба могла вернуть клиенту ошибки, используя реализуемый в клиенте обратный вызов.  
   

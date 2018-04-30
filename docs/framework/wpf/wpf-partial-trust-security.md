@@ -29,14 +29,14 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 740146bffe869dc30bbf8e8472c30be317ce6f7c
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 023de9e20206411f7dd6774553ae39eefaa508a0
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="wpf-partial-trust-security"></a>Безопасность частичного доверия в WPF
-<a name="introduction"></a> Как правило, интернет-приложениям следует ограничить прямой доступ к критическим системным ресурсам, чтобы избежать злонамеренного повреждения. По умолчанию [!INCLUDE[TLA#tla_html](../../../includes/tlasharptla-html-md.md)] и клиентские языки сценариев не смогут получить доступ к критическим системным ресурсам. Поскольку [!INCLUDE[TLA#tla_wpf](../../../includes/tlasharptla-wpf-md.md)] приложения, размещенные в браузере можно запускать из браузера, они должны соответствовать аналогичному набору ограничений. Для применения этих ограничений [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] использует и [!INCLUDE[TLA#tla_cas](../../../includes/tlasharptla-cas-md.md)] и [!INCLUDE[TLA#tla_clickonce](../../../includes/tlasharptla-clickonce-md.md)] (см. [стратегия безопасности WPF — безопасность платформы](../../../docs/framework/wpf/wpf-security-strategy-platform-security.md)). По умолчанию приложения, размещенные в браузере, запрашивают зоны Интернета [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] набор разрешений, независимо от того, запускаются ли они из Интернета, локальной интрасети или локального компьютера. Приложения, выполняющиеся с набором разрешений меньшим, чем полный набор, называют выполняющимися с частичным доверием.  
+<a name="introduction"></a> Как правило, интернет-приложениям следует ограничить прямой доступ к критическим системным ресурсам, чтобы избежать злонамеренного повреждения. По умолчанию [!INCLUDE[TLA#tla_html](../../../includes/tlasharptla-html-md.md)] и клиентские языки сценариев не смогут получить доступ к критическим системным ресурсам. Поскольку приложения, размещенные в браузере Windows Presentation Foundation (WPF) может быть запущено из браузера, они должны соответствовать аналогичному набору ограничений. Для применения этих ограничений [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] использует и [!INCLUDE[TLA#tla_cas](../../../includes/tlasharptla-cas-md.md)] и [!INCLUDE[TLA#tla_clickonce](../../../includes/tlasharptla-clickonce-md.md)] (см. [стратегия безопасности WPF — безопасность платформы](../../../docs/framework/wpf/wpf-security-strategy-platform-security.md)). По умолчанию приложения, размещенные в браузере, запрашивают зоны Интернета [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] набор разрешений, независимо от того, запускаются ли они из Интернета, локальной интрасети или локального компьютера. Приложения, выполняющиеся с набором разрешений меньшим, чем полный набор, называют выполняющимися с частичным доверием.  
   
  [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] предоставляет широкий набор возможностей, чтобы убедиться, что максимально столько функциональность может использоваться безопасно при частично доверительных отношениях, а вместе с [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)], обеспечивает дополнительную поддержку для программирования в режиме частичного доверия.  
   
@@ -50,7 +50,7 @@ ms.lasthandoff: 04/26/2018
   
 <a name="WPF_Feature_Partial_Trust_Support"></a>   
 ## <a name="wpf-feature-partial-trust-support"></a>Поддержка частичного доверия функциями WPF  
- В следующей таблице перечислены функции высокого уровня [!INCLUDE[TLA#tla_wpf](../../../includes/tlasharptla-wpf-md.md)] , являются безопасными для использования в пределах набора разрешений зоны Интернета.  
+ В следующей таблице перечислены функции высокого уровня Windows Presentation Foundation (WPF), которые являются безопасными для использования в пределах набора разрешений зоны Интернета.  
   
  Таблица 1. Функции WPF, которые являются безопасными в режиме частичного доверия  
   

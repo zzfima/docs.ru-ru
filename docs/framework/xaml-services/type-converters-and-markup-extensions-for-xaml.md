@@ -22,11 +22,11 @@ ms.author: wpickett
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 34d48e7de0269449bd4ed6eedb83a7464b6d3d50
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: a6ab52105785dc1efbffe093cdafb12cdf8eac4d
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="type-converters-and-markup-extensions-for-xaml"></a>Преобразователи типов или расширения разметки для XAML
 Преобразователи типов и расширения разметки — это два метода, используемых системами типов XAML и средствами записи XAML для создания компонентов графа объектов. Хотя они обладают общими характеристиками, преобразователи типов и расширения разметки представляются по-разному в потоке узлов XAML. В этой документации преобразователи типов, расширения разметки и аналогичные конструкции иногда называются преобразователями значений.  
@@ -45,7 +45,7 @@ ms.lasthandoff: 04/28/2018
   
 <a name="type_converters"></a>   
 ## <a name="type-converters"></a>Преобразователи типов  
- Согласно определению служб XAML .NET Framework преобразователи типов — это классы, производные от класса <xref:System.ComponentModel.TypeConverter> среды CLR. <xref:System.ComponentModel.TypeConverter> — это класс, используемый в [!INCLUDE[TLA#tla_netframewk](../../../includes/tlasharptla-netframewk-md.md)] до появления XAML. Его первоначальное назначение заключалось в поддержке окон свойств и аналогичных текстовых метафор для редактирования свойств [!INCLUDE[TLA2#tla_ide](../../../includes/tla2sharptla-ide-md.md)] . После реализации XAML в .NET Framework платформа использует <xref:System.ComponentModel.TypeConverter> для преобразования текстового синтаксиса (в значении атрибута или в узле значения XAML) в объект. <xref:System.ComponentModel.TypeConverter> может также использоваться для сериализации значения объекта в текстовый синтаксис. <xref:System.ComponentModel.TypeConverter> также применялся в предыдущих реализациях XAML для отдельных платформ в [!INCLUDE[TLA#tla_wpf](../../../includes/tlasharptla-wpf-md.md)] и Windows Communication Foundation (WCF). Дополнительные сведения о <xref:System.ComponentModel.TypeConverter> в XAML см. в разделе [Type Converters for XAML Overview](../../../docs/framework/xaml-services/type-converters-for-xaml-overview.md).  
+ Согласно определению служб XAML .NET Framework преобразователи типов — это классы, производные от класса <xref:System.ComponentModel.TypeConverter> среды CLR. <xref:System.ComponentModel.TypeConverter> — это класс, используемый в [!INCLUDE[TLA#tla_netframewk](../../../includes/tlasharptla-netframewk-md.md)] до появления XAML. Его первоначальное назначение заключалось в поддержке окон свойств и аналогичных текстовых метафор для редактирования свойств [!INCLUDE[TLA2#tla_ide](../../../includes/tla2sharptla-ide-md.md)] . После реализации XAML в .NET Framework платформа использует <xref:System.ComponentModel.TypeConverter> для преобразования текстового синтаксиса (в значении атрибута или в узле значения XAML) в объект. <xref:System.ComponentModel.TypeConverter> может также использоваться для сериализации значения объекта в текстовый синтаксис. <xref:System.ComponentModel.TypeConverter> также применялся в предыдущих реализациях XAML для отдельных платформ в Windows Presentation Foundation (WPF) и Windows Communication Foundation (WCF). Дополнительные сведения о <xref:System.ComponentModel.TypeConverter> в XAML см. в разделе [Type Converters for XAML Overview](../../../docs/framework/xaml-services/type-converters-for-xaml-overview.md).  
   
 <a name="markup_extensions"></a>   
 ## <a name="markup-extensions"></a>Расширения разметки  

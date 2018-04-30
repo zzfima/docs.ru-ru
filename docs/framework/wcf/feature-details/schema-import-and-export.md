@@ -23,11 +23,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 8489c0bf20d3d62501db269c5a72de657bcbbc97
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: fe4ef5b17013bf1a9abf5fd1ca0807fe4d335df4
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="schema-import-and-export"></a>Импорт и экспорт схемы
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] включает новый модуль сериализации - <xref:System.Runtime.Serialization.DataContractSerializer>. Объект `DataContractSerializer` осуществляет преобразование объектов [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] в формат XML и обратно. Помимо собственно сериализатора [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] включает связанные механизмы импорта и экспорта схемы. *Схемы* формальное, точное и обрабатываемое компьютером описание формата XML-данных, которые создаются сериализатором или могут десериализатором. В [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] используется язык определения схемы XML (XSD) консорциума W3C (XSD) в качестве представления схемы, которая поддерживает возможность взаимодействия с многочисленными сторонними платформами.  
@@ -68,9 +68,9 @@ ms.lasthandoff: 04/28/2018
   
  Класс `XsdDataContractExporter` поддерживает все типы [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], которые можно сериализовать с помощью класса `DataContractSerializer`. Дополнительные сведения см. в разделе [типы, поддерживаемые сериализатором контракта данных](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md). Обратите внимание, что схема, созданная с помощью класса `XsdDataContractExporter`, обычно содержит допустимые данные, которые могут использоваться классом `XsdDataContractImporter` (если только для изменения схемы не используется класс <xref:System.Xml.Serialization.XmlSchemaProviderAttribute>).  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] с помощью <xref:System.Runtime.Serialization.XsdDataContractImporter>, в разделе [Импорт схемы для создания классов](../../../../docs/framework/wcf/feature-details/importing-schema-to-generate-classes.md).  
+ Дополнительные сведения об использовании <xref:System.Runtime.Serialization.XsdDataContractImporter>, в разделе [Импорт схемы для создания классов](../../../../docs/framework/wcf/feature-details/importing-schema-to-generate-classes.md).  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] с помощью <xref:System.Runtime.Serialization.XsdDataContractExporter>, в разделе [Экспорт схем из классов](../../../../docs/framework/wcf/feature-details/exporting-schemas-from-classes.md).  
+ Дополнительные сведения об использовании <xref:System.Runtime.Serialization.XsdDataContractExporter>, в разделе [Экспорт схем из классов](../../../../docs/framework/wcf/feature-details/exporting-schemas-from-classes.md).  
   
 ## <a name="see-also"></a>См. также  
  <xref:System.Runtime.Serialization.DataContractSerializer>  

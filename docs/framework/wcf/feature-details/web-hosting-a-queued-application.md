@@ -1,31 +1,33 @@
 ---
-title: "Размещение веб-узлов в приложении, использующем очереди"
-ms.custom: 
+title: Размещение веб-узлов в приложении, использующем очереди
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: c7a539fa-e442-4c08-a7f1-17b7f5a03e88
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a12348c3c49c29812530bc568bb5873ec53f7eb5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 7b7168d5283a0dbe1001631f855e493335576a80
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="web-hosting-a-queued-application"></a>Размещение веб-узлов в приложении, использующем очереди
 Служба активации Windows (WAS) управляет активацией и временем существования рабочих процессов, содержащих приложения, которые размещают службы [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. Модель процесса WAS обобщает модель процесса [!INCLUDE[iis601](../../../../includes/iis601-md.md)] для HTTP-сервера путем устранения зависимости от HTTP. Это дает возможность службам [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] использовать как протокол HTTP, так и отличные от HTTP протоколы, такие как net.msmq и msmq.formatname, в среде размещения, которая поддерживает активацию на основе сообщений и предоставляет возможность размещать большое число приложений на данном компьютере.  
   
  WAS содержит службу активации очереди сообщений (MSMQ), которая активирует приложение с использованием очередей, где одно или более сообщений ставятся в очередь сообщений MSMQ, одну из очередей, используемых приложением. Служба активации MSMQ является службой NT, запускающейся по умолчанию автоматически.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]WAS и ее преимущества. в разделе [размещение в службе активации процессов Windows](../../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)]MSMQ, в разделе [Общие сведения об очередях](../../../../docs/framework/wcf/feature-details/queues-overview.md)  
+ Дополнительные сведения об АКТИВАЦИИ и ее преимущества см. в разделе [размещение в службе активации процессов Windows](../../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md). Дополнительные сведения о MSMQ см. в разделе [Общие сведения об очередях](../../../../docs/framework/wcf/feature-details/queues-overview.md)  
   
 ## <a name="queue-addressing-in-was"></a>Адресация очереди в WAS  
  Приложения WAS имеют адреса в виде универсальных кодов ресурсов (URI). Адреса приложений состоят из двух частей: основной префикс URI и относительный адрес, специальный для каждого приложения (путь). Вместе эти две части показывают внешний адрес приложения. Базовый префикс URI создается из привязки узла и используется для всех приложений на узле, например, «NET.MSMQ://localhost», «MSMQ.FormatName://localhost» или «NET.TCP://localhost». Затем адреса приложений создаются фрагментов пути конкретного приложения (например, «/ applicationOne») и добавления их к базовому URI префиксу для полного URI приложения, например, «NET.MSMQ://localhost/applicationone».  

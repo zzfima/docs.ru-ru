@@ -1,12 +1,13 @@
 ---
-title: "Сбор рукописных данных"
-ms.custom: 
+title: Сбор рукописных данных
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -20,19 +21,20 @@ helpviewer_keywords:
 - properties [WPF], DefaultDrawingAttributes
 - DefaultDrawingAttributes property [WPF]
 ms.assetid: 66a3129d-9577-43eb-acbd-56c147282016
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: cbf55b5d84420a6aa7af06e94497a85a2b54a0c0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 5f3effe358ba2d7accf1b0eea3493f63cfea6598
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="collecting-ink"></a>Сбор рукописных данных
-Платформа [Windows Presentation Foundation](../../../../docs/framework/wpf/index.md) выполняет сбор цифровых рукописных фрагментов, что является одной из основных ее функций. В этом разделе обсуждаются методы сбора рукописных данных в [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)].  
+Платформа [Windows Presentation Foundation](../../../../docs/framework/wpf/index.md) выполняет сбор цифровых рукописных фрагментов, что является одной из основных ее функций. В этом разделе обсуждаются методы сбора рукописного ввода в Windows Presentation Foundation (WPF).  
   
 ## <a name="prerequisites"></a>Предварительные требования  
  Чтобы использовать следующие примеры, необходимо сначала установить [!INCLUDE[TLA#tla_visualstu2005](../../../../includes/tlasharptla-visualstu2005-md.md)] и [!INCLUDE[TLA2#tla_winfxsdk](../../../../includes/tla2sharptla-winfxsdk-md.md)]. Кроме того, необходимо иметь представление о создании приложений для [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Дополнительные сведения о начале работы с [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], в разделе [Пошаговое руководство: My первого классического приложения WPF](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md).  

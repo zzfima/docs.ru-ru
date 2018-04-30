@@ -1,28 +1,28 @@
 ---
-title: "Настройка привязок для служб Windows Communication Foundation"
-ms.custom: 
+title: Настройка привязок для служб Windows Communication Foundation
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - binding configuration [WCF]
 ms.assetid: 99a85fd8-f7eb-4a84-a93e-7721b37d415c
-caps.latest.revision: 
+caps.latest.revision: 36
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: b11810e0a39c5b6091a63ef33e5abfccb95b7555
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f98d7c7b7d816687487a652f0527886300f0ee86
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="configuring-bindings-for-windows-communication-foundation-services"></a>Настройка привязок для служб Windows Communication Foundation
 При создании приложения часто нужно отложить решения для администратора после развертывания приложения. Например, часто нет способа узнать заранее, какими будут адрес службы или универсальный код ресурса (URI). Вместо жестко запрограммированного адреса желательно разрешить администратору ввести его после создания службы. Такая гибкость достигается благодаря конфигурации.  
@@ -47,13 +47,13 @@ ms.lasthandoff: 12/22/2017
 ```  
   
 ### <a name="servicemodel-elements"></a>Элементы ServiceModel  
- Можно использовать раздел, связанный с `system.ServiceModel` элемент, чтобы настроить тип службы с одной или несколькими конечными точками, а также параметры службы. После этого каждая конечная точка может быть настроена с адресом, контрактом и привязкой. [!INCLUDE[crabout](../../../includes/crabout-md.md)]конечные точки, в разделе [Общие сведения о создании конечной точки](../../../docs/framework/wcf/endpoint-creation-overview.md). Если конечные точки не указаны, то среда выполнения добавит конечные точки по умолчанию. [!INCLUDE[crabout](../../../includes/crabout-md.md)] о конечных точках по умолчанию, привязках и режимах работы см. в разделах [Simplified Configuration](../../../docs/framework/wcf/simplified-configuration.md) и [Simplified Configuration for WCF Services](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
+ Можно использовать раздел, связанный с `system.ServiceModel` элемент, чтобы настроить тип службы с одной или несколькими конечными точками, а также параметры службы. После этого каждая конечная точка может быть настроена с адресом, контрактом и привязкой. Дополнительные сведения о конечных точках см. в разделе [Общие сведения о создании конечной точки](../../../docs/framework/wcf/endpoint-creation-overview.md). Если конечные точки не указаны, то среда выполнения добавит конечные точки по умолчанию. Дополнительные сведения о конечных точек по умолчанию, привязок и поведений см. в разделе [упрощенной конфигурации](../../../docs/framework/wcf/simplified-configuration.md) и [упрощенной конфигурации для служб WCF](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
   
  Привязка задает транспорт (HTTP, TCP, каналы, очередь сообщений) и протоколы (безопасность, надежность, потоки транзакций) и состоит из элементов привязки, каждый из которых задает определенный аспект способа связи конечной точки с миром.  
   
  Например, при указании [ \<basicHttpBinding >](../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md) элемент указывает на использование протокола HTTP для транспорта для конечной точки. Это используется для подключения конечной точки во время выполнения, когда открыта служба, использующая данную конечную точку.  
   
- Существует два вида привязок: предопределенная и пользовательская. Предопределенные привязки содержат полезные комбинации элементов, которые используются в общих сценариях. Список предварительно определенные привязки типы, [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] предоставляет, см. [привязка, предоставляемая системой](../../../docs/framework/wcf/system-provided-bindings.md). Если ни одна из стандартных коллекций привязок не имеет нужного для приложения службы сочетания возможностей, для соответствия требованиям приложения можно создать специальные привязки. [!INCLUDE[crabout](../../../includes/crabout-md.md)]пользовательские привязки в разделе [ \<customBinding >](../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md).  
+ Существует два вида привязок: предопределенная и пользовательская. Предопределенные привязки содержат полезные комбинации элементов, которые используются в общих сценариях. Список предварительно определенные привязки типы, [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] предоставляет, см. [привязка, предоставляемая системой](../../../docs/framework/wcf/system-provided-bindings.md). Если ни одна из стандартных коллекций привязок не имеет нужного для приложения службы сочетания возможностей, для соответствия требованиям приложения можно создать специальные привязки. Дополнительные сведения о пользовательских привязок см. в разделе [ \<customBinding >](../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md).  
   
  В следующих четырех примерах проиллюстрированы наиболее общие конфигурации привязок, используемые для настройки службы [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].  
   

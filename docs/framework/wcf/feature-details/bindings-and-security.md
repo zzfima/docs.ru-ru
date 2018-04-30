@@ -21,23 +21,23 @@ ms.author: bruceper
 manager: mbaldwin
 ms.workload:
 - dotnet
-ms.openlocfilehash: 5eb1019694f6228edbe3656849b85dfa7611ef18
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 440bbcf03eef8f32a28073bfc9f5aeeb824a50fd
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="bindings-and-security"></a>Привязки и безопасность
 Предоставляемые системой привязки, включенные в [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], обеспечивают быстрый способ программирования приложений [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. За одним исключением, во всех привязках включена схема безопасности по умолчанию. Этот раздел поможет выбрать привязку, соответствующую требованиям к безопасности.  
   
- Общие сведения о [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] безопасности, в разделе [Общие сведения о безопасности](../../../../docs/framework/wcf/feature-details/security-overview.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Программирование [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] с помощью привязки, в разделе [программирование безопасности WCF](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md).  
+ Общие сведения о [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] безопасности, в разделе [Общие сведения о безопасности](../../../../docs/framework/wcf/feature-details/security-overview.md). Дополнительные сведения о программировании [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] с помощью привязки, в разделе [программирование безопасности WCF](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md).  
   
  Если привязка уже выбран, можно найти дополнительные сведения о поведение во время выполнения, связанные с безопасностью в [поведения безопасности](../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md).  
   
  Некоторые функции безопасности невозможно запрограммировать с помощью привязок, предоставляемых системой. Для усиления контроля использования пользовательской привязки, в разделе [возможности безопасности при использовании пользовательских привязок](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md).  
   
 ## <a name="security-functions-of-bindings"></a>Функции безопасности привязок  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] содержит ряд предоставляемых системой привязок, удовлетворяющих большей части потребностей. Если определенная привязка не удовлетворяет всем необходимым требованиям, можно также создать пользовательскую привязку. Список привязок, предоставляемых системой см. в разделе [привязка, предоставляемая системой](../../../../docs/framework/wcf/system-provided-bindings.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)] пользовательские привязки в разделе [пользовательские привязки](../../../../docs/framework/wcf/extending/custom-bindings.md).  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] содержит ряд предоставляемых системой привязок, удовлетворяющих большей части потребностей. Если определенная привязка не удовлетворяет всем необходимым требованиям, можно также создать пользовательскую привязку. Список привязок, предоставляемых системой см. в разделе [привязка, предоставляемая системой](../../../../docs/framework/wcf/system-provided-bindings.md). Дополнительные сведения о пользовательских привязок см. в разделе [пользовательские привязки](../../../../docs/framework/wcf/extending/custom-bindings.md).  
   
  Каждая привязка в [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] существует в двух видах: в виде API и в виде элемента XML, используемого в файле конфигурации. Например `WSHttpBinding` (API) имеет аналога в [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md).  
   

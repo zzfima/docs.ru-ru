@@ -21,11 +21,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: d20d4c39a6cca744ac981d1a143d2847d9b20e5a
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: bc962b328f2321d1cfb016b78a53307b43fac30d
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="developing-and-deploying-wcf-data-services"></a>Разработка и развертывание служб WCF Data Services
 Этот раздел содержит сведения о разработке и развертывании [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]. Дополнительные сведения о [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], в разделе [Приступая к работе](../../../../docs/framework/data/wcf/getting-started-with-wcf-data-services.md) и [Обзор](../../../../docs/framework/data/wcf/wcf-data-services-overview.md).  
@@ -80,7 +80,7 @@ ms.lasthandoff: 04/28/2018
   
 3.  **Среда разработки Microsoft Azure**  
   
-     Windows Azure Tools для Visual Studio входит интегрированный набор средств для разработки служб Windows Azure в Visual Studio. С помощью этих средств можно разрабатывать службы данных, которые могут развертываться на Microsoft Azure, а также тестировать службу данных на локальном компьютере перед развертыванием. Эти средства можно используйте при разработке службы данных, работающей на платформе Windows Azure с помощью Visual Studio. Вы можете загрузить инструменты Windows Azure для Visual Studio из [центра загрузки Майкрософт](http://go.microsoft.com/fwlink/?LinkID=201848). [!INCLUDE[crabout](../../../../includes/crabout-md.md)] разработке службы данных для запуска в Microsoft Azure см. в публикации блога [Deploying an OData Service in Microsoft Azure](http://go.microsoft.com/fwlink/?LinkId=201847).  
+     Windows Azure Tools для Visual Studio входит интегрированный набор средств для разработки служб Windows Azure в Visual Studio. С помощью этих средств можно разрабатывать службы данных, которые могут развертываться на Microsoft Azure, а также тестировать службу данных на локальном компьютере перед развертыванием. Эти средства можно используйте при разработке службы данных, работающей на платформе Windows Azure с помощью Visual Studio. Вы можете загрузить инструменты Windows Azure для Visual Studio из [центра загрузки Майкрософт](http://go.microsoft.com/fwlink/?LinkID=201848). Дополнительные сведения о разработке службы данных, которая работает в Windows Azure см. в публикации [Deploying an OData Service в Windows Azure](http://go.microsoft.com/fwlink/?LinkId=201847).  
   
 ### <a name="development-tips"></a>Советы по разработке  
  При разработке службы данных необходимо учитывать следующее:  
@@ -116,21 +116,21 @@ ms.lasthandoff: 04/28/2018
   
         -   [XCopy](http://msdn.microsoft.com/library/4312c651-2119-49be-bbeb-ee28bdbfe71e)  
   
-     [!INCLUDE[crabout](../../../../includes/crabout-md.md)] параметры развертывания для [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] приложения, в разделе [Обзор веб-развертывания Visual Studio и ASP.NET](http://msdn.microsoft.com/library/99bd1927-b59f-4e02-87b4-55c6ba2adbc3).  
+     Дополнительные сведения о вариантах развертывания [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] приложения, в разделе [Обзор веб-развертывания Visual Studio и ASP.NET](http://msdn.microsoft.com/library/99bd1927-b59f-4e02-87b4-55c6ba2adbc3).  
   
     > [!TIP]
     >  Прежде чем пытаться выполнить развертывание службы данных в IIS, обязательно протестируйте развертывание на веб-сервере, где работают службы IIS. Для получения дополнительной информации см. [How to: Develop a WCF Data Service Running on IIS](../../../../docs/framework/data/wcf/how-to-develop-a-wcf-data-service-running-on-iis.md).  
   
 -   **Microsoft Azure**  
   
-     Службы данных можно развернуть в Windows Azure с помощью средств Windows Azure для Visual Studio. Вы можете загрузить инструменты Windows Azure для Visual Studio из [центра загрузки Майкрософт](http://go.microsoft.com/fwlink/?LinkID=201848). [!INCLUDE[crabout](../../../../includes/crabout-md.md)] развертывании службы данных в Microsoft Azure см. в публикации [Deploying an OData Service in Microsoft Azure](http://go.microsoft.com/fwlink/?LinkId=201847).  
+     Службы данных можно развернуть в Windows Azure с помощью средств Windows Azure для Visual Studio. Вы можете загрузить инструменты Windows Azure для Visual Studio из [центра загрузки Майкрософт](http://go.microsoft.com/fwlink/?LinkID=201848). Дополнительные сведения о развертывании службы данных в Windows Azure см. в публикации [Deploying an OData Service в Windows Azure](http://go.microsoft.com/fwlink/?LinkId=201847).  
   
 ### <a name="deployment-considerations"></a>Требования к развертыванию  
  При разработке службы данных необходимо учитывать следующее:  
   
 -   При развертывании службы данных, использующей поставщика [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] для доступа к базе данных SQL Server, можно также распространить структуры данных, данные или и то и другое. Visual Studio может автоматически создать скрипты (SQL-файлы), чтобы сделать это в целевой базе данных, и эти скрипты можно включить в пакет веб-развертывания из [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] приложения. Дополнительные сведения см. в разделе [NIB: Практическое: развертывание базы данных с проектом веб-приложения](http://msdn.microsoft.com/library/683b33f1-8a3d-45cf-af6e-61ab50fc518b). Для [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] веб-сайта, это можно сделать помощью **мастер публикации базы данных** в Visual Studio. Для получения дополнительной информации см. [Deploying a Database by Using the Database Publishing Wizard](http://msdn.microsoft.com/library/1e3682e7-8b57-4da6-a393-af9640ccf8b7).  
   
--   Поскольку [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] включает в себя базовую реализацию [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] , Windows Server AppFabric можно использовать для мониторинга службы данных, развернутой на IIS, работающем на Windows Server. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] использовании Windows Server AppFabric для наблюдения за службами данных см. в публикации [Tracking WCF Data Services with Windows Server AppFabri](http://go.microsoft.com/fwlink/?LinkID=202005).  
+-   Поскольку [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] включает в себя базовую реализацию [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] , Windows Server AppFabric можно использовать для мониторинга службы данных, развернутой на IIS, работающем на Windows Server. Дополнительные сведения об использовании Windows Server AppFabric для наблюдения за службами данных см. в публикации [Tracking WCF Data Services с Windows Server AppFabric](http://go.microsoft.com/fwlink/?LinkID=202005).  
   
 ## <a name="see-also"></a>См. также  
  [Размещение служб данных](../../../../docs/framework/data/wcf/hosting-the-data-service-wcf-data-services.md)  

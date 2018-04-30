@@ -1,30 +1,32 @@
 ---
-title: "Практическое руководство. Асинхронная реализация операции службы"
-ms.custom: 
+title: Практическое руководство. Асинхронная реализация операции службы
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 4e5d2ea5-d8f8-4712-bd18-ea3c5461702c
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 3ba82242d0d3d42d4a2e3774186f2a282e279938
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: fe823fc8b86dd20cfa344c9889eca9dff21514ec
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-implement-an-asynchronous-service-operation"></a>Практическое руководство. Асинхронная реализация операции службы
-В приложениях [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] операция службы может быть реализована асинхронно или синхронно без жесткого задания способа вызова клиентом. Например, асинхронные операции службы могут вызываться синхронно или синхронные операции службы могут вызываться асинхронно. Пример, демонстрирующий способы асинхронного вызова операции в клиентском приложении см. в разделе [как: асинхронно вызывать операции службы](../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md). [!INCLUDE[crabout](../../../includes/crabout-md.md)]синхронные и асинхронные операции в разделе [проектирование контрактов службы](../../../docs/framework/wcf/designing-service-contracts.md) и [синхронной и асинхронной операции](../../../docs/framework/wcf/synchronous-and-asynchronous-operations.md). В этом разделе описывается базовая структура асинхронной операции службы, код не завершен. Полный пример клиенту и службе сторон см [асинхронной](http://msdn.microsoft.com/library/833db946-f511-4f64-a26f-2759a11217c7).  
+В приложениях [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] операция службы может быть реализована асинхронно или синхронно без жесткого задания способа вызова клиентом. Например, асинхронные операции службы могут вызываться синхронно или синхронные операции службы могут вызываться асинхронно. Пример, демонстрирующий способы асинхронного вызова операции в клиентском приложении см. в разделе [как: асинхронно вызывать операции службы](../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md). Дополнительные сведения о синхронных и асинхронных операциях см. в разделе [проектирование контрактов службы](../../../docs/framework/wcf/designing-service-contracts.md) и [синхронной и асинхронной операции](../../../docs/framework/wcf/synchronous-and-asynchronous-operations.md). В этом разделе описывается базовая структура асинхронной операции службы, код не завершен. Полный пример клиенту и службе сторон см [асинхронной](http://msdn.microsoft.com/library/833db946-f511-4f64-a26f-2759a11217c7).  
   
 ### <a name="implement-a-service-operation-asynchronously"></a>Асинхронная реализация операции службы  
   

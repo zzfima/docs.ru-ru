@@ -1,28 +1,28 @@
 ---
-title: "Очереди в Windows Communication Foundation"
-ms.custom: 
+title: Очереди в Windows Communication Foundation
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - queues [WCF]
 ms.assetid: 43008409-1bb4-4bd4-85d7-862c8f10ae20
-caps.latest.revision: 
+caps.latest.revision: 17
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 4dfc78d355db4bd8c9d43541545e6fac35086b39
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 82eb421b86f57cfe7c9a23de3ab24de2d4c470cb
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="queues-in-windows-communication-foundation"></a>Очереди в Windows Communication Foundation
 В подразделах этого раздела рассматривается поддержка очередей в [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] обеспечивает поддержку организации очереди с помощью технологии службу очередей сообщений (Майкрософт) (ранее носившей название MSMQ) в качестве транспорта и позволяет осуществить следующие сценарии:  
@@ -35,7 +35,7 @@ ms.lasthandoff: 01/19/2018
   
 -   Операции при отсутствии подключения к сети. Операции отправки, получения и обработки могут прерваться во время передачи данных по сетям с высокой задержкой или сетям с ограниченным доступом, например в случае с мобильными устройствами. В очереди выполнение этих операций продолжится даже при отключении конечных точек. При повторном подключении сообщения из очереди пересылаются в принимающее приложение.  
   
- Чтобы использовать функцию очередей в приложении [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], следует применить одну из стандартных привязок или создать пользовательскую привязку, если ни одна из стандартных привязок не удовлетворяет необходимым требованиям. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]соответствующие стандартные привязки и способ выбора, в разделе [как: обмена сообщениями с конечными точками WCF и приложениями очереди сообщений](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)]создании пользовательских привязок см. в разделе [пользовательские привязки](../../../../docs/framework/wcf/extending/custom-bindings.md).  
+ Чтобы использовать функцию очередей в приложении [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], следует применить одну из стандартных привязок или создать пользовательскую привязку, если ни одна из стандартных привязок не удовлетворяет необходимым требованиям. Дополнительные сведения о соответствующих стандартных привязок и выберите один см [как: обмена сообщениями с конечными точками WCF и приложениями очереди сообщений](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md). Дополнительные сведения о создании настраиваемых привязок см. в разделе [пользовательские привязки](../../../../docs/framework/wcf/extending/custom-bindings.md).  
   
 ## <a name="in-this-section"></a>В этом разделе  
  [Общие сведения об очередях](../../../../docs/framework/wcf/feature-details/queues-overview.md)  

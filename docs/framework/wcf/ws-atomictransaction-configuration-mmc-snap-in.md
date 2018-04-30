@@ -1,24 +1,26 @@
 ---
-title: "Оснастка консоли MMC для конфигурации WS-AtomicTransaction"
-ms.custom: 
+title: Оснастка консоли MMC для конфигурации WS-AtomicTransaction
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 23592973-1d51-44cc-b887-bf8b0d801e9e
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 73db4b201aba6e07891803aa86c56403f135f863
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 2e8b127e0d3c241a1e37ac2161d9fadcea990425
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="ws-atomictransaction-configuration-mmc-snap-in"></a>Оснастка консоли MMC для конфигурации WS-AtomicTransaction
 Оснастка консоли MMC для настройки WS-AtomicTransaction позволяет настраивать параметры WS-AtomicTransaction как на локальном, так и на удаленном компьютерах.  
@@ -28,7 +30,7 @@ ms.lasthandoff: 12/22/2017
   
  Если вы используете Windows Vista или [!INCLUDE[lserver](../../../includes/lserver-md.md)], можно найти оснастку MMC, щелкнув **запустить** и введите в `dcomcnfg.exe` в **поиска** поле. После открытия консоли MMC перейдите к **Мой компьютер\координатор транзакций транзакций\локальный DTC** узел, щелкните правой кнопкой мыши и выберите **свойства**. Доступные для настройки параметры сгруппированы на вкладке **WS-AT** вкладки.  
   
- Предыдущие шаги используются, чтобы запустить оснастку для настройки локального компьютера. Если вы хотите настроить удаленный компьютер, необходимо найти имя удаленного компьютера в **управления панели/Администрирование/службы компонентов /**и выполнить аналогичные шаги, если вы используете [!INCLUDE[wxp](../../../includes/wxp-md.md)] или [!INCLUDE[ws2003](../../../includes/ws2003-md.md)]. Если вы используете Windows Vista или [!INCLUDE[lserver](../../../includes/lserver-md.md)], выполните указанные ранее шаги для Vista и [!INCLUDE[lserver](../../../includes/lserver-md.md)], но использовать **координатор распределенных транзакций\локальный DTC** узел в узле удаленного компьютера.  
+ Предыдущие шаги используются, чтобы запустить оснастку для настройки локального компьютера. Если вы хотите настроить удаленный компьютер, необходимо найти имя удаленного компьютера в **управления панели/Администрирование/службы компонентов /** и выполнить аналогичные шаги, если вы используете [!INCLUDE[wxp](../../../includes/wxp-md.md)] или [!INCLUDE[ws2003](../../../includes/ws2003-md.md)]. Если вы используете Windows Vista или [!INCLUDE[lserver](../../../includes/lserver-md.md)], выполните указанные ранее шаги для Vista и [!INCLUDE[lserver](../../../includes/lserver-md.md)], но использовать **координатор распределенных транзакций\локальный DTC** узел в узле удаленного компьютера.  
   
  Для работы с пользовательским интерфейсом, предоставляемым средством, необходимо зарегистрировать файл WsatUI.dll. Путь к этому файлу:  
   
@@ -42,9 +44,9 @@ regasm.exe /codebase WsatUI.dll
   
  Это средство можно использовать для изменения основных параметров WS-AtomicTransaction. Например, можно включить или отключить поддержку протокола WS-AtomicTransaction, настроить HTTP-порты для WS-AT, привязать SSL-сертификат к HTTP-порту, настроить сертификаты путем указания имен субъектов сертификатов, выбрать режим трассировки и задать значения времени ожидания (по умолчанию и максимальное).  
   
- Если поддержку WS-AtomicTransaction требуется настроить только на локальном компьютере, можно запустить версию данного средства, использующую интерфейс командной строки. [!INCLUDE[crabout](../../../includes/crabout-md.md)]средство командной строки в разделе [программы конфигурации WS-AtomicTransaction (wsatConfig.exe)](../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md) раздела.  
+ Если поддержку WS-AtomicTransaction требуется настроить только на локальном компьютере, можно запустить версию данного средства, использующую интерфейс командной строки. Дополнительные сведения о средстве командной строки см. в разделе [программы конфигурации WS-AtomicTransaction (wsatConfig.exe)](../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md) раздела.  
   
- Следует иметь в виду, что оснастка консоли MMC и программа командной строки не поддерживают настройку всех параметров WS-AT. Некоторые параметры можно изменять только путем непосредственного редактирования реестра. [!INCLUDE[crabout](../../../includes/crabout-md.md)]Эти параметры реестра в разделе [Настройка поддержки транзакций WS-AT](../../../docs/framework/wcf/feature-details/configuring-ws-atomic-transaction-support.md).  
+ Следует иметь в виду, что оснастка консоли MMC и программа командной строки не поддерживают настройку всех параметров WS-AT. Некоторые параметры можно изменять только путем непосредственного редактирования реестра. Дополнительные сведения об этих параметрах реестра см. в разделе [Настройка поддержки транзакций WS-AT](../../../docs/framework/wcf/feature-details/configuring-ws-atomic-transaction-support.md).  
   
 ### <a name="user-interface-description"></a>Описание пользовательского интерфейса  
  **Включить сетевую поддержку WS-Atomic Transaction**:  
@@ -95,7 +97,7 @@ regasm.exe /codebase WsatUI.dll
 > [!NOTE]
 >  Новый сеанс ведения журнала для событий трассировки невозможно создать, если поставщик трассировки WS-AT используется другим потребителем трассировки. Любая попытка настроить ведение журнала в течение этого времени приводит к отображению следующего сообщения об ошибке: "Не удалось активировать поставщик. Код ошибки: 1".  
   
- [!INCLUDE[crabout](../../../includes/crabout-md.md)]Трассировка и ведение журнала, в разделе [Администрирование и диагностика](../../../docs/framework/wcf/diagnostics/index.md).  
+ Дополнительные сведения о трассировке и ведении журналов см. в разделе [Администрирование и диагностика](../../../docs/framework/wcf/diagnostics/index.md).  
   
 ## <a name="see-also"></a>См. также  
  [Настройка поддержки транзакций WS-Atomic](../../../docs/framework/wcf/feature-details/configuring-ws-atomic-transaction-support.md)  

@@ -1,24 +1,26 @@
 ---
-title: "Корреляция по содержимому"
-ms.custom: 
+title: Корреляция по содержимому
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: f46a2b68-8d24-4122-bbee-9573fc3f9fb4
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 72c7233a1c667b7ee3a1f00cc2fdf3c78f58e789
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 4b4ebd49fbed12f1e8120e67f32496cd782531da
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="content-based-correlation"></a>Корреляция по содержимому
 Когда службы рабочего процесса обмениваются данными с клиентами и другими службами, в сообщениях часто встречаются данные, уникальным образом направляющие сообщение в определенный экземпляр. При корреляции на основе содержимого эти данные в сообщении, например номер заказчика или идентификатор заказа, используются для маршрутизации сообщения в определенный экземпляр рабочего процесса. В этом разделе описывается использование корреляции на основе содержимого в рабочих процессах.  
@@ -27,7 +29,7 @@ ms.lasthandoff: 12/22/2017
  Корреляция на основе содержимого применяется, если служба рабочего процесса имеет несколько методов, доступных одному клиенту, и некоторые данные в сообщениях идентифицируют нужный экземпляр.  
   
 > [!NOTE]
->  Корреляция на основе содержимого полезна, если нельзя применить корреляцию на основе контекста, так как привязка не относится ни к одному поддерживаемому типу привязок для обмена контекстом. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Корреляция контекста, в разделе [обмен контекстом](../../../../docs/framework/wcf/feature-details/context-exchange-correlation.md).  
+>  Корреляция на основе содержимого полезна, если нельзя применить корреляцию на основе контекста, так как привязка не относится ни к одному поддерживаемому типу привязок для обмена контекстом. Дополнительные сведения о корреляции контекста см. в разделе [обмен контекстом](../../../../docs/framework/wcf/feature-details/context-exchange-correlation.md).  
   
  В каждом действии по обмену сообщениями при обмене данными должно быть указано расположение в сообщении данных, уникальным образом идентифицирующих экземпляр. Это делается путем указания набора <xref:System.ServiceModel.MessageQuerySet> с помощью <xref:System.ServiceModel.Activities.QueryCorrelationInitializer> или <xref:System.ServiceModel.Activities.Receive.CorrelatesOn%2A>, выбирающих из сообщения данные, уникальным образом идентифицирующие экземпляр.  
   

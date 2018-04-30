@@ -1,24 +1,26 @@
 ---
-title: "Конечная точка элемента управления рабочего процесса"
-ms.custom: 
+title: Конечная точка элемента управления рабочего процесса
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 1b883334-1590-4fbb-b0d6-65197efe0700
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 676451ac3dce4ff9d328bf4c46809444e0e7cb7c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 3cd72919acd8e6392d809f22ddd87042d00008f6
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="workflow-control-endpoint"></a>Конечная точка элемента управления рабочего процесса
 Конечная точка управления рабочим процессом позволяет разработчику вызывать операции удаленного управления экземплярами рабочего процесса, размещенные с помощью <xref:System.ServiceModel.Activities.WorkflowServiceHost>. Эта возможность может быть использована для программного выполнения таких операций управления, как приостановка, возобновление и завершение.  
@@ -43,7 +45,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="iworkflowinstancemanagement"></a>IWorkflowInstanceManagement  
  Интерфейс <xref:System.ServiceModel.Activities.IWorkflowInstanceManagement> определяет набор операций управления с синхронными и асинхронными версиями. Для версий с транзакциями необходимо использовать привязку с поддержкой транзакций. В следующей таблице перечислены поддерживаемые операции управления.  
   
-|Операции управления|Описание:|  
+|Операции управления|Описание|  
 |-----------------------|-----------------|  
 |Прервать|Принудительно останавливает выполнение экземпляра рабочего процесса.|  
 |Отмена|Переводит экземпляр рабочего процесса из активного или ожидающего состояния в завершенное состояние.|  
@@ -57,10 +59,10 @@ ms.lasthandoff: 12/22/2017
 |TransactedTerminate|Выполняет операцию прекращения для транзакции (передается от клиента или создается локально). Если система сохраняет устойчивое состояние экземпляра рабочего процесса, экземпляр рабочего процесса должен быть сохранен во время выполнения этой операции.|  
 |TransactedUnsuspend|Выполняет операцию возобновления для транзакции (передается от клиента или создается локально). Если система сохраняет устойчивое состояние экземпляра рабочего процесса, экземпляр рабочего процесса должен быть сохранен во время выполнения этой операции.|  
   
- Контракт <xref:System.ServiceModel.Activities.IWorkflowInstanceManagement> не предусматривает возможности создания нового экземпляра рабочего процесса, а лишь обеспечивает управление существующими экземплярами рабочих процессов. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]удаленно создания экземпляра рабочего процесса, в разделе [расширяемость узла службы рабочего процесса](../../../../docs/framework/wcf/feature-details/workflow-service-host-extensibility.md).  
+ Контракт <xref:System.ServiceModel.Activities.IWorkflowInstanceManagement> не предусматривает возможности создания нового экземпляра рабочего процесса, а лишь обеспечивает управление существующими экземплярами рабочих процессов. Дополнительные сведения о создании нового экземпляра рабочего процесса удаленно см. в разделе [расширяемость узла службы рабочего процесса](../../../../docs/framework/wcf/feature-details/workflow-service-host-extensibility.md).  
   
 ## <a name="workflowcontrolendpoint"></a>WorkflowControlEndpoint  
- <xref:System.ServiceModel.Activities.WorkflowControlEndpoint> является стандартной конечной точкой с фиксированным контрактом <xref:System.ServiceModel.Activities.IWorkflowInstanceManagement>. После добавления к экземпляру <xref:System.ServiceModel.Activities.WorkflowServiceHost> эта конечная точка затем может быть использована для отправки командных операций в любой экземпляр рабочего процесса, размещенного в ведущем экземпляре. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Стандартные конечные точки в разделе [стандартные конечные точки](../../../../docs/framework/wcf/feature-details/standard-endpoints.md).  
+ <xref:System.ServiceModel.Activities.WorkflowControlEndpoint> является стандартной конечной точкой с фиксированным контрактом <xref:System.ServiceModel.Activities.IWorkflowInstanceManagement>. После добавления к экземпляру <xref:System.ServiceModel.Activities.WorkflowServiceHost> эта конечная точка затем может быть использована для отправки командных операций в любой экземпляр рабочего процесса, размещенного в ведущем экземпляре. Дополнительные сведения о стандартных конечных точек см. в разделе [стандартные конечные точки](../../../../docs/framework/wcf/feature-details/standard-endpoints.md).  
   
 ## <a name="workflowcontrolclient"></a>WorkflowControlClient  
  <xref:System.ServiceModel.Activities.WorkflowControlClient> является классом, позволяющим отправлять сообщения управления <xref:System.ServiceModel.Activities.WorkflowControlEndpoint> в <xref:System.ServiceModel.Activities.WorkflowServiceHost>. Содержит метод для каждой из операций, поддерживаемых контрактом <xref:System.ServiceModel.Activities.IWorkflowInstanceManagement>, кроме транзакционных операций. <xref:System.ServiceModel.Activities.WorkflowControlClient> определяет необходимость использования транзакционных операций с помощью внешних транзакций.

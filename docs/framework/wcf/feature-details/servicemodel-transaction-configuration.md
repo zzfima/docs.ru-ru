@@ -1,34 +1,34 @@
 ---
-title: "Конфигурация транзакции ServiceModel"
-ms.custom: 
+title: Конфигурация транзакции ServiceModel
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - transactions [WCF], ServiceModel configuration
 ms.assetid: 5636067a-7fbd-4485-aaa2-8141c502acf3
-caps.latest.revision: 
+caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 650f34c37917a7f7ce407df1a3af42d177593c33
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 96cf83be06949160cf3efa73344e4a7680d24e09
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="servicemodel-transaction-configuration"></a>Конфигурация транзакции ServiceModel
 В [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] предусмотрено три атрибута для настройки транзакций для службы: `transactionFlow`, `transactionProtocol` и `transactionTimeout`.  
   
 ## <a name="configuring-transactionflow"></a>Настройка атрибута transactionFlow  
- Большинство заранее определенных привязок, предоставляемых [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], содержат атрибуты `transactionFlow` и `transactionProtocol`, чтобы можно было настроить привязку на прием входящих транзакций для конкретной конечной точки с использованием определенного протокола потока транзакций. Кроме того, вы можете использовать элемент `transactionFlow` и его атрибут `transactionProtocol` для сборки вашей собственной пользовательской привязки. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]элементы конфигурации, просмотреть [ \<привязки >](../../../../docs/framework/misc/binding.md) и [схем конфигурации WCF](../../../../docs/framework/configure-apps/file-schema/wcf/index.md).  
+ Большинство заранее определенных привязок, предоставляемых [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], содержат атрибуты `transactionFlow` и `transactionProtocol`, чтобы можно было настроить привязку на прием входящих транзакций для конкретной конечной точки с использованием определенного протокола потока транзакций. Кроме того, вы можете использовать элемент `transactionFlow` и его атрибут `transactionProtocol` для сборки вашей собственной пользовательской привязки. Дополнительные сведения о настройке элементов конфигурации см. в разделе [ \<привязки >](../../../../docs/framework/misc/binding.md) и [схем конфигурации WCF](../../../../docs/framework/configure-apps/file-schema/wcf/index.md).  
   
  Атрибут `transactionFlow` задает, разрешен ли поток транзакций для конечных точек службы, использующих данную привязку.  
   

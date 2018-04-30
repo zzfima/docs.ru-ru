@@ -1,24 +1,26 @@
 ---
-title: "Потоковая передача сообщений"
-ms.custom: 
+title: Потоковая передача сообщений
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 72a47a51-e5e7-4b76-b24a-299d51e0ae5a
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a751245f0a933fda649d5919bab86abf2969dbf6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: ed2aa57e044910ab9fd9c60dfd47eb7aaa0ce75e
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="streaming-message-transfer"></a>Потоковая передача сообщений
 В транспортных протоколах [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] поддерживаются два режима передачи сообщений.  
@@ -52,7 +54,7 @@ ms.lasthandoff: 12/22/2017
   
  Некоторые функции [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], такие как надежный обмен сообщениями, транзакции и безопасность уровня сообщений SOAP, используют буферизацию сообщений при передаче. Использование этих возможностей может уменьшить или свести до минимума повышение производительности, достигаемое за счет потоковой передачи. Для защиты потокового транспорта следует использовать либо безопасность только на транспортном уровне, либо безопасность на транспортном уровне и безопасность сообщений только с проверкой подлинности.  
   
- Заголовки SOAP буферизуются всегда, даже если выбран режим потоковой передачи. Размер заголовков сообщений не должен превышать размер квоты транспорта `MaxBufferSize`. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Этот параметр, в разделе [квоты транспорта](../../../../docs/framework/wcf/feature-details/transport-quotas.md).  
+ Заголовки SOAP буферизуются всегда, даже если выбран режим потоковой передачи. Размер заголовков сообщений не должен превышать размер квоты транспорта `MaxBufferSize`. Дополнительные сведения об этом параметре см. в разделе [квоты транспорта](../../../../docs/framework/wcf/feature-details/transport-quotas.md).  
   
 ## <a name="differences-between-buffered-and-streamed-transfers"></a>Различия между буферизованной и потоковой передачей  
  Изменение режима передачи с буферизованного на потоковый также приводит к изменению собственной формы канала для транспортов TCP и именованных каналов. При буферизованной передаче собственная форма канала представлена интерфейсом <xref:System.ServiceModel.Channels.IDuplexSessionChannel>. При потоковой передаче собственные каналы представлены интерфейсами <xref:System.ServiceModel.Channels.IRequestChannel> и <xref:System.ServiceModel.Channels.IReplyChannel>. Изменение режима передачи в существующем приложении, использующем эти транспорты напрямую (т.е. не через контракт службы), требует изменения ожидаемой формы канала для производств и прослушивателей каналов.  

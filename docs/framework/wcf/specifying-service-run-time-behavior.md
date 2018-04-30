@@ -1,35 +1,37 @@
 ---
-title: "Указание поведения службы во время выполнения"
-ms.custom: 
+title: Указание поведения службы во время выполнения
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 5c5450ea-6af1-4b75-a267-613d0ac54707
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c2c1534b161f81fa90dce52c825b0417dc8fd35d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: e45c35d0b19833b6fd43c7fd5794ecf8bd3a9769
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="specifying-service-run-time-behavior"></a>Указание поведения службы во время выполнения
-После создания ([Designing Service Contracts](../../../docs/framework/wcf/designing-service-contracts.md)) и реализации ([Implementing Service Contracts](../../../docs/framework/wcf/implementing-service-contracts.md)) контракта службы можно переходить к настройке рабочего поведения для среды выполнения службы. В этом разделе рассматриваются предоставляемые системой поведения служб и операций, а также указывается, где можно найти дополнительные сведения по созданию новых поведений. Хотя некоторые поведения применяются как атрибуты, многие поведения применяются с помощью файла конфигурации приложения или программно. [!INCLUDE[crabout](../../../includes/crabout-md.md)] настройке приложения службы см. в разделе [Configuring Services](../../../docs/framework/wcf/configuring-services.md).  
+После создания ([Designing Service Contracts](../../../docs/framework/wcf/designing-service-contracts.md)) и реализации ([Implementing Service Contracts](../../../docs/framework/wcf/implementing-service-contracts.md)) контракта службы можно переходить к настройке рабочего поведения для среды выполнения службы. В этом разделе рассматриваются предоставляемые системой поведения служб и операций, а также указывается, где можно найти дополнительные сведения по созданию новых поведений. Хотя некоторые поведения применяются как атрибуты, многие поведения применяются с помощью файла конфигурации приложения или программно. Дополнительные сведения о настройке приложения-службы см. в разделе [Настройка службы](../../../docs/framework/wcf/configuring-services.md).  
   
 ## <a name="overview"></a>Обзор  
  Контракт определяет входные данные, выходные данные, типы данных и возможности службы этого типа. При реализации контракта службы создается класс, которой, при настройке с привязкой к адресу, выполняет реализуемый им контракт. Сведения о контракте, привязке и адресе известны клиенту; без этих сведений клиент не может пользоваться службой.  
   
- Однако конкретные сведения об операциях, такие как сведения о потоках или управлении экземплярами, не видны клиентам. После реализации контракта службы можно настроить большое количество характеристик операций с помощью *поведений*. Поведения - это объекты, изменяющие среду выполнения [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] путем настройки ее свойств или путем добавления пользовательского типа в среду выполнения. [!INCLUDE[crabout](../../../includes/crabout-md.md)] изменении среды выполнения путем создания пользовательских поведений см. в разделе [Extending ServiceHost and the Service Model Layer](../../../docs/framework/wcf/extending/extending-servicehost-and-the-service-model-layer.md).  
+ Однако конкретные сведения об операциях, такие как сведения о потоках или управлении экземплярами, не видны клиентам. После реализации контракта службы можно настроить большое количество характеристик операций с помощью *поведений*. Поведения - это объекты, изменяющие среду выполнения [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] путем настройки ее свойств или путем добавления пользовательского типа в среду выполнения. Дополнительные сведения об изменении среды выполнения при создании определенных пользователем поведений см. в разделе [расширение ServiceHost и уровень модели службы](../../../docs/framework/wcf/extending/extending-servicehost-and-the-service-model-layer.md).  
   
  Атрибуты <xref:System.ServiceModel.ServiceBehaviorAttribute?displayProperty=nameWithType> и <xref:System.ServiceModel.OperationBehaviorAttribute?displayProperty=nameWithType> являются наиболее широко используемыми поведениями, раскрывающими наиболее часто запрашиваемые функции операции. Так как они являются атрибутами, они применяются к реализации службы или операции. Другие поведения, такие как <xref:System.ServiceModel.Description.ServiceMetadataBehavior?displayProperty=nameWithType> и <xref:System.ServiceModel.Description.ServiceDebugBehavior?displayProperty=nameWithType>, обычно применяются с помощью файла конфигурации приложения, хотя их можно использовать и программно.  
   

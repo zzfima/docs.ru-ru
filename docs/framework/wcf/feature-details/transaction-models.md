@@ -16,11 +16,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: ab3baf8cc0bb6af951f6f3e6396b7545d0c6b301
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 3c68a23e9ee86050a9db4c63c8c97d017794bce8
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="transaction-models"></a>Модели транзакций
 В этом разделе описывается связь между моделями программирования транзакций и компонентами инфраструктуры, предоставляемыми корпорацией Microsoft.  
@@ -37,7 +37,7 @@ ms.lasthandoff: 04/28/2018
 ## <a name="systemtransactions-transactions"></a>Транзакции System.Transactions  
  Пространство имен <xref:System.Transactions> предоставляет как модель явного программирования, основанную на классе <xref:System.Transactions.Transaction>, так и модель неявного программирования, использующая класс <xref:System.Transactions.TransactionScope>, в котором транзакции автоматически управляются инфраструктурой.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] как создавать приложения с поддержкой транзакций с помощью этих двух моделях см. в разделе [Создание транзакционного приложения](http://go.microsoft.com/fwlink/?LinkId=94947).  
+ Дополнительные сведения о создании приложения с поддержкой транзакций с помощью этих двух моделях см. в разделе [Создание транзакционного приложения](http://go.microsoft.com/fwlink/?LinkId=94947).  
   
  В службе или приложении [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] пространство имен <xref:System.Transactions> предоставляет модель программирования для создания транзакций в клиентском приложении и для явного взаимодействия с транзакциями, когда это необходимо, в пределах службы.  
   

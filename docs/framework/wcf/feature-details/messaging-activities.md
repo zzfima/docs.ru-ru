@@ -16,11 +16,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 8db31e8559d22e35f0d754a44ce425e144487296
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: bbc9fdfff5b5c6ab6e56af12269061f06bb79404
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="messaging-activities"></a>Действия обмена сообщениями
 Действия обмена сообщениями позволяют рабочим процессам отправлять или получать сообщения WCF. Добавляя действия обмена сообщениями в рабочий процесс, можно моделировать шаблоны обмена сообщениями любого уровня сложности.  
@@ -114,7 +114,7 @@ Request = rcv
  To make setting up a request/response MEP on the client and service easier, [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] provides two messaging activity templates. <xref:System.ServiceModel.Activities.Design.ReceiveAndSendReply> is used on the service and <xref:System.ServiceModel.Activities.Design.SendAndReceiveReply> is used on the client. In both cases the templates add the appropriate messaging activities to your workflow. On the service, the <xref:System.ServiceModel.Activities.Design.ReceiveAndSendReply> adds a <xref:System.ServiceModel.Activities.Receive> activity followed by a <xref:System.ServiceModel.Activities.SendReply> activity. The <xref:System.ServiceModel.Activities.SendReply.Request> property is automatically set to the <xref:System.ServiceModel.Activities.Receive> activity. On the client, the <xref:System.ServiceModel.Activities.Design.SendAndReceiveReply> adds a <xref:System.ServiceModel.Activities.Send> activity followed by a <xref:System.ServiceModel.Activities.ReceiveReply>. The <xref:System.ServiceModel.Activities.ReceiveReply.Request%2A> property is automatically set to the <xref:System.ServiceModel.Activities.Send> activity. To use these templates, just drag and drop the appropriate template onto your workflow.  
 -->
 ## <a name="messaging-activities-and-transactions"></a>Действия обмена сообщениями и транзакции  
- При вызове службы рабочего процесса может быть полезно выделить для операции службы транзакцию. Чтобы сделать это, поместите действие <xref:System.ServiceModel.Activities.Receive> в действие <xref:System.ServiceModel.Activities.TransactedReceiveScope>. Действие <xref:System.ServiceModel.Activities.TransactedReceiveScope> содержит действие `Receive` и текст. Транзакция, выделяемая службе, остается внешней в течение выполнения текста <xref:System.ServiceModel.Activities.TransactedReceiveScope>. Транзакция завершает работу, когда заканчивается выполнение основной части. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] рабочие процессы и транзакции. в разделе [транзакции рабочих процессов](../../../../docs/framework/windows-workflow-foundation/workflow-transactions.md).  
+ При вызове службы рабочего процесса может быть полезно выделить для операции службы транзакцию. Чтобы сделать это, поместите действие <xref:System.ServiceModel.Activities.Receive> в действие <xref:System.ServiceModel.Activities.TransactedReceiveScope>. Действие <xref:System.ServiceModel.Activities.TransactedReceiveScope> содержит действие `Receive` и текст. Транзакция, выделяемая службе, остается внешней в течение выполнения текста <xref:System.ServiceModel.Activities.TransactedReceiveScope>. Транзакция завершает работу, когда заканчивается выполнение основной части. Дополнительные сведения о рабочих процессах и транзакции в разделе [транзакции рабочих процессов](../../../../docs/framework/windows-workflow-foundation/workflow-transactions.md).  
   
 ## <a name="see-also"></a>См. также  
  [Как отправлять и получают сообщения об ошибках в службах рабочих процессов](http://go.microsoft.com/fwlink/?LinkId=189151)  

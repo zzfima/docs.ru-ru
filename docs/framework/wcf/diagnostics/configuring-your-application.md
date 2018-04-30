@@ -16,22 +16,22 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 922b9c5c53e04719f3ed48d0ff6386f21bf83e99
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 170583239ed357904e723aebdaef9809938b5123
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="configuring-your-application"></a>Настройка приложения
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] использует систему конфигурации .NET и позволяет настраивать службы и на компьютере, и в области приложений.  
   
- Параметры конфигурации, определяемые [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], находятся в группе разделов `<system.serviceModel>`. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] том, как настроить службу [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], см. в следующих разделах:  
+ Параметры конфигурации, определяемые [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], находятся в группе разделов `<system.serviceModel>`. Дополнительные сведения о настройке [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] службы, см. в следующих разделах:  
   
 -   [Настройка служб](../../../../docs/framework/wcf/configuring-services.md)  
   
 -   [\<system.serviceModel>](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md)  
   
- Определяемые приложением параметры конфигурации определяются в группе разделов `<appSettings>`. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] в разделе параметров приложения в файлах конфигурации .NET, [ \<appSettings >](http://go.microsoft.com/fwlink/?LinkId=95159).  
+ Определяемые приложением параметры конфигурации определяются в группе разделов `<appSettings>`. Дополнительные сведения о параметрах приложений, в файлах конфигурации .NET см. в разделе [ \<appSettings >](http://go.microsoft.com/fwlink/?LinkId=95159).  
   
 ## <a name="using-the-configuration-editor"></a>Использование редактора конфигураций  
  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] [Средство редактирования конфигурации (SvcConfigEditor.exe)](../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md) позволяет администраторам и разработчикам создавать и изменять параметры конфигурации для [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] службы с помощью графического интерфейса пользователя. С помощью этого средства можно управлять параметрами привязок, поведений, служб и диагностики [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] без непосредственного изменения XML-файлов конфигурации.  

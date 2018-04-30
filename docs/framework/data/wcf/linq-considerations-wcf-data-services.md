@@ -23,14 +23,14 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: c20817e791ae95efecd00a41a44c14eedec017d4
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 365bab484be17fd7bd1466a39d5af53f116ad06f
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="linq-considerations-wcf-data-services"></a>Рекомендации по LINQ (службы WCF Data Services)
-Данный раздел содержит сведения о способе подготовки и выполнения запросов LINQ при использовании клиента [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], а также об ограничениях использования LINQ для запросов к службе данных, реализующей [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Создание и выполнение запросов к [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]-службы данных на основе разделе [запросы к службе данных](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md).  
+Данный раздел содержит сведения о способе подготовки и выполнения запросов LINQ при использовании клиента [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], а также об ограничениях использования LINQ для запросов к службе данных, реализующей [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]. Дополнительные сведения о создании и выполнение запросов к [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]-службы данных на основе разделе [запросы к службе данных](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md).  
   
 ## <a name="composing-linq-queries"></a>Составление LINQ-запросов  
  LINQ позволяет составлять запросы к коллекции объектов, которая реализует <xref:System.Collections.Generic.IEnumerable%601>. Оба **добавить ссылку на службу** диалоговое окно в Visual Studio и средство DataSvcUtil.exe используются для создания представления [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] службу в виде класса контейнера сущностей, который наследует от <xref:System.Data.Services.Client.DataServiceContext>, а также объекты, представляющие сущности, возвращаемые в потоках. Эти средства также создают свойства для класса контейнера сущностей для коллекций, представляемых службой в виде потоков. Каждое свойство класса, инкапсулирующего службу данных, возвращает объект <xref:System.Data.Services.Client.DataServiceQuery%601>. Поскольку класс <xref:System.Data.Services.Client.DataServiceQuery%601> реализует интерфейс <xref:System.Linq.IQueryable%601>, определяемый LINQ, можно составить LINQ-запрос для потоков, предоставляемых службой данных, которые преобразуются клиентской библиотекой в URI-запрос, отправляемый службе данных при выполнении.  

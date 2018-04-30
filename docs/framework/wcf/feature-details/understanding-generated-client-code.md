@@ -19,14 +19,14 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 95e27941cece3bfb96c4567516d07bcbe07c7490
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 8cd3e7f5ac8f129e29ed080cbf510dfe106edfb7
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="understanding-generated-client-code"></a>Основные сведения о созданном коде клиента
-[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) создает код клиента и файл конфигурации клиентского приложения для использования при сборке клиентских приложений. В этом разделе содержатся примеры созданного кода для стандартных сценариев контрактов служб. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] сборке клиентского приложения с помощью созданного кода см. в разделе [WCF Client Overview](../../../../docs/framework/wcf/wcf-client-overview.md).  
+[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) создает код клиента и файл конфигурации клиентского приложения для использования при сборке клиентских приложений. В этом разделе содержатся примеры созданного кода для стандартных сценариев контрактов служб. Дополнительные сведения о создании клиентского приложения с помощью созданного кода см. в разделе [Общие сведения о клиенте WCF](../../../../docs/framework/wcf/wcf-client-overview.md).  
   
 ## <a name="overview"></a>Обзор  
  Если использовать Visual Studio для создания [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] типов клиентов для проекта, обычно не требуется для просмотра созданного кода клиента. Если используемая среда разработки не выполняет аналогичные службы, для создания кода клиента, а также для последующего использования этого кода для разработки клиентского приложения можно использовать такое средство, как Svcutil.exe.  
@@ -73,10 +73,10 @@ ms.lasthandoff: 04/28/2018
   
  [!code-csharp[C_GeneratedCodeFiles#30](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_generatedcodefiles/cs/proxycode.cs#30)]  
   
- В этом случае тип данных представляет собой тип сведений, вызванный конкретным исключением со стороны клиента <xref:System.ServiceModel.FaultException%601> , где параметром типа сведений является `microsoft.wcf.documentation.SampleFault`. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] типах данных см. в разделе [Specifying Data Transfer in Service Contracts](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)] обработке исключений в клиентских приложениях см. в разделе [Sending and Receiving Faults](../../../../docs/framework/wcf/sending-and-receiving-faults.md).  
+ В этом случае тип данных представляет собой тип сведений, вызванный конкретным исключением со стороны клиента <xref:System.ServiceModel.FaultException%601> , где параметром типа сведений является `microsoft.wcf.documentation.SampleFault`. Дополнительные сведения о типах данных см. в разделе [указание входящий трафик передачи данных в контрактах служб](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md). Дополнительные сведения об обработке исключений в клиентских приложениях см. в разделе [отправка и получение ошибки](../../../../docs/framework/wcf/sending-and-receiving-faults.md).  
   
 ### <a name="finding-callback-contracts-for-duplex-services"></a>Поиск контрактов обратного вызова для дуплексных служб  
- Если определяется местоположение контракта службы, для которого интерфейс контракта задает значение свойства <xref:System.ServiceModel.ServiceContractAttribute.CallbackContract%2A?displayProperty=nameWithType>, то этот контракт задает дуплексный контракт. Дуплексные контракты требуют, чтобы клиентское приложение создавало класс обратного вызова, реализующий контракт обратного вызова, и передавало экземпляр этого класса в <xref:System.ServiceModel.DuplexClientBase%601?displayProperty=nameWithType> или <xref:System.ServiceModel.DuplexChannelFactory%601?displayProperty=nameWithType>, которые используются для общения со службой. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] дуплексных клиентах см. в разделе [как: службы доступа с дуплексным контрактом](../../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md).  
+ Если определяется местоположение контракта службы, для которого интерфейс контракта задает значение свойства <xref:System.ServiceModel.ServiceContractAttribute.CallbackContract%2A?displayProperty=nameWithType>, то этот контракт задает дуплексный контракт. Дуплексные контракты требуют, чтобы клиентское приложение создавало класс обратного вызова, реализующий контракт обратного вызова, и передавало экземпляр этого класса в <xref:System.ServiceModel.DuplexClientBase%601?displayProperty=nameWithType> или <xref:System.ServiceModel.DuplexChannelFactory%601?displayProperty=nameWithType>, которые используются для общения со службой. Дополнительные сведения о дуплексных клиентах см. в разделе [как: службы доступа с дуплексным контрактом](../../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md).  
   
  Следующий контракт задает контракт обратного вызова типа `SampleDuplexHelloCallback`.  
   

@@ -18,16 +18,16 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: c29065ebe03617e288d7ebde3dc6b42cbfcf6061
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 530f6ce3d253cfc50818c82fc70e401382b50b85
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="analytic-tracing-overview"></a>Общие сведения об аналитическом отслеживании
 Аналитическая трассировка платформы [!INCLUDE[netfx_current_long](../../../../../includes/netfx-current-long-md.md)] - это набор высокопроизводительных функций с низкой детализацией, добавляемый к трассировке событий Windows (ETW). Трассировка событий Windows работает на уровне ядра, что значительно снижает издержки операций трассировки. Она эффективно буферизует события режима пользователя и ядра и позволяет динамически включать ведение журнала, при этом не требуется перезагружать службу. После их создания и получения данные трассировки отображаются в журналах событий.  
   
- [!INCLUDE[crabout](../../../../../includes/crabout-md.md)] трассировке событий Windows см. в разделе [Усовершенствованная отладка и настройка производительности с помощью приложения ETW](http://go.microsoft.com/fwlink/?LinkId=164781).  
+ Дополнительные сведения о трассировке событий Windows см. в разделе [улучшения отладки и настройки производительности с помощью ETW](http://go.microsoft.com/fwlink/?LinkId=164781).  
   
  Помимо использования журналов событий Windows, безопасности и приложений для анализа приложения, в [!INCLUDE[wv](../../../../../includes/wv-md.md)] и [!INCLUDE[lserver](../../../../../includes/lserver-md.md)] появились дополнительные «Журналы приложений» и «Журналы служб». Эти новые журналы предназначены для сохранения событий для конкретного приложения или для конкретного компонента, а не глобальных событий, имеющих глобальные последствия для системы (как, например, события в журнале безопасности). [!INCLUDE[netfx_current_short](../../../../../includes/netfx-current-short-md.md)] объединяет и коррелирует запись событий трассировки [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] , журналов сообщений [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] и записей отслеживания [!INCLUDE[wf1](../../../../../includes/wf1-md.md)] в журналы приложений и служб.  
   
@@ -57,7 +57,7 @@ ms.lasthandoff: 04/28/2018
  С помощью инфраструктуры ETW трассировку можно включать и настраивать динамически, используя стандартные средства Windows. Дополнительные сведения см. в разделе [динамически Включение аналитической трассировки](../../../../../docs/framework/wcf/diagnostics/etw/dynamically-enabling-analytic-tracing.md).  
   
 ### <a name="message-flow-tracing"></a>Трассировка потока сообщений  
- [!INCLUDE[crabout](../../../../../includes/crabout-md.md)] том, как включить трассировку потока сообщений, см. в разделе [Configuring Message Flow Tracing](../../../../../docs/framework/wcf/diagnostics/etw/configuring-message-flow-tracing.md).  
+ Дополнительные сведения о том, как включить трассировку потока сообщений см. в разделе [настройки трассировки потока сообщений](../../../../../docs/framework/wcf/diagnostics/etw/configuring-message-flow-tracing.md).  
   
 ### <a name="keywords"></a>Ключевые слова  
  Ключевые слова используются, чтобы фильтровать сообщения трассировки и определять, какой компонент [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] создал данное событие. Дополнительные сведения см. в разделе [динамически Включение аналитической трассировки](../../../../../docs/framework/wcf/diagnostics/etw/dynamically-enabling-analytic-tracing.md).

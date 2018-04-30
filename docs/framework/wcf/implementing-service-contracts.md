@@ -18,11 +18,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 2a9c34f67de6f4f8b4a8d22dac7e8bf1c9555498
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 5e477b11893d2b74ebe1674225e05b13cb9f67ca
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="implementing-service-contracts"></a>Реализация контрактов служб
 Служба - это класс, который предоставляет клиентам имеющиеся функциональные возможности в одной или нескольких конечных точках. Для создания службы необходимо создать класс, реализующий контракт [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]. Это можно сделать одним из двух способов. Во-первых, можно определить контракт отдельно в качестве интерфейса, а затем создать класс, реализующий этот интерфейс. Во-вторых, можно непосредственно создать класс и контракт, разместив атрибут <xref:System.ServiceModel.ServiceContractAttribute> в самом классе, а атрибут <xref:System.ServiceModel.OperationContractAttribute> - в методах, доступных клиентам службы.  
@@ -68,7 +68,7 @@ class MathService
   
  Некоторые свойства (такие как параллелизм и создание экземпляров) можно задать на уровне реализации службы и операции. Дополнительные сведения см. в разделе [проектирование и реализация служб](../../../docs/framework/wcf/designing-and-implementing-services.md).  
   
- После реализации контракта службы необходимо создать для службы одну или более конечных точек. Дополнительные сведения см. в разделе [Общие сведения о создании конечной точки](../../../docs/framework/wcf/endpoint-creation-overview.md). [!INCLUDE[crabout](../../../includes/crabout-md.md)] Запуск службы см. в разделе [размещение служб](../../../docs/framework/wcf/hosting-services.md).  
+ После реализации контракта службы необходимо создать для службы одну или более конечных точек. Дополнительные сведения см. в разделе [Общие сведения о создании конечной точки](../../../docs/framework/wcf/endpoint-creation-overview.md). Дополнительные сведения о запуске службы см. в разделе [размещение служб](../../../docs/framework/wcf/hosting-services.md).  
   
 ## <a name="see-also"></a>См. также  
  [Проектирование и реализация служб](../../../docs/framework/wcf/designing-and-implementing-services.md)  

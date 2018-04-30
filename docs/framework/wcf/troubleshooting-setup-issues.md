@@ -1,24 +1,26 @@
 ---
-title: "Устранение неполадок с установкой"
-ms.custom: 
+title: Устранение неполадок с установкой
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 1644f885-c408-4d5f-a5c7-a1a907bc8acd
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 284805f8ca1fb9778dc6bccd9807fa86dc7e2d77
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 9238c1a1c9092e6806ee941bd7c992071cf98e09
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="troubleshooting-setup-issues"></a>Устранение неполадок с установкой
 В этом разделе описано, как устранять неполадки установки [!INCLUDE[indigo1](../../../includes/indigo1-md.md)].  
@@ -63,7 +65,7 @@ ms.lasthandoff: 12/22/2017
   
  Чтобы решить описанную выше проблему, необходимо выполнить следующие действия.  
   
-1.  Запустите [WMI Diagnosis Utility, версия 2.0](http://go.microsoft.com/fwlink/?LinkId=94685) для восстановления службы WMI. [!INCLUDE[crabout](../../../includes/crabout-md.md)]с помощью этого средства см. [WMI Diagnosis Utility](http://go.microsoft.com/fwlink/?LinkId=94686) раздела.  
+1.  Запустите [WMI Diagnosis Utility, версия 2.0](http://go.microsoft.com/fwlink/?LinkId=94685) для восстановления службы WMI. Дополнительные сведения об использовании этого инструмента см. в разделе [WMI Diagnosis Utility](http://go.microsoft.com/fwlink/?LinkId=94686) раздела.  
   
  Восстановите установку .NET Framework 3.0 с помощью **Установка и удаление программ** приложения расположен в **панели управления**, или удалите и заново установите .NET Framework 3.0.  
   

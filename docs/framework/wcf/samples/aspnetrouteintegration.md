@@ -1,27 +1,29 @@
 ---
 title: AspNetRouteIntegration
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 0638ce0e-d053-47df-a447-688e447a03fb
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: bf4f96116e8a4e687e7818796fa4b95e1b9b171a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 93d248030c4b32bd7725cf9c6fbbb829a19f7845
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="aspnetrouteintegration"></a>AspNetRouteIntegration
-Этот образец демонстрирует размещение службы REST [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] с помощью маршрутов ASP.NET. [Базовой службы ресурсов](../../../../docs/framework/wcf/samples/basic-resource-service.md) образца показано резидентной версию этого сценария и обсуждается реализация service в глубину. В этом разделе основное внимание уделено возможности интеграции с ASP.NET. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] о маршрутизации ASP.NET см. в разделе <xref:System.Web.Routing>.  
+Этот образец демонстрирует размещение службы REST [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] с помощью маршрутов ASP.NET. [Базовой службы ресурсов](../../../../docs/framework/wcf/samples/basic-resource-service.md) образца показано резидентной версию этого сценария и обсуждается реализация service в глубину. В этом разделе основное внимание уделено возможности интеграции с ASP.NET. Дополнительные сведения о маршрутизации ASP.NET см. в разделе <xref:System.Web.Routing>.  
   
 ## <a name="sample-details"></a>Подробные сведения об образце  
  Служба [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] предоставляет доступ к коллекции клиентов в стиле REST (относительно ресурсов). Как и службу [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] на основе SOAP, эту службу можно разместить в ASP.NET с помощью SVC-файла. Однако зачастую это нежелательно для работы по HTTP, поскольку в этом случае для службы требуется указание SVC-файла в URL. Кроме того, в этом случае требуется развертывание SVC-файла вместе с библиотекой службы. Этих ограничений можно избежать, разместив службы с помощью маршрутов ASP.NET, как показано в данном образце.  
@@ -68,7 +70,7 @@ ms.lasthandoff: 12/22/2017
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите на страницу [Примеры Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все примеры [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Этот образец расположен в следующем каталоге.  
+>  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) Чтобы загрузить все [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] образцов. Этот образец расположен в следующем каталоге.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Web\AspNetRouteIntegration`  
   

@@ -31,14 +31,14 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 61197255c11745c2c3f6f60db084b96dc812cb00
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 8d4606023c1a9f3252e9039da547f384d27b7ecd
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="wpf-security-strategy---platform-security"></a>Стратегия безопасности WPF — безопасность платформы
-Хотя [!INCLUDE[TLA#tla_wpf](../../../includes/tlasharptla-wpf-md.md)] предоставляет множество служб безопасности, предусмотрена также возможность использования функций безопасности базовой платформы, включая операционную систему, [!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)] и [!INCLUDE[TLA2#tla_ie](../../../includes/tla2sharptla-ie-md.md)]. Эти уровни объединяются для обеспечения в [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] надежной модели безопасности с глубокой защитой, которая пытается исключить любые точки сбоя, как показано на следующем рисунке.  
+Windows Presentation Foundation (WPF) обеспечивает широкий набор служб безопасности, он также использует функции безопасности от базовой платформы, включая операционную систему, [!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)], и [!INCLUDE[TLA2#tla_ie](../../../includes/tla2sharptla-ie-md.md)]. Эти уровни объединяются для обеспечения в [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] надежной модели безопасности с глубокой защитой, которая пытается исключить любые точки сбоя, как показано на следующем рисунке.  
   
  ![Иллюстрация системы безопасности WPF](../../../docs/framework/wpf/media/windowplatformsecurity.PNG "windowplatformsecurity")  
   

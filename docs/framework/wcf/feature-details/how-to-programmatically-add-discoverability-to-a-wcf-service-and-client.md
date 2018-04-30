@@ -1,24 +1,26 @@
 ---
-title: "Как программно добавить возможность обнаружения к службе и клиенту WCF"
-ms.custom: 
+title: Как программно добавить возможность обнаружения к службе и клиенту WCF
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 4f7ae7ab-6fc8-4769-9730-c14d43f7b9b1
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a0a59788544a32b78e75ac25e787dcbae478451e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 3c0da3598b115df4f135ac3fab516447df85e258
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-programmatically-add-discoverability-to-a-wcf-service-and-client"></a>Как программно добавить возможность обнаружения к службе и клиенту WCF
 В этом разделе описано, как сделать службу [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] доступной для обнаружения. Он основан на [резидентной](http://go.microsoft.com/fwlink/?LinkId=145523) образца.  
@@ -231,7 +233,7 @@ ms.lasthandoff: 12/22/2017
     ```  
   
 ## <a name="example"></a>Пример  
- Ниже приведен полный листинг кода для данного образца. Поскольку этот код основан на [резидентной](http://go.microsoft.com/fwlink/?LinkId=145523) примера перечислены только те файлы, которые будут изменены. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Пример резидентного размещения, в разделе [инструкции по установке](http://go.microsoft.com/fwlink/?LinkId=145522).  
+ Ниже приведен полный листинг кода для данного образца. Поскольку этот код основан на [резидентной](http://go.microsoft.com/fwlink/?LinkId=145523) примера перечислены только те файлы, которые будут изменены. Дополнительные сведения об образце резидентной см. в разделе [инструкции по установке](http://go.microsoft.com/fwlink/?LinkId=145522).  
   
 ```csharp  
 // Service.cs  

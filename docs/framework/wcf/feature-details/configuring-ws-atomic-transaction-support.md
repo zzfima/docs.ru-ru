@@ -1,28 +1,28 @@
 ---
-title: "Настройка поддержки транзакций WS-Atomic"
-ms.custom: 
+title: Настройка поддержки транзакций WS-Atomic
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - WS-AT protocol [WCF], configuring WS-Atomic Transaction
 ms.assetid: cb9f1c9c-1439-4172-b9bc-b01c3e09ac48
-caps.latest.revision: 
+caps.latest.revision: 31
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 922b2048a262e722a11ee77c41e96dddec411326
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b2d94c96b8cc225344300540d9fc406a4742db2a
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="configuring-ws-atomic-transaction-support"></a>Настройка поддержки транзакций WS-Atomic
 В этой теме описывается, как можно настроить поддержку WS-AtomicTransaction (WS-AT) с помощью программы конфигурации WS-AT.  
@@ -34,11 +34,11 @@ ms.lasthandoff: 12/22/2017
   
  Окно командной строки можно открыть в папке установки Windows SDK "%WINDIR%\Microsoft.NET\Framework\v3.0\Windows Communication Foundation".  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]средство командной строки в разделе [программы конфигурации WS-AtomicTransaction (wsatConfig.exe)](../../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md).  
+ Дополнительные сведения о средстве командной строки см. в разделе [программы конфигурации WS-AtomicTransaction (wsatConfig.exe)](../../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md).  
   
  Если вы используете [!INCLUDE[wxp](../../../../includes/wxp-md.md)] или [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)], доступны оснастки MMC, перейдя к **управления панели/Администрирование/службы компонентов**, щелкните правой кнопкой мыши **Мой компьютер**, и При выборе **свойства**. Здесь же можно настроить координатор распределенных транзакций (Майкрософт). Доступные для настройки параметры сгруппированы на вкладке **WS-AT** вкладки. Если вы используете Windows Vista или [!INCLUDE[lserver](../../../../includes/lserver-md.md)], можно найти оснастку MMC, щелкнув **запустить** и введите `dcomcnfg.exe` в **поиска** поле. После открытия консоли MMC перейдите к **Мой компьютер\координатор транзакций транзакций\локальный DTC** узел, щелкните правой кнопкой мыши и выберите **свойства**. Доступные для настройки параметры сгруппированы на вкладке **WS-AT** вкладки.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]оснастки, см. в разделе [оснастку консоли MMC для настройки WS-AtomicTransaction](../../../../docs/framework/wcf/ws-atomictransaction-configuration-mmc-snap-in.md).  
+ Дополнительные сведения об оснастке см. в разделе [оснастку консоли MMC для настройки WS-AtomicTransaction](../../../../docs/framework/wcf/ws-atomictransaction-configuration-mmc-snap-in.md).  
   
  Для работы с пользовательским интерфейсом средства необходимо зарегистрировать файл WsatUI.dll. Путь к этому файлу:  
   
@@ -88,7 +88,7 @@ ms.lasthandoff: 12/22/2017
 ### <a name="configuring-msdtc-to-use-certificates"></a>Настройка MSDTC для использования сертификатов  
  Поскольку служба протокола WS-AT работает как клиент и как сервер, она должна прослушивать входящие подключения и инициировать исходящие. Поэтому координатор MSDTC необходимо настроить таким образом, чтобы он знал, какой сертификат использовать для связи с внешними сторонами, а какие авторизовывать во время приема входящего подключения.  
   
- Это можно осуществить с помощью оснастки MMC WS-AT. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Это средство в разделе [оснастку консоли MMC для настройки WS-AtomicTransaction](../../../../docs/framework/wcf/ws-atomictransaction-configuration-mmc-snap-in.md) раздела. Далее описывается, как устанавливать отношения доверия между двумя компьютерами с MSDTC.  
+ Это можно осуществить с помощью оснастки MMC WS-AT. Дополнительные сведения об этом инструменте см. в разделе [оснастку консоли MMC для настройки WS-AtomicTransaction](../../../../docs/framework/wcf/ws-atomictransaction-configuration-mmc-snap-in.md) раздела. Далее описывается, как устанавливать отношения доверия между двумя компьютерами с MSDTC.  
   
 1.  Задайте параметры компьютера A. Для «Сертификата конечной точки» выберите certA. Для «Авторизованных сертификатов» выберите certB.  
   

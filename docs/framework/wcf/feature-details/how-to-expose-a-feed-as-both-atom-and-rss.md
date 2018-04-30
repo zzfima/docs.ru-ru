@@ -19,14 +19,14 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 5a2ca8d6ce6cf907538c534f97300e418f5e825f
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 14059ebc3efe57a38a093faed9cfbd254c372920
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-expose-a-feed-as-both-atom-and-rss"></a>Как предоставить доступ к каналу в форматах Atom и RSS
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] позволяет создавать службу, предоставляющую веб-канал синдикации. В этом разделе рассматривается процесс создания службы синдикации, предоставляющей веб-канал синдикации с помощью Atom 1.0 и RSS 2.0. Эта служба предоставляет одну конечную точку, которая может вернуть любой формат синдикации. В целях упрощения в данном образце используется резидентная служба. В рабочей среде служба такого типа размещается в IIS или WAS. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] разные [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] варианты размещения, в разделе [размещения](../../../../docs/framework/wcf/feature-details/hosting.md).  
+[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] позволяет создавать службу, предоставляющую веб-канал синдикации. В этом разделе рассматривается процесс создания службы синдикации, предоставляющей веб-канал синдикации с помощью Atom 1.0 и RSS 2.0. Эта служба предоставляет одну конечную точку, которая может вернуть любой формат синдикации. В целях упрощения в данном образце используется резидентная служба. В рабочей среде служба такого типа размещается в IIS или WAS. Дополнительные сведения о различных [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] варианты размещения, в разделе [размещения](../../../../docs/framework/wcf/feature-details/hosting.md).  
   
 ### <a name="to-create-a-basic-syndication-service"></a>Создание базовой службы синдикации  
   

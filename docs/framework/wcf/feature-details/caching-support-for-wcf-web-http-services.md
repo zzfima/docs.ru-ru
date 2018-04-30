@@ -16,14 +16,14 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 912bfae4ab867540c01af798f883a0249ec297f7
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: cffa0e1c18fd3e1207b40c699684ebaa49511384
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="caching-support-for-wcf-web-http-services"></a>Поддержка кэширования для веб-служб HTTP WCF
-[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] позволяет использовать декларативный механизм кэширования, который уже доступен в ASP.NET в службах WCF Web HTTP. Это позволяет кэшировать ответы от операций службы WCF Web HTTP. Когда пользователь отправляет инструкцию HTTP GET службе, настроенной для кэширования, ASP.NET отправляет обратно кэшированный ответ, метод службы при этом не вызывается. По истечении срока действия кэш в следующий раз, когда пользователь отправит инструкцию HTTP GET, будет вызван метод службы и ответ будет снова кэширован. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Кэш ASP.NET, в разделе [Обзор технологии кэширования ASP.NET](http://go.microsoft.com/fwlink/?LinkId=152534)  
+[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] позволяет использовать декларативный механизм кэширования, который уже доступен в ASP.NET в службах WCF Web HTTP. Это позволяет кэшировать ответы от операций службы WCF Web HTTP. Когда пользователь отправляет инструкцию HTTP GET службе, настроенной для кэширования, ASP.NET отправляет обратно кэшированный ответ, метод службы при этом не вызывается. По истечении срока действия кэш в следующий раз, когда пользователь отправит инструкцию HTTP GET, будет вызван метод службы и ответ будет снова кэширован. Дополнительные сведения о кэшировании ASP.NET см. в разделе [Обзор технологии кэширования ASP.NET](http://go.microsoft.com/fwlink/?LinkId=152534)  
   
 ## <a name="basic-web-http-service-caching"></a>Кэширование базовой службы Web HTTP  
  Чтобы включить кэширование службы WEB http, необходимо сначала включить совместимость с ASP.NET, применив к службе атрибут <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute> и установив <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute.RequirementsMode%2A> для <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Allowed> или <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Required>.  
@@ -71,7 +71,7 @@ public class Service
 </system.web>  
 ```  
   
- Этот же элемент конфигурации доступен приложениям ASP.NET. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] о профилях кэша ASP.NET см. в разделе <xref:System.Web.Configuration.OutputCacheProfile>. Самыми важными атрибутами для служб Web HTTP в профиле кэша являются `cacheDuration` и `varyByParam`. Оба атрибута обязательные. `cacheDuration` задает время (в секундах), в течение которого ответ должен храниться в кэше. `varyByParam` позволяет задать параметр строки запроса, используемый для кэширования ответов. Все запросы, составленные с разными значениями параметра строки запроса, кэшируются отдельно. Например, когда исходный запрос для http://MyServer/MyHttpService/MyOperation?param=10 все последующие запросы с таким URI будет возвращено кэшированный ответ (пока не истечет срок кэширования). Ответы для аналогичного запроса, имеющего другое значение для параметра строки запроса, кэшируются отдельно. Если такое раздельное кэширование нежелательно, установите параметр `varyByParam` в значение «none».  
+ Этот же элемент конфигурации доступен приложениям ASP.NET. Дополнительные сведения о профилях кэша ASP.NET см. в разделе <xref:System.Web.Configuration.OutputCacheProfile>. Самыми важными атрибутами для служб Web HTTP в профиле кэша являются `cacheDuration` и `varyByParam`. Оба атрибута обязательные. `cacheDuration` задает время (в секундах), в течение которого ответ должен храниться в кэше. `varyByParam` позволяет задать параметр строки запроса, используемый для кэширования ответов. Все запросы, составленные с разными значениями параметра строки запроса, кэшируются отдельно. Например, когда исходный запрос для http://MyServer/MyHttpService/MyOperation?param=10 все последующие запросы с таким URI будет возвращено кэшированный ответ (пока не истечет срок кэширования). Ответы для аналогичного запроса, имеющего другое значение для параметра строки запроса, кэшируются отдельно. Если такое раздельное кэширование нежелательно, установите параметр `varyByParam` в значение «none».  
   
 ## <a name="sql-cache-dependency"></a>Зависимость кэша SQL  
  Ответы службы Web HTTP также могут быть кэшироваться с зависимостью от кэша SQL. Если служба WCF Web HTTP зависит от данных, которые хранятся в базе данных SQL, можно кэшировать ответ службы и аннулировать кэшированный ответ при изменении данных в таблице базы данных SQL. Это полностью настраивается в файле Web.config. Вначале необходимо определить строку подключения в <`connectionStrings`> элемент.  

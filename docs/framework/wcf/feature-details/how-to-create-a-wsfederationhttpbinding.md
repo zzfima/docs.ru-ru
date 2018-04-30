@@ -22,11 +22,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 8962564bbefc3f43261a2979ae9765369b211f15
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: f43b95df73b35b7dc7c34c2e16364dfa7bbdbee4
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-create-a-wsfederationhttpbinding"></a>Практическое руководство. Создание WSFederationHttpBinding
 В [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], <xref:System.ServiceModel.WSFederationHttpBinding> класса ([\<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) в конфигурации) предоставляет механизм для предоставления федеративной службы. т. е. к службе, требующей проверки подлинности клиентов с использованием маркера безопасности, выданного службой маркеров безопасности. В этом разделе показано, как настраивать привязку <xref:System.ServiceModel.WSFederationHttpBinding> в коде и в конфигурации. После создания привязки можно настроить конечную точку на использование этой привязки.  
@@ -48,7 +48,7 @@ ms.lasthandoff: 04/28/2018
   
      URI для маркера SAML 1.1 «http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.1#SAMLV1.1».  
   
-4.  Необязательный. В федеративных службах присвойте свойству <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.IssuerMetadataAddress%2A> URL-адрес метаданных службы маркеров безопасности. Конечная точка метаданных позволяет клиентам службы выбрать соответствующую пару «привязка - конечная точка», если служба настроена на публикацию метаданных. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Публикация метаданных, в разделе [публикация метаданных](../../../../docs/framework/wcf/feature-details/publishing-metadata.md).  
+4.  Необязательный. В федеративных службах присвойте свойству <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.IssuerMetadataAddress%2A> URL-адрес метаданных службы маркеров безопасности. Конечная точка метаданных позволяет клиентам службы выбрать соответствующую пару «привязка - конечная точка», если служба настроена на публикацию метаданных. Дополнительные сведения о публикации метаданных см. в разделе [публикация метаданных](../../../../docs/framework/wcf/feature-details/publishing-metadata.md).  
   
  Можно также задать другие свойства, в том числе тип ключа, используемого в качестве ключа проверки в выданном маркере, набор алгоритмов для взаимодействия между клиентом и службой, необходимость согласования или явного задания учетных данных службы, конкретные утверждения, которые служба ожидает получить в выданном маркере, а также любые дополнительные элементы XML, которые необходимо добавить в запрос, отправляемый клиентом службе маркеров безопасности.  
   
@@ -103,7 +103,7 @@ ms.lasthandoff: 04/28/2018
   
 12. Дополнительные сведения см. в разделе [службы удостоверений и проверки подлинности](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
   
-13. Является обязательным для клиента, если не задан локальный издатель; для службы не используется. Создание [ \<привязки >](../../../../docs/framework/misc/binding.md) элемента в разделе привязки, который может использоваться для взаимодействия со службой маркеров безопасности. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Создание привязки, в разделе [как: задание привязки службы в конфигурации](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md).  
+13. Является обязательным для клиента, если не задан локальный издатель; для службы не используется. Создание [ \<привязки >](../../../../docs/framework/misc/binding.md) элемента в разделе привязки, который может использоваться для взаимодействия со службой маркеров безопасности. Дополнительные сведения о создании привязки см. в разделе [как: задание привязки службы в конфигурации](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md).  
   
 14. Укажите привязку, созданную на предыдущем этапе, задав атрибуты `binding` и `bindingConfiguration` элемента `<issuer>`.  
   

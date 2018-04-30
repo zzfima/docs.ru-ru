@@ -1,12 +1,13 @@
 ---
-title: "Архитектура WPF"
-ms.custom: 
+title: Архитектура WPF
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - properties [WPF], attached
@@ -23,19 +24,20 @@ helpviewer_keywords:
 - data templates [WPF]
 - thread [WPF], affinity
 ms.assetid: 8579c10b-76ab-4c52-9691-195ce02333c8
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4d688bb460b01c0b3fe4d7571916b887cd485b87
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 29c8e2d632c37a299389b1bdc7f3f19f7df2f7e7
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="wpf-architecture"></a>Архитектура WPF
-В этом разделе предлагается интерактивный обзор иерархии классов [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]. Он охватывает большую часть основных подсистем [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] и описывает их взаимодействие. Здесь также подробно рассматриваются некоторые архитектурные решения [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].  
+Здесь представлен обзор возможностей иерархии классов Windows Presentation Foundation (WPF). Он охватывает большую часть основных подсистем [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] и описывает их взаимодействие. Здесь также подробно рассматриваются некоторые архитектурные решения [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].  
   
   
 <a name="System_Object"></a>   
@@ -64,7 +66,7 @@ ms.lasthandoff: 12/22/2017
   
  Чтобы иметь больше свойств управления системой, требовалась более полная система свойств, чем предоставляемая [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]. Простым примером такой полноты являются уведомления об изменении. Для двусторонней привязки необходимо, чтобы обе стороны привязки поддерживали уведомления об изменениях. Чтобы поведение зависело от значений свойств, необходимо получать уведомление в случае изменения значения свойства. В [!INCLUDE[TLA#tla_netframewk](../../../../includes/tlasharptla-netframewk-md.md)] существует интерфейс **INotifyPropertyChange**, который позволяет объекту публиковать уведомления об изменениях (однако это необязательно).  
   
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]предоставляет обширную систему свойств, производный от <xref:System.Windows.DependencyObject> типа. Система свойств действительно является системой свойств "зависимостей" в том смысле, что она отслеживает зависимости между выражениями свойств и автоматически проверяет значение свойства при изменении зависимости. Например, если у вас есть свойство, которое наследует (например <xref:System.Windows.Controls.Control.FontSize%2A>), система автоматически обновляется при изменении родительский элемент, который наследует значение свойства.  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] предоставляет обширную систему свойств, производный от <xref:System.Windows.DependencyObject> типа. Система свойств действительно является системой свойств "зависимостей" в том смысле, что она отслеживает зависимости между выражениями свойств и автоматически проверяет значение свойства при изменении зависимости. Например, если у вас есть свойство, которое наследует (например <xref:System.Windows.Controls.Control.FontSize%2A>), система автоматически обновляется при изменении родительский элемент, который наследует значение свойства.  
   
  Основой системы свойств [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] является понятие "выражение свойства". В этом первом выпуске [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] система выражений свойств закрыта и все выражения предоставлены как часть платформы. Выражения объясняют, почему система свойств не поддерживает привязку к данным, создание стилей или жестко заданное наследование, но вместо этого представлена слоями более поздних версий в платформе.  
   
@@ -74,9 +76,9 @@ ms.lasthandoff: 12/22/2017
   
 <a name="System_Windows_Media_Visual"></a>   
 ## <a name="systemwindowsmediavisual"></a>System.Windows.Media.Visual  
- После определения системы следующим шагом является рисование пикселей на экране. <xref:System.Windows.Media.Visual> Предоставляет класс для построения дерева визуальных объектов, которые дополнительно включают инструкции по рисованию и метаданные о способе визуализации этих инструкций (обрезки, преобразования, и т. д.). <xref:System.Windows.Media.Visual>должен быть облегченным и гибким, поэтому большинство возможностей не имеют открытого [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] раскрытия и полагаются на защищенных функций обратного вызова.  
+ После определения системы следующим шагом является рисование пикселей на экране. <xref:System.Windows.Media.Visual> Предоставляет класс для построения дерева визуальных объектов, которые дополнительно включают инструкции по рисованию и метаданные о способе визуализации этих инструкций (обрезки, преобразования, и т. д.). <xref:System.Windows.Media.Visual> должен быть облегченным и гибким, поэтому большинство возможностей не имеют открытого [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] раскрытия и полагаются на защищенных функций обратного вызова.  
   
- <xref:System.Windows.Media.Visual>на самом деле это точка входа [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] систему композиции. <xref:System.Windows.Media.Visual>— точка соединения между двумя подсистемами, управляемый [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] и неуправляемых milcore.  
+ <xref:System.Windows.Media.Visual> на самом деле это точка входа [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] систему композиции. <xref:System.Windows.Media.Visual> — точка соединения между двумя подсистемами, управляемый [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] и неуправляемых milcore.  
   
  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] отображает данные, проходя по неуправляемым структурам данных под управлением milcore. Эти структуры, называемые узлами композиции, представляют собой иерархическое дерево отображения с инструкциями по отрисовке в каждом узле. Это дерево, показанное в правой части расположенного ниже рисунка, доступно только через протокол обмена сообщениями.  
   
@@ -100,11 +102,11 @@ ms.lasthandoff: 12/22/2017
   
 <a name="System_Windows_UIElement"></a>   
 ## <a name="systemwindowsuielement"></a>System.Windows.UIElement  
- <xref:System.Windows.UIElement>Определяет подсистемы ядра, включая разметку, входные данные и события.  
+ <xref:System.Windows.UIElement> Определяет подсистемы ядра, включая разметку, входные данные и события.  
   
  Макет представляет собой основное понятие в [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]. Во многих системах либо присутствует фиксированный набор моделей для макетов (HTML поддерживает три модели для макетов: поток, абсолютное значение и таблицы), либо вообще нет модели для макета (User32 в действительности поддерживает только абсолютное размещение). Предпосылкой для создания [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] стало желание разработчиков и конструкторов иметь гибкую, расширяемую модель макета, которая управлялась бы значениями свойств, а не императивной логикой. В <xref:System.Windows.UIElement> уровня, вводится основное соглашение для макета — двухэтапная модель с <xref:System.Windows.UIElement.Measure%2A> и <xref:System.Windows.UIElement.Arrange%2A> передает.  
   
- <xref:System.Windows.UIElement.Measure%2A>позволяет определить требуемый размер просит разрешения на компонент. Этот этап является отдельным от <xref:System.Windows.UIElement.Arrange%2A> , поскольку существует множество ситуаций, когда родительский элемент запрашивает измерение несколько раз, чтобы определить его оптимального положения и размера дочернего. Тот факт, что родительские элементы запрашивают измерение дочерних, демонстрирует еще один ключевой принцип [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] — размер по содержимому. Все элементы управления в [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] поддерживают возможность изменения размера по размеру их содержимого. Это значительно упрощает локализацию и позволяет осуществлять динамическую компоновку элементов в соответствии с изменением размеров. <xref:System.Windows.UIElement.Arrange%2A> Этап позволяет родительской для размещения и определить окончательный размер каждого дочернего элемента.  
+ <xref:System.Windows.UIElement.Measure%2A> позволяет определить требуемый размер просит разрешения на компонент. Этот этап является отдельным от <xref:System.Windows.UIElement.Arrange%2A> , поскольку существует множество ситуаций, когда родительский элемент запрашивает измерение несколько раз, чтобы определить его оптимального положения и размера дочернего. Тот факт, что родительские элементы запрашивают измерение дочерних, демонстрирует еще один ключевой принцип [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] — размер по содержимому. Все элементы управления в [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] поддерживают возможность изменения размера по размеру их содержимого. Это значительно упрощает локализацию и позволяет осуществлять динамическую компоновку элементов в соответствии с изменением размеров. <xref:System.Windows.UIElement.Arrange%2A> Этап позволяет родительской для размещения и определить окончательный размер каждого дочернего элемента.  
   
  Часто длительное время затрачивается идет речь о стороны [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] — <xref:System.Windows.Media.Visual> и связанных объектов. Однако существует также множество новшеств со стороны ввода данных. Вероятно, наиболее фундаментальным изменением в модели ввода для [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] является согласованная модель, в соответствии с которой события ввода направляются через систему.  
   
@@ -120,11 +122,11 @@ ms.lasthandoff: 12/22/2017
   
 <a name="System_Windows_FrameworkElement"></a>   
 ## <a name="systemwindowsframeworkelement"></a>System.Windows.FrameworkElement  
- <xref:System.Windows.FrameworkElement>можно рассматривать с двумя разными способами. Он предоставляет набор политик и настроек для подсистем, введенных на нижнем уровне [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]. В нем также вводится набор новых подсистем.  
+ <xref:System.Windows.FrameworkElement> можно рассматривать с двумя разными способами. Он предоставляет набор политик и настроек для подсистем, введенных на нижнем уровне [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]. В нем также вводится набор новых подсистем.  
   
- Основной политики, представленных <xref:System.Windows.FrameworkElement> вокруг макет приложения. <xref:System.Windows.FrameworkElement>выполняет построение на базовый макет контракт, представленные <xref:System.Windows.UIElement> и добавляет понятие "ячейки «макета», упрощающее авторов макета согласованного набора управляемых свойствами семантик макета. Такие свойства, как <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>, <xref:System.Windows.FrameworkElement.VerticalAlignment%2A>, <xref:System.Windows.FrameworkElement.MinWidth%2A>, и <xref:System.Windows.FrameworkElement.Margin%2A> (к должностям) обеспечивают всем компонентам, производным от <xref:System.Windows.FrameworkElement> согласованное поведение внутри контейнеров макета.  
+ Основной политики, представленных <xref:System.Windows.FrameworkElement> вокруг макет приложения. <xref:System.Windows.FrameworkElement> выполняет построение на базовый макет контракт, представленные <xref:System.Windows.UIElement> и добавляет понятие "ячейки «макета», упрощающее авторов макета согласованного набора управляемых свойствами семантик макета. Такие свойства, как <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>, <xref:System.Windows.FrameworkElement.VerticalAlignment%2A>, <xref:System.Windows.FrameworkElement.MinWidth%2A>, и <xref:System.Windows.FrameworkElement.Margin%2A> (к должностям) обеспечивают всем компонентам, производным от <xref:System.Windows.FrameworkElement> согласованное поведение внутри контейнеров макета.  
   
- <xref:System.Windows.FrameworkElement>упрощает также [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] подверженности множество функций, найденные в уровне ядра [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]. Например <xref:System.Windows.FrameworkElement> предоставляет прямой доступ к анимации с помощью <xref:System.Windows.FrameworkElement.BeginStoryboard%2A> метод. Объект <xref:System.Windows.Media.Animation.Storyboard> предоставляет способ создания скриптов нескольких анимаций вместо набора свойств.  
+ <xref:System.Windows.FrameworkElement> упрощает также [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] подверженности множество функций, найденные в уровне ядра [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]. Например <xref:System.Windows.FrameworkElement> предоставляет прямой доступ к анимации с помощью <xref:System.Windows.FrameworkElement.BeginStoryboard%2A> метод. Объект <xref:System.Windows.Media.Animation.Storyboard> предоставляет способ создания скриптов нескольких анимаций вместо набора свойств.  
   
  Две наиболее важные вещи, <xref:System.Windows.FrameworkElement> появился, привязка данных и стили.  
   
@@ -138,7 +140,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="systemwindowscontrolscontrol"></a>System.Windows.Controls.Control  
  Наиболее значимая возможность для элемента управления — это использование шаблонов. Если представлять себе систему композиции WPF как систему отрисовки сохраненного режима, то шаблоны позволяют элементу управления описывать свою отрисовку в параметризированной, декларативной форме. Объект <xref:System.Windows.Controls.ControlTemplate> фактически является всего лишь скрипт для создания набора дочерних элементов с привязками к свойствам, предлагаемым элементом управления.  
   
- <xref:System.Windows.Controls.Control>предоставляет набор стандартных свойств <xref:System.Windows.Controls.Control.Foreground%2A>, <xref:System.Windows.Controls.Control.Background%2A>, <xref:System.Windows.Controls.Control.Padding%2A>, Вот некоторые из них, которые авторы шаблона можно затем использовать для настройки отображения элемента управления. Реализация элемента управления обеспечивает модель данных и модель взаимодействия. Модель взаимодействия определяет набор команд (таких как "Закрыть" для окна) и привязки к действиям ввода (таким как нажатие красного символа X в верхнем углу окна). Модель данных предоставляет набор свойств либо для настройки модели взаимодействия, либо для настройки отображения (определяется шаблоном).  
+ <xref:System.Windows.Controls.Control> предоставляет набор стандартных свойств <xref:System.Windows.Controls.Control.Foreground%2A>, <xref:System.Windows.Controls.Control.Background%2A>, <xref:System.Windows.Controls.Control.Padding%2A>, Вот некоторые из них, которые авторы шаблона можно затем использовать для настройки отображения элемента управления. Реализация элемента управления обеспечивает модель данных и модель взаимодействия. Модель взаимодействия определяет набор команд (таких как "Закрыть" для окна) и привязки к действиям ввода (таким как нажатие красного символа X в верхнем углу окна). Модель данных предоставляет набор свойств либо для настройки модели взаимодействия, либо для настройки отображения (определяется шаблоном).  
   
  Это разделение между моделью данных (свойства), моделью взаимодействия (команды и события) и моделью отображения (шаблоны) позволяет полностью настроить внешний вид и поведение элемента управления.  
   

@@ -1,24 +1,26 @@
 ---
-title: "Корреляция обмена контекстом"
-ms.custom: 
+title: Корреляция обмена контекстом
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 1e2852be-3601-45ae-b507-ccc465d45c60
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ee22feab20e2c96f3e708a277f9048f739213520
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: bf84dfce2b2164d78bf07f840d66d6089a16ff23
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="context-exchange-correlation"></a>Корреляция обмена контекстом
 Корреляция контекста основан на механизме обмена контекстом, описанной в [спецификации протокола обмена контекстом .NET](http://go.microsoft.com/fwlink/?LinkId=166059). Для связывания сообщений с нужным экземпляром корреляция контекста использует известный заголовок контекста или файл cookie. Для реализации корреляции контекста необходимо использование привязки на основе контекста, например <xref:System.ServiceModel.BasicHttpContextBinding>, <xref:System.ServiceModel.WSHttpContextBinding> или <xref:System.ServiceModel.NetTcpContextBinding> для конечных точек, предоставляемых для <xref:System.ServiceModel.Activities.WorkflowServiceHost>. В этом разделе описана работа корреляции контекста с действиями обмена сообщениями в службе рабочего процесса.  
@@ -54,7 +56,7 @@ SendReply ReplyToStartOrder = new SendReply
 ```  
   
 > [!NOTE]
->  В данном примере фактически используется два типа корреляции: контекстная корреляция и корреляция запросов и ответов. Контекстная корреляция используется для того, чтобы направить вызовы от клиентов к нужному экземпляру. Корреляция запросов и ответов используется действиями <xref:System.ServiceModel.Activities.Receive> и <xref:System.ServiceModel.Activities.SendReply> совместно для реализации двусторонней работы, моделируемой этими действиями. В этом примере контекстная корреляция явным образом настроен и <xref:System.ServiceModel.Activities.Receive> / <xref:System.ServiceModel.Activities.SendReply> пары использует корреляцию запросов и ответов по умолчанию, предоставляемый неявный <xref:System.ServiceModel.Activities.CorrelationHandle> управления <xref:System.ServiceModel.Activities.WorkflowServiceHost>. При использовании **ReceiveAndSendReply** явным образом настроен шаблон действия в конструкторе корреляция запросов и ответов рабочего процесса. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Корреляция запросов и ответов и неявного управления дескриптором взаимосвязи, в разделе [запрос-ответ](../../../../docs/framework/wcf/feature-details/request-reply-correlation.md) и [Общие сведения о корреляции](../../../../docs/framework/wcf/feature-details/correlation-overview.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)]**ReceiveAndSendReply** шаблон действия в разделе [ReceiveAndSendReply](/visualstudio/workflow-designer/receiveandsendreply-template-designer).  
+>  В данном примере фактически используется два типа корреляции: контекстная корреляция и корреляция запросов и ответов. Контекстная корреляция используется для того, чтобы направить вызовы от клиентов к нужному экземпляру. Корреляция запросов и ответов используется действиями <xref:System.ServiceModel.Activities.Receive> и <xref:System.ServiceModel.Activities.SendReply> совместно для реализации двусторонней работы, моделируемой этими действиями. В этом примере контекстная корреляция явным образом настроен и <xref:System.ServiceModel.Activities.Receive> / <xref:System.ServiceModel.Activities.SendReply> пары использует корреляцию запросов и ответов по умолчанию, предоставляемый неявный <xref:System.ServiceModel.Activities.CorrelationHandle> управления <xref:System.ServiceModel.Activities.WorkflowServiceHost>. При использовании **ReceiveAndSendReply** явным образом настроен шаблон действия в конструкторе корреляция запросов и ответов рабочего процесса. Дополнительные сведения о корреляции типа запрос ответ и неявного управления дескриптором взаимосвязи см. в разделе [запрос-ответ](../../../../docs/framework/wcf/feature-details/request-reply-correlation.md) и [Общие сведения о корреляции](../../../../docs/framework/wcf/feature-details/correlation-overview.md). Дополнительные сведения о **ReceiveAndSendReply** шаблон действия в разделе [ReceiveAndSendReply](/visualstudio/workflow-designer/receiveandsendreply-template-designer).  
   
  Последующие действия <xref:System.ServiceModel.Activities.Receive> в службе рабочего процесса могут ссылаться на <xref:System.ServiceModel.Activities.CorrelationHandle>, инициализированный <xref:System.ServiceModel.Activities.SendReply> в предыдущем примере.  
   
@@ -109,6 +111,6 @@ Send request2 = new Send
 };  
 ```  
   
- Обратите внимание, что в этих примерах корреляция контекста была настроена явным образом. Если рабочий процесс клиента не размещен в <xref:System.ServiceModel.Activities.WorkflowServiceHost>, то корреляция должна быть настроена явным образом, если только в действии <xref:System.ServiceModel.Activities.CorrelationScope> не содержатся другие действия. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Корреляция контекста, в разделе [NetContextExchangeCorrelation](http://msdn.microsoft.com/library/93c74a1a-b9e2-46c6-95c0-c9b0e9472caf) образца.  
+ Обратите внимание, что в этих примерах корреляция контекста была настроена явным образом. Если рабочий процесс клиента не размещен в <xref:System.ServiceModel.Activities.WorkflowServiceHost>, то корреляция должна быть настроена явным образом, если только в действии <xref:System.ServiceModel.Activities.CorrelationScope> не содержатся другие действия. Дополнительные сведения о корреляции контекста см. в разделе [NetContextExchangeCorrelation](http://msdn.microsoft.com/library/93c74a1a-b9e2-46c6-95c0-c9b0e9472caf) образца.  
   
  Если клиент, который выполняет вызовы службы рабочих процессов, сам не является рабочим процессом, он может производить повторяющиеся вызовы при условии, что контекст, возвращенный первым вызовом службы рабочих процессов, при последующих вызовах явным образом передается обратно. Прокси, сформированные при добавлении ссылки на службу в хранилище [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)], которые передают этот контекст по умолчанию.

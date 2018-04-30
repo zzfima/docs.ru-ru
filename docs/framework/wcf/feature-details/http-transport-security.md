@@ -1,24 +1,26 @@
 ---
-title: "Безопасность транспорта HTTP"
-ms.custom: 
+title: Безопасность транспорта HTTP
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: d3439262-c58e-4d30-9f2b-a160170582bb
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: f81a95546d593cd5a0acb6a89edf2f6c763f07df
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 2787c38603fd0f88878596a809d7e3c5cfdfb350
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="http-transport-security"></a>Безопасность транспорта HTTP
 Если в качестве транспорта используется протокол HTTP, безопасность обеспечивается реализацией протокола SSL (Secure Sockets Layer). Протокол SSL широко используется в Интернете для проверки подлинности службы при подключении клиента, а затем и для обеспечения конфиденциальности (шифрования) канала. В этом разделе описаны функционирование SSL и его реализация в [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
@@ -61,7 +63,7 @@ ms.lasthandoff: 12/22/2017
 ### <a name="using-httpcfg-for-ssl"></a>Использование средства HttpCfg для SSL  
  При создании резидентной [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] приложение, загрузите средство HttpCfg.exe, доступное на [средства для поддержки Windows XP Service Pack 2 узла](http://go.microsoft.com/fwlink/?LinkId=29002).  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]с помощью средства HttpCfg.exe Настройка порта с помощью сертификата X.509 в разделе [как: Настройка порта с SSL-сертификата](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md).  
+ Дополнительные сведения об использовании средства HttpCfg.exe Настройка порта с использованием сертификата X.509 см. в разделе [как: Настройка порта с SSL-сертификата](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md).  
   
 ## <a name="see-also"></a>См. также  
  [Безопасность транспорта](../../../../docs/framework/wcf/feature-details/transport-security.md)  

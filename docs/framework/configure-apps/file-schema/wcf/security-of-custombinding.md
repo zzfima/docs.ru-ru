@@ -1,24 +1,26 @@
 ---
-title: "&lt;security&gt; для &lt;customBinding&gt;"
-ms.custom: 
+title: '&lt;security&gt; для &lt;customBinding&gt;'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 243a5148-bbd1-447f-a8a5-6e7792c0a3f1
-caps.latest.revision: "24"
+caps.latest.revision: 24
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: e35f10071f8931c551645d4d07ca0f2113c52002
-ms.sourcegitcommit: 6a9030eb5bd0f00e1d144f81958adb195cfb1f6f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 15f2dd3eac33a54e53a609fc706397eef5e7dbe2
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="ltsecuritygt-of-ltcustombindinggt"></a>&lt;security&gt; для &lt;customBinding&gt;
 Задает параметры безопасности для пользовательской привязки.  
@@ -101,21 +103,21 @@ messageProtectionOrder="SignBeforeEncrypt/SignBeforeEncryptAndEncryptSignature/E
   
 ### <a name="child-elements"></a>Дочерние элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
-|[\<issuedTokenParameters >](../../../../../docs/framework/configure-apps/file-schema/wcf/issuedtokenparameters.md)|Определяет текущий выданный маркер. Это элемент типа <xref:System.ServiceModel.Configuration.IssuedTokenParametersElement>.|  
+|[\<issuedTokenParameters>](../../../../../docs/framework/configure-apps/file-schema/wcf/issuedtokenparameters.md)|Определяет текущий выданный маркер. Это элемент типа <xref:System.ServiceModel.Configuration.IssuedTokenParametersElement>.|  
 |[\<localClientSettings >](../../../../../docs/framework/configure-apps/file-schema/wcf/localclientsettings-element.md)|Задает параметры безопасности локального клиента для этой привязки. Это элемент типа <xref:System.ServiceModel.Configuration.LocalClientSecuritySettingsElement>.|  
 |[\<localServiceSettings >](../../../../../docs/framework/configure-apps/file-schema/wcf/localservicesettings-element.md)|Задает параметры безопасности локальной службы для этой привязки. Это элемент типа <xref:System.ServiceModel.Configuration.LocalServiceSecuritySettingsElement>.|  
 |[\<secureConversationBootstrap >](../../../../../docs/framework/configure-apps/file-schema/wcf/secureconversationbootstrap.md)|Задает значения по умолчанию, используемые для инициализации службы безопасного обмена данными.|  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
 |[\<Привязка >](../../../../../docs/framework/misc/binding.md)|Определяет все возможности пользовательской привязки.|  
   
 ## <a name="remarks"></a>Примечания  
- [!INCLUDE[crabout](../../../../../includes/crabout-md.md)]с помощью этого элемента в разделе [режимы проверки подлинности SecurityBindingElement](../../../../../docs/framework/wcf/feature-details/securitybindingelement-authentication-modes.md) и [как: создайте пользовательские привязки с использованием элемента SecurityBindingElement](../../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md).  
+ Дополнительные сведения об использовании этого элемента см. в разделе [режимы проверки подлинности SecurityBindingElement](../../../../../docs/framework/wcf/feature-details/securitybindingelement-authentication-modes.md) и [как: создайте пользовательские привязки с использованием элемента SecurityBindingElement](../../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md).  
   
 ## <a name="example"></a>Пример  
  В следующем примере показано, как настроить параметры безопасности с помощью настраиваемой привязки. Здесь показано, как использовать пользовательскую привязку для включения безопасности на уровне сообщений вместе с безопасным транспортом. Это полезно, когда требуется передавать сообщения между клиентом и службой с помощью безопасного транспорта с одновременным обеспечением безопасности на уровне сообщений. Эта конфигурация не поддерживается привязками, предоставляемыми системой.  

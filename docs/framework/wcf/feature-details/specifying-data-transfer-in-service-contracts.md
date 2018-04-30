@@ -21,11 +21,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: fc64ff14c321bd2053b0a97b3cf1ac075b02e973
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 852519dc1edc499511652f4027f4cd4eed6eef98
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="specifying-data-transfer-in-service-contracts"></a>Задание передачи данных в контрактах служб
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] можно рассматривать как инфраструктуру обмена сообщениями. Операции служб могут получать сообщения, обрабатывать их и отправлять. Сообщения описываются с помощью контрактов операций. Например, рассмотрим следующий контракт:  
@@ -453,7 +453,7 @@ End Class
  Сериализацию данных можно настраивать различными способами.  
   
 ### <a name="changing-server-serialization-settings"></a>Изменение параметров сериализации для сервера  
- Если используется сериализатор по умолчанию <xref:System.Runtime.Serialization.DataContractSerializer>, можно управлять некоторыми аспектами процесса сериализации в службе путем применения к ней атрибута <xref:System.ServiceModel.ServiceBehaviorAttribute>. В частности, с помощью свойства `MaxItemsInObjectGraph` можно задать максимальную квоту на количество объектов, десериализуемых с помощью <xref:System.Runtime.Serialization.DataContractSerializer>. Можно использовать свойство `IgnoreExtensionDataObject` для отключения функции полной совместимости управления версиями. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] в разделе квоты, [вопросы безопасности для данных](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Полная совместимость версий, в разделе [прямой совместимостью контракты данных](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md).  
+ Если используется сериализатор по умолчанию <xref:System.Runtime.Serialization.DataContractSerializer>, можно управлять некоторыми аспектами процесса сериализации в службе путем применения к ней атрибута <xref:System.ServiceModel.ServiceBehaviorAttribute>. В частности, с помощью свойства `MaxItemsInObjectGraph` можно задать максимальную квоту на количество объектов, десериализуемых с помощью <xref:System.Runtime.Serialization.DataContractSerializer>. Можно использовать свойство `IgnoreExtensionDataObject` для отключения функции полной совместимости управления версиями. Дополнительные сведения о квотах см. в разделе [вопросы безопасности для данных](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md). Дополнительные сведения о полной совместимости версий см. в разделе [прямой совместимостью контракты данных](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md).  
   
 ```csharp  
 [ServiceBehavior(MaxItemsInObjectGraph=100000)]  
@@ -585,7 +585,7 @@ Dim serviceHost As ServiceHost = New ServiceHost(GetType(IDataService))
   
 3.  Прежде чем открывать узел службы или создавать канал клиента, удалите существующее поведение <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> и подключите производный пользовательский класс, созданный на предыдущих этапах.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Дополнительные возможности сериализации, в разделе [сериализации и десериализации](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md).  
+ Дополнительные сведения о сложные методы сериализации см. в разделе [сериализации и десериализации](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md).  
   
 ## <a name="see-also"></a>См. также  
  [Использование класса XmlSerializer](../../../../docs/framework/wcf/feature-details/using-the-xmlserializer-class.md)  

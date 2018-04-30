@@ -14,11 +14,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 216136ba084505947b5ab3c985284d704cb5872f
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 460f6db9334c2ede7d968e10f9e594c49e806bea
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="using-variables-with-a-net-framework-35-ruleset"></a>Использование переменных с набором правил из .NET Framework 3.5
 В этом образце демонстрируется создание рабочего процесса, использующего действие <xref:System.Activities.Statements.Interop> для интеграции настраиваемого действия, записанного в [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)] с применением политики и правил. Рабочий процесс передает данные для пользовательского действия, привязывая переменные к свойствам зависимостей, предоставляемым настраиваемым действием.  
@@ -39,7 +39,7 @@ ms.lasthandoff: 04/26/2018
   
 4.  Щелкните правой кнопкой мыши `DiscountPolicy` и выберите **Просмотр кода** для просмотра побочного C# кода для действия.  
   
-     Проверьте значения свойства зависимости для `DiscountLevel`. Это эквивалентно аргументам в [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)]. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] аргументы, в разделе [переменных и аргументов](../../../../docs/framework/windows-workflow-foundation/variables-and-arguments.md).  
+     Проверьте значения свойства зависимости для `DiscountLevel`. Это эквивалентно аргументам в [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)]. Дополнительные сведения об аргументах см. в разделе [переменных и аргументов](../../../../docs/framework/windows-workflow-foundation/variables-and-arguments.md).  
   
 ## <a name="interopwith35ruleset"></a>InteropWith35RuleSet  
  Это проект последовательного рабочего процесса, использующий действие <xref:System.Activities.Statements.Interop> для интеграции с пользовательским набором правил, создаваемым в проекте `TravelRuleLibrary`. Переменные создаются при действии верхнего уровня <xref:System.Activities.Statements.Sequence>. Действие <xref:System.Activities.Statements.Interop> используется для интеграции с действием `TravelRuleSet`. Переменные, объявленные в <xref:System.Activities.Statements.Sequence>, используются для привязки к свойствам зависимости.  

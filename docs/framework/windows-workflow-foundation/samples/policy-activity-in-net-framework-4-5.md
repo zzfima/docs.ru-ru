@@ -14,14 +14,14 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: d8457182b666570853953830a92c3f2380a0eb85
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: 5ff750942a2d05310669361e83a10a5acefbcbd4
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="policy-activity-in-net-framework-45"></a>Действие политики в .NET Framework 4.5
-Действие Policy4 позволяет Windows Workflow Foundation в [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] (WF 3.5) <xref:System.Workflow.Activities.Rules.RuleSet> объектов для использования в Windows Workflow Foundation в [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] (WF 4.5) непосредственно с помощью этого обработчик правил, установленных в WF 3.5. Используя это действие, можно создавать и выполнять наборы правил <xref:System.Workflow.Activities.Rules.RuleSet> WF 3.5. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] об обработчике правил WF 3.5, являющемся частью Windows Workflow Foundation, см. в разделе «Введение в обработчик правил в Windows Workflow Foundation». Дополнительные сведения о миграции правил WF в [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)], прочитайте [руководство по миграции](../../../../docs/framework/windows-workflow-foundation/migration-guidance.md).  
+Действие Policy4 позволяет Windows Workflow Foundation в [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] (WF 3.5) <xref:System.Workflow.Activities.Rules.RuleSet> объектов для использования в Windows Workflow Foundation в [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] (WF 4.5) непосредственно с помощью этого обработчик правил, установленных в WF 3.5. Используя это действие, можно создавать и выполнять наборы правил <xref:System.Workflow.Activities.Rules.RuleSet> WF 3.5. Дополнительные сведения об обработчике правил WF 3.5, входящей в состав Windows Workflow Foundation, прочитайте введение в обработчик правил Windows Workflow Foundation. Дополнительные сведения о миграции правил WF в [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)], прочитайте [руководство по миграции](../../../../docs/framework/windows-workflow-foundation/migration-guidance.md).  
   
 > [!IMPORTANT]
 >  Образцы уже могут быть установлены на компьютере. Перед продолжением проверьте следующий каталог (по умолчанию).  

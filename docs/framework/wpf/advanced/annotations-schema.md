@@ -1,28 +1,30 @@
 ---
-title: "Схема примечаний"
-ms.custom: 
+title: Схема примечаний
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - XML schema definition (XSD)
 - Microsoft Annotations Framework [WPF]
 - documents [WPF], annotations
 ms.assetid: a893442b-e220-4603-bf6a-b01fefcb4b37
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7989269e8076eda1deef6384b7efdb51c2d279ec
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: a78e287065fb714878d4d97b037d44440d063a5a
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="annotations-schema"></a>Схема примечаний
 В этом разделе описывается определение схемы XML (XSD), используемое структурой заметок для сохранения и извлечения данных заметок пользователей.  
@@ -37,7 +39,7 @@ ms.lasthandoff: 12/22/2017
   
  Основная схема определяет первичный XML-структуру <xref:System.Windows.Annotations.Annotation>.  Большая часть XML-элементов, определенных в схеме Core соответствуют типам в <xref:System.Windows.Annotations> пространства имен.  Основная схема предоставляет три точки расширения, в которых приложения могут добавлять собственные XML-данные.  Эти точки расширения включают <xref:System.Windows.Annotations.Annotation.Authors%2A>, <xref:System.Windows.Annotations.ContentLocatorPart>и «Содержимое».  (Элементы содержимого представлены в виде <xref:System.Xml.XmlElement> список.)  
   
- Базовая схема, описанная в этом разделе определяет расширения для <xref:System.Windows.Annotations.Annotation.Authors%2A>, <xref:System.Windows.Annotations.ContentLocatorPart>и типы содержимого, включая начальный [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] выпуска.  
+ Базовая схема, описанная в этом разделе определяет расширения для <xref:System.Windows.Annotations.Annotation.Authors%2A>, <xref:System.Windows.Annotations.ContentLocatorPart>и типы содержимого, включая с первоначального выпуска Windows Presentation Foundation (WPF).  
   
 <a name="CoreSchema"></a>   
 ## <a name="annotations-xml-core-schema"></a>Основная схема XML-заметок  

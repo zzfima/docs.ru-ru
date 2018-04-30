@@ -1,24 +1,26 @@
 ---
-title: "Процедура однократной настройки образцов Windows Communication Foundation"
-ms.custom: 
+title: Процедура однократной настройки образцов Windows Communication Foundation
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: a5848ffd-3eb5-432d-812e-bd948ccb6bca
-caps.latest.revision: "83"
+caps.latest.revision: 83
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: bab723e4e52db9936e635f1348dff86d75de274d
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: acb89c8c1819024ebdb77720654ab7280333e456
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="one-time-setup-procedure-for-the-windows-communication-foundation-samples"></a>Процедура однократной настройки образцов Windows Communication Foundation
 Большинство примеров [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] размещаются в службах IIS и выполняются из общего виртуального каталога. Эта процедура однократной настройки создает папку на диске. Он также добавляет виртуальный каталог IIS с именем **ServiceModelSamples**.  
@@ -30,7 +32,7 @@ ms.lasthandoff: 01/19/2018
   
 ### <a name="one-time-setup-procedure-for-wcf-samples"></a>Однократно настраиваемая процедура для образцов WCF  
   
-1.  Убедитесь, что [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] установлена. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]как настроить [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)], в разделе [службы размещения инструкции по IIS](../../../../docs/framework/wcf/samples/internet-information-service-hosting-instructions.md).  
+1.  Убедитесь, что [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] установлена. Дополнительные сведения о настройке [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)], в разделе [службы размещения инструкции по IIS](../../../../docs/framework/wcf/samples/internet-information-service-hosting-instructions.md).  
   
 2.  Убедитесь, что установлена платформа [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)]. Найдите каталог для версии 4.0 (или более поздней версии): **\Windows\Microsoft.NET\Framework**  
   
@@ -88,7 +90,7 @@ ms.lasthandoff: 01/19/2018
     > [!NOTE]
     >  В целях безопасности по завершении работы с образцами не забудьте удалить определение виртуального каталога и разрешения, предоставленные на шагах установки, запустив пакетный файл Cleanupvroot.bat.  
   
-13. Резидентным образцам (не размещенным в службах IIS) требуется разрешение на регистрацию HTTP-адресов на компьютере для прослушивания. Разрешение на резервирование пространства имен HTTP поступает от учетной записи пользователя, используемой для выполнения образца. По умолчанию учетные записи администратора имеют разрешение на регистрацию любых HTTP-адресов. Неадминистративным учетным записям должно быть предоставлено разрешение на использование пространства имен HTTP, применяемых в образцах кода. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]как настроить резервирование пространства имен см. в разделе [Настройка протоколов HTTP и HTTPS](../../../../docs/framework/wcf/feature-details/configuring-http-and-https.md).  
+13. Резидентным образцам (не размещенным в службах IIS) требуется разрешение на регистрацию HTTP-адресов на компьютере для прослушивания. Разрешение на резервирование пространства имен HTTP поступает от учетной записи пользователя, используемой для выполнения образца. По умолчанию учетные записи администратора имеют разрешение на регистрацию любых HTTP-адресов. Неадминистративным учетным записям должно быть предоставлено разрешение на использование пространства имен HTTP, применяемых в образцах кода. Дополнительные сведения о настройке резервирования пространства имен см. в разделе [Настройка протоколов HTTP и HTTPS](../../../../docs/framework/wcf/feature-details/configuring-http-and-https.md).  
   
 14. Для некоторых примеров требуется очередь сообщений. В разделе [Установка Message Queuing (MSMQ)](../../../../docs/framework/wcf/samples/installing-message-queuing-msmq.md) инструкции по установке.  
   

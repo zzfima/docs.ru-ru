@@ -1,12 +1,13 @@
 ---
-title: "URI типа \"pack\" в WPF"
-ms.custom: 
+title: URI типа "pack" в WPF
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - pack URI scheme [WPF]
@@ -16,19 +17,20 @@ helpviewer_keywords:
 - loading non-resource files
 - application management [WPF]
 ms.assetid: 43adb517-21a7-4df3-98e8-09e9cdf764c4
-caps.latest.revision: "35"
+caps.latest.revision: 35
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 3143bcc05d88cde43e844ec21b95963e672bbc52
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: d90345f6c6e44bfdd98d2a1313a36372cdfe8b06
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="pack-uris-in-wpf"></a>URI типа "pack" в WPF
-В [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)], [!INCLUDE[TLA#tla_uri#plural](../../../../includes/tlasharptla-urisharpplural-md.md)] используются для идентификации и загрузки файлов несколькими способами, включая следующие:  
+В Windows Presentation Foundation (WPF), [!INCLUDE[TLA#tla_uri#plural](../../../../includes/tlasharptla-urisharpplural-md.md)] используются для идентификации и загрузки файлов несколькими способами, включая следующие:  
   
 -   Указание [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] для отображения при первом запуске приложения.  
   
@@ -92,7 +94,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="Resource_File_Pack_URIs___Local_Assembly"></a>   
 ## <a name="resource-file-pack-uris"></a>URI типа "pack" для файла ресурсов  
- Файлы ресурсов настраиваются как [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `Resource` элементы и компилируются в сборки. [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]поддерживает конструирование пакета [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] может использоваться для идентификации файлов ресурсов, скомпилированные в локальную сборку или компилируется в сборку, на который ссылается локальной сборки.  
+ Файлы ресурсов настраиваются как [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `Resource` элементы и компилируются в сборки. [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] поддерживает конструирование пакета [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] может использоваться для идентификации файлов ресурсов, скомпилированные в локальную сборку или компилируется в сборку, на который ссылается локальной сборки.  
   
 <a name="Local_Assembly_Resource_File"></a>   
 ### <a name="local-assembly-resource-file"></a>Файл ресурсов локальной сборки  
@@ -183,7 +185,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="Page_Files"></a>   
 ## <a name="page-files"></a>Файлы подкачки  
- [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]файлы, которые настроены как [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `Page` элементы, компилируются в сборки таким же образом, как и файлы ресурсов. Следовательно [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `Page` элементов можно определить с помощью пакета [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] файлов ресурсов.  
+ [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] файлы, которые настроены как [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `Page` элементы, компилируются в сборки таким же образом, как и файлы ресурсов. Следовательно [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `Page` элементов можно определить с помощью пакета [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] файлов ресурсов.  
   
  Типы [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] файлы, которые обычно настраиваются как [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `Page` элементы имеют одно из следующих в качестве корневого элемента:  
   
@@ -256,7 +258,7 @@ ms.lasthandoff: 12/22/2017
   
 5.  Если ресурс не найден, то созданный <xref:System.Uri> является недопустимым.  
   
- [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]разрешения не применяется к [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] , которые ссылаются на следующее:  
+ [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] разрешения не применяется к [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] , которые ссылаются на следующее:  
   
 -   Файлы содержимого в ссылочных сборках: эти типы файлов не поддерживаются [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].  
   
@@ -294,7 +296,7 @@ ms.lasthandoff: 12/22/2017
   
  Таблица 1. Абсолютные URI типа "pack" в разметке  
   
-|Файл|Абсолютный пакет[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]|  
+|Файл|Абсолютный пакет [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]|  
 |----------|-------------------------------------------------------------------------------------------------------------------------|  
 |Файл ресурсов — локальная сборка|`"pack://application:,,,/ResourceFile.xaml"`|  
 |Файл ресурсов в подпапке — локальная сборка|`"pack://application:,,,/Subfolder/ResourceFile.xaml"`|  
@@ -310,7 +312,7 @@ ms.lasthandoff: 12/22/2017
   
  Таблица 2. Относительные URI типа "pack" в разметке  
   
-|Файл|Относительный пакет[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]|  
+|Файл|Относительный пакет [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]|  
 |----------|-------------------------------------------------------------------------------------------------------------------------|  
 |Файл ресурсов в локальной сборке|`"/ResourceFile.xaml"`|  
 |Файл ресурсов в подпапке — локальная сборка|`"/Subfolder/ResourceFile.xaml"`|  
@@ -355,7 +357,7 @@ Uri uri = new Uri(userProvidedUriTextBox.Text, UriKind.RelativeOrAbsolute);
   
  Таблица 3. Абсолютные URI типа "pack" в коде  
   
-|Файл|Абсолютный пакет[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]|  
+|Файл|Абсолютный пакет [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]|  
 |----------|-------------------------------------------------------------------------------------------------------------------------|  
 |Файл ресурсов — локальная сборка|`Uri uri = new Uri("pack://application:,,,/ResourceFile.xaml", UriKind.Absolute);`|  
 |Файл ресурсов в подпапке — локальная сборка|`Uri uri = new Uri("pack://application:,,,/Subfolder/ResourceFile.xaml", UriKind.Absolute);`|  
@@ -371,7 +373,7 @@ Uri uri = new Uri(userProvidedUriTextBox.Text, UriKind.RelativeOrAbsolute);
   
  Таблица 4. Относительные URI типа "pack" в коде  
   
-|Файл|Относительный пакет[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]|  
+|Файл|Относительный пакет [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]|  
 |----------|-------------------------------------------------------------------------------------------------------------------------|  
 |Файл ресурсов — локальная сборка|`Uri uri = new Uri("/ResourceFile.xaml", UriKind.Relative);`|  
 |Файл ресурсов в подпапке — локальная сборка|`Uri uri = new Uri("/Subfolder/ResourceFile.xaml", UriKind.Relative);`|  
@@ -386,7 +388,7 @@ Uri uri = new Uri(userProvidedUriTextBox.Text, UriKind.RelativeOrAbsolute);
   
 <a name="Specifying_the_UI_to_Show_when_an_Application_Starts"></a>   
 #### <a name="specifying-the-ui-to-show-when-an-application-starts"></a>Указание пользовательского интерфейса для отображения при запуске приложения  
- <xref:System.Windows.Application.StartupUri%2A>Указывает первый [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] для отображения при [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] запуске приложения. Для автономных приложений [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] может быть окном, как показано в следующем примере.  
+ <xref:System.Windows.Application.StartupUri%2A> Указывает первый [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] для отображения при [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] запуске приложения. Для автономных приложений [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] может быть окном, как показано в следующем примере.  
   
  [!code-xaml[PackURIOverviewSnippets#StartupUriWindow](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PackURIOverviewSnippets/CS/Copy of App.xaml#startupuriwindow)]  
   
@@ -416,7 +418,7 @@ Uri uri = new Uri(userProvidedUriTextBox.Text, UriKind.RelativeOrAbsolute);
   
 <a name="Loading_Image__Audio__and_Video_Files"></a>   
 #### <a name="loading-image-audio-and-video-files"></a>Загрузка файлов изображения, аудио и видео файлов  
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]позволяет приложениям использовать самые разнообразные типы носителей, все из которых можно определить и загрузить пакет [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)], как показано в следующих примерах.  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] позволяет приложениям использовать самые разнообразные типы носителей, все из которых можно определить и загрузить пакет [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)], как показано в следующих примерах.  
   
  [!code-xaml[MediaPlayerVideoSample#VideoPackURIAtSOO](../../../../samples/snippets/csharp/VS_Snippets_Wpf/MediaPlayerVideoSample/CS/HomePage.xaml#videopackuriatsoo)]  
   

@@ -21,11 +21,11 @@ ms.author: mhopkins
 manager: markl
 ms.workload:
 - dotnet
-ms.openlocfilehash: 2028f312433e3a4cf8c90f2e6809ed29288d7819
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 581fe3272808da84fcf31667f8191f3cc6322033
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="ui-automation-and-microsoft-active-accessibility"></a>Модель автоматизации пользовательского интерфейса и Microsoft Active Accessibility
 > [!NOTE]
@@ -41,7 +41,7 @@ ms.lasthandoff: 04/26/2018
   
 <a name="Support_in_Windows_Presentation_Foundation_"></a>   
 ## <a name="support-in-windows-presentation-foundation"></a>Поддержка в Windows Presentation Foundation  
- [!INCLUDE[TLA#tla_wpf](../../../includes/tlasharptla-wpf-md.md)] — это новая модель создания пользовательских интерфейсов. В элементах[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] не предусмотрена собственная поддержка [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)]; однако они поддерживают [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], включая использование моста для клиентов [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] . Только клиенты, написанные специально для [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , могут использовать все преимущества специальных возможностей [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)], таких как расширенная поддержка текста.  
+ Windows Presentation Foundation (WPF) — это новая модель создания пользовательских интерфейсов. В элементах[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] не предусмотрена собственная поддержка [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)]; однако они поддерживают [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], включая использование моста для клиентов [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] . Только клиенты, написанные специально для [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , могут использовать все преимущества специальных возможностей [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)], таких как расширенная поддержка текста.  
   
 <a name="Servers_and_Clients_compare"></a>   
 ## <a name="servers-and-clients"></a>Серверы и клиенты  

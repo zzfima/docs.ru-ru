@@ -42,14 +42,14 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: ae454e54abc2c8200f33bdb0bc5537806c824074
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: c379a1db6b825a8ede7866661c11bdbf43cd630c
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="wpf-windows-overview"></a>Общие сведения об окнах WPF
-Пользователи взаимодействуют с автономными приложениями [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] через окна. Основная цель окна — разместить содержимое, которое визуализирует данные и позволяет пользователям взаимодействовать с ними. Автономный [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] приложений предоставляют свои собственные окна с помощью <xref:System.Windows.Window> класса. В этом разделе описываются <xref:System.Windows.Window> перед рассмотрением основ создания и управления окнами в автономных приложений.  
+Пользователи взаимодействуют с автономных приложений Windows Presentation Foundation (WPF) в windows. Основная цель окна — разместить содержимое, которое визуализирует данные и позволяет пользователям взаимодействовать с ними. Автономный [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] приложений предоставляют свои собственные окна с помощью <xref:System.Windows.Window> класса. В этом разделе описываются <xref:System.Windows.Window> перед рассмотрением основ создания и управления окнами в автономных приложений.  
   
 > [!NOTE]
 >  Размещенные в браузере [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] приложений, включая [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] и свободные [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] страницы, не предоставляют свои собственные окна. Вместо этого они размещаются в окнах [!INCLUDE[TLA#tla_iegeneric](../../../../includes/tlasharptla-iegeneric-md.md)]. В разделе [Обзор приложений браузера WPF XAML](../../../../docs/framework/wpf/app-development/wpf-xaml-browser-applications-overview.md).  

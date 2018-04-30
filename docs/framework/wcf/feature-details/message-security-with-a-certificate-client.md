@@ -19,11 +19,11 @@ ms.author: bruceper
 manager: mbaldwin
 ms.workload:
 - dotnet
-ms.openlocfilehash: 9bb7efa82e14f899ddcbb2fdfd26eba2023bdd61
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 6e31c7a9e53e8b918661c0c6c544e697e2a772e6
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="message-security-with-a-certificate-client"></a>Безопасность сообщений при использовании клиентом сертификата
 В следующем сценарии показаны служба и клиент [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], защищенные с помощью режима безопасности сообщений. Проверка подлинности клиента и службы выполняется с помощью сертификатов. Дополнительные сведения см. в разделе [безопасности распределенных приложений](../../../../docs/framework/wcf/feature-details/distributed-application-security.md).  
@@ -114,7 +114,7 @@ ms.lasthandoff: 04/28/2018
  [!code-vb[C_SecurityScenarios#17](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#17)]  
   
 ### <a name="configuration"></a>Конфигурация  
- В следующей конфигурации задается сертификат клиента с помощью поведения конечной точки. Дополнительные сведения см. в разделе [Работа с сертификатами](../../../../docs/framework/wcf/feature-details/working-with-certificates.md). Данный код также использует <`identity`> для указания доменных имен (DNS) из удостоверения сервера ожидаемый элемент. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] удостоверение, в разделе [удостоверения службы и проверки подлинности](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
+ В следующей конфигурации задается сертификат клиента с помощью поведения конечной точки. Дополнительные сведения см. в разделе [Работа с сертификатами](../../../../docs/framework/wcf/feature-details/working-with-certificates.md). Данный код также использует <`identity`> для указания доменных имен (DNS) из удостоверения сервера ожидаемый элемент. Дополнительные сведения об удостоверении см. в разделе [службы удостоверений и проверки подлинности](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  

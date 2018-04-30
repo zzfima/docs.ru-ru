@@ -1,32 +1,34 @@
 ---
-title: "Практическое руководство. Создание одностороннего контракта"
-ms.custom: 
+title: Практическое руководство. Создание одностороннего контракта
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 85084cd9-31cc-4e95-b667-42ef01336622
-caps.latest.revision: "23"
+caps.latest.revision: 23
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d08fcb955c972ffbd7ef0a48625f1005ab366dd0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 1a54b64826735d912bdf6507023da56118fb9a69
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-create-a-one-way-contract"></a>Практическое руководство. Создание одностороннего контракта
 В этом разделе приведены основные этапы создания методов, использующих односторонние контракты. Эти методы вызывают операции службы [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] с помощью клиента, но не ожидают ответа. Контракты этого типа можно использовать, к примеру, для публикации уведомлений для большого количества подписчиков. Также можно использовать односторонние контракты при создании дуплексного (двустороннего) контракта, что позволяет клиентам и серверам взаимодействовать независимо (клиент может инициировать вызовы сервера, а сервер - вызовы клиента). В частности, это позволяет серверу выполнять односторонние вызовы клиента, которые клиент может воспринимать как события. Подробные сведения об указании односторонних методов см. в описаниях свойства <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> и класса <xref:System.ServiceModel.OperationContractAttribute>.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Создание клиентского приложения для дуплексного контракта, в разделе [как: службы доступа с односторонним контрактом и контрактах типа запрос-ответ](../../../../docs/framework/wcf/feature-details/how-to-access-wcf-services-with-one-way-and-request-reply-contracts.md). Работающий пример см. в разделе [одностороннего](../../../../docs/framework/wcf/samples/one-way.md) образца.  
+ Дополнительные сведения о создании клиентского приложения для дуплексного контракта см. в разделе [как: службы доступа с односторонним контрактом и контрактах типа запрос-ответ](../../../../docs/framework/wcf/feature-details/how-to-access-wcf-services-with-one-way-and-request-reply-contracts.md). Работающий пример см. в разделе [одностороннего](../../../../docs/framework/wcf/samples/one-way.md) образца.  
   
 ### <a name="to-create-a-one-way-contract"></a>Создание одностороннего контракта  
   

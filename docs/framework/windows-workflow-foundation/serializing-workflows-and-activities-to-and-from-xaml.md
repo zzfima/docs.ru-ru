@@ -14,11 +14,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 9a215be76002b9e8fca8ac4a9073885b3b30a97b
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: a36b8a6bdf1a024f4ddee91bd937afac516e391f
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="serializing-workflows-and-activities-to-and-from-xaml"></a>Сериализация рабочих процессов и действий в XAML и обратно
 Кроме компиляции в содержащиеся в сборках типы определения рабочих процессов также могут быть сериализованы в XAML. Такие сериализованные определения могут быть загружены повторно для редактирования или просмотра, переданы в систему сборки для компиляции или загружены и вызваны. В этом разделе представлены общие сведения о сериализации определений рабочих процессов и работе с определениями рабочих процессов языка XAML.  
@@ -84,7 +84,7 @@ sw.Close();
  **25 + 15**  
 **40**    
 > [!NOTE]
->  [!INCLUDE[crabout](../../../includes/crabout-md.md)] вызов рабочих процессов с входные и выходные аргументы, в разделе [использование WorkflowInvoker и WorkflowApplication](../../../docs/framework/windows-workflow-foundation/using-workflowinvoker-and-workflowapplication.md) и <xref:System.Activities.WorkflowInvoker.Invoke%2A>.  
+>  Дополнительные сведения о вызовах рабочих процессов с входные и выходные аргументы. в разделе [использование WorkflowInvoker и WorkflowApplication](../../../docs/framework/windows-workflow-foundation/using-workflowinvoker-and-workflowapplication.md) и <xref:System.Activities.WorkflowInvoker.Invoke%2A>.  
   
  Если сериализованный рабочий процесс содержит выражения C#, то <xref:System.Activities.XamlIntegration.ActivityXamlServicesSettings> экземпляра с его <xref:System.Activities.XamlIntegration.ActivityXamlServicesSettings.CompileExpressions%2A> свойство `true` должен быть передан в качестве параметра <xref:System.Activities.XamlIntegration.ActivityXamlServices.Load%2A?displayProperty=nameWithType>, в противном случае <xref:System.NotSupportedException> будет создано сообщение, похожее на следующие: `Expression Activity type 'CSharpValue`1" должны быть скомпилированы для запуска.  Убедитесь, что рабочий процесс был скомпилирован. "  
   

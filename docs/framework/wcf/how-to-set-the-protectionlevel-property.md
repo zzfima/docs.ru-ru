@@ -1,12 +1,13 @@
 ---
-title: "Практическое руководство. Установка свойства ProtectionLevel"
-ms.custom: 
+title: Практическое руководство. Установка свойства ProtectionLevel
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,19 +16,20 @@ helpviewer_keywords:
 - WCF, security
 - ProtectionLevel property
 ms.assetid: 3d4e8f80-0f9e-4a26-9899-beb6584e78df
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a9b90df85259dfe48f071ca2b4b8404cfe8e673e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: abb1d3cc64b7992b9983e81c5f8a5c30c2343f30
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-set-the-protectionlevel-property"></a>Практическое руководство. Установка свойства ProtectionLevel
-Уровень защиты можно задать, применив соответствующий атрибут и задав свойство. Защиту на уровне службы можно задать таким образом, чтобы она влияла на все части каждого сообщения, можно также задать защиту на более детализированных уровнях - от методов до частей сообщения. [!INCLUDE[crabout](../../../includes/crabout-md.md)]`ProtectionLevel` свойство, в разделе [уровень защиты основные сведения о](../../../docs/framework/wcf/understanding-protection-level.md).  
+Уровень защиты можно задать, применив соответствующий атрибут и задав свойство. Защиту на уровне службы можно задать таким образом, чтобы она влияла на все части каждого сообщения, можно также задать защиту на более детализированных уровнях - от методов до частей сообщения. Дополнительные сведения о `ProtectionLevel` свойство, в разделе [уровень защиты основные сведения о](../../../docs/framework/wcf/understanding-protection-level.md).  
   
 > [!NOTE]
 >  Уровни защиты можно задавать только в коде, а не в конфигурации.  
@@ -53,7 +55,7 @@ ms.lasthandoff: 12/22/2017
      [!code-vb[C_ProtectionLevel#2](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_protectionlevel/vb/source.vb#2)]  
   
 ## <a name="protecting-fault-messages"></a>Защита сообщений об ошибках  
- Создаваемые в службе исключения можно отправить клиенту в виде ошибок SOAP. [!INCLUDE[crabout](../../../includes/crabout-md.md)]Создание строго типизированных ошибок см. в разделе [указание и обработка сбоев в контрактах и службах](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md) и [как: объявить сбоев в контрактах служб](../../../docs/framework/wcf/how-to-declare-faults-in-service-contracts.md).  
+ Создаваемые в службе исключения можно отправить клиенту в виде ошибок SOAP. Дополнительные сведения о создании строго типизированные ошибки, см. в разделе [указание и обработка сбоев в контрактах и службах](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md) и [как: объявить сбоев в контрактах служб](../../../docs/framework/wcf/how-to-declare-faults-in-service-contracts.md).  
   
 #### <a name="to-protect-a-fault-message"></a>Защита сообщения об ошибке  
   
@@ -72,7 +74,7 @@ ms.lasthandoff: 12/22/2017
      [!code-vb[C_ProtectionLevel#4](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_protectionlevel/vb/source.vb#4)]  
   
 ## <a name="protecting-message-parts"></a>Защита частей сообщения  
- Для защиты частей сообщения следует использовать контракт сообщения. [!INCLUDE[crabout](../../../includes/crabout-md.md)]контрактами сообщений см. в разделе [использование контрактов сообщений](../../../docs/framework/wcf/feature-details/using-message-contracts.md).  
+ Для защиты частей сообщения следует использовать контракт сообщения. Дополнительные сведения о контрактах сообщений см. в разделе [использование контрактов сообщений](../../../docs/framework/wcf/feature-details/using-message-contracts.md).  
   
 #### <a name="to-protect-a-message-body"></a>Защита тела сообщения  
   

@@ -1,24 +1,26 @@
 ---
-title: "Использование пользовательской привязки для клиентского канала обнаружения"
-ms.custom: 
+title: Использование пользовательской привязки для клиентского канала обнаружения
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 36f95e75-04f7-44f3-a995-a0d623624d7f
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 85c88132b1fa610b2bcb63635ae553ef47bb359c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: a5c80a257efb5f6006a0cf6394a1079cf92d2471
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="using-a-custom-binding-with-the-discovery-client-channel"></a>Использование пользовательской привязки для клиентского канала обнаружения
 При использовании пользовательской привязки к <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement> необходимо определить поставщик <xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider>, который будет создавать экземпляры <xref:System.ServiceModel.Discovery.DiscoveryEndpoint>.  
@@ -54,7 +56,7 @@ CustomBinding customBinding = new CustomBinding(new NetTcpBinding());
 customBinding.Elements.Insert(0, discoveryBindingElement);  
 ```  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]с помощью клиентского канала обнаружения. в разделе [использование клиентского канала обнаружения](../../../../docs/framework/wcf/feature-details/using-the-discovery-client-channel.md). Полный пример кода см. в разделе [образец элемента привязки обнаружения](../../../../docs/framework/wcf/samples/discovery-binding-element-sample.md)  
+ Дополнительные сведения об использовании клиентского канала обнаружения см. в разделе [использование клиентского канала обнаружения](../../../../docs/framework/wcf/feature-details/using-the-discovery-client-channel.md). Полный пример кода см. в разделе [образец элемента привязки обнаружения](../../../../docs/framework/wcf/samples/discovery-binding-element-sample.md)  
   
 ## <a name="see-also"></a>См. также  
  [Общие сведения об обнаружении WCF](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)  

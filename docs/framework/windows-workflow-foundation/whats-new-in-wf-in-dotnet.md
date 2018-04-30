@@ -14,14 +14,14 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: fa529ddbdfa05ce876c99efd4a717c6136cf6686
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: d862865057f9978a0b815f3026f2ba67c87eac7d
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="what39s-new-in-windows-workflow-foundation-in-net-45"></a>Что&#39;новые возможности Windows Workflow Foundation в .NET 4.5
-Windows Workflow Foundation (WF) в [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] содержит множество новых функций, включая новые действия, возможности конструктора и модели разработки рабочего процесса. Многие, хотя и не все, новые функции рабочего процесса, представленные в [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], поддерживаются в повторно размещенном конструкторе рабочих процессов. [!INCLUDE[crabout](../../../includes/crabout-md.md)] новые возможности, которые поддерживаются, см. [поддержке новых функций Workflow Foundation 4.5 в конструкторе рабочих процессов, повторно размещенными](../../../docs/framework/windows-workflow-foundation/wf-features-in-the-rehosted-workflow-designer.md). [!INCLUDE[crabout](../../../includes/crabout-md.md)] перенос .NET 3.0 и .NET 3.5 приложений рабочих процессов, чтобы использовать последнюю версию в разделе [руководство по миграции](../../../docs/framework/windows-workflow-foundation/migration-guidance.md). В этом разделе содержится общее описание новых возможностей рабочего процесса, представленных в [!INCLUDE[net_v45](../../../includes/net-v45-md.md)].  
+Windows Workflow Foundation (WF) в [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] содержит множество новых функций, включая новые действия, возможности конструктора и модели разработки рабочего процесса. Многие, хотя и не все, новые функции рабочего процесса, представленные в [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], поддерживаются в повторно размещенном конструкторе рабочих процессов. Дополнительные сведения о новых возможностях, которые поддерживаются см. в разделе [поддержке новых функций Workflow Foundation 4.5 в конструкторе рабочих процессов, повторно размещенными](../../../docs/framework/windows-workflow-foundation/wf-features-in-the-rehosted-workflow-designer.md). Дополнительные сведения о миграции .NET 3.0 и .NET 3.5 приложений рабочих процессов для использования последней версии см. в разделе [руководство по миграции](../../../docs/framework/windows-workflow-foundation/migration-guidance.md). В этом разделе содержится общее описание новых возможностей рабочего процесса, представленных в [!INCLUDE[net_v45](../../../includes/net-v45-md.md)].  
   
 > [!WARNING]
 >  Новые функции Windows Workflow Foundation, представленные в [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] недоступны для проектов, предназначенных для предыдущих версий платформы. Если проект, ориентированный на [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], переориентируется на предыдущую версию платформы .NET Framework, может возникнуть несколько проблем.  
@@ -158,7 +158,7 @@ Windows Workflow Foundation (WF) в [!INCLUDE[net_v45](../../../includes/net-v45
   
  Выражения на C# проверяются во время разработки. Ошибки в выражениях C# будут помечены подчеркиванием красной волнистой линией.  
   
- [!INCLUDE[crabout](../../../includes/crabout-md.md)] Выражения C#, в разделе [выражения C#](../../../docs/framework/windows-workflow-foundation/csharp-expressions.md).  
+ Дополнительные сведения о выражениях в C# см. в разделе [выражения C#](../../../docs/framework/windows-workflow-foundation/csharp-expressions.md).  
   
 ###  <a name="BKMK_Visibility"></a> Дополнительные возможности управления видимостью панели оболочки и заголовок элементов  
  В повторно размещенном конструкторе некоторые из стандартных элементов управления пользовательского интерфейса могут не иметь значения для заданного рабочего процесса и могут быть отключены. В [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] эта настройка поддерживается только панелью оболочки в нижней части конструктора. В [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] видимость элементов заголовка оболочки в верхней части конструктора можно настроить, задав для <xref:System.Activities.Presentation.View.DesignerView.WorkflowShellHeaderItemsVisibility%2A> соответствующее значение <xref:System.Activities.Presentation.View.ShellHeaderItemsVisibility>.  

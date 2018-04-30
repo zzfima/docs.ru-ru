@@ -16,11 +16,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 01dc36c73d9e668dd98cb5ba8b275d3d5177ba61
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 8bf4a668fe882212da1c6626b66a4f55390a562f
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="queuing-in-wcf"></a>Очереди в WCF
 В данном разделе описывается применение взаимодействия с использованием очередей в [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
@@ -51,7 +51,7 @@ ms.lasthandoff: 04/28/2018
   
  Кроме того, очереди MSMQ можно защищать с помощью удостоверений Windows, зарегистрированных в службе каталогов Active Directory. При установке MSMQ можно установить интеграцию с Active Directory, для чего компьютер должен входить в домен Windows.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] MSMQ, в разделе [Установка Message Queuing (MSMQ)](../../../../docs/framework/wcf/samples/installing-message-queuing-msmq.md).  
+ Дополнительные сведения о MSMQ см. в разделе [Установка Message Queuing (MSMQ)](../../../../docs/framework/wcf/samples/installing-message-queuing-msmq.md).  
   
 ### <a name="netmsmqbinding"></a>NetMsmqBinding  
  [ \<NetMsmqBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/netmsmqbinding.md) является привязке с очередью [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] предоставляет для двух [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] конечные точки для взаимодействия с помощью MSMQ. Поэтому привязка предоставляет свойства, имеющие отношение к MSMQ. Тем не менее в `NetMsmqBinding` доступны не все функции и свойства MSMQ. Компактная привязка `NetMsmqBinding` содержит оптимальный набор функций, которого должно быть достаточно для большинства пользователей.  
@@ -79,12 +79,12 @@ ms.lasthandoff: 04/28/2018
   
  У привязок имеются следующие важные свойства.  
   
--   `DeadLetterQueue`. Это свойство является перечислением, которое указывает, запрошена ли очередь недоставленных сообщений. Кроме того, в перечислении содержится тип очереди недоставленных сообщений, если она запрошена. Значениями являются `None`, `System` и `Custom`. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Интерпретация этих свойств в разделе [с использованием очередей недоставленных сообщений для обработки ошибок передачи сообщений](../../../../docs/framework/wcf/feature-details/using-dead-letter-queues-to-handle-message-transfer-failures.md)  
+-   `DeadLetterQueue`. Это свойство является перечислением, которое указывает, запрошена ли очередь недоставленных сообщений. Кроме того, в перечислении содержится тип очереди недоставленных сообщений, если она запрошена. Значениями являются `None`, `System` и `Custom`. Дополнительные сведения об интерпретации этих свойств см. в разделе [с использованием очередей недоставленных сообщений для обработки ошибок передачи сообщений](../../../../docs/framework/wcf/feature-details/using-dead-letter-queues-to-handle-message-transfer-failures.md)  
   
 -   `CustomDeadLetterQueue`. Это свойство представляет собой универсальный код ресурса (URI) очереди недоставленных сообщений конкретного приложения. Требуется, если `DeadLetterQueue`.`Custom` выбирается.  
   
 #### <a name="poison-message-handling-properties"></a>Свойства обработки подозрительных сообщений  
- Когда служба получает сообщение из целевой очереди в рамках транзакции, служба может по какой-либо причине не обработать это сообщение. В этом случае сообщение возвращается в очередь, чтобы быть считанными снова. Для обработки сообщений, которые часто вызывают сбои, в привязке можно настроить набор свойств обработки подозрительных сообщений. Есть четыре свойства: `ReceiveRetryCount`, `MaxRetryCycles`, `RetryCycleDelay` и `ReceiveErrorHandling`. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Эти свойства в разделе [обработка подозрительных сообщений](../../../../docs/framework/wcf/feature-details/poison-message-handling.md).  
+ Когда служба получает сообщение из целевой очереди в рамках транзакции, служба может по какой-либо причине не обработать это сообщение. В этом случае сообщение возвращается в очередь, чтобы быть считанными снова. Для обработки сообщений, которые часто вызывают сбои, в привязке можно настроить набор свойств обработки подозрительных сообщений. Есть четыре свойства: `ReceiveRetryCount`, `MaxRetryCycles`, `RetryCycleDelay` и `ReceiveErrorHandling`. Дополнительные сведения об этих свойствах см. в разделе [обработка подозрительных сообщений](../../../../docs/framework/wcf/feature-details/poison-message-handling.md).  
   
 #### <a name="security-properties"></a>Свойства безопасности  
  Служба MSMQ реализует собственную модель безопасности, например списки управления доступом в очереди или отправку прошедших проверку подлинности сообщений. В привязке `NetMsmqBinding` эти свойства безопасности реализованы как часть параметров безопасности транспорта. В привязке имеется два свойства для обеспечения безопасности транспорта: `MsmqAuthenticationMode` и `MsmqProtectionLevel`. Значения этих свойств зависят от настройки MSMQ. Дополнительные сведения см. в разделе [защита безопасность транспорта с помощью сообщений](../../../../docs/framework/wcf/feature-details/securing-messages-using-transport-security.md).  

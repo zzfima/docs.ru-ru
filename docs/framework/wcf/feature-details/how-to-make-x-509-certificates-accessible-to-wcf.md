@@ -1,12 +1,13 @@
 ---
-title: "Практическое руководство. Предоставление доступа к сертификатам X.509 для WCF"
-ms.custom: 
+title: Практическое руководство. Предоставление доступа к сертификатам X.509 для WCF
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -16,16 +17,17 @@ helpviewer_keywords:
 - certificates [WCF], making X.509 certificates accessible to WCF
 - X.509 certificates [WCF], making accessible to WCF
 ms.assetid: a54e407c-c2b5-4319-a648-60e43413664b
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b95ee7c28c67ff861dc401d1405306c78b9663de
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 77ee21074b6f1bb5a2f5bd4ee653100d3534075d
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-make-x509-certificates-accessible-to-wcf"></a>Практическое руководство. Предоставление доступа к сертификатам X.509 для WCF
 Чтобы сделать сертификат X.509 доступным для [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], в коде приложения необходимо указать имя хранилища сертификатов и его расположение. В некоторых случаях идентификатор процесса должен иметь доступ к файлу, который содержит закрытый ключ, связанный с сертификатом X.509. Чтобы получить закрытый ключ, связанный с сертификатом X.509 в хранилище сертификатов, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] должен иметь соответствующее разрешение. По умолчанию доступ к закрытому ключу сертификата имеют только владелец и системная учетная запись.  
@@ -54,7 +56,7 @@ ms.lasthandoff: 12/22/2017
   
     3.  Определить, где находится закрытый ключ для сертификата на компьютере с помощью [FindPrivateKey](../../../../docs/framework/wcf/samples/findprivatekey.md) средства.  
   
-         [FindPrivateKey](../../../../docs/framework/wcf/samples/findprivatekey.md) имя хранилища сертификатов, расположение хранилища сертификатов и что-то, которое однозначно идентифицирует этот сертификат для запуска этого средства. Средство принимает имя субъекта сертификата или его отпечаток в качестве уникального идентификатора. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]как определить отпечаток для сертификата см. в разделе [как: извлечение отпечатка сертификата](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md).  
+         [FindPrivateKey](../../../../docs/framework/wcf/samples/findprivatekey.md) имя хранилища сертификатов, расположение хранилища сертификатов и что-то, которое однозначно идентифицирует этот сертификат для запуска этого средства. Средство принимает имя субъекта сертификата или его отпечаток в качестве уникального идентификатора. Дополнительные сведения о том, как определить отпечаток для сертификата см. в разделе [как: извлечение отпечатка сертификата](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md).  
   
          Следующий пример кода использует [FindPrivateKey](../../../../docs/framework/wcf/samples/findprivatekey.md) , которая позволяет определить расположение файла закрытого ключа для сертификата в `My` хранить в `CurrentUser` с отпечатком `46 dd 0e 7a ed 0b 7a 31 9b 02 a3 a0 43 7a d8 3f 60 40 92 9d`.  
   

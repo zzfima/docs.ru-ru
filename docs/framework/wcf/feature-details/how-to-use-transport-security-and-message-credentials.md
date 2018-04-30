@@ -21,14 +21,14 @@ ms.author: bruceper
 manager: mbaldwin
 ms.workload:
 - dotnet
-ms.openlocfilehash: fad7970711435cdabecd883f5e1dc44c64bd2c93
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: d30769c854dad04a333509f64169a257fc461ad0
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-use-transport-security-and-message-credentials"></a>Практическое руководство. Использование средств обеспечения безопасности транспорта и учетных данных сообщения
-Механизм защиты службы с помощью учетных данных транспорта и учетных данных сообщения использует лучшие возможности режимов безопасности транспорта (TLS) и сообщений (MLS) в [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. В общих словах, TLS обеспечивает целостность и конфиденциальность, а MLS предоставляет различные учетные данные, которые невозможно использовать в строгих механизмах обеспечения безопасности транспорта. В этом разделе приведены основные этапы реализации транспорта с учетными данными сообщения с помощью привязок <xref:System.ServiceModel.WSHttpBinding> и <xref:System.ServiceModel.NetTcpBinding>. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Настройка режима безопасности, в разделе [как: режим безопасности](../../../../docs/framework/wcf/how-to-set-the-security-mode.md).  
+Механизм защиты службы с помощью учетных данных транспорта и учетных данных сообщения использует лучшие возможности режимов безопасности транспорта (TLS) и сообщений (MLS) в [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. В общих словах, TLS обеспечивает целостность и конфиденциальность, а MLS предоставляет различные учетные данные, которые невозможно использовать в строгих механизмах обеспечения безопасности транспорта. В этом разделе приведены основные этапы реализации транспорта с учетными данными сообщения с помощью привязок <xref:System.ServiceModel.WSHttpBinding> и <xref:System.ServiceModel.NetTcpBinding>. Дополнительные сведения о задании режима безопасности см. в разделе [как: режим безопасности](../../../../docs/framework/wcf/how-to-set-the-security-mode.md).  
   
  При задании режима безопасности`TransportWithMessageCredential` транспорт определяет фактический механизм, обеспечивающий безопасность на транспортном уровне. В случае HTTP таким механизмом является SSL по HTTP (HTTPS); в случае TCP таким механизмом является SSL по TCP или Windows.  
   

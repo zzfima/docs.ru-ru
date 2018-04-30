@@ -17,14 +17,14 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 6604c4fccec50369d83cede58ff2931c2015c5b9
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 73f4364d92c366dc6750144668f722fea93bca2b
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="what39s-new-in-windows-workflow-foundation"></a>Что&#39;новые возможности Windows Workflow Foundation
-Windows Workflow Foundation (WF) в [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)] изменяет несколько принципов разработки из предыдущих версий. Теперь рабочие процессы стало еще проще создавать, выполнять и поддерживать, а также реализовывать узел с новыми функциями. [!INCLUDE[crabout](../../../includes/crabout-md.md)] перенос .NET 3.0 и .NET 3.5 приложений рабочих процессов, чтобы использовать последнюю версию в разделе [руководство по миграции](../../../docs/framework/windows-workflow-foundation/migration-guidance.md).  
+Windows Workflow Foundation (WF) в [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)] изменяет несколько принципов разработки из предыдущих версий. Теперь рабочие процессы стало еще проще создавать, выполнять и поддерживать, а также реализовывать узел с новыми функциями. Дополнительные сведения о миграции .NET 3.0 и .NET 3.5 приложений рабочих процессов для использования последней версии см. в разделе [руководство по миграции](../../../docs/framework/windows-workflow-foundation/migration-guidance.md).  
   
 ## <a name="workflow-activity-model"></a>Модель действий рабочего процесса  
  Теперь действие, а не использования класса <xref:System.Workflow.Activities.SequentialWorkflowActivity> или <xref:System.Workflow.Activities.StateMachineWorkflowActivity> является базовой единицей создания рабочего процесса. Класс <xref:System.Activities.Activity> обеспечивает базовую абстракцию поведения рабочего процесса. Авторы действий могут использовать <xref:System.Activities.CodeActivity> для базовых функций пользовательских действий или <xref:System.Activities.NativeActivity> для функций пользовательских действий, использующих среду выполнения. <xref:System.Activities.Activity> — Это класс, используемый авторы действий для express новые режимы поведения декларативно с точки зрения других <xref:System.Activities.NativeActivity>, <xref:System.Activities.CodeActivity>, <xref:System.Activities.AsyncCodeActivity>, или <xref:System.Activities.DynamicActivity> объектов, являются ли они разработанного или не входит в [встроенных действий Библиотека](../../../docs/framework/windows-workflow-foundation/net-framework-4-5-built-in-activity-library.md).  

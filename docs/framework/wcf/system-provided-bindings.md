@@ -1,28 +1,28 @@
 ---
-title: "Привязки, предоставляемые системой"
-ms.custom: 
+title: Привязки, предоставляемые системой
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - bindings [WCF], system-provided
 ms.assetid: 2c243746-45ce-4588-995e-c17126a579a6
-caps.latest.revision: 
+caps.latest.revision: 60
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: c5f8df31e31c9617fe7bcd92789671d220382a82
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4ccdab56a90f4114836dd9f0a56cc495657ee9c8
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="system-provided-bindings"></a>Привязки, предоставляемые системой
 Привязки указывают, какой механизм связи использовать при взаимодействии с конечной точкой, а также способ подключения к конечной точке. Привязка содержит следующие элементы.  
@@ -33,7 +33,7 @@ ms.lasthandoff: 12/22/2017
   
 -   Элемент кодирования определяет кодирование на линии связи, используемое для отправляемых конечной точке сообщений, например кодирование text/XML, двоичное кодирование или кодирование подсистемы оптимизации передачи сообщений (MTOM).  
   
- В этом разделе представлены все привязки [!INCLUDE[indigo1](../../../includes/indigo1-md.md)], предоставляемые системой. Если ни одна из привязок не отвечает в точности требованиям приложения, можно создать пользовательскую привязку. [!INCLUDE[crabout](../../../includes/crabout-md.md)]создании пользовательских привязок см. в разделе [пользовательские привязки](../../../docs/framework/wcf/extending/custom-bindings.md).  
+ В этом разделе представлены все привязки [!INCLUDE[indigo1](../../../includes/indigo1-md.md)], предоставляемые системой. Если ни одна из привязок не отвечает в точности требованиям приложения, можно создать пользовательскую привязку. Дополнительные сведения о создании настраиваемых привязок см. в разделе [пользовательские привязки](../../../docs/framework/wcf/extending/custom-bindings.md).  
   
  Безопасная привязка с возможностью взаимодействия, которая поддерживает протокол WS-Federation, позволяет организациям в федерации эффективно проверять подлинность пользователей и авторизовать их.  
   
@@ -46,7 +46,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="system-provided-bindings"></a>Привязки, предоставляемые системой  
  В состав [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] входят следующие привязки.  
   
-|Привязка|Элемент конфигурации|Описание:|  
+|Привязка|Элемент конфигурации|Описание|  
 |-------------|---------------------------|-----------------|  
 |<xref:System.ServiceModel.BasicHttpBinding>|[\<basicHttpBinding >](../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)|Привязка, которая подходит для взаимодействия с веб-службами, совместимыми с WS-Basic Profile, например службами, основанными на веб-службах ASP.NET Web (ASMX). Эта привязка использует HTTP как транспорт и формат text/XML как кодирование сообщений по умолчанию.|  
 |<xref:System.ServiceModel.WSHttpBinding>|[\<wsHttpBinding >](../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)|Безопасная привязка с возможностью взаимодействия, которая подходит для недуплексных контрактов службы.|  
@@ -61,7 +61,7 @@ ms.lasthandoff: 12/22/2017
 |<xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>|[\<msmqIntegrationBinding >](../../../docs/framework/configure-apps/file-schema/wcf/msmqintegrationbinding.md)|Привязка, которая подходит для обмена данными между приложением [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] и существующими приложениями очереди сообщений (MSMQ) на разных компьютерах.|  
 |<xref:System.ServiceModel.BasicHttpContextBinding>|[\<basicHttpContextBinding >](../../../docs/framework/configure-apps/file-schema/wcf/basichttpcontextbinding.md)|Привязка, которая подходит для обмена данными с веб-службами, совместимыми с WS-Basic Profile, и позволяет использовать для обмена контекстом файлы cookie HTTP.|  
 |<xref:System.ServiceModel.NetTcpContextBinding>|[\<netTcpContextBinding >](../../../docs/framework/configure-apps/file-schema/wcf/nettcpcontextbinding.md)|Безопасная и оптимизированная привязка, которая подходит для обмена данными между приложениями [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] на разных компьютерах и позволяет использовать для обмена контекстом заголовки SOAP.|  
-|<xref:System.ServiceModel.WebHttpBinding>|[\<webHttpBinding >](../../../docs/framework/configure-apps/file-schema/wcf/webhttpbinding.md)|Привязка, используемая при настройке конечных точек для веб-служб [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], предоставляемых через HTTP-запросы, а не через сообщения SOAP.|  
+|<xref:System.ServiceModel.WebHttpBinding>|[\<webHttpBinding>](../../../docs/framework/configure-apps/file-schema/wcf/webhttpbinding.md)|Привязка, используемая при настройке конечных точек для веб-служб [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], предоставляемых через HTTP-запросы, а не через сообщения SOAP.|  
 |<xref:System.ServiceModel.WSHttpContextBinding>|[\<wsHttpContextBinding >](../../../docs/framework/configure-apps/file-schema/wcf/wshttpcontextbinding.md)|Безопасный и |<xref:System.ServiceModel.UdpBinding>|\<udpBinding >|Привязка, используемая при отправке группы простых сообщений большому количеству клиентов одновременно.|  
   
  В следующей таблице приведены возможности каждой предоставляемой системой привязки. В столбцах таблицы приведены привязки; возможности приведены в строках и подробно описаны во второй таблице. В следующей таблице приводится ключ к используемым аббревиатурам привязок. Чтобы выбрать привязку, определите, какой столбец удовлетворяет всем требуемым возможностям, указанным в строке.  
@@ -89,7 +89,7 @@ ms.lasthandoff: 12/22/2017
   
  В следующей таблице поясняются функции, упомянутые в предыдущей таблице.  
   
-|Функция|Описание:|  
+|Функция|Описание|  
 |-------------|-----------------|  
 |Тип взаимодействия|Указывает протокол или технологию, взаимодействие с которыми обеспечивает привязка.|  
 |Безопасность|Указывает способ защиты канала.<br /><br /> — None: Сообщение SOAP не защищено, и клиент не прошел проверку подлинности.<br />-Транспорта: Требования безопасности выполняются на транспортном уровне.<br />-Сообщения: Требования безопасности выполняются на уровне сообщений.<br />-Смешанный: Утверждения передаются в сообщении; требования целостности и конфиденциальности обеспечиваются на транспортном уровне.|  

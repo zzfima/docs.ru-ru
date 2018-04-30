@@ -16,14 +16,14 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 20ef713c67ee21aa8f7a92975bc6e6ce8798a087
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 53459517591c36430b9326d6605c4eb1b28a13e7
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="using-a-data-contract-resolver"></a>Использование арбитра контрактов данных
-Арбитр контрактов данных позволяет динамически настраивать известные типы. Известные типы необходимы для сериализации или десериализации типов, не предусмотренных контрактом данных. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] об известных типах см. в разделе [Data Contract Known Types](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md). Известные типы обычно задаются статически. Это означает, что при реализации операции необходимо знать все типы, которые могут быть переданы операции. Существуют сценарии, в которых это не так, и важно иметь возможность динамического задания типов.  
+Арбитр контрактов данных позволяет динамически настраивать известные типы. Известные типы необходимы для сериализации или десериализации типов, не предусмотренных контрактом данных. Дополнительные сведения об известных типах см. в разделе [известные типы контрактов данных](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md). Известные типы обычно задаются статически. Это означает, что при реализации операции необходимо знать все типы, которые могут быть переданы операции. Существуют сценарии, в которых это не так, и важно иметь возможность динамического задания типов.  
   
 ## <a name="creating-a-data-contract-resolver"></a>Создание арбитра контрактов данных  
  Создание арбитра контрактов данных включает реализацию двух методов: <xref:System.Runtime.Serialization.DataContractResolver.TryResolveType%2A> и <xref:System.Runtime.Serialization.DataContractResolver.ResolveName%2A>. Эти методы реализуют обратные вызовы, используемые при сериализации и десериализации соответственно. Метод <xref:System.Runtime.Serialization.DataContractResolver.TryResolveType%2A> вызывается при сериализации, принимает тип контракта данных и сопоставляет его с именем `xsi:type` и пространством имен. Метод <xref:System.Runtime.Serialization.DataContractResolver.ResolveName%2A> вызывается при десериализации, принимает имя `xsi:type` и пространство имен и сопоставляется с типом контракта данных. Оба метода содержат параметр `knownTypeResolver`, который позволяет использовать в реализации арбитр известного типа по умолчанию.  

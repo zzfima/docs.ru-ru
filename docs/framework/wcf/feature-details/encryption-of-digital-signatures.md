@@ -20,11 +20,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: aa6abc39159b14eae41e43de5a8976857b1d4c13
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 630465367eb4cee164a222bb5449070ac0726d5e
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="encryption-of-digital-signatures"></a>Шифрование цифровых сигнатур
 По умолчанию сообщение подписывается и шифруется, и цифровая подпись шифруется. Этим процессом можно управлять, создавая пользовательскую привязку с экземпляром элемента <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement> или <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> и затем присваивая свойству `MessageProtectionOrder` каждого класса значение перечисления <xref:System.ServiceModel.Security.MessageProtectionOrder>. Значение по умолчанию — <xref:System.ServiceModel.Security.MessageProtectionOrder.SignBeforeEncryptAndEncryptSignature>. Этот процесс занимает на 10 - 40 процентов больше времени, чем просто подписывание и шифрование. Однако в случае отключения шифрования подписи злоумышленник может распознать содержимое сообщения. Это обусловлено тем, что элемент подписи содержит хэш-код обычного текста каждой подписанной части сообщения. Например, хотя тело сообщения шифруется по умолчанию, нешифрованная подпись содержит хэш-код тела сообщения. Если сообщение короткое, злоумышленник может определить содержимое. Шифрование подписи уменьшает или исключает эту возможность.  
@@ -39,7 +39,7 @@ ms.lasthandoff: 04/28/2018
   
 3.  Присвойте свойству <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement.MessageProtectionOrder%2A?displayProperty=nameWithType> значение <xref:System.ServiceModel.Security.MessageProtectionOrder.SignBeforeEncrypt> или присвойте свойству <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement.MessageProtectionOrder%2A?displayProperty=nameWithType> значение <xref:System.ServiceModel.Security.MessageProtectionOrder.SignBeforeEncrypt>.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] создании пользовательских привязок см. в разделе [привязки привязанных к](../../../../docs/framework/wcf/extending/creating-user-defined-bindings.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Создание пользовательской привязки для конкретного режима проверки подлинности, в разделе [как: создание SecurityBindingElement для режима проверки подлинности указан](../../../../docs/framework/wcf/feature-details/how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md).  
+ Дополнительные сведения о создании настраиваемых привязок см. в разделе [привязки привязанных к](../../../../docs/framework/wcf/extending/creating-user-defined-bindings.md). Дополнительные сведения о создании настраиваемых привязок для конкретного режима проверки подлинности см. в разделе [как: создание SecurityBindingElement для режима проверки подлинности указан](../../../../docs/framework/wcf/feature-details/how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md).  
   
 ## <a name="see-also"></a>См. также  
  <xref:System.ServiceModel.Security.MessageProtectionOrder>  

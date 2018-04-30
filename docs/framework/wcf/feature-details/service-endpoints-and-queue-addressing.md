@@ -1,24 +1,26 @@
 ---
-title: "Конечные точки служб и адресация очереди"
-ms.custom: 
+title: Конечные точки служб и адресация очереди
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 7d2d59d7-f08b-44ed-bd31-913908b83d97
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 8488e802ee191c261b65388d48bd26aa37d18206
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: f2244ccb1637f944f9e3349cf0d94caa2f6676bf
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="service-endpoints-and-queue-addressing"></a>Конечные точки служб и адресация очереди
 В этом разделе рассматриваются принципы обращения клиентов к службам, выполняющим чтение из очередей, и сопоставления конечных точек служб с очередями. На следующем рисунке приведена схема классического развертывания приложения [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] с использованием очередей.  
@@ -32,7 +34,7 @@ ms.lasthandoff: 01/19/2018
   
  Имена путей сопоставляются именам «FormatName», чтобы определить дополнительные аспекты адреса, включая протокол передачи данных диспетчера маршрутизации и очереди. Диспетчер очередей поддерживает два протокола передачи данных: собственный протокол MSMQ и протокол SRMP.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Путь и формат имен очередей MSMQ, в разделе [об очереди сообщений](http://go.microsoft.com/fwlink/?LinkId=94837).  
+ Дополнительные сведения об именах пути и формата MSMQ см. в разделе [об очереди сообщений](http://go.microsoft.com/fwlink/?LinkId=94837).  
   
 ## <a name="netmsmqbinding-and-service-addressing"></a>NetMsmqBinding и адресация к службе  
  При адресации сообщения службе выбирается схема из URI (в зависимости от транспорта, используемого для передачи данных). Каждый транспорт в [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] имеет уникальную схему. Схема должна отражать тип транспорта, используемого для передачи данных. Например: net.tcp, net.pipe, HTTP и т. п.  
@@ -49,7 +51,7 @@ ms.lasthandoff: 01/19/2018
   
 -   [private] - необязательный элемент. Используется при адресации к целевой очереди, которая является частной. При адресации к общей очереди не допускается указывать «private». Обратите внимание, что в отличие от путей MSMQ знак «$» отсутствует в форме URI [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
   
--   \<*Имя очереди*> — имя очереди. Имя очереди также может относиться к вложенной очереди. Thus, \<*queue-name*> = \<*name-of-queue*>[;*sub-queue-name*].  
+-   \<*Имя очереди*> — имя очереди. Имя очереди также может относиться к вложенной очереди. Таким образом \< *имя очереди*> = \< *name-of-queue*> [; *Имя подопераций queue*].  
   
  Пример 1. Для адресации к частной очереди PurchaseOrders, размещенной на компьютере abc.adatum.com, универсальный код ресурса (URI) будет таким: net.msmq://abc.adatum.com/private/PurchaseOrders.  
   
@@ -83,9 +85,9 @@ ms.lasthandoff: 01/19/2018
   
 |Адрес очереди WCF, основанный на URI|Используется свойство Active Directory|Свойство протокола передачи между очередями|Результирующие имена форматов MSMQ|  
 |----------------------------------|-----------------------------------|--------------------------------------|---------------------------------|  
-|Net.msmq://\<machine-name>/private/abc|False (по умолчанию)|Native (по умолчанию)|DIRECT=OS:имя_компьютера\private$\abc|  
-|Net.msmq://\<machine-name>/private/abc|False|SRMP|DIRECT=http://компьютер/msmq/private$/abc|  
-|Net.msmq://\<machine-name>/private/abc|Да|машинный код;|PUBLIC=guid (идентификатор GUID очереди)|  
+|NET.MSMQ://\<имя компьютера >/private/abc|False (по умолчанию)|Native (по умолчанию)|DIRECT=OS:имя_компьютера\private$\abc|  
+|NET.MSMQ://\<имя компьютера >/private/abc|False|SRMP|DIRECT =http://machine/msmq/private$/ abc|  
+|NET.MSMQ://\<имя компьютера >/private/abc|Да|машинный код;|PUBLIC=guid (идентификатор GUID очереди)|  
   
 ### <a name="reading-messages-from-the-dead-letter-queue-or-the-poison-message-queue"></a>Чтение сообщений из очереди недоставленных сообщений или из очереди подозрительных сообщений  
  Для чтения сообщений из очереди подозрительных сообщений, являющейся вложенной очередью целевой очереди, откройте `ServiceHost`, указав адрес вложенной очереди.  
@@ -111,7 +113,7 @@ ms.lasthandoff: 01/19/2018
   
  Обратите внимание, что можно использовать только прямые имена форматов, а также открытые и закрытые имена форматов (требуется интеграция Active Directory) при получении сообщений из очереди с помощью `MsmqIntegrationBinding`. Впрочем, рекомендуется использовать прямые имена форматов. Например, в системе [!INCLUDE[wv](../../../../includes/wv-md.md)] использование любых других имен форматов приводит к ошибке, поскольку система пытается открыть вложенную очередь, что возможно только с использованием прямых имен форматов.  
   
- При адресации к SRMP с помощью `MsmqIntegrationBinding` не требуется добавлять /msmq/ к прямому имени формата для отправки с помощью служб IIS. Пример. При адресации очереди abc с помощью протокола SRMP вместо DIRECT=http://adatum.com/msmq/private$/abc следует указать DIRECT=http://adatum.com/private$/abc.  
+ При адресации к SRMP с помощью `MsmqIntegrationBinding` не требуется добавлять /msmq/ к прямому имени формата для отправки с помощью служб IIS. Например: при адресации к очереди протокола abc с помощью SRMP вместо DIRECT =http://adatum.com/msmq/private$/ abc следует использовать DIRECT =http://adatum.com/private$/ abc.  
   
  Обратите внимание, что нельзя использовать адресацию net.msmq:// вместе с `MsmqIntegrationBinding`. Поскольку `MsmqIntegrationBinding` поддерживает произвольную адресацию имен форматов MSMQ, можно с помощью службы [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], использующей эту привязку, использовать функции MSMQ «многоадресная рассылка» и «список рассылки». Единственное исключение: необходимо указать `CustomDeadLetterQueue` при использовании `MsmqIntegrationBinding`. Требуемая форма: net.msmq://, как и при указании с помощью `NetMsmqBinding`.  
   

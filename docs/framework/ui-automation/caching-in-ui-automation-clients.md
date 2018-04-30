@@ -19,11 +19,11 @@ ms.author: mhopkins
 manager: markl
 ms.workload:
 - dotnet
-ms.openlocfilehash: 5bbd54d4e1e8a6a1eae52f50696aecddd1f8bd8a
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 2db81007b745a1c3ee8434b400ab92a01aeeb6e2
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="caching-in-ui-automation-clients"></a>Кэширование в клиентах автоматизации пользовательского интерфейса
 > [!NOTE]
@@ -33,7 +33,7 @@ ms.lasthandoff: 04/26/2018
   
  В [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]кэширование означает предварительное получение данных. Затем к этим данным можно осуществлять доступ без дальнейшего взаимодействия между процессами. Кэширование обычно используется клиентскими приложениями модели автоматизации пользовательского интерфейса для массового извлечения свойств и шаблонов элементов управления. Затем по мере необходимости информация извлекается из кэша. Приложение периодически обновляет кэш, обычно в ответ на события, указывающие на изменение чего-нибудь в [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] .  
   
- Преимущества кэширования наиболее заметны при использовании с элементами управления [!INCLUDE[TLA#tla_wpf](../../../includes/tlasharptla-wpf-md.md)] и настраиваемыми элементами управления, имеющими серверных поставщиков автоматизации пользовательского интерфейса. При доступе к клиентским поставщикам, таким как поставщики по умолчанию для элементов управления [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] , преимущества кэширования не столь заметны.  
+ Преимущества кэширования наиболее заметны при использовании элементов управления Windows Presentation Foundation (WPF) и пользовательские элементы управления, имеющие серверного поставщика автоматизации пользовательского интерфейса. При доступе к клиентским поставщикам, таким как поставщики по умолчанию для элементов управления [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] , преимущества кэширования не столь заметны.  
   
  Кэширование происходит, когда приложение активирует <xref:System.Windows.Automation.CacheRequest> , а затем использует какой-либо метод или свойство для возврата <xref:System.Windows.Automation.AutomationElement>; например <xref:System.Windows.Automation.AutomationElement.FindFirst%2A>, <xref:System.Windows.Automation.AutomationElement.FindAll%2A>. Методы <xref:System.Windows.Automation.TreeWalker> являются исключением; кэширование выполняется только если <xref:System.Windows.Automation.CacheRequest> указан как параметр (например, <xref:System.Windows.Automation.TreeWalker.GetFirstChild%28System.Windows.Automation.AutomationElement%2CSystem.Windows.Automation.CacheRequest%29?displayProperty=nameWithType>.  
   

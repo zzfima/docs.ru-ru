@@ -1,30 +1,32 @@
 ---
-title: "Пример федерации"
-ms.custom: 
+title: Пример федерации
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 7e9da0ca-e925-4644-aa96-8bfaf649d4bb
-caps.latest.revision: "26"
+caps.latest.revision: 26
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6c87984b08a073f37dcf155a39fab0f5e580e985
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 58a8ab012682d5acb04b201c36d931276426ffe8
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="federation-sample"></a>Пример федерации
 В данном примере демонстрируется федеративная безопасность.  
   
 ## <a name="sample-details"></a>Подробные сведения об образце  
- В [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] предусмотрена поддержка развертывания архитектуры федеративной безопасности с помощью `wsFederationHttpBinding`. Привязка `wsFederationHttpBinding` обеспечивает наличие безопасной и надежной привязки, которая поддерживает возможность взаимодействия. Данная привязка предполагает использование протокола HTTP в качестве базового транспортного механизма для взаимодействия типа "запрос-ответ" и текста/XML в качестве формата подключения для кодирования. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Федерации в [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], в разделе [федерации](../../../../docs/framework/wcf/feature-details/federation.md).  
+ В [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] предусмотрена поддержка развертывания архитектуры федеративной безопасности с помощью `wsFederationHttpBinding`. Привязка `wsFederationHttpBinding` обеспечивает наличие безопасной и надежной привязки, которая поддерживает возможность взаимодействия. Данная привязка предполагает использование протокола HTTP в качестве базового транспортного механизма для взаимодействия типа "запрос-ответ" и текста/XML в качестве формата подключения для кодирования. Дополнительные сведения о федерации в [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], в разделе [федерации](../../../../docs/framework/wcf/feature-details/federation.md).  
   
  Сценарий состоит из 4 частей:  
   
@@ -124,7 +126,7 @@ ms.lasthandoff: 12/22/2017
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите на страницу [Примеры Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все примеры [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Этот образец расположен в следующем каталоге.  
+>  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) Чтобы загрузить все [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] образцов. Этот образец расположен в следующем каталоге.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\Federation`  
   

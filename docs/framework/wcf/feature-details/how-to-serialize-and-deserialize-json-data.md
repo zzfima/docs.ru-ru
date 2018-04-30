@@ -1,24 +1,26 @@
 ---
-title: "Практическое руководство. Сериализация и десериализация данных JSON"
-ms.custom: 
+title: Практическое руководство. Сериализация и десериализация данных JSON
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 88abc1fb-8196-4ee3-a23b-c6934144d1dd
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 994ccb677d1376eff5b889a0a4ddfe072557bdea
-ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
+ms.workload:
+- dotnet
+ms.openlocfilehash: 9152e0047102661664f9b158aa26f83fb1d3c25c
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-serialize-and-deserialize-json-data"></a>Практическое руководство. Сериализация и десериализация данных JSON
 JSON - эффективный формат кодирования данных, обеспечивающий быстрый обмен небольшими объемами данных между клиентскими браузерами и веб-службами с поддержкой AJAX.  
@@ -34,7 +36,7 @@ JSON - эффективный формат кодирования данных, 
   
 ### <a name="to-define-the-data-contract-for-a-person"></a>Определение контракта для типа Person  
   
-1.  Определите контракт данных для типа `Person`, применив атрибут <xref:System.Runtime.Serialization.DataContractAttribute> к классу и атрибут <xref:System.Runtime.Serialization.DataMemberAttribute> к элементам, которые требуется сериализовать. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]контрактах данных см. в разделе [проектирование контрактов службы](../../../../docs/framework/wcf/designing-service-contracts.md).  
+1.  Определите контракт данных для типа `Person`, применив атрибут <xref:System.Runtime.Serialization.DataContractAttribute> к классу и атрибут <xref:System.Runtime.Serialization.DataMemberAttribute> к элементам, которые требуется сериализовать. Дополнительные сведения о контрактах данных см. в разделе [проектирование контрактов службы](../../../../docs/framework/wcf/designing-service-contracts.md).  
   
     ```csharp  
     [DataContract]  

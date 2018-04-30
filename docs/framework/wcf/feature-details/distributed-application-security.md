@@ -1,32 +1,34 @@
 ---
-title: "Защита распределенных приложений"
-ms.custom: 
+title: Защита распределенных приложений
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - distributed application security [WCF]
 - security [WCF], transfer
 ms.assetid: 53928a10-e474-46d0-ab90-5f98f8d7b668
-caps.latest.revision: "32"
+caps.latest.revision: 32
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 1e67c5da534e7b35d4d27c0164d9389c8afe252b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 8b5bc311262aae1110f7d0249be60135e318785e
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="distributed-application-security"></a>Защита распределенных приложений
 Безопасность [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] подразделяется на три основные функциональные области: безопасность передачи, управление доступом и аудит. Безопасность передачи обеспечивает целостность, конфиденциальность и проверку подлинности. Безопасность передачи обеспечивается одним из следующих способов: безопасность транспорта, безопасность сообщений или `TransportWithMessageCredential`.  
   
- Общие сведения о [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] безопасность сообщений см. в разделе [Общие сведения о безопасности](../../../../docs/framework/wcf/feature-details/security-overview.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)]другие два блока [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] безопасности, в разделе [авторизации](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md) и [аудита](../../../../docs/framework/wcf/feature-details/auditing-security-events.md).  
+ Общие сведения о [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] безопасность сообщений см. в разделе [Общие сведения о безопасности](../../../../docs/framework/wcf/feature-details/security-overview.md). Дополнительные сведения о других два блока [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] безопасности, в разделе [авторизации](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md) и [аудита](../../../../docs/framework/wcf/feature-details/auditing-security-events.md).  
   
 ## <a name="transfer-security-scenarios"></a>Сценарии безопасности передачи  
  Обычными сценариями, в которых используется безопасность передачи [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], являются следующие сценарии:  
@@ -40,7 +42,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="integrity-confidentiality-and-authentication"></a>Целостность, конфиденциальность и проверка подлинности  
  Эти функции (целостность, конфиденциальность и проверка подлинности) совместно называются безопасностью передачи. Безопасность передачи обеспечивает функции, позволяющие устранить угрозы для распределенных приложений. В приведенной ниже таблице кратко описаны три функции, составляющие безопасность передачи.  
   
-|Функция|Описание:|  
+|Функция|Описание|  
 |--------------|-----------------|  
 |Целостность|*Целостность* это гарантия того, что данные являются полные и точные, особенно после передачи из одной точки в другую и возможно, считывания несколькими агентами. Целостность, необходимая для предотвращения подделки данных, обычно обеспечивается цифровой подписью сообщения.|  
 |Конфиденциальность|*Конфиденциальность* является гарантия того, что сообщение не было прочитано никем другим, кроме предполагаемого читателя. Например, при передаче по Интернету необходимо сохранить в секрете номер кредитной карты. Конфиденциальность часто обеспечивается путем шифрования данных с использованием схемы "открытый ключ/закрытый ключ".|  
@@ -49,7 +51,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="security-modes"></a>Режимы безопасности  
  В [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] предусмотрены несколько режимов безопасности передачи, рассматриваемые в приведенной ниже таблице.  
   
-|Режим|Описание:|  
+|Режим|Описание|  
 |----------|-----------------|  
 |Нет|Безопасность на уровне транспорта или на уровне сообщений не обеспечивается. Ни одна из стандартных привязок используйте этот режим по умолчанию, за исключением [ \<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md) элемента или, при использовании кода и <xref:System.ServiceModel.BasicHttpBinding> класса.|  
 |Transport|Для обеспечения целостности, конфиденциальности и взаимной проверки подлинности используется безопасный транспорт, такой как HTTPS.|  
@@ -68,7 +70,7 @@ ms.lasthandoff: 12/22/2017
   
  В учетных данных с сертификатом имя субъекта, альтернативное имя субъекта или определенные поля сертификата могут использоваться для представления заявленной идентификации и/или возможностей. Обладание данными, приведенными в учетных данных, доказывается с помощью соответствующего закрытого ключа, использованного для создания сигнатуры.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]программирование безопасности передачи и указания учетных данных, в разделе [привязки и безопасность](../../../../docs/framework/wcf/feature-details/bindings-and-security.md) и [поведения безопасности](../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md).  
+ Дополнительные сведения о программировании безопасность передачи, и заданию учетных данных см. в разделе [привязки и безопасность](../../../../docs/framework/wcf/feature-details/bindings-and-security.md) и [поведения безопасности](../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md).  
   
 ### <a name="transport-client-credential-types"></a>Типы учетных данных клиента с безопасностью транспорта  
  В следующей таблице приведены возможные значения, применимые при создании приложения, использующего безопасность транспорта. Эти значения можно использовать либо в коде, либо в параметрах привязки.  

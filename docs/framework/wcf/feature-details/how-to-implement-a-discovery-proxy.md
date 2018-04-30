@@ -1,27 +1,29 @@
 ---
-title: "Как реализовать прокси-сервера обнаружения"
-ms.custom: 
+title: Как реализовать прокси-сервера обнаружения
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 78d70e0a-f6c3-4cfb-a7ca-f66ebddadde0
-caps.latest.revision: "19"
+caps.latest.revision: 19
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 25db6b46758e11c194952fbca03286891a5914d9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 2e984a55137aec0042f8de0d69aa1310ed43a0df
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-implement-a-discovery-proxy"></a>Как реализовать прокси-сервера обнаружения
-В этом разделе приведены сведения о реализации прокси-сервера обнаружения. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]функция обнаружения в [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], в разделе [Общие сведения об обнаружении WCF](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md). Прокси-сервер обнаружения реализуется созданием класса, расширяющего абстрактный класс <xref:System.ServiceModel.Discovery.DiscoveryProxy>. В этом образце определены и использованы несколько других вспомогательных классов. `OnResolveAsyncResult`, `OnFindAsyncResult` и `AsyncResult`. Эти классы реализуют интерфейс <xref:System.IAsyncResult>. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<xref:System.IAsyncResult> разделе [System.IAsyncResult интерфейс](xref:System.IAsyncResult).
+В этом разделе приведены сведения о реализации прокси-сервера обнаружения. Дополнительные сведения о функции обнаружения в [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], в разделе [Общие сведения об обнаружении WCF](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md). Прокси-сервер обнаружения реализуется созданием класса, расширяющего абстрактный класс <xref:System.ServiceModel.Discovery.DiscoveryProxy>. В этом образце определены и использованы несколько других вспомогательных классов. `OnResolveAsyncResult`, `OnFindAsyncResult` и `AsyncResult`. Эти классы реализуют интерфейс <xref:System.IAsyncResult>. Дополнительные сведения о <xref:System.IAsyncResult> разделе [System.IAsyncResult интерфейс](xref:System.IAsyncResult).
   
  В данном разделе реализация прокси-сервера обнаружения разделена на три основные части.  
   

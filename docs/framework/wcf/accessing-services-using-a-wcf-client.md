@@ -1,13 +1,13 @@
 ---
-title: "Обращение к службам с использованием клиента WCF"
-ms.custom: 
+title: Обращение к службам с использованием клиента WCF
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - clients [WCF], consuming services
 ms.assetid: d780af9f-73c5-42db-9e52-077a5e4de7fe
-caps.latest.revision: 
+caps.latest.revision: 36
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 1f33d64e9ec1881b1ef7b93ba29d233f2f580c29
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 69352ba5c12267f5075ae38c5bdcc0665b3fe050
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="accessing-services-using-a-wcf-client"></a>Обращение к службам с использованием клиента WCF
 Следующим шагом после создания службы является создание клиентского прокси-класса [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]. Клиентское приложение использует клиентский прокси-класс [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] для взаимодействия со службой. Клиентские приложения обычно импортируют метаданные службы, чтобы создать код клиента [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], который можно будет использовать для вызова службы.  
@@ -61,7 +61,7 @@ Svcutil.exe <list of WSDL and XSD files on file system>
 Svcutil.exe <file1 [,file2]>  
 ```  
   
- Если задано только одно имя файла, это имя выходного файла. Если задано два имени файла, то первый файл является исходным файлом конфигурации, содержимое которого объединяется с создаваемой конфигурацией и записывается во второй файл. [!INCLUDE[crabout](../../../includes/crabout-md.md)]конфигурации, в разделе [Настройка привязок для служб](../../../docs/framework/wcf/configuring-bindings-for-wcf-services.md).  
+ Если задано только одно имя файла, это имя выходного файла. Если задано два имени файла, то первый файл является исходным файлом конфигурации, содержимое которого объединяется с создаваемой конфигурацией и записывается во второй файл. Дополнительные сведения о конфигурации см. в разделе [Настройка привязок для служб](../../../docs/framework/wcf/configuring-bindings-for-wcf-services.md).  
   
 > [!IMPORTANT]
 >  Незащищенные запросы метаданных представляют определенную угрозу, подобно незащищенным сетевым запросам. Если нет уверенности, что конечная точка, с которой осуществляется взаимодействие, является той точкой, за которую она себя выдает, получаемая информация может представлять собой метаданные вредоносной службы.  
@@ -194,7 +194,7 @@ Console.WriteLine("Add({0},{1}) = {2}", value1, value2, result)
   
 -   <xref:System.ServiceModel.CommunicationObjectAbortedException>: подключение к сокету было прервано. Это может быть вызвано ошибкой при обработке сообщения, истечением времени ожидания на удаленном узле или проблемой с соответствующим сетевым ресурсом.  
   
- Если происходят исключения этих типов, лучшим решением проблемы является включение трассировки на стороне службы и определение исключения, которое там произошло. [!INCLUDE[crabout](../../../includes/crabout-md.md)]Трассировка, в разделе [трассировки](../../../docs/framework/wcf/diagnostics/tracing/index.md) и [с помощью трассировки для устранения неполадок приложения](../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md).  
+ Если происходят исключения этих типов, лучшим решением проблемы является включение трассировки на стороне службы и определение исключения, которое там произошло. Дополнительные сведения о трассировке см. в разделе [трассировки](../../../docs/framework/wcf/diagnostics/tracing/index.md) и [с помощью трассировки для устранения неполадок приложения](../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md).  
   
 ## <a name="see-also"></a>См. также  
  [Практическое руководство. Создание клиента](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)  

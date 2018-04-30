@@ -21,11 +21,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 9f6a6a819b4667bc60ab0abb575d6fff397d67fe
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 172ef71bd3ae09e3c9f15cb0bdb48728a587605e
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="using-sessions"></a>Использование сеансов
 В приложениях [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] *сеанс* объединяет группу сообщений в диалоге. Сеансы в[!INCLUDE[indigo2](../../../includes/indigo2-md.md)] отличаются от объектов сеансов, имеющихся в приложениях [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] , поддерживают различные виды поведения, а также управляются разными способами. В этом разделе описаны возможности приложений [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] , обеспечиваемые сеансами, и способы их использования.  
@@ -144,7 +144,7 @@ ms.lasthandoff: 04/28/2018
   
  Примеры см. в разделе [How to: Create a Service That Requires Sessions](../../../docs/framework/wcf/feature-details/how-to-create-a-service-that-requires-sessions.md) , а также в примерах из разделов [Default Service Behavior](../../../docs/framework/wcf/samples/default-service-behavior.md) и [Instancing](../../../docs/framework/wcf/samples/instancing.md) .  
   
- [!INCLUDE[crabout](../../../includes/crabout-md.md)] клиентах и сеансах см. в разделе [получение служб с помощью клиента WCF](../../../docs/framework/wcf/feature-details/accessing-services-using-a-client.md).  
+ Дополнительные сведения о клиентах и сеансах см. в разделе [получение служб с помощью клиента WCF](../../../docs/framework/wcf/feature-details/accessing-services-using-a-client.md).  
   
 ## <a name="sessions-interact-with-instancecontext-settings"></a>Сеансы взаимодействуют с параметрами InstanceContext  
  Перечисление <xref:System.ServiceModel.SessionMode> контракта взаимодействует со свойством <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A?displayProperty=nameWithType>, управляющим связью между каналами и определенными объектами службы. Дополнительные сведения см. в разделе [сеансы, создания и параллелизм](../../../docs/framework/wcf/feature-details/sessions-instancing-and-concurrency.md).  

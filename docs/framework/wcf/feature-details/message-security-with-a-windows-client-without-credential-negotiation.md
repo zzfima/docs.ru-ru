@@ -1,27 +1,29 @@
 ---
-title: "Безопасность сообщений с использованием клиента Windows без согласования учетных данных"
-ms.custom: 
+title: Безопасность сообщений с использованием клиента Windows без согласования учетных данных
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: fc07a26c-cbee-41c5-8fb0-329085fef749
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: f069ff100a2fba1f6bace1d9a81ed69314261eae
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 056e743ff1849457f8a0e8ee509a56475f09435c
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="message-security-with-a-windows-client-without-credential-negotiation"></a>Безопасность сообщений с использованием клиента Windows без согласования учетных данных
 В следующем сценарии показаны клиент и служба [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], защищенные протоколом Kerberos.  
@@ -61,7 +63,7 @@ ms.lasthandoff: 12/22/2017
   
 2.  Запустите службу из любой учетной записи домена Active Directory. В этом случае потребуется установить SPN для учетной записи домена. Это можно сделать, например, с помощью средства Setspn.exe. Создав SPN для учетной записи службы, задайте [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] публиковать это SPN в клиентах службы через метаданные (WSDL). Это можно сделать, настроив удостоверение конечной точки для предоставляемой конечной точки либо в файле конфигурации приложения, либо в коде. В следующем примере описывается программный способ публикации удостоверения.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Имена участников-служб, протокол Kerberos и Active Directory в разделе [техническое дополнение Kerberos для Windows](http://go.microsoft.com/fwlink/?LinkId=88330). [!INCLUDE[crabout](../../../../includes/crabout-md.md)]удостоверения конечной точки в разделе [режимы проверки подлинности SecurityBindingElement](../../../../docs/framework/wcf/feature-details/securitybindingelement-authentication-modes.md).  
+ Дополнительные сведения об именах SPN, протокол Kerberos и Active Directory см. в разделе [техническое дополнение Kerberos для Windows](http://go.microsoft.com/fwlink/?LinkId=88330). Дополнительные сведения об удостоверениях конечной точки см. в разделе [режимы проверки подлинности SecurityBindingElement](../../../../docs/framework/wcf/feature-details/securitybindingelement-authentication-modes.md).  
   
  [!code-csharp[C_SecurityScenarios#12](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#12)]
  [!code-vb[C_SecurityScenarios#12](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#12)]  
@@ -117,9 +119,9 @@ ms.lasthandoff: 12/22/2017
  Следующий код служит для настройки клиента. Для режима безопасности задано значение Message, типу учетных данных клиента присвоено значение Windows. Обратите внимание: свойствам <xref:System.ServiceModel.MessageSecurityOverHttp.NegotiateServiceCredential%2A> и <xref:System.ServiceModel.NonDualMessageSecurityOverHttp.EstablishSecurityContext%2A> задается значение `false`.  
   
 > [!NOTE]
->  Для использования типа учетных данных Windows без согласования требуется настроить SPN учетной записи службы до начала обмена данными со службой. Клиент использует имя SPN, чтобы получить маркер Kerberos для проверки подлинности и обеспечения безопасности обмена данными со службой. В следующем образце показано, как настроить SPN службы для клиента. Если вы используете [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) для создания клиента, имя участника-службы для службы автоматически распространяется на клиент из метаданных службы (WSDL), если содержит метаданные службы Эти сведения. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] том, как настроить службу для включения ее имени участника-службы в метаданные, см. в подразделе «Служба» далее в этом разделе.  
+>  Для использования типа учетных данных Windows без согласования требуется настроить SPN учетной записи службы до начала обмена данными со службой. Клиент использует имя SPN, чтобы получить маркер Kerberos для проверки подлинности и обеспечения безопасности обмена данными со службой. В следующем образце показано, как настроить SPN службы для клиента. Если вы используете [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) для создания клиента, имя участника-службы для службы автоматически распространяется на клиент из метаданных службы (WSDL), если содержит метаданные службы Эти сведения. Дополнительные сведения о настройке службы для включения имени участника-службы в метаданных службы см. в разделе «Служба» далее в этом разделе.  
 >   
->  Дополнительные сведения о имена участников-служб, Kerberos и Active Directory см. в разделе [техническое дополнение Kerberos для Windows](http://go.microsoft.com/fwlink/?LinkId=88330). [!INCLUDE[crabout](../../../../includes/crabout-md.md)]удостоверения конечной точки в разделе [режимы проверки подлинности SecurityBindingElement](../../../../docs/framework/wcf/feature-details/securitybindingelement-authentication-modes.md) раздела.  
+>  Дополнительные сведения о имена участников-служб, Kerberos и Active Directory см. в разделе [техническое дополнение Kerberos для Windows](http://go.microsoft.com/fwlink/?LinkId=88330). Дополнительные сведения об удостоверениях конечной точки см. в разделе [режимы проверки подлинности SecurityBindingElement](../../../../docs/framework/wcf/feature-details/securitybindingelement-authentication-modes.md) раздела.  
   
  [!code-csharp[C_SecurityScenarios#19](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#19)]
  [!code-vb[C_SecurityScenarios#19](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#19)]  

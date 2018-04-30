@@ -1,12 +1,13 @@
 ---
-title: "Настройка каналов (службы данных WCF)"
-ms.custom: 
+title: Настройка каналов (службы данных WCF)
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework-oob
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -17,19 +18,20 @@ helpviewer_keywords:
 - Atom Publishing Protocol [WCF Data Services]
 - WCF Data Services, customizing feeds
 ms.assetid: 0d1a39bc-6462-4683-bd7d-e74e0fd28a85
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 2c5e33490a94346880986fdf66a4c5907084c8cd
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: c59bfdd22125f10b8a35afc8c264b6b2869a3998
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="feed-customization-wcf-data-services"></a>Настройка каналов (службы данных WCF)
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]использует [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] для предоставления данных в виде потока. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]поддерживает форматы Atom и нотации объектов JavaScript (JSON) для веб-каналов данных. При использовании канала Atom [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] предоставляет стандартный метод для сериализации данных, таких как сущности и связи, в формате XML, которое может быть включено в теле сообщения HTTP. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]Определяет сопоставление между данными, содержащимися в сущностях и элементы Atom свойства сущности по умолчанию. Дополнительные сведения см. в разделе [OData: формат Atom](http://go.microsoft.com/fwlink/?LinkID=185794).  
+[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] использует [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] для предоставления данных в виде потока. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] поддерживает форматы Atom и нотации объектов JavaScript (JSON) для веб-каналов данных. При использовании канала Atom [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] предоставляет стандартный метод для сериализации данных, таких как сущности и связи, в формате XML, которое может быть включено в теле сообщения HTTP. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] Определяет сопоставление между данными, содержащимися в сущностях и элементы Atom свойства сущности по умолчанию. Дополнительные сведения см. в разделе [OData: формат Atom](http://go.microsoft.com/fwlink/?LinkID=185794).  
   
  Возможна ситуация, когда требуется сериализация данных свойства, возвращаемых службой данных, в настраиваемом виде, а не в стандартном формате канала. С [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)], можно настроить сериализацию в поток данных, чтобы свойства сущности сопоставлялись с неиспользуемыми элементами и атрибутами сущности или с пользовательскими элементами записи в веб-канала.  
   
@@ -53,19 +55,19 @@ ms.lasthandoff: 01/19/2018
  Дополнительные сведения см. в разделе [как: Настройка каналов с использованием поставщика Entity Framework](../../../../docs/framework/data/wcf/how-to-customize-feeds-with-ef-provider-wcf-data-services.md).  
   
 > [!NOTE]
->  Поскольку расширения модели данных не поддерживаются конструктором сущностей, необходимо вручную модифицировать XML-файл, содержащий модель данных. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]EDMX-файл, созданный [!INCLUDE[adonet_edm](../../../../includes/adonet-edm-md.md)] средства, см. [.edmx Обзор файла](http://msdn.microsoft.com/library/f4c8e7ce-1db6-417e-9759-15f8b55155d4).  
+>  Поскольку расширения модели данных не поддерживаются конструктором сущностей, необходимо вручную модифицировать XML-файл, содержащий модель данных. Дополнительные сведения о EDMX-файл, созданный [!INCLUDE[adonet_edm](../../../../includes/adonet-edm-md.md)] средства, см. [.edmx Обзор файла](http://msdn.microsoft.com/library/f4c8e7ce-1db6-417e-9759-15f8b55155d4).  
   
 ### <a name="custom-feed-attributes"></a>Настраиваемые атрибуты канала  
  В следующей таблице приведены XML-атрибуты, с помощью которых можно настроить каналы, добавляемые в язык определения концептуальной схемы (CSDL) с определением модели данных. Эти атрибуты эквивалентны свойствам объекта <xref:System.Data.Services.Common.EntityPropertyMappingAttribute>, используемым при работе с поставщиком отражения.  
   
 |Имя атрибута|Описание|  
 |--------------------|-----------------|  
-|`FC_ContentKind`|Указывает тип содержимого. Следующие ключевые слова определяют типы содержимого синдикации.<br /><br /> `text:`Значение свойства отображается в канале как текст.<br /><br /> `html:`Значение свойства отображается в веб-канала в формате HTML.<br /><br /> `xhtml:`Значение свойства отображается в канале как HTML-текст в формате XML.<br /><br /> Эти ключевые слова эквивалентны значениям перечисления <xref:System.Data.Services.Common.SyndicationTextContentKind>, используемым при работе с поставщиком отражения.<br /><br /> Этот атрибут не поддерживается, если используются атрибуты `FC_NsPrefix` и `FC_NsUri`.<br /><br /> Если задается значение `xhtml` для атрибута `FC_ContentKind`, то необходимо убедиться, что значение свойства содержит XML в правильном формате. Служба данных возвращает значение, не выполняя никаких преобразований. Необходимо также убедиться, что префиксы элементов XML в возвращаемом XML имеют URI-код пространства имен и префикс, определенный в сопоставленном канале.|  
+|`FC_ContentKind`|Указывает тип содержимого. Следующие ключевые слова определяют типы содержимого синдикации.<br /><br /> `text:` Значение свойства отображается в канале как текст.<br /><br /> `html:` Значение свойства отображается в веб-канала в формате HTML.<br /><br /> `xhtml:` Значение свойства отображается в канале как HTML-текст в формате XML.<br /><br /> Эти ключевые слова эквивалентны значениям перечисления <xref:System.Data.Services.Common.SyndicationTextContentKind>, используемым при работе с поставщиком отражения.<br /><br /> Этот атрибут не поддерживается, если используются атрибуты `FC_NsPrefix` и `FC_NsUri`.<br /><br /> Если задается значение `xhtml` для атрибута `FC_ContentKind`, то необходимо убедиться, что значение свойства содержит XML в правильном формате. Служба данных возвращает значение, не выполняя никаких преобразований. Необходимо также убедиться, что префиксы элементов XML в возвращаемом XML имеют URI-код пространства имен и префикс, определенный в сопоставленном канале.|  
 |`FC_KeepInContent`|Указывает, что значение упомянутого свойства должно быть включено как в раздел содержимого канала, так и в сопоставленное расположение. Допустимые значения: `true` и `false`. Чтобы результирующий канал обратную совместимость с более ранними версиями [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], укажите значение `true` чтобы убедиться в том, что значение включено в раздел содержимого канала.|  
 |`FC_NsPrefix`|Префикс пространства имен элемента XML в сопоставлении, не включенном в синдикацию. Этот атрибут должен быть использован с атрибутом `FC_NsUri` и не может быть использован с атрибутом `FC_ContentKind`.|  
 |`FC_NsUri`|URI пространства имен элемента XML в сопоставлении, не включенном в синдикацию. Этот атрибут должен быть использован с атрибутом `FC_NsPrefix` и не может быть использован с атрибутом `FC_ContentKind`.|  
 |`FC_SourcePath`|Путь свойства сущности, к которой применяется данное правило сопоставления. Этот атрибут поддерживается только при использовании в элементе `EntityType`.<br /><br /> Свойство <xref:System.Data.Services.Common.EntityPropertyMappingAttribute.SourcePath%2A> не может непосредственно ссылаться на сложный тип. Для сложных типов необходимо использовать выражение пути, свойства в котором разделены символом косой черты (`/`). Например, допускаются следующие значения для типа сущности `Person` с целым свойством `Age` и сложным свойством<br /><br /> `Address`:<br /><br /> `Age`<br /><br /> `Address/Street`<br /><br /> Свойству <xref:System.Data.Services.Common.EntityPropertyMappingAttribute.SourcePath%2A> нельзя задать значение, содержащее пробел или любой символ, недопустимый в имени свойства.|  
-|`FC_TargetPath`|Имя целевого элемента результирующего канала, с которым сопоставляется данное свойство. Этот элемент может быть элементом, определенным в спецификации Atom, либо специализированным элементом.<br /><br /> Следующие ключевые слова соответствуют стандартным значениям целевых путей синдикации, указывающим на конкретные расположения в канале [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)].<br /><br /> `SyndicationAuthorEmail:``atom:email` Дочерний элемент элемента `atom:author` элемент.<br /><br /> `SyndicationAuthorName:``atom:name` Дочерний элемент элемента `atom:author` элемент.<br /><br /> `SyndicationAuthorUri:``atom:uri` Дочерний элемент элемента `atom:author` элемент.<br /><br /> `SyndicationContributorEmail:``atom:email` Дочерний элемент элемента `atom:contributor` элемент.<br /><br /> `SyndicationContributorName:``atom:name` Дочерний элемент элемента `atom:contributor` элемент.<br /><br /> `SyndicationContributorUri:``atom:uri` Дочерний элемент элемента `atom:contributor` элемент.<br /><br /> `SyndicationCustomProperty:`Элемент пользовательского свойства. При сопоставлении с пользовательским элементом целевой объект должен быть выражением пути, в котором вложенные элементы разделяются обратной косой чертой (`/`), а атрибуты определяются амперсандом (`@`). В следующем примере строка `UnitsInStock/@ReorderLevel` сопоставляет значение свойства с атрибутом с именем `ReorderLevel` у обозначенного именем `UnitsInStock` дочернего элемента корневого элемента entry.<br /><br /> `<Property Name="ReorderLevel" Type="Int16"               m:FC_TargetPath="UnitsInStock/@ReorderLevel"               m:FC_NsPrefix="Northwind"               m:FC_NsUri="http://schemas.examples.microsoft.com/dataservices"               m:FC_KeepInContent="false"               />`<br /><br /> Если целью является имя специализированного элемента, необходимо также задать атрибуты `FC_NsPrefix` и `FC_NsUri`.<br /><br /> `SyndicationPublished:``atom:published` Элемент.<br /><br /> `SyndicationRights:``atom:rights` Элемент.<br /><br /> `SyndicationSummary:``atom:summary` Элемент.<br /><br /> `SyndicationTitle:``atom:title` Элемент.<br /><br /> `SyndicationUpdated:``atom:updated` Элемент.<br /><br /> Эти ключевые слова эквивалентны значениям перечисления <xref:System.Data.Services.Common.SyndicationItemProperty>, используемым при работе с поставщиком отражения.|  
+|`FC_TargetPath`|Имя целевого элемента результирующего канала, с которым сопоставляется данное свойство. Этот элемент может быть элементом, определенным в спецификации Atom, либо специализированным элементом.<br /><br /> Следующие ключевые слова соответствуют стандартным значениям целевых путей синдикации, указывающим на конкретные расположения в канале [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)].<br /><br /> `SyndicationAuthorEmail:` `atom:email` Дочерний элемент элемента `atom:author` элемент.<br /><br /> `SyndicationAuthorName:` `atom:name` Дочерний элемент элемента `atom:author` элемент.<br /><br /> `SyndicationAuthorUri:` `atom:uri` Дочерний элемент элемента `atom:author` элемент.<br /><br /> `SyndicationContributorEmail:` `atom:email` Дочерний элемент элемента `atom:contributor` элемент.<br /><br /> `SyndicationContributorName:` `atom:name` Дочерний элемент элемента `atom:contributor` элемент.<br /><br /> `SyndicationContributorUri:` `atom:uri` Дочерний элемент элемента `atom:contributor` элемент.<br /><br /> `SyndicationCustomProperty:` Элемент пользовательского свойства. При сопоставлении с пользовательским элементом целевой объект должен быть выражением пути, в котором вложенные элементы разделяются обратной косой чертой (`/`), а атрибуты определяются амперсандом (`@`). В следующем примере строка `UnitsInStock/@ReorderLevel` сопоставляет значение свойства с атрибутом с именем `ReorderLevel` у обозначенного именем `UnitsInStock` дочернего элемента корневого элемента entry.<br /><br /> `<Property Name="ReorderLevel" Type="Int16"               m:FC_TargetPath="UnitsInStock/@ReorderLevel"               m:FC_NsPrefix="Northwind"               m:FC_NsUri="http://schemas.examples.microsoft.com/dataservices"               m:FC_KeepInContent="false"               />`<br /><br /> Если целью является имя специализированного элемента, необходимо также задать атрибуты `FC_NsPrefix` и `FC_NsUri`.<br /><br /> `SyndicationPublished:` `atom:published` Элемент.<br /><br /> `SyndicationRights:` `atom:rights` Элемент.<br /><br /> `SyndicationSummary:` `atom:summary` Элемент.<br /><br /> `SyndicationTitle:` `atom:title` Элемент.<br /><br /> `SyndicationUpdated:` `atom:updated` Элемент.<br /><br /> Эти ключевые слова эквивалентны значениям перечисления <xref:System.Data.Services.Common.SyndicationItemProperty>, используемым при работе с поставщиком отражения.|  
   
 > [!NOTE]
 >  В именах и значениях атрибутов учитывается регистр. Атрибуты можно применять либо к элементу `EntityType`, либо к одному или нескольким элементам `Property`, но не к тем и другим одновременно.  

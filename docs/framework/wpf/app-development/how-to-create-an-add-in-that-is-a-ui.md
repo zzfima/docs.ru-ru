@@ -1,12 +1,13 @@
 ---
-title: "Практическое руководство. Создание надстройки, являющейся пользовательским интерфейсом"
-ms.custom: 
+title: Практическое руководство. Создание надстройки, являющейся пользовательским интерфейсом
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - creating an add-in that is a UI [WPF]
@@ -16,19 +17,20 @@ helpviewer_keywords:
 - implementing UI add-ins [WPF]
 - pipeline segments [WPF], creating add-ins
 ms.assetid: 86375525-282b-4039-8352-8680051a10ea
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: fea1c718eedb12d49eced9964e4f9045badf07ed
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: cadb992a68f4ee9f06ad37adf71856cdc4f46503
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-create-an-add-in-that-is-a-ui"></a>Практическое руководство. Создание надстройки, являющейся пользовательским интерфейсом
-В этом примере показано, как создать надстройку, [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] , размещенное [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] автономное приложение.  
+В этом примере показано, как создать надстройку, Windows Presentation Foundation (WPF), размещаемый в [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] автономное приложение.  
   
  Надстройка — это [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] , [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] пользовательский элемент управления. Содержимое пользовательского элемента управления составляет одна кнопка, при нажатии которой отображается окно сообщения. [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Автономное приложение размещает надстройки [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] как содержимое главного окна приложения.  
   
@@ -64,7 +66,7 @@ ms.lasthandoff: 12/22/2017
   
  [!code-csharp[SimpleAddInIsAUISample#AddInSideAdapterCode](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SimpleAddInIsAUISample/CSharp/AddInSideAdapters/WPFAddIn_ViewToContractAddInSideAdapter.cs#addinsideadaptercode)]  
   
- В модели надстройки, где надстройка возвращает [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] (см. [Создайте надстройку, возвращает пользовательский Интерфейс](../../../../docs/framework/wpf/app-development/how-to-create-an-add-in-that-returns-a-ui.md)), адаптер надстройки преобразовать <xref:System.Windows.FrameworkElement> для <xref:System.AddIn.Contract.INativeHandleContract> путем вызова <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>. <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>необходимо также вызвать в этой модели, несмотря на то, что необходимо реализовать метод, с которых можно написать код, который будет вызывать его. Это делается путем переопределения <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> и реализация кода, который вызывает <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A> Если код, вызывающий <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> ожидает <xref:System.AddIn.Contract.INativeHandleContract>. В этом случае вызывающий объект будет адаптером приложения, который рассматривается в следующем подразделе.  
+ В модели надстройки, где надстройка возвращает [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] (см. [Создайте надстройку, возвращает пользовательский Интерфейс](../../../../docs/framework/wpf/app-development/how-to-create-an-add-in-that-returns-a-ui.md)), адаптер надстройки преобразовать <xref:System.Windows.FrameworkElement> для <xref:System.AddIn.Contract.INativeHandleContract> путем вызова <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>. <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A> необходимо также вызвать в этой модели, несмотря на то, что необходимо реализовать метод, с которых можно написать код, который будет вызывать его. Это делается путем переопределения <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> и реализация кода, который вызывает <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A> Если код, вызывающий <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> ожидает <xref:System.AddIn.Contract.INativeHandleContract>. В этом случае вызывающий объект будет адаптером приложения, который рассматривается в следующем подразделе.  
   
 > [!NOTE]
 >  Необходимо также переопределить <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> в этой модели, чтобы разрешить переходы между ведущим приложением [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] и надстройка [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]. Дополнительные сведения см. в разделе «WPF надстройки ограничения» в [Общие сведения о надстройках WPF](../../../../docs/framework/wpf/app-development/wpf-add-ins-overview.md).  

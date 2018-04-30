@@ -16,11 +16,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: ca37e8b3f59875ed912c02d0a8237a040bf79518
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 49ee6091b18dfcf2a5b46c173490b317fe770554
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="deploying-an-internet-information-services-hosted-wcf-service"></a>Развертывание службы WCF, размещенной в IIS
 Процесс разработки и развертывания службы [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] , которая размещается в службах IIS, состоит из следующих задач.  
@@ -38,7 +38,7 @@ ms.lasthandoff: 04/28/2018
  Подробное пошаговое руководство по созданию службы [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] , размещенной в IIS, см. в разделе [How to: Host a WCF Service in IIS](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md).  
   
 ## <a name="ensure-that-iis-aspnet-and-wcf-are-correctly-installed-and-registered"></a>Проверка правильности установки и регистрации IIS, ASP.NET и WCF  
- Для правильной работы служб[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], размещенных в IIS, должны быть установлены [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] , IIS и ASP.NET. Процедуры установки [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] (как части платформы [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)]), ASP.NET и IIS зависят от используемой версии операционной системы. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] установке [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] и [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)]см. в разделе [Веб-установщик Microsoft .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=201185). Инструкции по установке IIS см. в разделе [Установка IIS](http://go.microsoft.com/fwlink/?LinkId=201188).  
+ Для правильной работы служб[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], размещенных в IIS, должны быть установлены [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] , IIS и ASP.NET. Процедуры установки [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] (как части платформы [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)]), ASP.NET и IIS зависят от используемой версии операционной системы. Дополнительные сведения об установке [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] и [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)], в разделе [веб-установщик Microsoft .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=201185). Инструкции по установке IIS см. в разделе [Установка IIS](http://go.microsoft.com/fwlink/?LinkId=201188).  
   
  В процессе установки платформы [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)] выполняется автоматическая регистрация [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] с IIS, если IIS уже имеется на компьютере. Если IIS устанавливается после платформы [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)], для регистрации [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] с IIS и [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]требуется дополнительный шаг. Это можно выполнить указанным ниже способом в зависимости от операционной системы.  
   
@@ -51,9 +51,9 @@ ms.lasthandoff: 04/28/2018
  Наконец, необходимо убедиться в том, что среда ASP.NET настроена для использования платформы .NET Framework 4. Для этого запустите средство ASPNET_Regiis с параметром -i. Дополнительные сведения см. в разделе [средство регистрации IIS ASP.NET](http://go.microsoft.com/fwlink/?LinkId=201186)  
   
 ## <a name="create-a-new-iis-application-or-reuse-an-existing-aspnet-application"></a>Создание нового приложения служб IIS или повторное использование существующего приложения ASP.NET  
- Службы [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] , размещенные в IIS, должны находиться в приложении IIS. Можно создать новое приложение IIS только для размещения служб [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] . Можно также развернуть службу [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] в существующее приложение, в котором уже размещено содержимое [!INCLUDE[vstecasplong](../../../../includes/vstecasplong-md.md)] (например, страницы ASPX и веб-службы ASP.NET [ASMX]). [!INCLUDE[crabout](../../../../includes/crabout-md.md)] этих возможностях см. в разделах "Совместное размещение служб WCF вместе с ASP.NET" и "Размещение служб WCF в режиме совместимости с ASP.NET" в [WCF Services and ASP.NET](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md).  
+ Службы [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] , размещенные в IIS, должны находиться в приложении IIS. Можно создать новое приложение IIS только для размещения служб [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] . Можно также развернуть службу [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] в существующее приложение, в котором уже размещено содержимое [!INCLUDE[vstecasplong](../../../../includes/vstecasplong-md.md)] (например, страницы ASPX и веб-службы ASP.NET [ASMX]). Дополнительные сведения об этих параметрах см. в разделе «размещения WCF Side-by-Side с ASP.NET» и «Размещения служб WCF в режиме совместимости с ASP.NET» разделы в [службы WCF и ASP.NET](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md).  
   
- Обратите внимание, что [!INCLUDE[iis601](../../../../includes/iis601-md.md)] и более поздние версии периодически перезагружают изолированное приложение объектно-ориентированного программирования. Значение по умолчанию — 1740 минут. Максимальное поддерживаемое значение - 71582 минуты. Этот перезапуск можно отключить. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] этом свойстве см. в разделе [PeriodicRestartTime](http://go.microsoft.com/fwlink/?LinkId=109968).  
+ Обратите внимание, что [!INCLUDE[iis601](../../../../includes/iis601-md.md)] и более поздние версии периодически перезагружают изолированное приложение объектно-ориентированного программирования. Значение по умолчанию — 1740 минут. Максимальное поддерживаемое значение - 71582 минуты. Этот перезапуск можно отключить. Дополнительные сведения об этом свойстве см. в разделе [PeriodicRestartTime](http://go.microsoft.com/fwlink/?LinkId=109968).  
   
 ## <a name="create-an-svc-file-for-the-wcf-service"></a>Создание SVC-файла для службы WCF  
  Службы[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] , размещенные в IIS, представляются внутри приложения IIS в виде файлов со специальным содержимым (SVC-файлов). Эта модель подобна модели, согласно которой страницы ASMX представляются внутри приложения IIS в виде ASMX-файлов. SVC-файл содержит относящуюся к [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]директиву обработки ([@ServiceHost](../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md)), позволяющую инфраструктуре размещения [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] активировать размещенные службы в ответ на входящие сообщения. В приведенном ниже операторе показан наиболее распространенный синтаксис SVC-файла.  
@@ -70,7 +70,7 @@ new ServiceHost( typeof( MyNamespace.MyServiceImplementationTypeName ) );
   
  Можно также создать дополнительную конфигурацию размещения, например список базовых адресов службы. Кроме того, можно применить пользовательскую фабрику <xref:System.ServiceModel.Activation.ServiceHostFactory> , чтобы расширить директиву для использования с пользовательскими решениями по размещению. Приложения IIS, в которых размещаются службы [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] , не отвечают за управление созданием и временем существования экземпляров <xref:System.ServiceModel.ServiceHost> . Управляемая инфраструктура размещения [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] создает необходимый экземпляр <xref:System.ServiceModel.ServiceHost> динамически при получении первого запроса для SVC-файла. Этот экземпляр не освобождается, пока он не будет явно закрыт кодом или не перезапустится приложение.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] синтаксисе SVC-файлов см. в разделе [@ServiceHost](../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md).  
+ Дополнительные сведения о синтаксисе SVC-файлов см. в разделе [ @ServiceHost ](../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md).  
   
 ## <a name="deploy-the-service-implementation-to-the-iis-application"></a>Развертывание реализации службы в приложение IIS  
  Для служб[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] , размещенных в IIS, используется та же модель динамической компиляции, что и для [!INCLUDE[vstecasplong](../../../../includes/vstecasplong-md.md)]. Точно так же, как при использовании [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)], код реализации для размещенных в IIS служб [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] можно развернуть несколькими способами в разных расположениях следующим образом.  
@@ -81,7 +81,7 @@ new ServiceHost( typeof( MyNamespace.MyServiceImplementationTypeName ) );
   
 -   В виде нескомпилированного кода, расположенного непосредственно в SVC-файле. Код реализации может также быть размещен в SVC-файле службы после @ServiceHost директивы. Любые изменения во встроенном коде приводят к перезапуску и повторной компиляции приложения при получении следующего запроса.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] модели компиляции [!INCLUDE[vstecasplong](../../../../includes/vstecasplong-md.md)] см. в разделе [Общие сведения о компиляции в ASP.NET](http://go.microsoft.com/fwlink/?LinkId=94773).  
+ Дополнительные сведения о [!INCLUDE[vstecasplong](../../../../includes/vstecasplong-md.md)] модель компиляции. в разделе [компиляция](http://go.microsoft.com/fwlink/?LinkId=94773).  
   
 ## <a name="configure-the-wcf-service"></a>Настройка службы WCF  
  Конфигурация размещенных в IIS служб [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] хранится в файле Web.config приложений. Для размещенных в IIS служб используются те же элементы конфигурации и синтаксис, что и для служб [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] , размещенных вне IIS. Однако для среды размещения IIS присущи следующие ограничения.  

@@ -14,17 +14,17 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 09c3f7656284dd73dd5f50c4ef9f77cd5adcbfe7
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: c7c28d8c2edbda5a42a290786b0ff40e3ab6dd5b
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-create-a-workflow-service-that-consumes-an-existing-service-contract"></a>Как создать службу рабочего процесса, которая использует существующий контракт службы
 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] отличается улучшенной интеграцией между веб-службами и рабочими процессами в форме разработки рабочего процесса на основе контракта. Средство разработки рабочих процессов на основе контракта позволяет создать контракт в Code First. Затем это средство автоматически создает в области элементов шаблон действия для каждой операции в контракте.  
   
 > [!NOTE]
->  Этот раздел содержит пошаговые инструкции по созданию службы рабочих процессов на основе контракта. [!INCLUDE[crabout](../../../includes/crabout-md.md)] Разработка рабочих процессов на основе контракта службы, в разделе [контракта первого разработка служб рабочего процесса](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md).  
+>  Этот раздел содержит пошаговые инструкции по созданию службы рабочих процессов на основе контракта. Дополнительные сведения о разработке решений рабочих процессов на основе контракта службы см. в разделе [контракта первого разработка служб рабочего процесса](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md).  
   
 ### <a name="creating-the-workflow-project"></a>Создание проекта рабочего процесса  
   

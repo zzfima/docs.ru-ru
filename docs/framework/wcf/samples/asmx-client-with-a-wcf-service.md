@@ -1,24 +1,26 @@
 ---
-title: "Клиент ASMX со службой WCF"
-ms.custom: 
+title: Клиент ASMX со службой WCF
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 3ea381ee-ac7d-4d62-8c6c-12dc3650879f
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4df9060f173647767a3a070a451e0f2d3e02cf0d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 26fc56ae465c2792f895f08a8e55577d3b74b97d
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="asmx-client-with-a-wcf-service"></a>Клиент ASMX со службой WCF
 В этом образце показано, как создать службу с помощью [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], а затем получать доступ к службе из клиента, не являющегося [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-клиентом, например из клиента ASMX.  
@@ -149,14 +151,14 @@ Press <ENTER> to terminate client.
 3.  Для запуска образца в конфигурации одного или нескольких компьютерах, следуйте инструкциям в [выполнение образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 > [!NOTE]
->  [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Передача и возврат сложных данных см. типы: [привязки данных в клиенте Windows Forms](../../../../docs/framework/wcf/samples/data-binding-in-a-windows-forms-client.md), [привязка данных в клиенте Windows Presentation Foundation](../../../../docs/framework/wcf/samples/data-binding-in-a-wpf-client.md), и [привязки данных в ASP.NET Клиент](../../../../docs/framework/wcf/samples/data-binding-in-an-aspnet-client.md)  
+>  Дополнительные сведения о передаче и возврат сложных данных см. типы: [привязки данных в клиенте Windows Forms](../../../../docs/framework/wcf/samples/data-binding-in-a-windows-forms-client.md), [привязка данных в клиенте Windows Presentation Foundation](../../../../docs/framework/wcf/samples/data-binding-in-a-wpf-client.md), и [данных Привязки в клиенте ASP.NET](../../../../docs/framework/wcf/samples/data-binding-in-an-aspnet-client.md)  
   
 > [!IMPORTANT]
 >  Образцы уже могут быть установлены на компьютере. Перед продолжением проверьте следующий каталог (по умолчанию).  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите на страницу [Примеры Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все примеры [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Этот образец расположен в следующем каталоге.  
+>  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) Чтобы загрузить все [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] образцов. Этот образец расположен в следующем каталоге.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Interop\ASMX`  
   

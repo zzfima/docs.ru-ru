@@ -1,13 +1,13 @@
 ---
-title: "Практическое руководство. Использование пользовательского проверяющего элемента управления для имени пользователя и пароля"
-ms.custom: 
+title: Практическое руководство. Использование пользовательского проверяющего элемента управления для имени пользователя и пароля
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - WCF, username and password
 ms.assetid: 8e08b74b-fa44-4018-b63d-0d0805f85e3f
-caps.latest.revision: 
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: ee138c52c8cdd63137bf3c468ebbdd064d60d443
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4ea4f4d7021f02d239b9e2e93a85b5baaf5a0317
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-use-a-custom-user-name-and-password-validator"></a>Практическое руководство. Использование пользовательского проверяющего элемента управления для имени пользователя и пароля
 Когда для проверки подлинности используются имя пользователя и пароль, по умолчанию [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] использует Windows для проверки имени пользователя и пароля. Тем не менее [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] позволяет пользовательского имени и пароля схем проверки подлинности, также известный как *проверяющие элементы управления*. Чтобы внедрить пользовательский проверяющий элемент управления для проверки подлинности имени пользователя и пароля, необходимо создать класс, унаследованный от класса <xref:System.IdentityModel.Selectors.UserNamePasswordValidator>, и настроить его.  
@@ -64,7 +64,7 @@ ms.lasthandoff: 12/22/2017
   
     1.  В файле конфигурации в разделе [ \<system.serviceModel >](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) элемента, добавьте [ \<привязки >](../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md) элемента.  
   
-    2.  Добавить [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) или [ \<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md) элемент для раздела привязок. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Создание [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] элемент привязки в разделе [как: задание привязки службы в конфигурации](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md).  
+    2.  Добавить [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) или [ \<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md) элемент для раздела привязок. Дополнительные сведения о создании [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] элемент привязки в разделе [как: задание привязки службы в конфигурации](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md).  
   
     3.  Задать `mode` атрибут [ \<безопасности >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-wshttpbinding.md) или [ \<безопасности >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-basichttpbinding.md) для `Message`, `Transport`, `or``TransportWithMessageCredential`.  
   
@@ -77,7 +77,7 @@ ms.lasthandoff: 12/22/2017
         > [!NOTE]
         >  Если служба [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] размещена на сервере служб IIS, на котором используется безопасность на уровне транспорта, а свойству <xref:System.ServiceModel.Security.UserNamePasswordServiceCredential.UserNamePasswordValidationMode%2A> присвоено значение <xref:System.ServiceModel.Security.UserNamePasswordValidationMode.Custom>, в пользовательской схеме проверки подлинности используется подмножество возможностей проверки подлинности Windows. Это происходит потому, что в данном случае службы IIS выполняют проверку подлинности Windows перед вызовом службой [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] пользовательского модуля проверки подлинности.  
   
-     [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Создание [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] элемент привязки в разделе [как: задание привязки службы в конфигурации](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md).  
+     Дополнительные сведения о создании [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] элемент привязки в разделе [как: задание привязки службы в конфигурации](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md).  
   
      В следующем примере показан код конфигурации для привязки.  
   

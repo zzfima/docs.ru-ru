@@ -1,12 +1,13 @@
 ---
-title: "Практическое руководство. Создание надстройки, возвращающей пользовательский интерфейс"
-ms.custom: 
+title: Практическое руководство. Создание надстройки, возвращающей пользовательский интерфейс
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -16,19 +17,20 @@ helpviewer_keywords:
 - implementing add-in pipeline segments [WPF]
 - add-in [WPF], returns a UI
 ms.assetid: 57f274b7-4c66-4b72-92eb-81939a393776
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 361983c4e2b392cdf8410fdb1193a56f6d26d067
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 9e89cb9d0c8e5a26703ff5f56a3af10d7fe9923f
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-create-an-add-in-that-returns-a-ui"></a>Практическое руководство. Создание надстройки, возвращающей пользовательский интерфейс
-В этом примере показано, как создать надстройку, возвращающий [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] на узле [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] автономное приложение.  
+В этом примере показано, как создать надстройку, возвращающий Windows Presentation Foundation (WPF) на узле [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] автономное приложение.  
   
  Надстройка возвращает [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] , [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] пользовательский элемент управления. Содержимое пользовательского элемента управления составляет одна кнопка, при нажатии которой отображается окно сообщения. [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Автономное приложение размещает надстройки и отображает пользовательский элемент управления (возвращается методом надстройки) как содержимое главного окна приложения.  
   

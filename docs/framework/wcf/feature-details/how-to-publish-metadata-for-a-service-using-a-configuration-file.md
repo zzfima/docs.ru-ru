@@ -1,24 +1,26 @@
 ---
-title: "Практическое руководство. Публикация метаданных для службы с использованием файла конфигурации"
-ms.custom: 
+title: Практическое руководство. Публикация метаданных для службы с использованием файла конфигурации
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: f061443f-92df-4824-b36a-609c4cd14a17
-caps.latest.revision: "24"
+caps.latest.revision: 24
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 42f70cd34f65d5393d79b8ace4f9eb704f309d0f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: d30031db590b424688cc0af6a573c1042099e64e
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-publish-metadata-for-a-service-using-a-configuration-file"></a>Практическое руководство. Публикация метаданных для службы с использованием файла конфигурации
 Это одно из двух практических руководств, в которых демонстрируется публикация метаданных для службы [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. Существуют два способа указать, как служба должна публиковать метаданные: с помощью файла конфигурации и с помощью кода. В этом разделе показано, как публиковать метаданные для службы с помощью файла конфигурации.  
@@ -26,7 +28,7 @@ ms.lasthandoff: 12/22/2017
 > [!CAUTION]
 >  В этом разделе показано, как опубликовать метаданные незащищенным образом. Любой клиент может получить метаданные из службы. Если требуется, чтобы службы для публикации метаданных в безопасном режиме, см. раздел [настраиваемый защищенной конечной точки метаданных](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md).  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Публикация метаданных в коде, в разделе [как: публикация метаданных для службы с помощью кода](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md). Публикация метаданных позволяет клиентам извлекать метаданные с помощью запроса WS-Transfer GET или запроса HTTP/GET, используя строку запроса `?wsdl`. Чтобы убедиться в работоспособности кода, создайте простую службу [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Для упрощения в следующем коде представлена несложная резидентная служба.  
+ Дополнительные сведения о публикации метаданных в коде см. в разделе [как: публикация метаданных для службы с помощью кода](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md). Публикация метаданных позволяет клиентам извлекать метаданные с помощью запроса WS-Transfer GET или запроса HTTP/GET, используя строку запроса `?wsdl`. Чтобы убедиться в работоспособности кода, создайте простую службу [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Для упрощения в следующем коде представлена несложная резидентная служба.  
   
 ```csharp  
 using System;  
@@ -177,7 +179,7 @@ namespace Metadata.Samples
   
 9. Постройте и запустите консольное приложение.  
   
-10. В программе Internet Explorer перейдите по базовому адресу службы (в данном примере http://localhost:8001/MetadataSample) и убедитесь, что публикация метаданных включена. В противном случае вверху страницы отображается сообщение "Публикация метаданных для этой службы в настоящее время отключена".  
+10. Введите базовый адрес службы с помощью обозревателя Internet Explorer (http://localhost:8001/MetadataSample в этом образце) и убедитесь, что публикация метаданных включена. В противном случае вверху страницы отображается сообщение "Публикация метаданных для этой службы в настоящее время отключена".  
   
 ### <a name="to-use-default-endpoints"></a>Использование конечных точек по умолчанию  
   
@@ -198,7 +200,7 @@ namespace Metadata.Samples
     </configuration>  
     ```  
   
-     Поскольку служба имеет <xref:System.ServiceModel.Description.ServiceMetadataBehavior> со свойством `httpGetEnabled`, установленным в значение `true`, то для службы включена публикация метаданных, а поскольку конечные точки не были добавлены явно, среда выполнения добавляет конечные точки по умолчанию. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]см. по умолчанию конечные точки, привязки и поведения, [упрощенной конфигурации](../../../../docs/framework/wcf/simplified-configuration.md) и [упрощенной конфигурации для служб WCF](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
+     Поскольку служба имеет <xref:System.ServiceModel.Description.ServiceMetadataBehavior> со свойством `httpGetEnabled`, установленным в значение `true`, то для службы включена публикация метаданных, а поскольку конечные точки не были добавлены явно, среда выполнения добавляет конечные точки по умолчанию. Дополнительные сведения о конечных точек по умолчанию, привязок и поведений см. в разделе [упрощенной конфигурации](../../../../docs/framework/wcf/simplified-configuration.md) и [упрощенной конфигурации для служб WCF](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
   
 ## <a name="example"></a>Пример  
  В следующем примере кода показана реализация простой службы [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] и файл конфигурации, обеспечивающий публикацию метаданных для этой службы.  

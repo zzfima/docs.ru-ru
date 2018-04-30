@@ -1,23 +1,24 @@
 ---
-title: "Общие сведения о Windows Workflow"
-ms.custom: 
+title: Общие сведения о Windows Workflow
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: fc44adbe-1412-49ae-81af-0298be44aae6
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: dce6962feb0f425958f89182ee7695332389b567
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: bc1aa65b413b87b27c05e7a12ce607d1cd30b89b
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="windows-workflow-overview"></a>Общие сведения о Windows Workflow
 Рабочий процесс представляет собой набор элементарных единиц, которые называются *действия* , хранятся в виде модели, описывающей реальный процесс. Рабочие процессы позволяют описывать порядок выполнения этапов краткосрочных и долгосрочных работ, а также зависимости между этими этапами. Работа проходит по модели от начала и до конца, а действия могут выполняться как людьми, так и системными функциями.  
@@ -45,11 +46,11 @@ ms.lasthandoff: 12/22/2017
   
  На предыдущей диаграмме используется метод <xref:System.Activities.WorkflowInvoker.Invoke%2A> класса <xref:System.Activities.WorkflowInvoker> для вызова нескольких экземпляров рабочего процесса. <xref:System.Activities.WorkflowInvoker> используется для упрощенных рабочих процессов, не требующих управления с сервера. Рабочие же процессы, требующие управления с сервера (например, возобновление <xref:System.Activities.Bookmark>), должны выполняться с помощью <xref:System.Activities.WorkflowApplication.Run%2A>. Чтобы вызвать экземпляр рабочего процесса, не обязательно ждать завершения другого. Среда выполнения допускает одновременное выполнение нескольких экземпляров рабочего процесса.  Вызываются следующие рабочие процессы:  
   
--   Действие <xref:System.Activities.Statements.Sequence>, содержащее дочернее действие <xref:System.Activities.Statements.WriteLine>. Переменная <xref:System.Activities.Variable> родительского действия привязана к <xref:System.Activities.InArgument> дочернего действия. [!INCLUDE[crabout](../../../includes/crabout-md.md)]на переменные, аргументы и привязки, в разделе [переменных и аргументов](../../../docs/framework/windows-workflow-foundation/variables-and-arguments.md).  
+-   Действие <xref:System.Activities.Statements.Sequence>, содержащее дочернее действие <xref:System.Activities.Statements.WriteLine>. Переменная <xref:System.Activities.Variable> родительского действия привязана к <xref:System.Activities.InArgument> дочернего действия. Дополнительные сведения о переменных, аргументов и привязки в разделе [переменных и аргументов](../../../docs/framework/windows-workflow-foundation/variables-and-arguments.md).  
   
 -   Настраиваемое действие `ReadLine`. <xref:System.Activities.OutArgument> действия `ReadLine` возвращается в вызывающий метод <xref:System.Activities.WorkflowInvoker.Invoke%2A>.  
   
--   Настраиваемое действие, происходящее от абстрактного класса <xref:System.Activities.CodeActivity>. <xref:System.Activities.CodeActivity> может обращаться к функциям среды выполнения (например, к отслеживанию и свойствам) с помощью <xref:System.Activities.CodeActivityContext>, доступного в качестве параметра метода <xref:System.Activities.CodeActivity.Execute%2A>. [!INCLUDE[crabout](../../../includes/crabout-md.md)]Эти возможности времени выполнения см. [отслеживание и трассировка рабочих процессов](../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md) и [свойства выполнения рабочего процесса](../../../docs/framework/windows-workflow-foundation/workflow-execution-properties.md).  
+-   Настраиваемое действие, происходящее от абстрактного класса <xref:System.Activities.CodeActivity>. <xref:System.Activities.CodeActivity> может обращаться к функциям среды выполнения (например, к отслеживанию и свойствам) с помощью <xref:System.Activities.CodeActivityContext>, доступного в качестве параметра метода <xref:System.Activities.CodeActivity.Execute%2A>. Дополнительные сведения об этих функциях времени выполнения см. в разделе [отслеживание и трассировка рабочих процессов](../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md) и [свойства выполнения рабочего процесса](../../../docs/framework/windows-workflow-foundation/workflow-execution-properties.md).  
   
 ## <a name="see-also"></a>См. также  
  [BizTalk Server 2006 или WF? Выбор средства правой рабочего процесса для проекта](http://go.microsoft.com/fwlink/?LinkId=154901)

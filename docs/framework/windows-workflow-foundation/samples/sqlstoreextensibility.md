@@ -1,23 +1,24 @@
 ---
-title: "Решение SQLStoreExtensibility"
-ms.custom: 
+title: Решение SQLStoreExtensibility
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 5da1b5a3-f144-41ba-b9c4-02818b28b15d
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f4d3776c4cc3fb61fc01b84ee90bb714e1acb4fa
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 722c7cda49b2efc4c146970c69cc5e3c7bbad9b0
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="sqlstoreextensibility"></a>Решение SQLStoreExtensibility
 Этот образец демонстрирует использование и конфигурацию распространяемых свойств в хранилище экземпляров рабочих процессов SQL. Хранилище экземпляров рабочих процессов SQL - это реализация хранилища экземпляров на основе SQL Server. Это дает экземпляру возможность сохранять свое состояние и загружать свое состояние из базы данных SQL Server или SQL Server Express либо заносить состояние в эту базу данных. Возможность расширения хранилища позволяет пользователю определять свойства, хранимые в хранилище экземпляров. Эти свойства отображаются в представлении распространяемых свойств, которые позволяют пользователю запрашивать их.  
@@ -62,7 +63,7 @@ ms.lasthandoff: 12/22/2017
   
 ### <a name="to-verify-the-sample-is-working-correctly"></a>Проверка правильности работы образца  
   
-1.  Используйте SQL Server Management Studio для просмотра содержимого таблицы экземпляров, выбрав **баз данных**, **InstanceStore**, а затем  **System.ServiceModel.Activities.DurableInstancing.InstanceTable** в обозревателе объектов щелкните правой кнопкой мыши **System.ServiceModel.Activities.DurableInstancing.InstanceTable** и выберите  **Выберите первые 1000 строк**. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]SQL Server Management Studio, в разделе [Знакомство с SQL Server Management Studio](http://go.microsoft.com/fwlink/?LinkId=165645)  
+1.  Используйте SQL Server Management Studio для просмотра содержимого таблицы экземпляров, выбрав **баз данных**, **InstanceStore**, а затем  **System.ServiceModel.Activities.DurableInstancing.InstanceTable** в обозревателе объектов щелкните правой кнопкой мыши **System.ServiceModel.Activities.DurableInstancing.InstanceTable** и выберите  **Выберите первые 1000 строк**. Дополнительные сведения о SQL Server Management Studio см. в разделе [Знакомство с SQL Server Management Studio](http://go.microsoft.com/fwlink/?LinkId=165645)  
   
 2.  Просмотрите перечисленные экземпляры рабочих процессов.  
   
@@ -83,7 +84,7 @@ ms.lasthandoff: 12/22/2017
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите на страницу [Примеры Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все примеры [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Этот образец расположен в следующем каталоге.  
+>  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) Чтобы загрузить все [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] образцов. Этот образец расположен в следующем каталоге.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Persistence\SQLStoreExtensibility`  
   

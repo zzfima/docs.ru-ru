@@ -14,11 +14,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 11e61e1d702572af10cf4e46b9d1b284022fa56e
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 60eaef2bbbb2ff7653aeac832163276c32bc696b
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="sql-workflow-instance-store"></a>Хранилище экземпляров рабочих процессов SQL
 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] поставляется вместе с хранилищем экземпляров рабочего процесса SQL, благодаря чему рабочие процессы могут сохранять сведения о состоянии экземпляров рабочих процессов в базах данных SQL Server 2005 или SQL Server 2008. Эта функция чаще всего реализуется в виде класса <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>, являющегося производным от абстрактного класса <xref:System.Runtime.DurableInstancing.InstanceStore> платформы сохраняемости. Компонент хранилища экземпляров рабочего процесса SQL состоит из поставщика сохраняемости SQL, являющегося конкретной реализацией API сохраняемости, используемой ведущим приложением для отправки команд сохраняемости в хранилище.  
@@ -29,7 +29,7 @@ ms.lasthandoff: 04/28/2018
   
  В подразделах этого раздела описываются свойства и функции хранилища экземпляров рабочего процесса SQL, а также предоставляются подробные сведения о настройке хранилища.  
   
- Фабрика приложений (App Fabric) Windows Server предоставляет собственное хранилище экземпляров и инструментарий для упрощения настройки и использования хранилища. Дополнительные сведения см. в разделе [Windows Server хранилище экземпляров](http://go.microsoft.com/fwlink/?LinkId=201201). [!INCLUDE[crabout](../../../includes/crabout-md.md)] в разделе базы данных SQL Server App Fabric сохраняемости [базы данных SQL Server App Fabric сохраняемости](http://go.microsoft.com/fwlink/?LinkId=201202)  
+ Фабрика приложений (App Fabric) Windows Server предоставляет собственное хранилище экземпляров и инструментарий для упрощения настройки и использования хранилища. Дополнительные сведения см. в разделе [Windows Server хранилище экземпляров](http://go.microsoft.com/fwlink/?LinkId=201201). Дополнительные сведения о базе данных SQL Server App Fabric сохраняемости см [базы данных SQL Server App Fabric сохраняемости](http://go.microsoft.com/fwlink/?LinkId=201202)  
   
 ## <a name="in-this-section"></a>В этом разделе  
   

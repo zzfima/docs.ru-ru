@@ -1,12 +1,13 @@
 ---
-title: "Практическое руководство. Указание типа учетных данных клиента"
-ms.custom: 
+title: Практическое руководство. Указание типа учетных данных клиента
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,19 +16,20 @@ helpviewer_keywords:
 - security credentials, adding to SOAP messages
 - WCF, security
 ms.assetid: 10f51bee-5f92-4c1a-9126-fa5418535d8f
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 24336c180ad8d10a60567ebfeb0f0899f972e2c2
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 50455770f0e94df5994d0a7ecbe2bf13bc43cf38
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-specify-the-client-credential-type"></a>Практическое руководство. Указание типа учетных данных клиента
-После установки режима безопасности (на уровне транспорта или сообщений) можно установить тип учетных данных клиента. Это свойство определяет тип учетных данных, которые клиент должен предоставить службе для проверки подлинности. [!INCLUDE[crabout](../../../includes/crabout-md.md)]режим безопасности (необходимым этапом перед установкой типа учетных данных клиента), см. параметр [как: режим безопасности](../../../docs/framework/wcf/how-to-set-the-security-mode.md).  
+После установки режима безопасности (на уровне транспорта или сообщений) можно установить тип учетных данных клиента. Это свойство определяет тип учетных данных, которые клиент должен предоставить службе для проверки подлинности. Дополнительные сведения о задании режима безопасности (необходимым этапом, прежде чем устанавливать тип учетных данных клиента) см. в разделе [как: режим безопасности](../../../docs/framework/wcf/how-to-set-the-security-mode.md).  
   
 ### <a name="to-set-the-client-credential-type-in-code"></a>Установка типа учетных данных клиента в коде  
   

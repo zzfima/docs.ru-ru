@@ -1,36 +1,38 @@
 ---
-title: "Практическое руководство. Размещение службы WCF в управляемом приложении"
-ms.custom: 
+title: Практическое руководство. Размещение службы WCF в управляемом приложении
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 5eb29db0-b6dc-4e77-8c68-0a62f79d743b
-caps.latest.revision: "42"
+caps.latest.revision: 42
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6491faa6134c1e80e07294d8f888200c04fa8704
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 5f2671dc381e0d3ef8f55ced01268de6205fcb7d
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-host-a-wcf-service-in-a-managed-application"></a>Практическое руководство. Размещение службы WCF в управляемом приложении
 Для размещения службы внутри управляемого приложения внедрите код службы внутрь кода управляемого приложения, определите конечную точку для службы императивно в коде, декларативно с помощью конфигурации или посредством конечных точек по умолчанию, а затем создайте экземпляр класса <xref:System.ServiceModel.ServiceHost>.  
   
  Чтобы начать принимать сообщения, вызовите метод <xref:System.ServiceModel.ICommunicationObject.Open%2A> для <xref:System.ServiceModel.ServiceHost>. При этом создается и открывается прослушиватель для этой службы. Такое размещение службы часто называется "резидентным", так как управляемое приложение самостоятельно выполняет функции ведущего приложения. Чтобы закрыть службу, вызовите метод <xref:System.ServiceModel.Channels.CommunicationObject.Close%2A?displayProperty=nameWithType> для <xref:System.ServiceModel.ServiceHost>.  
   
- Служба может также размещаться в управляемой службе Windows, в службах IIS или в службе активации процесса Windows (WAS). [!INCLUDE[crabout](../../../includes/crabout-md.md)]варианты для службы размещения, в разделе [размещение служб](../../../docs/framework/wcf/hosting-services.md).  
+ Служба может также размещаться в управляемой службе Windows, в службах IIS или в службе активации процесса Windows (WAS). Дополнительные сведения о размещении для службы см. в разделе [размещение служб](../../../docs/framework/wcf/hosting-services.md).  
   
- Размещение служб в управляемом приложении - самый гибкий вариант размещения, так как в этом случае требуется минимальное развертывание инфраструктуры. [!INCLUDE[crabout](../../../includes/crabout-md.md)]Размещение служб в управляемых приложениях, в разделе [размещение в приложении управляемых](../../../docs/framework/wcf/feature-details/hosting-in-a-managed-application.md).  
+ Размещение служб в управляемом приложении - самый гибкий вариант размещения, так как в этом случае требуется минимальное развертывание инфраструктуры. Дополнительные сведения о размещении служб в управляемых приложениях см. в разделе [размещение в приложении управляемых](../../../docs/framework/wcf/feature-details/hosting-in-a-managed-application.md).  
   
  В следующей процедуре показано, как реализовать резидентную службу в консольном приложения.  
   
@@ -58,7 +60,7 @@ ms.lasthandoff: 12/22/2017
      [!code-vb[CFX_SelfHost4#2](../../../samples/snippets/visualbasic/VS_Snippets_CFX/cfx_selfhost4/vb/module1.vb#2)]  
   
     > [!NOTE]
-    >  [!INCLUDE[crabout](../../../includes/crabout-md.md)]как определить и реализовать интерфейс службы см. в разделе [как: определение контракта службы](../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md) и [как: реализация контракта службы](../../../docs/framework/wcf/how-to-implement-a-wcf-contract.md).  
+    >  Дополнительные сведения о том, как определить и реализовать интерфейс службы см. в разделе [как: определение контракта службы](../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md) и [как: реализация контракта службы](../../../docs/framework/wcf/how-to-implement-a-wcf-contract.md).  
   
 7.  В начале метода `Main` создайте экземпляр класса <xref:System.Uri> с базовым адресом для службы.  
   
@@ -71,7 +73,7 @@ ms.lasthandoff: 12/22/2017
      [!code-vb[CFX_SelfHost4#4](../../../samples/snippets/visualbasic/VS_Snippets_CFX/cfx_selfhost4/vb/module1.vb#4)]       
   
     > [!NOTE]
-    >  В этом примере используются конечные точки по умолчанию, и для данной службы не требуется файл конфигурации. Если конечные точки не настроены, то среда выполнения создает одну конечную точку для каждого базового адреса в каждом контракте службы, реализованном в службе. [!INCLUDE[crabout](../../../includes/crabout-md.md)]конечные точки по умолчанию см. в разделе [упрощенной конфигурации](../../../docs/framework/wcf/simplified-configuration.md) и [упрощенной конфигурации для служб WCF](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
+    >  В этом примере используются конечные точки по умолчанию, и для данной службы не требуется файл конфигурации. Если конечные точки не настроены, то среда выполнения создает одну конечную точку для каждого базового адреса в каждом контракте службы, реализованном в службе. Дополнительные сведения о конечных точках по умолчанию см. в разделе [упрощенной конфигурации](../../../docs/framework/wcf/simplified-configuration.md) и [упрощенной конфигурации для служб WCF](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
   
 9. Чтобы построить решение, нажмите CTRL+SHIFT+B.  
   

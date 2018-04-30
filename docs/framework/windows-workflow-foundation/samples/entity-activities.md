@@ -14,23 +14,23 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 81f8b1852b939d7ceb8b9afae4435ca12239b880
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: ff7e505f6e2040e847b711030d310a70ede65413
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="entity-activities"></a>Действия с сущностями
 В этом примере показано, как использовать ADO.NET Entity Framework с Windows Workflow Foundation для упрощения доступа к данным.  
   
- С помощью платформы ADO.NET Entity Framework разработчики могут работать с данными в форме объектов, свойств и связей определенного домена, например клиентов, заказов, подробных сведений о заказах и связей между этими сущностями. На платформе ADO.NET Entity Framework это достигается за счет уровня абстракции, позволяющего осуществлять программирование по концептуальной модели приложения, а не напрямую по схеме реляционного хранилища. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] ADO.NET Entity Framework см. в разделе [ADO.NET Entity Framework](http://go.microsoft.com/fwlink/?LinkId=165549).  
+ С помощью платформы ADO.NET Entity Framework разработчики могут работать с данными в форме объектов, свойств и связей определенного домена, например клиентов, заказов, подробных сведений о заказах и связей между этими сущностями. На платформе ADO.NET Entity Framework это достигается за счет уровня абстракции, позволяющего осуществлять программирование по концептуальной модели приложения, а не напрямую по схеме реляционного хранилища. Дополнительные сведения о ADO.NET Entity Framework см. [ADO.NET Entity Framework](http://go.microsoft.com/fwlink/?LinkId=165549).  
   
 ## <a name="sample-details"></a>Подробные сведения об образце  
  В этом образце используется база данных `Northwind`, в него входят скрипты для создания и удаления базы данных `Northwind` (Setup.cmd и Cleanup.cmd). Среди проектов этого образца имеется модель EDM, основанная на базе данных `Northwind`. Модель можно найти, открыв файл `Northwind.edmx`, который включен в проект. Именно эта модель определяет форму объектов, к которым может осуществляться доступ из платформы ADO.NET Entity Framework.  
   
  В данный образец включены следующие действия:  
   
--   `EntitySQLQuery`: действие `EntitySQLQuery` позволяет получать объекты из базы данных на основе строки запроса Entity SQL. Entity SQL - это независимый от хранилища язык, сходный с SQL, который позволяет задавать запросы на основе концептуальной модели и сущностей, являющихся частью модели или домена. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Язык Entity SQL. в разделе [язык Entity SQL](http://go.microsoft.com/fwlink/?LinkId=165646).  
+-   `EntitySQLQuery`: действие `EntitySQLQuery` позволяет получать объекты из базы данных на основе строки запроса Entity SQL. Entity SQL - это независимый от хранилища язык, сходный с SQL, который позволяет задавать запросы на основе концептуальной модели и сущностей, являющихся частью модели или домена. Дополнительные сведения о языке Entity SQL см. в разделе [язык Entity SQL](http://go.microsoft.com/fwlink/?LinkId=165646).  
   
 -   `EntityLinqQuery`: это действие позволяет получать объекты из базы данных на основе запроса LINQ или предиката.  
   

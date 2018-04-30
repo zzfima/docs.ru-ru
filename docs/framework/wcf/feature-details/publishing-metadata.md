@@ -1,28 +1,28 @@
 ---
-title: "Публикация метаданных"
-ms.custom: 
+title: Публикация метаданных
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - meatadata [WCF], publishing
 ms.assetid: 3a56831a-cabc-45c0-bd02-12e2e9bd7313
-caps.latest.revision: 
+caps.latest.revision: 10
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 86d9eb8e7e7c78f091deea55322cbef6e6d0f3c5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 031a80c52c194f300d7785f05e73eabeebb296b7
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="publishing-metadata"></a>Публикация метаданных
 Службы [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] публикуют метаданные путем публикации одной или нескольких конечных точек метаданных. Публикация метаданных службы позволяет получать доступ к метаданным с использованием стандартных протоколов, таких как WS-MetadataExchange (MEX) и запросы HTTP/GET. Конечные точки метаданных аналогичны другим конечным точкам служб в том, что они имеют адрес, привязку и контракт и могут быть добавлены в узел службы посредством конфигурации или принудительного кода.  
@@ -30,7 +30,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="publishing-metadata-endpoints"></a>Публикация конечных точек метаданных  
  Для публикации конечных точек метаданных для службы [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] сначала необходимо добавить в службу поведение <xref:System.ServiceModel.Description.ServiceMetadataBehavior>. Добавление экземпляра <xref:System.ServiceModel.Description.ServiceMetadataBehavior?displayProperty=nameWithType> позволяет службе отображать конечные точки метаданных. После добавления поведения службы <xref:System.ServiceModel.Description.ServiceMetadataBehavior?displayProperty=nameWithType> можно отображать конечные точки метаданных, поддерживающие протокол MEX или отвечающие на запросы HTTP/GET.  
   
- <xref:System.ServiceModel.Description.ServiceMetadataBehavior?displayProperty=nameWithType> использует <xref:System.ServiceModel.Description.WsdlExporter> для экспорта метаданных для всех конечных точек службы. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Экспорт метаданных из службы, в разделе [Экспорт и импорт метаданных](../../../../docs/framework/wcf/feature-details/exporting-and-importing-metadata.md).  
+ <xref:System.ServiceModel.Description.ServiceMetadataBehavior?displayProperty=nameWithType> использует <xref:System.ServiceModel.Description.WsdlExporter> для экспорта метаданных для всех конечных точек службы. Дополнительные сведения об экспорте метаданных из службы см. в разделе [Экспорт и импорт метаданных](../../../../docs/framework/wcf/feature-details/exporting-and-importing-metadata.md).  
   
  Поведение службы <xref:System.ServiceModel.Description.ServiceMetadataBehavior?displayProperty=nameWithType> добавляет в узел службы экземпляр <xref:System.ServiceModel.Description.ServiceMetadataExtension> в качестве расширения. Расширение <xref:System.ServiceModel.Description.ServiceMetadataExtension?displayProperty=nameWithType> обеспечивает реализацию протоколов публикации метаданных. Расширение <xref:System.ServiceModel.Description.ServiceMetadataExtension?displayProperty=nameWithType> также можно использовать для получения метаданных службы во время выполнения, обратившись к свойству <xref:System.ServiceModel.Description.ServiceMetadataExtension.Metadata%2A?displayProperty=nameWithType>.  
   

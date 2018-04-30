@@ -16,11 +16,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 7738eba66619e8a312ed2f9bd43142dbb097b259
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: cfeca11f7d78e8aa2d201238e3a485576b3e0c82
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="unsupported-scenarios"></a>Неподдерживаемые сценарии
 По различным причинам [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] не поддерживает некоторые сценарии безопасности. Например, в операционной системе [!INCLUDE[wxp](../../../../includes/wxp-md.md)] не реализованы протоколы проверки подлинности SSPI и Kerberos, поэтому [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] не поддерживает на этой платформе выполнение служб с проверкой подлинности Windows. При использовании [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] в ОС Windows XP Home Edition поддерживаются другие механизмы проверки подлинности, такие как проверка имени пользователя и пароля и встроенная проверка подлинности HTTP/HTTPS.  
@@ -58,7 +58,7 @@ ms.lasthandoff: 04/28/2018
 >  Свойство <xref:System.ServiceModel.Security.WindowsClientCredential.AllowedImpersonationLevel%2A> класса <xref:System.ServiceModel.Security.WindowsClientCredential> имеет значение по умолчанию <xref:System.Security.Principal.TokenImpersonationLevel.Identification>. В большинстве случаев контекст олицетворения уровня идентификации не имеет прав на загрузку дополнительных сборок. Это значение по умолчанию, поэтому необходимо учитывать это очень распространенное условие. Олицетворение на уровне идентификации также происходит, когда процесс олицетворения не имеет привилегии `SeImpersonate`. Дополнительные сведения см. в разделе [делегирования и олицетворения](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).  
   
 ### <a name="delegation-requires-credential-negotiation"></a>Для делегирования требуется согласование учетных данных  
- Для использования протокола проверки подлинности Kerberos с делегированием необходимо реализовать протокол Kerberos с согласованием учетных данных (иногда называется многоступенчатой проверкой подлинности Kerberos). Если проверка подлинности Kerberos реализована без согласования учетных данных (иногда называется одноступенчатой проверкой подлинности Kerberos), возникает исключение. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] как реализовать согласование учетных данных см. в разделе [Отладка ошибок проверки подлинности Windows](../../../../docs/framework/wcf/feature-details/debugging-windows-authentication-errors.md).  
+ Для использования протокола проверки подлинности Kerberos с делегированием необходимо реализовать протокол Kerberos с согласованием учетных данных (иногда называется многоступенчатой проверкой подлинности Kerberos). Если проверка подлинности Kerberos реализована без согласования учетных данных (иногда называется одноступенчатой проверкой подлинности Kerberos), возникает исключение. Дополнительные сведения о том, как реализовать согласование учетных данных см. в разделе [Отладка ошибок проверки подлинности Windows](../../../../docs/framework/wcf/feature-details/debugging-windows-authentication-errors.md).  
   
 ## <a name="cryptography"></a>Шифрование  
   

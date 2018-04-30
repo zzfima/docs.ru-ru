@@ -16,11 +16,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 7e315c9e77eace9bdb0e66abed203452e5d7f9bb
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: 7ec09b6b99b831245d11d858f90c27de05d1e21f
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="using-the-wcf-development-tools"></a>Использование средств разработки WCF
 В этом разделе описаны средства разработки Visual Studio, которые могут помочь в разработке вашей [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]службы.  
@@ -53,7 +53,7 @@ ms.lasthandoff: 04/27/2018
 netsh http add urlacl url=http://+:8001/MyService user=<domain>\<user>  
 ```  
   
- [!INCLUDE[crabout](../../../includes/crabout-md.md)] Netsh.exe см. в разделе [способы использования средства Netsh.exe и переключателей командной строки](http://go.microsoft.com/fwlink/?LinkId=97877).  
+ Дополнительные сведения о Netsh.exe см. в разделе [способы использования средства Netsh.exe и переключателей командной строки](http://go.microsoft.com/fwlink/?LinkId=97877).  
   
 ## <a name="see-also"></a>См. также  
  [Шаблоны WCF в Visual Studio](../../../docs/framework/wcf/wcf-vs-templates.md)  

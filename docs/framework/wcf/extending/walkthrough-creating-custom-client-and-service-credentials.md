@@ -1,27 +1,29 @@
 ---
-title: "Пошаговое руководство. Создание пользовательских учетных данных для клиента и службы"
-ms.custom: 
+title: Пошаговое руководство. Создание пользовательских учетных данных для клиента и службы
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 2b5ba5c3-0c6c-48e9-9e46-54acaec443ba
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 99ee624ef6198ed67141d3d92e63fb9ba815c4fd
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: cf9f6c1ad5be3a2d63140f03f74713809624e277
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="walkthrough-creating-custom-client-and-service-credentials"></a>Пошаговое руководство. Создание пользовательских учетных данных для клиента и службы
 В этом разделе показано, как реализовать пользовательские учетные данные клиента и службы, и как использовать пользовательские учетные данные из кода приложения.  
@@ -35,7 +37,7 @@ ms.lasthandoff: 01/19/2018
   
  И класс <xref:System.ServiceModel.Description.ClientCredentials>, и класс <xref:System.ServiceModel.Description.ServiceCredentials> наследуют от абстрактного класса <xref:System.ServiceModel.Security.SecurityCredentialsManager>, определяющего контракт для возвращения <xref:System.IdentityModel.Selectors.SecurityTokenManager>.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]классы учетных данных и как они работают в [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] архитектуры безопасности в разделе [архитектуры безопасности](http://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f).  
+ Дополнительные сведения о классах учетные данные и как они помещаются в [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] архитектуры безопасности в разделе [архитектуры безопасности](http://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f).  
   
  Реализации, предусмотренные по умолчанию в [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], поддерживают предоставляемые системой типы учетных данных и создают диспетчер учетных данных, способный обрабатывать эти типы учетных данных.  
   
@@ -81,11 +83,11 @@ ms.lasthandoff: 01/19/2018
   
 1.  Определите новый производный класс на основе класса <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager>.  
   
-2.  Необязательный. Переопределите метод <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenProvider%28System.IdentityModel.Selectors.SecurityTokenRequirement%29>, если <xref:System.IdentityModel.Selectors.SecurityTokenProvider> требуется создать пользовательскую реализацию класса. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]поставщики маркеров безопасности, в разделе [как: Создание пользовательского поставщика маркеров безопасности](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md).  
+2.  Необязательный. Переопределите метод <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenProvider%28System.IdentityModel.Selectors.SecurityTokenRequirement%29>, если <xref:System.IdentityModel.Selectors.SecurityTokenProvider> требуется создать пользовательскую реализацию класса. Дополнительные сведения о поставщиков маркеров безопасности см. в разделе [как: Создание пользовательского поставщика маркеров безопасности](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md).  
   
-3.  Необязательный. Переопределите метод <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenAuthenticator%28System.IdentityModel.Selectors.SecurityTokenRequirement%2CSystem.IdentityModel.Selectors.SecurityTokenResolver%40%29>, если <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator> требуется создать пользовательскую реализацию класса. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]пользовательский модуль безопасности структур проверки подлинности, в разделе [как: Создание пользовательской проверки подлинности маркеров безопасности](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md).  
+3.  Необязательный. Переопределите метод <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenAuthenticator%28System.IdentityModel.Selectors.SecurityTokenRequirement%2CSystem.IdentityModel.Selectors.SecurityTokenResolver%40%29>, если <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator> требуется создать пользовательскую реализацию класса. Дополнительные сведения о структур проверки подлинности маркеров безопасности см. в разделе [как: Создание пользовательской проверки подлинности маркеров безопасности](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md).  
   
-4.  Необязательный. Переопределите метод <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenSerializer%2A>, если требуется создать пользовательскую реализацию класса <xref:System.IdentityModel.Selectors.SecurityTokenSerializer>. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]пользовательские маркеры безопасности и сериализаторов маркеров безопасности, в разделе [как: Создание пользовательского токена](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md).  
+4.  Необязательный. Переопределите метод <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenSerializer%2A>, если требуется создать пользовательскую реализацию класса <xref:System.IdentityModel.Selectors.SecurityTokenSerializer>. Дополнительные сведения о пользовательских маркеров безопасности и сериализаторов маркеров безопасности см. в разделе [как: Создание пользовательского токена](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md).  
   
      [!code-csharp[c_CustomCredentials#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customcredentials/cs/source.cs#2)]
      [!code-vb[c_CustomCredentials#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customcredentials/vb/client/client.vb#2)]  
@@ -169,11 +171,11 @@ ms.lasthandoff: 01/19/2018
   
 1.  Определите новый класс, производный от класса <xref:System.ServiceModel.Security.ServiceCredentialsSecurityTokenManager>.  
   
-2.  Необязательный. Переопределите метод <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenProvider%2A>, если <xref:System.IdentityModel.Selectors.SecurityTokenProvider> требуется создать пользовательскую реализацию класса. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]поставщики маркеров безопасности, в разделе [как: Создание пользовательского поставщика маркеров безопасности](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md).  
+2.  Необязательный. Переопределите метод <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenProvider%2A>, если <xref:System.IdentityModel.Selectors.SecurityTokenProvider> требуется создать пользовательскую реализацию класса. Дополнительные сведения о поставщиков маркеров безопасности см. в разделе [как: Создание пользовательского поставщика маркеров безопасности](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md).  
   
-3.  Необязательный. Переопределите метод <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenAuthenticator%2A>, если <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator> требуется создать пользовательскую реализацию класса. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]пользовательский модуль безопасности структур проверки подлинности, в разделе [как: Создание пользовательской проверки подлинности маркеров безопасности](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md) раздела.  
+3.  Необязательный. Переопределите метод <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenAuthenticator%2A>, если <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator> требуется создать пользовательскую реализацию класса. Дополнительные сведения о структур проверки подлинности маркеров безопасности см. в разделе [как: Создание пользовательской проверки подлинности маркеров безопасности](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md) раздела.  
   
-4.  Необязательный. Переопределите метод <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenSerializer%28System.IdentityModel.Selectors.SecurityTokenVersion%29>, если требуется создать пользовательскую реализацию класса <xref:System.IdentityModel.Selectors.SecurityTokenSerializer>. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]пользовательские маркеры безопасности и сериализаторов маркеров безопасности, в разделе [как: Создание пользовательского токена](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md).  
+4.  Необязательный. Переопределите метод <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenSerializer%28System.IdentityModel.Selectors.SecurityTokenVersion%29>, если требуется создать пользовательскую реализацию класса <xref:System.IdentityModel.Selectors.SecurityTokenSerializer>. Дополнительные сведения о пользовательских маркеров безопасности и сериализаторов маркеров безопасности см. в разделе [как: Создание пользовательского токена](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md).  
   
      [!code-csharp[c_CustomCredentials#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customcredentials/cs/source.cs#5)]
      [!code-vb[c_CustomCredentials#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customcredentials/vb/service/service.vb#5)]  

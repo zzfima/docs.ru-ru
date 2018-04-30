@@ -1,24 +1,26 @@
 ---
-title: "Практическое руководство. Миграция веб-служб ASP.NET с поддержкой AJAX на платформу WCF"
-ms.custom: 
+title: Практическое руководство. Миграция веб-служб ASP.NET с поддержкой AJAX на платформу WCF
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 1428df4d-b18f-4e6d-bd4d-79ab3dd5147c
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 2ca8dbbffdb48c33160e3c4f7495057b9ce60c13
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 2b728e6283a2f038b7e5ef4c535da41f4eb8ebef
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-migrate-ajax-enabled-aspnet-web-services-to-wcf"></a>Практическое руководство. Миграция веб-служб ASP.NET с поддержкой AJAX на платформу WCF
 В этом разделе описаны процедуры по переносу базовой службы AJAX ASP.NET в эквивалентную службу [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] с поддержкой AJAX. В нем показано, как создать функционально эквивалентную [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-версию службы AJAX ASP.NET. Две службы можно использовать параллельно, либо можно заменить службу AJAX ASP.NET службой [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
@@ -33,7 +35,7 @@ ms.lasthandoff: 12/22/2017
   
  Код, получаемый в результате применения описанных в этом разделе процедур, приведен в примере после процедур.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Предоставление доступа к [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] службы через конечную точку с поддержкой AJAX см. в разделе [как: использование конфигурации для добавления конечной точки ASP.NET AJAX](../../../../docs/framework/wcf/feature-details/how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md) раздела.  
+ Дополнительные сведения о предоставлении доступа к [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] службы через конечную точку с поддержкой AJAX см. в разделе [как: использование конфигурации для добавления конечной точки ASP.NET AJAX](../../../../docs/framework/wcf/feature-details/how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md) раздела.  
   
 ### <a name="to-create-and-test-the-aspnet-web-service-application"></a>Создание и тестирование приложения веб-службы ASP.NET  
   
@@ -206,7 +208,7 @@ d.Add("two", 2);
   
 -   [{"Key":"one","Value":1},{"Key":"two","Value":2}] - <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>  
   
--   {«one»: 1, «two»: 2} с ASP.NET AJAX<xref:System.Web.Script.Serialization.JavaScriptSerializer>  
+-   {«one»: 1, «two»: 2} с ASP.NET AJAX <xref:System.Web.Script.Serialization.JavaScriptSerializer>  
   
  Класс <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> обладает более широкими возможностями в том смысле, что он может обрабатываться словари, где тип ключа не является строковым; класс <xref:System.Web.Script.Serialization.JavaScriptSerializer> не поддерживает такой возможности. Однако последний класс лучше работает с форматом JSON.  
   
@@ -215,11 +217,11 @@ d.Add("two", 2);
 |Категория различий|DataContractJsonSerializer|JavaScriptSerializer AJAX ASP.NET|  
 |-----------------------------|--------------------------------|---------------------------------------|  
 |Десериализация пустого буфера (new byte[0]) в <xref:System.Object> (или <xref:System.Uri>, или некоторые другие классы).|SerializationException|null|  
-|Сериализация <xref:System.DBNull.Value>|{} (или {"__type":"#System"})|Null|  
+|Сериализация <xref:System.DBNull.Value>|{} (или {«__type»: «#System»})|Null|  
 |Сериализация закрытых членов типов [Serializable]|Сериализуются|Не сериализуются|  
 |Сериализация открытых свойств типов <xref:System.Runtime.Serialization.ISerializable>|Не сериализуются|Сериализуются|  
 |Расширения JSON|Удовлетворяет спецификации JSON, которая требует заключать имена членов объектов в кавычки ({"a":"hello"}).|Поддерживает имена членов объектов без кавычек ({a:"hello"}).|  
-|Время в формате UTC (<xref:System.DateTime>)|Не поддерживает формат «\\/Date(123456789U)\\/» или «\\/Date\\(\d+ (и &#124; (\\+\\-[\d\{4\]}))?\\) \\\\/)".|Поддерживает формат «\\/Date(123456789U)\\/» и «\\/Date\\(\d+ (и &#124; (\\+\\-[\d\{4\]}))?\\) \\ \\/)» как значения даты и времени.|  
+|Время в формате UTC (<xref:System.DateTime>)|Не поддерживает формат «\\/Date(123456789U)\\/» или «\\/Date\\(\d+ (U&#124;(\\+\\-[\d{4}]))?\\) \\\\/)".|Поддерживает формат «\\/Date(123456789U)\\/» и «\\/Date\\(\d+ (U&#124;(\\+\\-[\d{4}]))?\\) \\ \\/)» как значения даты и времени.|  
 |Представление словарей|Массив KeyValuePair\<K, V >, обрабатывает типы ключей, которые не являются строками.|Фактические объекты JSON, но обрабатывает только ключи строковых типов|  
 |Escape-символы|Всегда с escape-символом прямой косой черты (/); нельзя использовать недопустимые символы JSON без escape-символа, например "\n"|Значения DateTime с escape-символом прямой косой черты (/)|  
   

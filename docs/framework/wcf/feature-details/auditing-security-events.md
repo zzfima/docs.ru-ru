@@ -18,18 +18,18 @@ ms.author: bruceper
 manager: mbaldwin
 ms.workload:
 - dotnet
-ms.openlocfilehash: 948ff11cf1b7ecacc6f9f5fdebfc3a0cbd1ef5b1
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 69b013389511ac2cfb31e22f7a39e98eb22fb977
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="auditing-security-events"></a>Аудит событий безопасности
 Приложения, созданные с помощью [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], могут регистрировать в журнале события, связанные с безопасностью (успешно, сбой или оба), используя функцию аудита. События записываются в журнал системных событий Windows, и их можно просматривать при помощи средства просмотра событий.  
   
  Аудит позволяет администраторам обнаруживать уже законченную или происходящую атаку. Кроме того, аудит может помочь разработчику при отладке неполадок, связанных с безопасностью. Например, если в результате ошибки в конфигурации авторизации или политики проверки авторизованному пользователю было отказано в доступе, разработчик может быстро найти и понять причину такой ошибки, изучив журнал событий.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] безопасность, в разделе [Общие сведения о безопасности](../../../../docs/framework/wcf/feature-details/security-overview.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Программирование [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], в разделе [базовое Программирование WCF](../../../../docs/framework/wcf/basic-wcf-programming.md).  
+ Дополнительные сведения о [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] безопасности, в разделе [Общие сведения о безопасности](../../../../docs/framework/wcf/feature-details/security-overview.md). Дополнительные сведения о программировании [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], в разделе [базовое Программирование WCF](../../../../docs/framework/wcf/basic-wcf-programming.md).  
   
 ## <a name="audit-level-and-behavior"></a>Уровень и поведение аудита  
  Предусмотрены два уровня аудита безопасности.  

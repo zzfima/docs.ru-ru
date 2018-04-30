@@ -1,23 +1,24 @@
 ---
-title: "Встроенная конфигурация"
-ms.custom: 
+title: Встроенная конфигурация
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 34e85c9b-088d-4347-816c-0f77cb73ef2f
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 3ddf9b316074a69a88f08a0d7f519533f2db0002
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 0c414f34da0cd4bbf484c0a439f8832f02a5ae58
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="built-in-configuration"></a>Встроенная конфигурация
 Этот образец показывает использование и настройку хранилища экземпляров рабочих процессов SQL. Хранилище экземпляров рабочих процессов SQL - это реализация хранилища экземпляров на основе SQL Server. Она позволяет экземпляру загружать свое состояние из базы данных SQL Server или SQL Server Express, либо сохранять состояние в этой базе данных.  
@@ -36,7 +37,7 @@ ms.lasthandoff: 12/22/2017
   
  Рабочий процесс подсчета является резидентным в узле службы рабочих процессов. Метод `Main` программы создает экземпляр узла службы рабочих процессов, в котором размещается рабочий процесс подсчета. Он определяет конечные точки, по которым можно получить доступ к рабочему процессу подсчета. После этого он определяет поведение хранилища экземпляров рабочих процессов SQL, которое используется для настройки экземпляра рабочего процесса SQL. Затем программа создает клиент, который вызывает метод запуска рабочего процесса подсчета.  
   
- После запуска программы счетчик автоматически начинает увеличиваться. Учтите, что на загрузку экземпляра и настройку хранилища экземпляров рабочих процессов SQL может уйти несколько секунд. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]хранилище экземпляров рабочих процессов в разделе [хранилище экземпляров рабочих процессов SQL](../../../../docs/framework/windows-workflow-foundation/sql-workflow-instance-store.md).  
+ После запуска программы счетчик автоматически начинает увеличиваться. Учтите, что на загрузку экземпляра и настройку хранилища экземпляров рабочих процессов SQL может уйти несколько секунд. Дополнительные сведения о хранилище экземпляров рабочих процессов см. в разделе [хранилище экземпляров рабочих процессов SQL](../../../../docs/framework/windows-workflow-foundation/sql-workflow-instance-store.md).  
   
  Образец состоит из двух частей:  
   
@@ -112,7 +113,7 @@ ms.lasthandoff: 12/22/2017
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите на страницу [Примеры Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все примеры [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Этот образец расположен в следующем каталоге.  
+>  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) Чтобы загрузить все [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] образцов. Этот образец расположен в следующем каталоге.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Persistence\BuiltInConfiguration`  
   

@@ -18,11 +18,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: bce838d9584480028c7b02d1ba19547fe208bf2c
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: df603da0f4feedeacc59198c156322c78fd2f388
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="metadata-architecture-overview"></a>Общие сведения об архитектуре метаданных
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] обеспечивает широкие возможности для экспорта, публикации, получения и импорта метаданных служб. Службы [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] используют метаданные для описания взаимодействия с конечными точками служб, чтобы такие средства, как Svcutil.exe, могли автоматически создавать клиентский код для обращения к службе.  
@@ -59,7 +59,7 @@ ms.lasthandoff: 04/28/2018
   
  Чтобы добавить конечные точки метаданных, использующие протокол MEX, добавьте в узел службы, использовать Контракт службы с именем IMetadataExchange конечных точек службы.[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Определяет <xref:System.ServiceModel.Description.IMetadataExchange> интерфейс с именем этого контракта службы. Конечные точки WS-Metadata Exchange (или конечные точки MEX) могут использовать одну из четырех привязок по умолчанию, предоставляемых статическими методами производства в классе <xref:System.ServiceModel.Description.MetadataExchangeBindings> для сопоставления с привязками по умолчанию, используемыми средствами [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], например Svcutil.exe. Настраивать конечные точки метаданных MEX также можно с помощью пользовательской привязки.  
   
- <xref:System.ServiceModel.Description.ServiceMetadataBehavior> использует <xref:System.ServiceModel.Description.WsdlExporter?displayProperty=nameWithType> для экспорта метаданных для всех конечных точек службы. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Экспорт метаданных из службы, в разделе [Экспорт и импорт метаданных](../../../../docs/framework/wcf/feature-details/exporting-and-importing-metadata.md).  
+ <xref:System.ServiceModel.Description.ServiceMetadataBehavior> использует <xref:System.ServiceModel.Description.WsdlExporter?displayProperty=nameWithType> для экспорта метаданных для всех конечных точек службы. Дополнительные сведения об экспорте метаданных из службы см. в разделе [Экспорт и импорт метаданных](../../../../docs/framework/wcf/feature-details/exporting-and-importing-metadata.md).  
   
  Класс <xref:System.ServiceModel.Description.ServiceMetadataBehavior> расширяет узел службы, добавляя экземпляр <xref:System.ServiceModel.Description.ServiceMetadataExtension> в качестве расширения узла службы. Расширение <xref:System.ServiceModel.Description.ServiceMetadataExtension?displayProperty=nameWithType> обеспечивает реализацию протоколов публикации метаданных. Расширение <xref:System.ServiceModel.Description.ServiceMetadataExtension?displayProperty=nameWithType> также можно использовать для получения метаданных службы во время выполнения, обратившись к свойству <xref:System.ServiceModel.Description.ServiceMetadataExtension.Metadata%2A>.  
   

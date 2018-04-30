@@ -1,32 +1,34 @@
 ---
-title: "Практическое руководство. Обращение к службе WSE 3.0 с помощью клиента WCF"
-ms.custom: 
+title: Практическое руководство. Обращение к службе WSE 3.0 с помощью клиента WCF
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 1f9bcd9b-8f8f-47fa-8f1e-0d47236eb800
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 49ff6378bcd35ab2d4e2adf3783a1c4e73025d3a
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 382762917e790d54dca31158f2b7ffde560c1427
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-access-a-wse-30-service-with-a-wcf-client"></a>Практическое руководство. Обращение к службе WSE 3.0 с помощью клиента WCF
 Клиенты [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] на уровне линий связи совместимы со службами расширений веб-служб (WSE) версии 3.0 для Microsoft .NET, если клиенты [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] настроены на использование спецификации WS-Addressing (версия от августа 2004 г.). Однако WSE 3.0 службы не поддерживают протокол обмена (MEX) метаданные, поэтому при использовании [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) для создания [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] клиентский класс, параметры безопасности не применяются к созданный [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] клиента. Следовательно, необходимо задавать параметры безопасности, которые требует служба WSE 3.0, после формирования клиента [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
   
- Эти параметры безопасности можно применить путем использования пользовательской привязки для принятия во внимание требований службы WSE 3.0 и требований в отношении взаимодействия между службой WSE 3.0 и клиентом [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Требования в отношении взаимодействия включают использование упомянутой выше спецификации WS-Addressing от августа 2004 г. и предусмотренной в WSE 3.0 защиты сообщений по умолчанию с помощью поля <xref:System.ServiceModel.Security.MessageProtectionOrder.SignBeforeEncrypt>. По умолчанию для защиты сообщений в [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] используется поле <xref:System.ServiceModel.Security.MessageProtectionOrder.SignBeforeEncryptAndEncryptSignature>. В этом разделе описывается создание привязки [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], взаимодействующей со службой WSE 3.0. В [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] также содержится образец, включающий в себя эту привязку. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]в этом примере в разделе [взаимодействие с веб-службами ASMX](../../../../docs/framework/wcf/samples/interoperating-with-asmx-web-services.md).  
+ Эти параметры безопасности можно применить путем использования пользовательской привязки для принятия во внимание требований службы WSE 3.0 и требований в отношении взаимодействия между службой WSE 3.0 и клиентом [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Требования в отношении взаимодействия включают использование упомянутой выше спецификации WS-Addressing от августа 2004 г. и предусмотренной в WSE 3.0 защиты сообщений по умолчанию с помощью поля <xref:System.ServiceModel.Security.MessageProtectionOrder.SignBeforeEncrypt>. По умолчанию для защиты сообщений в [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] используется поле <xref:System.ServiceModel.Security.MessageProtectionOrder.SignBeforeEncryptAndEncryptSignature>. В этом разделе описывается создание привязки [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], взаимодействующей со службой WSE 3.0. В [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] также содержится образец, включающий в себя эту привязку. Дополнительные сведения об этом образце см. в разделе [взаимодействие с веб-службами ASMX](../../../../docs/framework/wcf/samples/interoperating-with-asmx-web-services.md).  
   
 ### <a name="to-access-a-wse-30-web-service-with-a-wcf-client"></a>Обращение к веб-службе WSE 3.0 с помощью клиента WCF  
   
@@ -34,7 +36,7 @@ ms.lasthandoff: 01/19/2018
   
      Для веб-службы WSE 3.0 создается клиент [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Поскольку WSE 3.0 не поддерживает протокол MEX, использовать SvcUtil.exe для извлечения требований безопасности для веб-службы нельзя. Добавить параметры безопасности для клиента должен разработчик приложения.  
   
-     [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Создание [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] клиента, в разделе [как: создание клиента](../../../../docs/framework/wcf/how-to-create-a-wcf-client.md).  
+     Дополнительные сведения о создании [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] клиента, в разделе [как: создание клиента](../../../../docs/framework/wcf/how-to-create-a-wcf-client.md).  
   
 2.  Создайте класс, представляющий привязку, которая может обмениваться данными с веб-службами WSE 3.0.  
   

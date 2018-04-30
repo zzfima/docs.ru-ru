@@ -1,27 +1,29 @@
 ---
-title: "Как разместить службу рабочего процесса с помощью Windows Server App Fabric"
-ms.custom: 
+title: Как разместить службу рабочего процесса с помощью Windows Server App Fabric
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 83b62cce-5fc2-4c6d-b27c-5742ba3bac73
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: fc7af813f7fff422a2513c58c9e3cba6376de060
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: ef60a291af39a39d3427d74b8a6ea7d00382c8d6
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-host-a-workflow-service-with-windows-server-app-fabric"></a>Как разместить службу рабочего процесса с помощью Windows Server App Fabric
-Размещение служб рабочих процессов в фабрике приложений аналогично их размещению в виртуальном каталоге служб IIS/WAS. Разница состоит лишь в предоставлении фабрикой приложений средств для развертывания, наблюдения и управления службами рабочих процессов. В этом разделе использует службу рабочего процесса, созданные в [Создание службы рабочего процесса долго выполняющихся](../../../../docs/framework/wcf/feature-details/creating-a-long-running-workflow-service.md). Указанный раздел содержит пошаговые инструкции по созданию службы рабочих процессов. В этом разделе объясняется, как разместить службу рабочих процессов с помощью фабрики приложений. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Windows Server App Fabric. в разделе [документации Windows Server App Fabric](http://go.microsoft.com/fwlink/?LinkID=193037&clcid=0x409). Перед выполнением описанных далее шагов убедитесь, что фабрика приложений Windows Server уже установлена.  Для этого откройте диспетчер служб IIS (inetmgr.exe), щелкните имя сервера в **подключений** просмотр сайтов и нажмите кнопку **веб-сайт по умолчанию**. В правой части экрана появится раздел под названием **App Fabric**. Если вы не видите этот раздел (он находится на верхней правой панели), значит фабрика приложений не установлена. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Установка Windows Server App Fabric. в разделе [Установка Windows Server App Fabric](http://go.microsoft.com/fwlink/?LinkId=193136).  
+Размещение служб рабочих процессов в фабрике приложений аналогично их размещению в виртуальном каталоге служб IIS/WAS. Разница состоит лишь в предоставлении фабрикой приложений средств для развертывания, наблюдения и управления службами рабочих процессов. В этом разделе использует службу рабочего процесса, созданные в [Создание службы рабочего процесса долго выполняющихся](../../../../docs/framework/wcf/feature-details/creating-a-long-running-workflow-service.md). Указанный раздел содержит пошаговые инструкции по созданию службы рабочих процессов. В этом разделе объясняется, как разместить службу рабочих процессов с помощью фабрики приложений. Дополнительные сведения о Windows Server App Fabric см. в разделе [документации Windows Server App Fabric](http://go.microsoft.com/fwlink/?LinkID=193037&clcid=0x409). Перед выполнением описанных далее шагов убедитесь, что фабрика приложений Windows Server уже установлена.  Для этого откройте диспетчер служб IIS (inetmgr.exe), щелкните имя сервера в **подключений** просмотр сайтов и нажмите кнопку **веб-сайт по умолчанию**. В правой части экрана появится раздел под названием **App Fabric**. Если вы не видите этот раздел (он находится на верхней правой панели), значит фабрика приложений не установлена. Дополнительные сведения об установке Windows Server App Fabric разделе [Установка Windows Server App Fabric](http://go.microsoft.com/fwlink/?LinkId=193136).  
   
 ### <a name="creating-a-simple-workflow-service"></a>Создание простой службы рабочих процессов  
   
@@ -51,37 +53,37 @@ ms.lasthandoff: 12/22/2017
   
      ![Вкладка наблюдение за конфигурацией фабрики приложения](../../../../docs/framework/wcf/feature-details/media/appfabricconfiguration-monitoring.gif "AppFabricConfiguration мониторинг")  
   
-     [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Настройка наблюдение за службами рабочего процесса в фабрике приложений в разделе [настройке мониторинга с помощью App Fabric](http://go.microsoft.com/fwlink/?LinkId=193153).  
+     Дополнительные сведения о настройке службы рабочего процесса отслеживания в фабрике приложений. в разделе [настройке мониторинга с помощью App Fabric](http://go.microsoft.com/fwlink/?LinkId=193153).  
   
 6.  Выберите **сохранение рабочего процесса** вкладки. Здесь можно настроить приложение для использования поставщика механизма сохраняемости по умолчанию фабрикой приложений, как показано на следующем снимке экрана.  
   
-     ![Настройка App Fabric-45; Сохраняемости](../../../../docs/framework/wcf/feature-details/media/appfabricconfiguration-persistence.gif "AppFabricConfiguration сохраняемости")  
+     ![Настройка App Fabric &#45; сохраняемости](../../../../docs/framework/wcf/feature-details/media/appfabricconfiguration-persistence.gif "AppFabricConfiguration сохраняемости")  
   
-     [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Настройка сохранение рабочего процесса в фабрике приложений Windows Server. в разделе [Настройка сохранение рабочего процесса в фабрике приложений](http://go.microsoft.com/fwlink/?LinkId=193148).  
+     Дополнительные сведения о настройке сохранение рабочего процесса в фабрике приложений Windows Server. в разделе [Настройка сохранение рабочего процесса в фабрике приложений](http://go.microsoft.com/fwlink/?LinkId=193148).  
   
 7.  Выберите **Управление узлом рабочих процессов** вкладки. Здесь можно указать, когда должны выгружаться и сохраняться бездействующие службы рабочих процессов, как показано на следующем снимке экрана.  
   
      ![Настройка App Fabric-Управление узлом рабочего процесса](../../../../docs/framework/wcf/feature-details/media/appfabricconfiguration-management.gif "AppFabricConfiguration управления")  
   
-     [!INCLUDE[crabout](../../../../includes/crabout-md.md)]рабочий процесс узла управления конфигурации см. в разделе [Настройка Управление узлом рабочих процессов в фабрике приложений](http://go.microsoft.com/fwlink/?LinkId=193151).  
+     Дополнительные сведения о настройке управления узла рабочего процесса в разделе [Настройка Управление узлом рабочих процессов в фабрике приложений](http://go.microsoft.com/fwlink/?LinkId=193151).  
   
 8.  Выберите **автозапуска** вкладки. Здесь можно указать параметры автозапуска служб рабочих процессов в приложении, как показано на следующем снимке экрана.  
   
-     ![Auto структуры приложения &#45; Настройка запуска](../../../../docs/framework/wcf/feature-details/media/appfabricconfigurationautostart.gif "AppFabricConfigurationAutostart")  
+     ![Auto структуры приложения&#45;запустить настройку](../../../../docs/framework/wcf/feature-details/media/appfabricconfigurationautostart.gif "AppFabricConfigurationAutostart")  
   
-     [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Настройка автоматического запуска в разделе [Настройка автоматического запуска с помощью App Fabric](http://go.microsoft.com/fwlink/?LinkId=193150).  
+     Дополнительные сведения о настройке автоматического запуска в разделе [Настройка автоматического запуска с помощью App Fabric](http://go.microsoft.com/fwlink/?LinkId=193150).  
   
 9. Выберите **регулирование** вкладки. Здесь можно настроить параметры регулирования для службы рабочих процессов, как показано на следующем снимке экрана.  
   
      ![Регулирование конфигурации фабрики приложения](../../../../docs/framework/wcf/feature-details/media/appfabricconfigurationthrottling.gif "AppFabricConfigurationThrottling")  
   
-     [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Настройка регулирования. в разделе [Настройка регулирования с App Fabric](http://go.microsoft.com/fwlink/?LinkId=193149).  
+     Дополнительные сведения о настройке регулирования разделе [Настройка регулирования с App Fabric](http://go.microsoft.com/fwlink/?LinkId=193149).  
   
 10. Выберите **безопасности** вкладки. Здесь можно настроить параметры безопасности для приложения, как показано на следующем снимке экрана.  
   
      ![Конфигурация безопасности фабрики приложения](../../../../docs/framework/wcf/feature-details/media/appfabricconfiguration-security.gif "AppFabricConfiguration безопасности")  
   
-     [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Настройка безопасности с помощью Windows Server App Fabric. в разделе [настройки безопасности с помощью App Fabric](http://go.microsoft.com/fwlink/?LinkId=193152).  
+     Дополнительные сведения о настройке безопасности с помощью Windows Server App Fabric разделе [настройки безопасности с помощью App Fabric](http://go.microsoft.com/fwlink/?LinkId=193152).  
   
 ### <a name="using-windows-server-app-fabric"></a>Использование фабрики приложений Windows Server  
   

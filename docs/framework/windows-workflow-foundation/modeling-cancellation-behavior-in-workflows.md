@@ -1,23 +1,24 @@
 ---
-title: "Моделирование поведения отмены в рабочих процессах"
-ms.custom: 
+title: Моделирование поведения отмены в рабочих процессах
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: d48f6cf3-cdde-4dd3-8265-a665acf32a03
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 94a3cb69e2e897e992a05a19325630ca9bb1ae3a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: e455bf4d74f77c6cd87301dc9a21f56117777ecf
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="modeling-cancellation-behavior-in-workflows"></a>Моделирование поведения отмены в рабочих процессах
 Действия можно отменять внутри рабочего процесса, например действием <xref:System.Activities.Statements.Parallel>, отменяющим неполные ветви, если вычисление его условия <xref:System.Activities.Statements.Parallel.CompletionCondition%2A> возвращает значение `true`, или извне рабочего процесса, если узел вызывает метод <xref:System.Activities.WorkflowApplication.Cancel%2A>. Чтобы предусмотреть выполнение отмены, разработчики рабочего процесса могут использовать действие <xref:System.Activities.Statements.CancellationScope>, действие <xref:System.Activities.Statements.CompensableActivity> или создать пользовательские действия, которые предоставляют логику отмены. В этом разделе приведены общие сведения об отмене в рабочих процессах.  
@@ -26,7 +27,7 @@ ms.lasthandoff: 12/22/2017
  Транзакции предоставляют приложению способность прерывать (производить откат) все изменения, выполняемые в пределах транзакции, если в ходе выполнения любой части транзакции возникают какие-либо ошибки. Однако не вся работа, которая может потребовать отмены, подходит для транзакций. К примерам такой работы относятся продолжительные задания или операции, в которых не задействуются ресурсы транзакций. Компенсация предоставляет модель для отмены выполненной ранее работы, которая не входит в состав транзакции, если в последующем эти действия вызвали ошибку в рабочем процессе. Отмена предоставляет разработчикам рабочих процессов и действий модель для обработки незавершенной работы, которая не входит в состав транзакции. Если какое-либо действие отменяется до завершения его выполнения, то будет вызвана логика его отмены при ее наличии.  
   
 > [!NOTE]
->  [!INCLUDE[crabout](../../../includes/crabout-md.md)]транзакции и компенсация, в разделе [транзакции](../../../docs/framework/windows-workflow-foundation/workflow-transactions.md) и [компенсации](../../../docs/framework/windows-workflow-foundation/compensation.md).  
+>  Дополнительные сведения о транзакциях и компенсации см. в разделе [транзакции](../../../docs/framework/windows-workflow-foundation/workflow-transactions.md) и [компенсации](../../../docs/framework/windows-workflow-foundation/compensation.md).  
   
 ## <a name="using-cancellationscope"></a>Использование CancellationScope  
  Действие <xref:System.Activities.Statements.CancellationScope> имеет два раздела, которые могут содержать дочерние действия: <xref:System.Activities.Statements.CancellationScope.Body%2A> и <xref:System.Activities.Statements.CancellationScope.CancellationHandler%2A>. В раздел <xref:System.Activities.Statements.CancellationScope.Body%2A> помещаются действия, составляющие логику действия, а в раздел <xref:System.Activities.Statements.CancellationScope.CancellationHandler%2A> - действия, которые обеспечивают логику отмены действия. Отменено может быть только незавершенное действие. Если речь идет о действии <xref:System.Activities.Statements.CancellationScope>, то под завершением подразумевается завершение действий в <xref:System.Activities.Statements.CancellationScope.Body%2A>. Если запрос отмены запланирован и действия в <xref:System.Activities.Statements.CancellationScope.Body%2A> не завершились, то область <xref:System.Activities.Statements.CancellationScope> будет отмечена как <xref:System.Activities.ActivityInstanceState.Canceled>, после чего будут выполнены действия <xref:System.Activities.Statements.CancellationScope.CancellationHandler%2A>.  

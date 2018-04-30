@@ -16,11 +16,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: d82febd776bfc51e3e9725701253ed19996349b5
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: b8d9d9b55bbeade5aa337719ba19ea9f386dfd6a
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-add-an-aspnet-ajax-endpoint-without-using-configuration"></a>Практическое руководство. Добавление конечной точки ASP.NET AJAX без использования конфигурации
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] позволяет создать службу, предоставляющую конечную точку с поддержкой ASP.NET AJAX, которую можно вызвать из кода JavaScript на веб-сайте клиента. Для создания этой конечной точки можно воспользоваться либо файлом конфигурации (как и для всех остальных конечных точек WCF), либо методом, не требующим никаких элементов конфигурации. В этом разделе показано решение этой задачи вторым методом.  
@@ -83,7 +83,7 @@ ms.lasthandoff: 04/28/2018
     %>  
     ```  
   
-2.  Создайте службу и вызовите ее из клиента. Internet Information Services (IIS) активирует данную службу при вызове. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Размещение в службах IIS, в разделе [как: размещение службы WCF в IIS](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md).  
+2.  Создайте службу и вызовите ее из клиента. Internet Information Services (IIS) активирует данную службу при вызове. Дополнительные сведения о размещении в IIS см. в разделе [как: размещение службы WCF в IIS](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md).  
   
 ### <a name="to-call-the-service"></a>Вызов службы  
   

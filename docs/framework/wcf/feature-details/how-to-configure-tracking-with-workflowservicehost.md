@@ -16,11 +16,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 7cf4b9055334d68337e6414f25f30561b990c732
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: e1de3349bb9766beeee95b9934fc1ca11fc7006f
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-configure-tracking-with-workflowservicehost"></a>Как настроить отслеживание с помощью WorkflowServiceHost
 В этом разделе описывается настройка отслеживания для рабочего процесса платформы [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)], размещенного в <xref:System.ServiceModel.Activities.WorkflowServiceHost>. Она осуществляется с помощью файла Web.config, в котором задается поведение службы.  
@@ -63,9 +63,9 @@ ms.lasthandoff: 04/28/2018
     </system.serviceModel>  
     ```  
   
-     [!INCLUDE[crabout](../../../../includes/crabout-md.md)] профили отслеживания, в разделе [профили отслеживания](../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md).  
+     Дополнительные сведения о профилях отслеживания см. в разделе [профили отслеживания](../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md).  
   
-     [!INCLUDE[crabout](../../../../includes/crabout-md.md)] см. в общем случае отслеживания [отслеживание и трассировка рабочих процессов](../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md).  
+     Дополнительные сведения об отслеживании в целом см. в разделе [отслеживание и трассировка рабочих процессов](../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md).  
   
 ### <a name="configure-tracking-in-code"></a>Настройка отслеживания в коде  
   
@@ -77,9 +77,9 @@ ms.lasthandoff: 04/28/2018
   
      В предыдущем образце кода добавляется участник <xref:System.Activities.Tracking.EtwTrackingParticipant> и задается имя профиля отслеживания. Профили отслеживания создаются в элементе <`trackingProfile`> внутри элемента <`tracking`>, как показано в предыдущем разделе.  
   
-     [!INCLUDE[crabout](../../../../includes/crabout-md.md)] профили отслеживания, в разделе [профили отслеживания](../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md).  
+     Дополнительные сведения о профилях отслеживания см. в разделе [профили отслеживания](../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md).  
   
-     [!INCLUDE[crabout](../../../../includes/crabout-md.md)] см. в общем случае отслеживания [отслеживание и трассировка рабочих процессов](../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md). Пример настройки отслеживания программными средствами см. [Настройка отслеживания для рабочего процесса](../../../../docs/framework/windows-workflow-foundation/configuring-tracking-for-a-workflow.md).  
+     Дополнительные сведения об отслеживании в целом см. в разделе [отслеживание и трассировка рабочих процессов](../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md). Пример настройки отслеживания программными средствами см. [Настройка отслеживания для рабочего процесса](../../../../docs/framework/windows-workflow-foundation/configuring-tracking-for-a-workflow.md).  
   
 ## <a name="see-also"></a>См. также  
  [Упрощенная конфигурация служб WCF](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md)  

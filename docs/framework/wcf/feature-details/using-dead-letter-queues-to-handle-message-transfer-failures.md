@@ -1,27 +1,29 @@
 ---
-title: "Использование очередей недоставленных сообщений для обработки сбоев при передаче сообщений"
-ms.custom: 
+title: Использование очередей недоставленных сообщений для обработки сбоев при передаче сообщений
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 9e891c6a-d960-45ea-904f-1a00e202d61a
-caps.latest.revision: "19"
+caps.latest.revision: 19
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 9f10b3895fcdea0c3ab80617acd9874953b7665e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: b51999b1984dedf1baf23e41c1592382849c431b
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="using-dead-letter-queues-to-handle-message-transfer-failures"></a>Использование очередей недоставленных сообщений для обработки сбоев при передаче сообщений
 Сообщения в очереди могут вызвать сбой доставки. Сообщения, во время доставки которых произошел сбой, записываются в очередь недоставленных сообщений. Сбой доставки может быть вызван такими причинами, как сбои сети, удаленная очередь, заполнение очереди, сбой проверки подлинности или сбой доставки по времени.  
@@ -54,7 +56,7 @@ ms.lasthandoff: 12/22/2017
   
 -   Для чтения сообщений из пользовательской очереди недоставленных сообщений, код URI должен иметь форму: net.msmq://localhost/private/\<*имя пользовательского-очередь dlq*> где *имя пользовательского-очередь dlq* имя пользовательской очередь недоставленных сообщений.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]адрес очереди см. в разделе [конечные точки служб и адресация очереди](../../../../docs/framework/wcf/feature-details/service-endpoints-and-queue-addressing.md).  
+ Дополнительные сведения о том, как адрес очереди см. в разделе [конечные точки служб и адресация очереди](../../../../docs/framework/wcf/feature-details/service-endpoints-and-queue-addressing.md).  
   
  Стек приемника [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] сопоставляет адреса, по которым служба ожидает данные, адресу в сообщении. Если адреса совпадают, сообщение отправляется, если нет - не отправляется. Это может создать проблемы при чтении сообщений из очереди недоставленных сообщений, поскольку сообщения в очереди недоставленных сообщений обычно адресованы не службе и не службе очереди отправленных сообщений. Поэтому для чтения службой сообщений из очереди недоставленных сообщений необходима установка фильтра по адресу `ServiceBehavior`, которая дает команду стеку считать совпадающими все сообщения в очереди независимо от адресата. В частности, нужно добавить `ServiceBehavior` при помощи параметра <xref:System.ServiceModel.AddressFilterMode.Any>в службу, считывающую сообщения из очереди недоставленных сообщений.  
   

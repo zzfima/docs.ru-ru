@@ -1,24 +1,24 @@
 ---
-title: "Настраиваемое действие SendMail"
-ms.custom: 
+title: Настраиваемое действие SendMail
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 947a9ae6-379c-43a3-9cd5-87f573a5739f
-caps.latest.revision: 
+caps.latest.revision: 11
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 6086ca0ccb31603874feda6df1384b9346adb49d
-ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
+ms.openlocfilehash: 46038466233e7039229890b15b0ad6ca9d1a717f
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="sendmail-custom-activity"></a>Настраиваемое действие SendMail
 В образце описывается создание настраиваемого действия, которое является производным от <xref:System.Activities.AsyncCodeActivity>, для отправки почты с помощью SMTP для работы в приложении рабочего процесса. Пользовательское действие использует функции <xref:System.Net.Mail.SmtpClient> асинхронно отправлять электронную почту и для отправки почты с проверкой подлинности. При этом также обеспечивается возможность использования таких возможностей конечных пользователей, как тестовый режим, замена маркеров, шаблоны файлов и тестовый путь размещения файла.  
@@ -32,9 +32,9 @@ ms.lasthandoff: 02/01/2018
 |EnableSsl|bool|Указывает, использует ли <xref:System.Net.Mail.SmtpClient> протокол SSL для шифрования соединения.|  
 |UserName|Строковое|Имя пользователя для настройки учетных данных для проверки подлинности свойства <xref:System.Net.Mail.SmtpClient.Credentials%2A> отправителя.|  
 |Пароль|Строковое|Пароль для настройки учетных данных для проверки подлинности свойства <xref:System.Net.Mail.SmtpClient.Credentials%2A> отправителя.|  
-|Субъект|<xref:System.Activities.InArgument%601>\<string>|Тема сообщения.|  
-|Текст|<xref:System.Activities.InArgument%601>\<string>|Текст сообщения.|  
-|Вложения|<xref:System.Activities.InArgument%601>\<string>|Коллекция вложений, используемая для хранения данных, вложенных в это сообщение электронной почты.|  
+|Субъект|<xref:System.Activities.InArgument%601>\<строка >|Тема сообщения.|  
+|Текст|<xref:System.Activities.InArgument%601>\<строка >|Текст сообщения.|  
+|Вложения|<xref:System.Activities.InArgument%601>\<строка >|Коллекция вложений, используемая для хранения данных, вложенных в это сообщение электронной почты.|  
 |Исходный тип|<xref:System.Net.Mail.MailAddress>|Адрес отправителя для данного сообщения электронной почты.|  
 |Кому|<xref:System.Activities.InArgument%601>\<<xref:System.Net.Mail.MailAddressCollection>>|Коллекция адресов получателей данного сообщения электронной почты.|  
 |CC|<xref:System.Activities.InArgument%601>\<<xref:System.Net.Mail.MailAddressCollection>>|Адрес коллекцию, содержащую получателей копии (CC) данного сообщения электронной почты.|  
@@ -116,7 +116,7 @@ new SendMail
 ## <a name="set-up-instructions"></a>Инструкции по установке  
  В этом образце необходим доступ к SMTP-серверу.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Настройка SMTP-сервера, см. по следующим ссылкам.  
+ Дополнительные сведения о настройке SMTP-сервера см. по следующим ссылкам.  
   
 -   [Microsoft Technet](http://go.microsoft.com/fwlink/?LinkId=166060)  
   
@@ -147,6 +147,6 @@ new SendMail
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите на страницу [Примеры Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все примеры [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Этот образец расположен в следующем каталоге.  
+>  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) Чтобы загрузить все [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] образцов. Этот образец расположен в следующем каталоге.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\SendMail`

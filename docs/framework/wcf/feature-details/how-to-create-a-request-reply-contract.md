@@ -1,24 +1,26 @@
 ---
-title: "Практическое руководство. Создание контракта типа \"запрос-ответ\""
-ms.custom: 
+title: Практическое руководство. Создание контракта типа "запрос-ответ"
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 801d90da-3d45-4284-9c9f-56c8aadb4060
-caps.latest.revision: "19"
+caps.latest.revision: 19
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f86679d38b8d1a1d6443c1aac37cfa75f426e402
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 2a272eaa88a53814daea9d515550a37f7991ecb8
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-create-a-request-reply-contract"></a>Практическое руководство. Создание контракта типа "запрос-ответ"
 Контракт «запрос-ответ» указывает метод, который возвращает ответ. Необходима отправка ответа и его корреляция запросу согласно условиям этого контракта. Даже если метод не возвращает ответ (`void` в C# или `Sub` в Visual Basic), инфраструктура создает и отправляет вызывающему объекту пустое сообщение. Чтобы запретить отправку пустого ответного сообщения, используйте для операции односторонний контракт.  
@@ -54,7 +56,7 @@ public interface ICalculator
 }
 ```
   
--   [!INCLUDE[crabout](../../../../includes/crabout-md.md)] об указании контрактов операции см. в описании класса <xref:System.ServiceModel.OperationContractAttribute> и свойства <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A>.  
+-   Дополнительные сведения об указании контрактов операции см. в разделе <xref:System.ServiceModel.OperationContractAttribute> класса и <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> свойства.  
   
 -   Применение атрибутов <xref:System.ServiceModel.ServiceContractAttribute> и <xref:System.ServiceModel.OperationContractAttribute> вызывает автоматическое создание определений контракта службы в документе WSDL после развертывания службы. Документ загружается путем добавления `?wsdl` к базовому адресу HTTP для службы, Например `http://microsoft/CalculatorService?wsdl`.  
   

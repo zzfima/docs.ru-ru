@@ -1,31 +1,31 @@
 ---
-title: "Категории элементов управления"
-ms.custom: 
+title: Категории элементов управления
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-wpf
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - controls [WPF], listed by category
 ms.assetid: f8a1f78e-d9fa-4367-9ec6-f084577e83bb
-caps.latest.revision: 
+caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 26cd5c40a68b42b16fd2b7aacfcd84fdce483ee8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e88dc45d640391798a22af7a6a1d34f1acebcc0a
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="controls-by-category"></a>Категории элементов управления
-Элементы управления [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] могут быть логически сгруппированы в несколько категорий. Эти категории можно использовать для выбора соответствующего элемента управления для сценария, что поможет увидеть, какие элементы управления имеют схожие шаблоны использования или функциональные возможности.  
+Элементы управления Windows Presentation Foundation (WPF) может быть логически сгруппированы в несколько категорий. Эти категории можно использовать для выбора соответствующего элемента управления для сценария, что поможет увидеть, какие элементы управления имеют схожие шаблоны использования или функциональные возможности.  
   
 ## <a name="layout"></a>Макет  
  Элементы управления макета используются для управления размером, измерениями, размещением и расположением дочерних элементов.  

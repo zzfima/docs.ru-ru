@@ -1,27 +1,29 @@
 ---
-title: "Практическое руководство. Указание цепочки сертификатов центра сертификации, используемой для проверки сигнатур (WCF)"
-ms.custom: 
+title: Практическое руководство. Указание цепочки сертификатов центра сертификации, используемой для проверки сигнатур (WCF)
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - certificates [WCF], specifying the certificate authority certificate chain
 - certificates [WCF], verifying signatures
 ms.assetid: 7c719355-aa41-4567-80d0-5115a8cf73fd
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f0ea15e8fe9580f561eedf048ed2aaf2e2ed248f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 29637ea7f0a1e533a6735ebfa6f428fe20039e48
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-specify-the-certificate-authority-certificate-chain-used-to-verify-signatures-wcf"></a>Практическое руководство. Указание цепочки сертификатов центра сертификации, используемой для проверки сигнатур (WCF)
 Когда [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] получает сообщение SOAP, подписанное с помощью сертификата X.509, по умолчанию проверяется, что сертификат X.509 выдан надежным центром сертификации. Для этого выполняется поиск в хранилище сертификатов и проверяется, отмечен ли соответствующий центр сертификации как надежный. Для выполнения этой проверки, осуществляемой [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], цепь сертификатов центра сертификации должна быть установлена в надлежащем хранилище сертификатов.  
@@ -42,7 +44,7 @@ ms.lasthandoff: 12/22/2017
   
          В консоли управления (MMC), откройте оснастку диспетчера сертификатов. Для сертификата хранилища, на который [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] настроен для получения сертификатов X.509 из выберите **доверенных корневых** **центры сертификации**папки. В разделе **доверенные корневые центры сертификации** папку, щелкните правой кнопкой мыши **сертификаты**папку, выберите пункт **все задачи**и нажмите кнопку **импорта** . Укажите файл, экспортированный на предыдущем этапе.  
   
-         [!INCLUDE[crabout](../../../../includes/crabout-md.md)]используя оснастку «Сертификаты» с помощью консоли MMC в разделе [как: Просмотр сертификатов с помощью оснастки MMC](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md).  
+         Дополнительные сведения об использовании сертификатов с MMC см. в разделе [как: Просмотр сертификатов с помощью оснастки MMC](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md).  
   
 ## <a name="see-also"></a>См. также  
  [Работа с сертификатами](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)

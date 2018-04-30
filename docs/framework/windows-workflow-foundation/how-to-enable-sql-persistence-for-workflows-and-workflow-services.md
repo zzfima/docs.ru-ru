@@ -17,11 +17,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 5d687c00edd9d495f3b7715474d7eb2e107c23f0
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 3e5872be7e8b686a744832bf63a98e97a99cf9b6
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-enable-sql-persistence-for-workflows-and-workflow-services"></a>Как включить сохраняемость SQL для рабочих процессов и служб рабочих процессов
 В данном разделе описано, как настроить возможность хранилища экземпляров рабочих процессов SQL для включения сохраняемости рабочих процессов и служб рабочих процессов программно и с помощью файла конфигурации.  
@@ -41,7 +41,7 @@ ms.lasthandoff: 04/28/2018
 >   
 >  System.Data.SqlClient.SqlException: не удается найти хранимую процедуру System.Activities.DurableInstancing.CreateLockOwner  
   
- В следующих разделах описывается включение сохраняемости для рабочих процессов и служб рабочих процессов с использованием хранилища экземпляров рабочих процессов SQL. [!INCLUDE[crabout](../../../includes/crabout-md.md)] Свойства хранилища экземпляров рабочих процессов SQL, в разделе [свойства экземпляра рабочего процесса SQL хранилище](../../../docs/framework/windows-workflow-foundation/properties-of-sql-workflow-instance-store.md).  
+ В следующих разделах описывается включение сохраняемости для рабочих процессов и служб рабочих процессов с использованием хранилища экземпляров рабочих процессов SQL. Дополнительные сведения о свойствах хранилища экземпляров рабочих процессов SQL см. в разделе [свойства экземпляра рабочего процесса SQL хранилище](../../../docs/framework/windows-workflow-foundation/properties-of-sql-workflow-instance-store.md).  
   
 ## <a name="enabling-persistence-for-self-hosted-workflows-that-use-workflowapplication"></a>Включение сохраняемости для резидентных рабочих процессов, которые используют WorkflowApplication  
  Можно включить сохраняемость для резидентных рабочих процессов, которые программно используют <xref:System.Activities.WorkflowApplication> с помощью объектной модели <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>. Шаги, необходимые для выполнения этой задачи, содержатся в следующей процедуре.  

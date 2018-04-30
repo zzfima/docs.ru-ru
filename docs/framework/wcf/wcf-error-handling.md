@@ -16,11 +16,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: b85ef2b0c077b67cc341a48c9260393e158033c5
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: d951c0d85294dfcef56e231f7702cb2d37efa967
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="wcf-error-handling"></a>Обработка ошибок WCF
 Ошибки, с которыми столкнулось приложение WCF, относится к одной из трех групп:  
@@ -51,7 +51,7 @@ ms.lasthandoff: 04/28/2018
  Контракты сбоев позволяют определять ошибки, которые могут возникать во время выполнения работы службы, независимо от платформы. По умолчанию все ошибки, возникающие при работе службы, возвращаются клиенту в виде объекта <xref:System.ServiceModel.FaultException>. Объект <xref:System.ServiceModel.FaultException> содержит очень мало сведений. Для управления тем, какие сведения передаются клиенту, можно определить контракт сбоя и возвращать ошибки в виде исключения <xref:System.ServiceModel.FaultException%601>. Дополнительные сведения см. в разделе [указание и обработка сбоев в контрактах и службах](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md).  
   
 ## <a name="ierrorhandler"></a>IErrorHandler  
- Интерфейс <xref:System.ServiceModel.Dispatcher.IErrorHandler> обеспечивает больший контроль над тем, как приложение WCF будет реагировать на ошибки.  Он предоставляет разработчику полный доступ над содержанием сообщений об ошибках, которые возвращаются клиенту, и позволяет выполнять пользовательскую обработку ошибок, например ведение журнала.  [!INCLUDE[crdefault](../../../includes/crabout-md.md)] <xref:System.ServiceModel.Dispatcher.IErrorHandler> и [повышение управляемости обработки ошибок и отчетов](../../../docs/framework/wcf/samples/extending-control-over-error-handling-and-reporting.md)  
+ Интерфейс <xref:System.ServiceModel.Dispatcher.IErrorHandler> обеспечивает больший контроль над тем, как приложение WCF будет реагировать на ошибки.  Он предоставляет разработчику полный доступ над содержанием сообщений об ошибках, которые возвращаются клиенту, и позволяет выполнять пользовательскую обработку ошибок, например ведение журнала.  Дополнительные сведения о <xref:System.ServiceModel.Dispatcher.IErrorHandler> и [расширение управления через обработка ошибок и отчеты](../../../docs/framework/wcf/samples/extending-control-over-error-handling-and-reporting.md)  
   
 ## <a name="servicehost-events"></a>События ServiceHost  
  Класс <xref:System.ServiceModel.ServiceHost> применяется для размещения служб и определяет несколько событий, которые могут потребоваться для обработки ошибок. Пример:  

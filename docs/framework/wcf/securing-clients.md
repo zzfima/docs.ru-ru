@@ -1,37 +1,37 @@
 ---
-title: "Обеспечение безопасности клиентов"
-ms.custom: 
+title: Обеспечение безопасности клиентов
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - clients [WCF], security considerations
 ms.assetid: 44c8578c-9a5b-4acd-8168-1c30a027c4c5
-caps.latest.revision: 
+caps.latest.revision: 22
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
 ms.workload:
 - dotnet
-ms.openlocfilehash: 611272f9d0369a89d401315e9b6379d2e8cd27c0
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 7d06df1a9c4ef5a7cb64f71d2f7afc77c41a0e6f
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="securing-clients"></a>Обеспечение безопасности клиентов
-В [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] требования безопасности для клиентов определяются службой. Это означает, что служба указывает используемый режим безопасности и определяет, должен ли клиент предоставить учетные данные. Таким образом, процесс обеспечения безопасности клиента прост: используйте метаданные, полученные от службы (если она опубликована), и создайте клиент. Метаданные указывают, как настроить клиент. Если служба требует, чтобы клиент предоставлял учетные данные, необходимо получить учетные данные, удовлетворяющие требованиям. В этом разделе подробно описан данный процесс. [!INCLUDE[crabout](../../../includes/crabout-md.md)]Создание службы безопасности, в разделе [Защита служб](../../../docs/framework/wcf/securing-services.md).  
+В [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] требования безопасности для клиентов определяются службой. Это означает, что служба указывает используемый режим безопасности и определяет, должен ли клиент предоставить учетные данные. Таким образом, процесс обеспечения безопасности клиента прост: используйте метаданные, полученные от службы (если она опубликована), и создайте клиент. Метаданные указывают, как настроить клиент. Если служба требует, чтобы клиент предоставлял учетные данные, необходимо получить учетные данные, удовлетворяющие требованиям. В этом разделе подробно описан данный процесс. Дополнительные сведения о создании службы безопасности см. в разделе [Защита служб](../../../docs/framework/wcf/securing-services.md).  
   
 ## <a name="the-service-specifies-security"></a>Служба задает безопасность  
  По умолчанию в привязках [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] включены функции безопасности. (Исключением является класс <xref:System.ServiceModel.BasicHttpBinding>.) Поэтому если служба была создана с помощью [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], с большой вероятность она будет реализовывать функции безопасности для обеспечения проверки подлинности, конфиденциальности и целостности. В таком случае метаданные, предоставляемые службой, будут указывать, что требуется установить безопасный коммуникационный канал. Если метаданные службы не содержат требований по безопасности, не существует способа применить к службе какую-либо схему безопасности, например, SSL через HTTP. Если, однако, служба требует, чтобы клиент предоставлял учетные данные, разработчик, установщик или администратор клиента должны представить фактические учетные данные, которые клиент будет использовать для проверки своей подлинности в службе.  
   
 ## <a name="obtaining-metadata"></a>Получение метаданных  
- При создании клиента первым шагом является получение метаданных от службы, с которой будет взаимодействовать клиент. Это можно сделать двумя способами. Во-первых, если служба публикует конечную точку обмена метаданными или делает доступными ее метаданных по протоколу HTTP или HTTPS, вы можете загрузить метаданные с помощью [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md), который генерирует оба файлы кода клиента, а также файл конфигурации. ([!INCLUDE[crabout](../../../includes/crabout-md.md)] см. с помощью средства [получение служб с помощью клиента WCF](../../../docs/framework/wcf/accessing-services-using-a-wcf-client.md).) Если служба не публикует конечную точку обмена метаданными (MEX) и не предоставляет доступ к метаданным по протоколу HTTP или HTTPS, необходимо обратиться к разработчику службы за документацией, содержащей описание требований к безопасности и метаданные.  
+ При создании клиента первым шагом является получение метаданных от службы, с которой будет взаимодействовать клиент. Это можно сделать двумя способами. Во-первых, если служба публикует конечную точку обмена метаданными или делает доступными ее метаданных по протоколу HTTP или HTTPS, вы можете загрузить метаданные с помощью [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md), который генерирует оба файлы кода клиента, а также файл конфигурации. (Дополнительные сведения об использовании средства см. в разделе [получение служб с помощью клиента WCF](../../../docs/framework/wcf/accessing-services-using-a-wcf-client.md).) Если служба не публикует конечную точку обмена метаданными (MEX) и не предоставляет доступ к метаданным по протоколу HTTP или HTTPS, необходимо обратиться к разработчику службы за документацией, содержащей описание требований к безопасности и метаданные.  
   
 > [!IMPORTANT]
 >  Рекомендуется получать метаданные из надежного источника, который не был злонамеренно искажен. Метаданные, полученные по протоколу HTTP, передаются открытым текстом и могут быть подделаны. Если в службе используются свойства <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetEnabled%2A> и <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetUrl%2A>, для загрузки данных по протоколу HTTPS используйте URL-адрес, предоставленный разработчиком службы.  
@@ -91,7 +91,7 @@ ms.lasthandoff: 01/19/2018
 #### <a name="setting-a-clientcredentials-value-in-code"></a>Параметр \<clientCredentials > значение в коде  
  Чтобы задать [ \<clientCredentials >](../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md) значение в коде, должны обращаться к <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A> свойство <xref:System.ServiceModel.ClientBase%601> класса. Это свойство возвращает объект <xref:System.ServiceModel.Description.ClientCredentials>, обеспечивающий доступ к различным типам учетных данных, как показано в приведенной ниже таблице.  
   
-|Свойство ClientCredential|Описание:|Примечания|  
+|Свойство ClientCredential|Описание|Примечания|  
 |-------------------------------|-----------------|-----------|  
 |<xref:System.ServiceModel.Description.ClientCredentials.ClientCertificate%2A>|Возвращает <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential>|Представляет сертификат X.509, предоставляемый клиентом для проверки своей подлинности в службе.|  
 |<xref:System.ServiceModel.Description.ClientCredentials.HttpDigest%2A>|Возвращает <xref:System.ServiceModel.Security.HttpDigestClientCredential>|Представляет учетные данные дайджест-проверки подлинности HTTP. Эти учетные данные представляют собой хэш имени пользователя и пароля.|  
@@ -147,7 +147,7 @@ ms.lasthandoff: 01/19/2018
 > [!NOTE]
 >  Некоторые из значений учетных данных клиента не могут задаваться с помощью файлов конфигурации приложения; это, например, значения имени пользователя и пароля или значения пользователя и пароля Windows. Такие значения учетных данных могут быть заданы только в коде.  
   
- [!INCLUDE[crabout](../../../includes/crabout-md.md)]учетные данные клиента, просмотреть [как: задание значений учетных данных клиента](../../../docs/framework/wcf/how-to-specify-client-credential-values.md).  
+ Дополнительные сведения о настройке учетных данных клиента см. в разделе [как: задание значений учетных данных клиента](../../../docs/framework/wcf/how-to-specify-client-credential-values.md).  
   
 > [!NOTE]
 >  Значение `ClientCredentialType` игнорируется, если для параметра `SecurityMode` задано значение `"TransportWithMessageCredential",` как показано в следующем примере конфигурации.  
@@ -171,7 +171,7 @@ ms.lasthandoff: 01/19/2018
  <xref:System.ServiceModel.Description.ClientCredentials>  
  <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetEnabled%2A>  
  <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetUrl%2A>  
- [\<bindings>](../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)  
+ [\<привязки >](../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)  
  [Редактор конфигурации (SvcConfigEditor.exe)](../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md)  
  [Защита служб](../../../docs/framework/wcf/securing-services.md)  
  [Обращение к службам с помощью клиента WCF](../../../docs/framework/wcf/accessing-services-using-a-wcf-client.md)  

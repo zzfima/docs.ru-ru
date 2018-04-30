@@ -1,37 +1,39 @@
 ---
-title: "Элемент &lt;peerAuthentication&gt;"
-ms.custom: 
+title: Элемент &lt;peerAuthentication&gt;
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 09a8a9ff-e395-42f6-8ceb-9d44bdc1cbe1
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a2b0195ec042a0ad342f199f0bf9c2fd3a19821f
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 9d8809378d8ad8bd5b62d6435919602e4ad0b042
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="ltpeerauthenticationgt-element"></a>Элемент &lt;peerAuthentication&gt;
 Задает параметры проверки подлинности для одноранговых клиентов.  
   
- [!INCLUDE[crabout](../../../../../includes/crabout-md.md)]Одноранговая сеть программирования, см. в разделе [-одноранговые сети](../../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md).  
+ Дополнительные сведения о программировании одноранговая сеть см. в разделе [-одноранговые сети](../../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md).  
   
- \<system.ServiceModel>  
+ \<система. ServiceModel >  
 \<поведения >  
-\<endpointBehaviors>  
+\<endpointBehaviors >  
 \<поведение >  
 \<clientCredentials >  
 \<Одноранговый >  
-\<PeerAuthentication >  
+\<peerAuthentication >  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -85,9 +87,9 @@ trustedStoreLocation="CurrentUser/LocalMachine"
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
-|[\<peer>](../../../../../docs/framework/configure-apps/file-schema/wcf/peer-of-clientcredentials-element.md)|Задает учетные данные, используемые для проверки подлинности клиента при подключении к одноранговой службе.|  
+|[\<Одноранговый >](../../../../../docs/framework/configure-apps/file-schema/wcf/peer-of-clientcredentials-element.md)|Задает учетные данные, используемые для проверки подлинности клиента при подключении к одноранговой службе.|  
   
 ## <a name="remarks"></a>Примечания  
  Элемент `<authentication>` соответствует классу <xref:System.ServiceModel.Security.X509PeerCertificateAuthentication>. Этот элемент задает модуль проверки, который вызывается во время проверки подлинности «от соседа к соседу» в сетке. Когда новый одноранговый узел пытается установить соединение с соседним узлом, он передает свои учетные данные в отвечающий одноранговый узел. Для проверки учетных данных удаленной стороны вызывается проверяющий элемент управления отвечающего узла. Как только в сетке устанавливается одноранговое соединение, оба одноранговых узла выполняют взаимную проверку подлинности. Это означает, что вызываются проверяющие элементы управления на обоих концах.  

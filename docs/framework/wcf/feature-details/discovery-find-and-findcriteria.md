@@ -1,27 +1,29 @@
 ---
-title: "Объекты обнаружения Find и FindCriteria"
-ms.custom: 
+title: Объекты обнаружения Find и FindCriteria
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 99016fa4-1778-495b-b4cc-0e22fbec42c6
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 470fb0788aa3407fff14d1e4df4a89180c5e079d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 17ca5e12390e33525f0223917e4c72556a2a2ec7
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="discovery-find-and-findcriteria"></a>Объекты обнаружения Find и FindCriteria
-Операция поиска объектов обнаружения инициируется клиентом для обнаружения одной или нескольких служб и является одним из основных действий, выполняемых при обнаружении. При операции поиска выполняется отправка сообщения зонда WS-Discovery по сети. Службы, которые соответствуют указанному критерию, отвечают сообщениями WS-Discovery ProbeMatch. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]сообщения обнаружения. в разделе [спецификации WS-Discovery](http://go.microsoft.com/fwlink/?LinkID=122347).  
+Операция поиска объектов обнаружения инициируется клиентом для обнаружения одной или нескольких служб и является одним из основных действий, выполняемых при обнаружении. При операции поиска выполняется отправка сообщения зонда WS-Discovery по сети. Службы, которые соответствуют указанному критерию, отвечают сообщениями WS-Discovery ProbeMatch. Дополнительные сведения о сообщениях обнаружения см. в разделе [спецификации WS-Discovery](http://go.microsoft.com/fwlink/?LinkID=122347).  
   
 ## <a name="discoveryclient"></a>DiscoveryClient  
  Класс <xref:System.ServiceModel.Discovery.DiscoveryClient> обеспечивает механизм выполнения операции поиска и упрощает выполнение операций клиентов обнаружений. Он содержит метод <xref:System.ServiceModel.Discovery.DiscoveryClient.Find%2A>, который выполняет операцию синхронного поиска с блокировкой, и метод <xref:System.ServiceModel.Discovery.DiscoveryClient.FindAsync%2A>, который инициирует асинхронную операцию поиска без блокировки. Оба метода используют параметр <xref:System.ServiceModel.Discovery.FindCriteria> и передают результаты пользователю с помощью объекта <xref:System.ServiceModel.Discovery.FindResponse>.  
@@ -39,7 +41,7 @@ ms.lasthandoff: 12/22/2017
   
     -   <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByExact?displayProperty=nameWithType> выполняет базовое сравнение строк с учетом регистра.  
   
-    -   <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByPrefix?displayProperty=nameWithType>выполняет сопоставление по сегментам, разделенных точкой «/». При поиске http://contoso/building1 было выполнено сопоставление со службой с областью http://contoso/building/floor1. Обратите внимание, что не было выполнено сопоставление с http://contoso/building100 из-за несоответствия двух последних сегментов.  
+    -   <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByPrefix?displayProperty=nameWithType> выполняет сопоставление по сегментам, разделенных точкой «/». Поиск http://contoso/building1 со службой с областью http://contoso/building/floor1. Обратите внимание, что он не соответствует http://contoso/building100 из-за двух последних сегментов не совпадают.  
   
     -   <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByLdap?displayProperty=nameWithType> сопоставляет области по сегментам с помощью URL-адреса LDAP.  
   

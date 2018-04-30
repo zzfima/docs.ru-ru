@@ -1,24 +1,26 @@
 ---
-title: "Выполнение примеров Windows Communication Foundation"
-ms.custom: 
+title: Выполнение примеров Windows Communication Foundation
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: db8a83da-95c1-4a21-a9d2-48caeb6398ea
-caps.latest.revision: "26"
+caps.latest.revision: 26
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 603a6dce17d527a3f14e408da19006509514df52
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 2aca4555277a1b365ddee1c672a6375edfde9f34
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="running-the-windows-communication-foundation-samples"></a>Выполнение примеров Windows Communication Foundation
 Примеры [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] могут выполняться на одном или нескольких компьютерах. После передачи примеры готовы к выполнению на одном компьютере. При выполнении на нескольких компьютерах необходимо изменить параметры файла конфигурации примера. В следующих процедурах объясняется, как выполнить пример на одном компьютере или на нескольких компьютерах. Обратите внимание, что шаги, выполняемые для служб, размещенных в службах IIS, и шаги для резидентных примеров, отличаются. Большинство примеров размещаются в службах IIS; чтобы определить, как размещается пример, см. сведения в файле Readme.  
@@ -30,7 +32,7 @@ ms.lasthandoff: 01/19/2018
   
 ### <a name="to-run-the-sample-on-the-same-machine"></a>Запуск образца на том же компьютере  
   
-1.  Если служба размещена в IIS, убедитесь в наличии доступа к службе с помощью браузера, введя следующий адрес: http://localhost/servicemodelsamples/service.svc. Должна отобразиться страница подтверждения. Если страница подтверждения не отображается, см. раздел [советы по устранению неполадок](http://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
+1.  Если служба размещена в IIS, убедитесь, что доступ к службе с помощью браузера, введя следующий адрес: http://localhost/servicemodelsamples/service.svc. Должна отобразиться страница подтверждения. Если страница подтверждения не отображается, см. раздел [советы по устранению неполадок](http://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
   
 2.  Если служба является резидентной, запустите программу Service.exe из папки \service\bin\ в языковой папке. Действия службы отображаются в окне консоли службы.  
   
@@ -64,7 +66,7 @@ ms.lasthandoff: 01/19/2018
   
     1.  Если не удается запустить службу из учетной записи домена, откройте файл конфигурации клиента и измените значение адреса определения конечной точки, чтобы оно соответствовало новому адресу службы. Замените любые ссылки на "localhost" в адресе полным именем домена.  
   
-    2.  Если служба выполняется в учетной записи домена, заново создайте конфигурацию клиента, выполнив Svcutil.exe относительно службы. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]см. под управлением Svcutil.exe, [сборка образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md). Используйте созданный файл вместо файла конфигурации в примере. В созданном файле конфигурации содержатся дополнительные данные идентификации (и содержатся все параметры, необходимые для подключения к конечной точке службы, даже если они являются параметрами по умолчанию). [!INCLUDE[crabout](../../../../includes/crabout-md.md)]сведения об удостоверении, в разделе [удостоверения службы и проверки подлинности](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md), и [ \<удостоверение >](../../../../docs/framework/configure-apps/file-schema/wcf/identity.md).  
+    2.  Если служба выполняется в учетной записи домена, заново создайте конфигурацию клиента, выполнив Svcutil.exe относительно службы. Дополнительные сведения о запуске Svcutil.exe см. в разделе [сборка образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md). Используйте созданный файл вместо файла конфигурации в примере. В созданном файле конфигурации содержатся дополнительные данные идентификации (и содержатся все параметры, необходимые для подключения к конечной точке службы, даже если они являются параметрами по умолчанию). Дополнительные сведения об удостоверениях см. в разделе [службы удостоверений и проверки подлинности](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md), и [ \<удостоверение >](../../../../docs/framework/configure-apps/file-schema/wcf/identity.md).  
   
 4.  На клиентском компьютере из командной строки запустите программу Client.exe.  
   
@@ -74,7 +76,7 @@ ms.lasthandoff: 01/19/2018
   
 2.  Служба размещается в службах IIS.  
   
-    1.  Активируйте службу с помощью браузера: введите в адресной строке http://localhost/servicemodelsamples/service.svc.  
+    1.  Активировать службу, с помощью браузера путем ввода адреса http://localhost/servicemodelsamples/service.svc.  
   
     2.  В решении, выберите **отладки** меню и **присоединиться к процессу** элемента меню.  
   

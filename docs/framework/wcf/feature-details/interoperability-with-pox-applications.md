@@ -1,33 +1,35 @@
 ---
-title: "Взаимодействие с приложениями POX"
-ms.custom: 
+title: Взаимодействие с приложениями POX
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 449276b8-4633-46f0-85c9-81f01d127636
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 8cb7e209397e593ae1fd81c2bc2552e54a32adf0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 42f6bbb1a5605bd0a604f5cfe31ce5ea48d9bb10
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="interoperability-with-pox-applications"></a>Взаимодействие с приложениями POX
 «Plain Old XML» (POX) приложениям взаимодействовать, обмениваясь необработанные сообщения HTTP, которые содержат только XML-приложения данные, не заключенные в конверт SOAP. [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] может предоставлять как службы, так и клиенты, использующие сообщения POX. В случае службы [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] может использоваться для реализации служб, предоставляющих конечные точки таким клиентам, как веб-браузеры и языки сценариев, которые передают и принимают сообщения POX. В случае клиента модель программирования [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] может использоваться для реализации клиентов, взаимодействующих со службами, основанными на POX.  
   
 > [!NOTE]
->  Данный документ первоначально был написан для [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 3.0.  В [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 3.5 имеется встроенная поддержка приложений POX. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]в разделе [модель программирования WCF Web HTTP](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)  
+>  Данный документ первоначально был написан для [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 3.0.  В [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 3.5 имеется встроенная поддержка приложений POX. Дополнительные сведения см. в разделе [модель программирования WCF Web HTTP](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)  
   
 ## <a name="pox-programming-with-wcf"></a>Программирование POX с использованием WCF  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]службы, которые обмениваются данными по протоколу HTTP с помощью сообщений POX, используйте [ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md).  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] службы, которые обмениваются данными по протоколу HTTP с помощью сообщений POX, используйте [ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md).  
   
 ```xml  
 <customBinding>  
@@ -67,7 +69,7 @@ private static Binding CreatePoxBinding()
   
 -   <xref:System.ServiceModel.Channels.HttpResponseMessageProperty>, содержащий информацию об ответе HTTP, такую как код состояния и описание состояния HTTP, а также все заголовки ответа HTTP.  
   
- В следующем примере кода показано, как создать сообщения запроса HTTP GET, направляемое по адресу http://localhost:8100/customers.  
+ В следующем примере кода показано, как создать сообщения запроса HTTP GET, адресованного http://localhost:8100/customers.  
   
 ```  
 Message request = Message.CreateMessage( MessageVersion.None, String.Empty );  

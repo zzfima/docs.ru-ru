@@ -21,14 +21,14 @@ ms.author: bruceper
 manager: mbaldwin
 ms.workload:
 - dotnet
-ms.openlocfilehash: c754a4ec57751b2ca5a809c771b2fb5235ec0510
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 2828b6b9df313bab5a904712ad4e97cc7062f387
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-secure-a-service-with-windows-credentials"></a>Практическое руководство. Защита службы с использованием учетных данных Windows
-В этом разделе показано, как включить режим безопасности транспорта на [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] службы, который находится в домене Windows и вызывается клиентами, в том же домене. [!INCLUDE[crabout](../../../includes/crabout-md.md)] Этот сценарий в разделе [безопасность транспорта с проверкой подлинности Windows](../../../docs/framework/wcf/feature-details/transport-security-with-windows-authentication.md). Пример приложения см. в разделе [WSHttpBinding](../../../docs/framework/wcf/samples/wshttpbinding.md) образца.  
+В этом разделе показано, как включить режим безопасности транспорта на [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] службы, который находится в домене Windows и вызывается клиентами, в том же домене. Дополнительные сведения об этом сценарии см. в разделе [безопасность транспорта с проверкой подлинности Windows](../../../docs/framework/wcf/feature-details/transport-security-with-windows-authentication.md). Пример приложения см. в разделе [WSHttpBinding](../../../docs/framework/wcf/samples/wshttpbinding.md) образца.  
   
  Начинать изучение этого раздела рекомендуется только после определения существующего интерфейса контракта и его реализации. Также можно изменять существующие службу и клиент.  
   
@@ -57,7 +57,7 @@ ms.lasthandoff: 04/28/2018
      [!code-vb[c_SecureWindowsService#1](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securewindowsservice/vb/secureservice.vb#1)]  
   
 ### <a name="using-the-binding-in-a-service"></a>Использование привязки в службе  
- Это вторая процедура, в которой показано, как использовать привязку в резидентной службе. [!INCLUDE[crabout](../../../includes/crabout-md.md)] Размещение служб см. в разделе [размещение служб](../../../docs/framework/wcf/hosting-services.md).  
+ Это вторая процедура, в которой показано, как использовать привязку в резидентной службе. Дополнительные сведения о размещении служб в разделе [размещение служб](../../../docs/framework/wcf/hosting-services.md).  
   
 ##### <a name="to-use-a-binding-in-a-service"></a>Использование привязки в службе  
   

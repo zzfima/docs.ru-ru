@@ -18,11 +18,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 2ad8a3a79967c42b8e8afdd9b9d796a7a1dfdd79
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 23dbf9808976496686dfe9d595487110da41730b
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="configuring-tracing"></a>Настройка трассировки
 В этом разделе описывается, как включить трассировку, настроить создание трассировки источниками трассировки и задать уровни трассировки, задать распространение и трассировку действий для поддержки сквозной корреляции трассировки, а также настроить доступ прослушивателей трассировки к трассировкам.  
@@ -146,7 +146,7 @@ ms.lasthandoff: 04/28/2018
 </system.diagnostics>  
 ```  
   
- [!INCLUDE[crabout](../../../../../includes/crabout-md.md)] Создание определяемых пользователем источники трассировки см. в разделе [расширение трассировки](../../../../../docs/framework/wcf/samples/extending-tracing.md).  
+ Дополнительные сведения о создании источников трассировки, определенное пользователем. в разделе [расширение трассировки](../../../../../docs/framework/wcf/samples/extending-tracing.md).  
   
 ## <a name="configuring-trace-listeners-to-consume-traces"></a>Настройка потребления трассировки прослушивателями трассировки  
  Во время выполнения [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] передает данные трассировки прослушивателям, которые их обрабатывают. [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] предоставляет несколько стандартных прослушивателей для <xref:System.Diagnostics>, отличающихся друг от друга форматом выводимых данных. Можно добавлять пользовательские типы прослушивателей.  
@@ -187,7 +187,7 @@ ms.lasthandoff: 04/28/2018
   
  Атрибут `propagateActivity` указывает, должно ли действие распространяться на другие конечные точки, участвующие в обмене сообщениями. Если присвоить ему значение `true`, можно с помощью файлов трассировки, созданных любыми двумя конечными точками, проследить прохождение набора трассировок от одной конечной точки до набора трассировок на другой конечной точке.  
   
- [!INCLUDE[crabout](../../../../../includes/crabout-md.md)] Трассировка действий и распространение, см. [распространения](../../../../../docs/framework/wcf/diagnostics/tracing/propagation.md).  
+ Дополнительные сведения о трассировка и распространение действий см. в разделе [распространения](../../../../../docs/framework/wcf/diagnostics/tracing/propagation.md).  
   
  Оба `propagateActivity` и `ActivityTracing` логические значения применяются к источнику трассировки System.ServiceModel. `ActivityTracing` Значение также применяется к любому источнику трассировки, включая [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] или определенные пользователем.  
   

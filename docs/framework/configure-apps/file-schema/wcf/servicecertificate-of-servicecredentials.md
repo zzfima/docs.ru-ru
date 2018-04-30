@@ -1,24 +1,26 @@
 ---
-title: "&lt;serviceCertificate&gt; для &lt;serviceCredentials&gt;"
-ms.custom: 
+title: '&lt;serviceCertificate&gt; для &lt;serviceCredentials&gt;'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 597ae6d5-4938-4950-9f5e-b2280e816182
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e5b6baca250e4fadc2a66bb0fe83b076522f82ee
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 16c5c065e805cb672f85dd9ff28f5b5d82d1ffba
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="ltservicecertificategt-of-ltservicecredentialsgt"></a>&lt;serviceCertificate&gt; для &lt;serviceCredentials&gt;
 Задает сертификат X.509, который будет использоваться для проверки подлинности службы при подключении к клиентам с использованием режима безопасности сообщений.  
@@ -57,14 +59,14 @@ x509FindType="FindByThumbprint/FindBySubjectName/FindBySubjectDistinguishedName/
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
 |[\<serviceCredentials >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md)|Задает учетные данные, используемые при проверке подлинности службы, а также параметры, относящиеся к проверке учетных данных клиента.|  
   
 ## <a name="remarks"></a>Примечания  
  Этот элемент используется для задания сертификата X.509, который будет использоваться для проверки подлинности службы при подключении к клиентам с использованием режима безопасности сообщений. Если используется сертификат, который будет периодически обновляться, то его отпечаток изменится. В этом случае следует использовать имя субъекта в виде `x509FindType`, поскольку сертификат может быть выдан повторно с тем же именем субъекта.  
   
- [!INCLUDE[crabout](../../../../../includes/crabout-md.md)]с помощью элемента, в разделе [как: задание значений учетных данных клиента](../../../../../docs/framework/wcf/how-to-specify-client-credential-values.md).  
+ Дополнительные сведения об использовании элемента см. в разделе [как: задание значений учетных данных клиента](../../../../../docs/framework/wcf/how-to-specify-client-credential-values.md).  
   
 ## <a name="see-also"></a>См. также  
  <xref:System.ServiceModel.Configuration.X509RecipientCertificateServiceElement>  

@@ -1,23 +1,24 @@
 ---
-title: "Безопасность"
-ms.custom: 
+title: Безопасность
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 737ec121-bfc5-4b75-a504-2d53c2c8af39
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 461bc36fd85a158e67c29c3f4ad001997218c824
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: f4a2204e091be1d1246041a2e961e9fd2b156780
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="security"></a>Безопасность
 Хранилище экземпляров рабочих процессов SQL использует следующие роли безопасности базы данных для обеспечения безопасного доступа к сведениям о состоянии экземпляров в базе данных сохраняемости.  
@@ -28,7 +29,7 @@ ms.lasthandoff: 12/22/2017
   
 -   **System.Activities.DurableInstancing.WorkflowActivationUsers**. Эта роль имеет права на выполнение хранимых процедур, участвующих в процессе активации экземпляра. Дополнительные сведения об активации экземпляра см. в разделе [активации экземпляра](../../../docs/framework/windows-workflow-foundation/instance-activation.md). Учетная запись пользователя, в которой выполняется универсальное ведущее приложение (например, служба управления рабочего процесса для [!INCLUDE[dublin](../../../includes/dublin-md.md)]), должна быть добавлена к этой роли базы данных.  
   
- [!INCLUDE[crabout](../../../includes/crabout-md.md)]безопасности для хранилищ сохраняемости в фабрике приложений Windows Server, в разделе [конфигурацию безопасности для хранилищ сохраняемости в фабрике приложений](http://go.microsoft.com/fwlink/?LinkId=201208)  
+ Дополнительные сведения о безопасности для хранилищ сохраняемости в фабрике приложений Windows Server см. в разделе [конфигурацию безопасности для хранилищ сохраняемости в фабрике приложений](http://go.microsoft.com/fwlink/?LinkId=201208)  
   
 > [!CAUTION]
 >  Клиент, имеющий доступ к данным собственного экземпляра в хранилище экземпляров, также получает доступ и ко всем другим экземплярам в этом хранилище экземпляров. Хранилище экземпляров не поддерживает указание прав доступа на уровне экземпляра. Для обеспечения доступа к различным хранилищам экземпляров необходимо создать отдельные хранилища экземпляров и настроить доступ к ним различных групп и пользователей.

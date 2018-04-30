@@ -16,11 +16,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: bcb64a4e03cae5e6186754dacb87e17a22d13001
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 2516a80f8d92b4e64372be140d2ee3d5db4c7b54
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="architecture-of-syndication"></a>Архитектура синдикации
 API синдикации предназначен для обеспечения независимой от формата модели программирования, которая позволяет передавать сводное содержимое по каналам связи в различных форматах. Абстрактная модель данных состоит из следующих классов:  
@@ -43,7 +43,7 @@ API синдикации предназначен для обеспечения 
   
  [!code-csharp[S_UE_SyndicationBoth#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_ue_syndicationboth/cs/service.cs#0)]  
   
- Поддержка синдикации осуществляется на базе модели программирования [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] REST, которая определяет привязку <xref:System.ServiceModel.WebHttpBinding>, используемую совместно с поведением <xref:System.ServiceModel.Description.WebHttpBehavior>, которая предоставляет доступ к каналам в виде служб. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] модели программирования REST см. [WCF Web HTTP программирования Общие сведения о модели](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md).  
+ Поддержка синдикации осуществляется на базе модели программирования [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] REST, которая определяет привязку <xref:System.ServiceModel.WebHttpBinding>, используемую совместно с поведением <xref:System.ServiceModel.Description.WebHttpBehavior>, которая предоставляет доступ к каналам в виде служб. Дополнительные сведения о [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] модели программирования REST см. [WCF Web HTTP программирования Общие сведения о модели](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md).  
   
 > [!NOTE]
 >  Спецификация Atom 1.0 позволяет указывать точность выборки в долях секунды во всех структурах даты. При сериализации и десериализации в реализации [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] доли секунды игнорируются.  

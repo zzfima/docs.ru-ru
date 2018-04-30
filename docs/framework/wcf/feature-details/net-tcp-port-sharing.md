@@ -19,11 +19,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: c7abf272cb1d069b0fbdcd561256580de5a82c29
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: d9427d091855a4f658cc971ceca1116cfd74e2ab
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="nettcp-port-sharing"></a>Совместное использование портов Net.TCP
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] предоставляет новый сетевой протокол на базе TCP (net.tcp://) для высокопроизводительного обмена данными. Кроме того, в [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] введен новый системный компонент: служба совместного использования портов Net.TCP, позволяющая разделять порты net.tcp между несколькими пользовательскими процессами.  
@@ -56,7 +56,7 @@ ms.lasthandoff: 04/28/2018
 ## <a name="using-nettcp-port-sharing-in-an-application"></a>Включение совместного использования портов Net.TCP в приложении  
  Самый простой способ совместно использовать порты net.tcp:// в приложении [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] - предоставить службу с помощью привязки <xref:System.ServiceModel.NetTcpBinding> и затем включить службу совместного использования портов Net.TCP с помощью свойства <xref:System.ServiceModel.NetTcpBinding.PortSharingEnabled%2A>.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] как это сделать, см. [как: Настройка службы WCF на совместное использование портов](../../../../docs/framework/wcf/feature-details/how-to-configure-a-wcf-service-to-use-port-sharing.md).  
+ Дополнительные сведения о том, как это сделать см. в разделе [как: Настройка службы WCF на совместное использование портов](../../../../docs/framework/wcf/feature-details/how-to-configure-a-wcf-service-to-use-port-sharing.md).  
   
 ## <a name="security-implications-of-port-sharing"></a>Проблемы безопасности, связанные с совместным использованием портов  
  Хотя служба совместного использования портов Net.TCP предусматривает уровень обработки между приложениями и сетью, приложения, совместно использующие порты, все равно необходимо защищать так, как если бы они непосредственно прослушивали сеть. В частности, в приложениях, совместно использующих порты, необходимо оценивать привилегии процессов, в которых они выполняются. Имеет смысл рассмотреть возможность выполнения приложения от имени встроенной учетной записи Network Service, которая выполняется с минимально необходимым для обмена данными по сети набором привилегий.  

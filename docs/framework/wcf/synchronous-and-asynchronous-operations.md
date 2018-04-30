@@ -22,11 +22,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 123186dd5f0d63693c04c0857709292ce122f918
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: c626699dc5291f4d4f6d432e89708661b233f16d
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="synchronous-and-asynchronous-operations"></a>Синхронные и асинхронные операции
 В этом разделе описывается реализация и вызов асинхронных операций службы.  
@@ -51,7 +51,7 @@ ms.lasthandoff: 04/26/2018
   
 -   Асинхронный подход следует использовать в клиенте или вызывающем приложении в следующих случаях.  
   
--   Если операции вызываются из приложения промежуточного уровня. ([!INCLUDE[crabout](../../../includes/crabout-md.md)] таких сценариев, в разделе [клиентские приложения среднего уровня](../../../docs/framework/wcf/feature-details/middle-tier-client-applications.md).)  
+-   Если операции вызываются из приложения промежуточного уровня. (Дополнительные сведения о таких сценариев см. в разделе [клиентские приложения среднего уровня](../../../docs/framework/wcf/feature-details/middle-tier-client-applications.md).)  
   
 -   Если операции вызываются на страницах ASP.NET, следует использовать асинхронные страницы.  
   

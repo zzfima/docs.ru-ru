@@ -1,33 +1,33 @@
 ---
-title: "Размещение в службе активации процессов Windows"
-ms.custom: 
+title: Размещение в службе активации процессов Windows
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - hosting services [WCF], WAS
 ms.assetid: d2b9d226-15b7-41fc-8c9a-cb651ac20ecd
-caps.latest.revision: 
+caps.latest.revision: 16
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 40122670c84f87590a31b79f39695e9626ea9883
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a31d66cd4b4430ec838b34fcd77d712698f9e1dc
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="hosting-in-windows-process-activation-service"></a>Размещение в службе активации процессов Windows
 Служба активации Windows (WAS) управляет активацией и временем существования рабочих процессов, содержащих приложения, которые размещают службы [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. Модель процесса WAS обобщает модель процесса [!INCLUDE[iis601](../../../../includes/iis601-md.md)] для HTTP-сервера путем устранения зависимости от HTTP. Это позволяет службам [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] использовать и протокол HTTP, и отличные от HTTP протоколы, такие как Net.TCP, в среде размещения, которая поддерживает активацию на основе сообщений и предоставляет возможность размещать большое количество приложений на данном компьютере.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Построение [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] службы, которая выполняется в WAS, в среде размещения. в разделе [как: размещение службы WCF в WAS](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md).  
+ Дополнительные сведения о построении [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] службы, которая выполняется в WAS, в среде размещения. в разделе [как: размещение службы WCF в WAS](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md).  
   
  Модель процессов WAS предоставляет несколько возможностей, благодаря которым размещение приложений можно осуществлять более надежным и управляемым способом и при этом более эффективно использовать ресурсы.  
   
@@ -39,7 +39,7 @@ ms.lasthandoff: 12/22/2017
   
 -   Возможность использования приложениями модели процессов IIS без развертывания полной установки IIS.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Компоненты WAS. в разделе [бета-версия IIS 7.0: IIS 7.0 веб-администрирования](../../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md).  
+ Дополнительные сведения о функциях WAS см. в разделе [бета-версия IIS 7.0: IIS 7.0 веб-администрирования](../../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md).  
   
  [Windows Server AppFabric](http://go.microsoft.com/fwlink/?LinkId=196496) работает с [!INCLUDE[iisver](../../../../includes/iisver-md.md)] и активации процессов Windows Service (WAS) для предоставления полнофункциональных приложений размещения среды для служб NET4 WCF и WF. К ее преимуществам относятся управление жизненным циклом, перезапуск процессов, совместное размещение, быстрая защита от сбоев, обработка потерянных процессов, активация по запросу и наблюдение за работоспособностью. Дополнительные сведения см. в разделе [функции размещения AppFabric](http://go.microsoft.com/fwlink/?LinkId=196494) и [размещения AppFabric](http://go.microsoft.com/fwlink/?LinkId=196495).  
   

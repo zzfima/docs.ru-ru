@@ -18,11 +18,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 739046945a019541f279b15d2d1b945f526861fb
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 075f8d89caccd7723f3a1dc54fde695a8fb624ab
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="data-contract-schema-reference"></a>Справочник по схеме контрактов данных
 В данном разделе описывается подмножество схемы XML (XSD), используемое <xref:System.Runtime.Serialization.DataContractSerializer> для описания типов среды CLR, применяемых для сериализации XML.  
@@ -245,7 +245,7 @@ ms.lasthandoff: 04/28/2018
   
 -   Ограничения простых типов `xs:string` , не имеющие никаких других аспектов ограничения, кроме `xs:enumeration` , сопоставляются контрактам данных перечисления.  
   
--   Все другие ограничения простых типов сопоставляются типам, которые они ограничивают. Например, ограничение `xs:int` сопоставляется с целым числом так же, как и `xs:int` . [!INCLUDE[crabout](../../../../includes/crabout-md.md)] сопоставлении типов-примитивов см. в разделе «Сопоставление типов-примитивов».  
+-   Все другие ограничения простых типов сопоставляются типам, которые они ограничивают. Например, ограничение `xs:int` сопоставляется с целым числом так же, как и `xs:int` . Дополнительные сведения о сопоставлении тип-примитив. в разделе сопоставление тип примитив.  
   
 ### <a name="xsrestriction-attributes"></a>\<xs: Restriction >: атрибуты  
   
@@ -549,7 +549,7 @@ public class Employee : Person
 </xs:complexType>  
 ```  
   
- Необязательный атрибут `ser:FactoryType` , объявленный в схеме сериализации контракта данных ссылается на класс фабрики, который может выполнить десериализацию типа. Класс фабрики может входить в коллекцию известных типов используемого экземпляра `DataContractSerializer` . [!INCLUDE[crabout](../../../../includes/crabout-md.md)] об известных типах см. в разделе [Data Contract Known Types](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md).  
+ Необязательный атрибут `ser:FactoryType` , объявленный в схеме сериализации контракта данных ссылается на класс фабрики, который может выполнить десериализацию типа. Класс фабрики может входить в коллекцию известных типов используемого экземпляра `DataContractSerializer` . Дополнительные сведения об известных типах см. в разделе [известные типы контрактов данных](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md).  
   
 ## <a name="datacontract-serialization-schema"></a>DataContract - схема сериализации  
  Ряд схем, импортируемых `DataContractSerializer` , использует типы, элементы и атрибуты специального пространства имен сериализации контракта данных.  

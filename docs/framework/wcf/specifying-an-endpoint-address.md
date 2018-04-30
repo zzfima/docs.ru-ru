@@ -21,11 +21,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 09a3bf2d552b49e36375210e3036e344a9702405
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 99fdfad6c06e74a92d7fffb7c7a5e14284757e12
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="specifying-an-endpoint-address"></a>Задание адреса конечной точки
 Вся связь со службой [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] осуществляется через ее конечные точки. Каждая конечная точка службы <xref:System.ServiceModel.Description.ServiceEndpoint> содержит адрес <xref:System.ServiceModel.Description.ServiceEndpoint.Address%2A>, привязку <xref:System.ServiceModel.Description.ServiceEndpoint.Binding%2A> и контракт <xref:System.ServiceModel.Description.ServiceEndpoint.Contract%2A>. В контракте задается, какие операции доступны. Привязка определяет, как осуществлять взаимодействие со службой, а адрес показывает, где можно найти службу. Каждая конечная точка должна иметь уникальный адрес. Адрес конечной точки представляется классом <xref:System.ServiceModel.EndpointAddress>, содержащим универсальный код ресурса (URI), который, в свою очередь, обозначает адрес службы, <xref:System.ServiceModel.EndpointAddress.Identity%2A>, представляющий удостоверение безопасности службы и коллекцию необязательных заголовков <xref:System.ServiceModel.EndpointAddress.Headers%2A>. Необязательные заголовки содержат более подробную информацию для идентификации конечной точки и взаимодействия с ней. Например, в заголовках может содержаться информация о том, как следует обрабатывать входящее сообщение, куда конечная точка должна отправить ответное сообщение или какой экземпляр службы необходимо использовать для обработки входящего сообщения от конкретного пользователя, если доступно несколько экземпляров.  
@@ -93,7 +93,7 @@ ms.lasthandoff: 04/28/2018
 ## <a name="using-default-endpoints"></a>Использование конечных точек по умолчанию  
  Если конечные точки не заданы в коде или в конфигурации, то среда выполнения предоставляет конечные точки по умолчанию, добавляя одну конечную точку по умолчанию для каждого базового адреса в каждом контракте службы, реализованном в службе. Базовый адрес можно указывать в коде или в конфигурации, а конечные точки по умолчанию добавляются, когда вызывается метод <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A> в объекте <xref:System.ServiceModel.ServiceHost>.  
   
- Если конечные точки предоставляются явно, то конечные точки по умолчанию можно добавить, вызвав метод <xref:System.ServiceModel.ServiceHostBase.AddDefaultEndpoints%2A> класса <xref:System.ServiceModel.ServiceHost> перед вызовом <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A>. [!INCLUDE[crabout](../../../includes/crabout-md.md)] о конечных точках по умолчанию, привязках и режимах работы см. в разделах [Simplified Configuration](../../../docs/framework/wcf/simplified-configuration.md) и [Simplified Configuration for WCF Services](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
+ Если конечные точки предоставляются явно, то конечные точки по умолчанию можно добавить, вызвав метод <xref:System.ServiceModel.ServiceHostBase.AddDefaultEndpoints%2A> класса <xref:System.ServiceModel.ServiceHost> перед вызовом <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A>. Дополнительные сведения о конечных точек по умолчанию, привязок и поведений см. в разделе [упрощенной конфигурации](../../../docs/framework/wcf/simplified-configuration.md) и [упрощенной конфигурации для служб WCF](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
   
 ## <a name="see-also"></a>См. также  
  <xref:System.ServiceModel.EndpointAddress>  

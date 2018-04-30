@@ -1,28 +1,30 @@
 ---
-title: "Практическое руководство. Использование поставщика членства ASP.NET"
-ms.custom: 
+title: Практическое руководство. Использование поставщика членства ASP.NET
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - WCF and ASP.NET
 - WCF, authorization
 - WCF, security
 ms.assetid: 322c56e0-938f-4f19-a981-7b6530045b90
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6c5042e73945c54da2b1ee71fc5ea61727dc73c8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 19fb83d21c77f3206c314a2e6c40562fcb75f151
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-use-the-aspnet-membership-provider"></a>Практическое руководство. Использование поставщика членства ASP.NET
 Поставщик членства в среде [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] - это функция, которая позволяет разработчикам [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] создавать веб-узлы с возможностью создания пользователями уникальных комбинаций имени пользователя и пароля. Эта функция позволяет любому пользователю создавать на узле учетную запись и при входе получать монопольный доступ к узлу и его службам. В этом заключается отличие от безопасности Windows, по условиям которой пользователи обязаны создавать ученые записи в домене Windows. Вместо этого любой пользователь, который предоставляет свои учетные данные (сочетание имени пользователя и пароля), может использовать узел и его службы.  
@@ -71,7 +73,7 @@ ms.lasthandoff: 12/22/2017
   
 1.  В файле конфигурации в разделе [ \<system.serviceModel >](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) элемента, добавьте [ \<привязки >](../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md) элемента.  
   
-2.  Добавить [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) для раздела привязок. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Создание [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] элемент привязки в разделе [как: задание привязки службы в конфигурации](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md).  
+2.  Добавить [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) для раздела привязок. Дополнительные сведения о создании [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] элемент привязки в разделе [как: задание привязки службы в конфигурации](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md).  
   
 3.  Задайте атрибуту `mode` элемента `<security>` значение `Message`.  
   
