@@ -1,34 +1,35 @@
 ---
-title: "Безопасность"
-ms.custom: 
+title: Безопасность
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 737ec121-bfc5-4b75-a504-2d53c2c8af39
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 461bc36fd85a158e67c29c3f4ad001997218c824
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: f4a2204e091be1d1246041a2e961e9fd2b156780
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
-# <a name="security"></a><span data-ttu-id="b3227-102">Безопасность</span><span class="sxs-lookup"><span data-stu-id="b3227-102">Security</span></span>
-<span data-ttu-id="b3227-103">Хранилище экземпляров рабочих процессов SQL использует следующие роли безопасности базы данных для обеспечения безопасного доступа к сведениям о состоянии экземпляров в базе данных сохраняемости.</span><span class="sxs-lookup"><span data-stu-id="b3227-103">The SQL Workflow Instance Store uses the following database security roles to secure access to instance state information in the persistence database.</span></span>  
+# <a name="security"></a><span data-ttu-id="1aa3f-102">Безопасность</span><span class="sxs-lookup"><span data-stu-id="1aa3f-102">Security</span></span>
+<span data-ttu-id="1aa3f-103">Хранилище экземпляров рабочих процессов SQL использует следующие роли безопасности базы данных для обеспечения безопасного доступа к сведениям о состоянии экземпляров в базе данных сохраняемости.</span><span class="sxs-lookup"><span data-stu-id="1aa3f-103">The SQL Workflow Instance Store uses the following database security roles to secure access to instance state information in the persistence database.</span></span>  
   
--   <span data-ttu-id="b3227-104">**System.Activities.DurableInstancing.InstanceStoreUsers**.</span><span class="sxs-lookup"><span data-stu-id="b3227-104">**System.Activities.DurableInstancing.InstanceStoreUsers**.</span></span> <span data-ttu-id="b3227-105">Эта роль имеет доступ на чтение и запись для всех открытых представлений и права на выполнение хранимых процедур, участвующих в создании, загрузке и сохранении экземпляров.</span><span class="sxs-lookup"><span data-stu-id="b3227-105">This role has read and write access to public views and execution rights to stored procedures that are involved in creating, loading and saving instances.</span></span>  
+-   <span data-ttu-id="1aa3f-104">**System.Activities.DurableInstancing.InstanceStoreUsers**.</span><span class="sxs-lookup"><span data-stu-id="1aa3f-104">**System.Activities.DurableInstancing.InstanceStoreUsers**.</span></span> <span data-ttu-id="1aa3f-105">Эта роль имеет доступ на чтение и запись для всех открытых представлений и права на выполнение хранимых процедур, участвующих в создании, загрузке и сохранении экземпляров.</span><span class="sxs-lookup"><span data-stu-id="1aa3f-105">This role has read and write access to public views and execution rights to stored procedures that are involved in creating, loading and saving instances.</span></span>  
   
--   <span data-ttu-id="b3227-106">**System.Activities.DurableInstancing.InstanceStoreObservers**.</span><span class="sxs-lookup"><span data-stu-id="b3227-106">**System.Activities.DurableInstancing.InstanceStoreObservers**.</span></span> <span data-ttu-id="b3227-107">Эта роль имеет доступ только для чтения открытых представлений.</span><span class="sxs-lookup"><span data-stu-id="b3227-107">This role has read-only access to public views.</span></span>  
+-   <span data-ttu-id="1aa3f-106">**System.Activities.DurableInstancing.InstanceStoreObservers**.</span><span class="sxs-lookup"><span data-stu-id="1aa3f-106">**System.Activities.DurableInstancing.InstanceStoreObservers**.</span></span> <span data-ttu-id="1aa3f-107">Эта роль имеет доступ только для чтения открытых представлений.</span><span class="sxs-lookup"><span data-stu-id="1aa3f-107">This role has read-only access to public views.</span></span>  
   
--   <span data-ttu-id="b3227-108">**System.Activities.DurableInstancing.WorkflowActivationUsers**.</span><span class="sxs-lookup"><span data-stu-id="b3227-108">**System.Activities.DurableInstancing.WorkflowActivationUsers**.</span></span> <span data-ttu-id="b3227-109">Эта роль имеет права на выполнение хранимых процедур, участвующих в процессе активации экземпляра.</span><span class="sxs-lookup"><span data-stu-id="b3227-109">This role has execution rights to stored procedures that are involved in the instance activation process.</span></span> <span data-ttu-id="b3227-110">Дополнительные сведения об активации экземпляра см. в разделе [активации экземпляра](../../../docs/framework/windows-workflow-foundation/instance-activation.md).</span><span class="sxs-lookup"><span data-stu-id="b3227-110">For more information about instance activation, see [Instance Activation](../../../docs/framework/windows-workflow-foundation/instance-activation.md).</span></span> <span data-ttu-id="b3227-111">Учетная запись пользователя, в которой выполняется универсальное ведущее приложение (например, служба управления рабочего процесса для [!INCLUDE[dublin](../../../includes/dublin-md.md)]), должна быть добавлена к этой роли базы данных.</span><span class="sxs-lookup"><span data-stu-id="b3227-111">The user account under which a generic host (such as the Workflow Management Service of [!INCLUDE[dublin](../../../includes/dublin-md.md)]) runs should be added to this database role.</span></span>  
+-   <span data-ttu-id="1aa3f-108">**System.Activities.DurableInstancing.WorkflowActivationUsers**.</span><span class="sxs-lookup"><span data-stu-id="1aa3f-108">**System.Activities.DurableInstancing.WorkflowActivationUsers**.</span></span> <span data-ttu-id="1aa3f-109">Эта роль имеет права на выполнение хранимых процедур, участвующих в процессе активации экземпляра.</span><span class="sxs-lookup"><span data-stu-id="1aa3f-109">This role has execution rights to stored procedures that are involved in the instance activation process.</span></span> <span data-ttu-id="1aa3f-110">Дополнительные сведения об активации экземпляра см. в разделе [активации экземпляра](../../../docs/framework/windows-workflow-foundation/instance-activation.md).</span><span class="sxs-lookup"><span data-stu-id="1aa3f-110">For more information about instance activation, see [Instance Activation](../../../docs/framework/windows-workflow-foundation/instance-activation.md).</span></span> <span data-ttu-id="1aa3f-111">Учетная запись пользователя, в которой выполняется универсальное ведущее приложение (например, служба управления рабочего процесса для [!INCLUDE[dublin](../../../includes/dublin-md.md)]), должна быть добавлена к этой роли базы данных.</span><span class="sxs-lookup"><span data-stu-id="1aa3f-111">The user account under which a generic host (such as the Workflow Management Service of [!INCLUDE[dublin](../../../includes/dublin-md.md)]) runs should be added to this database role.</span></span>  
   
- [!INCLUDE[crabout](../../../includes/crabout-md.md)]<span data-ttu-id="b3227-112">безопасности для хранилищ сохраняемости в фабрике приложений Windows Server, в разделе [конфигурацию безопасности для хранилищ сохраняемости в фабрике приложений](http://go.microsoft.com/fwlink/?LinkId=201208)</span><span class="sxs-lookup"><span data-stu-id="b3227-112"> security for persistence stores with Windows Server App Fabric, see [Security Configuration for Persistence Stores in App Fabric](http://go.microsoft.com/fwlink/?LinkId=201208)</span></span>  
+ <span data-ttu-id="1aa3f-112">Дополнительные сведения о безопасности для хранилищ сохраняемости в фабрике приложений Windows Server см. в разделе [конфигурацию безопасности для хранилищ сохраняемости в фабрике приложений](http://go.microsoft.com/fwlink/?LinkId=201208)</span><span class="sxs-lookup"><span data-stu-id="1aa3f-112">For more information about security for persistence stores with Windows Server App Fabric, see [Security Configuration for Persistence Stores in App Fabric](http://go.microsoft.com/fwlink/?LinkId=201208)</span></span>  
   
 > [!CAUTION]
->  <span data-ttu-id="b3227-113">Клиент, имеющий доступ к данным собственного экземпляра в хранилище экземпляров, также получает доступ и ко всем другим экземплярам в этом хранилище экземпляров.</span><span class="sxs-lookup"><span data-stu-id="b3227-113">A client that has access to its own instance data in the instance store has access to all other instances in the same instance store.</span></span> <span data-ttu-id="b3227-114">Хранилище экземпляров не поддерживает указание прав доступа на уровне экземпляра.</span><span class="sxs-lookup"><span data-stu-id="b3227-114">The instance store does not support specifying security permissions at the instance level.</span></span> <span data-ttu-id="b3227-115">Для обеспечения доступа к различным хранилищам экземпляров необходимо создать отдельные хранилища экземпляров и настроить доступ к ним различных групп и пользователей.</span><span class="sxs-lookup"><span data-stu-id="b3227-115">You should create separate instance stores and map different groups/users to have access to different stores.</span></span>
+>  <span data-ttu-id="1aa3f-113">Клиент, имеющий доступ к данным собственного экземпляра в хранилище экземпляров, также получает доступ и ко всем другим экземплярам в этом хранилище экземпляров.</span><span class="sxs-lookup"><span data-stu-id="1aa3f-113">A client that has access to its own instance data in the instance store has access to all other instances in the same instance store.</span></span> <span data-ttu-id="1aa3f-114">Хранилище экземпляров не поддерживает указание прав доступа на уровне экземпляра.</span><span class="sxs-lookup"><span data-stu-id="1aa3f-114">The instance store does not support specifying security permissions at the instance level.</span></span> <span data-ttu-id="1aa3f-115">Для обеспечения доступа к различным хранилищам экземпляров необходимо создать отдельные хранилища экземпляров и настроить доступ к ним различных групп и пользователей.</span><span class="sxs-lookup"><span data-stu-id="1aa3f-115">You should create separate instance stores and map different groups/users to have access to different stores.</span></span>
