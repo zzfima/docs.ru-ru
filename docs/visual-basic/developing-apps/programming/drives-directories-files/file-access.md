@@ -1,11 +1,12 @@
 ---
-title: "Доступ к файлам с помощью Visual Basic"
-ms.custom: 
+title: Доступ к файлам с помощью Visual Basic
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - file access
@@ -20,19 +21,19 @@ helpviewer_keywords:
 - I/O [Visual Basic]
 - sequential access
 ms.assetid: 231533bf-d049-4345-befa-3fb78fe6517d
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 9929061feeccee31028056bc93f0f0a2f119eb4e
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.openlocfilehash: 2aabea79e3c7a6dabf47647c7e27b072738ba363
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="file-access-with-visual-basic"></a>Доступ к файлам с помощью Visual Basic
-Объект `My.Computer.FileSystem` предоставляет средства для работы с файлами и папками. Его свойства, методы и события позволяют создавать, копировать, перемещать, исследовать и удалять файлы и папки. `My.Computer.FileSystem` обеспечивает более высокую производительность, чем устаревшие функции (`FileOpen`, `FileClose`, `Input`, `InputString`, `LineInput` и т. д.), предоставляемые [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] для обеспечения обратной совместимости.  
+Объект `My.Computer.FileSystem` предоставляет средства для работы с файлами и папками. Его свойства, методы и события позволяют создавать, копировать, перемещать, исследовать и удалять файлы и папки. `My.Computer.FileSystem` обеспечивает более высокую производительность, чем устаревшие функции (`FileOpen`, `FileClose`, `Input`, `InputString`, `LineInput` и т. д.), предоставляемые Visual Basic для поддержки обратной совместимости.  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Чтение из файлов](../../../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md)  
  Список разделов, посвященных использованию объекта `My.Computer.FileSystem` для чтения из файлов.  
   

@@ -1,8 +1,9 @@
 ---
-title: "Пошаговые руководства для Visual Basic"
+title: Пошаговые руководства для Visual Basic
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-visual-basic
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - Visual Basic, walkthroughs
@@ -10,14 +11,14 @@ helpviewer_keywords:
 - Visual Basic code, walkthroughs
 - walkthroughs [Visual Basic]
 ms.assetid: e4e1f849-e1ce-4cf7-8483-d9b4c4887a8e
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: c57ee0b94e5aafb6b1287707b10977e86ee631f1
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: b34c513e54ba41bf845abaa59dd630b6877d9bbd
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="visual-basic-language-walkthroughs"></a>Пошаговые руководства для Visual Basic
 В пошаговых руководствах содержатся инструкции по выполнению стандартных сценариев, что делает их удобным инструментом для начала изучения продукта в целом или его отдельных возможностей.  
@@ -26,13 +27,13 @@ ms.lasthandoff: 10/18/2017
  Демонстрирует создание асинхронных решений с помощью ключевых слов [Async](../visual-basic/language-reference/modifiers/async.md) и [Await](../visual-basic/language-reference/operators/await-operator.md).  
   
  [Объявление и вызов событий](../visual-basic/programming-guide/language-features/events/walkthrough-declaring-and-raising-events.md)  
- В этом пошаговом руководстве описывается, каким образом объявляются и вызываются события в [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
+ В этом пошаговом руководстве описывается, каким образом объявляются и вызываются события в Visual Basic.  
   
  [Обработка событий](../visual-basic/programming-guide/language-features/events/walkthrough-handling-events.md)  
  В этом пошаговом руководстве описывается обработка событий с помощью стандартного ключевого слова `WithEvents` или новых ключевых слов `AddHandler` / `RemoveHandler`.  
   
  [Создание и реализация интерфейсов](../visual-basic/programming-guide/language-features/interfaces/walkthrough-creating-and-implementing-interfaces.md)  
- В этом пошаговом руководстве описывается объявление и реализация интерфейсов в [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
+ В этом пошаговом руководстве описывается объявление и реализация интерфейсов в Visual Basic.  
   
  [Определение классов](../visual-basic/programming-guide/language-features/objects-and-classes/walkthrough-defining-classes.md)  
  В этом пошаговом руководстве описывается объявление класса и его полей, а также свойств, методов и событий.  
@@ -47,10 +48,10 @@ ms.lasthandoff: 10/18/2017
  В этом пошаговом руководстве описывается, как использовать операторы `Declare` и вызывать API Windows. Он содержит сведения об использовании атрибутов для управления маршалингом вызова API, а также о способах предоставления вызова API как метода класса.  
   
  [Создание объектов COM с помощью Visual Basic](../visual-basic/programming-guide/com-interop/walkthrough-creating-com-objects.md)  
- В этом пошаговом руководстве описывается создание COM-объектов в [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], как с применением шаблона COM-класса, так и без него.  
+ В этом пошаговом руководстве описывается создание COM-объектов в Visual Basic, как с применением шаблона COM-класса, так и без него.  
   
  [Реализация наследования с использованием COM-объектов](../visual-basic/programming-guide/com-interop/walkthrough-implementing-inheritance-with-com-objects.md)  
- В этом пошаговом руководстве описывается использование [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 6.0 для создания COM-объекта, содержащего класс, и его последующее применение в качестве базового класса в [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
+ В этом пошаговом руководстве описывается использование Visual Basic 6.0 для создания COM-объекта, содержащего класс, и его последующее применение в качестве базового класса в Visual Basic.  
   
  [Многопоточность](http://msdn.microsoft.com/library/2cbf5116-8499-4af9-818c-6f7c1c2ad2c9)  
  В этом пошаговом руководстве описывается создание многопоточного приложения, которое выполняет поиск заданного слова в текстовом файле.  
@@ -77,7 +78,7 @@ ms.lasthandoff: 10/18/2017
  В этом пошаговом руководстве описывается использование класса <xref:System.Security.Cryptography.DESCryptoServiceProvider> для шифрования и расшифровки строк.  
   
  [Управление файлами и папками в Visual Basic](../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-and-directories.md)  
- В этом пошаговом руководстве описывается использование функций [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] для определения сведений о файле, поиска строки в файле и записи в файл.  
+ В этом пошаговом руководстве описывается использование функций Visual Basic для определения сведений о файле, поиска строки в файле и записи в файл.  
   
  [Управление файлами с помощью методов .NET Framework](../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-by-using-net-framework-methods.md)  
  В этом пошаговом руководстве описывается использование методов [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] для определения сведений о файле, поиска строки в файле и записи в файл.  

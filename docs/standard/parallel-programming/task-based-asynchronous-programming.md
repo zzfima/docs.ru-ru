@@ -21,11 +21,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: c0782498743f857afac4af073fb0a0cb8fc4d55a
-ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.openlocfilehash: 87c49eb1cb2b8cef7057e73eca19f74e818b043e
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="task-based-asynchronous-programming"></a>Асинхронное программирование на основе задач
 Библиотека параллельных задач (TPL) основана на концепции *задач*, представляющих асинхронные операции. В некотором смысле задача похожа на поток или рабочий элемент <xref:System.Threading.ThreadPool>, но на более высоком уровне абстракции. Термин *параллелизм задач* означает одновременное выполнение одной или нескольких разных задач. Задачи предоставляют два основных преимущества.  
@@ -191,7 +191,7 @@ ms.lasthandoff: 04/18/2018
  При ожидании задачи неявно ожидаются все ее дочерние задачи, созданные с помощью параметра <xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent?displayProperty=nameWithType>. <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> выполняет возврат немедленно, если задача уже завершена. Любые исключения, вызванные задачей, будут созданы методом <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType>, даже если метод <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> был вызван после завершения задачи.  
   
 ## <a name="composing-tasks"></a>Составление задач  
- Классы <xref:System.Threading.Tasks.Task> и <xref:System.Threading.Tasks.Task%601> предоставляют несколько методов, позволяющих создать ряд задач для реализации общих шаблонов и более эффективного использования асинхронных функций языка, предусмотренных в языках C#, [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] и F#. В этом подразделе описаны методы <xref:System.Threading.Tasks.Task.WhenAll%2A>, <xref:System.Threading.Tasks.Task.WhenAny%2A>, <xref:System.Threading.Tasks.Task.Delay%2A> и <xref:System.Threading.Tasks.Task.FromResult%2A>.  
+ Классы <xref:System.Threading.Tasks.Task> и <xref:System.Threading.Tasks.Task%601> предоставляют несколько методов, позволяющих создать ряд задач для реализации общих шаблонов и более эффективного использования асинхронных возможностей языка, предусмотренных в языках C#, Visual Basic и F#. В этом подразделе описаны методы <xref:System.Threading.Tasks.Task.WhenAll%2A>, <xref:System.Threading.Tasks.Task.WhenAny%2A>, <xref:System.Threading.Tasks.Task.Delay%2A> и <xref:System.Threading.Tasks.Task.FromResult%2A>.  
   
 ### <a name="taskwhenall"></a>Task.WhenAll  
  Метод <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> асинхронно ожидает завершения выполнения нескольких объектов <xref:System.Threading.Tasks.Task> или <xref:System.Threading.Tasks.Task%601>. Он предоставляет перегруженные версии, позволяющие ожидать неединобразные наборы задач. Например, можно ожидать завершения выполнения нескольких объектов <xref:System.Threading.Tasks.Task> и <xref:System.Threading.Tasks.Task%601> от одного вызова метода.  

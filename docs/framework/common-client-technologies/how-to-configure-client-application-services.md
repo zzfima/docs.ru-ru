@@ -1,28 +1,28 @@
 ---
-title: "Практическое руководство. Настройка служб клиентских приложений"
-ms.custom: 
+title: Практическое руководство. Настройка служб клиентских приложений
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - client application services, configuring
 ms.assetid: 34a8688a-a32c-40d3-94be-c8e610c6a4e8
-caps.latest.revision: 
+caps.latest.revision: 23
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: bac21a0c9535326becfe94610db33869da89c471
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: e7c6d31293109a0d778136235ccfc894aeba8574
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-configure-client-application-services"></a>Практическое руководство. Настройка служб клиентских приложений
 В этом разделе описывается использование [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] **конструктора проектов** для включения и настройки служб клиентских приложений. Эти службы позволяют проверять подлинность пользователей, извлекать роли пользователей и параметры из существующей службы приложений [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)]. После настройки можно получить доступ к включенным службам в коде приложения, как описано в разделе [Общие сведения о службах клиентских приложений](../../../docs/framework/common-client-technologies/client-application-services-overview.md). Дополнительные сведения о службах приложений [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] см. в разделе [Общие сведения о службах приложений ASP.NET](http://msdn.microsoft.com/library/1162e529-0d70-44b2-b3ab-83e60c695013).  
@@ -111,7 +111,7 @@ ms.lasthandoff: 01/19/2018
     Data Source = |SQL/CE|;password=<password>;encrypt database=true  
     ```  
   
-5.  Чтобы использовать собственную базу данных [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], укажите собственную строку подключения. Дополнительные сведения о форматах строки подключения см. в документации к [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Эта база данных не создается автоматически. Строка подключения должна ссылаться на существующую базу данных, которую можно создать с помощью следующих инструкций SQL.  
+5.  Чтобы использовать собственную базу данных SQL Server, укажите собственную строку подключения. Дополнительные сведения о форматах строки подключения см. в документации к SQL Server. Эта база данных не создается автоматически. Строка подключения должна ссылаться на существующую базу данных, которую можно создать с помощью следующих инструкций SQL.  
   
     ```  
     CREATE TABLE ApplicationProperties (PropertyName nvarchar(256),  
@@ -127,7 +127,7 @@ ms.lasthandoff: 01/19/2018
 ## <a name="using-custom-providers"></a>Использование настраиваемых поставщиков  
  По умолчанию компонент служб клиентских приложений использует поставщиков в пространстве имен <xref:System.Web.ClientServices.Providers?displayProperty=nameWithType>. При настройке приложения с помощью страницы **Службы** в **конструкторе проектов** ссылки на этих поставщиков добавляются в файл App.config. Эти поставщики по умолчанию получают доступ к соответствующим поставщикам на сервере. Веб-службы часто настраивается для доступа к данным пользователя через поставщиков, таких как <xref:System.Web.Security.SqlMembershipProvider> и <xref:System.Web.Security.SqlRoleProvider>.  
   
- Если нужно использовать других поставщиков, обычно следует изменить поставщиков на стороне сервера, чтобы изменения действовали для всех клиентских приложений, получающих доступ к серверу. Впрочем, есть возможность использовать других поставщиков и на стороне клиента. В файле App.config можно указать настраиваемых поставщиков проверки подлинности и поставщиков ролей. Сведения о создании пользовательской проверки подлинности и поставщиков служб см. в разделах [Реализация поставщика членства](http://msdn.microsoft.com/library/d8658b8e-c962-4f64-95e1-4acce35e4582) и [Реализация поставщика ролей](http://msdn.microsoft.com/library/851671ce-bf9b-43f2-aba4-bc9d28b11c7d). Также можно использовать настраиваемый поставщик параметров, изменив в проекте класс `Settings` (доступен как `Properties.Settings.Default` в C# и `My.Settings` в [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]). Дополнительные сведения см. в разделе [Архитектура параметров приложения](../../../docs/framework/winforms/advanced/application-settings-architecture.md).  
+ Если нужно использовать других поставщиков, обычно следует изменить поставщиков на стороне сервера, чтобы изменения действовали для всех клиентских приложений, получающих доступ к серверу. Впрочем, есть возможность использовать других поставщиков и на стороне клиента. В файле App.config можно указать настраиваемых поставщиков проверки подлинности и поставщиков ролей. Сведения о создании пользовательской проверки подлинности и поставщиков служб см. в разделах [Реализация поставщика членства](http://msdn.microsoft.com/library/d8658b8e-c962-4f64-95e1-4acce35e4582) и [Реализация поставщика ролей](http://msdn.microsoft.com/library/851671ce-bf9b-43f2-aba4-bc9d28b11c7d). Также можно использовать настраиваемый поставщик параметров, изменив в проекте класс `Settings` (доступен как `Properties.Settings.Default` в C# и `My.Settings` в Visual Basic). Дополнительные сведения см. в разделе [Архитектура параметров приложения](../../../docs/framework/winforms/advanced/application-settings-architecture.md).  
   
 #### <a name="to-configure-client-application-services-to-use-non-default-providers"></a>Настройка служб клиентских приложений для использования поставщиков, отличных от поставщиков по умолчанию  
   

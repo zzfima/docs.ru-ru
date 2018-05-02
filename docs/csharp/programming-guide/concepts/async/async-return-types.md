@@ -1,21 +1,22 @@
 ---
-title: "Асинхронные типы возвращаемых значений (C#)"
-ms.custom: 
+title: Асинхронные типы возвращаемых значений (C#)
+ms.custom: ''
 ms.date: 05/29/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-csharp
 ms.topic: article
 ms.assetid: ddb2539c-c898-48c1-ad92-245e4a996df8
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 7aee1ebdf24a2ac564268e1f36d3aac707dea463
-ms.sourcegitcommit: 7e99f66ef09d2903e22c789c67ff5a10aa953b2f
+ms.openlocfilehash: 4927d6324b6bda5a897ce81928fc13cae303a99a
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="async-return-types-c"></a>Асинхронные типы возвращаемых значений (C#)
 Асинхронные методы могут иметь следующие типы возвращаемых значений:
@@ -26,7 +27,7 @@ ms.lasthandoff: 11/18/2017
 
 - `void` для обработчика событий. 
 
-- Начиная с версии 7, в языке C# поддерживаются любые типы с доступным методом `GetAwaiter`. Объект, возвращаемый методом `GetAwaiter`, должен реализовывать интерфейс <xref:System.Runtime.CompilerServices.ICriticalNotifyCompletion?displayProperty=nameWithType>.
+- Начиная с версии 7.0 в языке C# поддерживаются любые типы с доступным методом `GetAwaiter`. Объект, возвращаемый методом `GetAwaiter`, должен реализовывать интерфейс <xref:System.Runtime.CompilerServices.ICriticalNotifyCompletion?displayProperty=nameWithType>.
   
 Дополнительные сведения об асинхронных методах см. в разделе [Асинхронное программирование с использованием ключевых слов Async и Await (C#)](../../../../csharp/programming-guide/concepts/async/index.md).  
   
@@ -76,7 +77,7 @@ ms.lasthandoff: 11/18/2017
  
 ## <a name="generalized-async-return-types-and-valuetaskt"></a>Обобщенные асинхронные типы возвращаемых значений и ValueTask<T>
 
-Начиная с версии 7, в языке C# асинхронные методы могут возвращать любой тип с доступным методом `GetAwaiter`.
+Начиная с C# 7.0 асинхронные методы могут возвращать любой тип, имеющий доступный метод `GetAwaiter`.
  
 Поскольку <xref:System.Threading.Tasks.Task> и <xref:System.Threading.Tasks.Task%601> являются ссылочными типами, выделение памяти во влияющих на производительность сегментах (особенно при выделении памяти в ограниченных циклах) может серьезно снизить производительность. Поддержка обобщенных типов возвращаемых значений позволяет возвращать небольшой тип значения вместо ссылочного типа, благодаря чему удается предотвратить избыточное выделение памяти. 
 

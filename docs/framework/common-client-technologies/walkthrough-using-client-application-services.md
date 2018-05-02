@@ -1,13 +1,13 @@
 ---
-title: "Пошаговое руководство. Использование служб клиентских приложений"
-ms.custom: 
+title: Пошаговое руководство. Использование служб клиентских приложений
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -16,17 +16,17 @@ helpviewer_keywords:
 - application services host [client application services]
 - client application services, walkthroughs
 ms.assetid: bb7c8950-4517-4dae-b705-b74a14059b26
-caps.latest.revision: 
+caps.latest.revision: 47
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 71eac85d07ac54cf15edcfcc3a86de58afef5004
-ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
+ms.openlocfilehash: fe0e446a0005ffcbf296c2728fd93056c3e38f2a
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="walkthrough-using-client-application-services"></a>Пошаговое руководство. Использование служб клиентских приложений
 В этой статье описывается создание приложения Windows, в котором для проверки подлинности пользователей и извлечения их ролей и параметров используются службы клиентских приложений.  
@@ -75,7 +75,7 @@ ms.lasthandoff: 02/01/2018
   
 7.  Убедитесь, что выбран пункт **Использовать проверку подлинности с помощью форм** , а затем в полях **Местонахождение службы проверки подлинности**, **Местонахождение службы ролей**и **Местонахождение службы веб-параметров** введите значение `http://localhost:55555/AppServices`.  
   
-8.  Для [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]задайте на вкладке **Приложение** в поле **Режим проверки подлинности** значение **Определяется приложением**.  
+8.  Для Visual Basic задайте на вкладке **Приложение** в поле **Режим проверки подлинности** значение **Определяется приложением**.  
   
  Указанные параметры будут сохранены конструктором проектов в файле app.config.  
   
@@ -250,7 +250,7 @@ ms.lasthandoff: 02/01/2018
   
 1.  В окне **Обозреватель решений** для проекта ClientAppServicesDemo добавьте ссылку на сборку System.Web.  
   
-2.  Щелкните файл Form1 и в главном меню  **выберите пункты** Вид &#124; Код[!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)].  
+2.  Щелкните файл Form1 и в главном меню **выберите пункты**Вид &#124; Код[!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)].  
   
 3.  В редакторе кода добавьте следующие операторы в начале файла Form1.  
   
@@ -315,7 +315,7 @@ ms.lasthandoff: 02/01/2018
 ### <a name="creating-a-login-form"></a>Создание формы входа  
  Поставщик учетных данных — это класс, реализующий интерфейс <xref:System.Web.ClientServices.Providers.IClientFormsAuthenticationCredentialsProvider> . Этот интерфейс содержит один метод с именем <xref:System.Web.ClientServices.Providers.IClientFormsAuthenticationCredentialsProvider.GetCredentials%2A> , возвращающий объект <xref:System.Web.ClientServices.Providers.ClientFormsAuthenticationCredentials> . В следующей процедуре описывается создание диалогового окна входа. Для отображения окна и возвращения указанных пользователем учетных данных используется метод <xref:System.Web.ClientServices.Providers.IClientFormsAuthenticationCredentialsProvider.GetCredentials%2A> .  
   
- Для [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] и C# представлены отдельные инструкции, так как в [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] доступен шаблон **Форма входа** . Это позволяет сократить время и затраты на кодирование.  
+ Для Visual Basic и C# представлены отдельные инструкции, так как в Visual Basic доступен шаблон **Форма входа**. Это позволяет сократить время и затраты на кодирование.  
   
 ##### <a name="to-create-a-login-dialog-box-as-a-credentials-provider-in-visual-basic"></a>Создание диалогового окна входа как поставщика учетных данных в Visual Basic  
   
@@ -407,7 +407,7 @@ ms.lasthandoff: 02/01/2018
  Теперь вы можете запустить приложение и войти в систему с именем пользователя "employee", чтобы убедиться, что кнопка не отображается. После этого попробуйте войти с именем "manager" — кнопка должна отображаться.  
   
 ## <a name="accessing-web-settings"></a>Доступ к веб-параметрам  
- В следующей процедуре вы добавите на форму текстовое поле и привяжете его к веб-параметрам. Как и в ранее описанном коде, с помощью которого были реализованы проверка подлинности и доступ к функциям в зависимости от ролей, в коде ваших параметров не требуется прямых ссылок на поставщика параметров. Вместо этого используется строго типизированный класс `Settings` ( `Properties.Settings.Default` в C# и `My.Settings` в [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]), созданный в вашем проекте с помощью [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)].  
+ В следующей процедуре вы добавите на форму текстовое поле и привяжете его к веб-параметрам. Как и в ранее описанном коде, с помощью которого были реализованы проверка подлинности и доступ к функциям в зависимости от ролей, в коде ваших параметров не требуется прямых ссылок на поставщика параметров. Вместо этого используется строго типизированный класс `Settings` (`Properties.Settings.Default` в C# и `My.Settings` в Visual Basic), созданный в вашем проекте с помощью [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)].  
   
 #### <a name="to-use-web-settings-in-your-user-interface"></a>Использование веб-параметров в пользовательском интерфейсе  
   
@@ -527,7 +527,7 @@ ms.lasthandoff: 02/01/2018
     > [!NOTE]
     >  Метод <xref:System.Web.ClientServices.ClientFormsIdentity.RevalidateUser%2A> предназначен исключительно для удобства. Поскольку у него отсутствуют возвращаемые значения, с его помощью нельзя выявлять ошибки при повторных проверках подлинности. Ошибка проверки подлинности может возникнуть, например, при изменении учетных данных пользователя на сервере. В этом случае вы можете использовать код, с помощью которого после ошибок вызова служб будет выполняться явная проверка подлинности пользователей. Дополнительные сведения см. в разделе "Доступ к веб-параметрам" в данном руководстве.  
   
-     После повторной проверки подлинности этот код вызывает метод `SaveSettings` , добавление которого рассматривается выше, чтобы сохранить все изменения локальных веб-параметров. Затем с помощью этого кода на сервере извлекаются все новые значения путем вызова метода <xref:System.Configuration.ApplicationSettingsBase.Reload%2A> класса проекта `Settings` ( `Properties.Settings.Default` в C# и `My.Settings` в [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]).  
+     После повторной проверки подлинности этот код вызывает метод `SaveSettings` , добавление которого рассматривается выше, чтобы сохранить все изменения локальных веб-параметров. Затем с помощью этого кода на сервере извлекаются все новые значения путем вызова метода <xref:System.Configuration.ApplicationSettingsBase.Reload%2A> класса проекта `Settings` (`Properties.Settings.Default` в C# и `My.Settings` в Visual Basic).  
   
      [!code-csharp[ClientApplicationServices#080](../../../samples/snippets/csharp/VS_Snippets_Winforms/ClientApplicationServices/CS/Form1.cs#080)]
      [!code-vb[ClientApplicationServices#080](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ClientApplicationServices/VB/Form1.vb#080)]  

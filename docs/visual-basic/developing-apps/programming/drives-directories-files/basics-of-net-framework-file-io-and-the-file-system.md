@@ -1,11 +1,12 @@
 ---
-title: "Основы файлового ввода-вывода и файловой системы в .NET Framework (Visual Basic)"
-ms.custom: 
+title: Основы файлового ввода-вывода и файловой системы в .NET Framework (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - file access, file I/O in Visual Basic
@@ -15,14 +16,14 @@ helpviewer_keywords:
 - streams
 - streams, definition
 ms.assetid: 49d837c0-cf28-416f-8606-4d83d7b479ef
-caps.latest.revision: "30"
+caps.latest.revision: 30
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: d6cfdb939bd4bf84fafbffceefccd5cd522018c2
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: 02eaa98b8a52a2b9efa2b273b2a58158a5848b86
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="basics-of-net-framework-file-io-and-the-file-system-visual-basic"></a>Основы файлового ввода-вывода и файловой системы в .NET Framework (Visual Basic)
 Классы в пространстве имен <xref:System.IO> используются для работы с дисками, файлами и каталогами.  
@@ -30,7 +31,7 @@ ms.lasthandoff: 12/21/2017
  Пространство имен <xref:System.IO> содержит классы <xref:System.IO.File> и <xref:System.IO.Directory>, обеспечивающие функциональные возможности [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] для работы с файлами и каталогами. Поскольку методы этих объектов являются статическими или общими элементами, их можно использовать непосредственно, без предварительного создания экземпляра класса. С этими классами связаны классы <xref:System.IO.FileInfo> и <xref:System.IO.DirectoryInfo>, которые будут знакомы пользователям функции `My`. Чтобы использовать эти классы, необходимо полностью уточнить имена или импортировать подходящие пространства имен, включив операторы `Imports` в начало соответствующего кода. Дополнительные сведения см. в статье [Оператор Imports (пространство имен .NET и тип)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md).  
   
 > [!NOTE]
->  В других подразделах этого раздела для работы с дисками, файлами и каталогами вместо класса `My.Computer.FileSystem` используется объект `System.IO`. Объект `My.Computer.FileSystem` предназначен главным образом для использования в программах [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. Классы `System.IO` предназначены для использования в любом языке, который поддерживает [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)], в том числе [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
+>  В других подразделах этого раздела для работы с дисками, файлами и каталогами вместо класса `My.Computer.FileSystem` используется объект `System.IO`. Объект `My.Computer.FileSystem` предназначен главным образом для использования в программах Visual Basic. Классы `System.IO` предназначены для использования в любом языке, который поддерживает [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)], в том числе Visual Basic.  
   
 ## <a name="definition-of-a-stream"></a>Определение потока  
  [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] использует потоки для поддержки чтения и записи файлов. Поток можно представить в виде одномерного набора связанных данных, у которого есть начало и конец, где курсор указывает текущее положение в потоке.  

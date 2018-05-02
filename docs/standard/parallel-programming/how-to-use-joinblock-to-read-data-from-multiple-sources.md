@@ -1,5 +1,5 @@
 ---
-title: "Практическое руководство. Использование JoinBlock для чтения данных из нескольких источников"
+title: Практическое руководство. Использование JoinBlock для чтения данных из нескольких источников
 ms.date: 03/30/2017
 ms.prod: .net
 ms.technology: dotnet-standard
@@ -18,11 +18,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: f7d4e552404f99580bceafe7f900db4607201c3d
-ms.sourcegitcommit: 6a9030eb5bd0f00e1d144f81958adb195cfb1f6f
+ms.openlocfilehash: ba353a34306b06e0f1df4696af5545799e7a5b37
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-use-joinblock-to-read-data-from-multiple-sources"></a>Практическое руководство. Использование JoinBlock для чтения данных из нескольких источников
 В этом документе объясняется, как использовать класс <xref:System.Threading.Tasks.Dataflow.JoinBlock%602> для выполнения операции, если данные доступны из нескольких источников. Также здесь показано, как использовать нежадный режим, чтобы разрешить нескольким блокам соединения совместно использовать источник данных более эффективно.
@@ -38,13 +38,13 @@ ms.lasthandoff: 01/10/2018
  Чтобы включить рациональное использование общего пула объектов `MemoryResource`, в этом примере определяется объект <xref:System.Threading.Tasks.Dataflow.GroupingDataflowBlockOptions>, у которого свойству <xref:System.Threading.Tasks.Dataflow.GroupingDataflowBlockOptions.Greedy%2A> задано значение `False`, для создания объектов <xref:System.Threading.Tasks.Dataflow.JoinBlock%602>, действующих в нежадном режиме. Нежадный блок соединения откладывает все входящие сообщения до тех пор, пока значение не станет доступно из каждого источника. Если какое-либо из отложенных сообщений, принято другим блоком, блок соединения перезапускает процесс. Нежадный режим позволяет блокам соединения, которые совместно используют один или несколько блоков источника, выполнять работу, пока другие блоки ожидают данных. В этом примере, если объект `MemoryResource` добавляется в пул `memoryResources`, первый блок соединения для получения его второго источника данных может выполняться. Если бы в этом примере использовался жадный режим, устанавливаемый по умолчанию, один блок соединения мог бы занять объект `MemoryResource` и ожидать, пока второй ресурс не станет доступным. Однако, если для другого блока соединения доступен второй источник данных, он не может выполняться, поскольку объект `MemoryResource` был занят другим блоком соединения.  
   
 ## <a name="compiling-the-code"></a>Компиляция кода  
- Скопируйте код примера и вставьте его в проект Visual Studio или в файл с именем `DataflowNonGreedyJoin.cs` (`DataflowNonGreedyJoin.vb` для [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]), затем выполните в окне командной строки Visual Studio следующую команду.  
+ Скопируйте код примера и вставьте его в проект Visual Studio или в файл с именем `DataflowNonGreedyJoin.cs` (`DataflowNonGreedyJoin.vb` для Visual Basic), затем выполните в окне командной строки Visual Studio следующую команду.  
   
- [!INCLUDE[csprcs](../../../includes/csprcs-md.md)]  
+ Visual C#  
   
  **csc.exe /r:System.Threading.Tasks.Dataflow.dll DataflowNonGreedyJoin.cs**  
   
- [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]  
+ Visual Basic  
   
  **vbc.exe /r:System.Threading.Tasks.Dataflow.dll DataflowNonGreedyJoin.vb**  
   

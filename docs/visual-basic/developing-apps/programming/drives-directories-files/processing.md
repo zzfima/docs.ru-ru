@@ -1,11 +1,12 @@
 ---
-title: "Операции с дисками, папками и файлами (Visual Basic)"
-ms.custom: 
+title: Операции с дисками, папками и файлами (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - drives
@@ -15,19 +16,19 @@ helpviewer_keywords:
 - files [Visual Basic], accessing
 - directories [Visual Studio], processing
 ms.assetid: f1db14c8-a4fd-4d0b-8323-c7cb29d688c2
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 27a5c3c389860cdc29c4263edbff492738ffe565
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: aad7ea3a24bf0f738999c58a7934d1ffcf92b967
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="processing-drives-directories-and-files-visual-basic"></a>Операции с дисками, папками и файлами (Visual Basic)
-[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] можно использовать для обработки дисков, папок и файлов с помощью объекта `My.Computer.FileSystem`, который обеспечивает лучшую производительность и проще в использовании, чем традиционные методы, такие как `FileOpen` и `Write` (хотя они по-прежнему доступны). Эти методы подробно обсуждаются в следующих разделах.  
+Visual Basic можно использовать для обработки дисков, папок и файлов с помощью объекта `My.Computer.FileSystem`, который обеспечивает лучшую производительность и проще в использовании, чем традиционные методы, такие как `FileOpen` и `Write` (хотя они по-прежнему доступны). Эти методы подробно обсуждаются в следующих разделах.  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Доступ к файлам с помощью Visual Basic](../../../../visual-basic/developing-apps/programming/drives-directories-files/file-access.md)  
  Описание использования объекта `My.Computer.FileSystem` для работы с файлами, дисками и папками.  
   

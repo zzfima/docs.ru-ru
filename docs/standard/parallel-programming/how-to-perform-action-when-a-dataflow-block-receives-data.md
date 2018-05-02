@@ -1,5 +1,5 @@
 ---
-title: "Практическое руководство. Выполнение действий при получении данных блоком потоков данных"
+title: Практическое руководство. Выполнение действий при получении данных блоком потоков данных
 ms.date: 03/30/2017
 ms.prod: .net
 ms.technology: dotnet-standard
@@ -17,14 +17,14 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 4aee0462e641e755830b63d3d708bf51b22cd797
-ms.sourcegitcommit: 6a9030eb5bd0f00e1d144f81958adb195cfb1f6f
+ms.openlocfilehash: 99f2f7184f869902f89eb0ac0fc8427533978cc3
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-perform-action-when-a-dataflow-block-receives-data"></a>Практическое руководство. Выполнение действий при получении данных блоком потоков данных
-Типы *блоков выполнения потоков данных* вызывают предоставленный пользователем делегат при получении данных. Классы <xref:System.Threading.Tasks.Dataflow.ActionBlock%601?displayProperty=nameWithType>, <xref:System.Threading.Tasks.Dataflow.TransformBlock%602?displayProperty=nameWithType> и <xref:System.Threading.Tasks.Dataflow.TransformManyBlock%602?displayProperty=nameWithType> являются типами блоков выполнения потока данных. Можно использовать ключевое слово `delegate` (`Sub` в [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]), <xref:System.Action%601>, <xref:System.Func%602> или лямбда-выражение при предоставлении рабочей функции блоку выполнения потока данных. В этом документе описано, как использовать <xref:System.Func%602> и лямбда-выражения для выполнения действий в блоках выполнения.  
+Типы *блоков выполнения потоков данных* вызывают предоставленный пользователем делегат при получении данных. Классы <xref:System.Threading.Tasks.Dataflow.ActionBlock%601?displayProperty=nameWithType>, <xref:System.Threading.Tasks.Dataflow.TransformBlock%602?displayProperty=nameWithType> и <xref:System.Threading.Tasks.Dataflow.TransformManyBlock%602?displayProperty=nameWithType> являются типами блоков выполнения потока данных. При предоставлении рабочей функции блоку выполнения потока данных можно использовать ключевое слово `delegate` (`Sub` в Visual Basic), <xref:System.Action%601>, <xref:System.Func%602> или лямбда-выражение. В этом документе описано, как использовать <xref:System.Func%602> и лямбда-выражения для выполнения действий в блоках выполнения.  
 
 [!INCLUDE [tpl-install-instructions](../../../includes/tpl-install-instructions.md)]
 
@@ -39,18 +39,18 @@ ms.lasthandoff: 01/10/2018
  В разделе "Сводка о типах делегатов" документации по [потокам данных](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md) перечислены типы делегатов, которые можно предоставлять объектам <xref:System.Threading.Tasks.Dataflow.ActionBlock%601>, <xref:System.Threading.Tasks.Dataflow.TransformBlock%602> и <xref:System.Threading.Tasks.Dataflow.TransformManyBlock%602>. В таблице также указано, работает ли делегат данного типа синхронно или асинхронно.  
   
 ## <a name="compiling-the-code"></a>Компиляция кода  
- Скопируйте код примера и вставьте его в проект Visual Studio или в файл с именем `DataflowExecutionBlocks.cs` (`DataflowExecutionBlocks.vb` для [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]), затем выполните в окне командной строки Visual Studio следующую команду.  
+ Скопируйте код примера и вставьте его в проект Visual Studio или в файл с именем `DataflowExecutionBlocks.cs` (`DataflowExecutionBlocks.vb` для Visual Basic), затем выполните в окне командной строки Visual Studio следующую команду.  
   
- [!INCLUDE[csprcs](../../../includes/csprcs-md.md)]  
+ Visual C#  
   
  **csc.exe /r:System.Threading.Tasks.Dataflow.dll DataflowExecutionBlocks.cs**  
   
- [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]  
+ Visual Basic  
   
  **vbc.exe /r:System.Threading.Tasks.Dataflow.dll DataflowExecutionBlocks.vb**  
   
 ## <a name="robust-programming"></a>Отказоустойчивость  
- Этот пример предоставляет делегат типа <xref:System.Func%602> объекту <xref:System.Threading.Tasks.Dataflow.TransformBlock%602> для синхронного выполнения задачи блока потока данных. Чтобы позволить блоку потока данных работать асинхронно, предоставьте блоку потока данных делегат типа <xref:System.Func%601>. Если блок потока данных работает асинхронно, задача блока потока данных завершается, только когда завершается возвращенный объект <xref:System.Threading.Tasks.Task%601>. В следующем примере изменяется метод `CountBytes` и используются операторы [async](~/docs/csharp/language-reference/keywords/async.md) и [await](~/docs/csharp/language-reference/keywords/await.md) ([Async](~/docs/visual-basic/language-reference/modifiers/async.md) и [Await](~/docs/visual-basic/language-reference/operators/await-operator.md) в [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]) для асинхронного подсчета общего количества нулевых байтов в предоставленном файле. Метод <xref:System.IO.FileStream.ReadAsync%2A> выполняет операции чтения файла асинхронно.  
+ Этот пример предоставляет делегат типа <xref:System.Func%602> объекту <xref:System.Threading.Tasks.Dataflow.TransformBlock%602> для синхронного выполнения задачи блока потока данных. Чтобы позволить блоку потока данных работать асинхронно, предоставьте блоку потока данных делегат типа <xref:System.Func%601>. Если блок потока данных работает асинхронно, задача блока потока данных завершается, только когда завершается возвращенный объект <xref:System.Threading.Tasks.Task%601>. В следующем примере изменяется метод `CountBytes` и используются операторы [async](~/docs/csharp/language-reference/keywords/async.md) и [await](~/docs/csharp/language-reference/keywords/await.md) ([Async](~/docs/visual-basic/language-reference/modifiers/async.md) и [Await](~/docs/visual-basic/language-reference/operators/await-operator.md) в Visual Basic) для асинхронного подсчета общего количества нулевых байтов в предоставленном файле. Метод <xref:System.IO.FileStream.ReadAsync%2A> выполняет операции чтения файла асинхронно.  
   
  [!code-csharp[TPLDataflow_ExecutionBlocks#2](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_executionblocks/cs/dataflowexecutionblocks.cs#2)]
  [!code-vb[TPLDataflow_ExecutionBlocks#2](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_executionblocks/vb/dataflowexecutionblocks.vb#2)]  

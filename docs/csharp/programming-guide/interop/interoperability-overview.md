@@ -1,5 +1,5 @@
 ---
-title: "Общие сведения о взаимодействии. (Руководство по программированию в C#)"
+title: Общие сведения о взаимодействии. (Руководство по программированию в C#)
 ms.date: 07/20/2015
 ms.prod: .net
 ms.technology:
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - interoperability, about interoperability
 - platform invoke
 ms.assetid: c025b2e0-2357-4c27-8461-118f0090aeff
-caps.latest.revision: 
+caps.latest.revision: 43
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 5ebdd2d58f2fe502dbeb14148c303487774f531b
-ms.sourcegitcommit: 099aa20d9b6450d1b7452d782a55771a6ad8ff35
+ms.openlocfilehash: 58538b690958e11b1590c13e6709cac4109ef49d
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/05/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="interoperability-overview-c-programming-guide"></a>Общие сведения о взаимодействии. (Руководство по программированию в C#)
 В этом разделе описываются способы включения взаимодействия между управляемым кодом C# и неуправляемым кодом.  
@@ -55,11 +55,11 @@ ms.lasthandoff: 02/05/2018
   
 1.  Добавьте атрибуты взаимодействия в проект C#.  
   
-     Сборку COM можно сделать видимой, изменив свойства проекта [!INCLUDE[csprcs](~/includes/csprcs-md.md)]. Дополнительные сведения см. в разделе [Диалоговое окно "Сведения о сборке"](/visualstudio/ide/reference/assembly-information-dialog-box).  
+     Сборку COM можно сделать видимой, изменив свойства проекта Visual C#. Дополнительные сведения см. в разделе [Диалоговое окно "Сведения о сборке"](/visualstudio/ide/reference/assembly-information-dialog-box).  
   
 2.  Создайте библиотеку типов COM и зарегистрируйте ее для использования моделью COM.  
   
-     Можно изменить свойства проекта [!INCLUDE[csprcs](~/includes/csprcs-md.md)] для автоматической регистрации сборки C# для COM-взаимодействия. [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] использует программу [Regasm.exe (средство регистрации сборок)](../../../../docs/framework/tools/regasm-exe-assembly-registration-tool.md) с помощью параметра командной строки `/tlb`, которая принимает управляемую сборку в качестве входного значения, чтобы создать библиотеку типов. Эта библиотека типов описывает типы `public` в сборке и добавляет записи реестра, чтобы клиенты COM могли создавать управляемые классы.  
+     Можно изменить свойства проекта Visual C# для автоматической регистрации сборки C# для COM-взаимодействия. [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] использует программу [Regasm.exe (средство регистрации сборок)](../../../../docs/framework/tools/regasm-exe-assembly-registration-tool.md) с помощью параметра командной строки `/tlb`, которая принимает управляемую сборку в качестве входного значения, чтобы создать библиотеку типов. Эта библиотека типов описывает типы `public` в сборке и добавляет записи реестра, чтобы клиенты COM могли создавать управляемые классы.  
   
  Дополнительные сведения см. в разделе [Предоставление COM-клиентам доступа к компонентам .NET Framework](../../../../docs/framework/interop/exposing-dotnet-components-to-com.md) и [Пример COM-класса](../../../csharp/programming-guide/interop/example-com-class.md).  
   

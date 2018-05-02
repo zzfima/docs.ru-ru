@@ -1,12 +1,13 @@
 ---
-title: "SqlMetal.exe (средство создания кода)"
-ms.custom: 
+title: SqlMetal.exe (средство создания кода)
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - SQLMetal [LINQ to SQL]
@@ -16,16 +17,17 @@ helpviewer_keywords:
 - LINQ to SQL, DBML files
 - LINQ to SQL, SQLMetal
 ms.assetid: 819e5a96-7646-4fdb-b14b-fe31221b0614
-caps.latest.revision: "43"
+caps.latest.revision: 43
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c14c01c670eccbc7f13210d3c0bb7df7bec07679
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 5c21c08cf76143959d11498594fbc94fb1dac55c
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sqlmetalexe-code-generation-tool"></a>SqlMetal.exe (средство создания кода)
 Программа командной строки SqlMetal создает код и сопоставление для компонента [!INCLUDE[vbtecdlinq](../../../includes/vbtecdlinq-md.md)] платформы [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. С помощью описанных ниже параметров можно настраивать SqlMetal на выполнение различных действий, включая следующие.  
@@ -103,7 +105,7 @@ sqlmetal [options] [<input file>]
   
 -   Создается выходной файл кода.  
   
-     Используя соответствующие параметры командной строки, можно получать исходный код [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] или C# либо XML-файл сопоставления.  
+     Используя соответствующие параметры командной строки, можно получать исходный код Visual Basic или C# либо XML-файл сопоставления.  
   
  Чтобы извлечь метаданные из MDF-файла, необходимо указать его имя после всех остальных параметров.  
   

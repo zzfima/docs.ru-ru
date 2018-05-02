@@ -1,5 +1,5 @@
 ---
-title: "Пошаговое руководство. Использование потока данных в приложении Windows Forms"
+title: Пошаговое руководство. Использование потока данных в приложении Windows Forms
 ms.date: 03/30/2017
 ms.prod: .net
 ms.technology: dotnet-standard
@@ -15,11 +15,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 8c0d44ca7933626c95603ccc81102889ba4c23cb
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: f28e103d6241d954dd6ac4f7e9c7fcb20a06ea0b
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="walkthrough-using-dataflow-in-a-windows-forms-application"></a>Пошаговое руководство. Использование потока данных в приложении Windows Forms
 В этом документе демонстрируется способ создания сети блоков потока данных, которые выполняют обработку изображений в приложении Windows Forms.  
@@ -48,9 +48,9 @@ ms.lasthandoff: 01/19/2018
   
 #### <a name="to-create-the-windows-forms-application"></a>Создание приложения Windows Forms  
   
-1.  В [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] создайте проект **приложения Windows Forms** на [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] или Visual Basic. В этом документе проект называется `CompositeImages`.  
+1.  В [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] создайте проект **Приложение Windows Forms** на Visual C# или Visual Basic. В этом документе проект называется `CompositeImages`.  
   
-2.  В конструкторе форм главной формы Form1.cs (Form1.vb для [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]) добавьте элемент управления <xref:System.Windows.Forms.ToolStrip>.  
+2.  В конструкторе форм главной формы Form1.cs (Form1.vb для Visual Basic) добавьте элемент управления <xref:System.Windows.Forms.ToolStrip>.  
   
 3.  Добавьте элемент управления <xref:System.Windows.Forms.ToolStripButton> к элементу управления <xref:System.Windows.Forms.ToolStrip>. Задайте свойству <xref:System.Windows.Forms.ToolStripItem.DisplayStyle%2A> значение <xref:System.Windows.Forms.ToolStripItemDisplayStyle.Text>, а свойству <xref:System.Windows.Forms.ToolStripItem.Text%2A> — **Выбрать папку**.  
   
@@ -66,7 +66,7 @@ ms.lasthandoff: 01/19/2018
   
 1.  В своем проекте добавьте ссылку на System.Threading.Tasks.Dataflow.dll.  
   
-2.  Убедитесь, что Form1.cs (Form1.vb для [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]) содержит следующие операторы `using` (`Using` в [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]).  
+2.  Убедитесь, что Form1.cs (Form1.vb для Visual Basic) содержит следующие операторы `using` (`Using` в Visual Basic).  
   
      [!code-csharp[TPLDataflow_CompositeImages#1](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_compositeimages/cs/compositeimages/form1.cs#1)]  
   
@@ -87,7 +87,7 @@ ms.lasthandoff: 01/19/2018
      [!code-csharp[TPLDataflow_CompositeImages#5](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_compositeimages/cs/compositeimages/form1.cs#5)]  
   
     > [!NOTE]
-    >  Версия метода `CreateCompositeBitmap` в C# использует указатели для обеспечения эффективной обработки объектов <xref:System.Drawing.Bitmap?displayProperty=nameWithType>. Поэтому необходимо включить параметр **Разрешить небезопасный код** в проекте для использования ключевого слова [небезопасный](~/docs/csharp/language-reference/keywords/unsafe.md). Дополнительные сведения о включении небезопасного кода в проекте [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] см. в разделе [Страница "Построение" в конструкторе проектов (C#)](/visualstudio/ide/reference/build-page-project-designer-csharp).  
+    >  Версия метода `CreateCompositeBitmap` в C# использует указатели для обеспечения эффективной обработки объектов <xref:System.Drawing.Bitmap?displayProperty=nameWithType>. Поэтому необходимо включить параметр **Разрешить небезопасный код** в проекте для использования ключевого слова [небезопасный](~/docs/csharp/language-reference/keywords/unsafe.md). Дополнительные сведения о включении небезопасного кода в проекте Visual C# см. в разделе [Страница "Сборка" в конструкторе проектов (C#)](/visualstudio/ide/reference/build-page-project-designer-csharp).  
   
  Следующая таблица описывает члены сети.  
   
@@ -98,7 +98,7 @@ ms.lasthandoff: 01/19/2018
 |`displayCompositeBitmap`|<xref:System.Threading.Tasks.Dataflow.ActionBlock%601>|Отображает составной точечный рисунок на форме.|  
 |`operationCancelled`|<xref:System.Threading.Tasks.Dataflow.ActionBlock%601>|Отображает изображение, чтобы указать, что операция отменена, и позволяет пользователю выбрать другую папку.|  
   
- Для подключения блоков потока данных для формирования сети в этом примере используется метод <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601.LinkTo%2A>. Метод <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601.LinkTo%2A> содержит перегруженную версию, которая принимает объект <xref:System.Predicate%601>, указывающий, допускает или отклоняет блок целевого объекта определенное сообщение. Этот механизм фильтрации позволяет блокам сообщений получать только определенные значения. В этом примере сеть может разветвляться одним из двух способов. Основная ветвь загружает изображения с диска, создает составное изображение и отображает его на форме. Другая ветвь отменяет текущую операцию. Объекты <xref:System.Predicate%601> позволяют блокам потоков данных, работающим по основной ветви, перейти к альтернативной ветви путем отклонения определенных сообщений. Например, если пользователь отменяет операцию, блок потока данных `createCompositeBitmap` на выход подает `null` (`Nothing` в [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]). Блок потока данных `displayCompositeBitmap` отклоняет входные значения `null`, и поэтому сообщение передается `operationCancelled`. Блок потока данных `operationCancelled` принимает все сообщения и поэтому отображает изображение, чтобы показать, что операция отменена.  
+ Для подключения блоков потока данных для формирования сети в этом примере используется метод <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601.LinkTo%2A>. Метод <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601.LinkTo%2A> содержит перегруженную версию, которая принимает объект <xref:System.Predicate%601>, указывающий, допускает или отклоняет блок целевого объекта определенное сообщение. Этот механизм фильтрации позволяет блокам сообщений получать только определенные значения. В этом примере сеть может разветвляться одним из двух способов. Основная ветвь загружает изображения с диска, создает составное изображение и отображает его на форме. Другая ветвь отменяет текущую операцию. Объекты <xref:System.Predicate%601> позволяют блокам потоков данных, работающим по основной ветви, перейти к альтернативной ветви путем отклонения определенных сообщений. Например, если пользователь отменяет операцию, блок потока данных `createCompositeBitmap` выводит `null` (`Nothing` в Visual Basic). Блок потока данных `displayCompositeBitmap` отклоняет входные значения `null`, и поэтому сообщение передается `operationCancelled`. Блок потока данных `operationCancelled` принимает все сообщения и поэтому отображает изображение, чтобы показать, что операция отменена.  
   
  На рисунке ниже показана сеть обработки изображений.  
   

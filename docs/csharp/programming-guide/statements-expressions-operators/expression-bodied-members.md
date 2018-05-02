@@ -1,19 +1,20 @@
 ---
-title: "Члены, воплощающие выражения (руководство по C#)"
+title: Члены, воплощающие выражения (руководство по C#)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - expression-bodied members[C#]
 - C# language, expresion-bodied members
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ead1e474fe87bd9fbd0f972bc0f2fc4fefc12ecf
-ms.sourcegitcommit: 7e99f66ef09d2903e22c789c67ff5a10aa953b2f
+ms.openlocfilehash: 5690a2ddb9127bb0c9b06d3607e3d105fca9a2e8
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="expression-bodied-members-c-programming-guide"></a>Члены, воплощающие выражения (руководство по программированию на C#)
 Определения тела выражений позволяют предоставлять реализацию члена самым быстрым и удобочитаемым способом. Определение тела выражения можно использовать, когда логика для любого поддерживаемого члена, такого как метод или свойство, состоит из одного выражения. Определение тела выражения имеет следующий общий синтаксис:
@@ -24,16 +25,16 @@ member => expression;
 
 здесь *expression* является допустимым выражением. 
 
-В C# 6 была представлена поддержка для определений тела выражений для методов и методов доступа Property Get. В C# 7 эта поддержка была расширена. Определения тела выражений можно использовать с членами типа, указанными в следующей таблице. 
+В C# 6 была представлена поддержка для определений тела выражений для методов и методов доступа Property Get. В C# 7.0 эта поддержка была расширена. Определения тела выражений можно использовать с членами типа, указанными в следующей таблице. 
 
 |Член  |Поддерживается как... |
 |---------|---------|
 |[Метод](#methods)  |C# 6 |
-|[Конструктор](#constructors)   |C# 7 |
-|[Метод завершения](#finalizers)     |C# 7 |
+|[Конструктор](#constructors)   |C# 7.0 |
+|[Метод завершения](#finalizers)     |C# 7.0 |
 |[Property Get](#property-get-statements)  |C# 6 |
-|[Property Set](#property-set-statements)  |C# 7 |
-|[Индексатор](#indexers)       |C# 7 |
+|[Property Set](#property-set-statements)  |C# 7.0 |
+|[Индексатор](#indexers)       |C# 7.0 |
 
 ## <a name="methods"></a>Методы
 

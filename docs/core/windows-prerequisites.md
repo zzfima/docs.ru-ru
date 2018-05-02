@@ -1,18 +1,18 @@
 ---
-title: "Необходимые компоненты для .NET Core в Windows"
-description: "Узнайте о том, какие зависимости необходимы для разработки и запуска приложений .NET Core на компьютере Windows."
+title: Необходимые компоненты для .NET Core в Windows
+description: Узнайте о том, какие зависимости необходимы для разработки и запуска приложений .NET Core на компьютере Windows.
 author: JRAlexander
 ms.author: johalex
-ms.date: 03/02/2018
+ms.date: 04/24/2018
 ms.topic: article
 ms.prod: .net-core
 ms.workload:
 - dotnetcore
-ms.openlocfilehash: 48102f3fb7fa6e93238eefff0e7f1ecbed4d8409
-ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
+ms.openlocfilehash: ac898ea87c0247581154eb7de65e8cbe6ea6ba15
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="prerequisites-for-net-core-on-windows"></a>Необходимые компоненты для .NET Core в Windows
 
@@ -50,7 +50,7 @@ ms.lasthandoff: 03/08/2018
 * установка .NET Core из файла *.zip*, включая серверы сборки/непрерывной интеграции/непрерывного развертывания.
 
 > [!NOTE]
-> *Только для компьютеров под управлением Windows 7 и Windows Server 2008.* Проверьте, актуальна ли установка Windows и установлено ли исправление [KB2533623](https://support.microsoft.com/help/2533623) через Центр обновления Windows.
+> *Для Windows 8.1 и более ранних версий или Windows Server 2012 R2 и более ранних версий.* Убедитесь, что установка Windows находится в актуальном состоянии и содержит обновление [ KB2999226](https://support.microsoft.com/en-us/help/2999226/update-for-universal-c-runtime-in-windows), которое можно установить из Центра обновления Windows. Если это обновление не установлено, при запуске приложения .NET Core появится следующая ошибка: `The program can't start because api-ms-win-crt-runtime-1-1-0.dll is missing from your computer. Try reinstalling the program to fix this problem.`.
 
 ## <a name="prerequisites-with-visual-studio-2017"></a>Необходимые компоненты для Visual Studio 2017
 

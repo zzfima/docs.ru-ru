@@ -1,5 +1,5 @@
 ---
-title: "Практическое руководство. Отмена блока потока данных"
+title: Практическое руководство. Отмена блока потока данных
 ms.date: 03/30/2017
 ms.prod: .net
 ms.technology: dotnet-standard
@@ -18,11 +18,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 3ef7fa62513072e1ee0dc7a8fecf3e600f9c26f2
-ms.sourcegitcommit: 6a9030eb5bd0f00e1d144f81958adb195cfb1f6f
+ms.openlocfilehash: eece4992deecbf30299d6e9e96fa8c2faf16d3ab
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-cancel-a-dataflow-block"></a>Практическое руководство. Отмена блока потока данных
 В этом документе показано, как включить отмену в приложении. В этом примере используется Windows Forms для отображения позиции активности рабочих элементов в конвейере потока данных, а также последствий отмены.  
@@ -33,7 +33,7 @@ ms.lasthandoff: 01/10/2018
   
 1.  Создайте проект **Приложение Windows Forms** на C# или Visual Basic. На следующих этапах проекту дается название `CancellationWinForms`.  
   
-2.  В конструкторе форм главной формы Form1.cs (Form1.vb для [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]) добавьте элемент управления <xref:System.Windows.Forms.ToolStrip>.  
+2.  В конструкторе форм главной формы Form1.cs (Form1.vb для Visual Basic) добавьте элемент управления <xref:System.Windows.Forms.ToolStrip>.  
   
 3.  Добавьте элемент управления <xref:System.Windows.Forms.ToolStripButton> к элементу управления <xref:System.Windows.Forms.ToolStrip>. Задайте свойству <xref:System.Windows.Forms.ToolStripItem.DisplayStyle%2A> значение <xref:System.Windows.Forms.ToolStripItemDisplayStyle.Text>, а свойству <xref:System.Windows.Forms.ToolStripItem.Text%2A> — **Добавить рабочие элементы**.  
   
@@ -48,7 +48,7 @@ ms.lasthandoff: 01/10/2018
   
 1.  В проекте добавьте ссылку на System.Threading.Tasks.Dataflow.dll.  
   
-2.  Убедитесь, что Form1.cs (Form1.vb для [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]) содержит следующие операторы `using` (`Imports` в [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]).  
+2.  Убедитесь, что Form1.cs (Form1.vb для Visual Basic) содержит следующие операторы `using` (`Imports` в Visual Basic).  
   
      [!code-csharp[TPLDataflow_CancellationWinForms#1](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_cancellationwinforms/cs/cancellationwinforms/form1.cs#1)]
      [!code-vb[TPLDataflow_CancellationWinForms#1](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_cancellationwinforms/vb/cancellationwinforms/form1.vb#1)]  
@@ -92,7 +92,7 @@ ms.lasthandoff: 01/10/2018
      [!code-vb[TPLDataflow_CancellationWinForms#6](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_cancellationwinforms/vb/cancellationwinforms/form1.vb#6)]  
   
 ## <a name="example"></a>Пример  
- В следующем примере приведен полный код Form1.cs (Form1.vb для [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]).  
+ В следующем примере приведен полный код Form1.cs (Form1.vb для Visual Basic).  
   
  [!code-csharp[TPLDataflow_CancellationWinForms#100](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_cancellationwinforms/cs/cancellationwinforms/form1.cs#100)]
  [!code-vb[TPLDataflow_CancellationWinForms#100](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_cancellationwinforms/vb/cancellationwinforms/form1.vb#100)]  

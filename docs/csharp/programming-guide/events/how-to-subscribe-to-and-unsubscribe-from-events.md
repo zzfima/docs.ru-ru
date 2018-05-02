@@ -1,22 +1,23 @@
 ---
-title: "Практическое руководство. Подписка и отмена подписки на события (Руководство по программированию в C#)"
+title: Практическое руководство. Подписка и отмена подписки на события (Руководство по программированию в C#)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - event handlers [C#], creating
 - Code Editor, event handlers
 - events [C#], creating using the IDE
 ms.assetid: 6319f39f-282c-4173-8a62-6c4657cf51cd
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 5555cc8913bff953601c54aa7430143dc22173c0
-ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
+ms.openlocfilehash: ecb65a2156f83d9da722329ff6159bb08e464eaa
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-subscribe-to-and-unsubscribe-from-events-c-programming-guide"></a>Практическое руководство. Подписка и отмена подписки на события (Руководство по программированию в C#)
 Необходимость подписки на событие, опубликованное другим классом, может возникнуть, когда требуется написать пользовательский код, вызываемый при инициировании такого события. Например, можно подписаться на событие кнопки `click`, чтобы приложение выполняло некоторое действие при нажатии пользователем кнопки.  
@@ -29,7 +30,7 @@ ms.lasthandoff: 01/05/2018
   
 3.  Дважды щелкните событие, которое требуется создать, например событие `Load`.  
   
-     [!INCLUDE[csprcs](~/includes/csprcs-md.md)] создаст пустой метод обработчика событий и добавит его в код. Код можно также добавить вручную в представлении **Код**. Например, приведенные ниже строки кода объявляют метод обработчика событий, который будет выполнен при вызове классом `Form` события `Load`.  
+     Visual C# создаст пустой метод обработчика событий и добавит его в код. Код можно также добавить вручную в представлении **Код**. Например, приведенные ниже строки кода объявляют метод обработчика событий, который будет выполнен при вызове классом `Form` события `Load`.  
   
      [!code-csharp[csProgGuideEvents#11](../../../csharp/programming-guide/events/codesnippet/CSharp/how-to-subscribe-to-and-unsubscribe-from-events_1.cs)]  
   

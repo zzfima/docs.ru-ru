@@ -1,5 +1,5 @@
 ---
-title: "Пошаговое руководство. Создание и использование динамических объектов (C# и Visual Basic)"
+title: Пошаговое руководство. Создание и использование динамических объектов (C# и Visual Basic)
 ms.date: 07/20/2015
 ms.prod: .net
 ms.technology:
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - dynamic objects
 - dynamic objects [C#]
 ms.assetid: 568f1645-1305-4906-8625-5d77af81e04f
-caps.latest.revision: 
+caps.latest.revision: 22
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: eca6da96d3bf9c5c25216e442999be77a332b5c9
-ms.sourcegitcommit: 70dcc89737127e4d5f20500242409b687e51b07e
+ms.openlocfilehash: d6b740e78503d0937c9a0f38a573bb7dd778075d
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="walkthrough-creating-and-using-dynamic-objects-c-and-visual-basic"></a>Пошаговое руководство. Создание и использование динамических объектов (C# и Visual Basic)
 
@@ -28,7 +28,7 @@ ms.lasthandoff: 02/11/2018
   
  Динамические объекты обеспечивают удобный доступ к динамическим языкам, таким как IronPython и IronRuby. С помощью динамического объекта можно ссылаться на динамический скрипт, интерпретируемый во время выполнения.  
   
- Ссылка на динамический объект выполняется с помощью позднего связывания. В C# тип объектов с поздним связыванием указывается как `dynamic`. В [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] тип объектов с поздним связыванием указывается как `Object`. Дополнительные сведения см. в разделах [dynamic](../../../csharp/language-reference/keywords/dynamic.md) и [Раннее и позднее связывание](../../../visual-basic/programming-guide/language-features/early-late-binding/index.md).  
+ Ссылка на динамический объект выполняется с помощью позднего связывания. В C# тип объектов с поздним связыванием указывается как `dynamic`. В Visual Basic тип объектов с поздним связыванием указывается как `Object`. Дополнительные сведения см. в разделах [dynamic](../../../csharp/language-reference/keywords/dynamic.md) и [Раннее и позднее связывание](../../../visual-basic/programming-guide/language-features/early-late-binding/index.md).  
   
  Вы можете создавать настраиваемые динамические объекты, используя классы из пространства имен <xref:System.Dynamic?displayProperty=nameWithType>. Например, можно создать объект <xref:System.Dynamic.ExpandoObject> и задать члены этого объекта во время выполнения. Также можно создать собственный тип, наследующий класс <xref:System.Dynamic.DynamicObject>. Затем для обеспечения динамических функциональных возможностей во время выполнения можно переопределить члены класса <xref:System.Dynamic.DynamicObject>.  
   
@@ -127,7 +127,7 @@ ms.lasthandoff: 02/11/2018
   
 #### <a name="to-create-a-sample-application-that-uses-the-custom-dynamic-object"></a>Создание примера приложения, в котором применяется пользовательский динамический объект  
   
-1.  В **обозревателе решений** дважды щелкните файл Module1.vb, если используется [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], или файл Program.cs, если используется Visual C#.  
+1.  В **обозревателе решений** дважды щелкните файл Module1.vb, если используется Visual Basic, или файл Program.cs, если используется Visual C#.  
   
 2.  Добавьте следующий код в процедуру Main, чтобы создать экземпляр класса `ReadOnlyFile` для файла TextFile1.txt. В этом коде используется позднее связывание для вызова динамических элементов и извлечения строк текста, которые содержат строку "Customer".  
   
@@ -147,11 +147,11 @@ ms.lasthandoff: 02/11/2018
   
 2.  Убедитесь, что в диалоговом окне **Создание проекта** в области **Типы проектов** выбран пункт **Windows**. В области **Шаблоны** выберите пункт **Консольное приложение**. В поле **Имя** введите `DynamicIronPythonSample` и нажмите кнопку **ОК**. Проект создан.  
   
-3.  Если используется [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], щелкните правой кнопкой мыши проект DynamicIronPythonSample и выберите пункт **Свойства**. Перейдите на вкладку **Ссылки**. Нажмите кнопку **Добавить**. Если используется Visual C#, в **обозревателе решений** щелкните правой кнопкой мыши папку **Ссылки** и выберите пункт **Добавить ссылку**.  
+3.  Если используется Visual Basic, щелкните правой кнопкой мыши проект DynamicIronPythonSample и выберите пункт **Свойства**. Перейдите на вкладку **Ссылки**. Нажмите кнопку **Добавить**. Если используется Visual C#, в **обозревателе решений** щелкните правой кнопкой мыши папку **Ссылки** и выберите пункт **Добавить ссылку**.  
   
 4.  На вкладке **Обзор** перейдите к папке, в которой установлены библиотеки IronPython. Например, C:\Program Files\IronPython 2.6 for .NET 4.0. Выберите библиотеки **IronPython.dll**, **IronPython.Modules.dll**, **Microsoft.Scripting.dll** и **Microsoft.Dynamic.dll**. Нажмите кнопку **ОК**.  
   
-5.  Если используется [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], отредактируйте файл Module1.vb. Если используется Visual C#, отредактируйте файл Program.cs.  
+5.  Если используется Visual Basic, отредактируйте файл Module1.vb. Если используется Visual C#, отредактируйте файл Program.cs.  
   
 6.  В верхней части файла добавьте следующий код для импорта пространств имен `Microsoft.Scripting.Hosting` и `IronPython.Hosting` из библиотек IronPython.  
   

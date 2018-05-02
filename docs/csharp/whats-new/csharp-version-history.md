@@ -9,11 +9,11 @@ ms.topic: article
 ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
-ms.openlocfilehash: d24d190eab5896121231543e6696b6a4861b5bb8
-ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
+ms.openlocfilehash: 0a24e8cf22bb8350777879a3adfd2757b89cd305
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="the-history-of-c"></a>История языка C# #
 
@@ -48,7 +48,7 @@ ms.lasthandoff: 03/28/2018
 
 ## <a name="c-version-30"></a>C# версии 3.0
 
-C# версии 3.0 был выпущен в конце 2007 года вместе с Visual Studio 2008, однако существенно набор возможностей языка пополнится только в C# версии 3.5. Эта версия ознаменовала кардинальное изменение развития C#. Она доказала, что C# действительно является достойным языком программирования. Давайте рассмотрим некоторые основные возможности в этой версии:
+C# версии 3.0 был выпущен в конце 2007 года вместе с Visual Studio 2008, однако существенно набор возможностей языка пополнится только в .NET Framework версии 3.5. Эта версия ознаменовала кардинальное изменение развития C#. Она доказала, что C# действительно является достойным языком программирования. Давайте рассмотрим некоторые основные возможности в этой версии:
 
 - [Автоматически реализуемые свойства](../programming-guide/classes-and-structs/auto-implemented-properties.md)
 - [Анонимные типы](../programming-guide/classes-and-structs/anonymous-types.md)

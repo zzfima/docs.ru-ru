@@ -1,5 +1,5 @@
 ---
-title: "Соглашения о написании кода на C# (Руководство по программированию на C#)"
+title: Соглашения о написании кода на C# (Руководство по программированию на C#)
 ms.date: 07/20/2015
 ms.prod: .net
 ms.technology:
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - Visual C#, coding conventions
 - C# language, coding conventions
 ms.assetid: f4f60de9-d49b-4fb6-bab1-20e19ea24710
-caps.latest.revision: 
+caps.latest.revision: 32
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 4a8806ddb0a9cc62fe68dc9d558917ee2d532e7f
-ms.sourcegitcommit: 75a180acb5d8a2dbd4a52915ce8e980749fb1d05
+ms.openlocfilehash: 697c3df3d418c57d58c42dc3cfb900de02146c80
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/24/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="c-coding-conventions-c-programming-guide"></a>Соглашения о написании кода на C# (Руководство по программированию на C#)
  Соглашения о написании кода предназначены для реализации следующих целей.  
@@ -76,7 +76,7 @@ ms.lasthandoff: 02/24/2018
   
 ### <a name="string-data-type"></a>Тип данных String  
   
--   Для сцепления коротких строк рекомендуется использовать оператор `+`, как показано в следующем коде.  
+-   Для сцепления коротких строк рекомендуется использовать [интерполяцию строк](../../language-reference/tokens/interpolated.md), как показано в следующем коде.  
   
      [!code-csharp[csProgGuideCodingConventions#6](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#6)]  
   

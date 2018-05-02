@@ -1,25 +1,26 @@
 ---
-title: "Фильтрация вывода My.Application.Log (Visual Basic)"
-ms.custom: 
+title: Фильтрация вывода My.Application.Log (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - My.Log object, filtering output
 - My.Application.Log object, filtering output
 - application event logs, output filtering
 ms.assetid: 2c0a457a-38a4-49e1-934d-a51320b7b4ca
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 90fd445227e0c8290ad63fccf807d6d7bdf43ccd
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 6c048578b320fedd2153aee7b466b1494551abe0
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="walkthrough-filtering-myapplicationlog-output-visual-basic"></a>Пошаговое руководство. Фильтрация вывода My.Application.Log (Visual Basic)
 В этом пошаговом руководстве демонстрируется изменение фильтрации журнала по умолчанию для объекта `My.Application.Log`, чтобы контролировать, какие данные передаются из объекта `Log` в прослушиватели и какие данные записываются прослушивателями. Режим ведения журнала можно изменить даже после создания приложения, поскольку сведения о конфигурации хранятся в файле конфигурации приложения.  
@@ -29,7 +30,7 @@ ms.lasthandoff: 11/21/2017
   
 #### <a name="to-build-the-sample-application"></a>Создание примера приложения  
   
-1.  Откройте новый проект приложения Windows [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
+1.  Откройте новый проект приложения Windows на Visual Basic.  
   
 2.  Добавьте кнопку с именем Button1 в форму Form1.  
   
@@ -65,7 +66,7 @@ ms.lasthandoff: 11/21/2017
 |---|---| 
 |`Critical`|`Critical`|  
 |`Error`|`Critical` или `Error`|  
-|`Warning`|`Critical`, `Error` или `Warning`|  
+|`Warning`|`Critical`, `Error`или `Warning`|  
 |`Information`|`Critical`, `Error`, `Warning` или `Information`|  
 |`Verbose`|`Critical`, `Error`, `Warning`, `Information` или `Verbose`|  
 |`ActivityTracing`|`Start`, `Stop`, `Suspend`, `Resume` или `Transfer`|  
@@ -81,7 +82,7 @@ ms.lasthandoff: 11/21/2017
   
 1.  Щелкните правой кнопкой мыши файл app.config в **обозревателе решений** и выберите команду **Открыть**.  
   
-     -или-  
+     - или -  
   
      Если файл app.config отсутствует, выполните указанные ниже действия.  
   
@@ -156,7 +157,7 @@ ms.lasthandoff: 11/21/2017
   
 1.  Щелкните правой кнопкой мыши файл app.config в **обозревателе решений** и выберите команду **Открыть**.  
   
-     -или-  
+     - или -  
   
      Если файл app.config отсутствует, выполните указанные ниже действия.  
   

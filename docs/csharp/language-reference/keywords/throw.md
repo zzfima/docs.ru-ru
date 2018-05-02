@@ -1,8 +1,9 @@
 ---
-title: "throw (Справочник по C#)"
+title: throw (Справочник по C#)
 ms.date: 03/02/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 f1_keywords:
 - throw
@@ -12,14 +13,14 @@ helpviewer_keywords:
 - throw expression [C#]
 - throw keyword [C#]
 ms.assetid: 5ac4feef-4b1a-4c61-aeb4-61d549e5dd42
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e56bd8f8b6bfcc7c8f1eb2df6ac157e28adac331
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 088a8e70c5aaaae6f833f12cad1052c30fbb6bfa
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="throw-c-reference"></a>throw (Справочник по C#)
 Сообщает о возникновении исключения во время выполнения программы.  
@@ -50,9 +51,9 @@ throw [e]
  
 ## <a name="the-throw-expression"></a>Выражение `throw`
 
-Начиная с C# 7 `throw` можно использовать в качестве выражения, а также как оператор. Это позволяет вызывать исключения в контекстах, которые ранее не поддерживались. Сюда входит следующее.
+Начиная с C# 7.0 `throw` можно использовать в качестве выражения, а также как оператор. Это позволяет вызывать исключения в контекстах, которые ранее не поддерживались. Сюда входит следующее.
 
-- [Условный оператор](../operators/conditional-operator.md). В следующем примере используется исключение `throw` для создания <xref:System.ArgumentException>, если методу передается массив пустых строк. До выхода C# 7 эта логика должна была отображаться в инструкции `if`/`else`.
+- [Условный оператор](../operators/conditional-operator.md). В следующем примере используется исключение `throw` для создания <xref:System.ArgumentException>, если методу передается массив пустых строк. До выхода C# 7.0 эта логика должна была отображаться в операторе `if`/`else`.
 
    [!code-csharp[csrefKeyword#4](../../../../samples/snippets/csharp/language-reference/keywords/throw/conditional.cs#1)]  
   
@@ -72,7 +73,7 @@ throw [e]
  [Справочник по C#](../../../csharp/language-reference/index.md)  
  [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
  [try-catch](../../../csharp/language-reference/keywords/try-catch.md)  
- [Try, catch и throw-операторы в C++](../../../csharp/language-reference/keywords/try-catch.md)  
+ [Операторы try, catch и throw в C++](../../../csharp/language-reference/keywords/try-catch.md)  
  [Ключевые слова в C#](../../../csharp/language-reference/keywords/index.md)  
  [Операторы обработки исключений](../../../csharp/language-reference/keywords/exception-handling-statements.md)  
  [Практическое руководство. Явное создание исключений](../../../standard/exceptions/how-to-explicitly-throw-exceptions.md)

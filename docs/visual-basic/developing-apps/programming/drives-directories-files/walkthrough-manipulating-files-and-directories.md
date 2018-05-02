@@ -1,11 +1,12 @@
 ---
-title: "Операции с файлами и каталогами в Visual Basic"
-ms.custom: 
+title: Операции с файлами и каталогами в Visual Basic
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - files [Visual Basic], reading text
@@ -21,19 +22,19 @@ helpviewer_keywords:
 - writing to files [Visual Basic], walkthroughs
 - I/O [Visual Basic], reading text from files
 ms.assetid: cae77565-9f78-4e46-8e42-eb2f9f8e1ffd
-caps.latest.revision: "49"
+caps.latest.revision: 49
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: bd1e61503394741e7943d30d383f2e7c5ea35f68
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: bff2e66b1a196117117370f7620f3f55576ad19b
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="walkthrough-manipulating-files-and-directories-in-visual-basic"></a>Пошаговое руководство. Операции с файлами и каталогами в Visual Basic
-В этом пошаговом руководстве приводятся основные сведения о файловом вводе-выводе в [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. В нем описывается создание небольшого приложения, перечисляющего текстовые файлы в каталоге и анализирующего их. Для каждого выбранного текстового файла приложение предоставляет атрибуты файла и первую строку содержимого. Кроме того, предоставляется возможность записать информацию в файл журнала.  
+В этом пошаговом руководстве приводятся основные сведения о файловом вводе-выводе в Visual Basic. В нем описывается создание небольшого приложения, перечисляющего текстовые файлы в каталоге и анализирующего их. Для каждого выбранного текстового файла приложение предоставляет атрибуты файла и первую строку содержимого. Кроме того, предоставляется возможность записать информацию в файл журнала.  
   
- В этом пошаговом руководстве используются члены `My.Computer.FileSystem Object`, доступные в [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. Дополнительные сведения см. в разделе <xref:Microsoft.VisualBasic.FileIO.FileSystem>. В конце пошагового руководства приводится эквивалентный пример, в котором используются классы пространства имен <xref:System.IO>.  
+ В этом пошаговом руководстве используются члены `My.Computer.FileSystem Object`, доступные в Visual Basic. Дополнительные сведения см. в разделе <xref:Microsoft.VisualBasic.FileIO.FileSystem>. В конце пошагового руководства приводится эквивалентный пример, в котором используются классы пространства имен <xref:System.IO>.  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
@@ -51,13 +52,13 @@ ms.lasthandoff: 11/21/2017
   
 4.  Добавьте в форму элементы управления из приведенной ниже таблицы и установите для их свойств соответствующие значения.  
   
-    |Control|Свойство|Значение|  
+    |Элемент управления|Свойство.|Значение|  
     |-------------|--------------|-----------|  
-    |**ListBox**|**Имя**|`filesListBox`|  
-    |**Button**|**Имя**<br /><br /> **Текст**|`browseButton`<br /><br /> **Обзор**|  
-    |**Button**|**Имя**<br /><br /> **Текст**|`examineButton`<br /><br /> **Исследовать**|  
-    |**CheckBox**|**Имя**<br /><br /> **Текст**|`saveCheckBox`<br /><br /> **Сохранить результаты**|  
-    |**FolderBrowserDialog**|**Имя**|`FolderBrowserDialog1`|  
+    |**ListBox**|**Name**|`filesListBox`|  
+    |**Button**|**Name**<br /><br /> **Text**|`browseButton`<br /><br /> **Обзор**|  
+    |**Button**|**Name**<br /><br /> **Text**|`examineButton`<br /><br /> **Исследовать**|  
+    |**CheckBox**|**Name**<br /><br /> **Text**|`saveCheckBox`<br /><br /> **Сохранить результаты**|  
+    |**FolderBrowserDialog**|**Name**|`FolderBrowserDialog1`|  
   
 ### <a name="to-select-a-folder-and-list-files-in-a-folder"></a>Выбор папки и перечисление файлов в ней  
   

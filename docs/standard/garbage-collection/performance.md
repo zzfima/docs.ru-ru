@@ -1,29 +1,29 @@
 ---
-title: "Сборка мусора и производительность"
-ms.custom: 
+title: Сборка мусора и производительность
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - garbage collection, troubleshooting
 - garbage collection, performance
 ms.assetid: c203467b-e95c-4ccf-b30b-953eb3463134
-caps.latest.revision: 
+caps.latest.revision: 35
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: e1cf3475ded3582cdf0754e68d13c97bd87b06a8
-ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
+ms.openlocfilehash: daf70cdb7344f895059d0bc8b986edddbf7d53bc
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="garbage-collection-and-performance"></a>Сборка мусора и производительность
 <a name="top"></a> В этом разделе описаны вопросы, связанные со сборкой мусора и использованием памяти. Здесь рассматриваются проблемы, относящиеся к управляемой куче, и объясняется, как свести к минимуму влияние сборки мусора на работу приложений. Для каждого аспекта приводятся ссылки на процедуры, которые можно использовать для анализа проблем.  
@@ -48,9 +48,9 @@ ms.lasthandoff: 01/09/2018
   
 <a name="sos"></a>   
 ### <a name="debugging-with-sos"></a>Отладка с помощью расширения SOS  
- Для проверки объектов в управляемой куче можно использовать [отладчик Windows (WinDbg)](/windows-hardware/drivers/debugger/index).  
-  
- Чтобы установить WinDbg, установите средства отладки для Windows с [веб-сайта загрузки комплекта WDK и средств разработчика](http://go.microsoft.com/fwlink/?LinkID=103787).  
+ Для проверки объектов в управляемой куче можно использовать [отладчик Windows (WinDbg)](/windows-hardware/drivers/debugger/index).
+ 
+ Чтобы установить WinDbg, установите средства отладки для Windows со страницы [скачивания средств отладки для Windows](/windows-hardware/drivers/debugger/debugger-download-tools).
   
 <a name="etw"></a>   
 ### <a name="garbage-collection-etw-events"></a>События сборки мусора (трассировка событий Windows)  

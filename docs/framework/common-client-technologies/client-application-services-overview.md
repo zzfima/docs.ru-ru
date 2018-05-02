@@ -1,27 +1,29 @@
 ---
-title: "Общие сведения о службах клиентских приложений"
-ms.custom: 
+title: Общие сведения о службах клиентских приложений
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - client application services, classes
 - client application services, about client application services
 ms.assetid: f0a2da13-e282-4fd7-88a1-f9102c9aeab1
-caps.latest.revision: "25"
+caps.latest.revision: 25
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 55b4ab154f9f3a9b17274697c30ca826218322ab
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 9ddc1b505146e7ca31bca5acc5e9d19d258a860d
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="client-application-services-overview"></a>Общие сведения о службах клиентских приложений
 Службы клиентских приложений предоставляют упрощенный доступ к службам входа, ролей и профилей [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] из приложений Windows Forms и Windows Presentation Foundation (WPF). Службы приложений [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] включены в расширения Microsoft ASP.NET 2.0 AJAX, которые входят в состав [!INCLUDE[vs_orcas_long](../../../includes/vs-orcas-long-md.md)] и [!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)]. Эти службы позволяют нескольким веб-приложениям и приложениям Windows использовать сведения о пользователе и функции управления пользователями с одного сервера.  
@@ -59,7 +61,7 @@ ms.lasthandoff: 12/22/2017
  Сведения о настройке службы ролей [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] см. в разделе [Использование сведений о ролях в Microsoft Ajax](http://msdn.microsoft.com/library/280f6ad9-ba1a-4fc9-b0cc-22e39e54a82d).  
   
 ## <a name="settings"></a>Параметры  
- Службы клиентских приложений можно использовать, чтобы получать параметры приложения пользователя из существующей службы профилей [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)]. Функциональность веб-параметров в службах клиентских приложений интегрируется с функциональностью параметров приложения, предоставленной в [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)]. Для извлечения веб-параметров сначала создайте класс `Settings` (доступен как `Properties.Settings.Default` в C# и как `My.Settings` в [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]) в своем проекте на вкладке **Параметры** конструктора проектов [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]. На вкладке **Параметры** нажмите кнопку **Загрузить веб-параметры**, чтобы получить веб-параметры и добавить их в созданный класс `Settings`. Вы можете использовать веб-параметры, настроенные для использования всеми прошедшими проверку подлинности пользователями или всеми анонимными пользователями.  
+ Службы клиентских приложений можно использовать, чтобы получать параметры приложения пользователя из существующей службы профилей [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)]. Функциональность веб-параметров в службах клиентских приложений интегрируется с функциональностью параметров приложения, предоставленной в [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)]. Для извлечения веб-параметров сначала создайте класс `Settings` (доступен как `Properties.Settings.Default` в C# и как `My.Settings` в Visual Basic) в своем проекте на вкладке **Параметры** конструктора проектов [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]. На вкладке **Параметры** нажмите кнопку **Загрузить веб-параметры**, чтобы получить веб-параметры и добавить их в созданный класс `Settings`. Вы можете использовать веб-параметры, настроенные для использования всеми прошедшими проверку подлинности пользователями или всеми анонимными пользователями.  
   
  Дополнительные сведения о параметрах приложения см. в разделе [Общие сведения о параметрах приложения](../../../docs/framework/winforms/advanced/application-settings-overview.md). Дополнительные сведения о реализации собственного класса параметров вместо создания его в [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] см. в разделе [Практическое руководство. Создание параметров приложения](../../../docs/framework/winforms/advanced/how-to-create-application-settings.md). Сведения о настройке службы профилей [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] см. в разделе [Использование сведений о профилях в Microsoft Ajax](http://msdn.microsoft.com/library/91239ae6-d01c-4f4e-a433-eb9040dbed61).  
   

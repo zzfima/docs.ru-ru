@@ -1,5 +1,5 @@
 ---
-title: "Свойства (Руководство по программированию в C#)"
+title: Свойства (Руководство по программированию в C#)
 ms.date: 03/10/2017
 ms.prod: .net
 ms.technology:
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - properties [C#]
 - C# language, properties
 ms.assetid: e295a8a2-b357-4ee7-a12e-385a44146fa8
-caps.latest.revision: 
+caps.latest.revision: 38
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 6f40bea2c7d39d88839a70e73e391113bee86f14
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 186384c0a251d72b8726b3ae2f8f3faf0e6e008f
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="properties-c-programming-guide"></a>Свойства (Руководство по программированию в C#)
 
@@ -51,7 +51,7 @@ ms.lasthandoff: 11/21/2017
 
  [!code-csharp[Properties#2](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/properties-2.cs)]  
 
- Начиная с C# 7 методы доступа `get` и `set` можно реализовывать в виде членов, воплощающих выражения. В этом случае необходимо указывать ключевые слова `get` и `set`. В следующем примере показано использование определений текста выражений для обоих методов доступа. Обратите внимание, что ключевое слово `return` не используется с методом доступа `get`.
+ Начиная с C# 7.0 методы доступа `get` и `set` можно реализовывать в виде членов, воплощающих выражения. В этом случае необходимо указывать ключевые слова `get` и `set`. В следующем примере показано использование определений текста выражений для обоих методов доступа. Обратите внимание, что ключевое слово `return` не используется с методом доступа `get`.
  
   [!code-csharp[Properties#3](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/properties-3.cs)]  
 

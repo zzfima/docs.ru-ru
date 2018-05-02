@@ -1,5 +1,5 @@
 ---
-title: "Практическое руководство. Указание планировщика задач в блоке потока данных"
+title: Практическое руководство. Указание планировщика задач в блоке потока данных
 ms.date: 03/30/2017
 ms.prod: .net
 ms.technology: dotnet-standard
@@ -18,11 +18,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 592b6c5c92a2c752fa0d2694cdb477423b15eb0d
-ms.sourcegitcommit: 6a9030eb5bd0f00e1d144f81958adb195cfb1f6f
+ms.openlocfilehash: 15b1168c34a22394424f250e8ab1887ec8ee1a5e
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-specify-a-task-scheduler-in-a-dataflow-block"></a>Практическое руководство. Указание планировщика задач в блоке потока данных
 В этом документе приводятся способы привязки определенного планировщика задач при использовании потока данных в приложении. В этом пример используется класс <xref:System.Threading.Tasks.ConcurrentExclusiveSchedulerPair?displayProperty=nameWithType> в приложении Windows Forms для указания того, когда активна задача чтения и когда активна задача записи. Здесь также используется метод <xref:System.Threading.Tasks.TaskScheduler.FromCurrentSynchronizationContext%2A?displayProperty=nameWithType>, чтобы позволить блоку потока данных выполняться в потоке пользовательского интерфейса.
@@ -31,9 +31,9 @@ ms.lasthandoff: 01/10/2018
 
 ## <a name="to-create-the-windows-forms-application"></a>Создание приложения Windows Forms  
   
-1.  Создайте [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] или проект **Приложение Windows Forms** на Visual Basic. На следующих этапах проекту дается название `WriterReadersWinForms`.  
+1.  Создайте проект **Приложение Windows Forms** на Visual C# или Visual Basic. На следующих этапах проекту дается название `WriterReadersWinForms`.  
   
-2.  В конструкторе форм главной формы Form1.cs (Form1.vb для [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]) добавьте четыре элемента управления <xref:System.Windows.Forms.CheckBox>. Установите свойству <xref:System.Windows.Forms.Control.Text%2A> значение **Reader 1** для `checkBox1`, **Reader 2** для `checkBox2`, **Reader 3** для `checkBox3` и **Writer** для `checkBox4`. Задайте свойству <xref:System.Windows.Forms.Control.Enabled%2A> каждого элемента управления значение `False`.  
+2.  В конструкторе форм главной формы Form1.cs (Form1.vb для Visual Basic) добавьте четыре элемента управления <xref:System.Windows.Forms.CheckBox>. Установите свойству <xref:System.Windows.Forms.Control.Text%2A> значение **Reader 1** для `checkBox1`, **Reader 2** для `checkBox2`, **Reader 3** для `checkBox3` и **Writer** для `checkBox4`. Задайте свойству <xref:System.Windows.Forms.Control.Enabled%2A> каждого элемента управления значение `False`.  
   
 3.  Добавьте на форму элемент управления <xref:System.Windows.Forms.Timer>. Задайте для свойства <xref:System.Windows.Forms.Timer.Interval%2A> значение `2500`.  
   
@@ -44,7 +44,7 @@ ms.lasthandoff: 01/10/2018
   
 1.  В проекте добавьте ссылку на System.Threading.Tasks.Dataflow.dll.  
   
-2.  Убедитесь, что Form1.cs (Form1.vb для [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]) содержит следующие операторы `using` (`Imports` в [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]).  
+2.  Убедитесь, что Form1.cs (Form1.vb для Visual Basic) содержит следующие операторы `using` (`Imports` в Visual Basic).  
   
      [!code-csharp[TPLDataflow_WriterReadersWinForms#1](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_writerreaderswinforms/cs/writerreaderswinforms/form1.cs#1)]
      [!code-vb[TPLDataflow_WriterReadersWinForms#1](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_writerreaderswinforms/vb/writerreaderswinforms/form1.vb#1)]  
@@ -81,7 +81,7 @@ ms.lasthandoff: 01/10/2018
  В этом примере также используется класс <xref:System.Threading.Tasks.ConcurrentExclusiveSchedulerPair>, чтобы обеспечить возможность одновременной работы для нескольких блоков потока данных и монопольной работы еще одного блока потока данных в отношении остальных блоков потока данных, выполняемых в этом же объекте <xref:System.Threading.Tasks.ConcurrentExclusiveSchedulerPair>. Этот способ полезен, когда несколько блоков потока данных совместно используют ресурс, и некоторым требуется монопольный доступ к этому ресурсу, поскольку это исключают потребность вручную синхронизировать доступ к этому ресурсу. Исключение ручной синхронизации может сделать код более эффективным.  
   
 ## <a name="example"></a>Пример  
- В следующем примере приведен полный код Form1.cs (Form1.vb для [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]).  
+ В следующем примере приведен полный код Form1.cs (Form1.vb для Visual Basic).  
   
  [!code-csharp[TPLDataflow_WriterReadersWinForms#100](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_writerreaderswinforms/cs/writerreaderswinforms/form1.cs#100)]
  [!code-vb[TPLDataflow_WriterReadersWinForms#100](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_writerreaderswinforms/vb/writerreaderswinforms/form1.vb#100)]  
