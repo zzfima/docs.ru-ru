@@ -1,21 +1,19 @@
 ---
 title: Необходимые компоненты для .NET Core в Linux
 description: Поддерживаемые версии Linux и зависимости .NET Core для разработки, развертывания и запуска приложений .NET Core на компьютерах с Linux.
-keywords: .NET, .NET Core, Linux, debian, ubuntu, RHEL, centOS,
 author: jralexander
 ms.author: johalex
 ms.date: 04/19/2018
 ms.topic: conceptual
-ms.prod: .net-core
+ms.prod: dotnet-core
 ms.devlang: dotnet
-ms.assetid: c33b1241-ab66-4583-9eba-52cf51146f5a
 ms.workload:
 - dotnetcore
-ms.openlocfilehash: 7ce13af00a43e1ce84f7c8af70155d0c4a5bed4c
-ms.sourcegitcommit: 68b60d38043e50104ccc90c76f8599b1ffe18346
+ms.openlocfilehash: 9d986ed56bbc6f803988fde4b5500cd5d5364050
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="prerequisites-for-net-core-on-linux"></a>Необходимые компоненты для .NET Core в Linux
 
