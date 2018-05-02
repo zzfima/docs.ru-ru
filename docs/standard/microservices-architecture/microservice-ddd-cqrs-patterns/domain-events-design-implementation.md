@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: af6a6b73c790577cebf301075f2ff7e90960ea62
-ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
+ms.openlocfilehash: bec1341df85f86d5f2aa15753a11a9c4a2d0173f
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="domain-events-design-and-implementation"></a>События предметной области: проектирование и реализация
 
@@ -209,7 +209,7 @@ public class OrderingContext : DbContext, IUnitOfWork
 
 "Не следует ожидать, что любое правило, которое распространяется на агрегаты, всегда будет актуальным. Применив обработку событий, пакетную обработку или другие механизмы обновления, можно устранить зависимости в установленные конкретные строки". (стр. 128)
 
-Вон Вернон в своей статье [Effective Aggregate Design. Part II: Making Aggregates Work Together (Эффективная разработка агрегатов. Часть II: организация совместной работы агрегатов)](http://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_2.pdf) выражает следующую мысль.
+Вон Вернон в своей статье [Effective Aggregate Design. Part II: Making Aggregates Work Together (Эффективная разработка агрегатов. Часть II: организация совместной работы агрегатов)](https://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_2.pdf) выражает следующую мысль.
 
 Таким образом, если для выполнения команды в одном экземпляре агрегата требуется выполнить дополнительные бизнес-правила в одном или нескольких агрегатах, используйте итоговую согласованность\[...\] Существует практический способ поддержки итоговой согласованности в модели DDD. Метод агрегата публикует событие предметной области, которое своевременно доставляется одному или нескольким асинхронным подписчикам.
 
@@ -347,13 +347,13 @@ public class ValidateOrAddBuyerAggregateWhenOrderStartedDomainEventHandler
     [*https://lostechies.com/jimmybogard/2014/05/13/a-better-domain-events-pattern/*](https://lostechies.com/jimmybogard/2014/05/13/a-better-domain-events-pattern/)
 
 -   **Вон Вернон (Vaughn Vernon). Эффективная разработка агрегатов. Часть II: организация совместной работы агрегатов**
-    [*http://dddcommunity.org/wp-content/uploads/files/pdf\_articles/Vernon\_2011\_2.pdf*](http://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_2.pdf)
+    [*http://dddcommunity.org/wp-content/uploads/files/pdf\_articles/Vernon\_2011\_2.pdf*](https://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_2.pdf)
 
 -   **Джимми Богард (Jimmy Bogard). Усиление предметной области: события предметной области**
     *<https://lostechies.com/jimmybogard/2010/04/08/strengthening-your-domain-domain-events/> *
 
 -   **Тони Чыонг (Tony Truong). Пример шаблона событий предметной области**
-    [*http://www.tonytruong.net/domain-events-pattern-example/*](http://www.tonytruong.net/domain-events-pattern-example/)
+    [*https://www.tonytruong.net/domain-events-pattern-example/*](https://www.tonytruong.net/domain-events-pattern-example/)
 
 -   **Уди Дахан (Udi Dahan). Создание полностью инкапсулированных моделей предметной области**
     [*http://udidahan.com/2008/02/29/how-to-create-fully-encapsulated-domain-models/*](http://udidahan.com/2008/02/29/how-to-create-fully-encapsulated-domain-models/)

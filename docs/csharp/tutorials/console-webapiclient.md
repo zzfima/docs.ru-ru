@@ -1,6 +1,6 @@
 ---
-title: "Создание клиента REST с использованием .NET Core"
-description: "Это руководство раскроет для вас некоторые возможности .NET Core и языка C#."
+title: Создание клиента REST с использованием .NET Core
+description: Это руководство раскроет для вас некоторые возможности .NET Core и языка C#.
 keywords: .NET, .NET Core
 author: BillWagner
 ms.author: wiwagn
@@ -10,11 +10,11 @@ ms.prod: .net-core
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 51033ce2-7a53-4cdd-966d-9da15c8204d2
-ms.openlocfilehash: 22391c4db3027c0fad2115c767b5e2808fee28a0
-ms.sourcegitcommit: 3a96c706e4dbb4667bf3bf37edac9e1666646f93
+ms.openlocfilehash: 8cca71b9b8e09fd26f80d53618a3f1e278e28390
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="rest-client"></a>Клиент REST
 
@@ -31,7 +31,7 @@ ms.lasthandoff: 02/27/2018
 
 В этом руководстве описано множество функций. Давайте начнем поочередно разбирать их.
 
-Если вы хотите поработать с [примером окончательного кода](https://github.com/dotnet/docs/tree/master/samples/csharp/getting-started/console-webapiclient) в этом разделе, вы можете его загрузить. Инструкции по загрузке см. в разделе [Просмотр и скачивание примеров](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
+Если вы хотите поработать с [примером окончательного кода](https://github.com/dotnet/samples/tree/master/csharp/getting-started/console-webapiclient) в этом разделе, вы можете его загрузить. Инструкции по загрузке см. в разделе [Просмотр и скачивание примеров](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
 
 ## <a name="prerequisites"></a>Предварительные требования
 Компьютер должен быть настроен для выполнения .NET Core. Инструкции по установке см. на странице [.NET Core](https://www.microsoft.com/net/core). Это приложение можно запустить в ОС Windows, Linux, macOS или в контейнере Docker. Вам потребуется редактор кода, но вы можете выбрать любой привычный для вас. В примерах ниже используется кроссплатформенный редактор [Visual Studio Code](https://code.visualstudio.com/) с открытым исходным кодом. Вы можете заменить его на любое другое средство, с которым вам удобно работать.
@@ -63,7 +63,7 @@ ms.lasthandoff: 02/27/2018
 После внесения этих изменений снова запустите команду `dotnet restore` ([см. примечание](#dotnet-restore-note)), чтобы установить в системе нужный пакет.
 
 ## <a name="making-web-requests"></a>Выполнение веб-запросов
-Теперь вы готовы получать данные из Интернета. В этом приложении вы будете считывать информацию из [API GitHub](https://developer.github.com/v3/). Давайте, например, получим информацию о проектах под зонтичным брендом [.NET Foundation](http://www.dotnetfoundation.org/). Для начала вам нужно составить запрос к API GitHub для получения информации о проектах. Вы будете использовать вот эту конечную точку: [https://api.github.com/orgs/dotnet/repos](https://api.github.com/orgs/dotnet/repos). Вы будете получать все данные об этих проектах, поэтому используйте запрос HTTP GET.
+Теперь вы готовы получать данные из Интернета. В этом приложении вы будете считывать информацию из [API GitHub](https://developer.github.com/v3/). Давайте, например, получим информацию о проектах под зонтичным брендом [.NET Foundation](http://www.dotnetfoundation.org/). Для начала вам нужно составить запрос к API GitHub для получения информации о проектах. Используемая конечная точка: [https://api.github.com/orgs/dotnet/repos](https://api.github.com/orgs/dotnet/repos). Вы будете получать все данные об этих проектах, поэтому используйте запрос HTTP GET.
 Браузер также использует запросы HTTP GET, поэтому вы можете указать этот URL-адрес в адресной строке браузера и увидеть, какие сведения вы будете получать и обрабатывать.
 
 Для выполнения веб-запросов используется класс <xref:System.Net.Http.HttpClient>. Как и все современные API-интерфейсы .NET, <xref:System.Net.Http.HttpClient> поддерживает для API-интерфейсов длительного выполнения только асинхронные методы.
@@ -380,7 +380,7 @@ using System.Globalization;
 Console.WriteLine(repo.LastPush);
 ```
 
-Теперь версия вашего приложения должна совпадать с [полной версией примера](https://github.com/dotnet/docs/tree/master/samples/csharp/getting-started/console-webapiclient).
+Теперь версия вашего приложения должна совпадать с [полной версией примера](https://github.com/dotnet/samples/tree/master/csharp/getting-started/console-webapiclient).
  
 ## <a name="conclusion"></a>Заключение
 

@@ -12,11 +12,11 @@ ms.assetid: 6685467b-28fa-4cde-9516-f0e00ad08911
 caps.latest.revision: 36
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 58e63d95c2f10329f85d6150b58f196294de38d1
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: ebaa934ffaed985439ed65b9f5308404171a91bd
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="get-started-with-visual-basic"></a>Начало работы с Visual Basic
 Этот раздел документации помогает начать разработку приложений на Visual Basic.  
@@ -64,7 +64,7 @@ ms.lasthandoff: 04/26/2018
  Способы получения поддержки и обеспечения обратной связи.  
   
  [Visual Studio](/visualstudio/)  
- Ссылки на документацию по [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)].  
+ Ссылки на документацию по Visual Studio.  
   
  [C#](../../csharp/index.md) Ссылки на документацию по разработке приложений с помощью Visual C#.  
   
@@ -72,4 +72,4 @@ ms.lasthandoff: 04/26/2018
  Ссылки на документацию по Visual C++.  
   
  [Office and SharePoint Development](https://msdn.microsoft.com/library/d2tx7z6d) (Разработка приложений Office и SharePoint)  
- Сведения об использовании приложений Microsoft Office и [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] в рамках бизнес-приложений.
+ Сведения об использовании Microsoft Office и Visual Studio в рамках бизнес-приложения.

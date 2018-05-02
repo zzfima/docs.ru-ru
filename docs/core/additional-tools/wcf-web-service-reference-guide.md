@@ -1,18 +1,18 @@
 ---
-title: "Инструмент Microsoft WCF Web Service Reference Provider"
-description: "Обзор инструмента Microsoft WCF Web Service Reference Provider, который расширяет функциональные возможности проектов .NET Core и ASP.NET Core аналогично функции \"Добавление ссылки на службу\" для проектов .NET Framework."
+title: Инструмент Microsoft WCF Web Service Reference Provider
+description: Обзор инструмента Microsoft WCF Web Service Reference Provider, который расширяет функциональные возможности проектов .NET Core и ASP.NET Core аналогично функции "Добавление ссылки на службу" для проектов .NET Framework.
 author: mlacouture
 manager: wpickett
 ms.author: johalex
-ms.date: 01/19/2018
+ms.date: 04/19/2018
 ms.topic: article
 ms.prod: .net-core
 ms.custom: mvc
-ms.openlocfilehash: e445361f9f4a858f4b34ca1008670fadc62b8b3c
-ms.sourcegitcommit: dd6ea7f0e581ac84e0a90d9b23c463fcf1ec3ce7
+ms.openlocfilehash: acf9e97c05dabc46da26ed2ea580e7d341b0f2dc
+ms.sourcegitcommit: 68b60d38043e50104ccc90c76f8599b1ffe18346
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="microsoft-wcf-web-service-reference-provider-tool"></a>Инструмент Microsoft WCF Web Service Reference Provider
 
@@ -20,6 +20,10 @@ ms.lasthandoff: 01/23/2018
 
 > [!IMPORTANT]
 > Ссылаться на службы следует только из надежного источника. Добавление ссылок из ненадежного источника может нарушить безопасность. 
+
+## <a name="prerequisites"></a>Предварительные требования
+
+* [Visual Studio 2017 15.5](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs) или более поздней версии
 
 ## <a name="how-to-use-the-extension"></a>Использование расширения
 
