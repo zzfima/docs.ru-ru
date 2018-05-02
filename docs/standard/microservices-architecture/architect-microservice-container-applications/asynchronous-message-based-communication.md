@@ -1,7 +1,7 @@
 ---
-title: "Асинхронное взаимодействие на основе сообщений"
-description: "Архитектура микрослужб .NET для упакованных в контейнеры приложений .NET | Асинхронное взаимодействие на основе сообщений"
-keywords: "Docker, микрослужбы, ASP.NET, контейнер"
+title: Асинхронное взаимодействие на основе сообщений
+description: Архитектура микрослужб .NET для упакованных в контейнеры приложений .NET | Асинхронное взаимодействие на основе сообщений
+keywords: Docker, микрослужбы, ASP.NET, контейнер
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 7469c41afa16bf96bc81a36c571e3e005c50d904
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 7c216dba3b763c310fe17e6294ae5f2b091f71f9
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="asynchronous-message-based-communication"></a>Асинхронное взаимодействие на основе сообщений
 
@@ -59,7 +59,7 @@ ms.lasthandoff: 01/19/2018
 
 Как отмечалось ранее в разделе [Распределенное управление данными. Проблемы и решения](#challenges-and-solutions-for-distributed-data-management), события интеграции можно использовать для реализации бизнес-задач, охватывающих многие микрослужбы. Таким образом, вы получите итоговую согласованность между этими службами. Согласованная по принципу итоговой согласованности транзакция состоит из коллекции распределенных действий. В каждом действии соответствующая микрослужба обновляет сущность домена и публикует другое событие интеграции, которое вызывает следующее действие в рамках той же конечной задачи.
 
-Важно то, что вы можете передать сообщение сразу нескольким микрослужбам, которые подписаны на это событие. Чтобы сделать это, вы можете использовать систему обмена сообщениями о публикациях и подписках на основе взаимодействия, управляемого событиями, как показано на рис. 4-19. Этот механизм публикаций и подписок используется не только в архитектуре микрослужб. Он похож на способ, которым взаимодействуют [ограниченные контексты](http://martinfowler.com/bliki/BoundedContext.html) в DDD, или на способ распространения обновлений от баз данных записи к базам данных чтения в архитектурах типа [разделение ответственности для команд и запросов (CQRS)](http://martinfowler.com/bliki/CQRS.html). Цель — получить итоговую согласованность между различными источниками данных в распределенной системе.
+Важно то, что вы можете передать сообщение сразу нескольким микрослужбам, которые подписаны на это событие. Чтобы сделать это, вы можете использовать систему обмена сообщениями о публикациях и подписках на основе взаимодействия, управляемого событиями, как показано на рис. 4-19. Этот механизм публикаций и подписок используется не только в архитектуре микрослужб. Он похож на способ, которым взаимодействуют [ограниченные контексты](https://martinfowler.com/bliki/BoundedContext.html) в DDD, или на способ распространения обновлений от баз данных записи к базам данных чтения в архитектурах типа [разделение ответственности для команд и запросов (CQRS)](https://martinfowler.com/bliki/CQRS.html). Цель — получить итоговую согласованность между различными источниками данных в распределенной системе.
 
 ![](./media/image19.png)
 
@@ -81,7 +81,7 @@ ms.lasthandoff: 01/19/2018
 
 -   Использование очереди транзакций (на основе DTC), подобной MSMQ. (Этот способ применялся в системах более ранних версий.)
 
--   [Интеллектуальный анализ данных журнала транзакций](http://www.scoop.it/t/sql-server-transaction-log-mining).
+-   [Интеллектуальный анализ данных журнала транзакций](https://www.scoop.it/t/sql-server-transaction-log-mining).
 
 -   Использование полной модели [источников событий](https://msdn.microsoft.com/library/dn589792.aspx).
 
@@ -91,16 +91,16 @@ ms.lasthandoff: 01/19/2018
 
 ## <a name="additional-resources"></a>Дополнительные ресурсы
 
--   **Взаимодействие, управляемое событиями**
+-   **Обмен сообщениями на основе событий**
     [*http://soapatterns.org/design\_patterns/event\_driven\_messaging*](http://soapatterns.org/design_patterns/event_driven_messaging)
 
--   **Канал публикации (подписки)**
+-   **Канал публикации или подписки**
     [*http://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html*](http://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html)
 
--   **Уди Дахан (Udi Dahan). Пояснение по CQRS**
+-   **Уди Дахан (Udi Dahan). Пояснения к CQRS**
     [*http://udidahan.com/2009/12/09/clarified-cqrs/*](http://udidahan.com/2009/12/09/clarified-cqrs/)
 
--   **Разделение ответственности для команд и запросов (CQRS)**
+-   **Архитектура с разделением обязанностей запросов и команд (CQRS)**
     [*https://docs.microsoft.com/azure/architecture/patterns/cqrs*](https://docs.microsoft.com/azure/architecture/patterns/cqrs)
 
 -   **Взаимодействие между ограниченными контекстами**
@@ -109,7 +109,7 @@ ms.lasthandoff: 01/19/2018
 -   **Итоговая согласованность**
     [*https://en.wikipedia.org/wiki/Eventual\_consistency*](https://en.wikipedia.org/wiki/Eventual_consistency)
 
--   **Джимми Богард (Jimmy Bogard). Рефакторинг как средство достижения устойчивости. Оценка взаимозависимости**
+-   **Джимми Богард (Jimmy Bogard). Рефакторинг для обеспечения отказоустойчивости: оценка взаимозависимости**
     [*https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/*](https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/)
 
 

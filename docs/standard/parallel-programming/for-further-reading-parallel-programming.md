@@ -18,25 +18,23 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 304522aa791e78dda6a67ed4f4e9b6cc33505dff
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: f09cbe788efb3baddf7b144c178e42a22c17bf95
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="for-further-reading-parallel-programming"></a>Дополнительные сведения (параллельное программирование)
 Следующие ресурсы содержат дополнительные сведения о параллельном программировании на платформе .NET Framework.  
   
--   [Центр разработчика параллельных вычислений](http://go.microsoft.com/fwlink/?LinkID=160570) на веб-сайте MSDN перечисляет ссылки на новейшие статьи и сообщения форума о параллельном программировании на платформе .NET Framework и на машинном C++.  
+-   [Центр разработчика параллельных вычислений](https://msdn.microsoft.com/vstudio/bb964701) на веб-сайте MSDN содержит ссылки на статьи и сообщения форума о параллельном программировании на платформе .NET Framework и на собственном языке C++.  
   
--   [Блог параллельного программирования на .NET](http://go.microsoft.com/fwlink/?LinkID=169627) на сайте блога MSDN предлагает множество подробных статей о параллельном программировании на платформе .NET Framework.  
+-   [Блог параллельного программирования на .NET](https://blogs.msdn.microsoft.com/pfxteam/) на сайте блога MSDN предлагает множество подробных статей о параллельном программировании на платформе .NET Framework.  
   
--   [Блог визуализатора одновременного выполнения](http://go.microsoft.com/fwlink/?LinkID=169630) на сайте блога MSDN описывает новое средство профилирования производительности, включенное в некоторые выпуски [!INCLUDE[vs_dev10_long](../../../includes/vs-dev10-long-md.md)].  
+-   [Форум параллельных расширений](https://social.msdn.microsoft.com/Forums/en-US/home?forum=parallelextensions) на сайте форумов MSDN позволяет задать вопросы и получить ответы о параллельном программировании.  
   
--   [Форум параллельных расширений](http://go.microsoft.com/fwlink/?LinkID=169628) на сайте форумов MSDN позволяет задать вопросы и получить ответы о параллельном программировании.  
-  
--   Страница [Примеры параллельных расширений](http://go.microsoft.com/fwlink/?LinkID=165717) на веб-сайте коллекции кода MSDN содержит много примеров, демонстрирующих использование методов параллельного программирования на среднем и продвинутом уровнях сложности.  
+-   Страница [Примеры параллельных расширений](https://code.msdn.microsoft.com/ParExtSamples) на веб-сайте коллекции кода MSDN содержит много примеров, демонстрирующих использование методов параллельного программирования на среднем и продвинутом уровнях сложности.  
   
 ## <a name="see-also"></a>См. также  
  [Параллельное программирование](../../../docs/standard/parallel-programming/index.md)  
- [Шаблоны для параллельного программирования: описание и применение в .NET Framework 4](http://go.microsoft.com/fwlink/?LinkID=185142)
+ [Шаблоны для параллельного программирования: описание и применение в .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=19222)

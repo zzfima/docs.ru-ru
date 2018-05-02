@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 0db12548-82cb-4903-ac88-13103d70aa77
-ms.openlocfilehash: c5720d5391eec327aa2f885fd65579aeb6260488
-ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
+ms.openlocfilehash: ce6ed278c4e5a9583a827e8c3ff941c2f25bf182
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="working-with-linq"></a>Работа с LINQ
 
@@ -32,7 +32,7 @@ ms.lasthandoff: 03/28/2018
 
 Здесь же мы используем его в качестве не слишком серьезного примера для процессов управления последовательностями данных. Приложение, которое вы создадите, будет моделировать колоду карт и выполнять для них серию тасовок, выводя новый порядок карт после каждой из них. Вы сможете сравнить новый порядок карт с исходным.
 
-Это руководство описывает несколько шагов. После каждого из них вы сможете запустить приложение и оценить результаты. [Готовый пример](https://github.com/dotnet/docs/blob/master/samples/csharp/getting-started/console-linq) доступен в репозитории dotnet/docs на сайте GitHub. Инструкции по загрузке см. в разделе [Просмотр и скачивание примеров](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
+Это руководство описывает несколько шагов. После каждого из них вы сможете запустить приложение и оценить результаты. [Готовый пример](https://github.com/dotnet/samples/blob/master/csharp/getting-started/console-linq) доступен в репозитории dotnet/samples на сайте GitHub. Инструкции по загрузке см. в разделе [Просмотр и скачивание примеров](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
 
 ## <a name="prerequisites"></a>Предварительные требования
 

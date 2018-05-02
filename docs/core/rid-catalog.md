@@ -1,17 +1,18 @@
 ---
-title: "Каталог идентификаторов сред выполнения (RID) в .NET Core"
-description: "Сведения об идентификаторах сред выполнения и их использовании в .NET Core."
+title: Каталог идентификаторов сред выполнения (RID) в .NET Core
+description: Сведения об идентификаторах сред выполнения и их использовании в .NET Core.
 author: mairaw
 ms.author: mairaw
 ms.date: 09/07/2017
 ms.topic: article
 ms.prod: .net-core
-ms.workload: dotnetcore
-ms.openlocfilehash: 180aac7635746f9ede146c3e561deb9bba9a61ab
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: 9343d475319084ddfe3450b4c1d2bbcbd394ad1f
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="net-core-rid-catalog"></a>Каталог идентификаторов сред выполнения (RID) в .NET Core
 
@@ -19,7 +20,7 @@ RID — это сокращение от *Runtime IDentifier* (идентифи
 Они используются пакетами .NET для представления ресурсов, специфичных для платформы, в пакетах NuGet. Некоторые примеры идентификаторов RID: `linux-x64`, `ubuntu.14.04-x64`, `win7-x64` или `osx.10.12-x64`.
 Для пакетов с собственными зависимостями они указывают, на каких платформах можно восстановить пакет.
 
-Идентификаторы RID можно задать в элементе `<RuntimeIdentifier>` вашего файла проекта. Они также используются с помощью параметра `--runtime` со следующими [командами интерфейса командной строки .NET Core](./tools/index.md):
+Один идентификатор RID можно задать в элементе `<RuntimeIdentifier>` вашего файла проекта. Несколько идентификаторов RID можно определить в виде списка, разделенного точкой с запятой, в элементе `<RuntimeIdentifiers>` файла проекта. Они также используются с помощью параметра `--runtime` со следующими [командами интерфейса командной строки .NET Core](./tools/index.md):
 
 - [dotnet build](./tools/dotnet-build.md)
 - [dotnet clean](./tools/dotnet-clean.md)

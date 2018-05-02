@@ -1,7 +1,7 @@
 ---
-title: "Распределенное управление данными: проблемы и решения"
-description: "Архитектура микрослужб .NET для упакованных в контейнеры приложений .NET | Распределенное управление данными: проблемы и решения"
-keywords: "Docker, микрослужбы, ASP.NET, контейнер"
+title: 'Распределенное управление данными: проблемы и решения'
+description: 'Архитектура микрослужб .NET для упакованных в контейнеры приложений .NET | Распределенное управление данными: проблемы и решения'
+keywords: Docker, микрослужбы, ASP.NET, контейнер
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: b0252586a508c059099885991b87c79346e0d809
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: a26f4243acee52e493a10f13ff18899823fd03ba
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="challenges-and-solutions-for-distributed-data-management"></a>Распределенное управление данными: проблемы и решения
 
@@ -98,13 +98,13 @@ ms.lasthandoff: 12/23/2017
 -   **Основные сведения о согласованности данных**
     [*https://msdn.microsoft.com/library/dn589800.aspx*](https://msdn.microsoft.com/library/dn589800.aspx)
 
--   **Мартин Фоулер (Martin Fowler). CQRS (команды и разделение ответственности запроса)**
-    [*http://martinfowler.com/bliki/CQRS.html*](http://martinfowler.com/bliki/CQRS.html)
+-   **Мартин Фоулер (Martin Fowler). CQRS (разделение обязанностей запросов и команд)**
+    [*https://martinfowler.com/bliki/CQRS.html*](https://martinfowler.com/bliki/CQRS.html)
 
 -   **Материализованное представление**
     [*https://docs.microsoft.com/azure/architecture/patterns/materialized-view*](https://docs.microsoft.com/azure/architecture/patterns/materialized-view)
 
--   **Чарльз Роу (Charles Row). ACID vs. Кислота (ACID) и основание (BASE): изменение pH-показателя обработки транзакций в базах данных**
+-   **Чарльз Роу (Charles Row). Кислота (ACID) и основание (BASE): изменение pH-показателя обработки транзакций в базах данных**
     [*http://www.dataversity.net/acid-vs-base-the-shifting-ph-of-database-transaction-processing/*](http://www.dataversity.net/acid-vs-base-the-shifting-ph-of-database-transaction-processing/)
 
 -   **Компенсирующие транзакции**

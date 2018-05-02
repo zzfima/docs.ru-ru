@@ -1,21 +1,22 @@
 ---
-title: "Обработка XML-файла (руководство по программированию на C#)"
+title: Обработка XML-файла (руководство по программированию на C#)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - XML processing [C#]
 - XML [C#], processing
 ms.assetid: 60c71193-9dac-4cd3-98c5-100bd0edcc42
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: e8b4c078ffcf7ba7690b7f3dd61bfab4162dd2cb
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 1e6e983d4fc07aaadc294bc67e146ac600f4c5bc
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="processing-the-xml-file-c-programming-guide"></a>Обработка XML-файла (руководство по программированию на C#)
 Компилятор создает строку идентификатора для каждой конструкции в коде, помеченной для создания документации. Дополнительные сведения о разметке кода см. в статье [Рекомендуемые теги для комментариев документации](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md). Строка идентификатора однозначно определяет конструкцию. Программы, обрабатывающие этот XML-файл, могут с помощью строки идентификатора определить, какому элементу метаданных или отражения .NET Framework соответствует эта документация.  
@@ -28,7 +29,7 @@ ms.lasthandoff: 11/21/2017
   
 -   Первая часть строки идентификатора определяет тип идентифицируемого члена. Это один символ, за которым следует двоеточие. Используются следующие типы элементов.  
   
-    |Знак|Описание|  
+    |Знак|Описание:|  
     |---------------|-----------------|  
     |в|namespace<br /><br /> Вы не можете присвоить комментарий документации пространству имен, но можете создать для него cref-ссылку, если они поддерживаются.|  
     |T|тип: класс, интерфейс, структура, перечисление, делегат|  
@@ -74,7 +75,7 @@ ms.lasthandoff: 11/21/2017
   
 -   Только для операторов преобразования (op_Implicit и op_Explicit) возвращаемое значение метода кодируется как символ "~", за которым следует возвращаемый тип, как описано выше.  
   
--   Для универсальных типов имя типа завершается символом обратного апострофа и числом, которое обозначает количество параметров универсального типа.  Например:  
+-   Для универсальных типов имя типа завершается символом обратного апострофа и числом, которое обозначает количество параметров универсального типа.  Например, примененная к объекту директива  
   
      `<member name="T:SampleClass`2">` is the tag for a type that is defined as `public class SampleClass\<T, U>`.  
   
@@ -87,5 +88,5 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="see-also"></a>См. также  
  [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
- [/ doc (параметры компилятора C#)](../../../csharp/language-reference/compiler-options/doc-compiler-option.md)  
+ [/doc (параметры компилятора C#)](../../../csharp/language-reference/compiler-options/doc-compiler-option.md)  
  [Комментарии XML-документации](../../../csharp/programming-guide/xmldoc/xml-documentation-comments.md)

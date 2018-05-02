@@ -1,7 +1,7 @@
 ---
-title: "Устойчивость и высокий уровень доступности в микрослужбах"
-description: "Архитектура микрослужб .NET для упакованных в контейнеры приложений .NET | Устойчивость и высокий уровень доступности в микрослужбах"
-keywords: "Docker, микрослужбы, ASP.NET, контейнер"
+title: Устойчивость и высокий уровень доступности в микрослужбах
+description: Архитектура микрослужб .NET для упакованных в контейнеры приложений .NET | Устойчивость и высокий уровень доступности в микрослужбах
+keywords: Docker, микрослужбы, ASP.NET, контейнер
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: cb78e98a01e413f31e6476dac77acdc4e5d4f78d
-ms.sourcegitcommit: c3957fdb990060559d73cca44ab3e2c7b4d049c0
+ms.openlocfilehash: 3ad3fc88a3e857f49283ff596e0385d0daad64b6
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="resiliency-and-high-availability-in-microservices"></a>Устойчивость и высокий уровень доступности в микрослужбах
 
@@ -43,7 +43,7 @@ ms.lasthandoff: 03/05/2018
 
 В монолитных серверных приложениях можно просто записывать журналы в файл на диске (файл журнала), а затем анализировать его с помощью любого инструмента. Поскольку приложение выполняется на фиксированном сервере или виртуальной машине, анализировать последовательность событий обычно не слишком сложно. Но в распределенных приложениях, где несколько служб выполняется на многих узлах в кластере оркестратора, сопоставить распределенные события бывает непросто.
 
-Приложение на основе микрослужб не должно пытаться самостоятельно сохранить поток вывода событий или файлов журнала или хотя бы управлять маршрутизацией событий в центральное хранилище. Оно должно быть прозрачным, то есть каждый процесс должен просто записывать поток события в стандартный поток вывода, который будет поступать в инфраструктуру среды выполнения, где оно запущено. Пример маршрутизатора потока событий — [Microsoft.Diagnostic.EventFlow](https://github.com/Azure/diagnostics-eventflow), который собирает потоки событий из нескольких источников и публикует их в систему вывода. Это может быть стандартный поток вывода для среды разработки или облачных систем, например [Application Insights](https://azure.microsoft.com/services/application-insights/), [OMS](https://github.com/Azure/diagnostics-eventflow#oms-operations-management-suite) (для локальных приложений) и [система диагностики Azure](https://docs.microsoft.com/azure/monitoring-and-diagnostics/azure-diagnostics). Существуют надежные сторонние платформы и инструменты анализа журналов, которые могут выполнять поиск, выводить предупреждения, составлять отчеты и отслеживать журналы, даже в режиме реального времени, например [Splunk](http://www.splunk.com/goto/Splunk_Log_Management?ac=ga_usa_log_analysis_phrase_Mar17&_kk=logs%20analysis&gclid=CNzkzIrex9MCFYGHfgodW5YOtA).
+Приложение на основе микрослужб не должно пытаться самостоятельно сохранить поток вывода событий или файлов журнала или хотя бы управлять маршрутизацией событий в центральное хранилище. Оно должно быть прозрачным, то есть каждый процесс должен просто записывать поток события в стандартный поток вывода, который будет поступать в инфраструктуру среды выполнения, где оно запущено. Пример маршрутизатора потока событий — [Microsoft.Diagnostic.EventFlow](https://github.com/Azure/diagnostics-eventflow), который собирает потоки событий из нескольких источников и публикует их в систему вывода. Это может быть стандартный поток вывода для среды разработки или облачных систем, например [Application Insights](https://azure.microsoft.com/services/application-insights/), [OMS](https://github.com/Azure/diagnostics-eventflow#oms-operations-management-suite) (для локальных приложений) и [система диагностики Azure](https://docs.microsoft.com/azure/monitoring-and-diagnostics/azure-diagnostics). Существуют надежные сторонние платформы и инструменты анализа журналов, которые могут выполнять поиск, выводить предупреждения, составлять отчеты и отслеживать журналы, даже в режиме реального времени, например [Splunk](https://www.splunk.com/goto/Splunk_Log_Management?ac=ga_usa_log_analysis_phrase_Mar17&_kk=logs%20analysis&gclid=CNzkzIrex9MCFYGHfgodW5YOtA).
 
 ### <a name="orchestrators-managing-health-and-diagnostics-information"></a>Оркестраторы, управляющие сведениями о работоспособности и диагностике
 
@@ -76,9 +76,9 @@ ms.lasthandoff: 03/05/2018
     [*https://msdn.microsoft.com/library/dn440729(v=pandp.60).aspx*](https://msdn.microsoft.com/library/dn440729(v=pandp.60).aspx)
 
 -   **Splunk.** Официальный сайт
-    [*http://www.splunk.com*](http://www.splunk.com)
+    [*https://www.splunk.com/*](https://www.splunk.com/)
 
--   **EventSource Class**. API for events tracing for Windows (ETW) [*https://docs.microsoft.com/dotnet/api/system.diagnostics.tracing.eventsource*](xref:System.Diagnostics.Tracing.EventSource)
+-   **EventSource Class**. Интерфейс API для трассировки событий Windows [*https://docs.microsoft.com/dotnet/api/system.diagnostics.tracing.eventsource*](xref:System.Diagnostics.Tracing.EventSource)
 
 
 

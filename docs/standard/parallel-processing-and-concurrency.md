@@ -1,50 +1,37 @@
 ---
-title: "Параллельная обработка и параллелизм в .NET Framework"
-ms.custom: 
-ms.date: 03/30/2017
+title: Параллельная обработка, параллелизм и асинхронное программирование в .NET
+description: Узнайте, как ускорить работу приложения и сократить его время отклика с помощью возможностей параллельной обработки и асинхронного программирования, имеющихся в .NET.
+ms.date: 04/06/2018
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
-- .NET Framework, parallel processing
-- parallel processing [.NET Framework]
-- concurrency [.NET Framework]
-- .NET Framework, concurrency
+- parallel processing [.NET]
+- concurrency [.NET]
+- asynchronous programming [.NET]
 ms.assetid: e573faa8-0212-44b1-a850-ce85dc54f47f
-caps.latest.revision: 
+caps.latest.revision: 7
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: ab15fd38a467eec398f8383e40067d2135c042b5
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: e4ee282f226d553a8bca92c1afb184bc181d6bb7
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="parallel-processing-and-concurrency-in-the-net-framework"></a>Параллельная обработка и параллелизм в .NET Framework
-Платформа .NET Framework предоставляет различные способы использования нескольких потоков выполнения для того, чтобы приложение могло отвечать на действия пользователя, в то время как производительность компьютера пользователя оставалась максимальной.  
+# <a name="parallel-processing-concurrency-and-async-programming-in-net"></a>Параллельная обработка, параллелизм и асинхронное программирование в .NET
+.NET предоставляет ряд способов написания асинхронного кода, позволяющего уменьшить время отклика приложения на действия пользователя, а также написания параллельного кода, который использует несколько потоков выполнения, чтобы повысить производительность компьютера.  
   
 ## <a name="in-this-section"></a>В этом разделе  
- [Работа с потоками](../../docs/standard/threading/index.md)  
- Описывает основные механизмы параллелизма и синхронизации, предоставляемые платформой .NET Framework.  
-  
- [Модели асинхронного программирования](../../docs/standard/asynchronous-programming-patterns/index.md)  
- Содержит общие сведения о трех асинхронных шаблонах программирования, поддерживаемых в платформе .NET Framework.  
-  
--   [Асинхронная модель программирования (APM)](../../docs/standard/asynchronous-programming-patterns/asynchronous-programming-model-apm.md) (устаревший)  
-  
--   [Асинхронная модель на основе событий (EAP)](../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md) (устаревший)  
-  
--   [Асинхронный шаблон, основанный на задачах (TAP)](../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md) (рекомендуется для новых разработок)  
+ [Асинхронное программирование](../../docs/standard/async.md)  
+ Описываются механизмы асинхронного программирования, предоставляемые .NET.  
   
  [Параллельное программирование](../../docs/standard/parallel-programming/index.md)  
  Описывает модель программирования, основанную на задачах, которая упрощает разработку параллельных приложений, позволяя писать эффективный, точный и масштабируемый параллельный код естественным образом без необходимости работать непосредственно с потоками или пулом потоков.  
-  
-## <a name="see-also"></a>См. также  
- [Руководство по разработке](../../docs/framework/development-guide.md)
+
+ [Работа с потоками](../../docs/standard/threading/index.md)  
+ Описываются основные механизмы параллелизма и синхронизации, предоставляемые .NET.  

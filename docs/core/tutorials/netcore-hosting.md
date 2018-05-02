@@ -1,7 +1,7 @@
 ---
-title: "Размещение .NET Core"
-description: "Размещение среды выполнения .NET Core из машинного кода"
-keywords: ".NET, .NET Core, размещение, размещение .NET Core"
+title: Размещение .NET Core
+description: Размещение среды выполнения .NET Core из машинного кода
+keywords: .NET, .NET Core, размещение, размещение .NET Core
 author: mjrousos
 ms.author: mikerou
 ms.date: 2/3/2017
@@ -11,11 +11,11 @@ ms.devlang: dotnet
 ms.assetid: 13edec8b-614d-47ed-9e95-ed6d3b94ec0c
 ms.workload:
 - dotnetcore
-ms.openlocfilehash: 3c358ab9173032b1f76d30b756ee6290233b2702
-ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
+ms.openlocfilehash: 5ff2e8e4da12b2a9822b595abbb2bdb0f583cf02
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="hosting-net-core"></a>Размещение .NET Core
 
@@ -35,7 +35,7 @@ ms.lasthandoff: 02/28/2018
 
 ## <a name="creating-the-host"></a>Создание основного приложения
 
-[Пример основного приложения](https://github.com/dotnet/docs/tree/master/samples/core/hosting), в котором демонстрируются описанные здесь действия, доступен в репозитории dotnet/docs на сайте GitHub. Комментарии в файле примера *host.cpp* четко соответствуют пронумерованным шагам в этом учебнике. Инструкции по загрузке см. в разделе [Просмотр и скачивание примеров](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
+[Пример основного приложения](https://github.com/dotnet/samples/tree/master/core/hosting), в котором демонстрируются описанные здесь действия, доступен в репозитории dotnet/samples на сайте GitHub. Комментарии в файле примера *host.cpp* четко соответствуют пронумерованным шагам в этом учебнике. Инструкции по загрузке см. в разделе [Просмотр и скачивание примеров](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
 
 Помните, что пример основного приложения предназначен для учебных целей, поэтому в нем реализована минимальная проверка ошибок, а удобочитаемость поставлена выше эффективности. Дополнительные реальные примеры основного приложения доступны в репозитории [dotnet/coreclr](https://github.com/dotnet/coreclr/tree/master/src/coreclr/hosts). В частности, хорошим приложением общего назначения является [основное приложение CoreRun](https://github.com/dotnet/coreclr/tree/master/src/coreclr/hosts/corerun), к которому стоит обратиться после изучения более простого примера.
 
@@ -90,7 +90,7 @@ hr = runtimeHost->Start();
 *  `PLATFORM_RESOURCE_ROOTS` Этот список содержит пути для поиска вспомогательных сборок ресурсов (в подкаталогах для конкретных языков и региональных параметров).
 *  `AppDomainCompatSwitch` Эта строка указывает, какие аспекты совместимости следует использовать для сборок без явного моникера целевой платформы (атрибут уровня сборки, показывающий, для какой платформы предназначена сборка). В общем случае здесь следует установить значение `"UseLatestBehaviorWhenTFMNotSpecified"`, но некоторым основным приложениям могут потребоваться более старые аспекты совместимости с Silverlight или Windows Phone.
 
-В нашем [простом примере основного приложения](https://github.com/dotnet/docs/tree/master/samples/core/hosting) эти свойства настроены следующим образом:
+В нашем [простом примере основного приложения](https://github.com/dotnet/samples/tree/master/core/hosting) эти свойства настроены следующим образом:
 
 [!code-cpp[NetCoreHost#6](../../../samples/core/hosting/host.cpp#6)]
 

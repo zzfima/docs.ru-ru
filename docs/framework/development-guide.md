@@ -1,34 +1,34 @@
 ---
-title: "Руководство по разработке для .NET Framework"
-ms.custom: 
+title: Руководство по разработке для .NET Framework
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - .NET Framework, development guide
 ms.assetid: 26e3d285-24c3-435c-a797-9fe5affb8525
-caps.latest.revision: 
+caps.latest.revision: 13
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 5d7950ae39ada3e1e0e070967f8d578fc3371126
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 3432ac629a6c754cf7f863b6444dc81b6f9919ef
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="net-framework-development-guide"></a>Руководство по разработке для .NET Framework
 В этом разделе поясняются способы создания, настройки, отладки, защиты и развертывания приложений .NET Framework. В этом разделе также приводятся сведения о технологических областях, таких как динамическое программирование, взаимодействие, расширяемость, управление памятью и потоки.  
   
 ## <a name="in-this-section"></a>В этом разделе  
- [.NET Framework Application Essentials](../../docs/standard/application-essentials.md) (Основные сведения о приложениях .NET Framework)  
+ [Основные сведения о приложениях .NET Framework](../../docs/standard/application-essentials.md)  
  Здесь приводится информация об основных задачах разработки приложений, таких как программирование с использованием доменов приложений и сборок, использование атрибутов, форматирование и анализ базовых типов, использование коллекций, обработка событий и исключений, использование файлов и потоков данных и использование универсальных шаблонов.  
   
  [Данные и модели в .NET Framework](../../docs/framework/data/index.md)  
@@ -49,7 +49,7 @@ ms.lasthandoff: 01/19/2018
  [Приложения служб Windows](../../docs/framework/windows-services/index.md)  
  Здесь поясняется, как можно использовать Visual Studio и .NET Framework для создания приложения, которое устанавливается в качестве службы, а также запускать его, останавливать и иными способами управлять его поведением.  
   
- [Параллельная обработка и параллелизм в .NET Framework](../../docs/standard/parallel-processing-and-concurrency.md)  
+ [Параллельная обработка, параллелизм и асинхронное программирование в .NET](../../docs/standard/parallel-processing-and-concurrency.md)  
  Здесь приводятся сведения о шаблонах разработки с применением управляемых потоков, параллельного программирования и асинхронного программирования.  
   
  [Сетевое программирование в .NET Framework](../../docs/framework/network-programming/index.md)  

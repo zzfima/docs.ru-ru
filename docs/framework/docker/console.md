@@ -1,19 +1,19 @@
 ---
-title: "Запуск консольных приложений в Docker"
-description: "Узнайте, как запускать существующее консольное приложение .NET Framework в контейнере Windows Docker/"
+title: Запуск консольных приложений в Docker
+description: Узнайте, как запускать существующее консольное приложение .NET Framework в контейнере Windows Docker/
 author: spboyer
-keywords: ".NET, контейнер, консольный, приложения"
+keywords: .NET, контейнер, консольный, приложения
 ms.date: 09/28/2016
 ms.topic: article
 ms.prod: .net-framework
 ms.technology: vs-ide-deployment
 ms.devlang: dotnet
 ms.assetid: 85cca1d5-c9a4-4eb2-93e6-4f878de07fd7
-ms.openlocfilehash: 037d94452dd62c06fe6d8ac7aea1143f52b96d32
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: 7990ed03028ea9361a8b1760b237b8ed2f9d204d
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="running-console-applications-in-windows-containers"></a>Запуск консольных приложений в контейнерах Windows
 
@@ -25,7 +25,7 @@ ms.lasthandoff: 12/09/2017
 
 Помимо самого ответа к нему было добавлено имя `Environment.MachineName`, чтобы продемонстрировать разницу между запуском приложения в локальной среде и в контейнере Windows. При запуске приложения в локальной среде должно возвращаться имя вашего локального компьютера, а при запуске в контейнере Windows — идентификатор сеанса контейнера.
 
-[Полный пример](https://github.com/dotnet/docs/tree/master/samples/framework/docker/ConsoleRandomAnswerGenerator) доступен в репозитории dotnet/docs в службе GitHub. Инструкции по загрузке см. в разделе [Просмотр и скачивание примеров](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
+[Полный пример](https://github.com/dotnet/samples/tree/master/framework/docker/ConsoleRandomAnswerGenerator) доступен в репозитории dotnet/samples на сайте GitHub. Инструкции по загрузке см. в разделе [Просмотр и скачивание примеров](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
 
 Перед началом перемещения приложения в контейнер необходимо знать некоторые термины Docker.
 

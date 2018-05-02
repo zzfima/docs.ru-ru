@@ -1,7 +1,7 @@
 ---
 title: Руководство по развертыванию .NET Framework для администраторов
 ms.custom: ''
-ms.date: 03/30/2017
+ms.date: 04/10/2018
 ms.prod: .net-framework
 ms.reviewer: ''
 ms.suite: ''
@@ -13,17 +13,17 @@ helpviewer_keywords:
 - administrator's guide, deploying .NET Framework
 - deployment [.NET Framework], administrator's guide
 ms.assetid: bee14036-0436-44e8-89f5-4bc61317977a
-caps.latest.revision: ''
+caps.latest.revision: 40
 author: mairaw
 ms.author: mairaw
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: f57b5db5c03030d8cb930355586d0253cae13319
-ms.sourcegitcommit: 6f967c86dde55472440f0c8669b0e910ee3c53ba
+ms.openlocfilehash: 67efb04fc0d86a20fdf10c0e84bb00ae57383bb1
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="net-framework-deployment-guide-for-administrators"></a>Руководство по развертыванию .NET Framework для администраторов
 В этой статье представлено пошаговое описание развертывания администратором платформы [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] и системных зависимостей в сети с помощью Microsoft System Center Configuration Manager. В рамках этой статьи предполагается, что все целевые клиентские компьютеры соответствуют минимальным требованиям для .NET Framework. Список требований к программному обеспечению и оборудованию для установки [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] см. в разделе [Требования к системе](../../../docs/framework/get-started/system-requirements.md).  
@@ -230,11 +230,16 @@ ms.lasthandoff: 03/22/2018
 ## <a name="troubleshooting"></a>Устранение неполадок  
   
 ### <a name="log-file-locations"></a>Расположение файлов журнала  
- Во время установки [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] создаются следующие файлы журнала:  
+ Во время установки .NET Framework создаются следующие файлы журнала:  
   
- %temp%\Microsoft .NET Framework 4.5*.txt %temp%\Microsoft .NET Framework 4.5*.html  
+ %temp%\Microsoft .NET Framework *версия*\*.txt  
+ %temp%\Microsoft .NET Framework *версия*\*.html  
   
- Для сбора файлов журнала [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] и создания CAB-файла, уменьшающего размер файлов, можно использовать [средство сбора журналов](http://www.microsoft.com/download/details.aspx?id=12493).  
+ Здесь *версия* — это устанавливаемая версия платформы .NET Framework, например 4.5 или 4.7.2.  
+ 
+ Вы также можете указать каталог, в который записываются файлы журнала, с помощью параметра командной строки `/log` в команде установки .NET Framework. Дополнительные сведения см. в статье [Руководство по развертыванию .NET Framework для разработчиков](deployment-guide-for-developers.md#command-line-options). 
+ 
+ Для сбора файлов журнала .NET Framework и создания CAB-файла, уменьшающего размер файлов, можно использовать [средство сбора журналов](https://www.microsoft.com/download/details.aspx?id=12493).  
   
 <a name="return_codes"></a>   
 ### <a name="return-codes"></a>Коды возврата  

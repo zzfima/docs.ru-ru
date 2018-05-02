@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 7538c760d396349fe9b1e93a21839e3e59d7f046
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
-ms.translationtype: MT
+ms.openlocfilehash: 279dd4ea2ffb36e13a22f366ece145174918b759
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="subscribing-to-events"></a>Подписка на события
 
@@ -112,7 +112,7 @@ public async Task<IActionResult> UpdateProduct([FromBody]CatalogItem product)
 
 -   Использование полной модели [источников событий](https://msdn.microsoft.com/library/dn589792.aspx).
 
--   [Интеллектуальный анализ данных журнала транзакций](http://www.scoop.it/t/sql-server-transaction-log-mining).
+-   [Интеллектуальный анализ данных журнала транзакций](https://www.scoop.it/t/sql-server-transaction-log-mining).
 
 -   Использование [шаблона Outbox](http://gistlabs.com/2014/05/the-outbox/). Это таблица транзакций, в которой хранятся события интеграции (расширяющие локальную транзакцию).
 
@@ -302,7 +302,7 @@ namespace Microsoft.eShopOnContainers.Services.Basket.API.IntegrationEvents.Even
 
 ### <a name="additional-resources"></a>Дополнительные ресурсы
 
--   **Учитывая идемпотентности сообщение** (подзаголовок на этой странице) [*https://msdn.microsoft.com/library/jj591565.aspx*](https://msdn.microsoft.com/library/jj591565.aspx)
+-   **Соблюдение идемпотентности сообщений** (подраздел на этой странице) [*https://msdn.microsoft.com/library/jj591565.aspx*](https://msdn.microsoft.com/library/jj591565.aspx)
 
 ## <a name="deduplicating-integration-event-messages"></a>Дедупликация сообщений о событиях интеграции
 
@@ -322,63 +322,63 @@ namespace Microsoft.eShopOnContainers.Services.Basket.API.IntegrationEvents.Even
 
 ### <a name="additional-resources"></a>Дополнительные ресурсы
 
--   **Разветвленного eShopOnContainers, с помощью NServiceBus (конкретного программного обеспечения)**
+-   **Ветвление eShopOnContainers с использованием NServiceBus (Particular Software)**
     [*http://go.particular.net/eShopOnContainers*](http://go.particular.net/eShopOnContainers)
 
--   **Событие обмена сообщениями**
-    [*http://soapatterns.org/design\_шаблонов и события\_управляемых\_обмена сообщениями*](http://soapatterns.org/design_patterns/event_driven_messaging)
+-   **Обмен сообщениями на основе событий**
+    [*http://soapatterns.org/design\_patterns/event\_driven\_messaging*](http://soapatterns.org/design_patterns/event_driven_messaging)
 
--   **Джимми Богард (Jimmy Bogard). Рефакторинг по направлению к устойчивости: Оценка взаимозависимости**
+-   **Джимми Богард (Jimmy Bogard). Рефакторинг для обеспечения отказоустойчивости: оценка взаимозависимости**
     [*https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/*](https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/)
 
--   **Публикация-подписка на канал**
+-   **Канал публикации и подписки**
     [*http://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html*](http://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html)
 
--   **Взаимодействие между контекстами ограниченной**
+-   **Взаимодействие между ограниченными контекстами**
     [*https://msdn.microsoft.com/library/jj591572.aspx*](https://msdn.microsoft.com/library/jj591572.aspx)
 
 -   **Итоговая согласованность**
-    [*https://en.wikipedia.org/wiki/Eventual\_согласованности*](https://en.wikipedia.org/wiki/Eventual_consistency)
+    [*https://en.wikipedia.org/wiki/Eventual\_consistency*](https://en.wikipedia.org/wiki/Eventual_consistency)
 
--   **Филип Браун (Philip Brown). Стратегии для интеграции ограниченных контексты**
+-   **Филип Браун (Philip Brown). Стратегии интеграции ограниченных контекстов**
     [*http://culttt.com/2014/11/26/strategies-integrating-bounded-contexts/*](http://culttt.com/2014/11/26/strategies-integrating-bounded-contexts/)
 
--   **Крис Ричардсон (Chris Richardson). Разработка транзакций Микрослужбами с использованием статистических функций, источники событий и CQRS — часть 2**
+-   **Крис Ричардсон (Chris Richardson). Разработка транзакционных микрослужб с помощью агрегатов, порождения событий и CQRS. Часть 2**
     [*https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-2-richardson*](https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-2-richardson)
 
--   **Крис Ричардсон (Chris Richardson). Использование модели событий**
-    [*http://microservices.io/patterns/data/event-sourcing.html*](http://microservices.io/patterns/data/event-sourcing.html)
+-   **Крис Ричардсон (Chris Richardson). Шаблон порождения событий**
+    [*https://microservices.io/patterns/data/event-sourcing.html*](https://microservices.io/patterns/data/event-sourcing.html)
 
--   **Знакомство с источники событий**
+-   **Знакомство с порождением событий**
     [*https://msdn.microsoft.com/library/jj591559.aspx*](https://msdn.microsoft.com/library/jj591559.aspx)
 
 -   **База данных хранилища событий**. Официальный сайт
     [*https://geteventstore.com/*](https://geteventstore.com/)
 
--   **Патрик Номменсен (Patrick Nommensen). Управление событиями данных для Микрослужбами**
+-   **Патрик Номменсен (Patrick Nommensen). Управление данными на основе событий для микрослужб**
     *<https://dzone.com/articles/event-driven-data-management-for-microservices-1> *
 
 -   **Теорема CAP**
-    [*https://en.wikipedia.org/wiki/CAP\_Теорема*](https://en.wikipedia.org/wiki/CAP_theorem)
+    [*https://en.wikipedia.org/wiki/CAP\_theorem*](https://en.wikipedia.org/wiki/CAP_theorem)
 
--   **Что такое ограничение Теорема?**
+-   **Что такое теорема CAP?**
     [*https://www.quora.com/What-Is-CAP-Theorem-1*](https://www.quora.com/What-Is-CAP-Theorem-1)
 
 -   **Основные сведения о согласованности данных**
     [*https://msdn.microsoft.com/library/dn589800.aspx*](https://msdn.microsoft.com/library/dn589800.aspx)
 
--   **Рик Сейлинг (Rick Saling). Теорема CAP: Почему «Все отличается» с в облаке и в Интернете**
+-   **Рик Сейлинг (Rick Saling). Теорема CAP: почему в случае с облачными средами и Интернетом все иначе**
     [*https://blogs.msdn.microsoft.com/rickatmicrosoft/2013/01/03/the-cap-theorem-why-everything-is-different-with-the-cloud-and-internet/*](https://blogs.msdn.microsoft.com/rickatmicrosoft/2013/01/03/the-cap-theorem-why-everything-is-different-with-the-cloud-and-internet/)
 
--   **Эрик Брюер (Eric Brewer). Ограничение Двенадцатилетнего позже: как «Правила» были изменены**
+-   **Эрик Брюер (Eric Brewer). Теорема CAP двенадцать лет спустя: как поменялись правила**
     [*https://www.infoq.com/articles/cap-twelve-years-later-how-the-rules-have-changed*](https://www.infoq.com/articles/cap-twelve-years-later-how-the-rules-have-changed)
 
--   **Участие в транзакции (DTC) внешние** (MSMQ) [  *https://msdn.microsoft.com/library/ms978430.aspx \#bdadotnetasync2\_topic3c*](https://msdn.microsoft.com/library/ms978430.aspx%23bdadotnetasync2_topic3c)
+-   **Участие во внешних транзакциях (DTC)** (MSMQ) [*https://msdn.microsoft.com/library/ms978430.aspx\#bdadotnetasync2\_topic3c*](https://msdn.microsoft.com/library/ms978430.aspx%23bdadotnetasync2_topic3c)
 
--   **Служебная шина Azure. Обмен сообщениями через посредника: Обнаружение повторяющихся элементов**
+-   **Служебная шина Azure. Обмен сообщениями через брокер: поиск повторяющихся данных**
     [*https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25*](https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25)
 
--   **Руководство по надежности** (RabbitMQ документация) [  *https://www.rabbitmq.com/reliability.html \#потребителя*](https://www.rabbitmq.com/reliability.html%23consumer)
+-   **Руководство по обеспечению надежности** (документация RabbitMQ) [*https://www.rabbitmq.com/reliability.html\#consumer*](https://www.rabbitmq.com/reliability.html%23consumer)
 
 
 

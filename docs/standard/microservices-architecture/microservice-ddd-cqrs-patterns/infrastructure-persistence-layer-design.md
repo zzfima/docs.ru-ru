@@ -11,15 +11,15 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 76db5388c75d4eb3b5cc23c1e57cc391a15f2934
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
-ms.translationtype: MT
+ms.openlocfilehash: cab12426308be258134e0385c5a6eb6cdb5d544b
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="designing-the-infrastructure-persistence-layer"></a>Проектирование уровня сохраняемости инфраструктуры
 
-Компоненты сохраняемости данных предоставляют доступ к данным, размещенным в границах микрослужбы (то есть в границах базы данных микрослужбы). Они содержат фактическую реализацию компонентов, таких как репозитории и классы [единиц работы](http://martinfowler.com/eaaCatalog/unitOfWork.html), например пользовательские контексты EF DBContexts.
+Компоненты сохраняемости данных предоставляют доступ к данным, размещенным в границах микрослужбы (то есть в границах базы данных микрослужбы). Они содержат фактическую реализацию компонентов, таких как репозитории и классы [единиц работы](https://martinfowler.com/eaaCatalog/unitOfWork.html), например пользовательские контексты EF DBContexts.
 
 ## <a name="the-repository-pattern"></a>Шаблон репозитория
 
@@ -90,7 +90,7 @@ public interface IOrderRepository : IRepository<Order>
 
 Единица работы — это одна транзакция, которая включает несколько операций вставки, обновления или удаления. Проще говоря, это означает, что все действия по вставке, обновлению и удалению данных для конкретного действия пользователя (например, регистрация на веб-сайте) обрабатываются в рамках одной транзакции. Это более эффективно, чем использовать несколько транзакций базы данных, которые выполняются поочередно.
 
-Эти несколько операций сохраняемости выполняются позднее в одном действии, когда из кода на уровне приложения поступает команда на их выполнение. Решение о применении изменений в памяти к фактическому хранилищу базы данных обычно основано на [шаблоне единицы работы](http://martinfowler.com/eaaCatalog/unitOfWork.html). В EF шаблон единицы работы реализуется как DBContext.
+Эти несколько операций сохраняемости выполняются позднее в одном действии, когда из кода на уровне приложения поступает команда на их выполнение. Решение о применении изменений в памяти к фактическому хранилищу базы данных обычно основано на [шаблоне единицы работы](https://martinfowler.com/eaaCatalog/unitOfWork.html). В EF шаблон единицы работы реализуется как DBContext.
 
 Во многих случаях этот шаблон, или способ применения операций к хранилищам, может повысить производительность приложения и снизить риск возникновения несоответствий. Кроме того, он снижает блокировку транзакций в таблицах базы данных, потому что все необходимые операции фиксируются как часть одной транзакции. Это более эффективно по сравнению с выполнением многих изолированных операций в базе данных. Таким образом, в выбранных ORM можно оптимизировать выполнение запросов к базам данных путем группирования нескольких действий обновления в одной и той же транзакции в отличие от выполнения нескольких отдельных мелких транзакций.
 
@@ -139,20 +139,20 @@ public interface ISpecification<T>
 ### <a name="the-repository-pattern"></a>Шаблон репозитория
 
 -   **Эдвард Хиятт и Роб Ми (Edward Hieatt и Rob Mee). Шаблон репозитория.**
-    [*http://martinfowler.com/eaaCatalog/repository.html*](http://martinfowler.com/eaaCatalog/repository.html)
+    [*https://martinfowler.com/eaaCatalog/repository.html*](https://martinfowler.com/eaaCatalog/repository.html)
 
 -   **Шаблон репозитория**
     [*https://msdn.microsoft.com/library/ff649690.aspx*](https://msdn.microsoft.com/library/ff649690.aspx)
 
--   **Шаблон репозитория: Сохраняемости уровень абстракции данных**
+-   **Шаблон репозитория: абстрагирование сохраняемости данных**
     [*http://deviq.com/repository-pattern/*](http://deviq.com/repository-pattern/)
 
--   **Эрик Эванс (Eric Evans). Предметно-ориентированное проектирование (DDD). Структуризация сложных программных систем.** (Книга; включает в себя обсуждение шаблон репозитория) [*https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/*](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/)
+-   **Эрик Эванс (Eric Evans). Предметно-ориентированное проектирование (DDD). Структуризация сложных программных систем.** (Книга; включает в себя обсуждение шаблона репозитория) [*https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/*](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/)
 
 ### <a name="unit-of-work-pattern"></a>Шаблон единицы работы
 
--   **Мартин Фоулер (Martin Fowler). Единица работы шаблон.**
-    [*http://martinfowler.com/eaaCatalog/unitOfWork.html*](http://martinfowler.com/eaaCatalog/unitOfWork.html)
+-   **Мартин Фоулер (Martin Fowler). Шаблон единицы работы.**
+    [*https://martinfowler.com/eaaCatalog/unitOfWork.html*](https://martinfowler.com/eaaCatalog/unitOfWork.html)
 
 <!-- -->
 
@@ -161,12 +161,12 @@ public interface ISpecification<T>
 
 ### <a name="the-specification-pattern"></a>Шаблон спецификации
 
--   **Шаблон спецификации.**
+-   **Шаблон спецификации**
     [*http://deviq.com/specification-pattern/*](http://deviq.com/specification-pattern/)
 
 -   **Эрик Эванс (2004). Предметно-ориентированное проектирование. Addison-Wesley. стр. 224.**
 
--   **Спецификации. Martin Fowler**
+-   **Спецификации. Мартин Фоулер (Martin Fowler)**
     [*https://www.martinfowler.com/apsupp/spec.pdf/*](https://www.martinfowler.com/apsupp/spec.pdf)
 
 >[!div class="step-by-step"]

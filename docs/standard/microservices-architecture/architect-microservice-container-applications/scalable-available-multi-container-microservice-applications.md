@@ -1,7 +1,7 @@
 ---
-title: "Управление микрослужбами и многоконтейнерными приложениями для обеспечения высокого уровня масштабируемости и доступности"
-description: "Архитектура микрослужб .NET для упакованных в контейнеры приложений .NET | Управление микрослужбами и многоконтейнерными приложениями для обеспечения высокого уровня масштабируемости и доступности"
-keywords: "Docker, микрослужбы, ASP.NET, контейнер"
+title: Управление микрослужбами и многоконтейнерными приложениями для обеспечения высокого уровня масштабируемости и доступности
+description: Архитектура микрослужб .NET для упакованных в контейнеры приложений .NET | Управление микрослужбами и многоконтейнерными приложениями для обеспечения высокого уровня масштабируемости и доступности
+keywords: Docker, микрослужбы, ASP.NET, контейнер
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/18/2017
@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: ff524c6d61c6ce51a1a3e831cd666a3b61ac849e
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: c484372c0b5626fc20c8991a432e62353baa7a4c
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="orchestrating-microservices-and-multi-container-applications-for-high-scalability-and-availability"></a>Управление микрослужбами и многоконтейнерными приложениями для обеспечения высокого уровня масштабируемости и доступности
 
@@ -124,20 +124,20 @@ Azure Service Fabric
 
 ## <a name="additional-resources"></a>Дополнительные ресурсы
 
--   **Общие сведения о решениях для размещения контейнеров Docker в службе контейнеров Azure**
+-   **Введение в решения для размещения контейнеров Docker с использованием службы контейнеров Azure**
     [*https://docs.microsoft.com/azure/container-service/container-service-intro*](https://docs.microsoft.com/azure/container-service/container-service-intro)
 
--   **Обзор Docker Swarm**
+-   **Общие сведения о Docker Swarm**
     [*https://docs.docker.com/swarm/overview/*](https://docs.docker.com/swarm/overview/)
 
--   **Обзор режима Swarm**
+-   **Общие сведения о режиме Swarm**
     [*https://docs.docker.com/engine/swarm/*](https://docs.docker.com/engine/swarm/)
 
--   **Обзор Mesosphere DC/OS**
+-   **Общие сведения о Mesosphere DC/OS**
     [*https://docs.mesosphere.com/1.7/overview/*](https://docs.mesosphere.com/1.7/overview/)
 
 -   **Kubernetes.** Официальный сайт.\
-    [*http://kubernetes.io/*](http://kubernetes.io/)
+    [*https://kubernetes.io/*](https://kubernetes.io/)
 
 
 >[!div class="step-by-step"]

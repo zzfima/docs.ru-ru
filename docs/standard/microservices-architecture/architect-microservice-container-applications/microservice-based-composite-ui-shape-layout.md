@@ -1,7 +1,7 @@
 ---
-title: "Создание составного пользовательского интерфейса на основе микрослужб, включая создание его визуальной формы и структуры с помощью нескольких микрослужб"
-description: "Архитектура микрослужб .NET для контейнерных приложений .NET | Создание составного пользовательского интерфейса на основе микрослужб, включая создание его визуальной формы и структуры с помощью нескольких микрослужб"
-keywords: "Docker, микрослужбы, ASP.NET, контейнер"
+title: Создание составного пользовательского интерфейса на основе микрослужб, включая создание его визуальной формы и структуры с помощью нескольких микрослужб
+description: Архитектура микрослужб .NET для контейнерных приложений .NET | Создание составного пользовательского интерфейса на основе микрослужб, включая создание его визуальной формы и структуры с помощью нескольких микрослужб
+keywords: Docker, микрослужбы, ASP.NET, контейнер
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 12b170e9d4c46fbb697f988596af6566d33099a4
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 55b643fa6f87e5e2b1f49ba201032df655195b46
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="creating-composite-ui-based-on-microservices-including-visual-ui-shape-and-layout-generated-by-multiple-microservices"></a>Создание составного пользовательского интерфейса на основе микрослужб, включая создание его визуальной формы и структуры с помощью нескольких микрослужб
 
@@ -53,14 +53,14 @@ ms.lasthandoff: 12/23/2017
 -   **Рубен Оостинга (Ruben Oostinga). Монолитный пользовательский интерфейс в архитектуре микрослужб**
     [*http://blog.xebia.com/the-monolithic-frontend-in-the-microservices-architecture/*](http://blog.xebia.com/the-monolithic-frontend-in-the-microservices-architecture/)
 
--   **Мауро Сервьенти (Mauro Servienti). Как лучше всего спроектировать пользовательский интерфейс**
+-   **Мауро Сервьенти (Mauro Servienti). Как лучше всего скомпоновать пользовательский интерфейс**
     [*https://particular.net/blog/secret-of-better-ui-composition*](https://particular.net/blog/secret-of-better-ui-composition)
 
 -   **Виктор Фарчич (Viktor Farcic). Включение клиентских веб-компонентов в микрослужбы**
     [*https://technologyconversations.com/2015/08/09/including-front-end-web-components-into-microservices/*](https://technologyconversations.com/2015/08/09/including-front-end-web-components-into-microservices/)
 
 -   **Управление клиентской частью в архитектуре микрослужб**\
-    [*http://allegro.tech/2016/03/Managing-Frontend-in-the-microservices-architecture.html*](http://allegro.tech/2016/03/Managing-Frontend-in-the-microservices-architecture.html)
+    [*https://allegro.tech/2016/03/Managing-Frontend-in-the-microservices-architecture.html*](https://allegro.tech/2016/03/Managing-Frontend-in-the-microservices-architecture.html)
 
 
 >[!div class="step-by-step"]

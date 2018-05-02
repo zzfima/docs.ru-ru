@@ -16,11 +16,11 @@ ms.assetid: 568f1645-1305-4906-8625-5d77af81e04f
 caps.latest.revision: 22
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: d6b740e78503d0937c9a0f38a573bb7dd778075d
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 16c08ff42ce77b3901f5909571c528394d139e03
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="walkthrough-creating-and-using-dynamic-objects-c-and-visual-basic"></a>Пошаговое руководство. Создание и использование динамических объектов (C# и Visual Basic)
 
@@ -48,7 +48,7 @@ ms.lasthandoff: 04/26/2018
   
 #### <a name="to-create-a-custom-dynamic-class"></a>Создание пользовательского динамического класса  
   
-1.  Запустите [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)].  
+1.  Запустите Visual Studio.  
   
 2.  В меню **Файл** выберите пункт **Создать** , а затем команду **Проект**.  
   
@@ -143,7 +143,7 @@ ms.lasthandoff: 04/26/2018
   
 #### <a name="to-create-a-custom-dynamic-class"></a>Создание пользовательского динамического класса  
   
-1.  В [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] в меню **Файл** последовательно выберите пункты **Создать**, **Проект**.  
+1.  В меню **Файл** окна Visual Studio наведите указатель мыши на пункт **Создать** и щелкните **Проект**.  
   
 2.  Убедитесь, что в диалоговом окне **Создание проекта** в области **Типы проектов** выбран пункт **Windows**. В области **Шаблоны** выберите пункт **Консольное приложение**. В поле **Имя** введите `DynamicIronPythonSample` и нажмите кнопку **ОК**. Проект создан.  
   

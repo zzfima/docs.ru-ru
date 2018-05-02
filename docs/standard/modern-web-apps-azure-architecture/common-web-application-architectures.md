@@ -6,16 +6,17 @@ ms.author: wiwagn
 ms.date: 10/06/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
+ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: dc5580d38ac29a5e923a4b7d84f9d7e077d5cdb2
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 911935379fd126ccbafe825a6ce4049c2e9b5cde
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
-#<a name="common-web-application-architectures"></a>Общие архитектуры веб-приложений
+# <a name="common-web-application-architectures"></a>Общие архитектуры веб-приложений
 
 > "Если вы считаете хорошую архитектуру слишком дорогой, попробуйте использовать плохую".  
 > _— Брайан Фут (Brian Foote) и Джозеф Йодер (Joseph Yoder)_
@@ -226,7 +227,7 @@ ms.lasthandoff: 12/23/2017
 > <http://deviq.com/repository-pattern/>
 > - **Пример решения с чистой архитектурой**  
 > <https://github.com/ardalis/cleanarchitecture>
-> - **Электронное руководство по проектированию архитектуры микрослужб** <http://aka.ms/MicroservicesEbook>
+> - **Электронная книга по разработке архитектуры микрослужб** <http://aka.ms/MicroservicesEbook>
 
 >[!div class="step-by-step"]
 [Назад] (architectural-principles.md) [Далее] (common-client-side-web-technologies.md)

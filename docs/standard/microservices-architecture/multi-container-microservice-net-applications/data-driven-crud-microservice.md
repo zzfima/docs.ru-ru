@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: be8644e45be8db88c99332476e74c5c968764c74
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
-ms.translationtype: MT
+ms.openlocfilehash: ca4bfd31b505754b508555ff2771a6380ae023b4
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="creating-a-simple-data-driven-crud-microservice"></a>Создание простой микрослужбы CRUD на основе данных
 
@@ -35,7 +35,7 @@ ms.lasthandoff: 03/26/2018
 
 **Рис. 8-5**. Структура простой микрослужбы CRUD на основе данных
 
-При разработке такого рода службы требуется только [ASP.NET Core](https://docs.microsoft.com/aspnet/core/) и ORM или API для доступа к данным, например [Entity Framework Core](https://docs.microsoft.com/ef/core/index). Можно также автоматически создать метаданные [Swagger](http://swagger.io/) посредством [Swashbuckle](https://github.com/domaindrivendev/Swashbuckle.AspNetCore), чтобы предоставить описание возможностей службы, как показано в следующем разделе.
+При разработке такого рода службы требуется только [ASP.NET Core](https://docs.microsoft.com/aspnet/core/) и ORM или API для доступа к данным, например [Entity Framework Core](https://docs.microsoft.com/ef/core/index). Можно также автоматически создать метаданные [Swagger](https://swagger.io/) посредством [Swashbuckle](https://github.com/domaindrivendev/Swashbuckle.AspNetCore), чтобы предоставить описание возможностей службы, как показано в следующем разделе.
 
 Обратите внимание, что запуск сервера базы данных, такого как SQL Server, в контейнере Docker отлично подходит для сред разработки, так как вы можете получить все нужные зависимости в полной готовности без необходимости подготовки базы данных в облаке или локально. Это очень удобно при выполнении интеграционных тестов. Однако для рабочих сред запуск сервера базы данных в контейнере не рекомендуется, так как при таком подходе обычно не удается добиться высокой доступности. Для рабочей среды в Azure рекомендуется использовать базу данных SQL Azure или любую другую технологию базы данных, которая может обеспечить высокий уровень доступности и масштабируемости. Например, для варианта NoSQL можно выбрать DocumentDB.
 
@@ -217,7 +217,7 @@ public void ConfigureServices(IServiceCollection services)
 
 ### <a name="additional-resources"></a>Дополнительные ресурсы
 
--   **Запрос данных**
+-   **Запросы к данным**
     [*https://docs.microsoft.com/ef/core/querying/index*](https://docs.microsoft.com/ef/core/querying/index)
 
 -   **Сохранение данных**
@@ -293,10 +293,10 @@ public class CatalogController : ControllerBase
 
 ### <a name="additional-resources"></a>Дополнительные ресурсы
 
--   **Скотт Ханселман (Scott Hanselman). Управление версиями RESTful веб-API ASP.NET Core, стало проще**
-    [*http://www.hanselman.com/blog/ASPNETCoreRESTfulWebAPIVersioningMadeEasy.aspx*](http://www.hanselman.com/blog/ASPNETCoreRESTfulWebAPIVersioningMadeEasy.aspx)
+-   **Скотт Ханселман (Scott Hanselman). Упрощение управления версиями веб-API ASP.NET Core с поддержкой REST**
+    [*https://www.hanselman.com/blog/ASPNETCoreRESTfulWebAPIVersioningMadeEasy.aspx*](https://www.hanselman.com/blog/ASPNETCoreRESTfulWebAPIVersioningMadeEasy.aspx)
 
--   **Управление версиями RESTful веб-API**
+-   **Управление версиями веб-API с поддержкой REST**
     [*https://docs.microsoft.com/azure/architecture/best-practices/api-design#versioning-a-restful-web-api*](https://docs.microsoft.com/azure/architecture/best-practices/api-design#versioning-a-restful-web-api)
 
 -   **Рой Филдинг (Roy Fielding). Управление версиями, гипермедиа и REST**
@@ -304,19 +304,19 @@ public class CatalogController : ControllerBase
 
 ## <a name="generating-swagger-description-metadata-from-your-aspnet-core-web-api"></a>Создание метаданных описания Swagger из веб-API ASP.NET Core 
 
-[Swagger](http://swagger.io/) — это распространенная платформа с открытым исходным кодом, поддерживаемая большой экосистемой инструментов, помогающих разрабатывать, собирать, документировать и использовать ваши API RESTful. Она становится стандартом для домена метаданных описания API. Следует включать метаданные описания Swagger в микрослужбы любого вида — и в микрослужбы на основе данных, и в более сложные предметно-ориентированные микрослужбы (как описывается в следующем разделе).
+[Swagger](https://swagger.io/) — это распространенная платформа с открытым исходным кодом, поддерживаемая большой экосистемой инструментов, помогающих разрабатывать, собирать, документировать и использовать ваши API RESTful. Она становится стандартом для домена метаданных описания API. Следует включать метаданные описания Swagger в микрослужбы любого вида — и в микрослужбы на основе данных, и в более сложные предметно-ориентированные микрослужбы (как описывается в следующем разделе).
 
 Основу Swagger составляет спецификация Swagger, представляющая собой метаданные описания API в файле JSON или YAML. Эта спецификация создает контракт RESTful для вашего API, детализируя все его ресурсы и операции как в форме, удобной для восприятия человеком, так и в машинно-распознаваемой форме для упрощения разработки, обнаружения и интеграции.
 
 Спецификация является основой спецификации OpenAPI (OAS) и разрабатывается в открытом, прозрачном, совместно работающем сообществе для стандартизации способа определения интерфейсов RESTful.
 
-Спецификация определяет структуру способа обнаружения службы и понимания ее возможностей. Дополнительные сведения, включая редактор web и примеры спецификаций Swagger из компании, например Spotify, Slack, полный и Майкрософт, см. на сайте Swagger (<http://swagger.io>).
+Спецификация определяет структуру способа обнаружения службы и понимания ее возможностей. Дополнительные сведения, включая веб-редактор и примеры спецификаций Swagger от таких компаний, как Spotify, Uber, Slack и Майкрософт, см. на сайте Swagger (<https://swagger.io/>).
 
 ### <a name="why-use-swagger"></a>Почему следует использовать Swagger?
 
 Ниже перечислены основные причины создания метаданных Swagger для ваших API.
 
-**Возможность для других продуктов автоматически использовать и интегрировать ваши API**. Десятки продуктов и [коммерческих инструментов](http://swagger.io/commercial-tools/), а также множество [библиотек и платформ](http://swagger.io/open-source-integrations/) поддерживают Swagger. Корпорация Майкрософт предоставляет высокоуровневые продукты и инструменты, которые могут автоматически использовать API на основе Swagger, например следующие.
+**Возможность для других продуктов автоматически использовать и интегрировать ваши API**. Десятки продуктов и [коммерческих инструментов](https://swagger.io/commercial-tools/), а также множество [библиотек и платформ](https://swagger.io/open-source-integrations/) поддерживают Swagger. Корпорация Майкрософт предоставляет высокоуровневые продукты и инструменты, которые могут автоматически использовать API на основе Swagger, например следующие.
 
 -   [AutoRest](https://github.com/Azure/AutoRest). Вы можете автоматически создавать клиентские классы .NET для вызова Swagger. Этот инструмент можно использовать из CLI, и он также интегрируется с Visual Studio для упрощения использования через графический интерфейс пользователя.
 
@@ -415,7 +415,7 @@ public class Startup
 
 ### <a name="additional-resources"></a>Дополнительные ресурсы
 
--   **Веб-API справки страниц ASP.NET с помощью Swagger**
+-   **Страницы справки по веб-API ASP.NET с использованием Swagger**
     [*https://docs.microsoft.com/aspnet/core/tutorials/web-api-help-pages-using-swagger*](https://docs.microsoft.com/aspnet/core/tutorials/web-api-help-pages-using-swagger)
 
 

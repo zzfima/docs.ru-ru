@@ -19,11 +19,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 64829eee5b21a44acb18cbec9b901d77d49cab90
-ms.sourcegitcommit: 32172ca05d5dcce7ef3d327b9c8639c736e0fe2b
+ms.openlocfilehash: 7298c87c3e61103577d4262ab2dc2645d7e6265a
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/20/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="transport-layer-security-tls-best-practices-with-the-net-framework"></a>Рекомендации по использованию протокола TLS с .NET Framework
 
@@ -78,7 +78,7 @@ ms.lasthandoff: 03/20/2018
 
 ### <a name="for-tcp-sockets-networking"></a>Для сетевого подключения через сокеты TCP
 
-<xref:System.Net.Security.SslStream> (для .NET Framework 4.7 и более поздних версий): операционная система по умолчанию выбирает подходящий протокол безопасности и его версию. Чтобы получить подходящую для ОС версию, по возможности не используйте перегрузки метода <xref:System.Net.Security.SslStream>, который явно задает параметр <xref:System.Security.Authentication.SslProtocols>. В противном случае передайте значение <xref:System.Security.Authentication.SslProtocols.None?displayProperty=nameWithType>. Мы не рекомендуем устанавливать значение <xref:System.Security.Authentication.SslProtocols.Default>. Заданный параметр `SslProtocols.Default` принудительно применяет SSL 3.0 или TLS 1.0 и препятствует использованию TLS 1.2.
+<xref:System.Net.Security.SslStream> (для .NET Framework 4.7 и более поздних версий): операционная система по умолчанию выбирает подходящий протокол безопасности и его версию. Чтобы получить подходящую для ОС версию, по возможности не используйте перегрузки метода <xref:System.Net.Security.SslStream>, который явно задает параметр <xref:System.Security.Authentication.SslProtocols>. В противном случае передайте значение <xref:System.Security.Authentication.SslProtocols.None?displayProperty=nameWithType>. Мы не рекомендуем устанавливать значение <xref:System.Security.Authentication.SslProtocols.Default>. Заданный параметр `SslProtocols.Default` принудительно применяет SSL 3.0 или TLS 1.0 и препятствует использованию TLS 1.2.
 
 Не устанавливайте значение для свойства <xref:System.Net.ServicePointManager.SecurityProtocol> (при сетевом подключении по протоколу HTTP).
 
@@ -114,7 +114,7 @@ WCF использует тот же сетевой стек, что вся пл
 
 Проведите аудит кода, чтобы проверить, не задана ли определенная версия TLS или SSL, выполнив инструкции в следующих разделах:
 
-### <a name="for-net-framework-46---462-and-not-wfc"></a>Для .NET Framework 4.6–4.6.2 (не для WFC)
+### <a name="for-net-framework-46---462-and-not-wcf"></a>Для .NET Framework 4.6–4.6.2 (не для WFC)
 
 Задайте для параметра `DontEnableSystemDefaultTlsVersions` `AppContext` значение `false`. Дополнительные сведения см. в разделе [Настройка безопасности с помощью параметров AppContext](#configuring-security-via-appcontext-switches).
 

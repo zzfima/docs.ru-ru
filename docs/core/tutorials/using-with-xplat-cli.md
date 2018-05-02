@@ -12,11 +12,11 @@ ms.devlang: dotnet
 ms.assetid: 41632e63-d5c6-4427-a09e-51dc1116d45f
 ms.workload:
 - dotnetcore
-ms.openlocfilehash: 8587857ef0d0f48f88331d9588e7e97e3290d34c
-ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
+ms.openlocfilehash: c5082806c907a6c6d4f51bf77e54deee08de3d8b
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="getting-started-with-net-core-on-windowslinuxmacos-using-the-command-line"></a>Начало работы с .NET Core в Windows, Linux и Mac OS с помощью командной строки
 
@@ -31,7 +31,7 @@ ms.lasthandoff: 03/28/2018
 
 ## <a name="hello-console-app"></a>Первое консольное приложение
 
-[Просмотреть или скачать пример кода](https://github.com/dotnet/docs/tree/master/samples/core/console-apps/HelloMsBuild) можно в репозитории dotnet/docs на сайте GitHub. Инструкции по загрузке см. в разделе [Просмотр и скачивание примеров](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
+[Просмотреть или скачать пример кода](https://github.com/dotnet/samples/tree/master/core/console-apps/HelloMsBuild) можно в репозитории dotnet/samples на сайте GitHub. Инструкции по загрузке см. в разделе [Просмотр и скачивание примеров](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
 
 Откройте командную строку и создайте папку с именем *Hello*. Перейдите в созданную папку и введите следующую команду:
 

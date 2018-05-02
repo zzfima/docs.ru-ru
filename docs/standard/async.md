@@ -13,11 +13,11 @@ ms.assetid: 1e38e9d9-8284-46ee-a15f-199adc4f26f4
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: f2dddc21dfb124fe97c397a156743981a67e4037
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 85e30292fdc0e0e529eacdd328d4515bba5ee3e8
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="async-overview"></a>Обзор асинхронной модели
 
@@ -41,4 +41,14 @@ ms.lasthandoff: 12/23/2017
 
 ## <a name="whats-next"></a>Что дальше?
 
-Основные понятия и методы асинхронного программирования подробно рассматриваются в статьях [Подробный обзор асинхронного программирования](async-in-depth.md) и [Task-based asynchronous programming](~/docs/standard/parallel-programming/task-based-asynchronous-programming.md) (Асинхронное программирование на основе задач).
+Дополнительные сведения см. в статье [Подробный обзор асинхронного программирования](async-in-depth.md).
+
+Статья [Шаблоны асинхронного программирования](/asynchronous-programming-patterns/index.md) содержит общие сведения о трех шаблонах асинхронного программирования, поддерживаемых в .NET:  
+  
+-   [Асинхронная модель программирования (APM)](asynchronous-programming-patterns/asynchronous-programming-model-apm.md) (устаревший)  
+  
+-   [Асинхронная модель на основе событий (EAP)](asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md) (устаревший)  
+  
+-   [Асинхронный шаблон, основанный на задачах (TAP)](asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md) (рекомендуется для новых разработок)  
+
+Дополнительные сведения о рекомендованных моделях программирования на основе задач см. в статье [Асинхронное программирование на основе задач](parallel-programming/task-based-asynchronous-programming.md).

@@ -1,7 +1,7 @@
 ---
-title: "Создание, развитие и управление версиями API-интерфейсов и контрактов микрослужб"
-description: "Архитектура микрослужб .NET для контейнерных приложений .NET | Создание, развитие и управление версиями API-интерфейсов и контрактов микрослужб"
-keywords: "Docker, микрослужбы, ASP.NET, контейнер"
+title: Создание, развитие и управление версиями API-интерфейсов и контрактов микрослужб
+description: Архитектура микрослужб .NET для контейнерных приложений .NET | Создание, развитие и управление версиями API-интерфейсов и контрактов микрослужб
+keywords: Docker, микрослужбы, ASP.NET, контейнер
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 3aaa7eaa8bc535874369cf08414f2211cae1bed9
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 7a80405f0a206cfaa0462392eddfc95878353cd7
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="creating-evolving-and-versioning-microservice-apis-and-contracts"></a>Создание, развитие и управление версиями API-интерфейсов и контрактов микрослужб
 
@@ -33,13 +33,13 @@ API микрослужбы представляет собой контракт 
 
 ## <a name="additional-resources"></a>Дополнительные ресурсы
 
--   **Скотт Ханселман (Scott Hanselman). Управление версиями веб-API RESTful ASP.NET Core стало проще**
-    <http://www.hanselman.com/blog/ASPNETCoreRESTfulWebAPIVersioningMadeEasy.aspx>
+-   **Скотт Ханселман (Scott Hanselman). Упрощение управления версиями веб-API ASP.NET Core с поддержкой REST**
+    <https://www.hanselman.com/blog/ASPNETCoreRESTfulWebAPIVersioningMadeEasy.aspx>
 
--   **Управление версиями веб-API RESTful**
+-   **Управление версиями веб-API с поддержкой REST**
     [*https://docs.microsoft.com/azure/architecture/best-practices/api-design#versioning-a-restful-web-api*](https://docs.microsoft.com/azure/architecture/best-practices/api-design#versioning-a-restful-web-api)
 
--   **Рой Филдинг (Roy Fielding). Управление версиями, гиперсредства и REST**
+-   **Рой Филдинг (Roy Fielding). Управление версиями, гипермедиа и REST**
     <https://www.infoq.com/articles/roy-fielding-on-versioning>
 
 
