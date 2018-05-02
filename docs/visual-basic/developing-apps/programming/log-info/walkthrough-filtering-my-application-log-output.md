@@ -1,105 +1,106 @@
 ---
-title: "Фильтрация вывода My.Application.Log (Visual Basic)"
-ms.custom: 
+title: Фильтрация вывода My.Application.Log (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - My.Log object, filtering output
 - My.Application.Log object, filtering output
 - application event logs, output filtering
 ms.assetid: 2c0a457a-38a4-49e1-934d-a51320b7b4ca
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 90fd445227e0c8290ad63fccf807d6d7bdf43ccd
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 6c048578b320fedd2153aee7b466b1494551abe0
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="walkthrough-filtering-myapplicationlog-output-visual-basic"></a><span data-ttu-id="84e7e-102">Пошаговое руководство. Фильтрация вывода My.Application.Log (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="84e7e-102">Walkthrough: Filtering My.Application.Log Output (Visual Basic)</span></span>
-<span data-ttu-id="84e7e-103">В этом пошаговом руководстве демонстрируется изменение фильтрации журнала по умолчанию для объекта `My.Application.Log`, чтобы контролировать, какие данные передаются из объекта `Log` в прослушиватели и какие данные записываются прослушивателями.</span><span class="sxs-lookup"><span data-stu-id="84e7e-103">This walkthrough demonstrates how to change the default log filtering for the `My.Application.Log` object, to control what information is passed from the `Log` object to the listeners and what information is written by the listeners.</span></span> <span data-ttu-id="84e7e-104">Режим ведения журнала можно изменить даже после создания приложения, поскольку сведения о конфигурации хранятся в файле конфигурации приложения.</span><span class="sxs-lookup"><span data-stu-id="84e7e-104">You can change the logging behavior even after building the application, because the configuration information is stored in the application's configuration file.</span></span>  
+# <a name="walkthrough-filtering-myapplicationlog-output-visual-basic"></a><span data-ttu-id="2c778-102">Пошаговое руководство. Фильтрация вывода My.Application.Log (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="2c778-102">Walkthrough: Filtering My.Application.Log Output (Visual Basic)</span></span>
+<span data-ttu-id="2c778-103">В этом пошаговом руководстве демонстрируется изменение фильтрации журнала по умолчанию для объекта `My.Application.Log`, чтобы контролировать, какие данные передаются из объекта `Log` в прослушиватели и какие данные записываются прослушивателями.</span><span class="sxs-lookup"><span data-stu-id="2c778-103">This walkthrough demonstrates how to change the default log filtering for the `My.Application.Log` object, to control what information is passed from the `Log` object to the listeners and what information is written by the listeners.</span></span> <span data-ttu-id="2c778-104">Режим ведения журнала можно изменить даже после создания приложения, поскольку сведения о конфигурации хранятся в файле конфигурации приложения.</span><span class="sxs-lookup"><span data-stu-id="2c778-104">You can change the logging behavior even after building the application, because the configuration information is stored in the application's configuration file.</span></span>  
   
-## <a name="getting-started"></a><span data-ttu-id="84e7e-105">Начало работы</span><span class="sxs-lookup"><span data-stu-id="84e7e-105">Getting Started</span></span>  
- <span data-ttu-id="84e7e-106">Каждое сообщение, записываемое объектом `My.Application.Log`, имеет соответствующий уровень степени серьезности, используемый механизмами фильтрации для управления выходными данными журнала.</span><span class="sxs-lookup"><span data-stu-id="84e7e-106">Each message that `My.Application.Log` writes has an associated severity level, which filtering mechanisms use to control the log output.</span></span> <span data-ttu-id="84e7e-107">В этом примере приложения используются методы `My.Application.Log` для записи нескольких сообщений журналов с различными уровнями степени серьезности.</span><span class="sxs-lookup"><span data-stu-id="84e7e-107">This sample application uses `My.Application.Log` methods to write several log messages with different severity levels.</span></span>  
+## <a name="getting-started"></a><span data-ttu-id="2c778-105">Начало работы</span><span class="sxs-lookup"><span data-stu-id="2c778-105">Getting Started</span></span>  
+ <span data-ttu-id="2c778-106">Каждое сообщение, записываемое объектом `My.Application.Log`, имеет соответствующий уровень степени серьезности, используемый механизмами фильтрации для управления выходными данными журнала.</span><span class="sxs-lookup"><span data-stu-id="2c778-106">Each message that `My.Application.Log` writes has an associated severity level, which filtering mechanisms use to control the log output.</span></span> <span data-ttu-id="2c778-107">В этом примере приложения используются методы `My.Application.Log` для записи нескольких сообщений журналов с различными уровнями степени серьезности.</span><span class="sxs-lookup"><span data-stu-id="2c778-107">This sample application uses `My.Application.Log` methods to write several log messages with different severity levels.</span></span>  
   
-#### <a name="to-build-the-sample-application"></a><span data-ttu-id="84e7e-108">Создание примера приложения</span><span class="sxs-lookup"><span data-stu-id="84e7e-108">To build the sample application</span></span>  
+#### <a name="to-build-the-sample-application"></a><span data-ttu-id="2c778-108">Создание примера приложения</span><span class="sxs-lookup"><span data-stu-id="2c778-108">To build the sample application</span></span>  
   
-1.  <span data-ttu-id="84e7e-109">Откройте новый проект приложения Windows [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].</span><span class="sxs-lookup"><span data-stu-id="84e7e-109">Open a new [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] Windows Application project.</span></span>  
+1.  <span data-ttu-id="2c778-109">Откройте новый проект приложения Windows на Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="2c778-109">Open a new Visual Basic Windows Application project.</span></span>  
   
-2.  <span data-ttu-id="84e7e-110">Добавьте кнопку с именем Button1 в форму Form1.</span><span class="sxs-lookup"><span data-stu-id="84e7e-110">Add a button named Button1 to Form1.</span></span>  
+2.  <span data-ttu-id="2c778-110">Добавьте кнопку с именем Button1 в форму Form1.</span><span class="sxs-lookup"><span data-stu-id="2c778-110">Add a button named Button1 to Form1.</span></span>  
   
-3.  <span data-ttu-id="84e7e-111">В обработчик события <xref:System.Windows.Forms.Control.Click> добавьте следующий код для Button1:</span><span class="sxs-lookup"><span data-stu-id="84e7e-111">In the <xref:System.Windows.Forms.Control.Click> event handler for Button1, add the following code:</span></span>  
+3.  <span data-ttu-id="2c778-111">В обработчик события <xref:System.Windows.Forms.Control.Click> добавьте следующий код для Button1:</span><span class="sxs-lookup"><span data-stu-id="2c778-111">In the <xref:System.Windows.Forms.Control.Click> event handler for Button1, add the following code:</span></span>  
   
      [!code-vb[VbVbcnMyApplicationLogFiltering#1](../../../../visual-basic/developing-apps/programming/log-info/codesnippet/VisualBasic/walkthrough-filtering-my-application-log-output_1.vb)]  
   
-4.  <span data-ttu-id="84e7e-112">Запустите приложение в отладчике.</span><span class="sxs-lookup"><span data-stu-id="84e7e-112">Run the application in the debugger.</span></span>  
+4.  <span data-ttu-id="2c778-112">Запустите приложение в отладчике.</span><span class="sxs-lookup"><span data-stu-id="2c778-112">Run the application in the debugger.</span></span>  
   
-5.  <span data-ttu-id="84e7e-113">Нажмите кнопку **Button1**.</span><span class="sxs-lookup"><span data-stu-id="84e7e-113">Press **Button1**.</span></span>  
+5.  <span data-ttu-id="2c778-113">Нажмите кнопку **Button1**.</span><span class="sxs-lookup"><span data-stu-id="2c778-113">Press **Button1**.</span></span>  
   
-     <span data-ttu-id="84e7e-114">Приложение записывает следующие сведения в файл выходных данных отладки и файл журнала приложения.</span><span class="sxs-lookup"><span data-stu-id="84e7e-114">The application writes the following information to the application's debug output and log file.</span></span>  
+     <span data-ttu-id="2c778-114">Приложение записывает следующие сведения в файл выходных данных отладки и файл журнала приложения.</span><span class="sxs-lookup"><span data-stu-id="2c778-114">The application writes the following information to the application's debug output and log file.</span></span>  
   
      `DefaultSource Information: 0 : In Button1_Click`  
   
      `DefaultSource Error: 2 : Error in the application.`  
   
-6.  <span data-ttu-id="84e7e-115">Закройте приложение.</span><span class="sxs-lookup"><span data-stu-id="84e7e-115">Close the application.</span></span>  
+6.  <span data-ttu-id="2c778-115">Закройте приложение.</span><span class="sxs-lookup"><span data-stu-id="2c778-115">Close the application.</span></span>  
   
-     <span data-ttu-id="84e7e-116">Сведения о просмотре окна вывода отладочных данных приложения см. в разделе [Окно вывода](/visualstudio/ide/reference/output-window).</span><span class="sxs-lookup"><span data-stu-id="84e7e-116">For information on how to view the application's debug output window, see [Output Window](/visualstudio/ide/reference/output-window).</span></span> <span data-ttu-id="84e7e-117">Сведения о расположении файла журнала приложения см. в разделе [Пошаговое руководство. Определение места записи информации для My.Application.Log](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md).</span><span class="sxs-lookup"><span data-stu-id="84e7e-117">For information on the location of the application's log file, see [Walkthrough: Determining Where My.Application.Log Writes Information](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md).</span></span>  
+     <span data-ttu-id="2c778-116">Сведения о просмотре окна вывода отладочных данных приложения см. в разделе [Окно вывода](/visualstudio/ide/reference/output-window).</span><span class="sxs-lookup"><span data-stu-id="2c778-116">For information on how to view the application's debug output window, see [Output Window](/visualstudio/ide/reference/output-window).</span></span> <span data-ttu-id="2c778-117">Сведения о расположении файла журнала приложения см. в разделе [Пошаговое руководство. Определение места записи информации для My.Application.Log](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md).</span><span class="sxs-lookup"><span data-stu-id="2c778-117">For information on the location of the application's log file, see [Walkthrough: Determining Where My.Application.Log Writes Information](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md).</span></span>  
   
     > [!NOTE]
-    >  <span data-ttu-id="84e7e-118">По умолчанию приложение записывает выходные данные в файл журнала при закрытии приложения.</span><span class="sxs-lookup"><span data-stu-id="84e7e-118">By default, the application flushes the log-file output when the application closes.</span></span>  
+    >  <span data-ttu-id="2c778-118">По умолчанию приложение записывает выходные данные в файл журнала при закрытии приложения.</span><span class="sxs-lookup"><span data-stu-id="2c778-118">By default, the application flushes the log-file output when the application closes.</span></span>  
   
-     <span data-ttu-id="84e7e-119">В приведенном выше примере второй вызов метода <xref:Microsoft.VisualBasic.Logging.Log.WriteEntry%2A> и вызов метода <xref:Microsoft.VisualBasic.Logging.Log.WriteException%2A> приводят к получению данных журнала, а первый и последний вызовы метода `WriteEntry` — нет.</span><span class="sxs-lookup"><span data-stu-id="84e7e-119">In the example above, the second call to the <xref:Microsoft.VisualBasic.Logging.Log.WriteEntry%2A> method and the call to the <xref:Microsoft.VisualBasic.Logging.Log.WriteException%2A> method produces log output, while the first and last calls to the `WriteEntry` method do not.</span></span> <span data-ttu-id="84e7e-120">Это связано с тем, что уровнями серьезности для `WriteEntry` и `WriteException` являются "Информация" и "Ошибка". Оба эти значения разрешены при фильтрации журнала по умолчанию для объекта `My.Application.Log`.</span><span class="sxs-lookup"><span data-stu-id="84e7e-120">This is because the severity levels of `WriteEntry` and `WriteException` are "Information" and "Error", both of which are allowed by the `My.Application.Log` object's default log filtering.</span></span> <span data-ttu-id="84e7e-121">Однако событиям с уровнями серьезности "Запуск" и "Остановка" запрещено создание выходных данных журнала.</span><span class="sxs-lookup"><span data-stu-id="84e7e-121">However, events with "Start" and "Stop" severity levels are prevented from producing log output.</span></span>  
+     <span data-ttu-id="2c778-119">В приведенном выше примере второй вызов метода <xref:Microsoft.VisualBasic.Logging.Log.WriteEntry%2A> и вызов метода <xref:Microsoft.VisualBasic.Logging.Log.WriteException%2A> приводят к получению данных журнала, а первый и последний вызовы метода `WriteEntry` — нет.</span><span class="sxs-lookup"><span data-stu-id="2c778-119">In the example above, the second call to the <xref:Microsoft.VisualBasic.Logging.Log.WriteEntry%2A> method and the call to the <xref:Microsoft.VisualBasic.Logging.Log.WriteException%2A> method produces log output, while the first and last calls to the `WriteEntry` method do not.</span></span> <span data-ttu-id="2c778-120">Это связано с тем, что уровнями серьезности для `WriteEntry` и `WriteException` являются "Информация" и "Ошибка". Оба эти значения разрешены при фильтрации журнала по умолчанию для объекта `My.Application.Log`.</span><span class="sxs-lookup"><span data-stu-id="2c778-120">This is because the severity levels of `WriteEntry` and `WriteException` are "Information" and "Error", both of which are allowed by the `My.Application.Log` object's default log filtering.</span></span> <span data-ttu-id="2c778-121">Однако событиям с уровнями серьезности "Запуск" и "Остановка" запрещено создание выходных данных журнала.</span><span class="sxs-lookup"><span data-stu-id="2c778-121">However, events with "Start" and "Stop" severity levels are prevented from producing log output.</span></span>  
   
-## <a name="filtering-for-all-myapplicationlog-listeners"></a><span data-ttu-id="84e7e-122">Фильтрация всех прослушивателей My.Application.Log</span><span class="sxs-lookup"><span data-stu-id="84e7e-122">Filtering for All My.Application.Log Listeners</span></span>  
- <span data-ttu-id="84e7e-123">Объект `My.Application.Log` использует <xref:System.Diagnostics.SourceSwitch> с именем `DefaultSwitch` для управления сообщениями, передаваемыми из методов `WriteEntry` и `WriteException` в прослушиватели журнала.</span><span class="sxs-lookup"><span data-stu-id="84e7e-123">The `My.Application.Log` object uses a <xref:System.Diagnostics.SourceSwitch> named `DefaultSwitch` to control which messages it passes from the `WriteEntry` and `WriteException` methods to the log listeners.</span></span> <span data-ttu-id="84e7e-124">`DefaultSwitch` можно настроить в файле конфигурации приложения, задав в качестве его значения одно из значений перечисления <xref:System.Diagnostics.SourceLevels>.</span><span class="sxs-lookup"><span data-stu-id="84e7e-124">You can configure `DefaultSwitch` in the application's configuration file by setting its value to one of the <xref:System.Diagnostics.SourceLevels> enumeration values.</span></span> <span data-ttu-id="84e7e-125">По умолчанию используется значение "Информация".</span><span class="sxs-lookup"><span data-stu-id="84e7e-125">By default, its value is "Information".</span></span>  
+## <a name="filtering-for-all-myapplicationlog-listeners"></a><span data-ttu-id="2c778-122">Фильтрация всех прослушивателей My.Application.Log</span><span class="sxs-lookup"><span data-stu-id="2c778-122">Filtering for All My.Application.Log Listeners</span></span>  
+ <span data-ttu-id="2c778-123">Объект `My.Application.Log` использует <xref:System.Diagnostics.SourceSwitch> с именем `DefaultSwitch` для управления сообщениями, передаваемыми из методов `WriteEntry` и `WriteException` в прослушиватели журнала.</span><span class="sxs-lookup"><span data-stu-id="2c778-123">The `My.Application.Log` object uses a <xref:System.Diagnostics.SourceSwitch> named `DefaultSwitch` to control which messages it passes from the `WriteEntry` and `WriteException` methods to the log listeners.</span></span> <span data-ttu-id="2c778-124">`DefaultSwitch` можно настроить в файле конфигурации приложения, задав в качестве его значения одно из значений перечисления <xref:System.Diagnostics.SourceLevels>.</span><span class="sxs-lookup"><span data-stu-id="2c778-124">You can configure `DefaultSwitch` in the application's configuration file by setting its value to one of the <xref:System.Diagnostics.SourceLevels> enumeration values.</span></span> <span data-ttu-id="2c778-125">По умолчанию используется значение "Информация".</span><span class="sxs-lookup"><span data-stu-id="2c778-125">By default, its value is "Information".</span></span>  
   
- <span data-ttu-id="84e7e-126">В этой таблице показан уровень серьезности, необходимый журналу для записи сообщения в прослушиватели с конкретным параметром `DefaultSwitch`.</span><span class="sxs-lookup"><span data-stu-id="84e7e-126">This table shows the severity level required for Log to write a message to the listeners, given a particular `DefaultSwitch` setting.</span></span>  
+ <span data-ttu-id="2c778-126">В этой таблице показан уровень серьезности, необходимый журналу для записи сообщения в прослушиватели с конкретным параметром `DefaultSwitch`.</span><span class="sxs-lookup"><span data-stu-id="2c778-126">This table shows the severity level required for Log to write a message to the listeners, given a particular `DefaultSwitch` setting.</span></span>  
   
-|<span data-ttu-id="84e7e-127">Значение DefaultSwitch</span><span class="sxs-lookup"><span data-stu-id="84e7e-127">DefaultSwitch Value</span></span>|<span data-ttu-id="84e7e-128">Уровень серьезности сообщения, необходимый для вывода</span><span class="sxs-lookup"><span data-stu-id="84e7e-128">Message severity required for output</span></span>|  
+|<span data-ttu-id="2c778-127">Значение DefaultSwitch</span><span class="sxs-lookup"><span data-stu-id="2c778-127">DefaultSwitch Value</span></span>|<span data-ttu-id="2c778-128">Уровень серьезности сообщения, необходимый для вывода</span><span class="sxs-lookup"><span data-stu-id="2c778-128">Message severity required for output</span></span>|  
 |---|---| 
 |`Critical`|`Critical`|  
-|`Error`|<span data-ttu-id="84e7e-129">`Critical` или `Error`</span><span class="sxs-lookup"><span data-stu-id="84e7e-129">`Critical` or `Error`</span></span>|  
-|`Warning`|<span data-ttu-id="84e7e-130">`Critical`, `Error` или `Warning`</span><span class="sxs-lookup"><span data-stu-id="84e7e-130">`Critical`, `Error`, or `Warning`</span></span>|  
-|`Information`|<span data-ttu-id="84e7e-131">`Critical`, `Error`, `Warning` или `Information`</span><span class="sxs-lookup"><span data-stu-id="84e7e-131">`Critical`, `Error`, `Warning`, or `Information`</span></span>|  
-|`Verbose`|<span data-ttu-id="84e7e-132">`Critical`, `Error`, `Warning`, `Information` или `Verbose`</span><span class="sxs-lookup"><span data-stu-id="84e7e-132">`Critical`, `Error`, `Warning`, `Information`, or `Verbose`</span></span>|  
-|`ActivityTracing`|<span data-ttu-id="84e7e-133">`Start`, `Stop`, `Suspend`, `Resume` или `Transfer`</span><span class="sxs-lookup"><span data-stu-id="84e7e-133">`Start`, `Stop`, `Suspend`, `Resume`, or `Transfer`</span></span>|  
-|`All`|<span data-ttu-id="84e7e-134">Все сообщения разрешены.</span><span class="sxs-lookup"><span data-stu-id="84e7e-134">All messages are allowed.</span></span>|  
-|`Off`|<span data-ttu-id="84e7e-135">Все сообщения блокируются.</span><span class="sxs-lookup"><span data-stu-id="84e7e-135">All messages are blocked.</span></span>|  
+|`Error`|<span data-ttu-id="2c778-129">`Critical` или `Error`</span><span class="sxs-lookup"><span data-stu-id="2c778-129">`Critical` or `Error`</span></span>|  
+|`Warning`|<span data-ttu-id="2c778-130">`Critical`, `Error`или `Warning`</span><span class="sxs-lookup"><span data-stu-id="2c778-130">`Critical`, `Error`, or `Warning`</span></span>|  
+|`Information`|<span data-ttu-id="2c778-131">`Critical`, `Error`, `Warning` или `Information`</span><span class="sxs-lookup"><span data-stu-id="2c778-131">`Critical`, `Error`, `Warning`, or `Information`</span></span>|  
+|`Verbose`|<span data-ttu-id="2c778-132">`Critical`, `Error`, `Warning`, `Information` или `Verbose`</span><span class="sxs-lookup"><span data-stu-id="2c778-132">`Critical`, `Error`, `Warning`, `Information`, or `Verbose`</span></span>|  
+|`ActivityTracing`|<span data-ttu-id="2c778-133">`Start`, `Stop`, `Suspend`, `Resume` или `Transfer`</span><span class="sxs-lookup"><span data-stu-id="2c778-133">`Start`, `Stop`, `Suspend`, `Resume`, or `Transfer`</span></span>|  
+|`All`|<span data-ttu-id="2c778-134">Все сообщения разрешены.</span><span class="sxs-lookup"><span data-stu-id="2c778-134">All messages are allowed.</span></span>|  
+|`Off`|<span data-ttu-id="2c778-135">Все сообщения блокируются.</span><span class="sxs-lookup"><span data-stu-id="2c778-135">All messages are blocked.</span></span>|  
   
 > [!NOTE]
->  <span data-ttu-id="84e7e-136">Каждый метод `WriteEntry` и `WriteException` имеет перегрузку, которая не указывает уровень серьезности.</span><span class="sxs-lookup"><span data-stu-id="84e7e-136">The `WriteEntry` and `WriteException` methods each have an overload that does not specify a severity level.</span></span> <span data-ttu-id="84e7e-137">Неявным уровнем серьезности для перегрузки `WriteEntry` является "Информация", а неявным уровнем серьезности для перегрузки `WriteException` — "Ошибка".</span><span class="sxs-lookup"><span data-stu-id="84e7e-137">The implicit severity level for the `WriteEntry` overload is "Information", and the implicit severity level for the `WriteException` overload is "Error".</span></span>  
+>  <span data-ttu-id="2c778-136">Каждый метод `WriteEntry` и `WriteException` имеет перегрузку, которая не указывает уровень серьезности.</span><span class="sxs-lookup"><span data-stu-id="2c778-136">The `WriteEntry` and `WriteException` methods each have an overload that does not specify a severity level.</span></span> <span data-ttu-id="2c778-137">Неявным уровнем серьезности для перегрузки `WriteEntry` является "Информация", а неявным уровнем серьезности для перегрузки `WriteException` — "Ошибка".</span><span class="sxs-lookup"><span data-stu-id="2c778-137">The implicit severity level for the `WriteEntry` overload is "Information", and the implicit severity level for the `WriteException` overload is "Error".</span></span>  
   
- <span data-ttu-id="84e7e-138">В этой таблице приводятся выходные данные журнала из предыдущего примера: с параметром `DefaultSwitch` по умолчанию "Информация" только второй вызов метода `WriteEntry` и вызов метода `WriteException` формируют выходные данные журнала.</span><span class="sxs-lookup"><span data-stu-id="84e7e-138">This table explains the log output shown in the previous example: with the default `DefaultSwitch` setting of "Information", only the second call to the `WriteEntry` method and the call to the `WriteException` method produce log output.</span></span>  
+ <span data-ttu-id="2c778-138">В этой таблице приводятся выходные данные журнала из предыдущего примера: с параметром `DefaultSwitch` по умолчанию "Информация" только второй вызов метода `WriteEntry` и вызов метода `WriteException` формируют выходные данные журнала.</span><span class="sxs-lookup"><span data-stu-id="2c778-138">This table explains the log output shown in the previous example: with the default `DefaultSwitch` setting of "Information", only the second call to the `WriteEntry` method and the call to the `WriteException` method produce log output.</span></span>  
   
-#### <a name="to-log-only-activity-tracing-events"></a><span data-ttu-id="84e7e-139">Запись в журнал только событий трассировки действий</span><span class="sxs-lookup"><span data-stu-id="84e7e-139">To log only activity tracing events</span></span>  
+#### <a name="to-log-only-activity-tracing-events"></a><span data-ttu-id="2c778-139">Запись в журнал только событий трассировки действий</span><span class="sxs-lookup"><span data-stu-id="2c778-139">To log only activity tracing events</span></span>  
   
-1.  <span data-ttu-id="84e7e-140">Щелкните правой кнопкой мыши файл app.config в **обозревателе решений** и выберите команду **Открыть**.</span><span class="sxs-lookup"><span data-stu-id="84e7e-140">Right-click app.config in the **Solution Explorer** and select **Open**.</span></span>  
+1.  <span data-ttu-id="2c778-140">Щелкните правой кнопкой мыши файл app.config в **обозревателе решений** и выберите команду **Открыть**.</span><span class="sxs-lookup"><span data-stu-id="2c778-140">Right-click app.config in the **Solution Explorer** and select **Open**.</span></span>  
   
-     <span data-ttu-id="84e7e-141">-или-</span><span class="sxs-lookup"><span data-stu-id="84e7e-141">-or-</span></span>  
+     <span data-ttu-id="2c778-141">- или -</span><span class="sxs-lookup"><span data-stu-id="2c778-141">-or-</span></span>  
   
-     <span data-ttu-id="84e7e-142">Если файл app.config отсутствует, выполните указанные ниже действия.</span><span class="sxs-lookup"><span data-stu-id="84e7e-142">If there is no app.config file:</span></span>  
+     <span data-ttu-id="2c778-142">Если файл app.config отсутствует, выполните указанные ниже действия.</span><span class="sxs-lookup"><span data-stu-id="2c778-142">If there is no app.config file:</span></span>  
   
-    1.  <span data-ttu-id="84e7e-143">В меню **Проект** выберите пункт **Добавить новый элемент**.</span><span class="sxs-lookup"><span data-stu-id="84e7e-143">On the **Project** menu, choose **Add New Item**.</span></span>  
+    1.  <span data-ttu-id="2c778-143">В меню **Проект** выберите пункт **Добавить новый элемент**.</span><span class="sxs-lookup"><span data-stu-id="2c778-143">On the **Project** menu, choose **Add New Item**.</span></span>  
   
-    2.  <span data-ttu-id="84e7e-144">В диалоговом окне **Добавление нового элемента** выберите элемент **Файл конфигурации приложения**.</span><span class="sxs-lookup"><span data-stu-id="84e7e-144">From the **Add New Item** dialog box, choose **Application Configuration File**.</span></span>  
+    2.  <span data-ttu-id="2c778-144">В диалоговом окне **Добавление нового элемента** выберите элемент **Файл конфигурации приложения**.</span><span class="sxs-lookup"><span data-stu-id="2c778-144">From the **Add New Item** dialog box, choose **Application Configuration File**.</span></span>  
   
-    3.  <span data-ttu-id="84e7e-145">Нажмите кнопку **Добавить**.</span><span class="sxs-lookup"><span data-stu-id="84e7e-145">Click **Add**.</span></span>  
+    3.  <span data-ttu-id="2c778-145">Нажмите кнопку **Добавить**.</span><span class="sxs-lookup"><span data-stu-id="2c778-145">Click **Add**.</span></span>  
   
-2.  <span data-ttu-id="84e7e-146">Найдите раздел `<switches>` в разделе `<system.diagnostics>` раздела `<configuration>` верхнего уровня.</span><span class="sxs-lookup"><span data-stu-id="84e7e-146">Locate the `<switches>` section, which is in the `<system.diagnostics>` section, which is in the top-level `<configuration>` section.</span></span>  
+2.  <span data-ttu-id="2c778-146">Найдите раздел `<switches>` в разделе `<system.diagnostics>` раздела `<configuration>` верхнего уровня.</span><span class="sxs-lookup"><span data-stu-id="2c778-146">Locate the `<switches>` section, which is in the `<system.diagnostics>` section, which is in the top-level `<configuration>` section.</span></span>  
   
-3.  <span data-ttu-id="84e7e-147">Найдите элемент, добавляющий `DefaultSwitch` в коллекцию переключателей.</span><span class="sxs-lookup"><span data-stu-id="84e7e-147">Find the element that adds `DefaultSwitch` to the collection of switches.</span></span> <span data-ttu-id="84e7e-148">Он должен выглядеть аналогично следующему элементу:</span><span class="sxs-lookup"><span data-stu-id="84e7e-148">It should look similar to this element:</span></span>  
+3.  <span data-ttu-id="2c778-147">Найдите элемент, добавляющий `DefaultSwitch` в коллекцию переключателей.</span><span class="sxs-lookup"><span data-stu-id="2c778-147">Find the element that adds `DefaultSwitch` to the collection of switches.</span></span> <span data-ttu-id="2c778-148">Он должен выглядеть аналогично следующему элементу:</span><span class="sxs-lookup"><span data-stu-id="2c778-148">It should look similar to this element:</span></span>  
   
      `<add name="DefaultSwitch" value="Information" />`  
   
-4.  <span data-ttu-id="84e7e-149">Измените значение атрибута `value` данного свойства на "ActivityTracing".</span><span class="sxs-lookup"><span data-stu-id="84e7e-149">Change the value of the `value` attribute to "ActivityTracing".</span></span>  
+4.  <span data-ttu-id="2c778-149">Измените значение атрибута `value` данного свойства на "ActivityTracing".</span><span class="sxs-lookup"><span data-stu-id="2c778-149">Change the value of the `value` attribute to "ActivityTracing".</span></span>  
   
-5.  <span data-ttu-id="84e7e-150">Содержимое файла app.config должно быть похоже на следующий код XML:</span><span class="sxs-lookup"><span data-stu-id="84e7e-150">The content of the app.config file should be similar to the following XML:</span></span>  
+5.  <span data-ttu-id="2c778-150">Содержимое файла app.config должно быть похоже на следующий код XML:</span><span class="sxs-lookup"><span data-stu-id="2c778-150">The content of the app.config file should be similar to the following XML:</span></span>  
   
     ```xml  
     <?xml version="1.0" encoding="utf-8" ?>  
@@ -128,49 +129,49 @@ ms.lasthandoff: 11/21/2017
     </configuration>  
     ```  
   
-6.  <span data-ttu-id="84e7e-151">Запустите приложение в отладчике.</span><span class="sxs-lookup"><span data-stu-id="84e7e-151">Run the application in the debugger.</span></span>  
+6.  <span data-ttu-id="2c778-151">Запустите приложение в отладчике.</span><span class="sxs-lookup"><span data-stu-id="2c778-151">Run the application in the debugger.</span></span>  
   
-7.  <span data-ttu-id="84e7e-152">Нажмите кнопку **Button1**.</span><span class="sxs-lookup"><span data-stu-id="84e7e-152">Press **Button1**.</span></span>  
+7.  <span data-ttu-id="2c778-152">Нажмите кнопку **Button1**.</span><span class="sxs-lookup"><span data-stu-id="2c778-152">Press **Button1**.</span></span>  
   
-     <span data-ttu-id="84e7e-153">Приложение записывает следующие сведения в файл выходных данных отладки и файл журнала приложения.</span><span class="sxs-lookup"><span data-stu-id="84e7e-153">The application writes the following information to the application's debug output and log file:</span></span>  
+     <span data-ttu-id="2c778-153">Приложение записывает следующие сведения в файл выходных данных отладки и файл журнала приложения.</span><span class="sxs-lookup"><span data-stu-id="2c778-153">The application writes the following information to the application's debug output and log file:</span></span>  
   
      `DefaultSource Start: 4 : Entering Button1_Click`  
   
      `DefaultSource Stop: 5 : Leaving Button1_Click`  
   
-8.  <span data-ttu-id="84e7e-154">Закройте приложение.</span><span class="sxs-lookup"><span data-stu-id="84e7e-154">Close the application.</span></span>  
+8.  <span data-ttu-id="2c778-154">Закройте приложение.</span><span class="sxs-lookup"><span data-stu-id="2c778-154">Close the application.</span></span>  
   
-9. <span data-ttu-id="84e7e-155">Измените значение атрибута `value` снова на "Информация".</span><span class="sxs-lookup"><span data-stu-id="84e7e-155">Change the value of the `value` attribute back to "Information".</span></span>  
+9. <span data-ttu-id="2c778-155">Измените значение атрибута `value` снова на "Информация".</span><span class="sxs-lookup"><span data-stu-id="2c778-155">Change the value of the `value` attribute back to "Information".</span></span>  
   
     > [!NOTE]
-    >  <span data-ttu-id="84e7e-156">Параметр переключателя `DefaultSwitch` контролирует только `My.Application.Log`.</span><span class="sxs-lookup"><span data-stu-id="84e7e-156">The `DefaultSwitch` switch setting controls only `My.Application.Log`.</span></span> <span data-ttu-id="84e7e-157">На поведение классов [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] <xref:System.Diagnostics.Trace?displayProperty=nameWithType> и <xref:System.Diagnostics.Debug?displayProperty=nameWithType> он не влияет.</span><span class="sxs-lookup"><span data-stu-id="84e7e-157">It does not change how the [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] <xref:System.Diagnostics.Trace?displayProperty=nameWithType> and <xref:System.Diagnostics.Debug?displayProperty=nameWithType> classes behave.</span></span>  
+    >  <span data-ttu-id="2c778-156">Параметр переключателя `DefaultSwitch` контролирует только `My.Application.Log`.</span><span class="sxs-lookup"><span data-stu-id="2c778-156">The `DefaultSwitch` switch setting controls only `My.Application.Log`.</span></span> <span data-ttu-id="2c778-157">На поведение классов [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] <xref:System.Diagnostics.Trace?displayProperty=nameWithType> и <xref:System.Diagnostics.Debug?displayProperty=nameWithType> он не влияет.</span><span class="sxs-lookup"><span data-stu-id="2c778-157">It does not change how the [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] <xref:System.Diagnostics.Trace?displayProperty=nameWithType> and <xref:System.Diagnostics.Debug?displayProperty=nameWithType> classes behave.</span></span>  
   
-## <a name="individual-filtering-for-myapplicationlog-listeners"></a><span data-ttu-id="84e7e-158">Отдельная фильтрация прослушивателей My.Application.Log</span><span class="sxs-lookup"><span data-stu-id="84e7e-158">Individual Filtering For My.Application.Log Listeners</span></span>  
- <span data-ttu-id="84e7e-159">В предыдущем примере показано, как изменить фильтрацию для всех выходных данных `My.Application.Log`.</span><span class="sxs-lookup"><span data-stu-id="84e7e-159">The previous example shows how to change the filtering for all `My.Application.Log` output.</span></span> <span data-ttu-id="84e7e-160">В этом примере демонстрируется способ фильтрации отдельных прослушивателей журнала.</span><span class="sxs-lookup"><span data-stu-id="84e7e-160">This example demonstrates how to filter an individual log listener.</span></span> <span data-ttu-id="84e7e-161">По умолчанию приложение имеет два прослушивателя, которые выполняют запись в файл выходных данных отладки и файл журнала приложения.</span><span class="sxs-lookup"><span data-stu-id="84e7e-161">By default, an application has two listeners that write to the application's debug output and the log file.</span></span>  
+## <a name="individual-filtering-for-myapplicationlog-listeners"></a><span data-ttu-id="2c778-158">Отдельная фильтрация прослушивателей My.Application.Log</span><span class="sxs-lookup"><span data-stu-id="2c778-158">Individual Filtering For My.Application.Log Listeners</span></span>  
+ <span data-ttu-id="2c778-159">В предыдущем примере показано, как изменить фильтрацию для всех выходных данных `My.Application.Log`.</span><span class="sxs-lookup"><span data-stu-id="2c778-159">The previous example shows how to change the filtering for all `My.Application.Log` output.</span></span> <span data-ttu-id="2c778-160">В этом примере демонстрируется способ фильтрации отдельных прослушивателей журнала.</span><span class="sxs-lookup"><span data-stu-id="2c778-160">This example demonstrates how to filter an individual log listener.</span></span> <span data-ttu-id="2c778-161">По умолчанию приложение имеет два прослушивателя, которые выполняют запись в файл выходных данных отладки и файл журнала приложения.</span><span class="sxs-lookup"><span data-stu-id="2c778-161">By default, an application has two listeners that write to the application's debug output and the log file.</span></span>  
   
- <span data-ttu-id="84e7e-162">Файл конфигурации управляет поведением прослушивателей журнала, разрешая каждому из них иметь фильтр, аналогичный переключателю `My.Application.Log`.</span><span class="sxs-lookup"><span data-stu-id="84e7e-162">The configuration file controls the behavior of the log listeners by allowing each one to have a filter, which is similar to a switch for `My.Application.Log`.</span></span> <span data-ttu-id="84e7e-163">Прослушиватель журнала будет выводить сообщение только в том случае, если уровень серьезности сообщения допускается фильтром `DefaultSwitch` журнала и фильтром прослушивателя журнала.</span><span class="sxs-lookup"><span data-stu-id="84e7e-163">A log listener will output a message only if the message's severity is allowed by both the log's `DefaultSwitch` and the log listener's filter.</span></span>  
+ <span data-ttu-id="2c778-162">Файл конфигурации управляет поведением прослушивателей журнала, разрешая каждому из них иметь фильтр, аналогичный переключателю `My.Application.Log`.</span><span class="sxs-lookup"><span data-stu-id="2c778-162">The configuration file controls the behavior of the log listeners by allowing each one to have a filter, which is similar to a switch for `My.Application.Log`.</span></span> <span data-ttu-id="2c778-163">Прослушиватель журнала будет выводить сообщение только в том случае, если уровень серьезности сообщения допускается фильтром `DefaultSwitch` журнала и фильтром прослушивателя журнала.</span><span class="sxs-lookup"><span data-stu-id="2c778-163">A log listener will output a message only if the message's severity is allowed by both the log's `DefaultSwitch` and the log listener's filter.</span></span>  
   
- <span data-ttu-id="84e7e-164">В этом примере демонстрируется настройка фильтрации для нового прослушивателя отладки и добавление его в объект `Log`.</span><span class="sxs-lookup"><span data-stu-id="84e7e-164">This example demonstrates how to configure filtering for a new debug listener and add it to the `Log` object.</span></span> <span data-ttu-id="84e7e-165">Прослушиватель отладки по умолчанию должен быть удален из объекта `Log`, чтобы сообщения отладки поступали только из нового прослушивателя отладки.</span><span class="sxs-lookup"><span data-stu-id="84e7e-165">The default debug listener should be removed from the `Log` object, so it is clear that the debug messages come from the new debug listener.</span></span>  
+ <span data-ttu-id="2c778-164">В этом примере демонстрируется настройка фильтрации для нового прослушивателя отладки и добавление его в объект `Log`.</span><span class="sxs-lookup"><span data-stu-id="2c778-164">This example demonstrates how to configure filtering for a new debug listener and add it to the `Log` object.</span></span> <span data-ttu-id="2c778-165">Прослушиватель отладки по умолчанию должен быть удален из объекта `Log`, чтобы сообщения отладки поступали только из нового прослушивателя отладки.</span><span class="sxs-lookup"><span data-stu-id="2c778-165">The default debug listener should be removed from the `Log` object, so it is clear that the debug messages come from the new debug listener.</span></span>  
   
-#### <a name="to-log-only-activity-tracing-events"></a><span data-ttu-id="84e7e-166">Запись в журнал только событий трассировки действий</span><span class="sxs-lookup"><span data-stu-id="84e7e-166">To log only activity-tracing events</span></span>  
+#### <a name="to-log-only-activity-tracing-events"></a><span data-ttu-id="2c778-166">Запись в журнал только событий трассировки действий</span><span class="sxs-lookup"><span data-stu-id="2c778-166">To log only activity-tracing events</span></span>  
   
-1.  <span data-ttu-id="84e7e-167">Щелкните правой кнопкой мыши файл app.config в **обозревателе решений** и выберите команду **Открыть**.</span><span class="sxs-lookup"><span data-stu-id="84e7e-167">Right-click app.config in the **Solution Explorer** and choose **Open**.</span></span>  
+1.  <span data-ttu-id="2c778-167">Щелкните правой кнопкой мыши файл app.config в **обозревателе решений** и выберите команду **Открыть**.</span><span class="sxs-lookup"><span data-stu-id="2c778-167">Right-click app.config in the **Solution Explorer** and choose **Open**.</span></span>  
   
-     <span data-ttu-id="84e7e-168">-или-</span><span class="sxs-lookup"><span data-stu-id="84e7e-168">-or-</span></span>  
+     <span data-ttu-id="2c778-168">- или -</span><span class="sxs-lookup"><span data-stu-id="2c778-168">-or-</span></span>  
   
-     <span data-ttu-id="84e7e-169">Если файл app.config отсутствует, выполните указанные ниже действия.</span><span class="sxs-lookup"><span data-stu-id="84e7e-169">If there is no app.config file:</span></span>  
+     <span data-ttu-id="2c778-169">Если файл app.config отсутствует, выполните указанные ниже действия.</span><span class="sxs-lookup"><span data-stu-id="2c778-169">If there is no app.config file:</span></span>  
   
-    1.  <span data-ttu-id="84e7e-170">В меню **Проект** выберите пункт **Добавить новый элемент**.</span><span class="sxs-lookup"><span data-stu-id="84e7e-170">On the **Project** menu, choose **Add New Item**.</span></span>  
+    1.  <span data-ttu-id="2c778-170">В меню **Проект** выберите пункт **Добавить новый элемент**.</span><span class="sxs-lookup"><span data-stu-id="2c778-170">On the **Project** menu, choose **Add New Item**.</span></span>  
   
-    2.  <span data-ttu-id="84e7e-171">В диалоговом окне **Добавление нового элемента** выберите элемент **Файл конфигурации приложения**.</span><span class="sxs-lookup"><span data-stu-id="84e7e-171">From the **Add New Item** dialog box, choose **Application Configuration File**.</span></span>  
+    2.  <span data-ttu-id="2c778-171">В диалоговом окне **Добавление нового элемента** выберите элемент **Файл конфигурации приложения**.</span><span class="sxs-lookup"><span data-stu-id="2c778-171">From the **Add New Item** dialog box, choose **Application Configuration File**.</span></span>  
   
-    3.  <span data-ttu-id="84e7e-172">Нажмите кнопку **Добавить**.</span><span class="sxs-lookup"><span data-stu-id="84e7e-172">Click **Add**.</span></span>  
+    3.  <span data-ttu-id="2c778-172">Нажмите кнопку **Добавить**.</span><span class="sxs-lookup"><span data-stu-id="2c778-172">Click **Add**.</span></span>  
   
-2.  <span data-ttu-id="84e7e-173">Щелкните правой кнопкой мыши файл app.config в **обозревателе решений**.</span><span class="sxs-lookup"><span data-stu-id="84e7e-173">Right-click app.config in **Solution Explorer**.</span></span> <span data-ttu-id="84e7e-174">Выберите команду **Открыть**.</span><span class="sxs-lookup"><span data-stu-id="84e7e-174">Choose **Open**.</span></span>  
+2.  <span data-ttu-id="2c778-173">Щелкните правой кнопкой мыши файл app.config в **обозревателе решений**.</span><span class="sxs-lookup"><span data-stu-id="2c778-173">Right-click app.config in **Solution Explorer**.</span></span> <span data-ttu-id="2c778-174">Выберите команду **Открыть**.</span><span class="sxs-lookup"><span data-stu-id="2c778-174">Choose **Open**.</span></span>  
   
-3.  <span data-ttu-id="84e7e-175">Найдите раздел `<listeners>` в разделе `<source>` с атрибутом `name`, равным DefaultSource, в разделе `<sources>`.</span><span class="sxs-lookup"><span data-stu-id="84e7e-175">Locate the `<listeners>` section, in the `<source>` section with the `name` attribute "DefaultSource", which is under the `<sources>` section.</span></span> <span data-ttu-id="84e7e-176">Раздел `<sources>` находится в разделе `<system.diagnostics>` раздела `<configuration>` верхнего уровня.</span><span class="sxs-lookup"><span data-stu-id="84e7e-176">The `<sources>` section is under the `<system.diagnostics>` section, in the top-level `<configuration>` section.</span></span>  
+3.  <span data-ttu-id="2c778-175">Найдите раздел `<listeners>` в разделе `<source>` с атрибутом `name`, равным DefaultSource, в разделе `<sources>`.</span><span class="sxs-lookup"><span data-stu-id="2c778-175">Locate the `<listeners>` section, in the `<source>` section with the `name` attribute "DefaultSource", which is under the `<sources>` section.</span></span> <span data-ttu-id="2c778-176">Раздел `<sources>` находится в разделе `<system.diagnostics>` раздела `<configuration>` верхнего уровня.</span><span class="sxs-lookup"><span data-stu-id="2c778-176">The `<sources>` section is under the `<system.diagnostics>` section, in the top-level `<configuration>` section.</span></span>  
   
-4.  <span data-ttu-id="84e7e-177">Добавьте этот элемент в раздел `<listeners>`:</span><span class="sxs-lookup"><span data-stu-id="84e7e-177">Add this element to the `<listeners>` section:</span></span>  
+4.  <span data-ttu-id="2c778-177">Добавьте этот элемент в раздел `<listeners>`:</span><span class="sxs-lookup"><span data-stu-id="2c778-177">Add this element to the `<listeners>` section:</span></span>  
   
     ```xml  
     <!-- Remove the default debug listener. -->  
@@ -179,9 +180,9 @@ ms.lasthandoff: 11/21/2017
     <add name="NewDefault"/>  
     ```  
   
-5.  <span data-ttu-id="84e7e-178">Найдите раздел `<sharedListeners>` в разделе `<system.diagnostics>` в разделе `<configuration>` верхнего уровня.</span><span class="sxs-lookup"><span data-stu-id="84e7e-178">Locate the `<sharedListeners>` section, in the `<system.diagnostics>` section, in the top-level `<configuration>` section.</span></span>  
+5.  <span data-ttu-id="2c778-178">Найдите раздел `<sharedListeners>` в разделе `<system.diagnostics>` в разделе `<configuration>` верхнего уровня.</span><span class="sxs-lookup"><span data-stu-id="2c778-178">Locate the `<sharedListeners>` section, in the `<system.diagnostics>` section, in the top-level `<configuration>` section.</span></span>  
   
-6.  <span data-ttu-id="84e7e-179">Добавьте в этот раздел `<sharedListeners>` следующий элемент:</span><span class="sxs-lookup"><span data-stu-id="84e7e-179">Add this element to that `<sharedListeners>` section:</span></span>  
+6.  <span data-ttu-id="2c778-179">Добавьте в этот раздел `<sharedListeners>` следующий элемент:</span><span class="sxs-lookup"><span data-stu-id="2c778-179">Add this element to that `<sharedListeners>` section:</span></span>  
   
     ```xml  
     <add name="NewDefault"   
@@ -194,9 +195,9 @@ ms.lasthandoff: 11/21/2017
     </add>  
     ```  
   
-     <span data-ttu-id="84e7e-180">Фильтр <xref:System.Diagnostics.EventTypeFilter> принимает одно из значений перечисления <xref:System.Diagnostics.SourceLevels> как атрибут `initializeData`.</span><span class="sxs-lookup"><span data-stu-id="84e7e-180">The <xref:System.Diagnostics.EventTypeFilter> filter takes one of the <xref:System.Diagnostics.SourceLevels> enumeration values as its `initializeData` attribute.</span></span>  
+     <span data-ttu-id="2c778-180">Фильтр <xref:System.Diagnostics.EventTypeFilter> принимает одно из значений перечисления <xref:System.Diagnostics.SourceLevels> как атрибут `initializeData`.</span><span class="sxs-lookup"><span data-stu-id="2c778-180">The <xref:System.Diagnostics.EventTypeFilter> filter takes one of the <xref:System.Diagnostics.SourceLevels> enumeration values as its `initializeData` attribute.</span></span>  
   
-7.  <span data-ttu-id="84e7e-181">Содержимое файла app.config должно быть похоже на следующий код XML:</span><span class="sxs-lookup"><span data-stu-id="84e7e-181">The content of the app.config file should be similar to the following XML:</span></span>  
+7.  <span data-ttu-id="2c778-181">Содержимое файла app.config должно быть похоже на следующий код XML:</span><span class="sxs-lookup"><span data-stu-id="2c778-181">The content of the app.config file should be similar to the following XML:</span></span>  
   
     ```xml  
     <?xml version="1.0" encoding="utf-8" ?>  
@@ -237,28 +238,28 @@ ms.lasthandoff: 11/21/2017
     </configuration>  
     ```  
   
-8.  <span data-ttu-id="84e7e-182">Запустите приложение в отладчике.</span><span class="sxs-lookup"><span data-stu-id="84e7e-182">Run the application in the debugger.</span></span>  
+8.  <span data-ttu-id="2c778-182">Запустите приложение в отладчике.</span><span class="sxs-lookup"><span data-stu-id="2c778-182">Run the application in the debugger.</span></span>  
   
-9. <span data-ttu-id="84e7e-183">Нажмите кнопку **Button1**.</span><span class="sxs-lookup"><span data-stu-id="84e7e-183">Press **Button1**.</span></span>  
+9. <span data-ttu-id="2c778-183">Нажмите кнопку **Button1**.</span><span class="sxs-lookup"><span data-stu-id="2c778-183">Press **Button1**.</span></span>  
   
-     <span data-ttu-id="84e7e-184">Приложение записывает следующие сведения в файл выходных данных приложения:</span><span class="sxs-lookup"><span data-stu-id="84e7e-184">The application writes the following information to the application's log file:</span></span>  
+     <span data-ttu-id="2c778-184">Приложение записывает следующие сведения в файл выходных данных приложения:</span><span class="sxs-lookup"><span data-stu-id="2c778-184">The application writes the following information to the application's log file:</span></span>  
   
      `Default Information: 0 : In Button1_Click`  
   
      `Default Error: 2 : Error in the application.`  
   
-     <span data-ttu-id="84e7e-185">В связи с более ограничивающим фильтром приложение записывает меньше данных в выходные данные отладки приложения.</span><span class="sxs-lookup"><span data-stu-id="84e7e-185">The application writes less information to the application's debug output because of the more restrictive filtering.</span></span>  
+     <span data-ttu-id="2c778-185">В связи с более ограничивающим фильтром приложение записывает меньше данных в выходные данные отладки приложения.</span><span class="sxs-lookup"><span data-stu-id="2c778-185">The application writes less information to the application's debug output because of the more restrictive filtering.</span></span>  
   
      `Default Error   2   Error`  
   
-10. <span data-ttu-id="84e7e-186">Закройте приложение.</span><span class="sxs-lookup"><span data-stu-id="84e7e-186">Close the application.</span></span>  
+10. <span data-ttu-id="2c778-186">Закройте приложение.</span><span class="sxs-lookup"><span data-stu-id="2c778-186">Close the application.</span></span>  
   
- <span data-ttu-id="84e7e-187">Дополнительные сведения об изменении параметров журнала после развертывания см. в разделе [Работа с журналами приложения](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md).</span><span class="sxs-lookup"><span data-stu-id="84e7e-187">For more information about changing log settings after deployment, see [Working with Application Logs](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md).</span></span>  
+ <span data-ttu-id="2c778-187">Дополнительные сведения об изменении параметров журнала после развертывания см. в разделе [Работа с журналами приложения](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md).</span><span class="sxs-lookup"><span data-stu-id="2c778-187">For more information about changing log settings after deployment, see [Working with Application Logs](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="84e7e-188">См. также</span><span class="sxs-lookup"><span data-stu-id="84e7e-188">See Also</span></span>  
- [<span data-ttu-id="84e7e-189">Пошаговое руководство. Определение места записи сведений для My.Application.Log</span><span class="sxs-lookup"><span data-stu-id="84e7e-189">Walkthrough: Determining Where My.Application.Log Writes Information</span></span>](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md)  
- [<span data-ttu-id="84e7e-190">Пошаговое руководство. Изменение места записи сведений для My.Application.Log</span><span class="sxs-lookup"><span data-stu-id="84e7e-190">Walkthrough: Changing Where My.Application.Log Writes Information</span></span>](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)  
- [<span data-ttu-id="84e7e-191">Пошаговое руководство. Создание пользовательских прослушивателей журнала</span><span class="sxs-lookup"><span data-stu-id="84e7e-191">Walkthrough: Creating Custom Log Listeners</span></span>](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-creating-custom-log-listeners.md)  
- [<span data-ttu-id="84e7e-192">Практическое руководство. Запись сообщений в журнал</span><span class="sxs-lookup"><span data-stu-id="84e7e-192">How to: Write Log Messages</span></span>](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)  
- [<span data-ttu-id="84e7e-193">Переключатели трассировки</span><span class="sxs-lookup"><span data-stu-id="84e7e-193">Trace Switches</span></span>](../../../../framework/debug-trace-profile/trace-switches.md)  
- [<span data-ttu-id="84e7e-194">Запись сведений в журнал из приложения</span><span class="sxs-lookup"><span data-stu-id="84e7e-194">Logging Information from the Application</span></span>](../../../../visual-basic/developing-apps/programming/log-info/logging-information-from-the-application.md)
+## <a name="see-also"></a><span data-ttu-id="2c778-188">См. также</span><span class="sxs-lookup"><span data-stu-id="2c778-188">See Also</span></span>  
+ [<span data-ttu-id="2c778-189">Пошаговое руководство. Определение места записи сведений для My.Application.Log</span><span class="sxs-lookup"><span data-stu-id="2c778-189">Walkthrough: Determining Where My.Application.Log Writes Information</span></span>](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md)  
+ [<span data-ttu-id="2c778-190">Пошаговое руководство. Изменение места записи сведений для My.Application.Log</span><span class="sxs-lookup"><span data-stu-id="2c778-190">Walkthrough: Changing Where My.Application.Log Writes Information</span></span>](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)  
+ [<span data-ttu-id="2c778-191">Пошаговое руководство. Создание пользовательских прослушивателей журнала</span><span class="sxs-lookup"><span data-stu-id="2c778-191">Walkthrough: Creating Custom Log Listeners</span></span>](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-creating-custom-log-listeners.md)  
+ [<span data-ttu-id="2c778-192">Практическое руководство. Запись сообщений в журнал</span><span class="sxs-lookup"><span data-stu-id="2c778-192">How to: Write Log Messages</span></span>](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)  
+ [<span data-ttu-id="2c778-193">Переключатели трассировки</span><span class="sxs-lookup"><span data-stu-id="2c778-193">Trace Switches</span></span>](../../../../framework/debug-trace-profile/trace-switches.md)  
+ [<span data-ttu-id="2c778-194">Запись сведений в журнал из приложения</span><span class="sxs-lookup"><span data-stu-id="2c778-194">Logging Information from the Application</span></span>](../../../../visual-basic/developing-apps/programming/log-info/logging-information-from-the-application.md)
