@@ -1,24 +1,14 @@
 ---
 title: '&lt;federationConfiguration&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 8b14054c-6d07-46ab-ab58-03f14beac0f2
-caps.latest.revision: "9"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 0014e0224221cd5143709ba0a5b38f10e457b494
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 44014d620dcd03e055eb58b50a1428b8e1b41186
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltfederationconfigurationgt"></a>&lt;federationConfiguration&gt;
 Настраивает <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (WSFAM) и <xref:System.IdentityModel.Services.SessionAuthenticationModule> (SAM), при использовании федеративной проверки подлинности по протоколу WS-Federation. Настраивает <xref:System.Security.Claims.ClaimsAuthorizationManager> при использовании <xref:System.IdentityModel.Services.ClaimsPrincipalPermission> или <xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute> класса для обеспечения контроля доступа на основе утверждений.  
@@ -47,7 +37,7 @@ ms.lasthandoff: 12/22/2017
   
 ### <a name="child-elements"></a>Дочерние элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
 |[\<cookieHandler >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/cookiehandler.md)|Настраивает обработчик куки-файл, используемый SAM. Необязательный.|  
 |[\<serviceCertificate >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/servicecertificate.md)|Настраивает сертификат, используемый для шифрования и расшифровки токенов. Необязательный.|  
@@ -55,7 +45,7 @@ ms.lasthandoff: 12/22/2017
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
 |[\<system.identityModel.services>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel-services.md)|Раздел конфигурации для проверки подлинности с помощью протокола WS-Federation.|  
   
@@ -76,7 +66,7 @@ ms.lasthandoff: 12/22/2017
   
 4.  Если несколько именованных `<federationConfiguration>` элементы, присутствует и нет неименованных `<federationConfiguration>` одного элемента, создается исключение.  
   
- Как правило, только один `<federationConfiguration>` определенный раздел. Этот раздел представляет конфигурацию федерации по умолчанию. Можно указать несколько уникальность имен `<federationConfiguration>` элементов; Однако в этом случае, если требуется загрузить конфигурацию федерации, отличном от того, без имени, необходимо указать обработчик. <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfigurationCreated>событие и набор <xref:System.IdentityModel.Services.Configuration.FederationConfigurationCreatedEventArgs.FederationConfiguration%2A?displayProperty=nameWithType> свойство в обработчике для <xref:System.IdentityModel.Services.Configuration.FederationConfiguration> объект инициализирован со значениями из соответствующих `<federationConfiguration>` элемент в файле конфигурации.  
+ Как правило, только один `<federationConfiguration>` определенный раздел. Этот раздел представляет конфигурацию федерации по умолчанию. Можно указать несколько уникальность имен `<federationConfiguration>` элементов; Однако в этом случае, если требуется загрузить конфигурацию федерации, отличном от того, без имени, необходимо указать обработчик. <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfigurationCreated> событие и набор <xref:System.IdentityModel.Services.Configuration.FederationConfigurationCreatedEventArgs.FederationConfiguration%2A?displayProperty=nameWithType> свойство в обработчике для <xref:System.IdentityModel.Services.Configuration.FederationConfiguration> объект инициализирован со значениями из соответствующих `<federationConfiguration>` элемент в файле конфигурации.  
   
  `<federationConfiguration>` Представлен <xref:System.IdentityModel.Services.Configuration.FederationConfigurationElement> класса. Сам объект конфигурации представленного <xref:System.IdentityModel.Services.Configuration.FederationConfiguration> класса. Один <xref:System.IdentityModel.Services.Configuration.FederationConfiguration> набор экземпляров на <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfiguration%2A?displayProperty=nameWithType> свойства и обеспечивает федеративной конфигурацию для приложения.  
   

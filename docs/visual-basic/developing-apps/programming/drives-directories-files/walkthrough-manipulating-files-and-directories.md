@@ -25,11 +25,11 @@ ms.assetid: cae77565-9f78-4e46-8e42-eb2f9f8e1ffd
 caps.latest.revision: 49
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: bff2e66b1a196117117370f7620f3f55576ad19b
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 12461cc99ec03ed87924c894e23740f9d76385ed
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="walkthrough-manipulating-files-and-directories-in-visual-basic"></a>Пошаговое руководство. Операции с файлами и каталогами в Visual Basic
 В этом пошаговом руководстве приводятся основные сведения о файловом вводе-выводе в Visual Basic. В нем описывается создание небольшого приложения, перечисляющего текстовые файлы в каталоге и анализирующего их. Для каждого выбранного текстового файла приложение предоставляет атрибуты файла и первую строку содержимого. Кроме того, предоставляется возможность записать информацию в файл журнала.  
@@ -48,7 +48,7 @@ ms.lasthandoff: 04/26/2018
   
 3.  В поле **Имя** введите `FileExplorer`, чтобы задать имя проекта, а затем нажмите кнопку **ОК**.  
   
-     [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] добавит проект в **обозреватель решений**, после чего откроется конструктор Windows Forms.  
+     Visual Studio добавит проект в **обозреватель решений**, после чего откроется конструктор Windows Forms.  
   
 4.  Добавьте в форму элементы управления из приведенной ниже таблицы и установите для их свойств соответствующие значения.  
   

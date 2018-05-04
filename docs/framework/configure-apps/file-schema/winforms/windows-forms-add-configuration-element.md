@@ -1,26 +1,17 @@
 ---
-title: "Windows Forms добавьте элемент конфигурации"
-ms.custom: 
+title: Windows Forms добавьте элемент конфигурации
 ms.date: 04/07/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Windows Forms Add configuration element
 - configuring Windows Forms applications
 ms.assetid: 3e3e04de-99d1-4658-b716-44cb669d9589
-caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 331b2238ae87776938422484d34bb68b4653a56e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 529dbccd5ddb4dd1f1456fb9a6043f3c5f7b378d
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="windows-forms-add-configuration-element"></a>Windows Forms добавьте элемент конфигурации
 
@@ -45,19 +36,19 @@ ms.lasthandoff: 12/22/2017
 | `key`     | Обязательный атрибут. Предопределенные имя ключа, соответствующий конкретной настраиваемые функции Windows Forms. |
 | `value`   | Обязательный атрибут. Значение, присваиваемое `key`. |
 
-### <a name="key-attribute-names-and-associated-values"></a>`key`имена атрибутов и связанных значений
+### <a name="key-attribute-names-and-associated-values"></a>`key` имена атрибутов и связанных значений
 
-| Имя в `key` | Значения | Описание: |
+| Имя в `key` | Значения | Описание |
 | ---------- | ------ | ----------- |
-| «AnchorLayout.DisableSinglePassControlScaling» | «true» &#124;» false» | Указывает, являются ли привязанные элементы управления масштабируется за один проход. «true», чтобы отключить один передать масштабирования; в противном случае — значение false. В разделе «Передать одним масштабирование» в [примечания](#Remarks) для получения дополнительной информации. |
-| «DpiAwareness» | «PerMonitorV2» &#124;» false» | Указывает, является ли приложение как поддерживающее DPI. Ключ «PerMonitorV2» для поддержки сведения о состоянии точек на дюйм; противном случае задайте значение «false». Поддержка точек на ДЮЙМ является функция, включаемая; Чтобы воспользоваться преимуществами высоким DPI поддержки Windows Forms, следует присвойте ему значение «PerMonitorV2». В разделе [примечания](#remarks) Дополнительные сведения. |
-| «CheckedListBox.DisableHighDpiImprovements» | «true» &#124;» false» | Указывает, является ли <xref:System.Windows.Forms.CheckedListBox> управления использует преимущества масштабирования и макет усовершенствования, появившиеся в .NET Framework 4.7. «true», чтобы отказаться от улучшения caling и макет; в противном случае — значение «false». |
-| «DataGridView.DisableHighDpiImprovements» | «true» &#124;» false» | Указывает, является ли <xref:System.Windows.Forms.DataGridView> управления масштабирования и макет усовершенствования, появившиеся в .NET Framework 4.7. «true», чтобы отказаться от сведения о состоянии точек на ДЮЙМ; «false» в противном случае. |
-| «DisableDpiChangedMessageHandling» | «true» &#124;» false» | «true», чтобы отказаться от получения сообщений, связанных с разрешение DPI изменения; «false» в противном случае. В разделе [примечания](#remarks) Дополнительные сведения. |
-| «EnableWindowsFormsHighDpiAutoResizing» | «true» &#124;» false» | Указывает, изменяется ли автоматически приложения Windows Forms из-за изменения масштабирования точек на ДЮЙМ. «true», чтобы включить автоматическое изменение размеров; в противном случае — значение false. |
-| «Form.DisableSinglePassControlScaling» | «true» &#124;» false» | Указывает, является ли <xref:System.Windows.Forms.Form> масштабируется за один проход. «true», чтобы отключить один проход масштабирования; в противном случае — значение false. В разделе «Передать одним масштабирование» в [примечания](#Remarks) для получения дополнительной информации. |
-| «MonthCalendar.DisableSinglePassControlScaling» | «true» &#124;» false» | Указывает, является ли <xref:System.Windows.Forms.MonthCalendar> масштабируется элемент управления за один проход. «true», чтобы отключить один проход масштабирования; в противном случае — значение false. В разделе «Передать одним масштабирование» в [примечания](#Remarks) для получения дополнительной информации. |
-| «Toolstrip.DisableHighDpiImprovements» | «true» &#124;» false» | Указывает, является ли <xref:System.Windows.Forms.ToolStrip> управления использует преимущества масштабирования и макет усовершенствования, появившиеся в .NET Framework 4.7. «true», чтобы отказаться от сведения о состоянии точек на ДЮЙМ; «false» в противном случае. |
+| «AnchorLayout.DisableSinglePassControlScaling» | «true»&#124;«false» | Указывает, являются ли привязанные элементы управления масштабируется за один проход. «true», чтобы отключить один передать масштабирования; в противном случае — значение false. В разделе «Передать одним масштабирование» в [примечания](#Remarks) для получения дополнительной информации. |
+| «DpiAwareness» | «PerMonitorV2»&#124;«false» | Указывает, является ли приложение как поддерживающее DPI. Ключ «PerMonitorV2» для поддержки сведения о состоянии точек на дюйм; противном случае задайте значение «false». Поддержка точек на ДЮЙМ является функция, включаемая; Чтобы воспользоваться преимуществами высоким DPI поддержки Windows Forms, следует присвойте ему значение «PerMonitorV2». В разделе [примечания](#remarks) Дополнительные сведения. |
+| «CheckedListBox.DisableHighDpiImprovements» | «true»&#124;«false» | Указывает, является ли <xref:System.Windows.Forms.CheckedListBox> управления использует преимущества масштабирования и макет усовершенствования, появившиеся в .NET Framework 4.7. «true», чтобы отказаться от улучшения caling и макет; в противном случае — значение «false». |
+| «DataGridView.DisableHighDpiImprovements» | «true»&#124;«false» | Указывает, является ли <xref:System.Windows.Forms.DataGridView> управления масштабирования и макет усовершенствования, появившиеся в .NET Framework 4.7. «true», чтобы отказаться от сведения о состоянии точек на ДЮЙМ; «false» в противном случае. |
+| «DisableDpiChangedMessageHandling» | «true»&#124;«false» | «true», чтобы отказаться от получения сообщений, связанных с разрешение DPI изменения; «false» в противном случае. В разделе [примечания](#remarks) Дополнительные сведения. |
+| «EnableWindowsFormsHighDpiAutoResizing» | «true»&#124;«false» | Указывает, изменяется ли автоматически приложения Windows Forms из-за изменения масштабирования точек на ДЮЙМ. «true», чтобы включить автоматическое изменение размеров; в противном случае — значение false. |
+| «Form.DisableSinglePassControlScaling» | «true»&#124;«false» | Указывает, является ли <xref:System.Windows.Forms.Form> масштабируется за один проход. «true», чтобы отключить один проход масштабирования; в противном случае — значение false. В разделе «Передать одним масштабирование» в [примечания](#Remarks) для получения дополнительной информации. |
+| «MonthCalendar.DisableSinglePassControlScaling» | «true»&#124;«false» | Указывает, является ли <xref:System.Windows.Forms.MonthCalendar> масштабируется элемент управления за один проход. «true», чтобы отключить один проход масштабирования; в противном случае — значение false. В разделе «Передать одним масштабирование» в [примечания](#Remarks) для получения дополнительной информации. |
+| «Toolstrip.DisableHighDpiImprovements» | «true»&#124;«false» | Указывает, является ли <xref:System.Windows.Forms.ToolStrip> управления использует преимущества масштабирования и макет усовершенствования, появившиеся в .NET Framework 4.7. «true», чтобы отказаться от сведения о состоянии точек на ДЮЙМ; «false» в противном случае. |
 
 ### <a name="child-elements"></a>Дочерние элементы
 
@@ -65,11 +56,11 @@ ms.lasthandoff: 12/22/2017
 
 ### <a name="parent-elements"></a>Родительские элементы
 
-| Элемент | Описание: |
+| Элемент | Описание |
 | ------- | ----------- |
 | [`<System.Windows.Forms.ApplicationConfigurationSection>`](../../../../../docs/framework/configure-apps/file-schema/winforms/index.md) | Настройка поддержки для новых функций приложения Windows Forms. |
 
-## <a name="a-nameremarks--remarks"></a><a name="remarks" />Примечания
+## <a name="a-nameremarks--remarks"></a><a name="remarks" /> Примечания
 
 Начиная с версии .NET Framework 4.7 элемент `<System.Windows.Forms.ApplicationConfigurationSection>` позволяет настраивать в приложениях Windows Forms функции, добавленные в последних выпусках .NET Framework. 
 

@@ -1,34 +1,22 @@
 ---
-title: "Элемент &lt;message&gt; &lt;netTcpBinding&gt;"
-ms.custom: 
+title: Элемент &lt;message&gt; &lt;netTcpBinding&gt;
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 1d71edd9-c085-4c2e-b6d3-980c313366f9
-caps.latest.revision: "20"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ab40ab1cd889665829e42072803010ad49e717a9
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
-ms.translationtype: MT
+ms.openlocfilehash: 4e05182d40348b215f39bb85e0848ed608dcdf16
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltmessagegt-element-of-ltnettcpbindinggt"></a>Элемент &lt;message&gt; &lt;netTcpBinding&gt;
 Определяет тип требований безопасности уровня сообщений для конечной точки, настроенной с [ \<netTcpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md).  
   
- \<system.ServiceModel>  
+ \<система. ServiceModel >  
 \<привязки >  
-\<netTcpBinding>  
+\<netTcpBinding >  
 \<Привязка >  
 \<Безопасность >  
-\<message>  
+\<сообщение >  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -84,7 +72,7 @@ ms.lasthandoff: 01/19/2018
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
 |[\<Безопасность >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-nettcpbinding.md)|Определяет возможности безопасности для элемента <xref:System.ServiceModel.Configuration.NetTcpBindingElement>.|  
   

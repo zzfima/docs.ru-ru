@@ -1,13 +1,6 @@
 ---
-title: "&lt;При запуске&gt; элемент"
-ms.custom: 
+title: '&lt;При запуске&gt; элемент'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/startup
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#startup
@@ -16,16 +9,14 @@ helpviewer_keywords:
 - <startup> element
 - startup element
 ms.assetid: 536acfd8-f827-452f-838a-e14fa3b87621
-caps.latest.revision: "19"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 4299775cd23162839ab9846adc7d2c64cc18a404
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 60699f0335bb35589341558800cfd64503d0aa0a
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltstartupgt-element"></a>&lt;При запуске&gt; элемент
 Указывает информация запуска среды CLR.  
@@ -51,21 +42,21 @@ ms.lasthandoff: 01/19/2018
   
 ## <a name="uselegacyv2runtimeactivationpolicy-attribute"></a>Атрибут useLegacyV2RuntimeActivationPolicy  
   
-|Значение|Описание:|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |`true`|Включить [!INCLUDE[dnprdnext](../../../../../includes/dnprdnext-md.md)] политике активации среды выполнения для выбранной среды выполнения, является привязка методы активации прежних версий среды выполнения (например, [CorBindToRuntimeEx-функция](../../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md)) в среду выполнения из файла конфигурации, а не выбраны ограниченного их в среде CLR версии 2.0. Таким образом Если вы выбрали CLR версии 4 или более поздней версии из файла конфигурации, смешанных сборок, созданных в более ранних версиях платформы .NET Framework, загружаются с выбранной версией среды CLR. Установка этого значения предотвращает CLR версии 1.1 или среда CLR версии 2.0 загрузку в один процесс, эффективно отключив функцию side-by-side-process.|  
 |`false`|Используйте политику активации по умолчанию для [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] и более поздних версиях это разрешить методы активации для загрузки среды CLR версии 1.1 или 2.0 в процесс прежних версий среды выполнения. Установка этого значения предотвращает сборки смешанного режима от загрузки в .NET Framework 4 или более поздней версии, если они были созданы с .NET Framework 4 или более поздней версии. Это значение по умолчанию.|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
 |[\<requiredRuntime>](../../../../../docs/framework/configure-apps/file-schema/startup/requiredruntime-element.md)|Указывает, что приложение поддерживает только версию 1.0 среды CLR. Приложения, собранные с помощью версии 1.1 или более поздней, должны использовать  **\<supportedRuntime >** элемента.|  
 |[\<supportedRuntime>](../../../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md)|Указывает, какие версии среды CLR поддерживает приложение.|  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
 |`configuration`|Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями .NET Framework.|  
   

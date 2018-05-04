@@ -1,12 +1,13 @@
 ---
-title: "Службы клиентских приложений"
-ms.custom: 
+title: Службы клиентских приложений
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - role-based security [.NET Framework], client application services
@@ -24,16 +25,17 @@ helpviewer_keywords:
 - roles [.NET Framework], client application services
 - client application services, about client application services
 ms.assetid: 1487d8df-089e-4f21-abfb-a791a652b58e
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 597b2d4d37d76ca722ddcebf9fcfeae532f67a00
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 9532594f5f243faed28229388b9a6d597be57a7d
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="client-application-services"></a>Службы клиентских приложений
 Службы клиентских приложений позволяют легко создавать приложения Windows, использующие службы входа, ролей, профилей [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)], которые включены в расширения Microsoft ASP.NET 2.0 AJAX. Эти службы позволяют нескольким веб-приложениям и приложениям Windows использовать сведения о пользователе и функции управления пользователями с одного сервера. Например, эти службы можно использовать для решения следующих задач.  
@@ -53,7 +55,7 @@ ms.lasthandoff: 12/22/2017
  Описание возможностей, доступных через поставщиков служб клиентских приложений.  
   
  [Практическое руководство. Настройка служб клиентских приложений](../../../docs/framework/common-client-technologies/how-to-configure-client-application-services.md)  
- Описание использования конструктора проектов [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] для включения и настройки служб клиентских приложений, а также описание соответствующих изменений в файле App.config.  
+ Описание использования конструктора проектов Visual Studio для включения и настройки служб клиентских приложений, а также описание соответствующих изменений в файле App.config.  
   
  [Практическое руководство. Реализация входа пользователя с помощью служб клиентских приложений](../../../docs/framework/common-client-technologies/how-to-implement-user-login-with-client-application-services.md)  
  Описание процедуры проверки пользователя, если в приложении настроено использование поставщика службы проверки подлинности клиента.  

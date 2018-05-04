@@ -1,24 +1,12 @@
 ---
-title: "Архитектура ADO.NET"
-ms.custom: 
+title: Архитектура ADO.NET
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: fcd45b99-ae8f-45ab-8b97-d887beda734e
-caps.latest.revision: "7"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: d1f09901ef6eb30fe3f43ee19ab17ceaaa2b78e8
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 384f2397e0e2794c4326d635db9f81fe1078f374
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="adonet-architecture"></a>Архитектура ADO.NET
 Обработка данных традиционно полагалась в основном на двухуровневую модель, основанную на сетевом соединении. Так как при обработке данных все больше используется многоуровневая архитектура, программисты переходят на метод, не использующий подключение, чтобы обеспечить лучшую масштабируемость для их приложений.  
@@ -34,7 +22,7 @@ ms.lasthandoff: 01/17/2018
   
  Следующая схема иллюстрирует связь между поставщиком данных [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] и `DataSet`.  
   
- ![ADO.Net graphic](../../../../docs/framework/data/adonet/media/ado-1-bpuedev11.png "ado_1_bpuedev11")  
+ ![Графика ADO.Net](../../../../docs/framework/data/adonet/media/ado-1-bpuedev11.png "ado_1_bpuedev11")  
 Архитектура ADO.NET  
   
 ### <a name="choosing-a-datareader-or-a-dataset"></a>Выбор между DataReader или DataSet  

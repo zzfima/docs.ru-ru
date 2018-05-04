@@ -1,35 +1,21 @@
 ---
 title: '&lt;netTcpBinding&gt;'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - netTcpBinding Element
 ms.assetid: 5c5104a7-8754-4335-8233-46a45322503e
-caps.latest.revision: ''
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 057baf6d18cba61c0ceeb7d5152edcf082392310
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
-ms.translationtype: MT
+ms.openlocfilehash: f6cbdbb7c5569851055102cfe5d413e0b94376f3
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltnettcpbindinggt"></a>&lt;netTcpBinding&gt;
 Задает безопасную, надежную и оптимизированную привязку, пригодную для обмена данными между компьютерами. По умолчанию создает стек связи среды выполнения с безопасностью Windows для защиты и проверки подлинности сообщений, с протоколом TCP для доставки сообщений, а также с кодированием двоичных сообщений.  
   
- \<system.ServiceModel>  
+ \<система. ServiceModel >  
 \<привязки >  
-\<netTcpBinding>  
+\<netTcpBinding >  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -94,17 +80,17 @@ algorithmSuite="Basic128/Basic192/Basic256/Basic128Rsa15/Basic256Rsa15/TripleDes
 |Элемент|Описание|  
 |-------------|-----------------|  
 |[\<Безопасность >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-nettcpbinding.md)|Определяет параметры безопасности привязки. Это элемент типа <xref:System.ServiceModel.Configuration.NetTcpSecurityElement>.|  
-|[\<readerQuotas>](http://msdn.microsoft.com/library/3e5e42ff-cef8-478f-bf14-034449239bfd)|Определяет ограничения по сложности сообщений SOAP, которые могут обрабатываться конечными точками, настроенными с использованием этой привязки. Это элемент типа <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>.|  
+|[\<readerQuotas >](http://msdn.microsoft.com/library/3e5e42ff-cef8-478f-bf14-034449239bfd)|Определяет ограничения по сложности сообщений SOAP, которые могут обрабатываться конечными точками, настроенными с использованием этой привязки. Это элемент типа <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>.|  
 |[reliableSession](http://msdn.microsoft.com/library/9c93818a-7dfa-43d5-b3a1-1aafccf3a00b)|Указывает, устанавливаются ли между конечными точками канала надежные сеансы.|  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
 |Элемент|Описание|  
 |-------------|-----------------|  
-|[\<bindings>](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|Этот элемент содержит коллекцию стандартных и пользовательских привязок.|  
+|[\<привязки >](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|Этот элемент содержит коллекцию стандартных и пользовательских привязок.|  
   
 ## <a name="remarks"></a>Примечания  
- Эта привязка создает стек связи времени выполнения по умолчанию, использующий режим безопасности транспорта, протокол TCP для доставки сообщений, а также кодирование двоичных сообщений. Эта привязка является должным предоставляемым системой выбором [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] для взаимодействия через интрасеть.  
+ Эта привязка создает стек связи времени выполнения по умолчанию, использующий режим безопасности транспорта, протокол TCP для доставки сообщений, а также кодирование двоичных сообщений. Эта привязка является Windows Communication Foundation (WCF) системных подходит для взаимодействия через интрасеть.  
   
  Конфигурация по умолчанию для привязки `netTcpBinding` быстрее, чем конфигурация, предоставляемая привязкой `wsHttpBinding`, но она предназначена только для взаимодействия [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] с [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]. Режим безопасности настраивается с помощью дополнительного атрибута `securityMode`. Использование WS-ReliableMessaging настраивается с использованием дополнительного атрибута `reliableSessionEnabled`. Но по умолчанию надежный обмен сообщениями отключен. В общем случае системные привязки по протоколу HTTP, такие как `wsHttpBinding` и `basicHttpBinding`, настроены на включение основных возможностей по умолчанию, в то время как привязка `netTcpBinding` по умолчанию отключает возможности, так что для получения поддержки, например для спецификаций WS-*, необходимо специально их включить. Это означает, что используемая по умолчанию конфигурация для TCP быстрее при обмене сообщениями между конечными точками, чем конфигурация по умолчанию для привязок HTTP.  
   

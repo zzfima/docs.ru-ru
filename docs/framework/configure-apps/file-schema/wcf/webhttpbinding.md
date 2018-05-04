@@ -1,33 +1,19 @@
 ---
 title: '&lt;webHttpBinding&gt;'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 84179d77-825d-44b9-895a-ab08e7aa044d
-caps.latest.revision: ''
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 0eb39fe234664b5ef5ffb604090191db14e8d751
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
-ms.translationtype: MT
+ms.openlocfilehash: abc08f81ac05aa42ff7247edf662f8dd4482fd4a
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltwebhttpbindinggt"></a>&lt;webHttpBinding&gt;
-Определяет элемент привязки, используемый при настройке конечных точек для веб-службы [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)], которые отвечают на запросы HTTP вместо сообщений протокола SOAP.  
+Определяет элемент привязки, который используется для настройки конечных точек для веб-службы Windows Communication Foundation (WCF) служб, которые отвечают на запросы HTTP вместо сообщений протокола SOAP.  
   
-\<system.ServiceModel>  
+\<система. ServiceModel >  
 \<привязки >  
-\<webHttpBinding>  
+\<webHttpBinding >  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -90,14 +76,14 @@ ms.lasthandoff: 03/26/2018
   
 |Элемент|Описание|  
 |-------------|-----------------|  
-|[\<readerQuotas>](http://msdn.microsoft.com/library/3e5e42ff-cef8-478f-bf14-034449239bfd)|Определяет ограничения по сложности сообщений POX, которые могут обрабатываться конечными точками, настроенными с помощью этой привязки. Это элемент типа <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>.|  
+|[\<readerQuotas >](http://msdn.microsoft.com/library/3e5e42ff-cef8-478f-bf14-034449239bfd)|Определяет ограничения по сложности сообщений POX, которые могут обрабатываться конечными точками, настроенными с помощью этой привязки. Это элемент типа <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>.|  
 |[\<Безопасность >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-webhttpbinding.md)|Определяет параметры безопасности привязки. Это элемент типа <xref:System.ServiceModel.Configuration.WebHttpSecurityElement>.|  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
 |Элемент|Описание|  
 |-------------|-----------------|  
-|[\<bindings>](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|Этот элемент содержит коллекцию стандартных и пользовательских привязок.|  
+|[\<привязки >](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|Этот элемент содержит коллекцию стандартных и пользовательских привязок.|  
   
 ## <a name="remarks"></a>Примечания  
  Модель веб-программирования [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] позволяет разработчикам предоставлять веб-службы [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] с помощью запросов протокола HTTP, в которых используется стиль «Plain Old XML» (POX) вместо обмена сообщениями на основе протокола SOAP. Чтобы клиенты могли взаимодействовать со службой, используя HTTP-запросы, необходимо настроить конечную точку службы с [ \<webHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/webhttpbinding.md) с \<WebHttpBehavior >, присоединенные к ней.  

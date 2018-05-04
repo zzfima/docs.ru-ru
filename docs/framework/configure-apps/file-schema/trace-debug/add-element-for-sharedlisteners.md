@@ -1,14 +1,6 @@
 ---
-title: "&lt;Добавить&gt; элемент для &lt;sharedListeners&gt;"
-ms.custom: 
+title: '&lt;Добавить&gt; элемент для &lt;sharedListeners&gt;'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sharedListeners/add
 helpviewer_keywords:
@@ -16,20 +8,17 @@ helpviewer_keywords:
 - <add> element for <sharedListeners>
 - add element for <sharedListeners>
 ms.assetid: 1595e1bc-2492-421f-8384-7f382eb8eb57
-caps.latest.revision: 
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload:
-- dotnet
-ms.openlocfilehash: 490e58d4514667c5ec781dd76644012b0c97509d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 27d83ba706b4d93b4ac5426bf5bae59b4bfc0d9a
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltaddgt-element-for-ltsharedlistenersgt"></a>&lt;Добавить&gt; элемент для &lt;sharedListeners&gt;
-Добавляет прослушиватель в коллекцию `sharedListeners`. `sharedListeners`— Это коллекция прослушивателей, чтобы любое [ \<источника >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/source-element.md) или [ \<трассировки >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/trace-element.md) может ссылаться.  По умолчанию в прослушиватели `sharedListeners` коллекции не помещаются в `Listeners` коллекции. Они должны быть добавлены по имени, чтобы [ \<источника >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/source-element.md) или [ \<трассировки >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/trace-element.md). Невозможно получить прослушиватели `sharedListeners` коллекции в коде во время выполнения.  
+Добавляет прослушиватель в коллекцию `sharedListeners`. `sharedListeners` — Это коллекция прослушивателей, чтобы любое [ \<источника >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/source-element.md) или [ \<трассировки >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/trace-element.md) может ссылаться.  По умолчанию в прослушиватели `sharedListeners` коллекции не помещаются в `Listeners` коллекции. Они должны быть добавлены по имени, чтобы [ \<источника >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/source-element.md) или [ \<трассировки >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/trace-element.md). Невозможно получить прослушиватели `sharedListeners` коллекции в коде во время выполнения.  
   
  \<configuration>  
 \<System.Diagnostics >  
@@ -57,7 +46,7 @@ ms.lasthandoff: 12/22/2017
   
 ### <a name="child-elements"></a>Дочерние элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
 |[\<filter>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/filter-element-for-add-for-sharedlisteners.md)|Добавляет фильтр к прослушивателю в коллекции `sharedListeners`.|  
   
@@ -90,7 +79,7 @@ ms.lasthandoff: 12/22/2017
  Этот элемент может использоваться в файле конфигурации компьютера (Machine.config) и файл конфигурации приложения.  
   
 ## <a name="example"></a>Пример  
- В следующем примере показано, как использовать `<add>` элементы для добавления <xref:System.Diagnostics.TextWriterTraceListener> `textListener` для `sharedListeners` коллекции.   `textListener`добавляется по имени, чтобы `Listeners` коллекции для источника трассировки `TraceSourceApp`. `textListener` Прослушиватель записывает выходные данные трассировки в файл myListener.log.  
+ В следующем примере показано, как использовать `<add>` элементы для добавления <xref:System.Diagnostics.TextWriterTraceListener> `textListener` для `sharedListeners` коллекции.   `textListener` добавляется по имени, чтобы `Listeners` коллекции для источника трассировки `TraceSourceApp`. `textListener` Прослушиватель записывает выходные данные трассировки в файл myListener.log.  
   
 ```xml  
 <configuration>  

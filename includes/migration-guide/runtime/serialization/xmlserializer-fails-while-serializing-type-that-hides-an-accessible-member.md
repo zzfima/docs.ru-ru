@@ -3,7 +3,7 @@
 |   |   |
 |---|---|
 |Подробные сведения|При сериализации производного типа <xref:System.Xml.Serialization.XmlSerializer?displayProperty=name> может завершаться сбоем, если тип содержит недоступное поле или свойство, которое скрывает (посредством ключевого слова "new") ранее доступное поле или свойство с тем же именем (например, public) в базовом типе.|
-|Предложение|Чтобы устранить эту проблему, можно сделать новый скрывающий член доступным для <xref:System.Xml.Serialization.XmlSerializer?displayProperty=name> (например, для этого можно пометить его как public). Кроме того, можно использовать следующий параметр конфигурации, который возвращает поведение <xref:System.Xml.Serialization.XmlSerializer?displayProperty=name> версии 4.0 и устраняет эту проблему:<pre><code class="language-xml">&lt;system.xml.serialization&gt;&#13;&#10;&lt;xmlSerializer useLegacySerializerGeneration=&quot;true&quot; /&gt;&#13;&#10;&lt;/system.xml.serialization&gt;&#13;&#10;</code></pre>|
+|Предложение|Чтобы устранить эту проблему, можно сделать новый скрывающий член доступным для <xref:System.Xml.Serialization.XmlSerializer?displayProperty=name> (например, для этого можно пометить его как public). Кроме того, можно использовать следующий параметр конфигурации, который возвращает поведение <xref:System.Xml.Serialization.XmlSerializer?displayProperty=name> версии 4.0 и устраняет эту проблему:<pre><code class="lang-xml">&lt;system.xml.serialization&gt;&#13;&#10;&lt;xmlSerializer useLegacySerializerGeneration=&quot;true&quot; /&gt;&#13;&#10;&lt;/system.xml.serialization&gt;&#13;&#10;</code></pre>|
 |Область|Дополнительный номер|
 |Версия|4.5|
 |Тип|Среда выполнения|

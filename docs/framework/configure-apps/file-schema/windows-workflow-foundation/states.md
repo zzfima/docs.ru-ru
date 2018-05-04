@@ -1,25 +1,15 @@
 ---
-title: "&lt;состояния&gt;"
-ms.custom: 
+title: '&lt;Состояния&gt;'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: ebea5e7c-ad58-43c5-8f2d-cca25ae1b721
-caps.latest.revision: "4"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 3c73ff606d9b8cdaf069b65f7faa48431a974123
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fe02106d8d7f70cb328214c7e464d80a41b75528
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="ltstatesgt"></a>&lt;состояния&gt;
+# <a name="ltstatesgt"></a>&lt;Состояния&gt;
 Представляет коллекцию состояний, на которые установлена подписка, из отслеживаемого экземпляра рабочего процесса в момент создания записей отслеживания.  
   
  Дополнительные сведения о запросах профиля отслеживания см. в разделе [профили отслеживания](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)  
@@ -58,13 +48,13 @@ ms.lasthandoff: 12/22/2017
   
 ### <a name="child-elements"></a>Дочерние элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
 |[\<Состояние >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/states.md)|Подписанное состояние от экземпляра рабочего процесса, который отслеживается в момент создания записи отслеживания.|  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
 |[\<workflowInstanceQuery >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/workflowinstancequery.md)|Запрос, отслеживающий изменения жизненного цикла экземпляра рабочего процесса, например начавшиеся и завершенные события.|  
   

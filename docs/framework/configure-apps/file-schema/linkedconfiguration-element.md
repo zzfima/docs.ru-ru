@@ -1,13 +1,6 @@
 ---
-title: "&lt;linkedConfiguration&gt; элемент"
-ms.custom: 
+title: '&lt;linkedConfiguration&gt; элемент'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/assemblyBinding/linkedConfiguration
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#linkedConfiguration
@@ -18,16 +11,14 @@ helpviewer_keywords:
 - linked configuration files
 - linkedConfiguration Element
 ms.assetid: 8eb34f3b-427e-4288-a7ff-c73f489deb45
-caps.latest.revision: "6"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: dffff7fefa80f420e61045b21b0e0c1a170e2911
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 71769efa1233fc8a693219dc02ae56ea39c164e7
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="linkedconfiguration-element"></a>\<linkedConfiguration > элемент
 
@@ -45,13 +36,13 @@ ms.lasthandoff: 12/22/2017
 
 ## <a name="attribute"></a>Атрибут
 
-|           | Описание: |
+|           | Описание |
 | --------- | ----------- |
 | **href**  | Обязательный атрибут.<br><br>URL-адрес файла конфигурации для включения. Поддерживается только формат **href** атрибут `file://`. Поддерживаются локальные файлы и файлы UNC. |
 
 ## <a name="parent-element"></a>Родительский элемент
 
-|     | Описание: |
+|     | Описание |
 | --- | ----------- |
 | [**\<assemblyBinding >** элемент](~/docs/framework/configure-apps/file-schema/assemblybinding-element-for-configuration.md) | Определяет политику привязки сборок на уровне конфигурации. |
 
@@ -61,10 +52,10 @@ ms.lasthandoff: 12/22/2017
 
 ## <a name="remarks"></a>Примечания
 
- **\<LinkedConfiguration >** элемент упрощает обслуживание для сборок компонентов. Если один или несколько приложений используют сборку, которая имеет файл конфигурации, находящихся в известное местоположение, можно использовать файлы конфигурации приложений, использующих сборку  **\<linkedConfiguration >** элемент для включения файла конфигурации сборки, вместо того чтобы включать сведения о конфигурации напрямую. При обслуживании сборки компонентов обновление общего файла конфигурации содержит обновленные сведения о конфигурации для всех приложений, использующих сборку.
+**\<LinkedConfiguration >** элемент упрощает обслуживание для сборок компонентов. Если один или несколько приложений используют сборку, которая имеет файл конфигурации, находящихся в известное местоположение, можно использовать файлы конфигурации приложений, использующих сборку  **\<linkedConfiguration >** элемент для включения файла конфигурации сборки, вместо того чтобы включать сведения о конфигурации напрямую. При обслуживании сборки компонентов обновление общего файла конфигурации содержит обновленные сведения о конфигурации для всех приложений, использующих сборку.
 
 > [!NOTE]
->  **\<LinkedConfiguration >** элемент не поддерживается для приложений с Windows side-by-side манифесты.
+> **\<LinkedConfiguration >** элемент не поддерживается для приложений с Windows side-by-side манифесты.
 
 Связанные файлы конфигурации действуют следующие правила:
 
@@ -76,7 +67,7 @@ ms.lasthandoff: 12/22/2017
 
 - Все связанные файлы конфигурации объединяются в один файл, аналогично поведению объекта `#include` директив в C/C++.
 
--  **\<LinkedConfiguration >** элемент допускается только в файлах конфигурации приложения; он игнорируется в *Machine.config*.
+- **\<LinkedConfiguration >** элемент допускается только в файлах конфигурации приложения; он игнорируется в *Machine.config*.
 
 - Обнаружены циклические ссылки и удалены. То есть если  **\<linkedConfiguration >** элементов ряда файлов конфигурации образуют цикл, цикл обнаруживается остановлена.
 

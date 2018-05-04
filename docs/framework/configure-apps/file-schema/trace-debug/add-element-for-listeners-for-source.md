@@ -1,14 +1,6 @@
 ---
-title: "&lt;Добавить&gt; элемент для &lt;прослушиватели&gt; для &lt;источника&gt;"
-ms.custom: 
+title: '&lt;Добавить&gt; элемент для &lt;прослушиватели&gt; для &lt;источника&gt;'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sources/source/listeners/add
 helpviewer_keywords:
@@ -16,17 +8,14 @@ helpviewer_keywords:
 - add element for <listeners> for <source>
 - <add> element for <listeners> for <source>
 ms.assetid: 4ce36ac1-81ef-48e8-b8b2-b5a5b0e2adcb
-caps.latest.revision: 
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload:
-- dotnet
-ms.openlocfilehash: 86177010d8ed70302b51ec9c416a3295009e7394
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ba8ff652003a9167ec370643797ac9300b83889a
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltaddgt-element-for-ltlistenersgt-for-ltsourcegt"></a>&lt;Добавить&gt; элемент для &lt;прослушиватели&gt; для &lt;источника&gt;
 Добавляет прослушиватель в коллекцию `Listeners` для источника трассировки.  
@@ -51,17 +40,17 @@ ms.lasthandoff: 12/22/2017
   
 ### <a name="attributes"></a>Атрибуты  
   
-|Атрибут|Описание:|  
+|Атрибут|Описание|  
 |---------------|-----------------|  
 |`type`|Требуется атрибут, в том случае, если не обращаются прослушивателя в `sharedListeners` коллекции, в котором регистр необходима только для ссылки на него по имени (в разделе [пример](#example)).<br /><br /> Указывает тип прослушивателя. Необходимо использовать строку, отвечающую требованиям, указанным в [Указание полных имен типов](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md).|  
 |`initializeData`|Необязательный атрибут.<br /><br /> Строка, передаваемая в конструктор для заданного класса. Объект <xref:System.Configuration.ConfigurationException> создается, если класс имеет конструктор, принимающий строку.|  
 |`name`|Необязательный атрибут.<br /><br /> Указывает имя прослушивателя.|  
 |`traceOutputOptions`|Необязательный атрибут.<br /><br /> Указывает <xref:System.Diagnostics.TraceListener.TraceOutputOptions%2A> значение свойства для прослушивателя трассировки.|  
-|[настраиваемые атрибуты]|Необязательные атрибуты.<br /><br /> Указывает значение для прослушивателя атрибуты, определяемые <xref:System.Diagnostics.TraceListener.GetSupportedAttributes%2A> метода для этого прослушивателя. <xref:System.Diagnostics.DelimitedListTraceListener.Delimiter%2A>Примером дополнительный атрибут является уникальным для <xref:System.Diagnostics.DelimitedListTraceListener> класса.|  
+|[настраиваемые атрибуты]|Необязательные атрибуты.<br /><br /> Указывает значение для прослушивателя атрибуты, определяемые <xref:System.Diagnostics.TraceListener.GetSupportedAttributes%2A> метода для этого прослушивателя. <xref:System.Diagnostics.DelimitedListTraceListener.Delimiter%2A> Примером дополнительный атрибут является уникальным для <xref:System.Diagnostics.DelimitedListTraceListener> класса.|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
 |[\<filter>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/filter-element-for-add-for-listeners-for-source.md)|Добавляет фильтр к прослушивателю в коллекции `Listeners` для источника трассировки.|  
   

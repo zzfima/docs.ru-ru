@@ -1,34 +1,22 @@
 ---
-title: "&lt;message&gt; для &lt;netMsmqBinding&gt;"
-ms.custom: 
+title: '&lt;message&gt; для &lt;netMsmqBinding&gt;'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 6ebf0240-d7be-4493-b0fe-f00fd5989d77
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 8a7fdb8c6df84a76450aabaa983275f563d342fa
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
-ms.translationtype: MT
+ms.openlocfilehash: a552b0f22a79b30dcbbe1951906b121d4c5e8cf8
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltmessagegt-of-ltnetmsmqbindinggt"></a>&lt;message&gt; для &lt;netMsmqBinding&gt;
 Определяет параметры безопасности сообщений SOAP для данной привязки `netMsmqBinding`.  
   
- \<system.ServiceModel>  
+ \<система. ServiceModel >  
 \<привязки >  
-\<netMsmqBinding>  
+\<netMsmqBinding >  
 \<Привязка >  
 \<Безопасность >  
-\<message>  
+\<сообщение >  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -51,14 +39,14 @@ ms.lasthandoff: 01/19/2018
 |Атрибут|Описание|  
 |---------------|-----------------|  
 |algorithmSuite|Задает алгоритмы шифрования сообщений и ключей, которые используются для обеспечения безопасности на уровне сообщений для сообщений, которые отправляются с помощью транспорта MSMQ.<br /><br /> Значение по умолчанию — `Aes256`. Это атрибут типа <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>.|  
-|clientCredentialType|Задает тип учетных данных, используемых при проверке подлинности клиента для сообщений, которые отправляются с помощью транспорта MSMQ. Допустимы следующие значения:<br /><br /> — None: Данное значение позволяет службе взаимодействовать с анонимными клиентами. Как для службы, так и для клиента учетные данные не требуются.<br />-Windows: Это позволяет проводить проверку подлинности учетных данных Windows обмен сообщениями SOAP. В этом случае всегда выполняется проверка подлинности на основе Kerberos.<br />-UserName: Данное значение позволяет службе требовать проверку подлинности клиента с помощью учетных данных UserName. В этом случае необходимо указать с помощью учетных данных `clientCredentials` поведение **осторожность:** [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] не поддерживает отправку пароля хэш-кода или получение ключей с использованием пароля и использование таких ключей для обеспечения безопасности сообщений. Таким образом, служба [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] принудительно обеспечивает безопасность обмена при использовании учетных данных UserName. В данном режиме требуется, чтобы сертификат службы был указан на стороне клиента при помощи поведения `clientCredential` и при помощи `serviceCertificate`. <br /><br /> -Certificate: Данное значение позволяет службе требовать проверки подлинности клиента с помощью сертификата. В этом случае учетные данные клиента должны быть определены с помощью поведения `clientCredentials`. Учетные данные службы в данном случае должны быть определены с помощью поведения `clientCredentials`, которому задается значение `serviceCertificate`.<br />-CardSpace: Данное значение позволяет службе требовать проверки подлинности клиента с помощью CardSpace. Необходимо определить `serviceCertiifcate` в поведении `clientCredential`.<br /><br /> Значение по умолчанию — `Windows`. Это атрибут типа <xref:System.ServiceModel.MessageCredentialType>.|  
+|clientCredentialType|Задает тип учетных данных, используемых при проверке подлинности клиента для сообщений, которые отправляются с помощью транспорта MSMQ. Допустимы следующие значения:<br /><br /> — None: Данное значение позволяет службе взаимодействовать с анонимными клиентами. Как для службы, так и для клиента учетные данные не требуются.<br />-Windows: Это позволяет проводить проверку подлинности учетных данных Windows обмен сообщениями SOAP. В этом случае всегда выполняется проверка подлинности на основе Kerberos.<br />-UserName: Данное значение позволяет службе требовать проверку подлинности клиента с помощью учетных данных UserName. В этом случае необходимо указать с помощью учетных данных `clientCredentials` поведение **осторожность:** Windows Communication Foundation (WCF) не поддерживает отправку хэш-кода или получение ключей с использованием пароля и использование таких ключей для пароля безопасность сообщений. Таким образом, служба [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] принудительно обеспечивает безопасность обмена при использовании учетных данных UserName. В данном режиме требуется, чтобы сертификат службы был указан на стороне клиента при помощи поведения `clientCredential` и при помощи `serviceCertificate`. <br /><br /> -Certificate: Данное значение позволяет службе требовать проверки подлинности клиента с помощью сертификата. В этом случае учетные данные клиента должны быть определены с помощью поведения `clientCredentials`. Учетные данные службы в данном случае должны быть определены с помощью поведения `clientCredentials`, которому задается значение `serviceCertificate`.<br />-CardSpace: Данное значение позволяет службе требовать проверки подлинности клиента с помощью CardSpace. Необходимо определить `serviceCertiifcate` в поведении `clientCredential`.<br /><br /> Значение по умолчанию — `Windows`. Это атрибут типа <xref:System.ServiceModel.MessageCredentialType>.|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
  Нет  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
 |[\<Безопасность >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-netmsmqbinding.md)|Определяет параметры безопасности для привязки.|  
   

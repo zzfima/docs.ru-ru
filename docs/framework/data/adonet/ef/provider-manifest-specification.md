@@ -1,24 +1,12 @@
 ---
-title: "Спецификация манифеста поставщика"
-ms.custom: 
+title: Спецификация манифеста поставщика
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: bb450b47-8951-4f99-9350-26f05a4d4e46
-caps.latest.revision: "4"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 85096406ae8996713d4861c805d75af42d8c1813
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 02faee9ad69bd75f4df608b9a4767560945c7bb3
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="provider-manifest-specification"></a>Спецификация манифеста поставщика
 В этом разделе описывается поддержка типов и функций в хранилище данных, представляемая поставщиком хранилища данных.  

@@ -1,35 +1,23 @@
 ---
 title: '&lt;serviceSecurityAudit&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: ba517369-a034-4f8e-a2c4-66517716062b
-caps.latest.revision: 
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: 25355acfd7bc82ccff33f68a690f3f02d1235438
-ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
+ms.openlocfilehash: 293cd3118ace2e073933e4c124664c775902e7d8
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltservicesecurityauditgt"></a>&lt;serviceSecurityAudit&gt;
 Задает параметры, позволяющие проводить аудит событий безопасности во время обслуживания.  
   
- \<system.ServiceModel>  
+ \<система. ServiceModel >  
 \<поведения >  
-\<serviceBehaviors>  
+\<serviceBehaviors >  
 \<поведение >  
-\<serviceSecurityAudit>  
+\<serviceSecurityAudit >  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -58,12 +46,12 @@ ms.lasthandoff: 03/08/2018
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
 |[\<поведение >](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|Указывает элемент поведения.|  
   
 ## <a name="remarks"></a>Примечания  
- Этот элемент конфигурации используется для аудита событий проверки подлинности [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)]. При включенном аудите может выполняться аудит либо успешных, либо неудачных попыток проверки подлинности (или попыток обоих видов). События записываются в один из трех журналов событий: журнал приложения, журнал безопасности или журнал, используемый по умолчанию в данной версии операционной системы. Все журналы событий можно просматривать при помощи средства просмотра событий Windows.  
+ Этот элемент конфигурации используется для аудита событий проверки подлинности Windows Communication Foundation (WCF). При включенном аудите может выполняться аудит либо успешных, либо неудачных попыток проверки подлинности (или попыток обоих видов). События записываются в один из трех журналов событий: журнал приложения, журнал безопасности или журнал, используемый по умолчанию в данной версии операционной системы. Все журналы событий можно просматривать при помощи средства просмотра событий Windows.  
   
  Подробный пример использования этого элемента конфигурации см. в разделе [поведение аудита службы](../../../../../docs/framework/wcf/samples/service-auditing-behavior.md).  
   

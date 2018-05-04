@@ -1,27 +1,15 @@
 ---
-title: "Элемент &lt;issuerChannelBehaviors&gt;"
-ms.custom: 
+title: Элемент &lt;issuerChannelBehaviors&gt;
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: f7378673-8e9b-45b2-98d1-cf5dccdd8c40
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: bb90b318f99816a3886056394559fdc80fa986ef
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7e5b8ace06a224db3abcc6b9d0ec87ccbc1a6a77
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltissuerchannelbehaviorsgt-element"></a>Элемент &lt;issuerChannelBehaviors&gt;
-Содержит коллекцию поведений конечной точки клиента [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] (определенных в конфигурации) для использования при взаимодействии с заданными службами маркеров безопасности. Не могут содержать заданные поведения [ \<clientCredentials >](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md) элементов.  
+Содержит коллекцию поведений конечной точки клиента Windows Communication Foundation (WCF), (определенных в конфигурации) для использования при взаимодействии с заданными службами маркеров. Не могут содержать заданные поведения [ \<clientCredentials >](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md) элементов.  
   
  \<система. ServiceModel >  
 \<поведения >  
@@ -48,13 +36,13 @@ ms.lasthandoff: 12/22/2017
   
 ### <a name="child-elements"></a>Дочерние элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
 |[\<add>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-issuerchannelbehaviors.md)|Добавляет поведение в коллекцию.|  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
 |[\<issuedToken >](../../../../../docs/framework/configure-apps/file-schema/wcf/issuedtoken.md)|Задает пользовательский маркер, используемый для проверки подлинности клиента при подключении к службе.|  
   

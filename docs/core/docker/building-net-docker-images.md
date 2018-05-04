@@ -1,24 +1,22 @@
 ---
-title: "Создание образов Docker для .NET Core"
-description: "Общие сведения об образах Docker и .NET Core"
-keywords: .NET, .NET Core, Docker
+title: Создание образов Docker для .NET Core
+description: Общие сведения об образах Docker и .NET Core
 author: jralexander
 ms.author: johalex
 ms.date: 11/06/2017
 ms.topic: tutorial
-ms.prod: .net-core
+ms.prod: dotnet-core
 ms.technology: dotnet-docker
 ms.devlang: dotnet
-ms.assetid: 03c28597-7e73-46d6-a9c3-f9cb55642739
 ms.custom: mvc
 manager: wpickett
 ms.workload:
 - dotnetcore
-ms.openlocfilehash: d5631bdbc0334640b290c08df17cba0bfe99fe85
-ms.sourcegitcommit: c3957fdb990060559d73cca44ab3e2c7b4d049c0
+ms.openlocfilehash: c1983be59b4a961cabd94915852e0cab7811682c
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="building-docker-images-for-net-core-applications"></a>Создание образов Docker для приложений .NET Core
 

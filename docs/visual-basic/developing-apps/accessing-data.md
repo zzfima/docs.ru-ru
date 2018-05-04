@@ -12,11 +12,11 @@ ms.assetid: 3086ab38-3be5-4b22-9385-7d0e16b04f6a
 caps.latest.revision: 23
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 306a618f193f9223443938ae2a9e0996c1b5295c
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: fb6645279a71252ff0ac81348c460b8981771797
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="accessing-data-in-visual-basic-applications"></a>Доступ к данным в приложениях Visual Basic
 В Visual Basic входит несколько новых возможностей для разработки приложений, обращающихся к данным. Формы с привязкой к данным для приложений Windows создаются путем перетаскивания элементов из [окна "Источники данных"](/visualstudio/data-tools/add-new-data-sources) на форму. Привязка элементов управления к данным осуществляется путем перетаскивания элементов из **окна "Источники данных"** на форму.  
@@ -26,7 +26,7 @@ ms.lasthandoff: 04/26/2018
  Содержит ссылки на страницы, посвященные добавлению в приложения функциональности доступа к данным.
 
  [Visual Studio Data Tools для .NET](/visualstudio/data-tools/visual-studio-data-tools-for-dotnet)  
- Предоставляет ссылки на разделы, в которых описывается создание приложений, работающих с данными, с помощью [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)].  
+ Содержит ссылки на страницы, посвященные созданию в Visual Studio приложений для работы с данными.  
   
  [LINQ](../../visual-basic/programming-guide/language-features/linq/index.md)  
  Содержит ссылки на разделы, описывающие использование LINQ с Visual Basic.  
@@ -41,7 +41,7 @@ ms.lasthandoff: 04/26/2018
  Содержит ссылки на разделы о создании многоуровневых приложений для работы с данными.  
      
  [Добавление новых подключений](/visualstudio/data-tools/add-new-connections)  
- Содержит ссылки страницы, посвященные подключению приложения к данным с помощью средств разработки и объектов подключения ADO.NET с использованием [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)].  
+ Содержит ссылки на страницы, посвященные подключению приложения к данным при помощи инструментов времени разработки и объектов подключения ADO.NET в Visual Studio.  
 
  [Инструменты для работы с наборами данных в Visual Studio](/visualstudio/data-tools/dataset-tools-in-visual-studio)  
  Содержит ссылки на страницы, описывающие загрузку данных в наборы данных, а также выполнение инструкций SQL и хранимых процедур.  

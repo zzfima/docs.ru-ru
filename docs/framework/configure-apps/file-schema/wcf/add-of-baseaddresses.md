@@ -1,24 +1,12 @@
 ---
-title: "&lt;add&gt; для &lt;baseAddresses&gt;"
-ms.custom: 
+title: '&lt;add&gt; для &lt;baseAddresses&gt;'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 1bd7426f-5f4f-43fc-b8e9-de842219aa32
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 516c615248c95ef3107664b996f457fb80b46373
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3f1b7e8f1f4ab8542270d459ce5020ce4320eea9
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltaddgt-of-ltbaseaddressesgt"></a>&lt;add&gt; для &lt;baseAddresses&gt;
 Представляет элемент конфигурации, который задает базовые адреса, используемые узлом службы.  
@@ -53,7 +41,7 @@ ms.lasthandoff: 12/22/2017
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
 |[\<baseAddresses >](../../../../../docs/framework/configure-apps/file-schema/wcf/baseaddresses.md)|Коллекция элементов `baseAddress`.|  
   

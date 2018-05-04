@@ -1,13 +1,6 @@
 ---
-title: "&lt;performanceCounters&gt; элемент"
-ms.custom: 
+title: '&lt;performanceCounters&gt; элемент'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/performanceCounters
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#performanceCounters
@@ -15,16 +8,14 @@ helpviewer_keywords:
 - performanceCounters element
 - <perfomanceCounters> element
 ms.assetid: a71f605b-c7d9-4501-a5c3-abcbb964a43f
-caps.latest.revision: "10"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 64afd62c6eeca7bce14e331fdc65fccfa3d02bce
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: cb4af08095c14c0c748a79f53104d8454d3dcd47
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltperformancecountersgt-element"></a>&lt;performanceCounters&gt; элемент
 Задает размер глобальной памяти, совместно используемой счетчиками производительности.  
@@ -63,7 +54,7 @@ ms.lasthandoff: 12/22/2017
   
  Размер глобальную общую память можно задать только с помощью файла конфигурации.  Значение по умолчанию-524 288 байтов, максимальный размер — 33 554 432 байта, а минимальный размер — 32 768 байт.  Поскольку глобальную общую память совместно используется всеми процессами и категориями, создатель первый размер.  При указании размера в файле конфигурации приложения, чтобы размер используется только если приложение является первым приложением, выполнившим запуск счетчиков производительности.  Поэтому правильное расположение, чтобы указать `filemappingsize` значение — в файле Machine.config.  Не удается освободить память в глобальную общую память отдельные счетчики производительности, поэтому в конечном итоге глобальную общую память будет исчерпан, если создается большое число экземпляров счетчика производительности с разными именами.  
   
- Для размера отдельной общей памяти, значение DWORD FileMappingSize в реестре раздела HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\\*\<имя категории >*\Performance имеется ссылка Во-первых следуют значение, указанное для глобальную общую память в файле конфигурации. Если значение FileMappingSize не существует, то размер отдельной общей памяти устанавливается равным одной четвертой (1/4) глобальный параметр в файле конфигурации.  
+ Для размера отдельной общей памяти, значение DWORD FileMappingSize в реестре раздела HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\\*\<имя категории >* \Performance имеется ссылка Во-первых следуют значение, указанное для глобальную общую память в файле конфигурации. Если значение FileMappingSize не существует, то размер отдельной общей памяти устанавливается равным одной четвертой (1/4) глобальный параметр в файле конфигурации.  
   
 ## <a name="see-also"></a>См. также  
  <xref:System.Diagnostics.PerformanceCounter>  

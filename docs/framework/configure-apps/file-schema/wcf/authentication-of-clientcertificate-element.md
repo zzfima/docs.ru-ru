@@ -1,24 +1,12 @@
 ---
-title: "&lt;authentication&gt; элемента &lt;clientCertificate&gt;"
-ms.custom: 
+title: '&lt;authentication&gt; элемента &lt;clientCertificate&gt;'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 4a55eea2-1826-4026-b911-b7cc9e9c8bfe
-caps.latest.revision: "16"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e909bd7f6257445fe4c42dd92ae366676f72d60c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ccc184f63428fd4a12b9047c0bcf4416e87f24d2
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltauthenticationgt-of-ltclientcertificategt-element"></a>&lt;authentication&gt; элемента &lt;clientCertificate&gt;
 Указывает расширения функциональности аутентификации для сертификатов клиентов, используемых службой.  
@@ -56,7 +44,7 @@ trustedStoreLocation="CurrentUser/LocalMachine"
 |includeWindowsGroups|Необязательный логический атрибут. Указывает, включены ли группы Windows в контекст безопасности. Установка для этого атрибута значения `true` снижает производительность, поскольку приводит к расширению всей группы. Если нет необходимости устанавливать список групп, к которым принадлежит пользователь, установите для этого атрибута значение `false`.|  
 |mapClientCertificateToWindowsAcccount|Логическое. Указывает, может ли клиент сопоставляться с удостоверением Windows с помощью сертификата. Для этого необходимо включить службу Active Directory.|  
 |revocationMode|Необязательное перечисление. Один из режимов, используемых для проверки списков отозванных сертификатов (RCL). Значение по умолчанию — `Online`. Это значение не учитывается при использовании безопасности транспорта HTTP.|  
-|trustedStoreLocation|Необязательное перечисление. Одно из двух местоположений системного хранилища: `LocalMachine` или `CurrentUser`. Данное значение используется при согласовании сертификата службы для клиента. Проверка выполняется для **доверенные лица** хранения в указанном местоположении хранилища. Значение по умолчанию — `CurrentUser`.|  
+|trustedStoreLocation|Необязательное перечисление. Одно из двух местоположений системного хранилища: `LocalMachine` или `CurrentUser`. Данное значение используется при согласовании сертификата службы для клиента. Проверка выполняется для **доверенные лица** хранения в указанном местоположении хранилища. Значение по умолчанию — `CurrentUser`.|  
   
 ## <a name="customcertificatevalidatortype-attribute"></a>Атрибут customCertificateValidatorType  
   
@@ -87,7 +75,7 @@ trustedStoreLocation="CurrentUser/LocalMachine"
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
 |[\<clientCertificate >](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcertificate-of-servicecredentials.md)|Определяет сертификат X.509, используемый для проверки подлинности клиента по отношению к службе.|  
   

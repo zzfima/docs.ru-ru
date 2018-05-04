@@ -1,9 +1,6 @@
 ---
-title: "&lt;раздел&gt; элемент"
+title: '&lt;раздел&gt; элемент'
 ms.date: 05/01/2017
-ms.prod: .net-framework
-ms.technology: dotnet-clr
-ms.topic: article
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/configSections/section
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/configSections/sectionGroup/section
@@ -13,13 +10,11 @@ helpviewer_keywords:
 ms.assetid: ec7d4110-2403-47ac-8218-499bfe9d5ddb
 author: guardrex
 ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4e7de6e5ce6415c58deeca14df74c26e24957054
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 17b44ca93efc26f4732f5fe2926f894257d8f984
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="section-element"></a>\<раздел > элемент
 
@@ -45,7 +40,7 @@ ms.lasthandoff: 12/22/2017
 
 ## <a name="required-attributes"></a>Обязательные атрибуты
 
-|           | Описание: |
+|           | Описание |
 | --------- | ----------- |
 | **name**  | Задает имя раздела конфигурации. |
 | **type**  | Задает имя класса обработчика раздела конфигурации, который считывает раздел из файла конфигурации. Значение типа имеет синтаксис «fully-qualified-section-handler-class-name простое имя сборки». Простое имя сборки является имя корневого файла без *.dll* расширение имени файла. |
@@ -54,14 +49,14 @@ ms.lasthandoff: 12/22/2017
 
 Следующие атрибуты применимы только для приложений ASP.NET. Система конфигурации пропускает эти атрибуты для других типов приложений.
 
-|                     | Описание: |
+|                     | Описание |
 | ------------------- | ----------- |
 | **allowDefinition** | Указывает, какой файл конфигурации, можно использовать в разделе. Необходимо использовать одно из следующих значений.<br><br>**Everywhere**<br>Разрешает раздела для использования в любом файле конфигурации. Это значение по умолчанию.<br>**MachineOnly**<br>Разрешает использовать только в файле конфигурации компьютера раздела (*Machine.config*).<br>**MachineToApplication**<br>Разрешает раздела для использования в файле конфигурации компьютера или в файле конфигурации приложения. |
 | **allowLocation**   | Определяет, может ли использоваться в разделе  **\<расположение >** элемента. Необходимо использовать одно из следующих значений.<br><br>**true**<br>Разрешает использовать внутри раздела  **\<расположение >** элемента. Это значение по умолчанию.<br>**false**<br>Разрешает использование раздела для использования в  **\<расположение >** элемента. |
 
 ## <a name="parent-elements"></a>Родительские элементы
 
-|     | Описание: |
+|     | Описание |
 | --- | ----------- |
 | [**\<configSections >** элемент](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md) | Содержит раздел конфигурации и пространства имен объявления. |
 | [**\<sectionGroup >** элемент](~/docs/framework/configure-apps/file-schema/sectiongroup-element-for-configsections.md) | Определяет пространство имен для разделов конфигурации. |

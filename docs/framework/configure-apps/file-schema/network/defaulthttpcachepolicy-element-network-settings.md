@@ -1,13 +1,6 @@
 ---
-title: "&lt;defaultHttpCachePolicy&gt; элемент (параметры сети)"
-ms.custom: 
+title: '&lt;defaultHttpCachePolicy&gt; элемент (параметры сети)'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/requestCaching/defaultHttpCachePolicy
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#defaultHttpCachePolicy
@@ -15,16 +8,14 @@ helpviewer_keywords:
 - defaultHttpCachePolicy element
 - <defaultHttpCachePolicy> element
 ms.assetid: 2c1247d0-39b0-4c12-919a-a925ce075c79
-caps.latest.revision: "19"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 048d9a373c77e530bd352b3caa0e122b3833a5c2
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0425711687a2f8b40f2c645e1c478d52b56ad979
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltdefaulthttpcachepolicygt-element-network-settings"></a>&lt;defaultHttpCachePolicy&gt; элемент (параметры сети)
 Описывает указывает, активна ли функция HTTP-кэширования и описывает политику кэширования по умолчанию.  
@@ -50,7 +41,7 @@ ms.lasthandoff: 12/22/2017
   
 ### <a name="attributes"></a>Атрибуты  
   
-|Атрибут|Описание:|  
+|Атрибут|Описание|  
 |---------------|-----------------|  
 |`maximumAge`|Указывает максимальный интервал времени перед кэшированный объект помечается как устаревшая.|  
 |`maximumStale`|Указывает максимальный интервал времени после запрограммированного обновления время ожидания до кэшированный объект помечается как устаревшая.|  
@@ -62,7 +53,7 @@ ms.lasthandoff: 12/22/2017
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
 |[requestCaching](../../../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)|Определяет механизм кэширования для сетевых запросов.|  
   

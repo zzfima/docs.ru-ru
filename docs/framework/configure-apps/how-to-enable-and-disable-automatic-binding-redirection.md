@@ -1,27 +1,18 @@
 ---
-title: "Практическое руководство. Включение и отключение автоматического перенаправления привязки"
-ms.custom: 
+title: Практическое руководство. Включение и отключение автоматического перенаправления привязки
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - side-by-side execution, assembly binding redirection
 - assemblies [.NET Framework], binding redirection
 ms.assetid: 5fca42f3-bdce-4b81-a704-61e42c89d3ba
-caps.latest.revision: "17"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: b6887706aeef3855c1e02c8b1379856022cdac04
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2d71da1b48938f9f98221d86f0f9badee3a17919
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-enable-and-disable-automatic-binding-redirection"></a>Практическое руководство. Включение и отключение автоматического перенаправления привязки
 Начиная с [!INCLUDE[vs_dev12](../../../includes/vs-dev12-md.md)] при компиляции приложений, нацеленных на [!INCLUDE[net_v451](../../../includes/net-v451-md.md)], в файл конфигурации приложения могут автоматически быть добавлены переадресации привязок для переопределения унификации сборок. Переадресации привязок добавляются, если приложение или его компоненты ссылаются на несколько версий одной сборки, даже если вручную указать переадресации привязок в файле конфигурации приложения. Функция автоматической переадресации привязки затрагивает классические приложения и веб-приложения, нацеленные на [!INCLUDE[net_v451](../../../includes/net-v451-md.md)], хотя в случае веб-приложений она ведет себя несколько иначе. Автоматическую переадресацию привязки можно включить при наличии существующих приложений, нацеленных на предыдущие версии .NET Framework; также можно отключить эту функцию, если требуется сохранить созданные вручную переадресации привязок.  

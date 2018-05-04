@@ -1,29 +1,15 @@
 ---
 title: Получение одного значения из базы данных
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-ado
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: b38526cd-a62a-48cb-822a-e91dfa68e02d
-caps.latest.revision: ''
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload:
-- dotnet
-ms.openlocfilehash: 41c3547d203a9958d3ad84303469c1e9591e6bd3
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: b7ad989dce39a8e9a0ed7b6cd988e06304e7b40f
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="obtaining-a-single-value-from-a-database"></a>Получение одного значения из базы данных
 Может возникнуть необходимость вернуть сведения из базы данных, которые представляют собой одиночное значение, а не форму таблицы или поток данных. Например, может потребоваться вернуть результат агрегатной функции, например COUNT (\*), SUM(Price) или AVG(Quantity). **Команда** объект предоставляет возможность возвращать одиночные значения при помощи **ExecuteScalar** метод. **ExecuteScalar** метод возвращает в виде скалярного значения, значение первого столбца первой строки результирующего набора.  

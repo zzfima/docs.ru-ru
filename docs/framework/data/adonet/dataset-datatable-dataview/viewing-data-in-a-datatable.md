@@ -1,27 +1,15 @@
 ---
-title: "Просмотр данных в таблице данных"
-ms.custom: 
+title: Просмотр данных в таблице данных
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 1d26e0fb-f6e0-4afa-9a9c-b8d55b8f20dc
-caps.latest.revision: "4"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 2576c95ad7739d28e2ca822fd13fb6f176900814
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 5d39d2a856a40b5ea20832a544ede360313309d3
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="viewing-data-in-a-datatable"></a>Просмотр данных в таблице данных
 Можно получить содержимое из <xref:System.Data.DataTable> с помощью **строк** и **столбцы** коллекции **DataTable**. Можно также использовать <xref:System.Data.DataTable.Select%2A> метод для возврата подмножества данных в **DataTable** в соответствии с условиями поиска, порядок сортировки и состоянием строк. Кроме того, можно использовать <xref:System.Data.DataRowCollection.Find%2A> метод **DataRowCollection** при поиске конкретной строки, используя значение первичного ключа.  
@@ -33,10 +21,10 @@ ms.lasthandoff: 01/17/2018
   
  **Выберите** метод определяет, какие версии строк для просмотра и управления на основе <xref:System.Data.DataViewRowState>. В следующей таблице описаны возможные **DataViewRowState** значений перечисления.  
   
-|Значение DataViewRowState|Описание:|  
+|Значение DataViewRowState|Описание|  
 |----------------------------|-----------------|  
 |**CurrentRows**|Текущие строки, включая не изменившиеся, добавленные и измененные.|  
-|**Deleted**|Удаленная строка.|  
+|**удален**|Удаленная строка.|  
 |**ModifiedCurrent**|Текущая версия, которая является измененной версией исходных данных. (См. **ModifiedOriginal**.)|  
 |**ModifiedOriginal**|Исходная версия всех измененных строк. Текущая версия — доступны с помощью **ModifiedCurrent**.|  
 |**Добавить**|Новая строка.|  

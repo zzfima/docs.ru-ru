@@ -1,24 +1,12 @@
 ---
-title: "&lt;add&gt; для &lt;authorizationPolicies&gt;"
-ms.custom: 
+title: '&lt;add&gt; для &lt;authorizationPolicies&gt;'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 613a03d8-4384-4556-bce2-8c23286c0bb0
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 72af0529cea2e6810bdb7a518874a313e3ceab40
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 008f465134860141293776130ebd75cd39120f5e
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltaddgt-of-ltauthorizationpoliciesgt"></a>&lt;add&gt; для &lt;authorizationPolicies&gt;
 Задает политику авторизации для преобразования требований.  
@@ -48,14 +36,14 @@ ms.lasthandoff: 12/22/2017
   
 |Атрибут|Описание|  
 |---------------|-----------------|  
-|`policyType`|Обязательный строковый атрибут.<br /><br /> Модель управления доступом [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] поддерживает предоставление набора политик авторизации в качестве типов. Данный атрибут определяет политику авторизации, которая позволяет преобразовывать один набор входных требований в другой набор требований. В зависимости от этого может быть предоставлено управление доступом или отказано в предоставлении управления доступом.|  
+|`policyType`|Обязательный строковый атрибут.<br /><br /> Модель управления доступом Windows Communication Foundation (WCF) поддерживает предоставление набора политик авторизации в качестве типов. Данный атрибут определяет политику авторизации, которая позволяет преобразовывать один набор входных требований в другой набор требований. В зависимости от этого может быть предоставлено управление доступом или отказано в предоставлении управления доступом.|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
  Отсутствует.  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
 |[\<authorizationPolicies >](../../../../../docs/framework/configure-apps/file-schema/wcf/authorizationpolicies.md)|Задает коллекцию типов политики авторизации.|  
   

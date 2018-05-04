@@ -1,31 +1,19 @@
 ---
-title: "&lt;peer&gt; элемент для элемента &lt;clientCredentials&gt;"
-ms.custom: 
+title: '&lt;peer&gt; элемент для элемента &lt;clientCredentials&gt;'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 505bd987-0042-4622-b68e-94f439729d53
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c3479b52c6e06b7b9ebd69d46780e8dca70d2ef7
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 9d64f682f67dcc7c4f0c0f1600938f8ff9ac0dd6
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltpeergt-of-ltclientcredentialsgt-element"></a>&lt;peer&gt; элемент для элемента &lt;clientCredentials&gt;
 Задает учетные данные, используемые при проверке подлинности одноранговых клиентов.  
   
- \<system.ServiceModel>  
+ \<система. ServiceModel >  
 \<поведения >  
-\<endpointBehaviors>  
+\<endpointBehaviors >  
 \<поведение >  
 \<clientCredentials >  
 \<Одноранговый >  
@@ -48,17 +36,17 @@ ms.lasthandoff: 01/19/2018
   
 ### <a name="child-elements"></a>Дочерние элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
 |[\<сертификат >](../../../../../docs/framework/configure-apps/file-schema/wcf/certificate-element.md)|Задает сертификат X.509, используемый для подписи и шифрования сообщений для клиентов одноранговых сетей. .|  
 |[\<peerAuthentication >](../../../../../docs/framework/configure-apps/file-schema/wcf/peerauthentication-element.md)|Задает параметры проверки подлинности для одноранговых клиентов.|  
-|[\<messageSenderAuthentication>](../../../../../docs/framework/configure-apps/file-schema/wcf/messagesenderauthentication-element.md)|Задает параметры проверки подлинности для отправителей сообщений.|  
+|[\<messageSenderAuthentication >](../../../../../docs/framework/configure-apps/file-schema/wcf/messagesenderauthentication-element.md)|Задает параметры проверки подлинности для отправителей сообщений.|  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
-|[\<clientCredentials>](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)|Задает учетные данные, используемые для проверки подлинности клиента при подключении к службе.|  
+|[\<clientCredentials >](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)|Задает учетные данные, используемые для проверки подлинности клиента при подключении к службе.|  
   
 ## <a name="remarks"></a>Примечания  
  Этот элемент конфигурации задает учетные данные, используемые одноранговым узлом для подтверждения своей подлинности для других узлов в сетке, а также параметры, используемые одноранговым узлом для проверки подлинности других одноранговых узлов. Дополнительные сведения см. в разделе [проверки подлинности сообщения однорангового канала](http://msdn.microsoft.com/library/80e73386-514e-4c30-9e4a-b9ca8c173a95) и [защита приложений одноранговых каналов](../../../../../docs/framework/wcf/feature-details/securing-peer-channel-applications.md).  

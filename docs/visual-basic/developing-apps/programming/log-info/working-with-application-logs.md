@@ -1,25 +1,26 @@
 ---
-title: "Работа с журналами приложения в Visual Basic"
-ms.custom: 
+title: Работа с журналами приложения в Visual Basic
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - logs, application
 - application event logs, Visual Basic
 - application event logs
 ms.assetid: 2581afd1-5791-4bc4-86b2-46244e9fe468
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: ea5f3699ca5a1b6b0859ac266656deb933839d3d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 40cad53cd9283a99a93cde79616151e77489e7bb
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="working-with-application-logs-in-visual-basic"></a>Работа с журналами приложения в Visual Basic
 Объекты `My.Applicaton.Log` и `My.Log` упрощают запись сообщений и данных трассировки в журналы.  
@@ -38,7 +39,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="where-messages-are-logged"></a>Куда записываются сообщения  
  Если сборка не имеет файла конфигурации, объекты `My.Application.Log` и `My.Log` записывают сообщения в вывод отладки приложения (с использованием класса <xref:System.Diagnostics.DefaultTraceListener> ). Кроме того, объект `My.Application.Log` записывает данные в файл журнала сборки (с использованием класса <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener>), а объект `My.Log` записывает сообщения в вывод веб-страницы ASP.NET (с использованием класса <xref:System.Web.WebPageTraceListener>).  
   
- При работе с приложением в режиме отладки вывод отладки можно просматривать в окне [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] **Output** window when running your application in debug mode. Чтобы открыть окно **Вывод** , выберите пункт меню **Отладка** , наведите указатель на пункт **Окна**и выберите пункт **Вывод**. В окне **Вывод** выберите значение **Отладка** в поле **Показать выходные данные из** .  
+ При работе с приложением в режиме отладки вывод отладки можно просматривать в окне Visual Studio **Вывод**. Чтобы открыть окно **Вывод** , выберите пункт меню **Отладка** , наведите указатель на пункт **Окна**и выберите пункт **Вывод**. В окне **Вывод** выберите значение **Отладка** в поле **Показать выходные данные из** .  
   
  По умолчанию объект `My.Application.Log` записывает сообщения в файл журнала, расположенный по пути данных приложения пользователя. Путь можно получить из свойства <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.FullLogFileName%2A> объекта <xref:Microsoft.VisualBasic.Logging.Log.DefaultFileLogWriter%2A> . Путь имеет следующий формат:  
   

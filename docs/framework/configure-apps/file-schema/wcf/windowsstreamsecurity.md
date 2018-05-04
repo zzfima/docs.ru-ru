@@ -1,24 +1,14 @@
 ---
-title: "&lt;windowsstreamsecurity инициирует&gt;"
-ms.custom: 
+title: '&lt;windowsstreamsecurity инициирует&gt;'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 926bea29-90c7-4a26-9cf0-fb4aa44f6f70
-caps.latest.revision: "10"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 3ebbb7749a5ca24072e62bb482ee33abadcfb8b8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a089a6fb61e8f7fac4116b2280a5c2fe0b703f94
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltwindowsstreamsecuritygt"></a>&lt;windowsstreamsecurity инициирует&gt;
 Задает параметры безопасности потока Windows пользовательской привязки.  
@@ -49,7 +39,7 @@ ms.lasthandoff: 12/22/2017
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
 |[\<Привязка >](../../../../../docs/framework/misc/binding.md)|Определяет все возможности пользовательской привязки.|  
   

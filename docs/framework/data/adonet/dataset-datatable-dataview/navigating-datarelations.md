@@ -1,27 +1,15 @@
 ---
-title: "Навигация по отношениям DataRelation"
-ms.custom: 
+title: Навигация по отношениям DataRelation
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: e5e673f4-9b44-45ae-aaea-c504d1cc5d3e
-caps.latest.revision: "3"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 84272a24dde909205d01f4ced5a57450c5fdbd7f
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: c46007fb86a76405fd99d6e943779238d6885aa8
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="navigating-datarelations"></a>Навигация по отношениям DataRelation
 Одно из основных назначений объекта <xref:System.Data.DataRelation> состоит в обеспечении переходов от одного объекта <xref:System.Data.DataTable> к другому в пределах <xref:System.Data.DataSet>. Это позволяет получить все связанные <xref:System.Data.DataRow> объектов в одном **DataTable** при указании единственного **DataRow** из связанного **DataTable**. Например, после установления связи **DataRelation** между таблицей заказчиков и таблицей заказов, можно получить все строки заказа для конкретного клиента строки с помощью **GetChildRows**.  

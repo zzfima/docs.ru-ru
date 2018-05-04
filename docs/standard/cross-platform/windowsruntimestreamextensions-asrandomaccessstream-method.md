@@ -1,13 +1,7 @@
 ---
-title: "Метод WindowsRuntimeStreamExtensions.AsRandomAccessStream(System.IO.Stream)"
-ms.custom: 
+title: Метод WindowsRuntimeStreamExtensions.AsRandomAccessStream(System.IO.Stream)
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,25 +10,20 @@ api_name:
 api_location:
 - System.Runtime.WindowsRuntime.dll
 ms.assetid: dcc72283-caed-49ee-b45d-ccaf94e97129
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 9057eabb7e3dfdfaa872fbcf2fe1180d0bbc7920
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 16f878abc11589fe62f78d941b367d82d7b49e1c
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="windowsruntimestreamextensionsasrandomaccessstreamsystemiostream-method"></a>Метод WindowsRuntimeStreamExtensions.AsRandomAccessStream(System.IO.Stream)
 [Поддерживается в .NET Framework 4.5.1 и более поздних версиях.]  
   
  Преобразует заданный поток в поток прямого доступа.  
   
- **Пространство имен:**<xref:System.IO?displayProperty=nameWithType>  
+ **Пространство имен:** <xref:System.IO?displayProperty=nameWithType>  
  **Сборка:** System.Runtime.WindowsRuntime (в System.Runtime.WindowsRuntime.dll)  
   
 ## <a name="syntax"></a>Синтаксис  

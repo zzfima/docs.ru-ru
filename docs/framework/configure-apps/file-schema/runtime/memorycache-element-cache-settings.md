@@ -1,36 +1,25 @@
 ---
 title: '&lt;memoryCache&gt; элемент (параметры кэша)'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - <memoryCache> element
 - caching [.NET Framework], configuration
 - memoryCache element
 ms.assetid: 182a622f-f7cf-472d-9d0b-451d2fd94525
-caps.latest.revision: ''
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload:
-- dotnet
-ms.openlocfilehash: 8219607debb9f0f616895a57e0328b3785d5e84e
-ms.sourcegitcommit: 6f967c86dde55472440f0c8669b0e910ee3c53ba
+ms.openlocfilehash: 3d0d741fd8193c7d874d70248cbd149f11163ed0
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltmemorycachegt-element-cache-settings"></a>&lt;memoryCache&gt; элемент (параметры кэша)
 Определяет элемент, используемый для настройки кэша, который основан на классе <xref:System.Runtime.Caching.MemoryCache> . Класс <xref:System.Runtime.Caching.Configuration.MemoryCacheElement> определяет элемент [memoryCache](../../../../../docs/framework/configure-apps/file-schema/runtime/memorycache-element-cache-settings.md) , который можно использовать для настройки кэша. В одном приложении может использоваться несколько экземпляров класса <xref:System.Runtime.Caching.MemoryCache> . Каждый элемент `memoryCache` в файле конфигурации может содержать параметры для именованного экземпляра <xref:System.Runtime.Caching.MemoryCache> .  
   
  \<configuration>  
-\<system.runtime.caching>  
+\<System.Runtime.Caching >  
 \<memoryCache >  
   
 ## <a name="syntax"></a>Синтаксис  

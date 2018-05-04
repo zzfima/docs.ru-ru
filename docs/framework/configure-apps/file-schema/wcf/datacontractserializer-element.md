@@ -1,31 +1,19 @@
 ---
-title: '&lt;dataContractSerializer&gt;'
-ms.custom: 
+title: '&lt;DataContractSerializer&gt;'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - dataContractSerializer element
 - <dataContractSerializer> element
 - DataContractSerializer
 - KnownTypes
 ms.assetid: f41fb4d5-24e7-4059-8010-286a30bfea93
-caps.latest.revision: "17"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 27b80c831fdc66bd3b022645c3de9c0c31ee575a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5f2a05fdf2e38923205092b232995a70a87f7e87
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="ltdatacontractserializergt"></a>&lt;dataContractSerializer&gt;
+# <a name="ltdatacontractserializergt"></a>&lt;DataContractSerializer&gt;
 Содержит данные конфигурации для <xref:System.Runtime.Serialization.DataContractSerializer>. Этот элемент присутствует в двух разных иерархиях. Одна из них указана в следующем разделе «Иерархия схемы», а другая - в разделе «Примечания».  
   
  \<система. ServiceModel >  
@@ -56,7 +44,7 @@ ms.lasthandoff: 12/22/2017
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
 |[\<поведение >](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-servicebehaviors.md)|Коллекция параметров для поведения службы.|  
 |[\<system.runtime.serialization>](../../../../../docs/framework/configure-apps/file-schema/wcf/system-runtime-serialization.md)|Представляет корневой элемент для раздела пространства имен <xref:System.Runtime.Serialization> и содержит элементы для установки параметров <xref:System.Runtime.Serialization.DataContractSerializer>.|  

@@ -1,24 +1,14 @@
 ---
 title: '&lt;audienceUris&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 7a3d8515-d756-4afe-a22d-07cbe2217ee3
-caps.latest.revision: "8"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 69c96698b309a789b4527c76e1fe8b8b99811a19
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7415cb3f1792d2de566161ae6c348ef591b4a0c3
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltaudienceurisgt"></a>&lt;audienceUris&gt;
 Задает набор URI, допустимых идентификаторов проверяющей стороны (RP). Маркеры не будут приниматься, если только они относятся к одному из разрешенных URI аудитории.  
@@ -58,7 +48,7 @@ ms.lasthandoff: 12/22/2017
   
 ### <a name="child-elements"></a>Дочерние элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
 |`<add value=xs:string>`|Добавляет URI, указанный параметром `value` атрибут в коллекцию audienceUris. Атрибут `value` является обязательным. URI с учетом регистра.|  
 |`<clear>`|Очищает коллекцию audienceUris. Все идентификаторы будут удалены из коллекции.|  
@@ -66,12 +56,12 @@ ms.lasthandoff: 12/22/2017
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
 |[\<securityTokenHandlerConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md)|Обеспечивает настройку для коллекции безопасности обработчиков маркеров.|  
   
 ## <a name="remarks"></a>Примечания  
- По умолчанию коллекция пуста; Используйте `<add>`, `<clear>`, и `<remove>` элементов для изменения коллекции. <xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler>и <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler> объекты используют значения в коллекции URI аудитории для настройки любых разрешено аудитории ограничения URI в <xref:System.IdentityModel.Tokens.SamlSecurityTokenRequirement> объектов.  
+ По умолчанию коллекция пуста; Используйте `<add>`, `<clear>`, и `<remove>` элементов для изменения коллекции. <xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler> и <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler> объекты используют значения в коллекции URI аудитории для настройки любых разрешено аудитории ограничения URI в <xref:System.IdentityModel.Tokens.SamlSecurityTokenRequirement> объектов.  
   
  `<audienceUris>` Представлен <xref:System.IdentityModel.Configuration.AudienceUriElementCollection> класса. Представляется отдельным URI, добавляемый в коллекцию <xref:System.IdentityModel.Configuration.AudienceUriElement> класса.  
   

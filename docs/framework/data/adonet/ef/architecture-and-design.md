@@ -1,24 +1,12 @@
 ---
-title: "Архитектура и разработка"
-ms.custom: 
+title: Архитектура и разработка
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: bd738d39-00e2-4bab-b387-90aac1a014bd
-caps.latest.revision: "3"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: ce16e89e697a7865a65d86b408e49b5ad671bae1
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: c2e8ff5f21a2941d75b21915552e6935a1423978
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="architecture-and-design"></a>Архитектура и разработка
 Модуль создания SQL в [образец поставщика](http://go.microsoft.com/fwlink/?LinkId=180616) реализуется в виде посетителя в дереве выражения, представляющем дерево команд. Создание кода выполняется за один проход по дереву выражения.  
@@ -29,7 +17,7 @@ ms.lasthandoff: 01/17/2018
   
 -   Для переименования псевдонимов необходимо определить все используемые псевдонимы, чтобы избежать конфликтов во время переименования. Чтобы определить варианты переименования в SqlBuilder, используйте объекты Symbol для представления столбцов-кандидатов на переименование.  
   
- ![Diagram](../../../../../docs/framework/data/adonet/ef/media/de1ca705-4f7c-4d2d-ace5-afefc6d3cefa.gif "de1ca705-4f7c-4d2d-ace5-afefc6d3cefa")  
+ ![Схема](../../../../../docs/framework/data/adonet/ef/media/de1ca705-4f7c-4d2d-ace5-afefc6d3cefa.gif "de1ca705-4f7c-4d2d-ace5-afefc6d3cefa")  
   
  На первом этапе во время обхода дерева выражения группируются в объекты SqlSelectStatement, а соединения и псевдонимы соединений преобразуются в плоские. На этом проходе объекты Symbol представляют столбцы или входные псевдонимы, которые можно переименовать.  
   

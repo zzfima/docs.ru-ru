@@ -1,24 +1,12 @@
 ---
-title: "Общие сведения об Entity Framework"
-ms.custom: 
+title: Общие сведения об Entity Framework
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: a2166b3d-d8ba-4a0a-8552-6ba1e3eaaee0
-caps.latest.revision: "6"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 2bfccccbcfa41f8ed67cb309a0e4a3dd9dda6b90
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 8b07fb9b80d5d0d13967c807198194b3a2228202
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="entity-framework-overview"></a>Общие сведения об Entity Framework
 Платформа [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] представляет собой набор технологий ADO.NET, обеспечивающих разработку приложений, связанных с обработкой данных. Архитекторам и разработчикам приложений, ориентированных на обработку данных, приходится учитывать необходимость достижения двух совершенно различных целей. Они должны моделировать сущности, связи и логику решаемых бизнес-задач, а также работать с ядрами СУБД, используемыми для сохранения и получения данных. Данные могут распределяться по нескольким системам хранения данных, в каждой из которых применяются свои протоколы, но даже в приложениях, работающих с одной системой хранения данных, необходимо поддерживать баланс между требованиями системы хранения данных и требованиями написания эффективного и удобного для обслуживания кода приложения.  
@@ -73,7 +61,7 @@ ms.lasthandoff: 01/19/2018
   
 -   [!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)]. Обеспечивает поддержку встроенных в язык запросы (LINQ) для запроса типов сущностей, определенных в концептуальной модели. Дополнительные сведения см. в разделе [LINQ to Entities](../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md).  
   
--   [!INCLUDE[esql](../../../../../includes/esql-md.md)]. Независимый от хранилища диалект SQL, который работает непосредственно с сущностями в концептуальной модели, которая поддерживает [!INCLUDE[adonet_edm](../../../../../includes/adonet-edm-md.md)] основные понятия. [!INCLUDE[esql](../../../../../includes/esql-md.md)]используется, и с запросами объектов и запросы, которые выполняются при помощи поставщика EntityClient. Дополнительные сведения см. в разделе [Общие сведения об Entity SQL](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md).  
+-   [!INCLUDE[esql](../../../../../includes/esql-md.md)]. Независимый от хранилища диалект SQL, который работает непосредственно с сущностями в концептуальной модели, которая поддерживает [!INCLUDE[adonet_edm](../../../../../includes/adonet-edm-md.md)] основные понятия. [!INCLUDE[esql](../../../../../includes/esql-md.md)] используется, и с запросами объектов и запросы, которые выполняются при помощи поставщика EntityClient. Дополнительные сведения см. в разделе [Общие сведения об Entity SQL](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md).  
   
  Платформа [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] включает в себя поставщик данных EntityClient. Поставщик управляет соединениями, переводит запросы сущностей в запросы, зависящие от источника данных, и возвращает модуль чтения данных, который используется [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] для материализации данных сущности в виде объектов. Если материализация объектов не требуется, поставщик EntityClient может также использоваться как обычная [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] поставщика данных, позволяя приложениям выполнять [!INCLUDE[esql](../../../../../includes/esql-md.md)] запросы и использовать средство чтения возвращаемых данных только для чтения. Дополнительные сведения см. в разделе [поставщик EntityClient для Entity Framework](../../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md).  
   

@@ -1,27 +1,15 @@
 ---
-title: "Практическое руководство. Переход по отношениям с помощью оператора Navigate"
-ms.custom: 
+title: Практическое руководство. Переход по отношениям с помощью оператора Navigate
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 79996d2d-9b03-4a9d-82cc-7c5e7c2ad93d
-caps.latest.revision: "3"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 20451f661bd4bcd2338af81bef0cf1d07b0a5637
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 3db44ccee4420423072fc256dbed888c78fc4417
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-navigate-relationships-with-the-navigate-operator"></a>Практическое руководство. Переход по отношениям с помощью оператора Navigate
 В этом подразделе показано выполнение команды для концептуальной модели с помощью объекта <xref:System.Data.EntityClient.EntityCommand>, а также получение результатов <xref:System.Data.Metadata.Edm.RefType> с помощью <xref:System.Data.EntityClient.EntityDataReader>.  

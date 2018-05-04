@@ -1,26 +1,12 @@
 ---
 title: Наборы данных ADO.NET
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-ado
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 82b641bb-6001-4512-bf1a-2830acdd92ab
-caps.latest.revision: 6
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload:
-- dotnet
-ms.openlocfilehash: 9458206ea7edfeba61f9805c2b601d6aa9198256
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: d7a73b11cae02abf8f61372c8d8684499781dda4
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="adonet-datasets"></a>Наборы данных ADO.NET
 Объект <xref:System.Data.DataSet> является центральным элементом поддержки разъединенных распределенных сценариев данных в [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]. **DataSet** является размещенные в оперативной памяти представлением данных, обеспечивающим согласованную реляционную программную модель независимо от источника данных. Он может использоваться с несколькими различными источниками данных, XML-данными или для управления данными, локальными по отношению к приложению. **Набора данных** представляет полный набор данных, включая связанные таблицы, ограничения и связи между таблицами. На следующем рисунке показана **DataSet** объектной модели.  

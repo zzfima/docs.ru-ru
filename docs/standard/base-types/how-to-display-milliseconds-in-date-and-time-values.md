@@ -1,12 +1,12 @@
 ---
-title: "Практическое руководство. Отображение миллисекунд в значениях даты и времени"
-ms.custom: 
+title: Практическое руководство. Отображение миллисекунд в значениях даты и времени
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -18,18 +18,18 @@ helpviewer_keywords:
 - dates [.NET Framework], milliseconds
 - milliseconds [.NET Framework]
 ms.assetid: ae1a0610-90b9-4877-8eb6-4e30bc5e00cf
-caps.latest.revision: 
+caps.latest.revision: 6
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 552c28420e9a04483b164cfe7e13d942230ec5e0
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 95bf12adc74ac91108a8383d9bbb5c9408e2fc81
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="how-to-display-milliseconds-in-date-and-time-values"></a>Практическое руководство. Отображение миллисекунд в значениях даты и времени
 Стандартные методы форматирования даты и времени, например <xref:System.DateTime.ToString?displayProperty=nameWithType>, поддерживают часы, минуты и секунды, но не миллисекунды. В этом разделе показано, как включить компонент миллисекунд даты и времени в форматированные строки даты и времени.  
@@ -62,7 +62,7 @@ ms.lasthandoff: 12/23/2017
 >  Существует возможность отображать малые дробные части секунды, например десятитысячные или стотысячные доли секунды. Однако эти значения могут не иметь смысла. Точность значений даты и времени зависит от разрешения системных часов. В операционных системах Windows NT, начиная с версии 3.5, и [!INCLUDE[windowsver](../../../includes/windowsver-md.md)], разрешение часов приблизительно соответствует 10–15 миллисекундам.  
   
 ## <a name="compiling-the-code"></a>Компиляция кода  
- Скомпилируйте код из командной строки с помощью команд csc.exe или vb.exe. Чтобы скомпилировать код в [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)], поместите его в шаблон проекта консольного приложения.  
+ Скомпилируйте код из командной строки с помощью команд csc.exe или vb.exe. Для компиляции кода в Visual Studio поместите его в шаблон проекта консольного приложения.  
   
 ## <a name="see-also"></a>См. также  
  <xref:System.Globalization.DateTimeFormatInfo>  

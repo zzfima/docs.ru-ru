@@ -16,11 +16,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 01dc48d7df85051449c92f4e91e5d1e58d6ddb91
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
-ms.translationtype: MT
+ms.openlocfilehash: 34febeb054d572286ccdf64ef9e2108ac605a36f
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="volatile-queued-communication"></a>Неустойчивое взаимодействие с использованием очереди
 В этом образце показано, как осуществлять неустойчивое взаимодействие с использованием очередей с помощью транспорта очереди сообщений (MSMQ). В этом образце используется привязка <xref:System.ServiceModel.NetMsmqBinding>. В данном случае служба представляет собой резидентное консольное приложение, позволяющее наблюдать за тем, как служба получает сообщения из очереди.  
@@ -95,7 +95,7 @@ public static void Main()
  Имя очереди MSMQ задается в разделе appSettings файла конфигурации. Конечная точка для службы задается в разделе system.serviceModel файла конфигурации и определяет привязку `netMsmqBinding`.  
   
 > [!NOTE]
->  В имени очереди для определения локального компьютера используется точка (.), а при создании очереди с помощью <xref:System.Messaging> в пути в качестве разделителей используются символы обратной косой черты. В адресе конечной точки [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] задается схема net.msmq:, для обозначения локального компьютера используется имя "localhost", а в пути в качестве разделителей используются символы косой черты.  
+>  В имени очереди для определения локального компьютера используется точка (.), а при создании очереди с помощью <xref:System.Messaging> в пути в качестве разделителей используются символы обратной косой черты. Адрес конечной точки службы Windows Communication Foundation (WCF) указывает net.msmq: схемы, используется имя «localhost» для локального компьютера и символы косой черты в пути.  
   
  Подтверждения устойчивости или неустойчивости сообщений также задаются в конфигурации.  
   
@@ -236,7 +236,7 @@ Stock Tick zzz9:43.3
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) Чтобы загрузить все [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] образцов. Этот образец расположен в следующем каталоге.  
+>  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] образцов. Этот образец расположен в следующем каталоге.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\MSMQ\Volatile`  
   

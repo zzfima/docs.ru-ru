@@ -1,9 +1,6 @@
 ---
-title: "&lt;supportedRuntime&gt; элемент"
-ms.date: 10/17/2017
-ms.prod: .net-framework
-ms.technology: dotnet-clr
-ms.topic: article
+title: '&lt;supportedRuntime&gt; элемент'
+ms.date: 04/10/2018
 ms.custom: updateeachrelease
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#supportedRuntime
@@ -15,20 +12,19 @@ ms.assetid: 1ae16e23-afbe-4de4-b413-bc457f37b69f
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 4b0967790f2bbf8fa9a889c56fa9c5168f7523bd
-ms.sourcegitcommit: 8bde7a3432f30fc771079744955c75c58c4eb393
+ms.openlocfilehash: 544aaf5a58b743c437b42764bdea3c6b7eea7c74
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/20/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltsupportedruntimegt-element"></a>&lt;supportedRuntime&gt; элемент
 
 Указывает, какие версии среды CLR поддерживает приложение. Этот элемент должен использоваться всеми приложениями, собранными с применением версии 1.1 или более поздней версии .NET Framework.  
   
 [\<configuration>](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)  
-&nbsp;&nbsp;[\<startup>](../../../../../docs/framework/configure-apps/file-schema/startup/startup-element.md)  
-&nbsp;&nbsp;&nbsp;&nbsp;**\<supportedRuntime>**  
+&nbsp;&nbsp;[\<При запуске >](../../../../../docs/framework/configure-apps/file-schema/startup/startup-element.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;**\<supportedRuntime >**  
   
 ## <a name="syntax"></a>Синтаксис
   
@@ -38,7 +34,7 @@ ms.lasthandoff: 01/20/2018
   
 ## <a name="attributes"></a>Атрибуты
   
-|Атрибут|Описание:|  
+|Атрибут|Описание|  
 |---------------|-----------------|  
 |**version**|Необязательный атрибут.<br /><br /> Строковое значение, задающее версию среды CLR, которая поддерживается данным приложением. Допустимые значения `version` см. в разделе [значения «runtime version»](#version) раздела. **Примечание:** через .NET Framework 3.5»*версии среды выполнения*» значение принимает форму *основных*. *дополнительный номер*. *Построение*. Начиная с [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)], требуются только основной и дополнительный номера версии (то есть "v4.0" вместо "v4.0.30319"). Рекомендуется использовать более короткие строки.|  
 |**sku**|Необязательный атрибут.<br /><br /> Строковое значение, которое указывает единицу складского хранения (SKU), которая, в свою очередь, указывает выпуск .NET Framework, поддерживаемый этим приложением.<br /><br /> Начиная с .NET Framework 4.0, использование `sku` рекомендуется использовать атрибут.  Если он присутствует, он указывает целевую версию .NET Framework приложения.<br /><br /> Допустимые значения атрибута sku см [значения «sku id»](#sku) раздела.|  
@@ -70,7 +66,7 @@ ms.lasthandoff: 01/20/2018
 |2.0|"v2.0.50727"|  
 |3.0|"v2.0.50727"|  
 |3.5|"v2.0.50727"|  
-|4.0-4.7.1|"v4.0"|  
+|4.0 4.7.2|"v4.0"|  
 
 <a name="sku"></a>   
 ## <a name="sku-id-values"></a>Значения "sku id"
@@ -93,8 +89,9 @@ ms.lasthandoff: 01/20/2018
 |4.6|".NETFramework,Version=v4.6"|  
 |4.6.1|".NETFramework,Version=v4.6.1"|  
 |4.6.2|". NETFramework, версия = v4.6.2»|  
-|4.7|".NETFramework,Version=v4.7"|
-|4.7.1|".NETFramework,Version=v4.7.1"|
+|4.7|". NETFramework, версия = v4.7»|
+|4.7.1|". NETFramework, версия = v4.7.1»|
+|4.7.2|". NETFramework, версия = v4.7.2»|
 
 ## <a name="example"></a>Пример  
  В следующем примере показано задание в файле конфигурации поддерживаемых версий среды выполнения. В файле конфигурации указано, что приложение предназначено 4.7 .NET Framework.  

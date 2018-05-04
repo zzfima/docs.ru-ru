@@ -1,29 +1,17 @@
 ---
 title: '&lt;mexTcpBinding&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 01baba8d-d784-4255-9ea2-7afff1482bf0
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 1d51f07da73834fe9b7983605b4e27f42b717e73
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 518644e3fa60dd12c0fa86b246e3abfd5e4bfc80
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltmextcpbindinggt"></a>&lt;mexTcpBinding&gt;
 Задает параметры для привязки, используемой для обмена сообщениями WS-MetadataExchange (WS-MEX) по TCP.  
   
- \<system.ServiceModel>  
+ \<система. ServiceModel >  
 \<привязки >  
 \<mexTcpBinding >  
   
@@ -59,9 +47,9 @@ ms.lasthandoff: 01/19/2018
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
-|[\<bindings>](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|Этот элемент содержит коллекцию стандартных и пользовательских привязок.|  
+|[\<привязки >](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|Этот элемент содержит коллекцию стандартных и пользовательских привязок.|  
   
 ## <a name="see-also"></a>См. также  
  <xref:System.ServiceModel.Configuration.MexTcpBindingElement>  

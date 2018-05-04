@@ -1,33 +1,21 @@
 ---
-title: "&lt;peer&gt;’ для &lt;serviceCredentials&gt;"
-ms.custom: 
+title: '&lt;peer&gt;’ для &lt;serviceCredentials&gt;'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: b134e21d-e5b5-458e-9309-626dbf8db4ed
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 79af459aae2eef0544d713b86e8534635fcdd141
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: f50c192639df7b7ed35e863821d5b7a8d62f29bc
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltpeergt-of-ltservicecredentialsgt"></a>&lt;peer&gt;’ для &lt;serviceCredentials&gt;
 Задает текущие учетные данные для однорангового узла.  
   
- \<system.ServiceModel>  
+ \<система. ServiceModel >  
 \<поведения >  
-\<serviceBehaviors>  
+\<serviceBehaviors >  
 \<поведение >  
-\<serviceCredentials>  
+\<serviceCredentials >  
 \<Одноранговый >  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -48,17 +36,17 @@ ms.lasthandoff: 01/19/2018
   
 ### <a name="child-elements"></a>Дочерние элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
 |[\<сертификат >](../../../../../docs/framework/configure-apps/file-schema/wcf/certificate-of-peer.md)|Задает сертификат X.509, используемый для подписи и шифрования сообщений для служб одноранговых сетей. .|  
-|[\<messageSenderAuthentication>](../../../../../docs/framework/configure-apps/file-schema/wcf/messagesenderauthentication.md)|Задает параметры проверки подлинности для отправителей сообщений.|  
+|[\<messageSenderAuthentication >](../../../../../docs/framework/configure-apps/file-schema/wcf/messagesenderauthentication.md)|Задает параметры проверки подлинности для отправителей сообщений.|  
 |[\<peerAuthentication >](../../../../../docs/framework/configure-apps/file-schema/wcf/peerauthentication.md)|Задает параметры проверки подлинности для одноранговых служб.|  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
-|[\<serviceCredentials>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md)|Задает учетные данные, используемые при проверке подлинности службы, а также параметры, относящиеся к проверке учетных данных клиента.|  
+|[\<serviceCredentials >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md)|Задает учетные данные, используемые при проверке подлинности службы, а также параметры, относящиеся к проверке учетных данных клиента.|  
   
 ## <a name="see-also"></a>См. также  
  <xref:System.ServiceModel.Configuration.PeerCredentialElement>  

@@ -1,13 +1,6 @@
 ---
-title: "&lt;трассировки&gt; элемент"
-ms.custom: 
+title: '&lt;трассировки&gt; элемент'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/trace
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#trace
@@ -17,16 +10,14 @@ helpviewer_keywords:
 - trace element
 - trace listener, <trace> element
 ms.assetid: 7931c942-63c1-47c3-a045-9d9de3cacdbf
-caps.latest.revision: "13"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: d7ddcbdbdbbc2924d4f725d2fd401f873a4cfb0b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 59d5083632630513d2afc1f8d78400310451e46f
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lttracegt-element"></a>&lt;трассировки&gt; элемент
 Содержит прослушиватели, которые собирают, хранят и маршрутизируют сообщения трассировки.  
@@ -56,21 +47,21 @@ ms.lasthandoff: 12/22/2017
   
 ## <a name="autoflush-attribute"></a>Автоматическая запись атрибута  
   
-|Значение|Описание:|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |`false`|Не сбрасывает автоматически выходного буфера. Это значение по умолчанию.|  
 |`true`|Автоматически очищает выходной буфер.|  
   
 ## <a name="usegloballock-attribute"></a>useGlobalLock атрибута  
   
-|Значение|Описание:|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |`false`|Не использовать глобальную блокировку, если прослушиватель потокобезопасен; в противном случае использует глобальную блокировку.|  
 |`true`|Использует глобальную блокировку, независимо от того, прослушиватель потокобезопасным. Это значение по умолчанию.|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
 |[\<listeners>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/listeners-element-for-trace.md)|Задает прослушиватель, собирающий, хранилища и маршрутизирует сообщения.|  
   
@@ -82,7 +73,7 @@ ms.lasthandoff: 12/22/2017
 |`system.diagnostics`|Задает прослушиватели трассировки, собирающие, хранящие и маршрутизирующие сообщения, а также уровень, на котором установлен ключ трассировки.|  
   
 ## <a name="example"></a>Пример  
- В следующем примере показано, как использовать `<trace>` элемент для добавления прослушивателя `MyListener` для `Listeners` коллекции. `MyListener`Создает файл с именем `MyListener.log` и записывает выходные данные в файл. `useGlobalLock` Атрибута задано значение `false`, чего не должно использоваться, если прослушиватель трассировки потокобезопасен глобальную блокировку. `autoflush` Атрибута задано значение `true`, которое вызывает прослушиватель трассировки для записи в файл независимо от того, следует ли <xref:System.Diagnostics.Trace.Flush%2A?displayProperty=nameWithType> вызывается метод. `indentsize` Атрибута задано значение 0 (ноль), вследствие чего слушатель в отступ при <xref:System.Diagnostics.Trace.Indent%2A?displayProperty=nameWithType> вызывается метод.  
+ В следующем примере показано, как использовать `<trace>` элемент для добавления прослушивателя `MyListener` для `Listeners` коллекции. `MyListener` Создает файл с именем `MyListener.log` и записывает выходные данные в файл. `useGlobalLock` Атрибута задано значение `false`, чего не должно использоваться, если прослушиватель трассировки потокобезопасен глобальную блокировку. `autoflush` Атрибута задано значение `true`, которое вызывает прослушиватель трассировки для записи в файл независимо от того, следует ли <xref:System.Diagnostics.Trace.Flush%2A?displayProperty=nameWithType> вызывается метод. `indentsize` Атрибута задано значение 0 (ноль), вследствие чего слушатель в отступ при <xref:System.Diagnostics.Trace.Indent%2A?displayProperty=nameWithType> вызывается метод.  
   
 ```xml  
 <configuration>  

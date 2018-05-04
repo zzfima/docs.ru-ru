@@ -1,8 +1,9 @@
 ---
-title: "Типы перечислений (Руководство по программированию в C#)"
+title: Типы перечислений (Руководство по программированию в C#)
 ms.date: 09/10/2017
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - enumerations [C#]
@@ -10,14 +11,14 @@ helpviewer_keywords:
 - C# Language, enums
 - bit flags [C#]
 ms.assetid: 64a9b731-9e3c-4336-8a09-018db2aa10b7
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 13ec7d5d2a44cddb2b7f440c8d811c2e4060d432
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: cdaa609acfa34f3b0b3073d88f09fe735d48e9a2
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="enumeration-types-c-programming-guide"></a>Типы перечислений (Руководство по программированию в C#)
 
@@ -47,7 +48,7 @@ Console.WriteLine("{0} is month number #{1}.", thisMonth, monthNumber);
 
 - Для клиентского кода ясно задается, какие значения допустимы для переменной.
 
-- В [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] IntelliSense выводит список определенных значений.
+- В Visual Studio IntelliSense выводит список определенных значений.
 
 Если не указать значения этих элементов в списке перечислителя, значения будут автоматически увеличиваться на 1. В предыдущем примере `Day.Sunday` имеет значение 0, `Day.Monday` имеет значение 1 и т. д. Когда создается новый объект `Day`, он будет иметь значение по умолчанию `Day.Sunday` (0), только ему явно не присвоить значение. При создании перечисления выберите наиболее логичное используемое по умолчанию значение и присвойте ему значение нуль. В результате этого все перечисления, если при их создании им явно не задать значение, будут иметь по умолчанию это значение.
 
@@ -88,7 +89,7 @@ Console.WriteLine("{0} is month number #{1}.", thisMonth, monthNumber);
 
 [!code-csharp[csProgGuideEnums#5](../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideEnums/CS/Enums.cs#5)]
 
-Для получения дополнительной информации см. <xref:System.Enum?displayProperty=nameWithType>.
+Дополнительные сведения см. в разделе <xref:System.Enum?displayProperty=nameWithType>.
 
 Можно также создать для перечисления новый метод, используя метод расширения. Дополнительные сведения см. в разделе [Практическое руководство. Создание нового метода для перечисления](../../csharp/programming-guide/classes-and-structs/how-to-create-a-new-method-for-an-enumeration.md).
 

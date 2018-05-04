@@ -1,27 +1,15 @@
 ---
-title: "Запись содержимого набора как данных XML"
-ms.custom: 
+title: Запись содержимого набора как данных XML
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: fd15f8a5-3b4c-46d0-a561-4559ab2a4705
-caps.latest.revision: "5"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 9b1250d616ad5835fccd1a3acbf0b8a759c34181
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 44afa79d715ef62bcbd1c242a533876d911345c8
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="writing-dataset-contents-as-xml-data"></a>Запись содержимого набора как данных XML
 В ADO.NET можно записать XML-представление объекта <xref:System.Data.DataSet> вместе со схемой или без нее. Если информация схемы встраивается внутрь XML, она записываются на языке XSD. Схема содержит определения таблиц для <xref:System.Data.DataSet>, а также определения связей и ограничений.  
@@ -44,7 +32,7 @@ string xmlDS = custDS.GetXml();
   
  В следующей таблице показаны параметры для **XmlWriteMode**.  
   
-|Параметр XmlWriteMode|Описание:|  
+|Параметр XmlWriteMode|Описание|  
 |-------------------------|-----------------|  
 |**IgnoreSchema**|Записывает текущее содержимое <xref:System.Data.DataSet> как XML-данные, без схемы XML. Это значение по умолчанию.|  
 |**WriteSchema**|Записывает текущее содержимое <xref:System.Data.DataSet> в виде XML-данных с реляционной структурой в виде встроенной схемы XML.|  
@@ -77,7 +65,7 @@ xmlSW.Close();
 ## <a name="mapping-columns-to-xml-elements-attributes-and-text"></a>Сопоставление столбцов с XML-элементами, атрибутами и текстом  
  Можно указать, как столбец таблицы представляется в формате XML с помощью **ColumnMapping** свойство **DataColumn** объекта. В следующей таблице показаны различные **MappingType** значения для **ColumnMapping** свойство столбца таблицы, а результирующий XML.  
   
-|Значение MappingType|Описание:|  
+|Значение MappingType|Описание|  
 |-----------------------|-----------------|  
 |**Элемент**|Это значение по умолчанию. Столбец записывается как XML-элемент, где ColumnName - имя элемента, а содержимое столбца записывается как текст элемента. Пример:<br /><br /> `<ColumnName>Column Contents</ColumnName>`|  
 |**Attribute (XElement Dynamic Property)** (Attribute (динамическое свойство XElement))|Столбец записывается как XML-атрибут XML-элемента для текущей строки, где ColumnName - это имя атрибута, а содержимое столбца записывается как значение атрибута. Пример:<br /><br /> `<RowElement ColumnName="Column Contents" />`|  

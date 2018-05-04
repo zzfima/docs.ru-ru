@@ -1,12 +1,13 @@
 ---
-title: "Пошаговое руководство. Выпуск кода в сценариях частичного доверия"
-ms.custom: 
+title: Пошаговое руководство. Выпуск кода в сценариях частичного доверия
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -21,16 +22,17 @@ helpviewer_keywords:
 - reflection emit, dynamic methods
 - dynamic methods
 ms.assetid: c45be261-2a9d-4c4e-9bd6-27f0931b7d25
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 835483d740b60f98c3170a590edbfbfbe970d783
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: cbdbf8a391235fc03140e032b35eb674a74dc88a
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="walkthrough-emitting-code-in-partial-trust-scenarios"></a>Пошаговое руководство. Выпуск кода в сценариях частичного доверия
 При порождении отражения для полного или частичного доверия используется одинаковый набор интерфейсов API, но для некоторых функциональных возможностей требуются особые разрешения в коде с частичным доверием. Кроме того, в порождении отражения имеется функциональная возможность, анонимно размещенные динамические методы, которые предназначены для использования при частичном доверии и в прозрачных с точки зрения безопасности сборках.  
@@ -144,7 +146,7 @@ ms.lasthandoff: 12/22/2017
      Метод <xref:System.AppDomain.CreateInstanceAndUnwrap%2A> создает объект в целевом домене приложения и возвращает прокси, который может использоваться для вызова свойств и методов объекта.  
   
     > [!NOTE]
-    >  При использовании этого кода в [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)], необходимо изменить имя класса для включения пространства имен. По умолчанию пространство имен носит имя проекта. Например, если проект называется PartialTrust, имя класса должно быть PartialTrust.Worker.  
+    >  При использовании этого кода в Visual Studio необходимо изменить имя класса для включения пространства имен. По умолчанию пространство имен носит имя проекта. Например, если проект называется PartialTrust, имя класса должно быть PartialTrust.Worker.  
   
 6.  Добавьте код для вызова метода `SimpleEmitDemo`. Вызов маршалируется за пределы домена приложения, а код выполняется в изолированном домене приложения.  
   
@@ -218,7 +220,7 @@ ms.lasthandoff: 12/22/2017
   
 ## <a name="compiling-the-code"></a>Компиляция кода  
   
--   При сборке этого примера кода в [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] необходимо изменить имя класса при передаче его в метод <xref:System.AppDomain.CreateInstanceAndUnwrap%2A>, включив в него пространство имен. По умолчанию пространство имен носит имя проекта. Например, если проект называется PartialTrust, имя класса должно быть PartialTrust.Worker.  
+-   При сборке этого примера кода в Visual Studio необходимо изменить имя класса при передаче его в метод <xref:System.AppDomain.CreateInstanceAndUnwrap%2A>, включив в него пространство имен. По умолчанию пространство имен носит имя проекта. Например, если проект называется PartialTrust, имя класса должно быть PartialTrust.Worker.  
   
 ## <a name="see-also"></a>См. также  
  [Вопросы безопасности в порождении отражения](../../../docs/framework/reflection-and-codedom/security-issues-in-reflection-emit.md)  

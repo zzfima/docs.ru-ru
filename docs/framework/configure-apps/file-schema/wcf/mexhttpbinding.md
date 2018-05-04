@@ -1,29 +1,17 @@
 ---
 title: '&lt;mexHttpBinding&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: e50b2e1f-9668-41a5-8077-dee7abff9f0f
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 92e6054845a4f898c595e6b647ea3edeaf7d6114
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 5822064af711c1a2c16bddfd142f415541b9604d
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltmexhttpbindinggt"></a>&lt;mexHttpBinding&gt;
 Задает параметры для привязки, используемой для обмена сообщениями WS-MetadataExchange (WS-MEX) по протоколу HTTP.  
   
- \<system.ServiceModel>  
+ \<система. ServiceModel >  
 \<привязки >  
 \<mexHttpBinding >  
   
@@ -59,9 +47,9 @@ ms.lasthandoff: 01/19/2018
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
-|[\<bindings>](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|Этот элемент содержит коллекцию стандартных и пользовательских привязок.|  
+|[\<привязки >](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|Этот элемент содержит коллекцию стандартных и пользовательских привязок.|  
   
 ## <a name="remarks"></a>Примечания  
  Эта привязка по существу является привязкой `WSHttpBinding` с отключенной безопасностью. Она поддерживает большинство запросов метаданных.  

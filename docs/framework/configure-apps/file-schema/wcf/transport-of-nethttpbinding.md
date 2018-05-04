@@ -1,29 +1,17 @@
 ---
-title: "&lt;транспорт&gt; для &lt;netHttpBinding&gt;"
-ms.custom: 
+title: '&lt;транспорт&gt; для &lt;netHttpBinding&gt;'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 3b180006-1661-43bf-a699-96fd3da469af
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 870e08f644f58d49f0165e1f97279adcf2e5445a
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 6603e590632f0bc21a2d98482d1f42f03bb9d9e7
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lttransportgt-of-ltnethttpbindinggt"></a>&lt;транспорт&gt; для &lt;netHttpBinding&gt;
 Определяет свойства, которые управляют параметрами проверки подлинности для транспорта HTTP.  
   
-\<system.serviceModel>  
+\<system.serviceModel >  
 \<привязки >  
 \<Привязка netHttpBinding >  
 \<Привязка >  
@@ -87,7 +75,7 @@ ms.lasthandoff: 01/19/2018
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
 |[\<Безопасность >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-nethttpbinding.md)|Определяет возможности безопасности для [ \<netHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/nethttpbinding.md).|  
   

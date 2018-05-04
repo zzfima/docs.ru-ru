@@ -1,27 +1,18 @@
 ---
-title: "&lt;пул приложений&gt; элемент (веб-параметров)"
-ms.custom: 
+title: '&lt;пул приложений&gt; элемент (веб-параметров)'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - applicationPool element
 - <applicationPool> element
 ms.assetid: 46d1baaa-e343-4639-b70d-2a43a9f62b2a
-caps.latest.revision: "12"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: d75e9eedf42523301b3c1745c05d90bcdafbdbf5
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: a2eafc6b5ad1446fd07518f877a8ec001ad8dbd6
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltapplicationpoolgt-element-web-settings"></a>&lt;пул приложений&gt; элемент (веб-параметров)
 Задает параметры конфигурации, используемого ASP.NET для управления поведением всего процесса, когда приложение ASP.NET выполняется в режиме интеграции с [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] или более поздней версии.  
@@ -47,7 +38,7 @@ ms.lasthandoff: 01/19/2018
   
 ### <a name="attributes"></a>Атрибуты  
   
-|Атрибут|Описание:|  
+|Атрибут|Описание|  
 |---------------|-----------------|  
 |`maxConcurrentRequestsPerCPU`|Указывает, сколько одновременных запросов ASP.NET разрешает для каждого ЦП.|  
 |`maxConcurrentThreadsPerCPU`|Указывает, сколько одновременных потоков могут одновременно выполняться для пула приложений для каждого ЦП. Это обеспечивает альтернативный способ управления параллелизмом ASP.NET, так как можно ограничить число управляемых потоков, которые могут использоваться для обслуживания запросов на один ЦП. По умолчанию этот параметр является 0, означающее, что ASP.NET не ограничивает количество потоков, которые могут быть созданы на ЦП, несмотря на то, что пул потоков CLR также ограничивает количество потоков, которые могут быть созданы.|  
@@ -58,7 +49,7 @@ ms.lasthandoff: 01/19/2018
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
 |[\<system.web>](../../../../../docs/framework/configure-apps/file-schema/web/system-web-element-web-settings.md)|Содержит сведения о том, как ASP.NET взаимодействует с ведущим приложением.|  
   
@@ -79,7 +70,7 @@ ms.lasthandoff: 01/19/2018
   
 -   Приложение размещается в [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] пула приложений.  
   
--   [!INCLUDE[iisver](../../../../../includes/iisver-md.md)]работает в интегрированном режиме.  
+-   [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] работает в интегрированном режиме.  
   
 -   Приложение использует [!INCLUDE[net_v35SP1_short](../../../../../includes/net-v35sp1-short-md.md)] или более поздней версии.  
   

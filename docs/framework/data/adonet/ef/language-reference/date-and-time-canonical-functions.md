@@ -1,32 +1,20 @@
 ---
-title: "Канонические функции даты и времени"
-ms.custom: 
+title: Канонические функции даты и времени
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 9628b74f-1585-436a-b385-8b02ed0cdd63
-caps.latest.revision: "3"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 143962ec91ebd8b24141b94af522585dd572d7f0
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 2e97d9f174b8b4dcb3a4b3ab12a57251548333a1
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="date-and-time-canonical-functions"></a>Канонические функции даты и времени
 Язык [!INCLUDE[esql](../../../../../../includes/esql-md.md)] включает канонические функции даты и времени.  
   
 ## <a name="remarks"></a>Примечания  
- В следующей таблице показаны даты и времени [!INCLUDE[esql](../../../../../../includes/esql-md.md)] канонические функции. `datetime`— <xref:System.DateTime> значение.  
+ В следующей таблице показаны даты и времени [!INCLUDE[esql](../../../../../../includes/esql-md.md)] канонические функции. `datetime` — <xref:System.DateTime> значение.  
   
-|Функция|Описание:|  
+|Функция|Описание|  
 |--------------|-----------------|  
 |`AddNanoseconds(` `expression`, `number``)`|Добавляет указанное количество `number` наносекунд к значению `expression`.<br /><br /> **Аргументы**<br /><br /> `expression`: `DateTime`, `DateTimeOffset` или `Time`.<br /><br /> `number`: `Int32`.<br /><br /> **Возвращаемое значение**<br /><br /> Тип параметра `expression`.|  
 |`AddMicroseconds(` `expression`, `number``)`|Добавляет указанное количество `number` микросекунд к значению `expression`.<br /><br /> **Аргументы**<br /><br /> `expression`: `DateTime`, `DateTimeOffset` или `Time`.<br /><br /> `number`: `Int32`.<br /><br /> **Возвращаемое значение**<br /><br /> Тип параметра `expression`.|  
@@ -45,15 +33,15 @@ ms.lasthandoff: 01/17/2018
 |`CurrentUtcDateTime()`|Возвращает текущие дату и время сервера по Гринвичу в виде значения типа <xref:System.DateTime>.<br /><br /> **Возвращаемое значение**<br /><br /> Объект `DateTime`.|  
 |`Day(` `expression` `)`|Возвращает относящуюся к числу месяца часть значения `expression` в качестве значения типа `Int32` от 1 до 31.<br /><br /> **Аргументы**<br /><br /> Значение типа `DateTime` и `DateTimeOffset`.<br /><br /> **Возвращаемое значение**<br /><br /> Объект `Int32`.<br /><br /> **Пример**<br /><br /> `-- The following example returns 12.`<br /><br /> `Day(cast('03/12/1998' as DateTime))`|  
 |`DayOfYear(` `expression` `)`|Возвращает относящуюся к дню года часть значения `expression` в виде значения типа `Int32` от 1 до 366, где значение 366 возвращается для последнего дня високосного года.<br /><br /> **Аргументы**<br /><br /> `DateTime` или `DateTimeOffset`.<br /><br /> **Возвращаемое значение**<br /><br /> Объект `Int32`.|  
-|`DiffNanoseconds(` `startExpression`, `endExpression``)`|Возвращает разность между `startExpression` и `endExpression` в наносекундах.<br /><br /> **Аргументы**<br /><br /> `startExpression`, `endExpression`, `DateTime`, `DateTimeOffset` или `Time` **Примечание:** `startExpression` и `endExpression` должен быть того же типа. <br /><br /> **Возвращаемое значение**<br /><br /> Объект `Int32`.|  
-|`DiffMilliseconds(` `startExpression`, `endExpression``)`|Возвращает разность между `startExpression` и `endExpression` в миллисекундах.<br /><br /> **Аргументы**<br /><br /> `startExpression`, `endExpression`, `DateTime`, `DateTimeOffset` или `Time` **Примечание:** `startExpression` и `endExpression` должен быть того же типа. <br /><br /> **Возвращаемое значение**<br /><br /> Объект `Int32`.|  
-|`DiffMicroseconds(` `startExpression`, `endExpression``)`|Возвращает разность между `startExpression` и `endExpression` в микросекундах.<br /><br /> **Аргументы**<br /><br /> `startExpression`, `endExpression`, `DateTime`, `DateTimeOffset` или `Time` **Примечание:** `startExpression` и `endExpression` должен быть того же типа. <br /><br /> **Возвращаемое значение**<br /><br /> Объект `Int32`.|  
-|`DiffSeconds(` `startExpression`, `endExpression``)`|Возвращает разность между `startExpression` и `endExpression` в секундах.<br /><br /> **Аргументы**<br /><br /> `startExpression`, `endExpression`, `DateTime`, `DateTimeOffset` или `Time` **Примечание:** `startExpression` и `endExpression` должен быть того же типа. <br /><br /> **Возвращаемое значение**<br /><br /> Объект `Int32`.|  
-|`DiffMinutes(` `startExpression`, `endExpression``)`|Возвращает разность между `startExpression` и `endExpression` в минутах.<br /><br /> **Аргументы**<br /><br /> `startExpression`, `endExpression`, `DateTime`, `DateTimeOffset` или `Time` **Примечание:** `startExpression` и `endExpression` должен быть того же типа. <br /><br /> **Возвращаемое значение**<br /><br /> Объект `Int32`.|  
-|`DiffHours(` `startExpression`, `endExpression``)`|Возвращает разность между `startExpression` и `endExpression` в часах.<br /><br /> **Аргументы**<br /><br /> `startExpression`, `endExpression`, `DateTime`, `DateTimeOffset` или `Time` **Примечание:** `startExpression` и `endExpression` должен быть того же типа. <br /><br /> **Возвращаемое значение**<br /><br /> Объект `Int32`.|  
-|`DiffDays(` `startExpression`, `endExpression``)`|Возвращает разность между `startExpression` и `endExpression` в днях.<br /><br /> **Аргументы**<br /><br /> `startExpression`, `endExpression`: `DateTime` или `DateTimeOffset`. **Примечание:** `startExpression` и `endExpression` должен быть того же типа. <br /><br /> **Возвращаемое значение**<br /><br /> Объект `Int32`.|  
-|`DiffMonths(` `startExpression`, `endExpression``)`|Возвращает разность между `startExpression` и `endExpression` в месяцах.<br /><br /> **Аргументы**<br /><br /> `startExpression`, `endExpression`: `DateTime` или `DateTimeOffset`. **Примечание:** `startExpression` и `endExpression` должен быть того же типа. <br /><br /> **Возвращаемое значение**<br /><br /> Объект `Int32`.|  
-|`DiffYears(` `startExpression`, `endExpression``)`|Возвращает разность между `startExpression` и `endExpression` в годах.<br /><br /> **Аргументы**<br /><br /> `startExpression`, `endExpression`: `DateTime` или `DateTimeOffset`. **Примечание:** `startExpression` и `endExpression` должен быть того же типа. <br /><br /> **Возвращаемое значение**<br /><br /> Объект `Int32`.|  
+|`DiffNanoseconds(` `startExpression`, `endExpression``)`|Возвращает разность между `startExpression` и `endExpression` в наносекундах.<br /><br /> **Аргументы**<br /><br /> `startExpression`, `endExpression`, `DateTime`, `DateTimeOffset` или `Time` **Примечание:** `startExpression` и `endExpression` должен быть того же типа.   <br /><br /> **Возвращаемое значение**<br /><br /> Объект `Int32`.|  
+|`DiffMilliseconds(` `startExpression`, `endExpression``)`|Возвращает разность между `startExpression` и `endExpression` в миллисекундах.<br /><br /> **Аргументы**<br /><br /> `startExpression`, `endExpression`, `DateTime`, `DateTimeOffset` или `Time` **Примечание:** `startExpression` и `endExpression` должен быть того же типа.   <br /><br /> **Возвращаемое значение**<br /><br /> Объект `Int32`.|  
+|`DiffMicroseconds(` `startExpression`, `endExpression``)`|Возвращает разность между `startExpression` и `endExpression` в микросекундах.<br /><br /> **Аргументы**<br /><br /> `startExpression`, `endExpression`, `DateTime`, `DateTimeOffset` или `Time` **Примечание:** `startExpression` и `endExpression` должен быть того же типа.   <br /><br /> **Возвращаемое значение**<br /><br /> Объект `Int32`.|  
+|`DiffSeconds(` `startExpression`, `endExpression``)`|Возвращает разность между `startExpression` и `endExpression` в секундах.<br /><br /> **Аргументы**<br /><br /> `startExpression`, `endExpression`, `DateTime`, `DateTimeOffset` или `Time` **Примечание:** `startExpression` и `endExpression` должен быть того же типа.   <br /><br /> **Возвращаемое значение**<br /><br /> Объект `Int32`.|  
+|`DiffMinutes(` `startExpression`, `endExpression``)`|Возвращает разность между `startExpression` и `endExpression` в минутах.<br /><br /> **Аргументы**<br /><br /> `startExpression`, `endExpression`, `DateTime`, `DateTimeOffset` или `Time` **Примечание:** `startExpression` и `endExpression` должен быть того же типа.   <br /><br /> **Возвращаемое значение**<br /><br /> Объект `Int32`.|  
+|`DiffHours(` `startExpression`, `endExpression``)`|Возвращает разность между `startExpression` и `endExpression` в часах.<br /><br /> **Аргументы**<br /><br /> `startExpression`, `endExpression`, `DateTime`, `DateTimeOffset` или `Time` **Примечание:** `startExpression` и `endExpression` должен быть того же типа.   <br /><br /> **Возвращаемое значение**<br /><br /> Объект `Int32`.|  
+|`DiffDays(` `startExpression`, `endExpression``)`|Возвращает разность между `startExpression` и `endExpression` в днях.<br /><br /> **Аргументы**<br /><br /> `startExpression`, `endExpression`: `DateTime` или `DateTimeOffset`. **Примечание:** `startExpression` и `endExpression` должен быть того же типа.   <br /><br /> **Возвращаемое значение**<br /><br /> Объект `Int32`.|  
+|`DiffMonths(` `startExpression`, `endExpression``)`|Возвращает разность между `startExpression` и `endExpression` в месяцах.<br /><br /> **Аргументы**<br /><br /> `startExpression`, `endExpression`: `DateTime` или `DateTimeOffset`. **Примечание:** `startExpression` и `endExpression` должен быть того же типа.   <br /><br /> **Возвращаемое значение**<br /><br /> Объект `Int32`.|  
+|`DiffYears(` `startExpression`, `endExpression``)`|Возвращает разность между `startExpression` и `endExpression` в годах.<br /><br /> **Аргументы**<br /><br /> `startExpression`, `endExpression`: `DateTime` или `DateTimeOffset`. **Примечание:** `startExpression` и `endExpression` должен быть того же типа.   <br /><br /> **Возвращаемое значение**<br /><br /> Объект `Int32`.|  
 |`GetTotalOffsetMinutes(` `datetimeoffset` `)`|Возвращает число минут, на которые `datetimeoffset` смещено относительно времени по Гринвичу (GMT). Обычно это значение находится в диапазоне от +780 до -780 (плюс-минус 13 ч). **Примечание:** эта функция поддерживается в SQL Server 2008 только. <br /><br /> **Аргументы**<br /><br /> Объект `DateTimeOffset`.<br /><br /> **Возвращаемое значение**<br /><br /> Объект `Int32`.|  
 |`Hour (` `expression` `)`|Возвращает для `expression` значение часа типа `Int32` от 0 до 23.<br /><br /> **Аргументы**<br /><br /> Значение типа `DateTime, Time` и `DateTimeOffset`.<br /><br /> **Пример**<br /><br /> `-- The following example returns 22.`<br /><br /> `Hour(cast('22:35:5' as DateTime))`|  
 |`Millisecond(` `expression` `)`|Возвращает для `expression` значение миллисекунд типа `Int32` от 0 до 999.<br /><br /> **Аргументы**<br /><br /> Значение типа `DateTime, Time` и `DateTimeOffset`.<br /><br /> **Возвращаемое значение**<br /><br /> Объект `Int32`.|  

@@ -1,14 +1,6 @@
 ---
-title: "&lt;Добавить&gt; элемент для &lt;прослушиватели&gt; для &lt;трассировки&gt;"
-ms.custom: 
+title: '&lt;Добавить&gt; элемент для &lt;прослушиватели&gt; для &lt;трассировки&gt;'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/trace/listeners/add
 helpviewer_keywords:
@@ -16,17 +8,14 @@ helpviewer_keywords:
 - <add> element for <listeners>
 - add element for <listeners>
 ms.assetid: 81e804a3-ef11-4d39-bbde-bfa012c179e2
-caps.latest.revision: 
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload:
-- dotnet
-ms.openlocfilehash: eb624052c3638cb49abe143ebd4173a5ee85a054
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e27187c05b49b7f73ef19243a3286e8c1de71579
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltaddgt-element-for-ltlistenersgt-for-lttracegt"></a>&lt;Добавить&gt; элемент для &lt;прослушиватели&gt; для &lt;трассировки&gt;
 Добавление прослушивателя к **прослушиватели** коллекции.  
@@ -50,7 +39,7 @@ ms.lasthandoff: 12/22/2017
   
 ### <a name="attributes"></a>Атрибуты  
   
-|Атрибут|Описание:|  
+|Атрибут|Описание|  
 |---------------|-----------------|  
 |**type**|Обязательный атрибут.<br /><br /> Указывает тип прослушивателя. Необходимо использовать строку, отвечающую требованиям, указанным в [Указание полных имен типов](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md).|  
 |**initializeData**|Необязательный атрибут.<br /><br /> Строка, передаваемая в конструктор для заданного класса.|  
@@ -58,7 +47,7 @@ ms.lasthandoff: 12/22/2017
   
 ### <a name="child-elements"></a>Дочерние элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
 |[\<filter>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/filter-element-for-add-for-listeners-for-trace.md)|Добавляет фильтр в прослушиватель в `Listeners` сбор данных для трассировки.|  
   
@@ -96,7 +85,7 @@ ms.lasthandoff: 12/22/2017
 |<xref:System.Diagnostics.XmlWriterTraceListener?displayProperty=nameWithType>|Имя файла, <xref:System.Diagnostics.XmlWriterTraceListener> записывает.|  
   
 ## <a name="example"></a>Пример  
- В следующем примере показано, как использовать  **\<Добавить >** элементы для добавления прослушивателей `MyListener` и `MyEventListener` для **прослушиватели** коллекции. `MyListener`Создает файл с именем `MyListener.log` и записывает выходные данные в файл. `MyEventListener`создает запись в журнале событий.  
+ В следующем примере показано, как использовать  **\<Добавить >** элементы для добавления прослушивателей `MyListener` и `MyEventListener` для **прослушиватели** коллекции. `MyListener` Создает файл с именем `MyListener.log` и записывает выходные данные в файл. `MyEventListener` создает запись в журнале событий.  
   
 ```xml  
 <configuration>  

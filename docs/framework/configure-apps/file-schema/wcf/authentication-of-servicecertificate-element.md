@@ -1,24 +1,12 @@
 ---
-title: "&lt;authentication&gt; элемента &lt; serviceCertificate&gt;"
-ms.custom: 
+title: '&lt;authentication&gt; элемента &lt; serviceCertificate&gt;'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 733b67b4-08a1-4d25-9741-10046f9357ef
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4e8c9530097593f1694af67396773fc32d5534d8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9ef17c8bedf6bcef21a7c59d98a86bb20ad2da80
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltauthenticationgt-of-ltservicecertificategt-element"></a>&lt;authentication&gt; элемента &lt; serviceCertificate&gt;
 Задает параметры, которые использует прокси клиента для проверки подлинности сертификатов службы, полученных при помощи согласования SSL/TLS.  
@@ -49,7 +37,7 @@ trustedStoreLocation="LocalMachine/CurrentUser" />
 |customCertificateValidatorType|Строка. Тип и сборка, используемые для проверки пользовательского типа.|  
 |certificateValidationMode|Задает один из трех режимов для проверки учетных данных. Если задано значение `Custom`, также необходимо предоставить customCertificateValidator. Значение по умолчанию — `ChainTrust`.|  
 |revocationMode|Один из режимов, используемых для проверки списков отозванных сертификатов (CRL). Значение по умолчанию — `Online`.|  
-|trustedStoreLocation|Одно из двух местоположений системного хранилища: `LocalMachine` или `CurrentUser`. Данное значение используется при согласовании сертификата службы для клиента. Проверка выполняется для **доверенные лица** хранения в указанном местоположении хранилища. Значение по умолчанию — `CurrentUser`.|  
+|trustedStoreLocation|Одно из двух местоположений системного хранилища: `LocalMachine` или `CurrentUser`. Данное значение используется при согласовании сертификата службы для клиента. Проверка выполняется для **доверенные лица** хранения в указанном местоположении хранилища. Значение по умолчанию — `CurrentUser`.|  
   
 ## <a name="customcertificatevalidator-attribute"></a>Атрибут customCertificateValidator  
   
@@ -80,7 +68,7 @@ trustedStoreLocation="LocalMachine/CurrentUser" />
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
 |[\<serviceCertificate >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-clientcredentials-element.md)|Задает сертификат для использования при проверке подлинности службы для клиента.|  
   

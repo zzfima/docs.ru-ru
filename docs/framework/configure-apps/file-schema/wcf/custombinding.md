@@ -1,31 +1,19 @@
 ---
 title: '&lt;customBinding&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 9da4f960-f64e-4d8a-894d-2b09eba5ce4b
-caps.latest.revision: "24"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e5a95d677588beaa41e94f12550ba8647202ffe3
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 5d423a29430284c904bcfe8eb11ec470a62ecf57
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltcustombindinggt"></a>&lt;customBinding&gt;
 Обеспечивает пользователю полный контроль над стеком обмена сообщениями.  
   
- \<system.serviceModel>  
+ \<system.serviceModel >  
 \<привязки >  
-\<customBinding>  
+\<customBinding >  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -200,15 +188,15 @@ ms.lasthandoff: 01/19/2018
   
 ### <a name="child-elements"></a>Дочерние элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
-|[\<compositeDuplex>](../../../../../docs/framework/configure-apps/file-schema/wcf/compositeduplex.md)|Определяет двусторонний обмен сообщениями в пользовательской привязке. Используется транспортными протоколами, которые не имеют встроенной поддержки дуплексной связи, например HTTP. Напротив, протокол TCP имеет встроенную поддержку дуплексной связи, и для него не требуется использовать этот элемент привязки для службы при отправке сообщений обратно клиенту.<br /><br /> Для осуществления контакта и установления подключения клиент должен предоставить службе адрес. Этот адрес клиента предоставляется атрибутом `ClientBaseAddress`.<br /><br /> Это элемент типа <xref:System.ServiceModel.Configuration.CompositeDuplexElement>.|  
+|[\<compositeDuplex >](../../../../../docs/framework/configure-apps/file-schema/wcf/compositeduplex.md)|Определяет двусторонний обмен сообщениями в пользовательской привязке. Используется транспортными протоколами, которые не имеют встроенной поддержки дуплексной связи, например HTTP. Напротив, протокол TCP имеет встроенную поддержку дуплексной связи, и для него не требуется использовать этот элемент привязки для службы при отправке сообщений обратно клиенту.<br /><br /> Для осуществления контакта и установления подключения клиент должен предоставить службе адрес. Этот адрес клиента предоставляется атрибутом `ClientBaseAddress`.<br /><br /> Это элемент типа <xref:System.ServiceModel.Configuration.CompositeDuplexElement>.|  
 |[\<pnrpPeerResolver>](../../../../../docs/framework/configure-apps/file-schema/wcf/pnrppeerresolver.md)|Определяет распознавателя имен узлов в протоколе однорангового разрешения имен (PNRP). Это элемент типа <xref:System.ServiceModel.Configuration.PnrpPeerResolverElement>.|  
 |[\<reliableSession >](../../../../../docs/framework/configure-apps/file-schema/wcf/reliablesession.md)|Определяет параметры WS-Reliable Messaging. Когда этот элемент добавляется к пользовательской привязке, получаемый канал может поддерживать гарантии доставки только один раз. Это элемент типа <xref:System.ServiceModel.Configuration.ReliableSessionElement>.|  
 |[\<Безопасность >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)|Определяет параметры безопасности пользовательской привязки. Это элемент типа <xref:System.ServiceModel.Configuration.SecurityElement>.|  
 |[\<sslStreamSecurity>](../../../../../docs/framework/configure-apps/file-schema/wcf/sslstreamsecurity.md)|Определяет параметры безопасности привязки потока SSL. Это элемент типа <xref:System.ServiceModel.Configuration.SslStreamSecurityElement>.|  
-|[\<transactionFlow>](../../../../../docs/framework/configure-apps/file-schema/wcf/transactionflow.md)|Указывает, что привязка поддерживает поток транзакций, и задает используемый протокол в атрибуте `transactionProtocol`. Это элемент типа <xref:System.ServiceModel.Configuration.TransactionFlowElement>.|  
-|[\<windowsStreamSecurity>](../../../../../docs/framework/configure-apps/file-schema/wcf/windowsstreamsecurity.md)|Определяет параметры для потоковой безопасности пользовательской привязки. Это элемент типа <xref:System.ServiceModel.Configuration.WindowsStreamSecurityElement>.|  
+|[\<transactionFlow >](../../../../../docs/framework/configure-apps/file-schema/wcf/transactionflow.md)|Указывает, что привязка поддерживает поток транзакций, и задает используемый протокол в атрибуте `transactionProtocol`. Это элемент типа <xref:System.ServiceModel.Configuration.TransactionFlowElement>.|  
+|[\<windowsstreamsecurity инициирует >](../../../../../docs/framework/configure-apps/file-schema/wcf/windowsstreamsecurity.md)|Определяет параметры для потоковой безопасности пользовательской привязки. Это элемент типа <xref:System.ServiceModel.Configuration.WindowsStreamSecurityElement>.|  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
@@ -241,7 +229,7 @@ ms.lasthandoff: 01/19/2018
   
 -   Далее следует необязательный элемент <xref:System.ServiceModel.Channels.ReliableSessionBindingElement>, который предоставляет сеанс и механизм сортировки в соответствии со спецификацией WS-ReliableMessaging. Это понятие сеанса может выходить за пределы посредников SOAP и транспорта.  
   
--   Далее следует необязательный элемент привязки безопасности, который предоставляет функции безопасности, например авторизацию, проверку подлинности, защиту и конфиденциальность. [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] предоставляет следующие элементы привязки безопасности.  
+-   Далее следует необязательный элемент привязки безопасности, который предоставляет возможности безопасности, например авторизацию, проверку подлинности, защиту и конфиденциальность. Следующие элементы привязки безопасности, предоставляемых Windows Communication Foundation (WCF):  
   
     -   <xref:System.ServiceModel.Channels.SecurityBindingElement>  
   
@@ -271,7 +259,7 @@ ms.lasthandoff: 01/19/2018
   
     -   <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>  
   
--   Внизу расположен обязательный элемент транспорта. Можно использовать собственный транспорт или один из элементов привязки транспорта, предоставляемых [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)].  
+-   Внизу расположен обязательный элемент транспорта. Можно использовать собственный транспорт или один из элементов, предоставляемых Windows Communication Foundation (WCF) привязки транспорта.  
   
     -   <xref:System.ServiceModel.Channels.TcpTransportBindingElement>  
   

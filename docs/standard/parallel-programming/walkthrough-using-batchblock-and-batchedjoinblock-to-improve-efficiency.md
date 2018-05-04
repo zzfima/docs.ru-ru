@@ -17,11 +17,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: c9ea53fb186551a24f678d905d35caaaa0c26494
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: e9305fd2a0e61a71f6875d6061f835e9cdae5dd1
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="walkthrough-using-batchblock-and-batchedjoinblock-to-improve-efficiency"></a>Пошаговое руководство. Повышение эффективности с помощью BatchBlock и BatchedJoinBlock
 Библиотека потоков данных TPL предоставляет классы <xref:System.Threading.Tasks.Dataflow.BatchBlock%601?displayProperty=nameWithType> и <xref:System.Threading.Tasks.Dataflow.BatchedJoinBlock%602?displayProperty=nameWithType>, чтобы пользователь мог получать и помещать в буфер данные из одного или нескольких источников и затем передавать эти помещенные в буфер данные в виде одной коллекции. Этот механизм пакетной обработки полезен при сборе данных из одного или нескольких источников и дальнейшей обработке различных элементов данных в пакетном режиме. Например, рассмотрим приложение, использующее поток данных для вставки записей в базу данных. Эта операция может быть эффективнее, если несколько элементов добавляются одновременно, а не последовательно по одному. В этом документе описано, как использовать класс <xref:System.Threading.Tasks.Dataflow.BatchBlock%601> для увеличения эффективности подобных операций вставки в базу данных. Также здесь приводится способ использования класса <xref:System.Threading.Tasks.Dataflow.BatchedJoinBlock%602> для перехвата и результатов, и всех исключений, возникающих при выполнении программой считывания из базы данных.
@@ -35,7 +35,7 @@ ms.lasthandoff: 04/26/2018
 2.  Убедитесь, что на вашем компьютере есть копия базы данных Northwind, Northwind.sdf. Этот файл обычно находится в папке %Program Files%\Microsoft SQL Server Compact Edition\v3.5\Samples\\.  
   
     > [!IMPORTANT]
-    >  В некоторых версиях Windows невозможно подключиться к Northwind.sdf, если [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] не работает в режиме администратора. Для подключения к Northwind.sdf **запустите от имени администратора** командную строку [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] или [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)].  
+    >  В некоторых версиях Windows вы не сможете подключиться к Northwind.sdf, если Visual Studio работает не в режиме администратора. Для подключения к Northwind.sdf запустите Visual Studio или командную строку Visual Studio в режиме **Запуск от имени администратора**.  
   
  Это пошаговое руководство содержит следующие разделы:  
   
@@ -57,7 +57,7 @@ ms.lasthandoff: 04/26/2018
 ## <a name="creating-the-console-application"></a>Создание консольного приложения  
   
 <a name="consoleApp"></a>   
-1.  В [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] создайте проект **Консольное приложение** Visual C# или Visual Basic. В этом документе проект называется `DataflowBatchDatabase`.  
+1.  В Visual Studio создайте проект **Консольное приложение** на Visual C# или Visual Basic. В этом документе проект называется `DataflowBatchDatabase`.  
   
 2.  В проект добавьте ссылку на System.Data.SqlServerCe.dll и ссылку на System.Threading.Tasks.Dataflow.dll.  
   

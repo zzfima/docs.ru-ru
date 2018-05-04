@@ -1,26 +1,12 @@
 ---
 title: Message Encoding
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: f30ee941-aca9-4c67-82a5-421568496f07
-caps.latest.revision: ''
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: b3040a16b6d167c4f066b2ddbd0a542741f88d62
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: cdfa83b722492a8b2a7b118ff70134916ed824fb
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="message-encoding"></a>Message Encoding
 Кодирование - это процесс преобразования набора символов Юникода в последовательность байтов. Декодирование представляет собой обратный процесс. В Windows Communication Foundation (WCF) имеется три типа кодирования для сообщений SOAP: Text, Binary и MTOM.  
@@ -37,5 +23,5 @@ ms.lasthandoff: 03/26/2018
  [Привязки](../../../../../docs/framework/wcf/bindings.md)  
  [Расширение привязок](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
  [Пользовательские привязки](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)  
+ [\<customBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)  
  [Выбор кодировщика сообщений](../../../../../docs/framework/wcf/feature-details/choosing-a-message-encoder.md)

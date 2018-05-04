@@ -1,27 +1,17 @@
 ---
-title: "&lt;gcAllowVeryLargeObjects&gt; элемент"
-ms.custom: 
+title: '&lt;gcAllowVeryLargeObjects&gt; элемент'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - gcAllowVeryLargeObjects element
 - <gcAllowVeryLargeObjects> element
 ms.assetid: 5c7ea24a-39ac-4e5f-83b7-b9f9a1b556ab
-caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b5db777f147e2eca7644d5b5f1a4bc18c8401ca8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 750b0dbc925ec484dd80e1796ba991435e354709
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltgcallowverylargeobjectsgt-element"></a>&lt;gcAllowVeryLargeObjects&gt; элемент
 На 64 разрядных платформах позволяет использовать массивы, размер которых превышает 2 гигабайта (ГБ).  
@@ -48,7 +38,7 @@ ms.lasthandoff: 12/22/2017
   
 ## <a name="enabled-attribute"></a>Атрибут enabled  
   
-|Значение|Описание:|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |`false`|Массивы с размером более 2 ГБ в общий размер не включены. Это значение по умолчанию.|  
 |`true`|Массивы с размером более 2 ГБ в общий размер включены на 64-разрядных платформах.|  

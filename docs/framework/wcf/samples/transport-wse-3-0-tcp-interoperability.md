@@ -16,14 +16,14 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 510d523cea78aa16a16adc8572c839e95059c068
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
-ms.translationtype: MT
+ms.openlocfilehash: 9ce948a9239e7a8171424fa9f1cf0fa8624d0156
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="transport-wse-30-tcp-interoperability"></a>Транспорт: TCP-взаимодействие WSE 3.0
-В примере транспорта взаимодействия TCP WSE 3.0 демонстрируется реализация дуплексного сеанса TCP в виде пользовательского транспорта [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. Также демонстрируется использование расширяемости уровня канала для создания интерфейса по сети с существующими развернутыми системами. Следующие шаги показывают, как построить этот пользовательский транспорт [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+В примере транспорта взаимодействия TCP WSE 3.0 демонстрируется реализация дуплексного сеанса TCP в качестве пользовательского транспорта Windows Communication Foundation (WCF). Также демонстрируется использование расширяемости уровня канала для создания интерфейса по сети с существующими развернутыми системами. Следующие шаги показывают, как построить этот пользовательский транспорт [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
   
 1.  Начиная с сокета TCP, создайте клиентские и серверные реализации интерфейса <xref:System.ServiceModel.Channels.IDuplexSessionChannel>, использующие кадрирование DIME для разграничения границ сообщений.  
   

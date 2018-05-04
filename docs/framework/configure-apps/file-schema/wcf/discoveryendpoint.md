@@ -1,24 +1,12 @@
 ---
-title: "&lt;конечной точки discoveryEndpoint&gt;"
-ms.custom: 
+title: '&lt;конечной точки discoveryEndpoint&gt;'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: fae2f48b-a635-4e4b-859d-a1432ac37e1c
-caps.latest.revision: "4"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 51caf46f85e7edd1f8e4b9a08ab6a1198ccd9c79
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6a352fbfced08001f76dceaff283d6bca25f56f9
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltdiscoveryendpointgt"></a>&lt;конечной точки discoveryEndpoint&gt;
 
@@ -61,7 +49,7 @@ ms.lasthandoff: 12/22/2017
   
 ### <a name="parent-elements"></a>Родительские элементы
 
-| Элемент | Описание: |  
+| Элемент | Описание |  
 | ------- | ----------- |  
 | [\<standardEndpoints >](../../../../../docs/framework/configure-apps/file-schema/wcf/standardendpoints.md) | Коллекция стандартных конечных точек, одно или несколько свойств которых (адрес, привязка, контракт) являются фиксированными. |  
   

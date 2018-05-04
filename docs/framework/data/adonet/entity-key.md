@@ -1,24 +1,12 @@
 ---
-title: "ключ сущности"
-ms.custom: 
+title: ключ сущности
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 0d447a6d-fa7a-4db0-8e7a-fd45e385fca0
-caps.latest.revision: "4"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 1f2f50f5306904a2a1b42a3abbe9071c33847c66
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 6b4e3c6876aa3de1661d680d79caa3116550e073
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="entity-key"></a>ключ сущности
 *Ключ сущности* — [свойство](../../../../docs/framework/data/adonet/property.md) или набор свойств [тип сущности](../../../../docs/framework/data/adonet/entity-type.md) , которые используются для установления личности. Свойства, составляющие ключ сущности, выбираются во время разработки. Значения свойств ключа сущности должен однозначно идентифицировать экземпляр типа сущности внутри [набора сущностей](../../../../docs/framework/data/adonet/entity-set.md) во время выполнения. Свойства, составляющие ключ сущности, должны гарантировать уникальность экземпляра набора сущностей.  

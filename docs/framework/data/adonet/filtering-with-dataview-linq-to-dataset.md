@@ -1,30 +1,18 @@
 ---
-title: "Фильтрация с использованием объекта DataView (LINQ to DataSet)"
-ms.custom: 
+title: Фильтрация с использованием объекта DataView (LINQ to DataSet)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 5632d74a-ff53-4ea7-9fe7-4a148eeb1c68
-caps.latest.revision: "2"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 2f1eb878bcc38d8bbeed42638cc5ccda230f60f1
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: b457eb925f636656455ef8f3f02f9d2a78558325
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="filtering-with-dataview-linq-to-dataset"></a>Фильтрация с использованием объекта DataView (LINQ to DataSet)
-Возможность фильтрации данных на основе заданных критериев и их предоставление клиенту с помощью элемента управления в пользовательском интерфейсе - это важный аспект привязки данных. Объект <xref:System.Data.DataView> реализует несколько способов фильтрации и возвращения подмножеств строк данных, отвечающих определенным критериям фильтрации. Помимо строковые возможностей фильтрации <xref:System.Data.DataView> также предоставляет возможность использовать [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] выражения для критерия фильтрации. [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)]выражения позволяют выполнять гораздо более сложные и мощные операции фильтрации, чем фильтрации на основе строки.  
+Возможность фильтрации данных на основе заданных критериев и их предоставление клиенту с помощью элемента управления в пользовательском интерфейсе - это важный аспект привязки данных. Объект <xref:System.Data.DataView> реализует несколько способов фильтрации и возвращения подмножеств строк данных, отвечающих определенным критериям фильтрации. Помимо строковые возможностей фильтрации <xref:System.Data.DataView> также предоставляет возможность использовать [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] выражения для критерия фильтрации. [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] выражения позволяют выполнять гораздо более сложные и мощные операции фильтрации, чем фильтрации на основе строки.  
   
  Существует два способа фильтрации данных с помощью объекта <xref:System.Data.DataView>.  
   

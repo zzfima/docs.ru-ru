@@ -1,13 +1,6 @@
 ---
-title: "&lt;performanceCounter&gt; элемент (параметры сети)"
-ms.custom: 
+title: '&lt;performanceCounter&gt; элемент (параметры сети)'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/settings/performanceCounters
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#performanceCounters
@@ -15,24 +8,22 @@ helpviewer_keywords:
 - performanceCounter element
 - <performanceCounter> element
 ms.assetid: 3afa1586-e1b8-473d-8985-c3fc90cf561b
-caps.latest.revision: "11"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: c50bf9e882ade86e70db217a75fef2a893c45572
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 5879614fd34fe645899f1b95f41e9b0675418292
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltperformancecountergt-element-network-settings"></a>&lt;performanceCounter&gt; элемент (параметры сети)
 Включает или отключает счетчики производительности сети.  
   
  \<configuration>  
-\<system.net>  
+\<System.NET >  
 \<Параметры >  
-\<performanceCounters>  
+\<performanceCounters >  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -47,7 +38,7 @@ ms.lasthandoff: 01/19/2018
   
 ### <a name="attributes"></a>Атрибуты  
   
-|Атрибут|Описание:|  
+|Атрибут|Описание|  
 |---------------|-----------------|  
 |`enabled`|Указывает, включены ли счетчики производительности сети. Значение по умолчанию — `false`.|  
   
@@ -56,9 +47,9 @@ ms.lasthandoff: 01/19/2018
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
-|[settings](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|Настраивает основные параметры сети для пространства имен <xref:System.Net>.|  
+|[Параметры](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|Настраивает основные параметры сети для пространства имен <xref:System.Net>.|  
   
 ## <a name="remarks"></a>Примечания  
  Этот элемент может использоваться в файле конфигурации приложения или в файле конфигурации компьютера (Machine.config).  

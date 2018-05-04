@@ -1,13 +1,6 @@
 ---
-title: "&lt;gcServer&gt; элемент"
-ms.custom: 
+title: '&lt;gcServer&gt; элемент'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/runtime/gcServer
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#gcServer
@@ -15,23 +8,20 @@ helpviewer_keywords:
 - gcServer element
 - <gcServer> element
 ms.assetid: 8d25b80e-2581-4803-bd87-a59528e3cb03
-caps.latest.revision: "17"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 46aae3ad287c2626123cf3f513fc72bc1acdd06e
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 027176bdff644a6ff3314df7484ed88ace93001b
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltgcservergt-element"></a>&lt;gcServer&gt; элемент
 Указывает, выполняет ли среда CLR сборку мусора сервера.  
   
  \<configuration>  
 \<Среда выполнения >  
-\<gcServer>  
+\<gcServer >  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -51,7 +41,7 @@ ms.lasthandoff: 01/19/2018
   
 ## <a name="enabled-attribute"></a>Атрибут enabled  
   
-|Значение|Описание:|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |`false`|Не выполняет сборку мусора сервера. Это значение по умолчанию.|  
 |`true`|Выполняет сборку мусора сервера.|  
@@ -61,7 +51,7 @@ ms.lasthandoff: 01/19/2018
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
 |`configuration`|Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями .NET Framework.|  
 |`runtime`|Содержит сведения о привязке сборок и сборке мусора.|  

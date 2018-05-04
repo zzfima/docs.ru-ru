@@ -1,29 +1,15 @@
 ---
 title: Потребление набора данных из веб-службы XML
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-ado
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 9edd6b71-0fa5-4649-ae1d-ac1c12541019
-caps.latest.revision: ''
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload:
-- dotnet
-ms.openlocfilehash: 9bfcd4d8dca38c9438c072c143cf7ba0eafd6ecf
-ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
+ms.openlocfilehash: da3eca875df9b80f66241a2ecb72c5ba5c1df309
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="consuming-a-dataset-from-an-xml-web-service"></a>Потребление набора данных из веб-службы XML
 Объект <xref:System.Data.DataSet> не имеет привязки к каким-либо источникам, что позволяет частично упростить передачу данных через Интернет. **DataSet** сериализуется «» в том, что он может быть указан в качестве входного или выходные данные веб-служб XML без дополнительного кодирования, необходимых для потоковой передачи содержимого **DataSet** из веб-служб XML Клиент и обратно. **DataSet** неявно преобразуется в поток XML с помощью формата DiffGram, отправляемых по сети и затем восстанавливается из потока XML в виде **DataSet** на принимающей стороне. Это обеспечивает очень простой и гибкий метод передачи и получения реляционных данных с помощью веб-служб XML. Дополнительные сведения о формате см. в разделе [дельты](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/diffgrams.md).  
@@ -176,7 +162,7 @@ ms.lasthandoff: 03/22/2018
   
      Клиентам веб-службы XML необходим посредник SOAP, чтобы использовать предоставленные методы. Этот посредник может быть создан с помощью среды Visual Studio. Если задать веб-ссылку на существующую веб-службу из Visual Studio, все действия, описанные в этом шаге, будут производиться незаметно. Если требуется создать класс посредника самостоятельно, читайте этот раздел далее. Однако в большинстве случаев достаточно создать класс посредника для клиентского приложения с помощью Visual Studio.  
   
-     Посредник можно создать с помощью средства WSDL. Например, если XML-веб-службы, доступные во http://myserver/data/DataSetSample.asmx URL-адрес, отправить команду, подобную следующей, чтобы создать посредник Visual Basic .NET с пространством имен **WebData.DSSample** и сохранить его в файл Sample.vb.  
+     Посредник можно создать с помощью средства WSDL. Например, если веб-службу XML доступна по URL-адрес http://myserver/data/DataSetSample.asmx, выполните команду, подобную следующей, чтобы создать посредник Visual Basic .NET с пространством имен **WebData.DSSample** и сохранить его в файле sample.vb.  
   
     ```console
     wsdl /l:VB -out:sample.vb http://myserver/data/DataSetSample.asmx /n:WebData.DSSample  

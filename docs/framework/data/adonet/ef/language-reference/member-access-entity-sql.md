@@ -1,24 +1,12 @@
 ---
-title: ". (Доступ к членам) (язык Entity SQL)"
-ms.custom: 
+title: . (Доступ к членам) (язык Entity SQL)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 4733e3b2-3efa-4b96-b591-ac31350e96ad
-caps.latest.revision: "2"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: c90c908e567ac05f344292411978ff0c80919a65
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: fdcd026d245b3f6d6ecaccc0f828f3d77fd6ce1a
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="-member-access-entity-sql"></a>. (Доступ к членам) (язык Entity SQL)
 Точка (.) является [!INCLUDE[esql](../../../../../../includes/esql-md.md)] оператор доступа к члену. Оператор доступа к элементу можно использовать, чтобы выдавать значение свойства или поля экземпляра структурного типа концептуальной модели.  

@@ -1,24 +1,12 @@
 ---
-title: "&lt;endpoint&gt; для &lt;client&gt;"
-ms.custom: 
+title: '&lt;endpoint&gt; для &lt;client&gt;'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: de6238ae-bbf8-48e9-a1b5-e24c0bea8afa
-caps.latest.revision: "22"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 351f49c346cb8126cdd9d540a4db382bf5f4e721
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f9a69483ab058823fd419edc84868e801b91d2c9
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltendpointgt-of-ltclientgt"></a>&lt;endpoint&gt; для &lt;client&gt;
 Задает свойства контракта, привязки и адреса конечной точки канала, которая используется клиентами для подключения к конечным точкам службы на сервере.  
@@ -57,14 +45,14 @@ ms.lasthandoff: 12/22/2017
   
 ### <a name="child-elements"></a>Дочерние элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
 |[\<заголовки >](../../../../../docs/framework/configure-apps/file-schema/wcf/headers.md)|Коллекция заголовков адреса.|  
 |[\<удостоверение >](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)|Удостоверение, обеспечивающее проверку подлинности конечной точки другими конечными точками, которые обмениваются с ней сообщениями.|  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
 |[\<Клиент >](../../../../../docs/framework/configure-apps/file-schema/wcf/client.md)|Раздел конфигурации, определяющий список конечных точек, к которым может подключаться клиент.|  
   

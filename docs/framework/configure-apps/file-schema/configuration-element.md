@@ -1,14 +1,6 @@
 ---
-title: "&lt;Конфигурация&gt; элемент"
-ms.custom: 
+title: '&lt;Конфигурация&gt; элемент'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration
 helpviewer_keywords:
@@ -16,17 +8,14 @@ helpviewer_keywords:
 - configuration element
 - container tags, <configuration> element
 ms.assetid: 2ec1c9dc-2e5c-4ef0-9958-81670ab88449
-caps.latest.revision: 
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload:
-- dotnet
-ms.openlocfilehash: 3874a613879d099ede4968b5bce349aefa015a38
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2d75b25734b92df062d3dc46824da44883ab46d5
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configuration-element"></a>\<Конфигурация > элемент
 
@@ -52,7 +41,7 @@ ms.lasthandoff: 12/22/2017
 
 ## <a name="child-elements"></a>Дочерние элементы
 
-|     | Описание: |
+|     | Описание |
 | --- | ----------- |
 | [**\<assemblyBinding >**](~/docs/framework/configure-apps/file-schema/assemblybinding-element-for-configuration.md) | Определяет политику привязки сборок на уровне конфигурации.|
 | [**\<При запуске >** схема параметров](~/docs/framework/configure-apps/file-schema/startup/index.md) | Все элементы в схеме параметров запуска. |

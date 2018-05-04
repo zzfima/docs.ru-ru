@@ -1,14 +1,6 @@
 ---
-title: "&lt;assemblyBinding&gt; элемент для &lt;среды выполнения&gt;"
-ms.custom: 
+title: '&lt;assemblyBinding&gt; элемент для &lt;среды выполнения&gt;'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/runtime/assemblyBinding
 helpviewer_keywords:
@@ -16,17 +8,13 @@ helpviewer_keywords:
 - assemblyBinding element
 - container tags, <assemblyBinding> element
 ms.assetid: 964cbb35-ab49-4498-8471-209689e5dada
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: d5ef09f5d7b2dce366c605c8d8f4e6c456920b35
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d84c134b8e2b048f39836bbc10af06039e96719e
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltassemblybindinggt-element-for-ltruntimegt"></a>&lt;assemblyBinding&gt; элемент для &lt;среды выполнения&gt;
 Содержит сведения о перенаправлении версии сборки и о расположениях сборок.  
@@ -48,14 +36,14 @@ ms.lasthandoff: 12/22/2017
   
 ### <a name="attributes"></a>Атрибуты  
   
-|Атрибут|Описание:|  
+|Атрибут|Описание|  
 |---------------|-----------------|  
 |**xmlns**|Обязательный атрибут.<br /><br /> Задает пространство имен XML, необходимое для привязки сборок. Используйте строку urn:schemas-microsoft-com:asm.v1 в качестве значения.|  
 |**appliesTo**|Задает версию среды выполнения, к которой применяется перенаправление сборки .NET Framework. Этот необязательный атрибут содержит номер версии .NET Framework, к которой применяется перенаправление. Если атрибут **appliesTo** не указан, элемент **\<assemblyBinding>** применяется ко всем версиям платформы .NET Framework. **AppliesTo** появился в .NET Framework версии 1.1; он игнорируется в .NET Framework версии 1.0. Это означает, что при использовании платформы .NET Framework версии 1.0 применяются все элементы **\<assemblyBinding>**, даже если атрибут **appliesTo** задан.|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
 |[\<dependentAssembly>](../../../../../docs/framework/configure-apps/file-schema/runtime/dependentassembly-element.md)|Инкапсулирует политику привязки и расположение сборки. Используйте один  **\<dependentAssembly >** тег для каждой сборки.|  
 |[\<probing>](../../../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md)|Задает вложенные папки, в которых среда CLR выполняет поиск при загрузке сборки.|  

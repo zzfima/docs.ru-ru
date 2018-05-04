@@ -1,12 +1,13 @@
 ---
-title: "Aximp.exe (программа импорта элементов ActiveX форм Windows)"
-ms.custom: 
+title: Aximp.exe (программа импорта элементов ActiveX форм Windows)
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - ActiveX controls, hosting in Windows Forms
@@ -15,16 +16,17 @@ helpviewer_keywords:
 - Aximp.exe
 - Windows Forms ActiveX Control Importer
 ms.assetid: 482c0d83-7144-4497-b626-87d2351b78d0
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ebde5bd48b02c20f7d607ebcda2b18ed0830c569
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 8098a44c9275be0a40ec8e067d33ac8a00654ec1
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="aximpexe-windows-forms-activex-control-importer"></a>Aximp.exe (программа импорта элементов ActiveX форм Windows)
 Программа для импорта элементов управления ActiveX преобразует определения типов в библиотеке типов COM для элемента управления ActiveX в элемент управления Windows Forms.  
@@ -79,7 +81,7 @@ aximp [options]{file.dll | file.ocx}
   
  Если программа Aximp.exe выполняется для "shdocvw.dll", она всегда создает другой файл с именем "shdocvw.dll" в каталоге, из которого запускается программа. Помещение вновь созданного файла в каталог "Documents and Settings" может привести к сбоям в работе Microsoft Internet Explorer и проводника Windows. При перезагрузке компьютера операционная система Windows сначала выполняет поиск копии "shdocvw.dll" в каталоге "Documents and Settings" и только затем — в каталоге "system32". Операционная система будет использовать копию, найденную в каталоге "Documents and Settings", и попытается загрузить управляемые оболочки. Internet Explorer и Проводник Windows будут работать неправильно, поскольку они используют механизм отрисовки из версии "shdocvw.dll", расположенной в каталоге "system32". В случае возникновения этой проблемы удалите копию "shdocvw.dll" из каталога "Documents and Settings" и перезагрузите компьютер.  
   
- Кроме того, проблемы могут возникнуть при использовании программы Aximp.exe с "shdocvw.dll" для создания сборки .NET, которая будет использоваться при разработке приложения. В этом случае приложение загружает и системную версию "shdocvw.dll", и созданную версию, а также может задавать приоритет системной версии. В такой ситуации при попытке загрузить веб-страницу в элемент управления ActiveX WebBrowser пользователю может быть выведено диалоговое окно "Открыть/Сохранить". Когда пользователь щелкает **Открыть**, веб-страница открывается в браузере Internet Explorer. Это происходит только на тех компьютерах, на которых установлен Internet Explorer версии 6 или более ранней версии. Чтобы избежать этой проблемы, следует использовать управляемый элемент управления <xref:System.Windows.Forms.WebBrowser> или [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] для создания управляемой библиотеки "shdocvw.dll", как описано в разделе [Практическое руководство. Добавление ссылок на библиотеки типов](../../../docs/framework/interop/how-to-add-references-to-type-libraries.md).  
+ Кроме того, проблемы могут возникнуть при использовании программы Aximp.exe с "shdocvw.dll" для создания сборки .NET, которая будет использоваться при разработке приложения. В этом случае приложение загружает и системную версию "shdocvw.dll", и созданную версию, а также может задавать приоритет системной версии. В такой ситуации при попытке загрузить веб-страницу в элемент управления ActiveX WebBrowser пользователю может быть выведено диалоговое окно "Открыть/Сохранить". Когда пользователь щелкает **Открыть**, веб-страница открывается в браузере Internet Explorer. Это происходит только на тех компьютерах, на которых установлен Internet Explorer версии 6 или более ранней версии. Чтобы избежать этой проблемы, следует использовать управляемый элемент управления <xref:System.Windows.Forms.WebBrowser> или Visual Studio для создания управляемой библиотеки "shdocvw.dll", как описано в разделе [Практическое руководство. Добавление ссылок на библиотеки типов](../../../docs/framework/interop/how-to-add-references-to-type-libraries.md).  
   
 ## <a name="example"></a>Пример  
  При выполнении указанной ниже команды создаются библиотеки "MediaPlayer.dll" и "AxMediaPlayer.dll" для элемента управления Media Player `msdxm.ocx`.  

@@ -1,11 +1,12 @@
 ---
-title: "Определение места записи информации для My.Application.Log (Visual Basic)"
-ms.custom: 
+title: Определение места записи информации для My.Application.Log (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - My.Log object, output location
@@ -15,14 +16,14 @@ helpviewer_keywords:
 - application event logs, output location
 - applications [Visual Basic], output location
 ms.assetid: 5b70143a-7741-45f2-ae1d-03324a3a4189
-caps.latest.revision: "24"
+caps.latest.revision: 24
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: f35a850a262e96762b4ada3fdff1f14634f77317
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: d15dc02f9b5c2728ea447b5a1969ea40753258f9
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="walkthrough-determining-where-myapplicationlog-writes-information-visual-basic"></a>Пошаговое руководство. Определение места записи информации для My.Application.Log (Visual Basic)
 Объект `My.Application.Log` может записывать информацию в несколько прослушивателей журналов. Прослушиватели журнала настраиваются в файле конфигурации компьютера и могут переопределяться в файле конфигурации приложения. В этом разделе описаны параметры по умолчанию и способ определения параметров для приложения.  
@@ -31,7 +32,7 @@ ms.lasthandoff: 12/21/2017
   
 ### <a name="to-determine-the-listeners-for-myapplicationlog"></a>Определение прослушивателей для объекта My.Application.Log  
   
-1.  Найдите файл конфигурации сборки. Во время разработки сборки доступ к файлу app.config в [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] можно получить в **обозревателе решений**. В противном случае имя файла конфигурации — это имя сборки с расширением .config, а расположен он в том же каталоге, что и сборка.  
+1.  Найдите файл конфигурации сборки. Во время разработки сборки доступ к файлу app.config в Visual Studio можно получить в **обозревателе решений**. В противном случае имя файла конфигурации — это имя сборки с расширением .config, а расположен он в том же каталоге, что и сборка.  
   
     > [!NOTE]
     >  Не каждая сборка имеет файл конфигурации.  

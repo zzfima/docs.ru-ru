@@ -1,24 +1,12 @@
 ---
-title: "Отладка запросов в LINQ to DataSet"
-ms.custom: 
+title: Отладка запросов в LINQ to DataSet
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: f4c54015-8ce2-4c5c-8d18-7038144cc66d
-caps.latest.revision: "3"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: e1c8a518dd3f8bc4c1123099522ad4a4f452c78f
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: c0d3347358fa3417f8b73fd848b4091fe7d74a15
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="debugging-linq-to-dataset-queries"></a>Отладка запросов в LINQ to DataSet
 Среда [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] поддерживает отладку кода [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]. Однако существуют некоторые различия между отладкой [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] код и не-[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] управляемого кода. Большинство функций отладки работают с [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] инструкций, включая пошаговое выполнение, задание точек останова и просмотр результатов, отображаемых в окнах отладчика. Тем не менее отложенное выполнение запроса имеет некоторые побочные эффекты, которые следует учитывать при отладке [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] кода и существуют некоторые ограничения на использование, изменить и продолжить. В этом разделе обсуждаются аспекты отладки, которые являются уникальными для [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] по сравнению с отличных[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] управляемого кода.  

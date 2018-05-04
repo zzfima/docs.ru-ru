@@ -1,11 +1,12 @@
 ---
-title: "Управление файлами с помощью методов .NET Framework (Visual Basic)"
-ms.custom: 
+title: Управление файлами с помощью методов .NET Framework (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - I/O [Visual Basic], walkthroughs
@@ -21,14 +22,14 @@ helpviewer_keywords:
 - text files [Visual Basic], reading
 - I/O [Visual Basic], reading text from files
 ms.assetid: 7d2109eb-f98a-4389-b43d-30f384aaa7d5
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: bc42dee640271ef84d35ceeb039d98741d296c5e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: ed363efeeef008927f2c34b393de66ca4ccbb0bb
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="walkthrough-manipulating-files-by-using-net-framework-methods-visual-basic"></a>Пошаговое руководство. Управление файлами с помощью методов .NET Framework (Visual Basic)
 В этом пошаговом руководстве демонстрируются открытие и чтение файла с помощью класса <xref:System.IO.StreamReader>, проверка доступа к файлу, поиск строки в файле, считанном с помощью экземпляра класса <xref:System.IO.StreamReader>, и запись в файл с помощью класса <xref:System.IO.StreamWriter>.  
@@ -36,7 +37,7 @@ ms.lasthandoff: 11/21/2017
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
 ## <a name="creating-the-application"></a>Создание приложения  
- Запустите [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] и начните проект с создания формы, которую пользователь сможет использовать для записи в намеченный файл.  
+ Запустите Visual Studio и начните проект с создания формы, которую пользователь сможет использовать для записи в намеченный файл.  
   
 #### <a name="to-create-the-project"></a>Создание проекта  
   
@@ -46,15 +47,15 @@ ms.lasthandoff: 11/21/2017
   
 3.  В поле **Имя** введите `MyDiary`, а затем нажмите кнопку **ОК**.  
   
-     [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] добавит проект в **обозреватель решений**, после чего откроется **конструктор Windows Forms**.  
+     Visual Studio добавит проект в **обозреватель решений**, после чего откроется **конструктор Windows Forms**.  
   
 4.  Добавьте в форму элементы управления из следующей таблицы и установите для их свойств соответствующие значения.  
   
 |**Объект**|**Свойства**|**Значение**|  
 |---|---|---|   
-|<xref:System.Windows.Forms.Button>|**Name**<br /><br /> **Текст**|`Submit`<br /><br /> **Сохранить запись**|  
-|<xref:System.Windows.Forms.Button>|**Name**<br /><br /> **Текст**|`Clear`<br /><br /> **Очистить запись**|  
-|<xref:System.Windows.Forms.TextBox>|**Name**<br /><br /> **Текст**<br /><br /> **Multiline**|`Entry`<br /><br /> **Введите произвольный текст.**<br /><br /> `False`|  
+|<xref:System.Windows.Forms.Button>|**Name**<br /><br /> **Text**|`Submit`<br /><br /> **Сохранить запись**|  
+|<xref:System.Windows.Forms.Button>|**Name**<br /><br /> **Text**|`Clear`<br /><br /> **Очистить запись**|  
+|<xref:System.Windows.Forms.TextBox>|**Name**<br /><br /> **Text**<br /><br /> **Multiline**|`Entry`<br /><br /> **Введите произвольный текст.**<br /><br /> `False`|  
   
 ## <a name="writing-to-the-file"></a>Запись в файл  
  Чтобы добавить возможность записи в файл с помощью приложения, воспользуйтесь классом <xref:System.IO.StreamWriter>. Класс <xref:System.IO.StreamWriter> предназначен для вывода символов в определенной кодировке, тогда как класс <xref:System.IO.Stream> предназначен для ввода и вывода двоичных данных. Класс <xref:System.IO.StreamWriter> следует использовать для записи строк данных в стандартный текстовый файл. Дополнительные сведения о классе <xref:System.IO.StreamWriter> см. в статье <xref:System.IO.StreamWriter>.  
@@ -99,10 +100,10 @@ ms.lasthandoff: 11/21/2017
   
 |Control|Свойства|Значения|  
 |-------------|----------------|------------|  
-|<xref:System.Windows.Forms.TextBox>|**Name**<br /><br /> **Visible**<br /><br /> **Size**<br /><br /> **Multiline**|`DisplayEntry`<br /><br /> `False`<br /><br /> `120,60`<br /><br /> `True`|  
-|<xref:System.Windows.Forms.Button>|**Name**<br /><br /> **Текст**|`Display`<br /><br /> **Отображение**|  
+|<xref:System.Windows.Forms.TextBox>|**Name**<br /><br /> **Показывается**<br /><br /> **Size**<br /><br /> **Multiline**|`DisplayEntry`<br /><br /> `False`<br /><br /> `120,60`<br /><br /> `True`|  
+|<xref:System.Windows.Forms.Button>|**Name**<br /><br /> **Text**|`Display`<br /><br /> **Отображение**|  
 |<xref:System.Windows.Forms.Button>|**Name**<br /><br /> **Текст**|`GetEntries`<br /><br /> **Показать записи**|  
-|<xref:System.Windows.Forms.ComboBox>|**Name**<br /><br /> **Текст**<br /><br /> **Enabled**|`PickEntries`<br /><br /> **Выберите запись**<br /><br /> `False`|  
+|<xref:System.Windows.Forms.ComboBox>|**Name**<br /><br /> **Text**<br /><br /> **Включено**|`PickEntries`<br /><br /> **Выберите запись**<br /><br /> `False`|  
   
 #### <a name="to-populate-the-combo-box"></a>Заполнение элемента управления ComboBox  
   
@@ -125,11 +126,11 @@ ms.lasthandoff: 11/21/2017
   
  Добавьте в форму элементы управления из следующей таблицы и установите для их свойств соответствующие значения.  
   
-|Control|Свойства|Значения|  
+|Элемент управления|Свойства|Значения|  
 |-------------|----------------|------------|  
-|<xref:System.Windows.Forms.Button>|**Name**<br /><br /> **Текст**<br /><br /> **Enabled**|`DeleteEntry`<br /><br /> **Удалить запись**<br /><br /> `False`|  
-|<xref:System.Windows.Forms.Button>|**Name**<br /><br /> **Текст**<br /><br /> **Enabled**|`EditEntry`<br /><br /> **Изменить запись**<br /><br /> `False`|  
-|<xref:System.Windows.Forms.Button>|**Name**<br /><br /> **Текст**<br /><br /> **Enabled**|`SubmitEdit`<br /><br /> **Сохранить изменения**<br /><br /> `False`|  
+|<xref:System.Windows.Forms.Button>|**Name**<br /><br /> **Text**<br /><br /> **Включено**|`DeleteEntry`<br /><br /> **Удалить запись**<br /><br /> `False`|  
+|<xref:System.Windows.Forms.Button>|**Name**<br /><br /> **Text**<br /><br /> **Включено**|`EditEntry`<br /><br /> **Изменить запись**<br /><br /> `False`|  
+|<xref:System.Windows.Forms.Button>|**Name**<br /><br /> **Text**<br /><br /> **Enabled**|`SubmitEdit`<br /><br /> **Сохранить изменения**<br /><br /> `False`|  
   
 #### <a name="to-enable-deletion-and-modification-of-entries"></a>Включение возможности удаления и изменения записей  
   

@@ -1,29 +1,20 @@
 ---
-title: "Схема параметров приложения"
-ms.custom: 
+title: Схема параметров приложения
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - schema application settings
 - application settings, schema [Windows Forms]
 - Windows Forms, application settings schema
 - configuration schema [.NET Framework], application settings
 ms.assetid: 5797fcff-6081-4e8c-bebf-63d9c70cf14b
-caps.latest.revision: "3"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 3581c8079132de5f1faad4a01e6b43c8e4833316
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7af6342e9c05fc4e6c1bf4daac59db14ccdf22c7
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="application-settings-schema"></a>Схема параметров приложения
 
@@ -33,7 +24,7 @@ ms.lasthandoff: 12/22/2017
 
 Параметры приложения определяют следующие элементы как часть файлов конфигурации, используемые в нем.
 
-| Элемент                    | Описание:                                                                           |
+| Элемент                    | Описание                                                                           |
 | -------------------------- | ------------------------------------------------------------------------------------- |
 | **\<applicationSettings >** | Содержит все  **\<параметр >** теги, относящиеся к приложению.                         |
 | **\<userSettings >**        | Содержит все  **\<параметр >** теги, относящиеся к текущему пользователю.                        |
@@ -52,7 +43,7 @@ ms.lasthandoff: 12/22/2017
 
 Этот элемент определяет параметр. Он имеет следующие атрибуты.
 
-| Атрибут        | Описание: |
+| Атрибут        | Описание |
 | ---------------- | ----------- |
 | **name**         | Обязательно. Уникальный идентификатор параметра. Параметры, созданные с помощью Visual Studio сохраняются с именем `ProjectName.Properties.Settings`. |
 | **serializedAs** | Обязательно. Формат, используемый для сериализации значения в текст. Допустимые значения:<br><br>- `string`. Значение сериализуется как строки с помощью <xref:System.ComponentModel.TypeConverter>.<br>- `xml`. Значение сериализуется с использованием XML-сериализации.<br>- `binary`. Значение сериализуется как текст в кодировке двоичного файла с использованием двоичной сериализации.<br />- `custom`. Поставщик параметров имеет встроенные сведения об этот параметр и сериализует и десериализует его. |

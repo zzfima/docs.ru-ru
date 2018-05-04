@@ -1,34 +1,22 @@
 ---
-title: "Элемент &lt;message&gt; &lt;wsFederationHttpBinding&gt;"
-ms.custom: 
+title: Элемент &lt;message&gt; &lt;wsFederationHttpBinding&gt;
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 9d710389-d9d8-4454-9bf2-da4ccda31cec
-caps.latest.revision: "28"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 548e5ec5369c697d2b35723a0778ccaf95c3b535
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 24d7370eaadba08d449b886a09cb9903ca0a64c2
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltmessagegt-element-of-ltwsfederationhttpbindinggt"></a>Элемент &lt;message&gt; &lt;wsFederationHttpBinding&gt;
 Определяет параметры безопасности уровня сообщений для [ \<wsFederationHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md).  
   
- \<system.ServiceModel>  
+ \<система. ServiceModel >  
 \<привязки >  
 \<wsFederatedBinding >  
 \<Привязка >  
 \<Безопасность >  
-\<message>  
+\<сообщение >  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -126,16 +114,16 @@ ms.lasthandoff: 01/19/2018
   
 ### <a name="child-elements"></a>Дочерние элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
 |[\<claimTypeRequirements >](../../../../../docs/framework/configure-apps/file-schema/wcf/claimtyperequirements-element.md)|Задает коллекцию типов утверждений для этой привязки. Каждый элемент имеет тип <xref:System.ServiceModel.Configuration.ClaimTypeElement>.|  
 |issuer|Задает конечную точку, которая выдает маркер безопасности. Это элемент типа <xref:System.ServiceModel.Configuration.IssuedTokenParametersEndpointAddressElement>.|  
 |issuerMetadata|Задает адрес конечной точки издателя.|  
-|[\<tokenRequestParameters>](../../../../../docs/framework/configure-apps/file-schema/wcf/tokenrequestparameters.md)|Коллекция параметров запроса маркера. Каждый параметр представляет собой элемент XML.|  
+|[\<tokenRequestParameters >](../../../../../docs/framework/configure-apps/file-schema/wcf/tokenrequestparameters.md)|Коллекция параметров запроса маркера. Каждый параметр представляет собой элемент XML.|  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
 |[\<Безопасность >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-wsfederationhttpbinding.md)|Определяет параметры безопасности для привязки.|  
   
@@ -143,7 +131,7 @@ ms.lasthandoff: 01/19/2018
  <xref:System.ServiceModel.FederatedMessageSecurityOverHttp>  
  <xref:System.ServiceModel.Configuration.WSFederationHttpSecurityElement.Message%2A>  
  <xref:System.ServiceModel.WSFederationHttpSecurity.Message%2A>  
- `System.ServiceModel.Configuration.FederatedMessageSecurityElement`[Защита служб и клиентов](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
+ `System.ServiceModel.Configuration.FederatedMessageSecurityElement` [Защита служб и клиентов](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
  [Привязки](../../../../../docs/framework/wcf/bindings.md)  
  [Настройка привязок, предоставляемых системой](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
  [Использование привязок для настройки служб Windows Communication Foundation и клиентов](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  

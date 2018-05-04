@@ -1,27 +1,15 @@
 ---
-title: "Сведения об ошибках строк"
-ms.custom: 
+title: Сведения об ошибках строк
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 8b1f9070-d032-48c7-b030-bd8fbb2ca59a
-caps.latest.revision: "4"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 3e8b2e486f33cbe3851b0d24911f5976a1a4b3c6
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 6f3f332d4b9bd0be9934c7bf7722e8ff71c4eb2f
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="row-error-information"></a>Сведения об ошибках строк
 Чтобы не отвечать на ошибки строки при изменении значений в таблице <xref:System.Data.DataTable>, можно добавить сведения об ошибке в строку для последующего использования. Для этой цели объект <xref:System.Data.DataRow> предоставляет свойство <xref:System.Data.DataRow.RowError%2A> для каждой строки. Добавление данных к **RowError** свойство **DataRow** задает <xref:System.Data.DataRow.HasErrors%2A> свойство **DataRow** для **true**. Если **DataRow** является частью **DataTable**, и **DataRow.HasErrors** — **true**, **DataTable.HasErrors** также имеет **true**. Это касается также **DataSet** к которому **DataTable** принадлежит. Проверка на наличие ошибок, можно проверить **HasErrors** свойства, чтобы определить, добавлен ли в строки, сведения об ошибке. Если **HasErrors** — **true**, можно использовать <xref:System.Data.DataTable.GetErrors%2A> метод **DataTable** для возврата и изучения только строки с ошибками, как показано в следующем примере.  

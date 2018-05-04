@@ -1,27 +1,15 @@
 ---
-title: "&lt;add&gt; для &lt;contractTypeNames&gt;"
-ms.custom: 
+title: '&lt;add&gt; для &lt;contractTypeNames&gt;'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 03aff6be-5dfb-4a64-ada3-e36227cd43c7
-caps.latest.revision: "2"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 191e3e221ae42e5c046f8df324989aae7ab0dc1c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 159ab5a40a69c075b648a0c161babe604d13377b
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltaddgt-of-ltcontracttypenamesgt"></a>&lt;add&gt; для &lt;contractTypeNames&gt;
-Элемент конфигурации, указывающий имя контракта искомых служб, а также критерии, обычно используемые при поиске служб. Если указано несколько имен контрактов, будет получен ответ только от конечных точек службы, совпадающих со ВСЕМИ контрактами. Следует отметить, что в [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] конечная точка может поддерживать только один контракт.  
+Элемент конфигурации, указывающий имя контракта искомых служб, а также критерии, обычно используемые при поиске служб. Если указано несколько имен контрактов, будет получен ответ только от конечных точек службы, совпадающих со ВСЕМИ контрактами. Обратите внимание, что в Windows Communication Foundation (WCF), конечная точка поддерживает только один контракт.  
   
  \<система. ServiceModel >  
 \<standardEndpoints >  
@@ -49,7 +37,7 @@ ms.lasthandoff: 12/22/2017
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
 |[\<contractTypeNames >](../../../../../docs/framework/configure-apps/file-schema/wcf/contracttypenames.md)|Коллекция имен типа контракта.|  
   

@@ -1,24 +1,15 @@
 ---
-title: "&lt;Добавить&gt; элемент для schemeSettings (параметры Uri)"
-ms.custom: 
+title: '&lt;Добавить&gt; элемент для schemeSettings (параметры Uri)'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 594a7b3b-af23-4cfa-b616-0b2dddb1a705
-caps.latest.revision: "7"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 2d617e78231bd0b9f4e332c4b7fbe58b78598868
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: bd8033b07b29066633e5217645f3ee06937179da
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltaddgt-element-for-schemesettings-uri-settings"></a>&lt;Добавить&gt; элемент для schemeSettings (параметры Uri)
 Добавляет параметр схемы для имени схемы.  
@@ -57,7 +48,7 @@ ms.lasthandoff: 12/22/2017
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
 |[Элемент \<schemeSettings> (параметры URI)](../../../../../docs/framework/configure-apps/file-schema/network/schemesettings-element-uri-settings.md)|Определяет, как <xref:System.Uri> анализируется для определенных схем.|  
   

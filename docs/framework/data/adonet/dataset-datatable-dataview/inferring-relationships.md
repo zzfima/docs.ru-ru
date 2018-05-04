@@ -1,24 +1,12 @@
 ---
-title: "Определение отношений"
-ms.custom: 
+title: Определение отношений
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 8fa86a9d-6545-4a9d-b1f5-58d9742179c7
-caps.latest.revision: "4"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 79f79c1dbc74b98cff10de81c2bd7bd32d7d286b
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 9833966fa5a16bef70a6ae2b9ca618fde0e05fbb
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="inferring-relationships"></a>Определение отношений
 Если элемент, выводимый в виде таблицы, имеет дочерний элемент, который также выводится в виде таблицы, между двумя этими таблицами будет создана связь <xref:System.Data.DataRelation>. Новый столбец с именем **ParentTableName_Id** будут добавлены в таблицу, созданную для родительского элемента и в таблицу, созданную для дочернего элемента. **ColumnMapping** будет присвоено свойству данного столбца идентификаторов **MappingType.Hidden**. Столбец будет с автоматическим приращением первичного ключа для родительской таблицы и будет использоваться для **DataRelation** между двумя таблицами. Тип данных добавленный столбец идентификаторов будет **System.Int32**, в отличие от типа данных всех остальных выведенных столбцов, который является **System.String**. Объект <xref:System.Data.ForeignKeyConstraint> с **DeleteRule** = **Cascade** также будет создан с помощью нового столбца в родительской и дочерней таблицами.  
@@ -70,7 +58,7 @@ ms.lasthandoff: 01/17/2018
   
  **ForeignKeyConstraint:** Element1_ChildElement1  
   
- **Column:** Element1_Id  
+ **Столбец:** Element1_Id  
   
  **ParentTable:** Element1  
   

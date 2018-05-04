@@ -1,14 +1,6 @@
 ---
-title: "&lt;SMTP&gt; элемент (параметры сети)"
-ms.custom: 
+title: '&lt;SMTP&gt; элемент (параметры сети)'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/mailSettings/smtp
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#smtp
@@ -16,23 +8,20 @@ helpviewer_keywords:
 - <smtp> element
 - smtp element
 ms.assetid: 220b0329-e384-4e0c-86b4-0945ad17efd9
-caps.latest.revision: 
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload:
-- dotnet
-ms.openlocfilehash: f5b2a3b7eec17fbdd12181c29f610d2b2ad32bd4
-ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
+ms.openlocfilehash: 56912e09d24fc83e93a91cc42b1d96dcc68210f2
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltsmtpgt-element-network-settings"></a>&lt;SMTP&gt; элемент (параметры сети)
 Настраивает формат доставки инструкций, метод доставки и адрес отправителя для отправки сообщений электронной почты.  
   
  \<configuration>  
-\<system.net>  
+\<System.NET >  
 \<mailSettings >  
 \<SMTP >  
   
@@ -53,7 +42,7 @@ ms.lasthandoff: 02/01/2018
   
 ### <a name="attributes"></a>Атрибуты  
   
-|Атрибут|Описание:|  
+|Атрибут|Описание|  
 |---------------|-----------------|  
 |`deliveryFormat`|Указывает формат доставки для исходящих сообщений электронной почты. Допустимые значения: SevenBit и International.|  
 |`deliveryMethod`|Указывает способ доставки сообщений электронной почты. Допустимые значения: сеть, pickupDirectoryFromIis и specifiedPickupDirectory.|  
@@ -61,7 +50,7 @@ ms.lasthandoff: 02/01/2018
   
 ### <a name="child-elements"></a>Дочерние элементы  
   
-|Атрибут|Описание:|  
+|Атрибут|Описание|  
 |---------------|-----------------|  
 |`specifiedPickupDirectory`|Настраивает локальный каталог для сервера Simple Mail Transport Protocol (SMTP).|  
 |`network`|Настройка сетевых параметров для внешнего сервера SMTP.|  

@@ -1,19 +1,14 @@
 ---
 title: Рабочий процесс DevOps для приложения Docker с использованием средств Майкрософт
 description: Рабочий процесс "Жизненный цикл контейнерного приложения Docker на основе платформы и средств Майкрософт" с использованием средств Майкрософт
-ms.prod: .net
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: bde96fd6348cf651dcca988eb546549fedf4df85
-ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.openlocfilehash: b4a88725de78f59c62aac1bd33764db6b2e0887e
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="docker-application-devops-workflow-with-microsoft-tools"></a>Рабочий процесс DevOps для приложения Docker с использованием средств Майкрософт
 

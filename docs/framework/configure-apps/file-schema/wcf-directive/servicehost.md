@@ -1,24 +1,12 @@
 ---
 title: '@ServiceHost'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 96ba6967-00f2-422f-9aa7-15de4d33ebf3
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 027debb311a3f9547623b6dff778e82b7e475327
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: f81c71746b6b59a51ee825b44c9e6d9f93eb5fbd
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="servicehost"></a>@ServiceHost
 Связывает фабрику, используемую для создания узла службы, с размещаемой службой и другими элементами программирования, необходимыми для доступа или компиляции кода размещения, представленного в SVC-файле.  
@@ -43,7 +31,7 @@ CodeBehind = "CodeBehind"%>
  Имя типа CLR фабрики узла службы, используемой для создания узла службы. Этот атрибут является необязательным. Если данный атрибут не задан, по умолчанию используется значение <xref:System.ServiceModel.Activation.ServiceHostFactory>, которое возвращает экземпляр <xref:System.ServiceModel.ServiceHost>.  
   
 #### <a name="debug"></a>Отладка  
- Указывает, должна ли служба [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] компилироваться с помощью символов отладки. Если для компиляции службы `true` должны использоваться символы отладки, следует задать значение [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)], в противном случае - значение `false`.  
+ Указывает, следует ли компилировать с использованием символов отладки службы Windows Communication Foundation (WCF). Если для компиляции службы `true` должны использоваться символы отладки, следует задать значение [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)], в противном случае - значение `false`.  
   
 #### <a name="language"></a>Язык  
  Задает язык, используемый при компиляции всего встроенного кода в файле (SVC). Значения данного атрибута могут представлять любой язык, поддерживаемый .NET, включая C#, VB и JS, что соответствует языкам C#, Visual Basic .NET и JScript .NET. Этот атрибут является необязательным.  
@@ -52,7 +40,7 @@ CodeBehind = "CodeBehind"%>
  Определяет файл исходного кода, реализующего веб-службу XML, если реализующий ее класс находится в другом файле и не был скомпилирован в сборку и помещен в каталог «\Bin».  
   
 ## <a name="remarks"></a>Примечания  
- <xref:System.ServiceModel.ServiceHost>, используемый для размещения службы, представляет точку расширения в программной модели [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)]. Для создания узла службы <xref:System.ServiceModel.ServiceHost> используется шаблон фабрики, поскольку он, возможно, имеет полиморфный тип, экземпляр которого среда размещения не должна создавать явно.  
+ <xref:System.ServiceModel.ServiceHost> Используется для размещения службы — это точка расширения в модели программирования Windows Communication Foundation (WCF). Для создания узла службы <xref:System.ServiceModel.ServiceHost> используется шаблон фабрики, поскольку он, возможно, имеет полиморфный тип, экземпляр которого среда размещения не должна создавать явно.  
   
  В реализации по умолчанию используется фабрика <xref:System.ServiceModel.Activation.ServiceHostFactory> для создания экземпляра узла службы <xref:System.ServiceModel.ServiceHost>. Но можно предоставить собственную фабрику (той, которая возвращает унаследованный узел), указав имя типа CLR реализации фабрики в [ @ServiceHost ](../../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md) директивы.  
   

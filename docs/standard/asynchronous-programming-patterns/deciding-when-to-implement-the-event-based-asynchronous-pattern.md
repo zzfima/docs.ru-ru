@@ -1,12 +1,12 @@
 ---
-title: "Определение, когда следует реализовать асинхронную модель, основанную на событиях"
-ms.custom: 
+title: Определение, когда следует реализовать асинхронную модель, основанную на событиях
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Event-based Asynchronous Pattern
@@ -18,18 +18,18 @@ helpviewer_keywords:
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: a00046aa-785d-4f7f-a8e5-d06475ea50da
-caps.latest.revision: 
+caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 111aaaa86877368ccbd0c9c11a26dff47b065698
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 330dc5ec76fe33a7f6165857334a367f578840ef
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="deciding-when-to-implement-the-event-based-asynchronous-pattern"></a>Определение, когда следует реализовать асинхронную модель, основанную на событиях
 Асинхронная модель на основе событий применяется для предоставления асинхронного поведения класса. С момента ее появления [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] определяет две модели для предоставления асинхронного поведения: на основе интерфейса <xref:System.IAsyncResult?displayProperty=nameWithType> и на основе событий. Эта статья описывает ситуации, в которых вам следует применять ту или иную модель.  
@@ -63,7 +63,7 @@ ms.lasthandoff: 12/23/2017
   
     -   Также допустимо размещать модель на основе событий и модель <xref:System.IAsyncResult> в одном классе в тех случаях, когда сложность объектной модели перевешивает преимущества от раздельной реализации. Гораздо лучше предоставить обе модели в одном классе, чем вовсе не предоставлять модель на основе событий.  
   
-    -   Если вам придется разместить модель на основе событий в том же классе, что и модель <xref:System.IAsyncResult>, используйте <xref:System.ComponentModel.EditorBrowsableAttribute> со значением <xref:System.ComponentModel.EditorBrowsableState.Advanced>, чтобы обозначить реализацию модели <xref:System.IAsyncResult> как дополнительную функцию. В этом случае среды разработки, например [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] IntelliSense, не будут отображать свойства и методы <xref:System.IAsyncResult>. Эти свойства и методы будут функционировать как прежде, но не будут захламлять рабочее пространство API-интерфейса для разработчика, работающего в IntelliSense.  
+    -   Если вам придется разместить модель на основе событий в том же классе, что и модель <xref:System.IAsyncResult>, используйте <xref:System.ComponentModel.EditorBrowsableAttribute> со значением <xref:System.ComponentModel.EditorBrowsableState.Advanced>, чтобы обозначить реализацию модели <xref:System.IAsyncResult> как дополнительную функцию. В этом случае среды разработки, например Visual Studio IntelliSense, не будут отображать свойства и методы <xref:System.IAsyncResult>. Эти свойства и методы будут функционировать как прежде, но не будут захламлять рабочее пространство API-интерфейса для разработчика, работающего в IntelliSense.  
   
 ## <a name="criteria-for-exposing-the-iasyncresult-pattern-in-addition-to-the-event-based-pattern"></a>Критерии для предоставления модели IAsyncResult в дополнение к модели на основе событий  
  В описанных выше сценариях асинхронная модель на основе событий дает целый ряд преимуществ, но имеет и некоторые недостатки. Их важно учитывать, если у вас высокие требования к производительности.  

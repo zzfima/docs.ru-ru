@@ -1,24 +1,12 @@
 ---
 title: '&lt;compositeDuplex&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 725004d1-ce88-4405-a220-78e89844f81f
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 80c8f3954cccbce8e93ab9d8c516fdfd6c7bff10
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ce04eb96868da9760412e37d2335d020cc768ac9
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltcompositeduplexgt"></a>&lt;compositeDuplex&gt;
 Определяет элемент привязки, который используется, когда клиенту необходимо предоставить службе конечную точку для отправки сообщений обратно клиенту.  
@@ -42,14 +30,14 @@ ms.lasthandoff: 12/22/2017
   
 |Атрибут|Описание|  
 |---------------|-----------------|  
-|clientBaseAddress|Универсальный код ресурса (URI), который задает адрес обратного канала при работе в дуплексном режиме. Служба использует данный адрес для осуществления контакта и создания подключения к клиенту.<br /><br /> Если этот атрибут не установлен, адрес по умолчанию «`full qualified name+default port\TemporaryIndigoAddress\guid`» создается. Значение по умолчанию — `null`.|  
+|clientBaseAddress|Универсальный код ресурса (URI), который задает адрес обратного канала при работе в дуплексном режиме. Служба использует данный адрес для осуществления контакта и создания подключения к клиенту.<br /><br /> Если этот атрибут не установлен, адрес по умолчанию «`full qualified name+default port\TemporaryIndigoAddress\guid`» создается. Значение по умолчанию — `null`.|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
  Нет  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
 |[\<Привязка >](../../../../../docs/framework/misc/binding.md)|Определяет все возможности пользовательской привязки.|  
   

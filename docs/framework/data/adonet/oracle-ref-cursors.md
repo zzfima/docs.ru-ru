@@ -1,24 +1,12 @@
 ---
-title: "REF CURSOR в Oracle"
-ms.custom: 
+title: REF CURSOR в Oracle
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: c6b25b8b-0bdd-41b2-9c7c-661f070c2247
-caps.latest.revision: "4"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: f01ace7bc7dfe1191dac8990210032b60e16f255
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 7aae9b2e4b39cf164a93ba82212b5705f583d761
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="oracle-ref-cursors"></a>REF CURSOR в Oracle
 Поставщик данных .NET Framework для Oracle поддерживает Oracle **REF CURSOR** тип данных. При использовании поставщика данных для работы с данными типа REF CURSOR Oracle необходимо учитывать следующие особенности его функционирования.  

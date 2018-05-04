@@ -1,24 +1,12 @@
 ---
-title: "&lt;add&gt; для &lt;backupList&gt;"
-ms.custom: 
+title: '&lt;add&gt; для &lt;backupList&gt;'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: bc5939fc-314a-4ea4-a533-c96958da7173
-caps.latest.revision: "2"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 786620b0daf1cd22a95f9d0c94b7fc3d17c1a2c3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7e7361b24c0444b5f3d51a6f5bf079d5eb2dee18
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltaddgt-of-ltbackuplistgt"></a>&lt;add&gt; для &lt;backupList&gt;
 Представляет элемент конфигурации, в котором задается элемент резервной конечной точки.  
@@ -52,7 +40,7 @@ ms.lasthandoff: 12/22/2017
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
 |[\<Маршрутизация >](../../../../../docs/framework/configure-apps/file-schema/wcf/routing.md)|Содержит список конечных точек, которые вы будете службе маршрутизации в случае, если основная конечная точка становится недоступной.|  
   

@@ -1,24 +1,14 @@
 ---
-title: "&lt;security&gt; для &lt;peerTransport&gt;"
-ms.custom: 
+title: '&lt;security&gt; для &lt;peerTransport&gt;'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: f73634ed-f896-4968-bf74-5e5ac52d3b6b
-caps.latest.revision: "7"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: d08d839d0eb80c23b96f87cf26d3d68db7d358f6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9d77c250b4843c9a0f83247cae5c2859429cf5bf
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltsecuritygt-of-ltpeertransportgt"></a>&lt;security&gt; для &lt;peerTransport&gt;
 Содержит параметры безопасности, связанные с одноранговым каналом, включая используемый тип проверки подлинности и механизм безопасности, применяемый при транспортировке сообщений.  
@@ -58,13 +48,13 @@ ms.lasthandoff: 12/22/2017
   
 ### <a name="child-elements"></a>Дочерние элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
 |[\<Транспорт >](../../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-peertransport.md)|Определяет одноранговый транспорт для пользовательской привязки. Этот элемент имеет атрибут `clientCredentialType`, который задает учетные данные для использования при взаимодействии со службой. Это атрибут типа <xref:System.ServiceModel.PeerTransportCredentialType>.<br /><br /> Это элемент типа <xref:System.ServiceModel.Configuration.PeerTransportSecurityElement>.|  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
 |[\<peerTransport >](../../../../../docs/framework/configure-apps/file-schema/wcf/peertransport.md)|Определяет одноранговый транспорт для пользовательской привязки.|  
   

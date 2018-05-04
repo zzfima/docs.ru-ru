@@ -1,31 +1,19 @@
 ---
-title: "Статистические функции (SqlClient для Entity Framework)"
-ms.custom: 
+title: Статистические функции (SqlClient для Entity Framework)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 03303f01-b591-4efc-9875-f9c608edff0b
-caps.latest.revision: "2"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 11779c07661edb8bfecda3b8ef955c35989294be
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 558e9f8480dd69e2277603e9bb1013acfbc29467
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="aggregate-functions-sqlclient-for-entity-framework"></a>Статистические функции (SqlClient для Entity Framework)
 Поставщик данных .NET Framework для SQL Server (SqlClient) предоставляет агрегатные функции. Агрегатные функции выполняют вычисления на наборе входных значений и возвращают значение. Эти функции находятся в пространстве имен SqlServer, которое доступно при использовании SqlClient. Свойство пространства имен поставщика позволяет платформе Entity Framework узнать, какой префикс используется поставщиком для конкретных конструкций, таких как типы или функции.  
   
  В следующей таблице описаны агрегатные функции SqlClient.  
   
-|Функция|Описание:|  
+|Функция|Описание|  
 |--------------|-----------------|  
 |`AVG(` `expression` `)`|Возвращает среднее значение для значений в коллекции.<br /><br /> Значения NULL не учитываются.<br /><br /> **Аргументы**<br /><br /> `Int32`, `Int64`, `Double`, И `Decimal`.<br /><br /> **Возвращаемое значение**<br /><br /> Тип параметра `expression`.<br /><br /> **Пример**<br /><br /> [!code-csharp[DP EntityServices Concepts#SQLSERVER_AVG](../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#sqlserver_avg)]
  [!code-sql[DP EntityServices Concepts#SQLSERVER_AVG](../../../../../samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#sqlserver_avg)]|  

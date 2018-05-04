@@ -1,13 +1,6 @@
 ---
-title: "&lt;requestCaching&gt; элемент (параметры сети)"
-ms.custom: 
+title: '&lt;requestCaching&gt; элемент (параметры сети)'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#requestCaching
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/requestCaching
@@ -15,16 +8,14 @@ helpviewer_keywords:
 - requestCaching element
 - <requestCaching> element
 ms.assetid: 9962a2fe-cbda-41a6-9377-571811eaea84
-caps.latest.revision: "20"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 35665bd79a14b74e192fed439e935936411d85c3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9c0c8d80182931f9ac14e687a337b7be55a5a9a5
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltrequestcachinggt-element-network-settings"></a>&lt;requestCaching&gt; элемент (параметры сети)
 Определяет механизм кэширования для сетевых запросов.  
@@ -51,7 +42,7 @@ ms.lasthandoff: 12/22/2017
   
 ### <a name="attributes"></a>Атрибуты  
   
-|Атрибут|Описание:|  
+|Атрибут|Описание|  
 |---------------|-----------------|  
 |`isPrivateCache`|Указывает, предоставляет ли кэш изоляцию сведений различных пользователей. Значение по умолчанию — `true`. Это значение должно быть `false` для приложений среднего уровня.|  
 |`disableAllCaching`|Указывает, что кэширование отключено для всех веб-откликов и не может быть переопределено программным способом.|  
@@ -60,7 +51,7 @@ ms.lasthandoff: 12/22/2017
   
 ## <a name="policylevel-attribute"></a>Сохранить атрибут  
   
-|Значение|Описание:|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |`Default`|Возвращает кэшируемый ресурс, если ресурс является новым, длина содержимого точна и присутствуют истечения срока, изменения и атрибуты content-length.|  
 |`BypassCache`|Возвращает ресурс с сервера.|  
@@ -73,14 +64,14 @@ ms.lasthandoff: 12/22/2017
   
 ### <a name="child-elements"></a>Дочерние элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
 |[defaultHttpCachePolicy](../../../../../docs/framework/configure-apps/file-schema/network/defaulthttpcachepolicy-element-network-settings.md)|Необязательный элемент.<br /><br /> Описывает указывает, активна ли функция HTTP-кэширования и описывает политику кэширования по умолчанию.|  
 |[\<defaultFtpCachePolicy > Element (Network Settings)](../../../../../docs/framework/configure-apps/file-schema/network/defaultftpcachepolicy-element-network-settings.md)|Необязательный элемент.<br /><br /> Описывает указывает, активна ли функция FTP-кэширования и описывает политику кэширования по умолчанию.|  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
 |[System.NET](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)|Содержит параметры сети, определяющие способ подключения .NET Framework к Интернету.|  
   

@@ -1,12 +1,13 @@
 ---
-title: "Практическое руководство. Создание пары открытого и закрытого ключей"
-ms.custom: 
+title: Практическое руководство. Создание пары открытого и закрытого ключей
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-bcl
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -22,22 +23,23 @@ helpviewer_keywords:
 - .snk files
 - strong-named assemblies, key pairs
 ms.assetid: 05026813-f3bd-4d7c-9e0b-fc588eb3d114
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b8076f5ed713c88f8f538959855408a8c542705a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 991affd7074cd69c1c56c37ab2d0a55f8b3af148
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="how-to-create-a-public-private-key-pair"></a>Практическое руководство. Создание пары открытого и закрытого ключей
 Для подписи сборки строгим именем необходимо иметь пару, состоящую из открытого и закрытого ключа. Эта пара криптографических ключей используется во время компиляции для создания сборки со строгим именем. Пару ключей можно создать с помощью [средства для работы со строгими именами (Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md). Файлы пары ключей обычно имеют расширение SNK.  
   
 > [!NOTE]
->  В [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] страницы свойств проекта C# и Visual Basic включают вкладку **Подписание**, которая позволяет выбрать существующие файлы ключей или создать новые файлы ключей без использования Sn.exe. В Visual C++ можно указать расположение уже существующего файла ключа на странице свойств **Дополнительно** в разделе **Компоновщик** раздела **Свойства конфигурации** окна **Страницы свойств**. Использование атрибута [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)] для идентификации пар файлов ключей признано устаревшим, начиная с <xref:System.Reflection.AssemblyKeyFileAttribute>.  
+>  В Visual Studio страницы свойств проекта C# и Visual Basic включают вкладку **Подписание**, которая позволяет выбрать существующие файлы ключей или создать новые файлы ключей без использования Sn.exe. В Visual C++ можно указать расположение уже существующего файла ключа на странице свойств **Дополнительно** в разделе **Компоновщик** раздела **Свойства конфигурации** окна **Страницы свойств**. Использование атрибута [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)] для идентификации пар файлов ключей признано устаревшим, начиная с <xref:System.Reflection.AssemblyKeyFileAttribute>.  
   
 ### <a name="to-create-a-key-pair"></a>Создание пары ключей  
   
@@ -69,7 +71,7 @@ sn -p keypair.snk public.snk
   
  При подписании сборки строгим именем [компоновщик сборок (Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md) выполняет поиск файла ключа относительно текущей и выходной папки. При использовании компиляторов, работающих в режиме командной строки, достаточно просто скопировать ключ в текущий каталог, содержащий модули кода.  
   
- При использовании более ранней версии [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)], в которой нет вкладки **Подписание** в свойствах проекта, рекомендуемым расположением файла ключа является каталог проекта с атрибутом файла, заданным следующим образом:  
+ При использовании более ранней версии Visual Studio, в которой нет вкладки **Подписание** в свойствах проекта, рекомендуемым расположением файла ключа является каталог проекта с атрибутом файла, заданным следующим образом:  
   
  [!code-cpp[AssemblyName_KeyPair#21](../../../samples/snippets/cpp/VS_Snippets_CLR/AssemblyName_KeyPair/CPP/keyfileattrib.cpp#21)]
  [!code-csharp[AssemblyName_KeyPair#21](../../../samples/snippets/csharp/VS_Snippets_CLR/AssemblyName_KeyPair/CS/keyfileattrib.cs#21)]

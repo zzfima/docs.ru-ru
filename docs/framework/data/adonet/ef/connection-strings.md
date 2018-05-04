@@ -1,24 +1,12 @@
 ---
-title: "Строки подключения"
-ms.custom: 
+title: Строки подключения
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 78d516bc-c99f-4865-8ff1-d856bc1a01c0
-caps.latest.revision: "3"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: d582383d59928d72c15aabba37b50ed878b67ca5
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: ac2c618272044ac9aaaba697f6583c9a814aa79f
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="connection-strings"></a>Строки подключения
 Строка подключения содержит сведения для инициализации, передаваемые в виде параметра от поставщика данных в источник данных. Синтаксис зависит от поставщика данных, и при попытке открыть соединение строка соединения анализируется. Строки соединения платформы Entity Framework содержат сведения, которые используются для соединения с базовым поставщиком данных ADO.NET, поддерживающим Entity Framework. Они также содержат сведения о необходимых файлах модели и сопоставления.  
@@ -102,12 +90,12 @@ Metadata=datadir\metadata\
 Metadata=.\  
 ```  
   
-## <a name="support-for-the-124datadirectory124-substitution-string-and-the-web-application-root-operator-"></a>Поддержка &#124; DataDirectory &#124; Строка подстановки и оператора корневого веб-приложения (~)  
- `DataDirectory`и ~ оператор, используемый в <xref:System.Data.EntityClient.EntityConnection.ConnectionString%2A> как часть `Metadata` и `Provider Connection String` ключевые слова. В соединении <xref:System.Data.EntityClient.EntityConnection> параметр `DataDirectory` и оператор ~ передаются <xref:System.Data.Metadata.Edm.MetadataWorkspace> и поставщику хранилища соответственно.  
+## <a name="support-for-the-124datadirectory124-substitution-string-and-the-web-application-root-operator-"></a>Поддержка &#124;DataDirectory&#124; строка подстановки и веб-приложение корневого оператором (~)  
+ `DataDirectory` и ~ оператор, используемый в <xref:System.Data.EntityClient.EntityConnection.ConnectionString%2A> как часть `Metadata` и `Provider Connection String` ключевые слова. В соединении <xref:System.Data.EntityClient.EntityConnection> параметр `DataDirectory` и оператор ~ передаются <xref:System.Data.Metadata.Edm.MetadataWorkspace> и поставщику хранилища соответственно.  
   
 |Термин|Описание|  
 |----------|-----------------|  
-|`&#124;DataDirectory&#124;`|Преобразуется в относительный путь к файлам сопоставлений и метаданных. Это значение определяется с помощью метода `AppDomain.SetData("DataDirectory", objValue)`. Строка подстановки `DataDirectory` должна быть заключена в символы вертикальной черты, причем между именем и символами вертикальной черты не должно быть пробелов. Имя `DataDirectory` обрабатывается без учета регистра.<br /><br /> Если в списке путей метаданных нужно передать имя физического каталога «DataDirectory», то добавьте пробелы с обеих сторон от имени, например: `Metadata="DataDirectory1 &#124; DataDirectory &#124; DataDirectory2"`. Приложения ASP.NET разрешает &#124; DataDirectory &#124; для «\<корневой каталог приложения > / app_data» папки.|  
+|`&#124;DataDirectory&#124;`|Преобразуется в относительный путь к файлам сопоставлений и метаданных. Это значение определяется с помощью метода `AppDomain.SetData("DataDirectory", objValue)`. Строка подстановки `DataDirectory` должна быть заключена в символы вертикальной черты, причем между именем и символами вертикальной черты не должно быть пробелов. Имя `DataDirectory` обрабатывается без учета регистра.<br /><br /> Если в списке путей метаданных нужно передать имя физического каталога «DataDirectory», то добавьте пробелы с обеих сторон от имени, например: `Metadata="DataDirectory1 &#124; DataDirectory &#124; DataDirectory2"`. Приложение ASP.NET преобразовывает &#124;DataDirectory&#124; для «\<корневой каталог приложения > / app_data» папки.|  
 |~|Преобразуется в корневой каталог веб-приложения. Символ ~ в ведущей позиции всегда интерпретируется как оператор определения корневого каталога веб-приложения (~), хотя и может представлять допустимый локальный подкаталог. Для ссылки на локальный подкаталог пользователь должен явно передать `./~`.|  
   
  Значение `DataDirectory` и оператор ~ должны быть указаны только в начале пути, поскольку их преобразование в любой другой позиции не происходит. Платформа Entity Framework пытается преобразовать `~/data`, но рассматривает `/data/~` как физический путь.  

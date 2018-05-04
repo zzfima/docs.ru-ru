@@ -1,27 +1,15 @@
 ---
-title: "&lt;certificateReference&gt; для &lt;идентификатора&gt;"
-ms.custom: 
+title: '&lt;certificateReference&gt; для &lt;идентификатора&gt;'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: ac359c65-c22d-42d2-97de-db53b77cebdb
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e7728f2ffc74462e43de32b07b819cc2371c9bc0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7c2ac27d547cdea959cca2ca4a0ffc9c9282c20d
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltcertificatereferencegt-for-ltidentitygt"></a>&lt;certificateReference&gt; для &lt;идентификатора&gt;
-Задает параметры для проверки сертификата X.509. Защищенный клиент [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)], подключающийся к конечной точке с использованием этого удостоверения, проверяет, что утверждения, представленные сервером, содержат идентификационное утверждение, используемое для конструирования этого удостоверения.  
+Задает параметры для проверки сертификата X.509. Защищенный клиент Windows Communication Foundation (WCF), подключающийся к конечной точке с использованием этого удостоверения, проверяет, утверждения, представленные сервером, содержат идентификационное утверждение, используемое для конструирования этого удостоверения.  
   
  \<удостоверение >  
 \<certificateReference >  
@@ -58,7 +46,7 @@ X509FindType="FindByThumbPrint/FindBySubjectName/FindBySubjectDistinguishedName/
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
 |[\<удостоверение >](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)|Задает параметры, которые обеспечивают проверку подлинности конечной точки другими конечными точками, с которыми происходит обмен сообщениями.|  
   

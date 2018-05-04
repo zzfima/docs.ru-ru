@@ -1,21 +1,19 @@
 ---
-title: "Упаковка дистрибутивов .NET Core"
-description: "Узнайте, как создавать пакеты .NET Core, присваивать им имена и управлять их версиями для распространения."
-keywords: ".NET, .NET Core, исходный код, сборка"
+title: Упаковка дистрибутивов .NET Core
+description: Узнайте, как создавать пакеты .NET Core, присваивать им имена и управлять их версиями для распространения.
 author: bleroy
 ms.author: mairaw
 ms.date: 06/28/2017
-ms.topic: article
-ms.prod: .net-core
+ms.topic: conceptual
+ms.prod: dotnet-core
 ms.devlang: dotnet
-ms.assetid: 71b9d722-c5a8-4271-9ce1-d87e7ae2494d
 ms.workload:
 - dotnetcore
-ms.openlocfilehash: e511ea13c578ab44c65a5ba78f666cce1ab6a0c4
-ms.sourcegitcommit: c3957fdb990060559d73cca44ab3e2c7b4d049c0
+ms.openlocfilehash: 63ff542dbde30f8ff72a2d257a16a18b2a9e71b8
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="net-core-distribution-packaging"></a>Упаковка дистрибутивов .NET Core
 
@@ -126,4 +124,4 @@ ms.lasthandoff: 03/05/2018
 
 ## <a name="building-packages"></a>Построение пакетов
 
-Репозиторий https://github.com/dotnet/source-build содержит инструкции по созданию архива tar с источником пакета .NET Core SDK и всех его компонентов. Выход репозитория, построенного из источника, соответствует виду, описанному в первом разделе этой статьи.
+Репозиторий https://github.com/dotnet/source-build содержит инструкции по созданию архива Tarball с источником пакета SDK для .NET Core и всех его компонентов. Выход репозитория, построенного из источника, соответствует виду, описанному в первом разделе этой статьи.

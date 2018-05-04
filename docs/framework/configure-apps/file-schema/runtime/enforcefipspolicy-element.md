@@ -1,29 +1,19 @@
 ---
-title: "&lt;enforceFIPSPolicy&gt; элемент"
-ms.custom: 
+title: '&lt;enforceFIPSPolicy&gt; элемент'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - enforceFIPSPolicy element
 - FIPS
 - <enforceFIPSPolicy> element
 - Federal Information Processing Standards (FIPS)
 ms.assetid: c35509c4-35cf-43c0-bb47-75e4208aa24e
-caps.latest.revision: "7"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: fb8cb1ea4d011eb25aee14ddd53d3dc882f75d8e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9040bf2548964cf6df5f4fd87ee9f6d979c7df1e
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltenforcefipspolicygt-element"></a>&lt;enforceFIPSPolicy&gt; элемент
 Указывает, нужно ли принудительно обеспечивать соблюдение требования конфигурации компьютера о том, что криптографические алгоритмы должны соответствовать стандартам FIPS.  
@@ -49,7 +39,7 @@ ms.lasthandoff: 12/22/2017
   
 ## <a name="enabled-attribute"></a>Атрибут enabled  
   
-|Значение|Описание:|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |`true`|Если компьютер настроен требовать быть FIPS-совместимые алгоритмы шифрования, это требование применяется. Если класс реализует алгоритм, который не соответствует стандарту FIPS, конструкторы или `Create` методы для этого класса вызывать исключения, когда они запускаются на этом компьютере. Это значение по умолчанию.|  
 |`false`|Алгоритмы шифрования, которые используются в приложении не требуются для соответствия FIPS, вне зависимости от конфигурации компьютера.|  

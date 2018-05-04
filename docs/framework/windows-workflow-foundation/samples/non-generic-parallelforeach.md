@@ -1,28 +1,29 @@
 ---
-title: "Нестандартное действие ParallelForEach"
-ms.custom: 
+title: Нестандартное действие ParallelForEach
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: de17e7a2-257b-48b3-91a1-860e2e9bf6e6
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 5eb019aed7fce267506ddb495609df5a80a8f8d7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.workload:
+- dotnet
+ms.openlocfilehash: bb74af3763e21b0f3529319a1c0fdbd7145632e6
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="non-generic-parallelforeach"></a>Нестандартное действие ParallelForEach
-[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]поставляется в область элементов набор действий потока управления, включая <xref:System.Activities.Statements.ParallelForEach%601>, который позволяет проходить по <!--zz <xref:System.Collections.IEnumerable%601> --> `System.Collections.IEnumerable` коллекций.  
+[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] поставляется в область элементов набор действий потока управления, включая <xref:System.Activities.Statements.ParallelForEach%601>, который позволяет проходить по <!--zz <xref:System.Collections.IEnumerable%601> --> `System.Collections.IEnumerable` коллекций.  
   
- <xref:System.Activities.Statements.ParallelForEach%601>требуется его <xref:System.Activities.Statements.ParallelForEach%601.Values%2A> свойство с типом <!--zz <xref:System.Collections.IEnumerable%601> --> `System.Collections.IEnumerable`. Это запрещает пользователям проходить по структурам данных, которые реализуют <!--zz <xref:System.Collections.IEnumerable%601> --> `System.Collections.IEnumerable` интерфейса (например, <xref:System.Collections.ArrayList>). Неуниверсальная версия <xref:System.Activities.Statements.ParallelForEach%601> выполняет это требование за счет большей гибкости во время выполнения, чтобы обеспечить совместимость типов значений в коллекции.  
+ <xref:System.Activities.Statements.ParallelForEach%601> требуется его <xref:System.Activities.Statements.ParallelForEach%601.Values%2A> свойство с типом <!--zz <xref:System.Collections.IEnumerable%601> --> `System.Collections.IEnumerable`. Это запрещает пользователям проходить по структурам данных, которые реализуют <!--zz <xref:System.Collections.IEnumerable%601> --> `System.Collections.IEnumerable` интерфейса (например, <xref:System.Collections.ArrayList>). Неуниверсальная версия <xref:System.Activities.Statements.ParallelForEach%601> выполняет это требование за счет большей гибкости во время выполнения, чтобы обеспечить совместимость типов значений в коллекции.  
   
  В этом образце показано, как реализовать неуниверсальное действие <xref:System.Activities.Statements.ParallelForEach%601> и конструктор для него. Это действие позволяет проходить по <xref:System.Collections.ArrayList>.  
   
@@ -122,6 +123,6 @@ public sealed class ParallelForEachWithBodyFactory : IActivityTemplateFactory
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите на страницу [Примеры Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все примеры [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Этот образец расположен в следующем каталоге.  
+>  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] образцов. Этот образец расположен в следующем каталоге.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\NonGenericParallelForEach`

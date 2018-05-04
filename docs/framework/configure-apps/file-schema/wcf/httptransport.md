@@ -1,33 +1,19 @@
 ---
 title: '&lt;httpTransport&gt;'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 8b30c065-b32a-4fa3-8eb4-5537a9c6b897
-caps.latest.revision: ''
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 50cbf6521870a54f4f87c3eeb12030d5d7f2f6bb
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
-ms.translationtype: MT
+ms.openlocfilehash: cd3a17eee9d4eebbefa880e14aadbc4715a18ac1
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lthttptransportgt"></a>&lt;httpTransport&gt;
 Задает транспорт HTTP для передачи сообщений протокола SOAP для пользовательской привязки.  
   
- \<system.serviceModel>  
+ \<system.serviceModel >  
 \<привязки >  
-\<customBinding>  
+\<customBinding >  
 \<Привязка >  
 \<httpTransport >  
   
@@ -59,7 +45,7 @@ IntegratedWindowsAuthentication: Specifies Windows authentication"
 |---------------|-----------------|  
 |allowCookies|Логическое значение, указывающее, принимает ли клиент файлы cookie и распространяет ли он их на будущие запросы. Значение по умолчанию — `false`.<br /><br /> Этот атрибут можно использовать при взаимодействии с веб-службами ASMX, которые используют файлы Cookie. В этом случае можно быть уверенным, что файлы cookie, возвращаемые с сервера, автоматически копируются во все последующие клиентские запросы к этой службе.|  
 |authenticationScheme|Задает протокол, используемый для проверки подлинности клиентских запросов, обрабатываемых прослушивателем HTTP. Допустимы следующие значения:<br /><br /> -Digest: Задает дайджест-проверки подлинности.<br />— Negotiate: Проводит согласование с клиентом для определения схемы проверки подлинности. Если и клиент, и сервер поддерживают Kerberos, используется именно этот протокол; в противном случае используется NTLM.<br />-Ntlm: Задает проверку подлинности NTLM.<br />-Basic: Задает обычную проверку подлинности.<br />-Anonymous: Задает анонимную проверку подлинности.<br /><br /> Значение по умолчанию - Anonymous. Это атрибут типа <xref:System.Net.AuthenticationSchemes>. Этот атрибут может быть задан лишь один раз.|  
-|bypassProxyOnLocal|Логическое значение, определяющее, будет ли выполняться обход прокси-сервера для локальных адресов. Значение по умолчанию — `false`.<br /><br /> Локальный адрес — это адрес, находящийся в локальной сети или в интрасети.<br /><br /> [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] всегда пропускает прокси, если адрес службы начинается с http://localhost.<br /><br /> Следует использовать имя узла (а не localhost), если необходимо, чтобы клиенты проходили через прокси при взаимодействии со службами на том же компьютере.|  
+|bypassProxyOnLocal|Логическое значение, определяющее, будет ли выполняться обход прокси-сервера для локальных адресов. Значение по умолчанию — `false`.<br /><br /> Локальный адрес — это адрес, находящийся в локальной сети или в интрасети.<br /><br /> Windows Communication Foundation (WCF), всегда пропускает прокси, если адрес службы начинается с http://localhost.<br /><br /> Следует использовать имя узла (а не localhost), если необходимо, чтобы клиенты проходили через прокси при взаимодействии со службами на том же компьютере.|  
 |hostnameComparisonMode|Задает режим сравнения имен узлов HTTP для анализа универсальных кодов ресурсов (URI). Допустимы следующие значения:<br /><br /> -StrongWildcard: («+») соответствует всем возможным именам узлов в контексте заданной схемы, порта и относительного URI.<br />-Точного: шаблоны<br />-WeakWildcard: («*») соответствует всем возможным узлов в контексте заданной схемы, порта и относительного Универсального, которые не соответствовали явным образом или посредством строгого механизма подстановочных знаков.<br /><br /> Значение по умолчанию - StrongWildcard. Это атрибут типа `System.ServiceModel.HostnameComparisonMode`.|  
 |keepAliveEnabled|Логическое значение, указывающее, следует ли устанавливать постоянное подключение к интернет-ресурсу.|  
 |maxBufferSize|Положительное целое число, указывающее максимальный размер буфера. Значение по умолчанию - 524 288|  
@@ -80,7 +66,7 @@ IntegratedWindowsAuthentication: Specifies Windows authentication"
 |[\<Привязка >](../../../../../docs/framework/misc/binding.md)|Определяет все возможности пользовательской привязки.|  
   
 ## <a name="remarks"></a>Примечания  
- Элемент `httpTransport` является начальной точкой для создания пользовательской привязки, реализующей транспортный протокол HTTP. Протокол HTTP является основным транспортом, используемым в целях взаимодействия. Этот транспорт поддерживается службой [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)], чтобы обеспечить взаимодействие с другими стеками веб-служб, не относящимися к [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)].  
+ Элемент `httpTransport` является начальной точкой для создания пользовательской привязки, реализующей транспортный протокол HTTP. Протокол HTTP является основным транспортом, используемым в целях взаимодействия. Этот транспорт поддерживается в Windows Communication Foundation (WCF) для обеспечения взаимодействия с другими отличных[!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] стеки веб-служб.  
   
 ## <a name="see-also"></a>См. также  
  <xref:System.ServiceModel.Configuration.HttpTransportElement>  
@@ -92,4 +78,4 @@ IntegratedWindowsAuthentication: Specifies Windows authentication"
  [Привязки](../../../../../docs/framework/wcf/bindings.md)  
  [Расширение привязок](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
  [Пользовательские привязки](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+ [\<customBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)

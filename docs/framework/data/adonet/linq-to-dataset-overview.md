@@ -1,26 +1,12 @@
 ---
 title: Общие сведения о LINQ to DataSet
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-ado
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: dc20a8fb-03f6-4b68-9c2b-7f7299e3070b
-caps.latest.revision: 3
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload:
-- dotnet
-ms.openlocfilehash: 3e030ca62625e2b8870cf0eeb5694f4b889b3a7e
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: d269ea2899ffd8005aad9912cf9273a012e13edd
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="linq-to-dataset-overview"></a>Общие сведения о LINQ to DataSet
 Класс <xref:System.Data.DataSet> является одним из наиболее распространенных компонентов [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]. Это ключевой элемент модели автономного программирования, основанной на [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)], он позволяет явно кэшировать данные из различных источников данных. Для уровня представления <xref:System.Data.DataSet> тесно интегрирован с элементами управления графическим интерфейсом привязки данных. Для среднего уровня он предоставляет кэш, который защищает реляционную форму данных и включает в себя быстрые простые службы запросов и навигации по иерархии. Распространенным приемом, используемым для уменьшения количества запросов к базе данных является использование <xref:System.Data.DataSet> для кэширования на среднем уровне. Например, рассмотрим данными [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] веб-приложения. Обычно значительная часть данных приложения изменяется нечасто и остается неизменной во время сеанса пользователя. Эти данные могут сохраняться в памяти веб-сервера, что сократит число запросов к базе данных и ускорит взаимодействие с пользователями. Другим полезным аспектом <xref:System.Data.DataSet> является то, что приложения могут переносить подмножества данных из одного или нескольких источников данных в пространстве приложения. Затем приложение может работать с данными в памяти как с реляционными данными.  

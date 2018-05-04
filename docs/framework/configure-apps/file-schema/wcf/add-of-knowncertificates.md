@@ -1,24 +1,12 @@
 ---
-title: "&lt;add&gt; для &lt;knownCertificates&gt;"
-ms.custom: 
+title: '&lt;add&gt; для &lt;knownCertificates&gt;'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 128aaabe-3f1a-4c3b-b59f-898d0f02910f
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 91a7174f98de2e2a5dd7eea738f51c3c6b9a1371
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0192c14d5ebc0c84859878b35770e03843b2dd50
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltaddgt-of-ltknowncertificatesgt"></a>&lt;add&gt; для &lt;knownCertificates&gt;
 Добавляет сертификат X.509 в коллекцию известных сертификатов.  
@@ -84,7 +72,7 @@ ms.lasthandoff: 12/22/2017
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
 |[\<knownCertificates >](../../../../../docs/framework/configure-apps/file-schema/wcf/knowncertificates.md)|Представляет коллекцию сертификатов X.509, предоставленную службой STS для проверки маркеров безопасности.|  
   

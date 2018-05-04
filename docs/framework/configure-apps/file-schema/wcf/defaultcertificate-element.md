@@ -1,24 +1,12 @@
 ---
-title: "Элемент &lt;defaultCertificate&gt;"
-ms.custom: 
+title: Элемент &lt;defaultCertificate&gt;
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: f1ddf364-9a00-45d3-b989-ff381c154ce6
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: eeb4c1b010e2d446303e780966668fc8a6f5ddb7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a4af1c6ec452b24634fa50162fa71f069e2451f5
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltdefaultcertificategt-element"></a>Элемент &lt;defaultCertificate&gt;
 Задает сертификат X.509 для использования, когда служба или служба маркеров безопасности не предоставляет сертификат посредством протокола согласования.  
@@ -81,7 +69,7 @@ x509FindType="FindByThumbPrint/FindBySubjectName/FindBySubjectDistinguishedName/
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
 |[\<serviceCertificate >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-clientcredentials-element.md)|Задает сертификат для использования при проверке подлинности службы для клиента.|  
   
@@ -89,7 +77,7 @@ x509FindType="FindByThumbPrint/FindBySubjectName/FindBySubjectDistinguishedName/
  Для привязок, использующих безопасность сообщений на основе сертификатов, сертификат, заданный этим элементом конфигурации, используется для шифрования сообщений службе; предполагается также, что он будет использоваться службой для подписи ответов клиенту. Он сохраняет один сертификат для использования при отсутствии сертификата, заданного службой сертификата.  
   
 ## <a name="example"></a>Пример  
- В следующем примере задается используемый сертификат для конечных точек, универсальный код ресурса (URI) которых начинается с http://www.contoso.com, и сертификат для всех остальных конечных точек, не выполняющих согласование сертификатов.  
+ В следующем примере задается сертификат для конечных точек, чей URI начинается с http://www.contoso.com и сертификат для использования для всех конечных точек, не выполняющих согласование сертификатов.  
   
 ```xml  
 <serviceCertificate>  

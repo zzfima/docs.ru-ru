@@ -1,34 +1,22 @@
 ---
-title: "Сопоставление уникальных ограничений XML-схемы (XSD) с ограничениями набора данных"
-ms.custom: 
+title: Сопоставление уникальных ограничений XML-схемы (XSD) с ограничениями набора данных
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 56da90bf-21d3-4d1a-8bb8-de908866b78d
-caps.latest.revision: "4"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 3700e4010176abed05677043469476fe34cd564c
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 8aed9830d613eeb7d49d2339a8ac1892c0e28e93
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="map-unique-xml-schema-xsd-constraints-to-dataset-constraints"></a>Сопоставление уникальных ограничений XML-схемы (XSD) с ограничениями набора данных
 В схему языка определения схемы XML **уникальный** элемент указывает на элемент или атрибут ограничение уникальности. В процессе преобразования схемы XML в реляционную схему наложенное на элемент или атрибут ограничение, гарантирующее уникальность, в XML-схеме сопоставляется с ограничением уникальности в объекте <xref:System.Data.DataTable> в соответствующем объекте <xref:System.Data.DataSet>, который формируется.  
   
  В следующей таблице описываются **msdata** атрибутов, которые можно указать в **уникальный** элемента.  
   
-|Имя атрибута|Описание:|  
+|Имя атрибута|Описание|  
 |--------------------|-----------------|  
-|**msdata:ConstraintName**|Если этот атрибут указан, его значение используется в качестве имени ограничения. В противном случае **имя** атрибут содержит значение имени ограничения.|  
-|**msdata:PrimaryKey**|Если `PrimaryKey="true"` присутствует в **уникальный** , ограничения unique создается элемент с **IsPrimaryKey** свойство **true**.|  
+|**msdata: ConstraintName**|Если этот атрибут указан, его значение используется в качестве имени ограничения. В противном случае **имя** атрибут содержит значение имени ограничения.|  
+|**msdata: PrimaryKey**|Если `PrimaryKey="true"` присутствует в **уникальный** , ограничения unique создается элемент с **IsPrimaryKey** свойство **true**.|  
   
  В следующем примере показано схему XML, который использует **уникальный** элемента, чтобы указать ограничение уникальности.  
   

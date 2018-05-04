@@ -18,14 +18,14 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: e7c6d31293109a0d778136235ccfc894aeba8574
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: f8a6c6be6874c1a90c9e40b5b82d833aeaa9b63a
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="how-to-configure-client-application-services"></a>Практическое руководство. Настройка служб клиентских приложений
-В этом разделе описывается использование [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] **конструктора проектов** для включения и настройки служб клиентских приложений. Эти службы позволяют проверять подлинность пользователей, извлекать роли пользователей и параметры из существующей службы приложений [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)]. После настройки можно получить доступ к включенным службам в коде приложения, как описано в разделе [Общие сведения о службах клиентских приложений](../../../docs/framework/common-client-technologies/client-application-services-overview.md). Дополнительные сведения о службах приложений [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] см. в разделе [Общие сведения о службах приложений ASP.NET](http://msdn.microsoft.com/library/1162e529-0d70-44b2-b3ab-83e60c695013).  
+Этот раздел описывает использование **конструктора проектов** Visual Studio для активации и настройки служб клиентского приложения. Эти службы позволяют проверять подлинность пользователей, извлекать роли пользователей и параметры из существующей службы приложений [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)]. После настройки можно получить доступ к включенным службам в коде приложения, как описано в разделе [Общие сведения о службах клиентских приложений](../../../docs/framework/common-client-technologies/client-application-services-overview.md). Дополнительные сведения о службах приложений [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] см. в разделе [Общие сведения о службах приложений ASP.NET](http://msdn.microsoft.com/library/1162e529-0d70-44b2-b3ab-83e60c695013).  
   
  Включать и настраивать службы клиентских приложений можно на странице **Службы** в **конструкторе проектов**. Изменения значений в файле проекта App.config вносятся на странице **Службы**. Открыть **конструктор проектов** можно с помощью команды **Свойства** в меню **Проект**. Дополнительные сведения о странице **Службы** см. в разделе [Страница "Службы" в конструкторе проектов](https://msdn.microsoft.com/library/bb398109).  
   
@@ -100,7 +100,7 @@ ms.lasthandoff: 04/26/2018
   
      В текстовом поле отобразится значение по умолчанию `Data Source = |SQL/CE|`.  
   
-3.  Для создания и использования базы данных SQL Server Compact оставьте значение по умолчанию строки подключения. [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] создаст файл базы данных и поместит его в каталог, указанный свойством <xref:System.Windows.Forms.Application.UserAppDataPath%2A?displayProperty=nameWithType>.  
+3.  Для создания и использования базы данных SQL Server Compact оставьте значение по умолчанию строки подключения. Visual Studio создаст файл базы данных и поместит его в каталог, указанный в свойстве <xref:System.Windows.Forms.Application.UserAppDataPath%2A?displayProperty=nameWithType>.  
   
 4.  Для создания и использования зашифрованной базы данных [!INCLUDE[ssEW](../../../includes/ssew-md.md)] добавьте значения `password` и `encrypt database` в строку подключения, как показано в следующем примере.  
   

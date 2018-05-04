@@ -1,31 +1,19 @@
 ---
-title: "&lt;transport&gt; для &lt;netTcpBinding&gt;"
-ms.custom: 
+title: '&lt;transport&gt; для &lt;netTcpBinding&gt;'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 49462e0a-66e1-463f-b3e1-c83a441673c6
-caps.latest.revision: "18"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 5ad2271b86d37d9063ac54d9a4e45681d132eb1d
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 9369351e4e197f321feb4ae56939bec2a8280a64
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lttransportgt-of-ltnettcpbindinggt"></a>&lt;transport&gt; для &lt;netTcpBinding&gt;
 Определяет тип требований безопасности уровня сообщений для конечной точки, настроенной с [ \<netTcpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md).  
   
- \<system.ServiceModel>  
+ \<система. ServiceModel >  
 \<привязки >  
-\<netTcpBinding>  
+\<netTcpBinding >  
 \<Привязка >  
 \<Безопасность >  
 \<Транспорт >  
@@ -59,7 +47,7 @@ ms.lasthandoff: 01/19/2018
 |---------------|-----------------|  
 |clientCredentialType|Необязательно. Задает тип учетных данных, используемых при проверке подлинности клиента с помощью безопасности транспорта.<br /><br /> Значение по умолчанию — `Windows`.<br />-Этот атрибут имеет тип <xref:System.ServiceModel.TcpClientCredentialType>.|  
 |protectionLevel|Необязательно. Определяет безопасность на уровне транспорта TCP. Подпись сообщений уменьшает риск подделки сообщения сторонними лицами при его передаче. Шифрование обеспечивает конфиденциальность на уровне данных во время транспортировки.<br /><br /> Значение по умолчанию — `EncryptAndSign`.|  
-|sslProtocols|Значение флага перечисления SslProtocols, указывающее, какие протоколы SslProtocols поддерживаются. Значение по умолчанию — Tls &#124; Tls11 &#124; Tls12.|  
+|sslProtocols|Значение флага перечисления SslProtocols, указывающее, какие протоколы SslProtocols поддерживаются. Значение по умолчанию — Tls&#124;Tls11&#124;Tls12.|  
 |policyEnforcement|Это перечисление указывает, когда следует применять <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy>.<br /><br /> 1.  Never - политика никогда не применяется (расширенная защита отключена).<br />2.  WhenSupported - политика применяется только тогда, когда клиент поддерживает расширенную защиту.<br />3.  Always - политика применяется всегда. Клиенты, которые не поддерживают расширенную защиту, не смогут пройти проверку подлинности.|  
   
 ## <a name="clientcredentialtype-attribute"></a>Атрибут clientCredentialType  
@@ -83,7 +71,7 @@ ms.lasthandoff: 01/19/2018
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
 |[\<Безопасность >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-nettcpbinding.md)|Задает возможности безопасности [ \<netTcpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md).|  
   

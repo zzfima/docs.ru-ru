@@ -1,13 +1,6 @@
 ---
-title: "&lt;прокси-сервер&gt; элемент (параметры сети)"
-ms.custom: 
+title: '&lt;прокси-сервер&gt; элемент (параметры сети)'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/defaultProxy/proxy
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#proxy
@@ -15,16 +8,14 @@ helpviewer_keywords:
 - <proxy> element
 - proxy element
 ms.assetid: 37a548d8-fade-4ac5-82ec-b49b6c6cb22a
-caps.latest.revision: "20"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: b0b397e66e0f73d10f482bc9151a6fbacf3e774d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b5ae716994f9b8222a633699367c94480179c97b
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltproxygt-element-network-settings"></a>&lt;прокси-сервер&gt; элемент (параметры сети)
 Определяет прокси-сервер.  
@@ -54,7 +45,7 @@ ms.lasthandoff: 12/22/2017
 |**Attribute (XElement Dynamic Property)** (Attribute (динамическое свойство XElement))|**Описание**|  
 |-------------------|---------------------|  
 |`autoDetect`|Указывает, обнаруживается ли прокси-сервер автоматически. Значение по умолчанию — `unspecified`.|  
-|`bypassonlocal`|Указывает, пропускает ли прокси-сервер для локальных ресурсов. Локальные ресурсы включают локальный сервер (http://localhost, http://loopback или http://127.0.0.1) и URI без точки (http://webserver). Значение по умолчанию — `unspecified`.|  
+|`bypassonlocal`|Указывает, пропускает ли прокси-сервер для локальных ресурсов. Локальные ресурсы включают локальный сервер (http://localhost, http://loopback, или http://127.0.0.1) и URI без точки (http://webserver). Значение по умолчанию — `unspecified`.|  
 |`proxyaddress`|Указывает URI, который используется прокси-сервер.|  
 |`scriptLocation`|Указывает расположение скрипта конфигурации.|  
 |`usesystemdefault`|Указывает, следует ли использовать параметры прокси-сервера обозревателя Internet Explorer. Если значение `true`, следующие атрибуты переопределят параметры прокси Internet Explorer. Значение по умолчанию — `unspecified`.|  

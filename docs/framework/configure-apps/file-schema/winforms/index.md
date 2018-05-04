@@ -1,23 +1,14 @@
 ---
 title: Раздел конфигурации Windows Forms
-ms.custom: ''
 ms.date: 04/07/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 6eb142d5-fc98-40e2-9d90-84733f2a27ba
-caps.latest.revision: 6
 author: rpetrusha
 ms.author: ronpet
-ms.workload:
-- dotnet
-ms.openlocfilehash: f2d83f5dcf6fa93ceba4d670470bd768a2ee1f88
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 18d8e1e24af73c9521b3a5bb45f1c86fc52ff1e9
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="windows-forms-configuration-section"></a>Раздел конфигурации Windows Forms
 Параметры конфигурации Windows Forms позволяют приложению Windows Forms хранить и извлекать сведения о настроенных параметрах приложения, таких как поддержка нескольких мониторов, поддержка высокого разрешения (DPI) и другие предопределенные параметры конфигурации.
@@ -44,13 +35,13 @@ ms.lasthandoff: 12/22/2017
 
 ### <a name="child-elements"></a>Дочерние элементы
 
-Элемент  |Описание: |
+Элемент  |Описание |
 ---------|---------|
 [`<add>`](../../../../../docs/framework/configure-apps/file-schema/winforms/windows-forms-add-configuration-element.md) | Добавляет ключ параметра конфигурации с указанным значением. |
 
 ### <a name="parent-elements"></a>Родительские элементы
 
-Элемент  |Описание: |
+Элемент  |Описание |
 ---------|---------|
 [\<configuration>](../configuration-element.md) | Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями Windows Forms. |
 

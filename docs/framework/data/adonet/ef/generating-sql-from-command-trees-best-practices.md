@@ -1,26 +1,12 @@
 ---
 title: Создание кода SQL из деревьев команд. Рекомендации
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-ado
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 71ef6a24-4c4f-4254-af3a-ffc0d855b0a8
-caps.latest.revision: 3
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload:
-- dotnet
-ms.openlocfilehash: 037d1eaa8d781d012cde7a1bd3b08aa7003edd77
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 0087c67b12b4b6ea36cabd5800b7be0a72fc4a90
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="generating-sql-from-command-trees---best-practices"></a>Создание кода SQL из деревьев команд. Рекомендации
 Деревья команд выходного запроса по своей структуре близки к моделям запросов, выражаемым на языке SQL. Однако модули записи поставщика при создании кода SQL на основе дерева команд выходного запроса сталкиваются с некоторыми распространенными проблемами. Они обсуждаются в данном разделе. В следующем разделе приводится образец поставщика, показывающий решение этих проблем.  

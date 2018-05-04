@@ -1,9 +1,6 @@
 ---
-title: "Поле Connection.m_WriteList"
+title: Поле Connection.m_WriteList
 ms.date: 05/01/2017
-ms.prod: .net-framework
-ms.technology: 
-ms.topic: reference
 topic_type:
 - apiref
 api_name:
@@ -15,18 +12,15 @@ api_type:
 ms.assetid: 235503c1-1d01-4f59-895f-ae2cf15b3345
 author: guardrex
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: e3849fdd327923e480cd88c932cfdce6580d3f09
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d145f6fd21989ada49a581ebf2694dcd56d94351
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="connectionmwritelist-field"></a>Connection.m\_WriteList поля
 
-`Connection.m_WriteList`— <xref:System.Collections.ArrayList> из <xref:System.Net.HttpWebRequest> объекты, которые помещаются в очередь копирование отправляться по протоколу HTTP.
+`Connection.m_WriteList` — <xref:System.Collections.ArrayList> из <xref:System.Net.HttpWebRequest> объекты, которые помещаются в очередь копирование отправляться по протоколу HTTP.
 
 ## <a name="syntax"></a>Синтаксис
   
@@ -41,7 +35,7 @@ private ArrayList m_WriteList
 
 ## <a name="requirements"></a>Требования
 
-**Пространство имен:**<xref:System.Net>
+**Пространство имен:** <xref:System.Net>
 
 **Сборка:** системы (в System.dll)
 

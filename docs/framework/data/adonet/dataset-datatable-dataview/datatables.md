@@ -1,24 +1,12 @@
 ---
 title: DataTables
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 52ff0e32-3e5a-41de-9a3b-7b04ea52b83e
-caps.latest.revision: "6"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 439b951779393d6ac232e6a1a622515905e837ad
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: e148b20c7d8efdb16a897c5606535e4b0112ea29
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="datatables"></a>DataTables
 Набор данных <xref:System.Data.DataSet> состоит из коллекции таблиц, связей и ограничений. В ADO.NET <xref:System.Data.DataTable> объекты используются для представления таблиц в **набора данных**. Объект **DataTable** представляет одну таблицу находящихся в памяти реляционных данных; является локальным для данных. NET-приложение в котором он находится, но могут быть заполнены из источника данных, например Microsoft SQL Server с помощью **DataAdapter** Дополнительные сведения см. в разделе [заполнение DataSet из объекта DataAdapter](../../../../../docs/framework/data/adonet/populating-a-dataset-from-a-dataadapter.md) .  

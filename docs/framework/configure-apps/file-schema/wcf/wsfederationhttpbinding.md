@@ -1,33 +1,19 @@
 ---
 title: '&lt;wsFederationHttpBinding&gt;'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - wsFederationBinding element
 ms.assetid: 9c3312b4-2137-4e71-bf3f-de1cf8e9be79
-caps.latest.revision: ''
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: f5d4e55f7ad2d4a347d51c3cd79647c070c11e2d
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: d89d0aeb68aed91b28ca7358a6140e171d3b36b2
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltwsfederationhttpbindinggt"></a>&lt;wsFederationHttpBinding&gt;
 Определяет привязку, которая поддерживает спецификацию WS-Federation.  
   
- \<system.ServiceModel>  
+ \<система. ServiceModel >  
 \<привязки >  
 wsFederationBinding, элемент  
   
@@ -140,17 +126,17 @@ wsFederationBinding, элемент
 |Элемент|Описание|  
 |-------------|-----------------|  
 |[\<Безопасность >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-wsfederationhttpbinding.md)|Определяет параметры безопасности сообщения. Это элемент типа <xref:System.ServiceModel.Configuration.WSFederationHttpSecurityElement>.|  
-|[\<readerQuotas>](http://msdn.microsoft.com/library/3e5e42ff-cef8-478f-bf14-034449239bfd)|Определяет ограничения по сложности сообщений SOAP, которые могут обрабатываться конечными точками, настроенными с использованием этой привязки. Это элемент типа <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>.|  
+|[\<readerQuotas >](http://msdn.microsoft.com/library/3e5e42ff-cef8-478f-bf14-034449239bfd)|Определяет ограничения по сложности сообщений SOAP, которые могут обрабатываться конечными точками, настроенными с использованием этой привязки. Это элемент типа <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>.|  
 |[reliableSession](http://msdn.microsoft.com/library/9c93818a-7dfa-43d5-b3a1-1aafccf3a00b)|Указывает, устанавливаются ли между конечными точками канала надежные сеансы.|  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
 |Элемент|Описание|  
 |-------------|-----------------|  
-|[\<bindings>](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|Этот элемент содержит коллекцию стандартных и пользовательских привязок.|  
+|[\<привязки >](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|Этот элемент содержит коллекцию стандартных и пользовательских привязок.|  
   
 ## <a name="remarks"></a>Примечания  
- Федерация - это возможность совместного использования удостоверений в нескольких системах в целях проверки подлинности и авторизации. Эти удостоверения могут ссылаться на пользователей или на компьютеры. Федеративный протокол HTTP поддерживает безопасность SOAP и безопасность в смешанном режиме, но не поддерживает использование исключительно безопасности транспорта. Эта привязка обеспечивает поддержку системой [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] протокола WS-Federation. Службы, настроенные с использованием этой привязки, должны использовать транспорт HTTP.  
+ Федерация - это возможность совместного использования удостоверений в нескольких системах в целях проверки подлинности и авторизации. Эти удостоверения могут ссылаться на пользователей или на компьютеры. Федеративный протокол HTTP поддерживает безопасность SOAP и безопасность в смешанном режиме, но не поддерживает использование исключительно безопасности транспорта. Эта привязка обеспечивает поддержку Windows Communication Foundation (WCF) для протокола WS-Federation. Службы, настроенные с использованием этой привязки, должны использовать транспорт HTTP.  
   
  Привязки состоят из стека элементов привязки. Стек элементов привязки в  
   

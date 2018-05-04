@@ -1,25 +1,15 @@
 ---
-title: "&lt;аргументы&gt;"
-ms.custom: 
+title: '&lt;Аргументы&gt;'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 0f327196-f468-4be3-b6c4-68ba981a1bd6
-caps.latest.revision: "5"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f233c7fc7d7edd020a750938a45351bb028524d9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ae2fd4a05cc8ca93cd74ccceb08a7a077b504f0c
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="ltargumentsgt"></a>&lt;аргументы&gt;
+# <a name="ltargumentsgt"></a>&lt;Аргументы&gt;
 Представляет коллекцию аргументов, связанных с запросом состояния действия.  
   
  Дополнительные сведения о запросах профиля отслеживания см. в разделе [профили отслеживания](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md).  
@@ -57,13 +47,13 @@ ms.lasthandoff: 12/22/2017
   
 ### <a name="child-elements"></a>Дочерние элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
 |[\<Аргумент >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/argument.md)|Аргумент, связанный с запросом состояния действия.|  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
 |[\<activityStateQuery >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/activitystatequery.md)|Представляет элемент конфигурации, используемый для отслеживания запросов на отмену дочернего действия родительским действием. Этот запрос необходим, чтобы участник отслеживания подписался на объекты записей запросов на отмену.|  
   

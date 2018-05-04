@@ -1,24 +1,12 @@
 ---
-title: "Элемент &lt;scopedCertificates&gt;"
-ms.custom: 
+title: Элемент &lt;scopedCertificates&gt;
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: c7b6fc35-d4b2-4c18-98bd-83e09591f1d3
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 719a52fb1a0f558bda2b337e1402f8aecafc6b8d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d95e608fa9b94086dac72341eb599f258dae6097
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltscopedcertificatesgt-element"></a>Элемент &lt;scopedCertificates&gt;
 Представляет коллекцию сертификатов X.509, предоставленную конкретными службами (в области действия) для проверки подлинности. Эта коллекция обычно используется, чтобы задать сертификаты служб для служб маркеров безопасности в федеративной инфраструктуре.  
@@ -52,13 +40,13 @@ ms.lasthandoff: 12/22/2017
   
 ### <a name="child-elements"></a>Дочерние элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
 |[\<add>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-scopedcertificates-element.md)|Добавляет сертификат X.509 в коллекцию сертификатов в области действия.|  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
 |[\<serviceCertificate >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)|Задает сертификат для использования при проверке подлинности службы для клиента.|  
   
@@ -70,7 +58,7 @@ ms.lasthandoff: 12/22/2017
  Дополнительные сведения см. раздел «Областью действия сертификатов» [как: создание федеративного клиента](../../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md).  
   
 ## <a name="example"></a>Пример  
- В следующем примере задается сертификат службы для клиента для использования при связи по протоколу HTTP с конечными точками, именем домена которых является http://www.contoso.com.  
+ В следующем примере задается сертификат службы для клиента для использования при взаимодействии с конечными точками, именем домена которых является http://www.contoso.com по протоколу HTTP.  
   
 ```xml  
 <serviceCertificate>  

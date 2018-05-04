@@ -1,24 +1,12 @@
 ---
-title: "Создание кода SQL для изменения данных"
-ms.custom: 
+title: Создание кода SQL для изменения данных
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 2188a39d-46ed-4a8b-906a-c9f15e6fefd1
-caps.latest.revision: "3"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 6696d80246d61cc2eac47266837d79661141b9b0
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: b7bb390fd4e221c70d5ed8da5873c557fcde3c98
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="modification-sql-generation"></a>Создание кода SQL для изменения данных
 В этом разделе приведено описание разработки модуля создания кода SQL для изменения данных для конкретного поставщика (базы данных, совместимой с SQL:1999). Этот модуль обеспечивает преобразование дерева команд изменения в соответствующие инструкции INSERT, UPDATE или DELETE языка SQL.  
@@ -38,7 +26,7 @@ ms.lasthandoff: 01/17/2018
   
  DbModificationCommandTree и его реализации, созданные с помощью [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] всегда представляют операцию из одной строки. В настоящем разделе рассматриваются указанные типы и их ограничения в .NET Framework версии 3.5.  
   
- ![Diagram](../../../../../docs/framework/data/adonet/ef/media/558ba7b3-dd19-48d0-b91e-30a76415bf5f.gif "558ba7b3-dd19-48d0-b91e-30a76415bf5f")  
+ ![Схема](../../../../../docs/framework/data/adonet/ef/media/558ba7b3-dd19-48d0-b91e-30a76415bf5f.gif "558ba7b3-dd19-48d0-b91e-30a76415bf5f")  
   
  DbModificationCommandTree имеет свойство Target, которое представляет набор целей для операции изменения. Свойство Expression свойства Target, которое определяет входной набор, всегда имеет тип DbScanExpression.  DbScanExpression может представлять таблицу или представление, или набор данных, определенный с запросом, если свойство метаданных «Defining Query» его свойства Target имеет отличное от null.  
   
@@ -115,7 +103,7 @@ The elements of the list are specified as type DbModificationClause, which speci
 ## <a name="generating-an-insert-sql-command"></a>Создание команд INSERT языка SQL  
  Для каждого конкретного объекта DbInsertCommandTree из образца поставщика созданная команда INSERT соответствует одному из двух приведенных далее шаблонов INSERT.  
   
- Первый шаблон имеет команду для выполнения оператора INSERT с учетом значений из списка SetClauses и инструкции SELECT для возврата свойств, указанных в свойстве Returning для вставленной строки, если свойство Returning не имело значение null. Элемент предиката «@@ROWCOUNT > 0» имеет значение true, если строка была вставлена. Элемент предиката «keyMemberI = keyValueI &#124; функция SCOPE_IDENTITY()» принимает форму «keyMemberI = scope_identity()» только если keyMemeberI представляет ключ, поскольку функция scope_identity() возвращает последнее значение идентификатора, вставленное в столбец идентификаторов (созданных хранилищем).  
+ Первый шаблон имеет команду для выполнения оператора INSERT с учетом значений из списка SetClauses и инструкции SELECT для возврата свойств, указанных в свойстве Returning для вставленной строки, если свойство Returning не имело значение null. Элемент предиката «@@ROWCOUNT > 0» имеет значение true, если строка была вставлена. Элемент предиката «keyMemberI = keyValueI &#124; scope_identity()» принимает форму «keyMemberI = scope_identity()» только если keyMemeberI представляет ключ, поскольку функция scope_identity() возвращает последнее значение идентификатора, вставленное в (удостоверение) столбец, созданных хранилищем).  
   
 ```  
 -- first insert Template  

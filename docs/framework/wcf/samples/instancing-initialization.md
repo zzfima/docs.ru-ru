@@ -1,24 +1,26 @@
 ---
-title: "Инициализация создания экземпляров"
-ms.custom: 
+title: Инициализация создания экземпляров
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 154d049f-2140-4696-b494-c7e53f6775ef
-caps.latest.revision: "31"
+caps.latest.revision: 31
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0bc034028f8dacbac638c27e6fb8f48603cdcf2c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.workload:
+- dotnet
+ms.openlocfilehash: f32b1c7159185bb9d4ccd99c916f00c552502748
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="instancing-initialization"></a>Инициализация создания экземпляров
 В этом примере расширяет [Pooling](../../../../docs/framework/wcf/samples/pooling.md) образец путем определения интерфейса `IObjectControl`, который настраивает инициализации объекта, активация и деактивация его. Клиент вызывает методы, которые возвращают объект в пул и не возвращают объект в пул.  
@@ -27,7 +29,7 @@ ms.lasthandoff: 12/22/2017
 >  Процедура настройки и инструкции по построению для данного образца приведены в конце этого раздела.  
   
 ## <a name="extensibility-points"></a>Точки расширяемости  
- При создании расширения [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] в первую очередь необходимо определить, какие точки расширяемости будут использоваться. В [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], термин *EndpointDispatcher* ссылается на компонент отвечает за преобразование входящих сообщений в вызовы метода в службе пользователя и для преобразования значения, возвращаемые этим методом, чтобы во время выполнения исходящее сообщение. Служба [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] создает для каждой конечной точки объект EndpointDispatcher.  
+ Чтобы определить, какие точки расширяемости для использования является первым шагом при создании расширения Windows Communication Foundation (WCF). В [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], термин *EndpointDispatcher* ссылается на компонент отвечает за преобразование входящих сообщений в вызовы метода в службе пользователя и для преобразования значения, возвращаемые этим методом, чтобы во время выполнения исходящее сообщение. Служба [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] создает для каждой конечной точки объект EndpointDispatcher.  
   
  EndpointDispatcher реализует расширяемость области конечной точки (для всех сообщений, получаемых и отправляемых службой) с помощью класса <xref:System.ServiceModel.Dispatcher.EndpointDispatcher>. Этот класс позволяет настраивать различные свойства, управляющие поведением EndpointDispatcher. В этом образце рассматривается свойство <xref:System.ServiceModel.Dispatcher.DispatchRuntime.InstanceProvider%2A>, которое указывает на объект, предоставляющий экземпляры класса службы.  
   
@@ -272,7 +274,7 @@ else if (pool.Count < minPoolSize)
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите на страницу [Примеры Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все примеры [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Этот образец расположен в следующем каталоге.  
+>  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] образцов. Этот образец расположен в следующем каталоге.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Instancing\Initialization`  
   

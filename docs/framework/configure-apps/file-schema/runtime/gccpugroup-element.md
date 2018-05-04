@@ -1,34 +1,24 @@
 ---
-title: "&lt;GCCpuGroup&gt; элемент"
-ms.custom: 
+title: '&lt;GCCpuGroup&gt; элемент'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - GCCpuGroup element
 - <GCCpuGroup> element
 ms.assetid: c1fc7d6c-7220-475c-a312-5b8b201f66e0
-caps.latest.revision: "9"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: dcead28d7bf66e0626a0108015add4f22c5fa476
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: d4461667bdb47d410c857b4ac2c9dd268438a02f
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltgccpugroupgt-element"></a>&lt;GCCpuGroup&gt; элемент
 Определяет, поддерживает ли сборка мусора несколько групп ЦП.  
   
  \<configuration>  
 \<Среда выполнения >  
-\<GCCpuGroup>  
+\<GCCpuGroup >  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -48,7 +38,7 @@ ms.lasthandoff: 01/19/2018
   
 ## <a name="enabled-attribute"></a>Атрибут enabled  
   
-|Значение|Описание:|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |`false`|Сборщик мусора не поддерживает несколько групп ЦП. Это значение по умолчанию.|  
 |`true`|Сборщик мусора поддерживает несколько групп ЦП, если включена серверная сборка мусора.|  
@@ -58,7 +48,7 @@ ms.lasthandoff: 01/19/2018
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
 |`configuration`|Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями .NET Framework.|  
 |`runtime`|Содержит сведения о привязке сборок и сборке мусора.|  

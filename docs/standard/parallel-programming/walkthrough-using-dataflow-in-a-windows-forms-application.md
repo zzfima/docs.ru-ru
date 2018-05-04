@@ -15,11 +15,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: f28e103d6241d954dd6ac4f7e9c7fcb20a06ea0b
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 8100f986a98c9e4712603c45a88d48cbb93be649
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="walkthrough-using-dataflow-in-a-windows-forms-application"></a>Пошаговое руководство. Использование потока данных в приложении Windows Forms
 В этом документе демонстрируется способ создания сети блоков потока данных, которые выполняют обработку изображений в приложении Windows Forms.  
@@ -48,7 +48,7 @@ ms.lasthandoff: 04/26/2018
   
 #### <a name="to-create-the-windows-forms-application"></a>Создание приложения Windows Forms  
   
-1.  В [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] создайте проект **Приложение Windows Forms** на Visual C# или Visual Basic. В этом документе проект называется `CompositeImages`.  
+1.  В Visual Studio создайте проект **Приложение Windows Forms** на Visual C# или Visual Basic. В этом документе проект называется `CompositeImages`.  
   
 2.  В конструкторе форм главной формы Form1.cs (Form1.vb для Visual Basic) добавьте элемент управления <xref:System.Windows.Forms.ToolStrip>.  
   

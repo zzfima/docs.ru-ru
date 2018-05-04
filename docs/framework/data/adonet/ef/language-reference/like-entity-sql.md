@@ -1,24 +1,12 @@
 ---
 title: LIKE (Entity SQL)
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 8300e6d2-875b-481e-9ef4-e1e7c12d46fa
-caps.latest.revision: "4"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 021a999e79239e3da5c874cb459ac7f03fdb5661
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: f2d06b364c577b581bb64af0436c133ca830bb2b
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="like-entity-sql"></a>LIKE (Entity SQL)
 Определяет, соответствует ли аргумент типа `String` заданному шаблону.  
@@ -46,16 +34,16 @@ match [NOT] LIKE pattern [ESCAPE escape]
  Равно `true`, если `string` соответствует шаблону, в противном случае равно `false`.  
   
 ## <a name="remarks"></a>Примечания  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)]выражения, использующих оператор LIKE, вычисляются во многом так же, как выражения, использующие равенства в роли условий фильтра. Однако [!INCLUDE[esql](../../../../../../includes/esql-md.md)] выражений, использующих оператор LIKE могут включать литералы и символы-шаблоны.  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] выражения, использующих оператор LIKE, вычисляются во многом так же, как выражения, использующие равенства в роли условий фильтра. Однако [!INCLUDE[esql](../../../../../../includes/esql-md.md)] выражений, использующих оператор LIKE могут включать литералы и символы-шаблоны.  
   
  В следующей таблице описан синтаксис шаблона `string`.  
   
 |Символ-шаблон|Описание|Пример|  
 |------------------------|-----------------|-------------|  
-|%|Любое значение `string` длиной от нуля и более символов.|`title like '%computer%'`Находит все названия, содержащие слово `"computer"` в любом месте названия.|  
-|_ (символ подчеркивания)|Любой отдельный символ.|`firstname like '_ean'`Находит все имена четырех букв с `"ean`, «например Дин или «Sean».|  
-|[ ]|Любой отдельный символ в диапазоне ([a-f]) или наборе ([abcdef]).|`lastname like '[C-P]arsen'`найдены фамилии, оканчиваются на «arsen», а начиная с любого символа между C и P, например «carsen» или «Larsen.|  
-|[^]|Любой символ, содержащийся в диапазоне ([^a-f]) или наборе ([^abcdef]).|`lastname like 'de[^l]%'`будут найдены все фамилии, которые начинаются с символов «de» и не включают символа «l» в качестве следующего символа.|  
+|%|Любое значение `string` длиной от нуля и более символов.|`title like '%computer%'` Находит все названия, содержащие слово `"computer"` в любом месте названия.|  
+|_ (символ подчеркивания)|Любой отдельный символ.|`firstname like '_ean'` Находит все имена четырех букв с `"ean`, «например Дин или «Sean».|  
+|[ ]|Любой отдельный символ в диапазоне ([a-f]) или наборе ([abcdef]).|`lastname like '[C-P]arsen'` найдены фамилии, оканчиваются на «arsen», а начиная с любого символа между C и P, например «carsen» или «Larsen.|  
+|[^]|Любой символ, содержащийся в диапазоне ([^a-f]) или наборе ([^abcdef]).|`lastname like 'de[^l]%'` будут найдены все фамилии, которые начинаются с символов «de» и не включают символа «l» в качестве следующего символа.|  
   
 > [!NOTE]
 >  Оператор LIKE и предложение ESCAPE языка [!INCLUDE[esql](../../../../../../includes/esql-md.md)] не могут применяться к значениям `System.DateTime` и `System.Guid`.  

@@ -1,24 +1,12 @@
 ---
-title: "Пошаговое руководство. Создание кода SQL"
-ms.custom: 
+title: Пошаговое руководство. Создание кода SQL
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 16c38aaa-9927-4f3c-ab0f-81636cce57a3
-caps.latest.revision: "3"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 272d0b8bc58094737d157abfff9f3f026a0f5953
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: ab08b404dc60483a39e5c6ae56d82b63932c3f3e
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="walkthrough-sql-generation"></a>Пошаговое руководство. Создание кода SQL
 В этом разделе показано, как происходит создание кода SQL в [образец поставщика](http://go.microsoft.com/fwlink/?LinkId=180616). В следующем запросе Entity SQL используется модель, которая прилагается к образцу поставщика.  
@@ -119,11 +107,11 @@ LEFT OUTER JOIN [dbo].[InternationalOrders] AS [Extent5] ON [Extent4].[OrderID] 
 ## <a name="first-phase-of-sql-generation-visiting-the-expression-tree"></a>Первый этап формирования кода SQL: обход дерева выражений  
  На следующем рисунке показано начальное пустое состояние посетителя.  В рамках данного раздела описываются только свойства, требуемые для наглядности пошагового руководства.  
   
- ![Diagram](../../../../../docs/framework/data/adonet/ef/media/430180f5-4fb9-4bc3-8589-d566512d9703.gif "430180f5-4fb9-4bc3-8589-d566512d9703")  
+ ![Схема](../../../../../docs/framework/data/adonet/ef/media/430180f5-4fb9-4bc3-8589-d566512d9703.gif "430180f5-4fb9-4bc3-8589-d566512d9703")  
   
  При посещении узла проекта поверх ввода (Join4) вызывается метод VisitInputExpression, активизирующий посещение Join4 методом VisitJoinExpression. Поскольку это самое верхнее соединение, параметр IsParentAJoin возвращает значение false, а новый объект SqlSelectStatement (SelectStatement0) создается и передается в стек инструкций SELECT. Кроме того, в таблицу символов вводится новая область (scope0). Перед посещением первого (левого) входного сигнала соединения в стек IsParentAJoin передается значение true. Перед посещением Join1, левого входного сигнала Join4, посетитель входит в состояние, показанное на следующем рисунке.  
   
- ![Diagram](../../../../../docs/framework/data/adonet/ef/media/406d4f5f-6166-44ea-8e74-c5001d5d5d79.gif "406d4f5f-6166-44ea-8e74-c5001d5d5d79")  
+ ![Схема](../../../../../docs/framework/data/adonet/ef/media/406d4f5f-6166-44ea-8e74-c5001d5d5d79.gif "406d4f5f-6166-44ea-8e74-c5001d5d5d79")  
   
  Когда метод посещения соединения вызывается по отношению к Join4, IsParentAJoin принимает значение true, таким образом, текущая инструкция выбора SelectStatement0 используется повторно. Вводится новая область (scope1). Перед посещением левого дочернего элемента Extent1 в стек IsParentAJoin передается еще одно значение true.  
   
@@ -131,11 +119,11 @@ LEFT OUTER JOIN [dbo].[InternationalOrders] AS [Extent5] ON [Extent4].[OrderID] 
   
  Перед посещением правого входного сигнала Join1 к предложению From инструкции SelectStatement0. добавляется «LEFT OUTER JOIN». Поскольку правый входной сигнал является выражением Scan, в стек IsParentAJoin снова передается значение true. Состояние перед посещением правого входного сигнала показано на следующем рисунке.  
   
- ![Diagram](../../../../../docs/framework/data/adonet/ef/media/ca62c31b-7ff6-4836-b209-e16166304fdc.gif "ca62c31b-7ff6-4836-b209-e16166304fdc")  
+ ![Схема](../../../../../docs/framework/data/adonet/ef/media/ca62c31b-7ff6-4836-b209-e16166304fdc.gif "ca62c31b-7ff6-4836-b209-e16166304fdc")  
   
  Правый входной сигнал обрабатывается так же, как и левый. Состояние после посещения правого входного сигнала показано на следующем рисунке.  
   
- ![Diagram](../../../../../docs/framework/data/adonet/ef/media/cd2afa99-7256-4c63-aaa9-c2d13f18a3d8.gif "cd2afa99-7256-4c63-aaa9-c2d13f18a3d8")  
+ ![Схема](../../../../../docs/framework/data/adonet/ef/media/cd2afa99-7256-4c63-aaa9-c2d13f18a3d8.gif "cd2afa99-7256-4c63-aaa9-c2d13f18a3d8")  
   
  Следующее значение false передается в стек IsParentAJoin, и обрабатывается условие соединения Var(Extent1).CategoryID == Var(Extent2).CategoryID. После поиска в символьной таблице Var(Extenent1) разрешается в <symbol_Extent1>. Поскольку экземпляр разрешается в простой символ, в результате обработки Var(Extent1). CategoryID, SqlBuilder с \<symbol1 >.» Возвращается CategoryID». Схожим образом обрабатывается другая сторона сравнения, результат посещения условия соединения добавляется к предложению FROM инструкции SelectStatement1, а из стека IsParentAJoin удаляется значение false.  
   
@@ -145,13 +133,13 @@ LEFT OUTER JOIN [dbo].[InternationalOrders] AS [Extent5] ON [Extent4].[OrderID] 
   
  Следующим обрабатывается узел Join3 - второй дочерний элемент Join4. Поскольку он правый, в стек IsParentAJoin передается значение false. Состояние посетителя в этот момент показано на следующем рисунке.  
   
- ![Diagram](../../../../../docs/framework/data/adonet/ef/media/1ec61ed3-fcdd-4649-9089-24385be7e423.gif "1ec61ed3-fcdd-4649-9089-24385be7e423")  
+ ![Схема](../../../../../docs/framework/data/adonet/ef/media/1ec61ed3-fcdd-4649-9089-24385be7e423.gif "1ec61ed3-fcdd-4649-9089-24385be7e423")  
   
  Для Join3 IsParentAJoin возвращает значение false, требует начать новую инструкцию SqlSelectStatement (SelectStatement1) и передать ее в стек. Обработка продолжается, как и с предыдущими соединениями, новая область передается в стек, и проводится обработка дочерних элементов. Область (Extent3) является левым дочерним элементом, а соединение (Join2) - правым, которое также требует начать новую инструкцию SqlSelectStatement: SelectStatement2. Дочерние элементы Join2 также являются областями, и они собраны в инструкции SelectStatement2.  
   
  Состояние посетителя после посещения Join2, но перед выполнением последующей обработки (ProcessJoinInputResult) показано на следующем рисунке.  
   
- ![Diagram](../../../../../docs/framework/data/adonet/ef/media/7510346f-8b09-4c99-b411-40af239c3c4d.gif "7510346f-8b09-4c99-b411-40af239c3c4d")  
+ ![Схема](../../../../../docs/framework/data/adonet/ef/media/7510346f-8b09-4c99-b411-40af239c3c4d.gif "7510346f-8b09-4c99-b411-40af239c3c4d")  
   
  На предыдущем рисунке инструкция SelectStatement2 показана в формате с плавающей запятой, поскольку она удалена из стека, но еще не обработана родительским элементом. Его нужно добавить к части FROM родительского элемента, но оно не является законченной инструкцией SQL без предложения SELECT. Поэтому в этот момент по умолчанию столбцы (все столбцы, созданные его входными сигналами) добавляются к списку выбора методом AddDefaultColumns. AddDefaultColumns проходит по символам из FromExtents и для каждого символа добавляет все столбцы, внесенные в область. В случае простого символа выполняется проверка типа символа для извлечения всех его свойств, которые нужно добавить. Он также вносит имена столбцов в словарь AllColumnNames. Завершенная инструкция SelectStatement2 прибавляется к предложению FROM инструкции SelectStatement1.  
   
@@ -165,7 +153,7 @@ LEFT OUTER JOIN [dbo].[InternationalOrders] AS [Extent5] ON [Extent4].[OrderID] 
   
  Условие соединения Join4 обрабатывается схожим образом. Элемент управления возвращается к методу VisitInputExpression, обрабатывавшему самый верхний проект. Судя по FromExtents возвращенного SelectStatement0, входной сигнал идентифицируется как соединение, удаляет исходные области и замещает их новой областью с символом Join. Также происходит обновление таблицы символов и обработка следующей части проекции проекта. Разрешение свойств и объединение областей соединения происходит, как описано выше.  
   
- ![Diagram](../../../../../docs/framework/data/adonet/ef/media/9456d6a9-ea2e-40ae-accc-a10e18e28b81.gif "9456d6a9-ea2e-40ae-accc-a10e18e28b81")  
+ ![Схема](../../../../../docs/framework/data/adonet/ef/media/9456d6a9-ea2e-40ae-accc-a10e18e28b81.gif "9456d6a9-ea2e-40ae-accc-a10e18e28b81")  
   
  Наконец, создается следующая инструкция SqlSelectStatement.  
   

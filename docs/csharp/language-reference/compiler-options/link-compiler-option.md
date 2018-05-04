@@ -1,8 +1,9 @@
 ---
-title: "-link (параметры компилятора C#)"
+title: -link (параметры компилятора C#)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - /l compiler option [C#]
@@ -14,14 +15,14 @@ helpviewer_keywords:
 - -link compiler option [C#]
 - link compiler option [C#]
 ms.assetid: 00da70c6-9ea1-43c2-86f2-aa7f26c03475
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 12ba3762a1c514c52b844a30efc9f49648c51b46
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: e317c73fab28c76a05b8f7e4472c2439f8731159
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="-link-c-compiler-options"></a>-link (параметры компилятора C#)
 Дает компилятору указание сделать всю информацию о типах COM из указанных сборок доступной компилируемому проекту.  
@@ -48,7 +49,7 @@ ms.lasthandoff: 01/19/2018
 > [!NOTE]
 >  Если в коде создается экземпляр внедренного COM-типа, его следует создавать, используя соответствующий интерфейс. При попытке создать экземпляр внедренного COM-типа с помощью компонентного класса возникнет ошибка.  
   
- Чтобы задать параметр `-link` в [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)], добавьте ссылку на сборку и задайте для свойства `Embed Interop Types` значение **true**. По умолчанию для свойства `Embed Interop Types` задается значение **false**.  
+ Чтобы задать параметр `-link` в Visual Studio, добавьте ссылку на сборку и задайте для свойства `Embed Interop Types` значение **true**. По умолчанию для свойства `Embed Interop Types` задается значение **false**.  
   
  Ссылаясь на COM-сборку (сборку A), которая, в свою очередь, ссылается на другую COM-сборку (сборку Б), необходимо также добавить ссылку на сборку Б, если выполняется любое из следующих условий:  
   

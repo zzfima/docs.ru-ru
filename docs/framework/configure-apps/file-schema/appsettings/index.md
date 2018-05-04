@@ -1,10 +1,6 @@
 ---
 title: Схема параметров приложения
 ms.date: 05/01/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: article
 helpviewer_keywords:
 - schema app settings
 - app settings, schema [Windows Forms]
@@ -13,14 +9,11 @@ helpviewer_keywords:
 ms.assetid: 99347d62-3ea5-40b6-bfec-c31431011422
 author: guardrex
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 028fdbeb90a1499459803f24f3aa62923452edba
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 154f38880225fb420f9944f336ff885bd116e2c3
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="app-settings-schema"></a>Схема параметров приложения
 
@@ -32,7 +25,7 @@ ms.lasthandoff: 12/22/2017
 &nbsp;&nbsp;&nbsp;&nbsp;[**\<clear>**](~/docs/framework/configure-apps/file-schema/appsettings/clear-element-for-appsettings.md)   
 &nbsp;&nbsp;&nbsp;&nbsp;[**\<remove>**](~/docs/framework/configure-apps/file-schema/appsettings/remove-element-for-appsettings.md)
 
-| Элемент | Описание: |
+| Элемент | Описание |
 | ------- | ----------- |
 | [**\<appSettings>**](~/docs/framework/configure-apps/file-schema/appsettings/appsettings-element-for-configuration.md) | Содержит теги **\<add>**, **\<clear>** и **\<remove>**, управляющие параметрами приложения. Имеет необязательный атрибут **file**. |
 | [**\<add>**](~/docs/framework/configure-apps/file-schema/appsettings/add-element-for-appsettings.md) | Определяет параметр. Дочерний элемент **\<appSettings>**. Обязательные атрибуты — **key** и **value**. |

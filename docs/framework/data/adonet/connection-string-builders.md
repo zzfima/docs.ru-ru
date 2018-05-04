@@ -1,27 +1,15 @@
 ---
-title: "Построители строк подключения"
-ms.custom: 
+title: Построители строк подключения
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 8434b608-c4d3-43d3-8ae3-6d8c6b726759
-caps.latest.revision: "3"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: beec0aba34bc38ba310aa87dadeeaa4b41c82649
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 01bbf726ffa8d1c595b1ef53df420431bf28560f
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="connection-string-builders"></a>Построители строк подключения
 В более ранних версиях [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]компиляции Проверка строк подключения с объединенными строковыми значениями не проводилась, чтобы автоматически созданный во время выполнения неверное ключевое слово <xref:System.ArgumentException>. Каждый из поставщиков данных платформы [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] поддерживал различный синтаксис ключевых слов строк соединения, что делало ручное построение допустимых строк соединения затруднительным. Для решения этой проблемы в [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 2.0 появились новые построители строк подключения для каждого поставщика данных платформы [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]. Каждый поставщик данных включает класс построителя строк соединения со строгой типизацией, наследованный от класса <xref:System.Data.Common.DbConnectionStringBuilder>. В следующей таблице перечислены поставщики данных платформы [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] и связанные с ними классы построителей строк соединения.  

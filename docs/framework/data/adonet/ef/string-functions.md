@@ -1,24 +1,12 @@
 ---
-title: "Строковые функции"
-ms.custom: 
+title: Строковые функции
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 338f0c26-8aee-43eb-bd1a-ec0849a376b9
-caps.latest.revision: "4"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: ba371840cf5c3b19ee232be0934557d87e7c343f
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 0faac7eb37a1405c38137ce9887cf7de4c36df3a
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="string-functions"></a>Строковые функции
 Поставщик данных для SQL Server (SqlClient) платформы .NET Framework предоставляет `String` функции, выполняющие операции над входными значениями с типом `String` и возвращающие результат с типом `String` или в виде числовых значений. Эти функции находятся в пространстве имен SqlServer, которое доступно при использовании SqlClient. Свойство пространства имен поставщика позволяет платформе Entity Framework узнать, какой префикс используется поставщиком для конкретных конструкций, таких как типы или функции.  
@@ -46,7 +34,7 @@ ms.lasthandoff: 01/17/2018
 |`SOUNDEX(expression)`|Возвращает четырехсимвольный код (SOUNDEX) для оценки степени сходства двух строк. **Аргументы**<br /><br /> `expression`: строковый тип в Юникоде или ASCII.<br /><br /> **Возвращаемое значение**<br /><br /> Строка `String` в ASCII. Четырехсимвольный код (SOUNDEX) — это строка, оценивающая степень сходства двух строк.<br /><br /> **Пример**<br /><br /> `Select SqlServer.SOUNDEX('Smith'), SqlServer.SOUNDEX('Smythe') FROM {1}`<br /><br /> **Возвращает**<br /><br /> `----- -----  S530  S530`|  
 |`SPACE(int_expression)`|Возвращает строку `String` повторяющихся пробелов в ASCII.<br /><br /> **Аргументы**<br /><br /> `int_expression`: значение типа `Int64` (не возвращается в SQL Server 2000) или `Int32`, указывающее количество пробелов.<br /><br /> **Возвращаемое значение**<br /><br /> Строка `String` в ASCII.<br /><br /> **Пример**<br /><br /> `SqlServer.SPACE(2)`|  
 |`STR(float_expression [, length [, decimal]])`|Возвращает строку `String` в кодировке ASCII, преобразованную из числовых данных.<br /><br /> **Аргументы**<br /><br /> `float _expression`: выражение приближенного числового типа данных `Double` с десятичной запятой.<br /><br /> `length`: числовое значение типа `Int32`, представляющее общую длину (необязательный параметр). Оно включает десятичную запятую, знак, цифры и пробелы. Значение по умолчанию — 10.<br /><br /> `decimal`: (необязательно) `Int32` , представляющий количество разрядов справа от десятичной запятой. количество знаков после десятичного разделителя должно быть не более 16. Если содержится более 16 знаков после десятичного разделителя, результат усекается до 16 знаков после десятичного разделителя.<br /><br /> **Возвращаемое значение**<br /><br /> Строка `String` в ASCII.<br /><br /> **Пример**<br /><br /> `SqlServer.STR(212.0)`|  
-|`STUFF(str_expression, start, length, str_expression_to_insert)`|Заменяет указанное число символов, начиная с определенной позиции, заданным набором символов в строковом выражении.<br /><br /> **Аргументы**<br /><br /> `str_expression`: строка (`String`) в Юникоде или ASCII.<br /><br /> `start:``Int64` (Не возвращается в SQL Server 2000) или `Int32` значение, определяющее место начала удаления и вставки.<br /><br /> `length`: значение типа `Int64` (не возвращаемое в SQL Server 2000) или `Int32`, которое определяет число удаляемых символов.<br /><br /> `str_expression_to_insert`: строка (`String`) в Юникоде или ASCII.<br /><br /> **Возвращаемое значение**<br /><br /> Строка (`String`) в Юникоде или ASCII.<br /><br /> **Пример**<br /><br /> `SqlServer.STUFF('abcd', 2, 2, 'zz')`|  
+|`STUFF(str_expression, start, length, str_expression_to_insert)`|Заменяет указанное число символов, начиная с определенной позиции, заданным набором символов в строковом выражении.<br /><br /> **Аргументы**<br /><br /> `str_expression`: строка (`String`) в Юникоде или ASCII.<br /><br /> `start:` `Int64` (Не возвращается в SQL Server 2000) или `Int32` значение, определяющее место начала удаления и вставки.<br /><br /> `length`: значение типа `Int64` (не возвращаемое в SQL Server 2000) или `Int32`, которое определяет число удаляемых символов.<br /><br /> `str_expression_to_insert`: строка (`String`) в Юникоде или ASCII.<br /><br /> **Возвращаемое значение**<br /><br /> Строка (`String`) в Юникоде или ASCII.<br /><br /> **Пример**<br /><br /> `SqlServer.STUFF('abcd', 2, 2, 'zz')`|  
 |`SUBSTRING(str_expression, start, length)`|Возвращает часть выражения типа `String`.<br /><br /> **Аргументы**<br /><br /> `str_expression`: выражение типа `String` (в Юникоде или ASCII) или типа `Binary`.<br /><br /> `start`: значение типа `Int64` (не возвращается в SQL Server 2000) или `Int32`, указывающее место, с которого начинается подстрока. Значение 1 соответствует первому символу строки.<br /><br /> `length`: значение типа `Int64` (не возвращается в SQL Server 2000) или `Int32`, которое определяет, сколько символов аргумента expression будет возвращено.<br /><br /> **Возвращаемое значение**<br /><br /> Значение типа `String` (ASCII или Юникод) или `Binary`.<br /><br /> **Пример**<br /><br /> `SqlServer.SUBSTRING('abcd', 2, 2)`|  
 |`UNICODE(expression)`|Возвращает целочисленное значение первого символа заданного выражения в стандарте Юникод.<br /><br /> **Аргументы**<br /><br /> `expression`: строка (`String`) в Юникоде.<br /><br /> **Возвращаемое значение**<br /><br /> Объект `Int32`.<br /><br /> **Пример**<br /><br /> `SqlServer.UNICODE('a')`|  
 |`UPPER(expression)`|Возвращает выражение типа `String` после преобразования символьных данных из нижнего регистра в прописные буквы.<br /><br /> **Аргументы**<br /><br /> `expression`: выражение строкового типа в Юникоде или ASCII.<br /><br /> **Возвращаемое значение**<br /><br /> Тип данных `String` в кодировке ASCII или Юникоде.<br /><br /> **Пример**<br /><br /> `SqlServer.UPPER('AbB')`|  

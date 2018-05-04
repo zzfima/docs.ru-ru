@@ -1,13 +1,6 @@
 ---
-title: "&lt;System.Diagnostics&gt; элемент"
-ms.custom: 
+title: '&lt;System.Diagnostics&gt; элемент'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#system.diagnostics
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics
@@ -15,16 +8,14 @@ helpviewer_keywords:
 - <system.diagnostics> element
 - system.diagnostics element
 ms.assetid: 3f348f42-fa72-4ff2-aa1c-bb9eecad4bb2
-caps.latest.revision: "17"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: e76f5ef38e29a1afc9f438abb37239d109876cc5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 090c296ba84043445364b350c8b74587c35b5940
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltsystemdiagnosticsgt-element"></a>&lt;System.Diagnostics&gt; элемент
 Задает прослушиватели трассировки, собирающие, хранящие и маршрутизирующие сообщения, а также уровень, на котором установлен ключ трассировки.  
@@ -47,7 +38,7 @@ ms.lasthandoff: 12/22/2017
   
 ### <a name="child-elements"></a>Дочерние элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
 |[\<assert>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/assert-element.md)|Определяет, должно ли выводиться окно сообщения при вызове метода <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType>. Кроме того, задает имя файла, в который записываются сообщения.|  
 |[\<performanceCounters>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/performancecounters-element.md)|Задает размер глобальной памяти, совместно используемой счетчиками производительности.|  

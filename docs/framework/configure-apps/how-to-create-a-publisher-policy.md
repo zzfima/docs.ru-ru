@@ -1,29 +1,20 @@
 ---
-title: "Практическое руководство. Создание политики издателя"
-ms.custom: 
+title: Практическое руководство. Создание политики издателя
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - publisher policy assembly
 - publisher policy files
 - GAC (global assembly cache), publisher policy assembly
 - global assembly cache, publisher policy assembly
 ms.assetid: 8046bc5d-2fa9-4277-8a5e-6dcc96c281d9
-caps.latest.revision: "15"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 4ccd490f6d31ad1d20128497e5115147eddb3df4
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 91971e4d41c3a54fa72ae73a3655dab650019676
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-create-a-publisher-policy"></a>Практическое руководство. Создание политики издателя
 Поставщики сборок можно указать, что приложений следует использовать более новой версии сборки, включая файл политики издателя с обновленной сборкой. Файл политики издателя задает перенаправление сборки и параметры базового каталога кода и используется тот же формат в файле конфигурации приложения. Файл политики издателя компилируется в сборку и помещен в глобальном кэше сборок.  
@@ -64,7 +55,7 @@ ms.lasthandoff: 01/19/2018
   
 1.  В командной строке введите следующую команду:  
   
-     **al /link:** *publisherPolicyFile* **/out:** *publisherPolicyAssemblyFile* **/keyfile:** *keyPairFile* **/platform:** *processorArchitecture*  
+     **/ LINK AL:** *publisherPolicyFile* **/out:** *publisherPolicyAssemblyFile* **/keyfile:**  *keyPairFile* **/Platform:** *processorArchitecture*  
   
      В этой команде:  
   
@@ -72,7 +63,7 @@ ms.lasthandoff: 01/19/2018
   
     -   *PublisherPolicyAssemblyFile* аргумент является именем сборка политики издателя, полученный в результате этой команды. Имя файла сборки должно иметь формат:  
   
-         **политика.** *majorNumber* **.** *minorNumber* **.** *mainAssemblyName* **.dll**  
+         **Политика.** *majorNumber* **.** *minorNumber* **.** *mainAssemblyName* **.dll**  
   
     -   *KeyPairFile* аргумент — имя файла, содержащего пару ключей. Необходимо подписать сборку и сборка политики издателя с ту же пару ключей.  
   

@@ -1,13 +1,7 @@
 ---
 title: Расширение метаданных с помощью атрибутов
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - metadata, extending
 - attributes [.NET Framework], metadata
@@ -18,18 +12,13 @@ helpviewer_keywords:
 - runtime, attributes
 - extending metadata
 ms.assetid: 30386922-1e00-4602-9ebf-526b271a8b87
-caps.latest.revision: 12
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: ae399e5213c95b29736c54fcc48ac45a778ba25b
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 2a31082604048e71ebc7581b36857a8bfbd333c2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="extending-metadata-using-attributes"></a>Расширение метаданных с помощью атрибутов
 Среда CLR позволяет добавлять описательные объявления со свойствами ключевого слова, называемые атрибутами, для комментирования элементов программирования, таких как типы, поля, методы и свойства. При компиляции кода для среды выполнения он преобразуется в MSIL-код и вместе с метаданными, создаваемыми компилятором, помещается в переносимый исполняемый файл (PE). Атрибуты позволяют поместить в метаданные дополнительные описательные сведения, которые можно извлечь с помощью служб отражения среды выполнения. Компилятор создает атрибуты при объявлении экземпляров специальных классов, производных от <xref:System.Attribute?displayProperty=nameWithType>.  

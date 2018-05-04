@@ -1,29 +1,19 @@
 ---
-title: "&lt;bypassTrustedAppStrongNames&gt; элемент"
-ms.custom: 
+title: '&lt;bypassTrustedAppStrongNames&gt; элемент'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - strong-name bypass feature
 - bypassTrustedAppStrongNames element
 - strong-named assemblies, loading into trusted application domains
 - <bypassTrustedAppStrongNames> element
 ms.assetid: 71b2ebf6-3843-41e2-ad52-ffa5cd083a40
-caps.latest.revision: "18"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0343aef083076249325b9577f90964d066867f24
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6988be28e3129748ee7f7996a66c728ccde3c70b
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltbypasstrustedappstrongnamesgt-element"></a>&lt;bypassTrustedAppStrongNames&gt; элемент
 Указывает, следует ли пропустить проверку строгих имен для сборок с полным доверием, которые загружаются с полным доверием <xref:System.AppDomain>.  
@@ -46,11 +36,11 @@ ms.lasthandoff: 12/22/2017
   
 |Атрибут|Описание|  
 |---------------|-----------------|  
-|`enabled`|Обязательный атрибут.<br /><br /> Указывает, включена ли функция пропуска, позволяющая избежать проверки строгих имен для сборок с полным доверием. Если эта функция включена, строгие имена не проверяются на правильность после загрузки сборки. Значение по умолчанию — `true`.|  
+|`enabled`|Обязательный атрибут.<br /><br /> Указывает, включена ли функция пропуска, позволяющая избежать проверки строгих имен для сборок с полным доверием. Если эта функция включена, строгие имена не проверяются на правильность после загрузки сборки. Значение по умолчанию — `true`.|  
   
 ## <a name="enabled-attribute"></a>Атрибут enabled  
   
-|Значение|Описание:|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |`true`|Подписей строгих имен для сборок с полным доверием не проверяются при загрузке в полностью доверенных сборок <xref:System.AppDomain>. Это значение по умолчанию.|  
 |`false`|Подписей строгих имен для сборок с полным доверием проверяются при загрузке в полностью доверенных сборок <xref:System.AppDomain>. Подпись со строгим именем проверяется только правильность подписи; не сравнивается с другим строгим именем для сопоставления.|  

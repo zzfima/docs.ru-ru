@@ -1,21 +1,22 @@
 ---
-title: "Практическое руководство. Инициализация объектов с помощью инициализатора объектов (Руководство по программированию на C#)."
+title: Практическое руководство. Инициализация объектов с помощью инициализатора объектов (Руководство по программированию на C#).
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - object initializers [C#], how to use
 - objects [C#], initializing
 ms.assetid: 4b75ebb2-2e29-43de-929c-d736a8f27ce6
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: d1e65f8519062f6bceeb466a3b72c5719c0918f7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 8e9130983aabe991660ff4cca90b33609f86c158
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="how-to-initialize-objects-by-using-an-object-initializer-c-programming-guide"></a>Практическое руководство. Инициализация объектов с помощью инициализатора объектов (Руководство по программированию на C#).
 Инициализаторы объектов можно использовать для декларативной инициализации объектов типов без явного вызова конструктора для типа.  
@@ -35,7 +36,7 @@ ms.lasthandoff: 11/21/2017
  [!code-csharp[csProgGuideLINQ#36](../../../csharp/programming-guide/arrays/codesnippet/CSharp/how-to-initialize-objects-by-using-an-object-initializer_2.cs)]  
   
 ## <a name="compiling-the-code"></a>Компиляция кода  
- Чтобы выполнить этот код, скопируйте и вставьте класс в проект консольного приложения Visual C#, которое было создано в [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)].  
+ Чтобы выполнить этот код, скопируйте и вставьте класс в проект консольного приложения Visual C#, созданный в Visual Studio.  
   
 ## <a name="see-also"></a>См. также  
  [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  

@@ -1,28 +1,17 @@
 ---
 title: Потокобезопасные коллекции
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - thread-safe collections, overview
 ms.assetid: 2e7ca21f-786c-4367-96be-0cf3f3dcc6bd
-caps.latest.revision: 24
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 5850335a13960df9094c1a6276799de043eb28f3
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 7e0d5e53b255ab59eabace01e69784d88aec8aca
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="thread-safe-collections"></a>Потокобезопасные коллекции
 В [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] введено пространство имен <xref:System.Collections.Concurrent?displayProperty=nameWithType>, включающее несколько потокобезопасных и масштабируемых классов коллекций. Несколько потоков могут безопасно и эффективно добавлять и удалять элементы из таких коллекций, не требуя при этом дополнительной синхронизации в пользовательском коде. При написании нового кода следует использовать классы параллельных коллекций каждый раз, когда коллекция будет записывать одновременно для нескольких потоков. Если выполняется только чтение из общей коллекции, вы можете использовать классы в пространстве имен <xref:System.Collections.Generic?displayProperty=nameWithType>. Мы рекомендуем использовать классы коллекций версии 1.0 только в том случае, если вам нужна среда выполнения .NET Framework до версии 1.1 включительно.  

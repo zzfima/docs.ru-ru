@@ -1,33 +1,19 @@
 ---
 title: '&lt;msmqIntegrationBinding&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - msmqIntegrationBinding Element
 ms.assetid: edf277f3-e3bf-4ed8-9f55-83b5788430a7
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 0715952077db755386a0381f68ccc6e33705a031
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: bae6b4e6bd11074b47c55bf310215f296394c90d
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltmsmqintegrationbindinggt"></a>&lt;msmqIntegrationBinding&gt;
 Определяет привязку, предоставляющую поддержку очередей путем маршрутизации сообщений с помощью MSMQ.  
   
- \<system.ServiceModel>  
+ \<система. ServiceModel >  
 \<привязки >  
 msmqIntegrationBinding  
   
@@ -97,15 +83,15 @@ msmqIntegrationBinding
   
 ### <a name="child-elements"></a>Дочерние элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
 |[\<Безопасность >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-msmqintegrationbinding.md)|Определяет параметры безопасности привязки. Это элемент типа <xref:System.ServiceModel.Configuration.MsmqIntegrationSecurityElement>.|  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
-|[\<bindings>](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|Этот элемент содержит коллекцию стандартных и пользовательских привязок.|  
+|[\<привязки >](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|Этот элемент содержит коллекцию стандартных и пользовательских привязок.|  
   
 ## <a name="remarks"></a>Примечания  
  Этот элемент привязки может использоваться для приложений Windows Communication Foundation (WCF) можно отправлять и получать сообщения от существующих приложений MSMQ, использующих COM, собственные API-интерфейсы MSMQ или типы, определенные в <xref:System.Messaging?displayProperty=nameWithType> пространства имен можно можно использовать этот элемент конфигурации для указания способа адресации очереди, передачи гарантий ли постоянного хранения сообщений и как следует защиты и проверки подлинности сообщений. Дополнительные сведения см. в разделе [как: обмена сообщениями с конечными точками WCF и приложениями очереди сообщений](../../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md).  

@@ -1,33 +1,21 @@
 ---
 title: '&lt;resolver&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 0c00200c-f135-4e5c-a024-76b72bcbc021
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: db95b6f9a988c133a6b4afd55849fc6fb650c24c
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: f29c34f53a8bdaee4b30c72bb5d764ae3935fe7a
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltresolvergt"></a>&lt;resolver&gt;
 Указывает распознаватель одноранговых узлов, используемый для распознавания идентификатора сетки с IP-адресами в набор адресов одноранговых узлов, которые представляют несколько узлов, входящих в сетку.  
   
- \<system.ServiceModel>  
+ \<система. ServiceModel >  
 \<привязки >  
 \<netPeerBinding >  
 \<Привязка >  
-\<resolver>  
+\<Сопоставитель >  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -49,13 +37,13 @@ ms.lasthandoff: 01/19/2018
   
 ### <a name="child-elements"></a>Дочерние элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
-|[\<headers>](../../../../../docs/framework/configure-apps/file-schema/wcf/headers.md)|Задает параметры службы пользовательского распознавателя одноранговых узлов.|  
+|[\<заголовки >](../../../../../docs/framework/configure-apps/file-schema/wcf/headers.md)|Задает параметры службы пользовательского распознавателя одноранговых узлов.|  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
 |[\<Привязка >](../../../../../docs/framework/misc/binding.md)|Определяет все возможности [ \<netPeerTcpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/netpeertcpbinding.md).|  
   

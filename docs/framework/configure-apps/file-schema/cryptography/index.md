@@ -1,14 +1,6 @@
 ---
 title: Схема параметров криптографии
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - configuration schema [.NET Framework], cryptography
 - elements [.NET Framework], cryptography
@@ -18,17 +10,14 @@ helpviewer_keywords:
 - configuration sections [.NET Framework]
 - configuration settings [.NET Framework], cryptography
 ms.assetid: 1f55050a-b2a3-4868-a3c0-da20826150f3
-caps.latest.revision: 10
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload:
-- dotnet
-ms.openlocfilehash: 6b6d9eeacb38531ced5768f29bf26de3c9294b71
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b7f41bc477f8d8095bf73859c02b7e2fc2443c14
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cryptography-settings-schema"></a>Схема параметров криптографии
 Схема параметров шифрования содержит элементы, с помощью которых можно сопоставить понятные имена алгоритмов с классами, реализующими алгоритмы шифрования.  
@@ -51,7 +40,7 @@ ms.lasthandoff: 12/22/2017
   
  [**\<oidEntry>**](../../../../../docs/framework/configure-apps/file-schema/cryptography/oidentry-element.md)  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
 |[**\<cryptoClasses**>](../../../../../docs/framework/configure-apps/file-schema/cryptography/cryptoclasses-element.md)|Содержит список криптографических классов, сопоставленных с понятными именами, указанными в элементе **\<nameEntry>**.|  
 |[**\<cryptoClass**>](../../../../../docs/framework/configure-apps/file-schema/cryptography/cryptoclass-element.md)|Содержит криптографический класс, сопоставленный с понятным именем, указанным в элементе **\<nameEntry>**.|  
