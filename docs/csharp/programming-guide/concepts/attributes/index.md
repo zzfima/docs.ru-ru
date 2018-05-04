@@ -1,22 +1,12 @@
 ---
 title: Атрибуты (C#)
-ms.custom: ''
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-csharp
-ms.topic: article
 ms.assetid: f148f13f-a0d5-4f22-9c87-4b73d5dde270
-caps.latest.revision: 3
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: f9fc23cf7afbd28f0c9ae438cbce298cbf362fbd
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: a7e64c29ab8ca56a47ec6554ebc316f4922d3aca
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="attributes-c"></a>Атрибуты (C#)
 Атрибуты предоставляют мощное средство для связывания метаданных или декларативной информации с кодом (сборки, типы, методы, свойства и т. д.). Связав атрибут связан с сущностью программы, вы можете проверять этот атрибут во время выполнения, используя технику *отражения*. Подробнее см. в разделе [Отражение (C#)](../../../../csharp/programming-guide/concepts/reflection.md).  
@@ -107,10 +97,10 @@ void TraceMethod()
 |`assembly`|Вся сборка|  
 |`module`|Модуль текущей сборки|  
 |`field`|Поле в классе или структуре|  
-|`event`|Событие|  
+|`event`|событие|  
 |`method`|Метод либо методы доступа к свойствам `get` и `set`|  
 |`param`|Параметры метода или параметры метода доступа `set`|  
-|`property`|Свойство|  
+|`property`|Свойство.|  
 |`return`|Возвращаемое значение метода, индексатора свойства или метода доступа к свойствам `get`|  
 |`type`|Структура, класс, интерфейс, перечисление или делегат|  
   
@@ -145,9 +135,9 @@ int Method3() { return 0; }
 ## <a name="common-uses-for-attributes"></a>Популярные методы применения атрибутов  
  В следующем списке перечислены несколько распространенных применений для атрибутов.  
   
--   Указание для методов в веб-службах атрибута `WebMethod`, который обозначает, что метод должен вызываться по протоколу SOAP. Для получения дополнительной информации см. <xref:System.Web.Services.WebMethodAttribute>.  
+-   Указание для методов в веб-службах атрибута `WebMethod`, который обозначает, что метод должен вызываться по протоколу SOAP. Дополнительные сведения см. в разделе <xref:System.Web.Services.WebMethodAttribute>.  
   
--   Описание способов упаковки параметров методов при взаимодействии с машинным кодом. Для получения дополнительной информации см. <xref:System.Runtime.InteropServices.MarshalAsAttribute>.  
+-   Описание способов упаковки параметров методов при взаимодействии с машинным кодом. Дополнительные сведения см. в разделе <xref:System.Runtime.InteropServices.MarshalAsAttribute>.  
   
 -   Описание свойств COM для классов, методов и интерфейсов.  
   

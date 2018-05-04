@@ -1,24 +1,14 @@
 ---
 title: '&lt;wsFederation&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: c537f770-68bd-4f82-96ad-6424ad91369f
-caps.latest.revision: "8"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 7fd4e12d77380942204d37b59644c46aed3a0148
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: de7be463403b675e5f03786e85807e6685348680
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltwsfederationgt"></a>&lt;wsFederation&gt;
 Обеспечивает настройку для <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (WSFAM).  
@@ -58,7 +48,7 @@ ms.lasthandoff: 12/22/2017
   
 ### <a name="attributes"></a>Атрибуты  
   
-|Атрибут|Описание:|  
+|Атрибут|Описание|  
 |---------------|-----------------|  
 |authenticationType|URI, указывающий тип проверки подлинности. Задает для параметра wauth запрос входа WS-Federation. Необязательный. Значение по умолчанию — пустая строка, которая указывает, что параметр wauth не включены в запрос.|  
 |актуальность|Требуемый максимальный срок действия запросов проверки подлинности в минутах. Задает для параметра wfresh запрос входа WS-Federation. Необязательный. По умолчанию используется значение ноль. Необязательный. **Предупреждение:** в следующей версии .NET Framework 4.5 `freshness` атрибута будет иметь тип `xs:string` будет иметь значение по умолчанию `null`.|  
@@ -82,7 +72,7 @@ ms.lasthandoff: 12/22/2017
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
 |[\<federationConfiguration>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/federationconfiguration.md)|Содержит параметры, настроенные <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (WSFAM) и <xref:System.IdentityModel.Services.SessionAuthenticationModule> (SAM).|  
   

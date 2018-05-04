@@ -1,24 +1,12 @@
 ---
-title: "&lt;add&gt; для &lt;filters&gt;"
-ms.custom: 
+title: '&lt;add&gt; для &lt;filters&gt;'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: e3bf437c-dd99-49f3-9792-9a8721e6eaad
-caps.latest.revision: "4"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b1ca0d5ae73d01e5bbb719f7bcc9a3f5a19fc291
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2a26a94c01fdb04b8a9e2d381a28cc909bbdac8f
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltaddgt-of-ltfiltersgt"></a>&lt;add&gt; для &lt;filters&gt;
 Фильтр XPath, задающий тип сообщений для записи в журнал.  
@@ -51,7 +39,7 @@ ms.lasthandoff: 12/22/2017
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
 |[\<Фильтры >](../../../../../docs/framework/configure-apps/file-schema/wcf/filters.md)|Содержит коллекцию фильтров XPath, используемых для контроля типов регистрируемых сообщений.|  
   

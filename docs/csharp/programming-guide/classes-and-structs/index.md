@@ -1,12 +1,7 @@
 ---
 title: Классы и структуры (Руководство по программированию в C#)
 description: Описание использования классов и структур в C#.
-keywords: классы (C#), структуры (C#), структуры (struct) (C#), ссылочные типы (C#), типы значений (C#)
 ms.date: 01/17/2016
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - structs [C#], about structs
 - classes [C#], overview
@@ -15,14 +10,11 @@ helpviewer_keywords:
 - objects [C#]
 - C# language, classes
 ms.assetid: cc39dbda-8754-423e-b5b1-16a1db0734c0
-caps.latest.revision: 48
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 8c4cbbdd0384c0c0e97d6a7c655e798d0562d9a8
-ms.sourcegitcommit: 7e99f66ef09d2903e22c789c67ff5a10aa953b2f
+ms.openlocfilehash: 801f8e64bf64ee55651521ba53915000cc326303
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="classes-and-structs-c-programming-guide"></a>Классы и структуры (Руководство по программированию в C#)
 Классы и структуры являются двумя основными конструкциями системы общих типов CTS, используемой в платформе .NET Framework. Оба они являются структурами данных, которые инкапсулируют набор данных и поведений в одной логической сущности. Данные и поведение являются *членами* класса или структуры. К ним относятся методы, свойства, события и другие элементы, которые описаны далее в этой статье.  
@@ -47,7 +39,7 @@ ms.lasthandoff: 11/18/2017
   
  Дополнительные сведения о классах вы найдете в статьях [Классы](../../../csharp/programming-guide/classes-and-structs/classes.md) и [Объекты](../../../csharp/programming-guide/classes-and-structs/objects.md).  
   
-### <a name="members"></a>Члены  
+### <a name="members"></a>Участники  
  Все методы, поля, константы, свойства и события должны объявляться внутри типа. Совокупно они называются *членами* типа. В C# не существует глобальных переменных или методов, как в некоторых других языках. Даже точка входа программы, то есть метод `Main`, должна объявляться внутри класса или структуры. Ниже приведен полный список возможных членов, которые можно объявить в классе или структуре.  
   
 -   [Поля](../../../csharp/programming-guide/classes-and-structs/fields.md)  
@@ -78,7 +70,7 @@ ms.lasthandoff: 11/18/2017
   
  Классы могут быть объявлены как [абстрактные](../../../csharp/language-reference/keywords/abstract.md). Это означает, что один или несколько их членов не имеют реализации. Из абстрактных классов нельзя напрямую создать экземпляры. Они выполняют роль базовых классов для других классов, которые предоставляют реализацию недостающих членов. Также классы можно объявить [запечатанными](../../../csharp/language-reference/keywords/sealed.md), чтобы запретить наследование от них других классов. Дополнительные сведения см. в статье [Абстрактные и запечатанные классы и члены классов](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md).  
   
-### <a name="interfaces"></a>Интерфейсы  
+### <a name="interfaces"></a>интерфейсов,  
  Классы и структуры могут наследовать несколько интерфейсов. Наследование интерфейса означает, что тип реализует все методы, определенные в этом интерфейсе. Дополнительные сведения см. в статье [Интерфейсы](../../../csharp/programming-guide/interfaces/index.md).  
   
 ### <a name="generic-types"></a>Универсальные типы  

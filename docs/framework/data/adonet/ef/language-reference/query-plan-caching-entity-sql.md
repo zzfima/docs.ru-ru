@@ -1,24 +1,12 @@
 ---
-title: "Кэширование плана запроса (Entity SQL)"
-ms.custom: 
+title: Кэширование плана запроса (Entity SQL)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 90b0c685-5ef2-461b-98b4-c3c0a2b253c7
-caps.latest.revision: "2"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: f3ff908102671e2b22cb3ebb5af55e86bd791c43
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 0e00d7f9382fca2af630a8e1d50a5cde5178da05
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="query-plan-caching-entity-sql"></a>Кэширование плана запроса (Entity SQL)
 При каждой попытке выполнения запроса конвейер запросов обращается в кэш планов запросов, чтобы определить, что конкретный запрос уже скомпилирован и доступен. Если это так, то кэшированный план используется повторно вместо построения нового плана. Если совпадение в кэше планов запросов не обнаружено, запрос компилируется и кэшируется. Запрос идентифицируется его текстом [!INCLUDE[esql](../../../../../../includes/esql-md.md)] и коллекцией параметров (имен и типов). Все текстовые сравнения выполняются с учетом регистра.  

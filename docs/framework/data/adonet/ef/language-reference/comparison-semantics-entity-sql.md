@@ -1,26 +1,12 @@
 ---
-title: "Семантика сравнения (Entity SQL)"
-ms.custom: 
+title: Семантика сравнения (Entity SQL)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: b36ce28a-2fe4-4236-b782-e5f7c054deae
-caps.latest.revision: 
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload:
-- dotnet
-ms.openlocfilehash: e20d47e0ae97067d2dcafcf929f717598d4e3e80
-ms.sourcegitcommit: 96cc82cac4650adfb65ba351506d8a8fbcd17b5c
+ms.openlocfilehash: 2184f86ee43f88b0c4cfc1b96e42e2486c17fe5f
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="comparison-semantics-entity-sql"></a>Семантика сравнения (Entity SQL)
 Выполнение любого следующего оператора [!INCLUDE[esql](../../../../../../includes/esql-md.md)] подразумевает сравнение типов экземпляров.  
@@ -81,13 +67,13 @@ ms.lasthandoff: 02/19/2018
   
 |**Type**|**=**<br /><br /> **!=**|**GROUP BY**<br /><br /> **DISTINCT**|**UNION**<br /><br /> **INTERSECT**<br /><br /> **EXCEPT**<br /><br /> **SET**<br /><br /> **OVERLAPS**|**IN**|**<   <=**<br /><br /> **>   >=**|**ORDER BY**|**ИМЕЕТ ЗНАЧЕНИЕ NULL**<br /><br /> **НЕ ИМЕЕТ ЗНАЧЕНИЕ NULL**|  
 |-|-|-|-|-|-|-|-|  
-|Тип сущности|Ref<sup>1</sup>|Все свойства<sup>2</sup>|Все свойства<sup>2</sup>|Все свойства<sup>2</sup>|Throw<sup>3</sup>|Throw<sup>3</sup>|Ref<sup>1</sup>|  
-|Сложный тип|Throw<sup>3</sup>|Throw<sup>3</sup>|Throw<sup>3</sup>|Throw<sup>3</sup>|Throw<sup>3</sup>|Throw<sup>3</sup>|Throw<sup>3</sup>|  
-|Строка|Все свойства<sup>4</sup>|Все свойства<sup>4</sup>|Все свойства<sup>4</sup>|Throw<sup>3</sup>|Throw<sup>3</sup>|Все свойства<sup>4</sup>|Throw<sup>3</sup>|  
+|Тип сущности|Ref<sup>1</sup>|Все свойства<sup>2</sup>|Все свойства<sup>2</sup>|Все свойства<sup>2</sup>|Исключение<sup>3</sup>|Исключение<sup>3</sup>|Ref<sup>1</sup>|  
+|Сложный тип|Исключение<sup>3</sup>|Исключение<sup>3</sup>|Исключение<sup>3</sup>|Исключение<sup>3</sup>|Исключение<sup>3</sup>|Исключение<sup>3</sup>|Исключение<sup>3</sup>|  
+|Строка|Все свойства<sup>4</sup>|Все свойства<sup>4</sup>|Все свойства<sup>4</sup>|Исключение<sup>3</sup>|Исключение<sup>3</sup>|Все свойства<sup>4</sup>|Исключение<sup>3</sup>|  
 |Тип-примитив|Зависит от поставщика|Зависит от поставщика|Зависит от поставщика|Зависит от поставщика|Зависит от поставщика|Зависит от поставщика|Зависит от поставщика|  
-|Мультинабор|Throw<sup>3</sup>|Throw<sup>3</sup>|Throw<sup>3</sup>|Throw<sup>3</sup>|Throw<sup>3</sup>|Throw<sup>3</sup>|Throw<sup>3</sup>|  
-|Ссылочный|Yes<sup>5</sup>|Yes<sup>5</sup>|Yes<sup>5</sup>|Yes<sup>5</sup>|Throw|Throw|Yes<sup>5</sup>|  
-|Ассоциация<br /><br /> type|Throw<sup>3</sup>|Throw|Throw|Throw|Throw<sup>3</sup>|Throw<sup>3</sup>|Throw<sup>3</sup>|  
+|Мультинабор|Исключение<sup>3</sup>|Исключение<sup>3</sup>|Исключение<sup>3</sup>|Исключение<sup>3</sup>|Исключение<sup>3</sup>|Исключение<sup>3</sup>|Исключение<sup>3</sup>|  
+|Ссылочный|Да<sup>5</sup>|Да<sup>5</sup>|Да<sup>5</sup>|Да<sup>5</sup>|Throw|Throw|Да<sup>5</sup>|  
+|Ассоциация<br /><br /> type|Исключение<sup>3</sup>|Throw|Throw|Throw|Исключение<sup>3</sup>|Исключение<sup>3</sup>|Исключение<sup>3</sup>|  
   
  <sup>1</sup>ссылки на тип экземпляров данной сущности неявно сравниваются, как показано в следующем примере:  
   

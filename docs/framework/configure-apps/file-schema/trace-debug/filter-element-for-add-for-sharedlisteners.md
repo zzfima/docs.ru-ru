@@ -1,14 +1,6 @@
 ---
-title: "&lt;Фильтр&gt; элемент для &lt;добавить&gt; для &lt;sharedListeners&gt;"
-ms.custom: 
+title: '&lt;Фильтр&gt; элемент для &lt;добавить&gt; для &lt;sharedListeners&gt;'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sharedListeners/add/filter
 helpviewer_keywords:
@@ -18,17 +10,14 @@ helpviewer_keywords:
 - filters, trace listeners
 - trace listeners, filters
 ms.assetid: 7d4e7faa-2e4e-4379-ac76-f6cd7f2f8fac
-caps.latest.revision: 
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload:
-- dotnet
-ms.openlocfilehash: bc3f97619c8ec28a61a9a51b431581383558a7d1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3bbba1c805c6b300f7cf7b3d9112cde9df7607a8
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltfiltergt-element-for-ltaddgt-for-ltsharedlistenersgt"></a>&lt;Фильтр&gt; элемент для &lt;добавить&gt; для &lt;sharedListeners&gt;
 Добавляет фильтр к прослушивателю в коллекции `sharedListeners`.  
@@ -51,7 +40,7 @@ ms.lasthandoff: 12/22/2017
   
 ### <a name="attributes"></a>Атрибуты  
   
-|Атрибут|Описание:|  
+|Атрибут|Описание|  
 |---------------|-----------------|  
 |**type**|Обязательный атрибут.<br /><br /> Задает тип фильтра. Можно использовать полное имя типа (в формате <xref:System.Type.FullName%2A?displayProperty=nameWithType> свойства), или можно использовать полное имя, включая сведения о сборке (в формате <xref:System.Type.AssemblyQualifiedName%2A?displayProperty=nameWithType> свойство). Сведения о создании полное имя типа см. в разделе [Указание полных имен типов](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md).|  
 |**initializeData**|Необязательный атрибут.<br /><br /> Строка, передаваемая в конструктор для заданного класса.|  

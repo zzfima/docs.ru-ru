@@ -1,14 +1,6 @@
 ---
 title: Ресурсы в приложениях для настольных систем
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-bcl
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - deploying applications [.NET Framework], resources
 - application resources
@@ -18,17 +10,13 @@ helpviewer_keywords:
 - packaging application resources
 - localizing resources
 ms.assetid: 8ad495d4-2941-40cf-bf64-e82e85825890
-caps.latest.revision: 19
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: d8fa1521a5516a4be18352c1bce6abf93e40287f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 023099adeeebf21b7dba631bde75332524eb0cc3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="resources-in-desktop-apps"></a>Ресурсы в приложениях для настольных систем
 Практически любое высококачественное приложение должно использовать ресурсы. Ресурс представляет собой любые неисполняемые данные, которые логически развертываются вместе с приложением. Ресурсы могут отображаться в приложении в виде сообщений об ошибках либо как часть интерфейса пользователя. Ресурсы могут содержать данные различных видов, включая символьные строки, изображения и объекты. (Для записи сохраняемых объектов в файл ресурсов объекты должны быть сериализуемыми.) Благодаря хранению данных в файле ресурсов сами данные можно изменять без перекомпиляции всего приложения. Это также позволяет хранить данные в одном месте и исключает необходимость в использовании жестко закодированных данных, которые хранятся в нескольких местах.  
@@ -62,7 +50,7 @@ ms.lasthandoff: 12/22/2017
   
  Дополнительные сведения об указании языка и региональных параметров для пользовательского интерфейса см. в разделах справки <xref:System.Globalization.CultureInfo> и <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=nameWithType>.  
   
- Ресурсы для текущего или определенного языка и региональных параметров пользовательского интерфейса можно получить с помощью класса <xref:System.Resources.ResourceManager?displayProperty=nameWithType>. Хотя класс <xref:System.Resources.ResourceManager> чаще всего используется для получения ресурсов в настольных приложениях, пространство имен приложение <xref:System.Resources?displayProperty=nameWithType> содержит дополнительные типы, которые также можно использовать для получения ресурсов. К ним относятся следующие методы.  
+ Ресурсы для текущего или определенного языка и региональных параметров пользовательского интерфейса можно получить с помощью класса <xref:System.Resources.ResourceManager?displayProperty=nameWithType>. Хотя класс <xref:System.Resources.ResourceManager> чаще всего используется для получения ресурсов в настольных приложениях, пространство имен приложение <xref:System.Resources?displayProperty=nameWithType> содержит дополнительные типы, которые также можно использовать для получения ресурсов. Сюда входит следующее.  
   
 -   Класс <xref:System.Resources.ResourceReader>, который позволяет перечислять ресурсы, встроенные в сборку или хранящиеся в отдельном двоичном RESOURCES-файле. Это удобно, когда точные имена ресурсов, доступных во время выполнения, неизвестны.  
   
@@ -75,7 +63,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="see-also"></a>См. также  
  <xref:System.Globalization.CultureInfo>  
  <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=nameWithType>  
- [.NET Framework Application Essentials](../../../docs/standard/application-essentials.md) (Основные сведения о приложениях .NET Framework)  
+ [Основные сведения о приложениях .NET Framework](../../../docs/standard/application-essentials.md)  
  [Создание файлов ресурсов](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md)  
  [Упаковка и развертывание ресурсов](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)  
  [Создание вспомогательных сборок](../../../docs/framework/resources/creating-satellite-assemblies-for-desktop-apps.md)  

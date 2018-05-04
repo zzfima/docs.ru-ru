@@ -1,21 +1,20 @@
 ---
-title: "Скрипты dotnet-install"
-description: "Сведения о скриптах dotnet-install, которые служат для установки средств CLI .NET Core и общей среды выполнения."
-keywords: "dotnet-install, скрипты dotnet-install, .NET Core"
+title: Скрипты dotnet-install
+description: Сведения о скриптах dotnet-install, которые служат для установки средств CLI .NET Core и общей среды выполнения.
 author: blackdwarf
 ms.author: mairaw
 ms.date: 09/11/2017
-ms.topic: article
-ms.prod: .net-core
+ms.topic: conceptual
+ms.prod: dotnet-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
-ms.assetid: b64e7e6f-ffb4-4fc8-b43b-5731c89479c2
-ms.workload: dotnetcore
-ms.openlocfilehash: bc38ca7b9f00c6c252ff4963c42519a64c456b43
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: 96336df087ea2ad01584010f0715ad31e079b663
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="dotnet-install-scripts-reference"></a>Справка по скриптам dotnet-install
 
@@ -39,8 +38,8 @@ Mac OS и Linux:
 
 Мы рекомендуем использовать стабильную версию, размещенную на [основном веб-сайте .NET Core](https://dot.net). Прямые пути к скриптам:
 
-* https://dot.net/v1/dotnet-install.sh (bash, UNIX)
-* https://dot.net/v1/dotnet-install.ps1 (Powershell, Windows)
+* https://dot.net/v1/dotnet-install.sh (Bash, UNIX);
+* https://dot.net/v1/dotnet-install.ps1 (Powershell, Windows).
 
 Их основное назначение — помощь в сценариях автоматизации и при установках без прав администратора. Существует два скрипта. Один — скрипт PowerShell, который работает в Windows. Второй — bash-скрипт, который выполняется в Linux и macOS. Оба скрипта выполняют одни и те же функции. Так как bash-скрипт также считывает параметры PowerShell, их можно использовать с этим скриптом в системах Linux и macOS. 
 

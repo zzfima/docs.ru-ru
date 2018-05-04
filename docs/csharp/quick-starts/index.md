@@ -1,20 +1,13 @@
 ---
 title: Интерактивные руководства по C# — краткие руководства по C#
 description: Изучите язык C# в браузере и начните работу в собственной среде разработки
-keywords: C#, Get Started, Lessons, Interactive
-author: billwagner
-ms.author: wiwagn
 ms.date: 01/30/2018
-ms.topic: get-started-article
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: 091a9b5cfca1f7d7c303b3961704b8a3bbdf34e2
-ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.openlocfilehash: 66674b93883211d66883795587e66380a0f43fd7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="c-quickstarts"></a>Краткие руководства по C# #
 

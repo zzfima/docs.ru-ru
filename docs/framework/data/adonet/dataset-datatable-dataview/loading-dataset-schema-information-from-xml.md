@@ -1,27 +1,15 @@
 ---
-title: "Загрузка сведений о схеме набора данных из XML"
-ms.custom: 
+title: Загрузка сведений о схеме набора данных из XML
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 43dfb23b-5cef-46f2-8d87-78f0fba1eb8c
-caps.latest.revision: "4"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 8b814715782710994f18163ccfcd3db342199145
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 4b212a7233e6eec93cdce3e521b58e08745e35e0
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="loading-dataset-schema-information-from-xml"></a>Загрузка сведений о схеме набора данных из XML
 Схема <xref:System.Data.DataSet> (его таблиц, столбцов, связей и ограничений) можно определить программно, созданные **заполнения** или **FillSchema** методы <xref:System.Data.Common.DataAdapter>, или загрузке из XML-документ. Для загрузки **DataSet** данные схемы из XML-документа, можно использовать **ReadXmlSchema** или **InferXmlSchema** метод **набораданных**. **ReadXmlSchema** позволяет загружать или выводить **DataSet** сведений о схеме из документа, содержащего схемы языка определения схемы XML или XML-документа со встроенной схемой XML. **InferXmlSchema** дает возможность выводить схему из XML-документ, учитывая некоторые указанные пространства имен XML.  
@@ -65,7 +53,7 @@ xmlStream.Close();
 ```  
   
 ## <a name="inferxmlschema"></a>InferXmlSchema  
- Можно также указать **DataSet** вывести свою схему из XML-документа с помощью **InferXmlSchema** метод **набора данных**. **InferXmlSchema** работает так же, как **ReadXml** с **XmlReadMode** из **InferSchema** (загружает данные а также формирует схему) и  **ReadXmlSchema** если считанный документ не содержит встроенной схемы. Тем не менее **InferXmlSchema** предоставляет дополнительные возможности, позволяя для указания пространства имен XML игнорироваться при формировании схемы. **InferXmlSchema** принимает два обязательных аргумента: местоположение XML-документа, указанные по имени файла, потока или **XmlReader**; и строковый массив пространств имен XML, чтобы использоваться в этой операции.  
+ Можно также указать **DataSet** вывести свою схему из XML-документа с помощью **InferXmlSchema** метод **набора данных**. **InferXmlSchema** работает так же, как **ReadXml** с **XmlReadMode** из **InferSchema** (загружает данные а также формирует схему) и **ReadXmlSchema** если считанный документ не содержит встроенной схемы. Тем не менее **InferXmlSchema** предоставляет дополнительные возможности, позволяя для указания пространства имен XML игнорироваться при формировании схемы. **InferXmlSchema** принимает два обязательных аргумента: местоположение XML-документа, указанные по имени файла, потока или **XmlReader**; и строковый массив пространств имен XML, чтобы использоваться в этой операции.  
   
  Например, рассмотрим следующий XML-код:  
   

@@ -1,34 +1,22 @@
 ---
-title: "Сортировка и фильтрация данных"
-ms.custom: 
+title: Сортировка и фильтрация данных
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: fdd9c753-39df-48cd-9822-2781afe76200
-caps.latest.revision: "4"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 2411307623c714ae521d00dcffca05d3569a656e
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 02a67a490eb8339663aac08c97c665ffee09f0df
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sorting-and-filtering-data"></a>Сортировка и фильтрация данных
 <xref:System.Data.DataView> предоставляет несколько способов сортировки и фильтрации данных в <xref:System.Data.DataTable>.  
   
 -   Можно использовать свойство <xref:System.Data.DataView.Sort%2A> для задания одного или нескольких порядков сортировки столбцов и включить параметры ASC (по возрастанию) и DESC (по убыванию).  
   
--   Свойство <xref:System.Data.DataView.ApplyDefaultSort%2A> служит для автоматического создания порядка сортировки по возрастанию на основании столбца или столбцов первичного ключа таблицы. <xref:System.Data.DataView.ApplyDefaultSort%2A>применяется, только если **сортировки** свойство является пустой ссылкой или пустой строкой, и если таблица имеет первичный ключ.  
+-   Свойство <xref:System.Data.DataView.ApplyDefaultSort%2A> служит для автоматического создания порядка сортировки по возрастанию на основании столбца или столбцов первичного ключа таблицы. <xref:System.Data.DataView.ApplyDefaultSort%2A> применяется, только если **сортировки** свойство является пустой ссылкой или пустой строкой, и если таблица имеет первичный ключ.  
   
 -   Свойство <xref:System.Data.DataView.RowFilter%2A> можно использовать для задания подмножеств строк на основании значений их столбцов. Дополнительные сведения о допустимых выражениях для **RowFilter** свойства, см. Справочные сведения по <xref:System.Data.DataColumn.Expression%2A> свойство <xref:System.Data.DataColumn> класса.  
   
@@ -38,11 +26,11 @@ ms.lasthandoff: 01/17/2018
   
      В следующей таблице показаны параметры для **DataViewRowState**.  
   
-    |Параметры DataViewRowState|Описание:|  
+    |Параметры DataViewRowState|Описание|  
     |------------------------------|-----------------|  
     |**CurrentRows**|**Текущей** из всех **Unchanged**, **Added**, и **Modified** строк. Это значение по умолчанию.|  
     |**Добавить**|**Текущей** из всех **Added** строк.|  
-    |**Deleted**|**Исходного** из всех **Deleted** строк.|  
+    |**удален**|**Исходного** из всех **Deleted** строк.|  
     |**ModifiedCurrent**|**Текущей** из всех **Modified** строк.|  
     |**ModifiedOriginal**|**Исходного** из всех **Modified** строк.|  
     |**None**|Нет строк.|  
