@@ -1,1 +1,0 @@
-Алгоритм SHA (Secure Hash Algorithm) версии 1.0 (SHA1)

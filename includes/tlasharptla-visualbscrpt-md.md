@@ -1,1 +1,0 @@
-Язык скриптов Microsoft VBScript (Microsoft Visual Basic Scripting Edition)

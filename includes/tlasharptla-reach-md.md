@@ -1,1 +1,0 @@
-Документ формата XPS (XML Paper Specification)
