@@ -2,11 +2,11 @@
 title: '@ServiceHost'
 ms.date: 03/30/2017
 ms.assetid: 96ba6967-00f2-422f-9aa7-15de4d33ebf3
-ms.openlocfilehash: f81c71746b6b59a51ee825b44c9e6d9f93eb5fbd
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
-ms.translationtype: HT
+ms.openlocfilehash: 5498c300ab126bbc4e08cd228e3e7b48e905932e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="servicehost"></a>@ServiceHost
 Связывает фабрику, используемую для создания узла службы, с размещаемой службой и другими элементами программирования, необходимыми для доступа или компиляции кода размещения, представленного в SVC-файле.  
@@ -31,7 +31,7 @@ CodeBehind = "CodeBehind"%>
  Имя типа CLR фабрики узла службы, используемой для создания узла службы. Этот атрибут является необязательным. Если данный атрибут не задан, по умолчанию используется значение <xref:System.ServiceModel.Activation.ServiceHostFactory>, которое возвращает экземпляр <xref:System.ServiceModel.ServiceHost>.  
   
 #### <a name="debug"></a>Отладка  
- Указывает, следует ли компилировать с использованием символов отладки службы Windows Communication Foundation (WCF). Если для компиляции службы `true` должны использоваться символы отладки, следует задать значение [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)], в противном случае - значение `false`.  
+ Указывает, следует ли компилировать с использованием символов отладки службы Windows Communication Foundation (WCF). `true` Если служба WCF должна компилироваться с отладочными символами. в противном случае `false`.  
   
 #### <a name="language"></a>Язык  
  Задает язык, используемый при компиляции всего встроенного кода в файле (SVC). Значения данного атрибута могут представлять любой язык, поддерживаемый .NET, включая C#, VB и JS, что соответствует языкам C#, Visual Basic .NET и JScript .NET. Этот атрибут является необязательным.  
