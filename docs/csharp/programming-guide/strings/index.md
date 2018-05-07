@@ -12,11 +12,11 @@ ms.assetid: 21580405-cb25-4541-89d5-037846a38b07
 caps.latest.revision: 41
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 9478900be008588597c1dd9e75f704c751ebe344
-ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
+ms.openlocfilehash: 5a888440a76119eae7e4c525942878e0aa6ddafc
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="strings-c-programming-guide"></a>Строки (Руководство по программированию на C#)
 Строка — это объект типа <xref:System.String>, значением которого является текст. Внутри программы текст хранится в виде упорядоченной коллекции объектов <xref:System.Char> только для чтения. В конце строки C# нет нуль-символов. Поэтому строка C# может содержать любое число внедренных нуль-символов ('\0'). Свойство <xref:System.String.Length%2A> строки соответствует числу содержащихся в ней объектов `Char`, но не числу символов Юникода. Для доступа к отдельным кодовым точкам Юникода в строке используйте объект <xref:System.Globalization.StringInfo>.  
@@ -125,12 +125,14 @@ string s = String.Empty;
 |-----------|-----------------|  
 |[Практическое руководство. Изменение содержимого строки](../../how-to/modify-string-contents.md)|Описание методов преобразования строк и изменения их содержимого.|  
 |[Практическое руководство. Сравнение строк](../../how-to/compare-strings.md)|Рассказывает, как строки сравниваются по языку, региональным параметрам и порядку.|  
-|[How to: Parse Strings Using String.Split (C# Programming Guide)](../../how-to/parse-strings-using-split.md) (Практическое руководство. Анализ строк с помощью метода String.Split (руководство по программированию на C#))|Содержит пример кода, демонстрирующий использование метода `String.Split` для анализа строк.|  
+|[Практическое руководство. Сцепка нескольких строк](../../how-to/concatenate-multiple-strings.md)|Демонстрирует разные способы соединения нескольких строк в одну.|
+|[How to: Parse Strings Using String.Split (C# Programming Guide)](../../how-to/parse-strings-using-split.md) (Практическое руководство. Анализ строк с помощью метода String.Split (руководство по программированию на C#))|Содержит примеры кода, демонстрирующие использование метода `String.Split` для анализа строк.|  
 |[Практическое руководство. Поиск по строкам](../../how-to/search-strings.md)|Описание использования поиска для нахождения в строках определенных шаблонов или текста.|  
 |[Практическое руководство. Определение представления числового значения в строке](../../../csharp/programming-guide/strings/how-to-determine-whether-a-string-represents-a-numeric-value.md)|Объясняет, как безопасно проанализировать строку, чтобы проверить, содержит ли она допустимое числовое значение.|  
-|[Практическое руководство. Преобразование строки в значение типа "DateTime"](../../../csharp/programming-guide/strings/how-to-convert-a-string-to-a-datetime.md)|Показывает, как преобразовать строку, например "01/24/2008", в объект <xref:System.DateTime?displayProperty=nameWithType>.|  
+|[Интерполяция строк](../../language-reference/tokens/interpolated.md)|Описывает функцию интерполяции строк, которая предоставляет удобный синтаксис для форматирования строк.|
 |[Базовые операции со строками в .NET Framework](../../../../docs/standard/base-types/basic-string-operations.md)|Содержит ссылки на статьи, в которых показаны базовые операции над строками с помощью методов <xref:System.String?displayProperty=nameWithType> и <xref:System.Text.StringBuilder?displayProperty=nameWithType>.|  
-|[Анализ строк в .NET Framework](../../../../docs/standard/base-types/parsing-strings.md)|Описывает способы вставки символов или пробелов в строку.|  
+|[Анализ строк в .NET Framework](../../../standard/base-types/parsing-strings.md)|Описывает, как преобразовать строковые представления базовых типов .NET в экземпляры соответствующих типов.|  
+|[Синтаксический анализ строк даты и времени в .NET](../../../standard/base-types/parsing-datetime.md)|Показывает, как преобразовать строку, например "01/24/2008", в объект <xref:System.DateTime?displayProperty=nameWithType>.|  
 |[Сравнение строк в .NET Framework](../../../../docs/standard/base-types/comparing.md)|Объясняет, как сравнивать строки, и содержит примеры на языках C# и Visual Basic.|  
 |[Using the StringBuilder class](../../../standard/base-types/stringbuilder.md) (Использование класса StringBuilder)|Описывает создание и изменение динамических строковых объектов с помощью класса <xref:System.Text.StringBuilder>.|  
 |[LINQ и строки](../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)|Содержит инструкции по выполнению различных операций со строками с помощью запросов LINQ.|  

@@ -1,14 +1,6 @@
 ---
-title: "Метод ICorDebugProcess5::EnumerateHandles"
-ms.custom: 
+title: Метод ICorDebugProcess5::EnumerateHandles
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorDebugProcess5.EnumerateHandles
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 7d7fa796-0dc6-4ee8-9d56-40166246d91d
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: c9bf9f1a4d565e0af4f3ee34a2805116407027d8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2f2177702c6c5999033d0852a932e52c0725fb8a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icordebugprocess5enumeratehandles-method"></a>Метод ICorDebugProcess5::EnumerateHandles
 Возвращает перечислитель для маркеров объектов в процессе.  
@@ -53,15 +41,15 @@ HRESULT EnumerateHandles(     [in] CorGCReferenceType types,
  [out] Указатель на адрес [ICorDebugGCReferenceEnum](../../../../docs/framework/unmanaged-api/debugging/icordebuggcreferenceenum-interface.md) , перечислитель для объектов для сбора мусора.  
   
 ## <a name="remarks"></a>Примечания  
- `EnumerateHandles`является вспомогательная функция, которая поддерживает проверку таблицы дескрипторов. Это похоже на [ICorDebugProcess5::EnumerateGCReferences](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumerategcreferences-method.md) метода, за исключением того, вместо того чтобы заполнение [ICorDebugGCReferenceEnum](../../../../docs/framework/unmanaged-api/debugging/icordebuggcreferenceenum-interface.md) коллекции со всеми объектами для сбора мусора, он включает только те объекты, которые имеют дескрипторы из таблицы дескрипторов.  
+ `EnumerateHandles` является вспомогательная функция, которая поддерживает проверку таблицы дескрипторов. Это похоже на [ICorDebugProcess5::EnumerateGCReferences](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumerategcreferences-method.md) метода, за исключением того, вместо того чтобы заполнение [ICorDebugGCReferenceEnum](../../../../docs/framework/unmanaged-api/debugging/icordebuggcreferenceenum-interface.md) коллекции со всеми объектами для сбора мусора, он включает только те объекты, которые имеют дескрипторы из таблицы дескрипторов.  
   
- `types` Параметр указывает типы дескрипторов для включения в коллекции. `types`может иметь любое из следующих трех возможных членов [CorGCReferenceType](../../../../docs/framework/unmanaged-api/debugging/corgcreferencetype-enumeration.md) перечисления:  
+ `types` Параметр указывает типы дескрипторов для включения в коллекции. `types` может иметь любое из следующих трех возможных членов [CorGCReferenceType](../../../../docs/framework/unmanaged-api/debugging/corgcreferencetype-enumeration.md) перечисления:  
   
--   `CorHandleStrongOnly`(маркеры для строгих ссылок только).  
+-   `CorHandleStrongOnly` (маркеры для строгих ссылок только).  
   
--   `CorHandleWeakOnly`(маркеры для только слабые ссылки).  
+-   `CorHandleWeakOnly` (маркеры для только слабые ссылки).  
   
--   `CorHandleAll`(все дескрипторы).  
+-   `CorHandleAll` (все дескрипторы).  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
@@ -70,7 +58,7 @@ HRESULT EnumerateHandles(     [in] CorGCReferenceType types,
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **Версии платформы .NET framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>См. также  
  [Структуры отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)  

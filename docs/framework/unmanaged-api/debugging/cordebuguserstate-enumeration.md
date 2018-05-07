@@ -1,14 +1,6 @@
 ---
-title: "Перечисление CorDebugUserState"
-ms.custom: 
+title: Перечисление CorDebugUserState
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - CorDebugUserState
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: 5f6c2bcd-8102-4e3b-abc5-86ab0bd62def
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 57fd9df27b1911c90bd11712b67e6e64588c2b5f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f489ab29726292f6c55151169ad9efc6f0fbfbcf
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cordebuguserstate-enumeration"></a>Перечисление CorDebugUserState
 Указывает состояние пользователя потока.  
@@ -55,7 +43,7 @@ typedef enum CorDebugUserState {
   
 ## <a name="members"></a>Участники  
   
-|Значение|Описание:|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |`USER_STOP_REQUESTED`|Запрошено завершение выполнения потока.|  
 |`USER_SUSPEND_REQUESTED`|Приостановка потока был запрошен.|  
@@ -79,7 +67,7 @@ typedef enum CorDebugUserState {
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>См. также  
  [Перечисления отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

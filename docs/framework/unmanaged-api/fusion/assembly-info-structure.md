@@ -1,14 +1,6 @@
 ---
-title: "Структура ASSEMBLY_INFO"
-ms.custom: 
+title: Структура ASSEMBLY_INFO
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ASSEMBLY_INFO
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: b3cbb47c-457f-4083-8895-49562ca99ab8
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 215d80c3d207c2f50cfbd74386915b0467692b57
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9ed65181abab58117d539d23fcfeffe71ac19388
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="assemblyinfo-structure"></a>Структура ASSEMBLY_INFO
 Содержит сведения о сборке, которая зарегистрирована в глобальном кэше сборок.  
@@ -51,7 +39,7 @@ typedef struct _ASSEMBLY_INFO {
   
 ## <a name="members"></a>Участники  
   
-|Член|Описание:|  
+|Член|Описание|  
 |------------|-----------------|  
 |`cbAssemblyInfo`|Размер в байтах структуры. Это поле зарезервировано для будущего расширения.|  
 |`dwAssemblyFlags`|Флаги, указывающие установки сведений о сборке. Поддерживаются следующие значения:<br /><br /> -ASSEMBLYINFO_FLAG_INSTALLED значение, которое указывает, что сборка установлена. Текущую версию платформы .NET Framework, всегда устанавливает `dwAssemblyFlags` это значение.<br />-ASSEMBLYINFO_FLAG_PAYLOADRESIDENT значение, которое указывает, что сборка является резидентной полезных данных. Текущую версию платформы .NET Framework никогда не задает `dwAssemblyFlags` это значение.|  
@@ -64,7 +52,7 @@ typedef struct _ASSEMBLY_INFO {
   
  **Заголовок:** Fusion.h  
   
- **Версии платформы .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>См. также  
  [Структуры Fusion](../../../../docs/framework/unmanaged-api/fusion/fusion-structures.md)  
