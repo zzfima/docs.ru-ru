@@ -1,27 +1,17 @@
 ---
-title: "События стека (трассировка событий Windows)"
-ms.custom: 
+title: События стека (трассировка событий Windows)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - stack event [.NET Framework]
 - ETW, stack event (CLR)
 ms.assetid: f612fa5b-4b62-4593-a19e-85c9b1018dce
-caps.latest.revision: "5"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 1107c6608fe5136eb6159b1d4f0a438e95c4dabb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 073622c22b957975ed799cf5b3bc3826473114b1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="stack-etw-event"></a>События стека (трассировка событий Windows)
 Событие стека должно использоваться вместе с другими событиями для создания трассировок стека после вызова события. Оно регистрируется при включенном поставщике среды выполнения. Это очень часто случающееся событие, так как оно сопровождает создание другого события времени выполнения. По этой причине рекомендуется использовать его с осторожностью.  

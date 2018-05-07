@@ -1,27 +1,17 @@
 ---
-title: "События загрузчика (трассировка событий Windows)"
-ms.custom: 
+title: События загрузчика (трассировка событий Windows)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - loader events [.NET Framework]
 - ETW, loader events (CLR)
 ms.assetid: cb403cc6-56f8-4609-b467-cdfa09f07909
-caps.latest.revision: "18"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ebdee4427bd0848e75e58443fefd439acaa27f64
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d4746e9e7c8c83caf09ccf51749e9e3cbe69ec52
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="loader-etw-events"></a>События загрузчика (трассировка событий Windows)
 <a name="top"></a> Эти события собирают информацию, относящуюся к загрузке и выгрузке доменов приложений, сборок и модулей.  
@@ -44,7 +34,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="application-domain-events"></a>События домена приложения  
  В таблице ниже показаны ключевое слово и уровень.  
   
-|Ключевое слово для вызова события|Событие|Уровень|  
+|Ключевое слово для вызова события|событие|Уровень|  
 |-----------------------------------|-----------|-----------|  
 |`LoaderKeyword` (0x8)|`AppDomainLoad_V1` и `AppDomainUnLoad_V1`|Информационный (4)|  
 |`LoaderRundownKeyword` (0x8) +<br /><br /> `StartRundownKeyword`|`AppDomainDCStart_V1`|Информационный (4)|  
@@ -75,7 +65,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="clr-loader-assembly-events"></a>События сборки загрузчика среды CLR  
  В таблице ниже показаны ключевое слово и уровень.  
   
-|Ключевое слово для вызова события|Событие|Уровень|  
+|Ключевое слово для вызова события|событие|Уровень|  
 |-----------------------------------|-----------|-----------|  
 |`LoaderKeyword` (0x8)|`AssemblyLoad` и `AssemblyUnload`|Информационный (4)|  
 |`LoaderRundownKeyword` (0x8) +<br /><br /> `StartRundownKeyword`|`AssemblyDCStart`|Информационный (4)|  
@@ -107,7 +97,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="module-events"></a>События модулей  
  В таблице ниже показаны ключевое слово и уровень.  
   
-|Ключевое слово для вызова события|Событие|Уровень|  
+|Ключевое слово для вызова события|событие|Уровень|  
 |-----------------------------------|-----------|-----------|  
 |`LoaderKeyword` (0x8)|`ModuleLoad_V2` и `ModuleUnload_V2`|Информационный (4)|  
 |`LoaderRundownKeyword` (0x8) +<br /><br /> `StartRundownKeyword`|`ModuleDCStart_V2`|Информационный (4)|  
@@ -155,7 +145,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="clr-domain-module-events"></a>События модулей домена среды CLR  
  В таблице ниже показаны ключевое слово и уровень.  
   
-|Ключевое слово для вызова события|Событие|Уровень|  
+|Ключевое слово для вызова события|событие|Уровень|  
 |-----------------------------------|-----------|-----------|  
 |`LoaderKeyword` (0x8)|`DomainModuleLoad_V1`|Информационный (4)|  
 |`LoaderRundownKeyword` (0x8) +<br /><br /> `StartRundownKeyword`|`DomainModuleDCStart_V1`|Информационный (4)|  
@@ -188,7 +178,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="module-range-events"></a>События диапазона модуля  
  В таблице ниже показаны ключевое слово и уровень.  
   
-|Ключевое слово для вызова события|Событие|Уровень|  
+|Ключевое слово для вызова события|событие|Уровень|  
 |-----------------------------------|-----------|-----------|  
 |`PerfTrackKeyWord`)|`ModuleRange`|Информационный (4)|  
 |`PerfTrackKeyWord`|`ModuleRangeDCStart`|Информационный (4)|  

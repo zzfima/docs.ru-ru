@@ -1,33 +1,21 @@
 ---
-title: "Предоставление данных как службы (службы данных WCF)"
-ms.custom: 
+title: Предоставление данных как службы (службы данных WCF)
 ms.date: 03/30/2017
-ms.prod: .net-framework-oob
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - WCF Data Services, configuring
 - getting started, WCF Data Services
 - WCF Data Services, getting started
 ms.assetid: df0bbcee-f66f-4a88-abb4-4e73c8b9c908
-caps.latest.revision: "2"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 55e0bc058b92540c9b11965854d38e8d124e205c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1ab349125419a0589d68ccb821009f8227c942e8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="exposing-your-data-as-a-service-wcf-data-services"></a>Предоставление данных как службы (службы данных WCF)
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]интегрируется с Visual Studio, чтобы можно было упрощает определение служб для предоставления данных в качестве [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] веб-каналов. Создание службы данных, который предоставляет [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] веб-канала состоит из следующих основных этапов:  
+[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] интегрируется с Visual Studio, чтобы можно было упрощает определение служб для предоставления данных в качестве [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] веб-каналов. Создание службы данных, который предоставляет [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] веб-канала состоит из следующих основных этапов:  
   
-1.  **Определение** **модели данных**. [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]поддерживаемые модели данных, которые основаны на [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md). Дополнительные сведения см. в разделе [как: создание службы данных с помощью источника данных Entity Framework ADO.NET](../../../../docs/framework/data/wcf/create-a-data-service-using-an-adonet-ef-data-wcf.md).  
+1.  **Определение** **модели данных**. [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] поддерживаемые модели данных, которые основаны на [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md). Дополнительные сведения см. в разделе [как: создание службы данных с помощью источника данных Entity Framework ADO.NET](../../../../docs/framework/data/wcf/create-a-data-service-using-an-adonet-ef-data-wcf.md).  
   
      Службы [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] поддерживают также модели данных на основе объектов CLR, возвращающих экземпляр интерфейса <xref:System.Linq.IQueryable%601>. Это позволяет развертывать службы данных на основе списков, массивов и коллекций .NET Framework. Для поддержки создания, обновления и удаления элементов этих структур данных необходимо также реализовать интерфейс <xref:System.Data.Services.IUpdatable>. Дополнительные сведения см. в разделе [как: создание службы данных с помощью поставщика отражения](../../../../docs/framework/data/wcf/create-a-data-service-using-rp-wcf-data-services.md).  
   

@@ -1,13 +1,6 @@
 ---
-title: "Доступ к ресурсам служб данных (службы данных WCF)"
-ms.custom: 
+title: Доступ к ресурсам служб данных (службы данных WCF)
 ms.date: 03/30/2017
-ms.prod: .net-framework-oob
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - WCF Data Services, querying
 - getting started, WCF Data Services
@@ -15,19 +8,14 @@ helpviewer_keywords:
 - WCF Data Services, getting started
 - WCF Data Services, accessing data
 ms.assetid: 9665ff5b-3e3a-495d-bf83-d531d5d060ed
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: dddbd9cf8e11f09cf1c2dc36db49281d00e97aac
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f1af991d7db9bfeeb0737e65a0517629f359f4a1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="accessing-data-service-resources-wcf-data-services"></a>Доступ к ресурсам служб данных (службы данных WCF)
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]поддерживает [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] для предоставления данных в виде канала с ресурсами, которые адресуются по URI. Эти ресурсы представлены в соответствии с соглашениями отношения сущностей из [модели EDM](../../../../docs/framework/data/adonet/entity-data-model.md). Сущности в этой модели представляют операционные единицы данных, которые являются типами данных в домене приложений, такими как клиенты, заказы, элементы и продукты. Это позволяет обращаться к данным сущности и изменять их с использованием семантики REST, в частности стандартных команд HTTP, таких как GET, PUT, POST и DELETE.  
+[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] поддерживает [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] для предоставления данных в виде канала с ресурсами, которые адресуются по URI. Эти ресурсы представлены в соответствии с соглашениями отношения сущностей из [модели EDM](../../../../docs/framework/data/adonet/entity-data-model.md). Сущности в этой модели представляют операционные единицы данных, которые являются типами данных в домене приложений, такими как клиенты, заказы, элементы и продукты. Это позволяет обращаться к данным сущности и изменять их с использованием семантики REST, в частности стандартных команд HTTP, таких как GET, PUT, POST и DELETE.  
   
 ## <a name="addressing-resources"></a>Обращение к ресурсам  
  В службах [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] обращение к данным, предоставленным моделью данных, осуществляется с использованием URI. Например следующий URI возвращает канал набора сущностей Customers, который содержит записи для всех экземпляров типа сущности Customer:  
@@ -66,7 +54,7 @@ http://services.odata.org/Northwind/Northwind.svc/Customers('ALFKI')/Orders
 http://services.odata.org/Northwind/Northwind.svc/Orders(10643)/Customer  
 ```  
   
- [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]также обеспечивает для адресации ресурсов на основе результатов выражений запросов. Это дает возможность фильтровать наборы ресурсов на основе вычисленного выражения. Например, следующий URI фильтрует для возврата только заказы конкретного клиента, доставленные с 22 сентября 1997 г.  
+ [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] также обеспечивает для адресации ресурсов на основе результатов выражений запросов. Это дает возможность фильтровать наборы ресурсов на основе вычисленного выражения. Например, следующий URI фильтрует для возврата только заказы конкретного клиента, доставленные с 22 сентября 1997 г.  
   
 ```  
 http://services.odata.org/Northwind/Northwind.svc/Customers('ALFKI')/Orders?$filter=ShippedDate gt datetime'1997-09-22T00:00:00'  
@@ -75,7 +63,7 @@ http://services.odata.org/Northwind/Northwind.svc/Customers('ALFKI')/Orders?$fil
  Дополнительные сведения см. в разделе [OData: соглашения URI](http://go.microsoft.com/fwlink/?LinkId=185564).  
   
 ## <a name="system-query-options"></a>Параметры запросов системы  
- [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]Определяет набор системных параметров запросов, которые можно использовать для выполнения традиционных операций с запросами к ресурсам, например фильтрации, сортировки и разбиения на страницы. Например, следующий URI возвращает набор всех `Order` сущности, вместе со связанными `Order_Detail` сущностей, почтовые коды которых не заканчиваются на `100`:  
+ [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] Определяет набор системных параметров запросов, которые можно использовать для выполнения традиционных операций с запросами к ресурсам, например фильтрации, сортировки и разбиения на страницы. Например, следующий URI возвращает набор всех `Order` сущности, вместе со связанными `Order_Detail` сущностей, почтовые коды которых не заканчиваются на `100`:  
   
 ```  
 http://services.odata.org/Northwind/Northwind.svc/Orders?$filter=not endswith(ShipPostalCode,'100')&$expand=Order_Details&$orderby=ShipCity  
@@ -83,7 +71,7 @@ http://services.odata.org/Northwind/Northwind.svc/Orders?$filter=not endswith(Sh
   
  Записи в возвращаемом канале упорядочены по значению свойства заказов ShipCity.  
   
- [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]поддерживает следующие [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] системные параметры запросов:  
+ [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] поддерживает следующие [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] системные параметры запросов:  
   
 |Параметр запроса|Описание|  
 |------------------|-----------------|  
@@ -96,7 +84,7 @@ http://services.odata.org/Northwind/Northwind.svc/Orders?$filter=not endswith(Sh
 |`$inlinecount`|Запрашивает включение в поток количества сущностей, возвращаемых в канале. Дополнительные сведения см. в разделе [OData: параметр системного запроса Inlinecount ($inlinecount)](http://go.microsoft.com/fwlink/?LinkId=186975).|  
   
 ## <a name="addressing-relationships"></a>Адресация связей  
- Помимо адресация наборов сущностей и экземпляров сущности [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] также позволяет ассоциациям, представляющим связи между сущностями. Эта функциональность необходима для создания или изменения связей между двумя экземплярами сущностей, таких как поставщик, связанный с данным заказом в образце базы данных Northwind. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]поддерживает `$link` оператор, чтобы адресовать сопоставления между сущностями. Например, следующий URI задан в сообщении запроса HTTP PUT для изменения поставщика конкретного заказа на нового.  
+ Помимо адресация наборов сущностей и экземпляров сущности [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] также позволяет ассоциациям, представляющим связи между сущностями. Эта функциональность необходима для создания или изменения связей между двумя экземплярами сущностей, таких как поставщик, связанный с данным заказом в образце базы данных Northwind. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] поддерживает `$link` оператор, чтобы адресовать сопоставления между сущностями. Например, следующий URI задан в сообщении запроса HTTP PUT для изменения поставщика конкретного заказа на нового.  
   
 ```  
 http://services.odata.org/Northwind/Northwind.svc/Orders(10643)/$links/Shipper  

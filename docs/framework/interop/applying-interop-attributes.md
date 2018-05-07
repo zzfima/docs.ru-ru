@@ -1,13 +1,6 @@
 ---
-title: "Применение атрибутов взаимодействия"
-ms.custom: 
+title: Применение атрибутов взаимодействия
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - design-time attributes
 - .NET Framework, exposing components to COM
@@ -20,16 +13,13 @@ helpviewer_keywords:
 - COM interop, exposing COM components
 - COM interop, applying attributes
 ms.assetid: b6014613-641c-4912-9e2f-83a99210a037
-caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ea9e12140e351bb5cc2b51ac2efca8a24e94bf2b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 554ea7c54973852510e539000baf03bdce8e7bcf
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="applying-interop-attributes"></a>Применение атрибутов взаимодействия
 В пространстве имен <xref:System.Runtime.InteropServices> представлены три категории атрибутов взаимодействия: атрибуты, применяемые разработчиком во время разработки, API и средствами COM-взаимодействия в процессе преобразования, а также разработчиком или средой COM-взаимодействия.  
@@ -39,7 +29,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="design-time-attributes"></a>Атрибуты времени разработки  
  Атрибуты времени разработки позволяют настраивать результаты процесса преобразования, который выполняется API и средствами COM-взаимодействия. В следующей таблице описываются атрибуты, которые можно применять к управляемому исходному коду. В некоторых случаях средства COM-взаимодействия также могут применять описываемые здесь атрибуты.  
   
-|Атрибут|Описание:|  
+|Атрибут|Описание|  
 |---------------|-----------------|  
 |<xref:System.Runtime.InteropServices.AutomationProxyAttribute>|Указывает, будет ли выполняться маршалинг типа с использованием маршалера автоматизации или настраиваемого прокси-сервера и заглушки.|  
 |<xref:System.Runtime.InteropServices.ClassInterfaceAttribute>|Определяет тип интерфейса, создаваемого для класса.|  
@@ -66,7 +56,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="conversion-tool-attributes"></a>Атрибуты средств преобразования  
  В следующей таблице описываются атрибуты, которые применяются средствами COM-взаимодействия во время преобразования. Эти атрибуты не применяются во время разработки.  
   
-|Атрибут|Описание:|  
+|Атрибут|Описание|  
 |---------------|-----------------|  
 |<xref:System.Runtime.InteropServices.ComAliasNameAttribute>|Указывает псевдоним COM для типа параметра или поля. Может использоваться в качестве атрибута параметров, полей или возвращаемых значений.|  
 |<xref:System.Runtime.InteropServices.ComConversionLossAttribute>|Указывает, что сведения о классе или интерфейсе были потеряны при импорте из библиотеки типов в сборку.|  

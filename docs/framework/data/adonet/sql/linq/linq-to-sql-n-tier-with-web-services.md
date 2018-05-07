@@ -1,27 +1,15 @@
 ---
-title: "N-уровневое использование LINQ to SQL с веб-службами"
-ms.custom: 
+title: N-уровневое использование LINQ to SQL с веб-службами
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 9cb10eb8-957f-4beb-a271-5f682016fed2
-caps.latest.revision: "3"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 79b9b1270f99720dec6b6369706f8a2f601d249e
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 94b00c5b9a433aa53fecef10d865db76d5577c84
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="linq-to-sql-n-tier-with-web-services"></a>N-уровневое использование LINQ to SQL с веб-службами
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]предназначена специально для использования на среднем уровне в слабо связанных доступа к данным (DAL), например веб-службы. Если уровнем представления данных является веб-страница ASP.NET, то для управления передачей данных между пользовательским интерфейсом и <xref:System.Web.UI.WebControls.LinqDataSource> на среднем уровне используется серверный веб-элемент управления [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]. Если уровень представления данных не является страницей ASP.NET, то и на среднем уровне, и на уровне представления данных необходимо выполнить дополнительные действия по управлению сериализацией и десериализацией данных.  
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] предназначена специально для использования на среднем уровне в слабо связанных доступа к данным (DAL), например веб-службы. Если уровнем представления данных является веб-страница ASP.NET, то для управления передачей данных между пользовательским интерфейсом и <xref:System.Web.UI.WebControls.LinqDataSource> на среднем уровне используется серверный веб-элемент управления [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]. Если уровень представления данных не является страницей ASP.NET, то и на среднем уровне, и на уровне представления данных необходимо выполнить дополнительные действия по управлению сериализацией и десериализацией данных.  
   
 ## <a name="setting-up-linq-to-sql-on-the-middle-tier"></a>Настройка технологии LINQ to SQL на среднем уровне  
  Средний уровень веб-службы или многоуровневого приложения содержит контекст данных и классы сущностей. Эти классы можно создать вручную либо с помощью программы SQLMetal.exe или конструктора [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)], как описано в документации. Во время разработки можно сделать класс сущностей сериализуемым. Дополнительные сведения см. в разделе [как: сделать сущностей сериализуемым](../../../../../../docs/framework/data/adonet/sql/linq/how-to-make-entities-serializable.md). Другой способ заключается в создании отдельного набора классов, инкапсулирующих данные, которые необходимо сериализовать, и последующем проецировании данных в эти сериализуемые типы при их возвращении в запросах [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)].  

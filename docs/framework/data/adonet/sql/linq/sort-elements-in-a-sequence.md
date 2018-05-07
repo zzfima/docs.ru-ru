@@ -1,33 +1,21 @@
 ---
-title: "Сортировка элементов последовательности"
-ms.custom: 
+title: Сортировка элементов последовательности
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: d59b93a9-50c8-4770-a114-d902f6a0ea76
-caps.latest.revision: "2"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: f296565beb284095dce2520cd545f8af61dc6b48
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 00c7a7a62890aced4c480e2653084c0b7cfe7f45
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sort-elements-in-a-sequence"></a>Сортировка элементов последовательности
 Для сортировки последовательности по одному или нескольким ключам используется оператор <xref:System.Linq.Enumerable.OrderBy%2A>.  
   
 > [!NOTE]
->  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]предназначен для поддержки упорядочения по простым примитивным типам, таких как `string`, `int`, и т. д. В этой технологии не поддерживается упорядочение для сложных многозначных классов, таких как анонимные типы. В ней также не поддерживаются типы данных `byte`.  
+>  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] предназначен для поддержки упорядочения по простым примитивным типам, таких как `string`, `int`, и т. д. В этой технологии не поддерживается упорядочение для сложных многозначных классов, таких как анонимные типы. В ней также не поддерживаются типы данных `byte`.  
   
 ## <a name="example"></a>Пример  
  В следующем примере выполняется сортировка сотрудников (`Employees`) по дате приема на работу.  

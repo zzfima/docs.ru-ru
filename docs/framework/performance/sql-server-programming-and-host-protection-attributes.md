@@ -1,13 +1,6 @@
 ---
-title: "программирование SQL Server и атрибуты защиты ведущего приложения"
-ms.custom: 
+title: программирование SQL Server и атрибуты защиты ведущего приложения
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - SQL Server [.NET Framework]
 - permission sets, SQL Server
@@ -19,16 +12,13 @@ helpviewer_keywords:
 - host protection attributes
 - HostProtectionAttribute class, reliability
 ms.assetid: 7dfa36b4-e773-4c75-a3ff-ff1af3ce4c4f
-caps.latest.revision: "13"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a775b1c4f8446e756301650dcc61e3ef378408f6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9f3e5b3c4dcec98f293b4d6444d781705c700f88
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sql-server-programming-and-host-protection-attributes"></a>программирование SQL Server и атрибуты защиты ведущего приложения
 Чтобы загружать и выполнять управляемый код, ведущее приложение SQL Server должно соответствовать требованиям ведущего приложения к управлению доступом для кода и защите ресурсов ведущего приложения.  Управление доступом для кода реализуется с применением одного из трех наборов разрешений SQL Server: SAFE, EXTERNAL-ACCESS или UNSAFE. В коде, выполняемом с набором разрешений SAFE или EXTERNAL-ACCESS, не рекомендуется использовать определенные типы и члены, к которым применен атрибут <xref:System.Security.Permissions.HostProtectionAttribute>. Атрибут <xref:System.Security.Permissions.HostProtectionAttribute> не является разрешением безопасности в той же степени, что и гарантия надежности, поскольку в нем определяются конкретные конструкции кода (типы или методы), которые ведущее приложение может запрещать.  С помощью атрибута <xref:System.Security.Permissions.HostProtectionAttribute> можно реализовать модель программирования, которая позволяет гарантировать стабильность работы ведущего приложения.  

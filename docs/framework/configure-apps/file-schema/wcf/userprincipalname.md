@@ -1,34 +1,20 @@
 ---
-title: '&lt;userPrincipalName&gt;'
-ms.custom: 
+title: '&lt;UserPrincipalName&gt;'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 68032f69-149e-4613-bae4-18314d4fd294
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 23e2599920c0ef0ea35569ec9b0b16b0f8735f1a
-ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
+ms.openlocfilehash: 1bb0c8ac4cbe11cdfa31beb16b00b3863acabf92
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="ltuserprincipalnamegt"></a>&lt;userPrincipalName&gt;
+# <a name="ltuserprincipalnamegt"></a>&lt;UserPrincipalName&gt;
 Задает имя участника-пользователя (UPN) для службы, подлинность которой должна быть проверена клиентом.  
   
  Дополнительные сведения о настройке имени участника-пользователя см. в разделе [службы удостоверений и проверки подлинности](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
   
 \<удостоверение >  
-\<userPrincipalName>  
+\<userPrincipalName >  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -50,12 +36,12 @@ ms.lasthandoff: 02/01/2018
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
 |[\<удостоверение >](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)|Задает удостоверение службы, подлинность которой должна быть проверена клиентом.|  
   
 ## <a name="remarks"></a>Примечания  
- Безопасный клиент [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)], подключающийся к конечной точке с этим идентификатором, использует UPN при выполнении проверки подлинности SSPI в конечной точке.  
+ Защищенный клиент Windows Communication Foundation (WCF), подключающийся к конечной точке с использованием этого удостоверения использует UPN при выполнении проверки подлинности SSPI с конечной точкой.  
   
 ## <a name="example"></a>Пример  
  Приводимый ниже код конфигурации задает имя участника-пользователя (UPN) для службы, подлинность которой должна быть проверена клиентом.  

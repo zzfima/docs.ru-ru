@@ -2,11 +2,11 @@
 title: '&lt;сообщение&gt; для &lt;netHttpBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: 9def5a35-475d-40d6-b716-ccdbd93863c7
-ms.openlocfilehash: 6e4cd2c000d577e26b54e09f24279e0fd74afcf1
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
-ms.translationtype: HT
+ms.openlocfilehash: be96306b61b3eb6bfb8d3305ccbb05bb3ec4549d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ltmessagegt-of-ltnethttpbindinggt"></a>&lt;сообщение&gt; для &lt;netHttpBinding&gt;
 Определяет параметры безопасности уровня сообщений [ \<basicHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md).  
@@ -40,7 +40,7 @@ ms.lasthandoff: 05/03/2018
   
 |Значение|Описание|  
 |-----------|-----------------|  
-|UserName|-Требует подлинности клиента на сервер с использованием имени пользователя. Эти учетные данные должны быть указаны с помощью элемента <`clientCredentials`>.<br />-   [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] не поддерживает передачу дайджеста пароля или получение ключей с использованием паролей и использование таких ключей для обеспечения безопасности сообщений. Таким образом, [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] принудительно обеспечивает безопасность транспорта при использовании имени пользователя. Для `basicHttpBinding` это требует настройки канала SSL.|  
+|UserName|-Требует подлинности клиента на сервер с использованием имени пользователя. Эти учетные данные должны быть указаны с помощью элемента <`clientCredentials`>.<br />-WCF не поддерживает передачу дайджеста пароля или получение ключей с использованием паролей и использование таких ключей для обеспечения безопасности сообщений. Таким образом WCF обеспечивает, что безопасность транспорта при использовании учетных данных UserName. Для `basicHttpBinding` это требует настройки канала SSL.|  
 |Сертификат|Требует, чтобы при подключении к серверу проверка подлинности клиента проводилась с помощью сертификата. В этом случае учетные данные клиента должны быть определены с помощью элементов <`clientCredentials`> и <`clientCertificate`>. Кроме того, при использовании режима безопасности сообщений клиенту должен быть предоставлен сертификат службы. В этом случае необходимо указать с помощью учетных данных службы <xref:System.ServiceModel.Description.ClientCredentials> класса или `ClientCredentials` элемент поведения и указав службу сертификатов с помощью \<serviceCertificate > элемента serviceCredentials.|  
   
 ### <a name="child-elements"></a>Дочерние элементы  

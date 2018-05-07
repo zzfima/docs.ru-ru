@@ -1,26 +1,15 @@
 ---
-title: "Реализация неявной транзакции с использованием области транзакции"
-ms.custom: 
+title: Реализация неявной транзакции с использованием области транзакции
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 49d1706a-1e0c-4c85-9704-75c908372eb9
-caps.latest.revision: "4"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0b75091739b0ea97b63b35830f4946a78e49ff8f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f3184801ed6a81d65727c638ef733bc93a87c1e8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="implementing-an-implicit-transaction-using-transaction-scope"></a>Реализация неявной транзакции с использованием области транзакции
 Класс <xref:System.Transactions.TransactionScope> предоставляет простой способ пометки блока кода как участвующего в транзакции без необходимости взаимодействия с самой транзакцией. Область транзакции может автоматически выбирать внешнюю транзакцию и управлять ей. В целях обеспечения простоты использования и эффективности при разработке транзакционного приложения рекомендуется использовать класс <xref:System.Transactions.TransactionScope>.  
@@ -51,7 +40,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="rolling-back-a-transaction"></a>Откат транзакции  
  Если требуется откатить транзакцию, не следует вызывать метод <xref:System.Transactions.TransactionScope.Complete%2A> в пределах области транзакции. Например, можно вызвать исключение в пределах области. При этом будет выполнен откат транзакции, в которой участвует область.  
   
-##  <a name="ManageTxFlow"></a>Управление потока транзакций с помощью TransactionScopeOption  
+##  <a name="ManageTxFlow"></a> Управление потока транзакций с помощью TransactionScopeOption  
  Область транзакции можно сделать вложенной, вызвав метод, использующий объект <xref:System.Transactions.TransactionScope>, из метода, использующего собственную область, как в случае метода `RootMethod` в следующем примере.  
   
 ```csharp  

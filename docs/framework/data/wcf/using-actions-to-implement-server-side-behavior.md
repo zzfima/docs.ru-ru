@@ -1,30 +1,18 @@
 ---
-title: "Использование действий для реализации поведения на стороне сервера"
-ms.custom: 
+title: Использование действий для реализации поведения на стороне сервера
 ms.date: 03/30/2017
-ms.prod: .net-framework-oob
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 11a372db-7168-498b-80d2-9419ff557ba5
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 9d8ca19a5a49815130103672f43452ebbfedfae3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d4be2aa42c667460232f6aa3cd8dc707805750e0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-actions-to-implement-server-side-behavior"></a>Использование действий для реализации поведения на стороне сервера
-Действия OData предоставляют способ реализации поведения, срабатывающего при получении ресурса из службы OData.  Рассмотрим для примера цифровой фильм в качестве ресурса. С цифровым фильмом можно совершить множество различных действий: извлекать, оценивать, комментировать или возвращать. Приведенные варианты являются примерами действий, которые могут выполняться службой данных WCF, управляющей цифровыми фильмами. Действия описываются в ответе OData, содержащим ресурс, для которого может быть вызвано это действие. Если пользователь запрашивает ответ, который представляет цифровой фильм, то ответ, возвращаемый службой данных WCF, содержит сведения о действиях, которые могут быть применены к этому ресурсу. Доступность действия зависит от состояния службы данных или ресурса. Например, цифровой фильм, извлеченный одним пользователем, не может быть извлечен другим пользователем. Для вызова действий клиентам достаточно указать URL-адрес. Например, http://MyServer/MovieService.svc/Movies(6) будет обозначать определенный цифровой фильм, а http://MyServer/MovieService.svc/Movies(6)/Checkout вызовет действие с этим фильмом. Действия позволяют применять модель службы, не обращаясь к модели данных. Продолжим рассмотрение примера с фильмом. Например, вы можете разрешить пользователям оценивать фильм, но не предоставлять доступ к данным оценок как к ресурсу. Вы можете реализовать действие оценки, чтобы разрешить пользователям оценивать фильм, при этом у них не будет прямого доступа к данным оценок как к ресурсу.  
+Действия OData предоставляют способ реализации поведения, срабатывающего при получении ресурса из службы OData.  Рассмотрим для примера цифровой фильм в качестве ресурса. С цифровым фильмом можно совершить множество различных действий: извлекать, оценивать, комментировать или возвращать. Приведенные варианты являются примерами действий, которые могут выполняться службой данных WCF, управляющей цифровыми фильмами. Действия описываются в ответе OData, содержащим ресурс, для которого может быть вызвано это действие. Если пользователь запрашивает ответ, который представляет цифровой фильм, то ответ, возвращаемый службой данных WCF, содержит сведения о действиях, которые могут быть применены к этому ресурсу. Доступность действия зависит от состояния службы данных или ресурса. Например, цифровой фильм, извлеченный одним пользователем, не может быть извлечен другим пользователем. Для вызова действий клиентам достаточно указать URL-адрес. Например http://MyServer/MovieService.svc/Movies(6) поможет идентифицировать определенный цифровой фильм и http://MyServer/MovieService.svc/Movies(6)/Checkout вызовет действие на определенного фильма. Действия позволяют применять модель службы, не обращаясь к модели данных. Продолжим рассмотрение примера с фильмом. Например, вы можете разрешить пользователям оценивать фильм, но не предоставлять доступ к данным оценок как к ресурсу. Вы можете реализовать действие оценки, чтобы разрешить пользователям оценивать фильм, при этом у них не будет прямого доступа к данным оценок как к ресурсу.  
   
 ## <a name="implementing-an-action"></a>Реализация действия  
- Для реализации действия службы, необходимо реализовать <xref:System.IServiceProvider>, [IDataServiceActionProvider](https://msdn.microsoft.com/library/system.data.services.providers.idataserviceactionprovider(v=vs.113).aspx), и [IDataServiceInvokable](https://msdn.microsoft.com/library/system.data.services.providers.idataserviceinvokable(v=vs.113).aspx) интерфейсов. <xref:System.IServiceProvider>позволяет службе данных WCF получить вашу реализацию [IDataServiceActionProvider](https://msdn.microsoft.com/library/system.data.services.providers.idataserviceactionprovider(v=vs.113).aspx). [IDataServiceActionProvider](https://msdn.microsoft.com/library/system.data.services.providers.idataserviceactionprovider(v=vs.113).aspx) позволяет службе данных WCF для создания, поиска, описания и вызывать действия службы. [IDataServiceInvokable](https://msdn.microsoft.com/library/system.data.services.providers.idataserviceinvokable(v=vs.113).aspx) позволяет вызывать код, который реализует поведение действий службы и получить результаты, если таковые имеются. Помните, что службы данных WCF являются службами с предварительным вызовом, то есть новый экземпляр службы создается при каждом вызове службы.  Удостоверьтесь в том, что при создании службы выполняется только необходимая работа.  
+ Для реализации действия службы, необходимо реализовать <xref:System.IServiceProvider>, [IDataServiceActionProvider](https://msdn.microsoft.com/library/system.data.services.providers.idataserviceactionprovider(v=vs.113).aspx), и [IDataServiceInvokable](https://msdn.microsoft.com/library/system.data.services.providers.idataserviceinvokable(v=vs.113).aspx) интерфейсов. <xref:System.IServiceProvider> позволяет службе данных WCF получить вашу реализацию [IDataServiceActionProvider](https://msdn.microsoft.com/library/system.data.services.providers.idataserviceactionprovider(v=vs.113).aspx). [IDataServiceActionProvider](https://msdn.microsoft.com/library/system.data.services.providers.idataserviceactionprovider(v=vs.113).aspx) позволяет службе данных WCF для создания, поиска, описания и вызывать действия службы. [IDataServiceInvokable](https://msdn.microsoft.com/library/system.data.services.providers.idataserviceinvokable(v=vs.113).aspx) позволяет вызывать код, который реализует поведение действий службы и получить результаты, если таковые имеются. Помните, что службы данных WCF являются службами с предварительным вызовом, то есть новый экземпляр службы создается при каждом вызове службы.  Удостоверьтесь в том, что при создании службы выполняется только необходимая работа.  
   
 ### <a name="iserviceprovider"></a>IServiceProvider  
  Интерфейс <xref:System.IServiceProvider> содержит метод <xref:System.IServiceProvider.GetService%2A>. Службы данных WCF вызывают этот метод для получения числа поставщиков служб, включая поставщиков служб метаданных и поставщиков действий служб данных. При запросе поставщика действий службы данных, возвращают вашей [IDataServiceActionProvider](https://msdn.microsoft.com/library/system.data.services.providers.idataserviceactionprovider(v=vs.113).aspx) реализации.  

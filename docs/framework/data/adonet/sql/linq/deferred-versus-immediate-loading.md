@@ -1,29 +1,15 @@
 ---
-title: "Отложенная и немедленная загрузка"
-ms.custom: 
+title: Отложенная и немедленная загрузка
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: d1d7247f-a3b7-460b-b342-5c1a2365aa1a
-caps.latest.revision: 
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload:
-- dotnet
-ms.openlocfilehash: 8a4fa1574b8e25a5d98f9547ad916a3c84f10b01
-ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
+ms.openlocfilehash: 5955d7361658c825c120e62e531b72d402a12650
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="deferred-versus-immediate-loading"></a>Отложенная и немедленная загрузка
 При запросе объекта фактически извлекается только запрошенный объект. *Связанные* объекты не извлекаются автоматически одновременно. (Дополнительные сведения см. в разделе [выполнение запросов в связях](../../../../../../docs/framework/data/adonet/sql/linq/querying-across-relationships.md).) Пользователь не может определить, что связанные объекты еще не загружены, поскольку попытка получить к ним доступ приводит к выполнению запроса, который их извлекает.  

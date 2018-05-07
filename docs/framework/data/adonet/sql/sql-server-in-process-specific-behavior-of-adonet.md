@@ -1,24 +1,12 @@
 ---
-title: "Внутрипроцессное поведение ADO.NET в SQL Server"
-ms.custom: 
+title: Внутрипроцессное поведение ADO.NET в SQL Server
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 4f223948-ae8f-4c16-bdc2-4acc6debed3f
-caps.latest.revision: "4"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: a71d450753fca7d2b3535233f7528c442ec0532a
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 2e89a902bbe7f25586bc4e6574932c8da3e67d40
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sql-server-in-process-specific-behavior-of-adonet"></a>Внутрипроцессное поведение ADO.NET в SQL Server
 В пространстве имен <xref:Microsoft.SqlServer.Server> существует четыре основных функциональных расширения для ADO.NET, которые специально предназначены для внутрипроцессного использования: <xref:Microsoft.SqlServer.Server.SqlContext>, <xref:Microsoft.SqlServer.Server.SqlPipe>, <xref:Microsoft.SqlServer.Server.SqlTriggerContext> и <xref:Microsoft.SqlServer.Server.SqlDataRecord>.  

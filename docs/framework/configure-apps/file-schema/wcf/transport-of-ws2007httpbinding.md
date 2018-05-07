@@ -1,31 +1,19 @@
 ---
-title: "&lt;transport&gt; для &lt;ws2007HttpBinding&gt;"
-ms.custom: 
+title: '&lt;transport&gt; для &lt;ws2007HttpBinding&gt;'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 692befa3-8b0b-4ec5-b601-755874e98eb0
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d3a0aa0e4dacafc4c81fa324529dfa3551fcc9c8
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 3be9d4e64e63b32156cb64257f5bed8230cee3aa
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="lttransportgt-of-ltws2007httpbindinggt"></a>&lt;transport&gt; для &lt;ws2007HttpBinding&gt;
 Определяет параметры проверки подлинности для HTTP-транспорта.  
   
- \<system.serviceModel>  
+ \<system.serviceModel >  
 \<привязки >  
-\<ws2007HttpBinding>  
+\<ws2007HttpBinding >  
 \<Привязка >  
 \<Безопасность >  
 \<Транспорт >  
@@ -80,7 +68,7 @@ transport clientCredentialType =
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
 |[\<Безопасность >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-ws2007httpbinding.md)|Представляет функциональные возможности безопасности [ \<ws2007HttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/ws2007httpbinding.md) элемента.|  
   

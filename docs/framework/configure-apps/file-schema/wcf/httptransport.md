@@ -2,11 +2,11 @@
 title: '&lt;httpTransport&gt;'
 ms.date: 03/30/2017
 ms.assetid: 8b30c065-b32a-4fa3-8eb4-5537a9c6b897
-ms.openlocfilehash: cd3a17eee9d4eebbefa880e14aadbc4715a18ac1
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
-ms.translationtype: HT
+ms.openlocfilehash: 77400348e9adc31d8121fc75f46d75d757af270f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="lthttptransportgt"></a>&lt;httpTransport&gt;
 Задает транспорт HTTP для передачи сообщений протокола SOAP для пользовательской привязки.  
@@ -66,7 +66,7 @@ IntegratedWindowsAuthentication: Specifies Windows authentication"
 |[\<Привязка >](../../../../../docs/framework/misc/binding.md)|Определяет все возможности пользовательской привязки.|  
   
 ## <a name="remarks"></a>Примечания  
- Элемент `httpTransport` является начальной точкой для создания пользовательской привязки, реализующей транспортный протокол HTTP. Протокол HTTP является основным транспортом, используемым в целях взаимодействия. Этот транспорт поддерживается в Windows Communication Foundation (WCF) для обеспечения взаимодействия с другими отличных[!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] стеки веб-служб.  
+ Элемент `httpTransport` является начальной точкой для создания пользовательской привязки, реализующей транспортный протокол HTTP. Протокол HTTP является основным транспортом, используемым в целях взаимодействия. Этот транспорт поддерживается в Windows Communication Foundation (WCF) для обеспечения взаимодействия с другими стеками веб WCF-служб.  
   
 ## <a name="see-also"></a>См. также  
  <xref:System.ServiceModel.Configuration.HttpTransportElement>  
