@@ -1,29 +1,17 @@
 ---
 title: Производительность .NET Framework
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - performance [.NET Framework]
 - reliability [.NET Framework]
 ms.assetid: c1676cca-3f1a-41ec-b469-9029566074fc
-caps.latest.revision: 20
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: aa4db0e3e136eee1d2037ad6041ac6945d313776
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ebfe03ea99f7a9c66fb46f01b37f85daf9e919d5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="net-framework-performance"></a>Производительность .NET Framework
 Если вы хотите создавать приложения, отличающиеся высокой производительностью, вам следует закладывать эту производительность при планировании и проектировании наравне с другими возможностями приложения. Вы можете использовать средства, предоставляемые корпорацией Майкрософт, для измерения уровня производительности приложения и внесения усовершенствований в использование памяти, пропускную способность кода и скорость реагирования. В этом разделе перечислены средства анализа производительности, предоставляемые корпорацией Майкрософт, и приведены ссылки на другие разделы, описывающие аспекты производительности для разных областей разработки.  
@@ -66,7 +54,7 @@ ms.lasthandoff: 12/22/2017
   
 ## <a name="related-topics"></a>См. также  
   
-|Заголовок|Описание:|  
+|Заголовок|Описание|  
 |-----------|-----------------|  
 |[Кэширование в приложениях платформы .NET Framework](../../../docs/framework/performance/caching-in-net-framework-applications.md)|Содержит описание методик кэширования данных, применяемых для повышения производительности приложения.|  
 |[Отложенная инициализация](../../../docs/framework/performance/lazy-initialization.md)|Содержит описание способов инициализации объектов по мере необходимости для повышения производительности, особенно при запуске приложения.|  

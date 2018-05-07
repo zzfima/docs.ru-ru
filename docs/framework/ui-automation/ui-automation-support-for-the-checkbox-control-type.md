@@ -1,28 +1,19 @@
 ---
-title: "Поддержка модели автоматизированного пользовательского интерфейса для элемента управления CheckBox"
-ms.custom: 
+title: Поддержка модели автоматизированного пользовательского интерфейса для элемента управления CheckBox
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - CheckBox control type
 - control types, CheckBox
 - UI Automation, CheckBox control type
 ms.assetid: 9c2a0e70-3a39-4ba9-96ea-a7fe531fae9f
-caps.latest.revision: "31"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 88b0bc564e2ba512af40f7056f3d755e3204d153
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 35b99c8cdbeaf5ac5f1e4f86ba40f1ce2e242c79
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ui-automation-support-for-the-checkbox-control-type"></a>Поддержка модели автоматизированного пользовательского интерфейса для элемента управления CheckBox
 > [!NOTE]
@@ -53,9 +44,9 @@ ms.lasthandoff: 12/22/2017
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationIdProperty>|См. примечания.|Значение этого свойства должно быть уникальным среди всех элементов управления в приложении.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty>|См. примечания.|Внешний прямоугольник, содержащий весь элемент управления.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.ClickablePointProperty>|См. примечания.|Поддерживается при наличии ограничивающего прямоугольника. Если не все точки внутри ограничивающего прямоугольника являются интерактивными и выполняется специализированная проверка на наличие данных, выполните переопределение и предоставьте интерактивную точку.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.ControlTypeProperty>|CheckBox|Это значение одинаково для всех инфраструктур пользовательского интерфейса.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsContentElementProperty>|True|Это свойство всегда должно иметь значение True. Это означает, что элемент управления «Флажок» всегда должен быть включен в представление содержимого дерева [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] .|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsControlElementProperty>|True|Это свойство всегда должно иметь значение True. Это означает, что элемент управления «Флажок» всегда должен быть включен в представление элемента управления дерева [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] .|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.ControlTypeProperty>|CheckBox|Это значение является одинаковым для всех инфраструктур пользовательского интерфейса.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsContentElementProperty>|Да|Это свойство всегда должно иметь значение True. Это означает, что элемент управления «Флажок» всегда должен быть включен в представление содержимого дерева [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] .|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsControlElementProperty>|Да|Это свойство всегда должно иметь значение True. Это означает, что элемент управления «Флажок» всегда должен быть включен в представление элемента управления дерева [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] .|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsKeyboardFocusableProperty>|См. примечания.|Если элемент управления может получать фокус клавиатуры, он должен поддерживать это свойство.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.LabeledByProperty>|`Null`|Элементы управления «Флажок» получают метку автоматически.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.LocalizedControlTypeProperty>|«флажок»|Локализованная строка, соответствующая типу элемента управления CheckBox.|  
@@ -67,7 +58,7 @@ ms.lasthandoff: 12/22/2017
   
 |Шаблон элемента управления|Поддержка|Примечания|  
 |---------------------|-------------|-----------|  
-|<xref:System.Windows.Automation.Provider.IToggleProvider>|Обязательный|Позволяет флажку циклически проходить через его внутренние состояния программным образом.|  
+|<xref:System.Windows.Automation.Provider.IToggleProvider>|Обязательно|Позволяет флажку циклически проходить через его внутренние состояния программным образом.|  
   
 <a name="Required_UI_Automation_Events"></a>   
 ## <a name="required-ui-automation-events"></a>Необходимые события модели автоматизации пользовательского интерфейса  
@@ -79,7 +70,7 @@ ms.lasthandoff: 12/22/2017
 |Событие изменения свойства<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> |Обязательно|Нет|  
 |Событие изменения свойства<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> |Обязательно|Нет|  
 |Событие изменения свойства<xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> |Обязательно|Нет|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|Обязательный|Нет|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|Обязательно|Нет|  
 |Событие изменения свойства<xref:System.Windows.Automation.TogglePatternIdentifiers.ToggleStateProperty> |Обязательно|Нет|  
   
 <a name="Default_Action"></a>   

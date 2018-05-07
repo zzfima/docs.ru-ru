@@ -1,28 +1,19 @@
 ---
-title: "Реализация шаблона элемента управления RangeValue автоматизации пользовательского интерфейса"
-ms.custom: 
+title: Реализация шаблона элемента управления RangeValue автоматизации пользовательского интерфейса
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - control patterns, Range Value
 - Range Value control pattern
 - UI Automation, Range Value control pattern
 ms.assetid: 225feaa4-918e-418b-938e-7389338d0a69
-caps.latest.revision: "19"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: a53f5f802d451d7575188d4687b6d88f96ec64fb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 219f460906d2892ae6cd76d13a2b17378e02b9b7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="implementing-the-ui-automation-rangevalue-control-pattern"></a>Реализация шаблона элемента управления RangeValue автоматизации пользовательского интерфейса
 > [!NOTE]
@@ -48,12 +39,12 @@ ms.lasthandoff: 12/22/2017
   
 |Обязательный член|Тип члена|Примечания|  
 |---------------------|-----------------|-----------|  
-|<xref:System.Windows.Automation.RangeValuePattern.IsReadOnlyProperty>|Свойство|Нет|  
-|<xref:System.Windows.Automation.RangeValuePattern.ValueProperty>|Свойство|Нет|  
-|<xref:System.Windows.Automation.RangeValuePattern.LargeChangeProperty>|Свойство|Нет|  
-|<xref:System.Windows.Automation.RangeValuePattern.SmallChangeProperty>|Свойство|Нет|  
-|<xref:System.Windows.Automation.RangeValuePattern.MaximumProperty>|Свойство|Нет|  
-|<xref:System.Windows.Automation.RangeValuePattern.MinimumProperty>|Свойство|Нет|  
+|<xref:System.Windows.Automation.RangeValuePattern.IsReadOnlyProperty>|Свойство.|Нет|  
+|<xref:System.Windows.Automation.RangeValuePattern.ValueProperty>|Свойство.|Нет|  
+|<xref:System.Windows.Automation.RangeValuePattern.LargeChangeProperty>|Свойство.|Нет|  
+|<xref:System.Windows.Automation.RangeValuePattern.SmallChangeProperty>|Свойство.|Нет|  
+|<xref:System.Windows.Automation.RangeValuePattern.MaximumProperty>|Свойство.|Нет|  
+|<xref:System.Windows.Automation.RangeValuePattern.MinimumProperty>|Свойство.|Нет|  
 |<xref:System.Windows.Automation.RangeValuePattern.SetValue%2A>|Методы|Нет|  
   
  Этот шаблон элемента управления не имеет связанных событий.  

@@ -1,28 +1,19 @@
 ---
-title: "Поддержка автоматизации пользовательского интерфейса для типа элемента управления MenuBar"
-ms.custom: 
+title: Поддержка автоматизации пользовательского интерфейса для типа элемента управления MenuBar
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - UI Automation, Menu Bar control type
 - control types, Menu Bar
 - Menu Bar control type
 ms.assetid: c1202b21-c1f0-4560-853c-7b99bd73ad97
-caps.latest.revision: "22"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 680afc96b2574a767ab187d8f6796a444b87ccdf
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a2a93699231f00d73eef42c6407bd83c09e3a90d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ui-automation-support-for-the-menubar-control-type"></a>Поддержка автоматизации пользовательского интерфейса для типа элемента управления MenuBar
 > [!NOTE]
@@ -53,13 +44,13 @@ ms.lasthandoff: 12/22/2017
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty>|См. примечания.|Значение, представляемое этим свойством, должно включать все содержащиеся в нем элементы управления.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty>|См. примечания.|Элементу управления "Строка меню" имя не требуется, кроме случая, когда в приложении имеется несколько строк меню. Если в приложении имеется несколько строк меню, то это свойство должно использоваться для предоставления различающихся имен, например "Форматирование" или "Структурирование".|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.LabeledByProperty>|`Null`|Элементы управления "Строка меню" никогда не имеют метки.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.ControlTypeProperty>|MenuBar|Это значение одинаково для всех инфраструктур пользовательского интерфейса.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.ControlTypeProperty>|MenuBar|Это значение является одинаковым для всех инфраструктур пользовательского интерфейса.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.LocalizedControlTypeProperty>|"строка меню"|Локализованная строка, соответствующая типу элемента управления MenuBar.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsContentElementProperty>|True|Элемент управления "Строка меню" всегда включается в представление содержимого дерева [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] .|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsControlElementProperty>|True|Элемент управления "Строка меню" всегда включается в представление элемента управления дерева [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] .|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsContentElementProperty>|Да|Элемент управления "Строка меню" всегда включается в представление содержимого дерева [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] .|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsControlElementProperty>|Да|Элемент управления "Строка меню" всегда включается в представление элемента управления дерева [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] .|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty>|См. примечания.|Значение этого свойства зависит от того, можно ли видеть элемент управления на экране.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.OrientationProperty>|Зависит от обстоятельств|Это свойство показывает, является ли элемент управления "Строка меню" горизонтальным или вертикальным.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsKeyboardFocusableProperty>|True|Элементы управления "Строка меню" являются фокусируемыми с помощью клавиатуры, так как элементы управления, содержащиеся в них, могут принимать фокус клавиатуры.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsKeyboardFocusableProperty>|Да|Элементы управления "Строка меню" являются фокусируемыми с помощью клавиатуры, так как элементы управления, содержащиеся в них, могут принимать фокус клавиатуры.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.HelpTextProperty>|См. примечания.|Ни в каких случаях элементу управления "Строка меню" текст справки не требуется.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.AcceleratorKeyProperty>|`Null`|Строки меню никогда не имеют клавиш быстрого доступа.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.AccessKeyProperty>|ALT|Нажатие клавиши ALT должно всегда переводить фокус в строку меню в приложении.|  
@@ -84,8 +75,8 @@ ms.lasthandoff: 12/22/2017
 |Событие изменения свойства<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> |Обязательно|Нет|  
 |Событие изменения свойства<xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> |Обязательно|Нет|  
 |Событие изменения свойства<xref:System.Windows.Automation.ExpandCollapsePatternIdentifiers.ExpandCollapseStateProperty> |Зависит от обстоятельств|Нет|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|Обязательный|Нет|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|Обязательный|Нет|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|Обязательно|Нет|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|Обязательно|Нет|  
   
 ## <a name="see-also"></a>См. также  
  <xref:System.Windows.Automation.ControlType.MenuBar>  

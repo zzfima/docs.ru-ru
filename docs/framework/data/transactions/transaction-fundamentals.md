@@ -1,23 +1,12 @@
 ---
-title: "Основные сведения о транзакциях"
-ms.custom: 
+title: Основные сведения о транзакциях
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 353f4ee2-e6bf-4b1c-b1c8-385fc8a486c0
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: fa26531b1d2573b4bef49ec93f4205716227e25b
-ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
+ms.openlocfilehash: 1189556c74c45dc7475dd872c01c1ec5eaeba111
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="transaction-fundamentals"></a>Основные сведения о транзакциях
 Транзакции позволяют объединить несколько задач в один логический блок. Например, пусть приложение выполняет две задачи. Сначала оно создает новую таблицу в базе данных. Затем оно вызывает специализированный объект для сбора, форматирования и вставки данных в новую таблицу. Эти две задачи являются связанными и даже взаимозависимыми: создание новой таблицы требуется, только если ее можно заполнить данными. Выполнение обеих задач в пределах области единой транзакции приводит к образованию связи между ними. Если выполнение второй задачи заканчивается сбоем, выполняется откат первой задачи в состояние до момента создания новой таблицы.  

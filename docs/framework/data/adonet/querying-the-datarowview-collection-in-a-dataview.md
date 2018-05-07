@@ -1,27 +1,15 @@
 ---
-title: "Запрос к коллекции DataRowView в объекте DataView"
-ms.custom: 
+title: Запрос к коллекции DataRowView в объекте DataView
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: b9070a12-1094-44d6-bb87-a23b50bcb0af
-caps.latest.revision: "2"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: a1912526d98dc7872470953e1bf61b72db191de5
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: e7c63591baa609e38a70c721ea57a797b7631b97
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="querying-the-datarowview-collection-in-a-dataview"></a>Запрос к коллекции DataRowView в объекте DataView
 Представление <xref:System.Data.DataView> обеспечивает доступ к перечисляемой коллекции объектов <xref:System.Data.DataRowView>. Объект <xref:System.Data.DataRowView> предоставляет пользовательское представление объекта <xref:System.Data.DataRow> и отображает конкретную версию этого объекта <xref:System.Data.DataRow> в элементе управления. В элементе управления, например <xref:System.Data.DataRow>, можно отобразить только одну версию объекта <xref:System.Windows.Forms.DataGridView>. Доступ к объекту <xref:System.Data.DataRow>, представляемому объектом <xref:System.Data.DataRowView>, можно получить через свойство <xref:System.Data.DataRowView.Row%2A> объекта <xref:System.Data.DataRowView>. При просмотре значений с помощью объекта <xref:System.Data.DataRowView> свойство <xref:System.Data.DataView.RowStateFilter%2A> определяет, какая версия строки базового объекта <xref:System.Data.DataRow> отображается. Сведения о доступе к различным версиям строк с помощью <xref:System.Data.DataRow>, в разделе [состояния строк и версии строк](../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md). Так как коллекция <xref:System.Data.DataRowView> объектами, предоставляемыми <xref:System.Data.DataView> является перечислимой, можно использовать [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] для запросов к ней.  

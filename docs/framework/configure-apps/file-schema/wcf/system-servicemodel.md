@@ -8,11 +8,11 @@ helpviewer_keywords:
 - <system.serviceModel> element
 - system.serviceModel element
 ms.assetid: 78519531-ad7a-40d3-b3e7-42f1103d8854
-ms.openlocfilehash: 0ce459b5b3d739770353d9913f30c6feaceabfd8
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
-ms.translationtype: HT
+ms.openlocfilehash: ef3af4663462ff2bb93622e128e58a3ac039dcf5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ltsystemservicemodelgt"></a>&lt;system.serviceModel&gt;
 Данный раздел конфигурации содержит все элементы конфигурации ServiceModel службы Windows Communication Foundation (WCF).  
@@ -62,7 +62,7 @@ ms.lasthandoff: 05/03/2018
 |[\<привязки >](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|В этом разделе содержится коллекция стандартных и пользовательских привязок. Каждая запись идентифицируется по уникальному свойству `name`. Службы используют привязки, связывая их с помощью параметра `name`.|  
 |[\<Клиент >](../../../../../docs/framework/configure-apps/file-schema/wcf/client.md)|Данный раздел содержит список конечных точек, которые клиент использует для подключения к службе.|  
 |[\<comContracts >](../../../../../docs/framework/configure-apps/file-schema/wcf/comcontracts.md)|В данном разделе определяются контракты COM, которые разрешены для обеспечения взаимодействия WCF и COM.|  
-|[\<commonBehaviors >](../../../../../docs/framework/configure-apps/file-schema/wcf/commonbehaviors.md)|Этот раздел может быть определен только в файле machine.config. В нем определяются две дочерние коллекции с именами `endpointBehaviors` и `serviceBehaviors`.  Каждая коллекция определяет элементы поведения, используемые соответственно всеми конечными точками [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] и службами на компьютере.  Если поведение определено как `<commonBehaviors>` и `<behaviors>` разделах, в \<поведения > отдается поведениям из раздела.|  
+|[\<commonBehaviors >](../../../../../docs/framework/configure-apps/file-schema/wcf/commonbehaviors.md)|Этот раздел может быть определен только в файле machine.config. В нем определяются две дочерние коллекции с именами `endpointBehaviors` и `serviceBehaviors`.  Каждая коллекция определяет элементы поведения, используемые всех конечных точек WCF и службы на компьютере соответственно.  Если поведение определено как `<commonBehaviors>` и `<behaviors>` разделах, в \<поведения > отдается поведениям из раздела.|  
 |[\<расширения >](../../../../../docs/framework/configure-apps/file-schema/wcf/extensions-section.md)|Данный раздел содержит коллекцию расширений, которые позволяют пользователю создавать определяемые пользователем привязки, поведения и другие виды расширений.|  
 |[\<Диагностика >](../../../../../docs/framework/configure-apps/file-schema/wcf/diagnostics.md)|В этом разделе содержатся параметры возможностей диагностики WCF. Пользователь может включить или отключить трассировку, счетчики производительности и провайдер инструментария WMI, а также может добавлять специальные фильтры сообщений.|  
 |[\<protocolMapping >](../../../../../docs/framework/configure-apps/file-schema/wcf/protocolmapping.md)|Этот раздел определяет набор сопоставления протоколов по умолчанию между схемами транспортных протоколов (например, http, net.tcp, net.pipe, т. д.) и привязками WCF.|  
@@ -78,9 +78,9 @@ ms.lasthandoff: 05/03/2018
 |\<configuration>|Корневой элемент для всех элементов конфигурации в файле конфигурации .NET.|  
   
 ## <a name="remarks"></a>Примечания  
- [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] не добавляет элементы к разделам конфигурации других продуктов.  
+ WCF не добавляет элементы к разделам конфигурации других продуктов.  
   
- Службы [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] определяются в разделе `services` файла конфигурации. Сборка может содержать любое число служб. Для каждой службы используется собственный раздел конфигурации `service`. Этот раздел и его содержимое определяют контракт, поведение и конечные точки конкретной службы.  
+ Определенные службы WCF в `services` раздел файла конфигурации. Сборка может содержать любое число служб. Для каждой службы используется собственный раздел конфигурации `service`. Этот раздел и его содержимое определяют контракт, поведение и конечные точки конкретной службы.  
   
  Обязательным является только атрибут `name`.  По умолчанию имя службы описывает базовый тип CLR, который используется для реализации службы, однако можно изменить свойство ConfigurationName в классе <xref:System.ServiceModel.ServiceContractAttribute>, чтобы изменить требования к типу CLR.  
   

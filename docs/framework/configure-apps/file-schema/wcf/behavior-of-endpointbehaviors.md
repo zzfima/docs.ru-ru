@@ -2,11 +2,11 @@
 title: '&lt;behavior&gt; для &lt;endpointBehaviors&gt;'
 ms.date: 03/30/2017
 ms.assetid: b90ca3bc-3c22-4174-b903-e3a39898bd27
-ms.openlocfilehash: 0619d14444d835ed959a1a1db7cd37aaf0429728
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
-ms.translationtype: HT
+ms.openlocfilehash: e275fbc1b14469553094a4df838930be53937de2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ltbehaviorgt-of-ltendpointbehaviorsgt"></a>&lt;behavior&gt; для &lt;endpointBehaviors&gt;
 Элемент `behavior` содержит коллекцию параметров поведения конечной точки. Каждое поведение индексируется по атрибуту `name`. Конечные точки могут ссылаться на каждое поведение по этому имени. Начиная с версии [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)] для привязок и поведений необязательно задавать имена. Дополнительные сведения о конфигурации по умолчанию и безымянные привязок и поведений см. в разделе [упрощенной конфигурации](../../../../../docs/framework/wcf/simplified-configuration.md) и [упрощенной конфигурации для служб WCF](../../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
@@ -52,7 +52,7 @@ ms.lasthandoff: 05/03/2018
 |[\<soapProcessing >](../../../../../docs/framework/configure-apps/file-schema/wcf/soapprocessing.md)|Определяет поведение конечной точки клиента, используемое для маршалинга сообщений между различными типами привязок и версиями сообщения.|  
 |[\<synchronousReceive >](../../../../../docs/framework/configure-apps/file-schema/wcf/synchronousreceive-element.md)|Задает поведение времени выполнения для получения сообщений в службе или клиентском приложении. Он не имеет атрибутов или дочерних элементов.|  
 |[\<transactedBatching >](../../../../../docs/framework/configure-apps/file-schema/wcf/transactedbatching.md)|Указывает, поддерживается ли объединение транзакций для операций получения.|  
-|[\<webHttp >](../../../../../docs/framework/configure-apps/file-schema/wcf/webhttp.md)|Задает WebHttpBehavior в конечной точке посредством настройки конфигурации. Такое поведение, при использовании в сочетании с \<webHttpBinding > Стандартная привязка включает модель веб-программирования для [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] службы.|  
+|[\<webHttp >](../../../../../docs/framework/configure-apps/file-schema/wcf/webhttp.md)|Задает WebHttpBehavior в конечной точке посредством настройки конфигурации. Такое поведение, при использовании в сочетании с \<webHttpBinding > Стандартная привязка включает модель веб-программирования для службы WCF.|  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   

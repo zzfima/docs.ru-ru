@@ -1,28 +1,14 @@
 ---
-title: "Пакетные операции (службы данных WCF)"
-ms.custom: 
+title: Пакетные операции (службы данных WCF)
 ms.date: 03/30/2017
-ms.prod: .net-framework-oob
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - WCF Data Services, client library
 ms.assetid: 962a49d1-cc11-4b96-bc7d-071dd6607d6c
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 65bf6bfd0bd437848137506605a958f5f2e8d750
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5284d1a3c2ea95e26eddd9c5617f09f299bda4f3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="batching-operations-wcf-data-services"></a>Пакетные операции (службы данных WCF)
 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] Поддерживает пакетную обработку запросов для [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]-служба на основе. Дополнительные сведения см. в разделе [OData: пакетная обработка](http://go.microsoft.com/fwlink/?LinkId=186075). В [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], каждая операция, использующая <xref:System.Data.Services.Client.DataServiceContext>, такие как выполнение запроса или сохранения изменений, порождает отдельный запрос, отправляемых в службу данных. Для создания логической области видимости для набора операций можно явно определить пакеты операций. Это гарантирует, что все операции в пакете, отправляются в службу данных в одном HTTP-запросе, позволяет серверу обработать их единым блоком и сокращает количество циклов приема-передачи в службу данных.  

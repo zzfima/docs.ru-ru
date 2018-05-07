@@ -1,26 +1,12 @@
 ---
 title: Доступ к службе из веб-браузера (краткое руководство по службе данных WCF)
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework-oob
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 5a6fa180-3094-4e6e-ba2b-8c80975d18d1
-caps.latest.revision: 4
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 5550e97d97adf28a84566c5d7936369656c65e43
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: b7fcead5eed2dd4c0c779d9a881563a39f88d094
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="accessing-the-service-from-a-web-browser-wcf-data-services-quickstart"></a>Доступ к службе из веб-браузера (краткое руководство по службе данных WCF)
 В этой задаче мы запустим службы [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] из Visual Studio и дополнительно отключим чтение канала в веб-браузере. Вам будет затем извлечем документ определения службы а также доступ к ресурсам службы данных, отправляя запросы HTTP GET через веб-браузер к предоставляемым ресурсам.  

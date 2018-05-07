@@ -1,24 +1,12 @@
 ---
-title: "Авторизация и разрешения в SQL Server"
-ms.custom: 
+title: Авторизация и разрешения в SQL Server
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: d340405c-91f4-4837-a3cc-a238ee89888a
-caps.latest.revision: "8"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 9b5dd162aad85ea28e7d05cbfd2e72e7fc2fb235
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: bddbbd7eac29d33801042276e5f4ca9a05a83c1a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="authorization-and-permissions-in-sql-server"></a>Авторизация и разрешения в SQL Server
 После создания объектов базы данных необходимо явно предоставить разрешения, чтобы сделать их доступными для пользователей. Каждый защищаемый объект имеет разрешения, которые могут быть предоставлены участнику с помощью инструкций разрешения.  
@@ -65,7 +53,7 @@ ms.lasthandoff: 01/17/2018
 ## <a name="external-resources"></a>Внешние ресурсы  
  Дополнительные сведения см. в следующих ресурсах.  
   
-|Ресурс|Описание:|  
+|Ресурс|Описание|  
 |--------------|-----------------|  
 |[Разрешения](http://msdn.microsoft.com/library/ms191291.aspx) в электронной документации по SQL Server|Содержит разделы, описывающие иерархию разрешений, представления каталога и разрешения предопределенных ролей сервера и базы данных.|  
   

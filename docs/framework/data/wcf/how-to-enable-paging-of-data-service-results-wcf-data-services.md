@@ -1,31 +1,17 @@
 ---
-title: "Практическое руководство. Включение разбивки на страницы результатов службы данных (службы данных WCF)"
-ms.custom: 
+title: Практическое руководство. Включение разбивки на страницы результатов службы данных (службы данных WCF)
 ms.date: 03/30/2017
-ms.prod: .net-framework-oob
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - paging output [WCF Data Services]
 ms.assetid: 9a316cbd-9612-4482-a541-a10bc78b2635
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: b03dd234681d031361696108702a7bbb558065ef
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 822184e3de3fd0cc628eb08619f93ba0734a464d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-enable-paging-of-data-service-results-wcf-data-services"></a>Практическое руководство. Включение разбивки на страницы результатов службы данных (службы данных WCF)
 Службы [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] позволяют ограничить количество сущностей, возвращаемых запросом службы данных. Пределы разбиения на страницы определены в методе, который вызывается при инициализации службы, и могут устанавливаться отдельно для каждого набора сущностей.  

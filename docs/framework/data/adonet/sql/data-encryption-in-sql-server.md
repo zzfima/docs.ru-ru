@@ -1,24 +1,12 @@
 ---
-title: "Шифрование данных в SQL Server"
-ms.custom: 
+title: Шифрование данных в SQL Server
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 83b992f7-b351-4678-b4b9-f4ffd58134cc
-caps.latest.revision: "6"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: e7784ac319785babbc4d7715e13fb157b3b15b04
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 9e2924dc9f2f2954f6690ad5009c4143d1b9a44f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="data-encryption-in-sql-server"></a>Шифрование данных в SQL Server
 SQL Server содержит функции шифрования и расшифровки данных с помощью сертификата и асимметричного или симметричного ключа. Все они содержатся во внутреннем хранилище сертификатов. Хранилище использует иерархию шифрования, обеспечивающую безопасность сертификатов и ключей на уровне, находящемся выше в иерархии. Эта область функций SQL Server называется секретным хранилищем.  

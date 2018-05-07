@@ -1,14 +1,6 @@
 ---
-title: "Практическое руководство. Реализация функций обратного вызова"
-ms.custom: 
+title: Практическое руководство. Реализация функций обратного вызова
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,17 +8,13 @@ dev_langs:
 helpviewer_keywords:
 - callback function, implementing
 ms.assetid: e55b3712-b9ea-4453-bd9a-ad5cfa2f6bfa
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 819861f9bf13f9af3fab7a1ea7ffc697c1d98926
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e081347129ce367cf6b46ca29c07a016bb64ab95
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-implement-callback-functions"></a>Практическое руководство. Реализация функций обратного вызова
 В приведенных ниже процедуре и примере показано, как, используя вызов неуправляемого кода, можно напечатать из управляемого приложения значение дескриптора для каждого окна на локальном компьютере. В частности, для печати значения дескриптора окна в процедуре и примере используется функция **EnumWindows**, которая просматривает список окон, и управляемая функция обратного вызова CallBack.  

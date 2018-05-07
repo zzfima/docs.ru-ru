@@ -1,24 +1,14 @@
 ---
-title: "Метод ICorDebugAssembly3::GetContainerAssembly"
-ms.custom: 
+title: Метод ICorDebugAssembly3::GetContainerAssembly
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 ms.assetid: f5fddeb6-b82e-4ebb-b432-849ce8513c77
-caps.latest.revision: "5"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 3c7bf800c75083fa81ab2bb14d4ad13f08050dc1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: acb34ac2568ac88797441306820e6e762b5ac46e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icordebugassembly3getcontainerassembly-method"></a>Метод ICorDebugAssembly3::GetContainerAssembly
 Возвращает контейнерную сборку этого объекта `ICorDebugAssembly3`.  
@@ -36,7 +26,7 @@ HRESULT GetContainerAssembly(
  Указатель на адрес объекта ICorDebugAssembly, представляющего контейнерную сборку или **null** при сбое вызова метода.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- `S_OK`Если вызов метода выполнен успешно; в противном случае `S_FALSE`, и `ppAssembly` — **null**.  
+ `S_OK` Если вызов метода выполнен успешно; в противном случае `S_FALSE`, и `ppAssembly` — **null**.  
   
 ## <a name="remarks"></a>Примечания  
  Если эта сборка была объединена с другими сборками внутри одиночной контейнерной сборки, этот метод возвращает контейнерную сборку. Дополнительные сведения и терминологию см. в разделе [ICorDebugProcess6::EnableVirtualModuleSplitting](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess6-enablevirtualmodulesplitting-method.md) раздела.  
@@ -51,7 +41,7 @@ HRESULT GetContainerAssembly(
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **Версии платформы .NET framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>См. также  
  [Интерфейс ICorDebugAssembly3](../../../../docs/framework/unmanaged-api/debugging/icordebugassembly3-interface.md)  

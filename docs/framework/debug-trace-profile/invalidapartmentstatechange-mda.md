@@ -1,13 +1,6 @@
 ---
-title: "Помощник по отладке управляемого кода invalidApartmentStateChange"
-ms.custom: 
+title: Помощник по отладке управляемого кода invalidApartmentStateChange
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - MDAs (managed debugging assistants), invalid apartment state
 - managed debugging assistants (MDAs), invalid apartment state
@@ -18,16 +11,13 @@ helpviewer_keywords:
 - threading [.NET Framework], managed debugging assistants
 - COM apartment states
 ms.assetid: e56fb9df-5286-4be7-b313-540c4d876cd7
-caps.latest.revision: "12"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 654e950aab0e8ae2929a62e035ffc1252c5717d7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 864367e71f3ed05af87931b2a87f576df42dcbf5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="invalidapartmentstatechange-mda"></a>Помощник по отладке управляемого кода invalidApartmentStateChange
 Помощник по отладке управляемого кода (MDA) `invalidApartmentStateChange` активируется при возникновении одной из двух следующих проблем.  
@@ -36,7 +26,7 @@ ms.lasthandoff: 12/22/2017
   
 -   Неожиданное изменение состояния подразделения COM потока.  
   
-## <a name="symptoms"></a>Признаки  
+## <a name="symptoms"></a>Симптомы  
   
 -   Состояние подразделения COM отличается от запрошенного. Это может привести к использованию прокси-серверов для COM-компонентов, имеющих потоковую модель, отличную от текущей. Это, в свою очередь, может привести к возникновению исключения <xref:System.InvalidCastException> при вызове COM-объекта через интерфейсы, которые не настроены для маршалинга между подразделениями.  
   

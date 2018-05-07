@@ -2,11 +2,11 @@
 title: '&lt;message&gt; для &lt;basicHttpBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: 51cdd329-6461-471a-8747-56c2299b61e5
-ms.openlocfilehash: f58fadbc3ac3f193232ad075c4973f6ac2f2d1f6
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
-ms.translationtype: HT
+ms.openlocfilehash: 7f543a91f1d11575df239267a6a8a0b244d99cb3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ltmessagegt-of-ltbasichttpbindinggt"></a>&lt;message&gt; для &lt;basicHttpBinding&gt;
 Определяет параметры безопасности уровня сообщений [ \<basicHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md).  
@@ -40,7 +40,7 @@ ms.lasthandoff: 05/03/2018
   
 |Значение|Описание|  
 |-----------|-----------------|  
-|UserName|-Требует подлинности клиента на сервер с использованием имени пользователя. Эти учетные данные должны быть определены с помощью [ \<clientCredentials >](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md).<br />-   [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] не поддерживает передачу дайджеста пароля или получение ключей с использованием паролей и использование таких ключей для обеспечения безопасности сообщений. Таким образом, [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] принудительно обеспечивает безопасность транспорта при использовании имени пользователя. Для `basicHttpBinding` это требует настройки канала SSL.|  
+|UserName|-Требует подлинности клиента на сервер с использованием имени пользователя. Эти учетные данные должны быть определены с помощью [ \<clientCredentials >](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md).<br />-WCF не поддерживает передачу дайджеста пароля или получение ключей с использованием паролей и использование таких ключей для обеспечения безопасности сообщений. Таким образом WCF обеспечивает, что безопасность транспорта при использовании учетных данных UserName. Для `basicHttpBinding` это требует настройки канала SSL.|  
 |Сертификат|Требует, чтобы при подключении к серверу проверка подлинности клиента проводилась с помощью сертификата. В этом случае необходимо указать с помощью учетных данных клиента [ \<clientCredentials >](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md) и [ \<clientCertificate >](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcertificate-of-servicecredentials.md). Кроме того, при использовании режима безопасности сообщений клиенту должен быть предоставлен сертификат службы. В этом случае необходимо указать с помощью учетных данных службы <xref:System.ServiceModel.Description.ClientCredentials> класса или `ClientCredentials` элемент поведения и указав службу сертификатов с помощью [ \<serviceCertificate >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md).|  
   
 ### <a name="child-elements"></a>Дочерние элементы  

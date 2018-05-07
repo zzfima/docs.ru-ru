@@ -1,10 +1,6 @@
 ---
 title: Создание прототипов в управляемом коде
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -21,17 +17,13 @@ helpviewer_keywords:
 - DLL functions
 - object fields in platform invoke
 ms.assetid: ecdcf25d-cae3-4f07-a2b6-8397ac6dc42d
-caps.latest.revision: 22
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: c59a05c5f6abfa30a71ccf7608f8a84738f99c3a
-ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
+ms.openlocfilehash: b305158ac87f01044bae5455cea07ca3b3a2e491
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="creating-prototypes-in-managed-code"></a>Создание прототипов в управляемом коде
 В этом разделе описывается доступ к неуправляемым функциям и представлено несколько полей атрибутов, которые уточняют определение метода в управляемом коде. Примеры, демонстрирующие создание объявлений на основе .NET, которые используются с вызовом неуправляемого кода, см. в разделе [Маршалинг данных при вызове неуправляемого кода](marshaling-data-with-platform-invoke.md).  

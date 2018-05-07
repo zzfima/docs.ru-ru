@@ -1,34 +1,22 @@
 ---
-title: "Извлечение данных и операции создания, обновления и удаления в N-уровневых приложениях (LINQ to SQL)"
-ms.custom: 
+title: Извлечение данных и операции создания, обновления и удаления в N-уровневых приложениях (LINQ to SQL)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: c3133d53-83ed-4a4d-af8b-82edcf3831db
-caps.latest.revision: "2"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 6cdf1a859595c82b8eea60311c3c96353849e3dc
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: ea27d6406ed588f2046dc938f5167a6c0200329e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="data-retrieval-and-cud-operations-in-n-tier-applications-linq-to-sql"></a>Извлечение данных и операции создания, обновления и удаления в N-уровневых приложениях (LINQ to SQL)
 При сериализации объектов сущностей, например объектов "Customers" или "Orders", на клиент по сети эти сущности отсоединяются от своего контекста данных. Контекст данных более не отслеживает их изменения или их связи с другими объектами. Это не вызывает проблемы, если клиент осуществляет только чтение данных. Также довольно просто реализовать добавление клиентами строк в базу данных. Однако если приложению требуется, чтобы клиенты имели возможность обновлять или удалять данные, то перед вызовом метода <xref:System.Data.Linq.DataContext.SubmitChanges%2A?displayProperty=nameWithType> необходимо присоединить сущности к новому контексту данных. Кроме того, если используется проверка оптимистического параллелизма на основе исходных значений, также требуется реализовать способ предоставления базе данных исходной сущности и сущности после изменения. С помощью методов `Attach` можно поместить сущности в новый контекст данных после их отсоединения.  
   
  Даже если выполняется сериализация прокси-объектов вместо [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] сущностей, все равно необходимо создать сущность в слое доступа к данным (DAL) и присоединить ее к новой <xref:System.Data.Linq.DataContext?displayProperty=nameWithType>, для отправки данных в базу данных.  
   
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]— совершенно не зависит от способа сериализации сущностей. Дополнительные сведения об использовании [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] и средства SQLMetal для создания классов, которые могут быть сериализованы с помощью Windows Communication Foundation (WCF) в разделе [как: сделать сущностей сериализуемым](../../../../../../docs/framework/data/adonet/sql/linq/how-to-make-entities-serializable.md).  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] — совершенно не зависит от способа сериализации сущностей. Дополнительные сведения об использовании [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] и средства SQLMetal для создания классов, которые могут быть сериализованы с помощью Windows Communication Foundation (WCF) в разделе [как: сделать сущностей сериализуемым](../../../../../../docs/framework/data/adonet/sql/linq/how-to-make-entities-serializable.md).  
   
 > [!NOTE]
 >  Для новых или десериализованных сущностей следует вызывать только методы `Attach`. При сериализации сущности ее обязательно следует отсоединить от исходного контекста данных. Если выполняется попытка присоединить неотсоединенную сущность к новому контексту данных и у этой сущности по-прежнему имеются отложенные загрузчики из предыдущего контекста данных, технология [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] вызовет исключение. Наличие сущности с отложенными загрузчиками из двух разных контекстов данных может привести к нежелательным результатам при выполнении операций вставки, обновления и удаления для этой сущности. Дополнительные сведения о отложенными загрузчиками см. в разделе [отложенное или немедленное загрузки](../../../../../../docs/framework/data/adonet/sql/linq/deferred-versus-immediate-loading.md).  

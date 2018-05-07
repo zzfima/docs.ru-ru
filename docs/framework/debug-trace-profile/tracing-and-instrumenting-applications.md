@@ -1,13 +1,6 @@
 ---
-title: "Трассировка и оборудование приложений"
-ms.custom: 
+title: Трассировка и оборудование приложений
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -20,16 +13,13 @@ helpviewer_keywords:
 - performance monitoring, tracing code
 - Trace class, instrumentation for .NET applications
 ms.assetid: 773b6fc4-9013-4322-b728-5dec7a72e743
-caps.latest.revision: "21"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 20eea5ed6f69c17466aeb33617f418ac71a3e1b2
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 33d940a051c3185d8a3a04e77ea5899de0475ffc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tracing-and-instrumenting-applications"></a>Трассировка и оборудование приложений
 Трассировка — это способ мониторинга выполнения приложения во время его выполнения. Вы можете добавить инструментирование трассировки и отладки в свое приложения .NET Framework при его разработке; кроме того, вы можете использовать это инструментирование при разработке приложения и после его развертывания. С помощью классов <xref:System.Diagnostics.Trace?displayProperty=nameWithType>, <xref:System.Diagnostics.Debug?displayProperty=nameWithType> и <xref:System.Diagnostics.TraceSource?displayProperty=nameWithType> можно записывать сведения об ошибках и выполнении приложения в журналы, текстовые файлы или на другие устройства для последующего анализа.  

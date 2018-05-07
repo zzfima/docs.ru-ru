@@ -1,24 +1,12 @@
 ---
-title: "Управление контекстом службы данных (службы WCF Data Services)"
-ms.custom: 
+title: Управление контекстом службы данных (службы WCF Data Services)
 ms.date: 03/30/2017
-ms.prod: .net-framework-oob
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 15b19d09-7de7-4638-9556-6ef396cc45ec
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c993a4f09a7187b45331f6beb71a9637da87d20f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9b2b0bb709081ca7b0b2a1367f10e1f7a08c98c9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="managing-the-data-service-context-wcf-data-services"></a>Управление контекстом службы данных (службы WCF Data Services)
 Класс <xref:System.Data.Services.Client.DataServiceContext> инкапсулирует операции, поддерживающие работу с конкретной службой данных. Хотя службы [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] не сохраняют состояние, контекст его сохраняет. Таким образом, можно использовать <xref:System.Data.Services.Client.DataServiceContext> класс для поддержки состояния клиента между операциями со службой данных для поддержки таких функций, как управление изменениями. Этот класс также управляет идентификаторами и отслеживает изменения.  
@@ -29,7 +17,7 @@ ms.lasthandoff: 12/22/2017
  По умолчанию клиент материализует значение в канале ответа в объект только для сущностей, еще не отслеживаемых в контексте <xref:System.Data.Services.Client.DataServiceContext>. Это означает, что изменения в объектах, уже находящихся в кэше, не перезаписываются. Это поведение управляется указанием значения параметра <xref:System.Data.Services.Client.MergeOption> для запросов и операций загрузки. Этот параметр указывается установкой свойства <xref:System.Data.Services.Client.DataServiceContext.MergeOption%2A> в <xref:System.Data.Services.Client.DataServiceContext>. Значение параметра слияния по умолчанию равно <xref:System.Data.Services.Client.MergeOption.AppendOnly>. В этом случае материализуются только объекты для еще неотслеживаемых сущностей, то есть существующие объекты не перезаписываются. Еще один способ предотвратить перезапись изменений объектов в клиенте при получении обновлений из службы данных состоит в указании параметра <xref:System.Data.Services.Client.MergeOption.PreserveChanges>. При указании параметра <xref:System.Data.Services.Client.MergeOption.OverwriteChanges> значения объектов в клиенте заменяются новейшими значениями из записей в канале ответа, даже если в эти объекты уже были внесены изменения. При использовании параметра слияния <xref:System.Data.Services.Client.MergeOption.NoTracking> <xref:System.Data.Services.Client.DataServiceContext> не может отправлять изменения, внесенные в объекты клиента, в службу данных. При выборе этого параметра, изменения всегда перезаписываются значениями из службы данных.  
   
 ## <a name="managing-concurrency"></a>Управление параллелизмом  
- [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]поддерживает оптимистичный параллелизм, позволяющий службе данных для обнаружения конфликтов обновления. Поставщик службы данных можно настроить таким образом, что служба данных будет проверять наличие изменений в сущностях с помощью маркера параллелизма. Этот маркер включает одно или несколько свойств типа сущности, проверяемых службой данных для определения, был ли ресурс изменен. Маркеры параллелизма, которые включены в заголовке eTag запросов и ответов службы данных, которые выполняют по [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] клиента. Дополнительные сведения см. в разделе [обновление службы данных](../../../../docs/framework/data/wcf/updating-the-data-service-wcf-data-services.md).  
+ [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] поддерживает оптимистичный параллелизм, позволяющий службе данных для обнаружения конфликтов обновления. Поставщик службы данных можно настроить таким образом, что служба данных будет проверять наличие изменений в сущностях с помощью маркера параллелизма. Этот маркер включает одно или несколько свойств типа сущности, проверяемых службой данных для определения, был ли ресурс изменен. Маркеры параллелизма, которые включены в заголовке eTag запросов и ответов службы данных, которые выполняют по [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] клиента. Дополнительные сведения см. в разделе [обновление службы данных](../../../../docs/framework/data/wcf/updating-the-data-service-wcf-data-services.md).  
   
  Объект <xref:System.Data.Services.Client.DataServiceContext> отслеживает изменения, внесенные в объекты, указанные вручную с помощью методов <xref:System.Data.Services.Client.DataServiceContext.AddObject%2A>, <xref:System.Data.Services.Client.DataServiceContext.UpdateObject%2A> и <xref:System.Data.Services.Client.DataServiceContext.DeleteObject%2A> или с помощью объекта <xref:System.Data.Services.Client.DataServiceCollection%601>. При вызове метода <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> клиент отправляет изменения назад службе данных. Метод <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> может завершиться ошибкой, если изменения данных, произведенные клиентом, вступают в конфликт с изменениями, произведенными службой данных. В этом случае необходимо запросить сущности повторно, чтобы получить обновленные данные. Чтобы переписать изменения в службе данных, выполните запрос с использованием параметра слияния <xref:System.Data.Services.Client.MergeOption.PreserveChanges>. При повторном вызове метода <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> изменения, произведенные в клиенте, будут внесены в службе данных, если в службе данных не производилось других изменений в ресурсах.  
   

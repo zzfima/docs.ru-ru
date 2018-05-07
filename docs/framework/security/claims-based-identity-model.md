@@ -1,26 +1,14 @@
 ---
-title: "Модель удостоверений, основанных на утверждениях"
-ms.custom: 
+title: Модель удостоверений, основанных на утверждениях
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 4a96a9af-d980-43be-bf91-341a23401431
-caps.latest.revision: 
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: f675f75d6dfd51b5259748316864048562ee0452
-ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
+ms.openlocfilehash: dadcc397783e003574d417aa6253ebc561ed28db
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="claims-based-identity-model"></a>Модель удостоверений, основанных на утверждениях
 При создании приложения, поддерживающего утверждения, удостоверение пользователя представлено в данном приложении в виде набора утверждений. Имя пользователя может иметь одно утверждение, другой может быть адрес электронной почты. Основная идея заключается в настройке внешней системы удостоверений таким образом, чтобы она предоставляла приложению всю необходимую информацию о пользователе при каждом его запросе с криптографическим подтверждением того, что полученные данные удостоверения поступили из надежного источника.  
