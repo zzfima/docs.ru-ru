@@ -1,13 +1,6 @@
 ---
-title: "Общие сведения о трехмерных преобразованиях"
-ms.custom: 
+title: Общие сведения о трехмерных преобразованиях
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - 3-D transformations
 - transformations [WPF], 3-D
 ms.assetid: e45e555d-ac1e-4b36-aced-e433afe7f27f
-caps.latest.revision: "18"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7b45c2c12393f296f916eaf8ea3f912958b54b09
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f0fb859905327b30c0ea509e5d07072b81dcf30e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="3-d-transformations-overview"></a>Общие сведения о трехмерных преобразованиях
 В этом разделе описывается применение преобразований к трехмерным моделям в графической системе [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. Преобразования позволяют разработчикам перемещать модели, изменять их размер и направление, при этом не затрагивая их базовые определяющие значения.  
@@ -49,7 +37,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="translation-transformations"></a>Преобразования перевода  
  Трехмерных преобразований наследуют от абстрактного базового класса <xref:System.Windows.Media.Media3D.Transform3D>; к ним относятся классы аффинного преобразования <xref:System.Windows.Media.Media3D.TranslateTransform3D>, <xref:System.Windows.Media.Media3D.ScaleTransform3D>, и <xref:System.Windows.Media.Media3D.RotateTransform3D>. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Трехмерных система также предоставляет <xref:System.Windows.Media.Media3D.MatrixTransform3D> класс, который позволяет указать те же преобразования в более коротких матричных операциях.  
   
- <xref:System.Windows.Media.Media3D.TranslateTransform3D>перемещает все точки в Model3D в направлении вектора смещения с <xref:System.Windows.Media.Media3D.TranslateTransform3D.OffsetX%2A>, <xref:System.Windows.Media.Media3D.TranslateTransform3D.OffsetY%2A>, и <xref:System.Windows.Media.Media3D.TranslateTransform3D.OffsetZ%2A> свойства. Например, если задать вершине куба с координатами (2, 2, 2) вектор смещения (0, 1,6, 1), то вершина (2, 2, 2) будет перемещена в точку (2, 3,6, 3). В пространстве модели вершина куба останется в точке (2, 2, 2), но, поскольку связь пространства модели с мировым пространством изменилась, координата пространства модели (2, 2, 2) будет находиться в точке (2, 3,6, 3) мирового пространства.  
+ <xref:System.Windows.Media.Media3D.TranslateTransform3D> перемещает все точки в Model3D в направлении вектора смещения с <xref:System.Windows.Media.Media3D.TranslateTransform3D.OffsetX%2A>, <xref:System.Windows.Media.Media3D.TranslateTransform3D.OffsetY%2A>, и <xref:System.Windows.Media.Media3D.TranslateTransform3D.OffsetZ%2A> свойства. Например, если задать вершине куба с координатами (2, 2, 2) вектор смещения (0, 1,6, 1), то вершина (2, 2, 2) будет перемещена в точку (2, 3,6, 3). В пространстве модели вершина куба останется в точке (2, 2, 2), но, поскольку связь пространства модели с мировым пространством изменилась, координата пространства модели (2, 2, 2) будет находиться в точке (2, 3,6, 3) мирового пространства.  
   
  ![Фигура](../../../../docs/framework/wpf/graphics-multimedia/media/transforms-translate.png "перевод преобразований")  
 Перевод со смещением  
@@ -59,7 +47,7 @@ ms.lasthandoff: 12/22/2017
  [!code-xaml[animation3dgallery_snip#Translation3DAnimationExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Animation3DGallery_snip/CS/Translation3DAnimationExample.xaml#translation3danimationexamplewholepage)]  
   
 ## <a name="scale-transformations"></a>Преобразования масштаба  
- <xref:System.Windows.Media.Media3D.ScaleTransform3D>изменяет масштаб модели, указанный вектор масштабирования относительно центральной точки. Укажите единый масштаб, который масштабирует модель по осям X, Y и Z для пропорционального изменения ее размера. Например, задание преобразования <xref:System.Windows.Media.ScaleTransform.ScaleX%2A>, <xref:System.Windows.Media.ScaleTransform.ScaleY%2A>, и <xref:System.Windows.Media.Media3D.ScaleTransform3D.ScaleZ%2A> свойства 0,5 уменьшению размера модели; значение 2 те же свойства удваивается его масштаб в все три оси.  
+ <xref:System.Windows.Media.Media3D.ScaleTransform3D> изменяет масштаб модели, указанный вектор масштабирования относительно центральной точки. Укажите единый масштаб, который масштабирует модель по осям X, Y и Z для пропорционального изменения ее размера. Например, задание преобразования <xref:System.Windows.Media.ScaleTransform.ScaleX%2A>, <xref:System.Windows.Media.ScaleTransform.ScaleY%2A>, и <xref:System.Windows.Media.Media3D.ScaleTransform3D.ScaleZ%2A> свойства 0,5 уменьшению размера модели; значение 2 те же свойства удваивается его масштаб в все три оси.  
   
  ![Универсальный ScaleTransform3D](../../../../docs/framework/wpf/graphics-multimedia/media/threecubes-uniformscale-1.png "threecubes_uniformscale_1")  
 Пример ScaleVector  
@@ -87,7 +75,7 @@ ms.lasthandoff: 12/22/2017
   
  Чтобы повернуть модель "на месте", следует указать фактический центр модели в качестве центра поворота. Геометрия обычно моделируется от начала координат, поэтому для получения ожидаемого результата от набора преобразований необходимо вначале изменить размер модели (т. е. отмасштабировать), задать ее направление (повернуть), а затем перенести ее в нужное место (преобразовать).  
   
- ![Поворот на 60 градусов в x-45; &#45; и y осей](../../../../docs/framework/wpf/graphics-multimedia/media/twocubes-rotation2axes-1.png "twocubes_rotation2axes_1")  
+ ![Поворот на 60 градусов в x&#45; и y&#45;осей](../../../../docs/framework/wpf/graphics-multimedia/media/twocubes-rotation2axes-1.png "twocubes_rotation2axes_1")  
 Пример поворота  
   
  Осе-угловой поворот подходит для статических преобразований и некоторых анимаций. Тем не менее рассмотрим поворот модели куба на 60 градусов вокруг оси X, а затем на 45 градусов вокруг оси Z. Это преобразование можно описать как два отдельных аффинных преобразования или как матрицу. Тем не менее плавно анимировать поворот, определенный таким образом, может быть достаточно трудно. Несмотря на то что начальные и конечные позиции вычисляемой модели совпадают, промежуточные положения модели не определены при вычислении. Кватернионы представляют собой альтернативный способ вычисления интерполяции между начальной и конечной точками поворота.  

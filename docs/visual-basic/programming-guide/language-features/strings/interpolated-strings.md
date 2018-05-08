@@ -1,17 +1,13 @@
 ---
 title: Интерполированные строки (Visual Basic)
 ms.date: 10/31/2017
-ms.prod: .net
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9501c052f387a522226e957193a8866083aa4233
-ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
+ms.openlocfilehash: 95f79c5cdff1a48da2bb0eaf92229570ced631b1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="interpolated-strings-visual-basic-reference"></a>Интерполированные строки (Справочник по языку Visual Basic)
 
@@ -61,7 +57,7 @@ $"<text> {<interpolated-expression> [,<field-width>] [:<format-string>] } <text>
 
    Это окончательный результат интерпретации строк. Все вхождения двойных фигурных скобок ("{{" и "}}") преобразуются в одиночную фигурную скобку. 
 
-2. Преобразование интерполированной строки в переменную <xref:System.IFormattable>, которая позволяет создавать несколько результирующих строк с содержимым для конкретного языка из одного экземпляра <xref:System.IFormattable>. Это полезно для включения правильных форматов чисел и дат для отдельных языков.  Все вхождения двойных фигурных скобок ("{{" и "}}") остаются двойными фигурными скобками до тех пор, пока строка не будет отформатирована путем явного или неявного вызова метода <xref:System.Object.ToString>.  Все заключенные в скобки выражения интерполяции преобразуются в {0}, \{1\} и т. д.  
+2. Преобразование интерполированной строки в переменную <xref:System.IFormattable>, которая позволяет создавать несколько результирующих строк с содержимым для конкретного языка из одного экземпляра <xref:System.IFormattable>. Это полезно для включения правильных форматов чисел и дат для отдельных языков.  Все вхождения двойных фигурных скобок ("{{" и "}}") остаются двойными фигурными скобками до тех пор, пока строка не будет отформатирована путем явного или неявного вызова метода <xref:System.Object.ToString>.  Все выражения автономной интерполяции преобразуются в {0}, {1}, и т. д.  
 
    В следующем примере используется отражение для отображения членов, а также значений поля и свойства переменной <xref:System.IFormattable>, созданной из интерполированной строки. Кроме того, переменная <xref:System.IFormattable> передается в метод <xref:System.Console.WriteLine(System.String)?displayProperty=nameWithType>.
 
@@ -71,13 +67,13 @@ $"<text> {<interpolated-expression> [,<field-width>] [:<format-string>] } <text>
 
 3. Преобразование интерполированной строки для <xref:System.FormattableString> переменной, которая представляет строку составного формата. Проверка строки составного формата и способа ее отрисовки в виде результирующей строки может, например, обеспечивать защиту от атак путем внедрения кода, если выполнялось построение запроса. Объект <xref:System.FormattableString> также включает в себя:
 
-      - Объект <xref:System.FormattableString.ToString> перегрузку, которая формирует результирующую строку для <xref:System.Globalization.CultureInfo.CurrentCulture>.
+      - Перегрузка <xref:System.FormattableString.ToString>, которая формирует результирующую строку для <xref:System.Globalization.CultureInfo.CurrentCulture>.
       
       - Объект <xref:System.FormattableString.Invariant%2A> метод, который формирует строку для <xref:System.Globalization.CultureInfo.InvariantCulture>.
       
-      - Объект <xref:System.FormattableString.ToString(System.IFormatProvider)> метод, который формирует результирующую строку для указанного языка и региональных параметров. 
+      - Метод <xref:System.FormattableString.ToString(System.IFormatProvider)>, который формирует результирующую строку для указанного языка и региональных параметров. 
   
-    Все вхождения двойных фигурных скобок («{{» и «}}») остаются двойными фигурными скобками, пока не выполнено форматирование.  Все заключенные в скобки выражения интерполяции преобразуются в {0}, \{1\} и т. д.  
+    Все вхождения двойных фигурных скобок («{{» и «}}») остаются двойными фигурными скобками, пока не выполнено форматирование.  Все выражения автономной интерполяции преобразуются в {0}, {1}, и т. д.  
 
    [!code-vb[interpolated-strings3](../../../../../samples/snippets/visualbasic/programming-guide/language-features/strings/interpolated-strings3.vb)]  
 

@@ -1,10 +1,6 @@
 ---
-title: "Практическое руководство. Изменение внешнего вида элемента управления DataRepeater (Visual Studio)"
+title: Практическое руководство. Изменение внешнего вида элемента управления DataRepeater (Visual Studio)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -12,14 +8,11 @@ helpviewer_keywords:
 - DataRepeater, customizing
 - DataRepeater, changing run time appearance
 ms.assetid: 2af6dfce-760b-489e-b863-8da967f315c3
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 585ff4c942185f3199fe6e9e47a4ebd9f1f0a478
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 9863d9343ffcecc1e4aae7f6bc16dae39ef76385
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-change-the-appearance-of-a-datarepeater-control-visual-studio"></a>Практическое руководство. Изменение внешнего вида элемента управления DataRepeater (Visual Studio)
 Можно изменить внешний вид <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> элемента управления во время разработки путем задания свойств или во время выполнения путем обработки <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.DrawItem> событий.  

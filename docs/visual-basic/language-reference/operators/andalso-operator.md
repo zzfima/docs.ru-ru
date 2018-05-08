@@ -1,11 +1,6 @@
 ---
-title: "Оператор AndAlso (Visual Basic)"
+title: Оператор AndAlso (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.AndAlso
 - AndAlso
@@ -16,14 +11,11 @@ helpviewer_keywords:
 - operators [Visual Basic], conjunction
 - short-circuit evaluation
 ms.assetid: bbc15191-b374-495b-9b8f-7b8c2f4388eb
-caps.latest.revision: "19"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 5f92f4ed226c2923c3d95a7b80db3872b7ac33dc
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 549d14cc35d285ac2e4a02a37dd201cc669c5627
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="andalso-operator-visual-basic"></a>Оператор AndAlso (Visual Basic)
 Выполняет сокращенное вычисление логического умножения двух выражений.  
@@ -38,9 +30,9 @@ result = expression1 AndAlso expression2
   
 |Термин|Определение|  
 |---|---|  
-|`result`|Обязательный. Произвольное выражение `Boolean`. В результате `Boolean` результат сравнения двух выражений.|  
-|`expression1`|Обязательный. Произвольное выражение `Boolean`.|  
-|`expression2`|Обязательный. Произвольное выражение `Boolean`.|  
+|`result`|Обязательно. Произвольное выражение `Boolean`. В результате `Boolean` результат сравнения двух выражений.|  
+|`expression1`|Обязательно. Произвольное выражение `Boolean`.|  
+|`expression2`|Обязательно. Произвольное выражение `Boolean`.|  
   
 ## <a name="remarks"></a>Примечания  
  Логическая операция называется *сокращенного вычисления* Если скомпилированный код может пропустить оценку одного выражения в зависимости от результата другого выражения. Если результат вычисления первого выражения определяет конечный результат операции, нет необходимости для вычисления второго выражения, так как он не может изменить результат. Сокращенные вычисления могут повысить производительность, если пропущенное выражение является сложным или содержит вызовы процедур.  

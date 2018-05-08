@@ -1,22 +1,12 @@
 ---
-title: "Многопоточность с помощью компонента BackgroundWorker (Visual Basic)"
-ms.custom: 
+title: Многопоточность с помощью компонента BackgroundWorker (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: e4cd9b2a-f924-470e-a16e-50274709b40e
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: bb0734b4bbf3f8bf5b27305754829f1a9f29f42a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 07700aa526866729f1ba1a8d846f22ce333c356d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-multithreading-with-the-backgroundworker-component-visual-basic"></a>Пошаговое руководство: Многопоточность с помощью компонента BackgroundWorker (Visual Basic)
 В этом пошаговом руководстве описывается создание многопоточного приложения Windows Forms, которое выполняет поиск заданного слова в текстовом файле. В нем демонстрируются:  
@@ -48,7 +38,7 @@ ms.lasthandoff: 11/21/2017
   
 4.  Добавьте метку рядом с каждым текстовым полем. Задайте свойство `Text` для каждой метки, как показано в следующей таблице.  
   
-    |Объект|Свойство|Параметр|  
+    |Object|Свойство|Параметр|  
     |------------|--------------|-------------|  
     |Первая метка|`Text`|Исходный файл|  
     |Вторая метка|`Text`|Сравнение строк|  
@@ -61,10 +51,10 @@ ms.lasthandoff: 11/21/2017
   
 2.  Задайте следующие свойства для объекта BackgroundWorker1.  
   
-    |Свойство|Параметр|  
+    |Свойство.|Параметр|  
     |--------------|-------------|  
     |`WorkerReportsProgress`|Да|  
-    |`WorkerSupportsCancellation`|True|  
+    |`WorkerSupportsCancellation`|Да|  
   
 ### <a name="to-define-the-method-that-will-run-on-a-separate-thread"></a>Определение метода, который будет выполняться в отдельном потоке  
   
@@ -273,7 +263,7 @@ ms.lasthandoff: 11/21/2017
   
 3.  Нажмите кнопку `Cancel`. Приложение должно незамедлительно прекратить подсчет.  
   
-## <a name="next-steps"></a>Дальнейшие действия  
+## <a name="next-steps"></a>Следующие шаги  
  Это приложение включает обработку некоторых основных ошибок. Оно выявляет пустые строки поиска. Программу можно сделать более надежной за счет обработки других ошибок, например, превышения максимального числа слов или строк, которые могут быть подсчитаны.  
   
 ## <a name="see-also"></a>См. также  

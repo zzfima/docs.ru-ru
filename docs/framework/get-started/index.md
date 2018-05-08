@@ -1,25 +1,18 @@
 ---
 title: Начало работы с .NET Framework
 ms.custom: updateeachrelease
-ms.date: 10/17/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: article
+ms.date: 04/10/2018
 helpviewer_keywords:
 - .NET Framework, getting started
 - getting started [.NET Framework]
 ms.assetid: c693fd34-88fe-4d90-b332-19eeadf3b7e7
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 3295d17b0ef4650c38f264dfc785eee7a452be86
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d62ae73c9a2789087785e1fba6b227245ee08a10
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="get-started-with-the-net-framework"></a>Начало работы с .NET Framework
 
@@ -60,7 +53,7 @@ ms.lasthandoff: 12/22/2017
 
 - Если приложение зависит от конкретной версии платформы .NET Framework, то его работа может быть нарушена в случае удаления этой версии.
 
-- В некоторых версиях платформы .NET Framework существуют локальные обновления на более ранние версии. Например, [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] представляет собой обновление на месте до версии 2.0, а .NET Framework 4.7.1 — обновление на месте до версий 4, 4.5, 4.5.1, 4.5.2, 4.6, 4.6.1, 4.6.2 и 4.7. Дополнительные сведения см. в разделе [Платформа.NET Framework: версии и зависимости](../../../docs/framework/migration-guide/versions-and-dependencies.md).
+- В некоторых версиях платформы .NET Framework существуют локальные обновления на более ранние версии. Например, [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] представляет собой обновление на месте для версии 2.0, а .NET Framework 4.7.2 — обновление на месте для версий с 4 по 4.7.1. Дополнительные сведения см. в разделе [Платформа.NET Framework: версии и зависимости](../../../docs/framework/migration-guide/versions-and-dependencies.md).
 
 Если вы решите удалить платформу .NET Framework в версии Windows, предшествующей Windows 8, всегда используйте для удаления средство **Программы и компоненты**. Никогда не удаляйте версию платформы .NET Framework вручную. В ОС Windows 8 и более поздних версий .NET Framework представляет собой компонент операционной системы, который нельзя удалить отдельно.
 
@@ -73,7 +66,7 @@ ms.lasthandoff: 12/22/2017
 
 Перед разработкой приложений или компонентов платформы .NET Framework сделайте следующее:
 
-1. Если платформа не предустановлена в операционной системе, установите версию платформы .NET Framework, на которой будет работать ваше приложение. Последней рабочей версией является .NET Framework 4.7.1, которая предустановлена в Windows 10 Fall Creators Update и доступна для скачивания в более ранних версиях операционной системы Windows. Требования к системе для .NET Framework см. в разделе [Требования к системе](../../../docs/framework/get-started/system-requirements.md). Сведения об установке других версий .NET Framework см. в [руководстве по установке](../../../docs/framework/install/guide-for-developers.md). Дополнительные пакеты .NET Framework выпускаются внештатно. Это значит, что они выпускаются по очереди, нерегулярно. Дополнительные сведения об этих пакетах см. в разделе [.NET Framework и отдельные выпуски](../../../docs/framework/get-started/the-net-framework-and-out-of-band-releases.md).
+1. Если платформа не предустановлена в операционной системе, установите версию платформы .NET Framework, на которой будет работать ваше приложение. Последней рабочей версией является .NET Framework 4.7.2, которая предустановлена в Windows 10, обновление за апрель 2018 года, и доступна для скачивания в более ранних версиях операционной системы Windows. Требования к системе для .NET Framework см. в разделе [Требования к системе](../../../docs/framework/get-started/system-requirements.md). Сведения об установке других версий .NET Framework см. в [руководстве по установке](../../../docs/framework/install/guide-for-developers.md). Дополнительные пакеты .NET Framework выпускаются внештатно. Это значит, что они выпускаются по очереди, нерегулярно. Дополнительные сведения об этих пакетах см. в разделе [.NET Framework и отдельные выпуски](../../../docs/framework/get-started/the-net-framework-and-out-of-band-releases.md).
 
 2. Выберите язык или языки, поддерживаемые платформой .NET Framework, которые вы хотите использовать для разработки приложений. Поддерживается целый ряд языков, в том числе [Visual Basic](../../visual-basic/index.md), [C#](../../csharp/index.md), [F#](../../fsharp/index.md) и C++/CLI от Майкрософт. (Язык программирования, позволяющий разрабатывать приложения для .NET Framework, соответствует [спецификации Common Language Infrastructure (CLI)](http://go.microsoft.com/fwlink/?LinkId=199862).)
 

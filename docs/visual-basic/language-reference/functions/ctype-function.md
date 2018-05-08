@@ -1,11 +1,6 @@
 ---
-title: "Функция CType (Visual Basic)"
+title: Функция CType (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.CType
 helpviewer_keywords:
@@ -14,14 +9,11 @@ helpviewer_keywords:
 - CType function
 - conversions [Visual Basic], expression
 ms.assetid: dd4b29e7-6fa1-428c-877e-69955420bb72
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: d804ce75929592675068fdc434a1ba7429fa5373
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: 7b1c7ae2a0126bf7cd487df4e9a7364c98e1c695
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ctype-function-visual-basic"></a>Функция CType (Visual Basic)
 Возвращает результат явного преобразования выражения для указанного типа данных, объекта, структуры, класса или интерфейса.  
@@ -47,7 +39,7 @@ CType(expression, typename)
 >  -   Функции преобразования типов, такие как `CByte`, `CDbl`, и `CInt` , выполнить преобразование в определенный тип данных. Дополнительные сведения см. в разделе [функции преобразования типов](../../../visual-basic/language-reference/functions/type-conversion-functions.md).  
 > -   [Оператор DirectCast](../../../visual-basic/language-reference/operators/directcast-operator.md) или [оператор TryCast](../../../visual-basic/language-reference/operators/trycast-operator.md). Эти операторы требуют наследовать от одного типа или реализовывал другой тип. Они могут предоставить немного лучшую производительность, чем `CType` при преобразовании к и из `Object` тип данных.  
   
- `CType`— скомпилированные встроенный, это означает, что код преобразования является частью кода, вычисляет выражение. В некоторых случаях код выполняется быстрее, так как процедуры не вызываются для выполнения преобразования.  
+ `CType` — скомпилированные встроенный, это означает, что код преобразования является частью кода, вычисляет выражение. В некоторых случаях код выполняется быстрее, так как процедуры не вызываются для выполнения преобразования.  
   
  Если не определено преобразование из `expression` для `typename` (например, из `Integer` для `Date`), Visual Basic выводит сообщение об ошибке времени компиляции.  
   

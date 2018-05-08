@@ -1,13 +1,7 @@
 ---
-title: "Взаимное преобразование структур DateTime и DateTimeOffset"
-ms.custom: 
+title: Взаимное преобразование структур DateTime и DateTimeOffset
 ms.date: 04/10/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -22,25 +16,20 @@ helpviewer_keywords:
 - Date data type, converting
 - local time conversions
 ms.assetid: b605ff97-0c45-4c24-833f-4c6a3e8be64c
-caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 2055df26618664ee130be417599f4ec46e439444
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: dec0e5138ecf08783f11d21cd28d7291d27ea68d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="converting-between-datetime-and-datetimeoffset"></a>Взаимное преобразование структур DateTime и DateTimeOffset
 
 Несмотря на то что <xref:System.DateTimeOffset> структура обеспечивает более высокую степень сведения о часовом поясе, чем <xref:System.DateTime> структуры <xref:System.DateTime> параметры наиболее часто используются в вызовах метода. По этой причине возможность преобразования <xref:System.DateTimeOffset> значения <xref:System.DateTime> значениям и наоборот особенно важен. В этом разделе показано, как выполнять эти преобразования таким образом, чтобы сохранять столько сведения о часовом поясе, насколько это возможно.
 
 > [!NOTE]
-> Как <xref:System.DateTime> и <xref:System.DateTimeOffset> типы имеют некоторые ограничения при представлении времени в часовых поясах. С его <xref:System.DateTime.Kind%2A> свойства <xref:System.DateTime> может отражают только по Гринвичу (UTC) и местный часовой пояс компьютера. <xref:System.DateTimeOffset>отражает смещение времени от времени UTC, но не отражает фактическое часовой пояс, к которому, смещение относится. Дополнительные сведения о значениях времени и поддержке часовых поясов см. в разделе [Choosing Between DateTime, DateTimeOffset, TimeSpan и TimeZoneInfo](../../../docs/standard/datetime/choosing-between-datetime.md).
+> Как <xref:System.DateTime> и <xref:System.DateTimeOffset> типы имеют некоторые ограничения при представлении времени в часовых поясах. С его <xref:System.DateTime.Kind%2A> свойства <xref:System.DateTime> может отражают только по Гринвичу (UTC) и местный часовой пояс компьютера. <xref:System.DateTimeOffset> отражает смещение времени от времени UTC, но не отражает фактическое часовой пояс, к которому, смещение относится. Дополнительные сведения о значениях времени и поддержке часовых поясов см. в разделе [Choosing Between DateTime, DateTimeOffset, TimeSpan и TimeZoneInfo](../../../docs/standard/datetime/choosing-between-datetime.md).
 
 ## <a name="conversions-from-datetime-to-datetimeoffset"></a>Преобразование DateTime в DateTimeOffset
 

@@ -1,10 +1,6 @@
 ---
 title: .NET Framework 4.7, 4.6 и 4.5
-ms.date: 10/17/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: article
+ms.date: 04/10/2018
 ms.custom: updateeachrelease
 f1_keywords:
 - f61f02f2-2f20-483d-8f56-a9c8f3a54986
@@ -14,19 +10,16 @@ helpviewer_keywords:
 ms.assetid: f61f02f2-2f20-483d-8f56-a9c8f3a54986
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 34402e74bb0cb560d213760c38ce4b936d712eb4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 85bb386f2adbf02a8fde891c65c78b8e8d4537b2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="net-framework-guide"></a>Руководство по .NET Framework
 
 > [!NOTE]
-> Этот набор содержимого .NET Framework включает сведения для версий .NET Framework 4.5, 4.5.1, 4.5.2, 4.6, 4.6.1, 4.6.2, 4.7 и 4.7.1. Сведения о скачивании .NET Framework см. в [руководстве по установке](../../docs/framework/install/guide-for-developers.md). Список новых возможностей и изменений в .NET Framework 4.5, [!INCLUDE[net_v46](../../includes/net-v46-md.md)], вспомогательных выпусках, .NET Framework 4.7 и 4.7.1 см. в разделе [Новые возможности .NET Framework](../../docs/framework/whats-new/index.md). Список поддерживаемых платформ см. в описании [системных требований .NET Framework](../../docs/framework/get-started/system-requirements.md). 
+> Этот набор содержимого .NET Framework включает сведения для версий .NET Framework 4.5, 4.5.1, 4.5.2, 4.6, 4.6.1, 4.6.2, 4.7, 4.7.1 и 4.7.2. Сведения о скачивании .NET Framework см. в [руководстве по установке](../../docs/framework/install/guide-for-developers.md). Список новых возможностей и изменений в .NET Framework 4.5, [!INCLUDE[net_v46](../../includes/net-v46-md.md)], доработанных выпусках, .NET Framework 4.7, 4.7.1 и 4.7.2 см. в разделе [Новые возможности .NET Framework](../../docs/framework/whats-new/index.md). Список поддерживаемых платформ см. в описании [системных требований .NET Framework](../../docs/framework/get-started/system-requirements.md). 
 
 .NET Framework — это платформа разработки для создания приложений для Интернета, Windows, Windows Phone, Windows Server и Microsoft Azure. Она состоит из среды CLR и библиотеки классов .NET Framework, которая содержит обширный набор функциональных возможностей, а также обеспечивает поддержку многих отраслевых стандартов.
 
@@ -61,7 +54,7 @@ ms.lasthandoff: 12/22/2017
 [Инструменты](../../docs/framework/tools/index.md)  
 Инструменты, описанные в этом разделе, помогут в разработке, настройке и развертывании приложений с помощью технологий .NET Framework.  
   
-[Библиотека классов .NET Framework](/dotnet/api/?view=netframework-4.7.1)   
+[Библиотека классов .NET Framework](/dotnet/api/?view=netframework-4.7.2)   
 Синтаксис, примеры кода и другие сведения для каждого класса, содержащегося в пространствах имен .NET Framework.  
   
 [Дополнительные библиотеки классов и API-интерфейсы](../../docs/framework/additional-apis/index.md)  

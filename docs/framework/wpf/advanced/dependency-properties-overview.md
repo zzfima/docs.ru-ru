@@ -1,10 +1,7 @@
 ---
-title: "Общие сведения о свойствах зависимости"
-description: "Свойство, которое реализуется в системе свойств WPF известен как свойство зависимостей. В этом обзоре описывается в системе свойств WPF и возможности для свойства зависимостей."
+title: Общие сведения о свойствах зависимости
+description: Свойство, которое реализуется в системе свойств WPF известен как свойство зависимостей. В этом обзоре описывается в системе свойств WPF и возможности для свойства зависимостей.
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.technology: dotnet-wpf
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,16 +14,11 @@ helpviewer_keywords:
 - dependency properties [WPF]
 - resources [WPF], references to
 ms.assetid: d119d00c-3afb-48d6-87a0-c4da4f83dee5
-caps.latest.revision: "30"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d90e47c400f24eb10f2d262f9cb0e757ff472f0a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 196e858c52c06c96d652209e86039bfcc81a785a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dependency-properties-overview"></a>Общие сведения о свойствах зависимости
 
@@ -43,7 +35,7 @@ ms.lasthandoff: 12/22/2017
 В справочнике по SDK можно определить, что это свойство является свойством зависимостей по наличию раздела сведений о свойстве зависимостей на странице управляемой ссылки для этого свойства. Сведения о свойстве зависимостей раздел содержит ссылку на <xref:System.Windows.DependencyProperty> идентификатор поля для этого свойства зависимости, а также включает список параметров метаданных, заданных для этого свойства, информацию о переопределениях каждого класса и другие сведения.
 
 ## <a name="dependency-properties-back-clr-properties"></a>Свойства зависимостей резервное свойств среды CLR
-Свойства зависимостей и система свойств [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] расширяют функциональные возможности свойства, предоставляя тип, который поддерживает свойство, в качестве альтернативной реализации для стандартного способа обеспечения свойства с помощью закрытого поля. Этот тип называется <xref:System.Windows.DependencyProperty>. Другие важные типа, который определяет [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] система свойств <xref:System.Windows.DependencyObject>. <xref:System.Windows.DependencyObject>Определяет базовый класс для регистрации и владельцем свойства зависимостей.
+Свойства зависимостей и система свойств [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] расширяют функциональные возможности свойства, предоставляя тип, который поддерживает свойство, в качестве альтернативной реализации для стандартного способа обеспечения свойства с помощью закрытого поля. Этот тип называется <xref:System.Windows.DependencyProperty>. Другие важные типа, который определяет [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] система свойств <xref:System.Windows.DependencyObject>. <xref:System.Windows.DependencyObject> Определяет базовый класс для регистрации и владельцем свойства зависимостей.
 
 Ниже приведен список терминов, используемых в этой документации [!INCLUDE[TLA#tla_sdk](../../../../includes/tlasharptla-sdk-md.md)] при описании свойств зависимостей.
 

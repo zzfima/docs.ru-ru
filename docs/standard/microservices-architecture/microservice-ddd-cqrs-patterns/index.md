@@ -1,21 +1,14 @@
 ---
 title: Использование микрослужб с шаблонами DDD и CQRS для решения сложных бизнес-задач
 description: Архитектура микрослужб .NET для упакованных в контейнеры приложений .NET | Использование микрослужб с шаблонами DDD и CQRS для решения сложных бизнес-задач
-keywords: Docker, микрослужбы, ASP.NET, контейнер
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.prod: .net-core
-ms.technology: dotnet-docker
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 8098c62ac18593d8044d52cb24c4cd8859972e68
-ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.openlocfilehash: ef8e0b08c7ba4ddb78144df54d407998cd40fc55
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tackling-business-complexity-in-a-microservice-with-ddd-and-cqrs-patterns"></a>Использование микрослужб с шаблонами DDD и CQRS для решения сложных бизнес-задач
 
@@ -40,7 +33,7 @@ DDD — это обширная тема, по которой доступно 
 -   **Эрик Эванс (Eric Evans). Domain Language (Предметно-ориентированный язык)**
     [*https://domainlanguage.com/*](https://domainlanguage.com/)
 
--   **Мартин Фаулер (Martin Fowler). Domain-Driven Design (Предметно-ориентированное проектирование)**
+-   **Мартин Фоулер (Martin Fowler). Domain-Driven Design (Предметно-ориентированное проектирование)**
     [*https://martinfowler.com/tags/domain%20driven%20design.html*](https://martinfowler.com/tags/domain%20driven%20design.html)
 
 -   **Джимми Богард (Jimmy Bogard). Strengthening Your Domain: A Primer (Усиление предметной области: учебник для начинающих)**
@@ -54,13 +47,13 @@ DDD — это обширная тема, по которой доступно 
 -   **Эрик Эванс (Eric Evans). Domain-Driven Design Reference: Definitions and Pattern Summaries (Справочник по предметно-ориентированному проектированию: общие сведения об определениях и шаблонах)**
     [*https://www.amazon.com/Domain-Driven-Design-Reference-Definitions-2014-09-22/dp/B01N8YB4ZO/*](https://www.amazon.com/Domain-Driven-Design-Reference-Definitions-2014-09-22/dp/B01N8YB4ZO/)
 
--   **Вон Вернон (Vaughn Vernon). Реализация методов предметно-ориентированного проектирования**
+-   **Вон Вернон (Vaughn Vernon). Реализация предметно-ориентированного проектирования**
     [*https://www.amazon.com/Implementing-Domain-Driven-Design-Vaughn-Vernon/dp/0321834577/*](https://www.amazon.com/Implementing-Domain-Driven-Design-Vaughn-Vernon/dp/0321834577/)
 
 -   **Вон Вернон (Vaughn Vernon). Предметно-ориентированное проектирование. Самое основное**
     [*https://www.amazon.com/Domain-Driven-Design-Distilled-Vaughn-Vernon/dp/0134434420/*](https://www.amazon.com/Domain-Driven-Design-Distilled-Vaughn-Vernon/dp/0134434420/)
 
--   **Джимми Нильссон (Jimmy Nilsson). Применение DDD и шаблонов проектирования**
+-   **Джимми Нилссон (Jimmy Nilsson). Применение DDD и шаблонов проектирования**
     [*https://www.amazon.com/Applying-Domain-Driven-Design-Patterns-Examples/dp/0321268202/*](https://www.amazon.com/Applying-Domain-Driven-Design-Patterns-Examples/dp/0321268202/)
 
 -   **Сезар де ла Торре (Cesar de la Torre). N-Layered Domain-Oriented Architecture Guide with .NET (Руководство по N-уровневой предметно-ориентированной архитектуре на .NET)**

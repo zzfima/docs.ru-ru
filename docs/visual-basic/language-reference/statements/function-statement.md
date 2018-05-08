@@ -1,12 +1,6 @@
 ---
-title: "Оператор Function (Visual Basic)"
+title: Оператор Function (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Function
 helpviewer_keywords:
@@ -34,14 +28,11 @@ helpviewer_keywords:
 - End keyword [Visual Basic], Function statements
 - Handles keyword [Visual Basic], Function statements
 ms.assetid: a4497077-0f46-4ede-a27f-9e8670df52b9
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 52e9210f9e715b6055e6ed199ef1aa4b919c6dd6
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: b4a0c33d6d466975ca5dde1bd20ad2e1a9f560e4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="function-statement-visual-basic"></a>Оператор Function (Visual Basic)
 Объявляет имя, параметры и код, определяющие `Function` процедуры.  
@@ -143,7 +134,7 @@ End Function
   
      `interface.definedname`  
   
-    |Отделение|Описание:|  
+    |Отделение|Описание|  
     |---|---|  
     |`interface`|Обязательно. Имя интерфейса, реализуемого данной процедурой, содержащего класса или структуры.|  
     |`definedname`|Обязательно. Имя, под которым процедура определена в `interface`.|  
@@ -162,7 +153,7 @@ End Function
   
      `eventvariable.event`  
   
-    |Отделение|Описание:|  
+    |Отделение|Описание|  
     |---|---|  
     |`eventvariable`|Обязательно. Объектная переменная объявлена с типом данных класса или структуры, который инициирует событие.|  
     |`event`|Обязательно. Имя события, которое обрабатывает данная процедура.|  
@@ -183,7 +174,7 @@ End Function
 ## <a name="defining-a-function"></a>Определение функции  
  Можно определить `Function` процедуры только на уровне модуля. Таким образом что контекст объявления для функции должен быть класс, структура, модуль или интерфейс и не может быть исходным файлом, пространство имен, процедура или блок. Дополнительные сведения см. в разделе [Контексты объявления и уровни доступа по умолчанию](declaration-contexts-and-default-access-levels.md).  
   
- `Function`процедуры по умолчанию для общего доступа. Вы можете настроить уровни доступа с помощью модификаторов доступа.  
+ `Function` процедуры по умолчанию для общего доступа. Вы можете настроить уровни доступа с помощью модификаторов доступа.  
   
  Объект `Function` процедура может объявить тип данных, процедура возвращает значение. Можно указать любой тип данных или имя перечисления, структуры, класса или интерфейса. Если не указать `returntype` , процедура возвращает `Object`.  
   

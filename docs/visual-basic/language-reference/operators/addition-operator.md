@@ -1,12 +1,6 @@
 ---
 title: + Оператор (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.+
 helpviewer_keywords:
@@ -16,14 +10,11 @@ helpviewer_keywords:
 - strings [Visual Basic], concatenating
 - sum operator [Visual Basic]
 ms.assetid: 5694778f-0a2c-4539-8009-f66f318fb46d
-caps.latest.revision: 26
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: fb0d66db2d777c046ccec69acc1f2069d21baf6c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: ccf79c700cf852c0febb9c3f3464cbacdd39296e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="-operator-visual-basic"></a>Оператор + (Visual Basic)
 Складывает два числа или возвращает положительное значение числового выражения. Может также использоваться для сцепления двух строковых выражений.  
@@ -40,7 +31,7 @@ ms.lasthandoff: 11/21/2017
   
 |Термин|Определение|  
 |---|---|  
-|`expression1`|Обязательный. Числовое или строковое выражение.|  
+|`expression1`|Обязательно. Числовое или строковое выражение.|  
 |`expression2`|Требуется, если `+` оператор вычисляет отрицательное значение. Числовое или строковое выражение.|  
   
 ## <a name="result"></a>Результат  
@@ -63,26 +54,26 @@ ms.lasthandoff: 11/21/2017
 |Типы данных выражений|Действие компилятора|  
 |---|---|  
 |Оба выражения имеют числовые типы данных (`SByte`, `Byte`, `Short`, `UShort`, `Integer`, `UInteger`, `Long`, `ULong`, `Decimal`, `Single`, или `Double`)|Добавите. Тип данных результата является числовым типом, соответствующим для типов данных `expression1` и `expression2`. В таблице «Целочисленных арифметических операций» в [типы данных из результатов оператора](../../../visual-basic/language-reference/operators/data-types-of-operator-results.md).|  
-|Оба выражения имеют тип`String`|Объединение.|  
+|Оба выражения имеют тип `String`|Объединение.|  
 |Одно выражение является числовым типом данных, а другой — строка|Если `Option Strict` — `On`, затем создает ошибку компилятора.<br /><br /> Если `Option Strict` — `Off`, неявно преобразовать `String` для `Double` и добавьте.<br /><br /> Если `String` не может быть преобразован `Double`, создается исключение <xref:System.InvalidCastException> исключение.|  
 |Одно выражение является числовым типом данных, а другой — [Nothing](../../../visual-basic/language-reference/nothing.md)|Добавить, с `Nothing` табличные значения как ноль.|  
-|Одно выражение представляет собой строку, а другой —`Nothing`|Объединение с `Nothing` значениями, как «».|  
+|Одно выражение представляет собой строку, а другой — `Nothing`|Объединение с `Nothing` значениями, как «».|  
   
  Если одно из выражений является `Object` выражения, Visual Basic выполняет следующие действия.  
   
 |Типы данных выражений|Действие компилятора|  
 |---|---|  
-|`Object`выражение содержит числовое значение, а другой — числовой тип данных|Если `Option Strict` — `On`, затем создает ошибку компилятора.<br /><br /> Если `Option Strict` — `Off`, затем добавьте.|  
-|`Object`выражение содержит числовое значение, а другой — типа`String`|Если `Option Strict` — `On`, затем создает ошибку компилятора.<br /><br /> Если `Option Strict` — `Off`, неявно преобразовать `String` для `Double` и добавьте.<br /><br /> Если `String` не может быть преобразован `Double`, создается исключение <xref:System.InvalidCastException> исключение.|  
-|`Object`выражение содержит строку, а другой — числовой тип данных|Если `Option Strict` — `On`, затем создает ошибку компилятора.<br /><br /> Если `Option Strict` — `Off`, неявно преобразует строку `Object` для `Double` и добавьте.<br /><br /> Если строка `Object` не может быть преобразован `Double`, создается исключение <xref:System.InvalidCastException> исключение.|  
-|`Object`выражение содержит строку, а другой — типа`String`|Если `Option Strict` — `On`, затем создает ошибку компилятора.<br /><br /> Если `Option Strict` — `Off`, неявно преобразовать `Object` для `String` и соединения.|  
+|`Object` выражение содержит числовое значение, а другой — числовой тип данных|Если `Option Strict` — `On`, затем создает ошибку компилятора.<br /><br /> Если `Option Strict` — `Off`, затем добавьте.|  
+|`Object` выражение содержит числовое значение, а другой — типа `String`|Если `Option Strict` — `On`, затем создает ошибку компилятора.<br /><br /> Если `Option Strict` — `Off`, неявно преобразовать `String` для `Double` и добавьте.<br /><br /> Если `String` не может быть преобразован `Double`, создается исключение <xref:System.InvalidCastException> исключение.|  
+|`Object` выражение содержит строку, а другой — числовой тип данных|Если `Option Strict` — `On`, затем создает ошибку компилятора.<br /><br /> Если `Option Strict` — `Off`, неявно преобразует строку `Object` для `Double` и добавьте.<br /><br /> Если строка `Object` не может быть преобразован `Double`, создается исключение <xref:System.InvalidCastException> исключение.|  
+|`Object` выражение содержит строку, а другой — типа `String`|Если `Option Strict` — `On`, затем создает ошибку компилятора.<br /><br /> Если `Option Strict` — `Off`, неявно преобразовать `Object` для `String` и соединения.|  
   
  Если оба выражения имеют `Object` выражения, Visual Basic выполняет следующие действия (`Option Strict Off` только).  
   
 |Типы данных выражений|Действие компилятора|  
 |---|---|  
 |Оба `Object` выражения содержат числовые значения|Добавите.|  
-|Оба `Object` выражения имеют тип`String`|Объединение.|  
+|Оба `Object` выражения имеют тип `String`|Объединение.|  
 |Один `Object` выражение содержит числовое значение, а другое содержит строку|Неявно преобразует строку `Object` для `Double` и добавьте.<br /><br /> Если строка `Object` не может быть преобразован в числовое значение, а затем вызывать <xref:System.InvalidCastException> исключение.|  
   
  Если параметр `Object` выражение, результатом которого является [ничего](../../../visual-basic/language-reference/nothing.md) или <xref:System.DBNull>, `+` оператор воспринимает его как `String` со значением «».  

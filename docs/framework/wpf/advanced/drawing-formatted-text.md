@@ -1,13 +1,6 @@
 ---
-title: "Рисование форматированного текста"
-ms.custom: 
+title: Рисование форматированного текста
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,16 +10,11 @@ helpviewer_keywords:
 - formatted text [WPF]
 - drawing [WPF], formatted text
 ms.assetid: b1d851c1-331c-4814-9964-6fe769db6f1f
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 364362e8377f02b5d6518e6ae4d71b6dd1eafc02
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 978c97b8cae24bff4ebdea8f4e56a940e5907fa6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="drawing-formatted-text"></a>Рисование форматированного текста
 В этом разделе содержится обзор возможностей <xref:System.Windows.Media.FormattedText> объекта. Этот объект предоставляет низкоуровневый элемент управления для рисования текста в приложениях [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  
@@ -42,11 +30,11 @@ ms.lasthandoff: 01/19/2018
 >  Для разработчиков, осуществляющих переход с API [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)], в таблице из раздела [Миграция Win32](#win32_migration) перечислены флаги DrawText [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] и примерный эквивалент в [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  
   
 ### <a name="reasons-for-using-formatted-text"></a>Причины использования форматированного текста  
- В [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] имеется множество элементов управления для рисования текста на экране. Каждый элемент управления предназначен для своего сценария и имеет собственный список функций и ограничений. Как правило <xref:System.Windows.Controls.TextBlock> элемент должен использоваться, если требуется ограниченная поддержка текста, например краткие предложения в [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]. <xref:System.Windows.Controls.Label>можно использовать, когда требуется Минимальная поддержка текста. Дополнительные сведения см. в разделе [Документы в WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md).  
+ В [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] имеется множество элементов управления для рисования текста на экране. Каждый элемент управления предназначен для своего сценария и имеет собственный список функций и ограничений. Как правило <xref:System.Windows.Controls.TextBlock> элемент должен использоваться, если требуется ограниченная поддержка текста, например краткие предложения в [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]. <xref:System.Windows.Controls.Label> можно использовать, когда требуется Минимальная поддержка текста. Дополнительные сведения см. в разделе [Документы в WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md).  
   
  <xref:System.Windows.Media.FormattedText> Объект предоставляет больше возможностей, чем форматирования [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] текстовых элементов управления и может быть полезно в случаях, где вы хотите использовать текст как декоративный элемент. Дополнительные сведения см. в следующем разделе: [Преобразование форматированного текста в геометрический объект](#converting_formatted_text).  
   
- Кроме того <xref:System.Windows.Media.FormattedText> объектов может применяться для создания ориентированных на текст <xref:System.Windows.Media.DrawingVisual>-производных объектов. <xref:System.Windows.Media.DrawingVisual>— Это упрощенный класс рисования, используемую для отрисовки фигур, изображений или текста. Дополнительные сведения см. в разделе [Пример проверки нажатия с использованием DrawingVisuals](http://go.microsoft.com/fwlink/?LinkID=159994).  
+ Кроме того <xref:System.Windows.Media.FormattedText> объектов может применяться для создания ориентированных на текст <xref:System.Windows.Media.DrawingVisual>-производных объектов. <xref:System.Windows.Media.DrawingVisual> — Это упрощенный класс рисования, используемую для отрисовки фигур, изображений или текста. Дополнительные сведения см. в разделе [Пример проверки нажатия с использованием DrawingVisuals](http://go.microsoft.com/fwlink/?LinkID=159994).  
   
 ## <a name="using-the-formattedtext-object"></a>Использование объекта FormattedText  
  Чтобы создать форматированный текст, вызовите <xref:System.Windows.Media.FormattedText.%23ctor%2A> конструктор для создания <xref:System.Windows.Media.FormattedText> объекта. После создания исходной строки форматированного текста можно применить ряд стилей форматирования.  
@@ -127,7 +115,7 @@ ms.lasthandoff: 01/19/2018
 |DT_PREFIXONLY|Нет|Не поддерживается.|  
 |DT_RIGHT|<xref:System.Windows.Media.FormattedText.TextAlignment%2A>|Используйте <xref:System.Windows.Media.FormattedText.TextAlignment%2A> свойство со значением, равным <xref:System.Windows.TextAlignment.Right>. (только WPF)|  
 |DT_RTLREADING|<xref:System.Windows.Media.FormattedText.FlowDirection%2A>|Задайте для свойства <xref:System.Windows.Media.FormattedText.FlowDirection%2A> значение <xref:System.Windows.FlowDirection.RightToLeft>.|  
-|DT_SINGLELINE|Нет|Не требуется. <xref:System.Windows.Media.FormattedText>объекты ведут себя как Однострочные элементы управления, если не либо <xref:System.Windows.Media.FormattedText.MaxTextWidth%2A> задано или содержит текст, возврат каретки и перевод строки (CR/LF).|  
+|DT_SINGLELINE|Нет|Не требуется. <xref:System.Windows.Media.FormattedText> объекты ведут себя как Однострочные элементы управления, если не либо <xref:System.Windows.Media.FormattedText.MaxTextWidth%2A> задано или содержит текст, возврат каретки и перевод строки (CR/LF).|  
 |DT_TABSTOP|Нет|Отсутствует поддержка пользовательских позиций табуляции.|  
 |DT_TOP|<xref:System.Windows.Media.FormattedText.Height%2A>|Не требуется. По умолчанию используется выравнивание по верхнему краю. Другие значения вертикального расположения могут быть определены с помощью <xref:System.Windows.Media.FormattedText.Height%2A> свойства для вычисления соответствующей [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] позиции DrawText 'y'.|  
 |DT_VCENTER|<xref:System.Windows.Media.FormattedText.Height%2A>|Используйте <xref:System.Windows.Media.FormattedText.Height%2A> свойства для вычисления соответствующей [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] позиции DrawText 'y'.|  

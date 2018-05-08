@@ -1,13 +1,6 @@
 ---
-title: "Практическое руководство. Управление элементами потокового содержимого через свойство Inlines"
-ms.custom: 
+title: Практическое руководство. Управление элементами потокового содержимого через свойство Inlines
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,16 +10,11 @@ helpviewer_keywords:
 - Inlines property [WPF], manipulating flow Content elements
 - properties [WPF], Inlines [WPF], manipulating flow Content elements
 ms.assetid: 510780d2-3da1-4360-8763-7054bda22ea3
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c5d90756ee200ba091f2f9e15e9e7d5632984ba9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3bbeac2eda8811939be3c710a8ce28349e7f0759
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-manipulate-flow-content-elements-through-the-inlines-property"></a>Практическое руководство. Управление элементами потокового содержимого через свойство Inlines
 Этих примерах показаны некоторые из наиболее распространенных операций, которые могут выполняться над встроенными элементами потокового содержимого (и контейнерами таких элементов, таких как <xref:System.Windows.Controls.TextBlock>) через **внутристрочных элементов** свойство. Это свойство используется для добавления и удаления элементов из <xref:System.Windows.Documents.InlineCollection>. Элементы содержимого на поток, эта функция **внедряет** свойства включают:  

@@ -1,27 +1,15 @@
 ---
-title: "Обзор использования автоматической разметки"
-ms.custom: 
+title: Обзор использования автоматической разметки
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - layout [WPF], automatic
 - automatic layout [WPF]
 ms.assetid: 6fed9264-18bb-4d05-8867-1fe356c6f687
-caps.latest.revision: "22"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 75066b59d0f3a686c66fdbdd187ba4c18e786e6d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8693150099559ca09541eb790c134ca3d5277e78
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="use-automatic-layout-overview"></a>Обзор использования автоматической разметки
 В этом разделе представлены рекомендации для разработчиков по написанию [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] приложений с локализуемыми [!INCLUDE[TLA#tla_ui#plural](../../../../includes/tlasharptla-uisharpplural-md.md)]. В прошлом локализации [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] было много времени. Каждый язык, [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] адаптирован для обязательного корректировку размера x. Сегодня при правом разработки и кодирования стандартов, [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)] могут создаваться таким образом, что локализаторам меньше изменений размеров и положения делать. Подход к написанию приложений, которые могут быть легко изменять размер и положение называется автоматической разметкой и может осуществляться с помощью [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] разработки приложения.  
@@ -59,11 +47,11 @@ ms.lasthandoff: 12/22/2017
 ## <a name="automatic-layout-and-coding-standards"></a>Автоматическая разметка и стандарты кодирования  
  С помощью автоматического макета требуется набор стандартов программирования и проектирования и правила для создания полностью локализуемый [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]. Следующие рекомендации предназначены для помощи в кодировании автоматической разметки.  
   
-|Стандарты кодирования|Описание:|  
+|Стандарты кодирования|Описание|  
 |----------------------|-----------------|  
 |Не используйте абсолютное позиционирование.|-Не используйте <xref:System.Windows.Controls.Canvas> , так как он применяет абсолютное позиционирование элементов.<br />-Используйте <xref:System.Windows.Controls.DockPanel>, <xref:System.Windows.Controls.StackPanel>, и <xref:System.Windows.Controls.Grid> для размещения элементов управления.<br />-Обсуждение различных типов панелей см. в разделе [Общие сведения о панелях](../../../../docs/framework/wpf/controls/panels-overview.md).|  
 |Не устанавливайте фиксированный размер окна.|-Используйте <xref:System.Windows.Window.SizeToContent%2A>.<br />— Пример.<br /><br /> [!code-xaml[LocalizationGrid#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LocalizationGrid/CS/Pane1.xaml#2)]|  
-|Добавьте элемент <xref:System.Windows.FrameworkElement.FlowDirection%2A>.|<ul><li>Добавить <xref:System.Windows.FrameworkElement.FlowDirection%2A> к корневому элементу приложения.</li><li>[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] предоставляет удобный способ поддержки горизонтальной, двунаправленной и вертикальной разметки. В инфраструктуре представления <xref:System.Windows.FrameworkElement.FlowDirection%2A> свойство может использоваться для определения макета. Ниже перечислены шаблоны направления текста.<br /><br /> <ul><li><xref:System.Windows.FlowDirection.LeftToRight>(LrTb) — горизонтальная разметка для латиницы, восточноазиатских языков и т. д.</li><li><xref:System.Windows.FlowDirection.RightToLeft>(RlTb) — двунаправленная для арабского языка, иврита и т. д.</li></ul></li></ul>|  
+|Добавьте элемент <xref:System.Windows.FrameworkElement.FlowDirection%2A>.|<ul><li>Добавить <xref:System.Windows.FrameworkElement.FlowDirection%2A> к корневому элементу приложения.</li><li>[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] предоставляет удобный способ поддержки горизонтальной, двунаправленной и вертикальной разметки. В инфраструктуре представления <xref:System.Windows.FrameworkElement.FlowDirection%2A> свойство может использоваться для определения макета. Ниже перечислены шаблоны направления текста.<br /><br /> <ul><li><xref:System.Windows.FlowDirection.LeftToRight> (LrTb) — горизонтальная разметка для латиницы, восточноазиатских языков и т. д.</li><li><xref:System.Windows.FlowDirection.RightToLeft> (RlTb) — двунаправленная для арабского языка, иврита и т. д.</li></ul></li></ul>|  
 |Используйте составные шрифты вместо физических шрифтов.|<ul><li>С составные шрифты <xref:System.Windows.Controls.Control.FontFamily%2A> свойство не требуется локализовать.</li><li>Разработчики могут использовать один из следующих шрифтов или создать свой собственный.<br /><br /> <ul><li>Глобальный пользовательский интерфейс</li><li>Global San Serif</li><li>Global Serif</li></ul></li></ul>|  
 |Добавление свойства xml:lang.|-Добавьте `xml:lang` атрибут в корневом элементе вашего [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)], такие как `xml:lang="en-US"` для приложения на английском языке.<br />— Поскольку составные шрифты используют `xml:lang` для определения шрифт, используемый, установите это свойство для поддержки многоязычных сценариев.|  
   

@@ -1,10 +1,6 @@
 ---
-title: "Функции преобразования типов (Visual Basic)"
+title: Функции преобразования типов (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.CUShort
 - vb.csng
@@ -85,14 +81,11 @@ helpviewer_keywords:
 - rounding numbers [Visual Basic], banker's rounding
 - type conversion [Visual Basic], Visual Basic vs. .NET Framework
 ms.assetid: d9d8d165-f967-44ff-a6cd-598e4740a99e
-caps.latest.revision: "22"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 117cd4ce038a533715bbc86558545f0f223dd149
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: c9222bdb31f4fd7c792d5a50c100067e29e9d537
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="type-conversion-functions-visual-basic"></a>Функции преобразования типов (Visual Basic)
 Эти функции являются скомпилированных встроенный, это означает, что код преобразования является частью кода, вычисляет выражение. Иногда отсутствует вызов процедуры для выполнения преобразований, что улучшает производительность. Каждая функция преобразует выражение к определенному типу данных.  
@@ -120,7 +113,7 @@ CUShort(expression)
   
 ## <a name="part"></a>Отделение  
  `expression`  
- Обязательный. Любое выражение исходного типа данных.  
+ Обязательно. Любое выражение исходного типа данных.  
   
 ## <a name="return-value-data-type"></a>Тип данных возвращаемого значения  
  Имя функции определяет тип данных значение, которое возвращается, как показано в следующей таблице.  
@@ -159,9 +152,9 @@ CUShort(expression)
   
      Если дробная часть равна точно 0,5, функции преобразования целых чисел округления для ближайшего четного целого. Например 0,5 округляется до 0, а 1,5 и 2,5 округляются до 2. Это иногда называется *банковское округление*, и его целью является компенсация сдвигов, которые могут накапливаться при сложении многих таких чисел.  
   
-     `CInt`и `CLng` отличаются от <xref:Microsoft.VisualBasic.Conversion.Int%2A> и <xref:Microsoft.VisualBasic.Conversion.Fix%2A> функций, которые усечение, а не округляют дробную часть числа. Кроме того `Fix` и `Int` всегда возвращают значение того же типа данных при передаче в.  
+     `CInt` и `CLng` отличаются от <xref:Microsoft.VisualBasic.Conversion.Int%2A> и <xref:Microsoft.VisualBasic.Conversion.Fix%2A> функций, которые усечение, а не округляют дробную часть числа. Кроме того `Fix` и `Int` всегда возвращают значение того же типа данных при передаче в.  
   
--   **Дата и время преобразования.** Используйте <xref:Microsoft.VisualBasic.Information.IsDate%2A> функцию, чтобы определить, если значение можно преобразовать в дату и время. `CDate`распознает литералы даты и времени, но не числовые значения. Для преобразования Visual Basic 6.0 `Date` значение `Date` в языке Visual Basic 2005 или более поздней версии, можно использовать <xref:System.DateTime.FromOADate%2A?displayProperty=nameWithType> метода.  
+-   **Дата и время преобразования.** Используйте <xref:Microsoft.VisualBasic.Information.IsDate%2A> функцию, чтобы определить, если значение можно преобразовать в дату и время. `CDate` распознает литералы даты и времени, но не числовые значения. Для преобразования Visual Basic 6.0 `Date` значение `Date` в языке Visual Basic 2005 или более поздней версии, можно использовать <xref:System.DateTime.FromOADate%2A?displayProperty=nameWithType> метода.  
   
 -   **Нейтральные значения даты и времени.** [Тип данных Date](../../../visual-basic/language-reference/data-types/date-data-type.md) всегда содержит сведения о дате и времени. В целях преобразования типов Visual Basic рассматривает 1/1/0001 (1 января 1 года) быть *нейтральным значением* для даты и 00:00:00 (полночь) будет нейтральным значением времени. Если вы преобразуете `Date` значения в строку `CStr` включает нейтральные значения в результирующую строку. Например, если вы преобразуете `#January 1, 0001 9:30:00#` в строку, результат будет «9:30:00 AM»; дата отбрасывается. Тем не менее, сведения о дате по-прежнему присутствует в исходной коллекции `Date` значение и может быть восстановлен с помощью функции например <xref:Microsoft.VisualBasic.DateAndTime.DatePart%2A> функции.  
   
@@ -194,7 +187,7 @@ CUShort(expression)
  [!code-vb[VbVbalrFunctions#4](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_4.vb)]  
   
 ## <a name="cdate-example"></a>Пример использования функции CDate  
- В следующем примере используется `CDate` функцию для преобразования строк для `Date` значения. В общем случае не рекомендуется жестко запрограммированные значения даты и время в виде строк (как показано в следующем примере). Используйте литералы даты и времени, например #Feb 12, &#1969; и # 4:45:23 PM #, вместо этого.  
+ В следующем примере используется `CDate` функцию для преобразования строк для `Date` значения. В общем случае не рекомендуется жестко запрограммированные значения даты и время в виде строк (как показано в следующем примере). Используйте литералы даты и времени, например #Feb 12, 1969 # и # 4:45:23 PM #, вместо этого.  
   
  [!code-vb[VbVbalrFunctions#5](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_5.vb)]  
   
@@ -245,7 +238,7 @@ CUShort(expression)
   
  [!code-vb[VbVbalrFunctions#15](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_15.vb)]  
   
- `CStr`всегда выводит `Date` значение в стандартном кратком формате для текущего языкового стандарта, например, «6/15/2003 4:35:47 PM». Тем не менее `CStr` подавляет *нейтральные значения* из 1/1/0001 00:00:00, время и даты.  
+ `CStr` всегда выводит `Date` значение в стандартном кратком формате для текущего языкового стандарта, например, «6/15/2003 4:35:47 PM». Тем не менее `CStr` подавляет *нейтральные значения* из 1/1/0001 00:00:00, время и даты.  
   
  Дополнительные сведения по значениям, возвращаемым методом `CStr`, в разделе [возвращаемые значения функции CStr](../../../visual-basic/language-reference/functions/return-values-for-the-cstr-function.md).  
   

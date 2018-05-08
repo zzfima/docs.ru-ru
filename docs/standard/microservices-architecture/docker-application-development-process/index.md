@@ -1,21 +1,14 @@
 ---
 title: Процесс разработки для приложений на основе Docker
 description: Архитектура микрослужб .NET для упакованных в контейнеры приложений .NET | Процесс разработки для приложений на основе Docker
-keywords: Docker, микрослужбы, ASP.NET, контейнер
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/18/2017
-ms.prod: .net-core
-ms.technology: dotnet-docker
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: dc91c7d5e2e27602afd6d583bf09adae3caea59e
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 881817f4f1007edad85eefb9002d56764cbf2a02
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="development-process-for-docker-based-applications"></a>Процесс разработки для приложений на основе Docker
 
@@ -37,7 +30,7 @@ ms.lasthandoff: 12/23/2017
 
 ### <a name="additional-resources"></a>Дополнительные ресурсы
 
--   **Средства Visual Studio для Docker**
+-   **Инструменты Visual Studio для Docker**
     [*https://docs.microsoft.com/aspnet/core/publishing/visual-studio-tools-for-docker*](https://docs.microsoft.com/aspnet/core/publishing/visual-studio-tools-for-docker)
 
 -   **Visual Studio Code**. Официальный сайт

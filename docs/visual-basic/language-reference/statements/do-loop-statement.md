@@ -1,17 +1,12 @@
 ---
-title: "Оператор Do...Loop (Visual Basic)"
+title: Оператор Do...Loop (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Do
 - vb.Loop
 - vb.Until
 helpviewer_keywords:
-- "conditional statements [Visual Basic], Do�Loop"
+- conditional statements [Visual Basic], Do�Loop
 - while statement [Visual Basic], Do...Loop
 - execution [Visual Basic], conditional
 - Do loops
@@ -20,19 +15,16 @@ helpviewer_keywords:
 - instructions, repeating
 - Do statement [Visual Basic]
 - Exit statement [Visual Basic], in Do...Loop statements
-- "loop structures [Visual Basic], Do�Loop statements"
+- loop structures [Visual Basic], Do�Loop statements
 - do-while statements [Visual Basic]
 - loops, exiting
 - Loop keyword [Visual Basic], Do...Loop statement
 ms.assetid: 892f9096-b3e2-4aee-834d-83bc4e2c379d
-caps.latest.revision: "37"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 79d25dce963f383a84b56ce2c9b600fc2d5a7937
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: e12cdc1ae405b877d4d27d1947c98dcb51938ba7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="doloop-statement-visual-basic"></a>Оператор Do...Loop (Visual Basic)
 Повторяет блок операторов, пока `Boolean` условие `True` или пока условия не станет `True`.  
@@ -61,14 +53,14 @@ Loop { While | Until } condition
   
 |Термин|Определение|  
 |---|---|  
-|`Do`|Обязательный. Начинается определение `Do` цикла.|  
+|`Do`|Обязательно. Начинается определение `Do` цикла.|  
 |`While`|Является обязательным, если используется параметр `Until`. Повторите цикл до `condition` — `False`.|  
 |`Until`|Является обязательным, если используется параметр `While`. Повторите цикл до `condition` — `True`.|  
-|`condition`|Необязательно. `Boolean`выражение. Если `condition` — `Nothing`, Visual Basic рассматривает его как `False`.|  
-|`statements`|Необязательно. Один или несколько операторов, которые повторяются во время или до, `condition` — `True`.|  
-|`Continue Do`|Необязательно. Передает управление следующей итерации цикла `Do` цикла.|  
-|`Exit Do`|Необязательно. Передает управление из `Do` цикла.|  
-|`Loop`|Обязательный. Завершает определение `Do` цикла.|  
+|`condition`|Необязательный. `Boolean` Выражение. Если `condition` — `Nothing`, Visual Basic рассматривает его как `False`.|  
+|`statements`|Необязательный. Один или несколько операторов, которые повторяются во время или до, `condition` — `True`.|  
+|`Continue Do`|Необязательный. Передает управление следующей итерации цикла `Do` цикла.|  
+|`Exit Do`|Необязательный. Передает управление из `Do` цикла.|  
+|`Loop`|Обязательно. Завершает определение `Do` цикла.|  
   
 ## <a name="remarks"></a>Примечания  
  Используйте `Do...Loop` структуры, если вы хотите повторить набор инструкций на неопределенное количество раз, пока условие выполняется. Если вы хотите повторить инструкцию set несколько раз, [для... Следующий оператор](../../../visual-basic/language-reference/statements/for-next-statement.md) обычно является лучшим выбором.  
@@ -85,9 +77,9 @@ Loop { While | Until } condition
 >  `Do...Loop` Структура обеспечивает большую гибкость, чем [во время... Оператор End While](../../../visual-basic/language-reference/statements/while-end-while-statement.md) , так как она позволяет решить, следует ли завершить цикл при `condition` перестает быть `True` или когда сначала становится `True`. Он также позволяет тестировать `condition` в начале или конце цикла.  
   
 ## <a name="exit-do"></a>Exit  
- [Выхода выполните](../../../visual-basic/language-reference/statements/exit-statement.md) инструкции можно предоставить альтернативный способ выйти из `Do…Loop`. `Exit Do`Управление передается оператору, следующему `Loop` инструкции.  
+ [Выхода выполните](../../../visual-basic/language-reference/statements/exit-statement.md) инструкции можно предоставить альтернативный способ выйти из `Do…Loop`. `Exit Do` Управление передается оператору, следующему `Loop` инструкции.  
   
- `Exit Do`часто используется после оценки некоторого условия, например в `If...Then...Else` структуры. Может потребоваться выйти из цикла при обнаружении условия, которое делает бесполезным или невозможным продолжение итераций, например ошибочное значение или запрос на завершение. Один из способов использования `Exit Do` используется для проверки условия, которое может вызвать *бесконечный цикл*, который является цикл, который может запустить большое или возможно, бесконечное число раз. Можно использовать `Exit Do` для выхода из цикла.  
+ `Exit Do` часто используется после оценки некоторого условия, например в `If...Then...Else` структуры. Может потребоваться выйти из цикла при обнаружении условия, которое делает бесполезным или невозможным продолжение итераций, например ошибочное значение или запрос на завершение. Один из способов использования `Exit Do` используется для проверки условия, которое может вызвать *бесконечный цикл*, который является цикл, который может запустить большое или возможно, бесконечное число раз. Можно использовать `Exit Do` для выхода из цикла.  
   
  Можно включить любое количество `Exit Do` инструкций в любом месте в `Do…Loop`.  
   

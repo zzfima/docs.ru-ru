@@ -1,27 +1,20 @@
 ---
 title: Микрослужбы .NET. Архитектура контейнерных приложений .NET
 description: Архитектура микрослужб .NET для упакованных в контейнеры приложений .NET | Вступление
-keywords: Docker, микрослужбы, ASP.NET, контейнер
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.prod: .net-core
-ms.technology: dotnet-docker
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 289f34b12cc0278212ceb737c2b9cb3f2ff986c1
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: d4499384d63f11a1d78d0aa84749aed8ea554794
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 ![](./media/cover.png)
 
 # <a name="net-microservices-architecture-for-containerized-net-applications"></a>Микрослужбы .NET. Архитектура контейнерных приложений .NET
 
-Скачать книгу можно на следующей странице <https://aka.ms/microservicesebook>
+Можно загрузить по ссылке: <https://aka.ms/microservicesebook>
 
 ИЗДАТЕЛЬ
 
@@ -41,7 +34,7 @@ Redmond, Washington 98052-6399
 
 Некоторые приведенные в книге примеры служат только для иллюстрации и являются вымышленными. Все совпадения с реальными наименованиями, людьми и любыми другими предметами являются непреднамеренными и случайными.
 
-Microsoft и товарные знаки, перечисленные на странице "Товарные знаки" на сайте http://www.microsoft.com, являются товарными знаками группы компания Майкрософт.
+Microsoft и товарные знаки, перечисленные на странице "Товарные знаки" на сайте http://www.microsoft.com, являются товарными знаками группы компаний Майкрософт.
 
 Mac и macOS являются товарными знаками Apple Inc.
 

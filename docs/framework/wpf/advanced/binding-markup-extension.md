@@ -1,31 +1,17 @@
 ---
-title: "Привязка расширения разметки"
-ms.custom: 
+title: Привязка расширения разметки
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - Binding
 helpviewer_keywords:
 - Binding markup extensions [WPF]
 - XAML [WPF], Binding markup extension
 ms.assetid: 83d6e2a4-1b0c-4fc8-bd96-b5e98800ab63
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: cc6a0616c6b462ffe6aca0a9adf27ac2ac7b7828
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8fc860f52f8fde2aed3cae224c05bbcf08b864d3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="binding-markup-extension"></a>Привязка расширения разметки
 Определяет значение свойства на значение с привязкой к данным, создавая объект промежуточного выражения и интерпретируя контекст данных, который применяется к элементу и его привязке во время выполнения.  
@@ -125,7 +111,7 @@ ms.lasthandoff: 12/22/2017
  Описание привязки данных на базовом уровне не рассматривается в этом разделе. В разделе [Общие сведения о привязке данных](../../../../docs/framework/wpf/data/data-binding-overview.md).  
   
 > [!NOTE]
->  <xref:System.Windows.Data.MultiBinding>и <xref:System.Windows.Data.PriorityBinding> не поддерживают [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] синтаксиса расширения. Вместо этого следует использовать элементы свойств. В разделах справочника для <xref:System.Windows.Data.MultiBinding> и <xref:System.Windows.Data.PriorityBinding>.  
+>  <xref:System.Windows.Data.MultiBinding> и <xref:System.Windows.Data.PriorityBinding> не поддерживают [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] синтаксиса расширения. Вместо этого следует использовать элементы свойств. В разделах справочника для <xref:System.Windows.Data.MultiBinding> и <xref:System.Windows.Data.PriorityBinding>.  
   
  Логические значения для XAML учитывается регистр. Например можно указать либо `{Binding NotifyOnValidationError=true}` или `{Binding NotifyOnValidationError=True}`.  
   
@@ -133,7 +119,7 @@ ms.lasthandoff: 12/22/2017
   
  `Binding` является расширением разметки. Расширения разметки обычно реализуются, если требуется заменить значения атрибутов на нелитеральные значения или обработчик имена и если требуется больше, чем установка атрибутов на определенными типами или свойствами преобразователей типов. Все расширения разметки в XAML используют `{` и `}` символов в синтаксисе их атрибутов, который является соглашением, по которому обработчик XAML узнает, что расширение разметки должно обработать содержимое строки. Дополнительные сведения см. в разделе [Расширения разметки и XAML WPF](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md).  
   
- `Binding`является необычным расширением разметки в том, что <xref:System.Windows.Data.Binding> класс, реализующий функциональные возможности расширения для реализации XAML в WPF также реализует несколько методов и свойств, которые не связаны с XAML. Другие члены предназначены для сделать <xref:System.Windows.Data.Binding> более гибким, автономная класс, который можно решить многие сценарии привязки данных в дополнение к его как расширение разметки XAML.  
+ `Binding` является необычным расширением разметки в том, что <xref:System.Windows.Data.Binding> класс, реализующий функциональные возможности расширения для реализации XAML в WPF также реализует несколько методов и свойств, которые не связаны с XAML. Другие члены предназначены для сделать <xref:System.Windows.Data.Binding> более гибким, автономная класс, который можно решить многие сценарии привязки данных в дополнение к его как расширение разметки XAML.  
   
 ## <a name="see-also"></a>См. также  
  <xref:System.Windows.Data.Binding>  

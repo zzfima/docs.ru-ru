@@ -1,28 +1,19 @@
 ---
-title: '&#39; &lt;ключевое слово&gt;&#39; является допустимым только в методе экземпляра'
+title: '&#39;&lt;Ключевое слово&gt; &#39; допустимо только в методах экземпляров'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - bc30043
 - vbc30043
 helpviewer_keywords:
 - BC30043
 ms.assetid: 7973aa82-a681-440c-9bca-242627d7ba86
-caps.latest.revision: 10
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: a61314c036cec0fd1412a9c844a610fbd1401add
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 2d9e26aa7dccf1b9c6390a20a59b10a0d248969d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="39ltkeywordgt39-is-valid-only-within-an-instance-method"></a>&#39; &lt;ключевое слово&gt;&#39; является допустимым только в методе экземпляра
+# <a name="39ltkeywordgt39-is-valid-only-within-an-instance-method"></a>&#39;&lt;Ключевое слово&gt; &#39; допустимо только в методах экземпляров
 `Me`, `MyClass`, И `MyBase` ключевые слова ссылаются на конкретные экземпляры класса. Их нельзя использовать внутри совместно используемого `Function` или `Sub` процедуры.  
   
  **Идентификатор ошибки:** BC30043  

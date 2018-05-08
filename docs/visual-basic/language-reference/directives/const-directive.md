@@ -1,10 +1,6 @@
 ---
-title: "#<a name=\"const-directive\"></a>Директива #const"
+title: '#Директива #const'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.#Const
 - '#vb.Const'
@@ -19,14 +15,11 @@ helpviewer_keywords:
 - Const statement [Visual Basic], directive (#Const)
 - 'declaring constants [Visual Basic], #const directive'
 ms.assetid: 707669e5-23f9-4f17-8622-a0d534429386
-caps.latest.revision: "17"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: a6e162b01dc5c99fb7708337d259f9e66ddd6b64
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: a3b3318f6b44f7d1798e08195be5aeb920b61c0c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="const-directive"></a>Директива #Const
 Задает константы условной компиляции для Visual Basic.  
@@ -39,10 +32,10 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="parts"></a>Части  
  `constname`  
- Обязательный. Имя определяемой константы.  
+ Обязательно. Имя определяемой константы.  
   
  `expression`  
- Обязательный. Литерал, другая константа условной компиляции или любой их комбинацией, включающей любые или все арифметические или логические операторы, за исключением `Is`.  
+ Обязательно. Литерал, другая константа условной компиляции или любой их комбинацией, включающей любые или все арифметические или логические операторы, за исключением `Is`.  
   
 ## <a name="remarks"></a>Примечания  
  Константы условной компиляции всегда являются закрытыми для файла, в котором они отображаются. Не удается создать открытые константы условной компиляции с помощью `#Const` директив; их можно создать только в пользовательском интерфейсе или с `/define` параметр компилятора.  

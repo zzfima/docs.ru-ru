@@ -1,12 +1,6 @@
 ---
 title: '&amp;= Оператор (Visual Basic)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.&=
 helpviewer_keywords:
@@ -16,14 +10,11 @@ helpviewer_keywords:
 - '&= operator [Visual Basic]'
 - compound assignment statements [Visual Basic]
 ms.assetid: 0cf262fc-1a05-419a-a503-60013f111c8a
-caps.latest.revision: 15
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 929a9e8c3384451679fc52ad478eb03219d67192
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: c3db2d4095600f32af92d1a4ce1f806a3f032af0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="amp-operator-visual-basic"></a>&amp;= Оператор (Visual Basic)
 Сцепляет `String` выражение `String` переменной или свойства и присваивает результат переменной или свойству.  
@@ -36,10 +27,10 @@ variableorproperty &= expression
   
 ## <a name="parts"></a>Части  
  `variableorproperty`  
- Обязательный. Любой `String` переменной или свойству.  
+ Обязательно. Любой `String` переменной или свойству.  
   
  `expression`  
- Обязательный. Произвольное выражение `String`.  
+ Обязательно. Произвольное выражение `String`.  
   
 ## <a name="remarks"></a>Примечания  
  Элемент, на левой стороне `&=` оператор может быть простой скалярной переменной, свойством или элемент массива. Переменная или свойство не может быть [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md). `&=` Оператор объединяет `String` выражение справа для `String` переменной или свойству слева от него и присваивает результат переменной или свойству слева от него.  

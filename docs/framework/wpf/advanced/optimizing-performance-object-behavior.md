@@ -1,13 +1,6 @@
 ---
-title: "Оптимизация производительности: поведение объекта"
-ms.custom: 
+title: 'Оптимизация производительности: поведение объекта'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -18,16 +11,11 @@ helpviewer_keywords:
 - object performance considerations [WPF]
 - Freezable objects [WPF], performance
 ms.assetid: 73aa2f47-1d73-439a-be1f-78dc4ba2b5bd
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 12c4dc202ac4db2c21b0a45b61608f5c03c24ac9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2e1f56dec87de7a22aa8a0bfefe84222d74ba085
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="optimizing-performance-object-behavior"></a>Оптимизация производительности: поведение объекта
 Понимание внутреннего поведения объектов [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] поможет найти оптимальное сочетание функциональных возможностей и производительности.  
@@ -80,8 +68,8 @@ ms.lasthandoff: 12/22/2017
   
 |**Состояние**|**Size**|  
 |---------------|--------------|  
-|Зафиксирован<xref:System.Windows.Media.SolidColorBrush>|212 байт|  
-|Не зафиксирован<xref:System.Windows.Media.SolidColorBrush>|972 байта|  
+|Зафиксирован <xref:System.Windows.Media.SolidColorBrush>|212 байт|  
+|Не зафиксирован <xref:System.Windows.Media.SolidColorBrush>|972 байта|  
   
  Следующий пример кода демонстрирует эту концепцию.  
   
@@ -91,7 +79,7 @@ ms.lasthandoff: 12/22/2017
 ### <a name="changed-handlers-on-unfrozen-freezables-may-keep-objects-alive"></a>Обработчики событий изменений Changed в нефиксированных объектах Freezable могут поддерживать объекты в активном состоянии  
  Делегат, который передает объект <xref:System.Windows.Freezable> объекта <xref:System.Windows.Freezable.Changed> событий фактически является ссылкой на этот объект. Таким образом <xref:System.Windows.Freezable.Changed> обработчики событий могут поддерживать объекты в активном состоянии дольше, чем обычно. При выполнении очистки объекта, зарегистрированного для прослушивания <xref:System.Windows.Freezable> объекта <xref:System.Windows.Freezable.Changed> событий, его необходимо удалить этот делегат перед высвобождением объекта.  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]также подключает <xref:System.Windows.Freezable.Changed> события внутренним образом. Например, все свойства зависимости принимающих <xref:System.Windows.Freezable> как значение будет прослушивать <xref:System.Windows.Freezable.Changed> события автоматически. <xref:System.Windows.Shapes.Shape.Fill%2A> Свойства, которое принимает <xref:System.Windows.Media.Brush>, эта концепция проиллюстрирована.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] также подключает <xref:System.Windows.Freezable.Changed> события внутренним образом. Например, все свойства зависимости принимающих <xref:System.Windows.Freezable> как значение будет прослушивать <xref:System.Windows.Freezable.Changed> события автоматически. <xref:System.Windows.Shapes.Shape.Fill%2A> Свойства, которое принимает <xref:System.Windows.Media.Brush>, эта концепция проиллюстрирована.  
   
  [!code-csharp[Performance#PerformanceSnippet4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/Window1.xaml.cs#performancesnippet4)]
  [!code-vb[Performance#PerformanceSnippet4](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/Performance/visualbasic/window1.xaml.vb#performancesnippet4)]  
@@ -110,7 +98,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="User_Interface_Virtualization"></a>   
 ## <a name="user-interface-virtualization"></a>Виртуализация пользовательского интерфейса  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]также предоставляет разновидность <xref:System.Windows.Controls.StackPanel> элемент, который автоматически «виртуализирует» с привязкой к данным дочернего содержимого. В данном контексте слово «виртуализация» означает способ, с помощью которого подмножество объектов создается из большего количества элементов данных в зависимости от того, какие из элементов отображаются на экране. Как для памяти, так и для процессора затратно создавать большое число элементов пользовательского интерфейса, при том что только несколько из них могут отображаться на экране одновременно. <xref:System.Windows.Controls.VirtualizingStackPanel>(через функциональные возможности, предоставляемые <xref:System.Windows.Controls.VirtualizingPanel>) подсчитывает видимые элементы и работает с <xref:System.Windows.Controls.ItemContainerGenerator> из <xref:System.Windows.Controls.ItemsControl> (такие как <xref:System.Windows.Controls.ListBox> или <xref:System.Windows.Controls.ListView>) создавать только элементы для видимых элементов.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] также предоставляет разновидность <xref:System.Windows.Controls.StackPanel> элемент, который автоматически «виртуализирует» с привязкой к данным дочернего содержимого. В данном контексте слово «виртуализация» означает способ, с помощью которого подмножество объектов создается из большего количества элементов данных в зависимости от того, какие из элементов отображаются на экране. Как для памяти, так и для процессора затратно создавать большое число элементов пользовательского интерфейса, при том что только несколько из них могут отображаться на экране одновременно. <xref:System.Windows.Controls.VirtualizingStackPanel> (через функциональные возможности, предоставляемые <xref:System.Windows.Controls.VirtualizingPanel>) подсчитывает видимые элементы и работает с <xref:System.Windows.Controls.ItemContainerGenerator> из <xref:System.Windows.Controls.ItemsControl> (такие как <xref:System.Windows.Controls.ListBox> или <xref:System.Windows.Controls.ListView>) создавать только элементы для видимых элементов.  
   
  Для оптимизации производительности визуальные объекты для этих элементов создаются или поддерживаются в активном состоянии, только если они будут отображаться на экране. Если они больше не находятся в видимой области элемента управления, визуальные объекты могут быть удалены. Это не следует путать с виртуализацией данных, где не все объекты данных присутствуют в локальной коллекции, а скорее, передаются в потоке при необходимости.  
   

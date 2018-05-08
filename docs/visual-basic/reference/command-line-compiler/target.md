@@ -1,11 +1,6 @@
 ---
 title: -target (Visual Basic)
 ms.date: 03/13/2018
-ms.prod: .net
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - target compiler options [Visual Basic]
 - -target compiler options [Visual Basic]
@@ -13,11 +8,11 @@ helpviewer_keywords:
 ms.assetid: e0954147-548b-461f-9c4b-a8f88845616c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8596cb7d43b2c54b46dedc40488ed1b4e2c31b69
-ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
+ms.openlocfilehash: acf47b24446656a539400c825f3332a70d211dad
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="-target-visual-basic"></a>-target (Visual Basic)
 Задает формат выходных данных компилятора.  
@@ -31,7 +26,7 @@ ms.lasthandoff: 03/22/2018
 ## <a name="remarks"></a>Примечания  
  В следующей таблице перечислены действия `-target` параметр.  
   
-|**Параметр**|**Behavior**|  
+|**Параметр**|**Поведение**|  
 |----------------|------------------|  
 |`-target:exe`|Указывает компилятору создавать исполняемое консольное приложение.<br /><br /> Это параметр по умолчанию, если аргумент `-target` параметра. Исполняемый файл создается с расширением .exe.<br /><br /> Если не указано иначе с `/out` параметр, выходной файл получает имя входного файла, содержащего `Sub Main` процедуры.<br /><br /> Только один `Sub Main` процедура является обязательной в файлах исходного кода, которые компилируются в файл .exe. Используйте `-main` параметр компилятора, чтобы указать класс, содержащий `Sub Main` процедуры.|  
 |`-target:library`|Указывает компилятору создать библиотеку динамической компоновки (DLL).<br /><br /> Файл библиотеки динамической компоновки создается с расширением DLL.<br /><br /> Если не указано иначе с `-out` параметр, выходной файл получает имя первого входного файла.<br /><br /> При создании библиотеки DLL, `Sub Main` процедура не требуется.|  
