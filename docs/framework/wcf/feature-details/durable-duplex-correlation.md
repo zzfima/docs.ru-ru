@@ -1,26 +1,12 @@
 ---
 title: Сохраняемая дуплексная корреляция
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 8eb0e49a-6d3b-4f7e-a054-0d4febee2ffb
-caps.latest.revision: ''
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: ceb5cbedf30c8ec53bc815f9cd52f7bcb8a6e327
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 5bef3e243afc0ea9a51f474bfed98320134ec043
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="durable-duplex-correlation"></a>Сохраняемая дуплексная корреляция
 Сохраняемую дуплексную корреляцию, также называемую корреляцией обратных вызовов, удобно использовать, когда служба рабочего процесса должна отправлять обратный вызов исходному вызывающему объекту. В отличие от дуплекса WCF, обратный вызов может выполняться в любой момент в будущем и не связан с одним и тем же каналом или временем существования канала. Единственное требование - у вызывающего должна быть конечная точка, прослушивающая сообщение обратного вызова. Благодаря этому обеспечивается возможность взаимодействия двух служб рабочего процесса в долговременных диалогах. В данном разделе приведены общие сведения о сохраняемой дуплексной корреляции.  

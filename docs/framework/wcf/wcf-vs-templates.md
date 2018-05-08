@@ -1,29 +1,15 @@
 ---
 title: Шаблоны WCF в Visual Studio
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 6a608575-3535-4190-89da-911e24c8374f
-caps.latest.revision: 31
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: fceb0f2ab7caa2bf3ab34ff957e3ed5f300e557c
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: 873e728b72529fb5153913c44cac0abd77f1f7c8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wcf-visual-studio-templates"></a>Шаблоны WCF в Visual Studio
-[!INCLUDE[indigo1](../../../includes/indigo1-md.md)] Шаблоны Visual Studio, предопределенных шаблонов проектов и элементов в Visual Studio можно использовать для быстрого создания [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] службы и окружающих приложений.  
+Шаблоны Visual Studio Windows Communication Foundation (WCF) — это предопределенные шаблоны проектов и элементов в Visual Studio можно использовать для быстрого создания [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] службы и окружающих приложений.  
   
 ## <a name="using-the-wcf-templates"></a>Использование шаблонов WCF  
  [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Шаблоны Visual Studio предоставляют базовую структуру класса для разработки службы. В частности, эти шаблоны предоставляет основные определения для контракта службы, контракта данных, реализации службы и конфигурации. Эти шаблоны можно использовать для создания простой службы, которая потребует минимального программирования, и которая может служить как стандартный блок для более сложных служб.  

@@ -1,31 +1,17 @@
 ---
-title: "Общие сведения о структурной навигации"
-ms.custom: 
+title: Общие сведения о структурной навигации
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - structured navigation [WPF]
 ms.assetid: 025d30ef-fec5-436d-ad7a-5d5483331c26
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: f9d20fb5b16fbf44bdf8431ae32afee105af7676
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9be4e753a229d97f2caf1d74b3b9b8239b99c694
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="structured-navigation-overview"></a>Общие сведения о структурной навигации
 Содержимое, которое может размещаться в [!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)], <xref:System.Windows.Controls.Frame>, или <xref:System.Windows.Navigation.NavigationWindow> состоит из страниц, которые могут быть идентифицированы пакетом [!INCLUDE[TLA#tla_uri#plural](../../../../includes/tlasharptla-urisharpplural-md.md)] и просматриваться с помощью гиперссылок. Структура страниц и способы навигации по ним с помощью гиперссылок называется топологией навигации. Такая топология подходит для различных типов приложений, особенно тех, в которых необходим переход по документам. В таких приложениях пользователь может перемещаться с одной страницы на другую даже при отсутствии связи между ними.  
@@ -160,7 +146,7 @@ ms.lasthandoff: 12/22/2017
 [!code-csharp[StructuredNavigationSample#ReturnCODEBEHIND2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/StructuredNavigationSample/CSharp/CalledPageFunction.xaml.cs#returncodebehind2)]
 [!code-vb[StructuredNavigationSample#ReturnCODEBEHIND2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/StructuredNavigationSample/VisualBasic/CalledPageFunction.xaml.vb#returncodebehind2)]  
   
- В этом примере, если пользователь нажимает кнопку "Отмена", значение `null` возвращается вызывающей странице. Если нажата кнопка "ОК", возвращается строковый параметр, предоставленный пользователем. <xref:System.Windows.Navigation.PageFunction%601.OnReturn%2A>— `protected``virtual` метод, который можно вызвать для возвращения данных вызывающему страницу. Данные необходимо упаковать в экземпляре универсального <xref:System.Windows.Navigation.ReturnEventArgs%601> тип, имеющий аргумент типа указывает тип значения, <xref:System.Windows.Navigation.ReturnEventArgs%601.Result%2A> возвращает. Таким образом, при объявлении <xref:System.Windows.Navigation.PageFunction%601> с определенным аргументом типа, пользователь заявляет, что <xref:System.Windows.Navigation.PageFunction%601> будет возвращен экземпляр типа, указанного аргументом типа. В этом примере аргумент типа и, следовательно, возвращаемое значение принадлежит к типу <xref:System.String>.  
+ В этом примере, если пользователь нажимает кнопку "Отмена", значение `null` возвращается вызывающей странице. Если нажата кнопка "ОК", возвращается строковый параметр, предоставленный пользователем. <xref:System.Windows.Navigation.PageFunction%601.OnReturn%2A> — `protected``virtual` метод, который можно вызвать для возвращения данных вызывающему страницу. Данные необходимо упаковать в экземпляре универсального <xref:System.Windows.Navigation.ReturnEventArgs%601> тип, имеющий аргумент типа указывает тип значения, <xref:System.Windows.Navigation.ReturnEventArgs%601.Result%2A> возвращает. Таким образом, при объявлении <xref:System.Windows.Navigation.PageFunction%601> с определенным аргументом типа, пользователь заявляет, что <xref:System.Windows.Navigation.PageFunction%601> будет возвращен экземпляр типа, указанного аргументом типа. В этом примере аргумент типа и, следовательно, возвращаемое значение принадлежит к типу <xref:System.String>.  
   
  Когда <xref:System.Windows.Navigation.PageFunction%601.OnReturn%2A> вызывается вызывающей странице требуется способ получения возвращаемого значения <xref:System.Windows.Navigation.PageFunction%601>. По этой причине <xref:System.Windows.Navigation.PageFunction%601> реализует <xref:System.Windows.Navigation.PageFunction%601.Return> событий для вызывающей страницы для обработки. При <xref:System.Windows.Navigation.PageFunction%601.OnReturn%2A> вызове <xref:System.Windows.Navigation.PageFunction%601.Return> вызывается, поэтому вызывающая страница может зарегистрировать <xref:System.Windows.Navigation.PageFunction%601.Return> получать уведомления.  
   

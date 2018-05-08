@@ -1,13 +1,6 @@
 ---
-title: "Отрисовка элементов управления Windows Forms"
-ms.custom: 
+title: Отрисовка элементов управления Windows Forms
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,16 +10,11 @@ helpviewer_keywords:
 - custom controls [Windows Forms], graphics resources
 - custom controls [Windows Forms], invalidation and painting
 ms.assetid: aae8e1e6-4786-432b-a15e-f4c44760d302
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 587c9c8fb0bf634a2491acb1ae0b2f60979fa899
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a2d7a02e725e3f8065b80a6b30ea21158be43ea8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="rendering-a-windows-forms-control"></a>Отрисовка элементов управления Windows Forms
 Отрисовка относится к процессу создания визуального представления на экране пользователя. Windows Forms использует [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] (новой библиотеки графики Windows) для подготовки к просмотру. Управляемые классы, предоставляющие доступ к [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] в <xref:System.Drawing?displayProperty=nameWithType> пространства имен и его подпространства.  
@@ -72,9 +60,9 @@ public System.Drawing.Graphics Graphics {get;}
 }  
 ```  
   
- <xref:System.Drawing.Graphics>является управляемым классом, инкапсулирующим функциональность рисования, как описано в обсуждение [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] далее в этом разделе. <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> Является экземпляром класса <xref:System.Drawing.Rectangle> структуры и определяет доступные области, в котором можно нарисовать элемент управления. Разработчик элемента управления может вычислить <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> с помощью <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> свойства элемента управления, как описано в описании геометрии далее в этом разделе.  
+ <xref:System.Drawing.Graphics> является управляемым классом, инкапсулирующим функциональность рисования, как описано в обсуждение [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] далее в этом разделе. <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> Является экземпляром класса <xref:System.Drawing.Rectangle> структуры и определяет доступные области, в котором можно нарисовать элемент управления. Разработчик элемента управления может вычислить <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> с помощью <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> свойства элемента управления, как описано в описании геометрии далее в этом разделе.  
   
- Элемент управления должен предоставить логики отрисовки путем переопределения <xref:System.Windows.Forms.Control.OnPaint%2A> метод, который наследует от <xref:System.Windows.Forms.Control>. <xref:System.Windows.Forms.Control.OnPaint%2A>Получает доступ к графический объект и прямоугольника для рисования с помощью <xref:System.Drawing.Design.PaintValueEventArgs.Graphics%2A> и <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> свойства <xref:System.Windows.Forms.PaintEventArgs> переданным ему экземпляром.  
+ Элемент управления должен предоставить логики отрисовки путем переопределения <xref:System.Windows.Forms.Control.OnPaint%2A> метод, который наследует от <xref:System.Windows.Forms.Control>. <xref:System.Windows.Forms.Control.OnPaint%2A> Получает доступ к графический объект и прямоугольника для рисования с помощью <xref:System.Drawing.Design.PaintValueEventArgs.Graphics%2A> и <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> свойства <xref:System.Windows.Forms.PaintEventArgs> переданным ему экземпляром.  
   
 ```vb  
 Protected Overridable Sub OnPaint(pe As PaintEventArgs)  
@@ -99,7 +87,7 @@ Protected Overridable Sub OnPaintBackground(pevent As PaintEventArgs)
 protected virtual void OnPaintBackground(PaintEventArgs pevent);  
 ```  
   
- <xref:System.Windows.Forms.Control.OnPaintBackground%2A>Рисует фон (и тем самым фигуры) окна и гарантированно будет быстро, при <xref:System.Windows.Forms.Control.OnPaint%2A> рисует детали и может работать медленнее, так как индивидуальные запросы на рисование объединены в один <xref:System.Windows.Forms.Control.Paint> событие, которое охватывает все аспекты, которые должны быть перерисовке. Может возникнуть необходимость вызвать <xref:System.Windows.Forms.Control.OnPaintBackground%2A> , если для экземпляра необходимо нарисовать цвета градиента фона для элемента управления.  
+ <xref:System.Windows.Forms.Control.OnPaintBackground%2A> Рисует фон (и тем самым фигуры) окна и гарантированно будет быстро, при <xref:System.Windows.Forms.Control.OnPaint%2A> рисует детали и может работать медленнее, так как индивидуальные запросы на рисование объединены в один <xref:System.Windows.Forms.Control.Paint> событие, которое охватывает все аспекты, которые должны быть перерисовке. Может возникнуть необходимость вызвать <xref:System.Windows.Forms.Control.OnPaintBackground%2A> , если для экземпляра необходимо нарисовать цвета градиента фона для элемента управления.  
   
  Во время <xref:System.Windows.Forms.Control.OnPaintBackground%2A> имеет событийного номенклатуру и принимает тем же аргументом, как `OnPaint` метод <xref:System.Windows.Forms.Control.OnPaintBackground%2A> не является истинным методом события. Имеется не `PaintBackground` событий и <xref:System.Windows.Forms.Control.OnPaintBackground%2A> вызывает делегаты событий. При переопределении метода <xref:System.Windows.Forms.Control.OnPaintBackground%2A> метода производного класса не требуется для вызова <xref:System.Windows.Forms.Control.OnPaintBackground%2A> метод базового класса.  
   

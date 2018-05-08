@@ -1,13 +1,6 @@
 ---
-title: "Создание элемента управления рукописным вводом"
-ms.custom: 
+title: Создание элемента управления рукописным вводом
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - ink strokes [WPF], managing
 - managing ink strokes [WPF]
@@ -21,16 +14,11 @@ helpviewer_keywords:
 - DynamicRenderer objects [WPF]
 - StylusPlugIn objects [WPF]
 ms.assetid: c31f3a67-cb3f-4ded-af9e-ed21f6575b26
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7054728e8bf54a7cf7b71ea1224cab6a352176d4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b3dc71182b7553a429bb17e1888a4108ceb3e286
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="creating-an-ink-input-control"></a>Создание элемента управления рукописным вводом
 Можно создать пользовательский элемент управления, динамически и статически отображающий рукописный ввод. Отображения рукописного ввода, то есть, как пользователь штриха, вызывая рукописный ввод в «поток» из планшетное перо и после него отображается добавляется в элемент управления, либо с помощью пера, вставленный из буфера обмена или загрузке из файла. Для динамического отображения рукописного ввода, необходимо использовать элемент управления <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>. Для статического отображения рукописного ввода, необходимо переопределить методы событий пера (<xref:System.Windows.UIElement.OnStylusDown%2A>, <xref:System.Windows.UIElement.OnStylusMove%2A>, и <xref:System.Windows.UIElement.OnStylusUp%2A>) для сбора <xref:System.Windows.Input.StylusPoint> данных, создания штрихов и добавить их к <xref:System.Windows.Controls.InkPresenter> (который отображает рукописного текста на элементе управления).  

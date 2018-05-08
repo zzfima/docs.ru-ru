@@ -1,12 +1,6 @@
 ---
-title: "Область видимости в Visual Basic"
-ms.custom: 
+title: Область видимости в Visual Basic
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - module scope [Visual Basic]
 - scope [Visual Basic], levels
@@ -21,14 +15,11 @@ helpviewer_keywords:
 - scope [Visual Basic], Visual Basic
 - procedure scope [Visual Basic]
 ms.assetid: 208106fe-79c9-4eec-93c6-55f08548895f
-caps.latest.revision: "17"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: a9bfda19b9f5ee96d45a0322541b35dfab7635d7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: d6692379626d787b728d6e92bd447c4a96e6680e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="scope-in-visual-basic"></a>Область видимости в Visual Basic
 *Область* объявленного элемента — это набор всех элементов кода, на него можно ссылаться без уточнения его имени или получения его с помощью [оператор Imports (пространство имен .NET и тип)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md). Элемент может иметь область на одном из следующих уровней:  
@@ -61,7 +52,7 @@ ms.lasthandoff: 11/21/2017
   
 -   `Do` и `Loop`.  
   
--   `For`[`Each`] и`Next`  
+-   `For` [`Each`] и `Next`  
   
 -   `If` и `End If`.  
   
@@ -127,7 +118,7 @@ Public strMsg As String
   
  Область видимости пространства имен включает вложенные пространства имен. Элемент, доступный в пределах пространства имен доступно также в любое пространство имен, вложенных в это пространство имен.  
   
- Если проект не содержит [оператор Namespace](../../../../visual-basic/language-reference/statements/namespace-statement.md)s, весь проект находится в том же пространстве имен. В этом случае область пространства имен может рассматриваться как область проекта. `Public`элементы модуля, класса или структуры также доступны в любой проект, который ссылается на соответствующий проект.  
+ Если проект не содержит [оператор Namespace](../../../../visual-basic/language-reference/statements/namespace-statement.md)s, весь проект находится в том же пространстве имен. В этом случае область пространства имен может рассматриваться как область проекта. `Public` элементы модуля, класса или структуры также доступны в любой проект, который ссылается на соответствующий проект.  
   
 ## <a name="choice-of-scope"></a>Выбор области действия  
  При объявлении переменной, вам необходимо иметь в виду следующие моменты при выборе ее области действия.  

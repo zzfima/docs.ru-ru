@@ -1,24 +1,12 @@
 ---
 title: CustomChannelsTester
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: ee1fa307-98b1-4647-8860-2e9217ba6082
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 92de7f168ce323a0d84975863564389ff389d680
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: eebe4f15095c7cefbd32971fd2f3ee308e9916b5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="customchannelstester"></a>CustomChannelsTester
 `CustomChannelsTester` - это средство, позволяющее проверять реализации пользовательских каналов на соответствие набору предопределенных контрактов службы. Можно выбрать набор контрактов службы и передать его средству с помощью XML-файла. Затем средство создает службу и клиента, использующих реализации пользовательского канала во время обмена сообщениями.  
@@ -39,7 +27,7 @@ ms.lasthandoff: 12/22/2017
   
      Необходимо использовать параметр `/binding`.  
   
-     Если "привязка" не является предоставляемой системой `/dll` привязкой, требуется [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
+     `/dll` является обязательным, если «привязка» не является предоставляемой системой привязки, предоставляемые Windows Communication Foundation (WCF).  
   
      Параметр `/testspec` является необязательным.  
   

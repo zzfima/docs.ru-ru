@@ -1,29 +1,18 @@
 ---
-title: "Создание криптографической схемы"
-ms.custom: 
+title: Создание криптографической схемы
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - encryption [.NET Framework], creating cryptographic schemes
 - cryptography [.NET Framework], creating cryptographic schemes
 ms.assetid: d40c509f-5a5e-46cc-94cb-a951e9ab6843
-caps.latest.revision: "8"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: b0aabdc9150aea73ad9078b0e9ee92b2abd03e17
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: b1635276465dd58028c8a5e4b7e69a307664a4c3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="creating-a-cryptographic-scheme"></a>Создание криптографической схемы
 Криптографические компоненты платформы .NET Framework можно объединить для создания различных схем шифрования и расшифровки данных.  
@@ -40,7 +29,7 @@ ms.lasthandoff: 12/23/2017
   
 5.  Затем стороны осуществляют взаимодействие с использованием симметричного шифрования.  
   
- Создание криптографической схемы нельзя назвать тривиальной задачей. Дополнительные сведения об использовании криптографии см. в разделе «Шифрование» в документации к пакету SDK для платформы на сайте http://MSDN.Microsoft.com/library.  
+ Создание криптографической схемы нельзя назвать тривиальной задачей. Дополнительные сведения об использовании криптографии см. в разделе шифрования в документации Platform SDK в http://msdn.microsoft.com/library.  
   
 ## <a name="see-also"></a>См. также  
  [Cryptographic Services](../../../docs/standard/security/cryptographic-services.md)

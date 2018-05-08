@@ -1,27 +1,15 @@
 ---
-title: "Как реализовать клиентское приложение, которое для поиска служб использует прокси-сервер обнаружения"
-ms.custom: 
+title: Как реализовать клиентское приложение, которое для поиска служб использует прокси-сервер обнаружения
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 62b41a75-cf40-4c52-a842-a5f1c70e247f
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 920f2f85333f23d1b07b6a8ddf2a05279ee477ce
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 82b38d684d6a8de66d569c6fe09813f8ee1bea6a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-implement-a-client-application-that-uses-the-discovery-proxy-to-find-a-service"></a>Как реализовать клиентское приложение, которое для поиска служб использует прокси-сервер обнаружения
-Это последний из трех разделов, в которых рассматривается реализация прокси-сервера обнаружения. В предыдущем разделе [как: реализовать Обнаружимую службу, которая регистрирует прокси-сервере обнаружения](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md), можно реализовать [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] службу, которая регистрирует себя с прокси-сервера обнаружения. В этом разделе будет создан клиент [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], который использует прокси-сервер обнаружения для поиска службы [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+Это последний из трех разделов, в которых рассматривается реализация прокси-сервера обнаружения. В предыдущем разделе [как: реализовать Обнаружимую службу, которая регистрирует прокси-сервере обнаружения](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md), реализации службы WCF, которая регистрирует себя с прокси-сервера обнаружения. В этом разделе создайте клиент WCF, который использует прокси-сервер обнаружения для поиска службы WCF.  
   
 ### <a name="implement-the-client"></a>Реализация клиента  
   

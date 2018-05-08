@@ -1,24 +1,14 @@
 ---
-title: "Метод ICorDebugSymbolProvider::GetAssemblyImageBytes"
-ms.custom: 
+title: Метод ICorDebugSymbolProvider::GetAssemblyImageBytes
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 ms.assetid: 3db215aa-e180-4f70-8d23-6d5a0ffbc8e5
-caps.latest.revision: "4"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 23c6dc836aefe1dd89431e003058ba2056eba3ff
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7975ca3da16be10285e618752981249602371c43
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icordebugsymbolprovidergetassemblyimagebytes-method"></a>Метод ICorDebugSymbolProvider::GetAssemblyImageBytes
 Считывает данные из объединенной сборки для указанного относительного виртуального адреса (RVA) в объединенной сборке.  
@@ -55,7 +45,7 @@ HRESULT GetAssemblyImageBytes(
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **Версии платформы .NET framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>См. также  
  [Интерфейс ICorDebugSymbolProvider](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider-interface.md)  

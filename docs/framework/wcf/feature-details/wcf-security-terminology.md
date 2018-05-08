@@ -1,35 +1,23 @@
 ---
 title: Терминология WCF в сфере безопасности
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - security [WCF], terminology
 - security glossary [WCF]
 - security terms [WCF]
 ms.assetid: 68dde024-8e51-40ba-804f-ec52d85e9ca9
-caps.latest.revision: 14
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: 46f70ad623d852e051ff69fb68690114f8c39381
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 8024abdab01b2df151a6c0c2f5760e85ae119fd4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wcf-security-terminology"></a>Терминология WCF в сфере безопасности
 Не все пользователи знакомы с терминологией, которая используется при обсуждении вопросов безопасности. В данном разделе кратко объясняются некоторые термины, относящиеся к безопасности, однако его целью не является исчерпывающее объяснение каждого термина.  
   
- Дополнительные сведения о терминах, использованных в [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] документацию см. в разделе [основные понятия Windows Communication Foundation](../../../../docs/framework/wcf/fundamental-concepts.md).  
+ Дополнительные сведения о терминов, используемых в документации по Windows Communication Foundation (WCF) см. в разделе [основные понятия Windows Communication Foundation](../../../../docs/framework/wcf/fundamental-concepts.md).  
   
  список управления доступом (ACL)  
  Список мер по обеспечению безопасности, применяемый к объекту. (Объектом может быть файл, процесс, событие или какой-либо другой объект с дескриптором безопасности.) Запись в списке ACL представляет собой элемент управления доступом (ACE). Существует два типа списков ACL: на уровне пользователя и на уровне системы.  
@@ -189,7 +177,7 @@ ms.lasthandoff: 04/30/2018
  Имя учетной записи пользователя (иногда называется *имя входа пользователя*) и имя домена, идентифицирующее домен, в котором находится учетная запись пользователя. Это стандартный способ входа в домен Windows. Недопустимый формат: someone@example.com (аналогично адресу электронной почты).  
   
 > [!NOTE]
->  Помимо имен участников-пользователей в стандартной форме [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] принимает имена участников-пользователей в форме нижнего уровня, например cohowinery.com\someone.  
+>  В дополнение к стандартной форме WCF принимает имена участников-пользователей в форме нижнего уровня, например cohowinery.com\someone.  
   
  X.509  
  Международный стандарт сертификатов, определяющий их обязательные части.  

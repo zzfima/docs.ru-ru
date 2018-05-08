@@ -1,27 +1,15 @@
 ---
-title: "Базовая служба HTTP"
-ms.custom: 
+title: Базовая служба HTTP
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 27048b43-8a54-4f2a-9952-594bbfab10ad
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 687eba2a346b3f554c8a7618bebe2e9c04f4d5b5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 0d00ee21fa328c32549f89d8d5fc4c767f64582c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="basic-http-service"></a>Базовая служба HTTP
-Этот образец демонстрирует реализацию службы на основе HTTP, на основе RPC - часто обозначается как «POX» (Plain Old XML) службы — с помощью [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] модели программирования REST. Данный образец состоит из двух компонентов: резидентной службы HTTP [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] (Service.cs) и консольного приложения (Program.cs), создающего службу и выполняющего вызовы в этой службе.  
+Этот образец демонстрирует реализацию службы на основе HTTP, на основе RPC - часто называют службы «POX» (Plain Old XML) — с использованием модели программирования REST Windows Communication Foundation (WCF). Данный образец состоит из двух компонентов: резидентной службы HTTP [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] (Service.cs) и консольного приложения (Program.cs), создающего службу и выполняющего вызовы в этой службе.  
   
 ## <a name="sample-details"></a>Подробные сведения об образце  
  Служба [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] предоставляет 2 операции - `EchoWithGet` и `EchoWithPost`, которые возвращают строку, переданную им на входе.  
@@ -49,7 +37,7 @@ ms.lasthandoff: 12/22/2017
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите на страницу [Примеры Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все примеры [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Этот образец расположен в следующем каталоге.  
+>  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] образцов. Этот образец расположен в следующем каталоге.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Web\BasicHttpService`  
   

@@ -1,24 +1,12 @@
 ---
-title: "Владение и отделение пользователей от схем в SQL Server"
-ms.custom: 
+title: Владение и отделение пользователей от схем в SQL Server
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 242830c1-31b5-4427-828c-cc22ff339f30
-caps.latest.revision: "6"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 8f78cd816be7a4c68853a25f89859bbe2452bb9c
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 69d0c0dee6141b80908c8cdc36dfe21ff318f423
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ownership-and-user-schema-separation-in-sql-server"></a>Владение и отделение пользователей от схем в SQL Server
 Основным принципом безопасности SQL Server является то, что владельцы объектов имеют неотзываемые разрешения на их администрирование. Нельзя удалять права доступа у владельцев объектов. Также нельзя удалять пользователей из базы данных, если они владеют в ней объектами.  
@@ -64,7 +52,7 @@ Server.Database.DatabaseSchema.DatabaseObject
 ## <a name="external-resources"></a>Внешние ресурсы  
  Дополнительные сведения о принадлежности объектов и схемах см. в следующих документах.  
   
-|Ресурс|Описание:|  
+|Ресурс|Описание|  
 |--------------|-----------------|  
 |[Отделение пользователей от схем](http://msdn.microsoft.com/library/ms190387.aspx) в электронной документации по SQL Server|Описывает изменения, возникшие из-за отделения пользователей от схем. Сюда входит новое поведение, его влияние на владение, представления каталогов и разрешения.|  
   

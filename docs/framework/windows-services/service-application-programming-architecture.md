@@ -1,13 +1,6 @@
 ---
-title: "Программная архитектура приложений служб"
-ms.custom: 
+title: Программная архитектура приложений служб
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -21,25 +14,22 @@ helpviewer_keywords:
 - ServiceProcessInstaller class, service application code model
 - Windows Service applications, states
 ms.assetid: 83230026-d068-4174-97ff-e264c896eb2f
-caps.latest.revision: "15"
 author: ghogen
-ms.author: ghogen
 manager: douge
-ms.workload: dotnet
-ms.openlocfilehash: 2d44ee323040346437261b51fddb707a30d1de6c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f0c760d0f9b65fc9b612a8bee8abb68fa5b4ecae
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="service-application-programming-architecture"></a>Программная архитектура приложений служб
 Приложения служб Windows основаны на класс, наследующий от <xref:System.ServiceProcess.ServiceBase?displayProperty=nameWithType> класса. Переопределите методы этого класса и определить функциональные возможности для их определить поведение службы.  
   
  Ниже перечислены основные классы, используемые при создании службы.  
   
--   <xref:System.ServiceProcess.ServiceBase?displayProperty=nameWithType>— Необходимо переопределить методы <xref:System.ServiceProcess.ServiceBase> класса при создании службы и определить код, чтобы определить, как функциональные возможности службы в этом наследуется класс.  
+-   <xref:System.ServiceProcess.ServiceBase?displayProperty=nameWithType> — Необходимо переопределить методы <xref:System.ServiceProcess.ServiceBase> класса при создании службы и определить код, чтобы определить, как функциональные возможности службы в этом наследуется класс.  
   
--   <xref:System.ServiceProcess.ServiceProcessInstaller?displayProperty=nameWithType>и <xref:System.ServiceProcess.ServiceInstaller?displayProperty=nameWithType> — эти классы используются для установки и удаления службы.  
+-   <xref:System.ServiceProcess.ServiceProcessInstaller?displayProperty=nameWithType> и <xref:System.ServiceProcess.ServiceInstaller?displayProperty=nameWithType> — эти классы используются для установки и удаления службы.  
   
  Кроме того, класс с именем <xref:System.ServiceProcess.ServiceController> можно использовать для управления службой. Этот класс не используется при создании службы, но может использоваться для запуска и остановки службы, передавать ей команды и возвращать последовательности перечислений.  
   

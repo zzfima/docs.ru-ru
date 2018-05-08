@@ -1,27 +1,15 @@
 ---
-title: "Упрощенная конфигурация"
-ms.custom: 
+title: Упрощенная конфигурация
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: dcbe1f84-437c-495f-9324-2bc09fd79ea9
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 334dfce44b1f0a7b6b38f509f2f0a346ef90630f
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
-ms.translationtype: MT
+ms.openlocfilehash: a07ab26b19004df97f4ac65f711b03fc6a6ba445
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="simplified-configuration"></a>Упрощенная конфигурация
-Настройка служб [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] может оказаться сложной задачей. Разных параметров много, и не всегда легко понять, какие настройки необходимы. Хотя файлы конфигурации и увеличивают гибкость служб [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], они также являются источником многих трудно обнаруживаемых проблем. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] устраняет эти проблемы, предоставляя способ уменьшить размер и упростить конфигурацию службы.  
+Настройка службы Windows Communication Foundation (WCF), может быть сложной задачей. Разных параметров много, и не всегда легко понять, какие настройки необходимы. Хотя файлы конфигурации и увеличивают гибкость служб [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], они также являются источником многих трудно обнаруживаемых проблем. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] устраняет эти проблемы, предоставляя способ уменьшить размер и упростить конфигурацию службы.  
   
 ## <a name="simplified-configuration"></a>Упрощенная конфигурация  
  В файлах конфигурации служб [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] раздел <`system.serviceModel`> содержит элемент <`service`> для каждой размещенной службы. Элемент <`service`> содержит коллекцию элементов <`endpoint`>, которыми задаются конечные точки, открытые для каждой службы, и по желанию набор поведений службы. Элементы <`endpoint`> указывают адрес, привязку и контракт, открытые в конечной точке, и по желанию конфигурацию привязки и поведения конечной точки. В разделе <`system.serviceModel`> также содержится элемент <`behaviors`>, с помощью которого можно указать поведение служб или конечных точек. В следующем примере демонстрируется раздел <`system.serviceModel`> файла конфигурации.  

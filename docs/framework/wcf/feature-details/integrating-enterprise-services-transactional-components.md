@@ -1,27 +1,15 @@
 ---
-title: "Интеграция транзакционных компонентов служб Enterprise Services"
-ms.custom: 
+title: Интеграция транзакционных компонентов служб Enterprise Services
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 05dab277-b8b2-48cf-b40c-826be128b175
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b6ce82d100341fec4415cf9fdb7159706b2accc4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8453b4199f5e6eae263ebc3fc1c457429c868d7f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="integrating-enterprise-services-transactional-components"></a>Интеграция транзакционных компонентов служб Enterprise Services
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]предоставляет механизм автоматического для интеграции с Enterprise Services (в разделе [интеграция с приложениями COM +](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)). Однако для разработки служб, которые внутренне используют транзакционные компоненты, размещенные внутри служб Enterprise Services, может потребоваться гибкость. Поскольку [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] транзакций функция основана на <xref:System.Transactions> инфраструктуры, процесс Интеграция служб Enterprise Services с [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] идентична для указания демонстрацию взаимодействия между <xref:System.Transactions> и Enterprise Службы, как описано в [взаимодействие с Enterprise Services и транзакции COM +](http://go.microsoft.com/fwlink/?LinkId=94949).  
+Windows Communication Foundation (WCF) предоставляет механизм автоматического для интеграции с Enterprise Services (в разделе [интеграция с приложениями COM +](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)). Однако для разработки служб, которые внутренне используют транзакционные компоненты, размещенные внутри служб Enterprise Services, может потребоваться гибкость. Так как функция транзакций WCF основана на <xref:System.Transactions> инфраструктуры, Интеграция служб Enterprise Services с WCF выполняется точно так же указание взаимодействие между <xref:System.Transactions> и Enterprise Services, как описано в [Взаимодействие с Enterprise Services и транзакции COM +](http://go.microsoft.com/fwlink/?LinkId=94949).  
   
  Чтобы обеспечить требуемый уровень взаимодействия между входящей поточной транзакцией и транзакцией контекста COM+, реализация службы должна создать экземпляр <xref:System.Transactions.TransactionScope> и использовать соответствующее значение из перечисления <xref:System.Transactions.EnterpriseServicesInteropOption>.  
   

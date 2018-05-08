@@ -1,14 +1,6 @@
 ---
-title: "Метод IHostSyncManager::CreateCrst"
-ms.custom: 
+title: Метод IHostSyncManager::CreateCrst
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IHostSyncManager.CreateCrst
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: ac278cc8-2540-4a6c-b5c6-b90c3970b4f4
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: f932c91892292c787feecf1768c33fb429334bae
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 101a652aa77e587003fb7e773e00ba9b77461a06
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ihostsyncmanagercreatecrst-method"></a>Метод IHostSyncManager::CreateCrst
 Создает объект критической секции для синхронизации.  
@@ -54,7 +42,7 @@ HRESULT CreateCrst (
   
 |HRESULT|Описание|  
 |-------------|-----------------|  
-|S_OK|`CreateCrst`успешно возвращен.|  
+|S_OK|`CreateCrst` успешно возвращен.|  
 |ЗНАЧЕНИЕ HOST_E_CLRNOTAVAILABLE|Общеязыковая среда выполнения (CLR) не был загружен в процесс или находится в состоянии, в котором не может выполнять управляемый код или успешно обработать вызов.|  
 |HOST_E_TIMEOUT|Истекло время ожидания вызова.|  
 |HOST_E_NOT_OWNER|Вызывающий объект не является владельцем блокировки.|  
@@ -63,7 +51,7 @@ HRESULT CreateCrst (
 |E_OUTOFMEMORY|Не хватает памяти была доступна для создания запрошенной критической секции.|  
   
 ## <a name="remarks"></a>Примечания  
- Объекты критической секции обеспечивают синхронизацию аналогичны предоставляемым объект мьютекса, за исключением того, что критические секции могут использоваться только потоками одного процесса. `CreateCrst`зеркально отражает Win32 `InitializeCriticalSection` функции.  
+ Объекты критической секции обеспечивают синхронизацию аналогичны предоставляемым объект мьютекса, за исключением того, что критические секции могут использоваться только потоками одного процесса. `CreateCrst` зеркально отражает Win32 `InitializeCriticalSection` функции.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
@@ -72,7 +60,7 @@ HRESULT CreateCrst (
   
  **Библиотека:** включена как ресурс в MSCorEE.dll  
   
- **Версии платформы .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Версии платформы .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>См. также  
  [Интерфейс ICLRSyncManager](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-interface.md)  

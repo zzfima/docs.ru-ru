@@ -1,27 +1,15 @@
 ---
-title: "Синтаксис PropertyPath XAML"
-ms.custom: 
+title: Синтаксис PropertyPath XAML
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - PropertyPath object [WPF]
 - XAML [WPF], PropertyPath object
 ms.assetid: 0e3cdf07-abe6-460a-a9af-3764b4fd707f
-caps.latest.revision: "24"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 9778094eb098d1e119ef4ef0c25dd022130a11ae
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 547c7d009d2fecf863284324c7ea45006d20d20c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="propertypath-xaml-syntax"></a>Синтаксис PropertyPath XAML
 <xref:System.Windows.PropertyPath> Поддерживает сложные встроенный объект [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] синтаксис для настройки различных свойств, которые принимают <xref:System.Windows.PropertyPath> тип со своим значением. Этот раздел документы <xref:System.Windows.PropertyPath> синтаксис применительно к синтаксисы привязки и анимации.  
@@ -29,7 +17,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="where"></a>   
 ## <a name="where-propertypath-is-used"></a>Где используется PropertyPath  
- <xref:System.Windows.PropertyPath>представляет собой общий объект, который используется в нескольких [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] функции. Несмотря на использование общего <xref:System.Windows.PropertyPath> для передачи сведений о пути свойства, параметры использования для каждой области функций где <xref:System.Windows.PropertyPath> используется как тип варьироваться. Таким образом, более практично документировать синтаксис для каждой функции.  
+ <xref:System.Windows.PropertyPath> представляет собой общий объект, который используется в нескольких [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] функции. Несмотря на использование общего <xref:System.Windows.PropertyPath> для передачи сведений о пути свойства, параметры использования для каждой области функций где <xref:System.Windows.PropertyPath> используется как тип варьироваться. Таким образом, более практично документировать синтаксис для каждой функции.  
   
  В первую очередь [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] использует <xref:System.Windows.PropertyPath> для описания пути объектной модели для нахождения свойств объекта источника данных и для описания целевой путь для целевой анимации.  
   
@@ -39,7 +27,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="propertypath-for-objects-in-data-binding"></a>PropertyPath для объектов в привязке данных  
  Привязка данных является функцией [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], которую можно привязать к целевому значению любого свойства зависимостей. Однако источник такой привязки данных не обязательно должен быть свойством зависимостей. Это может быть любой тип свойства, распознаваемый применимым поставщиком данных. Пути свойств используются особенно для <xref:System.Windows.Data.ObjectDataProvider>, который используется для получения источников привязки из [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] объекты и их свойства.  
   
- Обратите внимание, привязку данных к [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] не использует <xref:System.Windows.PropertyPath>, так как он не использует <xref:System.Windows.Data.Binding.Path%2A> в <xref:System.Windows.Data.Binding>. Вместо этого использовать <xref:System.Windows.Data.Binding.XPath%2A> и укажите допустимый синтаксис XPath в [!INCLUDE[TLA#tla_xmldom](../../../../includes/tlasharptla-xmldom-md.md)] данных. <xref:System.Windows.Data.Binding.XPath%2A>также указывается в виде строки, но не описано здесь; в разделе [связывания XML-данных с помощью XMLDataProvider и запросы XPath](../../../../docs/framework/wpf/data/how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md).  
+ Обратите внимание, привязку данных к [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] не использует <xref:System.Windows.PropertyPath>, так как он не использует <xref:System.Windows.Data.Binding.Path%2A> в <xref:System.Windows.Data.Binding>. Вместо этого использовать <xref:System.Windows.Data.Binding.XPath%2A> и укажите допустимый синтаксис XPath в [!INCLUDE[TLA#tla_xmldom](../../../../includes/tlasharptla-xmldom-md.md)] данных. <xref:System.Windows.Data.Binding.XPath%2A> также указывается в виде строки, но не описано здесь; в разделе [связывания XML-данных с помощью XMLDataProvider и запросы XPath](../../../../docs/framework/wpf/data/how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md).  
   
  Ключом к пониманию путей к свойствам в привязке к данным является то, что можно настроить целевой объект привязки на отдельное значение свойства либо использовать привязку к целевым свойствам, которые принимают списки или коллекции. При связывании коллекций, например привязки <xref:System.Windows.Controls.ListBox> , будет расширяться в зависимости от количества элементов данных в коллекции, а затем путь свойства должен ссылаться на объект коллекции, не на отдельные элементы коллекции. Механизм привязки данных будет соответствовать коллекции, используемой как источник данных для типа целевого объекта привязки автоматически, что приводит к заполнению <xref:System.Windows.Controls.ListBox> массивом элементов.  
   
@@ -70,7 +58,7 @@ ms.lasthandoff: 12/22/2017
 <Binding Path="propertyName.propertyName2" .../>  
 ```  
   
- `propertyName`необходимо разрешить имя свойства, которое является текущим <xref:System.Windows.FrameworkElement.DataContext%2A>. Свойствами пути `propertyName` и `propertyName2` могут быть любые свойства, которые существуют в связи, где `propertyName2` — свойство, которое существует в типе, являющемся значением `propertyName`.  
+ `propertyName` необходимо разрешить имя свойства, которое является текущим <xref:System.Windows.FrameworkElement.DataContext%2A>. Свойствами пути `propertyName` и `propertyName2` могут быть любые свойства, которые существуют в связи, где `propertyName2` — свойство, которое существует в типе, являющемся значением `propertyName`.  
   
 <a name="singleattached"></a>   
 ### <a name="single-property-attached-or-otherwise-type-qualified"></a>Одиночное свойство, присоединенное свойство или свойство с указанием типа  
@@ -166,7 +154,7 @@ or
 <animation Storyboard.TargetProperty="propertyName" .../>  
 ```  
   
- `propertyName`необходимо разрешить имя свойства зависимостей, который существует в указанном <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A> типа.  
+ `propertyName` необходимо разрешить имя свойства зависимостей, который существует в указанном <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A> типа.  
   
 <a name="indirectanim"></a>   
 ### <a name="indirect-property-targeting"></a>Косвенное назначение свойства  
@@ -175,7 +163,7 @@ or
 <animation Storyboard.TargetProperty="propertyName.propertyName2" .../>  
 ```  
   
- `propertyName`должно быть свойством, либо <xref:System.Windows.Freezable> тип значения или примитив, который существует в указанном <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A> типа.  
+ `propertyName` должно быть свойством, либо <xref:System.Windows.Freezable> тип значения или примитив, который существует в указанном <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A> типа.  
   
  `propertyName2` должно быть именем свойства зависимостей, существующего в объекте, который является значением `propertyName`. Другими словами `propertyName2` должны существовать в качестве свойства зависимостей для типа, `propertyName` <xref:System.Windows.DependencyProperty.PropertyType%2A>.  
   

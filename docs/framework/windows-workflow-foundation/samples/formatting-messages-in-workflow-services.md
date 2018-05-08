@@ -1,26 +1,15 @@
 ---
-title: "Форматирование сообщений в службах рабочего процесса"
-ms.custom: 
+title: Форматирование сообщений в службах рабочего процесса
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 6d15d44b-20f8-4cb7-bd4f-598c32781ebc
-caps.latest.revision: "5"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: be200882b59af3604a88c33ad1b3a99687ded860
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: eac9f7042dbcbd31f9a8c7d5e56c7b7d2ab62156
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="formatting-messages-in-workflow-services"></a>Форматирование сообщений в службах рабочего процесса
-В этом образце показано, как использовать различные пользовательские типы в действиях обмена сообщениями (в службах WF). Образец показывает простую службу утверждения затрат. Он представляет три операции. `ApproveExpense` принимает значение типа контракта данных и показывает, как использовать известные типы. Операция возвращает значение `true` или `false` в зависимости от суммы затрат. `ApprovePO`принимает значение типа XmlSerializer и возвращает `true` или `false` зависимости от суммы затрат.`ApprovedVendor` Получает тип контракта сообщения и возвращает `true` или `false` Если поставщик имеется в списке утвержденных поставщиков или если запрос прибыл из финансового отдела (финансовый отдел может использовать любого поставщика).  
+В этом образце показано, как использовать различные пользовательские типы в действиях обмена сообщениями (в службах WF). Образец показывает простую службу утверждения затрат. Он представляет три операции. `ApproveExpense` принимает значение типа контракта данных и показывает, как использовать известные типы. Операция возвращает значение `true` или `false` в зависимости от суммы затрат. `ApprovePO` принимает значение типа XmlSerializer и возвращает `true` или `false` зависимости от суммы затрат.`ApprovedVendor` Получает тип контракта сообщения и возвращает `true` или `false` Если поставщик имеется в списке утвержденных поставщиков или если запрос прибыл из финансового отдела (финансовый отдел может использовать любого поставщика).  
   
 #### <a name="to-use-this-sample"></a>Использование этого образца  
   
@@ -37,6 +26,6 @@ ms.lasthandoff: 12/22/2017
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите на страницу [Примеры Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все примеры [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Этот образец расположен в следующем каталоге.  
+>  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] образцов. Этот образец расположен в следующем каталоге.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Services\Formatter`

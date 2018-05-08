@@ -1,13 +1,6 @@
 ---
-title: "Стили и шаблоны элемента ScrollBar"
-ms.custom: 
+title: Стили и шаблоны элемента ScrollBar
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - styles [WPF], ScrollBar
 - ControlTemplate [WPF], ScrollBar
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - templates [WPF], ScrollBar
 - parts [WPF], ScrollBar
 ms.assetid: 066ea45a-e27d-43b0-adfe-cce6934c22f5
-caps.latest.revision: "18"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 14b40a458b271a4f8b88c167367771235f25c7a3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 28b5978ad58f8978510bba9b700f6767e6c4e207
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="scrollbar-styles-and-templates"></a>Стили и шаблоны элемента ScrollBar
 В этом разделе описываются стили и шаблоны для <xref:System.Windows.Controls.Primitives.ScrollBar> элемента управления. Можно изменить значение по умолчанию <xref:System.Windows.Controls.ControlTemplate> для предоставления уникального внешнего вида элемента управления. Подробнее см. в разделе [Настройка внешнего вида существующего элемента управления путем создания объекта ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  
@@ -33,14 +21,14 @@ ms.lasthandoff: 12/22/2017
 ## <a name="scrollbar-parts"></a>Части полосы прокрутки  
  В следующей таблице перечислены именованные части <xref:System.Windows.Controls.Primitives.ScrollBar> элемента управления.  
   
-|Отделение|Тип|Описание:|  
+|Отделение|Тип|Описание|  
 |-|-|-|  
 |PART_Track|<xref:System.Windows.Controls.Primitives.Track>|Контейнер для элемента, который указывает положение <xref:System.Windows.Controls.Primitives.ScrollBar>.|  
   
 ## <a name="scrollbar-states"></a>Состояния полосы прокрутки  
  В следующей таблице перечислены визуальные состояния <xref:System.Windows.Controls.Primitives.ScrollBar> элемента управления.  
   
-|Имя VisualState|Имя VisualStateGroup|Описание:|  
+|Имя VisualState|Имя VisualStateGroup|Описание|  
 |----------------------|---------------------------|-----------------|  
 |Норм.|CommonStates|Состояние по умолчанию.|  
 |MouseOver|CommonStates|Указатель мыши расположен над элементом управления.|  

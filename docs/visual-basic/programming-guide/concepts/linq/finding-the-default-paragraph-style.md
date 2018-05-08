@@ -1,22 +1,12 @@
 ---
-title: "Поиск стиля абзаца по умолчанию (Visual Basic)"
-ms.custom: 
+title: Поиск стиля абзаца по умолчанию (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 9d094a4a-ec8c-41b0-b7ab-a3deb2a01d45
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: cd22a545f8162352050ba698717fb0ceb3a72cfc
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 77e6e6db321b5f8ef338706e5f938daa02d115eb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="finding-the-default-paragraph-style-visual-basic"></a>Поиск стиля абзаца по умолчанию (Visual Basic)
 Первая задача в учебнике "Обработка информации в документе WordprocessingML" заключается в поиске стиля абзацев по умолчанию в документе.  
@@ -95,7 +85,7 @@ End Module
 The default style is: Normal  
 ```  
   
-## <a name="next-steps"></a>Дальнейшие действия  
+## <a name="next-steps"></a>Следующие шаги  
  В следующем примере будет создан похожий запрос, который ищет все абзацы в документе и их стили:  
   
 -   [Извлечение абзацев и стилей (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/retrieving-the-paragraphs-and-their-styles.md)  

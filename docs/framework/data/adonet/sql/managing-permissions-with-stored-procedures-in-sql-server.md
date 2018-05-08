@@ -1,24 +1,12 @@
 ---
-title: "Управление разрешениями с использованием хранимых процедур в SQL Server"
-ms.custom: 
+title: Управление разрешениями с использованием хранимых процедур в SQL Server
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 08fa34e8-2ffa-470d-ba62-e511a5f8558e
-caps.latest.revision: "6"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 38bdc4d41e4b42f2dccaf059d84f6b8b45967ff5
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 2472481156f44b55726243e9d939522e46796070
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="managing-permissions-with-stored-procedures-in-sql-server"></a>Управление разрешениями с использованием хранимых процедур в SQL Server
 Одним из методов создания нескольких линий защиты для базы данных является реализация доступа ко всем данным с помощью хранимых процедур или определяемых пользователем функций. Отменяются или запрещаются разрешения на все базовые объекты (например, таблицы), на хранимые процедуры предоставляются разрешения EXECUTE. Тем самым создается эффективный периметр безопасности вокруг данных и объектов базы данных.  
@@ -63,7 +51,7 @@ ms.lasthandoff: 01/17/2018
 ## <a name="external-resources"></a>Внешние ресурсы  
  Дополнительные сведения см. в следующих ресурсах.  
   
-|Ресурс|Описание:|  
+|Ресурс|Описание|  
 |--------------|-----------------|  
 |[Хранимые процедуры](http://msdn.microsoft.com/library/ms190782.aspx) и [атаки SQL Injection](http://go.microsoft.com/fwlink/?LinkId=98234) в электронной документации по SQL Server|Разделы описывают, как создавать хранимые процедуры и как работает внедрение кода SQL.|  
   

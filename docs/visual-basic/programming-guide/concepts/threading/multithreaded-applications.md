@@ -1,22 +1,12 @@
 ---
-title: "Многопоточные приложения (Visual Basic)"
-ms.custom: 
+title: Многопоточные приложения (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 02b0444b-2e68-4f2c-bc28-28c046004017
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 19a4fe40e27a9edf8515e2734914aaf02d5e48b2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: ab4b8d1c77ae75aee6f2cf459258766f88d86abe
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="multithreaded-applications-visual-basic"></a>Многопоточные приложения (Visual Basic)
 С помощью Visual Basic можно писать приложения, которые выполняют несколько задач одновременно. Задачи, которые потенциально могут задержать выполнение других задач, выполняются в отдельных потоках; такой способ организации работы приложения называется *многопоточностью* или *свободным созданием потоков*.  
@@ -65,7 +55,7 @@ newThread.Abort()
 ### <a name="thread-properties"></a>Свойства потока  
  Потоки также имеют несколько полезных свойств, которые приведены в следующей таблице.  
   
-|Свойство|Значение|  
+|Свойство.|Значение|  
 |--------------|-----------|  
 |<xref:System.Threading.Thread.IsAlive%2A>|Содержит значение `True`, если поток активен.|  
 |<xref:System.Threading.Thread.IsBackground%2A>|Возвращает или задает логическое значение, которое указывает, является ли поток (должен ли являться) фоновым потоком. Фоновые потоки отличаются от основного потока лишь тем, что они не влияют на завершение процесса. Когда обработка всех основных потоков закончена, общеязыковая среда выполнения завершает процесс, применяя метод <xref:System.Threading.Thread.Abort%2A> к тем фоновым потокам, которые еще продолжают существовать.|  

@@ -1,21 +1,12 @@
 ---
-title: "Итераторы (Visual Basic)"
-ms.custom: 
+title: Итераторы (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 ms.assetid: f26b5c1e-fe9d-4004-b287-da7919d717ae
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: f02249f7f30d2cd6b43aa75530ace099286c7d7f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: ecc48ad5bbddc82457a8d6cc8e60ee419fb593fa
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="iterators-visual-basic"></a>Итераторы (Visual Basic)
 *Итератор* можно использовать для прохода по коллекции, такой как список или массив.  
@@ -221,7 +212,7 @@ Public Class Zoo
 End Class  
 ```  
   
-##  <a name="BKMK_TryBlocks"></a>Блоки try  
+##  <a name="BKMK_TryBlocks"></a> Блоки try  
  Visual Basic позволяет `Yield` инструкции в `Try` блока [Try... CATCH... Оператор Finally](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md). Объект `Try` блок, который имеет `Yield` инструкция может иметь `Catch` блокируется и может иметь `Finally` блока.  
   
  Следующий пример включает `Try`, `Catch`, и `Finally` блоков в функции итератора. `Finally` Блок в функции итератора, выполняется перед `For Each` окончания итерации.  
@@ -261,7 +252,7 @@ End Function
   
  Если `For Each` текста (вместо метода итератора) вызывает исключение, `Catch` блок в функции итератора не выполняется, но `Finally` выполняется блок в функции итератора. Объект `Catch` блоке внутри функции итератора перехватывает только исключения, которые возникают внутри функции итератора.  
   
-##  <a name="BKMK_AnonymousMethods"></a>Анонимные методы  
+##  <a name="BKMK_AnonymousMethods"></a> Анонимные методы  
  В Visual Basic анонимная функция может быть функции итератора. Это показано в следующем примере.  
   
 ```vb  

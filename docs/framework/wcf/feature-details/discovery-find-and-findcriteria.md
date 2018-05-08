@@ -1,26 +1,12 @@
 ---
 title: Объекты обнаружения Find и FindCriteria
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 99016fa4-1778-495b-b4cc-0e22fbec42c6
-caps.latest.revision: 6
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 17ca5e12390e33525f0223917e4c72556a2a2ec7
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 70739647ac5904159b71121e86aa98e92981d4ab
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="discovery-find-and-findcriteria"></a>Объекты обнаружения Find и FindCriteria
 Операция поиска объектов обнаружения инициируется клиентом для обнаружения одной или нескольких служб и является одним из основных действий, выполняемых при обнаружении. При операции поиска выполняется отправка сообщения зонда WS-Discovery по сети. Службы, которые соответствуют указанному критерию, отвечают сообщениями WS-Discovery ProbeMatch. Дополнительные сведения о сообщениях обнаружения см. в разделе [спецификации WS-Discovery](http://go.microsoft.com/fwlink/?LinkID=122347).  
@@ -33,7 +19,7 @@ ms.lasthandoff: 04/30/2018
   
  К критериям поиска относятся следующие.  
   
--   <xref:System.ServiceModel.Discovery.Configuration.ContractTypeNameElement> - необязательный. Имя контракта службы, поиск которой выполняется, и критерий, который обычно используется при поиске служб. Если указано несколько имен контрактов, будет получен ответ только от конечных точек службы, соответствующих всем контрактам. Обратите внимание, что в [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] конечная точка поддерживает только один контракт.  
+-   <xref:System.ServiceModel.Discovery.Configuration.ContractTypeNameElement> - необязательный. Имя контракта службы, поиск которой выполняется, и критерий, который обычно используется при поиске служб. Если указано несколько имен контрактов, будет получен ответ только от конечных точек службы, соответствующих всем контрактам. Обратите внимание, что в WCF конечной точки поддерживает только один контракт.  
   
 -   <xref:System.ServiceModel.Discovery.Configuration.ScopeElement> - необязательный. Области представляют собой абсолютные идентификаторы URI, которые используются для категоризации отдельных конечных точек служб. Их можно использовать в случаях, когда несколько конечных точек используется для предоставления одного контракта и необходим способ поиска подмножества конечных точек. Если указано более одной области, будет получен ответ только от конечных точек службы, соответствующих всем областям.  
   

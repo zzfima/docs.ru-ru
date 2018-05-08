@@ -1,11 +1,7 @@
 ---
-title: "Функция VerifyClientKey (Справочник по неуправляемым API)"
-description: "Функция VerifyClientKey гарантирует, что ключ клиента имеет неправильные параметры безопасности."
+title: Функция VerifyClientKey (Справочник по неуправляемым API)
+description: Функция VerifyClientKey гарантирует, что ключ клиента имеет неправильные параметры безопасности.
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - VerifyClientKey
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: ada878ff8bc430ab2a2d48cac13a81b1f64d39f6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ea8a74633d3e950f6cf7ba87c00a9efa45206545
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="verifyclientkey-function"></a>Функция VerifyClientKey
 Гарантирует, что ключ клиента имеет неправильные параметры безопасности.  
@@ -51,7 +44,7 @@ LONG VerifyClientKey();
   
  **Заголовок:** WMINet_Utils.def  
   
- **Версии платформы .NET framework:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Версии платформы .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>См. также  
 [WMI и счетчиков производительности (Справочник по неуправляемым API)](index.md)

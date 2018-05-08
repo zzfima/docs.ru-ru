@@ -1,30 +1,18 @@
 ---
-title: "ADO.NET и LINQ to SQL"
-ms.custom: 
+title: ADO.NET и LINQ to SQL
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 49ac6da0-f2e1-46fa-963e-1b6dcb63fef7
-caps.latest.revision: "3"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: c95a84bafcb32861e299135feb0b89b931d11165
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: b2be963862b6bd7a0cd5643245606763907a5b72
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="adonet-and-linq-to-sql"></a>ADO.NET и LINQ to SQL
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]является частью [!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)] семейства технологий. Он основан на службах, предоставленных моделью поставщика [!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)]. Таким образом можно смешивать [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] кода с существующими [!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)] приложений и выполнять переход с текущих [!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)] решения [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]. На следующем рисунке показано общее представление связи.  
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] является частью [!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)] семейства технологий. Он основан на службах, предоставленных моделью поставщика [!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)]. Таким образом можно смешивать [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] кода с существующими [!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)] приложений и выполнять переход с текущих [!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)] решения [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]. На следующем рисунке показано общее представление связи.  
   
  ![LINQ to SQL и ADO.NET](../../../../../../docs/framework/data/adonet/sql/linq/media/dlinq-3.png "DLinq_3")  
   

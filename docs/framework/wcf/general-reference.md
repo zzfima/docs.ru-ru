@@ -1,28 +1,16 @@
 ---
-title: "Общие справочные сведения"
-ms.custom: 
+title: Общие справочные сведения
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - general reference [WCF]
 - Windows Communication Foundation, general reference
 - WCF, general reference
 ms.assetid: b1a21e93-4700-46e6-88ca-bd7a50e19a16
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a73f1aa4e55181bb52bfe2d389feec2a0464cd6a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5494716f52c3d604fb010c602389930c71a8ea40
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="general-reference"></a>Общие справочные сведения
-Раздел [ \<system.serviceModel >](../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) описаны элементы, которые используются для настройки [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] клиенты и службы.
+Раздел [ \<system.serviceModel >](../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) описаны элементы, которые используются для настройки клиентов Windows Communication Foundation (WCF) и служб.

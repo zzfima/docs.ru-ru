@@ -1,24 +1,12 @@
 ---
 title: Варианты размещения рабочего процесса
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 37bcd668-9c5c-4e7c-81da-a1f1b3a16514
-caps.latest.revision: 3
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 3f022a5162ab8624d0c696efde6416484e77e874
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: 7713044e40532c431d090b1cb1795876ead2a899
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="workflow-hosting-options"></a>Варианты размещения рабочего процесса
 Большинство примеров Windows Workflow Foundation (WF) используют рабочие процессы, размещенные в консольном приложении, но это не является реалистичным сценарием для реальных рабочих процессов. Рабочие процессы в реальных бизнес-приложениях будут задействованы в постоянных процессах: службе Windows, созданной разработчиком, или серверном приложении, например [!INCLUDE[iisver](../../../includes/iisver-md.md)] или AppFabric. Между этими подходами имеются следующие различия.  

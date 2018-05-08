@@ -1,30 +1,19 @@
 ---
-title: "Определение времени выполнения рабочего процесса с помощью трассировки"
-ms.custom: 
+title: Определение времени выполнения рабочего процесса с помощью трассировки
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: f04ad0fd-edc7-4cbc-8979-356f2a1131c4
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f2687d045db28974e99b2f2b6a3222924a520720
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9f9c65f2c873d54da443db14e7f5797ef1e14174
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="determining-workflow-execution-duration-using-tracing"></a>Определение времени выполнения рабочего процесса с помощью трассировки
 В этом разделе демонстрируется, как определить время, которое требуется для выполнения успешно созданного резидентного рабочего процесса с помощью трассировки рабочего процесса.  
   
 ### <a name="to-determine-workflow-application-execution-duration-by-using-workflow-tracing"></a>Определение продолжительности выполнения приложения рабочего процесса с помощью трассировки рабочего процесса  
   
-1.  Откройте [!INCLUDE[vs2010](../../../includes/vs2010-md.md)].  Выберите **файл**, **новый**, **проекта**.  В разделе **C#**выберите **рабочего процесса** узла.  Выберите **консольное приложение рабочего процесса** из списка шаблонов.  Имя для нового проекта `WorkflowDurationTracing` и нажмите кнопку **ОК**.  
+1.  Откройте [!INCLUDE[vs2010](../../../includes/vs2010-md.md)].  Выберите **файл**, **новый**, **проекта**.  В разделе **C#** выберите **рабочего процесса** узла.  Выберите **консольное приложение рабочего процесса** из списка шаблонов.  Имя для нового проекта `WorkflowDurationTracing` и нажмите кнопку **ОК**.  
   
 2.  Откройте файл Workflow1.xaml.  Перетащите действие <xref:System.Activities.Statements.Delay> в область конструктора. Свойству «Duration» действия присвойте значение 00:00:10 (десять секунд).  
   

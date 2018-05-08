@@ -1,11 +1,7 @@
 ---
-title: "Функция NextMethod (Справочник по неуправляемым API)"
-description: "Функция NextMethod получает следующий метод в перечислении."
+title: Функция NextMethod (Справочник по неуправляемым API)
+description: Функция NextMethod получает следующий метод в перечислении.
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - NextMethod
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 6b886b3ecbd1d5b5b8d212846b2bd8291fa43909
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: cd4559663194cb845fb0cc040e1f6739e38caa0e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="nextmethod-function"></a>Функция NextMethod
 Извлекает следующий метод в перечисление, которое начинается с вызова [BeginMethodEnumeration](beginmethodenumeration.md).  
@@ -71,7 +64,7 @@ HRESULT NextMethod (
 
 Следующие значения, возвращаемые этой функцией, определяются в *WbemCli.h* файла заголовка, или их можно определить как константы в коде:
 
-|Константа  |Значение  |Описание:  |
+|Константа  |Значение  |Описание  |
 |---------|---------|---------|
 | `WBEM_E_UNEXPECTED` | 0x8004101d | Был не вызов [ `BeginEnumeration` ](beginenumeration.md) функции. |
 | `WBEM_S_NO_ERROR` | 0 | Успешный вызов функции.  |
@@ -92,7 +85,7 @@ HRESULT NextMethod (
   
  **Заголовок:** WMINet_Utils.idl  
   
- **Версии платформы .NET framework:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Версии платформы .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>См. также  
 [WMI и счетчиков производительности (Справочник по неуправляемым API)](index.md)

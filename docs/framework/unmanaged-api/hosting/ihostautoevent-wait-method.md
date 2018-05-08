@@ -1,14 +1,6 @@
 ---
-title: "Метод IHostAutoEvent::Wait"
-ms.custom: 
+title: Метод IHostAutoEvent::Wait
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IHostAutoEvent.Wait
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 535d51c5-9112-401b-8c36-85f35d7ee609
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: e4646e0bd04d69e7fe0125740c9c6e0c1b014071
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7921f0361d7369cddf14dd1ab477529d1bbac481
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ihostautoeventwait-method"></a>Метод IHostAutoEvent::Wait
 Вызывает текущий [IHostAutoEvent](../../../../docs/framework/unmanaged-api/hosting/ihostautoevent-interface.md) экземпляр ожидать его признания или определенного времени.  
@@ -58,7 +46,7 @@ HRESULT Wait (
   
 |HRESULT|Описание|  
 |-------------|-----------------|  
-|S_OK|`Wait`успешно возвращен.|  
+|S_OK|`Wait` успешно возвращен.|  
 |ЗНАЧЕНИЕ HOST_E_CLRNOTAVAILABLE|Общеязыковая среда выполнения (CLR) не был загружен в процесс или находится в состоянии, в котором не может выполнять управляемый код или успешно обработать вызов.|  
 |HOST_E_TIMEOUT|Истекло время ожидания вызова.|  
 |HOST_E_NOT_OWNER|Вызывающий объект не является владельцем блокировки.|  
@@ -73,7 +61,7 @@ HRESULT Wait (
   
  **Библиотека:** включена как ресурс в MSCorEE.dll  
   
- **Версии платформы .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Версии платформы .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>См. также  
  [Интерфейс ICLRSyncManager](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-interface.md)  

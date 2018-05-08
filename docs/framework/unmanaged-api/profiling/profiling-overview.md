@@ -1,13 +1,6 @@
 ---
-title: "Общие сведения о профилировании"
-ms.custom: 
+title: Общие сведения о профилировании
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 helpviewer_keywords:
 - managed code, profiling API support
 - unmanaged code, combining with managed code in profiling
@@ -34,19 +27,16 @@ helpviewer_keywords:
 - security, profiling API considerations
 - stack depth [.NET Framework profiling]
 ms.assetid: 864c2344-71dc-46f9-96b2-ed59fb6427a8
-caps.latest.revision: "27"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 84688ed80d0cb1b802290176400eb45998052a34
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b38b64e1c86174bea11086e722ed86b0a0046e2c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="profiling-overview"></a>Общие сведения о профилировании
-<a name="top"></a>Профилировщик — это средство, которое наблюдает за выполнением другого приложения. Профилировщик среды CLR — это библиотека DLL, содержащая функции, которые получают сообщения из среды CLR и отправляют сообщения в среду CLR с помощью API профилирования. Библиотека DLL профилировщика загружается средой CLR во время выполнения.  
+<a name="top"></a> Профилировщик — это средство, которое наблюдает за выполнением другого приложения. Профилировщик среды CLR — это библиотека DLL, содержащая функции, которые получают сообщения из среды CLR и отправляют сообщения в среду CLR с помощью API профилирования. Библиотека DLL профилировщика загружается средой CLR во время выполнения.  
   
  Традиционные средства профилирования основное внимание уделяют измерению выполнения приложения. То есть они измеряют время, затраченное на каждую функцию, или использование памяти приложением за период времени. API профилирования предназначен для более широкого класса диагностических средств, таких как служебные программы с покрытием кода и расширенные средства отладки. Сфера их применения — вся диагностика в природе. API профилирования не только измеряет, но также наблюдает за выполнением приложения. По этой причине API профилирования никогда не должен использоваться самим приложением, и выполнение приложения не должно ни зависеть от профилировщика, ни подвергаться его влиянию.  
   
@@ -236,7 +226,7 @@ ms.lasthandoff: 12/22/2017
 <a name="related_topics"></a>   
 ## <a name="related-topics"></a>См. также  
   
-|Заголовок|Описание:|  
+|Заголовок|Описание|  
 |-----------|-----------------|  
 |[Настройка среды профилирования](../../../../docs/framework/unmanaged-api/profiling/setting-up-a-profiling-environment.md)|В этом разделе объясняется, как можно инициализировать профилировщик, установить уведомления о событиях и профилировать службу Windows.|  
 |[Интерфейсы профилирования](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)|В этом разделе описываются неуправляемые интерфейсы, которые использует API профилирования.|  

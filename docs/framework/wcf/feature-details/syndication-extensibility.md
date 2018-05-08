@@ -1,24 +1,12 @@
 ---
-title: "Расширяемость синдикации"
-ms.custom: 
+title: Расширяемость синдикации
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 4d941175-74a2-4b15-81b3-086e8a95d25f
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 5322ff2c79ab5051b3a9aaaeaafe7db6c9c2f683
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8182aee9d8a526d995ab1266e5c654f29f4af3d8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="syndication-extensibility"></a>Расширяемость синдикации
 API синдикации предназначен для обеспечения независимой от формата модели программирования, которая позволяет передавать сводный контент по каналам связи в различных форматах. Абстрактная модель данных состоит из следующих классов:  
@@ -35,7 +23,7 @@ API синдикации предназначен для обеспечения 
   
  Эти классы тесно сопоставлены с конструкциями, определенными в спецификации Atom 1.0, хотя некоторые имена различаются.  
   
- Ключевой особенностью протоколов синдикации является их расширяемость. Оба протокола, Atom 1.0 и RSS 2.0, добавляют в RSS-каналы атрибуты и элементы, не определенные в спецификациях. Модель программирования синдикации [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] обеспечивает следующие способы работы с пользовательскими атрибутами и расширениями, использования слабо типизированного доступа и создания новых производных классов.  
+ Ключевой особенностью протоколов синдикации является их расширяемость. Оба протокола, Atom 1.0 и RSS 2.0, добавляют в RSS-каналы атрибуты и элементы, не определенные в спецификациях. Модель программирования синдикации Windows Communication Foundation (WCF) предоставляет следующие способы работы с пользовательскими атрибутами и расширениями, использования слабо типизированного доступа и создания нового производного класса.  
   
 ## <a name="loosely-typed-access"></a>Слабо типизированный доступ  
  Чтобы добавить расширения путем создания нового производного класса, требуется написать дополнительный код. Другим вариантом является слабо типизированный доступ к расширениям. Все типы, определенные в абстрактной модели данных синдикации, содержат свойства `AttributeExtensions` и `ElementExtensions` (с одним исключением - <xref:System.ServiceModel.Syndication.SyndicationContent> имеет свойство `AttributeExtensions`, но не имеет свойства `ElementExtensions`). Эти свойства представляют собой коллекции расширений, не обрабатываемых методами `TryParseAttribute` и `TryParseElement` соответственно. Доступ к этим необработанным расширениям можно получить, вызвав метод <xref:System.ServiceModel.Syndication.SyndicationElementExtensionCollection.ReadElementExtensions%2A?displayProperty=nameWithType> для свойства `ElementExtensions` классов <xref:System.ServiceModel.Syndication.SyndicationFeed>, <xref:System.ServiceModel.Syndication.SyndicationItem>, <xref:System.ServiceModel.Syndication.SyndicationLink>, <xref:System.ServiceModel.Syndication.SyndicationPerson> и <xref:System.ServiceModel.Syndication.SyndicationCategory>. Этот набор методов находит все расширения с указанными именем и пространством имен, индивидуально десериализует их в экземпляры `TExtension` и возвращает в виде коллекции объектов `TExtension`.  

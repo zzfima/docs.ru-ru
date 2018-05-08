@@ -1,34 +1,20 @@
 ---
-title: "Практическое руководство. Реализация контракта службы Windows Communication Foundation"
-ms.custom: 
+title: Практическое руководство. Реализация контракта службы Windows Communication Foundation
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - service contracts [WCF], implementing
 ms.assetid: d5ab51ba-61ae-403e-b3c8-e2669e326806
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 4bf590b2f508cc6661b5acb045a7d66b38ed169c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d8d1712e6fcc844a3606403efc3c2648ddcc9c65
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-implement-a-windows-communication-foundation-service-contract"></a>Практическое руководство. Реализация контракта службы Windows Communication Foundation
-Это вторая из шести задач, выполнение которых необходимо для создания базовой службы [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] и клиента, который может вызывать службу. Обзор всех шести задач см. в разделе [учебник по началу работы](../../../docs/framework/wcf/getting-started-tutorial.md) раздела.  
+Это вторая из шести шагов, необходимых для создания базовой службы Windows Communication Foundation (WCF) и клиента, который может вызывать службу. Обзор всех шести задач см. в разделе [учебник по началу работы](../../../docs/framework/wcf/getting-started-tutorial.md) раздела.  
   
  Следующий шаг по созданию приложения WCF - это реализация интерфейса службы. Это предполагает создание класса с именем `CalculatorService`, реализующего пользовательский интерфейс `ICalculator`.  
   

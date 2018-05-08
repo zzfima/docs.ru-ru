@@ -1,27 +1,15 @@
 ---
-title: "Включение нескольких активных результирующих наборов"
-ms.custom: 
+title: Включение нескольких активных результирующих наборов
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 576079e4-debe-4ab5-9204-fcbe2ca7a5e2
-caps.latest.revision: "6"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: b2b1e3ccfe162b6d4903aaf162673ba476296d8b
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: ab866356e979ec6c041d12620cfb6abfc8928668
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="enabling-multiple-active-result-sets"></a>Включение нескольких активных результирующих наборов
 Режим MARS - это новая возможность, которая в SQL Server используется для выполнения нескольких пакетов по одному соединению. Если для работы с SQL Server включен режим MARS, каждый используемый объект команды добавляет сеанс к соединению.  
@@ -79,7 +67,7 @@ string connectionString = "Data Source=MSSQL1;" +
  Операции режима MARS не обеспечивают безопасность потока.  
   
 ### <a name="connection-pooling"></a>Объединение подключений в пул  
- Как и любые другие соединения, соединения, для которых включен режим MARS, организуются в пулы. Если приложение открывает два соединения (одно с включенным режимом MARS и другое, для которого режим MARS отключен), два эти соединения помещаются в отдельные пулы. Дополнительные сведения см. в разделе [SQL пулов соединений Server (ADO.NET)](../../../../../docs/framework/data/adonet/sql-server-connection-pooling.md).  
+ Как и любые другие соединения, соединения, для которых включен режим MARS, организуются в пулы. Если приложение открывает два соединения (одно с включенным режимом MARS и другое, для которого режим MARS отключен), два эти соединения помещаются в отдельные пулы. Дополнительные сведения см. в разделе [Пулы подключений SQL Server (ADO.NET)](../../../../../docs/framework/data/adonet/sql-server-connection-pooling.md).  
   
 ### <a name="sql-server-batch-execution-environment"></a>Среда выполнения пакетов SQL Server  
  При открытии соединения определяется среда по умолчанию. Затем эта среда копируется в логический сеанс режима MARS.  

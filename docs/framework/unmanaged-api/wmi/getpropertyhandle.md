@@ -1,11 +1,7 @@
 ---
-title: "Функция GetPropertyHandle (Справочник по неуправляемым API)"
-description: "Функция GetPropertyHandle возвращает уникальный дескриптор этого свойства удостоверения."
+title: Функция GetPropertyHandle (Справочник по неуправляемым API)
+description: Функция GetPropertyHandle возвращает уникальный дескриптор этого свойства удостоверения.
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - GetPropertyHandle
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 3af852fb4b9899a7937f288ffb65d8ca84e4aef1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 103e81dfa0e455157cfce5914b711347b15b578d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="getpropertyhandle-function"></a>Функция GetPropertyHandle
 Возвращает уникальный дескриптор, который определяет свойство.
@@ -67,7 +60,7 @@ HRESULT GetPropertyHandle (
 
 Следующие значения, возвращаемые этой функцией, определяются в *WbemCli.h* файла заголовка, или их можно определить как константы в коде:
 
-|Константа  |Значение  |Описание:  |
+|Константа  |Значение  |Описание  |
 |---------|---------|---------|
 |`WBEM_E_NOT_FOUND` | 0x80041002 | Указанное имя свойства не найден. |
 |`WBEM_E_INVALID_PARAMETER` | 0x80041008 | Параметр не является допустимым. |
@@ -87,7 +80,7 @@ HRESULT GetPropertyHandle (
   
  **Заголовок:** WMINet_Utils.idl  
   
- **Версии платформы .NET framework:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Версии платформы .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>См. также  
 [WMI и счетчиков производительности (Справочник по неуправляемым API)](index.md)

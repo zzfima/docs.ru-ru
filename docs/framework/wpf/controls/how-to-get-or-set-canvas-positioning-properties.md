@@ -1,31 +1,17 @@
 ---
-title: "Практическое руководство. Получение или задание свойств размещения Canvas"
-ms.custom: 
+title: Практическое руководство. Получение или задание свойств размещения Canvas
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - Canvas control [WPF], setting positioning properties
 ms.assetid: 1636b950-2b5a-4507-8a10-c5034cc58b1c
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: d2b01657088c388ad09037716278dc0788de2abb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 294b49d427a67da849ce930cf29a48f1735bf135
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-get-or-set-canvas-positioning-properties"></a>Практическое руководство. Получение или задание свойств размещения Canvas
 В этом примере показано, как использовать методы размещения элемента <xref:System.Windows.Controls.Canvas> для размещения содержимого дочернего элемента. В этом примере используется содержимое в <xref:System.Windows.Controls.ListBoxItem> для представления значений размещения и преобразования их в экземпляры <xref:System.Double>, который является обязательным аргументом для позиционирования. Затем значения преобразуются обратно в строки и отображаются в виде текста <xref:System.Windows.Controls.TextBlock> элемента с помощью <xref:System.Windows.Controls.Canvas.GetLeft%2A> метод.  

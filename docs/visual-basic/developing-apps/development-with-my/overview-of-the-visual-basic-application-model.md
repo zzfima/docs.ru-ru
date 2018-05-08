@@ -1,23 +1,15 @@
 ---
 title: Обзор модели приложения в Visual Basic
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - My.Application object [Visual Basic], Visual Basic application model
 - Visual Basic application model
 ms.assetid: 17538984-84fe-43c9-82c8-724c9529fe8b
-caps.latest.revision: 30
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 74a8fcfe3f49ab042b3bb4775f9f6e84374db0ae
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 5194810574f594e2c117fef8d8998b7ecebbc981
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="overview-of-the-visual-basic-application-model"></a>Обзор модели приложения в Visual Basic
 Visual Basic предоставляет четко определенную модель для управления поведением приложений Windows Forms: модель приложения Visual Basic. Эта модель включает события для обработки приложения при запуске и завершении работы, а также события для перехвата необработанных исключений. Он также обеспечивает поддержку для разработки приложений с одним экземпляром. Модель приложения является расширяемой, поэтому разработчики, которые требуется больший контроль над можно настраивать переопределяемые методы.  

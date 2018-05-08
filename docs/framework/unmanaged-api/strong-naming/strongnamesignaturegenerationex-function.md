@@ -1,14 +1,6 @@
 ---
-title: "Функция StrongNameSignatureGenerationEx"
-ms.custom: 
+title: Функция StrongNameSignatureGenerationEx
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - StrongNameSignatureGenerationEx
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: 9a75469e-aa49-4e32-ad48-3bafd5202f09
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 4f68befd145649e6d8921e160d302cdb81000a9a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8ac2dd50b26137ee4cf06f0545f1f8cf1bfabf80
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="strongnamesignaturegenerationex-function"></a>Функция StrongNameSignatureGenerationEx
 Создает подпись со строгим именем для указанной сборки в соответствии с заданными флагами.  
@@ -81,12 +69,12 @@ BOOLEAN StrongNameSignatureGenerationEx (
  `dwFlags`  
  [in] Один или несколько из следующих значений:  
   
--   `SN_SIGN_ALL_FILES`(0x00000001) — повторно вычисляет все хэши для связанных модулей.  
+-   `SN_SIGN_ALL_FILES` (0x00000001) — повторно вычисляет все хэши для связанных модулей.  
   
--   `SN_TEST_SIGN`(0x00000002) — пробное подписание сборки.  
+-   `SN_TEST_SIGN` (0x00000002) — пробное подписание сборки.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- `true`При успешном завершении; в противном случае `false`.  
+ `true` При успешном завершении; в противном случае `false`.  
   
 ## <a name="remarks"></a>Примечания  
  Укажите значение null для `wszFilePath` для вычисления размера подписи без создания подписи.  
@@ -106,7 +94,7 @@ BOOLEAN StrongNameSignatureGenerationEx (
   
  **Библиотека:** включена как ресурс в MsCorEE.dll  
   
- **Версии платформы .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>См. также  
  [Метод StrongNameSignatureGenerationEx](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignaturegenerationex-method.md)  

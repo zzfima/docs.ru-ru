@@ -1,13 +1,6 @@
 ---
-title: "Общие сведения об эффектах анимации"
-ms.custom: 
+title: Общие сведения об эффектах анимации
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,20 +8,15 @@ helpviewer_keywords:
 - Storyboards [WPF], animations
 - animations [WPF], overview
 ms.assetid: bd9ce563-725d-4385-87c9-d7ee38cf79ea
-caps.latest.revision: "73"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 118d63bbbcd0cbb52d092af7002df2538df7790b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5fb9550ddce4ead900206c2ece2f976ab8b42c4b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="animation-overview"></a>Общие сведения об эффектах анимации
 <a name="introduction"></a>
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]предоставляет мощный набор средств графики и макет, позволяющие создавать привлекательные пользовательские интерфейсы и документы. Применение анимации позволяет сделать пользовательский интерфейс еще более наглядным и удобным в использовании. Анимацию цвета фона или объекта <xref:System.Windows.Media.Transform>, можно создать экранных эффектов перехода или отображения визуальных подсказок.  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] предоставляет мощный набор средств графики и макет, позволяющие создавать привлекательные пользовательские интерфейсы и документы. Применение анимации позволяет сделать пользовательский интерфейс еще более наглядным и удобным в использовании. Анимацию цвета фона или объекта <xref:System.Windows.Media.Transform>, можно создать экранных эффектов перехода или отображения визуальных подсказок.  
   
  Данный обзор представляет собой введение [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] анимации и системы управления временем. Этот раздел посвящен анимацией [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] объектов с использованием раскадровки.  
 
@@ -46,7 +34,7 @@ ms.lasthandoff: 12/22/2017
   
 -   Затем программа обновляет прямоугольник с использованием нового значения и перерисовывает его.  
   
- До появления [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] разработчикам приходится создавать и управлять временем системами либо использовать специальные пользовательские библиотеки. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]включает систему эффективность промежутков времени, предоставляется с помощью управляемого кода и [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] и тесно интегрирована в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] framework. Анимация [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] упрощает анимацию элементов управления и других графических объектов.  
+ До появления [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] разработчикам приходится создавать и управлять временем системами либо использовать специальные пользовательские библиотеки. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] включает систему эффективность промежутков времени, предоставляется с помощью управляемого кода и [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] и тесно интегрирована в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] framework. Анимация [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] упрощает анимацию элементов управления и других графических объектов.  
   
  В [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] эффективно осуществляются все внутренние процессы управления системой времени и перерисовки экрана. Предоставляются классы контроля времени, позволяющие сосредоточиться на создаваемых эффектах, а не на механике их реализации. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] также упрощает создание собственной анимации, предоставляя доступ к базовым классам анимации, из которых пользовательские классы могут наследовать средства создания пользовательской анимации. По сравнению со стандартными пользовательские классы анимации обеспечивают большое преимущество в производительности.  
   
@@ -62,7 +50,7 @@ ms.lasthandoff: 12/22/2017
   
 -   Доступен совместимый тип анимации. (Если [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] не предоставляет сертификат, можно создать свой собственный. В разделе [Обзор пользовательской анимации](../../../../docs/framework/wpf/graphics-multimedia/custom-animations-overview.md).)  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]содержит множество объектов с <xref:System.Windows.Media.Animation.IAnimatable> свойства. Элементы управления, например <xref:System.Windows.Controls.Button> и <xref:System.Windows.Controls.TabControl>, а также <xref:System.Windows.Controls.Panel> и <xref:System.Windows.Shapes.Shape> объекты наследуют от <xref:System.Windows.DependencyObject>. Большинство их свойств являются свойствами зависимостей.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] содержит множество объектов с <xref:System.Windows.Media.Animation.IAnimatable> свойства. Элементы управления, например <xref:System.Windows.Controls.Button> и <xref:System.Windows.Controls.TabControl>, а также <xref:System.Windows.Controls.Panel> и <xref:System.Windows.Shapes.Shape> объекты наследуют от <xref:System.Windows.DependencyObject>. Большинство их свойств являются свойствами зависимостей.  
   
  Анимацию можно использовать практически везде, где используются стили и шаблоны элементов управления. Анимация не обязательно должна быть визуальной; можно анимировать и объекты, не являющиеся частью пользовательского интерфейса, если они соответствуют описанным в этом разделе условиям.  
   
@@ -268,7 +256,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="applyanimationstoproperty"></a>   
 ## <a name="applying-an-animation-to-a-property"></a>Применение анимации к свойству  
- В предыдущих разделах описаны различные типы анимации и их свойства времени. В этом подразделе показано, как применить анимацию к свойству. <xref:System.Windows.Media.Animation.Storyboard>объекты предоставляют один из способов применения анимации к свойствам. Объект <xref:System.Windows.Media.Animation.Storyboard> — *временная шкала контейнера* , предоставляющий сведения о содержащихся в нем анимациях.  
+ В предыдущих разделах описаны различные типы анимации и их свойства времени. В этом подразделе показано, как применить анимацию к свойству. <xref:System.Windows.Media.Animation.Storyboard> объекты предоставляют один из способов применения анимации к свойствам. Объект <xref:System.Windows.Media.Animation.Storyboard> — *временная шкала контейнера* , предоставляющий сведения о содержащихся в нем анимациях.  
   
 ### <a name="targeting-objects-and-properties"></a>Целевые объекты и свойства  
  <xref:System.Windows.Media.Animation.Storyboard> Класс предоставляет <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A> и <xref:System.Windows.Media.Animation.Storyboard.TargetProperty%2A> вложенные свойства. Эти свойства определяют анимируемые объекты. Чтобы использовать объект в качестве целевого объекта анимации, обычно следует присвоить ему имя.  
@@ -340,7 +328,7 @@ ms.lasthandoff: 12/22/2017
 <a name="related_topics"></a>   
 ## <a name="related-topics"></a>См. также  
   
-|Заголовок|Описание:|  
+|Заголовок|Описание|  
 |-----------|-----------------|  
 |[Общие сведения об анимации и системе управления временем](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-system-overview.md)|Описывает, как система времени использует <xref:System.Windows.Media.Animation.Timeline> и <xref:System.Windows.Media.Animation.Clock> классов, которые позволяют создавать анимации.|  
 |[Советы и рекомендации по анимации](../../../../docs/framework/wpf/graphics-multimedia/animation-tips-and-tricks.md)|Список полезных советов по устранению проблем с анимацией, например проблем производительности.|  

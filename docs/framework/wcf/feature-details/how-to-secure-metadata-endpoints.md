@@ -1,34 +1,22 @@
 ---
 title: Практическое руководство. Защита конечных точек метаданных
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 9f71b6ae-737c-4382-8d89-0a7b1c7e182b
-caps.latest.revision: 13
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: 50a62366063123de9e1773b2926f79b76a1b1c3b
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 659291975902ec78c1484ac77f898b4486000e8d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-secure-metadata-endpoints"></a>Практическое руководство. Защита конечных точек метаданных
 Метаданные для службы могут содержать конфиденциальные сведения о приложении, которые могут быть использованы злоумышленником. Потребителям службы может также потребоваться безопасный механизм получения метаданных о службе. Поэтому необходимо время от времени публиковать метаданные с помощью защищенной конечной точки.  
   
- Безопасность конечных точек обычно обеспечивается с помощью стандартных механизмов безопасности, определенных в [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] для защиты конечных точек приложений. (Дополнительные сведения см. в разделе [Общие сведения о безопасности](../../../../docs/framework/wcf/feature-details/security-overview.md).)  
+ Конечные точки метаданных обычно обеспечивается с помощью стандартные механизмы безопасности определены в Windows Communication Foundation (WCF) для защиты конечных точек приложений. (Дополнительные сведения см. в разделе [Общие сведения о безопасности](../../../../docs/framework/wcf/feature-details/security-overview.md).)  
   
  В этом разделе содержится пошаговое руководство по созданию конечной точки, безопасность которой обеспечивается SSL-сертификатом, то есть конечной точкой HTTPS.  
   

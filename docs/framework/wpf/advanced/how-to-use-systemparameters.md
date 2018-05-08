@@ -1,37 +1,23 @@
 ---
-title: "Как использовать SystemParameters"
-ms.custom: 
+title: Как использовать SystemParameters
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - classes [WPF], SystemParameters
 ms.assetid: 02e7a5de-94eb-4953-b91c-52e6c872ad5b
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: ec333fbc30374ff6f8e2e7674ab332644ff7aad0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 07b73d78a022e508f9ed8ca2e80b71bc2ab89910
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-use-systemparameters"></a>Как использовать SystemParameters
 В этом примере показано, как получить доступ и использование свойств объекта <xref:System.Windows.SystemParameters> для изменения стиля или настроек кнопки.  
   
 ## <a name="example"></a>Пример  
- Системные ресурсы предоставляют несколько параметров системы в виде ресурсов, помогающих создавать визуальные элементы с учетом параметров системы. <xref:System.Windows.SystemParameters>— Это класс, содержащий свойства значений параметров системы и ключи ресурсов, которые привязаны к значениям. Например <xref:System.Windows.SystemParameters.FullPrimaryScreenHeight%2A> — <xref:System.Windows.SystemParameters> значение свойства и <xref:System.Windows.SystemParameters.FullPrimaryScreenHeightKey%2A> является соответствующим ключом ресурса.  
+ Системные ресурсы предоставляют несколько параметров системы в виде ресурсов, помогающих создавать визуальные элементы с учетом параметров системы. <xref:System.Windows.SystemParameters> — Это класс, содержащий свойства значений параметров системы и ключи ресурсов, которые привязаны к значениям. Например <xref:System.Windows.SystemParameters.FullPrimaryScreenHeight%2A> — <xref:System.Windows.SystemParameters> значение свойства и <xref:System.Windows.SystemParameters.FullPrimaryScreenHeightKey%2A> является соответствующим ключом ресурса.  
   
  В [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], можно использовать члены <xref:System.Windows.SystemParameters> как статическое свойство или динамические ссылки на ресурс (со статическим значением свойства в качестве ключа). Используйте ссылку на динамический ресурс, если требуется системное значение для автоматического обновления во время выполнения приложения. В противном случае используйте статическую ссылку. Ключи ресурсов имеют суффикс `Key` добавляется к имени свойства.  
   

@@ -1,28 +1,16 @@
 ---
 title: Безопасность транспорта с проверкой подлинности с использованием сертификатов
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - vb
 ms.assetid: 3d726b71-4d8b-4581-a3bb-02b9af51d11b
-caps.latest.revision: 20
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: 19b54739d82fe7363319211d3f753416e0966aed
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: a4f29d9ac34437431a95a247ef1e7aa5c9084c36
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="transport-security-with-certificate-authentication"></a>Безопасность транспорта с проверкой подлинности с использованием сертификатов
 В этом разделе рассматривается проверка подлинности сервера и клиента при использовании безопасности транспорта с помощью сертификатов X.509. Дополнительные сведения о X.509 см. [сертификаты открытого ключа X.509](http://msdn.microsoft.com/library/bb540819\(VS.85\).aspx). Сертификаты должны быть выданы центром сертификации, который часто сторонним издателем сертификатов. В домене Windows Server для выдачи сертификатов клиентским компьютерам домена можно использовать службу сертификации Active Directory. Дополнительные сведения см. [служб сертификатов Windows 2008 R2](http://go.microsoft.com/fwlink/?LinkID=209949&clcid=0x409). В этом сценарии служба размещена в службах IIS, которые используют протокол SSL. В службе задано использование сертификата SSL (X.509), чтобы клиенты могли проверять подлинность сервера. В клиенте также задано использование сертификата X.509, что позволяет службе проверять подлинность клиента. Клиент должен доверять сертификату сервера, а сервер ― сертификату клиента. Фактический механизм проверки подлинности друг друга службой и клиентом в данном разделе не обсуждается. Дополнительные сведения см. [цифровой подписи в Википедии](http://go.microsoft.com/fwlink/?LinkId=253157).  

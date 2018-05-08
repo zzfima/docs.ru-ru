@@ -1,38 +1,24 @@
 ---
-title: "Общие сведения об элементе управления ToolStripPanel"
-ms.custom: 
+title: Общие сведения об элементе управления ToolStripPanel
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - ToolStripPanel
 helpviewer_keywords:
 - toolbars [Windows Forms]
 - ToolStripPanel control [Windows Forms], about ToolStripPanel control
 ms.assetid: ce54a60c-5eba-4b4c-bd77-cf0748a666cc
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: d376b5df4fabf63a87be04eca01136e22b3e3f82
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 5ab634994e3d229ae9d107bd89b667465d252056
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="toolstrippanel-control-overview"></a>Общие сведения об элементе управления ToolStripPanel
 Объект <xref:System.Windows.Forms.ToolStripPanel> предоставляет одну область для размещения и нависания <xref:System.Windows.Forms.ToolStrip>, <xref:System.Windows.Forms.MenuStrip>, и <xref:System.Windows.Forms.StatusStrip> элементов управления. Несколько <xref:System.Windows.Forms.ToolStrip> элементы управления располагаются по вертикали или по горизонтали в зависимости от <xref:System.Windows.Forms.ToolStripPanelRow.Orientation%2A> из <xref:System.Windows.Forms.ToolStripPanel>.  
   
 ### <a name="important-toolstrippanel-members"></a>ToolStripPanel важные члены  
   
-|name|Описание:|  
+|name|Описание|  
 |----------|-----------------|  
 |<xref:System.Windows.Forms.ToolStripPanel.Orientation%2A>|Возвращает или задает значение, определяющее горизонтальную или вертикальную ориентацию <xref:System.Windows.Forms.ToolStripPanel>.|  
 |<xref:System.Windows.Forms.ToolStripPanel.Renderer%2A>|Возвращает или задает <xref:System.Windows.Forms.ToolStripRenderer> позволяет настраивать внешний вид <xref:System.Windows.Forms.ToolStripPanel>.|  

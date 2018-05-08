@@ -1,28 +1,16 @@
 ---
-title: "Практическое руководство. Определение стиля элементов управления на панели инструментов"
-ms.custom: 
+title: Практическое руководство. Определение стиля элементов управления на панели инструментов
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - styling controls on toolbar [WPF]
 - toolbars [WPF]
 - customizing controls on toolbar [WPF]
 ms.assetid: ba6ae056-d6a9-4c24-90f8-467ab0bc0b1a
-caps.latest.revision: "4"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: fa6c2373a9372947b1093c4dcca31f563c2a8bf9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: cc5ac9dd64072c34ff999255a27dd92f311cda0f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-style-controls-on-a-toolbar"></a>Практическое руководство. Определение стиля элементов управления на панели инструментов
 <xref:System.Windows.Controls.ToolBar> Определяет <xref:System.Windows.ResourceKey> объектов для задания стиля элементов управления в пределах <xref:System.Windows.Controls.ToolBar>.  Для стиля элемента управления в <xref:System.Windows.Controls.ToolBar>, задайте `x:key` атрибута стиля для <xref:System.Windows.ResourceKey> определенные в <xref:System.Windows.Controls.ToolBar>.  

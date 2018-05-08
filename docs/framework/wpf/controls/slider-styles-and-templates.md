@@ -1,13 +1,6 @@
 ---
-title: "Стили и шаблоны элемента Slider"
-ms.custom: 
+title: Стили и шаблоны элемента Slider
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - parts [WPF], Slider
 - states [WPF], Slider
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - templates [WPF], Slider
 - ControlTemplate [WPF], Slider
 ms.assetid: d89aa97b-075a-4752-9c41-9679df65c491
-caps.latest.revision: "19"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 9ffbc5d2aa6e401dffb06f1695a5299a99ef90a7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 022508861c367b8ceaa700c45f6281993c883a44
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="slider-styles-and-templates"></a>Стили и шаблоны элемента Slider
 В этом разделе описываются стили и шаблоны для <xref:System.Windows.Controls.Slider> элемента управления. Можно изменить значение по умолчанию <xref:System.Windows.Controls.ControlTemplate> для предоставления уникального внешнего вида элемента управления. Подробнее см. в разделе [Настройка внешнего вида существующего элемента управления путем создания объекта ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  
@@ -33,7 +21,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="slider-parts"></a>Ползунок частей  
  В следующей таблице перечислены именованные части <xref:System.Windows.Controls.Slider> элемента управления.  
   
-|Отделение|Тип|Описание:|  
+|Отделение|Тип|Описание|  
 |-|-|-|  
 |PART_Track|<xref:System.Windows.Controls.Primitives.Track>|Контейнер для элемента, который указывает положение <xref:System.Windows.Controls.Slider>.|  
 |PART_SelectionRange|<xref:System.Windows.FrameworkElement>|Элемент, который отображает диапазон выбора вдоль <xref:System.Windows.Controls.Slider>.  Диапазон выбора отображается только тогда, когда <xref:System.Windows.Controls.Slider.IsSelectionRangeEnabled%2A> свойство `true`.|  
@@ -41,7 +29,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="slider-states"></a>Ползунок состояний  
  В следующей таблице перечислены визуальные состояния <xref:System.Windows.Controls.Slider> элемента управления.  
   
-|Имя VisualState|Имя VisualStateGroup|Описание:|  
+|Имя VisualState|Имя VisualStateGroup|Описание|  
 |----------------------|---------------------------|-----------------|  
 |Норм.|CommonStates|Состояние по умолчанию.|  
 |MouseOver|CommonStates|Указатель мыши расположен над элементом управления.|  

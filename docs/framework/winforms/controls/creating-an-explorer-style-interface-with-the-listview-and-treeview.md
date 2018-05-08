@@ -1,13 +1,6 @@
 ---
-title: "Пример. Создание интерфейса в стиле проводника с использованием элементов управления ListView и TreeView с помощью конструктора"
-ms.custom: 
+title: Пример. Создание интерфейса в стиле проводника с использованием элементов управления ListView и TreeView с помощью конструктора
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -20,16 +13,11 @@ helpviewer_keywords:
 - ListView control [Windows Forms], explorer style interface
 - ListView control [Windows Forms], explorer-style interface
 ms.assetid: 9e5e7721-19e2-4890-b273-a43589fe99ff
-caps.latest.revision: "19"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 1d8d7991f706f8098e4ac475ae057771de200197
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 0a0208194bd6cf24f61c58ece88e41b674e924fc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-creating-an-explorer-style-interface-with-the-listview-and-treeview-controls-using-the-designer"></a>Пример. Создание интерфейса в стиле проводника с использованием элементов управления ListView и TreeView с помощью конструктора
 Одно из преимуществ Visual Studio — возможность создавать профессионально оформленные приложения Windows Forms в короткие сроки. Типичный сценарий создает пользовательский интерфейс (UI) в <xref:System.Windows.Forms.ListView> и <xref:System.Windows.Forms.TreeView> элементов управления, который напоминает проводника операционных систем Windows. Проводник Windows отображает иерархическую структуру файлов и папок на компьютере пользователя.  
@@ -65,7 +53,7 @@ ms.lasthandoff: 01/19/2018
   
     2.  Задайте для свойства <xref:System.Windows.Forms.ListView.View%2A> значение <xref:System.Windows.Forms.View.Details>.  
   
-    3.  Откройте редактор коллекции ColumnHeader, нажав кнопку с многоточием (![экрана VisualStudioEllipsesButton](../../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton")) в <xref:System.Windows.Forms.ListView.Columns%2A> свойства**.** Добавьте три столбца и присвойте их <xref:System.Windows.Forms.ColumnHeader.Text%2A> свойства `Name`, `Type`, и `Last Modified`соответственно. Нажмите кнопку **ОК**, чтобы закрыть диалоговое окно.  
+    3.  Откройте редактор коллекции ColumnHeader, нажав кнопку с многоточием (![экрана VisualStudioEllipsesButton](../../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton")) в <xref:System.Windows.Forms.ListView.Columns%2A> свойства **.** Добавьте три столбца и присвойте их <xref:System.Windows.Forms.ColumnHeader.Text%2A> свойства `Name`, `Type`, и `Last Modified`соответственно. Нажмите кнопку **ОК**, чтобы закрыть диалоговое окно.  
   
     4.  Задайте свойству <xref:System.Windows.Forms.ListView.SmallImageList%2A> значение `imageList1.`  
   

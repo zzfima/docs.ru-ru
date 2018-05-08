@@ -1,31 +1,21 @@
 ---
-title: "Обработка XML в Visual Basic"
-ms.custom: 
+title: Обработка XML в Visual Basic
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - LINQ to XML [Visual Basic], manipulating XML
 - Visual Basic code, XML
 - XML [Visual Basic], manipulating
 ms.assetid: da32cffb-198d-41b1-9af3-260fe32e3b7d
-caps.latest.revision: "5"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 061617524659ac2f8793e2030f26a2d6b2724a64
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 4be24afe17e60c6c849530f1b892651a1f78399c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="manipulating-xml-in-visual-basic"></a>Обработка XML в Visual Basic
 Можно использовать *XML-литералы* для загрузки XML из внешнего источника, таких как строка, файл или поток. Затем можно использовать [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] для управления XML и использования [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] для составления запросов XML.  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Практическое руководство. Загрузка XML-кода из файла, строки или потока](../../../../visual-basic/programming-guide/language-features/xml/how-to-load-xml-from-a-file-string-or-stream.md)  
  Показан способ загрузки XML-документ в <xref:System.Xml.Linq.XDocument> или <xref:System.Xml.Linq.XElement> объект из текстового файла, строки или потока.  
   

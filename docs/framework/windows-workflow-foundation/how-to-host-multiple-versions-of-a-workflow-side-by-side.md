@@ -1,26 +1,15 @@
 ---
-title: "Как разместить параллельно несколько версий рабочего процесса"
-ms.custom: 
+title: Как разместить параллельно несколько версий рабочего процесса
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 09c575df-e0a3-4f3b-9e01-a7ac59d65287
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 96ae4d3e02b923187b3e0f88a7b18e84094fa584
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d8fef8523f827ab91729054ee87544879b1f1aa3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-host-multiple-versions-of-a-workflow-side-by-side"></a>Как разместить параллельно несколько версий рабочего процесса
 `WorkflowIdentity` предоставляет разработчикам приложений рабочих процессов способ связать имя и версию с определением рабочего процесса, а также связать эти сведения с сохраненным экземпляром рабочего процесса. Эти идентификационные данные могут быть использованы разработчиками приложений рабочего процесса для поддержки таких сценариев, как параллельное выполнение нескольких версий определения рабочего процесса, и являются ключевым элементом для других функциональных возможностей, таких как динамическое обновление. Этот шаг в учебнике показывает, как использовать `WorkflowIdentity` для размещения нескольких версий рабочих процессов одновременно.  
@@ -51,7 +40,7 @@ ms.lasthandoff: 12/22/2017
 > [!NOTE]
 >  Каждый шаг в учебнике «Приступая к работе» построен на основе предыдущих шагов. Если вы не завершили предыдущие шаги можно загрузить полную версию учебника из [Windows Workflow Foundation (WF45) — учебник по началу работы](http://go.microsoft.com/fwlink/?LinkID=248976).  
   
-###  <a name="BKMK_BackupCopy"></a>Создание копии проекта NumberGuessWorkflowActivities  
+###  <a name="BKMK_BackupCopy"></a> Создание копии проекта NumberGuessWorkflowActivities  
   
 1.  Откройте **WF45GettingStartedTutorial** решения в [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] , если она еще не открыта.  
   
@@ -74,10 +63,10 @@ ms.lasthandoff: 12/22/2017
   
 9. Снова откройте **WF45GettingStartedTutorial** решения в [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)].  
   
-###  <a name="BKMK_UpdateWorkflows"></a>Обновление рабочих процессов  
+###  <a name="BKMK_UpdateWorkflows"></a> Обновление рабочих процессов  
  В этом разделе обновлены определения рабочего процесса. Обновлены два действия `WriteLine`, которые получают отзывы на пробное значение пользователя, и добавлено новое действие `WriteLine`, которое предоставляет дополнительные сведения об игре, как только будет угадано число.  
   
-####  <a name="BKMK_UpdateStateMachine"></a>Обновление рабочего процесса StateMachine  
+####  <a name="BKMK_UpdateStateMachine"></a> Обновление рабочего процесса StateMachine  
   
 1.  В **обозревателе решений**в разделе **NumberGuessWorkflowActivities** проекта, дважды щелкните **StateMachineNumberGuessWorkflow.xaml**.  
   
@@ -119,7 +108,7 @@ ms.lasthandoff: 12/22/2017
     Guess + " is correct. You guessed it in " + Turns + " turns."  
     ```  
   
-####  <a name="BKMK_UpdateFlowchart"></a>Обновление рабочего процесса блок-схемы  
+####  <a name="BKMK_UpdateFlowchart"></a> Обновление рабочего процесса блок-схемы  
   
 1.  В **обозревателе решений**в разделе **NumberGuessWorkflowActivities** проекта, дважды щелкните **FlowchartNumberGuessWorkflow.xaml**.  
   
@@ -155,7 +144,7 @@ ms.lasthandoff: 12/22/2017
     Guess + " is correct. You guessed it in " + Turns + " turns."  
     ```  
   
-####  <a name="BKMK_UpdateSequential"></a>Обновление последовательного рабочего процесса  
+####  <a name="BKMK_UpdateSequential"></a> Обновление последовательного рабочего процесса  
   
 1.  В **обозревателе решений**в разделе **NumberGuessWorkflowActivities** проекта, дважды щелкните **SequentialNumberGuessWorkflow.xaml**.  
   
@@ -191,7 +180,7 @@ ms.lasthandoff: 12/22/2017
     Guess + " is correct. You guessed it in " + Turns + " turns."  
     ```  
   
-###  <a name="BKMK_UpdateWorkflowVersionMap"></a>Обновление WorkflowVersionMap для включения предыдущие версии рабочего процесса  
+###  <a name="BKMK_UpdateWorkflowVersionMap"></a> Обновление WorkflowVersionMap для включения предыдущие версии рабочего процесса  
   
 1.  Дважды щелкните **WorkflowVersionMap.cs** (или **WorkflowVersionMap.vb**) в разделе **NumberGuessWorkflowHost** проект, чтобы открыть его.  
   
@@ -559,7 +548,7 @@ ms.lasthandoff: 12/22/2017
     }  
     ```  
   
-###  <a name="BKMK_BuildAndRun"></a>Построение и запуск приложения  
+###  <a name="BKMK_BuildAndRun"></a> Построение и запуск приложения  
   
 1.  Нажмите сочетание клавиш CTRL+SHIFT+B, чтобы построить приложение, а затем сочетание клавиш CTRL+F5 для его запуска.  
   

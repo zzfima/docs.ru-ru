@@ -1,31 +1,17 @@
 ---
-title: "Типы перечислений в контрактах данных"
-ms.custom: 
+title: Типы перечислений в контрактах данных
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - data contracts [WCF], enumeration types
 ms.assetid: b5d694da-68cb-4b74-a5fb-75108a68ec3b
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 7989996f7ed64ba4b85ddc1ca01538ec05e99e1a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ed4a0c572f651793a40cb5ffcaa32aef884c1cec
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="enumeration-types-in-data-contracts"></a>Типы перечислений в контрактах данных
 Перечисления могут быть выражены в модели контракта данных. В этом разделе представлено несколько примеров, иллюстрирующих использование модели программирования.  
@@ -43,7 +29,7 @@ ms.lasthandoff: 12/22/2017
  Свойства <xref:System.Runtime.Serialization.DataContractAttribute> (<xref:System.Runtime.Serialization.DataContractAttribute.Name%2A> и <xref:System.Runtime.Serialization.DataContractAttribute.Namespace%2A>) можно использовать в контрактах данных перечисления как обычно.  
   
 ### <a name="enumeration-member-values"></a>Значения членов перечисления  
- Как правило, контракт данных содержит имена членов перечисления, а не числовые значения. Однако при использовании модели контракта данных экспортируемая схема сохраняет числовые значения, если получающей стороной является клиент [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Обратите внимание, что это не так, при использовании [с помощью класса XmlSerializer](../../../../docs/framework/wcf/feature-details/using-the-xmlserializer-class.md).  
+ Как правило, контракт данных содержит имена членов перечисления, а не числовые значения. Однако при использовании модели контракта данных, если получающей стороной является клиент WCF, экспортированный схема сохраняет числовые значения. Обратите внимание, что это не так, при использовании [с помощью класса XmlSerializer](../../../../docs/framework/wcf/feature-details/using-the-xmlserializer-class.md).  
   
  В предыдущем примере, если `condition` задано значение `Used` и данные сериализуются в формат XML, получается XML-код `<condition>Used</condition>`, а не `<condition>1</condition>`. Поэтому следующий контракт данных эквивалентен контракту данных `CarConditionEnum`.  
   

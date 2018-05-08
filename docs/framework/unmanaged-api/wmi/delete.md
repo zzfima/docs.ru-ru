@@ -1,11 +1,7 @@
 ---
-title: "Удаление функции (Справочник по неуправляемым API)"
-description: "Функция удаления удаляет указанное свойство и все его квалификаторов из определения класса CIM."
+title: Удаление функции (Справочник по неуправляемым API)
+description: Функция удаления удаляет указанное свойство и все его квалификаторов из определения класса CIM.
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - Delete
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 30f5bf651990cafe06811019cf2b3d92f866f646
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e7fcf5cff9f95b06a834d73df4090bd1edfca61b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="delete-function"></a>Удаление функции
 Удаляет указанное свойство и все его квалификаторов из определения класса CIM.
@@ -53,13 +46,13 @@ HRESULT Delete (
 [in] Указатель на [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx) экземпляра.
 
 `wszName`  
-[in] Имя свойства для удаления. `wszName`должен быть указателем на допустимый `LPCWSTR`.
+[in] Имя свойства для удаления. `wszName` должен быть указателем на допустимый `LPCWSTR`.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
 Следующие значения, возвращаемые этой функцией, определяются в *WbemCli.h* файла заголовка, или их можно определить как константы в коде:
 
-|Константа  |Значение  |Описание:  |
+|Константа  |Значение  |Описание  |
 |---------|---------|---------|
 | `WBEM_E_FAILED` | 0x80041001 | Произошла неизвестная ошибка. |
 | `WBEM_E_INVALID_OPERATION` | 0x80041016 | Не удается удалить свойство. |
@@ -80,7 +73,7 @@ HRESULT Delete (
   
  **Заголовок:** WMINet_Utils.idl  
   
- **Версии платформы .NET framework:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Версии платформы .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>См. также  
 [WMI и счетчиков производительности (Справочник по неуправляемым API)](index.md)

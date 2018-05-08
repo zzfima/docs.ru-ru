@@ -1,14 +1,6 @@
 ---
 title: Синхронные и асинхронные операции
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,22 +8,16 @@ helpviewer_keywords:
 - service contracts [WCF], synchronous operations
 - service contracts [WCF], asynchronous operations
 ms.assetid: db8a51cb-67e6-411b-9035-e5821ed350c9
-caps.latest.revision: 24
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: c626699dc5291f4d4f6d432e89708661b233f16d
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: 0b64d45797babff2da1649fb7469684342e65d47
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="synchronous-and-asynchronous-operations"></a>Синхронные и асинхронные операции
 В этом разделе описывается реализация и вызов асинхронных операций службы.  
   
- Многие приложения вызывают методы асинхронно, поскольку это позволяет приложению продолжать выполнение других операций, пока осуществляется вызов метода. Службы и клиенты [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] могут участвовать в асинхронных вызовах операций на 2 различных уровнях приложения, которые обеспечивают приложениям [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] большую гибкость для максимизации пропускной способности без ущерба для интерактивности.  
+ Многие приложения вызывают методы асинхронно, поскольку это позволяет приложению продолжать выполнение других операций, пока осуществляется вызов метода. Службы Windows Communication Foundation (WCF) и клиенты могут участвовать в асинхронных вызовах операций на два уровня приложения, которые предоставляют [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] соотношение еще большую гибкость, чтобы повысить пропускную способность приложения интерактивные возможности.  
   
 ## <a name="types-of-asynchronous-operations"></a>Типы асинхронных операций  
  Все контракты служб в [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]не зависят от типов параметров и возвращаемых значений и используют атрибуты [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], чтобы определить конкретный шаблон обмена сообщениями между клиентом и службой. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] автоматически направляет входящие и исходящие сообщения в соответствующую операцию службы или исполняемый код клиента.  

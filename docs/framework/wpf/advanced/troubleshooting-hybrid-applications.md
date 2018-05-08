@@ -1,13 +1,6 @@
 ---
-title: "Устранение неполадок смешанных приложений"
-ms.custom: 
+title: Устранение неполадок смешанных приложений
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - overlapping controls [WPF]
 - Windows Forms [WPF], interoperability with
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - hybrid applications [WPF interoperability]
 - message loops [WPF]
 ms.assetid: f440c23f-fa5d-4d5a-852f-ba61150e6405
-caps.latest.revision: "26"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0a23f439b9b14d16a5440fa3b757b972304fdfa3
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 878761c030d4950e53ee24b76f7e29101584143a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="troubleshooting-hybrid-applications"></a>Устранение неполадок смешанных приложений
 <a name="introduction"></a> В этом разделе перечислены некоторые общие проблемы, которые могут возникать при создании смешанных приложений, одновременно использующих технологии [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] и [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)].  
@@ -38,7 +26,7 @@ ms.lasthandoff: 01/19/2018
   
  Элемент управления [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)], размещенный в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], всегда появляется в верхней части содержимого [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]содержимое размещается в <xref:System.Windows.Forms.Integration.ElementHost> элемент управления в z порядок для <xref:System.Windows.Forms.Integration.ElementHost> элемента управления. Можно перекрывать <xref:System.Windows.Forms.Integration.ElementHost> элементы управления, но размещаемый [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] содержимое объединяется и не взаимодействует.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] содержимое размещается в <xref:System.Windows.Forms.Integration.ElementHost> элемент управления в z порядок для <xref:System.Windows.Forms.Integration.ElementHost> элемента управления. Можно перекрывать <xref:System.Windows.Forms.Integration.ElementHost> элементы управления, но размещаемый [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] содержимое объединяется и не взаимодействует.  
   
 <a name="child_property"></a>   
 ## <a name="child-property"></a>Дочернее свойство  
@@ -95,7 +83,7 @@ ms.lasthandoff: 01/19/2018
   
 <a name="dispose"></a>   
 ## <a name="dispose"></a>Ликвидировать  
- Неудаленные классы вполне могут дать утечку ресурсов. Убедитесь, что в гибридных приложениях <xref:System.Windows.Forms.Integration.WindowsFormsHost> и <xref:System.Windows.Forms.Integration.ElementHost> удалены классы или может вызвать утечку ресурсов. [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]Удаляет <xref:System.Windows.Forms.Integration.ElementHost> управляет тем, когда его немодальный <xref:System.Windows.Forms.Form> родительских закрывается. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]Удаляет <xref:System.Windows.Forms.Integration.WindowsFormsHost> элементы, когда приложение завершает работу. Имеется возможность показывать <xref:System.Windows.Forms.Integration.WindowsFormsHost> элемент в <xref:System.Windows.Window> в [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] цикл обработки сообщений. В этом случае код может не получить уведомление о том, что приложение завершает работу.  
+ Неудаленные классы вполне могут дать утечку ресурсов. Убедитесь, что в гибридных приложениях <xref:System.Windows.Forms.Integration.WindowsFormsHost> и <xref:System.Windows.Forms.Integration.ElementHost> удалены классы или может вызвать утечку ресурсов. [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] Удаляет <xref:System.Windows.Forms.Integration.ElementHost> управляет тем, когда его немодальный <xref:System.Windows.Forms.Form> родительских закрывается. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Удаляет <xref:System.Windows.Forms.Integration.WindowsFormsHost> элементы, когда приложение завершает работу. Имеется возможность показывать <xref:System.Windows.Forms.Integration.WindowsFormsHost> элемент в <xref:System.Windows.Window> в [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] цикл обработки сообщений. В этом случае код может не получить уведомление о том, что приложение завершает работу.  
   
 <a name="enabling_visual_styles"></a>   
 ## <a name="enabling-visual-styles"></a>Включение стилей оформления  

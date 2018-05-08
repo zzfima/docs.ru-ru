@@ -1,27 +1,15 @@
 ---
-title: "Транспорт: пример пользовательских транзакций по протоколу UDP"
-ms.custom: 
+title: 'Транспорт: пример пользовательских транзакций по протоколу UDP'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 6cebf975-41bd-443e-9540-fd2463c3eb23
-caps.latest.revision: "21"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7e26d0c25879b3b1b6ed873543f051de989ddd92
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: e395300df4cd9917b9662d4bc3b1e8d50d82914d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="transport-custom-transactions-over-udp-sample"></a>Транспорт: пример пользовательских транзакций по протоколу UDP
-Этот пример построен на [транспорт: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) в [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] [расширяемость транспорта](../../../../docs/framework/wcf/samples/transport-extensibility.md). Он расширяет пример транспорта UDP за счет поддержки пользовательского потока транзакций и иллюстрирует использование свойства <xref:System.ServiceModel.Channels.TransactionMessageProperty>.  
+Этот пример построен на [транспорт: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) образец в Windows Communication Foundation (WCF)[расширяемость транспорта](../../../../docs/framework/wcf/samples/transport-extensibility.md). Он расширяет пример транспорта UDP за счет поддержки пользовательского потока транзакций и иллюстрирует использование свойства <xref:System.ServiceModel.Channels.TransactionMessageProperty>.  
   
 ## <a name="code-changes-in-the-udp-transport-sample"></a>Изменения кода в примере транспорта UDP  
  Чтобы продемонстрировать поток транзакций, в этом примере изменен контракт службы для `ICalculatorContract`. Здесь этот контракт требует область транзакции для `CalculatorService.Add()`. Кроме того, в контракт операции `System.Guid` добавлен параметр `Add`. Этот параметр используется для передачи службе идентификатора транзакции клиента.  
@@ -269,7 +257,7 @@ if (transaction != null)
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите на страницу [Примеры Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все примеры [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Этот образец расположен в следующем каталоге.  
+>  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] образцов. Этот образец расположен в следующем каталоге.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Transactions\TransactionMessagePropertyUDPTransport`  
   

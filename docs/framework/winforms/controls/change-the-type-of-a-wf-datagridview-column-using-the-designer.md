@@ -1,29 +1,17 @@
 ---
-title: "Практическое руководство. Изменение типа столбца DataGridView в формах Windows Forms с помощью конструктора"
-ms.custom: 
+title: Практическое руководство. Изменение типа столбца DataGridView в формах Windows Forms с помощью конструктора
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Windows Forms, columns
 - columns [Windows Forms], types
 - DataGridView control [Windows Forms], changing column type
 - data [Windows Forms], displaying
 ms.assetid: 7f994d45-600d-4190-a187-35803214b40c
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 020eca128300f964614423e3ce371c00cb437ffb
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: b5d395575ac486307625fbdf2f236b6a588cc3ed
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-change-the-type-of-a-windows-forms-datagridview-column-using-the-designer"></a>Практическое руководство. Изменение типа столбца DataGridView в формах Windows Forms с помощью конструктора
 Иногда требуется изменить тип столбца, который уже был добавлен в форму Windows Forms <xref:System.Windows.Forms.DataGridView> элемента управления. Например может потребоваться изменить типы некоторых столбцов, которые создаются автоматически при привязке элемента управления к источнику данных. Это полезно в том случае, если таблицы, которые отображены столбцы, содержащие внешние ключи для строк в связанной таблице. В этом случае может потребоваться заменить столбцы с текстовыми полями, в которых отображаются эти внешние ключи, со столбцами поле со списком, которые отображаются более понятные значения из связанной таблицы.  

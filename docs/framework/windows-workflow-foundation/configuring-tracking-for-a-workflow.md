@@ -1,23 +1,12 @@
 ---
-title: "Настройка отслеживания рабочего процесса"
-ms.custom: 
+title: Настройка отслеживания рабочего процесса
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 905adcc9-30a0-4918-acd6-563f86db988a
-caps.latest.revision: "24"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: bb64569984d71e35ef9f502c79d3a0bb8b4b8988
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 70697d82242ab0704dd67129940a6660d300bef9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="configuring-tracking-for-a-workflow"></a>Настройка отслеживания рабочего процесса
 Рабочий процесс может выполняться тремя способами.  
@@ -156,7 +145,7 @@ invoker.Invoke();
 ```  
   
 ### <a name="viewing-tracking-records-in-event-viewer"></a>Просмотр записей отслеживания в обозревателе событий  
- Особый интерес представляют два журнала средства просмотра при отслеживании выполнения WF - аналитический журнал и журнал отладки. Оба журнала находятся в узле Microsoft &#124; Windows &#124; Узел приложения Server-Applications.  В этом разделе журналы содержат события из одного приложения, а не события, влияющие на всю систему.  
+ Особый интерес представляют два журнала средства просмотра при отслеживании выполнения WF - аналитический журнал и журнал отладки. Оба находятся в узле Microsoft&#124;Windows&#124;узел сервер приложений-приложения.  В этом разделе журналы содержат события из одного приложения, а не события, влияющие на всю систему.  
   
  События трассировки отладки записываются в журнал отладки. Для получения событий трассировки отладки WF в средстве просмотра включите журнал отладки.  
   

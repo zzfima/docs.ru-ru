@@ -1,13 +1,6 @@
 ---
-title: "Данные и объекты данных"
-ms.custom: 
+title: Данные и объекты данных
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - DataFormats class [WPF]
 - DataObject class [WPF]
 ms.assetid: 5967d557-1867-420f-a524-ae3af78402da
-caps.latest.revision: "5"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: cb2354b61a0433981675ba55978f31937212cabc
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ff596dc7428c9d105a27999f216d33e735e35a22
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="data-and-data-objects"></a>Данные и объекты данных
 Данные, которые передаются как часть операции перетаскивания и вставки хранятся в объект данных.  Концептуально объект данных состоит из одной или нескольких из следующих пар:  
@@ -47,7 +35,7 @@ ms.lasthandoff: 12/22/2017
 |<xref:System.Windows.IDataObject.GetFormats%2A>|Возвращает список форматов, которые хранятся в данные в этом объекте данных или можно преобразовать.|  
 |<xref:System.Windows.IDataObject.SetData%2A>|Сохраняет указанные данные в этом объекте данных.|  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]Предоставляет базовую реализацию <xref:System.Windows.IDataObject> в <xref:System.Windows.DataObject> класса. Акции <xref:System.Windows.DataObject> класса является достаточным для многих распространенных сценариев передачи данных.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Предоставляет базовую реализацию <xref:System.Windows.IDataObject> в <xref:System.Windows.DataObject> класса. Акции <xref:System.Windows.DataObject> класса является достаточным для многих распространенных сценариев передачи данных.  
   
  Существует несколько предварительно определенных форматов, например растрового изображения, CSV, файл, HTML, RTF, строки, текст и аудио. Сведения о предопределенных форматах данных предоставлены [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], в разделе <xref:System.Windows.DataFormats> класс справочном разделе.  
   
@@ -86,7 +74,7 @@ ms.lasthandoff: 12/22/2017
  Дополнительные примеры кода, который запрашивает объект данных для доступных форматов данных см. в разделе [перечисление форматов данных в объекте данных](../../../../docs/framework/wpf/advanced/how-to-list-the-data-formats-in-a-data-object.md).  Примеры запросов объектов данных на наличие определенного формата см. в разделе [определить, если формат данных, присутствует в объекте данных](../../../../docs/framework/wpf/advanced/how-to-determine-if-a-data-format-is-present-in-a-data-object.md).  
   
 ### <a name="retrieving-data-from-a-data-object"></a>Извлечение данных из объекта данных  
- Извлечение данных из объекта данных в определенном формате просто вызвать один из <xref:System.Windows.DataObject.GetData%2A> методы и указав требуемый формат данных.  Один из <xref:System.Windows.DataObject.GetDataPresent%2A> методы можно использовать для проверки на наличие определенного формата данных.  <xref:System.Windows.DataObject.GetData%2A>Возвращает данные в <xref:System.Object>; в зависимости от формата данных, этот объект может быть приведен к контейнеру определенного типа.  
+ Извлечение данных из объекта данных в определенном формате просто вызвать один из <xref:System.Windows.DataObject.GetData%2A> методы и указав требуемый формат данных.  Один из <xref:System.Windows.DataObject.GetDataPresent%2A> методы можно использовать для проверки на наличие определенного формата данных.  <xref:System.Windows.DataObject.GetData%2A> Возвращает данные в <xref:System.Object>; в зависимости от формата данных, этот объект может быть приведен к контейнеру определенного типа.  
   
  В следующем примере кода используется <xref:System.Windows.DataObject.GetDataPresent%28System.String%29> перегрузку, чтобы определить доступность указанного формата данных (встроенный или с автоматическим преобразованием). Если указанный формат доступен, данные извлекаются с помощью <xref:System.Windows.DataObject.GetData%28System.String%29> метод.  
   

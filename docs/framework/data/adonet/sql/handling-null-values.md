@@ -1,27 +1,15 @@
 ---
-title: "Обработка значений NULL"
-ms.custom: 
+title: Обработка значений NULL
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: f18b288f-b265-4bbe-957f-c6833c0645ef
-caps.latest.revision: "6"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 23a502cc3a286ed5cb47c7bbe21253f312722409
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 9c0b6d250dcedc9b5996c50ccdb2f183707e54e4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="handling-null-values"></a>Обработка значений NULL
 Значение NULL в реляционной базе данных используется, если значение в столбце неизвестно или отсутствует. Значение Null не является ни пустой строкой (для символьного типа данных или типа данных datetime), ни нулевым значением (для числовых типов данных). Спецификация ANSI SQL-92 устанавливает, что значение NULL должно быть одинаково для всех типов данных, так чтобы все значения NULL обрабатывались согласованно. Пространство имен <xref:System.Data.SqlTypes> предоставляет семантику NULL при реализации интерфейса <xref:System.Data.SqlTypes.INullable>. Каждый из типов данных в <xref:System.Data.SqlTypes> имеет свое собственное свойство `IsNull` и значение `Null`, которое может быть присвоено экземпляру этого типа данных.  

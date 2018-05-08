@@ -1,14 +1,6 @@
 ---
-title: "Метод IMetaDataEmit::MergeEnd"
-ms.custom: 
+title: Метод IMetaDataEmit::MergeEnd
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IMetaDataEmit.MergeEnd
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 2d64315a-1af1-4c60-aedf-f8a781914aea
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 265fc007b5817e8dffd5846738a7a0003bbddf9d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b794a62a0ac0d253f1431be29b43101816dc7233
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="imetadataemitmergeend-method"></a>Метод IMetaDataEmit::MergeEnd
 Выполняет слияние в текущей области видимости всех областей метаданных, заданных один или несколько предыдущих вызовами [IMetaDataEmit::Merge](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-merge-method.md).  
@@ -58,7 +46,7 @@ HRESULT MergeEnd ();
   
      Если для текущей области уже заданы свойства модуля, свойства модуля не импортируются. Тем не менее если не были заданы свойства модуля в текущей области, они импортируются только один раз, когда они встречаются впервые. Если эти свойства модуля встречаются снова, они являются дубликатами. Если сравниваются значения всех свойств модуля (за исключением MVID) и не найден, возникает ошибка.  
   
--   Для определения типов (`TypeDef`), без повторений объединяются в текущей области. `TypeDef`объекты проверяются на наличие дубликатов для каждой *объекта полное доменное имя* + *GUID* + *номер версии*. Если совпадение по имени или GUID и любые другие два элемента отличается, возникает ошибка. В противном случае, если совпадают все три элемента, `MergeEnd` поверхностной проверки убедитесь, что записи на самом деле являются дубликатами; в противном случае возникает ошибка. Эта проверка поверхностной выявляет:  
+-   Для определения типов (`TypeDef`), без повторений объединяются в текущей области. `TypeDef` объекты проверяются на наличие дубликатов для каждой *объекта полное доменное имя* + *GUID* + *номер версии*. Если совпадение по имени или GUID и любые другие два элемента отличается, возникает ошибка. В противном случае, если совпадают все три элемента, `MergeEnd` поверхностной проверки убедитесь, что записи на самом деле являются дубликатами; в противном случае возникает ошибка. Эта проверка поверхностной выявляет:  
   
     -   Же объявления членов, в том же порядке. Члены, помеченные как `mdPrivateScope` (см. [CorMethodAttr](../../../../docs/framework/unmanaged-api/metadata/cormethodattr-enumeration.md) перечисления) не включаются в эту проверку; специально объединяются.  
   
@@ -79,7 +67,7 @@ HRESULT MergeEnd ();
   
  **Библиотека:** используется как ресурс в MSCorEE.dll  
   
- **Версии платформы .NET framework:**[!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
+ **Версии платформы .NET framework:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   
 ## <a name="see-also"></a>См. также  
  [Интерфейс IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)  

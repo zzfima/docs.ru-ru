@@ -1,14 +1,6 @@
 ---
-title: "ICorDebugAssembly интерфейс1"
-ms.custom: 
+title: ICorDebugAssembly интерфейс1
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorDebugAssembly
 api_location:
@@ -22,24 +14,20 @@ helpviewer_keywords:
 ms.assetid: 9d657a28-6984-4c5e-8a54-89d20080baff
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 6331c00c2be0805afb56028e9e1a13cd11168cf1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 88134fb7854091bb60e8084a6d776bdec922c7e1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icordebugassembly-interface1"></a>ICorDebugAssembly интерфейс1
 Представляет сборку.  
   
 ## <a name="methods"></a>Методы  
   
-|Метод|Описание:|  
+|Метод|Описание|  
 |------------|-----------------|  
 |[Метод EnumerateModules](../../../../docs/framework/unmanaged-api/debugging/icordebugassembly-enumeratemodules-method.md)|Получает перечислитель для модулей, содержащиеся в сборке.|  
 |[Метод GetAppDomain](../../../../docs/framework/unmanaged-api/debugging/icordebugassembly-getappdomain-method.md)|Получает указатель интерфейса на домен приложения, который содержит это `ICorDebugAssembly` экземпляра.|  
@@ -59,7 +47,7 @@ ms.lasthandoff: 12/22/2017
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>См. также  
  [Интерфейсы отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

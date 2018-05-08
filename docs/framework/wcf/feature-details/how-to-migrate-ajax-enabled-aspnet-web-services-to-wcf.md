@@ -1,41 +1,27 @@
 ---
 title: Практическое руководство. Миграция веб-служб ASP.NET с поддержкой AJAX на платформу WCF
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 1428df4d-b18f-4e6d-bd4d-79ab3dd5147c
-caps.latest.revision: 17
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 2b728e6283a2f038b7e5ef4c535da41f4eb8ebef
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 048408adf8678c243a225a233cb1173c9b7f869f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-migrate-ajax-enabled-aspnet-web-services-to-wcf"></a>Практическое руководство. Миграция веб-служб ASP.NET с поддержкой AJAX на платформу WCF
-В этом разделе описаны процедуры по переносу базовой службы AJAX ASP.NET в эквивалентную службу [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] с поддержкой AJAX. В нем показано, как создать функционально эквивалентную [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-версию службы AJAX ASP.NET. Две службы можно использовать параллельно, либо можно заменить службу AJAX ASP.NET службой [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+В этом разделе описаны процедуры по переносу базовой службы ASP.NET AJAX для службы с поддержкой AJAX Windows Communication Foundation (WCF). В этом примере показано создание функционально эквивалентны версии WCF-служб ASP.NET AJAX. Две службы затем могут использоваться параллельно, или службы WCF можно использовать для замены службы ASP.NET AJAX.  
   
- Перенос имеющейся службы AJAX ASP.NET в службу AJAX [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] позволяет получить следующие преимущества:  
+ Миграция существующих AJAX ASP.NET службы для службы WCF AJAX предоставляет следующие преимущества:  
   
 -   службу AJAX можно сделать доступной в качестве службы SOAP при минимальной дополнительной настройке;  
   
--   можно использовать такие возможности [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], как трассировка и т. д.  
+-   Преимущества функций WCF, такие как трассировка и т. д.  
   
  В следующих процедурах предполагается, что используется [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)].  
   
  Код, получаемый в результате применения описанных в этом разделе процедур, приведен в примере после процедур.  
   
- Дополнительные сведения о предоставлении доступа к [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] службы через конечную точку с поддержкой AJAX см. в разделе [как: использование конфигурации для добавления конечной точки ASP.NET AJAX](../../../../docs/framework/wcf/feature-details/how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md) раздела.  
+ Дополнительные сведения о предоставлении доступа к службе WCF через конечную точку с поддержкой AJAX см. в разделе [как: использование конфигурации для добавления конечной точки ASP.NET AJAX](../../../../docs/framework/wcf/feature-details/how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md) раздела.  
   
 ### <a name="to-create-and-test-the-aspnet-web-service-application"></a>Создание и тестирование приложения веб-службы ASP.NET  
   
@@ -62,7 +48,7 @@ ms.lasthandoff: 04/30/2018
   
 9. Этот ответ подтверждает, что имеется функционирующая служба AJAX ASP.NET, и что эта служба доступна через конечную точку Service1.asmx/HelloWorld, которая отвечает на запросы HTTP POST и возвращает XML-код.  
   
-     Теперь эту службу можно преобразовать в службу AJAX [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+     Теперь все готово для преобразования эту службу для использования службы WCF AJAX.  
   
 ### <a name="to-create-an-equivalent-wcf-ajax-service-application"></a>Создание эквивалентного приложения службы AJAX WCF  
   
@@ -190,11 +176,11 @@ namespace ASPHello
   
  Тип <xref:System.Xml.XmlDocument> не поддерживается классом <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>, потому что его невозможно сериализовать с помощью класса <xref:System.Xml.Serialization.XmlSerializer>. Можно использовать тип <xref:System.Xml.Linq.XDocument> или сериализовать свойство <xref:System.Xml.XmlDocument.DocumentElement%2A>.  
   
- Если веб-службы ASMX обновляются и параллельно переносятся на платформу служб [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], следует избегать сопоставления двух типов одному имени клиента. Это приведет к исключению при сериализации, если в атрибутах <xref:System.Web.Services.WebMethodAttribute> и <xref:System.ServiceModel.ServiceContractAttribute> будет использоваться один и тот же тип:  
+ Если веб-службы ASMX обновляются и перенесены side-by-side службы WCF, избегайте сопоставление двух типов с тем же именем на стороне клиента. Это приведет к исключению при сериализации, если в атрибутах <xref:System.Web.Services.WebMethodAttribute> и <xref:System.ServiceModel.ServiceContractAttribute> будет использоваться один и тот же тип:  
   
--   если сначала добавляется служба [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], вызов метода в веб-службе ASMX приводит к исключению в методе <xref:System.Web.UI.ObjectConverter.ConvertValue%28System.Object%2CSystem.Type%2CSystem.String%29>, поскольку имеет приоритет стиль определения порядка в прокси [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)];  
+-   Если сначала добавляется служба WCF, вызов метода в веб-службе ASMX приводит к исключению в <xref:System.Web.UI.ObjectConverter.ConvertValue%28System.Object%2CSystem.Type%2CSystem.String%29> , так как определение стиля WCF порядка в прокси-сервер имеет более высокий приоритет.  
   
--   если сначала добавляется веб-служба ASMX, вызов метода в службе [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] приводит к исключению в объекте <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>, поскольку имеет приоритет стиль определения порядка в прокси веб-службы.  
+-   Если сначала добавляется веб-службы ASMX, вызов метода в службе WCF приводит к исключению в <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> , так как имеет приоритет стиль определения веб-службы, порядка в прокси-сервер.  
   
  Имеются важные различия в работе класса <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> и класса <xref:System.Web.Script.Serialization.JavaScriptSerializer> AJAX ASP.NET. Например, класс <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> представляет словарь в виде массива пар "ключ-значение", а класс <xref:System.Web.Script.Serialization.JavaScriptSerializer> AJAX ASP.NET представляет словарь в виде фактических объектов JSON. Ниже представлен словарь в формате AJAX ASP.NET.  
   

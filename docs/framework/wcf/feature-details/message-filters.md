@@ -1,28 +1,14 @@
 ---
 title: Фильтры сообщений
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - routing [WCF], message filters
 ms.assetid: cb33ba49-8b1f-4099-8acb-240404a46d9a
-caps.latest.revision: 8
-author: wadepickett
-ms.author: wpickett
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: bd5019668e865d2fea835b450d992d45b5273ed7
-ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
+ms.openlocfilehash: e129924de53fb0dba61798cc492729c8af69ed94
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="message-filters"></a>Фильтры сообщений
 Чтобы обеспечить маршрутизацию на основе содержимого, служба маршрутизации использует реализации класса <xref:System.ServiceModel.Dispatcher.MessageFilter>, которые проверяют такие разделы сообщения, как адрес, имя конечной точки или инструкция XPath. Если ни один из фильтров, предоставляемых платформой [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)], не подходит, можно создать пользовательский фильтр, написав реализацию базового класса <xref:System.ServiceModel.Dispatcher.MessageFilter>.  
@@ -39,13 +25,13 @@ ms.lasthandoff: 04/10/2018
 |Тип фильтра|Описание|Значение данных фильтра|Пример фильтра|  
 |------------------|-----------------|-------------------------|--------------------|  
 |Действие|Использует класс <xref:System.ServiceModel.Dispatcher.ActionMessageFilter> для поиска сообщений, содержащих определенное действие.|Действие, по которому производится фильтрация.|\<filter name="action1" filterType="Action" filterData="http://namespace/contract/operation" />|  
-|EndpointAddress|Использует <xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter> класса, с <xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter.IncludeHostNameInComparison%2A>  ==  `true` для поиска сообщений, содержащих определенный адрес.|Адрес, по которому будет выполняться фильтрация (в поле «Кому»).|\<filter name="address1" filterType="EndpointAddress" filterData="http://host/vdir/s.svc/b"  />|  
-|EndpointAddressPrefix|Использует <xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter> класса, с <xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter.IncludeHostNameInComparison%2A>  ==  `true` для поиска сообщений, содержащих определенный префикс адреса.|Адрес, по которому будет выполняться фильтрация с использованием самого длинного совпадающего префикса.|\<filter name="prefix1" filterType="EndpointAddressPrefix" filterData="http://host/" />|  
-|И|Использует класс <xref:System.ServiceModel.Dispatcher.StrictAndMessageFilter>, который всегда проверяет оба условия перед возвратом результата.|параметр filterData не используется. Вместо этого filter1 и filter2 содержат имена соответствующих фильтров сообщений (также в таблице), которые должны быть **AND**объединены.|\<filter name="and1" filterType="And" filter1="address1" filter2="action1" />|  
-|Другой|Определяемый пользователем тип, который расширяет класс <xref:System.ServiceModel.Dispatcher.MessageFilter> и имеет конструктор, принимающий строку.|Атрибут customType является полным именем типа для создаваемого класса. Параметр filterData - строка, передаваемая конструктору при создании фильтра.|\<filter name="custom1" filterType="Custom" customType="CustomAssembly.CustomMsgFilter, CustomAssembly" filterData="Custom Data" />|  
-|EndpointName|Использует класс <xref:System.ServiceModel.Dispatcher.EndpointNameMessageFilter> для поиска сообщений на основе имени конечной точки службы, в которую они поступили.|Имя конечной точки службы, например: «serviceEndpoint1».  Это должна быть одна из конечных точек, представленных в службе Routing Service.|\<filter name="stock1" filterType="Endpoint" filterData="SvcEndpoint" />|  
-|MatchAll|Использует класс <xref:System.ServiceModel.Dispatcher.MatchAllMessageFilter>. Этот фильтр находит все поступившие сообщения.|Параметр filterData не используется. Этот фильтр всегда находит все поступившие сообщения.|\<filter name="matchAll1" filterType="MatchAll" />|  
-|XPath|Использует класс <xref:System.ServiceModel.Dispatcher.XPathMessageFilter> для поиска сообщений по запросу XPath.|Запрос XPath, используемый при сопоставлении сообщений.|\<filter name="XPath1" filterType="XPath" filterData="//ns:element" />|  
+|EndpointAddress|Использует <xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter> класса, с <xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter.IncludeHostNameInComparison%2A>  ==  `true` для поиска сообщений, содержащих определенный адрес.|Адрес, по которому будет выполняться фильтрация (в поле «Кому»).|\<Имя фильтра = filterType «address1» = «EndpointAddress» filterData =»http://host/vdir/s.svc/b"/ >|  
+|EndpointAddressPrefix|Использует <xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter> класса, с <xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter.IncludeHostNameInComparison%2A>  ==  `true` для поиска сообщений, содержащих определенный префикс адреса.|Адрес, по которому будет выполняться фильтрация с использованием самого длинного совпадающего префикса.|\<Имя фильтра = filterType «prefix1» = «EndpointAddressPrefix» filterData =»http://host/"/ >|  
+|И|Использует класс <xref:System.ServiceModel.Dispatcher.StrictAndMessageFilter>, который всегда проверяет оба условия перед возвратом результата.|параметр filterData не используется. Вместо этого filter1 и filter2 содержат имена соответствующих фильтров сообщений (также в таблице), которые должны быть **AND**объединены.|\<Имя фильтра = filterType «и «1 = фильтр1 «И» = «address1» filter2 = «action1» / >|  
+|Другой|Определяемый пользователем тип, который расширяет класс <xref:System.ServiceModel.Dispatcher.MessageFilter> и имеет конструктор, принимающий строку.|Атрибут customType является полным именем типа для создаваемого класса. Параметр filterData - строка, передаваемая конструктору при создании фильтра.|\<Имя фильтра = filterType «custom1» = «Custom» customType="CustomAssembly.CustomMsgFilter, CustomAssembly» filterData = «Пользовательские данные» / >|  
+|EndpointName|Использует класс <xref:System.ServiceModel.Dispatcher.EndpointNameMessageFilter> для поиска сообщений на основе имени конечной точки службы, в которую они поступили.|Имя конечной точки службы, например: «serviceEndpoint1».  Это должна быть одна из конечных точек, представленных в службе Routing Service.|\<Имя фильтра = «stock1» filterType = filterData «Конечная точка» = «SvcEndpoint»->|  
+|MatchAll|Использует класс <xref:System.ServiceModel.Dispatcher.MatchAllMessageFilter>. Этот фильтр находит все поступившие сообщения.|Параметр filterData не используется. Этот фильтр всегда находит все поступившие сообщения.|\<Имя фильтра = filterType «matchAll1» = «MatchAll» / >|  
+|XPath|Использует класс <xref:System.ServiceModel.Dispatcher.XPathMessageFilter> для поиска сообщений по запросу XPath.|Запрос XPath, используемый при сопоставлении сообщений.|\<Имя фильтра = filterType «XPath1» = «XPath» filterData = «//ns:element» / >|  
   
  В следующем примере определяются записи фильтра, использующие фильтры сообщений XPath, EndpointName и PrefixEndpointAddress. В этом примере также показано применение пользовательского фильтра для записей RoundRobinFilter1 и RoundRobinFilter2.  
   

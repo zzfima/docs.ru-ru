@@ -1,34 +1,22 @@
 ---
 title: Практическое руководство. Задание учетных данных безопасности канала
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: f8e03f47-9c4f-4dd5-8f85-429e6d876119
-caps.latest.revision: ''
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: e2aedb06ec694f6c7dfb12b70ab919ae23eed17e
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: f25089f7f5ffa16bb46e0833b15b4cbc4a7735ac
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-specify-channel-security-credentials"></a>Практическое руководство. Задание учетных данных безопасности канала
-Моникер служб [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] позволяет приложениям COM вызывать службы [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Большинство служб [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] требуют, чтобы клиент указывал учетные данные для проверки подлинности и авторизации. При вызове службы [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] из клиента [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] можно указать эти учетные данные в управляемом коде или в файле конфигурации приложения. При вызове службы [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] из приложения COM можно использовать интерфейс <xref:System.ServiceModel.ComIntegration.IChannelCredentials>, чтобы указать учетные данные. В данном разделе описаны различные способы указания учетных данных с использованием интерфейса <xref:System.ServiceModel.ComIntegration.IChannelCredentials>.  
+Моникер служб Windows Communication Foundation (WCF) позволяет приложениям COM вызывать службы WCF. Большинство служб WCF потребовать от клиента указать учетные данные для проверки подлинности и авторизации. При вызове службы WCF из клиента WCF, можно указать эти учетные данные в управляемом коде или в файле конфигурации приложения. При вызове службы WCF из приложения COM, можно использовать <xref:System.ServiceModel.ComIntegration.IChannelCredentials> интерфейс, чтобы указать учетные данные. В данном разделе описаны различные способы указания учетных данных с использованием интерфейса <xref:System.ServiceModel.ComIntegration.IChannelCredentials>.  
   
 > [!NOTE]
 >  <xref:System.ServiceModel.ComIntegration.IChannelCredentials> - это интерфейс, основанный на IDispatch, и получение функциональных возможностей IntelliSense в среде Visual Studio невозможно.  
   
- Эта статья будет использовать [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] службы, определенные в [образец безопасности сообщений](../../../../docs/framework/wcf/samples/message-security-sample.md).  
+ Эта статья будет использовать службу WCF, определенные в [образец безопасности сообщений](../../../../docs/framework/wcf/samples/message-security-sample.md).  
   
 ### <a name="to-specify-a-client-certificate"></a>Задание сертификата клиента  
   
@@ -40,7 +28,7 @@ ms.lasthandoff: 03/23/2018
   
 4.  Добавить `bindingNamespace=``http://Microsoft.ServiceModel.Samples` в тег конечной точки в файле App.config для службы.  
   
-5.  Создайте образец безопасности сообщений и запустите файл Service.exe. Откройте Internet Explorer и перейдите по адресу службы (http://localhost:8000/ServiceModelSamples/Service), чтобы убедиться в том, что служба работает.  
+5.  Создайте образец безопасности сообщений и запустите файл Service.exe. Откройте Internet Explorer и перейдите к URI службы (http://localhost:8000/ServiceModelSamples/Service) чтобы убедиться, что служба работает.  
   
 6.  Откройте Visual Basic 6.0 и создайте новый стандартный EXE-файл. Добавьте в форму кнопку и дважды щелкните ее, чтобы добавить следующий код в обработчик щелчка.  
   

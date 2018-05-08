@@ -1,29 +1,18 @@
 ---
-title: "Особенности возможностей Windows Workflow Foundation"
-ms.custom: 
+title: Особенности возможностей Windows Workflow Foundation
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: e84d12da-a055-45f6-b4d1-878d127b46b6
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6943a7eaeaecf8f11de7c10237979067c83c24d8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: dc3ff5669d23e57685c89937f7c2171053f938ca
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="windows-workflow-foundation-feature-specifics"></a>Особенности возможностей Windows Workflow Foundation
 [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)] добавляет ряд функциональных возможностей в Windows Workflow Foundation. В этом документе описываются некоторые новые функциональные возможности и приведены подробные сведения о сценариях, в которых они могут оказаться полезными.  
   
 ## <a name="messaging-activities"></a>Действия обмена сообщениями  
- Действия обмена сообщениями (<xref:System.ServiceModel.Activities.Receive>, <xref:System.ServiceModel.Activities.SendReply>, <xref:System.ServiceModel.Activities.Send>, <xref:System.ServiceModel.Activities.ReceiveReply>) используются для отправки и получения [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] сообщения из рабочего процесса.  <xref:System.ServiceModel.Activities.Receive>и <xref:System.ServiceModel.Activities.SendReply> действия используются для формирования [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] , предоставляемый через WSDL, как и стандартные операции службы [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] веб-службы.  <xref:System.ServiceModel.Activities.Send>и <xref:System.ServiceModel.Activities.ReceiveReply> используются для использования веб-службы, аналогично WCF <xref:System.ServiceModel.ChannelFactory>; **добавить ссылку на службу** качества существует и для Workflow Foundation, приводит к возникновению ошибки предварительно настроенных действий.  
+ Действия обмена сообщениями (<xref:System.ServiceModel.Activities.Receive>, <xref:System.ServiceModel.Activities.SendReply>, <xref:System.ServiceModel.Activities.Send>, <xref:System.ServiceModel.Activities.ReceiveReply>) используются для отправки и получения [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] сообщения из рабочего процесса.  <xref:System.ServiceModel.Activities.Receive> и <xref:System.ServiceModel.Activities.SendReply> действия используются для формирования операции службы Windows Communication Foundation (WCF), представляемый через WSDL, как и стандартные [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] веб-службы.  <xref:System.ServiceModel.Activities.Send> и <xref:System.ServiceModel.Activities.ReceiveReply> используются для использования веб-службы, аналогично WCF <xref:System.ServiceModel.ChannelFactory>; **добавить ссылку на службу** качества существует и для Workflow Foundation, приводит к возникновению ошибки предварительно настроенных действий.  
   
 ### <a name="getting-started-with-messaging-activities"></a>Приступая к работе с действиями обмена сообщениями  
   
@@ -305,7 +294,7 @@ ms.lasthandoff: 12/22/2017
   
 1.  Документация: [маршрутизации](../../../docs/framework/wcf/feature-details/routing.md)  
   
-2.  Примеры: [маршрутизации службы &#91; Образцы WCF &#93;](../../../docs/framework/wcf/samples/routing-services.md)  
+2.  Примеры: [службы маршрутизации &#91;образцов WCF&#93;](../../../docs/framework/wcf/samples/routing-services.md)  
   
 3.  Блог: [правила маршрутизации!](http://go.microsoft.com/fwlink/?LinkId=204956)  
   

@@ -1,14 +1,6 @@
 ---
-title: "Функция StrongNameTokenFromPublicKey"
-ms.custom: 
+title: Функция StrongNameTokenFromPublicKey
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - StrongNameTokenFromPublicKey
 api_location:
@@ -26,17 +18,13 @@ helpviewer_keywords:
 ms.assetid: 997e9e57-abb2-4217-bf20-1df621a75add
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 0cb649f43bfea2e11c986aa3fff5a702e2b58c25
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: eb8ff76da288975ef291d226bb1f205e73a64252
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="strongnametokenfrompublickey-function"></a>Функция StrongNameTokenFromPublicKey
 Возвращает токен, представляющий открытый ключ. Маркер строгого имени — это сокращенная форма открытого ключа.  
@@ -68,7 +56,7 @@ BOOLEANStrongNameTokenFromPublicKey (
  [out] Размер в байтах, возвращенный строгое имя маркера.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- `true`При успешном завершении; в противном случае `false`.  
+ `true` При успешном завершении; в противном случае `false`.  
   
 ## <a name="remarks"></a>Примечания  
  Маркер строгого имени — это сокращенная форма открытого ключа, используемого для экономии места при сохранении ключевых сведений в метаданных. В частности маркеры строгого имени используются в ссылках сборок на зависимые сборки.  
@@ -82,7 +70,7 @@ BOOLEANStrongNameTokenFromPublicKey (
   
  **Библиотека:** включена как ресурс в mscoree.dll  
   
- **Версии платформы .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>См. также  
  [Метод StrongNameTokenFromPublicKey](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnametokenfrompublickey-method.md)  

@@ -1,23 +1,15 @@
 ---
-title: "Автоматическое масштабирование в Windows Forms"
+title: Автоматическое масштабирование в Windows Forms
 ms.date: 06/15/2017
-ms.prod: .net-framework
-ms.technology: dotnet-winforms
-ms.topic: article
 helpviewer_keywords:
 - scalability [Windows Forms], automatic in Windows Forms
 - Windows Forms, automatic scaling
 ms.assetid: 68fad25b-afbc-44bd-8e1b-966fc43507a4
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 519053576aac0f55dfbfa4c87dbed6096f45abca
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e27c56d9a6d745c7d1ff83986e7996aa1bebc879
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="automatic-scaling-in-windows-forms"></a>Автоматическое масштабирование в Windows Forms
 Автоматическое масштабирование позволяет форме и ее элементам управления, разработанным на одном компьютере с использованием определенного разрешения или системных шрифтов, правильно отображаться на другом компьютере с другим разрешением или системным шрифтом. Оно гарантирует, что размеры формы и ее элементов управления будут изменяться автоматически в соответствии с приложениями Windows и другими приложениями на компьютерах пользователя и разработчика. Поддержка автоматического масштабирования и стилей оформления в [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] позволяет приложениям [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] сохранять согласованный внешний вид и поведение на различных компьютерах пользователей, так же как в случае с обычными приложениями Windows.

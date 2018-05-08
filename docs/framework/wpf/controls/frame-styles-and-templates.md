@@ -1,13 +1,6 @@
 ---
-title: "Стили и шаблоны элемента Frame"
-ms.custom: 
+title: Стили и шаблоны элемента Frame
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - parts [WPF], Frame
 - templates [WPF], Frame
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - states [WPF], Frame
 - styles [WPF], Frame
 ms.assetid: a01c32e2-c951-46a0-a82f-2614ca241f0b
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d1b69ffb0eff114252383e682d6c200d88503a80
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ae7227aeca3680b5e10ae62637268eae7825f492
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="frame-styles-and-templates"></a>Стили и шаблоны элемента Frame
 В этом разделе описываются стили и шаблоны для <xref:System.Windows.Controls.Frame> элемента управления. Можно изменить значение по умолчанию <xref:System.Windows.Controls.ControlTemplate> для предоставления уникального внешнего вида элемента управления. Подробнее см. в разделе [Настройка внешнего вида существующего элемента управления путем создания объекта ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  
@@ -33,14 +21,14 @@ ms.lasthandoff: 12/22/2017
 ## <a name="frame-parts"></a>Части фрейма  
  В следующей таблице перечислены именованные части <xref:System.Windows.Controls.Frame> элемента управления.  
   
-|Отделение|Тип|Описание:|  
+|Отделение|Тип|Описание|  
 |-|-|-|  
 |PART_FrameCP|<xref:System.Windows.Controls.ContentPresenter>|Область содержимого.|  
   
 ## <a name="frame-states"></a>Состояния кадра  
  В следующей таблице перечислены визуальные состояния <xref:System.Windows.Controls.Frame> элемента управления.  
   
-|Имя VisualState|Имя VisualStateGroup|Описание:|  
+|Имя VisualState|Имя VisualStateGroup|Описание|  
 |-|-|-|  
 |Valid|ValidationStates|Элемент управления использует <xref:System.Windows.Controls.Validation> класса и <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> вложенное свойство `false`.|  
 |InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> Вложенное свойство `true` имеет элемент управления имеет фокус.|  

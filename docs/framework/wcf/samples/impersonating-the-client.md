@@ -1,28 +1,16 @@
 ---
-title: "Олицетворение клиента"
-ms.custom: 
+title: Олицетворение клиента
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - service behaviors, impersonation sample
 - Impersonating the Client Sample [Windows Communication Foundation]
 - impersonation, Windows Communication Foundation sample
 ms.assetid: 8bd974e1-90db-4152-95a3-1d4b1a7734f8
-caps.latest.revision: "25"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a17a3631b781e6a96eb8aec17b20e8ddca52890d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4c5d911bfbfcd33248e15b9fc822abdc9cf4046c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="impersonating-the-client"></a>Олицетворение клиента
 Пример олицетворения демонстрирует, как олицетворять приложение абонента в службе таким образом, чтобы служба могла получить доступ к ресурсам системы от лица абонента.  
@@ -113,7 +101,7 @@ client.ClientCredentials.Windows.AllowedImpersonationLevel = TokenImpersonationL
  При запуске данного примера запросы и ответы операций отображаются в окнах консоли как службы, так и клиента. Нажмите клавишу ВВОД в каждом окне консоли, чтобы закрыть службу и клиент.  
   
 > [!NOTE]
->  Служба должна быть запущена под учетной записью администратора, или учетная запись, под которой она работает, должна иметь права для регистрации универсального кода ресурса (URI) http://localhost:8000/ServiceModelSamples с уровнем HTTP. С помощью настройки могут быть предоставлены права [резервирование пространства имен](http://go.microsoft.com/fwlink/?LinkId=95012) с помощью [средства Httpcfg.exe](http://go.microsoft.com/fwlink/?LinkId=95010).  
+>  Необходимо выполнить с учетной записью администратора или запускается с использованием учетной записи должны быть предоставлены права для регистрации http://localhost:8000/ServiceModelSamples URI с уровнем HTTP. С помощью настройки могут быть предоставлены права [резервирование пространства имен](http://go.microsoft.com/fwlink/?LinkId=95012) с помощью [средства Httpcfg.exe](http://go.microsoft.com/fwlink/?LinkId=95010).  
   
 > [!NOTE]
 >  На компьютерах с [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] олицетворение поддерживается, только если приложение Host.exe имеет привилегию олицетворения. (По умолчанию эту привилегию имеют только администраторы). Чтобы добавить эту привилегию служба выполняется под учетной записи, перейдите к **Администрирование**откройте **Локальная политика безопасности**откройте **локальные политики**, щелкните **Назначение прав пользователя**и выберите **олицетворение клиента после проверки подлинности** и дважды щелкните **свойства** для добавления пользователя или группы.  

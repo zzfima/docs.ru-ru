@@ -1,13 +1,6 @@
 ---
-title: "DatePicker стили и шаблоны"
-ms.custom: 
+title: DatePicker стили и шаблоны
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - ControlTemplate [WPF], DatePicker
 - DatePicker [WPF], styles and templates
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - styles [WPF], DatePicker
 - states [WPF], DatePicker
 ms.assetid: c430a657-692f-44bd-a549-2341f92d6115
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4683ebd66afb2d4ac5bfa615336787c4006b4335
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5123cf0ef78d46f5cec30109a34c17eaabe13b38
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="datepicker-styles-and-templates"></a>DatePicker стили и шаблоны
 В этом разделе описываются стили и шаблоны для <xref:System.Windows.Controls.DatePicker> элемента управления. Можно изменить значение по умолчанию <xref:System.Windows.Controls.ControlTemplate> для предоставления уникального внешнего вида элемента управления. Подробнее см. в разделе [Настройка внешнего вида существующего элемента управления путем создания объекта ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  
@@ -33,7 +21,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="datepicker-parts"></a>DatePicker частей  
  В следующей таблице перечислены именованные части <xref:System.Windows.Controls.DatePicker> элемента управления.  
   
-|Отделение|Тип|Описание:|  
+|Отделение|Тип|Описание|  
 |-|-|-|  
 |PART_Root|<xref:System.Windows.Controls.Grid>|Корневой элемент управления.|  
 |PART_Button|<xref:System.Windows.Controls.Button>|Кнопки, которая открывает и закрывает <xref:System.Windows.Controls.Calendar>.|  
@@ -43,7 +31,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="datepicker-states"></a>DatePicker состояний  
  В следующей таблице перечислены визуальные состояния <xref:System.Windows.Controls.DatePicker> элемента управления.  
   
-|Имя VisualState|Имя VisualStateGroup|Описание:|  
+|Имя VisualState|Имя VisualStateGroup|Описание|  
 |-|-|-|  
 |Норм.|CommonStates|Состояние по умолчанию.|  
 |Отключено|CommonStates|<xref:System.Windows.Controls.DatePicker> Отключена.|  
@@ -54,7 +42,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="datepickertextbox-parts"></a>DatePickerTextBox частей  
  В следующей таблице перечислены именованные части <xref:System.Windows.Controls.Primitives.DatePickerTextBox> элемента управления.  
   
-|Отделение|Тип|Описание:|  
+|Отделение|Тип|Описание|  
 |-|-|-|  
 |PART_Watermark|<xref:System.Windows.Controls.ContentControl>|Элемент, который содержит исходный текст в <xref:System.Windows.Controls.DatePicker>.|  
 |PART_ContentElement|<xref:System.Windows.FrameworkElement>|Визуальный элемент, который может содержать <xref:System.Windows.FrameworkElement>. Текст <xref:System.Windows.Controls.TextBox> отображается в этом элементе.|  
@@ -62,7 +50,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="datepickertextbox-states"></a>DatePickerTextBox состояний  
  В следующей таблице перечислены визуальные состояния <xref:System.Windows.Controls.Primitives.DatePickerTextBox> элемента управления.  
   
-|Имя VisualState|Имя VisualStateGroup|Описание:|  
+|Имя VisualState|Имя VisualStateGroup|Описание|  
 |-|-|-|  
 |Норм.|CommonStates|Состояние по умолчанию.|  
 |Отключено|CommonStates|<xref:System.Windows.Controls.Primitives.DatePickerTextBox> Отключена.|  

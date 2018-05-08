@@ -1,14 +1,6 @@
 ---
-title: "Интерфейс IGCThreadControl"
-ms.custom: 
+title: Интерфейс IGCThreadControl
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IGCThreadControl
 api_location:
@@ -22,24 +14,20 @@ helpviewer_keywords:
 ms.assetid: 3ff04d75-85ac-4df9-886d-dbaa037c0552
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: def6ae3c8bf8eea9cb135529e2b6e672b180e68c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9296aedf24979624c3d7357a4d51be835716a16f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="igcthreadcontrol-interface"></a>Интерфейс IGCThreadControl
 Предоставляет методы для участия в планировании потоков, которые в противном случае были бы заблокированы для сборки мусора.  
   
 ## <a name="methods"></a>Методы  
   
-|Метод|Описание:|  
+|Метод|Описание|  
 |------------|-----------------|  
 |[Метод SuspensionEnding](../../../../docs/framework/unmanaged-api/hosting/igcthreadcontrol-suspensionending-method.md)|Уведомляет узел, что среда выполнения возобновляет выполнение после сборки мусора или по другой причине.|  
 |[Метод SuspensionStarting](../../../../docs/framework/unmanaged-api/hosting/igcthreadcontrol-suspensionstarting-method.md)|Уведомляет узел, что среда выполнения начинает приостановку потока для сборки мусора или по другим причинам.|  
@@ -52,7 +40,7 @@ ms.lasthandoff: 12/22/2017
   
  **Библиотека:** включена как ресурс в MSCorEE.dll  
   
- **Версии платформы .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Версии платформы .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>См. также  
  [Интерфейсы размещения](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

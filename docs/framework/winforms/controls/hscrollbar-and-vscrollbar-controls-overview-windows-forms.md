@@ -1,13 +1,6 @@
 ---
-title: "Общие сведения об элементах управления HScrollBar и VScrollBar (Windows Forms)"
-ms.custom: 
+title: Общие сведения об элементах управления HScrollBar и VScrollBar (Windows Forms)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - HScrollBar
 - VScrollBar
@@ -18,21 +11,16 @@ helpviewer_keywords:
 - ScrollBar control [Windows Forms], about ScrollBar control
 - scroll bars [Windows Forms], about scroll bars
 ms.assetid: 8b307679-1cae-41d8-99aa-3d1efd207cd6
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 8fbdb3778959d1691200cde49e485d8a63c6e645
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 572ba9f16d1c78e1825d0c9db7530c6c78175d27
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="hscrollbar-and-vscrollbar-controls-overview-windows-forms"></a>Общие сведения об элементах управления HScrollBar и VScrollBar (Windows Forms)
 Windows Forms <xref:System.Windows.Forms.ScrollBar> элементы управления используются для обеспечения удобного просмотра длинных списков элементов или данные большого объема с либо горизонтальной или вертикальной прокрутки окна приложения или элемента управления. Полосы прокрутки — это распространенный элемент интерфейса Windows, поэтому <xref:System.Windows.Forms.ScrollBar> управления часто используется с элементами управления, которые не являются производными от <xref:System.Windows.Forms.ScrollableControl> класса. Аналогично, многие разработчики выберите для включения <xref:System.Windows.Forms.ScrollBar> управления своих собственных пользовательских элементов управления.  
   
- <xref:System.Windows.Forms.HScrollBar> (Горизонтально) и <xref:System.Windows.Forms.VScrollBar> (по вертикали) элементы управления работают независимо от других элементов управления и имеют свой собственный набор событий, свойств и методов. <xref:System.Windows.Forms.ScrollBar>элементы управления не совпадает с встроенными полосами прокрутки, вложенные в текстовые поля, списки, поля со списком или MDI-форм ( <xref:System.Windows.Forms.TextBox> управления имеет <xref:System.Windows.Forms.TextBox.ScrollBars%2A> свойство для отображения или скрытия полос прокрутки, прикрепленных к элементу управления).  
+ <xref:System.Windows.Forms.HScrollBar> (Горизонтально) и <xref:System.Windows.Forms.VScrollBar> (по вертикали) элементы управления работают независимо от других элементов управления и имеют свой собственный набор событий, свойств и методов. <xref:System.Windows.Forms.ScrollBar> элементы управления не совпадает с встроенными полосами прокрутки, вложенные в текстовые поля, списки, поля со списком или MDI-форм ( <xref:System.Windows.Forms.TextBox> управления имеет <xref:System.Windows.Forms.TextBox.ScrollBars%2A> свойство для отображения или скрытия полос прокрутки, прикрепленных к элементу управления).  
   
  <xref:System.Windows.Forms.ScrollBar> Элементы управления используют <xref:System.Windows.Forms.ScrollBar.Scroll> событий для отслеживания перемещения ползунка (иногда называется бегунком) по полосе прокрутки. С помощью <xref:System.Windows.Forms.ScrollBar.Scroll> событие предоставляет доступ к значению панель прокрутки при его перетаскивании.  
   

@@ -1,13 +1,6 @@
 ---
-title: "Практическое руководство. Создание и определение пользовательского средства визуализации для элемента управления ToolStrip в Windows Forms"
-ms.custom: 
+title: Практическое руководство. Создание и определение пользовательского средства визуализации для элемента управления ToolStrip в Windows Forms
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,24 +10,19 @@ helpviewer_keywords:
 - examples [Windows Forms], toolbars
 - ToolStrip control [Windows Forms], rendering
 ms.assetid: 88a804ba-679f-4ba3-938a-0dc396199c5b
-caps.latest.revision: "16"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ad328af3aed9a319fe80d829b9556e867533e601
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0b7a77a4a923065cba8c7ea366826f7b04126f11
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-and-set-a-custom-renderer-for-the-toolstrip-control-in-windows-forms"></a>Практическое руководство. Создание и определение пользовательского средства визуализации для элемента управления ToolStrip в Windows Forms
-<xref:System.Windows.Forms.ToolStrip>элементы управления обеспечивают удобную поддержку тем и стилей. Полностью настраиваемый внешний вид и поведение (Вид) можно добиться путем задания либо <xref:System.Windows.Forms.ToolStrip.Renderer%2A?displayProperty=nameWithType> свойство или <xref:System.Windows.Forms.ToolStripManager.Renderer%2A?displayProperty=nameWithType> свойства пользовательского средства отрисовки.  
+<xref:System.Windows.Forms.ToolStrip> элементы управления обеспечивают удобную поддержку тем и стилей. Полностью настраиваемый внешний вид и поведение (Вид) можно добиться путем задания либо <xref:System.Windows.Forms.ToolStrip.Renderer%2A?displayProperty=nameWithType> свойство или <xref:System.Windows.Forms.ToolStripManager.Renderer%2A?displayProperty=nameWithType> свойства пользовательского средства отрисовки.  
   
  Модули подготовки отчетов можно назначить для каждого отдельного <xref:System.Windows.Forms.ToolStrip>, <xref:System.Windows.Forms.MenuStrip>, <xref:System.Windows.Forms.ContextMenuStrip>, или <xref:System.Windows.Forms.StatusStrip> управления, или же можно использовать <xref:System.Windows.Forms.ToolStripManager.Renderer%2A> влияют на все объекты, задав свойству <xref:System.Windows.Forms.ToolStrip.RenderMode%2A?displayProperty=nameWithType> свойства <xref:System.Windows.Forms.ToolStripRenderMode.ManagerRenderMode?displayProperty=nameWithType>.  
   
 > [!NOTE]
->  <xref:System.Windows.Forms.ToolStrip.RenderMode%2A>Возвращает <xref:System.Windows.Forms.ToolStripRenderMode.Custom> только тогда, когда значение <xref:System.Windows.Forms.ToolStrip.Renderer%2A?displayProperty=nameWithType> не `null`.  
+>  <xref:System.Windows.Forms.ToolStrip.RenderMode%2A> Возвращает <xref:System.Windows.Forms.ToolStripRenderMode.Custom> только тогда, когда значение <xref:System.Windows.Forms.ToolStrip.Renderer%2A?displayProperty=nameWithType> не `null`.  
   
 ### <a name="to-create-a-custom-renderer"></a>Создание пользовательского средства отрисовки  
   

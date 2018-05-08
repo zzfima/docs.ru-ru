@@ -1,29 +1,17 @@
 ---
-title: "Практическое руководство. Создание таблицы подстановок с помощью компонента BindingSource в формах Windows Forms"
-ms.custom: 
+title: Практическое руководство. Создание таблицы подстановок с помощью компонента BindingSource в формах Windows Forms
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - lookup tables
 - tables [Windows Forms], creating lookup tables
 - BindingSource component [Windows Forms], creating a lookup table
 - BindingSource component [Windows Forms], examples
 ms.assetid: 622fce80-879d-44be-abbf-8350ec22ca2b
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 324e4ed290b98d2268dd82fa55b81deaeb849770
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 83a34c9d1a4b3d1c2e9950d3c5427567022326b5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-lookup-table-with-the-windows-forms-bindingsource-component"></a>Практическое руководство. Создание таблицы подстановок с помощью компонента BindingSource в формах Windows Forms
 Таблица подстановки — это таблица данных, в одном из столбцов которой отображаются данные из записей в связанной таблице. В следующих процедурах для отображения поля с отношением по внешнему ключу от родительской к дочерней таблице используется элемент управления <xref:System.Windows.Forms.ComboBox>.  

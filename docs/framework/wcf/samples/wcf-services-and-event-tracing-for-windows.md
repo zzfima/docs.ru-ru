@@ -1,27 +1,15 @@
 ---
-title: "Службы WCF и средство отслеживания событий для Windows"
-ms.custom: 
+title: Службы WCF и средство отслеживания событий для Windows
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: eda4355d-0bd0-4dc9-80a2-d2c832152272
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: cb8924cc04442e3b9eda5e251e6dcdc57f5660c5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: ef98cb14b5f1ee6a2ce11c35627456459d3215b5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wcf-services-and-event-tracing-for-windows"></a>Службы WCF и средство отслеживания событий для Windows
-Этот образец демонстрирует использование аналитического отслеживания в [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] для передачи событий в средство отслеживания событий для Windows (ETW). Аналитические трассировки представляют собой события, возникающие в ключевых точках стека [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] и позволяющие отлаживать службы [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] в рабочей среде.  
+Этот образец демонстрирует использование аналитического отслеживания в Windows Communication Foundation (WCF) для передачи событий в Windows (Трассировка событий). Аналитические трассировки представляют собой события, возникающие в ключевых точках стека [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] и позволяющие отлаживать службы [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] в рабочей среде.  
   
  Аналитическое отслеживание служб [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] можно включить в рабочей среде, оказывая минимальное воздействие на производительность. Отслеживаемые события передаются в сеанс трассировки событий Windows.  
   
@@ -45,7 +33,7 @@ ms.lasthandoff: 12/22/2017
   
 5.  В пределах [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] тестовый клиент, добавить службу, указав **файл**, а затем **добавить службу**.  
   
-     Добавьте адрес конечной точки в поле ввода. Значение по умолчанию равно http://localhost:1378/Calculator.svc.  
+     Добавьте адрес конечной точки в поле ввода. Значение по умолчанию — http://localhost:1378/Calculator.svc.  
   
 6.  Откройте приложение просмотра событий.  
   
@@ -94,7 +82,7 @@ ms.lasthandoff: 12/22/2017
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите на страницу [Примеры Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все примеры [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Этот образец расположен в следующем каталоге.  
+>  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] образцов. Этот образец расположен в следующем каталоге.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\ETWTracing`  
   

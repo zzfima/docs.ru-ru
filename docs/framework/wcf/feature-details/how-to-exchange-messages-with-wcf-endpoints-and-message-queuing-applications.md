@@ -1,40 +1,28 @@
 ---
-title: "Практическое руководство. Обмен сообщениями с конечными точками WCF и приложениями очереди сообщений"
-ms.custom: 
+title: Практическое руководство. Обмен сообщениями с конечными точками WCF и приложениями очереди сообщений
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 62210fd8-a372-4d55-ab9b-c99827d1885e
-caps.latest.revision: "18"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: fa6f9d0b9631420013593cb44903b5451549e8c6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 807a34ac50ea317ace42ec12eddcd9ec7cf3736b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications"></a>Практическое руководство. Обмен сообщениями с конечными точками WCF и приложениями очереди сообщений
-Существующие приложения MSMQ можно интегрировать с приложениями [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], используя привязку интеграции MSMQ для преобразования сообщений MSMQ в сообщения [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] и наоборот. Это позволяет вызывать принимающие приложения MSMQ из клиентов [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], а также вызывать службы [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] из отправляющих приложений MSMQ.  
+Существующие приложения Message Queuing (MSMQ) можно интегрировать с приложениями Windows Communication Foundation (WCF), используя привязку интеграции MSMQ для преобразования сообщений MSMQ и из сообщения WCF. Это позволяет вызывать принимающие приложения MSMQ из клиентов WCF, а также обращаться к службам WCF из отправляющих приложений MSMQ.  
   
- В этом разделе рассматривается, как использовать привязку <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> для взаимодействия с использованием очередей между (1) клиентом [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] и службой приложения MSMQ, созданной с помощью System.Messaging, и (2) клиентом приложения MSMQ и службой [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ В этом разделе рассматривается, как использовать <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> для взаимодействия с использованием очередей между (1) клиентом WCF и службой приложения MSMQ, написанные с использованием System.Messaging и (2) клиентом приложения MSMQ и службой WCF.  
   
- Полный пример, демонстрирующий вызов принимающее приложение MSMQ из [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] клиента, в разделе [Windows Communication Foundation для Message Queuing](../../../../docs/framework/wcf/samples/wcf-to-message-queuing.md) образца.  
+ Полный пример, в котором показано, как вызывать из клиента WCF принимающее приложение MSMQ, в разделе [Windows Communication Foundation для Message Queuing](../../../../docs/framework/wcf/samples/wcf-to-message-queuing.md) образца.  
   
- Полный пример, демонстрирующий вызов [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] службы от клиента MSMQ см. в разделе [служба очередей сообщений Windows Communication Foundation](../../../../docs/framework/wcf/samples/message-queuing-to-wcf.md) образца.  
+ Полный пример, в котором показано, как вызвать службу WCF из клиента MSMQ, в разделе [служба очередей сообщений Windows Communication Foundation](../../../../docs/framework/wcf/samples/message-queuing-to-wcf.md) образца.  
   
 ### <a name="to-create-a-wcf-service-that-receives-messages-from-a-msmq-client"></a>Создание службы WCF, получающей сообщения от клиента MSMQ  
   
-1.  Определите интерфейс, который задает контракт службы для службы [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], принимающей сообщения с использованием очередей от передающего приложения MSMQ, как показано в следующем примере кода.  
+1.  Определите интерфейс, определяющий контракт службы для службы WCF, которая получает сообщения из очереди от передающего приложения MSMQ, как показано в следующем примере кода.  
   
      [!code-csharp[S_MsmqToWcf#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_msmqtowcf/cs/service.cs#1)]
      [!code-vb[S_MsmqToWcf#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_msmqtowcf/vb/service.vb#1)]  
@@ -54,12 +42,12 @@ ms.lasthandoff: 12/22/2017
   
 ### <a name="to-create-a-wcf-client-that-sends-messages-to-a-msmq-receiver-application"></a>Создание клиента WCF, передающего сообщения в принимающее приложение MSMQ  
   
-1.  Определите интерфейс, который задает контракт службы для клиента [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], передающего сообщения с использованием очередей в принимающее приложения MSMQ, как показано в следующем примере кода.  
+1.  Определите интерфейс, определяющий контракт службы для клиента WCF, что отправляет в очередь сообщений в принимающее приложения MSMQ, как показано в следующем примере кода.  
   
      [!code-csharp[S_WcfToMsmq#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_wcftomsmq/cs/proxy.cs#6)]
      [!code-vb[S_WcfToMsmq#6](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_wcftomsmq/vb/proxy.vb#6)]  
   
-2.  Определите класс клиента, используемый клиентом [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] для вызова принимающего приложения MSMQ.  
+2.  Определите класс клиента, который использует клиент WCF для вызова в принимающее приложения MSMQ.  
   
      [!code-csharp[S_WcfToMsmq#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_wcftomsmq/cs/snippets.cs#2)]
      [!code-vb[S_WcfToMsmq#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_wcftomsmq/vb/snippets.vb#2)]  

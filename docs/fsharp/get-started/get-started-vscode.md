@@ -1,17 +1,12 @@
 ---
 title: 'Начало работы с F # в коде Visual Studio'
 description: 'Сведения об использовании языка F # с кодом Visual Studio и suite Ionide подключаемого модуля.'
-author: cartermp
-ms.author: phcart
 ms.date: 02/28/2018
-ms.topic: conceptual
-ms.prod: dotnet-fsharp
-ms.devlang: fsharp
-ms.openlocfilehash: 43fed76a57bd7749a7f22a2039ad625e3d26d132
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 71cc0abfd8420794485d38e91efd9819379e3f55
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="get-started-with-f-in-visual-studio-code"></a>Начало работы с F # в коде Visual Studio
 

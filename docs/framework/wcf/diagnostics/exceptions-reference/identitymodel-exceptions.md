@@ -1,24 +1,12 @@
 ---
-title: "Исключения IdentityModel"
-ms.custom: 
+title: Исключения IdentityModel
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 4ef34497-8ff5-4621-b773-7731cc721231
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 26bf6cb88d77fc9890a23c482913514f1dc856aa
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ee0b5537a415e1ea53c653ae8e8485e94cc713fd
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="identitymodel-exceptions"></a>Исключения IdentityModel
 В этом разделе перечислены все исключения, создаваемые IdentityModel.  
@@ -91,8 +79,8 @@ ms.lasthandoff: 12/22/2017
 |SAMLSignatureAlreadyRead|Сигнатура уже прочитана в утверждении SAML.|  
 |AlgorithmAndPrivateKeyMisMatch|Указанный алгоритм и закрытый ключ не соответствуют друг другу.|  
 |EmptyTransformChainNotSupported|Пустая цепочка преобразований не поддерживается.|  
-|SspiWrapperEncryptDecryptAssert1|Sspiwrapper:: Encryptdecrypthelper &#124; " offset "выходит за пределы диапазона.|  
-|SspiWrapperEncryptDecryptAssert2|Sspiwrapper:: Encryptdecrypthelper &#124; " размер "выходит за пределы диапазона. SecurityTokenManagerCannotCreateAuthenticatorForRequirement=Диспетчер маркера безопасности не может создать структуру проверки подлинности для указанного требования.|  
+|SspiWrapperEncryptDecryptAssert1|Sspiwrapper:: Encryptdecrypthelper&#124;«offset» выходит за пределы диапазона.|  
+|SspiWrapperEncryptDecryptAssert2|Sspiwrapper:: Encryptdecrypthelper&#124;«size» выходит за пределы диапазона. SecurityTokenManagerCannotCreateAuthenticatorForRequirement=Диспетчер маркера безопасности не может создать структуру проверки подлинности для указанного требования.|  
 |UnableToCreateKeyedHashAlgorithm|Не удалось создать алгоритм KeyedHashAlgorithm из указанного значения для указанного алгоритма сигнатуры.|  
 |SAMLUnableToLoadAssertion|\<SAML: Assertion > не удалось загрузить элемент.|  
 |X509FindValueMismatchMulti|Для указанного типа X509FindType требуется, чтобы аргумент findValue имел один из 2 типов. Аргумент findValue имеет другой тип.|  
@@ -305,5 +293,5 @@ ms.lasthandoff: 12/22/2017
 |UnableToCreateKeyedHashAlgorithmFromSymmetricCrypto|Не удалось создать keyedHashAlgorithm для указанного алгоритма из указанного симметричного шифрования.|  
 |SAMLAuthenticationStatementMissingAuthenticationMethod|Метод "AuthenticationMethod", указанный для оператора SamlAuthenticationStatement, не может иметь значение null или длину 0.|  
 |TraceCodeSecurityImpersonationFailure|Ошибка олицетворения безопасности на сервере.|  
-|По умолчанию|(Значение по умолчанию)|  
+|Значение по умолчанию|(Значение по умолчанию)|  
 |UnsupportedNodeTypeInReader|Указанный тип узла с указанным именем не поддерживается.|

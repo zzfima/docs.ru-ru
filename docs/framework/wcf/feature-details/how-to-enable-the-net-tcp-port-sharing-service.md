@@ -1,30 +1,18 @@
 ---
-title: "Практическое руководство. Включение службы совместного использования портов Net.TCP"
-ms.custom: 
+title: Практическое руководство. Включение службы совместного использования портов Net.TCP
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - port sharing [WCF]
 - activation services [WCF]
 ms.assetid: c9175af4-c27c-4765-bf45-b8f7528a7282
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b9f1c57f067fa7c8bece3acaf0d51303b31d13bf
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4b5a18e11d9fc15f23b5353883a63d838face58a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-enable-the-nettcp-port-sharing-service"></a>Практическое руководство. Включение службы совместного использования портов Net.TCP
-Чтобы упростить совместное использование портов TCP в нескольких процессах, [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] использует службу совместного использования портов Net.TCP Windows. Эта служба устанавливается как часть [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], однако из соображений безопасности служба не включается по умолчанию и перед первым использованием должна быть включена вручную. В настоящем разделе описывается настройка службы совместного использования портов Net.TCP с помощью оснастки консоли управления (MMC).  
+Windows Communication Foundation (WCF) использует службу Windows под названием служба совместного использования портов Net.TCP создать возможность совместного использования портов TCP в нескольких процессах. Эта служба устанавливается как часть WCF, но служба не включена по умолчанию в качестве меры предосторожности и поэтому необходимо включить вручную перед первым использованием. В настоящем разделе описывается настройка службы совместного использования портов Net.TCP с помощью оснастки консоли управления (MMC).  
   
  После включения служба совместного использования портов Net.TCP и запустить его вручную, см. раздел [как: Настройка службы WCF на совместное использование портов](../../../../docs/framework/wcf/feature-details/how-to-configure-a-wcf-service-to-use-port-sharing.md) сведения о том, как настроить службу для использования этой службы.  
   

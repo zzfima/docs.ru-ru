@@ -1,24 +1,14 @@
 ---
-title: "Практическое руководство. Отладка приложений и служб с помощью трассировки WIF"
-ms.custom: 
+title: Практическое руководство. Отладка приложений и служб с помощью трассировки WIF
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 3d51ba59-3adb-4ca4-bd33-5027531af687
-caps.latest.revision: "7"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 4243313d88b22aa9f755a3586ea0c5fbe08cd891
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0f2126a83e6a5638eb492bb2a529dbf4cdab1714
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-debug-claims-aware-applications-and-services-using-wif-tracing"></a>Практическое руководство. Отладка приложений и служб с помощью трассировки WIF
 ## <a name="applies-to"></a>Применение  
@@ -114,7 +104,7 @@ ms.lasthandoff: 12/22/2017
   
 |**Идентификатор ошибки**|**Сообщение об ошибке**|**Действие, необходимое для исправления ошибки**|  
 |-|-|-|  
-|ID4175|Издатель токена безопасности не был распознан IssuerNameRegistry.  Чтобы принимать токены безопасности от этого издателя, настройте IssuerNameRegistry для возврата допустимого имени этого издателя.|Это ошибка может быть вызвана копированием отпечатка из оснастки MMC и вставкой его в файл *Web.config*. В частности, при копировании из окна свойств сертификата можно получить лишний непечатаемый символ в текстовой строке. Этот лишний символ приводит к ошибке при сравнении отпечатка. Процедуру правильного копирования отпечатка можно найти здесь: [http://msdn.microsoft.com/library/ff359102.aspx](http://msdn.microsoft.com/library/ff359102.aspx)|  
+|ID4175|Издатель токена безопасности не был распознан IssuerNameRegistry.  Чтобы принимать токены безопасности от этого издателя, настройте IssuerNameRegistry для возврата допустимого имени этого издателя.|Это ошибка может быть вызвана копированием отпечатка из оснастки MMC и вставкой его в файл *Web.config*. В частности, при копировании из окна свойств сертификата можно получить лишний непечатаемый символ в текстовой строке. Этот лишний символ приводит к ошибке сравнения отпечаток. Процедуры для правильного копирования отпечатка можно найти здесь: [http://msdn.microsoft.com/library/ff359102.aspx](http://msdn.microsoft.com/library/ff359102.aspx)|  
   
 ## <a name="related-items"></a>Связанные темы  
   

@@ -1,11 +1,6 @@
 ---
-title: "Оператор While... End While (Visual Basic)"
+title: Оператор While... End While (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.While
 - vb.While...EndWhile
@@ -14,14 +9,11 @@ helpviewer_keywords:
 - While statement [Visual Basic]
 - While...End While statements [Visual Basic]
 ms.assetid: b931d1ce-e8ed-44d8-a13d-92a4f5458a1e
-caps.latest.revision: "22"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 5f831f233eaa4f1c38d56f3a89bda9b0cf1bccaa
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 9f46a6ec65faef4448bdd25e30a6cc0c605cd0f2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="whileend-while-statement-visual-basic"></a>Оператор While... End While (Visual Basic)
 Выполняет последовательность операторов, пока заданное условие является `True`.  
@@ -42,11 +34,11 @@ End While
   
 |Термин|Определение|  
 |---|---|  
-|`condition`|Обязательный. `Boolean`выражение. Если `condition` — `Nothing`, Visual Basic рассматривает его как `False`.|  
-|`statements`|Необязательно. Один или несколько следующих инструкций `While`, который запускаться при каждом `condition` — `True`.|  
-|`Continue While`|Необязательно. Передает управление следующей итерации цикла `While` блока.|  
-|`Exit While`|Необязательно. Передает управление из `While` блока.|  
-|`End While`|Обязательный. Завершает определение блока `While`.|  
+|`condition`|Обязательно. `Boolean` Выражение. Если `condition` — `Nothing`, Visual Basic рассматривает его как `False`.|  
+|`statements`|Необязательный. Один или несколько следующих инструкций `While`, который запускаться при каждом `condition` — `True`.|  
+|`Continue While`|Необязательный. Передает управление следующей итерации цикла `While` блока.|  
+|`Exit While`|Необязательный. Передает управление из `While` блока.|  
+|`End While`|Обязательно. Завершает определение блока `While`.|  
   
 ## <a name="remarks"></a>Примечания  
  Используйте `While...End While` структуры, если вы хотите повторить набор инструкций на неопределенное количество раз, до тех пор, пока условие остается `True`. Если требуется больше гибкости, с которой проверки того, что или результат можно проверить его, может потребоваться [сделать... Цикл инструкции](../../../visual-basic/language-reference/statements/do-loop-statement.md). Если вы хотите повторить инструкцию set несколько раз, [для... Следующий оператор](../../../visual-basic/language-reference/statements/for-next-statement.md) обычно является лучшим выбором.  
@@ -63,7 +55,7 @@ End While
  Можно вложить `While` циклы, поместив один в другой. Также можно вложить различные виды структур управления друг в друга. Дополнительные сведения см. в разделе [вложенные структуры управления](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md).  
   
 ## <a name="exit-while"></a>Выход при  
- [Выхода во время](../../../visual-basic/language-reference/statements/exit-statement.md) инструкции можно предоставить другим способом, чтобы выйти из `While` цикла. `Exit While`немедленно передает управление оператору, следующему `End While` инструкции.  
+ [Выхода во время](../../../visual-basic/language-reference/statements/exit-statement.md) инструкции можно предоставить другим способом, чтобы выйти из `While` цикла. `Exit While` немедленно передает управление оператору, следующему `End While` инструкции.  
   
  Как правило, используется `Exit While` после вычисления некоторого условия (например, в `If...Then...Else` структуры). Может потребоваться выйти из цикла при обнаружении условия, которое делает бесполезным или невозможным продолжение итераций, например ошибочное значение или запрос на завершение. Можно использовать `Exit While` при проверке условия, которое может привести к *бесконечный цикл*, который является цикл, который может запустить слишком большой или возможно, бесконечное число раз. Затем можно использовать `Exit While` для выхода из цикла.  
   

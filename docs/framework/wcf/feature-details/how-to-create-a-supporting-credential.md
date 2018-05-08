@@ -1,29 +1,15 @@
 ---
 title: Практическое руководство. Создание подтверждающих учетных данных
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: d0952919-8bb4-4978-926c-9cc108f89806
-caps.latest.revision: 9
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: e74ba51306ba8761d916f580b21de9b3ba9cb7f4
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 6ec7412d1de2bca349c7cfbf4a37c98ca60cc78d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-supporting-credential"></a>Практическое руководство. Создание подтверждающих учетных данных
-Некоторые пользовательские схемы безопасности требуют нескольких учетных данных. Например, служба может потребовать от клиента не только имя пользователя и пароль, но и учетные данные, доказывающие, что возраст клиента старше 18 лет. Вторые учетные данные являются *вспомогательными учетными данными*. В этом разделе объясняется, как реализовать эти учетные данные в клиенте [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
+Некоторые пользовательские схемы безопасности требуют нескольких учетных данных. Например, служба может потребовать от клиента не только имя пользователя и пароль, но и учетные данные, доказывающие, что возраст клиента старше 18 лет. Вторые учетные данные являются *вспомогательными учетными данными*. В этом разделе объясняется, как реализовать эти учетные данные в клиентском приложении Windows Communication Foundation (WCF).  
   
 > [!NOTE]
 >  Спецификация для поддержки учетных данных является частью спецификации WS-SecurityPolicy. Дополнительные сведения см. в разделе [спецификации безопасности веб-служб](http://go.microsoft.com/fwlink/?LinkId=88537).  

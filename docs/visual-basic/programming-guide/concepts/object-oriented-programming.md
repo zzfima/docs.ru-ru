@@ -1,21 +1,12 @@
 ---
-title: "Объектно ориентированного программирования (Visual Basic)"
-ms.custom: 
+title: Объектно ориентированного программирования (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 ms.assetid: 49794de4-64c3-473c-b8ed-fe98835df69c
-caps.latest.revision: "4"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 950f080949dce0fc1a2834825d2f7c945007fb7b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: e8936eb9031ef68ea333835d8433e1ba1a45990f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="object-oriented-programming-visual-basic"></a>Объектно ориентированного программирования (Visual Basic)
 Visual Basic предоставляет полную поддержку для объектно ориентированного программирования, включая инкапсуляцию, наследование и полиморфизм.  
@@ -278,7 +269,7 @@ Dim sampleObject = New SampleClass With
 
 - [Инициализаторы объектов. Именованные и анонимные типы](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)
 
-###  <a name="Static"></a>Совместно используемые классы и члены  
+###  <a name="Static"></a> Совместно используемые классы и члены  
  Общий член класса имеет свойство, процедура или поле, которое является общим для всех экземпляров класса.  
   
  Для определения общего элемента:  
@@ -367,7 +358,7 @@ End Class
 |[MustOverride](../../../visual-basic/language-reference/modifiers/mustoverride.md)|Требует, чтобы член класса был переопределен в производном классе.|
 |[Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)|Скрывает член, наследуемый от базового класса|
 
-## <a name="interfaces"></a>Интерфейсы
+## <a name="interfaces"></a>интерфейсов,
 Интерфейсы, как и классы, определяют набор свойств, методов и событий. Но, в отличие от классов, интерфейсы не предоставляют реализацию. Они реализуются классами, но определяются как отдельные от классов сущности. Интерфейс представляет собой контракт, в котором класс, реализующий интерфейс, должен реализовывать каждый аспект этого интерфейса в точном соответствии с его определением.
 
 Определение интерфейса:

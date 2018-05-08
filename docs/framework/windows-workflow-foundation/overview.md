@@ -1,24 +1,12 @@
 ---
 title: Общие сведения о Windows Workflow
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: fc44adbe-1412-49ae-81af-0298be44aae6
-caps.latest.revision: 17
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: bc1aa65b413b87b27c05e7a12ce607d1cd30b89b
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 568797259087129ab4fc87a1f3523b0cce88eb4b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="windows-workflow-overview"></a>Общие сведения о Windows Workflow
 Рабочий процесс представляет собой набор элементарных единиц, которые называются *действия* , хранятся в виде модели, описывающей реальный процесс. Рабочие процессы позволяют описывать порядок выполнения этапов краткосрочных и долгосрочных работ, а также зависимости между этими этапами. Работа проходит по модели от начала и до конца, а действия могут выполняться как людьми, так и системными функциями.  
@@ -34,7 +22,7 @@ ms.lasthandoff: 04/30/2018
   
  Каждый из этих классов является оболочкой для среды выполнения основной операции, представленной как объект <xref:System.Activities.ActivityInstance>, ответственный за выполнение операции. В домене приложения может быть несколько объектов <xref:System.Activities.ActivityInstance>, работающих параллельно.  
   
- Каждый из трех предыдущих объектов взаимодействия узлов создается из дерева операций, называемого программой рабочего процесса. С помощью этих типов или настраиваемого узла, выполняющего роль оболочки для <xref:System.Activities.ActivityInstance>, можно выполнять рабочие процессы внутри любого процесса Windows, включая консольные приложения, приложения на основе форм, службы Windows, веб-сайты [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] и службы [!INCLUDE[indigo1](../../../includes/indigo1-md.md)].  
+ Каждый из трех предыдущих объектов взаимодействия узлов создается из дерева операций, называемого программой рабочего процесса. С помощью этих типов или настраиваемого узла, которая служит оболочкой для <xref:System.Activities.ActivityInstance>, можно выполнять рабочие процессы внутри любого процесса Windows, включая консольные приложения, приложения на основе форм, службы Windows, [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] веб-сайты и Windows Communication Foundation () Службы WCF).  
   
  ![Компоненты рабочего процесса в хост-процессе](../../../docs/framework/windows-workflow-foundation/media/44c79d1d-178b-4487-87ed-3e33015a3842.gif "44c79d1d-178b-4487-87ed-3e33015a3842")  
 Компоненты рабочего процесса в хост-процессе  

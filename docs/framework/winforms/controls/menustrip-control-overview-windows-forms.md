@@ -1,31 +1,17 @@
 ---
-title: "Общие сведения об элементе управления MenuStrip (Windows Forms)"
-ms.custom: 
+title: Общие сведения об элементе управления MenuStrip (Windows Forms)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - MenuStrip
 helpviewer_keywords:
 - MenuStrip control [Windows Forms], about MenuStrip control
 - menus [Windows Forms], creating
 ms.assetid: f45516e5-bf01-4468-b851-d45f4c33c055
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: eb27503fffc798b644f95fd213f8f23bdb3e228a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b09d653210c72a38bbc4dc0858ae2553ad9cbeef
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="menustrip-control-overview-windows-forms"></a>Общие сведения об элементе управления MenuStrip (Windows Forms)
 Меню предоставляют функциональные возможности для пользователей, удерживая команды, сгруппированные по общей теме.  
@@ -47,7 +33,7 @@ ms.lasthandoff: 12/22/2017
   
  В следующей таблице показаны некоторые особенно важные свойства <xref:System.Windows.Forms.MenuStrip> и связанных классов.  
   
-|Свойство.|Описание:|  
+|Свойство.|Описание|  
 |--------------|-----------------|  
 |<xref:System.Windows.Forms.MenuStrip.MdiWindowListItem%2A>|Возвращает или задает <xref:System.Windows.Forms.ToolStripMenuItem> , используемый для отображения списка дочерних MDI-форм.|  
 |<xref:System.Windows.Forms.ToolStripItem.MergeAction%2A?displayProperty=nameWithType>|Возвращает или задает способ слияния дочерних меню с родительскими меню в приложениях MDI.|  
@@ -60,7 +46,7 @@ ms.lasthandoff: 12/22/2017
   
  В следующей таблице показаны важные <xref:System.Windows.Forms.MenuStrip> сопутствующих классов.  
   
-|Класс|Описание:|  
+|Класс|Описание|  
 |-----------|-----------------|  
 |<xref:System.Windows.Forms.ToolStripMenuItem>|Представляет отдельные пункты, отображаемые на <xref:System.Windows.Forms.MenuStrip> или <xref:System.Windows.Forms.ContextMenuStrip>.|  
 |<xref:System.Windows.Forms.ContextMenuStrip>|Представляет контекстное меню.|  

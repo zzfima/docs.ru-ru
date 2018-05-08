@@ -1,11 +1,7 @@
 ---
-title: "Функция BlessIWbemServicesObject (Справочник по неуправляемым API)"
-description: "Функция BlessIWbemServicesObject указывает, разрешить ли учетные данные пользователя доступ к объекту IWbemServices"
+title: Функция BlessIWbemServicesObject (Справочник по неуправляемым API)
+description: Функция BlessIWbemServicesObject указывает, разрешить ли учетные данные пользователя доступ к объекту IWbemServices
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - BlessIWbemServicesObject
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 2430358e5ea21468c2e975c2a26f20fe801ee546
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d1bc31a4f074891149783dec647a592683564ba0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="blessiwbemservicesobject-function"></a>Функция BlessIWbemServicesObject
 Указывает, разрешить ли учетные данные пользователя доступ к определенному [IWbemServices](https://msdn.microsoft.com/library/aa392093(v=vs.85).aspx) объекта.   
@@ -58,17 +51,17 @@ HRESULT BlessIWbemServicesObject (
 `strPassword`  
 [in] Пароль, связанный с `strUser`.
 
-`strAuthority`[in] Имя домена пользователя. В разделе [ConnectServerWmi](connectserverwmi.md) функции для получения дополнительной информации.
+`strAuthority` [in] Имя домена пользователя. В разделе [ConnectServerWmi](connectserverwmi.md) функции для получения дополнительной информации.
 
-`impLevel`[in] Уровень олицетворения.
+`impLevel` [in] Уровень олицетворения.
 
-`authnLevel`[in] Уровень авторизации.
+`authnLevel` [in] Уровень авторизации.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
 Следующие значения, возвращаемые этой функцией, определяются в *WinError.h* заголовочный файл, или их можно определить как константы в коде:
 
-|Константа  |Значение  |Описание:  |
+|Константа  |Значение  |Описание  |
 |---------|---------|---------|
 | `E_INVALIDARG` | 0x80070057 | Один или несколько аргументов являются недопустимыми. |
 | `E_POINTER` | отметкой 0x80004003 | Свойство `pIWbemServices` имеет значение `null`. | 
@@ -81,7 +74,7 @@ HRESULT BlessIWbemServicesObject (
   
  **Заголовок:** WMINet_Utils.idl  
   
- **Версии платформы .NET framework:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Версии платформы .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>См. также  
 [WMI и счетчиков производительности (Справочник по неуправляемым API)](index.md)

@@ -1,12 +1,6 @@
 ---
 title: Operator Statement
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.operator
 helpviewer_keywords:
@@ -23,14 +17,11 @@ helpviewer_keywords:
 - Operator statement [Visual Basic]
 - CType function [Visual Basic], Operator statement
 ms.assetid: b12ec4af-1ad7-4a17-865b-c5ee96320ae5
-caps.latest.revision: 28
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 1b6be45fd0a606f43c14d57f3f8ae0955f256ba6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: cb7fe7929e4b6e61ca3b39be5615e09182f2fe0f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="operator-statement"></a>Operator Statement
 Объявляет символ оператора, операнды и код, которые определяют процедуру оператора для класса или структуры.  
@@ -49,19 +40,19 @@ End Operator
   
 ## <a name="parts"></a>Части  
  `attrlist`  
- Необязательно. В разделе [список атрибутов](../../../visual-basic/language-reference/statements/attribute-list.md).  
+ Необязательный. В разделе [список атрибутов](../../../visual-basic/language-reference/statements/attribute-list.md).  
   
  `Public`  
- Обязательный. Указывает, что эта процедура оператора [открытый](../../../visual-basic/language-reference/modifiers/public.md) доступа.  
+ Обязательно. Указывает, что эта процедура оператора [открытый](../../../visual-basic/language-reference/modifiers/public.md) доступа.  
   
  `Overloads`  
- Необязательно. В разделе [перегрузки](../../../visual-basic/language-reference/modifiers/overloads.md).  
+ Необязательный. В разделе [перегрузки](../../../visual-basic/language-reference/modifiers/overloads.md).  
   
  `Shared`  
- Обязательный. Указывает, что эта процедура оператора [Shared](../../../visual-basic/language-reference/modifiers/shared.md) процедуры.  
+ Обязательно. Указывает, что эта процедура оператора [Shared](../../../visual-basic/language-reference/modifiers/shared.md) процедуры.  
   
  `Shadows`  
- Необязательно. В разделе [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).  
+ Необязательный. В разделе [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).  
   
  `Widening`  
  Требуется для оператора преобразования, если не указать `Narrowing`. Указывает, что эта процедура оператора определяет [Widening](../../../visual-basic/language-reference/modifiers/widening.md) преобразования. В разделе «Расширяющие и сужающие преобразования» на этой странице справки.  
@@ -70,35 +61,35 @@ End Operator
  Требуется для оператора преобразования, если не указать `Widening`. Указывает, что эта процедура оператора определяет [Narrowing](../../../visual-basic/language-reference/modifiers/narrowing.md) преобразования. В разделе «Расширяющие и сужающие преобразования» на этой странице справки.  
   
  `operatorsymbol`  
- Обязательный. Символ или идентификатор оператора, который определяет Эта процедура оператора.  
+ Обязательно. Символ или идентификатор оператора, который определяет Эта процедура оператора.  
   
  `operand1`  
- Обязательный. Имя и тип одного операнда унарного оператора (включая оператор преобразования) или левого операнда бинарного оператора.  
+ Обязательно. Имя и тип одного операнда унарного оператора (включая оператор преобразования) или левого операнда бинарного оператора.  
   
  `operand2`  
  Требуется для бинарных операторов. Имя и тип правого операнда бинарного оператора.  
   
- `operand1`и `operand2` имеет следующий синтаксис и компоненты:  
+ `operand1` и `operand2` имеет следующий синтаксис и компоненты:  
   
  `[ ByVal ] operandname [ As operandtype ]`  
   
 |Отделение|Описание|  
 |----------|-----------------|  
 |`ByVal`|Необязательно, но механизм передачи должен быть [ByVal](../../../visual-basic/language-reference/modifiers/byval.md).|  
-|`operandname`|Обязательный. Имя переменной, представляющей этот операнд. В разделе [имена объявленных элементов](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).|  
+|`operandname`|Обязательно. Имя переменной, представляющей этот операнд. В разделе [имена объявленных элементов](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).|  
 |`operandtype`|Необязательный Если `Option Strict` — `On`. Тип данных этого операнда.|  
   
  `type`  
  Необязательный Если `Option Strict` — `On`. Возвращает тип данных значения процедура оператора.  
   
  `statements`  
- Необязательно. Блок операторов, процедура оператора.  
+ Необязательный. Блок операторов, процедура оператора.  
   
  `returnvalue`  
- Обязательный. Значение, которое процедура оператора возвращает в вызывающий код.  
+ Обязательно. Значение, которое процедура оператора возвращает в вызывающий код.  
   
  `End` `Operator`  
- Обязательный. Завершает определение данной процедуры оператора.  
+ Обязательно. Завершает определение данной процедуры оператора.  
   
 ## <a name="remarks"></a>Примечания  
  Можно использовать `Operator` только в классе или структуре. Это означает *контекст объявления* оператор не может быть исходный файл, пространство имен, модуля, интерфейса, процедуры или блока. Дополнительные сведения см. в разделе [Контексты объявления и уровни доступа по умолчанию](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).  
@@ -122,13 +113,13 @@ End Operator
 ## <a name="matched-pairs"></a>Совпадающие пары  
  Необходимо определить определенные операторы как пары. Если определен один оператор такой пары, необходимо определить другой. Ниже перечислены соответствующие пары.  
   
--   `=` и `<>`.  
+-   `=` и `<>`  
   
 -   `>` и `<`  
   
 -   `>=` и `<=`  
   
--   `IsTrue` и `IsFalse`.  
+-   `IsTrue` и `IsFalse`  
   
 ## <a name="data-type-restrictions"></a>Ограничения типа данных  
  Каждый оператор должен включать класса или структуры, в которой вы его определяете. Это означает, что класс или структура должно отображаться как тип данных из следующих:  
@@ -174,7 +165,7 @@ End Operator
  Если есть вероятность того, что процедуры преобразования не может завершиться успешно, или что он может вызвать необработанное исключение, необходимо объявить ее `Narrowing`.  
   
 ## <a name="example"></a>Пример  
- Следующий пример кода использует `Operator` инструкции для определения контура структуры, которая включает в себя процедуры оператора `And`, `Or`, `IsFalse`, и `IsTrue` операторы. `And`и `Or` каждый из которых принимает два операнда типа `abc` и тип возвращаемого значения `abc`. `IsFalse`и `IsTrue` каждый из которых принимает один операнд типа `abc` и возвращают `Boolean`. Эти определения позволяют вызывающий код, чтобы использовать `And`, `AndAlso`, `Or`, и `OrElse` с операндами типа `abc`.  
+ Следующий пример кода использует `Operator` инструкции для определения контура структуры, которая включает в себя процедуры оператора `And`, `Or`, `IsFalse`, и `IsTrue` операторы. `And` и `Or` каждый из которых принимает два операнда типа `abc` и тип возвращаемого значения `abc`. `IsFalse` и `IsTrue` каждый из которых принимает один операнд типа `abc` и возвращают `Boolean`. Эти определения позволяют вызывающий код, чтобы использовать `And`, `AndAlso`, `Or`, и `OrElse` с операндами типа `abc`.  
   
  [!code-vb[VbVbalrStatements#44](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/operator-statement_1.vb)]  
   

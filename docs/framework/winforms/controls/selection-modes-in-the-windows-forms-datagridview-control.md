@@ -1,34 +1,22 @@
 ---
-title: "Режимы выделения содержимого элемента управления DataGridView в Windows Forms"
-ms.custom: 
+title: Режимы выделения содержимого элемента управления DataGridView в Windows Forms
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - selection [Windows Forms], modes in DataGridView control
 - DataGridView control [Windows Forms], selection mode
 ms.assetid: a3ebfd3d-0525-479d-9d96-d9e017289b36
-caps.latest.revision: "16"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f0d605b7ee7e48ad0ed2e693f0e71e5f1c25e022
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 43f3648a9c7d64fb4fb900c7df3f01bc18d729b3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="selection-modes-in-the-windows-forms-datagridview-control"></a>Режимы выделения содержимого элемента управления DataGridView в Windows Forms
 Иногда требуется, чтобы приложение для выполнения действий, основываясь на выборе пользователя в пределах <xref:System.Windows.Forms.DataGridView> элемента управления. В зависимости от действий может потребоваться ограничить типы выбора, в которых возможны. Например предположим, что приложение можно распечатать отчет для выбранных записей. В этом случае может потребоваться настроить <xref:System.Windows.Forms.DataGridView> элемента управления, щелкнув в любом месте внутри строки выделяет всю строку, и таким образом можно выбрать только одну строку за раз.  
   
  Можно указать, задав допускается выбор <xref:System.Windows.Forms.DataGridView.SelectionMode%2A?displayProperty=nameWithType> в одно из следующих <xref:System.Windows.Forms.DataGridViewSelectionMode> значений перечисления.  
   
-|Значение DataGridViewSelectionMode|Описание:|  
+|Значение DataGridViewSelectionMode|Описание|  
 |-------------------------------------|-----------------|  
 |<xref:System.Windows.Forms.DataGridViewSelectionMode.CellSelect>|При щелчке ячейки выделяется. Заголовки строк и столбцов не может использоваться для выбора.|  
 |<xref:System.Windows.Forms.DataGridViewSelectionMode.ColumnHeaderSelect>|При щелчке ячейки выделяется. Щелкнув заголовок столбца выбирает весь столбец. Заголовки столбцов не может использоваться для сортировки.|  

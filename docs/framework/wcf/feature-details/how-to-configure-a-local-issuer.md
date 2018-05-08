@@ -1,13 +1,6 @@
 ---
-title: "Практическое руководство. Настройка локального издателя"
-ms.custom: 
+title: Практическое руководство. Настройка локального издателя
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,26 +8,21 @@ helpviewer_keywords:
 - WCF, federation
 - federation
 ms.assetid: 15263371-514e-4ea6-90fb-14b4939154cd
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c24b039709a013f210a42d67c744c03489e4cf73
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2b227398af3ea0dfd7cd866f1110ccc1737553c3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-configure-a-local-issuer"></a>Практическое руководство. Настройка локального издателя
 В этом разделе описано, как настроить клиент на использование локального издателя для выданных маркеров.  
   
  Часто при взаимодействии клиента с федеративной службой служба указывает адрес службы маркеров безопасности, выдающей маркеры, которые клиент будет использовать, чтобы федеративная служба могла проверить его подлинность. В некоторых случаях клиент можно настроить для использования *локального издателя*.  
   
- В [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] локальный издатель используется тогда, когда адрес издателя федеративной привязки имеет вид http://schemas.microsoft.com/2005/12/ServiceModel/Addressing/Anonymous или `null`. В этих случаях необходимо настроить объект <xref:System.ServiceModel.Description.ClientCredentials> с использованием адреса локального издателя и привязки, с помощью которой будет осуществляться взаимодействие с этим издателем.  
+ Windows Communication Foundation (WCF), локальный издатель используется в случаях, когда адрес издателя федеративной привязки http://schemas.microsoft.com/2005/12/ServiceModel/Addressing/Anonymous или `null`. В этих случаях необходимо настроить объект <xref:System.ServiceModel.Description.ClientCredentials> с использованием адреса локального издателя и привязки, с помощью которой будет осуществляться взаимодействие с этим издателем.  
   
 > [!NOTE]
->  Если <xref:System.ServiceModel.Description.ClientCredentials.SupportInteractive%2A> свойство `ClientCredentials` имеет значение `true`, не указан адрес локального издателя, а указывает адрес издателя [ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) или другие Федеративная привязка является http://schemas.xmlsoap.org/ws/2005/05/identity/issuer/self, http://schemas.microsoft.com/2005/12/ServiceModel/Addressing/Anonymous, или `null`, затем Windows [!INCLUDE[infocard](../../../../includes/infocard-md.md)] используется издателя.  
+>  Если <xref:System.ServiceModel.Description.ClientCredentials.SupportInteractive%2A> свойство `ClientCredentials` имеет значение `true`, не указан адрес локального издателя, а указывает адрес издателя [ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) или другие Федеративная привязка является http://schemas.xmlsoap.org/ws/2005/05/identity/issuer/self, http://schemas.microsoft.com/2005/12/ServiceModel/Addressing/Anonymous, или `null`, затем Windows [!INCLUDE[infocard](../../../../includes/infocard-md.md)] использованы поставщиком.  
   
 ### <a name="to-configure-the-local-issuer-in-code"></a>Настройка локального издателя в коде  
   

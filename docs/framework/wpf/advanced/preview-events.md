@@ -1,29 +1,17 @@
 ---
-title: "События предварительного просмотра"
-ms.custom: 
+title: События предварительного просмотра
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Preview events [WPF]
 - suppressing events [WPF]
 - events [WPF], Preview
 - events [WPF], suppressing
 ms.assetid: b5032308-aa9c-4d02-af11-630ecec8df7e
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a258a0e145e9a24e6e87bb511fdbd6166422a656
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2d6c1ab32cb43730af2f935f4bd4405059994c12
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="preview-events"></a>События предварительного просмотра
 События предварительного просмотра, также известные как туннелирование событий, являются перенаправленных событий, где направление маршрута перемещается из корня приложения в сторону элемента, вызвавшего событие и отображается как источник в данных события. Не для всех сценариев событий поддерживаться или требуется события предварительного просмотра; в этом разделе описываются ситуациях, где существуют события предварительного просмотра, каким образом приложениями или компонентами их обработки, и случаи, где создание событий предварительного просмотра в пользовательских компонентов или классов может быть целесообразным.  

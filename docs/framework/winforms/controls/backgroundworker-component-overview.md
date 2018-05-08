@@ -1,14 +1,6 @@
 ---
-title: "Общие сведения о компоненте BackgroundWorker"
-ms.custom: 
+title: Общие сведения о компоненте BackgroundWorker
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -25,17 +17,11 @@ helpviewer_keywords:
 - threading [Windows Forms], background operations
 - background operations
 ms.assetid: 64e9b3ab-7443-4a77-ab17-b8b8c0cb3f62
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 96fc5e1929589321872ba30d8c3821b4fd47ca8b
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 32d9bc19e9112fc9b518a68060f9f84e0e04fa16
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="backgroundworker-component-overview"></a>Общие сведения о компоненте BackgroundWorker
 Выполнение многих часто выполняемых операций может занимать длительное время. Например:  
@@ -58,7 +44,7 @@ ms.lasthandoff: 01/19/2018
   
  <xref:System.ComponentModel.BackgroundWorker> Компонент можно загрузить из **элементов**в **компоненты** вкладки. Чтобы добавить компонент <xref:System.ComponentModel.BackgroundWorker> в форму, перетащите компонент <xref:System.ComponentModel.BackgroundWorker> в соответствующую форму. Он отображается в области компонентов, а его свойства отобразятся в **свойства** окна.  
   
- Для запуска асинхронной работы используйте метод <xref:System.ComponentModel.BackgroundWorker.RunWorkerAsync%2A>. <xref:System.ComponentModel.BackgroundWorker.RunWorkerAsync%2A>принимает необязательный `object` параметр, который может использоваться для передачи аргументов в рабочий метод. Класс <xref:System.ComponentModel.BackgroundWorker> показывает событие <xref:System.ComponentModel.BackgroundWorker.DoWork>, к которому обработчик событий <xref:System.ComponentModel.BackgroundWorker.DoWork> прикрепляет рабочий поток.  
+ Для запуска асинхронной работы используйте метод <xref:System.ComponentModel.BackgroundWorker.RunWorkerAsync%2A>. <xref:System.ComponentModel.BackgroundWorker.RunWorkerAsync%2A> принимает необязательный `object` параметр, который может использоваться для передачи аргументов в рабочий метод. Класс <xref:System.ComponentModel.BackgroundWorker> показывает событие <xref:System.ComponentModel.BackgroundWorker.DoWork>, к которому обработчик событий <xref:System.ComponentModel.BackgroundWorker.DoWork> прикрепляет рабочий поток.  
   
  Обработчик событий <xref:System.ComponentModel.BackgroundWorker.DoWork> задействует параметр <xref:System.ComponentModel.DoWorkEventArgs> со свойством <xref:System.ComponentModel.DoWorkEventArgs.Argument%2A>. Данное свойство получает параметр из <xref:System.ComponentModel.BackgroundWorker.RunWorkerAsync%2A> и может быть передано в рабочий метод, который будет вызываться в обработчике событий <xref:System.ComponentModel.BackgroundWorker.DoWork>. В следующем примере показан способ назначения результата из рабочего метода, который называется `ComputeFibonacci`. Он является частью большего примера, который можно найти в [как: реализация формы, в которой выполняется фоновая операция](../../../../docs/framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md).  
   
@@ -74,5 +60,5 @@ ms.lasthandoff: 01/19/2018
  Дополнительные сведения об использовании <xref:System.ComponentModel.BackgroundWorker> см. в описании [как: выполнение операции в фоновом режиме](../../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md).  
   
 ## <a name="see-also"></a>См. также  
- [НЕ в СБОРКЕ: Многопоточность в Visual Basic](http://msdn.microsoft.com/library/c731a50c-09c1-4468-9646-54c86b75d269)  
+ (Не относится к этой сборке) [Многопоточность в Visual Basic](http://msdn.microsoft.com/library/c731a50c-09c1-4468-9646-54c86b75d269)  
  [Практическое руководство. Реализация формы, в которой выполняется фоновая операция](../../../../docs/framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md)

@@ -1,14 +1,6 @@
 ---
 title: Утверждения и маркеры SAML
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -18,20 +10,14 @@ helpviewer_keywords:
 - issued tokens
 - SAML token
 ms.assetid: 930b6e34-9eab-4e95-826c-4e06659bb977
-caps.latest.revision: 10
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 9bd10fe663ccb4c78af775baf3e76663ef9a91bd
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 374fde23a1bf8df704f76500b4808c16d142ddd9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="saml-tokens-and-claims"></a>Утверждения и маркеры SAML
-Язык разметки утверждения безопасности (SAML) *маркеры* являются XML-представлением утверждений. По умолчанию маркеры SAML [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] в сценариях федеративной безопасности используется в следующих *выданные маркеры*.  
+Язык разметки утверждения безопасности (SAML) *маркеры* являются XML-представлением утверждений. По умолчанию, маркеры SAML, Windows Communication Foundation (WCF) используется в сценариях федеративной безопасности *выданные маркеры*.  
   
  Маркеры SAML содержат операторы, которые являются набором утверждений, выполненных одной сущностью в отношении другой сущности. Например, в сценариях федеративной безопасности операторы относительно пользователя выполняются в системе службой маркеров безопасности. Служба маркеров безопасности подписывает маркер SAML, чтобы подтвердить достоверность оператора, содержащегося в маркере. Кроме того, маркер SAML связан с материалом ключа шифрования, который должен быть известен пользователю маркера SAML. Эта проверка убеждает проверяющую сторону, что на самом деле маркер SAML был выдан указанному пользователю. Например, в типичном сценарии происходит следующее.  
   
@@ -44,7 +30,7 @@ ms.lasthandoff: 04/28/2018
 4.  Подпись маркера SAML указывает проверяющей стороне, что маркер выдан службой маркеров безопасности. Подпись сообщения, созданная при помощи ключа проверки, указывает проверяющей стороне, что маркер был выдан клиенту.  
   
 ## <a name="from-claims-to-samlattributes"></a>От Claims к SamlAttributes  
- В [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] операторы в маркерах SAML моделируются как объекты <xref:System.IdentityModel.Tokens.SamlAttribute>, которые могут заполняться прямо из объектов <xref:System.IdentityModel.Claims.Claim>. Если у предоставляемого объекта <xref:System.IdentityModel.Claims.Claim> есть свойство <xref:System.IdentityModel.Claims.Claim.Right%2A> равное <xref:System.IdentityModel.Claims.Rights.PossessProperty%2A>, и свойство <xref:System.IdentityModel.Claims.Claim.Resource%2A> принадлежит к типу <xref:System.String>. Пример:  
+ В WCF, операторы в маркерах SAML моделируются как <xref:System.IdentityModel.Tokens.SamlAttribute> объектов, которые могут заполняться прямо из <xref:System.IdentityModel.Claims.Claim> объекты, предоставляемые <xref:System.IdentityModel.Claims.Claim> объект имеет <xref:System.IdentityModel.Claims.Claim.Right%2A> свойство <xref:System.IdentityModel.Claims.Rights.PossessProperty%2A> и <xref:System.IdentityModel.Claims.Claim.Resource%2A> имеет свойство Тип <xref:System.String>. Пример:  
   
  [!code-csharp[c_CreateSTS#8](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_creatests/cs/source.cs#8)]
  [!code-vb[c_CreateSTS#8](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_creatests/vb/source.vb#8)]  

@@ -1,30 +1,16 @@
 ---
 title: Общие сведения о транзакциях Windows Communication Foundation
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - transactions [WCF]
 - WCF, transactions
 - Windows Communication Foundation, transactions
 ms.assetid: c7757854-1207-4019-8b31-552578b7d570
-caps.latest.revision: 16
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 76edd7cf30d9da06db6e0c2f4624bf9a6d677eca
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 63f3826215f24a4bab6d84709c2f9da6a9c8f4f9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="windows-communication-foundation-transactions-overview"></a>Общие сведения о транзакциях Windows Communication Foundation
 Транзакции обеспечивают способ группировки набора действий или операций в одну неделимую единицу выполнения. Транзакция является коллекцией операций с перечисленными ниже свойствами.  
@@ -37,9 +23,9 @@ ms.lasthandoff: 04/28/2018
   
 -   Устойчивость. Данное свойство обозначает, что при однократной фиксации обновления в управляемых ресурсах (такие как запись базы данных) станут устойчивыми к сбоям.  
   
- [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] обеспечивает богатый набор функций, позволяющих создавать распределенные транзакции в приложении веб-службы.  
+ Windows Communication Foundation (WCF) предоставляет широкий набор функций, которые позволяют создавать распределенные транзакции в приложении веб-службы.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] реализует поддержку для протокола WS-AtomicTransaction (WS-AT), который позволяет приложениям [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] передавать транзакции во взаимодействующие приложения, такие как взаимодействующие веб-службы, созданные с использованием сторонней технологии. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] также реализует поддержку для протокола OLE transactions, который может быть использован в сценариях, в которых не требуется функциональность взаимодействия приложений для обеспечения потока транзакций.  
+ WCF реализует поддержку для протокола WS-AtomicTransaction (WS-AT), который позволяет приложениям WCF передавать транзакции во взаимодействующие приложения, такие как взаимодействующие веб-службы, созданные с использованием сторонней технологии. WCF также реализует поддержку для протокола OLE Transactions, который можно использовать в сценариях, где не требуется функциональность взаимодействия приложений для включения потока транзакций.  
   
  Для настройки привязок можно использовать файл конфигурации приложения, позволяющий включать или отключать передачу транзакций, а также задавать необходимый протокол транзакций для привязки. Кроме того, можно задать время ожидания транзакций на уровне службы с помощью файла конфигурации. Дополнительные сведения см. в разделе [Включение потока транзакций](../../../../docs/framework/wcf/feature-details/enabling-transaction-flow.md).  
   

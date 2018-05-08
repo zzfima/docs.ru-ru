@@ -1,14 +1,6 @@
 ---
 title: Пример. Создание составного элемента управления с помощью C#
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - custom controls [C#]
 - user controls [Windows Forms], creating with Visual C#
@@ -16,17 +8,11 @@ helpviewer_keywords:
 - user controls [C#]
 - custom controls [Windows Forms], creating
 ms.assetid: f88481a8-c746-4a36-9479-374ce5f2e91f
-caps.latest.revision: 21
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: c88a9b4786fd544d175243fedb56b5071c8990f6
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 1c669860b545150e75777b8c8cc434f47675ec5f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-authoring-a-composite-control-with-visual-c"></a>Пример. Создание составного элемента управления с помощью C# #
 Составные элементы управления предоставляют средства для создания и повторного использования настраиваемых графических интерфейсов. Составной элемент управления — это компонент, имеющий визуальное представление. Таким образом, он может состоять из одного или нескольких элементов управления, компонентов или блоков кода Windows Forms, позволяющих расширить функциональные возможности за счет проверки введенных пользователем данных, изменения свойств отображения или выполнения других предусмотренных разработчиком действий. Составные элементы управления можно вставлять в Windows Forms точно так же, как другие элементы управления. В первой части этого пошагового руководства мы создадим простой составной элемент управления с именем `ctlClock`. Во второй части мы расширим функциональность `ctlClock` за счет наследования.  

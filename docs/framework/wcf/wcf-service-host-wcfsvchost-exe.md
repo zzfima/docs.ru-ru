@@ -1,29 +1,15 @@
 ---
 title: Узел службы WCF (WcfSvcHost.exe)
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 8643a63d-a357-4c39-bd6c-cdfdf71e370e
-caps.latest.revision: 27
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 1da8d7a08e7887e8ba3fd50a8f809e2ff551a7fd
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
-ms.translationtype: MT
+ms.openlocfilehash: c000ad3ba53f103cb1a24a9a7fbc71049ba707c7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wcf-service-host-wcfsvchostexe"></a>Узел службы WCF (WcfSvcHost.exe)
-[!INCLUDE[indigo1](../../../includes/indigo1-md.md)] Узел службы (WcfSvcHost.exe) делает возможным запуск отладчика Visual Studio (F5) для автоматического размещения и проверки службы, реализованный. Затем службу можно проверить с помощью тестового клиента [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] (WcfTestClient.exe) или своего собственного клиента для поиска и устранения потенциальных ошибок.  
+Узел службы Windows Communication Foundation (WCF) (WcfSvcHost.exe) делает возможным запуск отладчика Visual Studio (F5) для автоматического размещения и проверки службы, реализованный. Затем службу можно проверить с помощью тестового клиента [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] (WcfTestClient.exe) или своего собственного клиента для поиска и устранения потенциальных ошибок.  
   
 ## <a name="wcf-service-host"></a>Узел службы WCF  
  [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Узел службы выполняет перечисление служб в проекте службы [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], загружает конфигурацию проекта и создает экземпляр узла для каждой найденной службы. Средство встроено в Visual Studio с помощью [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] шаблона службы и вызывается при запуске отладки проекта.  

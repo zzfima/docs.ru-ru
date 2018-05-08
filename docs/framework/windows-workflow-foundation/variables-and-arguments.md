@@ -1,24 +1,12 @@
 ---
 title: Переменные и аргументы
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: d03dbe34-5b2e-4f21-8b57-693ee49611b8
-caps.latest.revision: 15
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 66b11dda1b245fa88548cf70268a6ca10ee27708
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 7d4bcbb28ffac0ea0f2f6d4aa238523855570f7c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="variables-and-arguments"></a>Переменные и аргументы
 В Windows Workflow Foundation (WF), переменные представляют хранилище данных, а аргументы представляют поток данных в действие и из действия. Действие имеет набор аргументов, которые составляют сигнатуру действия. Действие может также поддерживать список переменных, к которым разработчик может добавлять или удалять переменные при разработке рабочего процесса. Привязка аргумента выполнена с помощью выражения, возвращающего значение.  

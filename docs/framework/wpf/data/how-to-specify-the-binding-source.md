@@ -1,13 +1,6 @@
 ---
-title: "Практическое руководство. Указание источника привязки"
-ms.custom: 
+title: Практическое руководство. Указание источника привязки
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - data binding [WPF], binding source
 - binding sources [WPF]
 ms.assetid: 55d47757-2648-4a52-987f-b767953f168c
-caps.latest.revision: "16"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 23a4c180eb62dd152f1ed24c01b8103ccf1ec562
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 333a85bc59ded3fd42bef6aff5845c9a6ddeb49b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-specify-the-binding-source"></a>Практическое руководство. Указание источника привязки
 В привязке данных объект источника привязки означает объект, из которого вы получаете данные. В этом разделе описываются различные способы указания источника привязки.  
@@ -48,7 +36,7 @@ ms.lasthandoff: 12/22/2017
   
  Кроме того, если вы хотите указать источник в отдельных привязках явным образом, доступны следующие варианты. Они имеют приоритет над наследуемым контекстом данных.  
   
-|Свойство.|Описание:|  
+|Свойство.|Описание|  
 |--------------|-----------------|  
 |<xref:System.Windows.Data.Binding.Source%2A>|Это свойство используется для задания экземпляра объекта в качестве источника. Если не требуется функциональность установки области видимости, в которой несколько свойств наследуют один и тот же контекст данных, можно использовать <xref:System.Windows.Data.Binding.Source%2A> вместо `DataContext` свойство. Дополнительные сведения см. в разделе <xref:System.Windows.Data.Binding.Source%2A>.|  
 |<xref:System.Windows.Data.Binding.RelativeSource%2A>|Это полезно, когда требуется указать источник относительно того, где расположен целевой объект привязки. Это свойство можно использовать в некоторых типичных сценариях, например, если вы хотите выполнить привязку одного свойства элемента к другому свойству этого же элемента или при определении привязки в стиле или шаблоне. Дополнительные сведения см. в разделе <xref:System.Windows.Data.Binding.RelativeSource%2A>.|  

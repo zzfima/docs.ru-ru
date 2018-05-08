@@ -1,14 +1,6 @@
 ---
-title: "Метод IHostAssemblyStore::ProvideModule"
-ms.custom: 
+title: Метод IHostAssemblyStore::ProvideModule
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IHostAssemblyStore.ProvideModule
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: f42e3dd0-c88e-4748-b6c0-4c515a633180
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 8b29f19933ae985d15627d1eba2622f350a52e72
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8b604e1d7fc3d3c8adf7d95bd95843bc0110dbc9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ihostassemblystoreprovidemodule-method"></a>Метод IHostAssemblyStore::ProvideModule
 Разрешает модулю в сборке или связанный (но не внедренный) файла ресурсов.  
@@ -66,14 +54,14 @@ HRESULT ProvideModule (
   
 |HRESULT|Описание|  
 |-------------|-----------------|  
-|S_OK|`ProvideModule`успешно возвращен.|  
+|S_OK|`ProvideModule` успешно возвращен.|  
 |ЗНАЧЕНИЕ HOST_E_CLRNOTAVAILABLE|Общеязыковая среда выполнения (CLR) не был загружен в процесс или находится в состоянии, в котором не может выполнять управляемый код или успешно обработать вызов.|  
 |HOST_E_TIMEOUT|Истекло время ожидания вызова.|  
 |HOST_E_NOT_OWNER|Вызывающий объект не является владельцем блокировки.|  
 |HOST_E_ABANDONED|Событие было отменено заблокированный поток или ожидал волокон.|  
 |E_FAIL|Неизвестная Неустранимая ошибка. Если метод вернет значение E_FAIL, среда CLR больше не может использоваться в процессе. Последующие вызовы размещение методы возвращают значение HOST_E_CLRNOTAVAILABLE.|  
 |COR_E_FILENOTFOUND (0X80070002)|Не удалось найти запрошенную сборку или связанный ресурс.|  
-|E_NOT_SUFFICIENT_BUFFER|`pdwModuleId`недостаточно велик для хранения идентификатора, который необходимо вернуть.|  
+|E_NOT_SUFFICIENT_BUFFER|`pdwModuleId` недостаточно велик для хранения идентификатора, который необходимо вернуть.|  
   
 ## <a name="remarks"></a>Примечания  
  Возвращаемое значение идентификатора для `pdwModuleId` заданный главным узлом. Идентификаторы должны быть уникальными в пределах срока существования процесса. Среда CLR использует это значение как уникальный идентификатор для соответствующего потока. Она проверяет каждое значение со значениями параметра `pAssemblyId` возвращается путем вызова метода [ProvideAssembly](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-provideassembly-method.md) и со значениями параметра `pdwModuleId` возвращенных другими вызовами `ProvideModule`. Если узел возвращает то же значение идентификатора для другого `IStream`, среда CLR проверяет, является ли содержимое этого потока уже были сопоставлены. В этом случае среда CLR загружает имеющуюся копию образа вместо сопоставления нового. Таким образом, идентификатор также не должен перекрывать идентификаторы сборки, возвращенные `ProvideAssembly`.  
@@ -85,7 +73,7 @@ HRESULT ProvideModule (
   
  **Библиотека:** включена как ресурс в MSCorEE.dll  
   
- **Версии платформы .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Версии платформы .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>См. также  
  [Интерфейс ICLRAssemblyReferenceList](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md)  

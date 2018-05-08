@@ -1,13 +1,6 @@
 ---
-title: "Помощник по отладке управляемого кода loaderLock"
-ms.custom: 
+title: Помощник по отладке управляемого кода loaderLock
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - deadlocks [.NET Framework]
 - LoaderLock MDA
@@ -17,21 +10,18 @@ helpviewer_keywords:
 - loader locks
 - locks, threads
 ms.assetid: 8c10fa02-1b9c-4be5-ab03-451d943ac1ee
-caps.latest.revision: "13"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 2835f1fdbe2132feb929a5264d3b2772d8f66377
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: dbc6cc814d23923f01eceea70bd2fe45b9cbff8a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="loaderlock-mda"></a>Помощник по отладке управляемого кода loaderLock
 Помощник по отладке управляемого кода `loaderLock` (MDA) определяет попытки выполнения управляемого кода в потоке, который удерживает блокировку загрузчика операционной системы Microsoft Windows.  Любое подобное выполнение кода недопустимо, поскольку оно может привести к взаимоблокировке и использованию библиотек DLL до того, как они будут инициализированы загрузчиком операционной системы.  
   
-## <a name="symptoms"></a>Признаки  
+## <a name="symptoms"></a>Симптомы  
  Наиболее распространенная ошибка при выполнении кода во время блокировки загрузчика операционной системы состоит во взаимоблокировке потоков при попытке вызова других функций Win32, которым также требуется блокировка загрузчика.  Примерами таких функций являются `LoadLibrary`, `GetProcAddress`, `FreeLibrary` и `GetModuleHandle`.  Приложение не может вызывать эти функции напрямую; общеязыковая среда выполнения (CLR) может вызывать эти функции в результате вызовов более высокого уровня, например <xref:System.Reflection.Assembly.Load%2A> или в качестве первого вызова метода неуправляемого кода.  
   
  Взаимоблокировка также может возникнуть, если поток ожидает запуска или завершения другого потока.  При запуске или завершении потока этот поток должен получить блокировку загрузчика операционной системы, чтобы передать события в связанные библиотеки DLL.  

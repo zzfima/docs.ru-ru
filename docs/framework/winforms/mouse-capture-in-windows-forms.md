@@ -1,28 +1,14 @@
 ---
-title: "Захват мыши в Windows Forms"
-ms.custom: 
+title: Захват мыши в Windows Forms
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - mouse [Windows Forms], capture
 ms.assetid: 8911d4b0-a4f8-4f93-8246-371aebd27d0c
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 7cc62780579c852aaa637a3ccc13ce2929423868
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: dfe983b9e407eddb9bed3bcc1a767cdeff38f2ab
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mouse-capture-in-windows-forms"></a>Захват мыши в Windows Forms
 *Захват мыши* называется элемента управления вводом все мыши. Элемент управления захватил мышь, получает ввод от мыши ли указатель мыши находится в пределах его границ.  

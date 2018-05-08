@@ -1,30 +1,20 @@
 ---
-title: "Незащищенные интернет-клиент и служба"
-ms.custom: 
+title: Незащищенные интернет-клиент и служба
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 97a10d79-3e7d-4bd1-9a99-fd9807fd70bc
-caps.latest.revision: "17"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: b202c4d67b48a9559afe035dc6b7bc95f6cc7779
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 93bf7a038a46ff6c03f89e576f3e4150cd069dba
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="internet-unsecured-client-and-service"></a>Незащищенные интернет-клиент и служба
-В следующей иллюстрации показан пример открытых незащищенных клиента и службы [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
+Ниже показан пример общедоступных, незащищенных клиента Windows Communication Foundation (WCF) и службы.  
   
  ![Небезопасные ситуации клиента и службы Интернета](../../../../docs/framework/wcf/feature-details/media/publicunsecured.gif "publicUnsecured")  
   
@@ -32,7 +22,7 @@ ms.lasthandoff: 12/22/2017
 |--------------------|-----------------|  
 |Режим безопасности|Нет|  
 |Transport|HTTP|  
-|Привязка|<xref:System.ServiceModel.BasicHttpBinding>в коде или [ \<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md) элемент в конфигурации.|  
+|Привязка|<xref:System.ServiceModel.BasicHttpBinding> в коде или [ \<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md) элемент в конфигурации.|  
 |Взаимодействие|С существующими службами и клиентами веб-служб|  
 |Проверка подлинности|Нет|  
 |Целостность|Нет|  
@@ -89,7 +79,7 @@ ms.lasthandoff: 12/22/2017
      [!code-vb[C_SecurityScenarios#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#0)]  
   
 ### <a name="code"></a>Код  
- Приведенный ниже код демонстрирует основной клиент [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], который имеет доступ к незащищенной конечной точке.  
+ В следующем коде показано основной клиент WCF, обращающийся к незащищенной конечной точке.  
   
  [!code-csharp[C_UnsecuredClient#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_unsecuredclient/cs/source.cs#1)]
  [!code-vb[C_UnsecuredClient#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_unsecuredclient/vb/source.vb#1)]  

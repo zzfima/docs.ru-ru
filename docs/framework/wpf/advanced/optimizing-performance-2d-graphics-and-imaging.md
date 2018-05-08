@@ -1,13 +1,6 @@
 ---
-title: "Оптимизация производительности: двумерная графика и обработка изображений"
-ms.custom: 
+title: 'Оптимизация производительности: двумерная графика и обработка изображений'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -19,16 +12,11 @@ helpviewer_keywords:
 - 2-D graphics [WPF]
 - images [WPF], optimizing performance
 ms.assetid: e335601e-28c8-4d64-ba27-778fffd55f72
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 99fc5e179fe7652868d47d93fbdcabd47bc8cab9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4e6b72dae863e89d70ec70c2cb99a5874581e9ea
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="optimizing-performance-2d-graphics-and-imaging"></a>Оптимизация производительности: двумерная графика и обработка изображений
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] предоставляет широкий спектр функциональных возможностей двумерной графики и изображений, которые можно оптимизировать для требований приложения. Этот раздел содержит сведения об оптимизации производительности в этих областях.  
@@ -36,23 +24,23 @@ ms.lasthandoff: 12/22/2017
   
 <a name="Drawing_and_Shapes"></a>   
 ## <a name="drawing-and-shapes"></a>Рисование и фигуры  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]предоставляет оба <xref:System.Windows.Media.Drawing> и <xref:System.Windows.Shapes.Shape> объектов, представляющих содержимое графического изображения. Тем не менее <xref:System.Windows.Media.Drawing> объекты являются конструкциями проще, чем <xref:System.Windows.Shapes.Shape> объектов и предоставляют лучшие характеристики производительности.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] предоставляет оба <xref:System.Windows.Media.Drawing> и <xref:System.Windows.Shapes.Shape> объектов, представляющих содержимое графического изображения. Тем не менее <xref:System.Windows.Media.Drawing> объекты являются конструкциями проще, чем <xref:System.Windows.Shapes.Shape> объектов и предоставляют лучшие характеристики производительности.  
   
  Объект <xref:System.Windows.Shapes.Shape> позволяет вывести на экран графическую форму. Поскольку они являются производными от <xref:System.Windows.FrameworkElement> класса <xref:System.Windows.Shapes.Shape> объекты могут использоваться внутри панелей и большинства элементов управления.  
   
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] предоставляет несколько уровней доступа к службам для работы с графикой и службам рендеринга. На верхнем уровне <xref:System.Windows.Shapes.Shape> объектов просты в использовании и предоставляют множество полезных возможностей, таких как макет и обработка событий. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] предоставляет ряд готовых к использованию объектов Shape. Все объекты фигур наследуются от <xref:System.Windows.Shapes.Shape> класса. Доступные объекты фигур включают <xref:System.Windows.Shapes.Ellipse>, <xref:System.Windows.Shapes.Line>, <xref:System.Windows.Shapes.Path>, <xref:System.Windows.Shapes.Polygon>, <xref:System.Windows.Shapes.Polyline>, и <xref:System.Windows.Shapes.Rectangle>.  
   
- <xref:System.Windows.Media.Drawing>объекты, с другой стороны, не являющиеся производными от <xref:System.Windows.FrameworkElement> класса и обеспечивают упрощенную реализацию отрисовки фигур, изображений и текста.  
+ <xref:System.Windows.Media.Drawing> объекты, с другой стороны, не являющиеся производными от <xref:System.Windows.FrameworkElement> класса и обеспечивают упрощенную реализацию отрисовки фигур, изображений и текста.  
   
  Существует четыре типа <xref:System.Windows.Media.Drawing> объектов:  
   
--   <xref:System.Windows.Media.GeometryDrawing>Рисование фигуры.  
+-   <xref:System.Windows.Media.GeometryDrawing> Рисование фигуры.  
   
--   <xref:System.Windows.Media.ImageDrawing>Рисует изображение.  
+-   <xref:System.Windows.Media.ImageDrawing> Рисует изображение.  
   
--   <xref:System.Windows.Media.GlyphRunDrawing>Рисование текста.  
+-   <xref:System.Windows.Media.GlyphRunDrawing> Рисование текста.  
   
--   <xref:System.Windows.Media.DrawingGroup>Рисует другие рисунки. Для объединения рисунков в один составной используйте группирование рисунков.  
+-   <xref:System.Windows.Media.DrawingGroup> Рисует другие рисунки. Для объединения рисунков в один составной используйте группирование рисунков.  
   
  <xref:System.Windows.Media.GeometryDrawing> Объект используется для отрисовки содержимого геометрического объекта. <xref:System.Windows.Media.Geometry> Класс и конкретные классы, производные от него, таких как <xref:System.Windows.Media.CombinedGeometry>, <xref:System.Windows.Media.EllipseGeometry>, и <xref:System.Windows.Media.PathGeometry>, предоставляют средства для отрисовки двумерных изображений, а также предоставляет возможности проверки попадания и поддержки отсечения. Геометрические объекты можно использовать, например, для определения области элемента управления или для определения области усечения, применяемой к изображению. Геометрические объекты могут быть простыми, такими как прямоугольники и круги, или сложными, созданными из двух или более геометрических объектов. Более сложные геометрические области можно создать путем объединения <xref:System.Windows.Media.PathSegment>-производных объектов, таких как <xref:System.Windows.Media.ArcSegment>, <xref:System.Windows.Media.BezierSegment>, и <xref:System.Windows.Media.QuadraticBezierSegment>.  
   
@@ -64,7 +52,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="StreamGeometry_Objects"></a>   
 ## <a name="streamgeometry-objects"></a>Объекты StreamGeometry  
- <xref:System.Windows.Media.StreamGeometry> Объект — это Упрощенная альтернатива <xref:System.Windows.Media.PathGeometry> для создания геометрических фигур. Используйте <xref:System.Windows.Media.StreamGeometry> для описания сложной геометрии. <xref:System.Windows.Media.StreamGeometry>оптимизирован для обработки большого количества <xref:System.Windows.Media.PathGeometry> объектов и дает более высокую производительность по сравнению с использованием нескольких отдельных <xref:System.Windows.Media.PathGeometry> объектов.  
+ <xref:System.Windows.Media.StreamGeometry> Объект — это Упрощенная альтернатива <xref:System.Windows.Media.PathGeometry> для создания геометрических фигур. Используйте <xref:System.Windows.Media.StreamGeometry> для описания сложной геометрии. <xref:System.Windows.Media.StreamGeometry> оптимизирован для обработки большого количества <xref:System.Windows.Media.PathGeometry> объектов и дает более высокую производительность по сравнению с использованием нескольких отдельных <xref:System.Windows.Media.PathGeometry> объектов.  
   
  В следующем примере используется синтаксис атрибутов для создания треугольного <xref:System.Windows.Media.StreamGeometry> в [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].  
   
@@ -91,7 +79,7 @@ ms.lasthandoff: 12/22/2017
 -   Более подробную информацию см. в разделе [Общие сведения об обработке изображений](../../../../docs/framework/wpf/graphics-multimedia/imaging-overview.md).  
   
 ### <a name="bitmapscalingmode"></a>BitmapScalingMode  
- При анимации масштабирования любого растрового изображения алгоритм повторной дискретизации изображения высокого качества по умолчанию иногда может использовать столько системных ресурсов, чтобы привести к снижению частоты кадров анимации и задержкам. Установив <xref:System.Windows.Media.RenderOptions.BitmapScalingMode%2A> свойство <xref:System.Windows.Media.RenderOptions> объект <xref:System.Windows.Media.BitmapScalingMode.LowQuality> можно создать плавную анимацию при масштабировании растрового изображения. <xref:System.Windows.Media.BitmapScalingMode.LowQuality>Указывает режим [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] механизм визуализации переход от алгоритма, оптимизированными для качества алгоритм оптимизации скорости при обработке образов.  
+ При анимации масштабирования любого растрового изображения алгоритм повторной дискретизации изображения высокого качества по умолчанию иногда может использовать столько системных ресурсов, чтобы привести к снижению частоты кадров анимации и задержкам. Установив <xref:System.Windows.Media.RenderOptions.BitmapScalingMode%2A> свойство <xref:System.Windows.Media.RenderOptions> объект <xref:System.Windows.Media.BitmapScalingMode.LowQuality> можно создать плавную анимацию при масштабировании растрового изображения. <xref:System.Windows.Media.BitmapScalingMode.LowQuality> Указывает режим [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] механизм визуализации переход от алгоритма, оптимизированными для качества алгоритм оптимизации скорости при обработке образов.  
   
  Следующий пример показывает, как задать <xref:System.Windows.Media.BitmapScalingMode> для объекта изображения.  
   

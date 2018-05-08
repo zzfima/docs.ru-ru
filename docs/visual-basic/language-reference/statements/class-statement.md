@@ -1,12 +1,6 @@
 ---
 title: Оператор Class (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Class
 helpviewer_keywords:
@@ -19,14 +13,11 @@ helpviewer_keywords:
 - classes [Visual Basic], data members
 - data members [Visual Basic], of classes
 ms.assetid: f2664f38-eb5a-4d4b-a374-1d041521fb6c
-caps.latest.revision: 29
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: df86ef0eec67d96f2f997dc5dac7ee2357c6362b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 2346823e7b774c21171bd81023cc5b920d34d19a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="class-statement-visual-basic"></a>Оператор Class (Visual Basic)
 Объявляет имя класса и вводит определение переменных, свойств, событий и процедур, которые включаются в класс.  
@@ -46,21 +37,21 @@ End Class
   
 |Термин|Определение|  
 |---|---|  
-|`attributelist`|Необязательно. В разделе [список атрибутов](../../../visual-basic/language-reference/statements/attribute-list.md).|  
-|`accessmodifier`|Необязательно. Ниже указаны доступные значения.<br /><br /> -   [Public](../../../visual-basic/language-reference/modifiers/public.md)<br />-   [Защищенные](../../../visual-basic/language-reference/modifiers/protected.md)<br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)<br />-   [Закрытый](../../../visual-basic/language-reference/modifiers/private.md)<br />-   `Protected Friend`<br /><br /> В разделе [уровни в Visual Basic доступа](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).|  
-|`Shadows`|Необязательно. В разделе [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).|  
-|`MustInherit`|Необязательно. В разделе [MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md).|  
-|`NotInheritable`|Необязательно. В разделе [NotInheritable](../../../visual-basic/language-reference/modifiers/notinheritable.md).|  
-|`Partial`|Необязательно. Указывает частичное определение класса. В разделе [частичного](../../../visual-basic/language-reference/modifiers/partial.md).|  
-|`name`|Обязательный. Имя этого класса. В разделе [имена объявленных элементов](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).|  
-|`Of`|Необязательно. Указывает, что это универсальный класс.|  
+|`attributelist`|Необязательный. В разделе [список атрибутов](../../../visual-basic/language-reference/statements/attribute-list.md).|  
+|`accessmodifier`|Необязательный. Ниже указаны доступные значения.<br /><br /> -   [Public](../../../visual-basic/language-reference/modifiers/public.md)<br />-   [Защищенные](../../../visual-basic/language-reference/modifiers/protected.md)<br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)<br />-   [Закрытый](../../../visual-basic/language-reference/modifiers/private.md)<br />-   `Protected Friend`<br /><br /> В разделе [уровни в Visual Basic доступа](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).|  
+|`Shadows`|Необязательный. В разделе [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).|  
+|`MustInherit`|Необязательный. В разделе [MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md).|  
+|`NotInheritable`|Необязательный. В разделе [NotInheritable](../../../visual-basic/language-reference/modifiers/notinheritable.md).|  
+|`Partial`|Необязательный. Указывает частичное определение класса. В разделе [частичного](../../../visual-basic/language-reference/modifiers/partial.md).|  
+|`name`|Обязательно. Имя этого класса. В разделе [имена объявленных элементов](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).|  
+|`Of`|Необязательный. Указывает, что это универсальный класс.|  
 |`typelist`|Является обязательным, если используется [из](../../../visual-basic/language-reference/statements/of-clause.md) ключевое слово. Список параметров типа для этого класса. В разделе [введите список](../../../visual-basic/language-reference/statements/type-list.md).|  
-|`Inherits`|Необязательно. Указывает, что этот класс наследует члены другого класса. В разделе [Инструкция Inherits](../../../visual-basic/language-reference/statements/inherits-statement.md).|  
+|`Inherits`|Необязательный. Указывает, что этот класс наследует члены другого класса. В разделе [Инструкция Inherits](../../../visual-basic/language-reference/statements/inherits-statement.md).|  
 |`classname`|Является обязательным, если используется `Inherits` инструкции. Имя класса, из которого происходит данный класс.|  
-|`Implements`|Необязательно. Указывает, что этот класс реализует члены одного или нескольких интерфейсов. В разделе [реализует оператор](../../../visual-basic/language-reference/statements/implements-statement.md).|  
+|`Implements`|Необязательный. Указывает, что этот класс реализует члены одного или нескольких интерфейсов. В разделе [реализует оператор](../../../visual-basic/language-reference/statements/implements-statement.md).|  
 |`interfacenames`|Является обязательным, если используется `Implements` инструкции. Имена интерфейсов, реализуемых этого класса.|  
-|`statements`|Необязательно. Операторы, которые определяют члены этого класса.|  
-|`End Class`|Обязательный. Завершает `Class` определения.|  
+|`statements`|Необязательный. Операторы, которые определяют члены этого класса.|  
+|`End Class`|Обязательно. Завершает `Class` определения.|  
   
 ## <a name="remarks"></a>Примечания  
  Объект `Class` инструкция определяет новый тип данных. Объект *класс* является основной строительный блок объектно ориентированное программирование (OOP). Дополнительные сведения см. в разделе [объекты и классы](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md).  

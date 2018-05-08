@@ -1,29 +1,17 @@
 ---
-title: "Архитектура компонента BindingSource"
-ms.custom: 
+title: Архитектура компонента BindingSource
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - BindingSource component [Windows Forms], architecture
 - Windows Forms, data binding
 - BindingSource component [Windows Forms], about BindingSource component
 - data binding [Windows Forms], BindingSource component
 ms.assetid: 7bc69c90-8a11-48b1-9336-3adab5b41591
-caps.latest.revision: "23"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 25a69f31d8da8638cfc92ff94d8f90dbcb327158
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b0334bd7a0bc5ff46c43fd7ee549422d98c35efe
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="bindingsource-component-architecture"></a>Архитектура компонента BindingSource
 С <xref:System.Windows.Forms.BindingSource> компонент глобально, все элементы управления Windows Forms можно привязать к источникам данных.  
@@ -57,13 +45,13 @@ ms.lasthandoff: 12/22/2017
   
 -   Источник данных в виде списка.  
   
--   <xref:System.Windows.Forms.BindingSource>как <xref:System.ComponentModel.IBindingList>.  
+-   <xref:System.Windows.Forms.BindingSource> как <xref:System.ComponentModel.IBindingList>.  
   
 -   Создание пользовательских элементов.  
   
 -   Создание транзакционных элементов.  
   
--   <xref:System.Collections.IEnumerable>Поддержка.  
+-   <xref:System.Collections.IEnumerable> Поддержка.  
   
 -   Поддержка во время разработки.  
   
@@ -120,7 +108,7 @@ ms.lasthandoff: 12/22/2017
 |Пустая ссылка (`Nothing` в Visual Basic) с <xref:System.Windows.Forms.BindingSource.DataMember%2A> значение|Не поддерживается; вызывает <xref:System.ArgumentException>.|  
 |Тип, не являющийся списком или объект типа «T»|Пустой <xref:System.ComponentModel.IBindingList> типа «T».|  
 |Экземпляр массива|<xref:System.ComponentModel.IBindingList> Содержащий элементы массива.|  
-|<xref:System.Collections.IEnumerable>экземпляр|<xref:System.ComponentModel.IBindingList> Содержащий <xref:System.Collections.IEnumerable> элементов|  
+|<xref:System.Collections.IEnumerable> Экземпляр|<xref:System.ComponentModel.IBindingList> Содержащий <xref:System.Collections.IEnumerable> элементов|  
 |Экземпляр списка, содержащий тип «T»|<xref:System.ComponentModel.IBindingList> Экземпляра, содержащего тип «T».|  
   
  Кроме того <xref:System.Windows.Forms.BindingSource.DataSource%2A> можно задать для других типов списков, таких как <xref:System.ComponentModel.IListSource> и <xref:System.ComponentModel.ITypedList>и <xref:System.Windows.Forms.BindingSource> будет обрабатывать их соответствующим образом. В этом случае тип, который содержится в списке должен быть конструктор по умолчанию.  

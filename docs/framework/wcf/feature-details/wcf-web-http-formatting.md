@@ -1,20 +1,12 @@
 ---
-title: "Форматирование WCF Web HTTP"
+title: Форматирование WCF Web HTTP
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.technology: dotnet-clr
-ms.topic: article
 ms.assetid: e2414896-5463-41cd-b0a6-026a713eac2c
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ab18e739b061ac6d28877eaac23c258a79f07a2d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: abbfc74f33ddb676c8ac85eb712757615a2972ab
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wcf-web-http-formatting"></a>Форматирование WCF Web HTTP
 Модель веб-программирования HTTP WCF позволяет динамически определять лучший формат возвращаемого ответа операции службы. Поддерживается два метода для определения формата: автоматический и явный.  
@@ -30,7 +22,7 @@ ms.lasthandoff: 12/22/2017
   
 4.  Параметр формата по умолчанию в WebHttpBehavior.  
   
- Если сообщение запроса содержит заголовок Accept, то инфраструктура [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] выполняет поиск поддерживаемого им типа. Если заголовок `Accept` указывает приоритеты типов носителей, то они учитываются. Если в заголовке `Accept` не найден подходящий формат, используется тип содержимого сообщения запроса. Если не указан подходящий тип содержимого, используется параметр формата по умолчанию для операции. Формат по умолчанию задается с помощью параметра `ResponseFormat` атрибутов <xref:System.ServiceModel.Web.WebGetAttribute> и <xref:System.ServiceModel.Web.WebInvokeAttribute>. Если не указан формат по умолчанию для операции, используется значение свойства <xref:System.ServiceModel.Description.WebHttpBehavior.DefaultOutgoingResponseFormat%2A>. Автоматическое форматирование основано на свойстве <xref:System.ServiceModel.Description.WebHttpBehavior.AutomaticFormatSelectionEnabled%2A>. Если это свойство имеет значение `true`, инфраструктура [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] определяет лучший формат для использования. Автоматический выбор формата отключен по умолчанию в целях обратной совместимости. Автоматический выбор формата можно включить программно или через конфигурацию. В следующем примере показано включение автоматического выбора формата в коде.  
+ Если сообщение запроса содержит заголовок Accept для типа, который он поддерживает выполняет инфраструктуры Windows Communication Foundation (WCF). Если заголовок `Accept` указывает приоритеты типов носителей, то они учитываются. Если в заголовке `Accept` не найден подходящий формат, используется тип содержимого сообщения запроса. Если не указан подходящий тип содержимого, используется параметр формата по умолчанию для операции. Формат по умолчанию задается с помощью параметра `ResponseFormat` атрибутов <xref:System.ServiceModel.Web.WebGetAttribute> и <xref:System.ServiceModel.Web.WebInvokeAttribute>. Если не указан формат по умолчанию для операции, используется значение свойства <xref:System.ServiceModel.Description.WebHttpBehavior.DefaultOutgoingResponseFormat%2A>. Автоматическое форматирование основано на свойстве <xref:System.ServiceModel.Description.WebHttpBehavior.AutomaticFormatSelectionEnabled%2A>. Если это свойство имеет значение `true`, то инфраструктура WCF определяет лучший формат для использования. Автоматический выбор формата отключен по умолчанию в целях обратной совместимости. Автоматический выбор формата можно включить программно или через конфигурацию. В следующем примере показано включение автоматического выбора формата в коде.  
   
 ```csharp
 // This code assumes the service name is MyService and the service contract is IMyContract     

@@ -1,13 +1,6 @@
 ---
-title: "Проверка попадания на визуальном уровне"
-ms.custom: 
+title: Проверка попадания на визуальном уровне
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - hit testing functionality [WPF]
 - visual layer [WPF], hit testing functionality
 ms.assetid: b1a64b61-14be-4d75-b89a-5c67bebb2c7b
-caps.latest.revision: "42"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f1bdecedece4581eaf8a010eddc0974e44fe88ab
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 60da11af51722e86a61c5e3298fafba2221f000b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="hit-testing-in-the-visual-layer"></a>Проверка попадания на визуальном уровне
 В этом разделе приведены общие сведения о функции проверки попадания, предоставляемой на визуальном уровне. Поддержка проверки попадания позволяет определить, попадает ли геометрический объект или точка в отображаемое содержимое <xref:System.Windows.Media.Visual>, что позволяет реализовать поведение пользовательского интерфейса, например прямоугольник выделения, чтобы выбрать несколько объектов.  
@@ -61,7 +49,7 @@ ms.lasthandoff: 12/22/2017
   
  На следующем рисунке объект-круг расположен поверх объектов квадрат и треугольник. Если вас интересуют только попадания, значение которого z порядка самый верхний визуальный объект, можно задать перечисления visual проверки нажатия для возврата <xref:System.Windows.Media.HitTestResultBehavior.Stop> из <xref:System.Windows.Media.HitTestResultCallback> для остановки прохождения проверки попадания после первого элемента.  
   
- ![Схема z-45; порядок для визуального дерева](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-mmgraphics-visuals-hittest-2.png "wcpsdk_mmgraphics_visuals_hittest_2")  
+ ![Схема z&#45;порядок для визуального дерева](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-mmgraphics-visuals-hittest-2.png "wcpsdk_mmgraphics_visuals_hittest_2")  
 Z-порядок для визуального дерева  
   
  Если требуется перечислить все визуальные объекты в определенный момент или геометрии, возвращают <xref:System.Windows.Media.HitTestResultBehavior.Continue> из <xref:System.Windows.Media.HitTestResultCallback>. Это означает, что можно выполнять проверку попадания для визуальных объектов, которые находятся под другими объектами, даже если они полностью не видны. Более подробные сведения см. в примере кода в разделе «Использование обратного вызова результатов проверки попадания».  

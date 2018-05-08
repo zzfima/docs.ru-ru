@@ -1,14 +1,6 @@
 ---
-title: "Метод ICLRAssemblyIdentityManager::GetBindingIdentityFromFile"
-ms.custom: 
+title: Метод ICLRAssemblyIdentityManager::GetBindingIdentityFromFile
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICLRAssemblyIdentityManager.GetBindingIdentityFromFile
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 7797562d-7b4c-4bd9-8b93-f35e0e2869e4
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 5456d2747bb9c55d73fcc377036f5df1e8b10db0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 28e97289eda5949e6d124426eb58105e2e3ad33e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="iclrassemblyidentitymanagergetbindingidentityfromfile-method"></a>Метод ICLRAssemblyIdentityManager::GetBindingIdentityFromFile
 Возвращает удостоверение сборки привязки данных для сборки по указанному пути.  
@@ -76,7 +64,7 @@ HRESULT GetBindingIdentityFromFile(
 |E_FAIL|Неизвестная Неустранимая ошибка. Если метод вернет значение E_FAIL, среда CLR больше не может использоваться в процессе. Последующие вызовы размещение методы возвращают значение HOST_E_CLRNOTAVAILABLE.|  
   
 ## <a name="remarks"></a>Примечания  
- `GetBindingIdentityFromFile`обычно вызывается дважды. Первый вызов предоставляет значение null для `pwzBuffer`, а метод возвращает соответствующий размер в `pcchBufferSize`. При втором вызове указывается надлежащий выделенный буфер, а метод возвращает фактические данные буфера после завершения.  
+ `GetBindingIdentityFromFile` обычно вызывается дважды. Первый вызов предоставляет значение null для `pwzBuffer`, а метод возвращает соответствующий размер в `pcchBufferSize`. При втором вызове указывается надлежащий выделенный буфер, а метод возвращает фактические данные буфера после завершения.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
@@ -85,7 +73,7 @@ HRESULT GetBindingIdentityFromFile(
   
  **Библиотека:** включена как ресурс в MSCorEE.dll  
   
- **Версии платформы .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Версии платформы .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>См. также  
  [Интерфейс ICLRAssemblyIdentityManager](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-interface.md)  

@@ -1,14 +1,6 @@
 ---
-title: "Метод IMetaDataEmit::GetSaveSize"
-ms.custom: 
+title: Метод IMetaDataEmit::GetSaveSize
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IMetaDataEmit.GetSaveSize
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 8aea2e2c-23a3-4cda-9a06-e19f97383830
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 7585f6adbca97b252fdad90276b0cd422d32c04a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d9a65f76aed00e2b848f8603f1fee4d6acc91f99
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="imetadataemitgetsavesize-method"></a>Метод IMetaDataEmit::GetSaveSize
 Получает приблизительный двоичный размер сборки и ее метаданные в текущей области.  
@@ -61,7 +49,7 @@ HRESULT GetSaveSize (
  [out] Указатель на размер, необходимый для сохранения файла.  
   
 ## <a name="remarks"></a>Примечания  
- `GetSaveSize`вычисляет размер, в байтах для сохранения сборки и ее метаданные в текущей области. (Вызов [IMetaDataEmit::SaveToStream](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-savetostream-method.md) метод выдаст это число байтов.)  
+ `GetSaveSize` вычисляет размер, в байтах для сохранения сборки и ее метаданные в текущей области. (Вызов [IMetaDataEmit::SaveToStream](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-savetostream-method.md) метод выдаст это число байтов.)  
   
  Если вызывающий объект реализует интерфейс [IMapToken](../../../../docs/framework/unmanaged-api/metadata/imaptoken-interface.md) интерфейса (через [IMetaDataEmit::SetHandler](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-sethandler-method.md) или [IMetaDataEmit::Merge](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-merge-method.md)), `GetSaveSize` выполняет два прохода через метаданные для оптимизации, а затем сжать. В противном случае оптимизация не выполняется.  
   
@@ -74,7 +62,7 @@ HRESULT GetSaveSize (
   
  **Библиотека:** используется как ресурс в MSCorEE.dll  
   
- **Версии платформы .NET framework:**[!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
+ **Версии платформы .NET framework:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   
 ## <a name="see-also"></a>См. также  
  [Интерфейс IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)  

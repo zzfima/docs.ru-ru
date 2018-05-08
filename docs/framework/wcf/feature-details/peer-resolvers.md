@@ -1,24 +1,12 @@
 ---
-title: "Одноранговые распознаватели"
-ms.custom: 
+title: Одноранговые распознаватели
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: d86d12a1-7358-450f-9727-b6afb95adb9c
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 79c26ca9e167455dfbd664ea96e574c130cdc3d2
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 760011dda4a3059a217dcfbfc3fddaa67edc9995
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="peer-resolvers"></a>Одноранговые распознаватели
 Чтобы подключиться к сетке, одноранговому узлу требуются IP-адреса других узлов. Получение IP-адресов обычно происходит в результате обращения к службе арбитра, которая принимает идентификатор сетки и возвращает список адресов, соответствующих узлам, зарегистрированным для конкретного идентификатора сетки. Арбитр сохраняет список зарегистрированных адресов, которые он создает при регистрации в службе всех узлов сетки.  
@@ -28,7 +16,7 @@ ms.lasthandoff: 01/19/2018
 ## <a name="supported-peer-resolvers"></a>Поддерживаемые одноранговые распознаватели  
  Одноранговые каналы поддерживают распознаватели двух типов: протокол PNRP и пользовательские службы распознавателя.  
   
- По умолчанию для обнаружения одноранговых и соседних узлов в сетке используется служба однорангового распознавателя PNRP. В ситуациях и на платформах, где служба PNRP недоступна или нереализуема, [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] предоставляет альтернативную службу обнаружения на базе сервера - <xref:System.ServiceModel.PeerResolvers.CustomPeerResolverService>. Кроме того, можно явным образом определить пользовательскую службу распознавателя, написав класс, который реализует интерфейс <xref:System.ServiceModel.PeerResolvers.IPeerResolverContract>.  
+ По умолчанию для обнаружения одноранговых и соседних узлов в сетке используется служба однорангового распознавателя PNRP. Для ситуаций и платформы, где PNRP не недоступна или нереализуема, Windows Communication Foundation (WCF) предоставляет доступ к службе обнаружения альтернативные, серверных - <xref:System.ServiceModel.PeerResolvers.CustomPeerResolverService>. Кроме того, можно явным образом определить пользовательскую службу распознавателя, написав класс, который реализует интерфейс <xref:System.ServiceModel.PeerResolvers.IPeerResolverContract>.  
   
 ### <a name="peer-name-resolution-protocol-pnrp"></a>Протокол PNRP  
  Протокол PNRP, являющийся распознавателем по умолчанию для [!INCLUDE[wv](../../../../includes/wv-md.md)], представляет собой распределенную бессерверную службу распознавания имен. Протокол PNRP также можно использовать в [!INCLUDE[wxpsp2](../../../../includes/wxpsp2-md.md)], установив пакет Advanced Networking Pack. Любые два клиента, выполняющие одну и ту же версию PNRP, могут находить друг друга с помощью этого протокола, если соблюдаются определенные условия (например, между клиентами нет брандмауэра). Обратите внимание, что версия протокола PNRP, входящая в состав [!INCLUDE[wv](../../../../includes/wv-md.md)], новее версии, включенной в пакет Advanced Networking Pack. Проверьте Центр загрузки Майкрософт на наличие обновлений протокола PNRP для [!INCLUDE[wxpsp2](../../../../includes/wxpsp2-md.md)].  

@@ -1,27 +1,15 @@
 ---
-title: "Как реализовать обнаружимую службу, которая регистрируется в прокси-сервере обнаружения"
-ms.custom: 
+title: Как реализовать обнаружимую службу, которая регистрируется в прокси-сервере обнаружения
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: eb275bc1-535b-44c8-b9f3-0b75e9aa473b
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ee99c7c74f0e1e2d287802d46cf4b716cfa3b76d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e0ceada8f65b98676d160ba096c63bf946a178cf
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-implement-a-discoverable-service-that-registers-with-the-discovery-proxy"></a>Как реализовать обнаружимую службу, которая регистрируется в прокси-сервере обнаружения
-Данный раздел является вторым из четырех разделов, в которых обсуждается реализация прокси-сервера обнаружения. В предыдущем разделе [как: реализация прокси-сервера обнаружения](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md), реализации прокси-сервера обнаружения. В данном разделе создается служба [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], которая отправляет сообщения объявления (`Hello` и `Bye`) на прокси-сервер обнаружения, вызывающие ее регистрацию и отмену регистрации на прокси-сервере обнаружения.  
+Данный раздел является вторым из четырех разделов, в которых обсуждается реализация прокси-сервера обнаружения. В предыдущем разделе [как: реализация прокси-сервера обнаружения](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md), реализации прокси-сервера обнаружения. В этом разделе Создание службы WCF, которая отправляет сообщения объявления (`Hello` и `Bye`) для прокси-сервера обнаружения, поэтому она регистрацию и отмену регистрации прокси-сервере обнаружения.  
   
 ### <a name="to-define-the-service-contract"></a>Определение контракта службы  
   

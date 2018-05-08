@@ -1,13 +1,6 @@
 ---
-title: "Расширение разметки ComponentResourceKey"
-ms.custom: 
+title: Расширение разметки ComponentResourceKey
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - ComponentResourceKey
 - ComponentResourceKeyExtension
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - ComponentResourceKey markup extension [WPF]
 - XAML [WPF], ComponentResourceKey markup extension
 ms.assetid: d6bcdbe6-61b3-40a7-b381-4e02185b5a85
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f4bfaee35ba9f8cf60deb01c52a142433d08021c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d11c26add084165eaa9fd0b319a375c4b98c7fb9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="componentresourcekey-markup-extension"></a>Расширение разметки ComponentResourceKey
 Определения и ключи для ресурсов, которые загружаются из внешних сборок ссылок. Это позволяет при поиске ресурса указать целевой тип в сборке, вместо явного словаря ресурса в сборке или в классе.  
@@ -67,7 +55,7 @@ ms.lasthandoff: 12/22/2017
   
 -   Если доступ к ресурсу темы из сборки, являются создания новых шаблонов элемента управления, но нужно использовать значения свойств из ресурсов, предоставленных темами элемента управления.  
   
- Для ссылки на компонент ресурсов, поступивших из темы, обычно рекомендуется использовать `{DynamicResource}` вместо `{StaticResource}`. Это показано в вариантах применения. `{DynamicResource}`рекомендуется, поскольку тема сама по себе может быть изменена пользователем. Если требуется ресурс компонента, который наиболее близко соответствует цели автора элемента управления для поддержки темы, следует включить компонент ресурсов справочной информации для также быть динамическими.  
+ Для ссылки на компонент ресурсов, поступивших из темы, обычно рекомендуется использовать `{DynamicResource}` вместо `{StaticResource}`. Это показано в вариантах применения. `{DynamicResource}` рекомендуется, поскольку тема сама по себе может быть изменена пользователем. Если требуется ресурс компонента, который наиболее близко соответствует цели автора элемента управления для поддержки темы, следует включить компонент ресурсов справочной информации для также быть динамическими.  
   
  <xref:System.Windows.ComponentResourceKey.TypeInTargetAssembly%2A> Определяет тип, который существует в целевой сборки, где фактически определенных ресурсов. Объект `ComponentResourceKey` определяется и используется независимо от точно знать, где <xref:System.Windows.ComponentResourceKey.TypeInTargetAssembly%2A> определен, но в конечном счете необходимо разрешить тип из сборок, на которую указывает ссылка.  
   
@@ -79,7 +67,7 @@ ms.lasthandoff: 12/22/2017
   
  С технической точки зрения значение `targetID` может быть любым объектом, не имеет в виде строки. Наиболее распространенное использование в WPF то, чтобы выровнять `targetID` значение с формами, которые представляют собой строки, а когда такие строки являются допустимыми в [Грамматика XamlName](../../../../docs/framework/xaml-services/xamlname-grammar.md).  
   
- `ComponentResourceKey`может использоваться в синтаксисе элемента объекта. В этом случае укажите значение параметра оба <xref:System.Windows.ComponentResourceKey.TypeInTargetAssembly%2A> и <xref:System.Windows.ComponentResourceKey.ResourceId%2A> свойства, необходимые для правильной инициализации расширения.  
+ `ComponentResourceKey` может использоваться в синтаксисе элемента объекта. В этом случае укажите значение параметра оба <xref:System.Windows.ComponentResourceKey.TypeInTargetAssembly%2A> и <xref:System.Windows.ComponentResourceKey.ResourceId%2A> свойства, необходимые для правильной инициализации расширения.  
   
  В [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] реализацию средства чтения, обработка для данного расширения разметки определяется <xref:System.Windows.ComponentResourceKey> класса.  
   

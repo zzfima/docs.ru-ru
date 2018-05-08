@@ -1,14 +1,6 @@
 ---
-title: "Функция StrongNameKeyDelete"
-ms.custom: 
+title: Функция StrongNameKeyDelete
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - StrongNameKeyDelete
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: 313e71e4-1790-4d2f-b68b-5040ebd1c149
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: d3acd8ae5f330e23642a679962a04ccb4f7e8ec6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a35ec4e3c3110616ac20cd31db134371838deda0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="strongnamekeydelete-function"></a>Функция StrongNameKeyDelete
 Удаляет указанный контейнер ключей.  
@@ -52,7 +40,7 @@ BOOLEAN StrongNameKeyDelete (
  [in] Имя контейнера ключа для удаления.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- `true`При успешном завершении; в противном случае `false`.  
+ `true` При успешном завершении; в противном случае `false`.  
   
 ## <a name="remarks"></a>Примечания  
  Используйте [StrongNameKeyInstall](../../../../docs/framework/unmanaged-api/strong-naming/strongnamekeyinstall-function.md) функции importa пару открытого и закрытого ключей в контейнер.  
@@ -66,7 +54,7 @@ BOOLEAN StrongNameKeyDelete (
   
  **Библиотека:** включена как ресурс в MsCorEE.dll  
   
- **Версии платформы .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>См. также  
  [Метод StrongNameKeyDelete](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeydelete-method.md)  

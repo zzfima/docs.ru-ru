@@ -1,27 +1,15 @@
 ---
-title: "Стандартная функциональность элемента управления DataGridView в Windows Forms"
-ms.custom: 
+title: Стандартная функциональность элемента управления DataGridView в Windows Forms
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - data grids [Windows Forms], default functionality in DataGridView control
 - DataGridView control [Windows Forms], default functionality
 ms.assetid: 4405f697-cad1-4839-9bcd-8ddb09d9f00e
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ecb8cdaa4e8eb0498259c597e0de3f80c3106549
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a475d8bce388860c88571fbf638d206bfe01223d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="default-functionality-in-the-windows-forms-datagridview-control"></a>Стандартная функциональность элемента управления DataGridView в Windows Forms
 Windows Forms <xref:System.Windows.Forms.DataGridView> управления предоставляет пользователям широкую функциональность по умолчанию.  
@@ -51,7 +39,7 @@ Windows Forms <xref:System.Windows.Forms.DataGridView> управления пр
   
 -   Автоматически использует имена столбцов источника данных в виде текста заголовка столбца.  
   
--   Заполняется содержимым источника данных. <xref:System.Windows.Forms.DataGridView>столбцы создаются автоматически для каждого столбца в источнике данных.  
+-   Заполняется содержимым источника данных. <xref:System.Windows.Forms.DataGridView> столбцы создаются автоматически для каждого столбца в источнике данных.  
   
 -   Создает строку для каждой видимой строки в таблице.  
   

@@ -1,9 +1,6 @@
 ---
-title: "Пошаговое руководство. Создание приложения служб Windows в конструкторе компонентов"
+title: Пошаговое руководство. Создание приложения служб Windows в конструкторе компонентов
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.technology: dotnet-clr
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -11,16 +8,13 @@ helpviewer_keywords:
 - Windows Service applications, walkthroughs
 - Windows Service applications, creating
 ms.assetid: e24d8a3d-edc6-485c-b6e0-5672d91fb607
-caps.latest.revision: "57"
 author: ghogen
-ms.author: ghogen
 manager: douge
-ms.workload: dotnet
-ms.openlocfilehash: 42fc5f27f1c78e243ff1d3a705c61a20ff459937
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c33b8badcacd4e228d70f8e770d4bf27144c29eb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-creating-a-windows-service-application-in-the-component-designer"></a>Пошаговое руководство. Создание приложения служб Windows в конструкторе компонентов
 В этой статье описывается процедура создания простого приложения службы Windows в Visual Studio, которое записывает сообщения в журнал событий. Ниже приведены основные шаги, которые необходимо выполнить для создания и использования службы.  
@@ -64,7 +58,7 @@ ms.lasthandoff: 12/22/2017
   
 3.  В меню **Правка** выберите **Найти и заменить**, **Найти в файлах** (сочетание клавиш: Ctrl+Shift+F). Замените все вхождения службы `Service1` на `MyNewService`. Вы найдете экземпляры в Service1.cs, Program.cs и Service1.Designer.cs (или их эквивалентах .vb).  
   
-4.  В окне **Свойства** для **Service1.cs [Design]** или **Service1.vb [Design]**установите для <xref:System.ServiceProcess.ServiceBase.ServiceName%2A> и свойства **(Имя)** для `Service1` значение **MyNewService**, если это еще не сделано.  
+4.  В окне **Свойства** для **Service1.cs [Design]** или **Service1.vb [Design]** установите для <xref:System.ServiceProcess.ServiceBase.ServiceName%2A> и свойства **(Имя)** для `Service1` значение **MyNewService**, если это еще не сделано.  
   
 5.  В обозревателе решений переименуйте **Service1.cs** в **MyNewService.cs**или **Service1.vb** в **MyNewService.vb**.  
   

@@ -1,13 +1,6 @@
 ---
-title: "Практическое руководство. Сортировка столбцов GridView при нажатии на заголовок"
-ms.custom: 
+title: Практическое руководство. Сортировка столбцов GridView при нажатии на заголовок
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,16 +10,11 @@ helpviewer_keywords:
 - ListView controls [WPF], sorting GridView columns
 - GridView controls [WPF], ListView control
 ms.assetid: 4865d720-d147-40ed-83a7-af7587f8aad8
-caps.latest.revision: "18"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 018d5c39efc1459e8883cf67cfc7992860f45318
-ms.sourcegitcommit: c3ebb11a66e85a465c9ba2c42592222630b7ff9e
+ms.openlocfilehash: 30bcbd8b7cdd4c184560aaa4a2799137da51fc8a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-sort-a-gridview-column-when-a-header-is-clicked"></a>Практическое руководство. Сортировка столбцов GridView при нажатии на заголовок
 В этом примере показано, как создать <xref:System.Windows.Controls.ListView> управления, который реализует <xref:System.Windows.Controls.GridView> просмотра режим и сортировка данных содержимого при щелчке заголовка столбца.  

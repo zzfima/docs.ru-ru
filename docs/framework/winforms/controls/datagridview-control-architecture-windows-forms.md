@@ -1,28 +1,14 @@
 ---
-title: "Архитектура элементов управления DataGridView (Windows Forms)"
-ms.custom: 
+title: Архитектура элементов управления DataGridView (Windows Forms)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - DataGridView control [Windows Forms], architecture
 ms.assetid: 1c6cabf0-02ee-4bbc-9574-b54bb7f5b19e
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 3b3e51b87cdd766adcc10aa3f682647b28fbbe4d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a9fc1707b1691266d1844c411a08e7e8f35514ce
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="datagridview-control-architecture-windows-forms"></a>Архитектура элементов управления DataGridView (Windows Forms)
 <xref:System.Windows.Forms.DataGridView> Управления и его связанные классы предназначены для гибкую расширяемую систему для отображения и изменения табличных данных. Эти классы содержатся в <xref:System.Windows.Forms?displayProperty=nameWithType> пространства имен и они именуются с префиксом «DataGridView».  
@@ -67,9 +53,9 @@ ms.lasthandoff: 12/22/2017
  ![Объектная модель DataGridViewCell](../../../../docs/framework/winforms/controls/media/datagridviewcell.gif "DataGridViewCell")  
 Объектная модель DataGridViewCell  
   
- <xref:System.Windows.Forms.DataGridViewCell> Тип является абстрактным базовым классом, от которого наследуют все типы ячеек. <xref:System.Windows.Forms.DataGridViewCell>и его производные типы не являются элементы управления Windows Forms, но некоторые элементы управления ведущего приложения Windows Forms. Любые изменения функциональных возможностей, поддерживаемых ячейки обычно обрабатываются размещенного элемента управления.  
+ <xref:System.Windows.Forms.DataGridViewCell> Тип является абстрактным базовым классом, от которого наследуют все типы ячеек. <xref:System.Windows.Forms.DataGridViewCell> и его производные типы не являются элементы управления Windows Forms, но некоторые элементы управления ведущего приложения Windows Forms. Любые изменения функциональных возможностей, поддерживаемых ячейки обычно обрабатываются размещенного элемента управления.  
   
- <xref:System.Windows.Forms.DataGridViewCell>объекты контролирует собственные внешним видом и оформлением так же как элементы управления Windows Forms. Вместо этого <xref:System.Windows.Forms.DataGridView> отвечает за внешний вид его <xref:System.Windows.Forms.DataGridViewCell> объектов. Вы может существенно повлиять на внешний вид и поведение ячеек, взаимодействуя с <xref:System.Windows.Forms.DataGridView> свойства и события для элемента управления. При наличии особых требований к настройкам, выходящих за рамки возможностей <xref:System.Windows.Forms.DataGridView> управления, можно реализовать собственный класс, производный от <xref:System.Windows.Forms.DataGridViewCell> или один из его дочерних классов.  
+ <xref:System.Windows.Forms.DataGridViewCell> объекты контролирует собственные внешним видом и оформлением так же как элементы управления Windows Forms. Вместо этого <xref:System.Windows.Forms.DataGridView> отвечает за внешний вид его <xref:System.Windows.Forms.DataGridViewCell> объектов. Вы может существенно повлиять на внешний вид и поведение ячеек, взаимодействуя с <xref:System.Windows.Forms.DataGridView> свойства и события для элемента управления. При наличии особых требований к настройкам, выходящих за рамки возможностей <xref:System.Windows.Forms.DataGridView> управления, можно реализовать собственный класс, производный от <xref:System.Windows.Forms.DataGridViewCell> или один из его дочерних классов.  
   
  В следующем списке приведены классы, производные от <xref:System.Windows.Forms.DataGridViewCell>:  
   

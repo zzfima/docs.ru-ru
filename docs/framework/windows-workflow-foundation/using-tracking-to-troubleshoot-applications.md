@@ -1,24 +1,12 @@
 ---
 title: Использование отслеживания для устранения неполадок приложений
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 8851adde-c3c2-4391-9523-d8eb831490af
-caps.latest.revision: 7
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: adc9a159b8887b0198cf19891f73fdee2a48437b
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: ee9aaaae80f213f026a222ac1754ae8b4fdf2d37
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-tracking-to-troubleshoot-applications"></a>Использование отслеживания для устранения неполадок приложений
 Windows Workflow Foundation (WF) позволяет отслеживать сведения о рабочем процессе для предоставления сведений в выполнение Windows Workflow Foundation приложения или службы. Узлы Windows Workflow Foundation, могут захватывать события рабочего процесса во время выполнения экземпляра рабочего процесса. Если рабочий процесс приводит к возникновению ошибки или исключения, можно использовать данные отслеживания для устранения неполадок обработки Windows Workflow Foundation.  

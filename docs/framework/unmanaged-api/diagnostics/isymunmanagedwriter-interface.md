@@ -1,14 +1,6 @@
 ---
-title: "Интерфейс ISymUnmanagedWriter"
-ms.custom: 
+title: Интерфейс ISymUnmanagedWriter
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ISymUnmanagedWriter
 api_location:
@@ -22,24 +14,20 @@ helpviewer_keywords:
 ms.assetid: 7d6733ec-f081-4166-bc17-de09e16dc304
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: f4996f0196df4c2bcf890df6ad972f313403e435
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 86aa8d3d23d82d51cfe4e6ce6b15b554704ad41c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="isymunmanagedwriter-interface"></a>Интерфейс ISymUnmanagedWriter
 Представляет модуль записи символов и предоставляет методы для определения документов, точек следования, лексические области и переменные.  
   
 ## <a name="methods"></a>Методы  
   
-|Метод|Описание:|  
+|Метод|Описание|  
 |------------|-----------------|  
 |[Метод Abort](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-abort-method.md)|Закрывает средство записи символов без передачи символов в хранилище символов.|  
 |[Метод Close](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-close-method.md)|Закрывает средство записи символов после передачи символов в хранилище символов.|  

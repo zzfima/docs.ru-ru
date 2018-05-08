@@ -1,26 +1,12 @@
 ---
 title: Сеансы, экземпляры и параллелизм
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 50797a3b-7678-44ed-8138-49ac1602f35b
-caps.latest.revision: 16
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 6dd96ea552bb92dd90c1c47abac744c55e2e67e5
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: a3f56a08c695b4d92529d2c1bec625e9e8c6b6ec
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sessions-instancing-and-concurrency"></a>Сеансы, экземпляры и параллелизм
 Под *сеансом* понимается скоррелированный набор всех сообщений, переданных между двумя конечными точками. *Создание экземпляров* означает управление временем жизни определенных пользователем объектов службы и связанных с ними объектов <xref:System.ServiceModel.InstanceContext> . Термин*параллелизм* означает управление количеством потоков, одновременно выполняющихся в некотором контексте <xref:System.ServiceModel.InstanceContext> .  
@@ -30,7 +16,7 @@ ms.lasthandoff: 04/28/2018
 ## <a name="sessions"></a>Сеансы  
  Если в контракте службы для свойства <xref:System.ServiceModel.ServiceContractAttribute.SessionMode%2A?displayProperty=nameWithType> задано значение <xref:System.ServiceModel.SessionMode.Required?displayProperty=nameWithType>, такой контракт означает, что все вызовы (т. е. обмен сообщениями, на котором основана поддержка вызовов) должны быть частью одного диалога. Если в контракте указано, что сеансы для него разрешены, но не требуются, клиенты могут подключаться, создавая сеанс или не создавая его. Если сеанс завершен, но по этому же основанному на сеансе каналу отправляется сообщение, выдается исключение.  
   
- Сеансы[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] имеют следующие основные особенности:  
+ WCF сеансы имеют следующие основные особенности:  
   
 -   Они явным образом инициируются и завершаются вызвавшим приложением.  
   
@@ -38,11 +24,11 @@ ms.lasthandoff: 04/28/2018
   
 -   Сеанс коррелирует группу сообщений в диалог. Такая корреляция является абстракцией. Например, один основанный на сеансах канал может коррелировать сообщения, основываясь на общем сетевом подключении, а другой - основываясь на общем теге в тексте сообщения. Функции, получаемые в результате сеанса, зависят от характера корреляции.  
   
--   Нет общего хранилища данных, связанного с сеансом [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] .  
+-   Нет общего хранилища данных, связанного с сеансом WCF.  
   
- Зная особенности класса <xref:System.Web.SessionState.HttpSessionState?displayProperty=nameWithType> в приложениях [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] и обеспечиваемые им функциональные возможности, можно отметить следующие различия между его сеансами и сеансами [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]:  
+ Если вы знакомы с <xref:System.Web.SessionState.HttpSessionState?displayProperty=nameWithType> в класс [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] приложения и функциональные возможности она предоставляет, можно отметить следующие различия между его сеансами и сеансами WCF:  
   
--   Сеансы [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] всегда инициируются сервером.  
+-   Сеансы[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] всегда инициируются сервером.  
   
 -   Сеансы[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] явным образом неупорядочены.  
   
@@ -78,7 +64,7 @@ public class CalculatorService : ICalculatorInstance
   
  Для создания такой службы используйте конструктор <xref:System.ServiceModel.ServiceHost.%23ctor%28System.Object%2CSystem.Uri%5B%5D%29?displayProperty=nameWithType>. Он обеспечивает альтернативу реализации пользовательского <xref:System.ServiceModel.Dispatcher.IInstanceContextInitializer?displayProperty=nameWithType>, если требуется предоставить определенный экземпляр объекта для использования одноэлементной службой. Этот перегружаемый метод можно использовать, когда тип реализации службы не позволяет легко использовать конструктор (например, если он не реализует открытый конструктор по умолчанию без параметров).  
   
- Обратите внимание, что когда этому конструктору передается объект, некоторые функции [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] , связанные с созданием экземпляров, работают по-другому. Например, вызов <xref:System.ServiceModel.InstanceContext.ReleaseServiceInstance%2A?displayProperty=nameWithType> не выполняет никаких действий, если предоставлен экземпляр одноэлементного объекта. Аналогичным образом пропускаются все другие механизмы освобождения экземпляров. Приложение <xref:System.ServiceModel.ServiceHost> всегда ведет себя таким образом, как если бы для свойства <xref:System.ServiceModel.OperationBehaviorAttribute.ReleaseInstanceMode%2A?displayProperty=nameWithType> было задано значение <xref:System.ServiceModel.ReleaseInstanceMode.None?displayProperty=nameWithType> для всех операций.  
+ Обратите внимание, что при этом конструктору передается объект, некоторые функции, относящиеся к Windows Communication Foundation (WCF) поведения создания экземпляров работают по-разному. Например, вызов <xref:System.ServiceModel.InstanceContext.ReleaseServiceInstance%2A?displayProperty=nameWithType> не выполняет никаких действий, если предоставлен экземпляр одноэлементного объекта. Аналогичным образом пропускаются все другие механизмы освобождения экземпляров. Приложение <xref:System.ServiceModel.ServiceHost> всегда ведет себя таким образом, как если бы для свойства <xref:System.ServiceModel.OperationBehaviorAttribute.ReleaseInstanceMode%2A?displayProperty=nameWithType> было задано значение <xref:System.ServiceModel.ReleaseInstanceMode.None?displayProperty=nameWithType> для всех операций.  
   
 ### <a name="sharing-instancecontext-objects"></a>Совместное использование объектов InstanceContext  
  Также для каждого сеансового канала или вызова можно задать объект <xref:System.ServiceModel.InstanceContext> , с которым он будет ассоциирован, самостоятельно назначив ассоциацию.  
@@ -92,7 +78,7 @@ public class CalculatorService : ICalculatorInstance
   
 -   <xref:System.ServiceModel.ConcurrencyMode.Multiple>: каждый экземпляр службы может иметь несколько потоков, параллельно обрабатывающих сообщения. Чтобы использовать этот режим параллелизма, реализация службы должна быть потокобезопасной.  
   
--   <xref:System.ServiceModel.ConcurrencyMode.Reentrant>: каждый экземпляр службы одновременно обрабатывает одно сообщение, но принимает вызовы операций с повторным входом. Служба принимает такие вызовы только при вызове через объект клиента [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] .  
+-   <xref:System.ServiceModel.ConcurrencyMode.Reentrant>: каждый экземпляр службы одновременно обрабатывает одно сообщение, но принимает вызовы операций с повторным входом. Служба принимает такие вызовы только при вызове через объект клиента WCF.  
   
 > [!NOTE]
 >  Проектирование и разработка кода, который может безопасно использовать несколько потоков, может оказаться непростым делом. Перед использованием значения <xref:System.ServiceModel.ConcurrencyMode.Multiple> или <xref:System.ServiceModel.ConcurrencyMode.Reentrant> убедитесь, что служба должным образом разработана для поддержки этих режимов. Дополнительные сведения см. в разделе <xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A>.  

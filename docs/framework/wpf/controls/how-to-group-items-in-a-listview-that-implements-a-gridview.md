@@ -1,28 +1,16 @@
 ---
-title: "Практическое руководство. Группировка элементов в объекте ListView, реализующем GridView"
-ms.custom: 
+title: Практическое руководство. Группировка элементов в объекте ListView, реализующем GridView
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - ListView controls [WPF], grouping items with GridViews
 - grouping items in ListViews implementing GridViews [WPF]
 - GridView controls [WPF], grouping items
 ms.assetid: eebef25b-ddc6-424e-a66d-ea228d1bf33d
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 8a97a6c85036a6daf4e8c908186953f9a75f952a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 76074449d4ea1454689c51ecad54d7c495f00872
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-group-items-in-a-listview-that-implements-a-gridview"></a>Практическое руководство. Группировка элементов в объекте ListView, реализующем GridView
 В этом примере показано, как для отображения групп элементов в <xref:System.Windows.Controls.GridView> режим просмотра для <xref:System.Windows.Controls.ListView> элемента управления.  

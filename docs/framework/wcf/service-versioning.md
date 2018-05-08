@@ -1,29 +1,15 @@
 ---
 title: Управление версиями службы
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 37575ead-d820-4a67-8059-da11a2ab48e2
-caps.latest.revision: 19
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: fef65a4134f1cf526a7082b08aa4d8d1c6ea7f4d
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: efff9778f1cbe2ee5d97912ada0193c4e8ba137c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="service-versioning"></a>Управление версиями службы
-После первоначального развертывания служб и, возможно, несколько раз на протяжении времени их существования возникает потребность в изменении этих служб (и предоставляемых ими конечных точек). Причин тому немало: изменяющиеся потребности бизнеса, требования информационных технологий или необходимость решить какие-либо другие проблемы. В результате каждого изменения создается новая версия службы. В этом разделе описываются принципы управления версиями в [!INCLUDE[indigo1](../../../includes/indigo1-md.md)].  
+После первоначального развертывания служб и, возможно, несколько раз на протяжении времени их существования возникает потребность в изменении этих служб (и предоставляемых ими конечных точек). Причин тому немало: изменяющиеся потребности бизнеса, требования информационных технологий или необходимость решить какие-либо другие проблемы. В результате каждого изменения создается новая версия службы. В этом разделе описываются принципы управления версиями в Windows Communication Foundation (WCF).  
   
 ## <a name="four-categories-of-service-changes"></a>Четыре категории изменений службы  
  Все изменения, которые может потребоваться внести в службы, можно разделить на четыре категории:  

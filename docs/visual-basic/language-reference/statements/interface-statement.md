@@ -1,24 +1,17 @@
 ---
 title: Оператор Interface (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Interface
 helpviewer_keywords:
 - interface statement [Visual Basic]
 - interfaces [Visual Basic], interface definition
 ms.assetid: 8997af73-bda3-4f79-bd41-ca396b610260
-caps.latest.revision: 26
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 9418dc86ac6947ae951cb8fb757aed6e092a6668
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: f4282778db2d95f701cadb8bb98ec8ca982ba663
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="interface-statement-visual-basic"></a>Оператор Interface (Visual Basic)
 Объявляет имя интерфейса и представляет определения членов, которые входят в интерфейс.  
@@ -43,22 +36,22 @@ End Interface
   
 |Термин|Определение|  
 |---|---|  
-|`attributelist`|Необязательно. В разделе [список атрибутов](../../../visual-basic/language-reference/statements/attribute-list.md).|  
-|`accessmodifier`|Необязательно. Ниже указаны доступные значения.<br /><br /> -   [Public](../../../visual-basic/language-reference/modifiers/public.md)<br />-   [Защищенные](../../../visual-basic/language-reference/modifiers/protected.md)<br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)<br />-   [Закрытый](../../../visual-basic/language-reference/modifiers/private.md)<br />-   `Protected Friend`<br /><br /> В разделе [уровни в Visual Basic доступа](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).|  
-|`Shadows`|Необязательно. В разделе [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).|  
-|`name`|Обязательный. Имя этого интерфейса. В разделе [имена объявленных элементов](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).|  
-|`Of`|Необязательно. Указывает, что это универсальный интерфейс.|  
+|`attributelist`|Необязательный. В разделе [список атрибутов](../../../visual-basic/language-reference/statements/attribute-list.md).|  
+|`accessmodifier`|Необязательный. Ниже указаны доступные значения.<br /><br /> -   [Public](../../../visual-basic/language-reference/modifiers/public.md)<br />-   [Защищенные](../../../visual-basic/language-reference/modifiers/protected.md)<br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)<br />-   [Закрытый](../../../visual-basic/language-reference/modifiers/private.md)<br />-   `Protected Friend`<br /><br /> В разделе [уровни в Visual Basic доступа](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).|  
+|`Shadows`|Необязательный. В разделе [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).|  
+|`name`|Обязательно. Имя этого интерфейса. В разделе [имена объявленных элементов](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).|  
+|`Of`|Необязательный. Указывает, что это универсальный интерфейс.|  
 |`typelist`|Является обязательным, если используется [из](../../../visual-basic/language-reference/statements/of-clause.md) ключевое слово. Список параметров типа для этого интерфейса. Кроме того, каждый параметр типа можно объявить как вариант с использованием `In` и `Out` универсальных модификаторов. В разделе [введите список](../../../visual-basic/language-reference/statements/type-list.md).|  
-|`Inherits`|Необязательно. Указывает, что этот интерфейс наследует атрибуты и члены другого интерфейса или интерфейсов. В разделе [Инструкция Inherits](../../../visual-basic/language-reference/statements/inherits-statement.md).|  
+|`Inherits`|Необязательный. Указывает, что этот интерфейс наследует атрибуты и члены другого интерфейса или интерфейсов. В разделе [Инструкция Inherits](../../../visual-basic/language-reference/statements/inherits-statement.md).|  
 |`interfacenames`|Является обязательным, если используется `Inherits` инструкции. Имена интерфейсов, из которых производится данный интерфейс.|  
-|`modifiers`|Необязательно. Соответствующие модификаторы для определяемого члена интерфейса.|  
-|`Property`|Необязательно. Определяет свойство, которое является членом интерфейса.|  
-|`Function`|Необязательно. Определяет `Function` процедуру, которая является членом интерфейса.|  
-|`Sub`|Необязательно. Определяет `Sub` процедуру, которая является членом интерфейса.|  
-|`Event`|Необязательно. Определяет событие, которое является членом интерфейса.|  
-|`Interface`|Необязательно. Определяет интерфейс, вложенный в этот интерфейс. Определение вложенного интерфейса должен завершать `End Interface` инструкции.|  
-|`Class`|Необязательно. Определяет класс, который является членом интерфейса. Определение члена класса должен завершать `End Class` инструкции.|  
-|`Structure`|Необязательно. Определяет структуру, которая является членом интерфейса. Определение члена структуры должен завершать `End Structure` инструкции.|  
+|`modifiers`|Необязательный. Соответствующие модификаторы для определяемого члена интерфейса.|  
+|`Property`|Необязательный. Определяет свойство, которое является членом интерфейса.|  
+|`Function`|Необязательный. Определяет `Function` процедуру, которая является членом интерфейса.|  
+|`Sub`|Необязательный. Определяет `Sub` процедуру, которая является членом интерфейса.|  
+|`Event`|Необязательный. Определяет событие, которое является членом интерфейса.|  
+|`Interface`|Необязательный. Определяет интерфейс, вложенный в этот интерфейс. Определение вложенного интерфейса должен завершать `End Interface` инструкции.|  
+|`Class`|Необязательный. Определяет класс, который является членом интерфейса. Определение члена класса должен завершать `End Class` инструкции.|  
+|`Structure`|Необязательный. Определяет структуру, которая является членом интерфейса. Определение члена структуры должен завершать `End Structure` инструкции.|  
 |`membername`|Требуется для каждого свойства, процедуры, события, интерфейса, класса или структуры, определенных как члена интерфейса. Имя элемента.|  
 |`End Interface`|Завершает `Interface` определения.|  
   

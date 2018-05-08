@@ -1,36 +1,22 @@
 ---
 title: Атрибуты ServiceModel и справочная информация ServiceDescription
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 4ab86b17-eab9-4846-a881-0099f9a7cc64
-caps.latest.revision: 13
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: ba8888c2a1bd3c16ab6d216c365870c0df0e499a
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: cc7c36ff7a1c81227f118ee7113be8f7f9eb2e9f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="servicemodel-attributes-and-servicedescription-reference"></a>Атрибуты ServiceModel и справочная информация ServiceDescription
-*Дерево описания* иерархия типов (начиная с <xref:System.ServiceModel.Description.ServiceDescription?displayProperty=nameWithType> класса), которые вместе описывают каждый аспект службы. [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] использует дерево описания для сборки допустимой среды выполнения службы, для публикации схем на языке WSDL, схем XSD и утверждений политики (метаданные) о службе, которые клиенты могут использовать для подключения и использования службы, а также для создания различных файлов конфигурации представления и кода на основе значений из дерева описания.  
+*Дерево описания* иерархия типов (начиная с <xref:System.ServiceModel.Description.ServiceDescription?displayProperty=nameWithType> класса), которые вместе описывают каждый аспект службы. Windows Communication Foundation (WCF) использует дерево описания для сборки допустимой среды выполнения службы, для публикации языка описания веб-служб (WSDL), язык определения схемы XML (XSD) и утверждений политики (метаданные) о службе, которые клиенты могут использовать для подключения и использования службы, а также для создания кода и конфигурации файла представления описание значений из дерева.  
   
  В этом разделе описывается получение свойств, относящихся к контракту, из контракта службы, а также их реализация и добавление в дерево описания. В некоторых случаях значения атрибутов преобразуются в свойства поведения, затем поведение вставляется в дерево описания. Дополнительные сведения о преобразование значений дерево описания в метаданные, см. в разделе [Справочник WSDL и ServiceDescription](../../../../docs/framework/wcf/feature-details/servicedescription-and-wsdl-reference.md).  
   
 ## <a name="mapping-operations-to-the-description-tree"></a>Сопоставление операций дереву описания  
- В приложениях [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] контракты службы моделируются интерфейсами (или классами), использующими атрибуты для отметки интерфейса или класса и его методы в качестве групп операций. При открытии класса <xref:System.ServiceModel.ServiceHost> все контракты и реализации службы отражаются и объединяются с информацией о конфигурации в дереве описания.  
+ В приложениях WCF контракты службы моделируются интерфейсами (или классы), использующими атрибуты для отметки интерфейса или класса и его методов как группирования операций. При открытии класса <xref:System.ServiceModel.ServiceHost> все контракты и реализации службы отражаются и объединяются с информацией о конфигурации в дереве описания.  
   
- Существует два типа моделей операции: *параметр* модели и *контракт сообщения* модели. В модели параметров используются управляемые методы, не имеющие типа параметра или возвращаемого значения, помеченного классом <xref:System.ServiceModel.MessageContractAttribute?displayProperty=nameWithType>. В этой модели разработчики управляют сериализацией параметров и возвращаемых значений, а [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] генерирует значения, используемые для заполнения дерева описания службы и ее контракта.  
+ Существует два типа моделей операции: *параметр* модели и *контракт сообщения* модели. В модели параметров используются управляемые методы, не имеющие типа параметра или возвращаемого значения, помеченного классом <xref:System.ServiceModel.MessageContractAttribute?displayProperty=nameWithType>. В этой модели разработчики управляют сериализацией параметров и возвращаемых значений, но WCF формирует значения, которые используются для заполнения дерева описания службы и ее контракта.  
   
  Привязки, указанные в файлах конфигурации, загружаются непосредственно в свойство <xref:System.ServiceModel.Description.ServiceEndpoint.Binding%2A?displayProperty=nameWithType>.  
   

@@ -1,13 +1,6 @@
 ---
-title: "Практическое руководство. Применение фонового потока для поиска файлов"
-ms.custom: 
+title: Практическое руководство. Применение фонового потока для поиска файлов
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,35 +10,30 @@ helpviewer_keywords:
 - threading [Windows Forms], custom controls
 - custom controls [Windows Forms], samples
 ms.assetid: 7fe3956f-5b8f-4f78-8aae-c9eb0b28f13a
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ea1f2edf4677e3a04e6dd007dcf0fef9137180fe
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1034868939837fc43cf7595c819a6109331a2684
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-use-a-background-thread-to-search-for-files"></a>Практическое руководство. Применение фонового потока для поиска файлов
 <xref:System.ComponentModel.BackgroundWorker> Компонент заменяет и расширяет его функциональные возможности <xref:System.Threading> пространства имен, однако <xref:System.Threading> пространство имен сохраняется для обеспечения обратной совместимости и использования в будущем при выборе. Дополнительные сведения см. в разделе [Общие сведения о компоненте BackgroundWorker](../../../../docs/framework/winforms/controls/backgroundworker-component-overview.md).  
   
  Windows Forms использует модель однопотокового подразделения (STA), так как Windows Forms основана на исходных окон Win32, которые являются по своей природе однопотоковое подразделение. Модель STA подразумевает окна могут создаваться в любом потоке, но не может переключать созданные потоки, что все вызовы функции в должно выполняться с его создания потока. За пределами Windows Forms классы .NET Framework используют свободной потоковой модели. Сведения о работе с потоками в платформе .NET Framework см. в разделе [потоки](../../../../docs/standard/threading/index.md).  
   
- Модель STA требует, что все методы управления, который необходимо вызывать не из должны маршалироваться (выполняется на) потока создания элемента управления. Базовый класс <xref:System.Windows.Forms.Control> предоставляет несколько методов (<xref:System.Windows.Forms.Control.Invoke%2A>, <xref:System.Windows.Forms.Control.BeginInvoke%2A>, и <xref:System.Windows.Forms.Control.EndInvoke%2A>) для этой цели. <xref:System.Windows.Forms.Control.Invoke%2A>осуществляет синхронные вызовы метода; <xref:System.Windows.Forms.Control.BeginInvoke%2A> вызывает асинхронный метод.  
+ Модель STA требует, что все методы управления, который необходимо вызывать не из должны маршалироваться (выполняется на) потока создания элемента управления. Базовый класс <xref:System.Windows.Forms.Control> предоставляет несколько методов (<xref:System.Windows.Forms.Control.Invoke%2A>, <xref:System.Windows.Forms.Control.BeginInvoke%2A>, и <xref:System.Windows.Forms.Control.EndInvoke%2A>) для этой цели. <xref:System.Windows.Forms.Control.Invoke%2A> осуществляет синхронные вызовы метода; <xref:System.Windows.Forms.Control.BeginInvoke%2A> вызывает асинхронный метод.  
   
  При использовании многопоточности для ресурсоемких задач элемента управления, пользовательский интерфейс может остаться работоспособным ресурсоемкие вычисления выполняется в фоновом потоке.  
   
  Следующий пример (`DirectorySearcher`) показывает многопоточный элемент управления Windows Forms, использует фоновый поток для рекурсивного поиска каталога с файлами, соответствующими заданной строке поиска, а затем заполняет поле со списком с результатами поиска. Ниже приведены основные понятия, показан в образце.  
   
--   `DirectorySearcher`начинает новый поток для выполнения поиска. Поток выполняет `ThreadProcedure` метод, который в свою очередь вызывает вспомогательный объект `RecurseDirectory` метод для выполнения фактического поиска и для заполнения списка. Однако заполнение списка требует вызова между потоками, как описано в следующих двух пунктах.  
+-   `DirectorySearcher` начинает новый поток для выполнения поиска. Поток выполняет `ThreadProcedure` метод, который в свою очередь вызывает вспомогательный объект `RecurseDirectory` метод для выполнения фактического поиска и для заполнения списка. Однако заполнение списка требует вызова между потоками, как описано в следующих двух пунктах.  
   
--   `DirectorySearcher`Определяет `AddFiles` метод, чтобы добавить файлы к списку; Однако `RecurseDirectory` не может напрямую вызвать `AddFiles` из-за `AddFiles` может выполняться только в потоке STA, где создан `DirectorySearcher`.  
+-   `DirectorySearcher` Определяет `AddFiles` метод, чтобы добавить файлы к списку; Однако `RecurseDirectory` не может напрямую вызвать `AddFiles` из-за `AddFiles` может выполняться только в потоке STA, где создан `DirectorySearcher`.  
   
--   Единственным способом `RecurseDirectory` можно вызвать `AddFiles` выполняется с помощью вызова между потоками, то есть путем вызова <xref:System.Windows.Forms.Control.Invoke%2A> или <xref:System.Windows.Forms.Control.BeginInvoke%2A> для маршалинга `AddFiles` для создания потока `DirectorySearcher`. `RecurseDirectory`использует <xref:System.Windows.Forms.Control.BeginInvoke%2A> , чтобы вызов может выполняться асинхронно.  
+-   Единственным способом `RecurseDirectory` можно вызвать `AddFiles` выполняется с помощью вызова между потоками, то есть путем вызова <xref:System.Windows.Forms.Control.Invoke%2A> или <xref:System.Windows.Forms.Control.BeginInvoke%2A> для маршалинга `AddFiles` для создания потока `DirectorySearcher`. `RecurseDirectory` использует <xref:System.Windows.Forms.Control.BeginInvoke%2A> , чтобы вызов может выполняться асинхронно.  
   
--   Маршалинг метода требует эквивалент указателя функции или обратного вызова. Это можно сделать с помощью делегаты в .NET Framework. <xref:System.Windows.Forms.Control.BeginInvoke%2A>принимает делегат в качестве аргумента. `DirectorySearcher`Таким образом определяется делегат (`FileListDelegate`), привязывает `AddFiles` к экземпляру `FileListDelegate` в конструкторе и передает этот экземпляр делегата в <xref:System.Windows.Forms.Control.BeginInvoke%2A>. `DirectorySearcher`также определяет делегат события, маршалируемый после завершения поиска.  
+-   Маршалинг метода требует эквивалент указателя функции или обратного вызова. Это можно сделать с помощью делегаты в .NET Framework. <xref:System.Windows.Forms.Control.BeginInvoke%2A> принимает делегат в качестве аргумента. `DirectorySearcher` Таким образом определяется делегат (`FileListDelegate`), привязывает `AddFiles` к экземпляру `FileListDelegate` в конструкторе и передает этот экземпляр делегата в <xref:System.Windows.Forms.Control.BeginInvoke%2A>. `DirectorySearcher` также определяет делегат события, маршалируемый после завершения поиска.  
   
 ```vb  
 Option Strict  

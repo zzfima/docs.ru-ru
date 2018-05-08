@@ -1,31 +1,19 @@
 ---
-title: "Отложенная инициализация"
-ms.custom: 
+title: Отложенная инициализация
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - lazy initialization in .NET, introduction
 ms.assetid: 56b4ae5c-4745-44ff-ad78-ffe4fcde6b9b
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: f4998cc0c836cf46d79d854ad9a85e7eacf70d7f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a826121a7f22d1db7287171c5add28e5fcd690cc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="lazy-initialization"></a>Отложенная инициализация
 *Отложенная инициализация* объекта означает, что его создание откладывается до первого использования. (В этом разделе термины *отложенная инициализация* и *отложенное создание экземпляра* являются синонимами.) Отложенная инициализация в основном используется, чтобы повысить быстродействие, избежать ресурсоемких вычислений и уменьшить требования к памяти программы. Ниже приведены наиболее распространенные сценарии.  
@@ -38,7 +26,7 @@ ms.lasthandoff: 12/22/2017
   
  В таблице ниже приведены типы, предоставляемые в .NET Framework версии 4 для поддержки отложенной инициализации в различных сценариях.  
   
-|Тип|Описание:|  
+|Тип|Описание|  
 |----------|-----------------|  
 |<xref:System.Lazy%601>|Класс-оболочка, предоставляющий семантику отложенной инициализации для любого типа из библиотеки классов или пользовательского типа.|  
 |<xref:System.Threading.ThreadLocal%601>|Похож на тип <xref:System.Lazy%601> за исключением того, что предоставляет семантику отложенной инициализации на основе локального потока. У каждого потока есть доступ к собственному уникальному значению.|  

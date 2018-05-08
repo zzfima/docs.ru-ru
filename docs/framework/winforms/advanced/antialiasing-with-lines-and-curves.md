@@ -1,13 +1,6 @@
 ---
-title: "Сглаживание прямых и кривых линий"
-ms.custom: 
+title: Сглаживание прямых и кривых линий
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,19 +9,14 @@ helpviewer_keywords:
 - antialiasing [Windows Forms], smoothing modes
 - GDI+, antialiasing
 ms.assetid: 810da1a4-c136-4abf-88df-68e49efdd8d4
-caps.latest.revision: "16"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b8552f185a93b688555dbcfab3da9d28d9bfde6d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ccc75a535d8ef21cc780ae8e20d590631306bdc9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="antialiasing-with-lines-and-curves"></a>Сглаживание прямых и кривых линий
-При использовании [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] для рисования линии, предоставляют начальную и конечную точки линии, но вам не требуется задать любые сведения об отдельных точках в строке. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]работает в сочетании с программным обеспечением драйвера экрана, чтобы определить, какие точек будет включена для отображения в строке для каждого конкретного устройства отображения.  
+При использовании [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] для рисования линии, предоставляют начальную и конечную точки линии, но вам не требуется задать любые сведения об отдельных точках в строке. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] работает в сочетании с программным обеспечением драйвера экрана, чтобы определить, какие точек будет включена для отображения в строке для каждого конкретного устройства отображения.  
   
 ## <a name="aliasing"></a>Совмещение имен  
  Попробуйте прямо красная линия, идущий от точки (4, 2) в точку (16, 10). Предположим системы координат расположен в верхнем левом углу, а единицей измерения является пикселя. Также предположим, на который указывает ось x вправо, а ось y точки вниз. Ниже показано увеличенное изображение красной линии, нарисованной на многоцветном фоне.  

@@ -1,29 +1,19 @@
 ---
-title: "Конечная точка: количество сбоев при проверке безопасности и проверке подлинности в секунду"
-ms.custom: 
+title: 'Конечная точка: количество сбоев при проверке безопасности и проверке подлинности в секунду'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 89a70b90-d7e4-4b03-9b84-4dc88ce3d605
-caps.latest.revision: "8"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: f457a3067a4ada3ea226bf289c9c559ef5e35594
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: bc68f49326818f0e6687c06a38e5e51fd6960c9f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="endpoint-security-validation-and-authentication-failures-per-second"></a>Конечная точка: количество сбоев при проверке безопасности и проверке подлинности в секунду
 Имя счетчика: Security Validation and Authentication Failures Per Second  
   
-## <a name="description"></a>Описание:  
+## <a name="description"></a>Описание  
  Значение этого счетчика увеличивается всякий раз, когда сообщение отклоняется из-за проблемы безопасности, не относящейся к счетчику "Security Calls Not Authorized". К таким проблемам относятся следующие.  
   
 -   Невозможно прочесть в этом сообщении маркер клиента.  

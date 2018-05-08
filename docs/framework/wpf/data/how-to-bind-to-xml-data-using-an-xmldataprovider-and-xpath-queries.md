@@ -1,28 +1,16 @@
 ---
-title: "Практическое руководство. Привязка к данным xml с помощью XMLDataProvider и запросов XPath"
-ms.custom: 
+title: Практическое руководство. Привязка к данным xml с помощью XMLDataProvider и запросов XPath
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - XmlDataProvider [WPF], binding to XML data
 - data binding [WPF], binding to XML data using XmlDataProvider queries
 - binding [WPF], to XML data using XmlDataProvider queries
 ms.assetid: 7dcd018f-16aa-4870-8e47-c1b4ea31e574
-caps.latest.revision: "22"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 92037be2280eaa248951ff9bad82b7a1581a4fd9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: bb8eb727fb6614440721c4d34a7d1828182d2f14
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries"></a>Практическое руководство. Привязка к данным xml с помощью XMLDataProvider и запросов XPath
 В этом примере показано, как выполнить привязку к [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] данных с помощью <xref:System.Windows.Data.XmlDataProvider>.  
@@ -55,7 +43,7 @@ ms.lasthandoff: 12/22/2017
   
 -   `XPath="*[position()>3]"` возвращает все элементы книги, за исключением первых трех.  
   
- При запуске **XPath** запрос, он возвращает <xref:System.Xml.XmlNode> или список XmlNodes. <xref:System.Xml.XmlNode>— [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] объекта, то есть, можно использовать <xref:System.Windows.Data.Binding.Path%2A> свойство для привязки [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] свойства. Вернемся к нашему предыдущему примеру еще раз. Если остальную часть примера остается неизменным, и изменить <xref:System.Windows.Controls.TextBlock> привязки приведенному ниже, будут отображаться имена возвращенных XMLNodes в <xref:System.Windows.Controls.ListBox>. В этом случае все возвращаемые узлы называются "*книги*".  
+ При запуске **XPath** запрос, он возвращает <xref:System.Xml.XmlNode> или список XmlNodes. <xref:System.Xml.XmlNode> — [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] объекта, то есть, можно использовать <xref:System.Windows.Data.Binding.Path%2A> свойство для привязки [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] свойства. Вернемся к нашему предыдущему примеру еще раз. Если остальную часть примера остается неизменным, и изменить <xref:System.Windows.Controls.TextBlock> привязки приведенному ниже, будут отображаться имена возвращенных XMLNodes в <xref:System.Windows.Controls.ListBox>. В этом случае все возвращаемые узлы называются "*книги*".  
   
  [!code-xaml[XmlDataSourceVariation#XmlNodePath](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XmlDataSourceVariation/CS/Page1.xaml#xmlnodepath)]  
   

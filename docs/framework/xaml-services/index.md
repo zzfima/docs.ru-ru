@@ -1,30 +1,16 @@
 ---
 title: Службы XAML
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - XAML [XAML Services], System.Xaml concepts
 - XAML Services in WPF [XAML Services]
 - System.Xaml [XAML Services], conceptual documentation
 ms.assetid: 0e11f386-808c-4eae-9ba6-029ad7ba2211
-caps.latest.revision: 13
-author: wadepickett
-ms.author: wpickett
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: f36f22e8bf68520f5f57280d33cf37990feb2df6
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: fbe67e81bdc461e290b5cdbb9e1050aec32ce8fa
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="xaml-services"></a>Службы XAML
 В этом разделе описываются возможности набора технологий, называются службами XAML платформы .NET Framework. Большинство служб и интерфейсов API, описанных находятся в сборке System.Xaml, которая представляет собой сборку предварен [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] набор основных сборок .NET. Службы включают в себя средства чтения и записи, классы схемы и поддержка схемы, фабрики, присвоение атрибутов классов, встроенной поддержки языка XAML и другие возможности языка XAML.  
@@ -49,7 +35,7 @@ ms.lasthandoff: 04/28/2018
  Если вы ищете вводный материал на языке XAML, можно попробовать [Обзор XAML (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md). Этом разделе описывается XAML для аудитории, новые для обоих [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] и с использованием разметки XAML и возможностей языка XAML. Другим полезным документ является вводный материал в [спецификации языка XAML](http://go.microsoft.com/fwlink/?LinkId=114525).  
   
 ## <a name="net-framework-xaml-services-and-systemxaml-in-the-net-architecture"></a>Службы XAML .NET framework и System.Xaml в архитектуре .NET  
- В предыдущих версиях [!INCLUDE[TLA#tla_netframewk](../../../includes/tlasharptla-netframewk-md.md)], поддержка возможностей языка XAML была реализована с платформ на основе [!INCLUDE[TLA#tla_netframewk](../../../includes/tlasharptla-netframewk-md.md)] ([!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], Windows Workflow Foundation и Windows Communication Foundation (WCF)) и поэтому менялись в его поведение и API, использующихся в зависимости от какой конкретной платформы, на который вы использовали. Это включены XAML синтаксического анализа и объект graph механизм создания, встроенные функции языка XAML, поддержка сериализации и т. д.  
+ В предыдущих версиях Microsoft .NET Framework, поддержка возможностей языка XAML была реализована платформами, которые построены на Microsoft .NET Framework ([!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], Windows Workflow Foundation и Windows Communication Foundation (WCF)) и, следовательно, изменять его поведение и API, использующихся в зависимости от какой конкретной платформы, на который вы использовали. Это включены XAML синтаксического анализа и объект graph механизм создания, встроенные функции языка XAML, поддержка сериализации и т. д.  
   
  В [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], объем необходимых для поддержки возможностей языка XAML для определения служб XAML .NET Framework и в сборке System.Xaml. Это включает базовые классы для чтения и записи XAML. Наиболее важные компонент, добавленный в службах XAML .NET Framework, который не был представлен в некоторых реализациях XAML для отдельных является представление системы типов для XAML. Представление системы типов XAML представляется в объектно ориентированным способом, где возможности XAML без учета зависимости от конкретных возможностей платформы.  
   

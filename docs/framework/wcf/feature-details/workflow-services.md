@@ -1,24 +1,12 @@
 ---
-title: "Службы рабочего процесса"
-ms.custom: 
+title: Службы рабочего процесса
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 7b05c766-f181-425d-9a3d-2a5e150c85f7
-caps.latest.revision: "20"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0e33915105ca9ff095f09bcd52431212e7c8e927
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a8871685007cdb81848848da5c6b3483d014bb20
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="workflow-services"></a>Службы рабочего процесса
 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] позволяет описать службу на основе рабочего процесса полностью декларативно на языке XAML. Рабочий процесс, реализующий службу, и описание конечных точек, предоставляемых службой, можно полностью определить на языке XAML. Подразделы, содержащиеся в этом разделе, подробно описывают модель программирования, декларативную поддержку создания служб.  

@@ -1,23 +1,12 @@
 ---
-title: "Удаление добавляемого конструктором в файл XAML состояния просмотра"
-ms.custom: 
+title: Удаление добавляемого конструктором в файл XAML состояния просмотра
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: a801ce22-8699-483c-a392-7bb3834aae4f
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 5da4423b5f6106bde106de739a8a33e351d17c3d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f63723c29c76854602308ba3e8d7e6dd65d9fb94
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="removing-the-view-state-the-designer-adds-to-an-xaml-file"></a>Удаление добавляемого конструктором в файл XAML состояния просмотра
 Этот образец демонстрирует создание класса, производного от <xref:System.Windows.Markup.XamlWriter>, и удаление состояния представления из файла XAML. [!INCLUDE[wfd1](../../../../includes/wfd1-md.md)] записывает сведения в документ XAML, который известен как состояние представления. Состоянием представления называются сведения, которые требуются во время разработки, такие как расположение макета, и не требуются во время выполнения. [!INCLUDE[wfd2](../../../../includes/wfd2-md.md)] вставляет эти сведения в документ XAML в ходе внесения в него изменений. [!INCLUDE[wfd2](../../../../includes/wfd2-md.md)] записывает состояние представления в файл XAML с атрибутом `mc:Ignorable`, поэтому эти сведения не загружаются, когда среда выполнения загружает файл XAML. Этот образец демонстрирует, как создать класс, который удаляет указанные сведения о состоянии представления при обработке узлов XAML.  
@@ -129,6 +118,6 @@ XamlServices.Save(new ViewStateCleaningWriter(ActivityXamlServices.CreateBuilder
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Если этот каталог не существует, перейдите на страницу [Примеры Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все примеры [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Этот образец расположен в следующем каталоге.  
+> Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] образцов. Этот образец расположен в следующем каталоге.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Designer\ViewStateCleaningWriter`

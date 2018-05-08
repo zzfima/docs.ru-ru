@@ -1,30 +1,20 @@
 ---
-title: "Незащищенные интранет-клиент и служба"
-ms.custom: 
+title: Незащищенные интранет-клиент и служба
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: f450f5d4-3547-47ec-9320-2809e6a12634
-caps.latest.revision: "20"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 0cfd98d401921c47bd85f8d4089e3efb437ca6b7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d08e8b5f9a22fc558af6f8f7c2ca3049e4a692ba
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="intranet-unsecured-client-and-service"></a>Незащищенные интранет-клиент и служба
-На следующем рисунке показана простая служба [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], разработанная для предоставления приложению [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] сведений о защищенной частной сети. Безопасность не требуется, поскольку данные имеют низкий уровень важности, предполагается, что сеть в своей основе является защищенной, или безопасность обеспечивается уровнем, расположенным ниже инфраструктуры [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+На следующем рисунке показана простая служба Windows Communication Foundation (WCF), разработаны для предоставления информации о защищенной частной сети для приложения WCF. Безопасность не является обязательной, так как данные имеют низкий уровень важности, должно быть в своей основе является защищенной сети или безопасность обеспечивается уровнем ниже инфраструктура WCF.  
   
  ![Незащищенные интранет-клиент и служба сценария](../../../../docs/framework/wcf/feature-details/media/unsecuredwebservice.gif "UnsecuredWebService")  
   
@@ -33,8 +23,8 @@ ms.lasthandoff: 12/22/2017
 |Режим безопасности|Нет|  
 |Transport|TCP|  
 |Привязка|<xref:System.ServiceModel.NetTcpBinding>|  
-|Взаимодействие|Только [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]|  
-|Аутентификация|Нет|  
+|Взаимодействие|Только WCF|  
+|Проверка подлинности|Нет|  
 |Целостность|Нет|  
 |Конфиденциальность|Нет|  
   
@@ -92,7 +82,7 @@ ms.lasthandoff: 12/22/2017
      [!code-vb[C_SecurityScenarios#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#0)]  
   
 ### <a name="code"></a>Код  
- В следующем коде показан основной клиент [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], обращающийся к незащищенной конечной точке по протоколу TCP.  
+ В следующем коде показано основной клиент WCF, обращающийся к незащищенной конечной точке по протоколу TCP.  
   
  [!code-csharp[C_UnsecuredClient#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_unsecuredclient/cs/source.cs#2)]
  [!code-vb[C_UnsecuredClient#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_unsecuredclient/vb/source.vb#2)]  

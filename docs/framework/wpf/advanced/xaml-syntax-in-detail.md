@@ -1,13 +1,6 @@
 ---
-title: "Подробное описание синтаксиса XAML"
-ms.custom: 
+title: Подробное описание синтаксиса XAML
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - XML [WPF], namespaces
 - XAML [WPF], parsing of attributes
@@ -36,16 +29,11 @@ helpviewer_keywords:
 - attribute syntax [XAML]
 - XAML [WPF], property element syntax
 ms.assetid: 67cce290-ca26-4c41-a797-b68aabc45479
-caps.latest.revision: "26"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 88e66210fd8066e82a11d07ea0cfeb83808d646c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d98141c0ad96ef1bd3958ae8d3166aedde76f535
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="xaml-syntax-in-detail"></a>Подробное описание синтаксиса XAML
 В этом разделе определяются термины, которые используются для описания элементов синтаксиса XAML. Эти термины часто используются в оставшейся части этой документации, в документации по WPF специально и для других платформ, использующих XAML или базовые понятия XAML, включаемые поддержки языка XAML на уровне System.Xaml. Этот раздел расширяет базовую терминологию, представленную в разделе [Обзор XAML (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md).  
@@ -134,7 +122,7 @@ ms.lasthandoff: 12/22/2017
 ...  
 ```  
   
- В WPF редки флагового перечисления, которые поддерживают атрибуты, которые можно задать в XAML. Тем не менее одного перечисления является <xref:System.Windows.Media.StyleSimulations>. Для экземпляра используйте синтаксис с разделителями запятыми флагового атрибутов для изменения примера, приведенного в комментарии для <xref:System.Windows.Documents.Glyphs> класса; `StyleSimulations = "BoldSimulation"` может стать `StyleSimulations = "BoldSimulation,ItalicSimulation"`. <xref:System.Windows.Input.KeyBinding.Modifiers%2A?displayProperty=nameWithType>является другим свойством, где можно указать несколько значений перечисления. Тем не менее, это свойство может быть является особым случаем, поскольку <xref:System.Windows.Input.ModifierKeys> перечисление поддерживает свой собственный преобразователь типов. Преобразователь типов для модификаторов использует знак плюс (+) в качестве разделителя вместо запятой (,). Это преобразование поддерживает традиционный синтаксис обозначения сочетаний клавиш в Microsoft Windows программирования, такие как «Ctrl + Alt».  
+ В WPF редки флагового перечисления, которые поддерживают атрибуты, которые можно задать в XAML. Тем не менее одного перечисления является <xref:System.Windows.Media.StyleSimulations>. Для экземпляра используйте синтаксис с разделителями запятыми флагового атрибутов для изменения примера, приведенного в комментарии для <xref:System.Windows.Documents.Glyphs> класса; `StyleSimulations = "BoldSimulation"` может стать `StyleSimulations = "BoldSimulation,ItalicSimulation"`. <xref:System.Windows.Input.KeyBinding.Modifiers%2A?displayProperty=nameWithType> является другим свойством, где можно указать несколько значений перечисления. Тем не менее, это свойство может быть является особым случаем, поскольку <xref:System.Windows.Input.ModifierKeys> перечисление поддерживает свой собственный преобразователь типов. Преобразователь типов для модификаторов использует знак плюс (+) в качестве разделителя вместо запятой (,). Это преобразование поддерживает традиционный синтаксис обозначения сочетаний клавиш в Microsoft Windows программирования, такие как «Ctrl + Alt».  
   
 ### <a name="properties-and-event-member-name-references"></a>Свойства и события ссылки на имя члена  
  При указании атрибута можно ссылаться на любое свойство или событие, которое существует в качестве члена типа среды CLR, который создан для содержащего элемента объекта.  
@@ -267,7 +255,7 @@ ms.lasthandoff: 12/22/2017
   
  `<Button Style="{StaticResource MyStyle}">My button</Button>`  
   
- Здесь `StaticResource` идентифицирует <xref:System.Windows.StaticResourceExtension> класс, предоставляющий реализации расширения разметки. Следующая строка `MyStyle` используется в качестве входных данных для нестандартных <xref:System.Windows.StaticResourceExtension> конструктор, где параметр, принимаемый из строки расширения, объявляет запрашиваемый <xref:System.Windows.ResourceKey>. `MyStyle`должно быть [x: Key](../../../../docs/framework/xaml-services/x-key-directive.md) значение <xref:System.Windows.Style> определяются как ресурсы. [StaticResource Markup Extension](../../../../docs/framework/wpf/advanced/staticresource-markup-extension.md) использование запрашивает использование ресурсов для предоставления <xref:System.Windows.Style> значение свойства через логику поиска статических ресурсов во время загрузки.  
+ Здесь `StaticResource` идентифицирует <xref:System.Windows.StaticResourceExtension> класс, предоставляющий реализации расширения разметки. Следующая строка `MyStyle` используется в качестве входных данных для нестандартных <xref:System.Windows.StaticResourceExtension> конструктор, где параметр, принимаемый из строки расширения, объявляет запрашиваемый <xref:System.Windows.ResourceKey>. `MyStyle` должно быть [x: Key](../../../../docs/framework/xaml-services/x-key-directive.md) значение <xref:System.Windows.Style> определяются как ресурсы. [StaticResource Markup Extension](../../../../docs/framework/wpf/advanced/staticresource-markup-extension.md) использование запрашивает использование ресурсов для предоставления <xref:System.Windows.Style> значение свойства через логику поиска статических ресурсов во время загрузки.  
   
  Подробнее о расширениях разметки см. в разделе [Расширения разметки и XAML WPF](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md). Справочную информацию о расширениях разметки и других программирования функции, доступные в общей реализации .NET XAML XAML, см. в разделе [пространства имен XAML (x:) Возможности языка](../../../../docs/framework/xaml-services/xaml-namespace-x-language-features.md). WPF-расширениях разметки см [расширения XAML WPF](../../../../docs/framework/wpf/advanced/wpf-xaml-extensions.md).  
   
@@ -309,13 +297,13 @@ ms.lasthandoff: 12/22/2017
   
  [!code-xaml[XAMLOvwSupport#TypeNameProp](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page8.xaml#typenameprop)]  
   
- `Button.Background`работает, поскольку полный поиск этого свойства в <xref:System.Windows.Controls.Button> успешно (<xref:System.Windows.Controls.Control.Background%2A> унаследованного от элемента управления) и <xref:System.Windows.Controls.Button> классом элемента объекта или базового класса. `Control.Background`работает, поскольку <xref:System.Windows.Controls.Control> класс фактически определяет <xref:System.Windows.Controls.Control.Background%2A> и <xref:System.Windows.Controls.Control> — <xref:System.Windows.Controls.Button> базового класса.  
+ `Button.Background` работает, поскольку полный поиск этого свойства в <xref:System.Windows.Controls.Button> успешно (<xref:System.Windows.Controls.Control.Background%2A> унаследованного от элемента управления) и <xref:System.Windows.Controls.Button> классом элемента объекта или базового класса. `Control.Background` работает, поскольку <xref:System.Windows.Controls.Control> класс фактически определяет <xref:System.Windows.Controls.Control.Background%2A> и <xref:System.Windows.Controls.Control> — <xref:System.Windows.Controls.Button> базового класса.  
   
  Тем не менее следующие *typeName*. *имя пользователя* пример элемента form не работает и таким образом маркерами комментария:  
   
  [!code-xaml[XAMLOvwSupport#TypeNameBadProp](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page8.xaml#typenamebadprop)]  
   
- <xref:System.Windows.Controls.Label>является другой класс, производный от <xref:System.Windows.Controls.Control>, и если вы задали `Label.Background` в <xref:System.Windows.Controls.Label> элемент объекта это использование могло бы работать. Тем не менее поскольку <xref:System.Windows.Controls.Label> не является классом или базовым классом для <xref:System.Windows.Controls.Button>, заданное поведение обработчика XAML является последующее `Label.Background` как вложенное свойство. `Label.Background`не является доступным вложенным свойством, и такое использование не удается.  
+ <xref:System.Windows.Controls.Label> является другой класс, производный от <xref:System.Windows.Controls.Control>, и если вы задали `Label.Background` в <xref:System.Windows.Controls.Label> элемент объекта это использование могло бы работать. Тем не менее поскольку <xref:System.Windows.Controls.Label> не является классом или базовым классом для <xref:System.Windows.Controls.Button>, заданное поведение обработчика XAML является последующее `Label.Background` как вложенное свойство. `Label.Background` не является доступным вложенным свойством, и такое использование не удается.  
   
 ### <a name="basetypenamemembername-property-elements"></a>baseTypeName.memberName свойств элементов  
  В виде аналогом как *typeName*. *имя пользователя* форма работает для синтаксиса атрибутов *Имя_базового_типа*. *имя пользователя* работает для синтаксиса элемента свойства. Например следующий синтаксис работает:  

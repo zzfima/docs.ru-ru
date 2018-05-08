@@ -1,34 +1,24 @@
 ---
-title: "Шифрование и расшифровка строк в Visual Basic"
-ms.custom: 
+title: Шифрование и расшифровка строк в Visual Basic
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - encryption [Visual Basic], strings
 - strings [Visual Basic], encrypting
 - decryption [Visual Basic], strings
 - strings [Visual Basic], decrypting
 ms.assetid: 1f51e40a-2f88-43e2-a83e-28a0b5c0d6fd
-caps.latest.revision: "18"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: fd9ec8e7af771db3f042e08c8ab30f6ed5832c2b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 96e56ab315a739fef9d5499b076a077f5294f39e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-encrypting-and-decrypting-strings-in-visual-basic"></a>Пошаговое руководство. Шифрование и расшифровка строк в Visual Basic
 В этом пошаговом руководстве показано, как использовать <xref:System.Security.Cryptography.DESCryptoServiceProvider> класса для шифрования и дешифрования строк с помощью служб шифрования (CSP) версии тройного шифрования данных (<xref:System.Security.Cryptography.TripleDES>) алгоритма. Первым шагом является создание простой программы-оболочки класс, который инкапсулирует алгоритм 3DES и сохраняет зашифрованные данные в виде строки в кодировке base-64. Затем эту оболочку используется для безопасного хранения личных данных пользователя в общедоступном текстовом файле.  
   
  Можно использовать шифрование для защиты секретов пользователя (например, пароли) и создания учетных данных может быть прочитан неавторизованные пользователи. Это позволяет защитить от кражи, удостоверения авторизованного пользователя, который защищает ресурсы пользователя и гарантирует неподдельность. Шифрование можно также защитить данные пользователя из от несанкционированного доступа.  
   
- Дополнительные сведения см. в разделе [службы криптографии](../../../../standard/security/cryptographic-services.md).  
+ Дополнительные сведения см. в разделе [Службы криптографии](../../../../standard/security/cryptographic-services.md).  
   
 > [!IMPORTANT]
 >  Rijndael (также известный как расширенный стандарт шифрования [AES]) и алгоритмы тройного шифрования данных (3DES) обеспечивают большую безопасность, чем DES, из-за большего большим объемом вычислений. Дополнительные сведения см. в разделах <xref:System.Security.Cryptography.DES> и <xref:System.Security.Cryptography.Rijndael>.  

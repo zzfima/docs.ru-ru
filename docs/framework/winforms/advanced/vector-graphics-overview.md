@@ -1,13 +1,6 @@
 ---
-title: "Общие сведения о векторной графике"
-ms.custom: 
+title: Общие сведения о векторной графике
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,19 +9,14 @@ helpviewer_keywords:
 - coordinate systems
 - graphics [Windows Forms], vector graphics
 ms.assetid: 0195df81-66be-452d-bb53-5a582ebfdc09
-caps.latest.revision: "16"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 603b76c999933f177a9e48ddb819562b8e4dd8f8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 31fec6d0d3769251d21783b4657d00b06431e942
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="vector-graphics-overview"></a>Общие сведения о векторной графике
-[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]Рисование линии, прямоугольники и других фигур в системе координат. Можно выбрать из различных систем координат, но система координат по умолчанию имеет начала координат в левом верхнем углу ось x вправо, а ось y направлена вниз. Единица измерения, в системе координат по умолчанию является пиксель.  
+[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] Рисование линии, прямоугольники и других фигур в системе координат. Можно выбрать из различных систем координат, но система координат по умолчанию имеет начала координат в левом верхнем углу ось x вправо, а ось y направлена вниз. Единица измерения, в системе координат по умолчанию является пиксель.  
   
 ## <a name="the-building-blocks-of-gdi"></a>Стандартные блоки GDI +  
  ![Векторная графика](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art01.gif "AboutGdip02_Art01")  
@@ -37,7 +25,7 @@ ms.lasthandoff: 12/22/2017
   
  ![Векторная графика](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art02.gif "AboutGdip02_Art02")  
   
- При использовании [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] для рисования линии, прямоугольника или кривой, предоставляют определенные ключевые данные об элементе для отрисовки. Например можно указать строку, предоставляя две точки и прямоугольника можно указать, предоставляя точку, высотой и шириной. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]работает в сочетании с программным обеспечением драйвера экрана, чтобы определить, какие точек должен быть включен для отображения линии, прямоугольника или кривой. На следующем рисунке пиксели, которые включены для отображения линии с точки (4, 2) в точку ("12", "8").  
+ При использовании [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] для рисования линии, прямоугольника или кривой, предоставляют определенные ключевые данные об элементе для отрисовки. Например можно указать строку, предоставляя две точки и прямоугольника можно указать, предоставляя точку, высотой и шириной. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] работает в сочетании с программным обеспечением драйвера экрана, чтобы определить, какие точек должен быть включен для отображения линии, прямоугольника или кривой. На следующем рисунке пиксели, которые включены для отображения линии с точки (4, 2) в точку ("12", "8").  
   
  ![Векторная графика](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art03.gif "AboutGdip02_Art03")  
   

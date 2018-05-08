@@ -1,18 +1,12 @@
 ---
-title: "Невозможно удалить журнал системных событий"
+title: Невозможно удалить журнал системных событий
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-visual-basic
-ms.topic: article
 ms.assetid: 26ca8819-4ce5-49c6-98f3-27fe9e2e8e3d
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: e07c6514d8ef3dd4f1cad40cbab1ff1c54c65796
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 3dc4d624bcc0b559e9f61f51c58926588f24ee45
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="system-event-log-cannot-be-deleted"></a>Невозможно удалить журнал системных событий
 Предпринята попытка удаления журнала системных событий, который не может быть удален. В системном журнале отслеживаются системные события, такие как запуск системы и сбой оборудования.  

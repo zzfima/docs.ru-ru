@@ -1,31 +1,17 @@
 ---
-title: "Практическое руководство. Реализация декоративного элемента"
-ms.custom: 
+title: Практическое руководство. Реализация декоративного элемента
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - adorners [WPF], implementing
 ms.assetid: 56ae32b6-0599-455c-b52f-2ff97e6f1ec2
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 76bceae5b69fad4c217127617309484edcf18108
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f5b0ed080a413546a3b985055858e209f9f347eb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-implement-an-adorner"></a>Практическое руководство. Реализация декоративного элемента
 В этом примере показана реализация минимальной графических элементов.  
@@ -35,7 +21,7 @@ ms.lasthandoff: 12/22/2017
   
 ## <a name="example"></a>Пример  
   
-### <a name="description"></a>Описание:  
+### <a name="description"></a>Описание  
  Пользовательский графический элемент создается путем реализации класса, который наследует от абстрактного <xref:System.Windows.Documents.Adorner> класса.  В примере декоративный элемент просто украшает углы <xref:System.Windows.UIElement> кругами путем переопределения <xref:System.Windows.UIElement.OnRender%2A> метод.  
   
 ### <a name="code"></a>Код  

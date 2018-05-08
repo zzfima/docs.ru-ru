@@ -1,34 +1,20 @@
 ---
 title: Что&#39;новые возможности Windows Communication Foundation 4.5
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - WCF [WCF], what's new
 - Windows Communication Foundation [WCF], what's new
 ms.assetid: 7e93fe73-af93-46b5-9f63-32f761ee40cf
-caps.latest.revision: 35
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 3ca03c4529588964abe2d0d434bfd47b005e8d26
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
-ms.translationtype: MT
+ms.openlocfilehash: 1d4ac2fe884a3c6696dc70ea2de9967a23fc6605
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="what39s-new-in-windows-communication-foundation-45"></a>Что&#39;новые возможности Windows Communication Foundation 4.5
-В этом разделе рассматриваются новые возможности [!INCLUDE[indigo1](../../../includes/indigo1-md.md)].  
+В этом разделе рассматриваются функции, новые для Windows Communication Foundation (WCF).  
   
-## <a name="wcf-simplification-features"></a>Функции упрощения WCF  
+## <a name="wcf-simplification-features"></a>Возможности упрощения WCF  
  Много работы было посвящено тому, чтобы сделать разработку и поддержку приложений WCF 4.5 более легкой. Дополнительные сведения см. в разделе [возможности упрощения WCF](../../../docs/framework/wcf/wcf-simplification-features.md).  
   
 ### <a name="task-based-async-support"></a>Поддержка асинхронного выполнения задач  
@@ -87,7 +73,7 @@ ms.lasthandoff: 04/28/2018
  В XML-редакторе Visual Studio отображаются подсказки для каждого элемента конфигурации (и его свойств), входящего в файл конфигурации службы. Это облегчает работу разработчиков по конфигурации WCF-служб.  
   
 ## <a name="configuring-wcf-services-in-code"></a>Настройка служб WCF в коде  
- [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] позволяет разработчикам настраивать службы с помощью файлов конфигурации или кода.  Файлы конфигурации используются, если необходимо настроить службу после ее развертывания. При использовании файлов конфигурации ИТ-работнику требуется только обновить файл конфигурации без необходимости выполнять повторную компиляцию. Файлы конфигурации, однако, могут быть сложными и требовать больших усилий при обслуживании. Отсутствует поддержка отладки файлов конфигурации, и ссылки на элементы конфигурации осуществляются по именам, что усложняет работу и способствует совершению ошибок при создании файлов конфигурации. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] также позволяет настраивать службы в коде. В предыдущих версиях [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] (4.0 и ранее) настройка служб легко выполнялась в коде в случае сценариев резидентных служб, класс <xref:System.ServiceModel.ServiceHost> позволял настроить конечные точки и поведение до вызова метода ServiceHost.Open. Однако в сценариях с размещением в Интернете нет прямого доступа к классу <xref:System.ServiceModel.ServiceHost>. Чтобы настроить службу, размещенную в сети, приходилось создавать класс `System.ServiceModel.ServiceHostFactory`, который создавал <xref:System.ServiceModel.Activation.ServiceHostFactory> и выполнял необходимые настройки. Начиная с версии .NET 4.5, [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] предоставляет более простой способ настройки как для резидентных служб, так и для служб, размещаемых в сети. Дополнительные сведения см. в разделе [Настройка служб WCF в коде](../../../docs/framework/wcf/configuring-wcf-services-in-code.md).  
+ Windows Communication Foundation (WCF) позволяет разработчикам настраивать службы с помощью файлов конфигурации или кода.  Файлы конфигурации используются, если необходимо настроить службу после ее развертывания. При использовании файлов конфигурации ИТ-работнику требуется только обновить файл конфигурации без необходимости выполнять повторную компиляцию. Файлы конфигурации, однако, могут быть сложными и требовать больших усилий при обслуживании. Отсутствует поддержка отладки файлов конфигурации, и ссылки на элементы конфигурации осуществляются по именам, что усложняет работу и способствует совершению ошибок при создании файлов конфигурации. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] также позволяет настраивать службы в коде. В предыдущих версиях [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] (4.0 и ранее) настройка служб легко выполнялась в коде в случае сценариев резидентных служб, класс <xref:System.ServiceModel.ServiceHost> позволял настроить конечные точки и поведение до вызова метода ServiceHost.Open. Однако в сценариях с размещением в Интернете нет прямого доступа к классу <xref:System.ServiceModel.ServiceHost>. Чтобы настроить службу, размещенную в сети, приходилось создавать класс `System.ServiceModel.ServiceHostFactory`, который создавал <xref:System.ServiceModel.Activation.ServiceHostFactory> и выполнял необходимые настройки. Начиная с версии .NET 4.5, [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] предоставляет более простой способ настройки как для резидентных служб, так и для служб, размещаемых в сети. Дополнительные сведения см. в разделе [Настройка служб WCF в коде](../../../docs/framework/wcf/configuring-wcf-services-in-code.md).  
   
 ## <a name="channelfactory-caching"></a>Кэширование ChannelFactory  
  Клиентские приложения WCF используют класс <xref:System.ServiceModel.ChannelFactory%601> для создания коммуникационного канала со службой WCF.  Создание экземпляров класса <xref:System.ServiceModel.ChannelFactory%601> оказывает определенное влияние на производительность, поскольку выполняются следующие операции:  

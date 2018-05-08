@@ -1,14 +1,6 @@
 ---
-title: "Метод IHostSecurityManager::OpenThreadToken"
-ms.custom: 
+title: Метод IHostSecurityManager::OpenThreadToken
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IHostSecurityManager.OpenThreadToken
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: d5999052-8bf0-4a9e-8621-da6284406b18
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 9b5c39632d7628d30149a0a0278f9bf6c865bc29
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 35a41badd7ade016619d940880a3ace80ccf5693
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ihostsecuritymanageropenthreadtoken-method"></a>Метод IHostSecurityManager::OpenThreadToken
 Открывает маркер доступом, связанный с текущей выполняемой потоком.  
@@ -62,7 +50,7 @@ HRESULT OpenThreadToken (
   
 |HRESULT|Описание|  
 |-------------|-----------------|  
-|S_OK|`OpenThreadToken`успешно возвращен.|  
+|S_OK|`OpenThreadToken` успешно возвращен.|  
 |ЗНАЧЕНИЕ HOST_E_CLRNOTAVAILABLE|Общеязыковая среда выполнения (CLR) не был загружен в процесс или находится в состоянии, в котором не может выполнять управляемый код или успешно обработать вызов.|  
 |HOST_E_TIMEOUT|Истекло время ожидания вызова.|  
 |HOST_E_NOT_OWNER|Вызывающий объект не является владельцем блокировки.|  
@@ -70,7 +58,7 @@ HRESULT OpenThreadToken (
 |E_FAIL|Неизвестная Неустранимая ошибка. Если метод вернет значение E_FAIL, среда CLR больше не может использоваться в процессе. Последующие вызовы размещение методы возвращают значение HOST_E_CLRNOTAVAILABLE.|  
   
 ## <a name="remarks"></a>Примечания  
- `IHostSecurityManager::OpenThreadToken`ведет себя точно так же для соответствующей функции Win32 с таким же именем, за исключением того, что функция Win32 позволяет вызывающему объекту произвольном потоке, передается дескриптор, хотя `IHostSecurityManager::OpenThreadToken` открывает только маркером, связанным с вызывающего потока.  
+ `IHostSecurityManager::OpenThreadToken` ведет себя точно так же для соответствующей функции Win32 с таким же именем, за исключением того, что функция Win32 позволяет вызывающему объекту произвольном потоке, передается дескриптор, хотя `IHostSecurityManager::OpenThreadToken` открывает только маркером, связанным с вызывающего потока.  
   
  `HANDLE` Типа не удовлетворяет требованиям COM, то есть, его размер будет относится к операционной системе и требуется пользовательский маршалинг. Таким образом этот токен предназначен для использования только в пределах процесса в среде CLR и узла.  
   
@@ -81,7 +69,7 @@ HRESULT OpenThreadToken (
   
  **Библиотека:** включена как ресурс в MSCorEE.dll  
   
- **Версии платформы .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Версии платформы .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>См. также  
  [Интерфейс IHostSecurityContext](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritycontext-interface.md)  

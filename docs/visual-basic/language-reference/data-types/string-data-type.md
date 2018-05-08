@@ -1,11 +1,6 @@
 ---
 title: Тип данных String (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.String
 helpviewer_keywords:
@@ -23,14 +18,11 @@ helpviewer_keywords:
 - String literals [Visual Basic]
 - identifier type characters [Visual Basic], $
 ms.assetid: 15ac03f5-cabd-42cc-a754-1df3893c25d9
-caps.latest.revision: 19
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 90f126a5cca36969617446e81a8d13434e39df75
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 894638bbe50dad2cae1f74a2f7b7fe006f029d1b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="string-data-type-visual-basic"></a>Тип данных String (Visual Basic)
 Содержит последовательности точек неподписанный код 16-разрядное (2-байтовые) этого диапазона, в диапазоне от 0 до 65535. Каждый *кодовой*, или код символа, представляет один знак Юникода. Строка может содержать от нуля до двух миллиардов (2 ^ 31) знаков Юникода.  
@@ -81,7 +73,7 @@ S = Microsoft.VisualBasic.Left(S, 4)
   
 -   **Вопросы взаимодействия.** При взаимодействии с компонентами, которые не написаны для платформы .NET Framework, например, автоматизация или COM-объекты, помните, что строка символов быть другой размер (8 бит) в других средах. Если вы передаете 8-битовых символов строкового аргумента такому компоненту, объявите его как `Byte()`, массив `Byte` элементов, а не `String` в новом коде Visual Basic.  
   
--   **Символы типов.** Добавление знак типа идентификатора `$` к любому идентификатору производится принудительное для `String` тип данных. `String`не имеет типа литерала символа. Однако компилятор обрабатывает литералы, заключенные в кавычки (`" "`) как `String`.  
+-   **Символы типов.** Добавление знак типа идентификатора `$` к любому идентификатору производится принудительное для `String` тип данных. `String` не имеет типа литерала символа. Однако компилятор обрабатывает литералы, заключенные в кавычки (`" "`) как `String`.  
   
 -   **Тип Framework.** Соответствующий тип в .NET Framework — <xref:System.String?displayProperty=nameWithType> класса.  
   

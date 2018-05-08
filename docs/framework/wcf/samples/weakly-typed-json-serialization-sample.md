@@ -1,31 +1,17 @@
 ---
 title: Пример сериализации слабо типизированных данных JSON
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 0b30e501-4ef5-474d-9fad-a9d559cf9c52
-caps.latest.revision: 13
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 4cc75ff1078c35c177f0809d25cd32ca3b2b8e16
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
-ms.translationtype: MT
+ms.openlocfilehash: 66e68985da94df11a81ba6d387438fe29dd96d56
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="weakly-typed-json-serialization-sample"></a>Пример сериализации слабо типизированных данных JSON
 При сериализации пользовательского типа в заданный формат передачи или при десериализации формата передачи в пользовательский тип заданный пользовательский тип должен быть доступен как службе, так и клиенту. Обычно для этого к пользовательским типам применяется атрибут <xref:System.Runtime.Serialization.DataContractAttribute> , а к их членам применяется атрибут <xref:System.Runtime.Serialization.DataMemberAttribute> . Этот механизм также применим при работе с объектами JSON, как описано в разделе [How to: Serialize and Deserialize JSON Data](../../../../docs/framework/wcf/feature-details/how-to-serialize-and-deserialize-json-data.md).  
   
- В некоторых сценариях службе или клиенту [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] требуется обращаться к объектам JSON, созданным службой или клиентом, которыми разработчик не может управлять. Чем большее число веб-служб публично предоставляют интерфейсы API в формате JSON, тем менее практично для разработчика [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] создавать локальные пользовательские типы, в которые будут десериализовываться произвольные объекты JSON. В этом образце описан механизм, позволяющий разработчикам [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] работать с произвольными десериализованными объектами JSON без создания пользовательских типов. Он называется *слабо типизированной сериализацией* объектов JSON, поскольку тип, в который десериализуется объект JSON, во время компиляции неизвестен.  
+ В некоторых сценариях службы Windows Communication Foundation (WCF) или клиент должен получить доступ к объектам JSON, созданным службой или клиентом, разработчик может управлять. Чем большее число веб-служб публично предоставляют интерфейсы API в формате JSON, тем менее практично для разработчика [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] создавать локальные пользовательские типы, в которые будут десериализовываться произвольные объекты JSON. В этом образце описан механизм, позволяющий разработчикам [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] работать с произвольными десериализованными объектами JSON без создания пользовательских типов. Он называется *слабо типизированной сериализацией* объектов JSON, поскольку тип, в который десериализуется объект JSON, во время компиляции неизвестен.  
   
 > [!NOTE]
 >  Процедура настройки и инструкции по построению для данного образца приведены в конце этого раздела.  
@@ -149,7 +135,7 @@ My favorite bands are Band ABC and Band XYZ.
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) Чтобы загрузить все [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] образцов. Этот образец расположен в следующем каталоге.  
+>  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] образцов. Этот образец расположен в следующем каталоге.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\Ajax\WeaklyTypedJson`  
   

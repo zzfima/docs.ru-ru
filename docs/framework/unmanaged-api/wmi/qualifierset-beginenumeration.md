@@ -1,11 +1,7 @@
 ---
-title: "Функция QualifierSet_BeginEnumeration (Справочник по неуправляемым API)"
-description: "Функция QualifierSet_BeginEnumeration Сбрасывает перечислитель квалификаторы объекта."
+title: Функция QualifierSet_BeginEnumeration (Справочник по неуправляемым API)
+description: Функция QualifierSet_BeginEnumeration Сбрасывает перечислитель квалификаторы объекта.
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - QualifierSet_BeginEnumeration
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 440dde03f4ed138a33eb6f817723d7c5c74f6d46
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1fac897f743ca452c38282143cdf822b682df1df
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="qualifiersetbeginenumeration-function"></a>Функция QualifierSet_BeginEnumeration
 Возвращает перечислитель квалификаторы объект в начало перечисления.  
@@ -59,7 +52,7 @@ HRESULT QualifierSet_BeginEnumeration (
 
 Следующие значения, возвращаемые этой функцией, определяются в *WbemCli.h* файла заголовка, или их можно определить как константы в коде:
 
-|Константа  |Значение  |Описание:  |
+|Константа  |Значение  |Описание  |
 |---------|---------|---------|
 |`WBEM_E_INVALID_PARAMETER` | 0x80041008 | `lFlags` Недопустимый параметр. |
 |`WBEM_E_UNEXPECTED` | 0x8004101d | Второй вызов `QualifierSet_BeginEnumeration` была произведена без промежуточных вызовов [ `QualifierSet_EndEnumeration` ](qualifierset-endenumeration.md). |
@@ -85,7 +78,7 @@ HRESULT QualifierSet_BeginEnumeration (
   
  **Заголовок:** WMINet_Utils.idl  
   
- **Версии платформы .NET framework:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Версии платформы .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>См. также  
 [WMI и счетчиков производительности (Справочник по неуправляемым API)](index.md)

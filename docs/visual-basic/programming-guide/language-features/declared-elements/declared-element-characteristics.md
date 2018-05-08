@@ -1,12 +1,6 @@
 ---
-title: "Характеристики объявленных элементов (Visual Basic)"
-ms.custom: 
+title: Характеристики объявленных элементов (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - declared elements [Visual Basic], lifetime
 - access levels, declared elements
@@ -19,14 +13,11 @@ helpviewer_keywords:
 - data types [Visual Basic], declared elements
 - declared elements [Visual Basic], visibility
 ms.assetid: 1bc40fb8-b67c-4428-90a4-76b630ae2583
-caps.latest.revision: "16"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 26ee27d3a1d085c6ab45ae850dbdac700aa208a9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 26c9ec247a0b848d46df063bc7b85ceec30d81c3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="declared-element-characteristics-visual-basic"></a>Характеристики объявленных элементов (Visual Basic)
 Объект *характеристика* объявленного элемента называется свойство этого элемента, определяющее, как код может взаимодействовать с ним. У каждого объявленного элемента имеется один или несколько из следующих характеристик, связанные с ним:  
@@ -48,7 +39,7 @@ ms.lasthandoff: 11/21/2017
 |Константа|Да|Нет|Да|Да|  
 |Перечисление|Да|Нет|Да|Да|  
 |Структура|Нет|Нет|Да|Да|  
-|Свойство|Да|Да|Да|Да|  
+|Свойство.|Да|Да|Да|Да|  
 |Метод|Нет|Да|Да|Да|  
 |Процедура (`Sub` или `Function`)|Нет|Да|Да|Да|  
 |Параметр процедуры|Да|Да|Да|Нет|  
@@ -56,8 +47,8 @@ ms.lasthandoff: 11/21/2017
 |Оператор|Да|Нет|Да|Да|  
 |Интерфейс|Нет|Нет|Да|Да|  
 |Класс|Нет|Нет|Да|Да|  
-|Событие|Нет|Нет|Да|Да|  
-|Делегат|Нет|Нет|Да|Да|  
+|событие|Нет|Нет|Да|Да|  
+|делегат|Нет|Нет|Да|Да|  
   
  <sup>1</sup> область, иногда называют *видимость*.  
   

@@ -1,14 +1,6 @@
 ---
-title: "Метод IHostTaskManager::EndThreadAffinity"
-ms.custom: 
+title: Метод IHostTaskManager::EndThreadAffinity
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IHostTaskManager.EndThreadAffinity
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 7738a904-0cd7-4fde-a3eb-2323a5533157
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: b12bdc16d70b9e4ccaecbee1b8bcd4e8f05d59dc
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fb07e38542893b26595b67d6cf0fa77c522b4def
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ihosttaskmanagerendthreadaffinity-method"></a>Метод IHostTaskManager::EndThreadAffinity
 Уведомляет хост, что управляемый код завершается из-за период, в котором текущую задачу нельзя перемещать в другой поток операционной системы после предыдущего вызова для [IHostTaskManager::BeginThreadAffinity](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-beginthreadaffinity-method.md).  
@@ -48,13 +36,13 @@ HRESULT EndThreadAffinity ();
   
 |HRESULT|Описание|  
 |-------------|-----------------|  
-|S_OK|`EndThreadAffinity`успешно возвращен.|  
+|S_OK|`EndThreadAffinity` успешно возвращен.|  
 |ЗНАЧЕНИЕ HOST_E_CLRNOTAVAILABLE|Общеязыковая среда выполнения (CLR) не был загружен в процесс или находится в состоянии, в котором не может выполнять управляемый код или успешно обработать вызов.|  
 |HOST_E_TIMEOUT|Истекло время ожидания вызова.|  
 |HOST_E_NOT_OWNER|Вызывающий объект не является владельцем блокировки.|  
 |HOST_E_ABANDONED|Событие было отменено заблокированный поток или ожидал волокон.|  
 |E_FAIL|Неизвестная Неустранимая ошибка. Если метод вернет значение E_FAIL, среда CLR больше не может использоваться в процессе. Последующие вызовы размещение методы возвращают значение HOST_E_CLRNOTAVAILABLE.|  
-|E_UNEXPECTED|`EndThreadAffinity`был вызван без ранее соответствующего вызова `BeginThreadAffinity`.|  
+|E_UNEXPECTED|`EndThreadAffinity` был вызван без ранее соответствующего вызова `BeginThreadAffinity`.|  
   
 ## <a name="remarks"></a>Примечания  
  Среда CLR вызывает соответствующий метод `BeginThreadAffinity` для текущей задачи перед вызовом `EndThreadAffinity`. При отсутствии такого соответствующего вызова реализация [IHostTaskManager](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-interface.md) должен возвратить значение E_UNEXPECTED и не выполнять никаких действий.  
@@ -66,7 +54,7 @@ HRESULT EndThreadAffinity ();
   
  **Библиотека:** включена как ресурс в MSCorEE.dll  
   
- **Версии платформы .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Версии платформы .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>См. также  
  <xref:System.Threading>  

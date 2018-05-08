@@ -1,26 +1,12 @@
 ---
 title: Очереди недоставленных сообщений
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: ff664f33-ad02-422c-9041-bab6d993f9cc
-caps.latest.revision: 35
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 9892579633103f1e7a6612c09865c91c559df34c
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: 9f92aeb02d997820fa2955419a3cdcf1c4369b45
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dead-letter-queues"></a>Очереди недоставленных сообщений
 В этом образце показано, как обрабатывать недоставленные сообщения. Он основан на [транзакции привязки MSMQ](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md) образца. В этом примере используется привязка `netMsmqBinding`. Служба представляет собой резидентное консольное приложение, позволяющее наблюдать за получением службой сообщений из очереди.  
@@ -182,7 +168,7 @@ public void SubmitPurchaseOrder(PurchaseOrder po)
 }
 ```
 
- Сообщения в очереди недоставленных сообщений - это сообщения, адресованные службе, обрабатывающей сообщение. Поэтому при выполнении службой недоставленных сообщений чтения сообщений из очереди уровень канала [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] находит несоответствие конечных точек и не отправляет сообщение. В этом случае сообщение адресуется службе, обрабатывающей заказы, но доставляется оно службе недоставленных сообщений. Для получения сообщений, адресованных другой конечной точке, в `ServiceBehavior` задается фильтр адресов, соответствующий любому адресу. Это необходимо для успешной обработки сообщений, считываемых из очереди недоставленных сообщений.  
+ Сообщения в очереди недоставленных сообщений - это сообщения, адресованные службе, обрабатывающей сообщение. Таким образом когда служба недоставленных сообщений считывает сообщения из очереди, уровень канала Windows Communication Foundation (WCF) находит несоответствие конечных точек и не отправляет сообщения. В этом случае сообщение адресуется службе, обрабатывающей заказы, но доставляется оно службе недоставленных сообщений. Для получения сообщений, адресованных другой конечной точке, в `ServiceBehavior` задается фильтр адресов, соответствующий любому адресу. Это необходимо для успешной обработки сообщений, считываемых из очереди недоставленных сообщений.  
   
  В этом образце служба недоставленных сообщений повторно отправляет сообщение, если причина ошибки заключалась в истечении срока жизни сообщения. Для любых других причин она отображает сообщение об ошибке доставки, как показано в следующем образце кода:  
 
@@ -370,7 +356,7 @@ Processing Purchase Order: 97897eff-f926-4057-a32b-af8fb11b9bf9
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) Чтобы загрузить все [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] образцов. Этот образец расположен в следующем каталоге.  
+>  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] образцов. Этот образец расположен в следующем каталоге.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\MSMQ\DeadLetter`  
   

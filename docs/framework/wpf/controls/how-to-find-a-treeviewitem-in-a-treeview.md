@@ -1,13 +1,6 @@
 ---
-title: "Практическое руководство. Поиск элемента TreeViewItem в TreeView"
-ms.custom: 
+title: Практическое руководство. Поиск элемента TreeViewItem в TreeView
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - TreeView control [WPF], finding a TreeViewItem
 - TreeViewItem [WPF], finding
 ms.assetid: 72ecd40c-3939-4e01-b617-5e9daa6074d9
-caps.latest.revision: "5"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 696a9e2d92b9c44e4aedbcc200b41e5548cd7411
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: cff931312e6bc6db5ae5f26c0db80ad2f43825f8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-find-a-treeviewitem-in-a-treeview"></a>Практическое руководство. Поиск элемента TreeViewItem в TreeView
 <xref:System.Windows.Controls.TreeView> Элемент управления предоставляет удобный способ отображения иерархических данных. Если ваш <xref:System.Windows.Controls.TreeView> привязан к источнику данных, <xref:System.Windows.Controls.TreeView.SelectedItem%2A> свойству предоставляет удобный способ для быстрого извлечения выбранного объекта данных. Обычно лучше всего работать с базовым объектом данных, но иногда необходимо программно манипулировать данных, содержащих <xref:System.Windows.Controls.TreeViewItem>. Например, может потребоваться программно разверните <xref:System.Windows.Controls.TreeViewItem>, или выберите другой элемент в <xref:System.Windows.Controls.TreeView>.  
@@ -33,7 +21,7 @@ ms.lasthandoff: 12/22/2017
   
 ## <a name="example"></a>Пример  
   
-## <a name="description"></a>Описание:  
+## <a name="description"></a>Описание  
  В следующем примере выполняется поиск <xref:System.Windows.Controls.TreeView> для указанного объекта и возвращает объект, содержащего <xref:System.Windows.Controls.TreeViewItem>. В примере проверяется, чтобы каждый <xref:System.Windows.Controls.TreeViewItem> создается, чтобы его дочерние элементы можно искать. В этом примере также работает, если <xref:System.Windows.Controls.TreeView> используются виртуализированные элементы.  
   
 > [!NOTE]

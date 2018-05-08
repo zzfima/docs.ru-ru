@@ -1,31 +1,21 @@
 ---
-title: "Вопросы безопасности в WCF"
-ms.custom: 
+title: Вопросы безопасности в WCF
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - security [WCF]
 - Windows Communication Foundation, security
 - WCF, security
 ms.assetid: 42055ee0-6d0c-443d-9d89-788dfc345d6d
-caps.latest.revision: "49"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: f35bd56bdc69f8c57a7e46984778051b57b7a06a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9d26acf8443967bff36637c482dd3270ef034f40
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="security-considerations-in-wcf"></a>Вопросы безопасности в WCF
-В подразделах этого раздела перечислены различные пункты, связанные с безопасностью, которые следует учитывать при разработке приложения [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
+В подразделах этого раздела перечислены различные элементы, связанные с безопасностью, следует учитывать при разработке приложения Windows Communication Foundation (WCF).  
   
 ## <a name="in-this-section"></a>В этом разделе  
  [Раскрытие информации](../../../../docs/framework/wcf/feature-details/information-disclosure.md)  

@@ -1,12 +1,6 @@
 ---
-title: "Практическое руководство. Преобразование строки (String) в массив символов в Visual Basic"
-ms.custom: 
+title: Практическое руководство. Преобразование строки (String) в массив символов в Visual Basic
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - character arrays [Visual Basic], converting strings
 - arrays [Visual Basic], converting strings to
@@ -14,20 +8,17 @@ helpviewer_keywords:
 - strings [Visual Basic], converting to arrays
 - string conversion [Visual Basic], arrays
 ms.assetid: 1b54b686-ab29-413b-adce-6bd5422376eb
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 59d0da52c8f78b93c76325e6242156c106deeaf1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: c109143601e304b1ec15a60c71d65fe6bd15aae8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-convert-a-string-to-an-array-of-characters-in-visual-basic"></a>Практическое руководство. Преобразование строки (String) в массив символов в Visual Basic
 Иногда полезно располагать сведениями о символов в строке и позициях этих символов, например при анализе строки. В этом примере показано, как получить массив символов в строку путем вызова строки <xref:System.String.ToCharArray%2A> метод.  
   
 ## <a name="example"></a>Пример  
- В этом примере показано, как разбить строку в `Char` массива и как разбить строку на `String` массив знаков Юникода. Причина различия — что Юникода может состоять из двух или более `Char` символов (например, суррогатная пара или несамостоятельных последовательность символов). Дополнительные сведения см. в разделе <xref:System.Globalization.TextElementEnumerator> и «Стандарте Юникод» http://www.Unicode.org.  
+ В этом примере показано, как разбить строку в `Char` массива и как разбить строку на `String` массив знаков Юникода. Причина различия — что Юникода может состоять из двух или более `Char` символов (например, суррогатная пара или несамостоятельных последовательность символов). Дополнительные сведения см. в разделе <xref:System.Globalization.TextElementEnumerator> и «Описании стандарта Юникод» на http://www.unicode.org.  
   
  [!code-vb[VbVbalrStrings#75](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/how-to-convert-a-string-to-an-array-of-characters_1.vb)]  
   

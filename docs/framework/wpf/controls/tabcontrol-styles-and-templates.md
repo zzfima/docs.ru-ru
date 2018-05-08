@@ -1,13 +1,6 @@
 ---
-title: "Стили и шаблоны элемента TabControl"
-ms.custom: 
+title: Стили и шаблоны элемента TabControl
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - ControlTemplate [WPF], TabControl
 - TabControl [WPF], styles and templates [WPF]
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - states [WPF], TabControl
 - templates [WPF], TabControl
 ms.assetid: f6b19a30-f10e-4fa1-96ce-f17a54092ab6
-caps.latest.revision: "18"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 22d1e4dbd8e7a3ca6ec9f0c91e5e59be2f683455
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 09ddf4119b64229be7fcda7b29c80ca6122d65f0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tabcontrol-styles-and-templates"></a>Стили и шаблоны элемента TabControl
 В этом разделе описываются стили и шаблоны для <xref:System.Windows.Controls.TabControl> элемента управления. Можно изменить значение по умолчанию <xref:System.Windows.Controls.ControlTemplate> для предоставления уникального внешнего вида элемента управления. Подробнее см. в разделе [Настройка внешнего вида существующего элемента управления путем создания объекта ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  
@@ -33,7 +21,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="tabcontrol-parts"></a>Элементы управления TabControl  
  В следующей таблице перечислены именованные части <xref:System.Windows.Controls.TabControl> элемента управления.  
   
-|Отделение|Тип|Описание:|  
+|Отделение|Тип|Описание|  
 |-|-|-|  
 |PART_SelectedContentHost|<xref:System.Windows.Controls.ContentPresenter>|Объект, который отображает содержимое выбранного в данный момент <xref:System.Windows.Controls.TabItem>.|  
   
@@ -42,7 +30,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="tabcontrol-states"></a>Состояния элемента управления TabControl  
  В следующей таблице перечислены визуальные состояния <xref:System.Windows.Controls.TabControl> элемента управления.  
   
-|Имя VisualState|Имя VisualStateGroup|Описание:|  
+|Имя VisualState|Имя VisualStateGroup|Описание|  
 |----------------------|---------------------------|-----------------|  
 |Норм.|CommonStates|Состояние по умолчанию.|  
 |Отключено|CommonStates|Элемент управления отключен.|  
@@ -56,7 +44,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="tabitem-states"></a>TabItem состояний  
  В следующей таблице перечислены визуальные состояния <xref:System.Windows.Controls.TabItem> элемента управления.  
   
-|Имя VisualState|Имя VisualStateGroup|Описание:|  
+|Имя VisualState|Имя VisualStateGroup|Описание|  
 |----------------------|---------------------------|-----------------|  
 |Норм.|CommonStates|Состояние по умолчанию.|  
 |MouseOver|CommonStates|Указатель мыши расположен над элементом управления.|  

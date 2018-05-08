@@ -1,37 +1,25 @@
 ---
-title: "Различия проверки сертификатов с использованием средств обеспечения безопасности HTTPS, SSL по TCP и SOAP"
-ms.custom: 
+title: Различия проверки сертификатов с использованием средств обеспечения безопасности HTTPS, SSL по TCP и SOAP
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - certificates [WCF], validation differences
 ms.assetid: 953a219f-4745-4019-9894-c70704f352e6
-caps.latest.revision: 
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: 34be2fbc5b8148d7bfdeb5e5d07e5b73ac89a97e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 744d9208f6be47965b89ddd9555b99feab9e18b7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="certificate-validation-differences-between-https-ssl-over-tcp-and-soap-security"></a>Различия проверки сертификатов с использованием средств обеспечения безопасности HTTPS, SSL по TCP и SOAP
-В [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] в дополнение к протоколам TLS по HTTP (HTTPS) или TCP можно использовать сертификаты с протоколом MLS (SOAP). В данном разделе описываются различия в способе, который используется для проверки сертификатов.  
+Можно использовать сертификаты в Windows Communication Foundation (WCF) с безопасность на уровне сообщений (SOAP) в дополнение к безопасности транспортного уровня (TLS) через HTTP (HTTPS) или TCP. В данном разделе описываются различия в способе, который используется для проверки сертификатов.  
   
 ## <a name="validation-of-https-client-certificates"></a>Проверка сертификатов клиента HTTPS  
- При использовании HTTPS для связи клиента и службы сертификат, который клиент использует для проверки подлинности службы, должен поддерживать цепь доверия. То есть, сертификат должен связываться по цепочке с доверенным корневым центром сертификации. Если нет, уровень HTTP вызывает исключение <xref:System.Net.WebException> с сообщением «удаленный сервер вернул ошибку: (403) запрещено.» [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]обрабатывает данное исключение как <xref:System.ServiceModel.Security.MessageSecurityException>.  
+ При использовании HTTPS для связи клиента и службы сертификат, который клиент использует для проверки подлинности службы, должен поддерживать цепь доверия. То есть, сертификат должен связываться по цепочке с доверенным корневым центром сертификации. Если нет, уровень HTTP вызывает исключение <xref:System.Net.WebException> с сообщением «удаленный сервер вернул ошибку: (403) запрещено.» WCF обрабатывает данное исключение как <xref:System.ServiceModel.Security.MessageSecurityException>.  
   
 ## <a name="validation-of-https-service-certificates"></a>Проверка сертификатов службы HTTPS  
  При использовании HTTPS для связи клиента и службы сертификат, используемый сервером для проверки подлинности службы, должен поддерживать цепь доверия. То есть, сертификат должен связываться по цепочке с доверенным корневым центром сертификации. Для проверки отмены сертификата проверка в сети не выполняется. Данное поведение можно переопределить, зарегистрировав обратный звонок <xref:System.Net.Security.RemoteCertificateValidationCallback>, как показано в следующем коде.  

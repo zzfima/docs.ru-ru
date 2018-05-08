@@ -1,27 +1,15 @@
 ---
-title: "Автоматический выбор формата"
-ms.custom: 
+title: Автоматический выбор формата
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: dab51e56-8517-4a6a-bb54-b55b15ab37bb
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: da09df968bffee9a07f1c03d5b771271a9d44129
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 9b9b4da4d5d3bdb3892feb49c033fbe4fc640cb0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="automatic-format-selection"></a>Автоматический выбор формата
-Данный образец демонстрирует включение автоматического выбора формата (XML или JSON) при использовании программной модели [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] REST, а также явное задание формата в коде операции.  
+Этот образец демонстрирует Включение автоматического выбора формата (XML или JSON) при использовании REST Windows Communication Foundation (WCF), программирование модели, а также явное задание формата в коде операции.  
   
 ## <a name="sample-details"></a>Подробные сведения об образце  
  Образец состоит из службы, а также клиентского кода, производящего запросы к этой службе. Служба поддерживает единственную операцию HTTP `GET` (`EchoWithGet`) и единственную операцию HTTP `POST` (`EchoWithPost`). Обе операции ожидают на входе строку и возвращают в ответе эту же строку. В случае операции `GET` строка предоставляется в виде параметра строки запроса URI. В случае операции `POST` строка предоставляется в тексте запроса, сериализованного в XML. Служба может возвращать ответы в формате XML или JSON, используя новую возможность автоматического выбора формата или старую возможность принудительного выбора формата [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)].  
@@ -47,7 +35,7 @@ ms.lasthandoff: 12/22/2017
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите на страницу [Примеры Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все примеры [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Этот образец расположен в следующем каталоге.  
+>  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] образцов. Этот образец расположен в следующем каталоге.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Web\AutomaticFormatSelection`  
   

@@ -1,13 +1,6 @@
 ---
-title: "Макет"
-ms.custom: 
+title: Макет
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - controls [WPF], layout system
 - layout system [WPF]
 ms.assetid: 3eecdced-3623-403a-a077-7595453a9221
-caps.latest.revision: "31"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c9a5f33ab22779002e85d7a73b29ae74dac81c26
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 00c2b2bcb58e60c1a60d2d360f25089c079c0704
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="layout"></a>Макет
 В этом разделе описывается система макета [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. Для создания пользовательских интерфейсов в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] важно понимание того, как и когда происходят вычисления макета.  
@@ -97,7 +85,7 @@ ms.lasthandoff: 12/22/2017
   
  Во-первых, собственный размер свойства <xref:System.Windows.UIElement> вычисляются, таких как <xref:System.Windows.UIElement.Clip%2A> и <xref:System.Windows.UIElement.Visibility%2A>. Это приводит к возникновению ошибки значение с именем `constraintSize` , передаваемое в <xref:System.Windows.FrameworkElement.MeasureCore%2A>.  
   
- Во-вторых, framework свойства, определенные на <xref:System.Windows.FrameworkElement> обрабатываются, что влияет на значение `constraintSize`. Как правило, эти свойства описывают размерные характеристики базового <xref:System.Windows.UIElement>, такие как его <xref:System.Windows.FrameworkElement.Height%2A>, <xref:System.Windows.FrameworkElement.Width%2A>, <xref:System.Windows.FrameworkElement.Margin%2A>, и <xref:System.Windows.FrameworkElement.Style%2A>. Каждое из этих свойств может изменить пространство, необходимое для отображения элемента. <xref:System.Windows.FrameworkElement.MeasureOverride%2A>Затем вызывается с `constraintSize` как параметр.  
+ Во-вторых, framework свойства, определенные на <xref:System.Windows.FrameworkElement> обрабатываются, что влияет на значение `constraintSize`. Как правило, эти свойства описывают размерные характеристики базового <xref:System.Windows.UIElement>, такие как его <xref:System.Windows.FrameworkElement.Height%2A>, <xref:System.Windows.FrameworkElement.Width%2A>, <xref:System.Windows.FrameworkElement.Margin%2A>, и <xref:System.Windows.FrameworkElement.Style%2A>. Каждое из этих свойств может изменить пространство, необходимое для отображения элемента. <xref:System.Windows.FrameworkElement.MeasureOverride%2A> Затем вызывается с `constraintSize` как параметр.  
   
 > [!NOTE]
 >  Есть разница между свойства <xref:System.Windows.FrameworkElement.Height%2A> и <xref:System.Windows.FrameworkElement.Width%2A> и <xref:System.Windows.FrameworkElement.ActualHeight%2A> и <xref:System.Windows.FrameworkElement.ActualWidth%2A>. Например <xref:System.Windows.FrameworkElement.ActualHeight%2A> свойство является вычисляемым значением на основе других входных значений высоты и системы макета. Значение задается самой системой макета в зависимости от фактического прохода отрисовки, а может поэтому немного отставать от установки значений свойств, таких как <xref:System.Windows.FrameworkElement.Height%2A>, которые являются основой для изменения ввода.  
@@ -108,15 +96,15 @@ ms.lasthandoff: 12/22/2017
   
  Порядок передачи начинается с вызова <xref:System.Windows.UIElement.Arrange%2A> метод. Во время компоновки родительского <xref:System.Windows.Controls.Panel> элемент формирует прямоугольник, представляющий границы потомка. Это значение передается <xref:System.Windows.FrameworkElement.ArrangeCore%2A> метод для обработки.  
   
- <xref:System.Windows.FrameworkElement.ArrangeCore%2A> Метод вычисляет <xref:System.Windows.UIElement.DesiredSize%2A> дочернего элемента и оценивает все дополнительные границы, которые могут повлиять на отображаемый размер элемента. <xref:System.Windows.FrameworkElement.ArrangeCore%2A>приводит к возникновению ошибки `arrangeSize`, который передается <xref:System.Windows.FrameworkElement.ArrangeOverride%2A> метод <xref:System.Windows.Controls.Panel> как параметр. <xref:System.Windows.FrameworkElement.ArrangeOverride%2A>приводит к возникновению ошибки `finalSize` дочернего элемента. Наконец <xref:System.Windows.FrameworkElement.ArrangeCore%2A> метод выполняет окончательную оценку свойств смещения, таких как границы и выравнивание и помещает дочерний объект в его расположении. Дочерний объект не должен обязательно заполнять все выделенное пространство (и в большинстве случаев не делает этого). Затем управление возвращается к родительскому <xref:System.Windows.Controls.Panel> и завершения процесса компоновки.  
+ <xref:System.Windows.FrameworkElement.ArrangeCore%2A> Метод вычисляет <xref:System.Windows.UIElement.DesiredSize%2A> дочернего элемента и оценивает все дополнительные границы, которые могут повлиять на отображаемый размер элемента. <xref:System.Windows.FrameworkElement.ArrangeCore%2A> приводит к возникновению ошибки `arrangeSize`, который передается <xref:System.Windows.FrameworkElement.ArrangeOverride%2A> метод <xref:System.Windows.Controls.Panel> как параметр. <xref:System.Windows.FrameworkElement.ArrangeOverride%2A> приводит к возникновению ошибки `finalSize` дочернего элемента. Наконец <xref:System.Windows.FrameworkElement.ArrangeCore%2A> метод выполняет окончательную оценку свойств смещения, таких как границы и выравнивание и помещает дочерний объект в его расположении. Дочерний объект не должен обязательно заполнять все выделенное пространство (и в большинстве случаев не делает этого). Затем управление возвращается к родительскому <xref:System.Windows.Controls.Panel> и завершения процесса компоновки.  
   
 <a name="LayoutSystem_PanelsCustom"></a>   
 ## <a name="panel-elements-and-custom-layout-behaviors"></a>Элементы панели и пользовательские расширения функциональности макета  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]включает группу элементов, которые являются производными от <xref:System.Windows.Controls.Panel>. Эти <xref:System.Windows.Controls.Panel> элементы включать множество сложных макетов. Например, наложение элементов можно легко получить с помощью <xref:System.Windows.Controls.StackPanel> элемент, пока более сложные и свободно потоковые макеты создаются при помощи <xref:System.Windows.Controls.Canvas>.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] включает группу элементов, которые являются производными от <xref:System.Windows.Controls.Panel>. Эти <xref:System.Windows.Controls.Panel> элементы включать множество сложных макетов. Например, наложение элементов можно легко получить с помощью <xref:System.Windows.Controls.StackPanel> элемент, пока более сложные и свободно потоковые макеты создаются при помощи <xref:System.Windows.Controls.Canvas>.  
   
  В следующей таблице перечислены доступные макета <xref:System.Windows.Controls.Panel> элементов.  
   
-|Имя панели|Описание:|  
+|Имя панели|Описание|  
 |----------------|-----------------|  
 |<xref:System.Windows.Controls.Canvas>|Определяет область, внутри которой можно явным образом разместить дочерние элементы при помощи относительных координат в <xref:System.Windows.Controls.Canvas> области.|  
 |<xref:System.Windows.Controls.DockPanel>|Определяет область, в которой можно горизонтально либо вертикально упорядочивать дочерние элементы относительно друг друга.|  
@@ -133,11 +121,11 @@ ms.lasthandoff: 12/22/2017
   
 -   Следует учитывать, что определенные изменения значений свойств могут привести к выполнению системой макета рекурсивного обновления.  
   
-     Свойства зависимостей, значения которых могут привести к инициализации системы макета, помечаются общими флагами. <xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A>и <xref:System.Windows.FrameworkPropertyMetadata.AffectsArrange%2A> предоставляют полезные указания о том, какое свойство изменяется вызовут рекурсивное обновление системы макета. Как правило, должны иметь любое свойство, которое может повлиять на размер ограничивающего прямоугольника элемента <xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A> для флага. Дополнительные сведения см. в [обзоре свойств зависимостей](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md).  
+     Свойства зависимостей, значения которых могут привести к инициализации системы макета, помечаются общими флагами. <xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A> и <xref:System.Windows.FrameworkPropertyMetadata.AffectsArrange%2A> предоставляют полезные указания о том, какое свойство изменяется вызовут рекурсивное обновление системы макета. Как правило, должны иметь любое свойство, которое может повлиять на размер ограничивающего прямоугольника элемента <xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A> для флага. Дополнительные сведения см. в [обзоре свойств зависимостей](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md).  
   
 -   По возможности используйте <xref:System.Windows.UIElement.RenderTransform%2A> вместо <xref:System.Windows.FrameworkElement.LayoutTransform%2A>.  
   
-     Объект <xref:System.Windows.FrameworkElement.LayoutTransform%2A> может быть очень удобный способ определения содержимого [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]. Тем не менее, если результат преобразования не влияет на положение других элементов, лучше всего использовать <xref:System.Windows.UIElement.RenderTransform%2A> вместо этого, так как <xref:System.Windows.UIElement.RenderTransform%2A> не вызывает систему макета. <xref:System.Windows.FrameworkElement.LayoutTransform%2A>применяет его преобразования и вызывает рекурсивное обновление макета для учета нового положения затронутого элемента.  
+     Объект <xref:System.Windows.FrameworkElement.LayoutTransform%2A> может быть очень удобный способ определения содержимого [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]. Тем не менее, если результат преобразования не влияет на положение других элементов, лучше всего использовать <xref:System.Windows.UIElement.RenderTransform%2A> вместо этого, так как <xref:System.Windows.UIElement.RenderTransform%2A> не вызывает систему макета. <xref:System.Windows.FrameworkElement.LayoutTransform%2A> применяет его преобразования и вызывает рекурсивное обновление макета для учета нового положения затронутого элемента.  
   
 -   Число вызовов <xref:System.Windows.UIElement.UpdateLayout%2A>.  
   

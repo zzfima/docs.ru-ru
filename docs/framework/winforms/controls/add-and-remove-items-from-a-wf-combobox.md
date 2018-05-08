@@ -1,13 +1,6 @@
 ---
-title: "Практическое руководство. Добавление и удаление элементов, отображаемых в элементах управления ComboBox, ListBox и CheckedListBox в Windows Forms"
-ms.custom: 
+title: Практическое руководство. Добавление и удаление элементов, отображаемых в элементах управления ComboBox, ListBox и CheckedListBox в Windows Forms
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -21,16 +14,11 @@ helpviewer_keywords:
 - combo boxes [Windows Forms], removing items
 - CheckedListBox control [Windows Forms], adding and removing items
 ms.assetid: 7224c8d2-4118-443e-ae1e-d7c17d1e69ee
-caps.latest.revision: "19"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: faf0422db9915806442ab96759d63e15ff98b813
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f9319ffe5e9c4f06565648565ce21dec6fc672f9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-add-and-remove-items-from-a-windows-forms-combobox-listbox-or-checkedlistbox-control"></a>Практическое руководство. Добавление и удаление элементов, отображаемых в элементах управления ComboBox, ListBox и CheckedListBox в Windows Forms
 Элементы могут добавляться в Windows Forms со списком, списке или списки с помеченными различными способами, так как эти элементы управления могут быть привязаны к различным источникам данных. Однако в этом разделе демонстрирует простейший метод и привязка к данным не требуется. Элементы отображаются обычно представляют собой строки; Тем не менее можно использовать любой объект. Текст, отображаемый в элементе управления является значения, возвращенного объекта `ToString` метод.  
@@ -102,7 +90,7 @@ ms.lasthandoff: 12/22/2017
   
 1.  Вызовите `Remove` или `RemoveAt` метод для удаления элементов.  
   
-     `Remove`имеет один аргумент, который задает удаляемый элемент.`RemoveAt` Удаляет элемент с заданным индексом.  
+     `Remove` имеет один аргумент, который задает удаляемый элемент.`RemoveAt` Удаляет элемент с заданным индексом.  
   
     ```vb  
     ' To remove item with index 0:  

@@ -1,24 +1,12 @@
 ---
-title: "Асинхронные сценарии с использованием HTTP, TCP или именованного канала"
-ms.custom: 
+title: Асинхронные сценарии с использованием HTTP, TCP или именованного канала
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: a4d62402-43a4-48a4-9ced-220633ebc4ce
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 76c4c225b333af6d376fa409a05ea5727ede6e8f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d08f70186a59b8717c4441167ee720ba1c20b9dc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="asynchronous-scenarios-using-http-tcp-or-named-pipe"></a>Асинхронные сценарии с использованием HTTP, TCP или именованного канала
 В этом разделе описываются действия и перенаправления для различных асинхронных сценариев типа запрос-ответ (с многопотоковыми запросами с использованием HTTP, TCP или именованного канала).  
@@ -44,7 +32,7 @@ ms.lasthandoff: 12/22/2017
 #### <a name="propagation-is-disabled-on-either-sides-using-http"></a>Распространение отключено для обеих сторон (с использованием HTTP)  
  Если `propagateActivity` = `false` для обеих сторон, действие ProcessMessage указывает, какое действие ProcessAction для передачи. Таким образом, вызывается новое временное действие ProcessAction с новым идентификатором. Если асинхронный ответ соответствует запросу в коде ServiceModel, идентификатор действия может быть получен из локального контекста. Фактическое действие ProcessAction может быть передано с данным идентификатором.  
   
- ![Асинхронные сценарии с использованием HTTP &#47; TCP &#47; Именованный канал](../../../../../docs/framework/wcf/diagnostics/tracing/media/async2.gif "Async2")  
+ ![Асинхронные сценарии с использованием HTTP&#47;TCP&#47;именованного канала](../../../../../docs/framework/wcf/diagnostics/tracing/media/async2.gif "Async2")  
   
  Рис. 2. Асинхронный клиент, без обратного вызова `propagateActivity` = `false` для обеих сторон, HTTP  
   
@@ -53,7 +41,7 @@ ms.lasthandoff: 12/22/2017
  Действие Process Action создается на асинхронном клиенте при `propagateActivity` = `false` в вызывающей или вызываемой и, когда сообщение-ответ не содержит заголовка Action.  
   
 #### <a name="propagation-is-enabled-on-both-sides-using-tcp-or-named-pipe"></a>Распространение включено для обеих сторон (с использованием TCP или именованного канала)  
- ![Асинхронные сценарии с использованием HTTP &#47; TCP &#47; Именованный канал](../../../../../docs/framework/wcf/diagnostics/tracing/media/async3.gif "Async3")  
+ ![Асинхронные сценарии с использованием HTTP&#47;TCP&#47;именованного канала](../../../../../docs/framework/wcf/diagnostics/tracing/media/async3.gif "Async3")  
   
  Рис. 3. Асинхронный клиент, без обратного вызова `propagateActivity` = `true` на обеих сторонах именованного канала или TCP  
   
@@ -66,7 +54,7 @@ ms.lasthandoff: 12/22/2017
   
  Аналогично Fig.2, если `propagateActivity` = `false` для обеих сторон, действие ProcessMessage указывает, какое действие ProcessAction для передачи. Таким образом, вызывается новое временное действие ProcessAction с новым идентификатором. Если асинхронный ответ соответствует запросу в коде ServiceModel, идентификатор действия может быть получен из локального контекста. Фактическое действие ProcessAction может быть передано с данным идентификатором.  
   
- ![Асинхронные сценарии с использованием HTTP &#47; TCP &#47; Именованные каналы](../../../../../docs/framework/wcf/diagnostics/tracing/media/async4.gif "Async4")  
+ ![Асинхронные сценарии с использованием HTTP&#47;TCP&#47; именованных каналов](../../../../../docs/framework/wcf/diagnostics/tracing/media/async4.gif "Async4")  
   
  Рис. 4. Асинхронный клиент, без обратного вызова `propagateActivity` = `false` на обеих сторонах именованного канала или TCP  
   
@@ -86,7 +74,7 @@ ms.lasthandoff: 12/22/2017
  Рис. 6. Асинхронный клиент с обратным вызовом, `endCall` вне обратного вызова  
   
 ### <a name="asynchronous-server-with-callback"></a>Асинхронный сервер с обратным вызовом  
- ![Асинхронные сценарии с использованием HTTP &#47; TCP &#47; С именем &#45; Канал](../../../../../docs/framework/wcf/diagnostics/tracing/media/aynchserver.gif "AynchServer")  
+ ![Асинхронные сценарии с использованием HTTP&#47;TCP&#47; именованных&#45;канала](../../../../../docs/framework/wcf/diagnostics/tracing/media/aynchserver.gif "AynchServer")  
   
  Рис. 7. Асинхронный сервер с обратным вызовом  
   

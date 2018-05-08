@@ -1,26 +1,12 @@
 ---
 title: Пример совместного использования портов Net.TCP
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 03da5959-0574-4e91-8a53-05854b6c55dc
-caps.latest.revision: 18
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 0db4148f9be6db97dec2b8b680dad56171106b2c
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: cfd87868a5ecc557ccca1003f54f3a896b2f9fcc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="nettcp-port-sharing-sample"></a>Пример совместного использования портов Net.TCP
 Протокол TCP/IP использует 16-разрядное число, называемое номером порта, чтобы различать подключения к разным сетевым приложениям, выполняющимся на одном компьютере. Если приложение ожидает передачи данных через порт, то весь трафик TCP через этот порт перенаправляется данному приложению. Другие приложения не могут одновременно ожидать передачи данных через тот же порт.  
@@ -30,13 +16,13 @@ ms.lasthandoff: 04/27/2018
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) Чтобы загрузить все [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] образцов. Этот образец расположен в следующем каталоге.  
+>  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] образцов. Этот образец расположен в следующем каталоге.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\TCP\PortSharing`  
   
  У многих протоколов имеется номер порта по умолчанию. Например, для протокола HTTP обычно используется порт TCP 80. У служб IIS имеется прослушиватель для совместного использования одного порта несколькими приложениями HTTP. Службы IIS ожидают передачи данных непосредственно через этот порт и перенаправляют сообщения соответствующим приложениям в зависимости от информации внутри сообщения. Это позволяет нескольким приложениям HTTP использовать один и тот же номер порта, не конкурируя за порт для получения сообщений.  
   
- Совместное использование порта NetTcp [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]функция, которая аналогичным образом позволяет нескольким сетевым приложениям использовать один порт. Служба общего доступа к портам NetTcp принимает подключения с помощью протокола net.tcp и перенаправляет сообщения в зависимости от их адреса назначения.  
+ Общий доступ к портам NetTcp — это компонент Windows Communication Foundation (WCF), которая аналогичным образом позволяет нескольким сетевым приложениям использовать один порт. Служба общего доступа к портам NetTcp принимает подключения с помощью протокола net.tcp и перенаправляет сообщения в зависимости от их адреса назначения.  
   
  По умолчанию служба общего доступа к портам NetTcp отключена. Перед запуском этого образца необходимо вручную включить эту службу. Дополнительные сведения см. в разделе [как: Включение службы совместного использования портов Net.TCP](../../../../docs/framework/wcf/feature-details/how-to-enable-the-net-tcp-port-sharing-service.md). Если служба отключена, при запуске серверного приложения создается исключение.  
   

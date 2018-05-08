@@ -1,13 +1,6 @@
 ---
-title: "Элементы управления Windows Forms со встроенной поддержки рисования владельцем"
-ms.custom: 
+title: Элементы управления Windows Forms со встроенной поддержки рисования владельцем
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - drawing [Windows Forms], owner
 - drawing [Windows Forms], custom
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - custom drawing
 - owner drawing
 ms.assetid: 3823d01e-9610-43e6-864d-99f9b7c2b351
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: efd297dcc11005d6b6d47bb9ce3853a757046e8f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a5cbdc733a2f1cda3e708ceaae8604297f8da58a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="controls-with-built-in-owner-drawing-support"></a>Элементы управления Windows Forms со встроенной поддержки рисования владельцем
 Рисование владельцем в Windows Forms, иначе называемое пользовательским рисованием, — это способ изменения внешнего вида определенных элементов управления.  
@@ -53,7 +41,7 @@ ms.lasthandoff: 12/22/2017
   
 -   <xref:System.Windows.Forms.ComboBox>  
   
--   <xref:System.Windows.Forms.MenuItem>(используемые <xref:System.Windows.Forms.MainMenu> и <xref:System.Windows.Forms.ContextMenu>)  
+-   <xref:System.Windows.Forms.MenuItem> (используемые <xref:System.Windows.Forms.MainMenu> и <xref:System.Windows.Forms.ContextMenu>)  
   
 -   <xref:System.Windows.Forms.TabControl>  
   
@@ -188,7 +176,7 @@ ms.lasthandoff: 12/22/2017
 -   [Практическое руководство. Настройка внешнего вида строк элемента управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/customize-the-appearance-of-rows-in-the-datagrid.md)  
   
 ### <a name="toolstrip-control"></a>Элемент управления ToolStrip  
- <xref:System.Windows.Forms.ToolStrip>и производные элементы управления дают возможность настраивать все аспекты их внешний вид.  
+ <xref:System.Windows.Forms.ToolStrip> и производные элементы управления дают возможность настраивать все аспекты их внешний вид.  
   
  Чтобы предоставить пользовательскую отрисовку для <xref:System.Windows.Forms.ToolStrip> элементов управления `Renderer` свойство <xref:System.Windows.Forms.ToolStrip>, <xref:System.Windows.Forms.ToolStripManager>, <xref:System.Windows.Forms.ToolStripPanel>, или <xref:System.Windows.Forms.ToolStripContentPanel> для `ToolStripRenderer` и обработать один или несколько из большого числа событий рисования по `ToolStripRenderer` класса. Можно также задать `Renderer` свойство для экземпляра собственный класс, производный от `ToolStripRenderer`, <xref:System.Windows.Forms.ToolStripProfessionalRenderer>, или <xref:System.Windows.Forms.ToolStripSystemRenderer> , реализующего или переопределяющего определенные `On` *EventName* методы.  
   

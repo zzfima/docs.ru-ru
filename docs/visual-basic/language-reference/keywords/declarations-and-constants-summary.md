@@ -1,23 +1,16 @@
 ---
-title: "Сводка по объявлениям и константам (Visual Basic)"
+title: Сводка по объявлениям и константам (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - constants [Visual Basic]
 - declaring constants [Visual Basic], keywords
 - declarations [Visual Basic], Visual Basic language elements
 ms.assetid: 79d64f3e-941d-4d39-bc5b-79f225d5be6e
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 35914482eb3dde1a0b77d7fb2484677616ad45f7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: b7cb3c6c8671a6f172cd7d3b94870e313062eb80
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="declarations-and-constants-summary-visual-basic"></a>Сводка по объявлениям и константам (Visual Basic)
 Ключевые слова языка Visual Basic и члены библиотек времени выполнения упорядочены по назначению и использованию.  
@@ -28,7 +21,7 @@ ms.lasthandoff: 11/21/2017
 |Объявление переменных и констант.|[Const](../../../visual-basic/language-reference/statements/const-statement.md), [Dim](../../../visual-basic/language-reference/statements/dim-statement.md), [закрытый](../../../visual-basic/language-reference/modifiers/private.md), [защищенных](../../../visual-basic/language-reference/modifiers/protected.md), [открытый](../../../visual-basic/language-reference/modifiers/public.md), [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md), [ Общие](../../../visual-basic/language-reference/modifiers/shared.md), [статический](../../../visual-basic/language-reference/modifiers/static.md)|  
 |Объявите класс, делегат, перечисление, модуля, пространства имен или структуры.|[Класс](../../../visual-basic/language-reference/statements/class-statement.md), [делегат](../../../visual-basic/language-reference/statements/delegate-statement.md), [перечисления](../../../visual-basic/language-reference/statements/enum-statement.md), [модуль](../../../visual-basic/language-reference/statements/module-statement.md), [имен](../../../visual-basic/language-reference/statements/namespace-statement.md), [структуры](../../../visual-basic/language-reference/statements/structure-statement.md)|  
 |Создание объектов.|<xref:Microsoft.VisualBasic.Interaction.CreateObject%2A>, <xref:Microsoft.VisualBasic.Interaction.GetObject%2A>, [New](../../../visual-basic/language-reference/operators/new-operator.md)|  
-|Получение сведений об объекте.|[GetType](../../../visual-basic/language-reference/operators/gettype-operator.md), <xref:Microsoft.VisualBasic.Information.IsArray%2A>, <xref:Microsoft.VisualBasic.Information.IsDate%2A>, <xref:Microsoft.VisualBasic.Information.IsDBNull%2A>, <xref:Microsoft.VisualBasic.Information.IsError%2A>, <xref:Microsoft.VisualBasic.Information.IsNothing%2A>, <xref:Microsoft.VisualBasic.Information.IsNumeric%2A>, <xref:Microsoft.VisualBasic.Information.IsReference%2A>, <xref:Microsoft.VisualBasic.Information.SystemTypeName%2A>, <xref:Microsoft.VisualBasic.Information.TypeName%2A>, <xref:Microsoft.VisualBasic.Information.VarType%2A>,<xref:Microsoft.VisualBasic.Information.VbTypeName%2A>|  
+|Получение сведений об объекте.|[GetType](../../../visual-basic/language-reference/operators/gettype-operator.md), <xref:Microsoft.VisualBasic.Information.IsArray%2A>, <xref:Microsoft.VisualBasic.Information.IsDate%2A>, <xref:Microsoft.VisualBasic.Information.IsDBNull%2A>, <xref:Microsoft.VisualBasic.Information.IsError%2A>, <xref:Microsoft.VisualBasic.Information.IsNothing%2A>, <xref:Microsoft.VisualBasic.Information.IsNumeric%2A>, <xref:Microsoft.VisualBasic.Information.IsReference%2A>, <xref:Microsoft.VisualBasic.Information.SystemTypeName%2A>, <xref:Microsoft.VisualBasic.Information.TypeName%2A>, <xref:Microsoft.VisualBasic.Information.VarType%2A>, <xref:Microsoft.VisualBasic.Information.VbTypeName%2A>|  
 |Ссылки на текущий объект.|[Me](../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)|  
 |Требовать явного объявления переменных.|[Option Explicit](../../../visual-basic/language-reference/statements/option-explicit-statement.md), [Option Strict](../../../visual-basic/language-reference/statements/option-strict-statement.md)|  
 |Обрабатывать события.|[AddHandler](../../../visual-basic/language-reference/statements/addhandler-statement.md), [событий](../../../visual-basic/language-reference/statements/event-statement.md), [RaiseEvent](../../../visual-basic/language-reference/statements/raiseevent-statement.md), [RemoveHandler](../../../visual-basic/language-reference/statements/removehandler-statement.md)|  

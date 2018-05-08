@@ -1,32 +1,18 @@
 ---
-title: "Руководство по работе с документацией"
-ms.custom: 
+title: Руководство по работе с документацией
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - WCF [WCF], documentation
 - Windows Communication Foundation [WCF], documentation
 ms.assetid: 2aa18c85-a4fd-4bb9-986a-a8249e4f8e0e
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 132cbc6c7c9ba7d8e6c29f477554fc7b3bbab469
-ms.sourcegitcommit: 08684dd61444c2f072b89b926370f750e456fca1
-ms.translationtype: MT
+ms.openlocfilehash: 79a9465c81071a77a6901f21f59036ea88b9cb53
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="guide-to-the-documentation"></a>Руководство по работе с документацией
-Этот раздел представляет собой руководство по работе с документацией к [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]. Документы, на которые указывают ссылки - это рекомендуемые отправные точки, сгруппированные по интересам и уровням подготовки.  
+Раздел представляет собой руководство по документации Windows Communication Foundation (WCF). Документы, на которые указывают ссылки - это рекомендуемые отправные точки, сгруппированные по интересам и уровням подготовки.  
   
  Установка изолированной версии документация и средства просмотра справки, загрузите [v Microsoft Windows SDK 7.1](http://go.microsoft.com/fwlink/?LinkID=194146&clcid=0x409).  
   

@@ -1,32 +1,18 @@
 ---
 title: Практическое руководство. Создание клиента Windows Communication Foundation
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - clients [WCF], running
 - WCF clients [WCF], running
 ms.assetid: a67884cc-1c4b-416b-8c96-5c954099f19f
-caps.latest.revision: ''
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 2591cad6354ec40f1fb6ead265c84a67adf3eec8
-ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
-ms.translationtype: MT
+ms.openlocfilehash: 962f1255f3c759d623850678005eff138353cc80
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-windows-communication-foundation-client"></a>Практическое руководство. Создание клиента Windows Communication Foundation
-Это четвертый из шести шагов, необходимый для создания простого приложения [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]. Общие сведения обо всех шести задач см. в разделе [учебник по началу работы](../../../docs/framework/wcf/getting-started-tutorial.md) раздела.  
+Это четвертый из шести шагов, необходимых для создания приложения Windows Communication Foundation (WCF). Общие сведения обо всех шести задач см. в разделе [учебник по началу работы](../../../docs/framework/wcf/getting-started-tutorial.md) раздела.  
   
  В данном разделе описывается, как извлечь метаданные из службы [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] и использовать, чтобы создать прокси [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] для доступа к службе. Эта задача выполняется с помощью функции добавления ссылки на службу, предоставляемой средой Visual Studio. Данное средство получает метаданные из конечной точки обмена метаданными службы и создает файл управляемого исходного кода для клиентского прокси на выбранном языке (по умолчанию на C#). Кроме создания прокси клиента данное средство также создает или обновляет файл конфигурации клиента, позволяющий клиентскому приложению подключаться к службе в одной из конечных точек.  
   
@@ -48,7 +34,7 @@ ms.lasthandoff: 03/19/2018
   
 3.  Добавление в проект GettingStartedClient ссылку на сборку System.ServiceModel щелкните правой кнопкой мыши **ссылки** папки проекта в обозревателе решений и выберите GettingStartedClient **добавить** Ссылка. В **добавить ссылку** окна выберите **Framework** с левой стороны диалогового окна. В текстовом поле «Поиск сборок» введите `System.ServiceModel`. В центральной части диалогового окна выберите **System.ServiceModel**, нажмите кнопку **добавить** и нажмите кнопку **закрыть** кнопки. Сохраните решение, нажав кнопку **сохранить все** кнопку под главным меню.  
   
-4.  Затем необходимо добавить ссылку на службу калькулятора. Прежде чем это можно будет сделать, следует запустить консольное приложение GettingStartedHost. После запуска основного приложения можно правой кнопкой мыши папку References проекта GettingStartedClient в обозревателе решений и выберите Добавить ссылку на службу и введите следующий URL-адрес в поле "адрес" диалогового окна Добавление ссылки на службу: ГИПЕРССЫЛКИ «http://localhost:8000/ServiceModelSamples/Service» http://localhost:8000/ServiceModelSamples/Service и нажмите кнопку **Go** кнопки. Служба CalculatorService должна отображаться в списке служб. Дважды щелкните службу CalculatorService, чтобы развернуть список контрактов, реализованных службой. Оставьте пространство имен по умолчанию и нажмите **ОК** кнопки.  
+4.  Затем необходимо добавить ссылку на службу калькулятора. Прежде чем это можно будет сделать, следует запустить консольное приложение GettingStartedHost. После запуска основного приложения можно правой кнопкой мыши папку References проекта GettingStartedClient в обозревателе решений и выберите Добавить ссылку на службу и введите следующий URL-адрес в поле "адрес" диалогового окна "Добавление ссылки на службу": «ГИПЕРССЫЛКИhttp://localhost:8000/ServiceModelSamples/Service» http://localhost:8000/ServiceModelSamples/Service и нажмите кнопку **Go** кнопки. Служба CalculatorService должна отображаться в списке служб. Дважды щелкните службу CalculatorService, чтобы развернуть список контрактов, реализованных службой. Оставьте пространство имен по умолчанию и нажмите **ОК** кнопки.  
   
      При добавлении ссылки на службу с помощью Visual Studio в обозревателе решений для проекта GettingStartedClient появится новый элемент в папке «Ссылки на службы».  Если вы используете [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) средство, будет создан файл исходного кода и файл app.config.  
   

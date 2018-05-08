@@ -1,33 +1,19 @@
 ---
-title: "Адреса конечных точек"
-ms.custom: 
+title: Адреса конечных точек
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - addresses [WCF]
 - Windows Communication Foundation [WCF], addresses
 - WCF [WCF], addresses
 ms.assetid: 13f269e3-ebb1-433c-86cf-54fbd866a627
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 58e6d383856d57e95a1ea5bd2658af2ec0b22ed5
-ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
+ms.openlocfilehash: 46278e35c6966e473f5a800f7e99814efd7b943c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="endpoint-addresses"></a>Адреса конечных точек
-С каждой конечной точкой связан адрес, который используется для поиска и идентификации этой конечной точки. Этот адрес в первую очередь включает универсальный код ресурса (URI), задающий расположение конечной точки. Адрес конечной точки представляется в модели программирования [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] классом <xref:System.ServiceModel.EndpointAddress>, который содержит необязательное свойство <xref:System.ServiceModel.EndpointAddress.Identity%2A>, включающее проверку подлинности конечной точки другими конечными точками, с которыми она обменивается сообщениями, а также набор необязательных свойств <xref:System.ServiceModel.EndpointAddress.Headers%2A>, задающих другие заголовки SOAP, необходимые для получения доступа к службе. Необязательные заголовки содержат дополнительную и более подробную информацию для идентификации конечной точки службы и взаимодействия с ней. При передаче данных по каналам связи адрес конечной точки представляется ссылкой на конечную точку WS-Addressing.  
+С каждой конечной точкой связан адрес, который используется для поиска и идентификации этой конечной точки. Этот адрес в первую очередь включает универсальный код ресурса (URI), задающий расположение конечной точки. Адрес конечной точки представляется в модели программирования Windows Communication Foundation (WCF), <xref:System.ServiceModel.EndpointAddress> класс, который содержит необязательное <xref:System.ServiceModel.EndpointAddress.Identity%2A> свойство, которое включает проверку подлинности конечной точки другими конечными точками, обмена с ней сообщениями, а также набор необязательных <xref:System.ServiceModel.EndpointAddress.Headers%2A> свойства, определяющие другие заголовки SOAP, необходимые для доступа к службе. Необязательные заголовки содержат дополнительную и более подробную информацию для идентификации конечной точки службы и взаимодействия с ней. При передаче данных по каналам связи адрес конечной точки представляется ссылкой на конечную точку WS-Addressing.  
   
 ## <a name="uri-structure-of-an-address"></a>Структура универсального кода ресурса (URI) адреса  
  Универсальный код ресурса (URI) адреса для большинства видов транспорта состоит из четырех частей. Например, четыре части URI http://www.fabrikam.com:322/mathservice.svc/secureEndpoint можно разбить на части следующим образом:  
@@ -63,7 +49,7 @@ ms.lasthandoff: 03/19/2018
   
 -   Данные привязки: IP-адрес, порт, заголовок узла  
   
- Службы IIS поддерживают задание нескольких привязок для каждого сайта, что позволяет использовать несколько базовых адресов для каждой схемы. До появления [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)] платформа [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] не поддерживала использование нескольких адресов для одной схемы, и, если они были заданы, во время активации создавалось исключение <xref:System.ArgumentException>.  
+ Службы IIS поддерживают задание нескольких привязок для каждого сайта, что позволяет использовать несколько базовых адресов для каждой схемы. До появления [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)], WCF не поддерживает несколько адресов для схемы и, если они были заданы, вызвал <xref:System.ArgumentException> во время активации.  
   
  [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)] позволяет поставщикам услуг Интернета размещать на одном сайте несколько приложений с различными базовыми адресами в рамках одной схемы.  
   
@@ -111,7 +97,7 @@ ms.lasthandoff: 03/19/2018
  Дополнительные сведения и примеры см. в разделе [поддержка нескольких привязок узла IIS](../../../../docs/framework/wcf/feature-details/supporting-multiple-iis-site-bindings.md) и <xref:System.ServiceModel.ServiceHostingEnvironment.MultipleSiteBindingsEnabled%2A>.  
   
 ## <a name="extending-addressing-in-wcf-services"></a>Расширение модели адресов в службах WCF  
- Модель адресов служб [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] по умолчанию использует коды URI адресов конечных точек для следующих целей:  
+ Значение по умолчанию модели служб WCF адресации использует адрес конечной точки URI для следующих целей:  
   
 -   задание адреса ожидания передачи данных службы, т. е. расположения, по которому конечная точка ожидает сообщений;  
   

@@ -1,14 +1,6 @@
 ---
-title: "Общие сведения об элементе управления RadioButton (Windows Forms)"
-ms.custom: 
+title: Общие сведения об элементе управления RadioButton (Windows Forms)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - RadioButton
 helpviewer_keywords:
@@ -17,17 +9,11 @@ helpviewer_keywords:
 - radio buttons [Windows Forms], determining state
 - radio buttons [Windows Forms], about radio buttons
 ms.assetid: cd11f0c2-d098-4022-adf9-1455bc166a13
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 67befd973dec38628f97a0d3153c399d48c18305
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 397808c055fd5ba5e8a73d47dfc7fee6c0cf2975
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="radiobutton-control-overview-windows-forms"></a>Общие сведения об элементе управления RadioButton (Windows Forms)
 Windows Forms <xref:System.Windows.Forms.RadioButton> элементы управления представляют собой набор из двух или более взаимоисключающих вариантов для пользователя. Переключатели и флажки могут показаться работают так же, является важным отличием: когда пользователь выбирает переключатель, другие переключатели в той же группе, не могут быть выбраны также. В отличие от этого можно выбрать любое число флажков. Определение в переключателе информирует пользователя, «Вот набор вариантов, из которых можно выбрать только один».  

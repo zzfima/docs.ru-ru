@@ -1,11 +1,7 @@
 ---
-title: "Функция GetQualifierSet (Справочник по неуправляемым API)"
-description: "Функция GetQualifierSet получает квалификатор для класса или экземпляра."
+title: Функция GetQualifierSet (Справочник по неуправляемым API)
+description: Функция GetQualifierSet получает квалификатор для класса или экземпляра.
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - GetQualifierSet
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 127e7862d0cb0d204e91cd5ee36f2d32f1453a8e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0b50befa4346e17048598afd3d018dbde2fe8572
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="getqualifierset-function"></a>Функция GetQualifierSet
 Извлекает квалификатор для экземпляра класса или определения класса.
@@ -59,7 +52,7 @@ HRESULT GetQualifierSet (
 
 Следующие значения, возвращаемые этой функцией, определяются в *WbemCli.h* файла заголовка, или их можно определить как константы в коде:
 
-|Константа  |Значение  |Описание:  |
+|Константа  |Значение  |Описание  |
 |---------|---------|---------|
 |`WBEM_E_FAILED` | 0x80041001 | Произошел общий сбой. |
 |`WBEM_E_NOT_FOUND` | 0x80041002 | Указанный метод не существует. |
@@ -78,7 +71,7 @@ HRESULT GetQualifierSet (
   
  **Заголовок:** WMINet_Utils.idl  
   
- **Версии платформы .NET framework:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Версии платформы .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>См. также  
 [WMI и счетчиков производительности (Справочник по неуправляемым API)](index.md)

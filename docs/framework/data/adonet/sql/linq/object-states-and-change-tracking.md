@@ -1,27 +1,15 @@
 ---
-title: "Состояния объектов и отслеживание изменений"
-ms.custom: 
+title: Состояния объектов и отслеживание изменений
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 7a808b00-9c3c-479a-aa94-717280fefd71
-caps.latest.revision: "2"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: f7eb1a8afe87caece18432c66a8d8a268ce9fbd2
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 482299f90a92acec9307649ec04a89f8ce6be414
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="object-states-and-change-tracking"></a>Состояния объектов и отслеживание изменений
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]объекты для участия в некоторых всегда *состояние*. Например, когда [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] создает объект, объект находится в состоянии `Unchanged`. Новый объект, создаваемый пользователем неизвестен <xref:System.Data.Linq.DataContext> и находится в `Untracked` состояние. После успешного выполнения <xref:System.Data.Linq.DataContext.SubmitChanges%2A> все объекты, известные [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], находятся в состоянии `Unchanged`. (Единственное исключение представляют объекты, успешно удаленные из базы данных, находящиеся в состоянии `Deleted` и не используемые в экземпляре <xref:System.Data.Linq.DataContext>.)  
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] объекты для участия в некоторых всегда *состояние*. Например, когда [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] создает объект, объект находится в состоянии `Unchanged`. Новый объект, создаваемый пользователем неизвестен <xref:System.Data.Linq.DataContext> и находится в `Untracked` состояние. После успешного выполнения <xref:System.Data.Linq.DataContext.SubmitChanges%2A> все объекты, известные [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], находятся в состоянии `Unchanged`. (Единственное исключение представляют объекты, успешно удаленные из базы данных, находящиеся в состоянии `Deleted` и не используемые в экземпляре <xref:System.Data.Linq.DataContext>.)  
   
 ## <a name="object-states"></a>Состояния объектов  
  В следующей таблице представлены возможные состояния объектов [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
@@ -45,9 +33,9 @@ ms.lasthandoff: 01/17/2018
 >  Объект, добавляемый в `Table` не является кэшем идентификации. Кэш идентификации отражает только данные, извлеченные из базы данных. После вызова <xref:System.Data.Linq.Table%601.InsertOnSubmit%2A> добавленная сущность не отображается в запросах к базе данных до успешного выполнения <xref:System.Data.Linq.DataContext.SubmitChanges%2A>.  
   
 ## <a name="deleting-objects"></a>Удаление объектов  
- Отслеживаемый объект `o` помечается для удаления путем вызова метода <xref:System.Data.Linq.Table%601.DeleteOnSubmit%2A>(o) для соответствующей таблицы <xref:System.Data.Linq.Table%601>. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]рассматривает удаление объекта из <xref:System.Data.Linq.EntitySet%601> как обновление операции, а значение соответствующего внешнего ключа задано значение null. Результат операции (`o`) из таблицы не удаляется. Например, `cust.Orders.DeleteOnSubmit(ord)` означает обновление, где для разрыва связи между `cust` и `ord` внешнему ключу `ord.CustomerID` задается значение NULL. При этом строка, соответствующая `ord`, не удаляется.  
+ Отслеживаемый объект `o` помечается для удаления путем вызова метода <xref:System.Data.Linq.Table%601.DeleteOnSubmit%2A>(o) для соответствующей таблицы <xref:System.Data.Linq.Table%601>. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] рассматривает удаление объекта из <xref:System.Data.Linq.EntitySet%601> как обновление операции, а значение соответствующего внешнего ключа задано значение null. Результат операции (`o`) из таблицы не удаляется. Например, `cust.Orders.DeleteOnSubmit(ord)` означает обновление, где для разрыва связи между `cust` и `ord` внешнему ключу `ord.CustomerID` задается значение NULL. При этом строка, соответствующая `ord`, не удаляется.  
   
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]выполняет следующий процесс, при удалении объекта (<xref:System.Data.Linq.Table%601.DeleteOnSubmit%2A>) из таблицы:  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] выполняет следующий процесс, при удалении объекта (<xref:System.Data.Linq.Table%601.DeleteOnSubmit%2A>) из таблицы:  
   
 -   При вызове <xref:System.Data.Linq.DataContext.SubmitChanges%2A> для объекта выполняется операция `DELETE`.  
   

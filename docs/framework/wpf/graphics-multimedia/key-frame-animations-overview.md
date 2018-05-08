@@ -1,28 +1,16 @@
 ---
-title: "Общие сведения об анимации по ключевым кадрам"
-ms.custom: 
+title: Общие сведения об анимации по ключевым кадрам
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - animation [WPF], key-frame
 - key frames [WPF], about key-frame animations
 - multiple animation target values [WPF]
 ms.assetid: 10028f97-bb63-41fc-b8ad-663dac7ea203
-caps.latest.revision: "29"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 38f0f6ac030af08039438b7e766c3f0f5bed7534
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8a18e0637b0fea7a1a960b157123da10819b4687
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="key-frame-animations-overview"></a>Общие сведения об анимации по ключевым кадрам
 В этом разделе рассказывается об анимации по ключевым кадрам. Методика анимации по ключевым кадрам позволяет использовать более двух целевых значений и контролировать применяемый метод интерполяции.  
@@ -290,7 +278,7 @@ ms.lasthandoff: 12/22/2017
   
 6.  Разрешить <xref:System.Windows.Media.Animation.KeyTime> значения ключевых кадров с неопределенным полным временем с помощью ключевых кадров, объявленных рядом с ними, которые были устранены <xref:System.Windows.Media.Animation.KeyTime> значения.  
   
-7.  Определите оставшиеся <xref:System.Windows.Media.Animation.KeyTime.Paced%2A> <xref:System.Windows.Media.Animation.KeyTime> значения. <xref:System.Windows.Media.Animation.KeyTime.Paced%2A><xref:System.Windows.Media.Animation.KeyTime> использовать <xref:System.Windows.Media.Animation.KeyTime> значений соседних полных кадров, чтобы определить их определенное время.  Цель — убедиться, что скорость анимации является постоянной в течение расчетного времени этого ключевого кадра.  
+7.  Определите оставшиеся <xref:System.Windows.Media.Animation.KeyTime.Paced%2A> <xref:System.Windows.Media.Animation.KeyTime> значения. <xref:System.Windows.Media.Animation.KeyTime.Paced%2A> <xref:System.Windows.Media.Animation.KeyTime> использовать <xref:System.Windows.Media.Animation.KeyTime> значений соседних полных кадров, чтобы определить их определенное время.  Цель — убедиться, что скорость анимации является постоянной в течение расчетного времени этого ключевого кадра.  
   
 8.  Отсортируйте полные кадры в порядке определенного времени (первичный ключ) и в порядке объявления (вторичный ключ), т. е., используйте строгую сортировку на основании полных кадров <xref:System.Windows.Media.Animation.KeyTime> значения.  
   

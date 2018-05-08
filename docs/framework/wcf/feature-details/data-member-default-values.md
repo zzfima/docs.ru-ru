@@ -1,13 +1,6 @@
 ---
-title: "Значения членов данных по умолчанию"
-ms.custom: 
+title: Значения членов данных по умолчанию
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - data members [WCF], default values
 - data members [WCF]
 ms.assetid: 53a3b505-4b27-444b-b079-0eb84a97cfd8
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 33f093beb022804bbdbccf1177404e128d198dd1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 477921069411bb4b7ac32a5e93cc409bc7fbdec2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="data-member-default-values"></a>Значения членов данных по умолчанию
 В [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], типов имеется концепция *значения по умолчанию*. Например, любой ссылочный тип имеет значение по умолчанию `null`, а значением по умолчанию для целого типа является ноль. Иногда требуется исключить член данных из сериализованных данных, если для него задано значение по умолчанию. Так как этот член имеет значение по умолчанию, нет необходимости сериализовывать фактическое значение; это повышает производительность.  
@@ -61,11 +49,11 @@ ms.lasthandoff: 12/22/2017
 ### <a name="schema-representation"></a>Представление схемы  
  Сведения о представления схемы языка определения схемы XML членов данных при `EmitDefaultValue` свойству `false` рассматриваются в [Справочник по схеме контрактов данных](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md). Тем не менее ниже приводятся краткие общие сведения:  
   
--   Если для свойства <xref:System.Runtime.Serialization.DataMemberAttribute.EmitDefaultValue%2A> задано значение `false`, оно представляется в схеме как заметка, специфичная для [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. Не существует совместимого способа представления этой информации. В частности, атрибут "default" в схеме не используется для этой цели, на атрибут `minOccurs` влияет только параметр <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A>, а на атрибут `nillable` влияет только тип члена данных.  
+-   Когда <xref:System.Runtime.Serialization.DataMemberAttribute.EmitDefaultValue%2A> равно `false`, оно представляется в схеме как заметка, специфичная для Windows Communication Foundation (WCF). Не существует совместимого способа представления этой информации. В частности, атрибут "default" в схеме не используется для этой цели, на атрибут `minOccurs` влияет только параметр <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A>, а на атрибут `nillable` влияет только тип члена данных.  
   
 -   Фактическое значение по умолчанию, которое требуется использовать, в этой схеме отсутствует. Правильная интерпретация отсутствующего элемента зависит только от принимающей конечной точки.  
   
- При импорте схемы для свойства <xref:System.Runtime.Serialization.DataMemberAttribute.EmitDefaultValue%2A> автоматически устанавливается значение `false`, если обнаруживается ранее упомянутая заметка, специфичная для [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Кроме того, значение `false` устанавливается для ссылочных типов, у которых для свойства `nillable` задано значение `false`, чтобы обеспечить поддержку специфичных сценариев взаимодействия, часто встречающихся при использовании веб-служб [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)].  
+ При импорте схемы <xref:System.Runtime.Serialization.DataMemberAttribute.EmitDefaultValue%2A> автоматически присваивается свойству `false` каждый раз, когда упомянутая заметка конкретного WCF обнаруживается ранее. Кроме того, значение `false` устанавливается для ссылочных типов, у которых для свойства `nillable` задано значение `false`, чтобы обеспечить поддержку специфичных сценариев взаимодействия, часто встречающихся при использовании веб-служб [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)].  
   
 ## <a name="see-also"></a>См. также  
  <xref:System.Runtime.Serialization.DataMemberAttribute.EmitDefaultValue%2A>  

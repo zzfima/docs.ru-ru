@@ -1,30 +1,18 @@
 ---
-title: "Программирование клиентов на уровне канала"
-ms.custom: 
+title: Программирование клиентов на уровне канала
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 3b787719-4e77-4e77-96a6-5b15a11b995a
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4c3d9bc1819045c8261f003cbab52dd71c4da408
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ff399a2f3a4b86404695502fb002ee6920bea758
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="client-channel-level-programming"></a>Программирование клиентов на уровне канала
-В данном разделе описывается, как создать клиентское приложение [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], не используя класс <xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType> и связанную с ним объектную модель.  
+В этом разделе описывается создание клиентского приложения Windows Communication Foundation (WCF) без использования <xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType> класса и его связанной объектной модели.  
   
 ## <a name="sending-messages"></a>Отправка сообщений  
  Чтобы подготовиться к отправке сообщений и получению и обработке ответов, необходимы следующие действия.  

@@ -1,32 +1,20 @@
 ---
-title: "Протоколы транзакций"
-ms.custom: 
+title: Протоколы транзакций
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 2820b0ec-2f32-430c-b299-1f0e95e1f2dc
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 13784a3a5062705abba1b3bbb33a04e66bd22072
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8841a9cf414ae94da7e63bd7312a3c541ab6de1b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="transaction-protocols"></a>Протоколы транзакций
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] реализует протоколы WS-Atomic Transaction и WS-Coordination.  
+Windows Communication Foundation (WCF) реализует протоколы WS-Atomic Transaction и WS-Coordination.  
   
 |Спецификация/документ|Версия|Ссылка|  
 |-----------------------------|-------------|----------|  
-|WS-Coordination|1.0<br /><br /> 1.1|[http://go.Microsoft.com/fwlink/?LinkId=96104](http://go.microsoft.com/fwlink/?LinkId=96104)<br /><br /> [http://go.Microsoft.com/fwlink/?LinkId=96079](http://go.microsoft.com/fwlink/?LinkId=96079)|  
-|WS-AtomicTransaction|1.0<br /><br /> 1.1|[http://go.Microsoft.com/fwlink/?LinkId=96080](http://go.microsoft.com/fwlink/?LinkId=96080)<br /><br /> http://go.microsoft.com/fwlink/?LinkId=96081|  
+|WS-Coordination|1.0<br /><br /> 1.1|[http://go.microsoft.com/fwlink/?LinkId=96104](http://go.microsoft.com/fwlink/?LinkId=96104)<br /><br /> [http://go.microsoft.com/fwlink/?LinkId=96079](http://go.microsoft.com/fwlink/?LinkId=96079)|  
+|WS-AtomicTransaction|1.0<br /><br /> 1.1|[http://go.microsoft.com/fwlink/?LinkId=96080](http://go.microsoft.com/fwlink/?LinkId=96080)<br /><br /> http://go.microsoft.com/fwlink/?LinkId=96081|  
   
  Согласно этим спецификациям протоколов, требуется взаимодействие на двух уровнях: между приложениями и между диспетчерами транзакций (см. следующий рисунок). В спецификациях подробно описываются форматы сообщений и обмен сообщениями для обоих уровней взаимодействия. При обмене между приложениями применяются определенные средства обеспечения безопасности, надежности и методы кодирования, как и при обычном обмене в пределах сообщения. Однако для успешного взаимодействия между диспетчерами транзакций требуется соглашение по конкретной привязке, поскольку она обычно не настраивается пользователем.  
   
@@ -64,19 +52,19 @@ ms.lasthandoff: 12/22/2017
   
 -   сообщения приложений.  
   
- Первые три класса сообщений считаются сообщениями диспетчера транзакций и их конфигурация привязки описывается в разделе "Обмен сообщениями приложений" ниже в данном разделе. Четвертый класс сообщений - это сообщения, передаваемые между приложениями, которые описываются в разделе "Примеры сообщений" ниже в данном разделе. В этом разделе описываются привязки протокола, используемые системой [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] для каждого из этих классов.  
+ Первые три класса сообщений считаются сообщениями диспетчера транзакций и их конфигурация привязки описывается в разделе "Обмен сообщениями приложений" ниже в данном разделе. Четвертый класс сообщений - это сообщения, передаваемые между приложениями, которые описываются в разделе "Примеры сообщений" ниже в данном разделе. В этом разделе описываются привязки протокола, используемый для каждого из этих классов с WCF.  
   
  Во всем данном документе используются следующие пространства имен XML и связанные с ними префиксы.  
   
 |Префикс|Версия|Универсальный код ресурса (URI) пространства имен|  
 |------------|-------------|-------------------|  
-|s11||[http://go.Microsoft.com/fwlink/?LinkId=96014](http://go.microsoft.com/fwlink/?LinkId=96014)|  
-|wsa|До 1.0<br /><br /> 1.0|http://www.w3.org/2004/08/Addressing<br /><br /> [http://go.Microsoft.com/fwlink/?LinkId=96022](http://go.microsoft.com/fwlink/?LinkId=96022)|  
-|wscoor|1.0<br /><br /> 1.1|[http://go.Microsoft.com/fwlink/?LinkId=96078](http://go.microsoft.com/fwlink/?LinkId=96078)<br /><br /> [http://go.Microsoft.com/fwlink/?LinkId=96079](http://go.microsoft.com/fwlink/?LinkId=96079)|  
-|wsat|1,0<br /><br /> 1.1|[http://go.Microsoft.com/fwlink/?LinkId=96080](http://go.microsoft.com/fwlink/?LinkId=96080)<br /><br /> [http://go.Microsoft.com/fwlink/?LinkId=96081](http://go.microsoft.com/fwlink/?LinkId=96081)|  
-|t|До 1.3<br /><br /> 1.3|[http://go.Microsoft.com/fwlink/?LinkId=96082](http://go.microsoft.com/fwlink/?LinkId=96082)<br /><br /> [http://go.Microsoft.com/fwlink/?LinkId=96100](http://go.microsoft.com/fwlink/?LinkId=96100)|  
-|o||[http://go.Microsoft.com/fwlink/?LinkId=96101](http://go.microsoft.com/fwlink/?LinkId=96101)|  
-|xsd||[http://go.Microsoft.com/fwlink/?LinkId=96102](http://go.microsoft.com/fwlink/?LinkId=96102)|  
+|s11||[http://go.microsoft.com/fwlink/?LinkId=96014](http://go.microsoft.com/fwlink/?LinkId=96014)|  
+|wsa|До 1.0<br /><br /> 1.0|http://www.w3.org/2004/08/addressing<br /><br /> [http://go.microsoft.com/fwlink/?LinkId=96022](http://go.microsoft.com/fwlink/?LinkId=96022)|  
+|wscoor|1.0<br /><br /> 1.1|[http://go.microsoft.com/fwlink/?LinkId=96078](http://go.microsoft.com/fwlink/?LinkId=96078)<br /><br /> [http://go.microsoft.com/fwlink/?LinkId=96079](http://go.microsoft.com/fwlink/?LinkId=96079)|  
+|wsat|1,0<br /><br /> 1.1|[http://go.microsoft.com/fwlink/?LinkId=96080](http://go.microsoft.com/fwlink/?LinkId=96080)<br /><br /> [http://go.microsoft.com/fwlink/?LinkId=96081](http://go.microsoft.com/fwlink/?LinkId=96081)|  
+|t|До 1.3<br /><br /> 1.3|[http://go.microsoft.com/fwlink/?LinkId=96082](http://go.microsoft.com/fwlink/?LinkId=96082)<br /><br /> [http://go.microsoft.com/fwlink/?LinkId=96100](http://go.microsoft.com/fwlink/?LinkId=96100)|  
+|o||[http://go.microsoft.com/fwlink/?LinkId=96101](http://go.microsoft.com/fwlink/?LinkId=96101)|  
+|xsd||[http://go.microsoft.com/fwlink/?LinkId=96102](http://go.microsoft.com/fwlink/?LinkId=96102)|  
   
 ## <a name="transaction-manager-bindings"></a>Привязки диспетчеров транзакций  
  R1001: Диспетчеры транзакций, участвующие в транзакции WS-AT 1.0 должны использовать SOAP 1.1 и WS-Addressing 2004/08 для обмена сообщениями WS-Coordination и WS-Atomic Transaction.  
@@ -96,12 +84,12 @@ ms.lasthandoff: 12/22/2017
 -   B1112: для успешного выполнения проверок имени субъекта X.509 между каждой парой "отправитель-получатель" в системе должна работать служба DNS.  
   
 #### <a name="activation-and-registration-binding-configuration"></a>Конфигурация привязки активации и регистрации  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] требует дуплексной привязки "запрос-ответ" с корреляцией по протоколу HTTPS. (Дополнительные сведения о корреляции и описание шаблонов обмена сообщениями "запрос-ответ" см. в разделе 8 спецификации WS-Atomic Transaction.)  
+ WCF требует дуплексной привязки типа запрос ответ с корреляцией по протоколу HTTPS. (Дополнительные сведения о корреляции и описание шаблонов обмена сообщениями "запрос-ответ" см. в разделе 8 спецификации WS-Atomic Transaction.)  
   
 #### <a name="2pc-protocol-binding-configuration"></a>Конфигурация привязки протокола 2PC  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] поддерживает однонаправленную (датаграммную) передачу сообщений по протоколу HTTPS. Корреляция между сообщениями зависит от реализации.  
+ WCF поддерживает односторонние (датаграммную) передачу сообщений по протоколу HTTPS. Корреляция между сообщениями зависит от реализации.  
   
- B1131: Реализации должны поддерживать `wsa:ReferenceParameters` как описано в WS-Addressing для обеспечения корреляции [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]элемента сообщений 2PC.  
+ B1131: Реализации должны поддерживать `wsa:ReferenceParameters` как описано в WS-Addressing для обеспечения корреляции сообщений 2PC WCF.  
   
 ### <a name="transaction-manager-mixed-security-binding"></a>Привязка безопасности диспетчера транзакций смешанного режима  
  Это альтернативная привязка (смешанного режима), которая для установления идентификации использует механизм безопасности транспорта в сочетании с моделью маркера, выдаваемого протоколом WS-Coordination. В двух привязках отличаются только элементы "Активация" и "Регистрация".  
@@ -112,7 +100,7 @@ ms.lasthandoff: 12/22/2017
 #### <a name="activation-message-binding-configuration"></a>Конфигурация привязки сообщений активации  
  Сообщения активации обычно не участвуют во взаимодействии, поскольку они, как правило, передаются между приложением и его локальным диспетчером транзакций.  
   
- B1221: [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] использует двусторонняя привязка HTTPS (описано в [протоколы обмена сообщениями](../../../../docs/framework/wcf/feature-details/messaging-protocols.md)) для сообщения активации. Сообщения запроса и ответа коррелируются с использованием протокола WS-Addressing 2004/08 в случае WS-AT 1.0 и протокола WS-Addressing 2005/08 в случае WS-AT 1.1.  
+ B1221: WCF использует двусторонняя привязка HTTPS (описано в [протоколы обмена сообщениями](../../../../docs/framework/wcf/feature-details/messaging-protocols.md)) для сообщения активации. Сообщения запроса и ответа коррелируются с использованием протокола WS-Addressing 2004/08 в случае WS-AT 1.0 и протокола WS-Addressing 2005/08 в случае WS-AT 1.1.  
   
  В разделе 8 спецификации WS-Atomic Transaction приводятся дополнительные сведения о корреляции и шаблонах обмена сообщениями.  
   
@@ -123,7 +111,7 @@ ms.lasthandoff: 12/22/2017
  Новый `t:IssuedTokens` заголовок должно создаваться для присоединения к исходящему `wscoor:CreateCoordinationContextResponse` сообщения.  
   
 #### <a name="registration-message-binding-configuration"></a>Конфигурация привязки сообщений регистрации  
- B1231: [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] использует двусторонняя привязка HTTPS (описано в [протоколы обмена сообщениями](../../../../docs/framework/wcf/feature-details/messaging-protocols.md)). Сообщения запроса и ответа коррелируются с использованием протокола WS-Addressing 2004/08 в случае WS-AT 1.0 и протокола WS-Addressing 2005/08 в случае WS-AT 1.1.  
+ B1231: WCF использует двусторонняя привязка HTTPS (описано в [протоколы обмена сообщениями](../../../../docs/framework/wcf/feature-details/messaging-protocols.md)). Сообщения запроса и ответа коррелируются с использованием протокола WS-Addressing 2004/08 в случае WS-AT 1.0 и протокола WS-Addressing 2005/08 в случае WS-AT 1.1.  
   
  В разделе 8 спецификации WS-AtomicTransaction приводятся дополнительные сведения о корреляции и описание шаблонов обмена сообщениями.  
   
@@ -132,9 +120,9 @@ ms.lasthandoff: 12/22/2017
  `wsse:Timestamp` Элемент должен быть подписан с помощью `SecurityContextToken``STx` выдан. Эта подпись является доказательством владения маркером, связанным с конкретной транзакцией, и используется для проверки подлинности зачисления участника в транзакцию. Сообщение RegistrationResponse отправляется обратно по протоколу HTTPS.  
   
 #### <a name="2pc-protocol-binding-configuration"></a>Конфигурация привязки протокола 2PC  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] поддерживает однонаправленную (датаграммную) передачу сообщений по протоколу HTTPS. Корреляция между сообщениями зависит от реализации.  
+ WCF поддерживает односторонние (датаграммную) передачу сообщений по протоколу HTTPS. Корреляция между сообщениями зависит от реализации.  
   
- B1241: для обеспечения корреляции сообщений 2PC `wsa:ReferenceParameters` реализации должны поддерживать [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], как описано в спецификации WS-Addressing.  
+ B1241: Реализации должны поддерживать `wsa:ReferenceParameters` как описано в WS-Addressing для обеспечения корреляции сообщений 2PC WCF.  
   
 ## <a name="application-message-exchange"></a>Обмен сообщениями приложений  
  Для сообщений, передаваемых между приложениями, приложения могут использовать любую привязку, если она удовлетворяет следующим требованиям безопасности.  
@@ -143,9 +131,9 @@ ms.lasthandoff: 12/22/2017
   
 -   R2002: необходимо обеспечение целостности и конфиденциальности `t:IssuedToken`.  
   
- Заголовок `CoordinationContext` содержит `wscoor:Identifier`. Хотя определение `xsd:AnyURI` допускает использование и абсолютных, и относительных универсальных кодов ресурсов (URI), [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] поддерживает только идентификаторы `wscoor:Identifiers`, являющиеся абсолютными URI.  
+ Заголовок `CoordinationContext` содержит `wscoor:Identifier`. Хотя определение `xsd:AnyURI` позволяет использовать абсолютные и относительные URI, WCF поддерживает только `wscoor:Identifiers`, являющиеся абсолютными URI.  
   
- B2003: если идентификатор `wscoor:Identifier` контекста `wscoor:CoordinationContext` является относительным URI, из транзакционных служб [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] будут возвращаться сбои.  
+ B2003: Если `wscoor:Identifier` из `wscoor:CoordinationContext` является относительным URI будут возвращаться из транзакционные службы WCF.  
   
 ## <a name="message-examples"></a>Примеры сообщений  
   

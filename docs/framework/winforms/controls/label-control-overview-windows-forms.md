@@ -1,14 +1,6 @@
 ---
-title: "Общие сведения об элементе управления Label (Windows Forms)"
-ms.custom: 
+title: Общие сведения об элементе управления Label (Windows Forms)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - Label
 helpviewer_keywords:
@@ -16,17 +8,11 @@ helpviewer_keywords:
 - labels
 - Label control [Windows Forms], about Label control
 ms.assetid: dcad7f44-11b7-4c55-b0c0-d984ade43d7d
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: f68642eb5f996722097976e042006afbf366ae39
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e5ad4416703e20a8e00299d496d360e1e84005a0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="label-control-overview-windows-forms"></a>Общие сведения об элементе управления Label (Windows Forms)
 Windows Forms <xref:System.Windows.Forms.Label> элементы управления используются для отображения текста или изображений, которые не может быть изменена пользователем. Они используются для идентификации объектов в форме — для предоставления описание какие определенный элемент управления будет выполнять при щелчке, например или для отображения сведений в ответ на событие во время выполнения или процесса в приложении. Например метки можно использовать для добавления описательных заголовков в текстовые поля, списки, поля со списком и т. д. Также можно написать код, который изменяет текст, отображаемый в метке в ответ на события во время выполнения. Например если приложение использует несколько минут, чтобы обрабатывать изменения, можно отобразить сообщение о состоянии обработки в метке.  

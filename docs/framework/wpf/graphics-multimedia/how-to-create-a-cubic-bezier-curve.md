@@ -1,29 +1,17 @@
 ---
-title: "Практическое руководство. Создание кривой Безье третьего порядка"
-ms.custom: 
+title: Практическое руководство. Создание кривой Безье третьего порядка
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - curves [WPF], cubic Bezier
 - Bezier curves [WPF], cubic
 - graphics [WPF], cubic Bezier curves
 - cubic Bezier curves [WPF]
 ms.assetid: 450a3a77-7c57-48b0-a008-0f6051add980
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a9d4e033ef18cfd33635ba34409c4edca87a7e23
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6332129179e1934e5a37c7a1a40ef5f46ab669a9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-cubic-bezier-curve"></a>Практическое руководство. Создание кривой Безье третьего порядка
 В этом примере демонстрируется создание кривой Безье третьего порядка. Чтобы создать кривой Безье третьего порядка, используйте <xref:System.Windows.Media.PathGeometry>, <xref:System.Windows.Media.PathFigure>, и <xref:System.Windows.Media.BezierSegment> классы.  Чтобы отобразить результирующей геометрии, используйте <xref:System.Windows.Shapes.Path> элемент, или использовать его с <xref:System.Windows.Media.GeometryDrawing> или <xref:System.Windows.Media.DrawingContext>. В следующих примерах кривой Безье третьего порядка строится от (10, 100) для (300, 100). Кривая имеет контрольные точки (100, 0) и (200, 200).  

@@ -1,29 +1,15 @@
 ---
 title: Процедура однократной настройки образцов Windows Communication Foundation
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: a5848ffd-3eb5-432d-812e-bd948ccb6bca
-caps.latest.revision: 83
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: acb89c8c1819024ebdb77720654ab7280333e456
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: e3bf4d70217a8231fe4ddc5b9a15afdfe8f0522e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="one-time-setup-procedure-for-the-windows-communication-foundation-samples"></a>Процедура однократной настройки образцов Windows Communication Foundation
-Большинство примеров [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] размещаются в службах IIS и выполняются из общего виртуального каталога. Эта процедура однократной настройки создает папку на диске. Он также добавляет виртуальный каталог IIS с именем **ServiceModelSamples**.  
+Большинство образцов Windows Communication Foundation (WCF) размещаются в Internet Information Services (IIS) и выполняются из общего виртуального каталога. Эта процедура однократной настройки создает папку на диске. Он также добавляет виртуальный каталог IIS с именем **ServiceModelSamples**.  
   
  **ServiceModelSamples** виртуальный каталог используется для построения и выполнения всех образцов, которые используют службу, размещенную в IIS. Это единственный виртуальный каталог, необходимый для выполнения примеров. При построении образца будет заменена любая служба, развернутая ранее в этом виртуальном каталоге. Развернут и доступен в данном виртуальном каталоге будет только последний построенный образец.  
   

@@ -1,32 +1,20 @@
 ---
-title: "Основные понятия Windows Communication Foundation"
-ms.custom: 
+title: Основные понятия Windows Communication Foundation
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - WCF [WCF], concepts
 - concepts [WCF]
 - fundamentals [WCF]
 - Windows Communication Foundation [WCF], concepts
 ms.assetid: 3e7e0afd-7913-499d-bafb-eac7caacbc7a
-caps.latest.revision: "39"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 651515095a0c9f9e970fff2d77421cfa804fa701
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
-ms.translationtype: MT
+ms.openlocfilehash: 44b36fc917ceb30141d7d2235b8bb364d3b998c9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="fundamental-windows-communication-foundation-concepts"></a>Основные понятия Windows Communication Foundation
-В этом документе представлено общее описание архитектуры [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]. В нем приводится объяснение ключевых понятий и их взаимосвязь. Учебник по созданию простой версии [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] службы и клиента см. в разделе [учебник по началу работы](../../../docs/framework/wcf/getting-started-tutorial.md). Чтобы узнать [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] программирования, в разделе [базовое Программирование WCF](../../../docs/framework/wcf/basic-wcf-programming.md).  
+В этом документе показано высокоуровневое представление архитектуры Windows Communication Foundation (WCF). В нем приводится объяснение ключевых понятий и их взаимосвязь. Учебник по созданию простой версии [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] службы и клиента см. в разделе [учебник по началу работы](../../../docs/framework/wcf/getting-started-tutorial.md). Чтобы узнать [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] программирования, в разделе [базовое Программирование WCF](../../../docs/framework/wcf/basic-wcf-programming.md).  
   
 ## <a name="wcf-fundamentals"></a>Основы WCF  
  [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] — это среда выполнения и набор интерфейсов API для создания систем, которые обеспечивают обмен сообщениями между службами и клиентами. Те же инфраструктура и интерфейсы API используются для создания приложений, обменивающихся данными с другими приложениями на данном компьютере или на компьютере, который находится в другой компании, и доступ к которому можно получить через Интернет.  

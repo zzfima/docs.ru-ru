@@ -1,24 +1,12 @@
 ---
-title: "Как создать службу рабочих процессов, которая вызывает другую службу рабочих процессов"
-ms.custom: 
+title: Как создать службу рабочих процессов, которая вызывает другую службу рабочих процессов
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 99b3ee3e-aeb7-4e6f-8321-60fe6140eb67
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c99748e77f1fccd9512c8915d0f4068d0da51a41
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fda5a7286c3d20c7cdc2093e58bfe3fbdcf1d1c1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-workflow-service-that-calls-another-workflow-service"></a>Как создать службу рабочих процессов, которая вызывает другую службу рабочих процессов
 Иногда службе рабочего процесса требуется получить данные от другой службы рабочего процесса.  В этом разделе описывается, как вызвать одну службу рабочего процесса из другой. В этом разделе мы создадим две службы рабочего процесса (одну с методом, который обращает входную строку, и вторую, которая преобразует входную строку в верхний регистр после обращения строки, которая использует первую службу).  
@@ -113,7 +101,7 @@ ms.lasthandoff: 12/22/2017
   
     4.  **TargetType**: NestedServices.StringLibrary  
   
-8.  Теперь для измененной строки мы вызовем первую службу. Щелкните правой кнопкой мыши проект и выберите **добавить ссылку на службу**. Добавьте ссылку на службу по адресу http://localhost/NestedServices/StringReverserService.xamlx и постройте проект для создания настраиваемого действия для доступа к первой веб-службе.  
+8.  Теперь для измененной строки мы вызовем первую службу. Щелкните правой кнопкой мыши проект и выберите **добавить ссылку на службу**. Добавьте ссылку на службу http://localhost/NestedServices/StringReverserService.xamlx и постройте проект для создания настраиваемого действия для доступа к первой веб-службе.  
   
 9. Перетащите экземпляр нового действия рабочего процесса, между **InvokeMethod** действия и **SendReplyToReceive** действия. Назначьте переменную StringToReverse свойству InputString нового действия, а переменную StringToReturn ― свойству StringToReturn.  
   

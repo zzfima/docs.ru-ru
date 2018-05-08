@@ -1,11 +1,6 @@
 ---
-title: "Тип данных Short (Visual Basic)"
+title: Тип данных Short (Visual Basic)
 ms.date: 01/31/2018
-ms.prod: .net
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 author: rpetrusha
 ms.author: ronpet
 f1_keywords:
@@ -23,11 +18,11 @@ helpviewer_keywords:
 - Short data type
 - literal type characters [Visual Basic], S
 ms.assetid: 65fcbcf3-a841-400e-885e-301497729a8b
-ms.openlocfilehash: 10c9869d4fb84cd013b22bc791bd31fad745f3d3
-ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
+ms.openlocfilehash: ef99743828d8d80844486b651178622ff45fd554
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="short-data-type-visual-basic"></a>Тип данных Short (Visual Basic)
 Содержит знаком 16-разрядное (2-байтовые) целые числа в диапазоне от-32 768 до 32 767.  
@@ -70,7 +65,7 @@ Dim number = &H_3264S
 
 -   **Расширяющие.** `Short` Тип данных может быть расширен до `Integer`, `Long`, `Decimal`, `Single`, или `Double`. Это означает, что тип `Short` можно преобразовать в любой из этих типов без возникновения ошибки <xref:System.OverflowException?displayProperty=nameWithType>.  
   
--   **Символы типов.** При добавлении к литералу символа типа литерала `S` производится принудительное приведение литерала к типу данных `Short`. `Short`не имеет типа символа идентификатора.  
+-   **Символы типов.** При добавлении к литералу символа типа литерала `S` производится принудительное приведение литерала к типу данных `Short`. `Short` не имеет типа символа идентификатора.  
   
 -   **Тип Framework.** В .NET Framework данный тип соответствует структуре <xref:System.Int16?displayProperty=nameWithType>.  
   

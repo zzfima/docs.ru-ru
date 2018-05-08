@@ -1,14 +1,6 @@
 ---
-title: "Функция CreateDebuggingInterfaceFromVersion"
-ms.custom: 
+title: Функция CreateDebuggingInterfaceFromVersion
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - CreateDebuggingInterfaceFromVersion
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: a746a849-463c-44f5-a2f0-9e812ed8bcc3
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: b3f269f5b1758481995d6064e7137e62bff4a868
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1b51b924652019cf05401e1972797c18e74b82d3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="createdebugginginterfacefromversion-function"></a>Функция CreateDebuggingInterfaceFromVersion
 Создает [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) объекта на основе указанной версии данных.  
@@ -63,10 +51,10 @@ HRESULT CreateDebuggingInterfaceFromVersion (
 ## <a name="return-value"></a>Возвращаемое значение  
  Этот метод возвращает стандартные коды ошибок COM, как определено в файле WinError.h, кроме следующих значений.  
   
-|Код возврата|Описание:|  
+|Код возврата|Описание|  
 |-----------------|-----------------|  
 |S_OK|Метод завершился успешно.|  
-|E_INVALIDARG|`szDebuggeeVersion`или `ppCordb` имеет значение null или версия Неверная строка.|  
+|E_INVALIDARG|`szDebuggeeVersion` или `ppCordb` имеет значение null или версия Неверная строка.|  
   
 ## <a name="remarks"></a>Примечания  
  `szDebuggeeVersion` Параметр сопоставляется соответствующую версию библиотеки MSCorDbi.dll.  
@@ -78,7 +66,7 @@ HRESULT CreateDebuggingInterfaceFromVersion (
   
  **Библиотека:** MSCorEE.dll  
   
- **Версии платформы .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Версии платформы .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>См. также  
  [Устаревшие функции размещения CLR](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

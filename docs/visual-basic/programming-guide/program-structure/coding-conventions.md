@@ -1,25 +1,16 @@
 ---
-title: "Соглашения о написании кода в Visual Basic"
-ms.custom: 
+title: Соглашения о написании кода в Visual Basic
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - coding conventions [Visual Basic], Visual Basic
 - examples [Visual Basic], coding conventions
 - Visual Basic code, conventions
 ms.assetid: c1df130b-fec6-49a5-becf-0a7e494a1d0f
-caps.latest.revision: "48"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: afea862fb8783da3e69fd9828e0ded67fb81b00e
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.openlocfilehash: b686747b46529b53b0802a7deb38b5b4949f4d5e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="visual-basic-coding-conventions"></a>Соглашения о написании кода в Visual Basic
 Корпорация Майкрософт разрабатывает примеров и документации, следуйте указаниям, изложенным в этом разделе. При таком же соглашения о написании кода, может получить следующие преимущества:  
@@ -165,7 +156,7 @@ ms.lasthandoff: 10/22/2017
   
      [!code-vb[VbVbalrGuidelines#26](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/coding-conventions_18.vb)]  
   
--   Не проверять, является ли событие `Nothing` (null), перед вызовом метода `RaiseEvent` метод. `RaiseEvent`проверяет наличие `Nothing` перед его вызывает событие.  
+-   Не проверять, является ли событие `Nothing` (null), перед вызовом метода `RaiseEvent` метод. `RaiseEvent` проверяет наличие `Nothing` перед его вызывает событие.  
   
 ### <a name="using-shared-members"></a>Использование общих членов  
  Вызовите `Shared` члены с помощью имени класса, а не переменной экземпляра.  

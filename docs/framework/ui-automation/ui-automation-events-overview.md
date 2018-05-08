@@ -1,13 +1,6 @@
 ---
-title: "Обзор событий автоматизации пользовательского интерфейса"
-ms.custom: 
+title: Обзор событий автоматизации пользовательского интерфейса
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - UI Automation, providers
 - UI Automation, events
@@ -16,16 +9,14 @@ helpviewer_keywords:
 - providers, UI Automation
 - UI Automation, clients
 ms.assetid: 69eebd8b-39ed-40e7-93cc-4457c4caf746
-caps.latest.revision: "22"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 8b28d6aafc0e9680123859ee0e9a28dd71a2249c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2190e404479a940e638d6ee8b9fd7135d8fc0109
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ui-automation-events-overview"></a>Обзор событий автоматизации пользовательского интерфейса
 > [!NOTE]
@@ -39,7 +30,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="types-of-events"></a>Типы событий  
  События[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] делятся на следующие категории.  
   
-|Событие|Описание|  
+|событие|Описание|  
 |-----------|-----------------|  
 |Изменение свойства|Возникает, когда свойство элемента [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] или шаблона элемента управления изменяется. Например, если клиент должен отслеживать элемент управления "Флажок" приложения, он может зарегистрироваться для прослушивания события изменения свойства <xref:System.Windows.Automation.TogglePattern.TogglePatternInformation.ToggleState%2A> . Когда флажок устанавливается или снимается, поставщик вызывает событие и клиент может выполнить необходимые действия.|  
 |Действие элемента|Возникает при изменении результатов [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] конечным пользователем или программой, например при нажатии кнопки или ее вызове с помощью <xref:System.Windows.Automation.InvokePattern>.|  

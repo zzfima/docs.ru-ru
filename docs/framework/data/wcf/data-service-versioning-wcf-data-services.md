@@ -1,30 +1,16 @@
 ---
 title: Управление версиями службы данных (службы WCF Data Services)
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework-oob
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - versioning, WCF Data Services
 - versioning [WCF Data Services]
 - WCF Data Services, versioning
 ms.assetid: e3e899cc-7f25-4f67-958f-063f01f79766
-caps.latest.revision: 9
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: e6d800b35a69c08ab9f7bd90165691eab7d8743f
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 0d77f54b5ef20db81c3c20f486ac7314f73aece8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="data-service-versioning-wcf-data-services"></a>Управление версиями службы данных (службы WCF Data Services)
 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] Позволяет создавать службы данных, чтобы клиенты могут обращаться к данным как ресурсам по идентификатору URI, основанные на модели данных. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] также поддерживает определение операций службы. После первоначального развертывания служб и, возможно, несколько раз на протяжении времени их существования возникает потребность в изменении этих служб. Причин тому немало: изменяющиеся потребности бизнеса, требования информационных технологий или необходимость решить какие-либо другие проблемы. При внесении изменений в существующую службу данных необходимо принять решение, следует ли определить новую версию службы данных и как оптимальным способом свести к минимуму воздействие на существующие клиентские приложения. Этот раздел содержит указания о том, когда и как следует создавать новую версию службы данных. В нем также описывается, как [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] обеспечивает обмен между клиентами и службами данных, которые поддерживают разные версии протокола [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)].  

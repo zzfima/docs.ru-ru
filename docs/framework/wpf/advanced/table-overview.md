@@ -1,13 +1,6 @@
 ---
-title: "Общие сведения о таблицах"
-ms.custom: 
+title: Общие сведения о таблицах
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,19 +9,14 @@ helpviewer_keywords:
 - documents [WPF], tables
 - tables [WPF]
 ms.assetid: 5e1105f4-8fc4-473a-ba55-88c8e71386e6
-caps.latest.revision: "21"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 922faa06456a1aa86ffd0c805ab33577280ccf4f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 631a14ae8eb17713186f7db66700026cc476024e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="table-overview"></a>Общие сведения о таблицах
-<xref:System.Windows.Documents.Table>Представляет элемент уровня блока, поддерживающий представление на основе сетки содержимого документа. Гибкость этого элемента делает его очень полезным, но также и более сложным для понимания и правильного использования.  
+<xref:System.Windows.Documents.Table> Представляет элемент уровня блока, поддерживающий представление на основе сетки содержимого документа. Гибкость этого элемента делает его очень полезным, но также и более сложным для понимания и правильного использования.  
   
  В этом разделе содержатся следующие подразделы.  
   
@@ -55,11 +43,11 @@ ms.lasthandoff: 12/22/2017
   
 <a name="table_vs_Grid"></a>   
 ### <a name="how-is-table-different-then-grid"></a>Отличие таблицы от сетки  
- <xref:System.Windows.Documents.Table>и <xref:System.Windows.Controls.Grid> совместно используют некоторые общие функциональные возможности, но каждый из них лучше всего подходят для различных сценариев. Объект <xref:System.Windows.Documents.Table> предназначен для использования в содержимом нефиксированного формата (см. [Обзор передачи документа](../../../../docs/framework/wpf/advanced/flow-document-overview.md) Дополнительные сведения о содержимом потока). Сетки лучше всего использовать внутри форм (по сути в любом месте вне потокового содержимого). В пределах <xref:System.Windows.Documents.FlowDocument>, <xref:System.Windows.Documents.Table> поддерживает потока такие возможности, как разбиение на страницы, обратный порядок столбцов и Выбор содержимого во время <xref:System.Windows.Controls.Grid> — нет. Объект <xref:System.Windows.Controls.Grid> с другой стороны лучше всего использовать за пределами <xref:System.Windows.Documents.FlowDocument> по многим причинам, в том числе <xref:System.Windows.Controls.Grid> добавляет элементы на основе строк и столбцов индекса, <xref:System.Windows.Documents.Table> — нет. <xref:System.Windows.Controls.Grid> Элемент позволяет слоев дочернее содержимое, что позволяет более одного элемента в одной «ячейки». <xref:System.Windows.Documents.Table>не поддерживает иерархическое представление. Дочерние элементы <xref:System.Windows.Controls.Grid> могут быть расположены абсолютно относительно границы «ячейки». <xref:System.Windows.Documents.Table>не поддерживает эту функцию. Наконец <xref:System.Windows.Controls.Grid> требует меньше ресурсов, а затем <xref:System.Windows.Documents.Table> поэтому рассмотрите возможность использования <xref:System.Windows.Controls.Grid> для повышения производительности.  
+ <xref:System.Windows.Documents.Table> и <xref:System.Windows.Controls.Grid> совместно используют некоторые общие функциональные возможности, но каждый из них лучше всего подходят для различных сценариев. Объект <xref:System.Windows.Documents.Table> предназначен для использования в содержимом нефиксированного формата (см. [Обзор передачи документа](../../../../docs/framework/wpf/advanced/flow-document-overview.md) Дополнительные сведения о содержимом потока). Сетки лучше всего использовать внутри форм (по сути в любом месте вне потокового содержимого). В пределах <xref:System.Windows.Documents.FlowDocument>, <xref:System.Windows.Documents.Table> поддерживает потока такие возможности, как разбиение на страницы, обратный порядок столбцов и Выбор содержимого во время <xref:System.Windows.Controls.Grid> — нет. Объект <xref:System.Windows.Controls.Grid> с другой стороны лучше всего использовать за пределами <xref:System.Windows.Documents.FlowDocument> по многим причинам, в том числе <xref:System.Windows.Controls.Grid> добавляет элементы на основе строк и столбцов индекса, <xref:System.Windows.Documents.Table> — нет. <xref:System.Windows.Controls.Grid> Элемент позволяет слоев дочернее содержимое, что позволяет более одного элемента в одной «ячейки». <xref:System.Windows.Documents.Table> не поддерживает иерархическое представление. Дочерние элементы <xref:System.Windows.Controls.Grid> могут быть расположены абсолютно относительно границы «ячейки». <xref:System.Windows.Documents.Table> не поддерживает эту функцию. Наконец <xref:System.Windows.Controls.Grid> требует меньше ресурсов, а затем <xref:System.Windows.Documents.Table> поэтому рассмотрите возможность использования <xref:System.Windows.Controls.Grid> для повышения производительности.  
   
 <a name="basic_table_structure"></a>   
 ### <a name="basic-table-structure"></a>Основная структура таблицы  
- <xref:System.Windows.Documents.Table>предоставляет представления на основе сетки, состоящий из столбцов (представленного <xref:System.Windows.Documents.TableColumn> элементы) и строки (представленного <xref:System.Windows.Documents.TableRow> элементов). <xref:System.Windows.Documents.TableColumn>не размещайте элементов содержимого; они просто определяют столбцы и их характеристики. <xref:System.Windows.Documents.TableRow>элементы должны размещаться в <xref:System.Windows.Documents.TableRowGroup> элемент, который определяет группирование строк в таблице. <xref:System.Windows.Documents.TableCell>элементы, которые содержат фактические данные, отображаемые в таблице, должны размещаться в <xref:System.Windows.Documents.TableRow> элемент. <xref:System.Windows.Documents.TableCell>может содержать только элементы, которые являются производными от <xref:System.Windows.Documents.Block>.  Допустимые дочерние элементы для <xref:System.Windows.Documents.TableCell> включают.  
+ <xref:System.Windows.Documents.Table> предоставляет представления на основе сетки, состоящий из столбцов (представленного <xref:System.Windows.Documents.TableColumn> элементы) и строки (представленного <xref:System.Windows.Documents.TableRow> элементов). <xref:System.Windows.Documents.TableColumn> не размещайте элементов содержимого; они просто определяют столбцы и их характеристики. <xref:System.Windows.Documents.TableRow> элементы должны размещаться в <xref:System.Windows.Documents.TableRowGroup> элемент, который определяет группирование строк в таблице. <xref:System.Windows.Documents.TableCell> элементы, которые содержат фактические данные, отображаемые в таблице, должны размещаться в <xref:System.Windows.Documents.TableRow> элемент. <xref:System.Windows.Documents.TableCell> может содержать только элементы, которые являются производными от <xref:System.Windows.Documents.Block>.  Допустимые дочерние элементы для <xref:System.Windows.Documents.TableCell> включают.  
   
 -   <xref:System.Windows.Documents.BlockUIContainer>  
   
@@ -72,10 +60,10 @@ ms.lasthandoff: 12/22/2017
 -   <xref:System.Windows.Documents.Table>  
   
 > [!NOTE]
->  <xref:System.Windows.Documents.TableCell>элементы не могут содержать текстовых данных. Дополнительные сведения о правила вместимости потока содержимого элементы, такие как <xref:System.Windows.Documents.TableCell>, в разделе [Обзор передачи документа](../../../../docs/framework/wpf/advanced/flow-document-overview.md).  
+>  <xref:System.Windows.Documents.TableCell> элементы не могут содержать текстовых данных. Дополнительные сведения о правила вместимости потока содержимого элементы, такие как <xref:System.Windows.Documents.TableCell>, в разделе [Обзор передачи документа](../../../../docs/framework/wpf/advanced/flow-document-overview.md).  
   
 > [!NOTE]
->  <xref:System.Windows.Documents.Table>Аналогично <xref:System.Windows.Controls.Grid> элемент но имеет больше возможностей и, следовательно, требует больше ресурсов.  
+>  <xref:System.Windows.Documents.Table> Аналогично <xref:System.Windows.Controls.Grid> элемент но имеет больше возможностей и, следовательно, требует больше ресурсов.  
   
  В следующем примере определяется простой таблицы 2 x 3 с [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)].  
   
@@ -87,7 +75,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="table_containment"></a>   
 ### <a name="table-containment"></a>Вложения таблицы  
- <xref:System.Windows.Documents.Table>является производным от <xref:System.Windows.Documents.Block> элемент и наследует общие правила для <xref:System.Windows.Documents.Block> элементов уровня.  Объект <xref:System.Windows.Documents.Table> элемент могут содержаться каким-либо из следующих элементов:  
+ <xref:System.Windows.Documents.Table> является производным от <xref:System.Windows.Documents.Block> элемент и наследует общие правила для <xref:System.Windows.Documents.Block> элементов уровня.  Объект <xref:System.Windows.Documents.Table> элемент могут содержаться каким-либо из следующих элементов:  
   
 -   <xref:System.Windows.Documents.FlowDocument>  
   

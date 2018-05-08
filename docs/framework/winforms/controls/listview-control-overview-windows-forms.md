@@ -1,14 +1,6 @@
 ---
-title: "Общие сведения об элементе управления ListView (Windows Forms)"
-ms.custom: 
+title: Общие сведения об элементе управления ListView (Windows Forms)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - ListView
 helpviewer_keywords:
@@ -16,17 +8,11 @@ helpviewer_keywords:
 - ListView control [Windows Forms], about ListView control
 - list views
 ms.assetid: c9ef56c1-3bb1-4101-9f4e-e95e720f2756
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: b79fecb0a537f4c568b4a57e9ce2bfab8d8e1005
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: f92b5f5ae40287c95da10ef96aad0fa764fa00e2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="listview-control-overview-windows-forms"></a>Общие сведения об элементе управления ListView (Windows Forms)
 Элемент управления <xref:System.Windows.Forms.ListView> Windows Forms отображает список элементов со значками. Представление списка можно использовать для создания пользовательского интерфейса, аналогичного правой области окна проводника. Элемент управления имеет четыре режима представления: LargeIcon, SmallIcon, списка и сведений.  
@@ -50,13 +36,13 @@ ms.lasthandoff: 01/19/2018
 |Метод <xref:System.Windows.Forms.ListView.FindItemWithText%2A>|<xref:System.Windows.Forms.View.Details>, <xref:System.Windows.Forms.View.List>или <xref:System.Windows.Forms.View.Tile>|  
 |Метод <xref:System.Windows.Forms.ListView.FindNearestItem%2A>|<xref:System.Windows.Forms.View.SmallIcon> или <xref:System.Windows.Forms.View.LargeIcon>|  
 |Метод <xref:System.Windows.Forms.ListView.GetItemAt%2A>|<xref:System.Windows.Forms.View.Details> или <xref:System.Windows.Forms.View.Tile>|  
-|Свойство <xref:System.Windows.Forms.ListView.Groups%2A>|Все представления, за исключением<xref:System.Windows.Forms.View.List>|  
+|Свойство <xref:System.Windows.Forms.ListView.Groups%2A>|Все представления, за исключением <xref:System.Windows.Forms.View.List>|  
 |Свойство <xref:System.Windows.Forms.ListView.HeaderStyle%2A>|<xref:System.Windows.Forms.View.Details>.|  
 |Свойство <xref:System.Windows.Forms.ListView.InsertionMark%2A>|<xref:System.Windows.Forms.View.LargeIcon>, <xref:System.Windows.Forms.View.SmallIcon>или <xref:System.Windows.Forms.View.Tile>|  
   
  Ключевое свойство <xref:System.Windows.Forms.ListView> управления <xref:System.Windows.Forms.ListView.Items%2A>, который содержит элементы, отображаемые элементом управления. <xref:System.Windows.Forms.ListView.SelectedItems%2A> Свойство содержит коллекцию элементов, выбранных в данный момент в элементе управления. Пользователь может выбрать несколько элементов, например перетаскивание нескольких элементов одновременно на другой элемент управления, если <xref:System.Windows.Forms.ListView.MultiSelect%2A> свойству `true`. <xref:System.Windows.Forms.ListView> Элемент управления может отображать флажки рядом с элементами, если <xref:System.Windows.Forms.ListView.CheckBoxes%2A> свойству `true`.  
   
- <xref:System.Windows.Forms.ListView.Activation%2A> Свойство определяет, какой тип действия должен выполнить пользователь для активации элемента в списке: параметры <xref:System.Windows.Forms.ItemActivation.Standard>, <xref:System.Windows.Forms.ItemActivation.OneClick>, и <xref:System.Windows.Forms.ItemActivation.TwoClick>. <xref:System.Windows.Forms.ItemActivation.OneClick>для активации требуется одним щелчком для активации элемента. <xref:System.Windows.Forms.ItemActivation.TwoClick>Активация требует от пользователя, дважды щелкните для активации элемента; одним щелчком изменяет цвет текста элемента. <xref:System.Windows.Forms.ItemActivation.Standard>Активация требует от пользователя, щелкните дважды, чтобы активировать элемент, но элемент не изменяет внешний вид.  
+ <xref:System.Windows.Forms.ListView.Activation%2A> Свойство определяет, какой тип действия должен выполнить пользователь для активации элемента в списке: параметры <xref:System.Windows.Forms.ItemActivation.Standard>, <xref:System.Windows.Forms.ItemActivation.OneClick>, и <xref:System.Windows.Forms.ItemActivation.TwoClick>. <xref:System.Windows.Forms.ItemActivation.OneClick> для активации требуется одним щелчком для активации элемента. <xref:System.Windows.Forms.ItemActivation.TwoClick> Активация требует от пользователя, дважды щелкните для активации элемента; одним щелчком изменяет цвет текста элемента. <xref:System.Windows.Forms.ItemActivation.Standard> Активация требует от пользователя, щелкните дважды, чтобы активировать элемент, но элемент не изменяет внешний вид.  
   
  <xref:System.Windows.Forms.ListView> Управления также поддерживает визуальные стили и другие средства, доступные на платформе Windows XP, включая группирование, мозаичное представление и метки вставки. Дополнительные сведения см. в разделе [возможности Windows XP и элементы управления Windows Forms](http://msdn.microsoft.com/library/bc7fab94-fce9-4bf1-a8ad-a5837c91c3c0).  
   

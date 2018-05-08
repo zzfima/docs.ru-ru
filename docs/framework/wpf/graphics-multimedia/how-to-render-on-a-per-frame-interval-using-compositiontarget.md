@@ -1,13 +1,6 @@
 ---
-title: "Практическое руководство. Визуализация каждого кадра с помощью CompositionTarget"
-ms.custom: 
+title: Практическое руководство. Визуализация каждого кадра с помощью CompositionTarget
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,21 +8,16 @@ helpviewer_keywords:
 - CompositionTarget objects [WPF], rendering per frame
 - rendering per frame using CompositionTarget objects [WPF]
 ms.assetid: 701246cd-66b7-4d69-ada9-17b3b433d95d
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: eb7e917c59f11ed78f8d44fa4b674d8d572f3623
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7c080c6deca63eacdf0e1123f4ca8bbb495ed9ca
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-render-on-a-per-frame-interval-using-compositiontarget"></a>Практическое руководство. Визуализация каждого кадра с помощью CompositionTarget
 Подсистема анимации [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] предоставляет множество возможностей для создания анимации на основе кадров. Однако существуют сценарии приложений, в которых необходим детальный контроль отрисовки каждого кадра. <xref:System.Windows.Media.CompositionTarget> Объект предоставляет возможность создания пользовательской анимации на основе покадрового обратного вызова.  
   
- <xref:System.Windows.Media.CompositionTarget>является статическим классом, который представляет поверхность отображения, на котором рисуется приложения. <xref:System.Windows.Media.CompositionTarget.Rendering> Событие возникает каждый раз при рисовании сцены приложения. Частота кадров отрисовки — это количество отрисовок сцены за секунду.  
+ <xref:System.Windows.Media.CompositionTarget> является статическим классом, который представляет поверхность отображения, на котором рисуется приложения. <xref:System.Windows.Media.CompositionTarget.Rendering> Событие возникает каждый раз при рисовании сцены приложения. Частота кадров отрисовки — это количество отрисовок сцены за секунду.  
   
 > [!NOTE]
 >  Для примера полный исходный код с помощью <xref:System.Windows.Media.CompositionTarget>, в разделе [использование образца элементу CompositionTarget](http://go.microsoft.com/fwlink/?LinkID=160045).  

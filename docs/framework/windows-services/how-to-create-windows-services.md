@@ -1,27 +1,17 @@
 ---
-title: "Практическое руководство. Создание служб Windows"
-ms.custom: 
+title: Практическое руководство. Создание служб Windows
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Windows Service applications, creating
 - templates, Windows Service
 ms.assetid: 0f5e2cbb-d95d-477c-b2b5-4b990e6b86ff
-caps.latest.revision: "18"
 author: ghogen
-ms.author: ghogen
 manager: douge
-ms.workload: dotnet
-ms.openlocfilehash: 7d93f8543b9e6e370827f5a666315d562e28ee76
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7719af9393bee816665040d6e4ced191419d0855
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-windows-services"></a>Практическое руководство. Создание служб Windows
 При создании службы, можно использовать шаблон проекта Visual Studio называется **службы Windows**. Этот шаблон автоматически выполняет основную часть работы, ссылаясь на необходимые классы и пространства имен, устанавливая наследование от базового класса для служб и переопределяя некоторые методы, которые вы обычно хотите переопределять.  
@@ -58,7 +48,7 @@ ms.lasthandoff: 12/22/2017
     |<xref:System.ServiceProcess.ServiceBase.CanStop%2A>|`True`, чтобы указать, что служба может принимать запросы на останов работы; `false` для предотвращения останова службы.|  
     |<xref:System.ServiceProcess.ServiceBase.CanShutdown%2A>|`True`, чтобы указать, что служба хочет принимать уведомления о выключении компьютера, на котором она работает, позволяя ему вызывать процедуру <xref:System.ServiceProcess.ServiceBase.OnShutdown%2A>.|  
     |<xref:System.ServiceProcess.ServiceBase.CanPauseAndContinue%2A>|`True`, чтобы указать, что служба может принимать запросы на приостановку или возобновление выполнения; `false` для предотвращения приостановки и возобновления работы службы.|  
-    |<xref:System.ServiceProcess.ServiceBase.CanHandlePowerEvent%2A>|`True`Чтобы указать, что служба может обрабатывать уведомления об изменениях состояния питания компьютера; `false` для предотвращения службе оповещен этих изменений.|  
+    |<xref:System.ServiceProcess.ServiceBase.CanHandlePowerEvent%2A>|`True` Чтобы указать, что служба может обрабатывать уведомления об изменениях состояния питания компьютера; `false` для предотвращения службе оповещен этих изменений.|  
     |<xref:System.ServiceProcess.ServiceBase.AutoLog%2A>|`True` для внесения информационных записей в журнал событий приложения, когда служба выполняет некоторое действие; `false` для отключения этой функции. Дополнительные сведения см. в разделе [как: сведения о журналам](../../../docs/framework/windows-services/how-to-log-information-about-services.md). **Примечание:** по умолчанию <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> равно `true`.|  
   
     > [!NOTE]

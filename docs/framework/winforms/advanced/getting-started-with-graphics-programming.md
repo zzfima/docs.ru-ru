@@ -1,29 +1,17 @@
 ---
-title: "Приступая к программированию графики"
-ms.custom: 
+title: Приступая к программированию графики
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - graphics [Windows Forms], getting started
 - getting started [Windows Forms], graphics programming
 - examples [Windows Forms], graphics
 - drawing
 ms.assetid: eb0f6d6f-9e52-4167-9592-ff4b82fb5869
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 15bcd9295ba825b156668152b3f1addf538aa884
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 61080643d5cacde60f5fbff35d815977a977cb65
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="getting-started-with-graphics-programming"></a>Приступая к программированию графики
 В этом разделе показано, как приступить к использованию [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] в приложении Windows Forms. В следующих темах инструкции по решению некоторых [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] задач, таких как рисование и заливка фигур и текста.  

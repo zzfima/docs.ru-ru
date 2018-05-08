@@ -1,25 +1,16 @@
 ---
 title: Оператор Const (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Const
 helpviewer_keywords:
 - Const statement [Visual Basic]
 ms.assetid: 495b318d-b7c5-4198-94f8-0790a541b07a
-caps.latest.revision: 28
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 720a465f1459b663a1fca2a48856f51762328459
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: bb4c524fa5c29efbcbe485fb5e86c8cf0fa432e8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="const-statement-visual-basic"></a>Оператор Const (Visual Basic)
 Объявляет и определяет одну или несколько констант.  
@@ -33,16 +24,16 @@ Const constantlist
   
 ## <a name="parts"></a>Части  
  `attributelist`  
- Необязательно. Список атрибутов, которые применяются ко всем константам, объявляемых в этом операторе. В разделе [список атрибутов](../../../visual-basic/language-reference/statements/attribute-list.md) в угловые скобки («`<`«и»`>`»).  
+ Необязательный. Список атрибутов, которые применяются ко всем константам, объявляемых в этом операторе. В разделе [список атрибутов](../../../visual-basic/language-reference/statements/attribute-list.md) в угловые скобки («`<`«и»`>`»).  
   
  `accessmodifier`  
- Необязательно. Позволяет указать, какой код может обращаться к этим константам. Может быть [открытый](../../../visual-basic/language-reference/modifiers/public.md), [Protected](../../../visual-basic/language-reference/modifiers/protected.md), [Friend](../../../visual-basic/language-reference/modifiers/friend.md), `Protected Friend`, или [частного](../../../visual-basic/language-reference/modifiers/private.md).  
+ Необязательный. Позволяет указать, какой код может обращаться к этим константам. Может быть [открытый](../../../visual-basic/language-reference/modifiers/public.md), [Protected](../../../visual-basic/language-reference/modifiers/protected.md), [Friend](../../../visual-basic/language-reference/modifiers/friend.md), `Protected Friend`, или [частного](../../../visual-basic/language-reference/modifiers/private.md).  
   
  `Shadows`  
- Необязательно. Используется для повторного объявления и скрытия программного элемента в базовом классе. В разделе [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).  
+ Необязательный. Используется для повторного объявления и скрытия программного элемента в базовом классе. В разделе [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).  
   
  `constantlist`  
- Обязательный. Список констант, объявляемых в этом операторе.  
+ Обязательно. Список констант, объявляемых в этом операторе.  
   
  `constant` `[ ,` `constant` `... ]`  
   
@@ -52,9 +43,9 @@ Const constantlist
   
 |Отделение|Описание|  
 |----------|-----------------|  
-|`constantname`|Обязательный. Имя константы. В разделе [имена объявленных элементов](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).|  
+|`constantname`|Обязательно. Имя константы. В разделе [имена объявленных элементов](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).|  
 |`datatype`|Обязателен, если `Option Strict` — `On`. Тип данных константы.|  
-|`initializer`|Обязательный. Выражение, которое вычисляется во время компиляции и присваиваемое константе.|  
+|`initializer`|Обязательно. Выражение, которое вычисляется во время компиляции и присваиваемое константе.|  
   
 ## <a name="remarks"></a>Примечания  
  Если в приложении имеется значение, которое никогда не изменяется, можно определить именованную константу и использовать его вместо литеральных значений. Имя легче запомнить, чем значение. Можно определить константу только один раз и использовать его во многих местах в коде. Если в более поздней версии требуется переопределить значение, `Const` оператор является единственным местом, необходимо внести изменения.  

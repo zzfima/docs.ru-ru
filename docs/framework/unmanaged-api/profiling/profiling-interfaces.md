@@ -1,28 +1,18 @@
 ---
-title: "Профилирующие интерфейсы"
-ms.custom: 
-ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
+title: Профилирующие интерфейсы
+ms.date: 04/10/2018
 helpviewer_keywords:
 - unmanaged interfaces [.NET Framework], profiling
 - profiling interfaces [.NET Framework]
 - interfaces [.NET Framework profiling]
 ms.assetid: d9303db8-e881-4217-91b7-8c7573c8ef9e
-caps.latest.revision: "31"
-author: mairaw
-ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4f8c2a5ce5e1231c55f598e48d14bec896a4b5f4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+author: rpetrusha
+ms.author: ronpet
+ms.openlocfilehash: 059fadc5607e76b871083682136fda542ae9bacf
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="profiling-interfaces"></a>Профилирующие интерфейсы
 В этом разделе описываются неуправляемые интерфейсы, позволяющие профилировать программу, выполняемую в среде CLR.  
@@ -54,7 +44,13 @@ ms.lasthandoff: 12/22/2017
   
  [Интерфейс ICorProfilerCallback7](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback7-interface.md)  
  Предоставляет метод обратного вызова, который общеязыковая среда выполнения использует для уведомления профилировщика о том, что обновляется поток символов, связанный с модулем в памяти.  
-  
+
+[Интерфейс ICorProfilerCallback8](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback8-interface.md)  
+Предоставляет методы обратного вызова, общеязыковая среда выполнения использует для уведомления профилировщика о началась и завершения JIT-компиляции динамического метода.
+
+[Интерфейс ICorProfilerCallback9](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback9-interface.md)  
+Предоставляет метод обратного вызова, общеязыковая среда выполнения использует для уведомления профилировщика о динамический метод является мусором, собираются и впоследствии выгружен.
+
  [Интерфейс ICorProfilerFunctionControl](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctioncontrol-interface.md)  
  Предоставляет методы, позволяющие профилировщику кода взаимодействовать со средой выполнения CLR и контролировать порядок генерирования кода JIT-компилятором при повторной компиляции указанного метода.  
   

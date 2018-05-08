@@ -1,31 +1,17 @@
 ---
-title: "Значение порядка преобразований"
-ms.custom: 
+title: Значение порядка преобразований
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - transformations [Windows Forms], order signficance
 ms.assetid: 37d5f9dc-a5cf-4475-aa5d-34d714e808a9
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: cd3363a1afb8658ed3bb27359259cb752464507d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 943bfa73b54a1ac5d68d21d2bb6e271133db595a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="why-transformation-order-is-significant"></a>Значение порядка преобразований
 Один <xref:System.Drawing.Drawing2D.Matrix> объект может хранить одно преобразование или последовательность преобразований. Называется составное преобразование. Матрица составного преобразования вычисляется путем умножения матриц отдельных преобразований.  
@@ -35,7 +21,7 @@ ms.lasthandoff: 12/22/2017
   
  Одна из причин важен порядок, — что преобразования, как поворот и масштабирование выполняются по отношению к исходной системы координат. Масштабирование объекта, который выравнивается по центру в источнике выдает различный результат, чем масштабирование объекта, который был перемещен этой точки. Аналогично поворот объекта, который выравнивается по центру в источнике выдает различный результат от поворота объекта, который был перемещен этой точки.  
   
- В следующем примере объединяются масштабирования, поворота и преобразования (в указанном порядке) для формирования составного преобразования. Аргумент <xref:System.Drawing.Drawing2D.MatrixOrder.Append> передаваемый <xref:System.Drawing.Graphics.RotateTransform%2A> метод указывает, что поворот будет выполняться после масштабирования. Аналогично аргумент <xref:System.Drawing.Drawing2D.MatrixOrder.Append> передаваемый <xref:System.Drawing.Graphics.TranslateTransform%2A> метод указывает, что сдвиг будет выполняться поворот. <xref:System.Drawing.Drawing2D.MatrixOrder.Append>и <xref:System.Drawing.Drawing2D.MatrixOrder.Prepend> являются членами <xref:System.Drawing.Drawing2D.MatrixOrder> перечисления.  
+ В следующем примере объединяются масштабирования, поворота и преобразования (в указанном порядке) для формирования составного преобразования. Аргумент <xref:System.Drawing.Drawing2D.MatrixOrder.Append> передаваемый <xref:System.Drawing.Graphics.RotateTransform%2A> метод указывает, что поворот будет выполняться после масштабирования. Аналогично аргумент <xref:System.Drawing.Drawing2D.MatrixOrder.Append> передаваемый <xref:System.Drawing.Graphics.TranslateTransform%2A> метод указывает, что сдвиг будет выполняться поворот. <xref:System.Drawing.Drawing2D.MatrixOrder.Append> и <xref:System.Drawing.Drawing2D.MatrixOrder.Prepend> являются членами <xref:System.Drawing.Drawing2D.MatrixOrder> перечисления.  
   
  [!code-csharp[System.Drawing.MiscLegacyTopics#21](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/CS/Class1.cs#21)]
  [!code-vb[System.Drawing.MiscLegacyTopics#21](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/VB/Class1.vb#21)]  

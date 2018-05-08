@@ -1,11 +1,6 @@
 ---
 title: Declare Statement
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Declare
 - vb.Lib
@@ -32,14 +27,11 @@ helpviewer_keywords:
 - Visual Basic code, Sub procedures
 - Function procedures [Visual Basic], declaring
 ms.assetid: d3f21fb0-b804-4c99-97ed-583b23894cf1
-caps.latest.revision: "30"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 2560f34a5130ef7453b50ffb4495b67bf1dfa4c8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: bc6949c7b52e87b7b39dd2690cac915a5f0d15aa
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="declare-statement"></a>Declare Statement
 Объявляет ссылку на процедуру, реализованную во внешнем файле.  
@@ -60,17 +52,17 @@ Declare [ charsetmodifier ] [ Function ] name Lib "libname" _
   
 |Термин|Определение|  
 |---|---|  
-|`attributelist`|Необязательно. В разделе [список атрибутов](../../../visual-basic/language-reference/statements/attribute-list.md).|  
-|`accessmodifier`|Необязательно. Ниже указаны доступные значения.<br /><br /> -   [Public](../../../visual-basic/language-reference/modifiers/public.md)<br />-   [Защищенные](../../../visual-basic/language-reference/modifiers/protected.md)<br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)<br />-   [Закрытый](../../../visual-basic/language-reference/modifiers/private.md)<br />-   `Protected Friend`<br /><br /> В разделе [уровни в Visual Basic доступа](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).|  
-|`Shadows`|Необязательно. В разделе [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).|  
-|`charsetmodifier`|Необязательно. Задает набор символов и файл поиска сведений. Ниже указаны доступные значения.<br /><br /> -   [ANSI](../../../visual-basic/language-reference/modifiers/ansi.md) (по умолчанию)<br />-   [Юникод](../../../visual-basic/language-reference/modifiers/unicode.md)<br />-   [Авто](../../../visual-basic/language-reference/modifiers/auto.md)|  
+|`attributelist`|Необязательный. В разделе [список атрибутов](../../../visual-basic/language-reference/statements/attribute-list.md).|  
+|`accessmodifier`|Необязательный. Ниже указаны доступные значения.<br /><br /> -   [Public](../../../visual-basic/language-reference/modifiers/public.md)<br />-   [Защищенные](../../../visual-basic/language-reference/modifiers/protected.md)<br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)<br />-   [Закрытый](../../../visual-basic/language-reference/modifiers/private.md)<br />-   `Protected Friend`<br /><br /> В разделе [уровни в Visual Basic доступа](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).|  
+|`Shadows`|Необязательный. В разделе [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).|  
+|`charsetmodifier`|Необязательный. Задает набор символов и файл поиска сведений. Ниже указаны доступные значения.<br /><br /> -   [ANSI](../../../visual-basic/language-reference/modifiers/ansi.md) (по умолчанию)<br />-   [Юникод](../../../visual-basic/language-reference/modifiers/unicode.md)<br />-   [Авто](../../../visual-basic/language-reference/modifiers/auto.md)|  
 |`Sub`|Необязательно, но либо `Sub` или `Function` должны отображаться. Указывает, что внешняя процедура не возвращает значение.|  
 |`Function`|Необязательно, но либо `Sub` или `Function` должны отображаться. Указывает, что внешняя процедура возвращает значение.|  
-|`name`|Обязательный. Имя этой внешней ссылки. Дополнительные сведения см. в разделе [имена объявленных элементов](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).|  
-|`Lib`|Обязательный. Представляет `Lib` предложение, которое идентифицирует внешний файл (DLL или код ресурса), содержащий внешнюю процедуру.|  
-|`libname`|Обязательный. Имя файла, который содержит объявляемую процедуру.|  
-|`Alias`|Необязательно. Указывает, что объявляемая процедура не может определяться в его файле имя, указанное в `name`. Необходимо указать его идентификацию в `aliasname`.|  
-|`aliasname`|Является обязательным, если используется `Alias` ключевое слово. Строка, идентифицирующая процедуру одним из двух способов:<br /><br /> Имя точки входа в процедуру в файле в кавычках (`""`)<br /><br /> -или-<br /><br /> Знак решетки (`#`) за которым следует целое число, указывающее порядковый номер точки входа процедуры в его файле|  
+|`name`|Обязательно. Имя этой внешней ссылки. Дополнительные сведения см. в разделе [имена объявленных элементов](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).|  
+|`Lib`|Обязательно. Представляет `Lib` предложение, которое идентифицирует внешний файл (DLL или код ресурса), содержащий внешнюю процедуру.|  
+|`libname`|Обязательно. Имя файла, который содержит объявляемую процедуру.|  
+|`Alias`|Необязательный. Указывает, что объявляемая процедура не может определяться в его файле имя, указанное в `name`. Необходимо указать его идентификацию в `aliasname`.|  
+|`aliasname`|Является обязательным, если используется `Alias` ключевое слово. Строка, идентифицирующая процедуру одним из двух способов:<br /><br /> Имя точки входа в процедуру в файле в кавычках (`""`)<br /><br /> - или -<br /><br /> Знак решетки (`#`) за которым следует целое число, указывающее порядковый номер точки входа процедуры в его файле|  
 |`parameterlist`|Требуется, если процедура принимает параметры. В разделе [список параметров](../../../visual-basic/language-reference/statements/parameter-list.md).|  
 |`returntype`|Обязателен, если `Function` указан и `Option Strict` — `On`. Тип данных значения, возвращаемого процедурой.|  
   
@@ -125,7 +117,7 @@ Declare [ charsetmodifier ] [ Function ] name Lib "libname" _
   
 -   **Наборы знаков.** Можно указать в `charsetmodifier` как Visual Basic должен маршалировать строки при вызове внешней процедуры. `Ansi` Модификатор указывает Visual Basic маршалировать все строки в значения ANSI и `Unicode` модификатор направляет его в маршалировать все строки в значения Юникода. `Auto` Направляет модификатор Visual Basic для маршалинга строк в соответствии с .NET Framework правила на основе внешней ссылки `name`, или `aliasname` Если указано. Значение по умолчанию — `Ansi`.  
   
-     `charsetmodifier`также указывает, как Visual Basic следует искать внешней процедуры во внешнем файле. `Ansi`и `Unicode` оба направления Visual Basic для поиска без изменения имени во время поиска. `Auto`Указывает Visual Basic, чтобы определить базовый набор символов платформы во время выполнения и возможно, изменить имя внешней процедуры следующим образом:  
+     `charsetmodifier` также указывает, как Visual Basic следует искать внешней процедуры во внешнем файле. `Ansi` и `Unicode` оба направления Visual Basic для поиска без изменения имени во время поиска. `Auto` Указывает Visual Basic, чтобы определить базовый набор символов платформы во время выполнения и возможно, изменить имя внешней процедуры следующим образом:  
   
     -   На платформе ANSI, таких как Windows 95, Windows 98 или Windows Millennium Edition сначала найдите внешнюю процедуру без изменения имени. В случае неудачи добавляется в конец имени внешней процедуры «A», и повторный поиск.  
   

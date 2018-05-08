@@ -1,40 +1,28 @@
 ---
 title: Практическое руководство. Создание пользовательской привязки с использованием элемента SecurityBindingElement
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - security [WCF], creating custom bindings
 ms.assetid: 203a9f9e-3a73-427c-87aa-721c56265b29
-caps.latest.revision: 19
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: 80fd6163db1b7b168be4e19b01c8eb9f15865f04
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 1e288daeb717fa9fa041d552cac4ec5d0cd28808
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-custom-binding-using-the-securitybindingelement"></a>Практическое руководство. Создание пользовательской привязки с использованием элемента SecurityBindingElement
-В [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] предусмотрено несколько предоставляемых системой привязок, подлежащих настройке, однако не способных в полной мере обеспечить гибкость настройки всех параметров безопасности, поддерживаемых [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. В этом разделе описывается создание пользовательской привязки непосредственно из отдельных элементов привязки с рассмотрением некоторых из параметров безопасности, которые могут быть заданы при создании такой привязки. Дополнительные сведения о создании настраиваемых привязок см. в разделе [расширение привязок](../../../../docs/framework/wcf/extending/extending-bindings.md).  
+Windows Communication Foundation (WCF) включает в себя несколько предоставляемых системой привязок, которые можно настроить, но не предоставляют полную гибкость при настройке все параметры безопасности, которые поддерживает WCF. В этом разделе описывается создание пользовательской привязки непосредственно из отдельных элементов привязки с рассмотрением некоторых из параметров безопасности, которые могут быть заданы при создании такой привязки. Дополнительные сведения о создании настраиваемых привязок см. в разделе [расширение привязок](../../../../docs/framework/wcf/extending/extending-bindings.md).  
   
 > [!WARNING]
 >  <xref:System.ServiceModel.Channels.SecurityBindingElement> не поддерживает форму канала <xref:System.ServiceModel.Channels.IDuplexSessionChannel>, которая по умолчанию используется формами каналов TCP-транспорта, если свойство <xref:System.ServiceModel.TransferMode> имеет значение <xref:System.ServiceModel.TransferMode.Buffered>. Необходимо задать свойству <xref:System.ServiceModel.TransferMode> значение <xref:System.ServiceModel.TransferMode.Streamed> для использования элемента <xref:System.ServiceModel.Channels.SecurityBindingElement> в этом сценарии.  
   
 ## <a name="creating-a-custom-binding"></a>Создание пользовательской привязки  
- В [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] все привязки состоят из *элементов привязки*. Каждый элемент привязки наследуется от класса <xref:System.ServiceModel.Channels.BindingElement>. В случае стандартных предоставляемых системой привязок элементы привязки уже созданы и настроены, хотя значения некоторых свойств можно изменить.  
+ В WCF все привязки состоят из *элементов привязки*. Каждый элемент привязки наследуется от класса <xref:System.ServiceModel.Channels.BindingElement>. В случае стандартных предоставляемых системой привязок элементы привязки уже созданы и настроены, хотя значения некоторых свойств можно изменить.  
   
  В противоположность этому при создании пользовательской привязки потребуется создать и настроить элементы привязки и создать из этих элементов объект <xref:System.ServiceModel.Channels.CustomBinding>.  
   

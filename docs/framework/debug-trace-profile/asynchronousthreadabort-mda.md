@@ -1,13 +1,6 @@
 ---
-title: "Помощник по отладке управляемого кода asynchronousThreadAbort"
-ms.custom: 
+title: Помощник по отладке управляемого кода asynchronousThreadAbort
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - asynchronous thread aborts
 - AsynchronousThreadAbort MDA
@@ -15,21 +8,18 @@ helpviewer_keywords:
 - threading [.NET Framework], managed debugging assistants
 - MDAs (managed debugging assistants), asynchronous thread aborts
 ms.assetid: 9ebe40b2-d703-421e-8660-984acc42bfe0
-caps.latest.revision: "10"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ecd99b098a619d4ad132432f4fd163d32598c2ba
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fd759a4167a667919a443bc6492c049631ad222c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="asynchronousthreadabort-mda"></a>Помощник по отладке управляемого кода asynchronousThreadAbort
 Помощник по отладке управляемого кода (MDA) `asynchronousThreadAbort` активируется в том случае, если поток пытается выполнить асинхронное прерывание в другом потоке. При вызове синхронных прерываний потока помощник `asynchronousThreadAbort` не активируется.
 
-## <a name="symptoms"></a>Признаки
+## <a name="symptoms"></a>Симптомы
  При прерывании потока основного приложения приложение аварийно завершает работу с необработанным исключением <xref:System.Threading.ThreadAbortException>. Если выполнение приложения должно было продолжиться, последствия завершения могут быть даже хуже, чем при аварийном завершении, что может привести к обширному повреждению данных.
 
  Атомарная операция, скорее всего, может быть прервана после частичного выполнения, в результате чего данные приложения будут находиться в непредсказуемом состоянии. Исключение <xref:System.Threading.ThreadAbortException> может возникать в произвольных точках выполняемого кода и чаще всего в самых неожиданных местах. Если в коде не реализована возможность обработки такого исключения, это может привести к повреждению состояния.

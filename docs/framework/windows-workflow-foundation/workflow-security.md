@@ -1,29 +1,17 @@
 ---
 title: Безопасность рабочих процессов
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - programming [WF], workflow security
 ms.assetid: d712a566-f435-44c0-b8c0-49298e84b114
-caps.latest.revision: 13
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: bfd7c3e36bf28c364adf3cd230522cfc40a9503b
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 8acfd0640478cf67309fe53a99707c7d96c5a635
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="workflow-security"></a>Безопасность рабочих процессов
-Windows Workflow Foundation (WF) интегрирована с несколькими разными технологиями, например Microsoft SQL Server и [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]. В случае неправильной настройки взаимодействие с этими технологиями может вызвать проблемы безопасности в рабочем процессе.  
+Windows Workflow Foundation (WF) интегрирована с несколькими разными технологиями, например Microsoft SQL Server и Windows Communication Foundation (WCF). В случае неправильной настройки взаимодействие с этими технологиями может вызвать проблемы безопасности в рабочем процессе.  
   
 ## <a name="persistence-security-concerns"></a>Вопросы безопасности сохраняемости  
   
@@ -49,7 +37,7 @@ Windows Workflow Foundation (WF) интегрирована с нескольк�
   
 ## <a name="considerations-for-workflowservicehost"></a>Рекомендации по WorkflowServiceHost  
   
--   Конечные точки [!INCLUDE[indigo1](../../../includes/indigo1-md.md)], используемые в рабочих процессах, должны быть защищены. Дополнительные сведения см. в разделе [Общие сведения о безопасности WCF](http://go.microsoft.com/fwlink/?LinkID=164975).  
+-   Следует обеспечить безопасность Windows Communication Foundation (WCF) конечных точек, используемых в рабочих процессах. Дополнительные сведения см. в разделе [Общие сведения о безопасности WCF](http://go.microsoft.com/fwlink/?LinkID=164975).  
   
 -   Авторизацию на уровне узлов можно реализовать с помощью <xref:System.ServiceModel.ServiceAuthorizationManager>. В разделе [How To: Создание пользовательского диспетчера авторизации для службы](http://go.microsoft.com/fwlink/?LinkId=192228) подробные сведения. Это также показано в следующем примере: [Защита служб рабочего процесса](../../../docs/framework/windows-workflow-foundation/samples/securing-workflow-services.md).  
   

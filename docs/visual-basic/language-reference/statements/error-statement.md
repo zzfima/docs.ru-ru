@@ -1,12 +1,6 @@
 ---
 title: Оператор Error
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.error
 helpviewer_keywords:
@@ -16,14 +10,11 @@ helpviewer_keywords:
 - run-time errors [Visual Basic], codes
 - errors [Visual Basic], simulating
 ms.assetid: 85cd5c59-5224-4f02-aaf5-fcfefab17a29
-caps.latest.revision: 10
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 3cd3245fd3e9e62b1b6443e9787c97808a0d179d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 3ecfe18392de15dc937d90565b49641415dd7e0a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="error-statement"></a>Оператор Error
 Имитирует возникновение ошибки.  
@@ -36,14 +27,14 @@ Error errornumber
   
 ## <a name="parts"></a>Части  
  `errornumber`  
- Обязательный. Может быть любой допустимый номер ошибки.  
+ Обязательно. Может быть любой допустимый номер ошибки.  
   
 ## <a name="remarks"></a>Примечания  
  `Error` Инструкция поддерживается для обратной совместимости. В новом коде, особенно при создании объектов, используйте `Err` объекта `Raise` метод для создания ошибки во время выполнения.  
   
  Если `errornumber` определен, `Error` инструкция вызывает обработчик ошибок после свойства `Err` объекта назначаются следующие значения по умолчанию:  
   
-|Свойство|Значение|  
+|Свойство.|Значение|  
 |--------------|-----------|  
 |`Number`|Значение, указанное в качестве аргумента `Error` инструкции. Может быть любой допустимый номер ошибки.|  
 |`Source`|Имя текущего проекта Visual Basic.|  

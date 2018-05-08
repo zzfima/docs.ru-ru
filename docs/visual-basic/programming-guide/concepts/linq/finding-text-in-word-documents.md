@@ -1,22 +1,12 @@
 ---
-title: "Поиск текста в документах Word (Visual Basic)"
-ms.custom: 
+title: Поиск текста в документах Word (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: eea9819b-a78a-4552-bf13-8837fc0e7a37
-caps.latest.revision: "4"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 4907aacfae333544448da399f0fd7169a36fc505
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: d9f9b0066a1f9b1fbe25c52f5bc23721b9e813c1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="finding-text-in-word-documents-visual-basic"></a>Поиск текста в документах Word (Visual Basic)
 В этом разделе производится расширение предыдущих запросов, которое позволит выполнить некоторые полезные действия: найти все повторения определенной строки в документе.  
@@ -311,7 +301,7 @@ StyleName:Code ><
   
  Обратите внимание, что этот пример работает почти так же хорошо, как если бы составлялся только один запрос. Поскольку каждый запрос выполняется отложенным неспешным образом, не происходит выдачи результатов каждого запроса до тех пор, пока не будет закончен поиск по всему заданному пространству. Дополнительные сведения о выполнение и отложенное вычисление см. в разделе [отложенное выполнение и отложенное вычисление в LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md).  
   
-## <a name="next-steps"></a>Дальнейшие действия  
+## <a name="next-steps"></a>Следующие шаги  
  В следующем разделе приводятся дополнительные сведения о документах WordprocessingML:  
   
 -   [Сведения об Office открывать документы WordprocessingML XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)  

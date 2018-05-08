@@ -1,36 +1,22 @@
 ---
 title: Инструменты
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 89c907f9-313f-408c-992a-631f1eadf1da
-caps.latest.revision: ''
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 5badbb9142261fc1dc6c2b2d5af3c89c7af776b6
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 6c4ada74c2fc6aba84eb1fe46f4d7cdee9978d13
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tools"></a>Инструменты
-В этом разделе перечислены все исключения, генерируемые средствами [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)].  
+В этом разделе перечислены все исключения, созданные средствами Windows Communication Foundation (WCF).  
   
 ## <a name="exception-list"></a>Список исключений  
   
 |Код ресурса|Строка ресурса|  
 |-------------------|---------------------|  
 |ParametersTarget|\<Перечисление >|  
-|ParametersToolConfig|\<configFile>|  
+|ParametersToolConfig|\<configFile >|  
 |ErrInvalidPath|Указан недопустимый путь. Проверьте указанные аргумент.|  
 |ParametersReference|\<путь к файлу >|  
 |WrnCannotLoadConfigFileForValidation|Ошибка при обработке файла конфигурации, загруженного из указанного расположения. Не удается проверить службы, определенные в этом файле конфигурации.|  
@@ -88,7 +74,7 @@ ms.lasthandoff: 03/26/2018
 |ErrInputConflictsWithMode|Входные данные, считываемые из указанного параметра, не согласованы с другими параметрами.|  
 |ErrDuplicateValuePassedToTypeArg|Указанное значение передано указанному параметру несколько раз. Каждый тип можно указать только один раз.|  
 |ErrInputEPRFileParseError|Не удается прочитать ссылку конечной точки из указанного. Проверьте допустимость и правильность формата XML-элемента.|  
-|ErrCouldNotCreateCodeProvider|Не удается создать поставщик кода для указанного значения, переданного аргументу /{1}. Проверьте, правильно ли установлен и настроен поставщик кода.|  
+|ErrCouldNotCreateCodeProvider|Не удается создать поставщик кода для указанного значения, которое было передано /{1} аргумент. Проверьте, правильно ли установлен и настроен поставщик кода.|  
 |ErrPathTooLongDirOnly|Указанный результирующий путь слишком длинный. Проверьте указанный аргумент.|  
 |HelpDataContractSerializer|Генерировать типы данных, использующие сериализатор DataContract для сериализации и десериализации.|  
 |ErrUnableToExportEndpoint|Ошибка при экспорте имени указанной конечной точки в указанном пространстве имен в указанном типе службы из файла конфигурации, загруженного для сборки.|  
@@ -100,7 +86,7 @@ ms.lasthandoff: 03/26/2018
 |ErrDirectoryNotFound|Не удается найти заданный каталог. Убедитесь, что каталог существует и у вас есть соответствующие разрешения на его чтение.|  
 |ErrUnableToLoadFile|Не удается прочитать указанный файл.|  
 |ErrNoFilesFound|Указанный входной путь не ссылается ни на один существующий файл.|  
-|ParametersConfig|\<configFile>|  
+|ParametersConfig|\<configFile >|  
 |ErrDirectoryInsteadOfFile|Указанный входной путь является каталогом. Он должен быть либо URL-адресом, либо путем к файлу.|  
 |HelpConfig|Предписывает программе создать файл конфигурации с предоставленным именем. По умолчанию: output.config.|  
 |ErrSingleUseSwitch|Указанный параметр нельзя указывать несколько раз.|  

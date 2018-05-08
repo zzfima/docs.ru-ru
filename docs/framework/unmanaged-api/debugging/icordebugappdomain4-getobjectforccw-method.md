@@ -1,27 +1,17 @@
 ---
-title: "Метод ICorDebugAppDomain4::GetObjectForCCW"
-ms.custom: 
+title: Метод ICorDebugAppDomain4::GetObjectForCCW
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 ms.assetid: 2cacdb85-e7b8-42e7-b310-c3e8c22e5d33
-caps.latest.revision: "6"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d459c9ea807114c4f63995ba8fbbb288ea5463b6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f1089668aa19747f5f694360ebb87098e2df9ad4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icordebugappdomain4getobjectforccw-method"></a>Метод ICorDebugAppDomain4::GetObjectForCCW
-Возвращает управляемый объект из вызываемой оболочки COM (CCW).  
+Возвращает управляемый объект из вызываемой оболочки COMr (CCW).  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -48,7 +38,7 @@ HRESULT GetObjectForCCW(
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:**[!INCLUDE[net_current_v46plus](../../../../includes/net-current-v46plus-md.md)]  
+ **Версии платформы .NET framework:** [!INCLUDE[net_current_v46plus](../../../../includes/net-current-v46plus-md.md)]  
   
 ## <a name="see-also"></a>См. также  
  [Интерфейс ICorDebugAppDomain4](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomain4-interface.md)  

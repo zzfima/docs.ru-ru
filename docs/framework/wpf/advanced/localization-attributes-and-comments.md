@@ -1,27 +1,15 @@
 ---
-title: "Атрибуты и комментарии локализации"
-ms.custom: 
+title: Атрибуты и комментарии локализации
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - localization [WPF], attributes
 - localization [WPF], comments
 ms.assetid: ead2d9ac-b709-4ec1-a924-39927a29d02f
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 85584c17675167d374c595aa26288f550a033efb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7cfcc9fa4dc3bc1450febb39500b7d96f92beac6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="localization-attributes-and-comments"></a>Атрибуты и комментарии локализации
 Комментарии локализации [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] являются свойствами в исходном коде [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)], предоставленными разработчиками для обеспечения правил и подсказок при локализации. Комментарии локализации [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] содержат два набора данных: атрибуты локализуемости и комментарии локализации в свободной форме. Атрибуты локализуемости используются API локализации [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] для указания того, какие ресурсы должны быть локализованы. Комментарии произвольной формы представляют собой любые сведения, которые автор приложения хочет указать.  

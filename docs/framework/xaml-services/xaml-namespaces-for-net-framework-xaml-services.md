@@ -1,24 +1,12 @@
 ---
-title: "Пространства имен языка XAML для служб .NET Framework XAML"
-ms.custom: 
+title: Пространства имен языка XAML для служб .NET Framework XAML
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: e4f15f13-c420-4c1e-aeab-9b6f50212047
-caps.latest.revision: "3"
-author: wadepickett
-ms.author: wpickett
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e4e94f116fa820d80e5e23833c20382591c5d479
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 842cfb31e21c59bb886ccd266d19c40c64557519
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="xaml-namespaces-for-net-framework-xaml-services"></a>Пространства имен языка XAML для служб .NET Framework XAML
 Пространства имен XAML — это понятие, расширяющее определение пространства имен XML. Как и пространство имен XML, можно определить пространства имен XAML с помощью `xmlns` атрибута в разметке. Пространства имен XAML также представлены в потоке узлов XAML и других API служб XAML. В этом разделе определяет понятие пространства имен XAML, а также описывается, как можно определить пространства имен языка XAML и используются контекстами схемы XAML и других аспектов служб XAML .NET Framework.  
@@ -41,9 +29,9 @@ ms.lasthandoff: 12/22/2017
   
  Самая простая форма идентификатора, который использует соглашение о пространства имен и сборки CLR выглядит следующим образом:  
   
- `clr-namespace:`*clrnsName* `; assembly=` *assemblyShortName*  
+ `clr-namespace:` *clrnsName* `; assembly=` *assemblyShortName*  
   
- `clr-namespace:`и `; assembly=` — литеральные компоненты синтаксиса.  
+ `clr-namespace:` и `; assembly=` — литеральные компоненты синтаксиса.  
   
  *clrnsName* строковое имя, которое определяет пространство имен среды CLR. Это имя строки включает символы внутренняя точка (.), определять подсказки, пространство имен среды CLR и его отношений с другими пространствами имен среды CLR.  
   
@@ -51,7 +39,7 @@ ms.lasthandoff: 12/22/2017
   
  Более полное определение соглашения о пространства имен и сборки CLR выглядит следующим образом:  
   
- `clr-namespace:`*clrnsName* `; assembly=` *assemblyName*  
+ `clr-namespace:` *clrnsName* `; assembly=` *assemblyName*  
   
  *assemblyName* представляет любую строку, допустимую в качестве <xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType> ввода. Эта строка может включать язык и региональные параметры, открытый ключ или сведения о версии (определенные в справочном разделе для определения этих понятий <xref:System.Reflection.Assembly>). COFF формат и свидетельства (как использовать другие перегрузки <xref:System.Reflection.Assembly.Load%2A>) не являются значимыми для целей; загрузки сборок XAML вся информация для загрузки должна быть представлена в виде строки.  
   
@@ -72,7 +60,7 @@ ms.lasthandoff: 12/22/2017
   
  Если вам нужно заполнить сведения о пространстве имен XAML, в случаях, где требуется контекст схемы XAML для использования пространства имен XAML не определен в разметке, можно использовать один из способов — объявить объявления пространств имен XML в <xref:System.Xml.XmlParserContext> для <xref:System.Xml.XmlReader>. Используйте его <xref:System.Xml.XmlReader> как входные параметры для конструктора средства чтения XAML, или <xref:System.Xaml.XamlServices.Load%28System.Xml.XmlReader%29?displayProperty=nameWithType>.  
   
- Две другие API, которые важны для обработки в службах XAML .NET Framework пространства имен XAML — это атрибуты <xref:System.Windows.Markup.XmlnsDefinitionAttribute> и <xref:System.Windows.Markup.XmlnsPrefixAttribute>. Эти атрибуты применяются к сборкам. <xref:System.Windows.Markup.XmlnsDefinitionAttribute>используется контекст схемы XAML для интерпретации любого объявления пространства имен XAML, включающего в себя URI. <xref:System.Windows.Markup.XmlnsPrefixAttribute>используется средствами, выдающими XAML, чтобы определенного пространства имен XAML, которые можно сериализовать с предсказуемым префиксом. Дополнительные сведения см. в разделе [XAML-Related атрибуты среды CLR для пользовательских типов и библиотек](../../../docs/framework/xaml-services/xaml-related-clr-attributes-for-custom-types-and-libraries.md).  
+ Две другие API, которые важны для обработки в службах XAML .NET Framework пространства имен XAML — это атрибуты <xref:System.Windows.Markup.XmlnsDefinitionAttribute> и <xref:System.Windows.Markup.XmlnsPrefixAttribute>. Эти атрибуты применяются к сборкам. <xref:System.Windows.Markup.XmlnsDefinitionAttribute> используется контекст схемы XAML для интерпретации любого объявления пространства имен XAML, включающего в себя URI. <xref:System.Windows.Markup.XmlnsPrefixAttribute> используется средствами, выдающими XAML, чтобы определенного пространства имен XAML, которые можно сериализовать с предсказуемым префиксом. Дополнительные сведения см. в разделе [XAML-Related атрибуты среды CLR для пользовательских типов и библиотек](../../../docs/framework/xaml-services/xaml-related-clr-attributes-for-custom-types-and-libraries.md).  
   
 ## <a name="see-also"></a>См. также  
  [Общее представление о понятиях и структурах потока узлов XAML](../../../docs/framework/xaml-services/understanding-xaml-node-stream-structures-and-concepts.md)

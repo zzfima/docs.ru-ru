@@ -1,28 +1,16 @@
 ---
-title: "Типы столбцов элемента управления DataGridView в Windows Forms"
-ms.custom: 
+title: Типы столбцов элемента управления DataGridView в Windows Forms
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - columns [Windows Forms], types
 - DataGridView control [Windows Forms], column types
 - data grids [Windows Forms], columns
 ms.assetid: f0a0a9f1-8757-4bfd-891f-d7d12870dbed
-caps.latest.revision: "17"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 92c6881fe876bba3fe0224a358a9b12767d53f0b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6630323b66265f478151ec80ab8b225c0b653917
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="column-types-in-the-windows-forms-datagridview-control"></a>Типы столбцов элемента управления DataGridView в Windows Forms
 <xref:System.Windows.Forms.DataGridView> Управления использует нескольких типов столбцов для отображения данных и позволяют пользователям изменять или добавлять данные.  
@@ -33,7 +21,7 @@ ms.lasthandoff: 12/22/2017
   
  В следующей таблице описаны доступные для использования в различных классов столбцов <xref:System.Windows.Forms.DataGridView> элемента управления.  
   
-|Класс|Описание:|  
+|Класс|Описание|  
 |-----------|-----------------|  
 |<xref:System.Windows.Forms.DataGridViewTextBoxColumn>|Используется с текстовыми значениями. Создается автоматически при привязке к чисел и строк.|  
 |<xref:System.Windows.Forms.DataGridViewCheckBoxColumn>|При использовании <xref:System.Boolean> и <xref:System.Windows.Forms.CheckState> значения. Создается автоматически при привязке к значениям из этих типов.|  
@@ -53,7 +41,7 @@ ms.lasthandoff: 12/22/2017
  Тип данных значения ячейки столбца указывается в <xref:System.Windows.Forms.DataGridViewColumn.ValueType%2A> свойство столбца.  
   
 ## <a name="datagridviewcheckboxcolumn"></a>DataGridViewCheckBoxColumn  
- <xref:System.Windows.Forms.DataGridViewCheckBoxColumn> Используется с <xref:System.Boolean> и <xref:System.Windows.Forms.CheckState> значения. <xref:System.Boolean>значения отображаются как двумя или тремя состояниями флажки, в зависимости от значения <xref:System.Windows.Forms.DataGridViewCheckBoxColumn.ThreeState%2A> свойство. Когда столбец связан с <xref:System.Windows.Forms.CheckState> значения, <xref:System.Windows.Forms.DataGridViewCheckBoxColumn.ThreeState%2A> значение свойства `true` по умолчанию.  
+ <xref:System.Windows.Forms.DataGridViewCheckBoxColumn> Используется с <xref:System.Boolean> и <xref:System.Windows.Forms.CheckState> значения. <xref:System.Boolean> значения отображаются как двумя или тремя состояниями флажки, в зависимости от значения <xref:System.Windows.Forms.DataGridViewCheckBoxColumn.ThreeState%2A> свойство. Когда столбец связан с <xref:System.Windows.Forms.CheckState> значения, <xref:System.Windows.Forms.DataGridViewCheckBoxColumn.ThreeState%2A> значение свойства `true` по умолчанию.  
   
  Как правило значения ячеек флажок предназначены для хранения данных, как любые другие данные, либо для выполнения массовых операций. Если вы хотите немедленно при щелчке ячейки с флажком, можно обработать реагировать на <xref:System.Windows.Forms.DataGridView.CellClick> событие, но это событие происходит до обновления значения ячейки. Если необходимо новое значение во время щелчка уже можно вычислить ожидаемое значение на основе текущего значения. Другой подход заключается в фиксировать изменения немедленно и обрабатывать <xref:System.Windows.Forms.DataGridView.CellValueChanged> событие, чтобы реагировать на них. Чтобы применить изменение, при щелчке ячейки, необходимо обрабатывать <xref:System.Windows.Forms.DataGridView.CurrentCellDirtyStateChanged> событий. В обработчике, если текущая ячейка, ячейки с флажком вызвать <xref:System.Windows.Forms.DataGridView.CommitEdit%2A> метод и передайте его в <xref:System.Windows.Forms.DataGridViewDataErrorContexts.Commit> значение.  
   

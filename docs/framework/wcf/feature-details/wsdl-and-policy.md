@@ -1,31 +1,17 @@
 ---
 title: WSDL и политика
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: cea87440-3519-4640-8494-b8a2b0e88c84
-caps.latest.revision: ''
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: dd52e36199fc2412abb003d530dd5614cda8049b
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 330a48989e9d6ca3cee0d11bf4b3fce38a25fa3d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wsdl-and-policy"></a>WSDL и политика
-В данном разделе приводятся сведения о реализации WSDL 1.1, WS-Policy и WS-PolicyAttachment [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], а также описываются дополнительные утверждения WS-Policy и расширения WSDL 1.1, впервые представленные в [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+В этом разделе рассматриваются Windows Communication Foundation (WCF) WSDL 1.1, WS-Policy и WS-PolicyAttachment особенности реализации, а также дополнительные утверждения WS-Policy и расширения WSDL 1.1, впервые представленные в WCF.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] реализует спецификации WS-Policy и WS-PolicyAttachment, переданные W3C с ограничениями и пояснениями, представленными в этом документе.  
+ WCF реализует спецификации WS-Policy и WS-PolicyAttachment, переданные W3C с ограничениями и пояснениями, описанные в этом документе.  
   
  В этом документе используются префиксы и пространства имен, приведенные в следующей таблице.  
   
@@ -41,19 +27,19 @@ ms.lasthandoff: 03/26/2018
 |cdp|http://schemas.microsoft.com/net/2006/06/duplex|  
   
 ## <a name="wcf-wsdl11-extensions"></a>Расширения WCF WSDL1.1  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] использует следующие расширения WSDL1.1 для описания требований сеанса контракта.  
+ WCF использует следующие расширения WSDL1.1 для описания требований сеанса контракта.  
   
  wsdl:portType/wsdl:operation/@msc:isInitiating  
- xs:boolean, показывает, что эта операция инициирует сеанс [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]; значение по умолчанию - `false`.  
+ xs: Boolean, показывает, что эта операция инициирует сеанс WCF; значение по умолчанию — `false`.  
   
  wsdl:portType/wsdl:operation/@msc:isTerminating  
- xs:boolean, показывает, что эта операция завершает сеанс [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]; значение по умолчанию - `false`.  
+ xs: Boolean, показывает, что эта операция завершает сеанс WCF. значение по умолчанию — `false`.  
   
  wsdl:portType/wsdl:operation/@msc:usingSession  
  xs:boolean, показывает, что этот контракт требует установления сеанса.  
   
 ### <a name="soap-1x-http-binding-transport-uris"></a>Универсальные коды ресурса (URI) транспорта привязки SOAP 1.x HTTP  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] использует следующие URI для указания транспортов, которые следует использовать с элементами расширения привязок WSDL 1.1, SOAP 1.1 и SOAP 1.2.  
+ WCF использует следующие URI для указания транспортов, которые используются элементами расширения привязок WSDL 1.1, SOAP 1.1 и SOAP 1.2.  
   
 |Transport|URI|  
 |---------------|---------|  
@@ -63,7 +49,7 @@ ms.lasthandoff: 03/26/2018
 |Именованные каналы|http://schemas.microsoft.com/soap/named-pipe|  
   
 ## <a name="policy-assertions-implemented-by-wcf"></a>Утверждения политики, реализуемые WCF  
- Помимо утверждений политики, представленных в спецификациях веб-служб (WS-*) и описываемых в других разделах этого документа, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] реализует следующие утверждения политики.  
+ Помимо утверждений политики, представленных в спецификациях веб-служб (WS-*) и указано в других разделах данного документа, WCF реализует следующие утверждения политики.  
   
 |Утверждение политики|Субъект политики|Описание|  
 |----------------------|--------------------|-----------------|  

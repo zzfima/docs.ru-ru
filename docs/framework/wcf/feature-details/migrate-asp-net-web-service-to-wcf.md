@@ -1,27 +1,15 @@
 ---
-title: "Практическое руководство. Миграция кода веб-службы ASP.NET на платформу Windows Communication Foundation"
-ms.custom: 
+title: Практическое руководство. Миграция кода веб-службы ASP.NET на платформу Windows Communication Foundation
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: e528c64f-c027-4f2e-ada6-d8f3994cf8d6
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e56d2481785a9a8486174e611001b9d800c7c869
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 90a6109a56299ec1bcaff4a35141abc194484772
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-migrate-aspnet-web-service-code-to-the-windows-communication-foundation"></a>Практическое руководство. Миграция кода веб-службы ASP.NET на платформу Windows Communication Foundation
-Ниже описано, как перенести веб-службу ASP.NET на платформу [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] .  
+Следующая процедура описывает, как перенести веб-службы ASP.NET для Windows Communication Foundation (WCF).  
   
 ## <a name="procedure"></a>Процедура  
   
@@ -85,9 +73,9 @@ ms.lasthandoff: 12/22/2017
   
 7.  Протестируйте изменения.  
   
-8.  Добавьте ссылки на сборки [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] System.ServiceModel и System.Runtime.Serialization в проект веб-службы ASP.NET.  
+8.  Добавьте ссылки на сборки WCF System.ServiceModel и System.Runtime.Serialization в проект ASP.NET Web service.  
   
-9. Запустите [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) для создания [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] класс клиента из WSDL. Добавьте модуль созданного класса в решение.  
+9. Запустите [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) для создания класса клиента WCF из WSDL. Добавьте модуль созданного класса в решение.  
   
 10. Модуль класса, созданный на предыдущем шаге, содержит определение интерфейса.  
   
@@ -145,7 +133,7 @@ ms.lasthandoff: 12/22/2017
     }  
     ```  
   
-13. Настройте класс, которые теперь является типом службы [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], чтобы он требовал режима совместимости [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] с ASP.NET, если веб-служба ASP.NET использовала какие-либо компоненты из следующего списка:  
+13. Настройте класс, который теперь является типом службы WCF, требуется режим совместимости WCF ASP.NET, если веб-служба ASP.NET использовала какие-либо из следующих:  
   
     -   класс <xref:System.Web.HttpContext>;  
   
@@ -167,14 +155,14 @@ ms.lasthandoff: 12/22/2017
   
 14. Переименуйте исходный файл ASMX в ASMX.OLD.  
   
-15. Создайте файл службы [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], присвойте ему расширение ASMX и сохраните его в корневой папке приложения в IIS.  
+15. Создайте файл службы WCF для службы, присвойте ему расширение .asmx и сохраните его в корневой папке приложения в IIS.  
   
     ```xml  
     <%@Service Class="MyOrganization.Adder" %>  
     <%@Assembly Name="MyServiceAssembly" %>   
     ```  
   
-16. Добавьте конфигурацию [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] службы в файл Web.config. Настройте службу на использование [ \<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md), для использования службы файла с расширением .asmx, созданные на предыдущем шаге и не формирует WSDL-код для себя, но для использования WSDL из шага 2. Кроме того, при необходимости настройте режим совместимости ASP.NET.  
+16. Добавление конфигурации WCF для службы в файле Web.config. Настройте службу на использование [ \<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md), для использования службы файла с расширением .asmx, созданные на предыдущем шаге и не формирует WSDL-код для себя, но для использования WSDL из шага 2. Кроме того, при необходимости настройте режим совместимости ASP.NET.  
   
     ```xml  
     <?xml version="1.0" encoding="utf-8" ?>  

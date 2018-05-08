@@ -1,29 +1,17 @@
 ---
-title: "Ресурсы XAML"
-ms.custom: 
+title: Ресурсы XAML
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - reusing resources [WPF]
 - resources [WPF], reusing
 - reusing commonly defined objects [WPF]
 - XAML [WPF], reusing resources
 ms.assetid: 91580b89-a0a8-4889-aecb-fddf8e63175f
-caps.latest.revision: "33"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a2d58802bcdfa57bb7689e7406651fcc9829a7e5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7b917b13909c463cd9d518d79bf8ce2683591dda
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="xaml-resources"></a>Ресурсы XAML
 Ресурс — это объект, который можно повторно использовать в разных местах приложения. Примерами ресурсов являются кисти и стили. В этом обзоре описывается использование ресурсов в [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. Можно также создать и доступ к ресурсам с помощью кода или попеременно кода и [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]. Дополнительные сведения см. в разделе [ресурсы и код](../../../../docs/framework/wpf/advanced/resources-and-code.md).  
@@ -162,7 +150,7 @@ ms.lasthandoff: 12/22/2017
   
  Неявные ключи для стилей не применяются для элемента управления, если <xref:System.Windows.FrameworkElement.OverridesDefaultStyle%2A> — `true` (также Обратите внимание, что <xref:System.Windows.FrameworkElement.OverridesDefaultStyle%2A> может быть задан как часть собственного поведения для класса элемента управления, а не явно на экземпляр элемента управления). Кроме того, чтобы поддерживать неявные ключи для сценариев в производном классе, элемент управления необходимо переопределить <xref:System.Windows.FrameworkElement.DefaultStyleKey%2A> (все существующие элементы управления, предоставляемые как часть [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] это сделать). Дополнительные сведения о стилях, темы и разработке элементов управления см. в разделе [рекомендации по разработке элементов](../../../../docs/framework/wpf/controls/guidelines-for-designing-stylable-controls.md).  
   
- <xref:System.Windows.DataTemplate>также имеет неявный ключ. Неявный ключ для <xref:System.Windows.DataTemplate> — <xref:System.Windows.DataTemplate.DataType%2A> значение свойства. <xref:System.Windows.DataTemplate.DataType%2A>Можно также задать имя типа, а не явным образом с помощью [{x: Type...} ](../../../../docs/framework/xaml-services/x-type-markup-extension.md). Дополнительные сведения см. в разделе [сведения о шаблонах данных](../../../../docs/framework/wpf/data/data-templating-overview.md).  
+ <xref:System.Windows.DataTemplate> также имеет неявный ключ. Неявный ключ для <xref:System.Windows.DataTemplate> — <xref:System.Windows.DataTemplate.DataType%2A> значение свойства. <xref:System.Windows.DataTemplate.DataType%2A> Можно также задать имя типа, а не явным образом с помощью [{x: Type...} ](../../../../docs/framework/xaml-services/x-type-markup-extension.md). Дополнительные сведения см. в разделе [сведения о шаблонах данных](../../../../docs/framework/wpf/data/data-templating-overview.md).  
   
 ## <a name="see-also"></a>См. также  
  <xref:System.Windows.ResourceDictionary>  

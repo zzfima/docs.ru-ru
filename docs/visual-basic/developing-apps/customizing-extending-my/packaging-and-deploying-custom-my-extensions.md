@@ -1,23 +1,16 @@
 ---
-title: "Упаковка и развертывание пользовательских расширений пространства имен My (Visual Basic)"
+title: Упаковка и развертывание пользовательских расширений пространства имен My (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - My namespace [Visual Basic], customizing
 - My namespace
 - My namespace [Visual Basic], extending
 ms.assetid: fd89c54b-0290-4c50-95a3-ff17d4487a21
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 94a9ea977d0add14ae9f0c9a889b008b94610ee0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 901d0b80a18d2f4d262cc65eb485dcc628bc6a08
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="packaging-and-deploying-custom-my-extensions-visual-basic"></a>Упаковка и развертывание пользовательских расширений пространства имен My (Visual Basic)
 Visual Basic предоставляет удобный способ развертывания пользовательских `My` расширений пространства имен с помощью шаблонов Visual Studio. Если вы создаете шаблон проекта, для которого вашей `My` расширения являются неотъемлемой частью, можно просто включить пользовательский `My` расширение кода в проект при экспорте шаблона. Дополнительные сведения об экспорте шаблонов проекта см. в разделе [как: создание шаблонов проектов](/visualstudio/ide/how-to-create-project-templates).  
@@ -61,9 +54,9 @@ Visual Basic предоставляет удобный способ развер
   
 |Атрибут|Описание|  
 |---|---|  
-|`ID`|Обязательный. Уникальный идентификатор расширения. Если расширение, имеющее этот идентификатор уже был добавлен в проект, пользователь будет приглашение не добавить его еще раз.|  
-|`Version`|Обязательный. Номер версии для шаблона элемента.|  
-|`AssemblyFullName`|Необязательно. Имя сборки. При добавлении в проект ссылку на эту сборку пользователю будет предложено добавить `My` расширения на основе этого шаблона элемента.|  
+|`ID`|Обязательно. Уникальный идентификатор расширения. Если расширение, имеющее этот идентификатор уже был добавлен в проект, пользователь будет приглашение не добавить его еще раз.|  
+|`Version`|Обязательно. Номер версии для шаблона элемента.|  
+|`AssemblyFullName`|Необязательный. Имя сборки. При добавлении в проект ссылку на эту сборку пользователю будет предложено добавить `My` расширения на основе этого шаблона элемента.|  
   
 ### <a name="add-the-customdatasignature-element-to-the-vstemplate-file"></a>Добавить \<CustomDataSignature > элемент VSTEMPLATE-файлу  
  Для идентификации элемента шаблона Visual Studio как `My` расширение пространства имен, необходимо также изменить файл VSTEMPLATE для шаблона элемента. Необходимо добавить `<CustomDataSignature>` элемента `<TemplateData>` элемент. `<CustomDataSignature>` Элемент должен содержать текст `Microsoft.VisualBasic.MyExtension`, как показано в следующем примере.  

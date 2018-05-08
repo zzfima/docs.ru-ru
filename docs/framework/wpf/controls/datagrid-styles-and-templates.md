@@ -1,13 +1,6 @@
 ---
-title: "Стили и шаблоны элемента DataGrid"
-ms.custom: 
+title: Стили и шаблоны элемента DataGrid
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - states [WPF], DataGrid
 - ControlTemplate [WPF], DataGrid
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - styles [WPF], DataGrid
 - parts [WPF], DataGrid
 ms.assetid: 9cb31d63-f148-4d25-b079-816e73f988c7
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 5fd9b374f9e2c367daa9869862ab717828049887
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e41fe0eb3cce2561514e472a2034e91eea921c12
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="datagrid-styles-and-templates"></a>Стили и шаблоны элемента DataGrid
 В этом разделе описываются стили и шаблоны для <xref:System.Windows.Controls.DataGrid> элемента управления. Можно изменить значение по умолчанию <xref:System.Windows.Controls.ControlTemplate> для предоставления уникального внешнего вида элемента управления. Подробнее см. в разделе [Настройка внешнего вида существующего элемента управления путем создания объекта ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  
@@ -33,7 +21,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="datagrid-parts"></a>Элементы управления DataGrid  
  В следующей таблице перечислены именованные части <xref:System.Windows.Controls.DataGrid> элемента управления.  
   
-|Отделение|Тип|Описание:|  
+|Отделение|Тип|Описание|  
 |-|-|-|  
 |PART_ColumnHeadersPresenter|<xref:System.Windows.Controls.Primitives.DataGridColumnHeadersPresenter>|Строка, содержащая заголовки столбцов.|  
   
@@ -44,7 +32,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="datagrid-states"></a>DataGrid состояний  
  В следующей таблице перечислены визуальные состояния <xref:System.Windows.Controls.DataGrid> элемента управления.  
   
-|Имя VisualState|Имя VisualStateGroup|Описание:|  
+|Имя VisualState|Имя VisualStateGroup|Описание|  
 |-|-|-|  
 |Норм.|CommonStates|Состояние по умолчанию.|  
 |Отключено|CommonStates|Элемент управления отключен.|  
@@ -58,7 +46,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="datagridcell-states"></a>DataGridCell состояний  
  В следующей таблице перечислены визуальные состояния <xref:System.Windows.Controls.DataGridCell> элемента.  
   
-|Имя VisualState|Имя VisualStateGroup|Описание:|  
+|Имя VisualState|Имя VisualStateGroup|Описание|  
 |-|-|-|  
 |Норм.|CommonStates|Состояние по умолчанию.|  
 |MouseOver|CommonStates|Указатель мыши наведен на ячейку.|  
@@ -80,7 +68,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="datagridrow-states"></a>DataGridRow состояний  
  В следующей таблице перечислены визуальные состояния <xref:System.Windows.Controls.DataGridRow> элемента.  
   
-|Имя VisualState|Имя VisualStateGroup|Описание:|  
+|Имя VisualState|Имя VisualStateGroup|Описание|  
 |-|-|-|  
 |Норм.|CommonStates|Состояние по умолчанию.|  
 |MouseOver|CommonStates|Указатель мыши наведен на строку.|  
@@ -100,7 +88,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="datagridrowheader-parts"></a>DataGridRowHeader частей  
  В следующей таблице перечислены именованные части <xref:System.Windows.Controls.Primitives.DataGridRowHeader> элемента.  
   
-|Отделение|Тип|Описание:|  
+|Отделение|Тип|Описание|  
 |-|-|-|  
 |PART_TopHeaderGripper|<xref:System.Windows.Controls.Primitives.Thumb>|Элемент, используемый для изменения размера заголовка строки сверху.|  
 |PART_BottomHeaderGripper|<xref:System.Windows.Controls.Primitives.Thumb>|Элемент, используемый для изменения размера заголовка строки снизу.|  
@@ -108,7 +96,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="datagridrowheader-states"></a>DataGridRowHeader состояний  
  В следующей таблице перечислены визуальные состояния <xref:System.Windows.Controls.Primitives.DataGridRowHeader> элемента.  
   
-|Имя VisualState|Имя VisualStateGroup|Описание:|  
+|Имя VisualState|Имя VisualStateGroup|Описание|  
 |-|-|-|  
 |Норм.|CommonStates|Состояние по умолчанию.|  
 |MouseOver|CommonStates|Указатель мыши наведен на строку.|  
@@ -133,14 +121,14 @@ ms.lasthandoff: 12/22/2017
 ## <a name="datagridcolumnheaderspresenter-parts"></a>DataGridColumnHeadersPresenter частей  
  В следующей таблице перечислены именованные части <xref:System.Windows.Controls.Primitives.DataGridColumnHeadersPresenter> элемента.  
   
-|Отделение|Тип|Описание:|  
+|Отделение|Тип|Описание|  
 |-|-|-|  
 |PART_FillerColumnHeader|<xref:System.Windows.Controls.Primitives.DataGridColumnHeader>|Заполнитель для заголовков столбцов.|  
   
 ## <a name="datagridcolumnheaderspresenter-states"></a>DataGridColumnHeadersPresenter состояний  
  В следующей таблице перечислены визуальные состояния <xref:System.Windows.Controls.Primitives.DataGridColumnHeadersPresenter> элемента.  
   
-|Имя VisualState|Имя VisualStateGroup|Описание:|  
+|Имя VisualState|Имя VisualStateGroup|Описание|  
 |-|-|-|  
 |InvalidFocused|ValidationStates|Ячейка не является допустимым и имеет фокус.|  
 |InvalidUnfocused|ValidationStates|Ячейка не является допустимым и не имеет фокуса.|  
@@ -149,7 +137,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="datagridcolumnheader-parts"></a>Направление элемента DataGridColumnHeader частей  
  В следующей таблице перечислены именованные части <xref:System.Windows.Controls.Primitives.DataGridColumnHeader> элемента.  
   
-|Отделение|Тип|Описание:|  
+|Отделение|Тип|Описание|  
 |-|-|-|  
 |PART_LeftHeaderGripper|<xref:System.Windows.Controls.Primitives.Thumb>|Элемент, используемый для изменения размера заголовка столбца слева.|  
 |PART_RightHeaderGripper|<xref:System.Windows.Controls.Primitives.Thumb>|Элемент, используемый для изменения размера заголовка столбца справа.|  
@@ -157,7 +145,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="datagridcolumnheader-states"></a>Направление элемента DataGridColumnHeader состояний  
  В следующей таблице перечислены визуальные состояния <xref:System.Windows.Controls.Primitives.DataGridColumnHeader> элемента.  
   
-|Имя VisualState|Имя VisualStateGroup|Описание:|  
+|Имя VisualState|Имя VisualStateGroup|Описание|  
 |-|-|-|  
 |Норм.|CommonStates|Состояние по умолчанию.|  
 |MouseOver|CommonStates|Указатель мыши расположен в элементе управления.|  

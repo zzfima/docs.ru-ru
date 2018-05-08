@@ -1,14 +1,6 @@
 ---
-title: "Метод ICLRHostBindingPolicyManager::ModifyApplicationPolicy"
-ms.custom: 
+title: Метод ICLRHostBindingPolicyManager::ModifyApplicationPolicy
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICLRHostBindingPolicyManager.ModifyApplicationPolicy
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: d82d633e-cce6-427c-8b02-8227e34e12ba
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 018dc40895a79788a9eef20082d764db0b2265c5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7a221b286ada97c3c03387556cb30ee6ddd2c453
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="iclrhostbindingpolicymanagermodifyapplicationpolicy-method"></a>Метод ICLRHostBindingPolicyManager::ModifyApplicationPolicy
 Изменяет политику привязки для указанной сборки и создает новую версию политики.  
@@ -79,7 +67,7 @@ HRESULT  ModifyApplicationPolicy (
 |HRESULT|Описание|  
 |-------------|-----------------|  
 |S_OK|Политика была успешно изменена.|  
-|E_INVALIDARG|`pwzSourceAssemblyIdentity`или `pwzTargetAssemblyIdentity` был ссылкой со значением null.|  
+|E_INVALIDARG|`pwzSourceAssemblyIdentity` или `pwzTargetAssemblyIdentity` был ссылкой со значением null.|  
 |ERROR_INSUFFICIENT_BUFFER|`pbNewApplicationPolicy` слишком мал.|  
 |ЗНАЧЕНИЕ HOST_E_CLRNOTAVAILABLE|Общеязыковая среда выполнения (CLR) не был загружен в процесс или находится в состоянии, в котором не может выполнять управляемый код или успешно обработать вызов.|  
 |HOST_E_TIMEOUT|Истекло время ожидания вызова.|  
@@ -97,7 +85,7 @@ HRESULT  ModifyApplicationPolicy (
   
  **Библиотека:** включена как ресурс в MSCorEE.dll  
   
- **Версии платформы .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Версии платформы .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>См. также  
  [Интерфейс ICLRHostBindingPolicyManager](../../../../docs/framework/unmanaged-api/hosting/iclrhostbindingpolicymanager-interface.md)

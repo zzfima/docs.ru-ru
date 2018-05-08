@@ -1,13 +1,6 @@
 ---
-title: "Практическое руководство. Создание элемента управления, показывающего прогресс в форме Windows Forms"
-ms.custom: 
+title: Практическое руководство. Создание элемента управления, показывающего прогресс в форме Windows Forms
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,16 +10,11 @@ helpviewer_keywords:
 - progress [Windows Forms], reporting [Windows Forms]
 - FlashTrackBar custom control
 ms.assetid: 24c5a2e3-058c-4b8d-a217-c06e6a130c2f
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 76ce5cd67b66dea47f5bd12e78bb27179b391257
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5773181b8883f0f94ff451808c8c97ce3407970e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-windows-forms-control-that-shows-progress"></a>Практическое руководство. Создание элемента управления, показывающего прогресс в форме Windows Forms
 В следующем примере кода показан пользовательский элемент управления `FlashTrackBar`, который позволяет показывать пользователю уровень или ход выполнения приложения. Ход выполнения отображается с помощью градиента.  
@@ -45,7 +33,7 @@ ms.lasthandoff: 12/22/2017
   
  В приведенной ниже таблице показаны пользовательские свойства, которые определяет `FlashTrackBar`.  
   
-|Свойство.|Описание:|  
+|Свойство.|Описание|  
 |--------------|-----------------|  
 |`AllowUserEdit`|Указывает, может ли пользователь изменить значение полосы прокрутки флеш-памяти, щелкнув его и перетащив.|  
 |`EndColor`|Определяет конечный цвет полосы прокрутки.|  
@@ -60,13 +48,13 @@ ms.lasthandoff: 12/22/2017
   
  В следующей таблице показаны дополнительные элементы, определяемые событием изменения свойства `FlashTrackBar:` и методом, который вызывает это событие.  
   
-|Член|Описание:|  
+|Член|Описание|  
 |------------|-----------------|  
 |`ValueChanged`|Событие, которое возникает при изменении свойства `Value` полосы ползунка.|  
 |`OnValueChanged`|Метод, который вызывает событие `ValueChanged`.|  
   
 > [!NOTE]
->  `FlashTrackBar`использует <xref:System.EventArgs> класс данных события и <xref:System.EventHandler> для делегата события.  
+>  `FlashTrackBar` использует <xref:System.EventArgs> класс данных события и <xref:System.EventHandler> для делегата события.  
   
  Для обработки соответствующего *EventName* события, `FlashTrackBar` переопределяет следующие методы, которые он наследует от <xref:System.Windows.Forms.Control?displayProperty=nameWithType>:  
   

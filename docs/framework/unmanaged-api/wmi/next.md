@@ -1,11 +1,7 @@
 ---
-title: "Функция Next (Справочник по неуправляемым API)"
-description: "Далее функция retireves далее свойства перечисления."
+title: Функция Next (Справочник по неуправляемым API)
+description: Далее функция retireves далее свойства перечисления.
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - Next
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: e59ef3f65b75a91708dc65f7d4e3d811dc2d3f9d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e945930a9a668d0a1c1e4c26bf3add9cc574c261
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="next-function"></a>Функция Next
 Извлекает свойство next в перечисление, которое начинается с вызова [BeginEnumeration](beginenumeration.md).  
@@ -75,7 +68,7 @@ HRESULT Next (
 
 Следующие значения, возвращаемые этой функцией, определяются в *WbemCli.h* файла заголовка, или их можно определить как константы в коде:
 
-|Константа  |Значение  |Описание:  |
+|Константа  |Значение  |Описание  |
 |---------|---------|---------|
 | `WBEM_E_FAILED` | 0x80041001 | Произошел общий сбой. |
 | `WBEM_E_INVALID_PARAMETER` | 0x80041008 | Недопустимый параметр. |
@@ -95,7 +88,7 @@ HRESULT Next (
 
 Если `plFlavor` не `null`, `LONG` значение получает информацию о происхождении свойства следующим образом:
 
-|Константа  |Значение  |Описание:  |
+|Константа  |Значение  |Описание  |
 |---------|---------|---------|
 | `WBEM_FLAVOR_ORIGIN_SYSTEM` | 0x40 | Свойство является свойством стандартной системы. |
 | `WBEM_FLAVOR_ORIGIN_PROPAGATED` | 0x20 | Для класса: свойство наследуется от родительского класса. </br> Для экземпляра: свойство, пока наследуется от родительского класса, не был изменен в экземпляре.  |
@@ -106,7 +99,7 @@ HRESULT Next (
   
  **Заголовок:** WMINet_Utils.idl  
   
- **Версии платформы .NET framework:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Версии платформы .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>См. также  
 [WMI и счетчиков производительности (Справочник по неуправляемым API)](index.md)

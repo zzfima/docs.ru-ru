@@ -1,27 +1,15 @@
 ---
-title: "Практическое руководство. Добавление данных пользователя в данные рукописного ввода"
-ms.custom: 
+title: Практическое руководство. Добавление данных пользователя в данные рукописного ввода
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - ink data [WPF], adding custom data
 - InkCanvas [WPF], displaying
 ms.assetid: f02aac6f-3436-4f7c-b6ea-0452cba5332c
-caps.latest.revision: "5"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 2ca44d6a2c42219f7aec76f8007010c24c610138
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 40d883f3d3e1d504c8757c31325aa72a03da37e0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-add-custom-data-to-ink-data"></a>Практическое руководство. Добавление данных пользователя в данные рукописного ввода
 Можно добавлять пользовательские данные для рукописного ввода, которая будет сохранена при сохранении рукописный ввод как рукописный ввод сериализованного формата (ISF).  Можно сохранить пользовательские данные для <xref:System.Windows.Ink.DrawingAttributes>, <xref:System.Windows.Ink.StrokeCollection>, или <xref:System.Windows.Ink.Stroke>.  Возможность сохранить пользовательские данные в трех объектов дает возможность выбрать лучшее место для сохранения данных.  Все три класса используют аналогичные методы для хранения и доступа к пользовательским данным.  

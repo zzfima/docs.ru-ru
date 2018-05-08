@@ -1,11 +1,6 @@
 ---
 title: Тип данных Double (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Double
 helpviewer_keywords:
@@ -24,14 +19,11 @@ helpviewer_keywords:
 - zeros, trailing
 - Double data type
 ms.assetid: 0c5670f7-fcb1-453a-bef1-374730cd38fd
-caps.latest.revision: 25
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: ad0e8082edfb7b7d96b0ca2019da88514e5b3b09
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: c2d3d7d360ccb240bafbe0e19e9f396adfba7f7e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="double-data-type-visual-basic"></a>Тип данных Double (Visual Basic)
 Содержит знаком IEEE 64-разрядные (8-байтные) числа двойной точности с плавающей запятой числа, в диапазоне от - 1, 79769313486231570E + 308 до - 4, 94065645841246544E-324 для отрицательных значений и от 4, 94065645841246544E-324 до 1, 79769313486231570E + 308 положительные значения. Числа двойной точности сохраняют приближенные значения вещественным числом.  

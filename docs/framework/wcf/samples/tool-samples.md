@@ -1,27 +1,15 @@
 ---
-title: "Образцы средств"
-ms.custom: 
+title: Образцы средств
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: ccf90c64-31de-4a18-9208-28887735ce80
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: bffd493d0680400da635797dffc2e03780d95809
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 87073aae7c7645e934490174f45ecca58b6a1868
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tool-samples"></a>Образцы средств
-В этом разделе обсуждаются средства [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
+Этот раздел содержит средства Windows Communication Foundation (WCF).  
   
 ## <a name="in-this-section"></a>В этом разделе  
  [ConfigurationCodeGenerator](../../../../docs/framework/wcf/samples/configurationcodegenerator.md)  

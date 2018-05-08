@@ -1,12 +1,6 @@
 ---
 title: Оператор / (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb./
 helpviewer_keywords:
@@ -22,14 +16,11 @@ helpviewer_keywords:
 - / operator [Visual Basic]
 - math operators [Visual Basic]
 ms.assetid: 335e97f2-c434-439e-9064-76973a051101
-caps.latest.revision: 18
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 2f221e863725b9aeb0b3fa3219b3a881541e2be0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 17eb3eddfae3cf7c818514a2fee20f646876a6ec
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="-operator-visual-basic"></a>Оператор / (Visual Basic)
 Делит два числа и возвращает результат с плавающей запятой.  
@@ -42,10 +33,10 @@ expression1 / expression2
   
 ## <a name="parts"></a>Части  
  `expression1`  
- Обязательный. Произвольное числовое выражение.  
+ Обязательно. Произвольное числовое выражение.  
   
  `expression2`  
- Обязательный. Произвольное числовое выражение.  
+ Обязательно. Произвольное числовое выражение.  
   
 ## <a name="supported-types"></a>Поддерживаемые типы  
  Все числовые типы, включая типы без знака и с плавающей запятой и `Decimal`.  
@@ -75,8 +66,8 @@ expression1 / expression2
 |Типы данных операндов|Поведение при `expression2` равно нулю|  
 |------------------------|---------------------------------------|  
 |С плавающей запятой (`Single` или `Double`)|Возвращает бесконечность (<xref:System.Double.PositiveInfinity> или <xref:System.Double.NegativeInfinity>), или <xref:System.Double.NaN> (не число) Если `expression1` также равно нулю|  
-|`Decimal`|Создает исключение<xref:System.DivideByZeroException>|  
-|Целочисленное (знаковое или без знака)|Выполняется преобразование в целочисленный тип создает исключение <xref:System.OverflowException> , так как не может принимать целые типы <xref:System.Double.PositiveInfinity>, <xref:System.Double.NegativeInfinity>, или<xref:System.Double.NaN>|  
+|`Decimal`|Создает исключение <xref:System.DivideByZeroException>|  
+|Целочисленное (знаковое или без знака)|Выполняется преобразование в целочисленный тип создает исключение <xref:System.OverflowException> , так как не может принимать целые типы <xref:System.Double.PositiveInfinity>, <xref:System.Double.NegativeInfinity>, или <xref:System.Double.NaN>|  
   
 > [!NOTE]
 >  `/` Оператор может быть *перегружены*, что означает, что класс или структура может переопределить его поведение, если операнд имеет тип этого класса или структуры. Если ваш код использует этот оператор для такого класса или структуры, убедитесь, что его переопределенное. Дополнительные сведения см. в разделе [процедуры оператора](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  

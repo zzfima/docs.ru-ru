@@ -1,23 +1,12 @@
 ---
-title: "Простой класс TransactionScope"
-ms.custom: 
+title: Простой класс TransactionScope
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 1e22b76a-76de-43b4-9be7-7a86ed3d5a44
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 78b6faacb131adf18417bf8b9e77182e8e0f8938
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fe6877c4b2d72dc3d571740395fd4dc92ca8e99c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="basic-transactionscope"></a>Простой класс TransactionScope
 Этот образец состоит из четырех сценариев, выполнение которых демонстрирует вкладывание экземпляров <xref:System.Activities.Statements.TransactionScope>. В первом сценарии показана вложенность стороннего действия, о разработке которого автору ничего не известно. Второй и третий сценарии показывают, как соблюдаются времена ожиданий, а последний сценарий показывает настройку <xref:System.Activities.Statements.TransactionScope.AbortInstanceOnTransactionFailure%2A>.  
@@ -46,6 +35,6 @@ ms.lasthandoff: 12/22/2017
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите на страницу [Примеры Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все примеры [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Этот образец расположен в следующем каталоге.  
+>  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] образцов. Этот образец расположен в следующем каталоге.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Transactions\BasicTransactionScope`

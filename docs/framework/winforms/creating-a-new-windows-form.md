@@ -1,27 +1,15 @@
 ---
-title: "Создание новой формы Windows Forms"
-ms.custom: 
+title: Создание новой формы Windows Forms
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Windows Forms, getting started
 - Windows Forms, creating a new form
 ms.assetid: c725559c-803e-4725-80fa-96aba93de29a
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e5f2769921241216d60c3ed1bb25edcf238830d7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ddceec86938ef5f500c38eb90004dc1f9d11b122
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="creating-a-new-windows-form"></a>Создание новой формы Windows Forms
 В этом разделе содержатся ссылки на разделы, описывающие процедуру создания вашего первого приложения Windows Forms. Кроме того в подразделах этого раздела представлены некоторые основные термины и правила, которые следует понять перед началом создания приложения Windows Forms. Для получения дополнительных сведений о приложениях Windows Forms, элементы управления, можно использовать на их, события и обработка событий и как обрабатывать входные данные пользователя, см. список связанных разделов.  

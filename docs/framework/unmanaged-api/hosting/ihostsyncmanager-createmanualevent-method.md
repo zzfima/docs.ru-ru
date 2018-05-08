@@ -1,14 +1,6 @@
 ---
-title: "Метод IHostSyncManager::CreateManualEvent"
-ms.custom: 
+title: Метод IHostSyncManager::CreateManualEvent
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IHostSyncManager.CreateManualEvent
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 68661fbd-09cf-46dc-890b-e694f8a3880a
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 347eaa64b8a5e5b5c9494a779e3d583b10d80052
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ecf53606dd12b517d9ec31ab25f98452d35bdf98
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ihostsyncmanagercreatemanualevent-method"></a>Метод IHostSyncManager::CreateManualEvent
 Создает объект события ручного сброса.  
@@ -58,7 +46,7 @@ HRESULT CreateManualEvent (
   
 |HRESULT|Описание|  
 |-------------|-----------------|  
-|S_OK|`CreateManualEvent`успешно возвращен.|  
+|S_OK|`CreateManualEvent` успешно возвращен.|  
 |ЗНАЧЕНИЕ HOST_E_CLRNOTAVAILABLE|Общеязыковая среда выполнения (CLR) не был загружен в процесс или находится в состоянии, в котором не может выполнять управляемый код или успешно обработать вызов.|  
 |HOST_E_TIMEOUT|Истекло время ожидания вызова.|  
 |HOST_E_NOT_OWNER|Вызывающий объект не является владельцем блокировки.|  
@@ -67,7 +55,7 @@ HRESULT CreateManualEvent (
 |E_OUTOFMEMORY|Не хватает памяти была доступна для создания запрошенного объекта события.|  
   
 ## <a name="remarks"></a>Примечания  
- `CreateManualEvent`Создает `IHostManualEvent`, объект события ручного сброса, который требуется вызов [IHostManualEvent::Reset](../../../../docs/framework/unmanaged-api/hosting/ihostmanualevent-reset-method.md) метод присваивается несигнальное состояние. `CreateManualEvent`зеркально отражает Win32 `CreateEvent` функции со значением `true` указано `bManualReset` параметра.  
+ `CreateManualEvent` Создает `IHostManualEvent`, объект события ручного сброса, который требуется вызов [IHostManualEvent::Reset](../../../../docs/framework/unmanaged-api/hosting/ihostmanualevent-reset-method.md) метод присваивается несигнальное состояние. `CreateManualEvent` зеркально отражает Win32 `CreateEvent` функции со значением `true` указано `bManualReset` параметра.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
@@ -76,7 +64,7 @@ HRESULT CreateManualEvent (
   
  **Библиотека:** включена как ресурс в MSCorEE.dll  
   
- **Версии платформы .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Версии платформы .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>См. также  
  [Интерфейс ICLRSyncManager](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-interface.md)  

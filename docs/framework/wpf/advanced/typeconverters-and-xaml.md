@@ -1,28 +1,14 @@
 ---
-title: "TypeConverters и XAML"
-ms.custom: 
+title: TypeConverters и XAML
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - XAML [WPF], TypeConverter class
 ms.assetid: f6313e4d-e89d-497d-ac87-b43511a1ae4b
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 1b7ee4b3b00a675cfafc884d41079b76656bdf49
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a6d41b5ad519302016ed7fa1d6a103af0f4f14d2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="typeconverters-and-xaml"></a>TypeConverters и XAML
 Этот раздел посвящен цели преобразования типов из строк — одной из основных функций языка XAML. В платформе .NET Framework <xref:System.ComponentModel.TypeConverter> класса служит конкретной цели как часть реализации для управляемых пользовательский класс, который можно использовать в качестве значения свойства в использование атрибута XAML. При написании пользовательского класса, и требуется, чтобы экземпляры класса можно использовать в качестве значения атрибута можно задать в XAML, может потребоваться применить <xref:System.ComponentModel.TypeConverterAttribute> к классу, написание пользовательского <xref:System.ComponentModel.TypeConverter> класса или оба.  
@@ -69,7 +55,7 @@ ms.lasthandoff: 12/22/2017
  Одна общая ситуация, где необходимо расширение разметки, а не преобразователь типов, заключается в создании ссылки на объект, который уже существует. В лучшем случае преобразователь типов с неопределенным состоянием может только создать новый экземпляр, что может быть нежелательно. Дополнительные сведения о расширениях разметки см. в разделе [Расширения разметки и XAML WPF](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md).  
   
 ### <a name="native-type-converters"></a>Собственные преобразователи типа  
- В реализации средства синтаксического анализа XAML в WPF и платформе .NET Framework существуют несколько типов, поддерживающих собственную обработку преобразования типа, но нет типов, которые можно рассматривать как примитивы. Пример такого типа — <xref:System.DateTime>. Причина зависит работа архитектуры платформы .NET Framework: тип <xref:System.DateTime> определяется в mscorlib, в основной библиотеке .NET. <xref:System.DateTime>не может иметь атрибут атрибут, поступающий из другой сборки, который представляет зависимость (<xref:System.ComponentModel.TypeConverterAttribute> из системы), механизм обнаружения преобразователя типа обычные по атрибуту не поддерживается. Вместо этого в средстве синтаксического анализа XAML имеется список типов, для которых необходима такая встроенная обработка; такие типы обрабатываются так же, как настоящие примитивы. (В случае использования <xref:System.DateTime> это подразумевает вызов <xref:System.DateTime.Parse%2A>.)  
+ В реализации средства синтаксического анализа XAML в WPF и платформе .NET Framework существуют несколько типов, поддерживающих собственную обработку преобразования типа, но нет типов, которые можно рассматривать как примитивы. Пример такого типа — <xref:System.DateTime>. Причина зависит работа архитектуры платформы .NET Framework: тип <xref:System.DateTime> определяется в mscorlib, в основной библиотеке .NET. <xref:System.DateTime> не может иметь атрибут атрибут, поступающий из другой сборки, который представляет зависимость (<xref:System.ComponentModel.TypeConverterAttribute> из системы), механизм обнаружения преобразователя типа обычные по атрибуту не поддерживается. Вместо этого в средстве синтаксического анализа XAML имеется список типов, для которых необходима такая встроенная обработка; такие типы обрабатываются так же, как настоящие примитивы. (В случае использования <xref:System.DateTime> это подразумевает вызов <xref:System.DateTime.Parse%2A>.)  
   
 <a name="Implementing_a_Type_Converter"></a>   
 ## <a name="implementing-a-type-converter"></a>Реализация преобразователя типов  
@@ -77,7 +63,7 @@ ms.lasthandoff: 12/22/2017
 ### <a name="typeconverter"></a>TypeConverter  
  В <xref:System.Windows.Point> ранее примере с типом класса <xref:System.Windows.PointConverter> был приведен. Для реализации XAML в .NET, все типы преобразователей, используемые для нужд XAML — это классы, производные от базового класса <xref:System.ComponentModel.TypeConverter>. <xref:System.ComponentModel.TypeConverter> Класс существовали в версии платформы .NET Framework, предшествующих появлению XAML; один из его исходной использования — преобразование строк для диалогов свойств в визуальных конструкторах. Для XAML роль <xref:System.ComponentModel.TypeConverter> расширяется: теперь это базовый класс для преобразований в строку и из строки, позволяющий анализ строкового значения атрибута и возможно во время выполнения значение определенного свойства объекта обратно в строку для сериализации в качестве атрибута.  
   
- <xref:System.ComponentModel.TypeConverter>определены четыре элемента, относящихся к преобразованию в строки в целях обработки XAML и обратно:  
+ <xref:System.ComponentModel.TypeConverter> определены четыре элемента, относящихся к преобразованию в строки в целях обработки XAML и обратно:  
   
 -   <xref:System.ComponentModel.TypeConverter.CanConvertTo%2A>  
   
@@ -125,7 +111,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="applying-the-typeconverterattribute"></a>Применение TypeConverterAttribute  
  Чтобы пользовательский преобразователь типов для использования в качестве действующего преобразователя для пользовательского класса, обработчик XAML, необходимо применить [!INCLUDE[TLA#tla_netframewkattr](../../../../includes/tlasharptla-netframewkattr-md.md)] <xref:System.ComponentModel.TypeConverterAttribute> к определению класса. Имя <xref:System.ComponentModel.TypeConverterAttribute.ConverterTypeName%2A> , указываемое в атрибуте, должно быть именем типа пользовательского преобразователя типов. Если этот атрибут применен, то в случае, когда обработчик XAML обрабатывает значения, в которых тип свойства использует тип пользовательского класса, обработчик может ввести строки и вернуть экземпляры объекта.  
   
- Вы также можете предоставить преобразователь типов для отдельных свойств. Вместо применения [!INCLUDE[TLA#tla_netframewkattr](../../../../includes/tlasharptla-netframewkattr-md.md)] <xref:System.ComponentModel.TypeConverterAttribute> к определению класса применить его к определению свойства (главному определению, не `get` / `set` реализации внутри него). Тип свойства должен соответствовать типу, который обрабатывается пользовательским преобразователем типов. Если этот атрибут применен, то в случае, когда обработчик XAML обрабатывает значения этого свойства, он может обработать входные строки и вернуть экземпляры объекта. Преобразователь типов для каждого свойства особенно полезен, если вы решили использовать типа свойства из [!INCLUDE[TLA#tla_netframewk](../../../../includes/tlasharptla-netframewk-md.md)] или другой библиотеки, где невозможно управлять определением класса и применять <xref:System.ComponentModel.TypeConverterAttribute>.  
+ Вы также можете предоставить преобразователь типов для отдельных свойств. Вместо применения [!INCLUDE[TLA#tla_netframewkattr](../../../../includes/tlasharptla-netframewkattr-md.md)] <xref:System.ComponentModel.TypeConverterAttribute> к определению класса применить его к определению свойства (главному определению, не `get` / `set` реализации внутри него). Тип свойства должен соответствовать типу, который обрабатывается пользовательским преобразователем типов. Если этот атрибут применен, то в случае, когда обработчик XAML обрабатывает значения этого свойства, он может обработать входные строки и вернуть экземпляры объекта. Метод преобразователь типа каждого свойства особенно полезен, если вы решили использовать типа свойства из Microsoft .NET Framework или другой библиотеки, где невозможно управлять определением класса и применять <xref:System.ComponentModel.TypeConverterAttribute> существует.  
   
 ## <a name="see-also"></a>См. также  
  <xref:System.ComponentModel.TypeConverter>  

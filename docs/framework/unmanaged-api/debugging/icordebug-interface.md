@@ -1,14 +1,6 @@
 ---
-title: "Интерфейс ICorDebug"
-ms.custom: 
+title: Интерфейс ICorDebug
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorDebug
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: 33f431d7-ab1a-494d-8af2-20ab15aba194
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 0ed0b3a8b42157f6a4fcbc6b4a05a416da736147
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 74c5036bdc8a4a75e5711c6dc1d34d8f2c21128f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icordebug-interface"></a>Интерфейс ICorDebug
 Предоставляет методы, позволяющие разработчикам отлаживать приложения в среде CLR (CLR).  
@@ -42,7 +30,7 @@ ms.lasthandoff: 12/22/2017
   
 ## <a name="methods"></a>Методы  
   
-|Метод|Описание:|  
+|Метод|Описание|  
 |------------|-----------------|  
 |[Метод CanLaunchOrAttach](../../../../docs/framework/unmanaged-api/debugging/icordebug-canlaunchorattach-method.md)|Определяет, возможна ли запуск нового процесса или вложение в данный процесс в контексте текущей конфигурации компьютера и среды выполнения.|  
 |[Метод CreateProcess](../../../../docs/framework/unmanaged-api/debugging/icordebug-createprocess-method.md)|Запускает процесс и основной поток под контролем отладчика.|  
@@ -55,7 +43,7 @@ ms.lasthandoff: 12/22/2017
 |[Метод Terminate](../../../../docs/framework/unmanaged-api/debugging/icordebug-terminate-method.md)|Завершает `ICorDebug` объекта.|  
   
 ## <a name="remarks"></a>Примечания  
- `ICorDebug`представляет цикл обработки событий для процесса отладчика. Отладчик должен ожидать [ICorDebugManagedCallback::ExitProcess](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-exitprocess-method.md) от всех процессов, отлаживаемых перед тем как освободить этот интерфейс обратного вызова.  
+ `ICorDebug` представляет цикл обработки событий для процесса отладчика. Отладчик должен ожидать [ICorDebugManagedCallback::ExitProcess](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-exitprocess-method.md) от всех процессов, отлаживаемых перед тем как освободить этот интерфейс обратного вызова.  
   
  `ICorDebug` Объект является исходным объектом, для управления все дополнительные управляемой отладки. В .NET Framework версий 1.0 и 1.1, этот объект был `CoClass` объектом, созданным из COM. В платформе .NET Framework версии 2.0 этот объект больше не `CoClass` объекта. Должны быть созданы с [CreateDebuggingInterfaceFromVersion](../../../../docs/framework/unmanaged-api/hosting/createdebugginginterfacefromversion-function.md) функции, которая более следящее за версией. Эта новая функция создания позволяет клиентам получать реализации `ICorDebug`, который также эмулируют определенную версию API отладки.  
   
@@ -69,7 +57,7 @@ ms.lasthandoff: 12/22/2017
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>См. также  
  [Интерфейсы отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

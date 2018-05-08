@@ -1,14 +1,6 @@
 ---
 title: Типы коллекций в контрактах данных
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,17 +9,11 @@ helpviewer_keywords:
 - data contracts [WCF], collection types
 - collection types [WCF]
 ms.assetid: 9b45b28e-0a82-4ea3-8c33-ec0094aff9d5
-caps.latest.revision: 19
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: c771d78c5e78feabcfe883934ed7ea3589c938d2
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: dccc53f13889e2073579af19e86459fe56b069e7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="collection-types-in-data-contracts"></a>Типы коллекций в контрактах данных
 Под *коллекцией* понимается список элементов определенного типа. В [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]такие списки могут быть представлены с помощью массивов или других типов (универсальный список, универсальные <xref:System.ComponentModel.BindingList%601>, <xref:System.Collections.Specialized.StringCollection>или <xref:System.Collections.ArrayList>). Например, в коллекции может содержаться список адресов конкретного клиента. Такие коллекции называются *коллекциями списков*, независимо от их фактического типа.  
@@ -86,7 +72,7 @@ ms.lasthandoff: 04/30/2018
   
  Во время сериализации, если объявленный тип является интерфейсом, текущий используемый тип экземпляра может быть любым типом, реализующим этот интерфейс. Описанные ранее ограничения (имеющие конструктор по умолчанию и метод `Add`) не применяются. Например, можно задать адреса в Customer2 в экземпляре универсального <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> значения Address, даже несмотря на то что непосредственно объявить элемент данных универсального класса <xref:System.Collections.ObjectModel.ReadOnlyCollection%601>невозможно.  
   
- Во время десериализации, если объявленный тип является интерфейсом, ядро сериализации выбирает тип, который реализует объявленный интерфейс, и создается экземпляр типа. Механизм известных типов (описанный в [Data Contract Known Types](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)) в данном случае не дает результата; выбор типа интегрирован в [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ Во время десериализации, если объявленный тип является интерфейсом, ядро сериализации выбирает тип, который реализует объявленный интерфейс, и создается экземпляр типа. Механизм известных типов (описанный в [известные типы контрактов данных](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)) не влияет; Выбор типа встроено в WCF.  
   
 ## <a name="customizing-collection-types"></a>Настройка типов коллекции  
  Настройка типов коллекции может быть выполнена с помощью атрибута <xref:System.Runtime.Serialization.CollectionDataContractAttribute> , имеющего несколько вариантов использования.  
@@ -235,7 +221,7 @@ ms.lasthandoff: 04/30/2018
 ## <a name="collections-and-schema"></a>Коллекции и схема  
  Все эквивалентные коллекции имеют одинаковое представление в схеме на языке определения схемы XML (XSD). По этой причине, в коде, созданном клиентом, и в коде, созданном на сервере, тип коллекции обычно отличается. Например, сервер может использовать контракт данных с универсальным <xref:System.Collections.Generic.List%601> целочисленного элемента данных, а в коде, созданном клиентом, тот же элемент данных может стать массивом целых чисел.  
   
- Коллекции-словари отмечаются свойственной [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]аннотацией к схеме, которая показывает, что данные коллекции являются словарями; в противном случае, их невозможно отличить от простых списков, содержащих записи с ключом и значением. Подробное описание представлений коллекций в схеме контракта данных см. в статье [Data Contract Schema Reference](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md).  
+ Коллекции-словари отмечаются аннотацию схемы конкретного WCF, указывают, что они являются словарями; в противном случае они будут отличаться от простых списков, содержащих записи с ключом и значением. Подробное описание представлений коллекций в схеме контракта данных см. в статье [Data Contract Schema Reference](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md).  
   
  По умолчанию в импортированном коде типы для ненастроенных коллекций не создаются. Элементы данных коллекций списков импортируются как массивы, а элементы данных коллекций-словарей импортируются как универсальный словарь.  
   

@@ -1,31 +1,20 @@
 ---
 title: Разработка с обеспечением расширяемости
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - extending class libraries
 - extensibility with class libraries in .NET Framework
 - class library design guidelines [.NET Framework], extensibility
 - class library extensibility [.NET Framework]
 ms.assetid: 1cdb8740-871a-456c-9bd9-db96ca8d79b3
-caps.latest.revision: 11
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: b643c33a1418839c8aabf06d681083232e61553a
-ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.openlocfilehash: 68419fe293dd25936aa3c1e3def10bbe8852e175
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="designing-for-extensibility"></a>Разработка с обеспечением расширяемости
 Проектирование платформу одним важным аспектом является обеспечение внимательно изучить расширяемость такой платформы. Это требует понимания издержки и прибыль, связанные с различные механизмы расширения. В этой главе помогут решить, какой из механизмов расширения — создания подкласса событий, виртуальные члены, обратные вызовы и т. д, соответствуют требованиям вашей платформы.  

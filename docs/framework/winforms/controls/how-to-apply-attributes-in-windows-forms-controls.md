@@ -1,13 +1,6 @@
 ---
-title: "Практическое руководство. Применение атрибутов к элементам управления Windows Forms"
-ms.custom: 
+title: Практическое руководство. Применение атрибутов к элементам управления Windows Forms
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - attributes [Windows Forms], applying
 - Windows Forms controls, applying attributes
 ms.assetid: af0a3f7f-155b-4ba1-83c4-9cf721331a06
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 9e4d5bfb445ce6ed37ad1dc63d92fde833ac9870
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 49c2aaa48a48e33a71b5112db31991975011551d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-apply-attributes-in-windows-forms-controls"></a>Практическое руководство. Применение атрибутов к элементам управления Windows Forms
 Для разработки компонентов и элементов управления, которые правильно взаимодействуют со средой разработки и привести к неправильному выполнению во время выполнения, необходимо правильно применить атрибуты к классам и членам.  
@@ -58,7 +46,7 @@ ms.lasthandoff: 12/22/2017
  [!code-vb[System.ComponentModel.AttributesDemoControl#20](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AttributesDemoControl/VB/attributesdemocontrol.vb#20)]  
   
 ### <a name="typeconverter-attribute"></a>Атрибут TypeConverter  
- <xref:System.ComponentModel.TypeConverterAttribute>являются другой часто используемые атрибуты уровня класса. В следующем примере кода показано его использование для `LogEntry` класса. В этом примере также показана реализация <xref:System.ComponentModel.TypeConverter> для `LogEntry` тип с именем `LogEntryTypeConverter`.  
+ <xref:System.ComponentModel.TypeConverterAttribute> являются другой часто используемые атрибуты уровня класса. В следующем примере кода показано его использование для `LogEntry` класса. В этом примере также показана реализация <xref:System.ComponentModel.TypeConverter> для `LogEntry` тип с именем `LogEntryTypeConverter`.  
   
  [!code-csharp[System.ComponentModel.AttributesDemoControl#5](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AttributesDemoControl/CS/attributesdemocontrol.cs#5)]
  [!code-vb[System.ComponentModel.AttributesDemoControl#5](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AttributesDemoControl/VB/attributesdemocontrol.vb#5)]  

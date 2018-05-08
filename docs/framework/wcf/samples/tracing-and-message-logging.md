@@ -1,28 +1,14 @@
 ---
-title: "Трассировка и ведение журнала сообщений"
-ms.custom: 
+title: Трассировка и ведение журнала сообщений
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Tracing and logging
 ms.assetid: a4f39bfc-3c5e-4d51-a312-71c5c3ce0afd
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: cae7d806ce68f6804f97195c9bf2571328af6dff
-ms.sourcegitcommit: f28752eab00d2bd97e971542c0f49ce63cfbc239
-ms.translationtype: MT
+ms.openlocfilehash: 5f0cca66798a9d84b01c9fde1147c28f14a953db
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tracing-and-message-logging"></a>Трассировка и ведение журнала сообщений
 В этом образце показано, как включить трассировку и ведение журнала сообщений. Полученный трассировки и журналы сообщений просматриваются с помощью [программы Service Trace Viewer (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md). Этот пример построен на [Приступая к работе](../../../../docs/framework/wcf/samples/getting-started-sample.md).  
@@ -31,7 +17,7 @@ ms.lasthandoff: 01/29/2018
 >  Процедура настройки и инструкции по построению для данного образца приведены в конце этого раздела.  
   
 ## <a name="tracing"></a>Трассировка  
- [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] использует механизм трассировки, определенный в пространстве имен <xref:System.Diagnostics>. В этой модели трассировки данные трассировки создаются источниками трассировки, реализуемыми приложениями. Каждый источник определяется именем. Потребители трассировки создают прослушиватели трассировки для источников трассировки, для которых необходимо извлечь информацию. Чтобы получить данные трассировки, необходимо создать прослушиватель для источника трассировки. В [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] это можно сделать путем добавления следующего кода в файл конфигурации службы или клиента, задав значение `switchValue` для источника трассировки модели службы.  
+ Windows Communication Foundation (WCF) использует механизм трассировки, определенные в <xref:System.Diagnostics> пространства имен. В этой модели трассировки данные трассировки создаются источниками трассировки, реализуемыми приложениями. Каждый источник определяется именем. Потребители трассировки создают прослушиватели трассировки для источников трассировки, для которых необходимо извлечь информацию. Чтобы получить данные трассировки, необходимо создать прослушиватель для источника трассировки. В [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] это можно сделать путем добавления следующего кода в файл конфигурации службы или клиента, задав значение `switchValue` для источника трассировки модели службы.  
   
 ```xml  
 <system.diagnostics>  
@@ -141,7 +127,7 @@ ms.lasthandoff: 01/29/2018
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите на страницу [Примеры Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все примеры [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Этот образец расположен в следующем каталоге.  
+>  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] образцов. Этот образец расположен в следующем каталоге.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\TracingAndLogging`  
   

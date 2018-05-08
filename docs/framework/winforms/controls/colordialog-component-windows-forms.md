@@ -1,28 +1,16 @@
 ---
-title: "Компонент ColorDialog (Windows Forms)"
-ms.custom: 
+title: Компонент ColorDialog (Windows Forms)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - ColorDialog component
 - colors [Windows Forms], dialog box
 - color dialog box
 ms.assetid: 261793e0-8252-47c5-b76c-621857b8da44
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b5072b9bd84817d569b0237d702f73ca4e39c9ba
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b4692b668ed19e6d720e873f374fe6729939dae4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="colordialog-component-windows-forms"></a>Компонент ColorDialog (Windows Forms)
 Windows Forms <xref:System.Windows.Forms.ColorDialog> компонент является стандартным диалоговым окном, который позволяет пользователю выбрать цвет из палитры и добавления в нее пользовательских цветов. Это то же диалоговое окно, которое вы видите в других приложениях Windows для выбора цветов. Он используется в приложении Windows в качестве простого решения вместо настройки собственного диалогового окна.  

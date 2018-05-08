@@ -1,14 +1,6 @@
 ---
 title: Импорт и экспорт схемы
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,20 +9,14 @@ helpviewer_keywords:
 - XsdDataContractExporter class
 - XsdDataContractImporter class
 ms.assetid: 0da32b50-ccd9-463a-844c-7fe803d3bf44
-caps.latest.revision: 14
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: fe4ef5b17013bf1a9abf5fd1ca0807fe4d335df4
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: c9bb0d6df362380a37ae3079694ab91e9577741d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="schema-import-and-export"></a>Импорт и экспорт схемы
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] включает новый модуль сериализации - <xref:System.Runtime.Serialization.DataContractSerializer>. Объект `DataContractSerializer` осуществляет преобразование объектов [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] в формат XML и обратно. Помимо собственно сериализатора [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] включает связанные механизмы импорта и экспорта схемы. *Схемы* формальное, точное и обрабатываемое компьютером описание формата XML-данных, которые создаются сериализатором или могут десериализатором. В [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] используется язык определения схемы XML (XSD) консорциума W3C (XSD) в качестве представления схемы, которая поддерживает возможность взаимодействия с многочисленными сторонними платформами.  
+Windows Communication Foundation (WCF) включает новый модуль сериализации, <xref:System.Runtime.Serialization.DataContractSerializer>. Объект `DataContractSerializer` осуществляет преобразование объектов [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] в формат XML и обратно. Помимо собственно сериализатора WCF включает связанные механизмы импорта и схемы экспорта. *Схемы* формальное, точное и обрабатываемое компьютером описание формата XML-данных, которые создаются сериализатором или могут десериализатором. WCF использует язык определения World Wide Web Consortium (W3C) XML-схемы (XSD) в качестве представления схемы, которая поддерживает возможность взаимодействия с многочисленными платформами сторонних разработчиков.  
   
  Компонент импорта схемы <xref:System.Runtime.Serialization.XsdDataContractImporter> принимает документ схемы XSD и создает классы [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] (обычно это классы контракта данных) таким образом, чтобы сериализованные формы соответствовали заданной схеме.  
   

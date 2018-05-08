@@ -1,30 +1,18 @@
 ---
 title: Сохраняемый дуплекс
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 4e76d1a1-f3d8-4a0f-8746-4a322cdff6eb
-caps.latest.revision: 10
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 50d0ac9efae8e6d795455a63d793b2e84407b987
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
-ms.translationtype: MT
+ms.openlocfilehash: 91490eb3ee6c11f29bb49d8343b807e74e8d3bc2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="durable-duplex"></a>Сохраняемый дуплекс
 В этом примере показано, как установить и настроить устойчивый дуплексный обмен сообщениями с помощью действий обмена сообщениями в Windows Workflow Foundation (WF). Устойчивый дуплексный обмен сообщениями - это двусторонний обмен сообщениями в течение длительного времени. Длительность обмена сообщениями может превышать время существования коммуникационного канала и время существования экземпляров службы в памяти.  
   
 ## <a name="sample-details"></a>Подробные сведения об образце  
- В этом примере два [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] служб, реализованных с помощью Windows Workflow Foundation настроены на устойчивый дуплексный обмен сообщениями. Устойчивый дуплексный обмен сообщениями состоит из двух односторонних обменов сообщениями по MSMQ, сопоставляются с помощью [обмен контекстом .NET](http://go.microsoft.com/fwlink/?LinkID=166059). Сообщения отправляются посредством действий по обмену сообщениями <xref:System.ServiceModel.Activities.Send> и <xref:System.ServiceModel.Activities.Receive>. Обмен контекстом .NET используется для указания адреса обратного вызова в отправленных сообщениях. Обе службы размещаются при помощи служб активации процессов Windows WAS и настраиваются на включение сохраняемости экземпляров служб.  
+ В этом примере две службы Windows Communication Foundation (WCF), реализованный с помощью Windows Workflow Foundation настраиваются иметь устойчивый дуплексный обмен сообщениями. Устойчивый дуплексный обмен сообщениями состоит из двух односторонних обменов сообщениями по MSMQ, сопоставляются с помощью [обмен контекстом .NET](http://go.microsoft.com/fwlink/?LinkID=166059). Сообщения отправляются посредством действий по обмену сообщениями <xref:System.ServiceModel.Activities.Send> и <xref:System.ServiceModel.Activities.Receive>. Обмен контекстом .NET используется для указания адреса обратного вызова в отправленных сообщениях. Обе службы размещаются при помощи служб активации процессов Windows WAS и настраиваются на включение сохраняемости экземпляров служб.  
   
  Первая служба (Service1.xamlx) отправляет в службу отправки (Service2.xamlx) запрос на выполнение задания. После выполнения задания служба Service2.xamlx уведомляет об этом службу Service1.xamlx. Приложение командной строки рабочего процесса настраивает прослушиваемые службами очереди и отправляет исходное сообщение "Start", активирующее службу Service1.xamlx. Получив уведомление о выполнения задания от службы Service2.xamlx, служба Service1.xamlx сохраняет результат в виде XML-файла. В ожидании сообщения обратного вызова служба Service1.xamlx сохраняет состояние своего экземпляра при помощи <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior> по умолчанию. Служба Service1.xamlx сохраняет состояние своего экземпляра при завершении задания, выполнение которого запрошено службой Service1.xamlx.  
   
@@ -190,6 +178,6 @@ ms.lasthandoff: 04/27/2018
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) Чтобы загрузить все [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] образцов. Этот образец расположен в следующем каталоге.  
+>  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] образцов. Этот образец расположен в следующем каталоге.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Services\DurableDuplex`

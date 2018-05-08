@@ -1,23 +1,12 @@
 ---
-title: "Пользовательские составные конструкторы - средство представления элементов рабочего процесса"
-ms.custom: 
+title: Пользовательские составные конструкторы - средство представления элементов рабочего процесса
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: f85224cf-9e30-44a5-9a81-3bc438a34364
-caps.latest.revision: "16"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b529d1c150f686fb4a39f968001c9ac03c7c1dc0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5bdc952bb4b920f0b5a7d272423ec2d922a94798
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="custom-composite-designers---workflow-item-presenter"></a>Пользовательские составные конструкторы - средство представления элементов рабочего процесса
 <xref:System.Activities.Presentation.WorkflowItemPresenter> Является ключевым типом в модели программирования конструктора WF, позволяющей создавать «зону сброса» где могут размещаться произвольные действия. В этом примере показано, как построить конструктор действий, который предоставляет доступ к «зону перетаскивания.»  
@@ -73,7 +62,7 @@ ms.lasthandoff: 12/22/2017
 </sap:ActivityDesigner>  
 ```  
   
- Обратите внимание на использование привязки данных WPF для привязки к `ModelItem.Body`. `ModelItem`-Свойство <xref:System.Activities.Presentation.ActivityDesigner> , относится к базовому объекту, в которой используется конструктор, в этом случае **SimpleNativeActivity**.  
+ Обратите внимание на использование привязки данных WPF для привязки к `ModelItem.Body`. `ModelItem` -Свойство <xref:System.Activities.Presentation.ActivityDesigner> , относится к базовому объекту, в которой используется конструктор, в этом случае **SimpleNativeActivity**.  
   
 #### <a name="to-setup-build-and-run-the-sample"></a>Настройка, сборка и выполнение образца  
   
@@ -86,7 +75,7 @@ ms.lasthandoff: 12/22/2017
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите на страницу [Примеры Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все примеры [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Этот образец расположен в следующем каталоге.  
+>  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] образцов. Этот образец расположен в следующем каталоге.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\CustomActivities\CustomActivityDesigners\WorkflowItemPresenter`  
   

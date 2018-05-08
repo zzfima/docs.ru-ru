@@ -1,14 +1,6 @@
 ---
 title: Надежные службы
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - WCF [WCF], reliable messaging
 - Windows Communication Foundation [WCF], reliable messaging
@@ -16,20 +8,14 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], reliable sessions
 - service contracts [WCF], reliable services
 ms.assetid: 07814ed0-0775-47f2-987b-d8134fdd5099
-caps.latest.revision: 8
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: d9cbaef77f4dce609d36ba4b679d8c569b648fa5
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: 02e0b8822c29490462fe74803a34222188afc910
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="reliable-services"></a>Надежные службы
-Очереди и надежные сеансы - функции [!INCLUDE[indigo1](../../../includes/indigo1-md.md)], реализующие надежный обмен сообщениями. В данном разделе рассматриваются функции надежного обмена сообщениями [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].  
+Очереди и надежные сеансы являются компонентами Windows Communication Foundation (WCF), которые реализуют надежный обмен сообщениями. В данном разделе рассматриваются функции надежного обмена сообщениями [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].  
   
  *Надежный обмен сообщениями* — как источник надежного обмена сообщениями (называется *источника*) передача сообщений от надежного для назначения надежного обмена сообщениями (называется *назначения*).  
   

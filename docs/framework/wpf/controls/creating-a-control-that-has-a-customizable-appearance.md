@@ -1,13 +1,6 @@
 ---
-title: "Создание элемента управления с настраиваемым внешним видом"
-ms.custom: 
+title: Создание элемента управления с настраиваемым внешним видом
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -20,20 +13,15 @@ helpviewer_keywords:
 - managing control states [WPF], VisualStateManager
 - VisualStateManager [WPF], best practice
 ms.assetid: 9e356d3d-a3d0-4b01-a25f-2d43e4d53fe5
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4da96c3e33c6f7827619b408568fbbfe96c50a11
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9f539e7dbb105591375857122d738fddd87f6776
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="creating-a-control-that-has-a-customizable-appearance"></a>Создание элемента управления с настраиваемым внешним видом
 <a name="introduction"></a>
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]предоставляет возможность создания элемента управления, можно настроить, вид. Например, можно изменить внешний вид <xref:System.Windows.Controls.CheckBox> Кроме какие настройки свойств выполняется путем создания нового <xref:System.Windows.Controls.ControlTemplate>. На следующем рисунке показана <xref:System.Windows.Controls.CheckBox> , используется значение по умолчанию <xref:System.Windows.Controls.ControlTemplate> и <xref:System.Windows.Controls.CheckBox> , использующий пользовательский <xref:System.Windows.Controls.ControlTemplate>.  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] предоставляет возможность создания элемента управления, можно настроить, вид. Например, можно изменить внешний вид <xref:System.Windows.Controls.CheckBox> Кроме какие настройки свойств выполняется путем создания нового <xref:System.Windows.Controls.ControlTemplate>. На следующем рисунке показана <xref:System.Windows.Controls.CheckBox> , используется значение по умолчанию <xref:System.Windows.Controls.ControlTemplate> и <xref:System.Windows.Controls.CheckBox> , использующий пользовательский <xref:System.Windows.Controls.ControlTemplate>.  
   
  ![Флажок с шаблоном элемента управления по умолчанию. ] (../../../../docs/framework/wpf/controls/media/ndp-checkboxdefault.png "NDP_CheckBoxDefault")  
 Элемент управления CheckBox, использующий шаблон элемента управления по умолчанию  
@@ -89,7 +77,7 @@ ms.lasthandoff: 12/22/2017
   
  [!code-xaml[VSMCustomControl#VisualStructure](../../../../samples/snippets/csharp/VS_Snippets_Wpf/vsmcustomcontrol/csharp/window1.xaml#visualstructure)]  
   
- Визуальное поведение `NumericUpDown` управления состоит в том, что значение отображается красным цветом отрицательное.  При изменении <xref:System.Windows.Controls.TextBlock.Foreground%2A> из <xref:System.Windows.Controls.TextBlock> в код при `Value` отрицательное, `NumericUpDown` всегда будет отображаться красный отрицательное значение. Укажите визуальное поведение элемента управления в <xref:System.Windows.Controls.ControlTemplate> путем добавления <xref:System.Windows.VisualState> объектов <xref:System.Windows.Controls.ControlTemplate>.  В следующем примере показан <xref:System.Windows.VisualState> объектов для `Positive` и `Negative` состояния.  `Positive`и `Negative` являются взаимоисключающими (элемент управления всегда находится в одном из двух), поэтому в примере <xref:System.Windows.VisualState> объектов в единую <xref:System.Windows.VisualStateGroup>.  Когда элемент управления переходит в `Negative` состояние, <xref:System.Windows.Controls.TextBlock.Foreground%2A> из <xref:System.Windows.Controls.TextBlock> становится красным.  Если элемент управления находится в `Positive` состояние, <xref:System.Windows.Controls.TextBlock.Foreground%2A> он возвращает исходное значение.  Определение <xref:System.Windows.VisualState> объекты в <xref:System.Windows.Controls.ControlTemplate> обсуждается ниже в [Настройка внешнего вида существующего элемента управления путем создания объекта ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  
+ Визуальное поведение `NumericUpDown` управления состоит в том, что значение отображается красным цветом отрицательное.  При изменении <xref:System.Windows.Controls.TextBlock.Foreground%2A> из <xref:System.Windows.Controls.TextBlock> в код при `Value` отрицательное, `NumericUpDown` всегда будет отображаться красный отрицательное значение. Укажите визуальное поведение элемента управления в <xref:System.Windows.Controls.ControlTemplate> путем добавления <xref:System.Windows.VisualState> объектов <xref:System.Windows.Controls.ControlTemplate>.  В следующем примере показан <xref:System.Windows.VisualState> объектов для `Positive` и `Negative` состояния.  `Positive` и `Negative` являются взаимоисключающими (элемент управления всегда находится в одном из двух), поэтому в примере <xref:System.Windows.VisualState> объектов в единую <xref:System.Windows.VisualStateGroup>.  Когда элемент управления переходит в `Negative` состояние, <xref:System.Windows.Controls.TextBlock.Foreground%2A> из <xref:System.Windows.Controls.TextBlock> становится красным.  Если элемент управления находится в `Positive` состояние, <xref:System.Windows.Controls.TextBlock.Foreground%2A> он возвращает исходное значение.  Определение <xref:System.Windows.VisualState> объекты в <xref:System.Windows.Controls.ControlTemplate> обсуждается ниже в [Настройка внешнего вида существующего элемента управления путем создания объекта ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  
   
 > [!NOTE]
 >  Не забудьте задать <xref:System.Windows.VisualStateManager.VisualStateGroups%2A?displayProperty=nameWithType> вложенное свойство в корне <xref:System.Windows.FrameworkElement> из <xref:System.Windows.Controls.ControlTemplate>.  
@@ -212,17 +200,17 @@ ms.lasthandoff: 12/22/2017
   
 -   Объект <xref:System.Windows.Controls.Primitives.RepeatButton> вызывается `UpButton`.  
   
--   Объект <xref:System.Windows.Controls.Primitives.RepeatButton> вызывается`DownButton.`  
+-   Объект <xref:System.Windows.Controls.Primitives.RepeatButton> вызывается `DownButton.`  
   
  Элемент управления может иметь следующие состояния:  
   
--   В`ValueStates`<xref:System.Windows.VisualStateGroup>  
+-   В `ValueStates`<xref:System.Windows.VisualStateGroup>  
   
     -   `Positive`  
   
     -   `Negative`  
   
--   В`FocusStates`<xref:System.Windows.VisualStateGroup>  
+-   В `FocusStates`<xref:System.Windows.VisualStateGroup>  
   
     -   `Focused`  
   

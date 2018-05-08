@@ -1,27 +1,15 @@
 ---
-title: "Приветствие средствами служб маршрутизации."
-ms.custom: 
+title: Приветствие средствами служб маршрутизации.
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 0f4b0d5b-6522-4ad5-9f3a-baa78316d7d1
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 3f1d068894c9ad28d786c7b433c56b6d0fd79acc
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 88b7cdb9beabd8e4ff5ffc9a1c31a702a3cb4f02
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="hello-world-with-the-routing-service"></a>Приветствие средствами служб маршрутизации.
-В этом образце показана служба маршрутизации [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. Служба маршрутизации - это компонент [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], который упрощает включение маршрутизатора на основе содержимого в приложение. В этом образце стандартный образец [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Calculator применяется для связи с использованием службы маршрутизации. В этом образце клиент ская часть калькулятора настраивается для отправки сообщений в конечную точку, доступ к которой предоставляется маршрутизатором. Служба маршрутизации настроена на прием всех отправляемых ей сообщений и перенаправление их в конечную точку, которая соответствует службе калькулятора. Таким образом, сообщения, отправленные клиентом и полученные маршрутизатором, перенаправляются фактической службе калькулятора. Сообщения от резервной службы калькулятора отправляются назад маршрутизатору, который, в свою очередь, передает их клиенту калькулятора.  
+В этом примере демонстрируется служба маршрутизации Windows Communication Foundation (WCF). Служба маршрутизации - это компонент [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], который упрощает включение маршрутизатора на основе содержимого в приложение. В этом образце стандартный образец [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Calculator применяется для связи с использованием службы маршрутизации. В этом образце клиент ская часть калькулятора настраивается для отправки сообщений в конечную точку, доступ к которой предоставляется маршрутизатором. Служба маршрутизации настроена на прием всех отправляемых ей сообщений и перенаправление их в конечную точку, которая соответствует службе калькулятора. Таким образом, сообщения, отправленные клиентом и полученные маршрутизатором, перенаправляются фактической службе калькулятора. Сообщения от резервной службы калькулятора отправляются назад маршрутизатору, который, в свою очередь, передает их клиенту калькулятора.  
   
 ### <a name="to-use-this-sample"></a>Использование этого образца  
   
@@ -62,7 +50,7 @@ ms.lasthandoff: 12/22/2017
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите на страницу [Примеры Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все примеры [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Этот образец расположен в следующем каталоге.  
+>  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] образцов. Этот образец расположен в следующем каталоге.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\RoutingServices\HelloRoutingService`  
   

@@ -1,33 +1,21 @@
 ---
 title: Защита служб
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - configuration [WCF], securing services
 - WCF security
 - WCF, security
 ms.assetid: f0ecc6f7-f4b5-42a4-9cb1-b02e28e26620
-caps.latest.revision: 28
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: ffc985d528bfdcdd9b62772a8a8ba61823c95e76
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: 6bdac5a65c51ff08cfa170c1a6e556c3532ee7c9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="securing-services"></a>Защита служб
-Для обеспечения безопасности службы [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] необходимо выполнение двух основных требований - обеспечение безопасности передачи и выполнение авторизации. (Третье требование, аудит событий безопасности описана в [аудита](../../../docs/framework/wcf/feature-details/auditing-security-events.md).) Вкратце, для обеспечения безопасности передачи должна быть выполнена проверка подлинности (проверка идентификации как службы, так и клиента) и обеспечены конфиденциальность (шифрование сообщений) и целостность (цифровая подпись для обнаружения подделки). Авторизация - это управление доступом к ресурсам, например разрешение чтение файла только привилегированным пользователям. С помощью функций [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]два основных требования легко реализуются.  
+Безопасность службы Windows Communication Foundation (WCF) состоит из двух основных требований: обеспечение безопасности передачи и авторизации. (Третье требование, аудит событий безопасности описана в [аудита](../../../docs/framework/wcf/feature-details/auditing-security-events.md).) Вкратце, для обеспечения безопасности передачи должна быть выполнена проверка подлинности (проверка идентификации как службы, так и клиента) и обеспечены конфиденциальность (шифрование сообщений) и целостность (цифровая подпись для обнаружения подделки). Авторизация - это управление доступом к ресурсам, например разрешение чтение файла только привилегированным пользователям. С помощью функций [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]два основных требования легко реализуются.  
   
  За исключением элемента <xref:System.ServiceModel.BasicHttpBinding> класс (или [ \<basicHttpBinding >](../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md) элемента в конфигурации), обеспечение безопасности передачи включено по умолчанию для всех предопределенных привязок. В подразделах данного раздела рассматриваются два основных сценария: обеспечение безопасности передачи и авторизации в службе интрасети, размещенной в IIS, а также обеспечение безопасности передачи и авторизации в службе, размещенной в IIS.  
   

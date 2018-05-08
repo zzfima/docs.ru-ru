@@ -1,27 +1,15 @@
 ---
-title: "Пример WebContentTypeMapper"
-ms.custom: 
+title: Пример WebContentTypeMapper
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: a4fe59e7-44d8-43c6-a1f8-40c45223adca
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 34adf191d3edbff33fe989cf036c32104a6754ae
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 3b3d53b0fe619c74c5e7f3533194f4b5e7c18a16
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="webcontenttypemapper-sample"></a>Пример WebContentTypeMapper
-В этом примере показано, как сопоставить новые типы содержимого с форматами тела сообщения [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
+В этом примере показано, как сопоставить новые типы содержимого для форматами тела сообщения Windows Communication Foundation (WCF).  
   
  Элемент <xref:System.ServiceModel.Description.WebHttpEndpoint> подключает кодировщик веб-сообщений, который позволяет [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] получать сообщения JSON, XML или необработанные двоичные сообщения в одной и той же конечной точке. Кодировщик определяет формат тела сообщения, просмотрев тип содержимого HTTP запроса. В этом примере показан класс <xref:System.ServiceModel.Channels.WebContentTypeMapper>, который позволяет пользователю управлять сопоставлением типа содержимого и формата тела.  
   
@@ -69,14 +57,14 @@ public class JsonContentTypeMapper : WebContentTypeMapper
   
 2.  Постройте решение WebContentTypeMapperSample.sln, как описано в [сборка образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3.  Перейдите к странице http://localhost/ServiceModelSamples/JCTMClientPage.htm (не открывайте страницу JCTMClientPage.htm в браузере из каталога проекта).  
+3.  Перейдите к http://localhost/ServiceModelSamples/JCTMClientPage.htm (не открывайте страницу JCTMClientPage.htm в браузере из каталога проекта).  
   
 > [!IMPORTANT]
 >  Образцы уже могут быть установлены на компьютере. Перед продолжением проверьте следующий каталог (по умолчанию).  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите на страницу [Примеры Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все примеры [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Этот образец расположен в следующем каталоге.  
+>  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] образцов. Этот образец расположен в следующем каталоге.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Ajax\WebContentTypeMapper`  
   

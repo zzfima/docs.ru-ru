@@ -1,10 +1,6 @@
 ---
 title: Overloads (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Overloads
 - Overloads
@@ -14,14 +10,11 @@ helpviewer_keywords:
 - Shadows keyword [Visual Basic]
 - signature, hiding by
 ms.assetid: 0c6820b8-25b2-4664-bc59-5ca93c99c042
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: a23a6b91681cbd814ac96464e1c340be99a0ecf0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: b68c13d192845fc4bedf1b34a40165ccc1a5ff75
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="overloads-visual-basic"></a>Overloads (Visual Basic)
 Указывает, что свойство или процедура повторно определяет одно или несколько существующих свойств или процедур с таким же именем.  
@@ -65,7 +58,7 @@ ms.lasthandoff: 11/21/2017
   
 -   **Необязательный модификатор.** Модификатор `Overloads` можно не использовать при определении нескольких перегруженных свойств или процедур в одном классе. Однако при использовании `Overloads` в одном из объявлений его необходимо использовать в них всех.  
   
--   **Затенение и перегрузка.** `Overloads`Можно также использовать для затенения существующего члена или набора перегруженных членов в базовом классе. При таком использовании `Overloads` свойство или метод объявляются с таким же именем и таким же списком параметров, как и у члена базового класса, а ключевое слово `Shadows` не предоставляется.  
+-   **Затенение и перегрузка.** `Overloads` Можно также использовать для затенения существующего члена или набора перегруженных членов в базовом классе. При таком использовании `Overloads` свойство или метод объявляются с таким же именем и таким же списком параметров, как и у члена базового класса, а ключевое слово `Shadows` не предоставляется.  
   
  При использовании `Overrides` компилятор неявно добавляет `Overloads`, чтобы упростить работу API-интерфейсов с библиотекой C#.  
   

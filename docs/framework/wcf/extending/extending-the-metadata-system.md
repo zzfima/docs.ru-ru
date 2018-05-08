@@ -1,31 +1,17 @@
 ---
-title: "Расширение системы метаданных"
-ms.custom: 
+title: Расширение системы метаданных
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - extending metadata [WCF]
 ms.assetid: 8c6b3b00-61b8-4589-8fa5-546cc33719bf
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: aca7a7aba7ef4a40100e9858561d197916b71544
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7ccef0c2b908a8f78249742decd6c46a862e541e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="extending-the-metadata-system"></a>Расширение системы метаданных
-Система метаданных [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] является набором классов и интерфейсов, представляющих метаданные, необходимые для реализации приложений на основе служб. Можно изменять или расширять классы, реализовывать и настраивать интерфейсы для экспорта и импорта пользовательских метаданных, например расширений языка WSDL или пользовательских утверждений WS-PolicyAttachments.  
+Система метаданных Windows Communication Foundation (WCF) — это группа из классов и интерфейсов, представляющих метаданные, необходимые для реализации приложений на основе служб. Можно изменять или расширять классы, реализовывать и настраивать интерфейсы для экспорта и импорта пользовательских метаданных, например расширений языка WSDL или пользовательских утверждений WS-PolicyAttachments.  
   
 ## <a name="in-this-section"></a>В этом разделе  
  [Экспорт пользовательских метаданных для расширения WCF](../../../../docs/framework/wcf/extending/exporting-custom-metadata-for-a-wcf-extension.md)  

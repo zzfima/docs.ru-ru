@@ -1,27 +1,15 @@
 ---
-title: "Класс XAMLServices и чтение или запись базового кода XAML"
-ms.custom: 
+title: Класс XAMLServices и чтение или запись базового кода XAML
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - XAML [XAML Services], XamlServices class
 - XamlServices class [XAML Services], how to use
 ms.assetid: 6ac27fad-3687-4d7a-add1-3e90675fdfde
-caps.latest.revision: "11"
-author: wadepickett
-ms.author: wpickett
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 30d94534f0da0e3946d036fd8e0db59971615c0f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 27c7a45a45e8bbe3594813b29344d1548eecda5e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="xamlservices-class-and-basic-xaml-reading-or-writing"></a>Класс XAMLServices и чтение или запись базового кода XAML
 <xref:System.Xaml.XamlServices> — это класс, предоставляемый службами XAML .NET Framework XAML, который может использоваться для сценариев  XAML, в которых не требуется отдельный доступ к потоку узлов XAML, или для информации о системе типов XAML, полученной из этих узлов. <xref:System.Xaml.XamlServices> API можно описать следующим образом: `Load` или `Parse` для поддержки пути загрузки XAML, `Save` для поддержки пути сохранения XAML, `Transform` — для предоставления метода объединения пути загрузки и пути сохранения. Можно использовать`Transform` для изменения одной схемы XAML на другую. В этом разделе собраны все классификации этих API и приведены различия между определенными перегрузками методов.  

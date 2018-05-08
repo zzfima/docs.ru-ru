@@ -1,37 +1,23 @@
 ---
 title: Настройка службы активации процессов Windows для использования с Windows Communication Foundation
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 1d50712e-53cd-4773-b8bc-a1e1aad66b78
-caps.latest.revision: 12
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 727ad032482829350b5cf88175c34d8ccc7b98b9
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 3a4d771c3f2d5e7e6ec4fd6a1e229548e063a6d1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="configuring-the-windows-process-activation-service-for-use-with-windows-communication-foundation"></a>Настройка службы активации процессов Windows для использования с Windows Communication Foundation
-В этом разделе описывается настройка службы активации Windows (WAS) в [!INCLUDE[wv](../../../../includes/wv-md.md)] для размещения служб [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], обменивающихся данными не по сетевым протоколам HTTP. Настройка предполагает следующие шаги.  
+В этом разделе описываются шаги, необходимые для настройки служба активации Windows (WAS) в [!INCLUDE[wv](../../../../includes/wv-md.md)] для размещения службы Windows Communication Foundation (WCF) служб, которые не поддерживают связь по протоколу HTTP сетевых протоколов. Настройка предполагает следующие шаги.  
   
--   Установите или проверьте, установлены ли требуемые компоненты активации [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+-   Установите (или проверьте, установлены ли) необходимые компоненты активации WCF.  
   
 -   Создайте узел WAS с привязками сетевых протоколов, которые планируется использовать, или добавьте новую привязку протокола в существующий узел.  
   
 -   Создайте приложение для размещения служб и разрешите этому приложению использовать требуемые сетевые протоколы.  
   
--   Постройте службу [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], предоставляющую конечную точку, работающую по отличному от HTTP протоколу.  
+-   Построение службы WCF, которая предоставляет конечную точку отличные от HTTP.  
   
 ## <a name="configuring-a-site-with-non-http-bindings"></a>Настройка узла с привязками протоколов, отличных от HTTP  
  Для использования в сочетании со службой WAS привязки к протоколу, отличному от HTTP, необходимо добавить привязку узла в конфигурацию WAS. Хранилищем конфигурации для службы WAS является файл applicationHost.config, находящийся в каталоге %windir%\system32\inetsrv\config. Это хранилище конфигурации используется и службой WAS, и службами IIS 7.0.  
@@ -107,7 +93,7 @@ appcmd.exe set app "Default Web Site/appOne" /enabledProtocols:net.tcp
 ## <a name="building-a-wcf-service-that-uses-was-for-non-http-activation"></a>Построение службы WCF, использующей WAS для активации по протоколу, отличному от HTTP  
  После выполнения действия по установке и настройке WAS (в разделе [как: Установка и настройка компонентов активации WCF](../../../../docs/framework/wcf/feature-details/how-to-install-and-configure-wcf-activation-components.md)), Настройка службы необходимо использовать WAS для активации похожа на настройку службы, размещенной в IIS.  
   
- Дополнительные сведения о построении активации WAS [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] службы см. в разделе [как: размещение службы WCF в WAS](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md).  
+ Подробные инструкции о построении службе активации WAS WCF см. в разделе [как: размещение службы WCF в WAS](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md).  
   
 ## <a name="see-also"></a>См. также  
  [Размещение в службе активации процессов Windows](../../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md)  

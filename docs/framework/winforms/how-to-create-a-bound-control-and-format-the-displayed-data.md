@@ -1,28 +1,16 @@
 ---
-title: "Практическое руководство. Создание связанного элемента управления и форматирование отображаемых данных"
-ms.custom: 
+title: Практическое руководство. Создание связанного элемента управления и форматирование отображаемых данных
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - data [Windows Forms], formatting
 - bound controls [Windows Forms], creating
 - bound controls [Windows Forms], formatting data
 ms.assetid: d5a56228-899d-41d9-8af8-87b3f4ec2f94
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6088048ed27b2021e297494275f4e80f7c0cb681
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 9055ec9c4b646e0c86819e4e72db8ce20086bace
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-bound-control-and-format-the-displayed-data"></a>Практическое руководство. Создание связанного элемента управления и форматирование отображаемых данных
 Благодаря функции привязки данных Windows Forms можно форматировать данные, отображаемые в элементе управления с привязкой к данным с помощью **форматирование и дополнительная привязка** диалоговое окно.  
@@ -61,7 +49,7 @@ ms.lasthandoff: 01/19/2018
     |Валюта|Укажите число знаков после запятой, используя **десятичных разрядов** вверх / вниз '.|  
     |Дата/время|Выберите способ отображения даты и времени, выбрав один из элементов в **типа** поля выбора.|  
     |Экспоненциальный|Укажите число знаков после запятой, используя **десятичных разрядов** вверх / вниз '.|  
-    |Другой|Укажите используемую строку пользовательского формата.<br /><br /> Дополнительные сведения см. в разделе [типы форматирования](../../../docs/standard/base-types/formatting-types.md). **Примечание:** строки настраиваемого формата, не обязательно успешно кругового пути между источником данных и связанным элементом управления. Вместо них в коде обработки событий для привязки и применения пользовательских форматов обрабатывайте событие <xref:System.Windows.Forms.Binding.Parse> или <xref:System.Windows.Forms.Binding.Format>.|  
+    |Другой|Укажите используемую строку пользовательского формата.<br /><br /> Дополнительные сведения см. в статье [Типы форматирования в .NET](../../../docs/standard/base-types/formatting-types.md). **Примечание:** строки настраиваемого формата, не обязательно успешно кругового пути между источником данных и связанным элементом управления. Вместо них в коде обработки событий для привязки и применения пользовательских форматов обрабатывайте событие <xref:System.Windows.Forms.Binding.Parse> или <xref:System.Windows.Forms.Binding.Format>.|  
   
 8.  Нажмите кнопку **ОК** закрыть **форматирование и дополнительная привязка** диалоговое окно и вернуться в окне «Свойства».  
   

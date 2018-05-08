@@ -1,14 +1,6 @@
 ---
-title: "Метод IMetaDataImport::FindMethod"
-ms.custom: 
+title: Метод IMetaDataImport::FindMethod
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IMetaDataImport.FindMethod
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 0f9bde1d-e306-438d-941b-d0925b322304
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: e59cc440ba004545c31d6b25d36cca4fdfb58899
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6b68d4e3d51fdb50290319de804a78c1a78a07a4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="imetadataimportfindmethod-method"></a>Метод IMetaDataImport::FindMethod
 Возвращает указатель на MethodDef, токен для метода, который заключается в указанном <xref:System.Type> и имеет имя и метаданные указанной подписи.  
@@ -71,7 +59,7 @@ HRESULT FindMethod (
   
  Подпись, передаваемый `FindMethod` должны были созданы в текущей области, поскольку подписи привязаны к определенным областям. Подпись можно внедрить токен, который определяет включающего класса или типа значения. Маркер — это индекс в локальной таблице TypeDef. Не удается построить во время выполнения вне контекста текущей области и использовать ее как входных данных, вводимых в `FindMethod`.  
   
- `FindMethod`находит только те методы, которые были определены непосредственно в классе или интерфейсе; унаследованные методы не найдена.  
+ `FindMethod` находит только те методы, которые были определены непосредственно в классе или интерфейсе; унаследованные методы не найдена.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
@@ -80,7 +68,7 @@ HRESULT FindMethod (
   
  **Библиотека:** включена как ресурс в MsCorEE.dll  
   
- **Версии платформы .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>См. также  
  <xref:System.Reflection.MethodInfo>  

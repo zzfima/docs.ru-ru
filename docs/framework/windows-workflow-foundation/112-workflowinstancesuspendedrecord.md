@@ -1,23 +1,12 @@
 ---
-title: "112 ― WorkflowInstanceSuspendedRecord"
-ms.custom: 
+title: 112 ― WorkflowInstanceSuspendedRecord
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: bc825c7c-8c90-48f7-9336-9a978a8246c6
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a53d670082a9e8c3c714c9c1ce519b5b9229d15a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 53ceec38973d2e964733736e6297007cdba66398
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="112---workflowinstancesuspendedrecord"></a>112 ― WorkflowInstanceSuspendedRecord
 ## <a name="properties"></a>Свойства  
@@ -46,5 +35,5 @@ ms.lasthandoff: 12/22/2017
 |Причина|xs:string|Причина приостановки рабочего процесса|  
 |Заметки|xs:string|Заметки, добавленные к этому событию.  Значения хранятся в виде элемента xml в формате \<элементы >\< имя элемента = «annotationName» type="System.String" > annotationValue\</товар > \< /items >.  Если не задано никаких заметок, строка содержит \<элементы / >. Размер событий ETW ограничен размером буфера ETW или максимальным размером полезных данных для события ETW. Если размер события превышает пределы трассировки событий Windows, то событие усекается путем отбрасывания заметок и замены значения заметок значением с \<элементы >...  \< /items >.|  
 |ProfileName|xs:string|Имя или профиль отслеживания, который привел к созданию этого события.|  
-|HostReference|xs:string|Для служб, размещенных на веб-сайтах, это поле служит уникальным идентификатором службы в веб-иерархии.  Ее формат определяется как "веб-сайт имя виртуальный путь приложения &#124; Виртуальный путь службы &#124; ServiceName "Пример:" по умолчанию веб-сайта или CalculatorApplication &#124;/CalculatorService.svc &#124; CalculatorService "|  
+|HostReference|xs:string|Для служб, размещенных на веб-сайтах, это поле служит уникальным идентификатором службы в веб-иерархии.  Ее формат определяется как "виртуальный путь приложения имя веб-сайта&#124;виртуальный путь службы&#124;ServiceName" Пример: "веб-сайт по умолчанию/CalculatorApplication&#124;/CalculatorService.svc&#124;CalculatorService"|  
 |AppDomain|xs:string|Строка, возвращаемая AppDomain.CurrentDomain.FriendlyName.|

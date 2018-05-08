@@ -1,34 +1,22 @@
 ---
-title: "Практическое руководство. Настройка службы WCF для взаимодействия с клиентами веб-службы ASP.NET"
-ms.custom: 
+title: Практическое руководство. Настройка службы WCF для взаимодействия с клиентами веб-службы ASP.NET
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 48e1cd90-de80-4d6c-846e-631878955762
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b4bd1dce4128e6f25294525f10226d98f732cd4e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 12c5645b53e8e931edabc1a13fc1749e40538044
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-configure-wcf-service-to-interoperate-with-aspnet-web-service-clients"></a>Практическое руководство. Настройка службы WCF для взаимодействия с клиентами веб-службы ASP.NET
-Для настройки конечной точки службы [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] таким образом, чтобы она могла взаимодействовать с клиентами веб-службы [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)], используйте в качестве типа привязки для конечной точки вашей службы тип <xref:System.ServiceModel.BasicHttpBinding?displayProperty=nameWithType>.  
+Чтобы настроить конечную точку службы Windows Communication Foundation (WCF) с [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] клиентами веб-службы, используйте <xref:System.ServiceModel.BasicHttpBinding?displayProperty=nameWithType> с типом привязки для конечной точки службы.  
   
  В привязке можно дополнительно включить поддержку протокола HTTPS и проверку подлинности клиента на транспортном уровне. Клиенты веб-службы [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] не поддерживают кодирование сообщений MTOM, поэтому для свойства <xref:System.ServiceModel.BasicHttpBinding.MessageEncoding%2A?displayProperty=nameWithType> следует сохранить значение по умолчанию, т. е. <xref:System.ServiceModel.WSMessageEncoding.Text?displayProperty=nameWithType>. Клиенты веб-служб ASP.Net не поддерживают WS-Security, поэтому для <xref:System.ServiceModel.BasicHttpBinding.Security%2A?displayProperty=nameWithType> должно быть задано значение <xref:System.ServiceModel.BasicHttpSecurityMode.Transport>.  
   
- Чтобы сделать метаданные для [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] службу, доступную [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] веб-инструменты создания прокси-сервера службы (т. е [инструмент языка описания веб-служб (Wsdl.exe)](http://go.microsoft.com/fwlink/?LinkId=73833), [(средство обнаружения веб-служб DISCO.exe)](http://go.microsoft.com/fwlink/?LinkId=73834)и возможность добавить веб-ссылку в Visual Studio), должны предоставлять конечную точку метаданных HTTP/GET.  
+ Для предоставления метаданных для службы WCF для [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] веб-инструменты создания службы прокси-сервера (то есть [инструмент языка описания веб-служб (Wsdl.exe)](http://go.microsoft.com/fwlink/?LinkId=73833), [инструмент обнаружения веб-служб (Disco.exe)](http://go.microsoft.com/fwlink/?LinkId=73834)и возможность добавить веб-ссылку в Visual Studio), должны предоставлять конечную точку метаданных HTTP/GET.  
   
 ### <a name="to-add-a-wcf-endpoint-that-is-compatible-with-aspnet-web-service-clients-in-code"></a>Добавление конечной точки WCF, совместимой с клиентами веб-службы ASP.NET, в код  
   
@@ -51,7 +39,7 @@ ms.lasthandoff: 12/22/2017
 4.  Включите конечную точку метаданных HTTP/GET для своей службы. Дополнительные сведения см. [как: публикация метаданных для службы с помощью файла конфигурации](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md).  
   
 ## <a name="example"></a>Пример  
- В следующем примере кода показано, как добавить конечную точку [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], совместимую с клиентами веб-службы [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)], в код или в файлы конфигурации.  
+ В следующем примере кода демонстрируется добавление конечной точки WCF, совместимой с [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] клиентами веб-службы в коде или в файлах конфигурации.  
   
  [!code-csharp[C_HowTo-WCFServiceAndASMXClient#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto-wcfserviceandasmxclient/cs/program.cs#0)] 
  [!code-vb[C_HowTo-WCFServiceAndASMXClient#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto-wcfserviceandasmxclient/vb/program.vb#0)] 

@@ -1,34 +1,20 @@
 ---
-title: "Как проверить видимость GridSplitter"
-ms.custom: 
+title: Как проверить видимость GridSplitter
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - GridSplitter control [WPF], ensuring visibility of
 ms.assetid: 0a62a964-89c8-48f0-9023-5df721a8cf47
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 0b7587a093b2b43856a05693bb785a0465211782
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 926df118bfd8e7ab3d1f0c953d0b6debafd59073
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-make-sure-that-a-gridsplitter-is-visible"></a>Как проверить видимость GridSplitter
 В этом примере показано, как убедитесь, что <xref:System.Windows.Controls.GridSplitter> управления не скрыты другими элементами управления в <xref:System.Windows.Controls.Grid>.  
   
 ## <a name="example"></a>Пример  
- <xref:System.Windows.Controls.Panel.Children%2A> Из <xref:System.Windows.Controls.Grid> управления подготавливаются к просмотру в том порядке, в котором они определены в разметке или коде. <xref:System.Windows.Controls.GridSplitter>элементы управления можно скрыть, другие элементы управления, если не назначить их последними элементами в <xref:System.Windows.Controls.Panel.Children%2A> коллекции или задать для других элементов более высокое <xref:System.Windows.Controls.Panel.ZIndexProperty>.  
+ <xref:System.Windows.Controls.Panel.Children%2A> Из <xref:System.Windows.Controls.Grid> управления подготавливаются к просмотру в том порядке, в котором они определены в разметке или коде. <xref:System.Windows.Controls.GridSplitter> элементы управления можно скрыть, другие элементы управления, если не назначить их последними элементами в <xref:System.Windows.Controls.Panel.Children%2A> коллекции или задать для других элементов более высокое <xref:System.Windows.Controls.Panel.ZIndexProperty>.  
   
  Чтобы предотвратить скрытые <xref:System.Windows.Controls.GridSplitter> элементов управления, выполните одно из следующих действий.  
   

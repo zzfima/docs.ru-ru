@@ -1,13 +1,6 @@
 ---
-title: "Общие сведения о TileBrush"
-ms.custom: 
+title: Общие сведения о TileBrush
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,19 +8,14 @@ helpviewer_keywords:
 - TileBrush [WPF]
 - brushes [WPF], TileBrush
 ms.assetid: aa4a7b7e-d09d-44c2-8d61-310c50e08d68
-caps.latest.revision: "16"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a7d5e9fa36ddeda0c724eeb0bb46a64d0ba36c99
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ac247a9caa54c40a31e3c78ba8537d60a333feb5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tilebrush-overview"></a>Общие сведения о TileBrush
-<xref:System.Windows.Media.TileBrush>объекты предоставляют значительные возможности контроля над способ рисования области с изображением, <xref:System.Windows.Media.Drawing>, или <xref:System.Windows.Media.Visual>. В этом разделе описывается использование <xref:System.Windows.Media.TileBrush> функции для большего контроля над тем, как <xref:System.Windows.Media.ImageBrush>, <xref:System.Windows.Media.DrawingBrush>, или <xref:System.Windows.Media.VisualBrush> закрашивает область.  
+<xref:System.Windows.Media.TileBrush> объекты предоставляют значительные возможности контроля над способ рисования области с изображением, <xref:System.Windows.Media.Drawing>, или <xref:System.Windows.Media.Visual>. В этом разделе описывается использование <xref:System.Windows.Media.TileBrush> функции для большего контроля над тем, как <xref:System.Windows.Media.ImageBrush>, <xref:System.Windows.Media.DrawingBrush>, или <xref:System.Windows.Media.VisualBrush> закрашивает область.  
   
   
 <a name="prerequisite"></a>   

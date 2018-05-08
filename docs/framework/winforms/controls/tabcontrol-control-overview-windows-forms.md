@@ -1,14 +1,6 @@
 ---
-title: "Общие сведения об элементе управления TabControl (Windows Forms)"
-ms.custom: 
+title: Общие сведения об элементе управления TabControl (Windows Forms)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - TabControl
 helpviewer_keywords:
@@ -17,17 +9,11 @@ helpviewer_keywords:
 - property pages [Windows Forms], Windows Forms
 - Windows Forms dialog boxes [Windows Forms], tabs
 ms.assetid: 2b4ea784-a39d-463c-81d8-af74ce068476
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 04407ca8ddb51658ffd9cc4078d8f545c08e9312
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f2662e7dd693a92456dc31ca7deda3ea5312e904
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tabcontrol-control-overview-windows-forms"></a>Общие сведения об элементе управления TabControl (Windows Forms)
 Элемент управления <xref:System.Windows.Forms.TabControl> Windows Forms используется для отображения нескольких вкладок, аналогичных разделителям в записной книжке или меткам в наборе папок в картотеке. Вкладки могут содержать изображения и другие элементы управления. Можно использовать набор вкладок для создания многостраничных диалоговых окон, отображаются во многих компонентах в операционной системе Windows, например свойства отображения панели управления. Кроме того <xref:System.Windows.Forms.TabControl> можно использовать для создания страниц свойств, которые используются для настройки группы связанных свойств.  

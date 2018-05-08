@@ -1,27 +1,15 @@
 ---
-title: "Как проверить прокси-сервер обнаружения"
-ms.custom: 
+title: Как проверить прокси-сервер обнаружения
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: d96e3fa2-3c42-4e5d-8244-2694081bdc32
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e6494a96f5e7e3a420c8443eff767b0e86d3bc25
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 35edbd03e912ae2d9c491afb28dee1c4a3055d14
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-test-the-discovery-proxy"></a>Как проверить прокси-сервер обнаружения
-Это последний из четырех разделов, в которых демонстрируется реализация прокси-сервера обнаружения. В предыдущем разделе [как: реализовать клиентское приложение, которое использует прокси-сервер обнаружения для поиска службы](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md), можно реализовать [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] клиентское приложение, которое использует прокси-сервер обнаружения для поиска службы, а затем вызывает Служба. В данном разделе показано, как проверить работу прокси-сервера обнаружения, службы и клиентского приложения.  
+Это последний из четырех разделов, в которых демонстрируется реализация прокси-сервера обнаружения. В предыдущем разделе [как: реализовать клиентское приложение, которое использует прокси-сервер обнаружения для поиска службы](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md), реализации клиентского приложения WCF, которая использует прокси-сервер обнаружения для поиска службы и затем вызывает службу. В данном разделе показано, как проверить работу прокси-сервера обнаружения, службы и клиентского приложения.  
   
 ### <a name="run-the-discovery-proxy"></a>Запуск прокси-сервера обнаружения  
   

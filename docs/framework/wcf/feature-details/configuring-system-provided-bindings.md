@@ -1,33 +1,19 @@
 ---
 title: Настройка привязок, предоставляемых системой
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - Windows Communication Foundation [WCF], system-provided bindings
 - WCF [WCF], system-provided bindings
 - bindings [WCF], system-provided
 ms.assetid: 443f8d65-f1f2-4311-83b3-4d8fdf7ccf16
-caps.latest.revision: 17
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 9bbf04f549c492ddc392b429edf3a703f3c307a0
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 184f4da26df2c688b2b6f30f063bab058af37a4a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="configuring-system-provided-bindings"></a>Настройка привязок, предоставляемых системой
-Привязки указывают, какой механизм связи использовать при взаимодействии с конечной точкой, а также способ подключения к конечной точке. Привязки состоят из элементов, определяющих способ деления каналов [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] на уровни для предоставления требуемых функций связи. Привязка содержит три типа элементов.  
+Привязки указывают, какой механизм связи использовать при взаимодействии с конечной точкой, а также способ подключения к конечной точке. Привязки состоят из элементов, определяющих способ деления каналов Windows Communication Foundation (WCF) для предоставления требуемых функций связи. Привязка содержит три типа элементов.  
   
 -   Элементы привязки канала протокола, определяющие безопасность, надежность, параметры перемещения контекста или пользовательские протоколы, которые используются с сообщениями, отправляемыми в конечную точку.  
   
@@ -35,7 +21,7 @@ ms.lasthandoff: 04/30/2018
   
 -   Элементы привязки кодирования сообщений, определяющие сетевое кодирование, которое необходимо использовать для сообщений, отправляемых в конечную точку, например кодирование text/XML, двоичное кодирование или подсистема оптимизации передачи сообщений (MTOM).  
   
- В этом разделе представлены все привязки [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], предоставляемые системой. Если ни одна из привязок не отвечает точным требованиям приложения, то можно создать привязку с помощью класса <xref:System.ServiceModel.Channels.CustomBinding>. Дополнительные сведения о создании настраиваемых привязок см. в разделе [пользовательские привязки](../../../../docs/framework/wcf/extending/custom-bindings.md).  
+ В этом разделе представлены все предоставляемые системой привязки Windows Communication Foundation (WCF). Если ни одна из привязок не отвечает точным требованиям приложения, то можно создать привязку с помощью класса <xref:System.ServiceModel.Channels.CustomBinding>. Дополнительные сведения о создании настраиваемых привязок см. в разделе [пользовательские привязки](../../../../docs/framework/wcf/extending/custom-bindings.md).  
   
 > [!IMPORTANT]
 >  Выберите привязку, в которой включены функции безопасности. По умолчанию функции безопасности всех привязок, за исключением привязки <xref:System.ServiceModel.BasicHttpBinding>, включены. Если безопасная привязка не выбрана или если безопасность выключена, убедитесь, что обмен данными в сети защищен каким-либо иным образом, например выполняется в безопасном центре обработки данных или в изолированной сети.  
@@ -44,7 +30,7 @@ ms.lasthandoff: 04/30/2018
 >  Не используйте дуплексные контракты с привязками, которые не поддерживают безопасность или в которых выключены функции безопасности, если обмен данными в сети не защищен каким-либо иным образом.  
   
 ## <a name="system-provided-bindings"></a>Привязки, предоставляемые системой  
- Служба [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] предоставляет следующие привязки.  
+ Следующие привязки входящие в состав WCF.  
   
 |Привязка|Элемент конфигурации|Описание|  
 |-------------|---------------------------|-----------------|  
@@ -54,14 +40,14 @@ ms.lasthandoff: 04/30/2018
 |<xref:System.ServiceModel.WSDualHttpBinding>|[\<wsDualHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md)|Безопасная привязка с возможностью взаимодействия, которая подходит для дуплексных контрактов службы или взаимодействия через посредников SOAP.|  
 |<xref:System.ServiceModel.WSFederationHttpBinding>|[\<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)|Безопасная привязка с возможностью взаимодействия, которая поддерживает протокол WS-Federation и позволяет организациям в федерации выполнять эффективную проверку подлинности и авторизацию пользователей.|  
 |<xref:System.ServiceModel.WS2007FederationHttpBinding>|[\<ws2007FederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/ws2007federationhttpbinding.md)|Безопасная привязка с возможностью взаимодействия, которая является производной от <xref:System.ServiceModel.WS2007HttpBinding> и поддерживает федеративную безопасность.|  
-|<xref:System.ServiceModel.NetTcpBinding>|[\<netTcpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md)|Безопасная и оптимизированная привязка, которая подходит для обмена данными между приложениями [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] на разных компьютерах.|  
-|<xref:System.ServiceModel.NetNamedPipeBinding>|[\<netNamedPipeBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/netnamedpipebinding.md)|Безопасная, надежная и оптимизированная привязка, которая подходит для обмена данными между приложениями [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] на одном компьютере.|  
-|<xref:System.ServiceModel.NetMsmqBinding>|[\<netMsmqBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/netmsmqbinding.md)|Поставленная в очередь привязка, которая подходит для обмена данными между приложениями [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] на разных компьютерах.|  
+|<xref:System.ServiceModel.NetTcpBinding>|[\<netTcpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md)|Безопасная и оптимизированная привязка, подходящая для взаимодействия между компьютерами приложений WCF.|  
+|<xref:System.ServiceModel.NetNamedPipeBinding>|[\<netNamedPipeBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/netnamedpipebinding.md)|Безопасная, надежная и оптимизированная привязка, которая подходит для обмена данными на компьютере приложениями WCF.|  
+|<xref:System.ServiceModel.NetMsmqBinding>|[\<netMsmqBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/netmsmqbinding.md)|Привязку с очередью, пригодную для обмена данными между компьютерами между приложениями WCF.|  
 |<xref:System.ServiceModel.NetPeerTcpBinding>|[\<netPeerTcpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/netpeertcpbinding.md)|Привязка, которая обеспечивает безопасный обмен данными между несколькими компьютерами.|  
-|<xref:System.ServiceModel.WebHttpBinding>|[\<webHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/webhttpbinding.md)|Привязка, используемая при настройке конечных точек для веб-служб [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], предоставляемых через HTTP-запросы, а не через сообщения SOAP.|  
-|<xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>|[\<msmqIntegrationBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/msmqintegrationbinding.md)|Привязка, которая подходит для обмена данными между приложением [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] и существующими приложениями очереди сообщений (также называемой MSMQ) на разных компьютерах.|  
+|<xref:System.ServiceModel.WebHttpBinding>|[\<webHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/webhttpbinding.md)|Привязка, используемая при настройке конечных точек для веб-служб WCF, предоставляемых через запросы HTTP вместо сообщений SOAP.|  
+|<xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>|[\<msmqIntegrationBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/msmqintegrationbinding.md)|Привязка, которая подходит для обмена данными между компьютерами между приложения WCF и существующей очереди сообщений (MSMQ) приложения.|  
   
-## <a name="binding-features"></a>Функции привязок  
+## <a name="binding-features"></a>Возможности привязок  
  В таблице ниже перечислены некоторые ключевые функции каждой указанной привязки, предоставленной системой. Привязки перечислены в первом столбце, а информация, касающаяся функций, представлена в таблице. В следующей таблице приводится ключ к используемым аббревиатурам привязок. Чтобы выбрать привязку, определите, какой столбец удовлетворяет всем требуемым возможностям, указанным в строке.  
   
 |Привязка|Взаимодействие|Режим безопасности (по умолчанию)|Сеанс<br /><br /> (Значение по умолчанию)|Транзакции|Дуплекс|  

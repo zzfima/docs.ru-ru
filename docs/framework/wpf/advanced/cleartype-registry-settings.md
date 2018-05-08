@@ -1,27 +1,15 @@
 ---
-title: "Параметры реестра ClearType"
-ms.custom: 
+title: Параметры реестра ClearType
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - ClearType [WPF], registry settings
 - typography [WPF], ClearType registry settings
 ms.assetid: 56f314bb-b30b-4f67-8492-8b8a9fa432ae
-caps.latest.revision: "18"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d915af4ee436bb6c661a7b412b0e36702191339a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: cacdc47a35bfd197bcac29edc6f7c780d3b8578f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cleartype-registry-settings"></a>Параметры реестра ClearType
 В этом разделе содержится обзор [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA#tla_ct](../../../../includes/tlasharptla-ct-md.md)] параметры реестра, которые используются в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] приложений.  
@@ -29,7 +17,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="overview"></a>   
 ## <a name="technology-overview"></a>Общие сведения о технологии  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]приложения, которые отображают текст на устройстве отображения, используют [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] функции для предоставления расширенного. [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] — это программная технология, разработанная [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] для улучшения удобочитаемости текста на современных ЖК-мониторах (жидкокристаллических дисплеях), например экранах ноутбуков, карманных ПК и плоскопанельных мониторах. [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] работает путем обращения к отдельным элементам вертикальных цветных полос в каждом пикселе ЖК-экрана. Дополнительные сведения о [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)], в разделе [Обзор ClearType](../../../../docs/framework/wpf/advanced/cleartype-overview.md).  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] приложения, которые отображают текст на устройстве отображения, используют [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] функции для предоставления расширенного. [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] — это программная технология, разработанная [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] для улучшения удобочитаемости текста на современных ЖК-мониторах (жидкокристаллических дисплеях), например экранах ноутбуков, карманных ПК и плоскопанельных мониторах. [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] работает путем обращения к отдельным элементам вертикальных цветных полос в каждом пикселе ЖК-экрана. Дополнительные сведения о [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)], в разделе [Обзор ClearType](../../../../docs/framework/wpf/advanced/cleartype-overview.md).  
   
  Текст, отображаемый с [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] может существенно отличаться при просмотре на различных устройствах отображения. Например, небольшое число мониторов реализуют элементы цветных полос в порядке, красный, зеленый, синий, а не чаще, красный, зеленый, синий ( [!INCLUDE[TLA#tla_rgb](../../../../includes/tlasharptla-rgb-md.md)]) порядке.  
   
@@ -39,9 +27,9 @@ ms.lasthandoff: 12/22/2017
   
 <a name="registry_settings"></a>   
 ## <a name="registry-settings"></a>Параметры реестра  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]Указывает четыре параметра реестра для управления [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] функции:  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Указывает четыре параметра реестра для управления [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] функции:  
   
-|Параметр|Описание:|  
+|Параметр|Описание|  
 |-------------|-----------------|  
 |Уровень [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]|Описывает уровень [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] прозрачности цвета.|  
 |Гамма-уровень|Описывает уровень компонента цвета пикселя для устройства отображения.|  
@@ -71,7 +59,7 @@ ms.lasthandoff: 12/22/2017
  ![Параметры ClearType в редакторе реестра](../../../../docs/framework/wpf/advanced/media/cleartyperegistry01.png "ClearTypeRegistry01")  
   
 > [!NOTE]
->  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]приложения для вывода текста в одном из двух режимов, с и без [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]. Отображение текста без [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)], он называется отрисовки оттенков серого.  
+>  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] приложения для вывода текста в одном из двух режимов, с и без [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]. Отображение текста без [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)], он называется отрисовки оттенков серого.  
   
 <a name="gamma_level"></a>   
 ## <a name="gamma-level"></a>Гамма-уровень  
@@ -92,7 +80,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="pixel-structure"></a>Структура пикселей  
  Структура пикселей описывает тип пикселей, составляющих устройство отображения. Структура пикселей определяется как один из трех типов.  
   
-|Тип|Значение|Описание:|  
+|Тип|Значение|Описание|  
 |----------|-----------|-----------------|  
 |плоский|0|Устройство отображения не имеет структуры пикселей. Это означает, что источники света для каждого цвета распределены равномерно в области пикселя: это называется отрисовкой в оттенках серого. Так работает стандартное устройство отображения. [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] никогда не применяется к отрисованному тексту.|  
 |RGB|1|Пиксели на устройстве отображения состоят из трех полос, расположенных в следующем порядке: красный, зеленый и синий. [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] применяется к отрисованному тексту.|  

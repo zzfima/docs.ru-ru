@@ -1,30 +1,18 @@
 ---
-title: "Настраиваемый диспетчер каналов"
-ms.custom: 
+title: Настраиваемый диспетчер каналов
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 813acf03-9661-4d57-a3c7-eeab497321c6
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 1c67425c67625fcfcfaac5ec689f4f70dbd3d64f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 7cd27d485efe7fe91e7c59627bf14e188e85f386
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="custom-channel-dispatcher"></a>Настраиваемый диспетчер каналов
 Этот образец демонстрирует построение пользовательского стека каналов путем непосредственной реализации <xref:System.ServiceModel.ServiceHostBase>, а также создание пользовательского диспетчера каналов в среде веб-узла. Диспетчер каналов взаимодействует с <xref:System.ServiceModel.Channels.IChannelListener> для принятия каналов и получения сообщений из стека каналов. В рамках этого образца также представлен базовый образец, показывающий, как построить стек каналов в среде веб-узла с помощью <xref:System.ServiceModel.Activation.VirtualPathExtension>.  
   
 ## <a name="custom-servicehostbase"></a>Пользовательский ServiceHostBase  
- Вместо <xref:System.ServiceModel.ServiceHostBase> этот образец реализует базовый тип <xref:System.ServiceModel.ServiceHost> для демонстрации замены реализации стека [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] пользовательским уровнем обработки сообщений поверх стека каналов. Для построения прослушивателей и диспетчера каналов переопределяется виртуальный метод <xref:System.ServiceModel.ServiceHostBase.InitializeRuntime%2A>.  
+ Этот образец реализует базовый тип <xref:System.ServiceModel.ServiceHostBase> вместо <xref:System.ServiceModel.ServiceHost> для демонстрации замены реализации стека Windows Communication Foundation (WCF) с пользовательской уровнем обработки сообщений поверх стека каналов. Для построения прослушивателей и диспетчера каналов переопределяется виртуальный метод <xref:System.ServiceModel.ServiceHostBase.InitializeRuntime%2A>.  
   
  Чтобы реализовать службу, размещенную на веб-сервере, возвратите расширение службы <xref:System.ServiceModel.Activation.VirtualPathExtension> из коллекции <xref:System.ServiceModel.ServiceHostBase.Extensions%2A> и добавьте его в коллекцию <xref:System.ServiceModel.Channels.BindingParameterCollection>, чтобы транспортному слою было известно, как настроить прослушиватель канала на основе параметров среды размещения, то есть параметров служб IIS/службы активации Windows (WAS).  
   
@@ -34,7 +22,7 @@ ms.lasthandoff: 12/22/2017
  Сначала диспетчер открывает прослушиватель каналов, а затем принимает одноэлементный канал ответа. По этому каналу он запускает бесконечный цикл отправки сообщений (запросов). По каждому запросу он создает ответное сообщение и отправляет его назад клиенту.  
   
 ## <a name="creating-a-response-message"></a>Создание ответного сообщения  
- Обработка сообщений реализуется в типе `MyServiceManager`. В методе `HandleRequest` сначала проверяется заголовок `Action` сообщения, чтобы выяснить, поддерживается ли запрос. Стандартное действие протокола SOAP «http://tempuri.org/HelloWorld/Hello» определено для выполнения фильтрации сообщений. Это похоже на концепцию контракта службы из реализации [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] объекта <xref:System.ServiceModel.ServiceHost>.  
+ Обработка сообщений реализуется в типе `MyServiceManager`. В методе `HandleRequest` сначала проверяется заголовок `Action` сообщения, чтобы выяснить, поддерживается ли запрос. Предварительно заданное действие SOAP «http://tempuri.org/HelloWorld/Hello» определено для выполнения фильтрации сообщений. Это похоже на концепцию контракта службы из реализации [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] объекта <xref:System.ServiceModel.ServiceHost>.  
   
  Для выбора правильного действия протокола SOAP образец получает запрошенные данные сообщения и формирует соответствующий ответ на запрос, аналогично случаю <xref:System.ServiceModel.ServiceHost>.  
   
@@ -62,6 +50,6 @@ Server replied: You said: Howdy. Message id: 5
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите на страницу [Примеры Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все примеры [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Этот образец расположен в следующем каталоге.  
+>  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] образцов. Этот образец расположен в следующем каталоге.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Channels\CustomChannelDispatcher`

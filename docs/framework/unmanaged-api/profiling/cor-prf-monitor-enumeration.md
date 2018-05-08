@@ -1,14 +1,6 @@
 ---
-title: "Перечисление COR_PRF_MONITOR"
-ms.custom: 
+title: Перечисление COR_PRF_MONITOR
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - COR_PRF_MONITOR
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: 9294d702-b4e5-441c-a930-e63d27b86bfd
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: e6dc135681d11a496dbc27553d46a5d101b6d7b9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7a12f3ffb14de9dcacdb4873d1c03ad1d096d7cd
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="corprfmonitor-enumeration"></a>Перечисление COR_PRF_MONITOR
 Содержит значения, используемые для указания поведения, возможностей или событий, на которые желает подписаться профилировщик.  
@@ -133,7 +121,7 @@ typedef enum {
 <a name="Callback"></a>   
 ### <a name="callback-flags"></a>Флаги обратного вызова  
   
-|Член|Описание:|  
+|Член|Описание|  
 |------------|-----------------|  
 |`COR_PRF_MONITOR_ALL`|Активирует все события обратного вызова.|  
 |`COR_PRF_MONITOR_APPDOMAIN_LOADS`|Элементы управления `AppDomainCreation*` и `AppDomainShutdown*` обратные вызовы в [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) интерфейса.|  
@@ -159,7 +147,7 @@ typedef enum {
 <a name="Feature"></a>   
 ### <a name="feature-enabling-flags"></a>Флаги включения компонентов  
   
-|Член|Описание:|  
+|Член|Описание|  
 |------------|-----------------|  
 |`COR_PRF_ENABLE_FRAME_INFO`|Включает извлечение точного `ClassID` для базовой функции путем вызова [GetFunctionInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md) метод с `COR_PRF_FRAME_INFO` значения, возвращенного [FunctionEnter2](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md) обратного вызова.|  
 |`COR_PRF_ENABLE_FUNCTION_ARGS`|Включает трассировку аргумента с помощью [FunctionEnter2](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md) обратного вызова или [FunctionEnter3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functionenter3withinfo-function.md) обратного вызова и [GetFunctionEnter3Info](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getfunctionenter3info-method.md) метод.|  
@@ -173,7 +161,7 @@ typedef enum {
 <a name="Config"></a>   
 ### <a name="configuration-flags"></a>Флаги конфигурации  
   
-|Член|Описание:|  
+|Член|Описание|  
 |------------|-----------------|  
 |`COR_PRF_DISABLE_ALL_NGEN_IMAGES`|Запрещает загрузку всех машинных образов (включая образы, улучшенные профилировщиком).  Если этот флаг и флаг `COR_PRF_USE_PROFILE_IMAGES` указаны, используется `COR_PRF_DISABLE_ALL_NGEN_IMAGES`.|  
 |`COR_PRF_DISABLE_INLINING`|Отключает все встраивания.|  
@@ -184,7 +172,7 @@ typedef enum {
 <a name="Composite"></a>   
 ### <a name="composite-flags"></a>Составные флаги  
   
-|Член|Описание:|  
+|Член|Описание|  
 |------------|-----------------|  
 |`COR_PRF_ALL`|Представляет все значения флагов `COR_PRF_MONITOR`.|  
 |`COR_PRF_ALLOWABLE_AFTER_ATTACH`|Представляет все флаги `COR_PRF_MONITOR`, которые могут быть установлены после присоединения профилировщика к выполняющемуся приложению. В разделе "Синтаксис" указываются отдельные флаги, которые присутствуют в этой битовой маске.|  
@@ -202,7 +190,7 @@ typedef enum {
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>См. также  
  [Перечисления профилирования](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)  

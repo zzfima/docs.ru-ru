@@ -1,13 +1,6 @@
 ---
-title: "События изменения свойств"
-ms.custom: 
+title: События изменения свойств
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - dependency properties [WPF], change events
 - property value changes [WPF]
@@ -20,16 +13,11 @@ helpviewer_keywords:
 - identifying changed property events [WPF]
 - property triggers [WPF], definition of
 ms.assetid: 0a7989df-9674-4cc1-bc50-5d8ef5d9c055
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 46a11b072731daf420e35bc9c9cfd7d4fced1fe5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ac2a44eb92e384851bbe6ac860fd9b46d3377a06
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="property-change-events"></a>События изменения свойств
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] определяет несколько событий, которые возникают в ответ на изменение значения свойства. Часто этим свойством является свойство зависимостей. Самим событием иногда является перенаправляемое событие, а иногда — стандартное событие [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]. Определение события зависит от сценария, так как некоторые изменения свойств лучше перенаправлять через дерево элементов, тогда как другие в основном влияют только на объект, в котором это свойство изменено.  
@@ -47,7 +35,7 @@ ms.lasthandoff: 12/22/2017
  Если свойство является пользовательское свойство зависимостей, или если вы работаете с производным классом где определен код создания экземпляра, лучше механизма для отслеживания изменений свойств, встроенной в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] системы свойств: обратных вызовов системы свойств <xref:System.Windows.CoerceValueCallback> и <xref:System.Windows.PropertyChangedCallback>. Дополнительные сведения об использовании системы свойств [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] для проверки и приведения см. в разделах [Проверка и обратные вызовы свойства зависимостей](../../../../docs/framework/wpf/advanced/dependency-property-callbacks-and-validation.md) и [Пользовательские свойства зависимостей](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md).  
   
 ### <a name="dependencypropertychanged-events"></a>События DependencyPropertyChanged  
- Является еще одной пары типов, которые являются частью скрипта события изменения свойства <xref:System.Windows.DependencyPropertyChangedEventArgs> и <xref:System.Windows.DependencyPropertyChangedEventHandler>. События для этих изменений свойств не перенаправляются; это стандартные события [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]. <xref:System.Windows.DependencyPropertyChangedEventArgs>данные событий, необычных тип отчета, так как он не является производным от <xref:System.EventArgs>; <xref:System.Windows.DependencyPropertyChangedEventArgs> представляет собой структуру, а не класс.  
+ Является еще одной пары типов, которые являются частью скрипта события изменения свойства <xref:System.Windows.DependencyPropertyChangedEventArgs> и <xref:System.Windows.DependencyPropertyChangedEventHandler>. События для этих изменений свойств не перенаправляются; это стандартные события [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]. <xref:System.Windows.DependencyPropertyChangedEventArgs> данные событий, необычных тип отчета, так как он не является производным от <xref:System.EventArgs>; <xref:System.Windows.DependencyPropertyChangedEventArgs> представляет собой структуру, а не класс.  
   
  События, использующие <xref:System.Windows.DependencyPropertyChangedEventArgs> и <xref:System.Windows.DependencyPropertyChangedEventHandler> немного более распространены, чем `RoutedPropertyChanged` события. Пример события, которое использует эти типы — <xref:System.Windows.UIElement.IsMouseCapturedChanged>.  
   

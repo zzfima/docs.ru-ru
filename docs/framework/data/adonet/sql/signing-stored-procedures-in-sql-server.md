@@ -1,26 +1,12 @@
 ---
-title: "Подписывание хранимых процедур в SQL Server"
-ms.custom: 
+title: Подписывание хранимых процедур в SQL Server
 ms.date: 01/05/2018
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: eeed752c-0084-48e5-9dca-381353007a0d
-caps.latest.revision: 
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload:
-- dotnet
-ms.openlocfilehash: 15771cc214ee17bc2c98bab2423013483d1355f1
-ms.sourcegitcommit: f28752eab00d2bd97e971542c0f49ce63cfbc239
+ms.openlocfilehash: 98dfaa6d5293cb1ad85f70be3388fb333daef373
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="signing-stored-procedures-in-sql-server"></a>Подписывание хранимых процедур в SQL Server
  Цифровая сигнатура представляет собой хэш-код данных, зашифрованную при помощи закрытого ключа лица, ставящего свою сигнатуру. Закрытый ключ обеспечивает уникальность цифровой сигнатуры его владельцу. Можно подписывать хранимые процедуры, функции (за исключением встроенных функций возвращающих табличные значения), триггеры и сборки.  
@@ -62,7 +48,7 @@ ms.lasthandoff: 01/29/2018
 ## <a name="external-resources"></a>Внешние ресурсы  
  Дополнительные сведения см. в следующих ресурсах.  
   
-|Ресурс|Описание:|  
+|Ресурс|Описание|  
 |--------------|-----------------|  
 |[Подписание модулей](http://go.microsoft.com/fwlink/?LinkId=98590) в электронной документации по SQL Server|Описывает подписывание модулей, демонстрирует образец сценария и содержит ссылки на соответствующие разделы по языку Transact-SQL.|  
 |[Подписывание хранимых процедур с помощью сертификата](http://msdn.microsoft.com/library/bb283630.aspx) в электронной документации по SQL Server|Предоставляет учебник для подписания хранимой процедуры с помощью сертификата.|  

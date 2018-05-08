@@ -1,13 +1,6 @@
 ---
-title: "Общие сведения о классе Geometry"
-ms.custom: 
+title: Общие сведения о классе Geometry
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - geometry classes [WPF]
 - graphics [WPF], geometry classes
 ms.assetid: 9fba8934-98b7-4af6-82f6-f4ef887f963a
-caps.latest.revision: "23"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e58e3ea00a00b24e476fd158beb3b0515e607f9d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 01c460ae18c489a21c860c6d2b10f551e6e68242
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="geometry-overview"></a>Общие сведения о классе Geometry
 В этом обзоре описывается использование [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] <xref:System.Windows.Media.Geometry> классов для описания фигур. В этом разделе также приведены различия между <xref:System.Windows.Media.Geometry> объектов и <xref:System.Windows.Shapes.Shape> элементы.  
@@ -34,7 +22,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="what-is-a-geometry"></a>Что такое класс Geometry?  
  <xref:System.Windows.Media.Geometry> Класса и классов, производных от него, таких как <xref:System.Windows.Media.EllipseGeometry>, <xref:System.Windows.Media.PathGeometry>, и <xref:System.Windows.Media.CombinedGeometry>, позволяют описывать геометрию двумерной фигуры. Данные геометрические описания имеют множество применений, например определение фигуры для рисования на экране или определение областей проверки нажатия и областей обрезки. Геометрию можно даже использовать для определения пути анимации.  
   
- <xref:System.Windows.Media.Geometry>объекты могут быть простыми, такими как прямоугольники и круги или сложными, созданными из двух или более геометрических объектов.  Более сложные геометрические объекты могут быть созданы с помощью <xref:System.Windows.Media.PathGeometry> и <xref:System.Windows.Media.StreamGeometry> классов, которые позволяют описывать дуги и кривые.  
+ <xref:System.Windows.Media.Geometry> объекты могут быть простыми, такими как прямоугольники и круги или сложными, созданными из двух или более геометрических объектов.  Более сложные геометрические объекты могут быть созданы с помощью <xref:System.Windows.Media.PathGeometry> и <xref:System.Windows.Media.StreamGeometry> классов, которые позволяют описывать дуги и кривые.  
   
  Поскольку <xref:System.Windows.Media.Geometry> — это тип <xref:System.Windows.Freezable>, <xref:System.Windows.Media.Geometry> объекты обладают рядом специальных возможностей: они могут быть объявлены как [ресурсов](../../../../docs/framework/wpf/advanced/xaml-resources.md), общие для нескольких объектов, доступным только для чтения для повышения производительности, клонировать, и потокобезопасными. Дополнительные сведения о различных возможностях, предоставляемых <xref:System.Windows.Freezable> объектов, в разделе [Freezable Общие сведения об объектах](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md).  
   
@@ -123,7 +111,7 @@ ms.lasthandoff: 12/22/2017
   
  Существует несколько типов сегментов.  
   
-|Тип сегмента|Описание:|Пример|  
+|Тип сегмента|Описание|Пример|  
 |------------------|-----------------|-------------|  
 |<xref:System.Windows.Media.ArcSegment>|Создает эллиптическую дугу между двумя точками.|[Создание эллиптической дуги](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-an-elliptical-arc.md).|  
 |<xref:System.Windows.Media.BezierSegment>|Создает кривую Безье третьего порядка между двумя точками.|[Создание кривой Безье третьего порядка](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-cubic-bezier-curve.md).|  
@@ -187,7 +175,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="composite-geometries"></a>Составные геометрические объекты  
  Составная геометрическая объекты могут быть созданы с помощью <xref:System.Windows.Media.GeometryGroup>, <xref:System.Windows.Media.CombinedGeometry>, или путем вызова статического <xref:System.Windows.Media.Geometry> метод <xref:System.Windows.Media.Geometry.Combine%2A>.  
   
--   <xref:System.Windows.Media.CombinedGeometry> Объекта и <xref:System.Windows.Media.Geometry.Combine%2A> метод выполняет логическую операцию для объединения области, определяемой двух геометрических объектов. <xref:System.Windows.Media.Geometry>объекты, имеющие область не удаляются. Только два <xref:System.Windows.Media.Geometry> объектов могут быть объединены (несмотря на то, что эти два геометрических объекта также могут быть составными).  
+-   <xref:System.Windows.Media.CombinedGeometry> Объекта и <xref:System.Windows.Media.Geometry.Combine%2A> метод выполняет логическую операцию для объединения области, определяемой двух геометрических объектов. <xref:System.Windows.Media.Geometry> объекты, имеющие область не удаляются. Только два <xref:System.Windows.Media.Geometry> объектов могут быть объединены (несмотря на то, что эти два геометрических объекта также могут быть составными).  
   
 -   <xref:System.Windows.Media.GeometryGroup> Класс создает объединением <xref:System.Windows.Media.Geometry> ее объектов без объединения их области. Любое количество <xref:System.Windows.Media.Geometry> объекты могут быть добавлены к <xref:System.Windows.Media.GeometryGroup>. Пример см. в разделе [Создание составной фигуры](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-composite-shape.md).  
   
@@ -219,11 +207,11 @@ ms.lasthandoff: 12/22/2017
 ## <a name="other-geometry-features"></a>Другие функции класса Geometry  
  <xref:System.Windows.Media.Geometry> Класс также предоставляет полезные служебные методы, например следующие:  
   
--   <xref:System.Windows.Media.Geometry.GetArea%2A>— Возвращает область <xref:System.Windows.Media.Geometry>.  
+-   <xref:System.Windows.Media.Geometry.GetArea%2A> — Возвращает область <xref:System.Windows.Media.Geometry>.  
   
--   <xref:System.Windows.Media.Geometry.FillContains%2A>-Определяет, содержит ли геометрию другой <xref:System.Windows.Media.Geometry>.  
+-   <xref:System.Windows.Media.Geometry.FillContains%2A> -Определяет, содержит ли геометрию другой <xref:System.Windows.Media.Geometry>.  
   
--   <xref:System.Windows.Media.Geometry.StrokeContains%2A>-Определяет, является ли обводку <xref:System.Windows.Media.Geometry> содержащую указанную точку.  
+-   <xref:System.Windows.Media.Geometry.StrokeContains%2A> -Определяет, является ли обводку <xref:System.Windows.Media.Geometry> содержащую указанную точку.  
   
  В разделе <xref:System.Windows.Media.Geometry> класс полный список его методов.  
   

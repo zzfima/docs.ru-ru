@@ -1,13 +1,6 @@
 ---
-title: "Устранение неполадок: Реализовано службы приложения &#39; Установка t"
-ms.custom: 
+title: Устранение неполадок Службы приложения реализовано&#39;t Install
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - troubleshooting service applications
 - services, troubleshooting
@@ -16,18 +9,15 @@ helpviewer_keywords:
 - troubleshooting NT services
 - Windows Service applications, troubleshooting
 ms.assetid: 45c48e2e-b97d-44bc-8896-14f328e0ce33
-caps.latest.revision: "8"
 author: ghogen
-ms.author: ghogen
 manager: douge
-ms.workload: dotnet
-ms.openlocfilehash: 43c973d83d2d1b614cf0ce49ba8d4af24123b47e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1f3e5674f9a52627efdc24d6c70c0ab16dcdbbbd
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="troubleshooting-service-application-won39t-install"></a>Устранение неполадок: Реализовано службы приложения &#39; Установка t
+# <a name="troubleshooting-service-application-won39t-install"></a>Устранение неполадок Службы приложения реализовано&#39;t Install
 Если приложение службы не устанавливается правильно, проверьте, убедитесь, что <xref:System.ServiceProcess.ServiceBase.ServiceName%2A> свойства для класса службы имеет значение то же значение, как показано в программе установки для этой службы. Значение должно быть одинаковым в обоих случаях для правильной установки службы.  
   
 > [!NOTE]

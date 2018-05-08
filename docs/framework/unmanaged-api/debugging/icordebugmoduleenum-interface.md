@@ -1,14 +1,6 @@
 ---
-title: "ICorDebugModuleEnum интерфейс1"
-ms.custom: 
+title: ICorDebugModuleEnum интерфейс1
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorDebugModuleEnum
 api_location:
@@ -22,24 +14,20 @@ helpviewer_keywords:
 ms.assetid: 2fb93cd6-6d47-4fdc-a9a0-047726fd03a1
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 466eada867dc6c424d4050d732eda67afd100232
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: bd6391c06900d5cafc1bfde23bd12c22ee0c77a2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icordebugmoduleenum-interface1"></a>ICorDebugModuleEnum интерфейс1
 Реализует методы ICorDebugEnum и выполняет перечисление массивов ICorDebugModule.  
   
 ## <a name="methods"></a>Методы  
   
-|Метод|Описание:|  
+|Метод|Описание|  
 |------------|-----------------|  
 |[Метод Next](../../../../docs/framework/unmanaged-api/debugging/icordebugmoduleenum-next-method.md)|Возвращает заданное число `ICorDebugModule` экземпляров из перечисления, начиная с текущей позиции.|  
   
@@ -55,7 +43,7 @@ ms.lasthandoff: 12/22/2017
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>См. также  
  [Интерфейсы отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

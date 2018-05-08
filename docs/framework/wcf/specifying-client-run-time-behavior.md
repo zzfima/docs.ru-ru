@@ -1,34 +1,20 @@
 ---
 title: Задание поведения клиента во время выполнения
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - behaviors [WCF], system-provided client
 ms.assetid: d16d3405-be70-4edb-8f62-b5f614ddeca5
-caps.latest.revision: 8
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: fb6ba82af23f51e43da57adb0e65c77ee3436676
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
-ms.translationtype: MT
+ms.openlocfilehash: dbee1fecda66dc377513bdf8cae4645f009b6384
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="specifying-client-run-time-behavior"></a>Задание поведения клиента во время выполнения
-Клиенты [!INCLUDE[indigo1](../../../includes/indigo1-md.md)], как и службы [!INCLUDE[indigo1](../../../includes/indigo1-md.md)], можно настроить для изменения поведения среды выполнения в соответствии с особенностями клиентского приложения. Для задания поведения среды выполнения клиента существует три атрибута. Объекты обратного вызова дуплексного клиента могут использовать атрибуты <xref:System.ServiceModel.CallbackBehaviorAttribute> и <xref:System.ServiceModel.Description.CallbackDebugBehavior> для изменения своего поведения в среде выполнения. Атрибут <xref:System.ServiceModel.Description.ClientViaBehavior> можно использовать для разделения логического назначения и непосредственного назначения сети. Более того, типы обратного вызова дуплексного клиента могут использовать некоторые поведения на стороне службы. Дополнительные сведения см. в разделе [указание поведения службы во время выполнения](../../../docs/framework/wcf/specifying-service-run-time-behavior.md).  
+Клиенты Windows Communication Foundation (WCF), такие как службы Windows Communication Foundation (WCF), можно настроить для изменения поведения во время выполнения в соответствии с клиентским приложением. Для задания поведения среды выполнения клиента существует три атрибута. Объекты обратного вызова дуплексного клиента могут использовать атрибуты <xref:System.ServiceModel.CallbackBehaviorAttribute> и <xref:System.ServiceModel.Description.CallbackDebugBehavior> для изменения своего поведения в среде выполнения. Атрибут <xref:System.ServiceModel.Description.ClientViaBehavior> можно использовать для разделения логического назначения и непосредственного назначения сети. Более того, типы обратного вызова дуплексного клиента могут использовать некоторые поведения на стороне службы. Дополнительные сведения см. в разделе [указание поведения службы во время выполнения](../../../docs/framework/wcf/specifying-service-run-time-behavior.md).  
   
 ## <a name="using-the-callbackbehaviorattribute"></a>Использование атрибута CallbackBehaviorAttribute  
  Настроить или расширить поведение выполнения реализации контракта обратного вызова в клиентском приложении можно с помощью класса <xref:System.ServiceModel.CallbackBehaviorAttribute>. Функция, выполняемая этим атрибутом для класса обратного вызова, аналогична функции, выполняемой им для класса <xref:System.ServiceModel.ServiceBehaviorAttribute>, за исключением поведения при создании экземпляров и параметров транзакции.  

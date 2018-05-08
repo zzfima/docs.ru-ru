@@ -1,28 +1,14 @@
 ---
-title: "Достижение максимальной производительности WPF 3D"
-ms.custom: 
+title: Достижение максимальной производительности WPF 3D
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - 3-D graphics [WPF]
 ms.assetid: 4bcf949d-d92f-4d8d-8a9b-1e4c61b25bf6
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 45053762a4782544531a09c92531b26f99663016
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6677ee3a6d17ea38636d49327d7af22b53bc900e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="maximize-wpf-3d-performance"></a>Достижение максимальной производительности WPF 3D
 При использовании [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] для построения трехмерных элементов управления и включения трехмерных сцен в приложении, необходимо рассмотреть вопрос оптимизации производительности. Здесь представлен список 3D классов и свойств, которые влияют на производительность приложения, а также рекомендации по оптимизации производительности при их использовании.  
@@ -33,15 +19,15 @@ ms.lasthandoff: 12/22/2017
   
 |Свойство.|Рекомендация|  
 |-|-|  
-|<xref:System.Windows.Media.Brush>|Скорость кисти (от самой быстрой к самой медленной):<br /><br /> <xref:System.Windows.Media.SolidColorBrush><br /><br /> <xref:System.Windows.Media.LinearGradientBrush><br /><br /> <xref:System.Windows.Media.ImageBrush><br /><br /> <xref:System.Windows.Media.DrawingBrush>(с кэшированием)<br /><br /> <xref:System.Windows.Media.VisualBrush>(с кэшированием)<br /><br /> <xref:System.Windows.Media.RadialGradientBrush><br /><br /> <xref:System.Windows.Media.DrawingBrush>(без кэш-памяти)<br /><br /> <xref:System.Windows.Media.VisualBrush>(без кэш-памяти)|  
-|<xref:System.Windows.UIElement.ClipToBoundsProperty>|Задать `Viewport3D.ClipToBounds` значение false, если необходимо иметь [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] явно усечение содержимого <xref:System.Windows.Controls.Viewport3D> Viewport3D прямоугольник. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]Сглаженный обрезки может вычисляться очень медленно, и `ClipToBounds` (медленно) включено по умолчанию в <xref:System.Windows.Controls.Viewport3D>.|  
-|<xref:System.Windows.UIElement.IsHitTestVisible%2A>|Задать `Viewport3D.IsHitTestVisible` значение false, если нет необходимости [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] рассмотреть содержимое <xref:System.Windows.Controls.Viewport3D> при выполнении проверки нажатия мыши.  Проверка нажатия трехмерного содержимого выполняется программным образом и может быть достаточно больших сеточных. <xref:System.Windows.UIElement.IsHitTestVisible%2A>(медленно) включено по умолчанию в <xref:System.Windows.Controls.Viewport3D>.|  
+|<xref:System.Windows.Media.Brush>|Скорость кисти (от самой быстрой к самой медленной):<br /><br /> <xref:System.Windows.Media.SolidColorBrush><br /><br /> <xref:System.Windows.Media.LinearGradientBrush><br /><br /> <xref:System.Windows.Media.ImageBrush><br /><br /> <xref:System.Windows.Media.DrawingBrush> (с кэшированием)<br /><br /> <xref:System.Windows.Media.VisualBrush> (с кэшированием)<br /><br /> <xref:System.Windows.Media.RadialGradientBrush><br /><br /> <xref:System.Windows.Media.DrawingBrush> (без кэш-памяти)<br /><br /> <xref:System.Windows.Media.VisualBrush> (без кэш-памяти)|  
+|<xref:System.Windows.UIElement.ClipToBoundsProperty>|Задать `Viewport3D.ClipToBounds` значение false, если необходимо иметь [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] явно усечение содержимого <xref:System.Windows.Controls.Viewport3D> Viewport3D прямоугольник. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Сглаженный обрезки может вычисляться очень медленно, и `ClipToBounds` (медленно) включено по умолчанию в <xref:System.Windows.Controls.Viewport3D>.|  
+|<xref:System.Windows.UIElement.IsHitTestVisible%2A>|Задать `Viewport3D.IsHitTestVisible` значение false, если нет необходимости [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] рассмотреть содержимое <xref:System.Windows.Controls.Viewport3D> при выполнении проверки нажатия мыши.  Проверка нажатия трехмерного содержимого выполняется программным образом и может быть достаточно больших сеточных. <xref:System.Windows.UIElement.IsHitTestVisible%2A> (медленно) включено по умолчанию в <xref:System.Windows.Controls.Viewport3D>.|  
 |<xref:System.Windows.Media.Media3D.GeometryModel3D>|Создайте различные модели только в том случае, если они требуются различные материалы или преобразования.  В противном случае попробуйте объединить несколько <xref:System.Windows.Media.Media3D.GeometryModel3D> экземпляры с одним и тем же материалы и преобразования в несколько больших <xref:System.Windows.Media.Media3D.GeometryModel3D> и <xref:System.Windows.Media.Media3D.MeshGeometry3D> экземпляры.|  
 |<xref:System.Windows.Media.Media3D.MeshGeometry3D>|Сетка анимации — Изменение отдельных вершин сетки на основе кадров, не всегда эффективно в [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  Чтобы свести к минимуму влияние на производительность уведомления об изменении при изменении каждой вершины, отсоедините сетку от визуального дерева перед выполнением каждой вершины.  После сетки был изменен, снова присоедините ее к визуальному дереву.  Кроме того попробуйте уменьшить размер сетки, которая будет анимированы таким образом.|  
 |3D сглаживание|Чтобы увеличить скорость отрисовки, отключите множественную выборку на <xref:System.Windows.Controls.Viewport3D> , задав значение вложенного свойства <xref:System.Windows.Media.RenderOptions.EdgeMode%2A> для `Aliased`.  По умолчанию, 3D сглаживание отключено в [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)] и включена на [!INCLUDE[TLA#tla_longhorn](../../../../includes/tlasharptla-longhorn-md.md)] с образцами 4 на пиксель.|  
 |Text|Live текст в трехмерной сцене (live, так как он <xref:System.Windows.Media.DrawingBrush> или <xref:System.Windows.Media.VisualBrush>) может выполняться медленно. Попробуйте вместо этого использовать изображения текста (через <xref:System.Windows.Media.Imaging.RenderTargetBitmap>), если текст не будет меняться.|  
 |<xref:System.Windows.Media.TileBrush>|Если необходимо использовать <xref:System.Windows.Media.VisualBrush> или <xref:System.Windows.Media.DrawingBrush> в трехмерной сцене, поскольку содержимое кисти не является статическим, попробуйте, кэшировать кисть (установив вложенное свойство <xref:System.Windows.Media.RenderOptions.CachingHint%2A> для `Cache`).  Задайте минимальный и максимальный масштаб недействительности пороговые значения (с вложенные свойства <xref:System.Windows.Media.RenderOptions.CacheInvalidationThresholdMinimum%2A> и <xref:System.Windows.Media.RenderOptions.CacheInvalidationThresholdMaximum%2A>), чтобы кэшированные кисти не будет повторно слишком часто, поддерживая нужный уровень качества.  По умолчанию <xref:System.Windows.Media.DrawingBrush> и <xref:System.Windows.Media.VisualBrush> не кэшируются, это означает, что каждый раз, что-нибудь, закрашенный с кистью должно быть повторно подготовленных к просмотру, все содержимое кисти сначала должны быть повторно помещены в область промежуточного.|  
-|<xref:System.Windows.Media.Effects.BitmapEffect>|<xref:System.Windows.Media.Effects.BitmapEffect>заставляет все измененное содержимое будет отображаться без аппаратного ускорения.  Для достижения оптимальной производительности следует использовать <xref:System.Windows.Media.Effects.BitmapEffect>.|  
+|<xref:System.Windows.Media.Effects.BitmapEffect>|<xref:System.Windows.Media.Effects.BitmapEffect> заставляет все измененное содержимое будет отображаться без аппаратного ускорения.  Для достижения оптимальной производительности следует использовать <xref:System.Windows.Media.Effects.BitmapEffect>.|  
   
 ## <a name="performance-impact-medium"></a>Влияние на производительность: средний  
   
@@ -58,7 +44,7 @@ ms.lasthandoff: 12/22/2017
 |<xref:System.Windows.Media.Media3D.Light>|Скорость света (от самой быстрой к самой медленной):<br /><br /> <xref:System.Windows.Media.Media3D.AmbientLight><br /><br /> <xref:System.Windows.Media.Media3D.DirectionalLight><br /><br /> <xref:System.Windows.Media.Media3D.PointLight><br /><br /> <xref:System.Windows.Media.Media3D.SpotLight>|  
 |<xref:System.Windows.Media.Media3D.MeshGeometry3D>|Попробуйте сохранять размер сетки в этих ограничений.<br /><br /> <xref:System.Windows.Media.Media3D.MeshGeometry3D.Positions%2A>: 20 001 <xref:System.Windows.Media.Media3D.Point3D> экземпляров<br /><br /> <xref:System.Windows.Media.Media3D.MeshGeometry3D.TriangleIndices%2A>: 60003 <xref:System.Int32> экземпляров|  
 |<xref:System.Windows.Media.Media3D.Material>|Скорость материала (от самой быстрой к самой медленной):<br /><br /> <xref:System.Windows.Media.Media3D.EmissiveMaterial><br /><br /> <xref:System.Windows.Media.Media3D.DiffuseMaterial><br /><br /> <xref:System.Windows.Media.Media3D.SpecularMaterial>|  
-|<xref:System.Windows.Media.Brush>|[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]Объемные эффекты не отказывается от невидимых кистей (черных кистей окружения, кистей очистки, т. д.) согласованным образом.  Рассмотрите возможность отказаться от сцены этих средств.|  
+|<xref:System.Windows.Media.Brush>|[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Объемные эффекты не отказывается от невидимых кистей (черных кистей окружения, кистей очистки, т. д.) согласованным образом.  Рассмотрите возможность отказаться от сцены этих средств.|  
 |<xref:System.Windows.Media.Media3D.MaterialGroup>|Каждый <xref:System.Windows.Media.Media3D.Material> в <xref:System.Windows.Media.Media3D.MaterialGroup> вызывает другой визуализации проход множество материалов, даже очень простой материалов, могут значительно повысить требования заливки в графическом процессоре.  Минимальное число используемых материалов в вашей <xref:System.Windows.Media.Media3D.MaterialGroup>.|  
   
 ## <a name="performance-impact-low"></a>Влияние на производительность: низкий  

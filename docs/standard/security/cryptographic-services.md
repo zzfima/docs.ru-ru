@@ -1,13 +1,7 @@
 ---
 title: службы шифрования
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - cryptography [.NET Framework]
 - pattern of derived class inheritance
@@ -30,18 +24,13 @@ helpviewer_keywords:
 - cryptography [.NET Framework], about
 - random number generation
 ms.assetid: f96284bc-7b73-44b5-ac59-fac613ad09f8
-caps.latest.revision: 34
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 02d399d85c53cd296fc5f49ca0ec4b51b14ad677
-ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.openlocfilehash: f8193932deac3854b07085cba9faac76e68c4da8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cryptographic-services"></a>службы шифрования
 <a name="top"></a> Общедоступные сети, такие как Интернет, не предоставляют средств обеспечения защищенного взаимодействия между объектами. При взаимодействии через такие сети может происходить чтение или даже изменение передаваемой информации неправомочными третьими лицами. Использование криптографии обеспечивает защиту данных от просмотра, обнаружение изменения данных и безопасный обмен данными на основе незащищенных каналов. Например, данные могут быть зашифрованы с помощью некоторого криптографического алгоритма, переданы в зашифрованном виде, а затем расшифрованы лицом, которому они предназначались. Если зашифрованные данные будут перехвачены третьим лицом, расшифровать их будет трудно.  

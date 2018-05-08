@@ -1,13 +1,6 @@
 ---
-title: "Порядок событий в формах Windows Forms"
-ms.custom: 
+title: Порядок событий в формах Windows Forms
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - events [Windows Forms], order of
 - focus event order
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - validation events [Windows Forms], order of
 - application startup event order
 ms.assetid: e81db09b-4453-437f-b78a-62d7cd5c9829
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 03d2661752e5c0acb36fe76a8fa72b0638b4ad54
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 10a6451827a16605ba738cf74b7f684b69adb5dc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="order-of-events-in-windows-forms"></a>Порядок событий в формах Windows Forms
 Особый интерес для разработчиков представляет порядок, в котором вызываются события в приложениях Windows Forms, для обеспечения обработки каждого из этих событий в свою очередь. Если ситуация требует аккуратной обработки событий, например когда производится перерисовка части формы, то необходимо знать точный порядок, в котором вызываются события во время выполнения. В этом разделе приведены некоторые сведения о порядке событий, возникающих на нескольких важных этапах жизненного цикла приложений и элементов управления. Подробные сведения о порядке событий щелчков мыши см [события мыши в формах Windows Forms](../../../docs/framework/winforms/mouse-events-in-windows-forms.md). Обзор событий в Windows Forms см. в разделе [Общие сведения о событиях](../../../docs/framework/winforms/events-overview-windows-forms.md). Дополнительные сведения о создании обработчиков событий см. в разделе [Обзор обработчиков событий](../../../docs/framework/winforms/event-handlers-overview-windows-forms.md).  

@@ -1,31 +1,17 @@
 ---
-title: "Проверка введенных пользователем данных в Windows Forms"
-ms.custom: 
+title: Проверка введенных пользователем данных в Windows Forms
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Windows Forms, validating user input
 - validation [Windows Forms], Windows Forms user input
 - user input [Windows Forms], validating in Windows Forms
 - validating user input [Windows Forms], Windows Forms
 ms.assetid: 4ec07681-1dee-4bf9-be5e-718f635a33a1
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 1d0e3ec867e44c4f01b239e8e243259d7c951d96
-ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
+ms.openlocfilehash: adc138ad1e277f69f27f9f86fc5c3ea28a8d5cce
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="user-input-validation-in-windows-forms"></a>Проверка введенных пользователем данных в Windows Forms
 После ввода данных в приложение, может потребоваться Проверьте допустимость данных перед вашим приложением. Может потребоваться, что некоторые текстовые поля не нулевой длины, отформатированы как номер телефона или другой тип данных поля, или что строка содержит любые небезопасных символов, которые могут использоваться для нарушения безопасности базы данных. Windows Forms предоставляет несколько способов для проверки входных данных в приложении.  
@@ -56,7 +42,7 @@ ms.lasthandoff: 02/01/2018
  При использовании привязки данных данные в элементе управления синхронизируются с источником данных во время выполнения <xref:System.Windows.Forms.Control.Validating> событий. Если вы отмените <xref:System.Windows.Forms.Control.Validating> события, данные не будут синхронизированы с источником данных.  
   
 > [!IMPORTANT]
->  Если пользовательская проверка, которая выполняется после <xref:System.Windows.Forms.Control.Validating> события, это не повлияет на привязки данных. Например, если у вас есть код <xref:System.Windows.Forms.Control.Validated> событие, которое пытается отменить привязку данных, привязка данных будут выполняться. В этом случае для выполнения проверки в <xref:System.Windows.Forms.Control.Validated> события элемента управления изменяется **режим обновления источника данных** свойство (**в группе (Databindings)**\\**(Дополнительно)** ) из **OnValidation** для **никогда**и добавьте *управления*`.DataBindings["`*\<YOURFIELD >*  `"].WriteValue()` в код проверки.  
+>  Если пользовательская проверка, которая выполняется после <xref:System.Windows.Forms.Control.Validating> события, это не повлияет на привязки данных. Например, если у вас есть код <xref:System.Windows.Forms.Control.Validated> событие, которое пытается отменить привязку данных, привязка данных будут выполняться. В этом случае для выполнения проверки в <xref:System.Windows.Forms.Control.Validated> события элемента управления изменяется **режим обновления источника данных** свойство (**в группе (Databindings)**\\ **(Дополнительно)** ) из **OnValidation** для **никогда**и добавьте *управления*`.DataBindings["`*\<YOURFIELD >*  `"].WriteValue()` в код проверки.  
   
 ### <a name="implicit-and-explicit-validation"></a>Явные и неявные проверки  
  Если данных элемента управления получить проверку? Это зависит от разработчика. Можно использовать явную или неявную проверку, в зависимости от требований приложения.  

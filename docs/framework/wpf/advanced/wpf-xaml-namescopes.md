@@ -1,13 +1,6 @@
 ---
-title: "Области видимости имен XAML в WPF"
-ms.custom: 
+title: Области видимости имен XAML в WPF
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - namescopes [WPF]
 - styles [WPF], namescopes in
@@ -17,16 +10,11 @@ helpviewer_keywords:
 - XAML [WPF], namescopes
 - classes [WPF], FrameworkContentElement
 ms.assetid: 52bbf4f2-15fc-40d4-837b-bb4c21ead7d4
-caps.latest.revision: "19"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c4caaa9453cb3cec76a8606afb5601919eba607a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c13dba48d21235c57be64d90b6547902e0428a6e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wpf-xaml-namescopes"></a>Области видимости имен XAML в WPF
 Области имен XAML — это понятие, которое идентифицирует объекты, определенные в XAML. Имена из области имен XAML можно использовать для установления связей между именами объектов, определенными в XAML, и эквивалентными им экземплярами из дерева объектов. Области имен XAML в управляемом коде [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], как правило, создаются при загрузке отдельных корневых страниц XAML для приложения XAML. Области видимости имен XAML как программируемые объекты определяются <xref:System.Windows.Markup.INameScope> интерфейс, а также реализован классом практические <xref:System.Windows.NameScope>.  
@@ -47,7 +35,7 @@ ms.lasthandoff: 12/22/2017
 ### <a name="adding-objects-to-runtime-object-trees"></a>Добавление объектов в деревья объектов среды выполнения  
  Область имен XAML системы WPF создается и определяется в момент синтаксического анализа кода XAML. Если объект добавляется в дерево объектов уже после того, как выполнен синтаксический анализ кода XAML, сформировавшего это дерево, значение `Name` или `x:Name` нового объекта не приводит к автоматическому обновлению сведений из области имен XAML. Чтобы добавить имя объекта в области видимости WPF XAML после загрузки XAML, необходимо вызвать соответствующую реализацию метода <xref:System.Windows.Markup.INameScope.RegisterName%2A> на объект, который определяет области имен XAML, который обычно является корневой страницы XAML. Если имя не зарегистрировано, добавленного объекта не может ссылаться по имени через методы например <xref:System.Windows.FrameworkElement.FindName%2A>, и не может использовать это имя для нацеливания на анимации.  
   
- Является наиболее распространенным сценарием для разработчиков приложений, который будет использоваться <xref:System.Windows.FrameworkElement.RegisterName%2A> для регистрации имен в области имен XAML в текущем корне страницы. <xref:System.Windows.FrameworkElement.RegisterName%2A>является частью важные сценарии для раскадровки, целевые объекты для анимации. Дополнительные сведения см. в разделе [Общие сведения о Storyboard](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md).  
+ Является наиболее распространенным сценарием для разработчиков приложений, который будет использоваться <xref:System.Windows.FrameworkElement.RegisterName%2A> для регистрации имен в области имен XAML в текущем корне страницы. <xref:System.Windows.FrameworkElement.RegisterName%2A> является частью важные сценарии для раскадровки, целевые объекты для анимации. Дополнительные сведения см. в разделе [Общие сведения о Storyboard](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md).  
   
  При вызове метода <xref:System.Windows.FrameworkElement.RegisterName%2A> объект, отличный от объекта, который определяет области имен XAML, имя по-прежнему регистрируется в области видимости, вызывающего объекта, находящееся в, как если бы метод <xref:System.Windows.FrameworkElement.RegisterName%2A> на область видимости имен XAML, определения объекта.  
   
@@ -82,9 +70,9 @@ ms.lasthandoff: 12/22/2017
   
 <a name="Namescopes_and_Name_related_APIs"></a>   
 ## <a name="xaml-namescopes-and-name-related-apis"></a>Области имен XAML и интерфейсы API, связанные с именами  
- <xref:System.Windows.FrameworkElement>имеет <xref:System.Windows.FrameworkElement.FindName%2A>, <xref:System.Windows.FrameworkElement.RegisterName%2A> и <xref:System.Windows.FrameworkElement.UnregisterName%2A> методы. Если объект, для которого вызываются эти методы, имеет собственную область имен XAML, то методы вызывают методы соответствующей области имен XAML. В противном случае выполняется проверка того, владеет ли родительский элемент областью имен XAML и этот процесс продолжается рекурсивно до тех пор, пока область имен XAML не будет найдена (из-за того что поведение обработчика XAML гарантирует наличие области имен XAML в корне). <xref:System.Windows.FrameworkContentElement>имеет аналогичное поведение, за исключением того, не <xref:System.Windows.FrameworkContentElement> когда-либо будет принадлежать пространства имен XAML. Методы существуют в <xref:System.Windows.FrameworkContentElement> , чтобы вызовы могут перенаправляться в конечном счете в <xref:System.Windows.FrameworkElement> родительского элемента.  
+ <xref:System.Windows.FrameworkElement> имеет <xref:System.Windows.FrameworkElement.FindName%2A>, <xref:System.Windows.FrameworkElement.RegisterName%2A> и <xref:System.Windows.FrameworkElement.UnregisterName%2A> методы. Если объект, для которого вызываются эти методы, имеет собственную область имен XAML, то методы вызывают методы соответствующей области имен XAML. В противном случае выполняется проверка того, владеет ли родительский элемент областью имен XAML и этот процесс продолжается рекурсивно до тех пор, пока область имен XAML не будет найдена (из-за того что поведение обработчика XAML гарантирует наличие области имен XAML в корне). <xref:System.Windows.FrameworkContentElement> имеет аналогичное поведение, за исключением того, не <xref:System.Windows.FrameworkContentElement> когда-либо будет принадлежать пространства имен XAML. Методы существуют в <xref:System.Windows.FrameworkContentElement> , чтобы вызовы могут перенаправляться в конечном счете в <xref:System.Windows.FrameworkElement> родительского элемента.  
   
- <xref:System.Windows.NameScope.SetNameScope%2A>используется для сопоставления нового пространства имен XAML для существующего объекта. Можно вызвать <xref:System.Windows.NameScope.SetNameScope%2A> более одного раза Чтобы сбросить или очистить XAML имен, но не является распространенным вариантом применения. Кроме того <xref:System.Windows.NameScope.GetNameScope%2A> обычно не используется из кода.  
+ <xref:System.Windows.NameScope.SetNameScope%2A> используется для сопоставления нового пространства имен XAML для существующего объекта. Можно вызвать <xref:System.Windows.NameScope.SetNameScope%2A> более одного раза Чтобы сбросить или очистить XAML имен, но не является распространенным вариантом применения. Кроме того <xref:System.Windows.NameScope.GetNameScope%2A> обычно не используется из кода.  
   
 ### <a name="xaml-namescope-implementations"></a>Реализации области имен XAML  
  Следующие классы реализуют <xref:System.Windows.Markup.INameScope> напрямую:  
@@ -97,9 +85,9 @@ ms.lasthandoff: 12/22/2017
   
 -   <xref:System.Windows.FrameworkTemplate>  
   
- <xref:System.Windows.ResourceDictionary>не используйте имена XAML или в области видимости имен; он использует ключи вместо этого, так как он является реализацией словаря. Единственная причина <xref:System.Windows.ResourceDictionary> реализует <xref:System.Windows.Markup.INameScope> , он может вызывать исключения в пользовательском коде, которые помогают уточнить различие между область имен XAML в значение true, и о том, как <xref:System.Windows.ResourceDictionary> обрабатывает ключи, а также чтобы убедиться, что области имен XAML не применяются к <xref:System.Windows.ResourceDictionary> родительскими элементами.  
+ <xref:System.Windows.ResourceDictionary> не используйте имена XAML или в области видимости имен; он использует ключи вместо этого, так как он является реализацией словаря. Единственная причина <xref:System.Windows.ResourceDictionary> реализует <xref:System.Windows.Markup.INameScope> , он может вызывать исключения в пользовательском коде, которые помогают уточнить различие между область имен XAML в значение true, и о том, как <xref:System.Windows.ResourceDictionary> обрабатывает ключи, а также чтобы убедиться, что области имен XAML не применяются к <xref:System.Windows.ResourceDictionary> родительскими элементами.  
   
- <xref:System.Windows.FrameworkTemplate>и <xref:System.Windows.Style> реализовать <xref:System.Windows.Markup.INameScope> через явные определения интерфейса. Явные реализации позволяют этим областям видимости имен XAML вести себя условно, когда они доступны через <xref:System.Windows.Markup.INameScope> интерфейс, который определяет, как взаимодействуют области имен XAML по [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] внутренние процессы. Но явные определения интерфейса не являются частью обычной области API объектов <xref:System.Windows.FrameworkTemplate> и <xref:System.Windows.Style>, так как редко бывает нужно вызывать <xref:System.Windows.Markup.INameScope> методы <xref:System.Windows.FrameworkTemplate> и <xref:System.Windows.Style> напрямую, а вместо этого используется другой интерфейс API Например, <xref:System.Windows.FrameworkElement.GetTemplateChild%2A>.  
+ <xref:System.Windows.FrameworkTemplate> и <xref:System.Windows.Style> реализовать <xref:System.Windows.Markup.INameScope> через явные определения интерфейса. Явные реализации позволяют этим областям видимости имен XAML вести себя условно, когда они доступны через <xref:System.Windows.Markup.INameScope> интерфейс, который определяет, как взаимодействуют области имен XAML по [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] внутренние процессы. Но явные определения интерфейса не являются частью обычной области API объектов <xref:System.Windows.FrameworkTemplate> и <xref:System.Windows.Style>, так как редко бывает нужно вызывать <xref:System.Windows.Markup.INameScope> методы <xref:System.Windows.FrameworkTemplate> и <xref:System.Windows.Style> напрямую, а вместо этого используется другой интерфейс API Например, <xref:System.Windows.FrameworkElement.GetTemplateChild%2A>.  
   
  Следующие классы определяют свои собственные области видимости имен XAML с помощью <xref:System.Windows.NameScope?displayProperty=nameWithType> вспомогательный класс и подключение к его реализации области видимости имен XAML по <xref:System.Windows.NameScope.NameScope%2A?displayProperty=nameWithType> вложенное свойство:  
   

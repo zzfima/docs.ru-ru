@@ -1,24 +1,12 @@
 ---
-title: "Сопоставление типов SQL-CLR"
-ms.custom: 
+title: Сопоставление типов SQL-CLR
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 4ed76327-54a7-414b-82a9-7579bfcec04b
-caps.latest.revision: "4"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: cc6a3d38b8534c9727562cb3fb82f96fa60db7ec
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 5437529d9293951ad34abda435b538b4f404c600
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sql-clr-type-mapping"></a>Сопоставление типов SQL-CLR
 В LINQ to SQL модель данных реляционной базы данных сопоставляется с моделью объектов, выраженной на выбранном языке программирования. При выполнении приложения LINQ to SQL преобразует запросы LINQ модели объектов в код SQL и направляет их в базу данных для выполнения. Когда база данных возвращает результаты, LINQ to SQL преобразует их обратно в объекты, с которыми можно работать на языке программирования.  
@@ -206,7 +194,7 @@ ms.lasthandoff: 01/17/2018
 >  Типы данных SQL Server `DATETIME2`, `DATETIMEOFFSET`, `DATE` и `TIME` доступны в версиях Microsoft SQL Server 2008 и выше. LINQ to SQL поддерживает сопоставление с этими новыми типами, начиная с версии платформы .NET Framework 3.5 с пакетом обновления 1 (SP1).  
   
 ### <a name="systemdatetime"></a>System.Datetime  
- Диапазон и точность типа CLR <xref:System.DateTime?displayProperty=nameWithType> превышают диапазон и точность типа SQL Server `DATETIME`, с которым по умолчанию выполняется сопоставление в методе <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType>. Чтобы избежать исключений, связанных с датами вне диапазона `DATETIME`, используйте тип `DATETIME2`, который доступен, начиная с версии Microsoft SQL Server 2008. `DATETIME2`можно сопоставить диапазон и точность типа CLR <xref:System.DateTime?displayProperty=nameWithType>.  
+ Диапазон и точность типа CLR <xref:System.DateTime?displayProperty=nameWithType> превышают диапазон и точность типа SQL Server `DATETIME`, с которым по умолчанию выполняется сопоставление в методе <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType>. Чтобы избежать исключений, связанных с датами вне диапазона `DATETIME`, используйте тип `DATETIME2`, который доступен, начиная с версии Microsoft SQL Server 2008. `DATETIME2` можно сопоставить диапазон и точность типа CLR <xref:System.DateTime?displayProperty=nameWithType>.  
   
  В датах SQL Server не учитывается часовой пояс (<xref:System.TimeZone>), который имеет широкую поддержку в среде CLR. Значения <xref:System.TimeZone> сохраняются в базе данных без изменений и без преобразования <xref:System.TimeZone>, независимо от исходных данных <xref:System.DateTimeKind>. Когда значения <xref:System.DateTime> получаются из базы данных, они загружаются в <xref:System.DateTime> без изменений, а <xref:System.DateTimeKind> получает значение <xref:System.DateTimeKind.Unspecified>. Дополнительные сведения о поддержке <xref:System.DateTime?displayProperty=nameWithType> методов, см. [методы System.DateTime](../../../../../../docs/framework/data/adonet/sql/linq/system-datetime-methods.md).  
   
@@ -224,7 +212,7 @@ ms.lasthandoff: 01/17/2018
 |`BINARY(50)`|<xref:System.Data.Linq.Binary?displayProperty=nameWithType>|  
 |`VARBINARY(50)`|<xref:System.Data.Linq.Binary?displayProperty=nameWithType>|  
 |`VARBINARY(MAX)`|<xref:System.Data.Linq.Binary?displayProperty=nameWithType>|  
-|`VARBINARY(MAX)`с `FILESTREAM` атрибутов|<xref:System.Data.Linq.Binary?displayProperty=nameWithType>|  
+|`VARBINARY(MAX)` с `FILESTREAM` атрибутов|<xref:System.Data.Linq.Binary?displayProperty=nameWithType>|  
 |`IMAGE`|<xref:System.Data.Linq.Binary?displayProperty=nameWithType>|  
 |`TIMESTAMP`|<xref:System.Data.Linq.Binary?displayProperty=nameWithType>|  
   

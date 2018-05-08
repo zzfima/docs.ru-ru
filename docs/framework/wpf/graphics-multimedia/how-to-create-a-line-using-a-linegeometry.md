@@ -1,31 +1,17 @@
 ---
-title: "Практическое руководство. Создание отрезка с помощью LineGeometry"
-ms.custom: 
+title: Практическое руководство. Создание отрезка с помощью LineGeometry
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - graphics [WPF], lines
 ms.assetid: 41231b22-1f74-4c26-a8e7-a55b29f8f6bd
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 487a5ffaf952450c6196f5fe0d00fd249177b054
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8db33fc5c611dcbcae50c71ada1c6b6f9fd9bd29
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-line-using-a-linegeometry"></a>Практическое руководство. Создание отрезка с помощью LineGeometry
 В этом примере показано, как использовать <xref:System.Windows.Media.LineGeometry> класса для описания строки. Объект <xref:System.Windows.Media.LineGeometry> определяется его начальную и конечную точки.  

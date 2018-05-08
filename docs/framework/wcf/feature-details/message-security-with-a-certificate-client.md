@@ -1,32 +1,20 @@
 ---
 title: Безопасность сообщений при использовании клиентом сертификата
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 99770573-c815-4428-a38c-e4335c8bd7ce
-caps.latest.revision: 16
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: 6e31c7a9e53e8b918661c0c6c544e697e2a772e6
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 570c7763da912de4e0d2729e7579a200f35c4941
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="message-security-with-a-certificate-client"></a>Безопасность сообщений при использовании клиентом сертификата
-В следующем сценарии показаны служба и клиент [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], защищенные с помощью режима безопасности сообщений. Проверка подлинности клиента и службы выполняется с помощью сертификатов. Дополнительные сведения см. в разделе [безопасности распределенных приложений](../../../../docs/framework/wcf/feature-details/distributed-application-security.md).  
+В следующем сценарии показаны клиент Windows Communication Foundation (WCF) и служба, защищенные с помощью режима безопасности сообщений. Проверка подлинности клиента и службы выполняется с помощью сертификатов. Дополнительные сведения см. в разделе [безопасности распределенных приложений](../../../../docs/framework/wcf/feature-details/distributed-application-security.md).  
   
  Пример приложения см. в разделе [сертификат безопасности сообщений](../../../../docs/framework/wcf/samples/message-security-certificate.md).  
   
@@ -35,7 +23,7 @@ ms.lasthandoff: 04/30/2018
 |Характеристика|Описание|  
 |--------------------|-----------------|  
 |Режим безопасности|Сообщение|  
-|Взаимодействие|Только [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]|  
+|Взаимодействие|Только WCF|  
 |Проверка подлинности (сервера)|Использование сертификатов служб|  
 |Проверка подлинности (клиента)|Использование сертификатов клиента|  
 |Целостность|Да|  

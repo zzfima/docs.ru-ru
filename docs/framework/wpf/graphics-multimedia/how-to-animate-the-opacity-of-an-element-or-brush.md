@@ -1,27 +1,15 @@
 ---
-title: "Практическое руководство. Анимация свойства \"Прозрачность\" элемента или кисти"
-ms.custom: 
+title: Практическое руководство. Анимация свойства "Прозрачность" элемента или кисти
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - opacity [WPF], animating
 - animation [WPF], Opacity property
 ms.assetid: 572af23b-39dd-48d1-9db5-4bca56a4b3d3
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c3b750e6ee21c8347d3896ec290f0ff564cc0a2c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a45bf0344c10e1214aa5218e25e9bd9a87d5ea60
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-animate-the-opacity-of-an-element-or-brush"></a>Практическое руководство. Анимация свойства "Прозрачность" элемента или кисти
 Чтобы сделать элемент структуры исчезновения и появления, анимация его <xref:System.Windows.UIElement.Opacity%2A> свойство или анимировать <xref:System.Windows.Media.Brush.Opacity%2A> свойство <xref:System.Windows.Media.Brush> (или кисти) используется для рисования. Анимация прозрачности элемента упрощает исчезновения и появления его дочерних элементов, но анимации кисть, используемую для рисования элемента позволяет иметь большую избирательность о Плавное какая часть элемента. Например вы Анимация прозрачности кисть, используемую для рисования фона кнопки. Это приведет к тому и исчезновения представления, оставив его текст полностью непрозрачный фон кнопки.  

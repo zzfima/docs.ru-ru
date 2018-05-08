@@ -1,34 +1,20 @@
 ---
-title: "Имена контрактов данных"
-ms.custom: 
+title: Имена контрактов данных
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - data contracts [WCF], naming
 ms.assetid: 31f87e6c-247b-48f5-8e94-b9e1e33d8d09
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 56744318e6ea29350fd02d1cb35e49e566894a23
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 18ba9aa1f7af3733acd60924d0aa24ceb1b5126c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="data-contract-names"></a>Имена контрактов данных
-Иногда клиент и служба поддерживают разные типы. Они все равно могут передавать данные друг другу при условии, что контракты данных эквивалентны на обеих сторонах. [Эквивалентность контрактов данных](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md) на основе контракта данных и имена членов данных, и поэтому предоставляется механизм для сопоставления типов и членов, эти имена. В этом разделе поясняются правила именования контрактов данных и описывается поведение по умолчанию инфраструктуры [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] при создании имен.  
+Иногда клиент и служба поддерживают разные типы. Они все равно могут передавать данные друг другу при условии, что контракты данных эквивалентны на обеих сторонах. [Эквивалентность контрактов данных](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md) на основе контракта данных и имена членов данных, и поэтому предоставляется механизм для сопоставления типов и членов, эти имена. В этом разделе описываются правила именования контрактов данных, а также поведение по умолчанию инфраструктуры Windows Communication Foundation (WCF), при создании имен.  
   
 ## <a name="basic-rules"></a>Основные правила  
  Ниже приведены основные правила именования контрактов данных:  
@@ -37,15 +23,15 @@ ms.lasthandoff: 12/22/2017
   
 -   Члены данных имеют только имена, но не имеют пространств имен.  
   
--   При обработке контрактов данных инфраструктура [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] учитывает регистр пространства имен и имен контрактов данных и членов данных.  
+-   При обработке контрактов данных, инфраструктура WCF учитывает регистр пространства имен и имена контрактов данных и члены данных.  
   
 ## <a name="data-contract-namespaces"></a>Пространства имен контракта данных  
  Пространство имен контракта данных принимает форму универсального кода ресурса (URI). URI может быть как абсолютным, так и относительным. По умолчанию контрактам данных определенного типа данных присваивается пространство имен из пространства имен среды CLR этого типа.  
   
- По умолчанию в каждом конкретном пространстве имен среды CLR (в формате *Clr.Namespace*) сопоставляется с пространством имен «http://schemas.datacontract.org/2004/07/Clr.Namespace». Для переопределения данной настройки по умолчанию необходимо применить атрибут <xref:System.Runtime.Serialization.ContractNamespaceAttribute> ко всему модулю или всей сборке. Кроме того, для того чтобы управлять пространством имен контракта данных для каждого типа, необходимо задать свойство <xref:System.Runtime.Serialization.DataContractAttribute.Namespace%2A> атрибута <xref:System.Runtime.Serialization.DataContractAttribute>.  
+ По умолчанию в каждом конкретном пространстве имен среды CLR (в формате *Clr.Namespace*) пространство имен «http://schemas.datacontract.org/2004/07/Clr.Namespace». Для переопределения данной настройки по умолчанию необходимо применить атрибут <xref:System.Runtime.Serialization.ContractNamespaceAttribute> ко всему модулю или всей сборке. Кроме того, для того чтобы управлять пространством имен контракта данных для каждого типа, необходимо задать свойство <xref:System.Runtime.Serialization.DataContractAttribute.Namespace%2A> атрибута <xref:System.Runtime.Serialization.DataContractAttribute>.  
   
 > [!NOTE]
->  Пространство имен "http://schemas.microsoft.com/2003/10/Serialization" зарезервировано, следовательно, его невозможно использовать в качестве пространства имен контракта данных.  
+>  "http://schemas.microsoft.com/2003/10/Serialization«Пространство имен зарезервирован и не может использоваться в качестве пространства имен контракта данных.  
   
 > [!NOTE]
 >  Нельзя переопределять заданное по умолчанию пространство имен в типах контрактов данных, содержащих объявления `delegate`.  

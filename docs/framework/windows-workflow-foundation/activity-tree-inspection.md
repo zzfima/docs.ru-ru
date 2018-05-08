@@ -1,23 +1,12 @@
 ---
-title: "Проверка дерева действий"
-ms.custom: 
+title: Проверка дерева действий
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 100d00e4-8c1d-4233-8fbb-dd443a01155d
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: efb7f8f1603de67f21aee7e1746670e324d5e238
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4f2ca6bff27cfe0e3362e2a3b95cd08a0f8d5297
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="activity-tree-inspection"></a>Проверка дерева действий
 Проверка дерева действий используется авторами приложений рабочих процессов для проверки рабочих процессов, размещенных приложением. Используя службы <xref:System.Activities.WorkflowInspectionServices>, в рабочих процессах можно искать определенные дочерние действия, отдельно взятые действия и их свойства могут быть перечислены, а метаданные действий времени выполнения могут быть кэшированы в определенное время. В этом разделе представлены общие сведения о службах <xref:System.Activities.WorkflowInspectionServices> и их использовании для проверки дерева действий.  
@@ -39,7 +28,7 @@ ms.lasthandoff: 12/22/2017
 **Элемент списка 4**   
 **Элемент списка 5**   
 **Элементы, добавленные в коллекцию.**   
-**Последовательности**   
+**последовательности**   
  **Литерал < список\<строка >>**  
  **While**  
  **AddToCollection\<строка >**  
@@ -52,7 +41,7 @@ ms.lasthandoff: 12/22/2017
  **VariableValue < IEnumerable\<строка >>**  
  **WriteLine**  
  **DelegateArgumentValue\<строка >**  
- **Последовательности**  
+ **последовательности**  
  **WriteLine**  
  **Литерал\<строка >** для извлечения определенного действия вместо перечисления всех действий, <xref:System.Activities.WorkflowInspectionServices.Resolve%2A> используется. Как <xref:System.Activities.WorkflowInspectionServices.Resolve%2A>, так <xref:System.Activities.WorkflowInspectionServices.GetActivities%2A> выполняют кэширование метаданных, если метод `WorkflowInspectionServices.CacheMetadata` не был вызван ранее. Если метод <xref:System.Activities.WorkflowInspectionServices.CacheMetadata%2A> уже был вызван, то <xref:System.Activities.WorkflowInspectionServices.GetActivities%2A> основывается на существующих метаданных. Таким образом, если с момента последнего вызова метода <xref:System.Activities.WorkflowInspectionServices.CacheMetadata%2A> в дерево были внесены изменения, <xref:System.Activities.WorkflowInspectionServices.GetActivities%2A> может возвратить неожиданные результаты. Если изменения были внесены в рабочий процесс после вызова <xref:System.Activities.WorkflowInspectionServices.GetActivities%2A>, метаданные могут быть кэшированы повторно путем вызова <xref:System.Activities.Validation.ActivityValidationServices> <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A> метод. Кэширование метаданных рассматривается в следующем разделе.  
   

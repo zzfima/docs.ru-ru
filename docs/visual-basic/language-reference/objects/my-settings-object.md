@@ -1,25 +1,17 @@
 ---
 title: Объект My.Settings
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - My.MySettingsProperty.Settings
 - My.Settings
 helpviewer_keywords:
 - My.Settings object
 ms.assetid: 41f30dc1-202a-4273-b9b7-5728941f996c
-caps.latest.revision: 16
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 2f744460f8ea6c6c7f5c8c5e1658bd357e910def
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 54176ae6706311b17227c7dc21a5060c9b369753
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mysettings-object"></a>Объект My.Settings
 Предоставляет свойства и методы для доступа к параметрам приложения.  
@@ -52,7 +44,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="tasks"></a>Задачи  
  В следующей таблице перечислены примеры задач, связанных с `My.Settings` объекта.  
   
-|Целевой тип|См.|  
+|Кому|См.|  
 |---|---|  
 |Чтение параметров приложения|[Практическое руководство. Чтение параметров приложения в Visual Basic](../../../visual-basic/developing-apps/programming/app-settings/how-to-read-application-settings.md)|  
 |Изменение параметров пользователя|[Практическое руководство. Изменение пользовательских параметров в Visual Basic](../../../visual-basic/developing-apps/programming/app-settings/how-to-change-user-settings.md)|  

@@ -1,39 +1,25 @@
 ---
-title: "Практическое руководство. Реализация ICommandSource"
-ms.custom: 
+title: Практическое руководство. Реализация ICommandSource
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - ICommandSource interfaces [WPF], implementing
 ms.assetid: 7452dd39-6e11-44bf-806a-31d87f3772ac
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: d82a211f59fbdecdc932b7e57b242274e91cd5b2
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9308bfbbb7fff86ca5e93c1155cc29e4ee0d05f2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-implement-icommandsource"></a>Практическое руководство. Реализация ICommandSource
-В этом примере показано, как создать источник команды путем реализации <xref:System.Windows.Input.ICommandSource>.  Источник команды — это объект, который знает, как вызывать команду.  <xref:System.Windows.Input.ICommandSource> Интерфейс предоставляет три члена: <xref:System.Windows.Input.ICommandSource.Command%2A>, <xref:System.Windows.Input.ICommandSource.CommandParameter%2A>, и <xref:System.Windows.Input.ICommandSource.CommandTarget%2A>.  <xref:System.Windows.Input.ICommandSource.Command%2A>Представляет команду, которая будет вызываться. <xref:System.Windows.Input.ICommandSource.CommandParameter%2A> Имеет тип данных, определяемых пользователем, передаваемый из источника команды методу, который обрабатывает команду. <xref:System.Windows.Input.ICommandSource.CommandTarget%2A> — Объект, для которого выполняется команда.  
+В этом примере показано, как создать источник команды путем реализации <xref:System.Windows.Input.ICommandSource>.  Источник команды — это объект, который знает, как вызывать команду.  <xref:System.Windows.Input.ICommandSource> Интерфейс предоставляет три члена: <xref:System.Windows.Input.ICommandSource.Command%2A>, <xref:System.Windows.Input.ICommandSource.CommandParameter%2A>, и <xref:System.Windows.Input.ICommandSource.CommandTarget%2A>.  <xref:System.Windows.Input.ICommandSource.Command%2A> Представляет команду, которая будет вызываться. <xref:System.Windows.Input.ICommandSource.CommandParameter%2A> Имеет тип данных, определяемых пользователем, передаваемый из источника команды методу, который обрабатывает команду. <xref:System.Windows.Input.ICommandSource.CommandTarget%2A> — Объект, для которого выполняется команда.  
   
  В этом примере класс создается какие подклассов <xref:System.Windows.Controls.Slider> управления и реализует <xref:System.Windows.Input.ICommandSource>.  
   
 ## <a name="example"></a>Пример  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]предоставляет несколько классов, которые реализуют <xref:System.Windows.Input.ICommandSource>, такие как <xref:System.Windows.Controls.Button>, <xref:System.Windows.Controls.MenuItem>, и <xref:System.Windows.Controls.ListBoxItem>.  Источник команды определяет порядок вызова команды.   <xref:System.Windows.Controls.Button>и <xref:System.Windows.Controls.MenuItem> вызова команды при щелчке.  Объект <xref:System.Windows.Controls.ListBoxItem> вызывает команду при двойном щелчке. Эти классы становятся лишь команду источника при их <xref:System.Windows.Input.ICommandSource.Command%2A> свойству.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] предоставляет несколько классов, которые реализуют <xref:System.Windows.Input.ICommandSource>, такие как <xref:System.Windows.Controls.Button>, <xref:System.Windows.Controls.MenuItem>, и <xref:System.Windows.Controls.ListBoxItem>.  Источник команды определяет порядок вызова команды.   <xref:System.Windows.Controls.Button> и <xref:System.Windows.Controls.MenuItem> вызова команды при щелчке.  Объект <xref:System.Windows.Controls.ListBoxItem> вызывает команду при двойном щелчке. Эти классы становятся лишь команду источника при их <xref:System.Windows.Input.ICommandSource.Command%2A> свойству.  
   
  В этом примере команда будет вызываться при перемещении ползунка или, точнее, когда <xref:System.Windows.Controls.Primitives.RangeBase.Value%2A> изменить свойство.  
   

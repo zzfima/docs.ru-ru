@@ -1,27 +1,15 @@
 ---
-title: "Получение уведомления об изменении данных привязки Windows Forms"
-ms.custom: 
+title: Получение уведомления об изменении данных привязки Windows Forms
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Windows Forms, data binding
 - Windows Forms, adding change notification for data binding
 ms.assetid: b5b10f90-0585-41d9-a377-409835262a92
-caps.latest.revision: "17"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 827e93ad779dfeb2dd398a2fc031fcb99a77a39c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 79ad52b6db8cb7be7f4e3162b8f726e8cbe22dcf
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="change-notification-in-windows-forms-data-binding"></a>Получение уведомления об изменении данных привязки Windows Forms
 Одним из наиболее важных понятий привязки данных Windows Forms является *уведомление об изменении*. Чтобы обеспечить источника данных и связанными элементами управления всегда самые последние данные, необходимо добавить уведомление об изменении для привязки данных. В частности вы хотите убедиться, что элементы управления с привязкой уведомления об изменении, внесенные в источнике данных, а источник данных получает уведомление об изменениях, внесенных в свойства привязанного элемента управления.  

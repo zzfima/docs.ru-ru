@@ -1,11 +1,6 @@
 ---
-title: "Оператор SyncLock"
+title: Оператор SyncLock
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.SyncLock
 - SyncLock
@@ -14,14 +9,11 @@ helpviewer_keywords:
 - SyncLock statement [Visual Basic]
 - locks, threads
 ms.assetid: 14501703-298f-4d43-b139-c4b6366af176
-caps.latest.revision: "17"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: c363b41bb7a409c490a6e07d4a1a4f1bb44c1438
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: cf2aad9ec2ba67200d175fbcddfcb49afeac6efc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="synclock-statement"></a>Оператор SyncLock
 Получает монопольную блокировку для блока операторов перед выполнением блока.  
@@ -45,7 +37,7 @@ End SyncLock
  Завершает `SyncLock` блока.  
   
 ## <a name="remarks"></a>Примечания  
- `SyncLock` Оператор гарантирует, что блок операторов не будут выполняться одновременно несколькими потоками. `SyncLock`запрещает каждому потоку входе в блок, пока его не выполняет никакой другой поток.  
+ `SyncLock` Оператор гарантирует, что блок операторов не будут выполняться одновременно несколькими потоками. `SyncLock` запрещает каждому потоку входе в блок, пока его не выполняет никакой другой поток.  
   
  Чаще всего используют `SyncLock` для защиты данных от обновления несколькими потоками одновременно. Операторы для работы с данными необходимо перейти к завершению без прерывания, поместите их внутри `SyncLock` блока.  
   
@@ -90,7 +82,7 @@ End SyncLock
 ### <a name="code"></a>Код  
  [!code-vb[VbVbalrThreading#1](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/synclock-statement_1.vb)]  
   
-### <a name="description"></a>Описание:  
+### <a name="description"></a>Описание  
  В следующем примере используется потоков и `SyncLock`. При условии, что `SyncLock` присутствует оператор, блок операторов является критической секции и `balance` никогда не будет отрицательным числом. Вы можете закомментировать `SyncLock` и `End SyncLock` инструкции, чтобы выявить эффект от пропускают `SyncLock` ключевое слово.  
   
 ### <a name="code"></a>Код  

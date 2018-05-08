@@ -1,34 +1,20 @@
 ---
 title: Конфигурация клиента
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 5da5bd3b-65d9-43b7-91b9-cc9e989b1350
-caps.latest.revision: 8
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: c2c0d17c7274cc9fdaf1b5080950ddb4f69f539a
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 0fd3d1a15164447275ef488ac91b9a8bd240032d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="client-configuration"></a>Конфигурация клиента
-Конфигурацию клиента [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] можно использовать для задания адреса, привязки, поведения и контракта - основополагающих свойств конечной точки клиента, которая используется клиентом для подключения к конечным точкам службы. [ \<Клиента >](../../../../docs/framework/configure-apps/file-schema/wcf/client.md) элемент имеет [ \<endpoint >](http://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) элемент, атрибуты которого используются для настройки основополагающих свойств конечной точки. Эти атрибуты обсуждаются в подразделе "Настройка конечных точек" данного раздела.  
+Конфигурация клиента Windows Communication Foundation (WCF) можно использовать для указания адреса, привязки, поведения и контракта, «ABC» свойства конечной точки клиента, которые используются клиентами для подключения к конечным точкам службы. [ \<Клиента >](../../../../docs/framework/configure-apps/file-schema/wcf/client.md) элемент имеет [ \<endpoint >](http://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) элемент, атрибуты которого используются для настройки основополагающих свойств конечной точки. Эти атрибуты обсуждаются в подразделе "Настройка конечных точек" данного раздела.  
   
  [ \<Endpoint >](http://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) элемент также содержит [ \<метаданных >](../../../../docs/framework/configure-apps/file-schema/wcf/metadata.md) элемент, используемый для задания параметров импорта и экспорта метаданных, [ \<заголовки >](../../../../docs/framework/configure-apps/file-schema/wcf/headers.md) элемент, содержащий коллекцию заголовков настраиваемый адрес, и [ \<удостоверение >](../../../../docs/framework/configure-apps/file-schema/wcf/identity.md) элемент, который позволяет выполнять проверку подлинности конечной точки другими конечными точками обмен сообщениями с ним. [ \<Заголовки >](../../../../docs/framework/configure-apps/file-schema/wcf/headers.md) и [ \<удостоверение >](../../../../docs/framework/configure-apps/file-schema/wcf/identity.md) элементы являются частью <xref:System.ServiceModel.EndpointAddress> и обсуждаются в [адреса](../../../../docs/framework/wcf/feature-details/endpoint-addresses.md) раздела. Ссылки на разделы, в которых рассматривается использование расширений метаданных, приведены в подразделе "Настройка метаданных" данного раздела.  
   
 ## <a name="configuring-endpoints"></a>Настройка конечных точек  
- Конфигурация клиента позволяет клиенту задавать одну или несколько конечных точек, каждая со своим именем, адресом и контрактом, ссылающихся на [ \<привязки >](../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md) и [ \< поведения >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md) элементов в конфигурации клиента, который будет использоваться для настройки этих конечных точек. Файл конфигурации клиента должен называться "App.config", так как это имя ожидается средой выполнения [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. В следующем примере показан файл конфигурации клиента.  
+ Конфигурация клиента позволяет клиенту задавать одну или несколько конечных точек, каждая со своим именем, адресом и контрактом, ссылающихся на [ \<привязки >](../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md) и [ \< поведения >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md) элементов в конфигурации клиента, который будет использоваться для настройки этих конечных точек. Файл конфигурации клиента должен называться «App.config», так как это имя, которое ожидает выполнения WCF. В следующем примере показан файл конфигурации клиента.  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  

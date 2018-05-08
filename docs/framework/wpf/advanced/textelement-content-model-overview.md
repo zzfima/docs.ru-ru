@@ -1,13 +1,6 @@
 ---
-title: "Общие сведения о модели содержимого TextElement"
-ms.custom: 
+title: Общие сведения о модели содержимого TextElement
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - TextElement content model [WPF]
 - flow content elements [WPF], TextElement content model
 ms.assetid: d0a7791c-b090-438c-812f-b9d009d83ee9
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 95d25ff6819ba913b7e9270bc2d87dd77032c5c6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4a50e8a10563fdc5e16ee2e2a46389e13b51e447
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="textelement-content-model-overview"></a>Общие сведения о модели содержимого TextElement
 Здесь описывается модель содержимого поддерживаемых содержимое <xref:System.Windows.Documents.TextElement>. <xref:System.Windows.Documents.Paragraph> Класс — это тип <xref:System.Windows.Documents.TextElement>. Модель содержимого описывает объекты/элементы, которые могут содержаться в других объектах. Обобщение модели содержимого для объектов, производных от <xref:System.Windows.Documents.TextElement>. Дополнительные сведения см. в разделе [Общие сведения о документа нефиксированного формата](../../../../docs/framework/wpf/advanced/flow-document-overview.md).  
@@ -69,9 +57,9 @@ ms.lasthandoff: 12/22/2017
 ## <a name="working-with-textelement-content-programmatically"></a>Работа с содержимым TextElement с помощью программных средств  
  Содержимое <xref:System.Windows.Documents.TextElement> состоит с помощью коллекций и поэтому программное управление содержимое <xref:System.Windows.Documents.TextElement> объектов можно сделать, работая с этими коллекциями. Существуют три различные коллекции, используемые <xref:System.Windows.Documents.TextElement> -производные классы:  
   
--   <xref:System.Windows.Documents.InlineCollection>: Представляет коллекцию <xref:System.Windows.Documents.Inline> элементов. <xref:System.Windows.Documents.InlineCollection>Определяет допустимое дочернее содержимое элементов <xref:System.Windows.Documents.Paragraph>, <xref:System.Windows.Documents.Span>, и <xref:System.Windows.Controls.TextBlock> элементы.  
+-   <xref:System.Windows.Documents.InlineCollection>: Представляет коллекцию <xref:System.Windows.Documents.Inline> элементов. <xref:System.Windows.Documents.InlineCollection> Определяет допустимое дочернее содержимое элементов <xref:System.Windows.Documents.Paragraph>, <xref:System.Windows.Documents.Span>, и <xref:System.Windows.Controls.TextBlock> элементы.  
   
--   <xref:System.Windows.Documents.BlockCollection>: Представляет коллекцию <xref:System.Windows.Documents.Block> элементов. <xref:System.Windows.Documents.BlockCollection>Определяет допустимое дочернее содержимое элементов <xref:System.Windows.Documents.FlowDocument>, <xref:System.Windows.Documents.Section>, <xref:System.Windows.Documents.ListItem>, <xref:System.Windows.Documents.TableCell>, <xref:System.Windows.Documents.Floater>, и <xref:System.Windows.Documents.Figure> элементы.  
+-   <xref:System.Windows.Documents.BlockCollection>: Представляет коллекцию <xref:System.Windows.Documents.Block> элементов. <xref:System.Windows.Documents.BlockCollection> Определяет допустимое дочернее содержимое элементов <xref:System.Windows.Documents.FlowDocument>, <xref:System.Windows.Documents.Section>, <xref:System.Windows.Documents.ListItem>, <xref:System.Windows.Documents.TableCell>, <xref:System.Windows.Documents.Floater>, и <xref:System.Windows.Documents.Figure> элементы.  
   
 -   <xref:System.Windows.Documents.ListItemCollection>: Элемент содержимого потока, представляющий определенный элемент содержимого в упорядоченную или неупорядоченную <xref:System.Windows.Documents.List>.  
   

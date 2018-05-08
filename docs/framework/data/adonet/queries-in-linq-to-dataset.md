@@ -1,27 +1,15 @@
 ---
-title: "Запросы в LINQ to DataSet"
-ms.custom: 
+title: Запросы в LINQ to DataSet
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: c1a78fa8-9f0c-40bc-a372-5575a48708fe
-caps.latest.revision: "3"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 7e07da38f7a75226d48ef84cc8d2dafd48f6e795
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: ef9334eec92ef06e5be07dae4391cdac43fed778
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="queries-in-linq-to-dataset"></a>Запросы в LINQ to DataSet
 Запрос представляет собой выражение, извлекающее данные из источника данных. Запросы обычно выражаются на специализированном языке запросов, например SQL для реляционных баз данных и XQuery для XML. Поэтому разработчикам приходится учить новый язык запросов для каждого типа источника данных и формата данных, для которых выполняется запрос. [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] реализует более простую и согласованную модель работы с данными для различных типов источников данных и различных форматов данных. В запросе [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] работа всегда происходит с программными объектами.  
@@ -37,7 +25,7 @@ ms.lasthandoff: 01/19/2018
  В отличие от отложенных запросов, возвращающих последовательности значений, запросы, получающие одноэлементное значение, выполняются немедленно. Примерами одноэлементных запросов являются <xref:System.Linq.Enumerable.Count%2A>, <xref:System.Linq.Enumerable.Max%2A>, <xref:System.Linq.Enumerable.Average%2A> и <xref:System.Linq.Enumerable.First%2A>. Они выполняются немедленно, так как результаты запросов необходимы для вычисления одноэлементного результата. Например, чтобы вычислить среднее из результатов запросов, запросы должны быть выполнены, только тогда усредняющая функция получит данные для обработки. Для принудительного немедленного выполнения запроса, не создающего одноэлементное значение, можно также использовать метод <xref:System.Linq.Enumerable.ToList%2A> или <xref:System.Linq.Enumerable.ToArray%2A>. Такая методика принудительного немедленного выполнения может оказаться полезной при кэшировании результатов запроса. Дополнительные сведения о отложенное и немедленное выполнение запроса см. в разделе [Приступая к работе с LINQ](http://msdn.microsoft.com/library/6cc9af04-950a-4cc3-83d4-2aeb4abe4de9).  
   
 ## <a name="queries"></a>Запросы  
- [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]запросы можно создавать два разных синтаксиса: синтаксис выражений запросов и синтаксис запросов на основе методов.  
+ [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] запросы можно создавать два разных синтаксиса: синтаксис выражений запросов и синтаксис запросов на основе методов.  
   
 ### <a name="query-expression-syntax"></a>Синтаксис выражений запросов  
  Выражения запроса используют декларативный синтаксис запроса. Этот синтаксис позволяет разработчику писать запросы на C# или Visual Basic в формате, похожем на SQL. С помощью синтаксиса выражения запроса можно выполнять даже сложную фильтрацию, упорядочение и группирование операций в источнике данных с помощью минимального программного кода. Дополнительные сведения см. в разделе [выражения запросов LINQ](http://msdn.microsoft.com/library/40638f19-fb46-4d26-a2d9-a383b48f5ed4) и [основные операции запроса (Visual Basic)](~/docs/visual-basic/programming-guide/concepts/linq/basic-query-operations.md).  

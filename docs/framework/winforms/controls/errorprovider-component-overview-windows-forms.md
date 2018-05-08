@@ -1,14 +1,6 @@
 ---
-title: "Общие сведения о компоненте ErrorProvider (Windows Forms)"
-ms.custom: 
+title: Общие сведения о компоненте ErrorProvider (Windows Forms)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - ErrorProvider
 helpviewer_keywords:
@@ -16,17 +8,11 @@ helpviewer_keywords:
 - error messages [Windows Forms], displaying
 - ErrorProvider component [Windows Forms], about ErrorProvider component
 ms.assetid: ced189f2-b5c8-46a7-a6f1-37f5af95dc99
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 589735156ad4d6d639c2449d6bd693e2b3a32d50
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2272220917f2d5adf15f1ba84a5d4c3d0ec07165
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="errorprovider-component-overview-windows-forms"></a>Общие сведения о компоненте ErrorProvider (Windows Forms)
 Windows Forms [ErrorProvider](../../../../docs/framework/winforms/controls/errorprovider-component-windows-forms.md) компонент используется для проверки пользовательского ввода в форме или элементе управления. Обычно используется в сочетании с проверка пользовательского ввода в форме или отображение ошибок в наборе данных. Использование поставщика ошибок — лучшую альтернативу по сравнению с сообщением об ошибке в окне сообщения, так как после закрытия этого окна сообщения сообщение об ошибке больше не отображается. <xref:System.Windows.Forms.ErrorProvider> Компонент отображает значок ошибки (![значок ErrorProvider](../../../../docs/framework/winforms/controls/media/vberrorprovidericon.gif "vbErrorProviderIcon")) рядом с соответствующим элементом управления, например текстовое поле; при наведении указателя мыши на значок ошибки появляется подсказка, показывающая строка сообщения об ошибке.  

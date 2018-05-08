@@ -1,14 +1,6 @@
 ---
-title: "Метод ICLRTaskManager::SetLocale"
-ms.custom: 
+title: Метод ICLRTaskManager::SetLocale
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICLRTaskManager.SetLocale
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: ed16bb7f-4206-43a8-b9e9-c5737b69e3af
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: bbed6bff52d7ccad38eb45d12a31d08dc8b1b774
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ab6b13c6b7dba34f5ea82d05f483b36bf96aab1d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="iclrtaskmanagersetlocale-method"></a>Метод ICLRTaskManager::SetLocale
 Уведомляет общеязыковой среды выполнения (CLR), что узел изменил значение идентификатора языкового стандарта (который сопоставляет региональные параметры и язык) в текущей выполняемой задаче.  
@@ -62,7 +50,7 @@ HRESULT SetLocale (
 |E_FAIL|Неизвестная Неустранимая ошибка. Если метод вернет значение E_FAIL, среда CLR больше не может использоваться в процессе. Последующие вызовы размещение методы возвращают значение HOST_E_CLRNOTAVAILABLE.|  
   
 ## <a name="remarks"></a>Примечания  
- `SetLocale`дает возможность выполнять какие-либо у него механизмы для синхронизации языковых стандартов для узла.  
+ `SetLocale` дает возможность выполнять какие-либо у него механизмы для синхронизации языковых стандартов для узла.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
@@ -71,7 +59,7 @@ HRESULT SetLocale (
   
  **Библиотека:** включена как ресурс в MSCorEE.dll  
   
- **Версии платформы .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Версии платформы .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>См. также  
  [Интерфейс ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)  

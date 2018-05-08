@@ -1,28 +1,17 @@
 ---
-title: "Как создать настраиваемого участника сохраняемости"
-ms.custom: 
+title: Как создать настраиваемого участника сохраняемости
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 1d9cc47a-8966-4286-94d5-4221403d9c06
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ebc83f100b4303b73ba2e6d3dc41d0f82e8f2c22
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fcd96e41d8fc7b36f9dff5f10e9bc2d9034d79b2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-custom-persistence-participant"></a>Как создать настраиваемого участника сохраняемости
 В следующей процедуре содержаться шаги для создания участника сохраняемости. В разделе [участия в сохраняемости](http://go.microsoft.com/fwlink/?LinkID=177735) образца и [расширения хранилища](../../../docs/framework/windows-workflow-foundation/store-extensibility.md) раздел, описывающий образец реализации участников сохраняемости.  
   
-1.  Создайте класс, который происходит от класса <xref:System.Activities.Persistence.PersistenceParticipant> или <xref:System.Activities.Persistence.PersistenceIOParticipant>. Класс PersistenceIOParticipant предлагает те же самые точки расширяемости, что и класс PersistenceParticipant, при этом он может принимать участие в операциях ввода-вывода данных. Выполните один или несколько следующих шагов.  
+1.  Создайте класс, который происходит от класса <xref:System.Activities.Persistence.PersistenceParticipant> или <xref:System.Activities.Persistence.PersistenceIOParticipant>. Класс PersistenceIOParticipant предлагает же точки расширяемости, что и класс PersistenceParticipant является возможность участия в операциях ввода-вывода. Выполните один или несколько следующих шагов.  
   
 2.  Выполните метод <xref:System.Activities.Persistence.PersistenceParticipant.CollectValues%2A>. **CollectValues** содержит два словарных параметра, один для хранения значений для чтения и записи и другой способ для сохранения значений только для записи (используется в дальнейшем в запросах). В этом методе необходимо заполнить словари данными, соответствующими участнику сохраняемости. Каждый словарь содержит имя значения в качестве ключа и само значение в качестве объекта <xref:System.Runtime.DurableInstancing.InstanceValue>.  
   
@@ -46,13 +35,13 @@ ms.lasthandoff: 12/22/2017
     protected virtual void PublishValues (IDictionary<XName,Object> readWriteValues)  
     ```  
   
-5.  Реализуйте **BeginOnSave** метод, если участник является участником ввода-ВЫВОДА сохраняемости. Метод вызывается во время создания сохранения. В этом методе необходимо выполнить дополнительные операции ввода-вывода при сохранении экземпляров рабочих процессов.  Если узел использует транзакцию для соответствующей команды сохраняемости, та же самая транзакция используется в Transaction.Current.  Помимо этого, PersistenceIOParticipants могут объявить о требовании к совместимости транзакций, в случае чего узел создаст транзакцию для сеанса сохраняемости, если такая транзакция не будет использована иначе.  
+5.  Реализуйте **BeginOnSave** метод, если участник является участником сохраняемости ввода-вывода. Метод вызывается во время создания сохранения. В этом методе необходимо выполнить дополнительные операции ввода-вывода при сохранении экземпляров рабочих процессов.  Если узел использует транзакцию для соответствующей команды сохраняемости, та же самая транзакция используется в Transaction.Current.  Помимо этого, PersistenceIOParticipants могут объявить о требовании к совместимости транзакций, в случае чего узел создаст транзакцию для сеанса сохраняемости, если такая транзакция не будет использована иначе.  
   
     ```  
     protected virtual IAsyncResult BeginOnSave (IDictionary<XName,Object> readWriteValues, IDictionary<XName,Object> writeOnlyValues, TimeSpan timeout, AsyncCallback callback, Object state)  
     ```  
   
-6.  Реализуйте **BeginOnLoad** метод, если участник является участником ввода-ВЫВОДА сохраняемости. Метод вызывается во время создания загрузки. В этом методе необходимо выполнить дополнительные операции ввода-вывода при загрузке экземпляров рабочих процессов. Если узел использует транзакцию для соответствующей команды сохраняемости, та же самая транзакция используется в Transaction.Current. Помимо этого, участники ввода-вывода данных сохраняемости могут объявить о требовании к совместимости транзакций, в случае чего узел создаст транзакцию для сеанса сохраняемости, если такая транзакция не будет использована иначе.  
+6.  Реализуйте **BeginOnLoad** метод, если участник является участником сохраняемости ввода-вывода. Метод вызывается во время создания загрузки. В этом методе необходимо выполнить дополнительные операции ввода-вывода при загрузке экземпляров рабочих процессов. Если узел использует транзакцию для соответствующей команды сохраняемости, та же самая транзакция используется в Transaction.Current. Кроме того участники ввода-вывода сохраняемости могут объявить о требовании к совместимости транзакций, в случае чего узел создаст транзакцию для сеанса сохраняемости, если такая транзакция не будет использована иначе.  
   
     ```  
     protected virtual IAsyncResult BeginOnLoad (IDictionary<XName,Object> readWriteValues, TimeSpan timeout, AsyncCallback callback, Object state)  

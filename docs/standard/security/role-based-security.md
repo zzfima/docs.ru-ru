@@ -1,13 +1,7 @@
 ---
-title: "Безопасность на основе ролей"
-ms.custom: 
+title: Безопасность на основе ролей
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - role-based security, about role-based security
 - user authentication, principals
@@ -17,18 +11,13 @@ helpviewer_keywords:
 - authentication [.NET Framework], principals
 - role-based security, principals
 ms.assetid: 578cc32b-5654-4d8b-9d8c-ebcbc5c75390
-caps.latest.revision: "13"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 18b2883fd69f5cadf2fce3dc677e5d2b79806d0b
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 596165bfac9c65898448714a4477b7f045bd87d7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="role-based-security"></a>Безопасность на основе ролей
 Роли часто используются в финансовых и деловых приложениях для применения политики. Например, приложение может установить ограничение на размер транзакции в зависимости от того, является ли сделавший запрос пользователь участником определенной роли. Служащие могут иметь доступ к проведению транзакций, размер которых меньше определенного порога, менеджер может иметь больший предел, а вице-президент — еще больший или неограниченный. Безопасность на основе ролей также можно использовать, когда приложению для завершения действия требуются многократные утверждения. В качестве примера можно привести систему закупок, в которой каждый сотрудник может создать заявку на покупку, но преобразовать эту заявку в заказ на покупку для отправки поставщику может только агент по закупкам.  
@@ -43,7 +32,7 @@ ms.lasthandoff: 12/23/2017
   
 ## <a name="related-topics"></a>См. также  
   
-|Заголовок|Описание:|  
+|Заголовок|Описание|  
 |-----------|-----------------|  
 |[Объекты Principal и Identity](../../../docs/standard/security/principal-and-identity-objects.md)|Описываются принципы настройки универсальных удостоверений и субъектов и удостоверений и субъектов Windows, а также управления ими.|  
 |[Основные понятия безопасности](../../../docs/standard/security/key-security-concepts.md)|Основные понятия, с которыми необходимо ознакомиться перед использованием механизмов безопасности .NET Framework.|  

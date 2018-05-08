@@ -1,34 +1,22 @@
 ---
 title: Процесс утверждения документа
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 9b240937-76a7-45cd-8823-7f82c34d03bd
-caps.latest.revision: 14
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 45a6a6b2cd3bf790c8170cef6a6111ee7dd0b27b
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
-ms.translationtype: MT
+ms.openlocfilehash: b1ef35f5a96399b669f0cda039bf1f6dd0fde979
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="document-approval-process"></a>Процесс утверждения документа
-В этом примере демонстрируется использование из многих Windows Workflow Foundation (WF) и [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] совместно. Вместе они реализуют сценарий утверждения документов. Клиентское приложение может представлять документы на утверждение и утверждать документы. Диспетчер утверждений облегчает взаимодействие между клиентами и обеспечивает соблюдение порядка утверждения. Утверждение - это рабочий процесс, который может выполняться несколькими способами. Поддерживается единичное утверждение, утверждение кворумом (частью группы утверждающих) и составное утверждение, состоящее из утверждения кворумом и следующего за ним единичного утверждения.  
+В этом образце демонстрируется использование многих возможностей Windows Workflow Foundation (WF) и Windows Communication Foundation (WCF) друг с другом. Вместе они реализуют сценарий утверждения документов. Клиентское приложение может представлять документы на утверждение и утверждать документы. Диспетчер утверждений облегчает взаимодействие между клиентами и обеспечивает соблюдение порядка утверждения. Утверждение - это рабочий процесс, который может выполняться несколькими способами. Поддерживается единичное утверждение, утверждение кворумом (частью группы утверждающих) и составное утверждение, состоящее из утверждения кворумом и следующего за ним единичного утверждения.  
   
 > [!IMPORTANT]
 >  Образцы уже могут быть установлены на компьютере. Перед продолжением проверьте следующий каталог (по умолчанию).  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) Чтобы загрузить все [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] образцов. Этот образец расположен в следующем каталоге.  
+>  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] образцов. Этот образец расположен в следующем каталоге.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Application\DocumentApprovalProcess`  
   

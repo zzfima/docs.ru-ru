@@ -1,24 +1,12 @@
 ---
-title: "Использование в WCF нескольких схем проверки подлинности"
-ms.custom: 
+title: Использование в WCF нескольких схем проверки подлинности
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: f32a56a0-e2b2-46bf-a302-29e1275917f9
-caps.latest.revision: "4"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e570185b7df06a47e8c7fb3319328e760079415d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 140211f10f7cdc88a3df8eb8ea1c30df73b0c4c7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-multiple-authentication-schemes-with-wcf"></a>Использование в WCF нескольких схем проверки подлинности
 В WCF теперь можно указать несколько схем проверки подлинности на одной конечной точке. Кроме того, службы, размещенные на веб-серверах, могут наследовать свои параметры проверки подлинности непосредственно из IIS. Резидентные службы могут указывать, какие схемы проверки подлинности можно использовать. Дополнительные сведения о настройке параметров проверки подлинности в службах IIS см. в разделе [проверки подлинности IIS](http://go.microsoft.com/fwlink/?LinkId=232458)  

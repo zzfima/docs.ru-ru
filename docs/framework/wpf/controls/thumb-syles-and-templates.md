@@ -1,13 +1,6 @@
 ---
-title: "Стили и шаблоны элемента Thumb"
-ms.custom: 
+title: Стили и шаблоны элемента Thumb
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - states [WPF], Thumb
 - styles [WPF], Thumb
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - ControlTemplate [WPF], Thumb
 - parts [WPF], Thumb
 ms.assetid: 86a49235-62d9-414e-923e-53126e3f930a
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 780ddc07c79aab111c17f9e7e551cfde85c68f3a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a32049befa84eb079fce7d2773360dc67cdbb8ff
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="thumb-syles-and-templates"></a>Стили и шаблоны элемента Thumb
 В этом разделе описываются стили и шаблоны для <xref:System.Windows.Controls.Primitives.Thumb> элемента управления. Можно изменить значение по умолчанию <xref:System.Windows.Controls.ControlTemplate> для предоставления уникального внешнего вида элемента управления. Подробнее см. в разделе [Настройка внешнего вида существующего элемента управления путем создания объекта ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  
@@ -36,7 +24,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="thumb-states"></a>Бегунок состояний  
  В следующей таблице перечислены визуальные состояния <xref:System.Windows.Controls.Primitives.Thumb> элемента управления.  
   
-|Имя VisualState|Имя VisualStateGroup|Описание:|  
+|Имя VisualState|Имя VisualStateGroup|Описание|  
 |-|-|-|  
 |Норм.|CommonStates|Состояние по умолчанию.|  
 |MouseOver|CommonStates|Указатель мыши расположен в элементе управления.|  

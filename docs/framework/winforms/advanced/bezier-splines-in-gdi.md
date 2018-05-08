@@ -1,13 +1,6 @@
 ---
-title: "Б &#233; Безье сплайны в GDI +"
-ms.custom: 
+title: B&#233;Безье сплайны в GDI +
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,18 +9,13 @@ helpviewer_keywords:
 - splines [Windows Forms], Bezier
 - GDI+, Bezier splines
 ms.assetid: 5774ce1e-87d4-4bc7-88c4-4862052781b8
-caps.latest.revision: "16"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 8cc06a81c879e6ebd50c4eb6a70590c28cc43f6e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2e247ec2bcd57c2fb2f5c32f61d38a2e7a267ff1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="b233zier-splines-in-gdi"></a>Б &#233; Безье сплайны в GDI +
+# <a name="b233zier-splines-in-gdi"></a>B&#233;Безье сплайны в GDI +
 Сплайн Безье — это кривая, задаваемая четырьмя точками: двумя конечными точками (p1 и p2) и двумя контрольными точками (c1 и c2). Кривая начинается в точке p1 и заканчивается в точке p2. Кривая не проходит через контрольные точки, но контрольные точки действуют как магниты удаление кривой в определенных направлениях и влияние на способ изгиба кривой. На следующем рисунке кривая Безье и ее конечные и контрольные точки.  
   
  ![Сплайны Безье](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art11a.gif "Aboutgdip02_art11a")  

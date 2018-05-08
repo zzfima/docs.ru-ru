@@ -1,29 +1,15 @@
 ---
 title: Практическое руководство. Блокировка конечных точек в среде предприятия
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 1b7eaab7-da60-4cf7-9d6a-ec02709cf75d
-caps.latest.revision: 21
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: e5b10665e9a820c7057231c684769bddf9cb0c79
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
-ms.translationtype: MT
+ms.openlocfilehash: c91faf201c9a7cb0e5dd810059dbaa39b1e8eb05
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-lock-down-endpoints-in-the-enterprise"></a>Практическое руководство. Блокировка конечных точек в среде предприятия
-Крупным предприятиям часто требуется, чтобы приложения разрабатывались в соответствии с политиками безопасности предприятия. В следующем разделе описано, как разработать и установить проверяющий элемент управления конечной точки клиента, который может проверять все установленные на компьютерах клиентские приложения [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
+Крупным предприятиям часто требуется, чтобы приложения разрабатывались в соответствии с политиками безопасности предприятия. Следующий раздел описывает, как разработать и установить проверяющий элемент конечной точки клиента, который может использоваться для проверки все клиентские приложения Windows Communication Foundation (WCF), установленных на компьютерах.  
   
  В этом случае проверяющий элемент управления является клиента проверяющий элемент управления, из-за этого поведения конечной точки добавляется клиенту [ \<commonBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/commonbehaviors.md) раздела в файле machine.config. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] загружает общие поведения конечных точек только для клиентских приложений и загружает общие поведения служб только для приложений служб. Чтобы установить тот же проверяющий элемент управления для приложения службы, этот элемент управления должен представлять собой поведение службы. Дополнительные сведения см. в разделе [ \<commonBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/commonbehaviors.md) раздела.  
   

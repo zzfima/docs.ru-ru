@@ -1,27 +1,15 @@
 ---
-title: "Технологическая сводка по элементам управления DataGridView (Windows Forms)"
-ms.custom: 
+title: Технологическая сводка по элементам управления DataGridView (Windows Forms)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - DataGridView control [Windows Forms], about DataGridView control
 - data grids [Windows Forms], about data grids
 ms.assetid: 094498c3-a126-4a3f-83fe-f69e96c7717b
-caps.latest.revision: "17"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e074229e4fe344633d277b77b6f7db881c154d8b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: cafd832e7105540ae684dd1feb4b33ab74f72836
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="datagridview-control-technology-summary-windows-forms"></a>Технологическая сводка по элементам управления DataGridView (Windows Forms)
 В этом разделе содержится сводная информация о системе управления `DataGridView` и классах, поддерживающих ее использование.  
@@ -63,8 +51,8 @@ ms.lasthandoff: 12/22/2017
 |Область технологий|Классы, интерфейсы, элементы конфигурации|  
 |---------------------|-------------------------------------------------|  
 |Привязка данных|<xref:System.Windows.Forms.BindingSource>|  
-|Представление данных|<xref:System.Windows.Forms.DataGridView><br /><br /> <xref:System.Windows.Forms.DataGridViewCell>и производные классы<br /><br /> <xref:System.Windows.Forms.DataGridViewRow>и производные классы<br /><br /> <xref:System.Windows.Forms.DataGridViewColumn>и производные классы<br /><br /> <xref:System.Windows.Forms.DataGridViewCellStyle>|  
-|<xref:System.Windows.Forms.DataGridView>Расширяемость|<xref:System.Windows.Forms.DataGridViewCell>и производные классы<br /><br /> <xref:System.Windows.Forms.DataGridViewColumn>и производные классы<br /><br /> <xref:System.Windows.Forms.IDataGridViewEditingCell><br /><br /> <xref:System.Windows.Forms.IDataGridViewEditingControl>|  
+|Представление данных|<xref:System.Windows.Forms.DataGridView><br /><br /> <xref:System.Windows.Forms.DataGridViewCell> и производные классы<br /><br /> <xref:System.Windows.Forms.DataGridViewRow> и производные классы<br /><br /> <xref:System.Windows.Forms.DataGridViewColumn> и производные классы<br /><br /> <xref:System.Windows.Forms.DataGridViewCellStyle>|  
+|<xref:System.Windows.Forms.DataGridView> Расширяемость|<xref:System.Windows.Forms.DataGridViewCell> и производные классы<br /><br /> <xref:System.Windows.Forms.DataGridViewColumn> и производные классы<br /><br /> <xref:System.Windows.Forms.IDataGridViewEditingCell><br /><br /> <xref:System.Windows.Forms.IDataGridViewEditingControl>|  
   
 ## <a name="whats-new"></a>Новые возможности  
  <xref:System.Windows.Forms.DataGridView> Элемент управления предназначен для законченное решение для представления табличных данных с помощью Windows Forms. Следует рассмотреть возможность использования <xref:System.Windows.Forms.DataGridView> элемента управления перед другим решениям, такого как <xref:System.Windows.Forms.DataGrid>, при разработке нового приложения. Дополнительные сведения см. в разделе [Различия элементов управления DataGridView и DataGrid в Windows Forms](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).  

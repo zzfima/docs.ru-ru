@@ -1,36 +1,22 @@
 ---
 title: Практическое руководство. Регистрация и настройка моникера службы
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - COM [WCF], configure service monikers
 - COM [WCF], register service monikers
 ms.assetid: e5e16c80-8a8e-4eef-af53-564933b651ef
-caps.latest.revision: 20
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 52b3ec27560ca2dc47b7951cb209f33f307fa7ea
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 1d245327c1e7d53de9a88c93ff0399d8e231a1df
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-register-and-configure-a-service-moniker"></a>Практическое руководство. Регистрация и настройка моникера службы
-Перед использованием моникера службы [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] в рамках приложения COM с типизированным контрактом необходимо зарегистрировать необходимые типы с атрибутами с помощью COM и настроить приложение COM и моникер в соответствии с необходимой конфигурацией привязки.  
+Перед использованием моникера службы Windows Communication Foundation (WCF) в рамках приложения COM с типизированным контрактом, необходимо зарегистрировать необходимые типы с атрибутами с помощью COM и настроить приложение COM и моникер в соответствии с необходимая привязка Конфигурация.  
   
 ### <a name="to-register-the-required-attributed-types-with-com"></a>Регистрация необходимых типов с атрибутами с помощью COM  
   
-1.  Используйте [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) средство для получения метаданных контракта из [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] службы. При этом будет создан исходный код сборки клиента [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] и файл конфигурации клиентского приложения.  
+1.  Используйте [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) средство для получения метаданных контракта службы WCF. Это создает исходный код для клиента WCF сборки и файла конфигурации приложения.  
   
 2.  Убедитесь, что все типы в сборке имеют пометку `ComVisible`. Для этого добавьте в файл AssemblyInfo.cs в проекте Visual Studio следующий атрибут.  
   
@@ -38,7 +24,7 @@ ms.lasthandoff: 04/28/2018
     [assembly: ComVisible(true)]  
     ```  
   
-3.  Скомпилируйте управляемый клиент [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] в виде сборки со строгим именем. Для этого нужно подписать ее с помощью пары ключей шифрования. Дополнительные сведения см. в разделе [подпись сборки строгим именем](http://go.microsoft.com/fwlink/?LinkId=94874) руководства разработчика .NET.  
+3.  Скомпилируйте управляемый клиент WCF, как сборка со строгими именами. Для этого нужно подписать ее с помощью пары ключей шифрования. Дополнительные сведения см. в разделе [подпись сборки строгим именем](http://go.microsoft.com/fwlink/?LinkId=94874) руководства разработчика .NET.  
   
 4.  С помощью средства регистрации сборок (Regasm.exe) с параметром `/tlb` зарегистрируйте типы сборки в COM.  
   
@@ -49,7 +35,7 @@ ms.lasthandoff: 04/28/2018
   
 ### <a name="to-configure-the-com-application-and-the-moniker-with-the-required-binding-configuration"></a>Настройка приложения COM и моникера с использованием нужной конфигурации привязки  
   
--   Поместить все определения привязки (созданные [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) в файле конфигурации приложения клиента) в файле конфигурации клиентского приложения. Например, для исполняемого файла Visual Basic 6.0 с именем CallCenterClient.exe конфигурацию необходимо помещать в файл с именем CallCenterConfig.exe.config в том же каталоге, что и исполняемый файл. Теперь клиентское приложение может использовать моникер. Обратите внимание, что конфигурация привязки не требуется, если используется один из стандартных типов привязок [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+-   Поместить все определения привязки (созданные [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) в файле конфигурации приложения клиента) в файле конфигурации клиентского приложения. Например, для исполняемого файла Visual Basic 6.0 с именем CallCenterClient.exe конфигурацию необходимо помещать в файл с именем CallCenterConfig.exe.config в том же каталоге, что и исполняемый файл. Теперь клиентское приложение может использовать моникер. Обратите внимание, что конфигурация привязки не требуется, если используется один из стандартных привязок типов, предоставляемых средой WCF.  
   
      Регистрируется следующий тип.  
   

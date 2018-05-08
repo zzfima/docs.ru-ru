@@ -1,12 +1,6 @@
 ---
-title: "Различия между свойствами и переменными в Visual Basic"
-ms.custom: 
+title: Различия между свойствами и переменными в Visual Basic
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - property values [Visual Basic]
 - variables [Visual Basic]
@@ -20,14 +14,11 @@ helpviewer_keywords:
 - variables [Visual Basic], and properties
 - properties [Visual Basic], and variables
 ms.assetid: 7a03a8be-5381-431f-bd7c-16e887e4e07b
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: cb30972e2b49a7005749f57c0223b9fa493cde52
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 126e4baa2752ba7ccb5e8ff7b06a44839c1d0af2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="differences-between-properties-and-variables-in-visual-basic"></a>Различия между свойствами и переменными в Visual Basic
 Переменные и свойства представляют значения, которые можно открыть. Однако существуют различия в хранении и реализации.  
@@ -41,7 +32,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="differences"></a>Различия  
  Ниже приведены некоторые важные отличия, переменные и свойства.  
   
-|Рассматриваемый|Переменная|Свойство|  
+|Рассматриваемый|Переменная|Свойство.|  
 |-------------------------|--------------|--------------|  
 |Объявление|Одиночный оператор объявления|Последовательность инструкций в блоке кода|  
 |Реализация|Одно место хранения|Исполняемый код (процедуры свойства)|  

@@ -1,28 +1,16 @@
 ---
-title: "Основы разработки элементов управления форм Windows Forms"
-ms.custom: 
+title: Основы разработки элементов управления форм Windows Forms
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - custom controls [Windows Forms], derivation types
 - programming concepts [Windows Forms], Windows Forms controls
 - controls [Windows Forms], creating
 ms.assetid: 6277bb81-90f7-4c5b-9f4b-b02bb42dd316
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: bcf06f4dc0d8c70ae85d5add5a2fee078238d5e8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b455912468376d2f5de0ac1f30b4fcab5bb93309
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="windows-forms-control-development-basics"></a>Основы разработки элементов управления форм Windows Forms
 Элемент управления Windows Forms — это класс, производный прямо или косвенно от <xref:System.Windows.Forms.Control?displayProperty=nameWithType>. Ниже описаны распространенные сценарии для разработки элементов управления Windows Forms.  
@@ -39,7 +27,7 @@ ms.lasthandoff: 12/22/2017
   
      В этом случае элемент управления следует наследовать от базового класса <xref:System.Windows.Forms.Control>. Можно добавить также а переопределять свойства, методы и события базового класса. Чтобы приступить к работе, см. [как: разработка простого элемента управления Windows Forms](../../../../docs/framework/winforms/controls/how-to-develop-a-simple-windows-forms-control.md).  
   
- Базовый класс для элементов управления Windows Forms, <xref:System.Windows.Forms.Control>, предоставляет все необходимое для визуального отображения в клиентских приложений Windows. <xref:System.Windows.Forms.Control>предоставляет дескриптор окна, обработку маршрутизации сообщений и предоставляет интерфейс событий события клавиатуры и мыши, а также других пользователей. Он предоставляет дополнительный макет и имеет специальные свойства для визуального отображения, такие как <xref:System.Windows.Forms.Control.ForeColor%2A>, <xref:System.Windows.Forms.Control.BackColor%2A>, <xref:System.Windows.Forms.Control.Height%2A>, <xref:System.Windows.Forms.Control.Width%2A>и многие другие. Кроме того он обеспечивает безопасность, поддержка и взаимодействие с элементами управления ActiveX работы с потоками. Поскольку существенная часть инфраструктуры предоставляется базовым классом, разрабатывать собственные элементы управления Windows Forms довольно просто.  
+ Базовый класс для элементов управления Windows Forms, <xref:System.Windows.Forms.Control>, предоставляет все необходимое для визуального отображения в клиентских приложений Windows. <xref:System.Windows.Forms.Control> предоставляет дескриптор окна, обработку маршрутизации сообщений и предоставляет интерфейс событий события клавиатуры и мыши, а также других пользователей. Он предоставляет дополнительный макет и имеет специальные свойства для визуального отображения, такие как <xref:System.Windows.Forms.Control.ForeColor%2A>, <xref:System.Windows.Forms.Control.BackColor%2A>, <xref:System.Windows.Forms.Control.Height%2A>, <xref:System.Windows.Forms.Control.Width%2A>и многие другие. Кроме того он обеспечивает безопасность, поддержка и взаимодействие с элементами управления ActiveX работы с потоками. Поскольку существенная часть инфраструктуры предоставляется базовым классом, разрабатывать собственные элементы управления Windows Forms довольно просто.  
   
 ## <a name="see-also"></a>См. также  
  [Практическое руководство. Разработка простого элемента управления форм Windows Forms](../../../../docs/framework/winforms/controls/how-to-develop-a-simple-windows-forms-control.md)  

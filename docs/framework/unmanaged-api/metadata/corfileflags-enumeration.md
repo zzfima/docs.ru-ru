@@ -1,14 +1,6 @@
 ---
-title: "Перечисление CorFileFlags"
-ms.custom: 
+title: Перечисление CorFileFlags
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - CorFileFlags
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: d16703fd-518f-412e-92cb-74433d11032e
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 939c7997849adfed090ead3b197c690e0202f37c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7ecc2f62a6bb8119b7fe06a82aea827a58d04ecb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="corfileflags-enumeration"></a>Перечисление CorFileFlags
 Содержит значения, описывающие тип файла, определенного в вызове [IMetaDataAssemblyEmit::DefineFile](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definefile-method.md).  
@@ -50,7 +38,7 @@ typedef enum CorFileFlags {
   
 ## <a name="members"></a>Участники  
   
-|Член|Описание:|  
+|Член|Описание|  
 |------------|-----------------|  
 |`ffContainsMetaData`|Указывает, что файл не является файлом ресурсов.|  
 |`ffContainsNoMetaData`|Указывает, что файл, возможно, файл ресурсов содержит метаданные.|  
@@ -60,7 +48,7 @@ typedef enum CorFileFlags {
   
  **Заголовок:** CorHdr.h  
   
- **Версии платформы .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>См. также  
  [Перечисления метаданных](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

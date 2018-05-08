@@ -1,26 +1,12 @@
 ---
-title: "Образец интеграции с SystemWebRouting"
-ms.custom: 
+title: Образец интеграции с SystemWebRouting
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: f1c94802-95c4-49e4-b1e2-ee9dd126ff93
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: de8869956a59cb47623dbc4d84763e19d6f181bf
-ms.sourcegitcommit: 3a96c706e4dbb4667bf3bf37edac9e1666646f93
-ms.translationtype: MT
+ms.openlocfilehash: 43785f84cb3852a35f1ed3bd555287842455a89b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="systemwebrouting-integration-sample"></a>Образец интеграции с SystemWebRouting
 Этот образец показывает интеграцию уровня размещения с классами в пространстве имен <xref:System.Web.Routing>. Классы в пространстве имен <xref:System.Web.Routing> позволяют приложению использовать URL-адреса, которые не соответствуют непосредственно физическому ресурсу. С помощью веб-маршрутизации разработчик может создавать виртуальные адреса протокола HTTP, которые затем сопоставляются с действительными службами [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Это может быть полезно, когда службу WCF необходимо разместить без обязательного выделения физического файла или ресурса или к службам необходимо получать доступ по URL-адресам, не содержащим файлов, например HTML или ASPX. Этот образец показывает использование класса <xref:System.Web.Routing.RouteTable> для создания виртуальных URI-адресов, связанных с выполняющимися службами, которые определены в файле global.asax. 
@@ -39,7 +25,7 @@ ms.lasthandoff: 02/27/2018
    
 `<InstallDrive>:\WF_WCF_Samples`  
    
- Если этот каталог не существует, перейдите на страницу [Примеры Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все примеры [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Этот образец расположен в следующем каталоге.  
+ Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] образцов. Этот образец расположен в следующем каталоге.  
    
 `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Hosting\WebRoutingIntegration`  
   
@@ -51,11 +37,11 @@ ms.lasthandoff: 02/27/2018
   
      Отобразится список каталогов для образца. Обратите внимание, что файлы с расширением SVC отсутствуют.  
   
-3.  В адресной строке добавьте `movies` URL-адрес, так что он считывает http://localhost: [порт] / movies и нажмите клавишу ВВОД.  
+3.  В адресной строке добавьте `movies` URL-адрес, так что он считывает http://localhost:[порт] / movies и нажмите клавишу ВВОД.  
   
      В браузере откроется пакет фильмов.  
   
-4.  В адресной строке добавьте в URL-адрес слово `channels` (он будет выглядеть как http://localhost:[порт]/channels) и нажмите клавишу ВВОД.  
+4.  В адресной строке добавьте `channels` URL-адрес, так что это операций чтения http://localhost:[порт] / каналы и нажмите клавишу ВВОД.  
   
      В браузере откроется пакет каналов.  
   
@@ -81,11 +67,11 @@ ms.lasthandoff: 02/27/2018
   
 4.  При запуске приложения, щелкнув правой кнопкой мыши веб-приложение и выбрав **управление приложением** и затем **Обзор**.  
   
-5.  В адресной строке добавьте в URL-адрес слово `movies` (он будет выглядеть как http://localhost:[порт]/movies) и нажмите клавишу ВВОД.  
+5.  В адресной строке добавьте `movies` URL-адрес, так что это операций чтения http://localhost:[порт] / movies и нажмите клавишу ВВОД.  
   
      В браузере откроется пакет фильмов.  
   
-6.  В адресной строке добавьте в URL-адрес слово `channels` (он будет выглядеть как http://localhost:[порт]/channels) и нажмите клавишу ВВОД.  
+6.  В адресной строке добавьте `channels` URL-адрес, так что это операций чтения http://localhost:[порт] / каналы и нажмите клавишу ВВОД.  
   
      В браузере откроется пакет каналов.  
   

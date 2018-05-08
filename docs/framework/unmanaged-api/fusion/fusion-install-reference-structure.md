@@ -1,14 +1,6 @@
 ---
-title: "Структура FUSION_INSTALL_REFERENCE"
-ms.custom: 
+title: Структура FUSION_INSTALL_REFERENCE
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - FUSION_INSTALL_REFERENCE
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: ae181ec8-36bf-4ed1-9a02-ca27d417c80b
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 36321606fe208233fb6114fe9568b655f0e1b400
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4685d1a23fdf1874817522a16ccd428d81acd1ac
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="fusioninstallreference-structure"></a>Структура FUSION_INSTALL_REFERENCE
 Представляет ссылку, когда приложение устанавливает на сборку, установленную приложением в глобальном кэше сборок.  
@@ -51,7 +39,7 @@ typedef struct _FUSION_INSTALL_REFERENCE_ {
   
 ## <a name="members"></a>Участники  
   
-|Член|Описание:|  
+|Член|Описание|  
 |------------|-----------------|  
 |`cbSize`|Размер структуры в байтах.|  
 |`dwFlags`|Зарезервировано для будущего расширения. Это значение должно быть 0 (ноль).|  
@@ -64,7 +52,7 @@ typedef struct _FUSION_INSTALL_REFERENCE_ {
   
  **Заголовок:** Fusion.h  
   
- **Версии платформы .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Версии платформы .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>См. также  
  [Структуры Fusion](../../../../docs/framework/unmanaged-api/fusion/fusion-structures.md)  

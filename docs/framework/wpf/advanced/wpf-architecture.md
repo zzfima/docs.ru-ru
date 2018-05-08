@@ -1,14 +1,6 @@
 ---
 title: Архитектура WPF
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - properties [WPF], attached
 - attached properties [WPF]
@@ -24,17 +16,11 @@ helpviewer_keywords:
 - data templates [WPF]
 - thread [WPF], affinity
 ms.assetid: 8579c10b-76ab-4c52-9691-195ce02333c8
-caps.latest.revision: 17
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 29c8e2d632c37a299389b1bdc7f3f19f7df2f7e7
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 70afa7e193832837650d72837b25e26e3b64c180
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wpf-architecture"></a>Архитектура WPF
 Здесь представлен обзор возможностей иерархии классов Windows Presentation Foundation (WPF). Он охватывает большую часть основных подсистем [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] и описывает их взаимодействие. Здесь также подробно рассматриваются некоторые архитектурные решения [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].  
@@ -64,7 +50,7 @@ ms.lasthandoff: 04/30/2018
 ## <a name="systemwindowsdependencyobject"></a>System.Windows.DependencyObject  
  Одним из основных архитектурных принципов, использовавшихся в построении [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], является предпочтение свойств методам или событиям. Свойства являются декларативными, и с их помощью проще указать цель, а не действие. Поддерживается также система для отображения содержимого пользовательского интерфейса на основе моделей (или данных). Такой подход обусловил создание дополнительных свойств, к которым можно осуществить привязку в целях лучшего управления поведением приложения.  
   
- Чтобы иметь больше свойств управления системой, требовалась более полная система свойств, чем предоставляемая [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]. Простым примером такой полноты являются уведомления об изменении. Для двусторонней привязки необходимо, чтобы обе стороны привязки поддерживали уведомления об изменениях. Чтобы поведение зависело от значений свойств, необходимо получать уведомление в случае изменения значения свойства. В [!INCLUDE[TLA#tla_netframewk](../../../../includes/tlasharptla-netframewk-md.md)] существует интерфейс **INotifyPropertyChange**, который позволяет объекту публиковать уведомления об изменениях (однако это необязательно).  
+ Чтобы иметь больше свойств управления системой, требовалась более полная система свойств, чем предоставляемая [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]. Простым примером такой полноты являются уведомления об изменении. Для двусторонней привязки необходимо, чтобы обе стороны привязки поддерживали уведомления об изменениях. Чтобы поведение зависело от значений свойств, необходимо получать уведомление в случае изменения значения свойства. Microsoft .NET Framework существует интерфейс **INotifyPropertyChange**, который позволяет объекту публиковать уведомления об изменениях, однако это необязательно.  
   
  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] предоставляет обширную систему свойств, производный от <xref:System.Windows.DependencyObject> типа. Система свойств действительно является системой свойств "зависимостей" в том смысле, что она отслеживает зависимости между выражениями свойств и автоматически проверяет значение свойства при изменении зависимости. Например, если у вас есть свойство, которое наследует (например <xref:System.Windows.Controls.Control.FontSize%2A>), система автоматически обновляется при изменении родительский элемент, который наследует значение свойства.  
   

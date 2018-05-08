@@ -1,24 +1,14 @@
 ---
-title: "Машинный код .NET и компиляция"
-ms.custom: 
+title: Машинный код .NET и компиляция
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: e38ae4f3-3e3d-42c3-a4b8-db1aa9d84f85
-caps.latest.revision: "7"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d86d8a740aa0597a21c6665ee722f4a601dec9bf
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 046b71a8f1d948a785a15cfc148b93292bf673f7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="net-native-and-compilation"></a>Машинный код .NET и компиляция
 Приложения Windows 8.1 и классические приложения Windows, предназначенные для платформы .NET Framework, создаются на определенном языке программирования и компилируются в промежуточный язык (IL). Перед выполнением какого-либо метода в первый раз JIT-компилятор компилирует IL-код в машинный код для локального компьютера. В противоположность этому цепочка инструментов .NET Native преобразует исходный код в машинный код во время компиляции. В этом разделе сравнивается .NET Native с другими технологиями компиляции, доступными для приложений .NET Framework, а также детально рассматривается, как цепочка инструментов .NET Native создает исходный код, что поможет вам понять, почему исключения, возникающие в коде, скомпилированном .NET Native, не возникают в JIT-скомпилированном коде.  

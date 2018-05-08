@@ -1,29 +1,15 @@
 ---
 title: Аналитическая трассировка WCF
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 6029c7c7-3515-4d36-9d43-13e8f4971790
-caps.latest.revision: 21
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 57e3ee18848031bce8ffbb54d26353fe36ee1def
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: 99b28dcc1cfb32f5f6835eadee1bded14375c216
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wcf-analytic-tracing"></a>Аналитическая трассировка WCF
-Этот пример демонстрирует способы добавления собственных событий трассировки к потоку аналитически отслеживаемых событий, которые [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] записывает в трассировке событий Windows в [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]. Аналитически отслеживаемые события предназначены для упрощения добавления видимости в службы без ущерба для производительности. Этот образец показывает, как с помощью интерфейсов <xref:System.Diagnostics.Eventing?displayProperty=nameWithType> API писать события, которые интегрируются со службами [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+Этот образец демонстрирует способы добавления собственных событий трассировки к потоку аналитически, записывает трассировки событий Windows в Windows Communication Foundation (WCF) [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]. Аналитически отслеживаемые события предназначены для упрощения добавления видимости в службы без ущерба для производительности. Этот образец показывает, как с помощью интерфейсов <xref:System.Diagnostics.Eventing?displayProperty=nameWithType> API писать события, которые интегрируются со службами [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
   
  Дополнительные сведения о <xref:System.Diagnostics.Eventing?displayProperty=nameWithType> API см. в разделе <xref:System.Diagnostics.Eventing?displayProperty=nameWithType>.  
   
@@ -126,7 +112,7 @@ ms.lasthandoff: 04/30/2018
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) Чтобы загрузить все [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] образцов. Этот образец расположен в следующем каталоге.  
+>  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] образцов. Этот образец расположен в следующем каталоге.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\ETWTrace`  
   

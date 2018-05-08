@@ -1,27 +1,19 @@
 ---
 title: Регистрация сборок в COM
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: article
 helpviewer_keywords:
 - COM interop, registering assemblies
 - unregistering assemblies
 - interoperation with unmanaged code, registering assemblies
 - registering assemblies
 ms.assetid: 87925795-a3ae-4833-b138-125413478551
-caps.latest.revision: 11
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 3beaffdc0660055dd047f449388216ccfdd312cc
-ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
+ms.openlocfilehash: b92f36488dec113dcffffac3e6cdc0c26a690b5b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="registering-assemblies-with-com"></a>Регистрация сборок в COM
 С помощью программы командной строки, которая называется [средством регистрации сборок (Regasm.exe)](../tools/regasm-exe-assembly-registration-tool.md), можно регистрировать сборки для использования с моделью COM и отменять их регистрацию. Программа Regasm.exe добавляет сведения о классе в системный реестр, что обеспечивает прозрачное использование класса .NET Framework COM-клиентами. Класс <xref:System.Runtime.InteropServices.RegistrationServices> реализует эквивалентные функциональные возможности.  

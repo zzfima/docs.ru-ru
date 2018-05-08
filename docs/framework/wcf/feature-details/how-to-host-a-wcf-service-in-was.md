@@ -1,36 +1,22 @@
 ---
 title: Практическое руководство. Размещение службы WCF в WAS
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 9e3e213e-2dce-4f98-81a3-f62f44caeb54
-caps.latest.revision: 25
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: c4613587d829b082ee7182cc32e34d2d2d563241
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 7050d866233b248c7c8f9f41337ce451b5510c30
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-host-a-wcf-service-in-was"></a>Практическое руководство. Размещение службы WCF в WAS
-В настоящем разделе описаны основные этапы, требуемые для создания служб активации процесса Windows (также известных как WAS), размещенных в службе [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. WAS является службой активации нового процесса, представляющей собой обобщение функций Internet Information Services (IIS), которые работают с транспортными протоколами, отличными от HTTP. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] использует интерфейс адаптера прослушивателя для передачи запросов на активацию, полученных через протоколы, отличные от HTTP, которые поддерживаются [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], например такие как TCP, именованные каналы и MSMQ.  
+В этой статье описаны основные шаги, необходимые для создания служб активации процесса Windows (WAS) размещенной службы Windows Communication Foundation (WCF). WAS является службой активации нового процесса, представляющей собой обобщение возможностей Internet Information Services (IIS), которые работают с транспортными протоколами, отличными от HTTP. WCF использует интерфейс адаптера прослушивателя для передачи запросов на активацию, полученных через отличные от HTTP протоколы, поддерживаемые службами WCF, такие как TCP, именованные каналы и MSMQ.  
   
  Данный параметр размещения требует правильно установленных и настроенных компонентов активации WAS, но не требует написания кода размещения как части приложения. Дополнительные сведения об установке и настройке WAS см. в разделе [как: Установка и настройка компонентов активации WCF](../../../../docs/framework/wcf/feature-details/how-to-install-and-configure-wcf-activation-components.md).  
   
 > [!WARNING]
 >  Активация WAS не поддерживается, если канал обработки запросов веб-сервера работает в классическом режиме. Чтобы использовать активацию WAS, канал обработки запросов веб-сервера необходимо перевести в интегрированный режим.  
   
- Если служба [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] размещается в WAS, стандартные привязки используются обычным способом. Однако при использовании <xref:System.ServiceModel.NetTcpBinding> и <xref:System.ServiceModel.NetNamedPipeBinding> для настройки служб, размещенных на WAS, ограничение должно быть удовлетворено. Если разные конечные точки используют один и тот же транспорт, параметры привязки должны соответствовать семи следующим свойствам:  
+ Если служба WCF размещается в WAS, стандартные привязки используются обычным способом. Однако при использовании <xref:System.ServiceModel.NetTcpBinding> и <xref:System.ServiceModel.NetNamedPipeBinding> для настройки служб, размещенных на WAS, ограничение должно быть удовлетворено. Если разные конечные точки используют один и тот же транспорт, параметры привязки должны соответствовать семи следующим свойствам:  
   
 -   ConnectionBufferSize  
   

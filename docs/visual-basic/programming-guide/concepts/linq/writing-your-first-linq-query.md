@@ -1,34 +1,24 @@
 ---
-title: "Написание первого запроса LINQ (Visual Basic)"
-ms.custom: 
+title: Написание первого запроса LINQ (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - queries [LINQ in Visual Basic], writing
 - LINQ queries [Visual Basic]
 - LINQ [Visual Basic], writing queries
 ms.assetid: 4affb732-3e9b-4479-aa31-1f9bd8183cbe
-caps.latest.revision: "56"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: c16bb28189d5525654328da2dc80d868bbe61bf5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: f426aac5358837563081d2bf9783f6d4fe04d853
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="writing-your-first-linq-query-visual-basic"></a>Написание первого запроса LINQ (Visual Basic)
 *Запрос* представляет собой выражение, извлекающее данные из источника данных. Запросы выражаются на выделенном языке запросов. Со временем различных языков были разработаны для различных типов источников данных, например, SQL для реляционных баз данных и XQuery для XML. Поэтому для разработчиков приложений узнать, новый язык запросов для каждого типа источника данных или формата данных, который поддерживается.  
   
- [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]упрощает ситуацию, предлагая согласованную модель для работы с данными для различных типов источников данных и форматы. В запросе [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] вы всегда работаете с объектами. Использовать одинаковые базовые шаблоны кодирования для запроса и преобразования для которого данные в XML-документов, баз данных SQL, наборы данных ADO.NET и сущностей, коллекции .NET Framework и любые другие источника или формата [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] доступен поставщик. В этом документе описываются три фазы создания и использования основных [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] запросов.  
+ [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] упрощает ситуацию, предлагая согласованную модель для работы с данными для различных типов источников данных и форматы. В запросе [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] вы всегда работаете с объектами. Использовать одинаковые базовые шаблоны кодирования для запроса и преобразования для которого данные в XML-документов, баз данных SQL, наборы данных ADO.NET и сущностей, коллекции .NET Framework и любые другие источника или формата [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] доступен поставщик. В этом документе описываются три фазы создания и использования основных [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] запросов.  
   
 ## <a name="three-stages-of-a-query-operation"></a>Три этапа операции запроса  
- [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]операции запроса состоят из трех действий:  
+ [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] операции запроса состоят из трех действий:  
   
 1.  Получите источником или источниками данных.  
   

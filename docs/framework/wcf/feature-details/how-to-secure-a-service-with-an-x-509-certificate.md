@@ -1,32 +1,20 @@
 ---
 title: Практическое руководство. Защита службы с использованием сертификата X.509
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 2d06c2aa-d0d7-4e5e-ad7e-77416aa1c10b
-caps.latest.revision: 8
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: 89ad47ad898184b99f32743855091c0985722f77
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 73fd9919d1403ef592e5b81c11b6eb659baea669
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-secure-a-service-with-an-x509-certificate"></a>Практическое руководство. Защита службы с использованием сертификата X.509
-Защита службы с помощью сертификата X.509 - стандартный прием, используемый в большинстве привязок [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. В этом разделе описывается порядок настройки резидентной службы с сертификатом X.509.  
+Защита службы с помощью сертификата X.509-стандартный прием, используемый в большинстве привязок в Windows Communication Foundation (WCF). В этом разделе описывается порядок настройки резидентной службы с сертификатом X.509.  
   
  Предварительным условием является наличие действительного сертификата, который можно использовать для проверки подлинности сервера. Сертификат должен быть выдан серверу доверенным центром сертификации. Если сертификат недействителен, ни один клиент, пытающийся воспользоваться службой, не будет доверять этой службе, следовательно, соединение установлено не будет. Дополнительные сведения об использовании сертификатов см. в разделе [работа с сертификатами](../../../../docs/framework/wcf/feature-details/working-with-certificates.md).  
   
@@ -44,7 +32,7 @@ ms.lasthandoff: 04/30/2018
      [!code-csharp[C_SecureWithCertificate#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securewithcertificate/cs/source.cs#2)]
      [!code-vb[C_SecureWithCertificate#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securewithcertificate/vb/source.vb#2)]  
   
-4.  Создайте экземпляр класса <xref:System.Uri> для базового адреса службы. Поскольку привязка `WSHttpBinding` использует транспорт HTTP, универсальный код ресурса (URI) должен начинаться с соответствующей схемы; в противном случае при открытии службы [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] вызовет исключение.  
+4.  Создайте экземпляр класса <xref:System.Uri> для базового адреса службы. Поскольку `WSHttpBinding` использует транспорт HTTP, универсальный код ресурса (URI) должен начинаться с соответствующей схемы, или при открытии службы Windows Communication Foundation (WCF) вызовет исключение.  
   
      [!code-csharp[C_SecureWithCertificate#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securewithcertificate/cs/source.cs#3)]
      [!code-vb[C_SecureWithCertificate#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securewithcertificate/vb/source.vb#3)]  

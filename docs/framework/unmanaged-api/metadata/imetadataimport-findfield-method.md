@@ -1,14 +1,6 @@
 ---
-title: "Метод IMetaDataImport::FindField"
-ms.custom: 
+title: Метод IMetaDataImport::FindField
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IMetaDataImport.FindField
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 38cd4e16-fbb2-471c-aa73-ac51a1931ad2
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 3178d3ff3c64de5390e1150445f0c49c560aa32a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ac69bab45ccd39b6a055fe4d2f74950ab47da779
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="imetadataimportfindfield-method"></a>Метод IMetaDataImport::FindField
 Возвращает указатель на FieldDef токен для поля, которое заключено в указанном <xref:System.Type> и имеет имя и метаданные указанной подписи.  
@@ -71,7 +59,7 @@ HRESULT FindField (
   
  Подпись, передаваемый `FindField` должны были созданы в текущей области, поскольку подписи привязаны к определенным областям. Подпись можно внедрить токен, который определяет включающего класса или типа значения. (Маркер — это индекс в локальной таблице TypeDef). Не удается построить во время выполнения вне контекста текущей области и использовать ее в качестве входных данных для `FindField`.  
   
- `FindField`находит только поля, которые были определены непосредственно в классе или интерфейсе; наследуемые поля не найден.  
+ `FindField` находит только поля, которые были определены непосредственно в классе или интерфейсе; наследуемые поля не найден.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
@@ -80,7 +68,7 @@ HRESULT FindField (
   
  **Библиотека:** включена как ресурс в MsCorEE.dll  
   
- **Версии платформы .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>См. также  
  [Интерфейс IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  

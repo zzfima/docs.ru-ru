@@ -1,47 +1,35 @@
 ---
-title: "Практическое руководство. Закраска области с помощью системной кисти"
-ms.custom: 
+title: Практическое руководство. Закраска области с помощью системной кисти
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - system brushes [WPF], painting with
 - painting [WPF], with system brushes
 - brushes [WPF], painting with system brushes [WPF]
 ms.assetid: 5141a763-9235-42cb-a6bb-afc75513eac7
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 87979c16d52262c665e2fb37fdf6d7550c5930c9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f8a66ffc283016d65a17b33e98ce28fe4cd1c242
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-paint-an-area-with-a-system-brush"></a>Практическое руководство. Закраска области с помощью системной кисти
 <xref:System.Windows.SystemColors> Класс предоставляет доступ к системные кисти и цвета, такие как <xref:System.Windows.SystemColors.ControlBrush%2A>, <xref:System.Windows.SystemColors.ControlBrushKey%2A>, и <xref:System.Windows.SystemColors.DesktopBrush%2A>. Системная кисть является <xref:System.Windows.Media.SolidColorBrush> объект, который закрашивает область с помощью указанного системного цвета. Системная кисть всегда дает сплошную заливку; ее нельзя использовать для создания градиентной заливки.  
   
  Системные кисти можно использовать как статический или динамический ресурс. Используйте динамический ресурс, если нужно автоматическое обновление кисти при изменении пользователем кисти во время выполнения приложения; в противном случае используйте статический ресурс. Класс SystemColors содержит разнообразные статические свойства, которые следуют строгому правилу именования:  
   
--   *\<SystemColor>*Brush  
+-   *\<SystemColor>* Brush  
   
      Возвращает статическую ссылку на <xref:System.Windows.Media.SolidColorBrush> указанного системного цвета.  
   
--   *\<SystemColor>*BrushKey  
+-   *\<SystemColor>* BrushKey  
   
      Получает динамическую ссылку на <xref:System.Windows.Media.SolidColorBrush> указанного системного цвета.  
   
--   *\<SystemColor>*Color  
+-   *\<SystemColor>* Color  
   
      Возвращает статическую ссылку на <xref:System.Windows.Media.Color> структуру указанного системного цвета.  
   
--   *\<SystemColor>*ColorKey  
+-   *\<SystemColor>* ColorKey  
   
      Получает динамическую ссылку на <xref:System.Windows.Media.Color> структуру указанного системного цвета.  
   

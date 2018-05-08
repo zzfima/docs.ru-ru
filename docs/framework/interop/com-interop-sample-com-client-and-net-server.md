@@ -1,13 +1,6 @@
 ---
-title: "Пример COM-взаимодействия. COM-клиент и сервер .NET"
-ms.custom: 
+title: Пример COM-взаимодействия. COM-клиент и сервер .NET
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,16 +8,13 @@ helpviewer_keywords:
 - interoperation with unmanaged code, samples
 - COM interop, samples
 ms.assetid: a219cb2c-9fa2-4c90-9b26-939e0788f178
-caps.latest.revision: "7"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7bf7bed76503f9ee0919826d39fe3df502a55511
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 26963a6dc057c979b43e9697ec7a85a60fd3932d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="com-interop-sample-com-client-and-net-server"></a>Пример COM-взаимодействия. COM-клиент и сервер .NET
 В этом примере демонстрируется взаимодействие [клиента COM](#cpconcominteropsamplecomclientnetserveranchor1) и [сервера .NET](#cpconcominteropsamplecomclientnetserveranchor2), в рамках которого рассчитывается величина выплат по ипотечному кредиту. В этом примере клиент создает и вызывает экземпляр управляемого класса `Loan`, передает в экземпляр четыре аргумента (один из этих аргументов равен нулю) и отображает результаты вычислений. Примеры кода из этого образца используются в рамках всего этого раздела.  

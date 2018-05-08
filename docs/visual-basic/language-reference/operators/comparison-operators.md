@@ -1,11 +1,6 @@
 ---
-title: "Операторы сравнения (Visual Basic)"
+title: Операторы сравнения (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.<>
 - vb.>=
@@ -35,29 +30,26 @@ helpviewer_keywords:
 - Is operator [Visual Basic]
 - comparison operators [Visual Basic], Visual Basicl
 ms.assetid: d6cb12a8-e52e-46a7-8aaf-f804d634a825
-caps.latest.revision: "20"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: aa450f7978f46196663c7534b31597b04d80482a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 4e37f55b4c873c3dbea22a8edf0e5e2b58824720
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="comparison-operators-visual-basic"></a>Операторы сравнения (Visual Basic)
 Ниже приведены операторы сравнения, определенные в Visual Basic.  
   
- `<`оператор  
+ `<` Оператор  
   
- `<=`оператор  
+ `<=` Оператор  
   
- `>`оператор  
+ `>` Оператор  
   
- `>=`оператор  
+ `>=` Оператор  
   
- `=`оператор  
+ `=` Оператор  
   
- `<>`оператор  
+ `<>` Оператор  
   
  [Оператор Is](../../../visual-basic/language-reference/operators/is-operator.md)  
   
@@ -77,34 +69,34 @@ result = string Like pattern
   
 ## <a name="parts"></a>Части  
  `result`  
- Обязательный. Объект `Boolean` значение, представляющее результат сравнения.  
+ Обязательно. Объект `Boolean` значение, представляющее результат сравнения.  
   
  `expression`  
- Обязательный. Любое выражение.  
+ Обязательно. Любое выражение.  
   
  `comparisonoperator`  
- Обязательный. Любой оператор сравнения.  
+ Обязательно. Любой оператор сравнения.  
   
  `object1`, `object2`  
- Обязательный. Имя любого ссылочного объекта.  
+ Обязательно. Имя любого ссылочного объекта.  
   
  `string`  
- Обязательный. Произвольное выражение `String`.  
+ Обязательно. Произвольное выражение `String`.  
   
  `pattern`  
- Обязательный. Любой `String` выражение или диапазона символов.  
+ Обязательно. Любой `String` выражение или диапазона символов.  
   
 ## <a name="remarks"></a>Примечания  
  Следующая таблица содержит список операторов сравнения и условий, определяющих, будет ли `result` — `True` или `False`.  
   
-|Оператор|`True`Если|`False`Если|  
+|Оператор|`True` Если|`False` Если|  
 |--------------|---------------|----------------|  
-|`<`(Меньше)|`expression1` < `expression2`|`expression1` >= `expression2`|  
-|`<=`(Меньше или равно)|`expression1` <= `expression2`|`expression1` > `expression2`|  
-|`>`(Больше)|`expression1` > `expression2`|`expression1` <= `expression2`|  
-|`>=`(Больше или равно)|`expression1` >= `expression2`|`expression1` < `expression2`|  
-|`=`(Равно)|`expression1` = `expression2`|`expression1` <> `expression2`|  
-|`<>`(Не равно)|`expression1` <> `expression2`|`expression1` = `expression2`|  
+|`<` (Меньше)|`expression1` < `expression2`|`expression1` >= `expression2`|  
+|`<=` (Меньше или равно)|`expression1` <= `expression2`|`expression1` > `expression2`|  
+|`>` (Больше)|`expression1` > `expression2`|`expression1` <= `expression2`|  
+|`>=` (Больше или равно)|`expression1` >= `expression2`|`expression1` < `expression2`|  
+|`=` (Равно)|`expression1` = `expression2`|`expression1` <> `expression2`|  
+|`<>` (Не равно)|`expression1` <> `expression2`|`expression1` = `expression2`|  
   
 > [!NOTE]
 >  [=-Оператор](../../../visual-basic/language-reference/operators/assignment-operator.md) также используется как оператор присваивания.  
@@ -122,11 +114,11 @@ result = string Like pattern
 ## <a name="comparing-strings"></a>Сравнение строк  
  При сравнении строк строковые выражения вычисляются на основе их порядка сортировки в алфавитном порядке, в зависимости от `Option Compare` параметр.  
   
- `Option Compare Binary`Сравнение на основе порядка сортировки, производного от внутренних двоичных представлений символов строк базовых классов. Порядок сортировки определяется кодовой странице. В следующем примере показано двоичный порядок сортировки.  
+ `Option Compare Binary` Сравнение на основе порядка сортировки, производного от внутренних двоичных представлений символов строк базовых классов. Порядок сортировки определяется кодовой странице. В следующем примере показано двоичный порядок сортировки.  
   
  `A < B < E < Z < a < b < e < z < À < Ê < Ø < à < ê < ø`  
   
- `Option Compare Text`Сравнение на основе порядка сортировки без учета регистра, текстовое, определяемого языком приложения строк базовых классов. При задании `Option Compare Text` и сортировки символов в предыдущем примере, применяется следующий порядок сортировки текста:  
+ `Option Compare Text` Сравнение на основе порядка сортировки без учета регистра, текстовое, определяемого языком приложения строк базовых классов. При задании `Option Compare Text` и сортировки символов в предыдущем примере, применяется следующий порядок сортировки текста:  
   
  `(A=a) < (À= à) < (B=b) < (E=e) < (Ê= ê) < (Ø = ø) < (Z=z)`  
   
@@ -138,10 +130,10 @@ result = string Like pattern
   
 |Если операнды имеют|Сравнение|  
 |---------------------|-------------------|  
-|Оба`String`|Сравнение сортировки, основанное на характеристиках сортировки строк.|  
+|Оба `String`|Сравнение сортировки, основанное на характеристиках сортировки строк.|  
 |Числовые|Объекты преобразуются `Double`, числовое сравнение объектов.|  
-|Один числовой и один`String`|`String` Преобразуется в `Double` и выполняется числовое сравнение. Если `String` не может быть преобразован `Double`, <xref:System.InvalidCastException> возникает исключение.|  
-|Одно или оба значения имеют ссылочных типов, отличных от`String`|Возникает исключение <xref:System.InvalidCastException>.|  
+|Один числовой и один `String`|`String` Преобразуется в `Double` и выполняется числовое сравнение. Если `String` не может быть преобразован `Double`, <xref:System.InvalidCastException> возникает исключение.|  
+|Одно или оба значения имеют ссылочных типов, отличных от `String`|Возникает исключение <xref:System.InvalidCastException>.|  
   
  Числовое сравнение обрабатывает `Nothing` как 0. Строковое сравнение рассматривает `Nothing` как `""` (пустая строка).  
   

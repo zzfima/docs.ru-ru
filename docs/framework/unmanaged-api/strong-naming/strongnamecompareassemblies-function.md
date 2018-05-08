@@ -1,14 +1,6 @@
 ---
-title: "Функция StrongNameCompareAssemblies"
-ms.custom: 
+title: Функция StrongNameCompareAssemblies
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - StrongNameCompareAssemblies
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: 763f2375-efc6-4219-8806-a3b0567ef72b
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 1ed98b1713427a71c73c30ddd64188f61d51045c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4bd1d098f21a3d5ba43b6251c87c36df4347a924
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="strongnamecompareassemblies-function"></a>Функция StrongNameCompareAssemblies
 Определяет, является ли две сборки отличаются только по их подписи строгого имени.  
@@ -59,14 +47,14 @@ BOOLEAN StrongNameCompareAssemblies (
  `pdwResult`  
  [out] Одно из следующих значений:  
   
--   `SN_CMP_DIFFERENT`(0) — указывает, что сборки содержат разные данные.  
+-   `SN_CMP_DIFFERENT` (0) — указывает, что сборки содержат разные данные.  
   
--   `SN_CMP_IDENTICAL`(1) — указывает, что сборки одинаковы, включая их подписи и контрольной суммы.  
+-   `SN_CMP_IDENTICAL` (1) — указывает, что сборки одинаковы, включая их подписи и контрольной суммы.  
   
--   `SN_CMP_SIGONLY`(2) — указывает, что сборки отличаются только подпись и контрольная сумма.  
+-   `SN_CMP_SIGONLY` (2) — указывает, что сборки отличаются только подпись и контрольная сумма.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- `true`При успешном завершении; в противном случае `false`.  
+ `true` При успешном завершении; в противном случае `false`.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
@@ -75,7 +63,7 @@ BOOLEAN StrongNameCompareAssemblies (
   
  **Библиотека:** включена как ресурс в MsCorEE.dll  
   
- **Версии платформы .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="remarks"></a>Примечания  
  Подпись сборки со строгим именем состоит из текстовое имя сборки, версию, язык и региональные параметры и маркер открытого ключа.  

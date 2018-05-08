@@ -1,12 +1,6 @@
 ---
 title: Инструкция Set (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Set
 helpviewer_keywords:
@@ -16,14 +10,11 @@ helpviewer_keywords:
 - write-only properties
 - properties [Visual Basic], write-only
 ms.assetid: 9ecc27b4-df84-420d-9075-db25455fb3cd
-caps.latest.revision: 16
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 3b18e6c858e64e78d7ab85fdaafd70e510f7a02f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: dbc48d14bac54809e4ddd12c87429bf407169950
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="set-statement-visual-basic"></a>Инструкция Set (Visual Basic)
 Объявляет `Set` процедуру, которая используется для присвоения значения свойству.  
@@ -38,7 +29,7 @@ End Set
   
 ## <a name="parts"></a>Части  
  `attributelist`  
- Необязательно. В разделе [список атрибутов](../../../visual-basic/language-reference/statements/attribute-list.md).  
+ Необязательный. В разделе [список атрибутов](../../../visual-basic/language-reference/statements/attribute-list.md).  
   
  `accessmodifier`  
  Необязательный на более одного `Get` и `Set` инструкции в этом свойстве. Ниже указаны доступные значения.  
@@ -54,16 +45,16 @@ End Set
  В разделе [уровни в Visual Basic доступа](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
   
  `value`  
- Обязательный. Параметр, содержащий новое значение для свойства.  
+ Обязательно. Параметр, содержащий новое значение для свойства.  
   
  `datatype`  
  Обязателен, если `Option Strict` — `On`. Тип данных `value` параметра. Указанный тип данных должен быть таким же, как тип данных свойства, где это `Set` оператор объявлен.  
   
  `statements`  
- Необязательно. Один или несколько операторов, выполняемых при `Set` вызывается процедура свойства.  
+ Необязательный. Один или несколько операторов, выполняемых при `Set` вызывается процедура свойства.  
   
  `End Set`  
- Обязательный. Завершает определение `Set` процедуры свойства.  
+ Обязательно. Завершает определение `Set` процедуры свойства.  
   
 ## <a name="remarks"></a>Примечания  
  Каждое свойство должно иметь `Set` процедуры свойства, если свойство помечено как `ReadOnly`. `Set` Процедура используется для задания значения свойства.  
@@ -86,7 +77,7 @@ End Set
   
 -   **Возвращение из процедуры свойства.** Когда `Set` процедура возвращает в вызывающий код, выполнение продолжается после инструкции, которая предоставляет значение для сохранения.  
   
-     `Set`процедуры свойств можно вернуть с помощью [оператор Return](../../../visual-basic/language-reference/statements/return-statement.md) или [оператор Exit](../../../visual-basic/language-reference/statements/exit-statement.md).  
+     `Set` процедуры свойств можно вернуть с помощью [оператор Return](../../../visual-basic/language-reference/statements/return-statement.md) или [оператор Exit](../../../visual-basic/language-reference/statements/exit-statement.md).  
   
      `Exit Property` И `Return` инструкции вызывают Немедленный выход из процедуры свойства. Любое количество `Exit Property` и `Return` операторы могут использоваться в любом месте в процедуре, и могут быть использованы смешанные `Exit Property` и `Return` инструкции.  
   

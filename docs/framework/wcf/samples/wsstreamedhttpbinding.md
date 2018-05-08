@@ -1,24 +1,12 @@
 ---
 title: WSStreamedHttpBinding
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 97ce4d3d-ca6f-45fa-b33b-2429bb84e65b
-caps.latest.revision: "27"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7d6259640bae2b4be4fac73883df8945bf1db7ff
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: f146e469a323dffa2cdb9b76b6956be97747b2de
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wsstreamedhttpbinding"></a>WSStreamedHttpBinding
 В этом образце показано, как создать привязку, предназначенную для поддержки сценариев работы с потоками при использовании транспорта HTTP.  
@@ -31,7 +19,7 @@ ms.lasthandoff: 12/22/2017
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите на страницу [Примеры Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все примеры [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Этот образец расположен в следующем каталоге.  
+>  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] образцов. Этот образец расположен в следующем каталоге.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Binding\WSStreamedHttpBinding`  
   
@@ -39,7 +27,7 @@ ms.lasthandoff: 12/22/2017
   
 1.  Создание новой стандартной привязки  
   
-     Стандартные привязки в [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], такие как basicHttpBinding и netTcpBinding, настраивают соответствующие транспорты и стек каналов под конкретные требования. В этом образце привязка `WSStreamedHttpBinding` настраивает стек каналов на поддержку потоковой передачи. По умолчанию возможности WS-Security и надежного обмена сообщениями не добавляются в стек каналов, поскольку обе эти возможности не поддерживаются при потоковой передаче. Новая привязка реализуется в классе `WSStreamedHttpBinding`, наследуемом от <xref:System.ServiceModel.Channels.Binding>. `WSStreamedHttpBinding` содержит следующие элементы привязки: <xref:System.ServiceModel.Channels.HttpTransportBindingElement>, <xref:System.ServiceModel.Channels.HttpsTransportBindingElement>, <xref:System.ServiceModel.Channels.TransactionFlowBindingElement> и <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>. Класс предоставляет метод `CreateBindingElements()` для настройки результирующего стека привязок, как показано в следующем образце кода.  
+     Стандартные привязки в Windows Communication Foundation (WCF), такие как basicHttpBinding и netTcpBinding настройте соответствующие транспорты и стек каналов под конкретные требования. В этом образце привязка `WSStreamedHttpBinding` настраивает стек каналов на поддержку потоковой передачи. По умолчанию возможности WS-Security и надежного обмена сообщениями не добавляются в стек каналов, поскольку обе эти возможности не поддерживаются при потоковой передаче. Новая привязка реализуется в классе `WSStreamedHttpBinding`, наследуемом от <xref:System.ServiceModel.Channels.Binding>. `WSStreamedHttpBinding` содержит следующие элементы привязки: <xref:System.ServiceModel.Channels.HttpTransportBindingElement>, <xref:System.ServiceModel.Channels.HttpsTransportBindingElement>, <xref:System.ServiceModel.Channels.TransactionFlowBindingElement> и <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>. Класс предоставляет метод `CreateBindingElements()` для настройки результирующего стека привязок, как показано в следующем образце кода.  
   
     ```  
     public override BindingElementCollection CreateBindingElements()  
@@ -145,7 +133,7 @@ public class StreamedEchoService : IStreamedEchoService
 ```  
   
 ## <a name="the-wsstreamedhttpbinding-sample-client"></a>Образец клиента WSStreamedHttpBinding  
- Клиент, используемый для взаимодействия со службой с помощью привязки `WSStreamedHttpBinding`, расположен в подкаталоге клиента. При попытке доступа через браузер к адресу HTTPS, такому как https://localhost/servicemodelsamples/service.svc, появляется предупреждение системы безопасности, поскольку сертификат, используемый в этом образце, является тестовым сертификатом, созданным Makecert.exe. Чтобы клиент [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] мог работать с используемым тестовым сертификатом, в клиент был добавлен дополнительный код, подавляющий появление предупреждения системы безопасности. При использовании рабочих сертификатов этот код и соответствующие классы не требуются.  
+ Клиент, используемый для взаимодействия со службой с помощью привязки `WSStreamedHttpBinding`, расположен в подкаталоге клиента. Так как сертификат, используемый в этом примере является тестовым сертификатом, созданным Makecert.exe, появляется предупреждение системы безопасности отображается при попытке доступа к HTTPS-адрес в браузере, например https://localhost/servicemodelsamples/service.svc. Чтобы клиент [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] мог работать с используемым тестовым сертификатом, в клиент был добавлен дополнительный код, подавляющий появление предупреждения системы безопасности. При использовании рабочих сертификатов этот код и соответствующие классы не требуются.  
   
 ```  
 // WARNING: This code is only required for test certificates such as those created by makecert. It is   

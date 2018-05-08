@@ -1,24 +1,12 @@
 ---
-title: "Добавление ссылки на службу в решение рабочего процесса"
-ms.custom: 
+title: Добавление ссылки на службу в решение рабочего процесса
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 83574cf3-9803-49bc-837f-432936dc9c76
-caps.latest.revision: "5"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ee974ee5a9f4564b0e44256bc4773f9898d89fc6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 01bf4b0040d545ce42a9a7c803767aa4925de75e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="adding-a-service-reference-in-a-workflow-solution"></a>Добавление ссылки на службу в решение рабочего процесса
 Добавление ссылки на службу в приложение рабочего процесса работает несколько иначе, чем обычное приложение WCF. При выборе команды «Добавить ссылку на службу» и указании URL-адреса службы загружаются метаданные и создаются пользовательские действия, позволяющие вызывать службу WCF или службу рабочего процесса WCF, на которую была добавлена ссылка. После добавления ссылки на службу заново постройте решение, чтобы построить сформированные действия. После этого они отобразятся в области элементов конструктора рабочих процессов. Тем не менее обратите внимание, что это будет работать только при добавлении ссылки на службу в пределах решения рабочего процесса. Следующие веб-трансляции показано, как добавить ссылку на службу в других типов проектов: [вызова службы WCF из рабочего процесса в проекте веб-](http://go.microsoft.com/fwlink/?LinkId=207725).  

@@ -1,27 +1,15 @@
 ---
-title: "Приложения Windows, использующие обратные вызовы"
-ms.custom: 
+title: Приложения Windows, использующие обратные вызовы
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: ae2ea457-0764-4b06-8977-713c77e85bd2
-caps.latest.revision: "3"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: cb20d30122f5478236deab3528dcc225efddf4e0
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 7f8a23c32d4c1e2a91cd83770935b071764943e8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="windows-applications-using-callbacks"></a>Приложения Windows, использующие обратные вызовы
 В большинстве сценариев асинхронной обработки необходимо запустить операцию в базе данных и продолжить выполнение других процессов, не дожидаясь завершения данной операции. Однако во многих случаях требуется выполнение каких-либо действий после завершения операции в базе данных. Например, в Windows-приложении может потребоваться передать длительную операцию в фоновый поток, чтобы иметь возможность работать с пользовательским интерфейсом. Однако по завершении операции в базе данных необходимо будет использовать результаты для заполнения формы. В таких случаях лучше всего использовать ответный вызов.  

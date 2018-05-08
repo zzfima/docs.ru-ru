@@ -1,13 +1,6 @@
 ---
-title: "Вывод локального типа (Visual Basic)"
-ms.custom: 
+title: Вывод локального типа (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - local type inference
 - vb.TypeInfer
@@ -19,14 +12,11 @@ helpviewer_keywords:
 - inference [Visual Basic]
 - type inference [Visual Basic]
 ms.assetid: b8307f18-2e56-4ab3-a45a-826873f400f6
-caps.latest.revision: "43"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: d753d1fbdc60f70dcf0513d809f28a112243c111
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: b33b8b2d17c240e380377528d4f5d2f511381a7d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="local-type-inference-visual-basic"></a>Вывод локального типа (Visual Basic)
 Компилятор Visual Basic использует *вывод типа* для определения типов данных локальных переменных, объявленных без `As` предложения. Компилятор выводит тип переменной из типа выражения инициализации. Это позволяет объявлять переменные без явного указания типа, как показано в следующем примере. В результате объявлений оба `num1` и `num2` являются строго типизированными как целые числа.  
@@ -68,7 +58,7 @@ ms.lasthandoff: 11/21/2017
  [!code-vb[VbVbalrTypeInference#5](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/local-type-inference_6.vb)]  
   
 ## <a name="option-infer"></a>Option Infer  
- `Option Infer`позволяет указать, разрешено ли вывод локального типа в файле. Чтобы разрешить или заблокировать параметр, введите одну из следующих инструкций в начале файла.  
+ `Option Infer` позволяет указать, разрешено ли вывод локального типа в файле. Чтобы разрешить или заблокировать параметр, введите одну из следующих инструкций в начале файла.  
   
  `Option Infer On`  
   

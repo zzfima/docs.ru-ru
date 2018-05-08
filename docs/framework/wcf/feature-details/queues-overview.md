@@ -1,31 +1,17 @@
 ---
-title: "Общие сведения об очередях"
-ms.custom: 
+title: Общие сведения об очередях
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - queues [WCF], MSMQ integration
 ms.assetid: b8757992-ffce-40ad-9e9b-3243f6d0fce1
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: eb5d0f51fbbb6c8bad9bfbbfd9977368fdbd0666
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 85c8cb1fbbda9be14754174c7cb7c76513bd94c7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="queues-overview"></a>Общие сведения об очередях
-В этом разделе описаны общие и основные принципы, лежащие в основе взаимодействия с использованием очередей. В последующих подразделах содержатся подробные сведения о том, как описанные здесь принципы очередей представлены в [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
+В этом разделе описаны общие и основные принципы, лежащие в основе взаимодействия с использованием очередей. В последующих подразделах сведения о том, как описанные здесь принципы очередей объявленное в Windows Communication Foundation (WCF).  
   
 ## <a name="basic-queuing-concepts"></a>Основные принципы очередей  
  При разработке распределенного приложения важно выбрать правильный транспорт для связи между службами и клиентами. Выбор транспорта определяется несколькими факторами. Во-первых, выбор между транспортом очередей или прямым транспортом (как TCP или HTTP) определяется изоляцией между службой, клиентом и транспортом. Особенностью прямых транспортов, таких как TCP или HTTP, является то, что связь останавливается при прекращении функционирования службы или клиента или сбое сети. Приложение работает, только если служба, клиент и сеть выполняются одновременно. Транспорты очереди обеспечивают изоляцию, т. е. при сбое службы, клиента или каналов связи между ними клиент и служба могут продолжать функционировать.  

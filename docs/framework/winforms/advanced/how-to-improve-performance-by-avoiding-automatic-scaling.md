@@ -1,13 +1,6 @@
 ---
-title: "Практическое руководство. Повышение производительности за счет отключения автоматического масштабирования"
-ms.custom: 
+title: Практическое руководство. Повышение производительности за счет отключения автоматического масштабирования
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,19 +10,14 @@ helpviewer_keywords:
 - images [Windows Forms], using without automatic scaling
 - performance [Windows Forms], improving image
 ms.assetid: 5fe2c95d-8653-4d55-bf0d-e5afa28f223b
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 1f49fc4b1e59879b9ecc67295610187fa2e5e80d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e1c46f805b7ba2e2f2a1eb52042cc2ca08e63e03
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-improve-performance-by-avoiding-automatic-scaling"></a>Практическое руководство. Повышение производительности за счет отключения автоматического масштабирования
-[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]Автоматическое масштабирование образа при рисовании, снижает производительность. Кроме того, можно управлять масштабирования изображения, передав размеры прямоугольника назначения <xref:System.Drawing.Graphics.DrawImage%2A> метод.  
+[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] Автоматическое масштабирование образа при рисовании, снижает производительность. Кроме того, можно управлять масштабирования изображения, передав размеры прямоугольника назначения <xref:System.Drawing.Graphics.DrawImage%2A> метод.  
   
  Например, в следующем вызове <xref:System.Drawing.Graphics.DrawImage%2A> метод задает верхний левый угол (50, 30), но не указывает прямоугольника назначения.  
   

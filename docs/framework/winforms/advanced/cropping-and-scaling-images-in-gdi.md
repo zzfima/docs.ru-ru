@@ -1,13 +1,6 @@
 ---
-title: "Обрезка и масштабирование изображений в GDI+"
-ms.custom: 
+title: Обрезка и масштабирование изображений в GDI+
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -22,19 +15,14 @@ helpviewer_keywords:
 - rectangles [Windows Forms], destination
 - images [Windows Forms], compression
 ms.assetid: ad5daf26-005f-45bc-a2af-e0e97777a21a
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0bbe7ac4b8c541ea76392f94f538e41816cf5c3f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 84e2e74e71c13593cb013849c07a6e904a4d2c14
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cropping-and-scaling-images-in-gdi"></a>Обрезка и масштабирование изображений в GDI+
-Можно использовать <xref:System.Drawing.Graphics.DrawImage%2A> метод <xref:System.Drawing.Graphics> класса для рисования и размещения векторных и растровых изображений. <xref:System.Drawing.Graphics.DrawImage%2A>— перегружаемый метод, поэтому существует несколько способов передачи аргументов.  
+Можно использовать <xref:System.Drawing.Graphics.DrawImage%2A> метод <xref:System.Drawing.Graphics> класса для рисования и размещения векторных и растровых изображений. <xref:System.Drawing.Graphics.DrawImage%2A> — перегружаемый метод, поэтому существует несколько способов передачи аргументов.  
   
 ## <a name="drawimage-variations"></a>DrawImage вариантов  
  Один из вариантов <xref:System.Drawing.Graphics.DrawImage%2A> метод получает <xref:System.Drawing.Bitmap> и <xref:System.Drawing.Rectangle>. Прямоугольник определяет место назначения для операции рисования; то есть он указывает прямоугольник, в котором будет рисоваться изображение. Если размер прямоугольника назначения отличается от размера исходного изображения, изображение масштабируется по размерам прямоугольника назначения. В следующем примере кода показано, как рисовать тот же образ три раза: один раз без масштабирования, рисование с увеличением и рисование со сжатием:  

@@ -1,22 +1,14 @@
 ---
 title: Объект My.Computer
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - My.Computer object
 ms.assetid: cc814d79-6f7f-4e54-8b9d-5ecfdd77a0b8
-caps.latest.revision: 30
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: bbc4741272ea974a06d3e7bdebbfac5e2d9726e9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: c3af674bf56694d1ccf589033f97421faafd8c46
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mycomputer-object"></a>Объект My.Computer
 Включает свойства для управления компонентами компьютера, такими как звук, часы, клавиатура, файловая система и т. д.  
@@ -25,7 +17,7 @@ ms.lasthandoff: 11/21/2017
  Дополнительные сведения о методах и свойствах `My.Computer` см. в разделе <xref:Microsoft.VisualBasic.Devices.Computer>. Базовый класс <xref:Microsoft.VisualBasic.Devices.ServerComputer> содержит члены, которые доступны во всех проектах.  
   
 ## <a name="requirements"></a>Требования  
- **Пространство имен:**<xref:Microsoft.VisualBasic.Devices>  
+ **Пространство имен:** <xref:Microsoft.VisualBasic.Devices>  
   
  **Класс:** <xref:Microsoft.VisualBasic.Devices.Computer> (базовый класс <xref:Microsoft.VisualBasic.Devices.ServerComputer> содержит члены, которые доступны во всех проектах).  
   

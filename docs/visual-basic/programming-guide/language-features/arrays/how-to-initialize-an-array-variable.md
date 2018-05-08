@@ -1,26 +1,17 @@
 ---
-title: "Практическое руководство. Инициализация переменной массива в Visual Basic"
-ms.custom: 
+title: Практическое руководство. Инициализация переменной массива в Visual Basic
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - variables [Visual Basic], initializing
 - arrays [Visual Basic], variables
 - arrays [Visual Basic], initializing
 - arrays [Visual Basic], declaring
 ms.assetid: aadd7a60-7ca4-4608-b986-091f19e7fc10
-caps.latest.revision: "42"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 3ccdbed601d3fa87acb0833bc153c199b17a4eba
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: ee8cb91fd2fae9637a0d0e33fca63a4cdb9d2fce
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-initialize-an-array-variable-in-visual-basic"></a>Практическое руководство. Инициализация переменной массива в Visual Basic
 Инициализация переменной массива, включив в литерал массива `New` предложения и указав начальные значения массива. Можно указать тип или разрешить ему выводится из значения литерала массива. Дополнительные сведения о том, как вывести тип. в разделе «Заполнение массива с начального значения» в [массивы](../../../../visual-basic/programming-guide/language-features/arrays/index.md).  
@@ -41,7 +32,7 @@ ms.lasthandoff: 11/21/2017
   
      [!code-vb[VbVbalrArrays#17](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/VisualBasic/how-to-initialize-an-array-variable_2.vb)]  
   
--   Можно явно указать границы массива или опустить их и тогда компилятор выведет границы массива на основе значений в литерале массива. Если указать верхней границы и значения, необходимо включить значение для каждого элемента от индекса 0 до верхней границы каждого измерения. В следующем примере показано несколько способов объявить, создать и инициализировать переменную должна содержать двухмерный массив элементов типа`Short`  
+-   Можно явно указать границы массива или опустить их и тогда компилятор выведет границы массива на основе значений в литерале массива. Если указать верхней границы и значения, необходимо включить значение для каждого элемента от индекса 0 до верхней границы каждого измерения. В следующем примере показано несколько способов объявить, создать и инициализировать переменную должна содержать двухмерный массив элементов типа `Short`  
   
      [!code-vb[VbVbalrArrays#18](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/VisualBasic/how-to-initialize-an-array-variable_3.vb)]  
   

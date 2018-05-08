@@ -1,14 +1,6 @@
 ---
-title: "Метода ICLRRuntimeHost::ExecuteInAppDomain"
-ms.custom: 
+title: Метода ICLRRuntimeHost::ExecuteInAppDomain
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICLRRuntimeHost.ExecuteInAppDomain
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: e2b0e2db-3fae-4b56-844e-d30a125a660c
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: a8c540c9618655e6df30ad253e0c4cccdf6624e3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 96352ec5eaba67489dbef999925c56475611746c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="iclrruntimehostexecuteinappdomain-method"></a>Метода ICLRRuntimeHost::ExecuteInAppDomain
 Указывает <xref:System.AppDomain> в которой выполняется указанный управляемый код.  
@@ -62,7 +50,7 @@ HRESULT ExecuteInAppDomain(
   
 |HRESULT|Описание|  
 |-------------|-----------------|  
-|S_OK|`ExecuteInAppDomain`успешно возвращен.|  
+|S_OK|`ExecuteInAppDomain` успешно возвращен.|  
 |ЗНАЧЕНИЕ HOST_E_CLRNOTAVAILABLE|Среда CLR не загружена в процесс или находится в состоянии, в котором не может выполнять управляемый код или успешно обработать вызов.|  
 |HOST_E_TIMEOUT|Истекло время ожидания вызова.|  
 |HOST_E_NOT_OWNER|Вызывающий объект не является владельцем блокировки.|  
@@ -70,7 +58,7 @@ HRESULT ExecuteInAppDomain(
 |E_FAIL|Неизвестная Неустранимая ошибка. Если метод вернет значение E_FAIL, среда CLR больше не может использоваться в процессе. Последующие вызовы размещение методы возвращают значение HOST_E_CLRNOTAVAILABLE.|  
   
 ## <a name="remarks"></a>Примечания  
- `ExecuteInAppDomain`предоставляет узлу возможность контроль которую управляемых <xref:System.AppDomain> указанного управляемого метода следует выполнять в. Можно получить значение идентификатора домена приложения, который соответствует значению <xref:System.AppDomain.Id%2A> свойство путем вызова [GetCurrentAppDomainId-метод](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-getcurrentappdomainid-method.md).  
+ `ExecuteInAppDomain` предоставляет узлу возможность контроль которую управляемых <xref:System.AppDomain> указанного управляемого метода следует выполнять в. Можно получить значение идентификатора домена приложения, который соответствует значению <xref:System.AppDomain.Id%2A> свойство путем вызова [GetCurrentAppDomainId-метод](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-getcurrentappdomainid-method.md).  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
@@ -79,7 +67,7 @@ HRESULT ExecuteInAppDomain(
   
  **Библиотека:** включена как ресурс в MSCorEE.dll  
   
- **Версии платформы .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Версии платформы .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>См. также  
  [Интерфейс ICLRRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md)

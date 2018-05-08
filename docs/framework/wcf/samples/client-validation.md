@@ -1,31 +1,19 @@
 ---
-title: "Проверка клиента"
-ms.custom: 
+title: Проверка клиента
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: f0c1f805-1a81-4d0d-a112-bf5e2e87a631
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: bd9c698962bbca04ac05473265d95fc00517b039
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
-ms.translationtype: MT
+ms.openlocfilehash: a5c1c5f907a797bff3dff490cbc953879ab69718
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="client-validation"></a>Проверка клиента
 Службы часто публикуют метаданные, чтобы включить автоматическое создание и настройку типов прокси клиента. Если служба не является доверенной, клиентские приложения должны убедиться, что метаданные соответствуют политике клиентского приложения в плане безопасности, транзакций, типа контракта службы и т. д. В следующем образце показано, как создать поведение конечной точки клиента, которое проверяет конечную точку службы на предмет безопасности использования.  
   
  Служба предоставляет четыре конечных точки службы. Первая конечная точка использует WSDualHttpBinding, вторая - проверку подлинности NTLM, третья конечная точка включает поток транзакций, а четвертая использует проверку подлинности на основе сертификатов.  
   
- Для извлечения метаданных для службы клиент использует класс <xref:System.ServiceModel.Description.MetadataResolver>. Клиент реализует политику запрещения дуплексных привязок, проверки подлинности NTLM и потока транзакций с помощью поведения проверки. Для каждого импортированного из метаданных службы экземпляра <xref:System.ServiceModel.Description.ServiceEndpoint> клиентское приложение добавляет в `InternetClientValidatorBehavior` экземпляр поведения конечной точки <xref:System.ServiceModel.Description.ServiceEndpoint>, прежде чем пытаться использовать клиент [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] для подключения к конечной точке. Метод `Validate` этого поведения выполняется до вызова каких-либо операций в службе и реализует политику клиента, создавая исключение `InvalidOperationExceptions`.  
+ Для извлечения метаданных для службы клиент использует класс <xref:System.ServiceModel.Description.MetadataResolver>. Клиент реализует политику запрещения дуплексных привязок, проверки подлинности NTLM и потока транзакций с помощью поведения проверки. Для каждого <xref:System.ServiceModel.Description.ServiceEndpoint> экземпляра, импортированные из метаданных службы, клиентское приложение добавляет экземпляр `InternetClientValidatorBehavior` поведение конечной точки <xref:System.ServiceModel.Description.ServiceEndpoint> перед попыткой использования клиента Windows Communication Foundation (WCF) для подключения к Конечная точка. Метод `Validate` этого поведения выполняется до вызова каких-либо операций в службе и реализует политику клиента, создавая исключение `InvalidOperationExceptions`.  
   
 ### <a name="to-build-the-sample"></a>Сборка образца  
   

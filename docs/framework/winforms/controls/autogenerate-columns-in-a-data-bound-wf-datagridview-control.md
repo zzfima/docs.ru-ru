@@ -1,13 +1,6 @@
 ---
-title: "Практическое руководство. Автоматическое создание столбцов связанного с данными элемента управления DataGridView в Windows Forms"
-ms.custom: 
+title: Практическое руководство. Автоматическое создание столбцов связанного с данными элемента управления DataGridView в Windows Forms
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - columns [Windows Forms], autogenerating
 - DataGridView control [Windows Forms], data-bound columns
 ms.assetid: 699f6f9e-6aa5-4811-902b-6a2c57dec7d6
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 18d54da2c24d592b6fb6b53be10824c85682f9db
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 97fbc2c21f618b9fa0451c17ebf87579f51a3f0d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-autogenerate-columns-in-a-data-bound-windows-forms-datagridview-control"></a>Практическое руководство. Автоматическое создание столбцов связанного с данными элемента управления DataGridView в Windows Forms
 В следующем примере кода показано, как отобразить столбцы из связанного источника данных в <xref:System.Windows.Forms.DataGridView> элемента управления. Когда <xref:System.Windows.Forms.DataGridView.AutoGenerateColumns%2A> значение свойства `true` (по умолчанию), <xref:System.Windows.Forms.DataGridViewColumn> создается для каждого столбца в исходной таблице данных.  

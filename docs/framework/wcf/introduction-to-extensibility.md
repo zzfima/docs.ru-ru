@@ -1,33 +1,19 @@
 ---
 title: Введение в расширяемость
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - WCF [WCF], extensibility
 - Windows Communication Foundation [WCF], extensibility
 - extensibility [WCF]
 ms.assetid: ef56c251-d63c-4b3f-944f-b0c67bfb0f68
-caps.latest.revision: 7
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 991c3879990fd5b6562a2270c65e1560efadc022
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: 142478352c8eb1c893d8b95b960c6079f735fa06
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="introduction-to-extensibility"></a>Введение в расширяемость
-Модель приложений [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] предусматривает удовлетворение большей части связанных с обменом данных потребностей любого распределенного приложения. Однако всегда существуют сценарии, которые модель приложений по умолчанию и предоставленные системой реализации не поддерживают. Модель расширяемости [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] предназначена для поддержки пользовательских сценариев и позволяет изменять поведение системы на всех уровнях, вплоть до замены модели приложений целиком. В этом разделе кратко рассматриваются различные области расширения и даются ссылки на дополнительные сведения о каждой из них.  
+Модель приложения Windows Communication Foundation (WCF) предусматривает удовлетворение большей части связанных с обменом данных потребностей любого распределенного приложения. Однако всегда существуют сценарии, которые модель приложений по умолчанию и предоставленные системой реализации не поддерживают. Модель расширяемости [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] предназначена для поддержки пользовательских сценариев и позволяет изменять поведение системы на всех уровнях, вплоть до замены модели приложений целиком. В этом разделе кратко рассматриваются различные области расширения и даются ссылки на дополнительные сведения о каждой из них.  
   
 ## <a name="areas-to-extend"></a>Области расширения  
  Можно расширять следующее.  

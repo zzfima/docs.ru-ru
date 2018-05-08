@@ -1,14 +1,6 @@
 ---
 title: Общие сведения о панелях
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,17 +9,11 @@ helpviewer_keywords:
 - Panel control [WPF], about Panel control
 - controls [WPF], Panel
 ms.assetid: f73644af-9941-4611-8754-6d4cef03fc44
-caps.latest.revision: 48
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: dd04413636c7d6182ff01712eecedbbd4ed02761
-ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
+ms.openlocfilehash: 65f5fa9eeffdeb6e7bc869d159b4b33d75fd7570
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="panels-overview"></a>Общие сведения о панелях
 <xref:System.Windows.Controls.Panel> элементы являются компонентами, которые управляют отображением элементов — их размер и измерения, их положение и расположение их дочернего содержимого. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Предоставляет ряд предопределенных <xref:System.Windows.Controls.Panel> элементы, а также возможность создания пользовательских <xref:System.Windows.Controls.Panel> элементов.  
@@ -107,7 +93,7 @@ ms.lasthandoff: 04/09/2018
   
 <a name="Panels_overview_Canvas_subsection"></a>   
 ### <a name="canvas"></a>Canvas  
- <xref:System.Windows.Controls.Canvas> Элемент позволяет размещение содержимого в соответствии с абсолютным *x -* и *y -*координаты. Элементы могут быть нарисованы в уникальном месте или, если элементы занимают одни координаты, порядок, в котором они отображаются в разметке, определяется порядком, в котором нарисованы эти элементы.  
+ <xref:System.Windows.Controls.Canvas> Элемент позволяет размещение содержимого в соответствии с абсолютным *x -* и *y -* координаты. Элементы могут быть нарисованы в уникальном месте или, если элементы занимают одни координаты, порядок, в котором они отображаются в разметке, определяется порядком, в котором нарисованы эти элементы.  
   
  <xref:System.Windows.Controls.Canvas> предоставляет самый гибкий макет поддержки любых <xref:System.Windows.Controls.Panel>. Высота и ширина используются для определения области canvas, и элементам внутри назначаются абсолютные координаты относительно области родительского <xref:System.Windows.Controls.Canvas>. Четыре вложенных свойства, <xref:System.Windows.Controls.Canvas.Left%2A?displayProperty=nameWithType>, <xref:System.Windows.Controls.Canvas.Top%2A?displayProperty=nameWithType>, <xref:System.Windows.Controls.Canvas.Right%2A?displayProperty=nameWithType> и <xref:System.Windows.Controls.Canvas.Bottom%2A?displayProperty=nameWithType>, допускают точное управление расположением объекта в <xref:System.Windows.Controls.Canvas>, позволяющий разработчику размещения и упорядочения элементов на экране.  
   
@@ -245,7 +231,7 @@ ms.lasthandoff: 04/09/2018
   
  Аналогично, на основе поведения пользовательского макета производные классы (такие как <xref:System.Windows.Controls.Canvas> или <xref:System.Windows.Controls.Grid>) можно определить путем переопределения их <xref:System.Windows.FrameworkElement.ArrangeOverride%2A> и <xref:System.Windows.FrameworkElement.MeasureOverride%2A> методы.  
   
- Приведенный ниже код демонстрирует создание пользовательского <xref:System.Windows.Controls.Panel> элемента. Этот новый <xref:System.Windows.Controls.Panel>, определенный как `PlotPanel`, поддерживает размещение дочерних элементов с использованием жестко *x -* и *y -*координаты. В этом примере <xref:System.Windows.Shapes.Rectangle> (не показано) элемент располагается в точке с координатами 50 (*x*) до 50 (*y*).  
+ Приведенный ниже код демонстрирует создание пользовательского <xref:System.Windows.Controls.Panel> элемента. Этот новый <xref:System.Windows.Controls.Panel>, определенный как `PlotPanel`, поддерживает размещение дочерних элементов с использованием жестко *x -* и *y -* координаты. В этом примере <xref:System.Windows.Shapes.Rectangle> (не показано) элемент располагается в точке с координатами 50 (*x*) до 50 (*y*).  
   
  [!code-cpp[PlotPanel#1](../../../../samples/snippets/cpp/VS_Snippets_Wpf/PlotPanel/CPP/PlotPanel.cpp#1)]
  [!code-csharp[PlotPanel#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PlotPanel/CSharp/PlotPanel.cs#1)]

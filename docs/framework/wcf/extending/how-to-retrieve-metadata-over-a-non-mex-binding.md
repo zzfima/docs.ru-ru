@@ -1,33 +1,19 @@
 ---
 title: Как получить метаданные через привязку, не использующую MEX
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 2292e124-81b2-4317-b881-ce9c1ec66ecb
-caps.latest.revision: 10
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: b469a08ad9759a2d5213f13256ec2def96107acc
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 198c343aa6f25d55e518990dc1dbd2667a8c17ad
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-retrieve-metadata-over-a-non-mex-binding"></a>Как получить метаданные через привязку, не использующую MEX
 В этом разделе описывается получение метаданных из конечной точки MEX через привязку, не использующую MEX. Код в этом образце, основан на [конечной точки метаданных защиты пользовательских](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md) образца.  
   
 ### <a name="to-retrieve-metadata-over-a-non-mex-binding"></a>Получение метаданных через привязку, не использующую MEX  
   
-1.  Определите привязку, используемую конечной точкой MEX. Для служб [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] определить привязку MEX можно, обратившись к файлу конфигурации службы. В этом случае привязка MEX определяется в следующей конфигурации службы.  
+1.  Определите привязку, используемую конечной точкой MEX. Для служб Windows Communication Foundation (WCF) можно определить привязку MEX, доступ к файлу конфигурации службы. В этом случае привязка MEX определяется в следующей конфигурации службы.  
   
     ```xml  
     <services>  

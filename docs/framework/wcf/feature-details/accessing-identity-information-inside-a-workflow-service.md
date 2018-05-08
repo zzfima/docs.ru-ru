@@ -1,24 +1,12 @@
 ---
-title: "Доступ к идентификационным данным в службе рабочего процесса"
-ms.custom: 
+title: Доступ к идентификационным данным в службе рабочего процесса
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 0b832127-b35b-468e-a45f-321381170cbc
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 06638a9f5aa031bec07a9aac510ce832f75980fd
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a87c21215c37fefd8d9306fd0ccd0c5b2a1dfd11
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="accessing-identity-information-inside-a-workflow-service"></a>Доступ к идентификационным данным в службе рабочего процесса
 Для доступа к сведениям об удостоверении в службе рабочего процесса необходимо реализовать интерфейс <xref:System.ServiceModel.Activities.IReceiveMessageCallback> в пользовательском свойстве выполнения. В методе <xref:System.ServiceModel.Activities.IReceiveMessageCallback.OnReceiveMessage(System.ServiceModel.OperationContext,System.Activities.ExecutionProperties)> можно обратиться к контексту <xref:System.ServiceModel.OperationContext.ServiceSecurityContext>, чтобы получить доступ к сведениям об удостоверении. Данный раздел содержит пошаговое руководство по реализации этого свойства выполнения, а также пользовательского действия, которое должно выявить это свойство для действия <xref:System.ServiceModel.Activities.Receive> во время выполнения.  Пользовательское действие реализует поведение аналогично <!--zz <xref:System.ServiceModel.Activities.Sequence>--> `System.ServiceModel.Activities.Sequence` действия, за исключением того, что при <xref:System.ServiceModel.Activities.Receive> размещения в нем <xref:System.ServiceModel.Activities.IReceiveMessageCallback> будет вызываться и сведения об удостоверении будут извлечены.  

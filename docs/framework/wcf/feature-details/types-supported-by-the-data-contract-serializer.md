@@ -1,31 +1,17 @@
 ---
 title: Типы, поддерживаемые сериализатором контракта данных
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - serialization [WCF], supported types
 ms.assetid: 7381b200-437a-4506-9556-d77bf1bc3f34
-caps.latest.revision: 24
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: c53a11408254dc3c5f2abfb7d5d45305d3429280
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 9a6279b9850ce5cd3d23cffeaf233dec1b360deb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="types-supported-by-the-data-contract-serializer"></a>Типы, поддерживаемые сериализатором контракта данных
-В[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] в качестве модуля сериализации по умолчанию для преобразования данных в формат XML и обратно используется <xref:System.Runtime.Serialization.DataContractSerializer> . Сериализатор <xref:System.Runtime.Serialization.DataContractSerializer> предназначен для сериализации типов *контрактов данных* . Однако поддерживаются и многие другие типы, которые можно рассматривать как неявные контракты данных. Полный список сериализуемых типов приведен ниже.  
+Windows Communication Foundation (WCF) использует <xref:System.Runtime.Serialization.DataContractSerializer> качестве модуля сериализации по умолчанию для преобразования данных в формат XML и преобразовать обратно в данных XML. Сериализатор <xref:System.Runtime.Serialization.DataContractSerializer> предназначен для сериализации типов *контрактов данных* . Однако поддерживаются и многие другие типы, которые можно рассматривать как неявные контракты данных. Полный список сериализуемых типов приведен ниже.  
   
 -   Все открытые типы, имеющие конструктор без параметров.  
   
@@ -51,13 +37,13 @@ ms.lasthandoff: 04/28/2018
   
 -   Для сериализации или десериализации типа, реализующего интерфейс <xref:System.Runtime.Serialization.ISerializable> , в коде с частичным доверием с использованием <xref:System.Runtime.Serialization.DataContractSerializer> требуются разрешения <xref:System.Security.Permissions.SecurityPermissionAttribute.SerializationFormatter%2A> и <xref:System.Security.Permissions.SecurityPermissionAttribute.UnmanagedCode%2A> .  
   
--   При выполнении кода [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] в режиме [Partial Trust](../../../../docs/framework/wcf/feature-details/partial-trust.md) сериализация и десериализация полей `readonly` ( `public` и `private`) не поддерживается. Это объясняется тем, что созданный код на промежуточном языке является непроверяемым и поэтому требует повышенного уровня разрешений.  
+-   При выполнении кода WCF [частичного доверия](../../../../docs/framework/wcf/feature-details/partial-trust.md) режиме, для сериализации и десериализации `readonly` поля (оба `public` и `private`) не поддерживается. Это объясняется тем, что созданный код на промежуточном языке является непроверяемым и поэтому требует повышенного уровня разрешений.  
   
 -   Оба типа <xref:System.Runtime.Serialization.DataContractSerializer> и <xref:System.Xml.Serialization.XmlSerializer> поддерживаются в среде с частичным доверием. При этом использование <xref:System.Runtime.Serialization.DataContractSerializer> зависит от следующих условий.  
   
     -   Все сериализуемые типы `[DataContract]` должны быть открытыми.  
   
-    -   Все сериализуемые поля и свойства `[DataMember]` в типе `[DataContract]` должны быть открытыми и доступными для чтения и записи. Сериализация и десериализация полей `readonly` не поддерживается при выполнении [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] в приложении с частичным доверием.  
+    -   Все сериализуемые поля и свойства `[DataMember]` в типе `[DataContract]` должны быть открытыми и доступными для чтения и записи. Сериализация и десериализация `readonly` поля не поддерживается при выполнении в частично доверенного приложения WCF.  
   
     -   Сериализатор `[Serializable]`/`ISerializable]` не поддерживается в среде с частичным доверием.  
   
@@ -76,7 +62,7 @@ ms.lasthandoff: 04/28/2018
   
 -   Поддерживаются структуры и классы.  
   
--   Сериализатор <xref:System.Runtime.Serialization.DataContractSerializer> не поддерживает модель программирования, используемую в <xref:System.Xml.Serialization.XmlSerializer> и веб-службах [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] . В частности, не поддерживаются такие атрибуты, как <xref:System.Xml.Serialization.XmlElementAttribute> и <xref:System.Xml.Serialization.XmlAttributeAttribute>. Чтобы обеспечить поддержку этой модели программирования, необходимо переключить [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] для использования <xref:System.Xml.Serialization.XmlSerializer> вместо <xref:System.Runtime.Serialization.DataContractSerializer>.  
+-   Сериализатор <xref:System.Runtime.Serialization.DataContractSerializer> не поддерживает модель программирования, используемую в <xref:System.Xml.Serialization.XmlSerializer> и веб-службах [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] . В частности, не поддерживаются такие атрибуты, как <xref:System.Xml.Serialization.XmlElementAttribute> и <xref:System.Xml.Serialization.XmlAttributeAttribute>. Чтобы обеспечить поддержку этой модели программирования, необходимо переключить WCF для использования <xref:System.Xml.Serialization.XmlSerializer> вместо <xref:System.Runtime.Serialization.DataContractSerializer>.  
   
 -   Тип <xref:System.DBNull> обрабатывается особым образом. Это одноэлементный тип, и при десериализации десериализатор соблюдает одноэлементное ограничение и указывает все ссылки `DBNull` на одноэлементный экземпляр. Поскольку тип `DBNull` сериализуется, ему требуется разрешение <xref:System.Security.Permissions.SecurityPermissionAttribute.SerializationFormatter%2A> .  
   

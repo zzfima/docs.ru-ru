@@ -1,14 +1,6 @@
 ---
 title: Практическое руководство. Создание пользовательского маркера
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -18,22 +10,16 @@ helpviewer_keywords:
 - WSSecurityTokenSerializer class
 - SecurityToken class
 ms.assetid: 6d892973-1558-4115-a9e1-696777776125
-caps.latest.revision: 14
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: c270b63586809044f1bb3e56841ae8cf590e7bb1
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: eb227075b1a696216e62e851aa8b10c7511ac93f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-custom-token"></a>Практическое руководство. Создание пользовательского маркера
 В этом разделе показано, как создать пользовательский маркер безопасности с помощью класса <xref:System.IdentityModel.Tokens.SecurityToken> и интегрировать его с поставщиком пользовательских маркеров безопасности и структурой проверки подлинности. Полный пример кода см. [пользовательского маркера](../../../../docs/framework/wcf/samples/custom-token.md) образца.  
   
- Объект *маркер безопасности* является по сути элементом XML, используемый [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] инфраструктуру безопасности для представления утверждений об отправителе в сообщении SOAP. В инфраструктуре безопасности [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] предусмотрены различные токены для предоставляемых системой режимов проверки подлинности. Примером является маркер безопасности X.509, представленный классом <xref:System.IdentityModel.Tokens.X509SecurityToken>, или маркер безопасности Username, представленный классом <xref:System.IdentityModel.Tokens.UserNameSecurityToken>.  
+ Объект *маркер безопасности* является по сути элементом XML, используемый инфраструктурой безопасности Windows Communication Foundation (WCF) для представления утверждений об отправителе в сообщении SOAP. В инфраструктуре безопасности [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] предусмотрены различные токены для предоставляемых системой режимов проверки подлинности. Примером является маркер безопасности X.509, представленный классом <xref:System.IdentityModel.Tokens.X509SecurityToken>, или маркер безопасности Username, представленный классом <xref:System.IdentityModel.Tokens.UserNameSecurityToken>.  
   
  Иногда режим проверки подлинности или учетные данные не поддерживаются указанными типами. В этом случае необходимо создать пользовательский маркер безопасности, чтобы предоставить XML-представление пользовательских учетных данных в сообщение SOAP.  
   

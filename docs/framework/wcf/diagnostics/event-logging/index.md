@@ -1,31 +1,17 @@
 ---
 title: Ведение журнала событий в WCF
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - event logging [WCF]
 ms.assetid: aac0530d-f44c-45a1-bada-e30e0677b41f
-caps.latest.revision: 22
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 4028772caef8e5c0301ab3a6a0bde2f180d821ca
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 78ad80188b8428bb718251045ef04ab803862a0f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="event-logging-in-wcf"></a>Ведение журнала событий в WCF
-[!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] отслеживает внутренние события в журнале событий Windows.  
+Windows Communication Foundation (WCF) отслеживает внутренние события в журнал событий Windows.  
   
 ## <a name="viewing-event-logs"></a>Просмотр журналов событий  
  Автоматическая запись событий в журнал включена по умолчанию, механизма ее отключения не существует. События, записанные в журнал [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)], можно просмотреть с помощью средства "Просмотр событий". Чтобы запустить это средство, нажмите кнопку **запустить**, нажмите кнопку **панели управления**, дважды щелкните **Администрирование**, а затем дважды щелкните **просмотра событий**.  

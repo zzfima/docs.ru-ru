@@ -1,38 +1,26 @@
 ---
-title: "Модель веб-программирования HTTP WCF"
-ms.custom: 
+title: Модель веб-программирования HTTP WCF
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - web services programming model [WCF]
 - POX
 - REST
 ms.assetid: 2312a8d3-b66e-4623-ba42-978434300c7f
-caps.latest.revision: "17"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f008cfe874ae9e38a71eb3cf5d6b2ed4e6cbdf7c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e063cdba74af9ee90b41d829a2a8b251a5cc96e7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wcf-web-http-programming-model"></a>Модель веб-программирования HTTP WCF
-Модель веб-программирования HTTP [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] позволяет разработчикам обрабатывать операции службы [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] для конечных точек, не являющихся конечными точками SOAP. Эта возможность подробно описана в следующих подразделах.  
+Windows Communication Foundation (WCF) модель программирования Web HTTP позволяет разработчикам предоставлять операции службы WCF в конечные точки не протокола SOAP. Эта возможность подробно описана в следующих подразделах.  
   
 ## <a name="in-this-section"></a>В этом разделе  
  [Общие сведения о модели веб-программирования HTTP WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)  
- Содержит общие сведения о модели веб-программирования HTTP [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
+ Обзор модели программирования HTTP веб-службы Windows Communication Foundation (WCF).  
   
  [Объектная модель веб-программирования HTTP WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-object-model.md)  
- Описывает модель веб-программирования HTTP [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и принципы ее работы.  
+ Описание службы Windows Communication Foundation (WCF) модель программирования Web HTTP и как он работает.  
   
  [Практическое руководство. Создание базовой веб-службы HTTP WCF](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-wcf-web-http-service.md)  
  Порядок написания простой службы, предоставляющей конечную точку, не являющуюся конечной точкой SOAP.  

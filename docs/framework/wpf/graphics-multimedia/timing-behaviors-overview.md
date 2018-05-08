@@ -1,27 +1,15 @@
 ---
-title: "Общие сведения о характере поведения во времени"
-ms.custom: 
+title: Общие сведения о характере поведения во времени
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - timing behaviors [WPF]
 - behaviors [WPF], timing
 ms.assetid: 5b714d46-bd46-48b8-b467-b4be89ba3091
-caps.latest.revision: "20"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 9305b69927a1ed0ad4f154ab972316f3dee951e9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 31a6b7d3b92e886d9c90fc39d69f31cf72b99666
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="timing-behaviors-overview"></a>Общие сведения о характере поведения во времени
 В этом разделе описываются временные характеристики анимации и других <xref:System.Windows.Media.Animation.Timeline> объектов.  
@@ -34,9 +22,9 @@ ms.lasthandoff: 12/22/2017
 ## <a name="timeline-types"></a>Типы временных шкал  
  Объект <xref:System.Windows.Media.Animation.Timeline> представляет сегмент времени. Он предоставляет свойства, с помощью которых вы сможете задать длину этого сегмента, время запуска сегмента, количество повторов сегмента, скорость течения времени в этом сегменте и многое другое.  
   
- Классы, которые унаследованы от класса временной шкалы, предоставляют дополнительные функции, такие как анимация и воспроизведение мультимедиа. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]предоставляет следующие <xref:System.Windows.Media.Animation.Timeline> типов.  
+ Классы, которые унаследованы от класса временной шкалы, предоставляют дополнительные функции, такие как анимация и воспроизведение мультимедиа. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] предоставляет следующие <xref:System.Windows.Media.Animation.Timeline> типов.  
   
-|Тип временной шкалы|Описание:|  
+|Тип временной шкалы|Описание|  
 |-------------------|-----------------|  
 |<xref:System.Windows.Media.Animation.AnimationTimeline>|Абстрактный базовый класс для <xref:System.Windows.Media.Animation.Timeline> объектов, для создания выходных значений для анимации свойства.|  
 |<xref:System.Windows.Media.MediaTimeline>|Формирует выходные данные из файла мультимедиа.|  
@@ -49,7 +37,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="properties-that-control-the-length-of-a-timeline"></a>Свойства, которые управляют длиной временной шкалы  
  Объект <xref:System.Windows.Media.Animation.Timeline> представляет сегмент времени и длину временной шкалы может называться по-разному. В следующей таблице приведены несколько терминов для описания длины временной шкалы.  
   
-|Термин|Описание:|Свойства||||  
+|Термин|Описание|Свойства||||  
 |----------|-----------------|----------------|-|-|-|  
 |Простая длительность|Длительность, необходимая для одной итерации временной шкалы вперед.|<xref:System.Windows.Media.Animation.Timeline.Duration%2A>||||  
 |Одно повторение|Время, необходимое для временной шкалы для воспроизведения вперед, после и, если <xref:System.Windows.Media.Animation.Timeline.AutoReverse%2A> имеет значение true, воспроизведение в обратном направлении один раз.|<xref:System.Windows.Media.Animation.Timeline.Duration%2A>, <xref:System.Windows.Media.Animation.Timeline.AutoReverse%2A>||||  
@@ -127,11 +115,11 @@ ms.lasthandoff: 12/22/2017
 ## <a name="properties-that-control-the-speed-of-a-timeline"></a>Свойства, которые управляют скоростью временной шкалы  
  <xref:System.Windows.Media.Animation.Timeline> Класс предоставляет три свойства для задания скорости шкалы:  
   
--   <xref:System.Windows.Media.Animation.Timeline.SpeedRatio%2A>— Указывает скорость относительно родительского течения времени для <xref:System.Windows.Media.Animation.Timeline>. Значения больше единицы повысить скорость <xref:System.Windows.Media.Animation.Timeline> и его дочерних <xref:System.Windows.Media.Animation.Timeline> объектов, значения в диапазоне от нуля до единицы замедлять его работу. Значение 1 указывает, что <xref:System.Windows.Media.Animation.Timeline> по мере того, с той же скоростью, что и родительский объект. <xref:System.Windows.Media.Animation.Timeline.SpeedRatio%2A> Параметр контейнера временной шкалы влияет на все его дочерние <xref:System.Windows.Media.Animation.Timeline> объекты.  
+-   <xref:System.Windows.Media.Animation.Timeline.SpeedRatio%2A> — Указывает скорость относительно родительского течения времени для <xref:System.Windows.Media.Animation.Timeline>. Значения больше единицы повысить скорость <xref:System.Windows.Media.Animation.Timeline> и его дочерних <xref:System.Windows.Media.Animation.Timeline> объектов, значения в диапазоне от нуля до единицы замедлять его работу. Значение 1 указывает, что <xref:System.Windows.Media.Animation.Timeline> по мере того, с той же скоростью, что и родительский объект. <xref:System.Windows.Media.Animation.Timeline.SpeedRatio%2A> Параметр контейнера временной шкалы влияет на все его дочерние <xref:System.Windows.Media.Animation.Timeline> объекты.  
   
--   <xref:System.Windows.Media.Animation.Timeline.AccelerationRatio%2A>— Указывает процент <xref:System.Windows.Media.Animation.Timeline.Duration%2A> временной шкалы, затраченный на ускорение. Пример см. в разделе [как: ускорение или замедление анимации](../../../../docs/framework/wpf/graphics-multimedia/how-to-accelerate-or-decelerate-an-animation.md). 
+-   <xref:System.Windows.Media.Animation.Timeline.AccelerationRatio%2A> — Указывает процент <xref:System.Windows.Media.Animation.Timeline.Duration%2A> временной шкалы, затраченный на ускорение. Пример см. в разделе [как: ускорение или замедление анимации](../../../../docs/framework/wpf/graphics-multimedia/how-to-accelerate-or-decelerate-an-animation.md). 
   
--   <xref:System.Windows.Media.Animation.Timeline.DecelerationRatio%2A>— Указывает процент <xref:System.Windows.Media.Animation.Timeline.Duration%2A> временной шкалы, затраченный на замедление. Пример см. в разделе [как: ускорение или замедление анимации](../../../../docs/framework/wpf/graphics-multimedia/how-to-accelerate-or-decelerate-an-animation.md).  
+-   <xref:System.Windows.Media.Animation.Timeline.DecelerationRatio%2A> — Указывает процент <xref:System.Windows.Media.Animation.Timeline.Duration%2A> временной шкалы, затраченный на замедление. Пример см. в разделе [как: ускорение или замедление анимации](../../../../docs/framework/wpf/graphics-multimedia/how-to-accelerate-or-decelerate-an-animation.md).  
   
 ## <a name="see-also"></a>См. также  
  [Общие сведения об эффектах анимации](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  

@@ -1,32 +1,18 @@
 ---
 title: Как предоставить доступ к каналу в форматах Atom и RSS
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: fe374932-67f5-487d-9325-f868812b92e4
-caps.latest.revision: 23
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 14059ebc3efe57a38a093faed9cfbd254c372920
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 4780e43679d461509911a4abda689a0c16112e4a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-expose-a-feed-as-both-atom-and-rss"></a>Как предоставить доступ к каналу в форматах Atom и RSS
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] позволяет создавать службу, предоставляющую веб-канал синдикации. В этом разделе рассматривается процесс создания службы синдикации, предоставляющей веб-канал синдикации с помощью Atom 1.0 и RSS 2.0. Эта служба предоставляет одну конечную точку, которая может вернуть любой формат синдикации. В целях упрощения в данном образце используется резидентная служба. В рабочей среде служба такого типа размещается в IIS или WAS. Дополнительные сведения о различных [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] варианты размещения, в разделе [размещения](../../../../docs/framework/wcf/feature-details/hosting.md).  
+Windows Communication Foundation (WCF) позволяет создавать службу, предоставляющую веб-канала синдикации. В этом разделе рассматривается процесс создания службы синдикации, предоставляющей веб-канал синдикации с помощью Atom 1.0 и RSS 2.0. Эта служба предоставляет одну конечную точку, которая может вернуть любой формат синдикации. В целях упрощения в данном образце используется резидентная служба. В рабочей среде служба такого типа размещается в IIS или WAS. Дополнительные сведения о различных вариантов размещения WCF см. в разделе [размещения](../../../../docs/framework/wcf/feature-details/hosting.md).  
   
 ### <a name="to-create-a-basic-syndication-service"></a>Создание базовой службы синдикации  
   

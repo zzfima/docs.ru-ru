@@ -1,13 +1,6 @@
 ---
-title: "Практическое руководство. Рисование пользовательских пунктирных линий"
-ms.custom: 
+title: Практическое руководство. Рисование пользовательских пунктирных линий
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,19 +9,14 @@ helpviewer_keywords:
 - lines [Windows Forms], drawing
 - lines [Windows Forms], dashed
 ms.assetid: cd0ed96a-cce4-47b9-b58a-3bae2e3d1bee
-caps.latest.revision: "16"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 770ce290b21f7d0094a487c30079063b79a7c08d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 39dde3bb45165783171326b79e98744807350952
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-draw-a-custom-dashed-line"></a>Практическое руководство. Рисование пользовательских пунктирных линий
-[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]предоставляет несколько стили штрихов, которые перечислены в <xref:System.Drawing.Drawing2D.DashStyle> перечисления. Если эти стандартные стили пунктирных линий не подходят, можно создать пользовательский шаблон пунктирной линии.  
+[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] предоставляет несколько стили штрихов, которые перечислены в <xref:System.Drawing.Drawing2D.DashStyle> перечисления. Если эти стандартные стили пунктирных линий не подходят, можно создать пользовательский шаблон пунктирной линии.  
   
 ## <a name="example"></a>Пример  
  Рисование пользовательских пунктирных линий, поместите длины штрихов и промежутков в массив и присвойте его значение <xref:System.Drawing.Pen.DashPattern%2A> свойство <xref:System.Drawing.Pen> объекта. В следующем примере рисуется пользовательская пунктирная линия на основе массива `{5, 2, 15, 4}`. Если умножить ширину пера 5 элементов массива, можно получить `{25, 10, 75, 20}`. Альтернативные отображаемых дефисы длиной от 25 до 75 и альтернативные пробелы в расстояние от 10 до 20.  

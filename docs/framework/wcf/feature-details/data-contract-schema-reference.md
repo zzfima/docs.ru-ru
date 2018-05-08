@@ -1,34 +1,20 @@
 ---
 title: Справочник по схеме контрактов данных
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - data contracts [WCF], schema reference
 ms.assetid: 9ebb0ebe-8166-4c93-980a-7c8f1f38f7c0
-caps.latest.revision: 24
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 075f8d89caccd7723f3a1dc54fde695a8fb624ab
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 06bc79e059300d448ababa87974b590f54f7984c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="data-contract-schema-reference"></a>Справочник по схеме контрактов данных
 В данном разделе описывается подмножество схемы XML (XSD), используемое <xref:System.Runtime.Serialization.DataContractSerializer> для описания типов среды CLR, применяемых для сериализации XML.  
   
 ## <a name="datacontractserializer-mappings"></a>DataContractSerializer - сопоставления  
- `DataContractSerializer` Сопоставляет типы CLR с XSD при экспорте метаданных из [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] службы через конечную точку метаданных или [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md). Дополнительные сведения см. в разделе [сериализатор контракта данных](../../../../docs/framework/wcf/feature-details/data-contract-serializer.md).  
+ `DataContractSerializer` Сопоставляет типы CLR с XSD при экспорте метаданных из конечной точки метаданных с помощью службы Windows Communication Foundation (WCF) или [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md). Дополнительные сведения см. в разделе [сериализатор контракта данных](../../../../docs/framework/wcf/feature-details/data-contract-serializer.md).  
   
  `DataContractSerializer` также сопоставляет типы XSD типам среды CLR, когда для доступа к документам WSDL или XSD и создания контрактов данных для служб или клиентов используется Svcutil.exe.  
   
@@ -105,7 +91,7 @@ ms.lasthandoff: 04/30/2018
 |`choice`|Запрещено|  
 |`sequence`|Поддерживается, сопоставляется членам данных контракта данных.|  
 |`attribute`|Запрещено, даже если use="prohibited" (существует одно исключение). Только необязательные атрибуты из стандартного пространства имен сериализации поддерживаются. Они не сопоставляются членам данных в модели программирования контракта данных. В настоящее время только один подобный атрибут имеет значение; он рассматривается в разделе ISerializable. Другие атрибуты игнорируются.|  
-|`attributeGroup`|Запрещено. В выпуске [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] v1 `DataContractSerializer` игнорирует наличие `attributeGroup` внутри `xs:complexType`.|  
+|`attributeGroup`|Запрещено. В версии v1 WCF `DataContractSerializer` игнорирует наличие `attributeGroup` внутри `xs:complexType`.|  
 |`anyAttribute`|Запрещено.|  
 |(пусто)|Сопоставляется с контрактом данных, не имеющем элементов данных.|  
   
@@ -215,7 +201,7 @@ ms.lasthandoff: 04/30/2018
   
  \* При использовании `simpleType` и `complexType,` сопоставление анонимных типов аналогичен-анонимные типы, за исключением того, что анонимные контракты данных отсутствуют, и поэтому создается именованный контракт данных создается с именем, образованным от имени элемента. Ниже перечислены правила для анонимных типов.  
   
--   Сведения о реализации[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] : если имя `xs:element` не содержит точек, анонимный тип сопоставляется внутреннему типу внешнего типа контракта данных. Если имя содержит точки, итоговый тип контракта данных является независимым (не внутренним типом).  
+-   Сведения о реализации WCF: Если `xs:element` имя не содержит точек, анонимный тип сопоставляется внутреннему типу внешнего типа контракта данных. Если имя содержит точки, итоговый тип контракта данных является независимым (не внутренним типом).  
   
 -   Создаваемое имя контракта данных внутреннего типа - это имя контракта данных внешнего типа, за которым следует точка, имя элемента и строка Type.  
   

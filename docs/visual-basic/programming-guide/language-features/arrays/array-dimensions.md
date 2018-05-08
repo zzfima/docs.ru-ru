@@ -1,12 +1,6 @@
 ---
 title: Array Dimensions in Visual Basic
-ms.custom: 
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - dimensions, arrays
 - arrays [Visual Basic], dimensions
@@ -15,14 +9,11 @@ helpviewer_keywords:
 - rectangular arrays
 - ranking, arrays
 ms.assetid: 385e911b-18c1-4e98-9924-c6d279101dd9
-caps.latest.revision: "22"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 21e170ca5942862a26e05428fffaea7d1e875e19
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: cf295288dd034d744dceb71b5c58278be5cc2a2f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="array-dimensions-in-visual-basic"></a>Array Dimensions in Visual Basic
 Объект *измерения* направление, в котором можно изменять спецификацию элементов массива. Массив, содержащий суммы продаж за каждый день месяца, имеет одного измерения (день месяца). Массив, содержащий суммы по отделу продаж за каждый день месяца, имеет два измерения (номер отдела и день месяца). Размерность массива не вызывается его *ранг*.  
@@ -35,13 +26,13 @@ ms.lasthandoff: 11/21/2017
   
  Общая структура массивов различного ранга на рисунках ниже. Каждый элемент на рисунках показаны значения индекса, которые к нему доступ. Например, можно получить доступ к первый элемент второй строки двумерного массива, указав индексы `(1, 0)`.  
   
- ![Графическая схема один &#45; двумерный массив](../../../../visual-basic/programming-guide/language-features/arrays/media/arrayexdimone.gif "ArrayExDimOne")  
+ ![Графическая схема одного&#45;двумерный массив](../../../../visual-basic/programming-guide/language-features/arrays/media/arrayexdimone.gif "ArrayExDimOne")  
 Одномерный массив  
   
- ![График схемы двух &#45; двумерный массив](../../../../visual-basic/programming-guide/language-features/arrays/media/arrayexdimtwo.gif "ArrayExDimTwo")  
+ ![Графическая схема двух&#45;двумерный массив](../../../../visual-basic/programming-guide/language-features/arrays/media/arrayexdimtwo.gif "ArrayExDimTwo")  
 Двумерный массив  
   
- ![Графическая схема трех &#45; двумерный массив](../../../../visual-basic/programming-guide/language-features/arrays/media/arrayexdimthree.gif "ArrayExDimThree")  
+ ![Графическая схема из трех&#45;двумерный массив](../../../../visual-basic/programming-guide/language-features/arrays/media/arrayexdimthree.gif "ArrayExDimThree")  
 Трехмерный массив  
   
 ### <a name="one-dimension"></a>Одно измерение  

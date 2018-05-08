@@ -1,28 +1,16 @@
 ---
-title: "Оптимизация производительности: элементы управления"
-ms.custom: 
+title: 'Оптимизация производительности: элементы управления'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - controls [WPF], improving performance
 - container recycling [WPF]
 - user interface virtualization [WPF]
 ms.assetid: 45a31c43-ea8a-4546-96c8-0631b9934179
-caps.latest.revision: "22"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 1b8008d104437454f36f6f425634c40968d5481a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9e4ceee26263a1d047aeda0881b955070de4326d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="optimizing-performance-controls"></a>Оптимизация производительности: элементы управления
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] включает множество общих компонентов пользовательского интерфейса (UI), которые используются в большинстве приложений Windows. В этом разделе описываются методы повышения производительности пользовательского интерфейса.  
@@ -35,7 +23,7 @@ ms.lasthandoff: 12/22/2017
   
  Виртуализация пользовательского интерфейса является важным аспектом элементов управления «Список». Не следует путать виртуализацию пользовательского интерфейса с виртуализацией данных. Виртуализация пользовательского интерфейса хранит в памяти только видимые элементы, но в сценариях привязки данных хранит в памяти всю структуру данных. В отличие от этого виртуализация данных хранит в памяти только элементы данных, которые отображаются.  
   
- По умолчанию Виртуализация пользовательского интерфейса включена для <xref:System.Windows.Controls.ListView> и <xref:System.Windows.Controls.ListBox> элементы управления, если их элементы списка привязаны к данным. <xref:System.Windows.Controls.TreeView>можно включить виртуализацию, задав <!--zz <xref:System.Windows.Controls.VirtualizingStackPanel.IsVirtualizing%2A?displayProperty=nameWithType> --> `IsVirtualizing` присоединенному свойству `true`. Если вы хотите включить виртуализацию пользовательского интерфейса для пользовательских элементов управления, которые являются производными от <xref:System.Windows.Controls.ItemsControl> или существующих элементов управления, использующих <xref:System.Windows.Controls.StackPanel> класса, такие как <xref:System.Windows.Controls.ComboBox>, можно задать <xref:System.Windows.Controls.ItemsControl.ItemsPanel%2A> для <xref:System.Windows.Controls.VirtualizingStackPanel> и задайте <xref:System.Windows.Controls.VirtualizingPanel.IsVirtualizing%2A> для `true`. К сожалению, вы можете отключить виртуализацию пользовательского интерфейса для этих элементов управления, не осознавая этого. Ниже приведен список условий, отключающих виртуализацию пользовательского интерфейса.  
+ По умолчанию Виртуализация пользовательского интерфейса включена для <xref:System.Windows.Controls.ListView> и <xref:System.Windows.Controls.ListBox> элементы управления, если их элементы списка привязаны к данным. <xref:System.Windows.Controls.TreeView> можно включить виртуализацию, задав <!--zz <xref:System.Windows.Controls.VirtualizingStackPanel.IsVirtualizing%2A?displayProperty=nameWithType> --> `IsVirtualizing` присоединенному свойству `true`. Если вы хотите включить виртуализацию пользовательского интерфейса для пользовательских элементов управления, которые являются производными от <xref:System.Windows.Controls.ItemsControl> или существующих элементов управления, использующих <xref:System.Windows.Controls.StackPanel> класса, такие как <xref:System.Windows.Controls.ComboBox>, можно задать <xref:System.Windows.Controls.ItemsControl.ItemsPanel%2A> для <xref:System.Windows.Controls.VirtualizingStackPanel> и задайте <xref:System.Windows.Controls.VirtualizingPanel.IsVirtualizing%2A> для `true`. К сожалению, вы можете отключить виртуализацию пользовательского интерфейса для этих элементов управления, не осознавая этого. Ниже приведен список условий, отключающих виртуализацию пользовательского интерфейса.  
   
 -   Контейнеры элементов добавляются к <xref:System.Windows.Controls.ItemsControl>. Например, если приложение явно добавляет <xref:System.Windows.Controls.ListBoxItem> объектов <xref:System.Windows.Controls.ListBox>, <xref:System.Windows.Controls.ListBox> виртуализировать <xref:System.Windows.Controls.ListBoxItem> объектов.  
   
@@ -57,7 +45,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="Supporting"></a>   
 ## <a name="supporting-bidirectional-virtualization"></a>Поддержка двунаправленной виртуализации  
- <xref:System.Windows.Controls.VirtualizingStackPanel>предоставляет встроенную поддержку виртуализации пользовательского интерфейса в одном направлении, горизонтально или вертикально. Если вы хотите использовать виртуализацию двунаправленный для элементов управления, необходимо реализовать пользовательскую панель, которая расширяет <xref:System.Windows.Controls.VirtualizingStackPanel> класса. <xref:System.Windows.Controls.VirtualizingStackPanel> Класс предоставляет виртуальные методы, такие как <xref:System.Windows.Controls.VirtualizingStackPanel.OnViewportSizeChanged%2A>, <xref:System.Windows.Controls.VirtualizingStackPanel.LineUp%2A>, <xref:System.Windows.Controls.VirtualizingStackPanel.PageUp%2A>, и <xref:System.Windows.Controls.VirtualizingStackPanel.MouseWheelUp%2A>. Эти виртуальные методы позволяют обнаруживать изменения в видимой части списка и обработать его соответствующим образом.  
+ <xref:System.Windows.Controls.VirtualizingStackPanel> предоставляет встроенную поддержку виртуализации пользовательского интерфейса в одном направлении, горизонтально или вертикально. Если вы хотите использовать виртуализацию двунаправленный для элементов управления, необходимо реализовать пользовательскую панель, которая расширяет <xref:System.Windows.Controls.VirtualizingStackPanel> класса. <xref:System.Windows.Controls.VirtualizingStackPanel> Класс предоставляет виртуальные методы, такие как <xref:System.Windows.Controls.VirtualizingStackPanel.OnViewportSizeChanged%2A>, <xref:System.Windows.Controls.VirtualizingStackPanel.LineUp%2A>, <xref:System.Windows.Controls.VirtualizingStackPanel.PageUp%2A>, и <xref:System.Windows.Controls.VirtualizingStackPanel.MouseWheelUp%2A>. Эти виртуальные методы позволяют обнаруживать изменения в видимой части списка и обработать его соответствующим образом.  
   
 <a name="Optimizing"></a>   
 ## <a name="optimizing-templates"></a>Оптимизация шаблонов  
@@ -67,7 +55,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="deferred-scrolling"></a>Отложенная прокрутка  
  По умолчанию, когда пользователь перетаскивает бегунок в полосе прокрутки, представление содержимого постоянно обновляется.  Если скорость прокрутки в элементе управления низкая, рассмотрите возможность использования отложенной прокрутки.  При отложенной прокрутке содержимое обновляется только в том случае, когда пользователь отпускает бегунок.  
   
- Чтобы реализовать отложенную прокрутку, задайте <xref:System.Windows.Controls.ScrollViewer.IsDeferredScrollingEnabled%2A> свойства `true`.  <xref:System.Windows.Controls.ScrollViewer.IsDeferredScrollingEnabled%2A>является присоединенным свойством и может быть задано на <xref:System.Windows.Controls.ScrollViewer> и любой элемент управления, который имеет <xref:System.Windows.Controls.ScrollViewer> в его шаблон элемента управления.  
+ Чтобы реализовать отложенную прокрутку, задайте <xref:System.Windows.Controls.ScrollViewer.IsDeferredScrollingEnabled%2A> свойства `true`.  <xref:System.Windows.Controls.ScrollViewer.IsDeferredScrollingEnabled%2A> является присоединенным свойством и может быть задано на <xref:System.Windows.Controls.ScrollViewer> и любой элемент управления, который имеет <xref:System.Windows.Controls.ScrollViewer> в его шаблон элемента управления.  
   
 <a name="Controls"></a>   
 ## <a name="controls-that-implement-performance-features"></a>Элементы управления, реализующие функции производительности  
@@ -78,8 +66,8 @@ ms.lasthandoff: 12/22/2017
 |<xref:System.Windows.Controls.ComboBox>|Можно включить|Можно включить|Можно включить|  
 |<xref:System.Windows.Controls.ContextMenu>|Можно включить|Можно включить|Можно включить|  
 |<xref:System.Windows.Controls.DocumentViewer>|Недоступно|Недоступно|Можно включить|  
-|<xref:System.Windows.Controls.ListBox>|По умолчанию|Можно включить|Можно включить|  
-|<xref:System.Windows.Controls.ListView>|По умолчанию|Можно включить|Можно включить|  
+|<xref:System.Windows.Controls.ListBox>|Значение по умолчанию|Можно включить|Можно включить|  
+|<xref:System.Windows.Controls.ListView>|Значение по умолчанию|Можно включить|Можно включить|  
 |<xref:System.Windows.Controls.TreeView>|Можно включить|Можно включить|Можно включить|  
 |<xref:System.Windows.Controls.ToolBar>|Недоступно|Недоступно|Можно включить|  
   

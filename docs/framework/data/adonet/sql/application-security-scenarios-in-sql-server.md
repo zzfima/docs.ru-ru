@@ -1,24 +1,12 @@
 ---
-title: "Сценарии безопасности приложений в SQL Server"
-ms.custom: 
+title: Сценарии безопасности приложений в SQL Server
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 0164f3a4-406e-4693-bec3-03c8e18b46d7
-caps.latest.revision: "5"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 6207bc570dd8182b351a945a36d5f80c14a8dd4c
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 1239715678bda648bc962f9b23667b954b540e3f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="application-security-scenarios-in-sql-server"></a>Сценарии безопасности приложений в SQL Server
 Не существует одного правильного способа создания безопасного клиентского приложения SQL Server. Каждое приложение уникально своими требованиями, средой развертывания и количеством пользователей. Приложение, довольно хорошо защищенное при начальном развертывании, с течением времени может стать менее защищенным. Невозможно точно предсказать, какие угрозы могут возникнуть в будущем.  

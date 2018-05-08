@@ -4,16 +4,11 @@ description: Архитектура Микрослужбами .NET для пр�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/26/2017
-ms.prod: .net
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: cccf78ef5b7683a2eefa3efab50a7bbe1bffda18
-ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.openlocfilehash: e9f99e8a325dda730b05656993ba2e4e1e74e9cc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="when-to-deploy-windows-containers-to-azure-container-service-that-is-kubernetes"></a>Если развернуть контейнеры Windows Azure контейнер службе (то есть, Kubernetes)
 

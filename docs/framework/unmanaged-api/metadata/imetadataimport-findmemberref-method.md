@@ -1,14 +1,6 @@
 ---
-title: "Метод IMetaDataImport::FindMemberRef"
-ms.custom: 
+title: Метод IMetaDataImport::FindMemberRef
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IMetaDataImport.FindMemberRef
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 1ccda329-d752-4d89-abe8-511af3c3f4c9
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: a94fb09e1ff62abac9dd716257ba75542453707e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c3736d604b7e77028a2b99d462d88ae207df926c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="imetadataimportfindmemberref-method"></a>Метод IMetaDataImport::FindMemberRef
 Возвращает указатель на токен MemberRef для члена, то есть ссылки, заключенных в указанный <xref:System.Type> и имеет имя и метаданные указанной подписи.  
@@ -71,7 +59,7 @@ HRESULT FindMemberRef (
   
  Подпись, передаваемый `FindMemberRef` должны были созданы в текущей области, поскольку подписи привязаны к определенным областям. Подпись можно внедрить токен, который определяет включающего класса или типа значения. Маркер — это индекс в локальной таблице TypeDef. Не удается построить во время выполнения вне контекста текущей области и использовать ее в качестве входных данных для `FindMemberRef`.  
   
- `FindMemberRef`находит только ссылок на элементы, определенные непосредственно в классе или интерфейсе. не удается найти ссылок на унаследованные члены.  
+ `FindMemberRef` находит только ссылок на элементы, определенные непосредственно в классе или интерфейсе. не удается найти ссылок на унаследованные члены.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
@@ -80,7 +68,7 @@ HRESULT FindMemberRef (
   
  **Библиотека:** включена как ресурс в MsCorEE.dll  
   
- **Версии платформы .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>См. также  
  [Интерфейс IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  

@@ -1,14 +1,6 @@
 ---
-title: "Перечисление COR_PRF_CLAUSE_TYPE"
-ms.custom: 
+title: Перечисление COR_PRF_CLAUSE_TYPE
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - COR_PRF_CLAUSE_TYPE
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: f64c325a-ed3a-4aaf-b847-a88edbc4fefc
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: e03b3f2462b8876bfba3cf7d0df40311935722f8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f6909fa426fa952c0918638f40a571393c651e8d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="corprfclausetype-enumeration"></a>Перечисление COR_PRF_CLAUSE_TYPE
 Указывает тип предложения исключения, код которого был только что введен или удален.  
@@ -50,7 +38,7 @@ typedef enum {
   
 ## <a name="members"></a>Участники  
   
-|Член|Описание:|  
+|Член|Описание|  
 |------------|-----------------|  
 |`COR_PRF_CLAUSE_NONE`|Недопустимое предложение исключения.|  
 |`COR_PRF_CLAUSE_FILTER`|Предложение исключения является выражением фильтра.|  
@@ -64,7 +52,7 @@ typedef enum {
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Версии платформы .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>См. также  
  [Перечисления профилирования](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)

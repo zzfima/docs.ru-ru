@@ -1,35 +1,23 @@
 ---
-title: "Сопоставление JSON и XML."
-ms.custom: 
+title: Сопоставление JSON и XML.
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 22ee1f52-c708-4024-bbf0-572e0dae64af
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 770be9ea5327b32286de64207a3cf07bca7449c6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: db34161ad3e2f7d2c9737e6a456b27bd70c5ebfb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mapping-between-json-and-xml"></a>Сопоставление JSON и XML.
-Модули чтения и записи, создаваемые фабрикой <xref:System.Runtime.Serialization.Json.JsonReaderWriterFactory>, обеспечивают интерфейс API XML к содержимому в формате JavaScript Object Notation (JSON, объектной нотации JavaScript). Формат JSON предусматривает кодирование данных с использованием подмножества объектных литералов JavaScript. Создаваемые этой фабрикой модули чтения и записи используются также при отправке или получении приложениями [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] JSON-содержимого с помощью элемента привязки <xref:System.ServiceModel.Channels.WebMessageEncodingBindingElement> или привязки <xref:System.ServiceModel.WebHttpBinding>.  
+Модули чтения и записи, создаваемые фабрикой <xref:System.Runtime.Serialization.Json.JsonReaderWriterFactory>, обеспечивают интерфейс API XML к содержимому в формате JavaScript Object Notation (JSON, объектной нотации JavaScript). Формат JSON предусматривает кодирование данных с использованием подмножества объектных литералов JavaScript. Содержимое JSON, который также используются средства чтения и записи, создаваемые этой фабрикой отправленных или полученных приложений Windows Communication Foundation (WCF), с помощью <xref:System.ServiceModel.Channels.WebMessageEncodingBindingElement> или <xref:System.ServiceModel.WebHttpBinding>.  
   
  Модуль чтения JSON при инициализации JSON-содержимым ведет себя так же, как модуль чтения текстовых XML-данных при инициализации экземпляром XML. Модуль записи JSON при получении последовательности вызовов, в результате которой модуль чтения текстовых XML-данных создает определенный экземпляр XML, записывает JSON-содержимое. В этом разделе описано сопоставление между этим экземпляром XML-данных и JSON-содержимым для использования в сложных сценариях.  
   
- При обработке внутри [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] JSON-содержимое представляется как набор сведений XML. Обычно внутреннее представление не должно заботить разработчика, поскольку сопоставление является исключительно логическим: JSON обычно не преобразуется физически в XML в памяти, равно как и XML не преобразуется в JSON. Сопоставление означает, что для обращения к JSON-содержимому используются интерфейсы API XML.  
+ На внутреннем уровне JSON представляется как набор сведений XML, когда обрабатываются средством WCF. Обычно внутреннее представление не должно заботить разработчика, поскольку сопоставление является исключительно логическим: JSON обычно не преобразуется физически в XML в памяти, равно как и XML не преобразуется в JSON. Сопоставление означает, что для обращения к JSON-содержимому используются интерфейсы API XML.  
   
- При использовании JSON в [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] обычно имеет место следующий сценарий: расширение функциональности <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> или расширение функциональности <xref:System.ServiceModel.Description.WebScriptEnablingBehavior> автоматически подключает класс <xref:System.ServiceModel.Description.WebHttpBehavior>, когда это необходимо. Сериализатор <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> понимает сопоставление между JSON и набором сведений XML и действует так, как будто работает непосредственно с JSON. (Можно использовать сериализатор <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> без какого-либо модуля чтения или записи XML, зная, что XML соответствует приведенному ниже сопоставлению).  
+ Когда WCF использует JSON, обычно сценарий представляет <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> автоматически подключена по <xref:System.ServiceModel.Description.WebScriptEnablingBehavior> поведение, или с помощью <xref:System.ServiceModel.Description.WebHttpBehavior> поведение, когда это необходимо. Сериализатор <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> понимает сопоставление между JSON и набором сведений XML и действует так, как будто работает непосредственно с JSON. (Можно использовать сериализатор <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> без какого-либо модуля чтения или записи XML, зная, что XML соответствует приведенному ниже сопоставлению).  
   
- В сложных сценариях может понадобиться непосредственно обратиться к приведенному ниже сопоставлению. Такие сценарии имеют место, когда требуется сериализовать десериализовать JSON особыми способами, не полагаясь на <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>, или при использовании типа <xref:System.ServiceModel.Channels.Message> непосредственно для сообщений, содержащих JSON. Сопоставление JSON-XML также используется для ведения журнала сообщений. При использовании функции ведения журнала сообщений в [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] сообщения JSON регистрируются в виде XML в соответствии с сопоставлением, рассмотренным в следующем разделе.  
+ В сложных сценариях может понадобиться непосредственно обратиться к приведенному ниже сопоставлению. Такие сценарии имеют место, когда требуется сериализовать десериализовать JSON особыми способами, не полагаясь на <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>, или при использовании типа <xref:System.ServiceModel.Channels.Message> непосредственно для сообщений, содержащих JSON. Сопоставление JSON-XML также используется для ведения журнала сообщений. При использовании функции ведения журнала сообщений в WCF, сообщения JSON регистрируются в формате XML в соответствии с сопоставлением, рассмотренным в следующем разделе.  
   
  Для пояснения принципов сопоставления ниже приведен пример JSON-документа.  
   
@@ -46,7 +34,7 @@ ms.lasthandoff: 12/22/2017
 </root>  
 ```  
   
- Кроме того, если JSON-сообщение из этого примера будет получено [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] и зарегистрировано, в приведенном выше журнале будет присутствовать фрагмент XML.  
+ Кроме того Если сообщение JSON в примере полученных WCF и в журнал, вы увидите XML-фрагмент в предыдущем журнале.  
   
 ## <a name="mapping-between-json-and-the-xml-infoset"></a>Сопоставление между JSON и набором сведений XML  
  Формально сопоставление устанавливается между JSON, как описано в [RFC 4627](http://go.microsoft.com/fwlink/?LinkId=98808) (за исключением с некоторыми ограничениями ослабленной и некоторые другие ограничения добавлены) и XML infoset (и не текстовых XML) как описано в [XML-данных Задать](http://go.microsoft.com/fwlink/?LinkId=98809) . См. в этом разделе для определения *информационных элементов* и полей в [квадратные скобки].  
@@ -105,7 +93,7 @@ ms.lasthandoff: 12/22/2017
   
 -   Атрибут имени контракта данных ("__type") (см. описание ниже). Этот атрибут может присутствовать только при условии, что присутствует также атрибут типа JSON и его свойство [normalized value] имеет значение "object". Этот атрибут используется сериализатором `DataContractJsonSerializer` для сохранения сведений о типе контракта данных - например, в случаях полиморфизма, где сериализуется производный тип и где ожидается базовый тип. Если используется не `DataContractJsonSerializer`, в большинстве случаев этот атрибут игнорируется.  
   
--   Набор [in-scope namespaces] содержит привязку "xml" к "http://www.w3.org/XML/1998/namespace", как того требует спецификация наборов сведений.  
+-   [-scope namespaces] содержит привязку «XML» к "http://www.w3.org/XML/1998/namespace" как того требует спецификация наборов сведений.  
   
 -   Свойства [children], [attributes] и [in-scope namespaces] не должны содержать никаких единиц, кроме указанных выше, а свойство [namespace attributes] не должно иметь никаких членов; тем не менее, при чтении XML-данных, полученных из JSON, на это полагаться нельзя.  
   
@@ -209,7 +197,7 @@ ms.lasthandoff: 12/22/2017
  `{"myLocalName1":"myValue1","myLocalName2":2,"myLocalName3":{"myNestedName1":true,"myNestedName2":null}}`  
   
 > [!NOTE]
->  В показанном выше сопоставлении отсутствует этап XML-кодирования. Следовательно, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] поддерживает только JSON-документы, где все символы в именах ключей представляют собой допустимые символы для имен XML-элементов. Например, JSON-документ {"<":"a"} не поддерживается, поскольку символ < не является допустимым именем для XML-элемента.  
+>  В показанном выше сопоставлении отсутствует этап XML-кодирования. Таким образом WCF поддерживает только документы JSON, где все символы в именах ключей представляют собой допустимые символы XML имена элементов. Например, JSON-документ {"<":"a"} не поддерживается, поскольку символ < не является допустимым именем для XML-элемента.  
   
  Обратная ситуация (символы, допустимые в XML, но недопустимые в JSON) никаких проблем не вызывает, поскольку описанное выше сопоставление предусматривает добавление или удаление escape-символов JSON.  
   

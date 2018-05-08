@@ -1,13 +1,6 @@
 ---
-title: "Общие сведения о надстройках WPF"
-ms.custom: 
+title: Общие сведения о надстройках WPF
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - add-ins and XAML browser applications [WPF]
 - add-ins overview [WPF]
@@ -19,16 +12,11 @@ helpviewer_keywords:
 - add-ins [WPF], architecture
 - add-ins [WPF], limitations
 ms.assetid: 00b4c776-29a8-4dba-b603-280a0cdc2ade
-caps.latest.revision: "36"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ffd45957b41cdfd8488aedd865aa70ef5b2634b2
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 942f5706a83a9f9e9cd969701ed5625c57b76f83
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wpf-add-ins-overview"></a>Общие сведения о надстройках WPF
 <a name="Introduction"></a> [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] включает модель надстроек, которую разработчики могут использовать для создания приложений, поддерживающих расширения среды с использованием надстроек. Эта модель позволяет создавать надстройки, которые интегрируются с функциональностью приложения и расширяют ее. В некоторых сценариях приложения также должны отображать [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)], которые предоставляются надстройками. В данном разделе показано, как [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] расширяет модель надстроек [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] для поддержки этих сценариев, описаны ее архитектура, преимущества и ограничения.  
@@ -115,7 +103,7 @@ ms.lasthandoff: 01/19/2018
   
  Типы [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] не поддерживают удаленное взаимодействие. Для решения этой проблемы [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] расширяет модель надстроек [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], чтобы разрешить отображение [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)], созданных надстройками, из ведущих приложений. Эта поддержка обеспечивается [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] двух типов: <xref:System.AddIn.Contract.INativeHandleContract> интерфейс и два статических методов, реализованных <xref:System.AddIn.Pipeline.FrameworkElementAdapters> класса: <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A> и <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>. На высоком уровне эти типы и методы используются следующим образом:  
   
-1.  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]требуется [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)] , предоставляемые надстройки — это классы, прямо или косвенно наследующие от <xref:System.Windows.FrameworkElement>, таких как фигуры, элементы управления, пользовательские элементы управления, панели макета и страниц.  
+1.  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] требуется [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)] , предоставляемые надстройки — это классы, прямо или косвенно наследующие от <xref:System.Windows.FrameworkElement>, таких как фигуры, элементы управления, пользовательские элементы управления, панели макета и страниц.  
   
 2.  Везде, где контракт объявляет, что пользовательский Интерфейс будет передаваться между надстройкой и ведущим приложением, должен быть объявлен как <xref:System.AddIn.Contract.INativeHandleContract> (не <xref:System.Windows.FrameworkElement>); <xref:System.AddIn.Contract.INativeHandleContract> является удаленным представлением надстройки [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] могут передаваться через границы изоляции.  
   
@@ -230,7 +218,7 @@ ms.lasthandoff: 01/19/2018
   
 -   На стороне ведущего приложения [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] переупаковывает <xref:System.Windows.Interop.HwndSource> как внутренний [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] класс, производный от <xref:System.Windows.Interop.HwndHost> и использует <xref:System.AddIn.Contract.INativeHandleContract>. Экземпляр этого класса возвращается с <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A> в ведущее приложение.  
   
- <xref:System.Windows.Interop.HwndHost>существует для отображения [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)], определенные с дескрипторами окон из [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)]. Более подробную информацию см. в разделе [Взаимодействие WPF и Win32](../../../../docs/framework/wpf/advanced/wpf-and-win32-interoperation.md).  
+ <xref:System.Windows.Interop.HwndHost> существует для отображения [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)], определенные с дескрипторами окон из [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)]. Более подробную информацию см. в разделе [Взаимодействие WPF и Win32](../../../../docs/framework/wpf/advanced/wpf-and-win32-interoperation.md).  
   
  Таким образом <xref:System.AddIn.Contract.INativeHandleContract>, <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>, и <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A> , позволяющие дескриптор окна для [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] должен передаваться из надстройки в ведущее приложение, где он инкапсулируется <xref:System.Windows.Interop.HwndHost> и отображается в узле приложения [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)].  
   

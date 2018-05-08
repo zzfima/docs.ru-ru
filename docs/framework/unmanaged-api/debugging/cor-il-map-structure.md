@@ -1,14 +1,6 @@
 ---
-title: "Структура COR_IL_MAP"
-ms.custom: 
+title: Структура COR_IL_MAP
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - COR_IL_MAP
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: 534ebc17-963d-4b26-8375-8cd940281db3
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 2e2772833d75ced2209896ca37cf6cf37fb965f1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9676730a4f11ed77996b7a4aab4e538aba9b53c4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="corilmap-structure"></a>Структура COR_IL_MAP
 Указывает изменения в относительном смещении функции.  
@@ -49,11 +37,11 @@ typedef struct _COR_IL_MAP {
   
 ## <a name="members"></a>Участники  
   
-|Член|Описание:|  
+|Член|Описание|  
 |------------|-----------------|  
 |`oldOffset`|Старый промежуточный язык Майкрософт (MSIL) смещение относительно начала функции.|  
 |`newOffset`|Новое смещение MSIL относительно начала функции.|  
-|`fAccurate`|`true`Если сопоставление является точным; в противном случае `false`.|  
+|`fAccurate`|`true` Если сопоставление является точным; в противном случае `false`.|  
   
 ## <a name="remarks"></a>Примечания  
  Карты имеет следующий формат: отладчик предполагается, что `oldOffset` ссылается на смещение MSIL в пределах исходного, неизмененного MSIL-код. `newOffset` Параметр ссылается на соответствующее смещение MSIL в новом инструментированном коде.  
@@ -99,7 +87,7 @@ typedef struct _COR_IL_MAP {
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>См. также  
  [Структуры отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)  

@@ -1,14 +1,6 @@
 ---
-title: "Общие сведения об элементе управления ToolStrip (Windows Forms)"
-ms.custom: 
+title: Общие сведения об элементе управления ToolStrip (Windows Forms)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - Toolstrip
 helpviewer_keywords:
@@ -17,20 +9,14 @@ helpviewer_keywords:
 - toolbars [Windows Forms]
 - what's new [Windows Forms], toolbars
 ms.assetid: 81d067ed-297c-4dad-90de-1bcac15336ec
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 45dab820072b3eb0bcc448ce32251e3ff5a3e622
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3927f180e738541f2f2f8af6d03d281f6a601167
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="toolstrip-control-overview-windows-forms"></a>Общие сведения об элементе управления ToolStrip (Windows Forms)
-Windows Forms <xref:System.Windows.Forms.ToolStrip> управления и связанные с ним классы предоставляют общую инфраструктуру для объединения элементов пользовательского интерфейса в панели инструментов, строк состояния и меню. <xref:System.Windows.Forms.ToolStrip>элементы управления обладают богатые возможности разработки, включающий активации на месте и редактирования, пользовательский макет и нависания, которая обеспечивает совместное использование горизонтального или вертикального пространства панели инструментов.  
+Windows Forms <xref:System.Windows.Forms.ToolStrip> управления и связанные с ним классы предоставляют общую инфраструктуру для объединения элементов пользовательского интерфейса в панели инструментов, строк состояния и меню. <xref:System.Windows.Forms.ToolStrip> элементы управления обладают богатые возможности разработки, включающий активации на месте и редактирования, пользовательский макет и нависания, которая обеспечивает совместное использование горизонтального или вертикального пространства панели инструментов.  
   
  Несмотря на то что <xref:System.Windows.Forms.ToolStrip> заменяет и расширяет его функциональные возможности для управления в предыдущих версиях <xref:System.Windows.Forms.ToolBar> при необходимости можно сохранить для обратной совместимости и использования в будущем.  
   
@@ -59,7 +45,7 @@ Windows Forms <xref:System.Windows.Forms.ToolStrip> управления и св
   
 ### <a name="important-toolstrip-members"></a>ToolStrip важные члены  
   
-|name|Описание:|  
+|name|Описание|  
 |----------|-----------------|  
 |<xref:System.Windows.Forms.ToolStrip.Dock%2A>|Возвращает или задает край родительского контейнера <xref:System.Windows.Forms.ToolStrip> прикрепляется к.|  
 |<xref:System.Windows.Forms.ToolStrip.AllowItemReorder%2A>|Возвращает или задает значение, указывающее, будут ли операции перетаскивания и переупорядочения элементов обрабатываться классом <xref:System.Windows.Forms.ToolStrip> в закрытом режиме.|  
@@ -75,7 +61,7 @@ Windows Forms <xref:System.Windows.Forms.ToolStrip> управления и св
   
 ### <a name="important-toolstrip-companion-classes"></a>Важные сопутствующие ToolStrip классы  
   
-|name|Описание:|  
+|name|Описание|  
 |----------|-----------------|  
 |<xref:System.Windows.Forms.MenuStrip>|Заменяет и расширяет его функциональные возможности <xref:System.Windows.Forms.MainMenu> класса.|  
 |<xref:System.Windows.Forms.StatusStrip>|Заменяет и расширяет его функциональные возможности <xref:System.Windows.Forms.StatusBar> класса.|  

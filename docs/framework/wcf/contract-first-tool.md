@@ -1,24 +1,12 @@
 ---
-title: "Средство первого контакта"
-ms.custom: 
+title: Средство первого контакта
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 0a880690-f460-4475-a5f4-9f91ce08fcc6
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 5079a4b45c7adf0cfd4d9ae1069379184422dc98
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: b8d38cc31eacf1d8eb29aaaf7d6ef29056ff9b79
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="contract-first-tool"></a>Средство первого контакта
 Контракты службы часто приходится создавать из существующих служб. В [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] классы контрактов данных можно создавать автоматически из существующих служб с помощью средства разработки на основе контракта. Для использования данного средства файл определения схемы XML (XSD) необходимо загрузить локально. Программа не может импортировать удаленные контракты данных через HTTP.  
@@ -72,11 +60,11 @@ ms.lasthandoff: 12/22/2017
 ## <a name="configuring-contract-first-options"></a>Настройка параметров на основе контракта  
  Параметры на основе контракта можно задать в меню «Свойства» проекта [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]. Чтобы включить разработку на основе контракта, установите **включить XSD в качестве языка определения типов** флажок на странице WCF окна свойств проекта.  
   
- ![Параметры проекта WCF, показывающая контракта &#45; первый](../../../docs/framework/wcf/media/contractfirstoptions.png "ContractFirstOptions")  
+ ![Отображение параметров проекта WCF контракта&#45;первый](../../../docs/framework/wcf/media/contractfirstoptions.png "ContractFirstOptions")  
   
  Чтобы настроить дополнительные свойства, нажмите кнопку «Дополнительно».  
   
- ![Расширенный контракт &#45; Свойства первого](../../../docs/framework/wcf/media/contractfirstadvanced.png "ContractFirstAdvanced")  
+ ![Расширенный контракт&#45;свойства первого](../../../docs/framework/wcf/media/contractfirstadvanced.png "ContractFirstAdvanced")  
   
  Для создания кода на основе контракта можно установить следующие дополнительные параметры. Можно задать параметры только сразу для всех файлов в проекте. В настоящий момент нельзя задавать параметры для отдельных файлов.  
   

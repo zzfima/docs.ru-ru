@@ -1,27 +1,15 @@
 ---
-title: "Список действий"
-ms.custom: 
+title: Список действий
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 5540e185-ce8e-4db3-83b0-2b9f5bf71829
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 5e7a371d43237b795536711cf1745030e14d6eca
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: dc504c37b21a2d457f270331ab917747bafbb022
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="activity-list"></a>Список действий
-В этом разделе перечислены все действия, определенные в [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)].  
+В этом разделе перечислены все действия, определенные Windows Communication Foundation (WCF).  
   
 > [!NOTE]
 >  Кроме того, действия можно определить программно для группирования пользовательских трассировок. Дополнительные сведения см. в разделе [создающие трассировки пользовательского кода](../../../../../docs/framework/wcf/diagnostics/tracing/emitting-user-code-traces.md).  
@@ -29,12 +17,12 @@ ms.lasthandoff: 12/22/2017
 ## <a name="servicemodel-activities"></a>Действия ServiceModel  
  В следующей таблице перечислены все действия для основных сценариев использования.  
   
-|Метка|Имя действия|Тип действия|Описание:|  
+|Метка|Имя действия|Тип действия|Описание|  
 |-----------|-------------------|-------------------|-----------------|  
 |A, M|Внешнее действие|Н/П (не контролируется ServiceModel)|Действие, идентификатор которого задается в протоколе TLS до каких-либо вызовов кода ServiceModel (сторона клиента или сторона сервера).<br /><br /> Пример. Действие, в котором метод open вызывается для клиента [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] или вызывается метод serviceHost.open.|  
 |С|Конструкция<br /><br /> ChannelFactory. ContractType : '[Type]'.|Конструкция||  
-|В|Открыть<br /><br /> [ClientBase &#124; ChannelFactory]. ContractType : '[Type]'.|Открыть||  
-|I|Закрыть [ClientBase &#124; ChannelFactory]. ContractType : '[Type]'.|Закрыть||  
+|В|Открыть<br /><br /> [ClientBase&#124;ChannelFactory]. ContractType : '[Type]'.|Открыть||  
+|I|Закрыть [ClientBase&#124;ChannelFactory]. ContractType : '[Type]'.|Закрыть||  
 |M|Построить ServiceHost. ServiceType: '[Type]'.|Конструкция||  
 |в|Открыть ServiceHost. ServiceType: '[Type]'.|Открыть||  
 |Z|Закрыть ServiceHost. ServiceType: '[Type]'.|Закрыть||  
@@ -47,14 +35,14 @@ ms.lasthandoff: 12/22/2017
 ## <a name="security-activities"></a>Действие по обеспечению безопасности  
  В следующей таблице перечислены все действия, связанные с безопасностью.  
   
-|Имя действия|Тип действия|Описание:|  
+|Имя действия|Тип действия|Описание|  
 |-------------------|-------------------|-----------------|  
 |Создание безопасного сеанса|SetupSecurity|Существует только на стороне клиента. Содержит все передаваемые данные RST*/SCT для проверки подлинности и установки контекста безопасности. Если `propagateActivity` = `true`, это действие объединяется с службы соответствующий процесс действия RST\*/SCT действий.|  
 |Закрытие безопасного сеанса|SetupSecurity|Существует на стороне клиента. Содержит обмен сообщением Cancel для закрытия безопасного сеанса. Если `propagateActivity` = `true`, это действие объединяется с действием Process Action «Cancel» от службы.|  
   
  В следующей таблице перечислены все действия, связанные с COM+.  
   
-|Имя действия|Тип действия|Описание:|  
+|Имя действия|Тип действия|Описание|  
 |-------------------|-------------------|-----------------|  
 |Создание экземпляра COM+|TransferToCOMPlus|1 экземпляр действия для каждого вызова COM+ из кода [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)].|  
 |Выполнение COM + \<операции >|TransferToCOMPlus|1 экземпляр действия для каждого вызова COM+ из кода [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)].|  
@@ -62,7 +50,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="wmi-activities"></a>Действия WMI  
  В следующей таблице перечислены все действия, связанные с WMI.  
   
-|Имя действия|Тип действия|Описание:|  
+|Имя действия|Тип действия|Описание|  
 |-------------------|-------------------|-----------------|  
 |Получить WMI|WMIGetObject|Пользователь извлекает данные из инструментария WMI.|  
 |Записать WMI|WmiPutInstance|Пользователь обновляет данные с помощью инструментария WMI.|

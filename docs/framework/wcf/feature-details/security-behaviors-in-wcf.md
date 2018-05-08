@@ -1,29 +1,17 @@
 ---
 title: Поведения безопасности в WCF
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 513232c0-39fd-4409-bda6-5ebd5e0ea7b0
-caps.latest.revision: 23
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: bb10d98eb96213029ae43533935312c6f1cf09c7
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 57bd34c72e98091c4a429d683a0da4ce2d3967c0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="security-behaviors-in-wcf"></a>Поведения безопасности в WCF
-В [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] поведения изменяют порядок работы во время выполнения на уровне службы или на уровне конечной точки. (Дополнительные сведения о поведении в целом. в разделе [указание поведения службы во время выполнения](../../../../docs/framework/wcf/specifying-service-run-time-behavior.md).) *Поведения безопасности* позволяют управлять учетными данными, проверкой подлинности, авторизацией и журналами аудита. Поведения можно использовать путем программирования или через конфигурацию. В этом разделе основное внимание уделяется настройке следующих поведений, связанных с функциями безопасности:  
+В Windows Communication Foundation (WCF), поведения изменяют поведение во время выполнения на уровне службы, так и на уровне конечной точки. (Дополнительные сведения о поведении в целом. в разделе [указание поведения службы во время выполнения](../../../../docs/framework/wcf/specifying-service-run-time-behavior.md).) *Поведения безопасности* позволяют управлять учетными данными, проверкой подлинности, авторизацией и журналами аудита. Поведения можно использовать путем программирования или через конфигурацию. В этом разделе основное внимание уделяется настройке следующих поведений, связанных с функциями безопасности:  
   
 -   [\<serviceCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md).  
   
@@ -140,7 +128,7 @@ ms.lasthandoff: 04/30/2018
  Задает адрес службы маркеров безопасности по умолчанию. Этот параметр используется при <xref:System.ServiceModel.WSFederationHttpBinding> не предоставляет URL-адрес для службы маркеров безопасности или адрес издателя федеративной привязки имеет http://schemas.microsoft.com/2005/12/ServiceModel/Addressing/Anonymous или `null`. В этих случаях необходимо настроить объект <xref:System.ServiceModel.Description.ClientCredentials> с использованием адреса локального издателя и привязки, с помощью которой будет осуществляться взаимодействие с этим издателем.  
   
 #### <a name="issuerchannelbehaviors"></a>\<issuerChannelBehaviors >  
- Используйте [ \<issuerChannelBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/issuerchannelbehaviors-element.md) добавление [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] поведений клиента, используемых при обмене данными со службой маркеров безопасности. Определение поведения клиента в [ \<endpointBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/endpointbehaviors.md) раздела. С помощью определенного поведения, добавьте <`add`> элемента `<issuerChannelBehaviors>` элемент с двумя атрибутами. Задайте в атрибуте `issuerAddress` URL-адрес службы маркеров безопасности, а в атрибуте `behaviorConfiguration` - имя определенного поведения конечной точки, как показано в следующем примере.  
+ Используйте [ \<issuerChannelBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/issuerchannelbehaviors-element.md) для добавления поведений клиента WCF, используемых при обмене данными со службой маркеров безопасности. Определение поведения клиента в [ \<endpointBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/endpointbehaviors.md) раздела. С помощью определенного поведения, добавьте <`add`> элемента `<issuerChannelBehaviors>` элемент с двумя атрибутами. Задайте в атрибуте `issuerAddress` URL-адрес службы маркеров безопасности, а в атрибуте `behaviorConfiguration` - имя определенного поведения конечной точки, как показано в следующем примере.  
   
 ```xml  
 <clientCredentials>  

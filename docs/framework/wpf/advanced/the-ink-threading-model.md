@@ -1,13 +1,6 @@
 ---
-title: "Потоковая модель рукописного ввода"
-ms.custom: 
+title: Потоковая модель рукописного ввода
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - application user interface thread [WPF]
 - stylus plug-in
@@ -20,16 +13,11 @@ helpviewer_keywords:
 - ink collection plug-in
 - plug-ins [WPF], for ink
 ms.assetid: c85fcad1-cb50-4431-847c-ac4145a35c89
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c8eb0cf9f1cbb1be688f228b7bbd10a3a3ca6ed0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: cc0ff8a2345bd945dd2fffdfda80f00e1ab99c67
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="the-ink-threading-model"></a>Потоковая модель рукописного ввода
 Одно из преимуществ рукописного ввода на планшетных ПК — что он сходство с записи с обычной ручкой и документ.  Для этого пера получать входные данные гораздо быстрее мыши и отображает рукописные данные как записи пользователя.  Потока пользовательского интерфейса приложения недостаточно для сбора данных пера и отображения рукописного ввода, так как он может быть заблокирован.  Чтобы устранить эту проблему, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] приложение использует два дополнительных потока, когда пользователь осуществляет рукописный ввод.  
@@ -72,11 +60,11 @@ ms.lasthandoff: 12/22/2017
   
  На предыдущей диаграмме выполняется следующим образом:  
   
-1.  `StylusPlugin1`изменяет значения x и y.  
+1.  `StylusPlugin1` изменяет значения x и y.  
   
-2.  <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>Получает измененные точки пера и помещает их в поток динамической отрисовки.  
+2.  <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> Получает измененные точки пера и помещает их в поток динамической отрисовки.  
   
-3.  `StylusPlugin2`Получает измененные точки пера и выполняет дальнейшие изменения значений x и y.  
+3.  `StylusPlugin2` Получает измененные точки пера и выполняет дальнейшие изменения значений x и y.  
   
 4.  Приложение собирает точки пера и, когда пользователь завершает штрих статически отображает штриха.  
   
@@ -87,7 +75,7 @@ ms.lasthandoff: 12/22/2017
   
  На следующей схеме показана связь между потоком пера и потоком пользовательского интерфейса по отношению к событиям пера <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn>.  
   
- ![Рукописного ввода Threading Models &#40; Пользовательский Интерфейс и перо &#41; ] (../../../../docs/framework/wpf/advanced/media/inkthreading-plugincallbacks.png "InkThreading_PluginCallbacks")  
+ ![Потоковые модели рукописного ввода &#40;пользовательский Интерфейс и перо&#41;](../../../../docs/framework/wpf/advanced/media/inkthreading-plugincallbacks.png "InkThreading_PluginCallbacks")  
   
 ## <a name="rendering-ink"></a>Подготовка к просмотру рукописного ввода  
  Как пользователь штриха, <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> отображает рукописные данные в отдельном потоке, поэтому данные «идут» от пера даже в том случае, если поток пользовательского интерфейса занят.  <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> Строит визуальное дерево в потоке динамической отрисовки, который получает точки пера.  Когда пользователь завершает штрих <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> запросом получать уведомления, когда приложение выполняет следующий этап отрисовки.  После завершения работы приложения следующего прохода отрисовки <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> очищает его визуального дерева.  Этот процесс показан на следующей схеме.  

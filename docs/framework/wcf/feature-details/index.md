@@ -1,33 +1,19 @@
 ---
 title: Подробные сведения о возможностях WCF
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - features [WCF]
 - WCF, features
 - Windows Communication Foundation, features
 ms.assetid: 9b4368ca-0bd3-40dc-a539-bcd5779cee5f
-caps.latest.revision: 22
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 91b22cbcabba95d8cc91ffbc0b74b51e61dae393
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: c97bd891f0bbb58f8b267296b9b53e00a5486622
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wcf-feature-details"></a>Подробные сведения о возможностях WCF
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] обеспечивает всеобъемлющий контроль функций отправки сообщений приложения. В подразделах этого раздела подробно описываются имеющиеся возможности. Дополнительные сведения о базовое программирование в разделе [базовое Программирование WCF](../../../../docs/framework/wcf/basic-wcf-programming.md).  
+Windows Communication Foundation (WCF) обеспечивает всеобъемлющий контроль функций отправки сообщений приложения. В подразделах этого раздела подробно описываются имеющиеся возможности. Дополнительные сведения о базовое программирование в разделе [базовое Программирование WCF](../../../../docs/framework/wcf/basic-wcf-programming.md).  
   
 ## <a name="in-this-section"></a>В этом разделе  
  [Службы рабочих процессов](../../../../docs/framework/wcf/feature-details/workflow-services.md)  
@@ -40,7 +26,7 @@ ms.lasthandoff: 04/30/2018
  Описывает способ настройки сериализации данных для совместной работы или будущей совместимости.  
   
  [Сеансы, экземпляры и параллелизм](../../../../docs/framework/wcf/feature-details/sessions-instancing-and-concurrency.md)  
- Описывает создание экземпляров и режимов сеанса [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] и способ выбора правильного режима для приложения.  
+ Описывает создание экземпляров и режимов сеанса WCF и способ выбора правильного режима для приложения.  
   
  [Транспорты](../../../../docs/framework/wcf/feature-details/transports.md)  
  Описывает способ настройки транспортного уровня, нижнего уровня стека каналов.  
@@ -52,7 +38,7 @@ ms.lasthandoff: 04/30/2018
  Объясняет, как создать транзакционные операции с возможностью отката при необходимости.  
   
  [Безопасность](../../../../docs/framework/wcf/feature-details/security.md)  
- Описывает, как безопасность [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] помогает создавать приложения с конфиденциальностью и целостностью. Кроме того, в качестве возможностей аудита имеются проверка подлинности и авторизация.  
+ Описывает, каким образом безопасности WCF помогает вам создавать приложения, которые имеют конфиденциальности и целостности. Кроме того, в качестве возможностей аудита имеются проверка подлинности и авторизация.  
   
  [Одноранговая сеть](../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md)  
  Подробная информация о способе создания одноранговых служб и клиентов.  
@@ -67,16 +53,16 @@ ms.lasthandoff: 04/30/2018
  Описывает размещение. Служба может размещаться в другом приложении или быть резидентной (размещаться сама в себе).  
   
  [Взаимодействие и интеграция](../../../../docs/framework/wcf/feature-details/interoperability-and-integration.md)  
- Описывает использование [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] для расширения существующей логики вместо ее переписывания при существенном изменении логики компонентно-ориентированного приложения, размещенного в COM+.  
+ Описывает способы использования WCF для расширения существующей логики вместо ее переписывания при наличии существенном изменении логики компонентно ориентированного приложения, размещенного в COM +.  
   
  [Модель веб-программирования HTTP WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)  
- Описывает модель веб-программирования [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], позволяющую разработчикам предоставлять операции службы [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] конечным точкам, не являющимся конечными точками SOAP.  
+ Описывает модель программирования WCF Web, позволяет разработчикам предоставлять операции службы WCF в конечные точки не протокола SOAP.  
   
  [Синдикация WCF](../../../../docs/framework/wcf/feature-details/wcf-syndication.md)  
- Описывает поддержку простого экспонирования веб-каналов синдикации из службы [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ Описывает поддержку простого экспонирования веб-каналов синдикации из службы WCF.  
   
  [Интеграция с AJAX и поддержка JSON](../../../../docs/framework/wcf/feature-details/ajax-integration-and-json-support.md)  
- Описывает поддержку форматов данных асинхронных сценариев JavaScript, XML (AJAX) и JSON в ASP.NET, позволяющую службам [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] предоставлять операции клиентам AJAX.  
+ Описывает поддержку для ASP.NET асинхронных скриптов JavaScript и XML (AJAX) и данные формат JavaScript Object Notation (JSON), чтобы службы WCF предоставлять операции клиентам AJAX.  
   
  [Обнаружение WCF](../../../../docs/framework/wcf/feature-details/wcf-discovery.md)  
  Описывает поддержку для включения обнаружения служб во время выполнения совместимым способом с помощью протокола WS-Discovery.  

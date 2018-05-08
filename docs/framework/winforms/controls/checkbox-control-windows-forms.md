@@ -1,13 +1,6 @@
 ---
-title: "Элемент управления CheckBox (Windows Forms)"
-ms.custom: 
+title: Элемент управления CheckBox (Windows Forms)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - checked list items [Windows Forms], Windows Forms controls
 - CheckBox control [Windows Forms]
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - checked list items
 - check boxes
 ms.assetid: 0719d798-c307-40d3-9040-72a62679c227
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7477ef53db9c2740a747c6a021a602ea32dfe3ee
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a71fefd8d1c0edb23119cdd6b2604e274302935a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="checkbox-control-windows-forms"></a>Элемент управления CheckBox (Windows Forms)
 Элемент управления `CheckBox` Windows Forms указывает, включено или отключено какое-либо условие. Обычно он используется для предоставления пользователю выбора типа "Да/Нет" или "Истина/Ложь". Элементы управления типа "флажок" можно объединять в группы для предоставления нескольких вариантов ответа, из которых пользователь может выбрать один или несколько. Это похоже на элемент управления <xref:System.Windows.Forms.RadioButton>, но можно выбрать любое число объединенных в группу элементов `CheckBox`.  

@@ -1,27 +1,15 @@
 ---
-title: "Активация на основе конфигурации в IIS и WAS"
-ms.custom: 
+title: Активация на основе конфигурации в IIS и WAS
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 6a927e1f-b905-4ee5-ad0f-78265da38238
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: fc0e954ae5cadbe7e70cd8a83d3d5841f4e0d142
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: aa4a3c682ab1d5d7ca0869fee588934b9ed2bf75
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="configuration-based-activation-in-iis-and-was"></a>Активация на основе конфигурации в IIS и WAS
-Обычно при размещении службы [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] в каталоге IIS или WAS следует предоставить SVC-файл. SVC-файл содержит имя службы, а также дополнительную пользовательскую фабрику узла службы. С помощью этого дополнительного файла добавляются служебные данные по управлению. Возможность активации на основе конфигурации снимает требование по наличию SVC-файла и, следовательно, по наличию связанных служебных данных.  
+Обычно при размещении службы Windows Communication Foundation (WCF) в Internet Information Services (IIS) или службы активации Windows (WAS), необходимо предоставить SVC-файла. SVC-файл содержит имя службы, а также дополнительную пользовательскую фабрику узла службы. С помощью этого дополнительного файла добавляются служебные данные по управлению. Возможность активации на основе конфигурации снимает требование по наличию SVC-файла и, следовательно, по наличию связанных служебных данных.  
   
 ## <a name="configuration-based-activation"></a>Активация на основе конфигурации  
  Активация на основе конфигурации принимает метаданные, которые используются для размещения в SVC-файле, и помещает их в файл Web.config. Внутри <`serviceHostingEnvironment`> отсутствует элемент <`serviceActivations`> элемент. Внутри <`serviceActivations`> элемент одного или нескольких <`add`> элементов, по одному для каждой размещенной службы. <`add`> Содержит атрибуты, которые позволяют задать относительный адрес для службы и тип службы или фабрики узла службы. В следующем примере конфигурации показано, каким образом используется этот раздел.  

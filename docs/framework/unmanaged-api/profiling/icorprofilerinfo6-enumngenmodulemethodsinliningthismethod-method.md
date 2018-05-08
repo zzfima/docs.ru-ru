@@ -1,24 +1,14 @@
 ---
-title: "Метод ICorProfilerInfo6::EnumNgenModuleMethodsInliningThisMethod"
-ms.custom: 
+title: Метод ICorProfilerInfo6::EnumNgenModuleMethodsInliningThisMethod
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: b933dfe6-7833-40cb-aad8-40842dc3034f
-caps.latest.revision: "6"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 8e11dd1c24001c764c82ed3f11336873ee57b2e9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 564f3b1cdfab2a3020b6bb5ac8d9af03c6532c8b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icorprofilerinfo6enumngenmodulemethodsinliningthismethod-method"></a>Метод ICorProfilerInfo6::EnumNgenModuleMethodsInliningThisMethod
 [Поддерживается в .NET Framework 4.6 и более поздних версиях]  
@@ -54,7 +44,7 @@ HRESULT EnumNgenModuleMethodsInliningThisMethod(
  [out] Указатель на адрес объекта перечислителя  
   
 ## <a name="remarks"></a>Примечания  
- `inlineeModuleId`и `inlineeMethodId` вместе образуют полный идентификатор для метода, который может быть встроен. Например, предположим, модуль `A` определяет метод `Simple.Add`:  
+ `inlineeModuleId` и `inlineeMethodId` вместе образуют полный идентификатор для метода, который может быть встроен. Например, предположим, модуль `A` определяет метод `Simple.Add`:  
   
 ```csharp  
 Simple.Add(int a, int b)   
@@ -68,7 +58,7 @@ Fancy.AddTwice(int a, int b)
 { return Simple.Add(a,b) + Simple.Add(a,b); }  
 ```  
   
- Позволяет также предполагается, что `Fancy.AddTwice` внедряет вызов к `SimpleAdd`. Профилировщик может использовать этот перечислитель найти все методы, определенные в модуле B какие встроенного `Simple.Add`, и результат будет перечислять `AddTwice`.  `inlineeModuleId`Идентификатор модуля `A`, и `inlineeeMethodId` идентификатор `Simple.Add(int a, int b)`.  
+ Позволяет также предполагается, что `Fancy.AddTwice` внедряет вызов к `SimpleAdd`. Профилировщик может использовать этот перечислитель найти все методы, определенные в модуле B какие встроенного `Simple.Add`, и результат будет перечислять `AddTwice`.  `inlineeModuleId` Идентификатор модуля `A`, и `inlineeeMethodId` идентификатор `Simple.Add(int a, int b)`.  
   
  Если `incompleteData` имеет значение true, после функции Возвращает перечислитель не содержит все методы встраивания данный метод. Это может произойти, когда один или более прямых или косвенных зависимостей модуля inliners еще не были загружены. Если профилировщик должен точные данные, его следует повторить позднее при загрузке дополнительных модулей, лучше всего при каждой загрузке модуля.  
   
@@ -88,7 +78,7 @@ Simple.Add(int a, int b)
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:**[!INCLUDE[net_current_v46plus](../../../../includes/net-current-v46plus-md.md)]  
+ **Версии платформы .NET framework:** [!INCLUDE[net_current_v46plus](../../../../includes/net-current-v46plus-md.md)]  
   
 ## <a name="see-also"></a>См. также  
  [Интерфейс ICorProfilerInfo6](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo6-interface.md)

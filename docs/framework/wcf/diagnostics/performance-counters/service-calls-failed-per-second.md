@@ -1,29 +1,17 @@
 ---
-title: "Служба: количество сбоев вызовов в секунду"
-ms.custom: 
+title: 'Служба: количество сбоев вызовов в секунду'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 5a2c7939-107d-4f0c-b43c-e02e079e8a9d
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 632c81b6ffd84202b7609dccb89887af01ae706e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6af8f79d1fe163967a5c6e8220697aa11bee66c7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="service-calls-failed-per-second"></a>Служба: количество сбоев вызовов в секунду
 Имя счетчика: Calls Failed Per Second.  
   
-## <a name="description"></a>Описание:  
+## <a name="description"></a>Описание  
  Число вызовов с необработанными исключениями, получаемых этой службой за секунду.  
   
  Этот счетчик является счетчиком производительности типа [PERF_COUNTER_COUNTER](http://go.microsoft.com/fwlink/?LinkID=94649), значение которого вычисляется по следующей формуле.  

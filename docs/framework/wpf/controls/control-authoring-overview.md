@@ -1,13 +1,6 @@
 ---
-title: "Общие сведения о разработке управления"
-ms.custom: 
+title: Общие сведения о разработке управления
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - controls [WPF], authoring overview
 - authoring overview for controls [WPF]
 ms.assetid: 3d864748-cff0-4e63-9b23-d8e5a635b28f
-caps.latest.revision: "32"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f9290c249ed85ffc1fe98878daf2c2f0777786f5
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: a6c2c796819924cdbd15d6eefffe10a607bad9bc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="control-authoring-overview"></a>Общие сведения о разработке элементов управления
 Расширяемость модели элементов управления [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] значительно уменьшает необходимость создания новых элементов управления. Однако в некоторых случаях может потребоваться создать пользовательский элемент управления. В этом разделе обсуждаются функции, которые уменьшают необходимость создания пользовательских элементов управления, а также различные модели создания элементов управления в [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. Также здесь демонстрируется создание нового элемента управления.  
@@ -83,7 +71,7 @@ ms.lasthandoff: 01/19/2018
 ### <a name="deriving-from-frameworkelement"></a>Создание производного от FrameworkElement  
  Элементы управления, которые являются производными от <xref:System.Windows.Controls.UserControl> или <xref:System.Windows.Controls.Control> основываются на сочетании существующих элементов. Во многих сценариях это решение приемлемо, так как любой объект, наследуемый от <xref:System.Windows.FrameworkElement> может находиться в <xref:System.Windows.Controls.ControlTemplate>. Однако бывают случаи, когда для внешнего вида элемента управления требуется больше, чем функциональность простой композиции элементов. В этих сценариях, компонент создание на основе <xref:System.Windows.FrameworkElement> – правильный выбор.  
   
- Существует два стандартных методов для построения <xref:System.Windows.FrameworkElement>-компонентов, основанных на: прямая отрисовка и настраиваемое построение элемента. Прямая отрисовка включает переопределение <xref:System.Windows.UIElement.OnRender%2A> метод <xref:System.Windows.FrameworkElement> и предоставляя <xref:System.Windows.Media.DrawingContext> операций, которые явно определяют графические параметры компонента. Это метод, используемый для <xref:System.Windows.Controls.Image> и <xref:System.Windows.Controls.Border>. Построение пользовательского элемента предполагает использование объектов типа <xref:System.Windows.Media.Visual> для построения внешнего компонента. Например, см. раздел [Использование объектов DrawingVisual](../../../../docs/framework/wpf/graphics-multimedia/using-drawingvisual-objects.md). <xref:System.Windows.Controls.Primitives.Track>Пример элемента управления в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] , используется сочетание настраиваемого элемента. Можно также комбинировать прямую отрисовку и пользовательскую композицию элемента в одном элементе управления.  
+ Существует два стандартных методов для построения <xref:System.Windows.FrameworkElement>-компонентов, основанных на: прямая отрисовка и настраиваемое построение элемента. Прямая отрисовка включает переопределение <xref:System.Windows.UIElement.OnRender%2A> метод <xref:System.Windows.FrameworkElement> и предоставляя <xref:System.Windows.Media.DrawingContext> операций, которые явно определяют графические параметры компонента. Это метод, используемый для <xref:System.Windows.Controls.Image> и <xref:System.Windows.Controls.Border>. Построение пользовательского элемента предполагает использование объектов типа <xref:System.Windows.Media.Visual> для построения внешнего компонента. Например, см. раздел [Использование объектов DrawingVisual](../../../../docs/framework/wpf/graphics-multimedia/using-drawingvisual-objects.md). <xref:System.Windows.Controls.Primitives.Track> Пример элемента управления в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] , используется сочетание настраиваемого элемента. Можно также комбинировать прямую отрисовку и пользовательскую композицию элемента в одном элементе управления.  
   
 #### <a name="benefits-of-deriving-from-frameworkelement"></a>Преимущества использования производного от FrameworkElement  
  Рассмотрите возможность наследования от <xref:System.Windows.FrameworkElement> при выполнении одного из следующих условий:  
@@ -127,7 +115,7 @@ ms.lasthandoff: 01/19/2018
   
 -   Определите метод для <xref:System.Windows.CoerceValueCallback> с именем `CoerceValue`. `CoerceValue` гарантирует, что `Value` больше или равно `MinValue` и меньше или равно `MaxValue`.  
   
--   Определите метод для <xref:System.Windows.PropertyChangedCallback>с именем `OnValueChanged`. `OnValueChanged`Создает <xref:System.Windows.RoutedPropertyChangedEventArgs%601> объекта и подготавливает для вызова `ValueChanged` перенаправленного события. Перенаправляемые события рассматриваются в следующем разделе.  
+-   Определите метод для <xref:System.Windows.PropertyChangedCallback>с именем `OnValueChanged`. `OnValueChanged` Создает <xref:System.Windows.RoutedPropertyChangedEventArgs%601> объекта и подготавливает для вызова `ValueChanged` перенаправленного события. Перенаправляемые события рассматриваются в следующем разделе.  
   
  [!code-csharp[UserControlNumericUpDown#DependencyProperty](../../../../samples/snippets/csharp/VS_Snippets_Wpf/UserControlNumericUpDown/CSharp/NumericUpDown.xaml.cs#dependencyproperty)]
  [!code-vb[UserControlNumericUpDown#DependencyProperty](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UserControlNumericUpDown/visualbasic/numericupdown.xaml.vb#dependencyproperty)]  
@@ -195,7 +183,7 @@ ms.lasthandoff: 01/19/2018
   
 -   Реализуйте пару методов CLR `public` `static` с именем `Set`*PropertyName* и `Get`*PropertyName*. Оба метода должны принимать класс, производный от <xref:System.Windows.DependencyProperty> качестве первого аргумента. Метод `Set`*PropertyName* также принимает аргумент, тип которого соответствует зарегистрированному типу данных для свойства. Метод `Get`*PropertyName* должен возвращать значение такого же типа. Если метод `Set` *PropertyName* отсутствует, свойство отмечается как "только для чтения".  
   
--   `Set`*PropertyName* и `Get` *PropertyName* должны перенаправляться непосредственно в <xref:System.Windows.DependencyObject.GetValue%2A> и <xref:System.Windows.DependencyObject.SetValue%2A> методы зависимостей целевого объекта, соответственно. Разработчики могут получить доступ к вложенному свойству, вызвав программу-оболочку метода или с помощью прямого вызова целевого объекта зависимостей.  
+-   `Set` *PropertyName* и `Get` *PropertyName* должны перенаправляться непосредственно в <xref:System.Windows.DependencyObject.GetValue%2A> и <xref:System.Windows.DependencyObject.SetValue%2A> методы зависимостей целевого объекта, соответственно. Разработчики могут получить доступ к вложенному свойству, вызвав программу-оболочку метода или с помощью прямого вызова целевого объекта зависимостей.  
   
  Дополнительные сведения о вложенных свойствах см. в разделе [Общие сведения о вложенных свойствах](../../../../docs/framework/wpf/advanced/attached-properties-overview.md).  
   

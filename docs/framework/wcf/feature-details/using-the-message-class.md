@@ -1,34 +1,20 @@
 ---
 title: Использование класса сообщений
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: d1d62bfb-2aa3-4170-b6f8-c93d3afdbbed
-caps.latest.revision: 14
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: c63a0a88997a1c35b24562bcca3e0fdb40ebfd41
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 0ff65d9173838a8eb8850253e62d822f06942f26
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-the-message-class"></a>Использование класса сообщений
-Класс <xref:System.ServiceModel.Channels.Message> является основой [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. Все взаимодействие между клиентами и службами в конечном итоге приводит к отправке и получению экземпляров класса <xref:System.ServiceModel.Channels.Message>.  
+<xref:System.ServiceModel.Channels.Message> Класс — это основа для Windows Communication Foundation (WCF). Все взаимодействие между клиентами и службами в конечном итоге приводит к отправке и получению экземпляров класса <xref:System.ServiceModel.Channels.Message>.  
   
- Как правило, с классом <xref:System.ServiceModel.Channels.Message> не приходится взаимодействовать напрямую. Вместо этого для описания входящих и исходящих сообщений используются конструкции модели служб [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], такие как контракты данных, контракты сообщений и контракты операций. Однако в некоторых сложных сценариях можно создавать код непосредственно с использованием класса <xref:System.ServiceModel.Channels.Message>. Например, класс <xref:System.ServiceModel.Channels.Message> можно использовать в следующих случаях.  
+ Как правило, с классом <xref:System.ServiceModel.Channels.Message> не приходится взаимодействовать напрямую. Вместо этого для описания входящих и исходящих сообщений используются конструкции модели службы WCF, такие как контракты данных, контракты сообщений и контракты операций. Однако в некоторых сложных сценариях можно создавать код непосредственно с использованием класса <xref:System.ServiceModel.Channels.Message>. Например, класс <xref:System.ServiceModel.Channels.Message> можно использовать в следующих случаях.  
   
 -   Если необходим альтернативный способ создания содержимого исходящих сообщений (например, нужно создать сообщение непосредственно из файла на диске), отличный от сериализации объектов [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)].  
   
@@ -36,7 +22,7 @@ ms.lasthandoff: 04/28/2018
   
 -   Если необходимо совершить общие операции с сообщениями независимо от их содержимого (например, маршрутизировать или переслать сообщения при создании маршрутизатора, подсистемы балансировки нагрузки или системы публикации-подписки).  
   
- Перед использованием <xref:System.ServiceModel.Channels.Message> класса, ознакомьтесь с [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] архитектуре передачи данных [Обзор архитектуры передачи данных](../../../../docs/framework/wcf/feature-details/data-transfer-architectural-overview.md).  
+ Перед использованием <xref:System.ServiceModel.Channels.Message> класса, ознакомьтесь с архитектурой передачи данных WCF в [Обзор архитектуры передачи данных](../../../../docs/framework/wcf/feature-details/data-transfer-architectural-overview.md).  
   
  Класс <xref:System.ServiceModel.Channels.Message> представляет собой контейнер для данных общего назначения, структура которого во многом схожа со структурой сообщения в протоколе SOAP. Как и в протоколе SOAP, сообщение имеет тело и заголовки. Тело сообщения содержит фактическую полезную нагрузку данных, а заголовки - дополнительные именованные контейнеры с данными. Правила чтения и записи тела и заголовков сообщения различаются. Так, заголовки всегда буферизуются в памяти, доступ к ним можно получать в любой очередности неограниченное количество раз, в то время как тело можно прочитать только один раз, и тело может участвовать в потоковой передаче. Как правило, при использовании протокола SOAP тело сообщения сопоставляется телу сообщения SOAP, а его заголовки - заголовкам сообщения SOAP.  
   
@@ -181,7 +167,7 @@ ms.lasthandoff: 04/28/2018
  Чтобы получить доступ к XML-данным в заголовке, можно вызвать метод <xref:System.ServiceModel.Channels.MessageHeaders.GetReaderAtHeader%2A> и вернуть средство чтения XML для конкретного индекса заголовка. При необходимости десериализовать содержимое заголовка в объект, следует использовать <xref:System.ServiceModel.Channels.MessageHeaders.GetHeader%60%601%28System.Int32%29> или любую другую перегрузку. Основные перегрузки десериализуют заголовки с помощью сериализатора <xref:System.Runtime.Serialization.DataContractSerializer>, настроенного по умолчанию. При необходимости использовать другой сериализатор или сериализатор `DataContractSerializer` с другими настройками используйте одну из перегрузок, принимающих `XmlObjectSerializer`. Существуют перегрузки, принимающие вместо индекса имя заголовка, пространство имен и дополнительно список значений `Actor`; в этом случае получается сочетание `FindHeader` и `GetHeader`.  
   
 ## <a name="working-with-properties"></a>Работа со свойствами  
- Экземпляр `Message` может содержать произвольное число именованных объектов произвольных типов. Доступ к этой коллекции осуществляется через свойство `Properties` типа `MessageProperties`. Коллекция реализует интерфейс <xref:System.Collections.Generic.IDictionary%602> и действует как сопоставление между <xref:System.String> и <xref:System.Object>. Как правило, значения свойств не сопоставляются непосредственно какой-либо части сообщения в сети, а предоставляют различным каналам в стеке каналов [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] или инфраструктуре службы <xref:System.ServiceModel.Channels.MessageHeaders.CopyTo%28System.ServiceModel.Channels.MessageHeaderInfo%5B%5D%2CSystem.Int32%29> различные подсказки об обработке сообщения. Пример см. в разделе [Общие сведения об архитектуре передачи данных](../../../../docs/framework/wcf/feature-details/data-transfer-architectural-overview.md).  
+ Экземпляр `Message` может содержать произвольное число именованных объектов произвольных типов. Доступ к этой коллекции осуществляется через свойство `Properties` типа `MessageProperties`. Коллекция реализует интерфейс <xref:System.Collections.Generic.IDictionary%602> и действует как сопоставление между <xref:System.String> и <xref:System.Object>. Как правило, значения свойств не сопоставляются непосредственно любую часть сообщения в сети, а также предоставляют различные сообщения подсказки об различным каналам в стеке каналов WCF или к обработке <xref:System.ServiceModel.Channels.MessageHeaders.CopyTo%28System.ServiceModel.Channels.MessageHeaderInfo%5B%5D%2CSystem.Int32%29> инфраструктура службы. Пример см. в разделе [Общие сведения об архитектуре передачи данных](../../../../docs/framework/wcf/feature-details/data-transfer-architectural-overview.md).  
   
 ## <a name="inheriting-from-the-message-class"></a>Наследование от класса сообщений  
  Если встроенные типы сообщений, созданные с использованием `CreateMessage`, не соответствуют предъявляемым требованиям, можно создать класс, который наследуется от класса `Message`.  

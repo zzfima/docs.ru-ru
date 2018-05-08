@@ -1,23 +1,12 @@
 ---
-title: "Шаблон автоподтверждения"
-ms.custom: 
+title: Шаблон автоподтверждения
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 668aec65-78d3-4636-9c7b-deed643a18f9
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c3595e501341f64883ce2552f0a3c0850691f38c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b30703ffba3b721ac544ea6471ec47ce7f746d2b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="auto-confirm-pattern"></a>Шаблон автоподтверждения
 Данный образец включает три сценария, иллюстрирующих пользовательское действие `AutoConfirmScope`. В первом образце показано успешное выполнение последовательности из четырех подлежащих компенсации действий, из которых второе и третье действия являются вложенными в `AutoConfirmScope`. Во втором образце показана та же последовательность с исключением, сформированным после выполнения четвертого действия <xref:System.Activities.Statements.CompensableActivity>. В третьем сценарии показана та же последовательность с исключением, сформированным в `AutoConfirmScope` после завершения второго действия <xref:System.Activities.Statements.CompensableActivity>.  
@@ -45,6 +34,6 @@ ms.lasthandoff: 12/22/2017
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите на страницу [Примеры Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все примеры [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Этот образец расположен в следующем каталоге.  
+>  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] образцов. Этот образец расположен в следующем каталоге.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\Compensation\AutoConfirm`

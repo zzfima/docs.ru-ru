@@ -1,24 +1,12 @@
 ---
 title: Производительность Windows Workflow Foundation 4
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 67d2b3e8-3777-49f8-9084-abbb33b5a766
-caps.latest.revision: 9
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 4db761d2e6ba0231cb83d4ef5d1ee663c99178c5
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: 793645c442e960c43f00c3ea3c9b636a4c539706
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="windows-workflow-foundation-4-performance"></a>Производительность Windows Workflow Foundation 4
 Дастин Метцгар (Dustin Metzgar)  
@@ -29,12 +17,12 @@ ms.lasthandoff: 04/30/2018
   
  Microsoft [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)] включает основной версии для Windows Workflow Foundation (WF) с интенсивной инвестициями в производительности.  В этой версии имеются значительные изменения по сравнению с предыдущими версиями [!INCLUDE[wf1](../../../includes/wf1-md.md)], поставляемыми в составе платформы .NET Framework 3.0 и [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)]. Переработка множества аспектов от ядра модели программирования и среды выполнения до инструментария позволила значительно повысить производительность и удобство использования. В этом разделе описаны важные характеристики производительности этих версий по сравнению с аналогичными характеристиками предыдущей версии.  
   
- Производительность компонентов отдельных рабочих процессов повысилась за счет разницы в скорости выполнения операций умножения между WF3 и WF4.  Это сокращает разрыв между службами [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] с написанием кода вручную и службами рабочего процесса [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].  Время ожидания рабочего процесса в WF4 значительно сократилось.  Производительность сохранения данных повысилась в 2,5–3,0 раза.  Заметно снизились издержки при наблюдении за работоспособностью при отслеживании рабочего процесса.  Все это делает применение WF4 в приложениях или переход на эту платформу очень привлекательным.  
+ Производительность компонентов отдельных рабочих процессов повысилась за счет разницы в скорости выполнения операций умножения между WF3 и WF4.  Это оставляет разрыв между службами служб Windows Communication Foundation (WCF) и [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] написанием службами рабочего процесса.  Время ожидания рабочего процесса в WF4 значительно сократилось.  Производительность сохранения данных повысилась в 2,5–3,0 раза.  Заметно снизились издержки при наблюдении за работоспособностью при отслеживании рабочего процесса.  Все это делает применение WF4 в приложениях или переход на эту платформу очень привлекательным.  
   
 ## <a name="terminology"></a>Терминология  
  Версия [!INCLUDE[wf1](../../../includes/wf1-md.md)], появившаяся в [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], далее в этом разделе именуется WF4.  [!INCLUDE[wf1](../../../includes/wf1-md.md)] появилась в .NET 3.0 и содержит ряд небольших изменений [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] с пакетом обновления 1 (SP1). Версия [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] платформы Workflow Foundation далее по тексту именуется WF3. WF3 поставляется в составе [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] параллельно с WF4. Дополнительные сведения о миграции артефактов WF3 в WF4 см: [руководстве по миграции Windows Workflow Foundation 4](http://go.microsoft.com/fwlink/?LinkID=153313)  
   
- [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] является единой моделью программирования (Майкрософт) для построения ориентированных на службы приложений. Этот компонент впервые появился в составе .Net 3.0 вместе с WF3 и теперь является одним из ключевых компонентов платформы [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)].  
+ Windows Communication Foundation (WCF) является единой моделью программирования корпорации Майкрософт для построения сервисноориентированных приложений. Этот компонент впервые появился в составе .Net 3.0 вместе с WF3 и теперь является одним из ключевых компонентов платформы [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)].  
   
  Windows Server AppFabric - это набор интегрированных технологий, которые упрощают построение, масштабирование и управление составными и веб-приложениями, работающими под управлением IIS. В состав этого продукта входят средства для наблюдения за службами и рабочими процессами и управления ими. Дополнительные сведения см. в разделе [Windows Server AppFabric](http://msdn.microsoft.com/windowsserver/ee695849.aspx)  
   

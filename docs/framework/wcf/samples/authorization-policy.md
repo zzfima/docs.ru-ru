@@ -1,24 +1,12 @@
 ---
-title: "Политика авторизации"
-ms.custom: 
+title: Политика авторизации
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 1db325ec-85be-47d0-8b6e-3ba2fdf3dda0
-caps.latest.revision: "38"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4ba4548e6ea62f408fddf3629eca1318c482f728
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
-ms.translationtype: MT
+ms.openlocfilehash: fc0c147f2f9a57c80edda6144a14f208bde835eb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="authorization-policy"></a>Политика авторизации
 В этом образце показано, как реализовать пользовательскую политику авторизации утверждений и связанный с ней пользовательский диспетчер авторизации службы. Это бывает удобно, если служба осуществляет проверку прав доступа к операциям службы на основании утверждений и предоставляет вызывающей стороне определенные права, прежде чем проверить права доступа. В этом образце показан процесс добавления утверждений, а также процесс проверки прав доступа с использованием готового набора утверждений. Все сообщения приложений, которыми обмениваются служба и клиент, подписываются и шифруются. По умолчанию при использовании привязки `wsHttpBinding` для входа от имени действующей учетной записи Windows NT используются предоставляемые клиентом имя пользователя и пароль. В этом примере показано, как использовать пользовательский <!--zz <xref:System.IdentityModel.Selectors.UsernamePasswordValidator>--> `System.IdentityModel.Selectors.UsernamePasswordValidator` для проверки подлинности клиента. Кроме того, в этом образце показана проверка подлинности клиента на стороне службы с использованием сертификата X.509. Этот образец показывает реализацию объектов <xref:System.IdentityModel.Policy.IAuthorizationPolicy> и <xref:System.ServiceModel.ServiceAuthorizationManager>, которые между собой предоставляют заданным пользователям доступ к определенным методам службы. Этот пример построен на [имя пользователя безопасности сообщения](../../../../docs/framework/wcf/samples/message-security-user-name.md), но показано, как выполнить преобразование утверждений до <xref:System.ServiceModel.ServiceAuthorizationManager> вызова.  
@@ -292,9 +280,9 @@ serviceHost.Credentials.UserNameAuthentication.CustomUserNamePasswordValidator =
 </behavior>  
 ```  
   
- В [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] реализована функциональная модель проверки прав доступа на основе утверждений. Для контроля прав доступа и проверки, удовлетворяют ли связанные с клиентом удостоверения требованиям, необходимым для доступа к методу службы, используется объект <xref:System.ServiceModel.ServiceAuthorizationManager>.  
+ Windows Communication Foundation (WCF) предоставляет расширенную модель на основе утверждений для выполнения проверок доступа. Для контроля прав доступа и проверки, удовлетворяют ли связанные с клиентом удостоверения требованиям, необходимым для доступа к методу службы, используется объект <xref:System.ServiceModel.ServiceAuthorizationManager>.  
   
- В демонстрационных целях в этом образце показана реализация <xref:System.ServiceModel.ServiceAuthorizationManager>, включающая метод <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A>, который дает возможность пользователю обращаться к методам на основе утверждений типа http://example.com/claims/allowedoperation, значения которых представляют собой коды URI действий разрешенных к вызову операций.  
+ В целях демонстрации в этом примере показана реализация <xref:System.ServiceModel.ServiceAuthorizationManager> , реализующий <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A> метод, чтобы разрешить доступ пользователей к методам на основе утверждений типа http://example.com/claims/allowedoperation , значение которого представляет собой URI действия операции может быть вызван.  
   
 ```  
 public class MyServiceAuthorizationManager : ServiceAuthorizationManager  

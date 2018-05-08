@@ -1,13 +1,6 @@
 ---
-title: "Практическое руководство. Сокрытие элемента управления во время выполнения"
-ms.custom: 
+title: Практическое руководство. Сокрытие элемента управления во время выполнения
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -18,16 +11,11 @@ helpviewer_keywords:
 - custom controls [Windows Forms], invisible
 - run time [Windows Forms], making controls invisible
 ms.assetid: 69eb2e72-32f5-4f79-a157-c2c5f60c1628
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6e28a682c6f3bfc52a293daebeade960c1875bb5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 51e804c7f01b55ed7504837042b6c32bf47d9405
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-make-your-control-invisible-at-run-time"></a>Практическое руководство. Сокрытие элемента управления во время выполнения
 Бывают случаи, когда может потребоваться создать пользовательский элемент управления, который остается невидимым во время выполнения. Например элемент управления, выполняющий функции будильника может быть невидимой, за исключением случаев, когда будильника. Это делается путем присвоения свойству легко <xref:System.Windows.Forms.Control.Visible%2A> свойство. Если <xref:System.Windows.Forms.Control.Visible%2A> свойство `true`, элемент управления отображается в обычном режиме. Если `false`, элемент управления будет скрыт. Несмотря на то, что код в элемент управления может выполняться при скрытии, вы не сможете взаимодействовать с элементом управления через пользовательский интерфейс. Если вы хотите создать невидимом элементе управления, который реагирует на пользовательский ввод (например, щелчки мышью), следует создать прозрачный элемент управления. Дополнительные сведения см. в разделе [предоставления элемента управления прозрачный фон](../../../../docs/framework/winforms/controls/how-to-give-your-control-a-transparent-background.md).  

@@ -1,14 +1,6 @@
 ---
-title: "Общие сведения об элементе управления ToolStripProgressBar"
-ms.custom: 
+title: Общие сведения об элементе управления ToolStripProgressBar
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - ToolStripProgressBar
 helpviewer_keywords:
@@ -16,17 +8,11 @@ helpviewer_keywords:
 - progress controls [Windows Forms]
 - ToolStripProgressBar control [Windows Forms], about ToolStripProgressBar control
 ms.assetid: ec3ab522-5fe4-4b4d-a551-bc19e84f4774
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 3ee73d87a65e9febed6ebd5ad981dcd548fc2404
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0ce2347be055cc1840341747f202125cbbf678c8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="toolstripprogressbar-control-overview"></a>Общие сведения об элементе управления ToolStripProgressBar
 <xref:System.Windows.Forms.ToolStripProgressBar> Объединяет нависание и функциональные возможности визуализации всех <xref:System.Windows.Forms.ToolStrip> элементов управления с его обычные функциональные возможности отслеживания выполнения процесса. Объект <xref:System.Windows.Forms.ToolStripProgressBar> наиболее обычно размещается <xref:System.Windows.Forms.StatusStrip>и менее часто, <xref:System.Windows.Forms.ToolStrip>.  
@@ -35,7 +21,7 @@ ms.lasthandoff: 12/22/2017
   
 ### <a name="important-toolstripprogressbar-members"></a>ToolStripProgressBar важные члены  
   
-|name|Описание:|  
+|name|Описание|  
 |----------|-----------------|  
 |<xref:System.Windows.Forms.ToolStripProgressBar.MarqueeAnimationSpeed%2A>|Возвращает или задает значение, представляющее задержку между каждым <xref:System.Windows.Forms.ProgressBarStyle.Marquee> отображения обновления, в миллисекундах.|  
 |<xref:System.Windows.Forms.ProgressBar.Maximum%2A>|Возвращает или задает верхнюю границу диапазона, определенные для данного <xref:System.Windows.Forms.ToolStripProgressBar>.|  

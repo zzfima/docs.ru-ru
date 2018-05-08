@@ -1,13 +1,6 @@
 ---
-title: "Практическое руководство. Распределение времени для анимации с ключевыми кадрами"
-ms.custom: 
+title: Практическое руководство. Распределение времени для анимации с ключевыми кадрами
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - key frames [WPF], timing
 - timing key-fram animation
 ms.assetid: b059216f-7d4b-4ca8-a019-bc287ee7bf16
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 252da422ffb34e5865a29112e349e18d0f40327f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7aacb975557a25b8ea7a80e02c16a59b8a746e26
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-control-key-frame-animation-timing"></a>Практическое руководство. Распределение времени для анимации с ключевыми кадрами
 В этом примере показано, как управлять временем ключевых кадров в анимацию кадрам. Как и другие виды анимации, имеют кадрам <xref:System.Windows.Media.Animation.Timeline.Duration%2A> свойство. Помимо указания продолжительности анимации, необходимо указать, какая часть длительности выделяется для каждого из его ключевых кадров. Чтобы выделить время, необходимо указать <xref:System.Windows.Media.Animation.KeyTime> для каждого ключевого кадра анимации.  

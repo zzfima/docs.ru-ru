@@ -1,33 +1,19 @@
 ---
 title: Создание служб WCF AJAX без использования ASP.NET
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: ba4a7d1b-e277-4978-9f62-37684e6dc934
-caps.latest.revision: 7
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: b652bcd522a8eea81b3d1218fbd054ee0b2caea8
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 77a850408c3d952dbd4f682ea704d3248ae17c3e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="creating-wcf-ajax-services-without-aspnet"></a>Создание служб WCF AJAX без использования ASP.NET
-Доступ к службам AJAX [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] можно получить с любой веб-страницы, поддерживающей JavaScript, без использования ASP.NET AJAX. В данном разделе описывается, как создать такую службу [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+Службы Windows Communication Foundation (WCF) AJAX может осуществляться из любого JavaScript веб-страницы, без использования ASP.NET AJAX. В этом разделе описывается создание службы WCF.  
   
- Инструкции по использованию [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] с ASP.NET AJAX, в разделе [Создание службы WCF для ASP.NET AJAX](../../../../docs/framework/wcf/feature-details/creating-wcf-services-for-aspnet-ajax.md).  
+ Инструкции по использованию WCF с помощью ASP.NET AJAX см. в разделе [Создание службы WCF для ASP.NET AJAX](../../../../docs/framework/wcf/feature-details/creating-wcf-services-for-aspnet-ajax.md).  
   
- Создание службы AJAX [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] выполняется за три этапа.  
+ Существует три этапа создания службы WCF AJAX.  
   
 -   Создание конечной точки AJAX, доступ к которой можно получить из браузера.  
   
@@ -36,7 +22,7 @@ ms.lasthandoff: 04/28/2018
 -   Доступ к службам AJAX WCF.  
   
 ## <a name="creating-an-ajax-endpoint"></a>Создание конечной точки AJAX  
- Основным способом включения поддержки AJAX в службе [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] является использование <xref:System.ServiceModel.Activation.WebServiceHostFactory> в файле .svc, связанном со службой, как показано в следующем примере.  
+ Является наиболее простым способом включения поддержки AJAX в службе WCF для использования <xref:System.ServiceModel.Activation.WebServiceHostFactory> в SVC-файла, связанного со службой, как показано в следующем примере.  
   
 ```  
 <%ServiceHost   
@@ -115,7 +101,7 @@ string[] GetCities(string firstLetters, int maxNumber);
 ```  
   
 ## <a name="accessing-ajax-services"></a>Доступ к службам AJAX  
- Конечные точки AJAX [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] всегда принимают как запросы JSON, так и XML-запросы.  
+ Конечные точки WCF AJAX всегда принимают запросы JSON и XML.  
   
  HTTP-запросы POST с content-type «application/json» обрабатываются как JSON и имеющих тип содержимого, указывающим на XML (например, «text/xml»), обрабатываются как XML.  
   

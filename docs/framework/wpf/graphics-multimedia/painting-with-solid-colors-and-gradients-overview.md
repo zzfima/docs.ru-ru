@@ -1,13 +1,6 @@
 ---
-title: "Общие сведения о закраске сплошным цветом и градиентом"
-ms.custom: 
+title: Общие сведения о закраске сплошным цветом и градиентом
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - solid colors [WPF], painting with
 - painting with gradients [WPF]
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - brushes [WPF], painting with gradients
 - painting with solid colors [WPF]
 ms.assetid: f5b182f3-c5c7-4cbe-9f2f-65e690d08255
-caps.latest.revision: "21"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: bb71a1ae52b35b421474954410869f20fa004eb7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: cea4b2dbd17178a6943b0f4a84182e65232330fb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="painting-with-solid-colors-and-gradients-overview"></a>Общие сведения о закраске сплошным цветом и градиентом
 В этом разделе описывается использование <xref:System.Windows.Media.SolidColorBrush>, <xref:System.Windows.Media.LinearGradientBrush>, и <xref:System.Windows.Media.RadialGradientBrush> объектов для рисования сплошным цветом, линейным градиентом и радиального градиента.  
@@ -74,7 +62,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="gradient"></a>   
 ## <a name="painting-an-area-with-a-gradient"></a>Закрашивание области с помощью градиента  
- Градиентные кисти закрашивают область разными цветами, которые переходят из одного в другой по некоторой оси. Их можно использовать для создания картины света и теней, которая придает элементам управления трехмерный вид. Их также можно использовать для имитации стекла, хрома, воды и других гладких поверхностей.  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]предоставляет два типа градиентных кистей: <xref:System.Windows.Media.LinearGradientBrush> и <xref:System.Windows.Media.RadialGradientBrush>.  
+ Градиентные кисти закрашивают область разными цветами, которые переходят из одного в другой по некоторой оси. Их можно использовать для создания картины света и теней, которая придает элементам управления трехмерный вид. Их также можно использовать для имитации стекла, хрома, воды и других гладких поверхностей.  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] предоставляет два типа градиентных кистей: <xref:System.Windows.Media.LinearGradientBrush> и <xref:System.Windows.Media.RadialGradientBrush>.  
   
 <a name="lineargradientbrush"></a>   
 ## <a name="linear-gradients"></a>Линейные градиенты  

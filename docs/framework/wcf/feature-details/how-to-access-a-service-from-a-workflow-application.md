@@ -1,27 +1,15 @@
 ---
-title: "Как получить доступ к службе из приложения рабочего процесса"
-ms.custom: 
+title: Как получить доступ к службе из приложения рабочего процесса
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 925ef8ea-5550-4c9d-bb7b-209e20c280ad
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0ffac399e3f7cb3f860128b072251131ac356a2a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5f1ef07d92eea2b526259cd11caf56e45c83675d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-access-a-service-from-a-workflow-application"></a>Как получить доступ к службе из приложения рабочего процесса
-В этом разделе описывается вызов службы рабочего процесса из консольного приложения рабочего процесса. Зависит от выполнения [как: создание службы рабочего процесса с действиями обмена сообщениями](../../../../docs/framework/wcf/feature-details/how-to-create-a-workflow-service-with-messaging-activities.md) раздела. Хотя в этом разделе описывается вызов службы рабочего процесса из приложения рабочего процесса, эти же методы можно использовать для вызова любых служб [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] из приложения рабочего процесса.  
+В этом разделе описывается вызов службы рабочего процесса из консольного приложения рабочего процесса. Зависит от выполнения [как: создание службы рабочего процесса с действиями обмена сообщениями](../../../../docs/framework/wcf/feature-details/how-to-create-a-workflow-service-with-messaging-activities.md) раздела. Несмотря на то, что в этом разделе описывается вызов службы рабочего процесса в приложении рабочего процесса, те же методы могут использоваться для вызова любой службы Windows Communication Foundation (WCF) в приложении рабочего процесса.  
   
 ### <a name="create-a-workflow-console-application-project"></a>Создание проекта консольного приложения рабочего процесса  
   

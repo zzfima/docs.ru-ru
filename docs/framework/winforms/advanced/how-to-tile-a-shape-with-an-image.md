@@ -1,13 +1,6 @@
 ---
-title: "Практическое руководство. Мозаичное заполнение фигуры заданным изображением"
-ms.custom: 
+title: Практическое руководство. Мозаичное заполнение фигуры заданным изображением
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,16 +10,11 @@ helpviewer_keywords:
 - shapes [Windows Forms], tiling with images
 - bitmaps [Windows Forms], filling shapes with
 ms.assetid: 6d407891-6e5c-4495-a546-3da5604e9fb8
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d8726322e9443042b76c28e7b4b22ebc51c871bb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0905f29b0f74c72979e252cf94e677d1c7e0525d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-tile-a-shape-with-an-image"></a>Практическое руководство. Мозаичное заполнение фигуры заданным изображением
 Аналогично плитки можно поместить рядом друг с другом пола, чтобы заполнить фигуру прямоугольные изображения можно поместить рядом друг с другом. Для мозаичного заполнения внутренней области фигуры, используйте кисти текстуры. При построении <xref:System.Drawing.TextureBrush> объекта, один из аргументов, можно передать конструктору <xref:System.Drawing.Image> объекта. При использовании кисти текстуры для рисования внутренней части фигуры заполнение повторяющиеся копии изображения.  

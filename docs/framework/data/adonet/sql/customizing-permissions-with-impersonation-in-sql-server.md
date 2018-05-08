@@ -1,24 +1,12 @@
 ---
-title: "Настройка разрешений с олицетворением в SQL Server"
-ms.custom: 
+title: Настройка разрешений с олицетворением в SQL Server
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: dc733d09-1d6d-4af0-9c4b-8d24504860f1
-caps.latest.revision: "6"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 7175542d8a9441d9f0d3eeb05acc67cf12d6a270
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: ac2c6805a9ab49d95f68e56306d7d9fb8aab2a2c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="customizing-permissions-with-impersonation-in-sql-server"></a>Настройка разрешений с олицетворением в SQL Server
 Во многих приложениях используются хранимые процедуры для получения доступа к данным, что позволяет ограничивать доступ к базовым таблицам на основе формирования цепочки владения. При этом можно предоставлять разрешения EXECUTE для хранимых процедур, отзывая или отменяя разрешения по отношению к базовым таблицам. В СУБД SQL Server если хранимая процедура и таблицы имеют одного владельца, то разрешения вызывающего объекта не проверяются. Но формирование цепочки владения перестает действовать, если объекты имеют разных владельцев, а также в случае применения динамического кода SQL.  
@@ -79,7 +67,7 @@ CREATE PROCEDURE [procName] WITH EXECUTE AS 'proxyUser' AS ...
 ## <a name="external-resources"></a>Внешние ресурсы  
  Дополнительные сведения см. в следующих ресурсах.  
   
-|Ресурс|Описание:|  
+|Ресурс|Описание|  
 |--------------|-----------------|  
 |[Переключение контекста](http://msdn.microsoft.com/library/ms188268.aspx) в электронной документации по SQL Server|Содержит ссылки на разделы с описаниями способов использования предложения EXECUTE AS.|  
 |[Использование инструкции EXECUTE AS для создания пользовательских наборов разрешений](http://msdn.microsoft.com/library/ms190384.aspx) и [с помощью инструкции EXECUTE AS в модулях](http://msdn.microsoft.com/library/ms178106.aspx) в электронной документации по SQL Server|Разделы содержат описание способов использования предложения EXECUTE AS.|  

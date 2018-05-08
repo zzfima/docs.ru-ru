@@ -1,31 +1,19 @@
 ---
-title: "Практическое руководство. Создание пользовательского поставщика маркеров безопасности"
-ms.custom: 
+title: Практическое руководство. Создание пользовательского поставщика маркеров безопасности
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - security [WCF], providing credentials
 ms.assetid: db8cb478-aa43-478b-bf97-c6489ad7c7fd
-caps.latest.revision: 
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: 37e7f9541457c475bfe187485520df63a84f7555
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
-ms.translationtype: MT
+ms.openlocfilehash: 480b968a15193bccb84ba491347dbba69e16fb52
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-custom-security-token-provider"></a>Практическое руководство. Создание пользовательского поставщика маркеров безопасности
 В этом разделе показано, как создавать новые типы маркеров с помощью поставщика пользовательских маркеров безопасности и как интегрировать поставщик с диспетчером пользовательских маркеров безопасности.  
@@ -33,7 +21,7 @@ ms.lasthandoff: 01/19/2018
 > [!NOTE]
 >  Поставщик пользовательских маркеров следует создавать, если предоставляемые системой маркеры в пространстве имен <xref:System.IdentityModel.Tokens> не соответствуют требованиям.  
   
- Поставщик маркеров безопасности создает представление маркера безопасности на основании сведений в учетных данных клиента или службы. Чтобы использовать пользовательский поставщик проверки подлинности в [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], необходимо создать пользовательские реализации учетных данных и диспетчера маркеров безопасности.  
+ Поставщик маркеров безопасности создает представление маркера безопасности на основании сведений в учетных данных клиента или службы. Чтобы использовать пользовательский поставщик маркеров безопасности в системе безопасности Windows Communication Foundation (WCF), необходимо создать пользовательские учетные данные и реализации диспетчера маркеров безопасности.  
   
  Дополнительные сведения о пользовательских учетных данных и диспетчера маркеров безопасности. в разделе [Пошаговое руководство: Создание настраиваемых клиентских учетных данных и службы](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md).  
   

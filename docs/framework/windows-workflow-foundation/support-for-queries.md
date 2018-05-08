@@ -1,23 +1,12 @@
 ---
-title: "Поддержка запросов"
-ms.custom: 
+title: Поддержка запросов
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 093c22f5-3294-4642-857a-5252233d6796
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f20e9fbcad31a3924474793d9107d6a3c4aeef27
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5c46ed5ae2fc2cc2275bfa7251fe5f8fa346c1f4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="support-for-queries"></a>Поддержка запросов
 Хранилище экземпляров рабочих процессов SQL записывает набор известных свойств в хранилище. Пользователи могут выполнить запрос экземпляров на основе этих свойств. В следующем списке приведены некоторые из этих известных свойств.  

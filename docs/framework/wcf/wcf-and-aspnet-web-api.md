@@ -1,26 +1,12 @@
 ---
 title: WCF и ASP.NET Web API
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 08ceded3-fd9a-4467-9715-c4cbd9c7228e
-caps.latest.revision: ''
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 1270eb202a1e8cbf1a297a13593dd0aa6046cb6c
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: c8bc8d3483d2f6c85ff14073f34caaf75d639bdf
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wcf-and-aspnet-web-api"></a>WCF и ASP.NET Web API
 WCF является единой моделью программирования (Майкрософт) для построения ориентированных на службы приложений. Она позволяет разработчикам построить безопасные надежные решения с поддержкой транзакций и возможностью межплатформенной интеграции и взаимодействия с существующими инвестициями. [Веб-API ASP.NET](http://www.asp.net/web-api) — платформа, которая позволяет легко создавать службы HTTP широкого диапазона клиентов, включая браузеры и мобильные устройства. ASP.NET Web API - это идеальная платформа для сборки REST-приложений на базе .NET Framework. В этом разделе даны рекомендации, помогающие решить, какая технология лучше подходит под конкретные требования.  

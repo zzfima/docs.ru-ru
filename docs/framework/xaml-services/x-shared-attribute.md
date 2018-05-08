@@ -1,28 +1,16 @@
 ---
-title: "Атрибут x:Shared"
-ms.custom: 
+title: Атрибут x:Shared
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - XAML [XAML Services], x:Shared attribute
 - x:Shared attribute [XAML Services]
 - Shared attribute in XAML [XAML Services]
 ms.assetid: c8cff434-2785-405f-9f95-16deb34c9e64
-caps.latest.revision: "16"
-author: wadepickett
-ms.author: wpickett
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c9cc5e2bff9cc2591c7a12630da5422dbf73713a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: bee37735382249d2919ef870ca495e6096532352
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="xshared-attribute"></a>Атрибут x:Shared
 Если задано значение `false`, изменяет поведение извлечения ресурсов WPF, чтобы запросы ресурсу с атрибутом создают новый экземпляр для каждого запроса, а не один и тот же экземпляр для всех запросов.  
@@ -36,7 +24,7 @@ ms.lasthandoff: 12/22/2017
 ```  
   
 ## <a name="remarks"></a>Примечания  
- `x:Shared`сопоставлен с пространством имен XAML языка XAML и распознается как допустимый элемент языка XAML служб XAML .NET Framework и ее средства чтения XAML. Однако указанные возможности `x:Shared` относятся только для приложений WPF и средство синтаксического анализа XAML в WPF. В WPF `x:Shared` полезен только как атрибут применительно к объект, который существует в WPF <xref:System.Windows.ResourceDictionary>. Другие варианты использования не создают исключения синтаксического анализа или других ошибок, но они не оказывают влияния.  
+ `x:Shared` сопоставлен с пространством имен XAML языка XAML и распознается как допустимый элемент языка XAML служб XAML .NET Framework и ее средства чтения XAML. Однако указанные возможности `x:Shared` относятся только для приложений WPF и средство синтаксического анализа XAML в WPF. В WPF `x:Shared` полезен только как атрибут применительно к объект, который существует в WPF <xref:System.Windows.ResourceDictionary>. Другие варианты использования не создают исключения синтаксического анализа или других ошибок, но они не оказывают влияния.  
   
  Значение `x:Shared` не указано в спецификации языка XAML. Другие реализации XAML, например те, основанных на службах XAML .NET Framework не обязательно поддерживают совместное использование ресурсов. Такие реализации XAML могут предоставлять подобное поведение во вспомогательной платформе, который также используется `x:Shared` значения.  
   
@@ -48,7 +36,7 @@ ms.lasthandoff: 12/22/2017
   
  Явное указание `x:Shared="true"` делается редко, так как он уже имеет значение по умолчанию. Нет эквивалента для прямого кода `x:Shared` в WPF объектной модели; он может быть указан только при использовании XAML и должны обрабатываться с помощью WPF поведения по умолчанию или в промежуточном потоке узлов XAML в пути загрузки при обработке с помощью .NET Framework XAML Se служб и его средства чтения XAML.  
   
- Сценарии для `x:Shared="false"` — Если вы определяете <xref:System.Windows.FrameworkElement> или <xref:System.Windows.FrameworkContentElement> производного класса в качестве ресурса, а затем вводите ресурсов элемента в модели содержимого. `x:Shared="false"`включает элемент ресурс должен быть представлен несколько раз в одной коллекции (например, <xref:System.Windows.Controls.UIElementCollection>). Без `x:Shared="false"` это недопустимо, поскольку коллекция обеспечивает уникальность ее содержимого. Тем не менее `x:Shared="false"` поведение создает другой идентичный экземпляр ресурса, а не возвращает тот же экземпляр.  
+ Сценарии для `x:Shared="false"` — Если вы определяете <xref:System.Windows.FrameworkElement> или <xref:System.Windows.FrameworkContentElement> производного класса в качестве ресурса, а затем вводите ресурсов элемента в модели содержимого. `x:Shared="false"` включает элемент ресурс должен быть представлен несколько раз в одной коллекции (например, <xref:System.Windows.Controls.UIElementCollection>). Без `x:Shared="false"` это недопустимо, поскольку коллекция обеспечивает уникальность ее содержимого. Тем не менее `x:Shared="false"` поведение создает другой идентичный экземпляр ресурса, а не возвращает тот же экземпляр.  
   
  Другим случаем `x:Shared="false"` при использовании <xref:System.Windows.Freezable> ресурсов для значений анимации, но требуется изменить ресурса для каждой анимации.  
   

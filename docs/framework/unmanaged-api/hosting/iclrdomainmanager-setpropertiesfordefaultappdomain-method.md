@@ -1,14 +1,6 @@
 ---
-title: "Метод ICLRDomainManager::SetPropertiesForDefaultAppDomain"
-ms.custom: 
+title: Метод ICLRDomainManager::SetPropertiesForDefaultAppDomain
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICLRDomainManager.SetPropertiesForDefaultAppDomain
 api_location:
@@ -21,17 +13,13 @@ helpviewer_keywords:
 - ICLRDomainManager::SetPropertiesForDefaultAppDomain method [.NET Framework hosting]
 - SetPropertiesForDefaultAppDomain method [.NET Framework hosting]
 ms.assetid: 43e61c4b-c435-45ec-9ef6-c68403aa4200
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: de72568f5908dc89c9a4105c927cfba6c7366b80
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 18db77b42af47b76bf1b3b66748d586c4c41dbd7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="iclrdomainmanagersetpropertiesfordefaultappdomain-method"></a>Метод ICLRDomainManager::SetPropertiesForDefaultAppDomain
 Задает свойства, которые будут использоваться для инициализации домена приложения по умолчанию.  
@@ -62,7 +50,7 @@ HRESULT SetPropertiesForDefaultAppDomain(
 |HRESULT|Описание|  
 |-------------|-----------------|  
 |S_OK|Метод завершился успешно.|  
-|HRESULT_FROM_WIN32(ERROR_UNKNOWN_PROPERTY)|`pwszPropertyNames`содержит имя свойства, которое не распознается этим методом.|  
+|HRESULT_FROM_WIN32(ERROR_UNKNOWN_PROPERTY)|`pwszPropertyNames` содержит имя свойства, которое не распознается этим методом.|  
   
 ## <a name="remarks"></a>Примечания  
  Значение свойства для «PARTIAL_TRUST_VISIBLE_ASSEMBLIES» приведен список сборок, содержащих условной <xref:System.Security.AllowPartiallyTrustedCallersAttribute> атрибут (APTCA) с <xref:System.Security.PartialTrustVisibilityLevel.NotVisibleByDefault?displayProperty=nameWithType> флаг, который будут сделаны видимыми для частично доверенным вызывающим объектам в приложении по умолчанию домен.  
@@ -74,7 +62,7 @@ HRESULT SetPropertiesForDefaultAppDomain(
   
  **Библиотека:** включена как ресурс в MSCorEE.dll  
   
- **Версии платформы .NET framework:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Версии платформы .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>См. также  
  [Размещение](../../../../docs/framework/unmanaged-api/hosting/index.md)  

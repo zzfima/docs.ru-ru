@@ -1,27 +1,15 @@
 ---
-title: "Определение продолжительности выполнения для операции службы"
-ms.custom: 
+title: Определение продолжительности выполнения для операции службы
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: e8a93a2c-2c20-48b3-8986-57e90e9aa908
-caps.latest.revision: "5"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 2c96aa6752feca637f89ed309d1a5c87cea4a3a9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: a7615a4574210ad6e9b5eee2e5d5855365768854
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="determining-service-operation-duration"></a>Определение продолжительности выполнения для операции службы
-Если в приложении [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] включена аналитическая трассировка, то продолжительность выполнения операции службы легко определить по журналу событий.  В этом разделе показано, как определить время, затраченное на выполнение операции службы.  
+Если аналитическая трассировка включена в приложении Windows Communication Foundation (WCF), на время выполнения для операции службы можно легко определить, проверив журнал событий.  В этом разделе показано, как определить время, затраченное на выполнение операции службы.  
   
 ### <a name="determining-service-operation-execution-duration"></a>Определение продолжительности выполнения для операции службы  
   

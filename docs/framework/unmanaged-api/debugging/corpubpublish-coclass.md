@@ -1,14 +1,6 @@
 ---
-title: "Компонентный класс CorpubPublish"
-ms.custom: 
+title: Компонентный класс CorpubPublish
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - CorpubPublish Coclass
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: 191015da-f54a-4bac-a28a-1de7ab3c3428
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: f3dec1175715bdbddc3c975924e91e238fa6d5f3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9941a9be7d9f68255636b405db29a623be8d37e8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="corpubpublish-coclass"></a>Кокласс CorpubPublish
 Предоставляет интерфейсы для публикации сведений о доменах приложений и процессах.  
@@ -51,7 +39,7 @@ coclass CorpubPublish {
   
 ## <a name="interfaces"></a>интерфейсов,  
   
-|Интерфейс|Описание:|  
+|Интерфейс|Описание|  
 |---------------|-----------------|  
 |[Интерфейс ICorPublish](../../../../docs/framework/unmanaged-api/debugging/icorpublish-interface.md)|Предоставляет методы для публикации сведений о процессах и доменах приложений в этих процессов.|  
 |[Интерфейс ICorPublishAppDomain](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomain-interface.md)|Представляет и предоставляет сведения о домен приложения в процессе.|  

@@ -1,24 +1,12 @@
 ---
-title: "Синхронные сценарии с использованием HTTP, TCP или именованного канала"
-ms.custom: 
+title: Синхронные сценарии с использованием HTTP, TCP или именованного канала
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 7e90af1b-f8f6-41b9-a63a-8490ada502b1
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 428e8852c9b1706e88b1688b4a1f2e36c167fe28
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 03f4fdcaa5fc59efe7e92d2cb900212ed5ebae77
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="synchronous-scenarios-using-http-tcp-or-named-pipe"></a>Синхронные сценарии с использованием HTTP, TCP или именованного канала
 В этом разделе описываются действия и перенаправления для различных сценариев синхронных запросов/ответов (с однопотоковым клиентом, с использованием HTTP, TCP или именованного канала). В разделе [асинхронные сценарии с использованием HTTP, TCP или именованного канала](../../../../../docs/framework/wcf/diagnostics/tracing/asynchronous-scenarios-using-http-tcp-or-named-pipe.md) Дополнительные сведения о многопоточных запросов.  
@@ -56,7 +44,7 @@ ms.lasthandoff: 12/22/2017
 #### <a name="closing-a-service-host"></a>Закрытие узла службы  
  Действие "закрыть" (Z) узла ServiceHost создается из внешнего действия.  
   
- ![Синхронные сценарии с использованием HTTP &#47; TCP &#47; Именованные каналы](../../../../../docs/framework/wcf/diagnostics/tracing/media/sync.gif "синхронизации")  
+ ![Синхронные сценарии с использованием HTTP&#47;TCP&#47; именованных каналов](../../../../../docs/framework/wcf/diagnostics/tracing/media/sync.gif "синхронизации")  
   
  В \<A: name >, `A` содержится ссылочный символ, описывающий действие в приведенном выше тексте и в таблице 3. `Name` представляет собой сокращенное имя действия.  
   

@@ -1,32 +1,20 @@
 ---
-title: "Применение кодировщиков и декодеров изображений в управляемом GDI+"
-ms.custom: 
+title: Применение кодировщиков и декодеров изображений в управляемом GDI+
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - image encoders [Windows Forms], using
 - image decoders [Windows Forms], using
 ms.assetid: 0e838ea1-4e7e-4334-b882-ab25df607b8b
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 084e8ff21e308cc20b633719dd31809b96b3c79a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b2e51587209cb4df41ea1fd18ce5c2088ee07a2b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-image-encoders-and-decoders-in-managed-gdi"></a>Применение кодировщиков и декодеров изображений в управляемом GDI+
 <xref:System.Drawing> Пространство имен предоставляет <xref:System.Drawing.Image> и <xref:System.Drawing.Bitmap> классов для хранения изображений и управления ими. С помощью кодировщиков изображений в [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], можно сохранять изображения из памяти на диск. С помощью декодеров изображений в [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], можно загружать изображения с диска в память. Кодировщик преобразует данные в <xref:System.Drawing.Image> или <xref:System.Drawing.Bitmap> объект в формат файла выделенного диска. Декодер преобразует данные в файл на диске в формат, требуемый <xref:System.Drawing.Image> и <xref:System.Drawing.Bitmap> объектов.  
   
- [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]имеет встроенные кодировщиков и декодеров, которые поддерживают следующие типы файлов:  
+ [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] имеет встроенные кодировщиков и декодеров, которые поддерживают следующие типы файлов:  
   
 -   BMP  
   
@@ -38,7 +26,7 @@ ms.lasthandoff: 12/22/2017
   
 -   TIFF  
   
- [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]также имеются встроенные декодеры, которые поддерживают следующие типы файлов:  
+ [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] также имеются встроенные декодеры, которые поддерживают следующие типы файлов:  
   
 -   WMF  
   

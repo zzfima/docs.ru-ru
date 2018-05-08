@@ -1,28 +1,16 @@
 ---
-title: "Практическое руководство. Применение материала к лицевой и обратной стороне трехмерного объекта"
-ms.custom: 
+title: Практическое руководство. Применение материала к лицевой и обратной стороне трехмерного объекта
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - 3-D objects [WPF], applying Material class
 - Material class [WPF], applying to both sides of 3-D object
 - classes [WPF], Material
 ms.assetid: d93c8ad6-4939-4d29-9544-4d16d98093c1
-caps.latest.revision: "5"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c5ead8805c3d16bc16e259bdf90a19f05500563c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0ccf0aa045886f0731cd22ecdc8e14fa6af55fd2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-apply-material-to-the-front-and-back-of-a-3-d-object"></a>Практическое руководство. Применение материала к лицевой и обратной стороне трехмерного объекта
 В следующем примере показано, как применить <xref:System.Windows.Media.Media3D.Material> к лицевой и обратной стороне трехмерного объекта и анимация объекта для отображения обеих сторон объекта. <xref:System.Windows.Media.Media3D.GeometryModel3D.Material%2A> Свойство <xref:System.Windows.Media.Media3D.GeometryModel3D> используется для применения красной <xref:System.Windows.Media.Brush> в передней части объекта и <xref:System.Windows.Media.Media3D.GeometryModel3D.BackMaterial%2A> свойство <xref:System.Windows.Media.Media3D.GeometryModel3D> используется для применения синий <xref:System.Windows.Media.Brush> к обратной стороне объекта. В следующем примере кода показано применение материалов к объекту:  

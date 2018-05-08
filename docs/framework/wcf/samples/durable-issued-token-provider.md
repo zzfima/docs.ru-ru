@@ -1,30 +1,18 @@
 ---
-title: "Пользовательский поставщик маркеров"
-ms.custom: 
+title: Пользовательский поставщик маркеров
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 76fb27f5-8787-4b6a-bf4c-99b4be1d2e8b
-caps.latest.revision: "17"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: fc92bd92f688ae2b12889779083142e6ddd481d9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 20006f87f7ecba9c09f6c957f8b6355dec7fbd32
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="durable-issued-token-provider"></a>Пользовательский поставщик маркеров
 Этот пример демонстрирует, как реализовать пользовательский поставщик маркеров, выдаваемых клиенту.  
   
 ## <a name="discussion"></a>Обсуждение  
- Поставщик маркеров в среде [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] используется для передачи учетных данных в инфраструктуру безопасности. Поставщик токенов осуществляет общую проверку цели и выдает соответствующие учетные данные, чтобы инфраструктура безопасности смогла обеспечить защиту сообщения. В состав [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] входит поставщик токенов [!INCLUDE[infocard](../../../../includes/infocard-md.md)]. Пользовательские поставщики маркеров полезны в следующих случаях:  
+ Поставщик маркеров в Windows Communication Foundation (WCF) используется для предоставления учетных данных в инфраструктуру безопасности. Поставщик токенов осуществляет общую проверку цели и выдает соответствующие учетные данные, чтобы инфраструктура безопасности смогла обеспечить защиту сообщения. В состав [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] входит поставщик токенов [!INCLUDE[infocard](../../../../includes/infocard-md.md)]. Пользовательские поставщики маркеров полезны в следующих случаях:  
   
 -   если используется хранилище учетных данных с которым не работает встроенный поставщик маркеров;  
   
@@ -261,7 +249,7 @@ ms.lasthandoff: 12/22/2017
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите на страницу [Примеры Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все примеры [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Этот образец расположен в следующем каталоге.  
+>  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] образцов. Этот образец расположен в следующем каталоге.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Security\DurableIssuedTokenProvider`  
   

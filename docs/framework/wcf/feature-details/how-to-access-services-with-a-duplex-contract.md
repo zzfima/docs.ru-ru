@@ -1,38 +1,24 @@
 ---
 title: Практическое руководство. Доступ к службам с дуплексным контрактом
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - duplex contracts [WCF]
 ms.assetid: 746a9d64-f21c-426c-b85d-972e916ec6c5
-caps.latest.revision: 18
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: c80980ff5a5b1011c021bcaf0688747178ec5b9b
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: c0022e6ce3a63c1f497eeee82ca959cec1046cec
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-access-services-with-a-duplex-contract"></a>Практическое руководство. Доступ к службам с дуплексным контрактом
-Одной из особенностей [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] является возможность создать службу, использующую дуплексный шаблон обмена сообщениями. Такой шаблон позволяет службе взаимодействовать с клиентом с помощью обратного вызова. В этом разделе приведены основные этапы создания клиента [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] в классе клиента, который реализует интерфейс обратного вызова.  
+Одна из возможностей Windows Communication Foundation (WCF) является возможность создать службу, использующую дуплексный шаблон обмена сообщениями. Такой шаблон позволяет службе взаимодействовать с клиентом с помощью обратного вызова. В этом разделе показаны шаги для создания клиента WCF в клиентском классе, который реализует интерфейс обратного вызова.  
   
  Двойная привязка предоставляет службе IP-адрес клиента. Клиент должен использовать механизм безопасности, чтобы обеспечить подключение только к доверенным службам.  
   
- Учебник по созданию базового [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] службы и клиента см. в разделе [учебник по началу работы](../../../../docs/framework/wcf/getting-started-tutorial.md).  
+ Учебник по Создание базовой службы WCF и клиента см. в разделе [учебник по началу работы](../../../../docs/framework/wcf/getting-started-tutorial.md).  
   
 ### <a name="to-access-a-duplex-service"></a>Доступ к дуплексной службе  
   
@@ -80,7 +66,7 @@ ms.lasthandoff: 04/30/2018
     Dim site As InstanceContext = New InstanceContext(new CallbackHandler())  
     ```  
   
-6.  Создайте экземпляр клиента [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], используя конструктор, которому требуется объект <xref:System.ServiceModel.InstanceContext>. Вторым параметром конструктора является имя конечной точки, определенное в файле конфигурации.  
+6.  Создайте экземпляр класса клиента WCF, используя конструктор, который требует <xref:System.ServiceModel.InstanceContext> объекта. Вторым параметром конструктора является имя конечной точки, определенное в файле конфигурации.  
   
     ```csharp  
     CalculatorDuplexClient wcfClient =   
@@ -91,7 +77,7 @@ ms.lasthandoff: 04/30/2018
     Dim wcfClient As New CalculatorDuplexClient(site, "default")  
     ```  
   
-7.  Вызовите требуемые методы клиента [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+7.  Вызовите методы клиент WCF при необходимости.  
   
 ## <a name="example"></a>Пример  
  В следующем примере кода показано, как создать класс клиента, обращающийся к дуплексному контракту.  

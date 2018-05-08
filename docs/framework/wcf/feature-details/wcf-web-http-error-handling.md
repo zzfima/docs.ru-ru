@@ -1,29 +1,15 @@
 ---
 title: Обработка ошибок веб-протокола HTTP WCF
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 02891563-0fce-4c32-84dc-d794b1a5c040
-caps.latest.revision: 8
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: bcd0e6d1e6318404eb47741dc61ccf2ff9358b47
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 228f8cdbe5ddde63f2b6afd82a27055f2241e058
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wcf-web-http-error-handling"></a>Обработка ошибок веб-протокола HTTP WCF
-Обработка ошибок протокола HTTP в [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] позволяет возвращать из веб-служб HTTP [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ошибки, указывающие код состояния HTTP, причем в том формате, который используется в операции, например XML или JSON.  
+Обработка ошибок Web HTTP Windows Communication Foundation (WCF) позволяет возвращать ошибки из службы WCF Web HTTP, укажите код состояния HTTP и возвращают сведения об ошибке, используя тот же формат используется в операции (например, XML или JSON).  
   
 ## <a name="wcf-web-http-error-handling"></a>Обработка ошибок веб-протокола HTTP WCF  
  Класс <xref:System.ServiceModel.Web.WebFaultException> содержит конструктор, позволяющий указать код состояния HTTP. Затем этот код состояния возвращается клиенту. Общая версия класса <xref:System.ServiceModel.Web.WebFaultException>, <xref:System.ServiceModel.Web.WebFaultException%601> позволяет возвращать определенный пользователем тип, содержащий сведения о возникшей ошибке. Этот пользовательский объект сериализуется с помощью формата, указанного операцией и возвращенного клиенту. Следующий пример показывает, как вернуть код состояния HTTP.  

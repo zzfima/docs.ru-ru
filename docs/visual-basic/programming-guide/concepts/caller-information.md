@@ -1,21 +1,12 @@
 ---
-title: "Сведения о вызывающем объекте (Visual Basic)"
-ms.custom: 
+title: Сведения о вызывающем объекте (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 ms.assetid: 15d556eb-4d0c-4497-98a3-7f60abb7d6a1
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: dfd9339e990b2a2a7c57acde3c91295a7154fdc0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 0074ad5bfa5907fb1d02cc92b8b5717897a36b3e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="caller-information-visual-basic"></a>Сведения о вызывающем объекте (Visual Basic)
 С помощью информационных атрибутов вызывающего объекта можно получить сведения о вызывающем объекте метода. Можно получить путь к файлу исходного кода, номер строки в исходном коде и имя вызывающего объекта. Эти сведения полезны для трассировки, отладки и создания средств диагностики.  
@@ -54,7 +45,7 @@ End Sub
 '   source line number: 15  
 ```  
   
-## <a name="remarks"></a>Заметки  
+## <a name="remarks"></a>Примечания  
  Для каждого необязательного параметра необходимо указать явное значение по умолчанию. Нельзя применять информационные атрибуты вызывающего объекта к параметрам, которые не были указаны как необязательные.  
   
  Информационные атрибуты вызывающего объекта не делают параметр необязательным. Вместо этого они влияют на значение по умолчанию, которое передается, если аргумент был опущен.  

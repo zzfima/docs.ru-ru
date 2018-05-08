@@ -1,13 +1,6 @@
 ---
-title: "Стили и шаблоны элемента Calendar"
-ms.custom: 
+title: Стили и шаблоны элемента Calendar
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - styles [WPF], Calendar
 - templates [WPF], Calendar
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - Calendar [WPF], styles and templates
 - ControlTemplate [WPF], Calendar
 ms.assetid: f4fcf046-7a8f-41b8-b5a8-534b64e0345c
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d3d99156868b3be8a1eb33788930f77a20063854
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a6f88d3371f4122a11c25a7cdf498f5822420498
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="calendar-styles-and-templates"></a>Стили и шаблоны элемента Calendar
 В этом разделе описываются стили и шаблоны для <xref:System.Windows.Controls.Calendar> элемента управления. Можно изменить значение по умолчанию <xref:System.Windows.Controls.ControlTemplate> для предоставления уникального внешнего вида элемента управления. Подробнее см. в разделе [Настройка внешнего вида существующего элемента управления путем создания объекта ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  
@@ -33,7 +21,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="calendar-parts"></a>Элементы календаря  
  В следующей таблице перечислены именованные части <xref:System.Windows.Controls.Calendar> элемента управления.  
   
-|Отделение|Тип|Описание:|  
+|Отделение|Тип|Описание|  
 |-|-|-|  
 |PART_CalendarItem|<xref:System.Windows.Controls.Primitives.CalendarItem>|Текущий отображаемый месяц или год в <xref:System.Windows.Controls.Calendar>.|  
 |PART_Root|<xref:System.Windows.Controls.Panel>|Панель, которая содержит <xref:System.Windows.Controls.Primitives.CalendarItem>.|  
@@ -41,7 +29,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="calendar-states"></a>Состояния календаря  
  В следующей таблице перечислены визуальные состояния <xref:System.Windows.Controls.Calendar> элемента управления.  
   
-|Имя VisualState|Имя VisualStateGroup|Описание:|  
+|Имя VisualState|Имя VisualStateGroup|Описание|  
 |----------------------|---------------------------|-----------------|  
 |Valid|ValidationStates|Элемент управления использует <xref:System.Windows.Controls.Validation> класса и <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> вложенное свойство `false`.|  
 |InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> Вложенное свойство `true` имеет элемент управления имеет фокус.|  
@@ -50,7 +38,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="calendaritem-parts"></a>Части элемента календаря, имеющего  
  В следующей таблице перечислены именованные части <xref:System.Windows.Controls.Primitives.CalendarItem> элемента управления.  
   
-|Отделение|Тип|Описание:|  
+|Отделение|Тип|Описание|  
 |-|-|-|  
 |PART_Root|<xref:System.Windows.FrameworkElement>|Корневой элемент управления.|  
 |PART_PreviousButton|<xref:System.Windows.Controls.Button>|Кнопка, Отображение предыдущей страницы календаря, при щелчке.|  
@@ -64,7 +52,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="calendaritem-states"></a>Состояния элемента календаря, имеющего  
  В следующей таблице перечислены визуальные состояния <xref:System.Windows.Controls.Primitives.CalendarItem> элемента управления.  
   
-|Имя VisualState|Имя VisualStateGroup|Описание:|  
+|Имя VisualState|Имя VisualStateGroup|Описание|  
 |-|-|-|  
 |Нормальное состояние|CommonStates|Состояние по умолчанию.|  
 |Отключенное состояние|CommonStates|Состояние календаря при <xref:System.Windows.UIElement.IsEnabled%2A> свойство `false`.|  
@@ -81,7 +69,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="calendardaybutton-states"></a>CalendarDayButton состояний  
  В следующей таблице перечислены визуальные состояния <xref:System.Windows.Controls.Primitives.CalendarDayButton> элемента управления.  
   
-|Имя VisualState|Имя VisualStateGroup|Описание:|  
+|Имя VisualState|Имя VisualStateGroup|Описание|  
 |-|-|-|  
 |Норм.|CommonStates|Состояние по умолчанию.|  
 |Отключено|CommonStates|<xref:System.Windows.Controls.Primitives.CalendarDayButton> Отключена.|  
@@ -109,7 +97,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="calendarbutton-states"></a>CalendarButton состояний  
  В следующей таблице перечислены визуальные состояния <xref:System.Windows.Controls.Primitives.CalendarButton> элемента управления.  
   
-|Имя VisualState|Имя VisualStateGroup|Описание:|  
+|Имя VisualState|Имя VisualStateGroup|Описание|  
 |-|-|-|  
 |Норм.|CommonStates|Состояние по умолчанию.|  
 |Отключено|CommonStates|<xref:System.Windows.Controls.Primitives.CalendarButton> Отключена.|  

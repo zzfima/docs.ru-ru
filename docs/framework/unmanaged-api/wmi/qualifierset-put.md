@@ -1,11 +1,7 @@
 ---
-title: "Функция QualifierSet_Put (Справочник по неуправляемым API)"
-description: "Функция QualifierSet_Put записывает именованного квалификатора и его значение."
+title: Функция QualifierSet_Put (Справочник по неуправляемым API)
+description: Функция QualifierSet_Put записывает именованного квалификатора и его значение.
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - QualifierSet_Put
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 1bf5c6dbf0f707942d58f4d7cf155636f0532724
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7ccb0aef0e998ffccd7526f9f0554bceb892001b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="qualifiersetput-function"></a>Функция QualifierSet_Put
 Записывает именованный квалификатор и значение. Новый квалификатор перезаписывает предыдущее значение с тем же именем. Если квалификатор не существует, он создается. 
@@ -57,9 +50,9 @@ HRESULT QualifierSet_Put (
 `wszName`   
 [in] Имя квалификатора для записи.
 
-`pVal`[in] Указатель на допустимый `VARIANT` , содержащий квалификатор для записи. Этот параметр не может быть `null`.
+`pVal` [in] Указатель на допустимый `VARIANT` , содержащий квалификатор для записи. Этот параметр не может быть `null`.
 
-`lFlavor`[in] Одно из следующих констант, который определяет требуемый квалификаторов для этого квалификатора. Значение по умолчанию — `WBEM_FLAVOR_OVERRIDABLE` (0).
+`lFlavor` [in] Одно из следующих констант, который определяет требуемый квалификаторов для этого квалификатора. Значение по умолчанию — `WBEM_FLAVOR_OVERRIDABLE` (0).
 
 |Константа  |Значение  |Описание  |
 |---------|---------|---------|
@@ -73,7 +66,7 @@ HRESULT QualifierSet_Put (
 
 Следующие значения, возвращаемые этой функцией, определяются в *WbemCli.h* файла заголовка, или их можно определить как константы в коде:
 
-|Константа  |Значение  |Описание:  |
+|Константа  |Значение  |Описание  |
 |---------|---------|---------|
 | `WBEM_E_CANNOT_BE_KEY` | 0x8004101f | Возникла Недопустимая попытка задать **ключ** квалификатор для свойства, которое не может быть ключом. Указанные ключи om c; ASS Разрешить определение объекта и не может быть изменены для каждого экземпляра. |
 | `WBEM_E_INVALID_PARAMETER` | 0x80041008 | Параметр не является допустимым. |
@@ -90,7 +83,7 @@ HRESULT QualifierSet_Put (
   
  **Заголовок:** WMINet_Utils.idl  
   
- **Версии платформы .NET framework:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Версии платформы .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>См. также  
 [WMI и счетчиков производительности (Справочник по неуправляемым API)](index.md)

@@ -1,12 +1,6 @@
 ---
 title: Оператор Using (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.using
 helpviewer_keywords:
@@ -15,14 +9,11 @@ helpviewer_keywords:
 - resources [Visual Basic], disposing
 - Using statement [Visual Basic]
 ms.assetid: 665d1580-dd54-4e96-a9a9-6be2a68948f1
-caps.latest.revision: 36
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: ed9cc0d04c89eac1fe342a0924dd89bb1e258a11
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 725eeb42dc5462022ac1a021c537d701929398ba
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-statement-visual-basic"></a>Оператор Using (Visual Basic)
 Объявляет начало `Using` блокировку и при необходимости получает системные ресурсы, которыми управляет блок.  
@@ -41,14 +32,14 @@ End Using
 |---|---|  
 |`resourcelist`|Требуется, если не указать `resourceexpression`. Список из одного или нескольких системных ресурсов, это `Using` блокировать элементы управления, разделенных запятыми.|  
 |`resourceexpression`|Требуется, если не указать `resourcelist`. Ссылочная переменная или выражение, которое ссылается на системный ресурс, чтобы управлять этим `Using` блока.|  
-|`statements`|Необязательно. Блок инструкций, `Using` блок.|  
-|`End Using`|Обязательный. Завершает определение `Using` блоков и освобождает все ресурсы, которыми он управляет.|  
+|`statements`|Необязательный. Блок инструкций, `Using` блок.|  
+|`End Using`|Обязательно. Завершает определение `Using` блоков и освобождает все ресурсы, которыми он управляет.|  
   
  Каждый ресурс в `resourcelist` часть имеет следующий синтаксис и компоненты:  
   
  `resourcename As New resourcetype [ ( [ arglist ] ) ]`  
   
- -или-  
+ - или -  
   
  `resourcename As resourcetype = resourceexpression`  
   
@@ -56,11 +47,11 @@ End Using
   
 |Термин|Определение|  
 |---|---|  
-|`resourcename`|Обязательный. Ссылочная переменная, которая ссылается на системный ресурс, `Using` блокировать элементы управления.|  
+|`resourcename`|Обязательно. Ссылочная переменная, которая ссылается на системный ресурс, `Using` блокировать элементы управления.|  
 |`New`|Обязателен, если `Using` инструкция получает ресурса. Если ресурс уже получен, используйте альтернативный синтаксис.|  
-|`resourcetype`|Обязательный. Класс ресурса. Класс должен реализовывать <xref:System.IDisposable> интерфейса.|  
-|`arglist`|Необязательно. Список аргументов, которые передаются в конструктор для создания экземпляра `resourcetype`. В разделе [список параметров](../../../visual-basic/language-reference/statements/parameter-list.md).|  
-|`resourceexpression`|Обязательный. Переменная или выражение, которое ссылается на системный ресурс, отвечающий требованиям `resourcetype`. Если используется альтернативный синтаксис, необходимо получить ресурс перед передачей управления `Using` инструкции.|  
+|`resourcetype`|Обязательно. Класс ресурса. Класс должен реализовывать <xref:System.IDisposable> интерфейса.|  
+|`arglist`|Необязательный. Список аргументов, которые передаются в конструктор для создания экземпляра `resourcetype`. В разделе [список параметров](../../../visual-basic/language-reference/statements/parameter-list.md).|  
+|`resourceexpression`|Обязательно. Переменная или выражение, которое ссылается на системный ресурс, отвечающий требованиям `resourcetype`. Если используется альтернативный синтаксис, необходимо получить ресурс перед передачей управления `Using` инструкции.|  
   
 ## <a name="remarks"></a>Примечания  
  Иногда код требует неуправляемых ресурсов, такие как дескриптор файла, оболочка COM или SQL-соединение. Объект `Using` блок гарантирует удаление одного или нескольких таких ресурсов после завершения вашего кода с ними. Это делает их доступными для использования другим кодом.  

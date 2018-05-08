@@ -1,14 +1,6 @@
 ---
 title: Интерфейсы, относящиеся к привязке данных
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - data [Windows Forms], data-binding interfaces
 - INotifyPropertyChanged interface
@@ -20,17 +12,11 @@ helpviewer_keywords:
 - data binding [Windows Forms], interfaces
 - IDataErrorInfo interface [Windows Forms], Windows Forms data binding
 ms.assetid: 14e49a2e-3e46-47ca-b491-70d546333277
-caps.latest.revision: 23
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 5278ccd34e556c33e4bc5c9f460573b399f265be
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: 6c4470b33977408fa4429d187dafd76241d0d9d9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="interfaces-related-to-data-binding"></a>Интерфейсы, относящиеся к привязке данных
 С помощью [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] можно создать различные структуры данных в соответствии с требованиями привязки приложения и данных, с которыми приходится работать. Можно создать собственные классы, которые предоставляют или используют данные в Windows Forms. Такие объекты могут предоставлять функциональные возможности и обеспечивать сложность различного уровня, такие как базовая привязка данных, поддержка на этапе разработки, проверка ошибок, уведомление об изменениях или даже поддержка структурированного отката изменений, внесенных в сами данные.  

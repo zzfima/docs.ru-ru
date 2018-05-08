@@ -1,23 +1,12 @@
 ---
-title: "Использование действия InvokePowerShell"
-ms.custom: 
+title: Использование действия InvokePowerShell
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 956251a0-31ca-4183-bf76-d277c08585df
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4cf7092d6eac4fc2d70c4606f4a76f3a83ed9dcf
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c5609556af94ed3e372538047ff6309a105975ae
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-the-invokepowershell-activity"></a>Использование действия InvokePowerShell
 Образец InvokePowerShell демонстрирует, как вызывать команды Windows PowerShell с помощью действия `InvokePowerShell`.  
@@ -35,7 +24,7 @@ ms.lasthandoff: 12/22/2017
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите на страницу [Примеры Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все примеры [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Этот образец расположен в следующем каталоге.  
+>  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] образцов. Этот образец расположен в следующем каталоге.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\PowerShell`  
   
@@ -205,7 +194,7 @@ new ForEach<PSObject>
   
 1.  Если при обращении к сборке с действиями `InvokePowerShell` или проекту от другого проекта возникает ошибка, возможно, нужно вручную добавить элемент `<SpecificVersion>True</SpecificVersion>` к CSPROJ-файлу нового проекта под строчкой, в которой происходит обращение к `InvokePowerShell`.  
   
-2.  Если не установлена оболочка Windows PowerShell, следующее сообщение об ошибке отображается в Visual Studio, сразу после добавления `InvokePowerShell` действия в рабочий процесс:`Workflow Designer encountered problems with your document. Could not load file or assembly ‘System.Management.Automation’ ... or one of its dependencies. The system cannot find the file specified.`  
+2.  Если не установлена оболочка Windows PowerShell, следующее сообщение об ошибке отображается в Visual Studio, сразу после добавления `InvokePowerShell` действия в рабочий процесс: `Workflow Designer encountered problems with your document. Could not load file or assembly ‘System.Management.Automation’ ... or one of its dependencies. The system cannot find the file specified.`  
   
 3.  В среде Windows PowerShell 2.0 не удался вызов `$input.MoveNext()` программным образом, а в скриптах, использующих `$input.MoveNext()`, формируются непреднамеренные ошибки и результаты. Чтобы решить эту проблему, попробуйте использовать операцию PowerShell `foreach`, вместо того, чтобы вызывать `MoveNext()` при проходе по массиву.  
   
@@ -214,6 +203,6 @@ new ForEach<PSObject>
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите на страницу [Примеры Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все примеры [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Этот образец расположен в следующем каталоге.  
+>  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] образцов. Этот образец расположен в следующем каталоге.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\PowerShell`

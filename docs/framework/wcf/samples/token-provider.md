@@ -1,27 +1,17 @@
 ---
-title: "Поставщик маркеров"
-ms.custom: 
+title: Поставщик маркеров
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 947986cf-9946-4987-84e5-a14678d96edb
-caps.latest.revision: "22"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: bd6b0983dcb4a0f7cdbabc5b391cca2000f9d16d
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
-ms.translationtype: MT
+ms.openlocfilehash: 97602a261f1e86cb70b38f21080c2a2e792605e8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="token-provider"></a>Поставщик маркеров
-В этом образце показано, как реализовать пользовательский поставщик маркеров. Поставщик маркеров в среде [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] используется для передачи учетных данных в инфраструктуру безопасности. Поставщик токенов осуществляет общую проверку цели и выдает соответствующие учетные данные, чтобы инфраструктура безопасности смогла обеспечить защиту сообщения. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] поставляется с поставщиком токенов учетных данных по умолчанию. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] также поставляется с поставщиком токенов [!INCLUDE[infocard](../../../../includes/infocard-md.md)]. Пользовательские поставщики маркеров полезны в следующих случаях:  
+В этом образце показано, как реализовать пользовательский поставщик маркеров. Поставщик маркеров в Windows Communication Foundation (WCF) используется для передачи учетных данных в инфраструктуру безопасности. Поставщик токенов осуществляет общую проверку цели и выдает соответствующие учетные данные, чтобы инфраструктура безопасности смогла обеспечить защиту сообщения. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] поставляется с поставщиком токенов учетных данных по умолчанию. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] также поставляется с поставщиком токенов [!INCLUDE[infocard](../../../../includes/infocard-md.md)]. Пользовательские поставщики маркеров полезны в следующих случаях:  
   
 -   если используется хранилище учетных данных с которым эти поставщики не работают;  
   

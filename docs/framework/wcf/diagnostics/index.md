@@ -1,14 +1,6 @@
 ---
 title: Администрирование и диагностика
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - Windows Communication Foundation, diagnostics
 - Windows Communication Foundation, administration
@@ -17,20 +9,14 @@ helpviewer_keywords:
 - administration [WCF]
 - WCF, administration
 ms.assetid: 34c81c08-0e0f-4fbc-9ae8-91948640ee43
-caps.latest.revision: 19
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: fa5256f543a99618e00dc88e085dfee4ac76ebab
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
-ms.translationtype: MT
+ms.openlocfilehash: 552ddb842e0a922493feccee1e48e7d5e74291ad
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="administration-and-diagnostics"></a>Администрирование и диагностика
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] предоставляет широкий набор функций, благодаря которому можно отслеживать разные этапы времени существования приложения. Например, можно использовать конфигурацию для настройки служб и клиентов при развертывании. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] содержит большой набор счетчиков производительности, с помощью которых можно измерять производительность приложения. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] также предоставляет данные проверки службы в среде выполнения с помощью поставщика инструментария управления Windows (WMI) [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Когда в приложении происходит ошибка или оно начинает функционировать неверно, журнал событий позволяет понять, серьезны ли причины нарушения. Также можно использовать журнал сообщений и функцию трассировки сообщений для того, чтобы понять, какие события происходят в приложении на всех этапах его работы. Эти функции помогают разработчикам и ИТ-специалистам устранять неполадки в приложении [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] в случае его неверного функционирования.  
+Windows Communication Foundation (WCF) предоставляет широкий набор функций, которые можно отслеживать разные этапы жизненного цикла приложения. Например, можно использовать конфигурацию для настройки служб и клиентов при развертывании. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] содержит большой набор счетчиков производительности, с помощью которых можно измерять производительность приложения. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] также предоставляет данные проверки службы в среде выполнения с помощью поставщика инструментария управления Windows (WMI) [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Когда в приложении происходит ошибка или оно начинает функционировать неверно, журнал событий позволяет понять, серьезны ли причины нарушения. Также можно использовать журнал сообщений и функцию трассировки сообщений для того, чтобы понять, какие события происходят в приложении на всех этапах его работы. Эти функции помогают разработчикам и ИТ-специалистам устранять неполадки в приложении [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] в случае его неверного функционирования.  
   
 > [!NOTE]
 >  Если вы получили ошибок без определенные сведения о данных, следует включить `includeExceptionDetailInFaults` атрибут [ \<serviceDebug >](../../../../docs/framework/configure-apps/file-schema/wcf/servicedebug.md) элемента конфигурации. Тем самым [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] дается указание отправлять клиентам сведения об исключениях, благодаря чему можно обнаружить многие распространенные проблемы, не прибегая к более сложным методам диагностики. Дополнительные сведения см. в разделе [отправка и получение ошибки](../../../../docs/framework/wcf/sending-and-receiving-faults.md).  

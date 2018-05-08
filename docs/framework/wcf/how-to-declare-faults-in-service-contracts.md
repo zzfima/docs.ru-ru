@@ -1,30 +1,18 @@
 ---
-title: "Практическое руководство. Объявление сбоев в контрактах служб"
-ms.custom: 
+title: Практическое руководство. Объявление сбоев в контрактах служб
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: e8da98e7-d22f-4f60-ac82-3fb0928a353f
-caps.latest.revision: "5"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: bcf707e58586673097c89e0e0f4d72ea68ef7247
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 142ad26702f0732bc5103e29d5a44bc57ab37625
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-declare-faults-in-service-contracts"></a>Практическое руководство. Объявление сбоев в контрактах служб
-В управляемом коде исключения создаются в случае возникновения ошибки. Однако в приложениях [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] контракты службы определяют, какие именно сведения об ошибке возвращаются клиенту. Для этого в контракте службы объявляются ошибки SOAP. Общие сведения о связи между исключений и ошибок в разделе [указание и обработка сбоев в контрактах и службах](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md).  
+В управляемом коде исключения создаются в случае возникновения ошибки. В приложениях Windows Communication Foundation (WCF) Однако контракты служб указывают, какие сведения об ошибке возвращаются клиенту объявляются ошибки SOAP в контракте службы. Общие сведения о связи между исключений и ошибок в разделе [указание и обработка сбоев в контрактах и службах](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md).  
   
 ### <a name="create-a-service-contract-that-specifies-a-soap-fault"></a>Создайте контракт службы, в котором определяется ошибка SOAP  
   

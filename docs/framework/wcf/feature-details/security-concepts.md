@@ -1,37 +1,27 @@
 ---
-title: "Основные понятия безопасности"
-ms.custom: 
+title: Основные понятия безопасности
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 944fa5ca-2c34-4268-8897-e005a61b470d
-caps.latest.revision: "11"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 1ac16afc6ee22665188d5df5e79288341072026e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2379c009cacf4cd2adac0aeebbade437e8483af4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="security-concepts"></a>Основные понятия безопасности
-В этом разделе содержится краткое описание понятий, связанных с вопросом безопасности [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
+В этом разделе содержится краткое описание понятий, связанных с безопасностью Windows Communication Foundation (WCF).  
   
 ## <a name="in-this-section"></a>В этом разделе  
  [Основные понятия безопасности, используемые в WCF](../../../../docs/framework/wcf/feature-details/security-concepts-used-in-wcf.md)  
  Высокоуровневый обзор принципов, используемых для реализации механизмов безопасности.  
   
  [Защита распределенных приложений](../../../../docs/framework/wcf/feature-details/distributed-application-security.md)  
- Общие сведения о том, как [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] обеспечивает механизмы безопасности в топографии распределенных приложений.  
+ Общие сведения о том, как WCF обеспечивает механизмы безопасности в топографии распределенных приложений.  
   
  [Терминология в сфере безопасности](../../../../docs/framework/wcf/feature-details/wcf-security-terminology.md)  
- Глоссарий терминов, используемых при обсуждении вопросов безопасности [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ Глоссарий терминов, используемых при обсуждении вопросов безопасности WCF.  
   
 ## <a name="reference"></a>Ссылка  
  <xref:System.ServiceModel>  

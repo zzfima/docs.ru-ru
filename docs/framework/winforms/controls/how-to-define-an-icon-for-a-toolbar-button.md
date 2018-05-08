@@ -1,13 +1,6 @@
 ---
-title: "Практическое руководство. Определение значка для кнопки элемента управления ToolBar"
-ms.custom: 
+title: Практическое руководство. Определение значка для кнопки элемента управления ToolBar
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -20,22 +13,17 @@ helpviewer_keywords:
 - icons [Windows Forms], toolbar buttons
 - ToolBar control [Windows Forms], adding icons to buttons
 ms.assetid: 84db98b4-8566-49ce-b2c8-1fd66a5eb3a0
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f7550fdc76cb3a025d8233ec538d38f23f9226a7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9c396f861307d1c8e722beaf38c6cb914d0630c6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-define-an-icon-for-a-toolbar-button"></a>Практическое руководство. Определение значка для кнопки элемента управления ToolBar
 > [!NOTE]
 >  Элемент управления <xref:System.Windows.Forms.ToolStrip> заменяет элемент управления <xref:System.Windows.Forms.ToolBar> и расширяет его функциональные возможности; однако при необходимости элемент управления <xref:System.Windows.Forms.ToolBar> можно сохранить для обратной совместимости и использования в будущем.  
   
- <xref:System.Windows.Forms.ToolBar>кнопки, могут отображать значки для упрощения идентификации пользователей. Это можно сделать, добавив изображения [компонент ImageList](../../../../docs/framework/winforms/controls/imagelist-component-windows-forms.md) компонента, а затем связать <xref:System.Windows.Forms.ImageList> компонент с <xref:System.Windows.Forms.ToolBar> элемента управления.  
+ <xref:System.Windows.Forms.ToolBar> кнопки, могут отображать значки для упрощения идентификации пользователей. Это можно сделать, добавив изображения [компонент ImageList](../../../../docs/framework/winforms/controls/imagelist-component-windows-forms.md) компонента, а затем связать <xref:System.Windows.Forms.ImageList> компонент с <xref:System.Windows.Forms.ToolBar> элемента управления.  
   
 ### <a name="to-set-an-icon-for-a-toolbar-button-programmatically"></a>Чтобы задать значок для кнопки панели инструментов программным способом  
   

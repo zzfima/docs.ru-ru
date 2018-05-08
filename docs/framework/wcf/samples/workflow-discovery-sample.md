@@ -1,24 +1,12 @@
 ---
-title: "Образец обнаружения рабочего процесса"
-ms.custom: 
+title: Образец обнаружения рабочего процесса
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 82cc43f1-3c8f-4771-ac19-a75ac936e2c3
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 3cf150562beaacb56596b90e1680adca97dd24a9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ec4b956a28048c0c30a4eadb0473adb34334fa92
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="workflow-discovery-sample"></a>Образец обнаружения рабочего процесса
 В этом образце показано, как сделать службу рабочего процесса обнаруживаемой, а также как создать настраиваемое действие кода, используемое для поиска определенной службы.  
@@ -33,13 +21,13 @@ ms.lasthandoff: 12/22/2017
   
 1.  Этот образец использует конечные точки HTTP, который должен иметь соответствующие списки управления доступом URL-адрес для запуска (см. [Настройка протоколов HTTP и HTTPS](http://go.microsoft.com/fwlink/?LinkId=70353) подробные сведения). Нужные списки управления доступом будут добавлены после выполнения следующей команды в командной строке с повышенными привилегиями. Если оболочка не распознает формат переменной, замените домен и имя пользователя в следующих аргументах.  
   
-     **добавить urlacl url-адрес Netsh http = http: / / +: 8000 / пользователь = % DOMAIN %\\% UserName %**  
+     **добавить urlacl url-адрес Netsh http =http://+:8000/ пользователь = % DOMAIN %\\% UserName %**  
   
 > [!IMPORTANT]
 >  Образцы уже могут быть установлены на компьютере. Перед продолжением проверьте следующий каталог (по умолчанию).  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите на страницу [Примеры Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все примеры [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Этот образец расположен в следующем каталоге.  
+>  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] образцов. Этот образец расположен в следующем каталоге.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Discovery\WorkflowDiscovery`

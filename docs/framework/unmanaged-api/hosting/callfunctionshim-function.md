@@ -1,14 +1,6 @@
 ---
-title: "Функция CallFunctionShim"
-ms.custom: 
+title: Функция CallFunctionShim
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - CallFunctionShim
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: 37118465-ddf3-41f0-bf27-335b72777e63
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 12c399c876a244d0c27e34b41e08c284d7429bac
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1060ca140db0304c8e5667f7fdf9624b3ac2b64a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="callfunctionshim-function"></a>Функция CallFunctionShim
 Выполняется вызов функции с указанным именем и параметрами в указанной библиотеке.  
@@ -78,7 +66,7 @@ HRESULT CallFunctionShim (
   
  **Библиотека:** MSCorEE.dll  
   
- **Версии платформы .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>См. также  
  [Устаревшие функции размещения CLR](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

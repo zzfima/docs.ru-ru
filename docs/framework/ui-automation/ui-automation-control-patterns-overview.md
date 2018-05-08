@@ -1,27 +1,18 @@
 ---
-title: "Общие сведения о шаблонах элементов управления модели автоматизации пользовательского интерфейса"
-ms.custom: 
+title: Общие сведения о шаблонах элементов управления модели автоматизации пользовательского интерфейса
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - control patterns
 - UI Automation, control patterns
 ms.assetid: cc229b33-234b-469b-ad60-f0254f32d45d
-caps.latest.revision: "34"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: e675681d1de3aa46645047da61ae8aac2ea0ba31
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1b02618676a1162681c67d34a2c6f43def07893c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ui-automation-control-patterns-overview"></a>Общие сведения о шаблонах элементов управления модели автоматизации пользовательского интерфейса
 > [!NOTE]
@@ -62,7 +53,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="control-pattern-classes-and-interfaces"></a>Классы шаблонов элементов управления и интерфейсы  
  В следующей таблице описываются шаблоны элементов управления [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] . В этой таблице также приведены классы, используемые клиентами автоматизации пользовательского интерфейса для доступа к шаблонам элементов управления, а также интерфейсы, используемые поставщиками автоматизации пользовательского интерфейса для их реализации.  
   
-|Класс шаблона элемента управления|Интерфейс поставщика|Описание:|  
+|Класс шаблона элемента управления|Интерфейс поставщика|Описание|  
 |---------------------------|------------------------|-----------------|  
 |<xref:System.Windows.Automation.DockPattern>|<xref:System.Windows.Automation.Provider.IDockProvider>|Используется для элементов управления, которые могут быть закреплены в контейнере закрепления. Например, это могут быть панели инструментов или палитры инструментов.|  
 |<xref:System.Windows.Automation.ExpandCollapsePattern>|<xref:System.Windows.Automation.Provider.IExpandCollapseProvider>|Используется для элементов управления, которые можно разворачивать и сворачивать. Например, это могут быть пункты меню в приложении, такие как меню **Файл** .|  

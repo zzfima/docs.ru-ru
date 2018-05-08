@@ -1,11 +1,6 @@
 ---
 title: Тип данных Char (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Char
 helpviewer_keywords:
@@ -15,14 +10,11 @@ helpviewer_keywords:
 - data types [Visual Basic], assigning
 - Char data type [Visual Basic], character literals
 ms.assetid: cd7547a9-7855-4e8e-b216-35d74a362657
-caps.latest.revision: 17
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 16ff547fccbf4481d31ca79537962cc7090fc9b0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: e672402535215ca30d19cc480e39b42b0364f137
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="char-data-type-visual-basic"></a>Тип данных Char (Visual Basic)
 Содержит точки неподписанный код 16-разрядное (2-байтовое), в диапазоне от 0 до 65535. Каждый *кодовой*, или код символа, представляет один знак Юникода.  
@@ -54,13 +46,13 @@ charVar = "Z"C
   
 ## <a name="programming-tips"></a>Советы по программированию  
   
--   **Отрицательные числа.** `Char`является типом без знака и не может представлять отрицательное значение. В любом случае не следует использовать `Char` для хранения числовых значений.  
+-   **Отрицательные числа.** `Char` является типом без знака и не может представлять отрицательное значение. В любом случае не следует использовать `Char` для хранения числовых значений.  
   
 -   **Вопросы взаимодействия.** Если возможность взаимодействовать с компонентами, которые не написаны для платформы .NET Framework, например, автоматизация или COM-объекты, помните, что символьные типы имеют другой размер (8 бит) в других средах. Если передается 8-разрядного аргумента такому компоненту, объявите ее в качестве `Byte` вместо `Char` в новом коде Visual Basic.  
   
 -   **Расширяющие.** `Char` Тип данных может быть расширен до `String`. Это означает, что можно преобразовать `Char` для `String` и не столкнетесь с <xref:System.OverflowException?displayProperty=nameWithType> ошибки.  
   
--   **Символы типов.** Знак типа литерала добавления `C` для строкового литерала приводит к принудительному `Char` тип данных. `Char`не имеет типа символа идентификатора.  
+-   **Символы типов.** Знак типа литерала добавления `C` для строкового литерала приводит к принудительному `Char` тип данных. `Char` не имеет типа символа идентификатора.  
   
 -   **Тип Framework.** В .NET Framework данный тип соответствует структуре <xref:System.Char?displayProperty=nameWithType>.  
   

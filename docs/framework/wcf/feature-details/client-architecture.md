@@ -1,32 +1,18 @@
 ---
 title: Клиентская архитектура
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 02624403-0d77-41cb-9a86-ab55e98c7966
-caps.latest.revision: 7
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 12db0d4f5717287439b66810e6354b12a4c68b77
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 4ced24f370e2ab54528c6adb2b3617d3d849e745
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="client-architecture"></a>Клиентская архитектура
-Для вызова операций службы приложения используют клиентские объекты [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. В этом разделе рассматриваются клиентские объекты [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], клиентские каналы [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] и их взаимосвязи с базовой архитектурой каналов. Для получения общих сведений о [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] клиентские объекты в разделе [Общие сведения о клиенте WCF](../../../../docs/framework/wcf/wcf-client-overview.md). Дополнительные сведения о уровень канала см. в разделе [расширение уровня каналов](../../../../docs/framework/wcf/extending/extending-the-channel-layer.md).  
+Приложения используют объекты клиента Windows Communication Foundation (WCF) для вызова операций службы. В этом разделе рассматриваются объекты клиента WCF, клиентских каналов WCF и их связи с базовой архитектурой каналов. Общий обзор объектов клиента WCF. в разделе [Общие сведения о клиенте WCF](../../../../docs/framework/wcf/wcf-client-overview.md). Дополнительные сведения о уровень канала см. в разделе [расширение уровня каналов](../../../../docs/framework/wcf/extending/extending-the-channel-layer.md).  
   
 ## <a name="overview"></a>Обзор  
- Во время выполнения модели службы создаются клиенты [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], в состав которых входят следующие компоненты.  
+ Время выполнения модели службы создает клиентов WCF, которые состоят из следующих:  
   
 -   Автоматически созданная реализация клиента контракта службы, направляющая вызовы из кода приложения в исходящие сообщения, а также направляющая ответные сообщения в параметры вывода и возвращаемые значения, которые приложение может получать.  
   
@@ -37,22 +23,22 @@ ms.lasthandoff: 04/30/2018
  Приложения могут создавать такие клиенты по требованию, либо с помощью <xref:System.ServiceModel.ChannelFactory?displayProperty=nameWithType> или путем создания экземпляра <xref:System.ServiceModel.ClientBase%601> производного класса, как оно генерируется [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md). Эти созданные клиентские классы осуществляют инкапсуляцию и делегирование в реализацию клиентского канала, которая динамически создается фабрикой <xref:System.ServiceModel.ChannelFactory>. Следовательно, наибольший интерес для данного обсуждения представляют клиентские каналы и создающая их фабрика каналов.  
   
 ## <a name="client-objects-and-client-channels"></a>Клиентские объекты и клиентские каналы  
- Базовым интерфейсом клиентов [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] является интерфейс <xref:System.ServiceModel.IClientChannel?displayProperty=nameWithType>, представляющий основные клиентские функции, а также базовые функции коммуникационных объектов <xref:System.ServiceModel.ICommunicationObject?displayProperty=nameWithType>, контекстные функции канала <xref:System.ServiceModel.IContextChannel?displayProperty=nameWithType> и расширяемое поведение объекта <xref:System.ServiceModel.IExtensibleObject%601?displayProperty=nameWithType>.  
+ Является базовым интерфейсом клиентов WCF <xref:System.ServiceModel.IClientChannel?displayProperty=nameWithType> интерфейс, который предоставляет основные клиентские функции, а также базовые функции коммуникационных объектов <xref:System.ServiceModel.ICommunicationObject?displayProperty=nameWithType>, контекстные функции канала <xref:System.ServiceModel.IContextChannel?displayProperty=nameWithType>и расширяемое поведение объекта <xref:System.ServiceModel.IExtensibleObject%601?displayProperty=nameWithType>.  
   
- Интерфейс <xref:System.ServiceModel.IClientChannel>, однако, не определяет сам контракт службы. Те, для объявления интерфейса контракта службы (обычно создается на основе метаданных службы с помощью таких средств, как [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)). Типы клиентов [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] расширяют как интерфейс <xref:System.ServiceModel.IClientChannel>, так и целевой интерфейс контракта службы, чтобы приложения могли вызывать операции непосредственно, а также иметь доступ к функциям среды выполнения на стороне клиента. При создании клиента [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] объектам [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]<xref:System.ServiceModel.ChannelFactory?displayProperty=nameWithType> предоставляются сведения, необходимые для создания среды выполнения, которая может подключиться к настроенной конечной точке службы и взаимодействовать с ней.  
+ Интерфейс <xref:System.ServiceModel.IClientChannel>, однако, не определяет сам контракт службы. Те, для объявления интерфейса контракта службы (обычно создается на основе метаданных службы с помощью таких средств, как [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)). Типы клиентов WCF расширяют как <xref:System.ServiceModel.IClientChannel> и целевой интерфейс контракта службы, чтобы приложения могли вызывать операции непосредственно, а также имеют доступ к функциям во время выполнения на стороне клиента. Создание клиента WCF предоставляет WCF<xref:System.ServiceModel.ChannelFactory?displayProperty=nameWithType> сведения, необходимые для создания среды выполнения объектов, которые могут подключаться и взаимодействовать с конечной точкой службы, настроенные.  
   
- Как было указано ранее, необходимо настроить два типа клиентов [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], прежде чем их можно будет использовать. Самыми простыми типами клиентов [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] являются объекты, унаследованные от <xref:System.ServiceModel.ClientBase%601> (или <xref:System.ServiceModel.DuplexClientBase%601>, если контрактом службы является дуплексный контракт). Эти типы можно создать с помощью программно настроенного конструктора или с использованием файла конфигурации и затем вызывать непосредственно для запуска операций службы. Для получения общих сведений о <xref:System.ServiceModel.ClientBase%601> объектов, в разделе [Общие сведения о клиенте WCF](../../../../docs/framework/wcf/wcf-client-overview.md).  
+ Как упоминалось ранее, перед использованием их необходимо настроить два типа клиентов WCF. Простейший типов клиентов WCF являются объектами, которые являются производными от <xref:System.ServiceModel.ClientBase%601> (или <xref:System.ServiceModel.DuplexClientBase%601> Если сервисный контракт является дуплексным). Эти типы можно создать с помощью программно настроенного конструктора или с использованием файла конфигурации и затем вызывать непосредственно для запуска операций службы. Для получения общих сведений о <xref:System.ServiceModel.ClientBase%601> объектов, в разделе [Общие сведения о клиенте WCF](../../../../docs/framework/wcf/wcf-client-overview.md).  
   
  Второй тип создается во время выполнения в результате вызова метода <xref:System.ServiceModel.ChannelFactory%601.CreateChannel%2A>. Приложения, которым требуется жесткий контроль особенностей взаимодействия обычно использовать этот тип клиента, вызывается *объекте канала клиента*, так как она допускает более непосредственное взаимодействие, чем базовой среды выполнения клиента и канала система.  
   
 ## <a name="channel-factories"></a>Фабрики каналов  
- За создание базовой среды выполнения, которая поддерживает вызовы клиентов, отвечает класс <xref:System.ServiceModel.ChannelFactory%601?displayProperty=nameWithType>. Клиентские объекты [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] и объекты клиентских каналов [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] используют объект <xref:System.ServiceModel.ChannelFactory%601> для создания экземпляров; клиентский объект, унаследованный от <xref:System.ServiceModel.ClientBase%601>, инкапсулирует обработку фабрики каналов, но в ряде сценариев полностью подходит для использования фабрики каналов непосредственно. Распространенный сценарий для этого - необходимость многократного создания новых клиентских каналов из существующей фабрики. В случае использования клиентского объекта можно получить базовую фабрику каналов из клиентского объекта [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], вызвав свойство <xref:System.ServiceModel.ClientBase%601.ChannelFactory%2A?displayProperty=nameWithType>.  
+ За создание базовой среды выполнения, которая поддерживает вызовы клиентов, отвечает класс <xref:System.ServiceModel.ChannelFactory%601?displayProperty=nameWithType>. Объектов клиента WCF и клиент WCF канала объектов используйте <xref:System.ServiceModel.ChannelFactory%601> для создания экземпляров; <xref:System.ServiceModel.ClientBase%601> клиентский объект, унаследованный инкапсулирует обработку фабрики каналов, но для некоторых сценариев полностью подходит для использования непосредственно фабрики каналов. Распространенный сценарий для этого - необходимость многократного создания новых клиентских каналов из существующей фабрики. Если вы используете объект клиента, можно получить производство выделенного канала из объекта клиента WCF путем вызова <xref:System.ServiceModel.ClientBase%601.ChannelFactory%2A?displayProperty=nameWithType> свойство.  
   
- В отношении фабрик каналов необходимо иметь в виду, что они создают новые экземпляры клиентских каналов для предоставленной им конфигурации до вызова метода <xref:System.ServiceModel.ChannelFactory%601.CreateChannel%2A?displayProperty=nameWithType>. Если вызывается <xref:System.ServiceModel.ChannelFactory%601.CreateChannel%2A> (или <xref:System.ServiceModel.ClientBase%601.Open%2A?displayProperty=nameWithType>, <xref:System.ServiceModel.ClientBase%601.CreateChannel%2A?displayProperty=nameWithType> либо любая операция для клиентского объекта [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]), невозможно изменить фабрику каналов и надеяться на получение каналов к различным экземплярам службы даже в случае простого изменения целевого адреса конечной точки. Если требуется создать клиентский объект или клиентский канал с другой конфигурацией, сначала необходимо создать новую фабрику каналов.  
+ В отношении фабрик каналов необходимо иметь в виду, что они создают новые экземпляры клиентских каналов для предоставленной им конфигурации до вызова метода <xref:System.ServiceModel.ChannelFactory%601.CreateChannel%2A?displayProperty=nameWithType>. При вызове метода <xref:System.ServiceModel.ChannelFactory%601.CreateChannel%2A> (или <xref:System.ServiceModel.ClientBase%601.Open%2A?displayProperty=nameWithType>, <xref:System.ServiceModel.ClientBase%601.CreateChannel%2A?displayProperty=nameWithType>, либо любая операция для объекта клиента WCF), невозможно изменить фабрику каналов и надеяться на получение каналов к различным экземплярам службы даже в случае простого изменения целевого адреса конечной точки. Если требуется создать клиентский объект или клиентский канал с другой конфигурацией, сначала необходимо создать новую фабрику каналов.  
   
- Дополнительные сведения о различных проблем, с помощью [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] клиентских объектов и [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] клиентские каналы, в разделе [получение служб с помощью клиента WCF](../../../../docs/framework/wcf/feature-details/accessing-services-using-a-client.md).  
+ Дополнительные сведения о различных проблем, с помощью объектов клиента WCF и клиентских каналов WCF см. в разделе [получение служб с помощью клиента WCF](../../../../docs/framework/wcf/feature-details/accessing-services-using-a-client.md).  
   
- В следующих двух разделах описываются создание и использование объектов клиентских каналов [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ В следующих двух разделах описаны создание и использование объектов клиентских каналов WCF.  
   
 #### <a name="creating-a-new-wcf-client-channel-object"></a>Создание нового объекта клиентского канала WCF  
  Чтобы продемонстрировать использование клиентского канала, предположим, что создан следующий контракт службы.  
@@ -70,6 +56,6 @@ ms.lasthandoff: 04/30/2018
   
  Созданные объекты клиентских каналов реализуют интерфейс <xref:System.ServiceModel.IClientChannel> и интерфейс контракта. Следовательно, их можно использовать непосредственно для вызова операций, взаимодействующих со службой, поддерживающей этот контракт.  
   
- Различие между применением клиентских объектов и объектов клиентских каналов состоит только в управлении и удобстве использования для разработчиков. Многие разработчики, которым удобно работать с классами и объектами, предпочтут использовать клиентский объект [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] вместо клиентского канала [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ Различие между применением клиентских объектов и объектов клиентских каналов состоит только в управлении и удобстве использования для разработчиков. Многие разработчики, которым удобно работать с классами и объектами предпочтут использовать объекта клиента WCF вместо клиентского канала WCF.  
   
  Пример см. в разделе [как: использование ChannelFactory](../../../../docs/framework/wcf/feature-details/how-to-use-the-channelfactory.md).

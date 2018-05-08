@@ -1,27 +1,15 @@
 ---
-title: "Привязка данных в клиенте Windows Forms"
-ms.custom: 
+title: Привязка данных в клиенте Windows Forms
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: a2a30b37-d6e2-4552-820e-e60b2bbe8829
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b78cfbd63687fc7288c945ebcbec790150efed61
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: a84aeedba89cc7a5c267a0fd1f6c4f604fe80d43
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="data-binding-in-a-windows-forms-client"></a>Привязка данных в клиенте Windows Forms
-В этом примере показано, как выполнить привязку к данным, возвращаемым службой [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] в приложении Windows Forms.  
+В этом примере показано, как выполнить привязку данных, возвращенных службой Windows Communication Foundation (WCF), в приложении Windows Forms.  
   
 > [!NOTE]
 >  Процедура настройки и инструкции по построению для данного примера приведены в конце этого раздела.  
@@ -45,7 +33,7 @@ ms.lasthandoff: 12/22/2017
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите на страницу [Примеры Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все примеры [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Этот образец расположен в следующем каталоге.  
+>  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] образцов. Этот образец расположен в следующем каталоге.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\DataBinding\WindowsForms`  
   

@@ -1,30 +1,18 @@
 ---
-title: "Практическое руководство. Настройка пользовательской привязки для обмена WS-Metadata"
-ms.custom: 
+title: Практическое руководство. Настройка пользовательской привязки для обмена WS-Metadata
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - WS-Metadata Exchange [WCF]
 - WS-Metadata Exchange [WCF], configuring a custom binding
 ms.assetid: cdba4d73-da64-4805-bc56-9822becfd1e4
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7bfa4ab0696083c78578517748cfdc2e79e001d1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0596e91204a2a9dbaed2fdbe85387ec3785fd3db
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-configure-a-custom-ws-metadata-exchange-binding"></a>Практическое руководство. Настройка пользовательской привязки для обмена WS-Metadata
-В этом разделе объясняется, как настроить пользовательскую привязку обмена WS-Metadata. [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] включает в себя четыре привязки метаданных, определенные системой, однако для публикации метаданных можно использовать любую привязку. В этой теме рассказывается, как опубликовать метаданные с помощью `wsHttpBinding`. Эта привязка позволяет предоставлять метаданные безопасным способом. Код в этой статье, основан на [Приступая к работе](../../../../docs/framework/wcf/samples/getting-started-sample.md).  
+В этом разделе объясняется, как настроить пользовательскую привязку обмена WS-Metadata. Windows Communication Foundation (WCF) включает в себя четыре привязки метаданных, определенные системой, но вы можете опубликовать метаданные с помощью любой привязки, которые нужно. В этой теме рассказывается, как опубликовать метаданные с помощью `wsHttpBinding`. Эта привязка позволяет предоставлять метаданные безопасным способом. Код в этой статье, основан на [Приступая к работе](../../../../docs/framework/wcf/samples/getting-started-sample.md).  
   
 ### <a name="using-a-configuration-file"></a>Использование файла конфигурации  
   

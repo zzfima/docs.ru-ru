@@ -1,13 +1,6 @@
 ---
-title: "Поиск утверждений в наборах утверждений"
-ms.custom: 
+title: Поиск утверждений в наборах утверждений
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - claims [WCF], finding in a claimset
 - claims [WCF]
 ms.assetid: a76ce107-aeb3-47d0-bfa9-134c53664e20
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 21a30833e72b1c87f1c65a3deaa44da48c08336e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7ca22d701277e71e509e6b291eb59a0223a0250c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="finding-claims-in-a-claimset"></a>Поиск утверждений в наборах утверждений
 При использовании авторизации на основе утверждений часто выполняется проверка содержимого <xref:System.IdentityModel.Claims.ClaimSet> для определенных типов утверждений. Чтобы проверить <xref:System.IdentityModel.Claims.ClaimSet> на наличие определенных утверждений, используйте метод <xref:System.IdentityModel.Claims.ClaimSet.FindClaims%2A>. Этот метод обеспечивает более высокую производительность по сравнению с выполнением итерации непосредственно с <xref:System.IdentityModel.Claims.ClaimSet>. Использование этого метода показано в следующем примере. Обратите внимание, что параметры `claimType` и `claimRight` могут иметь значение `null`. В этом случае параметры будут соответствовать всем типам и правам утверждения.  

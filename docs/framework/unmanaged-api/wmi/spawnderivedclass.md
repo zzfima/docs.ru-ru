@@ -1,11 +1,7 @@
 ---
-title: "Функция SpawnDerivedClass (Справочник по неуправляемым API)"
-description: "Функция SpawnDerivedClass создает новый объект, который является производным от объекта."
+title: Функция SpawnDerivedClass (Справочник по неуправляемым API)
+description: Функция SpawnDerivedClass создает новый объект, который является производным от объекта.
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - SpawnDerivedClass
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 51a0dd0013b1bb3898bcc81ee2d64be20a5b6ecc
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fe93b7ee28db8151345871b0dd716d41227ed565
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="spawnderivedclass-function"></a>Функция SpawnDerivedClass
 Создает объект вновь производного класса из указанного объекта.    
@@ -62,7 +55,7 @@ HRESULT SpawnDerivedClass (
 
 Следующие значения, возвращаемые этой функцией, определяются в *WbemCli.h* файла заголовка, или их можно определить как константы в коде:
 
-|Константа  |Значение  |Описание:  |
+|Константа  |Значение  |Описание  |
 |---------|---------|---------|
 | `WBEM_E_FAILED` | 0x80041001 | Произошел общий сбой. |
 | `WBEM_E_INVALID_OPERATION` | 0x80041016 | Запрошена недопустимая операция, например создать класс из экземпляра. |
@@ -75,7 +68,7 @@ HRESULT SpawnDerivedClass (
 
 Эта функция создает оболочку для вызова [IWbemClassObject::SpawnDerivedClass](https://msdn.microsoft.com/library/aa391436(v=vs.85).aspx) метод.
 
-`ptr`должно быть определение класса, который становится родительский класс, порожденный объекта. Возвращаемый объект становится подкласс текущего объекта.
+`ptr` должно быть определение класса, который становится родительский класс, порожденный объекта. Возвращаемый объект становится подкласс текущего объекта.
 
 Новый объект, возвращаемый в `ppNewClass` автоматически становится подкласс текущего объекта. Нельзя переопределить это поведение. Нет никакой другой метод, с помощью которого создаются подклассы (классы).
 
@@ -84,7 +77,7 @@ HRESULT SpawnDerivedClass (
   
  **Заголовок:** WMINet_Utils.idl  
   
- **Версии платформы .NET framework:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Версии платформы .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>См. также  
 [WMI и счетчиков производительности (Справочник по неуправляемым API)](index.md)

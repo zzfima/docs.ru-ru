@@ -1,23 +1,16 @@
 ---
-title: "Диск &#39; &lt;drivename&gt;&#39; не найден"
+title: Диск &#39; &lt;drivename&gt; &#39; не найден
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vbrFileSystem_DriveNotFound1
 ms.assetid: 0250e9f2-3470-4fe4-8fda-be4fbf2e2a30
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: ea9234a11dfb1c040ef58c38d9dfc8a4f71ccb96
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: a2417c8aa940034f75e37d9edfd7454b4f414199
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="drive-39ltdrivenamegt39-not-found"></a>Диск &#39; &lt;drivename&gt;&#39; не найден
+# <a name="drive-39ltdrivenamegt39-not-found"></a>Диск &#39; &lt;drivename&gt; &#39; не найден
 Не удается найти диск. Сетевое подключение разорвано или диск, к которому вы пытаетесь получить доступ, отключен либо не существует.  
   
 ## <a name="to-correct-this-error"></a>Исправление ошибки  

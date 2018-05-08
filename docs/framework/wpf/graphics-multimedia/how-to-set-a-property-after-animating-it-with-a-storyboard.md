@@ -1,31 +1,17 @@
 ---
-title: "Практическое руководство. Установка свойства после его анимации с помощью раскадровки"
-ms.custom: 
+title: Практическое руководство. Установка свойства после его анимации с помощью раскадровки
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - animation [WPF], changing property values after
 ms.assetid: 79466556-4dbf-40bd-9c1e-a77613b07077
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 3ffc534549f5b114a07f09326be72c1968d178a8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b8e9c08075b13f8d6f701d5ac6ae4f8ea8949184
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-set-a-property-after-animating-it-with-a-storyboard"></a>Практическое руководство. Установка свойства после его анимации с помощью раскадровки
 В некоторых случаях может оказаться, что не удается изменить значение свойства после его анимации.  
@@ -43,7 +29,7 @@ ms.lasthandoff: 12/22/2017
   
  Предыдущий код не отображается никаких действий: кисть остается желтой, что является значением, предоставляемые <xref:System.Windows.Media.Animation.ColorAnimation> , анимация кисти. Значение базового свойства (базовое значение) фактически изменяется на синий. Тем не менее, действующие или текущая позиция, значение останется желтый поскольку <xref:System.Windows.Media.Animation.ColorAnimation> по-прежнему переопределяет базовое значение. Если требуется, чтобы базовое значение вновь стать действительное значение, необходимо остановить влияние свойства анимации. Это можно сделать с помощью анимации раскадровки тремя способами:  
   
--   Задать анимации <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> свойства<xref:System.Windows.Media.Animation.FillBehavior.Stop>  
+-   Задать анимации <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> свойства <xref:System.Windows.Media.Animation.FillBehavior.Stop>  
   
 -   Удалите раскадровку целиком.  
   

@@ -1,23 +1,12 @@
 ---
-title: "Базовая служба с использованием только XAML"
-ms.custom: 
+title: Базовая служба с использованием только XAML
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: c106feb0-0245-43b5-aefe-93ce0e4d38eb
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: db4110ca8ce72b43bf5771db5b1020a826bc058f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: aa6b6ec6930ac90fe95b1cdfcd4cb027de8e5902
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="basic-xaml-only-service"></a>Базовая служба с использованием только XAML
 В этом образце демонстрируется создание службы, работающей только с языком XAML. В данном сценарии рассматривается диагностическая служба для автомобильных проблем. Служба реализована в виде рабочего процесса, задающего клиенту ряд вопросов для диагностики проблемы. Эта служба может выполнять диагностику двух типов проблем (машина не заводится, или система кондиционирования не работает). Для представления трех простых операций служб в рабочем процессе использует шаблон «Запрос-ответ» из конструктора. Служба размещается в службах IIS путем создания виртуального каталога в IIS и копирования service1.xamlx и файлов Web.config в виртуальный каталог, скомпилированный код не требуется. По умолчанию в этом примере автоматически скопирует необходимые файлы в виртуальный каталог, созданный при выполнении процедуры настройки для образцов WCF и WF: [выполняемая однократно процедура настройки для образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md) при построении в Visual Studio 2010.  
@@ -37,6 +26,6 @@ ms.lasthandoff: 12/22/2017
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите на страницу [Примеры Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все примеры [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Этот образец расположен в следующем каталоге.  
+>  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] образцов. Этот образец расположен в следующем каталоге.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Services\XAMLService`

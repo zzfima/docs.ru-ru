@@ -1,14 +1,6 @@
 ---
-title: "Метод ICLRRuntimeHost::ExecuteApplication"
-ms.custom: 
+title: Метод ICLRRuntimeHost::ExecuteApplication
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICLRRuntimeHost.ExecuteApplication
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 5f28cc4e-7176-4e00-aa1f-58ae6ee52fe4
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 7b765f020bd15fa94fb18a6fd7d81cf66c534639
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 56a49b3d08b58da109924267e6c23c188efefe29
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="iclrruntimehostexecuteapplication-method"></a>Метод ICLRRuntimeHost::ExecuteApplication
 Используется в сценариях развертывания служб на основе манифестов ClickOnce укажите приложение, которое необходимо активировать в новом домене. Дополнительные сведения об этих сценариях см. в разделе [развертывание и безопасность технологии ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment).  
@@ -74,7 +62,7 @@ HRESULT ExecuteApplication(
   
 |HRESULT|Описание|  
 |-------------|-----------------|  
-|S_OK|`ExecuteApplication`успешно возвращен.|  
+|S_OK|`ExecuteApplication` успешно возвращен.|  
 |ЗНАЧЕНИЕ HOST_E_CLRNOTAVAILABLE|Общеязыковая среда выполнения (CLR) не был загружен в процесс или находится в состоянии, в котором не может выполнять управляемый код или успешно обработать вызов.|  
 |HOST_E_TIMEOUT|Истекло время ожидания вызова.|  
 |HOST_E_NOT_OWNER|Вызывающий объект не является владельцем блокировки.|  
@@ -82,7 +70,7 @@ HRESULT ExecuteApplication(
 |E_FAIL|Неизвестная Неустранимая ошибка. Если метод вернет значение E_FAIL, среда CLR больше не может использоваться в процессе. Последующие вызовы размещение методы возвращают значение HOST_E_CLRNOTAVAILABLE.|  
   
 ## <a name="remarks"></a>Примечания  
- `ExecuteApplication`используется для активации приложений ClickOnce в новом домене приложения.  
+ `ExecuteApplication` используется для активации приложений ClickOnce в новом домене приложения.  
   
  `pReturnValue` Выходного параметра присваивается значение, возвращенное приложением. Если указать значение null для `pReturnValue`, `ExecuteApplication` не завершается ошибкой, но не возвращает значение.  
   
@@ -96,7 +84,7 @@ HRESULT ExecuteApplication(
   
  **Библиотека:** включена как ресурс в MSCorEE.dll  
   
- **Версии платформы .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Версии платформы .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>См. также  
  <xref:System.ActivationContext>  

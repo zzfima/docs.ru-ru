@@ -1,31 +1,17 @@
 ---
 title: Очереди в Windows Communication Foundation
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - queues [WCF]
 ms.assetid: 43008409-1bb4-4bd4-85d7-862c8f10ae20
-caps.latest.revision: 17
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 82eb421b86f57cfe7c9a23de3ab24de2d4c470cb
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 96dfee3304369c300c40d595860898c51ff728aa
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="queues-in-windows-communication-foundation"></a>Очереди в Windows Communication Foundation
-В подразделах этого раздела рассматривается поддержка очередей в [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] обеспечивает поддержку организации очереди с помощью технологии службу очередей сообщений (Майкрософт) (ранее носившей название MSMQ) в качестве транспорта и позволяет осуществить следующие сценарии:  
+В этом разделе описывается поддержка очередей в Windows Communication Foundation (WCF). WCF обеспечивает поддержку организации очереди, путем использования очереди сообщений Microsoft (ранее известный как MSMQ) как транспорт и включает следующие сценарии:  
   
 -   Слабо связанные приложения. Отправляющие приложения могут отправлять сообщения в очереди без необходимости наличия информации о доступности принимающего приложения для обработки сообщения. Очередь обеспечивает независимость обработки, позволяя отправляющему приложению отправлять сообщения в очередь со скоростью, не зависящей от скорости обработки сообщений принимающими приложениями. Доступность всей системы повышается, если отправка сообщений в очередь тесно не связана с обработкой сообщений.  
   
@@ -35,20 +21,20 @@ ms.lasthandoff: 04/30/2018
   
 -   Операции при отсутствии подключения к сети. Операции отправки, получения и обработки могут прерваться во время передачи данных по сетям с высокой задержкой или сетям с ограниченным доступом, например в случае с мобильными устройствами. В очереди выполнение этих операций продолжится даже при отключении конечных точек. При повторном подключении сообщения из очереди пересылаются в принимающее приложение.  
   
- Чтобы использовать функцию очередей в приложении [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], следует применить одну из стандартных привязок или создать пользовательскую привязку, если ни одна из стандартных привязок не удовлетворяет необходимым требованиям. Дополнительные сведения о соответствующих стандартных привязок и выберите один см [как: обмена сообщениями с конечными точками WCF и приложениями очереди сообщений](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md). Дополнительные сведения о создании настраиваемых привязок см. в разделе [пользовательские привязки](../../../../docs/framework/wcf/extending/custom-bindings.md).  
+ Чтобы использовать функцию очередей в приложении WCF, можно использовать один из стандартных привязок, или если один из стандартных привязок не удовлетворяет вашим требованиям, можно создать пользовательскую привязку. Дополнительные сведения о соответствующих стандартных привязок и выберите один см [как: обмена сообщениями с конечными точками WCF и приложениями очереди сообщений](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md). Дополнительные сведения о создании настраиваемых привязок см. в разделе [пользовательские привязки](../../../../docs/framework/wcf/extending/custom-bindings.md).  
   
 ## <a name="in-this-section"></a>В этом разделе  
  [Общие сведения об очередях](../../../../docs/framework/wcf/feature-details/queues-overview.md)  
  Обзор понятий очереди сообщений.  
   
  [Очереди в WCF](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)  
- Обзор поддержки очередей службой [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ Обзор поддержки очереди WCF.  
   
  [Практическое руководство. Обмен сообщениями в очереди с конечными точками WCF](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)  
- Описание использования класса <xref:System.ServiceModel.NetMsmqBinding> для взаимодействия между клиентом [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] и службой [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ Описание способов использования <xref:System.ServiceModel.NetMsmqBinding> класса для обмена данными между клиентом WCF и службы WCF.  
   
  [Практическое руководство. Обмен сообщениями с конечными точками WCF и приложениями очереди сообщений](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)  
- Описание использования привязки <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> для взаимодействия между приложениями [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] и приложениями очереди сообщений.  
+ Описание способов использования <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> для обмена данными между приложениями WCF и очереди сообщений.  
   
  [Группирование сообщений в очереди в рамках сеанса](../../../../docs/framework/wcf/feature-details/grouping-queued-messages-in-a-session.md)  
  Описание группирования сообщений в очереди для упрощения обработки связанных сообщений одним принимающим приложением.  
@@ -63,7 +49,7 @@ ms.lasthandoff: 04/30/2018
  Описание процедуры обработки подозрительных сообщений (превышено максимальное количество попыток доставки сообщений в принимающее приложение).  
   
  [Различия в возможностях очередей в Windows Vista, Windows Server 2003 и Windows XP](../../../../docs/framework/wcf/feature-details/diff-in-queue-in-vista-server-2003-windows-xp.md)  
- Общие сведения о различиях функций очереди [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] в [!INCLUDE[wv](../../../../includes/wv-md.md)], [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] и [!INCLUDE[wxp](../../../../includes/wxp-md.md)].  
+ Обобщены различия в функцию очередей WCF между [!INCLUDE[wv](../../../../includes/wv-md.md)], [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)], и [!INCLUDE[wxp](../../../../includes/wxp-md.md)].  
   
  [Защита сообщений с использованием средств обеспечения безопасности транспорта](../../../../docs/framework/wcf/feature-details/securing-messages-using-transport-security.md)  
  Описание способов защиты сообщений в очереди с помощью безопасности транспорта.  
@@ -75,7 +61,7 @@ ms.lasthandoff: 04/30/2018
  Описание способов устранения общих проблем, связанных с организацией очереди.  
   
  [Рекомендации по взаимодействию с использованием очередей](../../../../docs/framework/wcf/feature-details/best-practices-for-queued-communication.md)  
- Рекомендации по применению взаимодействия с использованием очередей [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ Описывает рекомендации по использованию WCF взаимодействия с использованием очередей.  
   
 ## <a name="see-also"></a>См. также  
  [Очереди сообщений](http://msdn.microsoft.com/library/ff917e87-05d5-478f-9430-0f560675ece1)

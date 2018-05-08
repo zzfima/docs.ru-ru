@@ -1,13 +1,6 @@
 ---
-title: "Источники данных, поддерживаемые Windows Forms"
-ms.custom: 
+title: Источники данных, поддерживаемые Windows Forms
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - collections [Windows Forms], binding to
 - OLE DB providers [Windows Forms], Windows Forms
@@ -22,16 +15,11 @@ helpviewer_keywords:
 - DataSet class [Windows Forms], binding and Windows Forms
 - data [Windows Forms], data providers
 ms.assetid: 3d2c43f6-462b-4d35-9c86-13e9afe012e1
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 5a0a4c2bca136377b9c6812008189dae009e195f
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 4705c8a7153e94fa1cd23cf6c2f622d5cd66ec77
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="data-sources-supported-by-windows-forms"></a>Источники данных, поддерживаемые Windows Forms
 В большинстве случаев привязка данных использовалась в приложениях для использования данных, хранящихся в базах данных. Привязки данных Windows Forms, предоставляет доступ к данным из баз данных, а также данные в другие структуры, таких как массивы и коллекции, при условии, что выполнены определенные минимальные требования.  
@@ -50,13 +38,13 @@ ms.lasthandoff: 01/19/2018
  массив или коллекция  
  В качестве источника данных, список должен реализовывать <xref:System.Collections.IList> интерфейса; один примеров можно привести массив, который является экземпляром класса <xref:System.Array> класса. Дополнительные сведения о массивах см. в разделе [как: создать массив объектов (Visual Basic)](http://msdn.microsoft.com/library/6b64e069-0387-400c-9081-3bdc581020c3).  
   
- В общем случае следует использовать <xref:System.ComponentModel.BindingList%601> при создании списков объектов для привязки данных. <xref:System.ComponentModel.BindingList%601>— универсальная версия <xref:System.ComponentModel.IBindingList> интерфейса. <xref:System.ComponentModel.IBindingList> Расширяет интерфейс <xref:System.Collections.IList> интерфейс, добавляя свойства, методы и события, необходимые для двусторонней привязки данных.  
+ В общем случае следует использовать <xref:System.ComponentModel.BindingList%601> при создании списков объектов для привязки данных. <xref:System.ComponentModel.BindingList%601> — универсальная версия <xref:System.ComponentModel.IBindingList> интерфейса. <xref:System.ComponentModel.IBindingList> Расширяет интерфейс <xref:System.Collections.IList> интерфейс, добавляя свойства, методы и события, необходимые для двусторонней привязки данных.  
   
  <xref:System.Collections.IEnumerable>  
  Элементы управления Windows Forms можно привязать к источникам данных, которые поддерживают только <xref:System.Collections.IEnumerable> интерфейс, если они связаны через <xref:System.Windows.Forms.BindingSource> компонента.  
   
- [!INCLUDE[vstecado](../../../includes/vstecado-md.md)]объекты данных  
- [!INCLUDE[vstecado](../../../includes/vstecado-md.md)]предоставляет несколько структур данных, к которым можно выполнить привязку. Каждый зависит от его сложности и сложности.  
+ [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] объекты данных  
+ [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] предоставляет несколько структур данных, к которым можно выполнить привязку. Каждый зависит от его сложности и сложности.  
   
 -   <xref:System.Data.DataColumn>. Объект <xref:System.Data.DataColumn> essential строительный блок <xref:System.Data.DataTable>, в котором несколько столбцов образуют таблицу. Каждый <xref:System.Data.DataColumn> имеет <xref:System.Data.DataColumn.DataType%2A> свойство, которое определяет, какие данные содержит столбец (например, производителей автомобилей в таблице с описанием автомобилей). Можно выполнить простую привязку элемента управления (таких как <xref:System.Windows.Forms.TextBox> элемента управления <xref:System.Windows.Forms.Control.Text%2A> свойство) к столбцу в таблице данных.  
   

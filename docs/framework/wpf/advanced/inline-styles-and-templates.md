@@ -1,45 +1,33 @@
 ---
-title: "Встроенные стили и шаблоны"
-ms.custom: 
+title: Встроенные стили и шаблоны
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - inline templates [WPF]
 - styles [WPF], inline
 - templates [WPF], inline
 - inline styles [WPF]
 ms.assetid: 69a1a3f9-acb5-4e2c-9c43-2e376c055ac4
-caps.latest.revision: "5"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 5dccf0b274121ff4fe88c9270119a2f631ffcf29
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9c06f61bce1e17770fa0a9b9ed7a0e20625a79ba
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="inline-styles-and-templates"></a>Встроенные стили и шаблоны
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]предоставляет <xref:System.Windows.Style> объектов и объектов шаблона (<xref:System.Windows.FrameworkTemplate> подклассов) как способ определения внешнего вида элемента в ресурсах, так что они могут использоваться несколько раз. По этой причине атрибуты в [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] , принимающие аргументы типов <xref:System.Windows.Style> и <xref:System.Windows.FrameworkTemplate> почти всегда создают ресурсные ссылки на существующие стили и шаблоны вместо определения новых.  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] предоставляет <xref:System.Windows.Style> объектов и объектов шаблона (<xref:System.Windows.FrameworkTemplate> подклассов) как способ определения внешнего вида элемента в ресурсах, так что они могут использоваться несколько раз. По этой причине атрибуты в [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] , принимающие аргументы типов <xref:System.Windows.Style> и <xref:System.Windows.FrameworkTemplate> почти всегда создают ресурсные ссылки на существующие стили и шаблоны вместо определения новых.  
   
 ## <a name="limitations-of-inline-styles-and-templates"></a>Ограничения встроенные стили и шаблоны  
  В [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], свойства стиля и шаблона формально могут задаваться одним из двух способов. Синтаксис атрибутов можно использовать для ссылки на стиль, который был определен в ресурсе, например `<` *объекта*`Style="{StaticResource`*myResourceKey*`}" .../>`. Или можно использовать синтаксис элемента свойства для определения встроенный стиль, например:  
   
- `<`*объекта*`>`  
+ `<` *Объект* `>`  
   
- `<`*объекта*`.Style>`  
+ `<` *Объект* `.Style>`  
   
  `<` `Style`  `.../>`  
   
- `</`*объекта*`.Style>`  
+ `</` *Объект* `.Style>`  
   
- `</`*объекта*`>`  
+ `</` *Объект* `>`  
   
  Использование атрибута является гораздо более распространенным. Стиль, определенный встроенным образом и не определенный в ресурсах, обязательно распространяется только на содержащий элемент и не может повторно использоваться так же просто, так как он не имеет ключа ресурса. В целом стиль, определенный ресурсом является более гибким, полезным и соответствующим Общие [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] отделения программной логики в коде из режима конструктора в разметке принцип модели программирования.  
   

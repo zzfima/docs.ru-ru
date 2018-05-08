@@ -1,13 +1,6 @@
 ---
-title: "Обзор фигур и базовых средств рисования в приложении WPF"
-ms.custom: 
+title: Обзор фигур и базовых средств рисования в приложении WPF
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -19,16 +12,11 @@ helpviewer_keywords:
 - vectors [WPF], drawing
 - Shape objects [WPF]
 ms.assetid: 66d7a6d6-e3b6-47bc-8dfe-8a1b26f7d901
-caps.latest.revision: "19"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 2912215cb8fb0090cef58e0201cc355da1f0bf19
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: adbf982da25ff445d277b7c1b5911217d9825c02
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="shapes-and-basic-drawing-in-wpf-overview"></a>Обзор фигур и базовых средств рисования в приложении WPF
 В этом разделе содержится обзор рисования с помощью <xref:System.Windows.Shapes.Shape> объектов. Объект <xref:System.Windows.Shapes.Shape> — это тип <xref:System.Windows.UIElement> , позволяющий нарисовать фигуру на экране. Так как они являются элементами пользовательского интерфейса, <xref:System.Windows.Shapes.Shape> объекты могут использоваться внутри <xref:System.Windows.Controls.Panel> элементы и элементы управления.  
@@ -38,7 +26,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="shapes"></a>   
 ## <a name="shape-objects"></a>Объекты фигур  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]предоставляет ряд готовых к использованию <xref:System.Windows.Shapes.Shape> объектов.  Все объекты фигур наследуются от <xref:System.Windows.Shapes.Shape> класса. Доступные объекты фигур включают <xref:System.Windows.Shapes.Ellipse>, <xref:System.Windows.Shapes.Line>, <xref:System.Windows.Shapes.Path>, <xref:System.Windows.Shapes.Polygon>, <xref:System.Windows.Shapes.Polyline>, и <xref:System.Windows.Shapes.Rectangle>. <xref:System.Windows.Shapes.Shape>объекты используют следующие общие свойства.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] предоставляет ряд готовых к использованию <xref:System.Windows.Shapes.Shape> объектов.  Все объекты фигур наследуются от <xref:System.Windows.Shapes.Shape> класса. Доступные объекты фигур включают <xref:System.Windows.Shapes.Ellipse>, <xref:System.Windows.Shapes.Line>, <xref:System.Windows.Shapes.Path>, <xref:System.Windows.Shapes.Polygon>, <xref:System.Windows.Shapes.Polyline>, и <xref:System.Windows.Shapes.Rectangle>. <xref:System.Windows.Shapes.Shape> объекты используют следующие общие свойства.  
   
 -   <xref:System.Windows.Shapes.Shape.Stroke%2A>: Описывает способ рисования контура фигуры.  
   
@@ -83,7 +71,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="pathgeometry"></a>   
 ### <a name="pathgeometry-and-pathsegments"></a>Классы PathGeometry и PathSegment  
- <xref:System.Windows.Media.PathGeometry>объекты состоят из одного или нескольких <xref:System.Windows.Media.PathFigure> объектов, каждый из которых <xref:System.Windows.Media.PathFigure> представляет различные «рисунок» или фигуры. Каждый <xref:System.Windows.Media.PathFigure> состоит из одного или нескольких <xref:System.Windows.Media.PathSegment> объектов, каждый из которых представляет подключенных часть фигуры или формы. Следующие типы сегмента: <xref:System.Windows.Media.LineSegment>, <xref:System.Windows.Media.BezierSegment>, и <xref:System.Windows.Media.ArcSegment>.  
+ <xref:System.Windows.Media.PathGeometry> объекты состоят из одного или нескольких <xref:System.Windows.Media.PathFigure> объектов, каждый из которых <xref:System.Windows.Media.PathFigure> представляет различные «рисунок» или фигуры. Каждый <xref:System.Windows.Media.PathFigure> состоит из одного или нескольких <xref:System.Windows.Media.PathSegment> объектов, каждый из которых представляет подключенных часть фигуры или формы. Следующие типы сегмента: <xref:System.Windows.Media.LineSegment>, <xref:System.Windows.Media.BezierSegment>, и <xref:System.Windows.Media.ArcSegment>.  
   
  В следующем примере <xref:System.Windows.Shapes.Path> используется для рисования кривой Безье второго.  
   
@@ -108,7 +96,7 @@ Data="M 100,200 C 100,25 400,350 400,175 H 280" />
   
  ![Рисунок пути](../../../../docs/framework/wpf/graphics-multimedia/media/shape-ovw-path.PNG "shape_ovw_path")  
   
- <xref:System.Windows.Shapes.Path.Data%2A> Атрибут строка начинается с помощью команды «moveto» обозначается M, задающей начальную точку для пути в системе координат <xref:System.Windows.Controls.Canvas>. <xref:System.Windows.Shapes.Path>данные параметры зависят от регистра. Заглавная буква M указывает абсолютное положение новой текущей точки. Строчная буква m указывала бы относительные координаты. Первый сегмент представляет собой кубическую кривую Безье, которая начинается в точке (100, 200) и заканчивается в точке (400, 175). Эта кривая нарисована с помощью двух контрольных точек (100, 25) и (400, 350). Этот сегмент определен командой C в <xref:System.Windows.Shapes.Path.Data%2A> строке атрибута. Опять же, заглавная буква C указывает абсолютный путь; строчная буква c указывает относительный путь.  
+ <xref:System.Windows.Shapes.Path.Data%2A> Атрибут строка начинается с помощью команды «moveto» обозначается M, задающей начальную точку для пути в системе координат <xref:System.Windows.Controls.Canvas>. <xref:System.Windows.Shapes.Path> данные параметры зависят от регистра. Заглавная буква M указывает абсолютное положение новой текущей точки. Строчная буква m указывала бы относительные координаты. Первый сегмент представляет собой кубическую кривую Безье, которая начинается в точке (100, 200) и заканчивается в точке (400, 175). Эта кривая нарисована с помощью двух контрольных точек (100, 25) и (400, 350). Этот сегмент определен командой C в <xref:System.Windows.Shapes.Path.Data%2A> строке атрибута. Опять же, заглавная буква C указывает абсолютный путь; строчная буква c указывает относительный путь.  
   
  Второй сегмент начинается с команды lineto H, которая рисует горизонтальную линию от предыдущей точки пути (400, 175) до новой точки (280, 175). Поскольку это команда горизонтали «lineto", указанное значение является *x*-координации.  
   
@@ -116,7 +104,7 @@ Data="M 100,200 C 100,25 400,350 400,175 H 280" />
   
 <a name="fillpaint"></a>   
 ## <a name="painting-shapes"></a>Заполнение фигур  
- <xref:System.Windows.Media.Brush>объекты используются для заливки фигуры <xref:System.Windows.Shapes.Shape.Stroke%2A> и <xref:System.Windows.Shapes.Shape.Fill%2A>. В следующем примере, обводки и заполнения <xref:System.Windows.Shapes.Ellipse> указаны. Обратите внимание, что значения свойств кисти могут задаваться только в формате ключевого слова или шестнадцатеричного значения цвета. Дополнительные сведения о доступных ключевых словах цветов см. в разделе свойств <xref:System.Windows.Media.Colors> класса в <xref:System.Windows.Media> пространства имен.  
+ <xref:System.Windows.Media.Brush> объекты используются для заливки фигуры <xref:System.Windows.Shapes.Shape.Stroke%2A> и <xref:System.Windows.Shapes.Shape.Fill%2A>. В следующем примере, обводки и заполнения <xref:System.Windows.Shapes.Ellipse> указаны. Обратите внимание, что значения свойств кисти могут задаваться только в формате ключевого слова или шестнадцатеричного значения цвета. Дополнительные сведения о доступных ключевых словах цветов см. в разделе свойств <xref:System.Windows.Media.Colors> класса в <xref:System.Windows.Media> пространства имен.  
   
 ```  
 <Canvas Background="LightGray">   
@@ -213,7 +201,7 @@ myPolygon.StrokeThickness = 2;
 ## <a name="transforming-shapes"></a>Преобразование фигур  
  <xref:System.Windows.Media.Transform> Класс предоставляет средства для преобразования фигур на двумерной плоскости.  Различные типы преобразования включают поворот (<xref:System.Windows.Media.RotateTransform>), масштабирование (<xref:System.Windows.Media.ScaleTransform>), отклонение (<xref:System.Windows.Media.SkewTransform>) и преобразование (<xref:System.Windows.Media.TranslateTransform>).  
   
- Распространенным преобразованием фигуры является поворот.  Чтобы повернуть фигуру, создайте <xref:System.Windows.Media.RotateTransform> и укажите его <xref:System.Windows.Media.RotateTransform.Angle%2A>. <xref:System.Windows.Media.RotateTransform.Angle%2A> 45 поворачивает элемент на 45 градусов по часовой стрелке; угол 90 поворачивает элемент на 90 градусов по часовой стрелке; и т. д. Задать <xref:System.Windows.Media.RotateTransform.CenterX%2A> и <xref:System.Windows.Media.RotateTransform.CenterY%2A> свойства, если вы хотите точки, о котором поворачивать элемент управления. Эти значения свойств выражаются в системе координат преобразуемого элемента. <xref:System.Windows.Media.RotateTransform.CenterX%2A>и <xref:System.Windows.Media.RotateTransform.CenterY%2A> имеют значения по умолчанию равно нулю. Наконец, примените <xref:System.Windows.Media.RotateTransform> к элементу. Если вы не хотите преобразование влияет на макет, задайте фигуры <xref:System.Windows.UIElement.RenderTransform%2A> свойство.  
+ Распространенным преобразованием фигуры является поворот.  Чтобы повернуть фигуру, создайте <xref:System.Windows.Media.RotateTransform> и укажите его <xref:System.Windows.Media.RotateTransform.Angle%2A>. <xref:System.Windows.Media.RotateTransform.Angle%2A> 45 поворачивает элемент на 45 градусов по часовой стрелке; угол 90 поворачивает элемент на 90 градусов по часовой стрелке; и т. д. Задать <xref:System.Windows.Media.RotateTransform.CenterX%2A> и <xref:System.Windows.Media.RotateTransform.CenterY%2A> свойства, если вы хотите точки, о котором поворачивать элемент управления. Эти значения свойств выражаются в системе координат преобразуемого элемента. <xref:System.Windows.Media.RotateTransform.CenterX%2A> и <xref:System.Windows.Media.RotateTransform.CenterY%2A> имеют значения по умолчанию равно нулю. Наконец, примените <xref:System.Windows.Media.RotateTransform> к элементу. Если вы не хотите преобразование влияет на макет, задайте фигуры <xref:System.Windows.UIElement.RenderTransform%2A> свойство.  
   
  В следующем примере <xref:System.Windows.Media.RotateTransform> используется для поворота фигуры 45 градусов относительно верхнего левого угла фигуры (0,0).  
   

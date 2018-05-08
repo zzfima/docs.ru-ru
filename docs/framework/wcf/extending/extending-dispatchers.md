@@ -1,33 +1,19 @@
 ---
-title: "Расширение диспетчеров"
-ms.custom: 
+title: Расширение диспетчеров
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - dispatcher extensions [WCF]
 ms.assetid: d0ad15ac-fa12-4f27-80e8-7ac2271e5985
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 4240a19401d97cd0636d13a94fd07ad4ef753388
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: bc700aefc3b50102dc0a3faabbbcd09c1c8fc4bc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="extending-dispatchers"></a>Расширение диспетчеров
 Диспетчеры отвечают за удаление входящих сообщений из базовых каналов, их перевод в вызовы метода в коде приложения и отправку результатов обратно вызывающему коду. Расширения диспетчера позволяют изменить эту процедуру.  Можно реализовать инспекторы сообщений или параметров, которые инспектируют или изменяют содержимое сообщений или параметров.  Можно изменить способ перенаправления сообщений в операции или обеспечить какие-либо другие функции.  
   
- В этом разделе описано, как использовать классы <xref:System.ServiceModel.Dispatcher.DispatchRuntime> и <xref:System.ServiceModel.Dispatcher.DispatchOperation> в приложении службы [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], чтобы изменять поведение выполнения диспетчера по умолчанию либо перехватывать или изменять сообщения, параметры или возвращаемые значения до отправки или извлечениях их из уровня канала или сразу после отправки или извлечения. Дополнительные сведения об обработке сообщений среды выполнения эквивалентные клиента см. в разделе [расширение клиентов](../../../../docs/framework/wcf/extending/extending-clients.md). Чтобы понять, какую роль, <xref:System.ServiceModel.IExtensibleObject%601> типы воспроизведение при доступе к общему состоянию между различными объектами среды выполнения настройки см. в разделе [расширяемых объектов](../../../../docs/framework/wcf/extending/extensible-objects.md).  
+ В этом разделе описывается использование <xref:System.ServiceModel.Dispatcher.DispatchRuntime> и <xref:System.ServiceModel.Dispatcher.DispatchOperation> приложение для изменения поведения по умолчанию выполнения диспетчера перехватывать или изменять сообщения, параметры или возвращать службы классы в Windows Communication Foundation (WCF) значения до или после их отправки и получения через канал. Дополнительные сведения об обработке сообщений среды выполнения эквивалентные клиента см. в разделе [расширение клиентов](../../../../docs/framework/wcf/extending/extending-clients.md). Чтобы понять, какую роль, <xref:System.ServiceModel.IExtensibleObject%601> типы воспроизведение при доступе к общему состоянию между различными объектами среды выполнения настройки см. в разделе [расширяемых объектов](../../../../docs/framework/wcf/extending/extensible-objects.md).  
   
 ## <a name="dispatchers"></a>Диспетчеры  
  Уровень модели службы осуществляет преобразование между моделью программирования разработчика и базовым обменом сообщениями, который обычно называется "уровень каналов". В [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] диспетчеры каналов и конечных точек (<xref:System.ServiceModel.Dispatcher.ChannelDispatcher> и <xref:System.ServiceModel.Dispatcher.EndpointDispatcher> соответственно) являются компонентами службы, отвечающими за принятие новых каналов, получение сообщений, перенаправление и вызов операций и обработку ответов. Объекты диспетчера - это объекты получателя, однако реализации контракта обратного вызова в дуплексных службах также предоставляют свои объекты диспетчера для проверки, изменения или расширения.  

@@ -1,11 +1,7 @@
 ---
-title: "Функция GetMethodQualifierSet (Справочник по неуправляемым API)"
-description: "Функция GetMethodQualifierSet получает набор описателей этого метода."
+title: Функция GetMethodQualifierSet (Справочник по неуправляемым API)
+description: Функция GetMethodQualifierSet получает набор описателей этого метода.
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - GetMethodQualifierSet
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 2999bef31576cf2bc025868260c2b1782a9b69f9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2b1f73e999738fbb59342aeab391132ac454c8dd
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="getmethodqualifierset-function"></a>Функция GetMethodQualifierSet
 Извлекает квалификатор для конкретного метода.
@@ -54,7 +47,7 @@ HRESULT GetMethodQualifierSet (
 [in] Указатель на [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx) экземпляра.
 
 `wszMethod`  
-[in] Имя метода. `wszMethod`должен указывать на допустимый `LPCWSTR`. 
+[in] Имя метода. `wszMethod` должен указывать на допустимый `LPCWSTR`. 
 
 `ppQualSet`  
 [out] Получает указатель интерфейса, обеспечивающего доступ к квалификаторы метода. Параметр `ppQualSet` не может иметь значение `null`. Если возникает ошибка не возвращается новый объект и указатель устанавливается на `null`. 
@@ -63,7 +56,7 @@ HRESULT GetMethodQualifierSet (
 
 Следующие значения, возвращаемые этой функцией, определяются в *WbemCli.h* файла заголовка, или их можно определить как константы в коде:
 
-|Константа  |Значение  |Описание:  |
+|Константа  |Значение  |Описание  |
 |---------|---------|---------|
 |`WBEM_E_NOT_FOUND` | 0x80041002 | Указанный метод не существует. |
 |`WBEM_E_INVALID_PARAMETER` | 0x80041008 | Параметр — `null`. |
@@ -82,7 +75,7 @@ HRESULT GetMethodQualifierSet (
   
  **Заголовок:** WMINet_Utils.idl  
   
- **Версии платформы .NET framework:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Версии платформы .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>См. также  
 [WMI и счетчиков производительности (Справочник по неуправляемым API)](index.md)

@@ -1,29 +1,15 @@
 ---
 title: Настройка сериализации в службе рабочего процесса
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: aa70b290-a2ee-4c3c-90ea-d0a7665096ae
-caps.latest.revision: 4
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 47c66077da051fd70300e1961593e906fe8e77aa
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 74d9a812b9e0cd51a401fa3526c947d52413807a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="configuring-serialization-in-a-workflow-service"></a>Настройка сериализации в службе рабочего процесса
-Службы рабочих процессов являются службами [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и поэтому обладают возможностью использовать <xref:System.Runtime.Serialization.DataContractSerializer> (по умолчанию) или <xref:System.Xml.Serialization.XmlSerializer>. При написании кода служб, отличных от служб рабочих процессов, тип используемого сериализатора задается применительно к контракту службы или операции. При создании служб Workflow Services [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] не надо указывать эти контракты в коде, вместо этого они формируются во время выполнения выводом контракта. Дополнительные сведения о вывод контракта см. в разделе [использование контрактов в рабочем процессе](../../../../docs/framework/wcf/feature-details/using-contracts-in-workflow.md).  Сериализатор определяется с помощью свойства <xref:System.ServiceModel.Activities.Receive.SerializerOption%2A>. Оно задается в конструкторе, как показано на следующем рисунке.  
+Службы рабочего процесса — это службы Windows Communication Foundation (WCF) и поэтому иметь возможность использовать либо <xref:System.Runtime.Serialization.DataContractSerializer> (по умолчанию) или <xref:System.Xml.Serialization.XmlSerializer>. При написании кода служб, отличных от служб рабочих процессов, тип используемого сериализатора задается применительно к контракту службы или операции. При создании службы рабочего процесса WCF не указать эти контракты в коде, но вместо этого они формируются во время выполнения выводом контракта. Дополнительные сведения о вывод контракта см. в разделе [использование контрактов в рабочем процессе](../../../../docs/framework/wcf/feature-details/using-contracts-in-workflow.md).  Сериализатор определяется с помощью свойства <xref:System.ServiceModel.Activities.Receive.SerializerOption%2A>. Оно задается в конструкторе, как показано на следующем рисунке.  
   
  ![Настройка сериализатора](../../../../docs/framework/wcf/feature-details/media/settingserialzier.png "SettingSerialzier")  
   

@@ -1,13 +1,6 @@
 ---
-title: "Атрибут mc: Ignorable"
-ms.custom: 
+title: 'Атрибут mc: Ignorable'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - mc XML namespace prefix [WPF]
 - mc:Ignorable attribute
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - mc:ProcessContent attribute
 - XAML [WPF], mc:ProcessContent attribute
 ms.assetid: acd9a6ef-b7ca-4146-abb6-60f3b366e9ec
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 9767b721321b34030a2f276a90c618c658645207
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7b8a2ef6e27bc6b25776157e59bef04b883fcb1a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mcignorable-attribute"></a>Атрибут mc: Ignorable
 Определяет, какая [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] может проигнорировать префиксы пространства имен в файле разметки [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] процессора. `mc:Ignorable` Атрибут поддерживает совместимость разметки для пользовательского сопоставления пространства имен и [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] управления версиями.  
@@ -66,7 +54,7 @@ ms.lasthandoff: 12/22/2017
   
  Элементы или атрибуты, где префиксная часть имени элемента определяется как `mc:Ignorable` не создают ошибок при обработке [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] процессора. Если этот атрибут не может быть разрешена для базового типа или программных конструкций, этот элемент игнорируется. Обратите внимание, что пропущенные элементы по-прежнему может создавать дополнительные синтаксические ошибки для дополнительных требований к элементу, побочные эффекты этого элемента не обрабатывается. Для экземпляра конкретный элемент содержимого модели может потребоваться только один дочерний элемент, но если указанный дочерний элемент был с `mc:Ignorable` префикс и указанный дочерний элемент не удалось разрешить тип, то [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] может процессора Возвращает ошибку.  
   
- `mc:Ignorable`применяется только для сопоставления пространства имен с идентификатором строки. `mc:Ignorable`не применяется для сопоставления пространства имен в сборках, указывающих [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] пространства имен и сборки (или по умолчанию для текущего исполняемого файла в качестве сборки).  
+ `mc:Ignorable` применяется только для сопоставления пространства имен с идентификатором строки. `mc:Ignorable` не применяется для сопоставления пространства имен в сборках, указывающих [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] пространства имен и сборки (или по умолчанию для текущего исполняемого файла в качестве сборки).  
   
  Если вы реализуете [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] процессора, не должны вызывать реализация обработчика, синтаксического анализа и обработки ошибок при приведении типа любого элемента или атрибута, которые уточняются префикс, который определяется как `mc:Ignorable`. Но реализация процессора по-прежнему может вызывать исключения, которые являются побочным результатом сбоя загрузки или обработки, такие как в приведенном выше примере одного дочернего элемента элемента.  
   

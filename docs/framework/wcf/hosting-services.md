@@ -1,31 +1,17 @@
 ---
 title: Размещение служб
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - hosting services [WCF]
 ms.assetid: 192be927-6be2-4fda-98f0-e513c4881acc
-caps.latest.revision: 31
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: ac7de48b801036ac186ffe92117269ae86d14a10
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: 6b7e94bdbec483f32fa41bb60032cca56c5e1593
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="hosting-services"></a>Размещение служб
-Для активации службы ее необходимо разместить в среде выполнения, которая создает эту службу и управляет ее контекстом и временем существования. Службы[!INCLUDE[indigo1](../../../includes/indigo1-md.md)] предназначены для выполнения в любом процессе Windows, который поддерживает управляемый код.  
+Для активации службы ее необходимо разместить в среде выполнения, которая создает эту службу и управляет ее контекстом и временем существования. Службы Windows Communication Foundation (WCF) предназначены для выполнения в любом процессе Windows, который поддерживает управляемый код.  
   
  [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] обеспечивает единую модель программирования для построения сервисноориентированных приложений. Эта модель программирования остается согласованной и не зависит от среды выполнения, в которой развертывается служба. На практике это означает, что код службы всегда выглядит практически одинаково, независимо от вариантов размещения.  
   

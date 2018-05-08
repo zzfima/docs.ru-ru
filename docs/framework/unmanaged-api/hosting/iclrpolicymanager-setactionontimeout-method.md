@@ -1,14 +1,6 @@
 ---
-title: "Метод ICLRPolicyManager::SetActionOnTimeout"
-ms.custom: 
+title: Метод ICLRPolicyManager::SetActionOnTimeout
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICLRPolicyManager.SetActionOnTimeout
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 38439fa1-2b99-4fa8-a6ec-08afc0f83b9c
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: db0918272a315e78191624cbe6420863285620c6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: cc1d16a2d57fea27c1c26fc55fbbfa9b74c25495
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="iclrpolicymanagersetactionontimeout-method"></a>Метод ICLRPolicyManager::SetActionOnTimeout
 Задает действие политики, которое должен выполнить общеязыковой среды выполнения (CLR), после истечения указанного времени ожидания операции.  
@@ -66,7 +54,7 @@ HRESULT SetActionOnTimeout (
   
 |HRESULT|Описание|  
 |-------------|-----------------|  
-|S_OK|`SetActionOnTimeout`успешно возвращен.|  
+|S_OK|`SetActionOnTimeout` успешно возвращен.|  
 |ЗНАЧЕНИЕ HOST_E_CLRNOTAVAILABLE|Среда CLR не загружена в процесс или находится в состоянии, в котором не может выполнять управляемый код или успешно обработать вызов.|  
 |HOST_E_TIMEOUT|Истекло время ожидания вызова.|  
 |HOST_E_NOT_OWNER|Вызывающий объект не является владельцем блокировки.|  
@@ -77,9 +65,9 @@ HRESULT SetActionOnTimeout (
 ## <a name="remarks"></a>Примечания  
  Значение времени ожидания может быть время ожидания по умолчанию, заданное в среде CLR или значения, указанного в узле в вызове [ICLRPolicyManager::SetTimeout](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-settimeout-method.md) метод.  
   
- Не все значения действий политики может быть указан как поведение времени ожидания для операций среды CLR. `SetActionOnTimeout`обычно используется только для повышения поведение. Например, узел может указать, что прерывания потока превратить грубые безотлагательно, однако нельзя указать обратное. В следующей таблице описаны допустимые `action` значения для допустимых `operation` значения.  
+ Не все значения действий политики может быть указан как поведение времени ожидания для операций среды CLR. `SetActionOnTimeout` обычно используется только для повышения поведение. Например, узел может указать, что прерывания потока превратить грубые безотлагательно, однако нельзя указать обратное. В следующей таблице описаны допустимые `action` значения для допустимых `operation` значения.  
   
-|Значение для`operation`|Допустимые значения`action`|  
+|Значение для `operation`|Допустимые значения `action`|  
 |---------------------------|-------------------------------|  
 |OPR_ThreadRudeAbortInNonCriticalRegion<br /><br /> OPR_ThreadRudeAbortInCriticalRegion|-eRudeAbortThread<br />-eUnloadAppDomain<br />-eRudeUnloadAppDomain<br />-eExitProcess<br />-eFastExitProcess<br />-eRudeExitProcess<br />-eDisableRuntime|  
 |OPR_AppDomainUnload|-eUnloadAppDomain<br />-eRudeUnloadAppDomain<br />-eExitProcess<br />-eFastExitProcess<br />-eRudeExitProcess<br />-eDisableRuntime|  
@@ -92,7 +80,7 @@ HRESULT SetActionOnTimeout (
   
  **Библиотека:** включена как ресурс в MSCorEE.dll  
   
- **Версии платформы .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Версии платформы .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>См. также  
  [Перечисление EClrOperation](../../../../docs/framework/unmanaged-api/hosting/eclroperation-enumeration.md)  

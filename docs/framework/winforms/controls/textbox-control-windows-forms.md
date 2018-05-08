@@ -1,27 +1,15 @@
 ---
-title: "Элемент управления TextBox (Windows Forms)"
-ms.custom: 
+title: Элемент управления TextBox (Windows Forms)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - text boxes
 - TextBox control [Windows Forms]
 ms.assetid: e5a06987-8aec-4271-b196-2245ba992d62
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d606140a5be2b1770bc5a16159e96e20b0fccdd9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fe5bafa5c21a3946df33821d358185f3aba67222
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="textbox-control-windows-forms"></a>Элемент управления TextBox (Windows Forms)
 Windows Forms текстовые поля используются для получения входных данных от пользователя или для отображения текста. `TextBox` Управления обычно используется для редактируемого текста, хотя его можно также сделать доступным только для чтения. Текстовые поля можно отобразить несколько строк, переноса текста по размеру элемента управления и добавлять основные элементы форматирования. `TextBox` Управления позволяет вводить в элементе управления или отображать текст только в одном формате.  

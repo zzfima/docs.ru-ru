@@ -1,13 +1,6 @@
 ---
-title: "Использование вложенных графических контейнеров"
-ms.custom: 
+title: Использование вложенных графических контейнеров
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,19 +9,14 @@ helpviewer_keywords:
 - graphics [Windows Forms], clipping
 - graphics [Windows Forms], transformations in nested objects
 ms.assetid: a0d9f178-43a4-4323-bb5a-d3e3f77ae6c1
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 512c8903611f025364a1af2cb6cbaaffc8d759eb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ba6bba84100a0ddcc87894710a6d3099ab0ccff5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-nested-graphics-containers"></a>Использование вложенных графических контейнеров
-[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]предоставляет контейнеры, которые можно использовать, чтобы временно заменить или дополнить часть состояния в <xref:System.Drawing.Graphics> объекта. Создать контейнер, вызвав <xref:System.Drawing.Graphics.BeginContainer%2A> метод <xref:System.Drawing.Graphics> объекта. Можно вызвать <xref:System.Drawing.Graphics.BeginContainer%2A> несколько раз для создания вложенных контейнеров. Каждый вызов <xref:System.Drawing.Graphics.BeginContainer%2A> должны составлять пару с помощью вызова <xref:System.Drawing.Graphics.EndContainer%2A>.  
+[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] предоставляет контейнеры, которые можно использовать, чтобы временно заменить или дополнить часть состояния в <xref:System.Drawing.Graphics> объекта. Создать контейнер, вызвав <xref:System.Drawing.Graphics.BeginContainer%2A> метод <xref:System.Drawing.Graphics> объекта. Можно вызвать <xref:System.Drawing.Graphics.BeginContainer%2A> несколько раз для создания вложенных контейнеров. Каждый вызов <xref:System.Drawing.Graphics.BeginContainer%2A> должны составлять пару с помощью вызова <xref:System.Drawing.Graphics.EndContainer%2A>.  
   
 ## <a name="transformations-in-nested-containers"></a>Преобразования во вложенных контейнерах  
  В следующем примере создается <xref:System.Drawing.Graphics> объекта и контейнера внутри этого <xref:System.Drawing.Graphics> объекта. Мировое преобразование объекта <xref:System.Drawing.Graphics> объект является сдвиг 100 единиц по оси x и 80 единиц по оси y. Мировое преобразование контейнера является поворот на 30 градусов. Код выполняет вызов `DrawRectangle(pen, -60, -30, 120, 60)` дважды. Первый вызов <xref:System.Drawing.Graphics.DrawRectangle%2A> внутри контейнера; то есть происходит между вызовами методов <xref:System.Drawing.Graphics.BeginContainer%2A> и <xref:System.Drawing.Graphics.EndContainer%2A>. Второй вызов <xref:System.Drawing.Graphics.DrawRectangle%2A> после вызова метода <xref:System.Drawing.Graphics.EndContainer%2A>.  

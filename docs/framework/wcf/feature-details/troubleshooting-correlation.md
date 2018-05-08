@@ -1,26 +1,12 @@
 ---
 title: Устранение неполадок корреляции
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 98003875-233d-4512-a688-4b2a1b0b5371
-caps.latest.revision: 11
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 2de3a8cac6e12d898173f8181b295c3e2e461cc7
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: c597012a5ff69ecb700c51e00ac7d1218962e9ad
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="troubleshooting-correlation"></a>Устранение неполадок корреляции
 Корреляция позволяет сопоставлять сообщения службы рабочего процесса друг с другом и с нужным экземпляром рабочего процесса. Если же корреляция настроена неправильно, то сообщения не будут приниматься и приложения будут работать неправильно. В этом разделе даны общие сведения о нескольких методах устранения неполадок корреляции, а также перечислен ряд распространенных проблем, которые возникают при использовании корреляции.  
@@ -146,7 +132,7 @@ supports the context protocol and has a valid context initialized.
  Дополнительные сведения см. в разделе [обмен контекстом](../../../../docs/framework/wcf/feature-details/context-exchange-correlation.md).  
   
 ## <a name="common-request-reply-correlation-issues"></a>Распространенные проблемы корреляции по схеме «запрос-ответ»  
- Корреляция запросов и ответов используется с <xref:System.ServiceModel.Activities.Receive> / <xref:System.ServiceModel.Activities.SendReply> пары для реализации двусторонней операции в службе рабочего процесса и с <xref:System.ServiceModel.Activities.Send> / <xref:System.ServiceModel.Activities.ReceiveReply> пары, вызывающей двустороннюю операцию в другой веб- Служба. При вызове двусторонней операции в службе WCF служба может быть либо традиционной, основанной на коде службой [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], либо службой рабочего процесса. Для корреляции «запрос-ответ» необходимо использовать двустороннюю привязку, такую как <xref:System.ServiceModel.BasicHttpBinding>, и операции должны быть двусторонними.  
+ Корреляция запросов и ответов используется с <xref:System.ServiceModel.Activities.Receive> / <xref:System.ServiceModel.Activities.SendReply> пары для реализации двусторонней операции в службе рабочего процесса и с <xref:System.ServiceModel.Activities.Send> / <xref:System.ServiceModel.Activities.ReceiveReply> пары, вызывающей двустороннюю операцию в другой веб- Служба. При вызове двусторонней операции в службе WCF, служба может быть либо традиционной императивного службы WCF на основе кода, или он может быть службы рабочего процесса. Для корреляции «запрос-ответ» необходимо использовать двустороннюю привязку, такую как <xref:System.ServiceModel.BasicHttpBinding>, и операции должны быть двусторонними.  
   
  Если служба рабочего процесса имеет двусторонние операции в параллельном режиме, или перекрывающиеся <xref:System.ServiceModel.Activities.Receive> / <xref:System.ServiceModel.Activities.SendReply> или <xref:System.ServiceModel.Activities.Send> / <xref:System.ServiceModel.Activities.ReceiveReply> пары, то неявное корреляции обработки управления, предоставляемые <xref:System.ServiceModel.Activities.WorkflowServiceHost>может оказаться недостаточно, особенно в сценариях с высокой загрузкой, и сообщения могут маршрутизироваться неправильно. Чтобы предотвратить эту проблему, рекомендуется всегда явно указывать <xref:System.ServiceModel.Activities.CorrelationHandle> при использовании корреляции «запрос-ответ». При использовании **SendAndReceiveReply** и **ReceiveAndSendReply** шаблоны обмена сообщениями части **элементов** в конструкторе рабочих процессов <xref:System.ServiceModel.Activities.CorrelationHandle> явным образом настроен по умолчанию. Если рабочий процесс создается из программного кода, то дескриптор <xref:System.ServiceModel.Activities.CorrelationHandle> указывается в свойстве <xref:System.ServiceModel.Activities.Receive.CorrelationInitializers%2A> первого действия из пары. В следующем примере действие <xref:System.ServiceModel.Activities.Receive> настраивается с явным дескриптором <xref:System.ServiceModel.Activities.CorrelationInitializer.CorrelationHandle%2A>, указанным в <xref:System.ServiceModel.Activities.RequestReplyCorrelationInitializer>.  
   

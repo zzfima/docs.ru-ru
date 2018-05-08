@@ -1,31 +1,19 @@
 ---
-title: "Сведения о политике конфиденциальности Windows Communication Foundation"
-ms.custom: 
+title: Сведения о политике конфиденциальности Windows Communication Foundation
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Windows Communication Foundation, privacy information
 - WCF, privacy information
 - privacy information [WCF]
 ms.assetid: c9553724-f3e7-45cb-9ea5-450a22d309d9
-caps.latest.revision: "34"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 2d0172b91393e4e9e373a247c33be938a3160e14
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
-ms.translationtype: MT
+ms.openlocfilehash: e9c4130cd4680d4cd68ca8c6ba36c38b5d065f58
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="windows-communication-foundation-privacy-information"></a>Сведения о политике конфиденциальности Windows Communication Foundation
-Корпорация Майкрософт стремится защитить конфиденциальные данные конечных пользователей. При создании приложения с использованием [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] версии 3.0 оно может повлиять на конфиденциальность информации конечных пользователей. Например, приложение может явным образом собирать контактные данные пользователей или запрашивать/отправлять информацию через Интернет на свой веб-сайт. Если в приложение внедряется технология Майкрософт, у этой технологии может быть свое поведение, которое способно повлиять на конфиденциальность данных приложения. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] отправляет информацию из приложения в корпорацию Майкрософт, только если это требуется разработчику или конечному пользователю.  
+Корпорация Майкрософт стремится защитить конфиденциальные данные конечных пользователей. При построении приложения с помощью Windows Communication Foundation (WCF), версия 3.0, приложение может повлиять на конфиденциальность конечных пользователей. Например, приложение может явным образом собирать контактные данные пользователей или запрашивать/отправлять информацию через Интернет на свой веб-сайт. Если в приложение внедряется технология Майкрософт, у этой технологии может быть свое поведение, которое способно повлиять на конфиденциальность данных приложения. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] отправляет информацию из приложения в корпорацию Майкрософт, только если это требуется разработчику или конечному пользователю.  
   
 ## <a name="wcf-in-brief"></a>Вкратце о WCF  
  [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] представляет собой распределенную среду обмена сообщениями, использующую платформу .NET Framework корпорации Майкрософт, которая позволяет разработчикам создавать распределенные приложения. Сообщения, обмен которыми осуществляется между двумя приложениями, содержат информацию заголовка и тела сообщения.  
@@ -138,13 +126,13 @@ ms.lasthandoff: 01/19/2018
   
  Удаляемые ключи:  
   
- \-Xmlns: WST = «http://schemas.xmlsoap.org/ws/2004/04/trust» и xmlns: WST = «http://schemas.xmlsoap.org/ws/2005/02/trust»  
+ \- Xmlns: WST =»http://schemas.xmlsoap.org/ws/2004/04/trust"и xmlns: WST =»http://schemas.xmlsoap.org/ws/2005/02/trust"  
   
  wst:BinarySecret  
   
  wst:Entropy  
   
- \-Xmlns:wsse = «http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.1.xsd» и xmlns:wsse = «http://docs.oasis-open.org/wss/2005/xx/oasis-2005xx-wss-wssecurity-secext-1.1.xsd»  
+ \- Xmlns:wsse =»http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.1.xsd» и xmlns:wsse =»http://docs.oasis-open.org/wss/2005/xx/oasis-2005xx-wss-wssecurity-secext-1.1.xsd"  
   
  wsse:Password  
   
@@ -152,13 +140,13 @@ ms.lasthandoff: 01/19/2018
   
  Удаляемые потенциально персональные данные:  
   
- \-Xmlns:wsse = «http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.1.xsd» и xmlns:wsse = «http://docs.oasis-open.org/wss/2005/xx/oasis-2005xx-wss-wssecurity-secext-1.1.xsd»  
+ \- Xmlns:wsse =»http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.1.xsd» и xmlns:wsse =»http://docs.oasis-open.org/wss/2005/xx/oasis-2005xx-wss-wssecurity-secext-1.1.xsd"  
   
  wsse:Username  
   
  wsse:BinarySecurityToken  
   
- \-Для xmlns:saml = «urn: oasis: имена: tc: SAML:1.0:assertion» удаляются элементы выделены полужирным шрифтом (см. ниже):  
+ \- Для xmlns:saml = «urn: oasis: имена: tc: SAML:1.0:assertion» удаляются элементы выделены полужирным шрифтом (см. ниже):  
   
  \<Утверждение  
   
@@ -178,7 +166,7 @@ ms.lasthandoff: 01/19/2018
   
  \<AudienceRestrictionCondition >  
   
- \<Audience>[uri]\</Audience>+  
+ \<Аудитория > [uri]\</Audience > +  
   
  \</ AudienceRestrictionCondition > *  
   
@@ -194,13 +182,13 @@ ms.lasthandoff: 01/19/2018
   
  \<Совет >  
   
- \<AssertionIDReference>[ID]\</AssertionIDReference>*  
+ \<AssertionIDReference > [ID]\</AssertionIDReference > *  
   
  \<Утверждение > [утверждение]\</Assertion > *  
   
  [any]*  
   
- \</Advice>?  
+ \</ Рекомендации >?  
   
  <\!--Абстрактных базовых типов  
   
@@ -228,7 +216,7 @@ ms.lasthandoff: 01/19/2018
   
  \<SubjectConfirmationData > [any]\</SubjectConfirmationData >?  
   
- \<ds:KeyInfo>...\</ds:KeyInfo>?  
+ \<DS:KeyInfo >... \</ds:KeyInfo >?  
   
  \</ SubjectConfirmation >?  
   
@@ -282,7 +270,7 @@ ms.lasthandoff: 01/19/2018
   
  `<AttributeValue>[any]</AttributeValue>+`  
   
- \</Attribute>+  
+ \</ Атрибут > +  
   
  \</ AttributeStatement > *  
   
@@ -290,7 +278,7 @@ ms.lasthandoff: 01/19/2018
   
  Resource="[uri]"  
   
- Решение = "[разрешения &#124; запретить &#124; неопределенное]»  
+ Решение = "[Разрешить&#124;запретить&#124;неопределенное]»  
   
  >  
   
@@ -304,7 +292,7 @@ ms.lasthandoff: 01/19/2018
   
  \<Утверждение > [утверждение]\</Assertion > +  
   
- \</Evidence>?  
+ \</ Свидетельства >?  
   
  \</ AuthorizationDecisionStatement > *  
   
@@ -315,7 +303,7 @@ ms.lasthandoff: 01/19/2018
   
  Для следующих пространств имен:  
   
- xmlns:wst="http://schemas.xmlsoap.org/ws/2004/04/trust" и xmlns:wst="http://schemas.xmlsoap.org/ws/2005/02/trust" (например без доступных действий)  
+ xmlns: WST =»http://schemas.xmlsoap.org/ws/2004/04/trust"и xmlns: WST =»http://schemas.xmlsoap.org/ws/2005/02/trust" (например, если нет доступных действий)  
   
  Информация удаляется для элементов тел, участвующих в обмене ключами:  
   

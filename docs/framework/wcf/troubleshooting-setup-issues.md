@@ -1,29 +1,15 @@
 ---
 title: Устранение неполадок с установкой
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 1644f885-c408-4d5f-a5c7-a1a907bc8acd
-caps.latest.revision: 15
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 9238c1a1c9092e6806ee941bd7c992071cf98e09
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: 806e8a1f45deec5861e3bcc9a9c06a93ce410c1a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="troubleshooting-setup-issues"></a>Устранение неполадок с установкой
-В этом разделе описано, как устранять неполадки установки [!INCLUDE[indigo1](../../../includes/indigo1-md.md)].  
+В этом разделе описывается устранение неполадок Windows Communication Foundation (WCF) неполадки установки.  
   
 ## <a name="some-windows-communication-foundation-registry-keys-are-not-repaired-by-performing-an-msi-repair-operation-on-the-net-framework-30"></a>Некоторые разделы реестра Windows Communication Foundation невозможно восстановить с помощью операции восстановления MSI в .NET Framework 3.0  
  Если удалить какие-либо разделы реестра из следующего списка:  

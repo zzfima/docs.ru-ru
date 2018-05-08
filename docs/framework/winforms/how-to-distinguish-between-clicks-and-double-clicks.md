@@ -1,14 +1,6 @@
 ---
 title: Практическое руководство. Распознавание одиночных и двойных щелчков
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -18,17 +10,11 @@ helpviewer_keywords:
 - mouse [Windows Forms], double-click
 - mouse clicks [Windows Forms], single versus double
 ms.assetid: d836ac8c-85bc-4f3a-a761-8aee03dc682c
-caps.latest.revision: 13
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 0f6f92c225e7b3c745c5cf439c9094d72fa0cde0
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: 6c8603df5a844fb93db0555b605f16235b9dff54
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-distinguish-between-clicks-and-double-clicks"></a>Практическое руководство. Распознавание одиночных и двойных щелчков
 Как правило, одиночное событие *щелчок* инициирует действие пользовательского интерфейса, а событие *двойной щелчок* расширяет его. Например, одним щелчком мыши обычно выбирается элемент, а двойным щелчком мыши этот элемент изменяется. Однако события щелчков Windows Forms непросто приспособить к сценарию, в котором щелчок и двойной щелчок выполняют несовместимые действия, поскольку действие, привязанное к событию <xref:System.Windows.Forms.Control.Click> или <xref:System.Windows.Forms.Control.MouseClick>, выполняется перед действием, привязанным к событию <xref:System.Windows.Forms.Control.DoubleClick> или <xref:System.Windows.Forms.Control.MouseDoubleClick>. В этом разделе показаны два способа решения этой проблемы. Одним из решений является обработка события двойного щелчка и откат действий при обработке события щелчка. В редких случаях может потребоваться имитировать поведение при одинарном и двойном щелчке при обработке событий <xref:System.Windows.Forms.Control.MouseDown> и с помощью свойств <xref:System.Windows.Forms.SystemInformation.DoubleClickTime%2A> и <xref:System.Windows.Forms.SystemInformation.DoubleClickSize%2A> класса <xref:System.Windows.Forms.SystemInformation>. Производится измерение времени между щелчками мышью и, если второе нажатие происходит до того, как <xref:System.Windows.Forms.SystemInformation.DoubleClickTime%2A> достигнет значения и кнопка мыши была нажата, когда курсор находился в прямоугольнике, заданном <xref:System.Windows.Forms.SystemInformation.DoubleClickSize%2A>, то выполняется действие двойного щелчка; в противном случае выполняется действие щелчка.  

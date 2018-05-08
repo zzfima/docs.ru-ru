@@ -1,14 +1,6 @@
 ---
-title: "Метод IHostTaskManager::GetCurrentTask"
-ms.custom: 
+title: Метод IHostTaskManager::GetCurrentTask
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IHostTaskManager.GetCurrentTask
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: f17bca49-90bd-4dee-a5e1-b9a57ea46f85
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: b3ba8cbaac28df49a2df70492c1a292ee8cd287e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2420ddb5cf9be2cfb08f89d27d9aa277305e7ffb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ihosttaskmanagergetcurrenttask-method"></a>Метод IHostTaskManager::GetCurrentTask
 Получает указатель интерфейса на задачу, которая в данный момент в потоке операционной системы, из которого этот вызов.  
@@ -54,13 +42,13 @@ HRESULT GetCurrentTask (
   
 |HRESULT|Описание|  
 |-------------|-----------------|  
-|S_OK|`GetCurrentTask`успешно возвращен.|  
+|S_OK|`GetCurrentTask` успешно возвращен.|  
 |ЗНАЧЕНИЕ HOST_E_CLRNOTAVAILABLE|Общеязыковая среда выполнения (CLR) не был загружен в процесс или находится в состоянии, в котором не может выполнять управляемый код или успешно обработать вызов.|  
 |HOST_E_TIMEOUT|Истекло время ожидания вызова.|  
 |HOST_E_NOT_OWNER|Вызывающий объект не является владельцем блокировки.|  
 |HOST_E_ABANDONED|Событие было отменено заблокированный поток или ожидал волокон.|  
 |E_FAIL|Неизвестная Неустранимая ошибка. Если метод вернет значение E_FAIL, среда CLR больше не может использоваться в процессе. Последующие вызовы размещение методы возвращают значение HOST_E_CLRNOTAVAILABLE.|  
-|ЗНАЧЕНИЕ HOST_E_INVALIDOPERATION|`GetCurrentTask`был вызван в потоке операционной системы за пределами элемента управления узла.|  
+|ЗНАЧЕНИЕ HOST_E_INVALIDOPERATION|`GetCurrentTask` был вызван в потоке операционной системы за пределами элемента управления узла.|  
   
 ## <a name="remarks"></a>Примечания  
  Можно также задать основное приложение `pTask` параметра значение null, чтобы предотвратить задачи, она не инициировать попадающие в CLR.  
@@ -72,7 +60,7 @@ HRESULT GetCurrentTask (
   
  **Библиотека:** включена как ресурс в MSCorEE.dll  
   
- **Версии платформы .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Версии платформы .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>См. также  
  [Интерфейс ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)  

@@ -1,23 +1,15 @@
 ---
 title: Функции (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - Visual Basic, functions
 - functions [Visual Basic]
 ms.assetid: d86fc51f-f46e-4941-8ae2-6262da3d2688
-caps.latest.revision: 14
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 03833cda517aa79f72d0081c25fbff2e78dcc281
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: d76e02676d3921231b3fe4bf5cc1015540e6bafc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="functions-visual-basic"></a>Функции (Visual Basic)
 В статьях этого раздела приводятся таблицы с функциями-членами времени выполнения Visual Basic.  
@@ -25,7 +17,7 @@ ms.lasthandoff: 10/18/2017
 > [!NOTE]
 >  Вы можете также создавать функции и вызывать их. Подробнее см. в разделах [Оператор Function](../../../visual-basic/language-reference/statements/function-statement.md) и [Практическое руководство. Создание процедуры, которая возвращает значение](../../../visual-basic/programming-guide/language-features/procedures/how-to-create-a-procedure-that-returns-a-value.md).  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Функции преобразования](../../../visual-basic/language-reference/functions/conversion-functions.md)  
   
  [Математические функции](../../../visual-basic/language-reference/functions/math-functions.md)  

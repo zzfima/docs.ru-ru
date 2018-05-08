@@ -1,31 +1,17 @@
 ---
-title: "Общие сведения об элементе управления Panel (Windows Forms)"
-ms.custom: 
+title: Общие сведения об элементе управления Panel (Windows Forms)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - Panel
 helpviewer_keywords:
 - grouping controls [Windows Forms], Panel control
 - Panel control [Windows Forms], about Panel control
 ms.assetid: b6b83636-2c39-4dad-89d6-f0fa41049a74
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: a8855c88a0ec60cd0d44d73046e44c9614347d90
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1ba766629f923b091459531ce74d28dca4b4ea0f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="panel-control-overview-windows-forms"></a>Общие сведения об элементе управления Panel (Windows Forms)
 Windows Forms <xref:System.Windows.Forms.Panel> элементы управления используются для предоставления возможность группировки других элементов управления. Как правило панели используются для разделения формы по функциям. Например имеется формой заказа, указаны параметры доставки почты ночное для использования. Объединение всех параметров на панели предоставляет пользователю логическую визуальную подсказку. В режиме разработки все элементы управления можно легко переместить — при перемещении <xref:System.Windows.Forms.Panel> управления, все содержащиеся в нем элементы перемещаются также. Элементы управления, сгруппированные на панели можно получить с помощью его <xref:System.Windows.Forms.Control.Controls%2A> свойство. Это свойство возвращает коллекцию <xref:System.Windows.Forms.Control> получить экземпляры, поэтому обычно необходимо привести элемент управления таким образом, чтобы его определенного типа.  

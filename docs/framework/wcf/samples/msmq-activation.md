@@ -1,26 +1,12 @@
 ---
 title: Активация MSMQ
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: e3834149-7b8c-4a54-806b-b4296720f31d
-caps.latest.revision: 29
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: e0f8077e425464d5a9f33662366377d573719659
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
-ms.translationtype: MT
+ms.openlocfilehash: ab414cb5535ce2b9062520c9d82e139ebdfc04c4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="msmq-activation"></a>Активация MSMQ
 Этот образец демонстрирует размещение приложений в службе активации Windows (WAS), которые считываются из очереди сообщений. В этом образце используется `netMsmqBinding` и основан на [двусторонней связи](../../../../docs/framework/wcf/samples/two-way-communication.md) образца. В данном случае служба представляет собой приложение, размещенное на веб-сервере, а клиент - резидентное приложение, выводящее данные в окно консоли для наблюдения за состоянием размещенных заказов на покупку.  
@@ -33,11 +19,11 @@ ms.lasthandoff: 04/27/2018
 >   
 >  \<InstallDrive>:\WF_WCF_Samples  
 >   
->  Если этот каталог не существует, перейдите к [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] гиперссылка «http://go.microsoft.com/fwlink/?LinkId=150780"\t «_blank» и образцы Windows Workflow Foundation (WF) для [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)] Чтобы загрузить все [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] образцов. Этот образец расположен в следующем каталоге.  
+>  Если этот каталог не существует, перейдите к Windows Communication Foundation (WCF) гиперссылка «http://go.microsoft.com/fwlink/?LinkId=150780"\t «_blank» и образцы Windows Workflow Foundation (WF) для [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)] Чтобы загрузить все [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] образцов. Этот образец расположен в следующем каталоге.  
 >   
 >  \<Диск_установки >: \Samples\WCFWFCardSpace\WCF\Basic\Services\Hosting\WASHost\MsmqActivation.  
   
- Служба активации Windows (WAS), новый механизм активации процессов для [!INCLUDE[lserver](../../../../includes/lserver-md.md)], предоставляет компоненты, подобные IIS, ранее доступные только приложениям, работающим на базе протокола HTTP, для приложений, использующих протоколы, отличные от HTTP. [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] использует интерфейс адаптера прослушивателя для передачи запросов на активацию, полученных через протоколы, отличные от HTTP, которые поддерживаются в [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], например TCP, именованные каналы и MSMQ. Функциональность для получения запросов по протоколам, отличным от HTTP, размещена в управляемых службах Windows, выполняемых в файле SMSvcHost.exe.  
+ Служба активации Windows (WAS), новый механизм активации процессов для [!INCLUDE[lserver](../../../../includes/lserver-md.md)], предоставляет компоненты, подобные IIS, ранее доступные только приложениям, работающим на базе протокола HTTP, для приложений, использующих протоколы, отличные от HTTP. Windows Communication Foundation (WCF) использует интерфейс адаптера прослушивателя для передачи запросов на активацию, полученных через протоколы отличные от HTTP, поддерживаемые [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], таких как TCP, именованные каналы и MSMQ. Функциональность для получения запросов по протоколам, отличным от HTTP, размещена в управляемых службах Windows, выполняемых в файле SMSvcHost.exe.  
   
  Служба адаптера прослушивателя Net.Msmq (NetMsmqActivator) активирует приложения в очереди на основании очереди сообщений.  
   

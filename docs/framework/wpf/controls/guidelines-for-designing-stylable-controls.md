@@ -1,27 +1,15 @@
 ---
-title: "Рекомендации по разработке элементов управления с возможностью использования стилей"
-ms.custom: 
+title: Рекомендации по разработке элементов управления с возможностью использования стилей
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - style design for controls [WPF]
 - controls [WPF], style design
 ms.assetid: c52dde45-a311-4531-af4c-853371c4d5f4
-caps.latest.revision: "18"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6707a434f64838467033966c9093e1e415b1fb31
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4e807a323f6b454b1f07c8e0a9f99b17c9723df7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="guidelines-for-designing-stylable-controls"></a>Рекомендации по разработке элементов управления с возможностью использования стилей
 В этом документе содержатся рекомендации по разработке элементов управления, стили и шаблоны которых можно с легкостью изменять. Эти рекомендации являются результатом продолжительного периода проб и ошибок при работе над стилями тем оформления для встроенного набора элементов управления [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Было выяснено, что успешное изменение стилей зависит как от хорошо спроектированной объектной модели, так и самого стиля. Данный документ предназначен именно для разработчиков элементов управления, а не для разработчиков стилей.  

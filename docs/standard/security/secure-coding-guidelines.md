@@ -1,13 +1,7 @@
 ---
-title: "Правила написания безопасного кода"
-ms.custom: 
+title: Правила написания безопасного кода
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - managed wrapper to native code implementation
 - secure coding
@@ -21,18 +15,13 @@ helpviewer_keywords:
 - security-neutral code
 - security [.NET Framework], coding guidelines
 ms.assetid: 4f882d94-262b-4494-b0a6-ba9ba1f5f177
-caps.latest.revision: "20"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 3e75f3c74c5966ce5ce22b23f7ba179e903d37aa
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: f8d61e76a657c7341ec7dfcede6d7dc9943d4659
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="secure-coding-guidelines"></a>Правила написания безопасного кода
 Защита на основе фактических данных и управление доступом для кода предоставляют очень мощные, четкие механизмы для обеспечения безопасности. Большая часть кода приложения может просто использовать инфраструктуру, реализуемую .NET Framework. В некоторых случаях требуется дополнительная защита на уровне приложения, построенная либо путем расширения системы, либо с помощью новых специальных методов.  
@@ -84,7 +73,7 @@ ms.lasthandoff: 12/23/2017
   
 ## <a name="related-topics"></a>См. также  
   
-|Заголовок|Описание:|  
+|Заголовок|Описание|  
 |-----------|-----------------|  
 |[Обеспечение безопасности данных](../../../docs/standard/security/securing-state-data.md)|Описание порядка защиты закрытых членов.|  
 |[Безопасность и ввод данных пользователем](../../../docs/standard/security/security-and-user-input.md)|Вопросы безопасности для приложений, которые принимают пользовательский ввод.|  

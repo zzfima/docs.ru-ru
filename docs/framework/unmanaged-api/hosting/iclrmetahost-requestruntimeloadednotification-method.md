@@ -1,14 +1,6 @@
 ---
-title: "Метод ICLRMetaHost::RequestRuntimeLoadedNotification"
-ms.custom: 
+title: Метод ICLRMetaHost::RequestRuntimeLoadedNotification
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICLRMetaHost.RequestRuntimeLoadedNotification
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 0d5ccc4d-0193-41f5-af54-45d7b70d5321
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: b7866270d8c9234a375401dfd05b504a06ddbf4b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9ac041db64a874cc143657c601f30e4482dd2462
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="iclrmetahostrequestruntimeloadednotification-method"></a>Метод ICLRMetaHost::RequestRuntimeLoadedNotification
 Предоставляет функции обратного вызова, которое гарантированно вызывается при первой загрузке версия CLR (CLR), но еще не запущена. Этот метод заменяет [LockClrVersion](../../../../docs/framework/unmanaged-api/hosting/lockclrversion-function.md) функции.  
@@ -91,11 +79,11 @@ typedef void (__stdcall *RuntimeLoadedCallbackFnPtr)(
   
  Если узел пытается загрузить или вызывать другой среды выполнения реентерабельным способом `pfnCallbackThreadSet` и `pfnCallbackThreadUnset` параметры, которые указаны в функции обратного вызова необходимо использовать функцию следующим образом:  
   
--   `pfnCallbackThreadSet`должен вызываться потоком, который может вызвать загрузку среды выполнения, до попытки такой загрузки.  
+-   `pfnCallbackThreadSet` должен вызываться потоком, который может вызвать загрузку среды выполнения, до попытки такой загрузки.  
   
--   `pfnCallbackThreadUnset`должен быть вызван, когда поток больше не вызывает загрузку среды выполнения (и до возврата из предыдущего обратного вызова).  
+-   `pfnCallbackThreadUnset` должен быть вызван, когда поток больше не вызывает загрузку среды выполнения (и до возврата из предыдущего обратного вызова).  
   
--   `pfnCallbackThreadSet`и `pfnCallbackThreadUnset` являются допускает повторные входы.  
+-   `pfnCallbackThreadSet` и `pfnCallbackThreadUnset` являются допускает повторные входы.  
   
 > [!NOTE]
 >  Хост-приложения не должны вызывать `pfnCallbackThreadSet` и `pfnCallbackThreadUnset` за пределами области `pCallbackFunction` параметра.  
@@ -107,7 +95,7 @@ typedef void (__stdcall *RuntimeLoadedCallbackFnPtr)(
   
  **Библиотека:** включена как ресурс в MSCorEE.dll  
   
- **Версии платформы .NET framework:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Версии платформы .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>См. также  
  [Интерфейс ICLRMetaHost](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-interface.md)  

@@ -1,29 +1,15 @@
 ---
 title: Поставщик WMI
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 462f0db3-f4a4-4a4b-ac26-41fc25c670a4
-caps.latest.revision: 35
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: c1b90a5231505f7d72d10c0ab9f9f80037d48bd7
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
-ms.translationtype: MT
+ms.openlocfilehash: 202923ab1d09b0ce836dbfce7360dd22a479a900
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wmi-provider"></a>Поставщик WMI
-В этом образце показано, как собирать данные из служб [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] во время выполнения, используя встроенный в [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] поставщик инструментария управления Windows (WMI). Кроме того, в образце показано, как добавлять в службу пользовательский объект инструментария WMI. Этот образец активирует поставщик инструментария WMI для [Приступая к работе](../../../../docs/framework/wcf/samples/getting-started-sample.md) и демонстрирует, как собирать данные из `ICalculator` службы во время выполнения.  
+В этом примере показано, как для сбора данных из служб Windows Communication Foundation (WCF) во время выполнения с помощью поставщика инструментария управления Windows (WMI), который встроен в [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Кроме того, в образце показано, как добавлять в службу пользовательский объект инструментария WMI. Этот образец активирует поставщик инструментария WMI для [Приступая к работе](../../../../docs/framework/wcf/samples/getting-started-sample.md) и демонстрирует, как собирать данные из `ICalculator` службы во время выполнения.  
   
  Инструментарий WMI - это реализованный корпорацией Майкрософт стандарт управления предприятием через Интернет (WBEM). Дополнительные сведения о пакете WMI SDK см. в разделе [инструментария управления Windows](https://msdn.microsoft.com/library/aa394582.aspx). WBEM является отраслевым стандартом предоставления приложениями инструментария управления для внешних средств управления.  
   
@@ -152,7 +138,7 @@ cscript EnumerateCustomObjects.js
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) Чтобы загрузить все [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] образцов. Этот образец расположен в следующем каталоге.  
+>  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] образцов. Этот образец расположен в следующем каталоге.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\WMIProvider`  
   

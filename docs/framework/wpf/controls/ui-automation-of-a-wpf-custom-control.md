@@ -1,13 +1,6 @@
 ---
-title: "Модель автоматизации пользовательского интерфейса пользовательского элемента управления WPF"
-ms.custom: 
+title: Модель автоматизации пользовательского интерфейса пользовательского элемента управления WPF
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,16 +10,11 @@ helpviewer_keywords:
 - custom controls [WPF], improving accessibility
 - UI Automation [WPF], using with custom controls
 ms.assetid: 47b310fc-fbd5-4ce2-a606-22d04c6d4911
-caps.latest.revision: "34"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 1a9d17408d6fa03b267c2a22890d2e17c0441389
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fbd19591c260b0ad160339b45fd762e7a87bbc74
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ui-automation-of-a-wpf-custom-control"></a>Модель автоматизации пользовательского интерфейса пользовательского элемента управления WPF
 [!INCLUDE[TLA#tla_uiautomation](../../../../includes/tlasharptla-uiautomation-md.md)] предоставляет единый общий интерфейс, который клиенты автоматизации могут использовать для проверки или использования пользовательских интерфейсов различных платформ и инфраструктур. [!INCLUDE[TLA2#tla_uiautomation](../../../../includes/tla2sharptla-uiautomation-md.md)] предоставляет как код для проверки качества (тестирования), так и приложения с поддержкой специальных возможностей, например средства чтения с экрана для проверки элементов пользовательского интерфейса и моделирования пользовательского взаимодействия с ними из другого кода. Сведения о [!INCLUDE[TLA2#tla_uiautomation](../../../../includes/tla2sharptla-uiautomation-md.md)] на всех платформах см. в разделе, посвященном специальным возможностям.  
@@ -63,7 +51,7 @@ ms.lasthandoff: 12/22/2017
  Переопределить <xref:System.Windows.UIElement.OnCreateAutomationPeer%2A> метод для пользовательского элемента управления, возвращающее объект поставщика, который должен быть производным прямо или косвенно от <xref:System.Windows.Automation.Peers.AutomationPeer>.  
   
 ### <a name="override-getpattern"></a>Переопределение метода GetPattern  
- Одноранговые классы автоматизации упрощают некоторые аспекты реализации поставщиков [!INCLUDE[TLA2#tla_uiautomation](../../../../includes/tla2sharptla-uiautomation-md.md)] на стороне сервера, но одноранговые классы автоматизации пользовательских элементов управления по-прежнему должны обрабатывать интерфейсы шаблонов. Как и поставщиков, отличных от WPF, одноранговые узлы поддерживают шаблоны элементов управления путем предоставления реализаций интерфейсов в <xref:System.Windows.Automation.Provider?displayProperty=nameWithType> пространства имен, такие как <xref:System.Windows.Automation.Provider.IInvokeProvider>. Интерфейсы шаблонов элементов управления могут быть реализованы самим одноранговым классом или другим объектом. Реализация однорангового узла <xref:System.Windows.Automation.Peers.AutomationPeer.GetPattern%2A> возвращает объект, который поддерживает указанный шаблон. [!INCLUDE[TLA2#tla_uiautomation](../../../../includes/tla2sharptla-uiautomation-md.md)]код вызывает метод <xref:System.Windows.Automation.Peers.UIElementAutomationPeer.GetPattern%2A> метод и указывает <xref:System.Windows.Automation.Peers.PatternInterface> значение перечисления. Переопределенный <xref:System.Windows.Automation.Peers.UIElementAutomationPeer.GetPattern%2A> должен возвращать объект, реализующий указанный шаблон. Если элемент управления не имеет пользовательскую реализацию шаблона, можно вызвать реализацию базового типа <xref:System.Windows.Automation.Peers.AutomationPeer.GetPattern%2A> для извлечения его реализации или значение null, если шаблон не поддерживается для этого типа элемента управления. Например, пользовательский элемент управления NumericUpDown может быть присвоено значение в диапазоне, поэтому его [!INCLUDE[TLA2#tla_uiautomation](../../../../includes/tla2sharptla-uiautomation-md.md)] одноранговых будет реализовывать <xref:System.Windows.Automation.Provider.IRangeValueProvider> интерфейса. В следующем примере показан способ однорангового узла <xref:System.Windows.Automation.Peers.UIElementAutomationPeer.GetPattern%2A> метод переопределяется, чтобы реагировать на <xref:System.Windows.Automation.Peers.PatternInterface.RangeValue?displayProperty=nameWithType> значение.  
+ Одноранговые классы автоматизации упрощают некоторые аспекты реализации поставщиков [!INCLUDE[TLA2#tla_uiautomation](../../../../includes/tla2sharptla-uiautomation-md.md)] на стороне сервера, но одноранговые классы автоматизации пользовательских элементов управления по-прежнему должны обрабатывать интерфейсы шаблонов. Как и поставщиков, отличных от WPF, одноранговые узлы поддерживают шаблоны элементов управления путем предоставления реализаций интерфейсов в <xref:System.Windows.Automation.Provider?displayProperty=nameWithType> пространства имен, такие как <xref:System.Windows.Automation.Provider.IInvokeProvider>. Интерфейсы шаблонов элементов управления могут быть реализованы самим одноранговым классом или другим объектом. Реализация однорангового узла <xref:System.Windows.Automation.Peers.AutomationPeer.GetPattern%2A> возвращает объект, который поддерживает указанный шаблон. [!INCLUDE[TLA2#tla_uiautomation](../../../../includes/tla2sharptla-uiautomation-md.md)] код вызывает метод <xref:System.Windows.Automation.Peers.UIElementAutomationPeer.GetPattern%2A> метод и указывает <xref:System.Windows.Automation.Peers.PatternInterface> значение перечисления. Переопределенный <xref:System.Windows.Automation.Peers.UIElementAutomationPeer.GetPattern%2A> должен возвращать объект, реализующий указанный шаблон. Если элемент управления не имеет пользовательскую реализацию шаблона, можно вызвать реализацию базового типа <xref:System.Windows.Automation.Peers.AutomationPeer.GetPattern%2A> для извлечения его реализации или значение null, если шаблон не поддерживается для этого типа элемента управления. Например, пользовательский элемент управления NumericUpDown может быть присвоено значение в диапазоне, поэтому его [!INCLUDE[TLA2#tla_uiautomation](../../../../includes/tla2sharptla-uiautomation-md.md)] одноранговых будет реализовывать <xref:System.Windows.Automation.Provider.IRangeValueProvider> интерфейса. В следующем примере показан способ однорангового узла <xref:System.Windows.Automation.Peers.UIElementAutomationPeer.GetPattern%2A> метод переопределяется, чтобы реагировать на <xref:System.Windows.Automation.Peers.PatternInterface.RangeValue?displayProperty=nameWithType> значение.  
   
  [!code-csharp[CustomControlNumericUpDown#GetPattern](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CustomControlNumericUpDown/CSharp/CustomControlLibrary/NumericUpDown.cs#getpattern)]
  [!code-vb[CustomControlNumericUpDown#GetPattern](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/CustomControlNumericUpDown/visualbasic/customcontrollibrary/numericupdown.vb#getpattern)]  

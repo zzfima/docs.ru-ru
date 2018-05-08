@@ -1,29 +1,15 @@
 ---
 title: Как программно добавить возможность обнаружения к службе и клиенту WCF
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 4f7ae7ab-6fc8-4769-9730-c14d43f7b9b1
-caps.latest.revision: 13
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 3c0da3598b115df4f135ac3fab516447df85e258
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 0685694db8f67ed690cf2a8002bf70a05695a192
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-programmatically-add-discoverability-to-a-wcf-service-and-client"></a>Как программно добавить возможность обнаружения к службе и клиенту WCF
-В этом разделе описано, как сделать службу [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] доступной для обнаружения. Он основан на [резидентной](http://go.microsoft.com/fwlink/?LinkId=145523) образца.  
+В этом разделе объясняется, как сделать обнаруживаемой службы Windows Communication Foundation (WCF). Он основан на [резидентной](http://go.microsoft.com/fwlink/?LinkId=145523) образца.  
   
 ### <a name="to-configure-the-existing-self-host-service-sample-for-discovery"></a>Настройка образца службы существующего резидентного размещения для обнаружения  
   
@@ -105,7 +91,7 @@ ms.lasthandoff: 04/30/2018
     }  
     ```  
   
-     Это указывает [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], что классу <xref:System.ServiceModel.Discovery.DiscoveryClient> следует использовать стандартную конечную точку обнаружения UDP для отправки и получения сообщений об обнаружении.  
+     Оно говорит WCF <xref:System.ServiceModel.Discovery.DiscoveryClient> класса следует использовать стандартную конечную точку обнаружения UDP для отправки и получения сообщений обнаружения.  
   
 8.  В следующей строке вызовите метод <xref:System.ServiceModel.Discovery.DiscoveryClient.Find%2A> и укажите экземпляр <xref:System.ServiceModel.Discovery.FindCriteria>, содержащий контракт службы, который необходимо найти. В данном случае укажите `ICalculator`.  
   

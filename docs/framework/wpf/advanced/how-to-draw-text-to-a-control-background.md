@@ -1,13 +1,6 @@
 ---
-title: "Практическое руководство. Рисование текста на фоне элемента управления"
-ms.custom: 
+title: Практическое руководство. Рисование текста на фоне элемента управления
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - controls [WPF], drawing text to backgrounds
 - text [WPF], drawing to control backgrounds
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - backgrounds [WPF], drawing text to
 - typography [WPF], drawing text to control backgrounds
 ms.assetid: 686d8fba-f61c-4974-a871-c635d67a7f69
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 091be80e055279685c9dba33dd6b6635e64eaff0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f79ec4f2c394fdc9462f4fd00942673b4536d713
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-draw-text-to-a-control39s-background"></a>Практическое руководство. Рисование текста на фоне элемента управления
 Можно нарисовать текст непосредственно на фоне элемента управления путем преобразования текстовую строку для <xref:System.Windows.Media.FormattedText> объекта, а затем рисование объекта элемента управления <xref:System.Windows.Media.DrawingContext>. Эту технологию можно также использовать для рисования фона для объектов, производных от <xref:System.Windows.Controls.Panel>, такие как <xref:System.Windows.Controls.Canvas> и <xref:System.Windows.Controls.StackPanel>.  

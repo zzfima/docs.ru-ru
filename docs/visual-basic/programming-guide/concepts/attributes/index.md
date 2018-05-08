@@ -1,23 +1,12 @@
 ---
 title: Общие сведения об атрибутах (Visual Basic)
-ms.custom: ''
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 1449f69b-c063-41de-8d89-f0bbdcf96ac6
-caps.latest.revision: 4
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 2b78eb3e5ac52ec89e810fde682249c689ba304a
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: e6d11daeac2f2392e1080eca8503c9b2c420ab35
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="attributes-overview-visual-basic"></a>Общие сведения об атрибутах (Visual Basic)
 Атрибуты предоставляют мощное средство для связывания метаданных или декларативной информации с кодом (сборки, типы, методы, свойства и т. д.). Связав атрибут связан с сущностью программы, вы можете проверять этот атрибут во время выполнения, используя технику *отражения*. Дополнительные сведения см. в статье [Отражение (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md).  
@@ -117,9 +106,9 @@ Module: CLSCompliant(True)>
 ## <a name="common-uses-for-attributes"></a>Популярные методы применения атрибутов  
  В следующем списке перечислены несколько распространенных применений для атрибутов.  
   
--   Указание для методов в веб-службах атрибута `WebMethod`, который обозначает, что метод должен вызываться по протоколу SOAP. Для получения дополнительной информации см. <xref:System.Web.Services.WebMethodAttribute>.  
+-   Указание для методов в веб-службах атрибута `WebMethod`, который обозначает, что метод должен вызываться по протоколу SOAP. Дополнительные сведения см. в разделе <xref:System.Web.Services.WebMethodAttribute>.  
   
--   Описание способов упаковки параметров методов при взаимодействии с машинным кодом. Для получения дополнительной информации см. <xref:System.Runtime.InteropServices.MarshalAsAttribute>.  
+-   Описание способов упаковки параметров методов при взаимодействии с машинным кодом. Дополнительные сведения см. в разделе <xref:System.Runtime.InteropServices.MarshalAsAttribute>.  
   
 -   Описание свойств COM для классов, методов и интерфейсов.  
   

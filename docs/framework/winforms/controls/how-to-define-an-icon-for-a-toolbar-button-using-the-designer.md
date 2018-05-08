@@ -1,13 +1,6 @@
 ---
-title: "Практическое руководство. Определение значка для кнопки на панели инструментов с помощью конструктора"
-ms.custom: 
+title: Практическое руководство. Определение значка для кнопки на панели инструментов с помощью конструктора
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - toolbars [Windows Forms], adding icons to buttons
 - examples [Windows Forms], toolbars
@@ -16,22 +9,17 @@ helpviewer_keywords:
 - icons [Windows Forms], toolbar buttons
 - ToolBar control [Windows Forms], adding icons to buttons
 ms.assetid: d848f38e-67f2-49d4-8e88-01c845c06c02
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 85be18b2cbb4e0fe729c335016fa8e7348f7be13
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: a6c08d33682e5e2cc936c3aa6aa109ad3389a367
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-define-an-icon-for-a-toolbar-button-using-the-designer"></a>Практическое руководство. Определение значка для кнопки на панели инструментов с помощью конструктора
 > [!NOTE]
 >  Элемент управления <xref:System.Windows.Forms.ToolStrip> заменяет элемент управления <xref:System.Windows.Forms.ToolBar> и расширяет его функциональные возможности; однако при необходимости элемент управления <xref:System.Windows.Forms.ToolBar> можно сохранить для обратной совместимости и использования в будущем.  
   
- <xref:System.Windows.Forms.ToolBar>кнопки, могут отображать значки для упрощения идентификации пользователей. Это можно сделать, добавив изображения <xref:System.Windows.Forms.ImageList> компонента и связывание его с <xref:System.Windows.Forms.ToolBar> элемента управления.  
+ <xref:System.Windows.Forms.ToolBar> кнопки, могут отображать значки для упрощения идентификации пользователей. Это можно сделать, добавив изображения <xref:System.Windows.Forms.ImageList> компонента и связывание его с <xref:System.Windows.Forms.ToolBar> элемента управления.  
   
  В следующей процедуре требуется **приложение Windows** проекта с формой, содержащей <xref:System.Windows.Forms.ToolBar> управления и <xref:System.Windows.Forms.ImageList> компонента. Сведения о настройке такого проекта см. в разделе [как: Создание проекта приложения Windows](http://msdn.microsoft.com/library/b2f93fed-c635-4705-8d0e-cf079a264efa) и [как: Добавление элементов управления в Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md).  
   

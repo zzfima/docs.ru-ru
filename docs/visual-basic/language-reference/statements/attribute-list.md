@@ -1,23 +1,15 @@
 ---
-title: "Список атрибутов (Visual Basic)"
+title: Список атрибутов (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - attribute list
 - attributes [Visual Basic], applying
 ms.assetid: 5880073a-68a4-4b6b-8a07-ace32959a4e2
-caps.latest.revision: "18"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: adfb980380bb787280715ca0185950657e174eb1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 35d031722a5eddd6adce5e32df62b86c500d305b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="attribute-list-visual-basic"></a>Список атрибутов (Visual Basic)
 Указывает атрибуты, применяемые к объявленных программных элементов. Несколько атрибутов разделяются запятыми. Ниже приведен синтаксис для одного атрибута.  
@@ -33,13 +25,13 @@ ms.lasthandoff: 11/21/2017
  Требуется для атрибутов, примененных в начале исходного файла. Может быть [сборки](../../../visual-basic/language-reference/modifiers/assembly.md) или [модуль](../../../visual-basic/language-reference/modifiers/module-keyword.md).  
   
  `attributename`  
- Обязательный. Имя атрибута.  
+ Обязательно. Имя атрибута.  
   
  `attributearguments`  
- Необязательно. Список позиционных аргументов для этого атрибута. Несколько аргументов разделяются запятыми.  
+ Необязательный. Список позиционных аргументов для этого атрибута. Несколько аргументов разделяются запятыми.  
   
  `attributeinitializer`  
- Необязательно. Список инициализаторов переменная или свойство для этого атрибута. Несколько инициализаторов разделяются запятыми.  
+ Необязательный. Список инициализаторов переменная или свойство для этого атрибута. Несколько инициализаторов разделяются запятыми.  
   
 ## <a name="remarks"></a>Примечания  
  Можно применить один или несколько атрибутов практически любого элементу программирования (типы, процедуры, свойства и т. д.). Атрибуты отображаются в метаданных сборки и они могут помочь комментировать код или указать способ использования конкретного программного элемента. Можно применить атрибутами, определенными по Visual Basic и .NET Framework, и можно определить собственные атрибуты.  
@@ -63,7 +55,7 @@ ms.lasthandoff: 11/21/2017
   
  [!code-vb[VbVbalrStatements#1](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/attribute-list_1.vb)]  
   
- <xref:System.Runtime.InteropServices.DllImportAttribute>Указывает, что процедура атрибутами представляет точку входа в неуправляемой библиотеки динамической компоновки (DLL). Атрибут предоставляет имя DLL как позиционные аргументы и другие сведения — как инициализаторы переменных.  
+ <xref:System.Runtime.InteropServices.DllImportAttribute> Указывает, что процедура атрибутами представляет точку входа в неуправляемой библиотеки динамической компоновки (DLL). Атрибут предоставляет имя DLL как позиционные аргументы и другие сведения — как инициализаторы переменных.  
   
 ## <a name="see-also"></a>См. также  
  [Assembly](../../../visual-basic/language-reference/modifiers/assembly.md)  

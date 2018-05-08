@@ -1,23 +1,14 @@
 ---
-title: "Расширяемые объекты"
+title: Расширяемые объекты
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: article
 helpviewer_keywords:
 - extensible objects [WCF]
 ms.assetid: bc88cefc-31fb-428e-9447-6d20a7d452af
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: a1bb341d9e164b1ce232f238f8ddf4a0cf807363
-ms.sourcegitcommit: c1904b0437605a90e5aa65b4abd7e048000e349d
-ms.translationtype: MT
+ms.openlocfilehash: 4fdb3ddff6bda21ac7f9538645d92f15e0b443b9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="extensible-objects"></a>Расширяемые объекты
 Шаблон расширяемого объекта используется для расширения существующих классов среды выполнения при помощи новых функций или добавления нового состояния к объекту. Расширения, привязанные к одному из расширяемых объектов, позволяют использовать поведения на различных этапах обработки для получения доступа к общему состоянию и функциональности, привязанным к общему расширяемому объекту, к которому они могут получить доступ.  
@@ -57,7 +48,7 @@ where T : IExtensibleObject<T>
  Интерфейс <xref:System.ServiceModel.IExtensionCollection%601> - это коллекция объектов <xref:System.ServiceModel.IExtension%601>, которая позволяет получить экземпляр <xref:System.ServiceModel.IExtension%601> по его типу. Метод <xref:System.ServiceModel.IExtensionCollection%601.Find%2A?displayProperty=nameWithType> возвращает последний добавленный объект <xref:System.ServiceModel.IExtension%601> данного типа.  
   
 ### <a name="extensible-objects-in-windows-communication-foundation"></a>Расширяемые объекты в Windows Communication Foundation  
- Существуют четыре расширяемых объекта в [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
+ Существуют четыре расширяемых объекта в Windows Communication Foundation (WCF):  
   
 -   <xref:System.ServiceModel.ServiceHostBase>. Это базовый класс для узла службы.  Расширения этого класса можно использовать для расширения поведения самого класса <xref:System.ServiceModel.ServiceHostBase> или для хранения состояния для каждой службы.  
   

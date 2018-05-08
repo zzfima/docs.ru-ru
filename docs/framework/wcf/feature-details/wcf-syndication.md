@@ -1,35 +1,21 @@
 ---
-title: "Синдикация WCF"
-ms.custom: 
+title: Синдикация WCF
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - syndication [WCF]
 ms.assetid: ebf80384-0fc9-4919-a1e8-23ca2a13e300
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 1f7f5fd65fc298107a66e2049c059f3cc58b3d44
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 627de6431c641e48367a97e3f80f3d05d185ab45
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wcf-syndication"></a>Синдикация WCF
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] обеспечивает поддержку для удобной работы с веб-каналами синдикации в форматах Atom, RSS и других нестандартных форматах, что позволяет обрабатывать и создавать каналы, а также предоставлять к ним доступ в конечной точке службы. В подразделах этого раздела подробно описывается модель программирования синдикации.  
+Windows Communication Foundation (WCF) обеспечивает поддержку для удобной работы с веб-каналами синдикации в форматах Atom, RSS и других нестандартных форматах, что позволяет обрабатывать и создавать их, а также предоставлять к ним доступ в конечной точке службы. В подразделах этого раздела подробно описывается модель программирования синдикации.  
   
 ## <a name="in-this-section"></a>В этом разделе  
  [Общие сведения о синдикации WCF](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md)  
- Общие сведения о поддержке синдикации в [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ Общие сведения о поддержке синдикации WCF.  
   
  [Архитектура синдикации](../../../../docs/framework/wcf/feature-details/architecture-of-syndication.md)  
  Описание классов объектной модели и расширяемости синдикации.  

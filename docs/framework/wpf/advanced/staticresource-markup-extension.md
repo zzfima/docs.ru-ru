@@ -1,13 +1,6 @@
 ---
-title: "Расширение разметки StaticResource"
-ms.custom: 
+title: Расширение разметки StaticResource
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - StaticResource
 - StaticResourceExtension
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - XAML [WPF], StaticResource markup extension
 - StaticResource markup extensions [WPF]
 ms.assetid: 97af044c-71f1-4617-9a94-9064b68185d2
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 97b83feb9d19760208d9cc103290c5c6293c30c3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 518a85c158c9a4472689d3c236b84278114cf3ce
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="staticresource-markup-extension"></a>Расширение разметки StaticResource
 Предоставляет значение для любого [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] атрибут свойства путем поиска ссылки на уже определенный ресурс. Поведение подстановки для этого ресурса является аналогом Уточняющий запрос во время загрузки, который будет искать ресурсы, которые были ранее загружены из разметки текущего [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] страницы, а также других источников приложения и автоматически создаст как значение ресурса значение свойства в объектах во время выполнения.  
@@ -64,7 +52,7 @@ ms.lasthandoff: 12/22/2017
   
  Синтаксис атрибутов является наиболее распространенным синтаксисом, используемым с этим расширением разметки. Строковая лексема, указываемая после строки идентификатора `StaticResource`, присваивается в качестве значения <xref:System.Windows.StaticResourceExtension.ResourceKey%2A> соответствующего класса расширения <xref:System.Windows.StaticResourceExtension>.  
   
- `StaticResource`может использоваться в синтаксисе элемента объекта. В этом случае укажите значение параметра <xref:System.Windows.StaticResourceExtension.ResourceKey%2A> свойство является обязательным.  
+ `StaticResource` может использоваться в синтаксисе элемента объекта. В этом случае укажите значение параметра <xref:System.Windows.StaticResourceExtension.ResourceKey%2A> свойство является обязательным.  
   
  Излишним может оказаться и использование `StaticResource` в атрибуте, в котором свойство <xref:System.Windows.StaticResourceExtension.ResourceKey%2A> определено как пара "свойство=значение".  
   

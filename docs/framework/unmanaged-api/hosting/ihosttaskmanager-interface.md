@@ -1,14 +1,6 @@
 ---
-title: "Интерфейс IHostTaskManager"
-ms.custom: 
+title: Интерфейс IHostTaskManager
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IHostTaskManager
 api_location:
@@ -22,24 +14,20 @@ helpviewer_keywords:
 ms.assetid: 4a0b05b9-3ef1-4607-b7c8-bd4dd43647a0
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 9573891a2c27a2a92eccd0522f84175effa8037a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9715738931d1b6a91ad9fae7e00ba607905d380f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ihosttaskmanager-interface"></a>Интерфейс IHostTaskManager
 Предоставляет методы, позволяющие общеязыковой среды выполнения (CLR), для работы с задачами через узел, вместо того чтобы использовать функции работы с потоками или волокон стандартной операционной системе.  
   
 ## <a name="methods"></a>Методы  
   
-|Метод|Описание:|  
+|Метод|Описание|  
 |------------|-----------------|  
 |[Метод BeginDelayAbort](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-begindelayabort-method.md)|Уведомляет хост, что управляемый код к периоду, в котором текущей задачи недопустимо.|  
 |[Метод BeginThreadAffinity](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-beginthreadaffinity-method.md)|Уведомляет хост, что управляемый код к периоду, в котором текущую задачу нельзя перемещать в другой поток операционной системы.|  
@@ -61,7 +49,7 @@ ms.lasthandoff: 12/22/2017
 |[Метод SwitchToTask](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-switchtotask-method.md)|Уведомляет узел, что необходимости отключения текущей задачи.|  
   
 ## <a name="remarks"></a>Примечания  
- `IHostTaskManager`позволяет среде CLR создавать задачи и управлять ими, чтобы обеспечить обработчиков предпринять действия при передаче управления из управляемого в неуправляемый код и обратно, а также указать определенные действия узла может и не может принимать во время выполнения кода.  
+ `IHostTaskManager` позволяет среде CLR создавать задачи и управлять ими, чтобы обеспечить обработчиков предпринять действия при передаче управления из управляемого в неуправляемый код и обратно, а также указать определенные действия узла может и не может принимать во время выполнения кода.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
@@ -70,7 +58,7 @@ ms.lasthandoff: 12/22/2017
   
  **Библиотека:** включена как ресурс в MSCorEE.dll  
   
- **Версии платформы .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Версии платформы .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>См. также  
  [Интерфейс ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)  

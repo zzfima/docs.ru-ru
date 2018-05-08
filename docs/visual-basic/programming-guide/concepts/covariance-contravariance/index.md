@@ -1,20 +1,12 @@
 ---
 title: Ковариация и контрвариантность (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-visual-basic
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 59224c46-9931-466b-8c6e-3648c3e609c6
-caps.latest.revision: 3
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 1df3b01573ae1a9dc5c106efa5e387927c57c55f
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 322cb452e0a3391812e58b68406657651f7a430f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="covariance-and-contravariance-visual-basic"></a>Ковариация и контрвариантность (Visual Basic)
 В Visual Basic ковариация и контрвариантность позволяют использовать неявное преобразование ссылок для типов массивов и делегатов, а также для аргументов универсального типа. Ковариация сохраняет совместимость присваивания, а при контрвариантности присваивание начинает работать противоположным образом.  
@@ -96,7 +88,7 @@ Dim objects As IEnumerable(Of Object) = strings
   
  Универсальный интерфейс или делегат называется *вариантным*, если его универсальные параметры объявлены ковариантными или контрвариантными. Visual Basic позволяет вам создавать свои собственные вариантные интерфейсы и делегаты. Дополнительные сведения см. в разделах [Создание вариативных универсальных интерфейсов (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/creating-variant-generic-interfaces.md) и [Вариативность в делегатах (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md).  
   
-## <a name="related-topics"></a>Связанные разделы  
+## <a name="related-topics"></a>См. также  
   
 |Заголовок|Описание|  
 |-----------|-----------------|  

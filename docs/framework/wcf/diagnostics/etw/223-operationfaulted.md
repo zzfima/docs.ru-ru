@@ -1,24 +1,12 @@
 ---
 title: 223 - OperationFaulted
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 2f7d89d7-3a6a-40fe-9610-5424eb6bbf61
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: fcaea7b98bc57bcac901ac659786175a10799700
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: cf4a455d80a1a0ac09e99bad967c1feba3653842
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="223---operationfaulted"></a>223 - OperationFaulted
 ## <a name="properties"></a>Свойства  
@@ -30,7 +18,7 @@ ms.lasthandoff: 12/22/2017
 |Уровень|Предупреждение|  
 |Канал|Microsoft-Windows-Application Server-Applications/Analytic|  
   
-## <a name="description"></a>Описание:  
+## <a name="description"></a>Описание  
  Это событие вызывается в том случае, если при вызове `OperationInvoker` модели службы по умолчанию обнаружено исключение, производное от `FaultException`.  
   
 ## <a name="message"></a>Сообщение  
@@ -38,9 +26,9 @@ ms.lasthandoff: 12/22/2017
   
 ## <a name="details"></a>Подробные сведения  
   
-|Имя элемента данных|Тип элемента данных|Описание:|  
+|Имя элемента данных|Тип элемента данных|Описание|  
 |--------------------|--------------------|-----------------|  
 |MethodName|`xs:string`|Имя CLR метода, который был вызван `OperationInvoker`.|  
 |Длительность|`xs:long`|Время в миллисекундах, которое потребовалось `OperationInvoker`, чтобы вызвать метод.|  
-|HostReference|`xs:string`|Для служб, размещенных на веб-узле, это поле является уникальным идентификатором службы в веб-иерархии. Ее формат определяется как "веб-сайт имя виртуальный путь приложения &#124; Виртуальный путь службы &#124; ServiceName ". Пример: "по умолчанию веб-сайта или CalculatorApplication &#124;/CalculatorService.svc &#124; CalculatorService ".|  
+|HostReference|`xs:string`|Для служб, размещенных на веб-узле, это поле является уникальным идентификатором службы в веб-иерархии. Ее формат определяется как "веб-сайт имя виртуальный путь приложения&#124;виртуальный путь службы&#124;имя_службы". Пример: "по умолчанию веб-сайта или CalculatorApplication&#124;/CalculatorService.svc&#124;CalculatorService".|  
 |AppDomain|`xs:string`|Строка, возвращаемая AppDomain.CurrentDomain.FriendlyName.|

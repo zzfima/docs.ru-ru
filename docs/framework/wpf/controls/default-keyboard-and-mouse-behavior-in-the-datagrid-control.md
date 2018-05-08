@@ -1,29 +1,17 @@
 ---
-title: "Поведение мыши и клавиатуры по умолчанию в элементе управления DataGrid"
-ms.custom: 
+title: Поведение мыши и клавиатуры по умолчанию в элементе управления DataGrid
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - DataGrid [WPF], keyboard behavior
 - DataGrid [WPF], mouse behavior
 - keyboard behavior [WPF], DataGrid
 - mouse behavior [WPF], DataGrid
 ms.assetid: 563b8854-ca39-4d97-8235-17eaa0f93c8d
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 28cb1b02e67d076f9190e2d8e36b72c20cc5c4e2
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 559b84d3e6b5ece6c71f17e6766cac4ec14824cb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="default-keyboard-and-mouse-behavior-in-the-datagrid-control"></a>Поведение мыши и клавиатуры по умолчанию в элементе управления DataGrid
 В этом разделе описывается, как пользователи могут взаимодействовать с <xref:System.Windows.Controls.DataGrid> управления с помощью клавиатуры и мыши.  
@@ -33,7 +21,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="default-keyboard-behavior"></a>Стандартное поведение клавиатуры  
  В следующей таблице перечислены сочетания по умолчанию <xref:System.Windows.Controls.DataGrid>.  
   
-|Клавиши или сочетания клавиш|Описание:|  
+|Клавиши или сочетания клавиш|Описание|  
 |----------------------------|-----------------|  
 |СТРЕЛКА ВНИЗ|Перемещение фокуса к ячейке, расположенной непосредственно под текущей ячейкой. Если фокус находится в последней строке, нажав клавишу со стрелкой вниз ничего не делает.|  
 |СТРЕЛКА ВВЕРХ|Перемещает фокус в ячейку непосредственно над текущей ячейки. Если фокус находится в первой строке, нажав клавишу со стрелкой вверх ничего не делает.|  
@@ -85,7 +73,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="default-mouse-behavior"></a>По умолчанию поведение мыши  
  В следующей таблице перечислены мыши по умолчанию <xref:System.Windows.Controls.DataGrid>.  
   
-|Действие мыши|Описание:|  
+|Действие мыши|Описание|  
 |------------------|-----------------|  
 |Нажмите кнопку невыбранные строки|Делает выбранной строки, текущая строка и выбранная ячейка текущей ячейки.|  
 |Нажмите кнопку текущей ячейки|Переводит текущую ячейку в режим редактирования.|  
@@ -96,7 +84,7 @@ ms.lasthandoff: 12/22/2017
 |CTRL + щелчок строки|Если <xref:System.Windows.Controls.DataGrid.SelectionMode%2A> равно <xref:System.Windows.Controls.DataGridSelectionMode.Extended>, изменяет несмежных выбора нескольких строк.<br /><br /> Если строка выбрана, отменяет выбор строки.|  
 |SHIFT, щелкните строку|Если <xref:System.Windows.Controls.DataGrid.SelectionMode%2A> равно <xref:System.Windows.Controls.DataGridSelectionMode.Extended>, изменяет связанному выделению нескольких строк.|  
 |Щелкните заголовок группы строк|Разворачивает или сворачивает группу.|  
-|Нажмите кнопку "выбрать все" в верхнем левом углу<xref:System.Windows.Controls.DataGrid>|Если <xref:System.Windows.Controls.DataGrid.SelectionMode%2A> равно <xref:System.Windows.Controls.DataGridSelectionMode.Extended>, выбирает все строки в <xref:System.Windows.Controls.DataGrid>.|  
+|Нажмите кнопку "выбрать все" в верхнем левом углу <xref:System.Windows.Controls.DataGrid>|Если <xref:System.Windows.Controls.DataGrid.SelectionMode%2A> равно <xref:System.Windows.Controls.DataGridSelectionMode.Extended>, выбирает все строки в <xref:System.Windows.Controls.DataGrid>.|  
   
 ## <a name="mouse-selection"></a>Выделение мышью  
  Если <xref:System.Windows.Controls.DataGrid.SelectionMode%2A> свойству <xref:System.Windows.Controls.DataGridSelectionMode.Extended>, щелкнув строку, удерживая нажатой клавишу CTRL или SHIFT изменит выбор нескольких строк.  

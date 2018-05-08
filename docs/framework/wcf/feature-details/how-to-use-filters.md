@@ -1,26 +1,12 @@
 ---
-title: "Как использовать фильтры"
-ms.custom: 
+title: Как использовать фильтры
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: f2c7255f-c376-460e-aa20-14071f1666e5
-caps.latest.revision: 
-author: wadepickett
-ms.author: wpickett
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 94d45537ca3edd5f31f1ed31898857f002312a0b
-ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
+ms.openlocfilehash: 2c8c5519d31d1d57c1c568599964b97043f806a9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-use-filters"></a>Как использовать фильтры
 В этом разделе описаны основные шаги по созданию конфигурации маршрутизации с несколькими фильтрами. В этом примере сообщения направляются в две реализации службы калькулятора: regularCalc и roundingCalc. Обе реализации поддерживают одинаковые операции, однако одна служба, прежде чем вернуть результаты вычислений, округляет их до ближайшего целого числа. Клиентское приложение должно иметь возможность указывать, нужно ли использовать версию службы, выполняющую округление. Если предпочитаемая служба не указана, сообщения равномерно распределяются между двумя службами. Операции, предоставляемые обеими службами:  
@@ -145,7 +131,7 @@ ms.lasthandoff: 03/19/2018
             filterData="http://localhost/routingservice/router/rounding/"/>  
     ```  
   
-     Если получено сообщение по адресу, который начинается с «http://localhost/routingservice/router/rounding/», то этот фильтр возвращает значение **true**. Поскольку базовый адрес, используемый этой конфигурацией «http://localhost/routingservice/router» и адрес, указанный для roundingEndpoint «rounding/calculator», полный адрес, используемый для связи с этой конечной точки — «http://localhost/ routingservice/маршрутизатора/rounding/calculator», которой соответствует этот фильтр.  
+     Если выдается сообщение по адресу, который начинается с «http://localhost/routingservice/router/rounding/"Этот фильтр принимает значение **true**. Так как базовый адрес, используемый этой конфигурацией "http://localhost/routingservice/router«и имеет полный адрес, используемый для связи с этой конечной точкой адрес, указанный для roundingEndpoint «rounding/calculator»,»http://localhost/routingservice/router/rounding/calculator», которой соответствует этот фильтр.  
   
     > [!NOTE]
     >  Фильтр PrefixEndpointAddress не вычисляет имя узла при проведении сопоставления, поскольку одному узлу может соответствовать несколько имен узлов, все из которых могут быть допустимыми ссылками на узел из клиентского приложения. Например, все следующие ссылки относятся к одному и тому же узлу:  
