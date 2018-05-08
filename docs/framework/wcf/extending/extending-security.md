@@ -1,31 +1,19 @@
 ---
-title: "Расширение безопасности"
-ms.custom: 
+title: Расширение безопасности
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - security [WCF], extending
 ms.assetid: a015a040-9fdf-4147-9ea9-f83b570be1d4
-caps.latest.revision: 
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: cdd9b91ba7ff9b1e431f7d9107e72df084ba8af3
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
-ms.translationtype: MT
+ms.openlocfilehash: 6ba6df24163064ee65c563253fa56a1ec574cffc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="extending-security"></a>Расширение безопасности
-Для размещения новых типов утверждений и пользовательских маркеров можно расширить инфраструктуру безопасности [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. Это подробно описывается в следующих подразделах.  
+Для размещения новых типов утверждений и пользовательских маркеров, можно расширить инфраструктуру безопасности Windows Communication Foundation (WCF). Это подробно описывается в следующих подразделах.  
   
 ## <a name="in-this-section"></a>В этом разделе  
  [Архитектура безопасности](http://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f)  
@@ -50,7 +38,7 @@ ms.lasthandoff: 01/19/2018
  Обычно сообщения подписываются и шифруются одним сертификатом. В этом разделе объясняется, как при необходимости использовать два сертификата.  
   
  [Практическое руководство. Изменение поставщика служб шифрования для закрытого ключа сертификата X.509](../../../../docs/framework/wcf/extending/change-cryptographic-provider-x509-certificate-private-key.md)  
- Объясняется, как изменить поставщика служб шифрования, предоставлявшего закрытый ключ сертификата X.509, и как интегрировать поставщика в инфраструктуру [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
+ Объясняется, как изменить поставщика служб шифрования, используемый для предоставления закрытый ключ сертификата X.509 и как интегрировать поставщика в платформу Windows Communication Foundation (WCF).  
   
 ## <a name="reference"></a>Ссылка  
  <xref:System.ServiceModel.ServiceAuthorizationManager>  

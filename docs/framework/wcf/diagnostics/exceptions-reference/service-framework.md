@@ -1,26 +1,12 @@
 ---
 title: Инфраструктура службы
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 75f60b87-f80e-4377-ba7c-8e6becaa2b28
-caps.latest.revision: ''
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 67e856aff583513fa8a16d289cf5190a9698c52c
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 859e718a56ab63c8e012e1851c0730f53cb707be
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="service-framework"></a>Инфраструктура службы
 В этом разделе перечислены все исключения, вызываемые данными инфраструктуры службы.  
@@ -49,8 +35,8 @@ ms.lasthandoff: 03/26/2018
 |channelDoesNotHaveADuplexSession0|Текущий канал не поддерживает закрытие выходных сеансов. Этот канал не реализует ISessionChannel\<IDuplexSession >.|  
 |ClientRuntimeRequiresFormatter0|Указанный элемент ClientOperation требуется средство форматирования, так как параметры SerializeRequest и DeserializeReply не имеют одновременно значение false.|  
 |CommunicationObjectAborted1|Указанный коммуникационный объект нельзя использовать для связи, так как он остановлен.|  
-|CommunicationObjectAbortedStack2|Указанный коммуникационный объект нельзя использовать для связи, так как он остановлен: {1}|  
-|CommunicationObjectBaseClassMethodNotCalled|Указанный коммуникационный объект переопределил виртуальную функцию {1}, однако не вызвал версию, заданную в базовом классе.|  
+|CommunicationObjectAbortedStack2|Указанный Коммуникационный объект не может использоваться для связи, так как он остановлен: {1}|  
+|CommunicationObjectBaseClassMethodNotCalled|Указанный Коммуникационный объект переопределил виртуальную функцию {1} , но не вызвал версию, заданную в базовом классе.|  
 |ContractIsNotSelfConsistentItHasOneOrMore2|Указанный контракт имеет одну или несколько операций IsTerminating или non-IsInitiating. Свойству SessionMode не присвоено значение SessionMode.Required. Атрибуты IsInitiating и IsTerminating можно использовать только в контексте сеанса.|  
 |CouldnTCreateChannelForChannelType2|Указанный тип канала был запрошен, однако указанная привязка не поддерживает это или настроена неправильно.|  
 |DispatchRuntimeRequiresFormatter0|Указанный элемент DispatchOperation требуется средство форматирования, так как параметры DeserializeRequest и SerializeReply не имеют одновременно значение false.|  

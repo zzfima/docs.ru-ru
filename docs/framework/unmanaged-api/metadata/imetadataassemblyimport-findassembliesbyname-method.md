@@ -1,14 +1,6 @@
 ---
-title: "Метод IMetaDataAssemblyImport::FindAssembliesByName"
-ms.custom: 
+title: Метод IMetaDataAssemblyImport::FindAssembliesByName
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IMetaDataAssemblyImport.FindAssembliesByName
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 4db97cf9-e4c1-4233-8efa-cbdc0e14a8e4
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 4d6518fdcf1bef8eaea74818f69f46bb6df26e31
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a6c7bf332d829a440fe216756f7a23ec1277e6c6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="imetadataassemblyimportfindassembliesbyname-method"></a>Метод IMetaDataAssemblyImport::FindAssembliesByName
 Возвращает массив сборок с заданным `szAssemblyName` параметр, с помощью стандартных правил, применяемых средой выполнения (CLR) для разрешения ссылок.  
@@ -72,9 +60,9 @@ HRESULT FindAssembliesByName (
   
 ## <a name="return-value"></a>Возвращаемое значение  
   
-|HRESULT|Описание:|  
+|HRESULT|Описание|  
 |-------------|-----------------|  
-|`S_OK`|`FindAssembliesByName`успешно возвращен.|  
+|`S_OK`|`FindAssembliesByName` успешно возвращен.|  
 |`S_FALSE`|Нет ни одна из сборок.|  
   
 ## <a name="remarks"></a>Примечания  
@@ -82,9 +70,9 @@ HRESULT FindAssembliesByName (
   
  `FindAssembliesByName` Методу требуется среда CLR инициализирована в процессе для вызова логики разрешения сборки. Таким образом, необходимо вызвать метод [CoInitializeEE](../../../../docs/framework/unmanaged-api/hosting/coinitializeee-function.md) (передача COINITEE_DEFAULT) перед вызовом `FindAssembliesByName`, а затем выполните с помощью вызова [CoUninitializeCor](../../../../docs/framework/unmanaged-api/hosting/couninitializecor-function.md).  
   
- `FindAssembliesByName`Возвращает [IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md) указатель файла, содержащего манифест сборки для имени сборки, переданные в. Если данное имя сборки (например, если он не включает версию) задан не полностью, может возвратить несколько сборок.  
+ `FindAssembliesByName` Возвращает [IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md) указатель файла, содержащего манифест сборки для имени сборки, переданные в. Если данное имя сборки (например, если он не включает версию) задан не полностью, может возвратить несколько сборок.  
   
- `FindAssembliesByName`обычно используется компилятором, который пытается найти сборку во время компиляции.  
+ `FindAssembliesByName` обычно используется компилятором, который пытается найти сборку во время компиляции.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
@@ -93,7 +81,7 @@ HRESULT FindAssembliesByName (
   
  **Библиотека:** используется как ресурс в MsCorEE.dll  
   
- **Версии платформы .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>См. также  
  [Обнаружение сборок в среде выполнения](../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  

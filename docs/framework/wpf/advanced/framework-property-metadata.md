@@ -1,27 +1,15 @@
 ---
-title: "Метаданные свойств среды"
-ms.custom: 
+title: Метаданные свойств среды
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - metadata [WPF], framework properties
 - framework property metadata [WPF]
 ms.assetid: 9962f380-b885-4b61-a62e-457397083fea
-caps.latest.revision: "19"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4fec11a973572dce9e8d6f77bf65ce31ee77eb41
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d968bc7a3033bd994590520c5cd5062d3c212b4f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="framework-property-metadata"></a>Метаданные свойств среды
 Параметры метаданных свойств среды сообщаются для свойств элементов объектов, которые, как считается, в архитектуре [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] находятся на уровне среды WPF. В целом привязка к уровню среды WPF подразумевает, что такие функции, как отрисовка, привязка данных и уточнение системных свойств, обрабатываются в презентации [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] и исполняемых файлах. Метаданные свойств среды запрашиваются этими системами для определения функциональных характеристик конкретных свойств элемента.  
@@ -40,7 +28,7 @@ ms.lasthandoff: 12/22/2017
   
 -   Свойства макета, влияющие на родительским элементом для отчетов (<xref:System.Windows.FrameworkPropertyMetadata.AffectsParentArrange%2A>, <xref:System.Windows.FrameworkPropertyMetadata.AffectsParentMeasure%2A>). Вот несколько примеров, где эти флаги устанавливаются по умолчанию <xref:System.Windows.Documents.FixedPage.Left%2A?displayProperty=nameWithType> и <xref:System.Windows.Documents.Paragraph.KeepWithNext%2A?displayProperty=nameWithType>.  
   
--   <xref:System.Windows.FrameworkPropertyMetadata.Inherits%2A>. По умолчанию свойства зависимости не наследуют значения. <xref:System.Windows.FrameworkPropertyMetadata.OverridesInheritanceBehavior%2A>позволяет перемещать путь наследования по визуальному дереву, что необходимо для некоторых сценариев управления композиции.  
+-   <xref:System.Windows.FrameworkPropertyMetadata.Inherits%2A>. По умолчанию свойства зависимости не наследуют значения. <xref:System.Windows.FrameworkPropertyMetadata.OverridesInheritanceBehavior%2A> позволяет перемещать путь наследования по визуальному дереву, что необходимо для некоторых сценариев управления композиции.  
   
     > [!NOTE]
     >  Термин "наследует" в контексте значений свойств имеет особое значение для свойств зависимостей; это означает, что дочерние элементы могут наследовать фактическое значение свойства зависимости от родительских элементов (это обусловлено возможностью системы свойств [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] на уровне среды WPF). Это не имеет ничего общего непосредственно с типом управляемого кода и наследованием элементов через производные типы. Подробнее см. в разделе [Наследование значения свойства](../../../../docs/framework/wpf/advanced/property-value-inheritance.md).  
@@ -69,13 +57,13 @@ ms.lasthandoff: 12/22/2017
 ## <a name="framework-property-metadata-merge-behavior"></a>Поведение слияния метаданных свойств среды  
  При переопределении метаданных свойств среды различные характеристики метаданных объединяются или заменяют друг друга.  
   
--   <xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A>объединяются. При добавлении нового <xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A>, ответного вызова хранится в метаданных. Если вы не укажете <xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A> при переопределении значения <xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A> переходит в качестве ссылки из ближайшего родительского объекта, указанного в метаданных.  
+-   <xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A> объединяются. При добавлении нового <xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A>, ответного вызова хранится в метаданных. Если вы не укажете <xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A> при переопределении значения <xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A> переходит в качестве ссылки из ближайшего родительского объекта, указанного в метаданных.  
   
 -   Фактическое поведение системы свойств для <xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A> том, что реализации для всех владельцев метаданных в иерархии сохраняются и добавляются в таблицу в порядке выполнения системой свойств выполняется, обратные вызовы наиболее глубоко производного класса, Сначала вызывается. Наследуемые обратные вызовы выполняются только один раз и считается, что они принадлежат классу, разместившему их в метаданных.  
   
--   <xref:System.Windows.PropertyMetadata.DefaultValue%2A>заменяется. Если вы не укажете <xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A> при переопределении значения <xref:System.Windows.PropertyMetadata.DefaultValue%2A> поступают из ближайшего родительского объекта, указанного в метаданных.  
+-   <xref:System.Windows.PropertyMetadata.DefaultValue%2A> заменяется. Если вы не укажете <xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A> при переопределении значения <xref:System.Windows.PropertyMetadata.DefaultValue%2A> поступают из ближайшего родительского объекта, указанного в метаданных.  
   
--   <xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A>реализации заменяются. При добавлении нового <xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A>, ответного вызова хранится в метаданных. Если вы не укажете <xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A> при переопределении значения <xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A> переходит в качестве ссылки из ближайшего родительского объекта, указанного в метаданных.  
+-   <xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A> реализации заменяются. При добавлении нового <xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A>, ответного вызова хранится в метаданных. Если вы не укажете <xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A> при переопределении значения <xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A> переходит в качестве ссылки из ближайшего родительского объекта, указанного в метаданных.  
   
 -   Поведение системы свойств только в том случае, <xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A> вызывается в интерпретации метаданных. Ссылки на другие <xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A> сохраняются реализации в иерархии.  
   

@@ -1,23 +1,12 @@
 ---
-title: "Активация XAML"
-ms.custom: 
+title: Активация XAML
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 486760e2-bb10-4ed5-8c02-fe7472498d2d
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 53665f39c6c0c7e5c7956912b05e3fd80659ddcb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8621b0ea7b390c81e76ac7eeedb0b547b44320d7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="xaml-activation"></a>Активация XAML
 В этом образце показано, как разместить декларативное бизнес-правило в IIS. Образец представляет базовый рабочий процесс с именем `EchoService`, в котором имеется одна операция.  
@@ -27,7 +16,7 @@ ms.lasthandoff: 12/22/2017
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите на страницу загрузки, чтобы загрузить все образцы [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)]. Этот образец расположен в следующем каталоге.  
+>  Если этот каталог не существует, перейдите на загрузки страницы, чтобы загрузить все Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] образцов. Этот образец расположен в следующем каталоге.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Services\XAMLActivation`  
   
@@ -43,10 +32,10 @@ ms.lasthandoff: 12/22/2017
   
     2.  Запустите файл WcfTestClient.exe.  
   
-4.  Установите адрес службы в WcfTestClient.exe, нажав CTRL+SHIFT+A и установив для адреса службы значение http://localhost:56133/Service.xamlx.  
+4.  Задать адрес службы в WcfTestClient.exe, нажав сочетание клавиш CTRL + SHIFT + A и установив для адреса службы http://localhost:56133/Service.xamlx.  
   
 5.  Произведите операцию Echo для проверки службы.  
   
 6.  Разверните службу в IIS, используя файл DeployToIIS.Bat из командной строки с правами администратора.  
   
-7.  Обновите адрес службы в клиенте на http://localhost/XAMLActivation/Service.xamlx и снова проверьте службу, используя WcfTestClient.exe.
+7.  Обновите адрес службы в клиенте для http://localhost/XAMLActivation/Service.xamlx и проверьте службу, используя WcfTestClient.exe.

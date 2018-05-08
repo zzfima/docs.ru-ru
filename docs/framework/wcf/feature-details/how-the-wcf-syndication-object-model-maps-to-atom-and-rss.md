@@ -1,30 +1,18 @@
 ---
-title: "Сопоставление объектной модели синдикации WCF моделям Atom и RSS"
-ms.custom: 
+title: Сопоставление объектной модели синдикации WCF моделям Atom и RSS
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 0365eb37-98cc-4b13-80fb-f1e78847a748
-caps.latest.revision: "18"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 01030ed226a5cdc384db56933325d7c4eeade989
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7baf77b4923cff4320d657b3024ab2a286e40c2b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-the-wcf-syndication-object-model-maps-to-atom-and-rss"></a>Сопоставление объектной модели синдикации WCF моделям Atom и RSS
-При разработке службы синдикации [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] создаются веб-каналы и элементы с использованием следующих классов.  
+При разработке службы синдикации Windows Communication Foundation (WCF), вы создаете веб-каналов и элементов с помощью следующих классов:  
   
 -   <xref:System.ServiceModel.Syndication.SyndicationFeed>  
   
@@ -42,9 +30,9 @@ ms.lasthandoff: 12/22/2017
   
 -   <xref:System.ServiceModel.Syndication.XmlSyndicationContent>  
   
- Объект <xref:System.ServiceModel.Syndication.SyndicationFeed> может быть сериализован в любой формат синдикации, для которого определен модуль форматирования. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] поставляется с двумя модулями форматирования: <xref:System.ServiceModel.Syndication.Atom10FeedFormatter> и <xref:System.ServiceModel.Syndication.Rss20FeedFormatter>.  
+ Объект <xref:System.ServiceModel.Syndication.SyndicationFeed> может быть сериализован в любой формат синдикации, для которого определен модуль форматирования. WCF поставляется с двумя модулями форматирования: <xref:System.ServiceModel.Syndication.Atom10FeedFormatter> и <xref:System.ServiceModel.Syndication.Rss20FeedFormatter>.  
   
- Объектная модель, связанная с классами <xref:System.ServiceModel.Syndication.SyndicationFeed> и <xref:System.ServiceModel.Syndication.SyndicationItem>, больше соответствует спецификации Atom 1.0, чем спецификации RSS 2.0. Это связано с тем, что Atom 1.0 - более значимая спецификация, определяющая элементы, которые являются неоднозначными или не включены в спецификацию RSS 2.0. Из-за этого многие элементы объектной модели синдикации [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] непосредственно не представлены в спецификации RSS 2.0. При сериализации объектов <xref:System.ServiceModel.Syndication.SyndicationFeed> и <xref:System.ServiceModel.Syndication.SyndicationItem> в спецификацию RSS 2.0 система [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] позволяет сериализовать элементы данных, характерные для спецификации Atom, как определяемые пространством имен элементы расширения, соответствующие спецификации Atom. Этим процессом можно управлять с помощью параметра, передаваемого в конструктор <xref:System.ServiceModel.Syndication.Rss20FeedFormatter>.  
+ Объектная модель, связанная с классами <xref:System.ServiceModel.Syndication.SyndicationFeed> и <xref:System.ServiceModel.Syndication.SyndicationItem>, больше соответствует спецификации Atom 1.0, чем спецификации RSS 2.0. Это связано с тем, что Atom 1.0 - более значимая спецификация, определяющая элементы, которые являются неоднозначными или не включены в спецификацию RSS 2.0. По этой причине многие элементы объектной модели синдикации WCF имеют непосредственно не представлены в спецификации RSS 2.0. При сериализации <xref:System.ServiceModel.Syndication.SyndicationFeed> и <xref:System.ServiceModel.Syndication.SyndicationItem> объекты в RSS 2.0 WCF позволяет сериализовать элементы данных Atom конкретных как элементы пространством имен расширения, соответствующие спецификации Atom. Этим процессом можно управлять с помощью параметра, передаваемого в конструктор <xref:System.ServiceModel.Syndication.Rss20FeedFormatter>.  
   
  В примерах кода в данном разделе для выполнения фактической сериализации используется один из двух определенных здесь методов.  
   

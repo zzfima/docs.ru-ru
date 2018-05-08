@@ -1,36 +1,22 @@
 ---
 title: Практическое руководство. Размещение службы WCF в управляемой службе Windows
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 8e37363b-4dad-4fb6-907f-73c30fac1d9a
-caps.latest.revision: 21
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: aab9780a0d40ab71710d454deb3144219557450f
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: c6c3e057fd07569d462f1bf25d1c283e42024a8b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-host-a-wcf-service-in-a-managed-windows-service"></a>Практическое руководство. Размещение службы WCF в управляемой службе Windows
-В этом разделе описаны основные шаги по созданию службы [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], размещенной в службе Windows. Сценарий реализуется с помощью возможности размещения в управляемой службе Windows и представляет собой работающую в течение продолжительного времени службу [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], размещенную за пределами служб IIS в защищенной среде, которая не активируется сообщениями. Вместо этого время существования службы контролируется операционной системой. Данный вариант размещения доступен во всех версиях Windows.  
+В этом разделе описаны основные шаги, необходимые для создания службы Windows Communication Foundation (WCF), размещенной в службе Windows. Сценарий реализуется с помощью управляемой службе Windows, является долго выполняющихся службы WCF, размещенных за пределами Internet Information Services (IIS) в защищенной среде, которая не является сообщением активации вариант размещения. Вместо этого время существования службы контролируется операционной системой. Данный вариант размещения доступен во всех версиях Windows.  
   
- Службами Windows можно управлять при помощи Microsoft.ManagementConsole.SnapIn в консоли управления (MMC) и можно настроить их автоматический запуск при загрузке системы. Возможность размещения состоит из регистрации домена приложения, где служба [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] размещена как управляемая служба Windows, так что время существования процесса службы контролируется диспетчером служб для служб Windows.  
+ Службами Windows можно управлять при помощи Microsoft.ManagementConsole.SnapIn в консоли управления (MMC) и можно настроить их автоматический запуск при загрузке системы. Этот вариант размещения предполагает регистрацию домена приложения (AppDomain), на котором размещена служба WCF как службу Windows, так что время существования процесса службы контролируется диспетчером управления службами (SCM) для служб Windows.  
   
- Код службы включает в себя реализацию службы контракта службы, класс службы Windows и класс установщика. Класс реализации службы, `CalculatorService`, является службой [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Класс `CalculatorWindowsService` является службой Windows. Чтобы считаться службой Windows, этот класс наследует от класса `ServiceBase` и реализует методы `OnStart` и `OnStop`. В методе `OnStart` создается объект <xref:System.ServiceModel.ServiceHost> для типа `CalculatorService` и открывается. В методе `OnStop` служба останавливается и освобождается. Основное приложение также отвечает за предоставление базового адреса для узла службы, настроенного в параметрах приложения. Класс установщика, унаследованный от класса <xref:System.Configuration.Install.Installer>, позволяет выполнить установку программы как службы Windows с помощью Installutil.exe.  
+ Код службы включает в себя реализацию службы контракта службы, класс службы Windows и класс установщика. Класс реализации службы, `CalculatorService`, является службой WCF. Класс `CalculatorWindowsService` является службой Windows. Чтобы считаться службой Windows, этот класс наследует от класса `ServiceBase` и реализует методы `OnStart` и `OnStop`. В методе `OnStart` создается объект <xref:System.ServiceModel.ServiceHost> для типа `CalculatorService` и открывается. В методе `OnStop` служба останавливается и освобождается. Основное приложение также отвечает за предоставление базового адреса для узла службы, настроенного в параметрах приложения. Класс установщика, унаследованный от класса <xref:System.Configuration.Install.Installer>, позволяет выполнить установку программы как службы Windows с помощью Installutil.exe.  
   
 ### <a name="construct-the-service-and-provide-the-hosting-code"></a>Создание службы и предоставление кода размещения  
   
@@ -135,7 +121,7 @@ ms.lasthandoff: 04/30/2018
     > [!NOTE]
     >  Если командная строка [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] не используется, убедитесь, что каталог `%WinDir%\Microsoft.NET\Framework\v4.0.<current version>` входит в системный путь.  
   
-     В командной строке введите `services.msc`, чтобы получить доступ к диспетчеру служб. Служба Windows должна появиться в списке служб с именем WCFWindowsServiceSample. Служба [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] может отвечать клиентам, только если запущена служба Windows. Чтобы запустить службу, щелкните его правой кнопкой в диспетчер управления Службами и выберите «Пуск» или тип **команда net start WCFWindowsServiceSample** в командной строке.  
+     В командной строке введите `services.msc`, чтобы получить доступ к диспетчеру служб. Служба Windows должна появиться в списке служб с именем WCFWindowsServiceSample. Служба WCF только может отвечать клиентам, если служба Windows запущена. Чтобы запустить службу, щелкните его правой кнопкой в диспетчер управления Службами и выберите «Пуск» или тип **команда net start WCFWindowsServiceSample** в командной строке.  
   
 3.  Чтобы внести изменения в службу, необходимо предварительно остановить ее и удалить. Чтобы остановить службу, щелкните правой кнопкой мыши в Диспетчере служб и выберите «Остановить», или **типа net stop WCFWindowsServiceSample** в командной строке. Учтите, что если остановить службу Windows, а затем запустить клиент, то когда клиент попытается обратиться к службе, будет вызвано исключение <xref:System.ServiceModel.EndpointNotFoundException>. Удаление типа службы Windows **installutil /u bin\service.exe** в командной строке.  
   

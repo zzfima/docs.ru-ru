@@ -1,29 +1,15 @@
 ---
 title: Выбор дополнительного формата
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: e02d9082-4d55-41d8-9329-98f6d1c77f06
-caps.latest.revision: 9
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 93d7fe0742e16abd92682094ca20d51488516e6e
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: 2d0e78bc1ec1dcd7e4a22b246f5cc35356f5f986
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="advanced-format-selection"></a>Выбор дополнительного формата
-Данный образец демонстрирует расширение программной модели [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] REST для поддержки новых форматов исходящих ответов. Кроме того, образец использует шаблон T4 для возврата ответов в виде страницы XHTML, показывая, как можно реализовать наглядную программную модель.  
+Этот образец демонстрирует расширение модели программирования REST Windows Communication Foundation (WCF) для поддержки новых форматов исходящих ответов. Кроме того, образец использует шаблон T4 для возврата ответов в виде страницы XHTML, показывая, как можно реализовать наглядную программную модель.  
   
 ## <a name="sample-details"></a>Подробные сведения об образце  
  Образец состоит из простой службы, а также клиентского кода, производящего запросы к этой службе.  Служба поддерживает единственную операцию [WebGet], имеющую следующую сигнатуру метода: `Message EchoListWithGet(string list);`  
@@ -55,7 +41,7 @@ ms.lasthandoff: 04/30/2018
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) Чтобы загрузить все [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] образцов. Этот образец расположен в следующем каталоге.  
+>  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] образцов. Этот образец расположен в следующем каталоге.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Web\AdvancedFormatSelection`  
   

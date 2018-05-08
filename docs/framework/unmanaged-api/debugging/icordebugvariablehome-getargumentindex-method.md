@@ -1,14 +1,6 @@
 ---
-title: "Метод ICorDebugVariableHome::GetArgumentIndex"
-ms.custom: 
+title: Метод ICorDebugVariableHome::GetArgumentIndex
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 api_name:
 - ICorDebugVariableHome.GetArgumentIndex
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: e86fcc72-388d-4009-ab21-8f9c3323e9a3
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 739d4d787858f64871269ea9bd467bc49424fbae
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 20f65218928ee07d67ea742154469ac3cbea9241
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icordebugvariablehomegetargumentindex-method"></a>Метод ICorDebugVariableHome::GetArgumentIndex
 Возвращает индекс аргумента функции.  
@@ -53,7 +41,7 @@ HRESULT GetArgumentIndex(
 ## <a name="return-value"></a>Возвращаемое значение  
  Метод возвращает следующие значения.  
   
-|Значение|Описание:|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |`S_OK`|Вызов метода вернул недопустимый аргумент индекс.|  
 |`E_FAIL`|Текущий [ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md) экземпляр представляет локальную переменную.|  
@@ -68,7 +56,7 @@ HRESULT GetArgumentIndex(
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:**[!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
+ **Версии платформы .NET framework:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
   
 ## <a name="see-also"></a>См. также  
  [Интерфейс ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md)

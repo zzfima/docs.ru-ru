@@ -1,24 +1,12 @@
 ---
-title: "Коллекции и типы коллекций для XAML"
-ms.custom: 
+title: Коллекции и типы коллекций для XAML
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 58f8e7c6-9a41-4f25-8551-c042f1315baa
-caps.latest.revision: "2"
-author: wadepickett
-ms.author: wpickett
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b67fec476c95d82b769494d53e50550cad0c719b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5605c97b13503e18e2f698f2a19f715663052b08
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="collections-and-collection-types-for-xaml"></a>Коллекции и типы коллекций для XAML
 В этом разделе описывается определение свойства типов, которые предназначены для поддержки коллекции, которые поддерживают синтаксис XAML для создания экземпляров элементов коллекции как дочерние элементы родительского элемента объекта или свойства элемента.  
@@ -34,7 +22,7 @@ ms.lasthandoff: 12/22/2017
   
 2.  <xref:System.Collections.IDictionary> Интерфейс указывает dicionary коллекции.  
   
-3.  <xref:System.Array>представляет массив и массив поддерживает <xref:System.Collections.IList> методы.  
+3.  <xref:System.Array> представляет массив и массив поддерживает <xref:System.Collections.IList> методы.  
   
  В каждом из этих концепций коллекции, обработчик XAML служб XAML .NET Framework ожидает вызова `Add` метода в определенном экземпляре типа свойства коллекции. Или, в сценарии сериализации, обработчик XAML создает дискретных экземпляры типа XAML для каждого элемента в списке, словаря или массива, основанного на каждой коллекции узкое понятие «Элементов». Ниже приведены: <xref:System.Collections.IList.Item%2A>; <xref:System.Collections.IDictionary.Item%2A>; явных <xref:System.Array.System%23Collections%23IList%23Item%2A> для <xref:System.Array>.  
   
@@ -49,8 +37,8 @@ ms.lasthandoff: 12/22/2017
 ## <a name="xaml-type-system-support-and-collections"></a>Поддержка системы типов XAML и коллекций  
  Помимо основной механизм синтаксического анализа XAML и заполнении или сериализации свойств коллекции в системе типов XAML, реализованное в службах XAML .NET Framework включает несколько функций разработки, которые относятся к коллекциям в XAML.  
   
-1.  <xref:System.Xaml.XamlType.IsCollection%2A>Возвращает значение true, если тип XAML, поддерживаемый тип, который обеспечивает поддержку коллекции XAML.  
+1.  <xref:System.Xaml.XamlType.IsCollection%2A> Возвращает значение true, если тип XAML, поддерживаемый тип, который обеспечивает поддержку коллекции XAML.  
   
-2.  <xref:System.Xaml.XamlType.IsDictionary%2A>и <xref:System.Xaml.XamlType.IsArray%2A> затем можно определить, какой тип XAML поддерживает режим сбора. Для пользовательских XAML система типов процессоров, основанных на службах XAML .NET Framework и XAML, но не на основе существующего <xref:System.Xaml.XamlWriter> реализации, знать, какой режим сбора используется может быть необходимо, чтобы знать, какой метод, вызываемый для Обработка коллекций.  
+2.  <xref:System.Xaml.XamlType.IsDictionary%2A> и <xref:System.Xaml.XamlType.IsArray%2A> затем можно определить, какой тип XAML поддерживает режим сбора. Для пользовательских XAML система типов процессоров, основанных на службах XAML .NET Framework и XAML, но не на основе существующего <xref:System.Xaml.XamlWriter> реализации, знать, какой режим сбора используется может быть необходимо, чтобы знать, какой метод, вызываемый для Обработка коллекций.  
   
 3.  Каждый из предыдущих значений свойств потенциально влиянию переопределения <xref:System.Xaml.XamlType.LookupCollectionKind%2A> типа XAML.

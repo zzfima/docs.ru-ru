@@ -1,11 +1,6 @@
 ---
-title: "Оператор Like (Visual Basic)"
+title: Оператор Like (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - Like
 - vb.Like
@@ -27,14 +22,11 @@ helpviewer_keywords:
 - data [Visual Basic], string comparisons
 - string comparison [Visual Basic], Like operators
 ms.assetid: 966283ec-80e2-4294-baa8-c75baff804f9
-caps.latest.revision: "18"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: ad5729515362bfd52b0c3b401f218a49f569726e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: a9c672a397510c69c9ee67358689feff80d8831a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="like-operator-visual-basic"></a>Оператор Like (Visual Basic)
 Сравнивает строку с шаблоном.  
@@ -47,13 +39,13 @@ result = string Like pattern
   
 ## <a name="parts"></a>Части  
  `result`  
- Обязательный. Любой `Boolean` переменной. В результате `Boolean` значение, указывающее, ли `string` удовлетворяет `pattern`.  
+ Обязательно. Любой `Boolean` переменной. В результате `Boolean` значение, указывающее, ли `string` удовлетворяет `pattern`.  
   
  `string`  
- Обязательный. Произвольное выражение `String`.  
+ Обязательно. Произвольное выражение `String`.  
   
  `pattern`  
- Обязательный. Любой `String` выражения, согласующееся с правилами соответствия шаблону описано в разделе «Примечания».  
+ Обязательно. Любой `String` выражения, согласующееся с правилами соответствия шаблону описано в разделе «Примечания».  
   
 ## <a name="remarks"></a>Примечания  
  Если значение в `string` соответствует шаблону в `pattern`, `result` — `True`. Если строка не удовлетворяет шаблон `result` — `False`. Если оба `string` и `pattern` являются пустыми строками, в результате `True`.  
@@ -64,13 +56,13 @@ result = string Like pattern
 ## <a name="pattern-options"></a>Параметры шаблона  
  Сопоставление встроенных шаблонов представляет собой универсальный инструмент для сравнения строк. Средства подбора шаблона позволяют сопоставлять каждый символ в `string` определенный символ, подстановочный знак, список символ или диапазон символов. В следующей таблице показаны допустимые символы в `pattern` и их соответствия.  
   
-|Символы в`pattern`|По условию поиска`string`|  
+|Символы в `pattern`|По условию поиска `string`|  
 |-----------------------------|-------------------------|  
 |`?`|Любой отдельный знак|  
 |`*`|Ноль или более символов|  
 |`#`|Любая отдельная цифра (0 – 9)|  
-|`[charlist]`|Любой символ в`charlist`|  
-|`[!charlist]`|Любой знак не в`charlist`|  
+|`[charlist]`|Любой символ в `charlist`|  
+|`[!charlist]`|Любой знак не в `charlist`|  
   
 ## <a name="character-lists"></a>Список знаков  
  Группа из одного или нескольких символов (`charlist`) заключена в квадратные скобки (`[ ]`) может использоваться для соответствует любому одиночному символу в `string` и может включать практически любой код символа, включая цифр.  

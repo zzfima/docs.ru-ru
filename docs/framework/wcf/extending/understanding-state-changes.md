@@ -1,24 +1,12 @@
 ---
-title: "Основные сведения об изменении состояния"
-ms.custom: 
+title: Основные сведения об изменении состояния
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: a79ed2aa-e49a-47a8-845a-c9f436ec9987
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ce0d3be43b8e50367d1cdd9b4e486a4154001624
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5bfee392053d9f3fd529d68b533a046e53f20dd1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="understanding-state-changes"></a>Основные сведения об изменении состояния
 В данном разделе рассматриваются состояния и переходы каналов, а также типы, используемые для структуризации каналов, и способы их реализации.  
@@ -42,7 +30,7 @@ ms.lasthandoff: 12/22/2017
  ![Канал состояние transitition](../../../../docs/framework/wcf/extending/media/channelstatetranitionshighleveldiagram.gif "ChannelStateTranitionsHighLevelDiagram")  
 Рисунок 1. Конечный автомат ICommunicationObject.  
   
- [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] предоставляет абстрактный базовый класс с именем <xref:System.ServiceModel.Channels.CommunicationObject>, реализующий объект <xref:System.ServiceModel.ICommunicationObject> и конечный автомат каналов. Ниже приведена схема изменившегося состояния, относящаяся к <xref:System.ServiceModel.Channels.CommunicationObject>. Кроме конечного автомата <xref:System.ServiceModel.ICommunicationObject>, на схеме также показано время, когда вызываются дополнительные методы <xref:System.ServiceModel.Channels.CommunicationObject>.  
+ Windows Communication Foundation (WCF) предоставляет абстрактный базовый класс с именем <xref:System.ServiceModel.Channels.CommunicationObject> , реализующий <xref:System.ServiceModel.ICommunicationObject> и конечный автомат каналов. Ниже приведена схема изменившегося состояния, относящаяся к <xref:System.ServiceModel.Channels.CommunicationObject>. Кроме конечного автомата <xref:System.ServiceModel.ICommunicationObject>, на схеме также показано время, когда вызываются дополнительные методы <xref:System.ServiceModel.Channels.CommunicationObject>.  
   
  ![Изменений состояния](../../../../docs/framework/wcf/extending/media/wcfc-wcfchannelsigure5statetransitionsdetailsc.gif "wcfc_WCFChannelsigure5StateTransitionsDetailsc")  
 Рис. 2. Реализация CommunicationObject конечного автомата ICommunicationObject, включая вызовы событий и защищенных методов.  

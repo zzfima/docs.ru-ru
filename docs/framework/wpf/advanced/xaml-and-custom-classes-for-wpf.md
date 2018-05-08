@@ -1,30 +1,16 @@
 ---
 title: Код XAML и пользовательские классы для WPF
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - custom classes in XAML [WPF]
 - XAML [WPF], custom classes
 - classes [WPF], custom classes in XAML
 ms.assetid: e7313137-581e-4a64-8453-d44e15a6164a
-caps.latest.revision: 22
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: a7aa7ffe38f1fbd7de71dbc95ae12b8faca6e356
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 35c4e23298a8af9fdba92b7e4b6231c08861cc72
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="xaml-and-custom-classes-for-wpf"></a>Код XAML и пользовательские классы для WPF
 Реализация языка XAML в платформах [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] поддерживает возможность определения пользовательского класса или структуры на любом языке [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] и последующего доступа к этому классу с помощью разметки XAML. В одном файле разметки можно использовать сочетание определенных в [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] типов и пользовательских типов, обычно сопоставляя пользовательские типы с префиксом пространства имен XAML. В этом разделе обсуждаются требования, которым должен соответствовать пользовательский класс, чтобы его можно было использовать в качестве элемента XAML.  

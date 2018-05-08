@@ -1,27 +1,15 @@
 ---
-title: "Слияние элементов меню в элементе управления MenuStrip в Windows Forms"
-ms.custom: 
+title: Слияние элементов меню в элементе управления MenuStrip в Windows Forms
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - MenuStrip [Windows Forms], merging
 - merging [Windows Forms], general concepts
 ms.assetid: 95e113ba-f362-4dda-8a76-6d95ddc45cee
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: cd54855f7ee618915fea4fcb8f465cc8c1a68164
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2782ae483d673f8f1eccab10876aca858737260a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="merging-menu-items-in-the-windows-forms-menustrip-control"></a>Слияние элементов меню в элементе управления MenuStrip в Windows Forms
 Если у вас есть приложения многодокументного интерфейса (MDI), можно объединять пункты меню или целые меню из дочерней формы в меню родительской формы.  
@@ -41,19 +29,19 @@ ms.lasthandoff: 12/22/2017
   
  Пункты меню можно объединить вручную или автоматически. Слияние пунктов меню для обоих методов таким же образом, но включается по-разному, как описано в разделах «Слияние вручную» и «Автоматическое слияние» далее в этом разделе. В процессе ручного и автоматического слияния каждое действие слияния затрагивает следующее.  
   
- <xref:System.Windows.Forms.MenuStrip>пункты меню Слияние перемещаются из одного <xref:System.Windows.Forms.ToolStrip> в другой а не клонируются, как в случае с <xref:System.Windows.Forms.MainMenu>.  
+ <xref:System.Windows.Forms.MenuStrip> пункты меню Слияние перемещаются из одного <xref:System.Windows.Forms.ToolStrip> в другой а не клонируются, как в случае с <xref:System.Windows.Forms.MainMenu>.  
   
 ## <a name="mergeaction-values"></a>MergeAction значения  
  Задайте действие слияния пунктов меню в источнике <xref:System.Windows.Forms.MenuStrip> с помощью <xref:System.Windows.Forms.MergeAction> свойство.  
   
  В следующей таблице описаны значения и типичные случаи использования доступных операций слияния.  
   
-|Значение MergeAction|Описание:|Типичные случаи использования|  
+|Значение MergeAction|Описание|Типичные случаи использования|  
 |-----------------------|-----------------|-----------------|  
 |<xref:System.Windows.Forms.MergeAction.Append>|(По умолчанию) Добавляет исходный элемент в конец коллекции целевого элемента.|Добавление пунктов меню в конец меню при активации определенной части программы.|  
 |<xref:System.Windows.Forms.MergeAction.Insert>|Добавляет элемент источника целевого элемента коллекции, в расположении, заданном <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> свойство, заданное для исходного элемента.|Добавление пунктов меню в середину или начало меню при активации определенной части программы.<br /><br /> Если значение <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> одинаково для обоих пунктов меню, они добавляются в обратном порядке. Задать <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> соответствующим образом для сохранения исходного порядка.|  
 |<xref:System.Windows.Forms.MergeAction.Replace>|Поиск текстового совпадения или использование <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> значение, если текстовое совпадение не найдено и затем заменяет исходный элемент меню сопоставления целевого элемента меню.|Заменив целевой элемент меню пункта меню источник с таким же именем, действие которого отличается.|  
-|<xref:System.Windows.Forms.MergeAction.MatchOnly>|Поиск текстового совпадения или использование <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> значение, если текстовое совпадение не найдено и затем добавляет все элементы раскрывающегося списка из источника в целевой объект.|Построение структуры меню, который вставляет или добавляются в подменю или удаляет элементы меню из вложенного меню. Например, можно добавить элемент меню из дочерней формы MDI в главное <xref:System.Windows.Forms.MenuStrip> **Сохранить как** меню.<br /><br /> <xref:System.Windows.Forms.MergeAction.MatchOnly>позволяет перемещаться по структуре меню без выполнения действий. Он предоставляет способ оценки последующих элементов.|  
+|<xref:System.Windows.Forms.MergeAction.MatchOnly>|Поиск текстового совпадения или использование <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> значение, если текстовое совпадение не найдено и затем добавляет все элементы раскрывающегося списка из источника в целевой объект.|Построение структуры меню, который вставляет или добавляются в подменю или удаляет элементы меню из вложенного меню. Например, можно добавить элемент меню из дочерней формы MDI в главное <xref:System.Windows.Forms.MenuStrip> **Сохранить как** меню.<br /><br /> <xref:System.Windows.Forms.MergeAction.MatchOnly> позволяет перемещаться по структуре меню без выполнения действий. Он предоставляет способ оценки последующих элементов.|  
 |<xref:System.Windows.Forms.MergeAction.Remove>|Поиск текстового совпадения или использование <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> значение, если текстовое совпадение не найдено и затем удаляет элемент из целевого объекта.|Удаление пункта меню из целевого <xref:System.Windows.Forms.MenuStrip>.|  
   
 ## <a name="manual-merging"></a>Слияние вручную  

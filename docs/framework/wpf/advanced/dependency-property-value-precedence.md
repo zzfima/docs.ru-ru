@@ -1,29 +1,17 @@
 ---
-title: "Приоритет значения свойств зависимостей"
-ms.custom: 
+title: Приоритет значения свойств зависимостей
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - dependency properties [WPF], classes as owners
 - dependency properties [WPF], metadata
 - classes [WPF], owners of dependency properties
 - metadata [WPF], dependency properties
 ms.assetid: 1fbada8e-4867-4ed1-8d97-62c07dad7ebc
-caps.latest.revision: "27"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d95cd0545fa4800f159f4e5e0f661cf7bddc6548
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7719c39c82b69421477cadf9ae5caf9f9f55b457
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dependency-property-value-precedence"></a>Приоритет значения свойств зависимостей
 <a name="introduction"></a> В этом разделе рассказывается, как работа системы свойств [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] может повлиять на значение свойства зависимости, и описывается приоритет применения аспектов системы свойств к действительному значению свойства.  
@@ -117,7 +105,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="setcurrentvalue"></a>   
 ## <a name="setcurrentvalue"></a>SetCurrentValue  
- <xref:System.Windows.DependencyObject.SetCurrentValue%2A> Метод еще один способ задания свойства, но он не поддерживает более высокий приоритет. Вместо этого <xref:System.Windows.DependencyObject.SetCurrentValue%2A> позволяет изменить значение свойства, не перезаписывая источник предыдущего значения. Можно использовать <xref:System.Windows.DependencyObject.SetCurrentValue%2A> каждый раз, когда требуется задать значение, не предоставляя приоритет локальное значение. Например, если свойство задается триггером и затем назначить другое значение с помощью <xref:System.Windows.DependencyObject.SetCurrentValue%2A>, в системе свойств по-прежнему учитывает этот триггер и свойство изменится при возникновении действия триггера. <xref:System.Windows.DependencyObject.SetCurrentValue%2A>позволяет изменить значение свойства, не предоставляя ему источник с более высоким приоритетом. Аналогичным образом, можно использовать <xref:System.Windows.DependencyObject.SetCurrentValue%2A> для изменения значения свойства без перезаписи привязки.  
+ <xref:System.Windows.DependencyObject.SetCurrentValue%2A> Метод еще один способ задания свойства, но он не поддерживает более высокий приоритет. Вместо этого <xref:System.Windows.DependencyObject.SetCurrentValue%2A> позволяет изменить значение свойства, не перезаписывая источник предыдущего значения. Можно использовать <xref:System.Windows.DependencyObject.SetCurrentValue%2A> каждый раз, когда требуется задать значение, не предоставляя приоритет локальное значение. Например, если свойство задается триггером и затем назначить другое значение с помощью <xref:System.Windows.DependencyObject.SetCurrentValue%2A>, в системе свойств по-прежнему учитывает этот триггер и свойство изменится при возникновении действия триггера. <xref:System.Windows.DependencyObject.SetCurrentValue%2A> позволяет изменить значение свойства, не предоставляя ему источник с более высоким приоритетом. Аналогичным образом, можно использовать <xref:System.Windows.DependencyObject.SetCurrentValue%2A> для изменения значения свойства без перезаписи привязки.  
   
 <a name="animations"></a>   
 ## <a name="coercion-animations-and-base-value"></a>Приведение, анимации и базовое значение  

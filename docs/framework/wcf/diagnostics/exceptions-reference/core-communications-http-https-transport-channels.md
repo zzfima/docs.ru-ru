@@ -1,27 +1,15 @@
 ---
-title: "Основное взаимодействие: Каналы транспорта HTTP-HTTPS"
-ms.custom: 
+title: 'Основное взаимодействие: Каналы транспорта HTTP-HTTPS'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 6c0a23c9-a663-461c-bdab-58b4d3e23642
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7d67bb810ced381749dca0dc698ca405bb59cfb0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fbdb5b350425aad7108402dec939f036e971d053
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="core-communications-httphttps-transport-channels"></a>Основное взаимодействие: транспортные каналы HTTP/HTTPS
-В этом разделе перечислены все исключения, вызываемые транспортными каналами HTTP или HTTPS [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)].  
+В этом разделе перечислены все исключения, вызываемые каналами HTTP или HTTPS транспорт Windows Communication Foundation (WCF).  
   
 ## <a name="exception-list"></a>Список исключений  
   
@@ -32,7 +20,7 @@ ms.lasthandoff: 12/22/2017
 |Hosting_SslSettingsMisconfigured|Параметры SSL заданной службы не соответствуют одноименным параметрам IIS.|  
 |HttpAuthSchemeAndClientCert|Фабрика прослушивателя HTTPS настроена на запрос сертификата клиента и указанной схемы проверки подлинности. Однако единовременно можно запросить только один тип проверки подлинности.|  
 |HttpReceiveFailure|При получении HTTP-ответа заданным объектом возникла ошибка. Привязка конечной точки службы, возможно, не использует протокол HTTP. Также возможно, что контекст HTTP-запроса был завершен сервером вследствие завершения работы службы. Дополнительные сведения см. в журналах сервера.|  
-|HttpRegistrationAccessDenied|HTTP не удается зарегистрировать указанный URL-адрес. У используемого процесса нет прав доступа к данному пространству имен (дополнительные сведения см. в разделе http://msdn.microsoft.com/library/default.asp?url=/library/http/http/namespace_reservations_registrations_and_routing.asp).|  
+|HttpRegistrationAccessDenied|HTTP не удается зарегистрировать указанный URL-адрес. Процесс имеет права доступа к этому пространству имен (в разделе http://msdn.microsoft.com/library/default.asp?url=/library/http/http/namespace_reservations_registrations_and_routing.asp подробные сведения).|  
 |HttpRegistrationAlreadyExists|HTTP не удается зарегистрировать указанный URL-адрес. Другое приложение уже зарегистрировало данный URL-адрес в HTTP.SYS.|  
 |HttpRegistrationPortInUse|HTTP не удается зарегистрировать указанный URL-адрес - указанный TCP-порт используется другим приложением.|  
 |HttpSendFailure|При выполнении HTTP-запроса для заданного объекта возникла ошибка. Убедитесь, что причиной не является несоответствие привязок безопасности. Также убедитесь, что служба не настроена для SSL.|  

@@ -1,13 +1,6 @@
 ---
-title: "Помощник по отладке управляемого кода invalidCERCall"
-ms.custom: 
+title: Помощник по отладке управляемого кода invalidCERCall
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - invalid CER calls
 - InvalidCERCall MDA
@@ -16,21 +9,18 @@ helpviewer_keywords:
 - CER calls
 - managed debugging assistants (MDAs), CER calls
 ms.assetid: c4577410-602e-44e5-9dab-fea7c55bcdfe
-caps.latest.revision: "14"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c77c49fef5657d5f69538285149e458209ee9b7c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 15f41ebd961f25979fe569fd89dd2135a0a6cd41
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="invalidcercall-mda"></a>Помощник по отладке управляемого кода invalidCERCall
 Помощник по отладке управляемого кода (MDA) `invalidCERCall` активируется при осуществляемом в графе области ограниченного исполнения (CER) вызове метода, не имеющего контракта надежности или имеющего чрезвычайно слабый контракт. Слабый контракт представляет собой контракт, который объявляет, что максимальное повреждение состояния имеет большую область, чем экземпляр, переданный в вызов, то есть <xref:System.AppDomain> или состояние процесса может быть повреждено или его результат не всегда является детерминированно вычисляемым при вызове в рамках CER.  
   
-## <a name="symptoms"></a>Признаки  
+## <a name="symptoms"></a>Симптомы  
  Неожиданные результаты при выполнении кода в CER. Признаки не являются специфическими. Это могут быть непредвиденные <xref:System.OutOfMemoryException>, <xref:System.Threading.ThreadAbortException> или другие исключения при вызове ненадежного метода, так как среда выполнения не подготовила его заранее или не защитила его от исключений <xref:System.Threading.ThreadAbortException> во время выполнения. Гораздо более серьезной угрозой является то, что любое исключение, возникающие в методе во время выполнения, может оставить <xref:System.AppDomain> или процесс в нестабильном состоянии, что противоречит цели CER. Причина, по которой создается CER, — необходимость избегать подобных повреждений состояния. Признаки поврежденного состояния связаны с конкретным приложением из-за различий определения согласованного состояния между приложениями.  
   
 ## <a name="cause"></a>Причина  

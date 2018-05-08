@@ -1,27 +1,17 @@
 ---
 title: Методы расширения (Visual Basic)
-ms.custom: ''
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.ExtensionMethods
 helpviewer_keywords:
 - extending data types [Visual Basic]
 - extension methods [Visual Basic]
 ms.assetid: b8020aae-374d-46a9-bcb7-8cc2390b93b6
-caps.latest.revision: 41
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: d3db3bc2b213b78ef2dceebcf56c9d5fbfa3016e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 1cc2ccef09dd027c6f1e82f60ed4ac5f50db6ebe
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="extension-methods-visual-basic"></a>Методы расширения (Visual Basic)
 Методы расширения позволяют разработчикам добавлять пользовательские функциональные возможности для типов данных, которые уже определены без создания нового производного типа. Методы расширения позволяют написать метод, который может вызываться, как если бы это был метод экземпляра существующего типа.  
@@ -38,7 +28,7 @@ ms.lasthandoff: 11/21/2017
   
  [!code-vb[VbVbalrExtensionMethods#1](./codesnippet/VisualBasic/extension-methods_1.vb)]  
   
- Обратите внимание, что определение метода расширения помечено атрибутом расширения `<Extension()>`. Помечать модуль, в которой определен метод является необязательным, но каждый метод расширения должен быть помечен. <xref:System.Runtime.CompilerServices>Чтобы получить доступ к атрибуту расширения должен быть импортирован.  
+ Обратите внимание, что определение метода расширения помечено атрибутом расширения `<Extension()>`. Помечать модуль, в которой определен метод является необязательным, но каждый метод расширения должен быть помечен. <xref:System.Runtime.CompilerServices> Чтобы получить доступ к атрибуту расширения должен быть импортирован.  
   
  Методы расширения могут быть объявлены только внутри модулей. Как правило модуль, в которой определен метод расширения не же модулем, в котором он вызван. Вместо этого модуля, содержащего метод расширения импортируется, если необходимо, чтобы привести его в область. После модуля, содержащего `Print` находится в области видимости, метод может быть вызван, как если бы он был обычным экземпляром метода, не принимающую аргументы, такие как `ToUpper`:  
   
@@ -48,9 +38,9 @@ ms.lasthandoff: 11/21/2017
   
  [!code-vb[VbVbalrExtensionMethods#3](./codesnippet/VisualBasic/extension-methods_3.vb)]  
   
- Метод вызывается отправкой аргумента строки для `punc`:`example.PrintAndPunctuate(".")`  
+ Метод вызывается отправкой аргумента строки для `punc`: `example.PrintAndPunctuate(".")`  
   
- В следующем примере показан `Print` и `PrintAndPunctuate` определен и вызывается. <xref:System.Runtime.CompilerServices>импортируется в модуле определения для обеспечения доступа к атрибуту расширения.  
+ В следующем примере показан `Print` и `PrintAndPunctuate` определен и вызывается. <xref:System.Runtime.CompilerServices> импортируется в модуле определения для обеспечения доступа к атрибуту расширения.  
   
 ### <a name="code"></a>Код  
   
@@ -106,7 +96,7 @@ End Module
   
 -   Структуры (типы значений)  
   
--   Интерфейсы  
+-   интерфейсов,  
   
 -   Делегаты  
   

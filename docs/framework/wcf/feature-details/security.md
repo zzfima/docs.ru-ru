@@ -1,45 +1,33 @@
 ---
 title: Безопасность Windows Communication Foundation
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - Windows Communication Foundation, programming
 - security [WCF]
 - Windows Communication Foundation, security
 ms.assetid: 7ea87fcb-dcfb-4a4a-8b03-6b954575d45b
-caps.latest.revision: 21
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: 6b93bfff2cd97e10d9c0dba4373839337f36aacb
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: fb48ae39d269f21a7120ecf143dc4c4680efe39d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="windows-communication-foundation-security"></a>Безопасность Windows Communication Foundation
-В подразделах этого раздела описываются средства безопасности [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и способы их использования для защиты сообщений.  
+В этом разделе описываются средства безопасности Windows Communication Foundation (WCF) и способ их использования для защиты сообщений.  
   
  Дополнительные сведения о Windows Server AppFabric и безопасности см. в разделе [безопасности модели для Windows Server AppFabric](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)  
   
 ## <a name="in-this-section"></a>В этом разделе  
  [Общие сведения о безопасности](../../../../docs/framework/wcf/feature-details/security-overview.md)  
- Описание средств безопасности [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ Описывает средства безопасности в WCF.  
   
  [Основные понятия безопасности](../../../../docs/framework/wcf/feature-details/security-concepts.md)  
- Основная терминология и основные понятия, связанные с функциями безопасности [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ Описывает основные термины и понятия, используемые в системе безопасности WCF.  
   
  [Типовые сценарии безопасности](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md)  
- Описание сценариев и топологий, конфигурируемых в [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ Описание сценариев и топологий, которые можно настроить с помощью WCF.  
   
  [Поведения безопасности](../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)  
  Общие сведения о поведении WCF, которые оказывают влияние на безопасность, например на настройки учетных данных.  
@@ -48,7 +36,7 @@ ms.lasthandoff: 04/30/2018
  Описание привязок с точки зрения безопасности, в том числе демонстрация создания настраиваемых привязок безопасности.  
   
  [Защита служб и клиентов](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
- Принципы защиты сообщений с помощью функций безопасности [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ Описание способов защиты сообщений с помощью средств безопасности WCF.  
   
  [Проверка подлинности](../../../../docs/framework/wcf/feature-details/authentication-in-wcf.md)  
  Примеры типичных задач, связанных с проверкой подлинности.  
@@ -60,13 +48,13 @@ ms.lasthandoff: 04/30/2018
  Основы федерации и принципы создания клиентов, взаимодействующих с федеративными серверами.  
   
  [Частичное доверие](../../../../docs/framework/wcf/feature-details/partial-trust.md)  
- Принципы выполнения сценариев с частичным доверием и ограничения [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] при выполнении с частичным доверием.  
+ Описание способов выполнения сценариев с частичным доверием и ограничения WCF при выполнении с частичным доверием.  
   
  [Аудит](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)  
  Принципы аудита событий безопасности.  
   
  [Руководство и рекомендации по безопасности](../../../../docs/framework/wcf/feature-details/security-guidance-and-best-practices.md)  
- Рекомендации по созданию защищенных приложений [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ Рекомендации по созданию безопасных приложений WCF.  
   
 ## <a name="reference"></a>Ссылка  
  <xref:System.ServiceModel>  

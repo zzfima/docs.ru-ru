@@ -1,12 +1,6 @@
 ---
 title: Оператор Xor (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Xor
 helpviewer_keywords:
@@ -20,14 +14,11 @@ helpviewer_keywords:
 - Xor keyword [Visual Basic]
 - bitwise comparison [Visual Basic]
 ms.assetid: 036000a9-3934-4e7f-a9d0-a816de3d84a6
-caps.latest.revision: 17
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: b14f11f2df2df9c29e88e9188390cfe245d2cb58
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 34d317da5d85127e371c2df7229e0f0873972f50
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="xor-operator-visual-basic"></a>Оператор Xor (Visual Basic)
 Выполняет логическое исключение над двумя `Boolean` выражений или побитовое Вычитание двух числовых выражений.  
@@ -40,13 +31,13 @@ result = expression1 Xor expression2
   
 ## <a name="parts"></a>Части  
  `result`  
- Обязательный. Любой `Boolean` или числовой переменной. Для логического сравнения `result` является логическим исключением (исключающая логическая дизъюнкция) из двух `Boolean` значения. Для битовых операций `result` является числовым значением, представляющим побитовое исключение (исключающая Побитовая дизъюнкция) из двух числовых битовых шаблонов.  
+ Обязательно. Любой `Boolean` или числовой переменной. Для логического сравнения `result` является логическим исключением (исключающая логическая дизъюнкция) из двух `Boolean` значения. Для битовых операций `result` является числовым значением, представляющим побитовое исключение (исключающая Побитовая дизъюнкция) из двух числовых битовых шаблонов.  
   
  `expression1`  
- Обязательный. Любой `Boolean` или числовое выражение.  
+ Обязательно. Любой `Boolean` или числовое выражение.  
   
  `expression2`  
- Обязательный. Любой `Boolean` или числовое выражение.  
+ Обязательно. Любой `Boolean` или числовое выражение.  
   
 ## <a name="remarks"></a>Примечания  
  Логическое сравнение `result` — `True` , только если один из `expression1` и `expression2` равен `True`. То есть, только если `expression1` и `expression2` оценки в обратном `Boolean` значения. В следующей таблице показано, как `result` определяется.  

@@ -1,27 +1,15 @@
 ---
-title: "Общие сведения о контекстном меню"
-ms.custom: 
+title: Общие сведения о контекстном меню
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - controls [WPF], Popup
 - Popup control [WPF], about Popup control
 ms.assetid: 774f53ca-bff8-470e-9ce9-3928b4cf3d4c
-caps.latest.revision: "34"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0cb20895b5af35fec7274ca4c747740390104355
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c9261e2151f116b46a0c25d8dc775bf41bf932b7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="popup-overview"></a>Общие сведения о контекстном меню
 <xref:System.Windows.Controls.Primitives.Popup> Элемент управления предоставляет способ отображения содержимого в отдельном окне, расположенном поверх текущего окна приложения относительно заданного элемента или экранных координат. В этом разделе описываются <xref:System.Windows.Controls.Primitives.Popup> управления и предоставляет сведения о его использовании.  
@@ -81,7 +69,7 @@ ms.lasthandoff: 12/22/2017
 ### <a name="popup-size"></a>Размер контекстного меню  
  По умолчанию <xref:System.Windows.Controls.Primitives.Popup> автоматическое изменение размеров на его содержимое. В случае автоматического изменения размера некоторых эффектов растрового изображения могут быть скрыты, поскольку размер по умолчанию область экрана, который определен для <xref:System.Windows.Controls.Primitives.Popup> содержимого не предоставляет достаточно места для отображения эффектов растрового изображения.  
   
- <xref:System.Windows.Controls.Primitives.Popup>содержимое может быть скрыто при установке <xref:System.Windows.UIElement.RenderTransform%2A> на содержимое. В этом случае часть содержимого может быть скрыт, если содержимое преобразованного <xref:System.Windows.Controls.Primitives.Popup> выходит за пределы области исходного <xref:System.Windows.Controls.Primitives.Popup>. Если эффект растрового изображения или преобразования требуется больше места, можно определить поля вокруг <xref:System.Windows.Controls.Primitives.Popup> содержимого, чтобы освободить больше площади для элемента управления.  
+ <xref:System.Windows.Controls.Primitives.Popup> содержимое может быть скрыто при установке <xref:System.Windows.UIElement.RenderTransform%2A> на содержимое. В этом случае часть содержимого может быть скрыт, если содержимое преобразованного <xref:System.Windows.Controls.Primitives.Popup> выходит за пределы области исходного <xref:System.Windows.Controls.Primitives.Popup>. Если эффект растрового изображения или преобразования требуется больше места, можно определить поля вокруг <xref:System.Windows.Controls.Primitives.Popup> содержимого, чтобы освободить больше площади для элемента управления.  
   
 <a name="DefiningPopupPosition"></a>   
 ## <a name="defining-the-popup-position"></a>Определение положения контекстного меню  

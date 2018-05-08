@@ -1,14 +1,6 @@
 ---
 title: Делегирование и олицетворение с использованием WCF
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,17 +8,11 @@ helpviewer_keywords:
 - impersonation [WCF]
 - delegation [WCF]
 ms.assetid: 110e60f7-5b03-4b69-b667-31721b8e3152
-caps.latest.revision: 40
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 8fc08c442813991b425b2bed3a0047fc5efa0d83
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 811ab308b881b5209d44612b29fb51d1c79e8bf1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="delegation-and-impersonation-with-wcf"></a>Делегирование и олицетворение с использованием WCF
 *Олицетворение* - это стандартная техника, которую службы используют для ограничения клиентского доступа к ресурсам домена службы. В роли ресурсов домена службы могут выступать ресурсы компьютера, например локальные файлы (олицетворение), или ресурсы, расположенные на другом компьютере, например общая папка (делегирование). Пример приложения см. в разделе [Impersonating the Client](../../../../docs/framework/wcf/samples/impersonating-the-client.md). Пример использования олицетворения см. в разделе [Практическое руководство. Олицетворение клиента в рамках службы](../../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md).  
@@ -40,12 +26,12 @@ ms.lasthandoff: 04/30/2018
  Для олицетворения и делегирования у клиента должно быть удостоверение Windows. Если у клиента нет удостоверения Windows, единственным решением является передача удостоверения клиента второй службе.  
   
 ## <a name="impersonation-basics"></a>Основные принципы олицетворения  
- [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] поддерживает олицетворение для различных учетных данных клиентов. В этом разделе описана поддержка модели служб для олицетворения вызывающего объекта во время реализации метода службы. Кроме того, в нем рассматриваются стандартные сценарии развертывания, включающие олицетворение и обеспечение безопасности SOAP, а также параметры [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] в этих сценариях.  
+ Windows Communication Foundation (WCF) поддерживает олицетворение для различных учетных данных клиента. В этом разделе описана поддержка модели служб для олицетворения вызывающего объекта во время реализации метода службы. Также рассматриваются стандартные сценарии развертывания, включающие олицетворение и безопасность SOAP и параметры WCF в этих сценариях.  
   
- Основной акцент в этом разделе делается на олицетворении и делегировании в [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] при использовании механизма безопасности SOAP. Олицетворение и делегирование в [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] также можно использовать при реализации безопасности транспорта, как описано в разделе [Using Impersonation with Transport Security](../../../../docs/framework/wcf/feature-details/using-impersonation-with-transport-security.md).  
+ Этот раздел посвящен олицетворении и делегировании в WCF при использовании механизма безопасности SOAP. Можно также использовать делегирования и олицетворения с WCF при использовании безопасности транспорта, как описано в [использование олицетворения с безопасностью транспорта](../../../../docs/framework/wcf/feature-details/using-impersonation-with-transport-security.md).  
   
 ## <a name="two-methods"></a>Два метода  
- Безопасность SOAP[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] поддерживает два различных метода для выполнения олицетворения. Выбор используемого метода зависит от привязки. Первый - олицетворение на основании маркера Windows, получаемого из интерфейса поставщика поддержки безопасности (SSPI) или при проверке подлинности Kerberos, который затем кэшируется службой. Второй метод - олицетворение на основании маркера Windows, получаемого из расширений Kerberos, имеющих общее имя *Service-for-User* (S4U).  
+ Безопасность WCF SOAP имеет два различных метода для выполнения олицетворения. Выбор используемого метода зависит от привязки. Первый - олицетворение на основании маркера Windows, получаемого из интерфейса поставщика поддержки безопасности (SSPI) или при проверке подлинности Kerberos, который затем кэшируется службой. Второй метод - олицетворение на основании маркера Windows, получаемого из расширений Kerberos, имеющих общее имя *Service-for-User* (S4U).  
   
 ### <a name="cached-token-impersonation"></a>Олицетворение с использованием кэшированного маркера  
  Для олицетворения с использованием кэшированного маркера используются следующие элементы:  
@@ -73,7 +59,7 @@ ms.lasthandoff: 04/30/2018
 >  Если клиент и служба выполняются на одном компьютере и клиент выполняется от имени системной учетной записи (например, `Local System` или `Network Service`), клиент невозможно олицетворить, если установлен безопасный сеанс с маркерами контекста безопасности с отслеживанием состояния. Приложения Windows Form и консольные приложения обычно выполняются от имени учетной записи находящегося в системе пользователя, поэтому эту учетную запись можно олицетворять по умолчанию. Если же клиент представляет собой страницу [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] , которая размещена в службах [!INCLUDE[iis601](../../../../includes/iis601-md.md)] или [!INCLUDE[iisver](../../../../includes/iisver-md.md)], то клиент по умолчанию выполняется от имени учетной записи `Network Service` . Все предоставляемые системой привязки, поддерживающие защищенные сеансы, по умолчанию используют маркеры контекста безопасности с отслеживанием состояния. Но если клиент является страницей [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] и используются защищенные сеансы с токенами контекста безопасности с отслеживанием состояния, в клиенте невозможно использовать олицетворение. Дополнительные сведения об использовании маркеров SCT с отслеживанием состояния в безопасном сеансе см. в разделе [как: создание токена контекста безопасности для безопасного сеанса](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md).  
   
 ## <a name="impersonation-in-a-service-method-declarative-model"></a>Олицетворение в методе службы: декларативная модель  
- Большинство сценариев олицетворения предполагают выполнение метода службы в контексте вызывающего объекта. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] предоставляет функцию олицетворения, упрощающую выполнение данного процесса и позволяющую пользователю задать требование олицетворения в атрибуте <xref:System.ServiceModel.OperationBehaviorAttribute> . Например, в следующем фрагменте кода инфраструктура [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] олицетворяет вызывающий объект перед вызовом метода `Hello` . Все попытки обратиться к собственным ресурсам внутри метода `Hello` окажутся успешными только в том случае, если список управления доступом (ACL) ресурса дает права на доступ вызывающему объекту. Чтобы включить олицетворение, присвойте свойству <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A> одно из значений перечисления <xref:System.ServiceModel.ImpersonationOption>: <xref:System.ServiceModel.ImpersonationOption.Required?displayProperty=nameWithType> или <xref:System.ServiceModel.ImpersonationOption.Allowed?displayProperty=nameWithType>, как показано в следующем примере.  
+ Большинство сценариев олицетворения предполагают выполнение метода службы в контексте вызывающего объекта. WCF предоставляет функцию олицетворения, который делает это легко сделать, позволяющую пользователю задать требование олицетворения в <xref:System.ServiceModel.OperationBehaviorAttribute> атрибута. Например, в следующем коде инфраструктура WCF олицетворяет вызывающий объект перед вызовом `Hello` метод. Все попытки обратиться к собственным ресурсам внутри метода `Hello` окажутся успешными только в том случае, если список управления доступом (ACL) ресурса дает права на доступ вызывающему объекту. Чтобы включить олицетворение, присвойте свойству <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A> одно из значений перечисления <xref:System.ServiceModel.ImpersonationOption>: <xref:System.ServiceModel.ImpersonationOption.Required?displayProperty=nameWithType> или <xref:System.ServiceModel.ImpersonationOption.Allowed?displayProperty=nameWithType>, как показано в следующем примере.  
   
 > [!NOTE]
 >  Если у службы имеется больше прав, чем у удаленного клиента, то используются учетные данные службы, если свойство <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A> имеет значение <xref:System.ServiceModel.ImpersonationOption.Allowed>. Это значит, что если пользователь с более узкими правами предоставляет свои учетные данные, то метод выполняется с более широкими правами службы, и пользователь получает доступ к ресурсам, доступ к которым он бы сам получить не смог.  
@@ -81,7 +67,7 @@ ms.lasthandoff: 04/30/2018
  [!code-csharp[c_ImpersonationAndDelegation#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_impersonationanddelegation/cs/source.cs#1)]
  [!code-vb[c_ImpersonationAndDelegation#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_impersonationanddelegation/vb/source.vb#1)]  
   
- Инфраструктура [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] может олицетворять вызывающий объект, только если вызывающий объект проходит проверку подлинности с учетными данными, которые можно сопоставить с учетной записью пользователя Windows. Если служба настроена на прохождение проверки подлинности с использованием учетных данных, которые невозможно сопоставить с учетной записью Windows, метод службы не выполняется.  
+ Инфраструктура WCF может олицетворять вызывающий объект только в том случае, если вызывающий объект проходит проверку подлинности с учетными данными, которые можно сопоставить с учетной записью пользователя Windows. Если служба настроена на прохождение проверки подлинности с использованием учетных данных, которые невозможно сопоставить с учетной записью Windows, метод службы не выполняется.  
   
 > [!NOTE]
 >  В [!INCLUDE[wxp](../../../../includes/wxp-md.md)]происходит сбой олицетворения, если создается маркер контекста безопасности с отслеживанием состояния, что приводит к появлению исключения <xref:System.InvalidOperationException>. Дополнительные сведения см. в разделе [неподдерживаемые сценарии](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md).  
@@ -101,14 +87,14 @@ ms.lasthandoff: 04/30/2018
  [!code-csharp[c_ImpersonationAndDelegation#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_impersonationanddelegation/cs/source.cs#3)]
  [!code-vb[c_ImpersonationAndDelegation#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_impersonationanddelegation/vb/source.vb#3)]  
   
- В следующей таблице описана функциональность [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] для всех возможных сочетаний значений `ImpersonationOption` и `ImpersonateCallerForAllServiceOperations`.  
+ В следующей таблице описывается поведение WCF для всех возможных сочетаний значений `ImpersonationOption` и `ImpersonateCallerForAllServiceOperations`.  
   
 |`ImpersonationOption`|`ImpersonateCallerForAllServiceOperations`|Поведение|  
 |---------------------------|------------------------------------------------|--------------|  
-|Обязательно|Н/Д|[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] олицетворяет вызывающий объект|  
-|Allowed|False|[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] не олицетворяет вызывающий объект|  
-|Allowed|true|[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] олицетворяет вызывающий объект|  
-|NotAllowed|False|[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] не олицетворяет вызывающий объект|  
+|Обязательно|Н/Д|Олицетворяет вызывающую сторону WCF|  
+|Allowed|False|WCF не олицетворяет вызывающий объект|  
+|Allowed|true|Олицетворяет вызывающую сторону WCF|  
+|NotAllowed|False|WCF не олицетворяет вызывающий объект|  
 |NotAllowed|true|Disallowed. (Создается исключение <xref:System.InvalidOperationException> .)|  
   
 ## <a name="impersonation-level-obtained-from-windows-credentials-and-cached-token-impersonation"></a>Уровень олицетворения, получаемый на основании учетных данных Windows, и олицетворение с использованием кэшированного маркера  
@@ -136,7 +122,7 @@ ms.lasthandoff: 04/30/2018
 |Делегирование|Нет|Н/Д|Идентификация|  
   
 ## <a name="impersonation-level-obtained-from-user-name-credentials-and-cached-token-impersonation"></a>Уровень олицетворения, получаемый на основании учетных данных имени пользователя, и олицетворение с использованием кэшированного маркера  
- Передавая службе имя пользователя и пароль, клиент позволяет среде [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] выполнять вход от имени этого пользователя, что эквивалентно установке свойства `AllowedImpersonationLevel` равным <xref:System.Security.Principal.TokenImpersonationLevel.Delegation>. (Свойство `AllowedImpersonationLevel` доступно в классах <xref:System.ServiceModel.Security.WindowsClientCredential> и <xref:System.ServiceModel.Security.HttpDigestClientCredential>.) В следующей таблице указаны уровни олицетворения, реализуемые, когда служба получает учетные данные имени пользователя.  
+ Передавая службе имя пользователя и пароль, клиент позволяет WCF на вход в качестве этого пользователя, что эквивалентно заданию для `AllowedImpersonationLevel` свойства <xref:System.Security.Principal.TokenImpersonationLevel.Delegation>. (Свойство `AllowedImpersonationLevel` доступно в классах <xref:System.ServiceModel.Security.WindowsClientCredential> и <xref:System.ServiceModel.Security.HttpDigestClientCredential>.) В следующей таблице указаны уровни олицетворения, реализуемые, когда служба получает учетные данные имени пользователя.  
   
 |`AllowedImpersonationLevel`|У службы есть `SeImpersonatePrivilege`|Служба и клиент поддерживают делегирование|Кэшированный маркер `ImpersonationLevel`|  
 |---------------------------------|------------------------------------------|--------------------------------------------------|---------------------------------------|  

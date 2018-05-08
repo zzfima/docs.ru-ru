@@ -1,23 +1,12 @@
 ---
-title: "Создание асинхронных действий в WF"
-ms.custom: 
+title: Создание асинхронных действий в WF
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 497e81ed-5eef-460c-ba55-fae73c05824f
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 1d06f825b96f66e35bdd30db272b99bb4e2e3e1e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8df876c9be020ece29683d1c101a4045b1c76322
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="creating-asynchronous-activities-in-wf"></a>Создание асинхронных действий в WF
 Класс <xref:System.Activities.AsyncCodeActivity> предоставляет авторам действий базовый класс, обеспечивающий реализацию логики асинхронного выполнения в производных от него действиях. Это особенно полезно для пользовательских действий, которые должны выполнять работу асинхронно, не останавливая поток расписания рабочих процессов и не блокируя другие действия, которые могут выполняться параллельно. В данном разделе приводятся общие сведения о процессе создания пользовательских асинхронных действий с использованием <xref:System.Activities.AsyncCodeActivity>.  
@@ -26,7 +15,7 @@ ms.lasthandoff: 12/22/2017
  <xref:System.Activities?displayProperty=nameWithType> предоставляет авторам пользовательских действий различные базовые классы для различных требований, предъявляемых при создании действий. Каждый класс имеет определенную семантику и предоставляет автору рабочего процесса (и среде выполнения действия) соответствующий контракт. Действие, основанное на <xref:System.Activities.AsyncCodeActivity> - это действие, выполняющее работу асинхронно относительно потока планировщика, а логика выполнения такого действия выражена в управляемом коде. Вследствие асинхронности <xref:System.Activities.AsyncCodeActivity> может вызывать точку бездействия во время выполнения. В силу изменчивого характера асинхронной работы <xref:System.Activities.AsyncCodeActivity> всегда создает несохраняемый блок на время выполнения действия. Это позволяет защитить среду выполнения рабочего процесса от сохранения экземпляра рабочего процесса во время выполнения асинхронной работы, а также предотвратить выгрузку экземпляра рабочего процесса во время выполнения асинхронного кода.  
   
 ### <a name="asynccodeactivity-methods"></a>Методы AsyncCodeActivity  
- Действия, производные от <xref:System.Activities.AsyncCodeActivity>, могут создавать логику асинхронного выполнения перепрограммированием метода <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> и методов интерфейса <xref:System.Activities.AsyncCodeActivity.EndExecute%2A>. При вызове средой выполнения эти методы передаются <xref:System.Activities.AsyncCodeActivityContext>. <xref:System.Activities.AsyncCodeActivityContext>позволяет автору действия обеспечить общее состояние между <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> /  <xref:System.Activities.AsyncCodeActivity.EndExecute%2A> в контексте <xref:System.Activities.AsyncCodeActivityContext.UserState%2A> свойство. В следующем примере действие `GenerateRandom` асинхронно формирует случайное число.  
+ Действия, производные от <xref:System.Activities.AsyncCodeActivity>, могут создавать логику асинхронного выполнения перепрограммированием метода <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> и методов интерфейса <xref:System.Activities.AsyncCodeActivity.EndExecute%2A>. При вызове средой выполнения эти методы передаются <xref:System.Activities.AsyncCodeActivityContext>. <xref:System.Activities.AsyncCodeActivityContext> позволяет автору действия обеспечить общее состояние между <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> /  <xref:System.Activities.AsyncCodeActivity.EndExecute%2A> в контексте <xref:System.Activities.AsyncCodeActivityContext.UserState%2A> свойство. В следующем примере действие `GenerateRandom` асинхронно формирует случайное число.  
   
  [!code-csharp[CFX_ActivityExample#8](../../../samples/snippets/csharp/VS_Snippets_CFX/CFX_ActivityExample/cs/Program.cs#8)]  
   

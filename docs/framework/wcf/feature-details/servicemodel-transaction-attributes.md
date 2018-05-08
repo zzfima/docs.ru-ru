@@ -1,31 +1,17 @@
 ---
-title: "Атрибуты транзакции ServiceModel"
-ms.custom: 
+title: Атрибуты транзакции ServiceModel
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - transactions [WCF], ServiceModel attributes
 ms.assetid: 1e0d2436-6ae5-439b-9765-a448d6f60000
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: aac52f3c542f88adbca40c6cbbdddc734e12903b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 79d97eee328d816281348b5b15cf779e1ee65893
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="servicemodel-transaction-attributes"></a>Атрибуты транзакции ServiceModel
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] предоставляет свойства в трех стандартных атрибутах <xref:System.ServiceModel>, которые позволяют настроить поведение транзакций для службы [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]:  
+Windows Communication Foundation (WCF) предоставляет свойства в трех стандартных <xref:System.ServiceModel> атрибутов, которые позволяют настраивать поведение транзакций для службы WCF:  
   
 -   <xref:System.ServiceModel.TransactionFlowAttribute>  
   
@@ -50,7 +36,7 @@ ms.lasthandoff: 12/22/2017
 -   <xref:System.ServiceModel.ServiceBehaviorAttribute.TransactionTimeout%2A> задает период времени, в течение которого созданная в службе новая транзакция должна быть завершена. Если по истечении этого времени транзакция не завершена, она будет прервана. Структура <xref:System.TimeSpan> используется в качестве времени ожидания <xref:System.Transactions.TransactionScope> для любых операций, у которых свойству <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionScopeRequired%2A> присвоено значение `true` и для которых была создана новая транзакция. Время ожидания - это максимально допустимый промежуток от создания транзакции до завершения фазы 1 в протоколе двухфазной фиксации. В качестве времени ожидания всегда используется меньшее из значений свойства <xref:System.ServiceModel.ServiceBehaviorAttribute.TransactionTimeout%2A> и параметра конфигурации `transactionTimeout`.  
   
 ## <a name="operationbehaviorattribute"></a>OperationBehaviorAttribute  
- Атрибут <xref:System.ServiceModel.OperationBehaviorAttribute> задает расширения функциональности методов в реализации службы. Его можно использовать для задания конкретного поведения выполнения операции. Свойства этого атрибута не влияют на описание контракта службы на языке WSDL и представляют собой исключительно элементы модели программирования [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], обеспечивающие стандартные функции, которые разработчикам в противном случае пришлось бы реализовывать самостоятельно.  
+ Атрибут <xref:System.ServiceModel.OperationBehaviorAttribute> задает расширения функциональности методов в реализации службы. Его можно использовать для задания конкретного поведения выполнения операции. Свойства этого атрибута не влияют на описание языка описания веб-служб (WSDL) для контракта службы и представляют собой исключительно элементы модели программирования WCF, обеспечивающие стандартные функции, что разработчики в противном случае пришлось бы реализовывать самостоятельно.  
   
  Этот атрибут имеет следующие относящиеся к транзакциям свойства.  
   

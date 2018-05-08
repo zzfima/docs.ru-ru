@@ -1,13 +1,6 @@
 ---
-title: "Общие сведения об отрисовке графики в WPF"
-ms.custom: 
+title: Общие сведения об отрисовке графики в WPF
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - graphics [WPF], rendering
 - rendering graphics [WPF]
 ms.assetid: 6dec9657-4d8c-4e46-8c54-40fb80008265
-caps.latest.revision: "51"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: cfb9a546ca33b848fbbcbd114951eddc5b000663
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 305af1025abb98950d90f46e75a9f261704a8ebe
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wpf-graphics-rendering-overview"></a>Общие сведения об отрисовке графики в WPF
 В этом разделе приведены общие сведения о визуальном слое [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Этот раздел посвящен роль <xref:System.Windows.Media.Visual> класса для подготовки к просмотру поддержку в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] модели.  
@@ -58,7 +46,7 @@ ms.lasthandoff: 12/22/2017
   
 -   Глобализация  
   
- <xref:System.Windows.Media.Visual>предоставляется как открытый абстрактный класс, от которого должны наследоваться дочерними классами. На следующем рисунке показана иерархия визуальных объектов, которые предоставляются в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
+ <xref:System.Windows.Media.Visual> предоставляется как открытый абстрактный класс, от которого должны наследоваться дочерними классами. На следующем рисунке показана иерархия визуальных объектов, которые предоставляются в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
   
  ![Схема классов, производных от объекта Visual](../../../../docs/framework/wpf/graphics-multimedia/media/visualclass01.png "VisualClass01")  
 Иерархия класса Visual  
@@ -75,7 +63,7 @@ ms.lasthandoff: 12/22/2017
 ### <a name="drawing-content-in-visual-objects"></a>Рисование содержимого в объектах Visual  
  Объект <xref:System.Windows.Media.Visual> объект хранит данные отрисовки как **списка инструкций векторной графики**. Каждый элемент в списке инструкций представляет низкоуровневый набор графических данных и связанных ресурсов в сериализованном формате. Существует четыре различных типа данных отрисовки, которые могут включать графическое содержимое.  
   
-|Тип содержимого для отрисовки|Описание:|  
+|Тип содержимого для отрисовки|Описание|  
 |--------------------------|-----------------|  
 |Векторная графика|Представляет векторные графические данные и все связанные <xref:System.Windows.Media.Brush> и <xref:System.Windows.Media.Pen> сведения.|  
 |Изображение|Представляет изображение в пределах области, определяемой <xref:System.Windows.Rect>.|  
@@ -86,7 +74,7 @@ ms.lasthandoff: 12/22/2017
   
  При создании [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] элемента управления, такого как <xref:System.Windows.Controls.Button>, элемент управления неявно создает данные визуализации для рисования самого себя. Например, установка <xref:System.Windows.Controls.ContentControl.Content%2A> свойство <xref:System.Windows.Controls.Button> элемент управления сохраняет визуальное представление глифа.  
   
- Объект <xref:System.Windows.Media.Visual> описывает свое содержимое в виде одной или нескольких <xref:System.Windows.Media.Drawing> объектов, содержащихся в <xref:System.Windows.Media.DrawingGroup>. Объект <xref:System.Windows.Media.DrawingGroup> также описывает маски непрозрачности, преобразования, эффекты растрового изображения и другие операции, которые применяются к его содержимому. <xref:System.Windows.Media.DrawingGroup>При отображении содержимого операции, применяются в следующем порядке: <xref:System.Windows.Media.DrawingGroup.OpacityMask%2A>, <xref:System.Windows.Media.DrawingGroup.Opacity%2A>, <xref:System.Windows.Media.DrawingGroup.BitmapEffect%2A>, <xref:System.Windows.Media.DrawingGroup.ClipGeometry%2A>, <xref:System.Windows.Media.DrawingGroup.GuidelineSet%2A>, а затем <xref:System.Windows.Media.DrawingGroup.Transform%2A>.  
+ Объект <xref:System.Windows.Media.Visual> описывает свое содержимое в виде одной или нескольких <xref:System.Windows.Media.Drawing> объектов, содержащихся в <xref:System.Windows.Media.DrawingGroup>. Объект <xref:System.Windows.Media.DrawingGroup> также описывает маски непрозрачности, преобразования, эффекты растрового изображения и другие операции, которые применяются к его содержимому. <xref:System.Windows.Media.DrawingGroup> При отображении содержимого операции, применяются в следующем порядке: <xref:System.Windows.Media.DrawingGroup.OpacityMask%2A>, <xref:System.Windows.Media.DrawingGroup.Opacity%2A>, <xref:System.Windows.Media.DrawingGroup.BitmapEffect%2A>, <xref:System.Windows.Media.DrawingGroup.ClipGeometry%2A>, <xref:System.Windows.Media.DrawingGroup.GuidelineSet%2A>, а затем <xref:System.Windows.Media.DrawingGroup.Transform%2A>.  
   
  Ниже показан порядок, в котором <xref:System.Windows.Media.DrawingGroup> операции, применяемые во время отрисовки последовательности.  
   

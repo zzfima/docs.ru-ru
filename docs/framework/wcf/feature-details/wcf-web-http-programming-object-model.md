@@ -1,29 +1,15 @@
 ---
 title: Объектная модель программирования WCF Web HTTP
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: ed96b5fc-ca2c-4b0d-bdba-d06b77c3cb2a
-caps.latest.revision: 40
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 7bf6512be6fabb87797fb6338f64320d5787d547
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 412f3cb8aa0fcbb491bb9aeee907f848d272b847
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wcf-web-http-programming-object-model"></a>Объектная модель программирования WCF Web HTTP
-Модель программирования WCF WEB HTTP позволяет разработчикам предоставлять доступ к веб-службам [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] через базовые HTTP-запросы, не требуя использования SOAP. Модель программирования WCF WEB HTTP построена на базе существующей модели расширяемости [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Она определяет следующие классы.  
+Модель программирования HTTP WCF WEB позволяет разработчикам предоставлять веб-службы Windows Communication Foundation (WCF) службы через базовые HTTP-запросы, не требуя использования SOAP. Модель программирования HTTP WCF WEB построено на основе существующей модели расширяемости WCF. Она определяет следующие классы.  
   
  **Модель программирования.**  
   
@@ -81,10 +67,10 @@ ms.lasthandoff: 04/30/2018
 |`UriTemplate`|Задает шаблон универсального кода ресурса (URI), который определяет, какие запросы GET сопоставляются с операцией службы, к которой относится атрибут.|  
   
 ## <a name="uritemplate"></a>UriTemplate  
- Класс <xref:System.UriTemplate> позволяет определить набор кодов URI с одинаковой структурой. Шаблоны состоят из двух частей: путь и запрос. Путь состоит из серии сегментов, разделенных косой чертой (/). Каждый сегмент может иметь литеральное значение, значение переменной (заключенное в фигурные скобки [{}], в соответствии с содержимым ровно один сегмент) или подстановочный знак (звездочка [\*], совпадающий «оставшуюся часть пути»), который должен отображаться в в конец пути. Выражение запроса можно полностью опустить. Если оно указано, оно задает неупорядоченную серию пар «имя-значение». Элементами выражения запроса могут быть либо литеральные пары (? x = 2) либо пары переменных (? x = {*значение*}). Непарные значения не допускаются. <xref:System.UriTemplate> используется внутри моделью программирования WEB HTTP [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] для сопоставления отдельных или групповых URI с операциями службы.  
+ Класс <xref:System.UriTemplate> позволяет определить набор кодов URI с одинаковой структурой. Шаблоны состоят из двух частей: путь и запрос. Путь состоит из серии сегментов, разделенных косой чертой (/). Каждый сегмент может иметь литеральное значение, значение переменной (заключенное в фигурные скобки [{}], в соответствии с содержимым ровно один сегмент) или подстановочный знак (звездочка [\*], совпадающий «оставшуюся часть пути»), который должен отображаться в в конец пути. Выражение запроса можно полностью опустить. Если оно указано, оно задает неупорядоченную серию пар «имя-значение». Элементами выражения запроса могут быть либо литеральные пары (? x = 2) либо пары переменных (? x = {*значение*}). Непарные значения не допускаются. <xref:System.UriTemplate> используется внутренним образом модель программирования HTTP WCF WEB для сопоставления отдельных или групповых URI с операциями службы.  
   
 ## <a name="uritemplatetable"></a>UriTemplateTable  
- Класс <xref:System.UriTemplateTable> представляет собой ассоциативный набор объектов <xref:System.UriTemplate>, привязанных к объекту, выбранному разработчиком. Он позволяет сопоставлять потенциальные универсальные идентификаторы ресурсов (URI) с содержащимися в наборе шаблонами и извлекать данные, связанные с шаблонами, для которых обнаружено соответствие. <xref:System.UriTemplateTable> используется внутри моделью программирования WEB HTTP [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] для сопоставления отдельных или групповых URI с операциями службы.  
+ Класс <xref:System.UriTemplateTable> представляет собой ассоциативный набор объектов <xref:System.UriTemplate>, привязанных к объекту, выбранному разработчиком. Он позволяет сопоставлять потенциальные универсальные идентификаторы ресурсов (URI) с содержащимися в наборе шаблонами и извлекать данные, связанные с шаблонами, для которых обнаружено соответствие. <xref:System.UriTemplateTable> используется внутренним образом модель программирования HTTP WCF WEB для сопоставления отдельных или групповых URI с операциями службы.  
   
 ## <a name="webservicehost"></a>WebServiceHost  
  <xref:System.ServiceModel.Web.WebServiceHost> расширяет <xref:System.ServiceModel.ServiceHost>, чтобы было проще размещать веб-службы, не использующие протокол SOAP. Если объект <xref:System.ServiceModel.Web.WebServiceHost> не обнаруживает конечные точки в описании службы, он автоматически создает конечную точку по умолчанию по базовому адресу службы. При создании конечной точки HTTP по умолчанию <xref:System.ServiceModel.Web.WebServiceHost> также отключает страницу справки HTTP и функцию GET языка WSDL, чтобы конечная точка метаданных не мешала конечной точке HTTP по умолчанию. <xref:System.ServiceModel.Web.WebServiceHost> также гарантирует, что все конечные точки, использующие <xref:System.ServiceModel.WebHttpBinding>, имеют требуемое вложение <xref:System.ServiceModel.Description.WebHttpBehavior>. Наконец <xref:System.ServiceModel.Web.WebServiceHost> автоматически настраивает привязку конечной точки для работы со связанными параметрами безопасности IIS при использовании в защищенном виртуальном каталоге.  
@@ -98,7 +84,7 @@ ms.lasthandoff: 04/30/2018
 ### <a name="extending-webhttpbehavior"></a>Расширение WebHttpBehavior  
  Класс <xref:System.ServiceModel.Description.WebHttpBehavior> можно расширить с помощью нескольких виртуальных методов: <xref:System.ServiceModel.Description.WebHttpBehavior.GetOperationSelector%28System.ServiceModel.Description.ServiceEndpoint%29>, <xref:System.ServiceModel.Description.WebHttpBehavior.GetReplyClientFormatter%28System.ServiceModel.Description.OperationDescription%2CSystem.ServiceModel.Description.ServiceEndpoint%29>, <xref:System.ServiceModel.Description.WebHttpBehavior.GetRequestClientFormatter%28System.ServiceModel.Description.OperationDescription%2CSystem.ServiceModel.Description.ServiceEndpoint%29>, <xref:System.ServiceModel.Description.WebHttpBehavior.GetReplyDispatchFormatter%28System.ServiceModel.Description.OperationDescription%2CSystem.ServiceModel.Description.ServiceEndpoint%29> и <xref:System.ServiceModel.Description.WebHttpBehavior.GetRequestDispatchFormatter%28System.ServiceModel.Description.OperationDescription%2CSystem.ServiceModel.Description.ServiceEndpoint%29>. Разработчики могут создать производный класс для <xref:System.ServiceModel.Description.WebHttpBehavior> и переопределить эти методы, чтобы изменить поведение по умолчанию.  
   
- <xref:System.ServiceModel.Description.WebScriptEnablingBehavior> - пример расширения <xref:System.ServiceModel.Description.WebHttpBehavior>. <xref:System.ServiceModel.Description.WebScriptEnablingBehavior> позволяет конечным точкам [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] получать HTTP-запросы от браузерного клиента ASP.NET AJAX. [AJAX службы с помощью HTTP POST](../../../../docs/framework/wcf/samples/ajax-service-using-http-post.md) приведен пример использования этой точки расширяемости.  
+ <xref:System.ServiceModel.Description.WebScriptEnablingBehavior> - пример расширения <xref:System.ServiceModel.Description.WebHttpBehavior>. <xref:System.ServiceModel.Description.WebScriptEnablingBehavior> включает конечные точки Windows Communication Foundation (WCF) для получения HTTP-запросы от клиента ASP.NET AJAX на основе браузера. [AJAX службы с помощью HTTP POST](../../../../docs/framework/wcf/samples/ajax-service-using-http-post.md) приведен пример использования этой точки расширяемости.  
   
 > [!WARNING]
 >  При использовании <xref:System.ServiceModel.Description.WebScriptEnablingBehavior><xref:System.UriTemplate> не поддерживаются внутри атрибутов <xref:System.ServiceModel.Web.WebGetAttribute> или <xref:System.ServiceModel.Web.WebInvokeAttribute>.  
@@ -107,10 +93,10 @@ ms.lasthandoff: 04/30/2018
  Класс <xref:System.ServiceModel.Dispatcher.WebHttpDispatchOperationSelector> использует классы <xref:System.UriTemplate> и <xref:System.UriTemplateTable> для распределения вызовов по операциям службы.  
   
 ## <a name="compatibility"></a>Совместимость  
- Модель программирования [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] WEB HTTP не использует сообщения SOAP и поэтому не поддерживает протоколы WS-*. Тем не менее один контракт можно представить двумя различными конечными точками, одна из которых будет использовать протокол SOAP, а другая не будет. В разделе [как: предоставление контрактов SOAP и веб-клиентов,](../../../../docs/framework/wcf/feature-details/how-to-expose-a-contract-to-soap-and-web-clients.md) в качестве примера.  
+ Модель программирования HTTP WCF WEB не использует SOAP-сообщения и поэтому не поддерживает WS-* протоколы. Тем не менее один контракт можно представить двумя различными конечными точками, одна из которых будет использовать протокол SOAP, а другая не будет. В разделе [как: предоставление контрактов SOAP и веб-клиентов,](../../../../docs/framework/wcf/feature-details/how-to-expose-a-contract-to-soap-and-web-clients.md) в качестве примера.  
   
 ## <a name="security"></a>Безопасность  
- Поскольку модель программирования WEB HTTP [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] не поддерживает WS-*протоколы, единственным способом защиты веб-службы, построенной по модели программирования WEB HTTP [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], является предоставление вашей службы, использующей SSL-сертификат. Дополнительные сведения о настройке SSL с [!INCLUDE[iisver](../../../../includes/iisver-md.md)] разделе [реализация протокола SSL в IIS](http://go.microsoft.com/fwlink/?LinkId=131613)  
+ Поскольку модель программирования HTTP WCF WEB не поддерживает WS-* протоколы, единственным способом защиты веб-службы, лежит модель программирования HTTP WCF WEB является предоставление вашей службы, с помощью протокола SSL. Дополнительные сведения о настройке SSL с [!INCLUDE[iisver](../../../../includes/iisver-md.md)] разделе [реализация протокола SSL в IIS](http://go.microsoft.com/fwlink/?LinkId=131613)  
   
 ## <a name="see-also"></a>См. также  
  <xref:System.ServiceModel.WebHttpBinding>  

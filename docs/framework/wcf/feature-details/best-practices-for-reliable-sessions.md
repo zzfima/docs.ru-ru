@@ -1,24 +1,12 @@
 ---
-title: "Рекомендации по работе с надежными сеансами"
-ms.custom: 
+title: Рекомендации по работе с надежными сеансами
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: b94f6e01-8070-40b6-aac7-a2cb7b4cb4f2
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c022db62103826aa89e9035fd36c050d1f7c0f84
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1d9671e7e3124d535b66de8cd8468f76dcb32b10
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="best-practices-for-reliable-sessions"></a>Рекомендации по работе с надежными сеансами
 
@@ -26,7 +14,7 @@ ms.lasthandoff: 12/22/2017
 
 ## <a name="setting-maxtransferwindowsize"></a>Установка MaxTransferWindowSize
 
-Надежные сеансы в [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] используют окно передачи для хранения сообщений в клиенте или в службе. Настраиваемое свойство <xref:System.ServiceModel.Channels.ReliableSessionBindingElement.MaxTransferWindowSize%2A> указывает количество сообщений, которое может храниться в окне передачи.
+Надежные сеансы в Windows Communication Foundation (WCF) используют окно передачи для хранения сообщений на стороне клиента и службы. Настраиваемое свойство <xref:System.ServiceModel.Channels.ReliableSessionBindingElement.MaxTransferWindowSize%2A> указывает количество сообщений, которое может храниться в окне передачи.
 
 На стороне отправителя это указывает количество сообщений, которые могут храниться в окне передачи во время ожидания подтверждения; на стороне получателя оно указывает количество сообщений в буфер для службы.
 
@@ -56,7 +44,7 @@ ms.lasthandoff: 12/22/2017
 
 *Поток управления* — это механизм, который гарантирует, что отправитель и получатель не отставать друг с другом, т. е. сообщения принимаются и ответных быстрое время они созданы. Размер окна передачи со стороны клиента и службы гарантирует, что отправитель и получатель находятся в разумном окне синхронизации.
 
-Настоятельно рекомендуется задать для свойства <xref:System.ServiceModel.Channels.ReliableSessionBindingElement.FlowControlEnabled%2A> для `true` при использовании надежного сеанса между [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] клиента и [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] службы.
+Настоятельно рекомендуется задать для свойства <xref:System.ServiceModel.Channels.ReliableSessionBindingElement.FlowControlEnabled%2A> для `true` при использовании надежного сеанса между клиентом WCF и службы WCF.
 
 ## <a name="setting-maxpendingchannels"></a>Установка MaxPendingChannels
 

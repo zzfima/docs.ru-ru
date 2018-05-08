@@ -1,6 +1,12 @@
- ---
-Заголовок: ms.custom «Библиотека действий»:»» ms.date: ms.prod «03/30/2017 г.»: ms.reviewer «.net framework»:»» ms.suite:»» ms.tgt_pltfrm:»» ms.topic: «статьи «ms.assetid: 5323e9d4-71d6-47eb-bfa6-31feac62044d caps.latest.revision: 7 Автор: «dotnet роботов "ms.author: «dotnetcontent» диспетчер: ms.workload «wpickett»: 
-  - «dotnet»
+---
+title: Библиотека действий
+ms.date: 03/30/2017
+ms.assetid: 5323e9d4-71d6-47eb-bfa6-31feac62044d
+ms.openlocfilehash: 75a7f0203b27e331f9c33fa95be7f6fb95354b7b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="activity-library"></a>Библиотека действий
 Этот раздел содержит образцы, демонстрирующие дополнительные пользовательские действия в Windows Workflow Foundation (WF).  

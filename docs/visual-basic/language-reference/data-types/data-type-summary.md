@@ -1,10 +1,6 @@
 ---
-title: "Сводка типов данных (Visual Basic)"
+title: Сводка типов данных (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - Boolean data type [Visual Basic], supported types in Visual Basic
 - storage [Visual Basic], order of storage
@@ -41,14 +37,11 @@ helpviewer_keywords:
 - storage order, controlling in Visual Basic
 - data types [Visual Basic], memory requirements
 ms.assetid: e975cdb6-64d8-4a4a-ae27-f3b3ed198ae0
-caps.latest.revision: "22"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: f69a112718eed7bb7baaff9bdffd110865c21081
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 8afeba3f88c4bfe6e1c9777f950c3b458665e340
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="data-type-summary-visual-basic"></a>Сводка типов данных (Visual Basic)
 В следующей таблице показаны типы данных Visual Basic, их вспомогательные типами среды CLR, их выделение номинальный хранилища и их диапазоны значений.  
@@ -63,11 +56,11 @@ ms.lasthandoff: 11/21/2017
 |[Двойные](../../../visual-basic/language-reference/data-types/double-data-type.md) (двойной точности с плавающей запятой)|<xref:System.Double>|8 байт|-1, 79769313486231570E + 308 до - 4.94065645841246544E-324 <sup>†</sup> для отрицательных значений;<br /><br /> 4.94065645841246544E-324 до 1, 79769313486231570E + 308 <sup>†</sup> для положительных значений|  
 |[Integer](../../../visual-basic/language-reference/data-types/integer-data-type.md)|<xref:System.Int32>|4 байта|от -2147483648 до 2 147 483 647 (со знаком)|  
 |[Длинное](../../../visual-basic/language-reference/data-types/long-data-type.md) (длинное целое)|<xref:System.Int64>|8 байт|-9,223,372,036,854,775,808 до 9,223,372,036,854,775,807 (9.2... E + 18 <sup>†</sup>) (подписанный)|  
-|[Объект](../../../visual-basic/language-reference/data-types/object-data-type.md)|<xref:System.Object>(класс)|4 байта в 32-разрядной платформе<br /><br /> 8 байт на 64-разрядной платформе|Любой тип, которые могут храниться в переменной типа`Object`|  
+|[Объект](../../../visual-basic/language-reference/data-types/object-data-type.md)|<xref:System.Object> (класс)|4 байта в 32-разрядной платформе<br /><br /> 8 байт на 64-разрядной платформе|Любой тип, которые могут храниться в переменной типа `Object`|  
 |[SByte](../../../visual-basic/language-reference/data-types/sbyte-data-type.md)|<xref:System.SByte>|1 байт|от -128 до 127 (со знаком)|  
 |[Краткое](../../../visual-basic/language-reference/data-types/short-data-type.md) (короткое целое число)|<xref:System.Int16>|2 байта|-32 768 до 32 767 (со знаком)|  
 |[Один](../../../visual-basic/language-reference/data-types/single-data-type.md) (одинарной точности с плавающей запятой)|<xref:System.Single>|4 байта|-3, 4028235E + 38 до - 1, 401298E-45 <sup>†</sup> для отрицательных значений;<br /><br /> 1, 401298E-45 до 3, 4028235E + 38 <sup>†</sup> для положительных значений|  
-|[Строка](../../../visual-basic/language-reference/data-types/string-data-type.md) (переменной длины)|<xref:System.String>(класс)|Зависит от платформы реализации|от 0 до приблизительно 2 миллиардов знаков Юникода|  
+|[Строка](../../../visual-basic/language-reference/data-types/string-data-type.md) (переменной длины)|<xref:System.String> (класс)|Зависит от платформы реализации|от 0 до приблизительно 2 миллиардов знаков Юникода|  
 |[UInteger](../../../visual-basic/language-reference/data-types/uinteger-data-type.md)|<xref:System.UInt32>|4 байта|от 0 до 4 294 967 295 (без знака)|  
 |[ULong](../../../visual-basic/language-reference/data-types/ulong-data-type.md)|<xref:System.UInt64>|8 байт|от 0 до 18446744073709551615 (1.8... E + 19 <sup>†</sup>) (без знака)|  
 |[Определяемые пользователем](../../../visual-basic/language-reference/data-types/user-defined-data-type.md) (структура)|(наследуется от <xref:System.ValueType>)|Зависит от платформы реализации|Каждый элемент структуры имеет диапазон, определяемый по его типу данных и не зависят от диапазонов других членов|  

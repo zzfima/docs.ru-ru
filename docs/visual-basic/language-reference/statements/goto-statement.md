@@ -1,12 +1,6 @@
 ---
 title: Оператор GoTo
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.GoTo
 helpviewer_keywords:
@@ -19,14 +13,11 @@ helpviewer_keywords:
 - conditional statements [Visual Basic], GoTo statement
 - GoTo statement [Visual Basic], syntax
 ms.assetid: 313274c2-8ab3-4b9c-9ba3-0fd6798e4f6d
-caps.latest.revision: 19
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 22a6315e69cd6c797d462d0835e85bb1dde67dcc
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 27ebc677bab8b7f61a02408fddb30a6ec21c43cc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="goto-statement"></a>Оператор GoTo
 Осуществляет безусловный переход на указанную строку в процедуре.  
@@ -39,13 +30,13 @@ GoTo line
   
 ## <a name="part"></a>Отделение  
  `line`  
- Обязательный. Метка строки.  
+ Обязательно. Метка строки.  
   
 ## <a name="remarks"></a>Примечания  
  `GoTo` Оператор может выполнять переход только к строкам в процедуре, в котором он отображается. Строка должна содержать строку, метка `GoTo` могут ссылаться на. Дополнительные сведения см. в разделе [как: метка инструкции](../../../visual-basic/programming-guide/program-structure/how-to-label-statements.md).  
   
 > [!NOTE]
->  `GoTo`операторы могут сделать код трудными для понимания и обслуживания. По возможности используйте структуру управления. Дополнительные сведения см. в разделе [поток управления](../../../visual-basic/programming-guide/language-features/control-flow/index.md).  
+>  `GoTo` операторы могут сделать код трудными для понимания и обслуживания. По возможности используйте структуру управления. Дополнительные сведения см. в разделе [поток управления](../../../visual-basic/programming-guide/language-features/control-flow/index.md).  
   
  Нельзя использовать `GoTo` инструкции для выхода из блоков `For`... `Next`, `For Each`... `Next`, `SyncLock`... `End SyncLock`, `Try`... `Catch`... `Finally`, `With`... `End With`, или `Using`... `End Using` метку внутри этой конструкции.  
   
@@ -54,9 +45,9 @@ GoTo line
   
 |Блок или область|Ветвление внутрь извне|Ветвление вовне|  
 |---------------------|-------------------------------|-------------------------------|  
-|`Try`блок|Только из `Catch` блок конструирование же <sup>1</sup>|Только вовне всей конструкции|  
-|`Catch`блок|Никогда не допускается|Только вовне всей конструкции или `Try` блок конструирование же <sup>1</sup>|  
-|`Finally`блок|Никогда не допускается|Никогда не допускается|  
+|`Try` Блок|Только из `Catch` блок конструирование же <sup>1</sup>|Только вовне всей конструкции|  
+|`Catch` Блок|Никогда не допускается|Только вовне всей конструкции или `Try` блок конструирование же <sup>1</sup>|  
+|`Finally` Блок|Никогда не допускается|Никогда не допускается|  
   
  <sup>1</sup> Если один `Try`... `Catch`... `Finally` вложена в другую, `Catch` блок можно ветвление в `Try` блок в свой собственный уровень вложенности, но не в любой другой `Try` блока. Вложенный `Try`... `Catch`... `Finally` конструкции, которые должны содержаться в полностью `Try` или `Catch` блок конструирование, в течение которого он является вложенным.  
   

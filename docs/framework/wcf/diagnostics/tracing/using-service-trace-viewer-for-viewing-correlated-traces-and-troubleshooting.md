@@ -1,30 +1,18 @@
 ---
-title: "Использование программы Service Trace Viewer для просмотра скоррелированных трассировок и устранения неполадок"
-ms.custom: 
+title: Использование программы Service Trace Viewer для просмотра скоррелированных трассировок и устранения неполадок
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 05d2321c-8acb-49d7-a6cd-8ef2220c6775
-caps.latest.revision: "22"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 13c862c8191a9bc312de743fc3ed99396c600f8f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: bfc0d2c10bfdca253f2ce410a4cd38218b3f5cfe
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting"></a>Использование программы Service Trace Viewer для просмотра скоррелированных трассировок и устранения неполадок
 В этом разделе описываются формат данных трассировки, способ просмотра этих данных, а также подходы, в которых используется программа Service Trace Viewer для устранения неполадок приложения.  
   
 ## <a name="using-the-service-trace-viewer-tool"></a>Использование программы Service Trace Viewer  
- Программа Service Trace Viewer системы [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] помогает сопоставлять диагностические трассировки, создаваемые прослушивателями [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)], для выявления основной причины ошибки. Эта программа позволяет легко просматривать, группировать и фильтровать трассировки в целях диагностики, устранения и проверки неисправностей, связанных со службами [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]. Дополнительные сведения об использовании этого инструмента см. в разделе [программы Service Trace Viewer (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md).  
+ Средство просмотра трассировки службы Windows Communication Foundation (WCF) помогает сопоставлять диагностические трассировки, создаваемые [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] прослушиватели для выявления основной причины ошибки. Эта программа позволяет легко просматривать, группировать и фильтровать трассировки в целях диагностики, устранения и проверки неисправностей, связанных со службами [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]. Дополнительные сведения об использовании этого инструмента см. в разделе [программы Service Trace Viewer (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md).  
   
  В этом разделе содержатся снимки экранов трассировок, созданные при выполнении [трассировка и ведение журнала сообщений](../../../../../docs/framework/wcf/samples/tracing-and-message-logging.md) выборки, при просмотре с помощью [программы Service Trace Viewer (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md). Показывается, как интерпретировать содержимое трассировки, действия и взаимосвязь между ними, а также как анализировать большое количество трассировок при устранении неполадок.  
   

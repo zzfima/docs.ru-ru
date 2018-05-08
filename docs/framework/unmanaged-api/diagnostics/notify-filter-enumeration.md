@@ -1,14 +1,6 @@
 ---
-title: "Перечисление NOTIFY_FILTER"
-ms.custom: 
+title: Перечисление NOTIFY_FILTER
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - NOTIFY_FILTER
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: 4789d08f-8683-45d3-ac30-73d48c61e470
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: ef72cb965bec8f424f5df35d4f66715fa11a5e46
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 98c3e1ed3da209cbded5d76d938d2420fce606be
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="notifyfilter-enumeration"></a>Перечисление NOTIFY_FILTER
 Определяет обратные вызовы для функций отладчика. Дополнительные сведения см. в разделе [INotifySource2::SetNotifyFilter](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-setnotifyfilter-method.md) метод.  
@@ -54,7 +42,7 @@ enum tagNOTIFY_FILTER
   
 ## <a name="members"></a>Участники  
   
-|Член|Описание:|  
+|Член|Описание|  
 |------------|-----------------|  
 |`NOTIFY_FILTER_ONSYNCCALLOUT`|Указывает, что [INotifySink2::OnSyncCallOut](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallout-method.md) следует вызвать метод.|  
 |`NOTIFY_FILTER_ONSYNCCALLENTER`|Указывает, что [INotifySink2::OnSyncCallEnter](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallenter-method.md) следует вызвать метод.|  

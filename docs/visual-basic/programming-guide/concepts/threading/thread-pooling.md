@@ -1,22 +1,12 @@
 ---
-title: "Группировка потоков в пул (Visual Basic)"
-ms.custom: 
+title: Группировка потоков в пул (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 4903fb7a-eaad-435a-9add-1d1b32de3b83
-caps.latest.revision: "4"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 33b89d261aa2d038926f8c7e1832436b0cd34019
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 445c1c70cc1371ef918f32046e0c30ae2a473da2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="thread-pooling-visual-basic"></a>Группировка потоков в пул (Visual Basic)
 *Пул потоков* — это коллекция потоков, которые могут использоваться для выполнения нескольких задач в фоновом режиме. (См. [потоки (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/index.md) сведения общего характера.) Это позволяет разгрузить главный поток для асинхронного выполнения других задач.  

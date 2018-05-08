@@ -1,11 +1,7 @@
 ---
-title: "Функция DeleteMethod (Справочник по неуправляемым API)"
-description: "Функция DeleteMethod Удаляет указанный метод из определения класса CIM."
+title: Функция DeleteMethod (Справочник по неуправляемым API)
+description: Функция DeleteMethod Удаляет указанный метод из определения класса CIM.
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - DeleteMethod
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 03b147d2fd76e34c6152a0b41ee14319811e9300
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fd862910d0c9bb0274158c2c516211cef598a553
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="deletemethod-function"></a>Функция DeleteMethod
 Удаляет указанный метод из определения класса CIM.
@@ -53,13 +46,13 @@ HRESULT Delete (
 [in] Указатель на [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx) экземпляра.
 
 `wszName`  
-[in] Имя метода, который требуется удалить из таблицы класса. `wszName`должен быть указателем на допустимый `LPCWSTR`.
+[in] Имя метода, который требуется удалить из таблицы класса. `wszName` должен быть указателем на допустимый `LPCWSTR`.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
 Следующие значения, возвращаемые этой функцией, определяются в *WbemCli.h* файла заголовка, или их можно определить как константы в коде:
 
-|Константа  |Значение  |Описание:  |
+|Константа  |Значение  |Описание  |
 |---------|---------|---------|
 | `WBEM_E_NOT_FOUND` | 0x80041002 | Указанный метод не существует. |
 | `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Не хватает памяти для завершения операции. |
@@ -76,7 +69,7 @@ HRESULT Delete (
   
  **Заголовок:** WMINet_Utils.idl  
   
- **Версии платформы .NET framework:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Версии платформы .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>См. также  
 [WMI и счетчиков производительности (Справочник по неуправляемым API)](index.md)

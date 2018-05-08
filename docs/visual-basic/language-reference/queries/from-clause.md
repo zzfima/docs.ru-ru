@@ -1,11 +1,6 @@
 ---
-title: "Предложение From (Visual Basic)"
+title: Предложение From (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.QueryFrom
 - vb.QueryFromIn
@@ -15,14 +10,11 @@ helpviewer_keywords:
 - From clause [Visual Basic]
 - From statement [Visual Basic]
 ms.assetid: 83e3665e-68a0-4540-a3a3-3d777a0f95d5
-caps.latest.revision: "19"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 0ecdc8b70fb1ae164a6c78998ce11db9938fbb56
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 1f113444efae83de7d299db330593937c7800bb3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="from-clause-visual-basic"></a>Предложение From (Visual Basic)
 Указывает один или несколько переменных диапазона и коллекции для запроса.  
@@ -38,9 +30,9 @@ From element [ As type ] In collection [ _ ]
   
 |Термин|Определение|  
 |---|---|  
-|`element`|Обязательный. Объект *переменной диапазона* используется для итерации элементов коллекции. Переменная диапазона используется для ссылки на каждый член `collection` как запрос осуществляет итерацию по `collection`. Должно быть перечислимым типом.|  
-|`type`|Необязательно. Тип параметра `element`. Если не `type` указан, тип `element` выводится из `collection`.|  
-|`collection`|Обязательный. Ссылается на коллекцию, которой будет отправлен запрос. Должно быть перечислимым типом.|  
+|`element`|Обязательно. Объект *переменной диапазона* используется для итерации элементов коллекции. Переменная диапазона используется для ссылки на каждый член `collection` как запрос осуществляет итерацию по `collection`. Должно быть перечислимым типом.|  
+|`type`|Необязательный. Тип параметра `element`. Если не `type` указан, тип `element` выводится из `collection`.|  
+|`collection`|Обязательно. Ссылается на коллекцию, которой будет отправлен запрос. Должно быть перечислимым типом.|  
   
 ## <a name="remarks"></a>Примечания  
  `From` Предложение используется для определения источника данных для запроса и переменные, которые используются для ссылки на элемент исходной коллекции. Эти переменные называются *переменные диапазона*. `From` Предложение является обязательным для запроса, за исключением случаев `Aggregate` предложение используется для обнаружения, возвращает только агрегированными результаты запроса. Дополнительные сведения см. в разделе [предложение Aggregate](../../../visual-basic/language-reference/queries/aggregate-clause.md).  

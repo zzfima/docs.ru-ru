@@ -1,28 +1,19 @@
 ---
-title: "Значение типа &#39; &lt;Имя_типа1&gt;&#39; невозможно преобразовать в &#39;&lt; имя_типа2&gt;&#39; (Несколько ссылок на файлы)"
+title: Значение типа &#39; &lt;Имя_типа1&gt; &#39; не может быть преобразован &#39; &lt;имя_типа2&gt; &#39; (несколько ссылок на файлы)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vbc30961
 - bc30961
 helpviewer_keywords:
 - BC30961
 ms.assetid: 8be5aa0d-d236-4ac3-aa9c-5044f9f6562b
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: f22516a5ca9626f43cb89745e67c66619cf9461f
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: 41c18160be9b546f8b525376fa06bc0eca6c117a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="value-of-type-39lttypename1gt39-cannot-be-converted-to-39lttypename2gt39-multiple-file-references"></a>Значение типа &#39; &lt;Имя_типа1&gt;&#39; невозможно преобразовать в &#39;&lt; имя_типа2&gt;&#39; (Несколько ссылок на файлы)
+# <a name="value-of-type-39lttypename1gt39-cannot-be-converted-to-39lttypename2gt39-multiple-file-references"></a>Значение типа &#39; &lt;Имя_типа1&gt; &#39; не может быть преобразован &#39; &lt;имя_типа2&gt; &#39; (несколько ссылок на файлы)
 Значение типа "\<Имя_типа1 >" нельзя преобразовать в "\<имя_типа2 >". Несоответствие типов может быть вызвана смешением ссылки на файл "\<путь_к_файлу1 >" в проекте "\<имя_проекта1 >" со ссылкой на файл "\<путь_к_файлу2 >" в проекте "\<имя_проекта2 >". Если обе сборки идентичны, попробуйте заменить эти ссылки так, чтобы они ссылались из одного места.  
   
  В случае, когда проект делает более одной ссылки на сборки компилятор не гарантирует, что одного типа могут преобразовываться в другой.  

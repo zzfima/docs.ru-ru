@@ -1,9 +1,6 @@
 ---
-title: "Условные обозначения и соглашения о коде (Visual Basic)"
+title: Условные обозначения и соглашения о коде (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - coding conventions [Visual Basic], Visual Basic
 - best practices [Visual Basic], coding conventions
@@ -13,14 +10,11 @@ helpviewer_keywords:
 - conventions [Visual Basic], documentation
 - Visual Basic code, conventions
 ms.assetid: 1916cd81-ea9d-4faa-81f7-4a0d864b60f4
-caps.latest.revision: "17"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 7b6db5c223b0548e308b49a686cff72eaaf8da36
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: eb7a33ef21bf6beda730dffa8eb7ff9cabe599fb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="typographic-and-code-conventions-visual-basic"></a>Условные обозначения и соглашения о коде (Visual Basic)
 Документации Visual Basic используются следующие условные обозначения и соглашения о написании кода.  
@@ -32,7 +26,7 @@ ms.lasthandoff: 11/21/2017
 |`Sub`, `If`, `ChDir`, `Print`, `True`, `Debug`|Зарезервированные слова языка и члены среды выполнения имеют начальные прописные буквы и форматируются как показано в следующем примере.|  
 |**SmallProject**, **ButtonCollection**|Слова и фразы, будет предложено ввести форматируются как показано в следующем примере.|  
 |[Оператор Module](../../visual-basic/language-reference/statements/module-statement.md)|Ссылки, которые можно щелкнуть для перехода на другую страницу справки, форматируются как показано в следующем примере.|  
-|*Объект*, *variableName*,`argumentList`|Заполнители для сведений, предоставляемых пользователем, форматируются как показано в следующем примере.|  
+|*Объект*, *variableName*, `argumentList`|Заполнители для сведений, предоставляемых пользователем, форматируются как показано в следующем примере.|  
 |[Теней] [ *expressionList* ]|В синтаксисе необязательные элементы заключены в квадратные скобки.|  
 |{ `Public` &#124; `Friend` &#124; `Private` }|Если необходимо сделать выбор между двумя или несколькими элементами, элементы в синтаксисе заключены в фигурные скобки и разделяются вертикальной чертой.<br /><br /> Необходимо выбрать один и только один из элементов.|  
 |[ `Protected` &#124; `Friend` ]|Если у вас есть возможность выбрать между двумя или более элементов, элементы в синтаксисе заключаются в квадратные скобки и разделяются вертикальной чертой.<br /><br /> Можно выбрать любое сочетание элементов или ни один элемент.|  

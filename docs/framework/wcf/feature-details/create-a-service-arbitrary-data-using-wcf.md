@@ -1,27 +1,15 @@
 ---
-title: "Как создать службу, принимающую произвольные данные с использованием модели программирования WCF REST"
-ms.custom: 
+title: Как создать службу, принимающую произвольные данные с использованием модели программирования WCF REST
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: e566c15a-b600-4e4a-be3a-4af43e767dae
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 170149f5a6c495b3f22b9fd30f79ecdda87789b4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: bc2643672743971da14c8bc4c75ac113f691bf4a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-service-that-accepts-arbitrary-data-using-the-wcf-rest-programming-model"></a>Как создать службу, принимающую произвольные данные с использованием модели программирования WCF REST
-Иногда разработчики должны полностью управлять тем, как данные возвращаются из операции службы. Это требуется, когда операция службы должна возвращать данные в формате, не поддерживаемом системой [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. В данном разделе рассматривается использование модели веб-программирования REST [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] для создания службы, получающей произвольные данные.  
+Иногда разработчики должны полностью управлять тем, как данные возвращаются из операции службы. Это условие выполняется, когда операция службы должна возвращать данные в формате, не поддерживается byWCF. В этом разделе рассматривается использование модели программирования WCF REST для создания службы, получающей произвольные данные.  
   
 ### <a name="to-implement-the-service-contract"></a>Реализация контракта службы  
   

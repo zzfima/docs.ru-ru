@@ -1,28 +1,14 @@
 ---
-title: "Практическое руководство. Привязка элемента управления TreeView к данным неопределенной глубины"
-ms.custom: 
+title: Практическое руководство. Привязка элемента управления TreeView к данным неопределенной глубины
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - TreeView control [WPF], binding to data of indeterminate depth
 ms.assetid: daddcd74-1b0f-4ffd-baeb-ec934c5e0f53
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: be21ecb75420b6499e5b95d5f4d93a5f079f9646
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 30e328c94e1e1da4641e93dd5f5730eab2d8af1f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-bind-a-treeview-to-data-that-has-an-indeterminable-depth"></a>Практическое руководство. Привязка элемента управления TreeView к данным неопределенной глубины
 Возможны ситуации, когда вы хотите привязать <xref:System.Windows.Controls.TreeView> к источнику данных, глубина которого неизвестен.  Это может произойти, когда данные рекурсивных по своей природе, например в файловой системе, где папок может содержать папки, или организационной структуры компании, где сотрудники имеют других сотрудников в качестве подчиненных.  

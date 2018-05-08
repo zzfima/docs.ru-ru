@@ -1,13 +1,6 @@
 ---
-title: "Пользовательские свойства зависимостей"
-ms.custom: 
+title: Пользовательские свойства зависимостей
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -21,16 +14,11 @@ helpviewer_keywords:
 - wrappers [WPF], implementing
 - dependency properties [WPF], custom
 ms.assetid: e6bfcfac-b10d-4f58-9f77-a864c2a2938f
-caps.latest.revision: "25"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 588ab00d61a701dc43e2af5978a6023a93f367f4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2623f34418aad7a0b29c52d1310fdc79afced790
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="custom-dependency-properties"></a>Пользовательские свойства зависимостей
 В этом разделе описываются основания для создания настраиваемых свойств зависимостей для приложений [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)], а также этапы и некоторые варианты реализации, которые могут повысить производительность, удобство использования и универсальность свойств.  
@@ -134,11 +122,11 @@ ms.lasthandoff: 12/22/2017
   
 -   Если свойство (или изменения его значения) влияет на [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)], и в частности влияет как система макета следует размер или отрисовки элемента на странице задайте одно или несколько из следующих флагов: <xref:System.Windows.FrameworkPropertyMetadataOptions.AffectsMeasure>, <xref:System.Windows.FrameworkPropertyMetadataOptions.AffectsArrange>, <xref:System.Windows.FrameworkPropertyMetadataOptions.AffectsRender>.  
   
-    -   <xref:System.Windows.FrameworkPropertyMetadataOptions.AffectsMeasure>Указывает, что изменение этого свойства требуется изменение [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] подготовки отчетов, где содержащийся объект может потребовать больше или меньше места в родительском элементе. Например, этот флаг следует задать для свойства "Ширина".  
+    -   <xref:System.Windows.FrameworkPropertyMetadataOptions.AffectsMeasure> Указывает, что изменение этого свойства требуется изменение [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] подготовки отчетов, где содержащийся объект может потребовать больше или меньше места в родительском элементе. Например, этот флаг следует задать для свойства "Ширина".  
   
-    -   <xref:System.Windows.FrameworkPropertyMetadataOptions.AffectsArrange>Указывает, что изменение этого свойства требуется изменение [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] подготовки отчетов, обычно не требует изменений в выделенном пространстве, но указания изменения положения в пространстве. Например, этот флаг следует задать для свойства "Выравнивание".  
+    -   <xref:System.Windows.FrameworkPropertyMetadataOptions.AffectsArrange> Указывает, что изменение этого свойства требуется изменение [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] подготовки отчетов, обычно не требует изменений в выделенном пространстве, но указания изменения положения в пространстве. Например, этот флаг следует задать для свойства "Выравнивание".  
   
-    -   <xref:System.Windows.FrameworkPropertyMetadataOptions.AffectsRender>Указывает, что произошло некоторые изменения, не влияет на макет и масштаб, но требуют повторной визуализации. Примером будет свойство, изменяющее цвет существующего элемента, например "Фон".  
+    -   <xref:System.Windows.FrameworkPropertyMetadataOptions.AffectsRender> Указывает, что произошло некоторые изменения, не влияет на макет и масштаб, но требуют повторной визуализации. Примером будет свойство, изменяющее цвет существующего элемента, например "Фон".  
   
     -   Эти флаги часто используются в качестве протокола в метаданных для собственных реализаций переопределения системы свойств или обратных вызовов макета. Например, может потребоваться <xref:System.Windows.DependencyObject.OnPropertyChanged%2A> обратного вызова, который будет вызывать <xref:System.Windows.UIElement.InvalidateArrange%2A> Если любое свойство экземпляра сообщает об изменении значения и имеет <xref:System.Windows.FrameworkPropertyMetadata.AffectsArrange%2A> как `true` в своих метаданных.  
   
@@ -148,7 +136,7 @@ ms.lasthandoff: 12/22/2017
   
 -   По умолчанию привязка данных <xref:System.Windows.Data.Binding.Mode%2A> для значений по умолчанию свойства зависимостей для <xref:System.Windows.Data.BindingMode.OneWay>. Можно всегда изменить привязки <xref:System.Windows.Data.BindingMode.TwoWay> каждого экземпляра привязки, Дополнительные сведения см. [указать направление привязки](../../../../docs/framework/wpf/data/how-to-specify-the-direction-of-the-binding.md). Но как автор свойство зависимостей, можно сделать свойство использовать <xref:System.Windows.Data.BindingMode.TwoWay> режима привязки по умолчанию. Примером существующего свойства зависимостей является <xref:System.Windows.Controls.MenuItem.IsSubmenuOpen%2A?displayProperty=nameWithType>; сценарий для этого свойства представляет <xref:System.Windows.Controls.MenuItem.IsSubmenuOpen%2A> задание логики и композиции <xref:System.Windows.Controls.MenuItem> взаимодействовать с стиля темы по умолчанию. <xref:System.Windows.Controls.MenuItem.IsSubmenuOpen%2A> Логику свойство изначально использует привязку данных для поддержания состояния этого свойства в соответствии с другими свойствами состояния и вызовы методов. Другим примером свойства, который привязывает <xref:System.Windows.Data.BindingMode.TwoWay> по умолчанию является <xref:System.Windows.Controls.TextBox.Text%2A?displayProperty=nameWithType>.  
   
--   Можно также включить наследование свойства в пользовательское свойство зависимостей, задав <xref:System.Windows.FrameworkPropertyMetadataOptions.Inherits> флаг. Наследование свойств удобно для ситуации, когда родительские и дочерние элементы имеют общее свойство и для дочерних элементов имеет смысл задать то же значение свойства, что и в родительском элементе. Примером наследуемого свойства является <xref:System.Windows.FrameworkElement.DataContext%2A>, который используется для привязки операций, чтобы включить важный скрипт основной подробности для представления данных. Делая <xref:System.Windows.FrameworkElement.DataContext%2A> наследуемые, любые дочерние элементы наследуют контекст данных также. Благодаря наследованию значения свойства вы можете указать контекст данных в корне приложения или страницы и вам не потребуется уточнять его для привязок во всех возможных дочерних элементах. <xref:System.Windows.FrameworkElement.DataContext%2A>также представляет собой хороший пример для иллюстрации того, что наследование переопределяет значение по умолчанию, но может всегда быть локально установлено для любого конкретного дочернего элемента. Дополнительные сведения см. в разделе [использовать шаблон «основной-подробности» с иерархическими данными](../../../../docs/framework/wpf/data/how-to-use-the-master-detail-pattern-with-hierarchical-data.md). Наследование значения свойства может влиять на производительность, и таким образом, его следует использовать с осторожностью. Дополнительные сведения см. в разделе [Наследование значения свойства](../../../../docs/framework/wpf/advanced/property-value-inheritance.md).  
+-   Можно также включить наследование свойства в пользовательское свойство зависимостей, задав <xref:System.Windows.FrameworkPropertyMetadataOptions.Inherits> флаг. Наследование свойств удобно для ситуации, когда родительские и дочерние элементы имеют общее свойство и для дочерних элементов имеет смысл задать то же значение свойства, что и в родительском элементе. Примером наследуемого свойства является <xref:System.Windows.FrameworkElement.DataContext%2A>, который используется для привязки операций, чтобы включить важный скрипт основной подробности для представления данных. Делая <xref:System.Windows.FrameworkElement.DataContext%2A> наследуемые, любые дочерние элементы наследуют контекст данных также. Благодаря наследованию значения свойства вы можете указать контекст данных в корне приложения или страницы и вам не потребуется уточнять его для привязок во всех возможных дочерних элементах. <xref:System.Windows.FrameworkElement.DataContext%2A> также представляет собой хороший пример для иллюстрации того, что наследование переопределяет значение по умолчанию, но может всегда быть локально установлено для любого конкретного дочернего элемента. Дополнительные сведения см. в разделе [использовать шаблон «основной-подробности» с иерархическими данными](../../../../docs/framework/wpf/data/how-to-use-the-master-detail-pattern-with-hierarchical-data.md). Наследование значения свойства может влиять на производительность, и таким образом, его следует использовать с осторожностью. Дополнительные сведения см. в разделе [Наследование значения свойства](../../../../docs/framework/wpf/advanced/property-value-inheritance.md).  
   
 -   Задать <xref:System.Windows.FrameworkPropertyMetadataOptions.Journal> флаг, указывающий, если свойство зависимостей определено или используется службами навигации ведения журнала. Например, <xref:System.Windows.Controls.Primitives.Selector.SelectedIndex%2A> свойство; любого элемента, выбранного в выделенной области элемента управления должны сохраняться при истории журналирования.  
   

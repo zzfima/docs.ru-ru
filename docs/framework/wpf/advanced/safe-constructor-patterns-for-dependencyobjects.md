@@ -1,28 +1,16 @@
 ---
-title: "Шаблоны безопасного конструктора для DependencyObjects"
-ms.custom: 
+title: Шаблоны безопасного конструктора для DependencyObjects
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - constructor patterns for dependency objects [WPF]
 - dependency objects [WPF], constructor patterns
 - FXCop tool [WPF]
 ms.assetid: f704b81c-449a-47a4-ace1-9332e3cc6d60
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: db1b7f47ef135b1a174eecef7e53b41e6996256d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 03615c1c49f2acf2a7c7f0910860f36de0a4f2d3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="safe-constructor-patterns-for-dependencyobjects"></a>Шаблоны безопасного конструктора для DependencyObjects
 Как правило, конструкторы классов не должны выполнять обратные вызовы, такие как виртуальные методы или делегаты, поскольку конструкторы могут вызываться в качестве базовой инициализации конструкторов для производного класса. Ввод виртуального объекта может выполняться в состоянии незавершенной инициализации любого заданного объекта. Однако сама система свойств внутренне вызывает и предоставляет обратные вызовы как часть системы свойств зависимостей. Как простая операция, как задание значения свойства зависимостей с <xref:System.Windows.DependencyObject.SetValue%2A> вызов потенциально включает обратный вызов где-то в процессе определения. По этой причине следует соблюдать осторожность при установке значений свойств зависимостей в теле конструктора, что может стать проблемой, если тип используется в качестве базового класса. Отсутствует определенный шаблон для реализации <xref:System.Windows.DependencyObject> конструкторов, позволяет избежать определенных неполадок с состояниями свойства зависимости и обратными вызовами, которые здесь описаны.  

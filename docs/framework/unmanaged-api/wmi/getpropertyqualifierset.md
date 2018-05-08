@@ -1,11 +1,7 @@
 ---
-title: "Функция GetPropertyQualifierSet (Справочник по неуправляемым API)"
-description: "Функция GetPropertyQualifierSet получает квалификатор для свойства."
+title: Функция GetPropertyQualifierSet (Справочник по неуправляемым API)
+description: Функция GetPropertyQualifierSet получает квалификатор для свойства.
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - GetPropertyQualifierSet
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 7ca2981c8833abaafd5d206b66d6e91f34e2c91d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d2951733211737f06cd737b20bd1537277be1be1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="getpropertyqualifierset-function"></a>Функция GetPropertyQualifierSet
 Извлекает квалификатор для конкретного свойства.
@@ -54,7 +47,7 @@ HRESULT GetPropertyQualifierSet (
 [in] Указатель на [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx) экземпляра.
 
 `wszMethod`  
-[in] Имя свойства. `wszProperty`должен указывать на допустимый `LPCWSTR`. 
+[in] Имя свойства. `wszProperty` должен указывать на допустимый `LPCWSTR`. 
 
 `ppQualSet`  
 [out] Получает указатель интерфейса, обеспечивающего доступ к квалификаторы свойства. Параметр `ppQualSet` не может иметь значение `null`. Если возникает ошибка не возвращается новый объект и указатель устанавливается на `null`. 
@@ -63,7 +56,7 @@ HRESULT GetPropertyQualifierSet (
 
 Следующие значения, возвращаемые этой функцией, определяются в *WbemCli.h* файла заголовка, или их можно определить как константы в коде:
 
-|Константа  |Значение  |Описание:  |
+|Константа  |Значение  |Описание  |
 |---------|---------|---------|
 |`WBEM_E_FAILED` | 0x80041001 | Произошел общий сбой. |
 | `WBEM_E_NOT_FOUND` | 0x80041002 | Указанный метод не существует. |
@@ -87,7 +80,7 @@ HRESULT GetPropertyQualifierSet (
   
  **Заголовок:** WMINet_Utils.idl  
   
- **Версии платформы .NET framework:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Версии платформы .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>См. также  
 [WMI и счетчиков производительности (Справочник по неуправляемым API)](index.md)

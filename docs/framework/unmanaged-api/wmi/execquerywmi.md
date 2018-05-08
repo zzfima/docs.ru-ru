@@ -1,11 +1,7 @@
 ---
-title: "Функция ExecQueryWmi (Справочник по неуправляемым API)"
-description: "Функция ExecQueryWmi выполняет запрос для получения объектов."
+title: Функция ExecQueryWmi (Справочник по неуправляемым API)
+description: Функция ExecQueryWmi выполняет запрос для получения объектов.
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - ExecQueryWmi
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 872109cb0472a8404c492c2867429fe783f898eb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b482f2ca2e2d5c06e69945adb71aa6c0f5d26465
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="execquerywmi-function"></a>Функция ExecQueryWmi
 Выполняет запрос для получения объектов.  
@@ -63,7 +56,7 @@ HRESULT ExecQueryWmi (
 `lFlags`   
 [in] Сочетание флагов, влияющих на поведение этой функции. Следующие значения определяются в *WbemCli.h* файла заголовка, или их можно определить как константы в коде: 
 
-| Константа | Значение  | Описание:  |
+| Константа | Значение  | Описание  |
 |---------|---------|---------|
 | `WBEM_FLAG_USE_AMENDED_QUALIFIERS` | 0x20000 | Если набор, функция возвращает изменяемые квалификаторы, хранимых в локализованных имен языкового стандарта текущего соединения. <br/> В противном случае набор, функция возвращает только квалификаторы, хранимых в интерпретации имен. |
 | `WBEM_FLAG_RETURN_IMMEDIATELY` | 0x10 | Флаг вызывает полусинхронных вызовов. |
@@ -84,7 +77,7 @@ HRESULT ExecQueryWmi (
 `authLevel`  
 [in] Уровень авторизации.
 
-`impLevel`[in] Уровень олицетворения.
+`impLevel` [in] Уровень олицетворения.
 
 `pCurrentNamespace`   
 [in] Указатель на [IWbemServices](https://msdn.microsoft.com/library/aa392093(v=vs.85).aspx) , представляющий текущего пространства имен.
@@ -102,7 +95,7 @@ HRESULT ExecQueryWmi (
 
 Следующие значения, возвращаемые этой функцией, определяются в *WbemCli.h* файла заголовка, или их можно определить как константы в коде:
 
-|Константа  |Значение  |Описание:  |
+|Константа  |Значение  |Описание  |
 |---------|---------|---------|
 | `WBEM_E_ACCESS_DENIED` | 0x80041003 | Пользователь не имеет разрешения на просмотр одного или нескольких классов, которые функция может вернуть. |
 | `WBEM_E_FAILED` | 0x80041001 | Произошла неизвестная ошибка. |
@@ -131,7 +124,7 @@ HRESULT ExecQueryWmi (
   
  **Заголовок:** WMINet_Utils.idl  
   
- **Версии платформы .NET framework:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Версии платформы .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>См. также  
 [WMI и счетчиков производительности (Справочник по неуправляемым API)](index.md)

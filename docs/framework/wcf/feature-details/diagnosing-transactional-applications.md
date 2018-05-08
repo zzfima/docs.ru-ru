@@ -1,32 +1,18 @@
 ---
 title: Диагностика транзакционных приложений
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 4a993492-1088-4d10-871b-0c09916af05f
-caps.latest.revision: 8
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 5b8171f382812480078b76588089871233bdf9ca
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 4fa85fea0651d7a31c5a50bbc9c1226421b976b7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="diagnosing-transactional-applications"></a>Диагностика транзакционных приложений
-В этом разделе рассматривается использование функции управления и диагностики [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] для устранения неполадок транзакционного приложения.  
+В этом разделе описывается использование функции управления Windows Communication Foundation (WCF) и диагностики для устранения неполадок транзакционного приложения.  
   
 ## <a name="performance-counters"></a>Счетчики производительности  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] обеспечивает стандартный набор счетчиков производительности для измерения производительности транзакционного приложения. Дополнительные сведения см. в разделе [Счетчики производительности](../../../../docs/framework/wcf/diagnostics/performance-counters/index.md).  
+ WCF предоставляет стандартный набор счетчиков производительности для измерения производительности транзакционного приложения. Дополнительные сведения см. в разделе [Счетчики производительности](../../../../docs/framework/wcf/diagnostics/performance-counters/index.md).  
   
  Счетчики производительности группируются по трем различным уровням области действия: служба, конечная точка и операция, как описано в приведенных далее таблицах.  
   
@@ -58,7 +44,7 @@ ms.lasthandoff: 04/30/2018
 |Количество поступивших транзакций в секунду|Количество транзакций в операциях для данной конечной точки за каждую секунду. Значение этого счетчика увеличивается каждый раз, когда в сообщении, отправленном на эту конечную точку, содержится транзакция.|  
   
 ## <a name="windows-management-instrumentation"></a>Инструментарий управления Windows (WMI)  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] предоставляет данные проверки службы во время выполнения с помощью поставщика инструментария управления Windows (WMI) [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Дополнительные сведения о доступе к данным WMI см. в разделе [с помощью Windows Management Instrumentation для диагностики](../../../../docs/framework/wcf/diagnostics/wmi/index.md).  
+ WCF предоставляет данные проверки службы во время выполнения с помощью поставщика WCF инструментария управления Windows (WMI). Дополнительные сведения о доступе к данным WMI см. в разделе [с помощью Windows Management Instrumentation для диагностики](../../../../docs/framework/wcf/diagnostics/wmi/index.md).  
   
  Ряд свойств WMI только для чтения показывает применяемые в службе параметры транзакции. В приведенных ниже таблицах перечислены эти параметры.  
   
@@ -100,13 +86,13 @@ ms.lasthandoff: 04/30/2018
 ## <a name="tracing"></a>Трассировка  
  Трассировка позволяет контролировать и анализировать ошибки в транзакционных приложениях. Трассировку можно включить следующими способами.  
   
--   Стандартная трассировка [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]  
+-   Стандартная трассировка WCF  
   
-     Трассировка этого типа аналогична трассировке любого другого приложения [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Для получения дополнительной информации см. [Configuring Tracing](../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md).  
+     Трассировка этого типа является таким же, как трассировка любого приложения WCF. Для получения дополнительной информации см. [Configuring Tracing](../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md).  
   
 -   Трассировка WS-AtomicTransaction  
   
-     Трассировку WS-AtomicTransaction можно включить с помощью [программы конфигурации WS-AtomicTransaction (wsatConfig.exe)](../../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md). Такая трассировка позволяет контролировать состояние транзакций и участников внутри системы. Чтобы включить также и трассировку модели службы, можно задать для ключа реестра `HKLM\SOFTWARE\Microsoft\WSAT\3.0\ServiceModelDiagnosticTracing` допустимое значение перечисления <xref:System.Diagnostics.SourceLevels>. Ведение журнала сообщений включается так же, как и для других приложений [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+     Трассировку WS-AtomicTransaction можно включить с помощью [программы конфигурации WS-AtomicTransaction (wsatConfig.exe)](../../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md). Такая трассировка позволяет контролировать состояние транзакций и участников внутри системы. Чтобы включить также и трассировку модели службы, можно задать для ключа реестра `HKLM\SOFTWARE\Microsoft\WSAT\3.0\ServiceModelDiagnosticTracing` допустимое значение перечисления <xref:System.Diagnostics.SourceLevels>. Вы можете включить ведение журнала так же, как другие приложения WCF сообщений.  
   
 -   Трассировка `System.Transactions`  
   
@@ -131,7 +117,7 @@ ms.lasthandoff: 04/30/2018
     </configuration>  
     ```  
   
-     При этом включается и трассировка [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], так как [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] также использует инфраструктуру <xref:System.Transactions>.  
+     Это также позволяет трассировки WCF, как WCF также использует <xref:System.Transactions> инфраструктуры.  
   
 ## <a name="see-also"></a>См. также  
  [Администрирование и диагностика](../../../../docs/framework/wcf/diagnostics/index.md)  

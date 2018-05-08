@@ -1,33 +1,19 @@
 ---
-title: "Расширение клиентов"
-ms.custom: 
+title: Расширение клиентов
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - proxy extensions [WCF]
 ms.assetid: 1328c61c-06e5-455f-9ebd-ceefb59d3867
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 2444488418b7647111cf4b89db0c41a8e66470d4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 7eea247602d24c545e0de5fa9df50e83aae8ed7f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="extending-clients"></a>Расширение клиентов
 В вызывающем приложении уровень модели службы отвечает за преобразование вызовов методов в коде приложения в исходящие сообщения, передачу их по соответствующим каналам, преобразование результатов обратно в возвращаемые значения и выходные параметры в коде приложения, а также за возврат результатов вызывающем объекту. Расширения модели службы изменяют или реализуют поведение и возможности выполнения или взаимодействия, в том числе возможности клиента или диспетчера, пользовательские поведения, перехват сообщений и параметров, а также другие возможности расширяемости.  
   
- В этом разделе описано, как использовать классы <xref:System.ServiceModel.Dispatcher.ClientRuntime> и <xref:System.ServiceModel.Dispatcher.ClientOperation> в клиентском приложении [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], чтобы изменять поведение клиента [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] по умолчанию или перехватывать или изменять сообщения, параметры и возвращаемые значения до или после их отправки и получения через канал. Дополнительные сведения о расширении среды выполнения службы см. в разделе [расширение диспетчеров](../../../../docs/framework/wcf/extending/extending-dispatchers.md). Дополнительные сведения о моделях поведения, изменять и вставлять объекты настройки в среду выполнения клиента см. в разделе [настройку и расширение среды выполнения с помощью поведений](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md).  
+ В этом разделе описывается использование <xref:System.ServiceModel.Dispatcher.ClientRuntime> и <xref:System.ServiceModel.Dispatcher.ClientOperation> классы в клиентском приложении Windows Communication Foundation (WCF) для изменения поведения выполнения по умолчанию [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] клиента или чтобы перехватывать или изменять сообщения, параметры или возвращаемые значения до или после их отправки и получения через канал. Дополнительные сведения о расширении среды выполнения службы см. в разделе [расширение диспетчеров](../../../../docs/framework/wcf/extending/extending-dispatchers.md). Дополнительные сведения о моделях поведения, изменять и вставлять объекты настройки в среду выполнения клиента см. в разделе [настройку и расширение среды выполнения с помощью поведений](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md).  
   
 ## <a name="clients"></a>Клиенты  
  На стороне клиента объект или канал клиента [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] преобразует вызовы метода в исходящие сообщения, а входящие сообщения - в результат выполнения операций, возвращаемый вызывающему приложению. (Дополнительные сведения о типах клиента см. в разделе [Клиентская архитектура технологии WCF](../../../../docs/framework/wcf/feature-details/client-architecture.md).)  

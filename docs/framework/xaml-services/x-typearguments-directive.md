@@ -1,13 +1,6 @@
 ---
-title: "Директива x:TypeArguments"
-ms.custom: 
+title: Директива x:TypeArguments
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - x:TypeArguments
 - xTypeArguments
@@ -17,16 +10,11 @@ helpviewer_keywords:
 - TypeArguments attribute in XAML [XAML Services]
 - XAML [XAML Services], x:TypeArguments attribute
 ms.assetid: 86561058-d393-4a44-b5c3-993a4513ea74
-caps.latest.revision: "18"
-author: wadepickett
-ms.author: wpickett
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e601fb5895460e52aa21836c542d0b1367527f09
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 94f09bdd3b6ee0b180e30bab0993f0b4e41730ac
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="xtypearguments-directive"></a>Директива x:TypeArguments
 Передает аргументы типов ограничений универсального в конструктор универсального типа.  
@@ -62,13 +50,13 @@ xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib"
 ```  
   
 ### <a name="liststring"></a>Список\<строка >  
- `<scg:List x:TypeArguments="sys:String" ...>`Создает новый <xref:System.Collections.Generic.List%601> с <xref:System.String> аргумент типа.  
+ `<scg:List x:TypeArguments="sys:String" ...>` Создает новый <xref:System.Collections.Generic.List%601> с <xref:System.String> аргумент типа.  
   
 ### <a name="dictionarystringstring"></a>Словарь\<String, String >  
- `<scg:Dictionary x:TypeArguments="sys:String,sys:String" ...>`Создает новый <xref:System.Collections.Generic.Dictionary%602> с двумя <xref:System.String> аргументы типа.  
+ `<scg:Dictionary x:TypeArguments="sys:String,sys:String" ...>` Создает новый <xref:System.Collections.Generic.Dictionary%602> с двумя <xref:System.String> аргументы типа.  
   
 ### <a name="queuekeyvaluepairstringstring"></a>Очередь < KeyValuePair\<String, String >>  
- `<scg:Queue x:TypeArguments="scg:KeyValuePair(sys:String,sys:String)" ...>`Создает новый <xref:System.Collections.Generic.Queue%601> , имеет ограничение <xref:System.Collections.Generic.KeyValuePair%602> с аргументами типа внутреннее ограничение <xref:System.String> и <xref:System.String>.  
+ `<scg:Queue x:TypeArguments="scg:KeyValuePair(sys:String,sys:String)" ...>` Создает новый <xref:System.Collections.Generic.Queue%601> , имеет ограничение <xref:System.Collections.Generic.KeyValuePair%602> с аргументами типа внутреннее ограничение <xref:System.String> и <xref:System.String>.  
   
 ## <a name="xaml-2006-and-wpf-generic-xaml-usages"></a>Использование универсальных XAML XAML 2006 и WPF  
  Для использования XAML 2006 и XAML, который используется для приложений WPF, действуют следующие ограничения для `x:TypeArguments` и их использование универсального типа из XAML в целом:  
@@ -79,7 +67,7 @@ xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib"
   
 -   Корневого элемента объекта XAML элемента для универсальных также необходимо объявить разделяемый класс с помощью `x:Class`. Это верно, даже если определение WPF действие построения.  
   
--   `x:TypeArguments`нельзя ссылаться на вложенные универсальные ограничения.  
+-   `x:TypeArguments` нельзя ссылаться на вложенные универсальные ограничения.  
   
 ## <a name="xaml-2009-or-xaml-2006-with-no-wpf-30-or-wpf-35-dependency"></a>XAML 2009 г. или XAML 2006 без WPF 3.0 или WPF 3.5 зависимостей  
  В службах XAML .NET Framework для XAML 2006 и XAML 2009 связанных с WPF, ограничений для универсального использования XAML освобождаются. Можно создать экземпляр универсального объектного элемента в любом месте в разметке XAML, поддерживающий резервный тип системы и объектной моделью.  

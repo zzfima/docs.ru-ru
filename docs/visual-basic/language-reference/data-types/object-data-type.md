@@ -1,10 +1,6 @@
 ---
 title: Object Data Type
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Object
 - vb.Variant
@@ -14,14 +10,11 @@ helpviewer_keywords:
 - Object data type
 - Object data type [Visual Basic], reference
 ms.assetid: 61ea4a7c-3b3d-48d4-adc4-eacfa91779b2
-caps.latest.revision: "19"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 847f2b50296ad1a1ba6f0009d1d6afced27f9abe
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: e9b1da5a88c12e0d883c3afe63be98c3fa3e9173
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="object-data-type"></a>Object Data Type
 Содержит адреса, которые ссылаются на объекты. Можно назначить любой ссылочный тип (строка, массив, класс или интерфейс) `Object` переменной. `Object` Переменная также может ссылаться на данные любого типа значения (числовые, `Boolean`, `Char`, `Date`, структуры или перечисления).  
@@ -58,7 +51,7 @@ datTyp = Type.GetTypeCode(myObject.GetType())
   
      Тем не менее при преобразовании между типами значений и `Object`, Visual Basic выполняет операции *упаковка-преобразование* и *распаковки*, убедитесь в выполнении медленнее.  
   
--   **Символы типов.** `Object`не имеет знак типа литерала или знак типа идентификатора.  
+-   **Символы типов.** `Object` не имеет знак типа литерала или знак типа идентификатора.  
   
 -   **Тип Framework.** Соответствующий тип в .NET Framework — <xref:System.Object?displayProperty=nameWithType> класса.  
   

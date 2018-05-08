@@ -1,22 +1,15 @@
 ---
-title: "Пошаговое руководство. Отображение заголовков элементов в элементе управления DataRepeater (Visual Studio)"
+title: Пошаговое руководство. Отображение заголовков элементов в элементе управления DataRepeater (Visual Studio)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - DataRepeater, item headers
 - DataRepeater, selection indicators
 ms.assetid: 37321447-0ffa-43e1-bdc9-0480e392b90f
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: da02f9374471a581a58131e26d618f91d7cbb7af
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 07f6a7e06c5b1e91597ab6b6d816407a2c172278
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-display-item-headers-in-a-datarepeater-control-visual-studio"></a>Пошаговое руководство. Отображение заголовков элементов в элементе управления DataRepeater (Visual Studio)
 Заголовок элемента в <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> управления предоставляется визуальный индикатор, когда <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItem> выбран. Когда <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.LayoutStyle%2A> свойству <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterLayoutStyles.Vertical> (по умолчанию), заголовок элемента отображается слева от каждого элемента. Когда <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.LayoutStyle%2A> свойству <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterLayoutStyles.Horizontal>, заголовок элемента отображается в верхней части каждого элемента.  
@@ -36,7 +29,7 @@ ms.lasthandoff: 11/21/2017
  Заголовки элементов можно скрыть, установив <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemHeaderVisible%2A> свойства **False**. Когда <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemHeaderVisible%2A> равно **False**, единственное свидетельство того, что выбран элемент — пунктирная линия по периметру <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItem>.  
   
 > [!NOTE]
->  Можно также предоставить свой собственный индикатор выделения, наблюдение за <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItem.IsCurrent%2A> свойство <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItem> в <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.DrawItem> событие <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> элемента управления. Для получения дополнительной информации см. <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItem.IsCurrent%2A>.  
+>  Можно также предоставить свой собственный индикатор выделения, наблюдение за <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItem.IsCurrent%2A> свойство <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItem> в <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.DrawItem> событие <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> элемента управления. Дополнительные сведения см. в разделе <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItem.IsCurrent%2A>.  
   
 ### <a name="to-change-the-appearance-of-item-headers"></a>Чтобы изменить внешний вид заголовков элементов  
   

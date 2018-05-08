@@ -1,11 +1,6 @@
 ---
-title: "Оператор Event"
+title: Оператор Event
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Event
 - vb.Custom
@@ -23,14 +18,11 @@ helpviewer_keywords:
 - ByRef keyword [Visual Basic], Event statements
 - declaring user-defined events
 ms.assetid: 306ff8ed-74dd-4b6a-bd2f-e91b17474042
-caps.latest.revision: "33"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 4ba49d6582eb2ecac4846eaee570a4d92439a5d9
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: 967eedcf1f4d0c9a19775f294167b915cca25a9c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="event-statement"></a>Оператор Event
 Объявляет пользовательское событие.  
@@ -63,7 +55,7 @@ End Event
   
 ## <a name="parts"></a>Части  
   
-|Отделение|Описание:|  
+|Отделение|Описание|  
 |---|---|  
 |`attrlist`|Необязательный. Список атрибутов, применимых к этому событию. Несколько атрибутов разделяются запятыми. Необходимо заключить [список атрибутов](../../../visual-basic/language-reference/statements/attribute-list.md) в угловые скобки («`<`«и»`>`»).|  
 |`accessmodifier`|Необязательный. Указывает, какой код может получать доступ к событию. Ниже указаны доступные значения.<br /><br /> -   [Открытый](../../../visual-basic/language-reference/modifiers/public.md)— любой код, который можно получить доступ к объявляющему его элементу, можно получить доступ к.<br />-   [Защищенные](../../../visual-basic/language-reference/modifiers/protected.md)— только код внутри его класса или производного класса может получить доступ к.<br />-   [Дружественные](../../../visual-basic/language-reference/modifiers/friend.md)— только код в той же сборке может получить доступ к.<br />-   [Закрытый](../../../visual-basic/language-reference/modifiers/private.md)— только код в объявляющем его элементе может получить доступ к.<br /><br /> Можно указать `Protected Friend` для предоставления доступа из кода в классе события, производном классе или той же сборке.|  
@@ -72,7 +64,7 @@ End Event
 |`eventname`|Обязательно. Имя события; соответствует стандартным правилам именования переменных.|  
 |`parameterlist`|Необязательный. Список локальных переменных, которые представляют параметры этого события. Необходимо заключить [список параметров](../../../visual-basic/language-reference/statements/parameter-list.md) в круглые скобки.|  
 |`Implements`|Необязательный. Указывает, что это событие реализует событие интерфейса.|  
-|`implementslist`|Является обязательным, если предоставлен параметр `Implements`. Список реализуемых процедур `Sub`. Несколько процедур разделяются запятыми.<br /><br /> *реализуемая_процедура* [, *реализуемая_процедура* ...]<br /><br /> Каждый элемент `implementedprocedure` имеет перечисленные ниже синтаксис и компоненты.<br /><br /> `interface`.`definedname`<br /><br /> -   `interface`-Обязательно. Имя интерфейса, реализуемого классом или структурой, содержащими эту процедуру.<br />-   `Definedname`-Обязательно. Имя, под которым процедура определена в `interface`. Оно не должно совпадать с `name`, именем, которое эта процедура использует для реализации определенной процедуры.|  
+|`implementslist`|Является обязательным, если предоставлен параметр `Implements`. Список реализуемых процедур `Sub`. Несколько процедур разделяются запятыми.<br /><br /> *реализуемая_процедура* [, *реализуемая_процедура* ...]<br /><br /> Каждый элемент `implementedprocedure` имеет перечисленные ниже синтаксис и компоненты.<br /><br /> `interface`.`definedname`<br /><br /> -   `interface` -Обязательно. Имя интерфейса, реализуемого классом или структурой, содержащими эту процедуру.<br />-   `Definedname` -Обязательно. Имя, под которым процедура определена в `interface`. Оно не должно совпадать с `name`, именем, которое эта процедура использует для реализации определенной процедуры.|  
 |`Custom`|Обязательно. События, объявленные как `Custom`, должны определять настраиваемые методы доступа `AddHandler`, `RemoveHandler` и `RaiseEvent`.|  
 |`delegatename`|Необязательный. Имя делегата, указывающего подпись обработчика событий.|  
 |`AddHandler`|Обязательно. Объявляет метод доступа `AddHandler`, который задает операторы, выполняемые при добавлении обработчика событий, явно с помощью оператора `AddHandler` или неявно с помощью предложения `Handles`.|  

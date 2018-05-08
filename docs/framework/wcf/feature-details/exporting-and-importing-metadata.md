@@ -1,34 +1,20 @@
 ---
-title: "Экспорт и импорт метаданных"
-ms.custom: 
+title: Экспорт и импорт метаданных
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - metadata [WCF], exporting and importing
 ms.assetid: 614a75bb-e0b0-4c95-b6d8-02cb5e5ddb38
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: a2785f74d9a07b267d836a9f6e6749d259a1ab21
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 497feb80d5930a784022877cfaa6e6c76a3047a1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="exporting-and-importing-metadata"></a>Экспорт и импорт метаданных
-В [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] экспорт метаданных представляет собой процесс описания конечных точек службы и проецирования их в параллельное, стандартизованное представление, позволяющее клиентам понять, как использовать службу. Импорт метаданных службы - это процесс создания экземпляров <xref:System.ServiceModel.Description.ServiceEndpoint> или частей из метаданных службы.  
+В Windows Communication Foundation (WCF), экспорт метаданных — это процесс описания конечных точек службы и проецирования их в параллельное, стандартизованное представление, позволяющее клиентам понять, как использовать службу. Импорт метаданных службы - это процесс создания экземпляров <xref:System.ServiceModel.Description.ServiceEndpoint> или частей из метаданных службы.  
   
 ## <a name="exporting-metadata"></a>Экспорт метаданных  
- Для экспорта метаданных из экземпляров <xref:System.ServiceModel.Description.ServiceEndpoint?displayProperty=nameWithType> используется реализация абстрактного класса <xref:System.ServiceModel.Description.MetadataExporter>. Тип <xref:System.ServiceModel.Description.WsdlExporter> является реализацией абстрактного класса <xref:System.ServiceModel.Description.MetadataExporter>, входящего в [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ Для экспорта метаданных из экземпляров <xref:System.ServiceModel.Description.ServiceEndpoint?displayProperty=nameWithType> используется реализация абстрактного класса <xref:System.ServiceModel.Description.MetadataExporter>. <xref:System.ServiceModel.Description.WsdlExporter> Тип — это реализация <xref:System.ServiceModel.Description.MetadataExporter> абстрактный класс, входящий в состав WCF.  
   
  Тип <xref:System.ServiceModel.Description.WsdlExporter?displayProperty=nameWithType> создает метаданные языка описания веб-служб (WSDL) с присоединенными выражениями политики в экземпляре <xref:System.ServiceModel.Description.MetadataSet>. Экземпляр <xref:System.ServiceModel.Description.WsdlExporter?displayProperty=nameWithType> можно использовать для итерационного экспорта метаданных для объектов <xref:System.ServiceModel.Description.ContractDescription> и объектов <xref:System.ServiceModel.Description.ServiceEndpoint>. Можно также экспортировать коллекцию объектов <xref:System.ServiceModel.Description.ServiceEndpoint> и связать их с определенным именем службы.  
   
@@ -38,7 +24,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="importing-metadata"></a>Импорт метаданных  
   
 ### <a name="importing-wsdl-documents"></a>Импорт документов WSDL  
- Чтобы импортировать метаданные службы в [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], следует использовать реализацию абстрактного класса <xref:System.ServiceModel.Description.MetadataImporter>. Тип <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType> является реализацией абстрактного класса <xref:System.ServiceModel.Description.MetadataImporter>, входящего в [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Тип <xref:System.ServiceModel.Description.WsdlImporter> импортирует метаданные языка WSDL с прикрепленными политиками, объединенными в объекте <xref:System.ServiceModel.Description.MetadataSet>.  
+ Чтобы импортировать метаданные службы в WCF, используется реализация <xref:System.ServiceModel.Description.MetadataImporter> абстрактного класса. <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType> Тип — это реализация <xref:System.ServiceModel.Description.MetadataImporter> абстрактный класс, входящий в состав WCF. Тип <xref:System.ServiceModel.Description.WsdlImporter> импортирует метаданные языка WSDL с прикрепленными политиками, объединенными в объекте <xref:System.ServiceModel.Description.MetadataSet>.  
   
  Тип <xref:System.ServiceModel.Description.WsdlImporter> позволяет контролировать способ импорта метаданных. Можно импортировать все конечные точки, все привязки или все контракты. Можно импортировать все конечные точки, связанные с определенной службой, привязкой или типом порта WSDL. Можно также импортировать конечную точку для определенного порта WSDL, привязку для определенной привязки WSDL или контракт для определенного типа порта WSDL.  
   

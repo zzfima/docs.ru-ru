@@ -1,37 +1,23 @@
 ---
 title: Рекомендации. Управление версиями контракта данных
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - data contracts
 - service contracts
 - best practices [WCF], data contract versioning
 - Windows Communication Foundation, data contracts
 ms.assetid: bf0ab338-4d36-4e12-8002-8ebfdeb346cb
-caps.latest.revision: 24
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 6ea139f6b854a299760df4c7cb8c315b58701ab8
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: a578235a0db0ba769cae0b2ade93edbfd72b5508
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="best-practices-data-contract-versioning"></a>Рекомендации. Управление версиями контракта данных
 В данном разделе приводятся рекомендации по созданию контрактов данных, которые можно легко развить со временем. Дополнительные сведения о контрактах данных см. в разделах в [использование контрактов данных](../../../docs/framework/wcf/feature-details/using-data-contracts.md).  
   
 ## <a name="note-on-schema-validation"></a>Замечания по проверке схемы  
- При обсуждении управления версиями контрактов данных важно отметить, что схема контракта данных, экспортированная службой [!INCLUDE[indigo1](../../../includes/indigo1-md.md)], не обеспечивает поддержку управления версиями, за исключением того, что элементы отмечаются как необязательные по умолчанию.  
+ При обсуждении управления версиями контрактов данных, важно отметить, что схема контракта данных, экспортированная Windows Communication Foundation (WCF) не обеспечивает поддержку управления версиями, за исключением того, что элементы отмечаются как необязательные по умолчанию.  
   
  Это значит, что даже самые общие сценарии управления версиями, такие как добавление нового члена данных, невозможно реализовать так, чтобы обеспечить тесное взаимодействие с данной схемой. Новые версии контракта данных (например, с новым членом данных) не выполняют проверку с использованием старой схемы.  
   

@@ -1,24 +1,12 @@
 ---
-title: "ограничение ссылочной целостности"
-ms.custom: 
+title: ограничение ссылочной целостности
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 3d3ba44b-4302-40d8-a7a9-62932e0395e5
-caps.latest.revision: "3"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: c343a0eba2478e041186f7bef18a85400c54bb5c
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: a4d63e07da0c75b8a0369933fccfc0cc66fcc40b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="referential-integrity-constraint"></a>ограничение ссылочной целостности
 Объект *ограничение ссылочной целостности* в модель данных сущности (EDM) похоже на ограничение ссылочной целостности в реляционной базе данных. Таким же образом, столбец (или столбцы) из таблицы базы данных может ссылаться первичный ключ другой таблицы [свойство](../../../../docs/framework/data/adonet/property.md) (или свойства) из [тип сущности](../../../../docs/framework/data/adonet/entity-type.md) могут ссылаться на [ключ сущности ](../../../../docs/framework/data/adonet/entity-key.md) другого типа сущности. Тип сущности, на который имеется ссылка называется *основной элемент* ограничения. Тип сущности, который ссылается на основной элемент называется *зависимом* ограничения.  

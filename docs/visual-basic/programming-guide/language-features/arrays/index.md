@@ -1,11 +1,6 @@
 ---
 title: Массивы в Visual Basic
-ms.custom: ''
 ms.date: 12/06/2017
-ms.prod: .net
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Array
 helpviewer_keywords:
@@ -14,12 +9,11 @@ helpviewer_keywords:
 ms.assetid: dbf29737-b589-4443-bee6-a27588d9c67e
 author: rpetrusha
 ms.author: ronpet
-ms.manager: wpickett
-ms.openlocfilehash: d223ca8b0ff59a13c31fa777e5cb6a97918421c6
-ms.sourcegitcommit: 01ea3686e74ff05e4f6de3d8d46dc603d051ec00
+ms.openlocfilehash: 3b6c1db0131f2a150dc1b00dd5e6dafc3a418f05
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="arrays-in-visual-basic"></a>Массивы в Visual Basic
 Массив — это набор значений, которые называются *элементы*, логически связанных друг с другом. Например массив может состоять из число учеников в каждом классе школы; Каждый элемент массива представляет число учеников в одном классе. Аналогичным образом массив может состоять из Стьюдента оценок для класса; Каждый элемент массива представляет один уровень.    
@@ -165,7 +159,7 @@ Dim sales()() As Double = New Double(11)() {}
   
  [!code-vb[iterate-one-dimensional-array](../../../../../samples/snippets/visualbasic/programming-guide/language-features/arrays/iterate1d.vb)]  
   
- Следующий пример перебор многомерного массива с помощью [ `For...Next` ](../../../../visual-basic/language-reference/statements/for-next-statement.md) инструкции. Метод <xref:System.Array.GetUpperBound%2A> имеет параметр, который определяет измерение. `GetUpperBound(0)`Возвращает наибольший индекс первого измерения и `GetUpperBound(1)` Возвращает наибольший индекс второго измерения.
+ Следующий пример перебор многомерного массива с помощью [ `For...Next` ](../../../../visual-basic/language-reference/statements/for-next-statement.md) инструкции. Метод <xref:System.Array.GetUpperBound%2A> имеет параметр, который определяет измерение. `GetUpperBound(0)` Возвращает наибольший индекс первого измерения и `GetUpperBound(1)` Возвращает наибольший индекс второго измерения.
   
  [!code-vb[iterate-two-dimensional-array](../../../../../samples/snippets/visualbasic/programming-guide/language-features/arrays/iterate2d.vb)]  
   
@@ -318,7 +312,7 @@ Dim arrZ(-1) As String
   
  Более подробную информацию о коллекциях см. в статье [Коллекции](../../concepts/collections.md).
   
-## <a name="related-topics"></a>Связанные разделы  
+## <a name="related-topics"></a>См. также  
   
 |Термин|Определение|  
 |----------|----------------|  

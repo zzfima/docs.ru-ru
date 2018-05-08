@@ -1,13 +1,6 @@
 ---
-title: "Элементы управления, разработанные пользователем"
-ms.custom: 
+title: Элементы управления, разработанные пользователем
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,25 +9,20 @@ helpviewer_keywords:
 - OnPaint method [Windows Forms]
 - user-drawn controls [Windows Forms]
 ms.assetid: 034af4b5-457f-4160-a937-22891817faa8
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e9e486058850616c2304ce0032c35baa855fdf2f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 26b4f062c120bf543a5e597fc8c734e8cc336bd8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="user-drawn-controls"></a>Элементы управления, разработанные пользователем
 Платформа .NET Framework предоставляет возможность легко разрабатывать собственные элементы управления. Можно создать пользовательский элемент управления, который представляет собой набор стандартных элементов управления, связанных с помощью кода, или можно разработать собственный элемент управления с самого начала копирования. Можно даже использовать наследование для создания элемента управления, который наследует от существующего элемента управления и добавить его функциональные возможности. Независимо от подхода, .NET Framework обеспечивает возможность создания пользовательского интерфейса для любого элемента управления, создаваемые вами.  
   
  Рисование элемента управления сопровождается выполнением кода в элементе управления <xref:System.Windows.Forms.Control.OnPaint%2A> метод. Единственным аргументом <xref:System.Windows.Forms.Control.OnPaint%2A> метод <xref:System.Windows.Forms.PaintEventArgs> объект, предоставляющий все сведения и функциональные возможности, необходимые для визуализации элемента управления. <xref:System.Windows.Forms.PaintEventArgs> Предоставляет два объекта-участника, которые будут использоваться при отрисовке элемента управления в виде свойств:  
   
--   <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A>Объект - прямоугольник, представляющий элемент управления, которая будет нарисована. Это может быть весь элемент управления или элемента управления в зависимости от того, как отображается элемент управления.  
+-   <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> Объект - прямоугольник, представляющий элемент управления, которая будет нарисована. Это может быть весь элемент управления или элемента управления в зависимости от того, как отображается элемент управления.  
   
--   <xref:System.Drawing.Graphics>объект - инкапсулирует несколько графических объектов и методов, которые предоставляют функциональные возможности, необходимые для рисования элемента управления.  
+-   <xref:System.Drawing.Graphics> объект - инкапсулирует несколько графических объектов и методов, которые предоставляют функциональные возможности, необходимые для рисования элемента управления.  
   
  Дополнительные сведения о <xref:System.Drawing.Graphics> объекта и способах ее использования см. в разделе [как: Создание графических объектов для рисования](../../../../docs/framework/winforms/advanced/how-to-create-graphics-objects-for-drawing.md).  
   

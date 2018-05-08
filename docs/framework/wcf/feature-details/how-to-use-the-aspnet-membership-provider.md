@@ -1,30 +1,16 @@
 ---
 title: Практическое руководство. Использование поставщика членства ASP.NET
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - WCF and ASP.NET
 - WCF, authorization
 - WCF, security
 ms.assetid: 322c56e0-938f-4f19-a981-7b6530045b90
-caps.latest.revision: 15
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 19fb83d21c77f3206c314a2e6c40562fcb75f151
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: d71e3679f4bf395b240c330fc573d6f613d1be07
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-use-the-aspnet-membership-provider"></a>Практическое руководство. Использование поставщика членства ASP.NET
 Поставщик членства в среде [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] - это функция, которая позволяет разработчикам [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] создавать веб-узлы с возможностью создания пользователями уникальных комбинаций имени пользователя и пароля. Эта функция позволяет любому пользователю создавать на узле учетную запись и при входе получать монопольный доступ к узлу и его службам. В этом заключается отличие от безопасности Windows, по условиям которой пользователи обязаны создавать ученые записи в домене Windows. Вместо этого любой пользователь, который предоставляет свои учетные данные (сочетание имени пользователя и пароля), может использовать узел и его службы.  
@@ -33,10 +19,10 @@ ms.lasthandoff: 04/30/2018
   
  Возможность членства требует использования базы данных SQL Server для хранения сведений о пользователе. Эта возможность также включает методы напоминания пользователю его пароля с помощью специального вопроса.  
   
- Разработчики [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] могут воспользоваться преимуществами этих функций в целях безопасности. Когда эти функции интегрированы в приложение [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], пользователи должны предоставлять сочетание имя/пароль пользователя клиентскому приложению [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Для передачи данных в [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] службы, привязку, которая поддерживает учетные данные имени и пароля пользователя, такие как <xref:System.ServiceModel.WSHttpBinding> (в конфигурации [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)) и задайте учетные данные клиента Тип `UserName`. В службе система безопасности [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] проверяет подлинность пользователя по имени и паролю пользователя и назначает роль, заданную ролью [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)].  
+ Разработчики Windows Communication Foundation (WCF) можно воспользоваться преимуществами этих функций в целях безопасности. При интеграции в приложение WCF, пользователи должны предоставлять сочетание имени и пароля пользователя клиентского приложения WCF. Для передачи данных в службу WCF, используйте привязку, которая поддерживает учетные данные имени и пароля пользователя, таких как <xref:System.ServiceModel.WSHttpBinding> (в конфигурации [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)) и задать тип учетных данных для клиента`UserName`. В службе WCF безопасности проверяет подлинность пользователя на основе имени пользователя и пароля и назначает роль, заданную [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] роли.  
   
 > [!NOTE]
->  В [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] не предусмотрены какие-либо методы для заполнения базы данных сочетаниями имени/пароля пользователя или другими сведениями о пользователе.  
+>  WCF не поддерживает методы для заполнения базы данных сочетаниями имени и пароля пользователя или другими сведениями о пользователе.  
   
 ### <a name="to-configure-the-membership-provider"></a>Настройка поставщика членства  
   
@@ -73,7 +59,7 @@ ms.lasthandoff: 04/30/2018
   
 1.  В файле конфигурации в разделе [ \<system.serviceModel >](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) элемента, добавьте [ \<привязки >](../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md) элемента.  
   
-2.  Добавить [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) для раздела привязок. Дополнительные сведения о создании [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] элемент привязки в разделе [как: задание привязки службы в конфигурации](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md).  
+2.  Добавить [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) для раздела привязок. Дополнительные сведения о создании элемента привязки WCF см. в разделе [как: задание привязки службы в конфигурации](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md).  
   
 3.  Задайте атрибуту `mode` элемента `<security>` значение `Message`.  
   
@@ -111,7 +97,7 @@ ms.lasthandoff: 04/30/2018
 6.  Задайте для атрибута `userNamePasswordValidationMode` значение `MembershipProvider`.  
   
     > [!IMPORTANT]
-    >  Если значение `userNamePasswordValidationMode` не задано, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] использует проверку подлинности Windows вместо поставщика членства [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)].  
+    >  Если `userNamePasswordValidationMode` значение не задано, WCF использует проверку подлинности Windows вместо [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] поставщика членства.  
   
 7.  Задайте для атрибута `membershipProviderName` значение "имя поставщика" (указывается при добавлении поставщика в первой процедуре данного раздела). В следующем примере показан фрагмент `<serviceCredentials>`, иллюстрирующий вышеуказанные действия.  
   

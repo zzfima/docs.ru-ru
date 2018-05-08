@@ -1,27 +1,17 @@
 ---
-title: "Работа с пространствами имен XML (Visual Basic)"
-ms.custom: 
+title: Работа с пространствами имен XML (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 428bf4b0-e348-4ffd-986b-d905d5a0e7fa
-caps.latest.revision: "4"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: fd38b2421a58fafa807d39506b728b7d3a4645a1
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 9408034173be9bba4ad11b86eef2d2a86b51b403
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="working-with-xml-namespaces-visual-basic"></a>Работа с пространствами имен XML (Visual Basic)
 Темы в этом разделе описывают, как [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] поддерживает пространства имен.  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
   
 |Раздел|Описание|  
 |-----------|-----------------|  

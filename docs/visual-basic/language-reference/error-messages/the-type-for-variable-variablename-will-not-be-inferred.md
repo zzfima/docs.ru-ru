@@ -1,28 +1,19 @@
 ---
-title: Тип для переменной &#39; &lt;variablename&gt;&#39; не будет определен, так как она привязана к полю во включающей области
+title: Тип для переменной &#39; &lt;variablename&gt; &#39; не будет определен, так как она привязана к полю во включающей области
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vbc42110
 - bc42110
 helpviewer_keywords:
 - BC42110
 ms.assetid: ef4442eb-08d1-434f-a03b-4aa2ed4e4414
-caps.latest.revision: 33
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 39968407f4de5436df324320c99dede4d72e2808
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: cb423e8dcced6956eb86d484607915030c91412b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="the-type-for-variable-39ltvariablenamegt39-will-not-be-inferred-because-it-is-bound-to-a-field-in-an-enclosing-scope"></a>Тип для переменной &#39; &lt;variablename&gt;&#39; не будет определен, так как она привязана к полю во включающей области
+# <a name="the-type-for-variable-39ltvariablenamegt39-will-not-be-inferred-because-it-is-bound-to-a-field-in-an-enclosing-scope"></a>Тип для переменной &#39; &lt;variablename&gt; &#39; не будет определен, так как она привязана к полю во включающей области
 Тип для переменной "\<variablename >" не будет определен, так как она привязана к полю во включающей области. Измените имя "\<variablename >", или используйте полное доменное имя (например, «Me.variablename» или «MyBase.variablename»).  
   
  Управляющая переменная цикла в коде имеет то же имя в поле класса или других внешней области видимости. Так как переменная управления используется без `As` предложения, он привязан к полю во включающей области, и компилятор не создает новую переменную и не вывести его тип.  

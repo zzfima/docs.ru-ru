@@ -1,30 +1,16 @@
 ---
 title: Windows Forms
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - Windows Forms
 - user interface
 - user interface [Windows Forms], forms
 ms.assetid: 627df1e9-b254-41af-bbac-9a4f02810c54
-caps.latest.revision: 25
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 5949bebe91767539c230ba166f9389f09dc2392b
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: bb785860ed3cccbd93273805e5f2bada2f5f9c34
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="windows-forms"></a>Windows Forms
 Так как формы являются основной частью приложения, необходимо уделить особое внимание их внешнему виду и функциям. В конечном счете форма представляет собой чистый лист, который разработчик оснащает элементами управления, формируя пользовательский интерфейс, и кодом для работы с данными. Для этого Visual Studio обеспечивает интегрированной среды разработки (IDE), упрощающую написание кода, а также широкий набор элементов управления [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. Дополняя функциональные возможности этих элементов управления своим кодом, вы можете легко и быстро разработать нужное приложение.  

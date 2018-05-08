@@ -1,14 +1,6 @@
 ---
-title: "Метод IHostTaskManager::SetUILocale"
-ms.custom: 
+title: Метод IHostTaskManager::SetUILocale
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IHostTaskManager.SetUILocale
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: d0c87a9c-ea81-4237-a16b-c22b36ec9dc8
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 099c3d4878e7dd83be9240e121777c71c2890c88
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f929dceafc72af89cfd85b1617de7bbd0bc0dfff
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ihosttaskmanagersetuilocale-method"></a>Метод IHostTaskManager::SetUILocale
 Уведомляет основное приложение об изменении общеязыковой среды выполнения (CLR) язык пользовательского интерфейса пользователя или языка и региональных параметров в текущей выполняемой задаче.  
@@ -54,7 +42,7 @@ HRESULT SetUILocale (
   
 |HRESULT|Описание|  
 |-------------|-----------------|  
-|S_OK|`SetUILocale`успешно возвращен.|  
+|S_OK|`SetUILocale` успешно возвращен.|  
 |ЗНАЧЕНИЕ HOST_E_CLRNOTAVAILABLE|Среда CLR не загружена в процесс или находится в состоянии, в котором не может выполнять управляемый код или успешно обработать вызов.|  
 |HOST_E_TIMEOUT|Истекло время ожидания вызова.|  
 |HOST_E_NOT_OWNER|Вызывающий объект не является владельцем блокировки.|  
@@ -72,7 +60,7 @@ HRESULT SetUILocale (
   
  **Библиотека:** включена как ресурс в MSCorEE.dll  
   
- **Версии платформы .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Версии платформы .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>См. также  
  [Интерфейс ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)  

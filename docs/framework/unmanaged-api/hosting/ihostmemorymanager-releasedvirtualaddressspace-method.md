@@ -1,14 +1,6 @@
 ---
-title: "Метод IHostMemoryManager::ReleasedVirtualAddressSpace"
-ms.custom: 
+title: Метод IHostMemoryManager::ReleasedVirtualAddressSpace
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IHostMemoryManager.ReleasedVirtualAddressSpace
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: d1876601-6ab9-48e1-8ebd-184af1d0cd76
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: d6db2868405aadb5879241e12128c6db40c0a5c2
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8f6a3d425d4c2ae2146723a6acfc5ab9893f0fe0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ihostmemorymanagerreleasedvirtualaddressspace-method"></a>Метод IHostMemoryManager::ReleasedVirtualAddressSpace
 Уведомляет узел об окончании общеязыковой среды выполнения (CLR) с помощью указанной памяти.  
@@ -60,7 +48,7 @@ HRESULT ReleasedVirtualAddressSpace(
   
  **Библиотека:** включена как ресурс в MSCorEE.dll  
   
- **Версии платформы .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Версии платформы .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>См. также  
  [Интерфейс IHostMemoryManager](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-interface.md)

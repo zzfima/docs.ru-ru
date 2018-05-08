@@ -1,14 +1,6 @@
 ---
-title: "Интерфейс ICorDebugModule3"
-ms.custom: 
+title: Интерфейс ICorDebugModule3
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorDebugModule3
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: 0b69f945-263a-4e11-8512-89d27f6ea296
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: b864b057e274424a8515ab1bb122da74538c4c63
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5fc4c0560c2aa0d66c1b40d78458a2d44284e232
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icordebugmodule3-interface"></a>Интерфейс ICorDebugModule3
 Создает средство чтения символов для динамического модуля.  
@@ -52,7 +40,7 @@ interface ICorDebugModule3 : IUnknown
   
 ## <a name="methods"></a>Методы  
   
-|Метод|Описание:|  
+|Метод|Описание|  
 |------------|-----------------|  
 |[Метод ICorDebugModule3::CreateReaderForInMemorySymbols](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule3-createreaderforinmemorysymbols-method.md)|Создает средство чтения символов (обычно [ISymUnmanagedReader-интерфейс](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)) для динамического модуля.|  
   
@@ -69,7 +57,7 @@ interface ICorDebugModule3 : IUnknown
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:**4.5, 4, 3.5 с пакетом обновления 1  
+ **Версии платформы .NET framework:** 4.5, 4, 3.5 с пакетом обновления 1  
   
 ## <a name="see-also"></a>См. также  
  [Интерфейс ICorDebugRemoteTarget](../../../../docs/framework/unmanaged-api/debugging/icordebugremotetarget-interface.md)  

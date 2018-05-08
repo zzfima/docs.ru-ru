@@ -1,24 +1,12 @@
 ---
-title: "Как разместить не являющийся службой рабочий процесс в службах IIS"
-ms.custom: 
+title: Как разместить не являющийся службой рабочий процесс в службах IIS
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: f362562c-767d-401b-8257-916616568fd4
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4b7ffdc00a7723fd6b514fbb5577c48da15d719c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 70fd6aca94f2addd7ee568e897171ae1da86db67
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-host-a-non-service-workflow-in-iis"></a>Как разместить не являющийся службой рабочий процесс в службах IIS
 Рабочие процессы, которые не являются службами рабочих процессов, должны быть размещены в службах IIS/WAS. Это может оказаться полезным, если нужно разместить рабочий процесс, разработанный кем-то другим. Например, если необходимо повторно разместить конструктор рабочих процессов и разрешить пользователям создавать собственные рабочие процессы.  Размещение не являющихся службами рабочих процессов в службах IIS обеспечивает поддержку таких функций, как перезапуск процессов, завершение работы при ожидании, наблюдение за работоспособностью процессов и активация на основе сообщений. Службы рабочих процессов, размещенные в службах IIS, содержат действия <xref:System.ServiceModel.Activities.Receive> и активируются в момент получения сообщения службами IIS. Не являющиеся службами рабочие процессы не содержат действий обмена сообщениями и по умолчанию не могут быть активированы отправкой сообщения.  Чтобы создать экземпляр рабочего процесса, необходимо создать класс, производный от <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint>, и определить контракт службы, содержащий операции. Этот раздел содержит пошаговое руководство по созданию простого рабочего процесса, определение контракта службы, клиент может использовать для активации рабочего процесса и создания класса, производного от класса <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint> для прослушивания запросов на создание рабочего процесса, которая использует контракт службы.  
@@ -332,7 +320,7 @@ ms.lasthandoff: 12/22/2017
   
 8.  Скопируйте файл web.config в каталог приложения IIS.  
   
-9. Проверьте, работает ли создание конечной точки, запустив Internet Explorer и прейдя по адресу http://localhost/MyCreationEndpoint/Workflow1.xamlx. Internet Explorer должен отобразить следующий экран.  
+9. Чтобы узнать, работает ли создание конечной точки, запустив Internet Explorer и перейдите в http://localhost/MyCreationEndpoint/Workflow1.xamlx. Internet Explorer должен отобразить следующий экран.  
   
      ![Тестирование службы](../../../../docs/framework/wcf/feature-details/media/testservice.gif "TestService")  
   

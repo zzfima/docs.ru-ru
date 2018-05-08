@@ -1,13 +1,6 @@
 ---
-title: "Настройка внешнего вида существующего элемента управления путем создания объекта ControlTemplate"
-ms.custom: 
+title: Настройка внешнего вида существующего элемента управления путем создания объекта ControlTemplate
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -19,19 +12,14 @@ helpviewer_keywords:
 - controls [WPF], appearance specified by state
 - templates [WPF], custom for existing controls
 ms.assetid: 678dd116-43a2-4b8c-82b5-6b826f126e31
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0019b739c794cbffa62b49749371c2a19f752267
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: bbdc79fabf8dbe344baae66d718d79ac6375db7e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="customizing-the-appearance-of-an-existing-control-by-creating-a-controltemplate"></a>Настройка внешнего вида существующего элемента управления путем создания объекта ControlTemplate
-<a name="introduction"></a>Объект <xref:System.Windows.Controls.ControlTemplate> указывает визуальную структуру и визуальное поведение элемента управления. Можно настроить внешний вид элемента управления, предоставляя ему новый <xref:System.Windows.Controls.ControlTemplate>. При создании <xref:System.Windows.Controls.ControlTemplate>, замените внешний вид существующего элемента управления без изменения его функциональность. Например, можно сделать кнопки в приложении round, а не по умолчанию квадратных, но будет по-прежнему вызывать кнопки <xref:System.Windows.Controls.Primitives.ButtonBase.Click> событий.  
+<a name="introduction"></a> Объект <xref:System.Windows.Controls.ControlTemplate> указывает визуальную структуру и визуальное поведение элемента управления. Можно настроить внешний вид элемента управления, предоставляя ему новый <xref:System.Windows.Controls.ControlTemplate>. При создании <xref:System.Windows.Controls.ControlTemplate>, замените внешний вид существующего элемента управления без изменения его функциональность. Например, можно сделать кнопки в приложении round, а не по умолчанию квадратных, но будет по-прежнему вызывать кнопки <xref:System.Windows.Controls.Primitives.ButtonBase.Click> событий.  
   
  В этом разделе объясняется различные части <xref:System.Windows.Controls.ControlTemplate>, показано, как создать простой <xref:System.Windows.Controls.ControlTemplate> для <xref:System.Windows.Controls.Button>и объясняется, как понимать контракт элемента управления, чтобы можно было настроить его внешний вид. Поскольку вы создаете <xref:System.Windows.Controls.ControlTemplate> в [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], можно изменить внешний вид элемента управления без написания кода. Можно также использовать конструктор, например Microsoft Expression Blend, чтобы создать шаблоны пользовательского элемента управления. В этом разделе приведены примеры [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] , настроить внешний вид <xref:System.Windows.Controls.Button> и перечислены в полном примере в конце этого раздела. Дополнительные сведения об использовании Expression Blend см. в статье [Настройка стиля элемента управления, поддерживающего шаблон](http://go.microsoft.com/fwlink/?LinkId=161153).  
   
@@ -93,7 +81,7 @@ ms.lasthandoff: 12/22/2017
   
  В этом примере <xref:System.Windows.Controls.Grid> имеет его <xref:System.Windows.Controls.Panel.Background%2A?displayProperty=nameWithType> шаблон свойство привязан к <xref:System.Windows.Controls.Control.Background%2A?displayProperty=nameWithType>. Поскольку <xref:System.Windows.Controls.Panel.Background%2A?displayProperty=nameWithType> будет привязано к шаблону, можно создать несколько кнопок, использующих один <xref:System.Windows.Controls.ControlTemplate> и задайте <xref:System.Windows.Controls.Control.Background%2A?displayProperty=nameWithType> в разные значения для каждой кнопки. Если <xref:System.Windows.Controls.Control.Background%2A?displayProperty=nameWithType> шаблон не был привязан к свойству элемента в <xref:System.Windows.Controls.ControlTemplate>, параметр <xref:System.Windows.Controls.Control.Background%2A?displayProperty=nameWithType> кнопки окажет никакого воздействия на внешний вид кнопки.  
   
- Следует отметить, что не требуется, чтобы имена этих двух свойств совпадали. В приведенном выше примере <xref:System.Windows.Controls.Control.HorizontalContentAlignment%2A?displayProperty=nameWithType> свойство <xref:System.Windows.Controls.Button> привязано к шаблону <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A?displayProperty=nameWithType> свойство <xref:System.Windows.Controls.ContentPresenter>. Это позволяет располагать содержимое кнопки горизонтально. <xref:System.Windows.Controls.ContentPresenter>имеет свойство с именем `HorizontalContentAlignment`, но <xref:System.Windows.Controls.Control.HorizontalContentAlignment%2A?displayProperty=nameWithType> могут быть привязаны к <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A?displayProperty=nameWithType>. Перед привязкой свойства к шаблону следует убедиться, что целевое и исходное свойства имеют один и тот же тип.  
+ Следует отметить, что не требуется, чтобы имена этих двух свойств совпадали. В приведенном выше примере <xref:System.Windows.Controls.Control.HorizontalContentAlignment%2A?displayProperty=nameWithType> свойство <xref:System.Windows.Controls.Button> привязано к шаблону <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A?displayProperty=nameWithType> свойство <xref:System.Windows.Controls.ContentPresenter>. Это позволяет располагать содержимое кнопки горизонтально. <xref:System.Windows.Controls.ContentPresenter> имеет свойство с именем `HorizontalContentAlignment`, но <xref:System.Windows.Controls.Control.HorizontalContentAlignment%2A?displayProperty=nameWithType> могут быть привязаны к <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A?displayProperty=nameWithType>. Перед привязкой свойства к шаблону следует убедиться, что целевое и исходное свойства имеют один и тот же тип.  
   
  <xref:System.Windows.Controls.Control> Класс определяет несколько свойств, которые необходимо использовать шаблон элемента управления для оказывать влияние на элемент управления, если они заданы. Как <xref:System.Windows.Controls.ControlTemplate> использует свойство зависит от свойства. <xref:System.Windows.Controls.ControlTemplate> Необходимо использовать свойство одним из следующих способов:  
   
@@ -142,7 +130,7 @@ ms.lasthandoff: 12/22/2017
   
  Элемент управления отвечает за определение состояний как часть своего контракта, что подробно рассматривается в подразделе [Настройка других элементов управления через понимание контракта элемента управления](#customizing_other_controls_by_understanding_the_control_contract) далее в этом разделе. В следующей таблице перечислены состояния, которые указаны для <xref:System.Windows.Controls.Button>.  
   
-|Имя VisualState|Имя VisualStateGroup|Описание:|  
+|Имя VisualState|Имя VisualStateGroup|Описание|  
 |----------------------|---------------------------|-----------------|  
 |Норм.|CommonStates|Состояние по умолчанию.|  
 |MouseOver|CommonStates|Указатель мыши расположен в элементе управления.|  
@@ -200,9 +188,9 @@ ms.lasthandoff: 12/22/2017
   
 |Тип ограничения|Состояние, из которого выполняется переход|Состояние, в которое выполняется переход|  
 |-------------------------|-------------------|-----------------|  
-|Из указанного состояния в другое указанное состояние|Имя<xref:System.Windows.VisualState>|Имя<xref:System.Windows.VisualState>|  
-|Из любого состояния в указанное состояние|Не задано|Имя<xref:System.Windows.VisualState>|  
-|Из указанного состояния в любое состояние|Имя<xref:System.Windows.VisualState>|Не задано|  
+|Из указанного состояния в другое указанное состояние|Имя <xref:System.Windows.VisualState>|Имя <xref:System.Windows.VisualState>|  
+|Из любого состояния в указанное состояние|Не задано|Имя <xref:System.Windows.VisualState>|  
+|Из указанного состояния в любое состояние|Имя <xref:System.Windows.VisualState>|Не задано|  
 |Из любого состояния в любое другое состояние|Не задано|Не задано|  
   
  Может иметь несколько <xref:System.Windows.VisualTransition> объекты в <xref:System.Windows.VisualStateGroup> , которые ссылаются на том же состоянии, но они будут использоваться в том порядке, в предыдущей таблице. В следующем примере есть два <xref:System.Windows.VisualTransition> объектов. Когда элемент управления переходит из `Pressed` состояние `MouseOver` состояние, <xref:System.Windows.VisualTransition> , имеет оба <xref:System.Windows.VisualTransition.From%2A> и <xref:System.Windows.VisualTransition.To%2A> набор используется. Когда элемент управления переходит из состояния, отличного от `Pressed`, в состояние `MouseOver`, используется другой объект.  

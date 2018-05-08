@@ -1,23 +1,12 @@
 ---
-title: "Динамическое обновление"
-ms.custom: 
+title: Динамическое обновление
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 8b6ef19b-9691-4b4b-824c-3c651a9db96e
-caps.latest.revision: "5"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ee6b228d729958e9e5f14cadb1e378a2944c4f85
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: cfd10e4b93351c607ef270487a12bec19ded4ca8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dynamic-update"></a>Динамическое обновление
 Динамическое обновление предоставляет разработчикам приложений рабочих процессов механизм обновления определения рабочего процесса для сохраненного экземпляра рабочего процесса. Это позволяет реализовать исправление ошибки, внедрить новые требования и внести непредвиденные изменения. В этом разделе приведены общие сведения о функциях динамического обновления, введенных в [!INCLUDE[net_v45](../../../includes/net-v45-md.md)].  
@@ -38,7 +27,7 @@ ms.lasthandoff: 12/22/2017
   
  В этом разделе приведены общие сведения о процессе динамического обновления с добавлением нового действия, которое добавляется к сохраненному экземпляру скомпилированного рабочего процесса языка XAML.  
   
-###  <a name="Prepare"></a>Подготовка определения рабочего процесса для динамического обновления  
+###  <a name="Prepare"></a> Подготовка определения рабочего процесса для динамического обновления  
  Первый шаг в процессе динамического обновления - подготовка требуемого определения рабочего процесса к обновлению. Это можно сделать, вызвав метод <xref:System.Activities.DynamicUpdate.DynamicUpdateServices.PrepareForUpdate%2A?displayProperty=nameWithType> и передав ему определение изменяемого рабочего процесса . Этот метод проверяет, а затем обходит дерево рабочего процесса для определения всех объектов, таких как открытые переменные и действия, которые необходимо отметить тегами для сравнения в дальнейшем с объектами в измененном определении рабочего процесса. По завершении этой операции дерево рабочего процесса клонируется и присоединяется к исходному определению рабочего процесса. При создании схемы обновленная версия определения рабочего процесса сравнивается с исходным определением рабочего процесса и схема создается на основе различий между ними.  
   
  Чтобы подготовить рабочий процесс языка XAML для динамического обновления, его можно загрузить в <xref:System.Activities.ActivityBuilder>, а затем передать <xref:System.Activities.ActivityBuilder> в <xref:System.Activities.DynamicUpdate.DynamicUpdateServices.PrepareForUpdate%2A?displayProperty=nameWithType>.  
@@ -69,7 +58,7 @@ DynamicUpdateServices.PrepareForUpdate(ab);
 > [!NOTE]
 >  Загрузить пример кода, используемый в этом разделе [пример кода динамического обновления](http://go.microsoft.com/fwlink/?LinkId=227905).  
   
-###  <a name="Update"></a>Обновление определения рабочего процесса для отражения требуемых изменений  
+###  <a name="Update"></a> Обновление определения рабочего процесса для отражения требуемых изменений  
  После того как определение рабочего процесса будет подготовлено к изменениям, можно внести необходимые желаемые изменения. Вы можете добавлять или удалять действия, добавлять, изменять или удалять открытые переменные, добавлять или удалять аргументы и вносить изменения в сигнатуру делегатов действий. Нельзя удалить выполняемое действие или изменить сигнатуру выполняемого делегата. Эти изменения можно внести из кода или в повторно размещенном конструкторе рабочих процессов. В следующем примере настраиваемое действие `VerifyAppraisal` добавляется в последовательность, представляющую основу `MortgageWorkflow` из предыдущего примера.  
   
 ```csharp  
@@ -87,7 +76,7 @@ Sequence s = ab.Implementation as Sequence;
 s.Activities.Insert(2, va);  
 ```  
   
-###  <a name="Create"></a>Создание схемы обновления  
+###  <a name="Create"></a> Создание схемы обновления  
  После изменения подготовленного к обновлению определения рабочего процесса можно создать схему обновления. Для создания схемы динамического обновления вызывается метод <xref:System.Activities.DynamicUpdate.DynamicUpdateServices.CreateUpdateMap%2A?displayProperty=nameWithType>. Этот метод возвращает <xref:System.Activities.DynamicUpdate.DynamicUpdateMap> - объект, содержащий сведения, необходимые среде выполнения для изменения сохраненного экземпляра рабочего процесса, чтобы тот можно было загрузить и возобновить вместе с новым определением рабочего процесса. В следующем примере создается динамическая схема для измененного определения `MortgageWorkflow` из предыдущего примера.  
   
 ```csharp  
@@ -116,7 +105,7 @@ XamlServices.Save(xw, ab);
 sw.Close();  
 ```  
   
-###  <a name="Apply"></a>Применение схемы обновления к требуемой сохраненные экземпляры рабочего процесса  
+###  <a name="Apply"></a> Применение схемы обновления к требуемой сохраненные экземпляры рабочего процесса  
  Применение схемы обновления можно выполнить в любое время после ее создания. Это можно сделать немедленно с помощью экземпляра <xref:System.Activities.DynamicUpdate.DynamicUpdateMap>, который был возвращен методом <xref:System.Activities.DynamicUpdate.DynamicUpdateServices.CreateUpdateMap%2A?displayProperty=nameWithType>, или позднее с помощью сохраненной копии схемы обновления. Для обновления экземпляра рабочего процесса загрузите его в объект <xref:System.Activities.WorkflowApplicationInstance> с помощью метода <xref:System.Activities.WorkflowApplication.GetInstance%2A?displayProperty=nameWithType>. Далее создайте <xref:System.Activities.WorkflowApplication> с помощью обновленного определения рабочего процесса и нужного метода <xref:System.Activities.WorkflowIdentity>. Этот идентификатор <xref:System.Activities.WorkflowIdentity> может отличаться от того, что был использован для сохранения исходного рабочего процесса, и, как правило, это делается для отражения того, что сохраненный экземпляр был изменен. Сразу после создания <xref:System.Activities.WorkflowApplication> загружается с помощью перегрузки <xref:System.Activities.WorkflowApplication.Load%2A?displayProperty=nameWithType>, принимающей <xref:System.Activities.DynamicUpdate.DynamicUpdateMap>, затем выгружается посредством вызова <xref:System.Activities.WorkflowApplication.Unload%2A?displayProperty=nameWithType>. При этом будет произведено динамическое обновление и обновленный экземпляр рабочего процесса будет сохранен.  
   
 ```csharp  

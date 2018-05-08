@@ -1,11 +1,6 @@
 ---
-title: "Тип данных UInteger"
+title: Тип данных UInteger
 ms.date: 01/31/2018
-ms.prod: .net
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.uinteger
 helpviewer_keywords:
@@ -23,11 +18,11 @@ helpviewer_keywords:
 ms.assetid: db7ddd34-4f23-46f5-84dd-8b0f83bb8729
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ea6d42a604e5a50fab62644034afc82e089792c7
-ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
+ms.openlocfilehash: a1c734578abd55270dd6feb9060d02691a6aaf8d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="uinteger-data-type"></a>UInteger - тип данных
 
@@ -80,7 +75,7 @@ Dim number = &H_0FAC_14D7ui
   
 -   **Расширяющие.** `UInteger` Тип данных может быть расширен до `Long`, `ULong`, `Decimal`, `Single`, и `Double`. Это означает, что можно преобразовать `UInteger` на любой из этих типов без возникновения <xref:System.OverflowException?displayProperty=nameWithType> ошибки.  
   
--   **Символы типов.** Символы типа литерала добавления `UI` с литералом приводит к принудительному `UInteger` тип данных. `UInteger`не имеет типа символа идентификатора.  
+-   **Символы типов.** Символы типа литерала добавления `UI` с литералом приводит к принудительному `UInteger` тип данных. `UInteger` не имеет типа символа идентификатора.  
   
 -   **Тип Framework.** В .NET Framework данный тип соответствует структуре <xref:System.UInt32?displayProperty=nameWithType>.  
   

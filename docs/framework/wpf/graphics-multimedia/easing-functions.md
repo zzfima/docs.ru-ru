@@ -1,13 +1,6 @@
 ---
-title: "Функции плавности"
-ms.custom: 
+title: Функции плавности
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -22,16 +15,11 @@ helpviewer_keywords:
 - easing functions [WPF], customizing
 - animations [WPF], applying
 ms.assetid: 075b9c2b-82c4-43fa-b3cd-de0b6236eb38
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 570a065d3f28befe8db4887ff908c3bd60a639a1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3ce7c1824dc53c154ba1091ea62c1b8950b757c1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="easing-functions"></a>Функции плавности
 Функции плавности позволяют применять к анимациям настраиваемые математические формулы. Например, требуется реалистичный отскок объекта или его поведение так, словно он подвешен на пружине. Для приблизительного воспроизведения этих эффектов можно использовать анимацию по ключевым кадрам или даже анимацию From/To/By, но это потребует значительного объема работы, и анимация будет менее точна, чем при использовании математических формул.  
@@ -50,7 +38,7 @@ ms.lasthandoff: 12/22/2017
   
 -   <xref:System.Windows.Media.Animation.ExponentialEase>: Создает анимацию, которая ускоряется и замедляется с помощью экспоненциальной формулы.  
   
--   <xref:System.Windows.Media.Animation.PowerEase>: Создает анимацию, которая ускоряется и замедляется с помощью формулы *f*(*t*) = *t*<sup>p</sup> где p — равно <xref:System.Windows.Media.Animation.PowerEase.Power%2A> свойство.  
+-   <xref:System.Windows.Media.Animation.PowerEase>: Создает анимацию, которая ускоряется и замедляется с помощью формулы *f*(*t*) = *t*<sup>p</sup> где p — <xref:System.Windows.Media.Animation.PowerEase.Power%2A>свойство.  
   
 -   <xref:System.Windows.Media.Animation.QuadraticEase>: Создает анимацию, которая ускоряется и замедляется с помощью формулы *f*(*t*) = *t*<sup>2</sup>.  
   

@@ -2,11 +2,11 @@
 title: '&lt;webHttpBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: 84179d77-825d-44b9-895a-ab08e7aa044d
-ms.openlocfilehash: abc08f81ac05aa42ff7247edf662f8dd4482fd4a
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
-ms.translationtype: HT
+ms.openlocfilehash: 3a5a0844da401607b2049069e7195fa996c62fba
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ltwebhttpbindinggt"></a>&lt;webHttpBinding&gt;
 Определяет элемент привязки, который используется для настройки конечных точек для веб-службы Windows Communication Foundation (WCF) служб, которые отвечают на запросы HTTP вместо сообщений протокола SOAP.  
@@ -86,9 +86,9 @@ ms.lasthandoff: 05/03/2018
 |[\<привязки >](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|Этот элемент содержит коллекцию стандартных и пользовательских привязок.|  
   
 ## <a name="remarks"></a>Примечания  
- Модель веб-программирования [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] позволяет разработчикам предоставлять веб-службы [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] с помощью запросов протокола HTTP, в которых используется стиль «Plain Old XML» (POX) вместо обмена сообщениями на основе протокола SOAP. Чтобы клиенты могли взаимодействовать со службой, используя HTTP-запросы, необходимо настроить конечную точку службы с [ \<webHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/webhttpbinding.md) с \<WebHttpBehavior >, присоединенные к ней.  
+ Модель веб-программирования WCF позволяет разработчикам предоставлять веб-служб WCF через HTTP-запросов, использующих «plain old XML» стиля (POX) вместо обмена сообщениями на основе SOAP. Чтобы клиенты могли взаимодействовать со службой, используя HTTP-запросы, необходимо настроить конечную точку службы с [ \<webHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/webhttpbinding.md) с \<WebHttpBehavior >, присоединенные к ней.  
   
- Поддержка в [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] механизма синдикации и интеграции технологии ASP.AJAX строится на базе модели веб-программирования. Дополнительные сведения о модели см. в разделе [модель программирования WCF Web HTTP](../../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md).  
+ Поддерживает в WCF для объединения и ASP. Интеграция с AJAX построены на основе модели веб-программирования. Дополнительные сведения о модели см. в разделе [модель программирования WCF Web HTTP](../../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md).  
   
 ## <a name="see-also"></a>См. также  
  <xref:System.ServiceModel.WebHttpBinding>  

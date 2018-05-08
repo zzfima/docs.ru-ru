@@ -1,27 +1,15 @@
 ---
-title: "Расширение среды"
-ms.custom: 
+title: Расширение среды
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: cd7ddffc-a261-44aa-bd50-33c1c74f0df0
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d1d8ea4987d918da79dcf1f69b842f19901e63a5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 7cba21715a6a0347e910300de46c1e47fd6e30bf
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="extensibility"></a>Расширение среды
-Этот раздел содержит образцы кода, связанные с настраиваемой расширяемостью и другими функциями [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
+В этом разделе содержатся образцы, которые имеют дело с настраиваемой расширяемостью и другими функциями Windows Communication Foundation (WCF).  
   
 ## <a name="in-this-section"></a>В этом разделе  
  [Расширяемость каналов](../../../../docs/framework/wcf/samples/channels-extensibility.md)  
@@ -58,7 +46,7 @@ ms.lasthandoff: 12/22/2017
  Показывает, как точки расширяемости могут использовать пользовательские форматы данных сообщения.  
   
  [Пользовательский фильтр сообщений](../../../../docs/framework/wcf/samples/custom-message-filter.md)  
- Показывает, как заменить фильтры сообщений, используемые в [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] для отправки сообщений в конечные точки.  
+ показано, как заменить фильтры сообщений, используемые для отправки сообщений в конечные точки Windows Communication Foundation (WCF).  
   
  [Пользовательский узел службы](../../../../docs/framework/wcf/samples/custom-service-host.md)  
  Демонстрируется, как применять пользовательский производный класс для класса <xref:System.ServiceModel.ServiceHost>, чтобы изменять поведение службы во время выполнения.  

@@ -1,34 +1,20 @@
 ---
-title: "Сбои при отправке и получении"
-ms.custom: 
+title: Сбои при отправке и получении
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - handling faults [WCF], sending
 ms.assetid: 7be6fb96-ce2a-450b-aebe-f932c6a4bc5d
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 248202e07d3b74f5d71b40155ae8f617f7ed15ce
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 76fb07a6c9a5e0efdbf21f153f5fc2aea7f1880e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sending-and-receiving-faults"></a>Сбои при отправке и получении
-Ошибки SOAP передают сведения об ошибке от службы клиенту и, в дуплексном случае, от клиента службе совместимым способом. Как правило, служба определяет пользовательское содержимое ошибки и указывает операции, которые могут возвращать такие ошибки. (Дополнительные сведения см. в разделе [определение и задание сбоев](../../../docs/framework/wcf/defining-and-specifying-faults.md).) В этом разделе описывается, как служба или дуплексный клиент могут отправлять такие ошибки в случае возникновения соответствующих условий и как клиентское приложение или приложение службы обрабатывает эти ошибки. Общие сведения для обработки ошибок в [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] приложения, см. [указание и обработка сбоев в контрактах и службах](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md).  
+Ошибки SOAP передают сведения об ошибке от службы клиенту и, в дуплексном случае, от клиента службе совместимым способом. Как правило, служба определяет пользовательское содержимое ошибки и указывает операции, которые могут возвращать такие ошибки. (Дополнительные сведения см. в разделе [определение и задание сбоев](../../../docs/framework/wcf/defining-and-specifying-faults.md).) В этом разделе описывается, как служба или дуплексный клиент могут отправлять такие ошибки в случае возникновения соответствующих условий и как клиентское приложение или приложение службы обрабатывает эти ошибки. Общие сведения для обработки ошибок в приложениях Windows Communication Foundation (WCF) см. в разделе [указание и обработка сбоев в контрактах и службах](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md).  
   
 ## <a name="sending-soap-faults"></a>Отправка ошибок SOAP  
  Объявленные ошибки SOAP - это ошибки, в которых в операции имеется атрибут <xref:System.ServiceModel.FaultContractAttribute?displayProperty=nameWithType>, указывающий пользовательский тип ошибки SOAP. Необъявленные ошибки SOAP - это ошибки, не указанные в контракте операции.  

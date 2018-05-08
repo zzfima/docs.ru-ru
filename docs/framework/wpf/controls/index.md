@@ -1,35 +1,21 @@
 ---
 title: Элементы управления
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - controls [WPF], about WPF controls
 ms.assetid: 3f255a8a-35a8-4712-9065-472ff7d75599
-caps.latest.revision: 13
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 66c6cc58423a2af8d0fd6de93b8884918888fb48
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 11c9c2cdd9e485fb87f5d8ead7790ded0428f7dd
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="controls"></a>Элементы управления
 <a name="introduction"></a>
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]поставляется с большинством общих компонентов пользовательского интерфейса, которые используются в практически во всех приложениях Windows, таких как <xref:System.Windows.Controls.Button>, <xref:System.Windows.Controls.Label>, <xref:System.Windows.Controls.TextBox>, <xref:System.Windows.Controls.Menu>, и <xref:System.Windows.Controls.ListBox>. Исторически эти объекты называются элементами управления. Хотя [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] SDK продолжает использовать термин «элемент управления» для общего обозначения любого класса, который представляет видимый объект в приложении, очень важно Обратите внимание, что класс необходимо наследовать от <xref:System.Windows.Controls.Control> класс, чтобы иметь визуальное представление. Классы, наследующие от <xref:System.Windows.Controls.Control> класс содержит <xref:System.Windows.Controls.ControlTemplate>, что позволяет потребителю элемента управления радикально изменить внешний вид элемента управления без необходимости создания нового подкласса.  В этом разделе рассматриваются как элементы управления (тех, которые наследуют от <xref:System.Windows.Controls.Control> класса и не поддерживающие) часто применяются в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] поставляется с большинством общих компонентов пользовательского интерфейса, которые используются в практически во всех приложениях Windows, таких как <xref:System.Windows.Controls.Button>, <xref:System.Windows.Controls.Label>, <xref:System.Windows.Controls.TextBox>, <xref:System.Windows.Controls.Menu>, и <xref:System.Windows.Controls.ListBox>. Исторически эти объекты называются элементами управления. Хотя [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] SDK продолжает использовать термин «элемент управления» для общего обозначения любого класса, который представляет видимый объект в приложении, очень важно Обратите внимание, что класс необходимо наследовать от <xref:System.Windows.Controls.Control> класс, чтобы иметь визуальное представление. Классы, наследующие от <xref:System.Windows.Controls.Control> класс содержит <xref:System.Windows.Controls.ControlTemplate>, что позволяет потребителю элемента управления радикально изменить внешний вид элемента управления без необходимости создания нового подкласса.  В этом разделе рассматриваются как элементы управления (тех, которые наследуют от <xref:System.Windows.Controls.Control> класса и не поддерживающие) часто применяются в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
 
 <a name="creating_an_instance_of_a_control"></a>   
 ## <a name="creating-an-instance-of-a-control"></a>Создание экземпляра элемента управления  
@@ -37,7 +23,7 @@ ms.lasthandoff: 12/22/2017
   
  [!code-xaml[ControlsOverview#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlsOverview/CSharp/Window1.xaml#1)]  
   
- В следующем примере создается такое же приложение в коде. Для краткости создание <xref:System.Windows.Controls.Grid>, `grid1`, был исключен из примера. `grid1`имеет одинаковые определения столбцов и строк, как показано в предыдущем [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] примере.  
+ В следующем примере создается такое же приложение в коде. Для краткости создание <xref:System.Windows.Controls.Grid>, `grid1`, был исключен из примера. `grid1` имеет одинаковые определения столбцов и строк, как показано в предыдущем [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] примере.  
   
  [!code-csharp[ControlsOverview#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlsOverview/CSharp/AppInCode.xaml.cs#2)]
  [!code-vb[ControlsOverview#2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ControlsOverview/VisualBasic/AppInCode.xaml.vb#2)]  
@@ -63,7 +49,7 @@ ms.lasthandoff: 12/22/2017
  [!code-vb[ControlsOverview#4](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ControlsOverview/VisualBasic/AppInCode.xaml.vb#4)]  
   
 ### <a name="creating-a-style-for-a-control"></a>Создание стиля для элемента управления  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]предоставляет возможность задавать внешний вид элементов управления, вместо того чтобы задавать свойства для каждого экземпляра в приложении, создав <xref:System.Windows.Style>. В следующем примере создается <xref:System.Windows.Style> , применяется к каждому <xref:System.Windows.Controls.Button> в приложении. <xref:System.Windows.Style>определения обычно определяются в [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] в <xref:System.Windows.ResourceDictionary>, такие как <xref:System.Windows.FrameworkElement.Resources%2A> свойство <xref:System.Windows.FrameworkElement>.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] предоставляет возможность задавать внешний вид элементов управления, вместо того чтобы задавать свойства для каждого экземпляра в приложении, создав <xref:System.Windows.Style>. В следующем примере создается <xref:System.Windows.Style> , применяется к каждому <xref:System.Windows.Controls.Button> в приложении. <xref:System.Windows.Style> определения обычно определяются в [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] в <xref:System.Windows.ResourceDictionary>, такие как <xref:System.Windows.FrameworkElement.Resources%2A> свойство <xref:System.Windows.FrameworkElement>.  
   
  [!code-xaml[ControlsOverview#5](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlsOverview/CSharp/AppInCode.xaml#5)]  
   

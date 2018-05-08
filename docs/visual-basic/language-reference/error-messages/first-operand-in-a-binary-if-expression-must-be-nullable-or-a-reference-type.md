@@ -1,28 +1,19 @@
 ---
-title: Первый операнд в двоичном файле &#39; Если &#39; выражение должно иметь значение NULL или ссылочный тип
+title: Первый операнд в двоичном файле &#39;Если&#39; выражение должно иметь значение NULL или ссылочный тип
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - bc33107
 - vbc33107
 helpviewer_keywords:
 - BC33107
 ms.assetid: 493c8899-3f6b-4471-8eb6-9284e8492768
-caps.latest.revision: 5
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: f66b110c02076120c55a3bff28c3d7614bf8be26
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 76078d315b2c32a2a29aa652a65b463622afec36
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="first-operand-in-a-binary-39if39-expression-must-be-nullable-or-a-reference-type"></a>Первый операнд в двоичном файле &#39; Если &#39; выражение должно иметь значение NULL или ссылочный тип
+# <a name="first-operand-in-a-binary-39if39-expression-must-be-nullable-or-a-reference-type"></a>Первый операнд в двоичном файле &#39;Если&#39; выражение должно иметь значение NULL или ссылочный тип
 `If` Выражение может принимать два или три аргумента. При передаче двух аргументов первый аргумент должен быть ссылочным типом или типом значения NULL. Если первый аргумент принимает значение, отличное от `Nothing`, возвращается его значение. Если первый аргумент принимает значение `Nothing`, второй аргумент вычисляется и возвращается.  
   
  Например, следующий код содержит два `If` выражения: с тремя аргументами и с двумя аргументами. Выражения вычисления и возвращает то же значение.  

@@ -1,48 +1,34 @@
 ---
 title: Развертывание службы WCF, размещенной в IIS
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 04ebd329-3fbd-44c3-b3ab-1de3517e27d7
-caps.latest.revision: 30
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 49ee6091b18dfcf2a5b46c173490b317fe770554
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 59f18d8487deb52f5ecb5b5c814ec9bdbc74e2cc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="deploying-an-internet-information-services-hosted-wcf-service"></a>Развертывание службы WCF, размещенной в IIS
-Процесс разработки и развертывания службы [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] , которая размещается в службах IIS, состоит из следующих задач.  
+Разработка и развертывание службы Windows Communication Foundation (WCF), размещенного в Internet Information Services (IIS) состоит из следующих задач:  
   
--   Проверка правильности установки и регистрации служб IIS, ASP, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]и компонента активации [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] .  
+-   Убедитесь, что службы IIS, ASP.NET, WCF и компонента активации WCF службы правильно установлен и зарегистрирован.  
   
 -   Создание нового приложения IIS или повторное использование существующего приложения [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] .  
   
--   Создание SVC-файла для службы [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] .  
+-   Создание SVC-файла для службы WCF.  
   
 -   Развертывание реализации службы в приложение IIS.  
   
--   Настройка службы [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] .  
+-   Настройка службы WCF.  
   
- Подробное пошаговое руководство по созданию службы [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] , размещенной в IIS, см. в разделе [How to: Host a WCF Service in IIS](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md).  
+ Подробное пошаговое руководство по созданию службы WCF, размещенной в IIS, в разделе [как: размещение службы WCF в IIS](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md).  
   
 ## <a name="ensure-that-iis-aspnet-and-wcf-are-correctly-installed-and-registered"></a>Проверка правильности установки и регистрации IIS, ASP.NET и WCF  
- Для правильной работы служб[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], размещенных в IIS, должны быть установлены [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] , IIS и ASP.NET. Процедуры установки [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] (как части платформы [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)]), ASP.NET и IIS зависят от используемой версии операционной системы. Дополнительные сведения об установке [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] и [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)], в разделе [веб-установщик Microsoft .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=201185). Инструкции по установке IIS см. в разделе [Установка IIS](http://go.microsoft.com/fwlink/?LinkId=201188).  
+ Для служб WCF, размещенных в IIS для правильной работы должны устанавливаться WCF, IIS и ASP.NET. Процедуры установки WCF (как часть [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)]), ASP.NET и IIS зависят от используемой версии операционной системы. Дополнительные сведения об установке WCF и [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)], в разделе [веб-установщик Microsoft .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=201185). Инструкции по установке IIS см. в разделе [Установка IIS](http://go.microsoft.com/fwlink/?LinkId=201188).  
   
- В процессе установки платформы [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)] выполняется автоматическая регистрация [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] с IIS, если IIS уже имеется на компьютере. Если IIS устанавливается после платформы [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)], для регистрации [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] с IIS и [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]требуется дополнительный шаг. Это можно выполнить указанным ниже способом в зависимости от операционной системы.  
+ В процессе установки [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)] автоматически регистрирует WCF в IIS, если IIS уже имеется на компьютере. Если IIS устанавливается после [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)], дополнительный шаг необходим для регистрации WCF со службами IIS и [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]. Это можно выполнить указанным ниже способом в зависимости от операционной системы.  
   
--   [!INCLUDE[wxpsp2](../../../../includes/wxpsp2-md.md)], Windows 7 и [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]: используйте [средство регистрации ServiceModel (ServiceModelReg.exe)](../../../../docs/framework/wcf/servicemodelreg-exe.md) средства для регистрации [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] со службами IIS: для использования этого средства, введите **ServiceModelReg.exe/i /x** в Командная строка Visual Studio. Можно открыть окно командной строки, щелкнув кнопку «Пуск» и выбрав **Все программы**, **Microsoft Visual Studio 2012**, **Набор средств Visual Studio**и **Командная строка Visual Studio**.  
+-   [!INCLUDE[wxpsp2](../../../../includes/wxpsp2-md.md)], Windows 7 и [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]: используйте [средство регистрации ServiceModel (ServiceModelReg.exe)](../../../../docs/framework/wcf/servicemodelreg-exe.md) , которая позволяет зарегистрировать WCF в IIS: для использования этого средства, введите **ServiceModelReg.exe/i /x** в Visual Studio Командная строка. Можно открыть окно командной строки, щелкнув кнопку «Пуск» и выбрав **Все программы**, **Microsoft Visual Studio 2012**, **Набор средств Visual Studio**и **Командная строка Visual Studio**.  
   
 -   [!INCLUDE[wv](../../../../includes/wv-md.md)]: установите подкомпонент "Компоненты активации Windows Communication Foundation" платформы [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)]. Для этого на панели управления щелкните значок **Установка и удаление программ** и затем **добавить\/компонентов Windows**. При этом активируется **Мастер компонентов Windows**.  
   
@@ -51,12 +37,12 @@ ms.lasthandoff: 04/30/2018
  Наконец, необходимо убедиться в том, что среда ASP.NET настроена для использования платформы .NET Framework 4. Для этого запустите средство ASPNET_Regiis с параметром -i. Дополнительные сведения см. в разделе [средство регистрации IIS ASP.NET](http://go.microsoft.com/fwlink/?LinkId=201186)  
   
 ## <a name="create-a-new-iis-application-or-reuse-an-existing-aspnet-application"></a>Создание нового приложения служб IIS или повторное использование существующего приложения ASP.NET  
- Службы [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] , размещенные в IIS, должны находиться в приложении IIS. Можно создать новое приложение IIS только для размещения служб [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] . Можно также развернуть службу [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] в существующее приложение, в котором уже размещено содержимое [!INCLUDE[vstecasplong](../../../../includes/vstecasplong-md.md)] (например, страницы ASPX и веб-службы ASP.NET [ASMX]). Дополнительные сведения об этих параметрах см. в разделе «размещения WCF Side-by-Side с ASP.NET» и «Размещения служб WCF в режиме совместимости с ASP.NET» разделы в [службы WCF и ASP.NET](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md).  
+ Службы WCF, размещенных в IIS, должны находиться в приложении IIS. Можно создать новое приложение IIS для размещения служб WCF исключительно. Кроме того, можно развернуть службу WCF в существующие приложения, в котором уже размещено [!INCLUDE[vstecasplong](../../../../includes/vstecasplong-md.md)] содержимого (например, страницы ASPX и веб-службы ASP.NET [ASMX]). Дополнительные сведения об этих параметрах см. в разделе «размещения WCF Side-by-Side с ASP.NET» и «Размещения служб WCF в режиме совместимости с ASP.NET» разделы в [службы WCF и ASP.NET](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md).  
   
  Обратите внимание, что [!INCLUDE[iis601](../../../../includes/iis601-md.md)] и более поздние версии периодически перезагружают изолированное приложение объектно-ориентированного программирования. Значение по умолчанию — 1740 минут. Максимальное поддерживаемое значение - 71582 минуты. Этот перезапуск можно отключить. Дополнительные сведения об этом свойстве см. в разделе [PeriodicRestartTime](http://go.microsoft.com/fwlink/?LinkId=109968).  
   
 ## <a name="create-an-svc-file-for-the-wcf-service"></a>Создание SVC-файла для службы WCF  
- Службы[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] , размещенные в IIS, представляются внутри приложения IIS в виде файлов со специальным содержимым (SVC-файлов). Эта модель подобна модели, согласно которой страницы ASMX представляются внутри приложения IIS в виде ASMX-файлов. SVC-файл содержит относящуюся к [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]директиву обработки ([@ServiceHost](../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md)), позволяющую инфраструктуре размещения [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] активировать размещенные службы в ответ на входящие сообщения. В приведенном ниже операторе показан наиболее распространенный синтаксис SVC-файла.  
+ Службы WCF, размещенные в IIS, представляются в виде файлов со специальным содержимым (SVC-файлов) внутри приложения IIS. Эта модель подобна модели, согласно которой страницы ASMX представляются внутри приложения IIS в виде ASMX-файлов. SVC-файл содержит директиву обработки определенного WCF ([@ServiceHost](../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md)), позволяющий WCF, размещающая инфраструктура активировать размещенные службы в ответ на входящие сообщения. В приведенном ниже операторе показан наиболее распространенный синтаксис SVC-файла.  
   
 ```  
 <% @ServiceHost Service="MyNamespace.MyServiceImplementationTypeName" %>  
@@ -68,12 +54,12 @@ ms.lasthandoff: 04/30/2018
 new ServiceHost( typeof( MyNamespace.MyServiceImplementationTypeName ) );  
 ```  
   
- Можно также создать дополнительную конфигурацию размещения, например список базовых адресов службы. Кроме того, можно применить пользовательскую фабрику <xref:System.ServiceModel.Activation.ServiceHostFactory> , чтобы расширить директиву для использования с пользовательскими решениями по размещению. Приложения IIS, в которых размещаются службы [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] , не отвечают за управление созданием и временем существования экземпляров <xref:System.ServiceModel.ServiceHost> . Управляемая инфраструктура размещения [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] создает необходимый экземпляр <xref:System.ServiceModel.ServiceHost> динамически при получении первого запроса для SVC-файла. Этот экземпляр не освобождается, пока он не будет явно закрыт кодом или не перезапустится приложение.  
+ Можно также создать дополнительную конфигурацию размещения, например список базовых адресов службы. Кроме того, можно применить пользовательскую фабрику <xref:System.ServiceModel.Activation.ServiceHostFactory> , чтобы расширить директиву для использования с пользовательскими решениями по размещению. Приложения IIS, в которых размещаются службы WCF не отвечают за управление созданием и временем существования <xref:System.ServiceModel.ServiceHost> экземпляров. Управляемая инфраструктура размещения WCF создает необходимый <xref:System.ServiceModel.ServiceHost> экземпляр динамически при получении первого запроса для SVC-файла. Этот экземпляр не освобождается, пока он не будет явно закрыт кодом или не перезапустится приложение.  
   
  Дополнительные сведения о синтаксисе SVC-файлов см. в разделе [ @ServiceHost ](../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md).  
   
 ## <a name="deploy-the-service-implementation-to-the-iis-application"></a>Развертывание реализации службы в приложение IIS  
- Для служб[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] , размещенных в IIS, используется та же модель динамической компиляции, что и для [!INCLUDE[vstecasplong](../../../../includes/vstecasplong-md.md)]. Точно так же, как при использовании [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)], код реализации для размещенных в IIS служб [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] можно развернуть несколькими способами в разных расположениях следующим образом.  
+ Службы WCF, размещенные в IIS используют одну и ту же модель динамической компиляции как [!INCLUDE[vstecasplong](../../../../includes/vstecasplong-md.md)]. Как и в случае с [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)], можно развернуть код реализации для служб WCF, размещенных в IIS несколькими способами в разных расположениях следующим образом:  
   
 -   В виде предкомпилированного DLL-файла, расположенного в глобальном кэше сборок или в каталоге \bin приложения. Предкомпилированные двоичные файлы не обновляются, пока не будет развернута новая версия библиотеки классов.  
   
@@ -84,14 +70,14 @@ new ServiceHost( typeof( MyNamespace.MyServiceImplementationTypeName ) );
  Дополнительные сведения о [!INCLUDE[vstecasplong](../../../../includes/vstecasplong-md.md)] модель компиляции. в разделе [компиляция](http://go.microsoft.com/fwlink/?LinkId=94773).  
   
 ## <a name="configure-the-wcf-service"></a>Настройка службы WCF  
- Конфигурация размещенных в IIS служб [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] хранится в файле Web.config приложений. Для размещенных в IIS служб используются те же элементы конфигурации и синтаксис, что и для служб [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] , размещенных вне IIS. Однако для среды размещения IIS присущи следующие ограничения.  
+ Службы WCF, размещенных в IIS их конфигурация хранится в файле Web.config приложения. Служб, размещенных в IIS использовать те же элементы конфигурации и синтаксис, как службы WCF, размещенных вне IIS. Однако для среды размещения IIS присущи следующие ограничения.  
   
 -   Базовые адреса размещенных в IIS служб.  
   
--   Приложениям, использующим [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] службы за пределами служб IIS, могут управлять базовый адрес в них служб, передавая набор базы адресов URI для <xref:System.ServiceModel.ServiceHost> конструктора или путем ввода [ \<узла >](../../../../docs/framework/configure-apps/file-schema/wcf/host.md) элемент конфигурации службы. Службы, размещенные в IIS, не могут управлять своими базовыми адресами; базовым адресом службы, размещенной в IIS, является адрес ее SVC-файла.  
+-   Приложения, размещение служб WCF за пределами IIS можно управлять базовый адрес в них служб, передавая набор базовый адрес URI для <xref:System.ServiceModel.ServiceHost> конструктора или путем ввода [ \<узла >](../../../../docs/framework/configure-apps/file-schema/wcf/host.md) элемент в Конфигурация службы. Службы, размещенные в IIS, не могут управлять своими базовыми адресами; базовым адресом службы, размещенной в IIS, является адрес ее SVC-файла.  
   
 ### <a name="endpoint-addresses-for-iis-hosted-services"></a>Адреса конечных точек для служб, размещенных в IIS  
- Будучи размещенными в IIS, адреса конечных точек всегда считаются относительными для адреса SVC-файла, представляющего службу. Например если базовый адрес [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] служба http://localhost/Application1/MyService.svc со следующей конфигурацией конечной точки.  
+ Будучи размещенными в IIS, адреса конечных точек всегда считаются относительными для адреса SVC-файла, представляющего службу. Например, если базовый адрес службы WCF-это http://localhost/Application1/MyService.svc со следующей конфигурацией конечной точки.  
   
 ```xml  
 <endpoint address="anotherEndpoint" .../>  
@@ -108,12 +94,12 @@ new ServiceHost( typeof( MyNamespace.MyServiceImplementationTypeName ) );
  Для конечных точек служб, размещенных в IIS, следует всегда использовать относительные адреса. Предоставление адреса конечной точки с полным (например, http://localhost/MyService.svc) может привести к ошибкам при развертывании службы, если адрес конечной точки для приложения IIS, на котором размещена служба, представляющая эту конечную точку. Использование относительных адресов конечных точек для размещенных служб позволяет избежать таких потенциальных конфликтов.  
   
 ### <a name="available-transports"></a>Доступные типы транспорта  
- Службы[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] , размещенные в IIS 5.1 и [!INCLUDE[iis601](../../../../includes/iis601-md.md)] , могут использовать связь только по протоколу HTTP. В этих платформах IIS настройка размещенной службы на использование привязки, отличной от HTTP, приводит к ошибке во время активации службы. Для [!INCLUDE[iisver](../../../../includes/iisver-md.md)]поддерживается транспорт HTTP, Net.TCP, Net.Pipe, Net.MSMQ и msmq.formatname для обратной совместимости с существующими приложениями MSMQ.  
+ Службы WCF, размещенные в IIS 5.1 и [!INCLUDE[iis601](../../../../includes/iis601-md.md)] ограничены с помощью связи на основе HTTP. В этих платформах IIS настройка размещенной службы на использование привязки, отличной от HTTP, приводит к ошибке во время активации службы. Для [!INCLUDE[iisver](../../../../includes/iisver-md.md)]поддерживается транспорт HTTP, Net.TCP, Net.Pipe, Net.MSMQ и msmq.formatname для обратной совместимости с существующими приложениями MSMQ.  
   
 ### <a name="http-transport-security"></a>Безопасность транспорта HTTP  
- Размещенные в IIS службы [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] могут пользоваться средствами обеспечения безопасности транспорта HTTP (например, такими схемами проверки подлинности HTTPS и HTTP, как "Обычная проверка подлинности", "Дайджест-проверка подлинности" и "Встроенная проверка подлинности Windows"), если виртуальный каталог IIS, содержащий службу, поддерживает названные параметры. Параметры безопасности транспорта HTTP в привязке размещенной конечной точки должны соответствовать параметрам безопасности транспорта в виртуальном каталоге IIS, который содержит эту привязку.  
+ Службы WCF, размещенных в IIS могут пользоваться HTTP-транспорта безопасности (например, HTTPS и HTTP такими схемами проверки подлинности Basic, Digest и встроенная проверка подлинности Windows), при условии, что виртуальный каталог IIS, которая содержит службу поддерживает Параметры. Параметры безопасности транспорта HTTP в привязке размещенной конечной точки должны соответствовать параметрам безопасности транспорта в виртуальном каталоге IIS, который содержит эту привязку.  
   
- Например, конечная точка [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] , настроенная на использование дайджест-проверки подлинности HTTP, должна находиться в виртуальном каталоге IIS, который также настроен на разрешение дайджест-проверки подлинности HTTP. Несоответствующие сочетания параметров IIS и параметров конечной точки [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] приводят к ошибке во время активации службы.  
+ Например настроен на использование дайджест-проверка подлинности HTTP конечной точки WCF необходимо разместить в виртуальный каталог IIS, который также настроен на разрешение дайджест-проверка подлинности HTTP. Несоответствующие сочетания параметров IIS и параметры конечной точки WCF приведет к ошибке во время активации службы.  
   
 ## <a name="see-also"></a>См. также  
  [Размещение в службах IIS](../../../../docs/framework/wcf/feature-details/hosting-in-internet-information-services.md)  

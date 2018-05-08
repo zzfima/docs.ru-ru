@@ -1,11 +1,6 @@
 ---
-title: "Оператор TypeOf (Visual Basic)"
+title: Оператор TypeOf (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - TypeOf
 - vb.TypeOf
@@ -17,14 +12,11 @@ helpviewer_keywords:
 - TypeOf operator [Visual Basic]
 - compatible data types [Visual Basic]
 ms.assetid: 33f65296-659a-4b9a-9a29-c2a91cff68b2
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 51bd2af7af28aa229fa62770c5b92d31e461333b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: fe287794423048e993d953c83fc8590a06b7a5e3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="typeof-operator-visual-basic"></a>Оператор TypeOf (Visual Basic)
 Сравнивает переменную ссылки на объект с типом данных.  
@@ -44,10 +36,10 @@ result = TypeOf objectexpression IsNot typename
  Возвращено. Значение `Boolean`.  
   
  `objectexpression`  
- Обязательный. Любое выражение, результатом которого является тип ссылки.  
+ Обязательно. Любое выражение, результатом которого является тип ссылки.  
   
  `typename`  
- Обязательный. Любое имя типа данных.  
+ Обязательно. Любое имя типа данных.  
   
 ## <a name="remarks"></a>Примечания  
  Оператор `TypeOf` определяет, совместим ли тип времени выполнения `objectexpression` с `typename`. Совместимость зависит от категории типа `typename`. В следующей таблице показано, как определяется совместимость.  

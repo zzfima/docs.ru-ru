@@ -1,11 +1,7 @@
 ---
-title: "Функция BeginMethodEnumeration (Справочник по неуправляемым API)"
-description: "Функция BeginMethodEnumeration начинается перечисление методов объектов"
+title: Функция BeginMethodEnumeration (Справочник по неуправляемым API)
+description: Функция BeginMethodEnumeration начинается перечисление методов объектов
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - BeginMethodEnumeration
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 7d843c40a8ab0dd1c48a08126b8c7472505a1732
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d87627b8bb3414860d994273396dbb4e64acdea7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="beginenumeration-function"></a>Функция BeginEnumeration
 Начинает перечисление методов, доступных для объекта.  
@@ -55,7 +48,7 @@ HRESULT BeginMethodEnumeration (
 `lEnumFlags`  
 [in] Ноль (0) для всех методов или флаг, указывающий область перечисления. Далее перечислены флаги определяются в *WbemCli.h* файла заголовка, или их можно определить как константы в коде:
 
-Константа  |Значение  |Описание:  |
+Константа  |Значение  |Описание  |
 |---------|---------|---------|
 | `WBEM_FLAG_LOCAL_ONLY` | 0x10 | Ограничьте к методы, определенные в самом классе перечисления. |
 | `WBEM_FLAG_PROPAGATED_ONLY` |  0x20 | Ограничения перечисления для свойства, наследуемые из базовых классов. |
@@ -64,9 +57,9 @@ HRESULT BeginMethodEnumeration (
 
 Следующие значения, возвращаемые этой функцией, определяются в *WbemCli.h* файла заголовка, или их можно определить как константы в коде:
 
-|Константа  |Значение  |Описание:  |
+|Константа  |Значение  |Описание  |
 |---------|---------|---------|
-|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | `lEnnumFlags`не равно нулю и не является одним из указанных флагов. |
+|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | `lEnnumFlags` не равно нулю и не является одним из указанных флагов. |
 |`WBEM_S_NO_ERROR` | 0 | Успешный вызов функции.  |
   
 ## <a name="remarks"></a>Примечания
@@ -80,7 +73,7 @@ HRESULT BeginMethodEnumeration (
   
  **Заголовок:** WMINet_Utils.idl  
   
- **Версии платформы .NET framework:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Версии платформы .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>См. также  
 [WMI и счетчиков производительности (Справочник по неуправляемым API)](index.md)

@@ -1,27 +1,17 @@
 ---
-title: "События конфликтов (трассировка событий Windows)"
-ms.custom: 
+title: События конфликтов (трассировка событий Windows)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - contention events [.NET Framework]
 - ETW, contention events (CLR)
 ms.assetid: 6933e753-2f2a-425b-ae84-42138c957d76
-caps.latest.revision: "7"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a09419c208d4ac754eb48da0c8d1b5d93386eb3d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3487b67ea49cecfd0da2b5b3f993ea54d562145d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="contention-etw-events"></a>События конфликтов (трассировка событий Windows)
 События конфликтов возникают каждый раз при обнаружении конфликта за блокировки <xref:System.Threading.Monitor?displayProperty=nameWithType> или блокировки машинного кода, используемые средой выполнения. Конфликт происходит, когда поток ожидает блокировку, которая обрабатывается другим потоком.  
@@ -34,7 +24,7 @@ ms.lasthandoff: 12/22/2017
   
  В таблице ниже представлены сведения о событии.  
   
-|Событие|Идентификатор события|Условие вызова|  
+|событие|Идентификатор события|Условие вызова|  
 |-----------|--------------|-----------------|  
 |`ContentionStart_V1`|81|Начало конфликта. Это событие не содержит сведений о времени, в течение которого поток ожидает получения блокировки. Оно возникает только в том случае, когда поток ожидает получения блокировки.|  
 |`ContentionStop`|81|Конец конфликта.|  

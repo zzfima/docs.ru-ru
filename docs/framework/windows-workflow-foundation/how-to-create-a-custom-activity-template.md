@@ -1,26 +1,15 @@
 ---
-title: "Как создать шаблон настраиваемого действия"
-ms.custom: 
+title: Как создать шаблон настраиваемого действия
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 6760a5cc-6eb8-465f-b4fa-f89b39539429
-caps.latest.revision: "4"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 772ad2a7ea56001bf3ecba089e62d6bc0f59e5ba
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b455f8a763859d31405380e25cd7516856e8da2e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-custom-activity-template"></a>Как создать шаблон настраиваемого действия
-Настраиваемые шаблоны действий служат для настройки конфигурации действий, в том числе настраиваемых составных действий, чтобы позволяет не создавать отдельно каждое действие и не настраивать все свойства и другие параметры вручную. Эти настраиваемые шаблоны доступны в **элементов** на [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] или в повторно размещенном конструкторе, из которого пользователи могут перетащить их в область конструктора предварительно настроенных. [!INCLUDE[wfd2](../../../includes/wfd2-md.md)]поставляется с хорошими примерами такие шаблоны: [конструктора шаблонов SendAndReceiveReply](/visualstudio/workflow-designer/sendandreceivereply-template-designer) и [конструктора шаблонов ReceiveAndSendReply](/visualstudio/workflow-designer/receiveandsendreply-template-designer) в [конструкторы действий обмена сообщениями](/visualstudio/workflow-designer/messaging-activity-designers) категории.  
+Настраиваемые шаблоны действий служат для настройки конфигурации действий, в том числе настраиваемых составных действий, чтобы позволяет не создавать отдельно каждое действие и не настраивать все свойства и другие параметры вручную. Эти настраиваемые шаблоны доступны в **элементов** на [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] или в повторно размещенном конструкторе, из которого пользователи могут перетащить их в область конструктора предварительно настроенных. [!INCLUDE[wfd2](../../../includes/wfd2-md.md)] поставляется с хорошими примерами такие шаблоны: [конструктора шаблонов SendAndReceiveReply](/visualstudio/workflow-designer/sendandreceivereply-template-designer) и [конструктора шаблонов ReceiveAndSendReply](/visualstudio/workflow-designer/receiveandsendreply-template-designer) в [конструкторы действий обмена сообщениями](/visualstudio/workflow-designer/messaging-activity-designers) категории.  
   
  В первой процедуре в этом разделе описывается создание настраиваемого шаблона действий для **задержки** действия и вторая процедура кратко описывает, как сделать его доступным в [!INCLUDE[wfd2](../../../includes/wfd2-md.md)] для проверки работы пользовательского шаблона.  
   
@@ -30,7 +19,7 @@ ms.lasthandoff: 12/22/2017
   
 1.  Запустите [!INCLUDE[vs2010](../../../includes/vs2010-md.md)].  
   
-2.  На **файл** последовательно выберите пункты **New**, а затем выберите **проекта**.  
+2.  В меню **Файл** наведите указатель мыши на элемент **Создать** и выберите **Проект**.  
   
      Откроется диалоговое окно **Новый проект** .  
   

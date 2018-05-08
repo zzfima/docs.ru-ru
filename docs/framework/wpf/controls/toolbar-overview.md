@@ -1,39 +1,27 @@
 ---
-title: "Общие сведения о панели инструментов ToolBar"
-ms.custom: 
+title: Общие сведения о панели инструментов ToolBar
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - controls [WPF], ToolBar
 - ToolBar control [WPF]
 ms.assetid: a8edb32c-118d-4f31-b6e6-8899082b504b
-caps.latest.revision: "28"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f00597d48ff100325c1fb2884f64169164415a50
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0c66867ce4d86a11424d7a7a859817d603b4227e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="toolbar-overview"></a>Общие сведения о панели инструментов ToolBar
-<xref:System.Windows.Controls.ToolBar>элементы управления являются контейнерами для группы команд или элементов управления, которые обычно связаны по функциональности. Объект <xref:System.Windows.Controls.ToolBar> обычно содержит кнопки, которые вызывают команды.  
+<xref:System.Windows.Controls.ToolBar> элементы управления являются контейнерами для группы команд или элементов управления, которые обычно связаны по функциональности. Объект <xref:System.Windows.Controls.ToolBar> обычно содержит кнопки, которые вызывают команды.  
   
   
 <a name="ToolBarControl"></a>   
 ## <a name="toolbar-control"></a>Элемент управления ToolBar  
- <xref:System.Windows.Controls.ToolBar> Управления планка как строки в одной строке или столбце ряд кнопок и других элементов управления. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]<xref:System.Windows.Controls.ToolBar> элементов управления предоставляют механизм переполнения, который помещает все элементы, не попадающие в ограничения по размеру объекта <xref:System.Windows.Controls.ToolBar> в специальную область переполнения. Кроме того [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.ToolBar> обычно используются элементы управления со связанным <xref:System.Windows.Controls.ToolBarTray> элемента управления, который предоставляет специальное поведение макета, а также поддержку для пользователь запустил размеры и расположение панели инструментов.  
+ <xref:System.Windows.Controls.ToolBar> Управления планка как строки в одной строке или столбце ряд кнопок и других элементов управления. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.ToolBar> элементы управления предоставляют механизм переполнения, который помещает все элементы, не попадающие в ограничения по размеру объекта <xref:System.Windows.Controls.ToolBar> в специальную область переполнения. Кроме того [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.ToolBar> обычно используются элементы управления со связанным <xref:System.Windows.Controls.ToolBarTray> элемента управления, который предоставляет специальное поведение макета, а также поддержку для пользователь запустил размеры и расположение панели инструментов.  
   
 <a name="Creating_ToolBars"></a>   
 ## <a name="specifying-the-position-of-toolbars-in-a-toolbartray"></a>Задание положения элементов управления ToolBar в элементе управления ToolBarTray  
- Используйте <xref:System.Windows.Controls.ToolBar.Band%2A> и <xref:System.Windows.Controls.ToolBar.BandIndex%2A> свойства для размещения <xref:System.Windows.Controls.ToolBar> в <xref:System.Windows.Controls.ToolBarTray>. <xref:System.Windows.Controls.ToolBar.Band%2A>указывает положение, где <xref:System.Windows.Controls.ToolBar> помещается в его родительском элементе <xref:System.Windows.Controls.ToolBarTray>. <xref:System.Windows.Controls.ToolBar.BandIndex%2A>Указывает порядок, в котором <xref:System.Windows.Controls.ToolBar> помещается расположения элементов. В следующем примере показан как данное свойство используется для размещения <xref:System.Windows.Controls.ToolBar> элементы управления внутри <xref:System.Windows.Controls.ToolBarTray>.  
+ Используйте <xref:System.Windows.Controls.ToolBar.Band%2A> и <xref:System.Windows.Controls.ToolBar.BandIndex%2A> свойства для размещения <xref:System.Windows.Controls.ToolBar> в <xref:System.Windows.Controls.ToolBarTray>. <xref:System.Windows.Controls.ToolBar.Band%2A> указывает положение, где <xref:System.Windows.Controls.ToolBar> помещается в его родительском элементе <xref:System.Windows.Controls.ToolBarTray>. <xref:System.Windows.Controls.ToolBar.BandIndex%2A> Указывает порядок, в котором <xref:System.Windows.Controls.ToolBar> помещается расположения элементов. В следующем примере показан как данное свойство используется для размещения <xref:System.Windows.Controls.ToolBar> элементы управления внутри <xref:System.Windows.Controls.ToolBarTray>.  
   
  [!code-xaml[ToolBarExample#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ToolBarExample/CS/Pane1.xaml#2)]  
   

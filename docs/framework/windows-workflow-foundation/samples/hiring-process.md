@@ -1,29 +1,17 @@
 ---
 title: Процесс найма
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: d5fcacbb-c884-4b37-a5d6-02b1b8eec7b4
-caps.latest.revision: 13
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 8cfa23ab5f36b3a40de107a546dd4700a4523595
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 87327692e35e9386dab4cf906ab33cbe08d73fdd
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="hiring-process"></a>Процесс найма
 Этот образец демонстрирует, как реализовать бизнес-процесс, используя действия обмена сообщениями и два рабочих процесса, размещенные как службы рабочих процессов. Эти рабочие процессы входят в ИT-инфраструктуру вымышленной компании Contoso, Inc.  
   
- Рабочий процесс `HiringRequest` (реализованный как <xref:System.Activities.Statements.Flowchart>) запрашивает авторизацию у нескольких менеджеров организации. Для этого рабочий процесс использует другие существующие в организации службы (в нашем случае это служба почтового ящика и служба данных организации, реализованные в виде простых служб [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]).  
+ Рабочий процесс `HiringRequest` (реализованный как <xref:System.Activities.Statements.Flowchart>) запрашивает авторизацию у нескольких менеджеров организации. Для достижения этой цели, рабочий процесс использует другие существующие службы в организации (в нашем случае это служба почтового ящика и служба данных организации реализованы в виде простых служб Windows Communication Foundation (WCF)).  
   
  Рабочий процесс `ResumeRequest` (реализованный как <xref:System.Activities.Statements.Sequence>) публикует объявления о вакансиях на соответствующей странице внешнего веб-узла компании Contoso, а также управляет получением резюме. Размещенное объявление о вакансии находится на внешнем веб-узле в течение определенного времени (до истечения времени ожидания) либо до тех пор, пока сотрудник компании Contoso не решит удалить его.  
   
@@ -64,7 +52,7 @@ ms.lasthandoff: 04/26/2018
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) Чтобы загрузить все [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] образцов. Этот образец расположен в следующем каталоге.  
+>  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] образцов. Этот образец расположен в следующем каталоге.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Application\HiringProcess`  
   
@@ -111,7 +99,7 @@ ms.lasthandoff: 04/26/2018
 |ContosoHR|Содержит контракты данных, бизнес-объекты и классы репозитория.|  
 |HiringRequestService|Содержит определение рабочего процесса запроса на найм.<br /><br /> Этот проект реализован в виде консольного приложения, в котором рабочий процесс (файл xaml) является резидентной службой.|  
 |ResumeRequestService|Служба рабочего процесса, которая собирает резюме от кандидатов до истечения времени ожидания или до того момента, когда кто-то решит остановить процесс.<br /><br /> Этот проект реализован в виде декларативной службы рабочего процесса (xamlx).|  
-|OrgService|Служба, которая предоставляет данные организации (Employees, Positions, PositionTypes и Departments). Эту службу можно представить в виде модуля организации компании плана ресурсов предприятия.<br /><br /> Этот проект реализован в виде консольного приложения, предоставляющего службу [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].|  
+|OrgService|Служба, которая предоставляет данные организации (Employees, Positions, PositionTypes и Departments). Эту службу можно представить в виде модуля организации компании плана ресурсов предприятия.<br /><br /> Этот проект реализован как консольное приложение, которое предоставляет службы Windows Communication Foundation (WCF).|  
 |InboxService|Папка «Входящие», содержащая императивные задачи для сотрудников.<br /><br /> Этот проект реализован в виде консольного приложения, предоставляющего службу WCF.|  
 |InternalClient|Веб-приложение для взаимодействия с процессом. Пользователи могут запускать свои рабочие процессы HiringProcess, участвовать в них, просматривать их. С помощью этого приложения они также могут запускать и отслеживать процессы ResumeRequest.<br /><br /> Этот узел реализован как внутренний в интрасети компании Contoso. Этот проект реализован в виде веб-узла ASP.NET.|  
 |CareersWebSite|Внешний веб-узел, на котором отображаются открытые вакансии в компании Contoso. Любой потенциальный кандидат может перейти на этот узел и отправить резюме.|  

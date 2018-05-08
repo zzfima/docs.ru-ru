@@ -1,28 +1,16 @@
 ---
-title: "Типовые сценарии безопасности"
-ms.custom: 
+title: Типовые сценарии безопасности
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - security [WCF], scenarios
 ms.assetid: 201923b5-5162-4a8a-8d4c-e7bd242748d5
-caps.latest.revision: 
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: d8881768d66e95ce1391ce1be1663bdc3107a347
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0fb51ea0624c4fa686e4e99ffb9c30decedfea10
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="common-security-scenarios"></a>Типовые сценарии безопасности
 В подразделах этого раздела рассматривается множество возможных конфигураций безопасности клиентов и служб. Конфигурация зависит от ряда факторов: например, находится ли служба или клиент в интрасети, или чем обеспечивается безопасность - Windows или транспортом (таким как HTTPS).  
@@ -32,7 +20,7 @@ ms.lasthandoff: 12/22/2017
  Пример общедоступных, незащищенных клиента и службы.  
   
  [Незащищенные интранет-клиент и служба](../../../../docs/framework/wcf/feature-details/intranet-unsecured-client-and-service.md)  
- Простая служба [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], предназначенная для предоставления информации о защищенной частной сети приложению [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ Базовой службы Windows Communication Foundation (WCF), разработаны для предоставления информации о защищенной частной сети для приложения WCF.  
   
  [Безопасность транспорта с обычной проверкой подлинности](../../../../docs/framework/wcf/feature-details/transport-security-with-basic-authentication.md)  
  Приложение, позволяющее клиентам входить в систему с использованием пользовательской проверки подлинности.  
@@ -47,7 +35,7 @@ ms.lasthandoff: 12/22/2017
  Клиент и служба, защищенные сертификатом.  
   
  [Безопасность сообщений с анонимным клиентом](../../../../docs/framework/wcf/feature-details/message-security-with-an-anonymous-client.md)  
- Клиент и служба, защищенные механизмом безопасности сообщения [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ Показывает, клиент и служба, защищенные механизмом безопасности сообщений WCF.  
   
  [Безопасность сообщений при использовании клиентом учетных данных пользователя](../../../../docs/framework/wcf/feature-details/message-security-with-a-user-name-client.md)  
  Клиент - приложение Windows Forms, позволяющее клиентам входить в систему с использованием имени пользователя и пароля домена.  

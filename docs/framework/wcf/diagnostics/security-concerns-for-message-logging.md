@@ -1,24 +1,14 @@
 ---
-title: "Проблемы безопасности при ведении журналов сообщений"
-ms.custom: 
+title: Проблемы безопасности при ведении журналов сообщений
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 21f513f2-815b-47f3-85a6-03c008510038
-caps.latest.revision: "17"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 87815be1f0951d54a8d9eedbfdcaca038fa6fe09
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: c8b2fe3300bacc76e63f9d533c613171d03600d7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="security-concerns-for-message-logging"></a>Проблемы безопасности при ведении журналов сообщений
 В этом разделе описываются способы защиты конфиденциальных данных от раскрытия в журналах сообщений, а также в событиях, формируемых посредством ведения журнала сообщений.  
@@ -26,7 +16,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="security-concerns"></a>Проблемы безопасности  
   
 ### <a name="logging-sensitive-information"></a>Регистрация конфиденциальных сведений  
- [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] не изменяет никаких данных в заголовках и тексте сообщения, зависящих от приложения. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] также не отслеживает персональные данные в заголовках или тексте сообщения, зависящих от приложения.  
+ Windows Communication Foundation (WCF) не изменяет данные в приложении заголовки и текст. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] также не отслеживает персональные данные в заголовках или тексте сообщения, зависящих от приложения.  
   
  Когда регистрация сообщений включена, персональные данные в заголовках, зависящих от приложения (такие как строка запроса), и в теле сообщения (такие как номер кредитной карты), могут быть видимы в журналах. За надлежащее управление доступом к файлам конфигурации и журналов отвечает специалист, выполняющий развертывание приложения. Если требуется, чтобы подобные сведения не были видимы, необходимо отключить регистрацию или фильтровать часть данных (если предполагается доступ к журналам других лиц).  
   

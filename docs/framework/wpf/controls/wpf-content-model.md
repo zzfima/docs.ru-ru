@@ -1,13 +1,6 @@
 ---
-title: "Модель содержимого WPF"
-ms.custom: 
+title: Модель содержимого WPF
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - UIElement class [WPF], displaying content
 - content model [WPF], controls
@@ -18,16 +11,11 @@ helpviewer_keywords:
 - arbitrary content classes [WPF], content model
 - ContentControl class [WPF], displaying content
 ms.assetid: 214da5ef-547a-4cf8-9b07-4aa8a0e52cdd
-caps.latest.revision: "17"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7d708674682ffd7b0d13c9cbe828e28bbc26e260
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 48e96b04a3459aa18a52624758d5fa2347570fcf
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wpf-content-model"></a>Модель содержимого WPF
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] — это презентационная платформа, которая предоставляет множество элементов и типов, схожих с элементами управления, основное предназначение которых — отображение различных типов содержимого. Чтобы определить, какой элемент управления использовать или от какого элемента управления выполнять наследование, вы должны понимать, какие виды объектов лучше всего может отображать конкретный элемент управления.  
@@ -122,7 +110,7 @@ ms.lasthandoff: 12/22/2017
  Пример создания <xref:System.Windows.Controls.TabItem> объектов, в разделе <xref:System.Windows.Controls.HeaderedContentControl>.  
   
 ### <a name="controls-that-contain-a-collection-of-arbitrary-objects"></a>Элементы управления, содержащие коллекцию произвольных объектов  
- <xref:System.Windows.Controls.ItemsControl> Класс наследует от <xref:System.Windows.Controls.Control> и может содержать несколько элементов, таких как строки, объектов или других элементов. Его свойства содержимого – <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> и <xref:System.Windows.Controls.ItemsControl.Items%2A>. <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A>обычно используется для заполнения <xref:System.Windows.Controls.ItemsControl> сбора данных. Если не хотите использовать коллекцию для заполнения <xref:System.Windows.Controls.ItemsControl>, можно добавить элементы с помощью <xref:System.Windows.Controls.ItemsControl.Items%2A> свойство.  
+ <xref:System.Windows.Controls.ItemsControl> Класс наследует от <xref:System.Windows.Controls.Control> и может содержать несколько элементов, таких как строки, объектов или других элементов. Его свойства содержимого – <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> и <xref:System.Windows.Controls.ItemsControl.Items%2A>. <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> обычно используется для заполнения <xref:System.Windows.Controls.ItemsControl> сбора данных. Если не хотите использовать коллекцию для заполнения <xref:System.Windows.Controls.ItemsControl>, можно добавить элементы с помощью <xref:System.Windows.Controls.ItemsControl.Items%2A> свойство.  
   
  Следующие элементы управления наследуют от <xref:System.Windows.Controls.ItemsControl> и используют его модель содержимого:  
   
@@ -261,7 +249,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="classes_that_format_text"></a>   
 ## <a name="classes-that-format-your-text"></a>Классы, выполняющие форматирование пользовательского текста  
- <xref:System.Windows.Documents.TextElement>и его связанные классы позволяют форматировать текст. <xref:System.Windows.Documents.TextElement>объекты содержат и форматирование текста в <xref:System.Windows.Controls.TextBlock> и <xref:System.Windows.Documents.FlowDocument> объектов. Два основных типа <xref:System.Windows.Documents.TextElement> объектов <xref:System.Windows.Documents.Block> элементы и <xref:System.Windows.Documents.Inline> элементы. Объект <xref:System.Windows.Documents.Block> представляет блок текста, например абзаца или список. <xref:System.Windows.Documents.Inline> Элемент представляет часть текста в блоке. Многие <xref:System.Windows.Documents.Inline> классы указать форматирование для текста, к которому они применяются. Каждый <xref:System.Windows.Documents.TextElement> имеет свою собственную модель содержимого. Подробнее см. в разделе [Общие сведения о модели содержимого TextElement](../../../../docs/framework/wpf/advanced/textelement-content-model-overview.md).  
+ <xref:System.Windows.Documents.TextElement> и его связанные классы позволяют форматировать текст. <xref:System.Windows.Documents.TextElement> объекты содержат и форматирование текста в <xref:System.Windows.Controls.TextBlock> и <xref:System.Windows.Documents.FlowDocument> объектов. Два основных типа <xref:System.Windows.Documents.TextElement> объектов <xref:System.Windows.Documents.Block> элементы и <xref:System.Windows.Documents.Inline> элементы. Объект <xref:System.Windows.Documents.Block> представляет блок текста, например абзаца или список. <xref:System.Windows.Documents.Inline> Элемент представляет часть текста в блоке. Многие <xref:System.Windows.Documents.Inline> классы указать форматирование для текста, к которому они применяются. Каждый <xref:System.Windows.Documents.TextElement> имеет свою собственную модель содержимого. Подробнее см. в разделе [Общие сведения о модели содержимого TextElement](../../../../docs/framework/wpf/advanced/textelement-content-model-overview.md).  
   
 ## <a name="see-also"></a>См. также  
  [Дополнительно](../../../../docs/framework/wpf/advanced/index.md)

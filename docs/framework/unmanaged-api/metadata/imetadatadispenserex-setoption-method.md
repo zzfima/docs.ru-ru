@@ -1,14 +1,6 @@
 ---
-title: "Метод IMetaDataDispenserEx::SetOption"
-ms.custom: 
+title: Метод IMetaDataDispenserEx::SetOption
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IMetaDataDispenserEx.SetOption
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 9f1c7ccd-7fb2-41d8-aa00-24b823376527
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 96810ba0eab99d1df58f0b68b85ef4da8ce7084e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: cfe600b54eb03a07ea01375355c5ff94190e5d9d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="imetadatadispenserexsetoption-method"></a>Метод IMetaDataDispenserEx::SetOption
 Устанавливает для указанного параметра заданное значение для текущей области метаданных. Параметр определяет способ обработки вызовов текущей области метаданных.  
@@ -57,7 +45,7 @@ HRESULT SetOption (
 ## <a name="remarks"></a>Примечания  
  В следующей таблице перечислены доступные идентификаторы GUID, `optionId` может указывать параметр и соответствующие допустимые значения для `pValue` параметра.  
   
-|GUID|Описание:|`pValue`Параметр|  
+|GUID|Описание|`pValue` Параметр|  
 |----------|-----------------|------------------------|  
 |MetaDataCheckDuplicatesFor|Определяет, какие элементы проверяются на наличие дубликатов. Каждый раз при вызове [IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md) метод, который создает новый элемент, вы можете запросить метод для проверки, является ли элемент уже существует в текущей области. Например, можно проверить наличие `mdMethodDef` элементы; в этом случае при вызове [IMetaDataEmit::DefineMethod](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definemethod-method.md), она проверяет, что метод уже существует в текущей области. Эта проверка используется ключ, который однозначно определяет данный метод: родительский тип, имя и подпись.|Должен быть разновидностью UI4 и должен состоять из комбинации значений [CorCheckDuplicatesFor](../../../../docs/framework/unmanaged-api/metadata/corcheckduplicatesfor-enumeration.md) перечисления.|  
 |MetaDataRefToDefCheck|Элементы управления, которые ссылки на элементы, преобразуемые в определения. По умолчанию ядро метаданных будет оптимизировать код, преобразование ссылочного элемента его определение, если указанный элемент, фактически определенных в текущей области.|Должен быть разновидностью UI4 и должен состоять из комбинации значений [CorRefToDefCheck](../../../../docs/framework/unmanaged-api/metadata/correftodefcheck-enumeration.md) перечисления.|  
@@ -80,7 +68,7 @@ HRESULT SetOption (
   
  **Библиотека:** используется как ресурс в MsCorEE.dll  
   
- **Версии платформы .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>См. также  
  [Интерфейс IMetaDataDispenserEx](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-interface.md)  

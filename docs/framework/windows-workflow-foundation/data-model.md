@@ -1,26 +1,14 @@
 ---
-title: "Модель данных Windows Workflow Foundation"
-ms.custom: 
+title: Модель данных Windows Workflow Foundation
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - programming [WF], data model
 ms.assetid: d5752e51-cfc9-4499-af71-53b6daae9879
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: dffdadf9b6896e61dfa23c17ef4d17180be99259
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a13cb699be7428080bf53ec09828b47590488852
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="windows-workflow-foundation-data-model"></a>Модель данных Windows Workflow Foundation
 Модель данных Windows Workflow Foundation состоит из трех понятий: переменные, аргументы и выражения. Переменные представляют хранилище данных, а аргументы представляют поток данных в действие и из действия. Аргументы привязываются (им присваивается значение) с помощью выражений, которые могут ссылаться на переменные.  

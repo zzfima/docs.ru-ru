@@ -1,13 +1,6 @@
 ---
-title: "Синтаксис DateTime XAML"
-ms.custom: 
+title: Синтаксис DateTime XAML
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - DateTime XAML syntax [WPF], strings for
 - DateTime XAML syntax [WPF], where used
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - DateTime XAML text [WPF]
 - DateTime XAML syntax [WPF], format strings for
 ms.assetid: 5901710a-609b-40c8-9d65-f0016cd9090b
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f3010d3123e78a5e292c5ac78ef4894962fb8f9d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 286117cc0cce9fb54ea2c372360b13865fba77ad
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="datetime-xaml-syntax"></a>Синтаксис DateTime XAML
 Некоторые элементы управления, такие как <xref:System.Windows.Controls.Calendar> и <xref:System.Windows.Controls.DatePicker>, имеют свойства, использующие <xref:System.DateTime> типа. Несмотря на то что начальные дата и время для этих элементов управления обычно указываются в коде программной части во время выполнения, их можно указать в коде XAML. Средство синтаксического анализа WPF XAML обрабатывает анализ <xref:System.DateTime> значения с помощью встроенных текстового синтаксиса XAML. В этом разделе описаны особенности <xref:System.DateTime> текстового синтаксиса XAML.  
@@ -36,11 +24,11 @@ ms.lasthandoff: 12/22/2017
  Задание дат в XAML не всегда обязательно, а иногда даже может быть нежелательно. Например, можно использовать <xref:System.DateTime.Now%2A?displayProperty=nameWithType> инициализацию даты во время выполнения, или можно сделать все корректировки дат календаря в кода на основе ввода пользователя. Однако существуют сценарии, где можно жестко закодировать дат в <xref:System.Windows.Controls.Calendar> и <xref:System.Windows.Controls.DatePicker> в шаблоне элемента управления. <xref:System.DateTime> Синтаксиса XAML должен использоваться в следующих случаях.  
   
 ### <a name="datetime-xaml-syntax-is-a-native-behavior"></a>Синтаксис DateTime XAML является собственным поведением  
- <xref:System.DateTime>— Это класс, который определен в библиотеках базовых классов среды CLR. Из-за связи библиотеки базовых классов с остальной части среды CLR, не удалось применить <xref:System.ComponentModel.TypeConverterAttribute> класс и использовать преобразователь типов для обработки строк из XAML и преобразовать их в <xref:System.DateTime> в объектной модели время выполнения. Нет класса `DateTimeConverter`, предоставляющего поведение преобразования: поведение преобразования, описанное в этом разделе, является собственным для средства синтаксического анализа XAML WPF.  
+ <xref:System.DateTime> — Это класс, который определен в библиотеках базовых классов среды CLR. Из-за связи библиотеки базовых классов с остальной части среды CLR, не удалось применить <xref:System.ComponentModel.TypeConverterAttribute> класс и использовать преобразователь типов для обработки строк из XAML и преобразовать их в <xref:System.DateTime> в объектной модели время выполнения. Нет класса `DateTimeConverter`, предоставляющего поведение преобразования: поведение преобразования, описанное в этом разделе, является собственным для средства синтаксического анализа XAML WPF.  
   
 <a name="format_strings_for_datetime_xaml_syntax"></a>   
 ## <a name="format-strings-for-datetime-xaml-syntax"></a>Строки формата для синтаксиса DateTime XAML  
- Можно указать формат <xref:System.DateTime> со строкой формата. Строки формата формализуют синтаксис текста, который может использоваться для создания значения. <xref:System.DateTime>значения для существующих элементов управления WPF обычно только использование компонентов даты <xref:System.DateTime> и не компоненты времени.  
+ Можно указать формат <xref:System.DateTime> со строкой формата. Строки формата формализуют синтаксис текста, который может использоваться для создания значения. <xref:System.DateTime> значения для существующих элементов управления WPF обычно только использование компонентов даты <xref:System.DateTime> и не компоненты времени.  
   
  При указании <xref:System.DateTime> в XAML, можно использовать любой из строк формата попеременно.  
   

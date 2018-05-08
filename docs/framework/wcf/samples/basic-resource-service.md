@@ -1,27 +1,15 @@
 ---
-title: "Основная служба ресурсов"
-ms.custom: 
+title: Основная служба ресурсов
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 4360063e-cc8c-4648-846e-c05a5af51a7a
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 8bfcd632846510f8f62280bfb1620ba1f8c35ce3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 3ec743bbbb6d18d972701c3149179d6f615d1884
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="basic-resource-service"></a>Основная служба ресурсов
-В этом образце демонстрируется реализация службы HTTP с использованием модели программирования REST [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], при использовании которой представляется доступ к коллекции клиентов, поддерживающей операции поиска, добавления, удаления и замены. Данный образец состоит из двух компонентов: резидентной службы HTTP [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] (Service.cs) и консольного приложения (program.cs), создающего службу и выполняющего вызовы в этой службе.  
+В этом примере показано, как реализовать службу на основе HTTP, с помощью модели программирования REST Windows Communication Foundation (WCF), который предоставляет доступ к коллекции клиентов, поддерживающей операции поиска, добавления, удаления и замены. Данный образец состоит из двух компонентов: резидентной службы HTTP [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] (Service.cs) и консольного приложения (program.cs), создающего службу и выполняющего вызовы в этой службе.  
   
 ## <a name="sample-details"></a>Подробные сведения об образце  
  Служба [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] предоставляет доступ к коллекции клиентов в стиле REST (относительно ресурсов). Кратко говоря, это связано с тем, что каждая запись в коллекции имеет уникальный универсальный код ресурса (URI) для коллекции клиентов и всех клиентов в коллекции. Служба поддерживает отправку HTTP `GET` в универсальном коде ресурса (URI) коллекции для получения всей коллекции и HTTP `POST` в URI коллекции для добавления к коллекции нового клиента. Также для универсального кода ресурса (URI) для отдельного клиента поддерживается отправка HTTP `GET` для получения сведений о клиентах, отправка HTTP `PUT` для замены сведений о клиентах и отправка HTTP `DELETE` для удаления клиента из коллекции. При добавлении к коллекции нового клиента служба назначает ему уникальный URI и сохраняет URI как часть сведений о клиенте. Также назначенный URI передается клиенту с использованием заголовка ответа Location HTTP.  
@@ -45,7 +33,7 @@ ms.lasthandoff: 12/22/2017
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите на страницу [Примеры Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все примеры [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Этот образец расположен в следующем каталоге.  
+>  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] образцов. Этот образец расположен в следующем каталоге.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Web\BasicResourceService`  
   

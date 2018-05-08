@@ -1,29 +1,17 @@
 ---
-title: "Количество отброшенных сообщений, передаваемых по надежным каналам, в секунду"
-ms.custom: 
+title: Количество отброшенных сообщений, передаваемых по надежным каналам, в секунду
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: a11b0b80-b242-48e1-b0bb-7f756db5486b
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: dbae9414c4ce5394fc0d4a83589e2e5e10ffcc8b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9a87ec509b19f0c566b50ae3672a6c3d2940ee12
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="reliable-messaging-messages-dropped-per-second"></a>Количество отброшенных сообщений, передаваемых по надежным каналам, в секунду
 Имя счетчика: Reliable Messaging Sessions Dropped Per Second.  
   
-## <a name="description"></a>Описание:  
+## <a name="description"></a>Описание  
  Общее количество надежных сообщений, которые были отклонены в данной службе в течение секунды.  
   
  Этот счетчик является счетчиком производительности типа [PERF_COUNTER_COUNTER](http://go.microsoft.com/fwlink/?LinkID=94649), значение которого вычисляется по следующей формуле.  

@@ -1,25 +1,12 @@
 ---
-title: "Инструменты сериализации"
-ms.custom: 
+title: Инструменты сериализации
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 593b675f-938c-44ff-807b-0ca9fea30103
-caps.latest.revision: "4"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 33da3336cc78763de080eb21e3b84fd4cfdc7716
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: c03edbc7747d680f151c4a3ea1857937314b4c78
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="serialization-tools"></a>Инструменты сериализации
 Данный раздел содержит подробные сведения об инструментах сериализации. Все инструменты можно запускать из командной строки.  
@@ -29,7 +16,7 @@ ms.lasthandoff: 12/23/2017
   
 ## <a name="in-this-section"></a>В этом разделе  
   
-|Средство|Описание:|  
+|Средство|Описание|  
 |----------|-----------------|  
 |[Инструмент создания XML-сериализатора (Sgen.exe)](../../../docs/standard/serialization/xml-serializer-generator-tool-sgen-exe.md)|Создает сборку XML-сериализации для типов в указанной сборке для повышения быстродействия <xref:System.Xml.Serialization.XmlSerializer> во время выполнения.|  
 |[Инструмент определения схемы XML (Xsd.exe)](../../../docs/standard/serialization/xml-schema-definition-tool-xsd-exe.md)|Создает схемы XML на языке XSD, предложенном консорциумом World Wide Web Consortium (W3C). Этот инструмент генерирует классы CLR и классы <xref:System.Data.DataSet> на основе XSD-файла схемы.|  

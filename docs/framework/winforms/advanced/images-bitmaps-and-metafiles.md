@@ -1,29 +1,17 @@
 ---
-title: "Работа с растровыми и векторными изображениями с использованием классов Image, Bitmap и Metafile"
-ms.custom: 
+title: Работа с растровыми и векторными изображениями с использованием классов Image, Bitmap и Metafile
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - metafiles [Windows Forms], about metafiles
 - bitmaps [Windows Forms], about bitmaps
 - images [Windows Forms], about images
 - Windows Forms, images
 ms.assetid: 7152b45b-a55c-49bc-8c78-ae002a844f71
-caps.latest.revision: "16"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 67f72847e5dca20acd623c566a882e0094e94f68
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 30887cd88bc8c08c78eb37c4fe8591ac528e6f01
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="images-bitmaps-and-metafiles"></a>Работа с растровыми и векторными изображениями с использованием классов Image, Bitmap и Metafile
 `Image` — это абстрактный базовый класс, содержащий методы для работы с растровыми изображениями (точечными рисунками) и векторными изображениями (метафайлами). Классы `Bitmap` и <xref:System.Drawing.Imaging.Metafile> унаследованы от класса `Image`. Класс `Bitmap` расширяет возможности класса `Image` за счет дополнительных методов для загрузки, сохранения и использования растровых изображений. Класс <xref:System.Drawing.Imaging.Metafile> расширяет возможности класса `Image` за счет дополнительных методов для записи и анализа векторных изображений.  

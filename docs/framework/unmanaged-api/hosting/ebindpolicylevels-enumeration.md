@@ -1,14 +1,6 @@
 ---
-title: "Перечисление EBindPolicyLevels"
-ms.custom: 
+title: Перечисление EBindPolicyLevels
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - EBindPolicyLevels
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: a9e00b4f-b6d0-4257-bd88-4fe9af97b8fa
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 52e4d4522c7401aba198deed7853ccca71752d83
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1da1d368725ab0a2334080c1caa7d4e25f5f3bab
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ebindpolicylevels-enumeration"></a>Перечисление EBindPolicyLevels
 Предоставляет флаги, чтобы задать уровень, на котором следует применять или изменять политику сборки.  
@@ -54,7 +42,7 @@ typedef enum {
   
 ## <a name="members"></a>Участники  
   
-|Член|Описание:|  
+|Член|Описание|  
 |------------|-----------------|  
 |`ePolicyLevelAdmin`|Включение применения политики на уровне администратора.|  
 |`ePolicyLevelApp`|Включение применения политики на уровне приложения.|  
@@ -75,7 +63,7 @@ typedef enum {
   
  **Библиотека:** MSCorEE.dll  
   
- **Версии платформы .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Версии платформы .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>См. также  
  [Интерфейс ICLRAssemblyIdentityManager](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-interface.md)  

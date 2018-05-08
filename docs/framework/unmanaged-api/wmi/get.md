@@ -2,10 +2,6 @@
 title: Get-функция (Справочник по неуправляемым API)
 description: Функция Get возвращает значение указанного свойства.
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - Get
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 69312030689ab1b87e3aadd040395f06e1c94ac8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2f837a526879f80177bc9979e1d7671edfcd8d4f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="get-function"></a>Функция get
 Получает значение указанного свойства, если он существует.
@@ -59,15 +52,15 @@ HRESULT Get (
 `wszName`  
 [in] Имя свойства.
 
-`lFlags`[in] Зарезервировано. Этот параметр должен быть 0.
+`lFlags` [in] Зарезервировано. Этот параметр должен быть 0.
 
-`pVal`[out] Если функция возвращает успешно, содержит значение `wszName` свойства. `pval` Аргумент назначен правильный тип и значение квалификатора.
+`pVal` [out] Если функция возвращает успешно, содержит значение `wszName` свойства. `pval` Аргумент назначен правильный тип и значение квалификатора.
 
-`pvtType`[out] Если функция возвращает успешно, содержит [тип CIM константа](https://msdn.microsoft.com/library/aa386309(v=vs.85).aspx) , указывающее тип свойства. Его значение может быть также `null`. 
+`pvtType` [out] Если функция возвращает успешно, содержит [тип CIM константа](https://msdn.microsoft.com/library/aa386309(v=vs.85).aspx) , указывающее тип свойства. Его значение может быть также `null`. 
 
-`plFlavor`[out] Если функция возвращает успешно, получает информацию о происхождении свойства. Его значение может быть `null`, или один из следующих WBEM_FLAVOR_TYPE констант, определенных в *WbemCli.h* файл заголовка: 
+`plFlavor` [out] Если функция возвращает успешно, получает информацию о происхождении свойства. Его значение может быть `null`, или один из следующих WBEM_FLAVOR_TYPE констант, определенных в *WbemCli.h* файл заголовка: 
 
-|Константа  |Значение  |Описание:  |
+|Константа  |Значение  |Описание  |
 |---------|---------|---------|
 | `WBEM_FLAVOR_ORIGIN_SYSTEM` | 0x40 | Свойство является свойством стандартной системы. |
 | `WBEM_FLAVOR_ORIGIN_PROPAGATED` | 0x20 | Для класса: свойство наследуется от родительского класса. </br> Для экземпляра: свойство, пока наследуется от родительского класса, не был изменен в экземпляре.  |
@@ -77,7 +70,7 @@ HRESULT Get (
 
 Следующие значения, возвращаемые этой функцией, определяются в *WbemCli.h* файла заголовка, или их можно определить как константы в коде:
 
-|Константа  |Значение  |Описание:  |
+|Константа  |Значение  |Описание  |
 |---------|---------|---------|
 |`WBEM_E_FAILED` | 0x80041001 | Произошел общий сбой. |
 |`WBEM_E_INVALID_PARAMETER` | 0x80041008 | Один или несколько параметров недопустимы. |
@@ -98,7 +91,7 @@ HRESULT Get (
   
  **Заголовок:** WMINet_Utils.idl  
   
- **Версии платформы .NET framework:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Версии платформы .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>См. также  
 [WMI и счетчиков производительности (Справочник по неуправляемым API)](index.md)

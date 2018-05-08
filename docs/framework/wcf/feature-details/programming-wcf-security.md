@@ -1,42 +1,30 @@
 ---
 title: Программирование безопасности WCF
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - message security [WCF], programming overview
 ms.assetid: 739ec222-4eda-4cc9-a470-67e64a7a3f10
-caps.latest.revision: 25
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: 63f5c2c61a374b92b018419c83c9429e6ad796d8
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 3eb645dcc5b8cc1c52818e290699ebadcd0943c6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="programming-wcf-security"></a>Программирование безопасности WCF
-В данном разделе приводится описание основных задач программирования, используемых для создания безопасного приложения [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. В этом разделе рассматриваются только проверки подлинности, конфиденциальность и целостность, которые в совокупности называются *безопасность передачи*. В этом разделе не рассматривается авторизацию (Управление доступом к ресурсам и службам); сведения об авторизации см. в разделе [авторизации](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md).  
+В этом разделе описываются основные задачи программирования, используемый для создания безопасных приложений Windows Communication Foundation (WCF). В этом разделе рассматриваются только проверки подлинности, конфиденциальность и целостность, которые в совокупности называются *безопасность передачи*. В этом разделе не рассматривается авторизацию (Управление доступом к ресурсам и службам); сведения об авторизации см. в разделе [авторизации](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md).  
   
 > [!NOTE]
->  Ценные сведения о концепции безопасности, особенно в учета [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], см. в разделе Шаблоны и методики учебников на сайте MSDN по адресу [сценариев, шаблоны и рекомендации по реализации для Web Services Enhancements (WSE) 3.0](http://go.microsoft.com/fwlink/?LinkID=88250).  
+>  Ценные сведения о концепции безопасности, особенно в отношении WCF, увидеть набор шаблоны и методики учебники на сайте MSDN по адресу [сценариев, шаблоны и рекомендации по реализации для Web Services Enhancements (WSE) 3.0](http://go.microsoft.com/fwlink/?LinkID=88250).  
   
- Программирование безопасности [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] заключается в задании следующих трех элементов: режим безопасности, тип учетных данных клиента и значения учетных данных. Эти действия можно выполнить с помощью кода или конфигурации.  
+ Программирование безопасности WCF основана на три этапа, задав следующие: режим безопасности, тип учетных данных клиента и значения учетных данных. Эти действия можно выполнить с помощью кода или конфигурации.  
   
 ## <a name="setting-the-security-mode"></a>Задание режима безопасности  
- Ниже рассматриваются общие действия по программированию режима безопасности в [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ Ниже рассматриваются общие действия по программированию с использованием режима безопасности в WCF:  
   
 1.  Выберите одну из предопределенных привязок, отвечающих требованиям приложения. Список вариантов привязки см. в разделе [привязка, предоставляемая системой](../../../../docs/framework/wcf/system-provided-bindings.md). По умолчанию практически во всех привязках включены функции безопасности. Единственное исключение — <xref:System.ServiceModel.BasicHttpBinding> класса (с использованием конфигурации, [ \<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)).  
   

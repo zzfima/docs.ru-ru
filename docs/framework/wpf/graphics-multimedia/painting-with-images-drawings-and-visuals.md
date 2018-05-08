@@ -1,13 +1,6 @@
 ---
-title: "Рисование с помощью объектов Image, Drawing и Visual"
-ms.custom: 
+title: Рисование с помощью объектов Image, Drawing и Visual
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -19,16 +12,11 @@ helpviewer_keywords:
 - brushes [WPF], painting with images
 - brushes [WPF], painting with visuals
 ms.assetid: 779aac3f-8d41-49d8-8130-768244aa2240
-caps.latest.revision: "28"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 01939eb8735e6764e0f0cba811091c7fdbd6797f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: abb5733ed54ea430ba161db5ea2dcb33e99298ad
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="painting-with-images-drawings-and-visuals"></a>Рисование с помощью объектов Image, Drawing и Visual
 В этом разделе описывается использование <xref:System.Windows.Media.ImageBrush>, <xref:System.Windows.Media.DrawingBrush>, и <xref:System.Windows.Media.VisualBrush> объектов Закраска области с изображением, <xref:System.Windows.Media.Drawing>, или <xref:System.Windows.Media.Visual>.  
@@ -69,15 +57,15 @@ ms.lasthandoff: 12/22/2017
   
  Объект <xref:System.Windows.Media.DrawingBrush> закрашивает область с <xref:System.Windows.Media.Drawing> объекта. Объект <xref:System.Windows.Media.Drawing> описывает отображаемое содержимое, например фигуры, растрового изображения, видео или строка текста. Различные типы рисунков описывают различные типы содержимого. Ниже приведен список различных типов объектов-рисунков.  
   
--   <xref:System.Windows.Media.GeometryDrawing>— Выводит фигуру.  
+-   <xref:System.Windows.Media.GeometryDrawing> — Выводит фигуру.  
   
--   <xref:System.Windows.Media.ImageDrawing>— Выводит изображение.  
+-   <xref:System.Windows.Media.ImageDrawing> — Выводит изображение.  
   
--   <xref:System.Windows.Media.GlyphRunDrawing>— Выводит текст.  
+-   <xref:System.Windows.Media.GlyphRunDrawing> — Выводит текст.  
   
--   <xref:System.Windows.Media.VideoDrawing>— Воспроизводит файл аудио и видео.  
+-   <xref:System.Windows.Media.VideoDrawing> — Воспроизводит файл аудио и видео.  
   
--   <xref:System.Windows.Media.DrawingGroup>— Выводит другие рисунки. Для объединения рисунков в один составной используйте группирование рисунков.  
+-   <xref:System.Windows.Media.DrawingGroup> — Выводит другие рисунки. Для объединения рисунков в один составной используйте группирование рисунков.  
   
  Дополнительные сведения о <xref:System.Windows.Media.Drawing> объектов, в разделе [Общие сведения об объектах Drawing](../../../../docs/framework/wpf/graphics-multimedia/drawing-objects-overview.md).  
   
@@ -133,7 +121,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="tilebrush"></a>   
 ## <a name="tilebrush-features"></a>Функции TileBrush  
- <xref:System.Windows.Media.ImageBrush>, <xref:System.Windows.Media.DrawingBrush>, и <xref:System.Windows.Media.VisualBrush> типов <xref:System.Windows.Media.TileBrush> объектов. <xref:System.Windows.Media.TileBrush>объекты предоставляют значительные возможности контроля над способ рисования области с изображения, рисунок или visual. Например, можно заполнить область не одним растянутым изображением, а элементами мозаики, которые образуют узор.  
+ <xref:System.Windows.Media.ImageBrush>, <xref:System.Windows.Media.DrawingBrush>, и <xref:System.Windows.Media.VisualBrush> типов <xref:System.Windows.Media.TileBrush> объектов. <xref:System.Windows.Media.TileBrush> объекты предоставляют значительные возможности контроля над способ рисования области с изображения, рисунок или visual. Например, можно заполнить область не одним растянутым изображением, а элементами мозаики, которые образуют узор.  
   
  Объект <xref:System.Windows.Media.TileBrush> имеет три основных компонента: содержимое, плитки и в области вывода.  
   

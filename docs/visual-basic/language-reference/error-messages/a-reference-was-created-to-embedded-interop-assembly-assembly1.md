@@ -1,10 +1,6 @@
 ---
-title: "Была создана ссылка на внедренную сборку взаимодействия &#39; &lt;assembly1&gt;&#39; из-за наличия неявной ссылки на эту сборку из сборки &#39;&lt; Assembly2&gt;&#39;"
+title: Была создана ссылка на внедренную сборку взаимодействия &#39; &lt;assembly1&gt; &#39; из-за наличия неявной ссылки на эту сборку из сборки &#39; &lt;assembly2&gt;&#39;
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vbc40059
 - bc40059
@@ -12,16 +8,13 @@ helpviewer_keywords:
 - VBC40059
 - BC40059
 ms.assetid: 520e39cb-8ab6-46f5-aa00-08afd51b4b7c
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: aaaa7460ade00ad4232807ce11ee125e270742bf
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: 43a441b6b99988ae1b47969dde9c4bc815820767
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="a-reference-was-created-to-embedded-interop-assembly-39ltassembly1gt39-because-of-an-indirect-reference-to-that-assembly-from-assembly-39ltassembly2gt39"></a>Была создана ссылка на внедренную сборку взаимодействия &#39; &lt;assembly1&gt;&#39; из-за наличия неявной ссылки на эту сборку из сборки &#39;&lt; Assembly2&gt;&#39;
+# <a name="a-reference-was-created-to-embedded-interop-assembly-39ltassembly1gt39-because-of-an-indirect-reference-to-that-assembly-from-assembly-39ltassembly2gt39"></a>Была создана ссылка на внедренную сборку взаимодействия &#39; &lt;assembly1&gt; &#39; из-за наличия неявной ссылки на эту сборку из сборки &#39; &lt;assembly2&gt;&#39;
 Была создана ссылка на внедренную сборку взаимодействия "\<сборка1>" из-за косвенной ссылки на эту сборку из сборки "\<сборка2>". Рекомендуется изменить свойство "Внедрить типы взаимодействия" в одной из сборок.  
   
  Была добавлена ссылка на сборку (сборка1), для которой свойству `Embed Interop Types` присвоено значение `True`. Это указывает компилятору на необходимость внедрить сведения о типе взаимодействия из этой сборки. Тем не менее компилятор не может внедрить такие сведения из этой сборки, поскольку другая сборка, на которую задаются ссылки (сборка2), также ссылается на эту сборку (сборка1) и содержит свойство `Embed Interop Types` со значением `False`.  

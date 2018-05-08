@@ -1,24 +1,12 @@
 ---
-title: "Интеграция кэширования ASP.NET"
-ms.custom: 
+title: Интеграция кэширования ASP.NET
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: f581923a-8a72-42fc-bd6a-46de2aaeecc1
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0d56c435088be383821d17250e230cae848d2bab
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 420ff192caf41a37b6229bf36e32124f3646d69c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="aspnet-caching-integration"></a>Интеграция кэширования ASP.NET
 В этом образце демонстрируется использование выходного кэша ASP.NET в модели веб-программирования WCF HTTP . См. в разделе [базовой службы ресурсов](../../../../docs/framework/wcf/samples/basic-resource-service.md) образец резидентной версию этого сценария, которое обсуждается реализация service в глубину. В этом разделе основное внимание уделено возможности интеграции выходного кэша ASP.NET.  
@@ -31,12 +19,12 @@ ms.lasthandoff: 12/22/2017
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите на страницу [Примеры Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все примеры [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Этот образец расположен в следующем каталоге.  
+>  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] образцов. Этот образец расположен в следующем каталоге.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Web\AspNetCachingIntegration`  
   
 ## <a name="discussion"></a>Обсуждение  
- В этом образце <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute> используется вместе с выходным кэшем ASP.NET для службы [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. Атрибут <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute> применяется к операциям службы и предоставляет имя профиля кэша для файла конфигурации, который будет использован для ответов из заданной операции.  
+ В этом образце используется <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute> использовать ASP.NET кэширования выводимых данных в службе Windows Communication Foundation (WCF). Атрибут <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute> применяется к операциям службы и предоставляет имя профиля кэша для файла конфигурации, который будет использован для ответов из заданной операции.  
   
  В файле Service.cs из образца проекта Service как `GetCustomer` и `GetCustomers` операции с пометкой <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute>, который предоставляет имя профиля кэша «CacheFor60Seconds». В файле Web.config проекта Service профиль кэша «CacheFor60Seconds» предоставляется в рамках <`caching`> элемента <`system.web`>. Для этого профиля кэша значение `duration` атрибут является «60», поэтому ответы, связанные с этим профилем, кэшируются в кэше вывода ASP.NET в 60 секунд. Кроме того, для этого профиля кэша `varmByParam` атрибута задано значение «format» так запросы с разными значениями для `format` параметра строки запроса их ответы, кэшируются отдельно. Наконец, профиля кэша `varyByHeader` атрибут имеет значение «Accept», поэтому запросы с другими значениями заголовка Accept кэшируются отдельно ответы.  
   

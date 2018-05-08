@@ -1,13 +1,6 @@
 ---
-title: "Общие сведения о Storyboard"
-ms.custom: 
+title: Общие сведения о Storyboard
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - syntax [WPF], Storyboard
 - timelines [WPF]
 ms.assetid: 1a698c3c-30f1-4b30-ae56-57e8a39811bd
-caps.latest.revision: "31"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 614b5cc4843dbb886fa9cb02c56b28452e9fae8a
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 36922dce795443a4c1136f6442eff1c297f3c641
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="storyboards-overview"></a>Общие сведения о Storyboard
 В этом разделе показано, как использовать <xref:System.Windows.Media.Animation.Storyboard> объектов для организации и применения анимации. Описывает интерактивно использовать <xref:System.Windows.Media.Animation.Storyboard> объектов и описывает синтаксис косвенного выбора свойств.  
@@ -38,7 +26,7 @@ ms.lasthandoff: 01/19/2018
 ## <a name="what-is-a-storyboard"></a>Что такое раскадровка?  
  Анимация — не единственный удобный тип временной шкалы. Существуют другие классы временной шкалы, с помощью которых вы сможете создать наборы временных шкал и применить временные шкалы к свойствам. Шкалы времени контейнера являются производными от <xref:System.Windows.Media.Animation.TimelineGroup> класса и включать <xref:System.Windows.Media.Animation.ParallelTimeline> и <xref:System.Windows.Media.Animation.Storyboard>.  
   
- Объект <xref:System.Windows.Media.Animation.Storyboard> — это тип контейнера временной шкалы, предоставляющий сведения о содержащихся в нем шкалах. Раскадровка может содержать любой тип <xref:System.Windows.Media.Animation.Timeline>, включая другие временные шкалы контейнера и анимации. <xref:System.Windows.Media.Animation.Storyboard>объекты позволяют объединить временные шкалы, влияющие на различные объекты и свойства в одно дерево временной шкалы, упрощая организацию и управление сложным поведением времени. Например, предположим, что вам необходима кнопка, которая выполняет следующие три действия.  
+ Объект <xref:System.Windows.Media.Animation.Storyboard> — это тип контейнера временной шкалы, предоставляющий сведения о содержащихся в нем шкалах. Раскадровка может содержать любой тип <xref:System.Windows.Media.Animation.Timeline>, включая другие временные шкалы контейнера и анимации. <xref:System.Windows.Media.Animation.Storyboard> объекты позволяют объединить временные шкалы, влияющие на различные объекты и свойства в одно дерево временной шкалы, упрощая организацию и управление сложным поведением времени. Например, предположим, что вам необходима кнопка, которая выполняет следующие три действия.  
   
 -   Увеличивается и изменяет цвет, когда пользователь выбирает кнопку.  
   
@@ -46,7 +34,7 @@ ms.lasthandoff: 01/19/2018
   
 -   Сжимается и изменяет яркость до 50-процентной прозрачности, если кнопка становится недоступной.  
   
- В этом случае у вас есть несколько наборов анимаций, которые применяются к одному объекту и которые требуется воспроизводить в разное время в зависимости от состояния кнопки. <xref:System.Windows.Media.Animation.Storyboard>объекты позволяют организовывать анимации и применить их в группах для одного или нескольких объектов.  
+ В этом случае у вас есть несколько наборов анимаций, которые применяются к одному объекту и которые требуется воспроизводить в разное время в зависимости от состояния кнопки. <xref:System.Windows.Media.Animation.Storyboard> объекты позволяют организовывать анимации и применить их в группах для одного или нескольких объектов.  
   
 <a name="wherecanyouuseastoryboard"></a>   
 ## <a name="where-can-you-use-a-storyboard"></a>Где можно использовать раскадровку?  
@@ -72,9 +60,9 @@ ms.lasthandoff: 01/19/2018
   
 |Раскадровка запускается с помощью метода...|Применение к конкретным экземплярам|Стиль|Шаблон элемента управления|Шаблон данных|Пример|  
 |--------------------------------|-------------------|-----------|----------------------|-------------------|-------------|  
-|<xref:System.Windows.Media.Animation.BeginStoryboard>и<xref:System.Windows.EventTrigger>|Да|Да|Да|Да|[Анимация свойства с помощью раскадровки](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-by-using-a-storyboard.md)|  
-|<xref:System.Windows.Media.Animation.BeginStoryboard>и свойство<xref:System.Windows.Trigger>|Нет|Да|Да|Да|[Запуск анимации при изменении значения свойства](../../../../docs/framework/wpf/graphics-multimedia/how-to-trigger-an-animation-when-a-property-value-changes.md)|  
-|<xref:System.Windows.Media.Animation.BeginStoryboard>и<xref:System.Windows.DataTrigger>|Нет|Да|Да|Да|[Практическое руководство. Запуск анимации при изменении данных](http://msdn.microsoft.com/library/a736bb3a-2ae5-479a-a33a-75a27055d863)|  
+|<xref:System.Windows.Media.Animation.BeginStoryboard> и <xref:System.Windows.EventTrigger>|Да|Да|Да|Да|[Анимация свойства с помощью раскадровки](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-by-using-a-storyboard.md)|  
+|<xref:System.Windows.Media.Animation.BeginStoryboard> и свойство <xref:System.Windows.Trigger>|Нет|Да|Да|Да|[Запуск анимации при изменении значения свойства](../../../../docs/framework/wpf/graphics-multimedia/how-to-trigger-an-animation-when-a-property-value-changes.md)|  
+|<xref:System.Windows.Media.Animation.BeginStoryboard> и <xref:System.Windows.DataTrigger>|Нет|Да|Да|Да|[Практическое руководство. Запуск анимации при изменении данных](http://msdn.microsoft.com/library/a736bb3a-2ae5-479a-a33a-75a27055d863)|  
 |Метод <xref:System.Windows.Media.Animation.Storyboard.Begin%2A>|Да|Нет|Нет|Нет|[Анимация свойства с помощью раскадровки](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-by-using-a-storyboard.md)|  
   
  В следующем примере используется <xref:System.Windows.Media.Animation.Storyboard> для анимации <xref:System.Windows.FrameworkElement.Width%2A> из <xref:System.Windows.Shapes.Rectangle> элемент и <xref:System.Windows.Media.SolidColorBrush.Color%2A> из <xref:System.Windows.Media.SolidColorBrush> используется для рисования <xref:System.Windows.Shapes.Rectangle>.  
@@ -107,7 +95,7 @@ ms.lasthandoff: 01/19/2018
   
  [!code-csharp[storyboards_ovw_snip#105](../../../../samples/snippets/csharp/VS_Snippets_Wpf/storyboards_ovw_snip/CSharp/StoryboardsExample.cs#105)]  
   
- <xref:System.Windows.Freezable>типы являются те классы, которые наследуют от <xref:System.Windows.Freezable> класса. Примеры <xref:System.Windows.Freezable> включают <xref:System.Windows.Media.SolidColorBrush>, <xref:System.Windows.Media.RotateTransform>, и <xref:System.Windows.Media.GradientStop>.  
+ <xref:System.Windows.Freezable> типы являются те классы, которые наследуют от <xref:System.Windows.Freezable> класса. Примеры <xref:System.Windows.Freezable> включают <xref:System.Windows.Media.SolidColorBrush>, <xref:System.Windows.Media.RotateTransform>, и <xref:System.Windows.Media.GradientStop>.  
   
  Чтобы включить определение <xref:System.Windows.Freezable> анимация в [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], используется [директива x: Name](../../../../docs/framework/xaml-services/x-name-directive.md) присвоить имя. В коде используйте <xref:System.Windows.NameScope.RegisterName%2A> метода для регистрации имени с элементом, для которого был создан <xref:System.Windows.NameScope>.  
   
@@ -123,7 +111,7 @@ ms.lasthandoff: 01/19/2018
   
  [!code-csharp[storyboards_ovw_snip#107](../../../../samples/snippets/csharp/VS_Snippets_Wpf/storyboards_ovw_snip/CSharp/StoryboardsExample.cs#107)]  
   
- <xref:System.Windows.Media.Animation.Storyboard>объекты используют области имен для разрешения <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A> свойство. Дополнительные сведения об областях видимости имен WPF см. в разделе [Области видимости имен XAML в WPF](../../../../docs/framework/wpf/advanced/wpf-xaml-namescopes.md). Если <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A> свойство опущено, анимация обращается к элементам, на которой он определен, или, в случае стили элемента со стилем.  
+ <xref:System.Windows.Media.Animation.Storyboard> объекты используют области имен для разрешения <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A> свойство. Дополнительные сведения об областях видимости имен WPF см. в разделе [Области видимости имен XAML в WPF](../../../../docs/framework/wpf/advanced/wpf-xaml-namescopes.md). Если <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A> свойство опущено, анимация обращается к элементам, на которой он определен, или, в случае стили элемента со стилем.  
   
  Иногда имя не может быть назначен <xref:System.Windows.Freezable> объекта. Например если <xref:System.Windows.Freezable> объявлен как ресурс или используется для задания значения свойства в стиле, ему нельзя присвоить имя. Так как у объекта нет имени, к нему нельзя обратиться напрямую, но можно обратиться косвенно. В следующих разделах описано, как обращаться к целевым объектам косвенно.  
   
@@ -157,7 +145,7 @@ ms.lasthandoff: 01/19/2018
   
  Ниже показано, как анимировать <xref:System.Windows.Media.SolidColorBrush.Color%2A> из <xref:System.Windows.Media.SolidColorBrush> используется для задания  
   
- <xref:System.Windows.Shapes.Shape.Fill%2A>элемента прямоугольника.  
+ <xref:System.Windows.Shapes.Shape.Fill%2A> элемента прямоугольника.  
   
  [!code-xaml[storyboards_ovw_snip_XAML#32](../../../../samples/snippets/csharp/VS_Snippets_Wpf/storyboards_ovw_snip_XAML/CS/IndirectTargetingExample.xaml#32)]  
   
@@ -234,7 +222,7 @@ ms.lasthandoff: 01/19/2018
   
 <a name="controllable_storyboards"></a>   
 ## <a name="interactively-controlling-a-storyboard-in-xaml"></a>Интерактивное управление раскадровкой в XAML  
- Запуск раскадровки в [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], используется <xref:System.Windows.Media.Animation.BeginStoryboard> запустить действие. <xref:System.Windows.Media.Animation.BeginStoryboard>распределяет анимации объекты и свойства и запускает раскадровкой. (Дополнительные сведения об этом процессе см. в разделе [анимации и общие сведения о синхронизации системы](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-system-overview.md).) Если вы предоставите <xref:System.Windows.Media.Animation.BeginStoryboard> имя, указав его <xref:System.Windows.Media.Animation.BeginStoryboard.Name%2A> свойства, можно упростить управляемой раскадровки. Вы можете затем интерактивно управлять раскадровкой после ее запуска. Ниже приведен список действий для управляемой раскадровки, которые используются совместно с триггерами событий для управления раскадровкой.  
+ Запуск раскадровки в [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], используется <xref:System.Windows.Media.Animation.BeginStoryboard> запустить действие. <xref:System.Windows.Media.Animation.BeginStoryboard> распределяет анимации объекты и свойства и запускает раскадровкой. (Дополнительные сведения об этом процессе см. в разделе [анимации и общие сведения о синхронизации системы](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-system-overview.md).) Если вы предоставите <xref:System.Windows.Media.Animation.BeginStoryboard> имя, указав его <xref:System.Windows.Media.Animation.BeginStoryboard.Name%2A> свойства, можно упростить управляемой раскадровки. Вы можете затем интерактивно управлять раскадровкой после ее запуска. Ниже приведен список действий для управляемой раскадровки, которые используются совместно с триггерами событий для управления раскадровкой.  
   
 -   <xref:System.Windows.Media.Animation.PauseStoryboard>: Приостанавливает раскадровку.  
   

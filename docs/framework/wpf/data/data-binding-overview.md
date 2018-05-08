@@ -1,13 +1,6 @@
 ---
-title: "Общие сведения о привязке данных"
-ms.custom: 
+title: Общие сведения о привязке данных
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,16 +10,11 @@ helpviewer_keywords:
 - data binding [WPF], about data binding
 - conversion for data binding [WPF]
 ms.assetid: c707c95f-7811-401d-956e-2fffd019a211
-caps.latest.revision: "78"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 817a7ba73c37c15afa1be402da38e828d2aba426
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0b58cde738e2584662fa5f9ad90634931674f48b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="data-binding-overview"></a>Общие сведения о привязке данных
 Привязка данных [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] предоставляет приложениям простой и последовательный способ представления данных и взаимодействия с ними. Можно связывать элементы с данными из различных источников данных в виде объектов [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] и [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)]. <xref:System.Windows.Controls.ContentControl>например <xref:System.Windows.Controls.Button> и <xref:System.Windows.Controls.ItemsControl>, например <xref:System.Windows.Controls.ListBox> и <xref:System.Windows.Controls.ListView> имеет встроенных функциональных возможностей для включения гибких стилей для отдельных элементов данных или коллекции элементов данных. Представления сортировки, фильтрации и группировки могут быть организованы поверх данных.  
@@ -94,11 +82,11 @@ ms.lasthandoff: 12/22/2017
   
  ![Поток данных привязки данных](../../../../docs/framework/wpf/data/media/databinding-dataflow.png "DataBinding_DataFlow")  
   
--   <xref:System.Windows.Data.BindingMode.OneWay>Привязка никак не влияет на свойство источника для автоматического обновления целевого свойства, но изменения в свойство цели не передаются обратно в исходное свойство. Этот тип привязки подходит, если привязываемый элемент управления неявно доступен только для чтения. Например, можно привязаться к источнику, такому как биржевые сводки, или, возможно, свойство цели не имеет интерфейса для внесения изменений, например цвета фона привязанной к данным таблицы. Если нет необходимости отслеживать изменения целевого свойства, с помощью <xref:System.Windows.Data.BindingMode.OneWay> режим привязки избежать дополнительной нагрузки <xref:System.Windows.Data.BindingMode.TwoWay> режим привязки.  
+-   <xref:System.Windows.Data.BindingMode.OneWay> Привязка никак не влияет на свойство источника для автоматического обновления целевого свойства, но изменения в свойство цели не передаются обратно в исходное свойство. Этот тип привязки подходит, если привязываемый элемент управления неявно доступен только для чтения. Например, можно привязаться к источнику, такому как биржевые сводки, или, возможно, свойство цели не имеет интерфейса для внесения изменений, например цвета фона привязанной к данным таблицы. Если нет необходимости отслеживать изменения целевого свойства, с помощью <xref:System.Windows.Data.BindingMode.OneWay> режим привязки избежать дополнительной нагрузки <xref:System.Windows.Data.BindingMode.TwoWay> режим привязки.  
   
--   <xref:System.Windows.Data.BindingMode.TwoWay>Привязка никак не влияет на свойства источника или целевого свойства для автоматического обновления другого. Этот тип привязки подходит для изменяемых форм или других полностью интерактивных сценариев [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]. Большинство свойств по умолчанию <xref:System.Windows.Data.BindingMode.OneWay> привязки, но некоторые свойства зависимостей (обычно свойства изменяемые пользователем элементы управления, такие как <xref:System.Windows.Controls.TextBox.Text%2A> свойство <xref:System.Windows.Controls.TextBox> и <xref:System.Windows.Controls.Primitives.ToggleButton.IsChecked%2A> свойство <xref:System.Windows.Controls.CheckBox>) по умолчанию для <xref:System.Windows.Data.BindingMode.TwoWay> привязки. Существует способ определить программно, использует ли свойство зависимостей односторонние или двухсторонние привязки по умолчанию: для этого нужно получить метаданные этого свойства, воспользовавшись методом <xref:System.Windows.DependencyProperty.GetMetadata%2A>, а затем проверить логическое значение свойства <xref:System.Windows.FrameworkPropertyMetadata.BindsTwoWayByDefault%2A>.  
+-   <xref:System.Windows.Data.BindingMode.TwoWay> Привязка никак не влияет на свойства источника или целевого свойства для автоматического обновления другого. Этот тип привязки подходит для изменяемых форм или других полностью интерактивных сценариев [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]. Большинство свойств по умолчанию <xref:System.Windows.Data.BindingMode.OneWay> привязки, но некоторые свойства зависимостей (обычно свойства изменяемые пользователем элементы управления, такие как <xref:System.Windows.Controls.TextBox.Text%2A> свойство <xref:System.Windows.Controls.TextBox> и <xref:System.Windows.Controls.Primitives.ToggleButton.IsChecked%2A> свойство <xref:System.Windows.Controls.CheckBox>) по умолчанию для <xref:System.Windows.Data.BindingMode.TwoWay> привязки. Существует способ определить программно, использует ли свойство зависимостей односторонние или двухсторонние привязки по умолчанию: для этого нужно получить метаданные этого свойства, воспользовавшись методом <xref:System.Windows.DependencyProperty.GetMetadata%2A>, а затем проверить логическое значение свойства <xref:System.Windows.FrameworkPropertyMetadata.BindsTwoWayByDefault%2A>.  
   
--   <xref:System.Windows.Data.BindingMode.OneWayToSource>является обратным <xref:System.Windows.Data.BindingMode.OneWay> связывание; он обновляет свойство источника при изменении целевого свойства. Одним из примеров является пересчет исходного значения из [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)].  
+-   <xref:System.Windows.Data.BindingMode.OneWayToSource> является обратным <xref:System.Windows.Data.BindingMode.OneWay> связывание; он обновляет свойство источника при изменении целевого свойства. Одним из примеров является пересчет исходного значения из [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)].  
   
 -   Не показано на рисунке является <xref:System.Windows.Data.BindingMode.OneTime> привязки, который вызывает инициализировать целевое свойство источника, но последующие изменения не распространяются. Это означает, что, если в контексте данных производятся изменения или меняется объект, это изменение не отражается в целевом свойстве. Этот тип привязки подходит при использовании данных там, где приемлемо использовать снимок текущего состояния или данные действительно являются статичными. Этот тип привязки также является полезным, если нужно инициализировать целевое свойство с использованием какого-либо значения из исходного свойства, а контекст данных заранее неизвестен. Это по сути, упрощенная форма <xref:System.Windows.Data.BindingMode.OneWay> привязки, которая обеспечивает более высокую производительность в случаях, когда исходное значение не меняется.  
   
@@ -125,8 +113,8 @@ ms.lasthandoff: 12/22/2017
 |Значение UpdateSourceTrigger|Когда обновляется значение источника|Пример сценария для TextBox|  
 |-------------------------------|----------------------------------------|----------------------------------|  
 |Потеря фокуса (по умолчанию для <xref:System.Windows.Controls.TextBox.Text%2A?displayProperty=nameWithType>)|Возникает при потере фокуса элементом управления TextBox|Объект <xref:System.Windows.Controls.TextBox> , связан с логикой проверки (см. в разделе Проверка данных)|  
-|Свойство изменено|При вводе в<xref:System.Windows.Controls.TextBox>|<xref:System.Windows.Controls.TextBox>элементы управления в окне чата|  
-|Явные|Когда приложение вызывает<xref:System.Windows.Data.BindingExpression.UpdateSource%2A>|<xref:System.Windows.Controls.TextBox>элементы управления в редактируемой форме (обновляет значения источника только при нажатии кнопки "Отправить")|  
+|Свойство изменено|При вводе в <xref:System.Windows.Controls.TextBox>|<xref:System.Windows.Controls.TextBox> элементы управления в окне чата|  
+|Явные|Когда приложение вызывает <xref:System.Windows.Data.BindingExpression.UpdateSource%2A>|<xref:System.Windows.Controls.TextBox> элементы управления в редактируемой форме (обновляет значения источника только при нажатии кнопки "Отправить")|  
   
  Пример см. в разделе [Практическое руководство. Управление обновлением источника из поля TextBox](../../../../docs/framework/wpf/data/how-to-control-when-the-textbox-text-updates-the-source.md).  
   
@@ -236,7 +224,7 @@ ms.lasthandoff: 12/22/2017
 ### <a name="how-to-implement-collections"></a>Способы реализации коллекций  
  Можно перечислить любой коллекции, реализующей <xref:System.Collections.IEnumerable> интерфейса. Тем не менее чтобы настроить динамические привязки, чтобы обновить вставки и удаления элементов в коллекции [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] автоматически, необходимо реализовать коллекции <xref:System.Collections.Specialized.INotifyCollectionChanged> интерфейса. Этот интерфейс предоставляет событие, которое должно вызываться при каждом изменении коллекции.  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]предоставляет <xref:System.Collections.ObjectModel.ObservableCollection%601> класс, который является встроенной реализацией коллекции данных, предоставляющей <xref:System.Collections.Specialized.INotifyCollectionChanged> интерфейса. Обратите внимание, что для полной поддержки передачи значений данных от источника объектов для целевых объектов, каждый объект в коллекции, который поддерживает свойства связывания должны также реализовать <xref:System.ComponentModel.INotifyPropertyChanged> интерфейса. Дополнительные сведения см. в разделе [Общие сведения об источниках привязки](../../../../docs/framework/wpf/data/binding-sources-overview.md).  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] предоставляет <xref:System.Collections.ObjectModel.ObservableCollection%601> класс, который является встроенной реализацией коллекции данных, предоставляющей <xref:System.Collections.Specialized.INotifyCollectionChanged> интерфейса. Обратите внимание, что для полной поддержки передачи значений данных от источника объектов для целевых объектов, каждый объект в коллекции, который поддерживает свойства связывания должны также реализовать <xref:System.ComponentModel.INotifyPropertyChanged> интерфейса. Дополнительные сведения см. в разделе [Общие сведения об источниках привязки](../../../../docs/framework/wpf/data/binding-sources-overview.md).  
   
  Перед реализацией свою собственную коллекцию, рассмотрите возможность использования <xref:System.Collections.ObjectModel.ObservableCollection%601> или один из существующей коллекции классов, таких как <xref:System.Collections.Generic.List%601>, <xref:System.Collections.ObjectModel.Collection%601>, и <xref:System.ComponentModel.BindingList%601>, многие другие. Если имеется расширенный сценарий и требуется реализовать свою собственную коллекцию, рассмотрите возможность использования <xref:System.Collections.IList>, который предоставляет неуниверсальную коллекцию объектов, которые можно получить индивидуальный доступ по индексу и, следовательно, повышения производительности.  
   
@@ -269,7 +257,7 @@ ms.lasthandoff: 12/22/2017
   
 |Тип исходной коллекции|Тип представления коллекции|Примечания|  
 |----------------------------|--------------------------|-----------|  
-|<xref:System.Collections.IEnumerable>|Внутренний тип, основанный на<xref:System.Windows.Data.CollectionView>|Невозможно группировать элементы.|  
+|<xref:System.Collections.IEnumerable>|Внутренний тип, основанный на <xref:System.Windows.Data.CollectionView>|Невозможно группировать элементы.|  
 |<xref:System.Collections.IList>|<xref:System.Windows.Data.ListCollectionView>|Самый быстрый.|  
 |<xref:System.ComponentModel.IBindingList>|<xref:System.Windows.Data.BindingListCollectionView>||  
   
@@ -373,7 +361,7 @@ ms.lasthandoff: 12/22/2017
   
  [!code-xaml[DataBindingLab#DefaultValidation](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/AddProductWindow.xaml#defaultvalidation)]  
   
- Объект <xref:System.Windows.Controls.ValidationRule> объект проверяет, допустимо ли значение свойства. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]имеет две следующие типы встроенных <xref:System.Windows.Controls.ValidationRule> объектов:  
+ Объект <xref:System.Windows.Controls.ValidationRule> объект проверяет, допустимо ли значение свойства. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] имеет две следующие типы встроенных <xref:System.Windows.Controls.ValidationRule> объектов:  
   
 -   Объект <xref:System.Windows.Controls.ExceptionValidationRule> проверяет для исключений, возникающих во время обновления свойства источника привязки. В предыдущем примере `StartPrice` имеет тип integer. Когда пользователь вводит значение, которое невозможно преобразовать в целое число, создается исключение, приводящее к тому, что привязка будет помечена как недопустимая. Альтернативный синтаксис параметра <xref:System.Windows.Controls.ExceptionValidationRule> явным образом заключается в задании <xref:System.Windows.Data.Binding.ValidatesOnExceptions%2A> свойства `true` на ваш <xref:System.Windows.Data.Binding> или <xref:System.Windows.Data.MultiBinding> объекта.  
   

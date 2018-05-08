@@ -1,41 +1,27 @@
 ---
 title: Основные сведения о созданном коде клиента
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: c3f6e4b0-1131-4c94-aa39-a197c5c2f2ca
-caps.latest.revision: 9
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 8cd3e7f5ac8f129e29ed080cbf510dfe106edfb7
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 8a28b52d786793308d8609704b564b75f23d95d8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="understanding-generated-client-code"></a>Основные сведения о созданном коде клиента
 [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) создает код клиента и файл конфигурации клиентского приложения для использования при сборке клиентских приложений. В этом разделе содержатся примеры созданного кода для стандартных сценариев контрактов служб. Дополнительные сведения о создании клиентского приложения с помощью созданного кода см. в разделе [Общие сведения о клиенте WCF](../../../../docs/framework/wcf/wcf-client-overview.md).  
   
 ## <a name="overview"></a>Обзор  
- Если использовать Visual Studio для создания [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] типов клиентов для проекта, обычно не требуется для просмотра созданного кода клиента. Если используемая среда разработки не выполняет аналогичные службы, для создания кода клиента, а также для последующего использования этого кода для разработки клиентского приложения можно использовать такое средство, как Svcutil.exe.  
+ При использовании Visual Studio для создания типов клиентов Windows Communication Foundation (WCF) для проекта, обычно не требуется для просмотра созданного кода клиента. Если используемая среда разработки не выполняет аналогичные службы, для создания кода клиента, а также для последующего использования этого кода для разработки клиентского приложения можно использовать такое средство, как Svcutil.exe.  
   
  Поскольку Svcutil.exe имеет несколько параметров, способных изменить тип созданной информации, данный раздел не рассматривает все сценарии. Тем не менее, поиск созданного кода включен в следующие задачи:  
   
 -   Определение интерфейсов контрактов служб.  
   
--   Определение класса клиента [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] .  
+-   Определение класса клиента WCF.  
   
 -   Определение типа данных.  
   
@@ -52,14 +38,14 @@ ms.lasthandoff: 04/30/2018
   
  [!code-csharp[C_GeneratedCodeFiles#12](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_generatedcodefiles/cs/proxycode.cs#12)]  
   
- Можно использовать созданный интерфейс контракта службы наряду с классом <xref:System.ServiceModel.ChannelFactory?displayProperty=nameWithType> для создания объекта канала [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], с помощью которого вызываются операции службы. Дополнительные сведения см. в разделе [как: использование ChannelFactory](../../../../docs/framework/wcf/feature-details/how-to-use-the-channelfactory.md).  
+ Можно использовать созданный интерфейс контракта службы наряду с <xref:System.ServiceModel.ChannelFactory?displayProperty=nameWithType> класса для создания объекта канала WCF для вызова операций службы. Дополнительные сведения см. в разделе [как: использование ChannelFactory](../../../../docs/framework/wcf/feature-details/how-to-use-the-channelfactory.md).  
   
 ### <a name="finding-wcf-client-classes"></a>Поиск классов клиента WCF  
- Чтобы найти класс клиента [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], реализующий необходимый контракт службы, следует искать расширение класса <xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType>, параметром типа в котором является интерфейс контракта службы, который был только что найден и который расширяет этот интерфейс. Следующий пример кода иллюстрирует класс <xref:System.ServiceModel.ClientBase%601> типа `ISampleService`.  
+ Чтобы найти класса клиента WCF, которая реализует контракт службы, которые вы хотите использовать, найдите расширение <xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType>, в котором параметр типа является интерфейс контракта службы, который был найден и который расширяет этот интерфейс. Следующий пример кода иллюстрирует класс <xref:System.ServiceModel.ClientBase%601> типа `ISampleService`.  
   
  [!code-csharp[C_GeneratedCodeFiles#14](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_generatedcodefiles/cs/proxycode.cs#14)]  
   
- Класс клиента [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] можно использовать путем создания его нового экземпляра и вызова методов его реализации. Эти методы вызывают операцию службы, для взаимодействия с которой они разработаны и сконфигурированы. Дополнительные сведения см. в разделе [Общие сведения о клиенте WCF](../../../../docs/framework/wcf/wcf-client-overview.md).  
+ Этот класс клиента WCF можно использовать путем создания нового экземпляра и вызова методов, которые она реализует. Эти методы вызывают операцию службы, для взаимодействия с которой они разработаны и сконфигурированы. Дополнительные сведения см. в разделе [Общие сведения о клиенте WCF](../../../../docs/framework/wcf/wcf-client-overview.md).  
   
 > [!NOTE]
 >  При создании средством SvcUtil.exe класса клиента WCF к классу клиента добавляется <xref:System.Diagnostics.DebuggerStepThroughAttribute> для предотвращения пошагового перебора элементов класса клиента WCF отладчиками.  

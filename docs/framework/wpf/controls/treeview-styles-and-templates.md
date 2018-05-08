@@ -1,13 +1,6 @@
 ---
-title: "Стили и шаблоны элемента TreeView"
-ms.custom: 
+title: Стили и шаблоны элемента TreeView
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - ControlTemplate [WPF], TreeView
 - templates [WPF], TreeView
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - styles [WPF], TreeView
 - TreeView [WPF], styles and templates
 ms.assetid: a49adb77-0202-4caa-b94a-8bb110d7fa9a
-caps.latest.revision: "16"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ea6e7d26ad70eef3aae4678b922ef01bccc9450b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3a73127e409a96d5282272bd7a0e55a13a83a849
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="treeview-styles-and-templates"></a>Стили и шаблоны элемента TreeView
 В этом разделе описываются стили и шаблоны для <xref:System.Windows.Controls.TreeView> элемента управления. Можно изменить значение по умолчанию <xref:System.Windows.Controls.ControlTemplate> для предоставления уникального внешнего вида элемента управления. Подробнее см. в разделе [Настройка внешнего вида существующего элемента управления путем создания объекта ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  
@@ -38,7 +26,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="treeview-states"></a>Состояния TreeView  
  В следующей таблице перечислены визуальные состояния <xref:System.Windows.Controls.TreeView> элемента управления.  
   
-|Имя VisualState|Имя VisualStateGroup|Описание:|  
+|Имя VisualState|Имя VisualStateGroup|Описание|  
 |-|-|-|  
 |Valid|ValidationStates|Элемент управления использует <xref:System.Windows.Controls.Validation> класса и <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> вложенное свойство `false`.|  
 |InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> Вложенное свойство `true` имеет элемент управления имеет фокус.|  
@@ -47,14 +35,14 @@ ms.lasthandoff: 12/22/2017
 ## <a name="treeviewitem-parts"></a>Части TreeViewItem  
  В следующей таблице перечислены именованные части <xref:System.Windows.Controls.TreeViewItem> элемента управления.  
   
-|Отделение|Тип|Описание:|  
+|Отделение|Тип|Описание|  
 |----------|----------|-----------------|  
 |PART_Header|<xref:System.Windows.FrameworkElement>|Визуальный элемент, который содержит заголовок, содержимое <xref:System.Windows.Controls.TreeView> элемента управления.|  
   
 ## <a name="treeviewitem-states"></a>Состояния TreeViewItem  
  В следующей таблице перечислены визуальные состояния <xref:System.Windows.Controls.TreeViewItem> элемента управления.  
   
-|Имя VisualState|Имя VisualStateGroup|Описание:|  
+|Имя VisualState|Имя VisualStateGroup|Описание|  
 |----------------------|---------------------------|-----------------|  
 |Норм.|CommonStates|Состояние по умолчанию.|  
 |MouseOver|CommonStates|Указатель мыши наведен на <xref:System.Windows.Controls.TreeViewItem>.|  

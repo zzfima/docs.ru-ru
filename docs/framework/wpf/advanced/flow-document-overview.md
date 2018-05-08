@@ -1,13 +1,6 @@
 ---
-title: "Общие сведения о документе нефиксированного формата"
-ms.custom: 
+title: Общие сведения о документе нефиксированного формата
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - ', '
 - flow documents [WPF]
 ms.assetid: ef236a50-d44f-43c8-ba7c-82b0c733c0b7
-caps.latest.revision: "39"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a99bd2336de41366d27c15e4bc4cfb2b2aff3cd0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0cf8944298af62a512599fc52998a046c66fed9b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="flow-document-overview"></a>Общие сведения о документе нефиксированного формата
 Документы нефиксированного формата предназначены для более удобного просмотра и чтения. Вместо того чтобы использовать какой-либо определенный макет, документы нефиксированного формата динамически корректируют и перемещают содержимое с учетом переменных времени выполнения, таких как размер окна, разрешение устройства и дополнительные пользовательские настройки. Кроме того, в документах нефиксированного формата предоставляются дополнительные возможности работы с документами, такие как разбивка на страницы и столбцы. В этом разделе представлены общие сведения о документах нефиксированного формата и способах их создания.  
@@ -69,13 +57,13 @@ ms.lasthandoff: 12/22/2017
 ## <a name="flow-document-types"></a>Типы документов нефиксированного формата  
  Отображение содержимого документа нефиксированного формата и его вид зависят от того, какой объект используется для размещения содержимого нефиксированного формата. Существуют четыре элемента управления, которые поддерживают просмотр содержимого нефиксированного формата: <xref:System.Windows.Controls.FlowDocumentReader>, <xref:System.Windows.Controls.FlowDocumentPageViewer>, <xref:System.Windows.Controls.RichTextBox>, и <xref:System.Windows.Controls.FlowDocumentScrollViewer>. Эти элементы управления кратко описаны ниже.  
   
- **Примечание:** <xref:System.Windows.Documents.FlowDocument> требуется напрямую содержимое потока узлов, поэтому все эти элементы управления для просмотра занимать <xref:System.Windows.Documents.FlowDocument> для размещения содержимого нефиксированного формата.
+ **Примечание:** <xref:System.Windows.Documents.FlowDocument> требуется напрямую содержимое потока узлов, поэтому все эти элементы управления для просмотра занимать <xref:System.Windows.Documents.FlowDocument> для размещения содержимого нефиксированного формата.  
   
 ### <a name="flowdocumentreader"></a>FlowDocumentReader  
- <xref:System.Windows.Controls.FlowDocumentReader>включает в себя функции, которые позволяют пользователю динамически выбирать различные режимы просмотра, включая одностраничный (страницы в раз), две страницы в раз (книжный формат) режиме постоянной прокрутки (без дна) и режим просмотра. Дополнительные сведения об этих режимах просмотра см. в разделе <xref:System.Windows.Controls.FlowDocumentReaderViewingMode>. Если не требуется возможность динамически переключаться между режимами просмотра <xref:System.Windows.Controls.FlowDocumentPageViewer> и <xref:System.Windows.Controls.FlowDocumentScrollViewer> предоставляют облегченные средства просмотра содержимого, которые исправлены в режиме просмотра.  
+ <xref:System.Windows.Controls.FlowDocumentReader> включает в себя функции, которые позволяют пользователю динамически выбирать различные режимы просмотра, включая одностраничный (страницы в раз), две страницы в раз (книжный формат) режиме постоянной прокрутки (без дна) и режим просмотра. Дополнительные сведения об этих режимах просмотра см. в разделе <xref:System.Windows.Controls.FlowDocumentReaderViewingMode>. Если не требуется возможность динамически переключаться между режимами просмотра <xref:System.Windows.Controls.FlowDocumentPageViewer> и <xref:System.Windows.Controls.FlowDocumentScrollViewer> предоставляют облегченные средства просмотра содержимого, которые исправлены в режиме просмотра.  
   
 ### <a name="flowdocumentpageviewer-and-flowdocumentscrollviewer"></a>FlowDocumentPageViewer и FlowDocumentScrollViewer  
- <xref:System.Windows.Controls.FlowDocumentPageViewer>Отображает содержимое в страницы во время режима просмотра, а <xref:System.Windows.Controls.FlowDocumentScrollViewer> отображает содержимое в режиме постоянной прокрутки. Оба <xref:System.Windows.Controls.FlowDocumentPageViewer> и <xref:System.Windows.Controls.FlowDocumentScrollViewer> фиксированной для определенного режима просмотра. Сравнить с <xref:System.Windows.Controls.FlowDocumentReader>, которая содержит функции, которые позволяют пользователю динамически выбирать различные режимы просмотра (в соответствии со <xref:System.Windows.Controls.FlowDocumentReaderViewingMode> перечисления), за счет его более ресурсоемким, чем <xref:System.Windows.Controls.FlowDocumentPageViewer> или <xref:System.Windows.Controls.FlowDocumentScrollViewer>.  
+ <xref:System.Windows.Controls.FlowDocumentPageViewer> Отображает содержимое в страницы во время режима просмотра, а <xref:System.Windows.Controls.FlowDocumentScrollViewer> отображает содержимое в режиме постоянной прокрутки. Оба <xref:System.Windows.Controls.FlowDocumentPageViewer> и <xref:System.Windows.Controls.FlowDocumentScrollViewer> фиксированной для определенного режима просмотра. Сравнить с <xref:System.Windows.Controls.FlowDocumentReader>, которая содержит функции, которые позволяют пользователю динамически выбирать различные режимы просмотра (в соответствии со <xref:System.Windows.Controls.FlowDocumentReaderViewingMode> перечисления), за счет его более ресурсоемким, чем <xref:System.Windows.Controls.FlowDocumentPageViewer> или <xref:System.Windows.Controls.FlowDocumentScrollViewer>.  
   
  По умолчанию вертикальная полоса прокрутки отображается всегда, а горизонтальная полоса прокрутки становится видимой при необходимости. Значение по умолчанию пользовательский Интерфейс для <xref:System.Windows.Controls.FlowDocumentScrollViewer> не включает панель инструментов, однако <xref:System.Windows.Controls.FlowDocumentScrollViewer.IsToolBarVisible%2A> свойство может использоваться для включения встроенной панели инструментов.  
   
@@ -111,7 +99,7 @@ ms.lasthandoff: 12/22/2017
 ### <a name="block-derived-classes"></a>Классы, производные от блока  
  **Paragraph**  
   
- <xref:System.Windows.Documents.Paragraph>обычно используется для группировки содержимого в абзац. Самый простой и распространенный способ использования класса Paragraph — составление текстового абзаца.  
+ <xref:System.Windows.Documents.Paragraph> обычно используется для группировки содержимого в абзац. Самый простой и распространенный способ использования класса Paragraph — составление текстового абзаца.  
   
  [!code-xaml[FlowOvwSnippets_snip#ParagraphExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FlowOvwSnippets_snip/CS/ParagraphExample.xaml#paragraphexamplewholepage)]  
   
@@ -122,7 +110,7 @@ ms.lasthandoff: 12/22/2017
   
  **Раздел**  
   
- <xref:System.Windows.Documents.Section>используется только для того, чтобы содержать другие <xref:System.Windows.Documents.Block>-элементов, производных. Он не применяет никакого форматирования по умолчанию к содержащимся в нем элементам. Тем не менее, любое свойство данные, установленные на <xref:System.Windows.Documents.Section> применяется к его дочерние элементы. Раздел также позволяет программным способом перебирать свою дочернюю коллекцию. <xref:System.Windows.Documents.Section>используется так же, как для \<DIV > тег в HTML.  
+ <xref:System.Windows.Documents.Section> используется только для того, чтобы содержать другие <xref:System.Windows.Documents.Block>-элементов, производных. Он не применяет никакого форматирования по умолчанию к содержащимся в нем элементам. Тем не менее, любое свойство данные, установленные на <xref:System.Windows.Documents.Section> применяется к его дочерние элементы. Раздел также позволяет программным способом перебирать свою дочернюю коллекцию. <xref:System.Windows.Documents.Section> используется так же, как для \<DIV > тег в HTML.  
   
  В следующем примере три абзаца определяются под одним <xref:System.Windows.Documents.Section>. В разделе о <xref:System.Windows.Documents.TextElement.Background%2A> значение свойства Red, поэтому цвет фона абзацев также — красным.  
   
@@ -133,7 +121,7 @@ ms.lasthandoff: 12/22/2017
   
  **BlockUIContainer**  
   
- <xref:System.Windows.Documents.BlockUIContainer>включает <xref:System.Windows.UIElement> элементы (т. е. <xref:System.Windows.Controls.Button>) для внедрения в блочное потоковое содержимое. <xref:System.Windows.Documents.InlineUIContainer>(см. ниже) используется для внедрения <xref:System.Windows.UIElement> элементы в содержимом нефиксированного формата встроенные. <xref:System.Windows.Documents.BlockUIContainer>и <xref:System.Windows.Documents.InlineUIContainer> важны, так как другие способы использования <xref:System.Windows.UIElement> потока содержимого, если он не содержится в одном из этих элементов.  
+ <xref:System.Windows.Documents.BlockUIContainer> включает <xref:System.Windows.UIElement> элементы (т. е. <xref:System.Windows.Controls.Button>) для внедрения в блочное потоковое содержимое. <xref:System.Windows.Documents.InlineUIContainer> (см. ниже) используется для внедрения <xref:System.Windows.UIElement> элементы в содержимом нефиксированного формата встроенные. <xref:System.Windows.Documents.BlockUIContainer> и <xref:System.Windows.Documents.InlineUIContainer> важны, так как другие способы использования <xref:System.Windows.UIElement> потока содержимого, если он не содержится в одном из этих элементов.  
   
  В следующем примере показано, как использовать <xref:System.Windows.Documents.BlockUIContainer> для размещения элемента <xref:System.Windows.UIElement> объекты в содержимом нефиксированного формата.  
   
@@ -145,7 +133,7 @@ ms.lasthandoff: 12/22/2017
   
  **List**  
   
- <xref:System.Windows.Documents.List>используется для создания маркированного или нумерованного списка. Задать <xref:System.Windows.Documents.List.MarkerStyle%2A> свойства <xref:System.Windows.TextMarkerStyle> значение перечисления для определения стиля списка. В приведенном ниже примере показано, как создать простой список.  
+ <xref:System.Windows.Documents.List> используется для создания маркированного или нумерованного списка. Задать <xref:System.Windows.Documents.List.MarkerStyle%2A> свойства <xref:System.Windows.TextMarkerStyle> значение перечисления для определения стиля списка. В приведенном ниже примере показано, как создать простой список.  
   
  [!code-xaml[FlowOvwSnippets_snip#ListExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FlowOvwSnippets_snip/CS/ListExample.xaml#listexamplewholepage)]  
   
@@ -156,12 +144,12 @@ ms.lasthandoff: 12/22/2017
   
  **Таблица**  
   
- <xref:System.Windows.Documents.Table>используется для создания таблицы. <xref:System.Windows.Documents.Table>Аналогично <xref:System.Windows.Controls.Grid> элемент, но имеет больше возможностей и, следовательно, требует больше ресурсов. Поскольку <xref:System.Windows.Controls.Grid> — <xref:System.Windows.UIElement>, его нельзя использовать в содержимом нефиксированного формата, если он содержится в <xref:System.Windows.Documents.BlockUIContainer> или <xref:System.Windows.Documents.InlineUIContainer>. Дополнительные сведения о <xref:System.Windows.Documents.Table>, в разделе [Общие сведения о таблицах](../../../../docs/framework/wpf/advanced/table-overview.md).  
+ <xref:System.Windows.Documents.Table> используется для создания таблицы. <xref:System.Windows.Documents.Table> Аналогично <xref:System.Windows.Controls.Grid> элемент, но имеет больше возможностей и, следовательно, требует больше ресурсов. Поскольку <xref:System.Windows.Controls.Grid> — <xref:System.Windows.UIElement>, его нельзя использовать в содержимом нефиксированного формата, если он содержится в <xref:System.Windows.Documents.BlockUIContainer> или <xref:System.Windows.Documents.InlineUIContainer>. Дополнительные сведения о <xref:System.Windows.Documents.Table>, в разделе [Общие сведения о таблицах](../../../../docs/framework/wpf/advanced/table-overview.md).  
   
 ### <a name="inline-derived-classes"></a>Встроенные классы  
  **Выполнить**  
   
- <xref:System.Windows.Documents.Run>используется для хранения неформатированного текста. Можно ожидать <xref:System.Windows.Documents.Run> содержимое потока в широко использовать объекты. Однако в разметке <xref:System.Windows.Documents.Run> элементы не обязательно должны использоваться явным образом. <xref:System.Windows.Documents.Run>требуется для использования при создании и управлении ими документы нефиксированного формата с помощью кода. Например, в разметке ниже первого <xref:System.Windows.Documents.Paragraph> указывает <xref:System.Windows.Documents.Run> элемент явно, а второй — нет. Оба абзаца создают идентичные выходные данные.  
+ <xref:System.Windows.Documents.Run> используется для хранения неформатированного текста. Можно ожидать <xref:System.Windows.Documents.Run> содержимое потока в широко использовать объекты. Однако в разметке <xref:System.Windows.Documents.Run> элементы не обязательно должны использоваться явным образом. <xref:System.Windows.Documents.Run> требуется для использования при создании и управлении ими документы нефиксированного формата с помощью кода. Например, в разметке ниже первого <xref:System.Windows.Documents.Paragraph> указывает <xref:System.Windows.Documents.Run> элемент явно, а второй — нет. Оба абзаца создают идентичные выходные данные.  
   
  [!code-xaml[FlowOvwSnippets_snip#RunExample1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FlowOvwSnippets_snip/CS/RunSnippetsExample.xaml#runexample1)]  
   
@@ -169,7 +157,7 @@ ms.lasthandoff: 12/22/2017
   
  **Span**  
   
- <xref:System.Windows.Documents.Span>Группирует другие элементы встроенного содержимого. Никакая обязательная отрисовка применяется к содержимому <xref:System.Windows.Documents.Span> элемента. Тем не менее, элементы, которые наследуются от <xref:System.Windows.Documents.Span> включая <xref:System.Windows.Documents.Hyperlink>, <xref:System.Windows.Documents.Bold>, <xref:System.Windows.Documents.Italic> и <xref:System.Windows.Documents.Underline> применить форматирование к тексту.  
+ <xref:System.Windows.Documents.Span> Группирует другие элементы встроенного содержимого. Никакая обязательная отрисовка применяется к содержимому <xref:System.Windows.Documents.Span> элемента. Тем не менее, элементы, которые наследуются от <xref:System.Windows.Documents.Span> включая <xref:System.Windows.Documents.Hyperlink>, <xref:System.Windows.Documents.Bold>, <xref:System.Windows.Documents.Italic> и <xref:System.Windows.Documents.Underline> применить форматирование к тексту.  
   
  Ниже приведен пример <xref:System.Windows.Documents.Span> , используемого для хранения встроенного содержимого, включая текст, <xref:System.Windows.Documents.Bold> элемент и <xref:System.Windows.Controls.Button>.  
   
@@ -181,7 +169,7 @@ ms.lasthandoff: 12/22/2017
   
  **InlineUIContainer**  
   
- <xref:System.Windows.Documents.InlineUIContainer>включает <xref:System.Windows.UIElement> элементы (т. е. элемент управления, например <xref:System.Windows.Controls.Button>) для внедрения в <xref:System.Windows.Documents.Inline> содержимого элемента. Этот элемент является встроенным эквивалентом <xref:System.Windows.Documents.BlockUIContainer> описано выше. Ниже приведен пример, использующий <xref:System.Windows.Documents.InlineUIContainer> для вставки <xref:System.Windows.Controls.Button> , встроенный в <xref:System.Windows.Documents.Paragraph>.  
+ <xref:System.Windows.Documents.InlineUIContainer> включает <xref:System.Windows.UIElement> элементы (т. е. элемент управления, например <xref:System.Windows.Controls.Button>) для внедрения в <xref:System.Windows.Documents.Inline> содержимого элемента. Этот элемент является встроенным эквивалентом <xref:System.Windows.Documents.BlockUIContainer> описано выше. Ниже приведен пример, использующий <xref:System.Windows.Documents.InlineUIContainer> для вставки <xref:System.Windows.Controls.Button> , встроенный в <xref:System.Windows.Documents.Paragraph>.  
   
  [!code-xaml[FlowOvwSnippets_snip#InlineUIContainerExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FlowOvwSnippets_snip/CS/InlineUIContainerExample.xaml#inlineuicontainerexamplewholepage)]  
   
@@ -192,7 +180,7 @@ ms.lasthandoff: 12/22/2017
   
  **Figure и Floater**  
   
- <xref:System.Windows.Documents.Figure>и <xref:System.Windows.Documents.Floater> используются для включения содержимого в документах потока с помощью свойства размещения, которые могут быть настроены независимо от первичного потока содержимого. <xref:System.Windows.Documents.Figure>или <xref:System.Windows.Documents.Floater> элементы часто используются для выделения или подчеркивания частей содержимого, для размещения сопровождающих изображений или другого содержимого в рамках основного потока содержимого или для вставки такого содержимого, например объявления.  
+ <xref:System.Windows.Documents.Figure> и <xref:System.Windows.Documents.Floater> используются для включения содержимого в документах потока с помощью свойства размещения, которые могут быть настроены независимо от первичного потока содержимого. <xref:System.Windows.Documents.Figure> или <xref:System.Windows.Documents.Floater> элементы часто используются для выделения или подчеркивания частей содержимого, для размещения сопровождающих изображений или другого содержимого в рамках основного потока содержимого или для вставки такого содержимого, например объявления.  
   
  В следующем примере показано, как внедрить <xref:System.Windows.Documents.Figure> в абзац текста.  
   
@@ -205,7 +193,7 @@ ms.lasthandoff: 12/22/2017
   
  ![Снимок экрана: пример элемента Figure](../../../../docs/framework/wpf/advanced/media/flow-ovw-figure-example.png "Flow_Ovw_Figure_Example")  
   
- <xref:System.Windows.Documents.Figure>и <xref:System.Windows.Documents.Floater> немного отличаются и используются для различных сценариев.  
+ <xref:System.Windows.Documents.Figure> и <xref:System.Windows.Documents.Floater> немного отличаются и используются для различных сценариев.  
   
  **Figure:**  
   
@@ -219,15 +207,15 @@ ms.lasthandoff: 12/22/2017
   
 -   Невозможно указать местоположение, отрисовывается в любом доступном пространстве. Невозможно задать смещение или значение привязки <xref:System.Windows.Documents.Floater>.  
   
--   Не меняются для более чем одного столбца: по умолчанию <xref:System.Windows.Documents.Floater> размеры в один столбец. Он имеет <xref:System.Windows.Documents.Floater.Width%2A> свойство, которое может быть присвоено абсолютное значение в пикселях, но если это значение превышает ширину одного столбца, оно игнорируется и размер плавающего объекта размера одного столбца. Размер меньше, чем один столбец, задав правильную ширину в пикселях, но нельзя относительно столбца, поэтому «0.5Column» не является допустимым выражением для <xref:System.Windows.Documents.Floater> ширины. <xref:System.Windows.Documents.Floater>Свойства высоты и является высота не может быть задано, его высота зависит от содержимого  
+-   Не меняются для более чем одного столбца: по умолчанию <xref:System.Windows.Documents.Floater> размеры в один столбец. Он имеет <xref:System.Windows.Documents.Floater.Width%2A> свойство, которое может быть присвоено абсолютное значение в пикселях, но если это значение превышает ширину одного столбца, оно игнорируется и размер плавающего объекта размера одного столбца. Размер меньше, чем один столбец, задав правильную ширину в пикселях, но нельзя относительно столбца, поэтому «0.5Column» не является допустимым выражением для <xref:System.Windows.Documents.Floater> ширины. <xref:System.Windows.Documents.Floater> Свойства высоты и является высота не может быть задано, его высота зависит от содержимого  
   
--   <xref:System.Windows.Documents.Floater>разбиение на страницы: если его содержимое с указанной шириной распространяется на высоту более 1 столбца, плавающий объект прерывается и разрывается следующий столбец, следующую страницу и т. д.  
+-   <xref:System.Windows.Documents.Floater> разбиение на страницы: если его содержимое с указанной шириной распространяется на высоту более 1 столбца, плавающий объект прерывается и разрывается следующий столбец, следующую страницу и т. д.  
   
- <xref:System.Windows.Documents.Figure>удобен для размещения отдельного содержимого, где вы хотите контролировать размер и размещение и уверены, что содержимое разместится в указанный размер. <xref:System.Windows.Documents.Floater>является хорошо подходит для размещения более свободного содержимого, расположенного подобно содержимому главной страницы, но отделен от нее.  
+ <xref:System.Windows.Documents.Figure> удобен для размещения отдельного содержимого, где вы хотите контролировать размер и размещение и уверены, что содержимое разместится в указанный размер. <xref:System.Windows.Documents.Floater> является хорошо подходит для размещения более свободного содержимого, расположенного подобно содержимому главной страницы, но отделен от нее.  
   
  **LineBreak**  
   
- <xref:System.Windows.Documents.LineBreak>вызывает разрыв строки в содержимом нефиксированного формата. В следующем примере показано использование функции <xref:System.Windows.Documents.LineBreak>.  
+ <xref:System.Windows.Documents.LineBreak> вызывает разрыв строки в содержимом нефиксированного формата. В следующем примере показано использование функции <xref:System.Windows.Documents.LineBreak>.  
   
  [!code-xaml[FlowOvwSnippets_snip#LineBreakExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FlowOvwSnippets_snip/CS/LineBreakExample.xaml#linebreakexamplewholepage)]  
   

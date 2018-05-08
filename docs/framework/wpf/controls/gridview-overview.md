@@ -1,31 +1,19 @@
 ---
-title: "Общие сведения о GridView"
-ms.custom: 
+title: Общие сведения о GridView
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - GridView view mode [WPF]
 - ListView controls [WPF], GridView view mode
 - controls [WPF], ListView
 ms.assetid: b2d02267-32b3-40ce-8e9f-06972d8749d9
-caps.latest.revision: "26"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 099584ff5149891f406d5ad24a28a6b3e3faafb4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 776897d490b2748e240cf7b9a4ea21364284c4c4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="gridview-overview"></a>Общие сведения о GridView
-<xref:System.Windows.Controls.GridView>режим — один из режимов просмотра для <xref:System.Windows.Controls.ListView> элемента управления. <xref:System.Windows.Controls.GridView> Класса и его вспомогательные классы позволяют вам и пользователям для просмотра коллекций элементов в таблице, в качестве интерактивных заголовков столбцов обычно используются кнопки. В этом разделе описываются <xref:System.Windows.Controls.GridView> класса и возможности его использования.  
+<xref:System.Windows.Controls.GridView> режим — один из режимов просмотра для <xref:System.Windows.Controls.ListView> элемента управления. <xref:System.Windows.Controls.GridView> Класса и его вспомогательные классы позволяют вам и пользователям для просмотра коллекций элементов в таблице, в качестве интерактивных заголовков столбцов обычно используются кнопки. В этом разделе описываются <xref:System.Windows.Controls.GridView> класса и возможности его использования.  
   
   
   
@@ -42,7 +30,7 @@ ms.lasthandoff: 12/22/2017
   
  ![Стилизированный ListView](../../../../docs/framework/wpf/controls/media/styledlistview.PNG "StyledListView")  
   
- <xref:System.Windows.Controls.GridView>столбцы представлены в <xref:System.Windows.Controls.GridViewColumn> объектов, которые можно автоматическое изменение размера в соответствии с содержимым. Кроме того, можно явно задать <xref:System.Windows.Controls.GridViewColumn> ширину. Можно изменить размеры столбцов, перетащив границу между заголовками столбцов. Динамически также можно добавлять, удалять, заменить и изменить порядок столбцов, так как эта функция встроена в <xref:System.Windows.Controls.GridView>. Тем не менее <xref:System.Windows.Controls.GridView> прямо обновить данные, он отображает.  
+ <xref:System.Windows.Controls.GridView> столбцы представлены в <xref:System.Windows.Controls.GridViewColumn> объектов, которые можно автоматическое изменение размера в соответствии с содержимым. Кроме того, можно явно задать <xref:System.Windows.Controls.GridViewColumn> ширину. Можно изменить размеры столбцов, перетащив границу между заголовками столбцов. Динамически также можно добавлять, удалять, заменить и изменить порядок столбцов, так как эта функция встроена в <xref:System.Windows.Controls.GridView>. Тем не менее <xref:System.Windows.Controls.GridView> прямо обновить данные, он отображает.  
   
  В следующем примере показан способ определения <xref:System.Windows.Controls.GridView> , отображающий данные о сотрудниках. В этом примере <xref:System.Windows.Controls.ListView> определяет `EmployeeInfoDataSource` как <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A>. Свойства определения <xref:System.Windows.Controls.GridViewColumn.DisplayMemberBinding%2A> привязки <xref:System.Windows.Controls.GridViewColumn> содержимого `EmployeeInfoDataSource` категории данных.  
   

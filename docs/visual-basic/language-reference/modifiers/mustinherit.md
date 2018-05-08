@@ -1,10 +1,6 @@
 ---
 title: MustInherit (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - MustInherit
 - vb.MustInherit
@@ -14,14 +10,11 @@ helpviewer_keywords:
 - abstract classes [Visual Basic], MustInherit class
 - MustInherit keyword [Visual Basic]
 ms.assetid: b8f05185-90e3-4dd7-adc2-90d852fab5b4
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 9d384986e42ee69a0f425c1590599aa2c82bc856
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 5d622c1cff77a45c8de7772af7efbb73586f4400
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mustinherit-visual-basic"></a>MustInherit (Visual Basic)
 Указывает, что класс может использоваться только как базовый класс и что невозможно создать объект непосредственно из него.  
@@ -31,7 +24,7 @@ ms.lasthandoff: 11/21/2017
   
  Другое использование оператора `MustInherit` класса является ограничение переменной до набора связанных классов. Можно определить базовый класс и производные от него все эти связанные классы. Базовый класс не требуется для предоставления функциональных возможностей, общих для всех производных классов, но его можно использовать в качестве фильтра для присвоения значений переменным. Если код объявляет переменную как базовый класс, Visual Basic можно присвоить переменной только объект из одного из производных классов.  
   
- Платформа .NET Framework определяет несколько `MustInherit` классы, среди них <xref:System.Array>, <xref:System.Enum>, и <xref:System.ValueType>. <xref:System.ValueType>Примером может служить базового класса, который ограничивает переменную. Все типы значений являются производными от <xref:System.ValueType>. Если объявить переменную как <xref:System.ValueType>, этой переменной можно назначить только типы значений.  
+ Платформа .NET Framework определяет несколько `MustInherit` классы, среди них <xref:System.Array>, <xref:System.Enum>, и <xref:System.ValueType>. <xref:System.ValueType> Примером может служить базового класса, который ограничивает переменную. Все типы значений являются производными от <xref:System.ValueType>. Если объявить переменную как <xref:System.ValueType>, этой переменной можно назначить только типы значений.  
   
 ## <a name="rules"></a>Правила  
   

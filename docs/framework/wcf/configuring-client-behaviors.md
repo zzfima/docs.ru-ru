@@ -1,30 +1,18 @@
 ---
-title: "Настройка поведений клиентов"
-ms.custom: 
+title: Настройка поведений клиентов
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: df5b32fa-e73b-4e8e-b66f-357c748e0173
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ee79900b52ae0fa58e8fb9a5cbbf50f5a882c295
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 062e726b6f1d6831303e1cc0ae82a434daab860c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="configuring-client-behaviors"></a>Настройка поведений клиентов
-[!INCLUDE[indigo1](../../../includes/indigo1-md.md)] настраивает поведение двумя способами: путем ссылки на конфигурации поведения (которые определяются в разделе `<behavior>` файла конфигурации приложения) или программным образом в вызывающем приложении. В этом разделе описываются оба подхода.  
+Windows Communication Foundation (WCF) настраивает поведение двумя способами: путем ссылки на конфигурации поведения, определенных в `<behavior>` раздел файла конфигурации приложения клиента — или программно в вызывающем приложение. В этом разделе описываются оба подхода.  
   
  При использовании файла конфигурации конфигурация поведения представляет собой именованную коллекцию параметров конфигурации. Имя каждой из конфигураций поведения должно быть уникальным. Эта строка используется в атрибуте `behaviorConfiguration` конфигурации конечной точки, чтобы связать конечную точку с поведением.  
   
@@ -54,7 +42,7 @@ ms.lasthandoff: 12/22/2017
 ```  
   
 ## <a name="using-behaviors-programmatically"></a>Управление поведениями программным образом  
- Можно также настраивать или вставлять поведения программным образом путем поиска соответствующего свойства `Behaviors` в клиентском объекте [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] или в объекте клиентской фабрики каналов до того, как открыть клиент.  
+ Можно также настраивать или вставлять поведения программным образом путем поиска соответствующего `Behaviors` свойства в объекте клиента Windows Communication Foundation (WCF) или в объект фабрики каналов клиента до открытия клиента.  
   
 ## <a name="example"></a>Пример  
  В следующем примере кода показано, как программным образом вставить поведение, обратившись к свойству <xref:System.ServiceModel.Description.ServiceEndpoint.Behaviors%2A> объекта <xref:System.ServiceModel.Description.ServiceEndpoint>, возвращаемого свойством <xref:System.ServiceModel.ChannelFactory.Endpoint%2A> до создания объекта канала.  

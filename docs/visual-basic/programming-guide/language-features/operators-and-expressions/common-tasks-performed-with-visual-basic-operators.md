@@ -1,12 +1,6 @@
 ---
-title: "Общие задачи, выполняемые с помощью операторов Visual Basic"
-ms.custom: 
+title: Общие задачи, выполняемые с помощью операторов Visual Basic
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - operators [Visual Basic], logical
 - operators [Visual Basic], string concatenation
@@ -19,14 +13,11 @@ helpviewer_keywords:
 - operators [Visual Basic], comparison
 - operators [Visual Basic], short-circuiting logical
 ms.assetid: d181afe5-fafa-460f-a13b-81203f6f4587
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 0886bc0365f37f964c4c4872a7b1624ec7388067
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: ab0b7e7c35992908aeaac14053665ff84719f1fc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="common-tasks-performed-with-visual-basic-operators"></a>Общие задачи, выполняемые с помощью операторов Visual Basic
 Операторы выполняют многие общие задачи над одним или несколькими выражениями вызывается *операндов*.  
@@ -34,7 +25,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="arithmetic-and-bit-shift-tasks"></a>Арифметические и поразрядного сдвига задачи  
  В следующей таблице перечислены доступные операции арифметические и сдвига.  
   
-|Целевой тип|См.|  
+|Кому|См.|  
 |---|---|  
 |Добавьте одно числовое значение в другой|[Оператор +](../../../../visual-basic/language-reference/operators/addition-operator.md)|  
 |Вычитание одного числового значения из другого|[-Оператор (Visual Basic)](../../../../visual-basic/language-reference/operators/subtraction-operator.md)|  
@@ -44,20 +35,20 @@ ms.lasthandoff: 11/21/2017
 |Найти частное от деления одного числового значения на другое (без остатка)|[\ Оператор (Visual Basic)](../../../../visual-basic/language-reference/operators/integer-division-operator.md)|  
 |Остаток от деления одного числового значения на другое (без частного)|[Оператор Mod](../../../../visual-basic/language-reference/operators/mod-operator.md)|  
 |Возвести одно числовое значение в степень другого|[Оператор ^](../../../../visual-basic/language-reference/operators/exponentiation-operator.md)|  
-|Сдвиг битового представления числового значения влево|[<\<Оператор](../../../../visual-basic/language-reference/operators/left-shift-operator.md)|  
+|Сдвиг битового представления числового значения влево|[<\< Оператор](../../../../visual-basic/language-reference/operators/left-shift-operator.md)|  
 |Сдвиг битового представления числового значения вправо|[Оператор >>](../../../../visual-basic/language-reference/operators/right-shift-operator.md)|  
   
 ## <a name="comparison-tasks"></a>Сравнение задачи  
  В следующей таблице перечислены доступные операции сравнения.  
   
-|Целевой тип|См.|  
+|Кому|См.|  
 |---|---|  
-|Определяет, равны ли два значения|`=`Оператор ([операторы сравнения в Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md))|  
-|Определить, равны ли два значения|`<>`Оператор ([операторы сравнения в Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md))|  
-|Определить, является ли одно значение меньше другого|`<`Оператор ([операторы сравнения в Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md))|  
-|Определить, является ли одно значение больше другого|`>`Оператор ([операторы сравнения в Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md))|  
-|Определить, является ли одно значение меньше или равно другому|`<=`Оператор ([операторы сравнения в Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md))|  
-|Определить, является ли одно значение больше или равно другому|`>=`Оператор ([операторы сравнения в Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md))|  
+|Определяет, равны ли два значения|`=` Оператор ([операторы сравнения в Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md))|  
+|Определить, равны ли два значения|`<>` Оператор ([операторы сравнения в Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md))|  
+|Определить, является ли одно значение меньше другого|`<` Оператор ([операторы сравнения в Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md))|  
+|Определить, является ли одно значение больше другого|`>` Оператор ([операторы сравнения в Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md))|  
+|Определить, является ли одно значение меньше или равно другому|`<=` Оператор ([операторы сравнения в Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md))|  
+|Определить, является ли одно значение больше или равно другому|`>=` Оператор ([операторы сравнения в Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md))|  
 |Определить, ссылаются ли две объектные переменные на один и тот же экземпляр объекта|[Оператор Is](../../../../visual-basic/language-reference/operators/is-operator.md)|  
 |Определить, ссылаются ли две объектные переменные на разные экземпляры объекта|[Оператор IsNot](../../../../visual-basic/language-reference/operators/isnot-operator.md)|  
 |Определить, является ли объект определенного типа|[Оператор TypeOf](../../../../visual-basic/language-reference/operators/typeof-operator.md)|  
@@ -65,15 +56,15 @@ ms.lasthandoff: 11/21/2017
 ## <a name="concatenation-tasks"></a>Задачи объединения  
  В следующей таблице перечислены доступные операции объединения.  
   
-|Целевой тип|См.|  
+|Кому|См.|  
 |---|---|  
-|Объединяют несколько строк в одну строку|`&`Оператор ([операторы объединения в Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md))|  
-|Присоединение числового значения к строке|`+`Оператор ([операторы объединения в Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md))|  
+|Объединяют несколько строк в одну строку|`&` Оператор ([операторы объединения в Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md))|  
+|Присоединение числового значения к строке|`+` Оператор ([операторы объединения в Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md))|  
   
 ## <a name="logical-and-bitwise-tasks"></a>Логические и побитовые задачи  
  В следующей таблице перечислены доступные логические и битовые операции.  
   
-|Целевой тип|См.|  
+|Кому|См.|  
 |---|---|  
 |Выполнить логическое отрицание логическое значение|[Оператор Not](../../../../visual-basic/language-reference/operators/not-operator.md)|  
 |Выполнить логическое умножение двух логических значений|[Оператор And](../../../../visual-basic/language-reference/operators/and-operator.md)|  

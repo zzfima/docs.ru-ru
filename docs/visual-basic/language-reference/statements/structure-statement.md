@@ -1,11 +1,6 @@
 ---
-title: "Оператор Structure"
+title: Оператор Structure
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Structure
 - Structure
@@ -17,14 +12,11 @@ helpviewer_keywords:
 - UDT (user-defined types)
 - types [Visual Basic], user-defined
 ms.assetid: 9bd1deea-2a89-4cdc-812c-6dcbb947c391
-caps.latest.revision: "28"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 43211bb10793acf3bfe0c1d7a35791114170ee7d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 6a3626706b226b0be253fd35fa60b33a71b86007
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="structure-statement"></a>Оператор Structure
 Объявляет имя структуры и вводит определение переменных, свойств, событий и процедур, которые в структуру.  
@@ -44,18 +36,18 @@ End Structure
   
 |Термин|Определение|  
 |---|---|  
-|`attributelist`|Необязательно. В разделе [список атрибутов](../../../visual-basic/language-reference/statements/attribute-list.md).|  
-|`accessmodifier`|Необязательно. Ниже указаны доступные значения.<br /><br /> -   [Public](../../../visual-basic/language-reference/modifiers/public.md)<br />-   [Защищенные](../../../visual-basic/language-reference/modifiers/protected.md)<br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)<br />-   [Закрытый](../../../visual-basic/language-reference/modifiers/private.md)<br />-   `Protected Friend`<br /><br /> В разделе [уровни в Visual Basic доступа](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).|  
-|`Shadows`|Необязательно. В разделе [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).|  
-|`Partial`|Необязательно. Указывает частичное определение структуры. В разделе [частичного](../../../visual-basic/language-reference/modifiers/partial.md).|  
-|`name`|Обязательный. Имя этой структуры. В разделе [имена объявленных элементов](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).|  
-|`Of`|Необязательно. Указывает, что это структурой универсального типа.|  
+|`attributelist`|Необязательный. В разделе [список атрибутов](../../../visual-basic/language-reference/statements/attribute-list.md).|  
+|`accessmodifier`|Необязательный. Ниже указаны доступные значения.<br /><br /> -   [Public](../../../visual-basic/language-reference/modifiers/public.md)<br />-   [Защищенные](../../../visual-basic/language-reference/modifiers/protected.md)<br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)<br />-   [Закрытый](../../../visual-basic/language-reference/modifiers/private.md)<br />-   `Protected Friend`<br /><br /> В разделе [уровни в Visual Basic доступа](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).|  
+|`Shadows`|Необязательный. В разделе [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).|  
+|`Partial`|Необязательный. Указывает частичное определение структуры. В разделе [частичного](../../../visual-basic/language-reference/modifiers/partial.md).|  
+|`name`|Обязательно. Имя этой структуры. В разделе [имена объявленных элементов](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).|  
+|`Of`|Необязательный. Указывает, что это структурой универсального типа.|  
 |`typelist`|Является обязательным, если используется [из](../../../visual-basic/language-reference/statements/of-clause.md) ключевое слово. Список параметров типа для этой структуры. В разделе [введите список](../../../visual-basic/language-reference/statements/type-list.md).|  
-|`Implements`|Необязательно. Указывает, что эта структура реализует члены одного или нескольких интерфейсов. В разделе [реализует оператор](../../../visual-basic/language-reference/statements/implements-statement.md).|  
+|`Implements`|Необязательный. Указывает, что эта структура реализует члены одного или нескольких интерфейсов. В разделе [реализует оператор](../../../visual-basic/language-reference/statements/implements-statement.md).|  
 |`interfacenames`|Является обязательным, если используется `Implements` инструкции. Имена интерфейсов, реализуемых этой структуры.|  
-|`datamemberdeclarations`|Обязательный. Ноль или более `Const`, `Dim`, `Enum`, или `Event` объявляющих *данные-члены* структуры.|  
-|`methodmemberdeclarations`|Необязательно. Ноль или несколько объявлений `Function`, `Operator`, `Property`, или `Sub` процедур, которые служат в качестве *метода члены* структуры.|  
-|`End Structure`|Обязательный. Завершает `Structure` определения.|  
+|`datamemberdeclarations`|Обязательно. Ноль или более `Const`, `Dim`, `Enum`, или `Event` объявляющих *данные-члены* структуры.|  
+|`methodmemberdeclarations`|Необязательный. Ноль или несколько объявлений `Function`, `Operator`, `Property`, или `Sub` процедур, которые служат в качестве *метода члены* структуры.|  
+|`End Structure`|Обязательно. Завершает `Structure` определения.|  
   
 ## <a name="remarks"></a>Примечания  
  `Structure` Оператор определяет тип составного значения, которые можно настроить. Объект *структура* представляет собой обобщение определяемых пользователем типов (UDT) предыдущих версий Visual Basic. Дополнительные сведения см. в разделе [структуры](../../../visual-basic/programming-guide/language-features/data-types/structures.md).  

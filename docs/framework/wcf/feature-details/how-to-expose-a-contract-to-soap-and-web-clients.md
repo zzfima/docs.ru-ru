@@ -1,30 +1,18 @@
 ---
-title: "Практическое руководство. Предоставление контрактов SOAP- и веб-клиентам"
-ms.custom: 
+title: Практическое руководство. Предоставление контрактов SOAP- и веб-клиентам
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: bb765a48-12f2-430d-a54d-6f0c20f2a23a
-caps.latest.revision: "21"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0f13ba797b0c0e5c8b0d1eef271baf62f920f199
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a9a730fe94d1df8c887a2eaf20c1e338bd056ed5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-expose-a-contract-to-soap-and-web-clients"></a>Практическое руководство. Предоставление контрактов SOAP- и веб-клиентам
-По умолчанию [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] делает конечные точки доступными только для клиентов SOAP. В [как: Создание базовой службы WCF Web HTTP](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-wcf-web-http-service.md), конечной точки становится доступным для клиентов, не использующие протокол SOAP. Иногда может потребоваться сделать один и тот же контракт доступным обоими способами: в качестве сетевой конечной точки и в качестве конечной точки SOAP. В данном разделе приводится пример того, как это сделать.  
+По умолчанию Windows Communication Foundation (WCF) делает конечные точки доступны только клиентам SOAP. В [как: Создание базовой службы WCF Web HTTP](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-wcf-web-http-service.md), конечной точки становится доступным для клиентов, не использующие протокол SOAP. Иногда может потребоваться сделать один и тот же контракт доступным обоими способами: в качестве сетевой конечной точки и в качестве конечной точки SOAP. В данном разделе приводится пример того, как это сделать.  
   
 ### <a name="to-define-the-service-contract"></a>Определение контракта службы  
   
@@ -65,7 +53,7 @@ ms.lasthandoff: 12/22/2017
   
 ### <a name="to-call-service-operations-mapped-to-get-in-internet-explorer"></a>Вызов операций службы, сопоставленных с операцией GET, в Internet Explorer  
   
-1.  Откройте Internet Explorer и введите «`http://localhost:8000/Web/EchoWithGet?s=Hello, world!`» и нажмите клавишу ВВОД. Этот URL-адрес содержит базовый адрес службы ("http://localhost:8000/"), относительный адрес конечной точки (""), вызываемую операцию службы ("EchoWithGet"), вопросительный знак и следующий за ним список именованных параметров, в качестве разделителя между которыми используется амперсанд (&).  
+1.  Откройте Internet Explorer и введите «`http://localhost:8000/Web/EchoWithGet?s=Hello, world!`» и нажмите клавишу ВВОД. URL-адрес содержит базовый адрес службы («http://localhost:8000/»), относительный адрес конечной точки ("»), операции службы, чтобы вызов («EchoWithGet») и вопросительный знак и список именованных параметров, разделенных знаком амперсанда (&).  
   
 ### <a name="to-call-service-operations-on-the-web-endpoint-in-code"></a>Вызов операций службы в сетевой конечной точке в коде  
   

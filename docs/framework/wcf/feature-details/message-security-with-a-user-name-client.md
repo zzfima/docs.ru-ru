@@ -1,30 +1,20 @@
 ---
-title: "Безопасность сообщений при использовании клиентом учетных данных пользователя"
-ms.custom: 
+title: Безопасность сообщений при использовании клиентом учетных данных пользователя
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 36335cb9-76b8-4443-92c7-44f081eabb21
-caps.latest.revision: "15"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: dfda34c6bf165ebcecfd6d9a3710e785586d6cb1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7bda1bc18e2b5af1365c799c6f2be9d8d220e9ed
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="message-security-with-a-user-name-client"></a>Безопасность сообщений при использовании клиентом учетных данных пользователя
-На следующем рисунке показано, как защищаются служба и клиент [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] с помощью безопасности на уровне сообщений. Служба проходит проверку подлинности с использованием сертификата X.509. Подлинность клиента проверяется с помощью имени и пароля пользователя.  
+На следующем рисунке службы Windows Communication Foundation (WCF) и клиента, защищены с помощью безопасности на уровне сообщений. Служба проходит проверку подлинности с использованием сертификата X.509. Подлинность клиента проверяется с помощью имени и пароля пользователя.  
   
  Пример приложения см. в разделе [имя пользователя безопасности сообщения](../../../../docs/framework/wcf/samples/message-security-user-name.md).  
   
@@ -33,7 +23,7 @@ ms.lasthandoff: 12/22/2017
 |Характеристика|Описание|  
 |--------------------|-----------------|  
 |Режим безопасности|Сообщение|  
-|Взаимодействие|Только [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]|  
+|Взаимодействие|Windows Communication Foundation (WCF) только|  
 |Проверка подлинности (сервера)|Первоначальное согласование возможно только после проверки подлинности сервера|  
 |Проверка подлинности (клиента)|Имя пользователя/пароль|  
 |Целостность|Да, используется общий контекст безопасности|  

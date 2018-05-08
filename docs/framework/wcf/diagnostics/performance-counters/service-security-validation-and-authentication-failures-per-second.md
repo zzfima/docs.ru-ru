@@ -1,29 +1,19 @@
 ---
-title: "Служба: количество сбоев при проверке безопасности и проверке подлинности в секунду"
-ms.custom: 
+title: 'Служба: количество сбоев при проверке безопасности и проверке подлинности в секунду'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 4af18009-e778-490b-9ba6-e76485285830
-caps.latest.revision: "9"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 85e6dae6b8358799370079c52c3d04e7c3221b80
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0dadf11888e55a96b15e09d5f4b326e8c5e18a02
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="service-security-validation-and-authentication-failures-per-second"></a>Служба: количество сбоев при проверке безопасности и проверке подлинности в секунду
 Имя счетчика: Security Validation and Authentication Failures Per Second.  
   
-## <a name="description"></a>Описание:  
+## <a name="description"></a>Описание  
  Значение этого счетчика увеличивается всякий раз, когда сообщение отклоняется из-за проблемы безопасности, не относящейся к счетчику "Security Calls Not Authorized". К таким проблемам относятся следующие.  
   
 -   Невозможно прочесть в этом сообщении маркер клиента.  

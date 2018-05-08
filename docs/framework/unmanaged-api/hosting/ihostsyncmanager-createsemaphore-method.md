@@ -1,14 +1,6 @@
 ---
-title: "Метод IHostSyncManager::CreateSemaphore"
-ms.custom: 
+title: Метод IHostSyncManager::CreateSemaphore
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IHostSyncManager.CreateSemaphore
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 37679e94-5ff9-4173-8fa5-457febeb89bf
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: d8df29b3eeb565aaa4a977762fcc453fb985e40d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 003e385ade6357b76823986d20e8fdf3d4c3757f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ihostsyncmanagercreatesemaphore-method"></a>Метод IHostSyncManager::CreateSemaphore
 Создает [IHostSemaphore](../../../../docs/framework/unmanaged-api/hosting/ihostsemaphore-interface.md) объект для среды (CLR) в качестве семафор для ожидания события.  
@@ -62,7 +50,7 @@ HRESULT CreateSemaphore (
   
 |HRESULT|Описание|  
 |-------------|-----------------|  
-|S_OK|`CreateSemaphore`успешно возвращен.|  
+|S_OK|`CreateSemaphore` успешно возвращен.|  
 |ЗНАЧЕНИЕ HOST_E_CLRNOTAVAILABLE|Среда CLR не загружена в процесс или находится в состоянии, в котором не может выполнять управляемый код или успешно обработать вызов.|  
 |HOST_E_TIMEOUT|Истекло время ожидания вызова.|  
 |HOST_E_NOT_OWNER|Вызывающий объект не является владельцем блокировки.|  
@@ -71,7 +59,7 @@ HRESULT CreateSemaphore (
 |E_OUTOFMEMORY|Не хватает памяти была доступна для создания запрошенного объекта события.|  
   
 ## <a name="remarks"></a>Примечания  
- `CreateSemaphore`функция зеркал Win32, которая имеет то же имя. `dwInitial` И `dwMax` параметров служит ту же семантику для счетчика семафора Win32 `lInitialCount` и `lMaximumCount` параметров, соответственно. `dwInitial`должно быть в диапазоне от нуля и `dwMax`включительно. `dwMax`должно быть больше нуля.  
+ `CreateSemaphore` функция зеркал Win32, которая имеет то же имя. `dwInitial` И `dwMax` параметров служит ту же семантику для счетчика семафора Win32 `lInitialCount` и `lMaximumCount` параметров, соответственно. `dwInitial` должно быть в диапазоне от нуля и `dwMax`включительно. `dwMax` Должно быть больше нуля.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
@@ -80,7 +68,7 @@ HRESULT CreateSemaphore (
   
  **Библиотека:** включена как ресурс в MSCorEE.dll  
   
- **Версии платформы .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Версии платформы .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>См. также  
  [Интерфейс ICLRSyncManager](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-interface.md)  

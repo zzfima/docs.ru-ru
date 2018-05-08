@@ -1,9 +1,6 @@
 ---
-title: "Список типов (Visual Basic)"
+title: Список типов (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - StructureConstraint
 - vb.StructureConstraint
@@ -27,14 +24,11 @@ helpviewer_keywords:
 - type parameters
 - constraints, Class keyword
 ms.assetid: 56db947a-2ae8-40f2-a70a-960764e9d0db
-caps.latest.revision: "33"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 35e72414b236615dc230b654ccfeed290841fb31
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 5fbb07154fce27feb257b431c1726446b42fbfe0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="type-list-visual-basic"></a>Список типов (Visual Basic)
 Указывает *параметры типа* для *универсального* программный элемент. Несколько параметров разделяются запятыми. Ниже приведен синтаксис для одного параметра типа.  
@@ -49,9 +43,9 @@ ms.lasthandoff: 11/21/2017
   
 |Термин|Определение|  
 |---|---|  
-|`genericmodifier`|Необязательно. Можно использовать только в универсальных интерфейсах и делегатах. Можно объявить тип ковариантного с помощью [Out](../../../visual-basic/language-reference/modifiers/out-generic-modifier.md) ключевое слово или контравариантные с помощью [в](../../../visual-basic/language-reference/modifiers/in-generic-modifier.md) ключевое слово. См. раздел [Ковариация и контрвариация](../../programming-guide/concepts/covariance-contravariance/index.md).|  
-|`typename`|Обязательный. Имя параметра типа. Это заполнитель, должен быть заменен на определенный тип, предоставляемый соответствующий аргумент типа.|  
-|`constraintlist`|Необязательно. Список требований, ограничивающих тип данных, который может быть задан для `typename`. Если имеется несколько ограничений, заключайте их в фигурных скобках (`{ }`) и разделяйте их запятыми. Необходимо ввести список ограничений с [как](../../../visual-basic/language-reference/statements/as-clause.md) ключевое слово. Вы используете `As` только один раз в начале списка.|  
+|`genericmodifier`|Необязательный. Можно использовать только в универсальных интерфейсах и делегатах. Можно объявить тип ковариантного с помощью [Out](../../../visual-basic/language-reference/modifiers/out-generic-modifier.md) ключевое слово или контравариантные с помощью [в](../../../visual-basic/language-reference/modifiers/in-generic-modifier.md) ключевое слово. См. раздел [Ковариация и контрвариация](../../programming-guide/concepts/covariance-contravariance/index.md).|  
+|`typename`|Обязательно. Имя параметра типа. Это заполнитель, должен быть заменен на определенный тип, предоставляемый соответствующий аргумент типа.|  
+|`constraintlist`|Необязательный. Список требований, ограничивающих тип данных, который может быть задан для `typename`. Если имеется несколько ограничений, заключайте их в фигурных скобках (`{ }`) и разделяйте их запятыми. Необходимо ввести список ограничений с [как](../../../visual-basic/language-reference/statements/as-clause.md) ключевое слово. Вы используете `As` только один раз в начале списка.|  
   
 ## <a name="remarks"></a>Примечания  
  Каждый стандартный программный элемент должен принимать хотя бы один параметр типа. Параметр типа является заполнителем для определенного типа ( *построенному элементу*), в коде клиента указывается при создании экземпляра универсального типа. Можно определить универсальный класс, структура, интерфейс, процедуру или делегат.  

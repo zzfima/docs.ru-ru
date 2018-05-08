@@ -1,13 +1,6 @@
 ---
-title: "Масштабирование элемента управления DataGridView в Windows Forms"
-ms.custom: 
+title: Масштабирование элемента управления DataGridView в Windows Forms
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - DataGridView control [Windows Forms], row sharing
 - data grids [Windows Forms], best practices
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - best practices [Windows Forms], dataGridView control
 - DataGridView control [Windows Forms], scaling
 ms.assetid: 8321a8a6-6340-4fd1-b475-fa090b905aaf
-caps.latest.revision: "31"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ecd629bd38e08c8d6909ee4ad771f17b1554fc80
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 91153df539871de571375d7bf6d49d712a0c43b2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="best-practices-for-scaling-the-windows-forms-datagridview-control"></a>Масштабирование элемента управления DataGridView в Windows Forms
 <xref:System.Windows.Forms.DataGridView> Управления предназначен для обеспечения максимальной масштабируемости. Если требуется для отображения больших объемов данных, необходимо следовать инструкциям, описанным в этом разделе, чтобы избежать использования больших объемов памяти и снижения скорости реагирования пользовательского интерфейса (UI). В этом разделе обсуждаются следующие вопросы:  
@@ -124,7 +112,7 @@ ms.lasthandoff: 12/22/2017
   
  Чтобы предотвратить строк строкам, следуйте приведенным ниже рекомендациям:  
   
--   Следует избегать индексирования <xref:System.Windows.Forms.DataGridView.Rows%2A> коллекции или ее перебора с `foreach` цикла. Не потребуется обычно прямой доступ к строкам. <xref:System.Windows.Forms.DataGridView>методы, которые работают в строках принимают аргументы строки индекса, а не экземпляру строки. Кроме того обработчики событий, связанных со строками принимают аргумент объекты со свойствами строк, которые можно использовать для операций со строками, избегая их к строкам.  
+-   Следует избегать индексирования <xref:System.Windows.Forms.DataGridView.Rows%2A> коллекции или ее перебора с `foreach` цикла. Не потребуется обычно прямой доступ к строкам. <xref:System.Windows.Forms.DataGridView> методы, которые работают в строках принимают аргументы строки индекса, а не экземпляру строки. Кроме того обработчики событий, связанных со строками принимают аргумент объекты со свойствами строк, которые можно использовать для операций со строками, избегая их к строкам.  
   
 -   Если необходимо получить доступ к объекту строки, используйте <xref:System.Windows.Forms.DataGridViewRowCollection.SharedRow%2A?displayProperty=nameWithType> метод и передайте ему фактический индекс строки. Обратите внимание, что для изменения объекта совместно используемой строки, полученные таким способом изменить все строки, которые совместно используют этот объект. Строку для новых записей не используется совместно с другими строками, тем не менее, так он не будут затронуты при изменении любых других строк. Обратите внимание, что различные строки, представленные совместно используемой строки могут иметь разные контекстные меню. Чтобы получить правильный контекстное меню из экземпляра общей строки, используйте <xref:System.Windows.Forms.DataGridViewRow.GetContextMenuStrip%2A> метод и передайте ему фактический индекс строки. Если доступ к совместно используемой строки <xref:System.Windows.Forms.DataGridViewRow.ContextMenuStrip%2A> свойство вместо этого он будет использовать индекс совместно используемой строки-1 и не получает правильные контекстное меню.  
   

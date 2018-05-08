@@ -1,14 +1,6 @@
 ---
-title: "Метод IHostSyncManager::CreateMonitorEvent"
-ms.custom: 
+title: Метод IHostSyncManager::CreateMonitorEvent
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IHostSyncManager.CreateMonitorEvent
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 524c7fd3-9b5c-46e7-99ba-555fd2fe33f0
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: ae12db71f4eae0f7d887fda26e05401f4f23ee5c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1d7cff23fc0b58d316ce19950a982249e84b79ec
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ihostsyncmanagercreatemonitorevent-method"></a>Метод IHostSyncManager::CreateMonitorEvent
 Создает объект, отслеживаемый события автоматического сброса.  
@@ -58,7 +46,7 @@ HRESULT CreateMonitorEvent (
   
 |HRESULT|Описание|  
 |-------------|-----------------|  
-|S_OK|`CreateMonitorEvent`успешно возвращен.|  
+|S_OK|`CreateMonitorEvent` успешно возвращен.|  
 |ЗНАЧЕНИЕ HOST_E_CLRNOTAVAILABLE|Общеязыковая среда выполнения (CLR) не был загружен в процесс или находится в состоянии, в котором не может выполнять управляемый код или успешно обработать вызов.|  
 |HOST_E_TIMEOUT|Истекло время ожидания вызова.|  
 |HOST_E_NOT_OWNER|Вызывающий объект не является владельцем блокировки.|  
@@ -67,7 +55,7 @@ HRESULT CreateMonitorEvent (
 |E_OUTOFMEMORY|Не хватает памяти была доступна для создания запрошенного объекта события.|  
   
 ## <a name="remarks"></a>Примечания  
- `CreateMonitorEvent`Возвращает `IHostAutoEvent` , среда CLR использует в своей реализации управляемый <xref:System.Threading.Monitor?displayProperty=nameWithType> типа. Этот метод получает зеркально Win32 `CreateEvent` функции со значением `false` указано `bManualReset` параметра.  
+ `CreateMonitorEvent` Возвращает `IHostAutoEvent` , среда CLR использует в своей реализации управляемый <xref:System.Threading.Monitor?displayProperty=nameWithType> типа. Этот метод получает зеркально Win32 `CreateEvent` функции со значением `false` указано `bManualReset` параметра.  
   
  Узел может использовать куки-файл, чтобы определить, какие задача ожидает монитор, вызвав [ICLRSyncManager::GetMonitorOwner](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-getmonitorowner-method.md) метод.  
   
@@ -78,7 +66,7 @@ HRESULT CreateMonitorEvent (
   
  **Библиотека:** включена как ресурс в MSCorEE.dll  
   
- **Версии платформы .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Версии платформы .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>См. также  
  [Интерфейс ICLRSyncManager](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-interface.md)  

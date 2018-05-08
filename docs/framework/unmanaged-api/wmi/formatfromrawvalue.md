@@ -1,11 +1,7 @@
 ---
-title: "Функция FormatFromRawValue (Справочник по неуправляемым API)"
-description: "Функция FormatFromRawValue преобразует необработанные данные производительности в указанный формат."
+title: Функция FormatFromRawValue (Справочник по неуправляемым API)
+description: Функция FormatFromRawValue преобразует необработанные данные производительности в указанный формат.
 ms.date: 11/21/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - FormatFromRawValue
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 3daa89ec0b40bb9c08898ecd682f05f0f0ce09a8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e0710b26237b350f1dfbc7d2464b7a131373604e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="formatfromrawvalue-function"></a>Функция FormatFromRawValue
 Преобразует одно значение данных оценки производительности в указанный формат или два значения данных для оценки производительности, если преобразование формата выполняется на основе времени.   
@@ -50,12 +43,12 @@ int FormatFromRawValue (
 ## <a name="parameters"></a>Параметры
 
 `dwCounterType`  
-[in] Тип счетчика. Список типов счетчиков см. в разделе [типы счетчиков производительности WMI](https://msdn.microsoft.com/library/aa394569(v=vs.85).aspx). `dwCounterType`может иметь любой тип счетчика, за исключением `PERF_LARGE_RAW_FRACTION` и `PERF_LARGE_RAW_BASE`. 
+[in] Тип счетчика. Список типов счетчиков см. в разделе [типы счетчиков производительности WMI](https://msdn.microsoft.com/library/aa394569(v=vs.85).aspx). `dwCounterType` может иметь любой тип счетчика, за исключением `PERF_LARGE_RAW_FRACTION` и `PERF_LARGE_RAW_BASE`. 
 
 `dwFormat`  
 [in] Формат, в который требуется преобразовать необработанные данные производительности. Он может принимать одно из следующих значений:
 
-|Константа  |Значение  |Описание: |
+|Константа  |Значение  |Описание |
 |---------|---------|---------|
 | `PDH_FMT_DOUBLE` |0x00000200 | Возвращает вычисленное значение как значение с плавающей запятой двойной точности. | 
 | `PDH_FMT_LARGE` | 0x00000400 | Возвращает вычисленное значение как 64-разрядное целое число. |
@@ -63,7 +56,7 @@ int FormatFromRawValue (
 
 Одно из предыдущих значений можно связать логическим с одним из следующих флагов масштабирования:
 
-|Константа  |Значение  |Описание: |
+|Константа  |Значение  |Описание |
 |---------|---------|---------|
 | `PDH_FMT_NOSCALE` | 0x00001000 | Коэффициенты масштабирования счетчика не применяются. |
 | `PDH_FMT_1000` | 0x00002000 | Умножьте окончательное значение 1000. | 
@@ -71,11 +64,11 @@ int FormatFromRawValue (
 `pTimeBase`  
 [in] Указатель на базовое время, если это необходимо для преобразования формата. Если базовые сведения о времени не является обязательной для преобразования формата, значение этого параметра учитывается.
 
-`pRawValue1`[in] Указатель на [ `PDH_RAW_COUNTER` ](https://msdn.microsoft.com/library/windows/desktop/aa373060(v=vs.85).aspx) структуру, которая представляет значение оценки производительности.
+`pRawValue1` [in] Указатель на [ `PDH_RAW_COUNTER` ](https://msdn.microsoft.com/library/windows/desktop/aa373060(v=vs.85).aspx) структуру, которая представляет значение оценки производительности.
 
-`pRawValue2`[in] Указатель на [ `PDH_RAW_COUNTER` ](https://msdn.microsoft.com/library/windows/desktop/aa373060(v=vs.85).aspx) структуру, которая представляет значение секунд оценки производительности. Если второе значение оценки производительности не является обязательной, этот параметр должен быть `null`.
+`pRawValue2` [in] Указатель на [ `PDH_RAW_COUNTER` ](https://msdn.microsoft.com/library/windows/desktop/aa373060(v=vs.85).aspx) структуру, которая представляет значение секунд оценки производительности. Если второе значение оценки производительности не является обязательной, этот параметр должен быть `null`.
 
-`pFmtValue`[out] Указатель на [ `PDH_FMT_COUNTERVALUE` ](https://msdn.microsoft.com/library/windows/desktop/aa373050(v=vs.85).aspx) структуру, которая получает значение форматированные производительности.
+`pFmtValue` [out] Указатель на [ `PDH_FMT_COUNTERVALUE` ](https://msdn.microsoft.com/library/windows/desktop/aa373050(v=vs.85).aspx) структуру, которая получает значение форматированные производительности.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
@@ -96,7 +89,7 @@ int FormatFromRawValue (
   
  **Библиотека:** PerfCounter.dll  
   
- **Версии платформы .NET framework:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Версии платформы .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>См. также  
 [WMI и счетчиков производительности (Справочник по неуправляемым API)](index.md)

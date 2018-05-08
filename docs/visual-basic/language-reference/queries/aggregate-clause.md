@@ -1,11 +1,6 @@
 ---
-title: "Предложение Aggregate (Visual Basic)"
+title: Предложение Aggregate (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.QueryAggregateIn
 - vb.QueryAggregate
@@ -15,14 +10,11 @@ helpviewer_keywords:
 - Aggregate statement [Visual Basic]
 - queries [Visual Basic], Aggregate
 ms.assetid: 1315a814-5db6-4077-b34b-b141e11cc0eb
-caps.latest.revision: "25"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 47017414a92bfbca0df4ce6e2b70398a01762d37
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 1db4b7fdcf9c8a38c2c49eca9d874eccea90ab1d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="aggregate-clause-visual-basic"></a>Предложение Aggregate (Visual Basic)
 Применяет один или несколько агрегатных функций к коллекции.  
@@ -40,11 +32,11 @@ Aggregate element [As type] In collection _
   
 |Термин|Определение|  
 |---|---|  
-|`element`|Обязательный. Переменная, используемая для итерации элементов коллекции.|  
-|`type`|Необязательно. Тип параметра `element`. Если тип не указан, тип `element` выводится из `collection`.|  
-|`collection`|Обязательный. Ссылается на коллекцию для работы.|  
-|`clause`|Необязательно. Один или несколько запросов предложений, например `Where` предложение для уточнения результатов запроса, применяется предложение aggregate или предложения.|  
-|`expressionList`|Обязательный. Один или несколько разделенных запятыми выражения, определяющие агрегатную функцию, применяемую к коллекции. Можно применить псевдоним агрегатной функции, чтобы указать имя члена для результата запроса. Если псевдоним не указан, используется имя агрегатной функции. Примеры см. в разделе агрегатных функций далее в этом разделе.|  
+|`element`|Обязательно. Переменная, используемая для итерации элементов коллекции.|  
+|`type`|Необязательный. Тип параметра `element`. Если тип не указан, тип `element` выводится из `collection`.|  
+|`collection`|Обязательно. Ссылается на коллекцию для работы.|  
+|`clause`|Необязательный. Один или несколько запросов предложений, например `Where` предложение для уточнения результатов запроса, применяется предложение aggregate или предложения.|  
+|`expressionList`|Обязательно. Один или несколько разделенных запятыми выражения, определяющие агрегатную функцию, применяемую к коллекции. Можно применить псевдоним агрегатной функции, чтобы указать имя члена для результата запроса. Если псевдоним не указан, используется имя агрегатной функции. Примеры см. в разделе агрегатных функций далее в этом разделе.|  
   
 ## <a name="remarks"></a>Примечания  
  `Aggregate` Предложение может использоваться для включения агрегатных функций в запросах. Агрегатные функции выполняют проверку и вычисление по набору значений и возвращают одиночное значение. Вычисляемое значение доступны с помощью члена типа результата запроса. Стандартные статистические функции, которые можно использовать, `All`, `Any`, `Average`, `Count`, `LongCount`, `Max`, `Min`, и `Sum` функции. Эти функции являются знакомый разработчикам, знакомым с статистических функций в SQL. Они описаны в следующем разделе этой статьи.  
@@ -58,15 +50,15 @@ Aggregate element [As type] In collection _
   
 |Функция|Описание|  
 |---|---|  
-|`All`|Возвращает `true` все ли элементы в коллекции удовлетворяют указанному условию; в противном случае возвращает `false`. Ниже представлен пример:<br /><br /> [!code-vb[VbSimpleQuerySamples#5](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/aggregate-clause_1.vb)]|  
-|`Any`|Возвращает `true` , если любой элемент в коллекции удовлетворяет указанному условию; в противном случае возвращает `false`. Ниже представлен пример:<br /><br /> [!code-vb[VbSimpleQuerySamples#6](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/aggregate-clause_2.vb)]|  
-|`Average`|Вычисляет среднее значение всех элементов в коллекции или указанное выражение для всех элементов в коллекции. Ниже представлен пример:<br /><br /> [!code-vb[VbSimpleQuerySamples#7](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/aggregate-clause_3.vb)]|  
-|`Count`|Подсчитывает количество элементов в коллекции. Можно указать необязательное `Boolean` выражение для подсчета числа элементов в коллекции, которые удовлетворяют условию. Ниже представлен пример:<br /><br /> [!code-vb[VbSimpleQuerySamples#8](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/aggregate-clause_4.vb)]|  
+|`All`|Возвращает `true` все ли элементы в коллекции удовлетворяют указанному условию; в противном случае возвращает `false`. Ниже представлен пример.<br /><br /> [!code-vb[VbSimpleQuerySamples#5](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/aggregate-clause_1.vb)]|  
+|`Any`|Возвращает `true` , если любой элемент в коллекции удовлетворяет указанному условию; в противном случае возвращает `false`. Ниже представлен пример.<br /><br /> [!code-vb[VbSimpleQuerySamples#6](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/aggregate-clause_2.vb)]|  
+|`Average`|Вычисляет среднее значение всех элементов в коллекции или указанное выражение для всех элементов в коллекции. Ниже представлен пример.<br /><br /> [!code-vb[VbSimpleQuerySamples#7](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/aggregate-clause_3.vb)]|  
+|`Count`|Подсчитывает количество элементов в коллекции. Можно указать необязательное `Boolean` выражение для подсчета числа элементов в коллекции, которые удовлетворяют условию. Ниже представлен пример.<br /><br /> [!code-vb[VbSimpleQuerySamples#8](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/aggregate-clause_4.vb)]|  
 |`Group`|Ссылается на результаты запроса, сгруппированные в результате использования `Group By` или `Group Join` предложения. `Group` Функция допустима только в `Into` предложения `Group By` или `Group Join` предложения. Дополнительные сведения и примеры см. в разделе [предложение Group](../../../visual-basic/language-reference/queries/group-by-clause.md) и [предложения Join группы](../../../visual-basic/language-reference/queries/group-join-clause.md).|  
 |`LongCount`|Подсчитывает количество элементов в коллекции. Можно указать необязательное `Boolean` выражение для подсчета числа элементов в коллекции, которые удовлетворяют условию. Возвращает результат в виде `Long`. Пример см. в разделе `Count` агрегатной функции.|  
-|`Max`|Вычисляет максимальное значение из коллекции или указанное выражение для всех элементов в коллекции. Ниже представлен пример:<br /><br /> [!code-vb[VbSimpleQuerySamples#9](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/aggregate-clause_5.vb)]|  
-|`Min`|Вычисляет минимальное значение из коллекции или указанное выражение для всех элементов в коллекции. Ниже представлен пример:<br /><br /> [!code-vb[VbSimpleQuerySamples#10](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/aggregate-clause_6.vb)]|  
-|`Sum`|Вычисляет сумму всех элементов в коллекции или указанное выражение для всех элементов в коллекции. Ниже представлен пример:<br /><br /> [!code-vb[VbSimpleQuerySamples#15](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/aggregate-clause_7.vb)]|  
+|`Max`|Вычисляет максимальное значение из коллекции или указанное выражение для всех элементов в коллекции. Ниже представлен пример.<br /><br /> [!code-vb[VbSimpleQuerySamples#9](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/aggregate-clause_5.vb)]|  
+|`Min`|Вычисляет минимальное значение из коллекции или указанное выражение для всех элементов в коллекции. Ниже представлен пример.<br /><br /> [!code-vb[VbSimpleQuerySamples#10](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/aggregate-clause_6.vb)]|  
+|`Sum`|Вычисляет сумму всех элементов в коллекции или указанное выражение для всех элементов в коллекции. Ниже представлен пример.<br /><br /> [!code-vb[VbSimpleQuerySamples#15](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/aggregate-clause_7.vb)]|  
   
 ## <a name="example"></a>Пример  
  В следующем примере кода показано, как использовать `Aggregate` предложение для применения статистических функций к результатам запроса.  

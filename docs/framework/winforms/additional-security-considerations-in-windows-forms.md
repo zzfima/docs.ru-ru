@@ -1,29 +1,17 @@
 ---
-title: "Дополнительные вопросы безопасности в формах Windows Forms"
-ms.custom: 
+title: Дополнительные вопросы безопасности в формах Windows Forms
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Windows Forms, secure calls to Windows API
 - security [Windows Forms]
 - security [Windows Forms], calling APIs
 - Clipboard [Windows Forms], securing access
 ms.assetid: 15abda8b-0527-47c7-aedb-77ab595f2bf1
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 5c86374066cea2926b0ac4510afbc17749182fea
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: a1d8606eb972a6e3bea52f6230cb893a4bbb5aac
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="additional-security-considerations-in-windows-forms"></a>Дополнительные вопросы безопасности в формах Windows Forms
 Приложение может работать по-разному в среде с частичным доверием и на локальном компьютере из-за параметров безопасности [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] ограничивает доступ, помимо прочего, к таким важным локальным ресурсам, как файловая система, сеть и неуправляемые API. Параметры безопасности влияют на возможность вызова интерфейса Microsoft Win32 API или других интерфейсов API, которые не могут быть проверены системой безопасности. Безопасность также влияет на другие аспекты приложения, включая доступ к файлам и данным, и вывод на печать. Дополнительные сведения о доступе к файлам и данным в среде с частичным доверием см. в разделе [Более безопасный доступ к файлам и данным в Windows Forms](../../../docs/framework/winforms/more-secure-file-and-data-access-in-windows-forms.md). Дополнительные сведения о выводе на печать в среде с частичным доверием см. в разделе [Более безопасная печать в Windows Forms](../../../docs/framework/winforms/more-secure-printing-in-windows-forms.md).  
@@ -33,7 +21,7 @@ ms.lasthandoff: 01/19/2018
 ## <a name="clipboard-access"></a>Доступ к буферу обмена  
  <xref:System.Security.Permissions.UIPermission> Класс управляет доступом к буфера обмена, а также <xref:System.Security.Permissions.UIPermissionClipboard> значение перечисления указывает уровень доступа. В следующей таблице приведены возможные уровни разрешения.  
   
-|Значение UIPermissionClipboard|Описание:|  
+|Значение UIPermissionClipboard|Описание|  
 |---------------------------------|-----------------|  
 |<xref:System.Security.Permissions.UIPermissionClipboard.AllClipboard>|Буфер обмена можно использовать без ограничений.|  
 |<xref:System.Security.Permissions.UIPermissionClipboard.OwnClipboard>|Буфер обмена можно использовать с некоторыми ограничениями. Возможность размещения данных в буфере обмена (операции с командами копирования и вырезания) не ограничена. Встроенные элементы управления, которые принимают операцию вставки, например текстовое поле, могут принимать данные из буфера обмена, но пользовательские элементы управления не могут программно считывать данные из буфера обмена.|  
@@ -46,7 +34,7 @@ ms.lasthandoff: 01/19/2018
   
  По умолчанию зона локальной интрасети получает <xref:System.Security.Permissions.UIPermissionWindow.AllWindows> доступа и зона Интернета получает <xref:System.Security.Permissions.UIPermissionWindow.SafeTopLevelWindows> доступа. Это означает, что в зоне Интернета приложение может выполнять большинство операций с окнами и пользовательским интерфейсом, но внешний вид окна будет изменяться. В измененном окне при первом запуске отображается всплывающее уведомление. В таком окне также изменен заголовок, а в строке заголовка должна быть кнопка "Закрыть". Всплывающее уведомление и строка заголовка информируют пользователя приложения о том, что данное приложение выполняется в режиме частичного доверия.  
   
-|Значение UIPermissionWindow|Описание:|  
+|Значение UIPermissionWindow|Описание|  
 |------------------------------|-----------------|  
 |<xref:System.Security.Permissions.UIPermissionWindow.AllWindows>|Пользователи могут использовать все окна и события пользовательского ввода без каких-либо ограничений.|  
 |<xref:System.Security.Permissions.UIPermissionWindow.SafeTopLevelWindows>|Пользователи могут использовать для рисования только более безопасные окна верхнего уровня и дочерние окна, а также события пользовательского ввода для пользовательского интерфейса в таких окнах и дочерних окнах. Такие более безопасные окна имеют специальные метки, а также ограничения на минимальный и максимальный размер. Эти ограничения предотвращают атаки спуфинга потенциально опасной, такие как имитация экрана входа в систему или рабочего стола системы и не программный доступ к родительским windows API, связанные с фокусом и использование <xref:System.Windows.Forms.ToolTip> элемента управления|  
@@ -55,7 +43,7 @@ ms.lasthandoff: 01/19/2018
   
  Каждый уровень разрешений, определенный <xref:System.Security.Permissions.UIPermissionWindow> перечисления позволяет меньше действий, чем предыдущий уровень. В следующих таблицах содержатся действия, которые ограничены <xref:System.Security.Permissions.UIPermissionWindow.SafeTopLevelWindows> и <xref:System.Security.Permissions.UIPermissionWindow.SafeSubWindows> значения. Точные разрешения, необходимые для каждого члена, представлены в справочном разделе для этого члена в документации по библиотеке классов .NET Framework.  
   
- <xref:System.Security.Permissions.UIPermissionWindow.SafeTopLevelWindows>разрешение ограничивает действия, приведенные в следующей таблице.  
+ <xref:System.Security.Permissions.UIPermissionWindow.SafeTopLevelWindows> разрешение ограничивает действия, приведенные в следующей таблице.  
   
 |Компонент|Ограниченные действия|  
 |---------------|------------------------|  
@@ -87,11 +75,11 @@ ms.lasthandoff: 01/19/2018
   
 |Компонент|Член|  
 |---------------|------------|  
-|<xref:System.Windows.Forms.Application>|Метод -   <xref:System.Windows.Forms.Application.AddMessageFilter%2A><br />-   <xref:System.Windows.Forms.Application.CurrentInputLanguage%2A>Свойство<br />Метод -   `Exit`<br />Метод -   <xref:System.Windows.Forms.Application.ExitThread%2A><br />-   <xref:System.Windows.Forms.Application.ThreadException>событие|  
+|<xref:System.Windows.Forms.Application>|Метод -   <xref:System.Windows.Forms.Application.AddMessageFilter%2A><br />-   <xref:System.Windows.Forms.Application.CurrentInputLanguage%2A> Свойство<br />Метод -   `Exit`<br />Метод -   <xref:System.Windows.Forms.Application.ExitThread%2A><br />-   <xref:System.Windows.Forms.Application.ThreadException> Событие|  
 |<xref:System.Windows.Forms.CommonDialog>|Метод -   <xref:System.Windows.Forms.CommonDialog.HookProc%2A><br />-   <xref:System.Windows.Forms.CommonDialog.OwnerWndProc%2A>\ метод<br />Метод -   <xref:System.Windows.Forms.CommonDialog.Reset%2A><br />Метод -   <xref:System.Windows.Forms.CommonDialog.RunDialog%2A>|  
 |<xref:System.Windows.Forms.Control>|Метод -   <xref:System.Windows.Forms.Control.CreateParams%2A><br />Метод -   <xref:System.Windows.Forms.Control.DefWndProc%2A><br />Метод -   <xref:System.Windows.Forms.Control.DestroyHandle%2A><br />Метод -   <xref:System.Windows.Forms.Control.WndProc%2A>|  
-|<xref:System.Windows.Forms.Help>|-   <xref:System.Windows.Forms.Help.ShowHelp%2A>методы<br />Метод -   <xref:System.Windows.Forms.Help.ShowHelpIndex%2A>|  
-|<xref:System.Windows.Forms.NativeWindow>|-   <xref:System.Windows.Forms.NativeWindow>класс|  
+|<xref:System.Windows.Forms.Help>|-   <xref:System.Windows.Forms.Help.ShowHelp%2A> Методы<br />Метод -   <xref:System.Windows.Forms.Help.ShowHelpIndex%2A>|  
+|<xref:System.Windows.Forms.NativeWindow>|-   <xref:System.Windows.Forms.NativeWindow> Класс|  
 |<xref:System.Windows.Forms.Screen>|Метод -   <xref:System.Windows.Forms.Screen.FromHandle%2A>|  
 |<xref:System.Windows.Forms.SendKeys>|Метод -   <xref:System.Windows.Forms.SendKeys.Send%2A><br />Метод -   <xref:System.Windows.Forms.SendKeys.SendWait%2A>|  
   
