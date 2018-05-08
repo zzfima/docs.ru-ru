@@ -1,25 +1,15 @@
 ---
 title: Делегаты (Visual Basic)
-ms.custom: ''
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - delegates [Visual Basic]
 - Visual Basic code, delegates
 ms.assetid: 410b60dc-5e60-4ec0-bfae-426755a2ee28
-caps.latest.revision: 10
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 6c83667534dcf69ea0ec1106bb3a02d2c9accd87
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 99fe0eee194fae21615652c9426bf6027fbf4354
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="delegates-visual-basic"></a>Делегаты (Visual Basic)
 Делегаты являются объектами, которые ссылаются на методы. Иногда их описывают как *типобезопасные указатели функций*, поскольку они похожи на указатели функций, используемые в других языках программирования. Но в отличие от указателей функций делегаты Visual Basic — это ссылочный тип, на основе класса <xref:System.Delegate?displayProperty=nameWithType>. Делегаты могут ссылаться на оба вида общих методов — на методы, которые могут вызываться без определенного экземпляра класса, и на методы экземпляра.  

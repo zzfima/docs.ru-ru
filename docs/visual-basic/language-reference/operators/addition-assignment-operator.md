@@ -1,12 +1,6 @@
 ---
 title: Оператор += (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.+=
 helpviewer_keywords:
@@ -16,14 +10,11 @@ helpviewer_keywords:
 - += operator [Visual Basic], appending strings
 - compound assignment statements [Visual Basic]
 ms.assetid: d3e959f4-85d4-4e47-87c4-77b62335a5b3
-caps.latest.revision: 16
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 4ac8f5679aa90c50c15c33a957cfc75d9ccecde6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: f12a0560d984f871110c02f1df2c2ec42b68809b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="-operator-visual-basic"></a>Оператор += (Visual Basic)
 Добавляет значение числового выражения к значению числовой переменной или свойства и присваивает результат переменной или свойству. Можно также использовать для объединения `String` выражение `String` переменной или свойства и присвоить его результат переменной или свойству.  
@@ -36,10 +27,10 @@ variableorproperty += expression
   
 ## <a name="parts"></a>Части  
  `variableorproperty`  
- Обязательный. Любые числовые или `String` переменной или свойству.  
+ Обязательно. Любые числовые или `String` переменной или свойству.  
   
  `expression`  
- Обязательный. Любые числовые или `String` выражение.  
+ Обязательно. Любые числовые или `String` выражение.  
   
 ## <a name="remarks"></a>Примечания  
  Элемент, на левой стороне `+=` оператор может быть простой скалярной переменной, свойством или элемент массива. Переменная или свойство не может быть [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md).  

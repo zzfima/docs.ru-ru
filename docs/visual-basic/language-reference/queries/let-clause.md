@@ -1,12 +1,6 @@
 ---
 title: Предложение Let (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.QueryLet
 helpviewer_keywords:
@@ -14,14 +8,11 @@ helpviewer_keywords:
 - Let clause [Visual Basic]
 - Let statement [Visual Basic]
 ms.assetid: 981aa516-16eb-4c53-b1f1-5aa3e82f316e
-caps.latest.revision: 16
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 70e47517a62f58dcababd31c26277417b62eab66
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 6484da5329c8240735b7c35f506637dd01cbeda4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="let-clause-visual-basic"></a>Предложение Let (Visual Basic)
 Вычисляет значение и присваивает его новой переменной в запросе.  
@@ -36,8 +27,8 @@ Let variable = expression [, ...]
   
 |Термин|Определение|  
 |---|---|  
-|`variable`|Обязательный. Псевдоним, который может использоваться для ссылки на результаты предоставленного выражения.|  
-|`expression`|Обязательный. Выражение, оценивается и назначен переменной.|  
+|`variable`|Обязательно. Псевдоним, который может использоваться для ссылки на результаты предоставленного выражения.|  
+|`expression`|Обязательно. Выражение, оценивается и назначен переменной.|  
   
 ## <a name="remarks"></a>Примечания  
  `Let` Предложение позволяет вычислить значения для каждого результата запроса и ссылаться на них с помощью псевдонима. Псевдоним может использоваться в других предложениях, таких как `Where` предложения. `Let` Предложение позволяет создавать инструкции запроса, который является более удобным для чтения, поскольку можно указать псевдоним для условия выражения, включенного в запрос и заменять этот псевдоним при каждом условия выражения.  

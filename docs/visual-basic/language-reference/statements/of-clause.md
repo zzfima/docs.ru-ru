@@ -1,11 +1,6 @@
 ---
-title: "Предложение Of (Visual Basic)"
+title: Предложение Of (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - Of
 - vb.Of
@@ -22,14 +17,11 @@ helpviewer_keywords:
 - type parameters
 - data type arguments
 ms.assetid: 0db8f65c-65af-4089-ab7f-6fcfecb60444
-caps.latest.revision: "17"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 5ef3ac4ac88727b1dcae50fa14abde03f29a16fb
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 9ace0ad55d9eb1618dbdafb0d49d1ff4b169a877
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="of-clause-visual-basic"></a>Предложение Of (Visual Basic)
 Представляет `Of` предложение, которое идентифицирует *параметр типа* на *универсального* класса, структуры, интерфейса, делегата или процедуры. Сведения об универсальных типах см. в разделе [универсальных типов в Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md).  
@@ -51,7 +43,7 @@ End Class
   
  Если выполнить предыдущий определение класса, можно создать различные `dictionary` классы из него. Типы, которые вводятся `entryType` и `keyType` определить класс содержит тип и тип ключа, связываемого с каждой записи. Из-за ограничений, необходимо указать `keyType` тип, реализующий <xref:System.IComparable>.  
   
- В следующем примере кода создается объект, который содержит `String` записей и связывает `Integer` ключа с каждой из них. `Integer`реализует <xref:System.IComparable> и поэтому удовлетворяет ограничению на `keyType`.  
+ В следующем примере кода создается объект, который содержит `String` записей и связывает `Integer` ключа с каждой из них. `Integer` реализует <xref:System.IComparable> и поэтому удовлетворяет ограничению на `keyType`.  
   
 ```  
 Dim d As New dictionary(Of String, Integer)  

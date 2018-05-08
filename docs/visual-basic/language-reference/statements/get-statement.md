@@ -1,12 +1,6 @@
 ---
 title: Оператор Get
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Get
 helpviewer_keywords:
@@ -17,14 +11,11 @@ helpviewer_keywords:
 - Get keyword [Visual Basic]
 - property procedures [Visual Basic], Get statements
 ms.assetid: 56b05cdc-bd64-4dfd-bb12-824eacec6f94
-caps.latest.revision: 19
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: c1ff062a5e3bf41794bd5b4c90f1e188d6d97480
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: d6a6fdfd191de76871619dea3bd1794b487698aa
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="get-statement"></a>Оператор Get
 Объявляет `Get` процедуру, которая используется для извлечения значения свойства.  
@@ -41,10 +32,10 @@ End Get
   
 |Термин|Определение|  
 |---|---|  
-|`attributelist`|Необязательно. В разделе [список атрибутов](../../../visual-basic/language-reference/statements/attribute-list.md).|  
+|`attributelist`|Необязательный. В разделе [список атрибутов](../../../visual-basic/language-reference/statements/attribute-list.md).|  
 |`accessmodifier`|Необязательный на более одного `Get` и `Set` инструкции в этом свойстве. Ниже указаны доступные значения.<br /><br /> -   [Защищенные](../../../visual-basic/language-reference/modifiers/protected.md)<br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)<br />-   [Закрытый](../../../visual-basic/language-reference/modifiers/private.md)<br />-   `Protected Friend`<br /><br /> В разделе [уровни в Visual Basic доступа](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).|  
-|`statements`|Необязательно. Один или несколько операторов, выполняемых при `Get` вызывается процедура свойства.|  
-|`End Get`|Обязательный. Завершает определение `Get` процедуры свойства.|  
+|`statements`|Необязательный. Один или несколько операторов, выполняемых при `Get` вызывается процедура свойства.|  
+|`End Get`|Обязательно. Завершает определение `Get` процедуры свойства.|  
   
 ## <a name="remarks"></a>Примечания  
  Каждое свойство должно иметь `Get` процедуры свойства, если свойство помечено как `WriteOnly`. `Get` Процедура используется для возврата текущего значения свойства.  
@@ -69,7 +60,7 @@ End Get
   
 -   **Возвращение из процедуры.** Когда `Get` процедура возвращает в вызывающий код, выполнение продолжается в операторе, запрошенное значение свойства.  
   
-     `Get`процедуры свойств может возвращать значение с помощью [оператор Return](../../../visual-basic/language-reference/statements/return-statement.md) , или присвоить возвращаемое значение имени свойства. Дополнительные сведения см. в разделе «Возвращение значения» в [Function, инструкция](../../../visual-basic/language-reference/statements/function-statement.md).  
+     `Get` процедуры свойств может возвращать значение с помощью [оператор Return](../../../visual-basic/language-reference/statements/return-statement.md) , или присвоить возвращаемое значение имени свойства. Дополнительные сведения см. в разделе «Возвращение значения» в [Function, инструкция](../../../visual-basic/language-reference/statements/function-statement.md).  
   
      `Exit Property` И `Return` инструкции вызывают Немедленный выход из процедуры свойства. Любое количество `Exit Property` и `Return` операторы могут использоваться в любом месте в процедуре, и могут быть использованы смешанные `Exit Property` и `Return` инструкции.  
   

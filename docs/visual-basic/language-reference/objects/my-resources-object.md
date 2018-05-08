@@ -1,11 +1,6 @@
 ---
-title: "Объект My.Resources"
+title: Объект My.Resources
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - My.Resources
 - My.Resources.MyResources.ResourceManager
@@ -13,14 +8,11 @@ f1_keywords:
 helpviewer_keywords:
 - My.Resources object
 ms.assetid: 34c3f2dc-7b87-432c-9d5f-17ea666bb266
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 96e5b909d9945ed631cebe07e4cfc7d5dc2e019f
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: 9fd23cb119ff9148a45d32ec70ccc4dad08ab876
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="myresources-object"></a>Объект My.Resources
 Предоставляет свойства и классы для доступа к ресурсам приложения.  
@@ -50,8 +42,8 @@ ms.lasthandoff: 12/21/2017
 |**Строки**|[String](../../../visual-basic/language-reference/data-types/string-data-type.md)|  
 |**Изображения**|<xref:System.Drawing.Bitmap>|  
 |**Значки**|<xref:System.Drawing.Icon>|  
-|**Аудио**|<xref:System.IO.UnmanagedMemoryStream><br /><br /> <xref:System.IO.UnmanagedMemoryStream> Класс является производным от <xref:System.IO.Stream> класса, чтобы можно было использовать с методами, которые принимают потоки, такие как <xref:Microsoft.VisualBasic.Devices.Audio.Play%2A> метод.|  
-|**Файлы**|-   [Строка](../../../visual-basic/language-reference/data-types/string-data-type.md) для текстовых файлов.<br />-   <xref:System.Drawing.Bitmap>для файлов изображений.<br />-   <xref:System.Drawing.Icon>значок файлов.<br />-   <xref:System.IO.UnmanagedMemoryStream>для звуковых файлов.|  
+|**Звук**|<xref:System.IO.UnmanagedMemoryStream><br /><br /> <xref:System.IO.UnmanagedMemoryStream> Класс является производным от <xref:System.IO.Stream> класса, чтобы можно было использовать с методами, которые принимают потоки, такие как <xref:Microsoft.VisualBasic.Devices.Audio.Play%2A> метод.|  
+|**Файлы**|-   [Строка](../../../visual-basic/language-reference/data-types/string-data-type.md) для текстовых файлов.<br />-   <xref:System.Drawing.Bitmap> для файлов изображений.<br />-   <xref:System.Drawing.Icon> значок файлов.<br />-   <xref:System.IO.UnmanagedMemoryStream> для звуковых файлов.|  
 |**Другое**|Определяются данными в конструкторе **тип** столбца.|  
   
 ## <a name="classes"></a>Классы  

@@ -1,11 +1,6 @@
 ---
-title: "Оператор Select...Case (Visual Basic)"
+title: Оператор Select...Case (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Select
 - vb.Case
@@ -26,14 +21,11 @@ helpviewer_keywords:
 - End keyword [Visual Basic], Select Case statements
 - Case statement [Visual Basic], Select...Case
 ms.assetid: 68877b65-5419-4bf0-a465-20cd0e4c7d44
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: a7527763a05ec32af88c6ba66ef717d839c33154
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 9d24b455d92cbd00b268df26283aab082b7703a1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="selectcase-statement-visual-basic"></a>Оператор Select...Case (Visual Basic)
 Запускает один из нескольких групп операторов в зависимости от значения выражения.  
@@ -53,10 +45,10 @@ End Select
   
 |Термин|Определение|  
 |---|---|  
-|`testexpression`|Обязательный. Выражение. Необходимо иметь один из простейших типов данных (`Boolean`, `Byte`, `Char`, `Date`, `Double`, `Decimal`, `Integer`, `Long`, `Object`, `SByte`, `Short`, `Single`, `String`, `UInteger`, `ULong`, и `UShort`).|  
-|`expressionlist`|Требуется в `Case` инструкции. Список предложений выражение, представляющее совпадают со значениями для `testexpression`. Несколько предложений выражения разделяются запятыми. Каждое условие может принимать одно из следующих форм:<br /><br /> -   *expression1* `To` *expression2*<br />-[ `Is` ] *comparisonoperator* *выражение*<br />-   *выражение*<br /><br /> Используйте `To` ключевое слово, чтобы задать границы диапазона совпадения значений для `testexpression`. Значение `expression1` должно быть меньше или равно значению `expression2`.<br /><br /> Используйте `Is` ключевое слово с помощью оператора сравнения (`=`, `<>`, `<`, `<=`, `>`, или `>=`) для определения ограничения возможных значений для `testexpression`. Если `Is` ключевое слово не предоставляется, то он автоматически вставляется перед *comparisonoperator*.<br /><br /> Формы, указав только `expression` рассматривается как особый случай `Is` форме where *comparisonoperator* является знак равенства (`=`). Эта форма вычисляется как `testexpression`  =  `expression`.<br /><br /> Выражения в `expressionlist` может быть любого типа данных, если они неявно преобразуются в тип `testexpression` и соответствующий `comparisonoperator` является допустимым для двух типов, он используется с.|  
-|`statements`|Необязательно. Один или несколько следующих инструкций `Case` , если выполнения `testexpression` соответствует любое предложение в `expressionlist`.|  
-|`elsestatements`|Необязательно. Один или несколько следующих инструкций `Case Else` , если выполнения `testexpression` не соответствует любое предложение в `expressionlist` любого `Case` инструкции.|  
+|`testexpression`|Обязательно. Выражение. Необходимо иметь один из простейших типов данных (`Boolean`, `Byte`, `Char`, `Date`, `Double`, `Decimal`, `Integer`, `Long`, `Object`, `SByte`, `Short`, `Single`, `String`, `UInteger`, `ULong`, и `UShort`).|  
+|`expressionlist`|Требуется в `Case` инструкции. Список предложений выражение, представляющее совпадают со значениями для `testexpression`. Несколько предложений выражения разделяются запятыми. Каждое условие может принимать одно из следующих форм:<br /><br /> -   *expression1* `To` *expression2*<br />-[ `Is` ] *comparisonoperator* *выражение*<br />-   *Выражение*<br /><br /> Используйте `To` ключевое слово, чтобы задать границы диапазона совпадения значений для `testexpression`. Значение `expression1` должно быть меньше или равно значению `expression2`.<br /><br /> Используйте `Is` ключевое слово с помощью оператора сравнения (`=`, `<>`, `<`, `<=`, `>`, или `>=`) для определения ограничения возможных значений для `testexpression`. Если `Is` ключевое слово не предоставляется, то он автоматически вставляется перед *comparisonoperator*.<br /><br /> Формы, указав только `expression` рассматривается как особый случай `Is` форме where *comparisonoperator* является знак равенства (`=`). Эта форма вычисляется как `testexpression`  =  `expression`.<br /><br /> Выражения в `expressionlist` может быть любого типа данных, если они неявно преобразуются в тип `testexpression` и соответствующий `comparisonoperator` является допустимым для двух типов, он используется с.|  
+|`statements`|Необязательный. Один или несколько следующих инструкций `Case` , если выполнения `testexpression` соответствует любое предложение в `expressionlist`.|  
+|`elsestatements`|Необязательный. Один или несколько следующих инструкций `Case Else` , если выполнения `testexpression` не соответствует любое предложение в `expressionlist` любого `Case` инструкции.|  
 |`End Select`|Завершает определение `Select`... `Case` построения.|  
   
 ## <a name="remarks"></a>Примечания  
@@ -82,7 +74,7 @@ End Select
   
  Если код внутри `Case` или `Case Else` блок инструкций необходимо выполнения любых дополнительных инструкций в блоке, можно выйти из блока с помощью `Exit Select` инструкции. Управление передается оператору, следующему `End Select`.  
   
- `Select Case`конструкции могут быть вложенными. Каждая вложенная `Select Case` конструкция должна иметь соответствующий `End Select` инструкции и должны полностью содержаться в одном `Case` или `Case Else` блок операторов внешнего `Select Case` построения, в течение которого он является вложенным.  
+ `Select Case` конструкции могут быть вложенными. Каждая вложенная `Select Case` конструкция должна иметь соответствующий `End Select` инструкции и должны полностью содержаться в одном `Case` или `Case Else` блок операторов внешнего `Select Case` построения, в течение которого он является вложенным.  
   
 ## <a name="example"></a>Пример  
  В следующем примере используется `Select Case` конструкции для записи строки, соответствующей значению переменной `number`. Второй `Case` инструкция содержит значение, соответствующее значение текущей `number`, поэтому инструкция, которая записывает «между 6 и 8, inclusive» работает.  

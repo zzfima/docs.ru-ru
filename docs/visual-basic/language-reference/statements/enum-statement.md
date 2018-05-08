@@ -1,12 +1,6 @@
 ---
 title: Оператор Enum (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Enum
 helpviewer_keywords:
@@ -17,14 +11,11 @@ helpviewer_keywords:
 - variables [Visual Basic], enumeration
 - constants [Visual Basic], enumerated
 ms.assetid: a45e51f1-65ff-48e1-bf32-79130f137377
-caps.latest.revision: 44
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 7a8244318e0be8e50f3384b56cf63e59182b6cda
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 89de51f2551437d102ccdc5a0f1ff5f23b53e47f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="enum-statement-visual-basic"></a>Оператор Enum (Visual Basic)
 Объявляет перечисление и определяет значения его членов.  
@@ -42,13 +33,13 @@ End Enum
   
 -   `attributelist`  
   
-     Необязательно. Список атрибутов, которые применяются для этого перечисления. Необходимо заключить [список атрибутов](../../../visual-basic/language-reference/statements/attribute-list.md) в угловые скобки («`<`«и»`>`»).  
+     Необязательный. Список атрибутов, которые применяются для этого перечисления. Необходимо заключить [список атрибутов](../../../visual-basic/language-reference/statements/attribute-list.md) в угловые скобки («`<`«и»`>`»).  
   
      <xref:System.FlagsAttribute> Атрибут указывает, что значение экземпляра перечисления может содержать несколько членов перечисления, и что каждый элемент представляет собой битовое поле, в значение перечисления.  
   
 -   `accessmodifier`  
   
-     Необязательно. Указывает, какой код может получить доступ этого перечисления. Ниже указаны доступные значения.  
+     Необязательный. Указывает, какой код может получить доступ этого перечисления. Ниже указаны доступные значения.  
   
     -   [Public](../../../visual-basic/language-reference/modifiers/public.md)  
   
@@ -62,26 +53,26 @@ End Enum
   
 -   `Shadows`  
   
-     Необязательно. Указывает, что это перечисление повторно объявляет и скрывает идентично именованный программный элемент или набор перегруженных элементов в базовом классе. Можно указать [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md) только на самом перечислении, а не на любой из его элементов.  
+     Необязательный. Указывает, что это перечисление повторно объявляет и скрывает идентично именованный программный элемент или набор перегруженных элементов в базовом классе. Можно указать [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md) только на самом перечислении, а не на любой из его элементов.  
   
 -   `enumerationname`  
   
-     Обязательный. Имя перечисления. Сведения о допустимых именах см. в разделе [имена объявленных элементов](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).  
+     Обязательно. Имя перечисления. Сведения о допустимых именах см. в разделе [имена объявленных элементов](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).  
   
 -   `datatype`  
   
-     Необязательно. Тип данных перечисления и все его члены.  
+     Необязательный. Тип данных перечисления и все его члены.  
   
 -   `memberlist`  
   
-     Обязательный. Список констант элементов, объявляемых в этом операторе. Несколько элементов отображаются на отдельных строках исходного кода.  
+     Обязательно. Список констант элементов, объявляемых в этом операторе. Несколько элементов отображаются на отдельных строках исходного кода.  
   
-     Каждый `member` имеет следующий синтаксис и компоненты:`[<attribute list>] member name [ = initializer ]`  
+     Каждый `member` имеет следующий синтаксис и компоненты: `[<attribute list>] member name [ = initializer ]`  
   
     |Отделение|Описание|  
     |---|---|  
-    |`membername`|Обязательный. Имя данного элемента.|  
-    |`initializer`|Необязательно. Выражение, которое вычисляется во время компиляции и присваивается этому элементу.|  
+    |`membername`|Обязательно. Имя данного элемента.|  
+    |`initializer`|Необязательный. Выражение, которое вычисляется во время компиляции и присваивается этому элементу.|  
   
 -   `End` `Enum`  
   
