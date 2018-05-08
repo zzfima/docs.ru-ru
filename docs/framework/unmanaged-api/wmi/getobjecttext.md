@@ -1,11 +1,7 @@
 ---
-title: "Функция GetObjectText (Справочник по неуправляемым API)"
-description: "Функция GetObjectText возвращает текстовое отображение объекта на синтаксис MOF."
+title: Функция GetObjectText (Справочник по неуправляемым API)
+description: Функция GetObjectText возвращает текстовое отображение объекта на синтаксис MOF.
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - GetObjectText
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 0b47dc73bb9da71b0c8593aa5758179327d7572d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d2f0e766a3a310bdb58f7cbffd8d49404eb5e0b0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="getobjecttext-function"></a>Функция GetObjectText
 Возвращает текстовое преобразования объекта в синтаксисе формата управляемых объектов (MOF).
@@ -63,7 +56,7 @@ HRESULT GetObjectText (
 
 Следующие значения, возвращаемые этой функцией, определяются в *WbemCli.h* файла заголовка, или их можно определить как константы в коде:
 
-|Константа  |Значение  |Описание:  |
+|Константа  |Значение  |Описание  |
 |---------|---------|---------|
 |`WBEM_E_FAILED` | 0x80041001 | Произошел общий сбой. |
 |`WBEM_E_INVALID_PARAMETER` | 0x80041008 | Параметр не является допустимым. |
@@ -81,14 +74,14 @@ MOF-текст, возвращаемый не содержит все сведе
 1. Параметры являются resequenced в порядке их значения идентификатора.
 1. Параметры, которые задаются в виде `[in]` и `[out]` объединяются в один параметр.
  
-`pstrObjectText`должен быть указателем на `null` при вызове функции; оно не должно указывать строку, которая является допустимым до вызова метода, поскольку указатель не будет освобождена.
+`pstrObjectText` должен быть указателем на `null` при вызове функции; оно не должно указывать строку, которая является допустимым до вызова метода, поскольку указатель не будет освобождена.
 
 ## <a name="requirements"></a>Требования  
 **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Заголовок:** WMINet_Utils.idl  
   
- **Версии платформы .NET framework:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Версии платформы .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>См. также  
 [WMI и счетчиков производительности (Справочник по неуправляемым API)](index.md)

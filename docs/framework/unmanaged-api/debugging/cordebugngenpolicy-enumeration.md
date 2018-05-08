@@ -1,14 +1,6 @@
 ---
-title: "Перечисление CorDebugNGenPolicy"
-ms.custom: 
+title: Перечисление CorDebugNGenPolicy
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 dev_langs:
 - cpp
 api_name:
@@ -24,17 +16,13 @@ helpviewer_keywords:
 ms.assetid: edb4e4d2-3166-44d4-8b17-bf302f7ea093
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 89767da7178319ed1add3dda0620062893487bfd
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: cc5a06e6b3cc1e9338d860cdb110bf7d516080be
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cordebugngenpolicy-enumeration"></a>Перечисление CorDebugNGenPolicy
 Предоставляет значение, который определяет, загружает ли отладчик образы в машинном коде (NGen) из кэша образов в машинном коде.  
@@ -49,7 +37,7 @@ enum CorDebugNGENPolicy {
   
 ## <a name="members"></a>Участники  
   
-|Имя члена|Описание:|  
+|Имя члена|Описание|  
 |-----------------|-----------------|  
 |`DISABLE_LOCAL_NIC`|В [!INCLUDE[win8_appname_long](../../../../includes/win8-appname-long-md.md)] отключена приложения, использование образов из локального кэша машинных образов. В приложении рабочего стола этот параметр не оказывает влияния.|  
   
@@ -63,7 +51,7 @@ enum CorDebugNGENPolicy {
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **Версии платформы .NET framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>См. также  
  [Перечисления отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

@@ -1,11 +1,7 @@
 ---
-title: "Функция BlessIWbemServices (Справочник по неуправляемым API)"
-description: "Функция BlessIWbemServices указывает ли учетные данные разрешают доступ к классу IWbemServices."
+title: Функция BlessIWbemServices (Справочник по неуправляемым API)
+description: Функция BlessIWbemServices указывает ли учетные данные разрешают доступ к классу IWbemServices.
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - BlessIWbemServices
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: f384e8d045dd7a6f2f864f0991f8caf4a674408b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 59cb20f7ccfbd0b8f9d6026c9805468613818130
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="blessiwbemservices-function"></a>Функция BlessIWbemServices
 Указывает, разрешить ли учетные данные пользователя доступ к указанным [IWbemServices](https://msdn.microsoft.com/library/aa392093(v=vs.85).aspx) класса.   
@@ -58,17 +51,17 @@ HRESULT BlessIWbemServices (
 `strPassword`  
 [in] Пароль, связанный с `strUser`.
 
-`strAuthority`[in] Имя домена пользователя. В разделе [ConnectServerWmi](connectserverwmi.md) функции для получения дополнительной информации.
+`strAuthority` [in] Имя домена пользователя. В разделе [ConnectServerWmi](connectserverwmi.md) функции для получения дополнительной информации.
 
-`impLevel`[in] Уровень олицетворения.
+`impLevel` [in] Уровень олицетворения.
 
-`authnLevel`[in] Уровень авторизации.
+`authnLevel` [in] Уровень авторизации.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
 Следующие значения, возвращаемые этой функцией, определяются в *WinError.h* заголовочный файл, или их можно определить как константы в коде:
 
-|Константа  |Значение  |Описание:  |
+|Константа  |Значение  |Описание  |
 |---------|---------|---------|
 | `E_INVALIDARG` | 0x80070057 | Один или несколько аргументов являются недопустимыми. |
 | `E_POINTER` | отметкой 0x80004003 | Свойство `pIWbemServices` имеет значение `null`. | 
@@ -81,7 +74,7 @@ HRESULT BlessIWbemServices (
   
  **Заголовок:** WMINet_Utils.idl  
   
- **Версии платформы .NET framework:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Версии платформы .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>См. также  
 [WMI и счетчиков производительности (Справочник по неуправляемым API)](index.md)

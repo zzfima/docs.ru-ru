@@ -1,31 +1,17 @@
 ---
 title: Настройка служб с использованием файлов конфигурации
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - configuring services [WCF]
 ms.assetid: c9c8cd32-2c9d-4541-ad0d-16dff6bd2a00
-caps.latest.revision: 29
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 62a8774ab2843d0b1f0a19ad04fc0a76abb7cac5
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: abfe502c6b50234037cad786a658edc3d479cc9e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="configuring-services-using-configuration-files"></a>Настройка служб с использованием файлов конфигурации
-Настройка службы [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] с помощью файла конфигурации обеспечивает гибкость предоставления данных по конечной точке и поведению службы непосредственно в точке развертывания, а не во время разработки. В этой теме представлено описание основных доступных методов.  
+Настройка службы Windows Communication Foundation (WCF), с помощью файла конфигурации обеспечивает гибкость предоставления конечной точки и данных поведение службы во время развертывания, а не во время разработки. В этой теме представлено описание основных доступных методов.  
   
  Службу [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] можно настроить с помощью технологии конфигурации [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] . Чаще всего элементы XML добавляются в файл Web.config для узла служб IIS, на котором размещена служба [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] . Эти элементы позволяют изменять данные, такие как адреса конечных точек (фактические адреса, используемые для взаимодействия со службой), по схеме компьютер-компьютер. Кроме того, [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] включает в себя несколько предоставляемых системой элементов, которые позволяют быстро выбрать для службы самые основные функции. Начиная с версии [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)], в [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] входит новая модель конфигурации по умолчанию, которая обладает упрощенными требованиями к настройке [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] . Если для службы не указана конфигурация [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] , то среда выполнения автоматически выполняет настройку службы, указывая некоторые стандартные конечные точки, привязку и поведение по умолчанию. На практике запись конфигурации является основной частью процесса программирования приложений [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] .  
   

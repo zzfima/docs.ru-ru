@@ -1,14 +1,6 @@
 ---
-title: "Перечисление COINITICOR"
-ms.custom: 
+title: Перечисление COINITICOR
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - COINITICOR
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: 67fefd89-28d6-4588-84ea-dc7a5870e014
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 53b02f709bca1edbdad82e0c0efd1c1959e4ebe1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 56d90257389941189ff5036ebcb145fd0df17dc0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="coiniticor-enumeration"></a>Перечисление COINITICOR
 Указывает константы, используемые [CoInitializeCor](../../../../docs/framework/unmanaged-api/hosting/coinitializecor-function.md) при инициализации общеязыковая среда выполнения.  
@@ -48,7 +36,7 @@ typedef enum tagCOINITCOR
   
 ## <a name="members"></a>Участники  
   
-|Член|Описание:|  
+|Член|Описание|  
 |------------|-----------------|  
 |`COINITCOR`|Указывает режим инициализации по умолчанию.|  
   
@@ -59,7 +47,7 @@ typedef enum tagCOINITCOR
   
  **Библиотека:** включена как ресурс в MsCorEE.dll  
   
- **Версии платформы .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>См. также  
  [Перечисления метаданных](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

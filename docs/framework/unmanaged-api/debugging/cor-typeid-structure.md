@@ -1,14 +1,6 @@
 ---
-title: "Структура COR_TYPEID"
-ms.custom: 
+title: Структура COR_TYPEID
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - COR_TYPEID
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: 1e172b14-ee22-4943-b3b8-3740e7bdcd2e
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: ca6c9b3b02314843a3eaf01d8cd4a9eac5513efa
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3d4e07fb3d0988838fde662f4bb7d4719cc2d50f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cortypeid-structure"></a>Структура COR_TYPEID
 Содержит идентификатор типа.  
@@ -48,7 +36,7 @@ typedef struct COR_TYPEID{
   
 ## <a name="members"></a>Участники  
   
-|Член|Описание:|  
+|Член|Описание|  
 |------------|-----------------|  
 |`token1`|Первый токен.|  
 |`token2`|Второй маркер.|  
@@ -65,7 +53,7 @@ typedef struct COR_TYPEID{
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **Версии платформы .NET framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>См. также  
  [Структуры отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)  

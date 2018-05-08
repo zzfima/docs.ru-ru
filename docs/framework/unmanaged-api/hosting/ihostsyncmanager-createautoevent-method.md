@@ -1,14 +1,6 @@
 ---
-title: "Метод IHostSyncManager::CreateAutoEvent"
-ms.custom: 
+title: Метод IHostSyncManager::CreateAutoEvent
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IHostSyncManager.CreateAutoEvent
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 3153643e-cf5c-4b44-8e0e-c2b22cb08208
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: b7874839d04af89f2fa512f82213862f34408001
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fe1b685f50f793f7451187f17adc848ec9d4422f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ihostsyncmanagercreateautoevent-method"></a>Метод IHostSyncManager::CreateAutoEvent
 Создает объект события автоматического сброса.  
@@ -54,7 +42,7 @@ HRESULT CreateAutoEvent (
   
 |HRESULT|Описание|  
 |-------------|-----------------|  
-|S_OK|`CreateAutoEvent`успешно возвращен.|  
+|S_OK|`CreateAutoEvent` успешно возвращен.|  
 |ЗНАЧЕНИЕ HOST_E_CLRNOTAVAILABLE|Общеязыковая среда выполнения (CLR) не был загружен в процесс или находится в состоянии, в котором не может выполнять управляемый код или успешно обработать вызов.|  
 |HOST_E_TIMEOUT|Истекло время ожидания вызова.|  
 |HOST_E_NOT_OWNER|Вызывающий объект не является владельцем блокировки.|  
@@ -63,7 +51,7 @@ HRESULT CreateAutoEvent (
 |E_OUTOFMEMORY|Не хватает памяти была доступна для создания запрошенного объекта события.|  
   
 ## <a name="remarks"></a>Примечания  
- `CreateAutoEvent`Создает объект автоматического события, состояние которого будет автоматически изменено на несигнальное после выпуска ожидающий поток. Этот метод получает зеркально Win32 `CreateEvent` функции со значением `false` указано `bManualReset` параметр  
+ `CreateAutoEvent` Создает объект автоматического события, состояние которого будет автоматически изменено на несигнальное после выпуска ожидающий поток. Этот метод получает зеркально Win32 `CreateEvent` функции со значением `false` указано `bManualReset` параметр  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
@@ -72,7 +60,7 @@ HRESULT CreateAutoEvent (
   
  **Библиотека:** включена как ресурс в MSCorEE.dll  
   
- **Версии платформы .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Версии платформы .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>См. также  
  [Интерфейс ICLRSyncManager](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-interface.md)  

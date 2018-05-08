@@ -1,14 +1,6 @@
 ---
-title: "Метод IHostTaskManager::EnterRuntime"
-ms.custom: 
+title: Метод IHostTaskManager::EnterRuntime
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IHostTaskManager.EnterRuntime
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 1aa7a4b1-636a-4f5e-b834-b406d72f7120
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 70c9e83311fd7427895e1957d3511a45c47434e6
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: a47f51ba32a9dfc16300a8de7c2d4b380a8ba988
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ihosttaskmanagerenterruntime-method"></a>Метод IHostTaskManager::EnterRuntime
 Уведомляет основное приложение, вызов неуправляемого метода, такие как неуправляемого метода возвращает управление выполнением для общеязыковой среды выполнения (CLR).  
@@ -48,8 +36,8 @@ HRESULT EnterRuntime ();
   
 |HRESULT|Описание|  
 |-------------|-----------------|  
-|S_OK|`EnterRuntime`успешно возвращен.|  
-|HOST_E_CLRNOTAVAILABLE|Среда CLR не загружена в процесс или находится в состоянии, в котором не может выполнять управляемый код или успешно обработать вызов.|  
+|S_OK|`EnterRuntime` успешно возвращен.|  
+|ЗНАЧЕНИЕ HOST_E_CLRNOTAVAILABLE|Среда CLR не загружена в процесс или находится в состоянии, в котором не может выполнять управляемый код или успешно обработать вызов.|  
 |HOST_E_TIMEOUT|Истекло время ожидания вызова.|  
 |HOST_E_NOT_OWNER|Вызывающий объект не является владельцем блокировки.|  
 |HOST_E_ABANDONED|Событие было отменено заблокированный поток или ожидал волокон.|  
@@ -57,7 +45,7 @@ HRESULT EnterRuntime ();
 |E_OUTOFMEMORY|Не хватает памяти была доступна для выполнения запрашиваемого распределения.|  
   
 ## <a name="remarks"></a>Примечания  
- `EnterRuntime`вызывается для уведомления узла, неуправляемые функции, для которого предыдущими вызовами метода [LeaveRuntime](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-leaveruntime-method.md) метод был сделан, закончила выполнение и возвращает управление выполнением в среду выполнения.  
+ `EnterRuntime` вызывается для уведомления узла, неуправляемые функции, для которого предыдущими вызовами метода [LeaveRuntime](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-leaveruntime-method.md) метод был сделан, закончила выполнение и возвращает управление выполнением в среду выполнения.  
   
 > [!NOTE]
 >  [ReverseEnterRuntime](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-reverseenterruntime-method.md) вызывается для уведомления узла, неуправляемые функции, для которого предыдущими вызовами метода `LeaveRuntime` был сделан, осуществляет вызов управляемого кода.  
@@ -69,7 +57,7 @@ HRESULT EnterRuntime ();
   
  **Библиотека:** включена как ресурс в MSCorEE.dll  
   
- **Версии платформы .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Версии платформы .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>См. также  
  [Расширенное COM-взаимодействие](http://msdn.microsoft.com/library/3ada36e5-2390-4d70-b490-6ad8de92f2fb)  

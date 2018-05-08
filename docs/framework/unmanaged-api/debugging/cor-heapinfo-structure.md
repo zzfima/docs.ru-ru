@@ -1,14 +1,6 @@
 ---
-title: "Структура COR_HEAPINFO"
-ms.custom: 
+title: Структура COR_HEAPINFO
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - COR_HEAPINFO
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: bfb2cd39-3e0b-4d51-ba0c-f009755c1456
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 991e018c3967693f5b87b71c77cdbadcd4ae0cfe
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8fb1ae367c30bb038bfe25961e91f02f172f486c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="corheapinfo-structure"></a>Структура COR_HEAPINFO
 Содержит общие сведения о куче для сборки мусора и указывает, является ли она перечислимой.  
@@ -51,12 +39,12 @@ typedef struct _COR_HEAPINFO {
   
 ## <a name="members"></a>Участники  
   
-|Член|Описание:|  
+|Член|Описание|  
 |------------|-----------------|  
-|`areGCStructuresValid`|`true`Если структурами для сборки мусора являются допустимыми и могут быть перечислены кучи; в противном случае `false`.|  
+|`areGCStructuresValid`|`true` Если структурами для сборки мусора являются допустимыми и могут быть перечислены кучи; в противном случае `false`.|  
 |`pointerSize`|Размер в байтах указателей в целевой архитектуре.|  
 |`numHeaps`|Количество логических мусора кучи в процессе.|  
-|`concurrent`|`TRUE`Если параллельной сборки мусора (фонового) включена; в противном случае `FALSE`.|  
+|`concurrent`|`TRUE` Если параллельной сборки мусора (фонового) включена; в противном случае `FALSE`.|  
 |`gcType`|Член [CorDebugGCType](../../../../docs/framework/unmanaged-api/debugging/cordebuggctype-enumeration.md) перечисление, указывающее, выполняется ли сборщик мусора на рабочей станции или сервере.|  
   
 ## <a name="remarks"></a>Примечания  
@@ -71,7 +59,7 @@ typedef struct _COR_HEAPINFO {
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **Версии платформы .NET framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>См. также  
  [Структуры отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)  

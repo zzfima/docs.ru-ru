@@ -1,34 +1,22 @@
 ---
-title: "Взаимодействие с расширениями веб-служб 3.0"
-ms.custom: 
+title: Взаимодействие с расширениями веб-служб 3.0
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: e8e589d2-12c6-4794-8a11-1ee90b47dfaa
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f23e4711f8a0952087494aa1b7b2d96aa0274f67
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2580ca4ba1aab0a1551c7bd0affcc9c9ec0d712c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="interoperability-with-web-services-enhancements-30"></a>Взаимодействие с расширениями веб-служб 3.0
-Клиенты и службы [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] на уровне линий связи совместимы со службами расширений веб-служб версии 3.0 для клиентов и служб Microsoft .NET (WSE), если клиенты и службы [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] настроены на использование спецификации WS-Addressing версии августа 2004 г.  
+Клиенты Windows Communication Foundation (WCF) и службы, транспортного уровня совместимости с веб-служб версии 3.0 для Microsoft .NET (WSE) клиентами и службами при клиентов и служб WCF настроены на использование версии августа 2004 г. Спецификация WS-Addressing.  
   
 ## <a name="in-this-section"></a>В этом разделе  
  [Практическое руководство. Настройка служб WCF для взаимодействия с клиентами WSE 3.0](../../../../docs/framework/wcf/feature-details/how-to-configure-wcf-services-to-interoperate-with-wse-3-0-clients.md)  
- Описание процесса настройки службы [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], чтобы расширения веб-служб версии 3.0 для клиентов Microsoft .NET (WSE) могли взаимодействовать с этой службой.  
+ Описывается настройка службы WCF, чтобы веб-служб версии 3.0 для клиента Microsoft .NET (WSE) могли взаимодействовать с ним.  
   
  [Практическое руководство. Настройка клиента WCF для взаимодействия со службами WSE 3.0](../../../../docs/framework/wcf/feature-details/how-to-configure-a-wcf-client-to-interoperate-with-wse3-0-services.md)  
- Описание процесса настройки клиента [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], чтобы он мог взаимодействовать с расширениями веб-служб версии 3.0 для служб Microsoft .NET (WSE).  
+ Подробные сведения о способах настройки клиента WCF, чтобы он взаимодействует с веб-служб версии 3.0 для службы Microsoft .NET (WSE).  
   
 ## <a name="related-sections"></a>Связанные разделы  
  [Миграция веб-служб WSE 3.0 на платформу WCF](../../../../docs/framework/wcf/feature-details/migrating-wse-3-0-web-services-to-wcf.md)  

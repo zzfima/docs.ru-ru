@@ -1,27 +1,15 @@
 ---
-title: "Практическое руководство. Миграция кода клиента веб-службы ASP.NET на платформу Windows Communication Foundation"
-ms.custom: 
+title: Практическое руководство. Миграция кода клиента веб-службы ASP.NET на платформу Windows Communication Foundation
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 2e0a22a7-e1d5-4718-8997-4319a7cd9027
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: baf43f2bfa2175062c57f73e45835c251ac5769e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: cb60f9cb2e8f35ee703b049eae9e3d99c1ec7d49
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-migrate-aspnet-web-service-client-code-to-the-windows-communication-foundation"></a>Практическое руководство. Миграция кода клиента веб-службы ASP.NET на платформу Windows Communication Foundation
-В следующей процедуре в общих чертах описывается порядок переноса кода клиента веб-службы ASP.NET на платформу [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+Следующая процедура описывает общих действия, которые необходимо соблюдать порядок переноса кода клиента веб-службы ASP.NET в WCF.  
   
 ## <a name="procedure"></a>Процедура  
   
@@ -33,9 +21,9 @@ ms.lasthandoff: 12/22/2017
   
 3.  Удалите код клиента ASP.NET из клиентского проекта. Этот код находится в модулях, сформированных с помощью программы WSDL.exe.  
   
-4.  Создание [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] кода клиента с помощью [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md). Добавьте этот код в клиентский проект и объедините полученную конфигурацию с существующим файлом конфигурации клиента.  
+4.  Создание кода клиента WCF с помощью [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md). Добавьте этот код в клиентский проект и объедините полученную конфигурацию с существующим файлом конфигурации клиента.  
   
-5.  Скомпилируйте приложение. Исправьте ошибки компиляции, заменив ссылки на старые клиентские типы ASP.NET ссылками на новые клиентские типы [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+5.  Скомпилируйте приложение. Исправьте ошибки компиляции, заменив ссылки на старые клиентские типы ASP.NET со ссылками на новые типы клиента WCF.  
   
 6.  Выполните набор тестов.  
   

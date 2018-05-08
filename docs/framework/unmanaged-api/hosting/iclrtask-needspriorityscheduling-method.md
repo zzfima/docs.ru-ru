@@ -1,14 +1,6 @@
 ---
-title: "Метод ICLRTask::NeedsPriorityScheduling"
-ms.custom: 
+title: Метод ICLRTask::NeedsPriorityScheduling
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICLRTask.NeedsPriorityScheduling
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 9c9db3f3-26bf-4317-88de-5eb926a22a1d
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 6ce57a4130c19ffd040bc9fbeba5e775a751efdb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 36403abcae4d4e691fe6362e61cf7fa979ec7f5e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="iclrtaskneedspriorityscheduling-method"></a>Метод ICLRTask::NeedsPriorityScheduling
 Возвращает значение, указывающее, нужно ли текущую задачу, которая была отключена, помечается как с высоким приоритетом для изменения расписания.  
@@ -54,7 +42,7 @@ HRESULT NeedsPriorityScheduling (
   
 |HRESULT|Описание|  
 |-------------|-----------------|  
-|S_OK|`NeedsPriorityRescheduling`успешно возвращен.|  
+|S_OK|`NeedsPriorityRescheduling` успешно возвращен.|  
 |ЗНАЧЕНИЕ HOST_E_CLRNOTAVAILABLE|Общеязыковая среда выполнения (CLR) не был загружен в процесс или находится в состоянии, в котором не может выполнять управляемый код или успешно обработать вызов.|  
 |HOST_E_TIMEOUT|Истекло время ожидания вызова.|  
 |HOST_E_NOT_OWNER|Вызывающий объект не является владельцем блокировки.|  
@@ -71,7 +59,7 @@ HRESULT NeedsPriorityScheduling (
   
  **Библиотека:** включена как ресурс в MSCorEE.dll  
   
- **Версии платформы .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Версии платформы .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>См. также  
  [Интерфейс ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)  

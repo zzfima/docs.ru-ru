@@ -1,14 +1,6 @@
 ---
-title: "Структура MDAInfo"
-ms.custom: 
+title: Структура MDAInfo
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - MDAInfo
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: fb8c14f7-d461-43d1-8b47-adb6723b9b93
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 53a999028f2677599598caf55e62f10721f61fe3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5164e85ecc97de99dcc493c2ba5efa8fc3468471
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mdainfo-structure"></a>Структура MDAInfo
 Предоставляет подробные сведения о `Event_MDAFired` событие, которое инициирует создание управляемого помощника по отладке (MDA).  
@@ -48,7 +36,7 @@ typedef struct _MDAInfo {
   
 ## <a name="members"></a>Участники  
   
-|Член|Описание:|  
+|Член|Описание|  
 |------------|-----------------|  
 |`lpMDACaption`|Название текущего MDA. Заголовок описывает тип ошибки, вызвавшей `Event_MDAFired` событий.|  
 |`lpMDAMessage`|Выходное сообщение, предоставленные текущим MDA.|  
@@ -71,7 +59,7 @@ typedef struct _MDAInfo {
   
  **Библиотека:** включена как ресурс в MSCorEE.dll  
   
- **Версии платформы .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Версии платформы .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>См. также  
  [Структуры размещения](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)  

@@ -1,14 +1,6 @@
 ---
-title: "Перечисление StackOverflowType"
-ms.custom: 
+title: Перечисление StackOverflowType
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - StackOverflowType
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: dab648ad-972b-479c-b129-b4c1dcbd932e
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: a04db61a16aeae24476fb0b191a3d2dc89743dee
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9e888b2359336c68ea6fdf52f798145fda12002e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="stackoverflowtype-enumeration"></a>Перечисление StackOverflowType
 Содержит значения, которые указывают на основную причину события переполнения стека.  
@@ -49,7 +37,7 @@ typedef enum {
   
 ## <a name="members"></a>Участники  
   
-|Член|Описание:|  
+|Член|Описание|  
 |------------|-----------------|  
 |`SO_ClrEngine`|Переполнение стека было вызвано подсистемой выполнения.|  
 |`SO_Managed`|Переполнение стека было вызвано управляемого кода.|  
@@ -65,7 +53,7 @@ typedef enum {
   
  **Библиотека:** MSCorEE.dll  
   
- **Версии платформы .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Версии платформы .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>См. также  
  [Размещение перечислений](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)

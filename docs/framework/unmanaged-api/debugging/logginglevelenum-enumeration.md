@@ -1,14 +1,6 @@
 ---
-title: "Перечисление LoggingLevelEnum"
-ms.custom: 
+title: Перечисление LoggingLevelEnum
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - LoggingLevelEnum
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: 09daac08-005a-46b2-beab-408d0820c5e5
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: a1f8bb53d53593073df7ef7aa095eeb3b9f8c632
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 331065d4aae82c66b9ebd82e99427501c3ba8a98
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="logginglevelenum-enumeration"></a>Перечисление LoggingLevelEnum
 Указывает уровень важности описательного сообщения, записанного в журнале событий при регистрации события управляемым потоком.  
@@ -59,7 +47,7 @@ typedef enum LoggingLevelEnum {
   
 ## <a name="members"></a>Участники  
   
-|Член|Описание:|  
+|Член|Описание|  
 |------------|-----------------|  
 |`LTraceLevel0`|Сообщение находится на уровне трассировки 0.|  
 |`LTraceLevel1`|Сообщение является уровень трассировки 1.|  
@@ -85,7 +73,7 @@ typedef enum LoggingLevelEnum {
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>См. также  
  <xref:System.Diagnostics.EventLog>  

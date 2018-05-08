@@ -1,11 +1,7 @@
 ---
-title: "Функция GetNames (Справочник по неуправляемым API)"
-description: "Функция GetNames извлекает имена свойств объекта."
+title: Функция GetNames (Справочник по неуправляемым API)
+description: Функция GetNames извлекает имена свойств объекта.
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - GetNames
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 80284900c318a3776168b781ce2e0e5e4a68f96d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 108946428cdfadcfb9c653b7e444bf278dfa2782
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="getnames-function"></a>GetNames-функция
 Возвращает подмножество или все имена свойств объекта. 
@@ -71,7 +64,7 @@ HRESULT GetNames (
 
 Следующие значения, возвращаемые этой функцией, определяются в *WbemCli.h* файла заголовка, или их можно определить как константы в коде:
 
-|Константа  |Значение  |Описание:  |
+|Константа  |Значение  |Описание  |
 |---------|---------|---------|
 |`WBEM_E_FAILED` | 0x80041001 | Произошел общий сбой. |
 |`WBEM_E_INVALID_PARAMETER` | 0x80041008 | Один или несколько параметров недопустимы или указано неверное сочетание флагов и параметры. |
@@ -91,17 +84,17 @@ HRESULT GetNames (
 
 | Группа 1 флаги |Значение  |Описание  |
 |---------|---------|---------|
-| `WBEM_FLAG_ALWAYS` | 0 | Возвращает имена всех свойств. `strQualifierName`и `pQualifierVal` не используются. |
+| `WBEM_FLAG_ALWAYS` | 0 | Возвращает имена всех свойств. `strQualifierName` и `pQualifierVal` не используются. |
 | `WBEM_FLAG_ONLY_IF_TRUE` | 1 | Возвращать только свойства, которые имеют квалификатор имени, указанного параметром `strQualifierName` параметр. Если этот флаг используется, необходимо указать `strQualifierName`. |
 |`WBEM_FLAG_ONLY_IF_FALSE` | 2 |  Возвращать только свойства, которые не имеют квалификатор имени, указанного параметром `strQualifierName` параметр. Если этот флаг используется, необходимо указать `strQualifierName`. |
 |`WBEM_FLAG_ONLY_IF_IDENTICAL` | 3 | Возвращать только те свойства, которые имеют квалификатор имени, указанного параметром `wszQualifierName` параметр и также имеют значения, идентичные значению, указанному `pQualifierVal` структуры. Если этот флаг используется, необходимо указать и `wszQualifierName` и `pQualifierValue`. |
 
-| Группа 2 флаги |Значение  |Описание:  |
+| Группа 2 флаги |Значение  |Описание  |
 |---------|---------|---------|
 |`WBEM_FLAG_KEYS_ONLY` | 0x4 | Возвращать только имена свойств, определяющих ключи. |
 |`WBEM_FLAG_REFS_ONLY` | 0x8 | Возврат только имена свойств, ссылки на объекты. |
 
-| Флаги группа 3 |Значение  |Описание:  |
+| Флаги группа 3 |Значение  |Описание  |
 |---------|---------|---------|
 | `WBEM_FLAG_LOCAL_ONLY` | 0x10 | Возвращать только имена свойств, принадлежащих наиболее производного класса. Исключите свойства из родительских классов. |
 | `WBEM_FLAG_PROPAGATED_ONLY` |  0x20 | Возвращать только имена свойств, принадлежащих родительских классов. |
@@ -115,7 +108,7 @@ HRESULT GetNames (
   
  **Заголовок:** WMINet_Utils.idl  
   
- **Версии платформы .NET framework:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Версии платформы .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>См. также  
 [WMI и счетчиков производительности (Справочник по неуправляемым API)](index.md)

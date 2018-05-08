@@ -1,14 +1,6 @@
 ---
-title: "Метод ICLRDebugging::OpenVirtualProcess"
-ms.custom: 
+title: Метод ICLRDebugging::OpenVirtualProcess
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICLRDebugging.OpenVirtualProcess
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: e8ab7c41-d508-4ed9-8a31-ead072b5a314
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: f1f71f42f10c3d25714998d1697b20a5ee13e055
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 51b5a9ecd85f0d40ac2fe2826cbbe7a56a6228d1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="iclrdebuggingopenvirtualprocess-method"></a>Метод ICLRDebugging::OpenVirtualProcess
 Получает интерфейс ICorDebugProcess, соответствующий общие модуля среды CLR (CLR) загружена в процессе.  
@@ -87,7 +75,7 @@ HRESULT OpenVirtualProcess(
 |S_OK|Метод завершился успешно.|  
 |E_POINTER|Свойство `pDataTarget` имеет значение `null`.|  
 |CORDBG_E_LIBRARY_PROVIDER_ERROR|[ICLRDebuggingLibraryProvider](../../../../docs/framework/unmanaged-api/debugging/iclrdebugginglibraryprovider-interface.md) обратного вызова возвращает сообщение об ошибке или не предоставлен допустимый дескриптор.|  
-|CORDBG_E_MISSING_DATA_TARGET_INTERFACE|`pDataTarget`не реализует необходимые интерфейсы целевых данных для этой версии среды выполнения.|  
+|CORDBG_E_MISSING_DATA_TARGET_INTERFACE|`pDataTarget` не реализует необходимые интерфейсы целевых данных для этой версии среды выполнения.|  
 |CORDBG_E_NOT_CLR|Указанный модуль не является модулем CLR. Это значение HRESULT также возвращается, если не удается обнаружить модуль среды CLR, так как память повреждена, модуль недоступен или более поздней, чем версия оболочки версию среды CLR.|  
 |CORDBG_E_UNSUPPORTED_DEBUGGING_MODEL|Эта версия среды выполнения не поддерживает данную модель отладки. В настоящее время эта модель отладки не поддерживается версиями CLR перед [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]. `pwszVersion` Выходной параметр по-прежнему задано правильное значение после данной ошибки.|  
 |CORDBG_E_UNSUPPORTED_FORWARD_COMPAT|Версии среды CLR больше, чем версия этот отладчик для поддержки утверждения. `pwszVersion` Выходной параметр по-прежнему задано правильное значение после данной ошибки.|  
@@ -105,7 +93,7 @@ HRESULT OpenVirtualProcess(
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Версии платформы .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>См. также  
  [Интерфейсы отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  

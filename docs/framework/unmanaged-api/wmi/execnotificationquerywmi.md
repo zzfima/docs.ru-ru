@@ -1,11 +1,7 @@
 ---
-title: "Функция ExecNotificationQueryWmi (Справочник по неуправляемым API)"
-description: "Функция ExecNotificationQueryWmi выполняет запрос для получения событий."
+title: Функция ExecNotificationQueryWmi (Справочник по неуправляемым API)
+description: Функция ExecNotificationQueryWmi выполняет запрос для получения событий.
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - ExecNotificationQueryWmi
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: d6dd0926d2262f8d0aa125b86755017a65a95a7f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4b5c26ab9c273b134915eea39078a83f569bcd32
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="execnotificationquerywmi-function"></a>Функция ExecNotificationQueryWmi
 Выполняет запрос для получения событий. Вызов возвращается немедленно, а вызывающий объект может выполнять опрос возвращаемый перечислитель для событий по мере их поступления. Освобождение возвращаемый перечислитель отменяет запрос.  
@@ -63,7 +56,7 @@ HRESULT ExecNotificationQueryWmi (
 `lFlags`   
 [in] Комбинация из двух следующих флагов, влияющих на поведение этой функции. Эти значения определяются в *WbemCli.h* файла заголовка, или их можно определить как константы в коде. 
 
-| Константа | Значение  | Описание:  |
+| Константа | Значение  | Описание  |
 |---------|---------|---------|
 | `WBEM_FLAG_RETURN_IMMEDIATELY` | 0x10 | Флаг вызывает полусинхронных вызовов. Если этот флаг не установлен, возникнет ошибка. Это так, как будут получены события постоянно, это означает, что пользователь должен опросить возвращаемый перечислитель. Блокирует этот вызов бесконечно делает это невозможно. |
 | `WBEM_FLAG_FORWARD_ONLY` | 0x20 | Эта функция возвращает только вперед перечислителя. Обычно последовательным перечислители работают быстрее и использовать меньше памяти, чем обычный перечислители, но не разрешать вызовы [клон](clone.md). |
@@ -77,7 +70,7 @@ HRESULT ExecNotificationQueryWmi (
 `authLevel`  
 [in] Уровень авторизации.
 
-`impLevel`[in] Уровень олицетворения.
+`impLevel` [in] Уровень олицетворения.
 
 `pCurrentNamespace`   
 [in] Указатель на [IWbemServices](https://msdn.microsoft.com/library/aa392093(v=vs.85).aspx) , представляющий текущего пространства имен.
@@ -95,7 +88,7 @@ HRESULT ExecNotificationQueryWmi (
 
 Следующие значения, возвращаемые этой функцией, определяются в *WbemCli.h* файла заголовка, или их можно определить как константы в коде:
 
-|Константа  |Значение  |Описание:  |
+|Константа  |Значение  |Описание  |
 |---------|---------|---------|
 | `WBEM_E_ACCESS_DENIED` | 0x80041003 | Пользователь не имеет разрешения на просмотр одного или нескольких классов, которые функция может вернуть. |
 | `WBEM_E_FAILED` | 0x80041001 | Произошла неизвестная ошибка. |
@@ -127,7 +120,7 @@ HRESULT ExecNotificationQueryWmi (
   
  **Заголовок:** WMINet_Utils.idl  
   
- **Версии платформы .NET framework:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Версии платформы .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>См. также  
 [WMI и счетчиков производительности (Справочник по неуправляемым API)](index.md)

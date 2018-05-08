@@ -1,37 +1,23 @@
 ---
 title: Создание контрактов служб
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - service contracts [WCF]
 ms.assetid: 8e89cbb9-ac84-4f0d-85ef-0eb6be0022fd
-caps.latest.revision: 34
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 14973d3612eb5739e0dfcd7b50409904ab5d6844
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: 6d1e9ba7f5546923b222f2d495aacdb2c1caaf96
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="designing-service-contracts"></a>Создание контрактов служб
 Этот раздел описывает, что такое контракты служб, как они определяются, какие операции доступны (также описаны последствия обмена сообщениями, на которых они основаны), какие типы данных используются; кроме того, он содержит ответы на другие вопросы, которые помогут при разработке операций, удовлетворяющих требованиям вашего сценария.  
   
 ## <a name="creating-a-service-contract"></a>Создание контракта службы  
- Службы предоставляют несколько операций. В приложениях [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] операции нужно определить, создав метод и пометив его атрибутом <xref:System.ServiceModel.OperationContractAttribute>. Затем, для создания контракта службы, необходимо сгруппировать операции либо объявив их в интерфейсе, отмеченном атрибутом <xref:System.ServiceModel.ServiceContractAttribute>, либо определив их в классе с таким же атрибутом. (Базовый пример см. в разделе [как: определение контракта службы](../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md).)  
+ Службы предоставляют несколько операций. В приложениях Windows Communication Foundation (WCF), определяются операции, создав метод и пометив его <xref:System.ServiceModel.OperationContractAttribute> атрибута. Затем, для создания контракта службы, необходимо сгруппировать операции либо объявив их в интерфейсе, отмеченном атрибутом <xref:System.ServiceModel.ServiceContractAttribute>, либо определив их в классе с таким же атрибутом. (Базовый пример см. в разделе [как: определение контракта службы](../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md).)  
   
  Методы, не имеющие атрибута <xref:System.ServiceModel.OperationContractAttribute>, не являются операциями служб и не предоставляются службами [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].  
   
@@ -82,7 +68,7 @@ ms.lasthandoff: 04/30/2018
 >  Значения имен параметров в сигнатуре операции являются частью контракта и чувствительны к регистру. Если требуется использовать одно имя параметра локально, но изменить имя опубликованных метаданных, см. раздел <xref:System.ServiceModel.MessageParameterAttribute?displayProperty=nameWithType>.  
   
 #### <a name="data-contracts"></a>Контракты данных  
- Ориентированные на службы приложения, например приложения [!INCLUDE[indigo1](../../../includes/indigo1-md.md)], спроектированы так, чтобы взаимодействовать с наиболее широким рядом клиентских приложений как на платформе Microsoft, так и на других платформах. Для наиболее широких возможностей взаимодействия рекомендуется помечать типы атрибутами <xref:System.Runtime.Serialization.DataContractAttribute> и <xref:System.Runtime.Serialization.DataMemberAttribute> для создания контракта данных - части контракта службы, описывающей данные, которыми могут обмениваться операции службы.  
+ Сервисноориентированные приложения как приложения Windows Communication Foundation (WCF), предназначены для взаимодействия с широким рядом клиентских приложений Майкрософт и других платформ. Для наиболее широких возможностей взаимодействия рекомендуется помечать типы атрибутами <xref:System.Runtime.Serialization.DataContractAttribute> и <xref:System.Runtime.Serialization.DataMemberAttribute> для создания контракта данных - части контракта службы, описывающей данные, которыми могут обмениваться операции службы.  
   
  Контракты данных - включаемые по требованию контракты стилей: тип или элемент данных не сериализуются, если не применен явным образом атрибут контракта данных. Контракты данных не связаны с областью доступа управляемого кода: закрытые элементы данных могут быть сериализованы и отправлены куда-либо для открытого доступа. (Базовый пример контракта данных см. в разделе [как: создать базовый контракт данных для класса или структуры](../../../docs/framework/wcf/feature-details/how-to-create-a-basic-data-contract-for-a-class-or-structure.md).) [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] обрабатывает определение базовых сообщений SOAP, позволяющие функциональные возможности операции, а также для сериализации типов данных в действие и из тела сообщения. Если типы данных сериализуемы, нет необходимости думать об инфраструктуре обмена базовыми сообщениями при создании операций.  
   

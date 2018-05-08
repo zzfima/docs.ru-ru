@@ -1,28 +1,19 @@
 ---
-title: "Реализация шаблона элемента управления GridItem модели автоматизации пользовательского интерфейса"
-ms.custom: 
+title: Реализация шаблона элемента управления GridItem модели автоматизации пользовательского интерфейса
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - control patterns, GridItem
 - UI Automation GridItem control pattern
 - GridItem control pattern
 ms.assetid: bffbae08-fe2a-42fd-ab84-f37187518916
-caps.latest.revision: "15"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: d234ea6f15706a47f6a758528dbe4eda0f3b778a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: bfe7fb8ab64f148d8ca5af0e419ca60690a1acce
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="implementing-the-ui-automation-griditem-control-pattern"></a>Реализация шаблона элемента управления GridItem модели автоматизации пользовательского интерфейса
 > [!NOTE]
@@ -40,7 +31,7 @@ ms.lasthandoff: 12/22/2017
   
 -   Объединенные ячейки будут передавать свои <xref:System.Windows.Automation.Provider.IGridItemProvider.Row%2A> и <xref:System.Windows.Automation.Provider.IGridItemProvider.Column%2A> основании свойств их базовой ячейки привязки в соответствии с определением поставщика автоматизации пользовательского интерфейса. Как правило, это будет самая верхняя строка и крайний левый столбец.  
   
--   <xref:System.Windows.Automation.Provider.IGridItemProvider>Отсутствует активная обработка сетки, таких как объединение или разбиение ячеек.  
+-   <xref:System.Windows.Automation.Provider.IGridItemProvider> Отсутствует активная обработка сетки, таких как объединение или разбиение ячеек.  
   
 -   Элементы управления, реализующие <xref:System.Windows.Automation.Provider.IGridItemProvider> обычно может выполняться (то есть клиент автоматизации пользовательского интерфейса может переходить к соседним элементам управления) с помощью клавиатуры.  
   
@@ -50,11 +41,11 @@ ms.lasthandoff: 12/22/2017
   
 |Обязательные члены|Тип члена|Примечания|  
 |----------------------|-----------------|-----------|  
-|<xref:System.Windows.Automation.Provider.IGridItemProvider.Row%2A>|Свойство|Нет|  
-|<xref:System.Windows.Automation.Provider.IGridItemProvider.Column%2A>|Свойство|Нет|  
-|<xref:System.Windows.Automation.Provider.IGridItemProvider.RowSpan%2A>|Свойство|Нет|  
-|<xref:System.Windows.Automation.Provider.IGridItemProvider.ColumnSpan%2A>|Свойство|Нет|  
-|<xref:System.Windows.Automation.Provider.IGridItemProvider.ContainingGrid%2A>|Свойство|Нет|  
+|<xref:System.Windows.Automation.Provider.IGridItemProvider.Row%2A>|Свойство.|Нет|  
+|<xref:System.Windows.Automation.Provider.IGridItemProvider.Column%2A>|Свойство.|Нет|  
+|<xref:System.Windows.Automation.Provider.IGridItemProvider.RowSpan%2A>|Свойство.|Нет|  
+|<xref:System.Windows.Automation.Provider.IGridItemProvider.ColumnSpan%2A>|Свойство.|Нет|  
+|<xref:System.Windows.Automation.Provider.IGridItemProvider.ContainingGrid%2A>|Свойство.|Нет|  
   
  Этот шаблон элемента управления не имеет связанных методов или событий.  
   

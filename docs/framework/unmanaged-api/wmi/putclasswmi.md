@@ -1,11 +1,7 @@
 ---
-title: "Функция PutClassWmi (Справочник по неуправляемым API)"
-description: "Функция PutClassWmi создает новый класс, или обновляет существующую."
+title: Функция PutClassWmi (Справочник по неуправляемым API)
+description: Функция PutClassWmi создает новый класс, или обновляет существующую.
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - PutClassWmi
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 219cec2096cd3d1dfe1e0d3c0903b62692e444e6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3ce887d59d02cfc2e4d8c183aa495dcc1535853c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="putclasswmi-function"></a>Функция PutClassWmi
 Создает новый класс, или обновляет существующую.  
@@ -53,7 +46,7 @@ HRESULT PutClassWmi (
 `lFlags`   
 [in] Сочетание флагов, влияющих на поведение этой функции. Следующие значения определяются в *WbemCli.h* файла заголовка, или их можно определить как константы в коде: 
 
-|Константа  |Значение  |Описание:  |
+|Константа  |Значение  |Описание  |
 |---------|---------|---------|
 | `WBEM_FLAG_USE_AMENDED_QUALIFIERS` | 0x20000 | Если набор WMI не сохраняет любые квалификаторы с измененные версии. </br> В противном случае набор, предполагается этот объект не локализован, что все квалификаторы — storedwith данного экземпляра. |
 | `WBEM_FLAG_CREATE_OR_UPDATE` | 0 | Создайте класс, если она не существует, или перезаписать его, если он уже существует. |
@@ -75,7 +68,7 @@ HRESULT PutClassWmi (
 
 Следующие значения, возвращаемые этой функцией, определяются в *WbemCli.h* файла заголовка, или их можно определить как константы в коде:
 
-|Константа  |Значение  |Описание:  |
+|Константа  |Значение  |Описание  |
 |---------|---------|---------|
 | `WBEM_E_ACCESS_DENIED` | 0x80041003 | Пользователь не имеет разрешения на создание или изменение классы. |
 | `WBEM_E_FAILED` | 0x80041001 | Произошла неизвестная ошибка. |
@@ -84,7 +77,7 @@ HRESULT PutClassWmi (
 | `WBEM_E_INVALID OPERATION` | 0x80041016 | Недопустимое имя указанного класса. |
 | `WBEM_E_CLASS_HAS_CHILDREN` | 0x80041025 | Попытка сделать изменение, которое аннулирует подкласс. |
 | `WBEM_E_ALREADY_EXISTS` | 0x80041019 | `WBEM_FLAG_CREATE_ONLY` Был указан флаг, но класс уже существует. |
-| `WBEM_E_NOT_FOUND` | 0x80041002 | `WBEM_FLAG_UPDATE_ONLY`был указан в `lFlags`, и этот класс не найден. |
+| `WBEM_E_NOT_FOUND` | 0x80041002 | `WBEM_FLAG_UPDATE_ONLY` был указан в `lFlags`, и этот класс не найден. |
 | `WBEM_E_INCOMPLETE_CLASS` | 0x80041020 | Требуемые свойства для классов, не все заданы. |
 | `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Недостаточно памяти для завершения операции. |
 | `WBEM_E_SHUTTING_DOWN` | 0x80041033 | WMI был, скорее всего, остановлен и перезапускать. Вызовите [ConnectServerWmi](connectserverwmi.md) еще раз. |
@@ -104,7 +97,7 @@ HRESULT PutClassWmi (
   
  **Заголовок:** WMINet_Utils.idl  
   
- **Версии платформы .NET framework:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Версии платформы .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>См. также  
 [WMI и счетчиков производительности (Справочник по неуправляемым API)](index.md)

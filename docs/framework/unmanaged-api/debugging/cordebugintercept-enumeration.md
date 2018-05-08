@@ -1,14 +1,6 @@
 ---
-title: "Перечисление CorDebugIntercept"
-ms.custom: 
+title: Перечисление CorDebugIntercept
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - CorDebugIntercept
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: 3d5b642e-7ef2-428b-a5ae-509c35ed461a
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 814ee1285780d5a3b02aa5926ad4628e339a9114
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3ee2272a43d9f71cd49754a7f4233868b8bb9134
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cordebugintercept-enumeration"></a>Перечисление CorDebugIntercept
 Указывает типы кода, которые могут быть перехвачены (то есть типы, для которых возможно пошаговое выполнение).  
@@ -53,7 +41,7 @@ typedef enum CorDebugIntercept {
   
 ## <a name="members"></a>Участники  
   
-|Член|Описание:|  
+|Член|Описание|  
 |------------|-----------------|  
 |`INTERCEPT_NONE`|Перехват кода невозможен.|  
 |`INTERCEPT_CLASS_INIT`|Допускается перехват конструктора.|  
@@ -73,7 +61,7 @@ typedef enum CorDebugIntercept {
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>См. также  
  [Перечисления отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

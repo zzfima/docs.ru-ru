@@ -1,14 +1,6 @@
 ---
-title: "Функция LoadStringRC"
-ms.custom: 
+title: Функция LoadStringRC
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - LoadStringRC
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: 752e49b4-987c-4c28-a118-1a0c1ed510c5
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 2fd42a576e1315ea029f98b94d8dc84d2b92b5e9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 463bcf451574700d02f933d024ea5c24cedd259d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="loadstringrc-function"></a>Функция LoadStringRC
 Преобразовывает значение HRESULT в сообщение об ошибке с помощью языка и региональных параметров по умолчанию текущего потока.  
@@ -66,10 +54,10 @@ HRESULT LoadStringRC (
 ## <a name="return-value"></a>Возвращаемое значение  
  Этот метод возвращает стандартные коды ошибок модели объектов компонентов (COM), как определено в файле WinError.h, кроме следующих значений.  
   
-|Код возврата|Описание:|  
+|Код возврата|Описание|  
 |-----------------|-----------------|  
 |S_OK|Метод завершился успешно.|  
-|E_INVALIDARG|`szBuffer`имеет значение null или `iMax` равно нулю (0).|  
+|E_INVALIDARG|`szBuffer` имеет значение null или `iMax` равно нулю (0).|  
   
 ## <a name="remarks"></a>Примечания  
  Если метод завершается успешно, `szBuffer` содержит пустую строку.  
@@ -81,7 +69,7 @@ HRESULT LoadStringRC (
   
  **Библиотека:** библиотек MSCorEE.dll и Mscorwks.dll. Используйте MSCorEE.dll вместо Mscorwks.dll, чтобы целевая правильную версию платформы .NET Framework.  
   
- **Версии платформы .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Версии платформы .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>См. также  
  [Функция LoadStringRCEx](../../../../docs/framework/unmanaged-api/hosting/loadstringrcex-function.md)  

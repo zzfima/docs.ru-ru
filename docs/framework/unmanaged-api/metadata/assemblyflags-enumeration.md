@@ -1,14 +1,6 @@
 ---
-title: "Перечисление AssemblyFlags"
-ms.custom: 
+title: Перечисление AssemblyFlags
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - AssemblyFlags
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: 40f9bd9e-16ec-447e-81b0-168c875e9866
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 605817ef23246f708b6cf46a93072cde3003ab43
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2fc6d08e960b0ba82c76945a318ec723546f71b9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="assemblyflags-enumeration"></a>Перечисление AssemblyFlags
 Содержит значения, описывающие функции времени выполнения сборки.  
@@ -51,7 +39,7 @@ typedef enum {
   
 ## <a name="members"></a>Участники  
   
-|Член|Описание:|  
+|Член|Описание|  
 |------------|-----------------|  
 |`afImplicitExportedTypes`|Указывает, что определения экспортируемого типа неявные внутри файлов, которые составляют сборку. В .NET Framework версий 1.0 и 1.1 это значение всегда является предполагается заданы.|  
 |`afImplicitResources`|Указывает, что определения ресурсов неявное внутри файлов, которые составляют сборку. В .NET Framework 1.0 и 1.1 это значение всегда предполагается требуется задать.|  
@@ -69,7 +57,7 @@ typedef enum {
   
  **Библиотека:** включена как ресурс в MsCorEE.dll  
   
- **Версии платформы .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>См. также  
  [Перечисления метаданных](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)  

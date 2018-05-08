@@ -1,14 +1,6 @@
 ---
-title: "Метод IHostSyncManager::CreateCrstWithSpinCount"
-ms.custom: 
+title: Метод IHostSyncManager::CreateCrstWithSpinCount
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IHostSyncManager.CreateCrstWithSpinCount
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 7280fa8c-3639-4abf-91cb-bc343da742d1
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 31830f97cff1c302ee573b8248eb1d83e696ac48
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 50f292ab39bcf77d49d8a363b43b9233f350974c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ihostsyncmanagercreatecrstwithspincount-method"></a>Метод IHostSyncManager::CreateCrstWithSpinCount
 Создает объект критической секции с прокруток для синхронизации.  
@@ -58,7 +46,7 @@ HRESULT CreateCrstWithSpinCount (
   
 |HRESULT|Описание|  
 |-------------|-----------------|  
-|S_OK|`CreateCrstWithSpinCount`успешно возвращен.|  
+|S_OK|`CreateCrstWithSpinCount` успешно возвращен.|  
 |ЗНАЧЕНИЕ HOST_E_CLRNOTAVAILABLE|Общеязыковая среда выполнения (CLR) не был загружен в процесс или находится в состоянии, в котором не может выполнять управляемый код или успешно обработать вызов.|  
 |HOST_E_TIMEOUT|Истекло время ожидания вызова.|  
 |HOST_E_NOT_OWNER|Вызывающий объект не является владельцем блокировки.|  
@@ -67,7 +55,7 @@ HRESULT CreateCrstWithSpinCount (
 |E_OUTOFMEMORY|Не хватает памяти была доступна для создания запрошенной критической секции.|  
   
 ## <a name="remarks"></a>Примечания  
- Счетчик прокруток используется только в системе с несколькими процессорами. Счетчик прокруток указывает количество раз, когда вызывающий поток должен выполнить перед выполнением операции ожидания в семафор, который связан с недоступной критической секцией. Если критическая секция освобождается во время операции прокрутки, вызывающий поток позволяет избежать ожидания операции. `CreateCrstWithSpinCount`зеркально отражает Win32 `InitializeCriticalSectionAndSpinCount` функции.  
+ Счетчик прокруток используется только в системе с несколькими процессорами. Счетчик прокруток указывает количество раз, когда вызывающий поток должен выполнить перед выполнением операции ожидания в семафор, который связан с недоступной критической секцией. Если критическая секция освобождается во время операции прокрутки, вызывающий поток позволяет избежать ожидания операции. `CreateCrstWithSpinCount` зеркально отражает Win32 `InitializeCriticalSectionAndSpinCount` функции.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
@@ -76,7 +64,7 @@ HRESULT CreateCrstWithSpinCount (
   
  **Библиотека:** включена как ресурс в MSCorEE.dll  
   
- **Версии платформы .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Версии платформы .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>См. также  
  [Интерфейс ICLRSyncManager](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-interface.md)  

@@ -1,31 +1,17 @@
 ---
-title: "Привязки Windows Communication Foundation"
-ms.custom: 
+title: Привязки Windows Communication Foundation
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - bindings [WCF]
 ms.assetid: 845df323-be53-4848-92ef-ba67a406484d
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: e878aadf1c7df6042323c008ff52a4be8a9d817f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: d40faff2734095af42f94c60c630dde8494e5975
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="windows-communication-foundation-bindings"></a>Привязки Windows Communication Foundation
-Привязки указывают способ взаимодействия конечных точек службы [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] с другими конечными точками. В привязке должен быть указан как минимум используемый транспорт (например, HTTP или TCP). Через привязки также можно задать другие характеристики, такие как поддержка безопасности и транзакций.  
+Привязки указывают, как конечную точку службы Windows Communication Foundation (WCF) взаимодействует с другими конечными точками. В привязке должен быть указан как минимум используемый транспорт (например, HTTP или TCP). Через привязки также можно задать другие характеристики, такие как поддержка безопасности и транзакций.  
   
 ## <a name="in-this-section"></a>В этом разделе  
  [Общие сведения о привязках WCF](../../../docs/framework/wcf/bindings-overview.md)  

@@ -1,27 +1,18 @@
 ---
-title: "Сопоставление шаблона элемента управления для клиентов автоматизации пользовательского интерфейса"
-ms.custom: 
+title: Сопоставление шаблона элемента управления для клиентов автоматизации пользовательского интерфейса
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - control patterns, for UI Automation clients
 - UI Automation, clients, control patterns for
 ms.assetid: 8b81645b-8be3-4e26-9c98-4fb0fceca06b
-caps.latest.revision: "18"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 6a5f9d115c601775cc4f5b1c61d71d739f7a405b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 571d94c7654038c7ea47721caa35c41d31983016
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="control-pattern-mapping-for-ui-automation-clients"></a>Сопоставление шаблона элемента управления для клиентов автоматизации пользовательского интерфейса
 > [!NOTE]
@@ -72,7 +63,7 @@ ms.lasthandoff: 12/22/2017
 |Spinner|Нет|Range Value, Selection, Value|Нет|  
 |Разворачивающаяся кнопка|Invoke, Expand Collapse|Нет|Нет|  
 |Status Bar|Нет|Grid|Нет|  
-|Вкладка|Выбранное|Scroll|Нет|  
+|Tab|Выбранное|Scroll|Нет|  
 |Tab Item|Selection Item|Нет|Вызвать|  
 |Таблица|Grid, Grid Item, Table, Table Item|Нет|Нет|  
 |Text|Нет|Grid Item, Table Item, Text|Значение|  

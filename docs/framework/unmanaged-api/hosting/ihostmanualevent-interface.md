@@ -1,14 +1,6 @@
 ---
-title: "Интерфейс IHostManualEvent"
-ms.custom: 
+title: Интерфейс IHostManualEvent
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IHostManualEvent
 api_location:
@@ -22,24 +14,20 @@ helpviewer_keywords:
 ms.assetid: 300c2661-b7d1-4c39-b080-9ebdef0fd523
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 0d55500efbe808b2fce16e869422e727b8ed0b93
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 53aaf4c23861666962e5567a6cf9eb9fffc6292f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ihostmanualevent-interface"></a>Интерфейс IHostManualEvent
 Предоставляет реализацию узла представления событие ручного сброса.  
   
 ## <a name="methods"></a>Методы  
   
-|Метод|Описание:|  
+|Метод|Описание|  
 |------------|-----------------|  
 |[Метод Reset](../../../../docs/framework/unmanaged-api/hosting/ihostmanualevent-reset-method.md)|Сбрасывает текущий `IHostManualEvent` несигнальное состояние экземпляра.|  
 |[Метод Set](../../../../docs/framework/unmanaged-api/hosting/ihostmanualevent-set-method.md)|Задает текущий `IHostManualEvent` экземпляр сигнальное состояние.|  
@@ -52,7 +40,7 @@ ms.lasthandoff: 12/22/2017
   
  **Библиотека:** включена как ресурс в MSCorEE.dll  
   
- **Версии платформы .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Версии платформы .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>См. также  
  [Интерфейс ICLRSyncManager](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-interface.md)  

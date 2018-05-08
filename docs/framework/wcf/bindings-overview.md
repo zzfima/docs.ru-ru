@@ -1,31 +1,17 @@
 ---
 title: Общие сведения о привязках Windows Communication Foundation
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - bindings [WCF], overview
 ms.assetid: cfb5842f-e0f9-4c56-a015-f2b33f258232
-caps.latest.revision: 16
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 58b3691c186dc6a33c94d9f8a1af96be488d67df
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: 38661c2ca0e3329f508e2740dfcdf69c0d5e4105
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="windows-communication-foundation-bindings-overview"></a>Общие сведения о привязках Windows Communication Foundation
-Привязки - это объекты, используемые для задания сведений о связи, необходимых для подключения к конечной точке службы [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]. Каждая конечная точка службы [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] требует точного задания привязки. В этом разделе описываются типы сведений о связи, определяемых привязками, элементы привязки и привязки, входящие в состав [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], а также демонстрируется задание привязки для конечной точки.  
+Привязки-это объекты, которые используются для указания сведений о связи, необходимые для подключения к конечной точке службы Windows Communication Foundation (WCF). Каждая конечная точка службы [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] требует точного задания привязки. В этом разделе описываются типы сведений о связи, определяемых привязками, элементы привязки и привязки, входящие в состав [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], а также демонстрируется задание привязки для конечной точки.  
   
 ## <a name="what-a-binding-defines"></a>Что определяет привязка  
  Информация в привязке может быть очень простой или очень сложной. Самые простые привязки указывают только транспортный протокол (такой как HTTP), который должен использоваться для подключения к конечной точке. Как правило, привязка содержит сведения о подключении к конечной точке, которые попадают в одну из следующих категорий.  

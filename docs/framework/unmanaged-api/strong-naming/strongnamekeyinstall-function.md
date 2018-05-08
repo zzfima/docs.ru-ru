@@ -1,14 +1,6 @@
 ---
-title: "Функция StrongNameKeyInstall"
-ms.custom: 
+title: Функция StrongNameKeyInstall
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - StrongNameKeyInstall
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: e32fd546-7757-4681-be3d-658e93281e50
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 9a8dbc84f375b7bbbad47971936650d81c5c63df
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1b6760a6418533f5c8f6cec815d86b4cff68aab1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="strongnamekeyinstall-function"></a>Функция StrongNameKeyInstall
 Импортирует пару открытого и закрытого ключей в контейнере.  
@@ -51,7 +39,7 @@ BOOLEAN StrongNameKeyInstall (
   
 #### <a name="parameters"></a>Параметры  
  `wszKeyContainer`  
- [in] Имя контейнера ключа. `wszKeyContainer`должен быть непустой строкой.  
+ [in] Имя контейнера ключа. `wszKeyContainer` должен быть непустой строкой.  
   
  `pbKeyBlob`  
  [in] Двоичный пару ключей.  
@@ -60,7 +48,7 @@ BOOLEAN StrongNameKeyInstall (
  [in] Размер в байтах для `pbKeyBlob`.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- `true`При успешном завершении; в противном случае `false`.  
+ `true` При успешном завершении; в противном случае `false`.  
   
 ## <a name="remarks"></a>Примечания  
  Используйте [StrongNameKeyDelete](../../../../docs/framework/unmanaged-api/strong-naming/strongnamekeydelete-function.md) функции, чтобы удалить контейнер ключей.  
@@ -74,7 +62,7 @@ BOOLEAN StrongNameKeyInstall (
   
  **Библиотека:** включена как ресурс в MsCorEE.dll  
   
- **Версии платформы .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>См. также  
  [Метод StrongNameKeyInstall](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeyinstall-method.md)  

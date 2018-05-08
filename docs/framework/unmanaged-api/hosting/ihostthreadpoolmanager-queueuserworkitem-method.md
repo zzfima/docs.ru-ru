@@ -1,14 +1,6 @@
 ---
-title: "Метод IHostThreadPoolManager::QueueUserWorkItem"
-ms.custom: 
+title: Метод IHostThreadPoolManager::QueueUserWorkItem
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IHostThreadPoolManager.QueueUserWorkItem
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 41602053-8670-4827-9d61-cbfcba509b9c
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: c0a304c2052192d3cba761a128e15dc463011030
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b458739db024bdbe8cf0fb5a12a5d5f508d332da
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ihostthreadpoolmanagerqueueuserworkitem-method"></a>Метод IHostThreadPoolManager::QueueUserWorkItem
 Помещает в очередь для выполнения функции и указывает объект, содержащий данные для использования этой функцией. Функция выполняется, когда поток становится доступной.  
@@ -62,7 +50,7 @@ HRESULT QueueUserWorkItem (
   
 |HRESULT|Описание|  
 |-------------|-----------------|  
-|S_OK|`QueueUserWorkItem`успешно возвращен.|  
+|S_OK|`QueueUserWorkItem` успешно возвращен.|  
 |ЗНАЧЕНИЕ HOST_E_CLRNOTAVAILABLE|Общеязыковая среда выполнения (CLR) не был загружен в процесс или находится в состоянии, в котором не может выполнять управляемый код или успешно обработать вызов.|  
 |HOST_E_TIMEOUT|Истекло время ожидания вызова.|  
 |HOST_E_NOT_OWNER|Вызывающий объект не является владельцем блокировки.|  
@@ -70,7 +58,7 @@ HRESULT QueueUserWorkItem (
 |E_FAIL|Неизвестная Неустранимая ошибка. Если метод вернет значение E_FAIL, среда CLR больше не может использоваться в процессе. Последующие вызовы размещение методы возвращают значение HOST_E_CLRNOTAVAILABLE.|  
   
 ## <a name="remarks"></a>Примечания  
- `QueueUserWorkItem`ставит в очередь рабочий элемент в рабочем потоке пула потоков. Его сигнатура и типы параметров идентичны соответствующей функции Win32, которая имеет то же имя. Дополнительные сведения см. в документации по платформе Windows.  
+ `QueueUserWorkItem` ставит в очередь рабочий элемент в рабочем потоке пула потоков. Его сигнатура и типы параметров идентичны соответствующей функции Win32, которая имеет то же имя. Дополнительные сведения см. в документации по платформе Windows.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
@@ -79,7 +67,7 @@ HRESULT QueueUserWorkItem (
   
  **Библиотека:** включена как ресурс в MSCorEE.dll  
   
- **Версии платформы .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Версии платформы .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>См. также  
  <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A>  

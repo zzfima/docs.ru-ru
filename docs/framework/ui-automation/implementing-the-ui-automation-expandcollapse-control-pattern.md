@@ -1,28 +1,19 @@
 ---
-title: "Реализация шаблона элемента управления ExpandCollapse модели автоматизации пользовательского интерфейса"
-ms.custom: 
+title: Реализация шаблона элемента управления ExpandCollapse модели автоматизации пользовательского интерфейса
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - UI Automation, ExpandCollapse control pattern
 - ExpandCollapse control pattern
 - control patterns, ExpandCollapse
 ms.assetid: 1dbabb8c-0d68-47c1-a35e-1c01cb01af26
-caps.latest.revision: "25"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 8e956008c6b80e0b2184adcf0a45b70efa21d752
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f593fb09e8c1056c28d351bfdf0218a0161fd9e4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="implementing-the-ui-automation-expandcollapse-control-pattern"></a>Реализация шаблона элемента управления ExpandCollapse модели автоматизации пользовательского интерфейса
 > [!NOTE]
@@ -61,10 +52,10 @@ ms.lasthandoff: 12/22/2017
   
 |Обязательные члены|Тип члена|Примечания|  
 |----------------------|-----------------|-----------|  
-|<xref:System.Windows.Automation.Provider.IExpandCollapseProvider.ExpandCollapseState%2A>|Свойство|Нет|  
+|<xref:System.Windows.Automation.Provider.IExpandCollapseProvider.ExpandCollapseState%2A>|Свойство.|Нет|  
 |<xref:System.Windows.Automation.ExpandCollapsePattern.Expand%2A>|Метод|Нет|  
 |<xref:System.Windows.Automation.ExpandCollapsePattern.Collapse%2A>|Метод|Нет|  
-|<xref:System.Windows.Automation.AutomationPropertyChangedEventHandler>|Событие|Этот элемент управления не имеет связанных событий; используйте этот универсальный делегат.|  
+|<xref:System.Windows.Automation.AutomationPropertyChangedEventHandler>|событие|Этот элемент управления не имеет связанных событий; используйте этот универсальный делегат.|  
   
 <a name="Exceptions"></a>   
 ## <a name="exceptions"></a>Исключения  

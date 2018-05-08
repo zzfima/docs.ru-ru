@@ -1,14 +1,6 @@
 ---
-title: "Метод ISymUnmanagedReader::UpdateSymbolStore"
-ms.custom: 
+title: Метод ISymUnmanagedReader::UpdateSymbolStore
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ISymUnmanagedReader.UpdateSymbolStore
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 4a17d723-86b9-4f27-bd0d-b70c3259011c
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 267037cbdf9e9bf45454bd8b584563ba1ecd847d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 81f9db872e9904d2297221e266be710837d0fb66
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="isymunmanagedreaderupdatesymbolstore-method"></a>Метод ISymUnmanagedReader::UpdateSymbolStore
 Обновляет существующее хранилище символов разностным хранилищем символов. Этот метод используется в сценариях edit and continue для обновления хранилища символов в соответствии с изменениями в исходном переносимом исполняемом (PE) файле.  

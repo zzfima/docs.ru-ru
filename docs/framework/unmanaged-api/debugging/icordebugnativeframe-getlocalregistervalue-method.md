@@ -1,14 +1,6 @@
 ---
-title: "Метод ICorDebugNativeFrame::GetLocalRegisterValue"
-ms.custom: 
+title: Метод ICorDebugNativeFrame::GetLocalRegisterValue
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorDebugNativeFrame.GetLocalRegisterValue
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 5ccb74f3-f891-430c-b70a-e370624edde2
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 03f528547797cd7eaf7d18ba63203bcbf0300e69
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b408654f367bc846dc878fb8412eb3e896dd192a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icordebugnativeframegetlocalregistervalue-method"></a>Метод ICorDebugNativeFrame::GetLocalRegisterValue
 Возвращает значение аргумента или локальной переменной, которая хранится в регистре, заданном для данного кадра машинного кода.  
@@ -72,7 +60,7 @@ HRESULT GetLocalRegisterValue (
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>См. также  
  

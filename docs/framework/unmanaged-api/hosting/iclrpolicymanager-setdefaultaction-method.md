@@ -1,14 +1,6 @@
 ---
-title: "Метод ICLRPolicyManager::SetDefaultAction"
-ms.custom: 
+title: Метод ICLRPolicyManager::SetDefaultAction
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICLRPolicyManager.SetDefaultAction
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: f9411e7a-27df-451f-9f6c-d643d6a7a7ce
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 751853aaf4322c15b44bb9b912d293a081c24ba8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9a183c7491ad5d67bc2c68edba3ef2d54839da12
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="iclrpolicymanagersetdefaultaction-method"></a>Метод ICLRPolicyManager::SetDefaultAction
 Задает действие политики, которое общеязыковой среды выполнения (CLR), выполняемое при возникновении указанной операции.  
@@ -58,7 +46,7 @@ HRESULT SetDefaultAction (
   
 |HRESULT|Описание|  
 |-------------|-----------------|  
-|S_OK|`SetDefaultAction`успешно возвращен.|  
+|S_OK|`SetDefaultAction` успешно возвращен.|  
 |ЗНАЧЕНИЕ HOST_E_CLRNOTAVAILABLE|Среда CLR не загружена в процесс или находится в состоянии, в котором не может выполнять управляемый код или успешно обработать вызов.|  
 |HOST_E_TIMEOUT|Истекло время ожидания вызова.|  
 |HOST_E_NOT_OWNER|Вызывающий объект не является владельцем блокировки.|  
@@ -67,9 +55,9 @@ HRESULT SetDefaultAction (
 |E_INVALIDARG|Недопустимый `action` был указан для `operation`, или было задано недопустимое значение для `operation`.|  
   
 ## <a name="remarks"></a>Примечания  
- Не все значения действий политики можно указать в качестве поведения по умолчанию для операций среды CLR. `SetDefaultAction`обычно используется только для повышения поведение. Например, узел может указать, что прерывания потока превратить грубые безотлагательно, однако нельзя указать обратное. В следующей таблице описаны допустимые `action` значения для каждого возможного `operation` значение.  
+ Не все значения действий политики можно указать в качестве поведения по умолчанию для операций среды CLR. `SetDefaultAction` обычно используется только для повышения поведение. Например, узел может указать, что прерывания потока превратить грубые безотлагательно, однако нельзя указать обратное. В следующей таблице описаны допустимые `action` значения для каждого возможного `operation` значение.  
   
-|Значение для`operation`|Допустимые значения`action`|  
+|Значение для `operation`|Допустимые значения `action`|  
 |---------------------------|-------------------------------|  
 |OPR_ThreadAbort|-eAbortThread<br />-eRudeAbortThread<br />-eUnloadAppDomain<br />-eRudeUnloadAppDomain<br />-eExitProcess<br />-eFastExitProcess<br />-eRudeExitProcess<br />-eDisableRuntime|  
 |OPR_ThreadRudeAbortInNonCriticalRegion<br /><br /> OPR_ThreadRudeAbortInCriticalRegion|-eRudeAbortThread<br />-eUnloadAppDomain<br />-eRudeUnloadAppDomain<br />-eExitProcess<br />-eFastExitProcess<br />-eRudeExitProcess<br />-eDisableRuntime|  
@@ -85,7 +73,7 @@ HRESULT SetDefaultAction (
   
  **Библиотека:** включена как ресурс в MSCorEE.dll  
   
- **Версии платформы .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Версии платформы .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>См. также  
  [Перечисление EClrOperation](../../../../docs/framework/unmanaged-api/hosting/eclroperation-enumeration.md)  

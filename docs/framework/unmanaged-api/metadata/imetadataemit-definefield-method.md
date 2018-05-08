@@ -1,14 +1,6 @@
 ---
-title: "Метод IMetaDataEmit::DefineField"
-ms.custom: 
+title: Метод IMetaDataEmit::DefineField
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IMetaDataEmit.DefineField
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 6b5be4fc-2e86-499c-8b09-833160bca767
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: e2c4b5604c3daec78744eb8902a30750571b9f82
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fd0ddda898911da2c96a53d941c4290af9028154
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="imetadataemitdefinefield-method"></a>Метод IMetaDataEmit::DefineField
 Создает определение для поля с заданной подписью метаданных и получает маркер для этого определения поля.  
@@ -71,7 +59,7 @@ HRESULT DefineField (
  [in] Число байт в `pvSigBlob`.  
   
  `dwCPlusTypeFlage`  
- [in] `ELEMENT_TYPE_`  *\**  Для постоянного значения. Это `CorElementType` значение. Если не определить постоянное значение для поля, используйте `ELEMENT_TYPE_END`.  
+ [in] `ELEMENT_TYPE_` *\** Для постоянного значения. Это `CorElementType` значение. Если не определить постоянное значение для поля, используйте `ELEMENT_TYPE_END`.  
   
  `pValue`  
  [in] Постоянное значение для поля.  
@@ -89,7 +77,7 @@ HRESULT DefineField (
   
  **Библиотека:** используется как ресурс в MSCorEE.dll  
   
- **Версии платформы .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>См. также  
  [Интерфейс IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)  

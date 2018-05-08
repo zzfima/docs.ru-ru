@@ -1,29 +1,15 @@
 ---
 title: Справочник по исключениям
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: adc19950-5f79-4045-8403-bf6310118ee3
-caps.latest.revision: 6
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 7b82c1821362b874f38f9419269708a7f61ab690
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7034c3bbc25ab7ae6fea1d03c42ecde2e0130ee0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="exceptions-reference"></a>Справочник по исключениям
-В данном разделе перечислены все исключения, создаваемые [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] в следующих областях:  
+В этом разделе перечислены все исключения в следующих областях, созданный Windows Communication Foundation (WCF):  
   
  [IdentityModel](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/identitymodel-exceptions.md)  
   

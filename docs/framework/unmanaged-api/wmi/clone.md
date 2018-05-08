@@ -1,11 +1,7 @@
 ---
-title: "Функция клона (Справочник по неуправляемым API)"
-description: "Функция клон возвращает новый объект, который представляет собой полный клон текущего."
+title: Функция клона (Справочник по неуправляемым API)
+description: Функция клон возвращает новый объект, который представляет собой полный клон текущего.
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - Clone
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 270150bb674ee7f9a71cf28008c663e3b833600d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c5841c89cf394502f68381dfed42593c9debdcb1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="clone-function"></a>Функция клонирования
 Возвращает новый объект, который представляет собой полный клон текущего объекта.   
@@ -59,10 +52,10 @@ HRESULT Clone (
 
 Следующие значения, возвращаемые этой функцией, определяются в *WbemCli.h* файла заголовка, или их можно определить как константы в коде:
 
-|Константа  |Значение  |Описание:  |
+|Константа  |Значение  |Описание  |
 |---------|---------|---------|
 | `WBEM_E_FAILED` | 0x80041001 | Произошел общий сбой. |
-| `WBEM_E_INVALID_PARAMETER` | 0x80041008 | `null`был указан в качестве параметра, и он не является допустимым в этом коде. |
+| `WBEM_E_INVALID_PARAMETER` | 0x80041008 | `null` был указан в качестве параметра, и он не является допустимым в этом коде. |
 | `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Не хватает памяти доступен для клонирования объекта. |
 | `WBEM_S_NO_ERROR` | 0 | Успешный вызов функции.  |
   
@@ -77,7 +70,7 @@ HRESULT Clone (
   
  **Заголовок:** WMINet_Utils.idl  
   
- **Версии платформы .NET framework:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Версии платформы .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>См. также  
 [WMI и счетчиков производительности (Справочник по неуправляемым API)](index.md)

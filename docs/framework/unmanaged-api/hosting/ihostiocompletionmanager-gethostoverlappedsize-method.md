@@ -1,14 +1,6 @@
 ---
-title: "Метод IHostIoCompletionManager::GetHostOverlappedSize"
-ms.custom: 
+title: Метод IHostIoCompletionManager::GetHostOverlappedSize
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IHostIoCompletionManager.GetHostOverlappedSize
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 2902578b-d5e2-4f8d-a103-0c7b6dceda9e
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 41fc1a4a0debe0c302115c79962c0da50cc4ee37
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6713fdb822babf607752c1823a32dae43a7d567e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ihostiocompletionmanagergethostoverlappedsize-method"></a>Метод IHostIoCompletionManager::GetHostOverlappedSize
 Получает размер любых пользовательских данных, которые должен узла для добавления запросов ввода-вывода.  
@@ -54,7 +42,7 @@ HRESULT GetHostOverlappedSize (
   
 |HRESULT|Описание|  
 |-------------|-----------------|  
-|S_OK|`GetHostOverlappedSize`успешно возвращен.|  
+|S_OK|`GetHostOverlappedSize` успешно возвращен.|  
 |ЗНАЧЕНИЕ HOST_E_CLRNOTAVAILABLE|Среда CLR не загружена в процесс или находится в состоянии, в котором не может выполнять управляемый код или успешно обработать вызов.|  
 |HOST_E_TIMEOUT|Истекло время ожидания вызова.|  
 |HOST_E_NOT_OWNER|Вызывающий объект не является владельцем блокировки.|  
@@ -62,12 +50,12 @@ HRESULT GetHostOverlappedSize (
 |E_FAIL|Неизвестная Неустранимая ошибка. Если метод вернет значение E_FAIL, среда CLR больше не может использоваться в процессе. Последующие вызовы размещение методы возвращают значение HOST_E_CLRNOTAVAILABLE.|  
   
 ## <a name="remarks"></a>Примечания  
- Все асинхронные вызовы ввода-вывода для API-интерфейсы платформы Windows принимают Win32 `OVERLAPPED` object, который предоставляет сведения, такие как положение указателя файла. Чтобы сохранять состояние, приложений, вызовов асинхронных операций ввода-вывода обычно добавить пользовательские данные в структуру. `GetHostOverlappedSize`и [IHostIoCompletionManager::InitializeHostOverlapped](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-initializehostoverlapped-method.md) дают возможность для узла включить такие пользовательские данные.  
+ Все асинхронные вызовы ввода-вывода для API-интерфейсы платформы Windows принимают Win32 `OVERLAPPED` object, который предоставляет сведения, такие как положение указателя файла. Чтобы сохранять состояние, приложений, вызовов асинхронных операций ввода-вывода обычно добавить пользовательские данные в структуру. `GetHostOverlappedSize` и [IHostIoCompletionManager::InitializeHostOverlapped](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-initializehostoverlapped-method.md) дают возможность для узла включить такие пользовательские данные.  
   
  Среда CLR вызывает `GetHostOverlappedSize` метод для определения размера пользовательских данных, который планирует добавить узел `OVERLAPPED` объекта.  
   
 > [!NOTE]
->  `GetHostOverlappedSize`вызывается только один раз. Пользовательские данные узла должны быть одинакового размера для каждого запроса ввода-вывода.  
+>  `GetHostOverlappedSize` вызывается только один раз. Пользовательские данные узла должны быть одинакового размера для каждого запроса ввода-вывода.  
   
 > [!IMPORTANT]
 >  Размер `OVERLAPPED` сам объект не включается в значение `pcbSize`.  
@@ -81,7 +69,7 @@ HRESULT GetHostOverlappedSize (
   
  **Библиотека:** включена как ресурс в MSCorEE.dll  
   
- **Версии платформы .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Версии платформы .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>См. также  
  <xref:System.Threading.NativeOverlapped>  

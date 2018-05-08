@@ -1,14 +1,6 @@
 ---
-title: "Интерфейс IEnumDefinitionIdentity"
-ms.custom: 
+title: Интерфейс IEnumDefinitionIdentity
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IEnumDefinitionIdentity
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: 8263e75d-251b-4abc-8a1a-c62884142232
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 79e2a35a455407715a05e826d31c5d5ab05a02ad
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 34186ee8825c0981ec095cf855c76ff5f800907d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ienumdefinitionidentity-interface"></a>Интерфейс IEnumDefinitionIdentity
 Служит в качестве перечислитель для коллекции `IDefinitionIdentity` объектов.  
@@ -64,7 +52,7 @@ IEnumDefinitionIdentity : IUnknown {
   
 ## <a name="methods"></a>Методы  
   
-|Метод|Описание:|  
+|Метод|Описание|  
 |------------|-----------------|  
 |`IEnumDefinitionIdentity::Clone`|Получает указатель интерфейса на новый `IEnumDefinitionIdentity` , содержащий те же элементы, как это `IEnumDefinitionIdentity`.|  
 |`IEnumDefinitionIdentity::Next`|Возвращает заданное число `IDefinitionIdentity` объектов, начиная с текущей позиции.|  
@@ -76,7 +64,7 @@ IEnumDefinitionIdentity : IUnknown {
   
  **Заголовок:** Isolation.h  
   
- **Версии платформы .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Версии платформы .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>См. также  
  [Интерфейсы Fusion](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)  

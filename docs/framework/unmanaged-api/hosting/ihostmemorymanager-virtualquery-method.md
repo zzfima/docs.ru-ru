@@ -1,14 +1,6 @@
 ---
-title: "Метод IHostMemoryManager::VirtualQuery"
-ms.custom: 
+title: Метод IHostMemoryManager::VirtualQuery
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IHostMemoryManager.VirtualQuery
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 757af1e6-b9e8-49e7-b5db-342be3aa205f
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 4fd893cd92f7e7621aefe59595cfd9905bc77afd
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 68a9d6ad7470ffaf1143a4a8e3134f20edb9e3c5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ihostmemorymanagervirtualquery-method"></a>Метод IHostMemoryManager::VirtualQuery
 Служит в качестве логической программой-оболочкой для соответствующей функции Win32. Реализация Win32 `VirtualQuery` извлекает сведения о диапазоне страниц в виртуальном адресном пространстве вызывающего процесса.  
@@ -66,7 +54,7 @@ HRESULT VirtualQuery (
   
 |HRESULT|Описание|  
 |-------------|-----------------|  
-|S_OK|`VirtualQuery`успешно возвращен.|  
+|S_OK|`VirtualQuery` успешно возвращен.|  
 |ЗНАЧЕНИЕ HOST_E_CLRNOTAVAILABLE|Общеязыковая среда выполнения (CLR) не был загружен в процесс или находится в состоянии, в котором не может выполнять управляемый код или успешно обработать вызов.|  
 |HOST_E_TIMEOUT|Истекло время ожидания вызова.|  
 |HOST_E_NOT_OWNER|Вызывающий объект не является владельцем блокировки.|  
@@ -74,7 +62,7 @@ HRESULT VirtualQuery (
 |E_FAIL|Неизвестная Неустранимая ошибка. Если метод вернет значение E_FAIL, среда CLR больше не может использоваться в процессе. Последующие вызовы размещение методы возвращают значение HOST_E_CLRNOTAVAILABLE.|  
   
 ## <a name="remarks"></a>Примечания  
- `VirtualQuery`Предоставляет сведения о диапазоне страниц в виртуальном адресном пространстве вызывающего процесса. Эта реализация задает значение `pResult` параметр для число байтов, возвращаемых в буфере сведения, а также возвращает значение HRESULT. В Win32 `VirtualQuery` функции, возвращаемое значение равно размеру буфера. Дополнительные сведения см. в документации по платформе Windows.  
+ `VirtualQuery` Предоставляет сведения о диапазоне страниц в виртуальном адресном пространстве вызывающего процесса. Эта реализация задает значение `pResult` параметр для число байтов, возвращаемых в буфере сведения, а также возвращает значение HRESULT. В Win32 `VirtualQuery` функции, возвращаемое значение равно размеру буфера. Дополнительные сведения см. в документации по платформе Windows.  
   
 > [!IMPORTANT]
 >  Реализация операционной системы `VirtualQuery` не приводит к взаимоблокировке и может работать до завершения при случайной приостановки потоков в пользовательском коде. Будьте осторожны значительные реализацию версии данного метода.  
@@ -86,7 +74,7 @@ HRESULT VirtualQuery (
   
  **Библиотека:** включена как ресурс в MSCorEE.dll  
   
- **Версии платформы .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Версии платформы .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>См. также  
  [Интерфейс IHostMemoryManager](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-interface.md)
