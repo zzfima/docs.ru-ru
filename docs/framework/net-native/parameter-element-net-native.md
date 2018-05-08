@@ -1,24 +1,14 @@
 ---
-title: "Элемент &lt;Parameter&gt; (машинный код .NET)"
-ms.custom: 
+title: Элемент &lt;Parameter&gt; (машинный код .NET)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 22aaa1f3-596f-4733-93db-f4bcabcb5240
-caps.latest.revision: "14"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 820c36abda104bbf748e5b3a7838f3c7715048e2
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a5c72919327c1186f5758f03680ff68037da3632
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ltparametergt-element-net-native"></a>Элемент &lt;Parameter&gt; (машинный код .NET)
 Применяет политику отражения к типу аргумента, переданного методу.  
@@ -44,7 +34,7 @@ ms.lasthandoff: 12/22/2017
   
 ### <a name="attributes"></a>Атрибуты  
   
-|Атрибут|Тип атрибута|Описание:|  
+|Атрибут|Тип атрибута|Описание|  
 |---------------|--------------------|-----------------|  
 |`Name`|Общие правила|Обязательный атрибут. Имя параметра. Например, сигнатура метода `String.CompareTo(Object value)`, значение `Name` — атрибут «value».|  
 |`Activate`|Отражение|Необязательный атрибут. Управляет доступом среды выполнения к конструкторам для включения активации экземпляров.|  
@@ -60,13 +50,13 @@ ms.lasthandoff: 12/22/2017
   
 ## <a name="name-attribute"></a>Name - атрибут  
   
-|Значение|Описание:|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |*parameter_name*|Имя параметра метода, к которому применяется политика. Например, сигнатура метода `String.CompareTo(Object value)`, значение `Name` — атрибут «value».|  
   
 ## <a name="all-other-attributes"></a>Все остальные атрибуты  
   
-|Значение|Описание:|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |*policy_setting*|Параметр, применяемый для этого типа политики. Допустимые значения: `All`, `Public`, `PublicAndInternal`, `Required Public`, `Required PublicAndInternal` и `Required All`. Дополнительные сведения см. в разделе [Параметры политики директив среды выполнения](../../../docs/framework/net-native/runtime-directive-policy-settings.md).|  
   
@@ -75,7 +65,7 @@ ms.lasthandoff: 12/22/2017
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
 |[\<Method>](../../../docs/framework/net-native/method-element-net-native.md)|Применяет политику отражения среды выполнения к конструктору или методу.|  
   

@@ -1,24 +1,14 @@
 ---
-title: "Элемент &lt;Type&gt; (машинный код .NET)"
-ms.custom: 
+title: Элемент &lt;Type&gt; (машинный код .NET)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 1e88d368-a886-4f1e-8eb6-6127979a9fce
-caps.latest.revision: "33"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 654f3a360038266d246438838c9ad5821b0a50b9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ad20cf4528f5ca7d23f80570cc34712d33b74d93
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="lttypegt-element-net-native"></a>Элемент &lt;Type&gt; (машинный код .NET)
 Применяет политику выполнения для конкретного типа, например класса или структуры.  
@@ -44,7 +34,7 @@ ms.lasthandoff: 12/22/2017
   
 ### <a name="attributes"></a>Атрибуты  
   
-|Атрибут|Тип атрибута|Описание:|  
+|Атрибут|Тип атрибута|Описание|  
 |---------------|--------------------|-----------------|  
 |`Name`|Общие правила|Обязательный атрибут. Задает имя типа.|  
 |`Activate`|Отражение|Необязательный атрибут. Управляет доступом среды выполнения к конструкторам для включения активации экземпляров.|  
@@ -60,19 +50,19 @@ ms.lasthandoff: 12/22/2017
   
 ## <a name="name-attribute"></a>Name - атрибут  
   
-|Значение|Описание:|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |*type_name*|Имя типа. Если этот элемент `<Type>` является дочерним элементом [\<Namespace>](../../../docs/framework/net-native/namespace-element-net-native.md) или другого элемента `<Type>`, то атрибут *type_name* может содержать имя типа без его пространства имен. В противном случае атрибут *type_name* должен содержать полное имя типа.|  
   
 ## <a name="all-other-attributes"></a>Все остальные атрибуты  
   
-|Значение|Описание:|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |*policy_setting*|Параметр, применяемый для этого типа политики. Допустимые значения `All`, `Auto`, `Excluded`, `Public`, `PublicAndInternal`, `Required Public`, `Required PublicAndInternal` и `Required All`. Дополнительные сведения см. в разделе [Параметры политики директив среды выполнения](../../../docs/framework/net-native/runtime-directive-policy-settings.md).|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
 |[\<AttributeImplies>](../../../docs/framework/net-native/attributeimplies-element-net-native.md)|Если содержащий тип является атрибутом, определяет политику выполнения для элементов кода, к которым применяется этот атрибут.|  
 |[\<Event>](../../../docs/framework/net-native/event-element-net-native.md)|Применяет политику отражения события, относящегося к этому типу.|  
@@ -88,7 +78,7 @@ ms.lasthandoff: 12/22/2017
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
 |[\<Application>](../../../docs/framework/net-native/application-element-net-native.md)|Служит в качестве контейнера для типов и членов типов приложения, метаданные которого доступны для отражения во время выполнения.|  
 |[\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md)|Применяет политику отражения ко всем типам в указанной сборке.|  

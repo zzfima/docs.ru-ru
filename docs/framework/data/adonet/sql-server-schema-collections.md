@@ -1,24 +1,12 @@
 ---
-title: "Коллекции схемы SQL Server"
-ms.custom: 
+title: Коллекции схемы SQL Server
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: c6403cc3-d78b-4f85-bab1-ada7a3446ec5
-caps.latest.revision: "5"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: e95c6dc6bceb367000f4aa174a368bf046bc1b93
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 248e5f4caf47f09742358240fa43f46169f0b1e5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sql-server-schema-collections"></a>Коллекции схемы SQL Server
 Поставщик данных Microsoft .NET Framework для SQL Server поддерживает дополнительные коллекции схем помимо общих коллекций. Коллекции схем незначительно меняются в зависимости от используемой версии SQL Server. Чтобы получить список поддерживаемых коллекций схем, вызовите **GetSchema** без аргументов или с именем коллекции схем «MetaDataCollections». При этом будет возвращена <xref:System.Data.DataTable> со списком поддерживаемых коллекций схем, число ограничений, которые каждая из них поддерживает, и число идентификационных частей, которые в них используются.  
@@ -33,7 +21,7 @@ ms.lasthandoff: 01/17/2018
   
 ## <a name="foreign-keys"></a>Foreign Keys  
   
-|ColumnName|DataType|Описание:|  
+|ColumnName|DataType|Описание|  
 |----------------|--------------|-----------------|  
 |CONSTRAINT_CATALOG|String|Каталог, к которому принадлежит ограничение.|  
 |CONSTRAINT_SCHEMA|String|Схема, которая содержит ограничение.|  
@@ -62,7 +50,7 @@ ms.lasthandoff: 01/17/2018
   
 |ColumnName|DataType|Описание|  
 |----------------|--------------|-----------------|  
-|type_desc|Строковое|Индекс имеет один из указанных ниже типов.<br /><br /> -HEAP<br />-КЛАСТЕР<br />-НЕКЛАСТЕРИЗОВАННЫЙ<br />-   XML<br />-ПРОСТРАНСТВЕННЫХ|  
+|type_desc|Строковое|Индекс имеет один из указанных ниже типов.<br /><br /> -HEAP<br />-КЛАСТЕР<br />-НЕКЛАСТЕРИЗОВАННЫЙ<br />-XML<br />-ПРОСТРАНСТВЕННЫХ|  
   
 ## <a name="indexcolumns"></a>IndexColumns  
   
@@ -81,7 +69,7 @@ ms.lasthandoff: 01/17/2018
   
 ## <a name="procedures"></a>Процедуры  
   
-|ColumnName|DataType|Описание:|  
+|ColumnName|DataType|Описание|  
 |----------------|--------------|-----------------|  
 |SPECIFIC_CATALOG|String|Собственное имя для каталога.|  
 |SPECIFIC_SCHEMA|String|Определенное имя схемы.|  
@@ -95,7 +83,7 @@ ms.lasthandoff: 01/17/2018
   
 ## <a name="procedure-parameters"></a>ProcedureParameters  
   
-|ColumnName|DataType|Описание:|  
+|ColumnName|DataType|Описание|  
 |----------------|--------------|-----------------|  
 |SPECIFIC_CATALOG|String|Имя каталога процедуры, для которой это является параметром.|  
 |SPECIFIC_SCHEMA|String|Схема, содержащая процедуру, частью которой является этот параметр.|  
@@ -123,7 +111,7 @@ ms.lasthandoff: 01/17/2018
   
 ## <a name="tables"></a>Таблицы  
   
-|ColumnName|DataType|Описание:|  
+|ColumnName|DataType|Описание|  
 |----------------|--------------|-----------------|  
 |TABLE_CATALOG|String|Каталог таблицы.|  
 |TABLE_SCHEMA|String|Схема, которая содержит таблицу.|  
@@ -132,7 +120,7 @@ ms.lasthandoff: 01/17/2018
   
 ## <a name="columns"></a>Столбцы  
   
-|ColumnName|DataType|Описание:|  
+|ColumnName|DataType|Описание|  
 |----------------|--------------|-----------------|  
 |TABLE_CATALOG|String|Каталог таблицы.|  
 |TABLE_SCHEMA|String|Схема, которая содержит таблицу.|  
@@ -167,7 +155,7 @@ ms.lasthandoff: 01/17/2018
   
  Для коллекции схем AllColumns установлены те же ограничения и результирующая схема DataTable, что и для коллекции схем Columns. Единственное отличие заключается в том, что коллекция схем AllColumns включает столбцы, представляющие наборы столбцов, которые не входят в коллекцию схем Columns. Эти столбцы описаны в приведенной ниже таблице.  
   
-|ColumnName|DataType|Описание:|  
+|ColumnName|DataType|Описание|  
 |----------------|--------------|-----------------|  
 |TABLE_CATALOG|String|Каталог таблицы.|  
 |TABLE_SCHEMA|String|Схема, которая содержит таблицу.|  
@@ -194,7 +182,7 @@ ms.lasthandoff: 01/17/2018
 ### <a name="columnsetcolumns-sql-server-2008"></a>ColumnSetColumns (SQL Server 2008)  
  Начиная с .NET Framework 3.5 с пакетом обновления 1 (SP1) и SQL Server 2008, для поддержки разреженных столбцов была добавлена коллекция схем ColumnSetColumns. Коллекция схем ColumnSetColumns не поддерживается в предыдущих версиях .NET Framework и SQL Server. Коллекция схем ColumnSetColumns возвращает схему для всех столбцов в наборе столбцов. Эти столбцы описаны в приведенной ниже таблице.  
   
-|ColumnName|DataType|Описание:|  
+|ColumnName|DataType|Описание|  
 |----------------|--------------|-----------------|  
 |TABLE_CATALOG|String|Каталог таблицы.|  
 |TABLE_SCHEMA|String|Схема, которая содержит таблицу.|  
@@ -223,13 +211,13 @@ ms.lasthandoff: 01/17/2018
 |ColumnName|DataType|Описание|  
 |----------------|--------------|-----------------|  
 |uid|Int16|Идентификатор пользователя, уникальный в этой базе данных. 1 — это владелец базы данных.|  
-|user_name|String|Имя пользователя или имя группы, уникальные в этой базе данных.|  
+|имя_пользователя|String|Имя пользователя или имя группы, уникальные в этой базе данных.|  
 |createdate|DateTime|Дата добавления этой учетной записи.|  
 |updatedate|DateTime|Дата последнего изменения учетной записи.|  
   
 ## <a name="views"></a>Представления  
   
-|ColumnName|DataType|Описание:|  
+|ColumnName|DataType|Описание|  
 |----------------|--------------|-----------------|  
 |TABLE_CATALOG|String|Каталог представления.|  
 |TABLE_SCHEMA|String|Схема, которая содержит представление.|  
@@ -239,7 +227,7 @@ ms.lasthandoff: 01/17/2018
   
 ## <a name="viewcolumns"></a>ViewColumns  
   
-|ColumnName|DataType|Описание:|  
+|ColumnName|DataType|Описание|  
 |----------------|--------------|-----------------|  
 |VIEW_CATALOG|String|Каталог представления.|  
 |VIEW_SCHEMA|String|Схема, которая содержит представление.|  

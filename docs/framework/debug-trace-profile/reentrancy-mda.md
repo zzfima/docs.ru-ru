@@ -1,13 +1,6 @@
 ---
-title: "MDA с возможностью повторного входа"
-ms.custom: 
+title: MDA с возможностью повторного входа
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - unmanaged code, debugging
 - transitioning threads unmanaged to managed code
@@ -20,21 +13,18 @@ helpviewer_keywords:
 - managed code, debugging
 - native debugging, MDAs
 ms.assetid: 7240c3f3-7df8-4b03-bbf1-17cdce142d45
-caps.latest.revision: "8"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a305658068e6d59f27957879c053b18742ea642f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5aea903a7b16491a84998d8290270044e167b79f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="reentrancy-mda"></a>MDA с возможностью повторного входа
 Помощник по отладке управляемого кода `reentrancy` (MDA) активируется при попытке выполнить переход из машинного кода в управляемый в тех случаях, когда ранее не был выполнен упорядоченный переход из управляемого кода в машинный.  
   
-## <a name="symptoms"></a>Признаки  
+## <a name="symptoms"></a>Симптомы  
  При переходе из машинного кода в управляемый повреждается куча объекта или возникает другая серьезная ошибка.  
   
  Переход в потоке между управляемым и машинным кодом в любом направлении должен быть упорядоченным. Тем не менее для некоторых низкоуровневых точек расширения в операционной системе, таких как векторный обработчик исключений, допускается неупорядоченный переход из управляемого кода в машинный.  Такие переходы осуществляются под управлением операционной системы, а не общеязыковой среды управления (CLR).  В любом машинном коде, который выполняется внутри таких точек расширения, не рекомендуется выполнять обратные вызовы управляемого кода.  
