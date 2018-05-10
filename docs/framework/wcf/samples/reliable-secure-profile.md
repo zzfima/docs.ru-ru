@@ -4,14 +4,14 @@ ms.date: 03/30/2017
 ms.assetid: 921edc41-e91b-40f9-bde9-b6148b633e61
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: b8faa7a3f92be25b1c1ae700c92e5d2a0828a5a5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 65523fcc1d08bd48a432e6cf599dfcb73ade8747
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="reliable-secure-profile"></a>Надежный защищенный профиль
-В этом примере показано, как составлять [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] и [надежному защищенному профилю](http://go.microsoft.com/fwlink/?LinkId=178140) (RSP). Этот образец демонстрирует реализацию [Создание подключения](http://go.microsoft.com/fwlink/?LinkId=178141) канала, который может формироваться вместе с надежного обмена сообщениями и при необходимости безопасного канала для создания надежных защищенную привязку на основе RSP спецификации.  
+В этом примере показано, как составлять WCF и [надежному защищенному профилю](http://go.microsoft.com/fwlink/?LinkId=178140) (RSP). Этот образец демонстрирует реализацию [Создание подключения](http://go.microsoft.com/fwlink/?LinkId=178141) канала, который может формироваться вместе с надежного обмена сообщениями и при необходимости безопасного канала для создания надежных защищенную привязку на основе RSP спецификации.  
   
 > [!IMPORTANT]
 >  Образцы уже могут быть установлены на компьютере. Перед продолжением проверьте следующий каталог (по умолчанию).  
