@@ -2,24 +2,24 @@
 title: Конечные точки SOAP и HTTP
 ms.date: 03/30/2017
 ms.assetid: e3c8be75-9dda-4afa-89b6-a82cb3b73cf8
-ms.openlocfilehash: bf11563b937426c3c1701e7fed79e82e4e4669ad
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 4c8a4695dbcaee2f0e7584418fbeac12815fa967
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="soap-and-http-endpoints"></a>Конечные точки SOAP и HTTP
-Этот образец демонстрирует реализацию службы на основе RPC и предоставление ее в формате протокола SOAP и форматировать «Plain Old XML» (POX) с помощью [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] модели веб-программирования. В разделе [базовой службы HTTP](../../../../docs/framework/wcf/samples/basic-http-service.md) образец Дополнительные сведения о привязке HTTP для службы. В данном образце акцент сделан на особенностях предоставления одной и той же службы через протокол SOAP и HTTP с использованием разных привязок.  
+Этот образец демонстрирует реализацию службы на основе RPC и предоставление ее в формате протокола SOAP и формате «Plain Old XML» (POX), с помощью модели веб-программирования WCF. В разделе [базовой службы HTTP](../../../../docs/framework/wcf/samples/basic-http-service.md) образец Дополнительные сведения о привязке HTTP для службы. В данном образце акцент сделан на особенностях предоставления одной и той же службы через протокол SOAP и HTTP с использованием разных привязок.  
   
 ## <a name="demonstrates"></a>Демонстрации  
- Предоставление службы RPC через протокол SOAP и HTTP с использованием [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ Предоставление службы RPC через протокол SOAP и HTTP с использованием WCF.  
   
 ## <a name="discussion"></a>Обсуждение  
- Данный образец состоит из двух компонентов: проекта веб-приложения (служба), который содержит службу [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], и консольного приложения (клиент), которое вызывает операции службы с использованием привязок протокола SOAP и HTTP.  
+ В этом примере состоит из двух компонентов: проекта веб-приложения (служба), содержащий службы WCF и консольное приложение (клиент), который вызывает операции службы с использованием привязок протокола SOAP и HTTP.  
   
- Служба [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] предоставляет 2 операции - `GetData` и `PutData`, которые повторяют строку, переданную им на входе. Операции службы помечены атрибутами <xref:System.ServiceModel.Web.WebGetAttribute> и <xref:System.ServiceModel.Web.WebInvokeAttribute>. Эти атрибуты управляют HTTP-проекцией операций. Кроме того, они помечены атрибутом <xref:System.ServiceModel.OperationContractAttribute>, который позволяет предоставлять их через привязки протокола SOAP. Метод службы `PutData` вызывает исключение <xref:System.ServiceModel.Web.WebFaultException>, которое отправляется обратно через HTTP с использованием кода состояния HTTP, а через SOAP как ошибка SOAP.  
+ Служба WCF предоставляет 2 операции-`GetData` и `PutData` — которые повторяют строку, которая была передана в качестве входных данных. Операции службы помечены атрибутами <xref:System.ServiceModel.Web.WebGetAttribute> и <xref:System.ServiceModel.Web.WebInvokeAttribute>. Эти атрибуты управляют HTTP-проекцией операций. Кроме того, они помечены атрибутом <xref:System.ServiceModel.OperationContractAttribute>, который позволяет предоставлять их через привязки протокола SOAP. Метод службы `PutData` вызывает исключение <xref:System.ServiceModel.Web.WebFaultException>, которое отправляется обратно через HTTP с использованием кода состояния HTTP, а через SOAP как ошибка SOAP.  
   
- Файл Web.config конфигурирует для службы [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] следующие 3 конечные точки.  
+ Файл Web.config настраивает службу WCF с конечными точками, 3:  
   
 -   Конечная точка ~/service.svc/mex предоставляет доступ к метаданным службы клиентам на основе SOAP.  
   

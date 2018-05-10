@@ -2,18 +2,18 @@
 title: Пользовательская привязка
 ms.date: 03/30/2017
 ms.assetid: 3c9537ea-9708-4ebc-b861-219f2e2db53d
-ms.openlocfilehash: a78cfb8fc79e37bdf189238b38277bb96efdca25
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: f28aa83aa22a87f76e955d6b4eb7cfa9f6d7fcdd
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="custom-binding"></a>Пользовательская привязка
 Этот раздел содержит образцы, которые демонстрируют использование атрибутов пользовательской привязки элемента конечной точки.  
   
 ## <a name="in-this-section"></a>В этом разделе  
  [Императивные пользовательские привязки](../../../../docs/framework/wcf/samples/custom-binding-imperative.md)  
- Показывает, как писать императивный код для определения и использования пользовательских привязок, не применяя файл конфигурации или клиент, созданный [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ Показано, как писать императивный код для определения и использования пользовательских привязок, без использования файла конфигурации или клиента WCF создается.  
   
  [Транспорт и кодировка пользовательской привязки](../../../../docs/framework/wcf/samples/custom-binding-transport-and-encoding.md)  
  Демонстрирует, как настроить пользовательскую привязку с различными элементами транспорта и кодирования сообщений.  

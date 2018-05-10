@@ -2,11 +2,11 @@
 title: Интеграция кэширования ASP.NET
 ms.date: 03/30/2017
 ms.assetid: f581923a-8a72-42fc-bd6a-46de2aaeecc1
-ms.openlocfilehash: 420ff192caf41a37b6229bf36e32124f3646d69c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 744ecbff8b51565906ff4c619ba8c8aecff123c7
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="aspnet-caching-integration"></a>Интеграция кэширования ASP.NET
 В этом образце демонстрируется использование выходного кэша ASP.NET в модели веб-программирования WCF HTTP . См. в разделе [базовой службы ресурсов](../../../../docs/framework/wcf/samples/basic-resource-service.md) образец резидентной версию этого сценария, которое обсуждается реализация service в глубину. В этом разделе основное внимание уделено возможности интеграции выходного кэша ASP.NET.  
@@ -28,7 +28,7 @@ ms.lasthandoff: 05/04/2018
   
  В файле Service.cs из образца проекта Service как `GetCustomer` и `GetCustomers` операции с пометкой <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute>, который предоставляет имя профиля кэша «CacheFor60Seconds». В файле Web.config проекта Service профиль кэша «CacheFor60Seconds» предоставляется в рамках <`caching`> элемента <`system.web`>. Для этого профиля кэша значение `duration` атрибут является «60», поэтому ответы, связанные с этим профилем, кэшируются в кэше вывода ASP.NET в 60 секунд. Кроме того, для этого профиля кэша `varmByParam` атрибута задано значение «format» так запросы с разными значениями для `format` параметра строки запроса их ответы, кэшируются отдельно. Наконец, профиля кэша `varyByHeader` атрибут имеет значение «Accept», поэтому запросы с другими значениями заголовка Accept кэшируются отдельно ответы.  
   
- В файле Program.cs из проекта «Клиент» показывается, как можно разработать клиент с помощью <xref:System.Net.HttpWebRequest>. Заметьте, что это лишь один из способов доступа к WCF-службе. Также возможен доступ к службе с помощью других классов .NET Framework, например фабрики каналов [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] и <xref:System.Net.WebClient>. Другие примеры в пакете SDK (такие как [базовой службы HTTP](../../../../docs/framework/wcf/samples/basic-http-service.md) образца и [автоматический выбор формата](../../../../docs/framework/wcf/samples/automatic-format-selection.md) образец) показывают, как использовать эти классы для взаимодействия с [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] службы.  
+ В файле Program.cs из проекта «Клиент» показывается, как можно разработать клиент с помощью <xref:System.Net.HttpWebRequest>. Заметьте, что это лишь один из способов доступа к WCF-службе. Можно также получить доступ к службе с помощью других классов .NET Framework, например фабрики каналов WCF и <xref:System.Net.WebClient>. Другие примеры в пакете SDK (такие как [базовой службы HTTP](../../../../docs/framework/wcf/samples/basic-http-service.md) образца и [автоматический выбор формата](../../../../docs/framework/wcf/samples/automatic-format-selection.md) образец) показывают, как использовать эти классы для взаимодействия со службой WCF.  
   
 ## <a name="to-run-the-sample"></a>Выполнение образца  
  Этот образец состоит из трех проектов.  

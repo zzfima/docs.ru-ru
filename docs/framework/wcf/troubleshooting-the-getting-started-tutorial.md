@@ -2,11 +2,11 @@
 title: Устранение неполадок, связанных с руководством по началу работы
 ms.date: 03/30/2017
 ms.assetid: 69a21511-0871-4c41-9a53-93110e84d7fd
-ms.openlocfilehash: 863e9dd1253624c025e830f589068068cb996413
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 12812bd1ef88eab14a8defed0b71657b0d33c618
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="troubleshooting-the-getting-started-tutorial"></a>Устранение неполадок, связанных с руководством по началу работы
 В этом разделе рассматриваются наиболее распространенные проблемы, которые возникают при работе с учебником «Приступая к работе», и описываются способы их решения.  
@@ -31,7 +31,7 @@ ms.lasthandoff: 05/04/2018
   
 <a name="BKMK_q2"></a>   
 ## <a name="attempting-to-run-the-service-application-http-could-not-register-url-http8000servicemodelsamplesservice-your-process-does-not-have-access-rights-to-this-namespace"></a>Попытка запуска служебного приложения: HTTP не удалось зарегистрировать URL-адрес http://+:8000/ServiceModelSamples/Service/. Процесс не обладает правами доступа к этому пространству имен.  
- Процесс, в котором размещается служба [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], должен запускаться с правами администратора. При запуске службы из [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] необходимо запускать [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] от имени администратора. Для этого выберите **запустить**, щелкните правой кнопкой мыши [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] и выберите **Запуск от имени администратора**. При запуске службы из командной строки необходимо запустить командную строку от имени администратора указанным выше способом. Нажмите кнопку **запустить**, щелкните правой кнопкой мыши **командной строки** и выберите **Запуск от имени администратора**.  
+ Процесс, на котором размещена служба WCF должна выполняться с правами администратора. При запуске службы из [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] необходимо запускать [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] от имени администратора. Для этого выберите **запустить**, щелкните правой кнопкой мыши [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] и выберите **Запуск от имени администратора**. При запуске службы из командной строки необходимо запустить командную строку от имени администратора указанным выше способом. Нажмите кнопку **запустить**, щелкните правой кнопкой мыши **командной строки** и выберите **Запуск от имени администратора**.  
   
 <a name="BKMK_q3"></a>   
 ## <a name="attempting-to-use-the-svcutilexe-tool-svcutil-is-not-recognized-as-an-internal-or-external-command-operable-program-or-batch-file"></a>Попытка использования средства Svcutil.exe: svcutil не является внутренней или внешней командой, работающей программой или пакетным файлом.  

@@ -4,18 +4,18 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WCF clients [WCF], using
 ms.assetid: 190349fc-0573-49c7-bb85-8e316df7f31f
-ms.openlocfilehash: 6667a8e9862054d7d8d5b20e70dfbe699de02eab
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 79431588e27b02a40d5898929f1bdf644c8a79cd
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-use-a-windows-communication-foundation-client"></a>Практическое руководство. Использование клиента Windows Communication Foundation
 Это последний из шести шагов, необходимых для создания базового приложения Windows Communication Foundation (WCF). Общие сведения обо всех шести задач см. в разделе [учебник по началу работы](../../../docs/framework/wcf/getting-started-tutorial.md) раздела.  
   
- Как только создан и настроен прокси службы Windows Communication Foundation (WCF), можно создать экземпляр клиента и клиентское приложение можно скомпилировать и использовать для взаимодействия с [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] службы. В этом разделе описаны процедуры создания и использования клиента [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]. Эта процедура выполняет три операции.  
+ После создания и настройки прокси службы Windows Communication Foundation (WCF) можно создать экземпляр клиента и клиентское приложение можно скомпилировать и использовать для взаимодействия со службой WCF. В этом разделе описаны процедуры создания и использования клиента WCF. Эта процедура выполняет три операции.  
   
-1.  Создается клиент [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].  
+1.  Создает экземпляр класса клиента WCF.  
   
 2.  Вызывает операции службы из созданной учетной записи-посредника.  
   

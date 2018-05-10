@@ -2,11 +2,11 @@
 title: Расширение среды
 ms.date: 03/30/2017
 ms.assetid: cd7ddffc-a261-44aa-bd50-33c1c74f0df0
-ms.openlocfilehash: 7cba21715a6a0347e910300de46c1e47fd6e30bf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 010d6d7b17d3cb39e19c23550ca3522d6ea73a21
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="extensibility"></a>Расширение среды
 В этом разделе содержатся образцы, которые имеют дело с настраиваемой расширяемостью и другими функциями Windows Communication Foundation (WCF).  
@@ -55,10 +55,10 @@ ms.lasthandoff: 05/04/2018
  Показывает, как настроить такие процессы, как сериализация, десериализация, экспорт схемы и импорт схемы, с помощью суррогатного класса контракта данных.  
   
  [Повышение управляемости обработки ошибок и формирования сообщений об ошибках](../../../../docs/framework/wcf/samples/extending-control-over-error-handling-and-reporting.md)  
- Демонстрируется, каким образом расширить управление обработкой ошибок и отчетами об ошибках в службе [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] с помощью интерфейса <xref:System.ServiceModel.Dispatcher.IErrorHandler>.  
+ Показано, как расширить управление обработкой ошибок и ошибок на службу WCF с помощью <xref:System.ServiceModel.Dispatcher.IErrorHandler> интерфейса.  
   
  [Инспекторы сообщений](../../../../docs/framework/wcf/samples/message-inspectors.md)  
  Демонстрируется, как реализовать и настроить инспекторы сообщений клиента и службы.  
   
  [WebContentTypeMapper](../../../../docs/framework/wcf/samples/webcontenttypemapper-sample.md)  
- Демонстрирует, как сопоставить новые типы содержимого с форматами тела сообщения [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].
+ Показано, как сопоставить новые типы содержимого для форматами тела сообщения WCF.

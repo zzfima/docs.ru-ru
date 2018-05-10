@@ -9,11 +9,11 @@ helpviewer_keywords:
 - impersonation
 - WCF, security
 ms.assetid: 431db851-a75b-4009-9fe2-247243d810d3
-ms.openlocfilehash: 991792b22dbef42e6f244f33f3a82550c02ddeba
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: c15d201a002ec93ff3a83ce1bba9f94ccb6a7b95
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-impersonate-a-client-on-a-service"></a>Практическое руководство. Олицетворение клиента в рамках службы
 Олицетворение клиента в службе Windows Communication Foundation (WCF) позволяет службе выполнять действия от имени клиента. В случае действий, для которых предусмотрены проверки списка управления доступом (ACL), таким как доступ к каталогам и файлам на компьютере или доступ к базе данных SQL Server, проверка ACL выполняется с использованием клиентской учетной записи пользователя. В данном разделе представлены основные этапы установки клиентом уровня олицетворения клиента в домене Windows. Рабочий пример см. в разделе [Impersonating the Client](../../../docs/framework/wcf/samples/impersonating-the-client.md). Дополнительные сведения об олицетворении клиента см. в разделе [делегирования и олицетворения](../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).  
@@ -36,7 +36,7 @@ ms.lasthandoff: 05/04/2018
   
 1.  Создайте код клиента службы с помощью средства [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md). Дополнительные сведения см. в разделе [получение служб с помощью клиента WCF](../../../docs/framework/wcf/accessing-services-using-a-wcf-client.md).  
   
-2.  После создания клиента [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] присвойте свойству <xref:System.ServiceModel.Security.WindowsClientCredential.AllowedImpersonationLevel%2A> класса <xref:System.ServiceModel.Security.WindowsClientCredential> одно из значений перечисления <xref:System.Security.Principal.TokenImpersonationLevel> .  
+2.  После создания клиента WCF, задайте <xref:System.ServiceModel.Security.WindowsClientCredential.AllowedImpersonationLevel%2A> свойство <xref:System.ServiceModel.Security.WindowsClientCredential> одно из <xref:System.Security.Principal.TokenImpersonationLevel> значений перечисления.  
   
     > [!NOTE]
     >  Для использования <xref:System.Security.Principal.TokenImpersonationLevel.Delegation>необходимо использовать согласованную проверку подлинности Kerberos (иногда называемую *многоступенчатой* или *многоэтапной* проверкой Kerberos). Описание того, как это реализовать см. в разделе [рекомендации по безопасности](../../../docs/framework/wcf/feature-details/best-practices-for-security-in-wcf.md).  

@@ -2,11 +2,11 @@
 title: 'Пользовательский кодировщик сообщений: кодировщик пользовательских текстовых сообщений'
 ms.date: 03/30/2017
 ms.assetid: 68ff5c74-3d33-4b44-bcae-e1d2f5dea0de
-ms.openlocfilehash: 975cfd44834ed31a5d723fdca0fe467cba63e68d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 369706ecdc2e37a5fb62a448a273b045fe424df8
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="custom-message-encoder-custom-text-encoder"></a>Пользовательский кодировщик сообщений: кодировщик пользовательских текстовых сообщений
 В этом примере показано, как реализовать пользовательский кодировщик текстовых сообщений с помощью Windows Communication Foundation (WCF).  
@@ -20,7 +20,7 @@ ms.lasthandoff: 05/04/2018
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\MessageEncoder\Text`  
   
- <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement> платформы [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] поддерживает только кодировки UTF-8, UTF-16 и Big Endean Unicode. Пользовательский кодировщик текстовых сообщений в этом образце поддерживает все поддерживаемые платформой кодировки символов, которые могут требоваться для взаимодействия. Этот образец содержит консольную программу клиента (EXE), библиотеку службы (DLL), размещаемую в службах IIS, и библиотеку кодировщика текстовых сообщений (DLL). Служба реализует контракт, определяющий шаблон взаимодействия "запрос-ответ". Контракт определяется интерфейсом `ICalculator`, который предоставляет математические операции (добавить, вычесть, умножить и разделить). Клиент осуществляет синхронные вызовы заданной математической операции, а служба отправляет в ответ результат. Как клиент, так и служба используют кодировщик `CustomTextMessageEncoder` вместо кодировщика по умолчанию <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>.  
+ <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement> (WCF) поддерживает только кодировки UTF-8, UTF-16 и Big Endean Unicode. Пользовательский кодировщик текстовых сообщений в этом образце поддерживает все поддерживаемые платформой кодировки символов, которые могут требоваться для взаимодействия. Этот образец содержит консольную программу клиента (EXE), библиотеку службы (DLL), размещаемую в службах IIS, и библиотеку кодировщика текстовых сообщений (DLL). Служба реализует контракт, определяющий шаблон взаимодействия "запрос-ответ". Контракт определяется интерфейсом `ICalculator`, который предоставляет математические операции (добавить, вычесть, умножить и разделить). Клиент осуществляет синхронные вызовы заданной математической операции, а служба отправляет в ответ результат. Как клиент, так и служба используют кодировщик `CustomTextMessageEncoder` вместо кодировщика по умолчанию <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>.  
   
  Реализация пользовательского кодировщика состоит из фабрики кодировщиков сообщений, кодировщика сообщений, элемента привязки кодировщика сообщений и обработчика конфигурации. При этом демонстрируются следующие операции.  
   
@@ -47,7 +47,7 @@ ms.lasthandoff: 05/04/2018
 4.  Для запуска образца в конфигурации одного или нескольких компьютерах, следуйте инструкциям в [выполнение образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 ## <a name="message-encoder-factory-and-the-message-encoder"></a>Фабрика кодировщика сообщений и кодировщик сообщений  
- При открытии <xref:System.ServiceModel.ServiceHost> или канала клиента компонент времени разработки `CustomTextMessageBindingElement` создает фабрику `CustomTextMessageEncoderFactory`. Фабрика создает кодировщик `CustomTextMessageEncoder`. Кодировщик сообщений работает как в режиме буферизации, так и в режиме потоковой передачи. Он использует классы <xref:System.Xml.XmlReader> и <xref:System.Xml.XmlWriter> для чтения и записи сообщений соответственно. В отличие от оптимизированных средств чтения и записи XML платформы [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], которые поддерживают только кодировки UTF-8, UTF-16 и Big-Endean Unicode, эти средства чтения и записи поддерживают все кодировки, поддерживаемые платформой.  
+ При открытии <xref:System.ServiceModel.ServiceHost> или канала клиента компонент времени разработки `CustomTextMessageBindingElement` создает фабрику `CustomTextMessageEncoderFactory`. Фабрика создает кодировщик `CustomTextMessageEncoder`. Кодировщик сообщений работает как в режиме буферизации, так и в режиме потоковой передачи. Он использует классы <xref:System.Xml.XmlReader> и <xref:System.Xml.XmlWriter> для чтения и записи сообщений соответственно. В отличие от оптимизированных средств чтения XML и записи (WCF), поддерживающих UTF-8, UTF-16 и Big-Endean Unicode эти средства чтения и записи поддерживают все кодировки, поддерживаемые платформой.  
   
  В следующем примере кода показан кодировщик CustomTextMessageEncoder.  
   
@@ -190,11 +190,11 @@ public class CustomTextMessageEncoderFactory : MessageEncoderFactory
 ```  
   
 ## <a name="message-encoding-binding-element"></a>Элемент привязки кодирования сообщений  
- Элементы привязки обеспечивают настройку стека времени выполнения [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Для использования пользовательского кодировщика сообщений в приложении [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] требуется элемент привязки, создающий фабрику кодировщиков сообщений с соответствующими параметрами на соответствующем уровне в стеке времени выполнения.  
+ Элементы привязки обеспечивают настройку стека времени выполнения WCF. Для использования пользовательского кодировщика сообщений в приложениях WCF, требуется элемент привязки, создающий фабрику кодировщиков сообщений с соответствующими параметрами на соответствующем уровне в стеке времени выполнения.  
   
- Класс `CustomTextMessageBindingElement` является производным от базового класса <xref:System.ServiceModel.Channels.BindingElement> и наследует от класса <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>. Это позволяет другим компонентам [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] распознавать этот элемент привязки как элемент привязки кодирования сообщений. Реализация <xref:System.ServiceModel.Channels.MessageEncodingBindingElement.CreateMessageEncoderFactory%2A> возвращает экземпляр соответствующей фабрики кодировщиков сообщений с соответствующими параметрами.  
+ Класс `CustomTextMessageBindingElement` является производным от базового класса <xref:System.ServiceModel.Channels.BindingElement> и наследует от класса <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>. Это позволяет другим компонентам WCF распознавать этот элемент привязки как элемент привязки кодирования сообщений. Реализация <xref:System.ServiceModel.Channels.MessageEncodingBindingElement.CreateMessageEncoderFactory%2A> возвращает экземпляр соответствующей фабрики кодировщиков сообщений с соответствующими параметрами.  
   
- Элемент `CustomTextMessageBindingElement` предоставляет параметры для `MessageVersion`, `ContentType` и `Encoding` через свойства. Кодировщик поддерживает версии Soap11Addressing и Soap12Addressing1. Значение по умолчанию - Soap11Addressing1. Значение по умолчанию `ContentType` - "text/xml". Свойство `Encoding` позволяет задать значение требуемой кодировки символов. В образце клиента и службы используется кодировка символов ISO-8859-1 (Latin1), не поддерживаемая классом <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement> платформы [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ Элемент `CustomTextMessageBindingElement` предоставляет параметры для `MessageVersion`, `ContentType` и `Encoding` через свойства. Кодировщик поддерживает версии Soap11Addressing и Soap12Addressing1. Значение по умолчанию - Soap11Addressing1. Значение по умолчанию `ContentType` - "text/xml". Свойство `Encoding` позволяет задать значение требуемой кодировки символов. Образец клиента и службы использует кодировку символов ISO-8859-1 (Latin1), которая не поддерживается <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement> (WCF).  
   
  В следующем коде показано, как программным способом создать привязку, использующую пользовательский кодировщик текстовых сообщений.  
   

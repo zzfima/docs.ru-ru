@@ -2,11 +2,11 @@
 title: Экспорт пользовательских метаданных для расширения WCF
 ms.date: 03/30/2017
 ms.assetid: 53c93882-f8ba-4192-965b-787b5e3f09c0
-ms.openlocfilehash: 8d9f5e223bb47fc8997f6509ec882b282e1ee8b5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: c2ae547f10e96a1fdc16fc428e98145fc81c59d5
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="exporting-custom-metadata-for-a-wcf-extension"></a>Экспорт пользовательских метаданных для расширения WCF
 В Windows Communication Foundation (WCF), для экспорта метаданных — это процесс описания конечных точек службы и проецирования их в параллельное, стандартизованное представление, позволяющее клиентам понять, как использовать службу. Пользовательские метаданные состоят из элементов XML, которые не могут быть экспортированы с помощью средств экспорта метаданных, предоставляемых системой. Обычно сюда входят пользовательские элементы WSDL для определенных пользователем поведений, элементов привязки и утверждений политики о возможностях и требованиях привязок и контрактов.  
@@ -14,7 +14,7 @@ ms.lasthandoff: 05/04/2018
  В этом разделе описано, как экспортировать пользовательские элементы WSDL и утверждения политики, но при этом не рассматривается сам процесс экспорта. Дополнительные сведения об использовании типов, экспорта и импорта метаданных, независимо от того, метаданные пользовательских или составить системы см. в разделе [Экспорт и импорт метаданных](../../../../docs/framework/wcf/feature-details/exporting-and-importing-metadata.md).  
   
 ## <a name="overview"></a>Обзор  
- При публикации метаданных с использованием <xref:System.ServiceModel.Description.ServiceMetadataBehavior?displayProperty=nameWithType> производится проверка <xref:System.ServiceModel.Description.ServiceDescription?displayProperty=nameWithType> и создаются XSD и WSDL -- включая утверждения политики -- для всех контрактов и привязок, поддерживаемых [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] с использованием предоставляемых системой атрибутов и привязок. Однако для правильного экспорта пользовательских атрибутов поведения или элементов привязки требуется их поддержка.  
+ При публикации метаданных с помощью <xref:System.ServiceModel.Description.ServiceMetadataBehavior?displayProperty=nameWithType>, <xref:System.ServiceModel.Description.ServiceDescription?displayProperty=nameWithType> анализируется и создаются XSD и WSDL--включая утверждения политики--для всех контрактов и привязок, которые поддерживают с использованием предоставляемых системой атрибутов и привязок WCF. Однако для правильного экспорта пользовательских атрибутов поведения или элементов привязки требуется их поддержка.  
   
  В данном разделе рассматриваются следующие вопросы.  
   

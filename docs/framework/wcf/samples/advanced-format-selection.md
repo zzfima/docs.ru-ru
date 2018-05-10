@@ -2,11 +2,11 @@
 title: Выбор дополнительного формата
 ms.date: 03/30/2017
 ms.assetid: e02d9082-4d55-41d8-9329-98f6d1c77f06
-ms.openlocfilehash: 2d0e78bc1ec1dcd7e4a22b246f5cc35356f5f986
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 4913d8dbf69f574aa4f329279bed0d92710512f9
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="advanced-format-selection"></a>Выбор дополнительного формата
 Этот образец демонстрирует расширение модели программирования REST Windows Communication Foundation (WCF) для поддержки новых форматов исходящих ответов. Кроме того, образец использует шаблон T4 для возврата ответов в виде страницы XHTML, показывая, как можно реализовать наглядную программную модель.  
@@ -18,7 +18,7 @@ ms.lasthandoff: 05/04/2018
   
  Формат ответа, возвращаемого службой, определяется, во-первых, параметром строки запроса `format`, а во-вторых, заголовком HTTP Accept, содержащимся в запросе. Если значение параметра строки запроса `format` указывает один из перечисленных ранее форматов, ответ возвращается в этом формате. Если параметр строки запроса `format` отсутствует, служба перебирает элементы заголовка Accept в запросе и возвращает формат первого поддерживаемого ею типа содержимого content-type.  
   
- Возвращаемый тип операции можно игнорировать. Программная модель [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] REST сама по себе поддерживает только форматы ответа XML и JSON, если операция возвращает тип, отличный от <xref:System.ServiceModel.Channels.Message>. Однако, если используется тип ответа <xref:System.ServiceModel.Channels.Message>, разработчик имеет полный контроль над тем, какой формат должно иметь это сообщение.  
+ Тип возвращаемого значения операции можно игнорировать. Только в собственном коде модель программирования WCF REST поддерживает форматы ответа XML и JSON, если операция возвращает тип, отличный от <xref:System.ServiceModel.Channels.Message>. Однако, если используется тип ответа <xref:System.ServiceModel.Channels.Message>, разработчик имеет полный контроль над тем, какой формат должно иметь это сообщение.  
   
  Образец использует методы <xref:System.ServiceModel.Web.WebOperationContext.CreateXmlResponse%2A>, <xref:System.ServiceModel.Web.WebOperationContext.CreateJsonResponse%2A> и <xref:System.ServiceModel.Web.WebOperationContext.CreateAtom10Response%2A> для сериализации списка строк в сообщениях XML, JSON и ATOM соответственно. В случае формата ответа jpeg используется метод <xref:System.ServiceModel.Web.WebOperationContext.CreateStreamResponse%2A>, а изображение сохраняется в потоке. Ответ XHTML использует метод <xref:System.ServiceModel.Web.WebOperationContext.CreateTextResponse%2A>, а также предварительно обработанный шаблон T4, который состоит из TT-файла и автоматически формируемого файла CS. TT-файл позволяет разработчику записывать ответ в виде шаблона, содержащего переменные и управляющие структуры. Дополнительные сведения о T4 см. в разделе [Создание артефактов с помощью текстовых шаблонов](http://go.microsoft.com/fwlink/?LinkId=166023).  
   

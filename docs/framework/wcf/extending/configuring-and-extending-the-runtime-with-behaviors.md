@@ -4,17 +4,17 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - attaching extensions using behaviors [WCF]
 ms.assetid: 149b99b6-6eb6-4f45-be22-c967279677d9
-ms.openlocfilehash: 05fd96574f072f8e349f83d11aca20bc5269dfc7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: af95fa01fc9caffb8a4f0e85d3457c7f3fa60320
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="configuring-and-extending-the-runtime-with-behaviors"></a>Настройка и расширение среды выполнения с помощью поведений
 Поведения позволяют изменять поведение по умолчанию и добавлять пользовательские расширения, которые проверяют и проверка конфигурации службы или изменяют поведение во время выполнения в приложениях клиента и службы Windows Communication Foundation (WCF). В этом разделе описаны интерфейсы поведений, способы их реализации, а также порядок их добавления в описания служб (в приложениях служб) и конечных точек (в клиентских приложениях) как программным образом, так и с помощью файла конфигурации. Дополнительные сведения об использовании предоставляемых системой поведений см. в разделе [указание поведения службы во время выполнения](../../../../docs/framework/wcf/specifying-service-run-time-behavior.md) и [указание поведения клиента во время выполнения](../../../../docs/framework/wcf/specifying-client-run-time-behavior.md).  
   
 ## <a name="behaviors"></a>поведения  
- Типы поведений добавляются к службе или объекты описания конечной точки службы (на службы или клиента, соответственно) перед использованием этих объектов Windows Communication Foundation (WCF) для создания среды выполнения, который выполняет [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] службы или [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] клиента. Если эти поведения вызываются в процессе создания среды выполнения, то они могут получать доступ к свойствам и методам среды выполнения, которые позволяют изменить создаваемую среду выполнения с использованием других контрактов, привязок и адресов.  
+ Типы поведений добавляются к службе или объекты описания конечной точки службы (на службы или клиента, соответственно) перед эти объекты используются Windows Communication Foundation (WCF) для создания среды выполнения, выполняющий службу WCF или клиента WCF. Если эти поведения вызываются в процессе создания среды выполнения, то они могут получать доступ к свойствам и методам среды выполнения, которые позволяют изменить создаваемую среду выполнения с использованием других контрактов, привязок и адресов.  
   
 ### <a name="behavior-methods"></a>Методы поведений  
  У всех поведений имеется метод `AddBindingParameters`, метод `ApplyDispatchBehavior`, метод `Validate` и метод `ApplyClientBehavior` за единственным исключением: поскольку интерфейс <xref:System.ServiceModel.Description.IServiceBehavior> не может выполняться на клиенте, он не реализует метод `ApplyClientBehavior`.  
@@ -33,9 +33,9 @@ ms.lasthandoff: 05/04/2018
 > [!NOTE]
 >  Обсуждение типы расширений, которые можно использовать для изменения поведения выполнения клиента и свойствам среды выполнения см. в разделе [расширение клиентов](../../../../docs/framework/wcf/extending/extending-clients.md). Обсуждение типы расширений, которые можно использовать для изменения поведения выполнения диспетчера службы и свойствам среды выполнения см. в разделе [расширение диспетчеров](../../../../docs/framework/wcf/extending/extending-dispatchers.md).  
   
- Большинство пользователей [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] не взаимодействуют со средой выполнения напрямую; вместо этого они используют элементы базовой модели программирования, например конечные точки, контракты, привязки, адреса и атрибуты поведений в классах или поведения в файлах конфигурации. Эти конструкции составляют *дерево описания*, который представляет собой полную спецификацию для создания среды выполнения для поддержки службы или клиента, описываемых деревом описания.  
+ Большинство пользователей WCF не взаимодействуют со средой выполнения напрямую; Вместо этого они используют элементы базовой модели программирования, такие как конечные точки, контракты, привязки, адреса и атрибуты поведений в классах или поведения в файлах конфигурации. Эти конструкции составляют *дерево описания*, который представляет собой полную спецификацию для создания среды выполнения для поддержки службы или клиента, описываемых деревом описания.  
   
- В [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] имеется четыре типа поведений:  
+ Существует четыре типа поведений в WCF.  
   
 -   поведения служб (типы <xref:System.ServiceModel.Description.IServiceBehavior>) позволяют настраивать среду выполнения службы целиком, включая <xref:System.ServiceModel.ServiceHostBase>;  
   
@@ -64,24 +64,24 @@ ms.lasthandoff: 05/04/2018
   
 3.  Реализация пользовательского элемента <xref:System.ServiceModel.Configuration.BehaviorExtensionElement>, который расширяет конфигурацию. Это позволяет использовать поведение службы в файлах конфигурации приложения.  
   
- К примерам поведений служб в [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] относится атрибут <xref:System.ServiceModel.ServiceBehaviorAttribute>, а также поведения <xref:System.ServiceModel.Description.ServiceThrottlingBehavior> и <xref:System.ServiceModel.Description.ServiceMetadataBehavior>.  
+ Поведения служб в WCF примеры <xref:System.ServiceModel.ServiceBehaviorAttribute> атрибута <xref:System.ServiceModel.Description.ServiceThrottlingBehavior>и <xref:System.ServiceModel.Description.ServiceMetadataBehavior> поведение.  
   
 #### <a name="contract-behaviors"></a>Поведения контрактов  
  Поведения контрактов, реализующие интерфейс <xref:System.ServiceModel.Description.IContractBehavior>, служат для расширения сред выполнения клиента и службы в рамках контракта.  
   
- Имеется два механизма добавления поведений контрактов к контрактам.  Первый механизм предполагает создание пользовательского атрибута, который будет использоваться в интерфейсе контракта. Когда интерфейс контракта передается объекту <xref:System.ServiceModel.ServiceHost> или <xref:System.ServiceModel.ChannelFactory%601>, среда [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] проверяет атрибуты этого интерфейса. Все атрибуты, реализующие интерфейс <xref:System.ServiceModel.Description.IContractBehavior>, добавляются в коллекцию поведений в объекте <xref:System.ServiceModel.Description.ContractDescription?displayProperty=nameWithType>, созданном для этого интерфейса.  
+ Имеется два механизма добавления поведений контрактов к контрактам.  Первый механизм предполагает создание пользовательского атрибута, который будет использоваться в интерфейсе контракта. Если интерфейс контракта передается <xref:System.ServiceModel.ServiceHost> или <xref:System.ServiceModel.ChannelFactory%601>, WCF проверяет атрибуты этого интерфейса. Все атрибуты, реализующие интерфейс <xref:System.ServiceModel.Description.IContractBehavior>, добавляются в коллекцию поведений в объекте <xref:System.ServiceModel.Description.ContractDescription?displayProperty=nameWithType>, созданном для этого интерфейса.  
   
  Кроме того, можно реализовать интерфейс <xref:System.ServiceModel.Description.IContractBehaviorAttribute?displayProperty=nameWithType> в атрибуте поведения пользовательского контракта. В этом случае поведение, если оно применяется, выглядит следующим образом:  
   
- •Интерфейс контракта. В этом случае поведение применяется ко всем контрактам этого типа в любой конечной точке, а среда [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] не учитывает значение свойства <xref:System.ServiceModel.Description.IContractBehaviorAttribute.TargetContract%2A?displayProperty=nameWithType>.  
+ •Интерфейс контракта. В этом случае поведение применяется ко всем контрактам этого типа в любой конечной точке и WCF игнорирует значение <xref:System.ServiceModel.Description.IContractBehaviorAttribute.TargetContract%2A?displayProperty=nameWithType> свойства.  
   
  •Класс службы. В этом случае поведение применяется только к конечным точкам, контракт которых имеет значение, равное значению свойства <xref:System.ServiceModel.Description.IContractBehaviorAttribute.TargetContract%2A>.  
   
- •Класс обратного вызова. В этом случае поведение применяется к конечной точке дуплексного клиента, и среда [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] не учитывает значение свойства <xref:System.ServiceModel.Description.IContractBehaviorAttribute.TargetContract%2A>.  
+ •Класс обратного вызова. В этом случае поведение применяется к конечной точке дуплексного клиента и WCF игнорирует значение <xref:System.ServiceModel.Description.IContractBehaviorAttribute.TargetContract%2A> свойства.  
   
  Второй механизм предполагает добавление поведения в коллекцию поведений объекта <xref:System.ServiceModel.Description.ContractDescription>.  
   
- К примерам поведений контрактов в [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] относится атрибут <xref:System.ServiceModel.DeliveryRequirementsAttribute?displayProperty=nameWithType>. Дополнительные сведения и пример см. в справочном разделе.  
+ Поведения контрактов в WCF примеры <xref:System.ServiceModel.DeliveryRequirementsAttribute?displayProperty=nameWithType> атрибута. Дополнительные сведения и пример см. в справочном разделе.  
   
 #### <a name="endpoint-behaviors"></a>Поведения конечных точек  
  Поведения конечных точек, реализующие интерфейс <xref:System.ServiceModel.Description.IEndpointBehavior>, являются основным механизмом для изменения всей среды выполнения службы или клиента для конкретной конечной точки.  
@@ -97,11 +97,11 @@ ms.lasthandoff: 05/04/2018
 #### <a name="operation-behaviors"></a>Поведения операций  
  Поведения операций, реализующие интерфейс <xref:System.ServiceModel.Description.IOperationBehavior>, служат для расширения сред выполнения клиента и службы для каждой из операций.  
   
- Имеется два механизма добавления поведений операций к операциям. Первый механизм предполагает создание пользовательского атрибута, который будет использоваться в методе, моделирующем операцию. При добавлении операции в объект <xref:System.ServiceModel.ServiceHost> или <xref:System.ServiceModel.ChannelFactory> среда [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] добавляет все атрибуты <xref:System.ServiceModel.Description.IOperationBehavior> в коллекцию поведений объекта <xref:System.ServiceModel.Description.OperationDescription>, созданного для данной операции.  
+ Имеется два механизма добавления поведений операций к операциям. Первый механизм предполагает создание пользовательского атрибута, который будет использоваться в методе, моделирующем операцию. При добавлении операции либо <xref:System.ServiceModel.ServiceHost> или <xref:System.ServiceModel.ChannelFactory>, WCF добавляет все <xref:System.ServiceModel.Description.IOperationBehavior> атрибут в коллекцию поведений в <xref:System.ServiceModel.Description.OperationDescription> созданного для данной операции.  
   
  Второй механизм предполагает непосредственное добавление поведения в коллекцию поведений объекта <xref:System.ServiceModel.Description.OperationDescription>.  
   
- К примерам поведений операций в [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] относятся атрибуты <xref:System.ServiceModel.OperationBehaviorAttribute> и <xref:System.ServiceModel.TransactionFlowAttribute>.  
+ Поведения операций в WCF примеры <xref:System.ServiceModel.OperationBehaviorAttribute> и <xref:System.ServiceModel.TransactionFlowAttribute>.  
   
  Дополнительные сведения и пример см. в справочном разделе.  
   

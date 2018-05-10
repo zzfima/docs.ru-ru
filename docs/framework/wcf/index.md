@@ -5,11 +5,11 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF]
 - WCF [WCF]
 ms.assetid: 149348a6-bf82-4ccc-9604-fa7cc88c0749
-ms.openlocfilehash: f3b8abb2a8e0079dc18624c5ac0408a2738f06b6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 56054216dc6e90e789c230acb3d56565a9ba3d69
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="developing-service-oriented-applications-with-wcf"></a>Разработка сервисноориентированных приложений с помощью WCF
 В этом разделе документации приводятся сведения о Windows Communication Foundation (WCF) — унифицированной модели программирования для сборки сервисноориентированных приложений. Она позволяет разработчикам построить безопасные надежные решения с поддержкой транзакций и возможностью межплатформенной интеграции и взаимодействия с существующими инвестициями.
@@ -34,7 +34,7 @@ ms.lasthandoff: 05/04/2018
  Описывает основные принципы создания приложений Windows Communication Foundation.  
   
  [Подробные сведения о возможностях WCF](../../../docs/framework/wcf/feature-details/index.md)  
- Содержит список разделов, которые помогут определить, какие функции [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] следует использовать.  
+ Содержит список разделов, которые можно выбрать, какие WCF или функций следует использовать.  
   
  [Расширение WCF](../../../docs/framework/wcf/extending/index.md)  
  Описывает, как изменять и расширять WCF-компоненты времени выполнения  
@@ -67,7 +67,7 @@ ms.lasthandoff: 05/04/2018
  Образцы с инструкциями по различным аспектам использования Windows Communication Foundation  
   
  [Глоссарий по Windows Communication Foundation](../../../docs/framework/wcf/glossary.md)  
- Содержит перечень терминов, относящихся к [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]  
+ Показывает список терминов, определенные в WCF  
   
  [Общие справочные сведения](../../../docs/framework/wcf/general-reference.md)  
  В разделе описаны элементы, используемые для настройки клиентов и служб Windows Communication Foundation.  

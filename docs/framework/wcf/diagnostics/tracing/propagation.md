@@ -2,11 +2,11 @@
 title: Распространение
 ms.date: 03/30/2017
 ms.assetid: f8181e75-d693-48d1-b333-a776ad3b382a
-ms.openlocfilehash: 5d848a2b74402d0adf125488481f5b82e0b09781
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: f4e92c6dec163d191c507dd80bb0d9dc129c6e96
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="propagation"></a>Распространение
 В этом разделе описывается распространение действий в модели трассировки Windows Communication Foundation (WCF).  
@@ -20,7 +20,7 @@ ms.lasthandoff: 05/04/2018
 <source name="System.ServiceModel" switchValue="Verbose,ActivityTracing" propagateActivity="true" >  
 ```  
   
- Распространение действий — настраиваемая функция, при использовании которой [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] добавляет в исходящие сообщения заголовок, содержащий идентификатор действия из локальной памяти потока. Включая этот идентификатор в последующие трассировки на стороне сервера, можно коррелировать действия клиента и сервера.  
+ Распространение действий — настраиваемая функция, вызывающая WCF добавить заголовок для исходящих сообщений, включая идентификатор действия из локальной памяти ПОТОКА. Включая этот идентификатор в последующие трассировки на стороне сервера, можно коррелировать действия клиента и сервера.  
   
 ## <a name="propagation-definition"></a>Определение распространения  
  Идентификатор gAId действия M распространяется на действие N, если выполняются все следующие условия.  

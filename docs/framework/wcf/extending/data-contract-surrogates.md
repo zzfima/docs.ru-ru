@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - data contracts [WCF], surrogates
 ms.assetid: 8c31134c-46c5-4ed7-94af-bab0ac0dfce5
-ms.openlocfilehash: 455900b1ac5d10c02e6b1341e737eb6874c874f4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b06cb45d6075c8de1da973a11e2edec6792df304
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="data-contract-surrogates"></a>Суррогаты контрактов данных
 Контракт данных *символов-заместителей* является дополнительным, встроенная в модель контракта данных. Эта возможность предназначена для настройки и подстановки типов, когда необходимо изменить способ сериализации типа, десериализации или преобразования типа в метаданные. Например, суррогат может использоваться в сценариях, когда для типа не задан контракт данных, поля и свойства не помечены атрибутом <xref:System.Runtime.Serialization.DataMemberAttribute> или пользователи хотят динамически создавать вариации схемы.  
@@ -133,7 +133,7 @@ ms.lasthandoff: 05/04/2018
  Этот метод вызывается в начале экспорта или импорта схемы. Метод возвращает типы пользовательских данных, которые используются в экспортируемой или импортируемой схеме. Методу передается объект <xref:System.Collections.ObjectModel.Collection%601> (параметр `customDataTypes`), который представляет собой коллекцию типов. Метод добавляет дополнительные известные типы в эту коллекцию. Известные типы пользовательских данных необходимы для сериализации и десериализации пользовательских данных при помощи <xref:System.Runtime.Serialization.DataContractSerializer>. Дополнительные сведения см. в разделе [известные типы контрактов данных](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md).  
   
 ## <a name="implementing-a-surrogate"></a>Реализация суррогата  
- Чтобы использовать суррогат контракта данных в [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], необходимо следовать определенным процедурам.  
+ Чтобы использовать суррогат контракта данных в WCF, необходимо выполнить несколько специальных процедур.  
   
 ### <a name="to-use-a-surrogate-for-serialization-and-deserialization"></a>Использование суррогата для сериализации и десериализации  
  Для выполнения сериализации и десериализации данных с суррогатом используйте <xref:System.Runtime.Serialization.DataContractSerializer>. Объект <xref:System.Runtime.Serialization.DataContractSerializer> создается при помощи <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior>. Необходимо также задать суррогат.  
@@ -174,7 +174,7 @@ ms.lasthandoff: 05/04/2018
      [!code-csharp[C_IDataContractSurrogate#9](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_idatacontractsurrogate/cs/source.cs#9)]  
   
 ### <a name="to-use-a-surrogate-for-metadata-export"></a>Использование суррогата для экспорта метаданных  
- По умолчанию при экспорте метаданных из [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] для службы должны быть сгенерированы как WSDL-, так и XSD-схема. Суррогат необходимо добавить в компонент, отвечающий за генерацию XSD-схемы для типов контрактов данных, <xref:System.Runtime.Serialization.XsdDataContractExporter>. Для этого используйте либо поведение, реализующее <xref:System.ServiceModel.Description.IWsdlExportExtension> для изменения <xref:System.ServiceModel.Description.WsdlExporter>, либо напрямую измените объект <xref:System.ServiceModel.Description.WsdlExporter>, который используется для экспорта метаданных.  
+ По умолчанию при экспорте метаданных из WCF для службы необходимо создать WSDL и XSD-схема. Суррогат необходимо добавить в компонент, отвечающий за генерацию XSD-схемы для типов контрактов данных, <xref:System.Runtime.Serialization.XsdDataContractExporter>. Для этого используйте либо поведение, реализующее <xref:System.ServiceModel.Description.IWsdlExportExtension> для изменения <xref:System.ServiceModel.Description.WsdlExporter>, либо напрямую измените объект <xref:System.ServiceModel.Description.WsdlExporter>, который используется для экспорта метаданных.  
   
 ##### <a name="to-use-a-surrogate-for-metadata-export"></a>Использование суррогата для экспорта метаданных  
   

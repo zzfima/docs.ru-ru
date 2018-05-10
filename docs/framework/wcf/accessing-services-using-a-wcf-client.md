@@ -7,20 +7,20 @@ dev_langs:
 helpviewer_keywords:
 - clients [WCF], consuming services
 ms.assetid: d780af9f-73c5-42db-9e52-077a5e4de7fe
-ms.openlocfilehash: d29483995a1fbf7a8c9918db0c3b65f7deac1e44
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b0bde07dbeb70eaafbde4d90627d245554ad7ca6
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="accessing-services-using-a-wcf-client"></a>Обращение к службам с использованием клиента WCF
-Следующим шагом после создания службы является создание клиентского прокси-класса [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]. Клиентское приложение использует клиентский прокси-класс [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] для взаимодействия со службой. Клиентские приложения обычно импортируют метаданные службы, чтобы создать код клиента [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], который можно будет использовать для вызова службы.  
+После создания службы, следующим шагом является создание прокси клиента WCF. Клиентское приложение использует прокси клиента WCF для взаимодействия со службой. Клиентские приложения обычно импортируют метаданные службы для создания кода клиента WCF, который может использоваться для вызова службы.  
   
- Список основных шагов по созданию клиента [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] включает следующие операции.  
+ Ниже приведены основные шаги для создания клиента WCF:  
   
 1.  Скомпилируйте код службы.  
   
-2.  Создайте клиентский прокси-класс [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].  
+2.  Создайте прокси клиента WCF.  
   
 3.  Создайте экземпляр клиентского прокси-класса WCF.  
   
@@ -39,7 +39,7 @@ Svcutil.exe <service's Metadata Exchange (MEX) address or HTTP GET address>
 Svcutil.exe <list of WSDL and XSD files on file system>  
 ```  
   
- В результате будет получен файл, содержащий код клиента [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], который клиентское приложение может использовать для вызова службы.  
+ Результатом является файл кода, содержащий код клиента WCF, который клиентское приложение может использовать для вызова службы.  
   
  Кроме того, с помощью этого средства можно создавать файлы конфигурации.  
   
@@ -79,7 +79,7 @@ Public Interface ICalculator
 End Interface
 ```
   
- Служебное средство ServiceModel Metadata Utility Tool и функция «Добавить ссылку на службу» в Visual Studio создают следующий клиентский класс [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]. Класс наследует универсальному классу <xref:System.ServiceModel.ClientBase%601> и реализует интерфейс `ICalculator`. Кроме того, это средство создает интерфейс `ICalculator` (не показан в этом примере).  
+ Служебного средства ServiceModel Metadata и добавить ссылку на службу в Visual Studio создает класс клиента WCF. Класс наследует универсальному классу <xref:System.ServiceModel.ClientBase%601> и реализует интерфейс `ICalculator`. Кроме того, это средство создает интерфейс `ICalculator` (не показан в этом примере).  
   
 ```csharp
 public partial class CalculatorClient : System.ServiceModel.ClientBase<ICalculator>, ICalculator
@@ -147,7 +147,7 @@ End Class
 ```
   
 ## <a name="using-the-wcf-client"></a>Использование клиента WCF  
- Чтобы воспользоваться клиентом [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], создайте экземпляр клиента [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] и вызывайте его методы, как показано в следующем примере кода.  
+ С помощью клиента WCF, создайте экземпляр класса клиента WCF и затем вызывать его методы, как показано в следующем коде.  
   
 ```csharp
 // Create a client object with the given client endpoint configuration.
@@ -172,7 +172,7 @@ Console.WriteLine("Add({0},{1}) = {2}", value1, value2, result)
 ```
   
 ## <a name="debugging-exceptions-thrown-by-a-client"></a>Отладка создаваемых клиентом исключений  
- Многие исключения, создаваемые клиентом [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], вызываются исключениями, которые возникают на стороне службы. Ниже приведены некоторые примеры.  
+ Многие исключения, создаваемые клиентом WCF вызываются исключения на стороне службы. Ниже приведены некоторые примеры.  
   
 -   <xref:System.Net.Sockets.SocketException>: существующее подключение было принудительно закрыто удаленным узлом.  
   

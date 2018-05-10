@@ -22,7 +22,7 @@ ms.lasthandoff: 05/04/2018
 4.  [Вручную разрешите отсутствующие метаданные](#Step4) и повторяйте [шаг 3](#Step3) до тех пор, пока все вопросы не будут разрешены.  
   
 > [!NOTE]
->  Если вы выполняете миграцию существующего приложения Магазина Windows в [!INCLUDE[net_native](../../../includes/net-native-md.md)], ознакомьтесь с разделом [Migrating Your Windows Store App to .NET Native](../../../docs/framework/net-native/migrating-your-windows-store-app-to-net-native.md).  
+>  Если вы выполняете миграцию существующего приложения Магазина Windows в [!INCLUDE[net_native](../../../includes/net-native-md.md)], ознакомьтесь с разделом [Миграция приложения для магазина Windows в машинный код .NET](../../../docs/framework/net-native/migrating-your-windows-store-app-to-net-native.md).  
   
 <a name="Step1"></a>   
 ## <a name="step-1-develop-and-test-debug-builds-of-your-uwp-app"></a>Шаг 1. Разработка и тестирование отладочных сборок приложения UWP  

@@ -2,14 +2,14 @@
 title: 'Транспорт: UDP'
 ms.date: 03/30/2017
 ms.assetid: 738705de-ad3e-40e0-b363-90305bddb140
-ms.openlocfilehash: 51f445d7f53f70fa206c53835b107da68749e3c2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 4f69730831ec57efc782a95d7412496aa69a4afb
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="transport-udp"></a>Транспорт: UDP
-В примере транспорта UDP демонстрируется реализация UDP одноадресной и многоадресной рассылки как пользовательский транспорт Windows Communication Foundation (WCF). В образце описана процедура, предлагаемая для создания пользовательского транспорта в [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] с помощью инфраструктуры канала и согласно рекомендациям [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Для создания пользовательского транспорта выполните следующие действия.  
+В примере транспорта UDP демонстрируется реализация UDP одноадресной и многоадресной рассылки как пользовательский транспорт Windows Communication Foundation (WCF). Образец описана процедура, предлагаемая для создания пользовательского транспорта в WCF, с помощью инфраструктуры канала и согласно рекомендации WCF. Для создания пользовательского транспорта выполните следующие действия.  
   
 1.  Решите, какой из канала [шаблонов обмена сообщениями](#MessageExchangePatterns) (IOutputChannel, IInputChannel, IDuplexChannel, IRequestChannel или IReplyChannel) будут поддерживать ChannelFactory и ChannelListener. Затем решите, поддерживать ли связанные с сеансами разновидности указанных интерфейсов.  
   
@@ -49,7 +49,7 @@ ms.lasthandoff: 05/04/2018
 >  Для транспорта по протоколу UDP единственным поддерживаемым шаблоном обмена сообщениями является датаграмма, поскольку структура протокола UDP основана на принципе "отправить и забыть".  
   
 ### <a name="the-icommunicationobject-and-the-wcf-object-lifecycle"></a>Жизненный цикл ICommunicationObject и объектов WCF  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] содержит общий конечный автомат для управления жизненным циклом таких объектов, как <xref:System.ServiceModel.Channels.IChannel>, <xref:System.ServiceModel.Channels.IChannelFactory> и <xref:System.ServiceModel.Channels.IChannelListener>, которые используются для взаимодействия. Эти объекты взаимодействий могут находиться в пяти состояниях. Эти состояния, приведенные ниже, представлены перечислением <xref:System.ServiceModel.CommunicationState>.  
+ WCF содержит общий конечный автомат, который используется для управления жизненным циклом таких объектов, как <xref:System.ServiceModel.Channels.IChannel>, <xref:System.ServiceModel.Channels.IChannelFactory>, и <xref:System.ServiceModel.Channels.IChannelListener> , используемые для обмена данными. Эти объекты взаимодействий могут находиться в пяти состояниях. Эти состояния, приведенные ниже, представлены перечислением <xref:System.ServiceModel.CommunicationState>.  
   
 -   Создан: Это состояние <xref:System.ServiceModel.ICommunicationObject> при его первом создании экземпляра. Ввод и вывод в этом состоянии не происходит.  
   
@@ -67,7 +67,7 @@ ms.lasthandoff: 05/04/2018
   
 <a name="ChannelAndChannelListener"></a>   
 ## <a name="channel-factory-and-channel-listener"></a>Фабрика каналов и прослушиватель каналов  
- Следующий этап создания пользовательского транспорта - реализация <xref:System.ServiceModel.Channels.IChannelFactory> для каналов клиентов и <xref:System.ServiceModel.Channels.IChannelListener> для каналов служб. Уровень канала использует шаблон фабрики для создания каналов. В [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] предусмотрены вспомогательные базовые классы для этого процесса.  
+ Следующий этап создания пользовательского транспорта - реализация <xref:System.ServiceModel.Channels.IChannelFactory> для каналов клиентов и <xref:System.ServiceModel.Channels.IChannelListener> для каналов служб. Уровень канала использует шаблон фабрики для создания каналов. WCF предоставляет вспомогательные методы базового класса для этого процесса.  
   
 -   Класс <xref:System.ServiceModel.Channels.CommunicationObject> реализует интерфейс <xref:System.ServiceModel.ICommunicationObject> и принудительно создает конечный автомат, описанный ранее на шаге 2. 
 
@@ -256,7 +256,7 @@ AddWSAddressingAssertion(context, encodingBindingElement.MessageVersion.Addressi
   
 -   С помощью пользовательской привязки: пользовательская привязка позволяет пользователю создать собственную привязку на основе произвольного набора элементов привязки.  
   
--   С помощью предусмотренной в составе системы привязки, включающей наш элемент привязки. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] предоставляет несколько таких привязок, предусмотренных в составе системы, например `BasicHttpBinding`, `NetTcpBinding` и `WsHttpBinding`. Каждая из них связана с четко определенным профилем.  
+-   С помощью предусмотренной в составе системы привязки, включающей наш элемент привязки. WCF предоставляет несколько из этих системных привязок, таких как `BasicHttpBinding`, `NetTcpBinding`, и `WsHttpBinding`. Каждая из них связана с четко определенным профилем.  
   
  В этом образце реализуется профиль привязки в `SampleProfileUdpBinding`, производном от <xref:System.ServiceModel.Channels.Binding>. Привязка `SampleProfileUdpBinding` содержит до четырех элементов привязки: `UdpTransportBindingElement`, `TextMessageEncodingBindingElement CompositeDuplexBindingElement` и `ReliableSessionBindingElement`.  
   

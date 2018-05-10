@@ -2,20 +2,20 @@
 title: Пользовательские службы времени существования
 ms.date: 03/30/2017
 ms.assetid: 52806c07-b91c-48fe-b992-88a41924f51f
-ms.openlocfilehash: 1d9baa2d6eab476d5c8428208576f341e71fef2f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e41c970739b8036730fa601433ce7157e01d7e19
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="custom-lifetime"></a>Пользовательские службы времени существования
-В этом примере показано, как написать расширение Windows Communication Foundation (WCF) для предоставления пользовательских служб времени существования для общих [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] экземпляров службы.  
+В этом примере показано, как написать расширение Windows Communication Foundation (WCF) для предоставления пользовательских служб времени существования для общих экземпляров службы WCF.  
   
 > [!NOTE]
 >  Процедура настройки и инструкции по построению для данного образца приведены в конце этого раздела.  
   
 ## <a name="shared-instancing"></a>Создание общих экземпляров  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] предлагает несколько режимов создания экземпляров служб. Режим создания общих экземпляров, описанный в этом разделе, предоставляет способ совместного использования экземпляра службы несколькими каналами. Клиенты могут разрешать адрес конечной точки экземпляра локально или обращаться к методу производства в службе, чтобы получить адрес конечной точки работающего экземпляра. Получив адрес конечной точки, клиент может создать новый канал и начать обмен данными. Следующий фрагмент кода показывает, как клиентское приложение создает новый канал к существующему экземпляру службы.  
+ WCF предлагает несколько режимов создания экземпляров служб. Режим создания общих экземпляров, описанный в этом разделе, предоставляет способ совместного использования экземпляра службы несколькими каналами. Клиенты могут разрешать адрес конечной точки экземпляра локально или обращаться к методу производства в службе, чтобы получить адрес конечной точки работающего экземпляра. Получив адрес конечной точки, клиент может создать новый канал и начать обмен данными. Следующий фрагмент кода показывает, как клиентское приложение создает новый канал к существующему экземпляру службы.  
   
 ```  
 // Create the first channel.  
@@ -34,12 +34,12 @@ ChannelFactory<IEchoService> channelFactory2 =
 IEchoService proxy2 = channelFactory2.CreateChannel();  
 ```  
   
- В отличие от других режимов создания экземпляров, режим создания общих экземпляров располагает уникальным способом освобождения экземпляров служб. Когда все каналы для экземпляра закрыты, среда выполнения [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] службы запускает таймер. Если никто не установит соединение до истечения времени ожидания, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] освободит экземпляр и вернет себе ресурсы. В рамках процедуры демонтажа перед освобождением экземпляра [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] вызывает метод <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider.IsIdle%2A> всех реализаций <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider>. Если все они возвратят значение `true`, экземпляр будет освобожден. В противном случае реализация <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider> отвечает за уведомление `Dispatcher` о состоянии бездействия с помощью метода обратного вызова.  
+ В отличие от других режимов создания экземпляров, режим создания общих экземпляров располагает уникальным способом освобождения экземпляров служб. Когда для экземпляра закрыты все каналы, среда выполнения службы WCF запускает таймер. Если никто не установит соединение до истечения времени ожидания, WCF освободит экземпляр и вернет себе ресурсы. В рамках процедуры демонтажа WCF вызывает <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider.IsIdle%2A> метод всех <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider> реализации перед освобождением экземпляра. Если все они возвратят значение `true`, экземпляр будет освобожден. В противном случае реализация <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider> отвечает за уведомление `Dispatcher` о состоянии бездействия с помощью метода обратного вызова.  
   
  По умолчанию значение времени ожидания состояния бездействия <xref:System.ServiceModel.InstanceContext> равно одной минуте. Однако в этом образце показано, как его можно продлить с помощью пользовательского расширения.  
   
 ## <a name="extending-the-instancecontext"></a>Расширение InstanceContext  
- В [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] контекст <xref:System.ServiceModel.InstanceContext> является каналом между экземпляром службы и `Dispatcher`. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] позволяет вам расширять данный компонент времени выполнения путем добавления нового состояния или поведения с помощью шаблона расширяемого объекта. Шаблон расширяемого объекта используется в [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] для расширения существующих классов среды выполнения с помощью новых функциональных возможностей или добавления новых функций состояния к объекту. Предусмотрено три интерфейса в шаблоне расширяемого объекта: `IExtensibleObject<T>`, `IExtension<T>` и `IExtensionCollection<T>`.  
+ В WCF <xref:System.ServiceModel.InstanceContext> связывает экземпляр службы и `Dispatcher`. WCF позволяет вам расширять данный компонент времени выполнения путем добавления нового состояния или поведения с помощью шаблона расширяемого объекта. Шаблон расширяемого объекта используется в WCF для расширения существующих классов среды выполнения при помощи новых функциональных возможностей или добавления новых возможностей состояния к объекту. Предусмотрено три интерфейса в шаблоне расширяемого объекта: `IExtensibleObject<T>`, `IExtension<T>` и `IExtensionCollection<T>`.  
   
  Интерфейс `IExtensibleObject<T>` реализуется объектами для обеспечения расширений, которые настраивают их функциональность.  
   
@@ -80,7 +80,7 @@ class CustomLeaseExtension : IExtension<InstanceContext>, ICustomLease
 }  
 ```  
   
- Когда [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] вызывает метод <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider.IsIdle%2A> в реализации <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider>, этот вызов направляется методу <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider.IsIdle%2A> расширения `CustomLeaseExtension`. Затем расширение `CustomLeaseExtension` проверяет его закрытое состояние, чтобы определить, бездействует ли контекст <xref:System.ServiceModel.InstanceContext>. Если контекст бездействует, то возвращается значение `true`. В противном случае запускается таймер на указанное продленное время существования.  
+ Когда WCF вызывает <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider.IsIdle%2A> метод в <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider> этот вызов направляется в реализации <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider.IsIdle%2A> метод `CustomLeaseExtension`. Затем расширение `CustomLeaseExtension` проверяет его закрытое состояние, чтобы определить, бездействует ли контекст <xref:System.ServiceModel.InstanceContext>. Если контекст бездействует, то возвращается значение `true`. В противном случае запускается таймер на указанное продленное время существования.  
   
 ```  
 public bool IsIdle  
@@ -116,7 +116,7 @@ void idleTimer_Elapsed(object sender, ElapsedEventArgs args)
   
  При поступлении нового сообщения для экземпляра, перемещаемого в состояние бездействия, возобновить работающий таймер невозможно.  
   
- Для перехвата вызовов метода <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider> и их перенаправления расширению <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider.IsIdle%2A> образец реализует `CustomLeaseExtension`. Реализация <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider> содержится в классе `CustomLifetimeLease`. Метод <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider.IsIdle%2A> вызывается, когда [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] собирается освободить экземпляр службы. Однако в коллекции `ISharedSessionInstance` ServiceBehavior имеется только один экземпляр конкретной реализации <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider>. Это значит, что узнать о закрытии <xref:System.ServiceModel.InstanceContext> в тот момент, когда [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] проверяет метод <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider.IsIdle%2A>, невозможно. Поэтому этот образец использует блокировку потока для сериализации запросов в метод <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider.IsIdle%2A>.  
+ Для перехвата вызовов метода <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider> и их перенаправления расширению <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider.IsIdle%2A> образец реализует `CustomLeaseExtension`. Реализация <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider> содержится в классе `CustomLifetimeLease`. <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider.IsIdle%2A> Метод вызывается, когда WCF собирается освободить экземпляр службы. Однако в коллекции `ISharedSessionInstance` ServiceBehavior имеется только один экземпляр конкретной реализации <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider>. Это означает, что нет способа узнать <xref:System.ServiceModel.InstanceContext> закрыт во время проверки WCF <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider.IsIdle%2A> метод. Поэтому этот образец использует блокировку потока для сериализации запросов в метод <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider.IsIdle%2A>.  
   
 > [!IMPORTANT]
 >  Использовать блокировку потока не рекомендуется, поскольку сериализация может значительно снизить производительность приложения.  
@@ -160,7 +160,7 @@ public void NotifyIdle(InstanceContextIdleCallback callback,
   
  Перед проверкой свойства `ICustomLease.IsIdle` необходимо задать значение свойства Callback, поскольку оно требуется `CustomLeaseExtension` для уведомления диспетчера при переходе в состояние бездействия. Если `ICustomLease.IsIdle` возвращает значение `true`, то закрытому элементу `isIdle` в `CustomLifetimeLease` просто устанавливается значение `true` и вызывается метод обратного вызова. Поскольку код содержит блокировку, другие потоки не могут изменить значение этого закрытого элемента. При следующей проверке диспетчером `ISharedSessionLifetime.IsIdle` возвращается значение `true`, при этом диспетчер может освободить экземпляр.  
   
- Завершив подготовительную работу для пользовательского расширения, его необходимо подключить к модели службы. Чтобы подключить реализацию `CustomLeaseExtension` к контексту <xref:System.ServiceModel.InstanceContext>, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] предоставляет интерфейс <xref:System.ServiceModel.Dispatcher.IInstanceContextInitializer> для выполнения начальной загрузки <xref:System.ServiceModel.InstanceContext>. В этом образце класс `CustomLeaseInitializer` реализует этот интерфейс и добавляет экземпляр `CustomLeaseExtension` в коллекцию <xref:System.ServiceModel.InstanceContext.Extensions%2A> из единственной инициализации метода. Этот метод вызывается диспетчером при инициализации <xref:System.ServiceModel.InstanceContext>.  
+ Завершив подготовительную работу для пользовательского расширения, его необходимо подключить к модели службы. Чтобы подключить `CustomLeaseExtension` реализации <xref:System.ServiceModel.InstanceContext>, WCF предоставляет <xref:System.ServiceModel.Dispatcher.IInstanceContextInitializer> интерфейс для выполнения начальной загрузки <xref:System.ServiceModel.InstanceContext>. В этом образце класс `CustomLeaseInitializer` реализует этот интерфейс и добавляет экземпляр `CustomLeaseExtension` в коллекцию <xref:System.ServiceModel.InstanceContext.Extensions%2A> из единственной инициализации метода. Этот метод вызывается диспетчером при инициализации <xref:System.ServiceModel.InstanceContext>.  
   
 ```  
 public void Initialize(InstanceContext instanceContext, Message message)  

@@ -2,21 +2,21 @@
 title: Аналитическая трассировка WCF
 ms.date: 03/30/2017
 ms.assetid: 6029c7c7-3515-4d36-9d43-13e8f4971790
-ms.openlocfilehash: 99b28dcc1cfb32f5f6835eadee1bded14375c216
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e13aa0f7d0dbc48bedad0a9c639695ed038b9303
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="wcf-analytic-tracing"></a>Аналитическая трассировка WCF
-Этот образец демонстрирует способы добавления собственных событий трассировки к потоку аналитически, записывает трассировки событий Windows в Windows Communication Foundation (WCF) [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]. Аналитически отслеживаемые события предназначены для упрощения добавления видимости в службы без ущерба для производительности. Этот образец показывает, как с помощью интерфейсов <xref:System.Diagnostics.Eventing?displayProperty=nameWithType> API писать события, которые интегрируются со службами [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+Этот образец демонстрирует способы добавления собственных событий трассировки к потоку аналитически, записывает трассировки событий Windows в Windows Communication Foundation (WCF) [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]. Аналитически отслеживаемые события предназначены для упрощения добавления видимости в службы без ущерба для производительности. В этом примере показано, как использовать <xref:System.Diagnostics.Eventing?displayProperty=nameWithType> API писать события, которые интегрируются со службами WCF.  
   
  Дополнительные сведения о <xref:System.Diagnostics.Eventing?displayProperty=nameWithType> API см. в разделе <xref:System.Diagnostics.Eventing?displayProperty=nameWithType>.  
   
  Дополнительные сведения о трассировке событий в Windows см. в разделе [улучшения отладки и настройки производительности с помощью ETW](http://go.microsoft.com/fwlink/?LinkId=166488).  
   
 ## <a name="disposing-eventprovider"></a>Удаление EventProvider  
- В этом образце используется класс <xref:System.Diagnostics.Eventing.EventProvider?displayProperty=nameWithType>, который реализует <xref:System.IDisposable?displayProperty=nameWithType>. При реализации трассировки для службы [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], вероятнее всего, во время существования службы будут использоваться ресурсы <xref:System.Diagnostics.Eventing.EventProvider>. По этой причине, а также для удобочитаемости, этот образец никогда не удаляет упакованный <xref:System.Diagnostics.Eventing.EventProvider>. Если по какой-либо причине ваша служба имеет другие требования для трассировки и вы должны удалить этот ресурс, то вы должны изменить этот пример в соответствии с подходящими рекомендациями по удалению неуправляемых ресурсов. Дополнительные сведения об уничтожении неуправляемых ресурсов см. в разделе [метода](http://go.microsoft.com/fwlink/?LinkId=166436).  
+ В этом образце используется класс <xref:System.Diagnostics.Eventing.EventProvider?displayProperty=nameWithType>, который реализует <xref:System.IDisposable?displayProperty=nameWithType>. При реализации трассировки для службы WCF, вполне вероятно, что можно использовать <xref:System.Diagnostics.Eventing.EventProvider>его ресурсы в течение времени существования службы. По этой причине, а также для удобочитаемости, этот образец никогда не удаляет упакованный <xref:System.Diagnostics.Eventing.EventProvider>. Если по какой-либо причине ваша служба имеет другие требования для трассировки и вы должны удалить этот ресурс, то вы должны изменить этот пример в соответствии с подходящими рекомендациями по удалению неуправляемых ресурсов. Дополнительные сведения об уничтожении неуправляемых ресурсов см. в разделе [метода](http://go.microsoft.com/fwlink/?LinkId=166436).  
   
 ## <a name="self-hosting-vs-web-hosting"></a>Резидентное размещение в сравнении с размещением на веб-узле  
  Для служб, размещенных на веб сервере аналитически отслеживаемые трассировки WCF предоставляют поле «hostreference», которое используется для идентификации службы, выдающей трассировки. В этой модели могут участвовать расширяемые пользовательские трассировки, а в данном образце демонстрируются рекомендации, как это сделать. Формат веб-узел ссылки, когда канал "&#124;" имеется символ в результате строка может быть одним из следующих:  
@@ -29,10 +29,10 @@ ms.lasthandoff: 05/04/2018
   
      \<Имя сайта >&#124;\<ServiceVirtualPath >&#124;\<ServiceName >  
   
- Для резидентных служб [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]в аналитической трассировки не заполняют поле «hostreference». В этом образце класс `WCFUserEventProvider` ведет себя согласованно при использовании резидентной службой.  
+ Для резидентных служб аналитически отслеживаемые трассировки WCF не заполняют поле «hostreference». В этом образце класс `WCFUserEventProvider` ведет себя согласованно при использовании резидентной службой.  
   
 ## <a name="custom-event-details"></a>Данные пользовательских событий  
- Манифест поставщика событий для трассировки событий Windows [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] определяет три события, которые предназначены для выдачи авторами служб [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] из кода службы. В следующей таблице приведена разбивка этих трех событий.  
+ Манифест поставщика событий ETW WCF определяет три события, которые предназначены для выдачи авторами службы WCF из кода службы. В следующей таблице приведена разбивка этих трех событий.  
   
 |событие|Описание|Идентификатор события|  
 |-----------|-----------------|--------------|  
@@ -50,11 +50,11 @@ ms.lasthandoff: 05/04/2018
   
      В веб-браузере, щелкните **Calculator.svc**. В браузере должен появиться URI WSDL-документа для службы. Скопируйте этот URI.  
   
-4.  Запустите тестовый клиент [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] (WcfTestClient.exe).  
+4.  Запустите тестовый клиент WCF (WcfTestClient.exe).  
   
-     [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Тестовый клиент (WcfTestClient.exe) расположен в \< [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] каталог установки > \Common7\IDE\ WcfTestClient.exe (по умолчанию [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] каталог установки — C:\Program Files\Microsoft Visual Studio 10.0).  
+     Тестовый клиент WCF (WcfTestClient.exe) расположен в \< [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] каталог установки > \Common7\IDE\ WcfTestClient.exe (по умолчанию [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] каталог установки — C:\Program Files\Microsoft Visual Studio 10.0).  
   
-5.  В пределах [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] тестовый клиент, добавить службу, указав **файл**, а затем **добавить службу**.  
+5.  В тестовом клиенте WCF, добавьте службу, выбрав **файл**, а затем **добавить службу**.  
   
      Добавьте адрес конечной точки в поле ввода.  
   
@@ -64,7 +64,7 @@ ms.lasthandoff: 05/04/2018
   
 7.  Откройте приложение просмотра событий.  
   
-     Перед запуском службы запустите средство просмотра событий и убедитесь, что журнал событий прослушивает события отслеживания, создаваемые в службе [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+     Перед запуском службы запустите средство просмотра событий и убедитесь, что журнал событий прослушивает событий отслеживания от службы WCF.  
   
 8.  Из **запустить** последовательно выберите пункты **Администрирование**, а затем **средство просмотра событий**. Включить **аналитический** и **отладки** журналы.  
   

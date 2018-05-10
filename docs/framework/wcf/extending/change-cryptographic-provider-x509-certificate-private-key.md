@@ -8,16 +8,16 @@ helpviewer_keywords:
 - cryptographic provider [WCF], changing
 - cryptographic provider [WCF]
 ms.assetid: b4254406-272e-4774-bd61-27e39bbb6c12
-ms.openlocfilehash: be6033efc03e25967af8bbb3266b0f60df02eaba
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 633e87bca302adc0963e1bf52d2470c9dbae81a5
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-change-the-cryptographic-provider-for-an-x509-certificate39s-private-key"></a>Как: изменить поставщика служб шифрования для сертификата X.509&#39;s закрытого ключа
 В этом разделе показано, как изменить поставщика служб шифрования, используемый для предоставления закрытый ключ сертификата X.509 и как интегрировать поставщика в инфраструктуру безопасности Windows Communication Foundation (WCF). Дополнительные сведения об использовании сертификатов см. в разделе [работа с сертификатами](../../../../docs/framework/wcf/feature-details/working-with-certificates.md).  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Инфраструктурой безопасности позволяет встраивать новые типы маркеров безопасности, как описано в [как: Создание пользовательского токена](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md). Пользовательский маркер также можно использовать для замены существующих типов маркеров, предоставляемых системой.  
+ Модель безопасности WCF предоставляет способ вводят новые типы маркеров безопасности, как описано в [как: Создание пользовательского токена](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md). Пользовательский маркер также можно использовать для замены существующих типов маркеров, предоставляемых системой.  
   
  В этом разделе описывается замена предоставляемого системой маркера безопасности X.509 пользовательским маркером X.509, что делает возможным иную реализацию закрытого ключа сертификата. Эта возможность оказывается полезной, если фактический закрытый ключ предоставляется другим поставщиком служб шифрования, а не поставщиком служб шифрования Windows по умолчанию. В качестве примера альтернативного поставщика служб шифрования можно назвать аппаратный модуль безопасности, выполняющий все операции шифрования с закрытым ключом и не сохраняющий закрытые ключи в памяти, тем самым повышая уровень безопасности системы.  
   
@@ -32,11 +32,11 @@ ms.lasthandoff: 05/04/2018
   
 2.  Переопределите свойство <xref:System.IdentityModel.Tokens.SecurityKey.KeySize%2A>, доступное только для чтения. Это свойство возвращает фактический размер ключа пары ключей сертификата (открытого и закрытого).  
   
-3.  Переопределите метод <xref:System.IdentityModel.Tokens.SecurityKey.DecryptKey%2A>. Этот метод вызывается инфраструктурой безопасности [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] для расшифровки симметричного ключа с помощью закрытого ключа сертификата. (Ранее этот ключ был зашифрован с помощью открытого ключа сертификата).  
+3.  Переопределите метод <xref:System.IdentityModel.Tokens.SecurityKey.DecryptKey%2A>. Этот метод вызывается инфраструктурой безопасности WCF для расшифровки симметричного ключа с помощью закрытого ключа сертификата. (Ранее этот ключ был зашифрован с помощью открытого ключа сертификата).  
   
-4.  Переопределите метод <xref:System.IdentityModel.Tokens.AsymmetricSecurityKey.GetAsymmetricAlgorithm%2A>. Этот метод вызывается инфраструктурой безопасности [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] для получения экземпляра класса <xref:System.Security.Cryptography.AsymmetricAlgorithm>, представляющего поставщика служб шифрования для закрытого или открытого ключа сертификата (в зависимости от параметров, переданных методу).  
+4.  Переопределите метод <xref:System.IdentityModel.Tokens.AsymmetricSecurityKey.GetAsymmetricAlgorithm%2A>. Этот метод вызывается инфраструктурой безопасности WCF для получения экземпляра <xref:System.Security.Cryptography.AsymmetricAlgorithm> класс, представляющий поставщика служб шифрования для закрытого или открытого ключа или сертификата, в зависимости от параметров, переданного методу.  
   
-5.  Необязательно. Переопределите метод <xref:System.IdentityModel.Tokens.AsymmetricSecurityKey.GetHashAlgorithmForSignature%2A>. Переопределите этот метод, если требуется иная реализация класса <xref:System.Security.Cryptography.HashAlgorithm>.  
+5.  Необязательный. Переопределите метод <xref:System.IdentityModel.Tokens.AsymmetricSecurityKey.GetHashAlgorithmForSignature%2A>. Переопределите этот метод, если требуется иная реализация класса <xref:System.Security.Cryptography.HashAlgorithm>.  
   
 6.  Переопределите метод <xref:System.IdentityModel.Tokens.AsymmetricSecurityKey.GetSignatureFormatter%2A>. Этот метод возвращает экземпляр класса <xref:System.Security.Cryptography.AsymmetricSignatureFormatter>, связанного с закрытым ключом сертификата.  
   
@@ -45,7 +45,7 @@ ms.lasthandoff: 05/04/2018
      [!code-csharp[c_CustomX509Token#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customx509token/cs/source.cs#1)]
      [!code-vb[c_CustomX509Token#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customx509token/vb/source.vb#1)]  
   
- В следующей процедуре показано, как интегрировать реализацию пользовательского асимметричного ключа безопасности X.509, созданного в предыдущей процедуре, в инфраструктуру безопасности [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], чтобы заменить предоставляемый системой маркер безопасности X.509.  
+ Ниже показано, как интегрировать X.509 безопасности асимметричного ключа реализацию пользовательского создан в предыдущей процедуре, с инфраструктурой безопасности WCF, чтобы заменить безопасности X.509 системных маркеров.  
   
 #### <a name="to-replace-the-system-provided-x509-security-token-with-a-custom-x509-asymmetric-security-key-token"></a>Замена предоставляемого системой маркера безопасности X.509 пользовательским маркером асимметричного ключа безопасности X.509  
   

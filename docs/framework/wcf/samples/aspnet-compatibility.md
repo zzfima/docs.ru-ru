@@ -2,11 +2,11 @@
 title: Совместимость с ASP.NET
 ms.date: 03/30/2017
 ms.assetid: c8b51f1e-c096-4c42-ad99-0519887bbbc5
-ms.openlocfilehash: 35d9362fde21faf4998051e85f66fc4ddfb8b94b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: f621a3f13fafee67a015d463898a10aaf9104008
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="aspnet-compatibility"></a>Совместимость с ASP.NET
 В этом примере показано, как включить [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] режим совместимости в Windows Communication Foundation (WCF). Службы, работающие в режиме совместимости с [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)], полностью участвуют в конвейере приложения [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] и могут использовать функции [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)], такие как "File/URL Authorization" (Авторизация файла/URL-адреса), "Session State" (Состояние сеанса) и класс <xref:System.Web.HttpContext>. Класс <xref:System.Web.HttpContext> обеспечивает доступ к файлам cookie, сеансам и другим функциям [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]. Для этого режима требуется, чтобы привязки использовали транспорт HTTP, а сами службы были размещены в службах IIS.  
@@ -59,7 +59,7 @@ public interface ICalculatorSession
  Служба использует сеанс [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] для хранения результата каждого сеанса клиента. Это позволяет службе поддерживать промежуточный результат для каждого клиента по мере множественных вызовов службы.  
   
 > [!NOTE]
->  Состояние сеанса [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] и сеансы [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] имеют очень большие отличия.  В разделе [сеанса](../../../../docs/framework/wcf/samples/session.md) сведения о [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] сеансы.  
+>  [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] состояние сеанса и сеансы WCF — это очень разные вещи.  В разделе [сеанса](../../../../docs/framework/wcf/samples/session.md) подробные сведения о сеансах WCF.  
   
  Служба сильно зависит от состояния сеанса [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] и требует правильной работы режима совместимости [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]. Такие требования выражаются декларативно путем применения атрибута `AspNetCompatibilityRequirements`.  
   

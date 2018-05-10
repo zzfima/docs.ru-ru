@@ -2,11 +2,11 @@
 title: Использование счетчиков производительности
 ms.date: 03/30/2017
 ms.assetid: 00a787af-1876-473c-a48d-f52b51e28a3f
-ms.openlocfilehash: 2e25551494a433c53832127fdb0a32cb4eccac47
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 8784b4a481b8313d370aad1d8f265dcb44ab3ed6
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="using-performance-counters"></a>Использование счетчиков производительности
 Этот образец демонстрирует способы доступа к счетчикам производительности службы Windows Communication Foundation (WCF) и создать пользовательские счетчики. Этот пример построен на [Приступая к работе](../../../../docs/framework/wcf/samples/getting-started-sample.md).  
@@ -28,7 +28,7 @@ ms.lasthandoff: 05/04/2018
   
  Эту задачу можно также выполнить с помощью [средство редактирования конфигурации (SvcConfigEditor.exe)](../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md).  
   
- Если включены счетчики производительности, это значит, что для службы включен полный набор счетчиков производительности [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Платформа .NET Framework автоматически поддерживает данные о производительности на трех уровнях: `ServiceModelService`, `ServiceModelEndpoint` и `ServiceModelOperation`. На каждом из этих уровней имеются счетчики производительности, например "Calls", "Calls per Second" и "Security Calls Not Authorized".  
+ Если включены счетчики производительности, для службы включен полный набор счетчиков производительности WCF. Платформа .NET Framework автоматически поддерживает данные о производительности на трех уровнях: `ServiceModelService`, `ServiceModelEndpoint` и `ServiceModelOperation`. На каждом из этих уровней имеются счетчики производительности, например "Calls", "Calls per Second" и "Security Calls Not Authorized".  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Настройка, сборка и выполнение образца  
   
@@ -47,10 +47,10 @@ ms.lasthandoff: 05/04/2018
   
 2.  Удалите доступные счетчики производительности, выбирая их и нажимая клавишу DELETE.  
   
-3.  Добавить [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] счетчики, щелкнув правой кнопкой мыши панель «Диаграмма» и выбрав **добавить счетчики**. В **добавить счетчики** выберите **ServiceModelOperation 3.0.0.0, ServiceModelEndpoint 3.0.0.0 или ServiceModelService 3.0.0.0** в объекте производительности раскрывающийся список. Выберите в списке нужные счетчики.  
+3.  Добавить счетчики WCF, щелкнув правой кнопкой мыши панель «Диаграмма» и выбрав **добавить счетчики**. В **добавить счетчики** выберите **ServiceModelOperation 3.0.0.0, ServiceModelEndpoint 3.0.0.0 или ServiceModelService 3.0.0.0** в объекте производительности раскрывающийся список. Выберите в списке нужные счетчики.  
   
     > [!NOTE]
-    >  В [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] нет счетчиков производительности для службы, если на компьютере не запущены службы [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+    >  Нет счетчиков производительности нет WCF для службы, службы WCF не запущен на компьютере.  
   
 ### <a name="to-use-the-configuration-editor-to-enable-counters"></a>Включение счетчиков с помощью редактора конфигураций  
   

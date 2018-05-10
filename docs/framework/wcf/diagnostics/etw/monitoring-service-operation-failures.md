@@ -2,11 +2,11 @@
 title: Наблюдение за сбоями в работе службы
 ms.date: 03/30/2017
 ms.assetid: 59472ba3-8ebf-4479-bd7b-f440d5e636cb
-ms.openlocfilehash: 16ed779f77836fb68cf1edf1e01dbb3c0df01d45
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 3d708b537789c8d0decf75df780300c1e185c4c8
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="monitoring-service-operation-failures"></a>Наблюдение за сбоями в работе службы
 Если для приложения включено аналитическое отслеживание, сбои в работе службы можно легко отслеживать в обозревателе событий.  В этом разделе показано, как определить момент, в который произошел сбой операции службы, и как определить причину сбоя.  
@@ -17,7 +17,7 @@ ms.lasthandoff: 05/04/2018
   
 2.  Если не включено аналитическое отслеживание, разверните **журналы приложений и служб**, **Microsoft**, **Windows**, **сервер приложений-приложения** . Выберите **представление**, **Отобразить аналитический и отладочный журналы**. Щелкните правой кнопкой мыши **аналитический** и выберите **включить журнал**. Оставьте окно просмотра событий открытым, чтобы можно было просмотреть трассировки после сбоя операции службы.  
   
-3.  Затем откройте образец, созданные в [учебник по началу работы](../../../../../docs/framework/wcf/getting-started-tutorial.md) в [!INCLUDE[vs_current_long](../../../../../includes/vs-current-long-md.md)] Обратите внимание, что необходимо запустить [!INCLUDE[vs_current_long](../../../../../includes/vs-current-long-md.md)] с правами администратора для создания службы. Если у вас есть [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] образцы, устанавливаемые, можно открыть [Приступая к работе](../../../../../docs/framework/wcf/samples/getting-started-sample.md), который содержит завершенный проект, созданный в учебнике.  
+3.  Затем откройте образец, созданные в [учебник по началу работы](../../../../../docs/framework/wcf/getting-started-tutorial.md) в [!INCLUDE[vs_current_long](../../../../../includes/vs-current-long-md.md)] Обратите внимание, что необходимо запустить [!INCLUDE[vs_current_long](../../../../../includes/vs-current-long-md.md)] с правами администратора для создания службы. Если у вас установлен образцов WCF, можно открыть [Приступая к работе](../../../../../docs/framework/wcf/samples/getting-started-sample.md), который содержит завершенный проект, созданный в учебнике.  
   
 4.  В файле Program.cs в проекте «Server» добавьте следующую строку кода к началу метода `Divide` класса `CalculatorService`.  
   

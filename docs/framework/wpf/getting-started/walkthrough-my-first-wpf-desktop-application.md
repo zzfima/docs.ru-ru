@@ -1,9 +1,6 @@
 ---
 title: Создание приложения WPF в Visual Studio
-ms.custom: 04/12/2018
-ms.prod: .net-framework
-ms.technology: dotnet-wpf
-ms.topic: conceptual
+ms.date: 04/12/2018
 dev_langs:
 - csharp
 - vb
@@ -13,14 +10,11 @@ helpviewer_keywords:
 ms.assetid: b96bed40-8946-4285-8fe4-88045ab854ed
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: edc7a22a7b108731e08c5d67ef8b8a52e9959ddc
-ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.openlocfilehash: 7ceb4d79bb88e41e62f3ee136b6beb3324b3dbd7
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="walkthrough-my-first-wpf-desktop-application"></a>Пошаговое руководство. Создание первого классического приложения WPF
 
@@ -202,7 +196,7 @@ ms.lasthandoff: 04/18/2018
     [!code-csharp[ExpenseIt#2_5](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt2/ExpenseItHome.xaml.cs#2_5)]
     [!code-vb[ExpenseIt#2_5](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ExpenseIt/VB/ExpenseIt1_A/ExpenseItHome.xaml.vb#2_5)]
 
-    И следующим образом для **ExpenseReport**:
+    И следующим образом для **ExpenseReportPage**:
 
     [!code-csharp[ExpenseIt#5](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt/ExpenseReportPage.xaml.cs#5)]
     [!code-vb[ExpenseIt#5](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ExpenseIt/VB/ExpenseIt1_A/ExpenseReportPage.xaml.vb#5)]
@@ -488,7 +482,7 @@ ms.lasthandoff: 04/18/2018
 >
 > - [Безопасность](../../../../docs/framework/wpf/security-wpf.md)
 >
-> - [Локализации и глобализации WPF](../../../../docs/framework/wpf/advanced/wpf-globalization-and-localization-overview.md)
+> - [Глобализация и локализация WPF](../../../../docs/framework/wpf/advanced/wpf-globalization-and-localization-overview.md)
 >
 > - [Производительности WPF](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md)
 

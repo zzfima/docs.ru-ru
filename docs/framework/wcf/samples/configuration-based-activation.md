@@ -2,11 +2,11 @@
 title: Активация на основе конфигурации
 ms.date: 03/30/2017
 ms.assetid: 21bb762e-c43e-4b0c-887b-5e434d665838
-ms.openlocfilehash: 2829458d40e3efb180699122570b2775a90be9e6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 3ac4edd2a51e4ed8a5c0b7e73d7d1afa31334c33
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="configuration-based-activation"></a>Активация на основе конфигурации
 В этом примере показано, как активировать службы Windows Communication Foundation (WCF) без использования SVC-файла.  
@@ -21,7 +21,7 @@ ms.lasthandoff: 05/04/2018
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Hosting\ConfigBasedActivation`  
   
 ## <a name="sample-details"></a>Подробные сведения об образце  
- В этом образце клиентом является тестовый клиент [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], а служба размещается в службах IIS.  
+ В этом образце клиентом является тестовый клиент WCF, а служба размещается в службах IIS.  
   
 > [!NOTE]
 >  Инструкции по настройке и построению этого образца приведены в конце этого раздела.  

@@ -2,11 +2,11 @@
 title: Основные понятия рабочих процессов Windows
 ms.date: 03/30/2017
 ms.assetid: 0e930e80-5060-45d2-8a7a-95c0690105d4
-ms.openlocfilehash: 8ffa1bd1cdcc0347691032885fb929784045bf8a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: c5306f8616086835373bc52bdd8195564441b8b7
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="fundamental-windows-workflow-concepts"></a>Основные понятия рабочих процессов Windows
 При разработке рабочих процессов в [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] используются концепции, которые могут быть незнакомы некоторым разработчикам. В этом разделе описаны некоторые концепции, а также их реализация.  
@@ -51,7 +51,7 @@ ms.lasthandoff: 05/04/2018
  Действия получают доступ к среде выполнения рабочих процессов с помощью соответствующего производного класса <xref:System.Activities.ActivityContext>, например <xref:System.Activities.NativeActivityContext> или <xref:System.Activities.CodeActivityContext>. Они используют этот класс для разрешения аргументов и переменных, планирования дочерних действий и многих других операций.  
   
 ## <a name="services"></a>Службы  
- Рабочие процессы обеспечивают естественный способ реализации слабосвязанных служб и доступа к ним с помощью действий обмена сообщениями. Действия обмена сообщениями построены на основе [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] и являются основным механизмом, используемым для ввода данных в рабочий процесс и вывода данных из него. Вы можете компоновать действия обмена сообщениями для моделирования шаблона обмена сообщениями любого нужного вам типа. Дополнительные сведения см. в разделе [действий обмена сообщениями](../../../docs/framework/wcf/feature-details/messaging-activities.md). Службы Workflow Services размещаются с помощью класса <xref:System.ServiceModel.Activities.WorkflowServiceHost>. Дополнительные сведения см. в разделе [размещение Обзор служб рабочего процесса](../../../docs/framework/wcf/feature-details/hosting-workflow-services-overview.md). Дополнительные сведения о службах рабочего процесса в разделе [служб рабочих процессов](../../../docs/framework/wcf/feature-details/workflow-services.md)  
+ Рабочие процессы обеспечивают естественный способ реализации слабосвязанных служб и доступа к ним с помощью действий обмена сообщениями. Действия обмена сообщениями построены на WCF и являются основным механизмом, используемым для ввода данных в действие и из рабочего процесса. Вы можете компоновать действия обмена сообщениями для моделирования шаблона обмена сообщениями любого нужного вам типа. Дополнительные сведения см. в разделе [действий обмена сообщениями](../../../docs/framework/wcf/feature-details/messaging-activities.md). Службы Workflow Services размещаются с помощью класса <xref:System.ServiceModel.Activities.WorkflowServiceHost>. Дополнительные сведения см. в разделе [размещение Обзор служб рабочего процесса](../../../docs/framework/wcf/feature-details/hosting-workflow-services-overview.md). Дополнительные сведения о службах рабочего процесса в разделе [служб рабочих процессов](../../../docs/framework/wcf/feature-details/workflow-services.md)  
   
 ## <a name="persistence-unloading-and-long-running-workflows"></a>Сохранение, выгрузка и длительные рабочие процессы  
  Windows Workflow упрощает создание длительных реактивных программ путем обеспечения следующего.  

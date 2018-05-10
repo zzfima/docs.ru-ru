@@ -4,23 +4,23 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - proxy extensions [WCF]
 ms.assetid: 1328c61c-06e5-455f-9ebd-ceefb59d3867
-ms.openlocfilehash: 7eea247602d24c545e0de5fa9df50e83aae8ed7f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 95340a9ae6ac5a3face81d5fe6f61ea134fb6ad2
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="extending-clients"></a>Расширение клиентов
 В вызывающем приложении уровень модели службы отвечает за преобразование вызовов методов в коде приложения в исходящие сообщения, передачу их по соответствующим каналам, преобразование результатов обратно в возвращаемые значения и выходные параметры в коде приложения, а также за возврат результатов вызывающем объекту. Расширения модели службы изменяют или реализуют поведение и возможности выполнения или взаимодействия, в том числе возможности клиента или диспетчера, пользовательские поведения, перехват сообщений и параметров, а также другие возможности расширяемости.  
   
- В этом разделе описывается использование <xref:System.ServiceModel.Dispatcher.ClientRuntime> и <xref:System.ServiceModel.Dispatcher.ClientOperation> классы в клиентском приложении Windows Communication Foundation (WCF) для изменения поведения выполнения по умолчанию [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] клиента или чтобы перехватывать или изменять сообщения, параметры или возвращаемые значения до или после их отправки и получения через канал. Дополнительные сведения о расширении среды выполнения службы см. в разделе [расширение диспетчеров](../../../../docs/framework/wcf/extending/extending-dispatchers.md). Дополнительные сведения о моделях поведения, изменять и вставлять объекты настройки в среду выполнения клиента см. в разделе [настройку и расширение среды выполнения с помощью поведений](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md).  
+ В этом разделе описывается использование <xref:System.ServiceModel.Dispatcher.ClientRuntime> и <xref:System.ServiceModel.Dispatcher.ClientOperation> классы в клиентском приложении Windows Communication Foundation (WCF), чтобы изменить поведение по умолчанию выполнение клиента WCF или перехватывать или изменять сообщения, параметры или возвращаемые значения перед или после их отправки и получения через канал. Дополнительные сведения о расширении среды выполнения службы см. в разделе [расширение диспетчеров](../../../../docs/framework/wcf/extending/extending-dispatchers.md). Дополнительные сведения о моделях поведения, изменять и вставлять объекты настройки в среду выполнения клиента см. в разделе [настройку и расширение среды выполнения с помощью поведений](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md).  
   
 ## <a name="clients"></a>Клиенты  
- На стороне клиента объект или канал клиента [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] преобразует вызовы метода в исходящие сообщения, а входящие сообщения - в результат выполнения операций, возвращаемый вызывающему приложению. (Дополнительные сведения о типах клиента см. в разделе [Клиентская архитектура технологии WCF](../../../../docs/framework/wcf/feature-details/client-architecture.md).)  
+ На клиентском компьютере клиентский объект или клиента канал WCF преобразует вызовы метода в исходящие сообщения, а входящих сообщений, чтобы результаты операции, которые будут возвращены вызывающему приложению. (Дополнительные сведения о типах клиента см. в разделе [Клиентская архитектура технологии WCF](../../../../docs/framework/wcf/feature-details/client-architecture.md).)  
   
- У типов клиентов [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] имеются типы среды выполнения, которые обрабатывают данные функции уровня конечных точек и операций. Когда приложение вызывает операцию, <xref:System.ServiceModel.Dispatcher.ClientOperation> преобразует исходящие объекты в сообщение, обрабатывает перехватчики, проверяет, что исходящий вызов соответствует целевому контракту, и передает исходящее сообщение объекту <xref:System.ServiceModel.Dispatcher.ClientRuntime>, который отвечает за создание исходящих каналов (и входящих в случае дуплексной связи) и управление ими, дополнительную обработку исходящих сообщений (например, изменение заголовка), обработку перехватчиков сообщений в обоих направлениях и перенаправление входящих дуплексных вызовов соответствующему объекту <xref:System.ServiceModel.Dispatcher.DispatchRuntime> на стороне клиента. Объекты <xref:System.ServiceModel.Dispatcher.ClientOperation> и <xref:System.ServiceModel.Dispatcher.ClientRuntime> выполняют аналогичные функции, когда сообщения (в том числе ошибки) возвращаются клиенту.  
+ Типы клиентов WCF имеются типы среды выполнения, определяющих эту функцию на уровне конечной точки и операции. Когда приложение вызывает операцию, <xref:System.ServiceModel.Dispatcher.ClientOperation> преобразует исходящие объекты в сообщение, обрабатывает перехватчики, проверяет, что исходящий вызов соответствует целевому контракту, и передает исходящее сообщение объекту <xref:System.ServiceModel.Dispatcher.ClientRuntime>, который отвечает за создание исходящих каналов (и входящих в случае дуплексной связи) и управление ими, дополнительную обработку исходящих сообщений (например, изменение заголовка), обработку перехватчиков сообщений в обоих направлениях и перенаправление входящих дуплексных вызовов соответствующему объекту <xref:System.ServiceModel.Dispatcher.DispatchRuntime> на стороне клиента. Объекты <xref:System.ServiceModel.Dispatcher.ClientOperation> и <xref:System.ServiceModel.Dispatcher.ClientRuntime> выполняют аналогичные функции, когда сообщения (в том числе ошибки) возвращаются клиенту.  
   
- Эти два класса среды выполнения являются основным расширением, позволяющим настроить обработку объектов и каналов клиентов [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Класс <xref:System.ServiceModel.Dispatcher.ClientRuntime> позволяет пользователям перехватывать и расширять выполнение клиента на уровне всех сообщений в контракте. Класс <xref:System.ServiceModel.Dispatcher.ClientOperation> позволяет пользователям перехватывать и расширять выполнение клиента для всех сообщений в заданной операции.  
+ Эти два класса среды выполнения являются основным расширением, позволяющим настроить обработку объектов клиента WCF и каналов. Класс <xref:System.ServiceModel.Dispatcher.ClientRuntime> позволяет пользователям перехватывать и расширять выполнение клиента на уровне всех сообщений в контракте. Класс <xref:System.ServiceModel.Dispatcher.ClientOperation> позволяет пользователям перехватывать и расширять выполнение клиента для всех сообщений в заданной операции.  
   
  Изменение свойств и вставка дополнительных функций реализуются с помощью расширений функциональности контрактов, конечных точек и операций. Дополнительные сведения о том, как использовать эти типы поведения для выполнения настройки среды выполнения клиента см. в разделе [настройку и расширение среды выполнения с помощью поведений](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md).  
   
@@ -33,7 +33,7 @@ ms.lasthandoff: 05/04/2018
   
 -   Пользовательские преобразования сообщений Вместо изменения кода приложений пользователю может потребоваться применить некоторые преобразования к сообщению в среде выполнения (например, для работы с версиями). Для этого также можно использовать интерфейсы перехватчиков сообщений.  
   
--   Пользовательская модель данных Может возникнуть необходимость использовать модель данных и сериализации, отличную от модели, которая по умолчанию поддерживается в [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] (а именно объекты <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType>, <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType> и <xref:System.ServiceModel.Channels.Message?displayProperty=nameWithType>). Этого можно добиться, реализовав интерфейсы модулей форматирования сообщений. Дополнительные сведения см. в описании интерфейса <xref:System.ServiceModel.Dispatcher.IClientMessageFormatter?displayProperty=nameWithType> и свойства <xref:System.ServiceModel.Dispatcher.ClientOperation.Formatter%2A?displayProperty=nameWithType>.  
+-   Пользовательская модель данных Может возникнуть необходимость использовать модель данных и сериализации отличным от того, по умолчанию в WCF (а именно, <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType>, <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType>, и <xref:System.ServiceModel.Channels.Message?displayProperty=nameWithType> объекты). Этого можно добиться, реализовав интерфейсы модулей форматирования сообщений. Дополнительные сведения см. в описании интерфейса <xref:System.ServiceModel.Dispatcher.IClientMessageFormatter?displayProperty=nameWithType> и свойства <xref:System.ServiceModel.Dispatcher.ClientOperation.Formatter%2A?displayProperty=nameWithType>.  
   
 -   Пользовательская проверка параметров Может возникнуть необходимость принудительной проверки введенных параметров (в отличие от XML). Для этого также можно использовать интерфейсы инспекторов параметров. Пример см. в разделе [как: проверять или изменять параметры](../../../../docs/framework/wcf/extending/how-to-inspect-or-modify-parameters.md) или [клиентской проверки](../../../../docs/framework/wcf/samples/client-validation.md).  
   
@@ -52,7 +52,7 @@ ms.lasthandoff: 05/04/2018
   
 -   Свойство <xref:System.ServiceModel.Dispatcher.ClientRuntime.Via%2A> задает значение назначения сообщения на уровне транспорта для поддержки посредников и других сценариев.  
   
--   Свойство <xref:System.ServiceModel.Dispatcher.ClientRuntime.MessageInspectors%2A> возвращает коллекцию объектов <xref:System.ServiceModel.Dispatcher.IClientMessageInspector>, в которую можно добавить пользовательские перехватчики сообщений для всех сообщений, проходящих через клиент [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+-   <xref:System.ServiceModel.Dispatcher.ClientRuntime.MessageInspectors%2A> Свойство возвращает коллекцию <xref:System.ServiceModel.Dispatcher.IClientMessageInspector> объектов, к которым можно добавить пользовательские перехватчики сообщений для всех сообщений, проходящих через клиент WCF.  
   
  Кроме того, существует несколько других свойств, которые извлекают данные о контракте:  
   
@@ -62,22 +62,22 @@ ms.lasthandoff: 05/04/2018
   
 -   <xref:System.ServiceModel.Dispatcher.ClientRuntime.ContractClientType%2A>  
   
- Если клиент [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] является дуплексным клиентом [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], то следующие свойства также извлекают сведения о клиенте [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] обратного вызова:  
+ Если клиент WCF является дуплексным клиентом WCF, следующие свойства также получать сведения о клиентах WCF обратного вызова:  
   
 -   <xref:System.ServiceModel.Dispatcher.ClientRuntime.CallbackClientType%2A>  
   
 -   <xref:System.ServiceModel.Dispatcher.ClientRuntime.CallbackDispatchRuntime%2A>  
   
- Чтобы расширить выполнение клиента [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] на весь клиент [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], изучите свойства, предоставляемые классом <xref:System.ServiceModel.Dispatcher.ClientRuntime>, чтобы понять, каким образом проще реализовать нужную функциональность - путем изменения свойства или путем реализации интерфейса и его добавления в свойство. После выбора расширения для построения вставьте это расширение в соответствующее свойство <xref:System.ServiceModel.Dispatcher.ClientRuntime>, реализовав расширение функциональности клиента, которое при вызове обеспечивает доступ к классу <xref:System.ServiceModel.Dispatcher.ClientRuntime>.  
+ Чтобы расширить выполнение клиента WCF через весь клиента WCF, просмотрите свойства, предоставляемые <xref:System.ServiceModel.Dispatcher.ClientRuntime> класс, чтобы просмотреть, создает ли функциональность-путем изменения свойства или путем реализации интерфейса и его добавления в свойство. После выбора расширения для построения вставьте это расширение в соответствующее свойство <xref:System.ServiceModel.Dispatcher.ClientRuntime>, реализовав расширение функциональности клиента, которое при вызове обеспечивает доступ к классу <xref:System.ServiceModel.Dispatcher.ClientRuntime>.  
   
  Объекты пользовательских расширений можно вставлять в коллекцию с помощью расширения функциональности оператора (объекта, реализующего интерфейс <xref:System.ServiceModel.Description.IOperationBehavior>), контракта (объекта, реализующего интерфейс <xref:System.ServiceModel.Description.IContractBehavior>) или конечной точки (объекта, реализующего интерфейс <xref:System.ServiceModel.Description.IEndpointBehavior>). Устанавливаемый объект расширения функциональности добавляется в соответствующую коллекцию либо программным образам, либо декларативно (путем реализации пользовательского атрибута), либо путем реализации пользовательского объекта <xref:System.ServiceModel.Configuration.BehaviorExtensionElement>, чтобы сделать возможной вставку расширения функциональности при помощи файла конфигурации приложения. Дополнительные сведения см. в разделе [настройку и расширение среды выполнения с помощью поведений](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md).  
   
- Примеры, демонстрирующие перехвата через [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] клиента, в разделе [как: проверки или изменения сообщений на клиенте](../../../../docs/framework/wcf/extending/how-to-inspect-or-modify-messages-on-the-client.md).  
+ Примеры, демонстрирующие перехвата между клиентом WCF см. в разделе [как: проверки или изменения сообщений на клиенте](../../../../docs/framework/wcf/extending/how-to-inspect-or-modify-messages-on-the-client.md).  
   
 ### <a name="using-the-clientoperation-class"></a>Использование класса ClientOperation  
  Класс <xref:System.ServiceModel.Dispatcher.ClientOperation> - это расположение для изменений клиента, вносимых во время выполнения, и точка вставки для пользовательских расширений, применяемых только к одной операции службы. (Чтобы изменить поведение клиента во время выполнения для всех сообщений в контракте, используйте класс <xref:System.ServiceModel.Dispatcher.ClientRuntime>.)  
   
- Используйте свойство <xref:System.ServiceModel.Dispatcher.ClientRuntime.Operations%2A>, чтобы найти объект <xref:System.ServiceModel.Dispatcher.ClientOperation>, который представляет определенную операцию службы. Следующие свойства позволяют вставить пользовательские объекты в систему клиента [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ Используйте свойство <xref:System.ServiceModel.Dispatcher.ClientRuntime.Operations%2A>, чтобы найти объект <xref:System.ServiceModel.Dispatcher.ClientOperation>, который представляет определенную операцию службы. Следующие свойства позволяют вставить пользовательские объекты в системе клиента WCF:  
   
 -   Используйте свойство <xref:System.ServiceModel.Dispatcher.ClientOperation.Formatter%2A> для вставки пользовательской реализации <xref:System.ServiceModel.Dispatcher.IClientMessageFormatter> для операции или изменения текущего модуля форматирования.  
   
@@ -91,7 +91,7 @@ ms.lasthandoff: 05/04/2018
   
 -   Используйте свойство <xref:System.ServiceModel.Dispatcher.ClientOperation.Action%2A>, чтобы управлять действием WS-Addressing сообщения запроса.  
   
--   Используйте свойства <xref:System.ServiceModel.Dispatcher.ClientOperation.BeginMethod%2A> и <xref:System.ServiceModel.Dispatcher.ClientOperation.EndMethod%2A> для указания методов клиента [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], которые связаны с асинхронной операцией.  
+-   Используйте <xref:System.ServiceModel.Dispatcher.ClientOperation.BeginMethod%2A> и <xref:System.ServiceModel.Dispatcher.ClientOperation.EndMethod%2A> для указания клиентских методов WCF, которые связаны с асинхронной операцией.  
   
 -   Используйте свойство <xref:System.ServiceModel.Dispatcher.ClientOperation.FaultContractInfos%2A>, чтобы получить коллекцию, содержащую типы, которые могут содержаться в ошибках SOAP в качестве типа сведений.  
   
@@ -105,13 +105,13 @@ ms.lasthandoff: 05/04/2018
   
 -   Используйте свойство <xref:System.ServiceModel.Dispatcher.ClientOperation.SyncMethod%2A> для определения метода, который сопоставлен операции.  
   
- Чтобы расширить выполнение клиента [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] только на одну операцию службы, изучите свойства, предоставляемые классом <xref:System.ServiceModel.Dispatcher.ClientOperation>, чтобы понять, каким образом проще реализовать нужную функциональность - путем изменения свойства или путем реализации интерфейса и его добавления в свойство. После выбора расширения для построения вставьте это расширение в соответствующее свойство <xref:System.ServiceModel.Dispatcher.ClientOperation>, реализовав расширение функциональности клиента, которое при вызове обеспечивает доступ к классу <xref:System.ServiceModel.Dispatcher.ClientOperation>. После этого внутри данного расширения функциональности можно изменить свойство <xref:System.ServiceModel.Dispatcher.ClientRuntime> для удовлетворения необходимых требований.  
+ Чтобы расширить выполнение клиента WCF только одну операцию службы, изучите свойства, предоставляемые на <xref:System.ServiceModel.Dispatcher.ClientOperation> класс, чтобы просмотреть, создает ли функциональность-путем изменения свойства или путем реализации интерфейса и его добавления в свойство. После выбора расширения для построения вставьте это расширение в соответствующее свойство <xref:System.ServiceModel.Dispatcher.ClientOperation>, реализовав расширение функциональности клиента, которое при вызове обеспечивает доступ к классу <xref:System.ServiceModel.Dispatcher.ClientOperation>. После этого внутри данного расширения функциональности можно изменить свойство <xref:System.ServiceModel.Dispatcher.ClientRuntime> для удовлетворения необходимых требований.  
   
  Обычно реализации расширения функциональности операции (объекта, реализующего интерфейс <xref:System.ServiceModel.Description.IOperationBehavior>) бывает достаточно, но для достижения такого же результата можно также воспользоваться расширениями функциональности конечных точек и контрактов, найдя объект <xref:System.ServiceModel.Description.OperationDescription> для конкретной операции и прикрепив к нему расширение функциональности. Дополнительные сведения см. в разделе [настройку и расширение среды выполнения с помощью поведений](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md).  
   
  Чтобы использовать пользовательское расширение функциональности на этапе конфигурации, установите его с использованием обработчика раздела конфигурации пользовательского расширения функциональности. Его также можно установить путем создания пользовательского атрибута.  
   
- Примеры, демонстрирующие перехват по [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] клиента, в разделе [как: проверить или изменить параметры](../../../../docs/framework/wcf/extending/how-to-inspect-or-modify-parameters.md).  
+ Примеры, демонстрирующие перехвата между клиентом WCF см. в разделе [как: проверять или изменять параметры](../../../../docs/framework/wcf/extending/how-to-inspect-or-modify-parameters.md).  
   
 ## <a name="see-also"></a>См. также  
  <xref:System.ServiceModel.Dispatcher.ClientRuntime>  

@@ -2,11 +2,11 @@
 title: Привязка WS
 ms.date: 03/30/2017
 ms.assetid: 629945b2-d771-46d7-a87b-5df3b2e460da
-ms.openlocfilehash: 67102c7c2925c2ac032d9defccdd5e187e76d608
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 11480b91c6ac6a5501029dfdf10cd81d3fa18820
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="ws-binding"></a>Привязка WS
 Этот раздел содержит образцы, которые демонстрируют привязку службы Windows в Windows Communication Foundation (WCF).  
@@ -25,7 +25,7 @@ ms.lasthandoff: 05/04/2018
  Демонстрирует использование кодирования сообщений с помощью механизма оптимизации передачи сообщений (MTOM) с привязкой WSHttpBinding.  
   
  [WSHttpBinding](../../../../docs/framework/wcf/samples/wshttpbinding.md)  
- Показано, как с помощью [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] реализовать типовую службу и типовой клиент.  
+ Показано, как реализовать типовую службу и типовой клиент с помощью WCF.  
   
  [Надежный сеанс WS](../../../../docs/framework/wcf/samples/ws-reliable-session.md)  
  Демонстрирует использование надежных сеансов.  
@@ -34,7 +34,7 @@ ms.lasthandoff: 05/04/2018
  Демонстрируется использование безопасности транспорта SSL с привязкой <xref:System.ServiceModel.WSHttpBinding>.  
   
  [Привязка безопасности сообщений](../../../../docs/framework/wcf/samples/message-security-binding.md)  
- Демонстрируется использование безопасности сообщений в [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ Демонстрируется использование безопасности сообщений в WCF.  
   
  [Транспорт WS с учетными данными сообщения](../../../../docs/framework/wcf/samples/ws-transport-with-message-credential.md)  
  В этом образце демонстрируется использование безопасности транспорта SSL в сочетании с передаваемыми в сообщении учетными данными клиента.

@@ -2,11 +2,11 @@
 title: 'Транспорт: пример пользовательских транзакций по протоколу UDP'
 ms.date: 03/30/2017
 ms.assetid: 6cebf975-41bd-443e-9540-fd2463c3eb23
-ms.openlocfilehash: e395300df4cd9917b9662d4bc3b1e8d50d82914d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 911331d5f5120f33a6c442a1eb4b2be2c8269a0e
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="transport-custom-transactions-over-udp-sample"></a>Транспорт: пример пользовательских транзакций по протоколу UDP
 Этот пример построен на [транспорт: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) образец в Windows Communication Foundation (WCF)[расширяемость транспорта](../../../../docs/framework/wcf/samples/transport-extensibility.md). Он расширяет пример транспорта UDP за счет поддержки пользовательского потока транзакций и иллюстрирует использование свойства <xref:System.ServiceModel.Channels.TransactionMessageProperty>.  
@@ -47,7 +47,7 @@ int bytesSent = this.socket.SendTo(txmsgBuffer, 0, txmsgBuffer.Length, SocketFla
   
  `TransactionMessageBuffer.WriteTransactionMessageBuffer` - вспомогательный метод, содержащий новые функции для слияния маркера распространения для текущей транзакции с сущностью сообщения и его помещения в буфер.  
   
- Для транспорта пользовательского потока транзакций реализация клиента должна знать, какие операции службы нуждаются в потоке транзакций, и передавать эти сведения [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Должен быть и механизм для передачи транзакции пользователя на транспортный уровень. Данный образец использует для получения этих сведений "инспекторы сообщений [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]". Инспектор сообщений клиента, реализованный здесь, называется `TransactionFlowInspector` и выполняет следующие задачи:  
+ Для транспорта пользовательского потока транзакций, реализация клиента должна знать, какие операции службы нуждаются в потоке транзакций и передавать эти сведения в WCF. Должен быть и механизм для передачи транзакции пользователя на транспортный уровень. В этом примере используется «Инспекторы сообщений WCF» для получения этих сведений. Инспектор сообщений клиента, реализованный здесь, называется `TransactionFlowInspector` и выполняет следующие задачи:  
   
 -   Определяет, следует ли создать поток транзакции для данного действия сообщения (это происходит в `IsTxFlowRequiredForThisOperation()`);  
   

@@ -2,11 +2,11 @@
 title: Средство регистрации ServiceModel (ServiceModelReg.exe)
 ms.date: 03/30/2017
 ms.assetid: 396ec5ae-e34f-4c64-a164-fcf50e86b6ac
-ms.openlocfilehash: 660bad0b80a80a21936c9c8a5d485fe05b8c8acf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5fab1a356cd035ed006bfe90d713e179907e0137
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="servicemodel-registration-tool-servicemodelregexe"></a>Средство регистрации ServiceModel (ServiceModelReg.exe)
 Этот инструмент командной строки предоставляет возможность управления регистрацией компонентов WCF и WF на одном компьютере. В обычных условиях использование данного средства не требуется, так как при установке компонентов WCF и WF производится их правильная настройка. Но если вы испытываете проблемы с активацией службы, то можно попробовать зарегистрировать компоненты с помощью этого средства.  
@@ -41,7 +41,7 @@ ServiceModelReg.exe[(-ia|-ua|-r)|((-i|-u) -c:<command>)] [-v|-q] [-nologo] [-?]
 |`-?`|Отображает текст справки|  
   
 ## <a name="fixing-the-fileloadexception-error"></a>Исправление ошибки FileLoadException  
- Если на компьютере устанавливались предыдущие версии [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], при запуске средства ServiceModelReg для регистрации новой версии может возникнуть ошибка `FileLoadFoundException`. Это может произойти, даже если пользователь вручную удалил файлы из каталога установки предыдущей версии, но оставил файл machine.config без изменений.  
+ Если в предыдущих версиях WCF установлены на компьютере, вы можете получить `FileLoadFoundException` ошибка при запуске средства ServiceModelReg для регистрации новой версии. Это может произойти, даже если пользователь вручную удалил файлы из каталога установки предыдущей версии, но оставил файл machine.config без изменений.  
   
  Сообщение об ошибке подобно приведенному ниже.  
   
@@ -50,7 +50,7 @@ Error: System.IO.FileLoadException: Could not load file or assembly 'System.Serv
 File name: 'System.ServiceModel, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089'  
 ```  
   
- Из этого сообщения об ошибке можно выяснить, что сборка System.ServiceModel версии 2.0.0.0 была установлена более ранней CTP-версией. Текущая версия сборки System.ServiceModel - 3.0.0.0. Таким образом, данная проблема возникает при попытке установить официальную версию [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] на компьютер, где CTP-версия [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] была установлена, но не полностью удалена.  
+ Из этого сообщения об ошибке можно выяснить, что сборка System.ServiceModel версии 2.0.0.0 была установлена более ранней CTP-версией. Текущая версия сборки System.ServiceModel - 3.0.0.0. Таким образом эта проблема возникает, если вы хотите установить официального выпуска WCF на компьютере, где ранних CTP-версии WCF была установлена, но не полностью удалена.  
   
  ServiceModelReg.exe не может удалять записи предыдущих версий или регистрировать записи новой версии. Единственным решением является изменение файла machine.config вручную. Этот файл находится в следующем расположении.  
   
@@ -58,7 +58,7 @@ File name: 'System.ServiceModel, Version=2.0.0.0, Culture=neutral, PublicKeyToke
 %windir%\Microsoft.NET\Framework\v2.0.50727\config\machine.config   
 ```  
   
- В случае использования [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] на 64-разрядном компьютере также необходимо отредактировать одноименный файл. Путь к этому файлу указан ниже.  
+ Если вы используете WCF на 64-разрядном компьютере, также необходимо отредактировать один и тот же файл в этом расположении.  
   
 ```  
 %windir%\Microsoft.NET\Framework64\v2.0.50727\config\machine.config   

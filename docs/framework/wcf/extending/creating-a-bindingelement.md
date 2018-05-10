@@ -2,17 +2,17 @@
 title: Создание элемента привязки BindingElement
 ms.date: 03/30/2017
 ms.assetid: 01a35307-a41f-4ef6-a3db-322af40afc99
-ms.openlocfilehash: fdc3ec1fef86ad31434ea372740497969c7ae6a7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 96924e97ad3fcc121ef7b28125301060d8448514
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="creating-a-bindingelement"></a>Создание элемента привязки BindingElement
-Привязок и элементов привязок (объектов, которые расширяют <xref:System.ServiceModel.Channels.Binding?displayProperty=nameWithType> и <xref:System.ServiceModel.Channels.BindingElement?displayProperty=nameWithType>соответственно) — это место, где модели приложения Windows Communication Foundation (WCF) связан с фабриками каналов и прослушиватели каналов. Без привязки, с помощью пользовательских каналов требует программирования на уровне канала как описано в [программирования на уровне канала службы](../../../../docs/framework/wcf/extending/service-channel-level-programming.md) и [программирования на уровне канала клиента](../../../../docs/framework/wcf/extending/client-channel-level-programming.md). В этом разделе обсуждаются минимальным требованием для использования канала в [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], разработку <xref:System.ServiceModel.Channels.BindingElement> для канала и включить использование из приложения, как описано в шаге 4 [разработка каналов](../../../../docs/framework/wcf/extending/developing-channels.md).  
+Привязок и элементов привязок (объектов, которые расширяют <xref:System.ServiceModel.Channels.Binding?displayProperty=nameWithType> и <xref:System.ServiceModel.Channels.BindingElement?displayProperty=nameWithType>соответственно) — это место, где модели приложения Windows Communication Foundation (WCF) связан с фабриками каналов и прослушиватели каналов. Без привязки, с помощью пользовательских каналов требует программирования на уровне канала как описано в [программирования на уровне канала службы](../../../../docs/framework/wcf/extending/service-channel-level-programming.md) и [программирования на уровне канала клиента](../../../../docs/framework/wcf/extending/client-channel-level-programming.md). В этом разделе обсуждаются минимальным требованием для использования канала в WCF, разработка <xref:System.ServiceModel.Channels.BindingElement> для канала и включить использование из приложения, как описано в шаге 4 [разработка каналов](../../../../docs/framework/wcf/extending/developing-channels.md).  
   
 ## <a name="overview"></a>Обзор  
- Создание элемента <xref:System.ServiceModel.Channels.BindingElement> для канала позволяет разработчикам использовать его в приложении [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Объекты <xref:System.ServiceModel.Channels.BindingElement> могут использоваться из класса <xref:System.ServiceModel.ServiceHost?displayProperty=nameWithType> для подключения приложения [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] к каналу без точных сведений о типе канала.  
+ Создание <xref:System.ServiceModel.Channels.BindingElement> для канала позволяет разработчикам использовать его в приложении WCF. <xref:System.ServiceModel.Channels.BindingElement> объекты, которые могут использоваться из <xref:System.ServiceModel.ServiceHost?displayProperty=nameWithType> класса для подключения приложения WCF канал без необходимости точные сведения о типе канала.  
   
  Один раз <xref:System.ServiceModel.Channels.BindingElement> был создан, можно включить дополнительные функциональные возможности, в зависимости от требований, оставшиеся шаги разработки канала описаны в следующих [разработка каналов](../../../../docs/framework/wcf/extending/developing-channels.md).  
   

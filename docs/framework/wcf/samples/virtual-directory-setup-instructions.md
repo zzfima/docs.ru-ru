@@ -2,11 +2,11 @@
 title: Инструкции по настройке виртуальных каталогов
 ms.date: 03/30/2017
 ms.assetid: 3c62cab5-81a4-48b6-ac8c-9ce33a85a157
-ms.openlocfilehash: a6fc8309563e78f919fe1e2009c1f46801c32913
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 3ff578b69590071ef2135e777b3105e7c226563e
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="virtual-directory-setup-instructions"></a>Инструкции по настройке виртуальных каталогов
 Образцы Windows Communication Foundation (WCF) предназначены для совместного использования общего виртуального каталога с именем servicemodelsamples, сопоставленный с папкой %SystemDrive%\inetpub\wwwroot\servicemodelsamples.  
@@ -35,12 +35,12 @@ ms.lasthandoff: 05/04/2018
 7.  Нажмите кнопку **ОК**. Веб-приложение для образцов WCF создано.  
   
     > [!NOTE]
-    >  Эта задача должна быть выполнена всего один раз, поскольку все образцы [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] используют одно и то же веб-приложение servicemodelsamples.  
+    >  Эта задача должна быть выполнена только один раз, поскольку все образцы WCF используют одно и то же веб-приложение servicemodelsamples.  
   
     > [!NOTE]
     >  В этой документации термины `virtual directory` и `Web application` являются синонимами.  
   
-     Помимо создания виртуального каталога необходимо также задать его свойства, чтобы включить выполняемые службы [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Дополнительные сведения см. далее.  
+     Помимо создания виртуального каталога, также необходимо задать его свойства, обеспечивающие работу служб WCF. Дополнительные сведения см. далее.  
   
 #### <a name="to-create-a-virtual-directory-in-iis-51-or-60"></a>Создание виртуального каталога в IIS 5.1 и 6.0  
   
@@ -52,7 +52,7 @@ ms.lasthandoff: 05/04/2018
   
 4.  В мастере введите `servicemodelsamples` как псевдоним для виртуального каталога, для которого создается.  
   
-5.  Укажите путь к каталогу %SystemDrive%\inetpub\wwwroot\servicemodelsamples. Большинство примеров [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] при построении копируют исполняемые файлы службы именно в этот каталог.  
+5.  Укажите путь к каталогу %SystemDrive%\inetpub\wwwroot\servicemodelsamples. Большинство образцов WCF при построении копируют исполняемые файлы службы именно в этот каталог.  
   
 6.  Нажмите кнопку **Далее**.  
   
@@ -65,7 +65,7 @@ ms.lasthandoff: 05/04/2018
 8.  Нажмите кнопку **Далее**, а затем нажмите кнопку **Готово** для завершения работы мастера.  
   
     > [!NOTE]
-    >  Эта задача должна быть выполнена всего один раз, поскольку все образцы [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] используют один и тот же виртуальный каталог servicemodelsamples.  
+    >  Эта задача должна быть выполнена только один раз, поскольку все образцы WCF используют тот же виртуальный каталог servicemodelsamples.  
   
 #### <a name="to-set-additional-virtual-directory-properties-in-iis-70-or-75"></a>Для задания дополнительных свойств виртуального каталога в IIS 7.0 или 7.5  
   

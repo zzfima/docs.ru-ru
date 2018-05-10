@@ -2,8 +2,8 @@
 
 |   |   |
 |---|---|
-|Подробные сведения|Начиная с .NET Framework 4.5, вызов <code>System.Windows.Forms.MessageBox.Show</code> из обработчика <xref:System.Windows.UIElement.PreviewLostKeyboardFocus> приведет к повторному запуску обработчика после закрытия окна сообщения. В результате может начаться бесконечный цикл вывода окон сообщений.|
-|Предложение|Существует два способа решения этой проблемы.<ol><li>Ее можно избежать, вызвав <code>System.Windows.MessageBox.Show</code> вместо <code>System.Windows.Forms.MessageBox.Show</code>.</li><li>Ее можно избежать, открыв окно сообщения из обработчика событий <xref:System.Windows.UIElement.LostKeyboardFocus> (в отличие от обработчика событий <xref:System.Windows.UIElement.PreviewLostKeyboardFocus?displayProperty=name>).</li></ol>|
+|Подробные сведения|Начиная с .NET Framework 4.5, вызов <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> из обработчика <xref:System.Windows.UIElement.PreviewLostKeyboardFocus> приведет к повторному запуску обработчика после закрытия окна сообщения. В результате может начаться бесконечный цикл вывода окон сообщений.|
+|Предложение|Существует два способа решения этой проблемы:<ol><li>Ее можно избежать, вызвав <xref:System.Windows.MessageBox.Show%2A?displayProperty=nameWithType> вместо <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType>.</li><li>Ее можно избежать, открыв окно сообщения из обработчика событий <xref:System.Windows.UIElement.LostKeyboardFocus?displayProperty=nameWithType> (в отличие от обработчика событий <xref:System.Windows.UIElement.PreviewLostKeyboardFocus?displayProperty=name>).</li></ol>|
 |Область|Пограничный случай|
 |Версия|4.5|
 |Тип|Среда выполнения|

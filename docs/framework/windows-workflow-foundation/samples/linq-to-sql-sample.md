@@ -2,21 +2,21 @@
 title: LINQ to SQL образца
 ms.date: 03/30/2017
 ms.assetid: 5f39db9e-0e62-42c9-8c98-bb8b54cec98c
-ms.openlocfilehash: a5c84dab941a50ddd5edb065004343cc304fd0f3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 3cfcaf3de1a22b8bb5505083f127a9888b99dbd8
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="linq-to-sql-sample"></a>LINQ to SQL образца
 В этом образце показано создание действий, использующих запросы к сущностям LINQ to SQL из таблиц в базах данных SQL Server.  
   
 > [!IMPORTANT]
->  Образцы [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] уже могут быть установлены на компьютере. Перед продолжением проверьте следующий каталог (по умолчанию).  
+>  Образцы WCF уже могут быть установлены на компьютере. Перед продолжением проверьте следующий каталог (по умолчанию).  
 >   
 >  `<InstallDrive>:\Samples\WCFWFCardspace`  
 >   
->  Если этот каталог не существует, щелкните ссылку "Загрузить образец" в верхней части страницы. Обратите внимание, что по этой ссылке происходит загрузка и установка всех [!INCLUDE[wf1](../../../../includes/wf1-md.md)], [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], и [!INCLUDE[infocard](../../../../includes/infocard-md.md)] образцов. Этот образец расположен в следующем каталоге.  
+>  Если этот каталог не существует, щелкните ссылку "Загрузить образец" в верхней части страницы. Обратите внимание, что этой ссылке происходит загрузка и установка всех [!INCLUDE[wf1](../../../../includes/wf1-md.md)], WCF, и [!INCLUDE[infocard](../../../../includes/infocard-md.md)] образцов. Этот образец расположен в следующем каталоге.  
 >   
 >  `<InstallDrive>:\Samples\WCFWFCardSpace\WF\Scenario\ActivityLibrary\Linq\LinqToSql`  
   

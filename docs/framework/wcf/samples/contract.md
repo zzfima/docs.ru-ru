@@ -2,24 +2,24 @@
 title: Contract2
 ms.date: 03/30/2017
 ms.assetid: 305eeb65-a52f-459e-9aa8-0ef071eade16
-ms.openlocfilehash: d7af8df46fabcb96a8f7015e360ee2617b7273a0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 1b751e3d4fd6eae01e3fcd7500f844427d46524c
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="contract"></a>Контракт
 В этом разделе содержатся образцы, которые демонстрируют контракты в Windows Communication Foundation (WCF).  
   
 ## <a name="in-this-section"></a>В этом разделе  
  [Контракты данных](../../../../docs/framework/wcf/samples/data-contracts.md)  
- Показывает контракты данных в [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ Показано, как в WCF контракты данных.  
   
  [Контракты сообщений](../../../../docs/framework/wcf/samples/message-contracts.md)  
- Показывает контракты сообщений в [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ Показано, как контракты сообщений в WCF.  
   
  [Контракты служб](../../../../docs/framework/wcf/samples/service-contracts.md)  
- Показывает контракты служб в [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ Показано, как в WCF контракты служб.  
   
  [DataContractResolver](../../../../docs/framework/wcf/samples/datacontractresolver.md)  
  Показывает, как можно настроить процессы сериализации и десериализации с помощью класса <xref:System.Runtime.Serialization.DataContractResolver>.  

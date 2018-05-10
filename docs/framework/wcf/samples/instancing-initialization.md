@@ -2,11 +2,11 @@
 title: Инициализация создания экземпляров
 ms.date: 03/30/2017
 ms.assetid: 154d049f-2140-4696-b494-c7e53f6775ef
-ms.openlocfilehash: 75b8d2a2696d5900fd7bffe42dbaf62b9f6ce694
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ae01254760219f2b408ef9d9663c4158e2802be8
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="instancing-initialization"></a>Инициализация создания экземпляров
 В этом примере расширяет [Pooling](../../../../docs/framework/wcf/samples/pooling.md) образец путем определения интерфейса `IObjectControl`, который настраивает инициализации объекта, активация и деактивация его. Клиент вызывает методы, которые возвращают объект в пул и не возвращают объект в пул.  
@@ -15,12 +15,12 @@ ms.lasthandoff: 05/04/2018
 >  Процедура настройки и инструкции по построению для данного образца приведены в конце этого раздела.  
   
 ## <a name="extensibility-points"></a>Точки расширяемости  
- Чтобы определить, какие точки расширяемости для использования является первым шагом при создании расширения Windows Communication Foundation (WCF). В [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], термин *EndpointDispatcher* ссылается на компонент отвечает за преобразование входящих сообщений в вызовы метода в службе пользователя и для преобразования значения, возвращаемые этим методом, чтобы во время выполнения исходящее сообщение. Служба [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] создает для каждой конечной точки объект EndpointDispatcher.  
+ Чтобы определить, какие точки расширяемости для использования является первым шагом при создании расширения Windows Communication Foundation (WCF). В WCF термин *EndpointDispatcher* относится к компоненту среды выполнения, который отвечает за преобразование входящих сообщений в вызовы метода в службе пользователя и для преобразования значения, возвращаемые из этого метода в исходящие сообщения . Служба WCF создает объект EndpointDispatcher для каждой конечной точки.  
   
  EndpointDispatcher реализует расширяемость области конечной точки (для всех сообщений, получаемых и отправляемых службой) с помощью класса <xref:System.ServiceModel.Dispatcher.EndpointDispatcher>. Этот класс позволяет настраивать различные свойства, управляющие поведением EndpointDispatcher. В этом образце рассматривается свойство <xref:System.ServiceModel.Dispatcher.DispatchRuntime.InstanceProvider%2A>, которое указывает на объект, предоставляющий экземпляры класса службы.  
   
 ## <a name="iinstanceprovider"></a>IInstanceProvider  
- В [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] EndpointDispatcher создает экземпляры класса службы с помощью поставщика экземпляров, реализующего интерфейс <xref:System.ServiceModel.Dispatcher.IInstanceProvider>. У этого интерфейса есть только два метода.  
+ В WCF, EndpointDispatcher создает экземпляры класса службы с помощью поставщика экземпляров, реализующего <xref:System.ServiceModel.Dispatcher.IInstanceProvider> интерфейса. У этого интерфейса есть только два метода.  
   
 -   <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%2A>. Когда прибывает сообщение, объект Dispatcher вызывает метод <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%2A>, чтобы создать экземпляр класса службы для обработки сообщения. Частота вызовов этого метода определяется свойством <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A>. Например, если свойство <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> имеет значение <xref:System.ServiceModel.InstanceContextMode.PerCall?displayProperty=nameWithType>, для обработки каждого получаемого сообщения создается новый экземпляр класса службы, поэтому метод <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%2A> вызывается каждый раз, когда приходит сообщение.  
   
@@ -153,7 +153,7 @@ if (activeObjectsCount == 0)
   
  В этом образце используется пользовательский атрибут. При создании <xref:System.ServiceModel.ServiceHost> проверяются атрибуты, используемые в определении типа службы, а в коллекцию поведений описания службы добавляются доступные поведения.  
   
- <xref:System.ServiceModel.Description.IServiceBehavior> Интерфейса есть три метода: <xref:System.ServiceModel.Description.IServiceBehavior.Validate%2A> `,` <xref:System.ServiceModel.Description.IServiceBehavior.AddBindingParameters%2A> `,` и <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A>. Данные методы вызываются [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] в процессе инициализации <xref:System.ServiceModel.ServiceHost>. Сначала вызывается метод <xref:System.ServiceModel.Description.IServiceBehavior.Validate%2A?displayProperty=nameWithType>, который позволяет проверить согласованность службы. Затем вызывается метод <xref:System.ServiceModel.Description.IServiceBehavior.AddBindingParameters%2A?displayProperty=nameWithType>, который используется только в очень сложных сценариях. Метод <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A?displayProperty=nameWithType> вызывается в последнюю очередь и отвечает за настройку среды выполнения. Следующие параметры передаются методу <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A?displayProperty=nameWithType>.  
+ <xref:System.ServiceModel.Description.IServiceBehavior> Интерфейса есть три метода: <xref:System.ServiceModel.Description.IServiceBehavior.Validate%2A> `,` <xref:System.ServiceModel.Description.IServiceBehavior.AddBindingParameters%2A> `,` и <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A>. Эти методы вызываются WCF при <xref:System.ServiceModel.ServiceHost> выполняется инициализация. Сначала вызывается метод <xref:System.ServiceModel.Description.IServiceBehavior.Validate%2A?displayProperty=nameWithType>, который позволяет проверить согласованность службы. Затем вызывается метод <xref:System.ServiceModel.Description.IServiceBehavior.AddBindingParameters%2A?displayProperty=nameWithType>, который используется только в очень сложных сценариях. Метод <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A?displayProperty=nameWithType> вызывается в последнюю очередь и отвечает за настройку среды выполнения. Следующие параметры передаются методу <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A?displayProperty=nameWithType>.  
   
 -   `Description`: этот параметр содержит описание службы для всей службы. Его можно использовать для проверки данных описания о конечных точках, контрактах и привязках службы, а также других связанных со службой данных.  
   
@@ -189,7 +189,7 @@ public void ApplyDispatchBehavior(ServiceDescription description, ServiceHostBas
   
  Помимо реализации интерфейса <xref:System.ServiceModel.Description.IServiceBehavior> у класса `ObjectPoolingAttribute` имеется несколько членов для настройки пула объектов с помощью аргументов атрибута. К этим членам относятся `MaxSize`, `MinSize`, `Enabled` и `CreationTimeout`, и они должны соответствовать набору функций пула, предоставляемому службами .NET Enterprise Services.  
   
- Теперь в службу [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] можно добавить поведение пула объектов, создав заметку для реализации службы с новым пользовательским атрибутом `ObjectPooling`.  
+ Поведение пула объектов возможность добавления к службе WCF создав заметку для реализации службы с новым пользовательским `ObjectPooling` атрибута.  
   
 ```  
 [ObjectPooling(MaxSize=1024, MinSize=10, CreationTimeout=30000]      

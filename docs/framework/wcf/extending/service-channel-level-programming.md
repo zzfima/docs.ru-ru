@@ -5,11 +5,11 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8d8dcd85-0a05-4c44-8861-4a0b3b90cca9
-ms.openlocfilehash: e48c519f6e10be4521d75345845eb5c019ec342c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 4d1ee0671a45b12e70f8f43ed2ea83b0a22d6c98
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="service-channel-level-programming"></a>Программирование служб на уровне канала
 В этом разделе описывается создание приложения службы Windows Communication Foundation (WCF) без использования <xref:System.ServiceModel.ServiceHost?displayProperty=nameWithType> и его связанной объектной модели.  
@@ -28,7 +28,7 @@ ms.lasthandoff: 05/04/2018
 5.  Закройте все объекты каналов.  
   
 #### <a name="creating-a-binding"></a>Создание привязки  
- Первым шагом для прослушивания и получения сообщений является создание привязки. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] поставляется с несколькими встроенными или предоставляемыми системой привязками, которые можно использовать напрямую путем создания экземпляра одной из них. Кроме того, всегда можно создать собственную пользовательскую привязку, создав класс CustomBinding, что и делает код в примере 1.  
+ Первым шагом для прослушивания и получения сообщений является создание привязки. WCF поставляется с несколькими встроенными или предоставляемые системой привязками, которые можно использовать напрямую путем создания экземпляра одного из них. Кроме того, всегда можно создать собственную пользовательскую привязку, создав класс CustomBinding, что и делает код в примере 1.  
   
  Пример кода, показанный ниже, создает экземпляр класса <xref:System.ServiceModel.Channels.CustomBinding?displayProperty=nameWithType> и добавляет элемент <xref:System.ServiceModel.Channels.HttpTransportBindingElement?displayProperty=nameWithType> в его коллекцию элементов, то есть коллекцию элементов привязки, используемую для построения стека канала. Поскольку коллекция элементов в этом примере состоит только из экземпляров класса <xref:System.ServiceModel.Channels.HttpTransportBindingElement>, у получившегося стека канала имеется только канал транспорта HTTP.  
   

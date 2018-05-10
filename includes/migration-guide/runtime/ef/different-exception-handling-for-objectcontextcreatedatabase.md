@@ -2,7 +2,7 @@
 
 |   |   |
 |---|---|
-|Подробные сведения|Начиная с .NET 4.5, если происходит сбой создания базы данных, методы <code>CreateDatabase</code> будут пытаться удалить пустую базу данных. Если эта операция выполняется успешно, будет распространяться исходное исключение <xref:System.Data.SqlClient.SqlException?displayProperty=name> (вместо <xref:System.InvalidOperationException?displayProperty=name>, которое всегда создавалось в .NET 4.0).|
+|Подробные сведения|Начиная с .NET Framework 4.5, если происходит сбой создания базы данных, методы <code>CreateDatabase</code> будут пытаться удалить пустую базу данных. Если эта операция выполняется успешно, будет распространяться исходное исключение <xref:System.Data.SqlClient.SqlException?displayProperty=name> (вместо <xref:System.InvalidOperationException?displayProperty=name>, которое всегда создавалось в .NET Framework 4.0).|
 |Предложение|При перехвате <xref:System.InvalidOperationException?displayProperty=name> во время выполнения <xref:System.Data.Objects.ObjectContext.CreateDatabase> или <xref:System.Data.Common.DbProviderServices.CreateDatabase(System.Data.Common.DbConnection,System.Nullable{System.Int32},System.Data.Metadata.Edm.StoreItemCollection)> теперь также должны обрабатываться исключения SQLException.|
 |Область|Дополнительный номер|
 |Версия|4.5|

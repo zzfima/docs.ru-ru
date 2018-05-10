@@ -8,33 +8,33 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], basic programming
 - Windows Communication Foundation [WCF], programming
 ms.assetid: 3ae3d498-f43c-4ecc-8cc0-6cbe36b62593
-ms.openlocfilehash: de56725f926ec9f6d4cc39c8160fa7af0f3ab80a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: cbdc693197344fe570c1462f6ca3115018eb69d6
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="basic-wcf-programming"></a>Базовое программирование WCF
 В этом разделе описываются основные принципы создания приложений Windows Communication Foundation (WCF).  
   
 ## <a name="in-this-section"></a>В этом разделе  
  [Базовый жизненный цикл программирования](../../../docs/framework/wcf/basic-programming-lifecycle.md)  
- Описание жизненного цикла разработки, создания и развертывания приложений служб и клиентских приложений [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].  
+ Описание жизненного цикла разработки, построения и развертывания служб и клиентских приложений WCF.  
   
  [Проектирование и реализация служб](../../../docs/framework/wcf/designing-and-implementing-services.md)  
  Описание разработки и реализации контракта службы, выбора шаблона обмена сообщениями, задания контракта сбоя и других основных аспектов служб.  
   
  [Настройка служб](../../../docs/framework/wcf/configuring-services.md)  
- Описание настройки службы [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] на поддержку требований контракта, настройки локального поведения во время выполнения и обозначения адреса для публикации службы.  
+ Описывает, как настроить службу WCF на поддержку требований контракта, настройки поведения среды выполнения локальной и обозначения адреса для публикации службы.  
   
  [Размещение служб](../../../docs/framework/wcf/hosting-services.md)  
  Описание основных принципов размещения служб в приложении.  
   
  [Создание клиентов](../../../docs/framework/wcf/building-clients.md)  
- Описание получения метаданных из служб, преобразования этих метаданных в код клиента [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], решения проблем безопасности и сборки, настройки и размещения клиента [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].  
+ Описывает, как получить метаданные из службы, преобразовать их в код клиента WCF, решения проблем безопасности и сборки, настройки и размещения клиента WCF.  
   
  [Введение в расширяемость](../../../docs/framework/wcf/introduction-to-extensibility.md)  
- Описание расширения [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] для создания пользовательских решений.  
+ Описывает способы расширения WCF для создания пользовательских решений.  
   
  [Примеры устранения неполадок WCF](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md)  
  Описание наиболее распространенных проблем, способов их решения и источников дополнительной информации о них.  

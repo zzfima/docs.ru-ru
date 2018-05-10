@@ -10,11 +10,11 @@ helpviewer_keywords:
 - streaming data provider [WCF Data Services]
 - WCF Data Services, streams
 ms.assetid: f0978fe4-5f9f-42aa-a5c2-df395d7c9495
-ms.openlocfilehash: 119877802bc6d685cd5b440cedb6ab71b20abf45
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d65ea58bc2e98ab2607ce105b496ac0a870362b0
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="streaming-provider-wcf-data-services"></a>Потоковый поставщик (службы WCF Data Services)
 Служба данных может обеспечивать доступ к данным больших двоичных объектов. Эти двоичные данные могут представлять видео- и аудиопотоки, изображения, файлы документов или двоичные данные медиаресурсов других типов. Когда сущность в модели данных включает одно или несколько двоичных свойств, служба данных возвращает двоичные данные в кодировке base-64 в записи в канале ответа. Так как загрузка и сериализация больших объемов двоичных данных, таким образом может повлиять на производительность, [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] определяет механизм получения двоичных данных независимо от сущности, к которой он принадлежит. Это достигается отделением двоичных данных от сущности с последующим разделением их на один или несколько потоков данных.  
@@ -79,12 +79,12 @@ ms.lasthandoff: 05/04/2018
  Общие сведения о создании службы данных см. в разделе [Настройка службы данных](../../../../docs/framework/data/wcf/configuring-the-data-service-wcf-data-services.md).  
   
 ## <a name="enabling-large-binary-streams-in-the-hosting-environment"></a>Включение больших двоичных потоков в среде размещения  
- При создании службы данных в веб-приложении [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] для реализации протокола HTTP используется Windows Communication Foundation (WCF). По умолчанию [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ограничивает размер сообщений HTTP только 65 тысяч байт. Чтобы иметь возможность направлять большие потоки двоичных данных в службу данных и из нее, необходимо также настроить веб-приложение, включив возможность использования больших двоичных файлов и потоков для передачи. Для этого добавьте к элементу `<configuration />` файла Web.config приложения следующее.  
+ При создании службы данных в веб-приложении [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] для реализации протокола HTTP используется Windows Communication Foundation (WCF). По умолчанию WCF устанавливает для HTTP-сообщений максимальный размер в 65 КБ. Чтобы иметь возможность направлять большие потоки двоичных данных в службу данных и из нее, необходимо также настроить веб-приложение, включив возможность использования больших двоичных файлов и потоков для передачи. Для этого добавьте к элементу `<configuration />` файла Web.config приложения следующее.  
   
   
   
 > [!NOTE]
->  Необходимо использовать режим передачи <xref:System.ServiceModel.TransferMode.Streamed?displayProperty=nameWithType>, чтобы обеспечить для двоичных данных запроса и ответа потоковую передачу и отсутствие буферизации [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+>  Необходимо использовать <xref:System.ServiceModel.TransferMode.Streamed?displayProperty=nameWithType> режим передачи, чтобы убедиться, что двоичные данные в сообщениях запроса и ответа потоковую передачу и отсутствие буферизации WCF.  
   
  Дополнительные сведения см. в разделе [потоковая передача сообщений](../../../../docs/framework/wcf/feature-details/streaming-message-transfer.md) и [квоты транспорта](../../../../docs/framework/wcf/feature-details/transport-quotas.md).  
   

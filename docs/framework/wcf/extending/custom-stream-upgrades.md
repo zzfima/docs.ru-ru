@@ -1,24 +1,12 @@
 ---
-title: "Пользовательские обновления потоков"
-ms.custom: 
+title: Пользовательские обновления потоков
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: e3da85c8-57f3-4e32-a4cb-50123f30fea6
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 73359c293f7d29c16702e826ed6caa61149935bd
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 84edac7a4dbaaf1a01332f5c0af29319c279dd1b
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="custom-stream-upgrades"></a>Пользовательские обновления потоков
 Ориентированные на потоки виды транспорта, например TCP и именованные каналы, работают с непрерывным потоком данных, установленным между клиентом и сервером. Поток реализуется объектом <xref:System.IO.Stream>. при обновлении потока клиенту требуется добавить дополнительный уровень протокола в стек каналов и он отправляет соответствующий запрос другому участнику коммуникационного канала. Обновление канала предполагает замену исходного объекта <xref:System.IO.Stream> на обновленный.  
@@ -41,7 +29,7 @@ ms.lasthandoff: 12/22/2017
  Обратите внимание, что в случае нескольких обновлений инициатор и акцептор инкапсулируют конечные автоматы для определения переходов обновления, которые являются допустимыми для каждой инициации.  
   
 ## <a name="how-to-implement-a-stream-upgrade"></a>Реализация обновления потока  
- В [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] имеется четыре класса `abstract`, которые можно реализовать:  
+ Windows Communication Foundation (WCF) имеется четыре `abstract` классы, которые можно реализовать:  
   
 -   <xref:System.ServiceModel.Channels.StreamUpgradeInitiator?displayProperty=nameWithType>  
   
@@ -78,7 +66,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="security-upgrades"></a>Обновления системы безопасности  
  Добавление обновления системы безопасности представляет собой специальную версию общего процесса обновления потока.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] уже содержит два элемента привязки для обновления безопасности потока. Конфигурация безопасности транспортного уровня инкапсулируется в элементах <xref:System.ServiceModel.Channels.WindowsStreamSecurityBindingElement> и <xref:System.ServiceModel.Channels.SslStreamSecurityBindingElement>, которые можно настроить и добавить в пользовательскую привязку. Эти элементы привязки расширяют класс <xref:System.ServiceModel.Channels.StreamUpgradeBindingElement>, создающий поставщики обновления потока клиента и сервера. У этих элементов привязки имеются методы, создающие специальные классы поставщиков обновления системы безопасности потоков, которые не являются `public`, поэтому в этих двух случаях достаточно просто добавить элемент привязки в привязку.  
+ WCF уже содержит два элемента привязки для обновления безопасности потока. Конфигурация безопасности транспортного уровня инкапсулируется в элементах <xref:System.ServiceModel.Channels.WindowsStreamSecurityBindingElement> и <xref:System.ServiceModel.Channels.SslStreamSecurityBindingElement>, которые можно настроить и добавить в пользовательскую привязку. Эти элементы привязки расширяют класс <xref:System.ServiceModel.Channels.StreamUpgradeBindingElement>, создающий поставщики обновления потока клиента и сервера. У этих элементов привязки имеются методы, создающие специальные классы поставщиков обновления системы безопасности потоков, которые не являются `public`, поэтому в этих двух случаях достаточно просто добавить элемент привязки в привязку.  
   
  Для сценариев обеспечения безопасности, не реализуемых с помощью описанных выше двух элементов привязки, от вышеупомянутых базовых классов инициатора, акцептора и поставщика наследуются три класса `abstract`, связанных с обеспечением безопасности:  
   

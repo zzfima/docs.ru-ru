@@ -2,20 +2,20 @@
 title: Образец элемента привязки для обнаружения
 ms.date: 03/30/2017
 ms.assetid: af513015-85bf-417b-8729-1bdff77ff6d6
-ms.openlocfilehash: 7dc38acbe91e03f579414294da07bff5cc53cc4c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 853f5cebfd745b3413d605dcfbf0e395e103b4f1
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="discovery-binding-element-sample"></a>Образец элемента привязки для обнаружения
 Данный образец демонстрирует использование клиентского элемента привязки обнаружения для обнаружения службы. Эта функция позволяет разработчикам добавлять клиентский канал обнаружения к клиентскому стеку каналов, в результате чего модель программирования становится намного интуитивно понятнее. Если соответствующий канал открыт, адрес службы разрешается в процессе обнаружения. Данный образец состоит из следующих проектов.  
   
--   **CalculatorService**: доступная для обнаружения [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] службы.  
+-   **CalculatorService**: обнаруживаемой службы WCF.  
   
--   **CalculatorClient**: A [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] клиентское приложение, которое использует клиентский канал обнаружения для поиска и вызова службы CalculatorService.  
+-   **CalculatorClient**: клиентское приложение WCF, которая использует клиентский канал обнаружения для поиска и вызова службы CalculatorService.  
   
--   **DynamicCalculatorClient**: A [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] клиентское приложение, использующее динамическую конечную точку для поиска и вызова службы CalculatorService.  
+-   **DynamicCalculatorClient**: клиентское приложение WCF, который использует динамическую конечную точку для поиска и вызова службы CalculatorService.  
   
 > [!IMPORTANT]
 >  Образцы уже могут быть установлены на компьютере. Перед продолжением проверьте следующий каталог (по умолчанию).  

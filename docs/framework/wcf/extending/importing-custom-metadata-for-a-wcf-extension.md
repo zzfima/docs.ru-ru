@@ -1,34 +1,22 @@
 ---
-title: "Импорт пользовательских метаданных для расширения WCF"
-ms.custom: 
+title: Импорт пользовательских метаданных для расширения WCF
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 78beb28f-408a-4c75-9c3c-caefe9595b1a
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 9208a73f6a35e4c05ab9be612491f3f7db792a5b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 99e2bd7c0ce1fd4a8154a0d6d9650487197d98d8
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="importing-custom-metadata-for-a-wcf-extension"></a>Импорт пользовательских метаданных для расширения WCF
-В процессе импорта метаданных в [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] создается абстрактное представление службы или ее компонентов на основе этих метаданных. Например, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] может импортировать экземпляры <xref:System.ServiceModel.Description.ServiceEndpoint>, <xref:System.ServiceModel.Channels.Binding> или <xref:System.ServiceModel.Description.ContractDescription> из документа WSDL службы. Чтобы импортировать метаданные службы в [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], следует использовать реализацию абстрактного класса <xref:System.ServiceModel.Description.MetadataImporter?displayProperty=nameWithType>. Типы, производные от класса <xref:System.ServiceModel.Description.MetadataImporter>, реализуют поддержку для импорта форматов метаданных, которые используют преимущества логики импорта WS-Policy в [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+В Windows Communication Foundation (WCF), импорта метаданных — это процесс создания абстрактное представление службы или ее компонентов из ее метаданных. Например, можно импортировать WCF <xref:System.ServiceModel.Description.ServiceEndpoint> экземпляров, <xref:System.ServiceModel.Channels.Binding> экземпляров или <xref:System.ServiceModel.Description.ContractDescription> документов экземпляров из WSDL для службы. Чтобы импортировать метаданные службы в WCF, используется реализация <xref:System.ServiceModel.Description.MetadataImporter?displayProperty=nameWithType> абстрактного класса. Типы, производные от <xref:System.ServiceModel.Description.MetadataImporter> класса реализуют поддержку для импорта форматов метаданных, которые используют преимущества WS-Policy логики импорта в WCF.  
   
  Пользовательские метаданные состоят из элементов XML, которые не могут быть импортированы с помощью средств импорта метаданных, предоставляемых системой. Как правило, они включают пользовательские расширения WSDL и утверждения политики.  
   
  В этом разделе описано, как импортировать пользовательские расширения WSDL и утверждения политики. В нем не рассматривается сам процесс импорта. Дополнительные сведения об использовании типов, экспорта и импорта метаданных, независимо от того, метаданные пользовательских или система поддерживается см. в разделе [Экспорт и импорт метаданных](../../../../docs/framework/wcf/feature-details/exporting-and-importing-metadata.md).  
   
 ## <a name="overview"></a>Обзор  
- Тип <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType> является реализацией абстрактного класса <xref:System.ServiceModel.Description.MetadataImporter>, входящего в [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Тип <xref:System.ServiceModel.Description.WsdlImporter> импортирует метаданные языка WSDL с прикрепленными политиками, объединенными в объекте <xref:System.ServiceModel.Description.MetadataSet?displayProperty=nameWithType>. Утверждения политики и расширения WSDL, не распознаваемые стандартными средствами импорта метаданных, передаются для импорта зарегистрированным средствам импорта пользовательской политики и WSDL. Как правило, средства импорта реализуются с целью поддержки пользовательских элементов привязки или изменения импортированного контракта.  
+ <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType> Тип — это реализация <xref:System.ServiceModel.Description.MetadataImporter> абстрактный класс, входящий в состав WCF. Тип <xref:System.ServiceModel.Description.WsdlImporter> импортирует метаданные языка WSDL с прикрепленными политиками, объединенными в объекте <xref:System.ServiceModel.Description.MetadataSet?displayProperty=nameWithType>. Утверждения политики и расширения WSDL, не распознаваемые стандартными средствами импорта метаданных, передаются для импорта зарегистрированным средствам импорта пользовательской политики и WSDL. Как правило, средства импорта реализуются с целью поддержки пользовательских элементов привязки или изменения импортированного контракта.  
   
  В данном разделе рассматриваются следующие вопросы.  
   

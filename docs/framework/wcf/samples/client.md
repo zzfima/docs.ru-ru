@@ -2,21 +2,21 @@
 title: "\"Клиент\";"
 ms.date: 03/30/2017
 ms.assetid: fabb0c70-b79b-4e58-a5d3-9705de85ee5b
-ms.openlocfilehash: 4c44ed4be9a3598ea79355737db678dd7a80a56a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: cd172aefa640853c7ace1d9d7ad3fada73714642
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="client"></a>"Клиент";
 Этот раздел содержит образцы, демонстрирующие клиентских приложений Windows Communication Foundation (WCF).  
   
 ## <a name="in-this-section"></a>В этом разделе  
  [Взаимодействие с клиентами](../../../../docs/framework/wcf/samples/client-interoperability.md)  
- Показывает взаимодействие между [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] и другими технологиями.  
+ Показывает взаимодействие между WCF и других технологий.  
   
  [Заголовки адресов](../../../../docs/framework/wcf/samples/address-headers.md)  
- Демонстрируется передача клиентами ссылочных параметров службе с помощью [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ Демонстрируется передача клиентами ссылочных параметров для службы с помощью WCF.  
   
  [Фабрика каналов](../../../../docs/framework/wcf/samples/channel-factory.md)  
  Показывает, как клиентское приложение может создать канал с помощью <xref:System.ServiceModel.ChannelFactory> вместо созданного клиента.  

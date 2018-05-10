@@ -2,16 +2,16 @@
 title: Трассировка
 ms.date: 03/30/2017
 ms.assetid: 2649eae2-dbf8-421c-9cfb-cfa9e01de87f
-ms.openlocfilehash: a0c3e5591280247cab97b6597a42ca496c9654d7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 6f427425b1bbf19ecd8b30fb1498634a7a3d5fa9
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="tracing"></a>Трассировка
 Windows Communication Foundation (WCF) предоставляет инструментирования приложений и диагностических данных для мониторинга и анализа сбоев. Трассировку можно использовать вместо отладчика для понимания того, как ведет себя приложение или почему оно дает сбои. Можно также устанавливать корреляцию между сбоями и обработкой, выполняемой различными компонентами, для сквозного анализа работы приложения.  
   
- [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] выдает следующие данные для диагностической трассировки:  
+ WCF выдает следующие данные для диагностической трассировки:  
   
 -   Трассировки основных этапов процесса по всем компонентам приложений, таких как вызовы операций, исключения кода, предупреждения и прочие значительные события обработки.  
   
@@ -36,7 +36,7 @@ Windows Communication Foundation (WCF) предоставляет инструм
   
  [Справочные сведения о трассировке](../../../../../docs/framework/wcf/diagnostics/tracing/traces-reference.md)  
   
- В этом разделе приводится список всех трассировок, формируемых [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)].  
+ В этом разделе перечислены все трассировки, созданные WCF.  
   
 ## <a name="see-also"></a>См. также  
  [Средство просмотра трассировки служб (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)

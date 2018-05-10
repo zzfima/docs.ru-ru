@@ -23,7 +23,7 @@ ms.lasthandoff: 05/04/2018
 4.  Включите доступ к службе данных.  
   
 > [!NOTE]
->  [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Выполняется веб-приложение, создаваемое после завершения этой задачи [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] , предоставляемые Visual Studio Development Server. Сервер разработки [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] поддерживает доступ только с локального компьютера. Чтобы упростить тестирование и устранение неполадок службы данных в ходе разработки, попробуйте также запустить с помощью IIS приложение со службой данных. Для получения дополнительной информации см. [How to: Develop a WCF Data Service Running on IIS](../../../../docs/framework/data/wcf/how-to-develop-a-wcf-data-service-running-on-iis.md).  
+>  [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Выполняется веб-приложение, создаваемое после завершения этой задачи [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] , предоставляемые Visual Studio Development Server. Сервер разработки [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] поддерживает доступ только с локального компьютера. Чтобы упростить тестирование и устранение неполадок службы данных в ходе разработки, попробуйте также запустить с помощью IIS приложение со службой данных. Для получения дополнительной информации см. [Практическое руководство. Разработка службы данных WCF Data Service, работающей на IIS](../../../../docs/framework/data/wcf/how-to-develop-a-wcf-data-service-running-on-iis.md).  
   
 ### <a name="to-create-the-aspnet-web-application"></a>Создание веб-приложения ASP.NET  
   

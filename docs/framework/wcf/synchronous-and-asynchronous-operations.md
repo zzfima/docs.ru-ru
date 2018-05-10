@@ -8,23 +8,23 @@ helpviewer_keywords:
 - service contracts [WCF], synchronous operations
 - service contracts [WCF], asynchronous operations
 ms.assetid: db8a51cb-67e6-411b-9035-e5821ed350c9
-ms.openlocfilehash: 0b64d45797babff2da1649fb7469684342e65d47
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 6c464dc79e0f38b72f724fafcef59916d766e2d0
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="synchronous-and-asynchronous-operations"></a>Синхронные и асинхронные операции
 В этом разделе описывается реализация и вызов асинхронных операций службы.  
   
- Многие приложения вызывают методы асинхронно, поскольку это позволяет приложению продолжать выполнение других операций, пока осуществляется вызов метода. Службы Windows Communication Foundation (WCF) и клиенты могут участвовать в асинхронных вызовах операций на два уровня приложения, которые предоставляют [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] соотношение еще большую гибкость, чтобы повысить пропускную способность приложения интерактивные возможности.  
+ Многие приложения вызывают методы асинхронно, поскольку это позволяет приложению продолжать выполнение других операций, пока осуществляется вызов метода. Службы Windows Communication Foundation (WCF) и клиенты могут участвовать в асинхронных вызовах операций на два уровня приложения, которые обеспечивают дополнительную гибкость для максимизации пропускной способности без ущерба для интерактивности приложений WCF .  
   
 ## <a name="types-of-asynchronous-operations"></a>Типы асинхронных операций  
- Все контракты служб в [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]не зависят от типов параметров и возвращаемых значений и используют атрибуты [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], чтобы определить конкретный шаблон обмена сообщениями между клиентом и службой. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] автоматически направляет входящие и исходящие сообщения в соответствующую операцию службы или исполняемый код клиента.  
+ Все службы, контрактов в WCF, независимо от того, типы параметров и возвращаемых значений, и позволяет указать конкретный шаблон обмена сообщениями между клиентом и службой WCF атрибуты. WCF автоматически направляет входящие и исходящие сообщения в соответствующую операцию службы или выполнение кода клиента.  
   
  У клиента имеется только контракт службы, который задает шаблон обмена сообщениями для конкретной операции. Клиенты могут предложить разработчикам любую модель программирования, если соблюдается соответствующий шаблон обмена сообщениями. Аналогично службы могут реализовывать операции произвольным образом, пока соблюдается заданный шаблон обмена сообщениями.  
   
- Независимость контракта службы от реализации службы и клиента делает возможными следующие формы асинхронного выполнения в приложениях [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]:  
+ Независимость контракта службы из реализации службы или клиента включает следующие формы асинхронного выполнения в приложениях WCF:  
   
 -   клиенты могут вызывать операции запроса и ответа асинхронно, используя синхронный механизм обмена сообщениями;  
   
@@ -147,7 +147,7 @@ Function DoWork(ByVal data As String, ByRef inout As String, _out outonly As out
 >  Атрибут <xref:System.ServiceModel.OperationContractAttribute> применяется только к методу `BeginDoWork`. В получаемом контракте имеется одна операция WSDL с именем `DoWork`.  
   
 ### <a name="client-side-asynchronous-invocations"></a>Асинхронные вызовы на стороне клиента  
- Клиентское приложение [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] может использовать одну из трех моделей асинхронных вызовов, описанных ранее  
+ Клиентское приложение WCF можно использовать любой из трех моделей асинхронных вызовов было описано выше  
   
  При использовании модели на основе задач просто вызовите операцию, используя ключевое слово «await», как показано в следующем фрагменте кода.  
   
@@ -161,9 +161,9 @@ await simpleServiceClient.SampleMethodTaskAsync("hello, world");
 svcutil http://localhost:8000/servicemodelsamples/service/mex /async /tcv:Version35  
 ```  
   
- Если сделать это, средство Svcutil.exe создаст класс клиента [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] с инфраструктурой событий, которая позволяет вызывающему приложению реализовать и присвоить обработчик событий, который получает ответ и выполняет соответствующие действия. Полный пример см. в разделе [как: асинхронно вызывать операции службы](../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md).  
+ Если это сделано, Svcutil.exe создает класса клиента WCF с инфраструктурой событий, которая позволяет вызывающему приложению реализовать и присвоить обработчик событий для получения ответа и предпринять соответствующие действия. Полный пример см. в разделе [как: асинхронно вызывать операции службы](../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md).  
   
- Однако асинхронная модель на основе событий доступна только в [!INCLUDE[netfx35_long](../../../includes/netfx35-long-md.md)]. Кроме того, она не поддерживается даже в [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)], если канал клиента [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] создается с помощью <xref:System.ServiceModel.ChannelFactory%601?displayProperty=nameWithType>. В случае объектов канала клиента [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] необходимо для асинхронного вызова операций использовать объекты <xref:System.IAsyncResult?displayProperty=nameWithType>. Чтобы использовать этот подход, укажите **/async** параметра с помощью команды [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md), как показано в следующем примере.  
+ Однако асинхронная модель на основе событий доступна только в [!INCLUDE[netfx35_long](../../../includes/netfx35-long-md.md)]. Кроме того, он не поддерживается даже в [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] при создании клиентского канала WCF с помощью <xref:System.ServiceModel.ChannelFactory%601?displayProperty=nameWithType>. С помощью объектов клиентских каналов WCF, необходимо использовать <xref:System.IAsyncResult?displayProperty=nameWithType> объектов для асинхронного вызова операций. Чтобы использовать этот подход, укажите **/async** параметра с помощью команды [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md), как показано в следующем примере.  
   
 ```  
 svcutil http://localhost:8000/servicemodelsamples/service/mex /async   
