@@ -2,11 +2,11 @@
 title: Аббревиатуры типов (F#)
 description: 'Дополнительные сведения о аббревиатуры типов F # для предоставления более значимое имя для типа, чтобы сделать код более удобным для чтения.'
 ms.date: 05/16/2016
-ms.openlocfilehash: cd0b2365aecc5d5b73df95a4b94ae4dd8327446d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e222caa41a20a64071c94cffea6ea7b2bec8eb22
+ms.sourcegitcommit: ff1d40507b3eb6e2185478e37c66c66be6de46f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/11/2018
 ---
 # <a name="type-abbreviations"></a>Сокращенные обозначения типов
 
@@ -15,11 +15,13 @@ ms.lasthandoff: 05/04/2018
 ## <a name="syntax"></a>Синтаксис
 
 ```fsharp
-type type-abbreviation = type-name
+type [accessibility-modifier] type-abbreviation = type-name
 ```
 
 ## <a name="remarks"></a>Примечания
 Сокращенные обозначения типов можно использовать для предоставления типа более значимое имя, чтобы сделать код более удобным для чтения. Их также можно использовать для создания простой в использовании имени типа, в противном случае сложно записать. Кроме того чтобы облегчить изменение базового типа, не изменяя весь код, который использует этот тип можно использовать сокращенные обозначения типов. Ниже приведен пример простой аббревиатуры типа.
+
+Доступность сокращений типов по умолчанию `public`.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet2301.fs)]
 

@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - configuring HTTP [WCF]
 ms.assetid: b0c29a86-bc0c-41b3-bc1e-4eb5bb5714d4
-ms.openlocfilehash: 70c947724abf8da68ec8f7e6d858e26fec62dce5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ed9c7a444018e7c5e9ac00de82133cce633fac93
+ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="configuring-http-and-https"></a>Настройка HTTP и HTTPS
 Службы и клиенты WCF могут взаимодействовать по протоколам HTTP и HTTPS. Параметры HTTP/HTTPS задаются с помощью служб IIS или посредством использования средства командной строки. Когда служба WCF размещается в службах IIS, параметры HTTP или HTTPS можно задать в службах IIS (с помощью средства inetmgr.exe). Если служба WCF является резидентной, параметры HTTP или HTTPS задаются с помощью средства командной строки.  
@@ -19,7 +19,7 @@ ms.lasthandoff: 05/04/2018
   
  При выполнении [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] или [!INCLUDE[wxp](../../../../includes/wxp-md.md)], используйте средство HttpCfg.exe. [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] автоматически устанавливает этот инструмент. При выполнении [!INCLUDE[wxp](../../../../includes/wxp-md.md)], можно загрузить инструмент по [средства для поддержки Windows XP Service Pack 2](http://go.microsoft.com/fwlink/?LinkId=88606). Дополнительные сведения см. в разделе [Обзор Httpcfg](http://go.microsoft.com/fwlink/?LinkId=88605).  
   
- При работе в [!INCLUDE[wv](../../../../includes/wv-md.md)] или Windows 7 эти параметры можно задать с помощью средства Netsh.exe.  
+ При выполнении [!INCLUDE[wv](../../../../includes/wv-md.md)] или Windows 7, эти параметры можно настроить с помощью средства Netsh.exe.  
   
 ## <a name="configuring-namespace-reservations"></a>Настройка резервирований пространства имен  
  Резервирование пространства имен назначает права на часть пространства имен URL-адреса HTTP определенной группе пользователей. Резервирование предоставляет этим пользователям право создавать службы, которые ожидают передачи данных в указанной части пространства имен. Резервирования представляют собой URL-префиксы, а это значит, что одно резервирование охватывает все подпути пути резервирования. Резервирования пространства имен позволяют использовать подстановочные знаки двумя способами. В документации API HTTP-сервера описывается [порядок разрешения утверждений пространства имен, включающих подстановочные знаки](http://go.microsoft.com/fwlink/?LinkId=94841).  
