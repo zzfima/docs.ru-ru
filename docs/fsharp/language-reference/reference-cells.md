@@ -2,11 +2,11 @@
 title: Ссылочные ячейки (F#)
 description: 'Узнайте, как ссылочные ячейки F # — это места хранения, которые позволяют создавать изменяющиеся значения с семантикой ссылок.'
 ms.date: 05/16/2016
-ms.openlocfilehash: d68726619bdfce5a9ed9bd94d6434427644cd9f1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3a632425356a250f07e5babd2751b9923eec6552
+ms.sourcegitcommit: e5bb395ec86f536e114314184288f40a8c745e2e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/12/2018
 ---
 # <a name="reference-cells"></a>Ссылочные ячейки
 
@@ -81,6 +81,9 @@ let ref x = { contents = x }
 >[!NOTE]
 Программистам на C# следует знать, что этой ссылки по-разному работает в языке F #, чем в C#. Например использование ref при передаче аргумента имеет тот же эффект в языке F #, нежели в C#.
 
+>[!NOTE]
+`mutable` переменные могут быть автоматически повышена до `'a ref` Если захвачено замыкание; см. раздел [значения](values/index.md).
+
 ## <a name="consuming-c-ref-returns"></a>Использование C# `ref` возвращает
 
 Начиная с версии 4.1 F #, можно будет использовать `ref` возвращает созданный в C#.  Результат такого вызова — `byref<_>` указателя.
@@ -132,3 +135,5 @@ let f (x: byref<int>) = &x
 [Параметры и аргументы](parameters-and-arguments.md)
 
 [Справочник символов и операторов](symbol-and-operator-reference/index.md)
+
+[Значения](values/index.md)
