@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Help, Visual C# documentation
 - C# language
 - Visual C#
-ms.openlocfilehash: 598ddfbe16a1a09326d811b4eafcf87f3ca6e971
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4d349f8aff5e3d48a2bc738e848d2a251805e260
+ms.sourcegitcommit: ff1d40507b3eb6e2185478e37c66c66be6de46f1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/11/2018
 ---
 # <a name="c-guide"></a>Руководство по языку C#
 
@@ -43,8 +43,8 @@ ms.lasthandoff: 05/04/2018
 * [Обзор языка C#](tour-of-csharp/index.md)
   * В этом разделе приведено краткое описание языка программирования. Здесь описаны элементы программ на C# и возможности, которые дает этот язык. В разделе приведены небольшие примеры для всех элементов синтаксиса C#, а также рассматриваются основные понятия языка C#.
 
-* [Новые возможности](whats-new/index.md)
-  * Изучите новые функции, реализованные в языке. Например, узнайте о новых средствах: C# Interactive (REPL для C#) и пакет SDK для платформы компилятора .NET. Этот раздел посвящен развитию языка и новым средствам повышения производительности.
+* [Новые возможности C#](whats-new/index.md)
+  * Обзор новых возможностей, добавленных в последние выпуски языка, и обзор истории языка C#.
 
 <!--
 * [.NET Compiler Platform SDK](roslyn-sdk/index.md)
