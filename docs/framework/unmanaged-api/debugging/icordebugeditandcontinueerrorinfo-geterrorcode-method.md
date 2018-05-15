@@ -1,14 +1,6 @@
 ---
-title: "Метод ICorDebugEditAndContinueErrorInfo::GetErrorCode"
-ms.custom: 
+title: Метод ICorDebugEditAndContinueErrorInfo::GetErrorCode
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorDebugEditAndContinueErrorInfo.GetErrorCode
 api_location:
@@ -23,20 +15,16 @@ helpviewer_keywords:
 ms.assetid: 2f82fb2c-a42e-48bf-af41-a15e40f636c6
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 0074607188ba55572e469491841ddcfa328c57bb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e1cd0753b1ebcda3de33953b96e9dcedd26a2cc4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="icordebugeditandcontinueerrorinfogeterrorcode-method"></a><span data-ttu-id="673c9-102">Метод ICorDebugEditAndContinueErrorInfo::GetErrorCode</span><span class="sxs-lookup"><span data-stu-id="673c9-102">ICorDebugEditAndContinueErrorInfo::GetErrorCode Method</span></span>
-<span data-ttu-id="673c9-103">`GetErrorCode` устарел.</span><span class="sxs-lookup"><span data-stu-id="673c9-103">`GetErrorCode` is obsolete.</span></span> <span data-ttu-id="673c9-104">Не вызывайте этот метод.</span><span class="sxs-lookup"><span data-stu-id="673c9-104">Do not call this method.</span></span>  
+# <a name="icordebugeditandcontinueerrorinfogeterrorcode-method"></a><span data-ttu-id="b6d16-102">Метод ICorDebugEditAndContinueErrorInfo::GetErrorCode</span><span class="sxs-lookup"><span data-stu-id="b6d16-102">ICorDebugEditAndContinueErrorInfo::GetErrorCode Method</span></span>
+<span data-ttu-id="b6d16-103">`GetErrorCode` устарел.</span><span class="sxs-lookup"><span data-stu-id="b6d16-103">`GetErrorCode` is obsolete.</span></span> <span data-ttu-id="b6d16-104">Не вызывайте этот метод.</span><span class="sxs-lookup"><span data-stu-id="b6d16-104">Do not call this method.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="673c9-105">См. также</span><span class="sxs-lookup"><span data-stu-id="673c9-105">See Also</span></span>  
- [<span data-ttu-id="673c9-106">Интерфейсы отладки</span><span class="sxs-lookup"><span data-stu-id="673c9-106">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="b6d16-105">См. также</span><span class="sxs-lookup"><span data-stu-id="b6d16-105">See Also</span></span>  
+ [<span data-ttu-id="b6d16-106">Интерфейсы отладки</span><span class="sxs-lookup"><span data-stu-id="b6d16-106">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

@@ -1,14 +1,6 @@
 ---
-title: "Метод ICorDebugModuleBreakpoint::GetModule"
-ms.custom: 
+title: Метод ICorDebugModuleBreakpoint::GetModule
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorDebugModuleBreakpoint.GetModule
 api_location:
@@ -23,22 +15,18 @@ helpviewer_keywords:
 ms.assetid: ffd5d9ec-4564-4200-b625-b306eec0ebd7
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 91e014a16420ea6790b592efe1ac57df960d2237
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5cbb1aa9c81101eb818a9e7829c777efd3923b5f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="icordebugmodulebreakpointgetmodule-method"></a><span data-ttu-id="3216f-102">Метод ICorDebugModuleBreakpoint::GetModule</span><span class="sxs-lookup"><span data-stu-id="3216f-102">ICorDebugModuleBreakpoint::GetModule Method</span></span>
-<span data-ttu-id="3216f-103">Получает указатель интерфейса на «ICorDebugModule», ссылается на модуль, в котором установлена данная точка останова.</span><span class="sxs-lookup"><span data-stu-id="3216f-103">Gets an interface pointer to an "ICorDebugModule" that references the module in which this breakpoint is set.</span></span>  
+# <a name="icordebugmodulebreakpointgetmodule-method"></a><span data-ttu-id="769e4-102">Метод ICorDebugModuleBreakpoint::GetModule</span><span class="sxs-lookup"><span data-stu-id="769e4-102">ICorDebugModuleBreakpoint::GetModule Method</span></span>
+<span data-ttu-id="769e4-103">Получает указатель интерфейса на «ICorDebugModule», ссылается на модуль, в котором установлена данная точка останова.</span><span class="sxs-lookup"><span data-stu-id="769e4-103">Gets an interface pointer to an "ICorDebugModule" that references the module in which this breakpoint is set.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="3216f-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="3216f-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="769e4-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="769e4-104">Syntax</span></span>  
   
 ```  
 HRESULT GetModule (  
@@ -46,18 +34,18 @@ HRESULT GetModule (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="3216f-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="3216f-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="769e4-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="769e4-105">Parameters</span></span>  
  `ppModule`  
- <span data-ttu-id="3216f-106">[out] Указатель на адрес `ICorDebugModule` интерфейс, который ссылается на модуль, в которой задана точка останова.</span><span class="sxs-lookup"><span data-stu-id="3216f-106">[out] A pointer to the address of an `ICorDebugModule` interface that references the module in which the breakpoint is set.</span></span>  
+ <span data-ttu-id="769e4-106">[out] Указатель на адрес `ICorDebugModule` интерфейс, который ссылается на модуль, в которой задана точка останова.</span><span class="sxs-lookup"><span data-stu-id="769e4-106">[out] A pointer to the address of an `ICorDebugModule` interface that references the module in which the breakpoint is set.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="3216f-107">Требования</span><span class="sxs-lookup"><span data-stu-id="3216f-107">Requirements</span></span>  
- <span data-ttu-id="3216f-108">**Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="3216f-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="769e4-107">Требования</span><span class="sxs-lookup"><span data-stu-id="769e4-107">Requirements</span></span>  
+ <span data-ttu-id="769e4-108">**Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="769e4-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="3216f-109">**Заголовок:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="3216f-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="769e4-109">**Заголовок:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="769e4-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="3216f-110">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="3216f-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="769e4-110">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="769e4-110">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="3216f-111">**Версии платформы .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="3216f-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="769e4-111">**Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="769e4-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="3216f-112">См. также</span><span class="sxs-lookup"><span data-stu-id="3216f-112">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="769e4-112">См. также</span><span class="sxs-lookup"><span data-stu-id="769e4-112">See Also</span></span>  
  

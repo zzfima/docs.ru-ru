@@ -1,14 +1,6 @@
 ---
-title: "Метод ICorDebugNativeFrame::GetIP"
-ms.custom: 
+title: Метод ICorDebugNativeFrame::GetIP
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorDebugNativeFrame.GetIP
 api_location:
@@ -23,22 +15,18 @@ helpviewer_keywords:
 ms.assetid: 99f693f3-d3b9-4fd8-9d09-b8efd03f7b67
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 2f9ea20577b3132a2378013e7c5fa8356c14c8b7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7d17ac4230296674381c87851377fcb535837ad3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="icordebugnativeframegetip-method"></a><span data-ttu-id="cd07b-102">Метод ICorDebugNativeFrame::GetIP</span><span class="sxs-lookup"><span data-stu-id="cd07b-102">ICorDebugNativeFrame::GetIP Method</span></span>
-<span data-ttu-id="cd07b-103">Возвращает расположение, к которому в настоящее время имеет значение указателя инструкций смещения в машинном коде.</span><span class="sxs-lookup"><span data-stu-id="cd07b-103">Gets the native code offset location to which the instruction pointer is currently set.</span></span>  
+# <a name="icordebugnativeframegetip-method"></a><span data-ttu-id="abf05-102">Метод ICorDebugNativeFrame::GetIP</span><span class="sxs-lookup"><span data-stu-id="abf05-102">ICorDebugNativeFrame::GetIP Method</span></span>
+<span data-ttu-id="abf05-103">Возвращает расположение, к которому в настоящее время имеет значение указателя инструкций смещения в машинном коде.</span><span class="sxs-lookup"><span data-stu-id="abf05-103">Gets the native code offset location to which the instruction pointer is currently set.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="cd07b-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="cd07b-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="abf05-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="abf05-104">Syntax</span></span>  
   
 ```  
 HRESULT GetIP (  
@@ -46,21 +34,21 @@ HRESULT GetIP (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="cd07b-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="cd07b-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="abf05-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="abf05-105">Parameters</span></span>  
  `pnOffset`  
- <span data-ttu-id="cd07b-106">[out] Указатель на расположение смещения в машинном коде.</span><span class="sxs-lookup"><span data-stu-id="cd07b-106">[out] A pointer to the offset location in the native code.</span></span>  
+ <span data-ttu-id="abf05-106">[out] Указатель на расположение смещения в машинном коде.</span><span class="sxs-lookup"><span data-stu-id="abf05-106">[out] A pointer to the offset location in the native code.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="cd07b-107">Примечания</span><span class="sxs-lookup"><span data-stu-id="cd07b-107">Remarks</span></span>  
- <span data-ttu-id="cd07b-108">Если кадр стека, представленный «ICorDebugNativeFrame» активен, смещение — это адрес следующую инструкцию для выполнения.</span><span class="sxs-lookup"><span data-stu-id="cd07b-108">If the stack frame that is represented by this "ICorDebugNativeFrame" is active, the offset is the address of the next instruction to be executed.</span></span> <span data-ttu-id="cd07b-109">Если этот кадр стека не активен, смещение — это адрес следующую инструкцию для выполнения при повторной активации кадра стека.</span><span class="sxs-lookup"><span data-stu-id="cd07b-109">If this stack frame is not active, the offset is the address of the next instruction to be executed when the stack frame is reactivated.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="abf05-107">Примечания</span><span class="sxs-lookup"><span data-stu-id="abf05-107">Remarks</span></span>  
+ <span data-ttu-id="abf05-108">Если кадр стека, представленный «ICorDebugNativeFrame» активен, смещение — это адрес следующую инструкцию для выполнения.</span><span class="sxs-lookup"><span data-stu-id="abf05-108">If the stack frame that is represented by this "ICorDebugNativeFrame" is active, the offset is the address of the next instruction to be executed.</span></span> <span data-ttu-id="abf05-109">Если этот кадр стека не активен, смещение — это адрес следующую инструкцию для выполнения при повторной активации кадра стека.</span><span class="sxs-lookup"><span data-stu-id="abf05-109">If this stack frame is not active, the offset is the address of the next instruction to be executed when the stack frame is reactivated.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="cd07b-110">Требования</span><span class="sxs-lookup"><span data-stu-id="cd07b-110">Requirements</span></span>  
- <span data-ttu-id="cd07b-111">**Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="cd07b-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="abf05-110">Требования</span><span class="sxs-lookup"><span data-stu-id="abf05-110">Requirements</span></span>  
+ <span data-ttu-id="abf05-111">**Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="abf05-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="cd07b-112">**Заголовок:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="cd07b-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="abf05-112">**Заголовок:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="abf05-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="cd07b-113">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="cd07b-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="abf05-113">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="abf05-113">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="cd07b-114">**Версии платформы .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="cd07b-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="abf05-114">**Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="abf05-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="cd07b-115">См. также</span><span class="sxs-lookup"><span data-stu-id="cd07b-115">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="abf05-115">См. также</span><span class="sxs-lookup"><span data-stu-id="abf05-115">See Also</span></span>  
  

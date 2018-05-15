@@ -1,14 +1,6 @@
 ---
-title: "Интерфейс1 ICorDebugAppDomain2"
-ms.custom: 
+title: Интерфейс1 ICorDebugAppDomain2
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorDebugAppDomain2
 api_location:
@@ -22,41 +14,37 @@ helpviewer_keywords:
 ms.assetid: 314d29f3-feb0-4a92-9530-b569c280cc31
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: c811107fcf32696aee17810af06ac0b2ddc9102d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ff6ffdd733cf6e7b923d88d057d7cd230c8d8541
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="icordebugappdomain2-interface1"></a><span data-ttu-id="8fe98-102">Интерфейс1 ICorDebugAppDomain2</span><span class="sxs-lookup"><span data-stu-id="8fe98-102">ICorDebugAppDomain2 Interface1</span></span>
-<span data-ttu-id="8fe98-103">Предоставляет методы для работы с массивами, указателями, указатели на функции и ссылочные типы.</span><span class="sxs-lookup"><span data-stu-id="8fe98-103">Provides methods to work with arrays, pointers, function pointers, and reference types.</span></span> <span data-ttu-id="8fe98-104">Этот интерфейс является расширением интерфейса ICorDebugAppDomain.</span><span class="sxs-lookup"><span data-stu-id="8fe98-104">This interface is an extension of the ICorDebugAppDomain interface.</span></span>  
+# <a name="icordebugappdomain2-interface1"></a><span data-ttu-id="047fa-102">Интерфейс1 ICorDebugAppDomain2</span><span class="sxs-lookup"><span data-stu-id="047fa-102">ICorDebugAppDomain2 Interface1</span></span>
+<span data-ttu-id="047fa-103">Предоставляет методы для работы с массивами, указателями, указатели на функции и ссылочные типы.</span><span class="sxs-lookup"><span data-stu-id="047fa-103">Provides methods to work with arrays, pointers, function pointers, and reference types.</span></span> <span data-ttu-id="047fa-104">Этот интерфейс является расширением интерфейса ICorDebugAppDomain.</span><span class="sxs-lookup"><span data-stu-id="047fa-104">This interface is an extension of the ICorDebugAppDomain interface.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="8fe98-105">Методы</span><span class="sxs-lookup"><span data-stu-id="8fe98-105">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="047fa-105">Методы</span><span class="sxs-lookup"><span data-stu-id="047fa-105">Methods</span></span>  
   
-|<span data-ttu-id="8fe98-106">Метод</span><span class="sxs-lookup"><span data-stu-id="8fe98-106">Method</span></span>|<span data-ttu-id="8fe98-107">Описание:</span><span class="sxs-lookup"><span data-stu-id="8fe98-107">Description</span></span>|  
+|<span data-ttu-id="047fa-106">Метод</span><span class="sxs-lookup"><span data-stu-id="047fa-106">Method</span></span>|<span data-ttu-id="047fa-107">Описание</span><span class="sxs-lookup"><span data-stu-id="047fa-107">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="8fe98-108">Метод GetArrayOrPointerType</span><span class="sxs-lookup"><span data-stu-id="8fe98-108">GetArrayOrPointerType Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomain2-getarrayorpointertype-method.md)|<span data-ttu-id="8fe98-109">Возвращает массив указанного типа, указатель или ссылку на указанный тип.</span><span class="sxs-lookup"><span data-stu-id="8fe98-109">Gets an array of the specified type, or a pointer or reference to the specified type.</span></span>|  
-|[<span data-ttu-id="8fe98-110">Метод GetFunctionPointerType</span><span class="sxs-lookup"><span data-stu-id="8fe98-110">GetFunctionPointerType</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomain2-getfunctionpointertype-method.md)|<span data-ttu-id="8fe98-111">Возвращает указатель на функцию с заданной подписью.</span><span class="sxs-lookup"><span data-stu-id="8fe98-111">Gets a pointer to a function that has a given signature.</span></span>|  
+|[<span data-ttu-id="047fa-108">Метод GetArrayOrPointerType</span><span class="sxs-lookup"><span data-stu-id="047fa-108">GetArrayOrPointerType Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomain2-getarrayorpointertype-method.md)|<span data-ttu-id="047fa-109">Возвращает массив указанного типа, указатель или ссылку на указанный тип.</span><span class="sxs-lookup"><span data-stu-id="047fa-109">Gets an array of the specified type, or a pointer or reference to the specified type.</span></span>|  
+|[<span data-ttu-id="047fa-110">Метод GetFunctionPointerType</span><span class="sxs-lookup"><span data-stu-id="047fa-110">GetFunctionPointerType</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomain2-getfunctionpointertype-method.md)|<span data-ttu-id="047fa-111">Возвращает указатель на функцию с заданной подписью.</span><span class="sxs-lookup"><span data-stu-id="047fa-111">Gets a pointer to a function that has a given signature.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="8fe98-112">Примечания</span><span class="sxs-lookup"><span data-stu-id="8fe98-112">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="047fa-112">Примечания</span><span class="sxs-lookup"><span data-stu-id="047fa-112">Remarks</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="8fe98-113">Этот интерфейс не поддерживает удаленные вызовы между компьютерами или между процессами.</span><span class="sxs-lookup"><span data-stu-id="8fe98-113">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
+>  <span data-ttu-id="047fa-113">Этот интерфейс не поддерживает удаленные вызовы между компьютерами или между процессами.</span><span class="sxs-lookup"><span data-stu-id="047fa-113">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="8fe98-114">Требования</span><span class="sxs-lookup"><span data-stu-id="8fe98-114">Requirements</span></span>  
- <span data-ttu-id="8fe98-115">**Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="8fe98-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="047fa-114">Требования</span><span class="sxs-lookup"><span data-stu-id="047fa-114">Requirements</span></span>  
+ <span data-ttu-id="047fa-115">**Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="047fa-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="8fe98-116">**Заголовок:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="8fe98-116">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="047fa-116">**Заголовок:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="047fa-116">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="8fe98-117">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="8fe98-117">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="047fa-117">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="047fa-117">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="8fe98-118">**Версии платформы .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="8fe98-118">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="047fa-118">**Версии платформы .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="047fa-118">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="8fe98-119">См. также</span><span class="sxs-lookup"><span data-stu-id="8fe98-119">See Also</span></span>  
- [<span data-ttu-id="8fe98-120">Интерфейсы отладки</span><span class="sxs-lookup"><span data-stu-id="8fe98-120">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="047fa-119">См. также</span><span class="sxs-lookup"><span data-stu-id="047fa-119">See Also</span></span>  
+ [<span data-ttu-id="047fa-120">Интерфейсы отладки</span><span class="sxs-lookup"><span data-stu-id="047fa-120">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

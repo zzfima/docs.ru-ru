@@ -1,27 +1,15 @@
 ---
 title: '&lt;behaviorExtensions&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 59f2791a-c78f-40d7-aa80-0d9cd10135d9
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6c5d359e05e04a98e0c5855ba4d78e8e63c1e6a0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: bb59ceeb478d0324fddc98a206a00dbd170b5ac9
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="ltbehaviorextensionsgt"></a><span data-ttu-id="6d6f4-102">&lt;behaviorExtensions&gt;</span><span class="sxs-lookup"><span data-stu-id="6d6f4-102">&lt;behaviorExtensions&gt;</span></span>
-<span data-ttu-id="6d6f4-103">Расширения поведений позволяют пользователям создавать пользовательские элементы поведений.</span><span class="sxs-lookup"><span data-stu-id="6d6f4-103">Behavior extensions enable the user to create user-defined behavior elements.</span></span> <span data-ttu-id="6d6f4-104">Эти элементы могут использоваться вместе со стандартными элементами поведений Windows Communication Foundation (WCF).</span><span class="sxs-lookup"><span data-stu-id="6d6f4-104">These elements can be used alongside the standard Windows Communication Foundation (WCF) behavior elements.</span></span> <span data-ttu-id="6d6f4-105">В разделе `behaviorExtensions` определяется элемент, который может использоваться в конфигурации.</span><span class="sxs-lookup"><span data-stu-id="6d6f4-105">The `behaviorExtensions` section defines the element such that it can be used in configuration.</span></span> <span data-ttu-id="6d6f4-106">Далее приведен пример типичного расширения поведения.</span><span class="sxs-lookup"><span data-stu-id="6d6f4-106">Here is an example of a typical behavior extension.</span></span>  
+# <a name="ltbehaviorextensionsgt"></a><span data-ttu-id="65c55-102">&lt;behaviorExtensions&gt;</span><span class="sxs-lookup"><span data-stu-id="65c55-102">&lt;behaviorExtensions&gt;</span></span>
+<span data-ttu-id="65c55-103">Расширения поведений позволяют пользователям создавать пользовательские элементы поведений.</span><span class="sxs-lookup"><span data-stu-id="65c55-103">Behavior extensions enable the user to create user-defined behavior elements.</span></span> <span data-ttu-id="65c55-104">Эти элементы могут использоваться вместе со стандартными элементами поведений Windows Communication Foundation (WCF).</span><span class="sxs-lookup"><span data-stu-id="65c55-104">These elements can be used alongside the standard Windows Communication Foundation (WCF) behavior elements.</span></span> <span data-ttu-id="65c55-105">В разделе `behaviorExtensions` определяется элемент, который может использоваться в конфигурации.</span><span class="sxs-lookup"><span data-stu-id="65c55-105">The `behaviorExtensions` section defines the element such that it can be used in configuration.</span></span> <span data-ttu-id="65c55-106">Далее приведен пример типичного расширения поведения.</span><span class="sxs-lookup"><span data-stu-id="65c55-106">Here is an example of a typical behavior extension.</span></span>  
   
 ```xml  
 <system.serviceModel>  
@@ -34,9 +22,9 @@ ms.lasthandoff: 12/22/2017
 </system.serviceModel>  
 ```  
   
- <span data-ttu-id="6d6f4-107">Чтобы добавить в элемент возможности конфигурации, нужно записать и зарегистрировать элемент конфигурации.</span><span class="sxs-lookup"><span data-stu-id="6d6f4-107">To add configuration abilities to the element, you need to write and register a configuration element.</span></span> <span data-ttu-id="6d6f4-108">Дополнительные сведения об этом см. в документации по <xref:System.Configuration>.</span><span class="sxs-lookup"><span data-stu-id="6d6f4-108">For more information on this, see the <xref:System.Configuration> documentation.</span></span>  
+ <span data-ttu-id="65c55-107">Чтобы добавить в элемент возможности конфигурации, нужно записать и зарегистрировать элемент конфигурации.</span><span class="sxs-lookup"><span data-stu-id="65c55-107">To add configuration abilities to the element, you need to write and register a configuration element.</span></span> <span data-ttu-id="65c55-108">Дополнительные сведения об этом см. в документации по <xref:System.Configuration>.</span><span class="sxs-lookup"><span data-stu-id="65c55-108">For more information on this, see the <xref:System.Configuration> documentation.</span></span>  
   
- <span data-ttu-id="6d6f4-109">После определения элемента и его типа конфигурации поведение можно использовать, как показано в следующем примере.</span><span class="sxs-lookup"><span data-stu-id="6d6f4-109">After the element and its configuration type are defined, the extension can be used, as shown in the following example.</span></span>  
+ <span data-ttu-id="65c55-109">После определения элемента и его типа конфигурации поведение можно использовать, как показано в следующем примере.</span><span class="sxs-lookup"><span data-stu-id="65c55-109">After the element and its configuration type are defined, the extension can be used, as shown in the following example.</span></span>  
   
 ```xml  
 <behaviors>  
@@ -48,15 +36,15 @@ ms.lasthandoff: 12/22/2017
 </behaviors>  
 ```  
   
-## <a name="security"></a><span data-ttu-id="6d6f4-110">Безопасность</span><span class="sxs-lookup"><span data-stu-id="6d6f4-110">Security</span></span>  
- <span data-ttu-id="6d6f4-111">Настоятельно рекомендуется использовать полные имена сборок при регистрации типов в файлах `machine.config` и `app.config`.</span><span class="sxs-lookup"><span data-stu-id="6d6f4-111">It is strongly recommended that you use fully qualified assembly names when registering types in the `machine.config` and `app.config` files.</span></span> <span data-ttu-id="6d6f4-112">Если тип определен неоднозначно, загрузчик типов среды CLR ищет его в следующих местоположениях в заданном порядке:</span><span class="sxs-lookup"><span data-stu-id="6d6f4-112">If the type is not uniquely defined, the CLR type loader searches for it in the following locations in the specified order:</span></span>  
+## <a name="security"></a><span data-ttu-id="65c55-110">Безопасность</span><span class="sxs-lookup"><span data-stu-id="65c55-110">Security</span></span>  
+ <span data-ttu-id="65c55-111">Настоятельно рекомендуется использовать полные имена сборок при регистрации типов в файлах `machine.config` и `app.config`.</span><span class="sxs-lookup"><span data-stu-id="65c55-111">It is strongly recommended that you use fully qualified assembly names when registering types in the `machine.config` and `app.config` files.</span></span> <span data-ttu-id="65c55-112">Если тип определен неоднозначно, загрузчик типов среды CLR ищет его в следующих местоположениях в заданном порядке:</span><span class="sxs-lookup"><span data-stu-id="65c55-112">If the type is not uniquely defined, the CLR type loader searches for it in the following locations in the specified order:</span></span>  
   
- <span data-ttu-id="6d6f4-113">Если сборка типа известна, загрузчик ищет в местах перенаправления файла конфигурации, в глобальном кэше сборок, в текущей сборке, используя данные конфигурации, и в базовой папке приложения.</span><span class="sxs-lookup"><span data-stu-id="6d6f4-113">If the assembly of the type is known, the loader searches the configuration file's redirect locations, GAC, the current assembly using configuration information, and the application base directory.</span></span> <span data-ttu-id="6d6f4-114">Если сборка неизвестна, загрузчик ищет в текущей сборке, в библиотеке mscorlib и в месте, возвращаемом обработчиком событий `TypeResolve`.</span><span class="sxs-lookup"><span data-stu-id="6d6f4-114">If the assembly is unknown, the loader searches the current assembly, mscorlib, and the location returned by the `TypeResolve` event handler.</span></span> <span data-ttu-id="6d6f4-115">Порядок поиска в среде CLR может быть изменен с помощью таких средств, как механизм пересылки типа и событие AppDomain.TypeResolve.</span><span class="sxs-lookup"><span data-stu-id="6d6f4-115">This CLR search order can be modified with hooks such as the Type Forwarding mechanism and the AppDomain.TypeResolve event.</span></span>  
+ <span data-ttu-id="65c55-113">Если сборка типа известна, загрузчик ищет в местах перенаправления файла конфигурации, в глобальном кэше сборок, в текущей сборке, используя данные конфигурации, и в базовой папке приложения.</span><span class="sxs-lookup"><span data-stu-id="65c55-113">If the assembly of the type is known, the loader searches the configuration file's redirect locations, GAC, the current assembly using configuration information, and the application base directory.</span></span> <span data-ttu-id="65c55-114">Если сборка неизвестна, загрузчик ищет в текущей сборке, в библиотеке mscorlib и в месте, возвращаемом обработчиком событий `TypeResolve`.</span><span class="sxs-lookup"><span data-stu-id="65c55-114">If the assembly is unknown, the loader searches the current assembly, mscorlib, and the location returned by the `TypeResolve` event handler.</span></span> <span data-ttu-id="65c55-115">Порядок поиска в среде CLR может быть изменен с помощью таких средств, как механизм пересылки типа и событие AppDomain.TypeResolve.</span><span class="sxs-lookup"><span data-stu-id="65c55-115">This CLR search order can be modified with hooks such as the Type Forwarding mechanism and the AppDomain.TypeResolve event.</span></span>  
   
- <span data-ttu-id="6d6f4-116">Злоумышленник может использовать порядок поиска в среде CLR и выполнить неавторизованный код.</span><span class="sxs-lookup"><span data-stu-id="6d6f4-116">An attacker can exploit the CLR search order and execute unauthorized code.</span></span> <span data-ttu-id="6d6f4-117">Использование полных (строгих) имен однозначно идентифицирует тип и еще больше повышает безопасность системы.</span><span class="sxs-lookup"><span data-stu-id="6d6f4-117">Using fully qualified (strong) names uniquely identifies a type and further increases security of your system.</span></span>  
+ <span data-ttu-id="65c55-116">Злоумышленник может использовать порядок поиска в среде CLR и выполнить неавторизованный код.</span><span class="sxs-lookup"><span data-stu-id="65c55-116">An attacker can exploit the CLR search order and execute unauthorized code.</span></span> <span data-ttu-id="65c55-117">Использование полных (строгих) имен однозначно идентифицирует тип и еще больше повышает безопасность системы.</span><span class="sxs-lookup"><span data-stu-id="65c55-117">Using fully qualified (strong) names uniquely identifies a type and further increases security of your system.</span></span>  
   
- <span data-ttu-id="6d6f4-118">Дополнительные сведения см. в разделе [как среда выполнения находит сборки](http://go.microsoft.com/fwlink/?LinkId=95336) и <xref:System.AppDomain.TypeResolve>.</span><span class="sxs-lookup"><span data-stu-id="6d6f4-118">For more information, see [How the Runtime Locates Assemblies](http://go.microsoft.com/fwlink/?LinkId=95336) and <xref:System.AppDomain.TypeResolve>.</span></span>  
+ <span data-ttu-id="65c55-118">Дополнительные сведения см. в разделе [как среда выполнения находит сборки](http://go.microsoft.com/fwlink/?LinkId=95336) и <xref:System.AppDomain.TypeResolve>.</span><span class="sxs-lookup"><span data-stu-id="65c55-118">For more information, see [How the Runtime Locates Assemblies](http://go.microsoft.com/fwlink/?LinkId=95336) and <xref:System.AppDomain.TypeResolve>.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="6d6f4-119">См. также</span><span class="sxs-lookup"><span data-stu-id="6d6f4-119">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="65c55-119">См. также</span><span class="sxs-lookup"><span data-stu-id="65c55-119">See Also</span></span>  
  <xref:System.ServiceModel.Configuration.BehaviorExtensionElement>  
- [<span data-ttu-id="6d6f4-120">Настройка и расширение среды выполнения с помощью поведений</span><span class="sxs-lookup"><span data-stu-id="6d6f4-120">Configuring and Extending the Runtime with Behaviors</span></span>](../../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md)
+ [<span data-ttu-id="65c55-120">Настройка и расширение среды выполнения с помощью поведений</span><span class="sxs-lookup"><span data-stu-id="65c55-120">Configuring and Extending the Runtime with Behaviors</span></span>](../../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md)

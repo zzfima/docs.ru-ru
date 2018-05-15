@@ -1,35 +1,25 @@
 ---
-title: "&lt;security&gt; для &lt;msmqIntegrationBinding&gt;"
-ms.custom: 
+title: '&lt;security&gt; для &lt;msmqIntegrationBinding&gt;'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: ae5c68a8-14a2-4c6e-b9e0-3e94e3e9135e
-caps.latest.revision: "13"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 94f6bf63a1da5385b884d67c582cd7d6577a6b67
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 861942ac3ce84d75be61d7b4125ab0e17c6d86e1
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="ltsecuritygt-of-ltmsmqintegrationbindinggt"></a><span data-ttu-id="f310d-102">&lt;security&gt; для &lt;msmqIntegrationBinding&gt;</span><span class="sxs-lookup"><span data-stu-id="f310d-102">&lt;security&gt; of &lt;msmqIntegrationBinding&gt;</span></span>
-<span data-ttu-id="f310d-103">Определяет параметры безопасности транспорта для канала интеграции очереди сообщений (MSMQ).</span><span class="sxs-lookup"><span data-stu-id="f310d-103">Defines the transport security settings for the Message Queuing (MSMQ) integration channel.</span></span>  
+# <a name="ltsecuritygt-of-ltmsmqintegrationbindinggt"></a><span data-ttu-id="25321-102">&lt;security&gt; для &lt;msmqIntegrationBinding&gt;</span><span class="sxs-lookup"><span data-stu-id="25321-102">&lt;security&gt; of &lt;msmqIntegrationBinding&gt;</span></span>
+<span data-ttu-id="25321-103">Определяет параметры безопасности транспорта для канала интеграции очереди сообщений (MSMQ).</span><span class="sxs-lookup"><span data-stu-id="25321-103">Defines the transport security settings for the Message Queuing (MSMQ) integration channel.</span></span>  
   
- <span data-ttu-id="f310d-104">\<system.ServiceModel></span><span class="sxs-lookup"><span data-stu-id="f310d-104">\<system.ServiceModel></span></span>  
-<span data-ttu-id="f310d-105">\<привязки ></span><span class="sxs-lookup"><span data-stu-id="f310d-105">\<bindings></span></span>  
-<span data-ttu-id="f310d-106">msmqIntegrationBinding</span><span class="sxs-lookup"><span data-stu-id="f310d-106">msmqIntegrationBinding</span></span>  
-<span data-ttu-id="f310d-107">\<Привязка ></span><span class="sxs-lookup"><span data-stu-id="f310d-107">\<binding></span></span>  
-<span data-ttu-id="f310d-108">\<Безопасность ></span><span class="sxs-lookup"><span data-stu-id="f310d-108">\<security></span></span>  
+ <span data-ttu-id="25321-104">\<система. ServiceModel ></span><span class="sxs-lookup"><span data-stu-id="25321-104">\<system.ServiceModel></span></span>  
+<span data-ttu-id="25321-105">\<привязки ></span><span class="sxs-lookup"><span data-stu-id="25321-105">\<bindings></span></span>  
+<span data-ttu-id="25321-106">msmqIntegrationBinding</span><span class="sxs-lookup"><span data-stu-id="25321-106">msmqIntegrationBinding</span></span>  
+<span data-ttu-id="25321-107">\<Привязка ></span><span class="sxs-lookup"><span data-stu-id="25321-107">\<binding></span></span>  
+<span data-ttu-id="25321-108">\<Безопасность ></span><span class="sxs-lookup"><span data-stu-id="25321-108">\<security></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f310d-109">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="f310d-109">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="25321-109">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="25321-109">Syntax</span></span>  
   
 ```xml  
 <msmqIntegrationBinding>  
@@ -47,36 +37,36 @@ ms.lasthandoff: 01/19/2018
 </msmqIntegrationBinding>   
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="f310d-110">Атрибуты и элементы</span><span class="sxs-lookup"><span data-stu-id="f310d-110">Attributes and Elements</span></span>  
- <span data-ttu-id="f310d-111">В следующих разделах описаны атрибуты, дочерние и родительские элементы.</span><span class="sxs-lookup"><span data-stu-id="f310d-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="25321-110">Атрибуты и элементы</span><span class="sxs-lookup"><span data-stu-id="25321-110">Attributes and Elements</span></span>  
+ <span data-ttu-id="25321-111">В следующих разделах описаны атрибуты, дочерние и родительские элементы.</span><span class="sxs-lookup"><span data-stu-id="25321-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="f310d-112">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="f310d-112">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="25321-112">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="25321-112">Attributes</span></span>  
   
-|<span data-ttu-id="f310d-113">Атрибут</span><span class="sxs-lookup"><span data-stu-id="f310d-113">Attribute</span></span>|<span data-ttu-id="f310d-114">Описание</span><span class="sxs-lookup"><span data-stu-id="f310d-114">Description</span></span>|  
+|<span data-ttu-id="25321-113">Атрибут</span><span class="sxs-lookup"><span data-stu-id="25321-113">Attribute</span></span>|<span data-ttu-id="25321-114">Описание</span><span class="sxs-lookup"><span data-stu-id="25321-114">Description</span></span>|  
 |---------------|-----------------|  
-|<span data-ttu-id="f310d-115">режим</span><span class="sxs-lookup"><span data-stu-id="f310d-115">mode</span></span>|<span data-ttu-id="f310d-116">Задает тип системы безопасности, отвечающей за целостность, конфиденциальность и проверку подлинности при использовании канала интеграции очереди сообщений.</span><span class="sxs-lookup"><span data-stu-id="f310d-116">Specifies the type of security that controls integrity, confidentiality and authentication with the Message Queuing integration channel.</span></span> <span data-ttu-id="f310d-117">Допустимы следующие значения:</span><span class="sxs-lookup"><span data-stu-id="f310d-117">Valid values include the following:</span></span><br /><br /> <span data-ttu-id="f310d-118">— None: Режим безопасности отключен.</span><span class="sxs-lookup"><span data-stu-id="f310d-118">-   None: This disables security.</span></span><br /><span data-ttu-id="f310d-119">-Transport: Защита и проверка подлинности предоставляются транспортом.</span><span class="sxs-lookup"><span data-stu-id="f310d-119">-   Transport: Protection and authentication are offered by the transport.</span></span> <span data-ttu-id="f310d-120">Это значение связано с безопасностью сообщений между двумя диспетчерами очереди.</span><span class="sxs-lookup"><span data-stu-id="f310d-120">This applies to the message security between the two queue managers.</span></span> <span data-ttu-id="f310d-121">Между приложением и диспетчером очереди безопасность сообщений не обеспечивается.</span><span class="sxs-lookup"><span data-stu-id="f310d-121">There is no security offered between the application and queue manager.</span></span> <span data-ttu-id="f310d-122">Существующие Msmq-приложения функционально равноценны такому режиму безопасности.</span><span class="sxs-lookup"><span data-stu-id="f310d-122">Existing Msmq applications are functionally equivalent with this type of security mode.</span></span><br /><br /> <span data-ttu-id="f310d-123">Значение по умолчанию — `Transport`.</span><span class="sxs-lookup"><span data-stu-id="f310d-123">The default value is `Transport`.</span></span> <span data-ttu-id="f310d-124">Это атрибут типа <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationSecurityMode>.</span><span class="sxs-lookup"><span data-stu-id="f310d-124">This attribute is of type <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationSecurityMode>.</span></span>|  
+|<span data-ttu-id="25321-115">режим</span><span class="sxs-lookup"><span data-stu-id="25321-115">mode</span></span>|<span data-ttu-id="25321-116">Задает тип системы безопасности, отвечающей за целостность, конфиденциальность и проверку подлинности при использовании канала интеграции очереди сообщений.</span><span class="sxs-lookup"><span data-stu-id="25321-116">Specifies the type of security that controls integrity, confidentiality and authentication with the Message Queuing integration channel.</span></span> <span data-ttu-id="25321-117">Допустимы следующие значения:</span><span class="sxs-lookup"><span data-stu-id="25321-117">Valid values include the following:</span></span><br /><br /> <span data-ttu-id="25321-118">— None: Режим безопасности отключен.</span><span class="sxs-lookup"><span data-stu-id="25321-118">-   None: This disables security.</span></span><br /><span data-ttu-id="25321-119">-Transport: Защита и проверка подлинности предоставляются транспортом.</span><span class="sxs-lookup"><span data-stu-id="25321-119">-   Transport: Protection and authentication are offered by the transport.</span></span> <span data-ttu-id="25321-120">Это значение связано с безопасностью сообщений между двумя диспетчерами очереди.</span><span class="sxs-lookup"><span data-stu-id="25321-120">This applies to the message security between the two queue managers.</span></span> <span data-ttu-id="25321-121">Между приложением и диспетчером очереди безопасность сообщений не обеспечивается.</span><span class="sxs-lookup"><span data-stu-id="25321-121">There is no security offered between the application and queue manager.</span></span> <span data-ttu-id="25321-122">Существующие Msmq-приложения функционально равноценны такому режиму безопасности.</span><span class="sxs-lookup"><span data-stu-id="25321-122">Existing Msmq applications are functionally equivalent with this type of security mode.</span></span><br /><br /> <span data-ttu-id="25321-123">Значение по умолчанию — `Transport`.</span><span class="sxs-lookup"><span data-stu-id="25321-123">The default value is `Transport`.</span></span> <span data-ttu-id="25321-124">Это атрибут типа <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationSecurityMode>.</span><span class="sxs-lookup"><span data-stu-id="25321-124">This attribute is of type <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationSecurityMode>.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="f310d-125">Дочерние элементы</span><span class="sxs-lookup"><span data-stu-id="f310d-125">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="25321-125">Дочерние элементы</span><span class="sxs-lookup"><span data-stu-id="25321-125">Child Elements</span></span>  
   
-|<span data-ttu-id="f310d-126">Элемент</span><span class="sxs-lookup"><span data-stu-id="f310d-126">Element</span></span>|<span data-ttu-id="f310d-127">Описание:</span><span class="sxs-lookup"><span data-stu-id="f310d-127">Description</span></span>|  
+|<span data-ttu-id="25321-126">Элемент</span><span class="sxs-lookup"><span data-stu-id="25321-126">Element</span></span>|<span data-ttu-id="25321-127">Описание</span><span class="sxs-lookup"><span data-stu-id="25321-127">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="f310d-128">\<transport></span><span class="sxs-lookup"><span data-stu-id="f310d-128">\<transport></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-msmqintegrationbinding.md)|<span data-ttu-id="f310d-129">Определяет параметры безопасности для транспорта интеграции очереди сообщений.</span><span class="sxs-lookup"><span data-stu-id="f310d-129">Defines the security settings for the Message Queuing integration transport.</span></span> <span data-ttu-id="f310d-130">Это элемент типа <xref:System.ServiceModel.Configuration.MsmqTransportSecurityElement>.</span><span class="sxs-lookup"><span data-stu-id="f310d-130">This element is of type <xref:System.ServiceModel.Configuration.MsmqTransportSecurityElement>.</span></span>|  
+|[<span data-ttu-id="25321-128">\<Транспорт ></span><span class="sxs-lookup"><span data-stu-id="25321-128">\<transport></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-msmqintegrationbinding.md)|<span data-ttu-id="25321-129">Определяет параметры безопасности для транспорта интеграции очереди сообщений.</span><span class="sxs-lookup"><span data-stu-id="25321-129">Defines the security settings for the Message Queuing integration transport.</span></span> <span data-ttu-id="25321-130">Это элемент типа <xref:System.ServiceModel.Configuration.MsmqTransportSecurityElement>.</span><span class="sxs-lookup"><span data-stu-id="25321-130">This element is of type <xref:System.ServiceModel.Configuration.MsmqTransportSecurityElement>.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="f310d-131">Родительские элементы</span><span class="sxs-lookup"><span data-stu-id="f310d-131">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="25321-131">Родительские элементы</span><span class="sxs-lookup"><span data-stu-id="25321-131">Parent Elements</span></span>  
   
-|<span data-ttu-id="f310d-132">Элемент</span><span class="sxs-lookup"><span data-stu-id="f310d-132">Element</span></span>|<span data-ttu-id="f310d-133">Описание:</span><span class="sxs-lookup"><span data-stu-id="f310d-133">Description</span></span>|  
+|<span data-ttu-id="25321-132">Элемент</span><span class="sxs-lookup"><span data-stu-id="25321-132">Element</span></span>|<span data-ttu-id="25321-133">Описание</span><span class="sxs-lookup"><span data-stu-id="25321-133">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="f310d-134">\<Привязка ></span><span class="sxs-lookup"><span data-stu-id="f310d-134">\<binding></span></span>](../../../../../docs/framework/misc/binding.md)|<span data-ttu-id="f310d-135">Элемент привязки для [ \<msmqIntegrationBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/msmqintegrationbinding.md).</span><span class="sxs-lookup"><span data-stu-id="f310d-135">The binding element of the [\<msmqIntegrationBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/msmqintegrationbinding.md).</span></span>|  
+|[<span data-ttu-id="25321-134">\<Привязка ></span><span class="sxs-lookup"><span data-stu-id="25321-134">\<binding></span></span>](../../../../../docs/framework/misc/binding.md)|<span data-ttu-id="25321-135">Элемент привязки для [ \<msmqIntegrationBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/msmqintegrationbinding.md).</span><span class="sxs-lookup"><span data-stu-id="25321-135">The binding element of the [\<msmqIntegrationBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/msmqintegrationbinding.md).</span></span>|  
   
-## <a name="see-also"></a><span data-ttu-id="f310d-136">См. также</span><span class="sxs-lookup"><span data-stu-id="f310d-136">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="25321-136">См. также</span><span class="sxs-lookup"><span data-stu-id="25321-136">See Also</span></span>  
  <xref:System.ServiceModel.Configuration.MsmqIntegrationSecurityElement>  
  <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding.Security%2A>  
  <xref:System.ServiceModel.Configuration.MsmqIntegrationBindingElement.Security%2A>  
  <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationSecurity>  
- [<span data-ttu-id="f310d-137">Очереди в WCF</span><span class="sxs-lookup"><span data-stu-id="f310d-137">Queues in WCF</span></span>](../../../../../docs/framework/wcf/feature-details/queues-in-wcf.md)  
- [<span data-ttu-id="f310d-138">Защита служб и клиентов</span><span class="sxs-lookup"><span data-stu-id="f310d-138">Securing Services and Clients</span></span>](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
- [<span data-ttu-id="f310d-139">Привязки</span><span class="sxs-lookup"><span data-stu-id="f310d-139">Bindings</span></span>](../../../../../docs/framework/wcf/bindings.md)  
- [<span data-ttu-id="f310d-140">Настройка привязок, предоставляемых системой</span><span class="sxs-lookup"><span data-stu-id="f310d-140">Configuring System-Provided Bindings</span></span>](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [<span data-ttu-id="f310d-141">Использование привязок для настройки служб Windows Communication Foundation и клиентов</span><span class="sxs-lookup"><span data-stu-id="f310d-141">Using Bindings to Configure Windows Communication Foundation Services and Clients</span></span>](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
- [<span data-ttu-id="f310d-142">\<Привязка ></span><span class="sxs-lookup"><span data-stu-id="f310d-142">\<binding></span></span>](../../../../../docs/framework/misc/binding.md)  
- [<span data-ttu-id="f310d-143">\<msmqIntegrationBinding></span><span class="sxs-lookup"><span data-stu-id="f310d-143">\<msmqIntegrationBinding></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/msmqintegrationbinding.md)
+ [<span data-ttu-id="25321-137">Очереди в WCF</span><span class="sxs-lookup"><span data-stu-id="25321-137">Queues in WCF</span></span>](../../../../../docs/framework/wcf/feature-details/queues-in-wcf.md)  
+ [<span data-ttu-id="25321-138">Защита служб и клиентов</span><span class="sxs-lookup"><span data-stu-id="25321-138">Securing Services and Clients</span></span>](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
+ [<span data-ttu-id="25321-139">Привязки</span><span class="sxs-lookup"><span data-stu-id="25321-139">Bindings</span></span>](../../../../../docs/framework/wcf/bindings.md)  
+ [<span data-ttu-id="25321-140">Настройка привязок, предоставляемых системой</span><span class="sxs-lookup"><span data-stu-id="25321-140">Configuring System-Provided Bindings</span></span>](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
+ [<span data-ttu-id="25321-141">Использование привязок для настройки служб Windows Communication Foundation и клиентов</span><span class="sxs-lookup"><span data-stu-id="25321-141">Using Bindings to Configure Windows Communication Foundation Services and Clients</span></span>](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [<span data-ttu-id="25321-142">\<Привязка ></span><span class="sxs-lookup"><span data-stu-id="25321-142">\<binding></span></span>](../../../../../docs/framework/misc/binding.md)  
+ [<span data-ttu-id="25321-143">\<msmqIntegrationBinding ></span><span class="sxs-lookup"><span data-stu-id="25321-143">\<msmqIntegrationBinding></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/msmqintegrationbinding.md)

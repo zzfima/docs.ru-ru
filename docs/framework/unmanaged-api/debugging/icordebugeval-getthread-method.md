@@ -1,14 +1,6 @@
 ---
-title: "Метод ICorDebugEval::GetThread"
-ms.custom: 
+title: Метод ICorDebugEval::GetThread
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorDebugEval.GetThread
 api_location:
@@ -23,22 +15,18 @@ helpviewer_keywords:
 ms.assetid: 57163b0d-c8a7-44af-9078-e7a895d29f9a
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 5a2ed99c2a939d2b39f6b236165b79634f2fc2c2
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e64bc173717c3121d6c2b101f734ee325a0ced53
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="icordebugevalgetthread-method"></a><span data-ttu-id="f28c2-102">Метод ICorDebugEval::GetThread</span><span class="sxs-lookup"><span data-stu-id="f28c2-102">ICorDebugEval::GetThread Method</span></span>
-<span data-ttu-id="f28c2-103">Получает поток, в котором эта оценка выполняется или будет выполняться.</span><span class="sxs-lookup"><span data-stu-id="f28c2-103">Gets the thread in which this evaluation is executing or will execute.</span></span>  
+# <a name="icordebugevalgetthread-method"></a><span data-ttu-id="e8e02-102">Метод ICorDebugEval::GetThread</span><span class="sxs-lookup"><span data-stu-id="e8e02-102">ICorDebugEval::GetThread Method</span></span>
+<span data-ttu-id="e8e02-103">Получает поток, в котором эта оценка выполняется или будет выполняться.</span><span class="sxs-lookup"><span data-stu-id="e8e02-103">Gets the thread in which this evaluation is executing or will execute.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f28c2-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="f28c2-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e8e02-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="e8e02-104">Syntax</span></span>  
   
 ```  
 HRESULT GetThread (  
@@ -46,15 +34,15 @@ HRESULT GetThread (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="f28c2-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="f28c2-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="e8e02-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="e8e02-105">Parameters</span></span>  
  `ppThread`  
- <span data-ttu-id="f28c2-106">[out] Указатель на адрес объекта, представляющего поток ICorDebugThread.</span><span class="sxs-lookup"><span data-stu-id="f28c2-106">[out] A pointer to the address of an ICorDebugThread object that represents the thread.</span></span>  
+ <span data-ttu-id="e8e02-106">[out] Указатель на адрес объекта, представляющего поток ICorDebugThread.</span><span class="sxs-lookup"><span data-stu-id="e8e02-106">[out] A pointer to the address of an ICorDebugThread object that represents the thread.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="f28c2-107">Требования</span><span class="sxs-lookup"><span data-stu-id="f28c2-107">Requirements</span></span>  
- <span data-ttu-id="f28c2-108">**Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="f28c2-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="e8e02-107">Требования</span><span class="sxs-lookup"><span data-stu-id="e8e02-107">Requirements</span></span>  
+ <span data-ttu-id="e8e02-108">**Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="e8e02-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="f28c2-109">**Заголовок:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="f28c2-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="e8e02-109">**Заголовок:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="e8e02-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="f28c2-110">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="f28c2-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="e8e02-110">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="e8e02-110">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="f28c2-111">**Версии платформы .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f28c2-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="e8e02-111">**Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e8e02-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

@@ -1,14 +1,6 @@
 ---
-title: "Интерфейс ICorDebugDataTarget"
-ms.custom: 
+title: Интерфейс ICorDebugDataTarget
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorDebugDataTarget
 api_location:
@@ -22,54 +14,50 @@ helpviewer_keywords:
 ms.assetid: df5f05be-bed7-4f3c-bc89-dbb435d79a0b
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: b5d3a3b190cfa606bd4239e24c5defdaff9f4257
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 972c650e0fb3b42e943838b72faf2658f65543ae
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="icordebugdatatarget-interface"></a><span data-ttu-id="ee10d-102">Интерфейс ICorDebugDataTarget</span><span class="sxs-lookup"><span data-stu-id="ee10d-102">ICorDebugDataTarget Interface</span></span>
-<span data-ttu-id="ee10d-103">Предоставляет интерфейс обратного вызова, обеспечивающий доступ к конкретному целевому процессу.</span><span class="sxs-lookup"><span data-stu-id="ee10d-103">Provides a callback interface that provides access to a particular target process.</span></span>  
+# <a name="icordebugdatatarget-interface"></a><span data-ttu-id="c21b6-102">Интерфейс ICorDebugDataTarget</span><span class="sxs-lookup"><span data-stu-id="c21b6-102">ICorDebugDataTarget Interface</span></span>
+<span data-ttu-id="c21b6-103">Предоставляет интерфейс обратного вызова, обеспечивающий доступ к конкретному целевому процессу.</span><span class="sxs-lookup"><span data-stu-id="c21b6-103">Provides a callback interface that provides access to a particular target process.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="ee10d-104">Методы</span><span class="sxs-lookup"><span data-stu-id="ee10d-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="c21b6-104">Методы</span><span class="sxs-lookup"><span data-stu-id="c21b6-104">Methods</span></span>  
   
-|<span data-ttu-id="ee10d-105">Метод</span><span class="sxs-lookup"><span data-stu-id="ee10d-105">Method</span></span>|<span data-ttu-id="ee10d-106">Описание:</span><span class="sxs-lookup"><span data-stu-id="ee10d-106">Description</span></span>|  
+|<span data-ttu-id="c21b6-105">Метод</span><span class="sxs-lookup"><span data-stu-id="c21b6-105">Method</span></span>|<span data-ttu-id="c21b6-106">Описание</span><span class="sxs-lookup"><span data-stu-id="c21b6-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="ee10d-107">Метод GetPlatform</span><span class="sxs-lookup"><span data-stu-id="ee10d-107">GetPlatform Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-getplatform-method.md)|<span data-ttu-id="ee10d-108">Предоставляет сведения о платформе, включая архитектуру процессора и операционной системы, на котором выполняется целевой процесс.</span><span class="sxs-lookup"><span data-stu-id="ee10d-108">Provides information about the platform, including processor architecture and operating system, on which the target process is running.</span></span>|  
-|[<span data-ttu-id="ee10d-109">Метод ReadVirtual</span><span class="sxs-lookup"><span data-stu-id="ee10d-109">ReadVirtual Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-readvirtual-method.md)|<span data-ttu-id="ee10d-110">Получает блок непрерывной памяти, начиная с указанного адреса и возвращает его в указанный буфер.</span><span class="sxs-lookup"><span data-stu-id="ee10d-110">Gets a block of contiguous memory starting at the specified address, and returns it in the supplied buffer.</span></span>|  
-|[<span data-ttu-id="ee10d-111">Метод GetThreadContext</span><span class="sxs-lookup"><span data-stu-id="ee10d-111">GetThreadContext Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-getthreadcontext-method.md)|<span data-ttu-id="ee10d-112">Запрашивает текущий контекст потока для указанного потока.</span><span class="sxs-lookup"><span data-stu-id="ee10d-112">Requests the current thread context for the specified thread.</span></span>|  
+|[<span data-ttu-id="c21b6-107">Метод GetPlatform</span><span class="sxs-lookup"><span data-stu-id="c21b6-107">GetPlatform Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-getplatform-method.md)|<span data-ttu-id="c21b6-108">Предоставляет сведения о платформе, включая архитектуру процессора и операционной системы, на котором выполняется целевой процесс.</span><span class="sxs-lookup"><span data-stu-id="c21b6-108">Provides information about the platform, including processor architecture and operating system, on which the target process is running.</span></span>|  
+|[<span data-ttu-id="c21b6-109">Метод ReadVirtual</span><span class="sxs-lookup"><span data-stu-id="c21b6-109">ReadVirtual Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-readvirtual-method.md)|<span data-ttu-id="c21b6-110">Получает блок непрерывной памяти, начиная с указанного адреса и возвращает его в указанный буфер.</span><span class="sxs-lookup"><span data-stu-id="c21b6-110">Gets a block of contiguous memory starting at the specified address, and returns it in the supplied buffer.</span></span>|  
+|[<span data-ttu-id="c21b6-111">Метод GetThreadContext</span><span class="sxs-lookup"><span data-stu-id="c21b6-111">GetThreadContext Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-getthreadcontext-method.md)|<span data-ttu-id="c21b6-112">Запрашивает текущий контекст потока для указанного потока.</span><span class="sxs-lookup"><span data-stu-id="c21b6-112">Requests the current thread context for the specified thread.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="ee10d-113">Примечания</span><span class="sxs-lookup"><span data-stu-id="ee10d-113">Remarks</span></span>  
- <span data-ttu-id="ee10d-114">`ICorDebugDataTarget`и его методы имеют следующие характеристики:</span><span class="sxs-lookup"><span data-stu-id="ee10d-114">`ICorDebugDataTarget` and its methods have the following characteristics:</span></span>  
+## <a name="remarks"></a><span data-ttu-id="c21b6-113">Примечания</span><span class="sxs-lookup"><span data-stu-id="c21b6-113">Remarks</span></span>  
+ <span data-ttu-id="c21b6-114">`ICorDebugDataTarget` и его методы имеют следующие характеристики:</span><span class="sxs-lookup"><span data-stu-id="c21b6-114">`ICorDebugDataTarget` and its methods have the following characteristics:</span></span>  
   
--   <span data-ttu-id="ee10d-115">Службы отладки вызывают методы этого интерфейса для доступа к памяти и другими данными в целевом процессе.</span><span class="sxs-lookup"><span data-stu-id="ee10d-115">The debugging services call methods on this interface to access memory and other data in the target process.</span></span>  
+-   <span data-ttu-id="c21b6-115">Службы отладки вызывают методы этого интерфейса для доступа к памяти и другими данными в целевом процессе.</span><span class="sxs-lookup"><span data-stu-id="c21b6-115">The debugging services call methods on this interface to access memory and other data in the target process.</span></span>  
   
--   <span data-ttu-id="ee10d-116">Клиент отладчика должен реализовывать этот интерфейс, в зависимости от конкретного целевого объекта (например, активный процесс или дамп памяти).</span><span class="sxs-lookup"><span data-stu-id="ee10d-116">The debugger client must implement this interface as appropriate for the particular target (for example, a live process or a memory dump).</span></span>  
+-   <span data-ttu-id="c21b6-116">Клиент отладчика должен реализовывать этот интерфейс, в зависимости от конкретного целевого объекта (например, активный процесс или дамп памяти).</span><span class="sxs-lookup"><span data-stu-id="c21b6-116">The debugger client must implement this interface as appropriate for the particular target (for example, a live process or a memory dump).</span></span>  
   
--   <span data-ttu-id="ee10d-117">`ICorDebugDataTarget` Методы могут вызываться только из методов, реализованных в других `ICorDebug*` интерфейсов.</span><span class="sxs-lookup"><span data-stu-id="ee10d-117">The `ICorDebugDataTarget` methods can be invoked only from within methods implemented in other `ICorDebug*` interfaces.</span></span> <span data-ttu-id="ee10d-118">Это гарантирует, что клиент отладчика управляет для потока, в который он вызывается и когда.</span><span class="sxs-lookup"><span data-stu-id="ee10d-118">This ensures that the debugger client has control over which thread it is invoked on, and when.</span></span>  
+-   <span data-ttu-id="c21b6-117">`ICorDebugDataTarget` Методы могут вызываться только из методов, реализованных в других `ICorDebug*` интерфейсов.</span><span class="sxs-lookup"><span data-stu-id="c21b6-117">The `ICorDebugDataTarget` methods can be invoked only from within methods implemented in other `ICorDebug*` interfaces.</span></span> <span data-ttu-id="c21b6-118">Это гарантирует, что клиент отладчика управляет для потока, в который он вызывается и когда.</span><span class="sxs-lookup"><span data-stu-id="c21b6-118">This ensures that the debugger client has control over which thread it is invoked on, and when.</span></span>  
   
--   <span data-ttu-id="ee10d-119">`ICorDebugDataTarget` Реализация должна всегда возвращать актуальные сведения о цели.</span><span class="sxs-lookup"><span data-stu-id="ee10d-119">The `ICorDebugDataTarget` implementation must always return up-to-date information about the target.</span></span>  
+-   <span data-ttu-id="c21b6-119">`ICorDebugDataTarget` Реализация должна всегда возвращать актуальные сведения о цели.</span><span class="sxs-lookup"><span data-stu-id="c21b6-119">The `ICorDebugDataTarget` implementation must always return up-to-date information about the target.</span></span>  
   
- <span data-ttu-id="ee10d-120">Целевой процесс следует останавливать и не изменяется во всех отношениях `ICorDebug*` интерфейсы (и, следовательно, `ICorDebugDataTarget` методы) вызываются.</span><span class="sxs-lookup"><span data-stu-id="ee10d-120">The target process should be stopped and not changed in any way while `ICorDebug*` interfaces (and therefore `ICorDebugDataTarget` methods) are being called.</span></span> <span data-ttu-id="ee10d-121">Если целью является активного процесса и его изменения состояния [ICLRDebugging::OpenVirtualProcess](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-openvirtualprocess-method.md) метод должен вызываться снова, чтобы предоставить экземпляр ICorDebugProcess замены.</span><span class="sxs-lookup"><span data-stu-id="ee10d-121">If the target is a live process and its state changes, the [ICLRDebugging::OpenVirtualProcess](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-openvirtualprocess-method.md) method has to be called again to provide a replacement ICorDebugProcess instance.</span></span>  
+ <span data-ttu-id="c21b6-120">Целевой процесс следует останавливать и не изменяется во всех отношениях `ICorDebug*` интерфейсы (и, следовательно, `ICorDebugDataTarget` методы) вызываются.</span><span class="sxs-lookup"><span data-stu-id="c21b6-120">The target process should be stopped and not changed in any way while `ICorDebug*` interfaces (and therefore `ICorDebugDataTarget` methods) are being called.</span></span> <span data-ttu-id="c21b6-121">Если целью является активного процесса и его изменения состояния [ICLRDebugging::OpenVirtualProcess](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-openvirtualprocess-method.md) метод должен вызываться снова, чтобы предоставить экземпляр ICorDebugProcess замены.</span><span class="sxs-lookup"><span data-stu-id="c21b6-121">If the target is a live process and its state changes, the [ICLRDebugging::OpenVirtualProcess](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-openvirtualprocess-method.md) method has to be called again to provide a replacement ICorDebugProcess instance.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="ee10d-122">Этот интерфейс не поддерживает удаленные вызовы между компьютерами или между процессами.</span><span class="sxs-lookup"><span data-stu-id="ee10d-122">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
+>  <span data-ttu-id="c21b6-122">Этот интерфейс не поддерживает удаленные вызовы между компьютерами или между процессами.</span><span class="sxs-lookup"><span data-stu-id="c21b6-122">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="ee10d-123">Требования</span><span class="sxs-lookup"><span data-stu-id="ee10d-123">Requirements</span></span>  
- <span data-ttu-id="ee10d-124">**Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="ee10d-124">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c21b6-123">Требования</span><span class="sxs-lookup"><span data-stu-id="c21b6-123">Requirements</span></span>  
+ <span data-ttu-id="c21b6-124">**Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="c21b6-124">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="ee10d-125">**Заголовок:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="ee10d-125">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="c21b6-125">**Заголовок:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="c21b6-125">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="ee10d-126">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="ee10d-126">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="c21b6-126">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="c21b6-126">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="ee10d-127">**Версии платформы .NET framework:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ee10d-127">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="c21b6-127">**Версии платформы .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c21b6-127">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ee10d-128">См. также</span><span class="sxs-lookup"><span data-stu-id="ee10d-128">See Also</span></span>  
- [<span data-ttu-id="ee10d-129">Интерфейсы отладки</span><span class="sxs-lookup"><span data-stu-id="ee10d-129">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
- [<span data-ttu-id="ee10d-130">Отладка</span><span class="sxs-lookup"><span data-stu-id="ee10d-130">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a><span data-ttu-id="c21b6-128">См. также</span><span class="sxs-lookup"><span data-stu-id="c21b6-128">See Also</span></span>  
+ [<span data-ttu-id="c21b6-129">Интерфейсы отладки</span><span class="sxs-lookup"><span data-stu-id="c21b6-129">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
+ [<span data-ttu-id="c21b6-130">Отладка</span><span class="sxs-lookup"><span data-stu-id="c21b6-130">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)

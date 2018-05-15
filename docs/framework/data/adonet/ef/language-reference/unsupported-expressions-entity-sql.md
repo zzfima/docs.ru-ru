@@ -1,49 +1,40 @@
 ---
-title: "Не поддерживаемые выражения (Entity SQL)"
+title: Не поддерживаемые выражения (Entity SQL)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-ado
-ms.topic: article
 ms.assetid: 5e79da7e-e78a-413c-8fb0-f3f9cd84f579
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload:
-- dotnet
 dev_langs:
 - sql
-ms.openlocfilehash: 075daf0e4f0477dda50231760fbb3d990a9f8468
-ms.sourcegitcommit: c3957fdb990060559d73cca44ab3e2c7b4d049c0
+ms.openlocfilehash: 6d1746bb51af4795f09c47f808cf9a29d0370f18
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="unsupported-expressions"></a><span data-ttu-id="d7bc7-102">Неподдерживаемые выражения</span><span class="sxs-lookup"><span data-stu-id="d7bc7-102">Unsupported expressions</span></span>
+# <a name="unsupported-expressions"></a><span data-ttu-id="cd491-102">Неподдерживаемые выражения</span><span class="sxs-lookup"><span data-stu-id="cd491-102">Unsupported expressions</span></span>
 
-<span data-ttu-id="d7bc7-103">В этом разделе описываются выражения [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)], не поддерживаемые в [!INCLUDE[esql](../../../../../../includes/esql-md.md)].</span><span class="sxs-lookup"><span data-stu-id="d7bc7-103">This topic describes [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] expressions that are not supported in [!INCLUDE[esql](../../../../../../includes/esql-md.md)].</span></span> <span data-ttu-id="d7bc7-104">Дополнительные сведения см. в разделе [как Entity SQL отличается от языка Transact-SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/how-entity-sql-differs-from-transact-sql.md).</span><span class="sxs-lookup"><span data-stu-id="d7bc7-104">For more information, see [How Entity SQL Differs from Transact-SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/how-entity-sql-differs-from-transact-sql.md).</span></span>
+<span data-ttu-id="cd491-103">В этом разделе описываются выражения [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)], не поддерживаемые в [!INCLUDE[esql](../../../../../../includes/esql-md.md)].</span><span class="sxs-lookup"><span data-stu-id="cd491-103">This topic describes [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] expressions that are not supported in [!INCLUDE[esql](../../../../../../includes/esql-md.md)].</span></span> <span data-ttu-id="cd491-104">Дополнительные сведения см. в разделе [как Entity SQL отличается от языка Transact-SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/how-entity-sql-differs-from-transact-sql.md).</span><span class="sxs-lookup"><span data-stu-id="cd491-104">For more information, see [How Entity SQL Differs from Transact-SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/how-entity-sql-differs-from-transact-sql.md).</span></span>
 
-## <a name="quantified-predicates"></a><span data-ttu-id="d7bc7-105">Предикаты с кванторами</span><span class="sxs-lookup"><span data-stu-id="d7bc7-105">Quantified predicates</span></span>
+## <a name="quantified-predicates"></a><span data-ttu-id="cd491-105">Предикаты с кванторами</span><span class="sxs-lookup"><span data-stu-id="cd491-105">Quantified predicates</span></span>
 
-[!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] <span data-ttu-id="d7bc7-106">позволяет конструкции следующего вида:</span><span class="sxs-lookup"><span data-stu-id="d7bc7-106">allows constructs of the following form:</span></span>
+<span data-ttu-id="cd491-106">Язык [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] допускает присутствие следующих конструкций:</span><span class="sxs-lookup"><span data-stu-id="cd491-106">[!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] allows constructs of the following form:</span></span>
 
 ```sql
 sal > all (select salary from employees)
 sal > any (select salary from employees)
 ```
 
-[!INCLUDE[esql](../../../../../../includes/esql-md.md)]<span data-ttu-id="d7bc7-107">, однако такие конструкции не поддерживает.</span><span class="sxs-lookup"><span data-stu-id="d7bc7-107">, however, does not support such constructs.</span></span> <span data-ttu-id="d7bc7-108">Эквивалентные выражения могут быть написаны на языке [!INCLUDE[esql](../../../../../../includes/esql-md.md)] следующим образом:</span><span class="sxs-lookup"><span data-stu-id="d7bc7-108">Equivalent expressions can be written in [!INCLUDE[esql](../../../../../../includes/esql-md.md)] as follows:</span></span>
+<span data-ttu-id="cd491-107">Язык [!INCLUDE[esql](../../../../../../includes/esql-md.md)] такие конструкции не поддерживает.</span><span class="sxs-lookup"><span data-stu-id="cd491-107">[!INCLUDE[esql](../../../../../../includes/esql-md.md)], however, does not support such constructs.</span></span> <span data-ttu-id="cd491-108">Эквивалентные выражения могут быть написаны на языке [!INCLUDE[esql](../../../../../../includes/esql-md.md)] следующим образом:</span><span class="sxs-lookup"><span data-stu-id="cd491-108">Equivalent expressions can be written in [!INCLUDE[esql](../../../../../../includes/esql-md.md)] as follows:</span></span>
 
 ```sql
 not exists(select 0 from employees as e where sal > e.salary)
 exists(select 0 from employees as e where sal > e.salary)
 ```
 
-## <a name="-operator"></a><span data-ttu-id="d7bc7-109">\* - оператор</span><span class="sxs-lookup"><span data-stu-id="d7bc7-109">\* operator</span></span>
+## <a name="-operator"></a><span data-ttu-id="cd491-109">\* - оператор</span><span class="sxs-lookup"><span data-stu-id="cd491-109">\* operator</span></span>
 
-[!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] <span data-ttu-id="d7bc7-110">поддерживает использование \* оператор в предложении SELECT, чтобы указать, что необходимо вернуть все столбцы. В [!INCLUDE[esql](../../../../../../includes/esql-md.md)] это не поддерживается.</span><span class="sxs-lookup"><span data-stu-id="d7bc7-110">supports the use of the \* operator in the SELECT clause to indicate that all columns should be projected out. This is not supported in [!INCLUDE[esql](../../../../../../includes/esql-md.md)].</span></span>
+<span data-ttu-id="cd491-110">В [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] поддерживается использование оператора \* в предложении SELECT, чтобы указать, что необходимо вернуть все столбцы. В [!INCLUDE[esql](../../../../../../includes/esql-md.md)] это не поддерживается.</span><span class="sxs-lookup"><span data-stu-id="cd491-110">[!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] supports the use of the \* operator in the SELECT clause to indicate that all columns should be projected out. This is not supported in [!INCLUDE[esql](../../../../../../includes/esql-md.md)].</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="d7bc7-111">См. также</span><span class="sxs-lookup"><span data-stu-id="d7bc7-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="cd491-111">См. также</span><span class="sxs-lookup"><span data-stu-id="cd491-111">See also</span></span>
 
-[<span data-ttu-id="d7bc7-112">Общие сведения об Entity SQL</span><span class="sxs-lookup"><span data-stu-id="d7bc7-112">Entity SQL Overview</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)  
-[<span data-ttu-id="d7bc7-113">Отличия Entity SQL от Transact-SQL</span><span class="sxs-lookup"><span data-stu-id="d7bc7-113">How Entity SQL Differs from Transact-SQL</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/how-entity-sql-differs-from-transact-sql.md)  
+[<span data-ttu-id="cd491-112">Общие сведения об Entity SQL</span><span class="sxs-lookup"><span data-stu-id="cd491-112">Entity SQL Overview</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)  
+[<span data-ttu-id="cd491-113">Отличия Entity SQL от Transact-SQL</span><span class="sxs-lookup"><span data-stu-id="cd491-113">How Entity SQL Differs from Transact-SQL</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/how-entity-sql-differs-from-transact-sql.md)  

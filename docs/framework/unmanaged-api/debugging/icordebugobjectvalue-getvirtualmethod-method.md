@@ -1,14 +1,6 @@
 ---
-title: "Метод ICorDebugObjectValue::GetVirtualMethod"
-ms.custom: 
+title: Метод ICorDebugObjectValue::GetVirtualMethod
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorDebugObjectValue.GetVirtualMethod
 api_location:
@@ -23,22 +15,18 @@ helpviewer_keywords:
 ms.assetid: f783ebc3-e952-46e6-9325-14dd2c666f21
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 893c21e024d5888467ee25bc32cdb27d7e980d99
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 09db41c71ef21ed6422785d3127c11af08420110
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="icordebugobjectvaluegetvirtualmethod-method"></a><span data-ttu-id="64cc2-102">Метод ICorDebugObjectValue::GetVirtualMethod</span><span class="sxs-lookup"><span data-stu-id="64cc2-102">ICorDebugObjectValue::GetVirtualMethod Method</span></span>
-<span data-ttu-id="64cc2-103">`GetVirtualMethod`в этой версии платформы .NET Framework не реализован.</span><span class="sxs-lookup"><span data-stu-id="64cc2-103">`GetVirtualMethod` is not implemented in this version of the .NET Framework.</span></span>  
+# <a name="icordebugobjectvaluegetvirtualmethod-method"></a><span data-ttu-id="7a4ca-102">Метод ICorDebugObjectValue::GetVirtualMethod</span><span class="sxs-lookup"><span data-stu-id="7a4ca-102">ICorDebugObjectValue::GetVirtualMethod Method</span></span>
+<span data-ttu-id="7a4ca-103">`GetVirtualMethod` в этой версии платформы .NET Framework не реализован.</span><span class="sxs-lookup"><span data-stu-id="7a4ca-103">`GetVirtualMethod` is not implemented in this version of the .NET Framework.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="64cc2-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="64cc2-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="7a4ca-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="7a4ca-104">Syntax</span></span>  
   
 ```  
 HRESULT GetVirtualMethod (  
@@ -47,9 +35,9 @@ HRESULT GetVirtualMethod (
 );  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="64cc2-105">Требования</span><span class="sxs-lookup"><span data-stu-id="64cc2-105">Requirements</span></span>  
- <span data-ttu-id="64cc2-106">**Заголовок:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="64cc2-106">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="7a4ca-105">Требования</span><span class="sxs-lookup"><span data-stu-id="7a4ca-105">Requirements</span></span>  
+ <span data-ttu-id="7a4ca-106">**Заголовок:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="7a4ca-106">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="64cc2-107">См. также</span><span class="sxs-lookup"><span data-stu-id="64cc2-107">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="7a4ca-107">См. также</span><span class="sxs-lookup"><span data-stu-id="7a4ca-107">See Also</span></span>  
     
  

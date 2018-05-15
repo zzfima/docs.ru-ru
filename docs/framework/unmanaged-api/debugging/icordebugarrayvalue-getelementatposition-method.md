@@ -1,14 +1,6 @@
 ---
-title: "Метод ICorDebugArrayValue::GetElementAtPosition"
-ms.custom: 
+title: Метод ICorDebugArrayValue::GetElementAtPosition
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorDebugArrayValue.GetElementAtPosition
 api_location:
@@ -23,22 +15,18 @@ helpviewer_keywords:
 ms.assetid: 6fd5eaa4-1997-4910-82f5-3887480db764
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: c26a55815e57126895902275148940c5271c235b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 580c7b4dcd63f83e113a5317c242b7e66cfb3f5a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="icordebugarrayvaluegetelementatposition-method"></a><span data-ttu-id="ff538-102">Метод ICorDebugArrayValue::GetElementAtPosition</span><span class="sxs-lookup"><span data-stu-id="ff538-102">ICorDebugArrayValue::GetElementAtPosition Method</span></span>
-<span data-ttu-id="ff538-103">Возвращает элемент в заданной позиции, обработке массива как отсчитываемый от нуля одномерный массив.</span><span class="sxs-lookup"><span data-stu-id="ff538-103">Gets the element at the given position, treating the array as a zero-based, single-dimensional array.</span></span>  
+# <a name="icordebugarrayvaluegetelementatposition-method"></a><span data-ttu-id="5bd3c-102">Метод ICorDebugArrayValue::GetElementAtPosition</span><span class="sxs-lookup"><span data-stu-id="5bd3c-102">ICorDebugArrayValue::GetElementAtPosition Method</span></span>
+<span data-ttu-id="5bd3c-103">Возвращает элемент в заданной позиции, обработке массива как отсчитываемый от нуля одномерный массив.</span><span class="sxs-lookup"><span data-stu-id="5bd3c-103">Gets the element at the given position, treating the array as a zero-based, single-dimensional array.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ff538-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="ff538-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="5bd3c-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="5bd3c-104">Syntax</span></span>  
   
 ```  
 HRESULT GetElementAtPosition (  
@@ -47,21 +35,21 @@ HRESULT GetElementAtPosition (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="ff538-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="ff538-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="5bd3c-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="5bd3c-105">Parameters</span></span>  
  `nPosition`  
- <span data-ttu-id="ff538-106">[in] Позиция элемента, который требуется получить.</span><span class="sxs-lookup"><span data-stu-id="ff538-106">[in] The position of the element to be retrieved.</span></span>  
+ <span data-ttu-id="5bd3c-106">[in] Позиция элемента, который требуется получить.</span><span class="sxs-lookup"><span data-stu-id="5bd3c-106">[in] The position of the element to be retrieved.</span></span>  
   
  `ppValue`  
- <span data-ttu-id="ff538-107">[out] Указатель на адрес объекта ICorDebugValue, который представляет значение элемента.</span><span class="sxs-lookup"><span data-stu-id="ff538-107">[out] A pointer to the address of an ICorDebugValue object that represents the value of the element.</span></span>  
+ <span data-ttu-id="5bd3c-107">[out] Указатель на адрес объекта ICorDebugValue, который представляет значение элемента.</span><span class="sxs-lookup"><span data-stu-id="5bd3c-107">[out] A pointer to the address of an ICorDebugValue object that represents the value of the element.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="ff538-108">Примечания</span><span class="sxs-lookup"><span data-stu-id="ff538-108">Remarks</span></span>  
- <span data-ttu-id="ff538-109">Макет многомерного массива следует C++ стиль макета массива.</span><span class="sxs-lookup"><span data-stu-id="ff538-109">The layout of a multi-dimension array follows the C++ style of array layout.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="5bd3c-108">Примечания</span><span class="sxs-lookup"><span data-stu-id="5bd3c-108">Remarks</span></span>  
+ <span data-ttu-id="5bd3c-109">Макет многомерного массива следует C++ стиль макета массива.</span><span class="sxs-lookup"><span data-stu-id="5bd3c-109">The layout of a multi-dimension array follows the C++ style of array layout.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="ff538-110">Требования</span><span class="sxs-lookup"><span data-stu-id="ff538-110">Requirements</span></span>  
- <span data-ttu-id="ff538-111">**Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="ff538-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="5bd3c-110">Требования</span><span class="sxs-lookup"><span data-stu-id="5bd3c-110">Requirements</span></span>  
+ <span data-ttu-id="5bd3c-111">**Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="5bd3c-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="ff538-112">**Заголовок:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="ff538-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="5bd3c-112">**Заголовок:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="5bd3c-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="ff538-113">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="ff538-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="5bd3c-113">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="5bd3c-113">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="ff538-114">**Версии платформы .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ff538-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="5bd3c-114">**Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="5bd3c-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

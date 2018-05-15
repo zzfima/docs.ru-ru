@@ -1,66 +1,52 @@
 ---
 title: BETWEEN (Entity SQL)
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-ado
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 4dcdd754-ae01-4e78-bf28-8a117fb2b73e
-caps.latest.revision: ''
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload:
-- dotnet
-ms.openlocfilehash: 3b27aee261e9195c2cb5f15e369cf26de4c0691a
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: bab31ca0a6fd37f5179412b7a4936d564620135e
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="between-entity-sql"></a><span data-ttu-id="89a2a-102">BETWEEN (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="89a2a-102">BETWEEN (Entity SQL)</span></span>
-<span data-ttu-id="89a2a-103">Определяет, находится ли значение выражения в указанном диапазоне.</span><span class="sxs-lookup"><span data-stu-id="89a2a-103">Determines whether an expression results in a value in a specified range.</span></span> <span data-ttu-id="89a2a-104">[!INCLUDE[esql](../../../../../../includes/esql-md.md)] Выражение BETWEEN имеет ту же функциональность, что и выражение Transact-SQL BETWEEN.</span><span class="sxs-lookup"><span data-stu-id="89a2a-104">The [!INCLUDE[esql](../../../../../../includes/esql-md.md)] BETWEEN expression has the same functionality as the Transact-SQL BETWEEN expression.</span></span>  
+# <a name="between-entity-sql"></a><span data-ttu-id="c7ced-102">BETWEEN (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="c7ced-102">BETWEEN (Entity SQL)</span></span>
+<span data-ttu-id="c7ced-103">Определяет, находится ли значение выражения в указанном диапазоне.</span><span class="sxs-lookup"><span data-stu-id="c7ced-103">Determines whether an expression results in a value in a specified range.</span></span> <span data-ttu-id="c7ced-104">[!INCLUDE[esql](../../../../../../includes/esql-md.md)] Выражение BETWEEN имеет ту же функциональность, что и выражение Transact-SQL BETWEEN.</span><span class="sxs-lookup"><span data-stu-id="c7ced-104">The [!INCLUDE[esql](../../../../../../includes/esql-md.md)] BETWEEN expression has the same functionality as the Transact-SQL BETWEEN expression.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="89a2a-105">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="89a2a-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c7ced-105">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="c7ced-105">Syntax</span></span>  
   
 ```  
 expression [ NOT ] BETWEEN begin_expression AND end_expression    
 ```  
   
-## <a name="arguments"></a><span data-ttu-id="89a2a-106">Аргументы</span><span class="sxs-lookup"><span data-stu-id="89a2a-106">Arguments</span></span>  
+## <a name="arguments"></a><span data-ttu-id="c7ced-106">Аргументы</span><span class="sxs-lookup"><span data-stu-id="c7ced-106">Arguments</span></span>  
  `expression`  
- <span data-ttu-id="89a2a-107">Любое допустимое выражение для проверки на принадлежность диапазону в пределах от `begin_expression` до `end_expression`.</span><span class="sxs-lookup"><span data-stu-id="89a2a-107">Any valid expression to test for in the range defined by `begin_expression` and `end_expression`.</span></span> <span data-ttu-id="89a2a-108">Аргумент `expression` должен быть того же типа данных, что и аргументы `begin_expression` и `end_expression`.</span><span class="sxs-lookup"><span data-stu-id="89a2a-108">`expression` must be the same type as both `begin_expression` and `end_expression`.</span></span>  
+ <span data-ttu-id="c7ced-107">Любое допустимое выражение для проверки на принадлежность диапазону в пределах от `begin_expression` до `end_expression`.</span><span class="sxs-lookup"><span data-stu-id="c7ced-107">Any valid expression to test for in the range defined by `begin_expression` and `end_expression`.</span></span> <span data-ttu-id="c7ced-108">Аргумент `expression` должен быть того же типа данных, что и аргументы `begin_expression` и `end_expression`.</span><span class="sxs-lookup"><span data-stu-id="c7ced-108">`expression` must be the same type as both `begin_expression` and `end_expression`.</span></span>  
   
  `begin_expression`  
- <span data-ttu-id="89a2a-109">Любое допустимое выражение.</span><span class="sxs-lookup"><span data-stu-id="89a2a-109">Any valid expression.</span></span> <span data-ttu-id="89a2a-110">Аргумент `begin_expression` должен быть того же типа данных, что и аргументы `expression` и `end_expression`.</span><span class="sxs-lookup"><span data-stu-id="89a2a-110">`begin_expression` must be the same type as both `expression` and `end_expression`.</span></span> <span data-ttu-id="89a2a-111">Значение `begin_expression` должно быть меньше `end_expression`, иначе возвращаемое значение будет инвертировано.</span><span class="sxs-lookup"><span data-stu-id="89a2a-111">`begin_expression` should be less than `end_expression`, else the return value will be negated.</span></span>  
+ <span data-ttu-id="c7ced-109">Любое допустимое выражение.</span><span class="sxs-lookup"><span data-stu-id="c7ced-109">Any valid expression.</span></span> <span data-ttu-id="c7ced-110">Аргумент `begin_expression` должен быть того же типа данных, что и аргументы `expression` и `end_expression`.</span><span class="sxs-lookup"><span data-stu-id="c7ced-110">`begin_expression` must be the same type as both `expression` and `end_expression`.</span></span> <span data-ttu-id="c7ced-111">Значение `begin_expression` должно быть меньше `end_expression`, иначе возвращаемое значение будет инвертировано.</span><span class="sxs-lookup"><span data-stu-id="c7ced-111">`begin_expression` should be less than `end_expression`, else the return value will be negated.</span></span>  
   
  `end_expression`  
- <span data-ttu-id="89a2a-112">Любое допустимое выражение.</span><span class="sxs-lookup"><span data-stu-id="89a2a-112">Any valid expression.</span></span> <span data-ttu-id="89a2a-113">Аргумент `end_expression` должен быть того же типа данных, что и аргументы `expression` и `begin_expression`.</span><span class="sxs-lookup"><span data-stu-id="89a2a-113">`end_expression` must be the same type as both `expression` and `begin_expression`.</span></span>  
+ <span data-ttu-id="c7ced-112">Любое допустимое выражение.</span><span class="sxs-lookup"><span data-stu-id="c7ced-112">Any valid expression.</span></span> <span data-ttu-id="c7ced-113">Аргумент `end_expression` должен быть того же типа данных, что и аргументы `expression` и `begin_expression`.</span><span class="sxs-lookup"><span data-stu-id="c7ced-113">`end_expression` must be the same type as both `expression` and `begin_expression`.</span></span>  
   
- <span data-ttu-id="89a2a-114">NOT</span><span class="sxs-lookup"><span data-stu-id="89a2a-114">NOT</span></span>  
- <span data-ttu-id="89a2a-115">Указывает, что результат оператора BETWEEN должен быть инвертирован.</span><span class="sxs-lookup"><span data-stu-id="89a2a-115">Specifies that the result of BETWEEN be negated.</span></span>  
+ <span data-ttu-id="c7ced-114">NOT</span><span class="sxs-lookup"><span data-stu-id="c7ced-114">NOT</span></span>  
+ <span data-ttu-id="c7ced-115">Указывает, что результат оператора BETWEEN должен быть инвертирован.</span><span class="sxs-lookup"><span data-stu-id="c7ced-115">Specifies that the result of BETWEEN be negated.</span></span>  
   
- <span data-ttu-id="89a2a-116">AND</span><span class="sxs-lookup"><span data-stu-id="89a2a-116">AND</span></span>  
- <span data-ttu-id="89a2a-117">Играет роль местозаполнителя и указывает на то, что значение выражения `expression` должно находиться в пределах заданных значений аргументов `begin_expression` и `end_expression`.</span><span class="sxs-lookup"><span data-stu-id="89a2a-117">Acts as a placeholder that indicates `expression` should be within the range indicated by `begin_expression` and `end_expression`.</span></span>  
+ <span data-ttu-id="c7ced-116">AND</span><span class="sxs-lookup"><span data-stu-id="c7ced-116">AND</span></span>  
+ <span data-ttu-id="c7ced-117">Играет роль местозаполнителя и указывает на то, что значение выражения `expression` должно находиться в пределах заданных значений аргументов `begin_expression` и `end_expression`.</span><span class="sxs-lookup"><span data-stu-id="c7ced-117">Acts as a placeholder that indicates `expression` should be within the range indicated by `begin_expression` and `end_expression`.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="89a2a-118">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="89a2a-118">Return Value</span></span>  
- <span data-ttu-id="89a2a-119">Значение `true`, если аргумент `expression` находится в диапазоне между `begin_expression` и `end_expression`; в противном случае - значение `false`.</span><span class="sxs-lookup"><span data-stu-id="89a2a-119">`true` if `expression` is between the range indicated by `begin_expression` and `end_expression`; otherwise, `false`.</span></span> <span data-ttu-id="89a2a-120">Возвращает `null`, если `expression` равно `null` или если `begin_expression` или `end_expression` равно `null`.</span><span class="sxs-lookup"><span data-stu-id="89a2a-120">`null` will be returned if `expression` is `null` or if `begin_expression` or `end_expression` is `null`.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="c7ced-118">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="c7ced-118">Return Value</span></span>  
+ <span data-ttu-id="c7ced-119">Значение `true`, если аргумент `expression` находится в диапазоне между `begin_expression` и `end_expression`; в противном случае - значение `false`.</span><span class="sxs-lookup"><span data-stu-id="c7ced-119">`true` if `expression` is between the range indicated by `begin_expression` and `end_expression`; otherwise, `false`.</span></span> <span data-ttu-id="c7ced-120">Возвращает `null`, если `expression` равно `null` или если `begin_expression` или `end_expression` равно `null`.</span><span class="sxs-lookup"><span data-stu-id="c7ced-120">`null` will be returned if `expression` is `null` or if `begin_expression` or `end_expression` is `null`.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="89a2a-121">Примечания</span><span class="sxs-lookup"><span data-stu-id="89a2a-121">Remarks</span></span>  
- <span data-ttu-id="89a2a-122">Чтобы указать диапазон, исключая границы, вместо оператора BETWEEN используйте операторы "больше" (>) и "меньше" (<).</span><span class="sxs-lookup"><span data-stu-id="89a2a-122">To specify an exclusive range, use the greater than (>) and less than (<) operators instead of BETWEEN.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="c7ced-121">Примечания</span><span class="sxs-lookup"><span data-stu-id="c7ced-121">Remarks</span></span>  
+ <span data-ttu-id="c7ced-122">Чтобы указать диапазон, исключая границы, вместо оператора BETWEEN используйте операторы "больше" (>) и "меньше" (<).</span><span class="sxs-lookup"><span data-stu-id="c7ced-122">To specify an exclusive range, use the greater than (>) and less than (<) operators instead of BETWEEN.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="89a2a-123">Пример</span><span class="sxs-lookup"><span data-stu-id="89a2a-123">Example</span></span>  
- <span data-ttu-id="89a2a-124">В следующем запросе Entity SQL оператор BETWEEN определяет, входит ли значение выражения в указанный диапазон.</span><span class="sxs-lookup"><span data-stu-id="89a2a-124">The following Entity SQL query uses BETWEEN operator to determine whether an expression results in a value in a specified range.</span></span> <span data-ttu-id="89a2a-125">Запрос основан на модели AdventureWorks Sales.</span><span class="sxs-lookup"><span data-stu-id="89a2a-125">The query is based on the AdventureWorks Sales Model.</span></span> <span data-ttu-id="89a2a-126">Для компиляции и запуска этого запроса выполните следующие шаги.</span><span class="sxs-lookup"><span data-stu-id="89a2a-126">To compile and run this query, follow these steps:</span></span>  
+## <a name="example"></a><span data-ttu-id="c7ced-123">Пример</span><span class="sxs-lookup"><span data-stu-id="c7ced-123">Example</span></span>  
+ <span data-ttu-id="c7ced-124">В следующем запросе Entity SQL оператор BETWEEN определяет, входит ли значение выражения в указанный диапазон.</span><span class="sxs-lookup"><span data-stu-id="c7ced-124">The following Entity SQL query uses BETWEEN operator to determine whether an expression results in a value in a specified range.</span></span> <span data-ttu-id="c7ced-125">Запрос основан на модели AdventureWorks Sales.</span><span class="sxs-lookup"><span data-stu-id="c7ced-125">The query is based on the AdventureWorks Sales Model.</span></span> <span data-ttu-id="c7ced-126">Для компиляции и запуска этого запроса выполните следующие шаги.</span><span class="sxs-lookup"><span data-stu-id="c7ced-126">To compile and run this query, follow these steps:</span></span>  
   
-1.  <span data-ttu-id="89a2a-127">Выполните процедуру из статьи [Практическое руководство. Выполнение запроса, возвращающего результаты StructuralType](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).</span><span class="sxs-lookup"><span data-stu-id="89a2a-127">Follow the procedure in [How to: Execute a Query that Returns StructuralType Results](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).</span></span>  
+1.  <span data-ttu-id="c7ced-127">Выполните процедуру из статьи [Практическое руководство. Выполнение запроса, возвращающего результаты StructuralType](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).</span><span class="sxs-lookup"><span data-stu-id="c7ced-127">Follow the procedure in [How to: Execute a Query that Returns StructuralType Results](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).</span></span>  
   
-2.  <span data-ttu-id="89a2a-128">Передайте следующий запрос в качестве аргумента методу `ExecuteStructuralTypeQuery` :</span><span class="sxs-lookup"><span data-stu-id="89a2a-128">Pass the following query as an argument to the `ExecuteStructuralTypeQuery` method:</span></span>  
+2.  <span data-ttu-id="c7ced-128">Передайте следующий запрос в качестве аргумента методу `ExecuteStructuralTypeQuery` :</span><span class="sxs-lookup"><span data-stu-id="c7ced-128">Pass the following query as an argument to the `ExecuteStructuralTypeQuery` method:</span></span>  
   
  [!code-csharp[DP EntityServices Concepts 2#BETWEEN](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#between)]  
   
-## <a name="see-also"></a><span data-ttu-id="89a2a-129">См. также</span><span class="sxs-lookup"><span data-stu-id="89a2a-129">See Also</span></span>  
- [<span data-ttu-id="89a2a-130">Справочник по Entity SQL</span><span class="sxs-lookup"><span data-stu-id="89a2a-130">Entity SQL Reference</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+## <a name="see-also"></a><span data-ttu-id="c7ced-129">См. также</span><span class="sxs-lookup"><span data-stu-id="c7ced-129">See Also</span></span>  
+ [<span data-ttu-id="c7ced-130">Справочник по Entity SQL</span><span class="sxs-lookup"><span data-stu-id="c7ced-130">Entity SQL Reference</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)

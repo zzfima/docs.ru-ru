@@ -1,55 +1,43 @@
 ---
-title: "Литералы NULL и вывод типов (Entity SQL)"
-ms.custom: 
+title: Литералы NULL и вывод типов (Entity SQL)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: edd56afb-af1b-4e7d-b210-cb8998143426
-caps.latest.revision: "2"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: eeea6a6b1674361a605d5236e203699d08724df3
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 74ff2b459488f896c5ea6af4f7d1e045da5a7983
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="null-literals-and-type-inference-entity-sql"></a><span data-ttu-id="b7164-102">Литералы NULL и вывод типов (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="b7164-102">Null Literals and Type Inference (Entity SQL)</span></span>
-<span data-ttu-id="b7164-103">Литералы NULL совместимы с любым типом в системе типов языка [!INCLUDE[esql](../../../../../../includes/esql-md.md)].</span><span class="sxs-lookup"><span data-stu-id="b7164-103">Null literals are compatible with any type in the [!INCLUDE[esql](../../../../../../includes/esql-md.md)] type system.</span></span> <span data-ttu-id="b7164-104">Однако для типа литерала null был определен правильно [!INCLUDE[esql](../../../../../../includes/esql-md.md)] накладывает некоторые ограничения на использование литерала null.</span><span class="sxs-lookup"><span data-stu-id="b7164-104">However, for the type of a null literal to be inferred correctly, [!INCLUDE[esql](../../../../../../includes/esql-md.md)] imposes certain constraints on where a null literal can be used.</span></span>  
+# <a name="null-literals-and-type-inference-entity-sql"></a><span data-ttu-id="c5dca-102">Литералы NULL и вывод типов (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="c5dca-102">Null Literals and Type Inference (Entity SQL)</span></span>
+<span data-ttu-id="c5dca-103">Литералы NULL совместимы с любым типом в системе типов языка [!INCLUDE[esql](../../../../../../includes/esql-md.md)].</span><span class="sxs-lookup"><span data-stu-id="c5dca-103">Null literals are compatible with any type in the [!INCLUDE[esql](../../../../../../includes/esql-md.md)] type system.</span></span> <span data-ttu-id="c5dca-104">Однако для типа литерала null был определен правильно [!INCLUDE[esql](../../../../../../includes/esql-md.md)] накладывает некоторые ограничения на использование литерала null.</span><span class="sxs-lookup"><span data-stu-id="c5dca-104">However, for the type of a null literal to be inferred correctly, [!INCLUDE[esql](../../../../../../includes/esql-md.md)] imposes certain constraints on where a null literal can be used.</span></span>  
   
-## <a name="typed-nulls"></a><span data-ttu-id="b7164-105">Типизированные значения NULL</span><span class="sxs-lookup"><span data-stu-id="b7164-105">Typed Nulls</span></span>  
- <span data-ttu-id="b7164-106">Типизированные значения NULL могут использоваться где угодно.</span><span class="sxs-lookup"><span data-stu-id="b7164-106">Typed nulls can be used anywhere.</span></span> <span data-ttu-id="b7164-107">Для типизированных значений NULL не требуется логический вывод типа, поскольку тип уже известен.</span><span class="sxs-lookup"><span data-stu-id="b7164-107">Type inference is not required for typed nulls because the type is known.</span></span> <span data-ttu-id="b7164-108">Например, с помощью следующей конструкции языка [!INCLUDE[esql](../../../../../../includes/esql-md.md)] можно создать значение NULL типа Int16:</span><span class="sxs-lookup"><span data-stu-id="b7164-108">For example, you can construct a null of type Int16 with the following [!INCLUDE[esql](../../../../../../includes/esql-md.md)] construct:</span></span>  
+## <a name="typed-nulls"></a><span data-ttu-id="c5dca-105">Типизированные значения NULL</span><span class="sxs-lookup"><span data-stu-id="c5dca-105">Typed Nulls</span></span>  
+ <span data-ttu-id="c5dca-106">Типизированные значения NULL могут использоваться где угодно.</span><span class="sxs-lookup"><span data-stu-id="c5dca-106">Typed nulls can be used anywhere.</span></span> <span data-ttu-id="c5dca-107">Для типизированных значений NULL не требуется логический вывод типа, поскольку тип уже известен.</span><span class="sxs-lookup"><span data-stu-id="c5dca-107">Type inference is not required for typed nulls because the type is known.</span></span> <span data-ttu-id="c5dca-108">Например, с помощью следующей конструкции языка [!INCLUDE[esql](../../../../../../includes/esql-md.md)] можно создать значение NULL типа Int16:</span><span class="sxs-lookup"><span data-stu-id="c5dca-108">For example, you can construct a null of type Int16 with the following [!INCLUDE[esql](../../../../../../includes/esql-md.md)] construct:</span></span>  
   
  `(cast(null as Int16))`  
   
-## <a name="free-floating-null-literals"></a><span data-ttu-id="b7164-109">Свободные литералы NULL </span><span class="sxs-lookup"><span data-stu-id="b7164-109">Free-Floating Null Literals</span></span>  
- <span data-ttu-id="b7164-110">Свободные литералы NULL используются в следующих ситуациях.</span><span class="sxs-lookup"><span data-stu-id="b7164-110">Free-floating null literals can be used in the following contexts:</span></span>  
+## <a name="free-floating-null-literals"></a><span data-ttu-id="c5dca-109">Свободные литералы NULL </span><span class="sxs-lookup"><span data-stu-id="c5dca-109">Free-Floating Null Literals</span></span>  
+ <span data-ttu-id="c5dca-110">Свободные литералы NULL используются в следующих ситуациях.</span><span class="sxs-lookup"><span data-stu-id="c5dca-110">Free-floating null literals can be used in the following contexts:</span></span>  
   
--   <span data-ttu-id="b7164-111">Как аргумент выражений CAST и TREAT.</span><span class="sxs-lookup"><span data-stu-id="b7164-111">As an argument to a CAST or TREAT expression.</span></span> <span data-ttu-id="b7164-112">Это предпочтительный способ создания типизированного выражения NULL.</span><span class="sxs-lookup"><span data-stu-id="b7164-112">This is the recommended way to produce a typed null expression.</span></span>  
+-   <span data-ttu-id="c5dca-111">Как аргумент выражений CAST и TREAT.</span><span class="sxs-lookup"><span data-stu-id="c5dca-111">As an argument to a CAST or TREAT expression.</span></span> <span data-ttu-id="c5dca-112">Это предпочтительный способ создания типизированного выражения NULL.</span><span class="sxs-lookup"><span data-stu-id="c5dca-112">This is the recommended way to produce a typed null expression.</span></span>  
   
--   <span data-ttu-id="b7164-113">Как аргумент метода или функции.</span><span class="sxs-lookup"><span data-stu-id="b7164-113">As an argument to a method or a function.</span></span> <span data-ttu-id="b7164-114">Применяются стандартные правила перегрузки.</span><span class="sxs-lookup"><span data-stu-id="b7164-114">Standard overload rules apply.</span></span>  
+-   <span data-ttu-id="c5dca-113">Как аргумент метода или функции.</span><span class="sxs-lookup"><span data-stu-id="c5dca-113">As an argument to a method or a function.</span></span> <span data-ttu-id="c5dca-114">Применяются стандартные правила перегрузки.</span><span class="sxs-lookup"><span data-stu-id="c5dca-114">Standard overload rules apply.</span></span>  
   
--   <span data-ttu-id="b7164-115">Как один из аргументов арифметического выражения, например +, - или /.</span><span class="sxs-lookup"><span data-stu-id="b7164-115">As one of the arguments to an arithmetic expression such as +, -, or /.</span></span> <span data-ttu-id="b7164-116">Остальные аргументы не могут быть литералами NULL, иначе вывод типа будет невозможен.</span><span class="sxs-lookup"><span data-stu-id="b7164-116">The other arguments cannot be null literals, otherwise type inference is not possible.</span></span>  
+-   <span data-ttu-id="c5dca-115">Как один из аргументов арифметического выражения, например +, - или /.</span><span class="sxs-lookup"><span data-stu-id="c5dca-115">As one of the arguments to an arithmetic expression such as +, -, or /.</span></span> <span data-ttu-id="c5dca-116">Остальные аргументы не могут быть литералами NULL, иначе вывод типа будет невозможен.</span><span class="sxs-lookup"><span data-stu-id="c5dca-116">The other arguments cannot be null literals, otherwise type inference is not possible.</span></span>  
   
--   <span data-ttu-id="b7164-117">Как один из аргументов логического выражения (И, ИЛИ, НЕ).</span><span class="sxs-lookup"><span data-stu-id="b7164-117">As any of the arguments to a logical expression (AND, OR, or NOT).</span></span> <span data-ttu-id="b7164-118">Все аргументы должны относиться к логическому типу.</span><span class="sxs-lookup"><span data-stu-id="b7164-118">All the arguments are known to be of type Boolean.</span></span>  
+-   <span data-ttu-id="c5dca-117">Как один из аргументов логического выражения (И, ИЛИ, НЕ).</span><span class="sxs-lookup"><span data-stu-id="c5dca-117">As any of the arguments to a logical expression (AND, OR, or NOT).</span></span> <span data-ttu-id="c5dca-118">Все аргументы должны относиться к логическому типу.</span><span class="sxs-lookup"><span data-stu-id="c5dca-118">All the arguments are known to be of type Boolean.</span></span>  
   
--   <span data-ttu-id="b7164-119">Как аргумент выражений IS NULL и IS NOT NULL.</span><span class="sxs-lookup"><span data-stu-id="b7164-119">As the argument to an IS NULL or IS NOT NULL expression.</span></span>  
+-   <span data-ttu-id="c5dca-119">Как аргумент выражений IS NULL и IS NOT NULL.</span><span class="sxs-lookup"><span data-stu-id="c5dca-119">As the argument to an IS NULL or IS NOT NULL expression.</span></span>  
   
--   <span data-ttu-id="b7164-120">Как один из аргументов выражения LIKE.</span><span class="sxs-lookup"><span data-stu-id="b7164-120">As one or more of the arguments to a LIKE expression.</span></span> <span data-ttu-id="b7164-121">Все аргументы должны быть строками.</span><span class="sxs-lookup"><span data-stu-id="b7164-121">All arguments are expected to be strings.</span></span>  
+-   <span data-ttu-id="c5dca-120">Как один из аргументов выражения LIKE.</span><span class="sxs-lookup"><span data-stu-id="c5dca-120">As one or more of the arguments to a LIKE expression.</span></span> <span data-ttu-id="c5dca-121">Все аргументы должны быть строками.</span><span class="sxs-lookup"><span data-stu-id="c5dca-121">All arguments are expected to be strings.</span></span>  
   
--   <span data-ttu-id="b7164-122">Как один или несколько аргументов конструктора именованного типа.</span><span class="sxs-lookup"><span data-stu-id="b7164-122">As one or more of the arguments to a named-type constructor.</span></span>  
+-   <span data-ttu-id="c5dca-122">Как один или несколько аргументов конструктора именованного типа.</span><span class="sxs-lookup"><span data-stu-id="c5dca-122">As one or more of the arguments to a named-type constructor.</span></span>  
   
--   <span data-ttu-id="b7164-123">Как один или несколько аргументов конструктора мультинабора.</span><span class="sxs-lookup"><span data-stu-id="b7164-123">As one or more of the arguments to a multiset constructor.</span></span> <span data-ttu-id="b7164-124">По крайней мере один аргумент конструктора мультинабора должен быть выражением, отличным от литерала NULL.</span><span class="sxs-lookup"><span data-stu-id="b7164-124">At least one argument to the multiset constructor must be an expression that is not a null literal.</span></span>  
+-   <span data-ttu-id="c5dca-123">Как один или несколько аргументов конструктора мультинабора.</span><span class="sxs-lookup"><span data-stu-id="c5dca-123">As one or more of the arguments to a multiset constructor.</span></span> <span data-ttu-id="c5dca-124">По крайней мере один аргумент конструктора мультинабора должен быть выражением, отличным от литерала NULL.</span><span class="sxs-lookup"><span data-stu-id="c5dca-124">At least one argument to the multiset constructor must be an expression that is not a null literal.</span></span>  
   
--   <span data-ttu-id="b7164-125">Как один из аргументов выражений THEN и ELSE в выражении CASE.</span><span class="sxs-lookup"><span data-stu-id="b7164-125">As one or more of the THEN or ELSE expressions in a CASE expression.</span></span> <span data-ttu-id="b7164-126">По крайней мере одно из выражений THEN или ELSE в выражении CASE должно быть отлично от литерала NULL.</span><span class="sxs-lookup"><span data-stu-id="b7164-126">At least one of the THEN or ELSE expressions in the CASE expression must be an expression other than a null literal.</span></span>  
+-   <span data-ttu-id="c5dca-125">Как один из аргументов выражений THEN и ELSE в выражении CASE.</span><span class="sxs-lookup"><span data-stu-id="c5dca-125">As one or more of the THEN or ELSE expressions in a CASE expression.</span></span> <span data-ttu-id="c5dca-126">По крайней мере одно из выражений THEN или ELSE в выражении CASE должно быть отлично от литерала NULL.</span><span class="sxs-lookup"><span data-stu-id="c5dca-126">At least one of the THEN or ELSE expressions in the CASE expression must be an expression other than a null literal.</span></span>  
   
- <span data-ttu-id="b7164-127">Ни в каких других ситуациях свободные литералы NULL использоваться не могут.</span><span class="sxs-lookup"><span data-stu-id="b7164-127">Free-floating null literals cannot be used in other scenarios.</span></span> <span data-ttu-id="b7164-128">Например, их нельзя использовать в качестве аргументов конструктора строки.</span><span class="sxs-lookup"><span data-stu-id="b7164-128">For example,  they cannot be used as arguments to a row constructor.</span></span>  
+ <span data-ttu-id="c5dca-127">Ни в каких других ситуациях свободные литералы NULL использоваться не могут.</span><span class="sxs-lookup"><span data-stu-id="c5dca-127">Free-floating null literals cannot be used in other scenarios.</span></span> <span data-ttu-id="c5dca-128">Например, их нельзя использовать в качестве аргументов конструктора строки.</span><span class="sxs-lookup"><span data-stu-id="c5dca-128">For example,  they cannot be used as arguments to a row constructor.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b7164-129">См. также</span><span class="sxs-lookup"><span data-stu-id="b7164-129">See Also</span></span>  
- [<span data-ttu-id="b7164-130">Общие сведения об Entity SQL</span><span class="sxs-lookup"><span data-stu-id="b7164-130">Entity SQL Overview</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
+## <a name="see-also"></a><span data-ttu-id="c5dca-129">См. также</span><span class="sxs-lookup"><span data-stu-id="c5dca-129">See Also</span></span>  
+ [<span data-ttu-id="c5dca-130">Общие сведения об Entity SQL</span><span class="sxs-lookup"><span data-stu-id="c5dca-130">Entity SQL Overview</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)

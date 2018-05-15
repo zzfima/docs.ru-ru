@@ -1,32 +1,20 @@
 ---
-title: "Применение преобразования XSLT к набору данных"
-ms.custom: 
+title: Применение преобразования XSLT к набору данных
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 09f2e4ee-1d08-4ba8-8936-83394fee319d
-caps.latest.revision: "4"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 0c2f5c50054be6254c472b8c161c4f9493132da7
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 05894431f819b968877a4a971027850efe37126a
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="applying-an-xslt-transform-to-a-dataset"></a><span data-ttu-id="b8bc0-102">Применение преобразования XSLT к набору данных</span><span class="sxs-lookup"><span data-stu-id="b8bc0-102">Applying an XSLT Transform to a DataSet</span></span>
-<span data-ttu-id="b8bc0-103">**WriteXml** метод <xref:System.Data.DataSet> дает возможность создавать содержимое **DataSet** как XML-данных.</span><span class="sxs-lookup"><span data-stu-id="b8bc0-103">The **WriteXml** method of the <xref:System.Data.DataSet> enables you to write the contents of a **DataSet** as XML data.</span></span> <span data-ttu-id="b8bc0-104">После этого типичной задачей является преобразование этого XML в другой формат с помощью XSLT-преобразования (XSLT).</span><span class="sxs-lookup"><span data-stu-id="b8bc0-104">A common task is to then transform that XML to another format using XSL transformations (XSLT).</span></span> <span data-ttu-id="b8bc0-105">Однако синхронизация **набора данных** с <xref:System.Xml.XmlDataDocument> позволяет применять таблицы стилей XSLT к содержимому **DataSet** без необходимости сначала записи содержимого  **Набор данных** как XML-данных с помощью **WriteXml**.</span><span class="sxs-lookup"><span data-stu-id="b8bc0-105">However, synchronizing a **DataSet** with an <xref:System.Xml.XmlDataDocument> enables you to apply an XSLT stylesheet to the contents of a **DataSet** without having to first write the contents of the **DataSet** as XML data using **WriteXml**.</span></span>  
+# <a name="applying-an-xslt-transform-to-a-dataset"></a><span data-ttu-id="a88d2-102">Применение преобразования XSLT к набору данных</span><span class="sxs-lookup"><span data-stu-id="a88d2-102">Applying an XSLT Transform to a DataSet</span></span>
+<span data-ttu-id="a88d2-103">**WriteXml** метод <xref:System.Data.DataSet> дает возможность создавать содержимое **DataSet** как XML-данных.</span><span class="sxs-lookup"><span data-stu-id="a88d2-103">The **WriteXml** method of the <xref:System.Data.DataSet> enables you to write the contents of a **DataSet** as XML data.</span></span> <span data-ttu-id="a88d2-104">После этого типичной задачей является преобразование этого XML в другой формат с помощью XSLT-преобразования (XSLT).</span><span class="sxs-lookup"><span data-stu-id="a88d2-104">A common task is to then transform that XML to another format using XSL transformations (XSLT).</span></span> <span data-ttu-id="a88d2-105">Однако синхронизация **набора данных** с <xref:System.Xml.XmlDataDocument> позволяет применять таблицы стилей XSLT к содержимому **DataSet** без необходимости сначала записи содержимого  **Набор данных** как XML-данных с помощью **WriteXml**.</span><span class="sxs-lookup"><span data-stu-id="a88d2-105">However, synchronizing a **DataSet** with an <xref:System.Xml.XmlDataDocument> enables you to apply an XSLT stylesheet to the contents of a **DataSet** without having to first write the contents of the **DataSet** as XML data using **WriteXml**.</span></span>  
   
- <span data-ttu-id="b8bc0-106">В следующем примере происходит заполнение **DataSet** с таблиц и связей, синхронизируется **DataSet** с **XmlDataDocument**и записывает часть  **Набор данных** HTML-файл с помощью таблицы стилей XSLT.</span><span class="sxs-lookup"><span data-stu-id="b8bc0-106">The following example populates a **DataSet** with tables and relationships, synchronizes the **DataSet** with an **XmlDataDocument**, and writes a portion of the **DataSet** as an HTML file using an XSLT stylesheet.</span></span> <span data-ttu-id="b8bc0-107">Ниже приведено содержимое таблицы стилей XSLT.</span><span class="sxs-lookup"><span data-stu-id="b8bc0-107">Following are the contents of the XSLT stylesheet.</span></span>  
+ <span data-ttu-id="a88d2-106">В следующем примере происходит заполнение **DataSet** с таблиц и связей, синхронизируется **DataSet** с **XmlDataDocument**и записывает часть  **Набор данных** HTML-файл с помощью таблицы стилей XSLT.</span><span class="sxs-lookup"><span data-stu-id="a88d2-106">The following example populates a **DataSet** with tables and relationships, synchronizes the **DataSet** with an **XmlDataDocument**, and writes a portion of the **DataSet** as an HTML file using an XSLT stylesheet.</span></span> <span data-ttu-id="a88d2-107">Ниже приведено содержимое таблицы стилей XSLT.</span><span class="sxs-lookup"><span data-stu-id="a88d2-107">Following are the contents of the XSLT stylesheet.</span></span>  
   
 ```xml  
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">  
@@ -67,10 +55,10 @@ ms.lasthandoff: 01/17/2018
 </xsl:stylesheet>  
 ```  
   
- <span data-ttu-id="b8bc0-108">В следующем примере кода заливки **набора данных** и применяет таблицу стилей XSLT.</span><span class="sxs-lookup"><span data-stu-id="b8bc0-108">The following code fills the **DataSet** and applies the XSLT style sheet.</span></span>  
+ <span data-ttu-id="a88d2-108">В следующем примере кода заливки **набора данных** и применяет таблицу стилей XSLT.</span><span class="sxs-lookup"><span data-stu-id="a88d2-108">The following code fills the **DataSet** and applies the XSLT style sheet.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="b8bc0-109">В случае применения стилей XSLT для **DataSet** , который содержит отношения, достичь наилучшей производительности при установке **Nested** свойство <xref:System.Data.DataRelation> для **true**для каждого вложенного отношения.</span><span class="sxs-lookup"><span data-stu-id="b8bc0-109">If you are applying an XSLT style sheet to a **DataSet** that contains relations, you achieve best performance if you set the **Nested** property of the <xref:System.Data.DataRelation> to **true** for each nested relation.</span></span> <span data-ttu-id="b8bc0-110">Это позволяет использовать таблицы стилей XSLT, реализующие естественную нисходящую обработку для перемещения по иерархии и преобразования данных, в отличие от ресурсоемких осей расположения XPath (например, предшествующий одноуровневый элемент и следующий элемент того же уровня в тестовых выражениях узла таблицы стилей).</span><span class="sxs-lookup"><span data-stu-id="b8bc0-110">This allows you to use XSLT style sheets that implement natural top-down processing to navigate the hierarchy and transform the data, as opposed to using performance-intensive XPath location axes (for example, preceding-sibling and following-sibling in style sheet node test expressions) to navigate it.</span></span> <span data-ttu-id="b8bc0-111">Дополнительные сведения о вложенных отношениях см. в разделе [вложение отношений DataRelation](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/nesting-datarelations.md).</span><span class="sxs-lookup"><span data-stu-id="b8bc0-111">For more information on nested relations, see [Nesting DataRelations](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/nesting-datarelations.md).</span></span>  
+>  <span data-ttu-id="a88d2-109">В случае применения стилей XSLT для **DataSet** , который содержит отношения, достичь наилучшей производительности при установке **Nested** свойство <xref:System.Data.DataRelation> для **true**для каждого вложенного отношения.</span><span class="sxs-lookup"><span data-stu-id="a88d2-109">If you are applying an XSLT style sheet to a **DataSet** that contains relations, you achieve best performance if you set the **Nested** property of the <xref:System.Data.DataRelation> to **true** for each nested relation.</span></span> <span data-ttu-id="a88d2-110">Это позволяет использовать таблицы стилей XSLT, реализующие естественную нисходящую обработку для перемещения по иерархии и преобразования данных, в отличие от ресурсоемких осей расположения XPath (например, предшествующий одноуровневый элемент и следующий элемент того же уровня в тестовых выражениях узла таблицы стилей).</span><span class="sxs-lookup"><span data-stu-id="a88d2-110">This allows you to use XSLT style sheets that implement natural top-down processing to navigate the hierarchy and transform the data, as opposed to using performance-intensive XPath location axes (for example, preceding-sibling and following-sibling in style sheet node test expressions) to navigate it.</span></span> <span data-ttu-id="a88d2-111">Дополнительные сведения о вложенных отношениях см. в разделе [вложение отношений DataRelation](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/nesting-datarelations.md).</span><span class="sxs-lookup"><span data-stu-id="a88d2-111">For more information on nested relations, see [Nesting DataRelations](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/nesting-datarelations.md).</span></span>  
   
 ```vb  
 ' Assumes connection is a valid SqlConnection.  
@@ -134,6 +122,6 @@ xslTran.Transform(xmlDoc, null, writer);
 writer.Close();  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="b8bc0-112">См. также</span><span class="sxs-lookup"><span data-stu-id="b8bc0-112">See Also</span></span>  
- [<span data-ttu-id="b8bc0-113">Синхронизация DataSet и XmlDataDocument</span><span class="sxs-lookup"><span data-stu-id="b8bc0-113">DataSet and XmlDataDocument Synchronization</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataset-and-xmldatadocument-synchronization.md)  
- [<span data-ttu-id="b8bc0-114">Центр разработчиков наборов данных и управляемых поставщиков ADO.NET</span><span class="sxs-lookup"><span data-stu-id="b8bc0-114">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="a88d2-112">См. также</span><span class="sxs-lookup"><span data-stu-id="a88d2-112">See Also</span></span>  
+ [<span data-ttu-id="a88d2-113">Синхронизация DataSet и XmlDataDocument</span><span class="sxs-lookup"><span data-stu-id="a88d2-113">DataSet and XmlDataDocument Synchronization</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataset-and-xmldatadocument-synchronization.md)  
+ [<span data-ttu-id="a88d2-114">Центр разработчиков наборов данных и управляемых поставщиков ADO.NET</span><span class="sxs-lookup"><span data-stu-id="a88d2-114">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

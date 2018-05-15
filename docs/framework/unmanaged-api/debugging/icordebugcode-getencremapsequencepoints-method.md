@@ -1,14 +1,6 @@
 ---
-title: "Метод ICorDebugCode::GetEnCRemapSequencePoints"
-ms.custom: 
+title: Метод ICorDebugCode::GetEnCRemapSequencePoints
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorDebugCode.GetEnCRemapSequencePoints
 api_location:
@@ -23,22 +15,18 @@ helpviewer_keywords:
 ms.assetid: 8463a98a-de4a-418e-beb0-9611885ae6b0
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 508979a63c2ab25ee3478dde490a5c3f7df14c73
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fd0607f2523e6f05065acc0078f4cb2848afd928
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="icordebugcodegetencremapsequencepoints-method"></a><span data-ttu-id="e7914-102">Метод ICorDebugCode::GetEnCRemapSequencePoints</span><span class="sxs-lookup"><span data-stu-id="e7914-102">ICorDebugCode::GetEnCRemapSequencePoints Method</span></span>
-<span data-ttu-id="e7914-103">Этот метод не реализован в текущей версии платформы .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="e7914-103">This method is not implemented in the current version of the .NET Framework.</span></span>  
+# <a name="icordebugcodegetencremapsequencepoints-method"></a><span data-ttu-id="8d46e-102">Метод ICorDebugCode::GetEnCRemapSequencePoints</span><span class="sxs-lookup"><span data-stu-id="8d46e-102">ICorDebugCode::GetEnCRemapSequencePoints Method</span></span>
+<span data-ttu-id="8d46e-103">Этот метод не реализован в текущей версии платформы .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="8d46e-103">This method is not implemented in the current version of the .NET Framework.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="e7914-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="e7914-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="8d46e-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="8d46e-104">Syntax</span></span>  
   
 ```  
 HRESULT GetEnCRemapSequencePoints(  
@@ -49,5 +37,5 @@ HRESULT GetEnCRemapSequencePoints(
 );  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="e7914-105">См. также</span><span class="sxs-lookup"><span data-stu-id="e7914-105">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="8d46e-105">См. также</span><span class="sxs-lookup"><span data-stu-id="8d46e-105">See Also</span></span>  
  

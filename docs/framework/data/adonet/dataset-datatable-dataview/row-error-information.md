@@ -1,30 +1,18 @@
 ---
-title: "Сведения об ошибках строк"
-ms.custom: 
+title: Сведения об ошибках строк
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 8b1f9070-d032-48c7-b030-bd8fbb2ca59a
-caps.latest.revision: "4"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 3e8b2e486f33cbe3851b0d24911f5976a1a4b3c6
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 6f3f332d4b9bd0be9934c7bf7722e8ff71c4eb2f
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="row-error-information"></a><span data-ttu-id="c3127-102">Сведения об ошибках строк</span><span class="sxs-lookup"><span data-stu-id="c3127-102">Row Error Information</span></span>
-<span data-ttu-id="c3127-103">Чтобы не отвечать на ошибки строки при изменении значений в таблице <xref:System.Data.DataTable>, можно добавить сведения об ошибке в строку для последующего использования.</span><span class="sxs-lookup"><span data-stu-id="c3127-103">To avoid having to respond to row errors while editing values in a <xref:System.Data.DataTable>, you can add the error information to the row for later use.</span></span> <span data-ttu-id="c3127-104">Для этой цели объект <xref:System.Data.DataRow> предоставляет свойство <xref:System.Data.DataRow.RowError%2A> для каждой строки.</span><span class="sxs-lookup"><span data-stu-id="c3127-104">The <xref:System.Data.DataRow> object provides a <xref:System.Data.DataRow.RowError%2A> property on each row for this purpose.</span></span> <span data-ttu-id="c3127-105">Добавление данных к **RowError** свойство **DataRow** задает <xref:System.Data.DataRow.HasErrors%2A> свойство **DataRow** для **true**.</span><span class="sxs-lookup"><span data-stu-id="c3127-105">Adding data to the **RowError** property of a **DataRow** sets the <xref:System.Data.DataRow.HasErrors%2A> property of the **DataRow** to **true**.</span></span> <span data-ttu-id="c3127-106">Если **DataRow** является частью **DataTable**, и **DataRow.HasErrors** — **true**, **DataTable.HasErrors** также имеет **true**.</span><span class="sxs-lookup"><span data-stu-id="c3127-106">If the **DataRow** is part of a **DataTable**, and **DataRow.HasErrors** is **true**, the **DataTable.HasErrors** property is also **true**.</span></span> <span data-ttu-id="c3127-107">Это касается также **DataSet** к которому **DataTable** принадлежит.</span><span class="sxs-lookup"><span data-stu-id="c3127-107">This applies as well to the **DataSet** to which the **DataTable** belongs.</span></span> <span data-ttu-id="c3127-108">Проверка на наличие ошибок, можно проверить **HasErrors** свойства, чтобы определить, добавлен ли в строки, сведения об ошибке.</span><span class="sxs-lookup"><span data-stu-id="c3127-108">When testing for errors, you can check the **HasErrors** property to determine if error information has been added to any rows.</span></span> <span data-ttu-id="c3127-109">Если **HasErrors** — **true**, можно использовать <xref:System.Data.DataTable.GetErrors%2A> метод **DataTable** для возврата и изучения только строки с ошибками, как показано в следующем примере.</span><span class="sxs-lookup"><span data-stu-id="c3127-109">If **HasErrors** is **true**, you can use the <xref:System.Data.DataTable.GetErrors%2A> method of the **DataTable** to return and examine only the rows with errors, as shown in the following example.</span></span>  
+# <a name="row-error-information"></a><span data-ttu-id="e56d7-102">Сведения об ошибках строк</span><span class="sxs-lookup"><span data-stu-id="e56d7-102">Row Error Information</span></span>
+<span data-ttu-id="e56d7-103">Чтобы не отвечать на ошибки строки при изменении значений в таблице <xref:System.Data.DataTable>, можно добавить сведения об ошибке в строку для последующего использования.</span><span class="sxs-lookup"><span data-stu-id="e56d7-103">To avoid having to respond to row errors while editing values in a <xref:System.Data.DataTable>, you can add the error information to the row for later use.</span></span> <span data-ttu-id="e56d7-104">Для этой цели объект <xref:System.Data.DataRow> предоставляет свойство <xref:System.Data.DataRow.RowError%2A> для каждой строки.</span><span class="sxs-lookup"><span data-stu-id="e56d7-104">The <xref:System.Data.DataRow> object provides a <xref:System.Data.DataRow.RowError%2A> property on each row for this purpose.</span></span> <span data-ttu-id="e56d7-105">Добавление данных к **RowError** свойство **DataRow** задает <xref:System.Data.DataRow.HasErrors%2A> свойство **DataRow** для **true**.</span><span class="sxs-lookup"><span data-stu-id="e56d7-105">Adding data to the **RowError** property of a **DataRow** sets the <xref:System.Data.DataRow.HasErrors%2A> property of the **DataRow** to **true**.</span></span> <span data-ttu-id="e56d7-106">Если **DataRow** является частью **DataTable**, и **DataRow.HasErrors** — **true**, **DataTable.HasErrors** также имеет **true**.</span><span class="sxs-lookup"><span data-stu-id="e56d7-106">If the **DataRow** is part of a **DataTable**, and **DataRow.HasErrors** is **true**, the **DataTable.HasErrors** property is also **true**.</span></span> <span data-ttu-id="e56d7-107">Это касается также **DataSet** к которому **DataTable** принадлежит.</span><span class="sxs-lookup"><span data-stu-id="e56d7-107">This applies as well to the **DataSet** to which the **DataTable** belongs.</span></span> <span data-ttu-id="e56d7-108">Проверка на наличие ошибок, можно проверить **HasErrors** свойства, чтобы определить, добавлен ли в строки, сведения об ошибке.</span><span class="sxs-lookup"><span data-stu-id="e56d7-108">When testing for errors, you can check the **HasErrors** property to determine if error information has been added to any rows.</span></span> <span data-ttu-id="e56d7-109">Если **HasErrors** — **true**, можно использовать <xref:System.Data.DataTable.GetErrors%2A> метод **DataTable** для возврата и изучения только строки с ошибками, как показано в следующем примере.</span><span class="sxs-lookup"><span data-stu-id="e56d7-109">If **HasErrors** is **true**, you can use the <xref:System.Data.DataTable.GetErrors%2A> method of the **DataTable** to return and examine only the rows with errors, as shown in the following example.</span></span>  
   
 ```vb  
 Dim workTable As DataTable = New DataTable("Customers")  
@@ -88,9 +76,9 @@ protected static void OnRowChanged(
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="c3127-110">См. также</span><span class="sxs-lookup"><span data-stu-id="c3127-110">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="e56d7-110">См. также</span><span class="sxs-lookup"><span data-stu-id="e56d7-110">See Also</span></span>  
  <xref:System.Data.DataColumnCollection>  
  <xref:System.Data.DataRow>  
  <xref:System.Data.DataTable>  
- [<span data-ttu-id="c3127-111">Управление данными в DataTable</span><span class="sxs-lookup"><span data-stu-id="c3127-111">Manipulating Data in a DataTable</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)  
- [<span data-ttu-id="c3127-112">Центр разработчиков наборов данных и управляемых поставщиков ADO.NET</span><span class="sxs-lookup"><span data-stu-id="c3127-112">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [<span data-ttu-id="e56d7-111">Управление данными в DataTable</span><span class="sxs-lookup"><span data-stu-id="e56d7-111">Manipulating Data in a DataTable</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)  
+ [<span data-ttu-id="e56d7-112">Центр разработчиков наборов данных и управляемых поставщиков ADO.NET</span><span class="sxs-lookup"><span data-stu-id="e56d7-112">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

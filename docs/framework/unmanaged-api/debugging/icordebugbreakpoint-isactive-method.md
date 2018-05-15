@@ -1,14 +1,6 @@
 ---
-title: "Метод ICorDebugBreakpoint::IsActive"
-ms.custom: 
+title: Метод ICorDebugBreakpoint::IsActive
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorDebugBreakpoint.IsActive
 api_location:
@@ -23,22 +15,18 @@ helpviewer_keywords:
 ms.assetid: 06e583d6-d88a-4ff5-bb95-5c48618a461c
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 394caaaff0b0269acd63a590225ffde420ebfd2e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 61aece9dd506d6e4af8718e45cc772d120a7d579
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="icordebugbreakpointisactive-method"></a><span data-ttu-id="1e0a7-102">Метод ICorDebugBreakpoint::IsActive</span><span class="sxs-lookup"><span data-stu-id="1e0a7-102">ICorDebugBreakpoint::IsActive Method</span></span>
-<span data-ttu-id="1e0a7-103">Возвращает значение, указывающее, является ли это `ICorDebugBreakpoint` активен.</span><span class="sxs-lookup"><span data-stu-id="1e0a7-103">Gets a value that indicates whether this `ICorDebugBreakpoint` is active.</span></span>  
+# <a name="icordebugbreakpointisactive-method"></a><span data-ttu-id="9ce62-102">Метод ICorDebugBreakpoint::IsActive</span><span class="sxs-lookup"><span data-stu-id="9ce62-102">ICorDebugBreakpoint::IsActive Method</span></span>
+<span data-ttu-id="9ce62-103">Возвращает значение, указывающее, является ли это `ICorDebugBreakpoint` активен.</span><span class="sxs-lookup"><span data-stu-id="9ce62-103">Gets a value that indicates whether this `ICorDebugBreakpoint` is active.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="1e0a7-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="1e0a7-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="9ce62-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="9ce62-104">Syntax</span></span>  
   
 ```  
 HRESULT IsActive (  
@@ -46,15 +34,15 @@ HRESULT IsActive (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="1e0a7-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="1e0a7-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="9ce62-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="9ce62-105">Parameters</span></span>  
  `pbActive`  
- <span data-ttu-id="1e0a7-106">[out] `true` в противном случае — активен; в противном случае — `false`.</span><span class="sxs-lookup"><span data-stu-id="1e0a7-106">[out] `true` if this breakpoint is active; otherwise, `false`.</span></span>  
+ <span data-ttu-id="9ce62-106">[out] `true` в противном случае — активен; в противном случае — `false`.</span><span class="sxs-lookup"><span data-stu-id="9ce62-106">[out] `true` if this breakpoint is active; otherwise, `false`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="1e0a7-107">Требования</span><span class="sxs-lookup"><span data-stu-id="1e0a7-107">Requirements</span></span>  
- <span data-ttu-id="1e0a7-108">**Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="1e0a7-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="9ce62-107">Требования</span><span class="sxs-lookup"><span data-stu-id="9ce62-107">Requirements</span></span>  
+ <span data-ttu-id="9ce62-108">**Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="9ce62-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="1e0a7-109">**Заголовок:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="1e0a7-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="9ce62-109">**Заголовок:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="9ce62-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="1e0a7-110">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="1e0a7-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="9ce62-110">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="9ce62-110">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="1e0a7-111">**Версии платформы .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="1e0a7-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="9ce62-111">**Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9ce62-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

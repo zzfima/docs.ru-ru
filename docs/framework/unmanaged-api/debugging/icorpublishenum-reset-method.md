@@ -1,14 +1,6 @@
 ---
-title: "Метод ICorPublishEnum::Reset"
-ms.custom: 
+title: Метод ICorPublishEnum::Reset
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorPublishEnum.Reset
 api_location:
@@ -23,38 +15,34 @@ helpviewer_keywords:
 ms.assetid: 8a4d9c86-b5ef-460a-9731-1d8c91b93a0b
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 24c2dc89d41556d58f574f279616558e5f361793
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fb0e70bffe5bf895fedbfde559674e161757ee48
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="icorpublishenumreset-method"></a><span data-ttu-id="8c219-102">Метод ICorPublishEnum::Reset</span><span class="sxs-lookup"><span data-stu-id="8c219-102">ICorPublishEnum::Reset Method</span></span>
-<span data-ttu-id="8c219-103">Перемещает курсор в начало перечисления.</span><span class="sxs-lookup"><span data-stu-id="8c219-103">Moves the cursor of to the beginning of the enumeration.</span></span>  
+# <a name="icorpublishenumreset-method"></a><span data-ttu-id="974c7-102">Метод ICorPublishEnum::Reset</span><span class="sxs-lookup"><span data-stu-id="974c7-102">ICorPublishEnum::Reset Method</span></span>
+<span data-ttu-id="974c7-103">Перемещает курсор в начало перечисления.</span><span class="sxs-lookup"><span data-stu-id="974c7-103">Moves the cursor of to the beginning of the enumeration.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="8c219-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="8c219-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="974c7-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="974c7-104">Syntax</span></span>  
   
 ```  
 HRESULT Reset ();  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="8c219-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="8c219-105">Parameters</span></span>  
- <span data-ttu-id="8c219-106">`Reset`не имеет параметров.</span><span class="sxs-lookup"><span data-stu-id="8c219-106">`Reset` takes no parameters.</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="974c7-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="974c7-105">Parameters</span></span>  
+ <span data-ttu-id="974c7-106">`Reset` не имеет параметров.</span><span class="sxs-lookup"><span data-stu-id="974c7-106">`Reset` takes no parameters.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="8c219-107">Требования</span><span class="sxs-lookup"><span data-stu-id="8c219-107">Requirements</span></span>  
- <span data-ttu-id="8c219-108">**Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="8c219-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="974c7-107">Требования</span><span class="sxs-lookup"><span data-stu-id="974c7-107">Requirements</span></span>  
+ <span data-ttu-id="974c7-108">**Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="974c7-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="8c219-109">**Заголовок:** CorPub.idl, CorPub.h</span><span class="sxs-lookup"><span data-stu-id="8c219-109">**Header:** CorPub.idl, CorPub.h</span></span>  
+ <span data-ttu-id="974c7-109">**Заголовок:** CorPub.idl, CorPub.h</span><span class="sxs-lookup"><span data-stu-id="974c7-109">**Header:** CorPub.idl, CorPub.h</span></span>  
   
- <span data-ttu-id="8c219-110">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="8c219-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="974c7-110">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="974c7-110">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="8c219-111">**Версии платформы .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="8c219-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="974c7-111">**Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="974c7-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="8c219-112">См. также</span><span class="sxs-lookup"><span data-stu-id="8c219-112">See Also</span></span>  
- [<span data-ttu-id="8c219-113">Интерфейс ICorPublishEnum</span><span class="sxs-lookup"><span data-stu-id="8c219-113">ICorPublishEnum Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icorpublishenum-interface.md)
+## <a name="see-also"></a><span data-ttu-id="974c7-112">См. также</span><span class="sxs-lookup"><span data-stu-id="974c7-112">See Also</span></span>  
+ [<span data-ttu-id="974c7-113">Интерфейс ICorPublishEnum</span><span class="sxs-lookup"><span data-stu-id="974c7-113">ICorPublishEnum Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icorpublishenum-interface.md)

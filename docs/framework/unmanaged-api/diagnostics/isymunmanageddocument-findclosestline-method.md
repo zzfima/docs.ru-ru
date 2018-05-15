@@ -1,14 +1,6 @@
 ---
-title: "Метод ISymUnmanagedDocument::FindClosestLine"
-ms.custom: 
+title: Метод ISymUnmanagedDocument::FindClosestLine
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ISymUnmanagedDocument.FindClosestLine
 api_location:
@@ -23,22 +15,18 @@ helpviewer_keywords:
 ms.assetid: 628f2a04-e529-407d-841e-3b3da219a9cb
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: a5467f7d500719e8849b85a57195e98c6eeb7fb3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f31dad53f42fdd8f7ac3a0cb995b507ecc3590d5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="isymunmanageddocumentfindclosestline-method"></a><span data-ttu-id="62ab0-102">Метод ISymUnmanagedDocument::FindClosestLine</span><span class="sxs-lookup"><span data-stu-id="62ab0-102">ISymUnmanagedDocument::FindClosestLine Method</span></span>
-<span data-ttu-id="62ab0-103">Возвращает ближайшую строку, являющуюся точкой следования, для заданной строки в этом документе, которые могут поддерживаться или не может являться точкой следования.</span><span class="sxs-lookup"><span data-stu-id="62ab0-103">Returns the closest line that is a sequence point, given a line in this document that may or may not be a sequence point.</span></span>  
+# <a name="isymunmanageddocumentfindclosestline-method"></a><span data-ttu-id="d1099-102">Метод ISymUnmanagedDocument::FindClosestLine</span><span class="sxs-lookup"><span data-stu-id="d1099-102">ISymUnmanagedDocument::FindClosestLine Method</span></span>
+<span data-ttu-id="d1099-103">Возвращает ближайшую строку, являющуюся точкой следования, для заданной строки в этом документе, которые могут поддерживаться или не может являться точкой следования.</span><span class="sxs-lookup"><span data-stu-id="d1099-103">Returns the closest line that is a sequence point, given a line in this document that may or may not be a sequence point.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="62ab0-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="62ab0-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="d1099-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="d1099-104">Syntax</span></span>  
   
 ```  
 HRESULT FindClosestLine(  
@@ -46,15 +34,15 @@ HRESULT FindClosestLine(
     [out, retval] ULONG32*  pRetVal);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="62ab0-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="62ab0-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="d1099-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="d1099-105">Parameters</span></span>  
  `line`  
- <span data-ttu-id="62ab0-106">[in] Строка в этом документе.</span><span class="sxs-lookup"><span data-stu-id="62ab0-106">[in] A line in this document.</span></span>  
+ <span data-ttu-id="d1099-106">[in] Строка в этом документе.</span><span class="sxs-lookup"><span data-stu-id="d1099-106">[in] A line in this document.</span></span>  
   
  `pRetVal`  
- <span data-ttu-id="62ab0-107">[out] Указатель на переменную, которая получает строки.</span><span class="sxs-lookup"><span data-stu-id="62ab0-107">[out] A pointer to a variable that receives the line.</span></span>  
+ <span data-ttu-id="d1099-107">[out] Указатель на переменную, которая получает строки.</span><span class="sxs-lookup"><span data-stu-id="d1099-107">[out] A pointer to a variable that receives the line.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="62ab0-108">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="62ab0-108">Return Value</span></span>  
- <span data-ttu-id="62ab0-109">Значение S_OK, если метод выполнен успешно; в противном случае — код ошибки.</span><span class="sxs-lookup"><span data-stu-id="62ab0-109">S_OK if the method succeeds; otherwise, an error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="d1099-108">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="d1099-108">Return Value</span></span>  
+ <span data-ttu-id="d1099-109">Значение S_OK, если метод выполнен успешно; в противном случае — код ошибки.</span><span class="sxs-lookup"><span data-stu-id="d1099-109">S_OK if the method succeeds; otherwise, an error code.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="62ab0-110">См. также</span><span class="sxs-lookup"><span data-stu-id="62ab0-110">See Also</span></span>  
- [<span data-ttu-id="62ab0-111">Интерфейс ISymUnmanagedDocument</span><span class="sxs-lookup"><span data-stu-id="62ab0-111">ISymUnmanagedDocument Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)
+## <a name="see-also"></a><span data-ttu-id="d1099-110">См. также</span><span class="sxs-lookup"><span data-stu-id="d1099-110">See Also</span></span>  
+ [<span data-ttu-id="d1099-111">Интерфейс ISymUnmanagedDocument</span><span class="sxs-lookup"><span data-stu-id="d1099-111">ISymUnmanagedDocument Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)

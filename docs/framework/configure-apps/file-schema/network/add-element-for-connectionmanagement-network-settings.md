@@ -1,13 +1,6 @@
 ---
-title: "&lt;Добавить&gt; элемент для connectionManagement (параметры сети)"
-ms.custom: 
+title: '&lt;Добавить&gt; элемент для connectionManagement (параметры сети)'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#add
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/connectionManagement/add
@@ -17,26 +10,24 @@ helpviewer_keywords:
 - add element, connectionManagement
 - connectionManagement, add element
 ms.assetid: 856bf57d-1c63-46c7-a178-03d97b0a4149
-caps.latest.revision: "14"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 654ada55d30ad95937fa05475ebcbf23ca86652d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c6cfd036a98c345da23fc7b3699987c9678e149d
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="ltaddgt-element-for-connectionmanagement-network-settings"></a><span data-ttu-id="9211e-102">&lt;Добавить&gt; элемент для connectionManagement (параметры сети)</span><span class="sxs-lookup"><span data-stu-id="9211e-102">&lt;add&gt; Element for connectionManagement (Network Settings)</span></span>
-<span data-ttu-id="9211e-103">Добавляет IP-адрес или DNS-имя в список управления подключениями.</span><span class="sxs-lookup"><span data-stu-id="9211e-103">Adds an IP address or DNS name to the connection management list.</span></span>  
+# <a name="ltaddgt-element-for-connectionmanagement-network-settings"></a><span data-ttu-id="7a332-102">&lt;Добавить&gt; элемент для connectionManagement (параметры сети)</span><span class="sxs-lookup"><span data-stu-id="7a332-102">&lt;add&gt; Element for connectionManagement (Network Settings)</span></span>
+<span data-ttu-id="7a332-103">Добавляет IP-адрес или DNS-имя в список управления подключениями.</span><span class="sxs-lookup"><span data-stu-id="7a332-103">Adds an IP address or DNS name to the connection management list.</span></span>  
   
- <span data-ttu-id="9211e-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="9211e-104">\<configuration></span></span>  
-<span data-ttu-id="9211e-105">\<System.NET ></span><span class="sxs-lookup"><span data-stu-id="9211e-105">\<system.net></span></span>  
-<span data-ttu-id="9211e-106">\<connectionManagement ></span><span class="sxs-lookup"><span data-stu-id="9211e-106">\<connectionManagement></span></span>  
-<span data-ttu-id="9211e-107">\<add></span><span class="sxs-lookup"><span data-stu-id="9211e-107">\<add></span></span>  
+ <span data-ttu-id="7a332-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="7a332-104">\<configuration></span></span>  
+<span data-ttu-id="7a332-105">\<System.NET ></span><span class="sxs-lookup"><span data-stu-id="7a332-105">\<system.net></span></span>  
+<span data-ttu-id="7a332-106">\<connectionManagement ></span><span class="sxs-lookup"><span data-stu-id="7a332-106">\<connectionManagement></span></span>  
+<span data-ttu-id="7a332-107">\<add></span><span class="sxs-lookup"><span data-stu-id="7a332-107">\<add></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="9211e-108">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="9211e-108">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="7a332-108">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="7a332-108">Syntax</span></span>  
   
 ```xml  
 <add   
@@ -45,35 +36,35 @@ ms.lasthandoff: 12/22/2017
 />  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="9211e-109">Атрибуты и элементы</span><span class="sxs-lookup"><span data-stu-id="9211e-109">Attributes and Elements</span></span>  
- <span data-ttu-id="9211e-110">В следующих разделах описаны атрибуты, дочерние и родительские элементы.</span><span class="sxs-lookup"><span data-stu-id="9211e-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="7a332-109">Атрибуты и элементы</span><span class="sxs-lookup"><span data-stu-id="7a332-109">Attributes and Elements</span></span>  
+ <span data-ttu-id="7a332-110">В следующих разделах описаны атрибуты, дочерние и родительские элементы.</span><span class="sxs-lookup"><span data-stu-id="7a332-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="9211e-111">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="9211e-111">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="7a332-111">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="7a332-111">Attributes</span></span>  
   
-|<span data-ttu-id="9211e-112">**Attribute (XElement Dynamic Property)** (Attribute (динамическое свойство XElement))</span><span class="sxs-lookup"><span data-stu-id="9211e-112">**Attribute**</span></span>|<span data-ttu-id="9211e-113">**Описание**</span><span class="sxs-lookup"><span data-stu-id="9211e-113">**Description**</span></span>|  
+|<span data-ttu-id="7a332-112">**Attribute (XElement Dynamic Property)** (Attribute (динамическое свойство XElement))</span><span class="sxs-lookup"><span data-stu-id="7a332-112">**Attribute**</span></span>|<span data-ttu-id="7a332-113">**Описание**</span><span class="sxs-lookup"><span data-stu-id="7a332-113">**Description**</span></span>|  
 |-------------------|---------------------|  
-|`address`|<span data-ttu-id="9211e-114">Строка, описывающая IP-адрес или DNS-имя.</span><span class="sxs-lookup"><span data-stu-id="9211e-114">A string describing an IP address or DNS name.</span></span>|  
-|`maxconnection`|<span data-ttu-id="9211e-115">Максимальное число разрешенных подключений к серверу.</span><span class="sxs-lookup"><span data-stu-id="9211e-115">The maximum number of connections allowed to a server.</span></span> <span data-ttu-id="9211e-116">Если значение не предоставлено, используется значение по умолчанию 2.</span><span class="sxs-lookup"><span data-stu-id="9211e-116">If not supplied, the default is 2.</span></span>|  
+|`address`|<span data-ttu-id="7a332-114">Строка, описывающая IP-адрес или DNS-имя.</span><span class="sxs-lookup"><span data-stu-id="7a332-114">A string describing an IP address or DNS name.</span></span>|  
+|`maxconnection`|<span data-ttu-id="7a332-115">Максимальное число разрешенных подключений к серверу.</span><span class="sxs-lookup"><span data-stu-id="7a332-115">The maximum number of connections allowed to a server.</span></span> <span data-ttu-id="7a332-116">Если значение не предоставлено, используется значение по умолчанию 2.</span><span class="sxs-lookup"><span data-stu-id="7a332-116">If not supplied, the default is 2.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="9211e-117">Дочерние элементы</span><span class="sxs-lookup"><span data-stu-id="9211e-117">Child Elements</span></span>  
- <span data-ttu-id="9211e-118">Отсутствует.</span><span class="sxs-lookup"><span data-stu-id="9211e-118">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="7a332-117">Дочерние элементы</span><span class="sxs-lookup"><span data-stu-id="7a332-117">Child Elements</span></span>  
+ <span data-ttu-id="7a332-118">Отсутствует.</span><span class="sxs-lookup"><span data-stu-id="7a332-118">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="9211e-119">Родительские элементы</span><span class="sxs-lookup"><span data-stu-id="9211e-119">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="7a332-119">Родительские элементы</span><span class="sxs-lookup"><span data-stu-id="7a332-119">Parent Elements</span></span>  
   
-|<span data-ttu-id="9211e-120">**Элемент**</span><span class="sxs-lookup"><span data-stu-id="9211e-120">**Element**</span></span>|<span data-ttu-id="9211e-121">**Описание**</span><span class="sxs-lookup"><span data-stu-id="9211e-121">**Description**</span></span>|  
+|<span data-ttu-id="7a332-120">**Элемент**</span><span class="sxs-lookup"><span data-stu-id="7a332-120">**Element**</span></span>|<span data-ttu-id="7a332-121">**Описание**</span><span class="sxs-lookup"><span data-stu-id="7a332-121">**Description**</span></span>|  
 |-----------------|---------------------|  
-|[<span data-ttu-id="9211e-122">connectionManagement</span><span class="sxs-lookup"><span data-stu-id="9211e-122">connectionManagement</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/connectionmanagement-element-network-settings.md)|<span data-ttu-id="9211e-123">Задает максимальное число подключений к сетевому узлу.</span><span class="sxs-lookup"><span data-stu-id="9211e-123">Specifies the maximum number of connections to a network host.</span></span>|  
+|[<span data-ttu-id="7a332-122">connectionManagement</span><span class="sxs-lookup"><span data-stu-id="7a332-122">connectionManagement</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/connectionmanagement-element-network-settings.md)|<span data-ttu-id="7a332-123">Задает максимальное число подключений к сетевому узлу.</span><span class="sxs-lookup"><span data-stu-id="7a332-123">Specifies the maximum number of connections to a network host.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="9211e-124">Примечания</span><span class="sxs-lookup"><span data-stu-id="9211e-124">Remarks</span></span>  
- <span data-ttu-id="9211e-125">В качестве значения атрибута `address` должна быть задана либо звездочка, указывающая все подключения, либо строка в форме `<schema>://<idn_hostname>[:<port>]`.</span><span class="sxs-lookup"><span data-stu-id="9211e-125">The value of the `address` attribute should be either an asterisk to indicate all connections, or a string of the form `<schema>://<idn_hostname>[:<port>]`.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="7a332-124">Примечания</span><span class="sxs-lookup"><span data-stu-id="7a332-124">Remarks</span></span>  
+ <span data-ttu-id="7a332-125">В качестве значения атрибута `address` должна быть задана либо звездочка, указывающая все подключения, либо строка в форме `<schema>://<idn_hostname>[:<port>]`.</span><span class="sxs-lookup"><span data-stu-id="7a332-125">The value of the `address` attribute should be either an asterisk to indicate all connections, or a string of the form `<schema>://<idn_hostname>[:<port>]`.</span></span>  
   
- <span data-ttu-id="9211e-126">Если URI, переданный в какие-либо API HTTP, содержит символы Юникода, то имя будет преобразовано внутренним образом с помощью свойства <xref:System.Uri.DnsSafeHost%2A>, которое может возвращать строку Punycode (поведение, зависящее от текущей конфигурации IDN).</span><span class="sxs-lookup"><span data-stu-id="9211e-126">If the URI passed to any HTTP APIs contains Unicode, the name will be converted internally using <xref:System.Uri.DnsSafeHost%2A> which might return a punicode string (behavior dependent on the current IDN configuration).</span></span>  
+ <span data-ttu-id="7a332-126">Если URI, переданный в какие-либо API HTTP, содержит символы Юникода, то имя будет преобразовано внутренним образом с помощью свойства <xref:System.Uri.DnsSafeHost%2A>, которое может возвращать строку Punycode (поведение, зависящее от текущей конфигурации IDN).</span><span class="sxs-lookup"><span data-stu-id="7a332-126">If the URI passed to any HTTP APIs contains Unicode, the name will be converted internally using <xref:System.Uri.DnsSafeHost%2A> which might return a punicode string (behavior dependent on the current IDN configuration).</span></span>  
   
-## <a name="configuration-files"></a><span data-ttu-id="9211e-127">Файлы конфигурации</span><span class="sxs-lookup"><span data-stu-id="9211e-127">Configuration Files</span></span>  
- <span data-ttu-id="9211e-128">Этот элемент может использоваться в файле конфигурации приложения или в файле конфигурации компьютера (Machine.config).</span><span class="sxs-lookup"><span data-stu-id="9211e-128">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>  
+## <a name="configuration-files"></a><span data-ttu-id="7a332-127">Файлы конфигурации</span><span class="sxs-lookup"><span data-stu-id="7a332-127">Configuration Files</span></span>  
+ <span data-ttu-id="7a332-128">Этот элемент может использоваться в файле конфигурации приложения или в файле конфигурации компьютера (Machine.config).</span><span class="sxs-lookup"><span data-stu-id="7a332-128">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="9211e-129">Пример</span><span class="sxs-lookup"><span data-stu-id="9211e-129">Example</span></span>  
- <span data-ttu-id="9211e-130">Следующий пример настраивает приложение для использования четырех подключений к серверу www.contoso.com и двух подключений ко всем другим серверам.</span><span class="sxs-lookup"><span data-stu-id="9211e-130">The following example configures an application to use four connections to the server www.contoso.com and two connections to all other servers.</span></span>  
+## <a name="example"></a><span data-ttu-id="7a332-129">Пример</span><span class="sxs-lookup"><span data-stu-id="7a332-129">Example</span></span>  
+ <span data-ttu-id="7a332-130">Следующий пример настраивает приложение для использования четырех подключений к серверу www.contoso.com и двух подключений ко всем другим серверам.</span><span class="sxs-lookup"><span data-stu-id="7a332-130">The following example configures an application to use four connections to the server www.contoso.com and two connections to all other servers.</span></span>  
   
 ```xml  
 <configuration>  
@@ -86,7 +77,7 @@ ms.lasthandoff: 12/22/2017
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="9211e-131">См. также</span><span class="sxs-lookup"><span data-stu-id="9211e-131">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="7a332-131">См. также</span><span class="sxs-lookup"><span data-stu-id="7a332-131">See Also</span></span>  
  <xref:System.Net.ServicePoint>  
  <xref:System.Net.ServicePointManager>  
- [<span data-ttu-id="9211e-132">Схема параметров сети</span><span class="sxs-lookup"><span data-stu-id="9211e-132">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+ [<span data-ttu-id="7a332-132">Схема параметров сети</span><span class="sxs-lookup"><span data-stu-id="7a332-132">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

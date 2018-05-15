@@ -1,14 +1,6 @@
 ---
-title: "Структура CoreClrDebugProcInfo"
-ms.custom: 
+title: Структура CoreClrDebugProcInfo
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - CoreClrDebugProcInfo
 api_location:
@@ -24,22 +16,18 @@ helpviewer_keywords:
 ms.assetid: 4ddc37da-5c94-4beb-b61c-b54071c0e749
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: d341b875f9f64b9aa1fcdcf21668dafea0beac12
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b9d4b27ca0bf454b42f15b849008e5a3019bb09a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="coreclrdebugprocinfo-structure"></a><span data-ttu-id="b0ed4-102">Структура CoreClrDebugProcInfo</span><span class="sxs-lookup"><span data-stu-id="b0ed4-102">CoreClrDebugProcInfo Structure</span></span>
-<span data-ttu-id="b0ed4-103">Представляет процесс, который выполняется на удаленном компьютере.</span><span class="sxs-lookup"><span data-stu-id="b0ed4-103">Represents a process that is running on a remote machine.</span></span>  
+# <a name="coreclrdebugprocinfo-structure"></a><span data-ttu-id="12823-102">Структура CoreClrDebugProcInfo</span><span class="sxs-lookup"><span data-stu-id="12823-102">CoreClrDebugProcInfo Structure</span></span>
+<span data-ttu-id="12823-103">Представляет процесс, который выполняется на удаленном компьютере.</span><span class="sxs-lookup"><span data-stu-id="12823-103">Represents a process that is running on a remote machine.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="b0ed4-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="b0ed4-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="12823-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="12823-104">Syntax</span></span>  
   
 ```  
 struct  CoreClrDebugProcInfo {  
@@ -49,19 +37,19 @@ struct  CoreClrDebugProcInfo {
 };  
 ```  
   
-## <a name="members"></a><span data-ttu-id="b0ed4-105">Участники</span><span class="sxs-lookup"><span data-stu-id="b0ed4-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="12823-105">Участники</span><span class="sxs-lookup"><span data-stu-id="12823-105">Members</span></span>  
   
-|<span data-ttu-id="b0ed4-106">Член</span><span class="sxs-lookup"><span data-stu-id="b0ed4-106">Member</span></span>|<span data-ttu-id="b0ed4-107">Описание:</span><span class="sxs-lookup"><span data-stu-id="b0ed4-107">Description</span></span>|  
+|<span data-ttu-id="12823-106">Член</span><span class="sxs-lookup"><span data-stu-id="12823-106">Member</span></span>|<span data-ttu-id="12823-107">Описание</span><span class="sxs-lookup"><span data-stu-id="12823-107">Description</span></span>|  
 |------------|-----------------|  
-|`m_dwPID`|<span data-ttu-id="b0ed4-108">Идентификатор процесса, назначенный операционной системой.</span><span class="sxs-lookup"><span data-stu-id="b0ed4-108">OS-assigned process identifier.</span></span>|  
-|`m_dwInternalID`|<span data-ttu-id="b0ed4-109">Идентификатор процесса, назначенный прокси-сервером удаленной отладки, работающим на целевом компьютере.</span><span class="sxs-lookup"><span data-stu-id="b0ed4-109">Process identifier that is assigned by the remote debugging proxy running on the target machine.</span></span> <span data-ttu-id="b0ed4-110">Этот идентификатор перезапускается реже, чем идентификатор ОС.</span><span class="sxs-lookup"><span data-stu-id="b0ed4-110">This identifier recycles less often than the OS identifier.</span></span>|  
-|`m_wszName`|<span data-ttu-id="b0ed4-111">Командная строка процесса.</span><span class="sxs-lookup"><span data-stu-id="b0ed4-111">Command-line of the process.</span></span> <span data-ttu-id="b0ed4-112">Этот член может быть усечен.</span><span class="sxs-lookup"><span data-stu-id="b0ed4-112">This member may be truncated.</span></span>|  
+|`m_dwPID`|<span data-ttu-id="12823-108">Идентификатор процесса, назначенный операционной системой.</span><span class="sxs-lookup"><span data-stu-id="12823-108">OS-assigned process identifier.</span></span>|  
+|`m_dwInternalID`|<span data-ttu-id="12823-109">Идентификатор процесса, назначенный прокси-сервером удаленной отладки, работающим на целевом компьютере.</span><span class="sxs-lookup"><span data-stu-id="12823-109">Process identifier that is assigned by the remote debugging proxy running on the target machine.</span></span> <span data-ttu-id="12823-110">Этот идентификатор перезапускается реже, чем идентификатор ОС.</span><span class="sxs-lookup"><span data-stu-id="12823-110">This identifier recycles less often than the OS identifier.</span></span>|  
+|`m_wszName`|<span data-ttu-id="12823-111">Командная строка процесса.</span><span class="sxs-lookup"><span data-stu-id="12823-111">Command-line of the process.</span></span> <span data-ttu-id="12823-112">Этот член может быть усечен.</span><span class="sxs-lookup"><span data-stu-id="12823-112">This member may be truncated.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="b0ed4-113">Требования</span><span class="sxs-lookup"><span data-stu-id="b0ed4-113">Requirements</span></span>  
- <span data-ttu-id="b0ed4-114">**Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="b0ed4-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="12823-113">Требования</span><span class="sxs-lookup"><span data-stu-id="12823-113">Requirements</span></span>  
+ <span data-ttu-id="12823-114">**Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="12823-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="b0ed4-115">**Заголовок:** CoreClrRemoteDebuggingInterfaces.h</span><span class="sxs-lookup"><span data-stu-id="b0ed4-115">**Header:** CoreClrRemoteDebuggingInterfaces.h</span></span>  
+ <span data-ttu-id="12823-115">**Заголовок:** CoreClrRemoteDebuggingInterfaces.h</span><span class="sxs-lookup"><span data-stu-id="12823-115">**Header:** CoreClrRemoteDebuggingInterfaces.h</span></span>  
   
- <span data-ttu-id="b0ed4-116">**Библиотека:** mscordbi_macx86.dll</span><span class="sxs-lookup"><span data-stu-id="b0ed4-116">**Library:** mscordbi_macx86.dll</span></span>  
+ <span data-ttu-id="12823-116">**Библиотека:** mscordbi_macx86.dll</span><span class="sxs-lookup"><span data-stu-id="12823-116">**Library:** mscordbi_macx86.dll</span></span>  
   
- <span data-ttu-id="b0ed4-117">**Версии платформы .NET framework:** 3.5 SP1</span><span class="sxs-lookup"><span data-stu-id="b0ed4-117">**.NET Framework Versions:** 3.5 SP1</span></span>
+ <span data-ttu-id="12823-117">**Версии платформы .NET framework:** 3.5 SP1</span><span class="sxs-lookup"><span data-stu-id="12823-117">**.NET Framework Versions:** 3.5 SP1</span></span>
