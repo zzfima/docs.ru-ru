@@ -1,32 +1,25 @@
 ---
-title: "Значение &lt;имя_аргумента&gt; должно быть положительным числом"
+title: Значение &lt;имя_аргумента&gt; должно быть положительным числом
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vbrApplicationLog_NegativeNumber
 ms.assetid: 597c412c-499e-49d2-b656-af2d90c292a5
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 2ba1b2d19389f4be5eaecaad41fd4443e8c73940
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: f38c2b92037a2a5dd400dd37656e6ec18066886b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="the-value-of-ltargumentnamegt-must-be-a-positive-number"></a><span data-ttu-id="ab925-102">Значение &lt;имя_аргумента&gt; должно быть положительным числом</span><span class="sxs-lookup"><span data-stu-id="ab925-102">The value of &lt;argumentname&gt; must be a positive number</span></span>
-<span data-ttu-id="ab925-103">Значение свойства <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.ReserveDiskSpace%2A> должно быть больше нуля.</span><span class="sxs-lookup"><span data-stu-id="ab925-103">The value of the <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.ReserveDiskSpace%2A> property must be greater than zero.</span></span>  
+# <a name="the-value-of-ltargumentnamegt-must-be-a-positive-number"></a><span data-ttu-id="144ee-102">Значение &lt;имя_аргумента&gt; должно быть положительным числом</span><span class="sxs-lookup"><span data-stu-id="144ee-102">The value of &lt;argumentname&gt; must be a positive number</span></span>
+<span data-ttu-id="144ee-103">Значение свойства <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.ReserveDiskSpace%2A> должно быть больше нуля.</span><span class="sxs-lookup"><span data-stu-id="144ee-103">The value of the <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.ReserveDiskSpace%2A> property must be greater than zero.</span></span>  
   
- <span data-ttu-id="ab925-104">Свойство <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.ReserveDiskSpace%2A> задает объем в байтах свободного места на диске, необходимого для того, чтобы сообщения могли записываться в файл журнала.</span><span class="sxs-lookup"><span data-stu-id="ab925-104">The <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.ReserveDiskSpace%2A> property specifies the amount of free disk space, in bytes, necessary before messages can be written to the log file</span></span>  
+ <span data-ttu-id="144ee-104">Свойство <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.ReserveDiskSpace%2A> задает объем в байтах свободного места на диске, необходимого для того, чтобы сообщения могли записываться в файл журнала.</span><span class="sxs-lookup"><span data-stu-id="144ee-104">The <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.ReserveDiskSpace%2A> property specifies the amount of free disk space, in bytes, necessary before messages can be written to the log file</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="ab925-105">Исправление ошибки</span><span class="sxs-lookup"><span data-stu-id="ab925-105">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="144ee-105">Исправление ошибки</span><span class="sxs-lookup"><span data-stu-id="144ee-105">To correct this error</span></span>  
   
--   <span data-ttu-id="ab925-106">Задайте положительное число для свойства <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.ReserveDiskSpace%2A> .</span><span class="sxs-lookup"><span data-stu-id="ab925-106">Set the <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.ReserveDiskSpace%2A> property to a positive number.</span></span>  
+-   <span data-ttu-id="144ee-106">Задайте положительное число для свойства <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.ReserveDiskSpace%2A> .</span><span class="sxs-lookup"><span data-stu-id="144ee-106">Set the <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.ReserveDiskSpace%2A> property to a positive number.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ab925-107">См. также</span><span class="sxs-lookup"><span data-stu-id="ab925-107">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="144ee-107">См. также</span><span class="sxs-lookup"><span data-stu-id="144ee-107">See Also</span></span>  
  <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.ReserveDiskSpace%2A>  
- [<span data-ttu-id="ab925-108">Объект My.Application.Log</span><span class="sxs-lookup"><span data-stu-id="ab925-108">My.Application.Log</span></span>](xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.Log)  
- [<span data-ttu-id="ab925-109">My.Application.Info.DirectoryPath</span><span class="sxs-lookup"><span data-stu-id="ab925-109">My.Application.Info.DirectoryPath</span></span>](xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.Log)
+ [<span data-ttu-id="144ee-108">Объект My.Application.Log</span><span class="sxs-lookup"><span data-stu-id="144ee-108">My.Application.Log</span></span>](xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.Log)  
+ [<span data-ttu-id="144ee-109">My.Application.Info.DirectoryPath</span><span class="sxs-lookup"><span data-stu-id="144ee-109">My.Application.Info.DirectoryPath</span></span>](xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.Log)

@@ -1,26 +1,20 @@
 ---
-title: "Указанный журнал событий не существует на этом компьютере."
+title: Указанный журнал событий не существует на этом компьютере.
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-visual-basic
-ms.topic: article
 ms.assetid: 974a23e7-37ea-4de2-b282-4cf46600694f
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 9f74b41f124797c52b5dd44f2da963b6547c22b6
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 9e45904d4f2f07403e3ca542c4adffc5db5dd2c8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="specified-event-log-does-not-exist-on-this-machine"></a><span data-ttu-id="97a79-102">Указанный журнал событий не существует на этом компьютере.</span><span class="sxs-lookup"><span data-stu-id="97a79-102">Specified event log does not exist on this machine</span></span>
-<span data-ttu-id="97a79-103">Выполнена попытка доступа к журналу событий, который не существует на этом компьютере.</span><span class="sxs-lookup"><span data-stu-id="97a79-103">An attempt has been made to access an event log that does not exist on this machine.</span></span>  
+# <a name="specified-event-log-does-not-exist-on-this-machine"></a><span data-ttu-id="6d41f-102">Указанный журнал событий не существует на этом компьютере.</span><span class="sxs-lookup"><span data-stu-id="6d41f-102">Specified event log does not exist on this machine</span></span>
+<span data-ttu-id="6d41f-103">Выполнена попытка доступа к журналу событий, который не существует на этом компьютере.</span><span class="sxs-lookup"><span data-stu-id="6d41f-103">An attempt has been made to access an event log that does not exist on this machine.</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="97a79-104">Исправление ошибки</span><span class="sxs-lookup"><span data-stu-id="97a79-104">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="6d41f-104">Исправление ошибки</span><span class="sxs-lookup"><span data-stu-id="6d41f-104">To correct this error</span></span>  
   
--   <span data-ttu-id="97a79-105">Убедитесь в том, что вы указали правильное имя файла и путь к нему.</span><span class="sxs-lookup"><span data-stu-id="97a79-105">Check that you are supplying the correct file name and path.</span></span>  
+-   <span data-ttu-id="6d41f-105">Убедитесь в том, что вы указали правильное имя файла и путь к нему.</span><span class="sxs-lookup"><span data-stu-id="6d41f-105">Check that you are supplying the correct file name and path.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="97a79-106">См. также</span><span class="sxs-lookup"><span data-stu-id="97a79-106">See Also</span></span>  
- [<span data-ttu-id="97a79-107">Администрирование журналов событий</span><span class="sxs-lookup"><span data-stu-id="97a79-107">Administering Event Logs</span></span>](http://msdn.microsoft.com/library/35f53238-bdd2-417b-acd8-2fd9f7397f18)  
- [<span data-ttu-id="97a79-108">Практическое руководство. Анализ путей к файлам</span><span class="sxs-lookup"><span data-stu-id="97a79-108">How to: Parse File Paths</span></span>](../../visual-basic/developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md)
+## <a name="see-also"></a><span data-ttu-id="6d41f-106">См. также</span><span class="sxs-lookup"><span data-stu-id="6d41f-106">See Also</span></span>  
+ [<span data-ttu-id="6d41f-107">Администрирование журналов событий</span><span class="sxs-lookup"><span data-stu-id="6d41f-107">Administering Event Logs</span></span>](http://msdn.microsoft.com/library/35f53238-bdd2-417b-acd8-2fd9f7397f18)  
+ [<span data-ttu-id="6d41f-108">Практическое руководство. Анализ путей к файлам</span><span class="sxs-lookup"><span data-stu-id="6d41f-108">How to: Parse File Paths</span></span>](../../visual-basic/developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md)

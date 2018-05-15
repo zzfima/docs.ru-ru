@@ -1,28 +1,21 @@
 ---
-title: Именованный аргумент &#39; &lt;имя_аргумента&gt;&#39; указан несколько раз
+title: Именованный аргумент &#39; &lt;имя_аргумента&gt; &#39; указан несколько раз
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vbrNamedArgumentAlreadyUsed1
 ms.assetid: a5113d23-ca66-4961-909f-74f97a0eaf87
-caps.latest.revision: 7
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: adff48e87b2405df5c166d7924a1053c0cd516be
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 4704c9184faa1b4091e17e4b4385419b96597ec1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="named-argument-39ltargumentnamegt39-specified-multiple-times"></a><span data-ttu-id="daab1-102">Именованный аргумент &#39; &lt;имя_аргумента&gt;&#39; указан несколько раз</span><span class="sxs-lookup"><span data-stu-id="daab1-102">Named argument &#39;&lt;argumentname&gt;&#39; specified multiple times</span></span>
-<span data-ttu-id="daab1-103">Именованный аргумент указан несколько раз.</span><span class="sxs-lookup"><span data-stu-id="daab1-103">You specified a named argument more than once.</span></span>  
+# <a name="named-argument-39ltargumentnamegt39-specified-multiple-times"></a><span data-ttu-id="cddcc-102">Именованный аргумент &#39; &lt;имя_аргумента&gt; &#39; указан несколько раз</span><span class="sxs-lookup"><span data-stu-id="cddcc-102">Named argument &#39;&lt;argumentname&gt;&#39; specified multiple times</span></span>
+<span data-ttu-id="cddcc-103">Именованный аргумент указан несколько раз.</span><span class="sxs-lookup"><span data-stu-id="cddcc-103">You specified a named argument more than once.</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="daab1-104">Исправление ошибки</span><span class="sxs-lookup"><span data-stu-id="daab1-104">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="cddcc-104">Исправление ошибки</span><span class="sxs-lookup"><span data-stu-id="cddcc-104">To correct this error</span></span>  
   
--   <span data-ttu-id="daab1-105">Удалите все вхождения аргумента, кроме одного.</span><span class="sxs-lookup"><span data-stu-id="daab1-105">Remove all but one of the specifications.</span></span>  
+-   <span data-ttu-id="cddcc-105">Удалите все вхождения аргумента, кроме одного.</span><span class="sxs-lookup"><span data-stu-id="cddcc-105">Remove all but one of the specifications.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="daab1-106">См. также</span><span class="sxs-lookup"><span data-stu-id="daab1-106">See Also</span></span>  
- [<span data-ttu-id="daab1-107">Передача аргументов по позиции и по имени</span><span class="sxs-lookup"><span data-stu-id="daab1-107">Passing Arguments by Position and by Name</span></span>](../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-position-and-by-name.md)
+## <a name="see-also"></a><span data-ttu-id="cddcc-106">См. также</span><span class="sxs-lookup"><span data-stu-id="cddcc-106">See Also</span></span>  
+ [<span data-ttu-id="cddcc-107">Передача аргументов по позиции и по имени</span><span class="sxs-lookup"><span data-stu-id="cddcc-107">Passing Arguments by Position and by Name</span></span>](../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-position-and-by-name.md)

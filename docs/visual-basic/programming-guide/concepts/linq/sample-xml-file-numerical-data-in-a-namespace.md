@@ -1,27 +1,17 @@
 ---
-title: "Образец XML-файла: Числовые данные в пространство имен 1"
-ms.custom: 
+title: 'Образец XML-файла: Числовые данные в пространство имен 1'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: f01cc0a1-fb55-4b42-8380-16f4be47d6f4
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 8baded2fc58d9ad285623edfe13f2ddaebc1501b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 71ff5229d4f2342880bdf50f288355a676b78722
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="sample-xml-file-numerical-data-in-a-namespace"></a><span data-ttu-id="8b5be-102">Пример XML-файла. Числовые данные пространстве имен</span><span class="sxs-lookup"><span data-stu-id="8b5be-102">Sample XML File: Numerical Data in a Namespace</span></span>
-<span data-ttu-id="8b5be-103">Следующий XML-файл используется в различных примерах в документации [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].</span><span class="sxs-lookup"><span data-stu-id="8b5be-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="8b5be-104">Этот файл содержит числовые данные для суммирования, вычисления средних значений и группирования.</span><span class="sxs-lookup"><span data-stu-id="8b5be-104">This file contains numerical data for summing, averaging, and grouping.</span></span> <span data-ttu-id="8b5be-105">XML располагается в пространстве имен.</span><span class="sxs-lookup"><span data-stu-id="8b5be-105">The XML is in a namespace.</span></span>  
+# <a name="sample-xml-file-numerical-data-in-a-namespace"></a><span data-ttu-id="18724-102">Пример XML-файла. Числовые данные пространстве имен</span><span class="sxs-lookup"><span data-stu-id="18724-102">Sample XML File: Numerical Data in a Namespace</span></span>
+<span data-ttu-id="18724-103">Следующий XML-файл используется в различных примерах в документации [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].</span><span class="sxs-lookup"><span data-stu-id="18724-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="18724-104">Этот файл содержит числовые данные для суммирования, вычисления средних значений и группирования.</span><span class="sxs-lookup"><span data-stu-id="18724-104">This file contains numerical data for summing, averaging, and grouping.</span></span> <span data-ttu-id="18724-105">XML располагается в пространстве имен.</span><span class="sxs-lookup"><span data-stu-id="18724-105">The XML is in a namespace.</span></span>  
   
-## <a name="data"></a><span data-ttu-id="8b5be-106">Данные</span><span class="sxs-lookup"><span data-stu-id="8b5be-106">Data</span></span>  
+## <a name="data"></a><span data-ttu-id="18724-106">Данные</span><span class="sxs-lookup"><span data-stu-id="18724-106">Data</span></span>  
   
 ```xml  
 <Root xmlns='http://www.adatum.com'>  
@@ -64,5 +54,5 @@ ms.lasthandoff: 10/18/2017
 </Root>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="8b5be-107">См. также</span><span class="sxs-lookup"><span data-stu-id="8b5be-107">See Also</span></span>  
- [<span data-ttu-id="8b5be-108">Примеры XML-документов (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="8b5be-108">Sample XML Documents (LINQ to XML)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
+## <a name="see-also"></a><span data-ttu-id="18724-107">См. также</span><span class="sxs-lookup"><span data-stu-id="18724-107">See Also</span></span>  
+ [<span data-ttu-id="18724-108">Примеры XML-документов (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="18724-108">Sample XML Documents (LINQ to XML)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)

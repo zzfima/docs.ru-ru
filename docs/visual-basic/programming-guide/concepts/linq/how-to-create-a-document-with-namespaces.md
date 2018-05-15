@@ -1,38 +1,28 @@
 ---
-title: "Практическое руководство. Создание документа с пространствами имен (LINQ to XML) (Visual Basic)"
-ms.custom: 
+title: Практическое руководство. Создание документа с пространствами имен (LINQ to XML) (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: cc5b0d4d-360c-4ada-94fa-2d2916e989be
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 038e2924603eba7250620bc2792ec87b8e978787
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 204d8a9cbb6ce47c6334c7309d27910c75b90ae0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="how-to-create-a-document-with-namespaces-linq-to-xml-visual-basic"></a><span data-ttu-id="c9fbd-102">Практическое руководство. Создание документа с пространствами имен (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="c9fbd-102">How to: Create a Document with Namespaces (LINQ to XML) (Visual Basic)</span></span>
-<span data-ttu-id="c9fbd-103">В этом разделе описано, как создать документ с пространствами имен в Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="c9fbd-103">This topic shows how to create a document with namespaces in Visual Basic.</span></span>  
+# <a name="how-to-create-a-document-with-namespaces-linq-to-xml-visual-basic"></a><span data-ttu-id="195f8-102">Практическое руководство. Создание документа с пространствами имен (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="195f8-102">How to: Create a Document with Namespaces (LINQ to XML) (Visual Basic)</span></span>
+<span data-ttu-id="195f8-103">В этом разделе описано, как создать документ с пространствами имен в Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="195f8-103">This topic shows how to create a document with namespaces in Visual Basic.</span></span>  
   
- <span data-ttu-id="c9fbd-104">При использовании литералов XML в Visual Basic пользователи могут задавать одно глобальное пространство имен XML.</span><span class="sxs-lookup"><span data-stu-id="c9fbd-104">When using XML literals in Visual Basic, users can define one global default XML namespace.</span></span> <span data-ttu-id="c9fbd-105">Это пространство имен является пространством имен по умолчанию как для литералов, так и для свойств XML.</span><span class="sxs-lookup"><span data-stu-id="c9fbd-105">This namespace is the default namespace for both XML literals and XML properties.</span></span> <span data-ttu-id="c9fbd-106">Пространство имен XML по умолчанию можно задать как на уровне проекта, так и на уровне файла.</span><span class="sxs-lookup"><span data-stu-id="c9fbd-106">The default XML namespace can be defined at either the project level or the file level.</span></span> <span data-ttu-id="c9fbd-107">Если оно задается на уровне файла, то оно переопределяет пространство имен по умолчанию, заданное на уровне проекта.</span><span class="sxs-lookup"><span data-stu-id="c9fbd-107">If it is defined at the file level, it overrides the default namespace at the project level.</span></span>  
+ <span data-ttu-id="195f8-104">При использовании литералов XML в Visual Basic пользователи могут задавать одно глобальное пространство имен XML.</span><span class="sxs-lookup"><span data-stu-id="195f8-104">When using XML literals in Visual Basic, users can define one global default XML namespace.</span></span> <span data-ttu-id="195f8-105">Это пространство имен является пространством имен по умолчанию как для литералов, так и для свойств XML.</span><span class="sxs-lookup"><span data-stu-id="195f8-105">This namespace is the default namespace for both XML literals and XML properties.</span></span> <span data-ttu-id="195f8-106">Пространство имен XML по умолчанию можно задать как на уровне проекта, так и на уровне файла.</span><span class="sxs-lookup"><span data-stu-id="195f8-106">The default XML namespace can be defined at either the project level or the file level.</span></span> <span data-ttu-id="195f8-107">Если оно задается на уровне файла, то оно переопределяет пространство имен по умолчанию, заданное на уровне проекта.</span><span class="sxs-lookup"><span data-stu-id="195f8-107">If it is defined at the file level, it overrides the default namespace at the project level.</span></span>  
   
- <span data-ttu-id="c9fbd-108">Можно также задавать другие пространства имен и указывать префиксы для них.</span><span class="sxs-lookup"><span data-stu-id="c9fbd-108">You can also define other namespaces, and specify the namespace prefixes for those namespaces.</span></span>  
+ <span data-ttu-id="195f8-108">Можно также задавать другие пространства имен и указывать префиксы для них.</span><span class="sxs-lookup"><span data-stu-id="195f8-108">You can also define other namespaces, and specify the namespace prefixes for those namespaces.</span></span>  
   
- <span data-ttu-id="c9fbd-109">Как пространства имен по умолчанию, так и пространства имен с префиксами можно задавать при помощи ключа `Imports`.</span><span class="sxs-lookup"><span data-stu-id="c9fbd-109">You define both default namespaces and namespaces with a prefix by using the `Imports` keyword.</span></span>  
+ <span data-ttu-id="195f8-109">Как пространства имен по умолчанию, так и пространства имен с префиксами можно задавать при помощи ключа `Imports`.</span><span class="sxs-lookup"><span data-stu-id="195f8-109">You define both default namespaces and namespaces with a prefix by using the `Imports` keyword.</span></span>  
   
- <span data-ttu-id="c9fbd-110">Дополнительные сведения см. в разделе [Знакомство с литералами XML в Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-xml-literals.md).</span><span class="sxs-lookup"><span data-stu-id="c9fbd-110">For more information, see [Introduction to XML Literals in Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-xml-literals.md).</span></span>  
+ <span data-ttu-id="195f8-110">Дополнительные сведения см. в разделе [Знакомство с литералами XML в Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-xml-literals.md).</span><span class="sxs-lookup"><span data-stu-id="195f8-110">For more information, see [Introduction to XML Literals in Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-xml-literals.md).</span></span>  
   
- <span data-ttu-id="c9fbd-111">Обратите внимание, что пространство имен XML по умолчанию применимо только к элементам, а не к атрибутам.</span><span class="sxs-lookup"><span data-stu-id="c9fbd-111">Note that the default XML namespace only applies to elements and not to attributes.</span></span> <span data-ttu-id="c9fbd-112">Атрибуты по умолчанию никогда не находятся в пространстве имен.</span><span class="sxs-lookup"><span data-stu-id="c9fbd-112">Attributes are by default always in no namespace.</span></span> <span data-ttu-id="c9fbd-113">Однако можно использовать префикс пространства имен, чтобы ввести атрибут в пространство имен.</span><span class="sxs-lookup"><span data-stu-id="c9fbd-113">However, you can use a namespace prefix to put an attribute in a namespace.</span></span>  
+ <span data-ttu-id="195f8-111">Обратите внимание, что пространство имен XML по умолчанию применимо только к элементам, а не к атрибутам.</span><span class="sxs-lookup"><span data-stu-id="195f8-111">Note that the default XML namespace only applies to elements and not to attributes.</span></span> <span data-ttu-id="195f8-112">Атрибуты по умолчанию никогда не находятся в пространстве имен.</span><span class="sxs-lookup"><span data-stu-id="195f8-112">Attributes are by default always in no namespace.</span></span> <span data-ttu-id="195f8-113">Однако можно использовать префикс пространства имен, чтобы ввести атрибут в пространство имен.</span><span class="sxs-lookup"><span data-stu-id="195f8-113">However, you can use a namespace prefix to put an attribute in a namespace.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="c9fbd-114">Пример</span><span class="sxs-lookup"><span data-stu-id="c9fbd-114">Example</span></span>  
- <span data-ttu-id="c9fbd-115">В этом примере создается документ, который содержит пространство имен.</span><span class="sxs-lookup"><span data-stu-id="c9fbd-115">This example creates a document that contains a namespace.</span></span>  
+## <a name="example"></a><span data-ttu-id="195f8-114">Пример</span><span class="sxs-lookup"><span data-stu-id="195f8-114">Example</span></span>  
+ <span data-ttu-id="195f8-115">В этом примере создается документ, который содержит пространство имен.</span><span class="sxs-lookup"><span data-stu-id="195f8-115">This example creates a document that contains a namespace.</span></span>  
   
 ```vb  
 Imports <xmlns:aw="http://www.adventure-works.com">  
@@ -47,7 +37,7 @@ Module Module1
 End Module  
 ```  
   
- <span data-ttu-id="c9fbd-116">В этом примере выводятся следующие данные:</span><span class="sxs-lookup"><span data-stu-id="c9fbd-116">This example produces the following output:</span></span>  
+ <span data-ttu-id="195f8-116">В этом примере выводятся следующие данные:</span><span class="sxs-lookup"><span data-stu-id="195f8-116">This example produces the following output:</span></span>  
   
 ```xml  
 <aw:Root xmlns:aw="http://www.adventure-works.com">  
@@ -55,8 +45,8 @@ End Module
 </aw:Root>  
 ```  
   
-## <a name="example"></a><span data-ttu-id="c9fbd-117">Пример</span><span class="sxs-lookup"><span data-stu-id="c9fbd-117">Example</span></span>  
- <span data-ttu-id="c9fbd-118">В этом примере создается документ, который содержит два пространства имен, каждое из которых является пространством имен по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="c9fbd-118">This example creates a document that contains two namespaces, one of which is the default namespace.</span></span>  
+## <a name="example"></a><span data-ttu-id="195f8-117">Пример</span><span class="sxs-lookup"><span data-stu-id="195f8-117">Example</span></span>  
+ <span data-ttu-id="195f8-118">В этом примере создается документ, который содержит два пространства имен, каждое из которых является пространством имен по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="195f8-118">This example creates a document that contains two namespaces, one of which is the default namespace.</span></span>  
   
 ```vb  
 Imports <xmlns="http://www.adventure-works.com">  
@@ -76,7 +66,7 @@ Module Module1
 End Module  
 ```  
   
- <span data-ttu-id="c9fbd-119">В этом примере выводятся следующие данные:</span><span class="sxs-lookup"><span data-stu-id="c9fbd-119">This example produces the following output:</span></span>  
+ <span data-ttu-id="195f8-119">В этом примере выводятся следующие данные:</span><span class="sxs-lookup"><span data-stu-id="195f8-119">This example produces the following output:</span></span>  
   
 ```xml  
 <Root xmlns:fc="www.fourthcoffee.com" xmlns="http://www.adventure-works.com">  
@@ -85,10 +75,10 @@ End Module
 </Root>  
 ```  
   
-## <a name="example"></a><span data-ttu-id="c9fbd-120">Пример</span><span class="sxs-lookup"><span data-stu-id="c9fbd-120">Example</span></span>  
- <span data-ttu-id="c9fbd-121">В этом примере создается документ, который содержит несколько пространств имен с префиксами.</span><span class="sxs-lookup"><span data-stu-id="c9fbd-121">The following example creates a document that contains multiple namespaces, both with namespace prefixes.</span></span>  
+## <a name="example"></a><span data-ttu-id="195f8-120">Пример</span><span class="sxs-lookup"><span data-stu-id="195f8-120">Example</span></span>  
+ <span data-ttu-id="195f8-121">В этом примере создается документ, который содержит несколько пространств имен с префиксами.</span><span class="sxs-lookup"><span data-stu-id="195f8-121">The following example creates a document that contains multiple namespaces, both with namespace prefixes.</span></span>  
   
- <span data-ttu-id="c9fbd-122">При сериализации XML-дерева [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] создает декларации пространства имен таким образом, чтобы каждый элемент находился в верном пространстве имен.</span><span class="sxs-lookup"><span data-stu-id="c9fbd-122">When serializing an XML tree, [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] emits namespace declarations as required so that each element is in its designated namespace.</span></span>  
+ <span data-ttu-id="195f8-122">При сериализации XML-дерева [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] создает декларации пространства имен таким образом, чтобы каждый элемент находился в верном пространстве имен.</span><span class="sxs-lookup"><span data-stu-id="195f8-122">When serializing an XML tree, [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] emits namespace declarations as required so that each element is in its designated namespace.</span></span>  
   
 ```vb  
 Imports <xmlns:aw="http://www.adventure-works.com">  
@@ -111,7 +101,7 @@ Module Module1
 End Module  
 ```  
   
- <span data-ttu-id="c9fbd-123">В этом примере выводятся следующие данные:</span><span class="sxs-lookup"><span data-stu-id="c9fbd-123">This example produces the following output:</span></span>  
+ <span data-ttu-id="195f8-123">В этом примере выводятся следующие данные:</span><span class="sxs-lookup"><span data-stu-id="195f8-123">This example produces the following output:</span></span>  
   
 ```xml  
 <aw:Root xmlns:fc="www.fourthcoffee.com" xmlns:aw="http://www.adventure-works.com">  
@@ -123,5 +113,5 @@ End Module
 </aw:Root>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="c9fbd-124">См. также</span><span class="sxs-lookup"><span data-stu-id="c9fbd-124">See Also</span></span>  
- [<span data-ttu-id="c9fbd-125">Работа с пространствами имен XML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="c9fbd-125">Working with XML Namespaces (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)
+## <a name="see-also"></a><span data-ttu-id="195f8-124">См. также</span><span class="sxs-lookup"><span data-stu-id="195f8-124">See Also</span></span>  
+ [<span data-ttu-id="195f8-125">Работа с пространствами имен XML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="195f8-125">Working with XML Namespaces (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)

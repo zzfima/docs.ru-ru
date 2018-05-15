@@ -1,36 +1,26 @@
 ---
-title: "Рефакторинг с использованием метода расширения (Visual Basic)"
-ms.custom: 
+title: Рефакторинг с использованием метода расширения (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: d87ae99a-cfa9-4a31-a5e4-9d6437be6810
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 3ac7ce4c6a40829582628907bd50321bdda29bb7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: e613994651ad33b8e9f4aa78c0c2897431246344
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="refactoring-using-an-extension-method-visual-basic"></a><span data-ttu-id="a4ded-102">Рефакторинг с использованием метода расширения (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="a4ded-102">Refactoring Using an Extension Method (Visual Basic)</span></span>
-<span data-ttu-id="a4ded-103">Этот пример основан на предыдущем примере [извлечение текста абзацев (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/retrieving-the-text-of-the-paragraphs.md), путем оптимизации кода объединения строк с помощью чистой функции, которая реализуется как метод расширения.</span><span class="sxs-lookup"><span data-stu-id="a4ded-103">This example builds on the previous example, [Retrieving the Text of the Paragraphs (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/retrieving-the-text-of-the-paragraphs.md), by refactoring the concatenation of strings using a pure function that is implemented as an extension method.</span></span>  
+# <a name="refactoring-using-an-extension-method-visual-basic"></a><span data-ttu-id="0a07b-102">Рефакторинг с использованием метода расширения (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="0a07b-102">Refactoring Using an Extension Method (Visual Basic)</span></span>
+<span data-ttu-id="0a07b-103">Этот пример основан на предыдущем примере [извлечение текста абзацев (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/retrieving-the-text-of-the-paragraphs.md), путем оптимизации кода объединения строк с помощью чистой функции, которая реализуется как метод расширения.</span><span class="sxs-lookup"><span data-stu-id="0a07b-103">This example builds on the previous example, [Retrieving the Text of the Paragraphs (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/retrieving-the-text-of-the-paragraphs.md), by refactoring the concatenation of strings using a pure function that is implemented as an extension method.</span></span>  
   
- <span data-ttu-id="a4ded-104">В предыдущем примере использовался стандартный оператор запроса <xref:System.Linq.Enumerable.Aggregate%2A> для объединения нескольких строк в одну.</span><span class="sxs-lookup"><span data-stu-id="a4ded-104">The previous example used the <xref:System.Linq.Enumerable.Aggregate%2A> standard query operator to concatenate multiple strings into one string.</span></span> <span data-ttu-id="a4ded-105">Однако более удобно записывать для этого метод расширения, так как результирующий запрос становится меньше и проще.</span><span class="sxs-lookup"><span data-stu-id="a4ded-105">However, it is more convenient to write an extension method to do this, because the resulting query smaller and more simple.</span></span>  
+ <span data-ttu-id="0a07b-104">В предыдущем примере использовался стандартный оператор запроса <xref:System.Linq.Enumerable.Aggregate%2A> для объединения нескольких строк в одну.</span><span class="sxs-lookup"><span data-stu-id="0a07b-104">The previous example used the <xref:System.Linq.Enumerable.Aggregate%2A> standard query operator to concatenate multiple strings into one string.</span></span> <span data-ttu-id="0a07b-105">Однако более удобно записывать для этого метод расширения, так как результирующий запрос становится меньше и проще.</span><span class="sxs-lookup"><span data-stu-id="0a07b-105">However, it is more convenient to write an extension method to do this, because the resulting query smaller and more simple.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="a4ded-106">Пример</span><span class="sxs-lookup"><span data-stu-id="a4ded-106">Example</span></span>  
- <span data-ttu-id="a4ded-107">В этом примере обрабатывается документ WordprocessingML и происходит получение абзацев, стилей и текста каждого абзаца.</span><span class="sxs-lookup"><span data-stu-id="a4ded-107">This example processes a WordprocessingML document, retrieving the paragraphs, the style of each paragraph, and the text of each paragraph.</span></span> <span data-ttu-id="a4ded-108">Этот пример основан на предыдущих примерах данного учебника.</span><span class="sxs-lookup"><span data-stu-id="a4ded-108">This example builds on the previous examples in this tutorial.</span></span>  
+## <a name="example"></a><span data-ttu-id="0a07b-106">Пример</span><span class="sxs-lookup"><span data-stu-id="0a07b-106">Example</span></span>  
+ <span data-ttu-id="0a07b-107">В этом примере обрабатывается документ WordprocessingML и происходит получение абзацев, стилей и текста каждого абзаца.</span><span class="sxs-lookup"><span data-stu-id="0a07b-107">This example processes a WordprocessingML document, retrieving the paragraphs, the style of each paragraph, and the text of each paragraph.</span></span> <span data-ttu-id="0a07b-108">Этот пример основан на предыдущих примерах данного учебника.</span><span class="sxs-lookup"><span data-stu-id="0a07b-108">This example builds on the previous examples in this tutorial.</span></span>  
   
- <span data-ttu-id="a4ded-109">В примере представлено несколько перегруженных вариантов метода `StringConcatenate`.</span><span class="sxs-lookup"><span data-stu-id="a4ded-109">The example contains multiple overloads of the `StringConcatenate` method.</span></span>  
+ <span data-ttu-id="0a07b-109">В примере представлено несколько перегруженных вариантов метода `StringConcatenate`.</span><span class="sxs-lookup"><span data-stu-id="0a07b-109">The example contains multiple overloads of the `StringConcatenate` method.</span></span>  
   
- <span data-ttu-id="a4ded-110">Имеются инструкции по созданию исходного документа для этого примера в [создания источника Office Open XML-документа (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).</span><span class="sxs-lookup"><span data-stu-id="a4ded-110">You can find instructions for creating the source document for this example in [Creating the Source Office Open XML Document (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).</span></span>  
+ <span data-ttu-id="0a07b-110">Имеются инструкции по созданию исходного документа для этого примера в [создания источника Office Open XML-документа (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).</span><span class="sxs-lookup"><span data-stu-id="0a07b-110">You can find instructions for creating the source document for this example in [Creating the Source Office Open XML Document (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).</span></span>  
   
- <span data-ttu-id="a4ded-111">В этом примере используются классы из сборки WindowsBase.</span><span class="sxs-lookup"><span data-stu-id="a4ded-111">This example uses classes from the WindowsBase assembly.</span></span> <span data-ttu-id="a4ded-112">Используются типы из пространства имен <xref:System.IO.Packaging?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="a4ded-112">It uses types in the <xref:System.IO.Packaging?displayProperty=nameWithType> namespace.</span></span>  
+ <span data-ttu-id="0a07b-111">В этом примере используются классы из сборки WindowsBase.</span><span class="sxs-lookup"><span data-stu-id="0a07b-111">This example uses classes from the WindowsBase assembly.</span></span> <span data-ttu-id="0a07b-112">Используются типы из пространства имен <xref:System.IO.Packaging?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="0a07b-112">It uses types in the <xref:System.IO.Packaging?displayProperty=nameWithType> namespace.</span></span>  
   
 ```vb  
 <System.Runtime.CompilerServices.Extension()> _  
@@ -73,10 +63,10 @@ ByVal func As Func(Of T, String), ByVal separator As String) As String
 End Function  
 ```  
   
-## <a name="example"></a><span data-ttu-id="a4ded-113">Пример</span><span class="sxs-lookup"><span data-stu-id="a4ded-113">Example</span></span>  
- <span data-ttu-id="a4ded-114">Рассматриваются четыре перегруженных варианта метода `StringConcatenate`.</span><span class="sxs-lookup"><span data-stu-id="a4ded-114">There are four overloads of the `StringConcatenate` method.</span></span> <span data-ttu-id="a4ded-115">Первый перегруженный метод принимает коллекцию строк и возвращает одну строку.</span><span class="sxs-lookup"><span data-stu-id="a4ded-115">One overload simply takes a collection of strings and returns a single string.</span></span> <span data-ttu-id="a4ded-116">Следующий перегруженный метод может принимать коллекцию любого типа и делегировать эти проекты из одного элемента коллекции в строку.</span><span class="sxs-lookup"><span data-stu-id="a4ded-116">Another overload can take a collection of any type, and a delegate that projects from a singleton of the collection to a string.</span></span> <span data-ttu-id="a4ded-117">Еще два перегруженных метода позволяют указывать строку разделителя.</span><span class="sxs-lookup"><span data-stu-id="a4ded-117">There are two more overloads that allow you to specify a separator string.</span></span>  
+## <a name="example"></a><span data-ttu-id="0a07b-113">Пример</span><span class="sxs-lookup"><span data-stu-id="0a07b-113">Example</span></span>  
+ <span data-ttu-id="0a07b-114">Рассматриваются четыре перегруженных варианта метода `StringConcatenate`.</span><span class="sxs-lookup"><span data-stu-id="0a07b-114">There are four overloads of the `StringConcatenate` method.</span></span> <span data-ttu-id="0a07b-115">Первый перегруженный метод принимает коллекцию строк и возвращает одну строку.</span><span class="sxs-lookup"><span data-stu-id="0a07b-115">One overload simply takes a collection of strings and returns a single string.</span></span> <span data-ttu-id="0a07b-116">Следующий перегруженный метод может принимать коллекцию любого типа и делегировать эти проекты из одного элемента коллекции в строку.</span><span class="sxs-lookup"><span data-stu-id="0a07b-116">Another overload can take a collection of any type, and a delegate that projects from a singleton of the collection to a string.</span></span> <span data-ttu-id="0a07b-117">Еще два перегруженных метода позволяют указывать строку разделителя.</span><span class="sxs-lookup"><span data-stu-id="0a07b-117">There are two more overloads that allow you to specify a separator string.</span></span>  
   
- <span data-ttu-id="a4ded-118">Все четыре перегруженных метода используются в следующем коде.</span><span class="sxs-lookup"><span data-stu-id="a4ded-118">The following code uses all four overloads.</span></span>  
+ <span data-ttu-id="0a07b-118">Все четыре перегруженных метода используются в следующем коде.</span><span class="sxs-lookup"><span data-stu-id="0a07b-118">The following code uses all four overloads.</span></span>  
   
 ```vb  
 Dim numbers As String() = {"one", "two", "three"}  
@@ -89,7 +79,7 @@ Console.WriteLine("{0}", intNumbers.StringConcatenate(Function(i) i.ToString()))
 Console.WriteLine("{0}", intNumbers.StringConcatenate(Function(i) i.ToString(), ":"))  
 ```  
   
- <span data-ttu-id="a4ded-119">В этом примере выводятся следующие данные:</span><span class="sxs-lookup"><span data-stu-id="a4ded-119">This example produces the following output:</span></span>  
+ <span data-ttu-id="0a07b-119">В этом примере выводятся следующие данные:</span><span class="sxs-lookup"><span data-stu-id="0a07b-119">This example produces the following output:</span></span>  
   
 ```  
 onetwothree  
@@ -98,8 +88,8 @@ one:two:three:
 1:2:3:  
 ```  
   
-## <a name="example"></a><span data-ttu-id="a4ded-120">Пример</span><span class="sxs-lookup"><span data-stu-id="a4ded-120">Example</span></span>  
- <span data-ttu-id="a4ded-121">Теперь пример можно изменить для получения преимущества нового метода расширения:</span><span class="sxs-lookup"><span data-stu-id="a4ded-121">Now, the example can be modified to take advantage of the new extension method:</span></span>  
+## <a name="example"></a><span data-ttu-id="0a07b-120">Пример</span><span class="sxs-lookup"><span data-stu-id="0a07b-120">Example</span></span>  
+ <span data-ttu-id="0a07b-121">Теперь пример можно изменить для получения преимущества нового метода расширения:</span><span class="sxs-lookup"><span data-stu-id="0a07b-121">Now, the example can be modified to take advantage of the new extension method:</span></span>  
   
 ```vb  
 Imports <xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">  
@@ -225,7 +215,7 @@ Module Module1
 End Module  
 ```  
   
- <span data-ttu-id="a4ded-122">В этом примере выводятся следующие выходные данные при применении к документу, описанной в [создания источника Office Open XML-документа (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).</span><span class="sxs-lookup"><span data-stu-id="a4ded-122">This example produces the following output when applied to the document described in [Creating the Source Office Open XML Document (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).</span></span>  
+ <span data-ttu-id="0a07b-122">В этом примере выводятся следующие выходные данные при применении к документу, описанной в [создания источника Office Open XML-документа (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).</span><span class="sxs-lookup"><span data-stu-id="0a07b-122">This example produces the following output when applied to the document described in [Creating the Source Office Open XML Document (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).</span></span>  
   
 ```  
 StyleName:Heading1 >Parsing WordprocessingML with LINQ to XML<  
@@ -245,13 +235,13 @@ StyleName:Normal ><
 StyleName:Code >Hello World<  
 ```  
   
- <span data-ttu-id="a4ded-123">Обратите внимание, что данная оптимизация кода является вариантом оптимизации кода в чистую функцию.</span><span class="sxs-lookup"><span data-stu-id="a4ded-123">Note that this refactoring is a variant of refactoring into a pure function.</span></span> <span data-ttu-id="a4ded-124">В следующем разделе принципы разбиения на чистые функции рассматриваются более подробно.</span><span class="sxs-lookup"><span data-stu-id="a4ded-124">The next topic will introduce the idea of factoring into pure functions in more detail.</span></span>  
+ <span data-ttu-id="0a07b-123">Обратите внимание, что данная оптимизация кода является вариантом оптимизации кода в чистую функцию.</span><span class="sxs-lookup"><span data-stu-id="0a07b-123">Note that this refactoring is a variant of refactoring into a pure function.</span></span> <span data-ttu-id="0a07b-124">В следующем разделе принципы разбиения на чистые функции рассматриваются более подробно.</span><span class="sxs-lookup"><span data-stu-id="0a07b-124">The next topic will introduce the idea of factoring into pure functions in more detail.</span></span>  
   
-## <a name="next-steps"></a><span data-ttu-id="a4ded-125">Дальнейшие действия</span><span class="sxs-lookup"><span data-stu-id="a4ded-125">Next Steps</span></span>  
- <span data-ttu-id="a4ded-126">В следующем примере показано, как обеспечить оптимизацию данного кода другим способом, с использованием чистых функций:</span><span class="sxs-lookup"><span data-stu-id="a4ded-126">The next example shows how to refactor this code in another way, by using pure functions:</span></span>  
+## <a name="next-steps"></a><span data-ttu-id="0a07b-125">Следующие шаги</span><span class="sxs-lookup"><span data-stu-id="0a07b-125">Next Steps</span></span>  
+ <span data-ttu-id="0a07b-126">В следующем примере показано, как обеспечить оптимизацию данного кода другим способом, с использованием чистых функций:</span><span class="sxs-lookup"><span data-stu-id="0a07b-126">The next example shows how to refactor this code in another way, by using pure functions:</span></span>  
   
--   [<span data-ttu-id="a4ded-127">Рефакторинг с использованием чистых функций (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="a4ded-127">Refactoring Using a Pure Function (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-a-pure-function.md)  
+-   [<span data-ttu-id="0a07b-127">Рефакторинг с использованием чистых функций (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="0a07b-127">Refactoring Using a Pure Function (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-a-pure-function.md)  
   
-## <a name="see-also"></a><span data-ttu-id="a4ded-128">См. также</span><span class="sxs-lookup"><span data-stu-id="a4ded-128">See Also</span></span>  
- [<span data-ttu-id="a4ded-129">Учебник: Управление содержимым в документе WordprocessingML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="a4ded-129">Tutorial: Manipulating Content in a WordprocessingML Document (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)  
- [<span data-ttu-id="a4ded-130">Рефакторинг в чистые функции (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="a4ded-130">Refactoring Into Pure Functions (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/refactoring-into-pure-functions.md)
+## <a name="see-also"></a><span data-ttu-id="0a07b-128">См. также</span><span class="sxs-lookup"><span data-stu-id="0a07b-128">See Also</span></span>  
+ [<span data-ttu-id="0a07b-129">Учебник: Управление содержимым в документе WordprocessingML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="0a07b-129">Tutorial: Manipulating Content in a WordprocessingML Document (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)  
+ [<span data-ttu-id="0a07b-130">Рефакторинг в чистые функции (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="0a07b-130">Refactoring Into Pure Functions (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/refactoring-into-pure-functions.md)

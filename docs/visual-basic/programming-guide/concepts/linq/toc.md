@@ -87,7 +87,6 @@
 ## [Практическое руководство. Управление префиксами пространств имен (LINQ to XML)](how-to-control-namespace-prefixes-linq-to-xml.md)
 ## [Области пространств имен по умолчанию](scope-of-default-namespaces.md)
 ## [Работа с глобальными пространствами имен (LINQ to XML)](working-with-global-namespaces-linq-to-xml.md)
-## [Пространства имен (LINQ to XML)](namespaces-linq-to-xml.md)
 ## [Практическое руководство. Создание запросов к XML в пространствах имен](how-to-write-queries-on-xml-in-namespaces.md)
 
 # [Сериализация деревьев XML](serializing-xml-trees.md)
