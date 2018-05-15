@@ -1,32 +1,20 @@
 ---
 title: System.ServiceModel.PortSharing.SharedManagerServiceEndpointNotExist
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 2f9638ec-620c-477b-a6fc-2228aea1f875
-caps.latest.revision: "5"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 8996572c8941c3045d643353a7b081f8e74a4b62
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a700c42b55db40487cb798e7c0ea26bcfb02910f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="systemservicemodelportsharingsharedmanagerserviceendpointnotexist"></a><span data-ttu-id="6ba49-102">System.ServiceModel.PortSharing.SharedManagerServiceEndpointNotExist</span><span class="sxs-lookup"><span data-stu-id="6ba49-102">System.ServiceModel.PortSharing.SharedManagerServiceEndpointNotExist</span></span>
-<span data-ttu-id="6ba49-103">System.ServiceModel.PortSharing.SharedManagerServiceEndpointNotExist</span><span class="sxs-lookup"><span data-stu-id="6ba49-103">System.ServiceModel.PortSharing.SharedManagerServiceEndpointNotExist</span></span>  
+# <a name="systemservicemodelportsharingsharedmanagerserviceendpointnotexist"></a><span data-ttu-id="55791-102">System.ServiceModel.PortSharing.SharedManagerServiceEndpointNotExist</span><span class="sxs-lookup"><span data-stu-id="55791-102">System.ServiceModel.PortSharing.SharedManagerServiceEndpointNotExist</span></span>
+<span data-ttu-id="55791-103">System.ServiceModel.PortSharing.SharedManagerServiceEndpointNotExist</span><span class="sxs-lookup"><span data-stu-id="55791-103">System.ServiceModel.PortSharing.SharedManagerServiceEndpointNotExist</span></span>  
   
-## <a name="description"></a><span data-ttu-id="6ba49-104">Описание:</span><span class="sxs-lookup"><span data-stu-id="6ba49-104">Description</span></span>  
- <span data-ttu-id="6ba49-105">Общая память для конечной точки указанной службы не существует.</span><span class="sxs-lookup"><span data-stu-id="6ba49-105">The shared memory for the endpoint of the specified service does not exist.</span></span> <span data-ttu-id="6ba49-106">Запуск службы невозможен.</span><span class="sxs-lookup"><span data-stu-id="6ba49-106">The service may not be started.</span></span>  
+## <a name="description"></a><span data-ttu-id="55791-104">Описание</span><span class="sxs-lookup"><span data-stu-id="55791-104">Description</span></span>  
+ <span data-ttu-id="55791-105">Общая память для конечной точки указанной службы не существует.</span><span class="sxs-lookup"><span data-stu-id="55791-105">The shared memory for the endpoint of the specified service does not exist.</span></span> <span data-ttu-id="55791-106">Запуск службы невозможен.</span><span class="sxs-lookup"><span data-stu-id="55791-106">The service may not be started.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="6ba49-107">См. также</span><span class="sxs-lookup"><span data-stu-id="6ba49-107">See Also</span></span>  
- [<span data-ttu-id="6ba49-108">Трассировка</span><span class="sxs-lookup"><span data-stu-id="6ba49-108">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="6ba49-109">Использование трассировки для устранения неполадок приложения</span><span class="sxs-lookup"><span data-stu-id="6ba49-109">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="6ba49-110">Администрирование и диагностика</span><span class="sxs-lookup"><span data-stu-id="6ba49-110">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="55791-107">См. также</span><span class="sxs-lookup"><span data-stu-id="55791-107">See Also</span></span>  
+ [<span data-ttu-id="55791-108">Трассировка</span><span class="sxs-lookup"><span data-stu-id="55791-108">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="55791-109">Использование трассировки для устранения неполадок приложения</span><span class="sxs-lookup"><span data-stu-id="55791-109">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="55791-110">Администрирование и диагностика</span><span class="sxs-lookup"><span data-stu-id="55791-110">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

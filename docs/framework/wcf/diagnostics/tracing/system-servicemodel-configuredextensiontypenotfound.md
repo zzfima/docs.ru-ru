@@ -1,32 +1,20 @@
 ---
 title: System.ServiceModel.ConfiguredExtensionTypeNotFound
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: ef1c72d7-35c4-4886-80bb-b0a368da77e2
-caps.latest.revision: "4"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 227543e265d1975664f9989c303c2b349e481362
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: bbd2f13bd1b02c909ffd2723bef9d37d4e9109c1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="systemservicemodelconfiguredextensiontypenotfound"></a><span data-ttu-id="ebcb9-102">System.ServiceModel.ConfiguredExtensionTypeNotFound</span><span class="sxs-lookup"><span data-stu-id="ebcb9-102">System.ServiceModel.ConfiguredExtensionTypeNotFound</span></span>
-<span data-ttu-id="ebcb9-103">System.ServiceModel.ConfiguredExtensionTypeNotFound</span><span class="sxs-lookup"><span data-stu-id="ebcb9-103">System.ServiceModel.ConfiguredExtensionTypeNotFound</span></span>  
+# <a name="systemservicemodelconfiguredextensiontypenotfound"></a><span data-ttu-id="426c4-102">System.ServiceModel.ConfiguredExtensionTypeNotFound</span><span class="sxs-lookup"><span data-stu-id="426c4-102">System.ServiceModel.ConfiguredExtensionTypeNotFound</span></span>
+<span data-ttu-id="426c4-103">System.ServiceModel.ConfiguredExtensionTypeNotFound</span><span class="sxs-lookup"><span data-stu-id="426c4-103">System.ServiceModel.ConfiguredExtensionTypeNotFound</span></span>  
   
-## <a name="description"></a><span data-ttu-id="ebcb9-104">Описание</span><span class="sxs-lookup"><span data-stu-id="ebcb9-104">Description</span></span>  
- <span data-ttu-id="ebcb9-105">Тип расширения не сконфигурирован.</span><span class="sxs-lookup"><span data-stu-id="ebcb9-105">The extension type is not configured.</span></span>  
+## <a name="description"></a><span data-ttu-id="426c4-104">Описание</span><span class="sxs-lookup"><span data-stu-id="426c4-104">Description</span></span>  
+ <span data-ttu-id="426c4-105">Тип расширения не сконфигурирован.</span><span class="sxs-lookup"><span data-stu-id="426c4-105">The extension type is not configured.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ebcb9-106">См. также</span><span class="sxs-lookup"><span data-stu-id="ebcb9-106">See Also</span></span>  
- [<span data-ttu-id="ebcb9-107">Трассировка</span><span class="sxs-lookup"><span data-stu-id="ebcb9-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="ebcb9-108">Использование трассировки для устранения неполадок приложения</span><span class="sxs-lookup"><span data-stu-id="ebcb9-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="ebcb9-109">Администрирование и диагностика</span><span class="sxs-lookup"><span data-stu-id="ebcb9-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="426c4-106">См. также</span><span class="sxs-lookup"><span data-stu-id="426c4-106">See Also</span></span>  
+ [<span data-ttu-id="426c4-107">Трассировка</span><span class="sxs-lookup"><span data-stu-id="426c4-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="426c4-108">Использование трассировки для устранения неполадок приложения</span><span class="sxs-lookup"><span data-stu-id="426c4-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="426c4-109">Администрирование и диагностика</span><span class="sxs-lookup"><span data-stu-id="426c4-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

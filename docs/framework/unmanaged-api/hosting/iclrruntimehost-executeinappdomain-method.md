@@ -1,14 +1,6 @@
 ---
-title: "Метода ICLRRuntimeHost::ExecuteInAppDomain"
-ms.custom: 
+title: Метода ICLRRuntimeHost::ExecuteInAppDomain
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICLRRuntimeHost.ExecuteInAppDomain
 api_location:
@@ -23,22 +15,18 @@ helpviewer_keywords:
 ms.assetid: e2b0e2db-3fae-4b56-844e-d30a125a660c
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: a8c540c9618655e6df30ad253e0c4cccdf6624e3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 96352ec5eaba67489dbef999925c56475611746c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="iclrruntimehostexecuteinappdomain-method"></a><span data-ttu-id="32e6b-102">Метода ICLRRuntimeHost::ExecuteInAppDomain</span><span class="sxs-lookup"><span data-stu-id="32e6b-102">ICLRRuntimeHost::ExecuteInAppDomain Method</span></span>
-<span data-ttu-id="32e6b-103">Указывает <xref:System.AppDomain> в которой выполняется указанный управляемый код.</span><span class="sxs-lookup"><span data-stu-id="32e6b-103">Specifies the <xref:System.AppDomain> in which to execute the specified managed code.</span></span>  
+# <a name="iclrruntimehostexecuteinappdomain-method"></a><span data-ttu-id="f0a82-102">Метода ICLRRuntimeHost::ExecuteInAppDomain</span><span class="sxs-lookup"><span data-stu-id="f0a82-102">ICLRRuntimeHost::ExecuteInAppDomain Method</span></span>
+<span data-ttu-id="f0a82-103">Указывает <xref:System.AppDomain> в которой выполняется указанный управляемый код.</span><span class="sxs-lookup"><span data-stu-id="f0a82-103">Specifies the <xref:System.AppDomain> in which to execute the specified managed code.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="32e6b-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="32e6b-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f0a82-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="f0a82-104">Syntax</span></span>  
   
 ```  
 HRESULT ExecuteInAppDomain(  
@@ -48,38 +36,38 @@ HRESULT ExecuteInAppDomain(
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="32e6b-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="32e6b-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="f0a82-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="f0a82-105">Parameters</span></span>  
  `AppDomainId`  
- <span data-ttu-id="32e6b-106">[in] Числовой идентификатор объекта <xref:System.AppDomain> в котором для выполнения указанного метода.</span><span class="sxs-lookup"><span data-stu-id="32e6b-106">[in] The numeric ID of the <xref:System.AppDomain> in which to execute the specified method.</span></span>  
+ <span data-ttu-id="f0a82-106">[in] Числовой идентификатор объекта <xref:System.AppDomain> в котором для выполнения указанного метода.</span><span class="sxs-lookup"><span data-stu-id="f0a82-106">[in] The numeric ID of the <xref:System.AppDomain> in which to execute the specified method.</span></span>  
   
  `pCallback`  
- <span data-ttu-id="32e6b-107">[in] Указатель на функцию, выполняемую в течение указанного <xref:System.AppDomain>.</span><span class="sxs-lookup"><span data-stu-id="32e6b-107">[in] A pointer to the function to execute within the specified <xref:System.AppDomain>.</span></span>  
+ <span data-ttu-id="f0a82-107">[in] Указатель на функцию, выполняемую в течение указанного <xref:System.AppDomain>.</span><span class="sxs-lookup"><span data-stu-id="f0a82-107">[in] A pointer to the function to execute within the specified <xref:System.AppDomain>.</span></span>  
   
  `cookie`  
- <span data-ttu-id="32e6b-108">[in] Указатель на непрозрачные памяти, выделенный вызывающим объектом.</span><span class="sxs-lookup"><span data-stu-id="32e6b-108">[in] A pointer to opaque caller-allocated memory.</span></span> <span data-ttu-id="32e6b-109">Этот параметр передается с общеязыковой среды выполнения (CLR) на обратный вызов домена.</span><span class="sxs-lookup"><span data-stu-id="32e6b-109">This parameter is passed by the common language runtime (CLR) to the domain callback.</span></span> <span data-ttu-id="32e6b-110">Не является управляемой средой выполнения динамической памяти; вызывающий объект управляет выделением и временем существования этой памяти.</span><span class="sxs-lookup"><span data-stu-id="32e6b-110">It is not runtime-managed heap memory; both the allocation and lifetime of this memory are controlled by the caller.</span></span>  
+ <span data-ttu-id="f0a82-108">[in] Указатель на непрозрачные памяти, выделенный вызывающим объектом.</span><span class="sxs-lookup"><span data-stu-id="f0a82-108">[in] A pointer to opaque caller-allocated memory.</span></span> <span data-ttu-id="f0a82-109">Этот параметр передается с общеязыковой среды выполнения (CLR) на обратный вызов домена.</span><span class="sxs-lookup"><span data-stu-id="f0a82-109">This parameter is passed by the common language runtime (CLR) to the domain callback.</span></span> <span data-ttu-id="f0a82-110">Не является управляемой средой выполнения динамической памяти; вызывающий объект управляет выделением и временем существования этой памяти.</span><span class="sxs-lookup"><span data-stu-id="f0a82-110">It is not runtime-managed heap memory; both the allocation and lifetime of this memory are controlled by the caller.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="32e6b-111">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="32e6b-111">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="f0a82-111">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="f0a82-111">Return Value</span></span>  
   
-|<span data-ttu-id="32e6b-112">HRESULT</span><span class="sxs-lookup"><span data-stu-id="32e6b-112">HRESULT</span></span>|<span data-ttu-id="32e6b-113">Описание</span><span class="sxs-lookup"><span data-stu-id="32e6b-113">Description</span></span>|  
+|<span data-ttu-id="f0a82-112">HRESULT</span><span class="sxs-lookup"><span data-stu-id="f0a82-112">HRESULT</span></span>|<span data-ttu-id="f0a82-113">Описание</span><span class="sxs-lookup"><span data-stu-id="f0a82-113">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="32e6b-114">S_OK</span><span class="sxs-lookup"><span data-stu-id="32e6b-114">S_OK</span></span>|<span data-ttu-id="32e6b-115">`ExecuteInAppDomain`успешно возвращен.</span><span class="sxs-lookup"><span data-stu-id="32e6b-115">`ExecuteInAppDomain` returned successfully.</span></span>|  
-|<span data-ttu-id="32e6b-116">ЗНАЧЕНИЕ HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="32e6b-116">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="32e6b-117">Среда CLR не загружена в процесс или находится в состоянии, в котором не может выполнять управляемый код или успешно обработать вызов.</span><span class="sxs-lookup"><span data-stu-id="32e6b-117">The CLR has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
-|<span data-ttu-id="32e6b-118">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="32e6b-118">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="32e6b-119">Истекло время ожидания вызова.</span><span class="sxs-lookup"><span data-stu-id="32e6b-119">The call timed out.</span></span>|  
-|<span data-ttu-id="32e6b-120">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="32e6b-120">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="32e6b-121">Вызывающий объект не является владельцем блокировки.</span><span class="sxs-lookup"><span data-stu-id="32e6b-121">The caller does not own the lock.</span></span>|  
-|<span data-ttu-id="32e6b-122">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="32e6b-122">HOST_E_ABANDONED</span></span>|<span data-ttu-id="32e6b-123">Событие было отменено заблокированный поток или ожидал волокон.</span><span class="sxs-lookup"><span data-stu-id="32e6b-123">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
-|<span data-ttu-id="32e6b-124">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="32e6b-124">E_FAIL</span></span>|<span data-ttu-id="32e6b-125">Неизвестная Неустранимая ошибка.</span><span class="sxs-lookup"><span data-stu-id="32e6b-125">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="32e6b-126">Если метод вернет значение E_FAIL, среда CLR больше не может использоваться в процессе.</span><span class="sxs-lookup"><span data-stu-id="32e6b-126">If a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="32e6b-127">Последующие вызовы размещение методы возвращают значение HOST_E_CLRNOTAVAILABLE.</span><span class="sxs-lookup"><span data-stu-id="32e6b-127">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="f0a82-114">S_OK</span><span class="sxs-lookup"><span data-stu-id="f0a82-114">S_OK</span></span>|<span data-ttu-id="f0a82-115">`ExecuteInAppDomain` успешно возвращен.</span><span class="sxs-lookup"><span data-stu-id="f0a82-115">`ExecuteInAppDomain` returned successfully.</span></span>|  
+|<span data-ttu-id="f0a82-116">ЗНАЧЕНИЕ HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="f0a82-116">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="f0a82-117">Среда CLR не загружена в процесс или находится в состоянии, в котором не может выполнять управляемый код или успешно обработать вызов.</span><span class="sxs-lookup"><span data-stu-id="f0a82-117">The CLR has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
+|<span data-ttu-id="f0a82-118">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="f0a82-118">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="f0a82-119">Истекло время ожидания вызова.</span><span class="sxs-lookup"><span data-stu-id="f0a82-119">The call timed out.</span></span>|  
+|<span data-ttu-id="f0a82-120">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="f0a82-120">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="f0a82-121">Вызывающий объект не является владельцем блокировки.</span><span class="sxs-lookup"><span data-stu-id="f0a82-121">The caller does not own the lock.</span></span>|  
+|<span data-ttu-id="f0a82-122">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="f0a82-122">HOST_E_ABANDONED</span></span>|<span data-ttu-id="f0a82-123">Событие было отменено заблокированный поток или ожидал волокон.</span><span class="sxs-lookup"><span data-stu-id="f0a82-123">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
+|<span data-ttu-id="f0a82-124">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="f0a82-124">E_FAIL</span></span>|<span data-ttu-id="f0a82-125">Неизвестная Неустранимая ошибка.</span><span class="sxs-lookup"><span data-stu-id="f0a82-125">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="f0a82-126">Если метод вернет значение E_FAIL, среда CLR больше не может использоваться в процессе.</span><span class="sxs-lookup"><span data-stu-id="f0a82-126">If a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="f0a82-127">Последующие вызовы размещение методы возвращают значение HOST_E_CLRNOTAVAILABLE.</span><span class="sxs-lookup"><span data-stu-id="f0a82-127">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="32e6b-128">Примечания</span><span class="sxs-lookup"><span data-stu-id="32e6b-128">Remarks</span></span>  
- <span data-ttu-id="32e6b-129">`ExecuteInAppDomain`предоставляет узлу возможность контроль которую управляемых <xref:System.AppDomain> указанного управляемого метода следует выполнять в.</span><span class="sxs-lookup"><span data-stu-id="32e6b-129">`ExecuteInAppDomain` allows the host to exercise control over which managed <xref:System.AppDomain> the specified managed method should be executed in.</span></span> <span data-ttu-id="32e6b-130">Можно получить значение идентификатора домена приложения, который соответствует значению <xref:System.AppDomain.Id%2A> свойство путем вызова [GetCurrentAppDomainId-метод](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-getcurrentappdomainid-method.md).</span><span class="sxs-lookup"><span data-stu-id="32e6b-130">You can get the value of an application domain's identifier, which corresponds to the value of the <xref:System.AppDomain.Id%2A> property, by calling [GetCurrentAppDomainId Method](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-getcurrentappdomainid-method.md).</span></span>  
+## <a name="remarks"></a><span data-ttu-id="f0a82-128">Примечания</span><span class="sxs-lookup"><span data-stu-id="f0a82-128">Remarks</span></span>  
+ <span data-ttu-id="f0a82-129">`ExecuteInAppDomain` предоставляет узлу возможность контроль которую управляемых <xref:System.AppDomain> указанного управляемого метода следует выполнять в.</span><span class="sxs-lookup"><span data-stu-id="f0a82-129">`ExecuteInAppDomain` allows the host to exercise control over which managed <xref:System.AppDomain> the specified managed method should be executed in.</span></span> <span data-ttu-id="f0a82-130">Можно получить значение идентификатора домена приложения, который соответствует значению <xref:System.AppDomain.Id%2A> свойство путем вызова [GetCurrentAppDomainId-метод](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-getcurrentappdomainid-method.md).</span><span class="sxs-lookup"><span data-stu-id="f0a82-130">You can get the value of an application domain's identifier, which corresponds to the value of the <xref:System.AppDomain.Id%2A> property, by calling [GetCurrentAppDomainId Method](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-getcurrentappdomainid-method.md).</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="32e6b-131">Требования</span><span class="sxs-lookup"><span data-stu-id="32e6b-131">Requirements</span></span>  
- <span data-ttu-id="32e6b-132">**Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="32e6b-132">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="f0a82-131">Требования</span><span class="sxs-lookup"><span data-stu-id="f0a82-131">Requirements</span></span>  
+ <span data-ttu-id="f0a82-132">**Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="f0a82-132">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="32e6b-133">**Заголовок:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="32e6b-133">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="f0a82-133">**Заголовок:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="f0a82-133">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="32e6b-134">**Библиотека:** включена как ресурс в MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="32e6b-134">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="f0a82-134">**Библиотека:** включена как ресурс в MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="f0a82-134">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="32e6b-135">**Версии платформы .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="32e6b-135">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="f0a82-135">**Версии платформы .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f0a82-135">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="32e6b-136">См. также</span><span class="sxs-lookup"><span data-stu-id="32e6b-136">See Also</span></span>  
- [<span data-ttu-id="32e6b-137">Интерфейс ICLRRuntimeHost</span><span class="sxs-lookup"><span data-stu-id="32e6b-137">ICLRRuntimeHost Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md)
+## <a name="see-also"></a><span data-ttu-id="f0a82-136">См. также</span><span class="sxs-lookup"><span data-stu-id="f0a82-136">See Also</span></span>  
+ [<span data-ttu-id="f0a82-137">Интерфейс ICLRRuntimeHost</span><span class="sxs-lookup"><span data-stu-id="f0a82-137">ICLRRuntimeHost Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md)

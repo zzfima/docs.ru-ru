@@ -1,14 +1,6 @@
 ---
-title: "Интерфейс ICorProfilerCallback3"
-ms.custom: 
+title: Интерфейс ICorProfilerCallback3
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorProfilerCallback3
 api_location:
@@ -22,42 +14,38 @@ helpviewer_keywords:
 ms.assetid: be83af41-3dec-4c77-8529-9dd6b8042af6
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 1419dfff7005b33fd1f8a545d168a410e7a88a76
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: cc63a0a42c1da11daa5d38ecce505296a893616b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="icorprofilercallback3-interface"></a><span data-ttu-id="e1160-102">Интерфейс ICorProfilerCallback3</span><span class="sxs-lookup"><span data-stu-id="e1160-102">ICorProfilerCallback3 Interface</span></span>
-<span data-ttu-id="e1160-103">Предоставляет методы обратного вызова общеязыковой среды выполнения (CLR), используемые для связи, присоединение и отсоединение профилировщику сведений о состоянии.</span><span class="sxs-lookup"><span data-stu-id="e1160-103">Provides callback methods that the common language runtime (CLR) uses to communicate attach and detach state information to the profiler.</span></span>  
+# <a name="icorprofilercallback3-interface"></a><span data-ttu-id="d4af8-102">Интерфейс ICorProfilerCallback3</span><span class="sxs-lookup"><span data-stu-id="d4af8-102">ICorProfilerCallback3 Interface</span></span>
+<span data-ttu-id="d4af8-103">Предоставляет методы обратного вызова общеязыковой среды выполнения (CLR), используемые для связи, присоединение и отсоединение профилировщику сведений о состоянии.</span><span class="sxs-lookup"><span data-stu-id="d4af8-103">Provides callback methods that the common language runtime (CLR) uses to communicate attach and detach state information to the profiler.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="e1160-104">Методы</span><span class="sxs-lookup"><span data-stu-id="e1160-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="d4af8-104">Методы</span><span class="sxs-lookup"><span data-stu-id="d4af8-104">Methods</span></span>  
   
-|<span data-ttu-id="e1160-105">Метод</span><span class="sxs-lookup"><span data-stu-id="e1160-105">Method</span></span>|<span data-ttu-id="e1160-106">Описание:</span><span class="sxs-lookup"><span data-stu-id="e1160-106">Description</span></span>|  
+|<span data-ttu-id="d4af8-105">Метод</span><span class="sxs-lookup"><span data-stu-id="d4af8-105">Method</span></span>|<span data-ttu-id="d4af8-106">Описание</span><span class="sxs-lookup"><span data-stu-id="d4af8-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="e1160-107">Метод InitializeForAttach</span><span class="sxs-lookup"><span data-stu-id="e1160-107">InitializeForAttach Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback3-initializeforattach-method.md)|<span data-ttu-id="e1160-108">Вызывается средой CLR, чтобы предоставить профилировщику возможность инициализировать свое состояние после операции присоединения.</span><span class="sxs-lookup"><span data-stu-id="e1160-108">Called by the CLR to give the profiler an opportunity to initialize its state after an attach operation.</span></span>|  
-|[<span data-ttu-id="e1160-109">Метод ProfilerAttachComplete</span><span class="sxs-lookup"><span data-stu-id="e1160-109">ProfilerAttachComplete Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback3-profilerattachcomplete-method.md)|<span data-ttu-id="e1160-110">Вызывается средой CLR, чтобы указать, что теперь профилировщик может вызывать дополнительные методы.</span><span class="sxs-lookup"><span data-stu-id="e1160-110">Called by the CLR to indicate that the profiler can now call the catch-up methods.</span></span>|  
-|[<span data-ttu-id="e1160-111">Метод ProfilerDetachSucceeded</span><span class="sxs-lookup"><span data-stu-id="e1160-111">ProfilerDetachSucceeded Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback3-profilerdetachsucceeded-method.md)|<span data-ttu-id="e1160-112">Уведомляет профилировщик о том, что среда CLR намерена выгрузить библиотеку DLL профилировщика.</span><span class="sxs-lookup"><span data-stu-id="e1160-112">Notifies the profiler that the common language runtime (CLR) is about to unload the profiler DLL.</span></span>|  
+|[<span data-ttu-id="d4af8-107">Метод InitializeForAttach</span><span class="sxs-lookup"><span data-stu-id="d4af8-107">InitializeForAttach Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback3-initializeforattach-method.md)|<span data-ttu-id="d4af8-108">Вызывается средой CLR, чтобы предоставить профилировщику возможность инициализировать свое состояние после операции присоединения.</span><span class="sxs-lookup"><span data-stu-id="d4af8-108">Called by the CLR to give the profiler an opportunity to initialize its state after an attach operation.</span></span>|  
+|[<span data-ttu-id="d4af8-109">Метод ProfilerAttachComplete</span><span class="sxs-lookup"><span data-stu-id="d4af8-109">ProfilerAttachComplete Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback3-profilerattachcomplete-method.md)|<span data-ttu-id="d4af8-110">Вызывается средой CLR, чтобы указать, что теперь профилировщик может вызывать дополнительные методы.</span><span class="sxs-lookup"><span data-stu-id="d4af8-110">Called by the CLR to indicate that the profiler can now call the catch-up methods.</span></span>|  
+|[<span data-ttu-id="d4af8-111">Метод ProfilerDetachSucceeded</span><span class="sxs-lookup"><span data-stu-id="d4af8-111">ProfilerDetachSucceeded Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback3-profilerdetachsucceeded-method.md)|<span data-ttu-id="d4af8-112">Уведомляет профилировщик о том, что среда CLR намерена выгрузить библиотеку DLL профилировщика.</span><span class="sxs-lookup"><span data-stu-id="d4af8-112">Notifies the profiler that the common language runtime (CLR) is about to unload the profiler DLL.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="e1160-113">Примечания</span><span class="sxs-lookup"><span data-stu-id="e1160-113">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="d4af8-113">Примечания</span><span class="sxs-lookup"><span data-stu-id="d4af8-113">Remarks</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="e1160-114">Требования</span><span class="sxs-lookup"><span data-stu-id="e1160-114">Requirements</span></span>  
- <span data-ttu-id="e1160-115">**Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="e1160-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="d4af8-114">Требования</span><span class="sxs-lookup"><span data-stu-id="d4af8-114">Requirements</span></span>  
+ <span data-ttu-id="d4af8-115">**Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="d4af8-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="e1160-116">**Заголовок:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="e1160-116">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="d4af8-116">**Заголовок:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="d4af8-116">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="e1160-117">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="e1160-117">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="d4af8-117">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="d4af8-117">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="e1160-118">**Версии платформы .NET framework:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e1160-118">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="d4af8-118">**Версии платформы .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d4af8-118">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="e1160-119">См. также</span><span class="sxs-lookup"><span data-stu-id="e1160-119">See Also</span></span>  
- [<span data-ttu-id="e1160-120">Интерфейсы профилирования</span><span class="sxs-lookup"><span data-stu-id="e1160-120">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)  
- [<span data-ttu-id="e1160-121">Интерфейс ICorProfilerInfo</span><span class="sxs-lookup"><span data-stu-id="e1160-121">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)  
- [<span data-ttu-id="e1160-122">Интерфейс ICorProfilerCallback2</span><span class="sxs-lookup"><span data-stu-id="e1160-122">ICorProfilerCallback2 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md)  
- [<span data-ttu-id="e1160-123">Интерфейс ICorProfilerCallback4</span><span class="sxs-lookup"><span data-stu-id="e1160-123">ICorProfilerCallback4 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-interface.md)
+## <a name="see-also"></a><span data-ttu-id="d4af8-119">См. также</span><span class="sxs-lookup"><span data-stu-id="d4af8-119">See Also</span></span>  
+ [<span data-ttu-id="d4af8-120">Интерфейсы профилирования</span><span class="sxs-lookup"><span data-stu-id="d4af8-120">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)  
+ [<span data-ttu-id="d4af8-121">Интерфейс ICorProfilerInfo</span><span class="sxs-lookup"><span data-stu-id="d4af8-121">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)  
+ [<span data-ttu-id="d4af8-122">Интерфейс ICorProfilerCallback2</span><span class="sxs-lookup"><span data-stu-id="d4af8-122">ICorProfilerCallback2 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md)  
+ [<span data-ttu-id="d4af8-123">Интерфейс ICorProfilerCallback4</span><span class="sxs-lookup"><span data-stu-id="d4af8-123">ICorProfilerCallback4 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-interface.md)

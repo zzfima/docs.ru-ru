@@ -1,40 +1,28 @@
 ---
 title: 3382 - ClientReliableSessionReconnect
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 029c0e75-8cf0-4860-8539-c2baa18eb7a7
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 15c35ff356d29946565bff0aeff18da3fbcecc80
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c79338106b7d4718271ad2322b59d7097c7403de
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="3382---clientreliablesessionreconnect"></a><span data-ttu-id="a213b-102">3382 - ClientReliableSessionReconnect</span><span class="sxs-lookup"><span data-stu-id="a213b-102">3382 - ClientReliableSessionReconnect</span></span>
-## <a name="properties"></a><span data-ttu-id="a213b-103">Свойства</span><span class="sxs-lookup"><span data-stu-id="a213b-103">Properties</span></span>  
+# <a name="3382---clientreliablesessionreconnect"></a><span data-ttu-id="6126c-102">3382 - ClientReliableSessionReconnect</span><span class="sxs-lookup"><span data-stu-id="6126c-102">3382 - ClientReliableSessionReconnect</span></span>
+## <a name="properties"></a><span data-ttu-id="6126c-103">Свойства</span><span class="sxs-lookup"><span data-stu-id="6126c-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|<span data-ttu-id="a213b-104">Идентификатор</span><span class="sxs-lookup"><span data-stu-id="a213b-104">ID</span></span>|<span data-ttu-id="a213b-105">3382</span><span class="sxs-lookup"><span data-stu-id="a213b-105">3382</span></span>|  
-|<span data-ttu-id="a213b-106">Ключевые слова</span><span class="sxs-lookup"><span data-stu-id="a213b-106">Keywords</span></span>|<span data-ttu-id="a213b-107">Канал</span><span class="sxs-lookup"><span data-stu-id="a213b-107">Channel</span></span>|  
-|<span data-ttu-id="a213b-108">Уровень</span><span class="sxs-lookup"><span data-stu-id="a213b-108">Level</span></span>|<span data-ttu-id="a213b-109">Информационное</span><span class="sxs-lookup"><span data-stu-id="a213b-109">Informational</span></span>|  
-|<span data-ttu-id="a213b-110">Канал</span><span class="sxs-lookup"><span data-stu-id="a213b-110">Channel</span></span>|<span data-ttu-id="a213b-111">Microsoft-Windows-Application Server-Applications/Debug</span><span class="sxs-lookup"><span data-stu-id="a213b-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
+|<span data-ttu-id="6126c-104">Идентификатор</span><span class="sxs-lookup"><span data-stu-id="6126c-104">ID</span></span>|<span data-ttu-id="6126c-105">3382</span><span class="sxs-lookup"><span data-stu-id="6126c-105">3382</span></span>|  
+|<span data-ttu-id="6126c-106">Ключевые слова</span><span class="sxs-lookup"><span data-stu-id="6126c-106">Keywords</span></span>|<span data-ttu-id="6126c-107">Канал</span><span class="sxs-lookup"><span data-stu-id="6126c-107">Channel</span></span>|  
+|<span data-ttu-id="6126c-108">Уровень</span><span class="sxs-lookup"><span data-stu-id="6126c-108">Level</span></span>|<span data-ttu-id="6126c-109">Информационное</span><span class="sxs-lookup"><span data-stu-id="6126c-109">Informational</span></span>|  
+|<span data-ttu-id="6126c-110">Канал</span><span class="sxs-lookup"><span data-stu-id="6126c-110">Channel</span></span>|<span data-ttu-id="6126c-111">Microsoft-Windows-Application Server-Applications/Debug</span><span class="sxs-lookup"><span data-stu-id="6126c-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
   
-## <a name="description"></a><span data-ttu-id="a213b-112">Описание</span><span class="sxs-lookup"><span data-stu-id="a213b-112">Description</span></span>  
- <span data-ttu-id="a213b-113">Это событие отправляется при повторном подключении ClientReliableSession.</span><span class="sxs-lookup"><span data-stu-id="a213b-113">This event is emitted when the ClientReliableSession is reconnecting.</span></span>  
+## <a name="description"></a><span data-ttu-id="6126c-112">Описание</span><span class="sxs-lookup"><span data-stu-id="6126c-112">Description</span></span>  
+ <span data-ttu-id="6126c-113">Это событие отправляется при повторном подключении ClientReliableSession.</span><span class="sxs-lookup"><span data-stu-id="6126c-113">This event is emitted when the ClientReliableSession is reconnecting.</span></span>  
   
-## <a name="message"></a><span data-ttu-id="a213b-114">Сообщение</span><span class="sxs-lookup"><span data-stu-id="a213b-114">Message</span></span>  
- <span data-ttu-id="a213b-115">Повторное подключение SessionId:%1.</span><span class="sxs-lookup"><span data-stu-id="a213b-115">SessionId:%1 reconnecting.</span></span>  
+## <a name="message"></a><span data-ttu-id="6126c-114">Сообщение</span><span class="sxs-lookup"><span data-stu-id="6126c-114">Message</span></span>  
+ <span data-ttu-id="6126c-115">Повторное подключение SessionId:%1.</span><span class="sxs-lookup"><span data-stu-id="6126c-115">SessionId:%1 reconnecting.</span></span>  
   
-## <a name="details"></a><span data-ttu-id="a213b-116">Подробные сведения</span><span class="sxs-lookup"><span data-stu-id="a213b-116">Details</span></span>  
- <span data-ttu-id="a213b-117">Это событие отправляется при повторном подключении ClientReliableSession.</span><span class="sxs-lookup"><span data-stu-id="a213b-117">This event is emitted when the ClientReliableSession is reconnecting.</span></span>
+## <a name="details"></a><span data-ttu-id="6126c-116">Подробные сведения</span><span class="sxs-lookup"><span data-stu-id="6126c-116">Details</span></span>  
+ <span data-ttu-id="6126c-117">Это событие отправляется при повторном подключении ClientReliableSession.</span><span class="sxs-lookup"><span data-stu-id="6126c-117">This event is emitted when the ClientReliableSession is reconnecting.</span></span>

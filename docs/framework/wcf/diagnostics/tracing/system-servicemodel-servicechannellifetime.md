@@ -1,32 +1,20 @@
 ---
 title: System.ServiceModel.ServiceChannelLifetime
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 1da8b8d0-7c5b-40bb-b177-29bbd67245e0
-caps.latest.revision: "4"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 97f347708a66db9a3d1d90dae8414a83b54bd75f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 04d1ea8575d29c5356d6a9af7657c87fb1320860
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="systemservicemodelservicechannellifetime"></a><span data-ttu-id="768c8-102">System.ServiceModel.ServiceChannelLifetime</span><span class="sxs-lookup"><span data-stu-id="768c8-102">System.ServiceModel.ServiceChannelLifetime</span></span>
-<span data-ttu-id="768c8-103">System.ServiceModel.ServiceChannelLifetime</span><span class="sxs-lookup"><span data-stu-id="768c8-103">System.ServiceModel.ServiceChannelLifetime</span></span>  
+# <a name="systemservicemodelservicechannellifetime"></a><span data-ttu-id="17a51-102">System.ServiceModel.ServiceChannelLifetime</span><span class="sxs-lookup"><span data-stu-id="17a51-102">System.ServiceModel.ServiceChannelLifetime</span></span>
+<span data-ttu-id="17a51-103">System.ServiceModel.ServiceChannelLifetime</span><span class="sxs-lookup"><span data-stu-id="17a51-103">System.ServiceModel.ServiceChannelLifetime</span></span>  
   
-## <a name="description"></a><span data-ttu-id="768c8-104">Описание:</span><span class="sxs-lookup"><span data-stu-id="768c8-104">Description</span></span>  
- <span data-ttu-id="768c8-105">Сведения о канале служб.</span><span class="sxs-lookup"><span data-stu-id="768c8-105">Information about the service channel.</span></span>  
+## <a name="description"></a><span data-ttu-id="17a51-104">Описание</span><span class="sxs-lookup"><span data-stu-id="17a51-104">Description</span></span>  
+ <span data-ttu-id="17a51-105">Сведения о канале служб.</span><span class="sxs-lookup"><span data-stu-id="17a51-105">Information about the service channel.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="768c8-106">См. также</span><span class="sxs-lookup"><span data-stu-id="768c8-106">See Also</span></span>  
- [<span data-ttu-id="768c8-107">Трассировка</span><span class="sxs-lookup"><span data-stu-id="768c8-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="768c8-108">Использование трассировки для устранения неполадок приложения</span><span class="sxs-lookup"><span data-stu-id="768c8-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="768c8-109">Администрирование и диагностика</span><span class="sxs-lookup"><span data-stu-id="768c8-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="17a51-106">См. также</span><span class="sxs-lookup"><span data-stu-id="17a51-106">See Also</span></span>  
+ [<span data-ttu-id="17a51-107">Трассировка</span><span class="sxs-lookup"><span data-stu-id="17a51-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="17a51-108">Использование трассировки для устранения неполадок приложения</span><span class="sxs-lookup"><span data-stu-id="17a51-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="17a51-109">Администрирование и диагностика</span><span class="sxs-lookup"><span data-stu-id="17a51-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

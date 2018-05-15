@@ -1,32 +1,20 @@
 ---
 title: System.ServiceModel.Activation.MessageQueueRegisterCalled
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 89e57e8e-39ae-4850-880c-f15629945584
-caps.latest.revision: "4"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: efc11937495e6634a46a080d4ff987dd20736ca5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e2049a2912d7923e10387813494f771c22a5fe52
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="systemservicemodelactivationmessagequeueregistercalled"></a><span data-ttu-id="f9726-102">System.ServiceModel.Activation.MessageQueueRegisterCalled</span><span class="sxs-lookup"><span data-stu-id="f9726-102">System.ServiceModel.Activation.MessageQueueRegisterCalled</span></span>
-<span data-ttu-id="f9726-103">System.ServiceModel.Activation.MessageQueueRegisterCalled</span><span class="sxs-lookup"><span data-stu-id="f9726-103">System.ServiceModel.Activation.MessageQueueRegisterCalled</span></span>  
+# <a name="systemservicemodelactivationmessagequeueregistercalled"></a><span data-ttu-id="5b6bb-102">System.ServiceModel.Activation.MessageQueueRegisterCalled</span><span class="sxs-lookup"><span data-stu-id="5b6bb-102">System.ServiceModel.Activation.MessageQueueRegisterCalled</span></span>
+<span data-ttu-id="5b6bb-103">System.ServiceModel.Activation.MessageQueueRegisterCalled</span><span class="sxs-lookup"><span data-stu-id="5b6bb-103">System.ServiceModel.Activation.MessageQueueRegisterCalled</span></span>  
   
-## <a name="description"></a><span data-ttu-id="f9726-104">Описание:</span><span class="sxs-lookup"><span data-stu-id="f9726-104">Description</span></span>  
- <span data-ttu-id="f9726-105">Выполнен вызов для регистрации пространства имен.</span><span class="sxs-lookup"><span data-stu-id="f9726-105">A call was made to register a namespace.</span></span>  
+## <a name="description"></a><span data-ttu-id="5b6bb-104">Описание</span><span class="sxs-lookup"><span data-stu-id="5b6bb-104">Description</span></span>  
+ <span data-ttu-id="5b6bb-105">Выполнен вызов для регистрации пространства имен.</span><span class="sxs-lookup"><span data-stu-id="5b6bb-105">A call was made to register a namespace.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f9726-106">См. также</span><span class="sxs-lookup"><span data-stu-id="f9726-106">See Also</span></span>  
- [<span data-ttu-id="f9726-107">Трассировка</span><span class="sxs-lookup"><span data-stu-id="f9726-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="f9726-108">Использование трассировки для устранения неполадок приложения</span><span class="sxs-lookup"><span data-stu-id="f9726-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="f9726-109">Администрирование и диагностика</span><span class="sxs-lookup"><span data-stu-id="f9726-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="5b6bb-106">См. также</span><span class="sxs-lookup"><span data-stu-id="5b6bb-106">See Also</span></span>  
+ [<span data-ttu-id="5b6bb-107">Трассировка</span><span class="sxs-lookup"><span data-stu-id="5b6bb-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="5b6bb-108">Использование трассировки для устранения неполадок приложения</span><span class="sxs-lookup"><span data-stu-id="5b6bb-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="5b6bb-109">Администрирование и диагностика</span><span class="sxs-lookup"><span data-stu-id="5b6bb-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

@@ -1,14 +1,6 @@
 ---
-title: "Метод ICorProfilerInfo4::EnumThreads"
-ms.custom: 
+title: Метод ICorProfilerInfo4::EnumThreads
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorProfilerInfo4.EnumThreads
 api_location:
@@ -23,45 +15,41 @@ helpviewer_keywords:
 ms.assetid: bca7a5b4-c207-4894-918c-0733926296dd
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 6e4dc301458d87b08960ef7c0b64203c703491ea
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6c394690f6c8d7f3618b385b0a1432fc396fb819
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="icorprofilerinfo4enumthreads-method"></a><span data-ttu-id="eb902-102">Метод ICorProfilerInfo4::EnumThreads</span><span class="sxs-lookup"><span data-stu-id="eb902-102">ICorProfilerInfo4::EnumThreads Method</span></span>
-<span data-ttu-id="eb902-103">Возвращает перечислитель, который предоставляет методы для последовательного перебора коллекции все управляемые потоки в процессе профилирования.</span><span class="sxs-lookup"><span data-stu-id="eb902-103">Returns an enumerator that provides methods to sequentially iterate through the collection of all managed threads in the profiled process.</span></span>  
+# <a name="icorprofilerinfo4enumthreads-method"></a><span data-ttu-id="780d4-102">Метод ICorProfilerInfo4::EnumThreads</span><span class="sxs-lookup"><span data-stu-id="780d4-102">ICorProfilerInfo4::EnumThreads Method</span></span>
+<span data-ttu-id="780d4-103">Возвращает перечислитель, который предоставляет методы для последовательного перебора коллекции все управляемые потоки в процессе профилирования.</span><span class="sxs-lookup"><span data-stu-id="780d4-103">Returns an enumerator that provides methods to sequentially iterate through the collection of all managed threads in the profiled process.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="eb902-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="eb902-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="780d4-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="780d4-104">Syntax</span></span>  
   
 ```  
 HRESULT EnumThreads([out]  
             ICorProfilerThreadEnum** ppEnum);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="eb902-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="eb902-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="780d4-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="780d4-105">Parameters</span></span>  
  `ppEnum`  
- <span data-ttu-id="eb902-106">[out] Указатель на [ICorProfilerThreadEnum](../../../../docs/framework/unmanaged-api/profiling/icorprofilerthreadenum-interface.md) интерфейса.</span><span class="sxs-lookup"><span data-stu-id="eb902-106">[out] A pointer to an [ICorProfilerThreadEnum](../../../../docs/framework/unmanaged-api/profiling/icorprofilerthreadenum-interface.md) interface.</span></span>  
+ <span data-ttu-id="780d4-106">[out] Указатель на [ICorProfilerThreadEnum](../../../../docs/framework/unmanaged-api/profiling/icorprofilerthreadenum-interface.md) интерфейса.</span><span class="sxs-lookup"><span data-stu-id="780d4-106">[out] A pointer to an [ICorProfilerThreadEnum](../../../../docs/framework/unmanaged-api/profiling/icorprofilerthreadenum-interface.md) interface.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="eb902-107">Примечания</span><span class="sxs-lookup"><span data-stu-id="eb902-107">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="780d4-107">Примечания</span><span class="sxs-lookup"><span data-stu-id="780d4-107">Remarks</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="eb902-108">Требования</span><span class="sxs-lookup"><span data-stu-id="eb902-108">Requirements</span></span>  
- <span data-ttu-id="eb902-109">**Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="eb902-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="780d4-108">Требования</span><span class="sxs-lookup"><span data-stu-id="780d4-108">Requirements</span></span>  
+ <span data-ttu-id="780d4-109">**Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="780d4-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="eb902-110">**Заголовок:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="eb902-110">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="780d4-110">**Заголовок:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="780d4-110">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="eb902-111">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="eb902-111">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="780d4-111">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="780d4-111">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="eb902-112">**Версии платформы .NET framework:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="eb902-112">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
+ <span data-ttu-id="780d4-112">**Версии платформы .NET framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="780d4-112">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="eb902-113">См. также</span><span class="sxs-lookup"><span data-stu-id="eb902-113">See Also</span></span>  
- [<span data-ttu-id="eb902-114">Интерфейс ICorProfilerThreadEnum</span><span class="sxs-lookup"><span data-stu-id="eb902-114">ICorProfilerThreadEnum Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerthreadenum-interface.md)  
- [<span data-ttu-id="eb902-115">Интерфейс ICorProfilerInfo4</span><span class="sxs-lookup"><span data-stu-id="eb902-115">ICorProfilerInfo4 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-interface.md)  
- [<span data-ttu-id="eb902-116">Интерфейсы профилирования</span><span class="sxs-lookup"><span data-stu-id="eb902-116">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)  
- [<span data-ttu-id="eb902-117">Профилирование</span><span class="sxs-lookup"><span data-stu-id="eb902-117">Profiling</span></span>](../../../../docs/framework/unmanaged-api/profiling/index.md)
+## <a name="see-also"></a><span data-ttu-id="780d4-113">См. также</span><span class="sxs-lookup"><span data-stu-id="780d4-113">See Also</span></span>  
+ [<span data-ttu-id="780d4-114">Интерфейс ICorProfilerThreadEnum</span><span class="sxs-lookup"><span data-stu-id="780d4-114">ICorProfilerThreadEnum Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerthreadenum-interface.md)  
+ [<span data-ttu-id="780d4-115">Интерфейс ICorProfilerInfo4</span><span class="sxs-lookup"><span data-stu-id="780d4-115">ICorProfilerInfo4 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-interface.md)  
+ [<span data-ttu-id="780d4-116">Интерфейсы профилирования</span><span class="sxs-lookup"><span data-stu-id="780d4-116">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)  
+ [<span data-ttu-id="780d4-117">Профилирование</span><span class="sxs-lookup"><span data-stu-id="780d4-117">Profiling</span></span>](../../../../docs/framework/unmanaged-api/profiling/index.md)

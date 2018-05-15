@@ -1,29 +1,17 @@
 ---
 title: MsmqTransportBindingElement
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 1c89f073-9ed3-4025-a8c5-13535a0f526b
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c4cfa3d58127fa560f39ce0dcfe51b97ded6223a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 643ab0f30c771f79df8ef7dd885013d5186fba59
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="msmqtransportbindingelement"></a><span data-ttu-id="518b8-102">MsmqTransportBindingElement</span><span class="sxs-lookup"><span data-stu-id="518b8-102">MsmqTransportBindingElement</span></span>
-<span data-ttu-id="518b8-103">MsmqTransportBindingElement</span><span class="sxs-lookup"><span data-stu-id="518b8-103">MsmqTransportBindingElement</span></span>  
+# <a name="msmqtransportbindingelement"></a><span data-ttu-id="d0a2d-102">MsmqTransportBindingElement</span><span class="sxs-lookup"><span data-stu-id="d0a2d-102">MsmqTransportBindingElement</span></span>
+<span data-ttu-id="d0a2d-103">MsmqTransportBindingElement</span><span class="sxs-lookup"><span data-stu-id="d0a2d-103">MsmqTransportBindingElement</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="518b8-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="518b8-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="d0a2d-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="d0a2d-104">Syntax</span></span>  
   
 ```  
 class MsmqTransportBindingElement : MsmqBindingElementBase  
@@ -34,38 +22,38 @@ class MsmqTransportBindingElement : MsmqBindingElementBase
 };  
 ```  
   
-## <a name="methods"></a><span data-ttu-id="518b8-105">Методы</span><span class="sxs-lookup"><span data-stu-id="518b8-105">Methods</span></span>  
- <span data-ttu-id="518b8-106">Класс MsmqTransportBindingElement не определяет никаких методов.</span><span class="sxs-lookup"><span data-stu-id="518b8-106">The MsmqTransportBindingElement class does not define any methods.</span></span>  
+## <a name="methods"></a><span data-ttu-id="d0a2d-105">Методы</span><span class="sxs-lookup"><span data-stu-id="d0a2d-105">Methods</span></span>  
+ <span data-ttu-id="d0a2d-106">Класс MsmqTransportBindingElement не определяет никаких методов.</span><span class="sxs-lookup"><span data-stu-id="d0a2d-106">The MsmqTransportBindingElement class does not define any methods.</span></span>  
   
-## <a name="properties"></a><span data-ttu-id="518b8-107">Свойства</span><span class="sxs-lookup"><span data-stu-id="518b8-107">Properties</span></span>  
- <span data-ttu-id="518b8-108">Класс MsmqTransportBindingElement имеет следующие свойства.</span><span class="sxs-lookup"><span data-stu-id="518b8-108">The MsmqTransportBindingElement class has the following properties:</span></span>  
+## <a name="properties"></a><span data-ttu-id="d0a2d-107">Свойства</span><span class="sxs-lookup"><span data-stu-id="d0a2d-107">Properties</span></span>  
+ <span data-ttu-id="d0a2d-108">Класс MsmqTransportBindingElement имеет следующие свойства.</span><span class="sxs-lookup"><span data-stu-id="d0a2d-108">The MsmqTransportBindingElement class has the following properties:</span></span>  
   
-### <a name="maxpoolsize"></a><span data-ttu-id="518b8-109">MaxPoolSize</span><span class="sxs-lookup"><span data-stu-id="518b8-109">MaxPoolSize</span></span>  
- <span data-ttu-id="518b8-110">Тип данных: sint32</span><span class="sxs-lookup"><span data-stu-id="518b8-110">Data type: sint32</span></span>  
+### <a name="maxpoolsize"></a><span data-ttu-id="d0a2d-109">MaxPoolSize</span><span class="sxs-lookup"><span data-stu-id="d0a2d-109">MaxPoolSize</span></span>  
+ <span data-ttu-id="d0a2d-110">Тип данных: sint32</span><span class="sxs-lookup"><span data-stu-id="d0a2d-110">Data type: sint32</span></span>  
   
- <span data-ttu-id="518b8-111">Тип доступа: только для чтения</span><span class="sxs-lookup"><span data-stu-id="518b8-111">Access type: Read-only</span></span>  
+ <span data-ttu-id="d0a2d-111">Тип доступа: только для чтения</span><span class="sxs-lookup"><span data-stu-id="d0a2d-111">Access type: Read-only</span></span>  
   
- <span data-ttu-id="518b8-112">Максимальный размер пула, содержащего внутренние объекты сообщений MSMQ.</span><span class="sxs-lookup"><span data-stu-id="518b8-112">The maximum size of the pool that contains internal MSMQ message objects.</span></span>  
+ <span data-ttu-id="d0a2d-112">Максимальный размер пула, содержащего внутренние объекты сообщений MSMQ.</span><span class="sxs-lookup"><span data-stu-id="d0a2d-112">The maximum size of the pool that contains internal MSMQ message objects.</span></span>  
   
-### <a name="queuetransferprotocol"></a><span data-ttu-id="518b8-113">QueueTransferProtocol</span><span class="sxs-lookup"><span data-stu-id="518b8-113">QueueTransferProtocol</span></span>  
- <span data-ttu-id="518b8-114">Тип данных: string</span><span class="sxs-lookup"><span data-stu-id="518b8-114">Data type: string</span></span>  
+### <a name="queuetransferprotocol"></a><span data-ttu-id="d0a2d-113">QueueTransferProtocol</span><span class="sxs-lookup"><span data-stu-id="d0a2d-113">QueueTransferProtocol</span></span>  
+ <span data-ttu-id="d0a2d-114">Тип данных: string</span><span class="sxs-lookup"><span data-stu-id="d0a2d-114">Data type: string</span></span>  
   
- <span data-ttu-id="518b8-115">Тип доступа: только для чтения</span><span class="sxs-lookup"><span data-stu-id="518b8-115">Access type: Read-only</span></span>  
+ <span data-ttu-id="d0a2d-115">Тип доступа: только для чтения</span><span class="sxs-lookup"><span data-stu-id="d0a2d-115">Access type: Read-only</span></span>  
   
- <span data-ttu-id="518b8-116">Значение перечисления, в котором указывается поставленный в очередь транспорт канала связи, используемый данной привязкой.</span><span class="sxs-lookup"><span data-stu-id="518b8-116">An enumeration value that indicates the queued communication channel transport that this binding uses.</span></span>  
+ <span data-ttu-id="d0a2d-116">Значение перечисления, в котором указывается поставленный в очередь транспорт канала связи, используемый данной привязкой.</span><span class="sxs-lookup"><span data-stu-id="d0a2d-116">An enumeration value that indicates the queued communication channel transport that this binding uses.</span></span>  
   
-### <a name="useactivedirectory"></a><span data-ttu-id="518b8-117">UseActiveDirectory</span><span class="sxs-lookup"><span data-stu-id="518b8-117">UseActiveDirectory</span></span>  
- <span data-ttu-id="518b8-118">Тип данных: boolean</span><span class="sxs-lookup"><span data-stu-id="518b8-118">Data type: boolean</span></span>  
+### <a name="useactivedirectory"></a><span data-ttu-id="d0a2d-117">UseActiveDirectory</span><span class="sxs-lookup"><span data-stu-id="d0a2d-117">UseActiveDirectory</span></span>  
+ <span data-ttu-id="d0a2d-118">Тип данных: boolean</span><span class="sxs-lookup"><span data-stu-id="d0a2d-118">Data type: boolean</span></span>  
   
- <span data-ttu-id="518b8-119">Тип доступа: только для чтения</span><span class="sxs-lookup"><span data-stu-id="518b8-119">Access type: Read-only</span></span>  
+ <span data-ttu-id="d0a2d-119">Тип доступа: только для чтения</span><span class="sxs-lookup"><span data-stu-id="d0a2d-119">Access type: Read-only</span></span>  
   
- <span data-ttu-id="518b8-120">Возвращает логическое значение, указывающее, следует ли преобразовывать адреса очередей с помощью Active Directory.</span><span class="sxs-lookup"><span data-stu-id="518b8-120">Returns a Boolean value that indicates whether queue addresses should be converted using Active Directory.</span></span>  
+ <span data-ttu-id="d0a2d-120">Возвращает логическое значение, указывающее, следует ли преобразовывать адреса очередей с помощью Active Directory.</span><span class="sxs-lookup"><span data-stu-id="d0a2d-120">Returns a Boolean value that indicates whether queue addresses should be converted using Active Directory.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="518b8-121">Требования</span><span class="sxs-lookup"><span data-stu-id="518b8-121">Requirements</span></span>  
+## <a name="requirements"></a><span data-ttu-id="d0a2d-121">Требования</span><span class="sxs-lookup"><span data-stu-id="d0a2d-121">Requirements</span></span>  
   
-|<span data-ttu-id="518b8-122">MOF</span><span class="sxs-lookup"><span data-stu-id="518b8-122">MOF</span></span>|<span data-ttu-id="518b8-123">Объявлено в файле Servicemodel.mof.</span><span class="sxs-lookup"><span data-stu-id="518b8-123">Declared in Servicemodel.mof.</span></span>|  
+|<span data-ttu-id="d0a2d-122">MOF</span><span class="sxs-lookup"><span data-stu-id="d0a2d-122">MOF</span></span>|<span data-ttu-id="d0a2d-123">Объявлено в файле Servicemodel.mof.</span><span class="sxs-lookup"><span data-stu-id="d0a2d-123">Declared in Servicemodel.mof.</span></span>|  
 |---------|-----------------------------------|  
-|<span data-ttu-id="518b8-124">Пространство имен</span><span class="sxs-lookup"><span data-stu-id="518b8-124">Namespace</span></span>|<span data-ttu-id="518b8-125">Определено в root\ServiceModel.</span><span class="sxs-lookup"><span data-stu-id="518b8-125">Defined in root\ServiceModel</span></span>|  
+|<span data-ttu-id="d0a2d-124">Пространство имен</span><span class="sxs-lookup"><span data-stu-id="d0a2d-124">Namespace</span></span>|<span data-ttu-id="d0a2d-125">Определено в root\ServiceModel.</span><span class="sxs-lookup"><span data-stu-id="d0a2d-125">Defined in root\ServiceModel</span></span>|  
   
-## <a name="see-also"></a><span data-ttu-id="518b8-126">См. также</span><span class="sxs-lookup"><span data-stu-id="518b8-126">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="d0a2d-126">См. также</span><span class="sxs-lookup"><span data-stu-id="d0a2d-126">See Also</span></span>  
  <xref:System.ServiceModel.Channels.MsmqTransportBindingElement>

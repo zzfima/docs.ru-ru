@@ -1,32 +1,20 @@
 ---
 title: System.ServiceModel.ServiceHostTimeoutOnClose
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 89f360d2-5bed-4677-ab55-26d9bd12695a
-caps.latest.revision: "5"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 71baadeae73c2cbaf203fc141e6f002c5ae9902d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2b155da29dd50f118560aadb919988f9ed74fc30
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="systemservicemodelservicehosttimeoutonclose"></a><span data-ttu-id="8396d-102">System.ServiceModel.ServiceHostTimeoutOnClose</span><span class="sxs-lookup"><span data-stu-id="8396d-102">System.ServiceModel.ServiceHostTimeoutOnClose</span></span>
-<span data-ttu-id="8396d-103">System.ServiceModel.ServiceHostTimeoutOnClose</span><span class="sxs-lookup"><span data-stu-id="8396d-103">System.ServiceModel.ServiceHostTimeoutOnClose</span></span>  
+# <a name="systemservicemodelservicehosttimeoutonclose"></a><span data-ttu-id="3da16-102">System.ServiceModel.ServiceHostTimeoutOnClose</span><span class="sxs-lookup"><span data-stu-id="3da16-102">System.ServiceModel.ServiceHostTimeoutOnClose</span></span>
+<span data-ttu-id="3da16-103">System.ServiceModel.ServiceHostTimeoutOnClose</span><span class="sxs-lookup"><span data-stu-id="3da16-103">System.ServiceModel.ServiceHostTimeoutOnClose</span></span>  
   
-## <a name="description"></a><span data-ttu-id="8396d-104">Описание:</span><span class="sxs-lookup"><span data-stu-id="8396d-104">Description</span></span>  
- <span data-ttu-id="8396d-105">Истекло время ожидания для операции закрытия узла ServiceHost. Это говорит о том, что некоторые каналы, связанные с сеансами, не закрыты клиентом надлежащим образом и, возможно, прерваны.</span><span class="sxs-lookup"><span data-stu-id="8396d-105">The close operation of a ServiceHost is timed out. This indicates that some sessionful channels were not properly shutdown by the client and could have been aborted.</span></span> <span data-ttu-id="8396d-106">Измените время по умолчанию, чтобы отрегулировать время ожидания закрытия.</span><span class="sxs-lookup"><span data-stu-id="8396d-106">Modify the default time to adjust close timeout.</span></span>  
+## <a name="description"></a><span data-ttu-id="3da16-104">Описание</span><span class="sxs-lookup"><span data-stu-id="3da16-104">Description</span></span>  
+ <span data-ttu-id="3da16-105">Истекло время ожидания для операции закрытия узла ServiceHost. Это говорит о том, что некоторые каналы, связанные с сеансами, не закрыты клиентом надлежащим образом и, возможно, прерваны.</span><span class="sxs-lookup"><span data-stu-id="3da16-105">The close operation of a ServiceHost is timed out. This indicates that some sessionful channels were not properly shutdown by the client and could have been aborted.</span></span> <span data-ttu-id="3da16-106">Измените время по умолчанию, чтобы отрегулировать время ожидания закрытия.</span><span class="sxs-lookup"><span data-stu-id="3da16-106">Modify the default time to adjust close timeout.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="8396d-107">См. также</span><span class="sxs-lookup"><span data-stu-id="8396d-107">See Also</span></span>  
- [<span data-ttu-id="8396d-108">Трассировка</span><span class="sxs-lookup"><span data-stu-id="8396d-108">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="8396d-109">Использование трассировки для устранения неполадок приложения</span><span class="sxs-lookup"><span data-stu-id="8396d-109">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="8396d-110">Администрирование и диагностика</span><span class="sxs-lookup"><span data-stu-id="8396d-110">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="3da16-107">См. также</span><span class="sxs-lookup"><span data-stu-id="3da16-107">See Also</span></span>  
+ [<span data-ttu-id="3da16-108">Трассировка</span><span class="sxs-lookup"><span data-stu-id="3da16-108">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="3da16-109">Использование трассировки для устранения неполадок приложения</span><span class="sxs-lookup"><span data-stu-id="3da16-109">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="3da16-110">Администрирование и диагностика</span><span class="sxs-lookup"><span data-stu-id="3da16-110">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

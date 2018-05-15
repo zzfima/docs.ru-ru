@@ -1,41 +1,31 @@
 ---
-title: "Служба: количество сбоев при проверке безопасности и проверке подлинности"
-ms.custom: 
+title: 'Служба: количество сбоев при проверке безопасности и проверке подлинности'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 55c98268-b1ad-459d-851b-25ef52248187
-caps.latest.revision: "7"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 50944c55525150868e5ddac9730792c10f6b975c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e160b014b7aa7586566073b800084d44be15ccaf
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="service-security-validation-and-authentication-failures"></a><span data-ttu-id="7155f-102">Служба: количество сбоев при проверке безопасности и проверке подлинности</span><span class="sxs-lookup"><span data-stu-id="7155f-102">Service: Security Validation and Authentication Failures</span></span>
-<span data-ttu-id="7155f-103">Имя счетчика: Security Validation and Authentication Failures</span><span class="sxs-lookup"><span data-stu-id="7155f-103">Counter name: Security Validation and Authentication Failures</span></span>  
+# <a name="service-security-validation-and-authentication-failures"></a><span data-ttu-id="9999d-102">Служба: количество сбоев при проверке безопасности и проверке подлинности</span><span class="sxs-lookup"><span data-stu-id="9999d-102">Service: Security Validation and Authentication Failures</span></span>
+<span data-ttu-id="9999d-103">Имя счетчика: Security Validation and Authentication Failures</span><span class="sxs-lookup"><span data-stu-id="9999d-103">Counter name: Security Validation and Authentication Failures</span></span>  
   
-## <a name="description"></a><span data-ttu-id="7155f-104">Описание:</span><span class="sxs-lookup"><span data-stu-id="7155f-104">Description</span></span>  
- <span data-ttu-id="7155f-105">Значение этого счетчика увеличивается всякий раз, когда сообщение отклоняется из-за проблемы безопасности, не относящейся к счетчику "Security Calls Not Authorized".</span><span class="sxs-lookup"><span data-stu-id="7155f-105">This counter is incremented whenever a message is rejected due to a security problem not covered by the "Security Calls Not Authorized" counter.</span></span> <span data-ttu-id="7155f-106">К таким проблемам относятся следующие.</span><span class="sxs-lookup"><span data-stu-id="7155f-106">Such problems include:</span></span>  
+## <a name="description"></a><span data-ttu-id="9999d-104">Описание</span><span class="sxs-lookup"><span data-stu-id="9999d-104">Description</span></span>  
+ <span data-ttu-id="9999d-105">Значение этого счетчика увеличивается всякий раз, когда сообщение отклоняется из-за проблемы безопасности, не относящейся к счетчику "Security Calls Not Authorized".</span><span class="sxs-lookup"><span data-stu-id="9999d-105">This counter is incremented whenever a message is rejected due to a security problem not covered by the "Security Calls Not Authorized" counter.</span></span> <span data-ttu-id="9999d-106">К таким проблемам относятся следующие.</span><span class="sxs-lookup"><span data-stu-id="9999d-106">Such problems include:</span></span>  
   
--   <span data-ttu-id="7155f-107">Невозможно прочесть в этом сообщении маркер клиента.</span><span class="sxs-lookup"><span data-stu-id="7155f-107">Client token cannot be read from the message.</span></span>  
+-   <span data-ttu-id="9999d-107">Невозможно прочесть в этом сообщении маркер клиента.</span><span class="sxs-lookup"><span data-stu-id="9999d-107">Client token cannot be read from the message.</span></span>  
   
--   <span data-ttu-id="7155f-108">Маркер клиента не прошел проверку подлинности (например, неправильный пароль).</span><span class="sxs-lookup"><span data-stu-id="7155f-108">Client token has failed authentication (for example,, bad password).</span></span>  
+-   <span data-ttu-id="9999d-108">Маркер клиента не прошел проверку подлинности (например, неправильный пароль).</span><span class="sxs-lookup"><span data-stu-id="9999d-108">Client token has failed authentication (for example,, bad password).</span></span>  
   
--   <span data-ttu-id="7155f-109">Сбой при проверке подписи (например, сообщение было искажено).</span><span class="sxs-lookup"><span data-stu-id="7155f-109">Signature verification has failed (for example,, the message has been tampered).</span></span>  
+-   <span data-ttu-id="9999d-109">Сбой при проверке подписи (например, сообщение было искажено).</span><span class="sxs-lookup"><span data-stu-id="9999d-109">Signature verification has failed (for example,, the message has been tampered).</span></span>  
   
--   <span data-ttu-id="7155f-110">Сообщение является копией предыдущего, что может свидетельствовать об атаке воспроизведения.</span><span class="sxs-lookup"><span data-stu-id="7155f-110">The message is a duplicate from a previous one, which can happen during a replay attack.</span></span>  
+-   <span data-ttu-id="9999d-110">Сообщение является копией предыдущего, что может свидетельствовать об атаке воспроизведения.</span><span class="sxs-lookup"><span data-stu-id="9999d-110">The message is a duplicate from a previous one, which can happen during a replay attack.</span></span>  
   
--   <span data-ttu-id="7155f-111">Произошел сбой при расшифровке.</span><span class="sxs-lookup"><span data-stu-id="7155f-111">A decryption failure has occurred.</span></span>  
+-   <span data-ttu-id="9999d-111">Произошел сбой при расшифровке.</span><span class="sxs-lookup"><span data-stu-id="9999d-111">A decryption failure has occurred.</span></span>  
   
--   <span data-ttu-id="7155f-112">В сообщении отсутствуют некоторые обязательные элементы (например, отсутствует метка времени или зашифрованный блок данных).</span><span class="sxs-lookup"><span data-stu-id="7155f-112">Some required elements (for example,, missing timestamp or encrypted data block) are missing from the message.</span></span>  
+-   <span data-ttu-id="9999d-112">В сообщении отсутствуют некоторые обязательные элементы (например, отсутствует метка времени или зашифрованный блок данных).</span><span class="sxs-lookup"><span data-stu-id="9999d-112">Some required elements (for example,, missing timestamp or encrypted data block) are missing from the message.</span></span>  
   
--   <span data-ttu-id="7155f-113">Во время подтверждения TLSNEGO/SPNEGO произошли ошибки.</span><span class="sxs-lookup"><span data-stu-id="7155f-113">Errors have occurred during TLSNEGO/SPNEGO handshake.</span></span>
+-   <span data-ttu-id="9999d-113">Во время подтверждения TLSNEGO/SPNEGO произошли ошибки.</span><span class="sxs-lookup"><span data-stu-id="9999d-113">Errors have occurred during TLSNEGO/SPNEGO handshake.</span></span>

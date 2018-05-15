@@ -1,38 +1,26 @@
 ---
-title: "Как секционировать данные служб"
-ms.custom: 
+title: Как секционировать данные служб
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 1ccff72e-d76b-4e36-93a2-e51f7b32dc83
-caps.latest.revision: "3"
-author: wadepickett
-ms.author: wpickett
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c6a3f95f2ecea342072de010a6cee51069f755fa
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 47e84555e38d2a71b7741c18de5f67349a622798
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="how-to-service-data-partitioning"></a><span data-ttu-id="1d88a-102">Как секционировать данные служб</span><span class="sxs-lookup"><span data-stu-id="1d88a-102">How To: Service Data Partitioning</span></span>
-<span data-ttu-id="1d88a-103">В этом разделе описаны основные шаги, которые необходимо выполнить для секционирования сообщений по нескольким экземплярам одной и той же целевой службы.</span><span class="sxs-lookup"><span data-stu-id="1d88a-103">This topic outlines the basic steps required to partition messages across multiple instances of the same destination service.</span></span> <span data-ttu-id="1d88a-104">Секционирование данных служб обычно используется в том случае, если необходимо масштабирование службы для повышения качества обслуживания или определенным образом обрабатывать запросы от различных клиентов.</span><span class="sxs-lookup"><span data-stu-id="1d88a-104">Service data partitioning is typically used when you need to scale a service in order to provide better quality of service, or when you need to handle requests from different customers in a specific way.</span></span> <span data-ttu-id="1d88a-105">Например сообщения от высокое значение "или" клиенты «Золотая» может потребоваться обрабатываться более высокий приоритет, чем сообщения от стандартных клиентов.</span><span class="sxs-lookup"><span data-stu-id="1d88a-105">For example, messages from high value or "Gold" customers may need to be processed at a higher priority than messages from a standard customer.</span></span>  
+# <a name="how-to-service-data-partitioning"></a><span data-ttu-id="4890b-102">Как секционировать данные служб</span><span class="sxs-lookup"><span data-stu-id="4890b-102">How To: Service Data Partitioning</span></span>
+<span data-ttu-id="4890b-103">В этом разделе описаны основные шаги, которые необходимо выполнить для секционирования сообщений по нескольким экземплярам одной и той же целевой службы.</span><span class="sxs-lookup"><span data-stu-id="4890b-103">This topic outlines the basic steps required to partition messages across multiple instances of the same destination service.</span></span> <span data-ttu-id="4890b-104">Секционирование данных служб обычно используется в том случае, если необходимо масштабирование службы для повышения качества обслуживания или определенным образом обрабатывать запросы от различных клиентов.</span><span class="sxs-lookup"><span data-stu-id="4890b-104">Service data partitioning is typically used when you need to scale a service in order to provide better quality of service, or when you need to handle requests from different customers in a specific way.</span></span> <span data-ttu-id="4890b-105">Например сообщения от высокое значение "или" клиенты «Золотая» может потребоваться обрабатываться более высокий приоритет, чем сообщения от стандартных клиентов.</span><span class="sxs-lookup"><span data-stu-id="4890b-105">For example, messages from high value or "Gold" customers may need to be processed at a higher priority than messages from a standard customer.</span></span>  
   
- <span data-ttu-id="1d88a-106">В этом примере сообщения передаются двум экземплярам службы regularCalc.</span><span class="sxs-lookup"><span data-stu-id="1d88a-106">In this example, messages are routed to one of two instances of the regularCalc service.</span></span> <span data-ttu-id="1d88a-107">Оба экземпляра службы идентичны, но служба, представленная конечной точкой calculator1, обрабатывает сообщения, которые получены от особо важных клиентов, а конечная точка calculator2 - от остальных.</span><span class="sxs-lookup"><span data-stu-id="1d88a-107">Both instances of the service are identical; however the service represented by the calculator1 endpoint processes messages received from high value customers, the calculator 2 endpoint processes messages from other customers</span></span>  
+ <span data-ttu-id="4890b-106">В этом примере сообщения передаются двум экземплярам службы regularCalc.</span><span class="sxs-lookup"><span data-stu-id="4890b-106">In this example, messages are routed to one of two instances of the regularCalc service.</span></span> <span data-ttu-id="4890b-107">Оба экземпляра службы идентичны, но служба, представленная конечной точкой calculator1, обрабатывает сообщения, которые получены от особо важных клиентов, а конечная точка calculator2 - от остальных.</span><span class="sxs-lookup"><span data-stu-id="4890b-107">Both instances of the service are identical; however the service represented by the calculator1 endpoint processes messages received from high value customers, the calculator 2 endpoint processes messages from other customers</span></span>  
   
- <span data-ttu-id="1d88a-108">Сообщение, отправляемое от клиента, не содержит уникальных данных, которые могут быть использованы для определения экземпляра службы, которому необходимо направить сообщение.</span><span class="sxs-lookup"><span data-stu-id="1d88a-108">The message sent from the client does not have any unique data that can be used to identify which service instance the message should be routed to.</span></span> <span data-ttu-id="1d88a-109">Чтобы каждый клиент мог обращаться к определенным службам, будут реализованы две конечные точки целевой службы, которые будут получать сообщения.</span><span class="sxs-lookup"><span data-stu-id="1d88a-109">To allow each client to route data to a specific destination service we will implement two service endpoints that will be used to receive messages.</span></span>  
+ <span data-ttu-id="4890b-108">Сообщение, отправляемое от клиента, не содержит уникальных данных, которые могут быть использованы для определения экземпляра службы, которому необходимо направить сообщение.</span><span class="sxs-lookup"><span data-stu-id="4890b-108">The message sent from the client does not have any unique data that can be used to identify which service instance the message should be routed to.</span></span> <span data-ttu-id="4890b-109">Чтобы каждый клиент мог обращаться к определенным службам, будут реализованы две конечные точки целевой службы, которые будут получать сообщения.</span><span class="sxs-lookup"><span data-stu-id="4890b-109">To allow each client to route data to a specific destination service we will implement two service endpoints that will be used to receive messages.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="1d88a-110">Хотя в этом примере секционирование данных производится по конечным точкам, оно также может выполняться по данным, содержащимся в самом сообщении (заголовку или тексту).</span><span class="sxs-lookup"><span data-stu-id="1d88a-110">While this example uses specific endpoints to partition data, this could also be accomplished using information contained within the message itself such as header or body data.</span></span>  
+>  <span data-ttu-id="4890b-110">Хотя в этом примере секционирование данных производится по конечным точкам, оно также может выполняться по данным, содержащимся в самом сообщении (заголовку или тексту).</span><span class="sxs-lookup"><span data-stu-id="4890b-110">While this example uses specific endpoints to partition data, this could also be accomplished using information contained within the message itself such as header or body data.</span></span>  
   
-### <a name="implement-service-data-partitioning"></a><span data-ttu-id="1d88a-111">Реализация секционирования данных служб</span><span class="sxs-lookup"><span data-stu-id="1d88a-111">Implement Service Data Partitioning</span></span>  
+### <a name="implement-service-data-partitioning"></a><span data-ttu-id="4890b-111">Реализация секционирования данных служб</span><span class="sxs-lookup"><span data-stu-id="4890b-111">Implement Service Data Partitioning</span></span>  
   
-1.  <span data-ttu-id="1d88a-112">Создайте базовую конфигурацию службы маршрутизации, указав конечные точки службы, предоставленные службой.</span><span class="sxs-lookup"><span data-stu-id="1d88a-112">Create the basic Routing Service configuration by specifying the service endpoints exposed by the service.</span></span> <span data-ttu-id="1d88a-113">В следующем примере определяются две конечные точки службы, которые будут использоваться для получения сообщений.</span><span class="sxs-lookup"><span data-stu-id="1d88a-113">The following example defines two endpoints, which will be used to receive messages.</span></span> <span data-ttu-id="1d88a-114">Кроме того, будут определены клиентские конечные точки для отправки сообщений экземплярам служб regularCalc.</span><span class="sxs-lookup"><span data-stu-id="1d88a-114">It also defines the client endpoints, which are used to send messages to the regularCalc service instances.</span></span>  
+1.  <span data-ttu-id="4890b-112">Создайте базовую конфигурацию службы маршрутизации, указав конечные точки службы, предоставленные службой.</span><span class="sxs-lookup"><span data-stu-id="4890b-112">Create the basic Routing Service configuration by specifying the service endpoints exposed by the service.</span></span> <span data-ttu-id="4890b-113">В следующем примере определяются две конечные точки службы, которые будут использоваться для получения сообщений.</span><span class="sxs-lookup"><span data-stu-id="4890b-113">The following example defines two endpoints, which will be used to receive messages.</span></span> <span data-ttu-id="4890b-114">Кроме того, будут определены клиентские конечные точки для отправки сообщений экземплярам служб regularCalc.</span><span class="sxs-lookup"><span data-stu-id="4890b-114">It also defines the client endpoints, which are used to send messages to the regularCalc service instances.</span></span>  
   
     ```xml  
     <services>  
@@ -69,7 +57,7 @@ ms.lasthandoff: 12/22/2017
      </client>  
     ```  
   
-2.  <span data-ttu-id="1d88a-115">Определите фильтры, используемые для маршрутизации сообщений до конечных точек назначения.</span><span class="sxs-lookup"><span data-stu-id="1d88a-115">Define the filters used to route messages to the destination endpoints.</span></span>  <span data-ttu-id="1d88a-116">В этом примере фильтр EndpointName служит для определения конечной точки службы, которая получает сообщение.</span><span class="sxs-lookup"><span data-stu-id="1d88a-116">For this example, the EndpointName filter is used to determine which service endpoint received the message.</span></span> <span data-ttu-id="1d88a-117">В следующем примере определяется секция и фильтры маршрутизации.</span><span class="sxs-lookup"><span data-stu-id="1d88a-117">The following example defines the necessary routing section and filters.</span></span>  
+2.  <span data-ttu-id="4890b-115">Определите фильтры, используемые для маршрутизации сообщений до конечных точек назначения.</span><span class="sxs-lookup"><span data-stu-id="4890b-115">Define the filters used to route messages to the destination endpoints.</span></span>  <span data-ttu-id="4890b-116">В этом примере фильтр EndpointName служит для определения конечной точки службы, которая получает сообщение.</span><span class="sxs-lookup"><span data-stu-id="4890b-116">For this example, the EndpointName filter is used to determine which service endpoint received the message.</span></span> <span data-ttu-id="4890b-117">В следующем примере определяется секция и фильтры маршрутизации.</span><span class="sxs-lookup"><span data-stu-id="4890b-117">The following example defines the necessary routing section and filters.</span></span>  
   
     ```xml  
     <filters>  
@@ -82,9 +70,9 @@ ms.lasthandoff: 12/22/2017
     </filters>  
     ```  
   
-3.  <span data-ttu-id="1d88a-118">Определите таблицу фильтров, которая связывает каждый фильтр с клиентской конечной точкой.</span><span class="sxs-lookup"><span data-stu-id="1d88a-118">Define the filter table, which associates each filter with a client endpoint.</span></span> <span data-ttu-id="1d88a-119">В этом примере маршрутизация сообщения будет определяться по конечной точке, через которую оно было получено.</span><span class="sxs-lookup"><span data-stu-id="1d88a-119">In this example, the message will be routed based on the specific endpoint it was received over.</span></span> <span data-ttu-id="1d88a-120">Поскольку сообщение может соответствовать только одному из двух возможных фильтров, в использовании приоритетов фильтров для управление порядком выполнения оценки фильтров не требуется.</span><span class="sxs-lookup"><span data-stu-id="1d88a-120">Since the message can only match one of the two possible filters, there is no need for using filter priority to control to the order in which filters are evaluated.</span></span>  
+3.  <span data-ttu-id="4890b-118">Определите таблицу фильтров, которая связывает каждый фильтр с клиентской конечной точкой.</span><span class="sxs-lookup"><span data-stu-id="4890b-118">Define the filter table, which associates each filter with a client endpoint.</span></span> <span data-ttu-id="4890b-119">В этом примере маршрутизация сообщения будет определяться по конечной точке, через которую оно было получено.</span><span class="sxs-lookup"><span data-stu-id="4890b-119">In this example, the message will be routed based on the specific endpoint it was received over.</span></span> <span data-ttu-id="4890b-120">Поскольку сообщение может соответствовать только одному из двух возможных фильтров, в использовании приоритетов фильтров для управление порядком выполнения оценки фильтров не требуется.</span><span class="sxs-lookup"><span data-stu-id="4890b-120">Since the message can only match one of the two possible filters, there is no need for using filter priority to control to the order in which filters are evaluated.</span></span>  
   
-     <span data-ttu-id="1d88a-121">Далее будет определена таблица фильтров, а также добавлены определенные ранее фильтры.</span><span class="sxs-lookup"><span data-stu-id="1d88a-121">The following defines the filter table and adds the filters defined earlier.</span></span>  
+     <span data-ttu-id="4890b-121">Далее будет определена таблица фильтров, а также добавлены определенные ранее фильтры.</span><span class="sxs-lookup"><span data-stu-id="4890b-121">The following defines the filter table and adds the filters defined earlier.</span></span>  
   
     ```xml  
     <filterTables>  
@@ -96,7 +84,7 @@ ms.lasthandoff: 12/22/2017
     </filterTables>  
     ```  
   
-4.  <span data-ttu-id="1d88a-122">Для обработки входящих сообщений фильтрами, содержащимися в таблице, необходимо связать таблицу фильтров с конечными точками службы при помощи поведения маршрутизации.</span><span class="sxs-lookup"><span data-stu-id="1d88a-122">To evaluate incoming messages against the filters contained in the table, you must associate the filter table with the service endpoints by using the routing behavior.</span></span> <span data-ttu-id="1d88a-123">В следующем примере показано связывание «filterTable1» с конечными точками служб:</span><span class="sxs-lookup"><span data-stu-id="1d88a-123">The following example demonstrates associating "filterTable1" with the service endpoints:</span></span>  
+4.  <span data-ttu-id="4890b-122">Для обработки входящих сообщений фильтрами, содержащимися в таблице, необходимо связать таблицу фильтров с конечными точками службы при помощи поведения маршрутизации.</span><span class="sxs-lookup"><span data-stu-id="4890b-122">To evaluate incoming messages against the filters contained in the table, you must associate the filter table with the service endpoints by using the routing behavior.</span></span> <span data-ttu-id="4890b-123">В следующем примере показано связывание «filterTable1» с конечными точками служб:</span><span class="sxs-lookup"><span data-stu-id="4890b-123">The following example demonstrates associating "filterTable1" with the service endpoints:</span></span>  
   
     ```xml  
     <behaviors>  
@@ -109,8 +97,8 @@ ms.lasthandoff: 12/22/2017
     </behaviors>  
     ```  
   
-## <a name="example"></a><span data-ttu-id="1d88a-124">Пример</span><span class="sxs-lookup"><span data-stu-id="1d88a-124">Example</span></span>  
- <span data-ttu-id="1d88a-125">Далее приведен полный листинг файла конфигурации.</span><span class="sxs-lookup"><span data-stu-id="1d88a-125">The following is a complete listing of the configuration file.</span></span>  
+## <a name="example"></a><span data-ttu-id="4890b-124">Пример</span><span class="sxs-lookup"><span data-stu-id="4890b-124">Example</span></span>  
+ <span data-ttu-id="4890b-125">Далее приведен полный листинг файла конфигурации.</span><span class="sxs-lookup"><span data-stu-id="4890b-125">The following is a complete listing of the configuration file.</span></span>  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8" ?>  
@@ -184,5 +172,5 @@ ms.lasthandoff: 12/22/2017
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="1d88a-126">См. также</span><span class="sxs-lookup"><span data-stu-id="1d88a-126">See Also</span></span>  
- [<span data-ttu-id="1d88a-127">Службы маршрутизации</span><span class="sxs-lookup"><span data-stu-id="1d88a-127">Routing Services</span></span>](../../../../docs/framework/wcf/samples/routing-services.md)
+## <a name="see-also"></a><span data-ttu-id="4890b-126">См. также</span><span class="sxs-lookup"><span data-stu-id="4890b-126">See Also</span></span>  
+ [<span data-ttu-id="4890b-127">Службы маршрутизации</span><span class="sxs-lookup"><span data-stu-id="4890b-127">Routing Services</span></span>](../../../../docs/framework/wcf/samples/routing-services.md)

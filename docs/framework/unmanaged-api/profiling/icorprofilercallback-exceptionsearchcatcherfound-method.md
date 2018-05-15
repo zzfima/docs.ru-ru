@@ -1,14 +1,6 @@
 ---
-title: "Метод ICorProfilerCallback::ExceptionSearchCatcherFound"
-ms.custom: 
+title: Метод ICorProfilerCallback::ExceptionSearchCatcherFound
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorProfilerCallback.ExceptionSearchCatcherFound
 api_location:
@@ -23,40 +15,36 @@ helpviewer_keywords:
 ms.assetid: 190f424d-5e37-4163-a191-0895686e9476
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: fc226b6102c50b118a4b13f9cd25700dd1ca7301
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: beb0e4d3e22ffc3619a6c5281ab5d72efeda921d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="icorprofilercallbackexceptionsearchcatcherfound-method"></a><span data-ttu-id="6f82d-102">Метод ICorProfilerCallback::ExceptionSearchCatcherFound</span><span class="sxs-lookup"><span data-stu-id="6f82d-102">ICorProfilerCallback::ExceptionSearchCatcherFound Method</span></span>
-<span data-ttu-id="6f82d-103">Уведомляет профилировщик, что на поисковом этапе обработки исключений был обнаружен обработчик для исключения.</span><span class="sxs-lookup"><span data-stu-id="6f82d-103">Notifies the profiler that the search phase of exception handling has located a handler for the exception that was thrown.</span></span>  
+# <a name="icorprofilercallbackexceptionsearchcatcherfound-method"></a><span data-ttu-id="68496-102">Метод ICorProfilerCallback::ExceptionSearchCatcherFound</span><span class="sxs-lookup"><span data-stu-id="68496-102">ICorProfilerCallback::ExceptionSearchCatcherFound Method</span></span>
+<span data-ttu-id="68496-103">Уведомляет профилировщик, что на поисковом этапе обработки исключений был обнаружен обработчик для исключения.</span><span class="sxs-lookup"><span data-stu-id="68496-103">Notifies the profiler that the search phase of exception handling has located a handler for the exception that was thrown.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="6f82d-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="6f82d-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="68496-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="68496-104">Syntax</span></span>  
   
 ```  
 RESULT ExceptionSearchCatcherFound(  
     [in] FunctionID functionId);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="6f82d-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="6f82d-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="68496-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="68496-105">Parameters</span></span>  
  `functionId`  
- <span data-ttu-id="6f82d-106">[in] Идентификатор функции, которая содержит обработчик исключений.</span><span class="sxs-lookup"><span data-stu-id="6f82d-106">[in] The ID of the function that contains the exception handler.</span></span>  
+ <span data-ttu-id="68496-106">[in] Идентификатор функции, которая содержит обработчик исключений.</span><span class="sxs-lookup"><span data-stu-id="68496-106">[in] The ID of the function that contains the exception handler.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="6f82d-107">Требования</span><span class="sxs-lookup"><span data-stu-id="6f82d-107">Requirements</span></span>  
- <span data-ttu-id="6f82d-108">**Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="6f82d-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="68496-107">Требования</span><span class="sxs-lookup"><span data-stu-id="68496-107">Requirements</span></span>  
+ <span data-ttu-id="68496-108">**Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="68496-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="6f82d-109">**Заголовок:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="6f82d-109">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="68496-109">**Заголовок:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="68496-109">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="6f82d-110">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="6f82d-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="68496-110">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="68496-110">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="6f82d-111">**Версии платформы .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="6f82d-111">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="68496-111">**Версии платформы .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="68496-111">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="6f82d-112">См. также</span><span class="sxs-lookup"><span data-stu-id="6f82d-112">See Also</span></span>  
- [<span data-ttu-id="6f82d-113">Интерфейс ICorProfilerCallback</span><span class="sxs-lookup"><span data-stu-id="6f82d-113">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+## <a name="see-also"></a><span data-ttu-id="68496-112">См. также</span><span class="sxs-lookup"><span data-stu-id="68496-112">See Also</span></span>  
+ [<span data-ttu-id="68496-113">Интерфейс ICorProfilerCallback</span><span class="sxs-lookup"><span data-stu-id="68496-113">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

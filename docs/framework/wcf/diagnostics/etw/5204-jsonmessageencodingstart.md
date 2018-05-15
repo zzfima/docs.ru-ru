@@ -1,39 +1,27 @@
 ---
 title: 5204 - JsonMessageEncodingStart
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: eda84660-7bf9-4633-81ce-e294f258d8e4
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d23fb32a1cd84f9c01b0100f73f9a8da4a687702
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0ac3d5205e68b71ef58266fbf65c126fcca5fb88
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="5204---jsonmessageencodingstart"></a><span data-ttu-id="5e38e-102">5204 - JsonMessageEncodingStart</span><span class="sxs-lookup"><span data-stu-id="5e38e-102">5204 - JsonMessageEncodingStart</span></span>
-## <a name="properties"></a><span data-ttu-id="5e38e-103">Свойства</span><span class="sxs-lookup"><span data-stu-id="5e38e-103">Properties</span></span>  
+# <a name="5204---jsonmessageencodingstart"></a><span data-ttu-id="534e5-102">5204 - JsonMessageEncodingStart</span><span class="sxs-lookup"><span data-stu-id="534e5-102">5204 - JsonMessageEncodingStart</span></span>
+## <a name="properties"></a><span data-ttu-id="534e5-103">Свойства</span><span class="sxs-lookup"><span data-stu-id="534e5-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|<span data-ttu-id="5e38e-104">Идентификатор</span><span class="sxs-lookup"><span data-stu-id="5e38e-104">ID</span></span>|<span data-ttu-id="5e38e-105">5204</span><span class="sxs-lookup"><span data-stu-id="5e38e-105">5204</span></span>|  
-|<span data-ttu-id="5e38e-106">Ключевые слова</span><span class="sxs-lookup"><span data-stu-id="5e38e-106">Keywords</span></span>|<span data-ttu-id="5e38e-107">Канал</span><span class="sxs-lookup"><span data-stu-id="5e38e-107">Channel</span></span>|  
-|<span data-ttu-id="5e38e-108">Уровень</span><span class="sxs-lookup"><span data-stu-id="5e38e-108">Level</span></span>|<span data-ttu-id="5e38e-109">Verbose</span><span class="sxs-lookup"><span data-stu-id="5e38e-109">Verbose</span></span>|  
-|<span data-ttu-id="5e38e-110">Канал</span><span class="sxs-lookup"><span data-stu-id="5e38e-110">Channel</span></span>|<span data-ttu-id="5e38e-111">Microsoft-Windows-Application Server-Applications/Debug</span><span class="sxs-lookup"><span data-stu-id="5e38e-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
+|<span data-ttu-id="534e5-104">Идентификатор</span><span class="sxs-lookup"><span data-stu-id="534e5-104">ID</span></span>|<span data-ttu-id="534e5-105">5204</span><span class="sxs-lookup"><span data-stu-id="534e5-105">5204</span></span>|  
+|<span data-ttu-id="534e5-106">Ключевые слова</span><span class="sxs-lookup"><span data-stu-id="534e5-106">Keywords</span></span>|<span data-ttu-id="534e5-107">Канал</span><span class="sxs-lookup"><span data-stu-id="534e5-107">Channel</span></span>|  
+|<span data-ttu-id="534e5-108">Уровень</span><span class="sxs-lookup"><span data-stu-id="534e5-108">Level</span></span>|<span data-ttu-id="534e5-109">Verbose</span><span class="sxs-lookup"><span data-stu-id="534e5-109">Verbose</span></span>|  
+|<span data-ttu-id="534e5-110">Канал</span><span class="sxs-lookup"><span data-stu-id="534e5-110">Channel</span></span>|<span data-ttu-id="534e5-111">Microsoft-Windows-Application Server-Applications/Debug</span><span class="sxs-lookup"><span data-stu-id="534e5-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
   
-## <a name="description"></a><span data-ttu-id="5e38e-112">Описание</span><span class="sxs-lookup"><span data-stu-id="5e38e-112">Description</span></span>  
- <span data-ttu-id="5e38e-113">Это событие создается, когда JsonMessageEncoder начал кодировать сообщение.</span><span class="sxs-lookup"><span data-stu-id="5e38e-113">This event is emitted when the JsonMessageEncoder started encoding the message.</span></span>  
+## <a name="description"></a><span data-ttu-id="534e5-112">Описание</span><span class="sxs-lookup"><span data-stu-id="534e5-112">Description</span></span>  
+ <span data-ttu-id="534e5-113">Это событие создается, когда JsonMessageEncoder начал кодировать сообщение.</span><span class="sxs-lookup"><span data-stu-id="534e5-113">This event is emitted when the JsonMessageEncoder started encoding the message.</span></span>  
   
-## <a name="message"></a><span data-ttu-id="5e38e-114">Сообщение</span><span class="sxs-lookup"><span data-stu-id="5e38e-114">Message</span></span>  
- <span data-ttu-id="5e38e-115">JsonMessageEncoder начал кодирование сообщения.</span><span class="sxs-lookup"><span data-stu-id="5e38e-115">JsonMessageEncoder started encoding the message.</span></span>  
+## <a name="message"></a><span data-ttu-id="534e5-114">Сообщение</span><span class="sxs-lookup"><span data-stu-id="534e5-114">Message</span></span>  
+ <span data-ttu-id="534e5-115">JsonMessageEncoder начал кодирование сообщения.</span><span class="sxs-lookup"><span data-stu-id="534e5-115">JsonMessageEncoder started encoding the message.</span></span>  
   
-## <a name="details"></a><span data-ttu-id="5e38e-116">Подробные сведения</span><span class="sxs-lookup"><span data-stu-id="5e38e-116">Details</span></span>
+## <a name="details"></a><span data-ttu-id="534e5-116">Подробные сведения</span><span class="sxs-lookup"><span data-stu-id="534e5-116">Details</span></span>

@@ -1,32 +1,20 @@
 ---
 title: System.ServiceModel.CommunicationObjectOpening
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: e19954e9-dd48-4560-b891-96d0ff8ecf98
-caps.latest.revision: "5"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ce22d852346a292b44ea93b804ba13199806b8a0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3695eebce1da4b4306f8b33c7418cb88ff1ba02f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="systemservicemodelcommunicationobjectopening"></a><span data-ttu-id="8fcad-102">System.ServiceModel.CommunicationObjectOpening</span><span class="sxs-lookup"><span data-stu-id="8fcad-102">System.ServiceModel.CommunicationObjectOpening</span></span>
-<span data-ttu-id="8fcad-103">System.ServiceModel.CommunicationObjectOpening</span><span class="sxs-lookup"><span data-stu-id="8fcad-103">System.ServiceModel.CommunicationObjectOpening</span></span>  
+# <a name="systemservicemodelcommunicationobjectopening"></a><span data-ttu-id="be5f7-102">System.ServiceModel.CommunicationObjectOpening</span><span class="sxs-lookup"><span data-stu-id="be5f7-102">System.ServiceModel.CommunicationObjectOpening</span></span>
+<span data-ttu-id="be5f7-103">System.ServiceModel.CommunicationObjectOpening</span><span class="sxs-lookup"><span data-stu-id="be5f7-103">System.ServiceModel.CommunicationObjectOpening</span></span>  
   
-## <a name="description"></a><span data-ttu-id="8fcad-104">Описание</span><span class="sxs-lookup"><span data-stu-id="8fcad-104">Description</span></span>  
- <span data-ttu-id="8fcad-105">Открывается коммуникационный объект.</span><span class="sxs-lookup"><span data-stu-id="8fcad-105">A communication object is being opened.</span></span>  
+## <a name="description"></a><span data-ttu-id="be5f7-104">Описание</span><span class="sxs-lookup"><span data-stu-id="be5f7-104">Description</span></span>  
+ <span data-ttu-id="be5f7-105">Открывается коммуникационный объект.</span><span class="sxs-lookup"><span data-stu-id="be5f7-105">A communication object is being opened.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="8fcad-106">См. также</span><span class="sxs-lookup"><span data-stu-id="8fcad-106">See Also</span></span>  
- [<span data-ttu-id="8fcad-107">Трассировка</span><span class="sxs-lookup"><span data-stu-id="8fcad-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="8fcad-108">Использование трассировки для устранения неполадок приложения</span><span class="sxs-lookup"><span data-stu-id="8fcad-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="8fcad-109">Администрирование и диагностика</span><span class="sxs-lookup"><span data-stu-id="8fcad-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="be5f7-106">См. также</span><span class="sxs-lookup"><span data-stu-id="be5f7-106">See Also</span></span>  
+ [<span data-ttu-id="be5f7-107">Трассировка</span><span class="sxs-lookup"><span data-stu-id="be5f7-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="be5f7-108">Использование трассировки для устранения неполадок приложения</span><span class="sxs-lookup"><span data-stu-id="be5f7-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="be5f7-109">Администрирование и диагностика</span><span class="sxs-lookup"><span data-stu-id="be5f7-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

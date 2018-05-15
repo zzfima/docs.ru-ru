@@ -1,44 +1,32 @@
 ---
-title: "Ведение журналов сообщений"
-ms.custom: 
+title: Ведение журналов сообщений
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 6bce0682-75ef-4d65-a659-b328fba4a8b5
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: da73af529a20a8d2e3e7df0ebadf2aeee4acbf1c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 473ddb3b68f6bb7a13203015a44450a92994a3b6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="message-logging"></a><span data-ttu-id="5005e-102">Ведение журналов сообщений</span><span class="sxs-lookup"><span data-stu-id="5005e-102">Message Logging</span></span>
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]<span data-ttu-id="5005e-103"> предоставляет возможность записи входящих и исходящих сообщений в журнал для автономного использования.</span><span class="sxs-lookup"><span data-stu-id="5005e-103"> provides the capability to log incoming and outgoing messages for offline consumption.</span></span> <span data-ttu-id="5005e-104">Ведение журнала сообщений позволяет увидеть, что представляет собой сообщение и тело сообщения.</span><span class="sxs-lookup"><span data-stu-id="5005e-104">Message logging enables you to see what the message and message body looks like.</span></span> <span data-ttu-id="5005e-105">Этот тип ведения журнала особенно полезен, поскольку он позволяет узнать, какие аргументы были переданы и как они, выраженные в формате XML, были отображены в принимающей конечной точке.</span><span class="sxs-lookup"><span data-stu-id="5005e-105">This type of logging is particularly helpful in letting you know what arguments were passed in and how the receiving endpoint saw the arguments expressed as XML.</span></span> <span data-ttu-id="5005e-106">Кроме того, запись сообщения в том виде, в котором оно было получено, позволяет выполнять диагностику неправильно сформированных сообщений, а также узнать порядок поступления сообщения.</span><span class="sxs-lookup"><span data-stu-id="5005e-106">In addition, logging the message as it was received allows you to diagnose malformed messages as well as to see how the message arrived.</span></span> <span data-ttu-id="5005e-107">Также предусмотрена возможность проверки маркеров безопасности, зашифрованных и подписанных частей, и частей, которые остались без изменений.</span><span class="sxs-lookup"><span data-stu-id="5005e-107">You can also examine the security tokens used, parts encrypted and signed, and parts left intact.</span></span>  
+# <a name="message-logging"></a><span data-ttu-id="eb46b-102">Ведение журналов сообщений</span><span class="sxs-lookup"><span data-stu-id="eb46b-102">Message Logging</span></span>
+<span data-ttu-id="eb46b-103">Windows Communication Foundation (WCF) предоставляет возможность записи входящих и исходящих сообщений для автономного использования.</span><span class="sxs-lookup"><span data-stu-id="eb46b-103">Windows Communication Foundation (WCF) provides the capability to log incoming and outgoing messages for offline consumption.</span></span> <span data-ttu-id="eb46b-104">Ведение журнала сообщений позволяет увидеть, что представляет собой сообщение и тело сообщения.</span><span class="sxs-lookup"><span data-stu-id="eb46b-104">Message logging enables you to see what the message and message body looks like.</span></span> <span data-ttu-id="eb46b-105">Этот тип ведения журнала особенно полезен, поскольку он позволяет узнать, какие аргументы были переданы и как они, выраженные в формате XML, были отображены в принимающей конечной точке.</span><span class="sxs-lookup"><span data-stu-id="eb46b-105">This type of logging is particularly helpful in letting you know what arguments were passed in and how the receiving endpoint saw the arguments expressed as XML.</span></span> <span data-ttu-id="eb46b-106">Кроме того, запись сообщения в том виде, в котором оно было получено, позволяет выполнять диагностику неправильно сформированных сообщений, а также узнать порядок поступления сообщения.</span><span class="sxs-lookup"><span data-stu-id="eb46b-106">In addition, logging the message as it was received allows you to diagnose malformed messages as well as to see how the message arrived.</span></span> <span data-ttu-id="eb46b-107">Также предусмотрена возможность проверки маркеров безопасности, зашифрованных и подписанных частей, и частей, которые остались без изменений.</span><span class="sxs-lookup"><span data-stu-id="eb46b-107">You can also examine the security tokens used, parts encrypted and signed, and parts left intact.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="5005e-108">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="5005e-108">In This Section</span></span>  
- [<span data-ttu-id="5005e-109">Общие сведения о потоках сообщений</span><span class="sxs-lookup"><span data-stu-id="5005e-109">Message Flow Overview</span></span>](../../../../docs/framework/wcf/diagnostics/message-flow-overview.md)  
+## <a name="in-this-section"></a><span data-ttu-id="eb46b-108">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="eb46b-108">In This Section</span></span>  
+ [<span data-ttu-id="eb46b-109">Общие сведения о потоках сообщений</span><span class="sxs-lookup"><span data-stu-id="eb46b-109">Message Flow Overview</span></span>](../../../../docs/framework/wcf/diagnostics/message-flow-overview.md)  
   
- <span data-ttu-id="5005e-110">В этом разделе описывается соответствие сообщений журнала событий событиям клиента и службы.</span><span class="sxs-lookup"><span data-stu-id="5005e-110">This topic describes how event log messages correspond to client and service events.</span></span>  
+ <span data-ttu-id="eb46b-110">В этом разделе описывается соответствие сообщений журнала событий событиям клиента и службы.</span><span class="sxs-lookup"><span data-stu-id="eb46b-110">This topic describes how event log messages correspond to client and service events.</span></span>  
   
- [<span data-ttu-id="5005e-111">Настройка ведения журналов сообщений</span><span class="sxs-lookup"><span data-stu-id="5005e-111">Configuring Message Logging</span></span>](../../../../docs/framework/wcf/diagnostics/configuring-message-logging.md)  
+ [<span data-ttu-id="eb46b-111">Настройка ведения журналов сообщений</span><span class="sxs-lookup"><span data-stu-id="eb46b-111">Configuring Message Logging</span></span>](../../../../docs/framework/wcf/diagnostics/configuring-message-logging.md)  
   
- <span data-ttu-id="5005e-112">В этом разделе описывается, как настроить ведение журнала сообщений для различных сценариев.</span><span class="sxs-lookup"><span data-stu-id="5005e-112">This topic describes how you can configure message logging for different scenarios.</span></span>  
+ <span data-ttu-id="eb46b-112">В этом разделе описывается, как настроить ведение журнала сообщений для различных сценариев.</span><span class="sxs-lookup"><span data-stu-id="eb46b-112">This topic describes how you can configure message logging for different scenarios.</span></span>  
   
- [<span data-ttu-id="5005e-113">Просмотр журналов сообщений</span><span class="sxs-lookup"><span data-stu-id="5005e-113">Viewing Message Logs</span></span>](../../../../docs/framework/wcf/diagnostics/viewing-message-logs.md)  
+ [<span data-ttu-id="eb46b-113">Просмотр журналов сообщений</span><span class="sxs-lookup"><span data-stu-id="eb46b-113">Viewing Message Logs</span></span>](../../../../docs/framework/wcf/diagnostics/viewing-message-logs.md)  
   
- <span data-ttu-id="5005e-114">В этом разделе описывается порядок просмотра журналов сообщений.</span><span class="sxs-lookup"><span data-stu-id="5005e-114">This topic describes how you can view message logs.</span></span>  
+ <span data-ttu-id="eb46b-114">В этом разделе описывается порядок просмотра журналов сообщений.</span><span class="sxs-lookup"><span data-stu-id="eb46b-114">This topic describes how you can view message logs.</span></span>  
   
- [<span data-ttu-id="5005e-115">Проблемы безопасности при ведении журналов сообщений</span><span class="sxs-lookup"><span data-stu-id="5005e-115">Security Concerns for Message Logging</span></span>](../../../../docs/framework/wcf/diagnostics/security-concerns-for-message-logging.md)  
+ [<span data-ttu-id="eb46b-115">Проблемы безопасности при ведении журналов сообщений</span><span class="sxs-lookup"><span data-stu-id="eb46b-115">Security Concerns for Message Logging</span></span>](../../../../docs/framework/wcf/diagnostics/security-concerns-for-message-logging.md)  
   
- <span data-ttu-id="5005e-116">В этом разделе описываются способы защиты конфиденциальных данных от раскрытия в журналах сообщений, а также в событиях, формируемых посредством ведения журнала сообщений.</span><span class="sxs-lookup"><span data-stu-id="5005e-116">This topic describes how you can protect sensitive data from being exposed in message logs, as well as events generated by message logging.</span></span>  
+ <span data-ttu-id="eb46b-116">В этом разделе описываются способы защиты конфиденциальных данных от раскрытия в журналах сообщений, а также в событиях, формируемых посредством ведения журнала сообщений.</span><span class="sxs-lookup"><span data-stu-id="eb46b-116">This topic describes how you can protect sensitive data from being exposed in message logs, as well as events generated by message logging.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="5005e-117">См. также</span><span class="sxs-lookup"><span data-stu-id="5005e-117">See Also</span></span>  
- [<span data-ttu-id="5005e-118">Администрирование и диагностика</span><span class="sxs-lookup"><span data-stu-id="5005e-118">Administration and Diagnostics</span></span>](../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="eb46b-117">См. также</span><span class="sxs-lookup"><span data-stu-id="eb46b-117">See Also</span></span>  
+ [<span data-ttu-id="eb46b-118">Администрирование и диагностика</span><span class="sxs-lookup"><span data-stu-id="eb46b-118">Administration and Diagnostics</span></span>](../../../../docs/framework/wcf/diagnostics/index.md)

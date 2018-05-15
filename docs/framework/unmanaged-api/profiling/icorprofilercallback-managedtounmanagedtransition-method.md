@@ -1,14 +1,6 @@
 ---
-title: "Метод ICorProfilerCallback::ManagedToUnmanagedTransition"
-ms.custom: 
+title: Метод ICorProfilerCallback::ManagedToUnmanagedTransition
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorProfilerCallback.ManagedToUnmanagedTransition
 api_location:
@@ -23,22 +15,18 @@ helpviewer_keywords:
 ms.assetid: ef3cd619-912d-40c5-a449-03ba02a39ee7
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 59e36f9285f57b54935e40243e87d44b687686da
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0735e4c59ba609ed87d61aca737c4f8a4dab757a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="icorprofilercallbackmanagedtounmanagedtransition-method"></a><span data-ttu-id="b444b-102">Метод ICorProfilerCallback::ManagedToUnmanagedTransition</span><span class="sxs-lookup"><span data-stu-id="b444b-102">ICorProfilerCallback::ManagedToUnmanagedTransition Method</span></span>
-<span data-ttu-id="b444b-103">Уведомляет профилировщик о переходе из управляемого кода в неуправляемый код.</span><span class="sxs-lookup"><span data-stu-id="b444b-103">Notifies the profiler that a transition from managed code to unmanaged code has occurred.</span></span>  
+# <a name="icorprofilercallbackmanagedtounmanagedtransition-method"></a><span data-ttu-id="c51d7-102">Метод ICorProfilerCallback::ManagedToUnmanagedTransition</span><span class="sxs-lookup"><span data-stu-id="c51d7-102">ICorProfilerCallback::ManagedToUnmanagedTransition Method</span></span>
+<span data-ttu-id="c51d7-103">Уведомляет профилировщик о переходе из управляемого кода в неуправляемый код.</span><span class="sxs-lookup"><span data-stu-id="c51d7-103">Notifies the profiler that a transition from managed code to unmanaged code has occurred.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="b444b-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="b444b-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c51d7-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="c51d7-104">Syntax</span></span>  
   
 ```  
 HRESULT ManagedToUnmanagedTransition(  
@@ -46,26 +34,26 @@ HRESULT ManagedToUnmanagedTransition(
     [in] COR_PRF_TRANSITION_REASON reason);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="b444b-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="b444b-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="c51d7-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="c51d7-105">Parameters</span></span>  
  `functionId`  
- <span data-ttu-id="b444b-106">[in] Идентификатор функции, которая вызывается.</span><span class="sxs-lookup"><span data-stu-id="b444b-106">[in] The ID of the function that is being called.</span></span>  
+ <span data-ttu-id="c51d7-106">[in] Идентификатор функции, которая вызывается.</span><span class="sxs-lookup"><span data-stu-id="c51d7-106">[in] The ID of the function that is being called.</span></span>  
   
  `reason`  
- <span data-ttu-id="b444b-107">[in] Значение [COR_PRF_TRANSITION_REASON](../../../../docs/framework/unmanaged-api/profiling/cor-prf-transition-reason-enumeration.md) перечисления, которое указывает, произошло из-за вызовов неуправляемого кода из управляемого кода или из-за возврат из управляемой функции, вызывается один из неуправляемого перехода.</span><span class="sxs-lookup"><span data-stu-id="b444b-107">[in] A value of the [COR_PRF_TRANSITION_REASON](../../../../docs/framework/unmanaged-api/profiling/cor-prf-transition-reason-enumeration.md) enumeration that indicates whether the transition occurred because of a call into unmanaged code from managed code, or because of a return from a managed function called by an unmanaged one.</span></span>  
+ <span data-ttu-id="c51d7-107">[in] Значение [COR_PRF_TRANSITION_REASON](../../../../docs/framework/unmanaged-api/profiling/cor-prf-transition-reason-enumeration.md) перечисления, которое указывает, произошло из-за вызовов неуправляемого кода из управляемого кода или из-за возврат из управляемой функции, вызывается один из неуправляемого перехода.</span><span class="sxs-lookup"><span data-stu-id="c51d7-107">[in] A value of the [COR_PRF_TRANSITION_REASON](../../../../docs/framework/unmanaged-api/profiling/cor-prf-transition-reason-enumeration.md) enumeration that indicates whether the transition occurred because of a call into unmanaged code from managed code, or because of a return from a managed function called by an unmanaged one.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="b444b-108">Примечания</span><span class="sxs-lookup"><span data-stu-id="b444b-108">Remarks</span></span>  
- <span data-ttu-id="b444b-109">Если значение `reason` является COR_PRF_TRANSITION_CALL, функция, идентификатор имеет неуправляемую функцию, который никогда не будет компилироваться с помощью компилятора just-in-time.</span><span class="sxs-lookup"><span data-stu-id="b444b-109">If the value of `reason` is COR_PRF_TRANSITION_CALL, the function ID is that of the unmanaged function, which will never have been compiled using the just-in-time compiler.</span></span> <span data-ttu-id="b444b-110">Неуправляемые функции имеют основные сведения, связанные с ними, такие как имя и некоторые метаданные.</span><span class="sxs-lookup"><span data-stu-id="b444b-110">Unmanaged functions have basic information associated with them, such as a name and some metadata.</span></span> <span data-ttu-id="b444b-111">Если неуправляемая функция была вызвана с помощью неявного вызова (PInvoke), среда выполнения не может определить назначение вызова и значение `functionId` будет иметь значение null.</span><span class="sxs-lookup"><span data-stu-id="b444b-111">If the unmanaged function was called by using implicit platform invoke (PInvoke), the runtime cannot determine the destination of the call and the value of `functionId` will be null.</span></span> <span data-ttu-id="b444b-112">Дополнительные сведения о неявный PInvoke см. в разделе [с помощью взаимодействия C++ (неявный PInvoke)](/cpp/dotnet/using-cpp-interop-implicit-pinvoke).</span><span class="sxs-lookup"><span data-stu-id="b444b-112">For more information on implicit PInvoke, see [Using C++ Interop (Implicit PInvoke)](/cpp/dotnet/using-cpp-interop-implicit-pinvoke).</span></span>  
+## <a name="remarks"></a><span data-ttu-id="c51d7-108">Примечания</span><span class="sxs-lookup"><span data-stu-id="c51d7-108">Remarks</span></span>  
+ <span data-ttu-id="c51d7-109">Если значение `reason` является COR_PRF_TRANSITION_CALL, функция, идентификатор имеет неуправляемую функцию, который никогда не будет компилироваться с помощью компилятора just-in-time.</span><span class="sxs-lookup"><span data-stu-id="c51d7-109">If the value of `reason` is COR_PRF_TRANSITION_CALL, the function ID is that of the unmanaged function, which will never have been compiled using the just-in-time compiler.</span></span> <span data-ttu-id="c51d7-110">Неуправляемые функции имеют основные сведения, связанные с ними, такие как имя и некоторые метаданные.</span><span class="sxs-lookup"><span data-stu-id="c51d7-110">Unmanaged functions have basic information associated with them, such as a name and some metadata.</span></span> <span data-ttu-id="c51d7-111">Если неуправляемая функция была вызвана с помощью неявного вызова (PInvoke), среда выполнения не может определить назначение вызова и значение `functionId` будет иметь значение null.</span><span class="sxs-lookup"><span data-stu-id="c51d7-111">If the unmanaged function was called by using implicit platform invoke (PInvoke), the runtime cannot determine the destination of the call and the value of `functionId` will be null.</span></span> <span data-ttu-id="c51d7-112">Дополнительные сведения о неявный PInvoke см. в разделе [с помощью взаимодействия C++ (неявный PInvoke)](/cpp/dotnet/using-cpp-interop-implicit-pinvoke).</span><span class="sxs-lookup"><span data-stu-id="c51d7-112">For more information on implicit PInvoke, see [Using C++ Interop (Implicit PInvoke)](/cpp/dotnet/using-cpp-interop-implicit-pinvoke).</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="b444b-113">Требования</span><span class="sxs-lookup"><span data-stu-id="b444b-113">Requirements</span></span>  
- <span data-ttu-id="b444b-114">**Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="b444b-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c51d7-113">Требования</span><span class="sxs-lookup"><span data-stu-id="c51d7-113">Requirements</span></span>  
+ <span data-ttu-id="c51d7-114">**Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="c51d7-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="b444b-115">**Заголовок:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="b444b-115">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="c51d7-115">**Заголовок:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="c51d7-115">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="b444b-116">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="b444b-116">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="c51d7-116">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="c51d7-116">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="b444b-117">**Версии платформы .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b444b-117">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="c51d7-117">**Версии платформы .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c51d7-117">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b444b-118">См. также</span><span class="sxs-lookup"><span data-stu-id="b444b-118">See Also</span></span>  
- [<span data-ttu-id="b444b-119">Интерфейс ICorProfilerCallback</span><span class="sxs-lookup"><span data-stu-id="b444b-119">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)  
- [<span data-ttu-id="b444b-120">Метод UnmanagedToManagedTransition</span><span class="sxs-lookup"><span data-stu-id="b444b-120">UnmanagedToManagedTransition Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-unmanagedtomanagedtransition-method.md)  
- [<span data-ttu-id="b444b-121">Использование явного вызова Pinvoke в C++ (атрибут DllImport)</span><span class="sxs-lookup"><span data-stu-id="b444b-121">Using Explicit PInvoke in C++ (DllImport Attribute)</span></span>](/cpp/dotnet/using-explicit-pinvoke-in-cpp-dllimport-attribute)
+## <a name="see-also"></a><span data-ttu-id="c51d7-118">См. также</span><span class="sxs-lookup"><span data-stu-id="c51d7-118">See Also</span></span>  
+ [<span data-ttu-id="c51d7-119">Интерфейс ICorProfilerCallback</span><span class="sxs-lookup"><span data-stu-id="c51d7-119">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)  
+ [<span data-ttu-id="c51d7-120">Метод UnmanagedToManagedTransition</span><span class="sxs-lookup"><span data-stu-id="c51d7-120">UnmanagedToManagedTransition Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-unmanagedtomanagedtransition-method.md)  
+ [<span data-ttu-id="c51d7-121">Использование явного вызова Pinvoke в C++ (атрибут DllImport)</span><span class="sxs-lookup"><span data-stu-id="c51d7-121">Using Explicit PInvoke in C++ (DllImport Attribute)</span></span>](/cpp/dotnet/using-explicit-pinvoke-in-cpp-dllimport-attribute)
