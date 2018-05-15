@@ -1,42 +1,31 @@
 ---
-title: "Как десериализовать свойства данных экземпляра"
-ms.custom: 
+title: Как десериализовать свойства данных экземпляра
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: b13a3508-1b97-4359-b336-03d85fa23bc4
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 3863812bc3c83b346f2340bcfbc609a1024c3c6b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: badea2b9731b1144a727a5d5b83c92072027e1f2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="how-to-deserialize-instance-data-properties"></a><span data-ttu-id="0ac99-102">Как десериализовать свойства данных экземпляра</span><span class="sxs-lookup"><span data-stu-id="0ac99-102">How to: Deserialize Instance Data Properties</span></span>
-<span data-ttu-id="0ac99-103">Могут возникнуть ситуации, когда пользователю или администратору рабочего процесса потребуется вручную проанализировать состояние сохраненного экземпляра рабочего процесса.</span><span class="sxs-lookup"><span data-stu-id="0ac99-103">There may be situations when a user or workflow administrator may want to manually inspect the state of a persisted workflow instance.</span></span> <span data-ttu-id="0ac99-104"><xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> содержит представление по таблицам экземпляров, предоставляющее следующие четыре столбца:</span><span class="sxs-lookup"><span data-stu-id="0ac99-104"><xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> provides a view on the Instances table that exposes the following four columns:</span></span>  
+# <a name="how-to-deserialize-instance-data-properties"></a><span data-ttu-id="dcc39-102">Как десериализовать свойства данных экземпляра</span><span class="sxs-lookup"><span data-stu-id="dcc39-102">How to: Deserialize Instance Data Properties</span></span>
+<span data-ttu-id="dcc39-103">Могут возникнуть ситуации, когда пользователю или администратору рабочего процесса потребуется вручную проанализировать состояние сохраненного экземпляра рабочего процесса.</span><span class="sxs-lookup"><span data-stu-id="dcc39-103">There may be situations when a user or workflow administrator may want to manually inspect the state of a persisted workflow instance.</span></span> <span data-ttu-id="dcc39-104"><xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> содержит представление по таблицам экземпляров, предоставляющее следующие четыре столбца:</span><span class="sxs-lookup"><span data-stu-id="dcc39-104"><xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> provides a view on the Instances table that exposes the following four columns:</span></span>  
   
--   <span data-ttu-id="0ac99-105">ReadWritePrimitiveDataProperties</span><span class="sxs-lookup"><span data-stu-id="0ac99-105">ReadWritePrimitiveDataProperties</span></span>  
+-   <span data-ttu-id="dcc39-105">ReadWritePrimitiveDataProperties</span><span class="sxs-lookup"><span data-stu-id="dcc39-105">ReadWritePrimitiveDataProperties</span></span>  
   
--   <span data-ttu-id="0ac99-106">WriteOnlyPrimitiveDataProperties</span><span class="sxs-lookup"><span data-stu-id="0ac99-106">WriteOnlyPrimitiveDataProperties</span></span>  
+-   <span data-ttu-id="dcc39-106">WriteOnlyPrimitiveDataProperties</span><span class="sxs-lookup"><span data-stu-id="dcc39-106">WriteOnlyPrimitiveDataProperties</span></span>  
   
--   <span data-ttu-id="0ac99-107">ReadWriteComplexDataProperties</span><span class="sxs-lookup"><span data-stu-id="0ac99-107">ReadWriteComplexDataProperties</span></span>  
+-   <span data-ttu-id="dcc39-107">ReadWriteComplexDataProperties</span><span class="sxs-lookup"><span data-stu-id="dcc39-107">ReadWriteComplexDataProperties</span></span>  
   
--   <span data-ttu-id="0ac99-108">WriteOnlyComplexDataProperties</span><span class="sxs-lookup"><span data-stu-id="0ac99-108">WriteOnlyComplexDataProperties</span></span>  
+-   <span data-ttu-id="dcc39-108">WriteOnlyComplexDataProperties</span><span class="sxs-lookup"><span data-stu-id="dcc39-108">WriteOnlyComplexDataProperties</span></span>  
   
- <span data-ttu-id="0ac99-109">Свойства примитивных данных см. свойства, типы .NET Framework которых считаются «общими» (например, Int32 или String) под свойствами сложных данных подразумевают данные всех других типов.</span><span class="sxs-lookup"><span data-stu-id="0ac99-109">Primitive data properties refer to properties whose .NET Framework types are considered to be "common" (for example, Int32 and String), while complex data properties refer to all other types.</span></span> <span data-ttu-id="0ac99-110">Полное перечисление типов-примитивов приведен далее в примере кода.</span><span class="sxs-lookup"><span data-stu-id="0ac99-110">An exact enumeration of primitive types is found later in this code example.</span></span>  
+ <span data-ttu-id="dcc39-109">Свойства примитивных данных см. свойства, типы .NET Framework которых считаются «общими» (например, Int32 или String) под свойствами сложных данных подразумевают данные всех других типов.</span><span class="sxs-lookup"><span data-stu-id="dcc39-109">Primitive data properties refer to properties whose .NET Framework types are considered to be "common" (for example, Int32 and String), while complex data properties refer to all other types.</span></span> <span data-ttu-id="dcc39-110">Полное перечисление типов-примитивов приведен далее в примере кода.</span><span class="sxs-lookup"><span data-stu-id="dcc39-110">An exact enumeration of primitive types is found later in this code example.</span></span>  
   
- <span data-ttu-id="0ac99-111">Свойствами чтения-записи называются свойства, невозвращаемые обратно в среду выполнения рабочих процессов при загрузке экземпляра.</span><span class="sxs-lookup"><span data-stu-id="0ac99-111">Read/write properties refer to properties that are returned back to the Workflow Runtime when an instance is loaded.</span></span> <span data-ttu-id="0ac99-112">Свойства WriteOnly записываются в базу данных и никогда оттуда впоследствии не считываются.</span><span class="sxs-lookup"><span data-stu-id="0ac99-112">WriteOnly properties are written to the database and then never read again.</span></span>  
+ <span data-ttu-id="dcc39-111">Свойствами чтения-записи называются свойства, невозвращаемые обратно в среду выполнения рабочих процессов при загрузке экземпляра.</span><span class="sxs-lookup"><span data-stu-id="dcc39-111">Read/write properties refer to properties that are returned back to the Workflow Runtime when an instance is loaded.</span></span> <span data-ttu-id="dcc39-112">Свойства WriteOnly записываются в базу данных и никогда оттуда впоследствии не считываются.</span><span class="sxs-lookup"><span data-stu-id="dcc39-112">WriteOnly properties are written to the database and then never read again.</span></span>  
   
- <span data-ttu-id="0ac99-113">В этом образце приведен код, позволяющий пользователю десериализировать свойства примитивных данных.</span><span class="sxs-lookup"><span data-stu-id="0ac99-113">This example provides code that enables a user to deserialize primitive data properties.</span></span> <span data-ttu-id="0ac99-114">Имеется массив байтов, считанный из столбца ReadWritePrimitiveDataProperties, либо WriteOnlyPrimitiveDataProperties, этот код преобразует большой двоичный объект (BLOB) в <xref:System.Collections.Generic.Dictionary%602> типа \<XName, объект > где каждого значения ключа пара представляет собой имя свойства и его соответствующее значение.</span><span class="sxs-lookup"><span data-stu-id="0ac99-114">Given a byte array read from either the ReadWritePrimitiveDataProperties or WriteOnlyPrimitiveDataProperties column, this code will convert the binary large object (BLOB) into a <xref:System.Collections.Generic.Dictionary%602> of type \<XName, object> where each key value pair represents a property name and its corresponding value.</span></span>  
+ <span data-ttu-id="dcc39-113">В этом образце приведен код, позволяющий пользователю десериализировать свойства примитивных данных.</span><span class="sxs-lookup"><span data-stu-id="dcc39-113">This example provides code that enables a user to deserialize primitive data properties.</span></span> <span data-ttu-id="dcc39-114">Имеется массив байтов, считанный из столбца ReadWritePrimitiveDataProperties, либо WriteOnlyPrimitiveDataProperties, этот код преобразует большой двоичный объект (BLOB) в <xref:System.Collections.Generic.Dictionary%602> типа \<XName, объект > где каждого значения ключа пара представляет собой имя свойства и его соответствующее значение.</span><span class="sxs-lookup"><span data-stu-id="dcc39-114">Given a byte array read from either the ReadWritePrimitiveDataProperties or WriteOnlyPrimitiveDataProperties column, this code will convert the binary large object (BLOB) into a <xref:System.Collections.Generic.Dictionary%602> of type \<XName, object> where each key value pair represents a property name and its corresponding value.</span></span>  
   
- <span data-ttu-id="0ac99-115">Этот пример не демонстрирует десериализацию свойств сложных типов данных, поскольку данная операция в настоящее время не поддерживается.</span><span class="sxs-lookup"><span data-stu-id="0ac99-115">This example does not demonstrate how to deserialize complex data properties because this is currently not a supported operation.</span></span>  
+ <span data-ttu-id="dcc39-115">Этот пример не демонстрирует десериализацию свойств сложных типов данных, поскольку данная операция в настоящее время не поддерживается.</span><span class="sxs-lookup"><span data-stu-id="dcc39-115">This example does not demonstrate how to deserialize complex data properties because this is currently not a supported operation.</span></span>  
   
 ```  
 using System;  

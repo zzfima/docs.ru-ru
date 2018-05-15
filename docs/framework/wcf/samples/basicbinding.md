@@ -1,44 +1,32 @@
 ---
 title: BasicBinding
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 86fbeb87-4d89-4b61-9577-867e0ac12945
-caps.latest.revision: "22"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 870318e08ff811f9c945bdeb07631e17ae1b47ca
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 91ebef7ec985d3da6dc563ddbaa277d25f3172cd
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="basicbinding"></a><span data-ttu-id="3925a-102">BasicBinding</span><span class="sxs-lookup"><span data-stu-id="3925a-102">BasicBinding</span></span>
-<span data-ttu-id="3925a-103">В следующем примере кода показано использование привязки `basicHttpBinding`, которая обеспечивает взаимодействие по HTTP-протоколу и максимальные возможности взаимодействия с веб-службами первого и второго поколений.</span><span class="sxs-lookup"><span data-stu-id="3925a-103">This sample demonstrates the use of `basicHttpBinding` that provides HTTP communication and maximum interoperability with first- and second-generation Web services.</span></span>  
+# <a name="basicbinding"></a><span data-ttu-id="71bdc-102">BasicBinding</span><span class="sxs-lookup"><span data-stu-id="71bdc-102">BasicBinding</span></span>
+<span data-ttu-id="71bdc-103">В следующем примере кода показано использование привязки `basicHttpBinding`, которая обеспечивает взаимодействие по HTTP-протоколу и максимальные возможности взаимодействия с веб-службами первого и второго поколений.</span><span class="sxs-lookup"><span data-stu-id="71bdc-103">This sample demonstrates the use of `basicHttpBinding` that provides HTTP communication and maximum interoperability with first- and second-generation Web services.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="3925a-104">Процедура настройки и инструкции по построению для данного образца приведены в конце этого раздела.</span><span class="sxs-lookup"><span data-stu-id="3925a-104">The set-up procedure and build instructions for this sample are located at the end of this topic.</span></span>  
+>  <span data-ttu-id="71bdc-104">Процедура настройки и инструкции по построению для данного образца приведены в конце этого раздела.</span><span class="sxs-lookup"><span data-stu-id="71bdc-104">The set-up procedure and build instructions for this sample are located at the end of this topic.</span></span>  
   
 > [!IMPORTANT]
->  <span data-ttu-id="3925a-105">Образцы уже могут быть установлены на компьютере.</span><span class="sxs-lookup"><span data-stu-id="3925a-105">The samples may already be installed on your machine.</span></span> <span data-ttu-id="3925a-106">Перед продолжением проверьте следующий каталог (по умолчанию).</span><span class="sxs-lookup"><span data-stu-id="3925a-106">Check for the following (default) directory before continuing.</span></span>  
+>  <span data-ttu-id="71bdc-105">Образцы уже могут быть установлены на компьютере.</span><span class="sxs-lookup"><span data-stu-id="71bdc-105">The samples may already be installed on your machine.</span></span> <span data-ttu-id="71bdc-106">Перед продолжением проверьте следующий каталог (по умолчанию).</span><span class="sxs-lookup"><span data-stu-id="71bdc-106">Check for the following (default) directory before continuing.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  <span data-ttu-id="3925a-107">Если этот каталог не существует, перейдите на страницу [Примеры Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все примеры [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] .</span><span class="sxs-lookup"><span data-stu-id="3925a-107">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="3925a-108">Этот образец расположен в следующем каталоге.</span><span class="sxs-lookup"><span data-stu-id="3925a-108">This sample is located in the following directory.</span></span>  
+>  <span data-ttu-id="71bdc-107">Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] образцов.</span><span class="sxs-lookup"><span data-stu-id="71bdc-107">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all Windows Communication Foundation (WCF) and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="71bdc-108">Этот образец расположен в следующем каталоге.</span><span class="sxs-lookup"><span data-stu-id="71bdc-108">This sample is located in the following directory.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Basic\Http`  
   
-## <a name="sample-details"></a><span data-ttu-id="3925a-109">Подробные сведения об образце</span><span class="sxs-lookup"><span data-stu-id="3925a-109">Sample Details</span></span>  
- <span data-ttu-id="3925a-110">Этот пример построен на [Приступая к работе](../../../../docs/framework/wcf/samples/getting-started-sample.md) , реализующий службу калькулятора.</span><span class="sxs-lookup"><span data-stu-id="3925a-110">This sample is based on the [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md) that implements a calculator service.</span></span>  
+## <a name="sample-details"></a><span data-ttu-id="71bdc-109">Подробные сведения об образце</span><span class="sxs-lookup"><span data-stu-id="71bdc-109">Sample Details</span></span>  
+ <span data-ttu-id="71bdc-110">Этот пример построен на [Приступая к работе](../../../../docs/framework/wcf/samples/getting-started-sample.md) , реализующий службу калькулятора.</span><span class="sxs-lookup"><span data-stu-id="71bdc-110">This sample is based on the [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md) that implements a calculator service.</span></span>  
   
- <span data-ttu-id="3925a-111">Для использования базовой привязки с поведением по умолчанию требуется только имя раздела привязки.</span><span class="sxs-lookup"><span data-stu-id="3925a-111">To use the basic binding with default behavior, only the binding section name is required.</span></span> <span data-ttu-id="3925a-112">Если необходимо настроить основную привязку и изменить некоторые из ее параметров, необходимо определить конфигурацию привязки.</span><span class="sxs-lookup"><span data-stu-id="3925a-112">If you want to configure the basic binding and change some of its settings, it is necessary to define a binding configuration.</span></span> <span data-ttu-id="3925a-113">Конечная точка должна ссылаться на конфигурацию привязки по имени с помощью `bindingConfiguration` атрибут <`endpoint`> элемента, как показано в следующем образце кода.</span><span class="sxs-lookup"><span data-stu-id="3925a-113">The endpoint must reference the binding configuration by name by using the `bindingConfiguration` attribute of the <`endpoint`> element, as shown in the following sample code.</span></span>  
+ <span data-ttu-id="71bdc-111">Для использования базовой привязки с поведением по умолчанию требуется только имя раздела привязки.</span><span class="sxs-lookup"><span data-stu-id="71bdc-111">To use the basic binding with default behavior, only the binding section name is required.</span></span> <span data-ttu-id="71bdc-112">Если необходимо настроить основную привязку и изменить некоторые из ее параметров, необходимо определить конфигурацию привязки.</span><span class="sxs-lookup"><span data-stu-id="71bdc-112">If you want to configure the basic binding and change some of its settings, it is necessary to define a binding configuration.</span></span> <span data-ttu-id="71bdc-113">Конечная точка должна ссылаться на конфигурацию привязки по имени с помощью `bindingConfiguration` атрибут <`endpoint`> элемента, как показано в следующем образце кода.</span><span class="sxs-lookup"><span data-stu-id="71bdc-113">The endpoint must reference the binding configuration by name by using the `bindingConfiguration` attribute of the <`endpoint`> element, as shown in the following sample code.</span></span>  
   
 ```xml  
 <services>  
@@ -53,7 +41,7 @@ ms.lasthandoff: 12/22/2017
 </services>  
 ```  
   
- <span data-ttu-id="3925a-114">В этом образце конфигурация привязки именуется `"Binding1"` и определена, как показано в следующем примере кода.</span><span class="sxs-lookup"><span data-stu-id="3925a-114">In this sample, the binding configuration is named `"Binding1"` and is defined as shown in the following code example.</span></span>  
+ <span data-ttu-id="71bdc-114">В этом образце конфигурация привязки именуется `"Binding1"` и определена, как показано в следующем примере кода.</span><span class="sxs-lookup"><span data-stu-id="71bdc-114">In this sample, the binding configuration is named `"Binding1"` and is defined as shown in the following code example.</span></span>  
   
 ```xml  
 <bindings>  
@@ -78,9 +66,9 @@ ms.lasthandoff: 12/22/2017
 </bindings>  
 ```  
   
- <span data-ttu-id="3925a-115">Элемент привязки обеспечивает атрибуты для установки режима сравнения имени узла, максимального размера сообщения, параметр прокси, времени ожидания, кодирования сообщений и прочих опций.</span><span class="sxs-lookup"><span data-stu-id="3925a-115">The binding element provides attributes for setting the host name comparison mode, maximum message size, proxy options, timeouts, message encoding, and other options.</span></span>  
+ <span data-ttu-id="71bdc-115">Элемент привязки обеспечивает атрибуты для установки режима сравнения имени узла, максимального размера сообщения, параметр прокси, времени ожидания, кодирования сообщений и прочих опций.</span><span class="sxs-lookup"><span data-stu-id="71bdc-115">The binding element provides attributes for setting the host name comparison mode, maximum message size, proxy options, timeouts, message encoding, and other options.</span></span>  
   
- <span data-ttu-id="3925a-116">При выполнении примера запросы и ответы операций отображаются в окне консоли клиента.</span><span class="sxs-lookup"><span data-stu-id="3925a-116">When you run the sample, the operation requests and responses are displayed in the client console window.</span></span> <span data-ttu-id="3925a-117">Чтобы закрыть клиент, нажмите клавишу ВВОД в окне клиента.</span><span class="sxs-lookup"><span data-stu-id="3925a-117">Press ENTER in the client window to shut down the client.</span></span>  
+ <span data-ttu-id="71bdc-116">При выполнении примера запросы и ответы операций отображаются в окне консоли клиента.</span><span class="sxs-lookup"><span data-stu-id="71bdc-116">When you run the sample, the operation requests and responses are displayed in the client console window.</span></span> <span data-ttu-id="71bdc-117">Чтобы закрыть клиент, нажмите клавишу ВВОД в окне клиента.</span><span class="sxs-lookup"><span data-stu-id="71bdc-117">Press ENTER in the client window to shut down the client.</span></span>  
   
 ```  
 Add(100,15.99) = 115.99  
@@ -91,18 +79,18 @@ Divide(22,7) = 3.14285714285714
 Press <ENTER> to terminate client.  
 ```  
   
-#### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="3925a-118">Настройка, сборка и выполнение образца</span><span class="sxs-lookup"><span data-stu-id="3925a-118">To set up, build, and run the sample</span></span>  
+#### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="71bdc-118">Настройка, сборка и выполнение образца</span><span class="sxs-lookup"><span data-stu-id="71bdc-118">To set up, build, and run the sample</span></span>  
   
-1.  <span data-ttu-id="3925a-119">Установите [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 4.0, выполнив следующую команду.</span><span class="sxs-lookup"><span data-stu-id="3925a-119">Install [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 4.0 using the following command.</span></span>  
+1.  <span data-ttu-id="71bdc-119">Установите [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 4.0, выполнив следующую команду.</span><span class="sxs-lookup"><span data-stu-id="71bdc-119">Install [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 4.0 using the following command.</span></span>  
   
     ```  
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable  
     ```  
   
-2.  <span data-ttu-id="3925a-120">Убедитесь, что вы выполнили [выполняемая однократно процедура настройки для образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span><span class="sxs-lookup"><span data-stu-id="3925a-120">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
+2.  <span data-ttu-id="71bdc-120">Убедитесь, что вы выполнили [выполняемая однократно процедура настройки для образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span><span class="sxs-lookup"><span data-stu-id="71bdc-120">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
   
-3.  <span data-ttu-id="3925a-121">Чтобы создать выпуск решения на языке C# или Visual Basic .NET, следуйте инструкциям в разделе [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="3925a-121">To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
+3.  <span data-ttu-id="71bdc-121">Чтобы создать выпуск решения на языке C# или Visual Basic .NET, следуйте инструкциям в разделе [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="71bdc-121">To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
   
-4.  <span data-ttu-id="3925a-122">Для запуска образца в конфигурации одного или нескольких компьютерах, следуйте инструкциям в [выполнение образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="3925a-122">To run the sample in a single- or cross-machine configuration, follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).</span></span>  
+4.  <span data-ttu-id="71bdc-122">Для запуска образца в конфигурации одного или нескольких компьютерах, следуйте инструкциям в [выполнение образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="71bdc-122">To run the sample in a single- or cross-machine configuration, follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="3925a-123">См. также</span><span class="sxs-lookup"><span data-stu-id="3925a-123">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="71bdc-123">См. также</span><span class="sxs-lookup"><span data-stu-id="71bdc-123">See Also</span></span>

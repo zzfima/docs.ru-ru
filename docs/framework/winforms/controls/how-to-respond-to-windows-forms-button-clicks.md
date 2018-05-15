@@ -1,13 +1,6 @@
 ---
-title: "Практическое руководство. Обработка события нажатия кнопки в Windows Forms"
-ms.custom: 
+title: Практическое руководство. Обработка события нажатия кнопки в Windows Forms
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -22,27 +15,22 @@ helpviewer_keywords:
 - examples [Windows Forms], controls
 - Click event [Windows Forms], responding to
 ms.assetid: 7a4951bd-369c-4662-b246-28ad83eda484
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 28b0467c8b589882fe5afd7e884d0de55d8ca564
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 14a880c34f163dc6fece44c24d377822a741b0f2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="how-to-respond-to-windows-forms-button-clicks"></a><span data-ttu-id="fc31b-102">Практическое руководство. Обработка события нажатия кнопки в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="fc31b-102">How to: Respond to Windows Forms Button Clicks</span></span>
-<span data-ttu-id="fc31b-103">Чаще всего в Windows Forms <xref:System.Windows.Forms.Button> элемент управления должен выполнять определенный код, при нажатии кнопки.</span><span class="sxs-lookup"><span data-stu-id="fc31b-103">The most basic use of a Windows Forms <xref:System.Windows.Forms.Button> control is to run some code when the button is clicked.</span></span>  
+# <a name="how-to-respond-to-windows-forms-button-clicks"></a><span data-ttu-id="6de66-102">Практическое руководство. Обработка события нажатия кнопки в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="6de66-102">How to: Respond to Windows Forms Button Clicks</span></span>
+<span data-ttu-id="6de66-103">Чаще всего в Windows Forms <xref:System.Windows.Forms.Button> элемент управления должен выполнять определенный код, при нажатии кнопки.</span><span class="sxs-lookup"><span data-stu-id="6de66-103">The most basic use of a Windows Forms <xref:System.Windows.Forms.Button> control is to run some code when the button is clicked.</span></span>  
   
- <span data-ttu-id="fc31b-104">Щелкнув <xref:System.Windows.Forms.Button> управления также создает ряд других событий, таких как <xref:System.Windows.Forms.Control.MouseEnter>, <xref:System.Windows.Forms.Control.MouseDown>, и <xref:System.Windows.Forms.Control.MouseUp> события.</span><span class="sxs-lookup"><span data-stu-id="fc31b-104">Clicking a <xref:System.Windows.Forms.Button> control also generates a number of other events, such as the <xref:System.Windows.Forms.Control.MouseEnter>, <xref:System.Windows.Forms.Control.MouseDown>, and <xref:System.Windows.Forms.Control.MouseUp> events.</span></span> <span data-ttu-id="fc31b-105">Если вы собираетесь добавить обработчики событий для этих связанных событий, убедитесь, что их действия не конфликтуют.</span><span class="sxs-lookup"><span data-stu-id="fc31b-105">If you intend to attach event handlers for these related events, be sure that their actions do not conflict.</span></span> <span data-ttu-id="fc31b-106">Например если нажатие кнопки удаляет данные, данные, введенные пользователем в текстовое поле, при наведении указателя мыши на кнопку не должно отображать подсказки с несуществующими сведениями.</span><span class="sxs-lookup"><span data-stu-id="fc31b-106">For example, if clicking the button clears information that the user has typed in a text box, pausing the mouse pointer over the button should not display a tool tip with that now-nonexistent information.</span></span>  
+ <span data-ttu-id="6de66-104">Щелкнув <xref:System.Windows.Forms.Button> управления также создает ряд других событий, таких как <xref:System.Windows.Forms.Control.MouseEnter>, <xref:System.Windows.Forms.Control.MouseDown>, и <xref:System.Windows.Forms.Control.MouseUp> события.</span><span class="sxs-lookup"><span data-stu-id="6de66-104">Clicking a <xref:System.Windows.Forms.Button> control also generates a number of other events, such as the <xref:System.Windows.Forms.Control.MouseEnter>, <xref:System.Windows.Forms.Control.MouseDown>, and <xref:System.Windows.Forms.Control.MouseUp> events.</span></span> <span data-ttu-id="6de66-105">Если вы собираетесь добавить обработчики событий для этих связанных событий, убедитесь, что их действия не конфликтуют.</span><span class="sxs-lookup"><span data-stu-id="6de66-105">If you intend to attach event handlers for these related events, be sure that their actions do not conflict.</span></span> <span data-ttu-id="6de66-106">Например если нажатие кнопки удаляет данные, данные, введенные пользователем в текстовое поле, при наведении указателя мыши на кнопку не должно отображать подсказки с несуществующими сведениями.</span><span class="sxs-lookup"><span data-stu-id="6de66-106">For example, if clicking the button clears information that the user has typed in a text box, pausing the mouse pointer over the button should not display a tool tip with that now-nonexistent information.</span></span>  
   
- <span data-ttu-id="fc31b-107">Если пользователь пытается дважды щелкните <xref:System.Windows.Forms.Button> элемента управления, каждый щелчок будет обрабатываться отдельно; то есть элемент управления не поддерживает событие двойного щелчка.</span><span class="sxs-lookup"><span data-stu-id="fc31b-107">If the user attempts to double-click the <xref:System.Windows.Forms.Button> control, each click will be processed separately; that is, the control does not support the double-click event.</span></span>  
+ <span data-ttu-id="6de66-107">Если пользователь пытается дважды щелкните <xref:System.Windows.Forms.Button> элемента управления, каждый щелчок будет обрабатываться отдельно; то есть элемент управления не поддерживает событие двойного щелчка.</span><span class="sxs-lookup"><span data-stu-id="6de66-107">If the user attempts to double-click the <xref:System.Windows.Forms.Button> control, each click will be processed separately; that is, the control does not support the double-click event.</span></span>  
   
-### <a name="to-respond-to-a-button-click"></a><span data-ttu-id="fc31b-108">Ответ на нажатие кнопки</span><span class="sxs-lookup"><span data-stu-id="fc31b-108">To respond to a button click</span></span>  
+### <a name="to-respond-to-a-button-click"></a><span data-ttu-id="6de66-108">Ответ на нажатие кнопки</span><span class="sxs-lookup"><span data-stu-id="6de66-108">To respond to a button click</span></span>  
   
--   <span data-ttu-id="fc31b-109">На кнопке панели `Click` <xref:System.EventHandler> написать код для выполнения.</span><span class="sxs-lookup"><span data-stu-id="fc31b-109">In the button's `Click` <xref:System.EventHandler> write the code to run.</span></span> <span data-ttu-id="fc31b-110">`Button1_Click`должен быть привязан к элементу управления.</span><span class="sxs-lookup"><span data-stu-id="fc31b-110">`Button1_Click` must be bound to the control.</span></span> <span data-ttu-id="fc31b-111">Дополнительные сведения см. в разделе [как: Создание обработчиков событий в запуска времени для Windows Forms](../../../../docs/framework/winforms/how-to-create-event-handlers-at-run-time-for-windows-forms.md).</span><span class="sxs-lookup"><span data-stu-id="fc31b-111">For more information, see [How to: Create Event Handlers at Run Time for Windows Forms](../../../../docs/framework/winforms/how-to-create-event-handlers-at-run-time-for-windows-forms.md).</span></span>  
+-   <span data-ttu-id="6de66-109">На кнопке панели `Click` <xref:System.EventHandler> написать код для выполнения.</span><span class="sxs-lookup"><span data-stu-id="6de66-109">In the button's `Click` <xref:System.EventHandler> write the code to run.</span></span> <span data-ttu-id="6de66-110">`Button1_Click` должен быть привязан к элементу управления.</span><span class="sxs-lookup"><span data-stu-id="6de66-110">`Button1_Click` must be bound to the control.</span></span> <span data-ttu-id="6de66-111">Дополнительные сведения см. в разделе [как: Создание обработчиков событий в запуска времени для Windows Forms](../../../../docs/framework/winforms/how-to-create-event-handlers-at-run-time-for-windows-forms.md).</span><span class="sxs-lookup"><span data-stu-id="6de66-111">For more information, see [How to: Create Event Handlers at Run Time for Windows Forms](../../../../docs/framework/winforms/how-to-create-event-handlers-at-run-time-for-windows-forms.md).</span></span>  
   
     ```vb  
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click  
@@ -66,7 +54,7 @@ ms.lasthandoff: 12/22/2017
        }  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="fc31b-112">См. также</span><span class="sxs-lookup"><span data-stu-id="fc31b-112">See Also</span></span>  
- [<span data-ttu-id="fc31b-113">Общие сведения об элементе управления Button</span><span class="sxs-lookup"><span data-stu-id="fc31b-113">Button Control Overview</span></span>](../../../../docs/framework/winforms/controls/button-control-overview-windows-forms.md)  
- [<span data-ttu-id="fc31b-114">Способы активации элемента управления Button в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="fc31b-114">Ways to Select a Windows Forms Button Control</span></span>](../../../../docs/framework/winforms/controls/ways-to-select-a-windows-forms-button-control.md)  
- [<span data-ttu-id="fc31b-115">Элемент управления Button</span><span class="sxs-lookup"><span data-stu-id="fc31b-115">Button Control</span></span>](../../../../docs/framework/winforms/controls/button-control-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="6de66-112">См. также</span><span class="sxs-lookup"><span data-stu-id="6de66-112">See Also</span></span>  
+ [<span data-ttu-id="6de66-113">Общие сведения об элементе управления Button</span><span class="sxs-lookup"><span data-stu-id="6de66-113">Button Control Overview</span></span>](../../../../docs/framework/winforms/controls/button-control-overview-windows-forms.md)  
+ [<span data-ttu-id="6de66-114">Способы активации элемента управления Button в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="6de66-114">Ways to Select a Windows Forms Button Control</span></span>](../../../../docs/framework/winforms/controls/ways-to-select-a-windows-forms-button-control.md)  
+ [<span data-ttu-id="6de66-115">Элемент управления Button</span><span class="sxs-lookup"><span data-stu-id="6de66-115">Button Control</span></span>](../../../../docs/framework/winforms/controls/button-control-windows-forms.md)

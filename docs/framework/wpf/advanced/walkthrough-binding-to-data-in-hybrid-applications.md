@@ -1,14 +1,6 @@
 ---
 title: Пошаговое руководство. Привязка к данным в гибридных приложениях
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,180 +8,174 @@ helpviewer_keywords:
 - hybrid applications [WPF interoperability]
 - data binding [WPF interoperability]
 ms.assetid: 18997e71-745a-4425-9c69-2cbce1d8669e
-caps.latest.revision: 39
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: b8afe4732363ec61d73db13e9b190381cbd8f29d
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: fe8826a390abd370361b84f99540b8dacbdedc5e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="walkthrough-binding-to-data-in-hybrid-applications"></a><span data-ttu-id="278e6-102">Пошаговое руководство. Привязка к данным в гибридных приложениях</span><span class="sxs-lookup"><span data-stu-id="278e6-102">Walkthrough: Binding to Data in Hybrid Applications</span></span>
-<span data-ttu-id="278e6-103">Привязка источника данных к элементу управления необходима для предоставления пользователям доступа к базовым данным независимо от использовании [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] или [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].</span><span class="sxs-lookup"><span data-stu-id="278e6-103">Binding a data source to a control is essential for providing users with access to underlying data, whether you are using [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] or [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].</span></span> <span data-ttu-id="278e6-104">В этом пошаговом руководстве показано, как можно использовать привязку данных в гибридных приложениях, содержащих [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] и [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] элементов управления.</span><span class="sxs-lookup"><span data-stu-id="278e6-104">This walkthrough shows how you can use data binding in hybrid applications that include both [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] and [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] controls.</span></span>  
+# <a name="walkthrough-binding-to-data-in-hybrid-applications"></a><span data-ttu-id="6ab78-102">Пошаговое руководство. Привязка к данным в гибридных приложениях</span><span class="sxs-lookup"><span data-stu-id="6ab78-102">Walkthrough: Binding to Data in Hybrid Applications</span></span>
+<span data-ttu-id="6ab78-103">Привязка источника данных к элементу управления необходима для предоставления пользователям доступа к базовым данным независимо от использовании [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] или [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].</span><span class="sxs-lookup"><span data-stu-id="6ab78-103">Binding a data source to a control is essential for providing users with access to underlying data, whether you are using [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] or [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].</span></span> <span data-ttu-id="6ab78-104">В этом пошаговом руководстве показано, как можно использовать привязку данных в гибридных приложениях, содержащих [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] и [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] элементов управления.</span><span class="sxs-lookup"><span data-stu-id="6ab78-104">This walkthrough shows how you can use data binding in hybrid applications that include both [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] and [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] controls.</span></span>  
   
- <span data-ttu-id="278e6-105">В данном пошаговом руководстве представлены следующие задачи.</span><span class="sxs-lookup"><span data-stu-id="278e6-105">Tasks illustrated in this walkthrough include:</span></span>  
+ <span data-ttu-id="6ab78-105">В данном пошаговом руководстве представлены следующие задачи.</span><span class="sxs-lookup"><span data-stu-id="6ab78-105">Tasks illustrated in this walkthrough include:</span></span>  
   
--   <span data-ttu-id="278e6-106">Создание проекта.</span><span class="sxs-lookup"><span data-stu-id="278e6-106">Creating the project.</span></span>  
+-   <span data-ttu-id="6ab78-106">Создание проекта.</span><span class="sxs-lookup"><span data-stu-id="6ab78-106">Creating the project.</span></span>  
   
--   <span data-ttu-id="278e6-107">Определение шаблона данных.</span><span class="sxs-lookup"><span data-stu-id="278e6-107">Defining the data template.</span></span>  
+-   <span data-ttu-id="6ab78-107">Определение шаблона данных.</span><span class="sxs-lookup"><span data-stu-id="6ab78-107">Defining the data template.</span></span>  
   
--   <span data-ttu-id="278e6-108">Задание макета формы.</span><span class="sxs-lookup"><span data-stu-id="278e6-108">Specifying the form layout.</span></span>  
+-   <span data-ttu-id="6ab78-108">Задание макета формы.</span><span class="sxs-lookup"><span data-stu-id="6ab78-108">Specifying the form layout.</span></span>  
   
--   <span data-ttu-id="278e6-109">Задание привязок данных.</span><span class="sxs-lookup"><span data-stu-id="278e6-109">Specifying data bindings.</span></span>  
+-   <span data-ttu-id="6ab78-109">Задание привязок данных.</span><span class="sxs-lookup"><span data-stu-id="6ab78-109">Specifying data bindings.</span></span>  
   
--   <span data-ttu-id="278e6-110">Отображение данных с помощью взаимодействия.</span><span class="sxs-lookup"><span data-stu-id="278e6-110">Displaying data by using interoperation.</span></span>  
+-   <span data-ttu-id="6ab78-110">Отображение данных с помощью взаимодействия.</span><span class="sxs-lookup"><span data-stu-id="6ab78-110">Displaying data by using interoperation.</span></span>  
   
--   <span data-ttu-id="278e6-111">Добавление источника данных в проект.</span><span class="sxs-lookup"><span data-stu-id="278e6-111">Adding the data source to the project.</span></span>  
+-   <span data-ttu-id="6ab78-111">Добавление источника данных в проект.</span><span class="sxs-lookup"><span data-stu-id="6ab78-111">Adding the data source to the project.</span></span>  
   
--   <span data-ttu-id="278e6-112">Подключение к источнику данных.</span><span class="sxs-lookup"><span data-stu-id="278e6-112">Binding to the data source.</span></span>  
+-   <span data-ttu-id="6ab78-112">Подключение к источнику данных.</span><span class="sxs-lookup"><span data-stu-id="6ab78-112">Binding to the data source.</span></span>  
   
- <span data-ttu-id="278e6-113">Полный пример кода для задач, приведенных в этом пошаговом руководстве, см. [привязка данных в гибридных приложениях-пример](http://go.microsoft.com/fwlink/?LinkID=159983).</span><span class="sxs-lookup"><span data-stu-id="278e6-113">For a complete code listing of the tasks illustrated in this walkthrough, see [Data Binding in Hybrid Applications Sample](http://go.microsoft.com/fwlink/?LinkID=159983).</span></span>  
+ <span data-ttu-id="6ab78-113">Полный пример кода для задач, приведенных в этом пошаговом руководстве, см. [привязка данных в гибридных приложениях-пример](http://go.microsoft.com/fwlink/?LinkID=159983).</span><span class="sxs-lookup"><span data-stu-id="6ab78-113">For a complete code listing of the tasks illustrated in this walkthrough, see [Data Binding in Hybrid Applications Sample](http://go.microsoft.com/fwlink/?LinkID=159983).</span></span>  
   
- <span data-ttu-id="278e6-114">Изучив этот раздел, вы будете иметь представление о функциях привязки данных в гибридных приложениях.</span><span class="sxs-lookup"><span data-stu-id="278e6-114">When you are finished, you will have an understanding of data binding features in hybrid applications.</span></span>  
+ <span data-ttu-id="6ab78-114">Изучив этот раздел, вы будете иметь представление о функциях привязки данных в гибридных приложениях.</span><span class="sxs-lookup"><span data-stu-id="6ab78-114">When you are finished, you will have an understanding of data binding features in hybrid applications.</span></span>  
   
-## <a name="prerequisites"></a><span data-ttu-id="278e6-115">Предварительные требования</span><span class="sxs-lookup"><span data-stu-id="278e6-115">Prerequisites</span></span>  
- <span data-ttu-id="278e6-116">Ниже приведены компоненты, необходимые для выполнения данного пошагового руководства.</span><span class="sxs-lookup"><span data-stu-id="278e6-116">You need the following components to complete this walkthrough:</span></span>  
+## <a name="prerequisites"></a><span data-ttu-id="6ab78-115">Предварительные требования</span><span class="sxs-lookup"><span data-stu-id="6ab78-115">Prerequisites</span></span>  
+ <span data-ttu-id="6ab78-116">Ниже приведены компоненты, необходимые для выполнения данного пошагового руководства.</span><span class="sxs-lookup"><span data-stu-id="6ab78-116">You need the following components to complete this walkthrough:</span></span>  
   
--   [!INCLUDE[vs_dev10_long](../../../../includes/vs-dev10-long-md.md)]<span data-ttu-id="278e6-117">.</span><span class="sxs-lookup"><span data-stu-id="278e6-117">.</span></span>  
+-   [!INCLUDE[vs_dev10_long](../../../../includes/vs-dev10-long-md.md)]<span data-ttu-id="6ab78-117">.</span><span class="sxs-lookup"><span data-stu-id="6ab78-117">.</span></span>  
   
--   <span data-ttu-id="278e6-118">Доступ к учебной базе данных Northwind, под управлением Microsoft SQL Server.</span><span class="sxs-lookup"><span data-stu-id="278e6-118">Access to the Northwind sample database running on Microsoft SQL Server.</span></span>  
+-   <span data-ttu-id="6ab78-118">Доступ к учебной базе данных Northwind, под управлением Microsoft SQL Server.</span><span class="sxs-lookup"><span data-stu-id="6ab78-118">Access to the Northwind sample database running on Microsoft SQL Server.</span></span>  
   
-## <a name="creating-the-project"></a><span data-ttu-id="278e6-119">Создание проекта</span><span class="sxs-lookup"><span data-stu-id="278e6-119">Creating the Project</span></span>  
+## <a name="creating-the-project"></a><span data-ttu-id="6ab78-119">Создание проекта</span><span class="sxs-lookup"><span data-stu-id="6ab78-119">Creating the Project</span></span>  
   
-#### <a name="to-create-and-set-up-the-project"></a><span data-ttu-id="278e6-120">Создание и настройка проекта</span><span class="sxs-lookup"><span data-stu-id="278e6-120">To create and set up the project</span></span>  
+#### <a name="to-create-and-set-up-the-project"></a><span data-ttu-id="6ab78-120">Создание и настройка проекта</span><span class="sxs-lookup"><span data-stu-id="6ab78-120">To create and set up the project</span></span>  
   
-1.  <span data-ttu-id="278e6-121">Создание проекта приложения WPF с именем `WPFWithWFAndDatabinding`.</span><span class="sxs-lookup"><span data-stu-id="278e6-121">Create a WPF Application project named `WPFWithWFAndDatabinding`.</span></span>  
+1.  <span data-ttu-id="6ab78-121">Создание проекта приложения WPF с именем `WPFWithWFAndDatabinding`.</span><span class="sxs-lookup"><span data-stu-id="6ab78-121">Create a WPF Application project named `WPFWithWFAndDatabinding`.</span></span>  
   
-2.  <span data-ttu-id="278e6-122">В обозревателе решений добавьте ссылки на следующие сборки.</span><span class="sxs-lookup"><span data-stu-id="278e6-122">In Solution Explorer, add references to the following assemblies.</span></span>  
+2.  <span data-ttu-id="6ab78-122">В обозревателе решений добавьте ссылки на следующие сборки.</span><span class="sxs-lookup"><span data-stu-id="6ab78-122">In Solution Explorer, add references to the following assemblies.</span></span>  
   
-    -   <span data-ttu-id="278e6-123">WindowsFormsIntegration</span><span class="sxs-lookup"><span data-stu-id="278e6-123">WindowsFormsIntegration</span></span>  
+    -   <span data-ttu-id="6ab78-123">WindowsFormsIntegration</span><span class="sxs-lookup"><span data-stu-id="6ab78-123">WindowsFormsIntegration</span></span>  
   
-    -   <span data-ttu-id="278e6-124">System.Windows.Forms.</span><span class="sxs-lookup"><span data-stu-id="278e6-124">System.Windows.Forms</span></span>  
+    -   <span data-ttu-id="6ab78-124">System.Windows.Forms.</span><span class="sxs-lookup"><span data-stu-id="6ab78-124">System.Windows.Forms</span></span>  
   
-3.  <span data-ttu-id="278e6-125">Откройте файл MainWindow.xaml в [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)].</span><span class="sxs-lookup"><span data-stu-id="278e6-125">Open MainWindow.xaml in the [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)].</span></span>  
+3.  <span data-ttu-id="6ab78-125">Откройте файл MainWindow.xaml в [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)].</span><span class="sxs-lookup"><span data-stu-id="6ab78-125">Open MainWindow.xaml in the [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)].</span></span>  
   
-4.  <span data-ttu-id="278e6-126">В <xref:System.Windows.Window> элемента, добавьте следующий [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] сопоставление пространства имен.</span><span class="sxs-lookup"><span data-stu-id="278e6-126">In the <xref:System.Windows.Window> element, add the following [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] namespaces mapping.</span></span>  
+4.  <span data-ttu-id="6ab78-126">В <xref:System.Windows.Window> элемента, добавьте следующий [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] сопоставление пространства имен.</span><span class="sxs-lookup"><span data-stu-id="6ab78-126">In the <xref:System.Windows.Window> element, add the following [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] namespaces mapping.</span></span>  
   
     ```xaml  
     xmlns:wf="clr-namespace:System.Windows.Forms;assembly=System.Windows.Forms"  
     ```  
   
-5.  <span data-ttu-id="278e6-127">Имя по умолчанию <xref:System.Windows.Controls.Grid> элемент `mainGrid` , назначив <xref:System.Windows.FrameworkElement.Name%2A> свойство.</span><span class="sxs-lookup"><span data-stu-id="278e6-127">Name the default <xref:System.Windows.Controls.Grid> element `mainGrid` by assigning the <xref:System.Windows.FrameworkElement.Name%2A> property.</span></span>  
+5.  <span data-ttu-id="6ab78-127">Имя по умолчанию <xref:System.Windows.Controls.Grid> элемент `mainGrid` , назначив <xref:System.Windows.FrameworkElement.Name%2A> свойство.</span><span class="sxs-lookup"><span data-stu-id="6ab78-127">Name the default <xref:System.Windows.Controls.Grid> element `mainGrid` by assigning the <xref:System.Windows.FrameworkElement.Name%2A> property.</span></span>  
   
      [!code-xaml[WPFWithWFAndDatabinding#8](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml#8)]  
   
-## <a name="defining-the-data-template"></a><span data-ttu-id="278e6-128">Определение шаблона данных</span><span class="sxs-lookup"><span data-stu-id="278e6-128">Defining the Data Template</span></span>  
- <span data-ttu-id="278e6-129">Основной список клиентов отображается в <xref:System.Windows.Controls.ListBox> элемента управления.</span><span class="sxs-lookup"><span data-stu-id="278e6-129">The master list of customers is displayed in a <xref:System.Windows.Controls.ListBox> control.</span></span> <span data-ttu-id="278e6-130">В следующем примере кода определяется <xref:System.Windows.DataTemplate> объект с именем `ListItemsTemplate` визуального дерева, который управляет <xref:System.Windows.Controls.ListBox> элемента управления.</span><span class="sxs-lookup"><span data-stu-id="278e6-130">The following code example defines a <xref:System.Windows.DataTemplate> object named `ListItemsTemplate` that controls the visual tree of the <xref:System.Windows.Controls.ListBox> control.</span></span> <span data-ttu-id="278e6-131">Это <xref:System.Windows.DataTemplate> назначается <xref:System.Windows.Controls.ListBox> элемента управления <xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A> свойство.</span><span class="sxs-lookup"><span data-stu-id="278e6-131">This <xref:System.Windows.DataTemplate> is assigned to the <xref:System.Windows.Controls.ListBox> control's <xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A> property.</span></span>  
+## <a name="defining-the-data-template"></a><span data-ttu-id="6ab78-128">Определение шаблона данных</span><span class="sxs-lookup"><span data-stu-id="6ab78-128">Defining the Data Template</span></span>  
+ <span data-ttu-id="6ab78-129">Основной список клиентов отображается в <xref:System.Windows.Controls.ListBox> элемента управления.</span><span class="sxs-lookup"><span data-stu-id="6ab78-129">The master list of customers is displayed in a <xref:System.Windows.Controls.ListBox> control.</span></span> <span data-ttu-id="6ab78-130">В следующем примере кода определяется <xref:System.Windows.DataTemplate> объект с именем `ListItemsTemplate` визуального дерева, который управляет <xref:System.Windows.Controls.ListBox> элемента управления.</span><span class="sxs-lookup"><span data-stu-id="6ab78-130">The following code example defines a <xref:System.Windows.DataTemplate> object named `ListItemsTemplate` that controls the visual tree of the <xref:System.Windows.Controls.ListBox> control.</span></span> <span data-ttu-id="6ab78-131">Это <xref:System.Windows.DataTemplate> назначается <xref:System.Windows.Controls.ListBox> элемента управления <xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A> свойство.</span><span class="sxs-lookup"><span data-stu-id="6ab78-131">This <xref:System.Windows.DataTemplate> is assigned to the <xref:System.Windows.Controls.ListBox> control's <xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A> property.</span></span>  
   
-#### <a name="to-define-the-data-template"></a><span data-ttu-id="278e6-132">Чтобы определить шаблон данных, выполните следующие действия.</span><span class="sxs-lookup"><span data-stu-id="278e6-132">To define the data template</span></span>  
+#### <a name="to-define-the-data-template"></a><span data-ttu-id="6ab78-132">Чтобы определить шаблон данных, выполните следующие действия.</span><span class="sxs-lookup"><span data-stu-id="6ab78-132">To define the data template</span></span>  
   
--   <span data-ttu-id="278e6-133">Скопируйте следующий код XAML в <xref:System.Windows.Controls.Grid> объявление элемента.</span><span class="sxs-lookup"><span data-stu-id="278e6-133">Copy the following XAML into the <xref:System.Windows.Controls.Grid> element's declaration.</span></span>  
+-   <span data-ttu-id="6ab78-133">Скопируйте следующий код XAML в <xref:System.Windows.Controls.Grid> объявление элемента.</span><span class="sxs-lookup"><span data-stu-id="6ab78-133">Copy the following XAML into the <xref:System.Windows.Controls.Grid> element's declaration.</span></span>  
   
      [!code-xaml[WPFWithWFAndDatabinding#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml#3)]  
   
-## <a name="specifying-the-form-layout"></a><span data-ttu-id="278e6-134">Задание макета формы</span><span class="sxs-lookup"><span data-stu-id="278e6-134">Specifying the Form Layout</span></span>  
- <span data-ttu-id="278e6-135">Макет формы определяется сеткой с тремя строками и тремя столбцами.</span><span class="sxs-lookup"><span data-stu-id="278e6-135">The layout of the form is defined by a grid with three rows and three columns.</span></span> <span data-ttu-id="278e6-136"><xref:System.Windows.Controls.Label> элементы управления предоставляются для идентификации каждого столбца в таблице Customers.</span><span class="sxs-lookup"><span data-stu-id="278e6-136"><xref:System.Windows.Controls.Label> controls are provided to identify each column in the Customers table.</span></span>  
+## <a name="specifying-the-form-layout"></a><span data-ttu-id="6ab78-134">Задание макета формы</span><span class="sxs-lookup"><span data-stu-id="6ab78-134">Specifying the Form Layout</span></span>  
+ <span data-ttu-id="6ab78-135">Макет формы определяется сеткой с тремя строками и тремя столбцами.</span><span class="sxs-lookup"><span data-stu-id="6ab78-135">The layout of the form is defined by a grid with three rows and three columns.</span></span> <span data-ttu-id="6ab78-136"><xref:System.Windows.Controls.Label> элементы управления предоставляются для идентификации каждого столбца в таблице Customers.</span><span class="sxs-lookup"><span data-stu-id="6ab78-136"><xref:System.Windows.Controls.Label> controls are provided to identify each column in the Customers table.</span></span>  
   
-#### <a name="to-set-up-the-grid-layout"></a><span data-ttu-id="278e6-137">Настройка макета сетки</span><span class="sxs-lookup"><span data-stu-id="278e6-137">To set up the Grid layout</span></span>  
+#### <a name="to-set-up-the-grid-layout"></a><span data-ttu-id="6ab78-137">Настройка макета сетки</span><span class="sxs-lookup"><span data-stu-id="6ab78-137">To set up the Grid layout</span></span>  
   
--   <span data-ttu-id="278e6-138">Скопируйте следующий код XAML в <xref:System.Windows.Controls.Grid> объявление элемента.</span><span class="sxs-lookup"><span data-stu-id="278e6-138">Copy the following XAML into the <xref:System.Windows.Controls.Grid> element's declaration.</span></span>  
+-   <span data-ttu-id="6ab78-138">Скопируйте следующий код XAML в <xref:System.Windows.Controls.Grid> объявление элемента.</span><span class="sxs-lookup"><span data-stu-id="6ab78-138">Copy the following XAML into the <xref:System.Windows.Controls.Grid> element's declaration.</span></span>  
   
      [!code-xaml[WPFWithWFAndDatabinding#4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml#4)]  
   
-#### <a name="to-set-up-the-label-controls"></a><span data-ttu-id="278e6-139">Чтобы настроить элементы управления Label, выполните следующие действия.</span><span class="sxs-lookup"><span data-stu-id="278e6-139">To set up the Label controls</span></span>  
+#### <a name="to-set-up-the-label-controls"></a><span data-ttu-id="6ab78-139">Чтобы настроить элементы управления Label, выполните следующие действия.</span><span class="sxs-lookup"><span data-stu-id="6ab78-139">To set up the Label controls</span></span>  
   
--   <span data-ttu-id="278e6-140">Скопируйте следующий код XAML в <xref:System.Windows.Controls.Grid> объявление элемента.</span><span class="sxs-lookup"><span data-stu-id="278e6-140">Copy the following XAML into the <xref:System.Windows.Controls.Grid> element's declaration.</span></span>  
+-   <span data-ttu-id="6ab78-140">Скопируйте следующий код XAML в <xref:System.Windows.Controls.Grid> объявление элемента.</span><span class="sxs-lookup"><span data-stu-id="6ab78-140">Copy the following XAML into the <xref:System.Windows.Controls.Grid> element's declaration.</span></span>  
   
      [!code-xaml[WPFWithWFAndDatabinding#5](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml#5)]  
   
-## <a name="specifying-data-bindings"></a><span data-ttu-id="278e6-141">Задание привязок данных</span><span class="sxs-lookup"><span data-stu-id="278e6-141">Specifying Data Bindings</span></span>  
- <span data-ttu-id="278e6-142">Основной список клиентов отображается в <xref:System.Windows.Controls.ListBox> элемента управления.</span><span class="sxs-lookup"><span data-stu-id="278e6-142">The master list of customers is displayed in a <xref:System.Windows.Controls.ListBox> control.</span></span> <span data-ttu-id="278e6-143">Прикрепленное `ListItemsTemplate` привязывает <xref:System.Windows.Controls.TextBlock> управления `ContactName` поля из базы данных.</span><span class="sxs-lookup"><span data-stu-id="278e6-143">The attached `ListItemsTemplate` binds a <xref:System.Windows.Controls.TextBlock> control to the `ContactName` field from the database.</span></span>  
+## <a name="specifying-data-bindings"></a><span data-ttu-id="6ab78-141">Задание привязок данных</span><span class="sxs-lookup"><span data-stu-id="6ab78-141">Specifying Data Bindings</span></span>  
+ <span data-ttu-id="6ab78-142">Основной список клиентов отображается в <xref:System.Windows.Controls.ListBox> элемента управления.</span><span class="sxs-lookup"><span data-stu-id="6ab78-142">The master list of customers is displayed in a <xref:System.Windows.Controls.ListBox> control.</span></span> <span data-ttu-id="6ab78-143">Прикрепленное `ListItemsTemplate` привязывает <xref:System.Windows.Controls.TextBlock> управления `ContactName` поля из базы данных.</span><span class="sxs-lookup"><span data-stu-id="6ab78-143">The attached `ListItemsTemplate` binds a <xref:System.Windows.Controls.TextBlock> control to the `ContactName` field from the database.</span></span>  
   
- <span data-ttu-id="278e6-144">Подробные сведения о каждой записи клиента отображаются в нескольких <xref:System.Windows.Controls.TextBox> элементов управления.</span><span class="sxs-lookup"><span data-stu-id="278e6-144">The details of each customer record are displayed in several <xref:System.Windows.Controls.TextBox> controls.</span></span>  
+ <span data-ttu-id="6ab78-144">Подробные сведения о каждой записи клиента отображаются в нескольких <xref:System.Windows.Controls.TextBox> элементов управления.</span><span class="sxs-lookup"><span data-stu-id="6ab78-144">The details of each customer record are displayed in several <xref:System.Windows.Controls.TextBox> controls.</span></span>  
   
-#### <a name="to-specify-data-bindings"></a><span data-ttu-id="278e6-145">Чтобы задать привязки данных, выполните следующие действия.</span><span class="sxs-lookup"><span data-stu-id="278e6-145">To specify data bindings</span></span>  
+#### <a name="to-specify-data-bindings"></a><span data-ttu-id="6ab78-145">Чтобы задать привязки данных, выполните следующие действия.</span><span class="sxs-lookup"><span data-stu-id="6ab78-145">To specify data bindings</span></span>  
   
--   <span data-ttu-id="278e6-146">Скопируйте следующий код XAML в <xref:System.Windows.Controls.Grid> объявление элемента.</span><span class="sxs-lookup"><span data-stu-id="278e6-146">Copy the following XAML into the <xref:System.Windows.Controls.Grid> element's declaration.</span></span>  
+-   <span data-ttu-id="6ab78-146">Скопируйте следующий код XAML в <xref:System.Windows.Controls.Grid> объявление элемента.</span><span class="sxs-lookup"><span data-stu-id="6ab78-146">Copy the following XAML into the <xref:System.Windows.Controls.Grid> element's declaration.</span></span>  
   
-     <span data-ttu-id="278e6-147"><xref:System.Windows.Data.Binding> Класса привязки <xref:System.Windows.Controls.TextBox> элементов управления с соответствующими полями в базе данных.</span><span class="sxs-lookup"><span data-stu-id="278e6-147">The <xref:System.Windows.Data.Binding> class binds the <xref:System.Windows.Controls.TextBox> controls to the appropriate fields in the database.</span></span>  
+     <span data-ttu-id="6ab78-147"><xref:System.Windows.Data.Binding> Класса привязки <xref:System.Windows.Controls.TextBox> элементов управления с соответствующими полями в базе данных.</span><span class="sxs-lookup"><span data-stu-id="6ab78-147">The <xref:System.Windows.Data.Binding> class binds the <xref:System.Windows.Controls.TextBox> controls to the appropriate fields in the database.</span></span>  
   
      [!code-xaml[WPFWithWFAndDatabinding#6](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml#6)]  
   
-## <a name="displaying-data-by-using-interoperation"></a><span data-ttu-id="278e6-148">Отображение данных с помощью взаимодействия</span><span class="sxs-lookup"><span data-stu-id="278e6-148">Displaying Data by Using Interoperation</span></span>  
- <span data-ttu-id="278e6-149">Заказы, соответствующие выбранному заказчику, отображаются в <xref:System.Windows.Forms.DataGridView?displayProperty=nameWithType> управления с именем `dataGridView1`.</span><span class="sxs-lookup"><span data-stu-id="278e6-149">The orders corresponding to the selected customer are displayed in a <xref:System.Windows.Forms.DataGridView?displayProperty=nameWithType> control named `dataGridView1`.</span></span> <span data-ttu-id="278e6-150">`dataGridView1` Элемент управления привязан к источнику данных в файле кода.</span><span class="sxs-lookup"><span data-stu-id="278e6-150">The `dataGridView1` control is bound to the data source in the code-behind file.</span></span> <span data-ttu-id="278e6-151">Объект <xref:System.Windows.Forms.Integration.WindowsFormsHost> управления является родительским для данного [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] элемента управления.</span><span class="sxs-lookup"><span data-stu-id="278e6-151">A <xref:System.Windows.Forms.Integration.WindowsFormsHost> control is the parent of this [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] control.</span></span>  
+## <a name="displaying-data-by-using-interoperation"></a><span data-ttu-id="6ab78-148">Отображение данных с помощью взаимодействия</span><span class="sxs-lookup"><span data-stu-id="6ab78-148">Displaying Data by Using Interoperation</span></span>  
+ <span data-ttu-id="6ab78-149">Заказы, соответствующие выбранному заказчику, отображаются в <xref:System.Windows.Forms.DataGridView?displayProperty=nameWithType> управления с именем `dataGridView1`.</span><span class="sxs-lookup"><span data-stu-id="6ab78-149">The orders corresponding to the selected customer are displayed in a <xref:System.Windows.Forms.DataGridView?displayProperty=nameWithType> control named `dataGridView1`.</span></span> <span data-ttu-id="6ab78-150">`dataGridView1` Элемент управления привязан к источнику данных в файле кода.</span><span class="sxs-lookup"><span data-stu-id="6ab78-150">The `dataGridView1` control is bound to the data source in the code-behind file.</span></span> <span data-ttu-id="6ab78-151">Объект <xref:System.Windows.Forms.Integration.WindowsFormsHost> управления является родительским для данного [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] элемента управления.</span><span class="sxs-lookup"><span data-stu-id="6ab78-151">A <xref:System.Windows.Forms.Integration.WindowsFormsHost> control is the parent of this [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] control.</span></span>  
   
-#### <a name="to-display-data-in-the-datagridview-control"></a><span data-ttu-id="278e6-152">Чтобы отобразить данные в элементе управления DataGridView, выполните следующие действия.</span><span class="sxs-lookup"><span data-stu-id="278e6-152">To display data in the DataGridView control</span></span>  
+#### <a name="to-display-data-in-the-datagridview-control"></a><span data-ttu-id="6ab78-152">Чтобы отобразить данные в элементе управления DataGridView, выполните следующие действия.</span><span class="sxs-lookup"><span data-stu-id="6ab78-152">To display data in the DataGridView control</span></span>  
   
--   <span data-ttu-id="278e6-153">Скопируйте следующий код XAML в <xref:System.Windows.Controls.Grid> объявление элемента.</span><span class="sxs-lookup"><span data-stu-id="278e6-153">Copy the following XAML into the <xref:System.Windows.Controls.Grid> element's declaration.</span></span>  
+-   <span data-ttu-id="6ab78-153">Скопируйте следующий код XAML в <xref:System.Windows.Controls.Grid> объявление элемента.</span><span class="sxs-lookup"><span data-stu-id="6ab78-153">Copy the following XAML into the <xref:System.Windows.Controls.Grid> element's declaration.</span></span>  
   
      [!code-xaml[WPFWithWFAndDatabinding#7](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml#7)]  
   
-## <a name="adding-the-data-source-to-the-project"></a><span data-ttu-id="278e6-154">Добавление источника данных в проект</span><span class="sxs-lookup"><span data-stu-id="278e6-154">Adding the Data Source to the Project</span></span>  
- <span data-ttu-id="278e6-155">С помощью Visual Studio можно легко добавить источник данных к проекту.</span><span class="sxs-lookup"><span data-stu-id="278e6-155">With Visual Studio, you can easily add a data source to your project.</span></span> <span data-ttu-id="278e6-156">Эта процедура добавляет строго типизированный набор данных в ваш проект.</span><span class="sxs-lookup"><span data-stu-id="278e6-156">This procedure adds a strongly typed data set to your project.</span></span> <span data-ttu-id="278e6-157">Также добавляется несколько других классов поддержки, таких как адаптеры таблиц для каждой из выбранных таблиц.</span><span class="sxs-lookup"><span data-stu-id="278e6-157">Several other support classes, such as table adapters for each of the chosen tables, are also added.</span></span>  
+## <a name="adding-the-data-source-to-the-project"></a><span data-ttu-id="6ab78-154">Добавление источника данных в проект</span><span class="sxs-lookup"><span data-stu-id="6ab78-154">Adding the Data Source to the Project</span></span>  
+ <span data-ttu-id="6ab78-155">С помощью Visual Studio можно легко добавить источник данных к проекту.</span><span class="sxs-lookup"><span data-stu-id="6ab78-155">With Visual Studio, you can easily add a data source to your project.</span></span> <span data-ttu-id="6ab78-156">Эта процедура добавляет строго типизированный набор данных в ваш проект.</span><span class="sxs-lookup"><span data-stu-id="6ab78-156">This procedure adds a strongly typed data set to your project.</span></span> <span data-ttu-id="6ab78-157">Также добавляется несколько других классов поддержки, таких как адаптеры таблиц для каждой из выбранных таблиц.</span><span class="sxs-lookup"><span data-stu-id="6ab78-157">Several other support classes, such as table adapters for each of the chosen tables, are also added.</span></span>  
   
-#### <a name="to-add-the-data-source"></a><span data-ttu-id="278e6-158">Добавление источника данных</span><span class="sxs-lookup"><span data-stu-id="278e6-158">To add the data source</span></span>  
+#### <a name="to-add-the-data-source"></a><span data-ttu-id="6ab78-158">Добавление источника данных</span><span class="sxs-lookup"><span data-stu-id="6ab78-158">To add the data source</span></span>  
   
-1.  <span data-ttu-id="278e6-159">Из **данные** последовательно выберите пункты **добавить новый источник данных**.</span><span class="sxs-lookup"><span data-stu-id="278e6-159">From the **Data** menu, select **Add New Data Source**.</span></span>  
+1.  <span data-ttu-id="6ab78-159">Из **данные** последовательно выберите пункты **добавить новый источник данных**.</span><span class="sxs-lookup"><span data-stu-id="6ab78-159">From the **Data** menu, select **Add New Data Source**.</span></span>  
   
-2.  <span data-ttu-id="278e6-160">В **мастер настройки источника данных**, создать подключение к базе данных Northwind с помощью набора данных.</span><span class="sxs-lookup"><span data-stu-id="278e6-160">In the **Data Source Configuration Wizard**, create a connection to the Northwind database by using a dataset.</span></span> <span data-ttu-id="278e6-161">Дополнительные сведения см. в разделе [как: подключение к данным в базе данных](http://msdn.microsoft.com/library/6c56e54e-8834-4297-85aa-cc1a443ba556).</span><span class="sxs-lookup"><span data-stu-id="278e6-161">For more information, see [How to: Connect to Data in a Database](http://msdn.microsoft.com/library/6c56e54e-8834-4297-85aa-cc1a443ba556).</span></span>  
+2.  <span data-ttu-id="6ab78-160">В **мастер настройки источника данных**, создать подключение к базе данных Northwind с помощью набора данных.</span><span class="sxs-lookup"><span data-stu-id="6ab78-160">In the **Data Source Configuration Wizard**, create a connection to the Northwind database by using a dataset.</span></span> <span data-ttu-id="6ab78-161">Дополнительные сведения см. в разделе [как: подключение к данным в базе данных](http://msdn.microsoft.com/library/6c56e54e-8834-4297-85aa-cc1a443ba556).</span><span class="sxs-lookup"><span data-stu-id="6ab78-161">For more information, see [How to: Connect to Data in a Database](http://msdn.microsoft.com/library/6c56e54e-8834-4297-85aa-cc1a443ba556).</span></span>  
   
-3.  <span data-ttu-id="278e6-162">При появлении по **мастер настройки источника данных**, сохранить строку подключения в качестве `NorthwindConnectionString`.</span><span class="sxs-lookup"><span data-stu-id="278e6-162">When you are prompted by the **Data Source Configuration Wizard**, save the connection string as `NorthwindConnectionString`.</span></span>  
+3.  <span data-ttu-id="6ab78-162">При появлении по **мастер настройки источника данных**, сохранить строку подключения в качестве `NorthwindConnectionString`.</span><span class="sxs-lookup"><span data-stu-id="6ab78-162">When you are prompted by the **Data Source Configuration Wizard**, save the connection string as `NorthwindConnectionString`.</span></span>  
   
-4.  <span data-ttu-id="278e6-163">При появлении запроса на выбор объектов базы данных выберите `Customers` и `Orders` таблицы и имя созданного набора данных `NorthwindDataSet`.</span><span class="sxs-lookup"><span data-stu-id="278e6-163">When you are prompted to choose your database objects, select the `Customers` and `Orders` tables, and name the generated data set `NorthwindDataSet`.</span></span>  
+4.  <span data-ttu-id="6ab78-163">При появлении запроса на выбор объектов базы данных выберите `Customers` и `Orders` таблицы и имя созданного набора данных `NorthwindDataSet`.</span><span class="sxs-lookup"><span data-stu-id="6ab78-163">When you are prompted to choose your database objects, select the `Customers` and `Orders` tables, and name the generated data set `NorthwindDataSet`.</span></span>  
   
-## <a name="binding-to-the-data-source"></a><span data-ttu-id="278e6-164">Подключение к источнику данных</span><span class="sxs-lookup"><span data-stu-id="278e6-164">Binding to the Data Source</span></span>  
- <span data-ttu-id="278e6-165"><xref:System.Windows.Forms.BindingSource?displayProperty=nameWithType> Компонент предоставляет единый интерфейс для источника данных приложения.</span><span class="sxs-lookup"><span data-stu-id="278e6-165">The <xref:System.Windows.Forms.BindingSource?displayProperty=nameWithType> component provides a uniform interface for the application's data source.</span></span> <span data-ttu-id="278e6-166">Привязка к источнику данных реализована в файле кода программной части.</span><span class="sxs-lookup"><span data-stu-id="278e6-166">Binding to the data source is implemented in the code-behind file.</span></span>  
+## <a name="binding-to-the-data-source"></a><span data-ttu-id="6ab78-164">Подключение к источнику данных</span><span class="sxs-lookup"><span data-stu-id="6ab78-164">Binding to the Data Source</span></span>  
+ <span data-ttu-id="6ab78-165"><xref:System.Windows.Forms.BindingSource?displayProperty=nameWithType> Компонент предоставляет единый интерфейс для источника данных приложения.</span><span class="sxs-lookup"><span data-stu-id="6ab78-165">The <xref:System.Windows.Forms.BindingSource?displayProperty=nameWithType> component provides a uniform interface for the application's data source.</span></span> <span data-ttu-id="6ab78-166">Привязка к источнику данных реализована в файле кода программной части.</span><span class="sxs-lookup"><span data-stu-id="6ab78-166">Binding to the data source is implemented in the code-behind file.</span></span>  
   
-#### <a name="to-bind-to-the-data-source"></a><span data-ttu-id="278e6-167">Чтобы создать привязку к источнику данных, выполните следующие действия.</span><span class="sxs-lookup"><span data-stu-id="278e6-167">To bind to the data source</span></span>  
+#### <a name="to-bind-to-the-data-source"></a><span data-ttu-id="6ab78-167">Чтобы создать привязку к источнику данных, выполните следующие действия.</span><span class="sxs-lookup"><span data-stu-id="6ab78-167">To bind to the data source</span></span>  
   
-1.  <span data-ttu-id="278e6-168">Откройте файл кода программной части с именем MainWindow.xaml.vb или MainWindow.xaml.cs.</span><span class="sxs-lookup"><span data-stu-id="278e6-168">Open the code-behind file, which is named MainWindow.xaml.vb or MainWindow.xaml.cs.</span></span>  
+1.  <span data-ttu-id="6ab78-168">Откройте файл кода программной части с именем MainWindow.xaml.vb или MainWindow.xaml.cs.</span><span class="sxs-lookup"><span data-stu-id="6ab78-168">Open the code-behind file, which is named MainWindow.xaml.vb or MainWindow.xaml.cs.</span></span>  
   
-2.  <span data-ttu-id="278e6-169">Скопируйте следующий код в `MainWindow` определения класса.</span><span class="sxs-lookup"><span data-stu-id="278e6-169">Copy the following code into the `MainWindow` class definition.</span></span>  
+2.  <span data-ttu-id="6ab78-169">Скопируйте следующий код в `MainWindow` определения класса.</span><span class="sxs-lookup"><span data-stu-id="6ab78-169">Copy the following code into the `MainWindow` class definition.</span></span>  
   
-     <span data-ttu-id="278e6-170">Этот код объявляет <xref:System.Windows.Forms.BindingSource> компонента и связанные вспомогательные классы, которые подключаются к базе данных.</span><span class="sxs-lookup"><span data-stu-id="278e6-170">This code declares the <xref:System.Windows.Forms.BindingSource> component and associated helper classes that connect to the database.</span></span>  
+     <span data-ttu-id="6ab78-170">Этот код объявляет <xref:System.Windows.Forms.BindingSource> компонента и связанные вспомогательные классы, которые подключаются к базе данных.</span><span class="sxs-lookup"><span data-stu-id="6ab78-170">This code declares the <xref:System.Windows.Forms.BindingSource> component and associated helper classes that connect to the database.</span></span>  
   
      [!code-csharp[WPFWithWFAndDatabinding#11](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml.cs#11)]
      [!code-vb[WPFWithWFAndDatabinding#11](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFWithWFAndDatabinding/VisualBasic/WPFWithWFAndDatabinding/Window1.xaml.vb#11)]  
   
-3.  <span data-ttu-id="278e6-171">Копируйте в конструктор следующий код.</span><span class="sxs-lookup"><span data-stu-id="278e6-171">Copy the following code into the constructor.</span></span>  
+3.  <span data-ttu-id="6ab78-171">Копируйте в конструктор следующий код.</span><span class="sxs-lookup"><span data-stu-id="6ab78-171">Copy the following code into the constructor.</span></span>  
   
-     <span data-ttu-id="278e6-172">Этот код создает и инициализирует <xref:System.Windows.Forms.BindingSource> компонента.</span><span class="sxs-lookup"><span data-stu-id="278e6-172">This code creates and initializes the <xref:System.Windows.Forms.BindingSource> component.</span></span>  
+     <span data-ttu-id="6ab78-172">Этот код создает и инициализирует <xref:System.Windows.Forms.BindingSource> компонента.</span><span class="sxs-lookup"><span data-stu-id="6ab78-172">This code creates and initializes the <xref:System.Windows.Forms.BindingSource> component.</span></span>  
   
      [!code-csharp[WPFWithWFAndDatabinding#12](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml.cs#12)]
      [!code-vb[WPFWithWFAndDatabinding#12](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFWithWFAndDatabinding/VisualBasic/WPFWithWFAndDatabinding/Window1.xaml.vb#12)]  
   
-4.  <span data-ttu-id="278e6-173">Откройте файл MainWindow.xaml.</span><span class="sxs-lookup"><span data-stu-id="278e6-173">Open MainWindow.xaml.</span></span>  
+4.  <span data-ttu-id="6ab78-173">Откройте файл MainWindow.xaml.</span><span class="sxs-lookup"><span data-stu-id="6ab78-173">Open MainWindow.xaml.</span></span>  
   
-5.  <span data-ttu-id="278e6-174">В режиме конструктора или XAML, выберите <xref:System.Windows.Window> элемент.</span><span class="sxs-lookup"><span data-stu-id="278e6-174">In Design view or XAML view, select the <xref:System.Windows.Window> element.</span></span>  
+5.  <span data-ttu-id="6ab78-174">В режиме конструктора или XAML, выберите <xref:System.Windows.Window> элемент.</span><span class="sxs-lookup"><span data-stu-id="6ab78-174">In Design view or XAML view, select the <xref:System.Windows.Window> element.</span></span>  
   
-6.  <span data-ttu-id="278e6-175">В окне «Свойства» щелкните **события** вкладки.</span><span class="sxs-lookup"><span data-stu-id="278e6-175">In the Properties window, click the **Events** tab.</span></span>  
+6.  <span data-ttu-id="6ab78-175">В окне «Свойства» щелкните **события** вкладки.</span><span class="sxs-lookup"><span data-stu-id="6ab78-175">In the Properties window, click the **Events** tab.</span></span>  
   
-7.  <span data-ttu-id="278e6-176">Дважды щелкните <xref:System.Windows.FrameworkElement.Loaded> событий.</span><span class="sxs-lookup"><span data-stu-id="278e6-176">Double-click the <xref:System.Windows.FrameworkElement.Loaded> event.</span></span>  
+7.  <span data-ttu-id="6ab78-176">Дважды щелкните <xref:System.Windows.FrameworkElement.Loaded> событий.</span><span class="sxs-lookup"><span data-stu-id="6ab78-176">Double-click the <xref:System.Windows.FrameworkElement.Loaded> event.</span></span>  
   
-8.  <span data-ttu-id="278e6-177">Скопируйте следующий код в <xref:System.Windows.FrameworkElement.Loaded> обработчика событий.</span><span class="sxs-lookup"><span data-stu-id="278e6-177">Copy the following code into the <xref:System.Windows.FrameworkElement.Loaded> event handler.</span></span>  
+8.  <span data-ttu-id="6ab78-177">Скопируйте следующий код в <xref:System.Windows.FrameworkElement.Loaded> обработчика событий.</span><span class="sxs-lookup"><span data-stu-id="6ab78-177">Copy the following code into the <xref:System.Windows.FrameworkElement.Loaded> event handler.</span></span>  
   
-     <span data-ttu-id="278e6-178">Этот код присваивает <xref:System.Windows.Forms.BindingSource> компонент в качестве контекста данных и заполняет `Customers` и `Orders` объекты адаптера.</span><span class="sxs-lookup"><span data-stu-id="278e6-178">This code assigns the <xref:System.Windows.Forms.BindingSource> component as the data context and populates the `Customers` and `Orders` adapter objects.</span></span>  
+     <span data-ttu-id="6ab78-178">Этот код присваивает <xref:System.Windows.Forms.BindingSource> компонент в качестве контекста данных и заполняет `Customers` и `Orders` объекты адаптера.</span><span class="sxs-lookup"><span data-stu-id="6ab78-178">This code assigns the <xref:System.Windows.Forms.BindingSource> component as the data context and populates the `Customers` and `Orders` adapter objects.</span></span>  
   
      [!code-csharp[WPFWithWFAndDatabinding#13](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml.cs#13)]
      [!code-vb[WPFWithWFAndDatabinding#13](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFWithWFAndDatabinding/VisualBasic/WPFWithWFAndDatabinding/Window1.xaml.vb#13)]  
   
-9. <span data-ttu-id="278e6-179">Скопируйте следующий код в `MainWindow` определения класса.</span><span class="sxs-lookup"><span data-stu-id="278e6-179">Copy the following code into the `MainWindow` class definition.</span></span>  
+9. <span data-ttu-id="6ab78-179">Скопируйте следующий код в `MainWindow` определения класса.</span><span class="sxs-lookup"><span data-stu-id="6ab78-179">Copy the following code into the `MainWindow` class definition.</span></span>  
   
-     <span data-ttu-id="278e6-180">Этот метод отвечает за <xref:System.Windows.Data.CollectionView.CurrentChanged> событий и обновляет текущий элемент привязки данных.</span><span class="sxs-lookup"><span data-stu-id="278e6-180">This method handles the <xref:System.Windows.Data.CollectionView.CurrentChanged> event and updates the current item of the data binding.</span></span>  
+     <span data-ttu-id="6ab78-180">Этот метод отвечает за <xref:System.Windows.Data.CollectionView.CurrentChanged> событий и обновляет текущий элемент привязки данных.</span><span class="sxs-lookup"><span data-stu-id="6ab78-180">This method handles the <xref:System.Windows.Data.CollectionView.CurrentChanged> event and updates the current item of the data binding.</span></span>  
   
      [!code-csharp[WPFWithWFAndDatabinding#14](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml.cs#14)]
      [!code-vb[WPFWithWFAndDatabinding#14](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFWithWFAndDatabinding/VisualBasic/WPFWithWFAndDatabinding/Window1.xaml.vb#14)]  
   
-10. <span data-ttu-id="278e6-181">Нажмите клавишу F5, чтобы выполнить сборку приложения и запустить его.</span><span class="sxs-lookup"><span data-stu-id="278e6-181">Press F5 to build and run the application.</span></span>  
+10. <span data-ttu-id="6ab78-181">Нажмите клавишу F5, чтобы выполнить сборку приложения и запустить его.</span><span class="sxs-lookup"><span data-stu-id="6ab78-181">Press F5 to build and run the application.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="278e6-182">См. также</span><span class="sxs-lookup"><span data-stu-id="278e6-182">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="6ab78-182">См. также</span><span class="sxs-lookup"><span data-stu-id="6ab78-182">See Also</span></span>  
  <xref:System.Windows.Forms.Integration.ElementHost>  
  <xref:System.Windows.Forms.Integration.WindowsFormsHost>  
- [<span data-ttu-id="278e6-183">Конструктор WPF</span><span class="sxs-lookup"><span data-stu-id="278e6-183">WPF Designer</span></span>](http://msdn.microsoft.com/library/c6c65214-8411-4e16-b254-163ed4099c26)  
- [<span data-ttu-id="278e6-184">Привязка данных в гибридных приложениях-пример</span><span class="sxs-lookup"><span data-stu-id="278e6-184">Data Binding in Hybrid Applications Sample</span></span>](http://go.microsoft.com/fwlink/?LinkID=159983)  
- [<span data-ttu-id="278e6-185">Пошаговое руководство. Размещение составного элемента управления Windows Forms в приложении WPF</span><span class="sxs-lookup"><span data-stu-id="278e6-185">Walkthrough: Hosting a Windows Forms Composite Control in WPF</span></span>](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)  
- [<span data-ttu-id="278e6-186">Пошаговое руководство. Размещение составного элемента управления WPF в форме Windows Forms</span><span class="sxs-lookup"><span data-stu-id="278e6-186">Walkthrough: Hosting a WPF Composite Control in Windows Forms</span></span>](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)
+ [<span data-ttu-id="6ab78-183">Конструктор WPF</span><span class="sxs-lookup"><span data-stu-id="6ab78-183">WPF Designer</span></span>](http://msdn.microsoft.com/library/c6c65214-8411-4e16-b254-163ed4099c26)  
+ [<span data-ttu-id="6ab78-184">Привязка данных в гибридных приложениях-пример</span><span class="sxs-lookup"><span data-stu-id="6ab78-184">Data Binding in Hybrid Applications Sample</span></span>](http://go.microsoft.com/fwlink/?LinkID=159983)  
+ [<span data-ttu-id="6ab78-185">Пошаговое руководство. Размещение составного элемента управления Windows Forms в приложении WPF</span><span class="sxs-lookup"><span data-stu-id="6ab78-185">Walkthrough: Hosting a Windows Forms Composite Control in WPF</span></span>](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)  
+ [<span data-ttu-id="6ab78-186">Пошаговое руководство. Размещение составного элемента управления WPF в форме Windows Forms</span><span class="sxs-lookup"><span data-stu-id="6ab78-186">Walkthrough: Hosting a WPF Composite Control in Windows Forms</span></span>](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)

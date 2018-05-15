@@ -1,48 +1,37 @@
 ---
-title: "Руководство по документации по рабочим процессам Windows"
-ms.custom: 
+title: Руководство по документации по рабочим процессам Windows
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - WF [WF], guide to
 - Windows Workflow Foundation [WF], guide to
 ms.assetid: a75025be-f225-430f-90cf-98f7022db436
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0367d3c492947beb1a193650a8172f7e7293f4c5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9e5b363f28dce86e254540ff5e2f3ac9e7ca7d0e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="guide-to-the-windows-workflow-documentation"></a><span data-ttu-id="afde9-102">Руководство по документации по рабочим процессам Windows</span><span class="sxs-lookup"><span data-stu-id="afde9-102">Guide to the Windows Workflow Documentation</span></span>
-<span data-ttu-id="afde9-103">В этом разделе описывается использование документации по Windows Workflow Foundation.</span><span class="sxs-lookup"><span data-stu-id="afde9-103">This topic contains information about how to use the Windows Workflow Foundation documentation.</span></span> <span data-ttu-id="afde9-104">Документы, на которые указывают ссылки - это рекомендуемые отправные точки, сгруппированные по интересам и уровням подготовки.</span><span class="sxs-lookup"><span data-stu-id="afde9-104">The linked documents are recommended starting points grouped according to specific interests and levels of expertise.</span></span>  
+# <a name="guide-to-the-windows-workflow-documentation"></a><span data-ttu-id="d5a63-102">Руководство по документации по рабочим процессам Windows</span><span class="sxs-lookup"><span data-stu-id="d5a63-102">Guide to the Windows Workflow Documentation</span></span>
+<span data-ttu-id="d5a63-103">В этом разделе описывается использование документации по Windows Workflow Foundation.</span><span class="sxs-lookup"><span data-stu-id="d5a63-103">This topic contains information about how to use the Windows Workflow Foundation documentation.</span></span> <span data-ttu-id="d5a63-104">Документы, на которые указывают ссылки - это рекомендуемые отправные точки, сгруппированные по интересам и уровням подготовки.</span><span class="sxs-lookup"><span data-stu-id="d5a63-104">The linked documents are recommended starting points grouped according to specific interests and levels of expertise.</span></span>  
   
-## <a name="new-to-windows-workflow-foundation-programming"></a><span data-ttu-id="afde9-105">Знакомство с программированием Windows Workflow Foundation</span><span class="sxs-lookup"><span data-stu-id="afde9-105">New to Windows Workflow Foundation Programming</span></span>  
+## <a name="new-to-windows-workflow-foundation-programming"></a><span data-ttu-id="d5a63-105">Знакомство с программированием Windows Workflow Foundation</span><span class="sxs-lookup"><span data-stu-id="d5a63-105">New to Windows Workflow Foundation Programming</span></span>  
   
--   <span data-ttu-id="afde9-106">Если вы не знакомы с программированием Windows Workflow Foundation и хотите узнать некоторые образцы приложений, которые работают, см. в разделах, перечисленных в разделе [образцы Windows Workflow](../../../docs/framework/windows-workflow-foundation/samples/index.md).</span><span class="sxs-lookup"><span data-stu-id="afde9-106">If you are new to programming with Windows Workflow Foundation and you just want to see some sample applications that work, see the topics listed under [Windows Workflow Samples](../../../docs/framework/windows-workflow-foundation/samples/index.md).</span></span>  
+-   <span data-ttu-id="d5a63-106">Если вы не знакомы с программированием Windows Workflow Foundation и хотите узнать некоторые образцы приложений, которые работают, см. в разделах, перечисленных в разделе [образцы Windows Workflow](../../../docs/framework/windows-workflow-foundation/samples/index.md).</span><span class="sxs-lookup"><span data-stu-id="d5a63-106">If you are new to programming with Windows Workflow Foundation and you just want to see some sample applications that work, see the topics listed under [Windows Workflow Samples](../../../docs/framework/windows-workflow-foundation/samples/index.md).</span></span>  
   
--   <span data-ttu-id="afde9-107">Обсуждение различных моделей управления потоком Windows Workflow Foundation см. в разделе [проектирование рабочих процессов](../../../docs/framework/windows-workflow-foundation/designing-workflows.md).</span><span class="sxs-lookup"><span data-stu-id="afde9-107">For a discussion of the various Windows Workflow Foundation flow-control models, see [Designing Workflows](../../../docs/framework/windows-workflow-foundation/designing-workflows.md).</span></span>  
+-   <span data-ttu-id="d5a63-107">Обсуждение различных моделей управления потоком Windows Workflow Foundation см. в разделе [проектирование рабочих процессов](../../../docs/framework/windows-workflow-foundation/designing-workflows.md).</span><span class="sxs-lookup"><span data-stu-id="d5a63-107">For a discussion of the various Windows Workflow Foundation flow-control models, see [Designing Workflows](../../../docs/framework/windows-workflow-foundation/designing-workflows.md).</span></span>  
   
--   <span data-ttu-id="afde9-108">Учебник, в котором рассматриваются основные шаги по созданию приложений Windows Workflow Foundation, в разделе [учебник по началу работы](../../../docs/framework/windows-workflow-foundation/getting-started-tutorial.md).</span><span class="sxs-lookup"><span data-stu-id="afde9-108">For a tutorial that walks through the basic steps of creating a Windows Workflow Foundation application, see [Getting Started Tutorial](../../../docs/framework/windows-workflow-foundation/getting-started-tutorial.md).</span></span>  
+-   <span data-ttu-id="d5a63-108">Учебник, в котором рассматриваются основные шаги по созданию приложений Windows Workflow Foundation, в разделе [учебник по началу работы](../../../docs/framework/windows-workflow-foundation/getting-started-tutorial.md).</span><span class="sxs-lookup"><span data-stu-id="d5a63-108">For a tutorial that walks through the basic steps of creating a Windows Workflow Foundation application, see [Getting Started Tutorial](../../../docs/framework/windows-workflow-foundation/getting-started-tutorial.md).</span></span>  
   
--   <span data-ttu-id="afde9-109">Если вы заинтересованы в принципы Windows Workflow Foundation, см. в разделах [концептуальный обзор рабочего процесса Windows](../../../docs/framework/windows-workflow-foundation/conceptual-overview.md) раздела.</span><span class="sxs-lookup"><span data-stu-id="afde9-109">If you are interested in the concepts behind Windows Workflow Foundation, see the topics in the [Windows Workflow Conceptual Overview](../../../docs/framework/windows-workflow-foundation/conceptual-overview.md) section.</span></span>  
+-   <span data-ttu-id="d5a63-109">Если вы заинтересованы в принципы Windows Workflow Foundation, см. в разделах [концептуальный обзор рабочего процесса Windows](../../../docs/framework/windows-workflow-foundation/conceptual-overview.md) раздела.</span><span class="sxs-lookup"><span data-stu-id="d5a63-109">If you are interested in the concepts behind Windows Workflow Foundation, see the topics in the [Windows Workflow Conceptual Overview](../../../docs/framework/windows-workflow-foundation/conceptual-overview.md) section.</span></span>  
   
--   <span data-ttu-id="afde9-110">Список терминов, используемых в документации по Windows Workflow Foundation см. в разделе [глоссарий Windows Workflow Foundation, для .NET Framework 4.5](../../../docs/framework/windows-workflow-foundation/glossary.md).</span><span class="sxs-lookup"><span data-stu-id="afde9-110">For a list of terms used in the Windows Workflow Foundation documentation, see [Windows Workflow Foundation Glossary for .NET Framework 4.5](../../../docs/framework/windows-workflow-foundation/glossary.md).</span></span>  
+-   <span data-ttu-id="d5a63-110">Список терминов, используемых в документации по Windows Workflow Foundation см. в разделе [глоссарий Windows Workflow Foundation, для .NET Framework 4.5](../../../docs/framework/windows-workflow-foundation/glossary.md).</span><span class="sxs-lookup"><span data-stu-id="d5a63-110">For a list of terms used in the Windows Workflow Foundation documentation, see [Windows Workflow Foundation Glossary for .NET Framework 4.5](../../../docs/framework/windows-workflow-foundation/glossary.md).</span></span>  
   
--   <span data-ttu-id="afde9-111">Список новых понятий и функций см. в разделе [новые возможности Windows Workflow Foundation](../../../docs/framework/windows-workflow-foundation/whats-new.md).</span><span class="sxs-lookup"><span data-stu-id="afde9-111">For a list of new concepts and functionalities, see [What's New in Windows Workflow Foundation](../../../docs/framework/windows-workflow-foundation/whats-new.md).</span></span>  
+-   <span data-ttu-id="d5a63-111">Список новых понятий и функций см. в разделе [новые возможности Windows Workflow Foundation](../../../docs/framework/windows-workflow-foundation/whats-new.md).</span><span class="sxs-lookup"><span data-stu-id="d5a63-111">For a list of new concepts and functionalities, see [What's New in Windows Workflow Foundation](../../../docs/framework/windows-workflow-foundation/whats-new.md).</span></span>  
   
-## <a name="programming-in-depth"></a><span data-ttu-id="afde9-112">Программирование изнутри</span><span class="sxs-lookup"><span data-stu-id="afde9-112">Programming In-Depth</span></span>  
+## <a name="programming-in-depth"></a><span data-ttu-id="d5a63-112">Программирование изнутри</span><span class="sxs-lookup"><span data-stu-id="d5a63-112">Programming In-Depth</span></span>  
   
--   <span data-ttu-id="afde9-113">Подробное обсуждение объектной модели Windows Workflow Foundation в разделе [архитектура рабочих процессов Windows](../../../docs/framework/windows-workflow-foundation/architecture.md).</span><span class="sxs-lookup"><span data-stu-id="afde9-113">For an in-depth discussion of the Windows Workflow Foundation object model, see [Windows Workflow Architecture](../../../docs/framework/windows-workflow-foundation/architecture.md).</span></span>  
+-   <span data-ttu-id="d5a63-113">Подробное обсуждение объектной модели Windows Workflow Foundation в разделе [архитектура рабочих процессов Windows](../../../docs/framework/windows-workflow-foundation/architecture.md).</span><span class="sxs-lookup"><span data-stu-id="d5a63-113">For an in-depth discussion of the Windows Workflow Foundation object model, see [Windows Workflow Architecture](../../../docs/framework/windows-workflow-foundation/architecture.md).</span></span>  
   
--   <span data-ttu-id="afde9-114">Если вы готовы начать разработку приложения см. в разделе [Windows Workflow Foundation программирования](../../../docs/framework/windows-workflow-foundation/programming.md).</span><span class="sxs-lookup"><span data-stu-id="afde9-114">If you are ready to start developing an application, see [Windows Workflow Foundation Programming](../../../docs/framework/windows-workflow-foundation/programming.md).</span></span>  
+-   <span data-ttu-id="d5a63-114">Если вы готовы начать разработку приложения см. в разделе [Windows Workflow Foundation программирования](../../../docs/framework/windows-workflow-foundation/programming.md).</span><span class="sxs-lookup"><span data-stu-id="d5a63-114">If you are ready to start developing an application, see [Windows Workflow Foundation Programming](../../../docs/framework/windows-workflow-foundation/programming.md).</span></span>  
   
--   <span data-ttu-id="afde9-115">Если вы хотите расширить и настроить Windows Workflow Foundation в соответствии с требованиями см. в разделе [расширение Windows Workflow Foundation](../../../docs/framework/windows-workflow-foundation/extend.md).</span><span class="sxs-lookup"><span data-stu-id="afde9-115">If you would like to extend or customize Windows Workflow Foundation to suit your requirements, see [Extending Windows Workflow Foundation](../../../docs/framework/windows-workflow-foundation/extend.md).</span></span>
+-   <span data-ttu-id="d5a63-115">Если вы хотите расширить и настроить Windows Workflow Foundation в соответствии с требованиями см. в разделе [расширение Windows Workflow Foundation](../../../docs/framework/windows-workflow-foundation/extend.md).</span><span class="sxs-lookup"><span data-stu-id="d5a63-115">If you would like to extend or customize Windows Workflow Foundation to suit your requirements, see [Extending Windows Workflow Foundation](../../../docs/framework/windows-workflow-foundation/extend.md).</span></span>

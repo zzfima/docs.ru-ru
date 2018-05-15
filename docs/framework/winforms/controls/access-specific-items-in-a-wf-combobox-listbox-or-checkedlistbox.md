@@ -1,13 +1,6 @@
 ---
-title: "Практическое руководство. Получение доступа к определенным элементам в элементах управления ComboBox, ListBox или CheckedListBox в Windows Forms"
-ms.custom: 
+title: Практическое руководство. Получение доступа к определенным элементам в элементах управления ComboBox, ListBox или CheckedListBox в Windows Forms
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -20,23 +13,18 @@ helpviewer_keywords:
 - combo boxes [Windows Forms], accessing items
 - CheckedListBox control [Windows Forms], accessing items
 ms.assetid: 1216742f-bcf9-4ff8-8a62-d7c9053c2b96
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 400e367581ea773d88320e593aa525d812ea0238
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 731527f2d6adb206fa4d8bc4bc2e488c61b86200
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="how-to-access-specific-items-in-a-windows-forms-combobox-listbox-or-checkedlistbox-control"></a><span data-ttu-id="68e18-102">Практическое руководство. Получение доступа к определенным элементам в элементах управления ComboBox, ListBox или CheckedListBox в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="68e18-102">How to: Access Specific Items in a Windows Forms ComboBox, ListBox, or CheckedListBox Control</span></span>
-<span data-ttu-id="68e18-103">Доступ к определенным элементам в поле со списком Windows Forms, список или список с установленными флажками является важнейшей задачей.</span><span class="sxs-lookup"><span data-stu-id="68e18-103">Accessing specific items in a Windows Forms combo box, list box, or checked list box is an essential task.</span></span> <span data-ttu-id="68e18-104">Он позволяет программно определить в виде списка, в любом месте.</span><span class="sxs-lookup"><span data-stu-id="68e18-104">It enables you to programmatically determine what is in a list, at any given position.</span></span>  
+# <a name="how-to-access-specific-items-in-a-windows-forms-combobox-listbox-or-checkedlistbox-control"></a><span data-ttu-id="8282e-102">Практическое руководство. Получение доступа к определенным элементам в элементах управления ComboBox, ListBox или CheckedListBox в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="8282e-102">How to: Access Specific Items in a Windows Forms ComboBox, ListBox, or CheckedListBox Control</span></span>
+<span data-ttu-id="8282e-103">Доступ к определенным элементам в поле со списком Windows Forms, список или список с установленными флажками является важнейшей задачей.</span><span class="sxs-lookup"><span data-stu-id="8282e-103">Accessing specific items in a Windows Forms combo box, list box, or checked list box is an essential task.</span></span> <span data-ttu-id="8282e-104">Он позволяет программно определить в виде списка, в любом месте.</span><span class="sxs-lookup"><span data-stu-id="8282e-104">It enables you to programmatically determine what is in a list, at any given position.</span></span>  
   
-### <a name="to-access-a-specific-item"></a><span data-ttu-id="68e18-105">Для доступа к определенного элемента</span><span class="sxs-lookup"><span data-stu-id="68e18-105">To access a specific item</span></span>  
+### <a name="to-access-a-specific-item"></a><span data-ttu-id="8282e-105">Для доступа к определенного элемента</span><span class="sxs-lookup"><span data-stu-id="8282e-105">To access a specific item</span></span>  
   
-1.  <span data-ttu-id="68e18-106">Запрос `Items` коллекции, используя индекс конкретного элемента:</span><span class="sxs-lookup"><span data-stu-id="68e18-106">Query the `Items` collection using the index of the specific item:</span></span>  
+1.  <span data-ttu-id="8282e-106">Запрос `Items` коллекции, используя индекс конкретного элемента:</span><span class="sxs-lookup"><span data-stu-id="8282e-106">Query the `Items` collection using the index of the specific item:</span></span>  
   
     ```vb  
     Private Function GetItemText(i As Integer) As String  
@@ -62,8 +50,8 @@ ms.lasthandoff: 12/22/2017
        }  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="68e18-107">См. также</span><span class="sxs-lookup"><span data-stu-id="68e18-107">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="8282e-107">См. также</span><span class="sxs-lookup"><span data-stu-id="8282e-107">See Also</span></span>  
  <xref:System.Windows.Forms.ComboBox>  
  <xref:System.Windows.Forms.ListBox>  
  <xref:System.Windows.Forms.CheckedListBox>  
- [<span data-ttu-id="68e18-108">Создание списка для выбора элементов в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="68e18-108">Windows Forms Controls Used to List Options</span></span>](../../../../docs/framework/winforms/controls/windows-forms-controls-used-to-list-options.md)
+ [<span data-ttu-id="8282e-108">Создание списка для выбора элементов в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="8282e-108">Windows Forms Controls Used to List Options</span></span>](../../../../docs/framework/winforms/controls/windows-forms-controls-used-to-list-options.md)

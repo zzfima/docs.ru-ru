@@ -1,13 +1,6 @@
 ---
-title: "Практическое руководство. Изменение порядка столбцов элемента управления DataGridView в Windows Forms"
-ms.custom: 
+title: Практическое руководство. Изменение порядка столбцов элемента управления DataGridView в Windows Forms
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,39 +9,34 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], column order
 - data grids [Windows Forms], changing column order
 ms.assetid: 5e9ac3bc-b0f0-48cb-a3d5-b005af905395
-caps.latest.revision: "17"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 04a2048025bbd582d812d0748cc2d1521f44f140
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 75362a2623cfe685f38259b9e581b593b2bd8d17
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="how-to-change-the-order-of-columns-in-the-windows-forms-datagridview-control"></a><span data-ttu-id="8a931-102">Практическое руководство. Изменение порядка столбцов элемента управления DataGridView в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="8a931-102">How to: Change the Order of Columns in the Windows Forms DataGridView Control</span></span>
-<span data-ttu-id="8a931-103">При использовании <xref:System.Windows.Forms.DataGridView> для отображения данных из источника данных столбцы в схеме данных не всегда выводятся в нужном порядке.</span><span class="sxs-lookup"><span data-stu-id="8a931-103">When you use a <xref:System.Windows.Forms.DataGridView> to display data from a data source, the columns in the data source's schema sometimes do not appear in the order you would like to display them.</span></span> <span data-ttu-id="8a931-104">Порядок отображения столбцов можно изменить с помощью свойства <xref:System.Windows.Forms.DataGridViewColumn.DisplayIndex%2A> класса <xref:System.Windows.Forms.DataGridViewColumn>.</span><span class="sxs-lookup"><span data-stu-id="8a931-104">You can change the displayed order of the columns by using the <xref:System.Windows.Forms.DataGridViewColumn.DisplayIndex%2A> property of the <xref:System.Windows.Forms.DataGridViewColumn> class.</span></span>  
+# <a name="how-to-change-the-order-of-columns-in-the-windows-forms-datagridview-control"></a><span data-ttu-id="03e5f-102">Практическое руководство. Изменение порядка столбцов элемента управления DataGridView в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="03e5f-102">How to: Change the Order of Columns in the Windows Forms DataGridView Control</span></span>
+<span data-ttu-id="03e5f-103">При использовании <xref:System.Windows.Forms.DataGridView> для отображения данных из источника данных столбцы в схеме данных не всегда выводятся в нужном порядке.</span><span class="sxs-lookup"><span data-stu-id="03e5f-103">When you use a <xref:System.Windows.Forms.DataGridView> to display data from a data source, the columns in the data source's schema sometimes do not appear in the order you would like to display them.</span></span> <span data-ttu-id="03e5f-104">Порядок отображения столбцов можно изменить с помощью свойства <xref:System.Windows.Forms.DataGridViewColumn.DisplayIndex%2A> класса <xref:System.Windows.Forms.DataGridViewColumn>.</span><span class="sxs-lookup"><span data-stu-id="03e5f-104">You can change the displayed order of the columns by using the <xref:System.Windows.Forms.DataGridViewColumn.DisplayIndex%2A> property of the <xref:System.Windows.Forms.DataGridViewColumn> class.</span></span>  
   
- <span data-ttu-id="8a931-105">В примере кода ниже изменяется положение некоторых столбцов, автоматически созданных при привязке к таблице Customers в базе данных Northwind.</span><span class="sxs-lookup"><span data-stu-id="8a931-105">The following code example repositions some of the columns automatically generated when binding to the Customers table in the Northwind sample database.</span></span> <span data-ttu-id="8a931-106">Дополнительные сведения о привязке <xref:System.Windows.Forms.DataGridView> управления в таблице базы данных см. в разделе [как: привязка данных к элементу управления DataGridView Windows Forms](../../../../docs/framework/winforms/controls/how-to-bind-data-to-the-windows-forms-datagridview-control.md).</span><span class="sxs-lookup"><span data-stu-id="8a931-106">For more information about how to bind the <xref:System.Windows.Forms.DataGridView> control to a database table, see [How to: Bind Data to the Windows Forms DataGridView Control](../../../../docs/framework/winforms/controls/how-to-bind-data-to-the-windows-forms-datagridview-control.md).</span></span>  
+ <span data-ttu-id="03e5f-105">В примере кода ниже изменяется положение некоторых столбцов, автоматически созданных при привязке к таблице Customers в базе данных Northwind.</span><span class="sxs-lookup"><span data-stu-id="03e5f-105">The following code example repositions some of the columns automatically generated when binding to the Customers table in the Northwind sample database.</span></span> <span data-ttu-id="03e5f-106">Дополнительные сведения о привязке <xref:System.Windows.Forms.DataGridView> управления в таблице базы данных см. в разделе [как: привязка данных к элементу управления DataGridView Windows Forms](../../../../docs/framework/winforms/controls/how-to-bind-data-to-the-windows-forms-datagridview-control.md).</span><span class="sxs-lookup"><span data-stu-id="03e5f-106">For more information about how to bind the <xref:System.Windows.Forms.DataGridView> control to a database table, see [How to: Bind Data to the Windows Forms DataGridView Control](../../../../docs/framework/winforms/controls/how-to-bind-data-to-the-windows-forms-datagridview-control.md).</span></span>  
   
- <span data-ttu-id="8a931-107">Эта задача поддерживается в Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="8a931-107">There is support for this task in Visual Studio.</span></span>  <span data-ttu-id="8a931-108">См. также [как: изменить порядок столбцов в Windows Forms управления DataGridView с помощью конструктора](http://msdn.microsoft.com/library/hb1dk7ax\(v=vs.110\))</span><span class="sxs-lookup"><span data-stu-id="8a931-108">Also see [How to: Change the Order of Columns in the Windows Forms DataGridView Control Using the Designer](http://msdn.microsoft.com/library/hb1dk7ax\(v=vs.110\))</span></span>  
+ <span data-ttu-id="03e5f-107">Эта задача поддерживается в Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="03e5f-107">There is support for this task in Visual Studio.</span></span>  <span data-ttu-id="03e5f-108">См. также [как: изменить порядок столбцов в Windows Forms управления DataGridView с помощью конструктора](http://msdn.microsoft.com/library/hb1dk7ax\(v=vs.110\))</span><span class="sxs-lookup"><span data-stu-id="03e5f-108">Also see [How to: Change the Order of Columns in the Windows Forms DataGridView Control Using the Designer](http://msdn.microsoft.com/library/hb1dk7ax\(v=vs.110\))</span></span>  
   
-## <a name="example"></a><span data-ttu-id="8a931-109">Пример</span><span class="sxs-lookup"><span data-stu-id="8a931-109">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="03e5f-109">Пример</span><span class="sxs-lookup"><span data-stu-id="03e5f-109">Example</span></span>  
  [!code-csharp[System.Windows.Forms.DataGridViewMisc#040](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#040)]
  [!code-vb[System.Windows.Forms.DataGridViewMisc#040](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#040)]  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="8a931-110">Компиляция кода</span><span class="sxs-lookup"><span data-stu-id="8a931-110">Compiling the Code</span></span>  
- <span data-ttu-id="8a931-111">Для этого примера требуются:</span><span class="sxs-lookup"><span data-stu-id="8a931-111">This example requires:</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="03e5f-110">Компиляция кода</span><span class="sxs-lookup"><span data-stu-id="03e5f-110">Compiling the Code</span></span>  
+ <span data-ttu-id="03e5f-111">Для этого примера требуются:</span><span class="sxs-lookup"><span data-stu-id="03e5f-111">This example requires:</span></span>  
   
--   <span data-ttu-id="8a931-112">элемент управления <xref:System.Windows.Forms.DataGridView> с именем `customersDataGridView`, связанный с таблицей с указанными именами столбцов, например с таблицей `Customers` базы данных Northwind;</span><span class="sxs-lookup"><span data-stu-id="8a931-112">A <xref:System.Windows.Forms.DataGridView> control named `customersDataGridView` that is bound to a table with the indicated column names, such as the `Customers` table in the Northwind sample database.</span></span>  
+-   <span data-ttu-id="03e5f-112">элемент управления <xref:System.Windows.Forms.DataGridView> с именем `customersDataGridView`, связанный с таблицей с указанными именами столбцов, например с таблицей `Customers` базы данных Northwind;</span><span class="sxs-lookup"><span data-stu-id="03e5f-112">A <xref:System.Windows.Forms.DataGridView> control named `customersDataGridView` that is bound to a table with the indicated column names, such as the `Customers` table in the Northwind sample database.</span></span>  
   
--   <span data-ttu-id="8a931-113">ссылки на сборки <xref:System?displayProperty=nameWithType>, <xref:System.Windows.Forms?displayProperty=nameWithType>, <xref:System.Data?displayProperty=nameWithType> и <xref:System.Xml?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="8a931-113">References to the <xref:System?displayProperty=nameWithType>, <xref:System.Windows.Forms?displayProperty=nameWithType>, <xref:System.Data?displayProperty=nameWithType>, and <xref:System.Xml?displayProperty=nameWithType> assemblies.</span></span>  
+-   <span data-ttu-id="03e5f-113">ссылки на сборки <xref:System?displayProperty=nameWithType>, <xref:System.Windows.Forms?displayProperty=nameWithType>, <xref:System.Data?displayProperty=nameWithType> и <xref:System.Xml?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="03e5f-113">References to the <xref:System?displayProperty=nameWithType>, <xref:System.Windows.Forms?displayProperty=nameWithType>, <xref:System.Data?displayProperty=nameWithType>, and <xref:System.Xml?displayProperty=nameWithType> assemblies.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="8a931-114">См. также</span><span class="sxs-lookup"><span data-stu-id="8a931-114">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="03e5f-114">См. также</span><span class="sxs-lookup"><span data-stu-id="03e5f-114">See Also</span></span>  
  <xref:System.Windows.Forms.DataGridView>  
  <xref:System.Windows.Forms.DataGridViewColumn>  
  <xref:System.Windows.Forms.DataGridViewColumn.DisplayIndex%2A?displayProperty=nameWithType>  
  <xref:System.Windows.Forms.DataGridViewColumn.Visible%2A?displayProperty=nameWithType>  
- [<span data-ttu-id="8a931-115">Отображение данных с помощью элемента управления DataGridView в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="8a931-115">Displaying Data in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/displaying-data-in-the-windows-forms-datagridview-control.md)  
- [<span data-ttu-id="8a931-116">Практическое руководство. Привязка данных к элементу управления DataGridView в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="8a931-116">How to: Bind Data to the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/how-to-bind-data-to-the-windows-forms-datagridview-control.md)
+ [<span data-ttu-id="03e5f-115">Отображение данных с помощью элемента управления DataGridView в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="03e5f-115">Displaying Data in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/displaying-data-in-the-windows-forms-datagridview-control.md)  
+ [<span data-ttu-id="03e5f-116">Практическое руководство. Привязка данных к элементу управления DataGridView в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="03e5f-116">How to: Bind Data to the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/how-to-bind-data-to-the-windows-forms-datagridview-control.md)

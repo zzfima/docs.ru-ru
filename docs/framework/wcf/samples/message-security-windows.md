@@ -1,36 +1,24 @@
 ---
 title: Безопасность сообщений с использованием механизмов Windows
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - WS Security
 ms.assetid: d2221d1c-c9cb-48d1-b044-a3b4445c7f05
-caps.latest.revision: 34
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: d42f266e51f6d5dd8c772d674736adc729b2ac2c
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: 7bf731c1accd6eefc97c27af58ba139992ae1866
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="message-security-windows"></a><span data-ttu-id="6b8ec-102">Безопасность сообщений с использованием механизмов Windows</span><span class="sxs-lookup"><span data-stu-id="6b8ec-102">Message Security Windows</span></span>
-<span data-ttu-id="6b8ec-103">В этом образце показывается, как настраивать привязку <xref:System.ServiceModel.WSHttpBinding> для использования безопасности на уровне сообщений с проверкой подлинности Windows.</span><span class="sxs-lookup"><span data-stu-id="6b8ec-103">This sample demonstrates how to configure a <xref:System.ServiceModel.WSHttpBinding> binding to use message-level security with Windows authentication.</span></span> <span data-ttu-id="6b8ec-104">Этот пример построен на [Приступая к работе](../../../../docs/framework/wcf/samples/getting-started-sample.md).</span><span class="sxs-lookup"><span data-stu-id="6b8ec-104">This sample is based on the [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md).</span></span> <span data-ttu-id="6b8ec-105">В этом образце служба размещается в службах IIS, а клиентом является консольное приложение (EXE).</span><span class="sxs-lookup"><span data-stu-id="6b8ec-105">In this sample, the service is hosted in Internet Information Services (IIS) and the client is a console application (.exe).</span></span>  
+# <a name="message-security-windows"></a><span data-ttu-id="4184c-102">Безопасность сообщений с использованием механизмов Windows</span><span class="sxs-lookup"><span data-stu-id="4184c-102">Message Security Windows</span></span>
+<span data-ttu-id="4184c-103">В этом образце показывается, как настраивать привязку <xref:System.ServiceModel.WSHttpBinding> для использования безопасности на уровне сообщений с проверкой подлинности Windows.</span><span class="sxs-lookup"><span data-stu-id="4184c-103">This sample demonstrates how to configure a <xref:System.ServiceModel.WSHttpBinding> binding to use message-level security with Windows authentication.</span></span> <span data-ttu-id="4184c-104">Этот пример построен на [Приступая к работе](../../../../docs/framework/wcf/samples/getting-started-sample.md).</span><span class="sxs-lookup"><span data-stu-id="4184c-104">This sample is based on the [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md).</span></span> <span data-ttu-id="4184c-105">В этом образце служба размещается в службах IIS, а клиентом является консольное приложение (EXE).</span><span class="sxs-lookup"><span data-stu-id="4184c-105">In this sample, the service is hosted in Internet Information Services (IIS) and the client is a console application (.exe).</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="6b8ec-106">Процедура настройки и инструкции по построению для данного образца приведены в конце этого раздела.</span><span class="sxs-lookup"><span data-stu-id="6b8ec-106">The setup procedure and build instructions for this sample are located at the end of this topic.</span></span>  
+>  <span data-ttu-id="4184c-106">Процедура настройки и инструкции по построению для данного образца приведены в конце этого раздела.</span><span class="sxs-lookup"><span data-stu-id="4184c-106">The setup procedure and build instructions for this sample are located at the end of this topic.</span></span>  
   
- <span data-ttu-id="6b8ec-107">Безопасность по умолчанию для [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) — безопасность сообщений с использованием проверки подлинности Windows.</span><span class="sxs-lookup"><span data-stu-id="6b8ec-107">The default security for the [\<wsHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) is message security using Windows authentication.</span></span> <span data-ttu-id="6b8ec-108">Файлы конфигурации в этом примере явно задать `mode` атрибут [ \<безопасности >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-wshttpbinding.md) для `Message` и `clientCredentialType` атрибут `Windows`.</span><span class="sxs-lookup"><span data-stu-id="6b8ec-108">The configuration files in this sample explicitly set the `mode` attribute of the [\<security>](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-wshttpbinding.md) to `Message` and the `clientCredentialType` attribute to `Windows`.</span></span> <span data-ttu-id="6b8ec-109">Эти значения являются значениями по умолчанию для этой привязки, но они были явно заданы, как показано в следующем образце конфигурации с целью демонстрации их использования.</span><span class="sxs-lookup"><span data-stu-id="6b8ec-109">These values are the default values for this binding, but they have been explicitly configured, as shown in the following sample configuration to demonstrate their use.</span></span>  
+ <span data-ttu-id="4184c-107">Безопасность по умолчанию для [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) — безопасность сообщений с использованием проверки подлинности Windows.</span><span class="sxs-lookup"><span data-stu-id="4184c-107">The default security for the [\<wsHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) is message security using Windows authentication.</span></span> <span data-ttu-id="4184c-108">Файлы конфигурации в этом примере явно задать `mode` атрибут [ \<безопасности >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-wshttpbinding.md) для `Message` и `clientCredentialType` атрибут `Windows`.</span><span class="sxs-lookup"><span data-stu-id="4184c-108">The configuration files in this sample explicitly set the `mode` attribute of the [\<security>](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-wshttpbinding.md) to `Message` and the `clientCredentialType` attribute to `Windows`.</span></span> <span data-ttu-id="4184c-109">Эти значения являются значениями по умолчанию для этой привязки, но они были явно заданы, как показано в следующем образце конфигурации с целью демонстрации их использования.</span><span class="sxs-lookup"><span data-stu-id="4184c-109">These values are the default values for this binding, but they have been explicitly configured, as shown in the following sample configuration to demonstrate their use.</span></span>  
   
 ```xml  
 <bindings>  
@@ -44,7 +32,7 @@ ms.lasthandoff: 04/27/2018
 </bindings>  
 ```  
   
- <span data-ttu-id="6b8ec-110">Конфигурация конечной точки клиента состоит из абсолютного адреса конечной точки службы, привязки и контракта.</span><span class="sxs-lookup"><span data-stu-id="6b8ec-110">The client endpoint configuration consists of an absolute address for the service endpoint, the binding, and the contract.</span></span> <span data-ttu-id="6b8ec-111">Привязка клиента настраивается с помощью соответствующих `securityMode` и `authenticationMode`.</span><span class="sxs-lookup"><span data-stu-id="6b8ec-111">The client binding is configured with the appropriate `securityMode` and `authenticationMode`.</span></span>  
+ <span data-ttu-id="4184c-110">Конфигурация конечной точки клиента состоит из абсолютного адреса конечной точки службы, привязки и контракта.</span><span class="sxs-lookup"><span data-stu-id="4184c-110">The client endpoint configuration consists of an absolute address for the service endpoint, the binding, and the contract.</span></span> <span data-ttu-id="4184c-111">Привязка клиента настраивается с помощью соответствующих `securityMode` и `authenticationMode`.</span><span class="sxs-lookup"><span data-stu-id="4184c-111">The client binding is configured with the appropriate `securityMode` and `authenticationMode`.</span></span>  
   
 ```xml  
 <system.serviceModel>  
@@ -74,7 +62,7 @@ ms.lasthandoff: 04/27/2018
 </system.serviceModel>  
 ```  
   
- <span data-ttu-id="6b8ec-112">Исходный код службы был изменен, чтобы показать, как можно использовать <xref:System.ServiceModel.OperationContext.ServiceSecurityContext%2A> для доступа к идентификатору вызывающего объекта.</span><span class="sxs-lookup"><span data-stu-id="6b8ec-112">The service source code has been modified to demonstrate how the <xref:System.ServiceModel.OperationContext.ServiceSecurityContext%2A> can be used to access the identity of the caller.</span></span>  
+ <span data-ttu-id="4184c-112">Исходный код службы был изменен, чтобы показать, как можно использовать <xref:System.ServiceModel.OperationContext.ServiceSecurityContext%2A> для доступа к идентификатору вызывающего объекта.</span><span class="sxs-lookup"><span data-stu-id="4184c-112">The service source code has been modified to demonstrate how the <xref:System.ServiceModel.OperationContext.ServiceSecurityContext%2A> can be used to access the identity of the caller.</span></span>  
 
 ```csharp
 public string GetCallerIdentity()  
@@ -84,14 +72,14 @@ public string GetCallerIdentity()
 }  
 ```
 
- <span data-ttu-id="6b8ec-113">При выполнении примера запросы и ответы операций отображаются в окне консоли клиента.</span><span class="sxs-lookup"><span data-stu-id="6b8ec-113">When you run the sample, the operation requests and responses are displayed in the client console window.</span></span> <span data-ttu-id="6b8ec-114">Первый вызываемый метод - `GetCallerIdentity` - возвращает имя идентификатора вызывающего объекта для клиента.</span><span class="sxs-lookup"><span data-stu-id="6b8ec-114">The first method called - `GetCallerIdentity` - returns the name of the caller identity back to the client.</span></span> <span data-ttu-id="6b8ec-115">Чтобы закрыть клиент, нажмите клавишу ВВОД в окне консоли.</span><span class="sxs-lookup"><span data-stu-id="6b8ec-115">Press ENTER in the console window to shut down the client.</span></span>  
+ <span data-ttu-id="4184c-113">При выполнении примера запросы и ответы операций отображаются в окне консоли клиента.</span><span class="sxs-lookup"><span data-stu-id="4184c-113">When you run the sample, the operation requests and responses are displayed in the client console window.</span></span> <span data-ttu-id="4184c-114">Первый вызываемый метод - `GetCallerIdentity` - возвращает имя идентификатора вызывающего объекта для клиента.</span><span class="sxs-lookup"><span data-stu-id="4184c-114">The first method called - `GetCallerIdentity` - returns the name of the caller identity back to the client.</span></span> <span data-ttu-id="4184c-115">Чтобы закрыть клиент, нажмите клавишу ВВОД в окне консоли.</span><span class="sxs-lookup"><span data-stu-id="4184c-115">Press ENTER in the console window to shut down the client.</span></span>  
   
-### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="6b8ec-116">Настройка, сборка и выполнение образца</span><span class="sxs-lookup"><span data-stu-id="6b8ec-116">To set up, build, and run the sample</span></span>  
+### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="4184c-116">Настройка, сборка и выполнение образца</span><span class="sxs-lookup"><span data-stu-id="4184c-116">To set up, build, and run the sample</span></span>  
   
-1.  <span data-ttu-id="6b8ec-117">Убедитесь, что вы выполнили [выполняемая однократно процедура настройки для образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span><span class="sxs-lookup"><span data-stu-id="6b8ec-117">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
+1.  <span data-ttu-id="4184c-117">Убедитесь, что вы выполнили [выполняемая однократно процедура настройки для образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span><span class="sxs-lookup"><span data-stu-id="4184c-117">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
   
-2.  <span data-ttu-id="6b8ec-118">Чтобы создать выпуск решения на языке C# или Visual Basic .NET, следуйте инструкциям в разделе [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="6b8ec-118">To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
+2.  <span data-ttu-id="4184c-118">Чтобы создать выпуск решения на языке C# или Visual Basic .NET, следуйте инструкциям в разделе [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="4184c-118">To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
   
-3.  <span data-ttu-id="6b8ec-119">Для запуска образца в конфигурации с одним или несколькими компьютерами следуйте инструкциям в [выполнение образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="6b8ec-119">To run the sample in a single- or cross-computer configuration, follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).</span></span>  
+3.  <span data-ttu-id="4184c-119">Для запуска образца в конфигурации с одним или несколькими компьютерами следуйте инструкциям в [выполнение образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="4184c-119">To run the sample in a single- or cross-computer configuration, follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="6b8ec-120">См. также</span><span class="sxs-lookup"><span data-stu-id="6b8ec-120">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="4184c-120">См. также</span><span class="sxs-lookup"><span data-stu-id="4184c-120">See Also</span></span>

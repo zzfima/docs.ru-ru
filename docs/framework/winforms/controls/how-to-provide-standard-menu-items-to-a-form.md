@@ -1,14 +1,6 @@
 ---
 title: Практическое руководство. Связывание с формой стандартных элементов меню
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,40 +9,34 @@ helpviewer_keywords:
 - menu items [Windows Forms], standard
 - ToolStrip control [Windows Forms]
 ms.assetid: 75db9126-e70c-4e81-921d-b83c0a4a9f50
-caps.latest.revision: 7
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: e6e2514adc2b2bbd5b2d1ab3371b48d760842140
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: b118392d089bf28edee1496e0e11ed24d263202a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="how-to-provide-standard-menu-items-to-a-form"></a><span data-ttu-id="e9324-102">Практическое руководство. Связывание с формой стандартных элементов меню</span><span class="sxs-lookup"><span data-stu-id="e9324-102">How to: Provide Standard Menu Items to a Form</span></span>
-<span data-ttu-id="e9324-103">С помощью элемента управления <xref:System.Windows.Forms.MenuStrip> можно создавать стандартные меню для форм.</span><span class="sxs-lookup"><span data-stu-id="e9324-103">You can provide a standard menu for your forms with the <xref:System.Windows.Forms.MenuStrip> control.</span></span>  
+# <a name="how-to-provide-standard-menu-items-to-a-form"></a><span data-ttu-id="178a5-102">Практическое руководство. Связывание с формой стандартных элементов меню</span><span class="sxs-lookup"><span data-stu-id="178a5-102">How to: Provide Standard Menu Items to a Form</span></span>
+<span data-ttu-id="178a5-103">С помощью элемента управления <xref:System.Windows.Forms.MenuStrip> можно создавать стандартные меню для форм.</span><span class="sxs-lookup"><span data-stu-id="178a5-103">You can provide a standard menu for your forms with the <xref:System.Windows.Forms.MenuStrip> control.</span></span>  
   
- <span data-ttu-id="e9324-104">Имеется расширенная поддержка этой возможности в Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="e9324-104">There is extensive support for this feature in Visual Studio.</span></span>  
+ <span data-ttu-id="178a5-104">Имеется расширенная поддержка этой возможности в Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="178a5-104">There is extensive support for this feature in Visual Studio.</span></span>  
   
- <span data-ttu-id="e9324-105">См. также [Пошаговое руководство. Создание стандартных пунктов меню для формы](http://msdn.microsoft.com/library/ms233662\(v=vs.110\)).</span><span class="sxs-lookup"><span data-stu-id="e9324-105">Also see [Walkthrough: Providing Standard Menu Items to a Form](http://msdn.microsoft.com/library/ms233662\(v=vs.110\)).</span></span>  
+ <span data-ttu-id="178a5-105">См. также [Пошаговое руководство. Создание стандартных пунктов меню для формы](http://msdn.microsoft.com/library/ms233662\(v=vs.110\)).</span><span class="sxs-lookup"><span data-stu-id="178a5-105">Also see [Walkthrough: Providing Standard Menu Items to a Form](http://msdn.microsoft.com/library/ms233662\(v=vs.110\)).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="e9324-106">Пример</span><span class="sxs-lookup"><span data-stu-id="e9324-106">Example</span></span>  
- <span data-ttu-id="e9324-107">В примере кода ниже показано, как использовать элемент управления <xref:System.Windows.Forms.MenuStrip> для создания формы, содержащей стандартное меню.</span><span class="sxs-lookup"><span data-stu-id="e9324-107">The following code example demonstrates how to use a <xref:System.Windows.Forms.MenuStrip> control to create a form with a standard menu.</span></span> <span data-ttu-id="e9324-108">Выбранные пункты меню выводятся в элементе управления <xref:System.Windows.Forms.StatusStrip>.</span><span class="sxs-lookup"><span data-stu-id="e9324-108">Menu item selections are displayed in a <xref:System.Windows.Forms.StatusStrip> control.</span></span>  
+## <a name="example"></a><span data-ttu-id="178a5-106">Пример</span><span class="sxs-lookup"><span data-stu-id="178a5-106">Example</span></span>  
+ <span data-ttu-id="178a5-107">В примере кода ниже показано, как использовать элемент управления <xref:System.Windows.Forms.MenuStrip> для создания формы, содержащей стандартное меню.</span><span class="sxs-lookup"><span data-stu-id="178a5-107">The following code example demonstrates how to use a <xref:System.Windows.Forms.MenuStrip> control to create a form with a standard menu.</span></span> <span data-ttu-id="178a5-108">Выбранные пункты меню выводятся в элементе управления <xref:System.Windows.Forms.StatusStrip>.</span><span class="sxs-lookup"><span data-stu-id="178a5-108">Menu item selections are displayed in a <xref:System.Windows.Forms.StatusStrip> control.</span></span>  
   
  [!code-csharp[System.Windows.Forms.ToolStrip.StandardMenu#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StandardMenu/CS/Form1.cs#1)]
  [!code-vb[System.Windows.Forms.ToolStrip.StandardMenu#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StandardMenu/VB/Form1.vb#1)]  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="e9324-109">Компиляция кода</span><span class="sxs-lookup"><span data-stu-id="e9324-109">Compiling the Code</span></span>  
- <span data-ttu-id="e9324-110">Для этого примера требуются:</span><span class="sxs-lookup"><span data-stu-id="e9324-110">This example requires:</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="178a5-109">Компиляция кода</span><span class="sxs-lookup"><span data-stu-id="178a5-109">Compiling the Code</span></span>  
+ <span data-ttu-id="178a5-110">Для этого примера требуются:</span><span class="sxs-lookup"><span data-stu-id="178a5-110">This example requires:</span></span>  
   
--   <span data-ttu-id="e9324-111">ссылки на сборки System, System.Drawing и System.Windows.Forms.</span><span class="sxs-lookup"><span data-stu-id="e9324-111">References to the System, System.Drawing and System.Windows.Forms assemblies.</span></span>  
+-   <span data-ttu-id="178a5-111">ссылки на сборки System, System.Drawing и System.Windows.Forms.</span><span class="sxs-lookup"><span data-stu-id="178a5-111">References to the System, System.Drawing and System.Windows.Forms assemblies.</span></span>  
   
- <span data-ttu-id="e9324-112">Сведения о построении этого примера из командной строки для Visual Basic или Visual C# см. в разделе [построение из командной строки](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) или [построение с командной строки csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).</span><span class="sxs-lookup"><span data-stu-id="e9324-112">For information about building this example from the command line for Visual Basic or Visual C#, see [Building from the Command Line](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) or [Command-line Building With csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).</span></span> <span data-ttu-id="e9324-113">Можно также построить этот пример, в Visual Studio, вставив код в новый проект.</span><span class="sxs-lookup"><span data-stu-id="e9324-113">You can also build this example in Visual Studio by pasting the code into a new project.</span></span>  <span data-ttu-id="e9324-114">См. также [Практическое руководство. Компиляция и выполнение откомпилированного примера кода формы Windows Forms с помощью Visual Studio](http://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).</span><span class="sxs-lookup"><span data-stu-id="e9324-114">Also see [How to: Compile and Run a Complete Windows Forms Code Example Using Visual Studio](http://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).</span></span>  
+ <span data-ttu-id="178a5-112">Сведения о построении этого примера из командной строки для Visual Basic или Visual C# см. в разделе [построение из командной строки](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) или [построение с командной строки csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).</span><span class="sxs-lookup"><span data-stu-id="178a5-112">For information about building this example from the command line for Visual Basic or Visual C#, see [Building from the Command Line](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) or [Command-line Building With csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).</span></span> <span data-ttu-id="178a5-113">Можно также построить этот пример, в Visual Studio, вставив код в новый проект.</span><span class="sxs-lookup"><span data-stu-id="178a5-113">You can also build this example in Visual Studio by pasting the code into a new project.</span></span>  <span data-ttu-id="178a5-114">См. также [Практическое руководство. Компиляция и выполнение откомпилированного примера кода формы Windows Forms с помощью Visual Studio](http://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).</span><span class="sxs-lookup"><span data-stu-id="178a5-114">Also see [How to: Compile and Run a Complete Windows Forms Code Example Using Visual Studio](http://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="e9324-115">См. также</span><span class="sxs-lookup"><span data-stu-id="e9324-115">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="178a5-115">См. также</span><span class="sxs-lookup"><span data-stu-id="178a5-115">See Also</span></span>  
  <xref:System.Windows.Forms.MenuStrip>  
  <xref:System.Windows.Forms.ToolStrip>  
  <xref:System.Windows.Forms.StatusStrip>  
- [<span data-ttu-id="e9324-116">Элемент управления MenuStrip</span><span class="sxs-lookup"><span data-stu-id="e9324-116">MenuStrip Control</span></span>](../../../../docs/framework/winforms/controls/menustrip-control-windows-forms.md)
+ [<span data-ttu-id="178a5-116">Элемент управления MenuStrip</span><span class="sxs-lookup"><span data-stu-id="178a5-116">MenuStrip Control</span></span>](../../../../docs/framework/winforms/controls/menustrip-control-windows-forms.md)

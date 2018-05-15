@@ -1,49 +1,37 @@
 ---
-title: "Элемент управления PictureBox (Windows Forms)"
-ms.custom: 
+title: Элемент управления PictureBox (Windows Forms)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - PictureBox control [Windows Forms]
 - image controls [Windows Forms]
 - images [Windows Forms], adding to PictureBox control
 ms.assetid: f900eb93-25d5-40e5-b5df-b3cea0e831b6
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 20c45ec8aa172edeb0c7babcb45c013330b9179b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d186b9deb88753566713dbf053e475a024f0bfa2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="picturebox-control-windows-forms"></a><span data-ttu-id="7d75b-102">Элемент управления PictureBox (Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="7d75b-102">PictureBox Control (Windows Forms)</span></span>
-<span data-ttu-id="7d75b-103">Windows Forms `PictureBox` элемент управления используется для отображения графических объектов в формат растрового изображения, GIF, JPEG, метафайла или значок.</span><span class="sxs-lookup"><span data-stu-id="7d75b-103">The Windows Forms `PictureBox` control is used to display graphics in bitmap, GIF, JPEG, metafile, or icon format.</span></span>  
+# <a name="picturebox-control-windows-forms"></a><span data-ttu-id="d1c08-102">Элемент управления PictureBox (Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="d1c08-102">PictureBox Control (Windows Forms)</span></span>
+<span data-ttu-id="d1c08-103">Windows Forms `PictureBox` элемент управления используется для отображения графических объектов в формат растрового изображения, GIF, JPEG, метафайла или значок.</span><span class="sxs-lookup"><span data-stu-id="d1c08-103">The Windows Forms `PictureBox` control is used to display graphics in bitmap, GIF, JPEG, metafile, or icon format.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="7d75b-104">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="7d75b-104">In This Section</span></span>  
- [<span data-ttu-id="7d75b-105">Общие сведения об элементе управления PictureBox</span><span class="sxs-lookup"><span data-stu-id="7d75b-105">PictureBox Control Overview</span></span>](../../../../docs/framework/winforms/controls/picturebox-control-overview-windows-forms.md)  
- <span data-ttu-id="7d75b-106">Описывается элемент управления, его основные возможности и свойства.</span><span class="sxs-lookup"><span data-stu-id="7d75b-106">Explains what this control is and its key features and properties.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="d1c08-104">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="d1c08-104">In This Section</span></span>  
+ [<span data-ttu-id="d1c08-105">Общие сведения об элементе управления PictureBox</span><span class="sxs-lookup"><span data-stu-id="d1c08-105">PictureBox Control Overview</span></span>](../../../../docs/framework/winforms/controls/picturebox-control-overview-windows-forms.md)  
+ <span data-ttu-id="d1c08-106">Описывается элемент управления, его основные возможности и свойства.</span><span class="sxs-lookup"><span data-stu-id="d1c08-106">Explains what this control is and its key features and properties.</span></span>  
   
- [<span data-ttu-id="7d75b-107">Практическое руководство. Изменение размера или размещения изображения во время выполнения</span><span class="sxs-lookup"><span data-stu-id="7d75b-107">How to: Modify the Size or Placement of a Picture at Run Time</span></span>](../../../../docs/framework/winforms/controls/how-to-modify-the-size-or-placement-of-a-picture-at-run-time-windows-forms.md)  
- <span data-ttu-id="7d75b-108">Объясняет, что <xref:System.Windows.Forms.PictureBox.SizeMode%2A> свойство выполняет и как его задать.</span><span class="sxs-lookup"><span data-stu-id="7d75b-108">Explains what the <xref:System.Windows.Forms.PictureBox.SizeMode%2A> property does and how to set it.</span></span>  
+ [<span data-ttu-id="d1c08-107">Практическое руководство. Изменение размера или размещения изображения во время выполнения</span><span class="sxs-lookup"><span data-stu-id="d1c08-107">How to: Modify the Size or Placement of a Picture at Run Time</span></span>](../../../../docs/framework/winforms/controls/how-to-modify-the-size-or-placement-of-a-picture-at-run-time-windows-forms.md)  
+ <span data-ttu-id="d1c08-108">Объясняет, что <xref:System.Windows.Forms.PictureBox.SizeMode%2A> свойство выполняет и как его задать.</span><span class="sxs-lookup"><span data-stu-id="d1c08-108">Explains what the <xref:System.Windows.Forms.PictureBox.SizeMode%2A> property does and how to set it.</span></span>  
   
- [<span data-ttu-id="7d75b-109">Практическое руководство. Установка изображений во время выполнения</span><span class="sxs-lookup"><span data-stu-id="7d75b-109">How to: Set Pictures at Run Time</span></span>](../../../../docs/framework/winforms/controls/how-to-set-pictures-at-run-time-windows-forms.md)  
- <span data-ttu-id="7d75b-110">Описание способа отображения и очистки рисунка во время выполнения.</span><span class="sxs-lookup"><span data-stu-id="7d75b-110">Describes how to display and clear a picture at run time.</span></span>  
+ [<span data-ttu-id="d1c08-109">Практическое руководство. Установка изображений во время выполнения</span><span class="sxs-lookup"><span data-stu-id="d1c08-109">How to: Set Pictures at Run Time</span></span>](../../../../docs/framework/winforms/controls/how-to-set-pictures-at-run-time-windows-forms.md)  
+ <span data-ttu-id="d1c08-110">Описание способа отображения и очистки рисунка во время выполнения.</span><span class="sxs-lookup"><span data-stu-id="d1c08-110">Describes how to display and clear a picture at run time.</span></span>  
   
- [<span data-ttu-id="7d75b-111">Практическое руководство. Загрузка изображения с помощью конструктора</span><span class="sxs-lookup"><span data-stu-id="7d75b-111">How to: Load a Picture Using the Designer</span></span>](../../../../docs/framework/winforms/controls/how-to-load-a-picture-using-the-designer-windows-forms.md)  
- <span data-ttu-id="7d75b-112">Описывает, как загружать и отображать рисунок на форме во время разработки.</span><span class="sxs-lookup"><span data-stu-id="7d75b-112">Describes how to load and display a picture on a form at design time.</span></span>  
+ [<span data-ttu-id="d1c08-111">Практическое руководство. Загрузка изображения с помощью конструктора</span><span class="sxs-lookup"><span data-stu-id="d1c08-111">How to: Load a Picture Using the Designer</span></span>](../../../../docs/framework/winforms/controls/how-to-load-a-picture-using-the-designer-windows-forms.md)  
+ <span data-ttu-id="d1c08-112">Описывает, как загружать и отображать рисунок на форме во время разработки.</span><span class="sxs-lookup"><span data-stu-id="d1c08-112">Describes how to load and display a picture on a form at design time.</span></span>  
   
-## <a name="reference"></a><span data-ttu-id="7d75b-113">Ссылка</span><span class="sxs-lookup"><span data-stu-id="7d75b-113">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="d1c08-113">Ссылка</span><span class="sxs-lookup"><span data-stu-id="d1c08-113">Reference</span></span>  
  <xref:System.Windows.Forms.PictureBox>  
- <span data-ttu-id="7d75b-114">Описание класса и всех его членов.</span><span class="sxs-lookup"><span data-stu-id="7d75b-114">Describes this class and has links to all its members.</span></span>  
+ <span data-ttu-id="d1c08-114">Описание класса и всех его членов.</span><span class="sxs-lookup"><span data-stu-id="d1c08-114">Describes this class and has links to all its members.</span></span>  
   
-## <a name="related-sections"></a><span data-ttu-id="7d75b-115">Связанные разделы</span><span class="sxs-lookup"><span data-stu-id="7d75b-115">Related Sections</span></span>  
- [<span data-ttu-id="7d75b-116">Элементы управления для использования в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="7d75b-116">Controls to Use on Windows Forms</span></span>](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
- <span data-ttu-id="7d75b-117">Полный список элементов управления Windows Forms со ссылками на информацию об их применении.</span><span class="sxs-lookup"><span data-stu-id="7d75b-117">Provides a complete list of Windows Forms controls, with links to information on their use.</span></span>
+## <a name="related-sections"></a><span data-ttu-id="d1c08-115">Связанные разделы</span><span class="sxs-lookup"><span data-stu-id="d1c08-115">Related Sections</span></span>  
+ [<span data-ttu-id="d1c08-116">Элементы управления для использования в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="d1c08-116">Controls to Use on Windows Forms</span></span>](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
+ <span data-ttu-id="d1c08-117">Полный список элементов управления Windows Forms со ссылками на информацию об их применении.</span><span class="sxs-lookup"><span data-stu-id="d1c08-117">Provides a complete list of Windows Forms controls, with links to information on their use.</span></span>

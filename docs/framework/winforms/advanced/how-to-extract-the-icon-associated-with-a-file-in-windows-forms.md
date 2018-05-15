@@ -1,13 +1,6 @@
 ---
-title: "Практическое руководство. Извлечение связанного с файлом значка в Windows Forms"
-ms.custom: 
+title: Практическое руководство. Извлечение связанного с файлом значка в Windows Forms
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,33 +9,28 @@ helpviewer_keywords:
 - file name extension icons [Windows Forms], displaying in a ListView
 - extracting icons associated with a file type [Windows Forms]
 ms.assetid: 88e2ad8b-c34f-415a-84f2-dad756b5c928
-caps.latest.revision: "5"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a5153f6389c4477a18c647d7cdaf7b49b43bb7ca
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 21bce2f630649afb59272362a7f40055855ed512
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="how-to-extract-the-icon-associated-with-a-file-in-windows-forms"></a><span data-ttu-id="721f9-102">Практическое руководство. Извлечение связанного с файлом значка в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="721f9-102">How to: Extract the Icon Associated with a File in Windows Forms</span></span>
-<span data-ttu-id="721f9-103">Число файлов с внедренными значки, которые предоставляют визуальное представление типа связанного файла.</span><span class="sxs-lookup"><span data-stu-id="721f9-103">Many files have embedded icons that provide a visual representation of the associated file type.</span></span> <span data-ttu-id="721f9-104">Например документы Microsoft Word содержат значок, который определяет их как документы Word.</span><span class="sxs-lookup"><span data-stu-id="721f9-104">For example, Microsoft Word documents contain an icon that identifies them as Word documents.</span></span> <span data-ttu-id="721f9-105">При отображении файлов в списке элементов управления, или таблицы, может потребоваться отображать значок, представляющий тип файла рядом с каждым именем файла.</span><span class="sxs-lookup"><span data-stu-id="721f9-105">When displaying files in a list control or table control, you may want to display the icon representing the file type next to each file name.</span></span> <span data-ttu-id="721f9-106">Легко сделать это с помощью <xref:System.Drawing.Icon.ExtractAssociatedIcon%2A> метод.</span><span class="sxs-lookup"><span data-stu-id="721f9-106">You can do this easily by using the <xref:System.Drawing.Icon.ExtractAssociatedIcon%2A> method.</span></span>  
+# <a name="how-to-extract-the-icon-associated-with-a-file-in-windows-forms"></a><span data-ttu-id="9ba32-102">Практическое руководство. Извлечение связанного с файлом значка в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="9ba32-102">How to: Extract the Icon Associated with a File in Windows Forms</span></span>
+<span data-ttu-id="9ba32-103">Число файлов с внедренными значки, которые предоставляют визуальное представление типа связанного файла.</span><span class="sxs-lookup"><span data-stu-id="9ba32-103">Many files have embedded icons that provide a visual representation of the associated file type.</span></span> <span data-ttu-id="9ba32-104">Например документы Microsoft Word содержат значок, который определяет их как документы Word.</span><span class="sxs-lookup"><span data-stu-id="9ba32-104">For example, Microsoft Word documents contain an icon that identifies them as Word documents.</span></span> <span data-ttu-id="9ba32-105">При отображении файлов в списке элементов управления, или таблицы, может потребоваться отображать значок, представляющий тип файла рядом с каждым именем файла.</span><span class="sxs-lookup"><span data-stu-id="9ba32-105">When displaying files in a list control or table control, you may want to display the icon representing the file type next to each file name.</span></span> <span data-ttu-id="9ba32-106">Легко сделать это с помощью <xref:System.Drawing.Icon.ExtractAssociatedIcon%2A> метод.</span><span class="sxs-lookup"><span data-stu-id="9ba32-106">You can do this easily by using the <xref:System.Drawing.Icon.ExtractAssociatedIcon%2A> method.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="721f9-107">Пример</span><span class="sxs-lookup"><span data-stu-id="721f9-107">Example</span></span>  
- <span data-ttu-id="721f9-108">В следующем примере кода показано, как извлекать значок, связанный с файлом и отобразить имя файла и его значок в <xref:System.Windows.Forms.ListView> элемента управления.</span><span class="sxs-lookup"><span data-stu-id="721f9-108">The following code example demonstrates how to extract the icon associated with a file and display the file name and its associated icon in a <xref:System.Windows.Forms.ListView> control.</span></span>  
+## <a name="example"></a><span data-ttu-id="9ba32-107">Пример</span><span class="sxs-lookup"><span data-stu-id="9ba32-107">Example</span></span>  
+ <span data-ttu-id="9ba32-108">В следующем примере кода показано, как извлекать значок, связанный с файлом и отобразить имя файла и его значок в <xref:System.Windows.Forms.ListView> элемента управления.</span><span class="sxs-lookup"><span data-stu-id="9ba32-108">The following code example demonstrates how to extract the icon associated with a file and display the file name and its associated icon in a <xref:System.Windows.Forms.ListView> control.</span></span>  
   
  [!code-csharp[System.Drawing.Icon.ExtractAssociatedIconEx#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.Icon.ExtractAssociatedIconEx/CS/Form1.cs#1)]
  [!code-vb[System.Drawing.Icon.ExtractAssociatedIconEx#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.Icon.ExtractAssociatedIconEx/VB/Form1.vb#1)]  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="721f9-109">Компиляция кода</span><span class="sxs-lookup"><span data-stu-id="721f9-109">Compiling the Code</span></span>  
- <span data-ttu-id="721f9-110">Чтобы скомпилировать этот пример:</span><span class="sxs-lookup"><span data-stu-id="721f9-110">To compile the example:</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="9ba32-109">Компиляция кода</span><span class="sxs-lookup"><span data-stu-id="9ba32-109">Compiling the Code</span></span>  
+ <span data-ttu-id="9ba32-110">Чтобы скомпилировать этот пример:</span><span class="sxs-lookup"><span data-stu-id="9ba32-110">To compile the example:</span></span>  
   
--   <span data-ttu-id="721f9-111">Вставьте приведенный выше код в форму Windows Forms и вызовите `ExtractAssociatedIconExample` метод из конструктора формы или <xref:System.Windows.Forms.Form.Load> метод обработки события.</span><span class="sxs-lookup"><span data-stu-id="721f9-111">Paste the preceding code into a Windows Form, and call the `ExtractAssociatedIconExample` method from the form's constructor or <xref:System.Windows.Forms.Form.Load> event-handling method.</span></span>  
+-   <span data-ttu-id="9ba32-111">Вставьте приведенный выше код в форму Windows Forms и вызовите `ExtractAssociatedIconExample` метод из конструктора формы или <xref:System.Windows.Forms.Form.Load> метод обработки события.</span><span class="sxs-lookup"><span data-stu-id="9ba32-111">Paste the preceding code into a Windows Form, and call the `ExtractAssociatedIconExample` method from the form's constructor or <xref:System.Windows.Forms.Form.Load> event-handling method.</span></span>  
   
-     <span data-ttu-id="721f9-112">Необходимо убедиться, что форма импортирует <xref:System.IO> пространства имен.</span><span class="sxs-lookup"><span data-stu-id="721f9-112">You will need to make sure that your form imports the <xref:System.IO> namespace.</span></span>  
+     <span data-ttu-id="9ba32-112">Необходимо убедиться, что форма импортирует <xref:System.IO> пространства имен.</span><span class="sxs-lookup"><span data-stu-id="9ba32-112">You will need to make sure that your form imports the <xref:System.IO> namespace.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="721f9-113">См. также</span><span class="sxs-lookup"><span data-stu-id="721f9-113">See Also</span></span>  
- [<span data-ttu-id="721f9-114">Изображения, точечные рисунки и метафайлы</span><span class="sxs-lookup"><span data-stu-id="721f9-114">Images, Bitmaps, and Metafiles</span></span>](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)  
- [<span data-ttu-id="721f9-115">Элемент управления ListView</span><span class="sxs-lookup"><span data-stu-id="721f9-115">ListView Control</span></span>](../../../../docs/framework/winforms/controls/listview-control-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="9ba32-113">См. также</span><span class="sxs-lookup"><span data-stu-id="9ba32-113">See Also</span></span>  
+ [<span data-ttu-id="9ba32-114">Изображения, точечные рисунки и метафайлы</span><span class="sxs-lookup"><span data-stu-id="9ba32-114">Images, Bitmaps, and Metafiles</span></span>](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)  
+ [<span data-ttu-id="9ba32-115">Элемент управления ListView</span><span class="sxs-lookup"><span data-stu-id="9ba32-115">ListView Control</span></span>](../../../../docs/framework/winforms/controls/listview-control-windows-forms.md)

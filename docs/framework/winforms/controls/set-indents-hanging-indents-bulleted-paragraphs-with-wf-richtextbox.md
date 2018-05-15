@@ -1,13 +1,6 @@
 ---
-title: "Практическое руководство. Задание отступов, выступов и маркеров абзацев с помощью элемента управления RichTextBox в Windows Forms"
-ms.custom: 
+title: Практическое руководство. Задание отступов, выступов и маркеров абзацев с помощью элемента управления RichTextBox в Windows Forms
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -20,23 +13,18 @@ helpviewer_keywords:
 - RichTextBox control [Windows Forms], setting indents and bullets
 - text boxes [Windows Forms], bullets
 ms.assetid: abfb40e6-5642-4691-8ec1-9d9ae91688dc
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 1349e86ecd04c0d4e394e7939996c3e717e841e4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 95ba276f3b2682d5b5bcaaa49916e856eb580632
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="how-to-set-indents-hanging-indents-and-bulleted-paragraphs-with-the-windows-forms-richtextbox-control"></a><span data-ttu-id="df774-102">Практическое руководство. Задание отступов, выступов и маркеров абзацев с помощью элемента управления RichTextBox в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="df774-102">How to: Set Indents, Hanging Indents, and Bulleted Paragraphs with the Windows Forms RichTextBox Control</span></span>
-<span data-ttu-id="df774-103">Windows Forms <xref:System.Windows.Forms.RichTextBox> элемент управления поддерживает разнообразные варианты форматирования текста, он отображает.</span><span class="sxs-lookup"><span data-stu-id="df774-103">The Windows Forms <xref:System.Windows.Forms.RichTextBox> control has numerous options for formatting the text it displays.</span></span> <span data-ttu-id="df774-104">Можно форматировать выделенные абзацы как маркированные списки, задав <xref:System.Windows.Forms.RichTextBox.SelectionBullet%2A> свойство.</span><span class="sxs-lookup"><span data-stu-id="df774-104">You can format selected paragraphs as bulleted lists by setting the <xref:System.Windows.Forms.RichTextBox.SelectionBullet%2A> property.</span></span> <span data-ttu-id="df774-105">Можно также использовать <xref:System.Windows.Forms.RichTextBox.SelectionIndent%2A>, <xref:System.Windows.Forms.RichTextBox.SelectionRightIndent%2A>, и <xref:System.Windows.Forms.RichTextBox.SelectionHangingIndent%2A> свойства, чтобы задать отступ абзаца относительно левой и правой границы элемента управления и левого края остальных строк текста.</span><span class="sxs-lookup"><span data-stu-id="df774-105">You can also use the <xref:System.Windows.Forms.RichTextBox.SelectionIndent%2A>, <xref:System.Windows.Forms.RichTextBox.SelectionRightIndent%2A>, and <xref:System.Windows.Forms.RichTextBox.SelectionHangingIndent%2A> properties to set the indentation of paragraphs relative to the left and right edges of the control, and the left edge of other lines of text.</span></span>  
+# <a name="how-to-set-indents-hanging-indents-and-bulleted-paragraphs-with-the-windows-forms-richtextbox-control"></a><span data-ttu-id="d7e28-102">Практическое руководство. Задание отступов, выступов и маркеров абзацев с помощью элемента управления RichTextBox в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="d7e28-102">How to: Set Indents, Hanging Indents, and Bulleted Paragraphs with the Windows Forms RichTextBox Control</span></span>
+<span data-ttu-id="d7e28-103">Windows Forms <xref:System.Windows.Forms.RichTextBox> элемент управления поддерживает разнообразные варианты форматирования текста, он отображает.</span><span class="sxs-lookup"><span data-stu-id="d7e28-103">The Windows Forms <xref:System.Windows.Forms.RichTextBox> control has numerous options for formatting the text it displays.</span></span> <span data-ttu-id="d7e28-104">Можно форматировать выделенные абзацы как маркированные списки, задав <xref:System.Windows.Forms.RichTextBox.SelectionBullet%2A> свойство.</span><span class="sxs-lookup"><span data-stu-id="d7e28-104">You can format selected paragraphs as bulleted lists by setting the <xref:System.Windows.Forms.RichTextBox.SelectionBullet%2A> property.</span></span> <span data-ttu-id="d7e28-105">Можно также использовать <xref:System.Windows.Forms.RichTextBox.SelectionIndent%2A>, <xref:System.Windows.Forms.RichTextBox.SelectionRightIndent%2A>, и <xref:System.Windows.Forms.RichTextBox.SelectionHangingIndent%2A> свойства, чтобы задать отступ абзаца относительно левой и правой границы элемента управления и левого края остальных строк текста.</span><span class="sxs-lookup"><span data-stu-id="d7e28-105">You can also use the <xref:System.Windows.Forms.RichTextBox.SelectionIndent%2A>, <xref:System.Windows.Forms.RichTextBox.SelectionRightIndent%2A>, and <xref:System.Windows.Forms.RichTextBox.SelectionHangingIndent%2A> properties to set the indentation of paragraphs relative to the left and right edges of the control, and the left edge of other lines of text.</span></span>  
   
-### <a name="to-format-a-paragraph-as-a-bulleted-list"></a><span data-ttu-id="df774-106">Форматирование абзаца в виде маркированного списка</span><span class="sxs-lookup"><span data-stu-id="df774-106">To format a paragraph as a bulleted list</span></span>  
+### <a name="to-format-a-paragraph-as-a-bulleted-list"></a><span data-ttu-id="d7e28-106">Форматирование абзаца в виде маркированного списка</span><span class="sxs-lookup"><span data-stu-id="d7e28-106">To format a paragraph as a bulleted list</span></span>  
   
-1.  <span data-ttu-id="df774-107">Задайте для свойства <xref:System.Windows.Forms.RichTextBox.SelectionBullet%2A> значение `true`.</span><span class="sxs-lookup"><span data-stu-id="df774-107">Set the <xref:System.Windows.Forms.RichTextBox.SelectionBullet%2A> property to `true`.</span></span>  
+1.  <span data-ttu-id="d7e28-107">Задайте для свойства <xref:System.Windows.Forms.RichTextBox.SelectionBullet%2A> значение `true`.</span><span class="sxs-lookup"><span data-stu-id="d7e28-107">Set the <xref:System.Windows.Forms.RichTextBox.SelectionBullet%2A> property to `true`.</span></span>  
   
     ```vb  
     RichTextBox1.SelectionBullet = True  
@@ -50,13 +38,13 @@ ms.lasthandoff: 12/22/2017
     richTextBox1->SelectionBullet = true;  
     ```  
   
-### <a name="to-indent-a-paragraph"></a><span data-ttu-id="df774-108">Чтобы задать отступ абзаца</span><span class="sxs-lookup"><span data-stu-id="df774-108">To indent a paragraph</span></span>  
+### <a name="to-indent-a-paragraph"></a><span data-ttu-id="d7e28-108">Чтобы задать отступ абзаца</span><span class="sxs-lookup"><span data-stu-id="d7e28-108">To indent a paragraph</span></span>  
   
-1.  <span data-ttu-id="df774-109">Задать <xref:System.Windows.Forms.RichTextBox.SelectionIndent%2A> свойства в целое число, представляющее расстояние в пикселях между левой границей элемента управления и левой границей текста.</span><span class="sxs-lookup"><span data-stu-id="df774-109">Set the <xref:System.Windows.Forms.RichTextBox.SelectionIndent%2A> property to an integer representing the distance in pixels between the left edge of the control and the left edge of the text.</span></span>  
+1.  <span data-ttu-id="d7e28-109">Задать <xref:System.Windows.Forms.RichTextBox.SelectionIndent%2A> свойства в целое число, представляющее расстояние в пикселях между левой границей элемента управления и левой границей текста.</span><span class="sxs-lookup"><span data-stu-id="d7e28-109">Set the <xref:System.Windows.Forms.RichTextBox.SelectionIndent%2A> property to an integer representing the distance in pixels between the left edge of the control and the left edge of the text.</span></span>  
   
-2.  <span data-ttu-id="df774-110">Задать <xref:System.Windows.Forms.RichTextBox.SelectionHangingIndent%2A> свойства в целое число, представляющее расстояние в пикселях между левым краем первой строки текста в абзаце и левым краем последующих строк того же абзаца.</span><span class="sxs-lookup"><span data-stu-id="df774-110">Set the <xref:System.Windows.Forms.RichTextBox.SelectionHangingIndent%2A> property to an integer representing the distance in pixels between the left edge of the first line of text in the paragraph and the left edge of subsequent lines in the same paragraph.</span></span> <span data-ttu-id="df774-111">Значение <xref:System.Windows.Forms.RichTextBox.SelectionHangingIndent%2A> свойство применяется только к строкам абзаца, следующим первой строки.</span><span class="sxs-lookup"><span data-stu-id="df774-111">The value of the <xref:System.Windows.Forms.RichTextBox.SelectionHangingIndent%2A> property only applies to lines in a paragraph that have wrapped below the first line.</span></span>  
+2.  <span data-ttu-id="d7e28-110">Задать <xref:System.Windows.Forms.RichTextBox.SelectionHangingIndent%2A> свойства в целое число, представляющее расстояние в пикселях между левым краем первой строки текста в абзаце и левым краем последующих строк того же абзаца.</span><span class="sxs-lookup"><span data-stu-id="d7e28-110">Set the <xref:System.Windows.Forms.RichTextBox.SelectionHangingIndent%2A> property to an integer representing the distance in pixels between the left edge of the first line of text in the paragraph and the left edge of subsequent lines in the same paragraph.</span></span> <span data-ttu-id="d7e28-111">Значение <xref:System.Windows.Forms.RichTextBox.SelectionHangingIndent%2A> свойство применяется только к строкам абзаца, следующим первой строки.</span><span class="sxs-lookup"><span data-stu-id="d7e28-111">The value of the <xref:System.Windows.Forms.RichTextBox.SelectionHangingIndent%2A> property only applies to lines in a paragraph that have wrapped below the first line.</span></span>  
   
-3.  <span data-ttu-id="df774-112">Задать <xref:System.Windows.Forms.RichTextBox.SelectionRightIndent%2A> свойства в целое число, представляющее расстояние в пикселях между правой границей элемента управления и правым краем текста.</span><span class="sxs-lookup"><span data-stu-id="df774-112">Set the <xref:System.Windows.Forms.RichTextBox.SelectionRightIndent%2A> property to an integer representing the distance in pixels between the right edge of the control and the right edge of the text.</span></span>  
+3.  <span data-ttu-id="d7e28-112">Задать <xref:System.Windows.Forms.RichTextBox.SelectionRightIndent%2A> свойства в целое число, представляющее расстояние в пикселях между правой границей элемента управления и правым краем текста.</span><span class="sxs-lookup"><span data-stu-id="d7e28-112">Set the <xref:System.Windows.Forms.RichTextBox.SelectionRightIndent%2A> property to an integer representing the distance in pixels between the right edge of the control and the right edge of the text.</span></span>  
   
     ```vb  
     RichTextBox1.SelectionIndent = 8  
@@ -77,9 +65,9 @@ ms.lasthandoff: 12/22/2017
     ```  
   
     > [!NOTE]
-    >  <span data-ttu-id="df774-113">Все эти свойства влияют на все абзацы, содержащие выделенный текст, а также на текст, который будет вводиться после текущей позиции курсора.</span><span class="sxs-lookup"><span data-stu-id="df774-113">All these properties affect any paragraphs that contain selected text, and also the text that is typed after the current insertion point.</span></span> <span data-ttu-id="df774-114">Например, когда пользователь выделяет слово в абзаце и затем изменяет параметры отступа, новые параметры будут применяться ко всему абзацу, который содержит это слово, а также ко всем абзацам, которые будут введены после выделенного абзаца.</span><span class="sxs-lookup"><span data-stu-id="df774-114">For example, when a user selects a word within a paragraph and then adjusts the indentation, the new settings will apply to the entire paragraph that contains that word, and also to any paragraphs subsequently entered after the selected paragraph.</span></span> <span data-ttu-id="df774-115">Сведения о выделение текста программными средствами см. в разделе <xref:System.Windows.Forms.TextBoxBase.Select%2A>.</span><span class="sxs-lookup"><span data-stu-id="df774-115">For information about selecting text programmatically, see <xref:System.Windows.Forms.TextBoxBase.Select%2A>.</span></span>  
+    >  <span data-ttu-id="d7e28-113">Все эти свойства влияют на все абзацы, содержащие выделенный текст, а также на текст, который будет вводиться после текущей позиции курсора.</span><span class="sxs-lookup"><span data-stu-id="d7e28-113">All these properties affect any paragraphs that contain selected text, and also the text that is typed after the current insertion point.</span></span> <span data-ttu-id="d7e28-114">Например, когда пользователь выделяет слово в абзаце и затем изменяет параметры отступа, новые параметры будут применяться ко всему абзацу, который содержит это слово, а также ко всем абзацам, которые будут введены после выделенного абзаца.</span><span class="sxs-lookup"><span data-stu-id="d7e28-114">For example, when a user selects a word within a paragraph and then adjusts the indentation, the new settings will apply to the entire paragraph that contains that word, and also to any paragraphs subsequently entered after the selected paragraph.</span></span> <span data-ttu-id="d7e28-115">Сведения о выделение текста программными средствами см. в разделе <xref:System.Windows.Forms.TextBoxBase.Select%2A>.</span><span class="sxs-lookup"><span data-stu-id="d7e28-115">For information about selecting text programmatically, see <xref:System.Windows.Forms.TextBoxBase.Select%2A>.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="df774-116">См. также</span><span class="sxs-lookup"><span data-stu-id="df774-116">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="d7e28-116">См. также</span><span class="sxs-lookup"><span data-stu-id="d7e28-116">See Also</span></span>  
  <xref:System.Windows.Forms.RichTextBox>  
- [<span data-ttu-id="df774-117">Элемент управления RichTextBox</span><span class="sxs-lookup"><span data-stu-id="df774-117">RichTextBox Control</span></span>](../../../../docs/framework/winforms/controls/richtextbox-control-windows-forms.md)  
- [<span data-ttu-id="df774-118">Элементы управления для использования в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="df774-118">Controls to Use on Windows Forms</span></span>](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
+ [<span data-ttu-id="d7e28-117">Элемент управления RichTextBox</span><span class="sxs-lookup"><span data-stu-id="d7e28-117">RichTextBox Control</span></span>](../../../../docs/framework/winforms/controls/richtextbox-control-windows-forms.md)  
+ [<span data-ttu-id="d7e28-118">Элементы управления для использования в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="d7e28-118">Controls to Use on Windows Forms</span></span>](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)

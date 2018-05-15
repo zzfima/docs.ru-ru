@@ -1,14 +1,6 @@
 ---
 title: Практическое руководство. Добавление или удаление элемента в коллекции элементов управления во время выполнения
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -20,33 +12,27 @@ helpviewer_keywords:
 - run time [Windows Forms], adding controls
 - controls [Windows Forms], removing using collections
 ms.assetid: 771bf895-3d5f-469b-a324-3528f343657e
-caps.latest.revision: 10
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: b34863e7846f75c5dc9a8af24591522e37252f4c
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: cd903558fdb0e01b5ba55e0007fc78315408fa13
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="how-to-add-to-or-remove-from-a-collection-of-controls-at-run-time"></a><span data-ttu-id="8aa86-102">Практическое руководство. Добавление или удаление элемента в коллекции элементов управления во время выполнения</span><span class="sxs-lookup"><span data-stu-id="8aa86-102">How to: Add to or Remove from a Collection of Controls at Run Time</span></span>
-<span data-ttu-id="8aa86-103">Общие задачи при разработке приложения Добавление элементов управления в и удаление элементов управления из любого контейнерного элемента управления в формах (например, <xref:System.Windows.Forms.Panel> или <xref:System.Windows.Forms.GroupBox> управления или в саму форму).</span><span class="sxs-lookup"><span data-stu-id="8aa86-103">Common tasks in application development are adding controls to and removing controls from any container control on your forms (such as the <xref:System.Windows.Forms.Panel> or <xref:System.Windows.Forms.GroupBox> control, or even the form itself).</span></span> <span data-ttu-id="8aa86-104">Во время разработки элементы управления можно перетаскивать непосредственно на панель или в группу.</span><span class="sxs-lookup"><span data-stu-id="8aa86-104">At design time, controls can be dragged directly onto a panel or group box.</span></span> <span data-ttu-id="8aa86-105">Во время выполнения эти элементы управления поддерживают коллекцию `Controls`, которая отслеживает размещенные в них элементы управления.</span><span class="sxs-lookup"><span data-stu-id="8aa86-105">At run time, these controls maintain a `Controls` collection, which keeps track of what controls are placed on them.</span></span>  
+# <a name="how-to-add-to-or-remove-from-a-collection-of-controls-at-run-time"></a><span data-ttu-id="3a3ee-102">Практическое руководство. Добавление или удаление элемента в коллекции элементов управления во время выполнения</span><span class="sxs-lookup"><span data-stu-id="3a3ee-102">How to: Add to or Remove from a Collection of Controls at Run Time</span></span>
+<span data-ttu-id="3a3ee-103">Общие задачи при разработке приложения Добавление элементов управления в и удаление элементов управления из любого контейнерного элемента управления в формах (например, <xref:System.Windows.Forms.Panel> или <xref:System.Windows.Forms.GroupBox> управления или в саму форму).</span><span class="sxs-lookup"><span data-stu-id="3a3ee-103">Common tasks in application development are adding controls to and removing controls from any container control on your forms (such as the <xref:System.Windows.Forms.Panel> or <xref:System.Windows.Forms.GroupBox> control, or even the form itself).</span></span> <span data-ttu-id="3a3ee-104">Во время разработки элементы управления можно перетаскивать непосредственно на панель или в группу.</span><span class="sxs-lookup"><span data-stu-id="3a3ee-104">At design time, controls can be dragged directly onto a panel or group box.</span></span> <span data-ttu-id="3a3ee-105">Во время выполнения эти элементы управления поддерживают коллекцию `Controls`, которая отслеживает размещенные в них элементы управления.</span><span class="sxs-lookup"><span data-stu-id="3a3ee-105">At run time, these controls maintain a `Controls` collection, which keeps track of what controls are placed on them.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="8aa86-106">Следующий пример кода применяется к любому элементу управления, который поддерживает внутри себя коллекцию элементов управления.</span><span class="sxs-lookup"><span data-stu-id="8aa86-106">The following code example applies to any control that maintains a collection of controls within it.</span></span>  
+>  <span data-ttu-id="3a3ee-106">Следующий пример кода применяется к любому элементу управления, который поддерживает внутри себя коллекцию элементов управления.</span><span class="sxs-lookup"><span data-stu-id="3a3ee-106">The following code example applies to any control that maintains a collection of controls within it.</span></span>  
   
-### <a name="to-add-a-control-to-a-collection-programmatically"></a><span data-ttu-id="8aa86-107">Программное добавление элемента управления в коллекцию</span><span class="sxs-lookup"><span data-stu-id="8aa86-107">To add a control to a collection programmatically</span></span>  
+### <a name="to-add-a-control-to-a-collection-programmatically"></a><span data-ttu-id="3a3ee-107">Программное добавление элемента управления в коллекцию</span><span class="sxs-lookup"><span data-stu-id="3a3ee-107">To add a control to a collection programmatically</span></span>  
   
-1.  <span data-ttu-id="8aa86-108">Создайте экземпляр элемента управления, подлежащий добавлению.</span><span class="sxs-lookup"><span data-stu-id="8aa86-108">Create an instance of the control to be added.</span></span>  
+1.  <span data-ttu-id="3a3ee-108">Создайте экземпляр элемента управления, подлежащий добавлению.</span><span class="sxs-lookup"><span data-stu-id="3a3ee-108">Create an instance of the control to be added.</span></span>  
   
-2.  <span data-ttu-id="8aa86-109">Задайте свойства нового элемента управления.</span><span class="sxs-lookup"><span data-stu-id="8aa86-109">Set properties of the new control.</span></span>  
+2.  <span data-ttu-id="3a3ee-109">Задайте свойства нового элемента управления.</span><span class="sxs-lookup"><span data-stu-id="3a3ee-109">Set properties of the new control.</span></span>  
   
-3.  <span data-ttu-id="8aa86-110">Добавьте этот элемент управления в коллекцию `Controls` родительского элемента управления.</span><span class="sxs-lookup"><span data-stu-id="8aa86-110">Add the control to the `Controls` collection of the parent control.</span></span>  
+3.  <span data-ttu-id="3a3ee-110">Добавьте этот элемент управления в коллекцию `Controls` родительского элемента управления.</span><span class="sxs-lookup"><span data-stu-id="3a3ee-110">Add the control to the `Controls` collection of the parent control.</span></span>  
   
-     <span data-ttu-id="8aa86-111">В следующем примере кода показано, как создать экземпляр <xref:System.Windows.Forms.Button> элемента управления.</span><span class="sxs-lookup"><span data-stu-id="8aa86-111">The following code example shows how to create an instance of the <xref:System.Windows.Forms.Button> control.</span></span> <span data-ttu-id="8aa86-112">Требуется форма с <xref:System.Windows.Forms.Panel> и метод обработки событий для кнопки в процессе создания, `NewPanelButton_Click`, уже существует.</span><span class="sxs-lookup"><span data-stu-id="8aa86-112">It requires a form with a <xref:System.Windows.Forms.Panel> control and that the event-handling method for the button being created, `NewPanelButton_Click`, already exists.</span></span>  
+     <span data-ttu-id="3a3ee-111">В следующем примере кода показано, как создать экземпляр <xref:System.Windows.Forms.Button> элемента управления.</span><span class="sxs-lookup"><span data-stu-id="3a3ee-111">The following code example shows how to create an instance of the <xref:System.Windows.Forms.Button> control.</span></span> <span data-ttu-id="3a3ee-112">Требуется форма с <xref:System.Windows.Forms.Panel> и метод обработки событий для кнопки в процессе создания, `NewPanelButton_Click`, уже существует.</span><span class="sxs-lookup"><span data-stu-id="3a3ee-112">It requires a form with a <xref:System.Windows.Forms.Panel> control and that the event-handling method for the button being created, `NewPanelButton_Click`, already exists.</span></span>  
   
     ```vb  
     Public NewPanelButton As New Button()  
@@ -77,13 +63,13 @@ ms.lasthandoff: 04/26/2018
     }  
     ```  
   
-### <a name="to-remove-controls-from-a-collection-programmatically"></a><span data-ttu-id="8aa86-113">Программное удаление элементов управления из коллекции</span><span class="sxs-lookup"><span data-stu-id="8aa86-113">To remove controls from a collection programmatically</span></span>  
+### <a name="to-remove-controls-from-a-collection-programmatically"></a><span data-ttu-id="3a3ee-113">Программное удаление элементов управления из коллекции</span><span class="sxs-lookup"><span data-stu-id="3a3ee-113">To remove controls from a collection programmatically</span></span>  
   
-1.  <span data-ttu-id="8aa86-114">Удалите обработчик событий из события.</span><span class="sxs-lookup"><span data-stu-id="8aa86-114">Remove the event handler from the event.</span></span> <span data-ttu-id="8aa86-115">В Visual Basic, используйте [оператор RemoveHandler](~/docs/visual-basic/language-reference/statements/removehandler-statement.md) ключевого слова; в Visual C# используйте [-= (Справочник по C#) оператор](~/docs/csharp/language-reference/operators/subtraction-assignment-operator.md).</span><span class="sxs-lookup"><span data-stu-id="8aa86-115">In Visual Basic, use the [RemoveHandler Statement](~/docs/visual-basic/language-reference/statements/removehandler-statement.md) keyword; in Visual C#, use the [-= Operator (C# Reference)](~/docs/csharp/language-reference/operators/subtraction-assignment-operator.md).</span></span>  
+1.  <span data-ttu-id="3a3ee-114">Удалите обработчик событий из события.</span><span class="sxs-lookup"><span data-stu-id="3a3ee-114">Remove the event handler from the event.</span></span> <span data-ttu-id="3a3ee-115">В Visual Basic, используйте [оператор RemoveHandler](~/docs/visual-basic/language-reference/statements/removehandler-statement.md) ключевого слова; в Visual C# используйте [-= (Справочник по C#) оператор](~/docs/csharp/language-reference/operators/subtraction-assignment-operator.md).</span><span class="sxs-lookup"><span data-stu-id="3a3ee-115">In Visual Basic, use the [RemoveHandler Statement](~/docs/visual-basic/language-reference/statements/removehandler-statement.md) keyword; in Visual C#, use the [-= Operator (C# Reference)](~/docs/csharp/language-reference/operators/subtraction-assignment-operator.md).</span></span>  
   
-2.  <span data-ttu-id="8aa86-116">Используйте метод `Remove` для удаления требуемого элемента управления из коллекции `Controls` панели.</span><span class="sxs-lookup"><span data-stu-id="8aa86-116">Use the `Remove` method to delete the desired control from the panel's `Controls` collection.</span></span>  
+2.  <span data-ttu-id="3a3ee-116">Используйте метод `Remove` для удаления требуемого элемента управления из коллекции `Controls` панели.</span><span class="sxs-lookup"><span data-stu-id="3a3ee-116">Use the `Remove` method to delete the desired control from the panel's `Controls` collection.</span></span>  
   
-3.  <span data-ttu-id="8aa86-117">Вызовите <xref:System.Windows.Forms.Control.Dispose%2A> метод, чтобы освободить все ресурсы, используемые элементом управления.</span><span class="sxs-lookup"><span data-stu-id="8aa86-117">Call the <xref:System.Windows.Forms.Control.Dispose%2A> method to release all the resources used by the control.</span></span>  
+3.  <span data-ttu-id="3a3ee-117">Вызовите <xref:System.Windows.Forms.Control.Dispose%2A> метод, чтобы освободить все ресурсы, используемые элементом управления.</span><span class="sxs-lookup"><span data-stu-id="3a3ee-117">Call the <xref:System.Windows.Forms.Control.Dispose%2A> method to release all the resources used by the control.</span></span>  
   
     ```vb  
     Public Sub RemoveControl()  
@@ -113,6 +99,6 @@ ms.lasthandoff: 04/26/2018
     }  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="8aa86-118">См. также</span><span class="sxs-lookup"><span data-stu-id="8aa86-118">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="3a3ee-118">См. также</span><span class="sxs-lookup"><span data-stu-id="3a3ee-118">See Also</span></span>  
  <xref:System.Windows.Forms.Panel>  
- [<span data-ttu-id="8aa86-119">Элемент управления Panel</span><span class="sxs-lookup"><span data-stu-id="8aa86-119">Panel Control</span></span>](../../../../docs/framework/winforms/controls/panel-control-windows-forms.md)
+ [<span data-ttu-id="3a3ee-119">Элемент управления Panel</span><span class="sxs-lookup"><span data-stu-id="3a3ee-119">Panel Control</span></span>](../../../../docs/framework/winforms/controls/panel-control-windows-forms.md)

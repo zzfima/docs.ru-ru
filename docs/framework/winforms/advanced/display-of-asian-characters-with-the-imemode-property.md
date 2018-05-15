@@ -1,13 +1,6 @@
 ---
-title: "Отображение азиатских символов с помощью свойства ImeMode"
-ms.custom: 
+title: Отображение азиатских символов с помощью свойства ImeMode
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Asian languages [Windows Forms], displaying with ImeMode
 - Chinese characters [Windows Forms], displaying with ImeMode
@@ -21,19 +14,14 @@ helpviewer_keywords:
 - localization [Windows Forms], character sets
 - globalization [Windows Forms], character sets
 ms.assetid: c60ae399-0dab-4f07-9dea-6dbfb15ec0ae
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 5971fd9a75f936d2ec63eea6a086c681ec996652
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 70be2506603856b1ce7787f74f3b9b203c155cec
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="display-of-asian-characters-with-the-imemode-property"></a><span data-ttu-id="83a6a-102">Отображение азиатских символов с помощью свойства ImeMode</span><span class="sxs-lookup"><span data-stu-id="83a6a-102">Display of Asian Characters with the ImeMode Property</span></span>
-<span data-ttu-id="83a6a-103"><xref:System.Windows.Forms.Control.ImeMode%2A> Свойство используется форм и элементов управления для принудительного определенный режим редактора метода ввода (IME).</span><span class="sxs-lookup"><span data-stu-id="83a6a-103">The <xref:System.Windows.Forms.Control.ImeMode%2A> property is used by forms and controls to force a specific mode for an input method editor (IME).</span></span> <span data-ttu-id="83a6a-104">Редактор метода ввода — это необходимый компонент для написания сценариев на китайском, японском и корейском языках, так как количество символов в этих системах письменности превышает возможности кодирования обычной клавиатуры.</span><span class="sxs-lookup"><span data-stu-id="83a6a-104">The IME is an essential component for writing Chinese, Japanese, and Korean scripts, since these writing systems have more characters than can be encoded for a regular keyboard.</span></span> <span data-ttu-id="83a6a-105">Например, в определенном текстовом поле можно разрешить только символы ASCII.</span><span class="sxs-lookup"><span data-stu-id="83a6a-105">For example, you may want to allow only ASCII characters in a particular text box.</span></span> <span data-ttu-id="83a6a-106">В этом случае можно задать <xref:System.Windows.Forms.Control.ImeMode%2A> свойства <xref:System.Windows.Forms.ImeMode> и пользователи только смогут ввести знаки ASCII данное текстовое поле.</span><span class="sxs-lookup"><span data-stu-id="83a6a-106">In such a case you can set the <xref:System.Windows.Forms.Control.ImeMode%2A> property to <xref:System.Windows.Forms.ImeMode> and users will only be able to enter ASCII characters for that particular text box.</span></span> <span data-ttu-id="83a6a-107">Значение по умолчанию <xref:System.Windows.Forms.Control.ImeMode%2A> свойство <xref:System.Windows.Forms.ImeMode>, поэтому если задать свойство для формы, все элементы управления в форме будут наследовать эту настройку.</span><span class="sxs-lookup"><span data-stu-id="83a6a-107">The default value of the <xref:System.Windows.Forms.Control.ImeMode%2A> property is <xref:System.Windows.Forms.ImeMode>, so if you set the property for a form, all controls on the form will inherit that setting.</span></span> <span data-ttu-id="83a6a-108">Дополнительные сведения см. в разделе <xref:System.Windows.Forms.Control.ImeMode%2A> ) и <xref:System.Windows.Forms.ImeMode>.</span><span class="sxs-lookup"><span data-stu-id="83a6a-108">For more information, see <xref:System.Windows.Forms.Control.ImeMode%2A> ) and <xref:System.Windows.Forms.ImeMode>.</span></span>  
+# <a name="display-of-asian-characters-with-the-imemode-property"></a><span data-ttu-id="b24ad-102">Отображение азиатских символов с помощью свойства ImeMode</span><span class="sxs-lookup"><span data-stu-id="b24ad-102">Display of Asian Characters with the ImeMode Property</span></span>
+<span data-ttu-id="b24ad-103"><xref:System.Windows.Forms.Control.ImeMode%2A> Свойство используется форм и элементов управления для принудительного определенный режим редактора метода ввода (IME).</span><span class="sxs-lookup"><span data-stu-id="b24ad-103">The <xref:System.Windows.Forms.Control.ImeMode%2A> property is used by forms and controls to force a specific mode for an input method editor (IME).</span></span> <span data-ttu-id="b24ad-104">Редактор метода ввода — это необходимый компонент для написания сценариев на китайском, японском и корейском языках, так как количество символов в этих системах письменности превышает возможности кодирования обычной клавиатуры.</span><span class="sxs-lookup"><span data-stu-id="b24ad-104">The IME is an essential component for writing Chinese, Japanese, and Korean scripts, since these writing systems have more characters than can be encoded for a regular keyboard.</span></span> <span data-ttu-id="b24ad-105">Например, в определенном текстовом поле можно разрешить только символы ASCII.</span><span class="sxs-lookup"><span data-stu-id="b24ad-105">For example, you may want to allow only ASCII characters in a particular text box.</span></span> <span data-ttu-id="b24ad-106">В этом случае можно задать <xref:System.Windows.Forms.Control.ImeMode%2A> свойства <xref:System.Windows.Forms.ImeMode> и пользователи только смогут ввести знаки ASCII данное текстовое поле.</span><span class="sxs-lookup"><span data-stu-id="b24ad-106">In such a case you can set the <xref:System.Windows.Forms.Control.ImeMode%2A> property to <xref:System.Windows.Forms.ImeMode> and users will only be able to enter ASCII characters for that particular text box.</span></span> <span data-ttu-id="b24ad-107">Значение по умолчанию <xref:System.Windows.Forms.Control.ImeMode%2A> свойство <xref:System.Windows.Forms.ImeMode>, поэтому если задать свойство для формы, все элементы управления в форме будут наследовать эту настройку.</span><span class="sxs-lookup"><span data-stu-id="b24ad-107">The default value of the <xref:System.Windows.Forms.Control.ImeMode%2A> property is <xref:System.Windows.Forms.ImeMode>, so if you set the property for a form, all controls on the form will inherit that setting.</span></span> <span data-ttu-id="b24ad-108">Дополнительные сведения см. в разделе <xref:System.Windows.Forms.Control.ImeMode%2A> ) и <xref:System.Windows.Forms.ImeMode>.</span><span class="sxs-lookup"><span data-stu-id="b24ad-108">For more information, see <xref:System.Windows.Forms.Control.ImeMode%2A> ) and <xref:System.Windows.Forms.ImeMode>.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="83a6a-109">См. также</span><span class="sxs-lookup"><span data-stu-id="83a6a-109">See Also</span></span>  
- [<span data-ttu-id="83a6a-110">Глобализация Windows Forms</span><span class="sxs-lookup"><span data-stu-id="83a6a-110">Globalizing Windows Forms</span></span>](../../../../docs/framework/winforms/advanced/globalizing-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="b24ad-109">См. также</span><span class="sxs-lookup"><span data-stu-id="b24ad-109">See Also</span></span>  
+ [<span data-ttu-id="b24ad-110">Глобализация Windows Forms</span><span class="sxs-lookup"><span data-stu-id="b24ad-110">Globalizing Windows Forms</span></span>](../../../../docs/framework/winforms/advanced/globalizing-windows-forms.md)

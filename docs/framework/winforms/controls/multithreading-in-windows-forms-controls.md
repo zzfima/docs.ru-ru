@@ -1,54 +1,42 @@
 ---
-title: "Многопоточность в элементах управления Windows Forms"
-ms.custom: 
+title: Многопоточность в элементах управления Windows Forms
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - BackgroundWorker component
 - threading [Windows Forms], controls
 ms.assetid: c311d652-0f26-45fa-bdcc-b1615d73ce4e
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e2b9c0a7b19df62867a4148b60e24b7d3ba9bcce
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 68822c62a1a195ce3128d51c765cfeba2056955d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="multithreading-in-windows-forms-controls"></a><span data-ttu-id="74fc1-102">Многопоточность в элементах управления Windows Forms</span><span class="sxs-lookup"><span data-stu-id="74fc1-102">Multithreading in Windows Forms Controls</span></span>
-<span data-ttu-id="74fc1-103">Во многих приложениях можно сделать более быстрого реагирования пользовательского интерфейса (UI), выполнять длительные операции в другом потоке.</span><span class="sxs-lookup"><span data-stu-id="74fc1-103">In many applications, you can make your user interface (UI) more responsive by performing time-consuming operations on another thread.</span></span> <span data-ttu-id="74fc1-104">Доступно несколько средств для многопоточности элементов управления Windows Forms, включая <xref:System.Threading> пространства имен, <xref:System.Windows.Forms.Control.BeginInvoke%2A?displayProperty=nameWithType> метода и `BackgroundWorker` компонента.</span><span class="sxs-lookup"><span data-stu-id="74fc1-104">A number of tools are available for multithreading your Windows Forms controls, including the <xref:System.Threading> namespace, the <xref:System.Windows.Forms.Control.BeginInvoke%2A?displayProperty=nameWithType> method, and the `BackgroundWorker` component.</span></span>  
+# <a name="multithreading-in-windows-forms-controls"></a><span data-ttu-id="5f1cd-102">Многопоточность в элементах управления Windows Forms</span><span class="sxs-lookup"><span data-stu-id="5f1cd-102">Multithreading in Windows Forms Controls</span></span>
+<span data-ttu-id="5f1cd-103">Во многих приложениях можно сделать более быстрого реагирования пользовательского интерфейса (UI), выполнять длительные операции в другом потоке.</span><span class="sxs-lookup"><span data-stu-id="5f1cd-103">In many applications, you can make your user interface (UI) more responsive by performing time-consuming operations on another thread.</span></span> <span data-ttu-id="5f1cd-104">Доступно несколько средств для многопоточности элементов управления Windows Forms, включая <xref:System.Threading> пространства имен, <xref:System.Windows.Forms.Control.BeginInvoke%2A?displayProperty=nameWithType> метода и `BackgroundWorker` компонента.</span><span class="sxs-lookup"><span data-stu-id="5f1cd-104">A number of tools are available for multithreading your Windows Forms controls, including the <xref:System.Threading> namespace, the <xref:System.Windows.Forms.Control.BeginInvoke%2A?displayProperty=nameWithType> method, and the `BackgroundWorker` component.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="74fc1-105">`BackgroundWorker` Компонент заменяет и расширяет его функциональные возможности <xref:System.Threading> пространства имен и <xref:System.Windows.Forms.Control.BeginInvoke%2A?displayProperty=nameWithType> метода; тем не менее, их можно сохранить для обратной совместимости и использования в будущем, при выборе.</span><span class="sxs-lookup"><span data-stu-id="74fc1-105">The `BackgroundWorker` component replaces and adds functionality to the <xref:System.Threading> namespace and the <xref:System.Windows.Forms.Control.BeginInvoke%2A?displayProperty=nameWithType> method; however, these are retained for both backward compatibility and future use, if you choose.</span></span> <span data-ttu-id="74fc1-106">Дополнительные сведения см. в разделе [Общие сведения о компоненте BackgroundWorker](../../../../docs/framework/winforms/controls/backgroundworker-component-overview.md).</span><span class="sxs-lookup"><span data-stu-id="74fc1-106">For more information, see [BackgroundWorker Component Overview](../../../../docs/framework/winforms/controls/backgroundworker-component-overview.md).</span></span>  
+>  <span data-ttu-id="5f1cd-105">`BackgroundWorker` Компонент заменяет и расширяет его функциональные возможности <xref:System.Threading> пространства имен и <xref:System.Windows.Forms.Control.BeginInvoke%2A?displayProperty=nameWithType> метода; тем не менее, их можно сохранить для обратной совместимости и использования в будущем, при выборе.</span><span class="sxs-lookup"><span data-stu-id="5f1cd-105">The `BackgroundWorker` component replaces and adds functionality to the <xref:System.Threading> namespace and the <xref:System.Windows.Forms.Control.BeginInvoke%2A?displayProperty=nameWithType> method; however, these are retained for both backward compatibility and future use, if you choose.</span></span> <span data-ttu-id="5f1cd-106">Дополнительные сведения см. в разделе [Общие сведения о компоненте BackgroundWorker](../../../../docs/framework/winforms/controls/backgroundworker-component-overview.md).</span><span class="sxs-lookup"><span data-stu-id="5f1cd-106">For more information, see [BackgroundWorker Component Overview](../../../../docs/framework/winforms/controls/backgroundworker-component-overview.md).</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="74fc1-107">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="74fc1-107">In This Section</span></span>  
- [<span data-ttu-id="74fc1-108">Практическое руководство. Осуществление потокобезопасных вызовов элементов управления Windows Forms.</span><span class="sxs-lookup"><span data-stu-id="74fc1-108">How to: Make Thread-Safe Calls to Windows Forms Controls</span></span>](../../../../docs/framework/winforms/controls/how-to-make-thread-safe-calls-to-windows-forms-controls.md)  
- <span data-ttu-id="74fc1-109">Описание способов обеспечения потокобезопасных вызовов элементов управления Windows Forms.</span><span class="sxs-lookup"><span data-stu-id="74fc1-109">Shows how to make thread-safe calls to Windows Forms controls.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="5f1cd-107">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="5f1cd-107">In This Section</span></span>  
+ [<span data-ttu-id="5f1cd-108">Практическое руководство. Осуществление потокобезопасных вызовов элементов управления Windows Forms.</span><span class="sxs-lookup"><span data-stu-id="5f1cd-108">How to: Make Thread-Safe Calls to Windows Forms Controls</span></span>](../../../../docs/framework/winforms/controls/how-to-make-thread-safe-calls-to-windows-forms-controls.md)  
+ <span data-ttu-id="5f1cd-109">Описание способов обеспечения потокобезопасных вызовов элементов управления Windows Forms.</span><span class="sxs-lookup"><span data-stu-id="5f1cd-109">Shows how to make thread-safe calls to Windows Forms controls.</span></span>  
   
- [<span data-ttu-id="74fc1-110">Практическое руководство. Применение фонового потока для поиска файлов</span><span class="sxs-lookup"><span data-stu-id="74fc1-110">How to: Use a Background Thread to Search for Files</span></span>](../../../../docs/framework/winforms/controls/how-to-use-a-background-thread-to-search-for-files.md)  
- <span data-ttu-id="74fc1-111">Показано, как использовать <xref:System.Threading> пространства имен и <xref:System.Windows.Forms.Control.BeginInvoke%2A> метод для поиска файлов асинхронно.</span><span class="sxs-lookup"><span data-stu-id="74fc1-111">Shows how to use the <xref:System.Threading> namespace and the <xref:System.Windows.Forms.Control.BeginInvoke%2A> method to search for files asynchronously.</span></span>  
+ [<span data-ttu-id="5f1cd-110">Практическое руководство. Применение фонового потока для поиска файлов</span><span class="sxs-lookup"><span data-stu-id="5f1cd-110">How to: Use a Background Thread to Search for Files</span></span>](../../../../docs/framework/winforms/controls/how-to-use-a-background-thread-to-search-for-files.md)  
+ <span data-ttu-id="5f1cd-111">Показано, как использовать <xref:System.Threading> пространства имен и <xref:System.Windows.Forms.Control.BeginInvoke%2A> метод для поиска файлов асинхронно.</span><span class="sxs-lookup"><span data-stu-id="5f1cd-111">Shows how to use the <xref:System.Threading> namespace and the <xref:System.Windows.Forms.Control.BeginInvoke%2A> method to search for files asynchronously.</span></span>  
   
-## <a name="reference"></a><span data-ttu-id="74fc1-112">Ссылка</span><span class="sxs-lookup"><span data-stu-id="74fc1-112">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="5f1cd-112">Ссылка</span><span class="sxs-lookup"><span data-stu-id="5f1cd-112">Reference</span></span>  
  <xref:System.ComponentModel.BackgroundWorker>  
- <span data-ttu-id="74fc1-113">Описание компонента, инкапсулирующего рабочий поток для асинхронных операций.</span><span class="sxs-lookup"><span data-stu-id="74fc1-113">Documents a component that encapsulates a worker thread for asynchronous operations.</span></span>  
+ <span data-ttu-id="5f1cd-113">Описание компонента, инкапсулирующего рабочий поток для асинхронных операций.</span><span class="sxs-lookup"><span data-stu-id="5f1cd-113">Documents a component that encapsulates a worker thread for asynchronous operations.</span></span>  
   
  <xref:System.Media.SoundPlayer.LoadAsync%2A>  
- <span data-ttu-id="74fc1-114">Описание способа асинхронной загрузки звука.</span><span class="sxs-lookup"><span data-stu-id="74fc1-114">Documents how to load a sound asynchronously.</span></span>  
+ <span data-ttu-id="5f1cd-114">Описание способа асинхронной загрузки звука.</span><span class="sxs-lookup"><span data-stu-id="5f1cd-114">Documents how to load a sound asynchronously.</span></span>  
   
  <xref:System.Windows.Forms.PictureBox.LoadAsync%2A>  
- <span data-ttu-id="74fc1-115">Описание способа асинхронной загрузки изображения.</span><span class="sxs-lookup"><span data-stu-id="74fc1-115">Documents how to load an image asynchronously.</span></span>  
+ <span data-ttu-id="5f1cd-115">Описание способа асинхронной загрузки изображения.</span><span class="sxs-lookup"><span data-stu-id="5f1cd-115">Documents how to load an image asynchronously.</span></span>  
   
-## <a name="related-sections"></a><span data-ttu-id="74fc1-116">Связанные разделы</span><span class="sxs-lookup"><span data-stu-id="74fc1-116">Related Sections</span></span>  
- [<span data-ttu-id="74fc1-117">Практическое руководство. Фоновое выполнение операции</span><span class="sxs-lookup"><span data-stu-id="74fc1-117">How to: Run an Operation in the Background</span></span>](../../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)  
- <span data-ttu-id="74fc1-118">Описание способов выполнения длительной операции с <xref:System.ComponentModel.BackgroundWorker> компонента.</span><span class="sxs-lookup"><span data-stu-id="74fc1-118">Shows how to perform a time-consuming operation with the <xref:System.ComponentModel.BackgroundWorker> component.</span></span>  
+## <a name="related-sections"></a><span data-ttu-id="5f1cd-116">Связанные разделы</span><span class="sxs-lookup"><span data-stu-id="5f1cd-116">Related Sections</span></span>  
+ [<span data-ttu-id="5f1cd-117">Практическое руководство. Фоновое выполнение операции</span><span class="sxs-lookup"><span data-stu-id="5f1cd-117">How to: Run an Operation in the Background</span></span>](../../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)  
+ <span data-ttu-id="5f1cd-118">Описание способов выполнения длительной операции с <xref:System.ComponentModel.BackgroundWorker> компонента.</span><span class="sxs-lookup"><span data-stu-id="5f1cd-118">Shows how to perform a time-consuming operation with the <xref:System.ComponentModel.BackgroundWorker> component.</span></span>  
   
- [<span data-ttu-id="74fc1-119">Общие сведения о компоненте BackgroundWorker</span><span class="sxs-lookup"><span data-stu-id="74fc1-119">BackgroundWorker Component Overview</span></span>](../../../../docs/framework/winforms/controls/backgroundworker-component-overview.md)  
- <span data-ttu-id="74fc1-120">Разделы, описывающие способы использования <xref:System.ComponentModel.BackgroundWorker> компонента для асинхронных операций.</span><span class="sxs-lookup"><span data-stu-id="74fc1-120">Provides topics that describe how to use the <xref:System.ComponentModel.BackgroundWorker> component for asynchronous operations.</span></span>
+ [<span data-ttu-id="5f1cd-119">Общие сведения о компоненте BackgroundWorker</span><span class="sxs-lookup"><span data-stu-id="5f1cd-119">BackgroundWorker Component Overview</span></span>](../../../../docs/framework/winforms/controls/backgroundworker-component-overview.md)  
+ <span data-ttu-id="5f1cd-120">Разделы, описывающие способы использования <xref:System.ComponentModel.BackgroundWorker> компонента для асинхронных операций.</span><span class="sxs-lookup"><span data-stu-id="5f1cd-120">Provides topics that describe how to use the <xref:System.ComponentModel.BackgroundWorker> component for asynchronous operations.</span></span>

@@ -1,14 +1,6 @@
 ---
-title: "Практическое руководство. Приостановка выполнения службы Windows (Visual Basic)"
-ms.custom: 
+title: Практическое руководство. Приостановка выполнения службы Windows (Visual Basic)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - vb
 f1_keywords:
@@ -17,50 +9,46 @@ helpviewer_keywords:
 - Windows Service applications, pausing
 - pausing Windows Service applications
 ms.assetid: eddb9409-942b-46b6-a2ce-fbd4c65f2790
-caps.latest.revision: 
 author: ghogen
-ms.author: ghogen
 manager: douge
-ms.workload:
-- dotnet
-ms.openlocfilehash: 90f2b01fae057a05cc71f77cecea3fdf85c832b2
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 43a852f1b618582c5aa65636e0a529434f8fd6a1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="how-to-pause-a-windows-service-visual-basic"></a><span data-ttu-id="e3375-102">Практическое руководство. Приостановка выполнения службы Windows (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e3375-102">How to: Pause a Windows Service (Visual Basic)</span></span>
-<span data-ttu-id="e3375-103">В этом примере используется <xref:System.ServiceProcess.ServiceController> компонента, чтобы приостановить службу IIS Admin на локальном компьютере.</span><span class="sxs-lookup"><span data-stu-id="e3375-103">This example uses the <xref:System.ServiceProcess.ServiceController> component to pause the IIS Admin service on the local computer.</span></span>  
+# <a name="how-to-pause-a-windows-service-visual-basic"></a><span data-ttu-id="574b2-102">Практическое руководство. Приостановка выполнения службы Windows (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="574b2-102">How to: Pause a Windows Service (Visual Basic)</span></span>
+<span data-ttu-id="574b2-103">В этом примере используется <xref:System.ServiceProcess.ServiceController> компонента, чтобы приостановить службу IIS Admin на локальном компьютере.</span><span class="sxs-lookup"><span data-stu-id="574b2-103">This example uses the <xref:System.ServiceProcess.ServiceController> component to pause the IIS Admin service on the local computer.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="e3375-104">Пример</span><span class="sxs-lookup"><span data-stu-id="e3375-104">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="574b2-104">Пример</span><span class="sxs-lookup"><span data-stu-id="574b2-104">Example</span></span>  
  [!code-vb[VbRadconService#11](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.vb#11)]  
 [!code-vb[VbRadconService#12](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.vb#12)]  
   
- <span data-ttu-id="e3375-105">Этот пример кода также доступен в качестве фрагмента кода IntelliSense.</span><span class="sxs-lookup"><span data-stu-id="e3375-105">This code example is also available as an IntelliSense code snippet.</span></span> <span data-ttu-id="e3375-106">В средстве выбора фрагмента кода он находится в **операционная система Windows > службы Windows**.</span><span class="sxs-lookup"><span data-stu-id="e3375-106">In the code snippet picker, it is located in **Windows Operating System > Windows Services**.</span></span> <span data-ttu-id="e3375-107">Дополнительные сведения см. в статье [Фрагменты кода](/visualstudio/ide/code-snippets).</span><span class="sxs-lookup"><span data-stu-id="e3375-107">For more information, see [Code Snippets](/visualstudio/ide/code-snippets).</span></span>  
+ <span data-ttu-id="574b2-105">Этот пример кода также доступен в качестве фрагмента кода IntelliSense.</span><span class="sxs-lookup"><span data-stu-id="574b2-105">This code example is also available as an IntelliSense code snippet.</span></span> <span data-ttu-id="574b2-106">В средстве выбора фрагмента кода он находится в **операционная система Windows > службы Windows**.</span><span class="sxs-lookup"><span data-stu-id="574b2-106">In the code snippet picker, it is located in **Windows Operating System > Windows Services**.</span></span> <span data-ttu-id="574b2-107">Дополнительные сведения см. в статье [Фрагменты кода](/visualstudio/ide/code-snippets).</span><span class="sxs-lookup"><span data-stu-id="574b2-107">For more information, see [Code Snippets](/visualstudio/ide/code-snippets).</span></span>  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="e3375-108">Компиляция кода</span><span class="sxs-lookup"><span data-stu-id="e3375-108">Compiling the Code</span></span>  
- <span data-ttu-id="e3375-109">Для этого примера требуются:</span><span class="sxs-lookup"><span data-stu-id="e3375-109">This example requires:</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="574b2-108">Компиляция кода</span><span class="sxs-lookup"><span data-stu-id="574b2-108">Compiling the Code</span></span>  
+ <span data-ttu-id="574b2-109">Для этого примера требуются:</span><span class="sxs-lookup"><span data-stu-id="574b2-109">This example requires:</span></span>  
   
--   <span data-ttu-id="e3375-110">Ссылка проекта System.serviceprocess.dll.</span><span class="sxs-lookup"><span data-stu-id="e3375-110">A project reference to System.serviceprocess.dll.</span></span>  
+-   <span data-ttu-id="574b2-110">Ссылка проекта System.serviceprocess.dll.</span><span class="sxs-lookup"><span data-stu-id="574b2-110">A project reference to System.serviceprocess.dll.</span></span>  
   
--   <span data-ttu-id="e3375-111">Доступ к членам пространства имен <xref:System.ServiceProcess>.</span><span class="sxs-lookup"><span data-stu-id="e3375-111">Access to the members of the <xref:System.ServiceProcess> namespace.</span></span> <span data-ttu-id="e3375-112">Добавьте оператор `Imports`, если в коде не используются полные имена членов.</span><span class="sxs-lookup"><span data-stu-id="e3375-112">Add an `Imports` statement if you are not fully qualifying member names in your code.</span></span> <span data-ttu-id="e3375-113">Дополнительные сведения см. в статье [Оператор Imports (пространство имен .NET и тип)](~/docs/visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md).</span><span class="sxs-lookup"><span data-stu-id="e3375-113">For more information, see [Imports Statement (.NET Namespace and Type)](~/docs/visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md).</span></span>  
+-   <span data-ttu-id="574b2-111">Доступ к членам пространства имен <xref:System.ServiceProcess>.</span><span class="sxs-lookup"><span data-stu-id="574b2-111">Access to the members of the <xref:System.ServiceProcess> namespace.</span></span> <span data-ttu-id="574b2-112">Добавьте оператор `Imports`, если в коде не используются полные имена членов.</span><span class="sxs-lookup"><span data-stu-id="574b2-112">Add an `Imports` statement if you are not fully qualifying member names in your code.</span></span> <span data-ttu-id="574b2-113">Дополнительные сведения см. в статье [Оператор Imports (пространство имен .NET и тип)](~/docs/visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md).</span><span class="sxs-lookup"><span data-stu-id="574b2-113">For more information, see [Imports Statement (.NET Namespace and Type)](~/docs/visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md).</span></span>  
   
-## <a name="robust-programming"></a><span data-ttu-id="e3375-114">Отказоустойчивость</span><span class="sxs-lookup"><span data-stu-id="e3375-114">Robust Programming</span></span>  
- <span data-ttu-id="e3375-115"><xref:System.ServiceProcess.ServiceController.MachineName%2A> Свойство <xref:System.ServiceProcess.ServiceController> класса — локальный компьютер по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="e3375-115">The <xref:System.ServiceProcess.ServiceController.MachineName%2A> property of the <xref:System.ServiceProcess.ServiceController> class is the local computer by default.</span></span> <span data-ttu-id="e3375-116">Чтобы обратиться к службам Windows на другом компьютере, измените <xref:System.ServiceProcess.ServiceController.MachineName%2A> на имя этого компьютера.</span><span class="sxs-lookup"><span data-stu-id="e3375-116">To reference Windows services on another computer, change the <xref:System.ServiceProcess.ServiceController.MachineName%2A> property to the name of that computer.</span></span>  
+## <a name="robust-programming"></a><span data-ttu-id="574b2-114">Отказоустойчивость</span><span class="sxs-lookup"><span data-stu-id="574b2-114">Robust Programming</span></span>  
+ <span data-ttu-id="574b2-115"><xref:System.ServiceProcess.ServiceController.MachineName%2A> Свойство <xref:System.ServiceProcess.ServiceController> класса — локальный компьютер по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="574b2-115">The <xref:System.ServiceProcess.ServiceController.MachineName%2A> property of the <xref:System.ServiceProcess.ServiceController> class is the local computer by default.</span></span> <span data-ttu-id="574b2-116">Чтобы обратиться к службам Windows на другом компьютере, измените <xref:System.ServiceProcess.ServiceController.MachineName%2A> на имя этого компьютера.</span><span class="sxs-lookup"><span data-stu-id="574b2-116">To reference Windows services on another computer, change the <xref:System.ServiceProcess.ServiceController.MachineName%2A> property to the name of that computer.</span></span>  
   
- <span data-ttu-id="e3375-117">При следующих условиях возможно возникновение исключения:</span><span class="sxs-lookup"><span data-stu-id="e3375-117">The following conditions may cause an exception:</span></span>  
+ <span data-ttu-id="574b2-117">При следующих условиях возможно возникновение исключения:</span><span class="sxs-lookup"><span data-stu-id="574b2-117">The following conditions may cause an exception:</span></span>  
   
--   <span data-ttu-id="e3375-118">Служба не может быть приостановлена.</span><span class="sxs-lookup"><span data-stu-id="e3375-118">The service cannot be paused.</span></span> <span data-ttu-id="e3375-119">(<xref:System.InvalidOperationException>)</span><span class="sxs-lookup"><span data-stu-id="e3375-119">(<xref:System.InvalidOperationException>)</span></span>  
+-   <span data-ttu-id="574b2-118">Служба не может быть приостановлена.</span><span class="sxs-lookup"><span data-stu-id="574b2-118">The service cannot be paused.</span></span> <span data-ttu-id="574b2-119">(<xref:System.InvalidOperationException>)</span><span class="sxs-lookup"><span data-stu-id="574b2-119">(<xref:System.InvalidOperationException>)</span></span>  
   
--   <span data-ttu-id="e3375-120">Произошла ошибка при обращении к API-интерфейсу системы.</span><span class="sxs-lookup"><span data-stu-id="e3375-120">An error occurred when accessing a system API.</span></span> <span data-ttu-id="e3375-121">(<xref:System.ComponentModel.Win32Exception>)</span><span class="sxs-lookup"><span data-stu-id="e3375-121">(<xref:System.ComponentModel.Win32Exception>)</span></span>  
+-   <span data-ttu-id="574b2-120">Произошла ошибка при обращении к API-интерфейсу системы.</span><span class="sxs-lookup"><span data-stu-id="574b2-120">An error occurred when accessing a system API.</span></span> <span data-ttu-id="574b2-121">(<xref:System.ComponentModel.Win32Exception>)</span><span class="sxs-lookup"><span data-stu-id="574b2-121">(<xref:System.ComponentModel.Win32Exception>)</span></span>  
   
-## <a name="net-framework-security"></a><span data-ttu-id="e3375-122">Безопасность платформы .NET Framework</span><span class="sxs-lookup"><span data-stu-id="e3375-122">.NET Framework Security</span></span>  
- <span data-ttu-id="e3375-123">Управление службами на компьютере может быть ограничен с помощью <xref:System.ServiceProcess.ServiceControllerPermissionAccess> для задания разрешений в <xref:System.ServiceProcess.ServiceControllerPermission>.</span><span class="sxs-lookup"><span data-stu-id="e3375-123">Control of services on the computer may be restricted by using the <xref:System.ServiceProcess.ServiceControllerPermissionAccess> to set permissions in the <xref:System.ServiceProcess.ServiceControllerPermission>.</span></span>  
+## <a name="net-framework-security"></a><span data-ttu-id="574b2-122">Безопасность платформы .NET Framework</span><span class="sxs-lookup"><span data-stu-id="574b2-122">.NET Framework Security</span></span>  
+ <span data-ttu-id="574b2-123">Управление службами на компьютере может быть ограничен с помощью <xref:System.ServiceProcess.ServiceControllerPermissionAccess> для задания разрешений в <xref:System.ServiceProcess.ServiceControllerPermission>.</span><span class="sxs-lookup"><span data-stu-id="574b2-123">Control of services on the computer may be restricted by using the <xref:System.ServiceProcess.ServiceControllerPermissionAccess> to set permissions in the <xref:System.ServiceProcess.ServiceControllerPermission>.</span></span>  
   
- <span data-ttu-id="e3375-124">Доступ к сведениям служб может быть ограничен с помощью <xref:System.Security.Permissions.PermissionState> для задания разрешений в <xref:System.Security.Permissions.SecurityPermission>.</span><span class="sxs-lookup"><span data-stu-id="e3375-124">Access to service information may be restricted by using the <xref:System.Security.Permissions.PermissionState> to set permissions in the <xref:System.Security.Permissions.SecurityPermission>.</span></span>  
+ <span data-ttu-id="574b2-124">Доступ к сведениям служб может быть ограничен с помощью <xref:System.Security.Permissions.PermissionState> для задания разрешений в <xref:System.Security.Permissions.SecurityPermission>.</span><span class="sxs-lookup"><span data-stu-id="574b2-124">Access to service information may be restricted by using the <xref:System.Security.Permissions.PermissionState> to set permissions in the <xref:System.Security.Permissions.SecurityPermission>.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="e3375-125">См. также</span><span class="sxs-lookup"><span data-stu-id="e3375-125">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="574b2-125">См. также</span><span class="sxs-lookup"><span data-stu-id="574b2-125">See Also</span></span>  
  <xref:System.ServiceProcess.ServiceController>  
  <xref:System.ServiceProcess.ServiceControllerStatus>  
  <xref:System.ServiceProcess.ServiceController.WaitForStatus%2A>  
- [<span data-ttu-id="e3375-126">Практическое руководство. Возобновление выполнения службы Windows (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e3375-126">How to: Continue a Windows Service (Visual Basic)</span></span>](../../../docs/framework/windows-services/how-to-continue-a-windows-service-visual-basic.md)
+ [<span data-ttu-id="574b2-126">Практическое руководство. Возобновление выполнения службы Windows (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="574b2-126">How to: Continue a Windows Service (Visual Basic)</span></span>](../../../docs/framework/windows-services/how-to-continue-a-windows-service-visual-basic.md)
