@@ -1,39 +1,27 @@
 ---
-title: "Практическое руководство. Задание значения свойства HandoffBehavior для анимаций раскадровки"
-ms.custom: 
+title: Практическое руководство. Задание значения свойства HandoffBehavior для анимаций раскадровки
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Storyboards [WPF], handoff behavior between animations
 - animation [WPF], handoff behavior between
 ms.assetid: 97bd6842-929b-49d9-813e-46553ae46472
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 9d11c559679b67c22eeed87893bf2e362084034c
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: c4728dc1cb4eeeff55e533b8d91e4512d9cc1d94
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="how-to-specify-handoffbehavior-between-storyboard-animations"></a><span data-ttu-id="1c86f-102">Практическое руководство. Задание значения свойства HandoffBehavior для анимаций раскадровки</span><span class="sxs-lookup"><span data-stu-id="1c86f-102">How to: Specify HandoffBehavior Between Storyboard Animations</span></span>
-<span data-ttu-id="1c86f-103">В этом примере показано, как указать поведение перемещения между анимациями раскадровки.</span><span class="sxs-lookup"><span data-stu-id="1c86f-103">This example shows how to specify handoff behavior between storyboard animations.</span></span> <span data-ttu-id="1c86f-104"><xref:System.Windows.Media.Animation.BeginStoryboard.HandoffBehavior%2A> Свойство <xref:System.Windows.Media.Animation.BeginStoryboard> указывает, как новая анимация взаимодействовать с любыми существующими анимациями, которые уже применены к свойству.</span><span class="sxs-lookup"><span data-stu-id="1c86f-104">The <xref:System.Windows.Media.Animation.BeginStoryboard.HandoffBehavior%2A> property of <xref:System.Windows.Media.Animation.BeginStoryboard> specifies how new animations interact with any existing ones that are already applied to a property.</span></span>  
+# <a name="how-to-specify-handoffbehavior-between-storyboard-animations"></a><span data-ttu-id="63779-102">Практическое руководство. Задание значения свойства HandoffBehavior для анимаций раскадровки</span><span class="sxs-lookup"><span data-stu-id="63779-102">How to: Specify HandoffBehavior Between Storyboard Animations</span></span>
+<span data-ttu-id="63779-103">В этом примере показано, как указать поведение перемещения между анимациями раскадровки.</span><span class="sxs-lookup"><span data-stu-id="63779-103">This example shows how to specify handoff behavior between storyboard animations.</span></span> <span data-ttu-id="63779-104"><xref:System.Windows.Media.Animation.BeginStoryboard.HandoffBehavior%2A> Свойство <xref:System.Windows.Media.Animation.BeginStoryboard> указывает, как новая анимация взаимодействовать с любыми существующими анимациями, которые уже применены к свойству.</span><span class="sxs-lookup"><span data-stu-id="63779-104">The <xref:System.Windows.Media.Animation.BeginStoryboard.HandoffBehavior%2A> property of <xref:System.Windows.Media.Animation.BeginStoryboard> specifies how new animations interact with any existing ones that are already applied to a property.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="1c86f-105">Пример</span><span class="sxs-lookup"><span data-stu-id="1c86f-105">Example</span></span>  
- <span data-ttu-id="1c86f-106">В следующем примере создается две кнопки, увеличивающиеся при перемещении курсора мыши над ними и уменьшаются при перемещении курсора немедленно.</span><span class="sxs-lookup"><span data-stu-id="1c86f-106">The following example creates two buttons that enlarge when the mouse cursor moves over them and become smaller when the cursor moves away.</span></span> <span data-ttu-id="1c86f-107">Если указатель мыши находится над кнопки и быстро удалить курсор, вторая анимация будут применены до завершения первой.</span><span class="sxs-lookup"><span data-stu-id="1c86f-107">If you mouse over a button and then quickly remove the cursor, the second animation will be applied before the first one is finished.</span></span> <span data-ttu-id="1c86f-108">При перекрытии двух объектов анимации следующим образом, можно увидеть разницу между <xref:System.Windows.Media.Animation.BeginStoryboard.HandoffBehavior%2A> значения <xref:System.Windows.Media.Animation.HandoffBehavior.Compose> и <xref:System.Windows.Media.Animation.HandoffBehavior.SnapshotAndReplace>.</span><span class="sxs-lookup"><span data-stu-id="1c86f-108">It is when two animations overlap like this that you can see the difference between the <xref:System.Windows.Media.Animation.BeginStoryboard.HandoffBehavior%2A> values of <xref:System.Windows.Media.Animation.HandoffBehavior.Compose> and <xref:System.Windows.Media.Animation.HandoffBehavior.SnapshotAndReplace>.</span></span> <span data-ttu-id="1c86f-109">Значение <xref:System.Windows.Media.Animation.HandoffBehavior.Compose> объединяет перекрывающиеся анимации, вызывая плавный переход между анимации при значение <xref:System.Windows.Media.Animation.HandoffBehavior.SnapshotAndReplace> вызывает новой анимацией немедленно заменить ранее перекрывающиеся анимации.</span><span class="sxs-lookup"><span data-stu-id="1c86f-109">A value of <xref:System.Windows.Media.Animation.HandoffBehavior.Compose> combines the overlapping animations causing a smoother transition between animations while a value of <xref:System.Windows.Media.Animation.HandoffBehavior.SnapshotAndReplace> causes the new animation to immediately replace the earlier overlapping animation.</span></span>  
+## <a name="example"></a><span data-ttu-id="63779-105">Пример</span><span class="sxs-lookup"><span data-stu-id="63779-105">Example</span></span>  
+ <span data-ttu-id="63779-106">В следующем примере создается две кнопки, увеличивающиеся при перемещении курсора мыши над ними и уменьшаются при перемещении курсора немедленно.</span><span class="sxs-lookup"><span data-stu-id="63779-106">The following example creates two buttons that enlarge when the mouse cursor moves over them and become smaller when the cursor moves away.</span></span> <span data-ttu-id="63779-107">Если указатель мыши находится над кнопки и быстро удалить курсор, вторая анимация будут применены до завершения первой.</span><span class="sxs-lookup"><span data-stu-id="63779-107">If you mouse over a button and then quickly remove the cursor, the second animation will be applied before the first one is finished.</span></span> <span data-ttu-id="63779-108">При перекрытии двух объектов анимации следующим образом, можно увидеть разницу между <xref:System.Windows.Media.Animation.BeginStoryboard.HandoffBehavior%2A> значения <xref:System.Windows.Media.Animation.HandoffBehavior.Compose> и <xref:System.Windows.Media.Animation.HandoffBehavior.SnapshotAndReplace>.</span><span class="sxs-lookup"><span data-stu-id="63779-108">It is when two animations overlap like this that you can see the difference between the <xref:System.Windows.Media.Animation.BeginStoryboard.HandoffBehavior%2A> values of <xref:System.Windows.Media.Animation.HandoffBehavior.Compose> and <xref:System.Windows.Media.Animation.HandoffBehavior.SnapshotAndReplace>.</span></span> <span data-ttu-id="63779-109">Значение <xref:System.Windows.Media.Animation.HandoffBehavior.Compose> объединяет перекрывающиеся анимации, вызывая плавный переход между анимации при значение <xref:System.Windows.Media.Animation.HandoffBehavior.SnapshotAndReplace> вызывает новой анимацией немедленно заменить ранее перекрывающиеся анимации.</span><span class="sxs-lookup"><span data-stu-id="63779-109">A value of <xref:System.Windows.Media.Animation.HandoffBehavior.Compose> combines the overlapping animations causing a smoother transition between animations while a value of <xref:System.Windows.Media.Animation.HandoffBehavior.SnapshotAndReplace> causes the new animation to immediately replace the earlier overlapping animation.</span></span>  
   
  [!code-xaml[timingbehaviors_snip#HandoffBehaviorWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_snip/CSharp/HandoffBehaviorExample.xaml#handoffbehaviorwholepage)]  
   
-## <a name="see-also"></a><span data-ttu-id="1c86f-110">См. также</span><span class="sxs-lookup"><span data-stu-id="1c86f-110">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="63779-110">См. также</span><span class="sxs-lookup"><span data-stu-id="63779-110">See Also</span></span>  
  <xref:System.Windows.Media.Animation.BeginStoryboard>  
  <xref:System.Windows.Media.Animation.BeginStoryboard.HandoffBehavior%2A>  
- [<span data-ttu-id="1c86f-111">Общие сведения об эффектах анимации</span><span class="sxs-lookup"><span data-stu-id="1c86f-111">Animation Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
- [<span data-ttu-id="1c86f-112">Анимация и расчет времени</span><span class="sxs-lookup"><span data-stu-id="1c86f-112">Animation and Timing</span></span>](http://msdn.microsoft.com/library/7d83765b-d5ae-41b1-b423-80206e1124aa)  
- [<span data-ttu-id="1c86f-113">Разделы практического руководства</span><span class="sxs-lookup"><span data-stu-id="1c86f-113">How-to Topics</span></span>](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-how-to-topics.md)
+ [<span data-ttu-id="63779-111">Общие сведения об эффектах анимации</span><span class="sxs-lookup"><span data-stu-id="63779-111">Animation Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
+ [<span data-ttu-id="63779-112">Анимация и расчет времени</span><span class="sxs-lookup"><span data-stu-id="63779-112">Animation and Timing</span></span>](http://msdn.microsoft.com/library/7d83765b-d5ae-41b1-b423-80206e1124aa)  
+ [<span data-ttu-id="63779-113">Разделы практического руководства</span><span class="sxs-lookup"><span data-stu-id="63779-113">How-to Topics</span></span>](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-how-to-topics.md)

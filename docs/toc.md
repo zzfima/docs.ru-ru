@@ -1109,4 +1109,15 @@
 
 <!-- End of VB Content -->
 
+<!-- ML.NET Content -->
+# [Руководство по ML.NET](machine-learning/index.md)
+## [Учебники](machine-learning/tutorials/index.md)
+### [Анализ тональности (классификация)](machine-learning/tutorials/sentiment-analysis.md)
+### [Прогнозирование тарифа такси (регрессия)](machine-learning/tutorials/taxi-fare.md)
+## [Ресурсы](machine-learning/resources/index.md)
+### [Глоссарий по машинному обучению](machine-learning/resources/glossary.md)
+### [Основы машинного обучения](machine-learning/resources/basics.md)
+
+<!-- End ML.NET Content -->
+
 # [Примеры и учебники](samples-and-tutorials/index.md)

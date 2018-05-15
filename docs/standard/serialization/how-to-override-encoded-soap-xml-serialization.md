@@ -1,54 +1,41 @@
 ---
-title: "Практическое руководство. Переопределение сериализации XML с кодировкой SOAP"
-ms.custom: 
+title: Практическое руководство. Переопределение сериализации XML с кодировкой SOAP
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - overriding XML serialization
 - SOAP, overriding encoded XML serialization
 ms.assetid: d0791df8-04e3-46b4-a6be-fe0ed09267e8
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 759da973662e407313dbfd1d1d8ffb18881d154c
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 1ce2259c482c0e8441b35b41e2303fba5d547416
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="how-to-override-encoded-soap-xml-serialization"></a><span data-ttu-id="d632b-102">Практическое руководство. Переопределение сериализации XML с кодировкой SOAP</span><span class="sxs-lookup"><span data-stu-id="d632b-102">How to: Override Encoded SOAP XML Serialization</span></span>
-[<span data-ttu-id="d632b-103">Пример кода</span><span class="sxs-lookup"><span data-stu-id="d632b-103">Code Example</span></span>](#tskhowtooverrideencodedsoapxmlserializationanchor1)  
+# <a name="how-to-override-encoded-soap-xml-serialization"></a><span data-ttu-id="ca541-102">Практическое руководство. Переопределение сериализации XML с кодировкой SOAP</span><span class="sxs-lookup"><span data-stu-id="ca541-102">How to: Override Encoded SOAP XML Serialization</span></span>
+[<span data-ttu-id="ca541-103">Пример кода</span><span class="sxs-lookup"><span data-stu-id="ca541-103">Code Example</span></span>](#tskhowtooverrideencodedsoapxmlserializationanchor1)  
   
- <span data-ttu-id="d632b-104">Процесс переопределения сериализации XML объектов как сообщений SOAP аналогичен процессу переопределения стандартной сериализации XML.</span><span class="sxs-lookup"><span data-stu-id="d632b-104">The process for overriding XML serialization of objects as SOAP messages is similar to the process for overriding standard XML serialization.</span></span> <span data-ttu-id="d632b-105">Сведения о том, как переопределить стандартную сериализацию XML, см. в разделе [Практическое руководство. Указание имени альтернативного элемента для потока XML](../../../docs/standard/serialization/how-to-specify-an-alternate-element-name-for-an-xml-stream.md).</span><span class="sxs-lookup"><span data-stu-id="d632b-105">For information about overriding standard XML serialization, see [How to: Specify an Alternate Element Name for an XML Stream](../../../docs/standard/serialization/how-to-specify-an-alternate-element-name-for-an-xml-stream.md).</span></span>  
+ <span data-ttu-id="ca541-104">Процесс переопределения сериализации XML объектов как сообщений SOAP аналогичен процессу переопределения стандартной сериализации XML.</span><span class="sxs-lookup"><span data-stu-id="ca541-104">The process for overriding XML serialization of objects as SOAP messages is similar to the process for overriding standard XML serialization.</span></span> <span data-ttu-id="ca541-105">Сведения о том, как переопределить стандартную сериализацию XML, см. в разделе [Практическое руководство. Указание имени альтернативного элемента для потока XML](../../../docs/standard/serialization/how-to-specify-an-alternate-element-name-for-an-xml-stream.md).</span><span class="sxs-lookup"><span data-stu-id="ca541-105">For information about overriding standard XML serialization, see [How to: Specify an Alternate Element Name for an XML Stream](../../../docs/standard/serialization/how-to-specify-an-alternate-element-name-for-an-xml-stream.md).</span></span>  
   
-### <a name="to-override-serialization-of-objects-as-soap-messages"></a><span data-ttu-id="d632b-106">Переопределение сериализации объектов как сообщений SOAP</span><span class="sxs-lookup"><span data-stu-id="d632b-106">To override serialization of objects as SOAP messages</span></span>  
+### <a name="to-override-serialization-of-objects-as-soap-messages"></a><span data-ttu-id="ca541-106">Переопределение сериализации объектов как сообщений SOAP</span><span class="sxs-lookup"><span data-stu-id="ca541-106">To override serialization of objects as SOAP messages</span></span>  
   
-1.  <span data-ttu-id="d632b-107">Создайте экземпляр класса <xref:System.Xml.Serialization.SoapAttributeOverrides>.</span><span class="sxs-lookup"><span data-stu-id="d632b-107">Create an instance of the <xref:System.Xml.Serialization.SoapAttributeOverrides> class.</span></span>  
+1.  <span data-ttu-id="ca541-107">Создайте экземпляр класса <xref:System.Xml.Serialization.SoapAttributeOverrides>.</span><span class="sxs-lookup"><span data-stu-id="ca541-107">Create an instance of the <xref:System.Xml.Serialization.SoapAttributeOverrides> class.</span></span>  
   
-2.  <span data-ttu-id="d632b-108">Создайте `SoapAttributes` для каждого сериализуемого члена класса.</span><span class="sxs-lookup"><span data-stu-id="d632b-108">Create a `SoapAttributes` for each class member that is being serialized.</span></span>  
+2.  <span data-ttu-id="ca541-108">Создайте `SoapAttributes` для каждого сериализуемого члена класса.</span><span class="sxs-lookup"><span data-stu-id="ca541-108">Create a `SoapAttributes` for each class member that is being serialized.</span></span>  
   
-3.  <span data-ttu-id="d632b-109">Создайте экземпляр одного или нескольких атрибутов, влияющих на XML-сериализацию соответствующим образом, для сериализуемого члена.</span><span class="sxs-lookup"><span data-stu-id="d632b-109">Create an instance of one or more of the attributes that affect XML serialization, as appropriate, to the member being serialized.</span></span> <span data-ttu-id="d632b-110">Дополнительные сведения см. в разделе "Атрибуты управления сериализацией с кодировкой SOAP".</span><span class="sxs-lookup"><span data-stu-id="d632b-110">For more information, see "Attributes That Control Encoded SOAP Serialization".</span></span>  
+3.  <span data-ttu-id="ca541-109">Создайте экземпляр одного или нескольких атрибутов, влияющих на XML-сериализацию соответствующим образом, для сериализуемого члена.</span><span class="sxs-lookup"><span data-stu-id="ca541-109">Create an instance of one or more of the attributes that affect XML serialization, as appropriate, to the member being serialized.</span></span> <span data-ttu-id="ca541-110">Дополнительные сведения см. в разделе "Атрибуты управления сериализацией с кодировкой SOAP".</span><span class="sxs-lookup"><span data-stu-id="ca541-110">For more information, see "Attributes That Control Encoded SOAP Serialization".</span></span>  
   
-4.  <span data-ttu-id="d632b-111">Задайте соответствующее свойство `SoapAttributes` для атрибута, созданного на шаге 3.</span><span class="sxs-lookup"><span data-stu-id="d632b-111">Set the appropriate property of `SoapAttributes` to the attribute created in step 3.</span></span>  
+4.  <span data-ttu-id="ca541-111">Задайте соответствующее свойство `SoapAttributes` для атрибута, созданного на шаге 3.</span><span class="sxs-lookup"><span data-stu-id="ca541-111">Set the appropriate property of `SoapAttributes` to the attribute created in step 3.</span></span>  
   
-5.  <span data-ttu-id="d632b-112">Добавьте `SoapAttributes` в `SoapAttributeOverrides`.</span><span class="sxs-lookup"><span data-stu-id="d632b-112">Add `SoapAttributes` to `SoapAttributeOverrides`.</span></span>  
+5.  <span data-ttu-id="ca541-112">Добавьте `SoapAttributes` в `SoapAttributeOverrides`.</span><span class="sxs-lookup"><span data-stu-id="ca541-112">Add `SoapAttributes` to `SoapAttributeOverrides`.</span></span>  
   
-6.  <span data-ttu-id="d632b-113">Создайте `XmlTypeMapping` с использованием `SoapAttributeOverrides`.</span><span class="sxs-lookup"><span data-stu-id="d632b-113">Create an `XmlTypeMapping` using the `SoapAttributeOverrides`.</span></span> <span data-ttu-id="d632b-114">Воспользуйтесь методом `SoapReflectionImporter.ImportTypeMapping`.</span><span class="sxs-lookup"><span data-stu-id="d632b-114">Use the `SoapReflectionImporter.ImportTypeMapping` method.</span></span>  
+6.  <span data-ttu-id="ca541-113">Создайте `XmlTypeMapping` с использованием `SoapAttributeOverrides`.</span><span class="sxs-lookup"><span data-stu-id="ca541-113">Create an `XmlTypeMapping` using the `SoapAttributeOverrides`.</span></span> <span data-ttu-id="ca541-114">Воспользуйтесь методом `SoapReflectionImporter.ImportTypeMapping`.</span><span class="sxs-lookup"><span data-stu-id="ca541-114">Use the `SoapReflectionImporter.ImportTypeMapping` method.</span></span>  
   
-7.  <span data-ttu-id="d632b-115">Создайте `XmlSerializer` с использованием `XmlTypeMapping`.</span><span class="sxs-lookup"><span data-stu-id="d632b-115">Create an `XmlSerializer` using `XmlTypeMapping`.</span></span>  
+7.  <span data-ttu-id="ca541-115">Создайте `XmlSerializer` с использованием `XmlTypeMapping`.</span><span class="sxs-lookup"><span data-stu-id="ca541-115">Create an `XmlSerializer` using `XmlTypeMapping`.</span></span>  
   
-8.  <span data-ttu-id="d632b-116">Сериализуйте или десериализуйте объект.</span><span class="sxs-lookup"><span data-stu-id="d632b-116">Serialize or deserialize the object.</span></span>  
+8.  <span data-ttu-id="ca541-116">Сериализуйте или десериализуйте объект.</span><span class="sxs-lookup"><span data-stu-id="ca541-116">Serialize or deserialize the object.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="d632b-117">Пример</span><span class="sxs-lookup"><span data-stu-id="d632b-117">Example</span></span>  
- <span data-ttu-id="d632b-118">В следующем примере кода файл сериализуется двумя способами: сначала без переопределения поведения класса `XmlSerializer`, а затем с переопределением поведения.</span><span class="sxs-lookup"><span data-stu-id="d632b-118">The following code example serializes a file in two ways: first, without overriding the `XmlSerializer` class's behavior, and second, by overriding the behavior.</span></span> <span data-ttu-id="d632b-119">В примере содержится класс с именем `Group` с несколькими членами.</span><span class="sxs-lookup"><span data-stu-id="d632b-119">The example contains a class named `Group` with several members.</span></span> <span data-ttu-id="d632b-120">К членам классов применены различные атрибуты, например `SoapElementAttribute`.</span><span class="sxs-lookup"><span data-stu-id="d632b-120">Various attributes, such as the `SoapElementAttribute`, have been applied to class members.</span></span> <span data-ttu-id="d632b-121">Когда класс сериализуется методом `SerializeOriginal`, атрибуты управляют содержимым сообщения SOAP.</span><span class="sxs-lookup"><span data-stu-id="d632b-121">When the class is serialized with the `SerializeOriginal` method, the attributes control the SOAP message content.</span></span> <span data-ttu-id="d632b-122">При вызове метода `SerializeOverride` поведение `XmlSerializer` переопределяется путем создания различных атрибутов и настройкой свойств `SoapAttributes` для таких атрибутов соответствующим образом.</span><span class="sxs-lookup"><span data-stu-id="d632b-122">When the `SerializeOverride` method is called, the behavior of the `XmlSerializer` is overridden by creating various attributes and setting the properties of a `SoapAttributes` to those attributes (as appropriate).</span></span>  
+## <a name="example"></a><span data-ttu-id="ca541-117">Пример</span><span class="sxs-lookup"><span data-stu-id="ca541-117">Example</span></span>  
+ <span data-ttu-id="ca541-118">В следующем примере кода файл сериализуется двумя способами: сначала без переопределения поведения класса `XmlSerializer`, а затем с переопределением поведения.</span><span class="sxs-lookup"><span data-stu-id="ca541-118">The following code example serializes a file in two ways: first, without overriding the `XmlSerializer` class's behavior, and second, by overriding the behavior.</span></span> <span data-ttu-id="ca541-119">В примере содержится класс с именем `Group` с несколькими членами.</span><span class="sxs-lookup"><span data-stu-id="ca541-119">The example contains a class named `Group` with several members.</span></span> <span data-ttu-id="ca541-120">К членам классов применены различные атрибуты, например `SoapElementAttribute`.</span><span class="sxs-lookup"><span data-stu-id="ca541-120">Various attributes, such as the `SoapElementAttribute`, have been applied to class members.</span></span> <span data-ttu-id="ca541-121">Когда класс сериализуется методом `SerializeOriginal`, атрибуты управляют содержимым сообщения SOAP.</span><span class="sxs-lookup"><span data-stu-id="ca541-121">When the class is serialized with the `SerializeOriginal` method, the attributes control the SOAP message content.</span></span> <span data-ttu-id="ca541-122">При вызове метода `SerializeOverride` поведение `XmlSerializer` переопределяется путем создания различных атрибутов и настройкой свойств `SoapAttributes` для таких атрибутов соответствующим образом.</span><span class="sxs-lookup"><span data-stu-id="ca541-122">When the `SerializeOverride` method is called, the behavior of the `XmlSerializer` is overridden by creating various attributes and setting the properties of a `SoapAttributes` to those attributes (as appropriate).</span></span>  
   
 ```csharp  
 using System;  
@@ -290,10 +277,10 @@ public class Run
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="d632b-123">См. также</span><span class="sxs-lookup"><span data-stu-id="d632b-123">See Also</span></span>  
- [<span data-ttu-id="d632b-124">Сериализация XML и SOAP</span><span class="sxs-lookup"><span data-stu-id="d632b-124">XML and SOAP Serialization</span></span>](../../../docs/standard/serialization/xml-and-soap-serialization.md)  
- [<span data-ttu-id="d632b-125">Атрибуты управления сериализацией с кодировкой SOAP</span><span class="sxs-lookup"><span data-stu-id="d632b-125">Attributes That Control Encoded SOAP Serialization</span></span>](../../../docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md)  
- [<span data-ttu-id="d632b-126">Сериализация XML с использованием XML-веб-служб</span><span class="sxs-lookup"><span data-stu-id="d632b-126">XML Serialization with XML Web Services</span></span>](../../../docs/standard/serialization/xml-serialization-with-xml-web-services.md)  
- [<span data-ttu-id="d632b-127">Практическое руководство. Сериализация объекта</span><span class="sxs-lookup"><span data-stu-id="d632b-127">How to: Serialize an Object</span></span>](../../../docs/standard/serialization/how-to-serialize-an-object.md)  
- [<span data-ttu-id="d632b-128">Практическое руководство. Десериализация объекта</span><span class="sxs-lookup"><span data-stu-id="d632b-128">How to: Deserialize an Object</span></span>](../../../docs/standard/serialization/how-to-deserialize-an-object.md)  
- [<span data-ttu-id="d632b-129">Практическое руководство. Сериализация объекта как потока XML с кодировкой SOAP</span><span class="sxs-lookup"><span data-stu-id="d632b-129">How to: Serialize an Object as a SOAP-Encoded XML Stream</span></span>](../../../docs/standard/serialization/how-to-serialize-an-object-as-a-soap-encoded-xml-stream.md)
+## <a name="see-also"></a><span data-ttu-id="ca541-123">См. также</span><span class="sxs-lookup"><span data-stu-id="ca541-123">See Also</span></span>  
+ [<span data-ttu-id="ca541-124">Сериализация XML и SOAP</span><span class="sxs-lookup"><span data-stu-id="ca541-124">XML and SOAP Serialization</span></span>](../../../docs/standard/serialization/xml-and-soap-serialization.md)  
+ [<span data-ttu-id="ca541-125">Атрибуты управления сериализацией с кодировкой SOAP</span><span class="sxs-lookup"><span data-stu-id="ca541-125">Attributes That Control Encoded SOAP Serialization</span></span>](../../../docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md)  
+ [<span data-ttu-id="ca541-126">Сериализация XML с использованием XML-веб-служб</span><span class="sxs-lookup"><span data-stu-id="ca541-126">XML Serialization with XML Web Services</span></span>](../../../docs/standard/serialization/xml-serialization-with-xml-web-services.md)  
+ [<span data-ttu-id="ca541-127">Практическое руководство. Сериализация объекта</span><span class="sxs-lookup"><span data-stu-id="ca541-127">How to: Serialize an Object</span></span>](../../../docs/standard/serialization/how-to-serialize-an-object.md)  
+ [<span data-ttu-id="ca541-128">Практическое руководство. Десериализация объекта</span><span class="sxs-lookup"><span data-stu-id="ca541-128">How to: Deserialize an Object</span></span>](../../../docs/standard/serialization/how-to-deserialize-an-object.md)  
+ [<span data-ttu-id="ca541-129">Практическое руководство. Сериализация объекта как потока XML с кодировкой SOAP</span><span class="sxs-lookup"><span data-stu-id="ca541-129">How to: Serialize an Object as a SOAP-Encoded XML Stream</span></span>](../../../docs/standard/serialization/how-to-serialize-an-object-as-a-soap-encoded-xml-stream.md)

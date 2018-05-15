@@ -1,50 +1,38 @@
 ---
-title: "Практическое руководство. Создание кривой Безье третьего порядка"
-ms.custom: 
+title: Практическое руководство. Создание кривой Безье третьего порядка
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - curves [WPF], cubic Bezier
 - Bezier curves [WPF], cubic
 - graphics [WPF], cubic Bezier curves
 - cubic Bezier curves [WPF]
 ms.assetid: 450a3a77-7c57-48b0-a008-0f6051add980
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a9d4e033ef18cfd33635ba34409c4edca87a7e23
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6332129179e1934e5a37c7a1a40ef5f46ab669a9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="how-to-create-a-cubic-bezier-curve"></a><span data-ttu-id="553c0-102">Практическое руководство. Создание кривой Безье третьего порядка</span><span class="sxs-lookup"><span data-stu-id="553c0-102">How to: Create a Cubic Bezier Curve</span></span>
-<span data-ttu-id="553c0-103">В этом примере демонстрируется создание кривой Безье третьего порядка.</span><span class="sxs-lookup"><span data-stu-id="553c0-103">This example shows how to create a cubic Bezier curve.</span></span> <span data-ttu-id="553c0-104">Чтобы создать кривой Безье третьего порядка, используйте <xref:System.Windows.Media.PathGeometry>, <xref:System.Windows.Media.PathFigure>, и <xref:System.Windows.Media.BezierSegment> классы.</span><span class="sxs-lookup"><span data-stu-id="553c0-104">To create a cubic Bezier curve, use the <xref:System.Windows.Media.PathGeometry>, <xref:System.Windows.Media.PathFigure>, and <xref:System.Windows.Media.BezierSegment> classes.</span></span>  <span data-ttu-id="553c0-105">Чтобы отобразить результирующей геометрии, используйте <xref:System.Windows.Shapes.Path> элемент, или использовать его с <xref:System.Windows.Media.GeometryDrawing> или <xref:System.Windows.Media.DrawingContext>.</span><span class="sxs-lookup"><span data-stu-id="553c0-105">To display the resulting geometry, use a <xref:System.Windows.Shapes.Path> element, or use it with a <xref:System.Windows.Media.GeometryDrawing> or a <xref:System.Windows.Media.DrawingContext>.</span></span> <span data-ttu-id="553c0-106">В следующих примерах кривой Безье третьего порядка строится от (10, 100) для (300, 100).</span><span class="sxs-lookup"><span data-stu-id="553c0-106">In the following examples, a cubic Bezier curve is drawn from (10, 100) to (300, 100).</span></span> <span data-ttu-id="553c0-107">Кривая имеет контрольные точки (100, 0) и (200, 200).</span><span class="sxs-lookup"><span data-stu-id="553c0-107">The curve has control points of (100, 0) and (200, 200).</span></span>  
+# <a name="how-to-create-a-cubic-bezier-curve"></a><span data-ttu-id="df485-102">Практическое руководство. Создание кривой Безье третьего порядка</span><span class="sxs-lookup"><span data-stu-id="df485-102">How to: Create a Cubic Bezier Curve</span></span>
+<span data-ttu-id="df485-103">В этом примере демонстрируется создание кривой Безье третьего порядка.</span><span class="sxs-lookup"><span data-stu-id="df485-103">This example shows how to create a cubic Bezier curve.</span></span> <span data-ttu-id="df485-104">Чтобы создать кривой Безье третьего порядка, используйте <xref:System.Windows.Media.PathGeometry>, <xref:System.Windows.Media.PathFigure>, и <xref:System.Windows.Media.BezierSegment> классы.</span><span class="sxs-lookup"><span data-stu-id="df485-104">To create a cubic Bezier curve, use the <xref:System.Windows.Media.PathGeometry>, <xref:System.Windows.Media.PathFigure>, and <xref:System.Windows.Media.BezierSegment> classes.</span></span>  <span data-ttu-id="df485-105">Чтобы отобразить результирующей геометрии, используйте <xref:System.Windows.Shapes.Path> элемент, или использовать его с <xref:System.Windows.Media.GeometryDrawing> или <xref:System.Windows.Media.DrawingContext>.</span><span class="sxs-lookup"><span data-stu-id="df485-105">To display the resulting geometry, use a <xref:System.Windows.Shapes.Path> element, or use it with a <xref:System.Windows.Media.GeometryDrawing> or a <xref:System.Windows.Media.DrawingContext>.</span></span> <span data-ttu-id="df485-106">В следующих примерах кривой Безье третьего порядка строится от (10, 100) для (300, 100).</span><span class="sxs-lookup"><span data-stu-id="df485-106">In the following examples, a cubic Bezier curve is drawn from (10, 100) to (300, 100).</span></span> <span data-ttu-id="df485-107">Кривая имеет контрольные точки (100, 0) и (200, 200).</span><span class="sxs-lookup"><span data-stu-id="df485-107">The curve has control points of (100, 0) and (200, 200).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="553c0-108">Пример</span><span class="sxs-lookup"><span data-stu-id="553c0-108">Example</span></span>  
- <span data-ttu-id="553c0-109">[xaml]</span><span class="sxs-lookup"><span data-stu-id="553c0-109">[xaml]</span></span>  
+## <a name="example"></a><span data-ttu-id="df485-108">Пример</span><span class="sxs-lookup"><span data-stu-id="df485-108">Example</span></span>  
+ <span data-ttu-id="df485-109">[xaml]</span><span class="sxs-lookup"><span data-stu-id="df485-109">[xaml]</span></span>  
   
- <span data-ttu-id="553c0-110">В [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], может использовать сокращенный синтаксис разметки для описания пути.</span><span class="sxs-lookup"><span data-stu-id="553c0-110">In [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], you may use abbreviated markup syntax to describe a path.</span></span>  
+ <span data-ttu-id="df485-110">В [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], может использовать сокращенный синтаксис разметки для описания пути.</span><span class="sxs-lookup"><span data-stu-id="df485-110">In [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], you may use abbreviated markup syntax to describe a path.</span></span>  
   
  [!code-xaml[GeometrySample#53](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GeometrySample/CS/geometryattributesyntaxexample.xaml#53)]  
   
- <span data-ttu-id="553c0-111">[xaml]</span><span class="sxs-lookup"><span data-stu-id="553c0-111">[xaml]</span></span>  
+ <span data-ttu-id="df485-111">[xaml]</span><span class="sxs-lookup"><span data-stu-id="df485-111">[xaml]</span></span>  
   
- <span data-ttu-id="553c0-112">В [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], также можно нарисовать кривую Безье третьего порядка с помощью тегов объектов.</span><span class="sxs-lookup"><span data-stu-id="553c0-112">In [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], you can also draw a cubic Bezier curve using object tags.</span></span> <span data-ttu-id="553c0-113">Следующий пример эквивалентен предыдущему примеру [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].</span><span class="sxs-lookup"><span data-stu-id="553c0-113">The following is equivalent to the previous [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] example.</span></span>  
+ <span data-ttu-id="df485-112">В [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], также можно нарисовать кривую Безье третьего порядка с помощью тегов объектов.</span><span class="sxs-lookup"><span data-stu-id="df485-112">In [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], you can also draw a cubic Bezier curve using object tags.</span></span> <span data-ttu-id="df485-113">Следующий пример эквивалентен предыдущему примеру [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].</span><span class="sxs-lookup"><span data-stu-id="df485-113">The following is equivalent to the previous [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] example.</span></span>  
   
  [!code-xaml[GeometrySample#33](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GeometrySample/CS/pathgeometryexample.xaml#33)]  
   
- <span data-ttu-id="553c0-114">Этот пример является частью большего примера; полный пример см. в разделе [Пример геометрических объектов](http://go.microsoft.com/fwlink/?LinkID=159989).</span><span class="sxs-lookup"><span data-stu-id="553c0-114">This example is part of larger sample; for the complete sample, see the [Geometries Sample](http://go.microsoft.com/fwlink/?LinkID=159989).</span></span>  
+ <span data-ttu-id="df485-114">Этот пример является частью большего примера; полный пример см. в разделе [Пример геометрических объектов](http://go.microsoft.com/fwlink/?LinkID=159989).</span><span class="sxs-lookup"><span data-stu-id="df485-114">This example is part of larger sample; for the complete sample, see the [Geometries Sample](http://go.microsoft.com/fwlink/?LinkID=159989).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="553c0-115">См. также</span><span class="sxs-lookup"><span data-stu-id="553c0-115">See Also</span></span>  
- [<span data-ttu-id="553c0-116">Создание эллиптической дуги</span><span class="sxs-lookup"><span data-stu-id="553c0-116">Create an Elliptical Arc</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-an-elliptical-arc.md)  
- [<span data-ttu-id="553c0-117">Создание LineSegment в PathGeometry</span><span class="sxs-lookup"><span data-stu-id="553c0-117">Create a LineSegment in a PathGeometry</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-linesegment-in-a-pathgeometry.md)  
- [<span data-ttu-id="553c0-118">Создание кривой Безье третьего порядка</span><span class="sxs-lookup"><span data-stu-id="553c0-118">Create a Cubic Bezier Curve</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-cubic-bezier-curve.md)  
- [<span data-ttu-id="553c0-119">Создание кривой Безье второго порядка</span><span class="sxs-lookup"><span data-stu-id="553c0-119">Create a Quadratic Bezier Curve</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-quadratic-bezier-curve.md)
+## <a name="see-also"></a><span data-ttu-id="df485-115">См. также</span><span class="sxs-lookup"><span data-stu-id="df485-115">See Also</span></span>  
+ [<span data-ttu-id="df485-116">Создание эллиптической дуги</span><span class="sxs-lookup"><span data-stu-id="df485-116">Create an Elliptical Arc</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-an-elliptical-arc.md)  
+ [<span data-ttu-id="df485-117">Создание LineSegment в PathGeometry</span><span class="sxs-lookup"><span data-stu-id="df485-117">Create a LineSegment in a PathGeometry</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-linesegment-in-a-pathgeometry.md)  
+ [<span data-ttu-id="df485-118">Создание кривой Безье третьего порядка</span><span class="sxs-lookup"><span data-stu-id="df485-118">Create a Cubic Bezier Curve</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-cubic-bezier-curve.md)  
+ [<span data-ttu-id="df485-119">Создание кривой Безье второго порядка</span><span class="sxs-lookup"><span data-stu-id="df485-119">Create a Quadratic Bezier Curve</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-quadratic-bezier-curve.md)

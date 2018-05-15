@@ -1,44 +1,35 @@
 ---
-title: "&#39; &lt;classname&gt;&#39; не является CLS-совместимым, так как интерфейс &#39;&lt; Имя интерфейса&gt;&#39; он реализует, несовместим с CLS"
+title: '&#39;&lt;className&gt; &#39; не является CLS-совместимым, так как интерфейс &#39; &lt;interfacename&gt; &#39; он реализует, несовместим с CLS'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - bc40029
 - vbc40029
 helpviewer_keywords:
 - BC40029
 ms.assetid: 178452f3-5575-4da0-9d6c-53bcddb6a338
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: f1f0d1e1f54b6b667431ceae2e346a4118c5b1a8
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: 4dda0e16a94f43cdb3deeff16fabdd1b10b62526
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="39ltclassnamegt39-is-not-cls-compliant-because-the-interface-39ltinterfacenamegt39-it-implements-is-not-cls-compliant"></a><span data-ttu-id="c414d-102">&#39; &lt;classname&gt;&#39; не является CLS-совместимым, так как интерфейс &#39;&lt; Имя интерфейса&gt;&#39; он реализует, несовместим с CLS</span><span class="sxs-lookup"><span data-stu-id="c414d-102">&#39;&lt;classname&gt;&#39; is not CLS-compliant because the interface &#39;&lt;interfacename&gt;&#39; it implements is not CLS-compliant</span></span>
-<span data-ttu-id="c414d-103">Класс или интерфейс помечен как `<CLSCompliant(True)>` , если он наследует или реализует тип, помеченный как `<CLSCompliant(False)>` или не помеченный совсем.</span><span class="sxs-lookup"><span data-stu-id="c414d-103">A class or interface is marked as `<CLSCompliant(True)>` when it derives from or implements a type that is marked as `<CLSCompliant(False)>` or is not marked.</span></span>  
+# <a name="39ltclassnamegt39-is-not-cls-compliant-because-the-interface-39ltinterfacenamegt39-it-implements-is-not-cls-compliant"></a><span data-ttu-id="f8e4c-102">&#39;&lt;className&gt; &#39; не является CLS-совместимым, так как интерфейс &#39; &lt;interfacename&gt; &#39; он реализует, несовместим с CLS</span><span class="sxs-lookup"><span data-stu-id="f8e4c-102">&#39;&lt;classname&gt;&#39; is not CLS-compliant because the interface &#39;&lt;interfacename&gt;&#39; it implements is not CLS-compliant</span></span>
+<span data-ttu-id="f8e4c-103">Класс или интерфейс помечен как `<CLSCompliant(True)>` , если он наследует или реализует тип, помеченный как `<CLSCompliant(False)>` или не помеченный совсем.</span><span class="sxs-lookup"><span data-stu-id="f8e4c-103">A class or interface is marked as `<CLSCompliant(True)>` when it derives from or implements a type that is marked as `<CLSCompliant(False)>` or is not marked.</span></span>  
   
- <span data-ttu-id="c414d-104">Для класса или интерфейса стандарту [независимость от языка и независимые от языка компоненты](../../../standard/language-independence-and-language-independent-components.md) (CLS) вся его иерархия наследования должна быть совместимой.</span><span class="sxs-lookup"><span data-stu-id="c414d-104">For a class or interface to be compliant with the [Language Independence and Language-Independent Components](../../../standard/language-independence-and-language-independent-components.md) (CLS), its entire inheritance hierarchy must be compliant.</span></span> <span data-ttu-id="c414d-105">Это означает, что каждый тип, от которого он наследуется прямо или косвенно, должен быть совместимым.</span><span class="sxs-lookup"><span data-stu-id="c414d-105">That means every type from which it inherits, directly or indirectly, must be compliant.</span></span> <span data-ttu-id="c414d-106">Аналогично, если класс реализует один или несколько интерфейсов, то все они должны быть совместимыми по всей иерархии наследования.</span><span class="sxs-lookup"><span data-stu-id="c414d-106">Similarly, if a class implements one or more interfaces, they must all be compliant throughout their inheritance hierarchies.</span></span>  
+ <span data-ttu-id="f8e4c-104">Для класса или интерфейса стандарту [независимость от языка и независимые от языка компоненты](../../../standard/language-independence-and-language-independent-components.md) (CLS) вся его иерархия наследования должна быть совместимой.</span><span class="sxs-lookup"><span data-stu-id="f8e4c-104">For a class or interface to be compliant with the [Language Independence and Language-Independent Components](../../../standard/language-independence-and-language-independent-components.md) (CLS), its entire inheritance hierarchy must be compliant.</span></span> <span data-ttu-id="f8e4c-105">Это означает, что каждый тип, от которого он наследуется прямо или косвенно, должен быть совместимым.</span><span class="sxs-lookup"><span data-stu-id="f8e4c-105">That means every type from which it inherits, directly or indirectly, must be compliant.</span></span> <span data-ttu-id="f8e4c-106">Аналогично, если класс реализует один или несколько интерфейсов, то все они должны быть совместимыми по всей иерархии наследования.</span><span class="sxs-lookup"><span data-stu-id="f8e4c-106">Similarly, if a class implements one or more interfaces, they must all be compliant throughout their inheritance hierarchies.</span></span>  
   
- <span data-ttu-id="c414d-107">Когда вы применяете атрибут <xref:System.CLSCompliantAttribute> к программному элементу, вы задаете для параметра `isCompliant` атрибута значение `True` или `False` , чтобы указать на совместимость или несовместимость.</span><span class="sxs-lookup"><span data-stu-id="c414d-107">When you apply the <xref:System.CLSCompliantAttribute> to a programming element, you set the attribute's `isCompliant` parameter to either `True` or `False` to indicate compliance or noncompliance.</span></span> <span data-ttu-id="c414d-108">Для этого параметра нет значения по умолчанию, и вы должны предоставить его.</span><span class="sxs-lookup"><span data-stu-id="c414d-108">There is no default for this parameter, and you must supply a value.</span></span>  
+ <span data-ttu-id="f8e4c-107">Когда вы применяете атрибут <xref:System.CLSCompliantAttribute> к программному элементу, вы задаете для параметра `isCompliant` атрибута значение `True` или `False` , чтобы указать на совместимость или несовместимость.</span><span class="sxs-lookup"><span data-stu-id="f8e4c-107">When you apply the <xref:System.CLSCompliantAttribute> to a programming element, you set the attribute's `isCompliant` parameter to either `True` or `False` to indicate compliance or noncompliance.</span></span> <span data-ttu-id="f8e4c-108">Для этого параметра нет значения по умолчанию, и вы должны предоставить его.</span><span class="sxs-lookup"><span data-stu-id="f8e4c-108">There is no default for this parameter, and you must supply a value.</span></span>  
   
- <span data-ttu-id="c414d-109">Если вы не применяете <xref:System.CLSCompliantAttribute> к элементу, он считается несовместимым.</span><span class="sxs-lookup"><span data-stu-id="c414d-109">If you do not apply the <xref:System.CLSCompliantAttribute> to an element, it is considered to be noncompliant.</span></span>  
+ <span data-ttu-id="f8e4c-109">Если вы не применяете <xref:System.CLSCompliantAttribute> к элементу, он считается несовместимым.</span><span class="sxs-lookup"><span data-stu-id="f8e4c-109">If you do not apply the <xref:System.CLSCompliantAttribute> to an element, it is considered to be noncompliant.</span></span>  
   
- <span data-ttu-id="c414d-110">По умолчанию данное сообщение является предупреждением.</span><span class="sxs-lookup"><span data-stu-id="c414d-110">By default, this message is a warning.</span></span> <span data-ttu-id="c414d-111">Сведения о сокрытии предупреждений или обработке предупреждений как ошибок см. в разделе [Configuring Warnings in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic).</span><span class="sxs-lookup"><span data-stu-id="c414d-111">For information on hiding warnings or treating warnings as errors, see [Configuring Warnings in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic).</span></span>  
+ <span data-ttu-id="f8e4c-110">По умолчанию данное сообщение является предупреждением.</span><span class="sxs-lookup"><span data-stu-id="f8e4c-110">By default, this message is a warning.</span></span> <span data-ttu-id="f8e4c-111">Сведения о сокрытии предупреждений или обработке предупреждений как ошибок см. в разделе [Configuring Warnings in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic).</span><span class="sxs-lookup"><span data-stu-id="f8e4c-111">For information on hiding warnings or treating warnings as errors, see [Configuring Warnings in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic).</span></span>  
   
- <span data-ttu-id="c414d-112">**Идентификатор ошибки:** BC40029</span><span class="sxs-lookup"><span data-stu-id="c414d-112">**Error ID:** BC40029</span></span>  
+ <span data-ttu-id="f8e4c-112">**Идентификатор ошибки:** BC40029</span><span class="sxs-lookup"><span data-stu-id="f8e4c-112">**Error ID:** BC40029</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="c414d-113">Исправление ошибки</span><span class="sxs-lookup"><span data-stu-id="c414d-113">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="f8e4c-113">Исправление ошибки</span><span class="sxs-lookup"><span data-stu-id="f8e4c-113">To correct this error</span></span>  
   
--   <span data-ttu-id="c414d-114">Если требуется совместимость с CLS, определите этот тип в другой иерархии наследования или схеме реализации.</span><span class="sxs-lookup"><span data-stu-id="c414d-114">If you require CLS compliance, define this type within a different inheritance hierarchy or implementation scheme.</span></span>  
+-   <span data-ttu-id="f8e4c-114">Если требуется совместимость с CLS, определите этот тип в другой иерархии наследования или схеме реализации.</span><span class="sxs-lookup"><span data-stu-id="f8e4c-114">If you require CLS compliance, define this type within a different inheritance hierarchy or implementation scheme.</span></span>  
   
--   <span data-ttu-id="c414d-115">Если требуется, чтобы этот тип оставался в текущей иерархии наследования или схеме реализации, удалите <xref:System.CLSCompliantAttribute> из его определения или пометьте его как `<CLSCompliant(False)>`.</span><span class="sxs-lookup"><span data-stu-id="c414d-115">If you require that this type remain within its current inheritance hierarchy or implementation scheme, remove the <xref:System.CLSCompliantAttribute> from its definition or mark it as `<CLSCompliant(False)>`.</span></span>  
+-   <span data-ttu-id="f8e4c-115">Если требуется, чтобы этот тип оставался в текущей иерархии наследования или схеме реализации, удалите <xref:System.CLSCompliantAttribute> из его определения или пометьте его как `<CLSCompliant(False)>`.</span><span class="sxs-lookup"><span data-stu-id="f8e4c-115">If you require that this type remain within its current inheritance hierarchy or implementation scheme, remove the <xref:System.CLSCompliantAttribute> from its definition or mark it as `<CLSCompliant(False)>`.</span></span>  
   
  
