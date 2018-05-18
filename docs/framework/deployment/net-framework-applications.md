@@ -1,27 +1,17 @@
 ---
-title: "Развертывание приложений .NET Framework"
-ms.custom: 
+title: Развертывание приложений .NET Framework
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - deploying applications [.NET Framework]
 - .NET Framework, deploying apps
 ms.assetid: 139d4cb1-5972-40f4-bdd8-1ce68e4dfb80
-caps.latest.revision: "3"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ecf0a4544b5417a548c7cc212e26c98bd1891c00
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7c999b6c391294a05eb7fae1d1f076f1d52b8c5c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="deploying-net-framework-applications"></a>Развертывание приложений .NET Framework
 Этот раздел документации по платформе .NET Framework содержит общие сведения о развертывании приложений платформы .NET Framework, включая рекомендации по загрузке сборок, разрешению ссылок на сборки и повышению производительности приложения при помощи генерации образа в машинном коде.  

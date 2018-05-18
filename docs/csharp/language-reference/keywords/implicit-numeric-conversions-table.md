@@ -1,28 +1,22 @@
 ---
-title: "Таблица неявных числовых преобразований (Справочник по C#)"
+title: Таблица неявных числовых преобразований (Справочник по C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - conversions [C#], implicit numeric
 - implicit numeric conversions [C#]
 - numeric conversions [C#], implicit
 - types [C#], implicit numeric conversions
 ms.assetid: 72eb5a94-0491-48bf-8032-d7ebfdfeb8d8
-caps.latest.revision: "12"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: f6b1705dca357fd2a155fc1ea9c7fe0f65bad8a7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 2d417a2020656f300de0517526742679388f262e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="implicit-numeric-conversions-table-c-reference"></a>Таблица неявных числовых преобразований (Справочник по C#)
 В следующей таблице приведены предопределенные неявные числовые преобразования. Неявные преобразования могут выполняться во многих ситуациях, включая вызов методов и операторы назначения.  
   
-|Исходный тип|Целевой тип|  
+|Исходный тип|Кому|  
 |----------|--------|  
 |[sbyte](../../../csharp/language-reference/keywords/sbyte.md)|`short`, `int`, `long`, `float`, `double` или `decimal`|  
 |[byte](../../../csharp/language-reference/keywords/byte.md)|`short`, `ushort`, `int`, `uint`, `long`, `ulong`, `float`, `double` или `decimal`|  
@@ -30,10 +24,10 @@ ms.lasthandoff: 11/21/2017
 |[ushort](../../../csharp/language-reference/keywords/ushort.md)|`int`, `uint`, `long`, `ulong`, `float`, `double` или `decimal`|  
 |[int](../../../csharp/language-reference/keywords/int.md)|`long`, `float`, `double` или `decimal`|  
 |[uint](../../../csharp/language-reference/keywords/uint.md)|`long`, `ulong`, `float`, `double` или `decimal`|  
-|[long](../../../csharp/language-reference/keywords/long.md)|`float`, `double` или `decimal`|  
+|[long](../../../csharp/language-reference/keywords/long.md)|`float`, `double`или `decimal`|  
 |[char](../../../csharp/language-reference/keywords/char.md)|`ushort`, `int`, `uint`, `long`, `ulong`, `float`, `double` или `decimal`|  
 |[float](../../../csharp/language-reference/keywords/float.md)|`double`|  
-|[ulong](../../../csharp/language-reference/keywords/ulong.md)|`float`, `double` или `decimal`|  
+|[ulong](../../../csharp/language-reference/keywords/ulong.md)|`float`, `double`или `decimal`|  
   
 ## <a name="remarks"></a>Примечания  
   

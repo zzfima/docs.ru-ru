@@ -1,26 +1,15 @@
 ---
-title: "Удаление узлов, содержимого и значений из XML-документа"
-ms.custom: 
+title: Удаление узлов, содержимого и значений из XML-документа
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: d818a29a-6ee5-4725-97c4-78cf60a156b6
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 6d33a3f18617eb7f3fc083f29439f11eb81a7761
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 6710ecc80b8b053c2f2899dd89f8a5844cb6404d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="removing-nodes-content-and-values-from-an-xml-document"></a>Удаление узлов, содержимого и значений из XML-документа
 Как только в памяти создана модель XML DOM, можно удалить узлы дерева или удалить содержимое и значения из узлов определенного типа. См. дополнительные сведения о [полном удалении листового узла или поддерева узлов из модели DOM](../../../../docs/standard/data/xml/removing-nodes-from-the-dom.md). См. дополнительные сведения об [удалении атрибутов из узла элемента в модели DOM](../../../../docs/standard/data/xml/removing-attributes-from-an-element-node-in-the-dom.md). См. дополнительные сведения об [удалении содержимого узла с сохранением узла в дереве в модели DOM](../../../../docs/standard/data/xml/removing-node-content-in-the-dom.md).  

@@ -1,27 +1,17 @@
 ---
-title: "Миграция из .NET Framework 1.1"
-ms.custom: 
+title: Миграция из .NET Framework 1.1
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - .NET Framework 4.5, migrating from 1.1
 - .NET Framework 1.1, migrating to .NET Framework 4.5
 ms.assetid: 7ead0cb3-3b19-414a-8417-a1c1fa198d9e
-caps.latest.revision: "12"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7d54fac935e7b1fad6b07a3a6cf2031dbca702cb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: bc181d0aecd6a0c7c0800544ea00a818573c954c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="migrating-from-the-net-framework-11"></a>Миграция из .NET Framework 1.1
 [!INCLUDE[win7](../../../includes/win7-md.md)] и более поздние версии операционной системы Windows не поддерживают [!INCLUDE[net_v11_long](../../../includes/net-v11-long-md.md)]. Поэтому приложения, предназначенные для [!INCLUDE[net_v11_short](../../../includes/net-v11-short-md.md)] , не будут запускаться в [!INCLUDE[win7](../../../includes/win7-md.md)] или более поздних версиях операционной системы без внесения изменений. В этой статье рассматриваются действия, которые нужно выполнить для запуска приложения, предназначенного для [!INCLUDE[net_v11_short](../../../includes/net-v11-short-md.md)], в [!INCLUDE[win7](../../../includes/win7-md.md)] или более поздней версии операционной системы Windows. Дополнительные сведения о [!INCLUDE[net_v11_long](../../../includes/net-v11-long-md.md)] и [!INCLUDE[win8](../../../includes/win8-md.md)] см. в статье [Выполнение приложений .NET Framework 1.1 в Windows 8, Windows 8.1 или Windows 10](../../../docs/framework/install/run-net-framework-1-1-apps.md).  

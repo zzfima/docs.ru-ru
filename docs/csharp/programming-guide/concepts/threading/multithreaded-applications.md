@@ -1,21 +1,12 @@
 ---
-title: "Многопоточные приложения(C#)"
-ms.custom: 
+title: Многопоточные приложения(C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: b7015cfb-d506-4eac-b2f8-b2caaa9cc977
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 48b056172e3260952155eb40a1a393d86da78344
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: ee4d92ae0ad3dadf6568b367522817484cb7337f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="multithreaded-applications-c"></a>Многопоточные приложения(C#)
 С помощью языка C# можно создавать приложения, которые выполняют несколько задач одновременно. Задачи, которые потенциально могут задержать выполнение других задач, выполняются в отдельных потоках; такой способ организации работы приложения называется *многопоточностью* или *свободным созданием потоков*.  
@@ -65,7 +56,7 @@ newThread.Abort();
 ### <a name="thread-properties"></a>Свойства потока  
  Потоки также имеют несколько полезных свойств, которые приведены в следующей таблице.  
   
-|Свойство|Значение|  
+|Свойство.|Значение|  
 |--------------|-----------|  
 |<xref:System.Threading.Thread.IsAlive%2A>|Содержит значение `True`, если поток активен.|  
 |<xref:System.Threading.Thread.IsBackground%2A>|Возвращает или задает логическое значение, которое указывает, является ли поток (должен ли являться) фоновым потоком. Фоновые потоки отличаются от основного потока лишь тем, что они не влияют на завершение процесса. Когда обработка всех основных потоков закончена, общеязыковая среда выполнения завершает процесс, применяя метод <xref:System.Threading.Thread.Abort%2A> к тем фоновым потокам, которые еще продолжают существовать.|  

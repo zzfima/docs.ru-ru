@@ -2,11 +2,11 @@
 title: Структуры (F#)
 description: 'Дополнительные сведения о структуре F #, это компактный тип объекта часто более эффективен, чем класс для типов с помощью небольшого количества данных и простое поведение.'
 ms.date: 05/16/2016
-ms.openlocfilehash: 728533e24dcfae219ae5ab3d410389e95fcfaee1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 57c4148aec1d6a19237d74aa99824ef475c3632e
+ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/15/2018
 ---
 # <a name="structures"></a>Структуры
 
@@ -18,13 +18,13 @@ ms.lasthandoff: 05/04/2018
 [ attributes ]
 type [accessibility-modifier] type-name =
     struct
-        type-definition-elements
+        type-definition-elements-and-members
     end
 // or
 [ attributes ]
 [<StructAttribute>]
 type [accessibility-modifier] type-name =
-    type-definition-elements
+    type-definition-elements-and-members
 ```
 
 ## <a name="remarks"></a>Примечания
@@ -32,7 +32,7 @@ type [accessibility-modifier] type-name =
 
 В предыдущем синтаксисе показаны две формы. Первая не является упрощенным синтаксисом, но, тем не менее, используется довольно часто, так как при использовании ключевых слов `struct` и `end` можно опустить атрибут `StructAttribute`, который есть во второй форме. `StructAttribute` можно сократить до `Struct`.
 
-*Элементы определения типа* в предыдущем синтаксисе представляет объявления и определения элементов. Структуры могут иметь конструкторы, изменяемые и неизменяемые поля. Они также могут объявлять элементы и реализации интерфейсов. Дополнительные сведения см. в разделе [элементы](members/index.md).
+*-Definition элементы и члены типа* в предыдущем синтаксисе представляет объявления и определения элементов. Структуры могут иметь конструкторы, изменяемые и неизменяемые поля. Они также могут объявлять элементы и реализации интерфейсов. Дополнительные сведения см. в разделе [элементы](members/index.md).
 
 Структуры не могут участвовать в наследовании, не могут содержать привязки `let` или `do`, не могут рекурсивно содержать поля собственного типа (хотя могут содержать ссылочные ячейки, которые ссылаются на собственный тип).
 

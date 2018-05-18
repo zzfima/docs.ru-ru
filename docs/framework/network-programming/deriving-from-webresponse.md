@@ -1,26 +1,17 @@
 ---
-title: "Наследование от класса WebResponse"
-ms.custom: 
+title: Наследование от класса WebResponse
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Deriving from WebResponse
 ms.assetid: f11d4866-a199-4087-9306-a5a4c18b13db
-caps.latest.revision: 
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload:
-- dotnet
-ms.openlocfilehash: 2c0c70719e3f149ddf1f1e22cee8158e31fccf3c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 14a1260bf67469e792439985fec43ac44c6f0c9f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="deriving-from-webresponse"></a>Наследование от класса WebResponse
 <xref:System.Net.WebResponse> — это абстрактный базовый класс, который предоставляет базовые методы и свойства для создания обработчика ответов определенного протокола в соответствии с требованиями модели подключаемых протоколов .NET Framework. Приложения, использующие класс <xref:System.Net.WebRequest> для запроса данных ресурсов, получают ответы в **WebResponse**. Потомки класса **WebResponse** для определенных протоколов должны реализовывать абстрактные члены класса **WebResponse**.  

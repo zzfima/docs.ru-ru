@@ -4,16 +4,11 @@ description: В этом разделе рассматривается созд�
 author: guardrex
 ms.author: mairaw
 ms.date: 06/12/2017
-ms.topic: get-started-article
-ms.prod: dotnet-core
-ms.devlang: dotnet
-ms.workload:
-- dotnetcore
-ms.openlocfilehash: 97a9c62280f09f244028c066a04350a59dd0400d
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 82cd7c09dd595a8273eb88a4caaf34782fa10ac4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="getting-started-with-net-core-on-macos-using-visual-studio-for-mac"></a>Начало работы с .NET Core в macOS с помощью Visual Studio для Mac
 

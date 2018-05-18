@@ -4,19 +4,12 @@ description: Общие сведения о Docker и .NET Core
 author: jralexander
 ms.author: johalex
 ms.date: 11/06/2017
-ms.topic: conceptual
-ms.prod: dotnet-core
-ms.technology: dotnet-docker
-ms.devlang: dotnet
-manager: wpickett
 ms.custom: mvc
-ms.workload:
-- dotnetcore
-ms.openlocfilehash: 3ceeead391c3e64db6849236a0f6821eb03abc3c
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: bc652a375abd03bbc70f055b34d6ecea4d9fc374
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="introduction-to-net-and-docker"></a>Введение в .NET и Docker
 
@@ -193,9 +186,9 @@ ms.lasthandoff: 04/28/2018
 * [Service Fabric Getting Started Sample](https://azure.microsoft.com/resources/samples/service-fabric-dotnet-getting-started/) (Пример начала работы с Service Fabric)
 * [Преимущества контейнеров Windows](/virtualization/windowscontainers/about/index#video-overview)
 * [Работа со средствами Visual Studio для Docker](/aspnet/core/host-and-deploy/docker/visual-studio-tools-for-docker)
-* [Deploying Docker Images from the Azure Container Registry to Azure Container Instances](https://blogs.msdn.microsoft.com/stevelasker/2017/07/28/deploying-docker-images-from-the-azure-container-registry-to-azure-container-instances/) (Развертывание образов Docker из реестра контейнеров Azure в службе "Экземпляры контейнеров Azure")
+* [Развертывание образов Docker из реестра контейнеров Azure в службе "Экземпляры контейнеров Azure](https://blogs.msdn.microsoft.com/stevelasker/2017/07/28/deploying-docker-images-from-the-azure-container-registry-to-azure-container-instances/) 
 * [Отладка с помощью Visual Studio Code](https://code.visualstudio.com/docs/nodejs/debugging-recipes#_nodejs-typescript-docker-container)
-* [Getting hands on with Visual Studio for Mac, containers, and serverless code in the cloud](https://blogs.msdn.microsoft.com/visualstudio/2017/08/31/hands-on-with-visual-studio-for-mac-containers-serverless-code-in-the-cloud/#comments) (Получение практических навыков по работе с Visual Studio для Mac, контейнерами и бессерверным кодом в облаке)
+* [Получение практических навыков по работе с Visual Studio для Mac, контейнерами и бессерверным кодом в облаке](https://blogs.msdn.microsoft.com/visualstudio/2017/08/31/hands-on-with-visual-studio-for-mac-containers-serverless-code-in-the-cloud/#comments)
 * [Getting started integrating with Docker containers in Visual Studio for Mac](https://github.com/Microsoft/vs4mac-labs/tree/master/Docker/Getting-Started) (Приступая к интеграции с контейнерами Docker в Visual Studio для Mac)
 
 ## <a name="next-steps"></a>Следующие шаги

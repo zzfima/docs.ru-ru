@@ -1,21 +1,12 @@
 ---
-title: "Секционирование данных (C#)"
-ms.custom: 
+title: Секционирование данных (C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: 2a5c507b-fe22-443c-a768-dec7f9ec568d
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 32b95887e05767513dd818743dd1726149503b0f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 003e292979b1dc75baa298ea4bda7ef432d0f27b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="partitioning-data-c"></a>Секционирование данных (C#)
 Секционированием в LINQ называют операцию разделения входной последовательности на два раздела без изменения порядка элементов, а затем возвращения одного из разделов.  
@@ -28,7 +19,7 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="operators"></a>Операторы  
   
-|Имя оператора|Описание|Синтаксис выражения запроса C#|Дополнительные сведения|  
+|Имя оператора|Описание:|Синтаксис выражения запроса C#|Дополнительные сведения|  
 |-------------------|-----------------|---------------------------------|----------------------|  
 |Skip|Пропускает элементы до указанной позиции в последовательности.|Неприменимо.|<xref:System.Linq.Enumerable.Skip%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Skip%2A?displayProperty=nameWithType>|  
 |SkipWhile|Пропускает элементы, пока элемент не удовлетворит условию функции предиката.|Неприменимо.|<xref:System.Linq.Enumerable.SkipWhile%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.SkipWhile%2A?displayProperty=nameWithType>|  

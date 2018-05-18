@@ -4,17 +4,11 @@ description: Сведения о функциях телеметрии сред�
 author: richlander
 ms.author: mairaw
 ms.date: 08/04/2017
-ms.topic: conceptual
-ms.prod: dotnet-core
-ms.technology: dotnet-cli
-ms.devlang: dotnet
-ms.workload:
-- dotnetcore
-ms.openlocfilehash: b3da69a7fc8de095b3845428af742870e7e737ad
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 4c04867f5db512ef53c23ec41ea66db570a82021
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="net-core-cli-tools-telemetry"></a>Телеметрия средств интерфейса командной строки для .NET Core
 

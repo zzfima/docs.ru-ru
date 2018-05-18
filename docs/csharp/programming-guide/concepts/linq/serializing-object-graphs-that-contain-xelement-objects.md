@@ -1,21 +1,12 @@
 ---
-title: "Сериализация графов объектов, содержащих объекты XElement (C#)"
-ms.custom: 
+title: Сериализация графов объектов, содержащих объекты XElement (C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: fcbc3951-3cc4-4d0f-9259-e97549ed68f0
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 8b7da4429360beb20fa304b592020d48666fe732
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: f51a026642563e1c1690d9a49220aae462840211
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="serializing-object-graphs-that-contain-xelement-objects-c"></a>Сериализация графов объектов, содержащих объекты XElement (C#)
 В этом разделе описаны возможности сериализации графов объектов, содержащих ссылки на объекты с типом <xref:System.Xml.Linq.XElement>. Для обеспечения сериализации этого типа класс <xref:System.Xml.Linq.XElement> реализует интерфейс <xref:System.Xml.Serialization.IXmlSerializable>.  
@@ -24,7 +15,7 @@ ms.lasthandoff: 10/18/2017
   
 ## <a name="in-this-section"></a>Содержание  
   
-|Раздел|Описание|  
+|Раздел|Описание:|  
 |-----------|-----------------|  
 |[Практическое руководство. Сериализация с использованием XmlSerializer (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-serialize-using-xmlserializer.md)|Демонстрирует, как выполнять сериализацию с помощью <xref:System.Xml.Serialization.XmlSerializer>.|  
 |[Практическое руководство. Сериализация с использованием DataContractSerializer (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-serialize-using-datacontractserializer.md)|Демонстрирует, как выполнять сериализацию с помощью <xref:System.Runtime.Serialization.DataContractSerializer>.|  

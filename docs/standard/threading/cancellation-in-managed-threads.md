@@ -1,31 +1,20 @@
 ---
-title: "Отмена в управляемых потоках"
-ms.custom: 
+title: Отмена в управляемых потоках
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - cancellation in .NET, overview
 ms.assetid: eea11fe5-d8b0-4314-bb5d-8a58166fb1c3
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 5407beba999ede6131adbc17f56d139396429597
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: a764912e46707b6f10e720f95a7d971ec4fc8e15
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cancellation-in-managed-threads"></a>Отмена в управляемых потоках
 В [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] введена новая универсальная модель совместной отмены асинхронных или долго выполняющихся синхронных операций. Эта модель построена на простом объекте, называемом токеном отмены. Объект, который вызывает одну или несколько отменяемых операций, например, путем создания новых потоков или задач, передает этот токен в каждую операцию. Операция, в свою очередь, передает копии этого токена в другие операции. Некоторое время спустя объект, создавший токен, может использовать его для запроса остановки выполнения операции. Запрос на отмену может создавать только запрашивающий объект, и каждый прослушиватель должен обнаружить этот запрос, чтобы правильно и своевременно отреагировать на него.  

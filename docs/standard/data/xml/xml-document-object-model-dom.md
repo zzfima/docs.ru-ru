@@ -1,26 +1,15 @@
 ---
-title: "Модель объектов XML-документов (DOM)"
-ms.custom: 
+title: Модель объектов XML-документов (DOM)
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: b5e52844-4820-47c0-a61d-de2da33e9f54
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: af9473af6a315feb6b1f0a741525cbf42dd32d1d
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 23be7e47dbe54d95eb29ef3b3cb169caeee3eff4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="xml-document-object-model-dom"></a>Модель объектов XML-документов (DOM)
 Класс XML DOM является представлением XML-документа в памяти. Модель DOM позволяет читать, обрабатывать и изменять XML-документ программным образом. Класс **XmlReader** также читает XML, но предоставляет только последовательный доступ для чтения без поддержки кэширования. Это значит, что **XmlReader** не позволит изменять значения атрибутов или содержимое элемента, а также вставлять и удалять узлы. Изменение - основная функция модели DOM. Это стандартизованный, структурированный способ представления XML-данных в памяти, хотя на самом деле данные XML хранятся в файлах и пересылаются из других объектов в строковом виде. Далее приведен пример XML-данных.  

@@ -1,26 +1,15 @@
 ---
 title: Устранимые ошибки XSLT
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 484929b0-fefb-4629-87ee-ebdde70ff1f8
-caps.latest.revision: 2
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 70491e86697356766b64a98201b2969883ab7ee4
-ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.openlocfilehash: 5ef88add49cb4a269612965d14dfbca6b3263533
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="recoverable-xslt-errors"></a>Устранимые ошибки XSLT
 Рекомендация W3C по XSL-преобразованиям (XSLT) версии 1.0 включает в себя такие области, в которых поставщик реализации может решать, как обрабатывать ситуацию. Эти области считаются предоставленными на усмотрение поставщика. Например, в разделе 7.3 «Инструкции по обработке при создании» рекомендаций XSLT 1.0 указывается на ошибку, которая возникает, если при формировании экземпляра содержимого `xsl:processing-instruction` создаются узлы, отличные от текстовых. Для некоторых проблем в рекомендациях XSLT 1.0 указывается решение, которое следует принять, если обработчик решает устранить ошибку. Для проблемы, приведенной в разделе 7.3, W3C заявляет, что реализация может устранять эту ошибку, игнорируя узлы и их содержимое.  

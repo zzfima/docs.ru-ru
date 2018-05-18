@@ -1,13 +1,6 @@
 ---
-title: "Ilasm.exe (ассемблер IL)"
-ms.custom: 
+title: Ilasm.exe (ассемблер IL)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - MSIL generators
 - metadata, MSIL Assembler
@@ -18,16 +11,13 @@ helpviewer_keywords:
 - Ilasm.exe
 - verifying MSIL performance
 ms.assetid: 4ca3a4f0-4400-47ce-8936-8e219961c76f
-caps.latest.revision: "41"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 2507acc7ddf41d921af0b86622b1e85208191767
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4009fe4910af81c685ee015c7801b040a90c25aa
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ilasmexe-il-assembler"></a>Ilasm.exe (ассемблер IL)
 
@@ -74,7 +64,7 @@ ilasm [options] filename [[options]filename...]
 |**/noautoinherit**|Отключает наследование по умолчанию из класса <xref:System.Object> , если базовый класс не указан.|
 |**/nocorstub**|Запрещает создание заглушки CORExeMain.|
 |**/nologo**|Отключает отображение эмблемы Майкрософт при запуске.|
-|**/output:** `file.ext`|Задает имя и расширение выходного файла. По умолчанию имя выходного файла совпадает с именем первого исходного файла. Расширение по умолчанию — *EXE*. Если задан параметр **/dll** , по умолчанию используется расширение *DLL*. **Примечание.** Задание параметра **/output:**myfile.dll не равносильно указанию параметра **/dll**. Если параметр **/dll**не задан, будет создан исполняемый файл с именем *myfile.dll*.|
+|**/output:** `file.ext`|Задает имя и расширение выходного файла. По умолчанию имя выходного файла совпадает с именем первого исходного файла. Расширение по умолчанию — *EXE*. Если задан параметр **/dll** , по умолчанию используется расширение *DLL*. **Примечание.** Задание параметра **/output:** myfile.dll не равносильно указанию параметра **/dll**. Если параметр **/dll**не задан, будет создан исполняемый файл с именем *myfile.dll*.|
 |**/optimize**|Оптимизирует длинные инструкции в короткие. Например, `br` в `br.s`.|
 |**/pe64**|Создает 64-разрядный образ (PE32+).<br /><br /> Если целевой процессор не задан, по умолчанию используется `/itanium`.|
 |**/pdb**|Создает PDB-файл, отслеживание отладочной информации не включается.|
@@ -88,7 +78,7 @@ ilasm [options] filename [[options]filename...]
 |**/?**|Отображает синтаксис команд и параметров программы.|
 
 > [!NOTE]
-> Параметры программы *Ilasm.exe* не учитывают регистр и распознаются по первым трем буквам. Например, **/lis** равнозначно **/listing** , а **/res:**myresfile.res равнозначно **/resource:**myresfile.res. Разделителем параметра и его аргумента может служить двоеточие (:) или знак равенства (=). Например, **/output:** *file.ext* эквивалентно **/output**=*file.ext*.
+> Параметры программы *Ilasm.exe* не учитывают регистр и распознаются по первым трем буквам. Например, **/lis** равнозначно **/listing** , а **/res:** myresfile.res равнозначно **/resource:** myresfile.res. Разделителем параметра и его аргумента может служить двоеточие (:) или знак равенства (=). Например, **/output:** *file.ext* эквивалентно **/output**=*file.ext*.
 
 ## <a name="remarks"></a>Примечания
 

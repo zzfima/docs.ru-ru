@@ -1,21 +1,12 @@
 ---
-title: "Сравнение изменения XML-дерева в памяти с Функциональное построение (LINQ to XML) (C#)"
-ms.custom: 
+title: Сравнение изменения XML-дерева в памяти с Функциональное построение (LINQ to XML) (C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: b5afc31d-a325-4ec6-bf17-0ff90a20ffca
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: d8ff61927d6335228858b24138af074a841d779e
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 3e6d86ac11f10d7dbb3d270410415fb23acb2e01
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="in-memory-xml-tree-modification-vs-functional-construction-linq-to-xml-c"></a>Сравнение изменения XML-дерева в памяти с Функциональное построение (LINQ to XML) (C#)
 Изменение XML-дерева на месте является традиционным подходом к изменению формы XML-документа. Стандартное приложение загружает документ в источник данных, например DOM или [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], при помощи интерфейса программирования вставляет, удаляет узлы или изменяет их содержимое, а затем сохраняет XML в файл или передает по сети.  

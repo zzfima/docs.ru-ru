@@ -1,21 +1,15 @@
 ---
-title: "Полиморфизм (Руководство по программированию на C#)"
+title: Полиморфизм (Руководство по программированию на C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - C# language, polymorphism
 - polymorphism [C#]
 ms.assetid: 086af969-29a5-4ce8-a993-0b7d53839dab
-caps.latest.revision: "31"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 601c8cf626c846ca6c5d6bc2338e271e6b93544a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 8bbf93d14a16b06441ba48b9d4e19cfd249e9146
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="polymorphism-c-programming-guide"></a>Полиморфизм (Руководство по программированию на C#)
 Полиморфизм часто называется третьим столпом объектно-ориентированного программирования после инкапсуляции и наследования. Полиморфизм — слово греческого происхождения, означающее "многообразие форм" и имеющее несколько аспектов.  
@@ -62,7 +56,7 @@ ms.lasthandoff: 11/21/2017
   
  [!code-csharp[csProgGuideInheritance#18](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/polymorphism_4.cs)]  
   
- Доступ к скрытым членам базового класса можно по-прежнему осуществлять из клиентского кода приведением экземпляра производного класса к экземпляру базового класса. Например:  
+ Доступ к скрытым членам базового класса можно по-прежнему осуществлять из клиентского кода приведением экземпляра производного класса к экземпляру базового класса. Пример:  
   
  [!code-csharp[csProgGuideInheritance#19](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/polymorphism_5.cs)]  
   
@@ -91,7 +85,7 @@ ms.lasthandoff: 11/21/2017
 > [!NOTE]
 >  Рекомендуется, чтобы виртуальные члены использовали `base` для вызова реализации базового класса этого члена в их собственной реализации. Разрешение поведения базового класса позволяет производному классу концентрироваться на реализации поведения, характерного для производного класса. Если реализация базового класса не вызывается, производный класс сопоставляет свое поведение с поведением базового класса по своему усмотрению.  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
   
 -   [Управление версиями с помощью ключевых слов Override и New](../../../csharp/programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md)  
   

@@ -4,7 +4,7 @@ description: 'Сведения об использовании языка F # с
 ms.date: 05/16/2016
 ms.openlocfilehash: 30a7de0a3bc523ef17c1f89d6f88549069f752f8
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
 ---

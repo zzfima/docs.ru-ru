@@ -1,13 +1,6 @@
 ---
-title: "Peverify.exe (средство PEVerify)"
-ms.custom: 
+title: Peverify.exe (средство PEVerify)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - portable executable files, PEVerify
 - verifying MSIL and metadata
@@ -17,16 +10,13 @@ helpviewer_keywords:
 - PEverify.exe
 - PE files, PEVerify
 ms.assetid: f4f46f9e-8d08-4e66-a94b-0c69c9b0bbfa
-caps.latest.revision: "18"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 5acb6da7c68f899daa4144e897e9ec31fcfa868a
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: e70324192f56214d273ae2a819a9c08be7d49b1e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="peverifyexe-peverify-tool"></a>Peverify.exe (средство PEVerify)
 Средство PEVerify помогает разработчикам, создающим код на языке CIL — авторам компиляторов, обработчиков скриптов и т. д. — определить, соответствует ли этот код и связанные с ним метаданные требованиям безопасности типов. Некоторые компиляторы создают проверяемый типобезопасный код только в том случае, если разработчик не применяет определенные языковые конструкции. При работе с таким компилятором разработчику иногда требуется проверить, сохранена ли в коде безопасность типов. В этом случае для проверки CIL и метаданных в файлах можно использовать инструмент PEVerify.  
@@ -68,7 +58,7 @@ peverify filename [options]
 ## <a name="remarks"></a>Примечания  
  В среде CLR реализация механизмов безопасности и изоляции основана на типобезопасном выполнении кода приложения. Обычно код, для которого невозможно [проверить типобезопасность](http://msdn.microsoft.com/library/095cd1f6-d8db-4c0e-bce2-83ccb34dd5dc), не выполняется, хотя можно настроить политику безопасности таким образом, чтобы допускалось выполнение доверенного непроверяемого кода.  
   
- Если параметры **/md** и **/il** не заданы, Peverify.exe проверяет как CIL, так и метаданные. Сначала Peverify.exe проверяет метаданные (параметр **/md**). Если ошибок нет, выполняется проверка CIL (параметр **/il**). Если задан и параметр **/md**, и параметр **/il**, проверка по параметру **/il** производится даже при наличии ошибок в метаданных. Поэтому при отсутствии ошибок в метаданных команда **peverify** *имя_файла* эквивалентна команде **peverify** *имя_файла* **/md** **/il**.  
+ Если параметры **/md** и **/il** не заданы, Peverify.exe проверяет как CIL, так и метаданные. Сначала Peverify.exe проверяет метаданные (параметр **/md**). Если ошибок нет, выполняется проверка CIL (параметр **/il**). Если задан и параметр **/md**, и параметр **/il**, проверка по параметру **/il** производится даже при наличии ошибок в метаданных. Поэтому при отсутствии ошибок в метаданных команда **peverify** *имя_файла* эквивалентна команде **peverify** *имя_файла*  **/md**  **/il**.  
   
  Средство Peverify.exe осуществляет полную проверку CIL на основе анализа потоков данных и проверяет правильность метаданных на основе списка из нескольких сотен правил. Дополнительные сведения о проверках, производимых Peverify.exe, см. в разделах, посвященных спецификации проверки метаданных и спецификации набора инструкций CIL в папке "Tools Developers Guide" в [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)].  
   

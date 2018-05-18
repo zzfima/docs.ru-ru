@@ -1,26 +1,20 @@
 ---
-title: "Модификаторы (Справочник по C#)"
+title: Модификаторы (Справочник по C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - keywords [C#], modifiers
 - modifiers [C#]
 ms.assetid: c96691dd-b357-49ec-b5ae-03ca214fadfb
-caps.latest.revision: "18"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 31bdfb74c5803e0108aab5b7733ea7b725f7ef3c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 241cbc767a3d094d664cf77f488e4154812d7516
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="modifiers-c-reference"></a>Модификаторы (Справочник по C#)
 Модификаторы служат для изменения объявлений типов и их членов. В этом разделе описаны модификаторы C#.  
   
-|Модификатор|Назначение|  
+|Модификатор|Цель|  
 |--------------|-------------|  
 |[Модификаторы доступа](../../../csharp/language-reference/keywords/access-modifiers.md)<br /><br /> -   [public](../../../csharp/language-reference/keywords/public.md)<br />-   [private](../../../csharp/language-reference/keywords/private.md)<br />-   [internal](../../../csharp/language-reference/keywords/internal.md)<br />-   [protected](../../../csharp/language-reference/keywords/protected.md)|Задает уровень доступа к типам и их членам.|  
 |[abstract](../../../csharp/language-reference/keywords/abstract.md)|Указывает на то, что класс предназначен только для использования в качестве базового класса других классов.|  

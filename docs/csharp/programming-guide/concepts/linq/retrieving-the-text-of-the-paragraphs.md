@@ -1,21 +1,12 @@
 ---
-title: "Извлечение текста абзацев (C#)"
-ms.custom: 
+title: Извлечение текста абзацев (C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: 127d635e-e559-408f-90c8-2bb621ca50ac
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 4d43ad0260406edac4920aad5f14c981de210b09
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 07a289ec8c3f0c783a9c85cb1d25d17164008e06
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="retrieving-the-text-of-the-paragraphs-c"></a>Извлечение текста абзацев (C#)
 Этот пример основан на предыдущем примере [Извлечение абзацев и стилей (C#)](../../../../csharp/programming-guide/concepts/linq/retrieving-the-paragraphs-and-their-styles.md). В этом примере текст каждого абзаца получается в строку.  
@@ -145,7 +136,7 @@ StyleName:Normal ><
 StyleName:Code >Hello World<  
 ```  
   
-## <a name="next-steps"></a>Дальнейшие действия  
+## <a name="next-steps"></a>Следующие шаги  
  В следующем примере показано, как использовать метод расширений вместо <xref:System.Linq.Enumerable.Aggregate%2A>, чтобы объединить несколько строк в одну.  
   
 -   [Рефакторинг с использованием метода расширения (C#)](../../../../csharp/programming-guide/concepts/linq/refactoring-using-an-extension-method.md)  

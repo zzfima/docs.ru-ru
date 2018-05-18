@@ -1,29 +1,18 @@
 ---
 title: Принудительная проверка с помощью XmlSchemaValidator
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 911d4460-dd91-4958-85b2-2ca3299f9ec6
-caps.latest.revision: ''
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 60c2effea612a579b4c66b7c30243b785b86a263
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
-ms.translationtype: MT
+ms.openlocfilehash: 36d91d4bd479c1592ae0b3f98d227947686188d7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="xmlschemavalidator-push-based-validation"></a>Принудительная проверка с помощью XmlSchemaValidator
 Класс <xref:System.Xml.Schema.XmlSchemaValidator> предоставляет эффективный, высокопроизводительный механизм для принудительной проверки XML-данных по схемам XML. Например, класс <xref:System.Xml.Schema.XmlSchemaValidator> позволяет проверять информационный набор XML локально, без сериализации в виде XML-документа, а затем повторно выполнить синтаксический анализ с помощью проверяющего модуля чтения XML.  
@@ -158,7 +147,7 @@ validator.ValidateEndElement(null);
 ### <a name="validating-elements-attributes-and-content"></a>Проверка элементов, атрибутов и содержимого  
  Класс <xref:System.Xml.Schema.XmlSchemaValidator> предоставляет несколько методов для проверки по схемам XML элементов, атрибутов и содержимого информационного набора XML. В следующей таблице описан каждый из этих методов.  
   
-|Метод|Описание|  
+|Метод|Описание:|  
 |------------|-----------------|  
 |<xref:System.Xml.Schema.XmlSchemaValidator.ValidateElement%2A>|Проверяет имя элемента в текущем контексте.|  
 |<xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute%2A>|Проверяет атрибут в контексте текущего элемента или по объекту <xref:System.Xml.Schema.XmlSchemaAttribute>, переданному в качестве параметра методу <xref:System.Xml.Schema.XmlSchemaValidator.Initialize%2A>.|  
@@ -253,7 +242,7 @@ static XmlValueGetter dateTimeGetter(DateTime dateTime)
  Если компоновщиком модели содержимого является `xs:sequence`, возвращается только следующий примитив последовательности. Если компоновщиком модели содержимого является `xs:all` или `xs:choice`, возвращаются все допустимые примитивы, которые могут следовать в текущем контекстном элементе.  
   
 > [!NOTE]
->  Если метод <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A> вызывается сразу после вызова <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A>метода <xref:System.Xml.Schema.XmlSchemaValidator.Initialize%2A>, он возвращает все глобальные элементы.  
+>  Если метод <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A> вызывается сразу после вызова <xref:System.Xml.Schema.XmlSchemaValidator.Initialize%2A> метода <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A>, он возвращает все глобальные элементы.  
   
  Например, в следующей схеме XSD и XML-документе после проверки элемента `book` текущим контекстным элементом является элемент `book`. Метод <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A> возвращает массив, который содержит один объект <xref:System.Xml.Schema.XmlSchemaElement>, представляющий элемент `title`. Если контекстом проверки является элемент `title`, метод <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A> возвращает пустой массив. Если метод <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A> вызывается после проверки элемента `title`, но перед проверкой элемента `description`, он возвращает массив, который содержит один объект <xref:System.Xml.Schema.XmlSchemaElement>, представляющий элемент `description`. Если метод <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A> вызывается после проверки элемента `description`, он возвращает массив, который содержит один объект <xref:System.Xml.Schema.XmlSchemaAny>, представляющий символ-шаблон.  
   
@@ -444,7 +433,7 @@ static void SchemaValidationEventHandler(object sender, ValidationEventArgs e)
   
  В следующей таблице описан переход между состояниями класса <xref:System.Xml.Schema.XmlSchemaValidator>, а также последовательность и вхождение вызовов методов, возможных в каждом состоянии.  
   
-|Состояние|Переход|  
+|Регион|Переход|  
 |-----------|----------------|  
 |Validate|<xref:System.Xml.Schema.XmlSchemaValidator.Initialize%2A> (<xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute%2A> &#124; TopLevel*) <xref:System.Xml.Schema.XmlSchemaValidator.EndValidation%2A>|  
 |TopLevel|<xref:System.Xml.Schema.XmlSchemaValidator.ValidateWhitespace%2A> &#124; <xref:System.Xml.Schema.XmlSchemaValidator.ValidateText%2A> &#124; Element|  
@@ -458,7 +447,7 @@ static void SchemaValidationEventHandler(object sender, ValidationEventArgs e)
   
  В следующей таблице показано, как символы пунктуации из приведенной выше таблицы перехода состояний влияют на методы и другие состояния, которые можно вызывать при переходе состояний класса <xref:System.Xml.Schema.XmlSchemaValidator>.  
   
-|Символ|Описание|  
+|Символ|Описание:|  
 |------------|-----------------|  
 |&#124;|Можно вызывать или метод, или состояние (перед чертой или после нее).|  
 |?|Метод или состояние перед вопросительным знаком (?) являются необязательными, но их можно вызывать только один раз.|  

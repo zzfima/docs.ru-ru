@@ -1,13 +1,7 @@
 ---
-title: "Блокируемые операции"
-ms.custom: 
+title: Блокируемые операции
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,18 +10,13 @@ helpviewer_keywords:
 - Interlocked class, about Interlocked class
 - threading [.NET Framework], Interlocked class
 ms.assetid: cbda7114-c752-4f3e-ada1-b1e8dd262f2b
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: c10c1188820b7a270baa0c51696974f93a8a2990
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 38532228f7a5d07bb1b9fcf7e90d2be53a28b04c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="interlocked-operations"></a>Блокируемые операции
 Класс <xref:System.Threading.Interlocked> предоставляет методы для синхронизации доступа к переменной, которую совместно используют несколько потоков. Потоки различных процессов могут использовать этот механизм, если переменная находится в общей памяти. Блокируемые операции являются атомарными, т. е. вся операция представляет собой единицу, которая не может быть прервана другой блокируемой операцией с той же переменной. Это имеет значение в операционных системах с преимущественной многопоточностью, когда поток может быть приостановлен после загрузки значения из адреса памяти, но прежде, чем его можно будет изменить или сохранить.  

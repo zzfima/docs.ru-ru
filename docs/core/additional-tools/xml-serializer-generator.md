@@ -2,23 +2,19 @@
 title: Использование генератора XML-сериализатора Майкрософт в .NET Core
 description: Обзор генератора XML-сериализатора Майкрософт.
 author: mlacouture
-manager: wpickett
 ms.author: johalex
 ms.date: 01/19/2017
 ms.topic: tutorial
-ms.prod: dotnet-core
 ms.custom: mvc
-ms.workload:
-- dotnetcore
-ms.openlocfilehash: d7332546cf7643ff808a29c83d13050571447666
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 98d85821784757db903c97e240c55a3d7bb656d5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-microsoft-xml-serializer-generator-on-net-core"></a>Использование генератора XML-сериализатора Майкрософт в .NET Core
 
-Это руководство описывает использование генератора XML-сериализатора Майкрософт в приложении .NET Core на языке C#. В ходе работы с этим руководством вы узнаете:
+Это руководство описывает использование генератора XML-сериализатора Майкрософт в приложении .NET Core на языке C#. В ходе работы с этим руководством вы:
 
 > [!div class="checklist"]
 > * как создать приложение .NET Core;

@@ -1,20 +1,13 @@
 ---
-title: "Выполнение деревьев выражений"
-description: "Сведения о выполнении деревьев выражений путем их преобразования в исполняемые инструкции промежуточного языка (IL)."
-keywords: .NET, .NET Core
-author: BillWagner
-ms.author: wiwagn
+title: Выполнение деревьев выражений
+description: Сведения о выполнении деревьев выражений путем их преобразования в исполняемые инструкции промежуточного языка (IL).
 ms.date: 06/20/2016
-ms.topic: article
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.devlang: csharp
 ms.assetid: 109e0ac5-2a9c-48b4-ac68-9b6219cdbccf
-ms.openlocfilehash: db481c18a79f55b079ec2558b884ce288e2a9933
-ms.sourcegitcommit: 6a9030eb5bd0f00e1d144f81958adb195cfb1f6f
+ms.openlocfilehash: 54706cd5d8ebe60bb893bc82f05aecddae370602
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="executing-expression-trees"></a>Выполнение деревьев выражений
 

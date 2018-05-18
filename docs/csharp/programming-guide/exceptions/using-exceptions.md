@@ -1,21 +1,15 @@
 ---
-title: "Использование исключений (Руководство по программированию на C#)"
+title: Использование исключений (Руководство по программированию на C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - exception handling [C#], about exception handling
 - exceptions [C#], about exceptions
 ms.assetid: 71472c62-320a-470a-97d2-67995180389d
-caps.latest.revision: "15"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 55c2cc0c6a1f852bd286b98927cc69f81119aeee
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 43012ec1190117b1905b5e44010d5f57a1e543aa
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-exceptions-c-programming-guide"></a>Использование исключений (Руководство по программированию на C#)
 В C# ошибки в программе в среде выполнения передаются через программу с помощью механизма, который называется исключениями. Исключения вызываются кодом, который встречает ошибку, и перехватываются кодом, который может ее исправить. Исключения могут вызываться средой CLR .NET Framework или кодом в программе. Вызванное исключение передается вверх по стеку вызовов, пока не будет найден соответствующий оператор `catch`. Не перехваченные исключения обрабатываются универсальным обработчиком исключений, предоставляемым системой, которая отображает диалоговое окно.  

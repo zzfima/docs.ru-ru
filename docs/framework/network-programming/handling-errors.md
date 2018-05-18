@@ -1,12 +1,6 @@
 ---
-title: "Обработка ошибок"
-ms.custom: 
+title: Обработка ошибок
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -37,16 +31,14 @@ helpviewer_keywords:
 - ConnectionClosed enumeration member
 - SecureChannelFailure enumeration member
 ms.assetid: 657141cd-5cf5-4fdb-a4b2-4c040eba84b5
-caps.latest.revision: "12"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: c7d9c08e38c2d82381c94e8813ef0312806bd010
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 8020a92345ba85a99c0b46b2d4247d677defd054
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="handling-errors"></a>Обработка ошибок
 Классы <xref:System.Net.WebRequest> и <xref:System.Net.WebResponse> вызывают одновременно системные исключения (например, <xref:System.ArgumentException>) и веб-исключения (исключения <xref:System.Net.WebException>, вызываемые методом <xref:System.Net.WebRequest.GetResponse%2A>).  
@@ -55,7 +47,7 @@ ms.lasthandoff: 12/22/2017
   
  В следующей таблице описаны возможные значения свойства **Status**.  
   
-|Status|Описание|  
+|Status|Описание:|  
 |------------|-----------------|  
 |ConnectFailure|Не удалось связаться с удаленной службой на транспортном уровне.|  
 |ConnectionClosed|Соединение было преждевременно закрыто.|  
@@ -71,7 +63,7 @@ ms.lasthandoff: 12/22/2017
 |Время ожидания|В течение заданного для запроса времени ожидания не был получен ответ.|  
 |TrustFailure|Не удалось проверить сертификат сервера.|  
 |MessageLengthLimitExceeded|Получено сообщение, которое превышает ограничение, заданное при отправке запроса или получении ответа от сервера.|  
-|Ожидание|Ожидается выполнение внутреннего асинхронного запроса.|  
+|Не завершен|Ожидается выполнение внутреннего асинхронного запроса.|  
 |PipelineFailure|Это значение поддерживает платформу .NET Framework и не должно использоваться непосредственно из вашего кода.|  
 |ProxyNameResolutionFailure|Службе разрешения имен не удалось разрешить имя узла прокси-сервера.|  
 |UnknownError|Возникло исключение неизвестного типа.|  

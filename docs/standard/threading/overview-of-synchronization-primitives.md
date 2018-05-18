@@ -1,30 +1,19 @@
 ---
-title: "Обзор примитивов синхронизации"
-ms.custom: 
+title: Обзор примитивов синхронизации
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - synchronization, threads
 - threading [.NET Framework],synchronizing threads
 - managed threading
 ms.assetid: b782bcb8-da6a-4c6a-805f-2eb46d504309
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 79d6e384458e289c4da8587eae66486a054aad08
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: e35c2337ff7e416cb5f2c869f8ede160e05d369f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="overview-of-synchronization-primitives"></a>Обзор примитивов синхронизации
 <a name="top"></a> Платформа .NET Framework предоставляет ряд примитивов синхронизации для управления взаимодействием потоков и предотвращения состояний гонки. Их можно условно разделить на три категории: блокировка, сигнал и блокированные операции.  

@@ -23,7 +23,8 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
 ---
 # <a name="icorprofilercallback-interface"></a>Интерфейс ICorProfilerCallback
-Предоставляет методы, используемые общеязыковой средой выполнения (CLR) для уведомления профилировщика кода о событиях, на которые подписан профилировщик.  
+Предоставляет методы, используемые общеязыковой средой выполнения (CLR) для уведомления профилировщика кода о событиях, на которые подписан профилировщик.
+  
   
 ## <a name="methods"></a>Методы  
   
@@ -38,7 +39,7 @@ ms.lasthandoff: 05/04/2018
 |[Метод AssemblyUnloadFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-assemblyunloadfinished-method.md)|Уведомляет профилировщик о выгрузке сборки.|  
 |[Метод AssemblyUnloadStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-assemblyunloadstarted-method.md)|Уведомляет профилировщик о том, что сборка выгружается.|  
 |[Метод ClassLoadFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-classloadfinished-method.md)|Уведомляет профилировщик об окончании загрузки класса.|  
-|[Метод ClassLoadStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-classloadstarted-method.md)|Уведомляет профилировщик о загрузке класса.| 
+|[Метод ClassLoadStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-classloadstarted-method.md)|Уведомляет профилировщик о загрузке класса.|  
 |[Метод ClassUnloadFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-classunloadfinished-method.md)|Уведомляет профилировщик о завершении выгрузки класса.|  
 |[Метод ClassUnloadStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-classunloadstarted-method.md)|Уведомляет профилировщик о выгрузке класса.|  
 |[Метод COMClassicVTableCreated](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-comclassicvtablecreated-method.md)|Уведомляет профилировщик, что вызываемая оболочка времени выполнения (RCW) для заданного IID и класса была создана.|  
@@ -64,7 +65,7 @@ ms.lasthandoff: 05/04/2018
 |[Метод JITCachedFunctionSearchFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcachedfunctionsearchfinished-method.md)|Уведомляет профилировщик об окончании поиска для функции, которая была скомпилирована ранее с помощью NGen.exe.|  
 |[Метод JITCachedFunctionSearchStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcachedfunctionsearchstarted-method.md)|Уведомляет профилировщик о начале поиска для функции, которая была скомпилирована ранее с помощью NGen.exe.|  
 |[Метод JITCompilationFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcompilationfinished-method.md)|Уведомляет профилировщик о завершении компиляции функции JIT-компилятором.|  
-|[Метод JITCompilationStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcompilationstarted-method.md)|Уведомляет профилировщик, что компилятор just-in-time (JIT) начал компиляцию функции.|
+|[Метод JITCompilationStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcompilationstarted-method.md)|Уведомляет профилировщик, что компилятор just-in-time (JIT) начал компиляцию функции.|  
 |[Метод JITFunctionPitched](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitfunctionpitched-method.md)|Уведомляет профилировщик о том, что функция, скомпилированная JIT-компилятором, была удалена из памяти.|  
 |[Метод JITInlining](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitinlining-method.md)|Уведомляет профилировщик, что JIT-компилятор намерен вставить функцию в одну строку другой функции.|  
 |[Метод ManagedToUnmanagedTransition](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-managedtounmanagedtransition-method.md)|Уведомляет профилировщик о переходе из управляемого кода в неуправляемый код.|  
@@ -75,11 +76,11 @@ ms.lasthandoff: 05/04/2018
 |[Метод ModuleUnloadStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleunloadstarted-method.md)|Уведомляет профилировщик о выгрузке модуля.|  
 |[Метод MovedReferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-movedreferences-method.md)|Уведомляет профилировщик о ссылках на объекты, которые были перемещены во время сборки мусора.|  
 |[Метод ObjectAllocated](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-objectallocated-method.md)|Уведомляет профилировщик о том, что для объекта выделена память в куче.|  
-|[Метод ObjectReferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-objectreferences-method.md)|Уведомляет профилировщик об объектах в памяти, на которые ссылается указанный объект.|  
+|[Метод ObjectReferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-objectreferences-method.md)|Уведомляет профилировщик об объектах в памяти ссылается указанный объект.|  
 |[Метод ObjectsAllocatedByClass](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-objectsallocatedbyclass-method.md)|Уведомляет профилировщик о количестве экземпляров каждого заданного класса, которые были созданы с момента предыдущей сборки мусора.|  
 |[Метод RemotingClientInvocationFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingclientinvocationfinished-method.md)|Уведомляет профилировщик о запуске удаленного вызова для завершения на клиенте.|  
 |[Метод RemotingClientInvocationStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingclientinvocationstarted-method.md)|Уведомляет профилировщик о начале вызова удаленного взаимодействия.|  
-|[Метод RemotingClientReceivingReply](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingclientreceivingreply-method.md)|Уведомляет профилировщик, что серверная часть вызова удаленного взаимодействия завершена, клиент принимает ответ и готов к его обработке.| 
+|[Метод RemotingClientReceivingReply](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingclientreceivingreply-method.md)|Уведомляет профилировщик, что серверная часть вызова удаленного взаимодействия завершена, клиент принимает ответ и готов к его обработке.|  
 |[Метод RemotingClientSendingMessage](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingclientsendingmessage-method.md)|Уведомляет профилировщик о том, что клиент отправляет запрос на сервер.|  
 |[Метод RemotingServerInvocationReturned](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingserverinvocationreturned-method.md)|Уведомляет профилировщик, что процесс завершил вызов метода в ответ на запрос вызова удаленного метода.|  
 |[Метод RemotingServerInvocationStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingserverinvocationstarted-method.md)|Уведомляет профилировщик о том, что процесс вызывает метод в ответ на запрос вызова удаленного метода.|  
@@ -100,14 +101,14 @@ ms.lasthandoff: 05/04/2018
 |[Метод UnmanagedToManagedTransition](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-unmanagedtomanagedtransition-method.md)|Уведомляет профилировщик о переход от неуправляемого кода в управляемый код.|  
   
 ## <a name="remarks"></a>Примечания  
- Среда CLR вызывает метод интерфейса `ICorProfilerCallback` (или [ICorProfilerCallback2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md)) для уведомления профилировщика, когда происходит событие, на которое подписан профилировщик. Это основной интерфейс обратного вызова, через который среда CLR взаимодействует с профилировщиком кода.  
+ Среда CLR вызывает метод интерфейса `ICorProfilerCallback` (или [ICorProfilerCallback2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md)) для уведомления профилировщика, когда происходит событие, на которое подписан профилировщик.  Это основной интерфейс обратного вызова, через который среда CLR взаимодействует с профилировщиком кода.  
   
- Профилировщик кода должен реализовать методы интерфейса `ICorProfilerCallback`. Для платформы .NET Framework начиная с версии 2.0 профилировщик должен также реализовать методы `ICorProfilerCallback2`. Каждая реализация метода должна возвращать HRESULT со значением S_OK в случае успешного выполнения или E_FAIL в случае ошибки. В настоящее время среда CLR игнорирует значение HRESULT, возвращаемое каждым методом обратного вызова, за исключением [ICorProfilerCallback::ObjectReferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-objectreferences-method.md). 
+ Профилировщик кода необходимо реализовать методы `ICorProfilerCallback` интерфейса. Для платформы .NET Framework версии 2.0 или более поздней версии, профилировщик должен также реализовать `ICorProfilerCallback2` методы. Каждая реализация метода должны возвращать значение HRESULT со значением S_OK в случае успешного выполнения или E_FAIL в случае ошибки. В настоящее время среда CLR игнорирует значение HRESULT, возвращаемого каждой обратного вызова, за исключением [ICorProfilerCallback::ObjectReferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-objectreferences-method.md).  
   
- Профилировщик кода должен зарегистрировать в реестре Windows свой объект Component Object Model (COM), реализующий интерфейсы `ICorProfilerCallback` и `ICorProfilerCallback2`. Профилировщик кода подписывается на события, для которых требуется получать уведомления, путем вызова [ICorProfilerInfo::SetEventMask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md). Обычно это делается в реализации профилировщиком [ICorProfilerCallback::Initialize](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-initialize-method.md). Затем профилировщик может получать уведомления от среды выполнения, когда в процессе в среде выполнения происходит или скоро произойдет событие.   
+ Профилировщик кода должен зарегистрировать в реестре Windows свой объект Component Object Model (COM), реализующий интерфейсы `ICorProfilerCallback` и `ICorProfilerCallback2`. Профилировщик кода подписывается на события, для которых требуется получать уведомления, путем вызова [ICorProfilerInfo::SetEventMask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md). Обычно это делается в реализации профилировщиком [ICorProfilerCallback::Initialize](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-initialize-method.md). Затем профилировщик может получать уведомления от среды выполнения, когда в процессе в среде выполнения происходит или скоро произойдет событие.  
   
 > [!NOTE]
->  Профилировщик регистрирует один COM-объект. Если профилировщик предназначен для .NET Framework версии 1.0 или 1.1, COM-объект должен реализовывать только методы `ICorProfilerCallback`. Если же он предназначен для платформы .NET Framework версии 2.0 и выше, COM-объект также должен реализовывать методы `ICorProfilerCallback2`.   
+>  Профилировщик регистрирует один COM-объект. сли профилировщик предназначен для .NET Framework версии 1.0 или 1.1, COM-объект должен реализовывать только методы `ICorProfilerCallback`. Если же он предназначен для платформы .NET Framework версии 2.0 и выше, COM-объект также должен реализовывать методы `ICorProfilerCallback2`.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [требования к системе](../../../../docs/framework/get-started/system-requirements.md).  

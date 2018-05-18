@@ -1,22 +1,12 @@
 ---
-title: "Практическое руководство. Выполнение запроса к ArrayList с помощью LINQ (C#)"
-ms.custom: 
+title: Практическое руководство. Выполнение запроса к ArrayList с помощью LINQ (C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-csharp
-ms.topic: article
 ms.assetid: 2bfb471c-6e9a-4e60-bd83-4a1778abde11
-caps.latest.revision: 
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 2f32fcca4504ce3d3f297cfc1b81529dd027f9a6
-ms.sourcegitcommit: 75a180acb5d8a2dbd4a52915ce8e980749fb1d05
+ms.openlocfilehash: 8aaf90843fa85cf20a92a40644f085769404aa85
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/24/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-query-an-arraylist-with-linq-c"></a>Практическое руководство. Выполнение запроса к ArrayList с помощью LINQ (C#)
 При использовании LINQ для запросов к неуниверсальным коллекциям <xref:System.Collections.IEnumerable>, таким как <xref:System.Collections.ArrayList>, необходимо явно объявить тип переменной диапазона, чтобы отразить конкретный тип объектов в коллекции. Например, если у вас есть список <xref:System.Collections.ArrayList> объектов `Student`, [предложение from](../../../../csharp/language-reference/keywords/from-clause.md) должно иметь следующий вид:  

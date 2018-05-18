@@ -1,21 +1,14 @@
 ---
 title: Seedwork (многократно используемые базовые классы и интерфейсы для модели предметной области)
 description: Архитектура микрослужб .NET для контейнерных приложений .NET | Seedwork (многократно используемые базовые классы и интерфейсы для модели предметной области)
-keywords: Docker, микрослужбы, ASP.NET, контейнер
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/12/2017
-ms.prod: .net-core
-ms.technology: dotnet-docker
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 641439267d7fcb504965487aeed165188b2cf123
-ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.openlocfilehash: 7098bc1d37ecdf4826c0db6e754ca8df2ed72fe4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="seedwork-reusable-base-classes-and-interfaces-for-your-domain-model"></a>Seedwork (многократно используемые базовые классы и интерфейсы для модели предметной области)
 

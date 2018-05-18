@@ -1,30 +1,21 @@
 ---
-title: "Сериализация деревьев XML (C#)"
-ms.custom: 
+title: Сериализация деревьев XML (C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: b3937e54-4ce9-4236-ac96-14e7972aa594
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 27001dbc92afddc35be12b593f5ba082c29af5f0
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 8f372a05bd69b801085cba9d9a3b11ae01841a2c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="serializing-xml-trees-c"></a>Сериализация деревьев XML (C#)
 Сериализация XML-дерева означает создание XML из XML-дерева. Можно сериализовать в файл, в конкретный экземпляр класса <xref:System.IO.TextWriter> или в конкретный экземпляр класса <xref:System.Xml.XmlWriter>.  
   
  Можно управлять различными аспектами сериализации. Например, можно выбрать либо расстановку отступов в сериализованном XML, либо написать XML-декларацию.  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
   
-|Раздел|Описание|  
+|Раздел|Описание:|  
 |-----------|-----------------|  
 |[Сохранение пробелов при сериализации](../../../../csharp/programming-guide/concepts/linq/preserving-white-space-while-serializing.md)|Описание управления пробелами при сериализации XML-деревьев.|  
 |[Сериализация с помощью объявления XML (C#)](../../../../csharp/programming-guide/concepts/linq/serializing-with-an-xml-declaration.md)|Описание сериализации XML-дерева, включающего XML-декларации.|  

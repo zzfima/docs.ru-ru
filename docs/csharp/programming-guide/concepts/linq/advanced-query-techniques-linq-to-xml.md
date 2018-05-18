@@ -1,28 +1,19 @@
 ---
-title: "Дополнительные способы создания запросов (LINQ to XML) (C#)"
-ms.custom: 
+title: Дополнительные способы создания запросов (LINQ to XML) (C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: 028d978e-215b-4d50-ba70-adce0659386d
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 5898813d5773f13fa2c969b065e5ab1412726e9e
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: b1045308d18afb46c5f3bb0da9d02b07f17db95e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="advanced-query-techniques-linq-to-xml-c"></a>Дополнительные способы создания запросов (LINQ to XML) (C#)
 В этом разделе представлены примеры расширенных методов выполнения запросов [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
   
-|Раздел|Описание|  
+|Раздел|Описание:|  
 |-----------|-----------------|  
 |[Практическое руководство. Объединение двух коллекций (C#) (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-join-two-collections-linq-to-xml.md)|Показывает, как использовать предложение `Join` для реализации преимуществ связей в XML-данных.|  
 |[Практическое руководство. Создание иерархии с помощью группировки (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-create-hierarchy-using-grouping.md)|Показывает способы группирования данных и последующего формирования XML на основе этого группирования.|  

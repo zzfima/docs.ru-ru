@@ -2,20 +2,14 @@
 title: Выражения значения по умолчанию (руководство по программированию на C#)
 description: Выражения значения по умолчанию создают значение по умолчанию для любого ссылочного типа или типа значения
 ms.date: 04/25/2018
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - generics [C#], default keyword
 - default keyword [C#], generic programming
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 174ac79c9e2c4a4e628816b1178d420ec7cfc809
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: be51ad253a2939f538144caf4500f39e144c1664
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="default-value-expressions-c-programming-guide"></a>Выражения значения по умолчанию (руководство по программированию на C#)
 
@@ -70,5 +64,5 @@ T t = default(T);
  [Руководство по программированию на C#](../index.md)  
  [Универсальные шаблоны (Руководство по программированию на C#)](../generics/index.md)  
  [Универсальные методы](../generics/generic-methods.md)  
- [Универсальные шаблоны в .NET](~/docs/standard/generics/index.md)  
+ [Универсальные шаблоны в .NET](~/docs/standard/generics/index.md)  
  [Таблица значений по умолчанию](../../language-reference/keywords/default-values-table.md)

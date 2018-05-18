@@ -1,21 +1,15 @@
 ---
-title: "Практическое руководство. Определение абстрактных свойств (Руководство по программированию в C#)"
+title: Практическое руководство. Определение абстрактных свойств (Руководство по программированию в C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - properties [C#], abstract
 - abstract properties [C#]
 ms.assetid: 672a90eb-47b9-4ae0-9914-af53852fddcb
-caps.latest.revision: "13"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: cd8a42c1040180c19bc58627ab0c6a21ace77773
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: cf4295eea6a257fe053bf889f0c2f3d3fa5bb2a6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-define-abstract-properties-c-programming-guide"></a>Практическое руководство. Определение абстрактных свойств (Руководство по программированию в C#)
 В следующем примере показано, как определять [абстрактные](../../../csharp/language-reference/keywords/abstract.md) свойства. В объявлении абстрактного свойства не предоставляется реализация методов доступа к свойству. В нем объявляется, что класс поддерживает свойства, однако реализация методов доступа к ним передается в производные классы. В следующем примере показано, как реализовать абстрактные свойства, наследуемые от базового класса.  
@@ -39,7 +33,7 @@ ms.lasthandoff: 11/21/2017
   
  [!code-csharp[csProgGuideInheritance#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-define-abstract-properties_1.cs)]  
   
--   Модификаторы свойства помещаются в само объявление свойства. Например:  
+-   Модификаторы свойства помещаются в само объявление свойства. Пример:  
   
     ```  
     public abstract double Area  

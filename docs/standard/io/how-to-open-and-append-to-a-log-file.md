@@ -1,13 +1,7 @@
 ---
-title: "Практическое руководство. Открытие файла журнала и добавление в него данных"
-ms.custom: 
+title: Практическое руководство. Открытие файла журнала и добавление в него данных
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,18 +11,13 @@ helpviewer_keywords:
 - log files, appending to
 - I/O [.NET Framework], log files
 ms.assetid: 74423362-1721-49cb-aa0a-e04005f72a06
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 333b20adee4ea2826a1fc6795a39490dca1af843
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: cd2d13a49d9b696541ac278b9f1847c8e4a48cf1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-open-and-append-to-a-log-file"></a>Практическое руководство. Открытие файла журнала и добавление в него данных
 <xref:System.IO.StreamWriter> и <xref:System.IO.StreamReader> записывают данные в потоки и считывают данные из потоков. Следующий пример кода открывает файл `log.txt` для получения входных данных или создает файл с таким именем, если он не существует, а затем добавляет сведения в конец файла. После этого он выводит содержимое файла для отображения в стандартный поток вывода. Вместо использованного здесь подхода вы можете сохранить данные в одной строке или в массиве строк и выполнить те же функции с помощью метода <xref:System.IO.File.WriteAllText%2A> или <xref:System.IO.File.WriteAllLines%2A>.  

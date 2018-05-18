@@ -1,29 +1,18 @@
 ---
 title: Практическое руководство. Преобразование между потоками .NET Framework и потоками среды выполнения Windows
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 23a763ea-8348-4244-9f8c-a4280b870b47
-caps.latest.revision: 15
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 25df0b363e5c9b44ae51d14ef0c2286cbb80ced8
-ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.openlocfilehash: f67f88cd7f690e56664fa45878d1c9ac1f8a6b6b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-convert-between-net-framework-streams-and-windows-runtime-streams"></a>Практическое руководство. Преобразование между потоками .NET Framework и потоками среды выполнения Windows
 .NET Framework для приложений Магазина Windows — это подмножество полной платформы .NET Framework. Из-за требований к безопасности и другим аспектам в приложениях Магазина Windows нельзя использовать полный набор API платформы .NET Framework для открытия и чтения файлов. Дополнительные сведения см. в статье [Обзор .NET для приложений Магазина Windows](http://msdn.microsoft.com/library/windows/apps/br230302.aspx). Однако может потребоваться использовать API платформы .NET Framework для других операций обработки потока. Для работы с потоками может потребоваться выполнить преобразование между типом потока .NET Framework, таким как <xref:System.IO.MemoryStream> или <xref:System.IO.FileStream>, и потоком среды выполнения Windows, таким как [IInputStream](http://msdn.microsoft.com/library/windows/apps/windows.storage.streams.iinputstream.aspx), [IOutputStream](http://msdn.microsoft.com/library/windows/apps/windows.storage.streams.ioutputstream.aspx)или [IRandomAccessStream](http://msdn.microsoft.com/library/windows/apps/windows.storage.streams.irandomaccessstream.aspx).  

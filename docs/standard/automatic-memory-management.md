@@ -1,13 +1,7 @@
 ---
 title: Automatic Memory Management
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - garbage collection, automatic memory management
 - memory, allocating
@@ -18,18 +12,13 @@ helpviewer_keywords:
 - managed heap
 - runtime, automatic memory management
 ms.assetid: d4850de5-fa63-4936-a250-5678d118acba
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 5405b6fc080696b7e507e70dd8b04f8ddcc4bbb2
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 9f81db46c20b27517968078c96f9eb484a1aedec
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="automatic-memory-management"></a>Automatic Memory Management
 Для автоматического управления памятью используется одна из служб, которые среда CLR предоставляет при [управляемом выполнении](../../docs/standard/managed-execution-process.md). Сборщик мусора среды CLR управляет освобождением и выделением памяти для приложения. Для разработчиков это означает, что при разработке управляемого приложения не нужно писать код для управления памятью. Автоматическое управление памятью позволяет устранить распространенные проблемы, такие как не освобожденный по забывчивости объект, вызывающий утечку памяти, или попытки доступа к памяти для уже удаленного объекта. В этом разделе описано, каким образом сборщик мусора выделяет и освобождает память.  

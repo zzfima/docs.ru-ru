@@ -1,14 +1,6 @@
 ---
 title: Создание файлов ресурсов для приложений для настольных систем
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-bcl
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -18,17 +10,13 @@ helpviewer_keywords:
 - application resources, creating files
 - resource files, creating
 ms.assetid: 6c5ad891-66a0-4e7a-adcf-f41863ba6d8d
-caps.latest.revision: ''
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: b73520dfc3d5123aedce77254f738a61a27ccd95
-ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
+ms.openlocfilehash: b8d5c151c728002ede0e29be77fa6e23aa2c1b3d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="creating-resource-files-for-desktop-apps"></a>Создание файлов ресурсов для приложений для настольных систем
 Ресурсы, такие как строки, изображения или данные объектов, можно включать в файлы ресурсов, чтобы сделать их легко доступными для приложения. В платформе .NET Framework предлагается пять способов создания файлов ресурсов.  

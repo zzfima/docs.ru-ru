@@ -1,23 +1,16 @@
 ---
 title: '##define (справочник по C#)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 f1_keywords:
 - '#define'
 helpviewer_keywords:
 - '#define directive [C#]'
 ms.assetid: 23638b8f-779c-450e-b600-d55682de7d01
-caps.latest.revision: 22
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: ae72a1b6c19421c51348a0d93691ba3fe29a191c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 1903b96de5f9dfa4efc252897a4a4bd18ed64924
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="define-c-reference"></a>#define (Справочник по C#)
 `#define` позволяет определить символ. При использовании символа в качестве выражения, которое передается директиве [#if](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md), выражение будет иметь значение `true`, как показано в следующем примере:  
@@ -74,6 +67,6 @@ public class TestDefine
  [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
  [Директивы препроцессора C#](../../../csharp/language-reference/preprocessor-directives/index.md)  
  [const](../../../csharp/language-reference/keywords/const.md)  
- [Как: условная компиляция с Trace и Debug](../../../framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md)  
+ [Практическое руководство. Условная компиляция с использованием атрибутов Trace и Debug](../../../framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md)  
  [#undef](../../../csharp/language-reference/preprocessor-directives/preprocessor-undef.md)  
  [#if](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md)

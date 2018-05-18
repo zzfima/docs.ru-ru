@@ -1,21 +1,12 @@
 ---
-title: "Пошаговое руководство. Многопоточность с помощью компонента BackgroundWorker (C#)"
-ms.custom: 
+title: Пошаговое руководство. Многопоточность с помощью компонента BackgroundWorker (C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: ff670fbf-a0ac-40c1-ab08-9ed53768f880
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 72d6e9ab42ca270ebe0691be23ebe181b973620d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: bc334261dbea7759d1bb571cc61a5f00f84531a4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-multithreading-with-the-backgroundworker-component-c"></a>Пошаговое руководство. Многопоточность с помощью компонента BackgroundWorker (C#)
 В этом пошаговом руководстве описывается создание многопоточного приложения Windows Forms, которое выполняет поиск заданного слова в текстовом файле. В нем демонстрируются:  
@@ -47,7 +38,7 @@ ms.lasthandoff: 11/21/2017
   
 4.  Добавьте метку рядом с каждым текстовым полем. Задайте свойство `Text` для каждой метки, как показано в следующей таблице.  
   
-    |Объект|Свойство|Параметр|  
+    |Object|Свойство|Параметр|  
     |------------|--------------|-------------|  
     |Первая метка|`Text`|Исходный файл|  
     |Вторая метка|`Text`|Сравнение строк|  
@@ -60,7 +51,7 @@ ms.lasthandoff: 11/21/2017
   
 2.  Задайте для объекта backgroundWorker1 следующие свойства.  
   
-    |Свойство|Параметр|  
+    |Свойство.|Параметр|  
     |--------------|-------------|  
     |`WorkerReportsProgress`|Да|  
     |`WorkerSupportsCancellation`|Да|  
@@ -279,7 +270,7 @@ ms.lasthandoff: 11/21/2017
   
 3.  Нажмите кнопку `Cancel`. Приложение должно незамедлительно прекратить подсчет.  
   
-## <a name="next-steps"></a>Дальнейшие действия  
+## <a name="next-steps"></a>Следующие шаги  
  Это приложение включает обработку некоторых основных ошибок. Оно выявляет пустые строки поиска. Программу можно сделать более надежной за счет обработки других ошибок, например, превышения максимального числа слов или строк, которые могут быть подсчитаны.  
   
 ## <a name="see-also"></a>См. также  

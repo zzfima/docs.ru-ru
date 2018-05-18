@@ -1,21 +1,14 @@
 ---
-title: "Передача массивов в качестве аргументов (Руководство по программированию на C#)"
+title: Передача массивов в качестве аргументов (Руководство по программированию на C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - arrays [C#], passing as arguments
 ms.assetid: f3a0971e-c87c-4a1f-8262-bc0a3b712772
-caps.latest.revision: 
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: f152173b747a171052ab99f261ed91ced9465fdc
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: d863cdc33a8a1a844aabbea9ba5876614e6e8dba
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="passing-arrays-as-arguments-c-programming-guide"></a>Передача массивов в качестве аргументов (Руководство по программированию на C#)
 Массивы можно передавать в качестве аргументов в параметры метода. Поскольку массивы представляют собой ссылочные типы, метод может изменять значения элементов.  
@@ -35,7 +28,7 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="example"></a>Пример  
   
-### <a name="description"></a>Описание  
+### <a name="description"></a>Описание:  
  В следующем примере массив строк инициализируется и передается в качестве аргумента в метод `PrintArray` для строк. Этот метод отображает элементы массива. Далее вызываются методы `ChangeArray` и `ChangeArrayElement`. Это позволяет продемонстрировать, что передача аргумента массива по значению не позволяет предотвратить изменение элементов массива.  
   
 ### <a name="code"></a>Код  
@@ -56,7 +49,7 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="example"></a>Пример  
   
-### <a name="description"></a>Описание  
+### <a name="description"></a>Описание:  
  В следующем примере инициализируется двухмерный массив целых чисел, который передается в метод `Print2DArray`. Этот метод отображает элементы массива.  
   
 ### <a name="code"></a>Код  

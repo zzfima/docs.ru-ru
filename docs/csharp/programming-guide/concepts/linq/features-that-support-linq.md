@@ -1,24 +1,14 @@
 ---
-title: "Возможности C#, поддерживающие LINQ"
-ms.custom: 
+title: Возможности C#, поддерживающие LINQ
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - LINQ [C#], features supporting LINQ
 ms.assetid: 524b0078-ebfd-45a7-b390-f2ceb9d84797
-caps.latest.revision: 
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 2f5accb188e54e0d3e2b941832637ec33afc26b2
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: f1c045ffe311dfad851c7cace37966d8d42a22cc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="c-features-that-support-linq"></a>Возможности C#, поддерживающие LINQ
 В следующем разделе приведены новые конструкции языка, представленные в C# 3.0. Несмотря на то, что эти новые возможности в некоторой степени используются с запросами [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], они не ограничиваются [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] и могут использоваться в любом контексте, где они будут целесообразны.  
@@ -48,7 +38,7 @@ var query = from str in stringArray
   
  Переменные, объявленные как `var`, настолько же строго типизированы, как и переменные, тип которых вы задаете явно. Использование `var` делает возможным создание анонимных типов, однако его можно использовать для любой локальной переменной. Массивы также могут быть объявлены путем неявной типизации.  
   
- Дополнительные сведения см. в разделе [Неявно типизированные локальные переменные](../../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md).  
+ Дополнительные сведения см. в статье [Implicitly Typed Local Variables](../../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md) (Неявно типизированные локальные переменные).  
   
 ## <a name="object-and-collection-initializers"></a>Инициализаторы объектов и коллекций  
  Инициализаторы объектов и коллекций позволяют инициализировать объекты без явного вызова конструктора для объекта. Инициализаторы обычно используются в выражениях запросов при проецировании исходных данных в новый тип данных. При наличии, например, класса с именем `Customer` с общедоступными свойствами `Name` и `Phone` инициализатор объектов можно использовать как в следующем примере кода:  
@@ -66,7 +56,7 @@ Customer cust = new Customer { Name = "Mike", Phone = "555-1212" };
 select new {name = cust.Name, phone = cust.Phone};  
 ```  
   
- Дополнительные сведения см. в разделе [Анонимные типы](../../../../csharp/programming-guide/classes-and-structs/anonymous-types.md).  
+ Дополнительные сведения см. в статье [Анонимные типы](../../../../csharp/programming-guide/classes-and-structs/anonymous-types.md).  
   
 ## <a name="extension-methods"></a>Методы расширения  
  Метод расширения представляет собой статический метод, который может быть связан с типом, чтобы его можно было вызывать, как если бы он являлся методом экземпляра типа. Эта возможность позволяет, по сути, "добавлять" новые методы в существующие типы, фактически не изменяя их. Стандартные операторы запросов представляют собой набор методов расширения, предоставляющих функции запросов [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] для любого типа, реализующего интерфейс <xref:System.Collections.Generic.IEnumerable%601>.  

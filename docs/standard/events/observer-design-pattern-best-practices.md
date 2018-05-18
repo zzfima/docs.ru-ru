@@ -1,29 +1,18 @@
 ---
-title: "Рекомендации по шаблону разработки Observer"
-ms.custom: 
+title: Рекомендации по шаблону разработки Observer
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - observer design pattern [.NET Framework], best practices
 - best practices [.NET Framework], observer design pattern
 ms.assetid: c834760f-ddd4-417f-abb7-a059679d5b8c
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: dc42ccd425b52719b2b69525d2bbbe4607a19982
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 030b62688ba8985a2659769fe20b6ae527471df5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="observer-design-pattern-best-practices"></a>Рекомендации по шаблону разработки Observer
 На платформе .NET Framework шаблон разработки наблюдателя реализован в виде набора интерфейсов. Интерфейс <xref:System.IObservable%601?displayProperty=nameWithType> представляет поставщик данных, который также отвечает за предоставление реализации <xref:System.IDisposable>, позволяющей наблюдателям отменять подписку на уведомления. Интерфейс <xref:System.IObserver%601?displayProperty=nameWithType> представляет наблюдателя. В этом разделе содержатся рекомендации, которым должны следовать разработчики при реализации шаблона разработки наблюдателя с помощью этих интерфейсов.  

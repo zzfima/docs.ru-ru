@@ -1,13 +1,7 @@
 ---
-title: "Уведомления о сборке мусора"
-ms.custom: 
+title: Уведомления о сборке мусора
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,18 +9,13 @@ dev_langs:
 helpviewer_keywords:
 - garbage collection, notifications
 ms.assetid: e12d8e74-31e3-4035-a87d-f3e66f0a9b89
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: ac951ad1f89d058b06280bc176ca7928a1dc65bf
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: d3470ebdd55adc97a60f07228c441cb7c94a53e6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="garbage-collection-notifications"></a>Уведомления о сборке мусора
 В некоторых случаях полная сборка мусора (сборка объектов поколения 2) средой CLR может отрицательно сказаться на производительности. Это может стать проблемой, особенно для серверов, которые обрабатывают большие объемы запросов. Длительный процесс сборки может привести к потере запросов из-за превышения времени ожидания. Чтобы предотвратить запуск полной сборки мусора в критически важные периоды, вы можете настроить уведомления о ее приближении. Это позволит принять меры и перенести нагрузку на другой экземпляр сервера. Также вы можете самостоятельно запустить сборку мусора на экземплярах сервера, которые в текущий момент не применяются для обработки запросов.  

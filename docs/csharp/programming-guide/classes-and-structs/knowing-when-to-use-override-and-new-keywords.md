@@ -1,22 +1,16 @@
 ---
-title: "Использование ключевых слов \"Override\" и \"New\" (Руководство по программированию в C#)"
+title: Использование ключевых слов "Override" и "New" (Руководство по программированию в C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - override keyword [C#]
 - new keyword [C#]
 - polymorphism [C#], using override and new [C#]
 ms.assetid: 323db184-b136-46fc-8839-007886e7e8b0
-caps.latest.revision: "16"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: b4d53f16f046839d56bc1dc37f7b2d8816c5956f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 61bfa87b7aaa7c17d4ba67c69fa1e57ee7415dc0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="knowing-when-to-use-override-and-new-keywords-c-programming-guide"></a>Использование ключевых слов "Override" и "New" (Руководство по программированию в C#)
 В C# метод в производном классе может иметь то же имя, что и метод в базовом классе. Можно задать способ взаимодействия методов, воспользовавшись ключевыми словами [new](../../../csharp/language-reference/keywords/new.md) и [override](../../../csharp/language-reference/keywords/override.md). Модификатор `override` *разворачивает* метод базового класса, а модификатор `new` *скрывает* его. Эта разница показана в примере в этой статье.  

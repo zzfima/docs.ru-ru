@@ -1,13 +1,6 @@
 ---
-title: "Доступ к пользовательским атрибутам"
-ms.custom: 
+title: Доступ к пользовательским атрибутам
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,16 +10,13 @@ helpviewer_keywords:
 - attributes [.NET Framework], accessing
 - reflection, custom attributes
 ms.assetid: 1d8e3398-00d8-47d5-a084-214f9859d3d7
-caps.latest.revision: "15"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0980488f3093bfcaedc730bac126b1b5b6505187
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8aafd1586068dcd7aaf4a72ef5454e3a2698ccd1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="accessing-custom-attributes"></a>Доступ к пользовательским атрибутам
 После того как с элементами программы связаны атрибуты, можно использовать отражение для проверки их существования и получения значений. В .NET Framework версии 1.0 и 1.1 пользовательские атрибуты проверяются в контексте выполнения. Платформа .NET Framework версии 2.0 предоставляет новый контекст загрузки — контекст только для отражения, используемый для проверки кода, который не может быть загружен для выполнения.  

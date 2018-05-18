@@ -1,20 +1,13 @@
 ---
-title: "Локальные функции или лямбда-выражения"
-description: "Узнайте, чем локальные функции могут быть лучше лямбда-выражений."
-keywords: "C# .NET, .NET Core, новейшие возможности, новые локальные функции, лямбда-выражения"
-author: BillWagner
-ms.author: wiwagn
+title: Локальные функции или лямбда-выражения
+description: Узнайте, чем локальные функции могут быть лучше лямбда-выражений.
 ms.date: 06/27/2016
-ms.topic: article
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.devlang: csharp
 ms.assetid: 368d1752-3659-489a-97b4-f15d87e49ae3
-ms.openlocfilehash: 5aa097c19a86e9ae62a37d91fb1b54067280286d
-ms.sourcegitcommit: cec0525b2121c36198379525e69aa5388266db5b
+ms.openlocfilehash: 0dfd34c5637bb4b8ae64a66e1ca1164fddec2cd7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="local-functions-compared-to-lambda-expressions"></a>Сравнение локальных функций и лямбда-выражений
 

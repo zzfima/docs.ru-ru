@@ -1,29 +1,18 @@
 ---
-title: "XDR-проверка с помощью XmlSchemaCollection"
-ms.custom: 
+title: XDR-проверка с помощью XmlSchemaCollection
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 00833027-1428-4586-83c1-42f5de3323d1
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: f875169d43a2f733050b46c76cea0891b4cfabf7
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 4d4e970423693bbe221f0146ecc07dd69e27bc35
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="xdr-validation-with-xmlschemacollection"></a>XDR-проверка с помощью XmlSchemaCollection
 Схема XDR, по которой выполняется проверка, хранится в коллекции **XmlSchemaCollection**. Она связана с URI-кодом пространства имен, который был указан во время добавления схемы в коллекцию. Объект **XmlValidatingReader** сопоставляет URI-код пространства имен в XML-документе со схемой, соответствующей этому URI-коду в коллекции.  

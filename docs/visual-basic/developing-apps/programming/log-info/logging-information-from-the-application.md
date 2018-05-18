@@ -1,12 +1,6 @@
 ---
-title: "Запись сведений в журнал из приложения (Visual Basic)"
-ms.custom: 
+title: Запись сведений в журнал из приложения (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - Log object
 - My.Log object
@@ -15,25 +9,22 @@ helpviewer_keywords:
 - My.Application.Log object
 - examples [Visual Basic], logging application information
 ms.assetid: 8bf4f047-22d6-48d6-aec5-93b98ad5b8e8
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 4e52aaf4c26b4fa60ee04d7df6aa96980ebbf491
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 68ec09dac026e46716ff18dce88acf9d60635026
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="logging-information-from-the-application-visual-basic"></a>Запись сведений в журнал из приложения (Visual Basic)
 Этот раздел содержит сведения о том, как регистрировать в журнале информацию из приложения с помощью объектов `My.Application.Log` или `My.Log` и как расширить возможности ведения журнала в приложении.  
   
  Объект `Log` предоставляет методы для записи информации в прослушиватели журнала приложения, а свойство `TraceSource` объекта `Log` предоставляет подробные сведения о конфигурации. Объект `Log` настраивается в файле конфигурации приложения.  
   
- Объект `My.Log` доступен только для приложений ASP.NET. Для клиентских приложений следует использовать объект `My.Application.Log`. Для получения дополнительной информации см. <xref:Microsoft.VisualBasic.Logging.Log>.  
+ Объект `My.Log` доступен только для приложений ASP.NET. Для клиентских приложений следует использовать объект `My.Application.Log`. Дополнительные сведения см. в разделе <xref:Microsoft.VisualBasic.Logging.Log>.  
   
 ## <a name="tasks"></a>Задачи  
   
-|Целевой тип|См.|  
+|Кому|См.|  
 |--------|---------|  
 |Запись информации о событиях в журналы приложения.|[Практическое руководство. Запись сообщений в журнал](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)|  
 |Запись информации об исключениях в журналы приложения.|[Практическое руководство. Запись в журнал сведений об исключениях](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md)|  

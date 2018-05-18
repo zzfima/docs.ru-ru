@@ -1,20 +1,13 @@
 ---
-title: "Обновленный шаблон событий .NET Core"
-description: "Сведения о том, за счет чего шаблон событий .NET Core обеспечивает гибкость и обратную совместимость, а также о способах реализации безопасной обработки событий с использованием асинхронных подписчиков."
-keywords: .NET, .NET Core
-author: BillWagner
-ms.author: wiwagn
+title: Обновленный шаблон событий .NET Core
+description: Сведения о том, за счет чего шаблон событий .NET Core обеспечивает гибкость и обратную совместимость, а также о способах реализации безопасной обработки событий с использованием асинхронных подписчиков.
 ms.date: 06/20/2016
-ms.topic: article
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.devlang: csharp
 ms.assetid: 9aa627c3-3222-4094-9ca8-7e88e1071e06
-ms.openlocfilehash: cf69cbe0a7adbd274d1cb9e9544dda77d9fa1740
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: d0ad85479265041d895039d6c72f1f9909ea5fa8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="the-updated-net-core-event-pattern"></a>Обновленный шаблон событий .NET Core
 
@@ -86,4 +79,4 @@ worker.StartWorking += async (sender, eventArgs) =>
 
 В следующей статье этой серии материалов вы узнаете об использовании `delegates` и `events` в своих проектах. Это относительно схожие понятия, и сведения в этой статье помогут вам принять оптимальное решение.
 
-[Далее](distinguish-delegates-events.md)
+[Вперед](distinguish-delegates-events.md)

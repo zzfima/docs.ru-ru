@@ -1,31 +1,20 @@
 ---
 title: SpinWait
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - synchronization primitives, SpinWait
 ms.assetid: 36012f42-34e5-4f86-adf4-973f433ed6c6
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 1e67dd59464de09a35941d91ef984db6b7779b8c
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: e5bb6262b32201207853ef702ae38002c2ded252
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="spinwait"></a>SpinWait
 <xref:System.Threading.SpinWait?displayProperty=nameWithType> представляет собой упрощенный тип синхронизации, который позволяет обойтись в низкоуровневых сценариях без ресурсоемких переключений контекста и изменений режима ядра, которые выполняются для событий ядра. На многоядерных компьютерах, если сценарий не подразумевает долгосрочную блокировку ресурсов, эффективнее всего применить цикл ожидания в пользовательском режиме для потока в состоянии ожидания, который после нескольких десятков или сотен повторений снова попытается обратиться к ресурсу. Если ресурс окажется доступен после выхода из такого цикла, вы сэкономите несколько тысяч тактов процессора. Если же ресурс будет недоступен, то вы потратили лишь несколько циклов и можете снова применить ожидание на уровне ядра. Такой подход с циклом и последующим ожиданием иногда называют *двухэтапной операцией ожидания*.  

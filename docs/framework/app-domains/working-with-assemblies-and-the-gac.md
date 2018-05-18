@@ -1,13 +1,6 @@
 ---
-title: "Работа со сборками и глобальным кэшем сборок"
-ms.custom: 
+title: Работа со сборками и глобальным кэшем сборок
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - assemblies [.NET Framework], global assembly cache
 - global assembly cache, benefits
@@ -15,16 +8,13 @@ helpviewer_keywords:
 - GAC (global assembly cache), benefits
 - access control lists [.NET Framework]
 ms.assetid: 8a18e5c2-d41d-49ef-abcb-7c27e2469433
-caps.latest.revision: "12"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6f1ee4855745573a4b73b409279d70906191bfd8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 91e780ed7e841809f21130822babe55ad4935670
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="working-with-assemblies-and-the-global-assembly-cache"></a>Работа со сборками и глобальным кэшем сборок
 Если необходимо обеспечить возможность совместного использования сборки в нескольких приложениях, то ее можно поместить в глобальный кэш сборок. Этот кэш кода уровня компьютера присутствует на любом компьютере, где установлена среда CLR. В глобальном кэше сборок сохраняются сборки, специально предназначенные для совместного использования на компьютере несколькими приложениями. Для установки в глобальном кэше сборка должна иметь строгое имя.  

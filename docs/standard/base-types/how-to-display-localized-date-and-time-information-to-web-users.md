@@ -1,13 +1,7 @@
 ---
-title: "Практическое руководство. Отображение сведений о локализованной дате и времени для веб-пользователей"
-ms.custom: 
+title: Практическое руководство. Отображение сведений о локализованной дате и времени для веб-пользователей
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - formatting [.NET Framework], dates
 - parsing strings [.NET Framework], date and time strings
@@ -16,18 +10,13 @@ helpviewer_keywords:
 - displaying date and time data
 - localized date displays [.NET Framework]
 ms.assetid: 377fe93c-32be-421a-a30a-be639a46ede8
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: b6c68ddd29b8221a073b00ade87e3b9d3dc870b8
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 63775d48ca2e11cfa121f3b7aeaff708d86e50de
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-display-localized-date-and-time-information-to-web-users"></a>Практическое руководство. Отображение сведений о локализованной дате и времени для веб-пользователей
 Веб-страницы могут отображаться в любой точке мира, поэтому в операциях синтаксического анализа и форматирования значений даты и времени при взаимодействии с пользователем не должен использоваться формат по умолчанию (который обычно определяется форматом языка и региональных параметров, установленным для веб-сервера). Вместо этого при обработке строк даты и времени, вводимых пользователем, веб-формы должны выполнять их синтаксический анализ с учетом значений языка и региональных параметров, установленных для пользователя. Аналогичным образом, отображать данные даты и времени для пользователя следует в формате, соответствующем языку и региональным параметрам пользователя. В настоящем разделе показано, как это делается.  
@@ -36,7 +25,7 @@ ms.lasthandoff: 12/23/2017
   
 1.  Определите, заполнен ли массив строк, возвращаемый в свойстве <xref:System.Web.HttpRequest.UserLanguages%2A?displayProperty=nameWithType>. Если нет, перейдите к шагу 6.  
   
-2.  Если массив строк, возвращаемый в свойстве <xref:System.Web.HttpRequest.UserLanguages%2A>, заполнен, извлеките его первый элемент. Первый элемент указывает язык и регион, установленные для пользователя по умолчанию или выбранные им в настройках.  
+2.  Если массив строк, возвращаемый в свойстве <xref:System.Web.HttpRequest.UserLanguages%2A>, заполнен, извлеките его первый элемент. Первый элемент определяет язык и регион, установленные для пользователя по умолчанию или выбранные им в настройках.  
   
 3.  Создайте экземпляр объекта <xref:System.Globalization.CultureInfo>, который представляет выбранные пользователем язык и региональные параметры, вызвав конструктор <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType>.  
   
@@ -64,7 +53,7 @@ ms.lasthandoff: 12/23/2017
   
 6.  В этом обработчике определите, заполнен ли массив строк, возвращаемый в свойстве <xref:System.Web.HttpRequest.UserLanguages%2A?displayProperty=nameWithType>. Если нет, перейдите к шагу 14.  
   
-7.  Если массив строк, возвращаемый в свойстве <xref:System.Web.HttpRequest.UserLanguages%2A>, заполнен, извлеките его первый элемент. Первый элемент указывает язык и регион, установленные для пользователя по умолчанию или выбранные им в настройках.  
+7.  Если массив строк, возвращаемый в свойстве <xref:System.Web.HttpRequest.UserLanguages%2A>, заполнен, извлеките его первый элемент. Первый элемент определяет язык и регион, установленные для пользователя по умолчанию или выбранные им в настройках.  
   
 8.  Создайте экземпляр объекта <xref:System.Globalization.CultureInfo>, который представляет выбранные пользователем язык и региональные параметры, вызвав конструктор <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType>.  
   
@@ -96,9 +85,9 @@ ms.lasthandoff: 12/23/2017
   
  Свойство <xref:System.Web.HttpRequest.UserLanguages%2A?displayProperty=nameWithType> заполняется именами языков и региональных параметров, которые содержатся в заголовках `Accept-Language` HTTP-запроса. Но не все браузеры включают в запрос заголовки `Accept-Language`, а пользователь может принудительно запретить такие заголовки. Это означает, что для синтаксического анализа введенных пользователем данных нужен резервный вариант региональных параметров. Обычно в таких случаях используются инвариантные язык и региональные параметры, возвращаемые в свойстве <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType>. В Internet Explorer пользователи могут вводить имена языков и региональных стандартов в обычное текстовое поле, а значит эти имена могут оказаться недопустимыми. Поэтому при создании экземпляра объекта <xref:System.Globalization.CultureInfo> необходимо обрабатывать исключения.  
   
- Массив <xref:System.Web.HttpRequest.UserLanguages%2A?displayProperty=nameWithType> заполняется данными, извлеченными из HTTP-запроса, полученного от Internet Explorer, в порядке предпочтений пользователя. Первый элемент массива содержит основное имя региона или языка и региональных параметров пользователя. Если массив содержит другие элементы, Internet Explorer в произвольном порядке присваивает им описатели качества, отделенные от имени языка и региональных параметров точкой с запятой. Например, запись для языка и региональных параметров fr-FR может принять форму `fr-FR;q=0.7`.  
+ Массив <xref:System.Web.HttpRequest.UserLanguages%2A?displayProperty=nameWithType> заполняется данными, извлеченными из HTTP-запроса, полученного от Internet Explorer, в порядке пользовательских предпочтений. Первый элемент массива содержит основное имя региона или языка и региональных параметров пользователя. Если массив содержит другие элементы, Internet Explorer в произвольном порядке присваивает им описатели качества, отделенные от имени языка и региональных параметров точкой с запятой. Например, запись для языка и региональных параметров fr-FR может принять форму `fr-FR;q=0.7`.  
   
- Этот пример вызывает конструктор <xref:System.Globalization.CultureInfo.%23ctor%2A>, присваивая параметру `useUserOverride` значение `false`, чтобы создать новый объект <xref:System.Globalization.CultureInfo>. Это означает, что если используется стандартное для сервера имя языка и региональных параметров, то конструктор класса создает новый объект <xref:System.Globalization.CultureInfo> с региональными параметрами по умолчанию без учета настроек, указанных на сервере в приложении **Язык и региональные стандарты**. Маловероятно, что измененные в настройках сервера значения существуют на компьютере пользователя или учитываются при вводе данных.  
+ Этот пример вызывает конструктор <xref:System.Globalization.CultureInfo.%23ctor%2A>, присваивая параметру `useUserOverride` значение `false`, чтобы создать объект <xref:System.Globalization.CultureInfo>. Это означает, что если используется стандартное для сервера имя языка и региональных параметров, конструктор класса создает объект <xref:System.Globalization.CultureInfo> с региональными параметрами по умолчанию без учета настроек, указанных на сервере в приложении  **Язык и региональные стандарты**. Маловероятно, что измененные в настройках сервера значения существуют на компьютере пользователя или учитываются при вводе данных.  
   
  Так как в этом примере выполняется синтаксический анализ двух строковых представлений даты и времени (одно из них вводится пользователем, а другое сохраняется в скрытом поле), мы заранее определяем возможные объекты <xref:System.Globalization.CultureInfo>, которые могут нам потребоваться. Этот код создает массив объектов <xref:System.Globalization.CultureInfo>, число которых на один больше, чем число элементов, возвращаемых свойством <xref:System.Web.HttpRequest.UserLanguages%2A?displayProperty=nameWithType>. Затем код создает отдельный объект <xref:System.Globalization.CultureInfo> для каждой строки языка и региона, а также создает экземпляр объекта <xref:System.Globalization.CultureInfo>, который представляет <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType>.  
   
@@ -107,16 +96,16 @@ ms.lasthandoff: 12/23/2017
 ## <a name="compiling-the-code"></a>Компиляция кода  
  Чтобы скомпилировать этот код, создайте веб-страницу [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] без кода программной части. Затем скопируйте наш пример на эту веб-страницу, заменив им весь существующий код. Веб страница [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] должна содержать следующие элементы управления:  
   
--   Элемент управления <xref:System.Web.UI.WebControls.Label>, который не указан в коде. Для его свойства <xref:System.Web.UI.WebControls.TextBox.Text%2A> задайте значение "Введите число:".  
+-   элемент управления <xref:System.Web.UI.WebControls.Label>, который не указан в коде (для его свойства <xref:System.Web.UI.WebControls.TextBox.Text%2A> задайте значение "Введите число:");  
   
 -   элемент управления <xref:System.Web.UI.WebControls.TextBox> с именем `DateString`;  
   
--   элемент управления <xref:System.Web.UI.WebControls.Button> с именем `OKButton`; Для его свойства <xref:System.Web.UI.WebControls.Button.Text%2A> задайте значение "ОК".  
+-   элемент управления <xref:System.Web.UI.WebControls.Button> с именем `OKButton`; (для его свойства <xref:System.Web.UI.WebControls.Button.Text%2A> задайте значение "ОК").  
   
 -   элемент управления <xref:System.Web.UI.WebControls.HiddenField> с именем `DateInfo`;  
   
 ## <a name="net-framework-security"></a>Безопасность платформы .NET Framework  
- Чтобы пользователи не могли внедрить скрипты в поток HTML, никогда не передавайте введенные данные напрямую в ответе сервера. Всегда шифруйте ответ с помощью метода <xref:System.Web.HttpServerUtility.HtmlEncode%2A?displayProperty=nameWithType>.  
+ Чтобы пользователи не могли внедрять скрипты в поток HTML, никогда не передавайте введенные данные напрямую в ответе сервера. Всегда шифруйте ответ с помощью метода <xref:System.Web.HttpServerUtility.HtmlEncode%2A?displayProperty=nameWithType>.  
   
 ## <a name="see-also"></a>См. также  
  [Выполнение операций форматирования](../../../docs/standard/base-types/performing-formatting-operations.md)  

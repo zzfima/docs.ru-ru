@@ -1,28 +1,22 @@
 ---
-title: "Члены (Руководство по программированию на C#)"
+title: Члены (Руководство по программированию на C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - types [C#], nested types
 - C# language, type members
 ms.assetid: 4a30a4ab-d690-4936-9124-92ce9448665a
-caps.latest.revision: "20"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 184d4f2976b8594c308efeb113a0490499e3460e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 61818b153bb74c5c0da053f381fd1ed9132c066b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="members-c-programming-guide"></a>Члены (Руководство по программированию на C#)
 В классах и структурах есть члены, представляющие их данные и поведение. Члены класса включают все члены, объявленные в этом классе, а также все члены (кроме конструкторов и методов завершения), объявленные во всех классах в иерархии наследования данного класса. Закрытые члены в базовых классах наследуются, но недоступны из производных классов.  
   
  В следующей таблице перечислены виды членов, которые содержатся в классе или в структуре.  
   
-|Член|Описание|  
+|Член|Описание:|  
 |------------|-----------------|  
 |[Поля](../../../csharp/programming-guide/classes-and-structs/fields.md)|Поля являются переменными, объявленными в области класса. Поле может иметь встроенный числовой тип или быть экземпляром другого класса. Например, в классе календаря может быть поле, содержащее текущую дату.|  
 |[Константы](../../../csharp/programming-guide/classes-and-structs/constants.md)|Константы — это поля или свойства, значения которых устанавливаются во время компиляции и не изменяются.|  

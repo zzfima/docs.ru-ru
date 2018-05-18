@@ -2,22 +2,15 @@
 title: Классы (Руководство по программированию на C#)
 description: Сведения о типах классов и их создании
 ms.date: 04/05/2018
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - classes [C#]
 - C# language, classes
 ms.assetid: e8848524-7273-429f-8aba-c658d5eff5ad
-caps.latest.revision: 40
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 1909623d3d8f6110a5fb466575bdab2d45495c2a
-ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
+ms.openlocfilehash: 808e25315b0010fd55112f2ed237485c3d0c40d4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="classes-c-programming-guide"></a>Классы (Руководство по программированию на C#)
 *Класс* — это конструкция, которая позволяет создавать собственные настраиваемые типы путем группирования переменных других типов, методов и событий. Класс похож на проект. Он определяет данные и поведение типа. Если класс не объявлен статическим, то клиентский код может создавать его *экземпляры*. Они представляют собой *объекты*, присваиваемые переменным. Экземпляр класса остается в памяти до тех пор, пока все ссылки на него не выйдут из области. В этот момент среда CLR помечает ее пригодной для сборки мусора. Если класс объявляется как [статический](../../../csharp/language-reference/keywords/static.md), то его экземпляры создавать нельзя, и клиентский код может получать к нему доступ только через сам класс. Дополнительные сведения см. в статье [Статические классы и члены статических классов](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md).  

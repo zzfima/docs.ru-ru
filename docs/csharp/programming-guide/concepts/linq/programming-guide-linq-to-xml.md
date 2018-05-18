@@ -1,21 +1,12 @@
 ---
-title: "Руководство по программированию (LINQ to XML) (C#)"
-ms.custom: 
+title: Руководство по программированию (LINQ to XML) (C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: 4b1ffd10-ab81-4a0d-a0ca-e9876478d924
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 7ee6ac9d13d265442e6d5b9f02c6d5788e75c50f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 03742916c973f9ddac8163fe231cba45750ff080
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="programming-guide-linq-to-xml-c"></a>Руководство по программированию (LINQ to XML) (C#)
 Этот раздел содержит теоретические и практические сведения о программировании при помощи [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].  
@@ -27,9 +18,9 @@ ms.lasthandoff: 11/21/2017
   
  [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] основывается на использовании универсальных классов. Поэтому очень важно понимать принципы использования универсальных классов. В дальнейшем полезно ознакомиться с делегатами, которые обозначаются как параметризованные типы. Если вы не знакомы с универсальными классами в языке C#, см. раздел [Универсальные классы](../../../../csharp/programming-guide/generics/generic-classes.md).  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
   
-|Раздел|Описание|  
+|Раздел|Описание:|  
 |-----------|-----------------|  
 |[Общие сведения о программировании LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-programming-overview.md)|Приводит общие сведения о классах [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], а также дает подробные сведения о трех самых важных классах: <xref:System.Xml.Linq.XElement>, <xref:System.Xml.Linq.XAttribute> и <xref:System.Xml.Linq.XDocument>.|  
 |[Создание деревьев XML (C#)](../../../../csharp/programming-guide/concepts/linq/creating-xml-trees.md)|Приводит общие представления и основанные на задачах сведения о создании XML-деревьев. Можно создавать XML-деревья при помощи функциональной конструкции либо путем синтаксического анализа текста XML из строки или файла. Для распределения содержимого по XML-дереву можно использовать <xref:System.Xml.XmlReader>.|  

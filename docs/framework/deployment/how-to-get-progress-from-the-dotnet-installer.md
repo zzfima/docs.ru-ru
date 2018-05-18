@@ -1,31 +1,19 @@
 ---
-title: "Практическое руководство. Получение хода выполнения установщика .NET Framework 4.5"
-ms.custom: 
+title: Практическое руководство. Получение хода выполнения установщика .NET Framework 4.5
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - cpp
 helpviewer_keywords:
 - progress information, .NET Framework installer
 - .NET Framework, installing
 ms.assetid: 0a1a3ba3-7e46-4df2-afd3-f3a8237e1c4f
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: c11d1c3469100b8bd0eb530a59bb3a01b152f3f1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 84bd96f27e8276546bef0dd9994163ccd843ac20
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-get-progress-from-the-net-framework-45-installer"></a>Практическое руководство. Получение хода выполнения установщика .NET Framework 4.5
 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] — это распространяемый пакет среды выполнения. Если вы разрабатываете приложения для данной версии платформы .NET Framework, можно включить (присоединить к цепочке) установку [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] в качестве необходимого компонента при установке приложения. Для создания специальной или универсальной процедуры установки может потребоваться автоматический запуск и отслеживание процесса установки [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] с одновременным отображением собственного представления хода выполнения установки. Для включения отслеживания в автоматическом режиме установка [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], которая может находиться под наблюдением, определяет протокол с помощью сегмента памяти ввода-вывода (MMIO) для связи с вашей установкой (наблюдателем или формирователем цепочки). Этот протокол определяет способ, которым формирователь цепочки получает информацию о ходе выполнения, получает подробные результаты, отвечает на сообщения и отменяет установку [!INCLUDE[net_v45](../../../includes/net-v45-md.md)].  

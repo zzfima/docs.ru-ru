@@ -1,24 +1,15 @@
 ---
-title: "Доступ к параметрам приложения (Visual Basic)"
-ms.custom: 
+title: Доступ к параметрам приложения (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - My.Settings object [Visual Basic], application settings
 - examples [Visual Basic], application settings
 ms.assetid: e38d0cc7-247a-46ca-ba04-f2913f0adb2e
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: ea87d6a1d20a7d85b063990f6e401f90548627be
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 3b933287d18a2519969852117fc6f847e9ead461
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="accessing-application-settings-visual-basic"></a>Доступ к параметрам приложения (Visual Basic)
 В этом разделе содержатся ссылки на разделы с описанием объекта `My.Settings` и задач, которые он позволяет выполнить.  
@@ -31,7 +22,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="tasks"></a>Задачи  
  Приведенная ниже таблица содержит примеры, показывающие, как получить доступ к формам приложения.  
   
-|Целевой тип|См.|  
+|Кому|См.|  
 |--------|---------|  
 |Обновление значения пользовательского параметра|[Практическое руководство. Изменение пользовательских параметров в Visual Basic](../../../../visual-basic/developing-apps/programming/app-settings/how-to-change-user-settings.md)|  
 |Отображение параметров приложения и пользователя в таблице свойств|[Практическое руководство. Создание таблицы свойств для пользовательских параметров в Visual Basic](../../../../visual-basic/developing-apps/programming/app-settings/how-to-create-property-grids-for-user-settings.md)|  

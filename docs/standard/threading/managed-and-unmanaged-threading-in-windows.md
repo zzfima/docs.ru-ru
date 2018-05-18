@@ -1,30 +1,19 @@
 ---
 title: Управляемые и неуправляемые потоки в Windows
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - threading [.NET Framework], unmanaged
 - threading [.NET Framework], managed
 - managed threading
 ms.assetid: 4fb6452f-c071-420d-9e71-da16dee7a1eb
-caps.latest.revision: 17
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 66bf8458a3f4f9dd622129e82acb659dddf8467a
-ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.openlocfilehash: 50e709c8b5de505b17efea8ddf333633b2bd7400
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="managed-and-unmanaged-threading-in-windows"></a>Управляемые и неуправляемые потоки в Windows
 Управление всеми потоками осуществляется посредством класса <xref:System.Threading.Thread> , включая потоки, созданные средой CLR или созданные за пределами среды выполнения и входящие в управляемую среду для выполнения кода. Среда выполнения отслеживает в своем процессе все потоки, которые когда-либо выполняли код в управляемой среде. Другие потоки она не отслеживает. Потоки могут входить в управляемую среду выполнения посредством COM-взаимодействия (так как среда выполнения предоставляет управляемые объекты неуправляемой среде в качестве COM-объектов), функции COM [DllGetClassObject](https://msdn.microsoft.com/library/ms680760.aspx) и вызова неуправляемого кода.  

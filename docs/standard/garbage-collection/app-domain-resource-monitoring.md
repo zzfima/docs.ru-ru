@@ -1,31 +1,20 @@
 ---
-title: "Отслеживание ресурсов домена приложения"
-ms.custom: 
+title: Отслеживание ресурсов домена приложения
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - monitoring managed memory use by application domain
 - application domains, memory use
 - memory use, monitoring
 - application domains, resource monitoring
 ms.assetid: 318bedf8-7f35-4f00-b34a-2b7b8e3fa315
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 648f8b86ecf73a7da5f3f33d71fb8617bacccee1
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 45b0f8293b41d42114b189c3ebe917a4f64c4f27
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="application-domain-resource-monitoring"></a>Отслеживание ресурсов домена приложения
 Функция наблюдения за ресурсами доменов приложений (ARM) позволяет узлам отслеживать загрузку ЦП и использование памяти доменом приложения. Это полезно для некоторых узлов, таких как ASP.NET, которые используют несколько доменов приложений в длительных процессах. Узел может выгрузить домен приложения, если его работа понижает производительность процесса в целом. Но для нужно определить проблемное приложение. ARM предоставляет сведения, которые помогут решить эту задачу.  

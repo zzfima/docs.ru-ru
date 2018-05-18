@@ -1,31 +1,22 @@
 ---
-title: "Приступая к работе с LINQ в C#"
-ms.custom: 
+title: Приступая к работе с LINQ в C#
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - LINQ [C#]
 - queries [LINQ in C#]
 - LINQ, C#
 - queries [LINQ], LINQ in C#
 ms.assetid: b8700c1f-05c9-4380-b6eb-e34c4da38e54
-caps.latest.revision: "17"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 1e8f520f1fa5146f68bae0b634f8b2b1d5d875d9
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 843126d86df36b2aeaa8f57248afb930b92a9ff0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="getting-started-with-linq-in-c"></a>Приступая к работе с LINQ в C#
 Этот раздел содержит основные сведения, которые необходимы для понимания остальной документации по LINQ и примеров.  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Введение в запросы LINQ (C#)](../../../../csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md)  
  Описание трех составляющих основной операции запроса LINQ, которые являются общими для всех языков и источников данных.  
   

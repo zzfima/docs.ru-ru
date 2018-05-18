@@ -41,9 +41,9 @@ ms.lasthandoff: 05/07/2018
   
 -   поведения конечных точек (типы <xref:System.ServiceModel.Description.IEndpointBehavior>) позволяют настраивать конечные точки служб и соответствующие объекты <xref:System.ServiceModel.Dispatcher.EndpointDispatcher>;  
   
--   поведения контрактов (типы <xref:System.ServiceModel.Description.IContractBehavior>) позволяют настраивать классы <xref:System.ServiceModel.Dispatcher.ClientRuntime> и <xref:System.ServiceModel.Dispatcher.DispatchRuntime> в приложениях клиентов и служб соответственно;  
+-   Поведения контрактов (типы <xref:System.ServiceModel.Description.IContractBehavior>) позволяют настраивать классы <xref:System.ServiceModel.Dispatcher.ClientRuntime> и <xref:System.ServiceModel.Dispatcher.DispatchRuntime> в приложениях клиентов и служб соответственно;  
   
--   поведения операций (типы <xref:System.ServiceModel.Description.IOperationBehavior>) позволяют настраивать классы <xref:System.ServiceModel.Dispatcher.ClientOperation> и <xref:System.ServiceModel.Dispatcher.DispatchOperation> в приложениях клиентов и служб.  
+-   Поведения операций (типы <xref:System.ServiceModel.Description.IOperationBehavior>) позволяют настраивать классы <xref:System.ServiceModel.Dispatcher.ClientOperation> и <xref:System.ServiceModel.Dispatcher.DispatchOperation> в приложениях клиентов и служб.  
   
  Эти поведения можно добавлять в различные объекты описания путем реализации пользовательских атрибутов, с помощью файлов конфигурации приложений или путем их непосредственного добавления в коллекцию поведений соответствующего объекта описания. Однако их обязательно необходимо добавлять в объекты описания службы или конечной точки службы до вызова метода <xref:System.ServiceModel.ICommunicationObject.Open%2A?displayProperty=nameWithType> объектов <xref:System.ServiceModel.ServiceHost> и <xref:System.ServiceModel.ChannelFactory%601>.  
   

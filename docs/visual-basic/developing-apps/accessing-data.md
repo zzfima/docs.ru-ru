@@ -1,22 +1,15 @@
 ---
 title: Доступ к данным в приложениях Visual Basic
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - data [Visual Basic]
 - Visual Basic, data access
 ms.assetid: 3086ab38-3be5-4b22-9385-7d0e16b04f6a
-caps.latest.revision: 23
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: fb6645279a71252ff0ac81348c460b8981771797
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: 2e6cfc3d6d8752b12fa20a357dedfeb1b3346dce
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="accessing-data-in-visual-basic-applications"></a>Доступ к данным в приложениях Visual Basic
 В Visual Basic входит несколько новых возможностей для разработки приложений, обращающихся к данным. Формы с привязкой к данным для приложений Windows создаются путем перетаскивания элементов из [окна "Источники данных"](/visualstudio/data-tools/add-new-data-sources) на форму. Привязка элементов управления к данным осуществляется путем перетаскивания элементов из **окна "Источники данных"** на форму.  

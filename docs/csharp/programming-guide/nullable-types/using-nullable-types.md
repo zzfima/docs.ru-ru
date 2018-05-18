@@ -1,28 +1,21 @@
 ---
-title: "Использование допускающих значение NULL типов (Руководство по программированию на C#)"
+title: Использование допускающих значение NULL типов (Руководство по программированию на C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - nullable types [C#], about nullable types
 ms.assetid: 0bacbe72-ce15-4b14-83e1-9c14e6380c28
-caps.latest.revision: 
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: c8a42392bbcd2e53c54ff4c13bf98c048262ae4d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: d2fe0f34c45d3de0516a71ca5ed4dc807df4bf93
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-nullable-types-c-programming-guide"></a>Использование допускающих значение NULL типов (Руководство по программированию на C#)
 Типы, допускающие значение NULL, могут представлять все значения своего основного типа, а также само значение [NULL](../../../csharp/language-reference/keywords/null.md). Типы, допускающие значение null, объявляются одним из следующих двух способов:  
   
  `System.Nullable<T> variable`  
   
- -или-  
+ - или -  
   
  `T? variable`  
   
@@ -106,13 +99,13 @@ ms.lasthandoff: 11/21/2017
 |X|y|x&y|x&#124;y|  
 |-------|-------|---------|--------------|  
 |true|true|true|true|  
-|true|false|false|true|  
+|true|False|false|true|  
 |true|null|null|true|  
-|false|true|false|true|  
-|false|false|false|false|  
-|false|null|false|null|  
+|False|true|False|true|  
+|False|False|False|False|  
+|False|null|False|null|  
 |null|true|null|true|  
-|null|false|false|null|  
+|null|False|False|null|  
 |null|null|null|null|  
   
 ## <a name="see-also"></a>См. также  

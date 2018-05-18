@@ -1,13 +1,6 @@
 ---
-title: "Динамическая загрузка и использование типов"
-ms.custom: 
+title: Динамическая загрузка и использование типов
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -19,16 +12,13 @@ helpviewer_keywords:
 - implicit late binding
 - reflection, dynamically using types
 ms.assetid: db985bec-5942-40ec-b13a-771ae98623dc
-caps.latest.revision: "15"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0b924f1c1b46eb132070b6d582cf065f38a8a600
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9795fa411d3b81f9092ddab183c6978ee701ef67
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dynamically-loading-and-using-types"></a>Динамическая загрузка и использование типов
 Отражение предоставляет инфраструктуру, с помощью которой компиляторы различных языков, таких как [!INCLUDE[vbprvbext](../../../includes/vbprvbext-md.md)] и JScript, реализуют позднее связывание. Привязка — это процесс поиска объявления (то есть реализации), которое соответствует уникально определенному типу. Если этот процесс происходит во время выполнения, а не во время компиляции, он называется поздним связыванием. [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)] позволяет использовать неявное позднее связывание в коде; компилятор Visual Basic вызывает вспомогательный метод, который использует отражение для получения типа объекта. Аргументы, передаваемые вспомогательному методу, приводят к вызову соответствующего метода во время выполнения. Эти аргументы определяют экземпляр (объект), для которого вызывается метод, имя вызываемого метода (строка) и аргументы, передаваемые в вызываемый метод (массив объектов).  

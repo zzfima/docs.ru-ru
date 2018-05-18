@@ -1,26 +1,15 @@
 ---
 title: Копирование существующих узлов из одного документа в другой
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 3caa78c1-3448-4b7b-b83c-228ee857635e
-caps.latest.revision: ''
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 958dccfc184857b0edd12cd1d9afe7b3b468b1e6
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
-ms.translationtype: MT
+ms.openlocfilehash: ca36ffdd2eb5eb3acfbacbd543eebf17cfffb5d3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="copying-existing-nodes-from-one-document-to-another"></a>Копирование существующих узлов из одного документа в другой
 Метод **ImportNode** позволяет скопировать узел или целое поддерево узлов из одного документа **XmlDocument** в другой. Узел, возвращенный после вызова, является копией узла из исходного документа, включая значения атрибутов, имя узла, тип узла и все атрибуты, связанные с пространством имен, такие как префикс, локальное имя и URI пространства имен. Исходный документ не изменяется. После импорта узла его необходимо добавить к дереву с помощью одного из методов, используемых для вставки узлов.  

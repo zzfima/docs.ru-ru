@@ -2,22 +2,15 @@
 title: Введение в язык C# и .NET Framework
 description: Изучите основы C# и .NET. Ознакомьтесь с общими сведениями о языке C# и экосистеме .NET.
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: get-started-article
 helpviewer_keywords:
 - C# language, about C# language
 - Visual C#, about
 ms.assetid: 0a2dff4e-cd84-42ff-8141-e89889b24081
-caps.latest.revision: 32
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 9713b61e9af25e6acba2d6b11b46f2e99f1f1800
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: ab2d3042aff51e85b50296ce6f4382f588e1af71
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="introduction-to-the-c-language-and-the-net-framework"></a>Введение в язык C# и .NET Framework
 C# — это изящный объектно-ориентированный язык со строгой типизацией, позволяющий разработчикам создавать различные безопасные и надежные приложения, работающие на платформе [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. C# можно использовать для создания клиентских приложений Windows, XML-веб-служб, распределенных компонентов, приложений клиент-сервер, приложений баз данных и т. д. Visual C# предоставляет развитый редактор кода, удобные конструкторы пользовательского интерфейса, интегрированный отладчик и многие другие средства, которые упрощают разработку приложений на языке C# для платформы [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].  

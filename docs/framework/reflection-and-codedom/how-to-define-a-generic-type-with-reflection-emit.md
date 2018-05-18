@@ -1,13 +1,6 @@
 ---
-title: "Практическое руководство. Определение универсального типа с порождаемым отражением"
-ms.custom: 
+title: Практическое руководство. Определение универсального типа с порождаемым отражением
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,16 +10,13 @@ helpviewer_keywords:
 - generics [.NET Framework], dynamic types
 - reflection emit, generic types
 ms.assetid: 07d5f01a-7b5b-40ea-9b15-f21561098fe4
-caps.latest.revision: "14"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d6096a54c6a530035bd32c24d427ba047f905476
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 34ed0d4752eb42f0bd3df8167d498b99d7af1080
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-define-a-generic-type-with-reflection-emit"></a>Практическое руководство. Определение универсального типа с порождаемым отражением
 В этом разделе приведено описание способов создания простого универсального типа с двумя параметрами типа, порядка применения ограничений класса, ограничений интерфейса и специальных ограничений параметров типа, создания элементов, использующих параметры типа класса в качестве типов параметров и возвращаемых типов.  

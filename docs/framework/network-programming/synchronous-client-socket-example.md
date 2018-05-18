@@ -1,12 +1,6 @@
 ---
-title: "Пример синхронного сокета клиента"
-ms.custom: 
+title: Пример синхронного сокета клиента
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,16 +9,14 @@ helpviewer_keywords:
 - synchronous client sockets
 - sockets, synchronous client sockets
 ms.assetid: 2c7d5be7-2221-467c-a839-5744ec4d576d
-caps.latest.revision: "8"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: be6c48f240290e2571bfc605bc9c3a84f59aa8e3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 2931e1ee9644952f2f643941e2076a7e2d5762db
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="synchronous-client-socket-example"></a>Пример синхронного сокета клиента
 Приведенная ниже программа создает клиент, который подключается к серверу. Клиент создается с использованием синхронного сокета, поэтому выполнение клиентского приложения приостанавливается до тех пор, пока сервер не вернет ответ. Приложение отправляет строку на сервер, а затем выводит возвращенную им строку в консоли.  

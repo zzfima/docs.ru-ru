@@ -1,13 +1,7 @@
 ---
-title: "Шаблон разработки Observer"
-ms.custom: 
+title: Шаблон разработки Observer
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -18,18 +12,13 @@ helpviewer_keywords:
 - IObservable(Of T) interface
 - observer design pattern [.NET Framework]
 ms.assetid: 3680171f-f522-453c-aa4a-54f755a78f88
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: c13424ad817ae73b5019f0ce5a7cda54c84adc71
-ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
+ms.openlocfilehash: d1dbd2c991f4b4259caa180375283ecb6d957336
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="observer-design-pattern"></a>Шаблон разработки Observer
 Шаблон разработки наблюдателя позволяет подписчику регистрироваться у поставщика и получать от него уведомления. Он подходит для любого сценария, в котором требуется использование push-уведомлений. Шаблон определяет *поставщик* (также называемый *субъектом* или *наблюдаемым*) и ноль, один или несколько *наблюдателей*. Наблюдатели регистрируются у поставщика, и при возникновении предварительно заданного условия, события или изменения состояния поставщик автоматически уведомляет все наблюдатели путем вызова одного из их методов. В вызове метода поставщик также может предоставить наблюдателям сведения о текущем состоянии. В .NET Framework шаблон разработки наблюдателя применяется путем реализации универсальных интерфейсов <xref:System.IObservable%601?displayProperty=nameWithType> и <xref:System.IObserver%601?displayProperty=nameWithType>. Параметр универсального типа представляет тип, который предоставляет сведения об уведомлении.  

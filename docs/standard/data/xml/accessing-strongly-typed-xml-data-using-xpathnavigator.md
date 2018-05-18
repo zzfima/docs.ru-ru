@@ -1,29 +1,18 @@
 ---
-title: "Доступ к XML-данным со строгой типизацией с помощью XPathNavigator"
-ms.custom: 
+title: Доступ к XML-данным со строгой типизацией с помощью XPathNavigator
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 898e0f52-8a7c-4d1f-afcd-6ffb28b050b4
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 651a8e11b5782227cdf5ffcc3d53cf2c75def031
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 040a137f9b7c26c4484a69313e1f405699a19b64
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="accessing-strongly-typed-xml-data-using-xpathnavigator"></a>Доступ к XML-данным со строгой типизацией с помощью XPathNavigator
 Класс <xref:System.Xml.XPath.XPathNavigator> как экземпляр модели данных XPath 2.0, может содержать данные со строгой типизацией, которые сопоставляются с типами CLR. Согласно модели данных XPath 2.0, только элементы и атрибуты могут содержать данные со строгой типизацией. Класс <xref:System.Xml.XPath.XPathNavigator> предоставляет механизмы для доступа к данным со строгой типизацией в объектах <xref:System.Xml.XPath.XPathDocument> и <xref:System.Xml.XmlDocument>, а также механизмы для преобразования данных из одного типа в другой.  

@@ -1,30 +1,19 @@
 ---
-title: "Обход XML-схем"
-ms.custom: 
+title: Обход XML-схем
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 - cpp
 ms.assetid: cce69574-5861-4a30-b730-2e18d915d8ee
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: ceca36b5e988751dff34b5574978aa0ae2da1259
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: b02fd72c705d264394b83b89fc7ec802be7e502a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="traversing-xml-schemas"></a>Обход XML-схем
 Обзор схемы XML с помощью API-интерфейса объектной модели схемы XML (SOM) предоставляет доступ к элементам, атрибутам и типам, хранящимся в модели SOM. Проход по схеме XML, загружаемой в SOM, представляет собой также первый шаг в изменении схемы XML с помощью SOM API.  

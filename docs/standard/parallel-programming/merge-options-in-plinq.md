@@ -1,31 +1,20 @@
 ---
 title: Параметры слияние в PLINQ
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - PLINQ queries, merge options
 ms.assetid: e8f7be3b-88de-4f33-ab14-dc008e76c1ba
-caps.latest.revision: 10
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 9e155ee8de2846fc3c8c767a77f365127923f757
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 7df080185db9631e47bb7a886f6e0db894974a6b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="merge-options-in-plinq"></a>Параметры слияние в PLINQ
 Когда запрос выполняется как параллельный, PLINQ разделяет исходную последовательность между несколькими потоками, чтобы они могли параллельно работать с разными частями. Если результаты будут использоваться в одном потоке, например в цикле `foreach` (`For Each` в Visual Basic), то полученные в каждом потоке результаты нужно объединить в одну последовательность. PLINQ может выполнять разные типы слияния в зависимости от операторов, которые присутствуют в запросе. Например, для операторов, изменяющих порядок результатов, необходимо собрать в буфер все элементы из всех потоков. Для потока ожидающего такой результат (и для пользователя приложения) может пройти достаточно большой период времени, пока появятся первые результаты полностью буферизованного запроса. Другие операторы по умолчанию используют частичную буферизацию, то есть возвращают результаты несколькими пакетами. Один оператор (<xref:System.Linq.ParallelEnumerable.ForAll%2A>) по умолчанию не использует буферизацию. Он немедленно выдает все элементы из всех потоков.  

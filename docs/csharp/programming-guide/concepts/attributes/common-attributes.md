@@ -1,21 +1,12 @@
 ---
-title: "Общие атрибуты (C#)"
-ms.custom: 
+title: Общие атрибуты (C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: 785a0526-6c0e-4599-8c61-ccdc88dd9965
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 4e0a8912aa60e4c2918bb812963d83fae8d529f1
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: 771460f8547252448be1b74526ec2babb719c3fa
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="common-attributes-c"></a>Общие атрибуты (C#)
 В этом разделе описываются атрибуты, которые чаще всего используются в программах C#.  
@@ -50,7 +41,7 @@ ms.lasthandoff: 12/09/2017
   
  В следующей таблице приведены атрибуты удостоверения.  
   
-|Атрибут|Назначение|  
+|Атрибут|Цель|  
 |---------------|-------------|  
 |<xref:System.Reflection.AssemblyName>|Полностью описывает удостоверение сборки.|  
 |<xref:System.Reflection.AssemblyVersionAttribute>|Задает версию сборки.|  
@@ -60,7 +51,7 @@ ms.lasthandoff: 12/09/2017
 ### <a name="informational-attributes"></a>Информационные атрибуты  
  Информационные атрибуты можно использовать для предоставления дополнительных сведений о компании или продукте в сборке. В следующей таблице показаны информационные атрибуты, определенные в пространстве имен <xref:System.Reflection?displayProperty=nameWithType>.  
   
-|Атрибут|Назначение|  
+|Атрибут|Цель|  
 |---------------|-------------|  
 |<xref:System.Reflection.AssemblyProductAttribute>|Определяет настраиваемый атрибут, задающий имя продукта для манифеста сборки.|  
 |<xref:System.Reflection.AssemblyTrademarkAttribute>|Определяет настраиваемый атрибут, задающий товарный знак для манифеста сборки.|  
@@ -73,7 +64,7 @@ ms.lasthandoff: 12/09/2017
 ### <a name="assembly-manifest-attributes"></a>Атрибуты манифеста сборки  
  Атрибуты манифеста сборки можно использовать для предоставления сведений в манифесте сборки. К ним относится заголовок, описание, псевдоним по умолчанию и конфигурация. В следующей таблице показаны атрибуты манифеста сборки, определенные в пространстве имен <xref:System.Reflection?displayProperty=nameWithType>.  
   
-|Атрибут|Назначение|  
+|Атрибут|Цель|  
 |---------------|-------------|  
 |<xref:System.Reflection.AssemblyTitleAttribute>|Определяет настраиваемый атрибут, задающий название сборки для манифеста сборки.|  
 |<xref:System.Reflection.AssemblyDescriptionAttribute>|Определяет настраиваемый атрибут, задающий описание сборки для манифеста сборки.|  
@@ -229,7 +220,7 @@ class SampleClass
   
  Для получения этих сведений используются атрибуты, которые применяются к необязательным параметрам. Каждый необязательный параметр задает значение по умолчанию. В следующей таблице перечислены информационные атрибуты вызывающего объекта, которые определены в пространстве имен <xref:System.Runtime.CompilerServices?displayProperty=nameWithType>:  
   
-|Атрибут|Описание|Тип|  
+|Атрибут|Описание:|Тип|  
 |---|---|---|  
 |<xref:System.Runtime.CompilerServices.CallerFilePathAttribute>|Полный путь исходного файла, содержащего вызывающий объект. Это путь во время компиляции.|`String`|  
 |<xref:System.Runtime.CompilerServices.CallerLineNumberAttribute>|Номер строки в исходном файле, из которого вызывается метод.|`Integer`|  

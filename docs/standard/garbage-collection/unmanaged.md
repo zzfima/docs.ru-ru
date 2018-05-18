@@ -1,13 +1,7 @@
 ---
-title: "Очистка неуправляемых ресурсов"
-ms.custom: 
+title: Очистка неуправляемых ресурсов
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Close method
 - Dispose method
@@ -18,18 +12,13 @@ helpviewer_keywords:
 - unmanaged resource cleanup
 - Finalize method
 ms.assetid: a17b0066-71c2-4ba4-9822-8e19332fc213
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: fea76042bb603889764a9d42b5a7836d704fcd48
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 5e32d2d4424d05b95af1eda400974da3293b8499
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cleaning-up-unmanaged-resources"></a>Очистка неуправляемых ресурсов
 Для большинства объектов, создаваемых приложением, управление памятью осуществляется сборщиком мусора .NET. Однако при создании объектов, которые включают неуправляемые ресурсы, после использования неуправляемых ресурсов в приложении необходимо освобождать их явно. Основным типом неуправляемых ресурсов являются объекты, заключающие в себе ресурсы операционной системы, такие как файлы, окна, сетевые подключения и подключения к базам данным. Хотя сборщик мусора может отслеживать время жизни управляемого объекта, инкапсулирующего неуправляемые ресурсы, он не имеет сведений о том, как освобождать такие ресурсы.  

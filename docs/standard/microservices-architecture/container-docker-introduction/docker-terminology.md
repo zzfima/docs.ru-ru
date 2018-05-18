@@ -1,21 +1,14 @@
 ---
-title: "Терминология Docker"
-description: "Архитектура микрослужб .NET для упакованных в контейнеры приложений .NET | Терминология Docker"
-keywords: "Docker, микрослужбы, ASP.NET, контейнер"
+title: Терминология Docker
+description: Архитектура микрослужб .NET для упакованных в контейнеры приложений .NET | Терминология Docker
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.prod: .net-core
-ms.technology: dotnet-docker
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 342b4443470053d81534d4de1d56d2797798c746
-ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
-ms.translationtype: MT
+ms.openlocfilehash: 9bbeff8c467e762e682fdaf99c8a11851b291db8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="docker-terminology"></a>Терминология Docker
 
@@ -39,11 +32,11 @@ ms.lasthandoff: 03/19/2018
 
 **Реестр контейнеров Azure** — общедоступный ресурс для работы с образами Docker и их компонентами в Azure. Он предоставляет реестр, близкий к вашим развертываниям в Azure, так что вы можете контролировать доступ и использовать группы и разрешения в Azure Active Directory.
 
-**Доверенный реестр Docker (DTR)** — служба реестра Docker (из Docker), которую можно установить локально, чтобы она находилась в центре данных и сети организации. Его удобно использовать для частных образов, которыми необходимо управлять внутри компании. Доверенный реестр Docker входит в Центр данных Docker. Дополнительные сведения см. в разделе [Доверенный реестр Docker (DTR)](https://docs.docker.com/docker-trusted-registry/overview/).
+**Доверенный реестр Docker (DTR)**  — служба реестра Docker (из Docker), которую можно установить локально, чтобы она находилась в центре данных и сети организации. Его удобно использовать для частных образов, которыми необходимо управлять внутри компании. Доверенный реестр Docker входит в Центр данных Docker. Дополнительные сведения см. в разделе [Доверенный реестр Docker (DTR)](https://docs.docker.com/docker-trusted-registry/overview/).
 
-**Docker Community Edition (CE)** — инструменты разработки в среде Windows и macOS для локальной сборки, выполнения и тестирования контейнеров. Docker CE для Windows предоставляет среды разработки для контейнеров Linux и Windows. Узел Linux Docker на Windows базируется на виртуальной машине [Hyper-V](https://www.microsoft.com/en-us/server-cloud/solutions/virtualization.aspx). Узел для контейнеров Windows базируется непосредственно на Windows. Docker CE для Mac базируется на платформе Apple Hypervisor и [гипервизоре xhyve](https://github.com/mist64/xhyve), который предоставляет узлу Linux Docker виртуальную машину в Mac OS X. Docker CE для Windows и для Mac заменил Docker Toolbox на базе Oracle VirtualBox.
+**Docker Community Edition (CE)**  — инструменты разработки в среде Windows и macOS для локальной сборки, выполнения и тестирования контейнеров. Docker CE для Windows предоставляет среды разработки для контейнеров Linux и Windows. Узел Linux Docker на Windows базируется на виртуальной машине [Hyper-V](https://www.microsoft.com/en-us/server-cloud/solutions/virtualization.aspx). Узел для контейнеров Windows базируется непосредственно на Windows. Docker CE для Mac базируется на платформе Apple Hypervisor и [гипервизоре xhyve](https://github.com/mist64/xhyve), который предоставляет узлу Linux Docker виртуальную машину в Mac OS X. Docker CE для Windows и для Mac заменил Docker Toolbox на базе Oracle VirtualBox.
 
-**Docker Enterprise Edition (EE)** — корпоративная версия инструментов Docker для разработки в среде Windows и Linux.
+**Docker Enterprise Edition (EE)**  — корпоративная версия инструментов Docker для разработки в среде Windows и Linux.
 
 **Compose** — программа командной строки и формат файлов YAML с метаданными для определения и выполнения многоконтейнерных приложений. Вы определяете одно приложение на основе нескольких образов с помощью одного или нескольких файлов .yml, которые могут изменять значения в зависимости от среды. Создав определения, вы можете развернуть все многоконтейнерное приложение с помощью одной команды (docker-compose up), которая создает один контейнер на образ на узле Docker.
 

@@ -1,22 +1,16 @@
 ---
-title: "#Директива препроцессора if (справочник по C#)"
+title: '#Директива препроцессора if (справочник по C#)'
 ms.date: 02/13/2017
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 f1_keywords:
 - '#if'
 helpviewer_keywords:
 - '#if directive [C#]'
 ms.assetid: 48cabbff-ca82-491f-a56a-eeccd528c7c2
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 710452d6fddea239cb2e65901fd5ce56d6be699f
-ms.sourcegitcommit: 08684dd61444c2f072b89b926370f750e456fca1
+ms.openlocfilehash: 2ae0af6971dbf549b52e8168e035d8582bdab61d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="if-c-reference"></a>#if (Справочник по C#)
 
@@ -28,7 +22,7 @@ ms.lasthandoff: 02/14/2018
 #endif
 ```
 
-Операторы [==](../operators/equality-comparison-operator.md) (равенство) и [! =](../operators/not-equal-operator.md) (неравенство) вы можете использовать только для проверки значений [true](../keywords/true.md) или [false](../keywords/false.md). Значение true означает, что символ определен. Инструкция `#if DEBUG` имеет то же значение, что и `#if (DEBUG == true)`. Вы можете использовать операторы [&&](../operators/conditional-and-operator.md) (логическое И), [&#124;&#124;](../operators/conditional-or-operator.md) (логическое ИЛИ) и [!](../operators/logical-negation-operator.md) (логическое НЕ) для проверки нескольких символов. Можно также группировать символы и операторы при помощи скобок.
+Операторы [==](../operators/equality-comparison-operator.md) (равенство) и [! =](../operators/not-equal-operator.md) (неравенство) вы можете использовать только для проверки значений [true](../keywords/true.md) или [false](../keywords/false.md). Значение true означает, что символ определен. Инструкция `#if DEBUG` имеет то же значение, что и `#if (DEBUG == true)`. Вы можете использовать операторы [&&](../operators/conditional-and-operator.md) (логическое И), [& #124;&#124;](../operators/conditional-or-operator.md) (логическое ИЛИ) и [!](../operators/logical-negation-operator.md) (логическое НЕ) для проверки нескольких символов. Можно также группировать символы и операторы при помощи скобок.
 
 ## <a name="remarks"></a>Примечания
 

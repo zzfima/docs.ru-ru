@@ -1,26 +1,15 @@
 ---
-title: "Разрешение внешних ресурсов"
-ms.custom: 
+title: Разрешение внешних ресурсов
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: ad3fa320-4b8f-4e5c-b549-01157591007a
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: c711cbd7b563bf647d7b4fb90873a396ddfaefdf
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: c1c56d69724212b9d1cd6a24204a12460071633f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="resolving-external-resources"></a>Разрешение внешних ресурсов
 Свойство **XmlResolver** класса **XmlDocument** используется классом **XmlDocument** для поиска ресурсов, не встроенных в XML-данные, таких как внешние определения DTD, сущности и схемы. Эти элементы могут находиться в сети или на локальном диске, и могут быть найдены с помощью URI. Это позволяет классу **XmlDocument** разрешать имеющиеся в документе узлы **EntityReference** и проверять документ на соответствие внешнему определению DTD или схеме.  

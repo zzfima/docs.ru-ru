@@ -1,20 +1,13 @@
 ---
-title: "Общие сведения о событиях"
-description: "Сведения о событиях в .NET Core и наших задачах по разработке языка для них."
-keywords: .NET, .NET Core
-author: BillWagner
-ms.author: wiwagn
+title: Общие сведения о событиях
+description: Сведения о событиях в .NET Core и наших задачах по разработке языка для них.
 ms.date: 06/20/2016
-ms.topic: article
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.devlang: csharp
 ms.assetid: 9b8d2a00-1584-4a5b-8994-5003d54d8e0c
-ms.openlocfilehash: f81c2d9fc2ec69c295485fe06029b5de65335db0
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 2a2230ea5fba1b0cd5b13319677965e7a776549e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="introduction-to-events"></a>Общие сведения о событиях
 
@@ -87,4 +80,4 @@ lister.Progress -= onProgress;
 
 В следующей статье вы узнаете больше о типичных шаблонах событий и ознакомитесь с вариантами этого примера.
 
-[Далее](event-pattern.md)
+[Вперед](event-pattern.md)

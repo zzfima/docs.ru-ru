@@ -1,23 +1,15 @@
 ---
-title: "Улучшения производительности сокетов в версии 3.5"
-ms.custom: 
+title: Улучшения производительности сокетов в версии 3.5
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 225aa5f9-c54b-4620-ab64-5cd100cfd54c
-caps.latest.revision: "9"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 868ab986a0f7343e2efd2d4b5f7016d0554084cc
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: db52123167648744141657d885f3d3dcc524dd3d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="socket-performance-enhancements-in-version-35"></a>Улучшения производительности сокетов в версии 3.5
 Класс <xref:System.Net.Sockets.Socket?displayProperty=nameWithType> был оптимизирован в версии 3.5 для обеспечения максимальной производительности приложений, которые используют асинхронные операции ввода-вывода по сети. В рамках набора усовершенствований класса <xref:System.Net.Sockets.Socket>, предоставляющих альтернативный шаблон асинхронной модели, который может использоваться специализированными высокопроизводительными приложениями сокетов, был добавлен ряд новых классов. Эти усовершенствования были специально разработаны для сетевых серверных приложений, требующих высокой производительности. Приложение может быть основано исключительно на улучшенном шаблоне асинхронной модели или может использовать его только в определенных областях (например, при получении больших объемов данных).  

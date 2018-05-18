@@ -1,21 +1,15 @@
 ---
-title: "Практическое руководство. Безопасное приведение bool? к bool (Руководство по программированию на C#)"
+title: Практическое руководство. Безопасное приведение bool? к bool (Руководство по программированию на C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - casting [C#], nullable types
 - nullable types [C#], casting bool? to bool
 ms.assetid: e06e4274-a443-422d-8ef1-9dbf9df55237
-caps.latest.revision: "9"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 1a6fa65c15bb5f1da9960dbc17bd25b4087ab862
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 18f44018621182427199dee56146f29b8d3068f4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-safely-cast-from-bool-to-bool-c-programming-guide"></a>Практическое руководство. Безопасное приведение bool? к bool (Руководство по программированию на C#)
 Тип `bool?`, допускающий значение NULL, может содержать три разных значения: `true`, `false` и `null`. Следовательно, тип `bool?` невозможно использовать в условных операторах, например с `if`, `for` или `while`. Так, следующий код вызовет ошибку компиляции.  

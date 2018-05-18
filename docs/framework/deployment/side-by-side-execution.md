@@ -1,28 +1,16 @@
 ---
-title: "Параллельное выполнение в .NET Framework"
-ms.custom: 
+title: Параллельное выполнение в .NET Framework
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - side-by-side execution
 ms.assetid: 649f1342-766b-49e6-a90d-5b019a751e11
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 75ee159f45932f6130db2ce47c6923c24b38ca99
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ea7a26a5b8ce0f30893e9ca66873ad61f82ff8df
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="side-by-side-execution-in-the-net-framework"></a>Параллельное выполнение в .NET Framework
 Параллельное выполнение представляет собой возможность запускать несколько версий приложения или компонента с одного и того же компьютера. В одно и то же время на одном компьютере можно запускать несколько версий среды CLR, а также несколько версий приложений и компонентов, использующих одну из версий среды выполнения.  

@@ -1,21 +1,12 @@
 ---
-title: "Общие сведения о классе XAttribute (C#)"
-ms.custom: 
+title: Общие сведения о классе XAttribute (C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: 5a630f24-f9ad-400e-831e-c14ebfc9e142
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: e9cfedb476f44ef8c3eaeb45bac571d17802d525
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: e0020a8cd8841ef9a35781b534c82db5e15c257f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="xattribute-class-overview-c"></a>Общие сведения о классе XAttribute (C#)
 Атрибуты - это пары «имя-значение», ассоциированные с элементом. Класс <xref:System.Xml.Linq.XAttribute> представляет XML-атрибуты.  
@@ -28,7 +19,7 @@ ms.lasthandoff: 10/18/2017
 ## <a name="the-xattribute-constructor"></a>Конструктор XAttribute  
  Чаще всего используется следующий конструктор класса <xref:System.Xml.Linq.XAttribute>.  
   
-|Конструктор|Описание|  
+|Конструктор|Описание:|  
 |-----------------|-----------------|  
 |`XAttribute(XName name, object content)`|Создает объект <xref:System.Xml.Linq.XAttribute>. Аргумент `name` указывает имя атрибута; `content` указывает содержимое атрибута.|  
   

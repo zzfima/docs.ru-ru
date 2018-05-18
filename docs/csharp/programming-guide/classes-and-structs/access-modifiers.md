@@ -1,22 +1,15 @@
 ---
 title: Модификаторы доступа (Руководство по программированию в C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - C# Language, access modifiers
 - access modifiers [C#], about
 ms.assetid: 6e81ee82-224f-4a12-9baf-a0dca2656c5b
-caps.latest.revision: 32
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: a567dea6418ff9cfc94c8180a88c872bcf4c96a4
-ms.sourcegitcommit: 39b65a49271e082add68cb737b48fdbe09d24718
+ms.openlocfilehash: ec275d4782fee047b16fd114c4d22ceb03eecb11
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/30/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="access-modifiers-c-programming-guide"></a>Модификаторы доступа (Руководство по программированию в C#)
 Все типы и члены имеют уровень доступности, определяющий возможность их использования из другого кода в вашей или в других сборках. Следующие модификаторы доступа позволяют указать доступность типа или члена при объявлении:  
