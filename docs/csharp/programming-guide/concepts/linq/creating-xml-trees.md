@@ -1,28 +1,19 @@
 ---
-title: "Создание деревьев XML (C#)"
-ms.custom: 
+title: Создание деревьев XML (C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: bccc3e0a-c08c-468e-9d30-e075670fdace
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 23b19593774b5a010b453e3fe755e21386afd015
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: f9367cd795104020c88c40e820c6af15054e38be
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="creating-xml-trees-c"></a>Создание деревьев XML (C#)
 Одна из самых распространенных задач при работе с XML состоит в построении XML-дерева. В этом разделе описывается несколько способов создания таких деревьев.  
   
 ## <a name="in-this-section"></a>Содержание  
   
-|Раздел|Описание|  
+|Раздел|Описание:|  
 |-----------|-----------------|  
 |[Функциональное построение (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/functional-construction-linq-to-xml.md)|Содержит общие сведения о функциональном построении в [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. Функциональное построение позволяет создавать все XML-дерево или его часть с помощью одной инструкции. В этом разделе также показано, как внедрять запросы при построении XML-дерева.|  
 |[Создание деревьев XML на языке C# (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/creating-xml-trees-linq-to-xml-2.md)|Показывает, как строить деревья на языке C#.|  

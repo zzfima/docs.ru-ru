@@ -1,33 +1,26 @@
 ---
 title: private (Справочник по C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 f1_keywords:
 - private_CSharpKeyword
 - private
 helpviewer_keywords:
 - private keyword [C#]
 ms.assetid: 654c0bb8-e6ac-4086-bf96-7474fa6aa1c8
-caps.latest.revision: 17
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: d9cc8f86166888b47a758e200182d319c68ca6d4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 89bc23e91bf693f0a95b75dffe2399cb7e865b50
+ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/15/2018
 ---
 # <a name="private-c-reference"></a>private (Справочник по C#)
 Ключевое слово `private` является модификатором доступа к члену. 
    
- > Эта страница содержит `private` доступа. `private` Также ключевое слово является частью [ `private protected` ](./private-protected.md) модификатор доступа.
+ > Эта страница содержит доступ `private`. Ключевое слово `private` также является частью модификатора доступа [`private protected`](./private-protected.md).
   
 Закрытый доступ является уровнем доступа с минимальными правами. Доступ к закрытым членам можно получить только внутри тела класса или структуры, в которой они объявлены, как показано в следующем примере:  
   
-```  
+```csharp  
 class Employee  
 {  
     private int i;  

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - types [C#], value types
 - C# language, value types
 ms.assetid: 471eb994-2958-49d5-a6be-19b4313f80a3
-ms.openlocfilehash: fdda6942c6883baaaea5e305a1e699a01e707d2b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 49043a9fe9eabbb54176a0106007ef0d26ed795f
+ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/15/2018
 ---
 # <a name="value-types-c-reference"></a>Типы значений (Справочник по C#)
 Типы значений относятся к двум основным категориям:  
@@ -56,31 +56,31 @@ ms.lasthandoff: 05/04/2018
 ## <a name="initializing-value-types"></a>Инициализация типов значений  
  В языке C# локальные переменные необходимо инициализировать перед использованием. Например, можно объявить локальную переменную без инициализации, как показано в следующем примере:  
   
-```  
+```csharp  
 int myInt;  
 ```  
   
  Тем не менее использовать ее до инициализации нельзя. Для инициализации локальной переменной можно использовать следующую инструкцию:  
   
-```  
+```csharp  
 myInt = new int();  // Invoke default constructor for int type.  
 ```  
   
  Эта инструкция эквивалентна следующей:  
   
-```  
+```csharp  
 myInt = 0;         // Assign an initial value, 0 in this example.  
 ```  
   
  При необходимости объявление и инициализация могут быть выполнены в одной инструкции, как показано в следующем примере:  
   
-```  
+```csharp  
 int myInt = new int();  
 ```  
   
  – или –  
   
-```  
+```csharp  
 int myInt = 0;  
 ```  
   
@@ -88,7 +88,7 @@ int myInt = 0;
   
  Для определяемых пользователем типов инструкция [new](../../../csharp/language-reference/keywords/new.md) вызывает конструктор по умолчанию. Например, следующая инструкция вызывает конструктор по умолчанию для структуры `Point`:  
   
-```  
+```csharp  
 Point p = new Point(); // Invoke default constructor for the struct.  
 ```  
   

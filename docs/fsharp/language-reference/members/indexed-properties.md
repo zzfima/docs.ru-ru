@@ -2,46 +2,52 @@
 title: Индексированные свойства (F#)
 description: 'Дополнительные сведения о F # индексированные свойства, которые являются свойства, предоставляющие доступ через массив к упорядоченным данным.'
 ms.date: 05/16/2016
-ms.openlocfilehash: b3945c7fc22977373b601856036178e890abc13e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 503cef9693cfe5e13d4e2d19a721d65bff1ce749
+ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="indexed-properties"></a>Индексированные свойства
 
-*Индексированные свойства* свойства, предоставляющие доступ через массив к упорядочиваются данные.
+*Индексированные свойства* свойства, предоставляющие доступ через массив к упорядочиваются данные. Они бывают трех видов:
+
+* `Item`
+* `Ordinal`
+* `Cardinal`
+
+F # член должен иметь имя одного из этих трех имен, чтобы предоставить доступ через массив. `IndexerName` используется для представления любого из этих трех параметров:
 
 
 ## <a name="syntax"></a>Синтаксис
 
 ```fsharp
 // Indexed property that has both get and set defined.
-member self-identifier.PropertyName
+member self-identifier.IndexerName
     with get(index-variable) =
         get-function-body
     and set index-variablesvalue-variables =
         set-function-body
 
 // Indexed property that has get only.
-member self-identifier.PropertyName(index-variable) =
+member self-identifier.IndexerName(index-variable) =
     get-function-body
 
 // Alternative syntax for indexed property with get only
-member self-identifier.PropertyName
+member self-identifier.IndexerName
     with get(index-variables) =
         get-function-body
 
 // Indexed property that has set only.
-member self-identifier.PropertyName
+member self-identifier.IndexerName
     with set index-variablesvalue-variables = 
         set-function-body
 ```
 
 ## <a name="remarks"></a>Примечания
-Три вида предыдущем синтаксисе показывают, как определять индексированные свойства, имеющие и `get` и `set` метод, имеют `get` только метод или иметь `set` только метод. Можно также комбинировать показано только получение и синтаксис, показанный для набора только синтаксис и создать свойство, имеющее get и set. Эта последняя форма позволяет размещать различные модификаторы доступности и атрибуты на get методов и set.
+Виды предыдущем синтаксисе показывают, как определять индексированные свойства, имеющие и `get` и `set` метод, имеют `get` только метод или иметь `set` только метод. Можно также комбинировать показано только получение и синтаксис, показанный для набора только синтаксис и создать свойство, имеющее get и set. Эта последняя форма позволяет размещать различные модификаторы доступности и атрибуты на get методов и set.
 
-Когда *PropertyName* — `Item`, компилятор рассматривает свойство как индексированное свойство по умолчанию. Объект *индексированное свойство по умолчанию* — это свойство, к которой можно обращаться, используя синтаксис, подобный массиву на экземпляр объекта. Например если `obj` — это объект типа, который определяет это свойство синтаксис `obj.[index]` используется для доступа к свойству.
+Когда *IndexerName* — `Item`, компилятор рассматривает свойство как индексированное свойство по умолчанию. Объект *индексированное свойство по умолчанию* — это свойство, к которой можно обращаться, используя синтаксис, подобный массиву на экземпляр объекта. Например если `obj` — это объект типа, который определяет это свойство синтаксис `obj.[index]` используется для доступа к свойству.
 
 Синтаксис для доступа к не по умолчанию индексированное свойство — для предоставления имени свойства и индекса в круглых скобках. Например, если свойство `Ordinal`, написании `obj.Ordinal(index)` для доступа к нему.
 

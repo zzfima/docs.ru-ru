@@ -1,21 +1,14 @@
 ---
-title: "Использование Azure Key Vault для защиты секретов в рабочей среде"
-description: "Архитектура микрослужб .NET для контейнерных приложений .NET | Использование Azure Key Vault для защиты секретов в рабочей среде"
-keywords: "Docker, микрослужбы, ASP.NET, контейнер"
+title: Использование Azure Key Vault для защиты секретов в рабочей среде
+description: Архитектура микрослужб .NET для контейнерных приложений .NET | Использование Azure Key Vault для защиты секретов в рабочей среде
 author: mjrousos
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.prod: .net-core
-ms.technology: dotnet-docker
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: cb289c7361362c225eac8b9898bac276c4b623b4
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 5ad5686909c29eba5916cbcc4b7115a16108a004
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-azure-key-vault-to-protect-secrets-at-production-time"></a>Использование Azure Key Vault для защиты секретов в рабочей среде
 
@@ -65,7 +58,7 @@ var kvClient = new KeyVaultClient(new KeyVaultClient.AuthenticationCallback(asyn
 
 ## <a name="additional-resources"></a>Дополнительные ресурсы
 
--   **Использование Azure Key Vault для защиты секретов приложений**
+-   **Использование Azure Key Vault для защиты секретов приложения**
     [*https://docs.microsoft.com/azure/guidance/guidance-multitenant-identity-keyvault*](https://docs.microsoft.com/azure/guidance/guidance-multitenant-identity-keyvault)
 
 -   **Безопасное хранение секретов приложений во время разработки**
@@ -74,7 +67,7 @@ var kvClient = new KeyVaultClient(new KeyVaultClient.AuthenticationCallback(asyn
 -   **Настройка защиты данных**
     [*https://docs.microsoft.com/aspnet/core/security/data-protection/configuration/overview*](https://docs.microsoft.com/aspnet/core/security/data-protection/configuration/overview)
 
--   **Управление ключами и временем существования**
+-   **Управление ключами и время существования ключей**
     [*https://docs.microsoft.com/aspnet/core/security/data-protection/configuration/default-settings\#data-protection-default-settings*](https://docs.microsoft.com/aspnet/core/security/data-protection/configuration/default-settings#data-protection-default-settings)
 
 -   **Microsoft.Extensions.Configuration.DockerSecrets.** Репозиторий GitHub.

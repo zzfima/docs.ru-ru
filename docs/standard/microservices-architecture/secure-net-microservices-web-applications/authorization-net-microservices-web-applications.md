@@ -1,21 +1,14 @@
 ---
-title: "Об авторизации в веб-приложениях и микрослужбах .NET"
-description: "Архитектура микрослужб .NET для упакованных в контейнеры приложений .NET | Об авторизации в веб-приложениях и микрослужбах .NET"
-keywords: "Docker, микрослужбы, ASP.NET, контейнер"
+title: Об авторизации в веб-приложениях и микрослужбах .NET
+description: Архитектура микрослужб .NET для упакованных в контейнеры приложений .NET | Об авторизации в веб-приложениях и микрослужбах .NET
 author: mjrousos
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.prod: .net-core
-ms.technology: dotnet-docker
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 6cd7be9bc8216aecf85f99a76e859b411a8735b0
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 2ea56f5a28d115fc5d91a98604b82565c8bf5c78
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="about-authorization-in-net-microservices-and-web-applications"></a>Об авторизации в веб-приложениях и микрослужбах .NET
 
@@ -119,16 +112,16 @@ services.AddAuthorization(options =>
 
 ## <a name="additional-resources"></a>Дополнительные ресурсы
 
--   **Проверка подлинности ASP.NET Core**
+-   **Проверка подлинности в ASP.NET Core**
     [*https://docs.microsoft.com/aspnet/core/security/authentication/identity*](https://docs.microsoft.com/aspnet/core/security/authentication/identity)
 
--   **Авторизация ASP.NET Core**
+-   **Авторизация в ASP.NET Core**
     [*https://docs.microsoft.com/aspnet/core/security/authorization/introduction*](https://docs.microsoft.com/aspnet/core/security/authorization/introduction)
 
--   **Авторизация на базе ролей**
+-   **Авторизация на основе ролей**
     [*https://docs.microsoft.com/aspnet/core/security/authorization/roles*](https://docs.microsoft.com/aspnet/core/security/authorization/roles)
 
--   **Авторизация на базе пользовательской политики**
+-   **Пользовательская авторизация на основе политик**
     [*https://docs.microsoft.com/aspnet/core/security/authorization/policies*](https://docs.microsoft.com/aspnet/core/security/authorization/policies)
 
 

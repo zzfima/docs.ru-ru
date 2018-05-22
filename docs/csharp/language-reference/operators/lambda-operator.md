@@ -1,31 +1,25 @@
 ---
 title: Оператор =&gt; (справочник по C#)
 ms.date: 10/02/2017
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 f1_keywords:
 - =>_CSharpKeyword
 helpviewer_keywords:
 - lambda operator [C#]
 - => operator [C#]
 - lambda expressions [C#], => operator
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 44cb0485aefa8b0ab10a00ae0525180020ce436d
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: d1565e262fbd3ebcee2d1576a2a0c8ed3ba8ce38
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="gt-operator-c-reference"></a>Оператор =&gt; (справочник по C#)
 
-`=>` Оператор можно использовать двумя способами, в C#:
+Оператор `=>` можно использовать в C# двумя способами:
 
-- Как [лямбда-оператора](#lamba-operator) в [лямбда-выражение](../../lambda-expressions.md), он позволяет разграничить входные переменные из тела лямбда-выражения.
+- Как [лямбда-оператор](#lamba-operator) в [лямбда-выражении](../../lambda-expressions.md) он разграничивает входные переменные из тела лямбда-выражения.
  
-- В [Определение текста выражения](#expression-body-definition), имя члена, отделяются от реализации элемента. 
+- В [определении тела выражения](#expression-body-definition) он разграничивает имя члена и реализацию члена. 
 
 ## <a name="lambda-operator"></a>Лямбда-оператор
 
@@ -88,24 +82,24 @@ static void Main(string[] args)
     // nine  
 }  
 ```  
-## <a name="expression-body-definition"></a>Определение текста выражения
+## <a name="expression-body-definition"></a>Определения тела выражения
 
-Определение текста выражения предоставляет реализацию участника в форме высокой краткие, доступные для чтения. Он имеет следующий общий синтаксис:
+Определения тела выражения позволяют предоставлять реализацию элемента самым понятным способом. Они имеют следующий общий синтаксис:
 
 ```csharp
 member => expression;
 ```
-здесь *expression* является допустимым выражением. Обратите внимание, что *выражение* может быть *выражения оператора* только если элемент возвращаемого типа `void`, или если элемент является конструктор или метод завершения.
+здесь *expression* является допустимым выражением. Обратите внимание, что *выражение* может быть *выражением оператора* только в том случае, если для элемента возвращается значение типа `void` или элемент является конструктором или методом завершения.
 
-Определения текста выражений для методов и операторов get свойства поддерживаются начиная с C# 6. Определения текста выражений для конструкторы, методы завершения, инструкции set свойства и индексаторы поддерживаются начиная с C# 7.
+Определения тела выражения для методов и операторов property get поддерживаются начиная с C# 6. Определения тела выражения для конструкторов, методов завершения, операторов property set и индексаторов поддерживаются начиная с C# 7.
 
-Ниже приводится определение тело выражения для `Person.ToString` метод:
+Ниже приводится определение тела выражения для метода `Person.ToString`:
 
 ```csharp
 public override string ToString() => $"{fname} {lname}".Trim();
 ```
 
-Это сокращенная версия следующие определения метода:
+Это сокращенная версия следующего определения метода:
 
 ```csharp
 public override string ToString()
@@ -113,10 +107,10 @@ public override string ToString()
    return $"{fname} {lname}".Trim();
 }
 ```
-Более подробные сведения для определения текста выражений см. в разделе [выражение телом члены](../../programming-guide/statements-expressions-operators/expression-bodied-members.md).
+Дополнительную информацию об определениях тела выражения см. в разделе [Элементы, воплощающие выражения](../../programming-guide/statements-expressions-operators/expression-bodied-members.md).
 
 ## <a name="see-also"></a>См. также  
 [Справочник по C#](../../../csharp/language-reference/index.md)   
 [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)   
 [Лямбда-выражения](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)   
-[Выражение телом члены](../../programming-guide/statements-expressions-operators/expression-bodied-members.md).
+[Элементы, воплощающие выражения](../../programming-guide/statements-expressions-operators/expression-bodied-members.md).

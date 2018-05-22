@@ -3,11 +3,11 @@ title: Руководство по языку F#
 description: 'Это руководство предоставляет обзор различных учебных материалов для языка F #, это функциональный язык программирования, работающей на платформе .NET.'
 author: jackfoxy
 ms.date: 03/19/2018
-ms.openlocfilehash: 393214a5da7445d8ee3dced844da8592f4ca6d31
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cb829e904c006467e1470752b4fe8757ca694b05
+ms.sourcegitcommit: 895c7602386a6dfe7ca4facce3d965b27e5c6e87
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="f-guide"></a>Руководство по языку F#
 
@@ -49,6 +49,8 @@ F # — о производительности сущность. Поддерж
 [Начало работы с F # с .NET Core CLI](get-started/get-started-command-line.md) Если требуется использование средств командной строки.
 
 [Начало работы с F # и Xamarin](https://docs.microsoft.com/xamarin/cross-platform/platform/fsharp/) для мобильных устройств программирование на F #.
+
+[F # для ноутбуков Azure](https://notebooks.azure.com/Microsoft/libraries/samples/html/FSharp%20for%20Azure%20Notebooks.ipynb) учебник для обучения F # в записной книжке Jupyter бесплатно, размещенный.
 
 ## <a name="references"></a>Ссылки
 

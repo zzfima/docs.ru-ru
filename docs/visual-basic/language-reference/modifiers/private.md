@@ -7,20 +7,23 @@ helpviewer_keywords:
 - Private keyword [Visual Basic]
 - Private keyword [Visual Basic], syntax
 ms.assetid: aba74a2e-5824-4613-bf63-b9ec7787f4e6
-ms.openlocfilehash: d7935cf691d961591ff5e3d2a290afb88de9165a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 40b64b8d2b6306d458b7a9cc657c5b7dc4270eb2
+ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="private-visual-basic"></a>Private (Visual Basic)
 Указывает, что один или несколько элементов доступны только внутри контекста, включая из любых вложенных типов.  
   
 ## <a name="remarks"></a>Примечания  
  Если элемент программирования представляет особые возможности или содержит конфиденциальные данные, обычно требуется максимально ограничить доступ к нему. Максимальное ограничение добиться, позволяя модуля, класса или структуры, которые определяют его для доступа к нему. Чтобы ограничить доступ к элементу таким образом, можно объявить его с `Private`.  
-  
+
+> [!NOTE]
+> Можно также использовать [защищенный закрытый](private-protected.md) модификатор доступа, благодаря чему доступен из внутри этого класса и из производных классов, которые находятся в его сборке, содержащей элемент.
+
 ## <a name="rules"></a>Правила  
-  
+
 -   **Контекст объявления.** `Private` можно использовать только на уровне модуля. Это означает, что контекст объявления для `Private` элемент должен быть модуля, класса или структуры и не может быть исходным файлом, пространства имен, интерфейса или процедуры.  
   
 ## <a name="behavior"></a>Поведение  
@@ -59,7 +62,8 @@ ms.lasthandoff: 05/04/2018
  [Public](../../../visual-basic/language-reference/modifiers/public.md)  
  [Protected](../../../visual-basic/language-reference/modifiers/protected.md)  
  [Friend](../../../visual-basic/language-reference/modifiers/friend.md)  
- [Уровни доступа в Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)  
+ [Protected Private](./private-protected.md)   
+ [Protected Friend](./protected-friend.md)[доступ к уровни в Visual Basic    ](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)  
  [Процедуры](../../../visual-basic/programming-guide/language-features/procedures/index.md)  
  [Структуры](../../../visual-basic/programming-guide/language-features/data-types/structures.md)  
  [Объекты и классы](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)

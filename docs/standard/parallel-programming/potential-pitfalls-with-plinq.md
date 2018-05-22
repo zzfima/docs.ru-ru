@@ -1,31 +1,20 @@
 ---
-title: "Потенциальные ошибки, связанные с PLINQ"
-ms.custom: 
+title: Потенциальные ошибки, связанные с PLINQ
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - PLINQ queries, pitfalls
 ms.assetid: 75a38b55-4bc4-488a-87d5-89dbdbdc76a2
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 972734b1275c82141c9057398268d068f5eaf3e6
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 73ec2d2fb73ee95b39a15307d136c35542578c41
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="potential-pitfalls-with-plinq"></a>Потенциальные ошибки, связанные с PLINQ
 Во многих случаях PLINQ может значительно повысить производительность по сравнению с последовательным выполнением запросов LINQ to Objects. Но сам процесс параллелизации запроса может оказаться сложным и вызвать дополнительные проблемы, которые в последовательном коде не типичны или совсем не встречаются. В этом разделе перечислены некоторые рекомендации по составлению запросов PLINQ.  

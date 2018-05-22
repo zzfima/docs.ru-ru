@@ -10,11 +10,11 @@ helpviewer_keywords:
 - Protected Friend keyword combination
 - Friend keyword [Visual Basic], and Protected
 ms.assetid: b664605e-1c79-4728-b996-aa59c50846bc
-ms.openlocfilehash: 756a18da74ff49cbefaf6a63980302bbcb141713
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d906fc8ada19f22059da44acbd76dd07dacd4801
+ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="friend-visual-basic"></a>Friend (Visual Basic)
 Указывает, что один или несколько объявленных программных элементов доступны только из внутри сборки, содержащей их объявления.  
@@ -27,9 +27,10 @@ ms.lasthandoff: 05/04/2018
  `Friend` доступ часто является предпочтительным уровнем для элементов программирования приложений, и `Friend` — доступ по умолчанию уровне интерфейса, модуля, класса или структуры.  
   
  Можно использовать `Friend` только на уровне модуля, интерфейсом или пространством имен. Таким образом, что контекст объявления для `Friend` элемент должен быть исходный файл, пространство имен, интерфейсом, модуля, класса или структуры; он не может быть процедурой.  
-  
- Можно использовать `Friend` модификатор вместе с [Protected](../../../visual-basic/language-reference/modifiers/protected.md) модификатор в объявлении. Указанное сочетание задает оба `Friend` доступа и защищенный доступ к объявленным элементам, поэтому они доступны в любом месте той же сборки, из собственного класса и из производных классов. Можно указать `Protected Friend` только для членов классов.  
-  
+
+> [!NOTE]
+> Можно также использовать [Protected Friend](protected-friend.md) модификатор доступа, что делает член класса, доступный из этого класса из производных классов и из той же сборки, в котором определен класс. Чтобы ограничить доступ к члену из внутри класса и из производных классов в той же сборке, используйте [защищенный закрытый](private-protected.md) модификатор доступа.
+
  Сравнение `Friend` и другие модификаторы доступа см. в разделе [уровни в Visual Basic доступа](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
   
 > [!NOTE]
@@ -74,6 +75,8 @@ ms.lasthandoff: 05/04/2018
  [Public](../../../visual-basic/language-reference/modifiers/public.md)  
  [Protected](../../../visual-basic/language-reference/modifiers/protected.md)  
  [Закрытые](../../../visual-basic/language-reference/modifiers/private.md)  
+ [Protected Private](./private-protected.md)   
+ [Protected Friend](./protected-friend.md)   
  [Уровни доступа в Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)  
  [Процедуры](../../../visual-basic/programming-guide/language-features/procedures/index.md)  
  [Структуры](../../../visual-basic/programming-guide/language-features/data-types/structures.md)  

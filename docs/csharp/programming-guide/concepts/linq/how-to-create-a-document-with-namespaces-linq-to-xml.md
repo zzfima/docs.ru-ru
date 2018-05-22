@@ -1,21 +1,12 @@
 ---
-title: "Практическое руководство. Создание документа с пространствами имен (C#) (LINQ to XML)"
-ms.custom: 
+title: Практическое руководство. Создание документа с пространствами имен (C#) (LINQ to XML)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: 37e63c57-f86d-47ac-88a7-2c2d107def30
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: d913cdf8b9018aa2bf91fd5a05b823e90ba63df2
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: ab572e0af79d51205167ad60b1b80e8ba6b43707
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-document-with-namespaces-c-linq-to-xml"></a>Практическое руководство. Создание документа с пространствами имен (C#) (LINQ to XML)
 В этом разделе описано, как создавать документы с пространствами имен.  
@@ -66,7 +57,7 @@ Console.WriteLine(root);
 ## <a name="example"></a>Пример  
  Следующий пример иллюстрирует создание документа, содержащего два пространства имен. Одно из них - пространство имен по умолчанию. Другое - пространство имен с префиксом.  
   
- При включении атрибутов пространств имен в корневой элемент пространства имен сериализуются, так что http://www.adventure-works.com становится пространством имен по умолчанию, а www.fourthcoffee.com сериализуется с префиксом «fc». Чтобы создать атрибут, объявляющий применяемое по умолчанию пространство имен, необходимо создать атрибут с именем «xmlns» без пространства имен. Значение этого атрибута является используемым по умолчанию идентификатором URI пространства имен.  
+ При включении атрибутов пространств имен в корневой элемент пространства имен сериализуются, так что http://www.adventure-works.com становится пространством имен по умолчанию, а www.fourthcoffee.com сериализуется с префиксом fc. Чтобы создать атрибут, объявляющий применяемое по умолчанию пространство имен, необходимо создать атрибут с именем «xmlns» без пространства имен. Значение этого атрибута является используемым по умолчанию идентификатором URI пространства имен.  
   
 ```csharp  
 // The http://www.adventure-works.com namespace is forced to be the default namespace.  

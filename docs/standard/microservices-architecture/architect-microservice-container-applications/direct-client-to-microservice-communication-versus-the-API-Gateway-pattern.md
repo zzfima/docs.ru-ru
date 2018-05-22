@@ -1,21 +1,14 @@
 ---
 title: Прямое взаимодействие клиента и микрослужбы по сравнению с использованием шаблона службы API
 description: Архитектура микрослужб .NET для контейнерных приложений .NET | Прямое взаимодействие клиента и микрослужбы по сравнению с использованием шаблона службы API
-keywords: Docker, микрослужбы, ASP.NET, контейнер, шлюз API
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/18/2017
-ms.prod: .net-core
-ms.technology: dotnet-docker
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: fa3f4bb97cf942ee7698b1efa1dcd09b3f2ca571
-ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.openlocfilehash: 40accd8e881c9667f69a61c98da1d013d28e7da6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="direct-client-to-microservice-communication-versus-the-api-gateway-pattern"></a>Прямое взаимодействие клиента и микрослужбы по сравнению с использованием шаблона службы API
 

@@ -1,10 +1,7 @@
 ---
-title: "Устаревшие классы библиотеки классов .NET Framework"
+title: Устаревшие классы библиотеки классов .NET Framework
 ms.custom: updateeachrelease
-ms.date: 10/17/2017
-ms.prod: .net-framework
-ms.technology: dotnet-clr
-ms.topic: article
+ms.date: 04/10/2018
 helpviewer_keywords:
 - obsolete [.NET Framework]
 - what's obsolete [.NET Framework]
@@ -12,13 +9,11 @@ helpviewer_keywords:
 ms.assetid: d356a43a-73df-4ae2-a457-b9628074c7cd
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d5fc41473c4a3ea812013ee7e5204c22d0a694d7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 01969eff86e5b1e8e4e2bdc4950df9fb5291f5b6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="what39s-obsolete-in-the-net-framework-class-library"></a>Устаревшие классы библиотеки классов .NET Framework
 Со временем в платформу .NET Framework вносятся изменения. В каждой новой версии добавляются новые типы и члены типов, предоставляющие новые функциональные возможности. Существующие типы и их члены постепенно изменяются. Например, некоторые типы становятся менее важными из-за того, что поддерживаемая ими технология заменяется на другую технологию, а некоторые методы вытесняются новыми методами, которые более удобны в использовании или обладают большей функциональностью.  
@@ -62,7 +57,7 @@ ms.lasthandoff: 12/22/2017
   
 |Версия платформы .NET Framework|`version` строковое значение|
 |-|-|  
-|4.7 (включая 4.7.1)|v4.0|  
+|4.7 (включая 4.7.1 и 4.7.2)|v4.0|  
 |4.6 (включая 4.6.1 и 4.6.2)|v4.0|  
 |4.5 (включая 4.5.1 и 4.5.2)|v4.0|  
 |4|v4.0|  
@@ -71,7 +66,7 @@ ms.lasthandoff: 12/22/2017
 |1.1|v1.1.4322|  
 |1.0|v1.0.3705|  
   
-## <a name="obsolete-lists-for-the-net-framework-45-and-46"></a>Списки устаревших типов и членов для платформ .NET Framework 4.5 и 4.6  
+## <a name="obsolete-lists-for-the-net-framework-45-and-later-versions"></a>Списки устаревших типов и членов для .NET Framework 4.5 и более поздних версий  
  [Устаревшие типы](../../../docs/framework/whats-new/obsolete-types.md)  
   
  [Устаревшие члены](../../../docs/framework/whats-new/obsolete-members.md)  

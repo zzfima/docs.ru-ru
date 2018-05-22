@@ -1,29 +1,19 @@
 ---
-title: "Regasm.exe (средство регистрации сборок)"
-ms.custom: 
+title: Regasm.exe (средство регистрации сборок)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Assembly Registration tool
 - assemblies [.NET Framework], registering
 - Regasm.exe
 - registering assemblies
 ms.assetid: e190e342-36ef-4651-a0b4-0e8c2c0281cb
-caps.latest.revision: "20"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b2762080c66c3c9451e7c7c3d4621d8cb9d4846e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 11ccdb4c75af2b37595d9be977f2ab881ebe1184
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="regasmexe-assembly-registration-tool"></a>Regasm.exe (средство регистрации сборок)
 Средство регистрации сборки считывает метаданные сборки и добавляет в реестр необходимые записи, что позволяет COM-клиентам прозрачно создавать классы .NET Framework. Зарегистрированные классы могут использоваться любыми COM-клиентами так же, как COM-классы. Класс регистрируется только один раз, при установке сборки. Экземпляры классов внутри сборки не могут создаваться на основе COM-классов до их фактической регистрации.  
@@ -58,7 +48,7 @@ regasm assemblyFile [options]
 |**/?** или **/help**|Отображает синтаксис команд и параметров программы.|  
   
 > [!NOTE]
->  В параметрах командной строки средства Regasm.exe прописные и строчные буквы не различаются. Достаточно указать начало параметра, позволяющее однозначно его определить. Например, запись **/n** эквивалентна записи **/nologo**, а **/t:** *outfile.tlb* — записи **/tlb:** *outfile.tlb*.  
+>  В параметрах командной строки средства Regasm.exe прописные и строчные буквы не различаются. Достаточно указать начало параметра, позволяющее однозначно его определить. Например, **/n** эквивалентно **/nologo**, а **/t:** *outfile.tlb* эквивалентно **/tlb:** *outfile.tlb*.  
   
 ## <a name="remarks"></a>Примечания  
  Можно не вносить изменения непосредственно в реестр, а создать REG-файл с записями реестра при помощи параметра **/regfile**. Чтобы внести изменения в реестр компьютера, импортируйте REG-файл в реестр с помощью редактора реестра (средства Regedit.exe). Обратите внимание, что REG-файл не содержит обновлений реестра, которые могут выполняться пользовательскими функциями реестра.  Также заметьте, что параметр **/regfile** порождает записи реестра только для управляемых классов.  Он не создает записи для объектов `TypeLibID` и `InterfaceID`.  

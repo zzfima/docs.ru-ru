@@ -1,21 +1,14 @@
 ---
-title: "Реализация модели предметной области микрослужбы с помощью .NET Core"
-description: "Архитектура микрослужб .NET для упакованных в контейнеры приложений .NET | Реализация модели предметной области микрослужбы с помощью .NET Core"
-keywords: "Docker, микрослужбы, ASP.NET, контейнер"
+title: Реализация модели предметной области микрослужбы с помощью .NET Core
+description: Архитектура микрослужб .NET для упакованных в контейнеры приложений .NET | Реализация модели предметной области микрослужбы с помощью .NET Core
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 11/09/2017
-ms.prod: .net-core
-ms.technology: dotnet-docker
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 0b954efffe2ee7e3e2bdaa49bd1057d72d69088c
-ms.sourcegitcommit: 96cc82cac4650adfb65ba351506d8a8fbcd17b5c
+ms.openlocfilehash: e0c931405b8b7e3b52bdcbd511737b449dc74273
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="implementing-a-microservice-domain-model-with-net-core"></a>Реализация модели предметной области микрослужбы с помощью .NET Core 
 
@@ -178,8 +171,8 @@ myOrder.AddOrderItem(productId, productName, pictureUrl, unitPrice, discount, un
 -   **Вон Вернон (Vaughn Vernon). Моделирование агрегатов с помощью DDD и Entity Framework.** Обратите внимание, что речь идет *не* об Entity Framework Core.
     [*https://vaughnvernon.co/?p=879*](https://vaughnvernon.co/?p=879)
 
--   **Julie Lerman (Джули Лерман). Кодирование при использовании DDD: советы разработчикам, сосредоточенным на операциях с данными**
-    [*https://msdn.microsoft.com/ru-ru/magazine/dn342868.aspx*](https://msdn.microsoft.com/en-us/magazine/dn342868.aspx)
+-   **Julie Lerman (Джули Лерман). Кодирование при проблемно-ориентированном проектировании: советы для разработчиков, ориентированных на данные**
+    [*https://msdn.microsoft.com/en-us/magazine/dn342868.aspx*](https://msdn.microsoft.com/en-us/magazine/dn342868.aspx)
 
 -   **Уди Дахан (Udi Dahan). Создание полностью инкапсулированных моделей предметной области**
     [*http://udidahan.com/2008/02/29/how-to-create-fully-encapsulated-domain-models/*](http://udidahan.com/2008/02/29/how-to-create-fully-encapsulated-domain-models/)

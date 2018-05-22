@@ -1,21 +1,14 @@
 ---
-title: "Применение подходов CQRS и CQS в микрослужбе DDD в eShopOnContainers"
-description: "Архитектура микрослужб .NET для контейнерных приложений .NET | Применение подходов CQRS и CQS в микрослужбе DDD в eShopOnContainers"
-keywords: "Docker, микрослужбы, ASP.NET, контейнер"
+title: Применение подходов CQRS и CQS в микрослужбе DDD в eShopOnContainers
+description: Архитектура микрослужб .NET для контейнерных приложений .NET | Применение подходов CQRS и CQS в микрослужбе DDD в eShopOnContainers
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.prod: .net-core
-ms.technology: dotnet-docker
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 63e61a93aa2a162d7b48e0d423dab99dcea9d020
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 6be8b52f42e3e37ff03e561af45c46f4dd283d9e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="applying-cqrs-and-cqs-approaches-in-a-ddd-microservice-in-eshoponcontainers"></a>Применение подходов CQRS и CQS в микрослужбе DDD в eShopOnContainers
 
@@ -56,16 +49,16 @@ ms.lasthandoff: 12/23/2017
 -   **Грег Янг (Greg Young). Документы CQRS**
     [*https://cqrs.files.wordpress.com/2010/11/cqrs\_documents.pdf*](https://cqrs.files.wordpress.com/2010/11/cqrs_documents.pdf)
 
--   **Грег Янг (Greg Young). CQRS, пользовательские интерфейсы на основе задач и порождение событий**
+-   **Грег Янг (Greg Young). CQRS, пользовательские интерфейсы на основе задач и источники событий**
     [*http://codebetter.com/gregyoung/2010/02/16/cqrs-task-based-uis-event-sourcing-agh/*](http://codebetter.com/gregyoung/2010/02/16/cqrs-task-based-uis-event-sourcing-agh/)
 
--   **Уди Дахан (Udi Dahan). Пояснение по CQRS**
+-   **Уди Дахан (Udi Dahan). Пояснения к CQRS**
     [*http://udidahan.com/2009/12/09/clarified-cqrs/*](http://udidahan.com/2009/12/09/clarified-cqrs/)
 
 -   **CQRS**
     [*http://udidahan.com/2009/12/09/clarified-cqrs/*](http://udidahan.com/2009/12/09/clarified-cqrs/)
 
--   **Порождение событий (ES)**
+-   **Источники событий (ES)**
     [*http://codebetter.com/gregyoung/2010/02/20/why-use-event-sourcing/*](http://codebetter.com/gregyoung/2010/02/20/why-use-event-sourcing/)
 
 

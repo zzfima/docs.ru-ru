@@ -7,11 +7,11 @@ helpviewer_keywords:
 - member access operator (->) [C#]
 - -> operator [C#]
 ms.assetid: e39ccdc1-f1ff-4a92-bf1d-ac2c8c11316a
-ms.openlocfilehash: 09d67b8386da371f7d98a8171f60298b316091ea
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 037229b2081a43077cb4b5d02a8929b06ba9e077
+ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/15/2018
 ---
 # <a name="-gt-operator-c-reference"></a>Оператор -&gt; (справочник по C#)
 Оператор `->` объединяет операции разыменования указателя и доступа к члену.  
@@ -19,13 +19,13 @@ ms.lasthandoff: 05/04/2018
 ## <a name="remarks"></a>Примечания  
  Выражение в формате  
   
-```  
+```csharp  
 x->y  
 ```  
   
  (где `x` — это указатель типа `T*` и `y` — это член `T`) эквивалентно  
   
-```  
+```csharp  
 (*x).y  
 ```  
   

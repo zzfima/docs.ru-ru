@@ -1,21 +1,14 @@
 ---
-title: "Реализация шаблона размыкателя цепи"
-description: "Архитектура микрослужб .NET для упакованных в контейнеры приложений .NET | Реализация шаблона размыкателя цепи"
-keywords: "Docker, микрослужбы, ASP.NET, контейнер"
+title: Реализация шаблона размыкателя цепи
+description: Архитектура микрослужб .NET для упакованных в контейнеры приложений .NET | Реализация шаблона размыкателя цепи
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 11/12/2017
-ms.prod: .net-core
-ms.technology: dotnet-docker
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 5d7db6899068f84f9165022cfbf17767a75e7db9
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: dea94d8eda3341cca5e3aaf6b3c8369c27381135
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="implementing-the-circuit-breaker-pattern"></a>Реализация шаблона размыкателя цепи
 
@@ -235,17 +228,17 @@ Policy.Handle<HttpResponseException>() // etc
 
 ## <a name="additional-resources"></a>Дополнительные ресурсы
 
--   **Шаблон повторов**
+-   **Шаблон повтора**
     [*https://docs.microsoft.com/azure/architecture/patterns/retry*](https://docs.microsoft.com/azure/architecture/patterns/retry)
 
 -   **Устойчивость подключений** (Entity Framework Core) [*https://docs.microsoft.com/ef/core/miscellaneous/connection-resiliency*](https://docs.microsoft.com/ef/core/miscellaneous/connection-resiliency)
 
 -   **Polly** (библиотека для обеспечения отказоустойчивости .NET и обработки временных сбоев) [*https://github.com/App-vNext/Polly*](https://github.com/App-vNext/Polly)
 
--   **Шаблон автоматического выключения**
+-   **Шаблон размыкателя цепи**
     [*https://docs.microsoft.com/azure/architecture/patterns/circuit-breaker*](https://docs.microsoft.com/azure/architecture/patterns/circuit-breaker)
 
--   **Марк Брукер (Marc Brooker). Jitter: Making Things Better With Randomness (Колебание задержки: более стабильная работа благодаря элементу случайности)** https://brooker.co.za/blog/2015/03/21/backoff.html
+-   **Марк Брукер (Marc Brooker). Дрожание. Оптимизация с помощью случайности** https://brooker.co.za/blog/2015/03/21/backoff.html
 
 
 >[!div class="step-by-step"]

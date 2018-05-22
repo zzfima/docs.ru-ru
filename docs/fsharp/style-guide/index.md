@@ -2,11 +2,11 @@
 title: 'Руководстве по стилю для F #'
 description: 'Узнайте пять принципов хороший код F #.'
 ms.date: 05/14/2018
-ms.openlocfilehash: 317fc2c101449b0500a54dd9fea3d426757af5cd
-ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
-ms.translationtype: HT
+ms.openlocfilehash: 6d8c1336ca991040a8f6e13290d209cb3b70054d
+ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/15/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="f-style-guide"></a>Руководстве по стилю для F #
 
@@ -40,8 +40,8 @@ ms.lasthandoff: 05/15/2018
 
 ## <a name="next-steps"></a>Следующие шаги
 
-[Правила форматирования F #](formatting.md) рекомендации по форматированию кода, который позволяет легко читается.
+[Правила форматирования кода F #](formatting.md) рекомендации по форматированию кода, который позволяет легко читается.
 
 [Соглашения о написании кода на языке F #](conventions.md) руководство по программированию стили, которые помогут долгосрочного обслуживания большего F # в F # базах кода.
 
-[Рекомендации по проектированию компонент F #](component-design-guidelines.md) — это полный набор рекомендации по разработке F # компонентов, таких как библиотеки.
+[Рекомендации по проектированию компонент F #](component-design-guidelines.md) предоставить рекомендации по разработке F # компонентов, таких как библиотеки.

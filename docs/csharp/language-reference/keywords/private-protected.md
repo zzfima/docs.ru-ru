@@ -1,24 +1,20 @@
 ---
-title: "Private, protected (Справочник по C#)"
+title: private protected (справочник по C#)
 ms.date: 11/15/2017
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 author: sputier
-ms.author: wiwagn
-ms.openlocfilehash: 5f7abd2569d5bad5af64161042e4e5d21e741c8c
-ms.sourcegitcommit: 7e99f66ef09d2903e22c789c67ff5a10aa953b2f
+ms.openlocfilehash: ee36cc713dd5fdb90ae20ef992f8e75eca09597d
+ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 05/15/2018
 ---
-# <a name="private-protected-c-reference"></a>Private, protected (Справочник по C#)
-`private protected` Сочетание ключевых слов — это модификатор доступа члена. Защищенный закрытый член имеет доступ по типам, производным от содержащего класса, но только в пределах содержащего сборки. Сравнение модификатора `private protected` с другими модификаторами доступа см. в разделе [Уровни доступности](../../../csharp/language-reference/keywords/accessibility-levels.md). 
+# <a name="private-protected-c-reference"></a>private protected (справочник по C#)
+Комбинация ключевых слов `private protected` является модификатором доступа к члену. К члену private protected имеют доступ типы, производные от содержащего класса, но только в пределах содержащей сборки. Сравнение модификатора `private protected` с другими модификаторами доступа см. в разделе [Уровни доступности](../../../csharp/language-reference/keywords/accessibility-levels.md). 
    
 ## <a name="example"></a>Пример  
- Закрытый защищенный член базового класса доступно из производных типов в его сборке, содержащей только в том случае, если статический тип переменной является тип производного класса. Для примера рассмотрим следующий сегмент кода:  
+ Член базового класса private protected доступен из производных типов в содержащей сборке только в том случае, если статический тип переменной является типом производного класса. Для примера рассмотрим следующий сегмент кода:  
   
- ```
+ ```csharp
  // Assembly1.cs  
  // Compile with: /target:library  
  public class BaseClass
@@ -42,7 +38,7 @@ ms.lasthandoff: 11/18/2017
  }
 ```  
   
-```  
+```csharp  
  // Assembly2.cs  
  // Compile with: /reference:Assembly1.dll  
  class DerivedClass2 : BaseClass
@@ -55,10 +51,10 @@ ms.lasthandoff: 11/18/2017
      }
  }
 ```  
- Этот пример содержит два файла, `Assembly1.cs` и `Assembly2.cs`. Первый файл содержит открытый базовый класс `BaseClass`и тип, производный от него, `DerivedClass1`. `BaseClass`защищенный закрытый член, которому принадлежит `myValue`, который `DerivedClass1` пытается получить доступ к одним из двух способов. Первая попытка доступа к `myValue` через экземпляр `BaseClass` приведет к ошибке. Однако попытка использовать ее в качестве наследуемого члена в `DerivedClass1` будет выполнена успешно.
-Во втором файле попытка получить доступ к `myValue` наследуемого члена из `DerivedClass2` приведет к ошибке, как оно доступно только для производных типов в Assembly1. 
+ Этот пример содержит два файла, `Assembly1.cs` и `Assembly2.cs`. Первый файл содержит открытый базовый класс, `BaseClass`, и производный от него тип, `DerivedClass1`. `BaseClass` владеет членом private protected, `myValue`, к которому `DerivedClass1` пытается получить доступ двумя способами. Первая попытка доступа к `myValue` через экземпляр `BaseClass` приведет к ошибке. Однако попытка использовать его в качестве наследуемого члена в `DerivedClass1` завершится успешно.
+Во втором файле попытка получить доступ к `myValue` в качестве наследуемого члена `DerivedClass2` приведет к ошибке, поскольку он доступен только для производных типов в Assembly1. 
 
- Члены структуры не могут быть `private protected` , так как структуры не наследуется.  
+ Элементы структуры не могут иметь модификатор `private protected`, поскольку структура не может наследоваться.  
   
 ## <a name="c-language-specification"></a>Спецификация языка C#  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
@@ -66,11 +62,11 @@ ms.lasthandoff: 11/18/2017
 ## <a name="see-also"></a>См. также  
  [Справочник по C#](../../../csharp/language-reference/index.md)   
  [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)   
- [Ключевые слова в C#](../../../csharp/language-reference/keywords/index.md)   
+ [Ключевые слова C#](../../../csharp/language-reference/keywords/index.md)   
  [Модификаторы доступа](../../../csharp/language-reference/keywords/access-modifiers.md)   
  [Уровни доступности](../../../csharp/language-reference/keywords/accessibility-levels.md)   
  [Модификаторы](../../../csharp/language-reference/keywords/modifiers.md)   
  [public](../../../csharp/language-reference/keywords/public.md)   
  [private](../../../csharp/language-reference/keywords/private.md)   
  [internal](../../../csharp/language-reference/keywords/internal.md)   
- [Вопросы безопасности для ключевых слов internal virtual](https://msdn.microsoft.com/library/heyd8kky(v=vs.110))
+ [Вопросы безопасности, связанные с использованием ключевых слов internal virtual](https://msdn.microsoft.com/library/heyd8kky(v=vs.110))

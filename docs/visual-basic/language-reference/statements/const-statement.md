@@ -1,16 +1,16 @@
 ---
 title: Оператор Const (Visual Basic)
-ms.date: 07/20/2015
+ms.date: 05/12/2018
 f1_keywords:
 - vb.Const
 helpviewer_keywords:
 - Const statement [Visual Basic]
 ms.assetid: 495b318d-b7c5-4198-94f8-0790a541b07a
-ms.openlocfilehash: bb4c524fa5c29efbcbe485fb5e86c8cf0fa432e8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: a5842e284eaa858e7a66160060123edc21858a3a
+ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="const-statement-visual-basic"></a>Оператор Const (Visual Basic)
 Объявляет и определяет одну или несколько констант.  
@@ -27,7 +27,7 @@ Const constantlist
  Необязательный. Список атрибутов, которые применяются ко всем константам, объявляемых в этом операторе. В разделе [список атрибутов](../../../visual-basic/language-reference/statements/attribute-list.md) в угловые скобки («`<`«и»`>`»).  
   
  `accessmodifier`  
- Необязательный. Позволяет указать, какой код может обращаться к этим константам. Может быть [открытый](../../../visual-basic/language-reference/modifiers/public.md), [Protected](../../../visual-basic/language-reference/modifiers/protected.md), [Friend](../../../visual-basic/language-reference/modifiers/friend.md), `Protected Friend`, или [частного](../../../visual-basic/language-reference/modifiers/private.md).  
+ Необязательный. Позволяет указать, какой код может обращаться к этим константам. Может быть [открытый](../../../visual-basic/language-reference/modifiers/public.md), [Protected](../../../visual-basic/language-reference/modifiers/protected.md), [Friend](../../../visual-basic/language-reference/modifiers/friend.md), [Protected Friend](../modifiers/protected-friend.md), [закрытый](../../../visual-basic/language-reference/modifiers/private.md), или [Private Protected](../../language-reference/modifiers/private-protected.md).
   
  `Shadows`  
  Необязательный. Используется для повторного объявления и скрытия программного элемента в базовом классе. В разделе [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).  

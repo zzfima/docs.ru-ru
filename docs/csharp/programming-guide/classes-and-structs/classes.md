@@ -6,11 +6,11 @@ helpviewer_keywords:
 - classes [C#]
 - C# language, classes
 ms.assetid: e8848524-7273-429f-8aba-c658d5eff5ad
-ms.openlocfilehash: 808e25315b0010fd55112f2ed237485c3d0c40d4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 688736aa8556719789b02d7db25858f442b4309e
+ms.sourcegitcommit: 895c7602386a6dfe7ca4facce3d965b27e5c6e87
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="classes-c-programming-guide"></a>Классы (Руководство по программированию на C#)
 *Класс* — это конструкция, которая позволяет создавать собственные настраиваемые типы путем группирования переменных других типов, методов и событий. Класс похож на проект. Он определяет данные и поведение типа. Если класс не объявлен статическим, то клиентский код может создавать его *экземпляры*. Они представляют собой *объекты*, присваиваемые переменным. Экземпляр класса остается в памяти до тех пор, пока все ссылки на него не выйдут из области. В этот момент среда CLR помечает ее пригодной для сборки мусора. Если класс объявляется как [статический](../../../csharp/language-reference/keywords/static.md), то его экземпляры создавать нельзя, и клиентский код может получать к нему доступ только через сам класс. Дополнительные сведения см. в статье [Статические классы и члены статических классов](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md).  
@@ -83,10 +83,9 @@ MyClass mc2 = mc;
   
  Определения классов можно разделить между различными исходными файлами. Дополнительные сведения см. в разделе [Разделяемые классы и методы](../../../csharp/programming-guide/classes-and-structs/partial-classes-and-methods.md).  
   
-## <a name="description"></a>Описание:  
- В следующем примере определяется открытый класс, содержащий одно поле, метод и специальный метод, вызывающий конструктор. Дополнительные сведения см. в разделе [Конструкторы](../../../csharp/programming-guide/classes-and-structs/constructors.md). Затем создается экземпляр этого класса с помощью ключевого слова `new`.  
-  
 ## <a name="example"></a>Пример  
+ В следующем примере определяется открытый класс, содержащий [автоматически реализуемое свойство](auto-implemented-properties.md), метод и специальный метод, который называется конструктором. См. дополнительные сведения о [свойствах](properties.md), [методах](methods.md) и [конструкторах](constructors.md). Затем создаются экземпляры этого класса с помощью ключевого слова `new`.  
+  
  [!code-csharp[Class Example](~/samples/snippets/csharp/programming-guide/classes-and-structs/class-example.cs)] 
   
 ## <a name="c-language-specification"></a>Спецификация языка C#  

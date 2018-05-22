@@ -1,21 +1,15 @@
 ---
-title: "Практическое руководство. Использование XML-документации (Руководство по программированию в C#)"
+title: Практическое руководство. Использование XML-документации (Руководство по программированию в C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - XML documentation [C#]
 - C# language, XML documentation features
 ms.assetid: 8f33917b-9577-4c9a-818a-640dbbb0b399
-caps.latest.revision: "19"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: eb647a275a5cd5fac2316706591440d9792861b3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 6c7e30d23868959145e8941057f1c633fe6e374e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-use-the-xml-documentation-features-c-programming-guide"></a>Практическое руководство. Использование XML-документации (Руководство по программированию в C#)
 В данном примере представлены основные общие сведения о задокументированном типе.  
@@ -34,7 +28,7 @@ ms.lasthandoff: 11/21/2017
  **\<summary>**  
  **Здесь сводная документация об уровне класса.\</summary>**  
  **\<remarks>**  
- **Комментариев больше времени может быть связан с типом или членом**  
+ **Расширенные комментарии можно связать с типом или членом**  
  **при помощи тега remarks\</remarks>**  
  **\</member>**  
  **\<member name="F:SomeClass.m_Name">**  
@@ -42,14 +36,14 @@ ms.lasthandoff: 11/21/2017
  **Хранилище для свойства name\</summary>**  
  **\</member>**  
  **\<member name="M:SomeClass.#ctor">**  
- **\<Сводка > конструктора класса.  \< /summary >**  
+ **\<summary>Конструктор класса.\</summary>**  
  **\</member>**  
  **\<member name="M:SomeClass.SomeMethod(System.String)">**  
  **\<summary>**  
  **Описание метода SomeMethod.\</summary>**  
  **\<param name="s"> Здесь описание параметра s\</param>**  
  **\<seealso cref="T:System.String">**  
- **Атрибут cref можно использовать на любом теге для ссылки на тип или член**  
+ **Атрибут cref можно использовать в любом теге для ссылки на тип или член**  
  **и тогда компилятор проверит существование ссылки. \</seealso>**  
  **\</member>**  
  **\<member name="M:SomeClass.SomeOtherMethod">**  
@@ -99,5 +93,5 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="see-also"></a>См. также  
  [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
- [/ doc (параметры компилятора C#)](../../../csharp/language-reference/compiler-options/doc-compiler-option.md)  
+ [/doc (параметры компилятора C#)](../../../csharp/language-reference/compiler-options/doc-compiler-option.md)  
  [Комментарии XML-документации](../../../csharp/programming-guide/xmldoc/xml-documentation-comments.md)

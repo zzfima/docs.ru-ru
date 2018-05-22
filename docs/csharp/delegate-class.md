@@ -1,20 +1,13 @@
 ---
-title: "System.Delegate и ключевое слово delegate"
-description: "Сведения о классах в .NET Framework, поддерживающих делегаты, а также их сопоставление с ключевым словом delegate."
-keywords: .NET, .NET Core
-author: BillWagner
-ms.author: wiwagn
+title: System.Delegate и ключевое слово `delegate`
+description: Сведения о классах в .NET Framework, поддерживающих делегаты, а также их сопоставление с ключевым словом delegate.
 ms.date: 06/20/2016
-ms.topic: article
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.devlang: csharp
 ms.assetid: f3742fda-13c2-4283-8966-9e21c2674393
-ms.openlocfilehash: 09c7da7c780389d3819cf23a533cc425b43ad5ff
-ms.sourcegitcommit: bbde43da655ae7bea1977f7af7345eb87bd7fd5f
+ms.openlocfilehash: 2265d081b884a19cda6fc9d80a0f621a30c87e2a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="systemdelegate-and-the-delegate-keyword"></a>System.Delegate и ключевое слово `delegate`
 
@@ -120,7 +113,7 @@ phrases.Sort(comparer);
 
 ## <a name="delegate-and-multicastdelegate-classes"></a>Классы Delegate и MulticastDelegate
 
-Описанная выше поддержка языка предоставляет функции и поддержку, которые обычно необходимы для работы с делегатами. Эти возможности построены на двух классов в платформе .NET Core: <xref:System.Delegate> и <xref:System.MulticastDelegate>.
+Описанная выше поддержка языка предоставляет функции и поддержку, которые обычно необходимы для работы с делегатами. Эти возможности основаны на двух классах в платформе .NET Core: <xref:System.Delegate> и <xref:System.MulticastDelegate>.
 
 Класс `System.Delegate` и его прямой вложенный класс `System.MulticastDelegate` обеспечивают поддержку платформы для создания делегатов, регистрации методов в качестве целевых объектов делегатов и вызова всех методов, которые зарегистрированы как целевые объекты делегатов. 
 

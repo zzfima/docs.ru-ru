@@ -1,21 +1,14 @@
 ---
-title: "Выбор .NET Framework для контейнеров Docker"
-description: "Архитектура микрослужб .NET для упакованных в контейнеры приложений .NET | Выбор .NET Framework для контейнеров Docker"
-keywords: "Docker, микрослужбы, ASP.NET, контейнер"
+title: Выбор .NET Framework для контейнеров Docker
+description: Архитектура микрослужб .NET для упакованных в контейнеры приложений .NET | Выбор .NET Framework для контейнеров Docker
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/18/2017
-ms.prod: .net-core
-ms.technology: dotnet-docker
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: eec258ff01bcfeb834fa7a1138fdf822fd00c996
-ms.sourcegitcommit: c3957fdb990060559d73cca44ab3e2c7b4d049c0
+ms.openlocfilehash: e707c8f0e721915e829e41628891928594010b92
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="when-to-choose-net-framework-for-docker-containers"></a>Выбор .NET Framework для контейнеров Docker
 
@@ -55,7 +48,7 @@ ms.lasthandoff: 03/05/2018
 
 ### <a name="additional-resources"></a>Дополнительные ресурсы
 
--   **Руководство по .NET core**
+-   **Руководство по .NET Core**
     [*https://docs.microsoft.com/dotnet/core/index*](../../../core/index.md)
 
 -   **Перенос кода в .NET Core из .NET Framework**

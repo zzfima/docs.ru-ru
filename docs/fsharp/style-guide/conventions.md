@@ -2,11 +2,11 @@
 title: 'Соглашения о написании кода на языке F #'
 description: 'Дополнительные сведения, общие рекомендации и идиом при написании кода F #.'
 ms.date: 05/14/2018
-ms.openlocfilehash: 4db1e2b4fef97fc060f717a080cd762f9fe08ee0
-ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
-ms.translationtype: HT
+ms.openlocfilehash: d1f47f821887dabcdbc5d9406e90213fe8fafda5
+ms.sourcegitcommit: 895c7602386a6dfe7ca4facce3d965b27e5c6e87
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/15/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="f-coding-conventions"></a>Соглашения о написании кода на языке F #
 
@@ -108,12 +108,11 @@ open System.IO
 open System.Reflection
 open System.Text
 
-open Microsoft.FSharp.Core.Printf
 open Microsoft.FSharp.Compiler
 open Microsoft.FSharp.Compiler.AbstractIL
+open Microsoft.FSharp.Compiler.AbstractIL.Diagnostics
 open Microsoft.FSharp.Compiler.AbstractIL.IL
 open Microsoft.FSharp.Compiler.AbstractIL.ILBinaryReader
-open Microsoft.FSharp.Compiler.AbstractIL.Diagnostics
 open Microsoft.FSharp.Compiler.AbstractIL.Internal
 open Microsoft.FSharp.Compiler.AbstractIL.Internal.Library
 
@@ -123,24 +122,23 @@ open Microsoft.FSharp.Compiler.CompileOps
 open Microsoft.FSharp.Compiler.CompileOptions
 open Microsoft.FSharp.Compiler.Driver
 open Microsoft.FSharp.Compiler.ErrorLogger
+open Microsoft.FSharp.Compiler.Infos
+open Microsoft.FSharp.Compiler.InfoReader
+open Microsoft.FSharp.Compiler.Lexhelp
+open Microsoft.FSharp.Compiler.Layout
 open Microsoft.FSharp.Compiler.Lib
+open Microsoft.FSharp.Compiler.NameResolution
 open Microsoft.FSharp.Compiler.PrettyNaming
 open Microsoft.FSharp.Compiler.Parser
 open Microsoft.FSharp.Compiler.Range
-open Microsoft.FSharp.Compiler.Lexhelp
-open Microsoft.FSharp.Compiler.Layout
 open Microsoft.FSharp.Compiler.Tast
 open Microsoft.FSharp.Compiler.Tastops
 open Microsoft.FSharp.Compiler.TcGlobals
-open Microsoft.FSharp.Compiler.Infos
-open Microsoft.FSharp.Compiler.InfoReader
-open Microsoft.FSharp.Compiler.NameResolution
 open Microsoft.FSharp.Compiler.TypeChecker
 open Microsoft.FSharp.Compiler.SourceCodeServices.SymbolHelpers
 
 open Internal.Utilities
 open Internal.Utilities.Collections
-open Microsoft.FSharp.Compiler.Layout.TaggedTextOps
 ```
 
 Обратите внимание, что разрыв строки отделяет топологические слои с каждым слоем сортируемых алфавитно-цифровом порядке после. Это верно организует кода без случайно затенение значения.
@@ -154,7 +152,9 @@ open Microsoft.FSharp.Compiler.Layout.TaggedTextOps
 module MyApi =
     let dep1 = File.ReadAllText "/Users/{your name}/connectionstring.txt"
     let dep2 = Environment.GetEnvironmentVariable "DEP_2"
-    let dep3 = Random().Next() // Random is not thread-safe
+
+    let private r = Random()
+    let dep3() = r.Next() // Problematic if multiple threads use this
 
     let function1 arg = doStuffWith dep1 dep2 dep3 arg
     let function2 arg = doSutffWith dep1 dep2 dep3 arg
@@ -162,7 +162,9 @@ module MyApi =
 
 Это часто не рекомендуются по нескольким причинам:
 
-Во-первых он делает сам интерфейс API зависимой от общего состояния. Например, несколько потоков вызывающий может осуществляется попытка доступа к `dep3` значение (и не является потокобезопасным). Во-вторых он отправляет в базу кода сам конфигурации приложения. Это трудно поддерживать для больших баз кода.
+Во-первых, конфигурацию приложения помещается в базу кода с `dep1` и `dep2`. Это довольно трудно поддерживать в больших баз кода.
+
+Второй, статически инициализированные данных не должно содержать значения, которые не являются потокобезопасными, если компонент себя с помощью нескольких потоков. Четко нарушено `dep3`.
 
 Наконец инициализации модуля компилирует в статический конструктор для всего блока компиляции. Если возникают ошибки при инициализации значение привязки let в этом модуле, он объявляется в качестве `TypeInitializationException` , сохраняется в кэше в течение всего времени существования приложения. Это может быть трудно диагностировать. Обычно имеется внутреннее исключение, которое можно попытаться обсуждения, но если нет, то есть не о том, что корневой причиной является.
 
@@ -318,7 +320,7 @@ let tryReadAllTextIfPresent (path : string) =
 
 ## <a name="partial-application-and-point-free-programming"></a>Частичное применение и освободить точки программирование
 
-F # поддерживает частичное применение и, следовательно, различные способы программы в стиле освободить точки. Это может быть использовано для повторного использования кода в модуль или что-то реализации, но обычно это не что-нибудь для предоставления публично. В общем случае точки освободить программирования не является тем, сама по себе и можно добавить когнитивных перешагнуть барьер для тех, кто не занимается стиль. Освободить точки программирование на F # является базовым для хорошо обученной поля, но может быть трудно людей, которые не знакомы с лямбда-выражения математического анализа.
+F # поддерживает частичное применение и, следовательно, различные способы программы в стиле освободить точки. Это может быть использовано для повторного использования кода в модуль или что-то реализации, но обычно это не что-нибудь для предоставления публично. В общем случае точки освободить программирования не является тем, сама по себе и можно добавить когнитивных перешагнуть барьер для тех, кто не занимается стиль.
 
 ### <a name="do-not-use-partial-application-and-currying-in-public-apis"></a>Не используйте частичное применение и каррирования в открытых интерфейсах API
 

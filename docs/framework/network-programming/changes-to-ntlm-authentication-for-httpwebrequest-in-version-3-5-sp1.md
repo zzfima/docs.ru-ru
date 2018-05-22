@@ -1,23 +1,15 @@
 ---
-title: "Изменения в аутентификации NTLM для HttpWebRequest в версии 3.5 с пакетом обновления 1 (SP1)"
-ms.custom: 
+title: Изменения в аутентификации NTLM для HttpWebRequest в версии 3.5 с пакетом обновления 1 (SP1)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 8bf0b428-5a21-4299-8d6e-bf8251fd978a
-caps.latest.revision: "8"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 239834a732fe3bc1cb3e8e7f1d126d26c210d1f6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: f5affc15607ddae76ec90a90928cb42fa0ad49e1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="changes-to-ntlm-authentication-for-httpwebrequest-in-version-35-sp1"></a>Изменения в аутентификации NTLM для HttpWebRequest в версии 3.5 с пакетом обновления 1 (SP1)
 В .NET Framework версии 3.5 с пакетом обновления 1 (SP1) и более поздних внесены касающиеся безопасности изменения, влияющие на обработку встроенной проверки подлинности Windows классами <xref:System.Net.HttpWebRequest>, <xref:System.Net.HttpListener>, <xref:System.Net.Security.NegotiateStream> и связанными классами в пространстве имен System.Net. Эти изменения могут влиять на приложения, которые используют данные классы для выполнения веб-запросов и получения ответов с применением встроенной проверки подлинности Windows на основе NTLM. Они также могут повлиять на веб-серверы и клиентские приложения, в которых используется встроенная проверка подлинности Windows.  
@@ -58,7 +50,7 @@ ms.lasthandoff: 12/22/2017
   
  7. Закройте редактор реестра, перезапустите службу IISAdmin и выполните команду IISReset.  
   
- Менее безопасный способ — отключить проверку замыкания на себя, как описано в статье по адресу [http://support.microsoft.com/kb/896861](http://go.microsoft.com/fwlink/?LinkID=179657). При этом отключается защита от атак отражением. Поэтому лучше ограничить набор альтернативных имен только теми, которые действительно будут использоваться компьютером.  
+ Менее безопасный способ — отключить проверку замыкания на себя, как описано на странице [http://support.microsoft.com/kb/896861](http://go.microsoft.com/fwlink/?LinkID=179657). При этом отключается защита от атак отражением. Поэтому лучше ограничить набор альтернативных имен только теми, которые действительно будут использоваться компьютером.  
   
 ## <a name="see-also"></a>См. также  
  <xref:System.Net.AuthenticationManager.CustomTargetNameDictionary%2A?displayProperty=nameWithType>  

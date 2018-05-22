@@ -1,125 +1,113 @@
 ---
-title: Интерполяция строк. Язык C#
-description: Узнайте, как работает интерполяция строк в C# 6
-keywords: .NET, .NET Core, C#, строка
-author: mgroves
-ms.author: wiwagn
-ms.date: 03/06/2017
-ms.topic: article
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.devlang: csharp
-ms.assetid: f8806f6b-3ac7-4ee6-9b3e-c524d5301ae9
-ms.openlocfilehash: a9578d006861b987871071961437345c378a5b58
-ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
+title: Интерполяция строк в C#
+description: Узнайте, как включить форматированные результаты выражения в строку результатов в C# с интерполяцией строк.
+author: pkulikov
+ms.date: 05/09/2018
+ms.openlocfilehash: 447e87cd4aae49896f0efbb8ece6097181079266
+ms.sourcegitcommit: ff1d40507b3eb6e2185478e37c66c66be6de46f1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 05/11/2018
 ---
 # <a name="string-interpolation-in-c"></a>Интерполяция строк в C# #
 
-Интерполяция строк — это процесс замены заполнителей в строке значениями строковой переменной. До версии C# 6 для этого приходилось применять метод <xref:System.String.Format%2A?displayProperty=nameWithType>. Он работает нормально, но использует только нумерованные заполнители, что порой затрудняет восприятие синтаксических конструкций и усложняет их.
+В этом руководстве описано, как использовать [интерполяцию строк](../language-reference/tokens/interpolated.md) для форматирования и включения результатов выражения в строку результатов. В примерах предполагается, что вам знакомы основные принципы C# и форматирования типов .NET. Если вы не знакомы с интерполяцией строк или форматированием типов .NET, сначала ознакомьтесь с [интерактивным кратким руководством по интерполяции строк](../quick-starts/interpolated-strings.yml). Дополнительные сведения о форматировании типов в .NET см. в разделе [Типы форматирования в .NET](../../standard/base-types/formatting-types.md).
 
-В других языках программирования интерполяция строк уже достаточно давно является встроенной возможностью. Например, в PHP можно сделать так:
+[!INCLUDE[interactive-note](~/includes/csharp-interactive-note.md)]
 
-```php
-$name = "Jonas";
-echo "My name is $name.";
-// This will output "My name is Jonas."
-```
+## <a name="introduction"></a>Вступление
 
-Наконец, в C# 6 мы тоже может выполнять такую интерполяцию строк. Укажите перед строкой `$`, и все переменные и (или) выражения в ней будут заменены соответствующими значениями.
+Функция [интерполяции строк](../language-reference/tokens/interpolated.md) создана на основе функции [составного форматирования](../../standard/base-types/composite-formatting.md) и имеет более удобный синтаксис для включения форматированных результатов выражения в строку результатов.
 
-## <a name="prerequisites"></a>Предварительные требования
-Компьютер должен быть настроен для выполнения .NET Core. Инструкции по установке см. на странице [.NET Core](https://www.microsoft.com/net/core).
-Это приложение можно запустить в ОС Windows, Ubuntu Linux, macOS или в контейнере Docker. Вам потребуется редактор кода, но вы можете выбрать любой привычный для вас. В примерах ниже используется кроссплатформенный редактор [Visual Studio Code](https://code.visualstudio.com/) с открытым исходным кодом. Вы можете заменить его на любое другое средство, с которым вам удобно работать.
+Для определения строкового литерала в качестве интерполированной строки добавьте к началу символ `$`. Вы можете внедрить любое допустимое выражение C#, возвращающее значение в интерполированной строке. В следующем примере после вычисления выражения его результат преобразуется в строку и включается в строку результатов:
 
-## <a name="create-the-application"></a>Создание приложения
+[!code-csharp-interactive[string interpolation example](~/samples/snippets/csharp/tutorials/string-interpolation/Program.cs#1)]
 
-Теперь, когда вы установили все нужные средства, создайте новое приложение .NET Core. Чтобы использовать генератор командной строки, создайте для проекта каталог, например `interpolated`, и выполните следующую команду в любой удобной оболочке:
+Как показано в примере, можно включить выражение в интерполированную строку, заключив его в фигурные скобки:
 
 ```
-dotnet new console
+{<interpolatedExpression>}
 ```
 
-Эта команда создает скелет проекта .NET Core: файл проекта *interpolated.csproj* и файл исходного кода *Program.cs*. Нужно также выполнить команду `dotnet restore`, чтобы восстановить зависимости, необходимые для компиляции проекта.
+Во время компиляции интерполированная строка обычно преобразуется в вызов метода <xref:System.String.Format%2A?displayProperty=nameWithType>. Так вы сможете использовать все возможности функции [составного форматирования строки](../../standard/base-types/composite-formatting.md) при работе с интерполированными строками.
 
-[!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
+## <a name="how-to-specify-a-format-string-for-an-interpolated-expression"></a>Как указать строку формата для интерполированного выражения
 
-Чтобы выполнить программу, используйте `dotnet run`. Она выведет в консоль сообщение "Hello, World".
-
-
-
-## <a name="intro-to-string-interpolation"></a>Знакомство с интерполяцией строк
-
-При использовании <xref:System.String.Format%2A?displayProperty=nameWithType> в строку включаются специальные местозаполнители, которые заменяются аргументами, переданными вслед за строкой. Например:
-
-[!code-csharp[String.Format example](../../../samples/snippets/csharp/new-in-6/string-interpolation.cs#StringFormatExample)]  
-
-Этот код выводит строку "My name is Matt Groves".
-
-В C# 6 вы теперь можете обойтись без `String.Format`. Определите интерполируемую строку, указав перед ней символ `$`, а затем просто используйте переменные прямо в этой строке. Например:
-
-[!code-csharp[Interpolation example](../../../samples/snippets/csharp/new-in-6/string-interpolation.cs#InterpolationExample)]  
-
-Можно использовать не только переменные. В фигурных скобках можно указать любое допустимое выражение. Например:
-
-[!code-csharp[Interpolation expression example](../../../samples/snippets/csharp/new-in-6/string-interpolation.cs#InterpolationExpressionExample)]  
-
-Этот пример кода выведет данные:
+Задайте строку формата, которая поддерживается типом результата выражения, указав ее после интерполированного выражения через двоеточие:
 
 ```
-This is line number 1
-This is line number 2
-This is line number 3
-This is line number 4
-This is line number 5
+{<interpolatedExpression>:<formatString>}
 ```
 
-## <a name="how-string-interpolation-works"></a>Как работает интерполяция строк
+В следующем примере показано, как задать стандартные и настраиваемые строки формата для выражений, возвращающих дату и время или числовые результаты:
 
-Компилятор преобразует синтаксис интерполяции в `String.Format`. Таким образом, вы можете выполнять [все, что раньше можно было сделать со `String.Format`](../../standard/base-types/formatting-types.md).
+[!code-csharp-interactive[format string example](~/samples/snippets/csharp/tutorials/string-interpolation/Program.cs#2)]
 
-Например, можно добавить отбивку и форматирование чисел:
+Дополнительные сведения см. в разделе [Компонент строки формата](../../standard/base-types/composite-formatting.md#format-string-component) в статье [Составное форматирование](../../standard/base-types/composite-formatting.md). Этот раздел содержит ссылки на разделы, описывающие стандартные и настраиваемые строки формата, поддерживаемые базовыми типами .NET.
 
-[!code-csharp[Interpolation formatting example](../../../samples/snippets/csharp/new-in-6/string-interpolation.cs#InterpolationFormattingExample)]  
+## <a name="how-to-control-the-field-width-and-alignment-of-the-formatted-interpolated-expression"></a>Управление шириной поля и выравниванием в форматированных интерполированных выражениях
 
-Приведенный выше пример выведет примерно следующее:
+Задайте минимальную ширину поля и выравнивание форматированного результата выражения, указав константное выражение после интерполированного выражения через запятую:
 
 ```
-998        5,177.67
-999        6,719.30
-1000       9,910.61
-1001       529.34
-1002       1,349.86
-1003       2,660.82
-1004       6,227.77
+{<interpolatedExpression>,<alignment>}
 ```
 
-Если имя переменной не найдено, создается ошибка времени компиляции.
+Если значение *alignment* положительное, форматированное выражение будет выровнено по правому краю, а если отрицательное — по левому.
 
-Например:
+Если вам нужно задать и выравнивание, и строку формата, начните с компонента выравнивания:
 
-```csharp
-var animal = "fox";
-var localizeMe = $"The {adj} brown {animal} jumped over the lazy {otheranimal}";
-var adj = "quick";
-Console.WriteLine(localizeMe);
+```
+{<interpolatedExpression>,<alignment>:<formatString>}
 ```
 
-При компиляции этого кода вы получите ошибки:
- 
-* `Cannot use local variable 'adj' before it is declared` — это значит, что переменная `adj` объявляется *после* интерполируемой строки.
-* `The name 'otheranimal' does not exist in the current context` — это значит, что переменная с именем `otheranimal` вообще никогда не объявляется.
+В следующем примере показано, как задать выравнивание. Текстовые поля разграничены символом вертикальной черты ("|"):
 
-## <a name="localization-and-internationalization"></a>Локализация и интернационализация
+[!code-csharp-interactive[alignment example](~/samples/snippets/csharp/tutorials/string-interpolation/Program.cs#3)]
 
-Интерполируемые строки поддерживают <xref:System.IFormattable?displayProperty=nameWithType> и <xref:System.FormattableString?displayProperty=nameWithType>, что можно удачно применять в контексте интернационализации.
+В выходных данных в примере видно, что если длина форматированного результата выражения превышает заданную ширину поля, значение *alignment* игнорируется.
 
-По умолчанию интерполируемая строка использует текущие настройки языка и региональных параметров. Чтобы использовать другие параметры, выполните приведение строки к типу `IFormattable`. Например:
+Дополнительные сведения см. в разделе [Компонент выравнивания](../../standard/base-types/composite-formatting.md#alignment-component) в статье [Составное форматирование](../../standard/base-types/composite-formatting.md).
 
-[!code-csharp[Interpolation internationalization example](../../../samples/snippets/csharp/new-in-6/string-interpolation.cs#InterpolationInternationalizationExample)]  
+## <a name="how-to-use-escape-sequences-in-an-interpolated-string"></a>Как использовать escape-последовательности в интерполированной строке
 
-## <a name="conclusion"></a>Заключение 
+Интерполированные строки поддерживают все escape-последовательности, которые могут использоваться в обычных строковых литералах. Дополнительные сведения см. в статье [Escape-последовательности строки](../programming-guide/strings/index.md#string-escape-sequences).
 
-В этом руководстве вы узнали, как использовать функции интерполяции строк в C# 6. По сути это упрощенная запись обычной инструкции `String.Format`, допускающая несколько более сложных вариантов использования. Дополнительную информацию см. в разделе [Интерполяция строк](../../csharp//language-reference/tokens/interpolated.md).
+Для литеральной интерпретации escape-последовательности используйте строковый литерал [verbatim](../language-reference/tokens/verbatim.md). В интерполированных строках verbatim используется символ `$`, за которым следует символ `@`.
+
+В строке результатов указывайте двойную фигурную скобку "{{" или "}}". Дополнительные сведения см. в разделе [escape-скобки](../../standard/base-types/composite-formatting.md#escaping-braces) в статье [Составное форматирование](../../standard/base-types/composite-formatting.md).
+
+В следующем примере показано, как включить фигурные скобки в строку результата и создать интерполированную строку verbatim:
+
+[!code-csharp-interactive[escape sequence example](~/samples/snippets/csharp/tutorials/string-interpolation/Program.cs#4)]
+
+## <a name="how-to-use-a-ternary-conditional-operator--in-an-interpolated-expression"></a>Как использовать троичный условный оператор `?:` в интерполированном выражении
+
+Двоеточие (:) имеет особое значение в элементе интерполированного выражения. Чтобы использовать [условный оператор](../language-reference/operators/conditional-operator.md) в выражении, заключите это выражение в скобки, как показано в следующем примере:
+
+[!code-csharp-interactive[conditional operator example](~/samples/snippets/csharp/tutorials/string-interpolation/Program.cs#5)]
+
+## <a name="how-to-create-a-culture-specific-result-string-with-string-interpolation"></a>Создание строки результата с интерполяцией для определенного языка и региональных параметров
+
+По умолчанию в интерполированной строке используется текущий язык и региональные параметры, определяемые свойством <xref:System.Globalization.CultureInfo.CurrentCulture?displayProperty=nameWithType> для всех операций форматирования. Используйте неявное преобразование интерполированной строки для экземпляра <xref:System.FormattableString?displayProperty=nameWithType> и вызовите метод <xref:System.FormattableString.ToString(System.IFormatProvider)>, чтобы создать строку результата с определенным языком и региональными параметрами. Следующий пример показывает, как это сделать:
+
+[!code-csharp-interactive[specify different cultures](~/samples/snippets/csharp/tutorials/string-interpolation/Program.cs#6)]
+
+Как показано в примере, можно использовать один экземпляр <xref:System.FormattableString> для создания нескольких строк результата для различных языков и региональных параметров.
+
+## <a name="how-to-create-a-result-string-using-the-invariant-culture"></a>Как создать строку результата с помощью инвариантного языка и региональных параметров
+
+Наряду с методом <xref:System.FormattableString.ToString(System.IFormatProvider)?displayProperty=nameWithType> можно использовать статический метод <xref:System.FormattableString.Invariant%2A?displayProperty=nameWithType>, чтобы разрешить интерполированную строку в строке результата для <xref:System.Globalization.CultureInfo.InvariantCulture>. Следующий пример показывает, как это сделать:
+
+[!code-csharp-interactive[format with invariant culture](~/samples/snippets/csharp/tutorials/string-interpolation/Program.cs#7)]
+
+## <a name="conclusion"></a>Заключение
+
+В этом руководстве описаны распространенные сценарии использования интерполяции строк. Дополнительные сведения об интерполяции строк см. в разделе [Интерполяция строк](../language-reference/tokens/interpolated.md). Дополнительные сведения о форматировании типов в .NET см. в разделах [Типы форматирования в .NET](../../standard/base-types/formatting-types.md) и [Составное форматирование](../../standard/base-types/composite-formatting.md).
+
+## <a name="see-also"></a>См. также
+
+<xref:System.String.Format%2A?displayProperty=nameWithType>  
+<xref:System.FormattableString?displayProperty=nameWithType>  
+<xref:System.IFormattable?displayProperty=nameWithType>  
+[Строки](../programming-guide/strings/index.md)  

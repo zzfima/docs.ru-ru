@@ -1,23 +1,15 @@
 ---
-title: "Сетевая изоляция для приложений Магазина Windows"
-ms.custom: 
+title: Сетевая изоляция для приложений Магазина Windows
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: b064497c-d956-46b8-838d-7a0223c7e200
-caps.latest.revision: "7"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: ba7e480f50d3a339648229f17152eb28b28ec159
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: d3a26d6c3fc500691fa007abfe9c8fd069f9e812
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="network-isolation-for-windows-store-apps"></a>Сетевая изоляция для приложений Магазина Windows
 Классы в пространствах имен <xref:System.Net>, <xref:System.Net.Http> и <xref:System.Net.Http.Headers> можно использовать для разработки классических приложений или приложений для Магазина Windows. При использовании в приложениях для Магазина Windows к классам из этих пространств имен применяется сетевая изоляция, которая является одной из составляющих модели обеспечения безопасности приложений в [!INCLUDE[win8](../../../includes/win8-md.md)]. Чтобы обеспечить доступ к сети, в манифесте приложения для Магазина Windows необходимо включить соответствующие сетевые возможности.  
@@ -36,9 +28,9 @@ ms.lasthandoff: 12/22/2017
  Дополнительные сведения о средствах настройки сетевых возможностей и изоляции, которые используются для устранения неполадок с сетевой изоляцией, см. в разделе [Практическое руководство. Настройка возможностей сетевой изоляции](http://go.microsoft.com/fwlink/?LinkID=228265) в документации разработчика [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)].  
   
 ## <a name="see-also"></a>См. также  
- [Подключение к веб-службы](http://go.microsoft.com/fwlink/?LinkID=245696)  
- [Рекомендации и контрольный список для сетевой изоляции](http://go.microsoft.com/fwlink/?LinkID=228265)  
- [Краткое руководство: Подключение с помощью HttpClient](http://go.microsoft.com/fwlink/?LinkId=245697)  
+ [Соединение с веб-службой](http://go.microsoft.com/fwlink/?LinkID=245696)  
+ [Рекомендации и контрольный список для настройки сетевой изоляции](http://go.microsoft.com/fwlink/?LinkID=228265)  
+ [Краткое руководство. Подключение с помощью HttpClient](http://go.microsoft.com/fwlink/?LinkId=245697)  
  [Как использовать обработчики HttpClient](http://go.microsoft.com/fwlink/?LinkId=245699)  
  [Как защитить подключения HttpClient](http://go.microsoft.com/fwlink/?LinkId=245698)  
  [Пример HttpClient](http://go.microsoft.com/fwlink/?LinkId=242550)

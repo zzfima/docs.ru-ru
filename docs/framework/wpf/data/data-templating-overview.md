@@ -10,11 +10,11 @@ helpviewer_keywords:
 - templates [WPF], data
 - data templates [WPF]
 ms.assetid: 0f4d9f8c-0230-4013-bd7b-e8e7fed01b4a
-ms.openlocfilehash: feed791ac876c13dbd637f0455d3cfdd83a86e05
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7aed418fe5e2c7d8a217f3016655f39c99300d53
+ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/15/2018
 ---
 # <a name="data-templating-overview"></a>Общие сведения о шаблонах данных
 Модель шаблонов данных WPF предоставляет большую гибкость при определении представления данных. Элементы управления WPF имеют встроенные функции для поддержки настройки представления данных. В этом разделе сначала демонстрируется определение <xref:System.Windows.DataTemplate> , а затем представлены другие возможности шаблонов данных, например выбора шаблонов на основе пользовательской логики и поддержка для отображения иерархических данных.  
@@ -132,7 +132,8 @@ ms.lasthandoff: 05/04/2018
   
 <a name="what_belongs_in_datatemplate"></a>   
 ### <a name="what-belongs-in-a-datatemplate"></a>Что входит в DataTemplate?  
- В предыдущем примере мы разместили триггер в <xref:System.Windows.DataTemplate> с помощью <xref:System.Windows.DataTemplate>.<xref:System.Windows.DataTemplate.Triggers%2A> . <xref:System.Windows.Setter> Триггера задает значение свойства элемента ( <xref:System.Windows.Controls.Border> элемент), находится в пределах <xref:System.Windows.DataTemplate>. Тем не менее если свойства, к `Setters` интересует не являются свойствами элементов, которые находятся в пределах текущего <xref:System.Windows.DataTemplate>, может быть более подходящими для задания свойств с помощью <xref:System.Windows.Style> , предназначенная для <xref:System.Windows.Controls.ListBoxItem> класса (если элемент управления привязывается <xref:System.Windows.Controls.ListBox>). Например, если вы хотите вашей <xref:System.Windows.Trigger> для анимации <xref:System.Windows.UIElement.Opacity%2A> значение элемента при наведении указателя мыши на элемент, определите триггеры в <xref:System.Windows.Controls.ListBoxItem> стиля. Пример см. в разделе [Вводная часть примера стилизации и использования шаблонов](http://go.microsoft.com/fwlink/?LinkID=160010).  
+
+В предыдущем примере мы разместили триггер в <xref:System.Windows.DataTemplate> с помощью <xref:System.Windows.DataTemplate>.<xref:System.Windows.DataTemplate.Triggers%2A> . <xref:System.Windows.Setter> Триггера задает значение свойства элемента ( <xref:System.Windows.Controls.Border> элемент), находится в пределах <xref:System.Windows.DataTemplate>. Тем не менее если свойства, к `Setters` интересует не являются свойствами элементов, которые находятся в пределах текущего <xref:System.Windows.DataTemplate>, может быть более подходящими для задания свойств с помощью <xref:System.Windows.Style> , предназначенная для <xref:System.Windows.Controls.ListBoxItem> класса (если элемент управления привязывается <xref:System.Windows.Controls.ListBox>). Например, если вы хотите вашей <xref:System.Windows.Trigger> для анимации <xref:System.Windows.UIElement.Opacity%2A> значение элемента при наведении указателя мыши на элемент, определите триггеры в <xref:System.Windows.Controls.ListBoxItem> стиля. Пример см. в разделе [Вводная часть примера стилизации и использования шаблонов](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating).
   
  Как правило, не забывайте, что <xref:System.Windows.DataTemplate> применяется к каждому из создаваемого <xref:System.Windows.Controls.ListBoxItem> (Дополнительные сведения о том, как и где он применен фактически см. в разделе <xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A> страницы.). Ваш <xref:System.Windows.DataTemplate> могут быть интересны только презентации и внешний вид объектов данных. В большинстве случаев все другие аспекты презентации, такие как элемент выглядит при этом или как <xref:System.Windows.Controls.ListBox> размещает элементы, не входящие в определение <xref:System.Windows.DataTemplate>. Пример см. в разделе [Стилизация и использование шаблонов для ItemsControl](#DataTemplating_ItemsControl).  
   
@@ -164,9 +165,9 @@ ms.lasthandoff: 05/04/2018
  С помощью выбора шаблона на месте <xref:System.Windows.Controls.ListBox> теперь выглядит следующим образом:  
   
  ![Снимок экрана примера шаблона данных](../../../../docs/framework/wpf/data/media/datatemplatingintro-fig7.png "DataTemplatingIntro_fig7")  
-  
- Это заключительный шаг нашего обсуждения данного примера. Полный пример см. в разделе [Вводная часть примера стилизации и использования шаблонов](http://go.microsoft.com/fwlink/?LinkID=160009).  
-  
+
+Это заключительный шаг нашего обсуждения данного примера. Полный пример см. в разделе [Вводная часть примера стилизации и использования шаблонов](https://github.com/Microsoft/WPF-Samples/tree/master/Data%20Binding/DataTemplatingIntro).
+
 <a name="DataTemplating_ItemsControl"></a>   
 ## <a name="styling-and-templating-an-itemscontrol"></a>Стилизация и использование шаблонов для ItemsControl  
  Несмотря на то что <xref:System.Windows.Controls.ItemsControl> не только типом элемента управления, который можно использовать <xref:System.Windows.DataTemplate> , это очень распространенный сценарий для привязки <xref:System.Windows.Controls.ItemsControl> в коллекцию. В [именно входит в DataTemplate](#what_belongs_in_datatemplate) раздела мы рассмотрели, определение вашей <xref:System.Windows.DataTemplate> должен быть только с представлением данных. Чтобы узнать, когда это не подходит для использования <xref:System.Windows.DataTemplate> важно понимать различные свойства стилей и шаблонов, предоставляемых <xref:System.Windows.Controls.ItemsControl>. Следующий пример предназначен для демонстрации функции каждого из этих свойств. <xref:System.Windows.Controls.ItemsControl> В этом примере привязан к тому же `Tasks` коллекции, как показано в предыдущем примере. Для демонстрационных целей все стили и шаблоны в этом примере объявлены встроенными.  

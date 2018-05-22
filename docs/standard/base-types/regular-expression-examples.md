@@ -1,30 +1,19 @@
 ---
-title: "Примеры регулярных выражений"
-ms.custom: 
+title: Примеры регулярных выражений
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - regular expressions [.NET Framework], examples
 - regular expressions [.NET Framework]
 - strings [.NET Framework], regular expressions
 ms.assetid: e9fd53f2-ed56-4b09-b2ea-e9bc9d65e6d6
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 4d2d3aced78d2afed3f0d1396efe5e954ef84102
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 8fb58f8e7a1fef711de28534fbe53dfc9d7084ac
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="regular-expression-examples"></a>Примеры регулярных выражений
 В этом разделе представлены примеры кодов, иллюстрирующих использование регулярных выражений в обычных приложениях.  
@@ -40,7 +29,7 @@ ms.lasthandoff: 12/23/2017
  В этом примере заменяются даты в формате мм/дд/гг датами в формате дд-мм-гг.  
   
  [Практическое руководство. Извлечение протокола и номера порта из URL-адреса](../../../docs/standard/base-types/how-to-extract-a-protocol-and-port-number-from-a-url.md)  
- В этом примере извлекаются протокол и номер порта из строки, содержащей URL-адрес. Например, для "http://www.contoso.com:8080/letters/readme.html" возвращается "http:8080".  
+ В этом примере извлекаются протокол и номер порта из строки, содержащей URL-адрес. Например, http://www.contoso.com:8080/letters/readme.html возвращает http:8080.  
   
  [Практическое руководство. Исключение недопустимых символов из строки](../../../docs/standard/base-types/how-to-strip-invalid-characters-from-a-string.md)  
  В этом примере удаляются из строки недопустимые символы, не являющиеся буквенно-цифровыми.  

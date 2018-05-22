@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Public keyword [Visual Basic], syntax
 - Public access modifier
 ms.assetid: 284c9e1b-ed23-499b-9bc9-ad87c11485a5
-ms.openlocfilehash: f6c18ecb748f62dd47a9689edb23089ca306dbe2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: a5e9161132ba6d571daa30ce82e1bfb1dd2b064f
+ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="public-visual-basic"></a>Public (Visual Basic)
 Указывает, что один или несколько элементов не имеют ограничений доступа.  
@@ -68,6 +68,8 @@ ms.lasthandoff: 05/04/2018
  [Protected](../../../visual-basic/language-reference/modifiers/protected.md)  
  [Friend](../../../visual-basic/language-reference/modifiers/friend.md)  
  [Закрытые](../../../visual-basic/language-reference/modifiers/private.md)  
+ [Protected Private](private-protected.md)   
+ [Protected Friend](protected-friend.md)   
  [Уровни доступа в Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)  
  [Процедуры](../../../visual-basic/programming-guide/language-features/procedures/index.md)  
  [Структуры](../../../visual-basic/programming-guide/language-features/data-types/structures.md)  

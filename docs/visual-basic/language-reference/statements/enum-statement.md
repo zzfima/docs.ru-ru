@@ -11,11 +11,11 @@ helpviewer_keywords:
 - variables [Visual Basic], enumeration
 - constants [Visual Basic], enumerated
 ms.assetid: a45e51f1-65ff-48e1-bf32-79130f137377
-ms.openlocfilehash: 89de51f2551437d102ccdc5a0f1ff5f23b53e47f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7cac4d5bde9ec617a1877a0605dc6dbab67ddf7f
+ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="enum-statement-visual-basic"></a>Оператор Enum (Visual Basic)
 Объявляет перечисление и определяет значения его членов.  
@@ -49,8 +49,10 @@ End Enum
   
     -   [Закрытые](../../../visual-basic/language-reference/modifiers/private.md)  
   
-     Можно указать `Protected``Friend` для предоставления доступа из кода внутри класса перечисления, производном классе или той же сборки.  
-  
+    - [Protected Friend](../../language-reference/modifiers/protected-friend.md)
+    
+    - [Protected Private](../../language-reference/modifiers/private-protected.md)
+
 -   `Shadows`  
   
      Необязательный. Указывает, что это перечисление повторно объявляет и скрывает идентично именованный программный элемент или набор перегруженных элементов в базовом классе. Можно указать [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md) только на самом перечислении, а не на любой из его элементов.  

@@ -8,11 +8,11 @@ helpviewer_keywords:
 ms.assetid: c693fd34-88fe-4d90-b332-19eeadf3b7e7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d62ae73c9a2789087785e1fba6b227245ee08a10
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1ecac9d30b390be886e9d81f11623070301f7d38
+ms.sourcegitcommit: 895c7602386a6dfe7ca4facce3d965b27e5c6e87
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="get-started-with-the-net-framework"></a>Начало работы с .NET Framework
 
@@ -70,7 +70,7 @@ ms.lasthandoff: 05/04/2018
 
 2. Выберите язык или языки, поддерживаемые платформой .NET Framework, которые вы хотите использовать для разработки приложений. Поддерживается целый ряд языков, в том числе [Visual Basic](../../visual-basic/index.md), [C#](../../csharp/index.md), [F#](../../fsharp/index.md) и C++/CLI от Майкрософт. (Язык программирования, позволяющий разрабатывать приложения для .NET Framework, соответствует [спецификации Common Language Infrastructure (CLI)](http://go.microsoft.com/fwlink/?LinkId=199862).)
 
-3. Выберите и установите среду разработки, которая будет использоваться для создания приложений и которая поддерживает выбранные язык или языки программирования. Интегрированной средой разработки Майкрософт для приложений .NET Framework является [Visual Studio](http://go.microsoft.com/fwlink/?LinkId=325532). Доступны разные выпуски.
+3. Выберите и установите среду разработки, которая будет использоваться для создания приложений и которая поддерживает выбранные язык или языки программирования. Интегрированной средой разработки Майкрософт для приложений .NET Framework является [Visual Studio](https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017). Доступны разные выпуски.
 
 Дополнительные сведения о разработке приложений, предназначенных для .NET Framework, см. в [руководстве по разработке](../../../docs/framework/development-guide.md).
 

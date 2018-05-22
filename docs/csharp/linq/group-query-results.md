@@ -1,20 +1,13 @@
 ---
-title: "Группировка результатов запросов"
-description: "Сведения о группировке результатов."
-keywords: .NET, .NET Core, C#
-author: BillWagner
-manager: wpickett
-ms.author: wiwagn
+title: Группировка результатов запросов
+description: Сведения о группировке результатов.
 ms.date: 12/1/2016
-ms.topic: article
-ms.prod: .net
-ms.technology: devlang-csharp
 ms.assetid: 2e4ec27f-06fb-4de7-8973-0189906d4520
-ms.openlocfilehash: ca68cf96a2c27bbd1999d5445c14fc93e8e2566c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: cb7808bfdd86dd23882d0722b87b1e013a84141e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="group-query-results"></a>Группировка результатов запросов
 
@@ -80,6 +73,6 @@ ms.lasthandoff: 11/21/2017
  [Выражения запросов LINQ](index.md)  
  [предложение group](../language-reference/keywords/group-clause.md)  
  [Анонимные типы](../programming-guide/classes-and-structs/anonymous-types.md)  
- [Выполнить вложенный запрос в операции группирования](perform-a-subquery-on-a-grouping-operation.md)  
+ [Вложенный запрос в операции группирования](perform-a-subquery-on-a-grouping-operation.md)  
  [Создание вложенной группы](create-a-nested-group.md)  
  [Группировка данных](../programming-guide/concepts/linq/grouping-data.md)

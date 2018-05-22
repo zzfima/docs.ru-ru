@@ -1,26 +1,15 @@
 ---
-title: "Примечания по реализации поддержки типов XML"
-ms.custom: 
+title: Примечания по реализации поддержки типов XML
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 26b071f3-1261-47ef-8690-0717f5cd93c1
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 8c2706782ed1242ecdb5af1fdfab7a3f24e19236
-ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
-ms.translationtype: MT
+ms.openlocfilehash: 4d2d6f2932e1afeb7369c32a43ca48f55fade2e9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="xml-type-support-implementation-notes"></a>Примечания по реализации поддержки типов XML
 В этом разделе описываются определенные детали реализации, которые следует знать.  
@@ -37,14 +26,14 @@ ms.lasthandoff: 03/19/2018
  Ниже описывается ряд несоответствий, которые могут возникать между типами данных CLR и XML, и о том, как они преодолеваются.  
   
 > [!NOTE]
->  `xs` Сопоставляется префикс http://www.w3.org/2001/XMLSchema и URI пространства имен.  
+>  Префикс `xs` сопоставляется с http://www.w3.org/2001/XMLSchema и URI пространства имен.  
   
 ### <a name="systemtimespan-and-xsduration"></a>System.TimeSpan и xs:duration  
  Тип `xs:duration` частично упорядочен в том смысле, что в нем представлены некоторые значения длительности, отличные друг от друга, но эквивалентные. Это означает, что для типа `xs:duration` значение 1 месяц (P1M) меньше чем 32 дня (P32D), больше чем 27 дней (P27D) и эквивалентно 28, 29 или 30 дням.  
   
  Класс <xref:System.TimeSpan> не поддерживает такое частичное упорядочение. Он предполагает использование определенного числа дней для 1 года и для 1 месяца: 365 дней и 30 дней соответственно.  
   
- Дополнительные сведения о `xs:duration` введите см. в разделе W3C XML Schema Part 2: рекомендации по типам данных в http://www.w3.org/TR/xmlschema-2/.  
+ Дополнительные сведения о типе `xs:duration` см. в документе "Рекомендация W3C по схемам XML. Часть 2. Типы данных" по адресу http://www.w3.org/TR/xmlschema-2/.  
   
 ### <a name="xstime-gregorian-date-types-and-systemdatetime"></a>Типы данных xs:time, григорианского календаря и System.DateTime  
  Когда значение `xs:time` сопоставляется с объектом <xref:System.DateTime>, поле <xref:System.DateTime.MinValue> используется для инициализации свойств даты объекта <xref:System.DateTime> (таких как <xref:System.DateTime.Year%2A>, <xref:System.DateTime.Month%2A> и <xref:System.DateTime.Day%2A>) наименьшим из возможных значений <xref:System.DateTime>.  

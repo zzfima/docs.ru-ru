@@ -1,13 +1,7 @@
 ---
-title: "Пул управляемых потоков"
-ms.custom: 
+title: Пул управляемых потоков
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -18,18 +12,13 @@ helpviewer_keywords:
 - threading [.NET Framework], thread pool
 - threading [.NET Framework], pooling
 ms.assetid: 2be05b06-a42e-4c9d-a739-96c21d673927
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: e50fd66096d6bd58fb7db692449e7f8654b5ca76
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 3894229ff5561e50d42a36f576a89ee7bf01c067
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="the-managed-thread-pool"></a>Пул управляемых потоков
 Класс <xref:System.Threading.ThreadPool> обеспечивает приложение пулом рабочих потоков, управляемых системой, позволяя пользователю сосредоточиться на выполнении задач приложения, а не на управлении потоками. Если имеются небольшие задачи, которые требуют фоновой обработки, пул управляемых потоков — это самый простой способ воспользоваться преимуществами нескольких потоков. Например, начиная с версии [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] можно создавать объекты <xref:System.Threading.Tasks.Task> и <xref:System.Threading.Tasks.Task%601>, выполняющие асинхронные задачи в потоках из пула потоков.  
@@ -68,7 +57,7 @@ ms.lasthandoff: 12/23/2017
   
 -   Среда CLR или процесс ведущего приложения прерывает выполнение потока.  
   
- См. дополнительные сведения об [исключениях в управляемых потоках](../../../docs/standard/threading/exceptions-in-managed-threads.md).  
+ Дополнительные сведения см. в статье [Исключения в управляемых потоках](../../../docs/standard/threading/exceptions-in-managed-threads.md).  
   
 > [!NOTE]
 >  В .NET Framework версии 1.0 и 1.1 среда CLR перехватывает необработанные исключения в потоках из пула потоков без вывода оповещения. Это может повредить состояние приложения и в итоге привести к его "зависанию", отладить которое может быть очень сложно.  

@@ -9,13 +9,13 @@ metadata:
   level: Beginner
   displayType: two-column
   interactive: csharp
-  nextTutorialHref: list-collection
+  nextTutorialHref: list-collection.yml
   nextTutorialTitle: Коллекции в C#
-  ms.openlocfilehash: 03d46a90033d480046b63bdec3c4c83ab39c2f56
-  ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+  ms.openlocfilehash: ac9c8488c787b1dc9b4fb60b18834d328faa4e83
+  ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
   ms.translationtype: HT
   ms.contentlocale: ru-RU
-  ms.lasthandoff: 04/18/2018
+  ms.lasthandoff: 05/10/2018
 items:
 - durationInMinutes: 2
   content: >
@@ -95,4 +95,4 @@ items:
     > [!NOTE]
 
     > Этот онлайн-интерфейс для написания кода находится на этапе предварительной версии. При возникновении проблем сообщите о них на странице [репозитория dotnet/try](https://github.com/dotnet/try/issues).
-- content: "Вы закончили работу с кратким руководством по интерполяции строк. \n\nВы можете продолжить работу с другими краткими руководствами в своей локальной среде разработки. Вы можете ознакомиться с основами [локальной разработки](local-environment.md), а затем выбрать краткое руководство. Вы можете попробовать еще раз выполнить это краткое руководство, сразу перейти к следующему руководству или вернуться к предыдущему руководству по [числам в C#](numbers-in-csharp-local.md).\n\nДополнительные сведения об интерполяции строк см. в разделе [Интерполяция строк](../language-reference/tokens/interpolated.md) справочника по C#."
+- content: "Вы закончили работу с кратким руководством по интерполяции строк. \n\nВы можете продолжить работу с другими краткими руководствами в своей локальной среде разработки. Вы можете ознакомиться с основами [локальной разработки](local-environment.md), а затем выбрать краткое руководство. Вы можете попробовать еще раз выполнить это краткое руководство, сразу перейти к следующему руководству или вернуться к предыдущему руководству по [числам в C#](numbers-in-csharp-local.md).\n\nДополнительные сведения об интерполяции строк см. в разделе [Интерполяция строк](../language-reference/tokens/interpolated.md) и в руководстве [Интерполяция строк в C#](../tutorials/string-interpolation.md)."
