@@ -1,29 +1,20 @@
 ---
-title: "Пример, выводящий части документа в формате Office Open XML (C#)"
-ms.custom: 
+title: Пример, выводящий части документа в формате Office Open XML (C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: 6cd37055-89b4-42e8-bf27-5a29717e35f3
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 42265df3bdaae7835cfd44346d78b3df212c8dfd
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: e63f6eafb32a6426d6c3fd7296c0e8fa6595efee
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="example-that-outputs-office-open-xml-document-parts-c"></a><span data-ttu-id="60ab5-102">Пример, выводящий части документа в формате Office Open XML (C#)</span><span class="sxs-lookup"><span data-stu-id="60ab5-102">Example that Outputs Office Open XML Document Parts (C#)</span></span>
-<span data-ttu-id="60ab5-103">В этом разделе разъясняется, как открывать документ Office Open XML и как обращаться к частям этого документа.</span><span class="sxs-lookup"><span data-stu-id="60ab5-103">This topic shows how to open an Office Open XML document and access parts within it.</span></span>  
+# <a name="example-that-outputs-office-open-xml-document-parts-c"></a><span data-ttu-id="07145-102">Пример, выводящий части документа в формате Office Open XML (C#)</span><span class="sxs-lookup"><span data-stu-id="07145-102">Example that Outputs Office Open XML Document Parts (C#)</span></span>
+<span data-ttu-id="07145-103">В этом разделе разъясняется, как открывать документ Office Open XML и как обращаться к частям этого документа.</span><span class="sxs-lookup"><span data-stu-id="07145-103">This topic shows how to open an Office Open XML document and access parts within it.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="60ab5-104">Пример</span><span class="sxs-lookup"><span data-stu-id="60ab5-104">Example</span></span>  
- <span data-ttu-id="60ab5-105">В следующем примере открывается документ Office Open XML, после чего часть, содержащая сам документ, и часть, содержащая стиль, выводятся на консоль.</span><span class="sxs-lookup"><span data-stu-id="60ab5-105">The following example opens an Office Open XML document, and prints the document part and the style part to the console.</span></span>  
+## <a name="example"></a><span data-ttu-id="07145-104">Пример</span><span class="sxs-lookup"><span data-stu-id="07145-104">Example</span></span>  
+ <span data-ttu-id="07145-105">В следующем примере открывается документ Office Open XML, после чего часть, содержащая сам документ, и часть, содержащая стиль, выводятся на консоль.</span><span class="sxs-lookup"><span data-stu-id="07145-105">The following example opens an Office Open XML document, and prints the document part and the style part to the console.</span></span>  
   
- <span data-ttu-id="60ab5-106">В этом примере используются классы из сборки WindowsBase.</span><span class="sxs-lookup"><span data-stu-id="60ab5-106">This example uses classes from the WindowsBase assembly.</span></span> <span data-ttu-id="60ab5-107">Используются типы из пространства имен <xref:System.IO.Packaging?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="60ab5-107">It uses types in the <xref:System.IO.Packaging?displayProperty=nameWithType> namespace.</span></span>  
+ <span data-ttu-id="07145-106">В этом примере используются классы из сборки WindowsBase.</span><span class="sxs-lookup"><span data-stu-id="07145-106">This example uses classes from the WindowsBase assembly.</span></span> <span data-ttu-id="07145-107">Используются типы из пространства имен <xref:System.IO.Packaging?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="07145-107">It uses types in the <xref:System.IO.Packaging?displayProperty=nameWithType> namespace.</span></span>  
   
 ```csharp  
 const string fileName = "SampleDoc.docx";  
@@ -74,5 +65,5 @@ using (Package wdPackage = Package.Open(fileName, FileMode.Open, FileAccess.Read
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="60ab5-108">См. также</span><span class="sxs-lookup"><span data-stu-id="60ab5-108">See Also</span></span>  
- [<span data-ttu-id="60ab5-109">Сведения о документах WordprocessingML в формате Office Open XML (C#)</span><span class="sxs-lookup"><span data-stu-id="60ab5-109">Details of Office Open XML WordprocessingML Documents (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)
+## <a name="see-also"></a><span data-ttu-id="07145-108">См. также</span><span class="sxs-lookup"><span data-stu-id="07145-108">See Also</span></span>  
+ [<span data-ttu-id="07145-109">Сведения о документах WordprocessingML в формате Office Open XML (C#)</span><span class="sxs-lookup"><span data-stu-id="07145-109">Details of Office Open XML WordprocessingML Documents (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)

@@ -1,35 +1,26 @@
 ---
-title: "Области пространств имен по умолчанию в C#1"
-ms.custom: 
+title: Области пространств имен по умолчанию в C#1
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: fe826236-830f-457a-9027-7ad62c909fae
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 95a31f4ffa1b27a8670d9dc979bdceb7f2b8dfdd
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 37b10c43071d4f6a9fb2a25d68ab2c100c27dde9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="scope-of-default-namespaces-in-c"></a><span data-ttu-id="feea3-102">Области пространств имен по умолчанию в C#</span><span class="sxs-lookup"><span data-stu-id="feea3-102">Scope of Default Namespaces in C#</span></span>
-<span data-ttu-id="feea3-103">Применяемые по умолчанию пространства имен, представленные в XML-дереве, находятся вне области запросов.</span><span class="sxs-lookup"><span data-stu-id="feea3-103">Default namespaces as represented in the XML tree are not in scope for queries.</span></span> <span data-ttu-id="feea3-104">Если имеется XML, расположенный в используемом по умолчанию пространстве имен, для получения полного имени, которое может быть применено в запросе, то необходимо объявить переменную <xref:System.Xml.Linq.XNamespace> и использовать ее в сочетании с локальным именем.</span><span class="sxs-lookup"><span data-stu-id="feea3-104">If you have XML that is in a default namespace, you still must declare an <xref:System.Xml.Linq.XNamespace> variable, and combine it with the local name to make a qualified name to be used in the query.</span></span>  
+# <a name="scope-of-default-namespaces-in-c"></a><span data-ttu-id="b686c-102">Области пространств имен по умолчанию в C#</span><span class="sxs-lookup"><span data-stu-id="b686c-102">Scope of Default Namespaces in C#</span></span>
+<span data-ttu-id="b686c-103">Применяемые по умолчанию пространства имен, представленные в XML-дереве, находятся вне области запросов.</span><span class="sxs-lookup"><span data-stu-id="b686c-103">Default namespaces as represented in the XML tree are not in scope for queries.</span></span> <span data-ttu-id="b686c-104">Если имеется XML, расположенный в используемом по умолчанию пространстве имен, для получения полного имени, которое может быть применено в запросе, то необходимо объявить переменную <xref:System.Xml.Linq.XNamespace> и использовать ее в сочетании с локальным именем.</span><span class="sxs-lookup"><span data-stu-id="b686c-104">If you have XML that is in a default namespace, you still must declare an <xref:System.Xml.Linq.XNamespace> variable, and combine it with the local name to make a qualified name to be used in the query.</span></span>  
   
- <span data-ttu-id="feea3-105">Одной из наиболее типичных проблем при запросах к XML-деревьям является то, что, если XML-дерево содержит пространство имен по умолчанию, разработчик иногда пишет запрос так, как если бы XML-код не располагался в пространстве имен.</span><span class="sxs-lookup"><span data-stu-id="feea3-105">One of the most common problems when querying XML trees is that if the XML tree has a default namespace, the developer sometimes writes the query as though the XML were not in a namespace.</span></span>  
+ <span data-ttu-id="b686c-105">Одной из наиболее типичных проблем при запросах к XML-деревьям является то, что, если XML-дерево содержит пространство имен по умолчанию, разработчик иногда пишет запрос так, как если бы XML-код не располагался в пространстве имен.</span><span class="sxs-lookup"><span data-stu-id="b686c-105">One of the most common problems when querying XML trees is that if the XML tree has a default namespace, the developer sometimes writes the query as though the XML were not in a namespace.</span></span>  
   
- <span data-ttu-id="feea3-106">Первый набор примеров в данном разделе показывает типичный способ загрузки XML в пространстве имен по умолчанию и неправильного запроса к нему.</span><span class="sxs-lookup"><span data-stu-id="feea3-106">The first set of examples in this topic shows a typical way that XML in a default namespace is loaded, but is queried improperly.</span></span>  
+ <span data-ttu-id="b686c-106">Первый набор примеров в данном разделе показывает типичный способ загрузки XML в пространстве имен по умолчанию и неправильного запроса к нему.</span><span class="sxs-lookup"><span data-stu-id="b686c-106">The first set of examples in this topic shows a typical way that XML in a default namespace is loaded, but is queried improperly.</span></span>  
   
- <span data-ttu-id="feea3-107">Второй набор примеров показывает необходимые исправления для запроса XML в пространстве имен.</span><span class="sxs-lookup"><span data-stu-id="feea3-107">The second set of examples show the necessary corrections so that you can query XML in a namespace.</span></span>  
+ <span data-ttu-id="b686c-107">Второй набор примеров показывает необходимые исправления для запроса XML в пространстве имен.</span><span class="sxs-lookup"><span data-stu-id="b686c-107">The second set of examples show the necessary corrections so that you can query XML in a namespace.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="feea3-108">Пример</span><span class="sxs-lookup"><span data-stu-id="feea3-108">Example</span></span>  
- <span data-ttu-id="feea3-109">Этот пример показывает создание XML в пространстве имен, а также запрос, возвращающий пустой результирующий набор.</span><span class="sxs-lookup"><span data-stu-id="feea3-109">This example shows the creation of XML in a namespace, and a query that returns an empty result set.</span></span>  
+## <a name="example"></a><span data-ttu-id="b686c-108">Пример</span><span class="sxs-lookup"><span data-stu-id="b686c-108">Example</span></span>  
+ <span data-ttu-id="b686c-109">Этот пример показывает создание XML в пространстве имен, а также запрос, возвращающий пустой результирующий набор.</span><span class="sxs-lookup"><span data-stu-id="b686c-109">This example shows the creation of XML in a namespace, and a query that returns an empty result set.</span></span>  
   
-### <a name="code"></a><span data-ttu-id="feea3-110">Код</span><span class="sxs-lookup"><span data-stu-id="feea3-110">Code</span></span>  
+### <a name="code"></a><span data-ttu-id="b686c-110">Код</span><span class="sxs-lookup"><span data-stu-id="b686c-110">Code</span></span>  
   
 ```csharp  
 XElement root = XElement.Parse(  
@@ -50,20 +41,20 @@ foreach (XElement el in c1)
 Console.WriteLine("End of result set");  
 ```  
   
-### <a name="comments"></a><span data-ttu-id="feea3-111">Комментарии</span><span class="sxs-lookup"><span data-stu-id="feea3-111">Comments</span></span>  
- <span data-ttu-id="feea3-112">Этот пример выдает следующий результат:</span><span class="sxs-lookup"><span data-stu-id="feea3-112">This example produces the following result:</span></span>  
+### <a name="comments"></a><span data-ttu-id="b686c-111">Комментарии</span><span class="sxs-lookup"><span data-stu-id="b686c-111">Comments</span></span>  
+ <span data-ttu-id="b686c-112">Этот пример выдает следующий результат:</span><span class="sxs-lookup"><span data-stu-id="b686c-112">This example produces the following result:</span></span>  
   
 ```  
 Result set follows:  
 End of result set  
 ```  
   
-## <a name="example"></a><span data-ttu-id="feea3-113">Пример</span><span class="sxs-lookup"><span data-stu-id="feea3-113">Example</span></span>  
- <span data-ttu-id="feea3-114">Этот пример показывает создание XML в пространстве имен, а также запрос, код которого написан правильно.</span><span class="sxs-lookup"><span data-stu-id="feea3-114">This example shows the creation of XML in a namespace, and a query that is coded properly.</span></span>  
+## <a name="example"></a><span data-ttu-id="b686c-113">Пример</span><span class="sxs-lookup"><span data-stu-id="b686c-113">Example</span></span>  
+ <span data-ttu-id="b686c-114">Этот пример показывает создание XML в пространстве имен, а также запрос, код которого написан правильно.</span><span class="sxs-lookup"><span data-stu-id="b686c-114">This example shows the creation of XML in a namespace, and a query that is coded properly.</span></span>  
   
- <span data-ttu-id="feea3-115">В отличие от вышеприведенного примера с неправильным кодом, правильный подход с использованием C# заключается в объявлении и инициализации объекта <xref:System.Xml.Linq.XNamespace> и его использовании при указании объектов <xref:System.Xml.Linq.XName>.</span><span class="sxs-lookup"><span data-stu-id="feea3-115">In contrast to the incorrectly coded example above, the correct approach when using C# is to declare and initialize an <xref:System.Xml.Linq.XNamespace> object, and to use it when specifying <xref:System.Xml.Linq.XName> objects.</span></span> <span data-ttu-id="feea3-116">В данном случае аргументом для метода <xref:System.Xml.Linq.XElement.Elements%2A> является объект <xref:System.Xml.Linq.XName>.</span><span class="sxs-lookup"><span data-stu-id="feea3-116">In this case, the argument to the <xref:System.Xml.Linq.XElement.Elements%2A> method is an <xref:System.Xml.Linq.XName> object.</span></span>  
+ <span data-ttu-id="b686c-115">В отличие от вышеприведенного примера с неправильным кодом, правильный подход с использованием C# заключается в объявлении и инициализации объекта <xref:System.Xml.Linq.XNamespace> и его использовании при указании объектов <xref:System.Xml.Linq.XName>.</span><span class="sxs-lookup"><span data-stu-id="b686c-115">In contrast to the incorrectly coded example above, the correct approach when using C# is to declare and initialize an <xref:System.Xml.Linq.XNamespace> object, and to use it when specifying <xref:System.Xml.Linq.XName> objects.</span></span> <span data-ttu-id="b686c-116">В данном случае аргументом для метода <xref:System.Xml.Linq.XElement.Elements%2A> является объект <xref:System.Xml.Linq.XName>.</span><span class="sxs-lookup"><span data-stu-id="b686c-116">In this case, the argument to the <xref:System.Xml.Linq.XElement.Elements%2A> method is an <xref:System.Xml.Linq.XName> object.</span></span>  
   
-### <a name="code"></a><span data-ttu-id="feea3-117">Код</span><span class="sxs-lookup"><span data-stu-id="feea3-117">Code</span></span>  
+### <a name="code"></a><span data-ttu-id="b686c-117">Код</span><span class="sxs-lookup"><span data-stu-id="b686c-117">Code</span></span>  
   
 ```csharp  
 XElement root = XElement.Parse(  
@@ -85,8 +76,8 @@ foreach (XElement el in c1)
 Console.WriteLine("End of result set");  
 ```  
   
-### <a name="comments"></a><span data-ttu-id="feea3-118">Комментарии</span><span class="sxs-lookup"><span data-stu-id="feea3-118">Comments</span></span>  
- <span data-ttu-id="feea3-119">Этот пример выдает следующий результат:</span><span class="sxs-lookup"><span data-stu-id="feea3-119">This example produces the following result:</span></span>  
+### <a name="comments"></a><span data-ttu-id="b686c-118">Комментарии</span><span class="sxs-lookup"><span data-stu-id="b686c-118">Comments</span></span>  
+ <span data-ttu-id="b686c-119">Этот пример выдает следующий результат:</span><span class="sxs-lookup"><span data-stu-id="b686c-119">This example produces the following result:</span></span>  
   
 ```  
 Result set follows:  
@@ -96,5 +87,5 @@ Result set follows:
 End of result set  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="feea3-120">См. также</span><span class="sxs-lookup"><span data-stu-id="feea3-120">See Also</span></span>  
- [<span data-ttu-id="feea3-121">Работа с пространствами имен XML (C#)</span><span class="sxs-lookup"><span data-stu-id="feea3-121">Working with XML Namespaces (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md)
+## <a name="see-also"></a><span data-ttu-id="b686c-120">См. также</span><span class="sxs-lookup"><span data-stu-id="b686c-120">See Also</span></span>  
+ [<span data-ttu-id="b686c-121">Работа с пространствами имен XML (C#)</span><span class="sxs-lookup"><span data-stu-id="b686c-121">Working with XML Namespaces (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md)

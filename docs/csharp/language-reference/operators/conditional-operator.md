@@ -1,10 +1,6 @@
 ---
-title: "Оператор ?: (справочник по C#)"
+title: 'Оператор ?: (справочник по C#)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 f1_keywords:
 - ?:_CSharpKeyword
 - ?_CSharpKeyword
@@ -13,28 +9,25 @@ helpviewer_keywords:
 - '?: operator [C#]'
 - conditional operator (?:) [C#]
 ms.assetid: e83a17f1-7500-48ba-8bee-2fbc4c847af4
-caps.latest.revision: 
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: bbd434e02ece4843bab4ffded6877f81f622950c
-ms.sourcegitcommit: ba765893e3efcece67d99fd6d5ce0074b050d1d9
+ms.openlocfilehash: 1bfbe5257123438751592695f23fe24aeb7ccc2b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="-operator-c-reference"></a><span data-ttu-id="f7f00-102">Оператор ?: (справочник по C#)</span><span class="sxs-lookup"><span data-stu-id="f7f00-102">?: Operator (C# Reference)</span></span>
-<span data-ttu-id="f7f00-103">Условный оператор (`?:`), известный как тернарный условный оператор, возвращает одно из двух значений в зависимости от значения логического выражения.</span><span class="sxs-lookup"><span data-stu-id="f7f00-103">The conditional operator (`?:`), commonly known as the ternary conditional operator, returns one of two values depending on the value of a Boolean expression.</span></span> <span data-ttu-id="f7f00-104">Для условного оператора используется следующий синтаксис.</span><span class="sxs-lookup"><span data-stu-id="f7f00-104">Following is the syntax for the conditional operator.</span></span>  
+# <a name="-operator-c-reference"></a><span data-ttu-id="3951f-102">Оператор ?: (справочник по C#)</span><span class="sxs-lookup"><span data-stu-id="3951f-102">?: Operator (C# Reference)</span></span>
+<span data-ttu-id="3951f-103">Условный оператор (`?:`), известный как тернарный условный оператор, возвращает одно из двух значений в зависимости от значения логического выражения.</span><span class="sxs-lookup"><span data-stu-id="3951f-103">The conditional operator (`?:`), commonly known as the ternary conditional operator, returns one of two values depending on the value of a Boolean expression.</span></span> <span data-ttu-id="3951f-104">Для условного оператора используется следующий синтаксис.</span><span class="sxs-lookup"><span data-stu-id="3951f-104">Following is the syntax for the conditional operator.</span></span>  
   
 ```  
 condition ? first_expression : second_expression;  
 ```  
   
-## <a name="remarks"></a><span data-ttu-id="f7f00-105">Примечания</span><span class="sxs-lookup"><span data-stu-id="f7f00-105">Remarks</span></span>  
- <span data-ttu-id="f7f00-106">Параметр `condition` должен иметь значение `true` или `false`.</span><span class="sxs-lookup"><span data-stu-id="f7f00-106">The `condition` must evaluate to `true` or `false`.</span></span> <span data-ttu-id="f7f00-107">Если параметр `condition` имеет значение `true`, вычисляется выражение `first_expression` и итог этого вычисления становится результатом.</span><span class="sxs-lookup"><span data-stu-id="f7f00-107">If `condition` is `true`, `first_expression` is evaluated and becomes the result.</span></span> <span data-ttu-id="f7f00-108">Если параметр `condition` имеет значение `false`, вычисляется выражение `second_expression` и итог этого вычисления становится результатом.</span><span class="sxs-lookup"><span data-stu-id="f7f00-108">If `condition` is `false`, `second_expression` is evaluated and becomes the result.</span></span> <span data-ttu-id="f7f00-109">В любом случае вычисляется только одно из двух выражений.</span><span class="sxs-lookup"><span data-stu-id="f7f00-109">Only one of the two expressions is evaluated.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="3951f-105">Примечания</span><span class="sxs-lookup"><span data-stu-id="3951f-105">Remarks</span></span>  
+ <span data-ttu-id="3951f-106">Параметр `condition` должен иметь значение `true` или `false`.</span><span class="sxs-lookup"><span data-stu-id="3951f-106">The `condition` must evaluate to `true` or `false`.</span></span> <span data-ttu-id="3951f-107">Если параметр `condition` имеет значение `true`, вычисляется выражение `first_expression` и итог этого вычисления становится результатом.</span><span class="sxs-lookup"><span data-stu-id="3951f-107">If `condition` is `true`, `first_expression` is evaluated and becomes the result.</span></span> <span data-ttu-id="3951f-108">Если параметр `condition` имеет значение `false`, вычисляется выражение `second_expression` и итог этого вычисления становится результатом.</span><span class="sxs-lookup"><span data-stu-id="3951f-108">If `condition` is `false`, `second_expression` is evaluated and becomes the result.</span></span> <span data-ttu-id="3951f-109">В любом случае вычисляется только одно из двух выражений.</span><span class="sxs-lookup"><span data-stu-id="3951f-109">Only one of the two expressions is evaluated.</span></span>  
   
- <span data-ttu-id="f7f00-110">Параметры `first_expression` и `second_expression` должны быть одинакового типа или должно существовать неявное преобразование из одного типа в другой.</span><span class="sxs-lookup"><span data-stu-id="f7f00-110">Either the type of `first_expression` and `second_expression` must be the same, or an implicit conversion must exist from one type to the other.</span></span>  
+ <span data-ttu-id="3951f-110">Параметры `first_expression` и `second_expression` должны быть одинакового типа или должно существовать неявное преобразование из одного типа в другой.</span><span class="sxs-lookup"><span data-stu-id="3951f-110">Either the type of `first_expression` and `second_expression` must be the same, or an implicit conversion must exist from one type to the other.</span></span>  
   
- <span data-ttu-id="f7f00-111">Расчеты, которые в другом случае требовали бы уточнения конструкции `if-else`, можно выражать с помощью условного оператора.</span><span class="sxs-lookup"><span data-stu-id="f7f00-111">You can express calculations that might otherwise require an `if-else` construction more concisely by using the conditional operator.</span></span> <span data-ttu-id="f7f00-112">Например, в следующем коде сначала используется оператор `if`, а затем — условный оператор для классификации целого числа как положительного или отрицательного.</span><span class="sxs-lookup"><span data-stu-id="f7f00-112">For example, the following code uses first an `if` statement and then a conditional operator to classify an integer as positive or negative.</span></span>  
+ <span data-ttu-id="3951f-111">Расчеты, которые в другом случае требовали бы уточнения конструкции `if-else`, можно выражать с помощью условного оператора.</span><span class="sxs-lookup"><span data-stu-id="3951f-111">You can express calculations that might otherwise require an `if-else` construction more concisely by using the conditional operator.</span></span> <span data-ttu-id="3951f-112">Например, в следующем коде сначала используется оператор `if`, а затем — условный оператор для классификации целого числа как положительного или отрицательного.</span><span class="sxs-lookup"><span data-stu-id="3951f-112">For example, the following code uses first an `if` statement and then a conditional operator to classify an integer as positive or negative.</span></span>  
   
 ```csharp
 int input = Convert.ToInt32(Console.ReadLine());  
@@ -50,17 +43,17 @@ else
 classify = (input > 0) ? "positive" : "negative";  
 ```  
   
- <span data-ttu-id="f7f00-113">Условный оператор имеет правую ассоциативность.</span><span class="sxs-lookup"><span data-stu-id="f7f00-113">The conditional operator is right-associative.</span></span> <span data-ttu-id="f7f00-114">Выражение `a ? b : c ? d : e` вычисляется как `a ? b : (c ? d : e)`, а не как `(a ? b : c) ? d : e`.</span><span class="sxs-lookup"><span data-stu-id="f7f00-114">The expression `a ? b : c ? d : e` is evaluated as `a ? b : (c ? d : e)`, not as `(a ? b : c) ? d : e`.</span></span>  
+ <span data-ttu-id="3951f-113">Условный оператор имеет правую ассоциативность.</span><span class="sxs-lookup"><span data-stu-id="3951f-113">The conditional operator is right-associative.</span></span> <span data-ttu-id="3951f-114">Выражение `a ? b : c ? d : e` вычисляется как `a ? b : (c ? d : e)`, а не как `(a ? b : c) ? d : e`.</span><span class="sxs-lookup"><span data-stu-id="3951f-114">The expression `a ? b : c ? d : e` is evaluated as `a ? b : (c ? d : e)`, not as `(a ? b : c) ? d : e`.</span></span>  
   
- <span data-ttu-id="f7f00-115">Условный оператор не может быть перегружен.</span><span class="sxs-lookup"><span data-stu-id="f7f00-115">The conditional operator cannot be overloaded.</span></span>  
+ <span data-ttu-id="3951f-115">Условный оператор не может быть перегружен.</span><span class="sxs-lookup"><span data-stu-id="3951f-115">The conditional operator cannot be overloaded.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="f7f00-116">Пример</span><span class="sxs-lookup"><span data-stu-id="f7f00-116">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="3951f-116">Пример</span><span class="sxs-lookup"><span data-stu-id="3951f-116">Example</span></span>  
  [!code-csharp[csRefOperators#41](../../../csharp/language-reference/operators/codesnippet/CSharp/conditional-operator_1.cs)]  
   
-## <a name="see-also"></a><span data-ttu-id="f7f00-117">См. также</span><span class="sxs-lookup"><span data-stu-id="f7f00-117">See Also</span></span>  
- [<span data-ttu-id="f7f00-118">Справочник по C#</span><span class="sxs-lookup"><span data-stu-id="f7f00-118">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
- [<span data-ttu-id="f7f00-119">Руководство по программированию на C#</span><span class="sxs-lookup"><span data-stu-id="f7f00-119">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
- [<span data-ttu-id="f7f00-120">Операторы в C#</span><span class="sxs-lookup"><span data-stu-id="f7f00-120">C# Operators</span></span>](../../../csharp/language-reference/operators/index.md)  
- [<span data-ttu-id="f7f00-121">if-else</span><span class="sxs-lookup"><span data-stu-id="f7f00-121">if-else</span></span>](../../../csharp/language-reference/keywords/if-else.md)  
- [<span data-ttu-id="f7f00-122">Операторы ?. и ?</span><span class="sxs-lookup"><span data-stu-id="f7f00-122">?. and ?Operators</span></span>](../../../csharp/language-reference/operators/null-conditional-operators.md)  
- [<span data-ttu-id="f7f00-123">?? Оператор</span><span class="sxs-lookup"><span data-stu-id="f7f00-123">?? Operator</span></span>](../../../csharp/language-reference/operators/null-conditional-operator.md)
+## <a name="see-also"></a><span data-ttu-id="3951f-117">См. также</span><span class="sxs-lookup"><span data-stu-id="3951f-117">See Also</span></span>  
+ [<span data-ttu-id="3951f-118">Справочник по C#</span><span class="sxs-lookup"><span data-stu-id="3951f-118">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
+ [<span data-ttu-id="3951f-119">Руководство по программированию на C#</span><span class="sxs-lookup"><span data-stu-id="3951f-119">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+ [<span data-ttu-id="3951f-120">Операторы в C#</span><span class="sxs-lookup"><span data-stu-id="3951f-120">C# Operators</span></span>](../../../csharp/language-reference/operators/index.md)  
+ [<span data-ttu-id="3951f-121">if-else</span><span class="sxs-lookup"><span data-stu-id="3951f-121">if-else</span></span>](../../../csharp/language-reference/keywords/if-else.md)  
+ [<span data-ttu-id="3951f-122">Операторы ?. и ?</span><span class="sxs-lookup"><span data-stu-id="3951f-122">?. and ?Operators</span></span>](../../../csharp/language-reference/operators/null-conditional-operators.md)  
+ [<span data-ttu-id="3951f-123">?? Оператор</span><span class="sxs-lookup"><span data-stu-id="3951f-123">?? Operator</span></span>](../../../csharp/language-reference/operators/null-conditional-operator.md)

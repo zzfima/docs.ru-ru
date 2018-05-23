@@ -1,26 +1,17 @@
 ---
-title: "Пример XML-файла. Несколько заказов на покупку в пространстве имен2"
-ms.custom: 
+title: Пример XML-файла. Несколько заказов на покупку в пространстве имен2
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: 595024f2-374a-4615-acb5-64fa1600f377
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: d774862cec3a3cf23dd909f12d6ab271cbcbbae6
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 03ca5cfbf198f576a52e6ceb5eb085195d599d3b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="sample-xml-file-multiple-purchase-orders-in-a-namespace"></a><span data-ttu-id="d3a62-102">Пример XML-файла. Несколько заказов на покупку в пространстве имен</span><span class="sxs-lookup"><span data-stu-id="d3a62-102">Sample XML File: Multiple Purchase Orders in a Namespace</span></span>
-<span data-ttu-id="d3a62-103">Следующий XML-файл используется в различных примерах в документации [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].</span><span class="sxs-lookup"><span data-stu-id="d3a62-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="d3a62-104">Этот файл содержит несколько заказов на покупку.</span><span class="sxs-lookup"><span data-stu-id="d3a62-104">This file contains several purchase orders.</span></span> <span data-ttu-id="d3a62-105">XML располагается в пространстве имен.</span><span class="sxs-lookup"><span data-stu-id="d3a62-105">The XML is in a namespace.</span></span>  
+# <a name="sample-xml-file-multiple-purchase-orders-in-a-namespace"></a><span data-ttu-id="7c45f-102">Пример XML-файла. Несколько заказов на покупку в пространстве имен</span><span class="sxs-lookup"><span data-stu-id="7c45f-102">Sample XML File: Multiple Purchase Orders in a Namespace</span></span>
+<span data-ttu-id="7c45f-103">Следующий XML-файл используется в различных примерах в документации [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].</span><span class="sxs-lookup"><span data-stu-id="7c45f-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="7c45f-104">Этот файл содержит несколько заказов на покупку.</span><span class="sxs-lookup"><span data-stu-id="7c45f-104">This file contains several purchase orders.</span></span> <span data-ttu-id="7c45f-105">XML располагается в пространстве имен.</span><span class="sxs-lookup"><span data-stu-id="7c45f-105">The XML is in a namespace.</span></span>  
   
-## <a name="purchaseordersinnamespacexml"></a><span data-ttu-id="d3a62-106">PurchaseOrdersInNamespace.xml</span><span class="sxs-lookup"><span data-stu-id="d3a62-106">PurchaseOrdersInNamespace.xml</span></span>  
+## <a name="purchaseordersinnamespacexml"></a><span data-ttu-id="7c45f-106">PurchaseOrdersInNamespace.xml</span><span class="sxs-lookup"><span data-stu-id="7c45f-106">PurchaseOrdersInNamespace.xml</span></span>  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -117,5 +108,5 @@ ms.lasthandoff: 10/18/2017
 </aw:PurchaseOrders>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="d3a62-107">См. также</span><span class="sxs-lookup"><span data-stu-id="d3a62-107">See Also</span></span>  
- [<span data-ttu-id="d3a62-108">Примеры XML-документов (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="d3a62-108">Sample XML Documents (LINQ to XML)</span></span>](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
+## <a name="see-also"></a><span data-ttu-id="7c45f-107">См. также</span><span class="sxs-lookup"><span data-stu-id="7c45f-107">See Also</span></span>  
+ [<span data-ttu-id="7c45f-108">Примеры XML-документов (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="7c45f-108">Sample XML Documents (LINQ to XML)</span></span>](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)

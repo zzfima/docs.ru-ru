@@ -1,27 +1,18 @@
 ---
-title: "Промежуточная материализация (C#)"
-ms.custom: 
+title: Промежуточная материализация (C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: 7922d38f-5044-41cf-8e17-7173d6553a5e
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 46d347921e24bc5504c69534d7b5c087818a6c7f
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: b98f9765f5c54a49f26a9d1a3ac351f3eebcf9c2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="intermediate-materialization-c"></a><span data-ttu-id="9f04d-102">Промежуточная материализация (C#)</span><span class="sxs-lookup"><span data-stu-id="9f04d-102">Intermediate Materialization (C#)</span></span>
-<span data-ttu-id="9f04d-103">Если не соблюдать осторожность, то в некоторых ситуациях может происходить преждевременная материализация коллекций в запросах, что приводит к радикальному изменению характера использования памяти и снижению производительности приложения.</span><span class="sxs-lookup"><span data-stu-id="9f04d-103">If you are not careful, in some situations you can drastically alter the memory and performance profile of your application by causing premature materialization of collections in your queries.</span></span> <span data-ttu-id="9f04d-104">Некоторые стандартные операторы запросов материализуют свою исходную коллекцию еще до получения хотя бы одного элемента.</span><span class="sxs-lookup"><span data-stu-id="9f04d-104">Some standard query operators cause materialization of their source collection before yielding a single element.</span></span> <span data-ttu-id="9f04d-105">Например, при выполнении оператора <xref:System.Linq.Enumerable.OrderBy%2A?displayProperty=nameWithType> вначале происходит итерация по всей исходной коллекции, затем сортировка всех элементов и лишь после этого осуществляется возврат первого элемента.</span><span class="sxs-lookup"><span data-stu-id="9f04d-105">For example, <xref:System.Linq.Enumerable.OrderBy%2A?displayProperty=nameWithType> first iterates through its entire source collection, then sorts all items, and then finally yields the first item.</span></span> <span data-ttu-id="9f04d-106">Это означает, что самой дорогостоящей операцией является получение первого элемента упорядоченной коллекции, после чего затраты ресурсов на каждый последующий элемент становятся меньше.</span><span class="sxs-lookup"><span data-stu-id="9f04d-106">This means that it is expensive to get the first item of an ordered collection; each item thereafter is not expensive.</span></span> <span data-ttu-id="9f04d-107">Это вполне оправдано, поскольку функционирование данного оператора запроса не может быть организовано иначе.</span><span class="sxs-lookup"><span data-stu-id="9f04d-107">This makes sense: It would be impossible for that query operator to do otherwise.</span></span>  
+# <a name="intermediate-materialization-c"></a><span data-ttu-id="b2e3c-102">Промежуточная материализация (C#)</span><span class="sxs-lookup"><span data-stu-id="b2e3c-102">Intermediate Materialization (C#)</span></span>
+<span data-ttu-id="b2e3c-103">Если не соблюдать осторожность, то в некоторых ситуациях может происходить преждевременная материализация коллекций в запросах, что приводит к радикальному изменению характера использования памяти и снижению производительности приложения.</span><span class="sxs-lookup"><span data-stu-id="b2e3c-103">If you are not careful, in some situations you can drastically alter the memory and performance profile of your application by causing premature materialization of collections in your queries.</span></span> <span data-ttu-id="b2e3c-104">Некоторые стандартные операторы запросов материализуют свою исходную коллекцию еще до получения хотя бы одного элемента.</span><span class="sxs-lookup"><span data-stu-id="b2e3c-104">Some standard query operators cause materialization of their source collection before yielding a single element.</span></span> <span data-ttu-id="b2e3c-105">Например, при выполнении оператора <xref:System.Linq.Enumerable.OrderBy%2A?displayProperty=nameWithType> вначале происходит итерация по всей исходной коллекции, затем сортировка всех элементов и лишь после этого осуществляется возврат первого элемента.</span><span class="sxs-lookup"><span data-stu-id="b2e3c-105">For example, <xref:System.Linq.Enumerable.OrderBy%2A?displayProperty=nameWithType> first iterates through its entire source collection, then sorts all items, and then finally yields the first item.</span></span> <span data-ttu-id="b2e3c-106">Это означает, что самой дорогостоящей операцией является получение первого элемента упорядоченной коллекции, после чего затраты ресурсов на каждый последующий элемент становятся меньше.</span><span class="sxs-lookup"><span data-stu-id="b2e3c-106">This means that it is expensive to get the first item of an ordered collection; each item thereafter is not expensive.</span></span> <span data-ttu-id="b2e3c-107">Это вполне оправдано, поскольку функционирование данного оператора запроса не может быть организовано иначе.</span><span class="sxs-lookup"><span data-stu-id="b2e3c-107">This makes sense: It would be impossible for that query operator to do otherwise.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="9f04d-108">Пример</span><span class="sxs-lookup"><span data-stu-id="9f04d-108">Example</span></span>  
- <span data-ttu-id="9f04d-109">В этом примере внесены изменения по сравнению с предыдущим примером.</span><span class="sxs-lookup"><span data-stu-id="9f04d-109">This example alters the previous example.</span></span> <span data-ttu-id="9f04d-110">В методе `AppendString` осуществляется вызов <xref:System.Linq.Enumerable.ToList%2A> до начала итераций по данным источника.</span><span class="sxs-lookup"><span data-stu-id="9f04d-110">The `AppendString` method calls <xref:System.Linq.Enumerable.ToList%2A> before iterating through the source.</span></span> <span data-ttu-id="9f04d-111">Это становится причиной материализации.</span><span class="sxs-lookup"><span data-stu-id="9f04d-111">This causes materialization.</span></span>  
+## <a name="example"></a><span data-ttu-id="b2e3c-108">Пример</span><span class="sxs-lookup"><span data-stu-id="b2e3c-108">Example</span></span>  
+ <span data-ttu-id="b2e3c-109">В этом примере внесены изменения по сравнению с предыдущим примером.</span><span class="sxs-lookup"><span data-stu-id="b2e3c-109">This example alters the previous example.</span></span> <span data-ttu-id="b2e3c-110">В методе `AppendString` осуществляется вызов <xref:System.Linq.Enumerable.ToList%2A> до начала итераций по данным источника.</span><span class="sxs-lookup"><span data-stu-id="b2e3c-110">The `AppendString` method calls <xref:System.Linq.Enumerable.ToList%2A> before iterating through the source.</span></span> <span data-ttu-id="b2e3c-111">Это становится причиной материализации.</span><span class="sxs-lookup"><span data-stu-id="b2e3c-111">This causes materialization.</span></span>  
   
 ```csharp  
 public static class LocalExtensions  
@@ -72,7 +63,7 @@ class Program
 }  
 ```  
   
- <span data-ttu-id="9f04d-112">В этом примере выводятся следующие данные:</span><span class="sxs-lookup"><span data-stu-id="9f04d-112">This example produces the following output:</span></span>  
+ <span data-ttu-id="b2e3c-112">В этом примере выводятся следующие данные:</span><span class="sxs-lookup"><span data-stu-id="b2e3c-112">This example produces the following output:</span></span>  
   
 ```  
 ToUpper: source >abc<  
@@ -88,11 +79,11 @@ AppendString: source >GHI<
 Main: str >GHI!!!<  
 ```  
   
- <span data-ttu-id="9f04d-113">В этом примере можно видеть, что применение вызова <xref:System.Linq.Enumerable.ToList%2A> вынуждает метод `AppendString` сформировать перечисление по всему источнику, прежде чем возвратить первый элемент.</span><span class="sxs-lookup"><span data-stu-id="9f04d-113">In this example, you can see that the call to <xref:System.Linq.Enumerable.ToList%2A> causes `AppendString` to enumerate its entire source before yielding the first item.</span></span> <span data-ttu-id="9f04d-114">Если источник представляет собой большой массив, то в результате характер использования памяти приложением существенно изменится.</span><span class="sxs-lookup"><span data-stu-id="9f04d-114">If the source were a large array, this would significantly alter the memory profile of the application.</span></span>  
+ <span data-ttu-id="b2e3c-113">В этом примере можно видеть, что применение вызова <xref:System.Linq.Enumerable.ToList%2A> вынуждает метод `AppendString` сформировать перечисление по всему источнику, прежде чем возвратить первый элемент.</span><span class="sxs-lookup"><span data-stu-id="b2e3c-113">In this example, you can see that the call to <xref:System.Linq.Enumerable.ToList%2A> causes `AppendString` to enumerate its entire source before yielding the first item.</span></span> <span data-ttu-id="b2e3c-114">Если источник представляет собой большой массив, то в результате характер использования памяти приложением существенно изменится.</span><span class="sxs-lookup"><span data-stu-id="b2e3c-114">If the source were a large array, this would significantly alter the memory profile of the application.</span></span>  
   
- <span data-ttu-id="9f04d-115">Стандартные операторы запроса можно также соединять в виде цепочки.</span><span class="sxs-lookup"><span data-stu-id="9f04d-115">Standard query operators can also be chained together.</span></span> <span data-ttu-id="9f04d-116">Это показано в последнем разделе учебника.</span><span class="sxs-lookup"><span data-stu-id="9f04d-116">The final topic in this tutorial illustrates this.</span></span>  
+ <span data-ttu-id="b2e3c-115">Стандартные операторы запроса можно также соединять в виде цепочки.</span><span class="sxs-lookup"><span data-stu-id="b2e3c-115">Standard query operators can also be chained together.</span></span> <span data-ttu-id="b2e3c-116">Это показано в последнем разделе учебника.</span><span class="sxs-lookup"><span data-stu-id="b2e3c-116">The final topic in this tutorial illustrates this.</span></span>  
   
--   [<span data-ttu-id="9f04d-117">Связывание стандартных операторов запросов (C#)</span><span class="sxs-lookup"><span data-stu-id="9f04d-117">Chaining Standard Query Operators Together (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/chaining-standard-query-operators-together.md)  
+-   [<span data-ttu-id="b2e3c-117">Связывание стандартных операторов запросов (C#)</span><span class="sxs-lookup"><span data-stu-id="b2e3c-117">Chaining Standard Query Operators Together (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/chaining-standard-query-operators-together.md)  
   
-## <a name="see-also"></a><span data-ttu-id="9f04d-118">См. также</span><span class="sxs-lookup"><span data-stu-id="9f04d-118">See Also</span></span>  
- [<span data-ttu-id="9f04d-119">Учебник. Объединение запросов в цепочки (C#)</span><span class="sxs-lookup"><span data-stu-id="9f04d-119">Tutorial: Chaining Queries Together (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/tutorial-chaining-queries-together.md)
+## <a name="see-also"></a><span data-ttu-id="b2e3c-118">См. также</span><span class="sxs-lookup"><span data-stu-id="b2e3c-118">See Also</span></span>  
+ [<span data-ttu-id="b2e3c-119">Учебник. Объединение запросов в цепочки (C#)</span><span class="sxs-lookup"><span data-stu-id="b2e3c-119">Tutorial: Chaining Queries Together (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/tutorial-chaining-queries-together.md)

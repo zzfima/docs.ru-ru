@@ -1,30 +1,21 @@
 ---
-title: "Практическое руководство. Нахождение разности множеств между двумя списками (LINQ) (C#)"
-ms.custom: 
+title: Практическое руководство. Нахождение разности множеств между двумя списками (LINQ) (C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: 8e8945f0-4aba-439d-8d5d-c8d1eeef4e71
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: d3987063a039b53b1e9ea7b39958835b0617aa2d
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 8a0f7a06a226c0fee1f0174e187060e4b25faea2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="how-to-find-the-set-difference-between-two-lists-linq-c"></a><span data-ttu-id="c6c6d-102">Практическое руководство. Нахождение разности множеств между двумя списками (LINQ) (C#)</span><span class="sxs-lookup"><span data-stu-id="c6c6d-102">How to: Find the Set Difference Between Two Lists (LINQ) (C#)</span></span>
-<span data-ttu-id="c6c6d-103">В этом примере показано, как использовать LINQ для сравнения двух списков строк и вывода тех строк, которые содержатся в файле names1.txt, но не в файле names2.txt.</span><span class="sxs-lookup"><span data-stu-id="c6c6d-103">This example shows how to use LINQ to compare two lists of strings and output those lines that are in names1.txt but not in names2.txt.</span></span>  
+# <a name="how-to-find-the-set-difference-between-two-lists-linq-c"></a><span data-ttu-id="c03c2-102">Практическое руководство. Нахождение разности множеств между двумя списками (LINQ) (C#)</span><span class="sxs-lookup"><span data-stu-id="c03c2-102">How to: Find the Set Difference Between Two Lists (LINQ) (C#)</span></span>
+<span data-ttu-id="c03c2-103">В этом примере показано, как использовать LINQ для сравнения двух списков строк и вывода тех строк, которые содержатся в файле names1.txt, но не в файле names2.txt.</span><span class="sxs-lookup"><span data-stu-id="c03c2-103">This example shows how to use LINQ to compare two lists of strings and output those lines that are in names1.txt but not in names2.txt.</span></span>  
   
-### <a name="to-create-the-data-files"></a><span data-ttu-id="c6c6d-104">Создание файлов данных</span><span class="sxs-lookup"><span data-stu-id="c6c6d-104">To create the data files</span></span>  
+### <a name="to-create-the-data-files"></a><span data-ttu-id="c03c2-104">Создание файлов данных</span><span class="sxs-lookup"><span data-stu-id="c03c2-104">To create the data files</span></span>  
   
-1.  <span data-ttu-id="c6c6d-105">Скопируйте файлы names1.txt и names2.txt в папку решения, как показано в разделе [Практическое руководство. Объединение и сравнение коллекций строк (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-combine-and-compare-string-collections-linq.md).</span><span class="sxs-lookup"><span data-stu-id="c6c6d-105">Copy names1.txt and names2.txt to your solution folder as shown in [How to: Combine and Compare String Collections (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-combine-and-compare-string-collections-linq.md).</span></span>  
+1.  <span data-ttu-id="c03c2-105">Скопируйте файлы names1.txt и names2.txt в папку решения, как показано в разделе [Практическое руководство. Объединение и сравнение коллекций строк (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-combine-and-compare-string-collections-linq.md).</span><span class="sxs-lookup"><span data-stu-id="c03c2-105">Copy names1.txt and names2.txt to your solution folder as shown in [How to: Combine and Compare String Collections (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-combine-and-compare-string-collections-linq.md).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="c6c6d-106">Пример</span><span class="sxs-lookup"><span data-stu-id="c6c6d-106">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="c03c2-106">Пример</span><span class="sxs-lookup"><span data-stu-id="c03c2-106">Example</span></span>  
   
 ```csharp  
 class CompareLists  
@@ -60,10 +51,10 @@ class CompareLists
      */  
 ```  
   
- <span data-ttu-id="c6c6d-107">Некоторые типы операторов запроса в C#, например <xref:System.Linq.Enumerable.Except%2A>, <xref:System.Linq.Enumerable.Distinct%2A>, <xref:System.Linq.Enumerable.Union%2A> и <xref:System.Linq.Enumerable.Concat%2A>, могут выражаться только с использованием синтаксиса на основе методов.</span><span class="sxs-lookup"><span data-stu-id="c6c6d-107">Some types of query operations in C#, such as <xref:System.Linq.Enumerable.Except%2A>, <xref:System.Linq.Enumerable.Distinct%2A>, <xref:System.Linq.Enumerable.Union%2A>, and <xref:System.Linq.Enumerable.Concat%2A>, can only be expressed in method-based syntax.</span></span>  
+ <span data-ttu-id="c03c2-107">Некоторые типы операторов запроса в C#, например <xref:System.Linq.Enumerable.Except%2A>, <xref:System.Linq.Enumerable.Distinct%2A>, <xref:System.Linq.Enumerable.Union%2A> и <xref:System.Linq.Enumerable.Concat%2A>, могут выражаться только с использованием синтаксиса на основе методов.</span><span class="sxs-lookup"><span data-stu-id="c03c2-107">Some types of query operations in C#, such as <xref:System.Linq.Enumerable.Except%2A>, <xref:System.Linq.Enumerable.Distinct%2A>, <xref:System.Linq.Enumerable.Union%2A>, and <xref:System.Linq.Enumerable.Concat%2A>, can only be expressed in method-based syntax.</span></span>  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="c6c6d-108">Компиляция кода</span><span class="sxs-lookup"><span data-stu-id="c6c6d-108">Compiling the Code</span></span>  
- <span data-ttu-id="c6c6d-109">Создайте проект, предназначенный для .NET Framework 3.5 или более поздней версии, со ссылкой на библиотеку System.Core.dll и директивы `using` для пространств имен System.Linq и System.IO.</span><span class="sxs-lookup"><span data-stu-id="c6c6d-109">Create a project that targets the .NET Framework  version 3.5 or higher, with a reference to System.Core.dll and `using` directives for the System.Linq and System.IO namespaces.</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="c03c2-108">Компиляция кода</span><span class="sxs-lookup"><span data-stu-id="c03c2-108">Compiling the Code</span></span>  
+ <span data-ttu-id="c03c2-109">Создайте проект, предназначенный для .NET Framework 3.5 или более поздней версии, со ссылкой на библиотеку System.Core.dll и директивы `using` для пространств имен System.Linq и System.IO.</span><span class="sxs-lookup"><span data-stu-id="c03c2-109">Create a project that targets the .NET Framework  version 3.5 or higher, with a reference to System.Core.dll and `using` directives for the System.Linq and System.IO namespaces.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c6c6d-110">См. также</span><span class="sxs-lookup"><span data-stu-id="c6c6d-110">See Also</span></span>  
- [<span data-ttu-id="c6c6d-111">LINQ и строки (C#)</span><span class="sxs-lookup"><span data-stu-id="c6c6d-111">LINQ and Strings (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)
+## <a name="see-also"></a><span data-ttu-id="c03c2-110">См. также</span><span class="sxs-lookup"><span data-stu-id="c03c2-110">See Also</span></span>  
+ [<span data-ttu-id="c03c2-111">LINQ и строки (C#)</span><span class="sxs-lookup"><span data-stu-id="c03c2-111">LINQ and Strings (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)

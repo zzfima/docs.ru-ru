@@ -1,28 +1,19 @@
 ---
-title: "Практическое руководство. Объединение и сравнение коллекций строк (LINQ) (C#)"
-ms.custom: 
+title: Практическое руководство. Объединение и сравнение коллекций строк (LINQ) (C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: 25926e5b-fde2-4dc1-86a0-16ead7aa13d2
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: c84e472b9b836fd996170543479e24a406ec2e8f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: c052302439407cecd7ce2924cc6cf5ffeefd1239
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="how-to-combine-and-compare-string-collections-linq-c"></a><span data-ttu-id="0222b-102">Практическое руководство. Объединение и сравнение коллекций строк (LINQ) (C#)</span><span class="sxs-lookup"><span data-stu-id="0222b-102">How to: Combine and Compare String Collections (LINQ) (C#)</span></span>
-<span data-ttu-id="0222b-103">В этом примере показано объединение файлов, содержащих строки текста, и последующая сортировка результатов.</span><span class="sxs-lookup"><span data-stu-id="0222b-103">This example shows how to merge files that contain lines of text and then sort the results.</span></span> <span data-ttu-id="0222b-104">В частности, показано выполнение простого сцепления, объединения и пересечения в двух наборах строк текста.</span><span class="sxs-lookup"><span data-stu-id="0222b-104">Specifically, it shows how to perform a simple concatenation, a union, and an intersection on the two sets of text lines.</span></span>  
+# <a name="how-to-combine-and-compare-string-collections-linq-c"></a><span data-ttu-id="a7e2b-102">Практическое руководство. Объединение и сравнение коллекций строк (LINQ) (C#)</span><span class="sxs-lookup"><span data-stu-id="a7e2b-102">How to: Combine and Compare String Collections (LINQ) (C#)</span></span>
+<span data-ttu-id="a7e2b-103">В этом примере показано объединение файлов, содержащих строки текста, и последующая сортировка результатов.</span><span class="sxs-lookup"><span data-stu-id="a7e2b-103">This example shows how to merge files that contain lines of text and then sort the results.</span></span> <span data-ttu-id="a7e2b-104">В частности, показано выполнение простого сцепления, объединения и пересечения в двух наборах строк текста.</span><span class="sxs-lookup"><span data-stu-id="a7e2b-104">Specifically, it shows how to perform a simple concatenation, a union, and an intersection on the two sets of text lines.</span></span>  
   
-### <a name="to-set-up-the-project-and-the-text-files"></a><span data-ttu-id="0222b-105">Настройка проекта и текстовых файлов</span><span class="sxs-lookup"><span data-stu-id="0222b-105">To set up the project and the text files</span></span>  
+### <a name="to-set-up-the-project-and-the-text-files"></a><span data-ttu-id="a7e2b-105">Настройка проекта и текстовых файлов</span><span class="sxs-lookup"><span data-stu-id="a7e2b-105">To set up the project and the text files</span></span>  
   
-1.  <span data-ttu-id="0222b-106">Скопируйте эти имена в текстовый файл с именем names1.txt и сохраните его в папке проекта:</span><span class="sxs-lookup"><span data-stu-id="0222b-106">Copy these names into a text file that is named names1.txt and save it in your project folder:</span></span>  
+1.  <span data-ttu-id="a7e2b-106">Скопируйте эти имена в текстовый файл с именем names1.txt и сохраните его в папке проекта:</span><span class="sxs-lookup"><span data-stu-id="a7e2b-106">Copy these names into a text file that is named names1.txt and save it in your project folder:</span></span>  
   
     ```  
     Bankov, Peter  
@@ -37,7 +28,7 @@ ms.lasthandoff: 11/21/2017
     Garcia, Debra  
     ```  
   
-2.  <span data-ttu-id="0222b-107">Скопируйте эти имена в текстовый файл с именем names2.txt и сохраните его в папке проекта.</span><span class="sxs-lookup"><span data-stu-id="0222b-107">Copy these names into a text file that is named names2.txt and save it in your project folder.</span></span> <span data-ttu-id="0222b-108">Обратите внимание, что в этих двух файлах имеются общие имена.</span><span class="sxs-lookup"><span data-stu-id="0222b-108">Note that the two files have some names in common.</span></span>  
+2.  <span data-ttu-id="a7e2b-107">Скопируйте эти имена в текстовый файл с именем names2.txt и сохраните его в папке проекта.</span><span class="sxs-lookup"><span data-stu-id="a7e2b-107">Copy these names into a text file that is named names2.txt and save it in your project folder.</span></span> <span data-ttu-id="a7e2b-108">Обратите внимание, что в этих двух файлах имеются общие имена.</span><span class="sxs-lookup"><span data-stu-id="a7e2b-108">Note that the two files have some names in common.</span></span>  
   
     ```  
     Liu, Jinghao  
@@ -52,7 +43,7 @@ ms.lasthandoff: 11/21/2017
     El Yassir, Mehdi  
     ```  
   
-## <a name="example"></a><span data-ttu-id="0222b-109">Пример</span><span class="sxs-lookup"><span data-stu-id="0222b-109">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="a7e2b-109">Пример</span><span class="sxs-lookup"><span data-stu-id="a7e2b-109">Example</span></span>  
   
 ```csharp  
 class MergeStrings  
@@ -176,9 +167,9 @@ class MergeStrings
 */  
 ```  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="0222b-110">Компиляция кода</span><span class="sxs-lookup"><span data-stu-id="0222b-110">Compiling the Code</span></span>  
- <span data-ttu-id="0222b-111">Создайте проект, предназначенный для .NET Framework 3.5 или более поздней версии, со ссылкой на библиотеку System.Core.dll и директивы `using` для пространств имен System.Linq и System.IO.</span><span class="sxs-lookup"><span data-stu-id="0222b-111">Create a project that targets the .NET Framework  version 3.5 or higher, with a reference to System.Core.dll and `using` directives for the System.Linq and System.IO namespaces.</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="a7e2b-110">Компиляция кода</span><span class="sxs-lookup"><span data-stu-id="a7e2b-110">Compiling the Code</span></span>  
+ <span data-ttu-id="a7e2b-111">Создайте проект, предназначенный для .NET Framework 3.5 или более поздней версии, со ссылкой на библиотеку System.Core.dll и директивы `using` для пространств имен System.Linq и System.IO.</span><span class="sxs-lookup"><span data-stu-id="a7e2b-111">Create a project that targets the .NET Framework  version 3.5 or higher, with a reference to System.Core.dll and `using` directives for the System.Linq and System.IO namespaces.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="0222b-112">См. также</span><span class="sxs-lookup"><span data-stu-id="0222b-112">See Also</span></span>  
- [<span data-ttu-id="0222b-113">LINQ и строки (C#)</span><span class="sxs-lookup"><span data-stu-id="0222b-113">LINQ and Strings (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)  
- [<span data-ttu-id="0222b-114">LINQ и каталоги файлов (C#)</span><span class="sxs-lookup"><span data-stu-id="0222b-114">LINQ and File Directories (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)
+## <a name="see-also"></a><span data-ttu-id="a7e2b-112">См. также</span><span class="sxs-lookup"><span data-stu-id="a7e2b-112">See Also</span></span>  
+ [<span data-ttu-id="a7e2b-113">LINQ и строки (C#)</span><span class="sxs-lookup"><span data-stu-id="a7e2b-113">LINQ and Strings (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)  
+ [<span data-ttu-id="a7e2b-114">LINQ и каталоги файлов (C#)</span><span class="sxs-lookup"><span data-stu-id="a7e2b-114">LINQ and File Directories (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)

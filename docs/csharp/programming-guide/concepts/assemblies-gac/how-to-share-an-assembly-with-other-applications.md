@@ -1,39 +1,30 @@
 ---
-title: "Практическое руководство. Совместное использование сборки с другими приложениями (C#)"
-ms.custom: 
+title: Практическое руководство. Совместное использование сборки с другими приложениями (C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: c30e972b-1693-4e05-b115-c31831fdf9f2
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 2317b608c57b4883d1e892e9419cd735fefbb3d9
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: beadd6adb176c3fd4e6dde94d95194aea790a2fe
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="how-to-share-an-assembly-with-other-applications-c"></a><span data-ttu-id="2145d-102">Практическое руководство. Совместное использование сборки с другими приложениями (C#)</span><span class="sxs-lookup"><span data-stu-id="2145d-102">How to: Share an Assembly with Other Applications (C#)</span></span>
-<span data-ttu-id="2145d-103">Сборки могут быть закрытыми или общими. По умолчанию большинство простых программ состоят из закрытой сборки, так как она не предназначена для использования другими приложениями.</span><span class="sxs-lookup"><span data-stu-id="2145d-103">Assemblies can be private or shared: by default, most simple programs consist of a private assembly because they are not intended to be used by other applications.</span></span>  
+# <a name="how-to-share-an-assembly-with-other-applications-c"></a><span data-ttu-id="e408b-102">Практическое руководство. Совместное использование сборки с другими приложениями (C#)</span><span class="sxs-lookup"><span data-stu-id="e408b-102">How to: Share an Assembly with Other Applications (C#)</span></span>
+<span data-ttu-id="e408b-103">Сборки могут быть закрытыми или общими. По умолчанию большинство простых программ состоят из закрытой сборки, так как она не предназначена для использования другими приложениями.</span><span class="sxs-lookup"><span data-stu-id="e408b-103">Assemblies can be private or shared: by default, most simple programs consist of a private assembly because they are not intended to be used by other applications.</span></span>  
   
- <span data-ttu-id="2145d-104">Для совместного использования сборки с другими приложениями ее необходимо поместить в [глобальный кэш сборок](../../../../framework/app-domains/gac.md) (GAC).</span><span class="sxs-lookup"><span data-stu-id="2145d-104">In order to share an assembly with other applications, it must be placed in the [Global Assembly Cache](../../../../framework/app-domains/gac.md) (GAC).</span></span>  
+ <span data-ttu-id="e408b-104">Для совместного использования сборки с другими приложениями ее необходимо поместить в [глобальный кэш сборок](../../../../framework/app-domains/gac.md) (GAC).</span><span class="sxs-lookup"><span data-stu-id="e408b-104">In order to share an assembly with other applications, it must be placed in the [Global Assembly Cache](../../../../framework/app-domains/gac.md) (GAC).</span></span>  
   
-### <a name="sharing-an-assembly"></a><span data-ttu-id="2145d-105">Предоставление общего доступа к сборке</span><span class="sxs-lookup"><span data-stu-id="2145d-105">Sharing an assembly</span></span>  
+### <a name="sharing-an-assembly"></a><span data-ttu-id="e408b-105">Предоставление общего доступа к сборке</span><span class="sxs-lookup"><span data-stu-id="e408b-105">Sharing an assembly</span></span>  
   
-1.  <span data-ttu-id="2145d-106">Создайте сборку.</span><span class="sxs-lookup"><span data-stu-id="2145d-106">Create your assembly.</span></span> <span data-ttu-id="2145d-107">Дополнительные сведения см. в разделе [Создание сборок](../../../../framework/app-domains/create-assemblies.md).</span><span class="sxs-lookup"><span data-stu-id="2145d-107">For more information, see [Creating Assemblies](../../../../framework/app-domains/create-assemblies.md).</span></span>  
+1.  <span data-ttu-id="e408b-106">Создайте сборку.</span><span class="sxs-lookup"><span data-stu-id="e408b-106">Create your assembly.</span></span> <span data-ttu-id="e408b-107">Дополнительные сведения см. в разделе [Создание сборок](../../../../framework/app-domains/create-assemblies.md).</span><span class="sxs-lookup"><span data-stu-id="e408b-107">For more information, see [Creating Assemblies](../../../../framework/app-domains/create-assemblies.md).</span></span>  
   
-2.  <span data-ttu-id="2145d-108">Назначьте сборке строгое имя.</span><span class="sxs-lookup"><span data-stu-id="2145d-108">Assign a strong name to your assembly.</span></span> <span data-ttu-id="2145d-109">Дополнительные сведения см. в разделе [Практическое руководство. Подписание сборки строгим именем](../../../../framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md).</span><span class="sxs-lookup"><span data-stu-id="2145d-109">For more information, see [How to: Sign an Assembly with a Strong Name](../../../../framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md).</span></span>  
+2.  <span data-ttu-id="e408b-108">Назначьте сборке строгое имя.</span><span class="sxs-lookup"><span data-stu-id="e408b-108">Assign a strong name to your assembly.</span></span> <span data-ttu-id="e408b-109">Дополнительные сведения см. в разделе [Практическое руководство. Подписание сборки строгим именем](../../../../framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md).</span><span class="sxs-lookup"><span data-stu-id="e408b-109">For more information, see [How to: Sign an Assembly with a Strong Name](../../../../framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md).</span></span>  
   
-3.  <span data-ttu-id="2145d-110">Назначьте сведения о версии для сборки.</span><span class="sxs-lookup"><span data-stu-id="2145d-110">Assign version information to your assembly.</span></span> <span data-ttu-id="2145d-111">Дополнительные сведения см. в разделе [Версии сборок](../../../../../docs/framework/app-domains/assembly-versioning.md).</span><span class="sxs-lookup"><span data-stu-id="2145d-111">For more information, see [Assembly Versioning](../../../../../docs/framework/app-domains/assembly-versioning.md).</span></span>  
+3.  <span data-ttu-id="e408b-110">Назначьте сведения о версии для сборки.</span><span class="sxs-lookup"><span data-stu-id="e408b-110">Assign version information to your assembly.</span></span> <span data-ttu-id="e408b-111">Дополнительные сведения см. в разделе [Версии сборок](../../../../../docs/framework/app-domains/assembly-versioning.md).</span><span class="sxs-lookup"><span data-stu-id="e408b-111">For more information, see [Assembly Versioning](../../../../../docs/framework/app-domains/assembly-versioning.md).</span></span>  
   
-4.  <span data-ttu-id="2145d-112">Добавьте сборку в глобальный кэш сборок.</span><span class="sxs-lookup"><span data-stu-id="2145d-112">Add your assembly to the Global Assembly Cache.</span></span> <span data-ttu-id="2145d-113">Дополнительные сведения см. в разделе [Практическое руководство. Установка сборки в глобальный кэш сборок](../../../../framework/app-domains/how-to-install-an-assembly-into-the-gac.md).</span><span class="sxs-lookup"><span data-stu-id="2145d-113">For more information, see [How to: Install an Assembly into the Global Assembly Cache](../../../../framework/app-domains/how-to-install-an-assembly-into-the-gac.md).</span></span>  
+4.  <span data-ttu-id="e408b-112">Добавьте сборку в глобальный кэш сборок.</span><span class="sxs-lookup"><span data-stu-id="e408b-112">Add your assembly to the Global Assembly Cache.</span></span> <span data-ttu-id="e408b-113">Дополнительные сведения см. в разделе [Практическое руководство. Установка сборки в глобальный кэш сборок](../../../../framework/app-domains/how-to-install-an-assembly-into-the-gac.md).</span><span class="sxs-lookup"><span data-stu-id="e408b-113">For more information, see [How to: Install an Assembly into the Global Assembly Cache](../../../../framework/app-domains/how-to-install-an-assembly-into-the-gac.md).</span></span>  
   
-5.  <span data-ttu-id="2145d-114">Получите доступ к типам, содержащимся в сборке, из других приложений.</span><span class="sxs-lookup"><span data-stu-id="2145d-114">Access the types contained in the assembly from the other applications.</span></span> <span data-ttu-id="2145d-115">Дополнительные сведения см. в разделе [Практическое руководство. Создание ссылки на сборку со строгим именем](http://msdn.microsoft.com/library/4c6a406a-b5eb-44fa-b4ed-4e95bb95a813).</span><span class="sxs-lookup"><span data-stu-id="2145d-115">For more information, see [How to: Reference a Strong-Named Assembly](http://msdn.microsoft.com/library/4c6a406a-b5eb-44fa-b4ed-4e95bb95a813).</span></span>  
+5.  <span data-ttu-id="e408b-114">Получите доступ к типам, содержащимся в сборке, из других приложений.</span><span class="sxs-lookup"><span data-stu-id="e408b-114">Access the types contained in the assembly from the other applications.</span></span> <span data-ttu-id="e408b-115">Дополнительные сведения см. в разделе [Практическое руководство. Создание ссылки на сборку со строгим именем](http://msdn.microsoft.com/library/4c6a406a-b5eb-44fa-b4ed-4e95bb95a813).</span><span class="sxs-lookup"><span data-stu-id="e408b-115">For more information, see [How to: Reference a Strong-Named Assembly](http://msdn.microsoft.com/library/4c6a406a-b5eb-44fa-b4ed-4e95bb95a813).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="2145d-116">См. также</span><span class="sxs-lookup"><span data-stu-id="2145d-116">See Also</span></span>  
- [<span data-ttu-id="2145d-117">Руководство по программированию на C#</span><span class="sxs-lookup"><span data-stu-id="2145d-117">C# Programming Guide</span></span>](../../../../csharp/programming-guide/index.md)  
- [<span data-ttu-id="2145d-118">Программирование с использованием сборок</span><span class="sxs-lookup"><span data-stu-id="2145d-118">Programming with Assemblies</span></span>](../../../../framework/app-domains/programming-with-assemblies.md)
+## <a name="see-also"></a><span data-ttu-id="e408b-116">См. также</span><span class="sxs-lookup"><span data-stu-id="e408b-116">See Also</span></span>  
+ [<span data-ttu-id="e408b-117">Руководство по программированию на C#</span><span class="sxs-lookup"><span data-stu-id="e408b-117">C# Programming Guide</span></span>](../../../../csharp/programming-guide/index.md)  
+ [<span data-ttu-id="e408b-118">Программирование с использованием сборок</span><span class="sxs-lookup"><span data-stu-id="e408b-118">Programming with Assemblies</span></span>](../../../../framework/app-domains/programming-with-assemblies.md)

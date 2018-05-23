@@ -1,63 +1,54 @@
 ---
 title: this (Справочник по C#)
 description: Ключевое слово this (справочник по C#)
-keywords: this (C#), ключевое слово this (C#), ключевое слово this (справочник по C#), ключевое слово this (справочник по языку C#)
-ms.custom: ''
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 f1_keywords:
 - this
 - this_CSharpKeyword
 helpviewer_keywords:
 - this keyword [C#]
 ms.assetid: d4f827fe-4710-410b-89b8-867dad44b8a3
-caps.latest.revision: 19
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: f159967707061481a34e72a97ec8cc8316d982ca
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 04496079114be45388926993b67e8f1d3f2e9f15
+ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/15/2018
 ---
-# <a name="this-c-reference"></a><span data-ttu-id="dcb1e-104">this (Справочник по C#)</span><span class="sxs-lookup"><span data-stu-id="dcb1e-104">this (C# Reference)</span></span>
-<span data-ttu-id="dcb1e-105">Ключевое слово `this` ссылается на текущий экземпляр класса, а также используется в качестве модификатора первого параметра метода расширения.</span><span class="sxs-lookup"><span data-stu-id="dcb1e-105">The `this` keyword refers to the current instance of the class and is also used as a modifier of the first parameter of an extension method.</span></span>  
+# <a name="this-c-reference"></a><span data-ttu-id="2ab01-103">this (Справочник по C#)</span><span class="sxs-lookup"><span data-stu-id="2ab01-103">this (C# Reference)</span></span>
+<span data-ttu-id="2ab01-104">Ключевое слово `this` ссылается на текущий экземпляр класса, а также используется в качестве модификатора первого параметра метода расширения.</span><span class="sxs-lookup"><span data-stu-id="2ab01-104">The `this` keyword refers to the current instance of the class and is also used as a modifier of the first parameter of an extension method.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="dcb1e-106">В этой статье рассматривается использование `this` с экземплярами класса.</span><span class="sxs-lookup"><span data-stu-id="dcb1e-106">This article discusses the use of `this` with class instances.</span></span> <span data-ttu-id="dcb1e-107">Дополнительные сведения об использовании этого ключевого слова в методах расширения см. в разделе [Методы расширения](../../../csharp/programming-guide/classes-and-structs/extension-methods.md).</span><span class="sxs-lookup"><span data-stu-id="dcb1e-107">For more information about its use in extension methods, see [Extension Methods](../../../csharp/programming-guide/classes-and-structs/extension-methods.md).</span></span>  
+>  <span data-ttu-id="2ab01-105">В этой статье рассматривается использование `this` с экземплярами класса.</span><span class="sxs-lookup"><span data-stu-id="2ab01-105">This article discusses the use of `this` with class instances.</span></span> <span data-ttu-id="2ab01-106">Дополнительные сведения об использовании этого ключевого слова в методах расширения см. в разделе [Методы расширения](../../../csharp/programming-guide/classes-and-structs/extension-methods.md).</span><span class="sxs-lookup"><span data-stu-id="2ab01-106">For more information about its use in extension methods, see [Extension Methods](../../../csharp/programming-guide/classes-and-structs/extension-methods.md).</span></span>  
   
- <span data-ttu-id="dcb1e-108">Ниже перечислены наиболее частые способы использования `this`.</span><span class="sxs-lookup"><span data-stu-id="dcb1e-108">The following are common uses of `this`:</span></span>  
+ <span data-ttu-id="2ab01-107">Ниже перечислены наиболее частые способы использования `this`.</span><span class="sxs-lookup"><span data-stu-id="2ab01-107">The following are common uses of `this`:</span></span>  
   
--   <span data-ttu-id="dcb1e-109">Для квалификации элементов, скрытых одинаковыми именами, например:</span><span class="sxs-lookup"><span data-stu-id="dcb1e-109">To qualify members hidden by similar names, for example:</span></span>  
+-   <span data-ttu-id="2ab01-108">Для квалификации элементов, скрытых одинаковыми именами, например:</span><span class="sxs-lookup"><span data-stu-id="2ab01-108">To qualify members hidden by similar names, for example:</span></span>  
   
  [!code-csharp[csrefKeywordsAccess#4](../../../csharp/language-reference/keywords/codesnippet/CSharp/this_1.cs)]  
   
--   <span data-ttu-id="dcb1e-110">Для передачи другим методам объекта в качестве параметра, например:</span><span class="sxs-lookup"><span data-stu-id="dcb1e-110">To pass an object as a parameter to other methods, for example:</span></span>  
+-   <span data-ttu-id="2ab01-109">Для передачи другим методам объекта в качестве параметра, например:</span><span class="sxs-lookup"><span data-stu-id="2ab01-109">To pass an object as a parameter to other methods, for example:</span></span>  
   
-    ```  
+    ```csharp  
     CalcTax(this);  
     ```  
   
--   <span data-ttu-id="dcb1e-111">Для объявления индексаторов, например:</span><span class="sxs-lookup"><span data-stu-id="dcb1e-111">To declare indexers, for example:</span></span>  
+-   <span data-ttu-id="2ab01-110">Для объявления индексаторов, например:</span><span class="sxs-lookup"><span data-stu-id="2ab01-110">To declare indexers, for example:</span></span>  
   
  [!code-csharp[csrefKeywordsAccess#5](../../../csharp/language-reference/keywords/codesnippet/CSharp/this_2.cs)]  
   
- <span data-ttu-id="dcb1e-112">У статических функций-членов нет указателя `this`, так как они существуют только на уровне класса и не являются частями объектов.</span><span class="sxs-lookup"><span data-stu-id="dcb1e-112">Static member functions, because they exist at the class level and not as part of an object, do not have a `this` pointer.</span></span> <span data-ttu-id="dcb1e-113">Использование ссылки на `this` в статическом методе является недопустимым.</span><span class="sxs-lookup"><span data-stu-id="dcb1e-113">It is an error to refer to `this` in a static method.</span></span>  
+ <span data-ttu-id="2ab01-111">У статических функций-членов нет указателя `this`, так как они существуют только на уровне класса и не являются частями объектов.</span><span class="sxs-lookup"><span data-stu-id="2ab01-111">Static member functions, because they exist at the class level and not as part of an object, do not have a `this` pointer.</span></span> <span data-ttu-id="2ab01-112">Использование ссылки на `this` в статическом методе является недопустимым.</span><span class="sxs-lookup"><span data-stu-id="2ab01-112">It is an error to refer to `this` in a static method.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="dcb1e-114">Пример</span><span class="sxs-lookup"><span data-stu-id="dcb1e-114">Example</span></span>  
- <span data-ttu-id="dcb1e-115">В этом примере `this` используется для квалификации членов класса `Employee`, `name` и `alias`, которые скрыты одинаковыми именами.</span><span class="sxs-lookup"><span data-stu-id="dcb1e-115">In this example, `this` is used to qualify the `Employee` class members, `name` and `alias`, which are hidden by similar names.</span></span> <span data-ttu-id="dcb1e-116">Это ключевое слово также используется для передачи объекта в метод `CalcTax`, который принадлежит другому классу.</span><span class="sxs-lookup"><span data-stu-id="dcb1e-116">It is also used to pass an object to the method `CalcTax`, which belongs to another class.</span></span>  
+## <a name="example"></a><span data-ttu-id="2ab01-113">Пример</span><span class="sxs-lookup"><span data-stu-id="2ab01-113">Example</span></span>  
+ <span data-ttu-id="2ab01-114">В этом примере `this` используется для квалификации членов класса `Employee`, `name` и `alias`, которые скрыты одинаковыми именами.</span><span class="sxs-lookup"><span data-stu-id="2ab01-114">In this example, `this` is used to qualify the `Employee` class members, `name` and `alias`, which are hidden by similar names.</span></span> <span data-ttu-id="2ab01-115">Это ключевое слово также используется для передачи объекта в метод `CalcTax`, который принадлежит другому классу.</span><span class="sxs-lookup"><span data-stu-id="2ab01-115">It is also used to pass an object to the method `CalcTax`, which belongs to another class.</span></span>  
   
  [!code-csharp[csrefKeywordsAccess#3](../../../csharp/language-reference/keywords/codesnippet/CSharp/this_3.cs)]  
   
-## <a name="c-language-specification"></a><span data-ttu-id="dcb1e-117">Спецификация языка C#</span><span class="sxs-lookup"><span data-stu-id="dcb1e-117">C# Language Specification</span></span>  
+## <a name="c-language-specification"></a><span data-ttu-id="2ab01-116">Спецификация языка C#</span><span class="sxs-lookup"><span data-stu-id="2ab01-116">C# Language Specification</span></span>  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="dcb1e-118">См. также</span><span class="sxs-lookup"><span data-stu-id="dcb1e-118">See Also</span></span>  
- [<span data-ttu-id="dcb1e-119">Справочник по C#</span><span class="sxs-lookup"><span data-stu-id="dcb1e-119">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
- [<span data-ttu-id="dcb1e-120">Руководство по программированию на C#</span><span class="sxs-lookup"><span data-stu-id="dcb1e-120">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
- [<span data-ttu-id="dcb1e-121">Ключевые слова в C#</span><span class="sxs-lookup"><span data-stu-id="dcb1e-121">C# Keywords</span></span>](../../../csharp/language-reference/keywords/index.md)  
- [<span data-ttu-id="dcb1e-122">base</span><span class="sxs-lookup"><span data-stu-id="dcb1e-122">base</span></span>](../../../csharp/language-reference/keywords/base.md)  
- [<span data-ttu-id="dcb1e-123">Методы</span><span class="sxs-lookup"><span data-stu-id="dcb1e-123">Methods</span></span>](../../../csharp/programming-guide/classes-and-structs/methods.md)
+## <a name="see-also"></a><span data-ttu-id="2ab01-117">См. также</span><span class="sxs-lookup"><span data-stu-id="2ab01-117">See Also</span></span>  
+ [<span data-ttu-id="2ab01-118">Справочник по C#</span><span class="sxs-lookup"><span data-stu-id="2ab01-118">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
+ [<span data-ttu-id="2ab01-119">Руководство по программированию на C#</span><span class="sxs-lookup"><span data-stu-id="2ab01-119">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+ [<span data-ttu-id="2ab01-120">Ключевые слова в C#</span><span class="sxs-lookup"><span data-stu-id="2ab01-120">C# Keywords</span></span>](../../../csharp/language-reference/keywords/index.md)  
+ [<span data-ttu-id="2ab01-121">base</span><span class="sxs-lookup"><span data-stu-id="2ab01-121">base</span></span>](../../../csharp/language-reference/keywords/base.md)  
+ [<span data-ttu-id="2ab01-122">Методы</span><span class="sxs-lookup"><span data-stu-id="2ab01-122">Methods</span></span>](../../../csharp/programming-guide/classes-and-structs/methods.md)

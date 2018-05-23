@@ -1,27 +1,21 @@
 ---
-title: "Практическое руководство. Создание раздела в реестре (Visual C#)"
+title: Практическое руководство. Создание раздела в реестре (Visual C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - registry, adding keys and values [C#]
 - registry keys, creating [C#]
 - keys, creating in registry
 ms.assetid: 8fa475b0-e01f-483a-9327-fd03488fdf5d
-caps.latest.revision: "14"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: f6cc79a8a914d3ef5b7c496db4dc0d2b3eb17768
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: a1643310740a472ad0a1df978fa41f674f3dbcb5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="how-to-create-a-key-in-the-registry-visual-c"></a><span data-ttu-id="57b41-102">Практическое руководство. Создание раздела в реестре (Visual C#)</span><span class="sxs-lookup"><span data-stu-id="57b41-102">How to: Create a Key In the Registry (Visual C#)</span></span>
-<span data-ttu-id="57b41-103">Код в этом примере добавляет в раздел Names реестра текущего пользователя пару значений — Name и Isabella.</span><span class="sxs-lookup"><span data-stu-id="57b41-103">This example adds the value pair, "Name" and "Isabella", to the current user's registry, under the key "Names".</span></span>  
+# <a name="how-to-create-a-key-in-the-registry-visual-c"></a><span data-ttu-id="c5fa5-102">Практическое руководство. Создание раздела в реестре (Visual C#)</span><span class="sxs-lookup"><span data-stu-id="c5fa5-102">How to: Create a Key In the Registry (Visual C#)</span></span>
+<span data-ttu-id="c5fa5-103">Код в этом примере добавляет в раздел Names реестра текущего пользователя пару значений — Name и Isabella.</span><span class="sxs-lookup"><span data-stu-id="c5fa5-103">This example adds the value pair, "Name" and "Isabella", to the current user's registry, under the key "Names".</span></span>  
   
-## <a name="example"></a><span data-ttu-id="57b41-104">Пример</span><span class="sxs-lookup"><span data-stu-id="57b41-104">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="c5fa5-104">Пример</span><span class="sxs-lookup"><span data-stu-id="c5fa5-104">Example</span></span>  
   
 ```  
 Microsoft.Win32.RegistryKey key;  
@@ -30,38 +24,38 @@ key.SetValue("Name", "Isabella");
 key.Close();  
 ```  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="57b41-105">Компиляция кода</span><span class="sxs-lookup"><span data-stu-id="57b41-105">Compiling the Code</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="c5fa5-105">Компиляция кода</span><span class="sxs-lookup"><span data-stu-id="c5fa5-105">Compiling the Code</span></span>  
   
--   <span data-ttu-id="57b41-106">Скопируйте код и вставьте его в метод `Main` консольного приложения.</span><span class="sxs-lookup"><span data-stu-id="57b41-106">Copy the code and paste it into the `Main` method of a console application.</span></span>  
+-   <span data-ttu-id="c5fa5-106">Скопируйте код и вставьте его в метод `Main` консольного приложения.</span><span class="sxs-lookup"><span data-stu-id="c5fa5-106">Copy the code and paste it into the `Main` method of a console application.</span></span>  
   
--   <span data-ttu-id="57b41-107">Замените параметр `Names` на имя ключа, который находится прямо в узле HKEY_CURRENT_USER реестра.</span><span class="sxs-lookup"><span data-stu-id="57b41-107">Replace the `Names` parameter with the name of a key that exists directly under the HKEY_CURRENT_USER node of the registry.</span></span>  
+-   <span data-ttu-id="c5fa5-107">Замените параметр `Names` на имя ключа, который находится прямо в узле HKEY_CURRENT_USER реестра.</span><span class="sxs-lookup"><span data-stu-id="c5fa5-107">Replace the `Names` parameter with the name of a key that exists directly under the HKEY_CURRENT_USER node of the registry.</span></span>  
   
--   <span data-ttu-id="57b41-108">Замените параметр `Name` на имя значения, которое находится прямо в узле Names.</span><span class="sxs-lookup"><span data-stu-id="57b41-108">Replace the `Name` parameter with the name of a value that exists directly under the Names node.</span></span>  
+-   <span data-ttu-id="c5fa5-108">Замените параметр `Name` на имя значения, которое находится прямо в узле Names.</span><span class="sxs-lookup"><span data-stu-id="c5fa5-108">Replace the `Name` parameter with the name of a value that exists directly under the Names node.</span></span>  
   
-## <a name="robust-programming"></a><span data-ttu-id="57b41-109">Отказоустойчивость</span><span class="sxs-lookup"><span data-stu-id="57b41-109">Robust Programming</span></span>  
- <span data-ttu-id="57b41-110">Проверьте структуру реестра и найдите подходящее место для ключа.</span><span class="sxs-lookup"><span data-stu-id="57b41-110">Examine the registry structure to find a suitable location for your key.</span></span> <span data-ttu-id="57b41-111">Для этого можно, например, открыть ключ программного обеспечения текущего пользователя и создать ключ с названием вашей компании.</span><span class="sxs-lookup"><span data-stu-id="57b41-111">For example, you might want to open the Software key of the current user, and create a key with your company's name.</span></span> <span data-ttu-id="57b41-112">Затем добавьте в ключ компании значения реестра.</span><span class="sxs-lookup"><span data-stu-id="57b41-112">Then add the registry values to your company's key.</span></span>  
+## <a name="robust-programming"></a><span data-ttu-id="c5fa5-109">Отказоустойчивость</span><span class="sxs-lookup"><span data-stu-id="c5fa5-109">Robust Programming</span></span>  
+ <span data-ttu-id="c5fa5-110">Проверьте структуру реестра и найдите подходящее место для ключа.</span><span class="sxs-lookup"><span data-stu-id="c5fa5-110">Examine the registry structure to find a suitable location for your key.</span></span> <span data-ttu-id="c5fa5-111">Для этого можно, например, открыть ключ программного обеспечения текущего пользователя и создать ключ с названием вашей компании.</span><span class="sxs-lookup"><span data-stu-id="c5fa5-111">For example, you might want to open the Software key of the current user, and create a key with your company's name.</span></span> <span data-ttu-id="c5fa5-112">Затем добавьте в ключ компании значения реестра.</span><span class="sxs-lookup"><span data-stu-id="c5fa5-112">Then add the registry values to your company's key.</span></span>  
   
- <span data-ttu-id="57b41-113">При следующих условиях может возникнуть исключение:</span><span class="sxs-lookup"><span data-stu-id="57b41-113">The following conditions might cause an exception:</span></span>  
+ <span data-ttu-id="c5fa5-113">При следующих условиях может возникнуть исключение:</span><span class="sxs-lookup"><span data-stu-id="c5fa5-113">The following conditions might cause an exception:</span></span>  
   
--   <span data-ttu-id="57b41-114">Пустое имя ключа.</span><span class="sxs-lookup"><span data-stu-id="57b41-114">The name of the key is null.</span></span>  
+-   <span data-ttu-id="c5fa5-114">Пустое имя ключа.</span><span class="sxs-lookup"><span data-stu-id="c5fa5-114">The name of the key is null.</span></span>  
   
--   <span data-ttu-id="57b41-115">У пользователя нет разрешения на создание разделов реестра.</span><span class="sxs-lookup"><span data-stu-id="57b41-115">The user does not have permissions to create registry keys.</span></span>  
+-   <span data-ttu-id="c5fa5-115">У пользователя нет разрешения на создание разделов реестра.</span><span class="sxs-lookup"><span data-stu-id="c5fa5-115">The user does not have permissions to create registry keys.</span></span>  
   
--   <span data-ttu-id="57b41-116">Имя ключа превышает ограничение в 255 символов.</span><span class="sxs-lookup"><span data-stu-id="57b41-116">The key name exceeds the 255-character limit.</span></span>  
+-   <span data-ttu-id="c5fa5-116">Имя ключа превышает ограничение в 255 символов.</span><span class="sxs-lookup"><span data-stu-id="c5fa5-116">The key name exceeds the 255-character limit.</span></span>  
   
--   <span data-ttu-id="57b41-117">Раздел является закрытым.</span><span class="sxs-lookup"><span data-stu-id="57b41-117">The key is closed.</span></span>  
+-   <span data-ttu-id="c5fa5-117">Раздел является закрытым.</span><span class="sxs-lookup"><span data-stu-id="c5fa5-117">The key is closed.</span></span>  
   
--   <span data-ttu-id="57b41-118">Раздел реестра доступен только для чтения.</span><span class="sxs-lookup"><span data-stu-id="57b41-118">The registry key is read-only.</span></span>  
+-   <span data-ttu-id="c5fa5-118">Раздел реестра доступен только для чтения.</span><span class="sxs-lookup"><span data-stu-id="c5fa5-118">The registry key is read-only.</span></span>  
   
-## <a name="net-framework-security"></a><span data-ttu-id="57b41-119">Безопасность платформы .NET Framework</span><span class="sxs-lookup"><span data-stu-id="57b41-119">.NET Framework Security</span></span>  
- <span data-ttu-id="57b41-120">Безопаснее записывать данные в папку пользователя (`Microsoft.Win32.Registry.CurrentUser`), чем на локальный компьютер (`Microsoft.Win32.Registry.LocalMachine`).</span><span class="sxs-lookup"><span data-stu-id="57b41-120">It is more secure to write data to the user folder — `Microsoft.Win32.Registry.CurrentUser` — rather than to the local computer — `Microsoft.Win32.Registry.LocalMachine`.</span></span>  
+## <a name="net-framework-security"></a><span data-ttu-id="c5fa5-119">Безопасность платформы .NET Framework</span><span class="sxs-lookup"><span data-stu-id="c5fa5-119">.NET Framework Security</span></span>  
+ <span data-ttu-id="c5fa5-120">Безопаснее записывать данные в папку пользователя (`Microsoft.Win32.Registry.CurrentUser`), чем на локальный компьютер (`Microsoft.Win32.Registry.LocalMachine`).</span><span class="sxs-lookup"><span data-stu-id="c5fa5-120">It is more secure to write data to the user folder — `Microsoft.Win32.Registry.CurrentUser` — rather than to the local computer — `Microsoft.Win32.Registry.LocalMachine`.</span></span>  
   
- <span data-ttu-id="57b41-121">Создавая значение реестра, необходимо решить, что делать, если это значение уже существует.</span><span class="sxs-lookup"><span data-stu-id="57b41-121">When you create a registry value, you need to decide what to do if that value already exists.</span></span> <span data-ttu-id="57b41-122">Другой процесс (возможно, вредоносный) мог уже создать это значение и получить к нему доступ.</span><span class="sxs-lookup"><span data-stu-id="57b41-122">Another process, perhaps a malicious one, may have already created the value and have access to it.</span></span> <span data-ttu-id="57b41-123">Данные, добавленные в значение реестра, становятся доступными для другого процесса.</span><span class="sxs-lookup"><span data-stu-id="57b41-123">When you put data in the registry value, the data is available to the other process.</span></span> <span data-ttu-id="57b41-124">Чтобы этого избежать, используйте `Overload:Microsoft.Win32.RegistryKey.GetValue`</span><span class="sxs-lookup"><span data-stu-id="57b41-124">To prevent this, use the.`Overload:Microsoft.Win32.RegistryKey.GetValue`</span></span> <span data-ttu-id="57b41-125">метод.</span><span class="sxs-lookup"><span data-stu-id="57b41-125">method.</span></span> <span data-ttu-id="57b41-126">Он возвращает значение NULL, если раздел еще не существует.</span><span class="sxs-lookup"><span data-stu-id="57b41-126">It returns null if the key does not already exist.</span></span>  
+ <span data-ttu-id="c5fa5-121">Создавая значение реестра, необходимо решить, что делать, если это значение уже существует.</span><span class="sxs-lookup"><span data-stu-id="c5fa5-121">When you create a registry value, you need to decide what to do if that value already exists.</span></span> <span data-ttu-id="c5fa5-122">Другой процесс (возможно, вредоносный) мог уже создать это значение и получить к нему доступ.</span><span class="sxs-lookup"><span data-stu-id="c5fa5-122">Another process, perhaps a malicious one, may have already created the value and have access to it.</span></span> <span data-ttu-id="c5fa5-123">Данные, добавленные в значение реестра, становятся доступными для другого процесса.</span><span class="sxs-lookup"><span data-stu-id="c5fa5-123">When you put data in the registry value, the data is available to the other process.</span></span> <span data-ttu-id="c5fa5-124">Чтобы этого избежать, используйте `Overload:Microsoft.Win32.RegistryKey.GetValue`</span><span class="sxs-lookup"><span data-stu-id="c5fa5-124">To prevent this, use the.`Overload:Microsoft.Win32.RegistryKey.GetValue`</span></span> <span data-ttu-id="c5fa5-125">метод.</span><span class="sxs-lookup"><span data-stu-id="c5fa5-125">method.</span></span> <span data-ttu-id="c5fa5-126">Он возвращает значение NULL, если раздел еще не существует.</span><span class="sxs-lookup"><span data-stu-id="c5fa5-126">It returns null if the key does not already exist.</span></span>  
   
- <span data-ttu-id="57b41-127">Небезопасно хранить секретные данные (например, пароли) в реестре как обычный текст, даже если раздел реестра защищен с помощью списков управления доступом (ACL).</span><span class="sxs-lookup"><span data-stu-id="57b41-127">It is not secure to store secrets, such as passwords, in the registry as plain text, even if the registry key is protected by access control lists (ACL).</span></span>  
+ <span data-ttu-id="c5fa5-127">Небезопасно хранить секретные данные (например, пароли) в реестре как обычный текст, даже если раздел реестра защищен с помощью списков управления доступом (ACL).</span><span class="sxs-lookup"><span data-stu-id="c5fa5-127">It is not secure to store secrets, such as passwords, in the registry as plain text, even if the registry key is protected by access control lists (ACL).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="57b41-128">См. также</span><span class="sxs-lookup"><span data-stu-id="57b41-128">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="c5fa5-128">См. также</span><span class="sxs-lookup"><span data-stu-id="c5fa5-128">See Also</span></span>  
  <xref:System.IO?displayProperty=nameWithType>  
- [<span data-ttu-id="57b41-129">Руководство по программированию на C#</span><span class="sxs-lookup"><span data-stu-id="57b41-129">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
- [<span data-ttu-id="57b41-130">Файловая система и реестр (руководство по программированию на C#)</span><span class="sxs-lookup"><span data-stu-id="57b41-130">File System and the Registry (C# Programming Guide)</span></span>](../../../csharp/programming-guide/file-system/index.md)  
- [<span data-ttu-id="57b41-131">Чтение, запись и удаление данных реестра с помощью C#</span><span class="sxs-lookup"><span data-stu-id="57b41-131">Read, write and delete from the registry with C#</span></span>](http://www.codeproject.com/Articles/3389/Read-write-and-delete-from-registry-with-C)
+ [<span data-ttu-id="c5fa5-129">Руководство по программированию на C#</span><span class="sxs-lookup"><span data-stu-id="c5fa5-129">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+ [<span data-ttu-id="c5fa5-130">Файловая система и реестр (руководство по программированию на C#)</span><span class="sxs-lookup"><span data-stu-id="c5fa5-130">File System and the Registry (C# Programming Guide)</span></span>](../../../csharp/programming-guide/file-system/index.md)  
+ [<span data-ttu-id="c5fa5-131">Чтение, запись и удаление данных реестра с помощью C#</span><span class="sxs-lookup"><span data-stu-id="c5fa5-131">Read, write and delete from the registry with C#</span></span>](http://www.codeproject.com/Articles/3389/Read-write-and-delete-from-registry-with-C)
