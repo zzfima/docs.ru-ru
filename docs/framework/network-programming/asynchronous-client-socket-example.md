@@ -1,12 +1,6 @@
 ---
-title: "Примеры асинхронных сокетов клиента"
-ms.custom: 
+title: Примеры асинхронных сокетов клиента
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,19 +9,17 @@ helpviewer_keywords:
 - sockets, code examples
 - sockets, asynchronous client sockets
 ms.assetid: d4ac53a0-b50b-4232-9726-d47d25fcc38a
-caps.latest.revision: "8"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 323250f7aae44d07aed8e79654335f29e53438bd
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: d295841173ee2f3bf018a2058b4eac1629c4828f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="asynchronous-client-socket-example"></a><span data-ttu-id="4c6f3-102">Примеры асинхронных сокетов клиента</span><span class="sxs-lookup"><span data-stu-id="4c6f3-102">Asynchronous Client Socket Example</span></span>
-<span data-ttu-id="4c6f3-103">Приведенная ниже программа создает клиент, который подключается к серверу.</span><span class="sxs-lookup"><span data-stu-id="4c6f3-103">The following example program creates a client that connects to a server.</span></span> <span data-ttu-id="4c6f3-104">Клиент создается с использованием асинхронного сокета, поэтому выполнение клиентского приложения не приостанавливается до тех пор, пока сервер возвращает ответ.</span><span class="sxs-lookup"><span data-stu-id="4c6f3-104">The client is built with an asynchronous socket, so execution of the client application is not suspended while the server returns a response.</span></span> <span data-ttu-id="4c6f3-105">Приложение отправляет строку на сервер, а затем выводит возвращенную им строку в консоли.</span><span class="sxs-lookup"><span data-stu-id="4c6f3-105">The application sends a string to the server and then displays the string returned by the server on the console.</span></span>  
+# <a name="asynchronous-client-socket-example"></a><span data-ttu-id="fd457-102">Примеры асинхронных сокетов клиента</span><span class="sxs-lookup"><span data-stu-id="fd457-102">Asynchronous Client Socket Example</span></span>
+<span data-ttu-id="fd457-103">Приведенная ниже программа создает клиент, который подключается к серверу.</span><span class="sxs-lookup"><span data-stu-id="fd457-103">The following example program creates a client that connects to a server.</span></span> <span data-ttu-id="fd457-104">Клиент создается с использованием асинхронного сокета, поэтому выполнение клиентского приложения не приостанавливается до тех пор, пока сервер возвращает ответ.</span><span class="sxs-lookup"><span data-stu-id="fd457-104">The client is built with an asynchronous socket, so execution of the client application is not suspended while the server returns a response.</span></span> <span data-ttu-id="fd457-105">Приложение отправляет строку на сервер, а затем выводит возвращенную им строку в консоли.</span><span class="sxs-lookup"><span data-stu-id="fd457-105">The application sends a string to the server and then displays the string returned by the server on the console.</span></span>  
   
 ```vb  
 Imports System  
@@ -331,7 +323,7 @@ public class AsynchronousClient {
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="4c6f3-106">См. также</span><span class="sxs-lookup"><span data-stu-id="4c6f3-106">See Also</span></span>  
- [<span data-ttu-id="4c6f3-107">Пример асинхронного сокета сервера</span><span class="sxs-lookup"><span data-stu-id="4c6f3-107">Asynchronous Server Socket Example</span></span>](../../../docs/framework/network-programming/asynchronous-server-socket-example.md)  
- [<span data-ttu-id="4c6f3-108">Использование синхронного сокета сервера</span><span class="sxs-lookup"><span data-stu-id="4c6f3-108">Using a Synchronous Server Socket</span></span>](../../../docs/framework/network-programming/using-a-synchronous-server-socket.md)  
- [<span data-ttu-id="4c6f3-109">Примеры кода сокетов</span><span class="sxs-lookup"><span data-stu-id="4c6f3-109">Socket Code Examples</span></span>](../../../docs/framework/network-programming/socket-code-examples.md)
+## <a name="see-also"></a><span data-ttu-id="fd457-106">См. также</span><span class="sxs-lookup"><span data-stu-id="fd457-106">See Also</span></span>  
+ [<span data-ttu-id="fd457-107">Пример асинхронного сокета сервера</span><span class="sxs-lookup"><span data-stu-id="fd457-107">Asynchronous Server Socket Example</span></span>](../../../docs/framework/network-programming/asynchronous-server-socket-example.md)  
+ [<span data-ttu-id="fd457-108">Использование синхронного сокета сервера</span><span class="sxs-lookup"><span data-stu-id="fd457-108">Using a Synchronous Server Socket</span></span>](../../../docs/framework/network-programming/using-a-synchronous-server-socket.md)  
+ [<span data-ttu-id="fd457-109">Примеры кода сокетов</span><span class="sxs-lookup"><span data-stu-id="fd457-109">Socket Code Examples</span></span>](../../../docs/framework/network-programming/socket-code-examples.md)

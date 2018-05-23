@@ -1,47 +1,36 @@
 ---
-title: "Пространства имен и DTD в DOM"
-ms.custom: 
+title: Пространства имен и DTD в DOM
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 1e9b55c4-76ad-4f54-8d96-7ce4b4cf1e05
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: cf085cf866ea6034679230115e588024fcd79a11
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 92d7a50d2db25f5e4d32734d550ce2d55a02e3c9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="namespaces-and-dtds-in-the-dom"></a><span data-ttu-id="fb473-102">Пространства имен и DTD в DOM</span><span class="sxs-lookup"><span data-stu-id="fb473-102">Namespaces and DTDs in the DOM</span></span>
-<span data-ttu-id="fb473-103">Определения типа документа (DTD) усложняют поддержку пространства имен.</span><span class="sxs-lookup"><span data-stu-id="fb473-103">Document type definitions (DTDs) complicate namespace support.</span></span> <span data-ttu-id="fb473-104">Например, приведенный ниже XML-файл содержит атрибуты по умолчанию с двоеточиями в имени.</span><span class="sxs-lookup"><span data-stu-id="fb473-104">For example, the following XML contains default attributes containing colons in their names.</span></span>  
+# <a name="namespaces-and-dtds-in-the-dom"></a><span data-ttu-id="6edcb-102">Пространства имен и DTD в DOM</span><span class="sxs-lookup"><span data-stu-id="6edcb-102">Namespaces and DTDs in the DOM</span></span>
+<span data-ttu-id="6edcb-103">Определения типа документа (DTD) усложняют поддержку пространства имен.</span><span class="sxs-lookup"><span data-stu-id="6edcb-103">Document type definitions (DTDs) complicate namespace support.</span></span> <span data-ttu-id="6edcb-104">Например, приведенный ниже XML-файл содержит атрибуты по умолчанию с двоеточиями в имени.</span><span class="sxs-lookup"><span data-stu-id="6edcb-104">For example, the following XML contains default attributes containing colons in their names.</span></span>  
   
 ```xml  
 <!ATTLIST item x:id CDATA #IMPLIED>  
 ```  
   
- <span data-ttu-id="fb473-105">Ниже приведены возможные разрешения, если эта конструкция допустима:</span><span class="sxs-lookup"><span data-stu-id="fb473-105">The following are possible resolutions if this construct is allowed:</span></span>  
+ <span data-ttu-id="6edcb-105">Ниже приведены возможные разрешения, если эта конструкция допустима:</span><span class="sxs-lookup"><span data-stu-id="6edcb-105">The following are possible resolutions if this construct is allowed:</span></span>  
   
--   <span data-ttu-id="fb473-106">`x:` рассматривается как префикс пространства имен, но этот префикс должен быть разрешаемым с использованием декларации пространства имен `xmlns:x`, которое также должно быть в DTD.</span><span class="sxs-lookup"><span data-stu-id="fb473-106">The `x:` is treated as a namespace prefix, but this prefix must be resolvable using an `xmlns:x` namespace declaration, which must also exist somewhere in the DTD.</span></span> <span data-ttu-id="fb473-107">Сопоставлять этот префикс с чем-то иным в экземпляре документа - ошибка.</span><span class="sxs-lookup"><span data-stu-id="fb473-107">It is an error to map this prefix to something different in the instance document.</span></span>  
+-   <span data-ttu-id="6edcb-106">`x:` рассматривается как префикс пространства имен, но этот префикс должен быть разрешаемым с использованием декларации пространства имен `xmlns:x`, которое также должно быть в DTD.</span><span class="sxs-lookup"><span data-stu-id="6edcb-106">The `x:` is treated as a namespace prefix, but this prefix must be resolvable using an `xmlns:x` namespace declaration, which must also exist somewhere in the DTD.</span></span> <span data-ttu-id="6edcb-107">Сопоставлять этот префикс с чем-то иным в экземпляре документа - ошибка.</span><span class="sxs-lookup"><span data-stu-id="6edcb-107">It is an error to map this prefix to something different in the instance document.</span></span>  
   
--   <span data-ttu-id="fb473-108">`x:` рассматривается как префикс пространства имен, но этот префикс всегда разрешается в контексте элементов экземпляра.</span><span class="sxs-lookup"><span data-stu-id="fb473-108">The `x:` is treated as a namespace prefix, but this prefix is always resolved in the context of the instance elements.</span></span> <span data-ttu-id="fb473-109">Это значит, что префикс может быть сопоставлен с другими URI пространства имен в зависимости от диапазона пространства имен, в котором находится элемент `item`.</span><span class="sxs-lookup"><span data-stu-id="fb473-109">This means the prefix could actually map to different namespace Uniform Resource Identifiers (URIs), depending on the namespace scope in which the `item` element appears.</span></span> <span data-ttu-id="fb473-110">Это поведение более предсказуемо, чем разрешение, данное в предшествующем пункте, но имеет другие сложные последствия, поскольку требует материализованных атрибутов по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="fb473-110">This behavior is more predictable than the resolution given in the earlier bullet, but it has other complicated ramifications because it requires the default attributes be materialized.</span></span>  
+-   <span data-ttu-id="6edcb-108">`x:` рассматривается как префикс пространства имен, но этот префикс всегда разрешается в контексте элементов экземпляра.</span><span class="sxs-lookup"><span data-stu-id="6edcb-108">The `x:` is treated as a namespace prefix, but this prefix is always resolved in the context of the instance elements.</span></span> <span data-ttu-id="6edcb-109">Это значит, что префикс может быть сопоставлен с другими URI пространства имен в зависимости от диапазона пространства имен, в котором находится элемент `item`.</span><span class="sxs-lookup"><span data-stu-id="6edcb-109">This means the prefix could actually map to different namespace Uniform Resource Identifiers (URIs), depending on the namespace scope in which the `item` element appears.</span></span> <span data-ttu-id="6edcb-110">Это поведение более предсказуемо, чем разрешение, данное в предшествующем пункте, но имеет другие сложные последствия, поскольку требует материализованных атрибутов по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="6edcb-110">This behavior is more predictable than the resolution given in the earlier bullet, but it has other complicated ramifications because it requires the default attributes be materialized.</span></span>  
   
--   <span data-ttu-id="fb473-111">Двоеточие не обрабатывается, так как оно находится в DTD, имя атрибута - `x:y`, нет префикса и нет URI-кода пространства имен.</span><span class="sxs-lookup"><span data-stu-id="fb473-111">The colon is ignored because it is in a DTD, and the name of the attribute is `x:y`, no prefix and no namespace URI.</span></span>  
+-   <span data-ttu-id="6edcb-111">Двоеточие не обрабатывается, так как оно находится в DTD, имя атрибута - `x:y`, нет префикса и нет URI-кода пространства имен.</span><span class="sxs-lookup"><span data-stu-id="6edcb-111">The colon is ignored because it is in a DTD, and the name of the attribute is `x:y`, no prefix and no namespace URI.</span></span>  
   
--   <span data-ttu-id="fb473-112">Двоеточие в атрибуте по умолчанию вызывает исключение, указывающее, что двоеточия в имена внутри DTD не поддерживаются.</span><span class="sxs-lookup"><span data-stu-id="fb473-112">The colon in the default attribute throws an exception, saying that colons in names inside a DTD are not supported.</span></span> <span data-ttu-id="fb473-113">Это дает прогнозируемость поведения, но лишает возможности загружать многие из DTD, опубликованные консорциумом W3C.</span><span class="sxs-lookup"><span data-stu-id="fb473-113">This results in a predictable behavior, but means you cannot load many of the World Wide Web Consortium (W3C) published DTDs.</span></span>  
+-   <span data-ttu-id="6edcb-112">Двоеточие в атрибуте по умолчанию вызывает исключение, указывающее, что двоеточия в имена внутри DTD не поддерживаются.</span><span class="sxs-lookup"><span data-stu-id="6edcb-112">The colon in the default attribute throws an exception, saying that colons in names inside a DTD are not supported.</span></span> <span data-ttu-id="6edcb-113">Это дает прогнозируемость поведения, но лишает возможности загружать многие из DTD, опубликованные консорциумом W3C.</span><span class="sxs-lookup"><span data-stu-id="6edcb-113">This results in a predictable behavior, but means you cannot load many of the World Wide Web Consortium (W3C) published DTDs.</span></span>  
   
--   <span data-ttu-id="fb473-114">Когда пользователь запрашивает проверку DTD, поддержка пространства имен для всего документа отключается.</span><span class="sxs-lookup"><span data-stu-id="fb473-114">When the user requests DTD validation, namespace support for the entire document is turned off.</span></span> <span data-ttu-id="fb473-115">Это позволяет загружать DTD консорциума W3C и обеспечивает прогнозируемость работы.</span><span class="sxs-lookup"><span data-stu-id="fb473-115">This makes it possible to load W3C DTDs and results in a predictable behavior.</span></span>  
+-   <span data-ttu-id="6edcb-114">Когда пользователь запрашивает проверку DTD, поддержка пространства имен для всего документа отключается.</span><span class="sxs-lookup"><span data-stu-id="6edcb-114">When the user requests DTD validation, namespace support for the entire document is turned off.</span></span> <span data-ttu-id="6edcb-115">Это позволяет загружать DTD консорциума W3C и обеспечивает прогнозируемость работы.</span><span class="sxs-lookup"><span data-stu-id="6edcb-115">This makes it possible to load W3C DTDs and results in a predictable behavior.</span></span>  
   
- <span data-ttu-id="fb473-116">Язык XML в платформе Microsoft .NET Framework реализует второй вариант, обеспечивая максимальную совместимость со стандартом W3C.</span><span class="sxs-lookup"><span data-stu-id="fb473-116">The XML in the Microsoft .NET Framework implements the second option for maximum W3C compatibility.</span></span>  
+ <span data-ttu-id="6edcb-116">Язык XML в платформе Microsoft .NET Framework реализует второй вариант, обеспечивая максимальную совместимость со стандартом W3C.</span><span class="sxs-lookup"><span data-stu-id="6edcb-116">The XML in the Microsoft .NET Framework implements the second option for maximum W3C compatibility.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="fb473-117">См. также</span><span class="sxs-lookup"><span data-stu-id="fb473-117">See Also</span></span>  
- [<span data-ttu-id="fb473-118">Модель объектов документов XML (DOM)</span><span class="sxs-lookup"><span data-stu-id="fb473-118">XML Document Object Model (DOM)</span></span>](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+## <a name="see-also"></a><span data-ttu-id="6edcb-117">См. также</span><span class="sxs-lookup"><span data-stu-id="6edcb-117">See Also</span></span>  
+ [<span data-ttu-id="6edcb-118">Модель объектов документов XML (DOM)</span><span class="sxs-lookup"><span data-stu-id="6edcb-118">XML Document Object Model (DOM)</span></span>](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

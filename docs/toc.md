@@ -285,7 +285,12 @@
 ### [Начало работы с Visual Studio для Mac](fsharp/get-started/get-started-with-visual-studio-for-mac.md)
 ### [Начало работы с Visual Studio Code и Ionide](fsharp/get-started/get-started-vscode.md)
 ### [Начало работы с интерфейсом командной строки .NET Core](fsharp/get-started/get-started-command-line.md)
-<!--## [Tutorials](fsharp/tutorials/index.md)-->
+
+## [Руководство по стилю для F#](fsharp/style-guide/index.md)
+### [Рекомендации по форматированию кода F#](fsharp/style-guide/formatting.md)
+### [Соглашения о написании кода на F#](fsharp/style-guide/conventions.md)
+### [Рекомендации по проектированию компонентов F#](fsharp/style-guide/component-design-guidelines.md)
+
 ## Учебники
 ### [Окно "Интерактивный F#"](fsharp/tutorials/fsharp-interactive/index.md)
 ### [Поставщики типов](fsharp/tutorials/type-providers/index.md)

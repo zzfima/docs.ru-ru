@@ -1,35 +1,25 @@
 ---
-title: "Устранение рисков: метод X509CertificateClaimSet.FindClaims"
-ms.custom: 
+title: 'Устранение рисков: метод X509CertificateClaimSet.FindClaims'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: ee356e3b-f932-48f5-875a-5e42340bee63
-caps.latest.revision: "7"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d1b10d5c746839f504eab258664b2a60d12244f7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b927ed2e68ddea537f87b692d5c3a949234f81f5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="mitigation-x509certificateclaimsetfindclaims-method"></a><span data-ttu-id="888f2-102">Устранение рисков: метод X509CertificateClaimSet.FindClaims</span><span class="sxs-lookup"><span data-stu-id="888f2-102">Mitigation: X509CertificateClaimSet.FindClaims Method</span></span>
-<span data-ttu-id="888f2-103">Начиная с приложений, предназначенных для [!INCLUDE[net_v461](../../../includes/net-v461-md.md)], метод <xref:System.IdentityModel.Claims.X509CertificateClaimSet.FindClaims%2A?displayProperty=nameWithType> пытается сопоставить аргумент `claimType` со всеми записями DNS в поле SAN.</span><span class="sxs-lookup"><span data-stu-id="888f2-103">Starting with apps that target the [!INCLUDE[net_v461](../../../includes/net-v461-md.md)],  the <xref:System.IdentityModel.Claims.X509CertificateClaimSet.FindClaims%2A?displayProperty=nameWithType> method will attempt to match the `claimType` argument with all the DNS entries in its SAN field.</span></span>  
+# <a name="mitigation-x509certificateclaimsetfindclaims-method"></a><span data-ttu-id="75732-102">Устранение рисков: метод X509CertificateClaimSet.FindClaims</span><span class="sxs-lookup"><span data-stu-id="75732-102">Mitigation: X509CertificateClaimSet.FindClaims Method</span></span>
+<span data-ttu-id="75732-103">Начиная с приложений, предназначенных для [!INCLUDE[net_v461](../../../includes/net-v461-md.md)], метод <xref:System.IdentityModel.Claims.X509CertificateClaimSet.FindClaims%2A?displayProperty=nameWithType> пытается сопоставить аргумент `claimType` со всеми записями DNS в поле SAN.</span><span class="sxs-lookup"><span data-stu-id="75732-103">Starting with apps that target the [!INCLUDE[net_v461](../../../includes/net-v461-md.md)],  the <xref:System.IdentityModel.Claims.X509CertificateClaimSet.FindClaims%2A?displayProperty=nameWithType> method will attempt to match the `claimType` argument with all the DNS entries in its SAN field.</span></span>  
   
-## <a name="impact"></a><span data-ttu-id="888f2-104">Последствия</span><span class="sxs-lookup"><span data-stu-id="888f2-104">Impact</span></span>  
- <span data-ttu-id="888f2-105">Это изменение затрагивает только приложения, предназначенные для .NET Framework, начиная с версии [!INCLUDE[net_v461](../../../includes/net-v461-md.md)].</span><span class="sxs-lookup"><span data-stu-id="888f2-105">This change only affects apps that target versions of the .NET Framework starting with the [!INCLUDE[net_v461](../../../includes/net-v461-md.md)].</span></span>  
+## <a name="impact"></a><span data-ttu-id="75732-104">Последствия</span><span class="sxs-lookup"><span data-stu-id="75732-104">Impact</span></span>  
+ <span data-ttu-id="75732-105">Это изменение затрагивает только приложения, предназначенные для .NET Framework, начиная с версии [!INCLUDE[net_v461](../../../includes/net-v461-md.md)].</span><span class="sxs-lookup"><span data-stu-id="75732-105">This change only affects apps that target versions of the .NET Framework starting with the [!INCLUDE[net_v461](../../../includes/net-v461-md.md)].</span></span>  
   
- <span data-ttu-id="888f2-106">В приложениях, предназначенных для более ранних версий .NET Framework, метод <xref:System.IdentityModel.Claims.X509CertificateClaimSet.FindClaims%2A?displayProperty=nameWithType> пытается сопоставить аргумент `claimType` только с последней записью DNS.</span><span class="sxs-lookup"><span data-stu-id="888f2-106">For apps that target previous versions of the .NET Framework, the <xref:System.IdentityModel.Claims.X509CertificateClaimSet.FindClaims%2A?displayProperty=nameWithType> method attempts to match the `claimType` argument only with the last  DNS entry.</span></span>  
+ <span data-ttu-id="75732-106">В приложениях, предназначенных для более ранних версий .NET Framework, метод <xref:System.IdentityModel.Claims.X509CertificateClaimSet.FindClaims%2A?displayProperty=nameWithType> пытается сопоставить аргумент `claimType` только с последней записью DNS.</span><span class="sxs-lookup"><span data-stu-id="75732-106">For apps that target previous versions of the .NET Framework, the <xref:System.IdentityModel.Claims.X509CertificateClaimSet.FindClaims%2A?displayProperty=nameWithType> method attempts to match the `claimType` argument only with the last  DNS entry.</span></span>  
   
-## <a name="mitigation"></a><span data-ttu-id="888f2-107">Устранение рисков</span><span class="sxs-lookup"><span data-stu-id="888f2-107">Mitigation</span></span>  
- <span data-ttu-id="888f2-108">Если это изменение нежелательно, его можно отключить для приложений, предназначенных для версий .NET Framework, начиная с [!INCLUDE[net_v461](../../../includes/net-v461-md.md)], добавив в раздел [\<runtime>](../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) файла конфигурации приложения следующий параметр:</span><span class="sxs-lookup"><span data-stu-id="888f2-108">If this change is undesirable, apps that target versions of the .NET Framework starting with the [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] can opt out of it by adding the following configuration setting to the [\<runtime>](../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) section of the app’s configuration file:</span></span>  
+## <a name="mitigation"></a><span data-ttu-id="75732-107">Устранение рисков</span><span class="sxs-lookup"><span data-stu-id="75732-107">Mitigation</span></span>  
+ <span data-ttu-id="75732-108">Если это изменение нежелательно, его можно отключить для приложений, предназначенных для версий .NET Framework, начиная с [!INCLUDE[net_v461](../../../includes/net-v461-md.md)], добавив в раздел [\<runtime>](../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) файла конфигурации приложения следующий параметр:</span><span class="sxs-lookup"><span data-stu-id="75732-108">If this change is undesirable, apps that target versions of the .NET Framework starting with the [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] can opt out of it by adding the following configuration setting to the [\<runtime>](../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) section of the app’s configuration file:</span></span>  
   
 ```xml  
 <runtime>  
@@ -37,7 +27,7 @@ ms.lasthandoff: 12/22/2017
 </runtime>  
 ```  
   
- <span data-ttu-id="888f2-109">Кроме того, это поведение можно включить для приложений, предназначенных для предыдущих версий .NET Framework, но работающих под управлением [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] и более поздних версий. Для этого добавьте в раздел [\<runtime>](../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) файла конфигурации приложения следующий параметр:</span><span class="sxs-lookup"><span data-stu-id="888f2-109">In addition, apps that target previous versions of the .NET Framework but are running under the [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] and later versions can opt in to this behavior by adding the following configuration setting to the [\<runtime>](../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) section of the app’s configuration file:</span></span>  
+ <span data-ttu-id="75732-109">Кроме того, это поведение можно включить для приложений, предназначенных для предыдущих версий .NET Framework, но работающих под управлением [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] и более поздних версий. Для этого добавьте в раздел [\<runtime>](../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) файла конфигурации приложения следующий параметр:</span><span class="sxs-lookup"><span data-stu-id="75732-109">In addition, apps that target previous versions of the .NET Framework but are running under the [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] and later versions can opt in to this behavior by adding the following configuration setting to the [\<runtime>](../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) section of the app’s configuration file:</span></span>  
   
 ```xml  
 <runtime>  
@@ -45,5 +35,5 @@ ms.lasthandoff: 12/22/2017
 </runtime>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="888f2-110">См. также</span><span class="sxs-lookup"><span data-stu-id="888f2-110">See Also</span></span>  
- [<span data-ttu-id="888f2-111">Изменение целевой платформы</span><span class="sxs-lookup"><span data-stu-id="888f2-111">Retargeting Changes</span></span>](../../../docs/framework/migration-guide/retargeting-changes-in-the-net-framework-4-6-1.md)
+## <a name="see-also"></a><span data-ttu-id="75732-110">См. также</span><span class="sxs-lookup"><span data-stu-id="75732-110">See Also</span></span>  
+ [<span data-ttu-id="75732-111">Изменение целевой платформы</span><span class="sxs-lookup"><span data-stu-id="75732-111">Retargeting Changes</span></span>](../../../docs/framework/migration-guide/retargeting-changes-in-the-net-framework-4-6-1.md)

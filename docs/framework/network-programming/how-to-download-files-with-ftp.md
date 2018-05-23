@@ -1,28 +1,20 @@
 ---
-title: "Практическое руководство. Скачивание файлов с использованием FTP"
-ms.custom: 
+title: Практическое руководство. Скачивание файлов с использованием FTP
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 892548b8-954a-4f6a-9bca-2ae620c3700f
-caps.latest.revision: "5"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 6309bf4885b7a0f2ab7cedfb48af70dc76bf31f4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: a3e0b5773a98b42411e4dd76668dafb834b5cbd3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="how-to-download-files-with-ftp"></a><span data-ttu-id="c0427-102">Практическое руководство. Скачивание файлов с использованием FTP</span><span class="sxs-lookup"><span data-stu-id="c0427-102">How to: Download Files with FTP</span></span>
-<span data-ttu-id="c0427-103">В этом примере показано, как скачать файл с FTP-сервера.</span><span class="sxs-lookup"><span data-stu-id="c0427-103">This sample shows how to download a file from an FTP server.</span></span>  
+# <a name="how-to-download-files-with-ftp"></a><span data-ttu-id="69b3c-102">Практическое руководство. Скачивание файлов с использованием FTP</span><span class="sxs-lookup"><span data-stu-id="69b3c-102">How to: Download Files with FTP</span></span>
+<span data-ttu-id="69b3c-103">В этом примере показано, как скачать файл с FTP-сервера.</span><span class="sxs-lookup"><span data-stu-id="69b3c-103">This sample shows how to download a file from an FTP server.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="c0427-104">Пример</span><span class="sxs-lookup"><span data-stu-id="c0427-104">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="69b3c-104">Пример</span><span class="sxs-lookup"><span data-stu-id="69b3c-104">Example</span></span>  
   
 ```csharp  
 using System;  
@@ -58,11 +50,11 @@ namespace Examples.System.Net
 }  
 ```  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="c0427-105">Компиляция кода</span><span class="sxs-lookup"><span data-stu-id="c0427-105">Compiling the Code</span></span>  
- <span data-ttu-id="c0427-106">Для этого примера требуются:</span><span class="sxs-lookup"><span data-stu-id="c0427-106">This example requires:</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="69b3c-105">Компиляция кода</span><span class="sxs-lookup"><span data-stu-id="69b3c-105">Compiling the Code</span></span>  
+ <span data-ttu-id="69b3c-106">Для этого примера требуются:</span><span class="sxs-lookup"><span data-stu-id="69b3c-106">This example requires:</span></span>  
   
--   <span data-ttu-id="c0427-107">Ссылки на пространство имен **System.Net**.</span><span class="sxs-lookup"><span data-stu-id="c0427-107">References to the **System.Net** namespace.</span></span>  
+-   <span data-ttu-id="69b3c-107">Ссылки на пространство имен **System.Net**.</span><span class="sxs-lookup"><span data-stu-id="69b3c-107">References to the **System.Net** namespace.</span></span>  
   
-## <a name="robust-programming"></a><span data-ttu-id="c0427-108">Отказоустойчивость</span><span class="sxs-lookup"><span data-stu-id="c0427-108">Robust Programming</span></span>  
+## <a name="robust-programming"></a><span data-ttu-id="69b3c-108">Отказоустойчивость</span><span class="sxs-lookup"><span data-stu-id="69b3c-108">Robust Programming</span></span>  
   
-## <a name="net-framework-security"></a><span data-ttu-id="c0427-109">Безопасность платформы .NET Framework</span><span class="sxs-lookup"><span data-stu-id="c0427-109">.NET Framework Security</span></span>
+## <a name="net-framework-security"></a><span data-ttu-id="69b3c-109">Безопасность платформы .NET Framework</span><span class="sxs-lookup"><span data-stu-id="69b3c-109">.NET Framework Security</span></span>
