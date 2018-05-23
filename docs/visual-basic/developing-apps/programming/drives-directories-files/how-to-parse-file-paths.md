@@ -1,51 +1,42 @@
 ---
-title: "Практическое руководство. Анализ путей к файлам в Visual Basic"
-ms.custom: 
+title: Практическое руководство. Анализ путей к файлам в Visual Basic
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - file names [Visual Basic], parsing [Visual Basic]
 - parsing, file paths [Visual Basic]
 ms.assetid: c1bd99c9-8160-456a-b5ab-60a49139b923
-caps.latest.revision: "18"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 913fe45cf6fc7afdc6e0f31e028bc18808cecf89
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 7479f368558a8a8a07c1e6ed588bdfef21a0b1de
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="how-to-parse-file-paths-in-visual-basic"></a><span data-ttu-id="c6c4c-102">Практическое руководство. Анализ путей к файлам в Visual Basic</span><span class="sxs-lookup"><span data-stu-id="c6c4c-102">How to: Parse File Paths in Visual Basic</span></span>
-<span data-ttu-id="c6c4c-103">Объект <xref:Microsoft.VisualBasic.FileIO.FileSystem> предоставляет ряд полезных методов при анализе путей к файлам.</span><span class="sxs-lookup"><span data-stu-id="c6c4c-103">The <xref:Microsoft.VisualBasic.FileIO.FileSystem> object offers a number of useful methods when parsing file paths.</span></span>  
+# <a name="how-to-parse-file-paths-in-visual-basic"></a><span data-ttu-id="d172d-102">Практическое руководство. Анализ путей к файлам в Visual Basic</span><span class="sxs-lookup"><span data-stu-id="d172d-102">How to: Parse File Paths in Visual Basic</span></span>
+<span data-ttu-id="d172d-103">Объект <xref:Microsoft.VisualBasic.FileIO.FileSystem> предоставляет ряд полезных методов при анализе путей к файлам.</span><span class="sxs-lookup"><span data-stu-id="d172d-103">The <xref:Microsoft.VisualBasic.FileIO.FileSystem> object offers a number of useful methods when parsing file paths.</span></span>  
   
--   <span data-ttu-id="c6c4c-104">Метод <xref:Microsoft.VisualBasic.FileIO.FileSystem.CombinePath%2A> получает два пути и возвращает комбинированный путь в правильном формате.</span><span class="sxs-lookup"><span data-stu-id="c6c4c-104">The <xref:Microsoft.VisualBasic.FileIO.FileSystem.CombinePath%2A> method takes two paths and returns a properly formatted combined path.</span></span>  
+-   <span data-ttu-id="d172d-104">Метод <xref:Microsoft.VisualBasic.FileIO.FileSystem.CombinePath%2A> получает два пути и возвращает комбинированный путь в правильном формате.</span><span class="sxs-lookup"><span data-stu-id="d172d-104">The <xref:Microsoft.VisualBasic.FileIO.FileSystem.CombinePath%2A> method takes two paths and returns a properly formatted combined path.</span></span>  
   
--   <span data-ttu-id="c6c4c-105">Метод <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetParentPath%2A> возвращает абсолютный путь к родительскому элементу указанного пути.</span><span class="sxs-lookup"><span data-stu-id="c6c4c-105">The <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetParentPath%2A> method returns the absolute path of the parent of the provided path.</span></span>  
+-   <span data-ttu-id="d172d-105">Метод <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetParentPath%2A> возвращает абсолютный путь к родительскому элементу указанного пути.</span><span class="sxs-lookup"><span data-stu-id="d172d-105">The <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetParentPath%2A> method returns the absolute path of the parent of the provided path.</span></span>  
   
--   <span data-ttu-id="c6c4c-106">Метод <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetFileInfo%2A> возвращает объект <xref:System.IO.FileInfo> , к которому можно выполнить запрос, чтобы определить свойства файла, например имя и путь.</span><span class="sxs-lookup"><span data-stu-id="c6c4c-106">The <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetFileInfo%2A> method returns a <xref:System.IO.FileInfo> object that can be queried to determine the file's properties, such as its name and path.</span></span>  
+-   <span data-ttu-id="d172d-106">Метод <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetFileInfo%2A> возвращает объект <xref:System.IO.FileInfo> , к которому можно выполнить запрос, чтобы определить свойства файла, например имя и путь.</span><span class="sxs-lookup"><span data-stu-id="d172d-106">The <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetFileInfo%2A> method returns a <xref:System.IO.FileInfo> object that can be queried to determine the file's properties, such as its name and path.</span></span>  
   
- <span data-ttu-id="c6c4c-107">По расширению файла не всегда можно с уверенностью судить о его содержимом.</span><span class="sxs-lookup"><span data-stu-id="c6c4c-107">Do not make decisions about the contents of the file based on the file name extension.</span></span> <span data-ttu-id="c6c4c-108">Например, файл с именем Form1.vb может вовсе не быть исходным файлом Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="c6c4c-108">For example, the file Form1.vb may not be a Visual Basic source file.</span></span>  
+ <span data-ttu-id="d172d-107">По расширению файла не всегда можно с уверенностью судить о его содержимом.</span><span class="sxs-lookup"><span data-stu-id="d172d-107">Do not make decisions about the contents of the file based on the file name extension.</span></span> <span data-ttu-id="d172d-108">Например, файл с именем Form1.vb может вовсе не быть исходным файлом Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="d172d-108">For example, the file Form1.vb may not be a Visual Basic source file.</span></span>  
   
-### <a name="to-determine-a-files-name-and-path"></a><span data-ttu-id="c6c4c-109">Определение имени и пути для файла</span><span class="sxs-lookup"><span data-stu-id="c6c4c-109">To determine a file's name and path</span></span>  
+### <a name="to-determine-a-files-name-and-path"></a><span data-ttu-id="d172d-109">Определение имени и пути для файла</span><span class="sxs-lookup"><span data-stu-id="d172d-109">To determine a file's name and path</span></span>  
   
--   <span data-ttu-id="c6c4c-110">Используйте свойства <xref:System.IO.FileInfo.DirectoryName%2A> и <xref:System.IO.FileInfo.Name%2A> объекта <xref:System.IO.FileInfo> , чтобы определить для файла имя и путь.</span><span class="sxs-lookup"><span data-stu-id="c6c4c-110">Use the <xref:System.IO.FileInfo.DirectoryName%2A> and <xref:System.IO.FileInfo.Name%2A> properties of the <xref:System.IO.FileInfo> object to determine a file's name and path.</span></span> <span data-ttu-id="c6c4c-111">В этом примере определяются и отображаются имя и путь.</span><span class="sxs-lookup"><span data-stu-id="c6c4c-111">This example determines the name and path and displays them.</span></span>  
+-   <span data-ttu-id="d172d-110">Используйте свойства <xref:System.IO.FileInfo.DirectoryName%2A> и <xref:System.IO.FileInfo.Name%2A> объекта <xref:System.IO.FileInfo> , чтобы определить для файла имя и путь.</span><span class="sxs-lookup"><span data-stu-id="d172d-110">Use the <xref:System.IO.FileInfo.DirectoryName%2A> and <xref:System.IO.FileInfo.Name%2A> properties of the <xref:System.IO.FileInfo> object to determine a file's name and path.</span></span> <span data-ttu-id="d172d-111">В этом примере определяются и отображаются имя и путь.</span><span class="sxs-lookup"><span data-stu-id="d172d-111">This example determines the name and path and displays them.</span></span>  
   
      [!code-vb[VbVbcnMyFileSystem#54](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-parse-file-paths_1.vb)]  
   
-### <a name="to-combine-a-files-name-and-directory-to-create-the-full-path"></a><span data-ttu-id="c6c4c-112">Объединение имени и каталога файла для создания полного пути</span><span class="sxs-lookup"><span data-stu-id="c6c4c-112">To combine a file's name and directory to create the full path</span></span>  
+### <a name="to-combine-a-files-name-and-directory-to-create-the-full-path"></a><span data-ttu-id="d172d-112">Объединение имени и каталога файла для создания полного пути</span><span class="sxs-lookup"><span data-stu-id="d172d-112">To combine a file's name and directory to create the full path</span></span>  
   
--   <span data-ttu-id="c6c4c-113">Используйте метод `CombinePath` , указав каталог и имя.</span><span class="sxs-lookup"><span data-stu-id="c6c4c-113">Use the `CombinePath` method, supplying the directory and name.</span></span> <span data-ttu-id="c6c4c-114">В этом примере объединяются строки `folderPath` и `fileName` , созданные в предыдущем примере, и отображается результат.</span><span class="sxs-lookup"><span data-stu-id="c6c4c-114">This example takes the strings `folderPath` and `fileName` created in the previous example, combines them, and displays the result.</span></span>  
+-   <span data-ttu-id="d172d-113">Используйте метод `CombinePath` , указав каталог и имя.</span><span class="sxs-lookup"><span data-stu-id="d172d-113">Use the `CombinePath` method, supplying the directory and name.</span></span> <span data-ttu-id="d172d-114">В этом примере объединяются строки `folderPath` и `fileName` , созданные в предыдущем примере, и отображается результат.</span><span class="sxs-lookup"><span data-stu-id="d172d-114">This example takes the strings `folderPath` and `fileName` created in the previous example, combines them, and displays the result.</span></span>  
   
      [!code-vb[VbVbcnMyFileSystem#55](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-parse-file-paths_2.vb)]  
   
-## <a name="see-also"></a><span data-ttu-id="c6c4c-115">См. также</span><span class="sxs-lookup"><span data-stu-id="c6c4c-115">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="d172d-115">См. также</span><span class="sxs-lookup"><span data-stu-id="d172d-115">See Also</span></span>  
  <xref:Microsoft.VisualBasic.FileIO.FileSystem>  
  <xref:Microsoft.VisualBasic.FileIO.FileSystem.CombinePath%2A>  
  <xref:System.IO.FileInfo>  
  <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetFileInfo%2A>  
- [<span data-ttu-id="c6c4c-116">Практическое руководство. Получение коллекции содержащихся в каталоге файлов</span><span class="sxs-lookup"><span data-stu-id="c6c4c-116">How to: Get the Collection of Files in a Directory</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-get-the-collection-of-files-in-a-directory.md)
+ [<span data-ttu-id="d172d-116">Практическое руководство. Получение коллекции содержащихся в каталоге файлов</span><span class="sxs-lookup"><span data-stu-id="d172d-116">How to: Get the Collection of Files in a Directory</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-get-the-collection-of-files-in-a-directory.md)
