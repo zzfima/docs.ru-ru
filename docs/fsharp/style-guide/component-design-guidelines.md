@@ -2,11 +2,11 @@
 title: 'Рекомендации по проектированию компонент F #'
 description: 'Дополнительные рекомендации по написанию компонентов F #, предназначен для использования в других вызывающих объектов.'
 ms.date: 05/14/2018
-ms.openlocfilehash: 7859baac76be01b2cfbdc8602b6cc417cfe5106f
-ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
+ms.openlocfilehash: 7e71710b1bc2fe3e8d7a5a091513a1432650dc04
+ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/15/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="f-component-design-guidelines"></a>Рекомендации по проектированию компонент F #
 
@@ -483,7 +483,7 @@ type MultiMap<'Key,'Value> = Map<'Key,'Value list>
 
 При разработке библиотеки для использования из других языков .NET, очень важно следовать [правилам разработки библиотеки .NET](../../standard/design-guidelines/index.md). В этом документе, эти библиотеки помечены как соответствующего ванили библиотеки .NET, в отличие от F # — с выходом библиотек, которые используются в языке F # создает без ограничений. Проектирование соответствующего ванили библиотек .NET означает предоставление знакомых и идиоматическое API, согласованное с оставшейся частью .NET Framework, сводя к минимуму использование F #-конкретных конструкций в открытом API. В следующих разделах описываются правила.
 
-### <a name="namespace-and-type-sesign-for-libraries-for-use-from-other-net-languages"></a>Пространство имен и тип sesign (для библиотек для использования из других языков .NET)
+### <a name="namespace-and-type-design-for-libraries-for-use-from-other-net-languages"></a>Пространство имен и тип конструктора (для библиотек для использования из других языков .NET)
 
 #### <a name="apply-the-net-naming-conventions-to-the-public-api-of-your-components"></a>Соблюдать правила именования .NET для открытого API-интерфейса компонентов
 

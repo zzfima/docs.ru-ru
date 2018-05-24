@@ -7,11 +7,11 @@ helpviewer_keywords:
 ms.assetid: 006d1280-2ac3-4db6-a984-a3d4e275046a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f0d442f71a0e2fc7deacd9aaa02cfba7b66f2349
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: acd66cdff9f2c68e7d665b1fd236b18eeb9b4bac
+ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="ltloadfromremotesourcesgt-element"></a>&lt;loadFromRemoteSources&gt; элемент
 Указывает, следует ли предоставлять полный уровень доверия сборки из удаленных источников.  
@@ -69,7 +69,7 @@ ms.lasthandoff: 05/03/2018
   
  `enabled` Атрибута для этого элемента действует только в том случае, при отключении управления доступом для кода (CAS). По умолчанию политика разграничения доступа кода отключена в [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] и более поздних версиях. Если задать `enabled` для `true`, удаленным приложениям предоставляется полное доверие.  
   
- Если `<loadFromRemoteSources>``enabled` равно `true`, возникает исключение при следующих условиях:  
+ Если `<loadFromRemoteSources>` `enabled` равно `true`, возникает исключение при следующих условиях:  
   
 -   Поведение «песочницы» для текущего домена отличается от его поведения в [!INCLUDE[net_v35_short](../../../../../includes/net-v35-short-md.md)]. Требуется отключить политики разграничения доступа кода и текущий домен не в песочницу.  
   

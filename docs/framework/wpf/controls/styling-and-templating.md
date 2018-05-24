@@ -15,11 +15,11 @@ helpviewer_keywords:
 - styles [WPF], triggers
 - styles [WPF], event triggers
 ms.assetid: 481765e5-5467-4a75-9f7b-e10e2ac410d9
-ms.openlocfilehash: 85911647c089d51bafe2d65d1c5db907599b06d4
-ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
+ms.openlocfilehash: 9c2c38020bb57a008d0948a360a5b2cbe401089d
+ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/15/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="styling-and-templating"></a>Стилизация и использование шаблонов
 Стилизация и использование шаблонов [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] относятся к набору возможностей (стили, шаблоны, триггеры и раскадровки), которые позволяют разработчикам и дизайнерам создавать визуально привлекательные эффекты, а также создавать согласованный внешний вид своих продуктов. Несмотря на то что разработчики и дизайнеры могут создавать внешний вид отдельно для каждого приложения, надежная модель стилизации и использования шаблонов необходима для поддержки и совместного использования внешнего вида как внутри одного приложения, так и в ряде приложений. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] предоставляет такую модель.  
@@ -28,10 +28,8 @@ ms.lasthandoff: 05/15/2018
   
  В этом обзоре основное внимание уделяется аспектам стилизации и использования шаблонов приложения и не рассматриваются концепции привязки данных. Подробнее о привязке данных см. в разделе [Общие сведения о привязке данных](../../../../docs/framework/wpf/data/data-binding-overview.md).  
   
- Также важно иметь представление о ресурсах, которые позволяют повторно использовать стили и шаблоны. Дополнительные сведения о ресурсах см. в разделе [Ресурсы XAML](../../../../docs/framework/wpf/advanced/xaml-resources.md).  
-  
- 
-  
+ Также важно иметь представление о ресурсах, которые позволяют повторно использовать стили и шаблоны. Дополнительные сведения о ресурсах см. в разделе [Ресурсы XAML](../../../../docs/framework/wpf/advanced/xaml-resources.md).
+
 <a name="styling_and_templating_sample"></a>   
 ## <a name="styling-and-templating-sample"></a>Пример стилизации и использования шаблонов  
  В примерах кода, приведенных в этом обзоре, используется простой пример фото, показанный ниже:  
@@ -183,9 +181,9 @@ ms.lasthandoff: 05/15/2018
   
  Словари ресурсов, оформленные в виде отдельных файлов, позволяют повторно использовать тему в нескольких приложениях. Также можно создать изменяемые темы, определив несколько словарей ресурсов, которые обеспечивают одни и те же типы ресурсов, но с разными значениями. Переопределение этих стилей или других ресурсов на уровне приложения является рекомендуемым способом смены тем приложения.  
   
- Чтобы совместно используют набор ресурсов, включая стили и шаблоны в приложениях, можно создать [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] и укажите <xref:System.Windows.ResourceDictionary>. Например, посмотрите на следующую иллюстрацию — часть [примера "Стилизация с помощью ControlTemplate"](http://go.microsoft.com/fwlink/?LinkID=160041):  
-  
- ![Примеры шаблонов элементов управления](../../../../docs/framework/wpf/controls/media/stylingintro-controltemplateexamples.png "StylingIntro_ControlTemplateExamples")  
+ Чтобы совместно используют набор ресурсов, включая стили и шаблоны в приложениях, можно создать [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] и укажите <xref:System.Windows.ResourceDictionary>. Например, посмотрите на следующую иллюстрацию — часть [примера "Стилизация с помощью ControlTemplate"](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating):
+
+![Примеры шаблонов элементов управления](../../../../docs/framework/wpf/controls/media/stylingintro-controltemplateexamples.png "StylingIntro_ControlTemplateExamples")  
   
  Если взглянуть на файлы [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] в примере, можно заметить, что все файлы имеют следующий код:  
   

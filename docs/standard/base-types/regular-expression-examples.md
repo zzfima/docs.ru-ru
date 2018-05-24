@@ -9,11 +9,11 @@ helpviewer_keywords:
 ms.assetid: e9fd53f2-ed56-4b09-b2ea-e9bc9d65e6d6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8fb58f8e7a1fef711de28534fbe53dfc9d7084ac
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ee4d884a0efbeb6e57ed727396bf3bcb39979774
+ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/15/2018
 ---
 # <a name="regular-expression-examples"></a>Примеры регулярных выражений
 В этом разделе представлены примеры кодов, иллюстрирующих использование регулярных выражений в обычных приложениях.  
@@ -35,7 +35,7 @@ ms.lasthandoff: 05/04/2018
  В этом примере удаляются из строки недопустимые символы, не являющиеся буквенно-цифровыми.  
   
  [Практическое руководство. Проверка строк на соответствие формату электронной почты](../../../docs/standard/base-types/how-to-verify-that-strings-are-in-valid-email-format.md)  
- Этот пример позволяет проверить, является ли строка допустимым адресом электронной почты.  
+ Содержит пример, с помощью которого можно проверить, имеет ли строка допустимый формат адреса электронной почты.  
   
 ## <a name="reference"></a>Ссылка  
  <xref:System.Text.RegularExpressions>  

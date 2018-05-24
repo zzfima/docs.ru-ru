@@ -3,12 +3,12 @@ title: Необходимые компоненты для .NET Core в Windows
 description: Узнайте о том, какие зависимости необходимы для разработки и запуска приложений .NET Core на компьютере Windows.
 author: JRAlexander
 ms.author: johalex
-ms.date: 04/24/2018
-ms.openlocfilehash: 7c6f39f004ebc39ca714ce419a38d842fcf8f0cb
-ms.sourcegitcommit: ff1d40507b3eb6e2185478e37c66c66be6de46f1
+ms.date: 05/18/2018
+ms.openlocfilehash: 3d172c83f0a79744afbaeeff52d7fea62d9b98b6
+ms.sourcegitcommit: 895c7602386a6dfe7ca4facce3d965b27e5c6e87
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/11/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="prerequisites-for-net-core-on-windows"></a>Необходимые компоненты для .NET Core в Windows
 
@@ -28,11 +28,13 @@ ms.lasthandoff: 05/11/2018
 * Windows Server 2008 R2 с пакетом обновления 1 (SP1) (полный сервер или основные серверные компоненты)
 * Windows Server 2012 с пакетом обновления 1 (SP1) (полный сервер или основные серверные компоненты)
 * Windows Server 2012 R2 (полный сервер или основные серверные компоненты)
-* Windows Server 2016 (полный сервер, основные серверные компоненты или сервер Nano)
+* Windows Server 2016 или более поздних версий (полный вариант сервера, основные серверные компоненты или сервер Nano)
 
-Полный список операционных систем, поддерживаемых .NET Core 2.x, см. в статье [Версии ОС, поддерживаемые .NET Core 2.x](https://github.com/dotnet/core/blob/master/release-notes/2.0/2.0-supported-os.md).
+В следующих статьях содержится полный список операционных систем с указанием версий, в которых поддерживается .NET Core:
 
-Полный список операционных систем, поддерживаемых .NET Core 1.x, см. в статье [Версии ОС, поддерживаемые .NET Core 1.x](https://github.com/dotnet/core/blob/master/release-notes/1.0/1.0-supported-os.md).
+* [.NET Core 2.1 - Supported OS Versions](https://github.com/dotnet/core/blob/master/release-notes/2.1/2.1-supported-os.md) (.NET Core 2.1 — поддерживаемые версии ОС)
+* [.NET Core 2.0 - Supported OS Versions](https://github.com/dotnet/core/blob/master/release-notes/2.0/2.0-supported-os.md) (.NET Core 2.0 — поддерживаемые версии ОС)
+* [.NET Core 1.x - Supported OS Versions](https://github.com/dotnet/core/blob/master/release-notes/1.0/1.0-supported-os.md) (.NET Core 1.x — поддерживаемые версии ОС)
 
 ## <a name="net-core-dependencies"></a>Зависимости .NET Core
 
@@ -46,7 +48,13 @@ ms.lasthandoff: 05/11/2018
 * установка .NET Core из файла *.zip*, включая серверы сборки/непрерывной интеграции/непрерывного развертывания.
 
 > [!NOTE]
-> *Для Windows 8.1 и более ранних версий или Windows Server 2012 R2 и более ранних версий.* Убедитесь, что установка Windows находится в актуальном состоянии и содержит обновление [ KB2999226](https://support.microsoft.com/en-us/help/2999226/update-for-universal-c-runtime-in-windows), которое можно установить из Центра обновления Windows. Если это обновление не установлено, при запуске приложения .NET Core появится следующая ошибка: `The program can't start because api-ms-win-crt-runtime-1-1-0.dll is missing from your computer. Try reinstalling the program to fix this problem.`
+> **Для Windows 8.1 и более ранних версий или Windows Server 2012 R2 и более ранних версий:**
+>
+> Убедитесь, что установленная версия Windows актуальна и содержит обновление [KB2999226](https://support.microsoft.com/en-us/help/2999226/update-for-universal-c-runtime-in-windows), которое можно установить через Центр обновления Windows. Если это обновление не установлено, при запуске приложения .NET Core появится следующая ошибка: `The program can't start because api-ms-win-crt-runtime-1-1-0.dll is missing from your computer. Try reinstalling the program to fix this problem.`
+>
+> **Для Windows 7 или Windows Server 2008 R2:**
+>
+> Убедитесь, что помимо обновления KB2999226 также установлено обновление [KB2533623](https://support.microsoft.com/en-us/help/2533623/microsoft-security-advisory-insecure-library-loading-could-allow-remot). Если это обновление не установлено, при запуске приложения .NET Core появится примерно следующая ошибка: `The library hostfxr.dll was found, but loading it from C:\<path_to_app>\hostfxr.dll failed`.
 
 ## <a name="prerequisites-with-visual-studio-2017"></a>Необходимые компоненты для Visual Studio 2017
 
@@ -96,6 +104,6 @@ ms.lasthandoff: 05/11/2018
 >
 > * В меню **Справка** выберите пункт **О программе Microsoft Visual Studio**.
 > * В диалоговом окне **О программе Microsoft Visual Studio** проверьте номер версии.
->   * Для приложений .NET Core 2.1, предварительная версия 1 — Visual Studio 2017 версии 15.6, предварительная версия 6 или более поздняя.
+>   * Для приложений .NET Core 2.1 RC — Visual Studio 2017 версии 15.7 или более поздней версии.
 >   * Для приложений .NET Core 2.0 — Visual Studio 2017 версии 15.3 или более поздняя версия.
 >   * Для приложений .NET Core 1.x — Visual Studio 2017 версии 15.0 или более поздняя версия.

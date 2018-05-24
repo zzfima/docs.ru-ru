@@ -231,8 +231,8 @@
 ### [Кортежи](csharp/tuples.md)
 ### [Деконструкция кортежей и других типов](csharp/deconstruct.md)
 ### [Интерфейсы](csharp/programming-guide/interfaces/index.md)
-#### [Методы](csharp/methods.md)
-#### [Лямбда-выражения](csharp/lambda-expressions.md)
+### [Методы](csharp/methods.md)
+### [Лямбда-выражения](csharp/lambda-expressions.md)
 ### [Свойства](csharp/properties.md)
 ### [Индексаторы](csharp/indexers.md)
 ### [Операции удаления](csharp/discards.md)
@@ -287,7 +287,7 @@
 ### [Начало работы с интерфейсом командной строки .NET Core](fsharp/get-started/get-started-command-line.md)
 
 ## [Руководство по стилю для F#](fsharp/style-guide/index.md)
-### [Рекомендации по форматированию F#](fsharp/style-guide/formatting.md)
+### [Рекомендации по форматированию кода F#](fsharp/style-guide/formatting.md)
 ### [Соглашения о написании кода на F#](fsharp/style-guide/conventions.md)
 ### [Рекомендации по проектированию компонентов F#](fsharp/style-guide/component-design-guidelines.md)
 

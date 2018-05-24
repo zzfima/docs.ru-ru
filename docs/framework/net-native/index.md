@@ -10,11 +10,11 @@ helpviewer_keywords:
 ms.assetid: 47cd5648-9469-4b1d-804c-43cc04384045
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1ecc707bb07d6d17ae4115b483cc8f52083f3933
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6900bca2bd94f52ea5603c752681163cde52ce19
+ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="compiling-apps-with-net-native"></a>Компиляция приложений с помощью машинного кода .NET
 [!INCLUDE[net_native](../../../includes/net-native-md.md)] Технология предварительной компиляции для построения и развертывания приложений Windows, входит в состав Visual Studio 2015 и более поздних версиях. Она автоматически компилирует окончательные версии приложений, написанных в форме управляемого кода (C# или Visual Basic) и предназначенных для .NET Framework и Windows 10, в машинный код.  
@@ -78,7 +78,4 @@ ms.lasthandoff: 05/04/2018
   
 -   [Миграция приложения для Магазина Windows в .NET Native](../../../docs/framework/net-native/migrating-your-windows-store-app-to-net-native.md)  
   
--   [.NET Native. Устранение общих неполадок](../../../docs/framework/net-native/net-native-general-troubleshooting.md)  
-  
-## <a name="see-also"></a>См. также  
- [Вопросы и ответы по .NET Native](http://msdn.microsoft.com/vstudio/dn642499.aspx)
+-   [.NET Native. Устранение общих неполадок](../../../docs/framework/net-native/net-native-general-troubleshooting.md)

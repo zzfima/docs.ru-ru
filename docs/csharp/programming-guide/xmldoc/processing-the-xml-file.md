@@ -5,11 +5,11 @@ helpviewer_keywords:
 - XML processing [C#]
 - XML [C#], processing
 ms.assetid: 60c71193-9dac-4cd3-98c5-100bd0edcc42
-ms.openlocfilehash: b95101d2f8e12f7c6fee5b410e7801f9d890182d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ca70f0c8237a5d9cc4ad9e0bb8c1947c871ce064
+ms.sourcegitcommit: 895c7602386a6dfe7ca4facce3d965b27e5c6e87
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="processing-the-xml-file-c-programming-guide"></a>Обработка XML-файла (руководство по программированию на C#)
 Компилятор создает строку идентификатора для каждой конструкции в коде, помеченной для создания документации. Дополнительные сведения о разметке кода см. в статье [Рекомендуемые теги для комментариев документации](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md). Строка идентификатора однозначно определяет конструкцию. Программы, обрабатывающие этот XML-файл, могут с помощью строки идентификатора определить, какому элементу метаданных или отражения .NET Framework соответствует эта документация.  
@@ -42,7 +42,7 @@ ms.lasthandoff: 05/04/2018
   
     -   ELEMENT_TYPE_PTR представляется как "*" после имени измененного типа.  
   
-    -   ELEMENT_TYPE_BYREF представляется как "@" после имени измененного типа.  
+    -   ELEMENT_TYPE_BYREF представляется как '\@' после имени измененного типа.  
   
     -   ELEMENT_TYPE_PINNED представляется как "^" после имени измененного типа. Компилятор C# никогда не создает такой текст.  
   
