@@ -1,13 +1,6 @@
 ---
-title: "Примеры вызовов неуправляемого кода"
-ms.custom: 
+title: Примеры вызовов неуправляемого кода
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -20,27 +13,24 @@ helpviewer_keywords:
 - interoperation with unmanaged code, platform invoke
 - DLL functions
 ms.assetid: 15926806-f0b7-487e-93a6-4e9367ec689f
-caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 1a4533aa1cef5d400fff0c8d3169b0b1edc22eab
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 330d8ff784218483caf153b5c14f8a30df2d2452
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="platform-invoke-examples"></a><span data-ttu-id="89f0b-102">Примеры вызовов неуправляемого кода</span><span class="sxs-lookup"><span data-stu-id="89f0b-102">Platform Invoke Examples</span></span>
-<span data-ttu-id="89f0b-103">В следующих примерах демонстрируется, как определить и вызвать функцию **MessageBox** в User32.dll, передав в качестве аргумента простую строку.</span><span class="sxs-lookup"><span data-stu-id="89f0b-103">The following examples demonstrate how to define and call the **MessageBox** function in User32.dll, passing a simple string as an argument.</span></span> <span data-ttu-id="89f0b-104">В этом примере полю <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=nameWithType> присваивается значение **Автоматически**, благодаря чему целевая платформа определяет ширину символа и параметры маршалинга строк.</span><span class="sxs-lookup"><span data-stu-id="89f0b-104">In the examples, the <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=nameWithType> field is set to **Auto** to let the target platform determine the character width and string marshaling.</span></span>  
+# <a name="platform-invoke-examples"></a><span data-ttu-id="fee72-102">Примеры вызовов неуправляемого кода</span><span class="sxs-lookup"><span data-stu-id="fee72-102">Platform Invoke Examples</span></span>
+<span data-ttu-id="fee72-103">В следующих примерах демонстрируется, как определить и вызвать функцию **MessageBox** в User32.dll, передав в качестве аргумента простую строку.</span><span class="sxs-lookup"><span data-stu-id="fee72-103">The following examples demonstrate how to define and call the **MessageBox** function in User32.dll, passing a simple string as an argument.</span></span> <span data-ttu-id="fee72-104">В этом примере полю <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=nameWithType> присваивается значение **Автоматически**, благодаря чему целевая платформа определяет ширину символа и параметры маршалинга строк.</span><span class="sxs-lookup"><span data-stu-id="fee72-104">In the examples, the <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=nameWithType> field is set to **Auto** to let the target platform determine the character width and string marshaling.</span></span>  
   
  [!code-cpp[Conceptual.Interop.PInvoke#1](../../../samples/snippets/cpp/VS_Snippets_CLR/Conceptual.Interop.PInvoke/cpp/Example.cpp#1)] 
  [!code-csharp[Conceptual.Interop.PInvoke#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Conceptual.Interop.PInvoke/cs/Example1.cs#1)] 
  [!code-vb[Conceptual.Interop.PInvoke#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Conceptual.Interop.PInvoke/vb/Example1.vb#1)]  
   
- <span data-ttu-id="89f0b-105">Дополнительные примеры см. в разделе [Маршалинг данных при вызове неуправляемого кода](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md).</span><span class="sxs-lookup"><span data-stu-id="89f0b-105">For additional examples, see [Marshaling Data with Platform Invoke](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md).</span></span>  
+ <span data-ttu-id="fee72-105">Дополнительные примеры см. в разделе [Маршалинг данных при вызове неуправляемого кода](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md).</span><span class="sxs-lookup"><span data-stu-id="fee72-105">For additional examples, see [Marshaling Data with Platform Invoke](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="89f0b-106">См. также</span><span class="sxs-lookup"><span data-stu-id="89f0b-106">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="fee72-106">См. также</span><span class="sxs-lookup"><span data-stu-id="fee72-106">See Also</span></span>  
  <xref:System.Runtime.InteropServices.DllImportAttribute>  
- [<span data-ttu-id="89f0b-107">Создание прототипов в управляемом коде</span><span class="sxs-lookup"><span data-stu-id="89f0b-107">Creating Prototypes in Managed Code</span></span>](../../../docs/framework/interop/creating-prototypes-in-managed-code.md)  
- [<span data-ttu-id="89f0b-108">Определение кодировки</span><span class="sxs-lookup"><span data-stu-id="89f0b-108">Specifying a Character Set</span></span>](../../../docs/framework/interop/specifying-a-character-set.md)
+ [<span data-ttu-id="fee72-107">Создание прототипов в управляемом коде</span><span class="sxs-lookup"><span data-stu-id="fee72-107">Creating Prototypes in Managed Code</span></span>](../../../docs/framework/interop/creating-prototypes-in-managed-code.md)  
+ [<span data-ttu-id="fee72-108">Определение кодировки</span><span class="sxs-lookup"><span data-stu-id="fee72-108">Specifying a Character Set</span></span>](../../../docs/framework/interop/specifying-a-character-set.md)
