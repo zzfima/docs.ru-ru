@@ -6,11 +6,11 @@ helpviewer_keywords:
 - type constraints [C#]
 - type parameters [C#], constraints
 - unbound type parameter [C#]
-ms.openlocfilehash: 1d6487f4136b5a3f8bfc2e1721ae268e06f5ba98
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b5ad639309238912aa27b58c95466b4f37052699
+ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="constraints-on-type-parameters-c-programming-guide"></a>Ограничения параметров типа (руководство по программированию на C#)
 
@@ -18,7 +18,7 @@ ms.lasthandoff: 05/04/2018
 
 |Ограничение|Описание:|
 |----------------|-----------------|
-|`where T: struct`|Аргумент типа должен быть типом значения. Допускается задание любого типа значения, кроме <xref:System.Nullable>. Дополнительные сведения см. в разделе [Использование допускающих значение NULL типов](../nullable-types/using-nullable-types.md).|
+|`where T : struct`|Аргумент типа должен быть типом значения. Допускается задание любого типа значения, кроме <xref:System.Nullable>. Дополнительные сведения см. в разделе [Использование допускающих значение NULL типов](../nullable-types/using-nullable-types.md).|
 |`where T : class`|Аргумент типа должен быть ссылочным типом. Это ограничение также применяется к любому типу класса, интерфейса, делегата или массива.|
 |`where T : unmanaged`|Аргумент типа не может быть ссылочным типом и содержать члены ссылочного типа на любом уровне вложения.|
 |`where T : new()`|Аргумент типа должен иметь общий конструктор без параметров. При одновременном использовании нескольких ограничений последним должно указываться ограничение `new()`.|

@@ -6,11 +6,11 @@ helpviewer_keywords:
 - C# language, operators
 - operators [C#], about operators
 ms.assetid: 214e7b83-1a41-4f7c-9867-64e9c0bab39f
-ms.openlocfilehash: d2eace5782b3a070a22acf751fd68340fa939a0b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 76371985e340945793310247ec48d9b0cb747aed
+ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="operators-c-programming-guide"></a>Операторы (Руководство по программированию на C#)
 В языке C# *оператор* — это элемент программы, который применяется для одного или нескольких *операндов* в выражении или инструкции. Операторы, в которых используется один операнд, например оператор инкремента (`++`) или `new`, называются *унарными* . Операторы, в которых используются два операнда, например арифметические операторы (`+`,`-`,`*`,`/`), называются *бинарными* . Для одного оператора — условного (`?:`) — используются три операнда, и такой оператор является единственным троичным оператором в C#.  
@@ -114,7 +114,7 @@ ms.lasthandoff: 05/04/2018
 |Логическое ИЛИ|x [&#124;](../../../csharp/language-reference/operators/or-operator.md) y|Поразрядное ИЛИ для операндов целочисленного типа, логическое ИЛИ для операндов логического типа|  
 |Условное И|x [&&](../../../csharp/language-reference/operators/conditional-and-operator.md) y|Равно y, только если x имеет значение true|  
 |Условное ИЛИ|x [&#124;&#124;](../../../csharp/language-reference/operators/conditional-or-operator.md) y|Равно y, только если x имеет значение false|  
-|Объединение со значением NULL|x [??](../../../csharp/language-reference/operators/null-conditional-operator.md) Y|Равно y, если x имеет значение NULL, в противном случае равно x|  
+|Объединение со значением NULL|x [??](../../../csharp/language-reference/operators/null-coalescing-operator.md) Y|Равно y, если x имеет значение NULL, в противном случае равно x|  
 |Условие|x [?](../../../csharp/language-reference/operators/conditional-operator.md) y : z|Равно y, если x имеет значение true, и z, если x имеет значение false|  
   
  **Операторы присваивания и анонимные операторы**  
