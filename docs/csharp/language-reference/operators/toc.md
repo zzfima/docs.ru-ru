@@ -39,5 +39,5 @@
 ## [Оператор <<=](left-shift-assignment-operator.md)
 ## [Оператор >>=](right-shift-assignment-operator.md)
 ## [Оператор ->](dereference-operator.md)
-## [?? Оператор](null-conditional-operator.md)
+## [?? Оператор](null-coalescing-operator.md)
 ## [Оператор =>](lambda-operator.md)
