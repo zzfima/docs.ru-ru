@@ -2,11 +2,11 @@
 title: Модули (F#)
 description: 'Узнайте, как модуль F # — это группирование кода F #, например значений, типов и значений функций, в программе F #.'
 ms.date: 04/24/2017
-ms.openlocfilehash: ddb6a0762171f8acc94f0ba0cf29c4b6b3e4990e
-ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
+ms.openlocfilehash: 9a1416321e392f7a06551b4a7e3429e3a2d023bd
+ms.sourcegitcommit: b7763f3435635850a76d4cbcf09bdce6c019208a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 05/25/2018
 ---
 # <a name="modules"></a>Модули
 
@@ -131,6 +131,6 @@ module rec RecursiveModule =
 
 ## <a name="see-also"></a>См. также
 
-[Справочник по языку F #](index.md)
-[пространства имен](namespaces.md)
-[F # 1009-FS RFC - разрешить взаимно ссылочные типы и модули через большего пространства в файлах](https://github.com/fsharp/fslang-design/blob/master/FSharp-4.1/FS-1009-mutually-referential-types-and-modules-single-scope.md)
+[Справочник по языку F#](index.md)  
+[Пространства имен](namespaces.md)  
+[F # RFC FS-1009 - разрешить взаимно ссылочные типы и модули через большего пространства в файлах](https://github.com/fsharp/fslang-design/blob/master/FSharp-4.1/FS-1009-mutually-referential-types-and-modules-single-scope.md)  
