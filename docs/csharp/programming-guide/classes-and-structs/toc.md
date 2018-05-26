@@ -47,7 +47,6 @@
 ## [Инициализаторы объектов и коллекций](object-and-collection-initializers.md)
 ### [Практическое руководство. Инициализация объектов с помощью инициализатора объектов](how-to-initialize-objects-by-using-an-object-initializer.md)
 ### [Практическое руководство. Инициализация словаря с помощью инициализатора коллекций](how-to-initialize-a-dictionary-with-a-collection-initializer.md)
-## [Практическое руководство. Доступ к классу коллекции с помощью оператора foreach](how-to-access-a-collection-class-with-foreach.md)
 ## [Вложенные типы](nested-types.md)
 ## [Разделяемые классы и методы](partial-classes-and-methods.md)
 ## [Анонимные типы](anonymous-types.md)
