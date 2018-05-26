@@ -2,11 +2,11 @@
 title: Записи (F#)
 description: 'Узнайте, как записи F # представляют простые агрегаты именованных значений, Дополнительно с членами.'
 ms.date: 05/16/2016
-ms.openlocfilehash: 5bd1f76937bf5839b7da5cae7dea578747ec9b99
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ffb853ee11ff8cacb45dadf6ef14a4f29400aad4
+ms.sourcegitcommit: 54231aa56fca059e9297888a96fbca1d4cf3746c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/25/2018
 ---
 # <a name="records"></a>Записи
 
@@ -16,15 +16,15 @@ ms.lasthandoff: 05/04/2018
 
 ```fsharp
 [ attributes ]
-type [accessibility-modifier] typename = {
-    [ mutable ] label1 : type1;
-    [ mutable ] label2 : type2;
-    ...
-}
+type [accessibility-modifier] typename =
+    { [ mutable ] label1 : type1;
+      [ mutable ] label2 : type2;
+      ... }
     [ member-list ]
 ```
 
 ## <a name="remarks"></a>Примечания
+
 В предыдущем синтаксисе *typename* — имя типа записи *label1* и *label2* — это имена значений, называют *метки*, и *тип1* и *тип2* типы из следующих значений. *Список членов* — необязательный список членов для типа.  Можно использовать `[<Struct>]` атрибут для создания записи структуры, а не запись, которая является ссылочным типом.
 
 Ниже приведены некоторые примеры.
@@ -48,6 +48,7 @@ type [accessibility-modifier] typename = {
 Методы могут определяться для типов записей, как и в случае типов класса.
 
 ## <a name="creating-records-by-using-record-expressions"></a>Создание записей с помощью выражений записей
+
 Записи можно инициализировать с помощью меток, которые определены в записи. Выражение, которое делает это называется *записать выражение*. Используйте фигурные скобки заключите выражения записи и используют в качестве разделителя точку с запятой.
 
 В следующем примере показано, как создать запись.
@@ -77,20 +78,19 @@ type [accessibility-modifier] typename = {
 ```fsharp
 // Rather than use [<DefaultValue>], define a default record.
 type MyRecord =
-{
-    field1 : int
-    field2 : int
-}
+    { Field1 : int
+      Field2 : int }
 
-let defaultRecord1 = { field1 = 0; field2 = 0 }
-let defaultRecord2 = { field1 = 1; field2 = 25 }
+let defaultRecord1 = { Field1 = 0; Field2 = 0 }
+let defaultRecord2 = { Field1 = 1; Field2 = 25 }
 
 // Use the with keyword to populate only a few chosen fields
 // and leave the rest with default values.
-let rr3 = { defaultRecord1 with field2 = 42 }
+let rr3 = { defaultRecord1 with Field2 = 42 }
 ```
 
 ## <a name="pattern-matching-with-records"></a>Соответствие шаблону с записями
+
 Записи можно использовать с сопоставлением шаблонов. Можно явно задать некоторые поля и указать переменные, значения для других полей, которые будут назначены при совпадении. Это показано в следующем примере кода.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1910.fs)]
@@ -104,17 +104,25 @@ Point is at (10.000000, 0.000000, -1.000000).
 ```
 
 ## <a name="differences-between-records-and-classes"></a>Различия между записями и классами
+
 Поля записей отличаются от классов в том, что они автоматически представляются как свойства, и они используются при создании и копировании записей. Построение записей также отличается от создания класса. В типе записи нельзя определить конструктор. Вместо этого применяется синтаксис конструкции, описанный в этом разделе. Классы не имеют прямых связей между параметрами конструктора, поля и свойства.
 
 Как типы объединения и структуры записи обладают семантикой структурного равенства. Классы имеют ссылки семантику равенства. Это действие представлено в следующем примере кода:
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1911.fs)]
 
+Результат выполнения этого кода выглядит следующим образом:
+
+```
+The records are equal.
+```
+
 При написании один и тот же код с классами, два объекта класса будут равны, так как два значения будут представлять два объекта в куче и будут сравниваться только адреса (если тип класса не переопределяет `System.Object.Equals` метода).
 
 Если требуется сослаться равенства для записей, добавьте атрибут `[<ReferenceEquality>]` выше записи.
 
 ## <a name="see-also"></a>См. также
+
 [Типы языка F#](fsharp-types.md)
 
 [Классы](classes.md)
