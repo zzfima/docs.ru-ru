@@ -2,11 +2,11 @@
 title: Статьи с практическими руководствами (руководств по языку C#)
 description: Коллекция советов и кратких конкретных примеров кода
 ms.date: 12/20/2017
-ms.openlocfilehash: b8164abd84647fc9118acc6e0b84e7fd46838fe9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 209af8858de1a791997d254f5a2ddd5dd1803bff
+ms.sourcegitcommit: 54231aa56fca059e9297888a96fbca1d4cf3746c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/25/2018
 ---
 # <a name="how-to-c"></a>Практическое руководство (C#)
 
@@ -43,9 +43,8 @@ ms.lasthandoff: 05/04/2018
 Следующие статьи содержат сведения о работе с коллекциями данных.
 
 - [Инициализация словаря с помощью инициализатора коллекций](../programming-guide/classes-and-structs/how-to-initialize-a-dictionary-with-a-collection-initializer.md).
-- [Доступ ко всем элементам в коллекции с помощью `foreach`](../programming-guide/classes-and-structs/how-to-access-a-collection-class-with-foreach.md).
 
-## <a name="strings"></a>strings
+## <a name="working-with-strings"></a>Работа со строками
 
 Строки являются основным типом данных, используемым для отображения текста или работы с ним. В этих статьях приводятся распространенные варианты использования строк.
 

@@ -2,11 +2,11 @@
 title: Коллекции (C#)
 ms.date: 07/20/2015
 ms.assetid: 317d7dc3-8587-4873-8b3e-556f86497939
-ms.openlocfilehash: 85cbabf74a702a4d6442a29c3cf3d7b726ab38da
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7400d4eee4df99cb1e255e428f83028fddf481f4
+ms.sourcegitcommit: 54231aa56fca059e9297888a96fbca1d4cf3746c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/25/2018
 ---
 # <a name="collections-c"></a>Коллекции (C#)
 Во многих приложениях требуется создавать группы связанных объектов и управлять ими. Существует два способа группировки объектов: создать массив объектов и создать коллекцию.  
@@ -460,7 +460,7 @@ public class Car : IComparable<Car>
   
 <a name="BKMK_CustomCollection"></a>
 ## <a name="defining-a-custom-collection"></a>Определение настраиваемой коллекции  
- Вы можете определить коллекцию, реализовав интерфейс <xref:System.Collections.Generic.IEnumerable%601> или <xref:System.Collections.IEnumerable>. Дополнительные сведения см. в разделе [Практическое руководство. Доступ к классу коллекции с помощью оператора foreach](../../../csharp/programming-guide/classes-and-structs/how-to-access-a-collection-class-with-foreach.md).  
+ Вы можете определить коллекцию, реализовав интерфейс <xref:System.Collections.Generic.IEnumerable%601> или <xref:System.Collections.IEnumerable>.  
   
  Хотя можно определить настраиваемую коллекцию, обычно лучше использовать коллекции, входящие в .NET Framework, которые описаны в подразделе [Виды коллекций](#BKMK_KindsOfCollections) ранее в этом разделе.  
   
@@ -585,4 +585,3 @@ private static IEnumerable<int> EvenSequence(
  [Выбор класса коллекции](../../../standard/collections/selecting-a-collection-class.md)  
  [Сравнение и сортировка в коллекциях](../../../standard/collections/comparisons-and-sorts-within-collections.md)  
  [Когда следует использовать универсальные коллекции](../../../standard/collections/when-to-use-generic-collections.md)  
- [Практическое руководство. Доступ к классу коллекции с помощью оператора foreach](../../../csharp/programming-guide/classes-and-structs/how-to-access-a-collection-class-with-foreach.md)

@@ -3,11 +3,11 @@ title: Микрослужбы, размещенные в Docker. Язык C#
 description: Узнайте, как создать службы ASP.NET Core, выполняемые в контейнерах Docker
 ms.date: 02/03/2017
 ms.assetid: 87e93838-a363-4813-b859-7356023d98ed
-ms.openlocfilehash: eacfa87e465e5f7737dbd2bfc4c6a77ffc5531c3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7428051c1d9a29ba98ca1f28288b3c50ea36ae1a
+ms.sourcegitcommit: 54231aa56fca059e9297888a96fbca1d4cf3746c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/25/2018
 ---
 # <a name="microservices-hosted-in-docker"></a>Микрослужбы, размещенные в Docker
 
@@ -237,7 +237,7 @@ WORKDIR /app
 
 # copy csproj and restore as distinct layers
 
-COPY WeatherMicroservice.csproj .
+COPY WeatherMicroService.csproj .
 RUN dotnet restore 
 
 # copy and build everything else
@@ -255,7 +255,7 @@ RUN dotnet publish -c Release -o out
 Последняя строка этого файла запускает наше приложение:
 
 ```
-ENTRYPOINT ["dotnet", "out/WeatherMicroservice.dll", "--server.urls", "http://0.0.0.0:5000"]
+ENTRYPOINT ["dotnet", "out/WeatherMicroService.dll", "--server.urls", "http://0.0.0.0:5000"]
 ```
 
 Настроенный здесь порт используется в аргументе `--server.urls` команды `dotnet`, которая находится в последней строке файла Dockerfile. Команда `ENTRYPOINT` сообщает Docker, какие команды и параметры командной строки нужно использовать для запуска службы. 
