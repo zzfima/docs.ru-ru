@@ -13,18 +13,19 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: baa5b9f250fe7117838f936b09b050ba500b7209
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33389048"
 ---
 # <a name="qualifying-net-types-for-interoperation"></a>Уточнение типов .NET для взаимодействия
 Если вы планируете предоставлять типы в сборке COM-приложениям, во время разработки необходимо учитывать требования COM-взаимодействия. Управляемые типы (класс, интерфейс, структура и перечисление) легко интегрируются с COM-типами, если следовать приведенным ниже рекомендациям:  
   
 -   Классы должны явным образом реализовывать интерфейсы.  
   
-     Несмотря на то, что COM-взаимодействие предоставляет механизм для автоматического создания интерфейса, содержащего все члены класса и члены его базового класса, гораздо эффективнее предоставлять явные интерфейсы. Автоматически создаваемый интерфейс называется интерфейсом класса. Рекомендации см. в разделе [введение в интерфейс класса](com-callable-wrapper.md#introducing-the-class-interface).  
+     Несмотря на то, что COM-взаимодействие предоставляет механизм для автоматического создания интерфейса, содержащего все члены класса и члены его базового класса, гораздо эффективнее предоставлять явные интерфейсы. Автоматически создаваемый интерфейс называется интерфейсом класса. См. рекомендации в разделе [Introducing the class interface](com-callable-wrapper.md#introducing-the-class-interface) (Введение в интерфейс класса).  
   
-     Visual Basic, C# и C++ можно использовать для включения определений интерфейса в коде, вместо того чтобы использовать языка определения интерфейса (IDL) или его эквивалент. Дополнительные сведения о синтаксисе см. в документации по соответствующему языку.  
+     В Visual Basic, C# и C++ можно внедрять определения интерфейса в код вместо использования языка IDL или его эквивалента. Дополнительные сведения о синтаксисе см. в документации по соответствующему языку.  
   
 -   Управляемые типы должны быть открытыми.  
   
@@ -49,6 +50,6 @@ ms.lasthandoff: 05/04/2018
 ## <a name="see-also"></a>См. также  
  <xref:System.Runtime.InteropServices.ComVisibleAttribute>  
  [Предоставление компонентов .NET Framework клиентам COM](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)  
- [Введение в интерфейс класса](com-callable-wrapper.md#introducing-the-class-interface)  
+ [Introducing the class interface](com-callable-wrapper.md#introducing-the-class-interface) (Введение в интерфейс класса)  
  [Применение атрибутов взаимодействия](../../../docs/framework/interop/applying-interop-attributes.md)  
  [Упаковка сборки для модели COM](../../../docs/framework/interop/packaging-an-assembly-for-com.md)

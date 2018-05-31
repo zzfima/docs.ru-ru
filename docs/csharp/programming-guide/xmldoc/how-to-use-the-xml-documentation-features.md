@@ -5,69 +5,73 @@ helpviewer_keywords:
 - XML documentation [C#]
 - C# language, XML documentation features
 ms.assetid: 8f33917b-9577-4c9a-818a-640dbbb0b399
-ms.openlocfilehash: 6c7e30d23868959145e8941057f1c633fe6e374e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d7f1f51040033cf25f7f1aefb04d249e6e028ca3
+ms.sourcegitcommit: 77d9a94dac4c05827ed0663d95e0f9ad35d6682e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/24/2018
+ms.locfileid: "34472780"
 ---
 # <a name="how-to-use-the-xml-documentation-features-c-programming-guide"></a>Практическое руководство. Использование XML-документации (Руководство по программированию в C#)
 В данном примере представлены основные общие сведения о задокументированном типе.  
   
 ## <a name="example"></a>Пример  
  [!code-csharp[csProgGuideDocComments#15](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/how-to-use-the-xml-documentation-features_1.cs)]  
-  
- **// Этот XML-файл был создан в предыдущем образце кода.**  
-**\<?xml version="1.0"?>**  
-**\<doc>**  
- **\<assembly>**  
- **\<name>xmlsample\</name>**  
- **\</assembly>**  
- **\<members>**  
- **\<member name="T:SomeClass">**  
- **\<summary>**  
- **Здесь сводная документация об уровне класса.\</summary>**  
- **\<remarks>**  
- **Расширенные комментарии можно связать с типом или членом**  
- **при помощи тега remarks\</remarks>**  
- **\</member>**  
- **\<member name="F:SomeClass.m_Name">**  
- **\<summary>**  
- **Хранилище для свойства name\</summary>**  
- **\</member>**  
- **\<member name="M:SomeClass.#ctor">**  
- **\<summary>Конструктор класса.\</summary>**  
- **\</member>**  
- **\<member name="M:SomeClass.SomeMethod(System.String)">**  
- **\<summary>**  
- **Описание метода SomeMethod.\</summary>**  
- **\<param name="s"> Здесь описание параметра s\</param>**  
- **\<seealso cref="T:System.String">**  
- **Атрибут cref можно использовать в любом теге для ссылки на тип или член**  
- **и тогда компилятор проверит существование ссылки. \</seealso>**  
- **\</member>**  
- **\<member name="M:SomeClass.SomeOtherMethod">**  
- **\<summary>**  
- **Какой-либо другой метод. \</summary>**  
- **\<returns>**  
- **Возврат результатов, описанных при помощи тега returns.\</returns>**  
- **\<seealso cref="M:SomeClass.SomeMethod(System.String)">**  
- **Обратите внимание, что атрибут cref используется для ссылки на указанный метод \</seealso>**  
- **\</member>**  
- **\<member name="M:SomeClass.Main(System.String[])">**  
- **\<summary>**  
- **Точка входа для приложения.**  
- **\</summary>**  
- **\<param name="args"> Список аргументов командной строки\</param>**  
- **\</member>**  
- **\<member name="P:SomeClass.Name">**  
- **\<summary>**  
- **Свойство Name \</summary>**  
- **\<value>**  
- **Тег value используется для описания значения свойства\</value>**  
- **\</member>**  
- **\</members>**  
-**\</doc>**   
+
+В примере создается XML-файл со следующим содержимым:
+
+```xml  
+<?xml version="1.0"?>  
+<doc>  
+ <assembly>  
+ <name>xmlsample</name>  
+ </assembly>  
+ <members>  
+ <member name="T:SomeClass">  
+ <summary>  
+ Class level summary documentation goes here.</summary>  
+ <remarks>  
+ Longer comments can be associated with a type or member  
+ through the remarks tag</remarks>  
+ </member>  
+ <member name="F:SomeClass.m_Name">  
+ <summary>  
+ Store for the name property</summary>  
+ </member>  
+ <member name="M:SomeClass.#ctor">  
+ <summary>The class constructor.</summary>  
+ </member>  
+ <member name="M:SomeClass.SomeMethod(System.String)">  
+ <summary>  
+ Description for SomeMethod.</summary>  
+ <param name="s"> Parameter description for s goes here</param>  
+ <seealso cref="T:System.String">  
+ You can use the cref attribute on any tag to reference a type or member  
+ and the compiler will check that the reference exists. </seealso>  
+ </member>  
+ <member name="M:SomeClass.SomeOtherMethod">  
+ <summary>  
+ Some other method. </summary>  
+ <returns>  
+ Return results are described through the returns tag.</returns>  
+ <seealso cref="M:SomeClass.SomeMethod(System.String)">  
+ Notice the use of the cref attribute to reference a specific method </seealso>  
+ </member>  
+ <member name="M:SomeClass.Main(System.String[])">  
+ <summary>  
+ The entry point for the application.  
+ </summary>  
+ <param name="args"> A list of command line arguments</param>  
+ </member>  
+ <member name="P:SomeClass.Name">  
+ <summary>  
+ Name property </summary>  
+ <value>A value tag is used to describe the property value</value>  
+ </member>  
+ </members>  
+</doc>   
+```
+
 ## <a name="compiling-the-code"></a>Компиляция кода  
  Чтобы скомпилировать этот пример, введите в командной строке:  
   
@@ -80,7 +84,7 @@ ms.lasthandoff: 05/04/2018
   
 -   Документация должна представлять собой XML с правильным форматом. Если формат XML неверен, то выдается предупреждение и файл документации содержит комментарий о том, что произошла ошибка.  
   
--   Разработчики могут создавать собственные наборы тегов. Однако существует рекомендуемый набор тегов (см. раздел "См. также" в данной теме). Некоторые рекомендуемые теги имеют особые значения.  
+-   Разработчики могут создавать собственные наборы тегов. Существует рекомендуемый набор тегов (см. статью о [рекомендуемых тегах для комментариев документации](recommended-tags-for-documentation-comments.md)). Некоторые рекомендуемые теги имеют особые значения.  
   
     -   Тег \<param> используется для описания параметров. При использовании этого тега компилятор проверяет, что параметр существует и все параметры описаны в документации. При сбое проверки компилятор выдает предупреждение.  
   

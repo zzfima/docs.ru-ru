@@ -12,9 +12,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 94377fb2079689e7b6af2c94fa24ca2214a5c729
 ms.sourcegitcommit: 895c7602386a6dfe7ca4facce3d965b27e5c6e87
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/19/2018
+ms.locfileid: "34312187"
 ---
 # <a name="default-marshaling-for-objects"></a>Маршалинг по умолчанию для объектов
 Параметры и поля, типизированные как <xref:System.Object?displayProperty=nameWithType>, могут предоставляться в неуправляемый код в виде одного из следующих типов:  
@@ -332,5 +333,5 @@ mo.SetVariant(new CurrencyWrapper(new Decimal(5.25)));
 ## <a name="see-also"></a>См. также  
  [Характеристики маршалинга по умолчанию](default-marshaling-behavior.md)  
  [Преобразуемые и непреобразуемые типы](blittable-and-non-blittable-types.md)  
- [Атрибуты направления](https://msdn.microsoft.com/library/241ac5b5-928e-4969-8f58-1dbc048f9ea2(v=vs.100))  
+ [Directional Attributes](https://msdn.microsoft.com/library/241ac5b5-928e-4969-8f58-1dbc048f9ea2(v=vs.100)) (Атрибуты направления)  
  [Копирование и закрепление](copying-and-pinning.md)

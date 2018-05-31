@@ -13,9 +13,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f3c4d38b60f349f0ecb87204cb980dd6681a8cc9
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33388704"
 ---
 # <a name="msgbox-sample"></a>Пример MsgBox
 В этом примере демонстрируется, как передавать строковые типы по значению в качестве параметров ввода и когда следует использовать поля <xref:System.Runtime.InteropServices.DllImportAttribute.EntryPoint>, <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet> и <xref:System.Runtime.InteropServices.DllImportAttribute.ExactSpelling>.  
@@ -45,7 +46,7 @@ ms.lasthandoff: 05/04/2018
   
 ## <a name="see-also"></a>См. также  
  [Mаршалинг строк](marshaling-strings.md)  
- [Типы данных вызовов неуправляемого кода](https://msdn.microsoft.com/library/16014d9f-d6bd-481e-83f0-df11377c550f(v=vs.100))  
+ [Типы данных в вызове неуправляемого кода](https://msdn.microsoft.com/library/16014d9f-d6bd-481e-83f0-df11377c550f(v=vs.100))  
  [Маршалинг по умолчанию для строк](default-marshaling-for-strings.md)  
  [Создание прототипов в управляемом коде](creating-prototypes-in-managed-code.md)  
  [Определение кодировки](specifying-a-character-set.md)

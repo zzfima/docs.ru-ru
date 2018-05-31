@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 89479ca4a41f761d4aacaf6d8d962bfba62be811
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33393420"
 ---
 # <a name="importing-a-type-library-as-an-assembly"></a>Импорт библиотеки типов в виде сборки
 Определения COM-типов обычно хранятся в библиотеке типов. С другой стороны, CLS-совместимые компиляторы создают в сборке метаданные типов. Эти два источника сведений о типах заметно отличаются. В этом разделе описываются способы создания метаданных из библиотеки типов. Результирующая сборка и называется сборкой взаимодействия, а содержащиеся в ней сведения о типах позволяют приложениям .NET Framework использовать COM-типы.  
@@ -74,8 +75,8 @@ ms.lasthandoff: 05/04/2018
  [Предоставление COM-компонентов платформе .NET Framework](../../../docs/framework/interop/exposing-com-components.md)  
  [Общие сведения о преобразовании библиотеки типов в сборку](https://msdn.microsoft.com/library/bf3f90c5-4770-4ab8-895c-3ba1055cc958(v=vs.100))  
  [Tlbimp.exe (программа экспорта библиотек типов)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md)  
- [Настройка стандартных оболочек](https://msdn.microsoft.com/library/c40d089b-6a3c-41b5-a20d-d760c215e49d(v=vs.100))  
- [Использование типов COM в управляемом коде](https://msdn.microsoft.com/library/1a95a8ca-c8b8-4464-90b0-5ee1a1135b66(v=vs.100))  
+ [Customizing Standard Wrappers](https://msdn.microsoft.com/library/c40d089b-6a3c-41b5-a20d-d760c215e49d(v=vs.100)) (Настройка стандартных оболочек)  
+ [Using COM Types in Managed Code](https://msdn.microsoft.com/library/1a95a8ca-c8b8-4464-90b0-5ee1a1135b66(v=vs.100)) (Использование COM-типов в управляемом коде)  
  [Компиляция проекта, использующего взаимодействие](../../../docs/framework/interop/compiling-an-interop-project.md)  
  [Развертывание приложения взаимодействия](../../../docs/framework/interop/deploying-an-interop-application.md)  
  [Практическое руководство. Добавление ссылок на библиотеки типов](../../../docs/framework/interop/how-to-add-references-to-type-libraries.md)  

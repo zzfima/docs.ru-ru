@@ -13,9 +13,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 57483f099bb71a1ab685cedf148d4343c12983dd
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33390527"
 ---
 # <a name="com-wrappers"></a>Оболочки COM
 Модель COM имеет несколько важных отличий от объектной модели .NET Framework:  
@@ -37,5 +38,5 @@ ms.lasthandoff: 05/04/2018
  [Расширенное COM-взаимодействие](https://msdn.microsoft.com/library/3ada36e5-2390-4d70-b490-6ad8de92f2fb(v=vs.100))  
  [Вызываемая оболочка времени выполнения](runtime-callable-wrapper.md)  
  [Вызываемая оболочка COM](com-callable-wrapper.md)  
- [Настройка стандартных оболочек](https://msdn.microsoft.com/library/c40d089b-6a3c-41b5-a20d-d760c215e49d(v=vs.100))  
+ [Customizing Standard Wrappers](https://msdn.microsoft.com/library/c40d089b-6a3c-41b5-a20d-d760c215e49d(v=vs.100)) (Настройка стандартных оболочек)  
  [Практическое руководство. Настройка вызываемых оболочек времени выполнения](https://msdn.microsoft.com/library/4a4bb3da-4d60-4517-99f2-78d46a681732(v=vs.100))

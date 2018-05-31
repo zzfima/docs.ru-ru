@@ -11,16 +11,17 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b92f36488dec113dcffffac3e6cdc0c26a690b5b
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33389165"
 ---
 # <a name="registering-assemblies-with-com"></a>Регистрация сборок в COM
 С помощью программы командной строки, которая называется [средством регистрации сборок (Regasm.exe)](../tools/regasm-exe-assembly-registration-tool.md), можно регистрировать сборки для использования с моделью COM и отменять их регистрацию. Программа Regasm.exe добавляет сведения о классе в системный реестр, что обеспечивает прозрачное использование класса .NET Framework COM-клиентами. Класс <xref:System.Runtime.InteropServices.RegistrationServices> реализует эквивалентные функциональные возможности.  
   
  Управляемый компонент необходимо регистрировать в реестре Windows до того, как он будет активироваться из COM-клиента. В следующей таблице показаны разделы, которые программа Regasm.exe обычно добавляет в реестр Windows. (000000 указывает фактическое значение GUID.)  
   
-|Идентификатор GUID|Описание|Раздел реестра|  
+|Идентификатор GUID|Описание:|Раздел реестра|  
 |----------|-----------------|------------------|  
 |CLSID|Идентификатор класса|HKEY_CLASSES_ROOT\CLSID\\{000…000}|  
 |IID|Идентификатор интерфейса|HKEY_CLASSES_ROOT\Interface\\{000…000}|  

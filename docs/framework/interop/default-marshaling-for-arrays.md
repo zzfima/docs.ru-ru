@@ -12,9 +12,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b05ac1016710109110c3ff9d0d318a71fe0827f1
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33393154"
 ---
 # <a name="default-marshaling-for-arrays"></a>Маршалинг по умолчанию для массивов
 Если приложение полностью состоит из управляемого кода, общеязыковая среда выполнения (CLR) передает типы массивов в качестве параметров ввода-вывода. В отличие от этого, маршалер взаимодействия по умолчанию передает массив в качестве параметров ввода.  
@@ -41,9 +42,9 @@ ms.lasthandoff: 05/04/2018
   
 |Тип управляемого массива|Тип элемента|Ранг|Нижняя граница|Нотация сигнатуры|  
 |------------------------|------------------|----------|-----------------|------------------------|  
-|**ELEMENT_TYPE_ARRAY**|Задается по типу.|Задается по рангу.|При необходимости задается границами.|*Тип* **[** *n*,*m* **]**|  
+|**ELEMENT_TYPE_ARRAY**|Задается по типу.|Задается по рангу.|При необходимости задается границами.|*type* **[** *n*,*m* **]**|  
 |**ELEMENT_TYPE_CLASS**|Неизвестно|Неизвестно|Неизвестно|**System.Array**|  
-|**ELEMENT_TYPE_SZARRAY**|Задается по типу.|1|0|*Тип* **[** *n* **]**|  
+|**ELEMENT_TYPE_SZARRAY**|Задается по типу.|1|0|*type* **[** *n* **]**|  
   
 <a name="cpcondefaultmarshalingforarraysanchor2"></a>   
 ## <a name="unmanaged-arrays"></a>Неуправляемые массивы  
@@ -374,5 +375,5 @@ public struct MyStruct {
 ## <a name="see-also"></a>См. также  
  [Характеристики маршалинга по умолчанию](default-marshaling-behavior.md)  
  [Преобразуемые и непреобразуемые типы](blittable-and-non-blittable-types.md)  
- [Атрибуты направления](https://msdn.microsoft.com/library/241ac5b5-928e-4969-8f58-1dbc048f9ea2(v=vs.100))  
+ [Directional Attributes](https://msdn.microsoft.com/library/241ac5b5-928e-4969-8f58-1dbc048f9ea2(v=vs.100)) (Атрибуты направления)  
  [Копирование и закрепление](copying-and-pinning.md)

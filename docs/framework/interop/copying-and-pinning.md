@@ -11,9 +11,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 503ef7066b5d66b05c1642512ab8d59a2b1d3f9a
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33392805"
 ---
 # <a name="copying-and-pinning"></a>Копирование и закрепление
 При маршалировании данных маршалер может копировать или закреплять включаемые в процесс данные. В ходе этого процесса копия данных переносится из одного расположения в памяти в другое. На следующем рисунке показаны различия между копированием типа значения и типа, передаваемого по ссылке, из управляемой памяти в неуправляемую.  
@@ -79,5 +80,5 @@ ms.lasthandoff: 05/04/2018
 ## <a name="see-also"></a>См. также  
  [Характеристики маршалинга по умолчанию](default-marshaling-behavior.md)  
  [Управление памятью с помощью упаковщика взаимодействия](https://msdn.microsoft.com/library/417206ce-ee3e-4619-9529-0c0b686c7bee(v=vs.100))  
- [Атрибуты направления](https://msdn.microsoft.com/library/241ac5b5-928e-4969-8f58-1dbc048f9ea2(v=vs.100))  
+ [Directional Attributes](https://msdn.microsoft.com/library/241ac5b5-928e-4969-8f58-1dbc048f9ea2(v=vs.100)) (Атрибуты направления)  
  [Маршалинг взаимодействия](interop-marshaling.md)

@@ -12,9 +12,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 744ce1f2810eee025f071cafaa71e473b6ed4c50
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33392857"
 ---
 # <a name="how-to-configure-net-framework-based-com-components-for-registration-free-activation"></a>Практическое руководство. Настройка COM-компонентов на основе платформы .NET Framework для активации без регистрации
 Активация компонентов на основе платформы .NET Framework без регистрации осуществляется лишь немного сложнее, чем для COM-компонентов. При установке требуются два манифеста:  
@@ -36,7 +37,7 @@ ms.lasthandoff: 05/04/2018
     <assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0">  
     ```  
   
-     Сведения об элементах манифеста и их атрибутов см. в разделе [манифесты приложения](https://msdn.microsoft.com/library/windows/desktop/aa374191.aspx).  
+     Дополнительные сведения об элементах манифеста и их атрибутах см. в статье [Application Manifests](https://msdn.microsoft.com/library/windows/desktop/aa374191.aspx) (Манифесты приложений).  
   
 3.  Определите владельца манифеста. В следующем примере владельцем файла манифеста является `myComApp` версии 1.  
   
@@ -76,7 +77,7 @@ ms.lasthandoff: 05/04/2018
   
 5.  Сохраните файл манифеста под соответствующим именем. Имя манифеста приложения состоит из имени исполняемого файла сборки и расширения manifest. Например, для приложения myComApp.exe файл манифеста будет носить имя myComApp.exe.manifest.  
   
- Манифест приложения можно установить в тот же каталог, что и COM-приложение. Также его можно добавить в качестве ресурса в EXE-файл приложения. За дополнительной информацией, Дополнительные сведения см. в разделе [о сборках Side-by-Side](https://msdn.microsoft.com/library/windows/desktop/ff951640.aspx).  
+ Манифест приложения можно установить в тот же каталог, что и COM-приложение. Также его можно добавить в качестве ресурса в EXE-файл приложения. Дополнительные сведения см. в статье о [параллельных сборках](https://msdn.microsoft.com/library/windows/desktop/ff951640.aspx).  
   
 #### <a name="to-create-a-component-manifest"></a>Создание манифеста компонента  
   
@@ -104,7 +105,7 @@ ms.lasthandoff: 05/04/2018
   
 4.  Определите каждый класс в сборке. Используйте `<clrClass>` элемент для уникальной идентификации каждого класса в управляемой сборке. Атрибуты элемента, вложенного в `<assembly>`, определены в следующей таблице.  
   
-    |Атрибут|Описание|Обязательно|  
+    |Атрибут|Описание:|Обязательно|  
     |---------------|-----------------|--------------|  
     |`clsid`|Идентификатор, который задает активируемый класс.|Да|  
     |`description`|Строка, которая сообщает пользователю о компоненте. По умолчанию используется пустая строка.|Нет|  
@@ -173,6 +174,6 @@ ms.lasthandoff: 05/04/2018
   
 ## <a name="see-also"></a>См. также  
  [COM-взаимодействие без регистрации](registration-free-com-interop.md)  
- [Требования для регистрации COM-взаимодействия без](https://msdn.microsoft.com/library/0c43bc57-eecf-4e6c-8114-490141cce4da(v=vs.100)))  
- [Настройка COM-компонентов для активации без регистрации](https://msdn.microsoft.com/library/bfe9b02f-d964-4784-960e-a1f94692fbfe(v=vs.100)))  
+ [Requirements for Registration-Free COM Interop](https://msdn.microsoft.com/library/0c43bc57-eecf-4e6c-8114-490141cce4da(v=vs.100)) (Требования для COM-взаимодействия без регистрации)  
+ [Configuring COM Components for Registration-Free Activation](https://msdn.microsoft.com/library/bfe9b02f-d964-4784-960e-a1f94692fbfe(v=vs.100)) (Настройка COM-компонентов для активации без регистрации)  
  [Пошаговое руководство. Активация компонентов на основе платформы .NET без регистрации](https://msdn.microsoft.com/library/ms973915.aspx)

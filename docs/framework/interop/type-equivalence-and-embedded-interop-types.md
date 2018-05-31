@@ -11,9 +11,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e3eeba609349bb9d5b7c68e15e0e0e6ff3f1b7ea
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33390937"
 ---
 # <a name="type-equivalence-and-embedded-interop-types"></a>Эквивалентность типов и внедренные типы взаимодействия
 
@@ -32,7 +33,7 @@ ms.lasthandoff: 05/04/2018
 
 - Типы имеют одинаковые удостоверения, как описано в следующем разделе.
 
-- Оба типа, допустимый для эквивалентности типов, описаны в [Пометка COM-типов для эквивалентности типов](#marking-com-types-for-type-equivalence) раздела.
+- Оба типа пригодны для использования эквивалентности типов, как описано в разделе об [определении типов COM для эквивалентности типов](#marking-com-types-for-type-equivalence).
 
 ### <a name="type-identity"></a>Удостоверение типа
 
@@ -44,7 +45,7 @@ ms.lasthandoff: 05/04/2018
 
 - Для структур, перечислений и делегатов вместо свойства <xref:System.Runtime.InteropServices.TypeIdentifierAttribute.Scope%2A> используется атрибут <xref:System.Runtime.InteropServices.GuidAttribute> содержащей сборки, а вместо свойства <xref:System.Runtime.InteropServices.TypeIdentifierAttribute.Identifier%2A> используется свойство <xref:System.Type.FullName%2A?displayProperty=nameWithType>.
 
-### <a name="marking-com-types-for-type-equivalence"></a>Пометка COM-типов для эквивалентности типов
+### <a name="marking-com-types-for-type-equivalence"></a>Пометка типов COM для эквивалентности типов
 
  Тип можно пометить как допустимый для эквивалентности типов двумя способами.
 
@@ -55,5 +56,5 @@ ms.lasthandoff: 05/04/2018
 ## <a name="see-also"></a>См. также
 
 <xref:System.Type.IsEquivalentTo%2A>  
-[Использование типов COM в управляемом коде](https://msdn.microsoft.com/library/1a95a8ca-c8b8-4464-90b0-5ee1a1135b66(v=vs.100))  
+[Using COM Types in Managed Code](https://msdn.microsoft.com/library/1a95a8ca-c8b8-4464-90b0-5ee1a1135b66(v=vs.100)) (Использование COM-типов в управляемом коде)  
 [Импорт библиотеки типов в виде сборки](importing-a-type-library-as-an-assembly.md)  

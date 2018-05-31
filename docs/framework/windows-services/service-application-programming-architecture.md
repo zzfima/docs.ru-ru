@@ -18,53 +18,54 @@ author: ghogen
 manager: douge
 ms.openlocfilehash: f0c760d0f9b65fc9b612a8bee8abb68fa5b4ecae
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33516111"
 ---
 # <a name="service-application-programming-architecture"></a>Программная архитектура приложений служб
-Приложения служб Windows основаны на класс, наследующий от <xref:System.ServiceProcess.ServiceBase?displayProperty=nameWithType> класса. Переопределите методы этого класса и определить функциональные возможности для их определить поведение службы.  
+В основе приложений-служб Windows лежит класс, наследуемый от класса <xref:System.ServiceProcess.ServiceBase?displayProperty=nameWithType>. Вы можете переопределить методы из этого класса и определить функции для них, чтобы настроить поведение службы.  
   
- Ниже перечислены основные классы, используемые при создании службы.  
+ Ниже перечислены основные классы, используемые при создании службы:  
   
--   <xref:System.ServiceProcess.ServiceBase?displayProperty=nameWithType> — Необходимо переопределить методы <xref:System.ServiceProcess.ServiceBase> класса при создании службы и определить код, чтобы определить, как функциональные возможности службы в этом наследуется класс.  
+-   <xref:System.ServiceProcess.ServiceBase?displayProperty=nameWithType> — вы можете переопределить методы из класса <xref:System.ServiceProcess.ServiceBase> при создании службы и определить код, чтобы обозначить функции службы в этом наследуемом классе.  
   
--   <xref:System.ServiceProcess.ServiceProcessInstaller?displayProperty=nameWithType> и <xref:System.ServiceProcess.ServiceInstaller?displayProperty=nameWithType> — эти классы используются для установки и удаления службы.  
+-   <xref:System.ServiceProcess.ServiceProcessInstaller?displayProperty=nameWithType> и <xref:System.ServiceProcess.ServiceInstaller?displayProperty=nameWithType> — эти классы можно использовать для установки и удаления службы.  
   
- Кроме того, класс с именем <xref:System.ServiceProcess.ServiceController> можно использовать для управления службой. Этот класс не используется при создании службы, но может использоваться для запуска и остановки службы, передавать ей команды и возвращать последовательности перечислений.  
+ Кроме того, класс с именем <xref:System.ServiceProcess.ServiceController> можно использовать для управления самой службой. Этот класс не используется при создании службы, но может использоваться для ее запуска и остановки, а также передачи команд и возврата последовательностей перечислений.  
   
 ## <a name="defining-your-services-behavior"></a>Определение поведения службы  
- В классе службы переопределить функции базового класса, которые определяют, что происходит при изменении состояния службы в диспетчере управления службами. <xref:System.ServiceProcess.ServiceBase> Класс предоставляет следующие методы, которые можно переопределить, чтобы добавить пользовательское поведение.  
+ В классе службы вы можете переопределить функции базового класса, которые определяют, что происходит при изменении состояния службы в диспетчере служб. Класс <xref:System.ServiceProcess.ServiceBase> предоставляет следующие методы, которые можно переопределить, чтобы добавить пользовательское поведение.  
   
-|Метод|Переопределение позволяет|  
+|Метод|Переопределение|  
 |------------|-----------------|  
-|<xref:System.ServiceProcess.ServiceBase.OnStart%2A>|Укажите, какие действия должны быть выполнены, при запуске службы. В этой процедуре для службы для выполнения требуемых задач, необходимо написать код.|  
-|<xref:System.ServiceProcess.ServiceBase.OnPause%2A>|Указывает, что должно происходить при приостановке службы.|  
-|<xref:System.ServiceProcess.ServiceBase.OnStop%2A>|Указывает, что должно происходить при остановке службы.|  
-|<xref:System.ServiceProcess.ServiceBase.OnContinue%2A>|Указывает, что должно происходить при возобновлении работы после ее приостановки вашей службы.|  
-|<xref:System.ServiceProcess.ServiceBase.OnShutdown%2A>|Указывает, что должно происходить непосредственно перед завершением работы, системы, если служба запущена в это время.|  
-|<xref:System.ServiceProcess.ServiceBase.OnCustomCommand%2A>|Указывает, что должно происходить, когда служба получает пользовательской команды. Дополнительные сведения о пользовательских командах см. в разделе MSDN online.|  
-|<xref:System.ServiceProcess.ServiceBase.OnPowerEvent%2A>|Укажите реакцию службы при получении события управления питанием, например низкого заряда батарей или режима приостановки.|  
+|<xref:System.ServiceProcess.ServiceBase.OnStart%2A>|Укажите, какие действия должны быть выполнены при запуске службы. В этой процедуре необходимо написать код, чтобы служба выполняла требуемые задачи.|  
+|<xref:System.ServiceProcess.ServiceBase.OnPause%2A>|Укажите, что должно происходить при приостановке службы.|  
+|<xref:System.ServiceProcess.ServiceBase.OnStop%2A>|Укажите, что должно происходить при остановке службы.|  
+|<xref:System.ServiceProcess.ServiceBase.OnContinue%2A>|Укажите, что должно происходить при возобновлении нормальной работы службы после приостановки.|  
+|<xref:System.ServiceProcess.ServiceBase.OnShutdown%2A>|Укажите, что должно происходить непосредственно перед завершением работы системы, если служба запущена в это время.|  
+|<xref:System.ServiceProcess.ServiceBase.OnCustomCommand%2A>|Укажите, что должно происходить при получении службой пользовательской команды. Дополнительные сведения о пользовательских командах см. на сайте MSDN.|  
+|<xref:System.ServiceProcess.ServiceBase.OnPowerEvent%2A>|Укажите, как должна реагировать служба при получении события управления питанием, например низкого заряда батареи или операции приостановки.|  
   
 > [!NOTE]
->  Эти методы соответствуют состояниям, которые служба перемещается по времени существования; Служба переходит из одного состояния к другому. Например, вы никогда не получите службе отвечать на <xref:System.ServiceProcess.ServiceBase.OnContinue%2A> перед тем как <xref:System.ServiceProcess.ServiceBase.OnStart%2A> был вызван.  
+>  Эти методы представляют состояния, через которые служба проходит за время своего существования, а именно — переходы службы от одного состояния к другому. Например, служба будет отвечать на команду <xref:System.ServiceProcess.ServiceBase.OnContinue%2A> только после вызова <xref:System.ServiceProcess.ServiceBase.OnStart%2A>.  
   
- Существует несколько других свойств и методов, которые представляют интерес. Сюда входит следующее.  
+ Есть несколько других свойств и методов, которые представляют интерес. Сюда входит следующее.  
   
--   <xref:System.ServiceProcess.ServiceBase.Run%2A> Метод <xref:System.ServiceProcess.ServiceBase> класса. Это главная точка входа для службы. При создании службы с помощью шаблона служб Windows, код вставляется в вашем приложении `Main` метод для запуска службы. Этот код выглядит следующим образом:  
+-   Метод <xref:System.ServiceProcess.ServiceBase.Run%2A> в классе <xref:System.ServiceProcess.ServiceBase>. Это главная точка входа для службы. При создании службы с помощью шаблона служб Windows код вставляется в метод `Main` приложения для запуска этой службы. Этот код выглядит так:  
   
      [!code-csharp[VbRadconService#6](../../../samples/snippets/csharp/VS_Snippets_VBCSharp/VbRadconService/CS/MyNewService.cs#6)]
      [!code-vb[VbRadconService#6](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.vb#6)]  
   
     > [!NOTE]
-    >  В этих примерах используются массивом типа <xref:System.ServiceProcess.ServiceBase>, в который каждой службы, который содержит приложение можно добавить и затем все службы могут выполняться одновременно. Если создается только одна служба, тем не менее, можно не использовать массив, а объявить новый объект, наследуемый от <xref:System.ServiceProcess.ServiceBase> и запустите его. Пример см. в разделе [как: запись службы программным образом](../../../docs/framework/windows-services/how-to-write-services-programmatically.md).  
+    >  В этих примерах используется массив типа <xref:System.ServiceProcess.ServiceBase>. В него можно добавить каждую службу, которую содержит приложение, а затем запустить все службы одновременно. Если создается только одна служба, вы можете не использовать массив, а просто объявить и запустить новый объект, наследуемый от <xref:System.ServiceProcess.ServiceBase>. Пример см. в [руководстве по созданию служб программным способом](../../../docs/framework/windows-services/how-to-write-services-programmatically.md).  
   
--   Наборы свойств <xref:System.ServiceProcess.ServiceBase> класса. Они определяют, какие методы могут вызываться в службе. Например, если <xref:System.ServiceProcess.ServiceBase.CanStop%2A> свойству `true`, <xref:System.ServiceProcess.ServiceBase.OnStop%2A> возможность вызова метода в службе. Когда <xref:System.ServiceProcess.ServiceBase.CanPauseAndContinue%2A> свойству `true`, <xref:System.ServiceProcess.ServiceBase.OnPause%2A> и <xref:System.ServiceProcess.ServiceBase.OnContinue%2A> можно вызывать методы. Если задано одно из этих свойств для `true`, необходимо переопределить и реализовать соответствующий метод.  
+-   Наборы свойств в классе <xref:System.ServiceProcess.ServiceBase>. Они определяют, какие методы могут вызываться в службе. Например, если свойству <xref:System.ServiceProcess.ServiceBase.CanStop%2A> задать значение `true`, в службе можно вызвать метод <xref:System.ServiceProcess.ServiceBase.OnStop%2A>. Если свойству <xref:System.ServiceProcess.ServiceBase.CanPauseAndContinue%2A> задать значение `true`, в службе можно вызвать методы <xref:System.ServiceProcess.ServiceBase.OnPause%2A> и <xref:System.ServiceProcess.ServiceBase.OnContinue%2A>. Если одному из этих свойств задать значение `true`, необходимо переопределить и реализовать обработку для соответствующих методов.  
   
     > [!NOTE]
-    >  Служба должна переопределять по крайней мере <xref:System.ServiceProcess.ServiceBase.OnStart%2A> и <xref:System.ServiceProcess.ServiceBase.OnStop%2A> для использования.  
+    >  Используемая служба должна переопределять хотя бы <xref:System.ServiceProcess.ServiceBase.OnStart%2A> и <xref:System.ServiceProcess.ServiceBase.OnStop%2A>.  
   
- Можно также использовать компонент, называемый <xref:System.ServiceProcess.ServiceController> для связи и управлять поведением существующую службу.  
+ Можно также использовать компонент, называемый <xref:System.ServiceProcess.ServiceController>, для обмена данными с существующей службой и управления ее поведением.  
   
 ## <a name="see-also"></a>См. также  
  [Знакомство с приложениями служб Windows](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)  

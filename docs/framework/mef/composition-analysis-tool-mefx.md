@@ -10,16 +10,17 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 6851ac334d439f2e5c0f6056f5226e3faa1503d5
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33392581"
 ---
 # <a name="composition-analysis-tool-mefx"></a>Средство анализа композиции (Mefx)
 Средство анализа композиции (Mefx) — это приложение командной строки, анализирующее файлы библиотеки (.dll) и приложений (.exe) с частями Managed Extensibility Framework (MEF). Основное назначение Mefx — предоставить разработчикам способ диагностики ошибок композиции в приложениях MEF, не добавляя громоздкий код трассировки в само приложение. Это средство также помогает понять части из сторонней библиотеки. В этом разделе описывается использование Mefx, содержится справочная информация по его синтаксису.  
   
 <a name="getting_mefx"></a>   
 ## <a name="getting-mefx"></a>Получение Mefx  
- Средство Mefx доступно на github на сайте [Managed Extensibility Framework](https://github.com/MicrosoftArchive/mef/releases/tag/4.0). Просто загрузите и распакуйте средство.  
+ Средство Mefx доступно в GitHub по следующей ссылке: [Managed Extensibility Framework](https://github.com/MicrosoftArchive/mef/releases/tag/4.0). Просто загрузите и распакуйте средство.  
   
 <a name="basic_syntax"></a>   
 ## <a name="basic-syntax"></a>Базовый синтаксис  
