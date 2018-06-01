@@ -1,1 +1,0 @@
-<span data-ttu-id="a2f7b-101">Поле идентификатора свойства зависимостей:</span><span class="sxs-lookup"><span data-stu-id="a2f7b-101">Dependency property identifier field:</span></span>

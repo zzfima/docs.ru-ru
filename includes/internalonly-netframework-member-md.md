@@ -1,1 +1,0 @@
-<span data-ttu-id="f9b18-101">Данный член предназначен для поддержки платформы .NET Framework и не должен вызываться напрямую из кода приложения.</span><span class="sxs-lookup"><span data-stu-id="f9b18-101">This member supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>

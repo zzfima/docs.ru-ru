@@ -1,1 +1,0 @@
-<span data-ttu-id="92c4f-101">Стандарт AES (Advanced Encryption Standard)</span><span class="sxs-lookup"><span data-stu-id="92c4f-101">Advanced Encryption Standard (AES)</span></span>
