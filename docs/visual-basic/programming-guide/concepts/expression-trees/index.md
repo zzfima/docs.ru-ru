@@ -2,11 +2,12 @@
 title: Деревья выражений (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 8bbbb02d-7ffc-476b-8c25-118d82bf5d46
-ms.openlocfilehash: ac37dd63041ba0a0a8ee08651fe62334c3c30049
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: babee41f7df48f270d0c56cb2af91e463407d5c1
+ms.sourcegitcommit: 3540f614fc94f77ca4ab58df66db2d0f4d52dfee
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34696953"
 ---
 # <a name="expression-trees-visual-basic"></a>Деревья выражений (Visual Basic)
 Деревья выражений представляют код в виде древовидной структуры, где каждый узел является выражением, например, вызовом метода или двоичной операцией, такой как `x < y`.  
@@ -84,7 +85,7 @@ Console.WriteLine(factorial)
 ' Prints 120.  
 ```
 
-Дополнительные сведения см. в записи блога [Generating Dynamic Methods with Expression Trees in Visual Studio 2010](http://go.microsoft.com/fwlink/p/?LinkId=169513) (Создание динамических методов с использованием деревьев выражений в Visual Studio 2010), которая также применима к более поздним версиям Visual Studio.
+Дополнительные сведения см. в записи блога [Generating Dynamic Methods with Expression Trees in Visual Studio 2010](https://blogs.msdn.microsoft.com/csharpfaq/2009/09/14/generating-dynamic-methods-with-expression-trees-in-visual-studio-2010) (Создание динамических методов с использованием деревьев выражений в Visual Studio 2010), которая также применима к более поздним версиям Visual Studio.
   
 ## <a name="parsing-expression-trees"></a>Синтаксический анализ деревьев выражений  
  В следующем примере кода показано, как дерево выражений, представляющее лямбда-выражение `Function(num) num < 5`, может быть разложено на части.  

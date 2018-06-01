@@ -4,11 +4,12 @@ description: Жизненный цикл контейнерного прилож
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: 8db9f37e4fa8df63060982857d457c9e1ce90f60
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4adbdd7099dfc1c5ef13d5bbb4370ae2f14aba1e
+ms.sourcegitcommit: 3540f614fc94f77ca4ab58df66db2d0f4d52dfee
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34696784"
 ---
 # <a name="development-environment-for-docker-apps"></a>Среда разработки приложений Docker
 
@@ -23,7 +24,7 @@ ms.lasthandoff: 05/04/2018
 > [!NOTE]
 > Чтобы загрузить кода Visual Studio, перейдите на <https://code.visualstudio.com/download>.
 
-Чтобы загрузить Docker для Mac и Windows, перейдите к <http://www.docker.com/products/docker>.
+Чтобы загрузить Docker для Mac и Windows, перейдите к <https://www.docker.com/products/docker>.
 
 ### <a name="visual-studio-with-docker-tools"></a>Visual Studio с помощью средств Docker
 
@@ -37,15 +38,10 @@ ms.lasthandoff: 05/04/2018
 Можно разрабатывать приложения Docker и средства Microsoft с наиболее современные языки. Ниже приведен исходный список, но вы не ограничены его:
 
 -   .NET core и ASP.NET Core
-
 -   Node.js
-
 -   Golang
-
 -   Java
-
 -   Ruby
-
 -   Python
 
 По сути можно использовать любой современный язык, поддерживаемый Docker в Windows или Linux.
