@@ -2,11 +2,12 @@
 title: 'Как: параллельное выполнение нескольких веб-запросов с помощью модификатора Async и Await (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: a894b99b-7cfd-4a38-adfb-20d24f986730
-ms.openlocfilehash: 1b98a0f29409fa49af1c9c8f7c91f2170981f7cc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4d4ccda6657dd4d889e8495fa000715c1f7a5ba6
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34728447"
 ---
 # <a name="how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await-visual-basic"></a>Как: параллельное выполнение нескольких веб-запросов с помощью модификатора Async и Await (Visual Basic)
 В асинхронном методе задачи запускаются в момент создания. [Await](../../../../visual-basic/language-reference/operators/await-operator.md) оператор применяется к задаче на этапе метод, когда обработка не может продолжаться до завершения задачи. Часто задачи ожидаются в момент создания, как показано в следующем примере.  
@@ -39,7 +40,7 @@ Dim result = Await myTask
   
  Другой пример, в котором запускает несколько задач, в то же время, в разделе [как: расширение Async пошагового руководства с использованием метода Task.WhenAll (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md).  
   
- Код для этого примера можно скачать на странице [Примеры кода от разработчиков](http://go.microsoft.com/fwlink/?LinkId=254906).  
+ Код для этого примера можно скачать на странице [Примеры кода от разработчиков](https://code.msdn.microsoft.com/Async-Make-Multiple-Web-49adb82e).  
   
 ### <a name="to-set-up-the-project"></a>Настройка проекта  
   

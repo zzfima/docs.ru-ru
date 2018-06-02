@@ -2,11 +2,12 @@
 title: Поток управления в асинхронных программах (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: b0443af7-c586-4cb0-b476-742ae4098a96
-ms.openlocfilehash: 2de9c00e5094a1c40e64bdf5215157867372be8c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a6783373f4b556694fd79401546665b09f55919d
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34728509"
 ---
 # <a name="control-flow-in-async-programs-visual-basic"></a>Поток управления в асинхронных программах (Visual Basic)
 Можно намного проще создавать и обслуживать асинхронные программы с помощью ключевых слов `Async` и `Await`. Однако при непонимании механизма работы асинхронной программы результаты могут удивить. В этом разделе выполняется трассировка потока управления с помощью простой асинхронной программы, чтобы продемонстрировать переход потока управления от одного метода к другому, включая данные, передаваемые в каждом случае.  
@@ -97,7 +98,7 @@ Length of the downloaded string: 33946.
 >  Чтобы запустить пример, необходимо иметь Visual Studio 2012 или более поздней версии и платформы .NET Framework 4.5 или более новая версия на компьютере.  
   
 ### <a name="download-the-program"></a>Скачайте программу  
- Вы можете скачать приложение для этого раздела на странице примеров [Async Sample: Control Flow in Async Programs](http://go.microsoft.com/fwlink/?LinkId=255285). Следующие шаги описывают процесс открытия и запуска программы.  
+ Вы можете скачать приложение для этого раздела на странице примеров [Async Sample: Control Flow in Async Programs](https://code.msdn.microsoft.com/Async-Sample-Control-Flow-5c804fc0). Следующие шаги описывают процесс открытия и запуска программы.  
   
 1.  Распакуйте загруженный файл, а затем запустите Visual Studio.  
   
@@ -361,4 +362,4 @@ Dim contentLength As Integer = Await getLengthTask
  [Асинхронное программирование с использованием ключевых слов Async и Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)  
  [Async Return Types (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/async-return-types.md) (Типы возвращаемых значений Async (Visual Basic))  
  [Walkthrough: Accessing the Web by Using Async and Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md) (Пошаговое руководство. Доступ к веб-сайтам с помощью модификатора Async и оператора Await (Visual Basic))  
- [Пример асинхронности. Поток управления в асинхронных программах (C# и Visual Basic)](http://go.microsoft.com/fwlink/?LinkId=255285)
+ [Пример асинхронности. Поток управления в асинхронных программах (C# и Visual Basic)](https://code.msdn.microsoft.com/Async-Sample-Control-Flow-5c804fc0)

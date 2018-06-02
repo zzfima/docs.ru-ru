@@ -2,11 +2,12 @@
 title: Отмена асинхронной задачи или списка задач (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: a9ee1b71-5bec-4736-a1e9-448042dd7215
-ms.openlocfilehash: 74f0c1c4653709497cb264aac18b49f4fee4eefa
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2823514bc462f198a43316b40eb05bc1ffed0e72
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34728671"
 ---
 # <a name="cancel-an-async-task-or-a-list-of-tasks-visual-basic"></a>Отмена асинхронной задачи или списка задач (Visual Basic)
 Вы можете настроить кнопку, которая позволит отменить асинхронное приложение в случае, если вы не захотите дожидаться его завершения. Выполнив код в приведенных ниже примерах, вы сможете добавить в приложение кнопку отмены, загружающую содержимое одного веб-сайта или список веб-сайтов.  
@@ -20,7 +21,7 @@ ms.lasthandoff: 05/04/2018
  Код в первом примере связывает кнопку **Отмена** с отдельной задачей загрузки. Если нажать эту кнопку, когда приложение загружает содержимое, загрузка будет отменена.  
   
 ### <a name="downloading-the-example"></a>Загрузка примера  
- Вы можете скачать весь проект Windows Presentation Foundation (WPF) со страницы [Пример асинхронности. Тонкая настройка приложения](http://go.microsoft.com/fwlink/?LinkId=255046), а затем выполнить необходимые действия.  
+ Вы можете скачать весь проект Windows Presentation Foundation (WPF) со страницы [Пример асинхронности. Тонкая настройка приложения](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea), а затем выполнить необходимые действия.  
   
 1.  Распакуйте загруженный файл, а затем запустите Visual Studio.  
   
@@ -138,7 +139,7 @@ ms.lasthandoff: 05/04/2018
  Вы можете расширить предыдущий пример до отмены сразу нескольких задач, связав с каждой из них один и тот же экземпляр `CancellationTokenSource`. В этом случае кнопка **Отмена** отменяет сразу все незавершенные задачи.  
   
 ### <a name="downloading-the-example"></a>Загрузка примера  
- Вы можете скачать весь проект Windows Presentation Foundation (WPF) со страницы [Пример асинхронности. Тонкая настройка приложения](http://go.microsoft.com/fwlink/?LinkId=255046), а затем выполнить необходимые действия.  
+ Вы можете скачать весь проект Windows Presentation Foundation (WPF) со страницы [Пример асинхронности. Тонкая настройка приложения](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea), а затем выполнить необходимые действия.  
   
 1.  Распакуйте загруженный файл, а затем запустите Visual Studio.  
   
@@ -249,7 +250,7 @@ ms.lasthandoff: 05/04/2018
 ##  <a name="BKMK_CompleteExamples"></a> Полные примеры  
  Следующие разделы содержат код каждого из приведенных выше примеров. Обратите внимание на то, что необходимо добавить ссылку для <xref:System.Net.Http>.  
   
- Проекты можно загрузить со страницы [Пример асинхронности. Тонкая настройка приложения](http://go.microsoft.com/fwlink/?LinkId=255046).  
+ Проекты можно загрузить со страницы [Пример асинхронности. Тонкая настройка приложения](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea).  
   
 ### <a name="cancel-a-task-example"></a>Пример отмены задачи  
  Ниже приведен полный файл MainWindow.xaml.vb для примера, который отменяет одну задачу.  
@@ -458,4 +459,4 @@ End Class
  <xref:System.Threading.CancellationToken>  
  [Асинхронное программирование с использованием ключевых слов Async и Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)  
  [Fine-Tuning Your Async Application (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md) (Настройка асинхронного приложения (Visual Basic))  
- [Async Sample: Fine Tuning Your Application](http://go.microsoft.com/fwlink/?LinkId=255046) (Пример использования async. Тонкая настройка асинхронного приложения)
+ [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) (Пример использования async. Тонкая настройка асинхронного приложения)
