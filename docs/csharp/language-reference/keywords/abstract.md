@@ -7,11 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - abstract keyword [C#]
 ms.assetid: b0797770-c1f3-4b4d-9441-b9122602a6bb
-ms.openlocfilehash: 78212365c4183d31bcd5f1b1628c3443d48909a8
-ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
+ms.openlocfilehash: 1da11548e95a2eedb8a16cf27807ff59daeb2bc5
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34566128"
 ---
 # <a name="abstract-c-reference"></a>abstract (Справочник по C#)
 Модификатор `abstract` указывает, что изменяемый элемент имеет отсутствующую или неполную реализацию. Модификатор abstract можно использовать с классами, методами, свойствами, индексаторами и событиями. Модификатор `abstract` в определении класса позволяет указать, что класс может быть только базовым классом для других классов. Члены, помеченные как абстрактные или включенные в абстрактный класс, должны быть реализованы классами, производными от абстрактного класса.  
@@ -19,7 +20,7 @@ ms.lasthandoff: 05/10/2018
 ## <a name="example"></a>Пример  
  В этом примере класс `Square` должен обеспечивать реализацию `Area`, поскольку является производным от класса `ShapesClass`:  
   
- [!code-csharp[csrefKeywordsModifiers#1](../../../csharp/language-reference/keywords/codesnippet/CSharp/abstract_1.cs)]  
+ [!code-csharp[csrefKeywordsModifiers#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsModifiers/CS/csrefKeywordsModifiers.cs#1)]
   
  Абстрактные классы предоставляют следующие возможности:  
   
@@ -61,12 +62,12 @@ ms.lasthandoff: 05/10/2018
   
  Абстрактный класс, реализующий интерфейс, может сопоставлять методы интерфейса с абстрактными методами. Пример:  
   
- [!code-csharp[csrefKeywordsModifiers#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/abstract_2.cs)]  
+[!code-csharp[csrefKeywordsModifiers#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsModifiers/CS/csrefKeywordsModifiers.cs#2)]
   
 ## <a name="example"></a>Пример  
  В следующем примере класс `DerivedClass` является производным от абстрактного класса `BaseClass`. Абстрактный класс содержит абстрактный метод, `AbstractMethod`, и два абстрактных свойства, `X` и `Y`.  
   
- [!code-csharp[csrefKeywordsModifiers#3](../../../csharp/language-reference/keywords/codesnippet/CSharp/abstract_3.cs)]  
+[!code-csharp[csrefKeywordsModifiers#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsModifiers/CS/csrefKeywordsModifiers.cs#3)]
   
  В предыдущем примере при попытке создать экземпляр абстрактного класса с помощью оператора вида:  
   

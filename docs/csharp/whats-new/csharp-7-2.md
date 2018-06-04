@@ -2,11 +2,12 @@
 title: Новые возможности C# 7.2
 description: Обзор новых возможностей в C# 7.2.
 ms.date: 08/16/2017
-ms.openlocfilehash: b813bf5b38ef17986b21e928c9c86e583174c7d1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a74afd7f073daa46328d60149e2dd90207420a80
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34566193"
 ---
 # <a name="whats-new-in-c-72"></a>Новые возможности C# 7.2
 
@@ -15,7 +16,7 @@ ms.lasthandoff: 05/04/2018
 
 Остальные нововведения реализованы преимущественно для удобства.
 
-В C# 7.2 предусмотрен элемент управления [выбором версии языка](csharp-7-1.md#language-version-selection), с помощью которого можно задать версию языка компилятора.
+В C# 7.2 предусмотрен элемент управления [выбором версии языка](../language-reference/configure-language-version.md), с помощью которого можно задать версию языка компилятора.
 
 Новые языковые функции в этом выпуске
 

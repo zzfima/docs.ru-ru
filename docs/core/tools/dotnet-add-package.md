@@ -3,12 +3,13 @@ title: Команда dotnet add package — CLI .NET Core
 description: Команду dotnet add package удобно использовать для добавления ссылки на пакет NuGet в проект.
 author: mairaw
 ms.author: mairaw
-ms.date: 08/11/2017
-ms.openlocfilehash: fd3704bbb941835421d78e19f196fa52b3767c34
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.date: 05/25/2018
+ms.openlocfilehash: 31dda9dbb101238b3a33d8b0d9a17765744480e0
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34696303"
 ---
 # <a name="dotnet-add-package"></a>dotnet add package
 
@@ -20,7 +21,7 @@ ms.lasthandoff: 05/04/2018
 
 ## <a name="synopsis"></a>Краткий обзор
 
-`dotnet add [<PROJECT>] package <PACKAGE_NAME> [-h|--help] [-v|--version] [-f|--framework] [-n|--no-restore] [-s|--source] [--package-directory]`
+`dotnet add [<PROJECT>] package <PACKAGE_NAME> [-h|--help] [-f|--framework] [-n|--no-restore] [--package-directory] [-s|--source] [-v|--version]`
 
 ## <a name="description"></a>Описание:
 
@@ -30,7 +31,7 @@ ms.lasthandoff: 05/04/2018
 
 Например, при добавлении `Newtonsoft.Json` в *ToDo.csproj* создаются выходные данные примерно следующего вида:
 
-```
+```console
   Writing C:\Users\mairaw\AppData\Local\Temp\tmp95A8.tmp
 info : Adding PackageReference for package 'Newtonsoft.Json' into project 'C:\projects\ToDo\ToDo.csproj'.
 log  : Restoring packages for C:\projects\ToDo\ToDo.csproj...
@@ -62,10 +63,6 @@ info : PackageReference for package 'Newtonsoft.Json' version '10.0.3' added to 
 
 Выводит краткую справку по команде.
 
-`-v|--version <VERSION>`
-
-Версия пакета.
-
 `-f|--framework <FRAMEWORK>`
 
 Добавляет ссылку на пакет только при ориентации на конкретную [платформу](../../standard/frameworks.md).
@@ -74,13 +71,17 @@ info : PackageReference for package 'Newtonsoft.Json' version '10.0.3' added to 
 
 Добавляет ссылку на пакет без предварительного просмотра восстановления и проверки совместимости.
 
+`--package-directory <PACKAGE_DIRECTORY>`
+
+Восстанавливает пакет в указанный каталог.
+
 `-s|--source <SOURCE>`
 
 Указывает конкретный источник пакета NuGet во время операции восстановления.
 
-`--package-directory <PACKAGE_DIRECTORY>`
+`-v|--version <VERSION>`
 
-Восстанавливает пакет в указанный каталог.
+Версия пакета.
 
 ## <a name="examples"></a>Примеры
 

@@ -7,18 +7,19 @@ f1_keywords:
 helpviewer_keywords:
 - var keyword [C#]
 ms.assetid: 0777850a-2691-4e3e-927f-0c850f5efe15
-ms.openlocfilehash: c311993ebcc5b5072959b2e79242bcdabd6de913
-ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
+ms.openlocfilehash: 439a4834d29f0176a5816c3ae78a4b6c3ca2ccda
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/15/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34566021"
 ---
 # <a name="var-c-reference"></a>var (справочник по C#)
 Начиная с Visual C# 3.0, переменные, объявленные в области действия метода, получают неявный "тип" `var`. Неявно типизированные локальные переменные является строго типизированными, как если бы вы объявили тип самостоятельно, однако его определяет компилятор. Следующие два объявления `i` функционально эквивалентны:  
   
 ```csharp  
-var i = 10; // implicitly typed  
-int i = 10; //explicitly typed  
+var i = 10; // Implicitly typed. 
+int i = 10; // Explicitly typed. 
 ```  
   
  Дополнительные сведения см. в разделах [Неявно типизированные локальные переменные](../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md) и [Связи типов в операциях запроса LINQ](../../../csharp/programming-guide/concepts/linq/type-relationships-in-linq-query-operations.md).  
