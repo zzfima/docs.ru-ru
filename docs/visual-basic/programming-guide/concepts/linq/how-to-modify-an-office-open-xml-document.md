@@ -2,16 +2,17 @@
 title: 'Как: изменение документа Office Open XML (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 1cefd7f5-8e39-44c4-869c-f8021538a777
-ms.openlocfilehash: 97e754f37580af990b1aaa64f389de5cbce91d60
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8d4ecdf89606190eed16b5374a5e43421d1260b7
+ms.sourcegitcommit: d8bf4976eafe3289275be3811e7cb721bfff7e1e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34753397"
 ---
 # <a name="how-to-modify-an-office-open-xml-document-visual-basic"></a>Как: изменение документа Office Open XML (Visual Basic)
 В этом разделе представлен пример, в котором открывается документ Office Open XML, затем он изменяется и сохраняется.  
   
- Дополнительные сведения об Office Open XML см. на веб-сайте [www.openxmldeveloper.org](http://go.microsoft.com/fwlink/?LinkID=95573).  
+ Дополнительные сведения об Office Open XML см. в разделе [Eric Технический блог](http://www.ericwhite.com).  
   
 ## <a name="example"></a>Пример  
  В этом примере осуществляется поиск первого абзаца документа. В примере происходит получение текста из этого абзаца, а затем все текстовые прогоны в абзаце удаляются. Создается новый текстовый прогон, состоящий из текста первого абзаца, преобразованного в верхний регистр. Затем измененный XML сериализуется в пакет Open XML и закрывается.  

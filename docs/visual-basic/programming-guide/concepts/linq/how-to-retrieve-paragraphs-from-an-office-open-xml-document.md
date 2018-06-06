@@ -2,16 +2,17 @@
 title: 'Как: извлечение абзацев из документа Office Open XML (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 66053f21-9217-473c-a6f3-a0897be07756
-ms.openlocfilehash: 241971c65bb1569e4df98bc3580dea71428dbf2b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 17d8c0fb9ecd5d3cb7a4f692d25a9f1514696117
+ms.sourcegitcommit: d8bf4976eafe3289275be3811e7cb721bfff7e1e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34753316"
 ---
 # <a name="how-to-retrieve-paragraphs-from-an-office-open-xml-document-visual-basic"></a>Как: извлечение абзацев из документа Office Open XML (Visual Basic)
 В этом разделе представлен пример, открывающий документ Office Open XML и получающий коллекцию всех абзацев документа.  
   
- Дополнительные сведения об Office Open XML см. на веб-сайте [www.openxmldeveloper.org](http://go.microsoft.com/fwlink/?LinkID=95573).  
+ Дополнительные сведения об Office Open XML см. в разделе [Eric Технический блог](http://www.ericwhite.com).  
   
 ## <a name="example"></a>Пример  
  В этом примере открывается пакет Office Open XML и используются связи внутри пакета Open XML для поиска документа и секций стилей. Затем в этом примере выполняется запрос к документу и создается проекция коллекции анонимного типа, содержащая узел <xref:System.Xml.Linq.XElement> абзаца, имя стиля каждого абзаца и текст каждого абзаца.  

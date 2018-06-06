@@ -7,11 +7,12 @@ helpviewer_keywords:
 - Async [Visual Basic]
 - Async keyword [Visual Basic]
 ms.assetid: 1be8b4b5-9689-41b5-bd33-b906bfd53bc5
-ms.openlocfilehash: 829128ff39c0c5e4f6cb140852228a028e39e69c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 244f468d9432e132c93ae8272d51098f86ad439a
+ms.sourcegitcommit: d8bf4976eafe3289275be3811e7cb721bfff7e1e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34753348"
 ---
 # <a name="async-visual-basic"></a>Async (Visual Basic)
 `Async` Модификатор указывает, что метод или [лямбда-выражение](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md) она изменяет является асинхронным. Такие методы называются *асинхронные методы*.  
@@ -55,7 +56,7 @@ End Function
  Дополнительные сведения и примеры см. в разделе [Асинхронные типы возвращаемых значений](../../../visual-basic/programming-guide/concepts/async/async-return-types.md).  
   
 ## <a name="example"></a>Пример  
- В следующих примерах асинхронный обработчик событий, асинхронное лямбда-выражение и асинхронного метода. Полный пример, использующий этих элементов см. в разделе [Пошаговое руководство: доступ к веб-сайте, с помощью Async и Await](../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md). Код пошагового руководства можно скачать в разделе [Примеры кода от разработчиков](http://go.microsoft.com/fwlink/?LinkId=255191).  
+ В следующих примерах асинхронный обработчик событий, асинхронное лямбда-выражение и асинхронного метода. Полный пример, использующий этих элементов см. в разделе [Пошаговое руководство: доступ к веб-сайте, с помощью Async и Await](../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md). Код пошагового руководства можно скачать в разделе [Примеры кода от разработчиков](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f).  
   
 ```vb  
 ' An event handler must be a Sub procedure.  
