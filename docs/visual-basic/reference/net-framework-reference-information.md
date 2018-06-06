@@ -6,11 +6,12 @@ helpviewer_keywords:
 - .NET Framework [Visual Basic], reference
 - .NET Framework class library [Visual Basic], reference information
 ms.assetid: 8b202505-608b-4223-bbd9-2ace3d73e6cd
-ms.openlocfilehash: 969aed5e98c0017f34d57d3999292c10163b4385
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8a949fa6554316ebd2b4abd90e512f4a8496f874
+ms.sourcegitcommit: fc70fcb9c789b6a4aefcdace46f3643fd076450f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "34805416"
 ---
 # <a name="net-framework-reference-information-visual-basic"></a>Справочные сведения о платформе .NET Framework (Visual Basic)
 В этом разделе приведены ссылки на сведения о работе с [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] библиотеки классов.  
@@ -31,5 +32,5 @@ ms.lasthandoff: 05/04/2018
  [Примеры по платформе .NET Framework](http://msdn.microsoft.com/library/177055f8-4a1f-43e7-aee6-995c196079b1)  
  Ссылки на примеры приложений, демонстрирующие технологии .NET Framework.  
   
- [Библиотека классов .NET Framework](http://go.microsoft.com/fwlink/?LinkID=227195)  
+ [Браузер API .NET](../../../api/index.md)  
  Содержит синтаксис, примеры кода и другие сведения для каждого класса в пространствах имен .NET Framework.

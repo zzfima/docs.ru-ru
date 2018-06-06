@@ -12,11 +12,12 @@ helpviewer_keywords:
 - deferred execution
 - iteration variables [Visual Basic]
 ms.assetid: 3047d86e-0d49-40e2-928b-dc02e46c7984
-ms.openlocfilehash: ae59cb4d6b812ba956ce55723e034f381db14aa1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7e6d299bafff2a5a34a8f0942ba6dc9c25fcdd83
+ms.sourcegitcommit: fc70fcb9c789b6a4aefcdace46f3643fd076450f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "34805741"
 ---
 # <a name="introduction-to-linq-in-visual-basic"></a>Знакомство с LINQ в Visual Basic
 Встроенные в язык запросы (LINQ) добавляют возможности запросов в Visual Basic и предоставляет простые и мощные возможности при работе с любыми видами данных. Вместо того чтобы отправлять запросы в базе данных должны быть обработаны или работы с разным синтаксисом запросов для каждого типа данных, которую нужно найти, LINQ используются запросы как часть языка Visual Basic. Синтаксис запросов не зависит от типа данных.  
@@ -59,7 +60,7 @@ ms.lasthandoff: 05/04/2018
   
  Visual Basic содержит следующие поставщики LINQ.  
   
-|Поставщик|Описание|  
+|Поставщик|Описание:|  
 |---|---|  
 |LINQ to Objects|Поставщик LINQ to Objects позволяет направлять запросы к коллекциям и массивам, которые находятся в памяти. Если объект поддерживает интерфейс <xref:System.Collections.IEnumerable> или <xref:System.Collections.Generic.IEnumerable%601>, поставщик LINQ to Objects позволяет направлять к нему запросы.<br /><br /> Можно включить поставщик LINQ to Objects путем импорта <xref:System.Linq> пространства имен, которое импортируется по умолчанию для всех проектов Visual Basic.<br /><br /> Дополнительные сведения о поставщик LINQ to Objects см. в разделе [LINQ to Objects](http://msdn.microsoft.com/library/73cafe73-37cf-46e7-bfa7-97c7eea7ced9).|  
 |LINQ to SQL|Поставщик LINQ to SQL позволяет запрашивать и изменять данные в базе данных SQL Server. Это упрощает сопоставление объектной модели приложения с таблицами и объектами в базе данных.<br /><br /> Visual Basic упрощает работу с LINQ to SQL включением реляционного конструктора объектов (O/R-конструктор). Он используется для создания в приложении модели объекта, которая сопоставляется с объектами в базе данных. Реляционный конструктор объектов также предоставляет функциональные возможности сопоставления сохраненных процедур и функций <xref:System.Data.Linq.DataContext> объекта, который управляет связью с базой данных и сохраняет состояние для проверки оптимистического параллелизма.<br /><br /> Дополнительные сведения о поставщике LINQ to SQL см. в разделе [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md). Дополнительные сведения о реляционном конструкторе объектов см. в разделе [средства LINQ to SQL в Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).|  
@@ -159,7 +160,7 @@ ms.lasthandoff: 05/04/2018
   
 ##  <a name="RelatedResources"></a> Связанные ресурсы  
   
-|Раздел|Описание|  
+|Раздел|Описание:|  
 |---|---|  
 |[XML](../../../../visual-basic/programming-guide/language-features/xml/index.md)|Описание возможностей XML в Visual Basic, можно делать запросы и которые позволяют включать XML как объекты данных первого класса в коде Visual Basic.|  
 |[Запросы](../../../../visual-basic/language-reference/queries/queries.md)|Содержит справочные сведения о предложениях запросов, которые доступны в Visual Basic.|  
@@ -189,7 +190,7 @@ ms.lasthandoff: 05/04/2018
  [Как: назначение хранимых процедур для выполнения обновления, вставки и удаления (конструктор O/R)](http://msdn.microsoft.com/library/e88224ab-ff61-4a3a-b6b8-6f3694546cac)  
   
 ## <a name="featured-book-chapters"></a>Главы в популярных книгах  
- [Глава 17: LINQ](http://go.microsoft.com/fwlink/?LinkId=195277) в [программирования Visual Basic 2008](http://go.microsoft.com/fwlink/?LinkId=195383)  
+ [Глава 17: LINQ](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff652502(v=orm.10)) в [программирования Visual Basic 2008](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff652504(v=orm.10))  
   
 ## <a name="see-also"></a>См. также  
  [Встроенный язык запросов LINQ](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)  
