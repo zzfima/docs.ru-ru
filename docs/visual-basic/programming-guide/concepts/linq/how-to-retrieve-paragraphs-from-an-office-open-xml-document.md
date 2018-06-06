@@ -2,25 +2,26 @@
 title: 'Как: извлечение абзацев из документа Office Open XML (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 66053f21-9217-473c-a6f3-a0897be07756
-ms.openlocfilehash: 241971c65bb1569e4df98bc3580dea71428dbf2b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 17d8c0fb9ecd5d3cb7a4f692d25a9f1514696117
+ms.sourcegitcommit: d8bf4976eafe3289275be3811e7cb721bfff7e1e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34753316"
 ---
-# <a name="how-to-retrieve-paragraphs-from-an-office-open-xml-document-visual-basic"></a><span data-ttu-id="e2859-102">Как: извлечение абзацев из документа Office Open XML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e2859-102">How to: Retrieve Paragraphs from an Office Open XML Document (Visual Basic)</span></span>
-<span data-ttu-id="e2859-103">В этом разделе представлен пример, открывающий документ Office Open XML и получающий коллекцию всех абзацев документа.</span><span class="sxs-lookup"><span data-stu-id="e2859-103">This topic presents an example that opens an Office Open XML document, and retrieves a collection of all of the paragraphs in the document.</span></span>  
+# <a name="how-to-retrieve-paragraphs-from-an-office-open-xml-document-visual-basic"></a><span data-ttu-id="63a04-102">Как: извлечение абзацев из документа Office Open XML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="63a04-102">How to: Retrieve Paragraphs from an Office Open XML Document (Visual Basic)</span></span>
+<span data-ttu-id="63a04-103">В этом разделе представлен пример, открывающий документ Office Open XML и получающий коллекцию всех абзацев документа.</span><span class="sxs-lookup"><span data-stu-id="63a04-103">This topic presents an example that opens an Office Open XML document, and retrieves a collection of all of the paragraphs in the document.</span></span>  
   
- <span data-ttu-id="e2859-104">Дополнительные сведения об Office Open XML см. на веб-сайте [www.openxmldeveloper.org](http://go.microsoft.com/fwlink/?LinkID=95573).</span><span class="sxs-lookup"><span data-stu-id="e2859-104">For more information on Office Open XML, see [www.openxmldeveloper.org](http://go.microsoft.com/fwlink/?LinkID=95573).</span></span>  
+ <span data-ttu-id="63a04-104">Дополнительные сведения об Office Open XML см. в разделе [Eric Технический блог](http://www.ericwhite.com).</span><span class="sxs-lookup"><span data-stu-id="63a04-104">For more information on Office Open XML, see [Eric White's Blog](http://www.ericwhite.com).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="e2859-105">Пример</span><span class="sxs-lookup"><span data-stu-id="e2859-105">Example</span></span>  
- <span data-ttu-id="e2859-106">В этом примере открывается пакет Office Open XML и используются связи внутри пакета Open XML для поиска документа и секций стилей.</span><span class="sxs-lookup"><span data-stu-id="e2859-106">This example opens an Office Open XML package, uses the relationships within the Open XML package to find the document and the style parts.</span></span> <span data-ttu-id="e2859-107">Затем в этом примере выполняется запрос к документу и создается проекция коллекции анонимного типа, содержащая узел <xref:System.Xml.Linq.XElement> абзаца, имя стиля каждого абзаца и текст каждого абзаца.</span><span class="sxs-lookup"><span data-stu-id="e2859-107">It then queries the document, projecting a collection of an anonymous type that contains the paragraph <xref:System.Xml.Linq.XElement> node, the style name of each paragraph, and the text of each paragraph.</span></span>  
+## <a name="example"></a><span data-ttu-id="63a04-105">Пример</span><span class="sxs-lookup"><span data-stu-id="63a04-105">Example</span></span>  
+ <span data-ttu-id="63a04-106">В этом примере открывается пакет Office Open XML и используются связи внутри пакета Open XML для поиска документа и секций стилей.</span><span class="sxs-lookup"><span data-stu-id="63a04-106">This example opens an Office Open XML package, uses the relationships within the Open XML package to find the document and the style parts.</span></span> <span data-ttu-id="63a04-107">Затем в этом примере выполняется запрос к документу и создается проекция коллекции анонимного типа, содержащая узел <xref:System.Xml.Linq.XElement> абзаца, имя стиля каждого абзаца и текст каждого абзаца.</span><span class="sxs-lookup"><span data-stu-id="63a04-107">It then queries the document, projecting a collection of an anonymous type that contains the paragraph <xref:System.Xml.Linq.XElement> node, the style name of each paragraph, and the text of each paragraph.</span></span>  
   
- <span data-ttu-id="e2859-108">В этом примере используется метод расширения с именем `StringConcatenate`, который также показан в примере.</span><span class="sxs-lookup"><span data-stu-id="e2859-108">The example uses an extension method named `StringConcatenate`, which is also supplied in the example.</span></span>  
+ <span data-ttu-id="63a04-108">В этом примере используется метод расширения с именем `StringConcatenate`, который также показан в примере.</span><span class="sxs-lookup"><span data-stu-id="63a04-108">The example uses an extension method named `StringConcatenate`, which is also supplied in the example.</span></span>  
   
- <span data-ttu-id="e2859-109">Подробный учебник, в котором описывается, как работает этот пример, в разделе [чисто функциональные преобразования XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/pure-functional-transformations-of-xml.md).</span><span class="sxs-lookup"><span data-stu-id="e2859-109">For a detailed tutorial that explains how this example works, see [Pure Functional Transformations of XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/pure-functional-transformations-of-xml.md).</span></span>  
+ <span data-ttu-id="63a04-109">Подробный учебник, в котором описывается, как работает этот пример, в разделе [чисто функциональные преобразования XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/pure-functional-transformations-of-xml.md).</span><span class="sxs-lookup"><span data-stu-id="63a04-109">For a detailed tutorial that explains how this example works, see [Pure Functional Transformations of XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/pure-functional-transformations-of-xml.md).</span></span>  
   
- <span data-ttu-id="e2859-110">В этом примере используются классы, находящиеся в сборке WindowsBase.</span><span class="sxs-lookup"><span data-stu-id="e2859-110">This example uses classes found in the WindowsBase assembly.</span></span> <span data-ttu-id="e2859-111">Используются типы из пространства имен <xref:System.IO.Packaging?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="e2859-111">It uses types in the <xref:System.IO.Packaging?displayProperty=nameWithType> namespace.</span></span>  
+ <span data-ttu-id="63a04-110">В этом примере используются классы, находящиеся в сборке WindowsBase.</span><span class="sxs-lookup"><span data-stu-id="63a04-110">This example uses classes found in the WindowsBase assembly.</span></span> <span data-ttu-id="63a04-111">Используются типы из пространства имен <xref:System.IO.Packaging?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="63a04-111">It uses types in the <xref:System.IO.Packaging?displayProperty=nameWithType> namespace.</span></span>  
   
 ```vb  
 Imports <xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">  
@@ -151,7 +152,7 @@ Module Module1
 End Module  
 ```  
   
- <span data-ttu-id="e2859-112">При запуске с образец откройте XML-документа, описанной в [создания источника Office Open XML-документа (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md), в этом примере выводятся следующие данные:</span><span class="sxs-lookup"><span data-stu-id="e2859-112">When run with the sample Open XML document described in [Creating the Source Office Open XML Document (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md), this example produces the following output:</span></span>  
+ <span data-ttu-id="63a04-112">При запуске с образец откройте XML-документа, описанной в [создания источника Office Open XML-документа (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md), в этом примере выводятся следующие данные:</span><span class="sxs-lookup"><span data-stu-id="63a04-112">When run with the sample Open XML document described in [Creating the Source Office Open XML Document (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md), this example produces the following output:</span></span>  
   
 ```  
 StyleName:Heading1 >Parsing WordprocessingML with LINQ to XML<  
@@ -171,5 +172,5 @@ StyleName:Normal ><
 StyleName:Code >Hello World<  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="e2859-113">См. также</span><span class="sxs-lookup"><span data-stu-id="e2859-113">See Also</span></span>  
- [<span data-ttu-id="e2859-114">Дополнительные способы создания запросов (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e2859-114">Advanced Query Techniques (LINQ to XML) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)
+## <a name="see-also"></a><span data-ttu-id="63a04-113">См. также</span><span class="sxs-lookup"><span data-stu-id="63a04-113">See Also</span></span>  
+ [<span data-ttu-id="63a04-114">Дополнительные способы создания запросов (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="63a04-114">Advanced Query Techniques (LINQ to XML) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)
