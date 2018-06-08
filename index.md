@@ -5,11 +5,12 @@ hide_bc: true
 title: Документация по .NET
 description: Сведения об использовании .NET для создания различных приложений на любой платформе с помощью C#, Visual Basic и F#. Ознакомьтесь со справочником по API, образцами кода, учебниками и другими материалами.
 ms.custom: updateeachrelease
-ms.openlocfilehash: f5967e21fcda580635dd53f976e2e5dabc0fbce8
-ms.sourcegitcommit: ff1d40507b3eb6e2185478e37c66c66be6de46f1
+ms.openlocfilehash: 25f01910ba6f004cafbe8b981e4a986791044ded
+ms.sourcegitcommit: d955cb4c681d68cf301d410925d83f25172ece86
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/11/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34826986"
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -392,13 +393,13 @@ ms.lasthandoff: 05/11/2018
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                    <img src="/dotnet/images/hub/net-docs-cloud-2.svg" alt="" />
+                                                    <img src="/dotnet/images/hub/net-docs-cloud-4.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <a href="/azure/cloud-services/cloud-services-dotnet-get-started">
-                                                    <h3>Облачные службы Azure и ASP.NET</h3>
-                                                    <p>Сведения о настройке, мониторинге и масштабировании облачных служб в Azure.</p>
+                                                <a href="/azure/storage/">
+                                                    <h3>Хранилище Azure</h3>
+                                                    <p>Сведения о службе хранилища Azure и создании приложений с помощью BLOB-объектов, таблиц, очередей и файлов Azure.</p>
                                                 </a>
                                             </div>
                                         </div>
@@ -418,25 +419,6 @@ ms.lasthandoff: 05/11/2018
                                                 <a href="/dotnet/fsharp/using-fsharp-on-azure">
                                                     <h3>Использование языка F# в Azure</h3>
                                                     <p>Сведения об использовании разных служб Azure на F#, таких как служба хранилища Azure, облачные службы и функции Azure.</p>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="cardSize">
-                                    <div class="cardPadding">
-                                        <div class="card">
-                                            <div class="cardImageOuter">
-                                                <div class="cardImage bgdAccent1">
-                                                    <img src="/dotnet/images/hub/net-docs-cloud-4.svg" alt="" />
-                                                </div>
-                                            </div>
-                                            <div class="cardText">
-                                                <a href="/azure/storage/">
-                                                    <h3>Хранилище Azure</h3>
-                                                    <p>Сведения о службе хранилища Azure и создании приложений с помощью BLOB-объектов, таблиц, очередей и файлов Azure.</p>
                                                 </a>
                                             </div>
                                         </div>
