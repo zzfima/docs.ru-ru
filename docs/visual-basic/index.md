@@ -6,11 +6,12 @@ helpviewer_keywords:
 - Visual Basic
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ce1c9aa868636181a8dd4e59e61d3ed82c89c217
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 03c9c118104f6fe3196d0a4bb13d28a6a122d859
+ms.sourcegitcommit: fc70fcb9c789b6a4aefcdace46f3643fd076450f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "34805546"
 ---
 # <a name="visual-basic-guide"></a>Руководство по Visual Basic
 
@@ -51,5 +52,5 @@ Visual Basic предназначен для эффективного созда
  [Начало разработки в Visual Studio](/visualstudio/ide/get-started-developing-with-visual-studio)  
  Ссылки на разделы об основах Visual Studio.  
   
- [Библиотека классов .NET Framework](http://go.microsoft.com/fwlink/?LinkID=227195)  
+ [Браузер API .NET](../../api/index.md)  
  Содержит вводные данные о библиотеке классов, интерфейсах и типах значений, включенных в Microsoft [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] SDK.
