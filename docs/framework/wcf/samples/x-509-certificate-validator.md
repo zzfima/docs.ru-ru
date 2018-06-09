@@ -2,11 +2,12 @@
 title: Проверяющий элемент управления для сертификатов X.509
 ms.date: 03/30/2017
 ms.assetid: 3b042379-02c4-4395-b927-e57c842fd3e0
-ms.openlocfilehash: 3d9aa14af3ded11bcd373f38656763036e83b0bf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 911b6db28f89f7a4266ef1b23246020cd0381ada
+ms.sourcegitcommit: 2ad7d06f4f469b5d8a5280ac0e0289a81867fc8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35231532"
 ---
 # <a name="x509-certificate-validator"></a>Проверяющий элемент управления для сертификатов X.509
 В этом образце показано, как реализовать пользовательский проверяющий элемент управления для сертификатов X.509. Это бывает полезным в случаях, когда ни один из встроенных режимов проверки сертификатов X.509 не соответствует требованиям приложения. В этом образце показана служба, содержащая пользовательский проверяющий элемент управления, который принимает самостоятельно выданные сертификаты. Клиент использует такие сертификаты для проверки подлинности службы.  
@@ -148,7 +149,7 @@ ms.lasthandoff: 05/04/2018
   
  Реализация клиента задает используемый сертификат клиента.  
   
-```  
+```csharp
 // Create a client with Certificate endpoint configuration  
 CalculatorClient client = new CalculatorClient("Certificate");  
 try  
@@ -199,7 +200,7 @@ catch (Exception e)
   
  В этом образце для проверки сертификатов используется пользовательский элемент X509CertificateValidator. В образце реализуется элемент CustomX509CertificateValidator, унаследованный от <xref:System.IdentityModel.Selectors.X509CertificateValidator>. Дополнительные сведения см. в документации по <xref:System.IdentityModel.Selectors.X509CertificateValidator>. В данном образце пользовательского элемента управления реализуется метод Validate, принимающий все выданные самостоятельно сертификаты X.509, как показано в следующем фрагменте кода.  
   
-```  
+```csharp
 public class CustomX509CertificateValidator : X509CertificateValidator  
 {  
   public override void Validate ( X509Certificate2 certificate )  
@@ -213,7 +214,7 @@ public class CustomX509CertificateValidator : X509CertificateValidator
   
  После реализации в коде службы проверяющего элемента управления необходимо проинформировать узел службы о проверяющем элементе управления, который следует использовать. Для этого можно воспользоваться следующим фрагментом кода.  
   
-```  
+```csharp
 serviceHost.Credentials.ClientCertificate.Authentication.CertificateValidationMode = X509CertificateValidationMode.Custom;  
 serviceHost.Credentials.ClientCertificate.Authentication.CustomCertificateValidator = new CustomX509CertificateValidator();  
 ```  
@@ -257,7 +258,7 @@ serviceHost.Credentials.ClientCertificate.Authentication.CustomCertificateValida
   
      Следующие строки из файла Setup.bat создают используемый в дальнейшем сертификат сервера. Переменная %SERVER_NAME% задает имя сервера. Измените эту переменную, чтобы задать собственное имя сервера. Значением по умолчанию является localhost.  
   
-    ```  
+    ```bash  
     echo ************  
     echo Server cert setup starting  
     echo %SERVER_NAME%  
@@ -271,7 +272,7 @@ serviceHost.Credentials.ClientCertificate.Authentication.CustomCertificateValida
   
      Следующие строки из файла Setup.bat копируют сертификат сервера в хранилище доверенных лиц клиента. Этот шаг является обязательным, поскольку сертификаты, созданные с помощью программы Makecert.exe, не получают неявного доверия со стороны клиентской системы. Если уже имеется сертификат, имеющий доверенный корневой сертификат клиента, например сертификат, выпущенный корпорацией Майкрософт, выполнять этот шаг по добавлению сертификата сервера в хранилище сертификатов клиента не требуется.  
   
-    ```  
+    ```bash  
     certmgr.exe -add -r LocalMachine -s My -c -n %SERVER_NAME% -r CurrentUser -s TrustedPeople  
     ```  
   
@@ -281,7 +282,7 @@ serviceHost.Credentials.ClientCertificate.Authentication.CustomCertificateValida
   
      Сертификат хранится в хранилище "My store" (Личном хранилище) в расположении CurrentUser.  
   
-    ```  
+    ```bash  
     echo ************  
     echo Client cert setup starting  
     echo %USER_NAME%  
@@ -295,7 +296,7 @@ serviceHost.Credentials.ClientCertificate.Authentication.CustomCertificateValida
   
      Следующие строки из файла Setup.bat копируют сертификат клиента в хранилище доверенных лиц. Этот шаг является обязательным, поскольку сертификаты, созданные с помощью программы Makecert.exe, не получают неявного доверия со стороны серверной системы. Если уже имеется сертификат, имеющий доверенный корневой сертификат клиента, например сертификат, выпущенный корпорацией Майкрософт, выполнять этот шаг по добавлению сертификата клиента в хранилище сертификатов сервера не требуется.  
   
-    ```  
+    ```bash  
     certmgr.exe -add -r CurrentUser -s My -c -n %USER_NAME% -r LocalMachine -s TrustedPeople  
     ```  
   
