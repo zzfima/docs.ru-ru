@@ -7,10 +7,11 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33562340"
 ---
 # <a name="do-bindings"></a>Привязки do
 
-Привязка `do` используется для выполнения кода без определения функции или значения. Кроме того, привязки `do` можно использовать в классах см [ привязки `do` в классах](../members/do-bindings-in-classes.md).
+Привязка `do` используется для выполнения кода без определения функции или значения. Кроме того, привязки `do` можно использовать в классах см [привязки `do` в классах](../members/do-bindings-in-classes.md).
 
 
 ## <a name="syntax"></a>Синтаксис
