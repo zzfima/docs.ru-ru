@@ -3,11 +3,12 @@ title: System.Delegate и ключевое слово `delegate`
 description: Сведения о классах в .NET Framework, поддерживающих делегаты, а также их сопоставление с ключевым словом delegate.
 ms.date: 06/20/2016
 ms.assetid: f3742fda-13c2-4283-8966-9e21c2674393
-ms.openlocfilehash: 2265d081b884a19cda6fc9d80a0f621a30c87e2a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 39dca1053f87a5059bdc60f8b722091ba991cbd5
+ms.sourcegitcommit: d955cb4c681d68cf301d410925d83f25172ece86
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34827304"
 ---
 # <a name="systemdelegate-and-the-delegate-keyword"></a>System.Delegate и ключевое слово `delegate`
 
@@ -77,10 +78,8 @@ int result = comparator(left, right);
 Предположим, требуется отсортировать список строк по их длине. Функция сравнения может выглядеть следующим образом:
 
 ```csharp
-private static int CompareLength(string left, string right)
-{
-    return left.Length.CompareTo(right.Length);
-}
+private static int CompareLength(string left, string right) =>
+    left.Length.CompareTo(right.Length);
 ```
 
 Метод объявляется как закрытый метод. Все правильно. Вам может быть не нужно, чтобы этот метод был частью общедоступного интерфейса. Этот метод, присоединенный к делегату, по-прежнему можно использовать в качестве метода сравнения. В вызывающем коде этот метод будет присоединен к целевому списку объекта делегата и будет доступен через этот делегат.

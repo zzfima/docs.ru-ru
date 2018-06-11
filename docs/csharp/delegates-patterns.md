@@ -3,11 +3,12 @@ title: Общие шаблоны делегатов
 description: Сведения об общих шаблонах, позволяющих использовать делегаты в коде и избежать возникновения сильных взаимозависимостей между компонентами.
 ms.date: 06/20/2016
 ms.assetid: 0ff8fdfd-6a11-4327-b061-0f2526f35b43
-ms.openlocfilehash: b9762841656aa362589d01ed011407aeedfe4a20
-ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
+ms.openlocfilehash: 20d55a1aba345b962c506bbc3f82248a817923ea
+ms.sourcegitcommit: d955cb4c681d68cf301d410925d83f25172ece86
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/17/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34827024"
 ---
 # <a name="common-patterns-for-delegates"></a>Общие шаблоны делегатов
 
@@ -53,32 +54,15 @@ public static IEnumerable<TSource> Where<TSource> (this IEnumerable<TSource> sou
 
 Начнем с малого: начальная реализация будет принимать новые сообщения и записывать их с помощью любого подключенного делегата. Можно начать с одного делегата, который записывает сообщения в консоль.
 
-```csharp
-public static class Logger
-{
-    public static Action<string> WriteMessage;
-    
-    public static void LogMessage(string msg)
-    {
-        WriteMessage(msg);
-    }
-}
-```
+[!code-csharp[LoggerImplementation](../../samples/csharp/delegates-and-events/Logger.cs#FirstImplementation "A first Logger implementation.")]
 
 Приведенный выше статический класс содержит только самое необходимое для работы. Нам нужно создать единственную реализацию метода, который записывает сообщения в консоль. 
 
-```csharp
-public static void LogToConsole(string message)
-{
-    Console.Error.WriteLine(message);
-}
-```
+[!code-csharp[LogToConsole](../../samples/csharp/delegates-and-events/Program.cs#LogToConsole "A Console logger.")]
 
 Наконец, необходимо подключить делегат к делегату WriteMessage, объявленному в средстве ведения журнала.
 
-```csharp
-Logger.WriteMessage += LogToConsole;
-```
+[!code-csharp[ConnectDelegate](../../samples/csharp/delegates-and-events/Program.cs#ConnectDelegate "Connect to the delegate")]
 
 ## <a name="practices"></a>Рекомендации
 
@@ -94,49 +78,13 @@ Logger.WriteMessage += LogToConsole;
 
 Затем добавим в метод `LogMessage()` несколько аргументов, чтобы класс журнала создавал более структурированные сообщения.
 
-```csharp
-// Logger implementation two
-public enum Severity
-{
-    Verbose,
-    Trace,
-    Information,
-    Warning,
-    Error,
-    Critical
-}
-
-public static class Logger
-{
-    public static Action<string> WriteMessage;
-    
-    public static void LogMessage(Severity s, string component, string msg)
-    {
-        var outputMsg = $"{DateTime.Now}\t{s}\t{component}\t{msg}";
-        WriteMessage(outputMsg);
-    }
-}
-```
+[!code-csharp[Severity](../../samples/csharp/delegates-and-events/Logger.cs#Severity "Define severities")]
+[!code-csharp[NextLogger](../../samples/csharp/delegates-and-events/Logger.cs#LoggerTwo "Refine the Logger")]
 
 Далее используем аргумент `Severity` для фильтрации сообщений, отправляемых в место вывода журнала. 
 
-```csharp
-public static class Logger
-{
-    public static Action<string> WriteMessage;
-    
-    public static Severity LogLevel {get;set;} = Severity.Warning;
-    
-    public static void LogMessage(Severity s, string component, string msg)
-    {
-        if (s < LogLevel)
-            return;
-            
-        var outputMsg = $"{DateTime.Now}\t{s}\t{component}\t{msg}";
-        WriteMessage(outputMsg);
-    }
-}
-```
+[!code-csharp[FinalLogger](../../samples/csharp/delegates-and-events/Logger.cs#LoggerFinal "Finish the Logger")]
+
 ## <a name="practices"></a>Рекомендации
 
 Вы добавили новые функции в инфраструктуру ведения журналов. Так как компонент logger очень слабо связан с любым из механизмов вывода, эти функции можно добавлять без влияния на код, в котором реализуется делегат logger.
@@ -149,41 +97,12 @@ public static class Logger
 
 Вот это средство ведения журнала на основе файла:
 
-```csharp
-public class FileLogger
-{
-    private readonly string logPath;
-    public FileLogger(string path)
-    {
-        logPath = path;
-        Logger.WriteMessage += LogMessage;
-    }
-    
-    public void DetachLog() => Logger.WriteMessage -= LogMessage;
+[!code-csharp[FileLogger](../../samples/csharp/delegates-and-events/FileLogger.cs#FileLogger "Log to files")]
 
-    // make sure this can't throw.
-    private void LogMessage(string msg)
-    {
-        try {
-            using (var log = File.AppendText(logPath))
-            {
-                log.WriteLine(msg);
-                log.Flush();
-            }
-        } catch (Exception e)
-        {
-            // Hmm. Not sure what to do.
-            // Logging is failing...
-        }
-    }
-}
-```
 
 После создания этого класса можно создать его экземпляр, и он подключит свой метод LogMessage к компоненту Logger:
 
-```csharp
-var file = new FileLogger("log.txt");
-```
+[!code-csharp[FileLogger](../../samples/csharp/delegates-and-events/Program.cs#FileLogger "Log to files")]
 
 Эти два метода не являются взаимоисключающими. Вы можете подключить оба метода ведения журнала, чтобы сообщения создавались как в консоли, так и в файле.
 
