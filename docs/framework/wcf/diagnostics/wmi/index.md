@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33805945"
 ---
 # <a name="using-windows-management-instrumentation-for-diagnostics"></a>Использование Windows Management Instrumentation для диагностики
 Windows Communication Foundation (WCF) предоставляет данные проверки службы во время выполнения посредством поставщика WCF инструментария управления Windows (WMI).  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33656338"
 ---
 # <a name="auto-implemented-properties-visual-basic"></a>Автоматически реализуемые свойства (Visual Basic)
 *Автоматически реализуемые свойства* позволяют быстро задать свойство класса без необходимости написания кода для `Get` и `Set` свойства. При написании кода для автоматически реализуемого свойства компилятор Visual Basic автоматически создает закрытое поле для хранения переменной свойства, в дополнение к созданию связанных процедур `Get` и `Set`.  

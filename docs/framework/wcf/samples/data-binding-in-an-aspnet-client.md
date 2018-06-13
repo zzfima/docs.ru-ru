@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33804996"
 ---
 # <a name="data-binding-in-an-aspnet-client"></a>Привязка данных в клиенте ASP.NET
 В этом примере показано, как выполнить привязку данных, возвращаемых обычной службы Windows Communication Foundation (WCF) в приложении веб-форм.  

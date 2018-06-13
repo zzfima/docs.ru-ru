@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33638489"
 ---
 # <a name="file-information-cannot-be-queried-if-the-file-does-not-exist"></a>Невозможно запросить сведения о файле, если он не существует
 Предпринята попытка запроса объекта <xref:System.IO.FileInfo> для получения сведений о файле, который не существует. Обычно это связано с ошибкой при указании имени файла.  

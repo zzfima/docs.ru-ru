@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33804382"
 ---
 # <a name="data-binding-in-a-windows-forms-client"></a>Привязка данных в клиенте Windows Forms
 В этом примере показано, как выполнить привязку данных, возвращенных службой Windows Communication Foundation (WCF), в приложении Windows Forms.  

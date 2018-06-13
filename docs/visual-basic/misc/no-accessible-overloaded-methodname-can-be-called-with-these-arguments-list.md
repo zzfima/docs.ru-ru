@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33637991"
 ---
 # <a name="no-accessible-overloaded-39ltmethodnamegt39-can-be-called-with-these-arguments-ltlistgt"></a>Ни один из доступных перегруженных &#39; &lt;имя_метода&gt; &#39; может вызываться с этими аргументами: &lt;списка&gt;
 Вызывается перегруженный метод, однако списку указанных аргументов не соответствует ни один метод.  

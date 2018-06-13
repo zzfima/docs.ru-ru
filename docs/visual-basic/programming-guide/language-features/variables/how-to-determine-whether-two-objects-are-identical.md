@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33650102"
 ---
 # <a name="how-to-determine-whether-two-objects-are-identical-visual-basic"></a>Практическое руководство. Определение идентичности двух объектов (Visual Basic)
 В Visual Basic две ссылки на переменные считаются идентичными, если их указатели совпадают, то есть, если обе переменные указывают на один и тот же экземпляр класса в памяти. Например, в приложении Windows Forms, может потребоваться провести сравнение для определения ли текущий экземпляр (`Me`) совпадает со значением конкретного экземпляра, такие как `Form2`.  

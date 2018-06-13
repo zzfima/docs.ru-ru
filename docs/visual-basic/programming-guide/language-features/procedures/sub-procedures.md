@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33652569"
 ---
 # <a name="sub-procedures-visual-basic"></a>Подпрограммы (Visual Basic)
 Объект `Sub` процедура — это последовательность операторов Visual Basic, заключенным в `Sub` и `End Sub` инструкции. `Sub` Процедура выполняет задачу и возвращает управление вызывающему коду, но не возвращает значение вызывающему коду.  

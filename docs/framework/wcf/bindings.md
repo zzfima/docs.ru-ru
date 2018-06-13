@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803599"
 ---
 # <a name="windows-communication-foundation-bindings"></a>Привязки Windows Communication Foundation
 Привязки указывают, как конечную точку службы Windows Communication Foundation (WCF) взаимодействует с другими конечными точками. В привязке должен быть указан как минимум используемый транспорт (например, HTTP или TCP). Через привязки также можно задать другие характеристики, такие как поддержка безопасности и транзакций.  

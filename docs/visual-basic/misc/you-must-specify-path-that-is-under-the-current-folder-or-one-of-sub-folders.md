@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33639501"
 ---
 # <a name="you-must-specify-a-path-that-is-under-the-current-folder-or-one-of-its-sub-folders"></a>Необходимо указать путь, который находится в текущей папке или в одной из ее вложенных папок
 Указанный путь не находится в текущем каталоге. Это может быть результатом неправильного анализа пути к файлу при указании относительного пути.  

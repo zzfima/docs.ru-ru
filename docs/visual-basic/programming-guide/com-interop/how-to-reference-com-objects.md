@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33643956"
 ---
 # <a name="how-to-reference-com-objects-from-visual-basic"></a>Практическое руководство. Ссылка на COM-объект в Visual Basic
 В Visual Basic Добавление ссылок на COM-объекты, имеющие библиотеки типов требует создания сборки взаимодействия для COM-библиотеки. Ссылки на члены объекта COM направляются в сборку взаимодействия и пересылаются на фактическое COM-объект. Ответы из COM-объекта направляются в сборку взаимодействия и пересылаются в вашей [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] приложения.  

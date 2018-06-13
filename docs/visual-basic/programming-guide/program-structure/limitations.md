@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33649933"
 ---
 # <a name="visual-basic-limitations"></a>Ограничения в Visual Basic
 Более ранних версиях Visual Basic накладывались ограничения на код, например длина имени переменной, количество переменных в модуле и размер модуля. В Visual Basic .NET эти ограничения были ослаблены, предоставляя большую свободу в написании и упорядочении кода.  

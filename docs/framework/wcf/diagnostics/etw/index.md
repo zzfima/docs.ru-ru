@@ -11,6 +11,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809268"
 ---
 # <a name="analytic-tracing-with-etw"></a>Аналитическое отслеживание ETW
 Windows Communication Foundation (WCF) аналитическая трассировка обеспечивает отслеживание диагностической информации во время выполнения службы WCF. События аналитического отслеживания WCF передаются в ключевых точках стека WCF и позволяющие отлаживать службы WCF в рабочей среде. Аналитическая трассировка служб WCF не влияли на производительность рабочего сервера, на котором размещена [!INCLUDE[netfx_current_long](../../../../../includes/netfx-current-long-md.md)] службы WCF, как эти события эффективно передаются в сеанс событий трассировки для Windows (ETW).  

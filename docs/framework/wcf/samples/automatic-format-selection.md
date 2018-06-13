@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803950"
 ---
 # <a name="automatic-format-selection"></a>Автоматический выбор формата
 Этот образец демонстрирует Включение автоматического выбора формата (XML или JSON) при использовании REST Windows Communication Foundation (WCF), программирование модели, а также явное задание формата в коде операции.  

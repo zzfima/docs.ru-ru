@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33643004"
 ---
 # <a name="how-to-find-an-element-with-a-specific-attribute-visual-basic"></a>Как: найти элемент с определенным атрибутом (Visual Basic)
 В этом разделе показан поиск элемента, имеющего атрибут с определенным значением.  

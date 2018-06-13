@@ -12,6 +12,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33808056"
 ---
 # <a name="fundamental-windows-communication-foundation-concepts"></a>Основные понятия Windows Communication Foundation
 В этом документе показано высокоуровневое представление архитектуры Windows Communication Foundation (WCF). В нем приводится объяснение ключевых понятий и их взаимосвязь. Учебник по созданию простой версии клиента и службы WCF см. в разделе [учебник по началу работы](../../../docs/framework/wcf/getting-started-tutorial.md). Для получения Программирование WCF см [базовое Программирование WCF](../../../docs/framework/wcf/basic-wcf-programming.md).  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33637070"
 ---
 # <a name="cannot-convert-start-value-of-type-39lttype1gt39-and-step-value-of-type-39lttype2gt39-to-a-common-type"></a>Невозможно привести начальное значение типа &#39; &lt;тип1&gt; &#39; и значение шага типа &#39; &lt;тип2&gt; &#39; в общий тип
 Указанные управляющие значения `For...Next` имеют разные типы и, следовательно, недопустимы, так как не могут быть преобразованы в общий тип.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33647154"
 ---
 # <a name="retrieving-the-text-of-the-paragraphs-visual-basic"></a>Извлечение текста абзацев (Visual Basic)
 Этот пример основан на предыдущем примере [извлечение абзацев и их стили (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/retrieving-the-paragraphs-and-their-styles.md). В этом примере текст каждого абзаца получается в строку.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803004"
 ---
 # <a name="transfer"></a>Transfer
 В этом разделе описывается перенаправление в модели трассировки действий Windows Communication Foundation (WCF).  

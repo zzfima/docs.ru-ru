@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33652813"
 ---
 # <a name="walkthrough-declaring-and-raising-events-visual-basic"></a>Пошаговое руководство. Объявление и создание событий (Visual Basic)
 В этом пошаговом руководстве демонстрируется объявление и вызов событий для класса с именем `Widget`. После выполнения шагов можно ознакомиться с разделом дополнительное [Пошаговое руководство: обработка событий](../../../../visual-basic/programming-guide/language-features/events/walkthrough-handling-events.md), который показывает, как использовать события из `Widget` объектов для предоставления сведений о состоянии в приложении.  

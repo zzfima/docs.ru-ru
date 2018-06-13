@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33807987"
 ---
 # <a name="tracing-and-message-logging"></a>Трассировка и ведение журнала сообщений
 В этом образце показано, как включить трассировку и ведение журнала сообщений. Полученный трассировки и журналы сообщений просматриваются с помощью [программы Service Trace Viewer (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md). Этот пример построен на [Приступая к работе](../../../../docs/framework/wcf/samples/getting-started-sample.md).  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33655275"
 ---
 # <a name="events-visual-basic"></a>События (Visual Basic)
 Хотя проект Visual Studio может представить как набор процедур, выполняемых в определенной последовательности, на самом деле, большинство программ управляются событиями, то есть поток выполнения определяется внешнего события, возникающие в вызове *события*.  

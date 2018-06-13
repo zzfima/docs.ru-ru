@@ -25,6 +25,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33656169"
 ---
 # <a name="implicit-and-explicit-conversions-visual-basic"></a>Явные и неявные преобразования (Visual Basic)
 *Неявное преобразование* не требует специального синтаксиса в исходном коде. В следующем примере Visual Basic неявно преобразует значение `k` значение с плавающей запятой одиночной точности перед назначением их `q`.  

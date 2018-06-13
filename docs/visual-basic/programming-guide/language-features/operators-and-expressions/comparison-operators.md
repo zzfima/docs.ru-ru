@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33655147"
 ---
 # <a name="comparison-operators-in-visual-basic"></a>Comparison Operators in Visual Basic
 Операторы сравнения сравнивают два выражения и возвращают `Boolean` значение, которое представляет связь между значениями. Существуют операторы для сравнения числовых значений, операторы для сравнения строк и операторы для сравнения объектов. Ниже представлено описание всех трех типов операторов.  

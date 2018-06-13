@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809008"
 ---
 # <a name="debugging-on-the-client"></a>Отладка в клиенте
 Чтобы упростить для пользователей, для создания клиентских приложений для службы WCF, можно добавить [ \<serviceDebug >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicedebug.md) службу поведение файла конфигурации службы. Это поведение может использоваться для публикации страниц справки и возвращения информации об управляемых исключениях в сведениях ошибок SOAP, возвращаемых клиенту.

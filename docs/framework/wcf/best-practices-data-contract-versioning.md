@@ -12,6 +12,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33808540"
 ---
 # <a name="best-practices-data-contract-versioning"></a>Рекомендации. Управление версиями контракта данных
 В данном разделе приводятся рекомендации по созданию контрактов данных, которые можно легко развить со временем. Дополнительные сведения о контрактах данных см. в разделах в [использование контрактов данных](../../../docs/framework/wcf/feature-details/using-data-contracts.md).  

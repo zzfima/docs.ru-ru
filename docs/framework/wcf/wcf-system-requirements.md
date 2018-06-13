@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33804190"
 ---
 # <a name="wcf-system-requirements"></a>Требования WCF к системе
 Windows Communication Foundation (WCF) является инфраструктурой связи, используемый для создания распределенных приложений. Ниже перечислены требования, которые позволяют WCF для запуска.  

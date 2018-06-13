@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33647392"
 ---
 # <a name="character-data-types-visual-basic"></a>Символьные типы данных (Visual Basic)
 Visual Basic предоставляет *символьные типы данных* работать с печатными отображаемую символами и. Оба они работают с символами Юникода, `Char` содержит один символ, в то время как `String` содержит неопределенное число символов.  

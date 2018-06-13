@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33807038"
 ---
 # <a name="wcf-service-host-wcfsvchostexe"></a>Узел службы WCF (WcfSvcHost.exe)
 Узел службы Windows Communication Foundation (WCF) (WcfSvcHost.exe) делает возможным запуск отладчика Visual Studio (F5) для автоматического размещения и проверки службы, реализованный. Затем можно проверить службу, используя тестовый клиент WCF (WcfTestClient.exe) или своего собственного клиента для поиска и устранения потенциальных ошибок.  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33805776"
 ---
 # <a name="how-to-restrict-access-with-the-principalpermissionattribute-class"></a>Практическое руководство. Ограничение доступа с использованием класса PrincipalPermissionAttribute
 Управление доступом к ресурсам компьютера Windows-домена - это базовая задача обеспечения безопасности. Например, только определенные пользователи должны иметь возможность просматривать конфиденциальные данные, такие как платежные ведомости. В этом разделе рассматривается, как ограничить доступ к методу, потребовав, чтобы пользователь принадлежал к заранее заданной группе. Работающий пример см. в разделе [авторизации доступа к операциям службы](../../../docs/framework/wcf/samples/authorizing-access-to-service-operations.md).  

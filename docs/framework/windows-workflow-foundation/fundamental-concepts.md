@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33805997"
 ---
 # <a name="fundamental-windows-workflow-concepts"></a>Основные понятия рабочих процессов Windows
 При разработке рабочих процессов в [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] используются концепции, которые могут быть незнакомы некоторым разработчикам. В этом разделе описаны некоторые концепции, а также их реализация.  

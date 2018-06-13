@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33805750"
 ---
 # <a name="reliable-secure-profile"></a>Надежный защищенный профиль
 В этом примере показано, как составлять WCF и [надежному защищенному профилю](http://go.microsoft.com/fwlink/?LinkId=178140) (RSP). Этот образец демонстрирует реализацию [Создание подключения](http://go.microsoft.com/fwlink/?LinkId=178141) канала, который может формироваться вместе с надежного обмена сообщениями и при необходимости безопасного канала для создания надежных защищенную привязку на основе RSP спецификации.  

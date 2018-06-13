@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33636097"
 ---
 # <a name="cast-from-type-39lttypename1gt39-to-type-39lttypename2gt39-is-not-valid"></a>Преобразование из типа &#39; &lt;Имя_типа1&gt; &#39; ввода &#39; &lt;имя_типа2&gt; &#39; является недопустимым
 Предпринята попытка недопустимого преобразования переменной из одного типа в другой.  

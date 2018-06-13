@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33655867"
 ---
 # <a name="objects-and-classes-in-visual-basic"></a>Объекты и классы Visual Basic
 *Объект* представляет собой сочетание кода и данных, которое рассматривается как единое целое. Объект может быть частью приложения, как, например, элемент управления или форма. Также объектом может являться само приложение в целом.

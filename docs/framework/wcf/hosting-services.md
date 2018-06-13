@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33807857"
 ---
 # <a name="hosting-services"></a>Размещение служб
 Для активации службы ее необходимо разместить в среде выполнения, которая создает эту службу и управляет ее контекстом и временем существования. Службы Windows Communication Foundation (WCF) предназначены для выполнения в любом процессе Windows, который поддерживает управляемый код.  

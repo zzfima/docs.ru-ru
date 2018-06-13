@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33644190"
 ---
 # <a name="walkthrough-embedding-types-from-managed-assemblies-in-visual-studio-visual-basic"></a>Пошаговое руководство: Внедрение типов из управляемых сборок в Visual Studio (Visual Basic)
 Внедряя сведения о типе из управляемой сборки со строгим именем, можно свободно объединять типы в приложении, делая версию независимой. Это означает, что в программе можно использовать типы из нескольких версий управляемой библиотеки, т. е. необходимость компилировать каждую версию отдельно отпадает.  

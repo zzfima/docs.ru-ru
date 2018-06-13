@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33638321"
 ---
 # <a name="method-39ltmethodnamegt39-has-no-parameter-named-39ltparameternamegt39"></a>Метод &#39; &lt;имя_метода&gt; &#39; не имеет параметра &#39; &lt;имя_параметра&gt;&#39;
 Указанный именованный аргумент не соответствует ни одному из аргументов целевого метода.  

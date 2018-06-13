@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33656036"
 ---
 # <a name="visual-basic-compiler-options-listed-alphabetically"></a>Параметры компилятора Visual Basic в алфавитном порядке
 Компилятор командной строки Visual Basic служит альтернативой программам компиляции в среде разработки Visual Studio (IDE). Ниже приведен список параметров компилятора командной строки Visual Basic, отсортированный в алфавитном порядке.  

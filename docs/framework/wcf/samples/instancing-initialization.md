@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33807926"
 ---
 # <a name="instancing-initialization"></a>Инициализация создания экземпляров
 В этом примере расширяет [Pooling](../../../../docs/framework/wcf/samples/pooling.md) образец путем определения интерфейса `IObjectControl`, который настраивает инициализации объекта, активация и деактивация его. Клиент вызывает методы, которые возвращают объект в пул и не возвращают объект в пул.  
