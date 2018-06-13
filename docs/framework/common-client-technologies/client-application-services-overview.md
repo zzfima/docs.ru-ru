@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32744500"
 ---
 # <a name="client-application-services-overview"></a>Общие сведения о службах клиентских приложений
 Службы клиентских приложений предоставляют упрощенный доступ к службам входа, ролей и профилей [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] из приложений Windows Forms и Windows Presentation Foundation (WPF). Службы приложений [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] включены в расширения Microsoft ASP.NET 2.0 AJAX, которые входят в состав [!INCLUDE[vs_orcas_long](../../../includes/vs-orcas-long-md.md)] и [!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)]. Эти службы позволяют нескольким веб-приложениям и приложениям Windows использовать сведения о пользователе и функции управления пользователями с одного сервера.  

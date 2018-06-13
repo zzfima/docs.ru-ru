@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32748845"
 ---
 # <a name="ltsystemservicemodelactivationgt"></a>&lt;system.serviceModel.activation&gt;
 В данном разделе конфигурации представлены параметры конфигурации для средства SMSvcHost.exe. Элементы конфигурации можно задать в файле SMSvcHost.exe.config. В частности в нем содержатся все параметры компьютера, которые необходимо настроить.  

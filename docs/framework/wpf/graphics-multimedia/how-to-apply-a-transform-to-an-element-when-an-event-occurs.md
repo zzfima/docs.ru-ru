@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33558981"
 ---
 # <a name="how-to-apply-a-transform-to-an-element-when-an-event-occurs"></a>Практическое руководство. Применение преобразования к элементу при возникновении события
 В этом примере показано, как применить <xref:System.Windows.Media.ScaleTransform> при возникновении события. Показанный подход аналогичен тому, который используется при применении других типов преобразований. Дополнительные сведения о доступных типах преобразований см. в разделе <xref:System.Windows.Media.Transform> класса или [преобразует Обзор](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md).  

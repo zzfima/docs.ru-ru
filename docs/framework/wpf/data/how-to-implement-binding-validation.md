@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33556970"
 ---
 # <a name="how-to-implement-binding-validation"></a>Практическое руководство. Реализация проверки привязки
 В этом примере показано, как использовать <xref:System.Windows.Controls.Validation.ErrorTemplate%2A> и триггера стиля для предоставления визуальную обратную связь, чтобы информировать пользователей при вводе недопустимого значения на основании пользовательского правила проверки.  

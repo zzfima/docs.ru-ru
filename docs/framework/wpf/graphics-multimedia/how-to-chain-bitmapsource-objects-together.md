@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33558869"
 ---
 # <a name="how-to-chain-bitmapsource-objects-together"></a>Практическое руководство. Связывание объектов растрового источника
 В этом примере показано, как применять различные эффекты источник изображения с помощью цепочки из нескольких <xref:System.Windows.Media.Imaging.BitmapSource> производных объектов.  

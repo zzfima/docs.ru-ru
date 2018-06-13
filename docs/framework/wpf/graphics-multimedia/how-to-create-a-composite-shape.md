@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33559977"
 ---
 # <a name="how-to-create-a-composite-shape"></a>Практическое руководство. Создание составной фигуры
 В этом примере демонстрируется создание составных фигур с помощью <xref:System.Windows.Media.Geometry> объектов и отобразить их с помощью <xref:System.Windows.Shapes.Path> элемента. В следующем примере <xref:System.Windows.Media.LineGeometry>, <xref:System.Windows.Media.EllipseGeometry>и <xref:System.Windows.Media.RectangleGeometry> используются с <xref:System.Windows.Media.GeometryGroup> для создания составного фигуры. Затем вычерчиваются с помощью <xref:System.Windows.Shapes.Path> элемента.  

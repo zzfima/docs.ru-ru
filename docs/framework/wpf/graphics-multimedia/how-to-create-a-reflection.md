@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33560580"
 ---
 # <a name="how-to-create-a-reflection"></a>Практическое руководство. Создание отражения
 В этом примере показано, как использовать <xref:System.Windows.Media.VisualBrush> будет создано отражение. Поскольку <xref:System.Windows.Media.VisualBrush> может отображать существующие визуальные, эту возможность можно использовать для создания интересных визуальных эффектов, например отражения и увеличения.  

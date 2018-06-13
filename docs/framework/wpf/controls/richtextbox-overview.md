@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557528"
 ---
 # <a name="richtextbox-overview"></a>Общие сведения о RichTextBox
 <xref:System.Windows.Controls.RichTextBox> Управления позволяет просмотреть или изменить содержимое потока, включая абзацев, изображения, таблицы и многое другое. В этом разделе описываются <xref:System.Windows.Controls.TextBox> класса и приводятся примеры того, как использовать его как [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] и C#.  
