@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33216481"
 ---
 # <a name="explicit-c-reference"></a>explicit (Справочник по C#)
 Ключевое слово `explicit` объявляет оператор преобразования определяемого пользователем типа, который должен быть вызван с помощью приведения. Например, этот оператор выполняет преобразование из класса Fahrenheit в класс Celsius:  

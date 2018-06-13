@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33286179"
 ---
 # <a name="ltlt-operator-c-reference"></a>Оператор &lt;&lt; (справочник по C#)
 Оператор сдвига влево (`<<`) сдвигает первый операнд влево на число битов, задаваемое вторым операндом. Второй операнд должен иметь тип [int](../../../csharp/language-reference/keywords/int.md) или тип, для которого существует предварительно определенное неявное числовое преобразование в `int`.  

@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33537948"
 ---
 # <a name="walkthrough-performing-common-tasks-using-smart-tags-on-windows-forms-controls"></a>Пошаговое руководство. Выполнение типичных задач с помощью смарт-тегов в элементах управления Windows Forms
 При разработке форм и элементов управления для приложения Windows Forms, существует много задач, которые выполняются несколько раз. Ниже приведено несколько наиболее типичных задач, которые указываются:  

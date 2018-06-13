@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33529462"
 ---
 # <a name="walkthrough-performing-a-drag-and-drop-operation-in-windows-forms"></a>Пример. Выполнение операции перетаскивания в Windows Forms
 Для выполнения операций перетаскивания и вставки в приложениях Windows необходимо обрабатывать последовательность событий, в частности <xref:System.Windows.Forms.Control.DragEnter>, <xref:System.Windows.Forms.Control.DragLeave>, и <xref:System.Windows.Forms.Control.DragDrop> события. Работая со сведениями, доступными через аргументы этих событий, можно значительно упростить операции перетаскивания.  

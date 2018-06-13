@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33528353"
 ---
 # <a name="vector-graphics-overview"></a>Общие сведения о векторной графике
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] Рисование линии, прямоугольники и других фигур в системе координат. Можно выбрать из различных систем координат, но система координат по умолчанию имеет начала координат в левом верхнем углу ось x вправо, а ось y направлена вниз. Единица измерения, в системе координат по умолчанию является пиксель.  

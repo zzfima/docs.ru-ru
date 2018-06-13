@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33526026"
 ---
 # <a name="button-control-overview-windows-forms"></a>Общие сведения об элементе управления Button (Windows Forms)
 Элемент управления Windows Forms <xref:System.Windows.Forms.Button> позволяет пользователю щелкнуть его для выполнения действия. При щелчке кнопки мышью элемент управления выглядит так, как будто его нажимают и отпускают. Когда пользователь нажимает кнопку, <xref:System.Windows.Forms.Control.Click> вызывается обработчик события. Поместить код в <xref:System.Windows.Forms.Control.Click> обработчик событий, чтобы выполнять любые действия, которые можно выбрать.  

@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33527304"
 ---
 # <a name="how-to-display-error-icons-for-form-validation-with-the-windows-forms-errorprovider-component"></a>Практическое руководство. Отображение значков ошибок при проверке введенных в форму данных с помощью компонента ErrorProvider в Windows Forms
 Можно использовать Windows Forms <xref:System.Windows.Forms.ErrorProvider> компонент для отображения значков ошибок при вводе неправильных данных. Необходимо иметь по крайней мере два элемента управления в форме для перехода между ними и вызова таким образом кода проверки.  

@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33528535"
 ---
 # <a name="how-to-display-specific-days-in-bold-with-the-windows-forms-monthcalendar-control"></a>Практическое руководство. Отображение определенных дней полужирным шрифтом в элементе управления MonthCalendar в Windows Forms
 Windows Forms <xref:System.Windows.Forms.MonthCalendar> элемент управления может отображать дни полужирным шрифтом, как существительные даты или на периодической основе. Это может сделать для привлечения внимания к определенные даты, например праздников и выходных дней.  

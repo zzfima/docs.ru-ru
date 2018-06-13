@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33217488"
 ---
 # <a name="group-clause-c-reference"></a>Предложение group (Справочник по C#)
 Предложение `group` возвращает последовательность объектов <xref:System.Linq.IGrouping%602>, содержащих нуль или более элементов, соответствующих значению ключа группы. Например, можно сгруппировать последовательность строк в соответствии с первой буквой в каждой строке. В этом случае первая буква является ключом и имеет тип [char](../../../csharp/language-reference/keywords/char.md). Она хранится в свойстве `Key` каждого объекта <xref:System.Linq.IGrouping%602>. Тип ключа определяется компилятором.  

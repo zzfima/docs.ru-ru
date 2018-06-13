@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33218759"
 ---
 # <a name="if-else-c-reference"></a>if-else (Справочник по C#)
 Оператор `if` определяет, какой оператор будет выполняться при выполнения условия, заданного выражением `Boolean` . В приведенном ниже примере переменной `Boolean` типа `result` присваивается значение `true` , а затем она проверяется оператором `if` . В результате получается `The condition is true`.  

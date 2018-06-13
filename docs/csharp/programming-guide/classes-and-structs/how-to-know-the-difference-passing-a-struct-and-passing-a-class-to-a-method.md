@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33315663"
 ---
 # <a name="how-to-know-the-difference-between-passing-a-struct-and-passing-a-class-reference-to-a-method-c-programming-guide"></a>Практическое руководство. Определение различия между передачей структуры и ссылки класса в метод (Руководство по программированию в C#)
 В следующем примере демонстрируется, чем передача [структуры](../../../csharp/language-reference/keywords/struct.md) в метод отличается от передачи экземпляра [класса](../../../csharp/language-reference/keywords/class.md) в метод. В этом примере оба аргумента (структура и экземпляр класса) передаются по значению, и оба метода изменяют значение одного поля аргумента. Тем не менее результаты этих двух методов будут отличаться, поскольку в случае со структурой передаваемое содержимое отличается от передачи экземпляра класса.  

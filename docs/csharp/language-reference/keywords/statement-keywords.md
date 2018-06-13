@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33269665"
 ---
 # <a name="statement-keywords-c-reference"></a>Ключевые слова операторов (Справочник по C#)
 Операторы представляют собой инструкции для программы. За исключением случаев, которые описаны в разделах, приведенных в следующей таблице, операторы выполняются последовательно. В следующей таблице приводятся ключевые слова операторов в C#. Дополнительные сведения об операторах, которые не выражаются ключевыми словами, см. в разделе [Операторы](../../../csharp/programming-guide/statements-expressions-operators/statements.md).  
