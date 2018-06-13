@@ -12,6 +12,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34171984"
 ---
 # <a name="-gt-operator-c-reference"></a>Оператор -&gt; (справочник по C#)
 Оператор `->` объединяет операции разыменования указателя и доступа к члену.  

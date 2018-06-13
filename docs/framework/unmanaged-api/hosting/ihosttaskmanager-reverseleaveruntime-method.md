@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 0800a1441b75c5003eabc77793b2b4fa3dd8f0da
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33444068"
 ---
 # <a name="ihosttaskmanagerreverseleaveruntime-method"></a>Метод IHostTaskManager::ReverseLeaveRuntime
 Уведомляет основное приложение, что элемент управления оставляя общеязыковой среды выполнения (CLR) и неуправляемой функции, которая, в свою очередь, была вызвана из управляемого кода.  

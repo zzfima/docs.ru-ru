@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33474861"
 ---
 # <a name="activity-tracing-in-message-security"></a>Отслеживание действий при обеспечении безопасности сообщений
 В данном разделе описывается трассировка действий для обработки событий безопасности, которая осуществляется в три этапа (см. ниже).  

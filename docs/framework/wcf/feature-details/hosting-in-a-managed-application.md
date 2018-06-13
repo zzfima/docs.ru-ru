@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33489746"
 ---
 # <a name="hosting-in-a-managed-application"></a>Размещение в управляемом приложении
 Службы Windows Communication Foundation (WCF), которые можно разместить в любом [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] приложения. Резидентное размещение служб - самый гибкий вариант размещения, так как в этом случае требуется минимальное развертывание инфраструктуры. Однако это и наименее надежный вариант размещения, поскольку управляемого приложения не предоставляют дополнительные размещения и функции управления другие варианты размещения в WCF, такие как службы Internet Information Services (IIS) и Windows.  

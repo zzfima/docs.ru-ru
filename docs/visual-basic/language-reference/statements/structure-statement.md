@@ -17,6 +17,7 @@ ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34234469"
 ---
 # <a name="structure-statement"></a>Оператор Structure
 Объявляет имя структуры и вводит определение переменных, свойств, событий и процедур, которые в структуру.  
