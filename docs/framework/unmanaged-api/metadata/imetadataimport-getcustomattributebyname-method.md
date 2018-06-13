@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: c25304bef4d240eedea749bb2829595056f9b74d
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33449251"
 ---
 # <a name="imetadataimportgetcustomattributebyname-method"></a><span data-ttu-id="63ac3-102">Метод IMetaDataImport::GetCustomAttributeByName</span><span class="sxs-lookup"><span data-stu-id="63ac3-102">IMetaDataImport::GetCustomAttributeByName Method</span></span>
 <span data-ttu-id="63ac3-103">Получает настраиваемый атрибут, ее имя и владельца.</span><span class="sxs-lookup"><span data-stu-id="63ac3-103">Gets the custom attribute, given its name and owner.</span></span>  

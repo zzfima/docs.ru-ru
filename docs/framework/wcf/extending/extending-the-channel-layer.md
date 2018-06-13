@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33488238"
 ---
 # <a name="extending-the-channel-layer"></a><span data-ttu-id="4889f-102">Расширение уровня каналов</span><span class="sxs-lookup"><span data-stu-id="4889f-102">Extending the Channel Layer</span></span>
 <span data-ttu-id="4889f-103">Уровень канала отвечает за обмен сообщениями между клиентами и службами.</span><span class="sxs-lookup"><span data-stu-id="4889f-103">The channel layer is responsible for the exchange of messages between clients and services.</span></span> <span data-ttu-id="4889f-104">Расширения каналов могут реализовывать новые функциональные возможности протокола, такие как безопасность, или транспортные функциональные возможности, такие как реализация нового сетевого транспорта для передачи сообщений SOAP.</span><span class="sxs-lookup"><span data-stu-id="4889f-104">Channel extensions can implement new protocol functionality, such as security, or transport functionality, such as implementing a new network transport to carry SOAP messages.</span></span>  

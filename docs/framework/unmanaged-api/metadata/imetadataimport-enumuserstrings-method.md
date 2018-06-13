@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 98b99493e54b123d37eb281455180b9a25baddd4
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33446834"
 ---
 # <a name="imetadataimportenumuserstrings-method"></a><span data-ttu-id="782f5-102">Метод IMetaDataImport::EnumUserStrings</span><span class="sxs-lookup"><span data-stu-id="782f5-102">IMetaDataImport::EnumUserStrings Method</span></span>
 <span data-ttu-id="782f5-103">Перечисляет токены String, представляющие жестко заданные строки в текущей области метаданных.</span><span class="sxs-lookup"><span data-stu-id="782f5-103">Enumerates String tokens representing hard-coded strings in the current metadata scope.</span></span>  

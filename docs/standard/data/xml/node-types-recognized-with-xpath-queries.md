@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33569383"
 ---
 # <a name="node-types-recognized-with-xpath-queries"></a><span data-ttu-id="c1297-102">Типы узлов, распознаваемые запросами XPath</span><span class="sxs-lookup"><span data-stu-id="c1297-102">Node Types Recognized with XPath Queries</span></span>
 <span data-ttu-id="c1297-103">Типы узлов, распознаваемые в запросе XPath, отличаются от типов узлов в модели DOM XML-документа.</span><span class="sxs-lookup"><span data-stu-id="c1297-103">The types of nodes recognized in an XPath query are not the same node types found in the Document Object Model (DOM).</span></span>  

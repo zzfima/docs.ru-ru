@@ -1,14 +1,6 @@
 ---
-title: "Метод IMetaDataImport::EnumMethodsWithName"
-ms.custom: 
+title: Метод IMetaDataImport::EnumMethodsWithName
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IMetaDataImport.EnumMethodsWithName
 api_location:
@@ -23,22 +15,19 @@ helpviewer_keywords:
 ms.assetid: a8624913-2e23-46ad-a0c1-bb8eccbbf20f
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 9f16e66f83925104c4be1e69a476e398f33295a7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: cea47f8300c57362abae0c10223559319ecb2469
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33448847"
 ---
-# <a name="imetadataimportenummethodswithname-method"></a><span data-ttu-id="8a0fb-102">Метод IMetaDataImport::EnumMethodsWithName</span><span class="sxs-lookup"><span data-stu-id="8a0fb-102">IMetaDataImport::EnumMethodsWithName Method</span></span>
-<span data-ttu-id="8a0fb-103">Перечисляет методы с заданным именем, определяемые по типу, на который ссылается указанный токен TypeDef.</span><span class="sxs-lookup"><span data-stu-id="8a0fb-103">Enumerates methods that have the specified name and that are defined by the type referenced by the specified TypeDef token.</span></span>  
+# <a name="imetadataimportenummethodswithname-method"></a><span data-ttu-id="43cf0-102">Метод IMetaDataImport::EnumMethodsWithName</span><span class="sxs-lookup"><span data-stu-id="43cf0-102">IMetaDataImport::EnumMethodsWithName Method</span></span>
+<span data-ttu-id="43cf0-103">Перечисляет методы с заданным именем, определяемые по типу, на который ссылается указанный токен TypeDef.</span><span class="sxs-lookup"><span data-stu-id="43cf0-103">Enumerates methods that have the specified name and that are defined by the type referenced by the specified TypeDef token.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="8a0fb-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="8a0fb-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="43cf0-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="43cf0-104">Syntax</span></span>  
   
 ```  
 HRESULT EnumMethodsWithName (  
@@ -51,44 +40,44 @@ HRESULT EnumMethodsWithName (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="8a0fb-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="8a0fb-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="43cf0-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="43cf0-105">Parameters</span></span>  
  `phEnum`  
- <span data-ttu-id="8a0fb-106">[in, out] Указатель на перечислитель.</span><span class="sxs-lookup"><span data-stu-id="8a0fb-106">[in, out] A pointer to the enumerator.</span></span> <span data-ttu-id="8a0fb-107">Это должно быть NULL при первом вызове этого метода.</span><span class="sxs-lookup"><span data-stu-id="8a0fb-107">This must be NULL for the first call of this method.</span></span>  
+ <span data-ttu-id="43cf0-106">[in, out] Указатель на перечислитель.</span><span class="sxs-lookup"><span data-stu-id="43cf0-106">[in, out] A pointer to the enumerator.</span></span> <span data-ttu-id="43cf0-107">Это должно быть NULL при первом вызове этого метода.</span><span class="sxs-lookup"><span data-stu-id="43cf0-107">This must be NULL for the first call of this method.</span></span>  
   
  `cl`  
- <span data-ttu-id="8a0fb-108">[in] Токен TypeDef, представляющий тип, методы которого для перечисления.</span><span class="sxs-lookup"><span data-stu-id="8a0fb-108">[in] A TypeDef token representing the type whose methods to enumerate.</span></span>  
+ <span data-ttu-id="43cf0-108">[in] Токен TypeDef, представляющий тип, методы которого для перечисления.</span><span class="sxs-lookup"><span data-stu-id="43cf0-108">[in] A TypeDef token representing the type whose methods to enumerate.</span></span>  
   
  `szName`  
- <span data-ttu-id="8a0fb-109">[in] Имя, которое ограничивает область перечисления.</span><span class="sxs-lookup"><span data-stu-id="8a0fb-109">[in] The name that limits the scope of the enumeration.</span></span>  
+ <span data-ttu-id="43cf0-109">[in] Имя, которое ограничивает область перечисления.</span><span class="sxs-lookup"><span data-stu-id="43cf0-109">[in] The name that limits the scope of the enumeration.</span></span>  
   
  `rMethods`  
- <span data-ttu-id="8a0fb-110">[out] Массив, используемый для хранения токены MethodDef.</span><span class="sxs-lookup"><span data-stu-id="8a0fb-110">[out] The array used to store the MethodDef tokens.</span></span>  
+ <span data-ttu-id="43cf0-110">[out] Массив, используемый для хранения токены MethodDef.</span><span class="sxs-lookup"><span data-stu-id="43cf0-110">[out] The array used to store the MethodDef tokens.</span></span>  
   
  `cMax`  
- <span data-ttu-id="8a0fb-111">[in] Максимальный размер массива `rMethods`.</span><span class="sxs-lookup"><span data-stu-id="8a0fb-111">[in] The maximum size of the `rMethods` array.</span></span>  
+ <span data-ttu-id="43cf0-111">[in] Максимальный размер массива `rMethods`.</span><span class="sxs-lookup"><span data-stu-id="43cf0-111">[in] The maximum size of the `rMethods` array.</span></span>  
   
  `pcTokens`  
- <span data-ttu-id="8a0fb-112">[out] Число токены MethodDef, возвращаемых в `rMethods`.</span><span class="sxs-lookup"><span data-stu-id="8a0fb-112">[out] The number of MethodDef tokens returned in `rMethods`.</span></span>  
+ <span data-ttu-id="43cf0-112">[out] Число токены MethodDef, возвращаемых в `rMethods`.</span><span class="sxs-lookup"><span data-stu-id="43cf0-112">[out] The number of MethodDef tokens returned in `rMethods`.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="8a0fb-113">Примечания</span><span class="sxs-lookup"><span data-stu-id="8a0fb-113">Remarks</span></span>  
- <span data-ttu-id="8a0fb-114">Этот метод перечисляет поля и методы, но не свойств или событий.</span><span class="sxs-lookup"><span data-stu-id="8a0fb-114">This method enumerates fields and methods, but not properties or events.</span></span> <span data-ttu-id="8a0fb-115">В отличие от [IMetaDataImport::EnumMethods](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enummethods-method.md), `EnumMethodsWithName` отменяет все метод маркеры, которые имеют указанное имя.</span><span class="sxs-lookup"><span data-stu-id="8a0fb-115">Unlike [IMetaDataImport::EnumMethods](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enummethods-method.md), `EnumMethodsWithName` discards all method tokens that do not have the specified name.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="43cf0-113">Примечания</span><span class="sxs-lookup"><span data-stu-id="43cf0-113">Remarks</span></span>  
+ <span data-ttu-id="43cf0-114">Этот метод перечисляет поля и методы, но не свойств или событий.</span><span class="sxs-lookup"><span data-stu-id="43cf0-114">This method enumerates fields and methods, but not properties or events.</span></span> <span data-ttu-id="43cf0-115">В отличие от [IMetaDataImport::EnumMethods](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enummethods-method.md), `EnumMethodsWithName` отменяет все метод маркеры, которые имеют указанное имя.</span><span class="sxs-lookup"><span data-stu-id="43cf0-115">Unlike [IMetaDataImport::EnumMethods](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enummethods-method.md), `EnumMethodsWithName` discards all method tokens that do not have the specified name.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="8a0fb-116">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="8a0fb-116">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="43cf0-116">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="43cf0-116">Return Value</span></span>  
   
-|<span data-ttu-id="8a0fb-117">HRESULT</span><span class="sxs-lookup"><span data-stu-id="8a0fb-117">HRESULT</span></span>|<span data-ttu-id="8a0fb-118">Описание:</span><span class="sxs-lookup"><span data-stu-id="8a0fb-118">Description</span></span>|  
+|<span data-ttu-id="43cf0-117">HRESULT</span><span class="sxs-lookup"><span data-stu-id="43cf0-117">HRESULT</span></span>|<span data-ttu-id="43cf0-118">Описание</span><span class="sxs-lookup"><span data-stu-id="43cf0-118">Description</span></span>|  
 |-------------|-----------------|  
-|`S_OK`|<span data-ttu-id="8a0fb-119">`EnumMethodsWithName`успешно возвращен.</span><span class="sxs-lookup"><span data-stu-id="8a0fb-119">`EnumMethodsWithName` returned successfully.</span></span>|  
-|`S_FALSE`|<span data-ttu-id="8a0fb-120">Существуют маркеры для перечисления отсутствуют.</span><span class="sxs-lookup"><span data-stu-id="8a0fb-120">There are no tokens to enumerate.</span></span> <span data-ttu-id="8a0fb-121">В этом случае `pcTokens` равно нулю.</span><span class="sxs-lookup"><span data-stu-id="8a0fb-121">In that case, `pcTokens` is zero.</span></span>|  
+|`S_OK`|<span data-ttu-id="43cf0-119">`EnumMethodsWithName` успешно возвращен.</span><span class="sxs-lookup"><span data-stu-id="43cf0-119">`EnumMethodsWithName` returned successfully.</span></span>|  
+|`S_FALSE`|<span data-ttu-id="43cf0-120">Существуют маркеры для перечисления отсутствуют.</span><span class="sxs-lookup"><span data-stu-id="43cf0-120">There are no tokens to enumerate.</span></span> <span data-ttu-id="43cf0-121">В этом случае `pcTokens` равно нулю.</span><span class="sxs-lookup"><span data-stu-id="43cf0-121">In that case, `pcTokens` is zero.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="8a0fb-122">Требования</span><span class="sxs-lookup"><span data-stu-id="8a0fb-122">Requirements</span></span>  
- <span data-ttu-id="8a0fb-123">**Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="8a0fb-123">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="43cf0-122">Требования</span><span class="sxs-lookup"><span data-stu-id="43cf0-122">Requirements</span></span>  
+ <span data-ttu-id="43cf0-123">**Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="43cf0-123">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="8a0fb-124">**Заголовок:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="8a0fb-124">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="43cf0-124">**Заголовок:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="43cf0-124">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="8a0fb-125">**Библиотека:** включена как ресурс в MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="8a0fb-125">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="43cf0-125">**Библиотека:** включена как ресурс в MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="43cf0-125">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="8a0fb-126">**Версии платформы .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="8a0fb-126">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="43cf0-126">**Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="43cf0-126">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="8a0fb-127">См. также</span><span class="sxs-lookup"><span data-stu-id="8a0fb-127">See Also</span></span>  
- [<span data-ttu-id="8a0fb-128">Интерфейс IMetaDataImport</span><span class="sxs-lookup"><span data-stu-id="8a0fb-128">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [<span data-ttu-id="8a0fb-129">Интерфейс IMetaDataImport2</span><span class="sxs-lookup"><span data-stu-id="8a0fb-129">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a><span data-ttu-id="43cf0-127">См. также</span><span class="sxs-lookup"><span data-stu-id="43cf0-127">See Also</span></span>  
+ [<span data-ttu-id="43cf0-128">Интерфейс IMetaDataImport</span><span class="sxs-lookup"><span data-stu-id="43cf0-128">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
+ [<span data-ttu-id="43cf0-129">Интерфейс IMetaDataImport2</span><span class="sxs-lookup"><span data-stu-id="43cf0-129">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

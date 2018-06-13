@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33475118"
 ---
 # <a name="microsofttransactionstransactionbridgeregisterparticipantfailure"></a><span data-ttu-id="fb5d6-102">Microsoft.Transactions.TransactionBridge.RegisterParticipantFailure</span><span class="sxs-lookup"><span data-stu-id="fb5d6-102">Microsoft.Transactions.TransactionBridge.RegisterParticipantFailure</span></span>
 <span data-ttu-id="fb5d6-103">Службе протокола WS-AT не удалось зарегистрировать участника для протокола управления.</span><span class="sxs-lookup"><span data-stu-id="fb5d6-103">The WS-AT protocol service failed to register a participant for a control protocol.</span></span>  

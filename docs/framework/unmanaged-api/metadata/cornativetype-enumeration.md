@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: b28fe8e8fd8b602a01b6358f46f60cdf792ced0d
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33448629"
 ---
 # <a name="cornativetype-enumeration"></a><span data-ttu-id="a7bc1-102">Перечисление CorNativeType</span><span class="sxs-lookup"><span data-stu-id="a7bc1-102">CorNativeType Enumeration</span></span>
 <span data-ttu-id="a7bc1-103">Содержит значения, описывающие собственные неуправляемые типы.</span><span class="sxs-lookup"><span data-stu-id="a7bc1-103">Contains values that describe native unmanaged types.</span></span>  

@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 562b6fcd015441ce5eb6b5f0ab7a4f361bb229c3
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33449433"
 ---
 # <a name="imetadatainfogetfilemapping-method"></a><span data-ttu-id="c1954-102">Метод IMetaDataInfo::GetFileMapping</span><span class="sxs-lookup"><span data-stu-id="c1954-102">IMetaDataInfo::GetFileMapping Method</span></span>
 <span data-ttu-id="c1954-103">Возвращает область памяти сопоставленных файлов и тип сопоставления.</span><span class="sxs-lookup"><span data-stu-id="c1954-103">Gets the memory region of the mapped file, and the type of mapping.</span></span>  

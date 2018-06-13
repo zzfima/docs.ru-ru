@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 75d1ce526d4cba025ea6e9db8281023969e7cb0c
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33448515"
 ---
 # <a name="imetadataimportenummethodimpls-method"></a><span data-ttu-id="9cf84-102">Метод IMetaDataImport::EnumMethodImpls</span><span class="sxs-lookup"><span data-stu-id="9cf84-102">IMetaDataImport::EnumMethodImpls Method</span></span>
 <span data-ttu-id="9cf84-103">Перечисляет токены MethodBody и MethodDeclaration, представляющие методы указанного типа.</span><span class="sxs-lookup"><span data-stu-id="9cf84-103">Enumerates MethodBody and MethodDeclaration tokens representing methods of the specified type.</span></span>  

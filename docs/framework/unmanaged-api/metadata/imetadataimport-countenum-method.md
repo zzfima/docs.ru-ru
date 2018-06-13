@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: a8e30020a8296e037d1dacc8dbaabde7e40032e4
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33445290"
 ---
 # <a name="imetadataimportcountenum-method"></a><span data-ttu-id="7b3d7-102">Метод IMetaDataImport::CountEnum</span><span class="sxs-lookup"><span data-stu-id="7b3d7-102">IMetaDataImport::CountEnum Method</span></span>
 <span data-ttu-id="7b3d7-103">Возвращает число элементов в перечислении, которые были получены с помощью указанного перечислителя.</span><span class="sxs-lookup"><span data-stu-id="7b3d7-103">Gets the number of elements in the enumeration that was retrieved by the specified enumerator.</span></span>  

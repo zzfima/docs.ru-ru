@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 954b4df6b341e18c5a995b57541a72e236278c45
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33449599"
 ---
 # <a name="imetadatatablesgetrow-method"></a><span data-ttu-id="f8381-102">Метод IMetaDataTables::GetRow</span><span class="sxs-lookup"><span data-stu-id="f8381-102">IMetaDataTables::GetRow Method</span></span>
 <span data-ttu-id="f8381-103">Возвращает строку с указанной строки индекса, в таблице с заданным индексом таблицы.</span><span class="sxs-lookup"><span data-stu-id="f8381-103">Gets the row at the specified row index, in the table at the specified table index.</span></span>  

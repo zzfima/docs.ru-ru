@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 0d62b9be1bef16014e2870c15a232bb46d4daf10
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33448756"
 ---
 # <a name="imetadataimportgetmemberrefprops-method"></a><span data-ttu-id="3c2c6-102">Метод IMetaDataImport::GetMemberRefProps</span><span class="sxs-lookup"><span data-stu-id="3c2c6-102">IMetaDataImport::GetMemberRefProps Method</span></span>
 <span data-ttu-id="3c2c6-103">Возвращает метаданные, связанные с членом, на который ссылается указанный токен.</span><span class="sxs-lookup"><span data-stu-id="3c2c6-103">Gets metadata associated with the member referenced by the specified token.</span></span>  

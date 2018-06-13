@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9e79a69bf71aee035fb1f9a0178879d7c19e62b9
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33448925"
 ---
 # <a name="ivalidator-interface"></a><span data-ttu-id="c72c5-102">Интерфейс IValidator</span><span class="sxs-lookup"><span data-stu-id="c72c5-102">IValidator Interface</span></span>
 <span data-ttu-id="c72c5-103">Предоставляет методы для проверки переносимого исполняемого (PE) образа и возврат ошибок проверки.</span><span class="sxs-lookup"><span data-stu-id="c72c5-103">Provides methods for validating portable executable (PE) images and reporting validation errors.</span></span>  

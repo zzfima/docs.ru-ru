@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33542214"
 ---
 # <a name="how-to-create-a-bound-control-and-format-the-displayed-data"></a><span data-ttu-id="f3113-102">Практическое руководство. Создание связанного элемента управления и форматирование отображаемых данных</span><span class="sxs-lookup"><span data-stu-id="f3113-102">How to: Create a Bound Control and Format the Displayed Data</span></span>
 <span data-ttu-id="f3113-103">Благодаря функции привязки данных Windows Forms можно форматировать данные, отображаемые в элементе управления с привязкой к данным с помощью **форматирование и дополнительная привязка** диалоговое окно.</span><span class="sxs-lookup"><span data-stu-id="f3113-103">With Windows Forms data binding, you can format the data displayed in a data-bound control by using the **Formatting and Advanced Binding** dialog box.</span></span>  

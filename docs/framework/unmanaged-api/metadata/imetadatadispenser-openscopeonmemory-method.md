@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: f184c04db384c2b9bdbce2d8ae6919c05a2ab425
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33448899"
 ---
 # <a name="imetadatadispenseropenscopeonmemory-method"></a><span data-ttu-id="c4294-102">Метод IMetaDataDispenser::OpenScopeOnMemory</span><span class="sxs-lookup"><span data-stu-id="c4294-102">IMetaDataDispenser::OpenScopeOnMemory Method</span></span>
 <span data-ttu-id="c4294-103">Открывает область памяти, содержащую существующие метаданные.</span><span class="sxs-lookup"><span data-stu-id="c4294-103">Opens an area of memory that contains existing metadata.</span></span> <span data-ttu-id="c4294-104">То есть этот метод открывает заданную область памяти, в которой существующие данные интерпретируются как метаданные.</span><span class="sxs-lookup"><span data-stu-id="c4294-104">That is, this method opens a specified area of memory in which the existing data is treated as metadata.</span></span>  

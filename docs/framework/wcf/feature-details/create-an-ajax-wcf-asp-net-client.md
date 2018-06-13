@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33490634"
 ---
 # <a name="how-to-create-an-ajax-enabled-wcf-service-and-an-aspnet-client-that-accesses-the-service"></a><span data-ttu-id="d2f80-102">Практическое руководство. Создание службы WCF с поддержкой AJAX и клиента ASP.NET для обращения к службе</span><span class="sxs-lookup"><span data-stu-id="d2f80-102">How to: Create an AJAX-Enabled WCF Service and an ASP.NET Client that Accesses the Service</span></span>
 <span data-ttu-id="d2f80-103">В этом разделе показано, как использовать Visual Studio 2008 для создания службы с поддержкой AJAX Windows Communication Foundation (WCF) и клиента ASP.NET, который обращается к службе.</span><span class="sxs-lookup"><span data-stu-id="d2f80-103">This topic shows how to use Visual Studio 2008 to create an AJAX-enabled Windows Communication Foundation (WCF) service and an ASP.NET client that accesses the service.</span></span> <span data-ttu-id="d2f80-104">Коды для службы и для клиента содержатся в разделе «Пример», который следует за разделом «Процедуры», в котором описаны шаги их создания.</span><span class="sxs-lookup"><span data-stu-id="d2f80-104">The code for the service and for the client are provided in the Example section after the steps for creating them are described in the Procedures section.</span></span>  

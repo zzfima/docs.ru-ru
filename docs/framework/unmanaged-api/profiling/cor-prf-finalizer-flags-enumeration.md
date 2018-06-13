@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 9292e7c5908b2e4fd7e2c0ae9412375249f2fdfc
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33449950"
 ---
 # <a name="corprffinalizerflags-enumeration"></a><span data-ttu-id="eb5a9-102">Перечисление COR_PRF_FINALIZER_FLAGS</span><span class="sxs-lookup"><span data-stu-id="eb5a9-102">COR_PRF_FINALIZER_FLAGS Enumeration</span></span>
 <span data-ttu-id="eb5a9-103">Описывает метод завершения для объекта.</span><span class="sxs-lookup"><span data-stu-id="eb5a9-103">Describes the finalizer for an object.</span></span>  

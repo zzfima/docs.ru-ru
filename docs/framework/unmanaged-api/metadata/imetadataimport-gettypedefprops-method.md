@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: aa69eda974187748d7046c792fa16b7729e3deff
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33446886"
 ---
 # <a name="imetadataimportgettypedefprops-method"></a><span data-ttu-id="4ac88-102">Метод IMetaDataImport::GetTypeDefProps</span><span class="sxs-lookup"><span data-stu-id="4ac88-102">IMetaDataImport::GetTypeDefProps Method</span></span>
 <span data-ttu-id="4ac88-103">Возвращает сведения о метаданных для <xref:System.Type> представленного указанным токеном TypeDef.</span><span class="sxs-lookup"><span data-stu-id="4ac88-103">Returns metadata information for the <xref:System.Type> represented by the specified TypeDef token.</span></span>  

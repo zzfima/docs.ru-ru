@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 24ece9bb614957e02c81d3a0f0a0eefe59f3febc
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33446549"
 ---
 # <a name="imetadataimportgetscopeprops-method"></a><span data-ttu-id="c0e3f-102">Метод IMetaDataImport::GetScopeProps</span><span class="sxs-lookup"><span data-stu-id="c0e3f-102">IMetaDataImport::GetScopeProps Method</span></span>
 <span data-ttu-id="c0e3f-103">Возвращает имя и при необходимости идентификатор версии сборки или модуля в текущей области метаданных.</span><span class="sxs-lookup"><span data-stu-id="c0e3f-103">Gets the name and optionally the version identifier of the assembly or module in the current metadata scope.</span></span>  

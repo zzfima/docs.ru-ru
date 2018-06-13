@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 7312cbd31a04365801b0380d5914966f36679560
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33449459"
 ---
 # <a name="imetadataimportgetpropertyprops-method"></a><span data-ttu-id="46c0f-102">Метод IMetaDataImport::GetPropertyProps</span><span class="sxs-lookup"><span data-stu-id="46c0f-102">IMetaDataImport::GetPropertyProps Method</span></span>
 <span data-ttu-id="46c0f-103">Получает метаданные для свойства, представленного указанным токеном.</span><span class="sxs-lookup"><span data-stu-id="46c0f-103">Gets the metadata for the property represented by the specified token.</span></span>  

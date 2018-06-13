@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33487910"
 ---
 # <a name="systemservicemodelchannelsmsmqmoveordeleteattemptfailed"></a><span data-ttu-id="605f0-102">System.ServiceModel.Channels.MsmqMoveOrDeleteAttemptFailed</span><span class="sxs-lookup"><span data-stu-id="605f0-102">System.ServiceModel.Channels.MsmqMoveOrDeleteAttemptFailed</span></span>
 <span data-ttu-id="605f0-103">Не удается переместить или удалить сообщение.</span><span class="sxs-lookup"><span data-stu-id="605f0-103">Cannot move or delete message.</span></span>  

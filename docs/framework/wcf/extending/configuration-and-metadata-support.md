@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33486728"
 ---
 # <a name="configuration-and-metadata-support"></a><span data-ttu-id="f005c-102">Конфигурация и поддержка метаданных</span><span class="sxs-lookup"><span data-stu-id="f005c-102">Configuration and Metadata Support</span></span>
 <span data-ttu-id="f005c-103">В этом разделе описывается, как включить поддержку конфигурации и метаданных для привязки и элементов привязки.</span><span class="sxs-lookup"><span data-stu-id="f005c-103">This topic describes how to enable configuration and metadata support for bindings and binding elements.</span></span>  

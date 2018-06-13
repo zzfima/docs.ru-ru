@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33541392"
 ---
 # <a name="rendering-a-windows-forms-control"></a><span data-ttu-id="3e9f0-102">Отрисовка элементов управления Windows Forms</span><span class="sxs-lookup"><span data-stu-id="3e9f0-102">Rendering a Windows Forms Control</span></span>
 <span data-ttu-id="3e9f0-103">Отрисовка относится к процессу создания визуального представления на экране пользователя.</span><span class="sxs-lookup"><span data-stu-id="3e9f0-103">Rendering refers to the process of creating a visual representation on a user's screen.</span></span> <span data-ttu-id="3e9f0-104">Windows Forms использует [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] (новой библиотеки графики Windows) для подготовки к просмотру.</span><span class="sxs-lookup"><span data-stu-id="3e9f0-104">Windows Forms uses [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] (the new Windows graphics library) for rendering.</span></span> <span data-ttu-id="3e9f0-105">Управляемые классы, предоставляющие доступ к [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] в <xref:System.Drawing?displayProperty=nameWithType> пространства имен и его подпространства.</span><span class="sxs-lookup"><span data-stu-id="3e9f0-105">The managed classes that provide access to [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] are in the <xref:System.Drawing?displayProperty=nameWithType> namespace and its subnamespaces.</span></span>  

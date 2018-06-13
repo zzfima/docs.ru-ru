@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33567306"
 ---
 # <a name="multithreaded-programming-with-the-event-based-asynchronous-pattern"></a><span data-ttu-id="c0216-102">Многопоточное программирование с использованием асинхронной модели, основанной на событиях</span><span class="sxs-lookup"><span data-stu-id="c0216-102">Multithreaded Programming with the Event-based Asynchronous Pattern</span></span>
 <span data-ttu-id="c0216-103">Существует несколько способов предоставить асинхронные возможности клиентскому коду.</span><span class="sxs-lookup"><span data-stu-id="c0216-103">There are a number of ways to expose asynchronous features to client code.</span></span> <span data-ttu-id="c0216-104">Асинхронная модель на основе событий задает для классов рекомендуемый способ работы в асинхронном режиме.</span><span class="sxs-lookup"><span data-stu-id="c0216-104">The Event-based Asynchronous Pattern prescribes the recommended way for classes to present asynchronous behavior.</span></span>  

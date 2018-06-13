@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33568749"
 ---
 # <a name="process-xml-data-using-linq-to-xml"></a><span data-ttu-id="46d18-102">Обработка XML-данных с помощью LINQ to XML</span><span class="sxs-lookup"><span data-stu-id="46d18-102">Process XML Data Using LINQ to XML</span></span>
 <span data-ttu-id="46d18-103">LINQ to XML - новая модель для обработки XML-данных в платформе .NET Framework версии 3.5.</span><span class="sxs-lookup"><span data-stu-id="46d18-103">LINQ to XML is the new model in the .NET Framework version 3.5 for processing XML data.</span></span> <span data-ttu-id="46d18-104">С помощью LINQ to XML разработчик может выполнять над XML-данными любые операции: запросы, изменения, создание, сохранение и сериализацию XML-документов.</span><span class="sxs-lookup"><span data-stu-id="46d18-104">LINQ to XML allows developers to do everything they would expect with XML data: querying, modifying, creating, saving, and serializing XML documents.</span></span> <span data-ttu-id="46d18-105">Основные преимущества заключаются в возможностях запросов и создания.</span><span class="sxs-lookup"><span data-stu-id="46d18-105">The real advantages lie in the query and creation capabilities.</span></span>  

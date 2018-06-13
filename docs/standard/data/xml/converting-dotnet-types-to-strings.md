@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33568775"
 ---
 # <a name="converting-net-framework-types-to-strings"></a><span data-ttu-id="94ee8-102">Преобразование типов .NET Framework в строки</span><span class="sxs-lookup"><span data-stu-id="94ee8-102">Converting .NET Framework Types to Strings</span></span>
 <span data-ttu-id="94ee8-103">Чтобы преобразовать тип .NET Framework в строку, используйте метод **ToString**.</span><span class="sxs-lookup"><span data-stu-id="94ee8-103">If you want to convert a .NET Framework type to a string, use the **ToString** method.</span></span> <span data-ttu-id="94ee8-104">Метод **ToString** возвращает символьное представление переданного типа.</span><span class="sxs-lookup"><span data-stu-id="94ee8-104">The **ToString** method returns a string representation of the type passed in.</span></span> <span data-ttu-id="94ee8-105">В следующей таблице приведен список типов платформы .NET Framework, которые возвращают строку в формате, сопоставленном со спецификациями XSD.</span><span class="sxs-lookup"><span data-stu-id="94ee8-105">The following table lists the .NET Framework types that return a string in a format that maps to the XML Schema (XSD) specifications.</span></span>  

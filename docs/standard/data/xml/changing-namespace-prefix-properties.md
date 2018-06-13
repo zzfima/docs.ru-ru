@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33568697"
 ---
 # <a name="changing-namespace-prefix-properties"></a><span data-ttu-id="86d25-102">Изменение свойств префикса пространства имен</span><span class="sxs-lookup"><span data-stu-id="86d25-102">Changing Namespace Prefix Properties</span></span>
 <span data-ttu-id="86d25-103">Класс **XmlNode** позволяет изменять префикс пространства имен, связанный с данным узлом.</span><span class="sxs-lookup"><span data-stu-id="86d25-103">The **XmlNode** class allows you to change the namespace prefix associated with a given node.</span></span> <span data-ttu-id="86d25-104">Изменение префикса элемента показано в следующем фрагменте кода.</span><span class="sxs-lookup"><span data-stu-id="86d25-104">For example, the following code shows the prefix of an element being changed.</span></span>  

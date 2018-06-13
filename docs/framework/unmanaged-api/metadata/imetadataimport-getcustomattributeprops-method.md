@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 8a4ed21b6f9fd067f3357e07c5fda07d25ce868d
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33448407"
 ---
 # <a name="imetadataimportgetcustomattributeprops-method"></a><span data-ttu-id="84acc-102">Метод IMetaDataImport::GetCustomAttributeProps</span><span class="sxs-lookup"><span data-stu-id="84acc-102">IMetaDataImport::GetCustomAttributeProps Method</span></span>
 <span data-ttu-id="84acc-103">Возвращает значение настраиваемого атрибута по указанному токену метаданных.</span><span class="sxs-lookup"><span data-stu-id="84acc-103">Gets the value of the custom attribute, given its metadata token.</span></span>  

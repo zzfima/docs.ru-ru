@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: f40fb2e94eac13211cf8ccf179904071a23f59ed
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33447231"
 ---
 # <a name="imetadataimportgetsigfromtoken-method"></a><span data-ttu-id="614d9-102">Метод IMetaDataImport::GetSigFromToken</span><span class="sxs-lookup"><span data-stu-id="614d9-102">IMetaDataImport::GetSigFromToken Method</span></span>
 <span data-ttu-id="614d9-103">Возвращает двоичную подпись метаданных, связанную с указанным токеном.</span><span class="sxs-lookup"><span data-stu-id="614d9-103">Gets the binary metadata signature associated with the specified token.</span></span>  

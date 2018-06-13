@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33542175"
 ---
 # <a name="attached-properties-overview"></a><span data-ttu-id="1d3a0-102">Общие сведения о вложенных свойствах зависимостей</span><span class="sxs-lookup"><span data-stu-id="1d3a0-102">Attached Properties Overview</span></span>
 <span data-ttu-id="1d3a0-103">Присоединенное свойство — это понятие, определяемое языком XAML.</span><span class="sxs-lookup"><span data-stu-id="1d3a0-103">An attached property is a concept defined by XAML.</span></span> <span data-ttu-id="1d3a0-104">Присоединенное свойство предназначено для использования в качестве типа глобального свойства, которое может быть задано для любого объекта.</span><span class="sxs-lookup"><span data-stu-id="1d3a0-104">An attached property is intended to be used as a type of global property that is settable on any object.</span></span> <span data-ttu-id="1d3a0-105">В [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] присоединенные свойства обычно определяются как особая форма свойства зависимости, не имеющего обычной "оболочки" свойства.</span><span class="sxs-lookup"><span data-stu-id="1d3a0-105">In [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)], attached properties are typically defined as a specialized form of dependency property that does not have the conventional property "wrapper".</span></span>  

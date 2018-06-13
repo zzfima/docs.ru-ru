@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: d9a65f76aed00e2b848f8603f1fee4d6acc91f99
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33449161"
 ---
 # <a name="imetadataemitgetsavesize-method"></a><span data-ttu-id="4d3f0-102">Метод IMetaDataEmit::GetSaveSize</span><span class="sxs-lookup"><span data-stu-id="4d3f0-102">IMetaDataEmit::GetSaveSize Method</span></span>
 <span data-ttu-id="4d3f0-103">Получает приблизительный двоичный размер сборки и ее метаданные в текущей области.</span><span class="sxs-lookup"><span data-stu-id="4d3f0-103">Gets the estimated binary size of the assembly and its metadata in the current scope.</span></span>  

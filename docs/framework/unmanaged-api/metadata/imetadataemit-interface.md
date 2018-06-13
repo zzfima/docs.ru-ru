@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 4c77edfff640f796dd3f345eaeb4728830c5f4c6
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33449148"
 ---
 # <a name="imetadataemit-interface"></a><span data-ttu-id="53d7d-102">Интерфейс IMetaDataEmit</span><span class="sxs-lookup"><span data-stu-id="53d7d-102">IMetaDataEmit Interface</span></span>
 <span data-ttu-id="53d7d-103">Предоставляет методы для создания, изменения и сохранить метаданные о сборке в текущей заданной области.</span><span class="sxs-lookup"><span data-stu-id="53d7d-103">Provides methods to create, modify, and save metadata about the assembly in the currently defined scope.</span></span> <span data-ttu-id="53d7d-104">Метаданные можно хранить в памяти или на жестком диске.</span><span class="sxs-lookup"><span data-stu-id="53d7d-104">The metadata can be stored in memory or saved to disk.</span></span>  

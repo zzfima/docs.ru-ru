@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: b9ded6b4e0ac8f3e70fd0145ab6e2410c3b38e02
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33448678"
 ---
 # <a name="imetadataimport2getgenericparamprops-method"></a><span data-ttu-id="5dc3a-102">Метод IMetaDataImport2::GetGenericParamProps</span><span class="sxs-lookup"><span data-stu-id="5dc3a-102">IMetaDataImport2::GetGenericParamProps Method</span></span>
 <span data-ttu-id="5dc3a-103">Возвращает метаданные, связанные с универсальным параметром, представленного указанным токеном.</span><span class="sxs-lookup"><span data-stu-id="5dc3a-103">Gets the metadata associated with the generic parameter represented by the specified token.</span></span>  
