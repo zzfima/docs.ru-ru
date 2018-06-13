@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33541967"
 ---
 # <a name="custom-dependency-properties"></a>Пользовательские свойства зависимостей
 В этом разделе описываются основания для создания настраиваемых свойств зависимостей для приложений [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)], а также этапы и некоторые варианты реализации, которые могут повысить производительность, удобство использования и универсальность свойств.  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33552556"
 ---
 # <a name="how-to-bind-an-adorner-to-an-element"></a>Практическое руководство. Привязка графического элемента к элементу
 В этом примере показано, как программным способом привязки графического элемента с заданным <xref:System.Windows.UIElement>.  

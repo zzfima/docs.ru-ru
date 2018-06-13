@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33541837"
 ---
 # <a name="base-elements-overview"></a>Общие сведения о базовых элементах
 Большое количество классов в [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] являются производными от четырех классов, которые обычно называются в документации по [!INCLUDE[TLA2#tla_sdk](../../../../includes/tla2sharptla-sdk-md.md)] базовыми классами элементов. Эти классы являются <xref:System.Windows.UIElement>, <xref:System.Windows.FrameworkElement>, <xref:System.Windows.ContentElement>, и <xref:System.Windows.FrameworkContentElement>. <xref:System.Windows.DependencyObject> Класса также связанных, так как это общий базовый класс обоих <xref:System.Windows.UIElement> и <xref:System.Windows.ContentElement>  

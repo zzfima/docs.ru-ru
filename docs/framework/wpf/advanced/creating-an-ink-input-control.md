@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33541061"
 ---
 # <a name="creating-an-ink-input-control"></a>Создание элемента управления рукописным вводом
 Можно создать пользовательский элемент управления, динамически и статически отображающий рукописный ввод. Отображения рукописного ввода, то есть, как пользователь штриха, вызывая рукописный ввод в «поток» из планшетное перо и после него отображается добавляется в элемент управления, либо с помощью пера, вставленный из буфера обмена или загрузке из файла. Для динамического отображения рукописного ввода, необходимо использовать элемент управления <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>. Для статического отображения рукописного ввода, необходимо переопределить методы событий пера (<xref:System.Windows.UIElement.OnStylusDown%2A>, <xref:System.Windows.UIElement.OnStylusMove%2A>, и <xref:System.Windows.UIElement.OnStylusUp%2A>) для сбора <xref:System.Windows.Input.StylusPoint> данных, создания штрихов и добавить их к <xref:System.Windows.Controls.InkPresenter> (который отображает рукописного текста на элементе управления).  

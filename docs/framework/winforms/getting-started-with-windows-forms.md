@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33538969"
 ---
 # <a name="getting-started-with-windows-forms"></a>Приступая к работе с Windows Forms
 С помощью Windows Forms можно создать мощные приложения Windows. Следующие разделы подробно описываются способы использования возможностей Windows Forms для отображения данных, обработки вводимых пользователем данных и легко и безопасного развертывания приложений.  

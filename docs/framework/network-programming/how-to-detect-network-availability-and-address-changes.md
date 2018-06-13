@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33396263"
 ---
 # <a name="how-to-detect-network-availability-and-address-changes"></a>Практическое руководство. Определение доступности сети и изменений адреса
 В этом примере показано, как обнаружить изменения в сетевом адресе интерфейса.  

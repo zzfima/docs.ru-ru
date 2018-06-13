@@ -14,6 +14,7 @@ ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 04/09/2018
+ms.locfileid: "30957650"
 ---
 # <a name="samples-and-tutorials"></a>примеры и учебники;
 

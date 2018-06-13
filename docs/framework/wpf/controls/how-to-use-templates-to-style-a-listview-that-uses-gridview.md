@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33553836"
 ---
 # <a name="how-to-use-templates-to-style-a-listview-that-uses-gridview"></a>Практическое руководство. Использование шаблонов для настройки представления ListView, использующего GridView
 В этом примере показано, как использовать <xref:System.Windows.DataTemplate> и <xref:System.Windows.Style> объектов для определения внешнего вида <xref:System.Windows.Controls.ListView> управления, который использует <xref:System.Windows.Controls.GridView> режим просмотра.  
