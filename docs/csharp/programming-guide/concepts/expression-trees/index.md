@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33326502"
 ---
 # <a name="expression-trees-c"></a><span data-ttu-id="91258-102">Деревья выражений (C#)</span><span class="sxs-lookup"><span data-stu-id="91258-102">Expression Trees (C#)</span></span>
 <span data-ttu-id="91258-103">Деревья выражений представляют код в виде древовидной структуры, где каждый узел является выражением, например, вызовом метода или двоичной операцией, такой как `x < y`.</span><span class="sxs-lookup"><span data-stu-id="91258-103">Expression trees represent code in a tree-like data structure, where each node is an expression, for example, a method call or a binary operation such as `x < y`.</span></span>  

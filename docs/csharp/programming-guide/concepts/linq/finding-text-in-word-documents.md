@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33333932"
 ---
 # <a name="finding-text-in-word-documents-c"></a><span data-ttu-id="9f5ac-102">Поиск текста в документах Word (C#)</span><span class="sxs-lookup"><span data-stu-id="9f5ac-102">Finding Text in Word Documents (C#)</span></span>
 <span data-ttu-id="9f5ac-103">В этом разделе производится расширение предыдущих запросов, которое позволит выполнить некоторые полезные действия: найти все повторения определенной строки в документе.</span><span class="sxs-lookup"><span data-stu-id="9f5ac-103">This topic extends the previous queries to do something useful: find all occurrences of a string in the document.</span></span>  

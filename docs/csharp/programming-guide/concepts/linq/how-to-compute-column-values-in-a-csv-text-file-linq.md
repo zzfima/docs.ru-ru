@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33328764"
 ---
 # <a name="how-to-compute-column-values-in-a-csv-text-file-linq-c"></a><span data-ttu-id="a1aae-102">Практическое руководство. Вычисление значений столбцов в текстовом CSV-файле (LINQ) (C#)</span><span class="sxs-lookup"><span data-stu-id="a1aae-102">How to: Compute Column Values in a CSV Text File (LINQ) (C#)</span></span>
 <span data-ttu-id="a1aae-103">В этом примере демонстрируется выполнение статистических вычислений, таких как сумма, среднее, минимальное и максимальное для столбцов в CSV-файле.</span><span class="sxs-lookup"><span data-stu-id="a1aae-103">This example shows how to perform aggregate computations such as Sum, Average, Min, and Max on the columns of a .csv file.</span></span> <span data-ttu-id="a1aae-104">Приведенные в примере принципы могут применяться к другим типам структурированного текста.</span><span class="sxs-lookup"><span data-stu-id="a1aae-104">The example principles that are shown here can be applied to other types of structured text.</span></span>  

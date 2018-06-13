@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33603396"
 ---
 # <a name="call-statement-visual-basic"></a><span data-ttu-id="9ff5b-102">Оператор Call (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="9ff5b-102">Call Statement (Visual Basic)</span></span>
 <span data-ttu-id="9ff5b-103">Передает управление `Function`, `Sub`, или процедуре библиотеки динамической компоновки (DLL).</span><span class="sxs-lookup"><span data-stu-id="9ff5b-103">Transfers control to a `Function`, `Sub`, or dynamic-link library (DLL) procedure.</span></span>  

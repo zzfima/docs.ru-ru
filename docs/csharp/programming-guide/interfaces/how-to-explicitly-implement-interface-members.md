@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33332190"
 ---
 # <a name="how-to-explicitly-implement-interface-members-c-programming-guide"></a><span data-ttu-id="d5e2c-102">Практическое руководство. Явная реализация членов интерфейса (Руководство по программированию на C#)</span><span class="sxs-lookup"><span data-stu-id="d5e2c-102">How to: Explicitly Implement Interface Members (C# Programming Guide)</span></span>
 <span data-ttu-id="d5e2c-103">В этом примере объявляются [интерфейс](../../../csharp/language-reference/keywords/interface.md) `IDimensions` и класс `Box`, который явно реализует члены интерфейса `getLength` и `getWidth`.</span><span class="sxs-lookup"><span data-stu-id="d5e2c-103">This example declares an [interface](../../../csharp/language-reference/keywords/interface.md), `IDimensions`, and a class, `Box`, which explicitly implements the interface members `getLength` and `getWidth`.</span></span> <span data-ttu-id="d5e2c-104">Доступ к членам осуществляется посредством экземпляра интерфейса `dimensions`.</span><span class="sxs-lookup"><span data-stu-id="d5e2c-104">The members are accessed through the interface instance `dimensions`.</span></span>  

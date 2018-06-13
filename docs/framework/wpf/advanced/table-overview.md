@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33549374"
 ---
 # <a name="table-overview"></a><span data-ttu-id="ac401-102">Общие сведения о таблицах</span><span class="sxs-lookup"><span data-stu-id="ac401-102">Table Overview</span></span>
 <span data-ttu-id="ac401-103"><xref:System.Windows.Documents.Table> Представляет элемент уровня блока, поддерживающий представление на основе сетки содержимого документа.</span><span class="sxs-lookup"><span data-stu-id="ac401-103"><xref:System.Windows.Documents.Table> is a block level element that supports grid-based presentation of Flow document content.</span></span> <span data-ttu-id="ac401-104">Гибкость этого элемента делает его очень полезным, но также и более сложным для понимания и правильного использования.</span><span class="sxs-lookup"><span data-stu-id="ac401-104">The flexibility of this element makes it very useful, but also makes it more complicated to understand and use correctly.</span></span>  

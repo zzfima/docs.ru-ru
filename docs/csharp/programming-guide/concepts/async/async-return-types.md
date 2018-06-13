@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33334188"
 ---
 # <a name="async-return-types-c"></a><span data-ttu-id="24b9f-102">Асинхронные типы возвращаемых значений (C#)</span><span class="sxs-lookup"><span data-stu-id="24b9f-102">Async Return Types (C#)</span></span>
 <span data-ttu-id="24b9f-103">Асинхронные методы могут иметь следующие типы возвращаемых значений:</span><span class="sxs-lookup"><span data-stu-id="24b9f-103">Async methods can have the following return types:</span></span>

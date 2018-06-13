@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32758167"
 ---
 # <a name="modifying-data-with-stored-procedures"></a><span data-ttu-id="99138-102">Изменение данных с помощью хранимых процедур</span><span class="sxs-lookup"><span data-stu-id="99138-102">Modifying Data with Stored Procedures</span></span>
 <span data-ttu-id="99138-103">Хранимые процедуры могут принимать данные в виде входных параметров и возвращать их в виде выходных параметров, результирующих наборов или возвращаемых значений.</span><span class="sxs-lookup"><span data-stu-id="99138-103">Stored procedures can accept data as input parameters and can return data as output parameters, result sets, or return values.</span></span> <span data-ttu-id="99138-104">Образец, приведенный ниже, показывает, как ADO.NET отправляет и получает входные и выходные параметры, а также возвращаемые значения.</span><span class="sxs-lookup"><span data-stu-id="99138-104">The sample below illustrates how ADO.NET sends and receives input parameters, output parameters, and return values.</span></span> <span data-ttu-id="99138-105">Пример добавляет в таблицу новую запись, где столбец первичного ключа является столбцом идентификаторов в базе данных SQL Server.</span><span class="sxs-lookup"><span data-stu-id="99138-105">The example inserts a new record into a table where the primary key column is an identity column in a SQL Server database.</span></span>  

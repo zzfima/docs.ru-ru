@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33547258"
 ---
 # <a name="optimizing-performance-taking-advantage-of-hardware"></a><span data-ttu-id="e006a-102">Оптимизация производительности. Использование преимуществ аппаратного ускорения</span><span class="sxs-lookup"><span data-stu-id="e006a-102">Optimizing Performance: Taking Advantage of Hardware</span></span>
 <span data-ttu-id="e006a-103">Внутренняя архитектура [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] имеет два конвейера визуализации, оборудования и программного обеспечения.</span><span class="sxs-lookup"><span data-stu-id="e006a-103">The internal architecture of [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] has two rendering pipelines, hardware and software.</span></span> <span data-ttu-id="e006a-104">В этом разделе сведения об этих конвейера отрисовки для принятия решений об оптимизации производительности приложений.</span><span class="sxs-lookup"><span data-stu-id="e006a-104">This topic provides information about these rendering pipelines to help you make decisions about performance optimizations of your applications.</span></span>  

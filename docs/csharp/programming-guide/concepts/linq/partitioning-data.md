@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33328585"
 ---
 # <a name="partitioning-data-c"></a><span data-ttu-id="a249a-102">Секционирование данных (C#)</span><span class="sxs-lookup"><span data-stu-id="a249a-102">Partitioning Data (C#)</span></span>
 <span data-ttu-id="a249a-103">Секционированием в LINQ называют операцию разделения входной последовательности на два раздела без изменения порядка элементов, а затем возвращения одного из разделов.</span><span class="sxs-lookup"><span data-stu-id="a249a-103">Partitioning in LINQ refers to the operation of dividing an input sequence into two sections, without rearranging the elements, and then returning one of the sections.</span></span>  

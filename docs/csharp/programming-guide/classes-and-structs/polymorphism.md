@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33328449"
 ---
 # <a name="polymorphism-c-programming-guide"></a><span data-ttu-id="fdb6a-102">Полиморфизм (Руководство по программированию на C#)</span><span class="sxs-lookup"><span data-stu-id="fdb6a-102">Polymorphism (C# Programming Guide)</span></span>
 <span data-ttu-id="fdb6a-103">Полиморфизм часто называется третьим столпом объектно-ориентированного программирования после инкапсуляции и наследования.</span><span class="sxs-lookup"><span data-stu-id="fdb6a-103">Polymorphism is often referred to as the third pillar of object-oriented programming, after encapsulation and inheritance.</span></span> <span data-ttu-id="fdb6a-104">Полиморфизм — слово греческого происхождения, означающее "многообразие форм" и имеющее несколько аспектов.</span><span class="sxs-lookup"><span data-stu-id="fdb6a-104">Polymorphism is a Greek word that means "many-shaped" and it has two distinct aspects:</span></span>  

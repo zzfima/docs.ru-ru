@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33546202"
 ---
 # <a name="mcignorable-attribute"></a><span data-ttu-id="9830a-102">Атрибут mc: Ignorable</span><span class="sxs-lookup"><span data-stu-id="9830a-102">mc:Ignorable Attribute</span></span>
 <span data-ttu-id="9830a-103">Определяет, какая [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] может проигнорировать префиксы пространства имен в файле разметки [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] процессора.</span><span class="sxs-lookup"><span data-stu-id="9830a-103">Specifies which [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] namespace prefixes encountered in a markup file may be ignored by a [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] processor.</span></span> <span data-ttu-id="9830a-104">`mc:Ignorable` Атрибут поддерживает совместимость разметки для пользовательского сопоставления пространства имен и [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] управления версиями.</span><span class="sxs-lookup"><span data-stu-id="9830a-104">The `mc:Ignorable` attribute supports markup compatibility both for custom namespace mapping and for [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] versioning.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33333353"
 ---
 # <a name="xdocument-class-overview-c"></a><span data-ttu-id="aaf8a-102">Общие сведения о классе XDocument (C#)</span><span class="sxs-lookup"><span data-stu-id="aaf8a-102">XDocument Class Overview (C#)</span></span>
 <span data-ttu-id="aaf8a-103">В этом разделе представлен класс <xref:System.Xml.Linq.XDocument>.</span><span class="sxs-lookup"><span data-stu-id="aaf8a-103">This topic introduces the <xref:System.Xml.Linq.XDocument> class.</span></span>  

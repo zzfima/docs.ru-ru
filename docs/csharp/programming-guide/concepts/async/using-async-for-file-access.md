@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33328293"
 ---
 # <a name="using-async-for-file-access-c"></a><span data-ttu-id="f859e-102">Использование метода Async для доступа к файлам (C#)</span><span class="sxs-lookup"><span data-stu-id="f859e-102">Using Async for File Access (C#)</span></span>
 <span data-ttu-id="f859e-103">Для доступа к файлам можно использовать функцию Async.</span><span class="sxs-lookup"><span data-stu-id="f859e-103">You can use the async feature to access files.</span></span> <span data-ttu-id="f859e-104">При использовании функции Async вы можете вызывать асинхронные методы без использования обратных вызовов или разделения вашего кода на множество методов или лямбда-выражений.</span><span class="sxs-lookup"><span data-stu-id="f859e-104">By using the async feature, you can call into asynchronous methods without using callbacks or splitting your code across multiple methods or lambda expressions.</span></span> <span data-ttu-id="f859e-105">Для выполнения последовательного кода асинхронно просто вызовите асинхронный метод вместо синхронного метода и добавьте несколько ключевых слов в код.</span><span class="sxs-lookup"><span data-stu-id="f859e-105">To make synchronous code asynchronous, you just call an asynchronous method instead of a synchronous method and add a few keywords to the code.</span></span>  

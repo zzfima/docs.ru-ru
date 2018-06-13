@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33545728"
 ---
 # <a name="how-to-call-a-page-function"></a><span data-ttu-id="02b77-102">Практическое руководство. Вызов функции страницы</span><span class="sxs-lookup"><span data-stu-id="02b77-102">How to: Call a Page Function</span></span>
 <span data-ttu-id="02b77-103">В этом примере показано, как вызвать функцию страницы из [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] страницы.</span><span class="sxs-lookup"><span data-stu-id="02b77-103">This example shows how to call a page function from a [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] page.</span></span>  

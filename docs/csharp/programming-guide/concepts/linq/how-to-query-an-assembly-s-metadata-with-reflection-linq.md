@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33319502"
 ---
 # <a name="how-to-query-an-assembly39s-metadata-with-reflection-linq-c"></a><span data-ttu-id="d6335-102">Практическое руководство. Выполнение запроса к метаданным сборки при помощи отражения (LINQ) (C#)</span><span class="sxs-lookup"><span data-stu-id="d6335-102">How to: Query An Assembly&#39;s Metadata with Reflection (LINQ) (C#)</span></span>
 <span data-ttu-id="d6335-103">В следующем примере показано использование LINQ с отражением для извлечения определенных метаданных о методах, соответствующих условиям поиска.</span><span class="sxs-lookup"><span data-stu-id="d6335-103">The following example shows how LINQ can be used with reflection to retrieve specific metadata about methods that match a specified search criterion.</span></span> <span data-ttu-id="d6335-104">В этом примере запрос будет искать имена всех методов в сборке, которые возвращают перечислимые типы, такие как массивы.</span><span class="sxs-lookup"><span data-stu-id="d6335-104">In this case, the query will find the names of all the methods in the assembly that return enumerable types such as arrays.</span></span>  

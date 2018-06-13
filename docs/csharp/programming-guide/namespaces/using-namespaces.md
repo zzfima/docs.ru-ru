@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33329551"
 ---
 # <a name="using-namespaces-c-programming-guide"></a><span data-ttu-id="3566f-102">Использование пространств имен (Руководство по программированию в C#)</span><span class="sxs-lookup"><span data-stu-id="3566f-102">Using Namespaces (C# Programming Guide)</span></span>
 <span data-ttu-id="3566f-103">Пространства имен часто используются в программировании на C# двумя способами.</span><span class="sxs-lookup"><span data-stu-id="3566f-103">Namespaces are heavily used within C# programs in two ways.</span></span> <span data-ttu-id="3566f-104">Первый способ — платформа .NET Framework использует пространства имен для упорядочения множества ее классов.</span><span class="sxs-lookup"><span data-stu-id="3566f-104">Firstly, the .NET Framework classes use namespaces to organize its many classes.</span></span> <span data-ttu-id="3566f-105">Второй способ — объявление собственных пространств имен поможет вам контролировать область имен классов и методов в более крупных проектах.</span><span class="sxs-lookup"><span data-stu-id="3566f-105">Secondly, declaring your own namespaces can help control the scope of class and method names in larger programming projects.</span></span>  

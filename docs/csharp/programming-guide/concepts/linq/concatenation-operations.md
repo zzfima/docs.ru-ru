@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33323385"
 ---
 # <a name="concatenation-operations-c"></a><span data-ttu-id="874c8-102">Операции объединения (C#)</span><span class="sxs-lookup"><span data-stu-id="874c8-102">Concatenation Operations (C#)</span></span>
 <span data-ttu-id="874c8-103">Объединением называют операцию добавления одной последовательности к другой.</span><span class="sxs-lookup"><span data-stu-id="874c8-103">Concatenation refers to the operation of appending one sequence to another.</span></span>  

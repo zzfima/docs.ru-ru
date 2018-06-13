@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33330711"
 ---
 # <a name="how-to-override-the-tostring-method-c-programming-guide"></a><span data-ttu-id="40e62-102">Практическое руководство. Переопределение метода ToString (Руководство по программированию на C#)</span><span class="sxs-lookup"><span data-stu-id="40e62-102">How to: Override the ToString Method (C# Programming Guide)</span></span>
 <span data-ttu-id="40e62-103">Каждый класс или структура в языке C# неявно наследует класс <xref:System.Object>.</span><span class="sxs-lookup"><span data-stu-id="40e62-103">Every class or struct in C# implicitly inherits the <xref:System.Object> class.</span></span> <span data-ttu-id="40e62-104">Поэтому каждый объект в языке C# получает метод <xref:System.Object.ToString%2A>, который возвращает строковое представление данного объекта.</span><span class="sxs-lookup"><span data-stu-id="40e62-104">Therefore, every object in C# gets the <xref:System.Object.ToString%2A> method, which returns a string representation of that object.</span></span> <span data-ttu-id="40e62-105">Например, все переменные типа `int` имеют метод `ToString`, который позволяет им возвращать их содержимое в виде строки:</span><span class="sxs-lookup"><span data-stu-id="40e62-105">For example, all variables of type `int` have a `ToString` method, which enables them to return their contents as a string:</span></span>  

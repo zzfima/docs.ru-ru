@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33548224"
 ---
 # <a name="packaging-fonts-with-applications"></a><span data-ttu-id="674d6-102">Упаковка шрифтов с приложениями</span><span class="sxs-lookup"><span data-stu-id="674d6-102">Packaging Fonts with Applications</span></span>
 <span data-ttu-id="674d6-103">В этом разделе представлены общие сведения по пакета шрифтов с вашей [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] приложения.</span><span class="sxs-lookup"><span data-stu-id="674d6-103">This topic provides an overview of how to package fonts with your [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] application.</span></span>  

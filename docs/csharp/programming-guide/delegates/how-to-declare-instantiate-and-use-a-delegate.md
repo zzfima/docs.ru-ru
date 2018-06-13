@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33333977"
 ---
 # <a name="how-to-declare-instantiate-and-use-a-delegate-c-programming-guide"></a><span data-ttu-id="0598c-102">Практическое руководство. Объявление, создание экземпляра и использование делегата (руководство по программированию в C#)</span><span class="sxs-lookup"><span data-stu-id="0598c-102">How to: Declare, Instantiate, and Use a Delegate (C# Programming Guide)</span></span>
 <span data-ttu-id="0598c-103">В C# 1.0 и более поздних версий делегаты можно объявлять так, как показано в следующем примере.</span><span class="sxs-lookup"><span data-stu-id="0598c-103">In C# 1.0 and later, delegates can be declared as shown in the following example.</span></span>  

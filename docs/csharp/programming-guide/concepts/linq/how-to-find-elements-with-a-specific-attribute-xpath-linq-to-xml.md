@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33318092"
 ---
 # <a name="how-to-find-elements-with-a-specific-attribute-xpath-linq-to-xml-c"></a><span data-ttu-id="9aded-102">Практическое руководство. Поиск элементов с определенным атрибутом (XPath-LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="9aded-102">How to: Find Elements with a Specific Attribute (XPath-LINQ to XML) (C#)</span></span>
 <span data-ttu-id="9aded-103">Иногда может понадобиться найти все элементы, имеющие конкретный атрибут.</span><span class="sxs-lookup"><span data-stu-id="9aded-103">Sometimes you want to find all elements that have a specific attribute.</span></span> <span data-ttu-id="9aded-104">Вас не интересует содержимое атрибута.</span><span class="sxs-lookup"><span data-stu-id="9aded-104">You are not concerned about the contents of the attribute.</span></span> <span data-ttu-id="9aded-105">Вместо этого вы хотите сделать выбор на основании самого существования атрибута.</span><span class="sxs-lookup"><span data-stu-id="9aded-105">Instead, you want to select based on the existence of the attribute.</span></span>  

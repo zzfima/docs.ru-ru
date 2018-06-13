@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32751445"
 ---
 # <a name="ltreliablesessiongt"></a><span data-ttu-id="9ae56-102">&lt;reliableSession&gt;</span><span class="sxs-lookup"><span data-stu-id="9ae56-102">&lt;reliableSession&gt;</span></span>
 <span data-ttu-id="9ae56-103">Определяет параметры протокола WS-Reliable Messaging.</span><span class="sxs-lookup"><span data-stu-id="9ae56-103">Defines setting for WS-Reliable Messaging.</span></span> <span data-ttu-id="9ae56-104">Когда этот элемент добавляется к пользовательской привязке, получаемый канал может поддерживать гарантии доставки только один раз.</span><span class="sxs-lookup"><span data-stu-id="9ae56-104">When this element is added to a custom binding, the resulting channel can support exactly-once delivery assurances.</span></span>  

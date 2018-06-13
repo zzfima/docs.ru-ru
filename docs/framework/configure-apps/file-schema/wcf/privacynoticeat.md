@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32749248"
 ---
 # <a name="ltprivacynoticeatgt"></a><span data-ttu-id="e5198-102">&lt;privacyNoticeAt&gt;</span><span class="sxs-lookup"><span data-stu-id="e5198-102">&lt;privacyNoticeAt&gt;</span></span>
 <span data-ttu-id="e5198-103">Представляет элемент конфигурации, который задает уведомление о конфиденциальности, используемое в привязке `wsFederationHttp`.</span><span class="sxs-lookup"><span data-stu-id="e5198-103">Represents a configuration element that specifies a privacy notice used in `wsFederationHttp` binding.</span></span>  

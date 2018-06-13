@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33334091"
 ---
 # <a name="covariance-and-contravariance-c"></a><span data-ttu-id="75c1d-102">Ковариация и контравариантность (C#)</span><span class="sxs-lookup"><span data-stu-id="75c1d-102">Covariance and Contravariance (C#)</span></span>
 <span data-ttu-id="75c1d-103">В C# ковариация и контрвариантность позволяют использовать неявное преобразование ссылок для типов массивов и делегатов, а также для аргументов универсального типа.</span><span class="sxs-lookup"><span data-stu-id="75c1d-103">In C#, covariance and contravariance enable implicit reference conversion for array types, delegate types, and generic type arguments.</span></span> <span data-ttu-id="75c1d-104">Ковариация сохраняет совместимость присваивания, а при контрвариантности присваивание начинает работать противоположным образом.</span><span class="sxs-lookup"><span data-stu-id="75c1d-104">Covariance preserves assignment compatibility and contravariance reverses it.</span></span>  
