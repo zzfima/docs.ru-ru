@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33538412"
 ---
 # <a name="mouse-capture-in-windows-forms"></a>Захват мыши в Windows Forms
 *Захват мыши* называется элемента управления вводом все мыши. Элемент управления захватил мышь, получает ввод от мыши ли указатель мыши находится в пределах его границ.  

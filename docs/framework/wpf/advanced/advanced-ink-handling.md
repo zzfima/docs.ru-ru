@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33539034"
 ---
 # <a name="advanced-ink-handling"></a>Дополнительная обработка рукописных данных
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Поставляется с <xref:System.Windows.Controls.InkCanvas>, и элементом, можно поместить в приложение, чтобы немедленно начать сбор и отображение рукописного ввода. Однако если <xref:System.Windows.Controls.InkCanvas> управления не предоставляет необходимый уровень управления, то можно использовать элемент управления на более высоком уровне путем настройки своей собственной коллекции рукописного ввода и классов отрисовки рукописного ввода с помощью <xref:System.Windows.Input.StylusPlugIns>.  

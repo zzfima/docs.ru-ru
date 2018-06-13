@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33538836"
 ---
 # <a name="how-to-create-a-simple-bound-control-on-a-windows-form"></a>Практическое руководство. Создание элемента управления с простой привязкой в форме Windows Forms
 С *простую привязку*, одному элементу данных, например, значение столбца из таблицы набора данных, можно отобразить в элементе управления. Вы можете простую привязку любого свойства элемента управления к значению данных.  
