@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33395912"
 ---
 # <a name="making-asynchronous-requests"></a><span data-ttu-id="dc5e4-102">Выполнение асинхронных запросов</span><span class="sxs-lookup"><span data-stu-id="dc5e4-102">Making Asynchronous Requests</span></span>
 <span data-ttu-id="dc5e4-103">В классах <xref:System.Net> используется стандартная асинхронная модель программирования .NET Framework для асинхронного доступа к ресурсам в Интернете.</span><span class="sxs-lookup"><span data-stu-id="dc5e4-103">The <xref:System.Net> classes use the .NET Framework's standard asynchronous programming model for asynchronous access to Internet resources.</span></span> <span data-ttu-id="dc5e4-104">Методы <xref:System.Net.WebRequest.BeginGetResponse%2A> и <xref:System.Net.WebRequest.EndGetResponse%2A> класса <xref:System.Net.WebRequest> запускают и завершают асинхронные запросы к интернет-ресурсу.</span><span class="sxs-lookup"><span data-stu-id="dc5e4-104">The <xref:System.Net.WebRequest.BeginGetResponse%2A> and <xref:System.Net.WebRequest.EndGetResponse%2A> methods of the <xref:System.Net.WebRequest> class start and complete asynchronous requests for an Internet resource.</span></span>  
