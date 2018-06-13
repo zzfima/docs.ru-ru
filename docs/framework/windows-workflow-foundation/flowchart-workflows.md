@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33514528"
 ---
 # <a name="flowchart-workflows"></a><span data-ttu-id="24e86-102">Рабочие процессы блок-схемы</span><span class="sxs-lookup"><span data-stu-id="24e86-102">Flowchart Workflows</span></span>
 <span data-ttu-id="24e86-103">Блок-схемы лежат в основе широко известного принципа разработки программ.</span><span class="sxs-lookup"><span data-stu-id="24e86-103">A flowchart is a well-known paradigm for designing programs.</span></span> <span data-ttu-id="24e86-104">Действие «Блок-схема» обычно используется для реализации непоследовательных рабочих процессов, но если не требуются узлы `FlowDecision`, то может использоваться для реализации последовательных рабочих процессов.</span><span class="sxs-lookup"><span data-stu-id="24e86-104">The Flowchart activity is typically used to implement non-sequential workflows, but can be used for sequential workflows if no `FlowDecision` nodes are used.</span></span>  

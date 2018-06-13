@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33353515"
 ---
 # <a name="how-to-use-stored-procedures-that-take-parameters"></a><span data-ttu-id="eabb2-102">Практическое руководство. Использование хранимых процедур, принимающих параметры</span><span class="sxs-lookup"><span data-stu-id="eabb2-102">How to: Use Stored Procedures that Take Parameters</span></span>
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]<span data-ttu-id="eabb2-103"> сопоставляет выходные параметры с параметрами, передаваемыми по ссылке, и для типов значений объявляет, что параметры могут принимать значение NULL.</span><span class="sxs-lookup"><span data-stu-id="eabb2-103"> maps output parameters to reference parameters, and for value types declares the parameter as nullable.</span></span>  

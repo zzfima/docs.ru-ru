@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 9bcf8919037d5b79f3819fffec02708886064b40
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33453207"
 ---
 # <a name="icorprofilerinfogettokenandmetadatafromfunction-method"></a><span data-ttu-id="7c759-102">Метод ICorProfilerInfo::GetTokenAndMetadataFromFunction</span><span class="sxs-lookup"><span data-stu-id="7c759-102">ICorProfilerInfo::GetTokenAndMetadataFromFunction Method</span></span>
 <span data-ttu-id="7c759-103">Получает маркер метаданных и экземпляр интерфейса метаданных, который может использоваться в отношении маркера для указанной функции.</span><span class="sxs-lookup"><span data-stu-id="7c759-103">Gets the metadata token and a metadata interface instance that can be used against the token for the specified function.</span></span>  

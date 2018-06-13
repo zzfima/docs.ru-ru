@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33516166"
 ---
 # <a name="how-to-query-for-non-persisted-instances"></a><span data-ttu-id="52ef8-102">Как обращаться с запросом к несохраняемым экземплярам</span><span class="sxs-lookup"><span data-stu-id="52ef8-102">How to: Query for Non-persisted Instances</span></span>
 <span data-ttu-id="52ef8-103">Когда новый экземпляр службы создан и для службы определено поведение хранилища экземпляров рабочих процессов SQL, узел службы создает начальную запись для экземпляра службы в хранилище экземпляров.</span><span class="sxs-lookup"><span data-stu-id="52ef8-103">When a new instance of a service is created and the service has the SQL Workflow Instance Store behavior defined, the service host creates a initial entry for that service instance in the instance store.</span></span> <span data-ttu-id="52ef8-104">Позднее, когда экземпляр службы материализуется в первый раз, поведение хранилища экземпляров рабочих процессов SQL сохраняет текущее состояние экземпляра вместе с дополнительными данными, необходимыми для его активации, восстановления и управления.</span><span class="sxs-lookup"><span data-stu-id="52ef8-104">Subsequently when the service instance persists for the first time, the SQL Workflow Instance Store behavior stores the current instance state together with additional data that is required for activation, recovery, and control.</span></span>  

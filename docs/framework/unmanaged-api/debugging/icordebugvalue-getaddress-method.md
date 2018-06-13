@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 8c0fa19841580c7cfe8902577c3f756712a35893
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33420664"
 ---
 # <a name="icordebugvaluegetaddress-method"></a><span data-ttu-id="87ea8-102">Метод ICorDebugValue::GetAddress</span><span class="sxs-lookup"><span data-stu-id="87ea8-102">ICorDebugValue::GetAddress Method</span></span>
 <span data-ttu-id="87ea8-103">Возвращает адрес объекта «ICorDebugValue», который находится в отлаживаемом процессе.</span><span class="sxs-lookup"><span data-stu-id="87ea8-103">Gets the address of this "ICorDebugValue" object, which is in the process of being debugged.</span></span>  

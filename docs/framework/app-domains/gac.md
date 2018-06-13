@@ -17,6 +17,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32751978"
 ---
 # <a name="global-assembly-cache"></a><span data-ttu-id="10fb5-102">глобальный кэш сборок</span><span class="sxs-lookup"><span data-stu-id="10fb5-102">Global Assembly Cache</span></span>
 <span data-ttu-id="10fb5-103">На каждом компьютере с установленной средой CLR имеется кэш кода на уровне компьютера, называемый глобальным кэшем сборок.</span><span class="sxs-lookup"><span data-stu-id="10fb5-103">Each computer where the Common Language Runtime is installed has a machine-wide code cache called the Global Assembly Cache.</span></span> <span data-ttu-id="10fb5-104">В глобальном кэше сборок сохраняются сборки, специально предназначенные для совместного использования на компьютере несколькими приложениями.</span><span class="sxs-lookup"><span data-stu-id="10fb5-104">The Global Assembly Cache stores assemblies specifically designated to be shared by several applications on the computer.</span></span>  

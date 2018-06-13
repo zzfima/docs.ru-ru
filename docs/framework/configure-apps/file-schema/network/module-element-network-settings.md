@@ -16,6 +16,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32753772"
 ---
 # <a name="ltmodulegt-element-network-settings"></a><span data-ttu-id="4f3c6-102">&lt;модуль&gt; элемент (параметры сети)</span><span class="sxs-lookup"><span data-stu-id="4f3c6-102">&lt;module&gt; Element (Network Settings)</span></span>
 <span data-ttu-id="4f3c6-103">Добавляет в приложение новый модуль прокси-сервера.</span><span class="sxs-lookup"><span data-stu-id="4f3c6-103">Adds a new proxy module to the application.</span></span>  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33521558"
 ---
 # <a name="cropping-and-scaling-images-in-gdi"></a><span data-ttu-id="c8023-102">Обрезка и масштабирование изображений в GDI+</span><span class="sxs-lookup"><span data-stu-id="c8023-102">Cropping and Scaling Images in GDI+</span></span>
 <span data-ttu-id="c8023-103">Можно использовать <xref:System.Drawing.Graphics.DrawImage%2A> метод <xref:System.Drawing.Graphics> класса для рисования и размещения векторных и растровых изображений.</span><span class="sxs-lookup"><span data-stu-id="c8023-103">You can use the <xref:System.Drawing.Graphics.DrawImage%2A> method of the <xref:System.Drawing.Graphics> class to draw and position vector images and raster images.</span></span> <span data-ttu-id="c8023-104"><xref:System.Drawing.Graphics.DrawImage%2A> — перегружаемый метод, поэтому существует несколько способов передачи аргументов.</span><span class="sxs-lookup"><span data-stu-id="c8023-104"><xref:System.Drawing.Graphics.DrawImage%2A> is an overloaded method, so there are several ways you can supply it with arguments.</span></span>  

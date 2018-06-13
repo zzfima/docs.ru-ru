@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33517102"
 ---
 # <a name="workflow-management-endpoint-sample"></a><span data-ttu-id="8a8a9-102">Образец конечной точки управления рабочим процессом</span><span class="sxs-lookup"><span data-stu-id="8a8a9-102">Workflow Management Endpoint Sample</span></span>
 <span data-ttu-id="8a8a9-103">Этот образец показывает, как можно использовать конечную точку управления рабочего процесса для создания и запуска рабочих процессов как локально, так и удаленно.</span><span class="sxs-lookup"><span data-stu-id="8a8a9-103">This sample shows how a workflow control endpoint can be used to create and run workflows both locally and remotely.</span></span> <span data-ttu-id="8a8a9-104">В следующем образце показано создание узла конечной точки управления, и клиентов, вызывающих конечную точку управления для создания и запуска экземпляра рабочего процесса.</span><span class="sxs-lookup"><span data-stu-id="8a8a9-104">The sample demonstrates how to host a control endpoint and write clients that call the control endpoint to create and run the instance of a workflow.</span></span> <span data-ttu-id="8a8a9-105">Рабочий процесс не является службой.</span><span class="sxs-lookup"><span data-stu-id="8a8a9-105">The workflow is not a service.</span></span>  

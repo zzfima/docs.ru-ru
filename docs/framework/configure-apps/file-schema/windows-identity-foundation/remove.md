@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32755081"
 ---
 # <a name="ltremovegt"></a><span data-ttu-id="2ba02-102">&lt;remove&gt;</span><span class="sxs-lookup"><span data-stu-id="2ba02-102">&lt;remove&gt;</span></span>
 <span data-ttu-id="2ba02-103">Удаляет обработчик маркеров безопасности из коллекции обработчиков маркеров.</span><span class="sxs-lookup"><span data-stu-id="2ba02-103">Removes the specified security token handler from the token handler collection.</span></span>  

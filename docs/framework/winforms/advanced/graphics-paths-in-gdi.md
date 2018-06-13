@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33523893"
 ---
 # <a name="graphics-paths-in-gdi"></a><span data-ttu-id="06215-102">Контуры в GDI+</span><span class="sxs-lookup"><span data-stu-id="06215-102">Graphics Paths in GDI+</span></span>
 <span data-ttu-id="06215-103">Пути сформированном путем объединения линии, прямоугольники и простейших кривых.</span><span class="sxs-lookup"><span data-stu-id="06215-103">Paths are formed by combining lines, rectangles, and simple curves.</span></span> <span data-ttu-id="06215-104">Вспомните из [Общие сведения о векторной графике](../../../../docs/framework/winforms/advanced/vector-graphics-overview.md) , основными строительными блоками доказали подходят для рисования изображений:</span><span class="sxs-lookup"><span data-stu-id="06215-104">Recall from the [Vector Graphics Overview](../../../../docs/framework/winforms/advanced/vector-graphics-overview.md) that the following basic building blocks have proven to be the most useful for drawing pictures:</span></span>  

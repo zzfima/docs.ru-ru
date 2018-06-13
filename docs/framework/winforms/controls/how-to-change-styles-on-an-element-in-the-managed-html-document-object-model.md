@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33531255"
 ---
 # <a name="how-to-change-styles-on-an-element-in-the-managed-html-document-object-model"></a><span data-ttu-id="0ae27-102">Практическое руководство. Изменение стилей элемента в управляемой объектной модели HTML-документов</span><span class="sxs-lookup"><span data-stu-id="0ae27-102">How to: Change Styles on an Element in the Managed HTML Document Object Model</span></span>
 <span data-ttu-id="0ae27-103">Стили в формате HTML можно использовать для управления внешним видом документа и его элементов.</span><span class="sxs-lookup"><span data-stu-id="0ae27-103">You can use styles in HTML to control the appearance of a document and its elements.</span></span> <span data-ttu-id="0ae27-104"><xref:System.Windows.Forms.HtmlDocument> и <xref:System.Windows.Forms.HtmlElement> поддерживает <xref:System.Windows.Forms.HtmlElement.Style%2A> свойств, которые принимают строки в следующем формате:</span><span class="sxs-lookup"><span data-stu-id="0ae27-104"><xref:System.Windows.Forms.HtmlDocument> and <xref:System.Windows.Forms.HtmlElement> support <xref:System.Windows.Forms.HtmlElement.Style%2A> properties that take style strings of the following format:</span></span>  

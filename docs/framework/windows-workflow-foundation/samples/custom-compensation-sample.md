@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33514328"
 ---
 # <a name="custom-compensation-sample"></a><span data-ttu-id="23058-102">Образец настраиваемой компенсации</span><span class="sxs-lookup"><span data-stu-id="23058-102">Custom Compensation Sample</span></span>
 <span data-ttu-id="23058-103">В этом образце показано, как использовать действие <xref:System.Activities.Statements.CompensableActivity> и его обработчик компенсации для определения пользовательской логики компенсации.</span><span class="sxs-lookup"><span data-stu-id="23058-103">This sample shows how to use <xref:System.Activities.Statements.CompensableActivity> and its compensation handler to define custom compensation logic.</span></span> <span data-ttu-id="23058-104">В этом образце моделируется «Агентство по аренде грузовиков».</span><span class="sxs-lookup"><span data-stu-id="23058-104">The scenario modeled in this sample is a Truck Rental Agency.</span></span>  

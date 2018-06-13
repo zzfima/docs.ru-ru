@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c4b28d60b3a1da32d2d9db84aa92ca4c9bf769aa
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33423199"
 ---
 # <a name="icordebugregisterset-interface"></a><span data-ttu-id="4e9b3-102">Интерфейс ICorDebugRegisterSet</span><span class="sxs-lookup"><span data-stu-id="4e9b3-102">ICorDebugRegisterSet Interface</span></span>
 <span data-ttu-id="4e9b3-103">Представляет набор регистров, доступных на компьютере, на данный момент выполняется код.</span><span class="sxs-lookup"><span data-stu-id="4e9b3-103">Represents the set of registers available on the computer that is currently executing code.</span></span>  

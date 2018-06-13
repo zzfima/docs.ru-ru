@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33516250"
 ---
 # <a name="rules-samples"></a><span data-ttu-id="1fe6f-102">Образцы правил</span><span class="sxs-lookup"><span data-stu-id="1fe6f-102">Rules Samples</span></span>
 <span data-ttu-id="1fe6f-103">Данный раздел содержит образцы, которые демонстрируют использование обработчика правил рабочих процессов из [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)].</span><span class="sxs-lookup"><span data-stu-id="1fe6f-103">This section contains samples that demonstrate using the workflow rules engine from [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)].</span></span>  

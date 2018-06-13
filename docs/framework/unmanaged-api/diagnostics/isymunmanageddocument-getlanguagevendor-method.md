@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 0a6830f47d5cac2cf9c84144c18486489b0ec581
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33424535"
 ---
 # <a name="isymunmanageddocumentgetlanguagevendor-method"></a><span data-ttu-id="81e31-102">Метод ISymUnmanagedDocument::GetLanguageVendor</span><span class="sxs-lookup"><span data-stu-id="81e31-102">ISymUnmanagedDocument::GetLanguageVendor Method</span></span>
 <span data-ttu-id="81e31-103">Возвращает поставщика языка документа.</span><span class="sxs-lookup"><span data-stu-id="81e31-103">Gets the language vendor of this document.</span></span>  

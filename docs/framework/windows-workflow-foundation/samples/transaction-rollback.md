@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33517161"
 ---
 # <a name="transaction-rollback"></a><span data-ttu-id="9409e-102">Откат транзакции</span><span class="sxs-lookup"><span data-stu-id="9409e-102">Transaction Rollback</span></span>
 <span data-ttu-id="9409e-103">Этот образец показывает, как создавать пользовательское действие <xref:System.Activities.NativeActivity>, которое обращается к внешнему дескриптору <xref:System.Activities.RuntimeTransactionHandle> для получения внешней транзакции и выполнения явного ее отката.</span><span class="sxs-lookup"><span data-stu-id="9409e-103">This sample shows how to create a custom <xref:System.Activities.NativeActivity> that accesses the ambient <xref:System.Activities.RuntimeTransactionHandle> to get the ambient transaction and explicitly roll it back.</span></span>  
