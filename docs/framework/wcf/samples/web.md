@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33805117"
 ---
 # <a name="web"></a><span data-ttu-id="392bc-102">Интернет</span><span class="sxs-lookup"><span data-stu-id="392bc-102">Web</span></span>
 <span data-ttu-id="392bc-103">В этом разделе перечислены образцы, размещенные в Интернете.</span><span class="sxs-lookup"><span data-stu-id="392bc-103">This section contains Web-hosted samples.</span></span>  

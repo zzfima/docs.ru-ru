@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33649052"
 ---
 # <a name="how-to-call-a-procedure-that-does-not-return-a-value-visual-basic"></a><span data-ttu-id="f0356-102">Практическое руководство. Вызов процедуры, которая не возвращает значение (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="f0356-102">How to: Call a Procedure that Does Not Return a Value (Visual Basic)</span></span>
 <span data-ttu-id="f0356-103">Объект `Sub` процедура не возвращает значение вызывающему коду.</span><span class="sxs-lookup"><span data-stu-id="f0356-103">A `Sub` procedure does not return a value to the calling code.</span></span> <span data-ttu-id="f0356-104">Она вызывается явным образом с помощью отдельного вызывающего оператора.</span><span class="sxs-lookup"><span data-stu-id="f0356-104">You call it explicitly with a stand-alone calling statement.</span></span> <span data-ttu-id="f0356-105">Нельзя вызвать, просто указав ее имя в выражении.</span><span class="sxs-lookup"><span data-stu-id="f0356-105">You cannot call it by simply using its name within an expression.</span></span>  

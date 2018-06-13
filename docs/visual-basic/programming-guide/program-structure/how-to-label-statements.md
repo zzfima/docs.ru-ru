@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33650128"
 ---
 # <a name="how-to-label-statements-visual-basic"></a><span data-ttu-id="ffa60-102">Практическое руководство. Операторы меток (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="ffa60-102">How to: Label Statements (Visual Basic)</span></span>
 <span data-ttu-id="ffa60-103">Блоки операторов состоят из строк кода, разделенных точкой с запятой.</span><span class="sxs-lookup"><span data-stu-id="ffa60-103">Statement blocks are made up of lines of code delimited by colons.</span></span> <span data-ttu-id="ffa60-104">Строки кода, предшествует идентификатор или целое число, называются *с меткой*.</span><span class="sxs-lookup"><span data-stu-id="ffa60-104">Lines of code preceded by an identifying string or integer are said to be *labeled*.</span></span> <span data-ttu-id="ffa60-105">Метки операторов используются пометить строку кода для обозначения при использовании операторами, такие как `On Error Goto`.</span><span class="sxs-lookup"><span data-stu-id="ffa60-105">Statement labels are used to mark a line of code to identify it for use with statements such as `On Error Goto`.</span></span>  

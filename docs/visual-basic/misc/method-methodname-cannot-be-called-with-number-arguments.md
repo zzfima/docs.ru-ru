@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33636123"
 ---
 # <a name="method-39ltmethodnamegt39-cannot-be-called-with-ltnumbergt-arguments"></a><span data-ttu-id="c8511-102">Метод &#39; &lt;имя_метода&gt; &#39; не может вызываться с &lt;номер&gt; аргументов</span><span class="sxs-lookup"><span data-stu-id="c8511-102">Method &#39;&lt;methodname&gt;&#39; cannot be called with &lt;number&gt; arguments</span></span>
 <span data-ttu-id="c8511-103">Вызов метода содержит неверное число аргументов.</span><span class="sxs-lookup"><span data-stu-id="c8511-103">A method call contains the wrong number of arguments.</span></span>  

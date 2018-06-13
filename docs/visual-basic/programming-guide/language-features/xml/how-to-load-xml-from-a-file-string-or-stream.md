@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33647635"
 ---
 # <a name="how-to-load-xml-from-a-file-string-or-stream-visual-basic"></a><span data-ttu-id="22b70-102">Практическое руководство. Загрузка XML-кода из файла, строки или потока (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="22b70-102">How to: Load XML from a File, String, or Stream (Visual Basic)</span></span>
 <span data-ttu-id="22b70-103">Можно создать [XML-литералы](../../../../visual-basic/language-reference/xml-literals/index.md) и заполнить их содержимое из внешнего источника, например файла, строки или потока с помощью нескольких методов.</span><span class="sxs-lookup"><span data-stu-id="22b70-103">You can create [XML Literals](../../../../visual-basic/language-reference/xml-literals/index.md) and populate them with the contents from an external source such as a file, a string, or a stream by using several methods.</span></span> <span data-ttu-id="22b70-104">В следующих примерах показаны эти методы.</span><span class="sxs-lookup"><span data-stu-id="22b70-104">These methods are shown in the following examples.</span></span>  

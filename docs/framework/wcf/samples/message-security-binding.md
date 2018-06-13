@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33805045"
 ---
 # <a name="message-security-binding"></a><span data-ttu-id="c26c5-102">Привязка безопасности сообщений</span><span class="sxs-lookup"><span data-stu-id="c26c5-102">Message Security Binding</span></span>
 <span data-ttu-id="c26c5-103">В этом разделе содержатся образцы, которые демонстрируют привязку безопасности сообщений в службах Windows в WCF.</span><span class="sxs-lookup"><span data-stu-id="c26c5-103">This section contains samples that demonstrate message security binding in Windows Services in WCF.</span></span>  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33649267"
 ---
 # <a name="how-to-create-a-procedure-visual-basic"></a><span data-ttu-id="e7099-102">Практическое руководство. Создание процедуры (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e7099-102">How to: Create a Procedure (Visual Basic)</span></span>
 <span data-ttu-id="e7099-103">Заключите процедуру между начальной оператор объявления (`Sub` или `Function`) и конечный оператор объявления (`End Sub` или `End Function`).</span><span class="sxs-lookup"><span data-stu-id="e7099-103">You enclose a procedure between a starting declaration statement (`Sub` or `Function`) and an ending declaration statement (`End Sub` or `End Function`).</span></span> <span data-ttu-id="e7099-104">Код процедуры содержится между этими операторами.</span><span class="sxs-lookup"><span data-stu-id="e7099-104">All the procedure's code lies between these statements.</span></span>  

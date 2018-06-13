@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33649816"
 ---
 # <a name="how-to-define-multiple-versions-of-a-procedure-visual-basic"></a><span data-ttu-id="4f991-102">Практическое руководство. Определение различных версий процедуры (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="4f991-102">How to: Define Multiple Versions of a Procedure (Visual Basic)</span></span>
 <span data-ttu-id="4f991-103">Можно определить процедуру в нескольких версиях по *перегрузка* его, используя то же имя, но другим списком параметров для каждой версии.</span><span class="sxs-lookup"><span data-stu-id="4f991-103">You can define a procedure in multiple versions by *overloading* it, using the same name but a different parameter list for each version.</span></span> <span data-ttu-id="4f991-104">Перегрузка предназначена для определения несколько взаимосвязанных версий процедуры, не различая их по имени.</span><span class="sxs-lookup"><span data-stu-id="4f991-104">The purpose of overloading is to define several closely related versions of a procedure without having to differentiate them by name.</span></span>  

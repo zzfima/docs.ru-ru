@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33644138"
 ---
 # <a name="using-variance-in-delegates-visual-basic"></a><span data-ttu-id="7cdde-102">Использование вариативности в делегатах (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="7cdde-102">Using Variance in Delegates (Visual Basic)</span></span>
 <span data-ttu-id="7cdde-103">При назначении метода делегату *ковариация* и *контравариантость* обеспечивают гибкость сопоставления типа делегата с сигнатурой метода.</span><span class="sxs-lookup"><span data-stu-id="7cdde-103">When you assign a method to a delegate, *covariance* and *contravariance* provide flexibility for matching a delegate type with a method signature.</span></span> <span data-ttu-id="7cdde-104">Ковариация позволяет методу иметь тип возвращаемого значения, степень наследования которого больше, чем указано в делегате.</span><span class="sxs-lookup"><span data-stu-id="7cdde-104">Covariance permits a method to have return type that is more derived than that defined in the delegate.</span></span> <span data-ttu-id="7cdde-105">Контравариантность позволяет использовать метод с типами параметров, степень наследования которых меньше, чем у типа делегата.</span><span class="sxs-lookup"><span data-stu-id="7cdde-105">Contravariance permits a method that has parameter types that are less derived than those in the delegate type.</span></span>  

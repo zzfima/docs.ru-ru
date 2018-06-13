@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33643508"
 ---
 # <a name="finding-text-in-word-documents-visual-basic"></a><span data-ttu-id="28074-102">Поиск текста в документах Word (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="28074-102">Finding Text in Word Documents (Visual Basic)</span></span>
 <span data-ttu-id="28074-103">В этом разделе производится расширение предыдущих запросов, которое позволит выполнить некоторые полезные действия: найти все повторения определенной строки в документе.</span><span class="sxs-lookup"><span data-stu-id="28074-103">This topic extends the previous queries to do something useful: find all occurrences of a string in the document.</span></span>  

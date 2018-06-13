@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33645958"
 ---
 # <a name="style-part-of-a-wordprocessingml-document"></a><span data-ttu-id="74934-102">Раздел со стилями документа WordprocessingML</span><span class="sxs-lookup"><span data-stu-id="74934-102">Style Part of a WordprocessingML Document</span></span>
 <span data-ttu-id="74934-103">В этом разделе показан пример секции стилей документа Office Open XML WordprocessingML.</span><span class="sxs-lookup"><span data-stu-id="74934-103">This topic shows an example of the style part of the Office Open XML WordprocessingML document.</span></span>  

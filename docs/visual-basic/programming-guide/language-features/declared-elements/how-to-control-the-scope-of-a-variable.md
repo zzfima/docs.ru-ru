@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33649195"
 ---
 # <a name="how-to-control-the-scope-of-a-variable-visual-basic"></a><span data-ttu-id="b3359-102">Практическое руководство. Управление областью действия переменной (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b3359-102">How to: Control the Scope of a Variable (Visual Basic)</span></span>
 <span data-ttu-id="b3359-103">Как правило, переменная находится в *область*, или доступна для ссылки во всей области, в котором она объявлена.</span><span class="sxs-lookup"><span data-stu-id="b3359-103">Normally, a variable is in *scope*, or visible for reference, throughout the region in which you declare it.</span></span> <span data-ttu-id="b3359-104">В некоторых случаях переменная *уровень доступа* может повлиять на ее область действия.</span><span class="sxs-lookup"><span data-stu-id="b3359-104">In some cases, the variable's *access level* can influence its scope.</span></span>  

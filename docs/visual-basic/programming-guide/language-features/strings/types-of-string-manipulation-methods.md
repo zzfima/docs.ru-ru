@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33648698"
 ---
 # <a name="types-of-string-manipulation-methods-in-visual-basic"></a><span data-ttu-id="08dad-102">Типы методов для работы со строками в Visual Basic</span><span class="sxs-lookup"><span data-stu-id="08dad-102">Types of String Manipulation Methods in Visual Basic</span></span>
 <span data-ttu-id="08dad-103">Существует несколько способов для анализа и работы со строками.</span><span class="sxs-lookup"><span data-stu-id="08dad-103">There are several different ways to analyze and manipulate your strings.</span></span> <span data-ttu-id="08dad-104">Некоторые методы являются частью языка Visual Basic, а другие принадлежат `String` класса.</span><span class="sxs-lookup"><span data-stu-id="08dad-104">Some of the methods are a part of the Visual Basic language, and others are inherent in the `String` class.</span></span>  
