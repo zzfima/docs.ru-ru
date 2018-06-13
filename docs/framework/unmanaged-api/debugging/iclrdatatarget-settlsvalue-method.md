@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 18733c2d643a75f9bb11159ba4acdbc8ab064c55
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33404123"
 ---
 # <a name="iclrdatatargetsettlsvalue-method"></a>Метод ICLRDataTarget::SetTLSValue
 Задает значение в локальном хранилище потока (TLS) заданного потока в целевом процессе. Этот метод вызывается службами доступа к данным среды CLR.  

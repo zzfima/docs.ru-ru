@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 90ad74a3b9dd26d0a6e390a777e862f4274f86d6
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33403846"
 ---
 # <a name="icordebugassembly2-interface1"></a>Интерфейс1 ICorDebugAssembly2
 Представляет сборку. Этот интерфейс является расширением интерфейса ICorDebugAssembly.  

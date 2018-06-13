@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33410024"
 ---
 # <a name="mpgoexe-managed-profile-guided-optimization-tool"></a>Mpgo.exe (управляемое средство профильной оптимизации)
 Управляемое средство профильной оптимизации (Mpgo.exe) — это программа командной строки, которая использует общие пользовательские сценарии для оптимизации сборок машинных образов, созданных [Генератором машинных образов (Ngen.exe)](../../../docs/framework/tools/ngen-exe-native-image-generator.md). Это средство позволяет выполнять обучающие сценарии, которые создают данные профиля. [Генератор машинных образов (Ngen.exe)](../../../docs/framework/tools/ngen-exe-native-image-generator.md) использует эти данные для оптимизации создаваемых сборок приложений с машинными образами. Обучающий сценарий — это пробный сеанс предполагаемого использования приложения. Средство Mpgo.exe доступно в Visual Studio Ultimate 2012 и более поздних версий. Начиная с [!INCLUDE[vs_dev12](../../../includes/vs-dev12-md.md)] с помощью средства Mpgo.exe можно также оптимизировать приложения [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)].  
