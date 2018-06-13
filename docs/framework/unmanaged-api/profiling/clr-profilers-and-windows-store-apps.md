@@ -16,9 +16,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 20a1ed9b6b613b1e4d3e5363ab9995cc81295091
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33462290"
 ---
 # <a name="clr-profilers-and-windows-store-apps"></a><span data-ttu-id="8c08a-102">Профилировщик среды CLR и приложений для магазина Windows</span><span class="sxs-lookup"><span data-stu-id="8c08a-102">CLR Profilers and Windows Store Apps</span></span>
 <span data-ttu-id="8c08a-103">Здесь описывается, что необходимо рассматривать при написание средств диагностики анализа управляемого кода, выполняемым внутри приложения для магазина Windows.</span><span class="sxs-lookup"><span data-stu-id="8c08a-103">This topic discusses what you need to think about when writing diagnostic tools that analyze managed code running inside a Windows Store app.</span></span>  <span data-ttu-id="8c08a-104">Он также предоставляет инструкции для изменения существующих средств разработки, они продолжают работать при запуске для приложений для магазина Windows.</span><span class="sxs-lookup"><span data-stu-id="8c08a-104">It also provides guidelines to modify your existing development tools so they continue to work when you run them against Windows Store apps.</span></span>  <span data-ttu-id="8c08a-105">Чтобы понять эту информацию, она лучше всего подходит, если вы знакомы с общий язык времени выполнения профилирования API, вы уже использовали этот интерфейс API в диагностическое средство, будет работать правильно с настольных приложений Windows и вы являетесь теперь вам интересны изменение средство для правильной работы для приложений для магазина Windows.</span><span class="sxs-lookup"><span data-stu-id="8c08a-105">To understand this information, it’s best if you're  familiar with the Common Language Runtime Profiling API, you’ve already used this API in a diagnostic tool that runs correctly against Windows desktop applications, and you’re now interested in modifying the tool to run correctly against Windows Store apps.</span></span>  

@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 7ccb0aef0e998ffccd7526f9f0554bceb892001b
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33462193"
 ---
 # <a name="qualifiersetput-function"></a><span data-ttu-id="2983a-103">Функция QualifierSet_Put</span><span class="sxs-lookup"><span data-stu-id="2983a-103">QualifierSet_Put function</span></span>
 <span data-ttu-id="2983a-104">Записывает именованный квалификатор и значение.</span><span class="sxs-lookup"><span data-stu-id="2983a-104">Writes the named qualifier and value.</span></span> <span data-ttu-id="2983a-105">Новый квалификатор перезаписывает предыдущее значение с тем же именем.</span><span class="sxs-lookup"><span data-stu-id="2983a-105">The new qualifier overwrites the previous value of the same name.</span></span> <span data-ttu-id="2983a-106">Если квалификатор не существует, он создается.</span><span class="sxs-lookup"><span data-stu-id="2983a-106">If the qualifier does not exist, it is created.</span></span> 

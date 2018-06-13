@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33397004"
 ---
 # <a name="peer-name-resolution-protocol"></a><span data-ttu-id="e01d4-102">Протокол PNRP</span><span class="sxs-lookup"><span data-stu-id="e01d4-102">Peer Name Resolution Protocol</span></span>
 <span data-ttu-id="e01d4-103">В одноранговых средах одноранговые узлы используют определенные системы разрешения имен для определения сетевого расположения (адреса, протоколы и порты) друг друга на основе имен и идентификаторов других типов.</span><span class="sxs-lookup"><span data-stu-id="e01d4-103">In peer-to-peer environments, peers use specific name resolution systems to resolve each other's network locations (addresses, protocols, and ports) from names or other types of identifiers.</span></span> <span data-ttu-id="e01d4-104">Раньше разрешение имен одноранговых узлов было затруднено из-за временного характера подключений, а также других недостатков службы доменных имен (DNS).</span><span class="sxs-lookup"><span data-stu-id="e01d4-104">In the past, peer name resolution has been complicated by the inherently transient connectivity as well as other shortcomings within the Domain Name System (DNS).</span></span>  

@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: b848c30e824d45f6f619cfdb3d00a2d3cdc4573e
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33448717"
 ---
 # <a name="imetadataimportenumparams-method"></a><span data-ttu-id="41f3b-102">Метод IMetaDataImport::EnumParams</span><span class="sxs-lookup"><span data-stu-id="41f3b-102">IMetaDataImport::EnumParams Method</span></span>
 <span data-ttu-id="41f3b-103">Перечисляет токены ParamDef, представляющие параметры метода, на который ссылается указанный токен MethodDef.</span><span class="sxs-lookup"><span data-stu-id="41f3b-103">Enumerates ParamDef tokens representing the parameters of the method referenced by the specified MethodDef token.</span></span>  
