@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2c0545440ed63ba914229249080ec9f6be8eb2b3
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33402257"
 ---
 # <a name="icordebugchaingetprevious-method"></a><span data-ttu-id="6c225-102">Метод ICorDebugChain::GetPrevious</span><span class="sxs-lookup"><span data-stu-id="6c225-102">ICorDebugChain::GetPrevious Method</span></span>
 <span data-ttu-id="6c225-103">Возвращает предыдущую цепь кадров для потока.</span><span class="sxs-lookup"><span data-stu-id="6c225-103">Gets the previous chain of frames for the thread.</span></span>  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33552016"
 ---
 # <a name="how-to-retrieve-a-text-selection"></a><span data-ttu-id="f8169-102">Практическое руководство. Извлечение выделенного текста</span><span class="sxs-lookup"><span data-stu-id="f8169-102">How to: Retrieve a Text Selection</span></span>
 <span data-ttu-id="f8169-103">В этом примере показано, как использовать <xref:System.Windows.Controls.TextBox.SelectedText%2A> свойства, чтобы получить текст, который пользователь выбрал в <xref:System.Windows.Controls.TextBox> элемента управления.</span><span class="sxs-lookup"><span data-stu-id="f8169-103">This example shows one way to use the <xref:System.Windows.Controls.TextBox.SelectedText%2A> property to retrieve text that the user has selected in a <xref:System.Windows.Controls.TextBox> control.</span></span>  

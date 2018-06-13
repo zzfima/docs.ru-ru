@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 4338619414c9c9ac8c5fe85479562410d1678698
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33403862"
 ---
 # <a name="iclrmetadatalocatorgetmetadata-method"></a><span data-ttu-id="f77d7-102">Метод ICLRMetadataLocator::GetMetadata</span><span class="sxs-lookup"><span data-stu-id="f77d7-102">ICLRMetadataLocator::GetMetadata Method</span></span>
 <span data-ttu-id="f77d7-103">Вызывается службами доступа к данным среды выполнения (CLR) для получения метаданных изображения.</span><span class="sxs-lookup"><span data-stu-id="f77d7-103">Called by the common language runtime (CLR) data access services to retrieve the metadata of an image.</span></span>  

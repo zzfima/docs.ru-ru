@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 580c7b4dcd63f83e113a5317c242b7e66cfb3f5a
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33403420"
 ---
 # <a name="icordebugarrayvaluegetelementatposition-method"></a><span data-ttu-id="5bd3c-102">Метод ICorDebugArrayValue::GetElementAtPosition</span><span class="sxs-lookup"><span data-stu-id="5bd3c-102">ICorDebugArrayValue::GetElementAtPosition Method</span></span>
 <span data-ttu-id="5bd3c-103">Возвращает элемент в заданной позиции, обработке массива как отсчитываемый от нуля одномерный массив.</span><span class="sxs-lookup"><span data-stu-id="5bd3c-103">Gets the element at the given position, treating the array as a zero-based, single-dimensional array.</span></span>  

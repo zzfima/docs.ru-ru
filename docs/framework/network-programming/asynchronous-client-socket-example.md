@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33390303"
 ---
 # <a name="asynchronous-client-socket-example"></a><span data-ttu-id="fd457-102">Примеры асинхронных сокетов клиента</span><span class="sxs-lookup"><span data-stu-id="fd457-102">Asynchronous Client Socket Example</span></span>
 <span data-ttu-id="fd457-103">Приведенная ниже программа создает клиент, который подключается к серверу.</span><span class="sxs-lookup"><span data-stu-id="fd457-103">The following example program creates a client that connects to a server.</span></span> <span data-ttu-id="fd457-104">Клиент создается с использованием асинхронного сокета, поэтому выполнение клиентского приложения не приостанавливается до тех пор, пока сервер возвращает ответ.</span><span class="sxs-lookup"><span data-stu-id="fd457-104">The client is built with an asynchronous socket, so execution of the client application is not suspended while the server returns a response.</span></span> <span data-ttu-id="fd457-105">Приложение отправляет строку на сервер, а затем выводит возвращенную им строку в консоли.</span><span class="sxs-lookup"><span data-stu-id="fd457-105">The application sends a string to the server and then displays the string returned by the server on the console.</span></span>  

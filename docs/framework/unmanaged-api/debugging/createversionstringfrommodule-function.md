@@ -20,9 +20,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 0988b2c4471cb5449f7c7fac82c6e94bcd537b7e
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33409284"
 ---
 # <a name="createversionstringfrommodule-function"></a><span data-ttu-id="8ff13-102">Функция CreateVersionStringFromModule</span><span class="sxs-lookup"><span data-stu-id="8ff13-102">CreateVersionStringFromModule Function</span></span>
 <span data-ttu-id="8ff13-103">Создает строку версии из пути среды CLR в целевом процессе.</span><span class="sxs-lookup"><span data-stu-id="8ff13-103">Creates a version string from a common language runtime (CLR) path in a target process.</span></span>  

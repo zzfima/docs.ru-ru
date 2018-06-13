@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: a6f528bcef7d06b503b1ee9d7bd4a61d3d3e9672
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33406524"
 ---
 # <a name="icordebugappdomaingetobject-method"></a><span data-ttu-id="9b948-102">Метод ICorDebugAppDomain::GetObject</span><span class="sxs-lookup"><span data-stu-id="9b948-102">ICorDebugAppDomain::GetObject Method</span></span>
 <span data-ttu-id="9b948-103">Получает указатель интерфейса на домен приложения среды выполнения (CLR).</span><span class="sxs-lookup"><span data-stu-id="9b948-103">Gets an interface pointer to the common language runtime (CLR) application domain.</span></span>  

@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 03ce49466587d3e214c32e2a5cca89cdd7a72038
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33405231"
 ---
 # <a name="iclrdatatargetgetcurrentthreadid-method"></a><span data-ttu-id="96e27-102">Метод ICLRDataTarget::GetCurrentThreadID</span><span class="sxs-lookup"><span data-stu-id="96e27-102">ICLRDataTarget::GetCurrentThreadID Method</span></span>
 <span data-ttu-id="96e27-103">Получает идентификатор операционной системы для текущего потока.</span><span class="sxs-lookup"><span data-stu-id="96e27-103">Gets the operating system identifier for the current thread.</span></span>  

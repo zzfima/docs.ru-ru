@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33540534"
 ---
 # <a name="how-to-save-files-using-the-savefiledialog-component"></a><span data-ttu-id="fd2c9-102">Практическое руководство. Сохранение файлов с помощью компонента SaveFileDialog</span><span class="sxs-lookup"><span data-stu-id="fd2c9-102">How to: Save Files Using the SaveFileDialog Component</span></span>
 <span data-ttu-id="fd2c9-103"><xref:System.Windows.Forms.SaveFileDialog> Компонент позволяет пользователям просматривать файловую систему и выберите файлы для сохранения.</span><span class="sxs-lookup"><span data-stu-id="fd2c9-103">The <xref:System.Windows.Forms.SaveFileDialog> component allows users to browse the file system and select files to be saved.</span></span> <span data-ttu-id="fd2c9-104">Диалоговое окно возвращает путь и имя файла, который пользователь выбрал в диалоговом окне.</span><span class="sxs-lookup"><span data-stu-id="fd2c9-104">The dialog box returns the path and name of the file the user has selected in the dialog box.</span></span> <span data-ttu-id="fd2c9-105">Тем не менее для фактического сохранения файла на диск необходимо написать специальный код.</span><span class="sxs-lookup"><span data-stu-id="fd2c9-105">However, you must write the code to actually write the files to disk.</span></span>  

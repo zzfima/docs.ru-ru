@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 71dcc34fd3489fc71cec4050b168548927833082
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33404535"
 ---
 # <a name="cordebugstepreason-enumeration"></a><span data-ttu-id="eaa0c-102">Перечисление CorDebugStepReason</span><span class="sxs-lookup"><span data-stu-id="eaa0c-102">CorDebugStepReason Enumeration</span></span>
 <span data-ttu-id="eaa0c-103">Указывает результат отдельного шага.</span><span class="sxs-lookup"><span data-stu-id="eaa0c-103">Indicates the outcome of an individual step.</span></span>  

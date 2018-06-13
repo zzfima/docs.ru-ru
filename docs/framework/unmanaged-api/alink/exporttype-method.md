@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 958b56266b0d2dcc317204c39a1df56baabd83e2
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33402487"
 ---
 # <a name="exporttype-method"></a><span data-ttu-id="69ee4-102">Метод ExportType</span><span class="sxs-lookup"><span data-stu-id="69ee4-102">ExportType Method</span></span>
 <span data-ttu-id="69ee4-103">Указывает, что тип может быть экспортирован.</span><span class="sxs-lookup"><span data-stu-id="69ee4-103">Specifies that a type is exportable.</span></span>  
