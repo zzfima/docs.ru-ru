@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33513910"
 ---
 # <a name="get-workflowinstanceid"></a><span data-ttu-id="272f4-102">Получение GetWorkflowInstanceId</span><span class="sxs-lookup"><span data-stu-id="272f4-102">Get WorkflowInstanceId</span></span>
 <span data-ttu-id="272f4-103">В этом образце показывается, как можно использовать пользовательское действие `GetWorkflowInstanceId` для возвращения идентификатора экземпляра рабочего процесса.</span><span class="sxs-lookup"><span data-stu-id="272f4-103">This sample demonstrates how to use the custom activity, `GetWorkflowInstanceId` to return the workflow instance ID.</span></span>  

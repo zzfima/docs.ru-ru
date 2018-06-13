@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 32889a8e8867fc42b48413463095dda423f26b85
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33409845"
 ---
 # <a name="icordebugchain-interface1"></a><span data-ttu-id="f1d07-102">ICorDebugChain интерфейс1</span><span class="sxs-lookup"><span data-stu-id="f1d07-102">ICorDebugChain Interface1</span></span>
 <span data-ttu-id="f1d07-103">Представляет сегмент физического или логического стека вызовов.</span><span class="sxs-lookup"><span data-stu-id="f1d07-103">Represents a segment of a physical or logical call stack.</span></span>  

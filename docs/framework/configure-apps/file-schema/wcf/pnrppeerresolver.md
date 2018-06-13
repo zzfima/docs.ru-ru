@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32747984"
 ---
 # <a name="ltpnrppeerresolvergt"></a><span data-ttu-id="fdd34-102">&lt;pnrpPeerResolver&gt;</span><span class="sxs-lookup"><span data-stu-id="fdd34-102">&lt;pnrpPeerResolver&gt;</span></span>
 <span data-ttu-id="fdd34-103">Задает использование распознавателя протокола PNRP (протокола однорангового разрешения имен) в качестве распознавателя.</span><span class="sxs-lookup"><span data-stu-id="fdd34-103">Specifies that the PNRP (Peer Name Resolution Protocol) resolver is to be used as a resolver.</span></span> <span data-ttu-id="fdd34-104">Этот элемент является необязательным, поскольку протокол PNRP является распознавателем по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="fdd34-104">This element is optional because PNRP is the default resolver.</span></span>  

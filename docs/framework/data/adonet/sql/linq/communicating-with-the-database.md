@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33353661"
 ---
 # <a name="communicating-with-the-database"></a><span data-ttu-id="012d5-102">Установка связи с базой данных</span><span class="sxs-lookup"><span data-stu-id="012d5-102">Communicating with the Database</span></span>
 <span data-ttu-id="012d5-103">В темах этого раздела описываются некоторые основные аспекты по установке и поддержке подключения к базе данных.</span><span class="sxs-lookup"><span data-stu-id="012d5-103">The topics in this section describe some basic aspects of how you establish and maintain communication with the database.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33513855"
 ---
 # <a name="application"></a><span data-ttu-id="7d310-102">Приложение</span><span class="sxs-lookup"><span data-stu-id="7d310-102">Application</span></span>
 <span data-ttu-id="7d310-103">Этот раздел содержит образцы, связанные с приложениями рабочих процессов в Windows Workflow Foundation (WF).</span><span class="sxs-lookup"><span data-stu-id="7d310-103">This section contains samples related to workflow applications in Windows Workflow Foundation (WF).</span></span>  

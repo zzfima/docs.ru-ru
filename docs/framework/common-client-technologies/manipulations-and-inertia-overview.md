@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32744399"
 ---
 # <a name="manipulations-and-inertia-overview"></a><span data-ttu-id="af677-102">Общие сведения о манипуляциях и инерции</span><span class="sxs-lookup"><span data-stu-id="af677-102">Manipulations and Inertia Overview</span></span>
 <span data-ttu-id="af677-103">*Манипуляции* предоставляют пользователям возможность перемещать, поворачивать и изменять размеры элементов пользовательского интерфейса с помощью *манипуляторов*.</span><span class="sxs-lookup"><span data-stu-id="af677-103">*Manipulations* enable users to move, rotate, and resize user interface (UI) elements by using *manipulators*.</span></span> <span data-ttu-id="af677-104">Манипулятором является мышь или (в сценарии с поддержкой сенсорного ввода) перо либо палец.</span><span class="sxs-lookup"><span data-stu-id="af677-104">A manipulator represents a mouse or (in a touch-enabled scenario) a stylus or a finger.</span></span>  

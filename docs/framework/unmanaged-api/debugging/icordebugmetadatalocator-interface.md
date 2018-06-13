@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d1673b6045a6344ee0eeadf4ec3003206f92cde4
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33415682"
 ---
 # <a name="icordebugmetadatalocator-interface"></a><span data-ttu-id="d99e1-102">Интерфейс ICorDebugMetaDataLocator</span><span class="sxs-lookup"><span data-stu-id="d99e1-102">ICorDebugMetaDataLocator Interface</span></span>
 <span data-ttu-id="d99e1-103">Предоставляет сведения о метаданных для отладчика.</span><span class="sxs-lookup"><span data-stu-id="d99e1-103">Provides metadata information to the debugger.</span></span>  

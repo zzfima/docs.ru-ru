@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33509181"
 ---
 # <a name="security-protocols-version-10"></a><span data-ttu-id="911fe-102">Протоколы безопасности версии 1.0</span><span class="sxs-lookup"><span data-stu-id="911fe-102">Security Protocols version 1.0</span></span>
 <span data-ttu-id="911fe-103">Протоколы WS-Security предоставляют механизмы обеспечения безопасности веб-служб, охватывающие все существующие требования к безопасности обмена сообщениями на предприятии.</span><span class="sxs-lookup"><span data-stu-id="911fe-103">The Web Services Security Protocols provide Web services security mechanisms that cover all existing enterprise messaging security requirements.</span></span> <span data-ttu-id="911fe-104">В этом разделе описываются подробности Windows Communication Foundation (WCF) версии 1.0 (реализованные в <xref:System.ServiceModel.Channels.SecurityBindingElement>) для следующих протоколов WS-безопасности.</span><span class="sxs-lookup"><span data-stu-id="911fe-104">This section describes the Windows Communication Foundation (WCF) version 1.0 details (implemented in the <xref:System.ServiceModel.Channels.SecurityBindingElement>) for the following Web services security protocols.</span></span>  

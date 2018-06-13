@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33505773"
 ---
 # <a name="getting-started-sample"></a><span data-ttu-id="41c62-102">Пример для начала работы</span><span class="sxs-lookup"><span data-stu-id="41c62-102">Getting Started Sample</span></span>
 <span data-ttu-id="41c62-103">Приступая к работе образца показано, как реализовать типовую службу и типовой клиент с помощью Windows Communication Foundation (WCF).</span><span class="sxs-lookup"><span data-stu-id="41c62-103">The Getting Started sample demonstrates how to implement a typical service and a typical client using Windows Communication Foundation (WCF).</span></span> <span data-ttu-id="41c62-104">Этот образец является основой для всех остальных базовых образцов технологий.</span><span class="sxs-lookup"><span data-stu-id="41c62-104">This sample is the basis for all other basic technology samples.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33506833"
 ---
 # <a name="sessions-and-queues"></a><span data-ttu-id="43da8-102">Сеансы и очереди</span><span class="sxs-lookup"><span data-stu-id="43da8-102">Sessions and Queues</span></span>
 <span data-ttu-id="43da8-103">В этом образце показано, как отправлять и принимать набор связанных сообщений при взаимодействии с использованием очередей с помощью транспорта очереди сообщений (MSMQ).</span><span class="sxs-lookup"><span data-stu-id="43da8-103">This sample demonstrates how to send and receive a set of related messages in queued communication over the Message Queuing (MSMQ) transport.</span></span> <span data-ttu-id="43da8-104">В этом примере используется привязка `netMsmqBinding`.</span><span class="sxs-lookup"><span data-stu-id="43da8-104">This sample uses the `netMsmqBinding` binding.</span></span> <span data-ttu-id="43da8-105">Служба представляет собой резидентное консольное приложение, позволяющее наблюдать за получением службой сообщений из очереди.</span><span class="sxs-lookup"><span data-stu-id="43da8-105">The service is a self-hosted console application to enable you to observe the service receiving queued messages.</span></span>  

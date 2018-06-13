@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32747490"
 ---
 # <a name="ltbaseaddressesgt"></a><span data-ttu-id="2d4df-102">&lt;среди базовых адресов&gt;</span><span class="sxs-lookup"><span data-stu-id="2d4df-102">&lt;baseAddresses&gt;</span></span>
 <span data-ttu-id="2d4df-103">Представляет коллекцию элементов `baseAddress`, которые являются базовыми адресам для узла службы в резидентной среде.</span><span class="sxs-lookup"><span data-stu-id="2d4df-103">Represents a collection of `baseAddress` elements, which are base addresses for a service host in a self-hosted environment.</span></span> <span data-ttu-id="2d4df-104">Если указан базовый адрес, конечные точки можно настроить, используя относительные (по отношению к базовому адресу) адреса.</span><span class="sxs-lookup"><span data-stu-id="2d4df-104">If a base address is present, endpoints can be configured with addresses relative to the base address.</span></span>  

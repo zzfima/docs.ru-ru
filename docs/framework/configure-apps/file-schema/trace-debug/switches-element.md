@@ -17,6 +17,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32745152"
 ---
 # <a name="ltswitchesgt-element"></a><span data-ttu-id="6a2a7-102">&lt;Коммутаторы&gt; элемент</span><span class="sxs-lookup"><span data-stu-id="6a2a7-102">&lt;switches&gt; Element</span></span>
 <span data-ttu-id="6a2a7-103">Содержит ключи трассировки и уровень, на котором они установлены.</span><span class="sxs-lookup"><span data-stu-id="6a2a7-103">Contains trace switches and the level where the trace switches are set.</span></span>  

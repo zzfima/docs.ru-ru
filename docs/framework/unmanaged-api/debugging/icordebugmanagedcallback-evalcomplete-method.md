@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 688c5a4b5a18cea444ebf1d63f3ea012a5d815c1
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33415214"
 ---
 # <a name="icordebugmanagedcallbackevalcomplete-method"></a><span data-ttu-id="8e1ce-102">Метод ICorDebugManagedCallback::EvalComplete</span><span class="sxs-lookup"><span data-stu-id="8e1ce-102">ICorDebugManagedCallback::EvalComplete Method</span></span>
 <span data-ttu-id="8e1ce-103">Уведомляет отладчик о завершении вычисления.</span><span class="sxs-lookup"><span data-stu-id="8e1ce-103">Notifies the debugger that an evaluation has been completed.</span></span>  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32752823"
 ---
 # <a name="ltenableampmparseadjustmentgt-element"></a><span data-ttu-id="9b603-102">&lt;EnableAmPmParseAdjustment&gt; элемент</span><span class="sxs-lookup"><span data-stu-id="9b603-102">&lt;EnableAmPmParseAdjustment&gt; Element</span></span>
 <span data-ttu-id="9b603-103">Определяет дату и время методов синтаксического анализа использования скорректированное набор правил, выполнить синтаксический анализ строк даты, которые содержат день, месяц, часов и обозначение AM/PM.</span><span class="sxs-lookup"><span data-stu-id="9b603-103">Determines whether date and time parsing methods use an adjusted set of rules to parse date strings that contain a day, month, hour, and AM/PM designator.</span></span>  

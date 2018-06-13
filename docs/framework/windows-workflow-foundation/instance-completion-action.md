@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33513205"
 ---
 # <a name="instance-completion-action"></a><span data-ttu-id="01af0-102">Действие завершения экземпляра</span><span class="sxs-lookup"><span data-stu-id="01af0-102">Instance Completion Action</span></span>
 <span data-ttu-id="01af0-103">**Действие завершения экземпляра** хранилища экземпляров рабочих процессов SQL позволяет задать данные и метаданные экземпляров рабочих процессов удаляется из базы данных сохраняемости после завершения работы экземпляров.</span><span class="sxs-lookup"><span data-stu-id="01af0-103">The **Instance Completion Action** property of the SQL Workflow Instance Store lets you specify whether the data and metadata of workflow instances is deleted from the persistence database after the instances are completed.</span></span> <span data-ttu-id="01af0-104">Допустимые значения для этого свойства **DeleteAll** и **DeleteNothing**.</span><span class="sxs-lookup"><span data-stu-id="01af0-104">The allowed values for this property are **DeleteAll** and **DeleteNothing**.</span></span> <span data-ttu-id="01af0-105">Эти варианты описаны в следующем списке.</span><span class="sxs-lookup"><span data-stu-id="01af0-105">The following list describes these options:</span></span>  

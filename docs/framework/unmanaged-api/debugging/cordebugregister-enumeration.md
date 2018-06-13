@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 82bcbf363a4fa682a85adf485596fea713457051
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33409221"
 ---
 # <a name="cordebugregister-enumeration"></a><span data-ttu-id="84998-102">Перечисление CorDebugRegister</span><span class="sxs-lookup"><span data-stu-id="84998-102">CorDebugRegister Enumeration</span></span>
 <span data-ttu-id="84998-103">Указывает регистры, связанные с данной архитектурой процессора.</span><span class="sxs-lookup"><span data-stu-id="84998-103">Specifies the registers associated with a given processor architecture.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33512467"
 ---
 # <a name="activity-localization"></a><span data-ttu-id="11867-102">Локализация действий</span><span class="sxs-lookup"><span data-stu-id="11867-102">Activity Localization</span></span>
 <span data-ttu-id="11867-103">Если приложения и компоненты рабочего процесса могут подлежать локализации для других языков и адаптации к особенностям других регионов, то в них следует использовать строки ресурсов, чтобы локализацию можно было провести без перекомпилирования.</span><span class="sxs-lookup"><span data-stu-id="11867-103">When workflow applications and components have the potential to be localized into other cultures and languages, resource strings should be used so that they can be localized without recompiling.</span></span>  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33356017"
 ---
 # <a name="enabling-query-notifications"></a><span data-ttu-id="cc7e8-102">Включение уведомлений запросов</span><span class="sxs-lookup"><span data-stu-id="cc7e8-102">Enabling Query Notifications</span></span>
 <span data-ttu-id="cc7e8-103">Приложения, в которых используются уведомления о запросах, имеют общий набор требований.</span><span class="sxs-lookup"><span data-stu-id="cc7e8-103">Applications that consume query notifications have a common set of requirements.</span></span> <span data-ttu-id="cc7e8-104">Чтобы поддерживать уведомления о запросах, источник данных SQL должен быть правильно настроен, а пользователь должен иметь соответствующие права доступа на стороне клиента и сервера.</span><span class="sxs-lookup"><span data-stu-id="cc7e8-104">Your data source must be correctly configured to support SQL query notifications, and the user must have the correct client-side and server-side permissions.</span></span>  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33407497"
 ---
 # <a name="ui-automation-providers-overview"></a><span data-ttu-id="1673b-102">Общие сведения о поставщиках автоматизации пользовательского интерфейса</span><span class="sxs-lookup"><span data-stu-id="1673b-102">UI Automation Providers Overview</span></span>
 > [!NOTE]

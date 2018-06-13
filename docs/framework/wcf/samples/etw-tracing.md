@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33506046"
 ---
 # <a name="etw-tracing"></a><span data-ttu-id="4a937-102">Трассировка ETW</span><span class="sxs-lookup"><span data-stu-id="4a937-102">ETW Tracing</span></span>
 <span data-ttu-id="4a937-103">В этом примере показано, как реализовать сквозную трассировку (E2E) с помощью трассировки событий для Windows (трассировка событий Windows) и `ETWTraceListener`, предоставляемого с этим примером.</span><span class="sxs-lookup"><span data-stu-id="4a937-103">This sample demonstrates how to implement End-to-End (E2E) tracing using Event Tracing for Windows (ETW) and the `ETWTraceListener` that is provided with this sample.</span></span> <span data-ttu-id="4a937-104">Пример построен на [Приступая к работе](../../../../docs/framework/wcf/samples/getting-started-sample.md) и включает трассировка событий Windows.</span><span class="sxs-lookup"><span data-stu-id="4a937-104">The sample is based on the [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md) and includes ETW tracing.</span></span>  

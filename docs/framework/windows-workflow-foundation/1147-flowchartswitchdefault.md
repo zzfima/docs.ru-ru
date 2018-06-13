@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33510264"
 ---
 # <a name="1147---flowchartswitchdefault"></a><span data-ttu-id="5f8f8-102">1147 - FlowchartSwitchDefault</span><span class="sxs-lookup"><span data-stu-id="5f8f8-102">1147 - FlowchartSwitchDefault</span></span>
 ## <a name="properties"></a><span data-ttu-id="5f8f8-103">Свойства</span><span class="sxs-lookup"><span data-stu-id="5f8f8-103">Properties</span></span>  

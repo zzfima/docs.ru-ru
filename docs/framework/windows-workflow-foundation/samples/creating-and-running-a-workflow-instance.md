@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33513690"
 ---
 # <a name="creating-and-running-a-workflow-instance"></a><span data-ttu-id="a0845-102">Создание и запуск экземпляра рабочего процесса</span><span class="sxs-lookup"><span data-stu-id="a0845-102">Creating and Running a Workflow Instance</span></span>
 <span data-ttu-id="a0845-103">В этом образце показано, как выполнить экземпляр рабочего процесса.</span><span class="sxs-lookup"><span data-stu-id="a0845-103">This sample shows how to run a workflow instance.</span></span> <span data-ttu-id="a0845-104">Здесь показано синхронное и асинхронное выполнение.</span><span class="sxs-lookup"><span data-stu-id="a0845-104">It shows how to execute it synchronously and asynchronously.</span></span>  

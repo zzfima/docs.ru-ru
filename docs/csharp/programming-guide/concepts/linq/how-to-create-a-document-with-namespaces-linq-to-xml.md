@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33330695"
 ---
 # <a name="how-to-create-a-document-with-namespaces-c-linq-to-xml"></a><span data-ttu-id="6b450-102">Практическое руководство. Создание документа с пространствами имен (C#) (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="6b450-102">How to: Create a Document with Namespaces (C#) (LINQ to XML)</span></span>
 <span data-ttu-id="6b450-103">В этом разделе описано, как создавать документы с пространствами имен.</span><span class="sxs-lookup"><span data-stu-id="6b450-103">This topic shows how to create documents with namespaces.</span></span>  

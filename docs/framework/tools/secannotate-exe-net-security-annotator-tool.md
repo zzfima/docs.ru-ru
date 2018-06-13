@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33410355"
 ---
 # <a name="secannotateexe-net-security-annotator-tool"></a><span data-ttu-id="931a6-102">SecAnnotate.exe (средство создания заметок безопасности .NET)</span><span class="sxs-lookup"><span data-stu-id="931a6-102">SecAnnotate.exe (.NET Security Annotator Tool)</span></span>
 <span data-ttu-id="931a6-103">Средство создания заметок безопасности .NET Security Annotator (SecAnnotate.exe) — это приложение командной строки, определяющее части `SecurityCritical` и `SecuritySafeCritical` одной или нескольких сборок.</span><span class="sxs-lookup"><span data-stu-id="931a6-103">The .NET Security Annotator tool (SecAnnotate.exe) is a command-line application that identifies the `SecurityCritical` and `SecuritySafeCritical` portions of one or more assemblies.</span></span>  

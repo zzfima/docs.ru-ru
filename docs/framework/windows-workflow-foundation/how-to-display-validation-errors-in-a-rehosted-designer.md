@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33512571"
 ---
 # <a name="how-to-display-validation-errors-in-a-rehosted-designer"></a><span data-ttu-id="619a7-102">Как отображать ошибки проверок в повторно размещенном конструкторе</span><span class="sxs-lookup"><span data-stu-id="619a7-102">How to: Display Validation Errors in a Rehosted Designer</span></span>
 <span data-ttu-id="619a7-103">В этом разделе описывается получение и публикация ошибок проверки в повторно размещенном экземпляре средства [!INCLUDE[wfd1](../../../includes/wfd1-md.md)].</span><span class="sxs-lookup"><span data-stu-id="619a7-103">This topic describes how to retrieve and publish validation errors in a rehosted [!INCLUDE[wfd1](../../../includes/wfd1-md.md)].</span></span> <span data-ttu-id="619a7-104">Это предоставляет процедуру подтверждения того, что рабочий процесс в повторно размещенном конструкторе является допустимым.</span><span class="sxs-lookup"><span data-stu-id="619a7-104">This provides us with a procedure to confirm that a workflow in a rehosted designer is valid.</span></span>  

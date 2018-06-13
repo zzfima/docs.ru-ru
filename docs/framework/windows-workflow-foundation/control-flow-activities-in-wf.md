@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33513003"
 ---
 # <a name="control-flow-activities-in-wf"></a><span data-ttu-id="3331d-102">Действия потока управления потока в WF</span><span class="sxs-lookup"><span data-stu-id="3331d-102">Control Flow Activities in WF</span></span>
 <span data-ttu-id="3331d-103">[!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] содержит несколько действий для управления потоком выполнения внутри рабочего процесса.</span><span class="sxs-lookup"><span data-stu-id="3331d-103">The [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] provides several activities for controlling flow of execution within a workflow.</span></span> <span data-ttu-id="3331d-104">Некоторые из этих действий (таких как `Switch` и `If`) реализуют структуры управления потоком, аналогичные доступным в средах как Visual C#, тогда как другие программирования (такие как `Pick`) моделируют новые структуры программирования.</span><span class="sxs-lookup"><span data-stu-id="3331d-104">Some of these activities (such as `Switch` and `If`) implement flow control structures similar to those in programming environments such as Visual C#, while others (such as `Pick`) model new programming structures.</span></span>  

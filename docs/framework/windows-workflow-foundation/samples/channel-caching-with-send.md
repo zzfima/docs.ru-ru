@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33514043"
 ---
 # <a name="channel-caching-with-send"></a><span data-ttu-id="b89c2-102">Кэширование канала и операция Send</span><span class="sxs-lookup"><span data-stu-id="b89c2-102">Channel Caching with Send</span></span>
 <span data-ttu-id="b89c2-103">Объект <xref:System.ServiceModel.Activities.SendMessageChannelCache> позволяет пользователям использовать различные уровни кэширования канала для действий <xref:System.ServiceModel.Activities.Send> и <xref:System.ServiceModel.Activities.SendParametersContent>.</span><span class="sxs-lookup"><span data-stu-id="b89c2-103">The <xref:System.ServiceModel.Activities.SendMessageChannelCache> enables users to have different levels of channel caching with <xref:System.ServiceModel.Activities.Send> and <xref:System.ServiceModel.Activities.SendParametersContent> activities.</span></span> <span data-ttu-id="b89c2-104">Кэширование на уровне экземпляра включено по умолчанию. Данный образец иллюстрирует перечисленные далее возможности.</span><span class="sxs-lookup"><span data-stu-id="b89c2-104">Instance-level caching is enabled by default and this sample demonstrates the following features:</span></span>  

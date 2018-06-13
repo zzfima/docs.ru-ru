@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33513831"
 ---
 # <a name="writing-projects-targeting-the-net-framework-30-and-35-in-visual-studio-2010"></a><span data-ttu-id="f442d-102">Программирование Windows Forms в Visual Studio с помощью .NET Framework версий 3.0 и 3.5</span><span class="sxs-lookup"><span data-stu-id="f442d-102">Writing Projects Targeting the .NET Framework 3.0 and 3.5 in Visual Studio 2010</span></span>
 <span data-ttu-id="f442d-103">Можно использовать [!INCLUDE[vs2010](../../../includes/vs2010-md.md)] для создания проектов, ориентированных на [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] версии 3.0 и 3.5.</span><span class="sxs-lookup"><span data-stu-id="f442d-103">You can use [!INCLUDE[vs2010](../../../includes/vs2010-md.md)] to create projects that target the [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] version 3.0 or 3.5.</span></span> <span data-ttu-id="f442d-104">В этом разделе описано выполнение этой задачи.</span><span class="sxs-lookup"><span data-stu-id="f442d-104">This topic describes how to do this.</span></span>  

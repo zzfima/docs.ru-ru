@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33507769"
 ---
 # <a name="securitybindingelement-authentication-modes"></a><span data-ttu-id="e98df-102">Режимы проверки подлинности SecurityBindingElement</span><span class="sxs-lookup"><span data-stu-id="e98df-102">SecurityBindingElement Authentication Modes</span></span>
 <span data-ttu-id="e98df-103">Windows Communication Foundation (WCF) имеется несколько режимов, с помощью которых клиенты и службы проверяют подлинность друг друга.</span><span class="sxs-lookup"><span data-stu-id="e98df-103">Windows Communication Foundation (WCF) provides several modes by which clients and services authenticate to one another.</span></span> <span data-ttu-id="e98df-104">Для этих режимов проверки подлинности можно создать привязки безопасности с помощью статических методов класса <xref:System.ServiceModel.Channels.SecurityBindingElement> или с помощью конфигурации.</span><span class="sxs-lookup"><span data-stu-id="e98df-104">You can create security binding elements for these authentication modes by using static methods on the <xref:System.ServiceModel.Channels.SecurityBindingElement> class or through configuration.</span></span> <span data-ttu-id="e98df-105">В этом разделе кратко описано 18 режимов проверки подлинности.</span><span class="sxs-lookup"><span data-stu-id="e98df-105">This topic briefly describes the 18 authentication modes.</span></span>  

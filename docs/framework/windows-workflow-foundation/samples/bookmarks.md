@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33514164"
 ---
 # <a name="bookmarks"></a><span data-ttu-id="49b0b-102">Закладки</span><span class="sxs-lookup"><span data-stu-id="49b0b-102">Bookmarks</span></span>
 <span data-ttu-id="49b0b-103">В этом образце показано, как разработать настраиваемое действие, которое создает закладку для получения внешних входных данных.</span><span class="sxs-lookup"><span data-stu-id="49b0b-103">This sample demonstrates how to write a custom activity that creates a bookmark to receive external input.</span></span> <span data-ttu-id="49b0b-104">В образец также входит простое консольное приложение, которое использует настраиваемое действие в рабочем процессе и показывает, как обнаруживать и возобновлять закладки, связанные с выполняющимся экземпляром рабочего процесса.</span><span class="sxs-lookup"><span data-stu-id="49b0b-104">The sample also includes a basic console application that uses the custom activity in a workflow and shows how to discover and resume bookmarks associated with a running workflow instance.</span></span> <span data-ttu-id="49b0b-105">Дополнительные сведения о закладках см. в разделе [закладки](../../../../docs/framework/windows-workflow-foundation/bookmarks.md).</span><span class="sxs-lookup"><span data-stu-id="49b0b-105">For more information about bookmarks, see [Bookmarks](../../../../docs/framework/windows-workflow-foundation/bookmarks.md).</span></span>  

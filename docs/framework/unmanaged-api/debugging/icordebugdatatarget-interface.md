@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 972c650e0fb3b42e943838b72faf2658f65543ae
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33412907"
 ---
 # <a name="icordebugdatatarget-interface"></a><span data-ttu-id="c21b6-102">Интерфейс ICorDebugDataTarget</span><span class="sxs-lookup"><span data-stu-id="c21b6-102">ICorDebugDataTarget Interface</span></span>
 <span data-ttu-id="c21b6-103">Предоставляет интерфейс обратного вызова, обеспечивающий доступ к конкретному целевому процессу.</span><span class="sxs-lookup"><span data-stu-id="c21b6-103">Provides a callback interface that provides access to a particular target process.</span></span>  

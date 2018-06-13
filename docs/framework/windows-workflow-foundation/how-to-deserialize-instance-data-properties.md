@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33514056"
 ---
 # <a name="how-to-deserialize-instance-data-properties"></a><span data-ttu-id="dcc39-102">Как десериализовать свойства данных экземпляра</span><span class="sxs-lookup"><span data-stu-id="dcc39-102">How to: Deserialize Instance Data Properties</span></span>
 <span data-ttu-id="dcc39-103">Могут возникнуть ситуации, когда пользователю или администратору рабочего процесса потребуется вручную проанализировать состояние сохраненного экземпляра рабочего процесса.</span><span class="sxs-lookup"><span data-stu-id="dcc39-103">There may be situations when a user or workflow administrator may want to manually inspect the state of a persisted workflow instance.</span></span> <span data-ttu-id="dcc39-104"><xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> содержит представление по таблицам экземпляров, предоставляющее следующие четыре столбца:</span><span class="sxs-lookup"><span data-stu-id="dcc39-104"><xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> provides a view on the Instances table that exposes the following four columns:</span></span>  

@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 84a11b6264ac0e241c1975eea5626edbdddce206
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33406881"
 ---
 # <a name="icordebugappdomain-interface1"></a><span data-ttu-id="2f662-102">ICorDebugAppDomain интерфейс1</span><span class="sxs-lookup"><span data-stu-id="2f662-102">ICorDebugAppDomain Interface1</span></span>
 <span data-ttu-id="2f662-103">Предоставляет методы для отладки доменов приложения.</span><span class="sxs-lookup"><span data-stu-id="2f662-103">Provides methods for debugging application domains.</span></span> <span data-ttu-id="2f662-104">Этот интерфейс является подклассом ICorDebugController.</span><span class="sxs-lookup"><span data-stu-id="2f662-104">This interface is a subclass of ICorDebugController.</span></span>  

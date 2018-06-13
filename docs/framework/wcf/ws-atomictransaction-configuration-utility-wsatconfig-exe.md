@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33506271"
 ---
 # <a name="ws-atomictransaction-configuration-utility-wsatconfigexe"></a><span data-ttu-id="0abc7-102">Программа конфигурации WS-AtomicTransaction (wsatConfig.exe)</span><span class="sxs-lookup"><span data-stu-id="0abc7-102">WS-AtomicTransaction Configuration Utility (wsatConfig.exe)</span></span>
 <span data-ttu-id="0abc7-103">Программа настройки WS-AtomicTransaction используется для настройки основных параметров поддержки WS-AtomicTransaction.</span><span class="sxs-lookup"><span data-stu-id="0abc7-103">The WS-AtomicTransaction Configuration Utility is used to configure basic WS-AtomicTransaction support settings.</span></span>  

@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 46532592057f4fa6d9883d46dcef2f8f9e5f7228
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33406348"
 ---
 # <a name="iclrdatatarget2allocvirtual-method"></a><span data-ttu-id="23207-102">Метод ICLRDataTarget2::AllocVirtual</span><span class="sxs-lookup"><span data-stu-id="23207-102">ICLRDataTarget2::AllocVirtual Method</span></span>
 <span data-ttu-id="23207-103">Вызывается службами доступа к данным среды выполнения (CLR) для выделения памяти в адресном пространстве данного целевого процесса.</span><span class="sxs-lookup"><span data-stu-id="23207-103">Called by the common language runtime (CLR) data access services to allocate memory in the address space of this target process.</span></span>  

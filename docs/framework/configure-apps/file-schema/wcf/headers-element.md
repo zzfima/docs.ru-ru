@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32748283"
 ---
 # <a name="ltheadersgt-element"></a><span data-ttu-id="f2d46-102">Элемент &lt;headers&gt;</span><span class="sxs-lookup"><span data-stu-id="f2d46-102">&lt;headers&gt; element</span></span>
 <span data-ttu-id="f2d46-103">Содержит коллекцию заголовков адреса, требуемых для правильного обращения к локальному издателю.</span><span class="sxs-lookup"><span data-stu-id="f2d46-103">This contains a collection of address headers that are required in order to correctly address the local issuer.</span></span> <span data-ttu-id="f2d46-104">Заголовок в эту коллекцию можно добавить с помощью ключевого слова `add`.</span><span class="sxs-lookup"><span data-stu-id="f2d46-104">You can use the `add` keyword to add a header to this collection.</span></span>  

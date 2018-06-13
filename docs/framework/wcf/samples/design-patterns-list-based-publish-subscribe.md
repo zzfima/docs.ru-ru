@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33506536"
 ---
 # <a name="design-patterns-list-based-publish-subscribe"></a><span data-ttu-id="bb325-102">Шаблоны разработки: публикация-подписка на основе списка</span><span class="sxs-lookup"><span data-stu-id="bb325-102">Design Patterns: List-Based Publish-Subscribe</span></span>
 <span data-ttu-id="bb325-103">Этот пример иллюстрирует шаблон публикации-подписка на основе списка, реализованный в качестве программы Windows Communication Foundation (WCF).</span><span class="sxs-lookup"><span data-stu-id="bb325-103">This sample illustrates the List-based Publish-Subscribe pattern implemented as a Windows Communication Foundation (WCF) program.</span></span>  

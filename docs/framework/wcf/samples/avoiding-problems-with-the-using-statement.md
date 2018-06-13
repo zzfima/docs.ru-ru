@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33503902"
 ---
 # <a name="avoiding-problems-with-the-using-statement"></a><span data-ttu-id="e5c8c-102">Предотвращение проблем при использовании операторов</span><span class="sxs-lookup"><span data-stu-id="e5c8c-102">Avoiding Problems with the Using Statement</span></span>
 <span data-ttu-id="e5c8c-103">В этом образце показано, как не следует использовать оператор "using" в C# для автоматической очистки ресурсов при использовании типизированного клиента.</span><span class="sxs-lookup"><span data-stu-id="e5c8c-103">This sample demonstrates how you should not use the C# "using" statement to automatically clean up resources when using a typed client.</span></span> <span data-ttu-id="e5c8c-104">Этот пример построен на [Приступая к работе](../../../../docs/framework/wcf/samples/getting-started-sample.md) , реализующий службу калькулятора.</span><span class="sxs-lookup"><span data-stu-id="e5c8c-104">This sample is based on the [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md) that implements a calculator service.</span></span> <span data-ttu-id="e5c8c-105">В этом образце клиентом является консольное приложение (EXE), а служба размещается в службах IIS.</span><span class="sxs-lookup"><span data-stu-id="e5c8c-105">In this sample, the client is a console application (.exe) and the service is hosted by Internet Information Services (IIS).</span></span>  

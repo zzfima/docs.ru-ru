@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33511313"
 ---
 # <a name="2027---cacherootmetadatastart"></a><span data-ttu-id="f7724-102">2027 - CacheRootMetadataStart</span><span class="sxs-lookup"><span data-stu-id="f7724-102">2027 - CacheRootMetadataStart</span></span>
 ## <a name="properties"></a><span data-ttu-id="f7724-103">Свойства</span><span class="sxs-lookup"><span data-stu-id="f7724-103">Properties</span></span>  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33512272"
 ---
 # <a name="developing-windows-service-applications"></a><span data-ttu-id="90e59-102">Разработка служебных приложений Windows</span><span class="sxs-lookup"><span data-stu-id="90e59-102">Developing Windows Service Applications</span></span>
 <span data-ttu-id="90e59-103">С помощью Microsoft Visual Studio или пакета SDK Microsoft [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] можно легко создавать службы. Просто создайте приложение, которое устанавливается как служба.</span><span class="sxs-lookup"><span data-stu-id="90e59-103">Using Microsoft Visual Studio or the Microsoft [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] SDK, you can easily create services by creating an application that is installed as a service.</span></span> <span data-ttu-id="90e59-104">Такие приложения называются службами Windows.</span><span class="sxs-lookup"><span data-stu-id="90e59-104">This type of application is called a Windows service.</span></span> <span data-ttu-id="90e59-105">Используя компоненты платформы, можно создавать, устанавливать, запускать, останавливать и администрировать службы.</span><span class="sxs-lookup"><span data-stu-id="90e59-105">With framework features, you can create services, install them, and start, stop, and otherwise control their behavior.</span></span>  

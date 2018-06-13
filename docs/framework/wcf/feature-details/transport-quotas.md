@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33507762"
 ---
 # <a name="transport-quotas"></a><span data-ttu-id="0ce41-102">Квоты транспорта</span><span class="sxs-lookup"><span data-stu-id="0ce41-102">Transport Quotas</span></span>
 <span data-ttu-id="0ce41-103">Квоты транспорта - это механизм политики, позволяющий принимать решения о чрезмерном потреблении ресурсов подключением.</span><span class="sxs-lookup"><span data-stu-id="0ce41-103">Transport quotas are a policy mechanism for deciding when a connection is consuming excessive resources.</span></span> <span data-ttu-id="0ce41-104">Квота - это строгое ограничение, предотвращающее использование дополнительных ресурсов после превышения значения квоты.</span><span class="sxs-lookup"><span data-stu-id="0ce41-104">A quota is a hard limit that prevents the use of additional resources once the quota value is exceeded.</span></span> <span data-ttu-id="0ce41-105">Квоты транспорта препятствуют злонамеренным или неумышленным атакам типа "отказ в обслуживании".</span><span class="sxs-lookup"><span data-stu-id="0ce41-105">Transport quotas prevent either malicious or unintentional denial of service attacks.</span></span>  

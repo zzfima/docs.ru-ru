@@ -1,14 +1,6 @@
 ---
-title: "Метод ICorDebugILFrame::EnumerateLocalVariables"
-ms.custom: 
+title: Метод ICorDebugILFrame::EnumerateLocalVariables
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorDebugILFrame.EnumerateLocalVariables
 api_location:
@@ -23,22 +15,19 @@ helpviewer_keywords:
 ms.assetid: 1a67fa1b-2419-4cd0-aad4-6f46a0719b4b
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 3a1b53dbefefcea6003ec4a61c8169ed96bac701
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 6fd7694901534ad6897bbf78239081af6314e4bd
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33415474"
 ---
-# <a name="icordebugilframeenumeratelocalvariables-method"></a><span data-ttu-id="d79ed-102">Метод ICorDebugILFrame::EnumerateLocalVariables</span><span class="sxs-lookup"><span data-stu-id="d79ed-102">ICorDebugILFrame::EnumerateLocalVariables Method</span></span>
-<span data-ttu-id="d79ed-103">Получает перечислитель для локальных переменных в кадре.</span><span class="sxs-lookup"><span data-stu-id="d79ed-103">Gets an enumerator for the local variables in this frame.</span></span>  
+# <a name="icordebugilframeenumeratelocalvariables-method"></a><span data-ttu-id="50a8e-102">Метод ICorDebugILFrame::EnumerateLocalVariables</span><span class="sxs-lookup"><span data-stu-id="50a8e-102">ICorDebugILFrame::EnumerateLocalVariables Method</span></span>
+<span data-ttu-id="50a8e-103">Получает перечислитель для локальных переменных в кадре.</span><span class="sxs-lookup"><span data-stu-id="50a8e-103">Gets an enumerator for the local variables in this frame.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d79ed-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="d79ed-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="50a8e-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="50a8e-104">Syntax</span></span>  
   
 ```  
 HRESULT EnumerateLocalVariables(   
@@ -46,18 +35,18 @@ HRESULT EnumerateLocalVariables(
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="d79ed-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="d79ed-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="50a8e-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="50a8e-105">Parameters</span></span>  
  `ppValueEnum`  
- <span data-ttu-id="d79ed-106">[out] Указатель на адрес объекта ICorDebugValueEnum, который является перечислителем для локальных переменных в этом кадре.</span><span class="sxs-lookup"><span data-stu-id="d79ed-106">[out] A pointer to the address of an ICorDebugValueEnum object that is the enumerator for the local variables in this frame.</span></span>  
+ <span data-ttu-id="50a8e-106">[out] Указатель на адрес объекта ICorDebugValueEnum, который является перечислителем для локальных переменных в этом кадре.</span><span class="sxs-lookup"><span data-stu-id="50a8e-106">[out] A pointer to the address of an ICorDebugValueEnum object that is the enumerator for the local variables in this frame.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="d79ed-107">Примечания</span><span class="sxs-lookup"><span data-stu-id="d79ed-107">Remarks</span></span>  
- <span data-ttu-id="d79ed-108">`EnumerateLocalVariables`Возвращает перечислитель, который может содержать локальные переменные, доступные в кадр вызова, который представлен этим объектом ICorDebugILFrame.</span><span class="sxs-lookup"><span data-stu-id="d79ed-108">`EnumerateLocalVariables` gets an enumerator that can list the local variables available in the call frame that is represented by this ICorDebugILFrame object.</span></span> <span data-ttu-id="d79ed-109">Список может содержать не все локальные переменные в исполняемой функции, поскольку некоторые из них могут быть неактивными.</span><span class="sxs-lookup"><span data-stu-id="d79ed-109">The list may not include all of the local variables in the running function, because some of them may not be active.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="50a8e-107">Примечания</span><span class="sxs-lookup"><span data-stu-id="50a8e-107">Remarks</span></span>  
+ <span data-ttu-id="50a8e-108">`EnumerateLocalVariables` Возвращает перечислитель, который может содержать локальные переменные, доступные в кадр вызова, который представлен этим объектом ICorDebugILFrame.</span><span class="sxs-lookup"><span data-stu-id="50a8e-108">`EnumerateLocalVariables` gets an enumerator that can list the local variables available in the call frame that is represented by this ICorDebugILFrame object.</span></span> <span data-ttu-id="50a8e-109">Список может содержать не все локальные переменные в исполняемой функции, поскольку некоторые из них могут быть неактивными.</span><span class="sxs-lookup"><span data-stu-id="50a8e-109">The list may not include all of the local variables in the running function, because some of them may not be active.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="d79ed-110">Требования</span><span class="sxs-lookup"><span data-stu-id="d79ed-110">Requirements</span></span>  
- <span data-ttu-id="d79ed-111">**Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="d79ed-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="50a8e-110">Требования</span><span class="sxs-lookup"><span data-stu-id="50a8e-110">Requirements</span></span>  
+ <span data-ttu-id="50a8e-111">**Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="50a8e-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="d79ed-112">**Заголовок:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="d79ed-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="50a8e-112">**Заголовок:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="50a8e-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="d79ed-113">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="d79ed-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="50a8e-113">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="50a8e-113">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="d79ed-114">**Версии платформы .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d79ed-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="50a8e-114">**Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="50a8e-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

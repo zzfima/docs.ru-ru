@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 214fc97e41d8d220547a5f8bd28117ff411fa89b
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33418409"
 ---
 # <a name="icordebugprocess5gettypefields-method"></a><span data-ttu-id="cb570-102">Метод ICorDebugProcess5::GetTypeFields</span><span class="sxs-lookup"><span data-stu-id="cb570-102">ICorDebugProcess5::GetTypeFields Method</span></span>
 <span data-ttu-id="cb570-103">Сведения о полях, которые принадлежат к типу.</span><span class="sxs-lookup"><span data-stu-id="cb570-103">Provides information about the fields that belong to a type.</span></span>  

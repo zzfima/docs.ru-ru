@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: a892012e872dcf44512adbe0d6890812d84ed899
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33412598"
 ---
 # <a name="icordebugmanagedcallbackunloadassembly-method"></a><span data-ttu-id="4615e-102">Метод ICorDebugManagedCallback::UnloadAssembly</span><span class="sxs-lookup"><span data-stu-id="4615e-102">ICorDebugManagedCallback::UnloadAssembly Method</span></span>
 <span data-ttu-id="4615e-103">Уведомляет отладчик о выгрузке сборки среды CLR.</span><span class="sxs-lookup"><span data-stu-id="4615e-103">Notifies the debugger that a common language runtime assembly has been unloaded.</span></span>  

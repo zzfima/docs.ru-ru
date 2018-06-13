@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33513348"
 ---
 # <a name="compensation-samples"></a><span data-ttu-id="c5cc1-102">Компенсация (образцы)</span><span class="sxs-lookup"><span data-stu-id="c5cc1-102">Compensation (Samples)</span></span>
 <span data-ttu-id="c5cc1-103">В этом разделе содержатся образцы, описывающие компенсацию в Windows Workflow Foundation (WF).</span><span class="sxs-lookup"><span data-stu-id="c5cc1-103">This section contains samples related to compensation in Windows Workflow Foundation (WF).</span></span>  

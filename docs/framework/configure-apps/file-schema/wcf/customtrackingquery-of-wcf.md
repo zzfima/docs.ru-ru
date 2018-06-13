@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32747038"
 ---
 # <a name="ltcustomtrackingquerygt-of-wcf"></a><span data-ttu-id="492f3-102">&lt;customTrackingQuery&gt; (WCF)</span><span class="sxs-lookup"><span data-stu-id="492f3-102">&lt;customTrackingQuery&gt; of WCF</span></span>
 <span data-ttu-id="492f3-103">Представляет коллекцию запросов, используемых для отслеживания событий, определенных в действиях кода.</span><span class="sxs-lookup"><span data-stu-id="492f3-103">Represents a collection of queries that are used to track events that you define in your code activities.</span></span> <span data-ttu-id="492f3-104">Запрос необходим, чтобы участник отслеживания подписался на пользовательские записи отслеживания.</span><span class="sxs-lookup"><span data-stu-id="492f3-104">The query is necessary for a tracking participant to subscribe to custom tracking records.</span></span>  

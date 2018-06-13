@@ -16,6 +16,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32753590"
 ---
 # <a name="ltservicepointmanagergt-element-network-settings"></a><span data-ttu-id="42c92-102">&lt;servicePointManager&gt; элемент (параметры сети)</span><span class="sxs-lookup"><span data-stu-id="42c92-102">&lt;servicePointManager&gt; Element (Network Settings)</span></span>
 <span data-ttu-id="42c92-103">Настраивает подключения к сетевым ресурсам.</span><span class="sxs-lookup"><span data-stu-id="42c92-103">Configures connections to network resources.</span></span>  

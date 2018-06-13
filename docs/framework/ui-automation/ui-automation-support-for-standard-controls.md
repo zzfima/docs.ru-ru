@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33409095"
 ---
 # <a name="ui-automation-support-for-standard-controls"></a><span data-ttu-id="14cb7-102">Поддержка автоматизации пользовательского интерфейса для стандартных элементов управления</span><span class="sxs-lookup"><span data-stu-id="14cb7-102">UI Automation Support for Standard Controls</span></span>
 > [!NOTE]

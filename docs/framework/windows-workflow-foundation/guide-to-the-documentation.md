@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33513130"
 ---
 # <a name="guide-to-the-windows-workflow-documentation"></a><span data-ttu-id="d5a63-102">Руководство по документации по рабочим процессам Windows</span><span class="sxs-lookup"><span data-stu-id="d5a63-102">Guide to the Windows Workflow Documentation</span></span>
 <span data-ttu-id="d5a63-103">В этом разделе описывается использование документации по Windows Workflow Foundation.</span><span class="sxs-lookup"><span data-stu-id="d5a63-103">This topic contains information about how to use the Windows Workflow Foundation documentation.</span></span> <span data-ttu-id="d5a63-104">Документы, на которые указывают ссылки - это рекомендуемые отправные точки, сгруппированные по интересам и уровням подготовки.</span><span class="sxs-lookup"><span data-stu-id="d5a63-104">The linked documents are recommended starting points grouped according to specific interests and levels of expertise.</span></span>  

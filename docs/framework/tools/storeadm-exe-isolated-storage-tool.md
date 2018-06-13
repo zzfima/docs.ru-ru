@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33410271"
 ---
 # <a name="storeadmexe-isolated-storage-tool"></a><span data-ttu-id="3a202-102">Storeadm.exe (средство изолированного хранилища)</span><span class="sxs-lookup"><span data-stu-id="3a202-102">Storeadm.exe (Isolated Storage Tool)</span></span>
 <span data-ttu-id="3a202-103">Программа изолированного хранилища выводит список или удаляет все существующие хранилища для текущего пользователя.</span><span class="sxs-lookup"><span data-stu-id="3a202-103">The Isolated Storage tool lists or removes all existing stores for the current user.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33512389"
 ---
 # <a name="error-handling-activities-in-wf"></a><span data-ttu-id="3eb5b-102">Действия по обработке ошибок в WF</span><span class="sxs-lookup"><span data-stu-id="3eb5b-102">Error Handling Activities in WF</span></span>
 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)]<span data-ttu-id="3eb5b-103"> содержит несколько предоставляемых системой действий для реализации обработки ошибок и восстановления.</span><span class="sxs-lookup"><span data-stu-id="3eb5b-103"> provides several system-provided activities for implementing error handling and recovery.</span></span> <span data-ttu-id="3eb5b-104">Дополнительные сведения см. в разделе [исключения](../../../docs/framework/windows-workflow-foundation/exceptions.md).</span><span class="sxs-lookup"><span data-stu-id="3eb5b-104">For more information, see [Exceptions](../../../docs/framework/windows-workflow-foundation/exceptions.md).</span></span>  

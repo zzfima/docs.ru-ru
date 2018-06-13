@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33511463"
 ---
 # <a name="4207---maximumretriesexceededforsqlcommand"></a><span data-ttu-id="a0767-102">4207 - MaximumRetriesExceededForSqlCommand</span><span class="sxs-lookup"><span data-stu-id="a0767-102">4207 - MaximumRetriesExceededForSqlCommand</span></span>
 ## <a name="properties"></a><span data-ttu-id="a0767-103">Свойства</span><span class="sxs-lookup"><span data-stu-id="a0767-103">Properties</span></span>  

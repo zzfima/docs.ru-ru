@@ -19,6 +19,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32745579"
 ---
 # <a name="ltsharedlistenersgt-element"></a><span data-ttu-id="bc357-102">&lt;sharedListeners&gt; элемент</span><span class="sxs-lookup"><span data-stu-id="bc357-102">&lt;sharedListeners&gt; Element</span></span>
 <span data-ttu-id="bc357-103">Содержит прослушиватели, на которые может ссылаться любой источник или элемент трассировки.</span><span class="sxs-lookup"><span data-stu-id="bc357-103">Contains listeners that any source or trace element can reference.</span></span>  <span data-ttu-id="bc357-104">Эти прослушиватели не принимают никакой трассировки по умолчанию, и невозможно извлечь эти прослушиватели во время выполнения.</span><span class="sxs-lookup"><span data-stu-id="bc357-104">These listeners do not receive any traces by default, and it is not possible to retrieve these listeners at run time.</span></span> <span data-ttu-id="bc357-105">Прослушиватели, определенные как общие могут добавляться к источникам или трассировки по имени.</span><span class="sxs-lookup"><span data-stu-id="bc357-105">Listeners identified as shared listeners can be added to sources or traces by name.</span></span>  

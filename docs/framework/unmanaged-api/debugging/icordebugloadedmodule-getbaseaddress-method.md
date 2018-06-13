@@ -6,9 +6,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1c12ea84f1a706850972b2e404ec52eea3523de7
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33412640"
 ---
 # <a name="icordebugloadedmodulegetbaseaddress-method"></a><span data-ttu-id="2c2a9-102">Метод ICorDebugLoadedModule::GetBaseAddress</span><span class="sxs-lookup"><span data-stu-id="2c2a9-102">ICorDebugLoadedModule::GetBaseAddress Method</span></span>
 <span data-ttu-id="2c2a9-103">Получает базовый адрес загруженного модуля.</span><span class="sxs-lookup"><span data-stu-id="2c2a9-103">Gets the base address of the loaded module.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33506700"
 ---
 # <a name="membership-and-role-provider"></a><span data-ttu-id="5a38b-102">Поставщик членства и ролей</span><span class="sxs-lookup"><span data-stu-id="5a38b-102">Membership and Role Provider</span></span>
 <span data-ttu-id="5a38b-103">В образце поставщиков членства и ролей показано, как создать службу, которая может с помощью поставщиков членства и ролей [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] выполнять проверку подлинности и авторизацию клиентов.</span><span class="sxs-lookup"><span data-stu-id="5a38b-103">The Membership and Role Provider sample demonstrates how a service can use the [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] membership and role providers to authenticate and authorize clients.</span></span>  

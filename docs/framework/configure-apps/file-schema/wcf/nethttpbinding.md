@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32751926"
 ---
 # <a name="ltnethttpbindinggt"></a><span data-ttu-id="e3a35-102">&lt;Привязка netHttpBinding&gt;</span><span class="sxs-lookup"><span data-stu-id="e3a35-102">&lt;netHttpBinding&gt;</span></span>
 <span data-ttu-id="e3a35-103">Представляет привязку, службы Windows Communication Foundation (WCF) можно использовать для настройки и предоставления конечных точек, которые могут взаимодействовать по протоколу HTTP.</span><span class="sxs-lookup"><span data-stu-id="e3a35-103">Represents a binding that a Windows Communication Foundation (WCF) service can use to configure and expose endpoints that are able to communicate over HTTP.</span></span> <span data-ttu-id="e3a35-104">При использовании с дуплексным контрактом будут использоваться веб-сокеты, в противном случае будет использоваться HTTP.</span><span class="sxs-lookup"><span data-stu-id="e3a35-104">When used with a duplex contract, Web Sockets will be used, otherwise HTTP will be used.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33513322"
 ---
 # <a name="getting-started-writing-a-custom-activity"></a><span data-ttu-id="1cee8-102">Приступая к написанию настраиваемого действия</span><span class="sxs-lookup"><span data-stu-id="1cee8-102">Getting Started Writing a Custom Activity</span></span>
 <span data-ttu-id="1cee8-103">В этом образце показано, как определить простое пользовательское действие в XAML.</span><span class="sxs-lookup"><span data-stu-id="1cee8-103">This sample demonstrates how to define a simple custom activity in XAML.</span></span> <span data-ttu-id="1cee8-104">Действию присваивается имя `Rhyme`, а его логика представляет собой последовательность из трех действий <xref:System.Activities.Statements.WriteLine>.</span><span class="sxs-lookup"><span data-stu-id="1cee8-104">The activity is given the name `Rhyme`, and its logic is a sequence of three <xref:System.Activities.Statements.WriteLine> activities.</span></span>  

@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2452f4be0acde300676bf56011416e0a9ef16464
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33411720"
 ---
 # <a name="icordebugframegetcaller-method"></a><span data-ttu-id="152d6-102">Метод ICorDebugFrame::GetCaller</span><span class="sxs-lookup"><span data-stu-id="152d6-102">ICorDebugFrame::GetCaller Method</span></span>
 <span data-ttu-id="152d6-103">Получает указатель на объект ICorDebugFrame в текущей цепи, вызванной этим кадром.</span><span class="sxs-lookup"><span data-stu-id="152d6-103">Gets a pointer to the ICorDebugFrame object in the current chain that called this frame.</span></span>  

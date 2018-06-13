@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33511440"
 ---
 # <a name="2022---executeworkitemstop"></a><span data-ttu-id="6404f-102">2022 - ExecuteWorkItemStop</span><span class="sxs-lookup"><span data-stu-id="6404f-102">2022 - ExecuteWorkItemStop</span></span>
 ## <a name="properties"></a><span data-ttu-id="6404f-103">Свойства</span><span class="sxs-lookup"><span data-stu-id="6404f-103">Properties</span></span>  

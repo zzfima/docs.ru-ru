@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33513315"
 ---
 # <a name="rehosting-the-workflow-designer"></a><span data-ttu-id="2bd94-102">Повторное размещение конструктора рабочих процессов</span><span class="sxs-lookup"><span data-stu-id="2bd94-102">Rehosting the Workflow Designer</span></span>
 <span data-ttu-id="2bd94-103">Для создания, изменения и наблюдения за рабочими процессами [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] может быть повторно размещен в среде вне [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)].</span><span class="sxs-lookup"><span data-stu-id="2bd94-103">The [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] can be rehosted in environments outside of [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] for the purposes of creating, modifying, and monitoring workflows.</span></span>  
