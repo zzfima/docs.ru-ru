@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b49590fba64fc0372d671c009ad587b441e85343
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33434233"
 ---
 # <a name="iclrtasklocksheld-method"></a><span data-ttu-id="e6374-102">Метод ICLRTask::LocksHeld</span><span class="sxs-lookup"><span data-stu-id="e6374-102">ICLRTask::LocksHeld Method</span></span>
 <span data-ttu-id="e6374-103">Возвращает число блокировок, произведенных в задаче.</span><span class="sxs-lookup"><span data-stu-id="e6374-103">Gets the number of locks currently held on the task.</span></span>  
