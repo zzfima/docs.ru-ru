@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33592162"
 ---
 # <a name="customizing-which-objects-are-available-in-my-visual-basic"></a><span data-ttu-id="d5f84-102">Настройка доступа к объектам через My (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="d5f84-102">Customizing Which Objects are Available in My (Visual Basic)</span></span>
 <span data-ttu-id="d5f84-103">В этом разделе описывается, как можно выбирать, какие `My` объекты включены, задав проекта `_MYTYPE` константы условной компиляции.</span><span class="sxs-lookup"><span data-stu-id="d5f84-103">This topic describes how you can control which `My` objects are enabled by setting your project's `_MYTYPE` conditional-compilation constant.</span></span> <span data-ttu-id="d5f84-104">Интегрированная среда разработки (IDE) Visual Studio сохраняет `_MYTYPE` константы условной компиляции для проекта, в соответствии с типом проекта.</span><span class="sxs-lookup"><span data-stu-id="d5f84-104">The Visual Studio Integrated Development Environment (IDE) keeps the `_MYTYPE` conditional-compilation constant for a project in sync with the project's type.</span></span>  

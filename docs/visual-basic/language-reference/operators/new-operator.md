@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33603643"
 ---
 # <a name="new-operator-visual-basic"></a><span data-ttu-id="1a2ea-102">Оператор New (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="1a2ea-102">New Operator (Visual Basic)</span></span>
 <span data-ttu-id="1a2ea-103">Представляет `New` предложений, чтобы создать новый экземпляр объекта, задает ограничение конструктору по параметру типа, либо определяет `Sub` процедуры как конструктор класса.</span><span class="sxs-lookup"><span data-stu-id="1a2ea-103">Introduces a `New` clause to create a new object instance, specifies a constructor constraint on a type parameter, or identifies a `Sub` procedure as a class constructor.</span></span>  

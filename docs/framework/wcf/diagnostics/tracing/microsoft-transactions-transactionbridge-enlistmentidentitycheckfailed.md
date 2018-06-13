@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33474900"
 ---
 # <a name="microsofttransactionstransactionbridgeenlistmentidentitycheckfailed"></a><span data-ttu-id="40fce-102">Microsoft.Transactions.TransactionBridge.EnlistmentIdentityCheckFailed</span><span class="sxs-lookup"><span data-stu-id="40fce-102">Microsoft.Transactions.TransactionBridge.EnlistmentIdentityCheckFailed</span></span>
 <span data-ttu-id="40fce-103">Имя отправителя входящего сообщения не совпадает с именем, полученным из ссылки на конечную точку перечисления.</span><span class="sxs-lookup"><span data-stu-id="40fce-103">The identity of the incoming message sender did not match the identity derived from the enlistment's endpoint reference.</span></span>  

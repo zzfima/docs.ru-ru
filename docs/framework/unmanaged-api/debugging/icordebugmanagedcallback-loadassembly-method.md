@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f1d05914004d3c1fcc5ff109e854d01661367835
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33413123"
 ---
 # <a name="icordebugmanagedcallbackloadassembly-method"></a><span data-ttu-id="ed133-102">Метод ICorDebugManagedCallback::LoadAssembly</span><span class="sxs-lookup"><span data-stu-id="ed133-102">ICorDebugManagedCallback::LoadAssembly Method</span></span>
 <span data-ttu-id="ed133-103">Уведомляет отладчик о успешно загруженных сборки CLR среды выполнения (CLR).</span><span class="sxs-lookup"><span data-stu-id="ed133-103">Notifies the debugger that a common language runtime (CLR) assembly has been successfully loaded.</span></span>  

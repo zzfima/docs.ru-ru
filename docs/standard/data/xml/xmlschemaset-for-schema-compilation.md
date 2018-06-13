@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579084"
 ---
 # <a name="xmlschemaset-for-schema-compilation"></a><span data-ttu-id="f7672-102">XmlSchemaSet для компиляции схемы</span><span class="sxs-lookup"><span data-stu-id="f7672-102">XmlSchemaSet for Schema Compilation</span></span>
 <span data-ttu-id="f7672-103">Описывает класс <xref:System.Xml.Schema.XmlSchemaSet>, который представляет собой кэш, в котором можно хранить и проверять схемы XSD.</span><span class="sxs-lookup"><span data-stu-id="f7672-103">Describes the <xref:System.Xml.Schema.XmlSchemaSet>, a cache where XML Schema definition language (XSD) schemas can be stored and validated.</span></span>  

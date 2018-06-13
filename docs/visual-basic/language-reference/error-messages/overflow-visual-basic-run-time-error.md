@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33594179"
 ---
 # <a name="overflow-visual-basic-run-time-error"></a><span data-ttu-id="03e0e-102">Переполнение (Ошибка во время выполнения Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="03e0e-102">Overflow (Visual Basic Run-Time Error)</span></span>
 <span data-ttu-id="03e0e-103">Переполнение является результатом присваивания, которое нарушает ограничения присваиваемого результата.</span><span class="sxs-lookup"><span data-stu-id="03e0e-103">An overflow results when you attempt an assignment that exceeds the limits of the assignment's target.</span></span>  

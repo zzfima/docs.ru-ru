@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33599623"
 ---
 # <a name="argument-39ltargumentnamegt39-is-nothing-or-empty"></a><span data-ttu-id="d1314-102">Аргумент &#39; &lt;имя_аргумента&gt; &#39; имеет значение Nothing или пуст.</span><span class="sxs-lookup"><span data-stu-id="d1314-102">Argument &#39;&lt;argumentname&gt;&#39; is Nothing or empty</span></span>
 <span data-ttu-id="d1314-103">Имя аргумента является недопустимым, поскольку он инициализируется значением `Nothing` или является пустым.</span><span class="sxs-lookup"><span data-stu-id="d1314-103">An argument name is not valid because it is initialized to `Nothing` or is empty.</span></span> <span data-ttu-id="d1314-104">Аргумент должен иметь определенный тип данных и допустимое имя.</span><span class="sxs-lookup"><span data-stu-id="d1314-104">An argument must have a specific data type and a valid name.</span></span>  

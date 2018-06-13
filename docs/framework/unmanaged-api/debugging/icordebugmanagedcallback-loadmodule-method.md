@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: cbf538f066058b4f80d8cfd6cdf1a79683c79be9
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33413421"
 ---
 # <a name="icordebugmanagedcallbackloadmodule-method"></a><span data-ttu-id="ea606-102">Метод ICorDebugManagedCallback::LoadModule</span><span class="sxs-lookup"><span data-stu-id="ea606-102">ICorDebugManagedCallback::LoadModule Method</span></span>
 <span data-ttu-id="ea606-103">Уведомляет отладчик успешно загружен общих модуля среды CLR (CLR).</span><span class="sxs-lookup"><span data-stu-id="ea606-103">Notifies the debugger that a common language runtime (CLR) module has been successfully loaded.</span></span>  

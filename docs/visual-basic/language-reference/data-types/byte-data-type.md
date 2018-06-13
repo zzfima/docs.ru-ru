@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33590538"
 ---
 # <a name="byte-data-type-visual-basic"></a><span data-ttu-id="9d499-102">Тип данных Byte (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="9d499-102">Byte data type (Visual Basic)</span></span>
 <span data-ttu-id="9d499-103">Содержит 8-разрядное (1-байтовые) целых чисел без знака, в диапазоне от 0 до 255.</span><span class="sxs-lookup"><span data-stu-id="9d499-103">Holds unsigned 8-bit (1-byte) integers that range in value from 0 through 255.</span></span>

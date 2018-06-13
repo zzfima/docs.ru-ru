@@ -8,6 +8,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32756687"
 ---
 # <a name="lttrackinggt"></a><span data-ttu-id="6f565-102">&lt;Отслеживание&gt;</span><span class="sxs-lookup"><span data-stu-id="6f565-102">&lt;tracking&gt;</span></span>
 <span data-ttu-id="6f565-103">Представляет раздел конфигурации для определения настроек отслеживания для службы рабочего процесса.</span><span class="sxs-lookup"><span data-stu-id="6f565-103">Represents a configuration section for defining tracking settings for a workflow service.</span></span>  

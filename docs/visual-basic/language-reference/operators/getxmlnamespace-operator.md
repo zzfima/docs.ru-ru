@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33603487"
 ---
 # <a name="getxmlnamespace-operator-visual-basic"></a><span data-ttu-id="727ae-102">Оператор GetXmlNamespace (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="727ae-102">GetXmlNamespace Operator (Visual Basic)</span></span>
 <span data-ttu-id="727ae-103">Возвращает <xref:System.Xml.Linq.XNamespace> объекта, который соответствует указанным префиксом пространства имен XML.</span><span class="sxs-lookup"><span data-stu-id="727ae-103">Gets the <xref:System.Xml.Linq.XNamespace> object that corresponds to the specified XML namespace prefix.</span></span>  

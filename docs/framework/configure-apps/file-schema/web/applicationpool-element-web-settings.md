@@ -13,6 +13,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32757701"
 ---
 # <a name="ltapplicationpoolgt-element-web-settings"></a><span data-ttu-id="d7c6c-102">&lt;пул приложений&gt; элемент (веб-параметров)</span><span class="sxs-lookup"><span data-stu-id="d7c6c-102">&lt;applicationPool&gt; Element (Web Settings)</span></span>
 <span data-ttu-id="d7c6c-103">Задает параметры конфигурации, используемого ASP.NET для управления поведением всего процесса, когда приложение ASP.NET выполняется в режиме интеграции с [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] или более поздней версии.</span><span class="sxs-lookup"><span data-stu-id="d7c6c-103">Specifies configuration settings that are used by ASP.NET to manage process-wide behavior when an ASP.NET application is running in Integrated mode on [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] or a later version.</span></span>  

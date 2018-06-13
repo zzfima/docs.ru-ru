@@ -27,6 +27,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33605099"
 ---
 # <a name="on-error-statement-visual-basic"></a><span data-ttu-id="12a0f-102">Оператор On Error (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="12a0f-102">On Error Statement (Visual Basic)</span></span>
 <span data-ttu-id="12a0f-103">Включает процедуру обработки ошибок и определяет местоположение этой подпрограммы в процедуре. может также использоваться для отключения подпрограммы обработки ошибок.</span><span class="sxs-lookup"><span data-stu-id="12a0f-103">Enables an error-handling routine and specifies the location of the routine within a procedure; can also be used to disable an error-handling routine.</span></span>  

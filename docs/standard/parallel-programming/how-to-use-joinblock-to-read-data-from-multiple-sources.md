@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33581590"
 ---
 # <a name="how-to-use-joinblock-to-read-data-from-multiple-sources"></a><span data-ttu-id="03282-102">Практическое руководство. Использование JoinBlock для чтения данных из нескольких источников</span><span class="sxs-lookup"><span data-stu-id="03282-102">How to: Use JoinBlock to Read Data From Multiple Sources</span></span>
 <span data-ttu-id="03282-103">В этом документе объясняется, как использовать класс <xref:System.Threading.Tasks.Dataflow.JoinBlock%602> для выполнения операции, если данные доступны из нескольких источников.</span><span class="sxs-lookup"><span data-stu-id="03282-103">This document explains how to use the <xref:System.Threading.Tasks.Dataflow.JoinBlock%602> class to perform an operation when data is available from multiple sources.</span></span> <span data-ttu-id="03282-104">Также здесь показано, как использовать нежадный режим, чтобы разрешить нескольким блокам соединения совместно использовать источник данных более эффективно.</span><span class="sxs-lookup"><span data-stu-id="03282-104">It also demonstrates how to use non-greedy mode to enable multiple join blocks to share a data source more efficiently.</span></span>

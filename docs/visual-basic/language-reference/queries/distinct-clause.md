@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33603981"
 ---
 # <a name="distinct-clause-visual-basic"></a><span data-ttu-id="1422f-102">Предложение Distinct (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="1422f-102">Distinct Clause (Visual Basic)</span></span>
 <span data-ttu-id="1422f-103">Ограничивает значения текущей переменной диапазона, чтобы исключить повторяющиеся значения в предложениях последующих запросов.</span><span class="sxs-lookup"><span data-stu-id="1422f-103">Restricts the values of the current range variable to eliminate duplicate values in subsequent query clauses.</span></span>  

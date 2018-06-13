@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33587750"
 ---
 # <a name="file-not-found-visual-basic-run-time-error"></a><span data-ttu-id="b7caa-102">Файл не найден (Ошибка времени выполнения Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b7caa-102">File not found (Visual Basic Run-Time Error)</span></span>
 <span data-ttu-id="b7caa-103">Если не указано, файл не найден.</span><span class="sxs-lookup"><span data-stu-id="b7caa-103">The file was not found where specified.</span></span> <span data-ttu-id="b7caa-104">Ошибка имеет следующие возможные причины:</span><span class="sxs-lookup"><span data-stu-id="b7caa-104">The error has the following possible causes:</span></span>  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33604592"
 ---
 # <a name="visual-basic-runtime-library-members"></a><span data-ttu-id="e80d5-102">Члены библиотеки времени выполнения Visual Basic</span><span class="sxs-lookup"><span data-stu-id="e80d5-102">Visual Basic Runtime Library Members</span></span>
 <span data-ttu-id="e80d5-103">`Microsoft.VisualBasic` Пространство имен содержит классы, модули, константы и перечисления, которые составляют библиотеку времени выполнения Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="e80d5-103">The `Microsoft.VisualBasic` namespace contains the classes, modules, constants, and enumerations that constitute the Visual Basic runtime library.</span></span> <span data-ttu-id="e80d5-104">Эти члены библиотеки предоставляют процедуры, свойства и значения констант, которые можно использовать в коде.</span><span class="sxs-lookup"><span data-stu-id="e80d5-104">These library members provide procedures, properties, and constant values you can use in your code.</span></span> <span data-ttu-id="e80d5-105">Каждый модуль и класс предоставляет конкретную категорию функциональных возможностей.</span><span class="sxs-lookup"><span data-stu-id="e80d5-105">Each module and class represents a particular category of functionality.</span></span>  

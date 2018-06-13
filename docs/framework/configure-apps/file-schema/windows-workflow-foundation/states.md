@@ -8,6 +8,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32757282"
 ---
 # <a name="ltstatesgt"></a><span data-ttu-id="c0d36-102">&lt;Состояния&gt;</span><span class="sxs-lookup"><span data-stu-id="c0d36-102">&lt;states&gt;</span></span>
 <span data-ttu-id="c0d36-103">Представляет коллекцию состояний, на которые установлена подписка, из отслеживаемого экземпляра рабочего процесса в момент создания записей отслеживания.</span><span class="sxs-lookup"><span data-stu-id="c0d36-103">Represents a collection of subscribed states from the tracked workflow instance when the tracking records are created.</span></span>  

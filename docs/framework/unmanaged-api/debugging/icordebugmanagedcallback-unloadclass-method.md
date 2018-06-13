@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e70a1c66baff2d91554dea47e248a7003e30c498
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33414616"
 ---
 # <a name="icordebugmanagedcallbackunloadclass-method"></a><span data-ttu-id="d99d9-102">Метод ICorDebugManagedCallback::UnloadClass</span><span class="sxs-lookup"><span data-stu-id="d99d9-102">ICorDebugManagedCallback::UnloadClass Method</span></span>
 <span data-ttu-id="d99d9-103">Уведомляет отладчик о выгрузке класса.</span><span class="sxs-lookup"><span data-stu-id="d99d9-103">Notifies the debugger that a class is being unloaded.</span></span>  

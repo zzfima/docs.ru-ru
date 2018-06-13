@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33591681"
 ---
 # <a name="walkthrough-using-dataflow-in-a-windows-forms-application"></a><span data-ttu-id="933e2-102">Пошаговое руководство. Использование потока данных в приложении Windows Forms</span><span class="sxs-lookup"><span data-stu-id="933e2-102">Walkthrough: Using Dataflow in a Windows Forms Application</span></span>
 <span data-ttu-id="933e2-103">В этом документе демонстрируется способ создания сети блоков потока данных, которые выполняют обработку изображений в приложении Windows Forms.</span><span class="sxs-lookup"><span data-stu-id="933e2-103">This document demonstrates how to create a network of dataflow blocks that perform image processing in a Windows Forms application.</span></span>  

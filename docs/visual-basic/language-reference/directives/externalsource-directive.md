@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33586595"
 ---
 # <a name="externalsource-directive"></a><span data-ttu-id="672ab-102">Директива #ExternalSource</span><span class="sxs-lookup"><span data-stu-id="672ab-102">#ExternalSource Directive</span></span>
 <span data-ttu-id="672ab-103">Указывает сопоставление между определенными строками исходного кода и текста, внешних по отношению к источнику.</span><span class="sxs-lookup"><span data-stu-id="672ab-103">Indicates a mapping between specific lines of source code and text external to the source.</span></span>  

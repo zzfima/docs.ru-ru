@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33593346"
 ---
 # <a name="name-ltmembernamegt-is-not-cls-compliant"></a><span data-ttu-id="3a954-102">Имя &lt;membername&gt; не является CLS-совместимым</span><span class="sxs-lookup"><span data-stu-id="3a954-102">Name &lt;membername&gt; is not CLS-compliant</span></span>
 <span data-ttu-id="3a954-103">Сборка помечена как `<CLSCompliant(True)>` , но предоставляет член с именем, которое начинается со знака подчеркивания (`_`).</span><span class="sxs-lookup"><span data-stu-id="3a954-103">An assembly is marked as `<CLSCompliant(True)>` but exposes a member with a name that begins with an underscore (`_`).</span></span>  
