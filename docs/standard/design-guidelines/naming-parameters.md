@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33570491"
 ---
 # <a name="naming-parameters"></a><span data-ttu-id="ee8a2-102">Именование параметров</span><span class="sxs-lookup"><span data-stu-id="ee8a2-102">Naming Parameters</span></span>
 <span data-ttu-id="ee8a2-103">Помимо очевидной причине удобочитаемость необходимо придерживаться следующих правил имена параметров, поскольку параметры отображаются в документации и в конструкторе при средства визуального проектирования предоставляют Intellisense и функции просмотра классов.</span><span class="sxs-lookup"><span data-stu-id="ee8a2-103">Beyond the obvious reason of readability, it is important to follow the guidelines for parameter names because parameters are displayed in documentation and in the designer when visual design tools provide Intellisense and class browsing functionality.</span></span>  

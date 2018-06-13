@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 8c1d83b32402343f3cd2b5403e328698abd6a930
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33436219"
 ---
 # <a name="corbindtoruntimehost-function"></a><span data-ttu-id="e6938-102">Функция CorBindToRuntimeHost</span><span class="sxs-lookup"><span data-stu-id="e6938-102">CorBindToRuntimeHost Function</span></span>
 <span data-ttu-id="e6938-103">Позволяет узлам загружать в процесс заданную версию среды common language runtime (CLR).</span><span class="sxs-lookup"><span data-stu-id="e6938-103">Enables hosts to load a specified version of the common language runtime (CLR) into a process.</span></span>  

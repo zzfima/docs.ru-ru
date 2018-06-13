@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33522048"
 ---
 # <a name="how-to-copy-pixels-for-reducing-flicker-in-windows-forms"></a><span data-ttu-id="abc1e-102">Практическое руководство. Копирование пикселов для уменьшения эффекта дрожания изображения в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="abc1e-102">How to: Copy Pixels for Reducing Flicker in Windows Forms</span></span>
 <span data-ttu-id="abc1e-103">При создании простых анимированных могут появиться мерцание или другие нежелательные визуальные эффекты.</span><span class="sxs-lookup"><span data-stu-id="abc1e-103">When you animate a simple graphic, users can sometimes encounter flicker or other undesirable visual effects.</span></span> <span data-ttu-id="abc1e-104">Ограничить эту проблему можно использовать процесс «bitblt» на рисунок.</span><span class="sxs-lookup"><span data-stu-id="abc1e-104">One way to limit this problem is to use a "bitblt" process on the graphic.</span></span> <span data-ttu-id="abc1e-105">BitBlt является «перемещение набора битов» данных о цвете из исходного прямоугольника пикселей в прямоугольник назначения пикселей.</span><span class="sxs-lookup"><span data-stu-id="abc1e-105">Bitblt is the "bit-block transfer" of the color data from an origin rectangle of pixels to a destination rectangle of pixels.</span></span>  

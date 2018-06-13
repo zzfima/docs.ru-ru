@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: f046fb51753bfa79d333d465e8850794ecc73973
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33453542"
 ---
 # <a name="icorprofilerinfo2getboxclasslayout-method"></a><span data-ttu-id="2a595-102">Метод ICorProfilerInfo2::GetBoxClassLayout</span><span class="sxs-lookup"><span data-stu-id="2a595-102">ICorProfilerInfo2::GetBoxClassLayout Method</span></span>
 <span data-ttu-id="2a595-103">Получает сведения о расположении заданного типа значения при его упаковке.</span><span class="sxs-lookup"><span data-stu-id="2a595-103">Gets information about where the specified value type is located when it is boxed.</span></span>  

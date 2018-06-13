@@ -10,9 +10,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ec2fd3b309820f2bfb7f6091cc3db720db497408
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33434897"
 ---
 # <a name="fusion-interfaces"></a><span data-ttu-id="ee152-102">Fusion-интерфейсы</span><span class="sxs-lookup"><span data-stu-id="ee152-102">Fusion Interfaces</span></span>
 <span data-ttu-id="ee152-103">В этом разделе описываются неуправляемые интерфейсы, используемые API Fusion для доступа к свойствам ресурсов приложения и найти правильные версии этих ресурсов для приложения.</span><span class="sxs-lookup"><span data-stu-id="ee152-103">This section describes the unmanaged interfaces that the fusion API uses to access the properties of an application's resources and to locate the correct versions of those resources for the application.</span></span>  

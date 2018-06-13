@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33571960"
 ---
 # <a name="designing-and-developing-multi-container-and-microservice-based-net-applications"></a><span data-ttu-id="9cb7d-103">Проектирование и разработка приложений .NET на основе множества контейнеров и микрослужб</span><span class="sxs-lookup"><span data-stu-id="9cb7d-103">Designing and Developing Multi-Container and Microservice-Based .NET Applications</span></span>
 

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33521860"
 ---
 # <a name="how-to-create-figures-from-lines-curves-and-shapes"></a><span data-ttu-id="2c664-102">Практическое руководство. Создание изображений из прямых и кривых линий и геометрических фигур</span><span class="sxs-lookup"><span data-stu-id="2c664-102">How to: Create Figures from Lines, Curves, and Shapes</span></span>
 <span data-ttu-id="2c664-103">Чтобы создать изображение, построить <xref:System.Drawing.Drawing2D.GraphicsPath>и затем вызывать методы, такие как <xref:System.Drawing.Drawing2D.GraphicsPath.AddLine%2A> и <xref:System.Drawing.Drawing2D.GraphicsPath.AddCurve%2A>, для добавления в путь примитивов.</span><span class="sxs-lookup"><span data-stu-id="2c664-103">To create a figure, construct a <xref:System.Drawing.Drawing2D.GraphicsPath>, and then call methods, such as <xref:System.Drawing.Drawing2D.GraphicsPath.AddLine%2A> and <xref:System.Drawing.Drawing2D.GraphicsPath.AddCurve%2A>, to add primitives to the path.</span></span>  

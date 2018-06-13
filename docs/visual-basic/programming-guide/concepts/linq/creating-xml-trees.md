@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33643512"
 ---
 # <a name="creating-xml-trees-visual-basic"></a><span data-ttu-id="a5d41-102">Создание деревьев XML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="a5d41-102">Creating XML Trees (Visual Basic)</span></span>
 <span data-ttu-id="a5d41-103">Одна из самых распространенных задач при работе с XML состоит в построении XML-дерева.</span><span class="sxs-lookup"><span data-stu-id="a5d41-103">One of the most common XML tasks is constructing an XML tree.</span></span> <span data-ttu-id="a5d41-104">В этом разделе описывается несколько способов создания таких деревьев.</span><span class="sxs-lookup"><span data-stu-id="a5d41-104">This section describes several ways to create them.</span></span>  

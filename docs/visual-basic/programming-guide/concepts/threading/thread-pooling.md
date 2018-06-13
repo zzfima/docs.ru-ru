@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33647837"
 ---
 # <a name="thread-pooling-visual-basic"></a><span data-ttu-id="a6063-102">Группировка потоков в пул (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="a6063-102">Thread Pooling (Visual Basic)</span></span>
 <span data-ttu-id="a6063-103">*Пул потоков* — это коллекция потоков, которые могут использоваться для выполнения нескольких задач в фоновом режиме.</span><span class="sxs-lookup"><span data-stu-id="a6063-103">A *thread pool* is a collection of threads that can be used to perform several tasks in the background.</span></span> <span data-ttu-id="a6063-104">(См. [потоки (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/index.md) сведения общего характера.) Это позволяет разгрузить главный поток для асинхронного выполнения других задач.</span><span class="sxs-lookup"><span data-stu-id="a6063-104">(See [Threading (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/index.md) for background information.) This leaves the primary thread free to perform other tasks asynchronously.</span></span>  

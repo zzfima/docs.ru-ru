@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33650469"
 ---
 # <a name="-win32icon"></a><span data-ttu-id="55260-102">-win32icon</span><span class="sxs-lookup"><span data-stu-id="55260-102">-win32icon</span></span>
 <span data-ttu-id="55260-103">Внедряет ICO-файл в выходной файл.</span><span class="sxs-lookup"><span data-stu-id="55260-103">Inserts an .ico file in the output file.</span></span> <span data-ttu-id="55260-104">ICO-файл представляет выходной файл в **проводнике**.</span><span class="sxs-lookup"><span data-stu-id="55260-104">This .ico file represents the output file in **File Explorer**.</span></span>  

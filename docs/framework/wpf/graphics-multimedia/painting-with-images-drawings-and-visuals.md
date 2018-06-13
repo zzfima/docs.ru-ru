@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33566916"
 ---
 # <a name="painting-with-images-drawings-and-visuals"></a><span data-ttu-id="d5491-102">Рисование с помощью объектов Image, Drawing и Visual</span><span class="sxs-lookup"><span data-stu-id="d5491-102">Painting with Images, Drawings, and Visuals</span></span>
 <span data-ttu-id="d5491-103">В этом разделе описывается использование <xref:System.Windows.Media.ImageBrush>, <xref:System.Windows.Media.DrawingBrush>, и <xref:System.Windows.Media.VisualBrush> объектов Закраска области с изображением, <xref:System.Windows.Media.Drawing>, или <xref:System.Windows.Media.Visual>.</span><span class="sxs-lookup"><span data-stu-id="d5491-103">This topic describes how to use <xref:System.Windows.Media.ImageBrush>, <xref:System.Windows.Media.DrawingBrush>, and <xref:System.Windows.Media.VisualBrush> objects to paint an area with an image, a <xref:System.Windows.Media.Drawing>, or a <xref:System.Windows.Media.Visual>.</span></span>  

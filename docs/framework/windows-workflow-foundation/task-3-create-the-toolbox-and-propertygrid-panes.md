@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33519754"
 ---
 # <a name="task-3-create-the-toolbox-and-propertygrid-panes"></a><span data-ttu-id="2527b-102">Задача 3. Создание области элементов и сетки свойств</span><span class="sxs-lookup"><span data-stu-id="2527b-102">Task 3: Create the Toolbox and PropertyGrid Panes</span></span>
 <span data-ttu-id="2527b-103">В этой задаче вы создадите **элементов** и **PropertyGrid** областей и добавить их в размещаемый повторно [!INCLUDE[wfd1](../../../includes/wfd1-md.md)].</span><span class="sxs-lookup"><span data-stu-id="2527b-103">In this task, you will create the **Toolbox** and **PropertyGrid** panes and add them to the rehosted [!INCLUDE[wfd1](../../../includes/wfd1-md.md)].</span></span>  

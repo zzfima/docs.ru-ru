@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33605450"
 ---
 # <a name="declaration-contexts-and-default-access-levels-visual-basic"></a><span data-ttu-id="6b5e6-102">Контексты объявления и уровни доступа по умолчанию (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="6b5e6-102">Declaration Contexts and Default Access Levels (Visual Basic)</span></span>
 <span data-ttu-id="6b5e6-103">В этом разделе описывается, какие типы Visual Basic могут быть объявлены внутри других типов, и что их уровни доступа по умолчанию, если не указана.</span><span class="sxs-lookup"><span data-stu-id="6b5e6-103">This topic describes which Visual Basic types can be declared within which other types, and what their access levels default to if not specified.</span></span>  

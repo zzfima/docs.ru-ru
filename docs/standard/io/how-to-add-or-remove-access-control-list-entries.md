@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33573427"
 ---
 # <a name="how-to-add-or-remove-access-control-list-entries"></a><span data-ttu-id="5b257-102">Практическое руководство. Добавление или удаление записей списка управления доступом</span><span class="sxs-lookup"><span data-stu-id="5b257-102">How to: Add or Remove Access Control List Entries</span></span>
 <span data-ttu-id="5b257-103">Для добавления записей списка управления доступом (ACL) в файл или удаления из него необходимо получить объект <xref:System.Security.AccessControl.FileSecurity> или <xref:System.Security.AccessControl.DirectorySecurity> из файла или каталога, изменить его и затем применить обратно к файлу или каталогу.</span><span class="sxs-lookup"><span data-stu-id="5b257-103">To add or remove Access Control List (ACL) entries to or from a file, the <xref:System.Security.AccessControl.FileSecurity> or <xref:System.Security.AccessControl.DirectorySecurity> object must be obtained from the file or directory, modified, and then applied back to the file or directory.</span></span>  

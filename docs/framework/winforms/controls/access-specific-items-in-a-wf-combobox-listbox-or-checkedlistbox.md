@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33523573"
 ---
 # <a name="how-to-access-specific-items-in-a-windows-forms-combobox-listbox-or-checkedlistbox-control"></a><span data-ttu-id="8282e-102">Практическое руководство. Получение доступа к определенным элементам в элементах управления ComboBox, ListBox или CheckedListBox в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="8282e-102">How to: Access Specific Items in a Windows Forms ComboBox, ListBox, or CheckedListBox Control</span></span>
 <span data-ttu-id="8282e-103">Доступ к определенным элементам в поле со списком Windows Forms, список или список с установленными флажками является важнейшей задачей.</span><span class="sxs-lookup"><span data-stu-id="8282e-103">Accessing specific items in a Windows Forms combo box, list box, or checked list box is an essential task.</span></span> <span data-ttu-id="8282e-104">Он позволяет программно определить в виде списка, в любом месте.</span><span class="sxs-lookup"><span data-stu-id="8282e-104">It enables you to programmatically determine what is in a list, at any given position.</span></span>  

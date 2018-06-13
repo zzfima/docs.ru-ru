@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33645945"
 ---
 # <a name="sample-xml-file-multiple-purchase-orders-linq-to-xml"></a><span data-ttu-id="aad6b-102">Пример XML-файла. Несколько заказов на покупку (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="aad6b-102">Sample XML File: Multiple Purchase Orders (LINQ to XML)</span></span>
 <span data-ttu-id="aad6b-103">Следующий XML-файл используется в различных примерах в документации [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].</span><span class="sxs-lookup"><span data-stu-id="aad6b-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="aad6b-104">Этот файл содержит несколько заказов на покупку.</span><span class="sxs-lookup"><span data-stu-id="aad6b-104">This file contains several purchase orders.</span></span>  

@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 4503c3c745fde148c77ff30c9ece008dd9d54829
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33445800"
 ---
 # <a name="imetadataemitdefinemoduleref-method"></a><span data-ttu-id="100b5-102">Метод IMetaDataEmit::DefineModuleRef</span><span class="sxs-lookup"><span data-stu-id="100b5-102">IMetaDataEmit::DefineModuleRef Method</span></span>
 <span data-ttu-id="100b5-103">Создает подпись метаданных для модуля с указанным именем.</span><span class="sxs-lookup"><span data-stu-id="100b5-103">Creates the metadata signature for a module with the specified name.</span></span>  

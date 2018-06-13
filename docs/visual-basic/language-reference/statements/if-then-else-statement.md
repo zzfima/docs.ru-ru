@@ -26,6 +26,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33604995"
 ---
 # <a name="ifthenelse-statement-visual-basic"></a><span data-ttu-id="cd251-102">Оператор If...Then...Else (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="cd251-102">If...Then...Else Statement (Visual Basic)</span></span>
 <span data-ttu-id="cd251-103">Выполняет ту или иную группу операторов в зависимости от значения выражения.</span><span class="sxs-lookup"><span data-stu-id="cd251-103">Conditionally executes a group of statements, depending on the value of an expression.</span></span>  

@@ -13,9 +13,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 6fca7359888b8b73b2e1cf709ab708d71abf0db6
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33435816"
 ---
 # <a name="diagnostics-symbol-store-interfaces"></a><span data-ttu-id="2973d-102">Интерфейсы хранилища символов диагностики</span><span class="sxs-lookup"><span data-stu-id="2973d-102">Diagnostics Symbol Store Interfaces</span></span>
 <span data-ttu-id="2973d-103">В этом разделе описываются неуправляемые интерфейсы, позволяющие компилятору генерировать символьную информацию для использования отладчиком.</span><span class="sxs-lookup"><span data-stu-id="2973d-103">This topic describes the unmanaged interfaces that enable a compiler to generate symbol information for use by a debugger.</span></span>  

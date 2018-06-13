@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33643917"
 ---
 # <a name="how-to-compare-the-contents-of-two-folders-linq-visual-basic"></a><span data-ttu-id="f968a-102">Как: сравнение содержимого двух папок (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="f968a-102">How to: Compare the Contents of Two Folders (LINQ) (Visual Basic)</span></span>
 <span data-ttu-id="f968a-103">В этом примере демонстрируются три способа сравнения двух списков файлов:</span><span class="sxs-lookup"><span data-stu-id="f968a-103">This example demonstrates three ways to compare two file listings:</span></span>  

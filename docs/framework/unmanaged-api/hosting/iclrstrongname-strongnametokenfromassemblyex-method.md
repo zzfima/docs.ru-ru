@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: a5bb3d48d33333e888200bc607d3a193482f0336
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33433657"
 ---
 # <a name="iclrstrongnamestrongnametokenfromassemblyex-method"></a><span data-ttu-id="39f28-102">Метод ICLRStrongName::StrongNameTokenFromAssemblyEx</span><span class="sxs-lookup"><span data-stu-id="39f28-102">ICLRStrongName::StrongNameTokenFromAssemblyEx Method</span></span>
 <span data-ttu-id="39f28-103">Создает маркер строгого имени из указанного файла сборки и возвращает открытый ключ, представляющий маркер.</span><span class="sxs-lookup"><span data-stu-id="39f28-103">Creates a strong name token from the specified assembly file, and returns the public key that the token represents.</span></span>  

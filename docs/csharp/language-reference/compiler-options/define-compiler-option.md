@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33218720"
 ---
 # <a name="-define-c-compiler-options"></a><span data-ttu-id="7d50f-102">-define (параметры компилятора C#)</span><span class="sxs-lookup"><span data-stu-id="7d50f-102">-define (C# Compiler Options)</span></span>
 <span data-ttu-id="7d50f-103">Параметр **-define** определяет `name` как символ во всех файлах исходного кода программы.</span><span class="sxs-lookup"><span data-stu-id="7d50f-103">The **-define** option defines `name` as a symbol in all source code files your program.</span></span>  

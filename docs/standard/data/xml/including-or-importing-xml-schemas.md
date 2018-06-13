@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33573070"
 ---
 # <a name="including-or-importing-xml-schemas"></a><span data-ttu-id="47aeb-102">Включение или импорт XML-схем</span><span class="sxs-lookup"><span data-stu-id="47aeb-102">Including or Importing XML Schemas</span></span>
 <span data-ttu-id="47aeb-103">Схема XML может содержать элементы `<xs:import />`, `<xs:include />` и `<xs:redefine />`.</span><span class="sxs-lookup"><span data-stu-id="47aeb-103">An XML schema may contain `<xs:import />`, `<xs:include />`, and `<xs:redefine />` elements.</span></span> <span data-ttu-id="47aeb-104">Эти элементы схемы ссылаются на другие схемы XML, которые можно использовать в дополнение к структуре схемы, их включающей или импортирующей.</span><span class="sxs-lookup"><span data-stu-id="47aeb-104">These schema elements refer to other XML schemas that can be used to supplement the structure of the schema that includes or imports them.</span></span> <span data-ttu-id="47aeb-105">Классы <xref:System.Xml.Schema.XmlSchemaImport>, <xref:System.Xml.Schema.XmlSchemaInclude> и <xref:System.Xml.Schema.XmlSchemaRedefine> сопоставляются с этими элементами в API модели SOM.</span><span class="sxs-lookup"><span data-stu-id="47aeb-105">The <xref:System.Xml.Schema.XmlSchemaImport>, <xref:System.Xml.Schema.XmlSchemaInclude> and <xref:System.Xml.Schema.XmlSchemaRedefine> classes, map to these elements in the Schema Object Model (SOM) API.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33643245"
 ---
 # <a name="how-to-retrieve-a-single-child-element-linq-to-xml-visual-basic"></a><span data-ttu-id="b68fc-102">Как: извлечение одного дочернего элемента (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b68fc-102">How to: Retrieve a Single Child Element (LINQ to XML) (Visual Basic)</span></span>
 <span data-ttu-id="b68fc-103">В этом разделе объясняется, как обеспечить получение отдельных дочерних элементов, когда известно имя этого дочернего элемента.</span><span class="sxs-lookup"><span data-stu-id="b68fc-103">This topic explains how to retrieve a single child element, given the name of the child element.</span></span> <span data-ttu-id="b68fc-104">Если известно имя дочернего элемента, а также то, что есть только один элемент с таким именем, удобнее получить один элемент, а не целую коллекцию.</span><span class="sxs-lookup"><span data-stu-id="b68fc-104">When you know the name of the child element and that there is only one element that has this name, it can be convenient to retrieve just one element, instead of a collection.</span></span>  

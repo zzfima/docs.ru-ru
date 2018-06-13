@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33521476"
 ---
 # <a name="how-to-create-vertical-text"></a><span data-ttu-id="aa815-102">Практическое руководство. Вывод текста по вертикали</span><span class="sxs-lookup"><span data-stu-id="aa815-102">How to: Create Vertical Text</span></span>
 <span data-ttu-id="aa815-103">Можно использовать <xref:System.Drawing.StringFormat> объекта, чтобы указать, что текст должен выводиться по вертикали, а не по горизонтали.</span><span class="sxs-lookup"><span data-stu-id="aa815-103">You can use a <xref:System.Drawing.StringFormat> object to specify that text be drawn vertically rather than horizontally.</span></span>  

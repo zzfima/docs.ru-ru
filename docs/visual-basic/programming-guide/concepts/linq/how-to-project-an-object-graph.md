@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33643787"
 ---
 # <a name="how-to-project-an-object-graph-visual-basic"></a><span data-ttu-id="1c97e-102">Как: проецирование графа объекта (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="1c97e-102">How to: Project an Object Graph (Visual Basic)</span></span>
 <span data-ttu-id="1c97e-103">Данный раздел иллюстрирует способ проецирования, или наполнения, из XML графа объектов.</span><span class="sxs-lookup"><span data-stu-id="1c97e-103">This topic illustrates how to project, or populate, an object graph from XML.</span></span>  

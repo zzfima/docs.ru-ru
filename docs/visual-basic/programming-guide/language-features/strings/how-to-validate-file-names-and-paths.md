@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33647808"
 ---
 # <a name="how-to-validate-file-names-and-paths-in-visual-basic"></a><span data-ttu-id="e2c0f-102">Практическое руководство. Проверка имен файлов и путей в Visual Basic</span><span class="sxs-lookup"><span data-stu-id="e2c0f-102">How to: Validate File Names and Paths in Visual Basic</span></span>
 <span data-ttu-id="e2c0f-103">Этот пример возвращает `Boolean` значение, указывающее, представляет ли строка имя файла или путь.</span><span class="sxs-lookup"><span data-stu-id="e2c0f-103">This example returns a `Boolean` value that indicates whether a string represents a file name or path.</span></span> <span data-ttu-id="e2c0f-104">Проверяется, если имя содержит символы, которые не разрешены в файловой системе.</span><span class="sxs-lookup"><span data-stu-id="e2c0f-104">The validation checks if the name contains characters that are not allowed by the file system.</span></span>  

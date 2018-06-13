@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33643670"
 ---
 # <a name="how-to-create-signed-friend-assemblies-visual-basic"></a><span data-ttu-id="30def-102">Как: Создание подписанных дружественных сборок (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="30def-102">How to: Create Signed Friend Assemblies (Visual Basic)</span></span>
 <span data-ttu-id="30def-103">В этом примере демонстрируется использование дружественных сборок со сборками, имеющими строгие имена.</span><span class="sxs-lookup"><span data-stu-id="30def-103">This example shows how to use friend assemblies with assemblies that have strong names.</span></span> <span data-ttu-id="30def-104">Обе сборки должны иметь строгое имя.</span><span class="sxs-lookup"><span data-stu-id="30def-104">Both assemblies must be strong named.</span></span> <span data-ttu-id="30def-105">Хотя обе сборки в этом примере используют одинаковые ключи, вы можете использовать для двух сборок разные ключи.</span><span class="sxs-lookup"><span data-stu-id="30def-105">Although both assemblies in this example use the same keys, you could use different keys for two assemblies.</span></span>  

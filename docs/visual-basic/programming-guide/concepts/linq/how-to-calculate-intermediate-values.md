@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33642486"
 ---
 # <a name="how-to-calculate-intermediate-values-visual-basic"></a><span data-ttu-id="26b32-102">Как: вычисления промежуточных значений (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="26b32-102">How to: Calculate Intermediate Values (Visual Basic)</span></span>
 <span data-ttu-id="26b32-103">В этом примере показано, как вычислять промежуточные значения, которые используются в сортировке, фильтрации и выборке.</span><span class="sxs-lookup"><span data-stu-id="26b32-103">This example shows how to calculate intermediate values that can be used in sorting, filtering, and selecting.</span></span>  

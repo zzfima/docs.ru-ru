@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33578070"
 ---
 # <a name="serialization"></a><span data-ttu-id="3ed95-102">Сериализация</span><span class="sxs-lookup"><span data-stu-id="3ed95-102">Serialization</span></span>
 <span data-ttu-id="3ed95-103">Сериализация — это процесс преобразования объекта в формате, который можно легко сохранять или передавать.</span><span class="sxs-lookup"><span data-stu-id="3ed95-103">Serialization is the process of converting an object into a format that can be readily persisted or transported.</span></span> <span data-ttu-id="3ed95-104">Например можно сериализовать объект, передавать его через Интернет с помощью протокола HTTP и десериализовать его на целевой компьютер.</span><span class="sxs-lookup"><span data-stu-id="3ed95-104">For example, you can serialize an object, transport it over the Internet using HTTP, and deserialized it at the destination machine.</span></span>  

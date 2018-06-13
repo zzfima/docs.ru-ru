@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33654426"
 ---
 # <a name="interfaces-visual-basic"></a><span data-ttu-id="71f53-102">Интерфейсы (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="71f53-102">Interfaces (Visual Basic)</span></span>
 <span data-ttu-id="71f53-103">*Интерфейсы* определяют свойства, методы и события, которые можно реализовать в классах.</span><span class="sxs-lookup"><span data-stu-id="71f53-103">*Interfaces* define the properties, methods, and events that classes can implement.</span></span> <span data-ttu-id="71f53-104">Интерфейсы позволяют определить возможности в виде небольших групп тесно связанных свойств, методов и событий. Это снижает число проблем совместимости, так как можно создавать усовершенствованные реализации интерфейсов без изменения существующего кода.</span><span class="sxs-lookup"><span data-stu-id="71f53-104">Interfaces allow you to define features as small groups of closely related properties, methods, and events; this reduces compatibility problems because you can develop enhanced implementations for your interfaces without jeopardizing existing code.</span></span> <span data-ttu-id="71f53-105">Вы можете добавлять новые функции в любое время с помощью дополнительных интерфейсов и реализаций.</span><span class="sxs-lookup"><span data-stu-id="71f53-105">You can add new features at any time by developing additional interfaces and implementations.</span></span>  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33520465"
 ---
 # <a name="application-settings-overview"></a><span data-ttu-id="23252-102">Общие сведения о параметрах приложений</span><span class="sxs-lookup"><span data-stu-id="23252-102">Application Settings Overview</span></span>
 <span data-ttu-id="23252-103">В этом разделе описывается создание и хранение параметров приложения и пользователей.</span><span class="sxs-lookup"><span data-stu-id="23252-103">This topic discusses how to create and store settings data on behalf of your application and your users.</span></span>  

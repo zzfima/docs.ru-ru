@@ -8,6 +8,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33215168"
 ---
 # <a name="strongly-typed-delegates"></a><span data-ttu-id="a3d12-103">Строго типизированные делегаты</span><span class="sxs-lookup"><span data-stu-id="a3d12-103">Strongly Typed Delegates</span></span>
 

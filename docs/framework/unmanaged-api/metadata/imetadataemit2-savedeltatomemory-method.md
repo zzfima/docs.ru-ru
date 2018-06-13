@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 38d0d794cdedfd058b93785f4f444b4dd3196195
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33444774"
 ---
 # <a name="imetadataemit2savedeltatomemory-method"></a><span data-ttu-id="b2717-102">Метод IMetaDataEmit2::SaveDeltaToMemory</span><span class="sxs-lookup"><span data-stu-id="b2717-102">IMetaDataEmit2::SaveDeltaToMemory Method</span></span>
 <span data-ttu-id="b2717-103">Сохраняет изменения в текущем сеансе edit and continue в памяти.</span><span class="sxs-lookup"><span data-stu-id="b2717-103">Saves changes from the current edit-and-continue session to memory.</span></span>  

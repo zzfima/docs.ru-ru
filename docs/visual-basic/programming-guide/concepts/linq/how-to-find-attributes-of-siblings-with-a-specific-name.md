@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33643612"
 ---
 # <a name="how-to-find-attributes-of-siblings-with-a-specific-name-xpath-linq-to-xml-visual-basic"></a><span data-ttu-id="08031-102">Как: поиск атрибутов одноуровневых узлов с определенным именем (XPath-LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="08031-102">How to: Find Attributes of Siblings with a Specific Name (XPath-LINQ to XML) (Visual Basic)</span></span>
 <span data-ttu-id="08031-103">В этом разделе показано, как найти все атрибуты одноуровневых элементов контекстного узла.</span><span class="sxs-lookup"><span data-stu-id="08031-103">This topic shows how to find all attributes of the siblings of the context node.</span></span> <span data-ttu-id="08031-104">В коллекции возвращаются только атрибуты с заданным именем.</span><span class="sxs-lookup"><span data-stu-id="08031-104">Only attributes with a specific name are returned in the collection.</span></span>  

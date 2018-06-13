@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 6a84da2a337554873e94b47eb51916088edbb5a6
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33439037"
 ---
 # <a name="ihostgcmanagersuspensionstarting-method"></a><span data-ttu-id="6ccec-102">Метод IHostGCManager::SuspensionStarting</span><span class="sxs-lookup"><span data-stu-id="6ccec-102">IHostGCManager::SuspensionStarting Method</span></span>
 <span data-ttu-id="6ccec-103">Уведомляет узел, что общеязыковой среды выполнения (CLR) приостановила выполнение задачи для выполнения сборки мусора.</span><span class="sxs-lookup"><span data-stu-id="6ccec-103">Notifies the host that the common language runtime (CLR) is suspending execution of tasks, to perform a garbage collection.</span></span>  

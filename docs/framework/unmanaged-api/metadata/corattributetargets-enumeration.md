@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 54d239c3091b29424b26fbab4cb4eb9152ff9ad9
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33442170"
 ---
 # <a name="corattributetargets-enumeration"></a><span data-ttu-id="3cb70-102">Перечисление CorAttributeTargets</span><span class="sxs-lookup"><span data-stu-id="3cb70-102">CorAttributeTargets Enumeration</span></span>
 <span data-ttu-id="3cb70-103">Задает элементы приложения, в которых допустимо применять аргумент.</span><span class="sxs-lookup"><span data-stu-id="3cb70-103">Specifies the application elements on which it is valid to apply an attribute.</span></span>  

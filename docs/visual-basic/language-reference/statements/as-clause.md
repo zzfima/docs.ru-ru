@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33604267"
 ---
 # <a name="as-clause-visual-basic"></a><span data-ttu-id="a6a3a-102">Предложение As (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="a6a3a-102">As Clause (Visual Basic)</span></span>
 <span data-ttu-id="a6a3a-103">Представляет `As` предложение, которое определяет тип данных в операторе объявления или список ограничений для параметра универсального типа.</span><span class="sxs-lookup"><span data-stu-id="a6a3a-103">Introduces an `As` clause, which identifies a data type in a declaration statement or a constraint list on a generic type parameter.</span></span>  

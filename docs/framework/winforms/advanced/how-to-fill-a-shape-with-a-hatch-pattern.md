@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33521746"
 ---
 # <a name="how-to-fill-a-shape-with-a-hatch-pattern"></a><span data-ttu-id="31cc5-102">Практическое руководство. Штриховая заливка фигуры</span><span class="sxs-lookup"><span data-stu-id="31cc5-102">How to: Fill a Shape with a Hatch Pattern</span></span>
 <span data-ttu-id="31cc5-103">Шаблон штриховки, состоящее из двух цветов: один для фона и один для строк, формирующих шаблон на фоне.</span><span class="sxs-lookup"><span data-stu-id="31cc5-103">A hatch pattern is made from two colors: one for the background and one for the lines that form the pattern over the background.</span></span> <span data-ttu-id="31cc5-104">Чтобы залить замкнутую фигуру штриховая, используйте <xref:System.Drawing.Drawing2D.HatchBrush> объекта.</span><span class="sxs-lookup"><span data-stu-id="31cc5-104">To fill a closed shape with a hatch pattern, use a <xref:System.Drawing.Drawing2D.HatchBrush> object.</span></span> <span data-ttu-id="31cc5-105">Следующий пример демонстрирует Штриховая заливка эллипса:</span><span class="sxs-lookup"><span data-stu-id="31cc5-105">The following example demonstrates how to fill an ellipse with a hatch pattern:</span></span>  

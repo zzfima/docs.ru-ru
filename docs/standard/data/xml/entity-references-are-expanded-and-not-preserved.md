@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33569536"
 ---
 # <a name="entity-references-are-expanded-and-not-preserved"></a><span data-ttu-id="7ae80-102">Разворачиваемые и не сохраняемые ссылки на сущности</span><span class="sxs-lookup"><span data-stu-id="7ae80-102">Entity References are Expanded and Not Preserved</span></span>
 <span data-ttu-id="7ae80-103">Если ссылка на сущность разворачивается и заменяется текстом, который она представляет, узел **XmlEntityReference** не создается.</span><span class="sxs-lookup"><span data-stu-id="7ae80-103">When the entity reference is expanded and replaced by the text it represents, the **XmlEntityReference** node is not created.</span></span> <span data-ttu-id="7ae80-104">Вместо этого выполняется синтаксический анализ для декларации сущности и на место **XmlEntityReference** копируются узлы, созданные из содержимого этой декларации.</span><span class="sxs-lookup"><span data-stu-id="7ae80-104">Instead, the entity declaration is parsed, and nodes created from the content in the declaration are copied in the place of the **XmlEntityReference**.</span></span> <span data-ttu-id="7ae80-105">Таким образом, в примере `&publisher;` ссылка `&publisher;` не сохраняется, а вместо нее создается узел **XmlText**.</span><span class="sxs-lookup"><span data-stu-id="7ae80-105">Therefore, in the `&publisher;` example, the `&publisher;` is not saved, but instead, an **XmlText** node is created.</span></span>  

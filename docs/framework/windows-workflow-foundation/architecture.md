@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33513101"
 ---
 # <a name="windows-workflow-architecture"></a><span data-ttu-id="d04bf-102">Архитектура рабочих процессов Windows</span><span class="sxs-lookup"><span data-stu-id="d04bf-102">Windows Workflow Architecture</span></span>
 <span data-ttu-id="d04bf-103">Windows Workflow Foundation (WF) поднимает уровень абстракции для разработки интерактивных длительных приложений.</span><span class="sxs-lookup"><span data-stu-id="d04bf-103">Windows Workflow Foundation (WF) raises the abstraction level for developing interactive long-running applications.</span></span> <span data-ttu-id="d04bf-104">Блоки обработки инкапсулируются в виде действий.</span><span class="sxs-lookup"><span data-stu-id="d04bf-104">Units of work are encapsulated as activities.</span></span> <span data-ttu-id="d04bf-105">Действия работают в среде, которая обеспечивает средства для управления потоком, обработки исключений, распространения ошибок, сохранения данных состояния, загрузки и выгрузки текущих рабочих процессов из памяти, отслеживания и управления потоком транзакций.</span><span class="sxs-lookup"><span data-stu-id="d04bf-105">Activities run in an environment that provides facilities for flow control, exception handling, fault propagation, persistence of state data, loading and unloading of in-progress workflows from memory, tracking, and transaction flow.</span></span>  

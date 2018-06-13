@@ -16,6 +16,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32741910"
 ---
 # <a name="how-to-load-assemblies-into-an-application-domain"></a><span data-ttu-id="44209-102">Практическое руководство. Загрузка сборок в домен приложения</span><span class="sxs-lookup"><span data-stu-id="44209-102">How to: Load Assemblies into an Application Domain</span></span>
 <span data-ttu-id="44209-103">Существует несколько способов загрузки сборки в домен приложения.</span><span class="sxs-lookup"><span data-stu-id="44209-103">There are several ways to load an assembly into an application domain.</span></span> <span data-ttu-id="44209-104">Рекомендуется использовать метод <xref:System.Reflection.Assembly.Load%2A> `static` (`Shared` в Visual Basic) класса <xref:System.Reflection.Assembly?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="44209-104">The recommended way is to use the `static` (`Shared` in Visual Basic) <xref:System.Reflection.Assembly.Load%2A> method of the <xref:System.Reflection.Assembly?displayProperty=nameWithType> class.</span></span> <span data-ttu-id="44209-105">Другими способами загрузки сборок являются:</span><span class="sxs-lookup"><span data-stu-id="44209-105">Other ways assemblies can be loaded include:</span></span>  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32741832"
 ---
 # <a name="assembly-contents"></a><span data-ttu-id="04845-102">Содержимое сборок</span><span class="sxs-lookup"><span data-stu-id="04845-102">Assembly Contents</span></span>
 <span data-ttu-id="04845-103">В общем случае статическая сборка может состоять из четырех элементов.</span><span class="sxs-lookup"><span data-stu-id="04845-103">In general, a static assembly can consist of four elements:</span></span>  

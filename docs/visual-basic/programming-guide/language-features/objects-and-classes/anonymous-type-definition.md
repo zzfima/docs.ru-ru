@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33649624"
 ---
 # <a name="anonymous-type-definition-visual-basic"></a><span data-ttu-id="b846e-102">Определение анонимного типа (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b846e-102">Anonymous Type Definition (Visual Basic)</span></span>
 <span data-ttu-id="b846e-103">В ответ на объявление экземпляра анонимного типа компилятор создает определение нового класса, который содержит указанные свойства для типа.</span><span class="sxs-lookup"><span data-stu-id="b846e-103">In response to the declaration of an instance of an anonymous type, the compiler creates a new class definition that contains the specified properties for the type.</span></span>  

@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 3f978f565dd93eb10a68942fc463f7d5cc212e6e
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33442037"
 ---
 # <a name="ihostthreadpoolmanagersetmaxthreads-method"></a><span data-ttu-id="11a78-102">Метод IHostThreadPoolManager::SetMaxThreads</span><span class="sxs-lookup"><span data-stu-id="11a78-102">IHostThreadPoolManager::SetMaxThreads Method</span></span>
 <span data-ttu-id="11a78-103">Задает максимальное число потоков, которые основное приложение может хранить в пуле потоков.</span><span class="sxs-lookup"><span data-stu-id="11a78-103">Sets the maximum number of threads that the host can maintain in the thread pool.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33646969"
 ---
 # <a name="xattribute-class-overview-visual-basic"></a><span data-ttu-id="d88a3-102">Общие сведения о классе XAttribute (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="d88a3-102">XAttribute Class Overview (Visual Basic)</span></span>
 <span data-ttu-id="d88a3-103">Атрибуты - это пары «имя-значение», ассоциированные с элементом.</span><span class="sxs-lookup"><span data-stu-id="d88a3-103">Attributes are name/value pairs that are associated with an element.</span></span> <span data-ttu-id="d88a3-104">Класс <xref:System.Xml.Linq.XAttribute> представляет XML-атрибуты.</span><span class="sxs-lookup"><span data-stu-id="d88a3-104">The <xref:System.Xml.Linq.XAttribute> class represents XML attributes.</span></span>  

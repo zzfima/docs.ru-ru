@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: b8c972bcace3ba3d855a3b5eebc16e6b76994eb7
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33450708"
 ---
 # <a name="corprfjitcache-enumeration"></a><span data-ttu-id="2e6af-102">Перечисление COR_PRF_JIT_CACHE</span><span class="sxs-lookup"><span data-stu-id="2e6af-102">COR_PRF_JIT_CACHE Enumeration</span></span>
 <span data-ttu-id="2e6af-103">Указывает результат кэшированной функции поиска.</span><span class="sxs-lookup"><span data-stu-id="2e6af-103">Indicates the result of a cached function search.</span></span>  

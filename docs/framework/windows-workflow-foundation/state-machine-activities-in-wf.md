@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33515773"
 ---
 # <a name="state-machine-activities-in-wf"></a><span data-ttu-id="323f1-102">Действия конечного автомата в WF</span><span class="sxs-lookup"><span data-stu-id="323f1-102">State Machine Activities in WF</span></span>
 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]<span data-ttu-id="323f1-103"> предусматривает несколько системных действий и конструкторов действий для создания рабочих процессов конечного автомата.</span><span class="sxs-lookup"><span data-stu-id="323f1-103"> provides several system-provided activities and activity designers for creating state machine workflows.</span></span>  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33571986"
 ---
 # <a name="miscellaneous-constructs-in-regular-expressions"></a><span data-ttu-id="aa636-102">Другие конструкции в регулярных выражениях</span><span class="sxs-lookup"><span data-stu-id="aa636-102">Miscellaneous Constructs in Regular Expressions</span></span>
 <span data-ttu-id="aa636-103">Регулярные выражения в .NET поддерживают три различные языковые конструкции.</span><span class="sxs-lookup"><span data-stu-id="aa636-103">Regular expressions in .NET include three miscellaneous language constructs.</span></span> <span data-ttu-id="aa636-104">Одна позволяет включать или отключать определенные параметры соответствия в середине шаблона регулярного выражения.</span><span class="sxs-lookup"><span data-stu-id="aa636-104">One lets you enable or disable particular matching options in the middle of a regular expression pattern.</span></span> <span data-ttu-id="aa636-105">Оставшиеся две позволяют включать комментарии в регулярное выражение.</span><span class="sxs-lookup"><span data-stu-id="aa636-105">The remaining two let you include comments in a regular expression.</span></span>  

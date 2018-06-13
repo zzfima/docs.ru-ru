@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 92097cdf735630f3537296f188bd83ea8162add2
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33441143"
 ---
 # <a name="ihostthreadpoolmanager-interface"></a><span data-ttu-id="c7104-102">Интерфейс IHostThreadPoolManager</span><span class="sxs-lookup"><span data-stu-id="c7104-102">IHostThreadPoolManager Interface</span></span>
 <span data-ttu-id="c7104-103">Предоставляет методы, позволяющие общеязыковой среды выполнения (CLR) для настройки пула потоков и очередь рабочих элементов в пуле потоков.</span><span class="sxs-lookup"><span data-stu-id="c7104-103">Provides methods that enable the common language runtime (CLR) to configure the thread pool and to queue work items to the thread pool.</span></span>  

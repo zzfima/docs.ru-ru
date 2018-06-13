@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d6ff70ec0c9a34a6539523f5ec4488b0abac228c
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33443555"
 ---
 # <a name="itypenamebuilderopengenericarguments-method"></a><span data-ttu-id="38e0a-102">Метод ITypeNameBuilder::OpenGenericArguments</span><span class="sxs-lookup"><span data-stu-id="38e0a-102">ITypeNameBuilder::OpenGenericArguments Method</span></span>
 <span data-ttu-id="38e0a-103">Этот метод поддерживает инфраструктуру .NET Framework и не предназначен для использования непосредственно из программного кода.</span><span class="sxs-lookup"><span data-stu-id="38e0a-103">This method supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>  

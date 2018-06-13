@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d3edae4cb112f46643734c5f1612d9df36ad47e9
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33441336"
 ---
 # <a name="ihostmemorymanager-interface"></a><span data-ttu-id="879f1-102">Интерфейс IHostMemoryManager</span><span class="sxs-lookup"><span data-stu-id="879f1-102">IHostMemoryManager Interface</span></span>
 <span data-ttu-id="879f1-103">Предоставляет методы, позволяющие общеязыковой среды выполнения (CLR), чтобы запросы виртуальной памяти через узел, вместо использования стандартных функций Win32 виртуальной памяти.</span><span class="sxs-lookup"><span data-stu-id="879f1-103">Provides methods that allow the common language runtime (CLR) to make virtual memory requests through the host, instead of using the standard Win32 virtual memory functions.</span></span>  

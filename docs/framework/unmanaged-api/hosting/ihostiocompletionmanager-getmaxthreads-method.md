@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 8544466edcaca1198d7a7ca92a3f9b9a16847193
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33442489"
 ---
 # <a name="ihostiocompletionmanagergetmaxthreads-method"></a><span data-ttu-id="cc791-102">Метод IHostIoCompletionManager::GetMaxThreads</span><span class="sxs-lookup"><span data-stu-id="cc791-102">IHostIoCompletionManager::GetMaxThreads Method</span></span>
 <span data-ttu-id="cc791-103">Возвращает максимальное число потоков, которые основное приложение может выделить для обслуживания запросов ввода-вывода.</span><span class="sxs-lookup"><span data-stu-id="cc791-103">Gets the maximum number of threads that the host can allot to service I/O requests.</span></span>  

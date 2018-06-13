@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33644047"
 ---
 # <a name="covariance-and-contravariance-visual-basic"></a><span data-ttu-id="a8778-102">Ковариация и контрвариантность (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="a8778-102">Covariance and Contravariance (Visual Basic)</span></span>
 <span data-ttu-id="a8778-103">В Visual Basic ковариация и контрвариантность позволяют использовать неявное преобразование ссылок для типов массивов и делегатов, а также для аргументов универсального типа.</span><span class="sxs-lookup"><span data-stu-id="a8778-103">In Visual Basic, covariance and contravariance enable implicit reference conversion for array types, delegate types, and generic type arguments.</span></span> <span data-ttu-id="a8778-104">Ковариация сохраняет совместимость присваивания, а при контрвариантности присваивание начинает работать противоположным образом.</span><span class="sxs-lookup"><span data-stu-id="a8778-104">Covariance preserves assignment compatibility and contravariance reverses it.</span></span>  

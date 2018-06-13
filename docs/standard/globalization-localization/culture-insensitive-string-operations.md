@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33574054"
 ---
 # <a name="culture-insensitive-string-operations"></a><span data-ttu-id="2b389-102">Строковые операции, не зависящие от языка и региональных параметров</span><span class="sxs-lookup"><span data-stu-id="2b389-102">Culture-Insensitive String Operations</span></span>
 <span data-ttu-id="2b389-103">Строковые операции с учетом языка и региональных параметров могут представлять преимущество для разработчиков, которые создают приложения, предназначенные для отображения пользователям результатов в зависимости от языка и региона.</span><span class="sxs-lookup"><span data-stu-id="2b389-103">Culture-sensitive string operations can be an advantage if you are creating applications designed to display results to users on a per-culture basis.</span></span> <span data-ttu-id="2b389-104">По умолчанию методы, зависящие от языка и региона, используют значение среды, содержащееся в свойстве <xref:System.Globalization.CultureInfo.CurrentCulture%2A> для текущего потока.</span><span class="sxs-lookup"><span data-stu-id="2b389-104">By default, culture-sensitive methods obtain the culture to use from the <xref:System.Globalization.CultureInfo.CurrentCulture%2A> property for the current thread.</span></span>  

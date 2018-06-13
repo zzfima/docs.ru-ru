@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33604670"
 ---
 # <a name="withend-with-statement-visual-basic"></a><span data-ttu-id="46081-102">Оператор With... End With (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="46081-102">With...End With Statement (Visual Basic)</span></span>
 <span data-ttu-id="46081-103">Выполняет последовательность операторов, которые многократно ссылаются на единственный объект или структуру, чтобы операторы могли использовать упрощенный синтаксис доступ к членам объекта или структуры.</span><span class="sxs-lookup"><span data-stu-id="46081-103">Executes a series of statements that repeatedly refer to a single object or structure so that the statements can use a simplified syntax when accessing members of the object or structure.</span></span>  <span data-ttu-id="46081-104">При использовании структуры можно только считывать значения членов или вызвать методы. При попытке присвоения значений членам структуры, используемым в операторе `With...End With`, возникает ошибка.</span><span class="sxs-lookup"><span data-stu-id="46081-104">When using a structure, you can only read the values of members or invoke methods, and you get an error if you try to assign values to members of a structure used in a `With...End With` statement.</span></span>  

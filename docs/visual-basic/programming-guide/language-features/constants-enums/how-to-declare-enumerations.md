@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33650807"
 ---
 # <a name="how-to-declare-enumerations-visual-basic"></a><span data-ttu-id="b7cfe-102">Практическое руководство. Объявление перечисления (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b7cfe-102">How to: Declare Enumerations (Visual Basic)</span></span>
 <span data-ttu-id="b7cfe-103">Создать перечисление с `Enum` инструкции в разделе объявлений класса или модуля.</span><span class="sxs-lookup"><span data-stu-id="b7cfe-103">You create an enumeration with the `Enum` statement in the declarations section of a class or module.</span></span> <span data-ttu-id="b7cfe-104">Нельзя объявить перечисление в методе.</span><span class="sxs-lookup"><span data-stu-id="b7cfe-104">You cannot declare an enumeration within a method.</span></span> <span data-ttu-id="b7cfe-105">Чтобы указать соответствующий уровень доступа, используйте `Private`, `Protected`, `Friend`, или `Public`.</span><span class="sxs-lookup"><span data-stu-id="b7cfe-105">To specify the appropriate level of access, use `Private`, `Protected`, `Friend`, or `Public`.</span></span>  

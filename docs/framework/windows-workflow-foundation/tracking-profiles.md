@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33519988"
 ---
 # <a name="tracking-profiles"></a><span data-ttu-id="e17e5-102">Профили отслеживания</span><span class="sxs-lookup"><span data-stu-id="e17e5-102">Tracking Profiles</span></span>
 <span data-ttu-id="e17e5-103">Профили отслеживания содержат запросы отслеживания, позволяющие участнику подписываться на события рабочего потока, создаваемые в момент изменения состояния экземпляра рабочего процесса во время выполнения.</span><span class="sxs-lookup"><span data-stu-id="e17e5-103">Tracking profiles contain tracking queries that permit a tracking participant to subscribe to workflow events that are emitted when the state of a workflow instance changes at runtime.</span></span>  

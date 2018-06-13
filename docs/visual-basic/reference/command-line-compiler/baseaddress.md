@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33650154"
 ---
 # <a name="-baseaddress"></a><span data-ttu-id="30643-102">-baseaddress</span><span class="sxs-lookup"><span data-stu-id="30643-102">-baseaddress</span></span>
 <span data-ttu-id="30643-103">Задает базовый адрес при создании библиотеки DLL.</span><span class="sxs-lookup"><span data-stu-id="30643-103">Specifies a default base address when creating a DLL.</span></span>  

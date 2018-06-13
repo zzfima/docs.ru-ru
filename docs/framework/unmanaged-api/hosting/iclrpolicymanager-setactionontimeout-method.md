@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: cc1d16a2d57fea27c1c26fc55fbbfa9b74c25495
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33435842"
 ---
 # <a name="iclrpolicymanagersetactionontimeout-method"></a><span data-ttu-id="435d2-102">Метод ICLRPolicyManager::SetActionOnTimeout</span><span class="sxs-lookup"><span data-stu-id="435d2-102">ICLRPolicyManager::SetActionOnTimeout Method</span></span>
 <span data-ttu-id="435d2-103">Задает действие политики, которое должен выполнить общеязыковой среды выполнения (CLR), после истечения указанного времени ожидания операции.</span><span class="sxs-lookup"><span data-stu-id="435d2-103">Specifies the policy action the common language runtime (CLR) should take when the specified operation times out.</span></span>  

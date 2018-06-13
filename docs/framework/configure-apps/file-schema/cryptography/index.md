@@ -18,6 +18,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32742878"
 ---
 # <a name="cryptography-settings-schema"></a><span data-ttu-id="fb257-102">Схема параметров криптографии</span><span class="sxs-lookup"><span data-stu-id="fb257-102">Cryptography Settings Schema</span></span>
 <span data-ttu-id="fb257-103">Схема параметров шифрования содержит элементы, с помощью которых можно сопоставить понятные имена алгоритмов с классами, реализующими алгоритмы шифрования.</span><span class="sxs-lookup"><span data-stu-id="fb257-103">The cryptography settings schema contains elements that specify how to map friendly algorithm names to classes that implement cryptography algorithms.</span></span>  

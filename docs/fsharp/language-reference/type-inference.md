@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33563710"
 ---
 # <a name="type-inference"></a><span data-ttu-id="8022e-103">Вывод типа</span><span class="sxs-lookup"><span data-stu-id="8022e-103">Type Inference</span></span>
 

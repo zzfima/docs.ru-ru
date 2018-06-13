@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33643069"
 ---
 # <a name="how-to-create-unsigned-friend-assemblies-visual-basic"></a><span data-ttu-id="d57a0-102">Как: создание неподписанных дружественных сборок (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="d57a0-102">How to: Create Unsigned Friend Assemblies (Visual Basic)</span></span>
 <span data-ttu-id="d57a0-103">В этом примере показано использование дружественных сборок с неподписанными сборками.</span><span class="sxs-lookup"><span data-stu-id="d57a0-103">This example shows how to use friend assemblies with assemblies that are unsigned.</span></span>  

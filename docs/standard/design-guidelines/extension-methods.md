@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33574521"
 ---
 # <a name="extension-methods"></a><span data-ttu-id="c7381-102">Методы расширения</span><span class="sxs-lookup"><span data-stu-id="c7381-102">Extension Methods</span></span>
 <span data-ttu-id="c7381-103">Методы расширения являются функция языка, позволяющая статических методов, вызываемых с помощью синтаксиса вызова метода экземпляра.</span><span class="sxs-lookup"><span data-stu-id="c7381-103">Extension methods are a language feature that allows static methods to be called using instance method call syntax.</span></span> <span data-ttu-id="c7381-104">Эти методы необходимо выполнить по крайней мере один параметр, который представляет экземпляр, который имеет метод для выполнения операций над.</span><span class="sxs-lookup"><span data-stu-id="c7381-104">These methods must take at least one parameter, which represents the instance the method is to operate on.</span></span>  

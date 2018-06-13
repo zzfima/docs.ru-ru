@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 0e24acdde486f377cc9187aac088ce7a611cd4eb
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33460754"
 ---
 # <a name="qualifiersetendenumeration-function"></a><span data-ttu-id="143a1-103">Функция QualifierSet_EndEnumeration</span><span class="sxs-lookup"><span data-stu-id="143a1-103">QualifierSet_EndEnumeration function</span></span>
 <span data-ttu-id="143a1-104">Завершается перечисление начался вызовом [QualifierSet_BeginEnumeration](qualifierset-beginenumeration.md) функции.</span><span class="sxs-lookup"><span data-stu-id="143a1-104">Terminates the enumeration begun with a call to the [QualifierSet_BeginEnumeration](qualifierset-beginenumeration.md) function.</span></span>  

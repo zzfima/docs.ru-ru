@@ -17,6 +17,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32742092"
 ---
 # <a name="how-to-unload-an-application-domain"></a><span data-ttu-id="2bc58-102">Практическое руководство. Выгрузка домена приложения</span><span class="sxs-lookup"><span data-stu-id="2bc58-102">How to: Unload an Application Domain</span></span>
 <span data-ttu-id="2bc58-103">После завершения использования домена приложения выгрузите его с помощью метода <xref:System.AppDomain.Unload%2A?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="2bc58-103">When you have finished using an application domain, unload it using the <xref:System.AppDomain.Unload%2A?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="2bc58-104">Метод **Unload** безопасно завершает работу указанного домена приложения.</span><span class="sxs-lookup"><span data-stu-id="2bc58-104">The **Unload** method gracefully shuts down the specified application domain.</span></span> <span data-ttu-id="2bc58-105">В процессе выгрузки новые потоки не могут получить доступ к домену приложения, и освобождаются все структуры данных, определяемые доменом приложения.</span><span class="sxs-lookup"><span data-stu-id="2bc58-105">During the unloading process, no new threads can access the application domain, and all application domain–specific data structures are freed.</span></span>  

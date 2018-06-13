@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33643293"
 ---
 # <a name="how-to-create-and-use-assemblies-using-the-command-line-visual-basic"></a><span data-ttu-id="dfb30-102">Как: Создание и использование сборок с помощью командной строки (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="dfb30-102">How to: Create and Use Assemblies Using the Command Line (Visual Basic)</span></span>
 <span data-ttu-id="dfb30-103">Сборка (или библиотека динамической компоновки (DLL)) связывается с программой во время выполнения.</span><span class="sxs-lookup"><span data-stu-id="dfb30-103">An assembly, or a dynamic linking library (DLL), is linked to your program at run time.</span></span> <span data-ttu-id="dfb30-104">Сборка и использование библиотеки DLL рассматривается в следующем сценарии:</span><span class="sxs-lookup"><span data-stu-id="dfb30-104">To demonstrate building and using a DLL, consider the following scenario:</span></span>  

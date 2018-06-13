@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33566341"
 ---
 # <a name="tilebrush-overview"></a><span data-ttu-id="63563-102">Общие сведения о TileBrush</span><span class="sxs-lookup"><span data-stu-id="63563-102">TileBrush Overview</span></span>
 <span data-ttu-id="63563-103"><xref:System.Windows.Media.TileBrush> объекты предоставляют значительные возможности контроля над способ рисования области с изображением, <xref:System.Windows.Media.Drawing>, или <xref:System.Windows.Media.Visual>.</span><span class="sxs-lookup"><span data-stu-id="63563-103"><xref:System.Windows.Media.TileBrush> objects provide you with a great deal of control over how an area is painted with an image, <xref:System.Windows.Media.Drawing>, or <xref:System.Windows.Media.Visual>.</span></span> <span data-ttu-id="63563-104">В этом разделе описывается использование <xref:System.Windows.Media.TileBrush> функции для большего контроля над тем, как <xref:System.Windows.Media.ImageBrush>, <xref:System.Windows.Media.DrawingBrush>, или <xref:System.Windows.Media.VisualBrush> закрашивает область.</span><span class="sxs-lookup"><span data-stu-id="63563-104">This topic describes how to use <xref:System.Windows.Media.TileBrush> features to gain more control over how an <xref:System.Windows.Media.ImageBrush>, <xref:System.Windows.Media.DrawingBrush>, or <xref:System.Windows.Media.VisualBrush> paints an area.</span></span>  

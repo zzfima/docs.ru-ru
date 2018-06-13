@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33571255"
 ---
 # <a name="commonly-used-collection-types"></a><span data-ttu-id="2d446-102">Часто используемые типы коллекций</span><span class="sxs-lookup"><span data-stu-id="2d446-102">Commonly Used Collection Types</span></span>
 <span data-ttu-id="2d446-103">Типы коллекций — это распространенные виды коллекций данных, такие как хэш-таблицы, очереди, стеки, контейнеры, словари и списки.</span><span class="sxs-lookup"><span data-stu-id="2d446-103">Collection types are the common variations of data collections, such as hash tables, queues, stacks, bags, dictionaries, and lists.</span></span>  

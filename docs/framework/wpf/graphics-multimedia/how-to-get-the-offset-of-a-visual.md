@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33561853"
 ---
 # <a name="how-to-get-the-offset-of-a-visual"></a><span data-ttu-id="ae516-102">Практическое руководство. Получение смещения визуального объекта</span><span class="sxs-lookup"><span data-stu-id="ae516-102">How to: Get the Offset of a Visual</span></span>
 <span data-ttu-id="ae516-103">Этих примерах показано, как получить значение смещения относительно его родительского, любой предков или потомков визуального объекта.</span><span class="sxs-lookup"><span data-stu-id="ae516-103">These examples show how to retrieve the offset value of a visual object that is relative to its parent, or any ancestor or descendant.</span></span>  

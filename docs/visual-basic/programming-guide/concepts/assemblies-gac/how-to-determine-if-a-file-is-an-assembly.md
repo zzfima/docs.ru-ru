@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33643250"
 ---
 # <a name="how-to-determine-if-a-file-is-an-assembly-visual-basic"></a><span data-ttu-id="877df-102">Как: определить, является ли файл сборкой (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="877df-102">How to: Determine If a File Is an Assembly (Visual Basic)</span></span>
 <span data-ttu-id="877df-103">Файл является сборкой только в том случае, если он является управляемым и содержит запись сборки в своих метаданных.</span><span class="sxs-lookup"><span data-stu-id="877df-103">A file is an assembly if and only if it is managed, and contains an assembly entry in its metadata.</span></span> <span data-ttu-id="877df-104">Дополнительные сведения о сборках и метаданных см. в разделе [Манифест сборки](../../../../framework/app-domains/assembly-manifest.md).</span><span class="sxs-lookup"><span data-stu-id="877df-104">For more information on assemblies and metadata, see the topic [Assembly Manifest](../../../../framework/app-domains/assembly-manifest.md).</span></span>  

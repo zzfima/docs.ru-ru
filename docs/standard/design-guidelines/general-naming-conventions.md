@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33578044"
 ---
 # <a name="general-naming-conventions"></a><span data-ttu-id="89aa8-102">Общие соглашения об именовании</span><span class="sxs-lookup"><span data-stu-id="89aa8-102">General Naming Conventions</span></span>
 <span data-ttu-id="89aa8-103">В этом разделе описаны общие соглашения об именовании, связанные с выбором word, инструкции по использованию сокращений и акронимов и рекомендации о том, как следует избегать использования имен конкретного языка.</span><span class="sxs-lookup"><span data-stu-id="89aa8-103">This section describes general naming conventions that relate to word choice, guidelines on using abbreviations and acronyms, and recommendations on how to avoid using language-specific names.</span></span>  

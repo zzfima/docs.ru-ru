@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33485099"
 ---
 # <a name="systemservicemodeltxcompletionstatuscompletedfortacosc"></a><span data-ttu-id="a1deb-102">System.ServiceModel.TxCompletionStatusCompletedForTACOSC</span><span class="sxs-lookup"><span data-stu-id="a1deb-102">System.ServiceModel.TxCompletionStatusCompletedForTACOSC</span></span>
 <span data-ttu-id="a1deb-103">Когда был закрыт сеанс, была выполнена специальная транзакция.</span><span class="sxs-lookup"><span data-stu-id="a1deb-103">The specific transaction was completed when the session was closed.</span></span>  

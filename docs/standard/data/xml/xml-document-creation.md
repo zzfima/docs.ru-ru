@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33572792"
 ---
 # <a name="xml-document-creation"></a><span data-ttu-id="1b2f8-102">Создание XML-документа</span><span class="sxs-lookup"><span data-stu-id="1b2f8-102">XML Document Creation</span></span>
 <span data-ttu-id="1b2f8-103">XML-документ можно создать двумя способами.</span><span class="sxs-lookup"><span data-stu-id="1b2f8-103">There are two ways to create an XML document.</span></span> <span data-ttu-id="1b2f8-104">Один из них заключается в создании объекта **XmlDocument** без параметров.</span><span class="sxs-lookup"><span data-stu-id="1b2f8-104">One way is to create an **XmlDocument** with no parameters.</span></span> <span data-ttu-id="1b2f8-105">Второй включает создание объекта **XmlDocument**, которому нужно в качестве параметра передать XmlNameTable.</span><span class="sxs-lookup"><span data-stu-id="1b2f8-105">The other way is to create an **XmlDocument** and pass it an XmlNameTable as a parameter.</span></span> <span data-ttu-id="1b2f8-106">В следующем примере показано создание пустого объекта **XmlDocument** без параметров.</span><span class="sxs-lookup"><span data-stu-id="1b2f8-106">The following example shows how to create a new, empty **XmlDocument** using no parameters.</span></span>  

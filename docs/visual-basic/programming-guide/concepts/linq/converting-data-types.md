@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33643758"
 ---
 # <a name="converting-data-types-visual-basic"></a><span data-ttu-id="9d77e-102">Преобразование типов данных (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="9d77e-102">Converting Data Types (Visual Basic)</span></span>
 <span data-ttu-id="9d77e-103">Методы преобразования изменяют тип входных объектов.</span><span class="sxs-lookup"><span data-stu-id="9d77e-103">Conversion methods change the type of input objects.</span></span>  

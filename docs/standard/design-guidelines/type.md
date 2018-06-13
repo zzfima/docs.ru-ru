@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33572893"
 ---
 # <a name="type-design-guidelines"></a><span data-ttu-id="f2b46-102">Правила разработки типов</span><span class="sxs-lookup"><span data-stu-id="f2b46-102">Type Design Guidelines</span></span>
 <span data-ttu-id="f2b46-103">С точки зрения среды CLR, есть только две категории типов — ссылочные типы и типы значений, но с целью обсуждение разработки решений, типы разделен на несколько логических групп, каждая из которых собственные правила по разработке.</span><span class="sxs-lookup"><span data-stu-id="f2b46-103">From the CLR perspective, there are only two categories of types—reference types and value types—but for the purpose of a discussion about framework design, we divide types into more logical groups, each with its own specific design rules.</span></span>  

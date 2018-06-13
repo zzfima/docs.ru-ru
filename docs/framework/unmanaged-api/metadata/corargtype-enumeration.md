@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 5803f958c9340c068d6ce6e7fc0b1d6846d67876
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33441579"
 ---
 # <a name="corargtype-enumeration"></a><span data-ttu-id="942fa-102">Перечисление CorArgType</span><span class="sxs-lookup"><span data-stu-id="942fa-102">CorArgType Enumeration</span></span>
 <span data-ttu-id="942fa-103">Содержит значения, описывающие собственный тип дескриптора среды выполнения.</span><span class="sxs-lookup"><span data-stu-id="942fa-103">Contains values that describe the native type of a runtime handle.</span></span>  

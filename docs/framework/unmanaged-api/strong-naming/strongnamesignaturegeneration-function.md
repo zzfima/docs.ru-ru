@@ -17,9 +17,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c0555299779aebc6cc37c3863e8b5504b357b262
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33461497"
 ---
 # <a name="strongnamesignaturegeneration-function"></a><span data-ttu-id="394c9-102">Функция StrongNameSignatureGeneration</span><span class="sxs-lookup"><span data-stu-id="394c9-102">StrongNameSignatureGeneration Function</span></span>
 <span data-ttu-id="394c9-103">Создает подпись со строгим именем для указанной сборки.</span><span class="sxs-lookup"><span data-stu-id="394c9-103">Generates a strong name signature for the specified assembly.</span></span>  

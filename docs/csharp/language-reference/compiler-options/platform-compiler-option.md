@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33216516"
 ---
 # <a name="-platform-c-compiler-options"></a><span data-ttu-id="9346f-102">-platform (параметры компилятора C#)</span><span class="sxs-lookup"><span data-stu-id="9346f-102">-platform (C# Compiler Options)</span></span>
 <span data-ttu-id="9346f-103">Указывает, в какой версии среды CLR может запускаться сборка.</span><span class="sxs-lookup"><span data-stu-id="9346f-103">Specifies which version of the Common Language Runtime (CLR) can run the assembly.</span></span>  

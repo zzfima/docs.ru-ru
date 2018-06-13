@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33482712"
 ---
 # <a name="systemservicemodeltxasyncabort"></a><span data-ttu-id="f3e12-102">System.ServiceModel.TxAsyncAbort</span><span class="sxs-lookup"><span data-stu-id="f3e12-102">System.ServiceModel.TxAsyncAbort</span></span>
 <span data-ttu-id="f3e12-103">Заданная транзакция была асинхронно прервана.</span><span class="sxs-lookup"><span data-stu-id="f3e12-103">The specified transaction was asynchronously aborted.</span></span>  

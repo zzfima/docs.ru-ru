@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33564834"
 ---
 # <a name="code-formatting-guidelines"></a><span data-ttu-id="1a60c-103">Рекомендации по форматированию кода</span><span class="sxs-lookup"><span data-stu-id="1a60c-103">Code Formatting Guidelines</span></span>
 
