@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33488092"
 ---
 # <a name="how-to-retrieve-metadata-over-a-non-mex-binding"></a><span data-ttu-id="63943-102">Как получить метаданные через привязку, не использующую MEX</span><span class="sxs-lookup"><span data-stu-id="63943-102">How to: Retrieve Metadata Over a non-MEX Binding</span></span>
 <span data-ttu-id="63943-103">В этом разделе описывается получение метаданных из конечной точки MEX через привязку, не использующую MEX.</span><span class="sxs-lookup"><span data-stu-id="63943-103">This topic describes how to retrieve metadata from a MEX endpoint over a non-MEX binding.</span></span> <span data-ttu-id="63943-104">Код в этом образце, основан на [конечной точки метаданных защиты пользовательских](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md) образца.</span><span class="sxs-lookup"><span data-stu-id="63943-104">The code in this sample is based on the [Custom Secure Metadata Endpoint](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md) sample.</span></span>  

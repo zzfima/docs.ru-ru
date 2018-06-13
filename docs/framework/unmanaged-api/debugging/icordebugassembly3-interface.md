@@ -6,9 +6,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5042f59b3716d077cc441585004e075b765c0cfb
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33407859"
 ---
 # <a name="icordebugassembly3-interface"></a><span data-ttu-id="52649-102">Интерфейс ICorDebugAssembly3</span><span class="sxs-lookup"><span data-stu-id="52649-102">ICorDebugAssembly3 Interface</span></span>
 <span data-ttu-id="52649-103">Логически расширяет интерфейс ICorDebugAssembly для обеспечения поддержки контейнерных сборок и их вложенных сборок.</span><span class="sxs-lookup"><span data-stu-id="52649-103">Logically extends the ICorDebugAssembly interface to provide support for container assemblies and their contained assemblies.</span></span>  

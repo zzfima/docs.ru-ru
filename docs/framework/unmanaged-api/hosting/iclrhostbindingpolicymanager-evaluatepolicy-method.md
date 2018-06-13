@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9e37d56a321e6529812045e37c4f1929818b38a7
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33433611"
 ---
 # <a name="iclrhostbindingpolicymanagerevaluatepolicy-method"></a><span data-ttu-id="59ff9-102">Метод ICLRHostBindingPolicyManager::EvaluatePolicy</span><span class="sxs-lookup"><span data-stu-id="59ff9-102">ICLRHostBindingPolicyManager::EvaluatePolicy Method</span></span>
 <span data-ttu-id="59ff9-103">Оценивает политику привязки от имени узла.</span><span class="sxs-lookup"><span data-stu-id="59ff9-103">Evaluates binding policy on behalf of the host.</span></span>  

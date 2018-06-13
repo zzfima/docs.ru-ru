@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33484573"
 ---
 # <a name="security-concerns-and-useful-tips-for-tracing"></a><span data-ttu-id="5caff-102">Проблемы безопасности и полезные советы при трассировке</span><span class="sxs-lookup"><span data-stu-id="5caff-102">Security Concerns and Useful Tips for Tracing</span></span>
 <span data-ttu-id="5caff-103">В этом разделе описываются способы защиты конфиденциальных сведений от раскрытия, а также приводятся полезные советы по использованию WebHost.</span><span class="sxs-lookup"><span data-stu-id="5caff-103">This topic describes how you can protect sensitive information from being exposed, as well as useful tips when using WebHost.</span></span>  

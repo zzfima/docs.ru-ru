@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33641093"
 ---
 # <a name="how-to-filter-on-an-attribute-xpath-linq-to-xml-visual-basic"></a><span data-ttu-id="bed20-102">Как: фильтрация по атрибуту (XPath-LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="bed20-102">How to: Filter on an Attribute (XPath-LINQ to XML) (Visual Basic)</span></span>
 <span data-ttu-id="bed20-103">В этом разделе показано, как получать элементы-потомки с указанным именем и атрибут с заданным значением.</span><span class="sxs-lookup"><span data-stu-id="bed20-103">This topic shows how to get the descendant elements with a specified name, and with an attribute with a specified value.</span></span>  

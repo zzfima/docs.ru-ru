@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33409385"
 ---
 # <a name="wsfederation-authentication-module-overview"></a><span data-ttu-id="3047d-102">Обзор модуля аутентификации WSFederation</span><span class="sxs-lookup"><span data-stu-id="3047d-102">WSFederation Authentication Module Overview</span></span>
 <span data-ttu-id="3047d-103">Windows Identity Foundation (WIF) поддерживает федеративную проверку подлинности в приложениях ASP.NET с помощью модуля проверки подлинности WS-Federated (WS-FAM).</span><span class="sxs-lookup"><span data-stu-id="3047d-103">Windows Identity Foundation (WIF) includes support for federated authentication in ASP.NET applications through the WS-Federated Authentication Module (WS-FAM).</span></span> <span data-ttu-id="3047d-104">В этом разделе объясняются принципы работы федеративной проверки подлинности и способы ее применения.</span><span class="sxs-lookup"><span data-stu-id="3047d-104">This topic will help you understand how federated authentication works and how to use it.</span></span>  

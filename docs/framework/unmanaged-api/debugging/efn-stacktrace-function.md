@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 39a249108d10e5dc382775378e2d6b84bba87356
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33408090"
 ---
 # <a name="efnstacktrace-function"></a><span data-ttu-id="cb6be-102">Функция _EFN_StackTrace</span><span class="sxs-lookup"><span data-stu-id="cb6be-102">_EFN_StackTrace Function</span></span>
 <span data-ttu-id="cb6be-103">Предоставляет текстовое представление трассировки управляемого стека и массив записей `CONTEXT`, по одной для каждого перехода между неуправляемым и управляемым кодом.</span><span class="sxs-lookup"><span data-stu-id="cb6be-103">Provides a text representation of a managed stack trace and an array of `CONTEXT` records, one for each transition between unmanaged and managed code.</span></span>  

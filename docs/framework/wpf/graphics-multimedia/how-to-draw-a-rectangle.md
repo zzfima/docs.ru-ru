@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33561050"
 ---
 # <a name="how-to-draw-a-rectangle"></a><span data-ttu-id="de61e-102">Практическое руководство. Рисование прямоугольника</span><span class="sxs-lookup"><span data-stu-id="de61e-102">How to: Draw a Rectangle</span></span>
 <span data-ttu-id="de61e-103">В этом примере показано, как рисование прямоугольника с помощью <xref:System.Windows.Shapes.Rectangle> элемента.</span><span class="sxs-lookup"><span data-stu-id="de61e-103">This example shows how to draw a rectangle by using the <xref:System.Windows.Shapes.Rectangle> element.</span></span>  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33535955"
 ---
 # <a name="using-the-managed-html-document-object-model"></a><span data-ttu-id="72c21-102">Использование управляемой объектной модели HTML-документов</span><span class="sxs-lookup"><span data-stu-id="72c21-102">Using the Managed HTML Document Object Model</span></span>
 <span data-ttu-id="72c21-103">Управляемый HTML модель объектов документов (DOM) обеспечивает оболочку, основанную на [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] для классов HTML, предоставленных Internet Explorer.</span><span class="sxs-lookup"><span data-stu-id="72c21-103">The managed HTML document object model (DOM) provides a wrapper based on the [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] for the HTML classes exposed by Internet Explorer.</span></span> <span data-ttu-id="72c21-104">Эти классы используются для управления HTML-страницами в <xref:System.Windows.Forms.WebBrowser> элемента управления, или для создания новых страниц с начала.</span><span class="sxs-lookup"><span data-stu-id="72c21-104">Use these classes to manipulate HTML pages hosted in the <xref:System.Windows.Forms.WebBrowser> control, or to build new pages from the beginning.</span></span>  

@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 86aa8d3d23d82d51cfe4e6ce6b15b554704ad41c
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33435476"
 ---
 # <a name="isymunmanagedwriter-interface"></a><span data-ttu-id="0cf4b-102">Интерфейс ISymUnmanagedWriter</span><span class="sxs-lookup"><span data-stu-id="0cf4b-102">ISymUnmanagedWriter Interface</span></span>
 <span data-ttu-id="0cf4b-103">Представляет модуль записи символов и предоставляет методы для определения документов, точек следования, лексические области и переменные.</span><span class="sxs-lookup"><span data-stu-id="0cf4b-103">Represents a symbol writer, and provides methods to define documents, sequence points, lexical scopes, and variables.</span></span>  

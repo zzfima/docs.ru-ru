@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33538383"
 ---
 # <a name="printpreviewdialog-control-windows-forms"></a><span data-ttu-id="49dad-102">Элемент управления PrintPreviewDialog (Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="49dad-102">PrintPreviewDialog Control (Windows Forms)</span></span>
 <span data-ttu-id="49dad-103">Элемент управления Windows Forms `PrintPreviewDialog` является стандартным диалоговым окном, используемым для отображения документа в том виде, как он будет напечатан.</span><span class="sxs-lookup"><span data-stu-id="49dad-103">The Windows Forms `PrintPreviewDialog` control is a pre-configured dialog box used to display how a document will appear when printed.</span></span> <span data-ttu-id="49dad-104">Он используется в приложении Windows в качестве простого решения вместо настройки собственного диалогового окна.</span><span class="sxs-lookup"><span data-stu-id="49dad-104">Use it within your Windows-based application as a simple solution in lieu of configuring your own dialog box.</span></span> <span data-ttu-id="49dad-105">Элемент управления содержит кнопки для печати, увеличения масштаба, отображения одной или нескольких страниц и закрытия диалогового окна.</span><span class="sxs-lookup"><span data-stu-id="49dad-105">The control contains buttons for printing, zooming in, displaying one or multiple pages, and closing the dialog box.</span></span>  

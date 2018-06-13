@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 8cacc96d66d5d4eb46c08c93d9c2793282627539
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33438237"
 ---
 # <a name="iclrtask2endpreventasyncabort-method"></a><span data-ttu-id="8d2f6-102">Метод ICLRTask2::EndPreventAsyncAbort</span><span class="sxs-lookup"><span data-stu-id="8d2f6-102">ICLRTask2::EndPreventAsyncAbort Method</span></span>
 <span data-ttu-id="8d2f6-103">Позволяет новым или ожидающим запросам прерывания потока в результате поток прерывает выполнение в текущем потоке.</span><span class="sxs-lookup"><span data-stu-id="8d2f6-103">Allows new or pending thread abort requests to result in thread aborts on the current thread.</span></span>  

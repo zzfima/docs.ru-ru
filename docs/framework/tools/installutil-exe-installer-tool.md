@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33410151"
 ---
 # <a name="installutilexe-installer-tool"></a><span data-ttu-id="d9b15-102">Installutil.exe (инструмент для установки)</span><span class="sxs-lookup"><span data-stu-id="d9b15-102">Installutil.exe (Installer Tool)</span></span>
 <span data-ttu-id="d9b15-103">Программа для установки является программой командной строки, с помощью которой можно устанавливать и удалять ресурсы сервера путем выполнения компонентов установщика в соответствующих сборках.</span><span class="sxs-lookup"><span data-stu-id="d9b15-103">The Installer tool is a command-line utility that allows you to install and uninstall server resources by executing the installer components in specified assemblies.</span></span> <span data-ttu-id="d9b15-104">Эта программа работает совместно с классами в пространстве имен <xref:System.Configuration.Install>.</span><span class="sxs-lookup"><span data-stu-id="d9b15-104">This tool works in conjunction with classes in the <xref:System.Configuration.Install> namespace.</span></span>  

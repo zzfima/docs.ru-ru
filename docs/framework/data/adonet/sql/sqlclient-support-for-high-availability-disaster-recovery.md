@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365713"
 ---
 # <a name="sqlclient-support-for-high-availability-disaster-recovery"></a><span data-ttu-id="a83c7-102">Поддержка SqlClient для высокого уровня доступности, аварийного восстановления</span><span class="sxs-lookup"><span data-stu-id="a83c7-102">SqlClient Support for High Availability, Disaster Recovery</span></span>
 <span data-ttu-id="a83c7-103">В данном разделе рассматривается поддержка групп доступности AlwaysOn (высокая доступность, аварийное восстановление) в SqlClient, которая появилась в [!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)].</span><span class="sxs-lookup"><span data-stu-id="a83c7-103">This topic discusses SqlClient support (added in [!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)]) for high-availability, disaster recovery -- AlwaysOn Availability Groups.</span></span>  <span data-ttu-id="a83c7-104">Группы доступности AlwaysOn появились в SQL Server 2012.</span><span class="sxs-lookup"><span data-stu-id="a83c7-104">AlwaysOn Availability Groups feature was added to SQL Server 2012.</span></span> <span data-ttu-id="a83c7-105">Дополнительные сведения о группах доступности AlwaysOn см. в разделе электронной документации по SQL Server.</span><span class="sxs-lookup"><span data-stu-id="a83c7-105">For more information about AlwaysOn Availability Groups, see SQL Server Books Online.</span></span>  

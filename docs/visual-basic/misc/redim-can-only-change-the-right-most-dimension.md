@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33641187"
 ---
 # <a name="39redim39-can-only-change-the-right-most-dimension"></a><span data-ttu-id="86c80-102">&#39;Оператор reDim&#39; можно изменять только крайнее правое измерение</span><span class="sxs-lookup"><span data-stu-id="86c80-102">&#39;ReDim&#39; can only change the right-most dimension</span></span>
 <span data-ttu-id="86c80-103">В операторе `ReDim` ключевое слово `Preserve` используется для изменения измерения массива, которое не является его последним измерением.</span><span class="sxs-lookup"><span data-stu-id="86c80-103">A `ReDim` statement attempted to use the `Preserve` keyword to change a dimension of an array that is not the last dimension.</span></span> <span data-ttu-id="86c80-104">При использовании `Preserve`можно изменять размер только последнего измерения массива.</span><span class="sxs-lookup"><span data-stu-id="86c80-104">When using `Preserve`, you can resize only the last dimension of an array.</span></span> <span data-ttu-id="86c80-105">Для всех других измерений необходимо указать тот же размер, что и для существующего массива.</span><span class="sxs-lookup"><span data-stu-id="86c80-105">For all other dimensions, you must specify the same size as for the existing array.</span></span>  

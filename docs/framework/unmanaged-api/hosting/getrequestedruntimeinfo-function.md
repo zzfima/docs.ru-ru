@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9f37be8e3d2e92147e9f13954ab64396062ade2d
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33434985"
 ---
 # <a name="getrequestedruntimeinfo-function"></a><span data-ttu-id="1c1c7-102">Функция GetRequestedRuntimeInfo</span><span class="sxs-lookup"><span data-stu-id="1c1c7-102">GetRequestedRuntimeInfo Function</span></span>
 <span data-ttu-id="1c1c7-103">Получает сведения о версии и каталоге о общеязыковой среды выполнения (CLR), запрошенный приложением.</span><span class="sxs-lookup"><span data-stu-id="1c1c7-103">Gets version and directory information about the common language runtime (CLR) requested by an application.</span></span>  

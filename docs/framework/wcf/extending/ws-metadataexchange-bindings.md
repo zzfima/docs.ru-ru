@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33488628"
 ---
 # <a name="ws-metadataexchange-bindings"></a><span data-ttu-id="33b3c-102">Привязки WS-MetadataExchange</span><span class="sxs-lookup"><span data-stu-id="33b3c-102">WS-MetadataExchange Bindings</span></span>
 <span data-ttu-id="33b3c-103">В этом разделе описано, как создавать привязки обмена метаданными по умолчанию для различных транспортов.</span><span class="sxs-lookup"><span data-stu-id="33b3c-103">This topic describes how the default metadata exchange bindings are constructed for various transports.</span></span>  

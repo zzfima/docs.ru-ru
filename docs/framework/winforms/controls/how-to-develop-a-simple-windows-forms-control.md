@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33539670"
 ---
 # <a name="how-to-develop-a-simple-windows-forms-control"></a><span data-ttu-id="990b5-102">Руководство: Разработка простого элемента управления форм Windows Forms</span><span class="sxs-lookup"><span data-stu-id="990b5-102">How to: Develop a Simple Windows Forms Control</span></span>
 <span data-ttu-id="990b5-103">В этом разделе рассматриваются основные этапы создания пользовательского элемента управления Windows Forms.</span><span class="sxs-lookup"><span data-stu-id="990b5-103">This section walks you through the key steps for authoring a custom Windows Forms control.</span></span> <span data-ttu-id="990b5-104">Простой элемент управления, разработанный в этом примере разрешает выравнивание его <xref:System.Windows.Forms.Control.Text%2A> значение изменяемого свойства.</span><span class="sxs-lookup"><span data-stu-id="990b5-104">The simple control developed in this walkthrough allows the alignment of its <xref:System.Windows.Forms.Control.Text%2A> property to be changed.</span></span> <span data-ttu-id="990b5-105">Он не вызывает и не обрабатывает события.</span><span class="sxs-lookup"><span data-stu-id="990b5-105">It does not raise or handle events.</span></span>  

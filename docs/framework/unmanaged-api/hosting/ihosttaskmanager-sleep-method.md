@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 648d705f21b23feb740e1791c8f32a707b985df2
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33442667"
 ---
 # <a name="ihosttaskmanagersleep-method"></a><span data-ttu-id="077c8-102">Метод IHostTaskManager::Sleep</span><span class="sxs-lookup"><span data-stu-id="077c8-102">IHostTaskManager::Sleep Method</span></span>
 <span data-ttu-id="077c8-103">Уведомляет основное приложение, текущая задача будет в спящий режим.</span><span class="sxs-lookup"><span data-stu-id="077c8-103">Notifies the host that the current task is going to sleep.</span></span>  

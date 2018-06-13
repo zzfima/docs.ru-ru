@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 36e4f07f04968579be2e42efad666b0453cc4796
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33434795"
 ---
 # <a name="iclrstrongnamegethashfromassemblyfilew-method"></a><span data-ttu-id="431c9-102">Метод ICLRStrongName::GetHashFromAssemblyFileW</span><span class="sxs-lookup"><span data-stu-id="431c9-102">ICLRStrongName::GetHashFromAssemblyFileW Method</span></span>
 <span data-ttu-id="431c9-103">Создает хэш содержимого файла, заданный строкой в Юникоде.</span><span class="sxs-lookup"><span data-stu-id="431c9-103">Generates a hash over the contents of the file specified by a Unicode string.</span></span>  

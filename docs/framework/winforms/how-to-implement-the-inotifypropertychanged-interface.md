@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33536416"
 ---
 # <a name="how-to-implement-the-inotifypropertychanged-interface"></a><span data-ttu-id="6b148-102">Практическое руководство. Реализация интерфейса INotifyPropertyChanged</span><span class="sxs-lookup"><span data-stu-id="6b148-102">How to: Implement the INotifyPropertyChanged Interface</span></span>
 <span data-ttu-id="6b148-103">В следующем примере кода показано, как реализовать <xref:System.ComponentModel.INotifyPropertyChanged> интерфейса.</span><span class="sxs-lookup"><span data-stu-id="6b148-103">The following code example demonstrates how to implement the <xref:System.ComponentModel.INotifyPropertyChanged> interface.</span></span> <span data-ttu-id="6b148-104">Реализуйте этот интерфейс бизнес-объекты, которые используются в процессе привязки данных Windows Forms.</span><span class="sxs-lookup"><span data-stu-id="6b148-104">Implement this interface on business objects that are used in Windows Forms data binding.</span></span> <span data-ttu-id="6b148-105">При реализации этот интерфейс сообщает связанному элементу управления об изменениях свойств бизнес-объекта.</span><span class="sxs-lookup"><span data-stu-id="6b148-105">When implemented, the interface  communicates to a bound control the property changes on a business object.</span></span>  

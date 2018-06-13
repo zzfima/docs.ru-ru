@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33638718"
 ---
 # <a name="object-doesn39t-support-this-property-or-method-visual-basic"></a><span data-ttu-id="cfe17-102">Объект&#39;t поддерживает это свойство или метод (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="cfe17-102">Object doesn&#39;t support this property or method (Visual Basic)</span></span>
 <span data-ttu-id="cfe17-103">Вы указали свойство или метод, не существующие для данного объекта автоматизации.</span><span class="sxs-lookup"><span data-stu-id="cfe17-103">You specified a method or property that does not exist for this automation object.</span></span>  

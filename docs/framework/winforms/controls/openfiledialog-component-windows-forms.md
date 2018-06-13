@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33539956"
 ---
 # <a name="openfiledialog-component-windows-forms"></a><span data-ttu-id="15c08-102">Компонент OpenFileDialog (Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="15c08-102">OpenFileDialog Component (Windows Forms)</span></span>
 <span data-ttu-id="15c08-103">Компонент Windows Forms <xref:System.Windows.Forms.OpenFileDialog> является стандартным диалоговым окном.</span><span class="sxs-lookup"><span data-stu-id="15c08-103">The Windows Forms <xref:System.Windows.Forms.OpenFileDialog> component is a pre-configured dialog box.</span></span> <span data-ttu-id="15c08-104">Он аналогичен **открыть файл** диалоговому операционной системы Windows.</span><span class="sxs-lookup"><span data-stu-id="15c08-104">It is the same **Open File** dialog box exposed by the Windows operating system.</span></span> <span data-ttu-id="15c08-105">Он наследуется от класса <xref:System.Windows.Forms.CommonDialog>.</span><span class="sxs-lookup"><span data-stu-id="15c08-105">It inherits from the <xref:System.Windows.Forms.CommonDialog> class.</span></span>  

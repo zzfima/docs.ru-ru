@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33364507"
 ---
 # <a name="group-elements-in-a-sequence"></a><span data-ttu-id="46b44-102">Группировка элементов последовательности</span><span class="sxs-lookup"><span data-stu-id="46b44-102">Group Elements in a Sequence</span></span>
 <span data-ttu-id="46b44-103">Оператор <xref:System.Linq.Enumerable.GroupBy%2A> группирует элементы последовательности.</span><span class="sxs-lookup"><span data-stu-id="46b44-103">The <xref:System.Linq.Enumerable.GroupBy%2A> operator groups the elements of a sequence.</span></span> <span data-ttu-id="46b44-104">В следующем примере используется база данных Northwind.</span><span class="sxs-lookup"><span data-stu-id="46b44-104">The following examples use the Northwind database.</span></span>  

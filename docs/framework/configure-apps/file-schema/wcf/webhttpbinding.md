@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365544"
 ---
 # <a name="ltwebhttpbindinggt"></a><span data-ttu-id="46318-102">&lt;webHttpBinding&gt;</span><span class="sxs-lookup"><span data-stu-id="46318-102">&lt;webHttpBinding&gt;</span></span>
 <span data-ttu-id="46318-103">Определяет элемент привязки, который используется для настройки конечных точек для веб-службы Windows Communication Foundation (WCF) служб, которые отвечают на запросы HTTP вместо сообщений протокола SOAP.</span><span class="sxs-lookup"><span data-stu-id="46318-103">Defines a binding element that is used to configure endpoints for Windows Communication Foundation (WCF) Web services that respond to HTTP requests instead of SOAP messages.</span></span>  

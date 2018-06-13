@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33361288"
 ---
 # <a name="managing-permissions-with-stored-procedures-in-sql-server"></a><span data-ttu-id="f6b22-102">Управление разрешениями с использованием хранимых процедур в SQL Server</span><span class="sxs-lookup"><span data-stu-id="f6b22-102">Managing Permissions with Stored Procedures in SQL Server</span></span>
 <span data-ttu-id="f6b22-103">Одним из методов создания нескольких линий защиты для базы данных является реализация доступа ко всем данным с помощью хранимых процедур или определяемых пользователем функций.</span><span class="sxs-lookup"><span data-stu-id="f6b22-103">One method of creating multiple lines of defense around your database is to implement all data access using stored procedures or user-defined functions.</span></span> <span data-ttu-id="f6b22-104">Отменяются или запрещаются разрешения на все базовые объекты (например, таблицы), на хранимые процедуры предоставляются разрешения EXECUTE.</span><span class="sxs-lookup"><span data-stu-id="f6b22-104">You revoke or deny all permissions to underlying objects, such as tables, and grant EXECUTE permissions on stored procedures.</span></span> <span data-ttu-id="f6b22-105">Тем самым создается эффективный периметр безопасности вокруг данных и объектов базы данных.</span><span class="sxs-lookup"><span data-stu-id="f6b22-105">This effectively creates a security perimeter around your data and database objects.</span></span>  

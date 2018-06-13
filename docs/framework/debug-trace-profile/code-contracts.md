@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365882"
 ---
 # <a name="code-contracts"></a><span data-ttu-id="392c2-102">Контракты для кода</span><span class="sxs-lookup"><span data-stu-id="392c2-102">Code Contracts</span></span>
 <span data-ttu-id="392c2-103">Контракты для кода предоставляют способ указания предусловий, постусловий и инвариантов объектов в коде.</span><span class="sxs-lookup"><span data-stu-id="392c2-103">Code contracts provide a way to specify preconditions, postconditions, and object invariants in your code.</span></span> <span data-ttu-id="392c2-104">Предусловия — это требования, которые должны быть выполнены при входе в метод или свойство.</span><span class="sxs-lookup"><span data-stu-id="392c2-104">Preconditions are requirements that must be met when entering a method or property.</span></span> <span data-ttu-id="392c2-105">Постусловия описывают ожидания во время выхода из кода метода или свойства.</span><span class="sxs-lookup"><span data-stu-id="392c2-105">Postconditions describe expectations at the time the method or property code exits.</span></span> <span data-ttu-id="392c2-106">Инварианты объектов описывают ожидаемое состояние класса, который находится в рабочем состоянии.</span><span class="sxs-lookup"><span data-stu-id="392c2-106">Object invariants describe the expected state for a class that is in a good state.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33364828"
 ---
 # <a name="troubleshooting"></a><span data-ttu-id="3ad0a-102">Устранение неполадок</span><span class="sxs-lookup"><span data-stu-id="3ad0a-102">Troubleshooting</span></span>
 <span data-ttu-id="3ad0a-103">В данном материале представлен ряд проблем, которые могут возникнуть в приложениях [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], и даны рекомендации, как их избежать или, по крайней мере, снизить их негативное влияние.</span><span class="sxs-lookup"><span data-stu-id="3ad0a-103">The following information exposes some issues you might encounter in your [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] applications, and provides suggestions to avoid or otherwise reduce the effect of these issues.</span></span>  

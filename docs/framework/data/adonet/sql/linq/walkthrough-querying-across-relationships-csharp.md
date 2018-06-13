@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33364422"
 ---
 # <a name="walkthrough-querying-across-relationships-c"></a><span data-ttu-id="34f99-102">Пошаговое руководство. Запросы по связям (C#)</span><span class="sxs-lookup"><span data-stu-id="34f99-102">Walkthrough: Querying Across Relationships (C#)</span></span>
 <span data-ttu-id="34f99-103">В этом пошаговом руководстве демонстрируется использование [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] *ассоциации* для представления связей внешних ключей в базе данных.</span><span class="sxs-lookup"><span data-stu-id="34f99-103">This walkthrough demonstrates the use of [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] *associations* to represent foreign-key relationships in the database.</span></span>  

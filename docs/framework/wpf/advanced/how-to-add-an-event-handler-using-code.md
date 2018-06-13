@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33542627"
 ---
 # <a name="how-to-add-an-event-handler-using-code"></a><span data-ttu-id="4edf8-102">Практическое руководство. Добавление обработчика событий с помощью кода</span><span class="sxs-lookup"><span data-stu-id="4edf8-102">How to: Add an Event Handler Using Code</span></span>
 <span data-ttu-id="4edf8-103">В этом примере показано, как добавить обработчик событий к элементу с помощью кода.</span><span class="sxs-lookup"><span data-stu-id="4edf8-103">This example shows how to add an event handler to an element by using code.</span></span>  

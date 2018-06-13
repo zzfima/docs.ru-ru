@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33364981"
 ---
 # <a name="transaction-support"></a><span data-ttu-id="91196-102">Поддержка транзакций</span><span class="sxs-lookup"><span data-stu-id="91196-102">Transaction Support</span></span>
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]<span data-ttu-id="91196-103"> поддерживает три различные модели транзакций.</span><span class="sxs-lookup"><span data-stu-id="91196-103"> supports three distinct transaction models.</span></span> <span data-ttu-id="91196-104">Далее представлен список этих моделей в порядке выполненных проверок.</span><span class="sxs-lookup"><span data-stu-id="91196-104">The following lists these models in the order of checks performed.</span></span>  

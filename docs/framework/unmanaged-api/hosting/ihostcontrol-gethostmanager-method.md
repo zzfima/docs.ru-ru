@@ -1,14 +1,6 @@
 ---
-title: "Метод IHostControl::GetHostManager"
-ms.custom: 
+title: Метод IHostControl::GetHostManager
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IHostControl.GetHostManager
 api_location:
@@ -23,22 +15,19 @@ helpviewer_keywords:
 ms.assetid: 0fa34bca-ed18-4626-9e78-d33684d18edb
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 6701350fa9bdb51843b117b0191b677e739807a3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 355d2e259adb13da44b09e19872337c17ac20ade
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33439326"
 ---
-# <a name="ihostcontrolgethostmanager-method"></a><span data-ttu-id="f55f9-102">Метод IHostControl::GetHostManager</span><span class="sxs-lookup"><span data-stu-id="f55f9-102">IHostControl::GetHostManager Method</span></span>
-<span data-ttu-id="f55f9-103">Возвращает указатель на интерфейс для реализации интерфейса с заданным `IID`.</span><span class="sxs-lookup"><span data-stu-id="f55f9-103">Gets an interface pointer to the host's implementation of the interface with the specified `IID`.</span></span>  
+# <a name="ihostcontrolgethostmanager-method"></a><span data-ttu-id="a4856-102">Метод IHostControl::GetHostManager</span><span class="sxs-lookup"><span data-stu-id="a4856-102">IHostControl::GetHostManager Method</span></span>
+<span data-ttu-id="a4856-103">Возвращает указатель на интерфейс для реализации интерфейса с заданным `IID`.</span><span class="sxs-lookup"><span data-stu-id="a4856-103">Gets an interface pointer to the host's implementation of the interface with the specified `IID`.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f55f9-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="f55f9-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="a4856-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="a4856-104">Syntax</span></span>  
   
 ```  
 HRESULT GetHostManager (  
@@ -47,59 +36,59 @@ HRESULT GetHostManager (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="f55f9-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="f55f9-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="a4856-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="a4856-105">Parameters</span></span>  
  `riid`  
- <span data-ttu-id="f55f9-106">[in] `IID` Интерфейса, который запрашивает общеязыковой среды выполнения (CLR).</span><span class="sxs-lookup"><span data-stu-id="f55f9-106">[in] The `IID` of the interface that the common language runtime (CLR) is querying for.</span></span>  
+ <span data-ttu-id="a4856-106">[in] `IID` Интерфейса, который запрашивает общеязыковой среды выполнения (CLR).</span><span class="sxs-lookup"><span data-stu-id="a4856-106">[in] The `IID` of the interface that the common language runtime (CLR) is querying for.</span></span>  
   
  `ppObject`  
- <span data-ttu-id="f55f9-107">[out] Указатель интерфейса, реализуемого узла или значение null, если узел не поддерживает этот интерфейс.</span><span class="sxs-lookup"><span data-stu-id="f55f9-107">[out] A pointer to the host-implemented interface, or null if the host does not support this interface.</span></span>  
+ <span data-ttu-id="a4856-107">[out] Указатель интерфейса, реализуемого узла или значение null, если узел не поддерживает этот интерфейс.</span><span class="sxs-lookup"><span data-stu-id="a4856-107">[out] A pointer to the host-implemented interface, or null if the host does not support this interface.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="f55f9-108">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="f55f9-108">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="a4856-108">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="a4856-108">Return Value</span></span>  
   
-|<span data-ttu-id="f55f9-109">HRESULT</span><span class="sxs-lookup"><span data-stu-id="f55f9-109">HRESULT</span></span>|<span data-ttu-id="f55f9-110">Описание</span><span class="sxs-lookup"><span data-stu-id="f55f9-110">Description</span></span>|  
+|<span data-ttu-id="a4856-109">HRESULT</span><span class="sxs-lookup"><span data-stu-id="a4856-109">HRESULT</span></span>|<span data-ttu-id="a4856-110">Описание</span><span class="sxs-lookup"><span data-stu-id="a4856-110">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="f55f9-111">S_OK</span><span class="sxs-lookup"><span data-stu-id="f55f9-111">S_OK</span></span>|<span data-ttu-id="f55f9-112">`GetHostManager`успешно возвращен.</span><span class="sxs-lookup"><span data-stu-id="f55f9-112">`GetHostManager` returned successfully.</span></span>|  
-|<span data-ttu-id="f55f9-113">ЗНАЧЕНИЕ HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="f55f9-113">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="f55f9-114">Среда CLR не загружена в процесс или находится в состоянии, в котором не может выполнять управляемый код или успешно обработать вызов.</span><span class="sxs-lookup"><span data-stu-id="f55f9-114">The CLR has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
-|<span data-ttu-id="f55f9-115">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="f55f9-115">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="f55f9-116">Истекло время ожидания вызова.</span><span class="sxs-lookup"><span data-stu-id="f55f9-116">The call timed out.</span></span>|  
-|<span data-ttu-id="f55f9-117">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="f55f9-117">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="f55f9-118">Вызывающий объект не является владельцем блокировки.</span><span class="sxs-lookup"><span data-stu-id="f55f9-118">The caller does not own the lock.</span></span>|  
-|<span data-ttu-id="f55f9-119">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="f55f9-119">HOST_E_ABANDONED</span></span>|<span data-ttu-id="f55f9-120">Событие было отменено заблокированный поток или ожидал волокон.</span><span class="sxs-lookup"><span data-stu-id="f55f9-120">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
-|<span data-ttu-id="f55f9-121">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="f55f9-121">E_FAIL</span></span>|<span data-ttu-id="f55f9-122">Неизвестная Неустранимая ошибка.</span><span class="sxs-lookup"><span data-stu-id="f55f9-122">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="f55f9-123">Если метод вернет значение E_FAIL, среда CLR больше не может использоваться в процессе.</span><span class="sxs-lookup"><span data-stu-id="f55f9-123">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="f55f9-124">Последующие вызовы размещение методы возвращают значение HOST_E_CLRNOTAVAILABLE.</span><span class="sxs-lookup"><span data-stu-id="f55f9-124">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
-|<span data-ttu-id="f55f9-125">E_INVALIDARG</span><span class="sxs-lookup"><span data-stu-id="f55f9-125">E_INVALIDARG</span></span>|<span data-ttu-id="f55f9-126">Запрошенный `IID` является недопустимым.</span><span class="sxs-lookup"><span data-stu-id="f55f9-126">The requested `IID` is not valid.</span></span>|  
-|<span data-ttu-id="f55f9-127">E_NOINTERFACE</span><span class="sxs-lookup"><span data-stu-id="f55f9-127">E_NOINTERFACE</span></span>|<span data-ttu-id="f55f9-128">Требуемый интерфейс не поддерживается.</span><span class="sxs-lookup"><span data-stu-id="f55f9-128">The requested interface is not supported.</span></span>|  
+|<span data-ttu-id="a4856-111">S_OK</span><span class="sxs-lookup"><span data-stu-id="a4856-111">S_OK</span></span>|<span data-ttu-id="a4856-112">`GetHostManager` успешно возвращен.</span><span class="sxs-lookup"><span data-stu-id="a4856-112">`GetHostManager` returned successfully.</span></span>|  
+|<span data-ttu-id="a4856-113">ЗНАЧЕНИЕ HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="a4856-113">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="a4856-114">Среда CLR не загружена в процесс или находится в состоянии, в котором не может выполнять управляемый код или успешно обработать вызов.</span><span class="sxs-lookup"><span data-stu-id="a4856-114">The CLR has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
+|<span data-ttu-id="a4856-115">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="a4856-115">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="a4856-116">Истекло время ожидания вызова.</span><span class="sxs-lookup"><span data-stu-id="a4856-116">The call timed out.</span></span>|  
+|<span data-ttu-id="a4856-117">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="a4856-117">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="a4856-118">Вызывающий объект не является владельцем блокировки.</span><span class="sxs-lookup"><span data-stu-id="a4856-118">The caller does not own the lock.</span></span>|  
+|<span data-ttu-id="a4856-119">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="a4856-119">HOST_E_ABANDONED</span></span>|<span data-ttu-id="a4856-120">Событие было отменено заблокированный поток или ожидал волокон.</span><span class="sxs-lookup"><span data-stu-id="a4856-120">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
+|<span data-ttu-id="a4856-121">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="a4856-121">E_FAIL</span></span>|<span data-ttu-id="a4856-122">Неизвестная Неустранимая ошибка.</span><span class="sxs-lookup"><span data-stu-id="a4856-122">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="a4856-123">Если метод вернет значение E_FAIL, среда CLR больше не может использоваться в процессе.</span><span class="sxs-lookup"><span data-stu-id="a4856-123">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="a4856-124">Последующие вызовы размещение методы возвращают значение HOST_E_CLRNOTAVAILABLE.</span><span class="sxs-lookup"><span data-stu-id="a4856-124">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="a4856-125">E_INVALIDARG</span><span class="sxs-lookup"><span data-stu-id="a4856-125">E_INVALIDARG</span></span>|<span data-ttu-id="a4856-126">Запрошенный `IID` является недопустимым.</span><span class="sxs-lookup"><span data-stu-id="a4856-126">The requested `IID` is not valid.</span></span>|  
+|<span data-ttu-id="a4856-127">E_NOINTERFACE</span><span class="sxs-lookup"><span data-stu-id="a4856-127">E_NOINTERFACE</span></span>|<span data-ttu-id="a4856-128">Требуемый интерфейс не поддерживается.</span><span class="sxs-lookup"><span data-stu-id="a4856-128">The requested interface is not supported.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="f55f9-129">Примечания</span><span class="sxs-lookup"><span data-stu-id="f55f9-129">Remarks</span></span>  
- <span data-ttu-id="f55f9-130">Среда CLR запрашивает узлу возможность определить, поддерживает ли один или несколько из следующих интерфейсов:</span><span class="sxs-lookup"><span data-stu-id="f55f9-130">The CLR queries the host to determine whether it supports one or more of the following interfaces:</span></span>  
+## <a name="remarks"></a><span data-ttu-id="a4856-129">Примечания</span><span class="sxs-lookup"><span data-stu-id="a4856-129">Remarks</span></span>  
+ <span data-ttu-id="a4856-130">Среда CLR запрашивает узлу возможность определить, поддерживает ли один или несколько из следующих интерфейсов:</span><span class="sxs-lookup"><span data-stu-id="a4856-130">The CLR queries the host to determine whether it supports one or more of the following interfaces:</span></span>  
   
--   [<span data-ttu-id="f55f9-131">IHostMemoryManager</span><span class="sxs-lookup"><span data-stu-id="f55f9-131">IHostMemoryManager</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-interface.md)  
+-   [<span data-ttu-id="a4856-131">IHostMemoryManager</span><span class="sxs-lookup"><span data-stu-id="a4856-131">IHostMemoryManager</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-interface.md)  
   
--   [<span data-ttu-id="f55f9-132">IHostTaskManager</span><span class="sxs-lookup"><span data-stu-id="f55f9-132">IHostTaskManager</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-interface.md)  
+-   [<span data-ttu-id="a4856-132">IHostTaskManager</span><span class="sxs-lookup"><span data-stu-id="a4856-132">IHostTaskManager</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-interface.md)  
   
--   [<span data-ttu-id="f55f9-133">IHostThreadPoolManager</span><span class="sxs-lookup"><span data-stu-id="f55f9-133">IHostThreadPoolManager</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostthreadpoolmanager-interface.md)  
+-   [<span data-ttu-id="a4856-133">IHostThreadPoolManager</span><span class="sxs-lookup"><span data-stu-id="a4856-133">IHostThreadPoolManager</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostthreadpoolmanager-interface.md)  
   
--   [<span data-ttu-id="f55f9-134">IHostIoCompletionManager</span><span class="sxs-lookup"><span data-stu-id="f55f9-134">IHostIoCompletionManager</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-interface.md)  
+-   [<span data-ttu-id="a4856-134">IHostIoCompletionManager</span><span class="sxs-lookup"><span data-stu-id="a4856-134">IHostIoCompletionManager</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-interface.md)  
   
--   [<span data-ttu-id="f55f9-135">IHostSyncManager</span><span class="sxs-lookup"><span data-stu-id="f55f9-135">IHostSyncManager</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-interface.md)  
+-   [<span data-ttu-id="a4856-135">IHostSyncManager</span><span class="sxs-lookup"><span data-stu-id="a4856-135">IHostSyncManager</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-interface.md)  
   
--   [<span data-ttu-id="f55f9-136">IHostAssemblyManager</span><span class="sxs-lookup"><span data-stu-id="f55f9-136">IHostAssemblyManager</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostassemblymanager-interface.md)  
+-   [<span data-ttu-id="a4856-136">IHostAssemblyManager</span><span class="sxs-lookup"><span data-stu-id="a4856-136">IHostAssemblyManager</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostassemblymanager-interface.md)  
   
--   [<span data-ttu-id="f55f9-137">IHostGCManager</span><span class="sxs-lookup"><span data-stu-id="f55f9-137">IHostGCManager</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostgcmanager-interface.md)  
+-   [<span data-ttu-id="a4856-137">IHostGCManager</span><span class="sxs-lookup"><span data-stu-id="a4856-137">IHostGCManager</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostgcmanager-interface.md)  
   
--   [<span data-ttu-id="f55f9-138">IHostPolicyManager</span><span class="sxs-lookup"><span data-stu-id="f55f9-138">IHostPolicyManager</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostpolicymanager-interface.md)  
+-   [<span data-ttu-id="a4856-138">IHostPolicyManager</span><span class="sxs-lookup"><span data-stu-id="a4856-138">IHostPolicyManager</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostpolicymanager-interface.md)  
   
--   [<span data-ttu-id="f55f9-139">IHostSecurityManager</span><span class="sxs-lookup"><span data-stu-id="f55f9-139">IHostSecurityManager</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritymanager-interface.md)  
+-   [<span data-ttu-id="a4856-139">IHostSecurityManager</span><span class="sxs-lookup"><span data-stu-id="a4856-139">IHostSecurityManager</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritymanager-interface.md)  
   
- <span data-ttu-id="f55f9-140">Если узел поддерживает указанный интерфейс, он задает `ppObject` на свою реализацию этого интерфейса.</span><span class="sxs-lookup"><span data-stu-id="f55f9-140">If the host supports the specified interface, it sets `ppObject` to its implementation of that interface.</span></span> <span data-ttu-id="f55f9-141">В противном случае он устанавливает `ppObject` значение null.</span><span class="sxs-lookup"><span data-stu-id="f55f9-141">Otherwise, it sets `ppObject` to null.</span></span>  
+ <span data-ttu-id="a4856-140">Если узел поддерживает указанный интерфейс, он задает `ppObject` на свою реализацию этого интерфейса.</span><span class="sxs-lookup"><span data-stu-id="a4856-140">If the host supports the specified interface, it sets `ppObject` to its implementation of that interface.</span></span> <span data-ttu-id="a4856-141">В противном случае он устанавливает `ppObject` значение null.</span><span class="sxs-lookup"><span data-stu-id="a4856-141">Otherwise, it sets `ppObject` to null.</span></span>  
   
- <span data-ttu-id="f55f9-142">Среда CLR не вызывает `Release` на узле диспетчеров, даже в том случае, если выполняется завершение работы.</span><span class="sxs-lookup"><span data-stu-id="f55f9-142">The CLR does not call `Release` on host managers, even when you shut it down.</span></span>  
+ <span data-ttu-id="a4856-142">Среда CLR не вызывает `Release` на узле диспетчеров, даже в том случае, если выполняется завершение работы.</span><span class="sxs-lookup"><span data-stu-id="a4856-142">The CLR does not call `Release` on host managers, even when you shut it down.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="f55f9-143">Требования</span><span class="sxs-lookup"><span data-stu-id="f55f9-143">Requirements</span></span>  
- <span data-ttu-id="f55f9-144">**Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="f55f9-144">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="a4856-143">Требования</span><span class="sxs-lookup"><span data-stu-id="a4856-143">Requirements</span></span>  
+ <span data-ttu-id="a4856-144">**Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="a4856-144">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="f55f9-145">**Заголовок:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="f55f9-145">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="a4856-145">**Заголовок:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="a4856-145">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="f55f9-146">**Библиотека:** включена как ресурс в MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="f55f9-146">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="a4856-146">**Библиотека:** включена как ресурс в MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="a4856-146">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="f55f9-147">**Версии платформы .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f55f9-147">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="a4856-147">**Версии платформы .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a4856-147">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f55f9-148">См. также</span><span class="sxs-lookup"><span data-stu-id="f55f9-148">See Also</span></span>  
- [<span data-ttu-id="f55f9-149">Интерфейс IHostControl</span><span class="sxs-lookup"><span data-stu-id="f55f9-149">IHostControl Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostcontrol-interface.md)
+## <a name="see-also"></a><span data-ttu-id="a4856-148">См. также</span><span class="sxs-lookup"><span data-stu-id="a4856-148">See Also</span></span>  
+ [<span data-ttu-id="a4856-149">Интерфейс IHostControl</span><span class="sxs-lookup"><span data-stu-id="a4856-149">IHostControl Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostcontrol-interface.md)

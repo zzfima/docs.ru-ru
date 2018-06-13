@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33489115"
 ---
 # <a name="authentication-in-wcf"></a><span data-ttu-id="637c8-102">Аутентификация в WCF</span><span class="sxs-lookup"><span data-stu-id="637c8-102">Authentication in WCF</span></span>
 <span data-ttu-id="637c8-103">В следующих разделах содержатся несколько различных механизмов Windows Communication Foundation (WCF), проверки подлинности, например, проверку подлинности Windows, сертификаты X.509, имя пользователя и пароли.</span><span class="sxs-lookup"><span data-stu-id="637c8-103">The following topics show a number of different mechanisms in Windows Communication Foundation (WCF) that provide authentication, for example, Windows authentication, X.509 certificates, and user name and passwords.</span></span>  

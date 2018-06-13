@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365531"
 ---
 # <a name="sql-clr-type-mapping"></a><span data-ttu-id="e635a-102">Сопоставление типов SQL-CLR</span><span class="sxs-lookup"><span data-stu-id="e635a-102">SQL-CLR Type Mapping</span></span>
 <span data-ttu-id="e635a-103">В LINQ to SQL модель данных реляционной базы данных сопоставляется с моделью объектов, выраженной на выбранном языке программирования.</span><span class="sxs-lookup"><span data-stu-id="e635a-103">In LINQ to SQL, the data model of a relational database maps to an object model that is expressed in the programming language of your choice.</span></span> <span data-ttu-id="e635a-104">При выполнении приложения LINQ to SQL преобразует запросы LINQ модели объектов в код SQL и направляет их в базу данных для выполнения.</span><span class="sxs-lookup"><span data-stu-id="e635a-104">When the application runs, LINQ to SQL translates the language-integrated queries in the object model into SQL and sends them to the database for execution.</span></span> <span data-ttu-id="e635a-105">Когда база данных возвращает результаты, LINQ to SQL преобразует их обратно в объекты, с которыми можно работать на языке программирования.</span><span class="sxs-lookup"><span data-stu-id="e635a-105">When the database returns the results, LINQ to SQL translates the results back to objects that you can work with in your own programming language.</span></span>  

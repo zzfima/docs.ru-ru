@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33538787"
 ---
 # <a name="tooltip-component-windows-forms"></a><span data-ttu-id="15a56-102">Компонент ToolTip (Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="15a56-102">ToolTip Component (Windows Forms)</span></span>
 <span data-ttu-id="15a56-103">Компонент <xref:System.Windows.Forms.ToolTip> в Windows Forms отображает текст при наведении указателя мыши на элементы управления.</span><span class="sxs-lookup"><span data-stu-id="15a56-103">The Windows Forms <xref:System.Windows.Forms.ToolTip> component displays text when the user points at controls.</span></span> <span data-ttu-id="15a56-104">Компонент ToolTip можно связать с любым элементом управления.</span><span class="sxs-lookup"><span data-stu-id="15a56-104">A ToolTip can be associated with any control.</span></span> <span data-ttu-id="15a56-105">Пример использования этого компонента: для экономии места в форме можно настроить отображение маленького значка для кнопки и использовать компонент ToolTip для объяснения ее функции.</span><span class="sxs-lookup"><span data-stu-id="15a56-105">An example use of this control: In order to save space on a form, you can display a small icon on a button and use a ToolTip to explain the button's function.</span></span>  

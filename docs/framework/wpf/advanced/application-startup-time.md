@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33541954"
 ---
 # <a name="application-startup-time"></a><span data-ttu-id="d0e4d-102">Время запуска приложения</span><span class="sxs-lookup"><span data-stu-id="d0e4d-102">Application Startup Time</span></span>
 <span data-ttu-id="d0e4d-103">Время, необходимое для запуска WPF-приложения, может сильно варьироваться.</span><span class="sxs-lookup"><span data-stu-id="d0e4d-103">The amount of time that is required for a WPF application to start can vary greatly.</span></span> <span data-ttu-id="d0e4d-104">В этом разделе описаны различные способы, позволяющие сократить воспринимаемое и фактическое время запуска приложений Windows Presentation Foundation (WPF).</span><span class="sxs-lookup"><span data-stu-id="d0e4d-104">This topic describes various techniques for reducing the perceived and actual startup time for a Windows Presentation Foundation (WPF) application.</span></span>  

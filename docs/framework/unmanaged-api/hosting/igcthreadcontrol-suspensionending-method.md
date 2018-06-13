@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d0986645a8ce4076c27f39f2ae8004ef20bb4bdb
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33437756"
 ---
 # <a name="igcthreadcontrolsuspensionending-method"></a><span data-ttu-id="7d5ca-102">Метод IGCThreadControl::SuspensionEnding</span><span class="sxs-lookup"><span data-stu-id="7d5ca-102">IGCThreadControl::SuspensionEnding Method</span></span>
 <span data-ttu-id="7d5ca-103">Уведомляет узел, что среда выполнения возобновляет выполнение после сборки мусора или по другой причине.</span><span class="sxs-lookup"><span data-stu-id="7d5ca-103">Notifies the host that the runtime is resuming threads after a garbage collection or other suspension.</span></span>  

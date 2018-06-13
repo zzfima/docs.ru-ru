@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33364705"
 ---
 # <a name="bindingfailure-mda"></a><span data-ttu-id="df691-102">bindingFailure MDA</span><span class="sxs-lookup"><span data-stu-id="df691-102">bindingFailure MDA</span></span>
 <span data-ttu-id="df691-103">Помощник по отладке управляемого кода (MDA) `bindingFailure` запускается в случае сбоя при загрузке сборки.</span><span class="sxs-lookup"><span data-stu-id="df691-103">The `bindingFailure` managed debugging assistant (MDA) is activated when an assembly fails to load.</span></span>  

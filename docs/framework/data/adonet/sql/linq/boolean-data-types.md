@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33361576"
 ---
 # <a name="boolean-data-types"></a><span data-ttu-id="9ae94-102">Логические типы данных</span><span class="sxs-lookup"><span data-stu-id="9ae94-102">Boolean Data Types</span></span>
 <span data-ttu-id="9ae94-103">Логические операторы работают в среде (CLR) соответствующим образом, за исключением отсутствия преобразования сокращенной обработки.</span><span class="sxs-lookup"><span data-stu-id="9ae94-103">Boolean operators work as expected in the common language runtime (CLR), except that short-circuiting behavior is not translated.</span></span> <span data-ttu-id="9ae94-104">Например, оператор `AndAlso` Visual Basic действует так же, как оператор `And`.</span><span class="sxs-lookup"><span data-stu-id="9ae94-104">For example, the Visual Basic `AndAlso` operator behaves like the `And` operator.</span></span> <span data-ttu-id="9ae94-105">Оператор `&&` C# действует как оператор `&`.</span><span class="sxs-lookup"><span data-stu-id="9ae94-105">The C# `&&` operator behaves like the `&` operator.</span></span>  

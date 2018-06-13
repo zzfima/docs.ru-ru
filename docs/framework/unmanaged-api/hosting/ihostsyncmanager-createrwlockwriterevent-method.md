@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5ff830c136e539fec58d573247a83d1f8239e3bf
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33443207"
 ---
 # <a name="ihostsyncmanagercreaterwlockwriterevent-method"></a><span data-ttu-id="3ac3c-102">Метод IHostSyncManager::CreateRWLockWriterEvent</span><span class="sxs-lookup"><span data-stu-id="3ac3c-102">IHostSyncManager::CreateRWLockWriterEvent Method</span></span>
 <span data-ttu-id="3ac3c-103">Создает объект события автоматического сброса для реализации блокировки модуля записи.</span><span class="sxs-lookup"><span data-stu-id="3ac3c-103">Creates an auto-reset event object for the implementation of a writer lock.</span></span>  

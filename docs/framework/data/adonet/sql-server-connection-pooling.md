@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33364481"
 ---
 # <a name="sql-server-connection-pooling-adonet"></a><span data-ttu-id="0c4bf-102">Объединение подключений в пул в SQL Server (ADO.NET)</span><span class="sxs-lookup"><span data-stu-id="0c4bf-102">SQL Server Connection Pooling (ADO.NET)</span></span>
 <span data-ttu-id="0c4bf-103">Соединение с сервером базы данных обычно состоит из нескольких длительных шагов.</span><span class="sxs-lookup"><span data-stu-id="0c4bf-103">Connecting to a database server typically consists of several time-consuming steps.</span></span> <span data-ttu-id="0c4bf-104">Необходимо установить физический канал, например сокет или именованный канал, выполнить первоначальное подтверждение установления связи с сервером, выполнить синтаксический анализ данных строки соединения, сервер должен проверить подлинность соединения, а также запустить проверку прикреплений в текущей транзакции и т. д.</span><span class="sxs-lookup"><span data-stu-id="0c4bf-104">A physical channel such as a socket or a named pipe must be established, the initial handshake with the server must occur, the connection string information must be parsed, the connection must be authenticated by the server, checks must be run for enlisting in the current transaction, and so on.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33361082"
 ---
 # <a name="signing-stored-procedures-in-sql-server"></a><span data-ttu-id="d2fce-102">Подписывание хранимых процедур в SQL Server</span><span class="sxs-lookup"><span data-stu-id="d2fce-102">Signing Stored Procedures in SQL Server</span></span>
  <span data-ttu-id="d2fce-103">Цифровая сигнатура представляет собой хэш-код данных, зашифрованную при помощи закрытого ключа лица, ставящего свою сигнатуру.</span><span class="sxs-lookup"><span data-stu-id="d2fce-103">A digital signature is a data digest encrypted with the private key of the signer.</span></span> <span data-ttu-id="d2fce-104">Закрытый ключ обеспечивает уникальность цифровой сигнатуры его владельцу.</span><span class="sxs-lookup"><span data-stu-id="d2fce-104">The private key ensures that the digital signature is unique to its bearer or owner.</span></span> <span data-ttu-id="d2fce-105">Можно подписывать хранимые процедуры, функции (за исключением встроенных функций возвращающих табличные значения), триггеры и сборки.</span><span class="sxs-lookup"><span data-stu-id="d2fce-105">You can sign stored procedures, functions (except for inline table-valued functions), triggers, and assemblies.</span></span>  

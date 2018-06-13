@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9296aedf24979624c3d7357a4d51be835716a16f
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33438032"
 ---
 # <a name="igcthreadcontrol-interface"></a><span data-ttu-id="d7561-102">Интерфейс IGCThreadControl</span><span class="sxs-lookup"><span data-stu-id="d7561-102">IGCThreadControl Interface</span></span>
 <span data-ttu-id="d7561-103">Предоставляет методы для участия в планировании потоков, которые в противном случае были бы заблокированы для сборки мусора.</span><span class="sxs-lookup"><span data-stu-id="d7561-103">Provides methods for participating in the scheduling of threads that would otherwise be blocked for a garbage collection.</span></span>  

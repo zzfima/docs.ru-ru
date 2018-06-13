@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33539923"
 ---
 # <a name="walkthrough-implementing-virtual-mode-in-the-windows-forms-datagridview-control"></a><span data-ttu-id="aefae-102">Пример. Реализация виртуального режима для элемента управления DataGridView в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="aefae-102">Walkthrough: Implementing Virtual Mode in the Windows Forms DataGridView Control</span></span>
 <span data-ttu-id="aefae-103">Если вы хотите отобразить очень большому количеству табличные данные в <xref:System.Windows.Forms.DataGridView> управления, можно задать <xref:System.Windows.Forms.DataGridView.VirtualMode%2A> свойства `true` и явным образом управлять взаимодействием элемента управления с хранилищем данных.</span><span class="sxs-lookup"><span data-stu-id="aefae-103">When you want to display very large quantities of tabular data in a <xref:System.Windows.Forms.DataGridView> control, you can set the <xref:System.Windows.Forms.DataGridView.VirtualMode%2A> property to `true` and explicitly manage the control's interaction with its data store.</span></span> <span data-ttu-id="aefae-104">Это позволяет оптимизировать производительность элемента управления в этой ситуации.</span><span class="sxs-lookup"><span data-stu-id="aefae-104">This lets you fine-tune the performance of the control in this situation.</span></span>  

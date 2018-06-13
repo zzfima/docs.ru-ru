@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33540921"
 ---
 # <a name="implementing-virtual-mode-with-just-in-time-data-loading-in-the-windows-forms-datagridview-control"></a><span data-ttu-id="efe4b-102">Реализация виртуального режима с JIT-загрузкой данных для элемента управления DataGridView в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="efe4b-102">Implementing Virtual Mode with Just-In-Time Data Loading in the Windows Forms DataGridView Control</span></span>
 <span data-ttu-id="efe4b-103">Реализация виртуального режима в одной из причин <xref:System.Windows.Forms.DataGridView> управления является получение данных только по мере необходимости.</span><span class="sxs-lookup"><span data-stu-id="efe4b-103">One reason to implement virtual mode in the <xref:System.Windows.Forms.DataGridView> control is to retrieve data only as it is needed.</span></span> <span data-ttu-id="efe4b-104">Это называется *загрузка данных в момент*.</span><span class="sxs-lookup"><span data-stu-id="efe4b-104">This is called *just-in-time data loading*.</span></span>  
