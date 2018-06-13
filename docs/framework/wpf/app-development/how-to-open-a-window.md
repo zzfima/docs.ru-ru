@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33545468"
 ---
 # <a name="how-to-open-a-window"></a><span data-ttu-id="becef-102">Как: Открытие окна</span><span class="sxs-lookup"><span data-stu-id="becef-102">How to: Open a Window</span></span>
 <span data-ttu-id="becef-103">В этом примере показано, как открыть окно.</span><span class="sxs-lookup"><span data-stu-id="becef-103">This example shows how to open a window.</span></span>  

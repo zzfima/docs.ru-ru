@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33546101"
 ---
 # <a name="storing-ink"></a><span data-ttu-id="9e295-102">Хранение рукописных данных</span><span class="sxs-lookup"><span data-stu-id="9e295-102">Storing Ink</span></span>
 <span data-ttu-id="9e295-103"><xref:System.Windows.Ink.StrokeCollection.Save%2A> Методы предоставляют поддержку хранения рукописного ввода как формат сериализации рукописного ввода (ISF).</span><span class="sxs-lookup"><span data-stu-id="9e295-103">The <xref:System.Windows.Ink.StrokeCollection.Save%2A> methods provide support for storing ink as Ink Serialized Format (ISF).</span></span> <span data-ttu-id="9e295-104">Конструкторы для <xref:System.Windows.Ink.StrokeCollection> класса обеспечивают поддержку чтения рукописного ввода данных.</span><span class="sxs-lookup"><span data-stu-id="9e295-104">Constructors for the <xref:System.Windows.Ink.StrokeCollection> class provide support for reading ink data.</span></span>  

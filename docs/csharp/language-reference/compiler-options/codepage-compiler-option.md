@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33216929"
 ---
 # <a name="-codepage-c-compiler-options"></a><span data-ttu-id="ce11d-102">-codepage (параметры компилятора C#)</span><span class="sxs-lookup"><span data-stu-id="ce11d-102">-codepage (C# Compiler Options)</span></span>
 <span data-ttu-id="ce11d-103">Этот параметр задает кодовую страницу, используемую во время компиляции, если требуемая страница не является текущей кодовой страницей системы по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="ce11d-103">This option specifies which codepage to use during compilation if the required page is not the current default codepage for the system.</span></span>  

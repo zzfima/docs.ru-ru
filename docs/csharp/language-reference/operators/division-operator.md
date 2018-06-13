@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33272575"
 ---
 # <a name="-operator-c-reference"></a><span data-ttu-id="c0161-102">Оператор / (Справочник по C#)</span><span class="sxs-lookup"><span data-stu-id="c0161-102">/ Operator (C# Reference)</span></span>
 <span data-ttu-id="c0161-103">Оператор деления (`/`) делит первый операнд на второй.</span><span class="sxs-lookup"><span data-stu-id="c0161-103">The division operator (`/`) divides its first operand by its second operand.</span></span> <span data-ttu-id="c0161-104">Все числовые типы имеют предопределенные операторы деления.</span><span class="sxs-lookup"><span data-stu-id="c0161-104">All numeric types have predefined division operators.</span></span>

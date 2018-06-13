@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33218401"
 ---
 # <a name="from-clause-c-reference"></a><span data-ttu-id="7965f-102">Предложение from (справочник по C#)</span><span class="sxs-lookup"><span data-stu-id="7965f-102">from clause (C# Reference)</span></span>
 <span data-ttu-id="7965f-103">Выражение запроса должно начинаться с предложения `from`.</span><span class="sxs-lookup"><span data-stu-id="7965f-103">A query expression must begin with a `from` clause.</span></span> <span data-ttu-id="7965f-104">Кроме того, выражение запроса может содержать вложенные запросы, которые также начинаются с предложения `from`.</span><span class="sxs-lookup"><span data-stu-id="7965f-104">Additionally, a query expression can contain sub-queries, which also begin with a `from` clause.</span></span> <span data-ttu-id="7965f-105">Предложение `from` определяет следующее:</span><span class="sxs-lookup"><span data-stu-id="7965f-105">The `from` clause specifies the following:</span></span>  

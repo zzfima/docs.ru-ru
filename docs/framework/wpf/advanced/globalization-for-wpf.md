@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33547954"
 ---
 # <a name="globalization-for-wpf"></a><span data-ttu-id="c5e74-102">Глобализация для WPF</span><span class="sxs-lookup"><span data-stu-id="c5e74-102">Globalization for WPF</span></span>
 <span data-ttu-id="c5e74-103">В этом разделе рассматриваются проблемы, которые следует учитывать при написании [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] приложений для глобального рынка.</span><span class="sxs-lookup"><span data-stu-id="c5e74-103">This topic introduces issues that you should be aware of when writing [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] applications for the global market.</span></span> <span data-ttu-id="c5e74-104">Элементы программирования глобализации определены в [!INCLUDE[TLA#tla_net](../../../../includes/tlasharptla-net-md.md)] в `System.Globalization`.</span><span class="sxs-lookup"><span data-stu-id="c5e74-104">The globalization programming elements are defined in [!INCLUDE[TLA#tla_net](../../../../includes/tlasharptla-net-md.md)] in `System.Globalization`.</span></span>  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33545822"
 ---
 # <a name="resources-wpf"></a><span data-ttu-id="5ac4f-102">Ресурсы WPF.</span><span class="sxs-lookup"><span data-stu-id="5ac4f-102">Resources (WPF)</span></span>
 <span data-ttu-id="5ac4f-103">Ресурс — это объект, который можно повторно использовать в разных местах приложения.</span><span class="sxs-lookup"><span data-stu-id="5ac4f-103">A resource is an object that can be reused in different places in your application.</span></span> <span data-ttu-id="5ac4f-104">WPF поддерживает различные типы ресурсов.</span><span class="sxs-lookup"><span data-stu-id="5ac4f-104">WPF supports different types of resources.</span></span> <span data-ttu-id="5ac4f-105">Эти ресурсы — в первую очередь двух типах ресурсов: XAML ресурсы и файлы данных ресурсов.</span><span class="sxs-lookup"><span data-stu-id="5ac4f-105">These resources are primarily two types of resources: XAML resources and resource data files.</span></span> <span data-ttu-id="5ac4f-106">Ресурсы XAML примеры кисти и стили.</span><span class="sxs-lookup"><span data-stu-id="5ac4f-106">Examples of XAML resources include brushes and styles.</span></span> <span data-ttu-id="5ac4f-107">Файлы данных ресурсов, файлы данных не является исполняемым, необходимые для приложения.</span><span class="sxs-lookup"><span data-stu-id="5ac4f-107">Resource data files are non-executable data files that an application needs.</span></span>  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33267372"
 ---
 # <a name="selection-statements-c-reference"></a><span data-ttu-id="2111a-102">Инструкции выбора (Справочник по C#)</span><span class="sxs-lookup"><span data-stu-id="2111a-102">Selection Statements (C# Reference)</span></span>
 <span data-ttu-id="2111a-103">Оператор выбора позволяет программе передать управление определенному потоку команд в зависимости от выполнения условия `true`.</span><span class="sxs-lookup"><span data-stu-id="2111a-103">A selection statement causes the program control to be transferred to a specific flow based upon whether a certain condition is `true` or not.</span></span>  

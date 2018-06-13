@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33216627"
 ---
 # <a name="-targetwinexe-c-compiler-options"></a><span data-ttu-id="b30ba-102">-target:winexe (параметры компилятора C#)</span><span class="sxs-lookup"><span data-stu-id="b30ba-102">-target:winexe (C# Compiler Options)</span></span>
 <span data-ttu-id="b30ba-103">Параметр **-target:winexe** предписывает компилятору создать исполняемый файл (EXE), программу Windows.</span><span class="sxs-lookup"><span data-stu-id="b30ba-103">The **-target:winexe** option causes the compiler to create an executable (EXE), Windows program.</span></span>  

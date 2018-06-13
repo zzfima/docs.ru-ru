@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33216032"
 ---
 # <a name="add-c-reference"></a><span data-ttu-id="83db3-102">add (Справочник по C#)</span><span class="sxs-lookup"><span data-stu-id="83db3-102">add (C# Reference)</span></span>
 <span data-ttu-id="83db3-103">Контекстное ключевое слово `add` определяет метод доступа настраиваемого события, который вызывается, когда клиентский код подписывается на [событие](../../../csharp/language-reference/keywords/event.md).</span><span class="sxs-lookup"><span data-stu-id="83db3-103">The `add` contextual keyword is used to define a custom event accessor that is invoked when client code subscribes to your [event](../../../csharp/language-reference/keywords/event.md).</span></span> <span data-ttu-id="83db3-104">Если указан настраиваемый метод доступа `add`, также необходимо указать метод доступа [remove](../../../csharp/language-reference/keywords/remove.md).</span><span class="sxs-lookup"><span data-stu-id="83db3-104">If you supply a custom `add` accessor, you must also supply a [remove](../../../csharp/language-reference/keywords/remove.md) accessor.</span></span>  

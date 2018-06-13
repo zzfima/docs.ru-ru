@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33528353"
 ---
 # <a name="vector-graphics-overview"></a><span data-ttu-id="207cb-102">Общие сведения о векторной графике</span><span class="sxs-lookup"><span data-stu-id="207cb-102">Vector Graphics Overview</span></span>
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]<span data-ttu-id="207cb-103"> Рисование линии, прямоугольники и других фигур в системе координат.</span><span class="sxs-lookup"><span data-stu-id="207cb-103"> draws lines, rectangles, and other shapes on a coordinate system.</span></span> <span data-ttu-id="207cb-104">Можно выбрать из различных систем координат, но система координат по умолчанию имеет начала координат в левом верхнем углу ось x вправо, а ось y направлена вниз.</span><span class="sxs-lookup"><span data-stu-id="207cb-104">You can choose from a variety of coordinate systems, but the default coordinate system has the origin in the upper-left corner with the x-axis pointing to the right and the y-axis pointing down.</span></span> <span data-ttu-id="207cb-105">Единица измерения, в системе координат по умолчанию является пиксель.</span><span class="sxs-lookup"><span data-stu-id="207cb-105">The unit of measure in the default coordinate system is the pixel.</span></span>  

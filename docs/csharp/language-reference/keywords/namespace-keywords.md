@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33266159"
 ---
 # <a name="namespace-keywords-c-reference"></a><span data-ttu-id="6d43a-102">Ключевые слова, используемые для пространств имен (справочник по C#)</span><span class="sxs-lookup"><span data-stu-id="6d43a-102">Namespace Keywords (C# Reference)</span></span>
 <span data-ttu-id="6d43a-103">В этом разделе описываются ключевые слова и операторы, связанные с использованием пространств имен:</span><span class="sxs-lookup"><span data-stu-id="6d43a-103">This section describes the keywords and operators that are associated with using namespaces:</span></span>  

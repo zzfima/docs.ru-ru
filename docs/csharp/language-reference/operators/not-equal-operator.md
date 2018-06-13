@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33272443"
 ---
 # <a name="-operator-c-reference"></a><span data-ttu-id="b5f6b-102">Оператор != (справочник по C#)</span><span class="sxs-lookup"><span data-stu-id="b5f6b-102">!= Operator (C# Reference)</span></span>
 <span data-ttu-id="b5f6b-103">Оператор неравенства (`!=`) возвращает значение false, если его операнды равны. В противном случае возвращается значение true.</span><span class="sxs-lookup"><span data-stu-id="b5f6b-103">The inequality operator (`!=`) returns false if its operands are equal, true otherwise.</span></span> <span data-ttu-id="b5f6b-104">Операторы неравенства предопределены для всех типов, включая строки и объекты.</span><span class="sxs-lookup"><span data-stu-id="b5f6b-104">Inequality operators are predefined for all types, including string and object.</span></span> <span data-ttu-id="b5f6b-105">Определяемые пользователем типы могут перегружать оператор `!=`.</span><span class="sxs-lookup"><span data-stu-id="b5f6b-105">User-defined types can overload the `!=` operator.</span></span>  

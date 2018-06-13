@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33267952"
 ---
 # <a name="operator-c-reference"></a><span data-ttu-id="d93b7-102">operator (Справочник по C#)</span><span class="sxs-lookup"><span data-stu-id="d93b7-102">operator (C# Reference)</span></span>
 <span data-ttu-id="d93b7-103">Ключевое слово `operator` используется для перегрузки встроенного оператора или выполнения пользовательского преобразования в объявлении класса или структуры.</span><span class="sxs-lookup"><span data-stu-id="d93b7-103">Use the `operator` keyword to overload a built-in operator or to provide a user-defined conversion in a class or struct declaration.</span></span>  

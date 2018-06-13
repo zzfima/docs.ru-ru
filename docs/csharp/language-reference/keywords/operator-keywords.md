@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33273319"
 ---
 # <a name="operator-keywords-c-reference"></a><span data-ttu-id="82277-102">Ключевые слова операторов (Справочник по C#)</span><span class="sxs-lookup"><span data-stu-id="82277-102">Operator Keywords (C# Reference)</span></span>
 <span data-ttu-id="82277-103">Используются для выполнения различных действий, включая создание объектов, проверку типа объекта во время выполнения, получение размера типа и другие операции.</span><span class="sxs-lookup"><span data-stu-id="82277-103">Used to perform miscellaneous actions such as creating objects, checking the run-time type of an object, obtaining the size of a type, and other actions.</span></span> <span data-ttu-id="82277-104">В этом разделе описываются следующие ключевые слова:</span><span class="sxs-lookup"><span data-stu-id="82277-104">This section introduces the following keywords:</span></span>  

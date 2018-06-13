@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33317298"
 ---
 # <a name="linq-and-reflection-c"></a><span data-ttu-id="12000-102">LINQ и отражение (C#)</span><span class="sxs-lookup"><span data-stu-id="12000-102">LINQ and Reflection (C#)</span></span>
 <span data-ttu-id="12000-103">API отражения библиотеки классов .NET Framework можно использовать для просмотра метаданных в сборке .NET и создания коллекций типов, членов типов, параметров и т. д., присутствующих в этой сборке.</span><span class="sxs-lookup"><span data-stu-id="12000-103">The .NET Framework class library reflection APIs can be used to examine the metadata in a .NET assembly and create collections of types, type members, parameters, and so on that are in that assembly.</span></span> <span data-ttu-id="12000-104">Поскольку эти коллекции поддерживают универсальный интерфейс `IEnumerable`, их можно запрашивать с помощью LINQ.</span><span class="sxs-lookup"><span data-stu-id="12000-104">Because these collections support the generic `IEnumerable` interface, they can be queried by using LINQ.</span></span>  

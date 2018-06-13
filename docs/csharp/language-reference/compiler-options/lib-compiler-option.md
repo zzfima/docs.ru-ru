@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33216860"
 ---
 # <a name="-lib-c-compiler-options"></a><span data-ttu-id="ead89-102">-lib (параметры компилятора C#)</span><span class="sxs-lookup"><span data-stu-id="ead89-102">-lib (C# Compiler Options)</span></span>
 <span data-ttu-id="ead89-103">Параметр **-lib** указывает расположение сборок, на которые ссылается параметр [-reference (параметры компилятора C#)](../../../csharp/language-reference/compiler-options/reference-compiler-option.md).</span><span class="sxs-lookup"><span data-stu-id="ead89-103">The **-lib** option specifies the location of assemblies referenced by means of the [-reference (C# Compiler Options)](../../../csharp/language-reference/compiler-options/reference-compiler-option.md) option.</span></span>  

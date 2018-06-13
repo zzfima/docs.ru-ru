@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33217837"
 ---
 # <a name="deploying-net-core-apps-with-command-line-interface-cli-tools"></a><span data-ttu-id="3d571-103">Развертывание приложений .NET Core с помощью средств командной строки (CLI)</span><span class="sxs-lookup"><span data-stu-id="3d571-103">Deploying .NET Core apps with command-line interface (CLI) tools</span></span>
 

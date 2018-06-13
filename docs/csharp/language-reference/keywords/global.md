@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33216047"
 ---
 # <a name="global-c-reference"></a><span data-ttu-id="f908d-102">global (Справочник по C#)</span><span class="sxs-lookup"><span data-stu-id="f908d-102">global (C# Reference)</span></span>
 <span data-ttu-id="f908d-103">Контекстное слово `global`, указанное перед [оператором ::](../../../csharp/language-reference/operators/namespace-alias-qualifer.md), ссылается на глобальное пространство имен, которое используется по умолчанию в любых программах на языке C# и в других случаях не именуется отдельно.</span><span class="sxs-lookup"><span data-stu-id="f908d-103">The `global` contextual keyword, when it comes before the [:: operator](../../../csharp/language-reference/operators/namespace-alias-qualifer.md), refers to the global namespace, which is the default namespace for any C# program and is otherwise unnamed.</span></span> <span data-ttu-id="f908d-104">Дополнительные сведения см. в разделе [Практическое руководство. Использование псевдонима глобального пространства имен](../../../csharp/programming-guide/namespaces/how-to-use-the-global-namespace-alias.md).</span><span class="sxs-lookup"><span data-stu-id="f908d-104">For more information, see [How to: Use the Global Namespace Alias](../../../csharp/programming-guide/namespaces/how-to-use-the-global-namespace-alias.md).</span></span>  

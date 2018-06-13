@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33545413"
 ---
 # <a name="how-to-create-a-text-decoration"></a><span data-ttu-id="8dbda-102">Практическое руководство. Создание оформления текста</span><span class="sxs-lookup"><span data-stu-id="8dbda-102">How to: Create a Text Decoration</span></span>
 <span data-ttu-id="8dbda-103">Объект <xref:System.Windows.TextDecoration> объект является визуальным декоративным элементом, можно добавить в текст.</span><span class="sxs-lookup"><span data-stu-id="8dbda-103">A <xref:System.Windows.TextDecoration> object is a visual ornamentation you can add to text.</span></span> <span data-ttu-id="8dbda-104">Существует четыре типа оформления текста: подчеркивание, базовых показателей, зачеркивания и надчеркивания.</span><span class="sxs-lookup"><span data-stu-id="8dbda-104">There are four types of text decorations: underline, baseline, strikethrough, and overline.</span></span> <span data-ttu-id="8dbda-105">В следующем примере показано расположений украшений текста относительно текста.</span><span class="sxs-lookup"><span data-stu-id="8dbda-105">The following example shows the locations of the text decorations relative to the text.</span></span>  

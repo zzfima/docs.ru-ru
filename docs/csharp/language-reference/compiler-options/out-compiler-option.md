@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33218752"
 ---
 # <a name="-out-c-compiler-options"></a><span data-ttu-id="40965-102">-out (параметры компилятора C#)</span><span class="sxs-lookup"><span data-stu-id="40965-102">-out (C# Compiler Options)</span></span>
 <span data-ttu-id="40965-103">Параметр **-out** задает имя выходного файла.</span><span class="sxs-lookup"><span data-stu-id="40965-103">The **-out** option specifies the name of the output file.</span></span>  

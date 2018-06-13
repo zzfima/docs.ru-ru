@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33527765"
 ---
 # <a name="how-to-inherit-forms-using-the-inheritance-picker-dialog-box"></a><span data-ttu-id="18db4-102">Практическое руководство. Наследование форм с помощью диалогового окна выбора наследования</span><span class="sxs-lookup"><span data-stu-id="18db4-102">How to: Inherit Forms Using the Inheritance Picker Dialog Box</span></span>
 <span data-ttu-id="18db4-103">Самым простым способом наследования формы или другого объекта является использование диалогового окна **Выбор компонентов для наследования**.</span><span class="sxs-lookup"><span data-stu-id="18db4-103">The easiest way to inherit a form or other object is to use the **Inheritance Picker** dialog box.</span></span> <span data-ttu-id="18db4-104">С его помощью можно использовать преимущества кода или пользовательского интерфейса, уже созданного в других решениях.</span><span class="sxs-lookup"><span data-stu-id="18db4-104">With it, you can take advantage of code or user interfaces (UI) you have already created in other solutions.</span></span>  

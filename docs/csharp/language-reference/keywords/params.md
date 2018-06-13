@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33265474"
 ---
 # <a name="params-c-reference"></a><span data-ttu-id="8e998-102">params (справочник по C#)</span><span class="sxs-lookup"><span data-stu-id="8e998-102">params (C# Reference)</span></span>
 <span data-ttu-id="8e998-103">С помощью ключевого слова `params` можно указать [параметр метода](../../../csharp/language-reference/keywords/method-parameters.md), принимающий переменное число аргументов.</span><span class="sxs-lookup"><span data-stu-id="8e998-103">By using the `params` keyword, you can specify a [method parameter](../../../csharp/language-reference/keywords/method-parameters.md) that takes a variable number of arguments.</span></span>  

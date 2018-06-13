@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33268200"
 ---
 # <a name="endregion-c-reference"></a><span data-ttu-id="ea73b-102">#endregion (справочник по C#)</span><span class="sxs-lookup"><span data-stu-id="ea73b-102">#endregion (C# Reference)</span></span>
 <span data-ttu-id="ea73b-103">`#endregion` отмечает конец блока [#region](../../../csharp/language-reference/preprocessor-directives/preprocessor-region.md).</span><span class="sxs-lookup"><span data-stu-id="ea73b-103">`#endregion` marks the end of a [#region](../../../csharp/language-reference/preprocessor-directives/preprocessor-region.md) block.</span></span> <span data-ttu-id="ea73b-104">Пример:</span><span class="sxs-lookup"><span data-stu-id="ea73b-104">For example:</span></span>  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33266572"
 ---
 # <a name="using-c-reference"></a><span data-ttu-id="d64ee-102">using (справочник по C#)</span><span class="sxs-lookup"><span data-stu-id="d64ee-102">using (C# Reference)</span></span>
 <span data-ttu-id="d64ee-103">Ключевое слово `using` имеет два основных применения:</span><span class="sxs-lookup"><span data-stu-id="d64ee-103">The `using` keyword has two major uses:</span></span>  

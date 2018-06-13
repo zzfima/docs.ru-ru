@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33280157"
 ---
 # <a name="override-c-reference"></a><span data-ttu-id="629aa-102">override (Справочник по C#)</span><span class="sxs-lookup"><span data-stu-id="629aa-102">override (C# Reference)</span></span>
 <span data-ttu-id="629aa-103">Модификатор `override` требуется для расширения или изменения абстрактной или виртуальной реализации унаследованного метода, свойства, индексатора или события.</span><span class="sxs-lookup"><span data-stu-id="629aa-103">The `override` modifier is required to extend or modify the abstract or virtual implementation of an inherited method, property, indexer, or event.</span></span>  

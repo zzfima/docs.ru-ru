@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33219460"
 ---
 # <a name="how-to-create-a-nuget-package-with-cross-platform-tools"></a><span data-ttu-id="37b04-103">Создание пакета NuGet с помощью кроссплатформенных средств</span><span class="sxs-lookup"><span data-stu-id="37b04-103">How to Create a NuGet Package with Cross Platform Tools</span></span>
 

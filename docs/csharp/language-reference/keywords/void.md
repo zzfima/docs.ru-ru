@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33267292"
 ---
 # <a name="void-c-reference"></a><span data-ttu-id="7bfeb-102">void (справочник по C#)</span><span class="sxs-lookup"><span data-stu-id="7bfeb-102">void (C# Reference)</span></span>
 <span data-ttu-id="7bfeb-103">При использовании в качестве типа возвращаемого значения для метода ключевое слово `void` указывает, что метод не возвращает значение.</span><span class="sxs-lookup"><span data-stu-id="7bfeb-103">When used as the return type for a method, `void` specifies that the method doesn't return a value.</span></span>

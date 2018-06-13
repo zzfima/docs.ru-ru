@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33526143"
 ---
 # <a name="how-to-designate-a-windows-forms-button-as-the-cancel-button-using-the-designer"></a><span data-ttu-id="dad75-102">Практическое руководство. Создание кнопки отмены в формах Windows Forms с помощью конструктора</span><span class="sxs-lookup"><span data-stu-id="dad75-102">How to: Designate a Windows Forms Button as the Cancel Button Using the Designer</span></span>
 <span data-ttu-id="dad75-103">В любой форме Windows Forms можно назначить <xref:System.Windows.Forms.Button> элемента управления "Отмена".</span><span class="sxs-lookup"><span data-stu-id="dad75-103">On any Windows Form, you can designate a <xref:System.Windows.Forms.Button> control to be the cancel button.</span></span> <span data-ttu-id="dad75-104">Каждый раз, когда пользователь нажимает клавишу ESC, независимо от других элементов управления в форме имеет фокус по нажатию кнопки "Отмена".</span><span class="sxs-lookup"><span data-stu-id="dad75-104">A cancel button is clicked whenever the user presses the ESC key, regardless of which other control on the form has the focus.</span></span> <span data-ttu-id="dad75-105">Такая кнопка обычно создается, чтобы пользователь мог быстро прервать операцию, не выполняя никаких действий.</span><span class="sxs-lookup"><span data-stu-id="dad75-105">Such a button is usually programmed to enable the user to quickly exit an operation without committing to any action.</span></span>  

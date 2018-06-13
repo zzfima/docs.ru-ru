@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33218375"
 ---
 # <a name="-filealign-c-compiler-options"></a><span data-ttu-id="f65bd-102">-filealign (параметры компилятора C#)</span><span class="sxs-lookup"><span data-stu-id="f65bd-102">-filealign (C# Compiler Options)</span></span>
 <span data-ttu-id="f65bd-103">Параметр **-filealign** позволяет указать размер разделов в выходном файле.</span><span class="sxs-lookup"><span data-stu-id="f65bd-103">The **-filealign** option lets you specify the size of sections in your output file.</span></span>  

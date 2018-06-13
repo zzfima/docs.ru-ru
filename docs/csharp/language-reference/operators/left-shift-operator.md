@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33286179"
 ---
 # <a name="ltlt-operator-c-reference"></a><span data-ttu-id="48284-102">Оператор &lt;&lt; (справочник по C#)</span><span class="sxs-lookup"><span data-stu-id="48284-102">&lt;&lt; Operator (C# Reference)</span></span>
 <span data-ttu-id="48284-103">Оператор сдвига влево (`<<`) сдвигает первый операнд влево на число битов, задаваемое вторым операндом.</span><span class="sxs-lookup"><span data-stu-id="48284-103">The left-shift operator (`<<`) shifts its first operand left by the number of bits specified by its second operand.</span></span> <span data-ttu-id="48284-104">Второй операнд должен иметь тип [int](../../../csharp/language-reference/keywords/int.md) или тип, для которого существует предварительно определенное неявное числовое преобразование в `int`.</span><span class="sxs-lookup"><span data-stu-id="48284-104">The type of the second operand must be an [int](../../../csharp/language-reference/keywords/int.md) or a type that has a predefined implicit numeric conversion to `int`.</span></span>  

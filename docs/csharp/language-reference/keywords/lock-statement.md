@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33274223"
 ---
 # <a name="lock-statement-c-reference"></a><span data-ttu-id="98261-102">Оператор lock (Справочник по C#)</span><span class="sxs-lookup"><span data-stu-id="98261-102">lock Statement (C# Reference)</span></span>
 <span data-ttu-id="98261-103">При помощи ключевого слова `lock` блок выражений можно пометить как важный фрагмент. Получив блокировку взаимного исключения для указанного объекта, выражения выполняются, а затем снимается блокировка.</span><span class="sxs-lookup"><span data-stu-id="98261-103">The `lock` keyword marks a statement block as a critical section by obtaining the mutual-exclusion lock for a given object, executing a statement, and then releasing the lock.</span></span> <span data-ttu-id="98261-104">Следующий пример включает оператор `lock`.</span><span class="sxs-lookup"><span data-stu-id="98261-104">The following example includes a `lock` statement.</span></span>  

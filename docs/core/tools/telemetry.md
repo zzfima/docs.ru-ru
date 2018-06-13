@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33216087"
 ---
 # <a name="net-core-cli-tools-telemetry"></a><span data-ttu-id="56b12-103">Телеметрия средств интерфейса командной строки для .NET Core</span><span class="sxs-lookup"><span data-stu-id="56b12-103">.NET Core CLI Tools telemetry</span></span>
 

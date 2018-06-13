@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33218849"
 ---
 # <a name="-debug-c-compiler-options"></a><span data-ttu-id="cfb90-102">-debug (параметры компилятора C#)</span><span class="sxs-lookup"><span data-stu-id="cfb90-102">-debug (C# Compiler Options)</span></span>
 <span data-ttu-id="cfb90-103">При заданном параметре **-debug** компилятор создает отладочную информацию и помещает ее в один или несколько выходных файлов.</span><span class="sxs-lookup"><span data-stu-id="cfb90-103">The **-debug** option causes the compiler to generate debugging information and place it in the output file or files.</span></span>  

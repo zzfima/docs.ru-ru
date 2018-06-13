@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33527791"
 ---
 # <a name="design-time-errors-in-the-windows-forms-designer"></a><span data-ttu-id="657d6-102">Ошибки во время разработки в конструкторе Windows Forms Designer</span><span class="sxs-lookup"><span data-stu-id="657d6-102">Design-Time Errors in the Windows Forms Designer</span></span>
 <span data-ttu-id="657d6-103">В этом разделе разъясняются значения и использование списка ошибок во время разработки, отображаемого в Microsoft Visual Studio при невозможности загрузить конструктор Windows Forms.</span><span class="sxs-lookup"><span data-stu-id="657d6-103">This topic explains the meaning and use of the design-time error list that appears in Microsoft Visual Studio when the Windows Forms Designer fails to load.</span></span> <span data-ttu-id="657d6-104">При появления такого списка его надо использовать для исправлении ошибок в коде, а не воспринимать как ошибку в конструкторе.</span><span class="sxs-lookup"><span data-stu-id="657d6-104">If this error list appears, you should not interpret it as a bug in the designer, but as an aid to correcting errors in your code.</span></span>  

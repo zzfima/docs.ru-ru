@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33216048"
 ---
 # <a name="access-keywords-c-reference"></a><span data-ttu-id="afeab-102">Ключевые слова доступа (справочник по C#)</span><span class="sxs-lookup"><span data-stu-id="afeab-102">Access Keywords (C# Reference)</span></span>
 <span data-ttu-id="afeab-103">В этом разделе описываются следующие ключевые слова доступа:</span><span class="sxs-lookup"><span data-stu-id="afeab-103">This section introduces the following access keywords:</span></span>  

@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33218759"
 ---
 # <a name="if-else-c-reference"></a><span data-ttu-id="27fce-102">if-else (Справочник по C#)</span><span class="sxs-lookup"><span data-stu-id="27fce-102">if-else (C# Reference)</span></span>
 <span data-ttu-id="27fce-103">Оператор `if` определяет, какой оператор будет выполняться при выполнения условия, заданного выражением `Boolean` .</span><span class="sxs-lookup"><span data-stu-id="27fce-103">An `if` statement identifies which statement to run based on the value of a `Boolean` expression.</span></span> <span data-ttu-id="27fce-104">В приведенном ниже примере переменной `Boolean` типа `result` присваивается значение `true` , а затем она проверяется оператором `if` .</span><span class="sxs-lookup"><span data-stu-id="27fce-104">In the following example, the `Boolean` variable `result` is set to `true` and then checked in the `if` statement.</span></span> <span data-ttu-id="27fce-105">В результате получается `The condition is true`.</span><span class="sxs-lookup"><span data-stu-id="27fce-105">The output is `The condition is true`.</span></span>  

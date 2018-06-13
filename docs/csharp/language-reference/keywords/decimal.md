@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33219340"
 ---
 # <a name="decimal-c-reference"></a><span data-ttu-id="b6747-102">decimal (Справочник по C#)</span><span class="sxs-lookup"><span data-stu-id="b6747-102">decimal (C# Reference)</span></span>
 <span data-ttu-id="b6747-103">Ключевое слово `decimal` обозначает 128-разрядный тип данных.</span><span class="sxs-lookup"><span data-stu-id="b6747-103">The `decimal` keyword indicates a 128-bit data type.</span></span> <span data-ttu-id="b6747-104">По сравнению с другими типами данных с плавающей запятой, диапазон значений `decimal` меньше, а точность выше, благодаря чему этот тип подходит для финансовых расчетов.</span><span class="sxs-lookup"><span data-stu-id="b6747-104">Compared to other floating-point types, the `decimal` type has more precision and a smaller range, which makes it appropriate for financial and monetary calculations.</span></span> <span data-ttu-id="b6747-105">В следующей таблице представлен приблизительный диапазон значений и точность для типа `decimal`.</span><span class="sxs-lookup"><span data-stu-id="b6747-105">The approximate range and precision for the `decimal` type are shown in the following table.</span></span>  
