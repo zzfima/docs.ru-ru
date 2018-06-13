@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32763271"
 ---
 # <a name="synchronizing-a-dataset-with-an-xmldatadocument"></a>Синхронизация набора данных с XmlDataDocument
 В этом разделе демонстрируется один шаг обработки заказа на покупку с использованием <xref:System.Data.DataSet> со строгой типизацией, синхронизированного с <xref:System.Xml.XmlDataDocument>. Следующие примеры создания **набора данных** с минимальной схемой, который соответствует только часть исходного XML-документа. В примерах используется **XmlDataDocument** совпадения из исходного XML-документа, включение **набора данных** для предоставления доступа к подмножеству XML-документа.  
