@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33602925"
 ---
 # <a name="ltparamgt-visual-basic"></a><span data-ttu-id="cf300-102">&lt;PARAM&gt; (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="cf300-102">&lt;param&gt; (Visual Basic)</span></span>
 <span data-ttu-id="cf300-103">Определяет имя параметра и описание.</span><span class="sxs-lookup"><span data-stu-id="cf300-103">Defines a parameter name and description.</span></span>  

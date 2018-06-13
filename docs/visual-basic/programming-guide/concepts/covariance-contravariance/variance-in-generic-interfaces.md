@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33643462"
 ---
 # <a name="variance-in-generic-interfaces-visual-basic"></a><span data-ttu-id="86952-102">Вариативность в универсальных интерфейсах (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="86952-102">Variance in Generic Interfaces (Visual Basic)</span></span>
 <span data-ttu-id="86952-103">В платформе .NET Framework 4 появилась поддержка вариативности для нескольких существующих универсальных интерфейсов.</span><span class="sxs-lookup"><span data-stu-id="86952-103">.NET Framework 4 introduced variance support for several existing generic interfaces.</span></span> <span data-ttu-id="86952-104">Поддержка вариативности позволяет выполнять неявное преобразование классов, реализующих эти интерфейсы.</span><span class="sxs-lookup"><span data-stu-id="86952-104">Variance support enables implicit conversion of classes that implement these interfaces.</span></span> <span data-ttu-id="86952-105">Сейчас вариативными являются следующие интерфейсы.</span><span class="sxs-lookup"><span data-stu-id="86952-105">The following interfaces are now variant:</span></span>  

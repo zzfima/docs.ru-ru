@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33598067"
 ---
 # <a name="an-invalid-name-was-specified-for-the-event-log"></a><span data-ttu-id="344fa-102">Указано недопустимое имя для журнала событий</span><span class="sxs-lookup"><span data-stu-id="344fa-102">An invalid name was specified for the event log</span></span>
 <span data-ttu-id="344fa-103">Для журнала событий было указано недопустимое имя.</span><span class="sxs-lookup"><span data-stu-id="344fa-103">An invalid name was specified for the event log.</span></span> <span data-ttu-id="344fa-104">Обычно это является результатом недопустимых символов в имени, пустого имени файла или слишком длинного имени файла.</span><span class="sxs-lookup"><span data-stu-id="344fa-104">Usually this is a result of invalid characters in the name, a blank file name, or a file name that is too long.</span></span>  

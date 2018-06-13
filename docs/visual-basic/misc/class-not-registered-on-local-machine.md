@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33638390"
 ---
 # <a name="class-not-registered-on-local-machine"></a><span data-ttu-id="53bd7-102">Класс не зарегистрирован на локальном компьютере</span><span class="sxs-lookup"><span data-stu-id="53bd7-102">Class not registered on local machine</span></span>
 <span data-ttu-id="53bd7-103">Эта ошибка обычно возникает из-за поврежденного файла.</span><span class="sxs-lookup"><span data-stu-id="53bd7-103">This error is usually encountered as a result of a corrupted file.</span></span> <span data-ttu-id="53bd7-104">Может потребоваться переустановить Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="53bd7-104">You may need to reinstall Visual Studio.</span></span>  

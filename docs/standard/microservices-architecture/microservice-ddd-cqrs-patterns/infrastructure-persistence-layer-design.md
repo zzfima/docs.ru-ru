@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33578921"
 ---
 # <a name="designing-the-infrastructure-persistence-layer"></a><span data-ttu-id="c9292-103">Проектирование уровня сохраняемости инфраструктуры</span><span class="sxs-lookup"><span data-stu-id="c9292-103">Designing the infrastructure persistence layer</span></span>
 

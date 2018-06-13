@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33593643"
 ---
 # <a name="39ltname1gt39-is-ambiguous-imported-from-the-namespaces-or-types-39ltname2gt39"></a><span data-ttu-id="fa2af-102">&#39;&lt;Name1&gt; &#39; является неоднозначным, импортированный из пространств имен или типов &#39; &lt;name2&gt;&#39;</span><span class="sxs-lookup"><span data-stu-id="fa2af-102">&#39;&lt;name1&gt;&#39; is ambiguous, imported from the namespaces or types &#39;&lt;name2&gt;&#39;</span></span>
 <span data-ttu-id="fa2af-103">Вы указали неоднозначное имя, которое конфликтует с другим именем.</span><span class="sxs-lookup"><span data-stu-id="fa2af-103">You have provided a name that is ambiguous and therefore conflicts with another name.</span></span> <span data-ttu-id="fa2af-104">Компилятор Visual Basic не имеет правил разрешения конфликтов; Вы должны самостоятельно устранить неоднозначность имен.</span><span class="sxs-lookup"><span data-stu-id="fa2af-104">The Visual Basic compiler does not have any conflict resolution rules; you must disambiguate names yourself.</span></span>  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33637680"
 ---
 # <a name="numberofchars-must-be-greater-than-zero"></a><span data-ttu-id="d636f-102">Значение NumberOfChars должно быть больше нуля</span><span class="sxs-lookup"><span data-stu-id="d636f-102">NumberOfChars must be greater than zero</span></span>
 <span data-ttu-id="d636f-103">При использовании метода `PeekChars` объекта `TextFieldParser` необходимо указать значение `NumberOfChars` больше `0`.</span><span class="sxs-lookup"><span data-stu-id="d636f-103">When using the `PeekChars` method of the `TextFieldParser` object, you must supply a `NumberOfChars` value that is greater than `0`.</span></span>  

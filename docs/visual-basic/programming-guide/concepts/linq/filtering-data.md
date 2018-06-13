@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33644346"
 ---
 # <a name="filtering-data-visual-basic"></a><span data-ttu-id="1cf94-102">Фильтрация данных (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="1cf94-102">Filtering Data (Visual Basic)</span></span>
 <span data-ttu-id="1cf94-103">Фильтрация — это операция по ограничению значений в результирующем наборе только элементами, соответствующими указанному условию.</span><span class="sxs-lookup"><span data-stu-id="1cf94-103">Filtering refers to the operation of restricting the result set to contain only those elements that satisfy a specified condition.</span></span> <span data-ttu-id="1cf94-104">Это также называется выборкой.</span><span class="sxs-lookup"><span data-stu-id="1cf94-104">It is also known as selection.</span></span>  

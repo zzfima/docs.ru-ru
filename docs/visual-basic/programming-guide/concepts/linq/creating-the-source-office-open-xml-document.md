@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33640447"
 ---
 # <a name="creating-the-source-office-open-xml-document-visual-basic"></a><span data-ttu-id="e1454-102">Создание документа Office Open XML источника (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e1454-102">Creating the Source Office Open XML Document (Visual Basic)</span></span>
 <span data-ttu-id="e1454-103">В этом разделе показано создание документа Office Open XML WordprocessingML, который используется в примерах этого учебника.</span><span class="sxs-lookup"><span data-stu-id="e1454-103">This topic shows how to create the Office Open XML WordprocessingML document that the other examples in this tutorial use.</span></span> <span data-ttu-id="e1454-104">Если следовать приведенным ниже инструкциям, выходные данные будут соответствовать выходным данным каждого примера.</span><span class="sxs-lookup"><span data-stu-id="e1454-104">If you follow these instructions, your output will match the output provided in each example.</span></span>  

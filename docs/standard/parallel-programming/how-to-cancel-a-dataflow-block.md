@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33584909"
 ---
 # <a name="how-to-cancel-a-dataflow-block"></a><span data-ttu-id="ddd8e-102">Практическое руководство. Отмена блока потока данных</span><span class="sxs-lookup"><span data-stu-id="ddd8e-102">How to: Cancel a Dataflow Block</span></span>
 <span data-ttu-id="ddd8e-103">В этом документе показано, как включить отмену в приложении.</span><span class="sxs-lookup"><span data-stu-id="ddd8e-103">This document demonstrates how to enable cancellation in your application.</span></span> <span data-ttu-id="ddd8e-104">В этом примере используется Windows Forms для отображения позиции активности рабочих элементов в конвейере потока данных, а также последствий отмены.</span><span class="sxs-lookup"><span data-stu-id="ddd8e-104">This example uses Windows Forms to show where work items are active in a dataflow pipeline and also the effects of cancellation.</span></span>  

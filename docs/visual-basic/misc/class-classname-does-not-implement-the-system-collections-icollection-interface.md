@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33637391"
 ---
 # <a name="class-39ltclassnamegt39-does-not-implement-the-systemcollectionsicollection-interface"></a><span data-ttu-id="929fc-102">Класс &#39; &lt;classname&gt; &#39; не реализует интерфейс System.Collections.ICollection</span><span class="sxs-lookup"><span data-stu-id="929fc-102">Class &#39;&lt;classname&gt;&#39; does not implement the System.Collections.ICollection interface</span></span>
 <span data-ttu-id="929fc-103">Класс не реализует интерфейс `System.Collections.ICollection` , который определяет размер, перечислители и методы синхронизации для всех коллекций.</span><span class="sxs-lookup"><span data-stu-id="929fc-103">The class does not implement the `System.Collections.ICollection` interface, which defines size, enumerators and synchronization methods for all collections.</span></span> <span data-ttu-id="929fc-104">Возможно, необходимо переустановить Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="929fc-104">It may be necessary to reinstall Visual Studio.</span></span>  

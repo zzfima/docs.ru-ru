@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33585056"
 ---
 # <a name="can39t-create-necessary-temporary-file"></a><span data-ttu-id="f3ffd-102">Можно&#39;t создать требуемый временный файл</span><span class="sxs-lookup"><span data-stu-id="f3ffd-102">Can&#39;t create necessary temporary file</span></span>
 <span data-ttu-id="f3ffd-103">Диск заполнен, содержащий каталоге, указанном в переменной среды TEMP или переменной среды TEMP указывает недопустимый или только для чтения диска или каталога.</span><span class="sxs-lookup"><span data-stu-id="f3ffd-103">Either the drive is full that contains the directory specified by the TEMP environment variable, or the TEMP environment variable specifies an invalid or read-only drive or directory.</span></span>  

@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33582640"
 ---
 # <a name="parallel-processing-concurrency-and-async-programming-in-net"></a><span data-ttu-id="7d245-103">Параллельная обработка, параллелизм и асинхронное программирование в .NET</span><span class="sxs-lookup"><span data-stu-id="7d245-103">Parallel Processing, Concurrency, and Async Programming in .NET</span></span>
 <span data-ttu-id="7d245-104">.NET предоставляет ряд способов написания асинхронного кода, позволяющего уменьшить время отклика приложения на действия пользователя, а также написания параллельного кода, который использует несколько потоков выполнения, чтобы повысить производительность компьютера.</span><span class="sxs-lookup"><span data-stu-id="7d245-104">.NET provides several ways for you to write asynchronous code to make your application more responsive to a user and write parallel code that uses multiple threads of execution to maximize the performance of your user's computer.</span></span>  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33594599"
 ---
 # <a name="myapplicationinfo-object"></a><span data-ttu-id="ab064-102">Объект My.Application.Info</span><span class="sxs-lookup"><span data-stu-id="ab064-102">My.Application.Info Object</span></span>
 <span data-ttu-id="ab064-103">Предоставляет свойства для получения сведений о приложении, такие как номер версии, описание, загруженных сборок и т. д.</span><span class="sxs-lookup"><span data-stu-id="ab064-103">Provides properties for getting the information about the application, such as the version number, description, loaded assemblies, and so on.</span></span>  

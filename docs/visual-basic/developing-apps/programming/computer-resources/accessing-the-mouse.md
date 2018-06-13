@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33582594"
 ---
 # <a name="accessing-the-mouse-visual-basic"></a><span data-ttu-id="ebe25-102">Доступ к мыши (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="ebe25-102">Accessing the Mouse (Visual Basic)</span></span>
 <span data-ttu-id="ebe25-103">Объект `My.Computer.Mouse` предоставляет способ поиска сведений о компьютерной мыши компьютера, таких как ее наличие, количество кнопок и информация о колесике мыши.</span><span class="sxs-lookup"><span data-stu-id="ebe25-103">The `My.Computer.Mouse` object provides a way to find information about the computer's mouse, such as if a mouse exists, the number of mouse buttons, and details about the mouse wheel.</span></span>  

@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33604722"
 ---
 # <a name="from-clause-visual-basic"></a><span data-ttu-id="f7dec-102">Предложение From (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="f7dec-102">From Clause (Visual Basic)</span></span>
 <span data-ttu-id="f7dec-103">Указывает один или несколько переменных диапазона и коллекции для запроса.</span><span class="sxs-lookup"><span data-stu-id="f7dec-103">Specifies one or more range variables and a collection to query.</span></span>  

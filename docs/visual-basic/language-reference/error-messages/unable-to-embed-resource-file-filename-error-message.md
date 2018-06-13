@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33596646"
 ---
 # <a name="unable-to-embed-resource-file-39ltfilenamegt39-lterror-messagegt"></a><span data-ttu-id="99ee9-102">Не удается внедрить файл ресурсов &#39; &lt;filename&gt;&#39;: &lt;сообщение об ошибке&gt;</span><span class="sxs-lookup"><span data-stu-id="99ee9-102">Unable to embed resource file &#39;&lt;filename&gt;&#39;: &lt;error message&gt;</span></span>
 <span data-ttu-id="99ee9-103">Компилятор Visual Basic вызывает компоновщик сборок (Al.exe, который также называется Alink) для создания сборки с манифестом.</span><span class="sxs-lookup"><span data-stu-id="99ee9-103">The Visual Basic compiler calls the Assembly Linker (Al.exe, also known as Alink) to generate an assembly with a manifest.</span></span> <span data-ttu-id="99ee9-104">Компоновщик сообщил об ошибке внедрения файла машинного ресурса COM+ прямо в сборку.</span><span class="sxs-lookup"><span data-stu-id="99ee9-104">The linker has reported an error embedding a native COM+ resource file directly into the assembly.</span></span>  

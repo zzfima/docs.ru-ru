@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33578239"
 ---
 # <a name="rules-for-inferring-schema-node-types-and-structure"></a><span data-ttu-id="47056-102">Правила выведения структуры и типов узлов схемы</span><span class="sxs-lookup"><span data-stu-id="47056-102">Rules for Inferring Schema Node Types and Structure</span></span>
 <span data-ttu-id="47056-103">В данном разделе описывается, как в процессе вывода схемы различные типы узлов XML-документа преобразуются в структуру языка XSD.</span><span class="sxs-lookup"><span data-stu-id="47056-103">This topic describes how the schema inference process translates the node types in an XML document to an XML Schema definition language (XSD) structure.</span></span>  

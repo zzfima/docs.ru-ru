@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579604"
 ---
 # <a name="xmlschemavalidator-push-based-validation"></a><span data-ttu-id="e73b1-102">Принудительная проверка с помощью XmlSchemaValidator</span><span class="sxs-lookup"><span data-stu-id="e73b1-102">XmlSchemaValidator Push-Based Validation</span></span>
 <span data-ttu-id="e73b1-103">Класс <xref:System.Xml.Schema.XmlSchemaValidator> предоставляет эффективный, высокопроизводительный механизм для принудительной проверки XML-данных по схемам XML.</span><span class="sxs-lookup"><span data-stu-id="e73b1-103">The <xref:System.Xml.Schema.XmlSchemaValidator> class provides an efficient, high-performance mechanism to validate XML data against XML schemas in a push-based manner.</span></span> <span data-ttu-id="e73b1-104">Например, класс <xref:System.Xml.Schema.XmlSchemaValidator> позволяет проверять информационный набор XML локально, без сериализации в виде XML-документа, а затем повторно выполнить синтаксический анализ с помощью проверяющего модуля чтения XML.</span><span class="sxs-lookup"><span data-stu-id="e73b1-104">For example, the <xref:System.Xml.Schema.XmlSchemaValidator> class allows you to validate an XML infoset in-place without having to serialize it as an XML document and then reparse the document using a validating XML reader.</span></span>  

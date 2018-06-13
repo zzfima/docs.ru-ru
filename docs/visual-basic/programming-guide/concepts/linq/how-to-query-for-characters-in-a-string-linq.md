@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33642120"
 ---
 # <a name="how-to-query-for-characters-in-a-string-linq-visual-basic"></a><span data-ttu-id="f06ac-102">Как: запрос знаков в строке (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="f06ac-102">How to: Query for Characters in a String (LINQ) (Visual Basic)</span></span>
 <span data-ttu-id="f06ac-103">Поскольку класс <xref:System.String> реализует универсальный интерфейс <xref:System.Collections.Generic.IEnumerable%601>, любая строка может запрашиваться как последовательность символов.</span><span class="sxs-lookup"><span data-stu-id="f06ac-103">Because the <xref:System.String> class implements the generic <xref:System.Collections.Generic.IEnumerable%601> interface, any string can be queried as a sequence of characters.</span></span> <span data-ttu-id="f06ac-104">Однако это не слишком распространенный пример использования LINQ.</span><span class="sxs-lookup"><span data-stu-id="f06ac-104">However, this is not a common use of LINQ.</span></span> <span data-ttu-id="f06ac-105">Для сложных операций сопоставления шаблонов используйте класс <xref:System.Text.RegularExpressions.Regex>.</span><span class="sxs-lookup"><span data-stu-id="f06ac-105">For complex pattern matching operations, use the <xref:System.Text.RegularExpressions.Regex> class.</span></span>  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33598205"
 ---
 # <a name="ltremarksgt-visual-basic"></a><span data-ttu-id="36410-102">&lt;Примечания&gt; (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="36410-102">&lt;remarks&gt; (Visual Basic)</span></span>
 <span data-ttu-id="36410-103">Задает раздел примечаний для члена.</span><span class="sxs-lookup"><span data-stu-id="36410-103">Specifies a remarks section for the member.</span></span>  

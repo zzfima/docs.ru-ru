@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33597668"
 ---
 # <a name="object-variable-or-with-block-variable-not-set"></a><span data-ttu-id="e20a2-102">Не задана переменная объекта или переменная блока With</span><span class="sxs-lookup"><span data-stu-id="e20a2-102">Object variable or With block variable not set</span></span>
 <span data-ttu-id="e20a2-103">Указан недопустимый объектной переменной.</span><span class="sxs-lookup"><span data-stu-id="e20a2-103">An invalid object variable is being referenced.</span></span>   <span data-ttu-id="e20a2-104">Эта ошибка может возникать по нескольким причинам:</span><span class="sxs-lookup"><span data-stu-id="e20a2-104">This error can occur for several reasons:</span></span>  

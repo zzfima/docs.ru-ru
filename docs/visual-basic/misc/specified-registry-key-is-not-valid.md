@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33639452"
 ---
 # <a name="specified-registry-key-is-not-valid-because-it-contains-two-or-more-consecutive-backslashes"></a><span data-ttu-id="538cd-102">Указанный раздел реестра является недопустимым, так как он содержит подряд две или более обратные косые черты</span><span class="sxs-lookup"><span data-stu-id="538cd-102">Specified registry key is not valid because it contains two or more consecutive backslashes</span></span>
 <span data-ttu-id="538cd-103">Раздел реестра, указанный с помощью пути, содержит две или более обратные косые черты, идущие подряд.</span><span class="sxs-lookup"><span data-stu-id="538cd-103">A registry key specified with a path contains two or more consecutive backslashes.</span></span> <span data-ttu-id="538cd-104">Это может быть результатом объединения нескольких строк для формирования пути и случайного включения нескольких обратных косых черт.</span><span class="sxs-lookup"><span data-stu-id="538cd-104">This may be a result of combining several strings to form the path and inadvertently including too many backslashes.</span></span>  

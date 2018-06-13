@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33597436"
 ---
 # <a name="in-generic-modifier-visual-basic"></a><span data-ttu-id="428c7-102">In (универсальный модификатор) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="428c7-102">In (Generic Modifier) (Visual Basic)</span></span>
 <span data-ttu-id="428c7-103">Для параметров универсального типа ключевое слово `In` указывает, что параметр типа является контравариантным.</span><span class="sxs-lookup"><span data-stu-id="428c7-103">For generic type parameters, the `In` keyword specifies that the type parameter is contravariant.</span></span>  

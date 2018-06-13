@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33604876"
 ---
 # <a name="yield-statement-visual-basic"></a><span data-ttu-id="01ed5-102">Оператор Yield (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="01ed5-102">Yield Statement (Visual Basic)</span></span>
 <span data-ttu-id="01ed5-103">Отправляет следующий элемент коллекции, которая будет `For Each...Next` инструкции.</span><span class="sxs-lookup"><span data-stu-id="01ed5-103">Sends the next element of a collection to a `For Each...Next` statement.</span></span>  

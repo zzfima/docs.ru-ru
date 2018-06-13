@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33644385"
 ---
 # <a name="friend-assemblies-visual-basic"></a><span data-ttu-id="6b6d4-102">Дружественные сборки (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="6b6d4-102">Friend Assemblies (Visual Basic)</span></span>
 <span data-ttu-id="6b6d4-103">Объект *дружественной сборки* — это сборка, можно получить доступ к другой сборке [Friend](../../../../visual-basic/language-reference/modifiers/friend.md) типы и члены.</span><span class="sxs-lookup"><span data-stu-id="6b6d4-103">A *friend assembly* is an assembly that can access another assembly's [Friend](../../../../visual-basic/language-reference/modifiers/friend.md) types and members.</span></span> <span data-ttu-id="6b6d4-104">Если сборка определяется как дружественная, помечать типы и члены как открытые для того, чтобы другие сборки могли получить к ним доступ, больше не требуется.</span><span class="sxs-lookup"><span data-stu-id="6b6d4-104">If you identify an assembly as a friend assembly, you no longer have to mark types and members as public in order for them to be accessed by other assemblies.</span></span> <span data-ttu-id="6b6d4-105">Это особенно удобно в следующих ситуациях:</span><span class="sxs-lookup"><span data-stu-id="6b6d4-105">This is especially convenient in the following scenarios:</span></span>  

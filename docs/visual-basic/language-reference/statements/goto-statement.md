@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33604748"
 ---
 # <a name="goto-statement"></a><span data-ttu-id="70c75-102">Оператор GoTo</span><span class="sxs-lookup"><span data-stu-id="70c75-102">GoTo Statement</span></span>
 <span data-ttu-id="70c75-103">Осуществляет безусловный переход на указанную строку в процедуре.</span><span class="sxs-lookup"><span data-stu-id="70c75-103">Branches unconditionally to a specified line in a procedure.</span></span>  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33597703"
 ---
 # <a name="argument-39life39-cannot-be-zero"></a><span data-ttu-id="a3f5c-102">Аргумент &#39;жизни&#39; не может быть нулевым</span><span class="sxs-lookup"><span data-stu-id="a3f5c-102">Argument &#39;Life&#39; cannot be zero</span></span>
 <span data-ttu-id="a3f5c-103">Недопустимый аргумент для `Life`, который должен быть `Double` , указывающий срок эксплуатации актива.</span><span class="sxs-lookup"><span data-stu-id="a3f5c-103">An argument for `Life`, which must be a `Double` that specifies the length of useful life of the asset, is not valid.</span></span>  

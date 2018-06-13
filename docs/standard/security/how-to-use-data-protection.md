@@ -23,6 +23,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33582191"
 ---
 # <a name="how-to-use-data-protection"></a><span data-ttu-id="10a5e-102">Практическое руководство. Использование защиты данных</span><span class="sxs-lookup"><span data-stu-id="10a5e-102">How to: Use Data Protection</span></span>
 <span data-ttu-id="10a5e-103">Платформа .NET Framework предоставляет доступ к API защиты данных (DPAPI), который позволяет шифровать данные, используя сведения из текущей учетной записи пользователя или с текущего компьютера.</span><span class="sxs-lookup"><span data-stu-id="10a5e-103">The .NET Framework provides access to the data protection API (DPAPI), which allows you to encrypt data using information from the current user account or computer.</span></span>  <span data-ttu-id="10a5e-104">Использование API защиты данных позволяет упростить сложную задачу явного создания и хранения криптографического ключа.</span><span class="sxs-lookup"><span data-stu-id="10a5e-104">When you use the DPAPI, you alleviate the difficult problem of explicitly generating and storing a cryptographic key.</span></span>  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33592357"
 ---
 # <a name="defining-your-multi-container-application-with-docker-composeyml"></a><span data-ttu-id="e165a-103">Определение многоконтейнерного приложения с помощью docker-compose.yml</span><span class="sxs-lookup"><span data-stu-id="e165a-103">Defining your multi-container application with docker-compose.yml</span></span> 
 

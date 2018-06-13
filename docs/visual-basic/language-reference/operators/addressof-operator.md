@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33597791"
 ---
 # <a name="addressof-operator-visual-basic"></a><span data-ttu-id="f1c0b-102">Оператор AddressOf (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="f1c0b-102">AddressOf Operator (Visual Basic)</span></span>
 <span data-ttu-id="f1c0b-103">Создает экземпляр делегата процедуры, ссылающийся на конкретную процедуру.</span><span class="sxs-lookup"><span data-stu-id="f1c0b-103">Creates a procedure delegate instance that references the specific procedure.</span></span>  

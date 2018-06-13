@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33580407"
 ---
 # <a name="using-azure-key-vault-to-protect-secrets-at-production-time"></a><span data-ttu-id="b0508-103">Использование Azure Key Vault для защиты секретов в рабочей среде</span><span class="sxs-lookup"><span data-stu-id="b0508-103">Using Azure Key Vault to protect secrets at production time</span></span>
 

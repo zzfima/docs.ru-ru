@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33638516"
 ---
 # <a name="could-not-complete-operation-since-target-directory-is-under-source-directory"></a><span data-ttu-id="b921c-102">Невозможно завершить операцию: конечный каталог находится внутри исходного</span><span class="sxs-lookup"><span data-stu-id="b921c-102">Could not complete operation since target directory is under source directory</span></span>
 <span data-ttu-id="b921c-103">Циклическая операция не удалась.</span><span class="sxs-lookup"><span data-stu-id="b921c-103">A cyclic operation has failed.</span></span> <span data-ttu-id="b921c-104">Циклические операции являются бесконечными циклами и поэтому не могут завершиться.</span><span class="sxs-lookup"><span data-stu-id="b921c-104">Cyclic operations cycle and therefore cannot complete.</span></span> <span data-ttu-id="b921c-105">Например, объект A может попытаться наследоваться от объекта B, который в свою очередь наследуется от объекта A.</span><span class="sxs-lookup"><span data-stu-id="b921c-105">For example, Object A may attempt to inherit from Object B, which in turn inherits from Object A.</span></span>  

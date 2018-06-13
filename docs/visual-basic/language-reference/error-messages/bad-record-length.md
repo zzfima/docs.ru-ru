@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33585974"
 ---
 # <a name="bad-record-length"></a><span data-ttu-id="fa711-102">Недопустимая длина записи</span><span class="sxs-lookup"><span data-stu-id="fa711-102">Bad record length</span></span>
 <span data-ttu-id="fa711-103">Некоторые из возможных причин этой ошибки:</span><span class="sxs-lookup"><span data-stu-id="fa711-103">Among the possible causes of this error are:</span></span>  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33638347"
 ---
 # <a name="set-not-supported-at-run-time"></a><span data-ttu-id="44d84-102">Установка не поддерживается во время выполнения</span><span class="sxs-lookup"><span data-stu-id="44d84-102">Set not supported at run time</span></span>
 <span data-ttu-id="44d84-103">Попытка задать или изменить свойство, значение которого может быть задано только во время разработки.</span><span class="sxs-lookup"><span data-stu-id="44d84-103">You tried to set or change a property whose value can only be set at design time.</span></span>  

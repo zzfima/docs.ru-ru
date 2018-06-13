@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33588084"
 ---
 # <a name="end-of-statement-expected"></a><span data-ttu-id="5df9e-102">Ожидается окончание оператора</span><span class="sxs-lookup"><span data-stu-id="5df9e-102">End of statement expected</span></span>
 <span data-ttu-id="5df9e-103">Оператор является синтаксически завершенным, однако дополнительный программный элемент элементом, выполненную инструкцию.</span><span class="sxs-lookup"><span data-stu-id="5df9e-103">The statement is syntactically complete, but an additional programming element follows the element that completes the statement.</span></span> <span data-ttu-id="5df9e-104">Признак конца строки является обязательным в конце каждой инструкции.</span><span class="sxs-lookup"><span data-stu-id="5df9e-104">A line terminator is required at the end of every statement.</span></span>

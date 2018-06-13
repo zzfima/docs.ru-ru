@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33637508"
 ---
 # <a name="no-default-member-found-for-type-39lttypenamegt39"></a><span data-ttu-id="50f48-102">Найти элемент по умолчанию для типа &#39; &lt;typename&gt;&#39;</span><span class="sxs-lookup"><span data-stu-id="50f48-102">No default member found for type &#39;&lt;typename&gt;&#39;</span></span>
 <span data-ttu-id="50f48-103">Предпринята попытка вызова `Get` или `Set` индекса позднего связывания.</span><span class="sxs-lookup"><span data-stu-id="50f48-103">A late-bound index `Get` or `Set` call has been attempted.</span></span>  

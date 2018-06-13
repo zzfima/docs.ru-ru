@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33598444"
 ---
 # <a name="all-field-widths-except-the-last-element-must-be-greater-than-zero"></a><span data-ttu-id="f2686-102">Все поля, за исключением последнего элемента, должны иметь ширину больше нуля</span><span class="sxs-lookup"><span data-stu-id="f2686-102">All field widths, except the last element, must be greater than zero</span></span>
 <span data-ttu-id="f2686-103">Все поля, за исключением последнего элемента, должны иметь ширину больше нуля.</span><span class="sxs-lookup"><span data-stu-id="f2686-103">All field widths, except the last element, must be greater than zero.</span></span> <span data-ttu-id="f2686-104">Ширина поля, меньшая или равная нулю в последнем элементе, указывает, что поле имеет переменную длину.</span><span class="sxs-lookup"><span data-stu-id="f2686-104">A field width less than or equal to zero in the last element indicates the last field is of variable length.</span></span>  

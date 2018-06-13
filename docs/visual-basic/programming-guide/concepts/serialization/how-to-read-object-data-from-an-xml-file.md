@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33646062"
 ---
 # <a name="how-to-read-object-data-from-an-xml-file-visual-basic"></a><span data-ttu-id="01993-102">Как: чтение данных объекта из XML-файла (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="01993-102">How to: Read Object Data from an XML File (Visual Basic)</span></span>
 <span data-ttu-id="01993-103">В этом примере демонстрируется считывание данных объекта, которые ранее были записаны в XML-файл с помощью класса <xref:System.Xml.Serialization.XmlSerializer>.</span><span class="sxs-lookup"><span data-stu-id="01993-103">This example reads object data that was previously written to an XML file using the <xref:System.Xml.Serialization.XmlSerializer> class.</span></span>  

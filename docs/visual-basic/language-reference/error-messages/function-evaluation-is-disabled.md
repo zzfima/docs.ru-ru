@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33587664"
 ---
 # <a name="function-evaluation-is-disabled-because-a-previous-function-evaluation-timed-out"></a><span data-ttu-id="e5286-102">Вычисление функции отключено, поскольку истекло время, выделенное на вычисление предыдущей функции</span><span class="sxs-lookup"><span data-stu-id="e5286-102">Function evaluation is disabled because a previous function evaluation timed out</span></span>
 <span data-ttu-id="e5286-103">Вычисление функции отключено, поскольку истекло время ожидания вычисление предыдущей функции. Для повторного выполнения функции сделайте еще один шаг или перезапустите отладку.</span><span class="sxs-lookup"><span data-stu-id="e5286-103">Function evaluation is disabled because a previous function evaluation timed out. To re-enable function evaluation, step again or restart debugging.</span></span>  

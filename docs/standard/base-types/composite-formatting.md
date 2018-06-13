@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579188"
 ---
 # <a name="composite-formatting"></a><span data-ttu-id="f5411-102">Составное форматирование</span><span class="sxs-lookup"><span data-stu-id="f5411-102">Composite Formatting</span></span>
 <span data-ttu-id="f5411-103">В качестве входных данных для составного форматирования в .NET используется список объектов и строка составного формата.</span><span class="sxs-lookup"><span data-stu-id="f5411-103">The .NET composite formatting feature takes a list of objects and a composite format string as input.</span></span> <span data-ttu-id="f5411-104">Строка составного формата состоит из фиксированного текста, в который включены индексированные местозаполнители, которые называются элементами форматирования и соответствуют объектам из списка.</span><span class="sxs-lookup"><span data-stu-id="f5411-104">A composite format string consists of fixed text intermixed with indexed placeholders, called format items, that correspond to the objects in the list.</span></span> <span data-ttu-id="f5411-105">Операция форматирования создает результирующую строку, состоящую из исходного фиксированного текста, в который включено строковое представление объектов из списка.</span><span class="sxs-lookup"><span data-stu-id="f5411-105">The formatting operation yields a result string that consists of the original fixed text intermixed with the string representation of the objects in the list.</span></span>  

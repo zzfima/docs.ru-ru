@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33594111"
 ---
 # <a name="mycomputerkeyboard-object"></a><span data-ttu-id="129ea-102">Объект My.Computer.Keyboard</span><span class="sxs-lookup"><span data-stu-id="129ea-102">My.Computer.Keyboard Object</span></span>
 <span data-ttu-id="129ea-103">Предлагает свойства для доступа к текущему состоянию клавиатуры, в частности к сведениям о нажатых в настоящий момент клавишах, а также метод для отправки сообщений о нажатиях клавиш активному окну.</span><span class="sxs-lookup"><span data-stu-id="129ea-103">Provides properties for accessing the current state of the keyboard, such as what keys are currently pressed, and provides a method to send keystrokes to the active window.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33643449"
 ---
 # <a name="element-operations-visual-basic"></a><span data-ttu-id="28192-102">Операции с элементами (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="28192-102">Element Operations (Visual Basic)</span></span>
 <span data-ttu-id="28192-103">Операции с элементами возвращают один определенный элемент из последовательности.</span><span class="sxs-lookup"><span data-stu-id="28192-103">Element operations return a single, specific element from a sequence.</span></span>  

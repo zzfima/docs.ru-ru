@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33584961"
 ---
 # <a name="timers"></a><span data-ttu-id="529ee-102">таймеры</span><span class="sxs-lookup"><span data-stu-id="529ee-102">Timers</span></span>
 <span data-ttu-id="529ee-103">Таймеры являются простыми объектами, которые позволяют указать делегат для вызова в заданное время.</span><span class="sxs-lookup"><span data-stu-id="529ee-103">Timers are lightweight objects that enable you to specify a delegate to be called at a specified time.</span></span> <span data-ttu-id="529ee-104">Поток в пуле потоков выполняет операцию ожидания.</span><span class="sxs-lookup"><span data-stu-id="529ee-104">A thread in the thread pool performs the wait operation.</span></span>  

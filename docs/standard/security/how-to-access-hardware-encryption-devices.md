@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33581720"
 ---
 # <a name="how-to-access-hardware-encryption-devices"></a><span data-ttu-id="0a36d-102">Практическое руководство. Доступ к устройствам аппаратного шифрования</span><span class="sxs-lookup"><span data-stu-id="0a36d-102">How to: Access Hardware Encryption Devices</span></span>
 <span data-ttu-id="0a36d-103">Класс <xref:System.Security.Cryptography.CspParameters> можно использовать для доступа к устройствам аппаратного шифрования.</span><span class="sxs-lookup"><span data-stu-id="0a36d-103">You can use the <xref:System.Security.Cryptography.CspParameters> class to access hardware encryption devices.</span></span> <span data-ttu-id="0a36d-104">Например, этот класс можно использовать для интеграции приложения со смарт-картой, аппаратным генератором случайных чисел или аппаратной реализацией определенного алгоритма шифрования.</span><span class="sxs-lookup"><span data-stu-id="0a36d-104">For example, you can use this class to integrate your application with a smart card, a hardware random number generator, or a hardware implementation of a particular cryptographic algorithm.</span></span>  

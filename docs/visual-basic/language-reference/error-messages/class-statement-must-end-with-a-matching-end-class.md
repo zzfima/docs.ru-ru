@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33585519"
 ---
 # <a name="39class39-statement-must-end-with-a-matching-39end-class39"></a><span data-ttu-id="c1f40-102">&#39;Класс&#39; оператор должен заканчиваться соответствующим &#39;End Class&#39;</span><span class="sxs-lookup"><span data-stu-id="c1f40-102">&#39;Class&#39; statement must end with a matching &#39;End Class&#39;</span></span>
 <span data-ttu-id="c1f40-103">`Class` используется для запуска `Class` блокировать; поэтому он может присутствовать только в начале блока с соответствующим `End Class` инструкции конечный блок.</span><span class="sxs-lookup"><span data-stu-id="c1f40-103">`Class` is used to initiate a `Class` block; hence it can only appear at the beginning of the block, with a matching `End Class` statement ending the block.</span></span> <span data-ttu-id="c1f40-104">Либо имеется лишний оператор `Class` инструкции, или не заканчивается на `Class` блоке с `End Class`.</span><span class="sxs-lookup"><span data-stu-id="c1f40-104">Either you have a redundant `Class` statement, or you have not ended your `Class` block with `End Class`.</span></span>  

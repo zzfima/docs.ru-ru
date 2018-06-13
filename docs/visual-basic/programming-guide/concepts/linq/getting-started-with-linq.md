@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33643495"
 ---
 # <a name="getting-started-with-linq-in-visual-basic"></a><span data-ttu-id="f22a2-102">Приступая к работе с LINQ в Visual Basic</span><span class="sxs-lookup"><span data-stu-id="f22a2-102">Getting Started with LINQ in Visual Basic</span></span>
 <span data-ttu-id="f22a2-103">Этот раздел содержит общие сведения, примеры и общие сведения, которые помогут освоить и использовать Visual Basic и встроенных в язык запросы (LINQ).</span><span class="sxs-lookup"><span data-stu-id="f22a2-103">This section contains overviews, examples, and background information that will help you understand and use Visual Basic and Language-Integrated Query (LINQ).</span></span>  

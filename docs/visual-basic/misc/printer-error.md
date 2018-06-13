@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33639393"
 ---
 # <a name="printer-error"></a><span data-ttu-id="5e63e-102">Ошибка принтера</span><span class="sxs-lookup"><span data-stu-id="5e63e-102">Printer error</span></span>
 <span data-ttu-id="5e63e-103">Произошла ошибка принтера, однако компьютеру, который отправил файл, других сведений возвращено не было.</span><span class="sxs-lookup"><span data-stu-id="5e63e-103">An error occurred at the printer, but no other information was returned to the computer that sent the file.</span></span>  

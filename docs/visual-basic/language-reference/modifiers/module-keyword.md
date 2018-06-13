@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33595281"
 ---
 # <a name="module-ltkeywordgt-visual-basic"></a><span data-ttu-id="b19a2-102">Модуль &lt;ключевое слово&gt; (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b19a2-102">Module &lt;keyword&gt; (Visual Basic)</span></span>
 <span data-ttu-id="b19a2-103">Указывает, что атрибут в начале исходного файла применяется к текущему модулю сборки.</span><span class="sxs-lookup"><span data-stu-id="b19a2-103">Specifies that an attribute at the beginning of a source file applies to the current assembly module.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33642783"
 ---
 # <a name="how-to-generate-text-files-from-xml-visual-basic"></a><span data-ttu-id="2edfa-102">Как: Создание текстовых файлов из XML-кода (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="2edfa-102">How to: Generate Text Files from XML (Visual Basic)</span></span>
 <span data-ttu-id="2edfa-103">В этом примере показано, как создавать файл с разделителями-запятыми (csv) из XML-файла.</span><span class="sxs-lookup"><span data-stu-id="2edfa-103">This example shows how to generate a comma-separated values (CSV) file from an XML file.</span></span>  

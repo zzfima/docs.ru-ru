@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33582945"
 ---
 # <a name="destroying-threads"></a><span data-ttu-id="28572-102">Уничтожение потоков</span><span class="sxs-lookup"><span data-stu-id="28572-102">Destroying Threads</span></span>
 <span data-ttu-id="28572-103">Метод <xref:System.Threading.Thread.Abort%2A> используется для остановки управляемого потока без возможности возобновления.</span><span class="sxs-lookup"><span data-stu-id="28572-103">The <xref:System.Threading.Thread.Abort%2A> method is used to stop a managed thread permanently.</span></span> <span data-ttu-id="28572-104">При вызове <xref:System.Threading.Thread.Abort%2A> общеязыковая среда выполнения создает в целевом потоке исключение <xref:System.Threading.ThreadAbortException>, которое целевой поток может перехватить.</span><span class="sxs-lookup"><span data-stu-id="28572-104">When you call <xref:System.Threading.Thread.Abort%2A>, the common language runtime throws a <xref:System.Threading.ThreadAbortException> in the target thread, which the target thread can catch.</span></span> <span data-ttu-id="28572-105">Дополнительные сведения см. в разделе <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="28572-105">For more information, see <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>.</span></span>  

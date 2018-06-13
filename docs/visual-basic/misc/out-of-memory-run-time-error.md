@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33637482"
 ---
 # <a name="out-of-memory-visual-basic-run-time-error"></a><span data-ttu-id="9830c-102">Недостаточно памяти (ошибка Visual Basic времени выполнения)</span><span class="sxs-lookup"><span data-stu-id="9830c-102">Out of memory (Visual Basic Run-Time Error)</span></span>
 <span data-ttu-id="9830c-103">Требовалось больше памяти, чем было доступно.</span><span class="sxs-lookup"><span data-stu-id="9830c-103">More memory was required than is available.</span></span>  

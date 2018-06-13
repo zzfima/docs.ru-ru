@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33584700"
 ---
 # <a name="deploying-applications-that-reference-the-printform-component-visual-basic"></a><span data-ttu-id="b28a7-102">Развертывание приложений, ссылающихся на компонент PrintForm (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b28a7-102">Deploying applications that reference the PrintForm component (Visual Basic)</span></span>
 <span data-ttu-id="b28a7-103">Если требуется развернуть приложение, которое ссылается на компонент <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> , этот компонент должен быть установлен на целевом компьютере.</span><span class="sxs-lookup"><span data-stu-id="b28a7-103">If you want to deploy an application that references the <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> component, the component must be installed on the destination computer.</span></span>  

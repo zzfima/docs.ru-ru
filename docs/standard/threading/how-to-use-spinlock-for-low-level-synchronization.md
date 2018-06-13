@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33582760"
 ---
 # <a name="how-to-use-spinlock-for-low-level-synchronization"></a><span data-ttu-id="44556-102">Практическое руководство. SpinLock и низкоуровневая синхронизация</span><span class="sxs-lookup"><span data-stu-id="44556-102">How to: Use SpinLock for Low-Level Synchronization</span></span>
 <span data-ttu-id="44556-103">В следующем примере демонстрируется использование <xref:System.Threading.SpinLock>.</span><span class="sxs-lookup"><span data-stu-id="44556-103">The following example demonstrates how to use a <xref:System.Threading.SpinLock>.</span></span>  

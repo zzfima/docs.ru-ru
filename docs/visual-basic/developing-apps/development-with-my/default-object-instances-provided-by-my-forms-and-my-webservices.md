@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33582666"
 ---
 # <a name="default-object-instances-provided-by-myforms-and-mywebservices-visual-basic"></a><span data-ttu-id="42ba4-102">Экземпляры объектов, которые My.Forms и My.WebServices предоставляют по умолчанию (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="42ba4-102">Default Object Instances Provided by My.Forms and My.WebServices (Visual Basic)</span></span>
 <span data-ttu-id="42ba4-103">[My.Forms](../../../visual-basic/language-reference/objects/my-forms-object.md) и [My.WebServices](../../../visual-basic/language-reference/objects/my-webservices-object.md) объекты предоставляют доступ к формам, источникам данных и веб-служб XML, используемого приложением.</span><span class="sxs-lookup"><span data-stu-id="42ba4-103">The [My.Forms](../../../visual-basic/language-reference/objects/my-forms-object.md) and [My.WebServices](../../../visual-basic/language-reference/objects/my-webservices-object.md) objects provide access to forms, data sources, and XML Web services used by your application.</span></span> <span data-ttu-id="42ba4-104">Это делается путем предоставления коллекций *экземпляров по умолчанию* каждого из этих объектов.</span><span class="sxs-lookup"><span data-stu-id="42ba4-104">They do this by providing collections of *default instances* of each of these objects.</span></span>  

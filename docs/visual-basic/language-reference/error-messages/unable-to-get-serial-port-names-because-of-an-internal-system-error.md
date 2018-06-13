@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33596659"
 ---
 # <a name="unable-to-get-serial-port-names-because-of-an-internal-system-error"></a><span data-ttu-id="ce102-102">Не удалось получить имена последовательных портов из-за внутренней системной ошибки</span><span class="sxs-lookup"><span data-stu-id="ce102-102">Unable to get serial port names because of an internal system error</span></span>
 <span data-ttu-id="ce102-103">При вызове свойства `My.Computer.Ports.SerialPortNames` возникла внутренняя ошибка.</span><span class="sxs-lookup"><span data-stu-id="ce102-103">An internal error occurred when the `My.Computer.Ports.SerialPortNames` property was called.</span></span>  

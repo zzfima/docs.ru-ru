@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33643759"
 ---
 # <a name="how-to-list-all-nodes-in-a-tree-visual-basic"></a><span data-ttu-id="3fff0-102">Как: список всех узлов дерева (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="3fff0-102">How to: List All Nodes in a Tree (Visual Basic)</span></span>
 <span data-ttu-id="3fff0-103">Иногда нужно вывести список всех узлов дерева.</span><span class="sxs-lookup"><span data-stu-id="3fff0-103">Sometimes it is helpful to list all nodes in a tree.</span></span> <span data-ttu-id="3fff0-104">Это полезно, если требуется узнать, как метод или свойство повлияли на дерево.</span><span class="sxs-lookup"><span data-stu-id="3fff0-104">This can be useful when learning exactly how a method or property affects the tree.</span></span> <span data-ttu-id="3fff0-105">Одним из подходов для вывода списка всех узлов в текстовом формате является создание выражения XPath, которое точно определяет каждый конкретный узел дерева.</span><span class="sxs-lookup"><span data-stu-id="3fff0-105">One approach to listing all nodes in a textual form is to generate an XPath expression that exactly and specifically identifies any node in the tree.</span></span>  

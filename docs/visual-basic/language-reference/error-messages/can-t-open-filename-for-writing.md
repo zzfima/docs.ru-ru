@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33586540"
 ---
 # <a name="can39t-open-39ltfilenamegt39-for-writing"></a><span data-ttu-id="f8e04-102">Можно&#39;t откройте &#39; &lt;filename&gt; &#39; для записи</span><span class="sxs-lookup"><span data-stu-id="f8e04-102">Can&#39;t open &#39;&lt;filename&gt;&#39; for writing</span></span>
 <span data-ttu-id="f8e04-103">Указанный файл не удается открыть для записи, возможно, так как он уже открыт.</span><span class="sxs-lookup"><span data-stu-id="f8e04-103">The specified file cannot be opened for writing, perhaps because it has already been opened.</span></span>  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33648168"
 ---
 # <a name="validating-strings-in-visual-basic"></a><span data-ttu-id="7f885-102">Проверка строк в Visual Basic</span><span class="sxs-lookup"><span data-stu-id="7f885-102">Validating Strings in Visual Basic</span></span>
 <span data-ttu-id="7f885-103">В этом разделе описывается, как проверить строки в Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="7f885-103">This section discusses how to validate strings in Visual Basic.</span></span>  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33587362"
 ---
 # <a name="labels-that-are-numbers-must-be-followed-by-colons"></a><span data-ttu-id="c64b8-102">После меток, представляющих собой числа, следует ставить двоеточие</span><span class="sxs-lookup"><span data-stu-id="c64b8-102">Labels that are numbers must be followed by colons</span></span>
 <span data-ttu-id="c64b8-103">Номера строк подчиняются тем же правилам, как другие виды меток и должны содержать двоеточие.</span><span class="sxs-lookup"><span data-stu-id="c64b8-103">Line numbers follow the same rules as other kinds of labels, and must contain a colon.</span></span>  

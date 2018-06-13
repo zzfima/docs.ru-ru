@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33582152"
 ---
 # <a name="how-to-start-an-application-and-send-it-keystrokes-visual-basic"></a><span data-ttu-id="2db72-102">Практическое руководство. Запуск приложения и отправка ему нажатий клавиш (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="2db72-102">How to: Start an Application and Send it Keystrokes (Visual Basic)</span></span>
 <span data-ttu-id="2db72-103">В этом примере используется функция `Shell` для запуска приложения "Калькулятор", а затем перемножается два числа путем отправки событий нажатия клавиш с помощью метода `My.Computer.Keyboard.SendKeys`.</span><span class="sxs-lookup"><span data-stu-id="2db72-103">This example uses the `Shell` function to start the calculator application and then multiplies two numbers by sending keystrokes using the `My.Computer.Keyboard.SendKeys` method.</span></span>  

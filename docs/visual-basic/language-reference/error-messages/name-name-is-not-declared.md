@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33594823"
 ---
 # <a name="name-39ltnamegt39-is-not-declared"></a><span data-ttu-id="f3dbc-102">Имя &#39; &lt;имя&gt; &#39; не объявлена</span><span class="sxs-lookup"><span data-stu-id="f3dbc-102">Name &#39;&lt;name&gt;&#39; is not declared</span></span>
 <span data-ttu-id="f3dbc-103">Оператор ссылается на элемент программирования, но компилятор не может найти элемент с указанным именем.</span><span class="sxs-lookup"><span data-stu-id="f3dbc-103">A statement refers to a programming element, but the compiler cannot find an element with that exact name.</span></span>  

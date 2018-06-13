@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33586774"
 ---
 # <a name="39ltelementnamegt39-is-obsolete-visual-basic-warning"></a><span data-ttu-id="e80e6-102">&#39;&lt;ElementName&gt; &#39; устарел (предупреждение Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e80e6-102">&#39;&lt;elementname&gt;&#39; is obsolete (Visual Basic Warning)</span></span>
 <span data-ttu-id="e80e6-103">Оператор пытается получить доступ к элементу программирования, который был помечен атрибутом <xref:System.ObsoleteAttribute> и директивой, предписывающей расценивать это как предупреждение.</span><span class="sxs-lookup"><span data-stu-id="e80e6-103">A statement attempts to access a programming element which has been marked with the <xref:System.ObsoleteAttribute> attribute and the directive to treat it as a warning.</span></span>  

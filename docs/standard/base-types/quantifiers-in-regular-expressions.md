@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579097"
 ---
 # <a name="quantifiers-in-regular-expressions"></a><span data-ttu-id="64190-102">кванторы в регулярных выражениях</span><span class="sxs-lookup"><span data-stu-id="64190-102">Quantifiers in Regular Expressions</span></span>
 <span data-ttu-id="64190-103">Квантификаторы определяют количество экземпляров символа, группы или класса символов, которое должно присутствовать во входных данных, чтобы было зафиксировано совпадение.</span><span class="sxs-lookup"><span data-stu-id="64190-103">Quantifiers specify how many instances of a character, group, or character class must be present in the input for a match to be found.</span></span>  <span data-ttu-id="64190-104">В приведенной ниже таблице перечислены квантификаторы, поддерживаемые платформой .NET.</span><span class="sxs-lookup"><span data-stu-id="64190-104">The following table lists the quantifiers supported by .NET.</span></span>  

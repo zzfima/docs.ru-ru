@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33598587"
 ---
 # <a name="pathfile-access-error"></a><span data-ttu-id="edbb5-102">Ошибка доступа к пути/файлу</span><span class="sxs-lookup"><span data-stu-id="edbb5-102">Path/File access error</span></span>
 <span data-ttu-id="edbb5-103">Во время операции доступа к файлам или доступа к диску операционной системы не может сделать соединение между путь и имя файла.</span><span class="sxs-lookup"><span data-stu-id="edbb5-103">During a file-access or disk-access operation, the operating system could not make a connection between the path and the file name.</span></span>  

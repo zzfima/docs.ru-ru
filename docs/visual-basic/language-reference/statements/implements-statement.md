@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33604215"
 ---
 # <a name="implements-statement"></a><span data-ttu-id="beb04-102">Оператор Implements</span><span class="sxs-lookup"><span data-stu-id="beb04-102">Implements Statement</span></span>
 <span data-ttu-id="beb04-103">Указывает один или несколько интерфейсов, или членов интерфейса, которые должны быть реализованы в классе или определение структуры, в котором он отображается.</span><span class="sxs-lookup"><span data-stu-id="beb04-103">Specifies one or more interfaces, or interface members, that must be implemented in the class or structure definition in which it appears.</span></span>  

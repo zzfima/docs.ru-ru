@@ -26,6 +26,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33604579"
 ---
 # <a name="selectcase-statement-visual-basic"></a><span data-ttu-id="e8767-102">Оператор Select...Case (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e8767-102">Select...Case Statement (Visual Basic)</span></span>
 <span data-ttu-id="e8767-103">Запускает один из нескольких групп операторов в зависимости от значения выражения.</span><span class="sxs-lookup"><span data-stu-id="e8767-103">Runs one of several groups of statements, depending on the value of an expression.</span></span>  
