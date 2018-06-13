@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33562301"
 ---
 # <a name="how-to-control-key-frame-animation-timing"></a>Практическое руководство. Распределение времени для анимации с ключевыми кадрами
 В этом примере показано, как управлять временем ключевых кадров в анимацию кадрам. Как и другие виды анимации, имеют кадрам <xref:System.Windows.Media.Animation.Timeline.Duration%2A> свойство. Помимо указания продолжительности анимации, необходимо указать, какая часть длительности выделяется для каждого из его ключевых кадров. Чтобы выделить время, необходимо указать <xref:System.Windows.Media.Animation.KeyTime> для каждого ключевого кадра анимации.  

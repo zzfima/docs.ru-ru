@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33565549"
 ---
 # <a name="whitespace-processing-in-xaml"></a>Обработка пробелов в XAML
 Согласно правилам языка XAML значащие пробелы должны обрабатываться реализации процессора [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] . В этом разделе описываются эти правила языка XAML. Здесь также описывается обработка дополнительных пробелов, которая определяется в реализации [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] процессора XAML и модуле записи XAML для сериализации.  

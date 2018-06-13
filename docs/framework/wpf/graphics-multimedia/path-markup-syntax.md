@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33566773"
 ---
 # <a name="path-markup-syntax"></a>Синтаксис разметки пути
 Пути рассматриваются в [фигур и базовых средств рисования в общие сведения о WPF](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md) и [конфигурациях](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md), однако в этом разделе подробно описываются мощное и сложное мини-язык, можно использовать для указания пути более [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].  
