@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33656049"
 ---
 # <a name="how-to-modify-xml-literals-visual-basic"></a>Практическое руководство. Изменение XML-литералов (Visual Basic)
 Visual Basic предоставляет удобный способ изменения XML-литералов. Можно добавить или удалить элементы и атрибуты, и также можно заменить существующий элемент новым элементом XML. Здесь приведены несколько примеров того, как изменить существующий XML-литерала.  

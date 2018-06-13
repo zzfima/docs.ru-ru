@@ -9,6 +9,7 @@ ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "33957964"
 ---
 # <a name="when-not-to-deploy-to-windows-containers"></a>Когда не следует развернуть контейнеры Windows
 

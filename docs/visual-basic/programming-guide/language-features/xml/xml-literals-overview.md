@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33655027"
 ---
 # <a name="xml-literals-overview-visual-basic"></a>Общие сведения об XML-литералах (Visual Basic)
 *XML-литерала* позволяет внедрять XML непосредственно в код Visual Basic. Синтаксис XML представляет [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] объектов, который напоминает синтаксис XML 1.0. Это упрощает программное создание XML-элементов и документов, так как код имеет такую же структуру, как последний XML.  

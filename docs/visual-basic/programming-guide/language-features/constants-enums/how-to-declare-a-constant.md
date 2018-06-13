@@ -28,6 +28,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33649741"
 ---
 # <a name="how-to-declare-a-constant-visual-basic"></a>Практическое руководство. Объявление константы (Visual Basic)
 Вы используете `Const` инструкцию, чтобы объявление константы и присвойте ему значение. В объявлении константы, понятное имя назначить значение. После объявления константы ее нельзя изменить или присвоить новое значение.  

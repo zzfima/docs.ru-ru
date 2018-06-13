@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33605281"
 ---
 # <a name="exit-statement-visual-basic"></a>Оператор Exit (Visual Basic)
 Выходит из процедуры или блока и немедленно передает управление оператору после вызова процедуры или определения блока.  

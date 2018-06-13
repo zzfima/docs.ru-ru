@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33655815"
 ---
 # <a name="references-to-declared-elements-visual-basic"></a>Ссылки на объявленные элементы (Visual Basic)
 Когда код ссылается на объявленный элемент, компилятор Visual Basic соответствует имени в ссылке соответствующему объявлению с тем же именем. Если с тем же именем объявлено несколько элементов, можно управлять, какой из этих элементов — для ссылки на *соответствующие* его имя.  

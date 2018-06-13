@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33636732"
 ---
 # <a name="managed-classes-derived-from-a-com-class-cannot-be-called-late-bound"></a>Управляемые классы, производные от класса COM, не могут вызываться с отложенной привязкой.
 Предпринята попытка вызова с поздней привязкой управляемого класса, производного от класса COM, однако такие вызовы не поддерживаются.  
