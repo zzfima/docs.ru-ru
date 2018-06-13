@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33602024"
 ---
 # <a name="skip-while-clause-visual-basic"></a>Предложение Skip While (Visual Basic)
 Пропускает элементы в коллекции, если заданное условие имеет значение `true`, и возвращает остальные элементы.  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33602058"
 ---
 # <a name="static-visual-basic"></a>Static (Visual Basic)
 Указывает один или несколько объявленных локальных переменных должны по-прежнему существует и сохранять свои последние значения после завершения процедуры, в котором они объявлены.  

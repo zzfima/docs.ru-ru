@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33639862"
 ---
 # <a name="this-system-does-not-contain-support-for-the-japanese-locale"></a>Эта система не содержит поддержки для стандартов японского языка
 Вы пытаетесь использовать элемент перечисления `VbStrConv.Japanese` , но ваша система не поддерживает японский язык.  

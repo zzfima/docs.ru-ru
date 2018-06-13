@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33599051"
 ---
 # <a name="argument-39ltargumentnamegt39-cannot-be-converted-to-type-39lttypenamegt39"></a>Аргумент &#39; &lt;имя_аргумента&gt; &#39; не может быть преобразован в тип &#39; &lt;typename&gt;&#39;
 Преобразование пытается изменить аргумент на тип, который является недопустимым.  
