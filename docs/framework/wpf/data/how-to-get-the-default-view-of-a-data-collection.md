@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557177"
 ---
 # <a name="how-to-get-the-default-view-of-a-data-collection"></a><span data-ttu-id="e5990-102">Практическое руководство. Получение представления по умолчанию для коллекции данных</span><span class="sxs-lookup"><span data-stu-id="e5990-102">How to: Get the Default View of a Data Collection</span></span>
 <span data-ttu-id="e5990-103">Представления позволяют просматривать различными способами, в зависимости от сортировки, фильтрации и группирования критерии одну коллекцию данных.</span><span class="sxs-lookup"><span data-stu-id="e5990-103">Views allow the same data collection to be viewed in different ways, depending on sorting, filtering, or grouping criteria.</span></span> <span data-ttu-id="e5990-104">Каждая коллекция имеет одно общее представление по умолчанию, который используется в качестве фактического источника привязки, если привязка задает коллекцию в качестве источника.</span><span class="sxs-lookup"><span data-stu-id="e5990-104">Every collection has one shared default view, which is used as the actual binding source when a binding specifies a collection as its source.</span></span> <span data-ttu-id="e5990-105">В этом примере показано, как получить представление коллекции по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="e5990-105">This example shows how to get the default view of a collection.</span></span>  

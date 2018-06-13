@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33559174"
 ---
 # <a name="how-to-read-metadata-from-a-bitmap"></a><span data-ttu-id="277fb-102">Практическое руководство. Чтение метаданных объекта Bitmap</span><span class="sxs-lookup"><span data-stu-id="277fb-102">How to: Read Metadata from a Bitmap</span></span>
 <span data-ttu-id="277fb-103">В этом примере показано, как на чтение метаданных растрового изображения с помощью языка запросов метаданных.</span><span class="sxs-lookup"><span data-stu-id="277fb-103">This example shows how to read bitmap metadata using the metadata query language.</span></span>  

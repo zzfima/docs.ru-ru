@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 3e09bf424a41445f7e36397775d1578cdf4e7e75
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33442791"
 ---
 # <a name="corsetenc-enumeration"></a><span data-ttu-id="79a0a-102">Перечисление CorSetENC</span><span class="sxs-lookup"><span data-stu-id="79a0a-102">CorSetENC Enumeration</span></span>
 <span data-ttu-id="79a0a-103">Содержит значения, используемые для оказания влияния на поведение во время создания метаданных.</span><span class="sxs-lookup"><span data-stu-id="79a0a-103">Contains values used to influence behavior during the generation of metadata.</span></span>  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557593"
 ---
 # <a name="expander-overview"></a><span data-ttu-id="07f13-102">Общие сведения об элементе управления Expander</span><span class="sxs-lookup"><span data-stu-id="07f13-102">Expander Overview</span></span>
 <span data-ttu-id="07f13-103"><xref:System.Windows.Controls.Expander> Управления обеспечивает способ предоставления содержимого в развертываемой области, имеющей вид окна и включающей заголовок.</span><span class="sxs-lookup"><span data-stu-id="07f13-103">An <xref:System.Windows.Controls.Expander> control provides a way to provide content in an expandable area that resembles a window and includes a header.</span></span>  

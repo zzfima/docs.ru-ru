@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: bb5de5b46a46d5caa74b83f16d943edc39d08b01
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33441842"
 ---
 # <a name="ihostiocompletionmanagergetavailablethreads-method"></a><span data-ttu-id="08c60-102">Метод IHostIoCompletionManager::GetAvailableThreads</span><span class="sxs-lookup"><span data-stu-id="08c60-102">IHostIoCompletionManager::GetAvailableThreads Method</span></span>
 <span data-ttu-id="08c60-103">Возвращает число потоков завершения ввода-вывода, от общего количества потоков, управляемых сервером, которые в настоящее время не обслуживает запросы.</span><span class="sxs-lookup"><span data-stu-id="08c60-103">Gets the number of I/O completion threads, of the total number of threads managed by the host, that are not currently servicing requests.</span></span>  

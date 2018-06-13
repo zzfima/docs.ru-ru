@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33556154"
 ---
 # <a name="how-to-resize-columns-with-a-gridsplitter"></a><span data-ttu-id="436a8-102">Практическое руководство. Изменение размера столбцов с помощью разделителя GridSplitter</span><span class="sxs-lookup"><span data-stu-id="436a8-102">How to: Resize Columns with a GridSplitter</span></span>
 <span data-ttu-id="436a8-103">В этом примере показано, как создать вертикальной <xref:System.Windows.Controls.GridSplitter> для увеличения пространства между двумя столбцами в <xref:System.Windows.Controls.Grid> без изменения размеров <xref:System.Windows.Controls.Grid>.</span><span class="sxs-lookup"><span data-stu-id="436a8-103">This example shows how to create a vertical <xref:System.Windows.Controls.GridSplitter> in order to redistribute the space between two columns in a <xref:System.Windows.Controls.Grid> without changing the dimensions of the <xref:System.Windows.Controls.Grid>.</span></span>  

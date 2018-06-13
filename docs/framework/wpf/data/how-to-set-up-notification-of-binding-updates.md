@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33555846"
 ---
 # <a name="how-to-set-up-notification-of-binding-updates"></a><span data-ttu-id="a231e-102">Практическое руководство. Настройка уведомлений обновлений привязок</span><span class="sxs-lookup"><span data-stu-id="a231e-102">How to: Set Up Notification of Binding Updates</span></span>
 <span data-ttu-id="a231e-103">В этом примере показано, как настроить уведомления об обновлении свойства цели привязки (целевой) или источника привязки (источник) для привязки.</span><span class="sxs-lookup"><span data-stu-id="a231e-103">This example shows how to set up to be notified when the binding target (target) or the binding source (source) property of a binding has been updated.</span></span>  

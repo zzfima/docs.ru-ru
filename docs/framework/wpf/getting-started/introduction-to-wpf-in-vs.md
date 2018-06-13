@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33554972"
 ---
 # <a name="introduction-to-wpf-in-visual-studio"></a><span data-ttu-id="c3536-102">Введение в WPF в Visual Studio</span><span class="sxs-lookup"><span data-stu-id="c3536-102">Introduction to WPF in Visual Studio</span></span>
 <span data-ttu-id="c3536-103">Windows Presentation Foundation (WPF) в Visual Studio предоставляет разработчикам унифицированную модель программирования для построения бизнес-приложений для настольных систем Windows.</span><span class="sxs-lookup"><span data-stu-id="c3536-103">Windows Presentation Foundation (WPF) in Visual Studio provides developers with a unified programming model for building line-of-business desktop applications on Windows.</span></span>  

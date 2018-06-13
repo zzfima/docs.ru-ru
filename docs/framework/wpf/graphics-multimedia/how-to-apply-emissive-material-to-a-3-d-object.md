@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33559431"
 ---
 # <a name="how-to-apply-emissive-material-to-a-3-d-object"></a><span data-ttu-id="aeea5-102">Практическое руководство. Применение эмиссионного материала к трехмерному объекту</span><span class="sxs-lookup"><span data-stu-id="aeea5-102">How to: Apply Emissive Material to a 3-D Object</span></span>
 <span data-ttu-id="aeea5-103">В следующем примере показано, как использовать <xref:System.Windows.Media.Media3D.EmissiveMaterial> для добавления цвета в существующий материал, равный цвету кисти EmissiveMaterial.</span><span class="sxs-lookup"><span data-stu-id="aeea5-103">The following example shows how to use <xref:System.Windows.Media.Media3D.EmissiveMaterial> to add color to an existing Material equal to the color of the EmissiveMaterial's brush.</span></span> <span data-ttu-id="aeea5-104">Ниже показан код <xref:System.Windows.Media.Media3D.DiffuseMaterial> и <xref:System.Windows.Media.Media3D.EmissiveMaterial> примененные вместе для добавления синего цвета во внешний вид DiffuseMaterial.</span><span class="sxs-lookup"><span data-stu-id="aeea5-104">The code below shows <xref:System.Windows.Media.Media3D.DiffuseMaterial> and <xref:System.Windows.Media.Media3D.EmissiveMaterial> applied in combination to add blue to the DiffuseMaterial's appearance.</span></span>  

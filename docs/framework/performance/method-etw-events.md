@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33398109"
 ---
 # <a name="method-etw-events"></a><span data-ttu-id="c68a1-102">События методов (трассировка событий Windows)</span><span class="sxs-lookup"><span data-stu-id="c68a1-102">Method ETW Events</span></span>
 <a name="top"></a> <span data-ttu-id="c68a1-103">Эти события собирают сведения, связанные с методами.</span><span class="sxs-lookup"><span data-stu-id="c68a1-103">These events collect information that is specific to methods.</span></span> <span data-ttu-id="c68a1-104">Полезные данные этих событий необходимы для разрешения символов.</span><span class="sxs-lookup"><span data-stu-id="c68a1-104">The payload of these events is required for symbol resolution.</span></span> <span data-ttu-id="c68a1-105">Кроме того, эти события содержат полезные сведения, например сколько раз вызывался метод.</span><span class="sxs-lookup"><span data-stu-id="c68a1-105">In addition, these events provide helpful information such as the number of times a method was called.</span></span>  

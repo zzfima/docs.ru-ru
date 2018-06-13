@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33556735"
 ---
 # <a name="how-to-get-the-binding-object-from-a-bound-target-property"></a><span data-ttu-id="6dd6a-102">Практическое руководство. Получение объекта привязки из свойства целевого объекта привязки</span><span class="sxs-lookup"><span data-stu-id="6dd6a-102">How to: Get the Binding Object from a Bound Target Property</span></span>
 <span data-ttu-id="6dd6a-103">В этом примере показано, как получить объект привязки из свойства целевого связанного объекта.</span><span class="sxs-lookup"><span data-stu-id="6dd6a-103">This example shows how to obtain the binding object from a data-bound target property.</span></span>  

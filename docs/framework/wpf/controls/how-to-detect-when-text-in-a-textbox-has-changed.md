@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33552956"
 ---
 # <a name="how-to-detect-when-text-in-a-textbox-has-changed"></a><span data-ttu-id="afdc0-102">Практическое руководство. Определение изменения текста в TextBox</span><span class="sxs-lookup"><span data-stu-id="afdc0-102">How to: Detect When Text in a TextBox Has Changed</span></span>
 <span data-ttu-id="afdc0-103">В этом примере показано, как использовать <xref:System.Windows.Controls.Primitives.TextBoxBase.TextChanged> событий для выполнения метода всякий раз, когда текст в <xref:System.Windows.Controls.TextBox> элемент управления был изменен.</span><span class="sxs-lookup"><span data-stu-id="afdc0-103">This example shows one way to use the <xref:System.Windows.Controls.Primitives.TextBoxBase.TextChanged> event to execute a method whenever the text in a <xref:System.Windows.Controls.TextBox> control has changed.</span></span>  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557723"
 ---
 # <a name="graphics-rendering-registry-settings"></a><span data-ttu-id="8d4f3-102">Настройки реестра графической отрисовки</span><span class="sxs-lookup"><span data-stu-id="8d4f3-102">Graphics Rendering Registry Settings</span></span>
 <span data-ttu-id="8d4f3-103">В этом разделе содержится обзор параметров графической отрисовки [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] в реестре, которые влияют на приложения [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].</span><span class="sxs-lookup"><span data-stu-id="8d4f3-103">This topic provides an overview of the [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] graphics rendering registry settings that affect [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] applications.</span></span>  

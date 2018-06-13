@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557424"
 ---
 # <a name="default-keyboard-and-mouse-behavior-in-the-datagrid-control"></a><span data-ttu-id="4a6db-102">Поведение мыши и клавиатуры по умолчанию в элементе управления DataGrid</span><span class="sxs-lookup"><span data-stu-id="4a6db-102">Default Keyboard and Mouse Behavior in the DataGrid Control</span></span>
 <span data-ttu-id="4a6db-103">В этом разделе описывается, как пользователи могут взаимодействовать с <xref:System.Windows.Controls.DataGrid> управления с помощью клавиатуры и мыши.</span><span class="sxs-lookup"><span data-stu-id="4a6db-103">This topic describes how users can interact with the <xref:System.Windows.Controls.DataGrid> control by using the keyboard and mouse.</span></span>  

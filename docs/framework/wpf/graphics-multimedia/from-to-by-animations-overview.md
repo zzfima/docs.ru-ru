@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557801"
 ---
 # <a name="fromtoby-animations-overview"></a><span data-ttu-id="86393-102">Общие сведения об анимациях From/To/By</span><span class="sxs-lookup"><span data-stu-id="86393-102">From/To/By Animations Overview</span></span>
 <span data-ttu-id="86393-103">В этом разделе описываются способы использования анимаций From/To/By для свойств зависимостей.</span><span class="sxs-lookup"><span data-stu-id="86393-103">This topic describes how to use From/To/By animations to animate dependency properties.</span></span> <span data-ttu-id="86393-104">Анимация From/To/By создает переход между двумя целевыми значениями.</span><span class="sxs-lookup"><span data-stu-id="86393-104">A From/To/By animation creates a transition between two values.</span></span>  

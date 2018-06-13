@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33558009"
 ---
 # <a name="bitmap-effects-overview"></a><span data-ttu-id="f95ff-102">Общие сведения об эффектах для точечных рисунков</span><span class="sxs-lookup"><span data-stu-id="f95ff-102">Bitmap Effects Overview</span></span>
 <span data-ttu-id="f95ff-103">Эффекты точечного рисунка позволяют конструкторам и разработчикам применять визуальные эффекты к просмотру содержимого Windows Presentation Foundation (WPF).</span><span class="sxs-lookup"><span data-stu-id="f95ff-103">Bitmap effects enable designers and developers to apply visual effects to rendered Windows Presentation Foundation (WPF) content.</span></span> <span data-ttu-id="f95ff-104">Например, растровых эффектов, которые позволяют применять легко <xref:System.Windows.Media.Effects.DropShadowBitmapEffect> эффект или эффект размытия изображения или кнопки.</span><span class="sxs-lookup"><span data-stu-id="f95ff-104">For example, bitmap effects allow you to easily apply a <xref:System.Windows.Media.Effects.DropShadowBitmapEffect> effect or a blur effect to an image or a button.</span></span>  

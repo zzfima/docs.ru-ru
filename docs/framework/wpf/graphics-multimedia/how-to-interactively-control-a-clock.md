@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33560228"
 ---
 # <a name="how-to-interactively-control-a-clock"></a><span data-ttu-id="54dcb-102">Практическое руководство. Управление часами в интерактивном режиме</span><span class="sxs-lookup"><span data-stu-id="54dcb-102">How to: Interactively Control a Clock</span></span>
 <span data-ttu-id="54dcb-103">Объект <xref:System.Windows.Media.Animation.Clock> объекта <xref:System.Windows.Media.Animation.ClockController> свойство позволяет интерактивно запуск, приостановка, возобновление, поиска, перемещать значение до периода заполнения и остановить часы.</span><span class="sxs-lookup"><span data-stu-id="54dcb-103">A <xref:System.Windows.Media.Animation.Clock> object's <xref:System.Windows.Media.Animation.ClockController> property enables you to interactively start, pause, resume, seek, advance the clock to its fill period, and stop the clock.</span></span> <span data-ttu-id="54dcb-104">Можно интерактивно управлять только корневые часы временного дерева.</span><span class="sxs-lookup"><span data-stu-id="54dcb-104">Only the root clock of a timing tree can be interactively controlled.</span></span>  

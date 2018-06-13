@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: df1fb24c4003f77523ef01a4029fd19cc55a3fef
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33442225"
 ---
 # <a name="ihosttask-interface"></a><span data-ttu-id="4b721-102">Интерфейс IHostTask</span><span class="sxs-lookup"><span data-stu-id="4b721-102">IHostTask Interface</span></span>
 <span data-ttu-id="4b721-103">Предоставляет методы, позволяющие общеязыковой среды выполнения (CLR) для взаимодействия с основным приложением для управления задачами.</span><span class="sxs-lookup"><span data-stu-id="4b721-103">Provides methods that allow the common language runtime (CLR) to communicate with the host to manage tasks.</span></span>  

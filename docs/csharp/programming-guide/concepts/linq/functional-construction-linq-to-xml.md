@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33329859"
 ---
 # <a name="functional-construction-linq-to-xml-c"></a><span data-ttu-id="5c508-102">Функциональное построение (LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="5c508-102">Functional Construction (LINQ to XML) (C#)</span></span>
 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]<span data-ttu-id="5c508-103"> предоставляет эффективный способ создания XML-элементов, который называется *функциональным построением*.</span><span class="sxs-lookup"><span data-stu-id="5c508-103"> provides a powerful way to create XML elements called *functional construction*.</span></span> <span data-ttu-id="5c508-104">Функциональное построение — это возможность создать XML-дерево одной инструкцией.</span><span class="sxs-lookup"><span data-stu-id="5c508-104">Functional construction is the ability to create an XML tree in a single statement.</span></span>  

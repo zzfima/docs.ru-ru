@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 089aaf96a164be7eaa258dec65807bd75c998eb7
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33440974"
 ---
 # <a name="ihosttaskmanagergetstackguarantee-method"></a><span data-ttu-id="c2304-102">Метод IHostTaskManager::GetStackGuarantee</span><span class="sxs-lookup"><span data-stu-id="c2304-102">IHostTaskManager::GetStackGuarantee Method</span></span>
 <span data-ttu-id="c2304-103">Возвращает объем места в стеке, гарантированно будут доступны после завершения операций в стеке, но до закрытия процесса.</span><span class="sxs-lookup"><span data-stu-id="c2304-103">Gets the amount of stack space that is guaranteed to be available after a stack operation completes, but before the closing of a process.</span></span>  

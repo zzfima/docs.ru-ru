@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33559684"
 ---
 # <a name="how-to-hit-test-in-a-viewport3d"></a><span data-ttu-id="aedcb-102">Практическое руководство. Проверка нажатия в Viewport3D</span><span class="sxs-lookup"><span data-stu-id="aedcb-102">How to: Hit Test in a Viewport3D</span></span>
 <span data-ttu-id="aedcb-103">В этом примере показано, как для проверки нажатия для трехмерной визуальных элементов в <xref:System.Windows.Controls.Viewport3D>.</span><span class="sxs-lookup"><span data-stu-id="aedcb-103">This example shows how to hit test for 3D Visuals in a <xref:System.Windows.Controls.Viewport3D>.</span></span>  

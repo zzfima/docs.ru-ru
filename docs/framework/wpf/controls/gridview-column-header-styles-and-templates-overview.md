@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33553876"
 ---
 # <a name="gridview-column-header-styles-and-templates-overview"></a><span data-ttu-id="d69bd-102">Общие сведения о стилях заголовков столбцов GridView и шаблонах</span><span class="sxs-lookup"><span data-stu-id="d69bd-102">GridView Column Header Styles and Templates Overview</span></span>
 <span data-ttu-id="d69bd-103">В этом обзоре описывается порядок приоритета для свойств, которые позволяют настроить заголовок столбца в <xref:System.Windows.Controls.GridView> режим просмотра для <xref:System.Windows.Controls.ListView> элемента управления.</span><span class="sxs-lookup"><span data-stu-id="d69bd-103">This overview discusses the order of precedence for properties that you use to customize a column header in the <xref:System.Windows.Controls.GridView> view mode of a <xref:System.Windows.Controls.ListView> control.</span></span>  

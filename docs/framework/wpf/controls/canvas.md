@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33553278"
 ---
 # <a name="canvas"></a><span data-ttu-id="d606c-102">Canvas</span><span class="sxs-lookup"><span data-stu-id="d606c-102">Canvas</span></span>
 <span data-ttu-id="d606c-103"><xref:System.Windows.Controls.Canvas> Представляет элемент управления макета, позволяющий абсолютное позиционирование дочерних элементов.</span><span class="sxs-lookup"><span data-stu-id="d606c-103"><xref:System.Windows.Controls.Canvas> is a layout control that enables absolute positioning of child elements.</span></span>  
