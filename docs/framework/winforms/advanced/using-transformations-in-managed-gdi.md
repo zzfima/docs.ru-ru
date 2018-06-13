@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33523800"
 ---
 # <a name="using-transformations-in-managed-gdi"></a>Использование преобразований в управляемом GDI+
 Аффинные преобразования включают поворот, масштабирование, отражение, наклон и преобразования. В [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], <xref:System.Drawing.Drawing2D.Matrix> класс предоставляет основу для осуществления аффинных преобразований векторные рисунки, изображения и текст.  

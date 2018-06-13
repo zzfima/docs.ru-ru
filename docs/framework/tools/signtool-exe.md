@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33409819"
 ---
 # <a name="signtoolexe-sign-tool"></a>SignTool.exe (программа подписывания)
 Sign Tool — это программа командной строки, которая присваивает цифровые подписи файлам, проверяет подписи файлов и создает отметки времени для файлов.  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33520725"
 ---
 # <a name="help-systems-in-windows-forms-applications"></a>Справочные системы в приложениях Windows Forms
 Одно из наиболее важных преимуществ, как разработчик приложений, можно предоставить пользователям является исчерпывающая справочная система. Это происходит, где они включается, когда они становятся путать или затруднений. Справочную систему в приложении Windows легко выполняется с помощью [компонент HelpProvider](../../../../docs/framework/winforms/controls/helpprovider-component-windows-forms.md).  

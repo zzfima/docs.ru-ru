@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33552796"
 ---
 # <a name="how-to-improve-the-scrolling-performance-of-a-listbox"></a>Практическое руководство. Улучшение производительности прокрутки ListBox
 Если <xref:System.Windows.Controls.ListBox> содержит много элементов, ответ пользовательского интерфейса может замедлиться при прокрутке <xref:System.Windows.Controls.ListBox> с помощью колесика мыши или путем перетаскивания ползунка полосы прокрутки. Можно повысить производительность <xref:System.Windows.Controls.ListBox> при прокрутке, задав `VirtualizingStackPanel.VirtualizationMode` присоединенному свойству <xref:System.Windows.Controls.VirtualizationMode.Recycling?displayProperty=nameWithType>.  

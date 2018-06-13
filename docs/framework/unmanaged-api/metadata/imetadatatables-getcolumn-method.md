@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 850a97240e0a6450b4dec759a8786e0df5bffac8
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33448964"
 ---
 # <a name="imetadatatablesgetcolumn-method"></a>Метод IMetaDataTables::GetColumn
 Возвращает указатель на значение, содержащееся в ячейке указанного столбца и строки в данной таблице.  

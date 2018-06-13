@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33519685"
 ---
 # <a name="transacted-queues"></a>Транзакционные очереди
 В этом примере показано, как объединить очереди и транзакции в Windows Workflow Foundation (WF) для создания надежные и масштабируемые службы. Объект <!--zz <xref:System.Activities.TransactionScope>--> `System.Activities.TransactionScope` используется в рабочем потоке клиента для отправки сообщения в очередь в рамках транзакции с использованием <xref:System.ServiceModel.NetMsmqBinding>. Область <xref:System.ServiceModel.Activities.TransactedReceiveScope> используется на сервере для получения сообщений из очереди и обновления состояния рабочего процесса в рамках той же транзакции.  

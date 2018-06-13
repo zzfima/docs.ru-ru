@@ -16,6 +16,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32744672"
 ---
 # <a name="ltnetworkgt-element-network-settings"></a>&lt;сети&gt; элемент (параметры сети)
 Настройка сетевых параметров для внешнего сервера Simple Mail Transport Protocol (SMTP).  

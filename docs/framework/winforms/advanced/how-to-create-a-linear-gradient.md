@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33522464"
 ---
 # <a name="how-to-create-a-linear-gradient"></a>Практическое руководство. Создание линейного градиента
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] поддерживает горизонтальные, вертикальные и диагональные линейные градиенты. По умолчанию цвет в линейном градиенте меняется равномерно. Тем не менее можно настроить линейный градиент, чтобы цвет изменяется таким образом неоднородной.  

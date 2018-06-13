@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33522761"
 ---
 # <a name="how-to-align-drawn-text"></a>Практическое руководство. Выравнивание рисуемого текста
 При выполнении пользовательской отрисовки, часто требуется формируемого выравнивание текста по центру формы или элемента управления. Выровнять текст, отображаемый с <xref:System.Drawing.Graphics.DrawString%2A> или <xref:System.Windows.Forms.TextRenderer.DrawText%2A> методы создания нужный объект форматирования и установив соответствующие параметры форматирования.  

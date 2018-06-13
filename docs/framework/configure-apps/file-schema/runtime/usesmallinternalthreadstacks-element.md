@@ -12,6 +12,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32745491"
 ---
 # <a name="ltusesmallinternalthreadstacksgt-element"></a>&lt;UseSmallInternalThreadStacks&gt; элемент
 Запросы, что общеязыковой среды выполнения (CLR) уменьшение памяти использовать путем указания явных размеров стека при создании определенных потоков, используемых для внутренних целей, вместо того чтобы использовать размер стека по умолчанию для этих потоков.  

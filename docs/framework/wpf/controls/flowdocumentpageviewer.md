@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33551234"
 ---
 # <a name="flowdocumentpageviewer"></a>FlowDocumentPageViewer
 <xref:System.Windows.Controls.FlowDocumentPageViewer> Управления используется для просмотра <xref:System.Windows.Documents.FlowDocument> содержимого на основе страниц. Этот метод противоположен <xref:System.Windows.Controls.FlowDocumentScrollViewer>, отображает <xref:System.Windows.Documents.FlowDocument> содержимого в средстве просмотра прокрутки.  

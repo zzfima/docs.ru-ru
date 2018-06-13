@@ -12,6 +12,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32741949"
 ---
 # <a name="strong-named-assemblies"></a>Сборки со строгими именами
 При задании строгого имени для сборки для нее создается уникальный идентификатор, что позволяет избежать конфликтов сборок.  

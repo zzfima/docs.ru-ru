@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33519191"
 ---
 # <a name="persisting-a-workflow-application"></a>Сохранение приложения рабочего процесса
 Этот образец демонстрирует, как запускать приложение <xref:System.Activities.WorkflowApplication>, выгружать его при переходе в состояние бездействия и снова загружать для продолжения выполнения.  

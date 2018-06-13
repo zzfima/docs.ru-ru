@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33520790"
 ---
 # <a name="how-to-convert-a-bmp-image-to-a-png-image"></a>Практическое руководство. Преобразование изображение из формата BMP в формат PNG
 Очень часто необходимо преобразовать изображение из одного формата в другой. Это легко сделать, вызвав метод <xref:System.Drawing.Image.Save%2A> класса <xref:System.Drawing.Image> и указав в качестве параметра <xref:System.Drawing.Imaging.ImageFormat> нужный формат файла.  
