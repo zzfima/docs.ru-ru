@@ -18,6 +18,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32746063"
 ---
 # <a name="lttracegt-element"></a><span data-ttu-id="c46e0-102">&lt;трассировки&gt; элемент</span><span class="sxs-lookup"><span data-stu-id="c46e0-102">&lt;trace&gt; Element</span></span>
 <span data-ttu-id="c46e0-103">Содержит прослушиватели, которые собирают, хранят и маршрутизируют сообщения трассировки.</span><span class="sxs-lookup"><span data-stu-id="c46e0-103">Contains listeners that collect, store, and route tracing messages.</span></span>  

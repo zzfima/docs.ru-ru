@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32761484"
 ---
 # <a name="deref-entity-sql"></a><span data-ttu-id="c287e-102">DEREF (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="c287e-102">DEREF (Entity SQL)</span></span>
 <span data-ttu-id="c287e-103">Разыменовывает значение ссылки и выдает результат разыменования.</span><span class="sxs-lookup"><span data-stu-id="c287e-103">Dereferences a reference value and produces the result of that dereference.</span></span>  

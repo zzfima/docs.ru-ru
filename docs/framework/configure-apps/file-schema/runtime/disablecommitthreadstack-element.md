@@ -15,6 +15,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32752667"
 ---
 # <a name="ltdisablecommitthreadstackgt-element"></a><span data-ttu-id="7cb69-102">&lt;disableCommitThreadStack&gt; элемент</span><span class="sxs-lookup"><span data-stu-id="7cb69-102">&lt;disableCommitThreadStack&gt; Element</span></span>
 <span data-ttu-id="7cb69-103">Указывает, фиксируется ли весь стек потоков при запуске потока.</span><span class="sxs-lookup"><span data-stu-id="7cb69-103">Specifies whether the full thread stack is committed when a thread is started.</span></span>  

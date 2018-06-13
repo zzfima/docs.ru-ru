@@ -17,6 +17,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32748676"
 ---
 # <a name="ltruntimegt-element"></a><span data-ttu-id="6374c-102">&lt;Среда выполнения&gt; элемент</span><span class="sxs-lookup"><span data-stu-id="6374c-102">&lt;runtime&gt; Element</span></span>
 <span data-ttu-id="6374c-103">Предоставляет сведения, используемые средой CLR для настройки приложений.</span><span class="sxs-lookup"><span data-stu-id="6374c-103">Provides information used by the common language runtime to configure applications.</span></span>  

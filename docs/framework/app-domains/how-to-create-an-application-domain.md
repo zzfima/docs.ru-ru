@@ -15,6 +15,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32751784"
 ---
 # <a name="how-to-create-an-application-domain"></a><span data-ttu-id="f8035-102">Практическое руководство. Создание домена приложения</span><span class="sxs-lookup"><span data-stu-id="f8035-102">How to: Create an Application Domain</span></span>
 <span data-ttu-id="f8035-103">Хост-приложение CLR автоматически создает домены приложений в нужный момент.</span><span class="sxs-lookup"><span data-stu-id="f8035-103">A common language runtime host creates application domains automatically when they are needed.</span></span> <span data-ttu-id="f8035-104">Но можно создать собственные домены приложений и загрузить их в те сборки, которыми требуется управлять отдельно.</span><span class="sxs-lookup"><span data-stu-id="f8035-104">However, you can create your own application domains and load into them those assemblies that you want to manage personally.</span></span> <span data-ttu-id="f8035-105">Кроме того, домены приложений можно создать из доменов, выполняющих код.</span><span class="sxs-lookup"><span data-stu-id="f8035-105">You can also create application domains from which you execute code.</span></span>  

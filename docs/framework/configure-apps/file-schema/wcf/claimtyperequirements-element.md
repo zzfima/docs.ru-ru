@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32748026"
 ---
 # <a name="ltclaimtyperequirementsgt-element"></a><span data-ttu-id="f2d4a-102">Элемент &lt;claimTypeRequirements&gt;</span><span class="sxs-lookup"><span data-stu-id="f2d4a-102">&lt;claimTypeRequirements&gt; element</span></span>
 <span data-ttu-id="f2d4a-103">Задает коллекцию обязательных типов утверждений.</span><span class="sxs-lookup"><span data-stu-id="f2d4a-103">Specifies a collection of required claim types.</span></span>  

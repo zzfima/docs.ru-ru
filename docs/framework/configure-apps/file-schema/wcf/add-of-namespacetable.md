@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32748637"
 ---
 # <a name="ltaddgt-of-ltnamespacetablegt"></a><span data-ttu-id="bf218-102">&lt;add&gt; для &lt;namespaceTable&gt;</span><span class="sxs-lookup"><span data-stu-id="bf218-102">&lt;add&gt; of &lt;namespaceTable&gt;</span></span>
 <span data-ttu-id="bf218-103">Представляет элемент конфигурации, содержащий пространство имен, используемое в качестве префикса сопоставления, которое затем можно использовать в фильтрах XPath для маршрутизации.</span><span class="sxs-lookup"><span data-stu-id="bf218-103">Represents a configuration element that contains a namespace to prefix mapping that can then be used in XPath filters for routing.</span></span>  

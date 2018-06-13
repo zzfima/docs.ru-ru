@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32747753"
 ---
 # <a name="ltbindingelementextensionsgt"></a><span data-ttu-id="8b452-102">&lt;bindingElementExtensions&gt;</span><span class="sxs-lookup"><span data-stu-id="8b452-102">&lt;bindingElementExtensions&gt;</span></span>
 <span data-ttu-id="8b452-103">В этом разделе описывается, как обеспечивается использование пользовательского элемента привязки в файле конфигурации компьютера или приложения.</span><span class="sxs-lookup"><span data-stu-id="8b452-103">This section enables the use of a custom binding element from a machine or application configuration file.</span></span> <span data-ttu-id="8b452-104">Элемент пользовательской привязки можно добавить в эту коллекцию, используя ключевое слово `add`, присвоив атрибуту `type` элемента значение, соответствующее расширению элемента привязки, и указав в атрибуте `name` пользовательский элемент привязки.</span><span class="sxs-lookup"><span data-stu-id="8b452-104">You can add a custom binding element to this collection by using the `add` keyword, and setting the `type` attribute of the element to a binding element extension, as well as the `name` attribute to the custom binding element.</span></span>  

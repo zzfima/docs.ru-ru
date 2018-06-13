@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33566903"
 ---
 # <a name="storyboards-overview"></a><span data-ttu-id="7fc3e-102">Общие сведения о Storyboard</span><span class="sxs-lookup"><span data-stu-id="7fc3e-102">Storyboards Overview</span></span>
 <span data-ttu-id="7fc3e-103">В этом разделе показано, как использовать <xref:System.Windows.Media.Animation.Storyboard> объектов для организации и применения анимации.</span><span class="sxs-lookup"><span data-stu-id="7fc3e-103">This topic shows how to use <xref:System.Windows.Media.Animation.Storyboard> objects to organize and apply animations.</span></span> <span data-ttu-id="7fc3e-104">Описывает интерактивно использовать <xref:System.Windows.Media.Animation.Storyboard> объектов и описывает синтаксис косвенного выбора свойств.</span><span class="sxs-lookup"><span data-stu-id="7fc3e-104">It describes how to interactively manipulate <xref:System.Windows.Media.Animation.Storyboard> objects and describes indirect property targeting syntax.</span></span>  

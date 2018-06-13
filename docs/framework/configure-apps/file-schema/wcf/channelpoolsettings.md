@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32747240"
 ---
 # <a name="ltchannelpoolsettingsgt"></a><span data-ttu-id="ce556-102">&lt;channelPoolSettings&gt;</span><span class="sxs-lookup"><span data-stu-id="ce556-102">&lt;channelPoolSettings&gt;</span></span>
 <span data-ttu-id="ce556-103">Задает параметры пула каналов для пользовательской привязки.</span><span class="sxs-lookup"><span data-stu-id="ce556-103">Specifies the channel pool settings for a custom binding.</span></span>  

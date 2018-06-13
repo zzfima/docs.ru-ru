@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32747935"
 ---
 # <a name="ltdiagnosticsgt-for-activation"></a><span data-ttu-id="ea7ee-102">&lt;diagnostics&gt; для активации</span><span class="sxs-lookup"><span data-stu-id="ea7ee-102">&lt;diagnostics&gt; for Activation</span></span>
 <span data-ttu-id="ea7ee-103">Настраивает диагностические функции прослушивателя Windows Communication Foundation (WCF).</span><span class="sxs-lookup"><span data-stu-id="ea7ee-103">Configures Windows Communication Foundation (WCF) listener's diagnostics functionalities.</span></span>  

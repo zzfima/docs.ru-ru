@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32757116"
 ---
 # <a name="connecting-to-a-data-source-in-adonet"></a><span data-ttu-id="6520c-102">Подключение к источнику данных в ADO.NET</span><span class="sxs-lookup"><span data-stu-id="6520c-102">Connecting to a Data Source in ADO.NET</span></span>
 <span data-ttu-id="6520c-103">В ADO.NET используется **подключения** для подключения к определенному источнику данных путем передачи сведений о необходимости проверки подлинности в строке подключения.</span><span class="sxs-lookup"><span data-stu-id="6520c-103">In ADO.NET you use a **Connection** object to connect to a specific data source by supplying necessary authentication information in a connection string.</span></span> <span data-ttu-id="6520c-104">**Подключения** использовании объект зависит от типа источника данных.</span><span class="sxs-lookup"><span data-stu-id="6520c-104">The **Connection** object you use depends on the type of data source.</span></span>  

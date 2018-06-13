@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33567397"
 ---
 # <a name="polling-for-the-status-of-an-asynchronous-operation"></a><span data-ttu-id="34ca4-102">Запрос состояния асинхронной операции</span><span class="sxs-lookup"><span data-stu-id="34ca4-102">Polling for the Status of an Asynchronous Operation</span></span>
 <span data-ttu-id="34ca4-103">Приложения, которые могут выполнять работу во время ожидания результатов асинхронной операции, не должны блокироваться до завершения этой операции.</span><span class="sxs-lookup"><span data-stu-id="34ca4-103">Applications that can do other work while waiting for the results of an asynchronous operation should not block waiting until the operation completes.</span></span> <span data-ttu-id="34ca4-104">Используйте один из следующих вариантов, чтобы продолжить выполнение инструкций в период ожидания асинхронной операции.</span><span class="sxs-lookup"><span data-stu-id="34ca4-104">Use one of the following options to continue executing instructions while waiting for an asynchronous operation to complete:</span></span>  
