@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33537412"
 ---
 # <a name="monthcalendar-control-overview-windows-forms"></a>Общие сведения об элементе управления MonthCalendar (Windows Forms)
 Windows Forms <xref:System.Windows.Forms.MonthCalendar> управления предоставляет интуитивно понятный графический интерфейс для пользователей, для просмотра и задания сведений о дате. Отображает календарь: сетку, содержащую пронумерованные дни месяца, разбитые на столбцы по дням недели, с выбранным диапазоном дат. С помощью кнопок со стрелками слева от заголовка месяца можно выбрать другой месяц. В отличие от аналогичного <xref:System.Windows.Forms.DateTimePicker> элемента управления, можно выбрать несколько дат с этим элементом управления. Дополнительные сведения о <xref:System.Windows.Forms.DateTimePicker> управления см. в разделе [управления DateTimePicker](../../../../docs/framework/winforms/controls/datetimepicker-control-windows-forms.md).  

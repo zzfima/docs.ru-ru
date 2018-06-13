@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32766625"
 ---
 # <a name="security-considerations-entity-framework"></a>Вопросы безопасности (Entity Framework)
 В этом разделе приводятся сведения по безопасности, связанные с разработкой, развертыванием и запуском приложений [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. Необходимо также следовать инструкциям по созданию безопасных приложений [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)]. Дополнительные сведения см. в разделе [Общие сведения о безопасности](../../../../../docs/framework/data/adonet/security-overview.md).  

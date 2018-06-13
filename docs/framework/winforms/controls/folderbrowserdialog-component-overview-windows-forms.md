@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33525012"
 ---
 # <a name="folderbrowserdialog-component-overview-windows-forms"></a>Общие сведения о компоненте FolderBrowserDialog (Windows Forms)
 Windows Forms <xref:System.Windows.Forms.FolderBrowserDialog> компонент является модальным диалоговым окном, который используется для просмотра и выбора папки. Новые папки могут также создаваться внутри <xref:System.Windows.Forms.FolderBrowserDialog> компонента.  

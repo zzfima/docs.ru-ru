@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33488515"
 ---
 # <a name="calling-a-rest-style-service-from-a-wcf-service"></a>Вызов службы в стиле REST из службы WCF
 При вызове REST-службы из обычной (на основе SOAP) службы WCF контекст операции в методе службы (со сведениями о входящем запросе) переопределяет контекст, который должен использоваться исходящим запросом. В результате запросы HTTP GET превращаются в запросы HTTP POST. Чтобы заставить службу WCF использовать правильный контекст для вызова REST-службы, создайте новый объект <xref:System.ServiceModel.OperationContextScope> и вызовите REST-службу из области контекста операции. В этом разделе описано создание простого примера, иллюстрирующего данный способ.  

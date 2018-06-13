@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33494951"
 ---
 # <a name="how-to-access-a-service-from-a-workflow-application"></a>Как получить доступ к службе из приложения рабочего процесса
 В этом разделе описывается вызов службы рабочего процесса из консольного приложения рабочего процесса. Зависит от выполнения [как: создание службы рабочего процесса с действиями обмена сообщениями](../../../../docs/framework/wcf/feature-details/how-to-create-a-workflow-service-with-messaging-activities.md) раздела. Несмотря на то, что в этом разделе описывается вызов службы рабочего процесса в приложении рабочего процесса, те же методы могут использоваться для вызова любой службы Windows Communication Foundation (WCF) в приложении рабочего процесса.  

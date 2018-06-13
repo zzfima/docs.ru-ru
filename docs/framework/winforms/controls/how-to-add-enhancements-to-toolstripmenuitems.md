@@ -29,6 +29,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33529725"
 ---
 # <a name="how-to-add-enhancements-to-toolstripmenuitems"></a>Практическое руководство. Дополнительные возможности элементов ToolStripMenuItem
 Можно повысить удобство использования <xref:System.Windows.Forms.MenuStrip> и <xref:System.Windows.Forms.ContextMenuStrip> элементы управления одним из следующих способов:  

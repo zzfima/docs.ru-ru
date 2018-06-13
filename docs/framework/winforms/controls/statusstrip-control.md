@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33534508"
 ---
 # <a name="statusstrip-control"></a>Элемент управления StatusStrip
 Элемент управления Windows Forms `StatusStrip` используется в формах в качестве области, обычно отображаемой в нижней части окна, в которой выводятся различные сведения о состоянии приложения. Элементы управления `StatusStrip` обычно имеют встроенные элементы управления `ToolStripStatusLabel`, отображающие текст или значки, которые показывают состояние, или <xref:System.Windows.Forms.ToolStripProgressBar>, который  отображает состояние завершения процесса графически.  

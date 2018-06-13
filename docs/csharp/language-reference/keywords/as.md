@@ -8,11 +8,12 @@ helpviewer_keywords:
 - type conversion [C#], as keyword
 - as keyword [C#]
 ms.assetid: a9be126b-cbf4-4990-a70d-d0e1983cad0e
-ms.openlocfilehash: 6ea5346119259d70ac1a42f3f72a8b2746b8f536
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 092c30a858df7baeb35bdf28bae53802fb0916d4
+ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/15/2018
+ms.locfileid: "34172023"
 ---
 # <a name="as-c-reference"></a>as (Справочник по C#)
 Оператор `as` можно использовать для выполнения определенных типов преобразований между совместимыми ссылочными типами или [типами, допускающими значение NULL](../../../csharp/programming-guide/nullable-types/index.md). Вот пример кода:  
@@ -22,13 +23,13 @@ ms.lasthandoff: 05/04/2018
 ## <a name="remarks"></a>Примечания  
  Оператор `as` аналогичен операции приведения. Однако, если преобразование невозможно, `as` возвращает `null`, а не вызывает исключение. Рассмотрим следующий пример.  
   
-```  
+```csharp  
 expression as type  
 ```  
   
  Этот код является эквивалентом следующего выражения, за исключением того, что переменная `expression` вычисляется только один раз.  
   
-```  
+```csharp  
 expression is type ? (type)expression : (type)null  
 ```  
   

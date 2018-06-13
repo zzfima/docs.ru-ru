@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32764022"
 ---
 # <a name="operator-precedence-entity-sql"></a>Приоритет операторов (Entity SQL)
 Когда [!INCLUDE[esql](../../../../../../includes/esql-md.md)] запроса содержит несколько операторов, приоритет операторов определяет последовательность, в которой выполняются операции. Порядок выполнения может существенно повлиять на результат выполнения запроса.  

@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33540622"
 ---
 # <a name="how-to-implement-two-way-communication-between-dhtml-code-and-client-application-code"></a>Практическое руководство. Реализация двунаправленного взаимодействия между кодом DHTML и клиентским кодом приложений
 Элемент управления <xref:System.Windows.Forms.WebBrowser> можно использовать для добавления существующего динамического кода веб-приложений HTML (DHTML) в клиентские приложения Windows Forms. Это полезно, если на разработку элементов управления DHTML затрачено немало времени и нужно воспользоваться широкими возможностями интерфейса Windows Forms, не тратя время на переписывание существующего кода.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33519630"
 ---
 # <a name="using-workflowinvoker-and-workflowapplication"></a>Использование WorkflowInvoker и WorkflowApplication
 Windows Workflow Foundation (WF) предоставляет несколько методов размещения рабочих процессов. <xref:System.Activities.WorkflowInvoker> предоставляет простой способ вызова рабочего процесса аналогично вызову метода и может использоваться только для рабочих процессов, не использующих сохраняемость. <xref:System.Activities.WorkflowApplication> предоставляет улучшенную модель выполнения рабочих процессов, которая обеспечивает уведомления о событиях жизненного цикла, управление выполнением, возобновление закладок и сохраняемость. <xref:System.ServiceModel.Activities.WorkflowServiceHost> предоставляет поддержку для действий по обмену сообщениями и главным образом используется со службами Workflow Service. В этом разделе вы познакомитесь с размещением рабочих процессов в <xref:System.Activities.WorkflowInvoker> и <xref:System.Activities.WorkflowApplication>. Дополнительные сведения о размещении рабочих процессов с <xref:System.ServiceModel.Activities.WorkflowServiceHost>, в разделе [службы рабочего процесса](../../../docs/framework/wcf/feature-details/workflow-services.md) и [размещение Обзор служб рабочего процесса](../../../docs/framework/wcf/feature-details/hosting-workflow-services-overview.md).  

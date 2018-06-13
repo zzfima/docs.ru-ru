@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33543105"
 ---
 # <a name="how-to-define-a-table-with-xaml"></a>Практическое руководство. Определение таблицы с помощью XAML
 В следующем примере демонстрируется определение <xref:System.Windows.Documents.Table> с помощью [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].  Пример таблицы содержит четыре столбца (представленного <xref:System.Windows.Documents.TableColumn> элементы) и несколько строк (представленного <xref:System.Windows.Documents.TableRow> элементов) с данными также как название, заголовок и нижний колонтитул сведения.  Строки, которые должны содержаться в <xref:System.Windows.Documents.TableRowGroup> элемент.  Каждая строка в таблице состоит из одной или нескольких ячеек (представленного <xref:System.Windows.Documents.TableCell> элементов).  Содержимое в ячейку таблицы, которые должны содержаться в <xref:System.Windows.Documents.Block> элемент; в этом случае <xref:System.Windows.Documents.Paragraph> используются элементы.  Таблица также содержит гиперссылку (представленного <xref:System.Windows.Documents.Hyperlink> элемент) в строке нижнего колонтитула.  

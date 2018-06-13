@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32767626"
 ---
 # <a name="ltudpdiscoveryendpointgt"></a>&lt;точка udpDiscoveryEndpoint&gt;
 Этот элемент конфигурации указывает стандартную конечную точку, которая стандартно используется для операций обнаружения через привязку для многоадресной рассылки UDP. Эта конечная точка имеет фиксированный контракт и поддерживает две версии протокола WS-Discovery. Кроме того, она имеет фиксированную привязку UDP и значение адреса по умолчанию в соответствии со спецификациями WS-Discovery (WS-Discovery от апреля 2005 или WS-Discovery версии 1.1).  

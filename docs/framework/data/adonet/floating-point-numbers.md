@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32764727"
 ---
 # <a name="floating-point-numbers"></a>Числа с плавающей запятой
 В этом разделе описаны некоторые из проблем, с которыми разработчики часто встречаются при работе с числами с плавающей запятой в [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]. Эти проблемы вызваны способом, которым эти числа хранятся в компьютерах, и не характерны для определенных поставщиков, например <xref:System.Data.SqlClient> или <xref:System.Data.OracleClient>.  

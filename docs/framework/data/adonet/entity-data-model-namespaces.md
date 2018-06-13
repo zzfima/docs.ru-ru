@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32765234"
 ---
 # <a name="entity-data-model-namespaces"></a>Модель EDM. Пространство имен
 Пространство имен в модели данных сущности (EDM) — абстрактный контейнер для [типов сущностей](../../../../docs/framework/data/adonet/entity-type.md), [сложные типы](../../../../docs/framework/data/adonet/complex-type.md), и [ассоциации](../../../../docs/framework/data/adonet/association-type.md). Пространства имен в модели EDM схожи с пространствами имен в языке программирования: они обеспечивают контекст для объектов, которые они содержат, а также являются способом устранения неопределенности в отношении объектов, которые имеют одно и то же имя (но содержатся в разных пространствах имен).  

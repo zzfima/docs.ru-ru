@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33487429"
 ---
 # <a name="developing-channels"></a>Разработка каналов
 Для разработки протокола или транспорта канала, который можно использовать Windows Communication Foundation (WCF) прикладной уровень требует выполнения нескольких шагов. В этом разделе описываются эти действия и указываются конкретные разделы для получения дополнительных сведений. Чтобы понять модель канала и различных типов, описанных в этом разделе, см. [Общие сведения о модели каналов](../../../../docs/framework/wcf/extending/channel-model-overview.md). Пример завершения транспорта канала, см. [транспорт: UDP](../../../../docs/framework/wcf/samples/transport-udp.md).  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33541941"
 ---
 # <a name="dependency-property-value-precedence"></a>Приоритет значения свойств зависимостей
 <a name="introduction"></a> В этом разделе рассказывается, как работа системы свойств [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] может повлиять на значение свойства зависимости, и описывается приоритет применения аспектов системы свойств к действительному значению свойства.  

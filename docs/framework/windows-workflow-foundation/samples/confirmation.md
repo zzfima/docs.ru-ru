@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33518851"
 ---
 # <a name="confirmation"></a>Подтверждение
 В данном образце показаны четыре общих сценария, связанных с использованием <xref:System.Activities.Statements.CompensableActivity> и подтверждением. Для демонстрации подтверждения в образце запускаются четыре рабочих процесса. Доступны декларативная и императивная версии образца.  

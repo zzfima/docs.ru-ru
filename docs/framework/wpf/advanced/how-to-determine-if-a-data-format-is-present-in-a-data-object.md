@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33543423"
 ---
 # <a name="how-to-determine-if-a-data-format-is-present-in-a-data-object"></a>Практическое руководство. Определение присутствия формата данных в объекте данных
 Следующие примеры показывают, как использовать различные <xref:System.Windows.DataObject.GetDataPresent%2A> запрос перегрузки метода, определенного формата данных существует ли в объект данных.  

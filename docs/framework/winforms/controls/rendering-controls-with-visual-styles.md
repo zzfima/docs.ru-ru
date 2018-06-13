@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33540908"
 ---
 # <a name="rendering-controls-with-visual-styles"></a>Отрисовка элементов управления с применением визуальных стилей
 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] обеспечивает поддержку для отрисовки элементов управления и других элементов пользовательского интерфейса Windows с использованием стилей оформления в операционных системах, поддерживающих их. В этом разделе описано несколько уровней поддержки в [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] для отрисовки элементов управления и других элементов пользовательского интерфейса с учетом текущего стиля оформления операционной системы.  

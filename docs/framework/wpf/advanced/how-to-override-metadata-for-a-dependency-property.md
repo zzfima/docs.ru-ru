@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33543723"
 ---
 # <a name="how-to-override-metadata-for-a-dependency-property"></a>Практическое руководство. Переопределение метаданных для свойств зависимости
 В этом примере показан способ переопределения метаданных свойства зависимостей по умолчанию, поступающие из наследованного класса путем вызова <xref:System.Windows.DependencyProperty.OverrideMetadata%2A> метод и предоставление метаданных определенного типа.  

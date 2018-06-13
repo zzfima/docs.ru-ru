@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33523998"
 ---
 # <a name="how-to-use-the-modifiers-and-generatemember-properties"></a>Практическое руководство. Использование свойств Modifiers и GenerateMember
 При размещении компонента в форме Windows Forms, два свойства предоставляются средой разработки: `GenerateMember` и `Modifiers`. `GenerateMember` Свойство указывает, когда конструктор Windows Forms создает переменную-член для компонента. `Modifiers` Свойство имеет модификатор доступа, назначенный этой переменной-члена. Если значение `GenerateMember` свойство `false`, значение `Modifiers` свойство не имеет значения.  

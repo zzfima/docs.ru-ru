@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: ce94765467899ac7c906b0dfcdf0ceb78c659b5f
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33448208"
 ---
 # <a name="imetadataemitdefineevent-method"></a>Метод IMetaDataEmit::DefineEvent
 Создает определение события с заданной подписью метаданных и получает маркер для этого определения событий.  

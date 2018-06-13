@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33486046"
 ---
 # <a name="trace-type-summary"></a>Сводка типов трассировок
 [Уровни источника](http://go.microsoft.com/fwlink/?LinkID=94943) определяются различные уровни трассировки: критическое, ошибка, предупреждение, сведения и подробные сведения, а также приводится описание `ActivityTracing` границ и действие передачи событий трассировки флага, которые выводом.  

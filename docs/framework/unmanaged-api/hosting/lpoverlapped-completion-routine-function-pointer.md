@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: cd4b7ffef9c0ba3aba54387245b2d5c9ec1ae906
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33441760"
 ---
 # <a name="lpoverlappedcompletionroutine-function-pointer"></a>Указатель функции LPOVERLAPPED_COMPLETION_ROUTINE
 Указывает на функцию, которая уведомляет основное приложение перекрывающегося (то есть асинхронные) завершения ввода-вывода на устройстве.  

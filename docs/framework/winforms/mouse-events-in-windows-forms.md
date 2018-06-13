@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33541214"
 ---
 # <a name="mouse-events-in-windows-forms"></a>События мыши в формах Windows Forms
 При обработке ввода данных с помощью мыши обычно необходимо знать положение указателя и состояние кнопок мыши. В этом разделе приводится подробная информация о получении этих сведений из событий мыши и описывается порядок, в котором вызываются события щелчка мыши в элементах управления Windows Forms. Список и описание всех событий мыши см. в разделе [принцип работы мыши ввода в Windows Forms](../../../docs/framework/winforms/how-mouse-input-works-in-windows-forms.md).  См. также [Обзор обработчиков событий (Windows Forms)](http://msdn.microsoft.com/library/be6fx1bb\(v=vs.110\)), [Общие сведения о событиях (Windows Forms)](http://msdn.microsoft.com/library/1h12f09z\(v=vs.110\))  

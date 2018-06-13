@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33490923"
 ---
 # <a name="interoperability-with-web-services-enhancements-30"></a>Взаимодействие с расширениями веб-служб 3.0
 Клиенты Windows Communication Foundation (WCF) и службы, транспортного уровня совместимости с веб-служб версии 3.0 для Microsoft .NET (WSE) клиентами и службами при клиентов и служб WCF настроены на использование версии августа 2004 г. Спецификация WS-Addressing.  

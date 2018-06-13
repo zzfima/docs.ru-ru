@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33540967"
 ---
 # <a name="walkthrough-validating-data-in-the-windows-forms-datagridview-control"></a>Пример. Проверка данных элемента управления DataGridView в Windows Forms
 При отображении функциональных возможностей ввода данных, пользователям необходимо часто проверки данных, введенных в форму. <xref:System.Windows.Forms.DataGridView> Класс предоставляет удобный способ выполнять проверку перед данные передаются в хранилище данных. Вы можете проверять данные, обрабатывая <xref:System.Windows.Forms.DataGridView.CellValidating> событие, которое вызывается <xref:System.Windows.Forms.DataGridView> при изменении текущей ячейки.  

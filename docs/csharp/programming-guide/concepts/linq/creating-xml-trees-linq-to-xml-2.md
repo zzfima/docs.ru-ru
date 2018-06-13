@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33335473"
 ---
 # <a name="creating-xml-trees-in-c-linq-to-xml"></a>Создание деревьев XML в C# (LINQ to XML)
 В этом разделе размещены сведения о создании XML-деревьев при помощи языка C#.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33337760"
 ---
 # <a name="how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await-c"></a>Практическое руководство. Параллельное выполнение нескольких веб-запросов с использованием Async и Await (C#)
 В асинхронном методе задачи запускаются в момент создания. Оператор [Await](../../../../csharp/language-reference/keywords/await.md) применяется к задаче в той точке в методе, где обработка не может продолжаться до завершения задачи. Часто задачи ожидаются в момент создания, как показано в следующем примере.  

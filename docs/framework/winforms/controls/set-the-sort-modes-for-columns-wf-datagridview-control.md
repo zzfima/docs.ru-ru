@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33535735"
 ---
 # <a name="how-to-set-the-sort-modes-for-columns-in-the-windows-forms-datagridview-control"></a>Практическое руководство. Определение режимов сортировки для столбцов элемента управления DataGridView в Windows Forms
 В <xref:System.Windows.Forms.DataGridView> управления, столбцах текстовых полей используется автоматическая сортировка по умолчанию, а другие типы столбцов не сортируются автоматически. Иногда требуется переопределить эти значения по умолчанию. Например можно отобразить изображения вместо текста, числа или значения перечисления ячеек. Хотя нельзя выполнить сортировку изображений, можно сортировать значения, которые они представляют.  

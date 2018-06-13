@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33529264"
 ---
 # <a name="bindingsource-component-architecture"></a>Архитектура компонента BindingSource
 С <xref:System.Windows.Forms.BindingSource> компонент глобально, все элементы управления Windows Forms можно привязать к источникам данных.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33488479"
 ---
 # <a name="configuring-workflowservicehost"></a>Настройка WorkflowServiceHost
 В этом разделе описывается ряд коротких «как» разделы, в которых кратко описывается настройка различных характеристик <xref:System.ServiceModel.Activities.WorkflowServiceHost> в конфигурации. В этих разделах рассматриваются параметры настройки службы рабочего процесса, все остальные настройки выполняются аналогично стандартной службы WCF.  

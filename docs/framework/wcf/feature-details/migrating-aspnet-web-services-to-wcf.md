@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33494566"
 ---
 # <a name="migrating-aspnet-web-services-to-wcf"></a>Миграция веб-служб ASP.NET на платформу WCF
 Платформа ASP.NET предоставляет библиотеки классов .NET Framework и средства для построения веб-служб, а также возможности для их размещения в службах Internet Information Services (IIS). Windows Communication Foundation (WCF) предоставляет библиотеки классов .NET Framework, средства и возможности размещения, позволяющие программным компонентам взаимодействовать с использованием любых протоколов, включая используемые веб-службами.  Перенос веб-служб ASP.NET в WCF позволяет приложениями использовать преимущества новых возможностей и усовершенствований, которые являются уникальными для WCF.  

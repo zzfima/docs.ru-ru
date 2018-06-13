@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33335488"
 ---
 # <a name="refactoring-using-an-extension-method-c"></a>Рефакторинг с использованием метода расширения (C#)
 Этот пример основан на предыдущем примере, [Извлечение текста абзацев (C#)](../../../../csharp/programming-guide/concepts/linq/retrieving-the-text-of-the-paragraphs.md), и в нем применяется оптимизация кода объединения строк с помощью чистой функции, которая реализуется в виде метода расширения.  

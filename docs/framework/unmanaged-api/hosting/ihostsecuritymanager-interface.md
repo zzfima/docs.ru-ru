@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 13f60730fedef4876f81f078f811104777050175
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33440259"
 ---
 # <a name="ihostsecuritymanager-interface"></a>Интерфейс IHostSecurityManager
 Предоставляет методы, обеспечивающие доступ и контроль над контекст безопасности текущего потока.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33520163"
 ---
 # <a name="exceptions"></a>Исключения
 Рабочие процессы могут использовать действие <xref:System.Activities.Statements.TryCatch> для обработки исключений, возникающих в ходе выполнения рабочего процесса. Эти исключения обрабатываются либо вызываются повторно при помощи действия <xref:System.Activities.Statements.Rethrow>. Действия в разделе <xref:System.Activities.Statements.TryCatch.Finally%2A> выполняются при завершении либо раздела <xref:System.Activities.Statements.TryCatch.Try%2A>, либо раздела <xref:System.Activities.Statements.TryCatch.Catches%2A>. Рабочие процессы, размещаемые <xref:System.Activities.WorkflowApplication> экземпляра можно также использовать <xref:System.Activities.WorkflowApplication.OnUnhandledException%2A> обработчик событий для обработки исключений, которые не обрабатываются <xref:System.Activities.Statements.TryCatch> действия.  

@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33529211"
 ---
 # <a name="walkthrough-creating-an-explorer-style-interface-with-the-listview-and-treeview-controls-using-the-designer"></a>Пример. Создание интерфейса в стиле проводника с использованием элементов управления ListView и TreeView с помощью конструктора
 Одно из преимуществ Visual Studio — возможность создавать профессионально оформленные приложения Windows Forms в короткие сроки. Типичный сценарий создает пользовательский интерфейс (UI) в <xref:System.Windows.Forms.ListView> и <xref:System.Windows.Forms.TreeView> элементов управления, который напоминает проводника операционных систем Windows. Проводник Windows отображает иерархическую структуру файлов и папок на компьютере пользователя.  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33540414"
 ---
 # <a name="componentresourcekey-markup-extension"></a>Расширение разметки ComponentResourceKey
 Определения и ключи для ресурсов, которые загружаются из внешних сборок ссылок. Это позволяет при поиске ресурса указать целевой тип в сборке, вместо явного словаря ресурса в сборке или в классе.  

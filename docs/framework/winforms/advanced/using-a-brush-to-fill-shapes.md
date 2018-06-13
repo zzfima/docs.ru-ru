@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33523735"
 ---
 # <a name="using-a-brush-to-fill-shapes"></a>Использование кисти для заливки фигур
 Объект [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] <xref:System.Drawing.Brush> объект используется для заливки замкнутой фигуры. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] определены следующие стили заливки: сплошной цвет, шаблон штриховки, текстура с изображением и цветового градиента.  
