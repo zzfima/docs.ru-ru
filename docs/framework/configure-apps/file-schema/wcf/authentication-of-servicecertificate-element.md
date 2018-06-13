@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32752550"
 ---
 # <a name="ltauthenticationgt-of-ltservicecertificategt-element"></a><span data-ttu-id="8329c-102">&lt;authentication&gt; элемента &lt; serviceCertificate&gt;</span><span class="sxs-lookup"><span data-stu-id="8329c-102">&lt;authentication&gt; of &lt;serviceCertificate&gt; Element</span></span>
 <span data-ttu-id="8329c-103">Задает параметры, которые использует прокси клиента для проверки подлинности сертификатов службы, полученных при помощи согласования SSL/TLS.</span><span class="sxs-lookup"><span data-stu-id="8329c-103">Specifies the settings used by the client proxy to authenticate service certificates that are obtained using SSL/TLS negotiation.</span></span>  

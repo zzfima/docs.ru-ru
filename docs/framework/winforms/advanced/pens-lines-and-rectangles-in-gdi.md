@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33527474"
 ---
 # <a name="pens-lines-and-rectangles-in-gdi"></a><span data-ttu-id="bf907-102">Перья, линии и прямоугольники в GDI+</span><span class="sxs-lookup"><span data-stu-id="bf907-102">Pens, Lines, and Rectangles in GDI+</span></span>
 <span data-ttu-id="bf907-103">Рисование линий с [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] необходимо создать <xref:System.Drawing.Graphics> объекта и <xref:System.Drawing.Pen> объекта.</span><span class="sxs-lookup"><span data-stu-id="bf907-103">To draw lines with [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] you need to create a <xref:System.Drawing.Graphics> object and a <xref:System.Drawing.Pen> object.</span></span> <span data-ttu-id="bf907-104"><xref:System.Drawing.Graphics> Объект предоставляет методы, которые фактически выполняют рисования и <xref:System.Drawing.Pen> объект хранит атрибуты, такие как цвет, ширину и стиль.</span><span class="sxs-lookup"><span data-stu-id="bf907-104">The <xref:System.Drawing.Graphics> object provides the methods that actually do the drawing, and the <xref:System.Drawing.Pen> object stores attributes, such as line color, width, and style.</span></span>  

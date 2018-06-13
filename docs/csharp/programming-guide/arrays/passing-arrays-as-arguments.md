@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33315520"
 ---
 # <a name="passing-arrays-as-arguments-c-programming-guide"></a><span data-ttu-id="51e38-102">Передача массивов в качестве аргументов (Руководство по программированию на C#)</span><span class="sxs-lookup"><span data-stu-id="51e38-102">Passing Arrays as Arguments (C# Programming Guide)</span></span>
 <span data-ttu-id="51e38-103">Массивы можно передавать в качестве аргументов в параметры метода.</span><span class="sxs-lookup"><span data-stu-id="51e38-103">Arrays can be passed as arguments to method parameters.</span></span> <span data-ttu-id="51e38-104">Поскольку массивы представляют собой ссылочные типы, метод может изменять значения элементов.</span><span class="sxs-lookup"><span data-stu-id="51e38-104">Because arrays are reference types, the method can change the value of the elements.</span></span>  

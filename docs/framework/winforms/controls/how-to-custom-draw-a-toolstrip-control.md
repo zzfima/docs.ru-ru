@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33532178"
 ---
 # <a name="how-to-custom-draw-a-toolstrip-control"></a><span data-ttu-id="81bf0-102">Практическое руководство. Пользовательская прорисовка элемента управления ToolStrip</span><span class="sxs-lookup"><span data-stu-id="81bf0-102">How to: Custom Draw a ToolStrip Control</span></span>
 <span data-ttu-id="81bf0-103">Элементы управления <xref:System.Windows.Forms.ToolStrip> имеют следующие связанные классы отрисовки:</span><span class="sxs-lookup"><span data-stu-id="81bf0-103">The <xref:System.Windows.Forms.ToolStrip> controls have the following associated rendering (painting) classes:</span></span>  

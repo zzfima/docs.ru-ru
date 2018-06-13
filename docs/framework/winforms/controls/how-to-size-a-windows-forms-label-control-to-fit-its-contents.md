@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33533732"
 ---
 # <a name="how-to-size-a-windows-forms-label-control-to-fit-its-contents"></a><span data-ttu-id="bb7bc-102">Практическое руководство. Приведение размера элемента управления Label в соответствие с его содержимым в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="bb7bc-102">How to: Size a Windows Forms Label Control to Fit Its Contents</span></span>
 <span data-ttu-id="bb7bc-103">Windows Forms <xref:System.Windows.Forms.Label> элемент управления может быть одной или нескольких строк, а также может быть либо фиксированного размера или можно автоматически изменить размер самой надписи.</span><span class="sxs-lookup"><span data-stu-id="bb7bc-103">The Windows Forms <xref:System.Windows.Forms.Label> control can be single-line or multi-line, and it can be either fixed in size or can automatically resize itself to accommodate its caption.</span></span> <span data-ttu-id="bb7bc-104"><xref:System.Windows.Forms.Label.AutoSize%2A> Свойства помогает определить размер элементов управления в соответствии с размером надписи, который является особенно полезно, если заголовок изменится во время выполнения.</span><span class="sxs-lookup"><span data-stu-id="bb7bc-104">The <xref:System.Windows.Forms.Label.AutoSize%2A> property helps you size the controls to fit larger or smaller captions, which is particularly useful if the caption will change at run time.</span></span>  

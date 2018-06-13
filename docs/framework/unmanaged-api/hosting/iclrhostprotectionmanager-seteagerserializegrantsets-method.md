@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e9bddaa25ba83570389a9d70ac1a9f60357f533c
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33432226"
 ---
 # <a name="iclrhostprotectionmanagerseteagerserializegrantsets-method"></a><span data-ttu-id="be074-102">Метод ICLRHostProtectionManager::SetEagerSerializeGrantSets</span><span class="sxs-lookup"><span data-stu-id="be074-102">ICLRHostProtectionManager::SetEagerSerializeGrantSets Method</span></span>
 <span data-ttu-id="be074-103">Этот метод поддерживает инфраструктуру .NET Framework и не предназначен для использования непосредственно из программного кода.</span><span class="sxs-lookup"><span data-stu-id="be074-103">This method supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>  

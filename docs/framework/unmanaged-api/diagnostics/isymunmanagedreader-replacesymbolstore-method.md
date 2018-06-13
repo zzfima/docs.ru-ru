@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 03607cf96d73e96eef63fe62b86b50be02f34421
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33428206"
 ---
 # <a name="isymunmanagedreaderreplacesymbolstore-method"></a><span data-ttu-id="7f2a5-102">Метод ISymUnmanagedReader::ReplaceSymbolStore</span><span class="sxs-lookup"><span data-stu-id="7f2a5-102">ISymUnmanagedReader::ReplaceSymbolStore Method</span></span>
 <span data-ttu-id="7f2a5-103">Заменяет имеющееся хранилище символов разностным хранилищем символов.</span><span class="sxs-lookup"><span data-stu-id="7f2a5-103">Replaces the existing symbol store with a delta symbol store.</span></span> <span data-ttu-id="7f2a5-104">Этот метод аналогичен [UpdateSymbolStore](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-updatesymbolstore-method.md) метода, за исключением того, что данная разность используется полная замена, а не для обновления.</span><span class="sxs-lookup"><span data-stu-id="7f2a5-104">This method is similar to the [UpdateSymbolStore](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-updatesymbolstore-method.md) method, except that the given delta acts as a complete replacement rather than an update.</span></span>  

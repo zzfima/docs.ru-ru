@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33536502"
 ---
 # <a name="how-to-show-a-font-list-with-the-fontdialog-component"></a><span data-ttu-id="42ad8-102">Практическое руководство. Отображение списка шрифтов с помощью компонента FontDialog</span><span class="sxs-lookup"><span data-stu-id="42ad8-102">How to: Show a Font List with the FontDialog Component</span></span>
 <span data-ttu-id="42ad8-103">[FontDialog](../../../../docs/framework/winforms/controls/fontdialog-component-windows-forms.md) компонент позволяет пользователям выбрать шрифт, а также менять параметры его отображения, такие как вес и размер.</span><span class="sxs-lookup"><span data-stu-id="42ad8-103">The [FontDialog](../../../../docs/framework/winforms/controls/fontdialog-component-windows-forms.md) component allows users to select a font, as well as change its display aspects, such as its weight and size.</span></span>  

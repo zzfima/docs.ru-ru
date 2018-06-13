@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33529572"
 ---
 # <a name="default-keyboard-and-mouse-handling-in-the-windows-forms-datagridview-control"></a><span data-ttu-id="f200a-102">В элементе управления Windows Forms DataGridView обработка событий мыши и клавиатуры по умолчанию</span><span class="sxs-lookup"><span data-stu-id="f200a-102">Default keyboard and mouse handling in the Windows Forms DataGridView control</span></span>
 

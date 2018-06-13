@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33529487"
 ---
 # <a name="datagridview-control-architecture-windows-forms"></a><span data-ttu-id="a07ae-102">Архитектура элементов управления DataGridView (Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="a07ae-102">DataGridView Control Architecture (Windows Forms)</span></span>
 <span data-ttu-id="a07ae-103"><xref:System.Windows.Forms.DataGridView> Управления и его связанные классы предназначены для гибкую расширяемую систему для отображения и изменения табличных данных.</span><span class="sxs-lookup"><span data-stu-id="a07ae-103">The <xref:System.Windows.Forms.DataGridView> control and its related classes are designed to be a flexible, extensible system for displaying and editing tabular data.</span></span> <span data-ttu-id="a07ae-104">Эти классы содержатся в <xref:System.Windows.Forms?displayProperty=nameWithType> пространства имен и они именуются с префиксом «DataGridView».</span><span class="sxs-lookup"><span data-stu-id="a07ae-104">These classes are all contained in the <xref:System.Windows.Forms?displayProperty=nameWithType> namespace, and they are all named with the "DataGridView" prefix.</span></span>  

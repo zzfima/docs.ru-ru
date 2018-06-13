@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: dc0f72168e076f661bfefc17c851d7d353e5e742
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33426756"
 ---
 # <a name="isymunmanagedvariablegetattributes-method"></a><span data-ttu-id="fc946-102">Метод ISymUnmanagedVariable::GetAttributes</span><span class="sxs-lookup"><span data-stu-id="fc946-102">ISymUnmanagedVariable::GetAttributes Method</span></span>
 <span data-ttu-id="fc946-103">Получает флаги атрибутов для данной переменной.</span><span class="sxs-lookup"><span data-stu-id="fc946-103">Gets the attribute flags for this variable.</span></span>  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33534603"
 ---
 # <a name="how-to-raise-change-notifications-using-the-bindingsource-resetitem-method"></a><span data-ttu-id="f8ce7-102">Практическое руководство. Уведомление об изменении данных с использованием метода ResetItem компонента BindingSource</span><span class="sxs-lookup"><span data-stu-id="f8ce7-102">How to: Raise Change Notifications Using the BindingSource ResetItem Method</span></span>
 <span data-ttu-id="f8ce7-103">Некоторые источники данных для элементов управления не инициируют уведомления об изменении при добавлении, изменении или удалении элементов.</span><span class="sxs-lookup"><span data-stu-id="f8ce7-103">Some data sources for your controls do not raise change notifications when items are changed, added, or deleted.</span></span> <span data-ttu-id="f8ce7-104">При помощи компонента <xref:System.Windows.Forms.BindingSource> можно выполнить привязку к источникам данных и вызывать уведомление об изменениях из кода.</span><span class="sxs-lookup"><span data-stu-id="f8ce7-104">With the <xref:System.Windows.Forms.BindingSource> component, you can bind to such data sources and raise a change notification from your code.</span></span>  

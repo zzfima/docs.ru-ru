@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33640538"
 ---
 # <a name="how-to-work-with-activex-controls-visual-basic"></a><span data-ttu-id="0dac0-102">Практическое руководство. Работа с элементами ActiveX (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="0dac0-102">How to: Work with ActiveX Controls (Visual Basic)</span></span>
 <span data-ttu-id="0dac0-103">Элементы управления ActiveX являются компоненты COM или объекты, которые можно вставить в веб-страницы или другое приложение для использования упакованных функциональных возможностей, запрограммированных другим пользователем.</span><span class="sxs-lookup"><span data-stu-id="0dac0-103">ActiveX controls are COM components or objects you can insert into a Web page or other application to reuse packaged functionality someone else has programmed.</span></span> <span data-ttu-id="0dac0-104">Элементы управления ActiveX, разработанные для Visual Basic 6.0 и более ранних версиях можно использовать для добавления возможностей в **элементов** из Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="0dac0-104">You can use ActiveX controls developed for Visual Basic 6.0 and earlier versions to add features to the **Toolbox** of Visual Studio.</span></span>  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33538494"
 ---
 # <a name="toolstrippanel-control-overview"></a><span data-ttu-id="dd328-102">Общие сведения об элементе управления ToolStripPanel</span><span class="sxs-lookup"><span data-stu-id="dd328-102">ToolStripPanel Control Overview</span></span>
 <span data-ttu-id="dd328-103">Объект <xref:System.Windows.Forms.ToolStripPanel> предоставляет одну область для размещения и нависания <xref:System.Windows.Forms.ToolStrip>, <xref:System.Windows.Forms.MenuStrip>, и <xref:System.Windows.Forms.StatusStrip> элементов управления.</span><span class="sxs-lookup"><span data-stu-id="dd328-103">A <xref:System.Windows.Forms.ToolStripPanel> provides a single area for positioning and rafting <xref:System.Windows.Forms.ToolStrip>, <xref:System.Windows.Forms.MenuStrip>, and <xref:System.Windows.Forms.StatusStrip> controls.</span></span> <span data-ttu-id="dd328-104">Несколько <xref:System.Windows.Forms.ToolStrip> элементы управления располагаются по вертикали или по горизонтали в зависимости от <xref:System.Windows.Forms.ToolStripPanelRow.Orientation%2A> из <xref:System.Windows.Forms.ToolStripPanel>.</span><span class="sxs-lookup"><span data-stu-id="dd328-104">Multiple <xref:System.Windows.Forms.ToolStrip> controls stack vertically or horizontally depending on the <xref:System.Windows.Forms.ToolStripPanelRow.Orientation%2A> of the <xref:System.Windows.Forms.ToolStripPanel>.</span></span>  

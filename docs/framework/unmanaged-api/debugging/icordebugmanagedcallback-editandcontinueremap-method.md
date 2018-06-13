@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9e8aa71a79bee45d5a8e1f3448c781e6ba1ec605
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33414142"
 ---
 # <a name="icordebugmanagedcallbackeditandcontinueremap-method"></a><span data-ttu-id="c44f3-102">Метод ICorDebugManagedCallback::EditAndContinueRemap</span><span class="sxs-lookup"><span data-stu-id="c44f3-102">ICorDebugManagedCallback::EditAndContinueRemap Method</span></span>
 <span data-ttu-id="c44f3-103">Этот метод использовать не рекомендуется.</span><span class="sxs-lookup"><span data-stu-id="c44f3-103">This method has been deprecated.</span></span> <span data-ttu-id="c44f3-104">Он уведомляет отладчик, что события повторного сопоставления был отправлен интегрированной среды разработки (IDE).</span><span class="sxs-lookup"><span data-stu-id="c44f3-104">It notifies the debugger that a remap event has been sent to the integrated development environment (IDE).</span></span>  

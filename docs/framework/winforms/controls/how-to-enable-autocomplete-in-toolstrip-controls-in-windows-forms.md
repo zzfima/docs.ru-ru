@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33532542"
 ---
 # <a name="how-to-enable-autocomplete-in-toolstrip-controls-in-windows-forms"></a><span data-ttu-id="1a20b-102">Практическое руководство. Включение автозаполнения для элементов управления ToolStrip в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="1a20b-102">How to: Enable AutoComplete in ToolStrip Controls in Windows Forms</span></span>
 <span data-ttu-id="1a20b-103">В следующей процедуре компонент <xref:System.Windows.Forms.ToolStripLabel> с <xref:System.Windows.Forms.ToolStripComboBox> , можно раскрыть, чтобы показать список элементов, таких как последние посещенные веб-сайтов.</span><span class="sxs-lookup"><span data-stu-id="1a20b-103">The following procedure combines a <xref:System.Windows.Forms.ToolStripLabel> with a <xref:System.Windows.Forms.ToolStripComboBox> that can be dropped down to show a list of items, such as recently visited Web sites.</span></span> <span data-ttu-id="1a20b-104">Если пользователь вводит символ, который совпадает с первым символом одного из элементов в списке, сразу же отображается элемент.</span><span class="sxs-lookup"><span data-stu-id="1a20b-104">If the user types a character that matches the first character of one of the items in the list, the item is immediately displayed.</span></span>  

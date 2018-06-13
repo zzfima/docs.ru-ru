@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e64bc173717c3121d6c2b101f734ee325a0ced53
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33413765"
 ---
 # <a name="icordebugevalgetthread-method"></a><span data-ttu-id="e8e02-102">Метод ICorDebugEval::GetThread</span><span class="sxs-lookup"><span data-stu-id="e8e02-102">ICorDebugEval::GetThread Method</span></span>
 <span data-ttu-id="e8e02-103">Получает поток, в котором эта оценка выполняется или будет выполняться.</span><span class="sxs-lookup"><span data-stu-id="e8e02-103">Gets the thread in which this evaluation is executing or will execute.</span></span>  

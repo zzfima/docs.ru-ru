@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33535588"
 ---
 # <a name="how-to-create-a-lookup-table-with-the-windows-forms-bindingsource-component"></a><span data-ttu-id="dc4dd-102">Практическое руководство. Создание таблицы подстановок с помощью компонента BindingSource в формах Windows Forms</span><span class="sxs-lookup"><span data-stu-id="dc4dd-102">How to: Create a Lookup Table with the Windows Forms BindingSource Component</span></span>
 <span data-ttu-id="dc4dd-103">Таблица подстановки — это таблица данных, в одном из столбцов которой отображаются данные из записей в связанной таблице.</span><span class="sxs-lookup"><span data-stu-id="dc4dd-103">A lookup table is a table of data that has a column that displays data from records in a related table.</span></span> <span data-ttu-id="dc4dd-104">В следующих процедурах для отображения поля с отношением по внешнему ключу от родительской к дочерней таблице используется элемент управления <xref:System.Windows.Forms.ComboBox>.</span><span class="sxs-lookup"><span data-stu-id="dc4dd-104">In the following procedures, a <xref:System.Windows.Forms.ComboBox> control is used to display the field with the foreign-key relationship from the parent to the child table.</span></span>  

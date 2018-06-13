@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33532403"
 ---
 # <a name="how-to-play-a-system-sound-from-a-windows-form"></a><span data-ttu-id="893db-102">Практическое руководство. Воспроизведение системных звуков в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="893db-102">How to: Play a System Sound from a Windows Form</span></span>
 <span data-ttu-id="893db-103">В следующем примере кода воспроизводится системный звук `Exclamation` во время выполнения.</span><span class="sxs-lookup"><span data-stu-id="893db-103">The following code example plays the `Exclamation` system sound at run time.</span></span> <span data-ttu-id="893db-104">Дополнительные сведения о системных звуков, в разделе <xref:System.Media.SystemSounds>.</span><span class="sxs-lookup"><span data-stu-id="893db-104">For more information about system sounds, see <xref:System.Media.SystemSounds>.</span></span>  

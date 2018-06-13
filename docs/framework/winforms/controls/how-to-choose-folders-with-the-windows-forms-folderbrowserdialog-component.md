@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33531239"
 ---
 # <a name="how-to-choose-folders-with-the-windows-forms-folderbrowserdialog-component"></a><span data-ttu-id="41a51-102">Практическое руководство. Выбор папки с помощью компонента FolderBrowserDialog в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="41a51-102">How to: Choose Folders with the Windows Forms FolderBrowserDialog Component</span></span>
 <span data-ttu-id="41a51-103">Часто в создаваемых приложениях Windows требуется предлагать пользователю выбрать папку, как правило, для сохранения набора файлов.</span><span class="sxs-lookup"><span data-stu-id="41a51-103">Often, within Windows applications you create, you will have to prompt users to select a folder, most frequently to save a set of files.</span></span> <span data-ttu-id="41a51-104">Windows Forms <xref:System.Windows.Forms.FolderBrowserDialog> компонент позволяет эта задача легко решается.</span><span class="sxs-lookup"><span data-stu-id="41a51-104">The Windows Forms <xref:System.Windows.Forms.FolderBrowserDialog> component allows you to easily accomplish this task.</span></span>  

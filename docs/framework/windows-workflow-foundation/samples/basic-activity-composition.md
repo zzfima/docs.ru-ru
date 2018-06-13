@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33515708"
 ---
 # <a name="basic-activity-composition"></a><span data-ttu-id="6036d-102">Сочетание базовых действий</span><span class="sxs-lookup"><span data-stu-id="6036d-102">Basic Activity Composition</span></span>
 <span data-ttu-id="6036d-103">В этом образце показывается создание пользовательских и предоставляемых системой действий для построения других пользовательских действий.</span><span class="sxs-lookup"><span data-stu-id="6036d-103">This sample demonstrates how to compose custom activities and system-provided activities to build more custom activities.</span></span>  

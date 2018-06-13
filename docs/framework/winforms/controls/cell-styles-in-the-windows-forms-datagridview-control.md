@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33529663"
 ---
 # <a name="cell-styles-in-the-windows-forms-datagridview-control"></a><span data-ttu-id="0e1a1-102">Стили ячеек элемента управления DataGridView в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="0e1a1-102">Cell Styles in the Windows Forms DataGridView Control</span></span>
 <span data-ttu-id="0e1a1-103">Каждая ячейка в <xref:System.Windows.Forms.DataGridView> элемент управления может иметь свой собственный стиль, включая формат текста, цвет фона, цвет и шрифт.</span><span class="sxs-lookup"><span data-stu-id="0e1a1-103">Each cell within the <xref:System.Windows.Forms.DataGridView> control can have its own style, such as text format, background color, foreground color, and font.</span></span> <span data-ttu-id="0e1a1-104">Как правило, тем не менее, несколько ячеек обладают одинаковым стилем.</span><span class="sxs-lookup"><span data-stu-id="0e1a1-104">Typically, however, multiple cells will share particular style characteristics.</span></span>  

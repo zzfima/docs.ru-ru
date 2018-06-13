@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: bc41acd6a4f2ef2557d3b39523c5e398c887c454
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33427912"
 ---
 # <a name="isymunmanagedwriteropenmethod-method"></a><span data-ttu-id="ea805-102">Метод ISymUnmanagedWriter::OpenMethod</span><span class="sxs-lookup"><span data-stu-id="ea805-102">ISymUnmanagedWriter::OpenMethod Method</span></span>
 <span data-ttu-id="ea805-103">Открывает метод в символ, который создается информация.</span><span class="sxs-lookup"><span data-stu-id="ea805-103">Opens a method into which symbol information is emitted.</span></span> <span data-ttu-id="ea805-104">Данный метод становится текущим методом для вызовов с целью определения точек следования, параметров и лексические области.</span><span class="sxs-lookup"><span data-stu-id="ea805-104">The given method becomes the current method for calls to define sequence points, parameters, and lexical scopes.</span></span> <span data-ttu-id="ea805-105">Нет неявную лексическую область вокруг весь метод.</span><span class="sxs-lookup"><span data-stu-id="ea805-105">There is an implicit lexical scope around the entire method.</span></span> <span data-ttu-id="ea805-106">Повторное открытие метода, которое было ранее закрыто стирает всех ранее определенных символов для этого метода.</span><span class="sxs-lookup"><span data-stu-id="ea805-106">Reopening a method that was previously closed erases any previously defined symbols for that method.</span></span> <span data-ttu-id="ea805-107">Одновременно может существовать только один метод open.</span><span class="sxs-lookup"><span data-stu-id="ea805-107">There can be only one open method at a time.</span></span>  

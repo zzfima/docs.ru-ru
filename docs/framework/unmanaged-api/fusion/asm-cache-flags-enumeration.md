@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ddf0f01db73a873d2dd823e1f754b970ae8aa056
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33430477"
 ---
 # <a name="asmcacheflags-enumeration"></a><span data-ttu-id="d99a9-102">Перечисление ASM_CACHE_FLAGS</span><span class="sxs-lookup"><span data-stu-id="d99a9-102">ASM_CACHE_FLAGS Enumeration</span></span>
 <span data-ttu-id="d99a9-103">Указывает источник сборки, представленного [IAssemblyCacheItem](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-interface.md) в глобальном кэше сборок.</span><span class="sxs-lookup"><span data-stu-id="d99a9-103">Indicates the source of an assembly that is represented by [IAssemblyCacheItem](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-interface.md) in the global assembly cache.</span></span>  

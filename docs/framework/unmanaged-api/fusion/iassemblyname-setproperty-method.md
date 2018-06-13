@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: bcfb584fc2380a7ae1567d3d4d6203b537676220
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33429703"
 ---
 # <a name="iassemblynamesetproperty-method"></a><span data-ttu-id="36bff-102">Метод IAssemblyName::SetProperty</span><span class="sxs-lookup"><span data-stu-id="36bff-102">IAssemblyName::SetProperty Method</span></span>
 <span data-ttu-id="36bff-103">Задает значение свойства, который ссылается указанный идентификатор свойства.</span><span class="sxs-lookup"><span data-stu-id="36bff-103">Sets the value of the property referenced by the specified property identifier.</span></span>  

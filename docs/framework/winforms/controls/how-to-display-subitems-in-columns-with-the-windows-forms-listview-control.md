@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33532511"
 ---
 # <a name="how-to-display-subitems-in-columns-with-the-windows-forms-listview-control"></a><span data-ttu-id="58a9c-102">Практическое руководство. Отображение дополнительных данных в столбцах элемента управления ListView в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="58a9c-102">How to: Display Subitems in Columns with the Windows Forms ListView Control</span></span>
 <span data-ttu-id="58a9c-103">Windows Forms <xref:System.Windows.Forms.ListView> элемент управления может отображать дополнительный текст или подэлементы, для каждого элемента в представлении Details.</span><span class="sxs-lookup"><span data-stu-id="58a9c-103">The Windows Forms <xref:System.Windows.Forms.ListView> control can display additional text, or subitems, for each item in the Details view.</span></span> <span data-ttu-id="58a9c-104">В первом столбце отображается текст элемента, например номер сотрудника.</span><span class="sxs-lookup"><span data-stu-id="58a9c-104">The first column displays the item text, for example an employee number.</span></span> <span data-ttu-id="58a9c-105">Второй, третий и последующих столбцах отображаются первый, второй и последующие связанные подэлементы.</span><span class="sxs-lookup"><span data-stu-id="58a9c-105">The second, third, and subsequent columns display the first, second, and subsequent associated subitems.</span></span>  

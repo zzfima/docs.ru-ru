@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33532390"
 ---
 # <a name="how-to-create-a-windows-explorerstyle-interface-on-a-windows-form"></a><span data-ttu-id="5f9b0-102">Практическое руководство. Создание интерфейса в стиле проводника в форме Windows Forms</span><span class="sxs-lookup"><span data-stu-id="5f9b0-102">How to: Create a Windows Explorer–Style Interface on a Windows Form</span></span>
 <span data-ttu-id="5f9b0-103">Проводник Windows является распространенным вариантом пользовательского интерфейса для приложений из-за его хорошо знаком всем пользователям.</span><span class="sxs-lookup"><span data-stu-id="5f9b0-103">Windows Explorer is a common user-interface choice for applications because of its ready familiarity.</span></span>  

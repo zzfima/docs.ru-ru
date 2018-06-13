@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: c9f22f23835f01022d5d62596b2cf63425759193
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33426067"
 ---
 # <a name="isymunmanagedreadergetsymattribute-method"></a><span data-ttu-id="db63d-102">Метод ISymUnmanagedReader::GetSymAttribute</span><span class="sxs-lookup"><span data-stu-id="db63d-102">ISymUnmanagedReader::GetSymAttribute Method</span></span>
 <span data-ttu-id="db63d-103">Получает пользовательский атрибут на основе его имени.</span><span class="sxs-lookup"><span data-stu-id="db63d-103">Gets a custom attribute based upon its name.</span></span> <span data-ttu-id="db63d-104">В отличие от настраиваемых атрибутов метаданных эти настраиваемые атрибуты хранятся в хранилище символов.</span><span class="sxs-lookup"><span data-stu-id="db63d-104">Unlike metadata custom attributes, these custom attributes are held in the symbol store.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33516153"
 ---
 # <a name="designer-rehosting"></a><span data-ttu-id="5e934-102">Повторное размещение конструктора</span><span class="sxs-lookup"><span data-stu-id="5e934-102">Designer ReHosting</span></span>
 <span data-ttu-id="5e934-103">Повторное размещение конструктора представляет собой обычный сценарий, предусматривающий размещение поля визуальной разработки рабочего процесса в пользовательском приложении.</span><span class="sxs-lookup"><span data-stu-id="5e934-103">Designer rehosting is a common scenario that refers to hosting the workflow design canvas inside of a custom application.</span></span> <span data-ttu-id="5e934-104">Наиболее привычным приложением размещения является Visual Studio, однако в целом ряде сценариев может быть полезным отображение конструктора рабочих процессов в приложении.</span><span class="sxs-lookup"><span data-stu-id="5e934-104">The hosting application most people are familiar with is Visual Studio, however there are a number of scenarios where showing the workflow designer in an application may be useful:</span></span>  

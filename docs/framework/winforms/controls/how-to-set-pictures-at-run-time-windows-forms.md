@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33533478"
 ---
 # <a name="how-to-set-pictures-at-run-time-windows-forms"></a><span data-ttu-id="f1e26-102">Практическое руководство. Установка изображений во время выполнения (Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="f1e26-102">How to: Set Pictures at Run Time (Windows Forms)</span></span>
 <span data-ttu-id="f1e26-103">Рисунок, отображаемый на форму Windows Forms можно программно установить <xref:System.Windows.Forms.PictureBox> элемента управления.</span><span class="sxs-lookup"><span data-stu-id="f1e26-103">You can programmatically set the image displayed by a Windows Forms <xref:System.Windows.Forms.PictureBox> control.</span></span>  

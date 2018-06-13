@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33528291"
 ---
 # <a name="how-to-add-search-capabilities-to-a-listview-control"></a><span data-ttu-id="c6216-102">Практическое руководство. Добавление в элемент управления ListView возможностей поиска</span><span class="sxs-lookup"><span data-stu-id="c6216-102">How to: Add Search Capabilities to a ListView Control</span></span>
 <span data-ttu-id="c6216-103">Зачастую при работе с большой список элементов в <xref:System.Windows.Forms.ListView> элемента управления, необходимо предоставить пользователям возможности поиска.</span><span class="sxs-lookup"><span data-stu-id="c6216-103">Oftentimes when working with a large list of items in a <xref:System.Windows.Forms.ListView> control, you want to offer search capabilities to the user.</span></span> <span data-ttu-id="c6216-104"><xref:System.Windows.Forms.ListView> Управления обеспечивает такую функцию двумя способами: поиск совпадений текста и поиск расположений.</span><span class="sxs-lookup"><span data-stu-id="c6216-104">The <xref:System.Windows.Forms.ListView> control offers this capability in two different ways: text matching and location searching.</span></span>  

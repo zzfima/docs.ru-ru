@@ -10,9 +10,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ffee9084bd07882079b2d44de25391f2491a1520
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33432786"
 ---
 # <a name="fusion-enumerations"></a><span data-ttu-id="03de8-102">Перечисления Fusion</span><span class="sxs-lookup"><span data-stu-id="03de8-102">Fusion Enumerations</span></span>
 <span data-ttu-id="03de8-103">В этом разделе описываются неуправляемые перечисления, используемые API Fusion.</span><span class="sxs-lookup"><span data-stu-id="03de8-103">This section describes the unmanaged enumerations that the fusion API uses.</span></span>  

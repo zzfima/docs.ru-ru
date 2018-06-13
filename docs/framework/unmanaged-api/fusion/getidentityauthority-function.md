@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: eae17c2dbccb4296d7542c60a30b341f1ad67f88
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33429570"
 ---
 # <a name="getidentityauthority-function"></a><span data-ttu-id="02fb2-102">Функция GetIdentityAuthority</span><span class="sxs-lookup"><span data-stu-id="02fb2-102">GetIdentityAuthority Function</span></span>
 <span data-ttu-id="02fb2-103">Возвращает указатель на [IIdentityAuthority](../../../../docs/framework/unmanaged-api/fusion/iidentityauthority-interface.md) экземпляр, который управляет ключи для объектов кода.</span><span class="sxs-lookup"><span data-stu-id="02fb2-103">Gets a pointer to an [IIdentityAuthority](../../../../docs/framework/unmanaged-api/fusion/iidentityauthority-interface.md) instance that manages keys for code objects.</span></span>  

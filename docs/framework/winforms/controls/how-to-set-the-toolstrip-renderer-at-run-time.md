@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33534184"
 ---
 # <a name="how-to-set-the-toolstrip-renderer-at-run-time"></a><span data-ttu-id="5687e-102">Практическое руководство. Назначение средства визуализации компоненту ToolStrip во время выполнения</span><span class="sxs-lookup"><span data-stu-id="5687e-102">How to: Set the ToolStrip Renderer at Run Time</span></span>
 <span data-ttu-id="5687e-103">С помощью пользовательского класса `ProfessionalColorTable` можно настраивать внешний вид элемента управления <xref:System.Windows.Forms.ToolStrip>.</span><span class="sxs-lookup"><span data-stu-id="5687e-103">You can customize the appearance of your <xref:System.Windows.Forms.ToolStrip> control by creating a custom `ProfessionalColorTable` class.</span></span>  

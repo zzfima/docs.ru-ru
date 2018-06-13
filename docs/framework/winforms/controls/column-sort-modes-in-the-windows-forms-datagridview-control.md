@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33529692"
 ---
 # <a name="column-sort-modes-in-the-windows-forms-datagridview-control"></a><span data-ttu-id="455c4-102">Установка режимов сортировки для столбцов элемента управления DataGridView в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="455c4-102">Column Sort Modes in the Windows Forms DataGridView Control</span></span>
 <span data-ttu-id="455c4-103"><xref:System.Windows.Forms.DataGridView> столбцы имеют три режима сортировки.</span><span class="sxs-lookup"><span data-stu-id="455c4-103"><xref:System.Windows.Forms.DataGridView> columns have three sort modes.</span></span> <span data-ttu-id="455c4-104">Режим сортировки для каждого столбца указывается с помощью <xref:System.Windows.Forms.DataGridViewColumn.SortMode%2A> свойство столбца, который может быть присвоено одно из следующих <xref:System.Windows.Forms.DataGridViewColumnSortMode> значений перечисления.</span><span class="sxs-lookup"><span data-stu-id="455c4-104">The sort mode for each column is specified through the <xref:System.Windows.Forms.DataGridViewColumn.SortMode%2A> property of the column, which can be set to one of the following <xref:System.Windows.Forms.DataGridViewColumnSortMode> enumeration values.</span></span>  

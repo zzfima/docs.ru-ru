@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33530742"
 ---
 # <a name="how-to-control-the-insertion-point-in-a-windows-forms-textbox-control"></a><span data-ttu-id="18d2e-102">Практическое руководство. Управление положением курсора в элементе управления TextBox в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="18d2e-102">How to: Control the Insertion Point in a Windows Forms TextBox Control</span></span>
 <span data-ttu-id="18d2e-103">Если в Windows Forms <xref:System.Windows.Forms.TextBox> управления впервые получает фокус, по умолчанию курсор в текстовом поле слева от текста.</span><span class="sxs-lookup"><span data-stu-id="18d2e-103">When a Windows Forms <xref:System.Windows.Forms.TextBox> control first receives the focus, the default insertion within the text box is to the left of any existing text.</span></span> <span data-ttu-id="18d2e-104">Пользователь может перемещать курсор с помощью клавиатуры или мыши.</span><span class="sxs-lookup"><span data-stu-id="18d2e-104">The user can move the insertion point with the keyboard or the mouse.</span></span> <span data-ttu-id="18d2e-105">Если текстовое поле теряет и затем восстанавливает фокус, курсор будет везде, где пользователь последний раз поместил его.</span><span class="sxs-lookup"><span data-stu-id="18d2e-105">If the text box loses and then regains the focus, the insertion point will be wherever the user last placed it.</span></span>  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33534271"
 ---
 # <a name="how-to-disable-tab-pages"></a><span data-ttu-id="7332c-102">Практическое руководство. Блокировка доступа ко вкладкам</span><span class="sxs-lookup"><span data-stu-id="7332c-102">How to: Disable Tab Pages</span></span>
 <span data-ttu-id="7332c-103">В некоторых случаях может потребоваться ограничить доступ к данным, доступным в приложении Windows Forms.</span><span class="sxs-lookup"><span data-stu-id="7332c-103">On some occasions, you will want to restrict access to data that is available within your Windows Forms application.</span></span> <span data-ttu-id="7332c-104">Примером этого может быть при наличии данных, отображаемых на страницах вкладок элемента управления вкладками; Администраторы могут иметь сведения на странице вкладки, который требуется запретить запись гостя или пользователям более низкого уровня.</span><span class="sxs-lookup"><span data-stu-id="7332c-104">One example of this might be when you have data displayed in the tab pages of a tab control; administrators could have information on a tab page that you would want to restrict from guest or lower-level users.</span></span>  

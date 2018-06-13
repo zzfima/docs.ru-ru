@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33317451"
 ---
 # <a name="element-operations-c"></a><span data-ttu-id="5f418-102">Операции с элементами (C#)</span><span class="sxs-lookup"><span data-stu-id="5f418-102">Element Operations (C#)</span></span>
 <span data-ttu-id="5f418-103">Операции с элементами возвращают один определенный элемент из последовательности.</span><span class="sxs-lookup"><span data-stu-id="5f418-103">Element operations return a single, specific element from a sequence.</span></span>  

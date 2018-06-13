@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33537207"
 ---
 # <a name="annotations"></a><span data-ttu-id="28b91-102">Заметки</span><span class="sxs-lookup"><span data-stu-id="28b91-102">Annotations</span></span>
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]<span data-ttu-id="28b91-103"> предоставляет элементы управления, которые поддерживают Составление примечаний для содержимого документа для просмотра документа.</span><span class="sxs-lookup"><span data-stu-id="28b91-103"> provides document viewing controls that support annotating document content.</span></span>  

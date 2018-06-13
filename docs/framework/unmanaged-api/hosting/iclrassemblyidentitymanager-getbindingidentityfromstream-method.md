@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 57cf4e9f79be8e705869cf986a586fcfb3359584
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33435343"
 ---
 # <a name="iclrassemblyidentitymanagergetbindingidentityfromstream-method"></a><span data-ttu-id="0b17d-102">Метод ICLRAssemblyIdentityManager::GetBindingIdentityFromStream</span><span class="sxs-lookup"><span data-stu-id="0b17d-102">ICLRAssemblyIdentityManager::GetBindingIdentityFromStream Method</span></span>
 <span data-ttu-id="0b17d-103">Возвращает данные идентификации канонической сборки для сборки в указанном потоке.</span><span class="sxs-lookup"><span data-stu-id="0b17d-103">Gets the canonical assembly identity data for the assembly in the specified stream.</span></span>  

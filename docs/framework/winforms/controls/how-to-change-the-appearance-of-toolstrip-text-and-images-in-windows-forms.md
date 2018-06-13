@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33530534"
 ---
 # <a name="how-to-change-the-appearance-of-toolstrip-text-and-images-in-windows-forms"></a><span data-ttu-id="25e6b-102">Практическое руководство. Изменение внешнего вида текста и изображений элемента управления ToolStrip в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="25e6b-102">How to: Change the Appearance of ToolStrip Text and Images in Windows Forms</span></span>
 <span data-ttu-id="25e6b-103">Можно управлять отображением текста и изображений на <xref:System.Windows.Forms.ToolStripItem> и их выравниванием относительно друг друга и <xref:System.Windows.Forms.ToolStrip>.</span><span class="sxs-lookup"><span data-stu-id="25e6b-103">You can control whether text and images are displayed on a <xref:System.Windows.Forms.ToolStripItem> and how they are aligned relative to each other and the <xref:System.Windows.Forms.ToolStrip>.</span></span>  

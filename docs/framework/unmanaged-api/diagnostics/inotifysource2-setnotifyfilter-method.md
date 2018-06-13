@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: d7a2391527a7912c5def593438a71ed006955e8d
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33426150"
 ---
 # <a name="inotifysource2setnotifyfilter-method"></a><span data-ttu-id="fcb0e-102">Метод INotifySource2::SetNotifyFilter</span><span class="sxs-lookup"><span data-stu-id="fcb0e-102">INotifySource2::SetNotifyFilter Method</span></span>
 <span data-ttu-id="fcb0e-103">Назначает фильтр уведомлений для использования с этим источником.</span><span class="sxs-lookup"><span data-stu-id="fcb0e-103">Assigns a notification filter for use with this source.</span></span>  

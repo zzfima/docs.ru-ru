@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32748923"
 ---
 # <a name="ltclientcertificategt-of-ltservicecredentialsgt"></a><span data-ttu-id="5e1ea-102">&lt;clientCertificate&gt; для &lt;serviceCredentials&gt;</span><span class="sxs-lookup"><span data-stu-id="5e1ea-102">&lt;clientCertificate&gt; of &lt;serviceCredentials&gt;</span></span>
 <span data-ttu-id="5e1ea-103">Задает файл сертификата X.509, используемый для подписания и шифрования сообщений к клиенту от службы при дуплексном обмене данными.</span><span class="sxs-lookup"><span data-stu-id="5e1ea-103">Defines an X.509 certificate used to sign and encrypt messages to a client form a service in a duplex communication pattern.</span></span>  

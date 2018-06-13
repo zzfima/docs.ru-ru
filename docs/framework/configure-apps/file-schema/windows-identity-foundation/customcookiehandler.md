@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32755608"
 ---
 # <a name="ltcustomcookiehandlergt"></a><span data-ttu-id="c277f-102">&lt;customCookieHandler&gt;</span><span class="sxs-lookup"><span data-stu-id="c277f-102">&lt;customCookieHandler&gt;</span></span>
 <span data-ttu-id="c277f-103">Задает тип обработчика пользовательского файла cookie.</span><span class="sxs-lookup"><span data-stu-id="c277f-103">Sets the custom cookie handler type.</span></span> <span data-ttu-id="c277f-104">Этот элемент может быть представлен, только если `mode` атрибут `<cookieHandler>` элемента является «Custom».</span><span class="sxs-lookup"><span data-stu-id="c277f-104">This element may only be present if the `mode` attribute of the `<cookieHandler>` element is "Custom".</span></span> <span data-ttu-id="c277f-105">Пользовательский тип должен быть производным от <xref:System.IdentityModel.Services.CookieHandler> класса.</span><span class="sxs-lookup"><span data-stu-id="c277f-105">The custom type must be derived from the <xref:System.IdentityModel.Services.CookieHandler> class.</span></span>  

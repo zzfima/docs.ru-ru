@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33531889"
 ---
 # <a name="how-to-navigate-to-a-url-with-the-webbrowser-control"></a><span data-ttu-id="c915b-102">Практическое руководство. Переход по заданному URL с помощью элемента управления WebBrowser</span><span class="sxs-lookup"><span data-stu-id="c915b-102">How to: Navigate to a URL with the WebBrowser Control</span></span>
 <span data-ttu-id="c915b-103">В следующем примере кода показано, как переходить <xref:System.Windows.Forms.WebBrowser> управления определенный URL-адрес.</span><span class="sxs-lookup"><span data-stu-id="c915b-103">The following code example demonstrates how to navigate the <xref:System.Windows.Forms.WebBrowser> control to a specific URL.</span></span>  

@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: afc041896615e906ac49eed9a7be139dff217463
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33427015"
 ---
 # <a name="isymunmanagedsourceservermodulegetsourceserverdata-method"></a><span data-ttu-id="ed07a-102">Метод ISymUnmanagedSourceServerModule::GetSourceServerData</span><span class="sxs-lookup"><span data-stu-id="ed07a-102">ISymUnmanagedSourceServerModule::GetSourceServerData Method</span></span>
 <span data-ttu-id="ed07a-103">Возвращает данные исходного сервера для модуля.</span><span class="sxs-lookup"><span data-stu-id="ed07a-103">Returns the source server data for the module.</span></span> <span data-ttu-id="ed07a-104">Вызывающий объект должен освободить ресурсы с помощью `CoTaskMemFree`.</span><span class="sxs-lookup"><span data-stu-id="ed07a-104">The caller must free resources by using `CoTaskMemFree`.</span></span>  

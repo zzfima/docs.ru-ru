@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32761042"
 ---
 # <a name="entity-sql-language"></a><span data-ttu-id="fda09-102">Язык Entity SQL</span><span class="sxs-lookup"><span data-stu-id="fda09-102">Entity SQL Language</span></span>
 <span data-ttu-id="fda09-103">Entity SQL представляет собой независимый от хранилища язык запросов, аналогичный языку SQL.</span><span class="sxs-lookup"><span data-stu-id="fda09-103">Entity SQL is a storage-independent query language that is similar to SQL.</span></span> <span data-ttu-id="fda09-104">Entity SQL позволяет выполнять запросы к данным сущности, представленным либо в виде объектов, либо в табличной форме.</span><span class="sxs-lookup"><span data-stu-id="fda09-104">Entity SQL allows you to query entity data, either as objects or in a tabular form.</span></span> <span data-ttu-id="fda09-105">Возможность использования Entity SQL необходимо рассматривать в следующих случаях:</span><span class="sxs-lookup"><span data-stu-id="fda09-105">You should consider using Entity SQL in the following cases:</span></span>  

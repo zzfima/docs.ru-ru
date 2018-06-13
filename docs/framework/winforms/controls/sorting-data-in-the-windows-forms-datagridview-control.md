@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33536017"
 ---
 # <a name="sorting-data-in-the-windows-forms-datagridview-control"></a><span data-ttu-id="c09fb-102">Сортировка данных в элементе управления Windows Forms DataGridView</span><span class="sxs-lookup"><span data-stu-id="c09fb-102">Sorting data in the Windows Forms DataGridView control</span></span>
 

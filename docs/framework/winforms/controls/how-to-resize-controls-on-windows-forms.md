@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33533930"
 ---
 # <a name="how-to-resize-controls-on-windows-forms"></a><span data-ttu-id="54f01-102">Практическое руководство. Изменение размера элементов управления в формах Windows Forms</span><span class="sxs-lookup"><span data-stu-id="54f01-102">How to: Resize Controls on Windows Forms</span></span>
 <span data-ttu-id="54f01-103">Вы можете изменить размер отдельных элементов управления, и вы можете изменить размер набора элементов управления одного или разных типов, таких как <xref:System.Windows.Forms.Button> и <xref:System.Windows.Forms.GroupBox> элементов управления.</span><span class="sxs-lookup"><span data-stu-id="54f01-103">You can resize individual controls, and you can resize multiple controls of the same or different kind, such as <xref:System.Windows.Forms.Button> and <xref:System.Windows.Forms.GroupBox> controls.</span></span>  

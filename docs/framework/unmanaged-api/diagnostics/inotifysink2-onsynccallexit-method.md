@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 3fe2ebecdacd3b848d5de7eecca4753a89a58f35
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33432483"
 ---
 # <a name="inotifysink2onsynccallexit-method"></a><span data-ttu-id="10a5a-102">Метод INotifySink2::OnSyncCallExit</span><span class="sxs-lookup"><span data-stu-id="10a5a-102">INotifySink2::OnSyncCallExit Method</span></span>
 <span data-ttu-id="10a5a-103">Вызывается при выходе из вызова.</span><span class="sxs-lookup"><span data-stu-id="10a5a-103">Gets invoked when exiting a call.</span></span>  

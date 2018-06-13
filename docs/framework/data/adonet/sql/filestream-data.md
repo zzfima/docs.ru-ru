@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33357784"
 ---
 # <a name="filestream-data"></a><span data-ttu-id="e201f-102">Данные FILESTREAM</span><span class="sxs-lookup"><span data-stu-id="e201f-102">FILESTREAM Data</span></span>
 <span data-ttu-id="e201f-103">Для двоичных данных (BLOB), хранящихся в столбце varbinary(max), появился новый атрибут хранилища FILESTREAM.</span><span class="sxs-lookup"><span data-stu-id="e201f-103">The FILESTREAM storage attribute is for binary (BLOB) data stored in a varbinary(max) column.</span></span> <span data-ttu-id="e201f-104">До появления FILESTREAM для хранения двоичных данных была необходима специальная обработка.</span><span class="sxs-lookup"><span data-stu-id="e201f-104">Before FILESTREAM, storing binary data required special handling.</span></span> <span data-ttu-id="e201f-105">Неструктурированные данные, например текстовые документы, изображения и видеоролики, зачастую хранятся вне базы данных, что затрудняет работу с ними.</span><span class="sxs-lookup"><span data-stu-id="e201f-105">Unstructured data, such as text documents, images and video, is often stored outside of the database, making it difficult to manage.</span></span>  

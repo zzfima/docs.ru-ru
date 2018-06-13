@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33536332"
 ---
 # <a name="ways-to-select-a-windows-forms-button-control"></a><span data-ttu-id="e04dc-102">Способы активации элемента управления Button в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="e04dc-102">Ways to Select a Windows Forms Button Control</span></span>
 <span data-ttu-id="e04dc-103">Кнопки Windows Forms можно выбрать следующими способами:</span><span class="sxs-lookup"><span data-stu-id="e04dc-103">A Windows Forms button can be selected in the following ways:</span></span>  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33535029"
 ---
 # <a name="how-to-set-grid-options-for-all-windows-forms"></a><span data-ttu-id="c589f-102">Практическое руководство. Установка параметров сетки для всех форм Windows Forms</span><span class="sxs-lookup"><span data-stu-id="c589f-102">How to: Set Grid Options for All Windows Forms</span></span>
 <span data-ttu-id="c589f-103">Освоив работу в среде разработки Visual Studio, можно задать настройки для всех форм и проектов, которыми вы работаете в конструкторе Windows Forms.</span><span class="sxs-lookup"><span data-stu-id="c589f-103">As you become used to working in the Visual Studio development environment, you can set preferences for all the forms and projects you work with in the Windows Forms Designer.</span></span>  

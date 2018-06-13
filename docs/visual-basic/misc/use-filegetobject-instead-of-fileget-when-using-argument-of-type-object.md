@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33640421"
 ---
 # <a name="use-39filegetobject39-instead-of-39fileget39-when-using-argument-of-type-39object39"></a><span data-ttu-id="c2d5f-102">Используйте &#39;FileGetObject&#39; вместо &#39;FileGet&#39; при использовании аргумента типа &#39;объекта&#39;</span><span class="sxs-lookup"><span data-stu-id="c2d5f-102">Use &#39;FileGetObject&#39; instead of &#39;FileGet&#39; when using argument of type &#39;Object&#39;</span></span>
 <span data-ttu-id="c2d5f-103">Метод `FileGet` включает аргумент типа `Object`.</span><span class="sxs-lookup"><span data-stu-id="c2d5f-103">The `FileGet` method includes an argument of type `Object`.</span></span> <span data-ttu-id="c2d5f-104">Чтобы избежать неоднозначности, следует использовать`FileGetObject` вместо `FileGet` .</span><span class="sxs-lookup"><span data-stu-id="c2d5f-104">`FileGetObject` should be used in place of `FileGet` to avoid ambiguities.</span></span>  

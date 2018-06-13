@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e60c3b06453e0f447249bddf5d4da5c240576577
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33432964"
 ---
 # <a name="iclrruntimeinfoisloadable-method"></a><span data-ttu-id="7aa9e-102">Метод ICLRRuntimeInfo::IsLoadable</span><span class="sxs-lookup"><span data-stu-id="7aa9e-102">ICLRRuntimeInfo::IsLoadable Method</span></span>
 <span data-ttu-id="7aa9e-103">Указывает, возможна ли загрузка среды выполнения, связанных с этим интерфейсом в текущий процесс, принимая во внимание других сред выполнения, которые уже могли быть загружены в процесс.</span><span class="sxs-lookup"><span data-stu-id="7aa9e-103">Indicates whether the runtime associated with this interface can be loaded into the current process, taking into account other runtimes that might already be loaded into the process.</span></span>  
