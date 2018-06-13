@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33270582"
 ---
 # <a name="sizeof-c-reference"></a><span data-ttu-id="abbb5-102">sizeof (Справочник по C#)</span><span class="sxs-lookup"><span data-stu-id="abbb5-102">sizeof (C# Reference)</span></span>
 <span data-ttu-id="abbb5-103">Позволяет получить размер в байтах для неуправляемого типа.</span><span class="sxs-lookup"><span data-stu-id="abbb5-103">Used to obtain the size in bytes for an unmanaged type.</span></span> <span data-ttu-id="abbb5-104">К неуправляемым типам относятся встроенные типы, перечисленные в представленной ниже таблице, а также следующие типы:</span><span class="sxs-lookup"><span data-stu-id="abbb5-104">Unmanaged types include the built-in types that are listed in the table that follows, and also the following:</span></span>  

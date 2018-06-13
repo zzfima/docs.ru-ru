@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33499093"
 ---
 # <a name="windows-communication-foundation-security"></a><span data-ttu-id="89a40-102">Безопасность Windows Communication Foundation</span><span class="sxs-lookup"><span data-stu-id="89a40-102">Windows Communication Foundation Security</span></span>
 <span data-ttu-id="89a40-103">В этом разделе описываются средства безопасности Windows Communication Foundation (WCF) и способ их использования для защиты сообщений.</span><span class="sxs-lookup"><span data-stu-id="89a40-103">The topics in this section describe Windows Communication Foundation (WCF) security features and how to use them to help secure messages.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33498635"
 ---
 # <a name="tampering"></a><span data-ttu-id="7b589-102">Подделка</span><span class="sxs-lookup"><span data-stu-id="7b589-102">Tampering</span></span>
 <span data-ttu-id="7b589-103">*Подмены* — это процесс изменения сообщения или доставки сообщения и использования измененного сообщения в целях, отличных от он был предназначен для.</span><span class="sxs-lookup"><span data-stu-id="7b589-103">*Tampering* is the act of altering a message, or the delivery of a message, and using the altered message for a purpose other than what it was intended for.</span></span>  

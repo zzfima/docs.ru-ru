@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33496703"
 ---
 # <a name="how-to-migrate-aspnet-web-service-code-to-the-windows-communication-foundation"></a><span data-ttu-id="899f0-102">Практическое руководство. Миграция кода веб-службы ASP.NET на платформу Windows Communication Foundation</span><span class="sxs-lookup"><span data-stu-id="899f0-102">How to: Migrate ASP.NET Web Service Code to the Windows Communication Foundation</span></span>
 <span data-ttu-id="899f0-103">Следующая процедура описывает, как перенести веб-службы ASP.NET для Windows Communication Foundation (WCF).</span><span class="sxs-lookup"><span data-stu-id="899f0-103">The following procedure describes how to migrate an ASP.NET Web Service to Windows Communication Foundation (WCF).</span></span>  

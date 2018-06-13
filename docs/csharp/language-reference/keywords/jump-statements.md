@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33265224"
 ---
 # <a name="jump-statements-c-reference"></a><span data-ttu-id="7474c-102">Операторы перехода (Справочник по C#)</span><span class="sxs-lookup"><span data-stu-id="7474c-102">Jump Statements (C# Reference)</span></span>
 <span data-ttu-id="7474c-103">Ветвление реализуется с помощью операторов перехода, которые выполняют немедленную передачу управления программой.</span><span class="sxs-lookup"><span data-stu-id="7474c-103">Branching is performed using jump statements, which cause an immediate transfer of the program control.</span></span> <span data-ttu-id="7474c-104">В операторах перехода используются следующие ключевые слова:</span><span class="sxs-lookup"><span data-stu-id="7474c-104">The following keywords are used in jump statements:</span></span>  

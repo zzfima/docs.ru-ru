@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33269981"
 ---
 # <a name="endif-c-reference"></a><span data-ttu-id="8a75f-102">#endif (Справочник по C#)</span><span class="sxs-lookup"><span data-stu-id="8a75f-102">#endif (C# Reference)</span></span>
 <span data-ttu-id="8a75f-103">`#endif` указывает на конец условной директивы, начало которой было задано с помощью директивы [#if](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md).</span><span class="sxs-lookup"><span data-stu-id="8a75f-103">`#endif` specifies the end of a conditional directive, which began with the [#if](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md) directive.</span></span> <span data-ttu-id="8a75f-104">Например, примененная к объекту директива</span><span class="sxs-lookup"><span data-stu-id="8a75f-104">For example,</span></span>  

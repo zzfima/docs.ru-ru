@@ -20,9 +20,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 81e2c59a538bd436606c226855c002cecd501e33
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33433670"
 ---
 # <a name="iclrstrongnamestrongnamegetblob-method"></a><span data-ttu-id="03d71-102">Метод ICLRStrongName::StrongNameGetBlob</span><span class="sxs-lookup"><span data-stu-id="03d71-102">ICLRStrongName::StrongNameGetBlob Method</span></span>
 <span data-ttu-id="03d71-103">Заполняет указанный буфер двоичное представление исполняемого файла по указанному адресу.</span><span class="sxs-lookup"><span data-stu-id="03d71-103">Fills the specified buffer with the binary representation of the executable file at the specified address.</span></span>  

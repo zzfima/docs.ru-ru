@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33656062"
 ---
 # <a name="object-variable-assignment-visual-basic"></a><span data-ttu-id="29e4a-102">Присваивание объектных переменных (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="29e4a-102">Object Variable Assignment (Visual Basic)</span></span>
 <span data-ttu-id="29e4a-103">Используйте обычный оператор присваивания для назначения объекта переменной объекта.</span><span class="sxs-lookup"><span data-stu-id="29e4a-103">You use a normal assignment statement to assign an object to an object variable.</span></span> <span data-ttu-id="29e4a-104">Можно присвоить выражение объекта или [ничего](../../../../visual-basic/language-reference/nothing.md) ключевое слово, как приведенный ниже пример иллюстрирует.</span><span class="sxs-lookup"><span data-stu-id="29e4a-104">You can assign an object expression or the [Nothing](../../../../visual-basic/language-reference/nothing.md) keyword, as the following example illustrates.</span></span>  

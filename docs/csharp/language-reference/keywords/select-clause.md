@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33279988"
 ---
 # <a name="select-clause-c-reference"></a><span data-ttu-id="347b7-102">Предложение "select" (справочник по C#)</span><span class="sxs-lookup"><span data-stu-id="347b7-102">select clause (C# Reference)</span></span>
 <span data-ttu-id="347b7-103">В выражении запроса предложение `select` задает тип значений, которые будут получены при выполнении запроса.</span><span class="sxs-lookup"><span data-stu-id="347b7-103">In a query expression, the `select` clause specifies the type of values that will be produced when the query is executed.</span></span> <span data-ttu-id="347b7-104">Получаемый результат зависит от вычисления всех предыдущих предложений и любых выражений в самом предложении `select`.</span><span class="sxs-lookup"><span data-stu-id="347b7-104">The result is based on the evaluation of all the previous clauses and on any expressions in the `select` clause itself.</span></span> <span data-ttu-id="347b7-105">Выражение запроса должно оканчиваться предложением `select` или [group](../../../csharp/language-reference/keywords/group-clause.md).</span><span class="sxs-lookup"><span data-stu-id="347b7-105">A query expression must terminate with either a `select` clause or a [group](../../../csharp/language-reference/keywords/group-clause.md) clause.</span></span>  

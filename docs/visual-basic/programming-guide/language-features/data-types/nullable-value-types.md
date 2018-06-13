@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33656023"
 ---
 # <a name="nullable-value-types-visual-basic"></a><span data-ttu-id="eb45b-102">Типы значения, допускающие Null (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="eb45b-102">Nullable Value Types (Visual Basic)</span></span>
 <span data-ttu-id="eb45b-103">Иногда пользователь работает с типом значения, не имеет определенного значения в определенных обстоятельствах.</span><span class="sxs-lookup"><span data-stu-id="eb45b-103">Sometimes you work with a value type that does not have a defined value in certain circumstances.</span></span> <span data-ttu-id="eb45b-104">Например поле в базе данных может потребоваться различать наличие присвоенного значения, имеет смысл и отсутствие присвоено значение.</span><span class="sxs-lookup"><span data-stu-id="eb45b-104">For example, a field in a database might have to distinguish between having an assigned value that is meaningful and not having an assigned value.</span></span> <span data-ttu-id="eb45b-105">Типы значений можно расширить выполнить обычные значения или значение null.</span><span class="sxs-lookup"><span data-stu-id="eb45b-105">Value types can be extended to take either their normal values or a null value.</span></span> <span data-ttu-id="eb45b-106">Такое расширение называется *обнуляемый*.</span><span class="sxs-lookup"><span data-stu-id="eb45b-106">Such an extension is called a *nullable type*.</span></span>  

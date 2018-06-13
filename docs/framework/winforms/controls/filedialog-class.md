@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33526941"
 ---
 # <a name="filedialog-class"></a><span data-ttu-id="c4ee8-102">Класс FileDialog</span><span class="sxs-lookup"><span data-stu-id="c4ee8-102">FileDialog Class</span></span>
 <span data-ttu-id="c4ee8-103">Windows Forms <xref:System.Windows.Forms.FileDialog> класс представляет общий базовый класс для <xref:System.Windows.Forms.OpenFileDialog> и <xref:System.Windows.Forms.SaveFileDialog> компонентов.</span><span class="sxs-lookup"><span data-stu-id="c4ee8-103">The Windows Forms <xref:System.Windows.Forms.FileDialog> class is the common base class for the <xref:System.Windows.Forms.OpenFileDialog> and <xref:System.Windows.Forms.SaveFileDialog> components.</span></span> <span data-ttu-id="c4ee8-104">Можно внести изменения в <xref:System.Windows.Forms.FileDialog> класс, который влияет на внешний вид и поведение этих диалоговых окон, в зависимости от версии Windows, приложение выполняется на.</span><span class="sxs-lookup"><span data-stu-id="c4ee8-104">You can make changes to the <xref:System.Windows.Forms.FileDialog> class that affect the appearance and behavior of these dialog boxes, depending on the version of Windows the application is running on.</span></span>  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33275068"
 ---
 # <a name="-operator-c-reference"></a><span data-ttu-id="43bb0-102">Оператор ++ (справочник по C#)</span><span class="sxs-lookup"><span data-stu-id="43bb0-102">++ Operator (C# Reference)</span></span>
 <span data-ttu-id="43bb0-103">Оператор инкремента (`++`) увеличивает операнд на 1.</span><span class="sxs-lookup"><span data-stu-id="43bb0-103">The increment operator (`++`) increments its operand by 1.</span></span> <span data-ttu-id="43bb0-104">Оператор инкремента может находиться перед своим операндом или после него: `++variable` и `variable++`.</span><span class="sxs-lookup"><span data-stu-id="43bb0-104">The increment operator can appear before or after its operand: `++variable` and `variable++`.</span></span>  

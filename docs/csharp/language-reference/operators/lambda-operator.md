@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33288230"
 ---
 # <a name="gt-operator-c-reference"></a><span data-ttu-id="fd14a-102">Оператор =&gt; (справочник по C#)</span><span class="sxs-lookup"><span data-stu-id="fd14a-102">=&gt; Operator (C# Reference)</span></span>
 

@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33532718"
 ---
 # <a name="how-to-split-a-window-horizontally-using-the-designer"></a><span data-ttu-id="1a7d0-102">Практическое руководство. Разделение окна по горизонтали с помощью конструктора</span><span class="sxs-lookup"><span data-stu-id="1a7d0-102">How to: Split a Window Horizontally Using the Designer</span></span>
 <span data-ttu-id="1a7d0-103">Этот пример делает разделитель <xref:System.Windows.Forms.SplitContainer> элемента управления по горизонтали.</span><span class="sxs-lookup"><span data-stu-id="1a7d0-103">This example makes the splitter that divides the <xref:System.Windows.Forms.SplitContainer> control horizontal.</span></span>  

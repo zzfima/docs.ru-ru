@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32750535"
 ---
 # <a name="ltclientcertificategt-of-ltclientcredentialsgt-element"></a><span data-ttu-id="c84ef-102">&lt;clientCertificate&gt; элемента &lt;clientCredentials&gt;</span><span class="sxs-lookup"><span data-stu-id="c84ef-102">&lt;clientCertificate&gt; of &lt;clientCredentials&gt; Element</span></span>
 <span data-ttu-id="c84ef-103">Определяет сертификат X.509, используемый для проверки подлинности клиента по отношению к службе.</span><span class="sxs-lookup"><span data-stu-id="c84ef-103">Defines an X.509 certificate used to authenticate a client to a service.</span></span>  

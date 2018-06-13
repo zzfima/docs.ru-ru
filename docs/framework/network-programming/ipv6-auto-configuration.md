@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33393433"
 ---
 # <a name="ipv6-auto-configuration"></a><span data-ttu-id="1d5b7-102">Автоматическая настройка IPv6</span><span class="sxs-lookup"><span data-stu-id="1d5b7-102">IPv6 Auto-Configuration</span></span>
 <span data-ttu-id="1d5b7-103">Одна из важнейших целей IPv6 заключается в поддержке самонастраивающегося узла.</span><span class="sxs-lookup"><span data-stu-id="1d5b7-103">One important goal for IPv6 is to support node Plug and Play.</span></span> <span data-ttu-id="1d5b7-104">То есть можно подключить узел к сети IPv6 и автоматически настроить его без вмешательства человека.</span><span class="sxs-lookup"><span data-stu-id="1d5b7-104">That is, it should be possible to plug a node into an IPv6 network and have it automatically configured without any human intervention.</span></span>  

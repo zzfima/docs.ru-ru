@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c8c8d17723481fc5b41fe5f3006fe8db2c53d1ea
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33438484"
 ---
 # <a name="ihostassemblymanager-interface"></a><span data-ttu-id="5736a-102">Интерфейс IHostAssemblyManager</span><span class="sxs-lookup"><span data-stu-id="5736a-102">IHostAssemblyManager Interface</span></span>
 <span data-ttu-id="5736a-103">Предоставляет методы, позволяющие основному приложению задать набор сборок, которые должны быть загружены с общеязыковой среды выполнения (CLR) или узлом.</span><span class="sxs-lookup"><span data-stu-id="5736a-103">Provides methods that allow a host to specify sets of assemblies that should be loaded by the common language runtime (CLR) or by the host.</span></span>  

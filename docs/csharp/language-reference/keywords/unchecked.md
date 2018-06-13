@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33267984"
 ---
 # <a name="unchecked-c-reference"></a><span data-ttu-id="df9b4-102">unchecked (справочник по C#)</span><span class="sxs-lookup"><span data-stu-id="df9b4-102">unchecked (C# Reference)</span></span>
 <span data-ttu-id="df9b4-103">Ключевое слово `unchecked` позволяет предотвратить проверку переполнения при выполнении арифметических операций и преобразований с данными целого типа.</span><span class="sxs-lookup"><span data-stu-id="df9b4-103">The `unchecked` keyword is used to suppress overflow-checking for integral-type arithmetic operations and conversions.</span></span>  

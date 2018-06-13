@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33528848"
 ---
 # <a name="column-fill-mode-in-the-windows-forms-datagridview-control"></a><span data-ttu-id="2f32f-102">Установка режимов заполнения для столбцов элемента управления DataGridView в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="2f32f-102">Column Fill Mode in the Windows Forms DataGridView Control</span></span>
 <span data-ttu-id="2f32f-103">В режиме заполнения столбцов элемент управления <xref:System.Windows.Forms.DataGridView> автоматически изменяет размер своих столбцов, чтобы они полностью заполняли доступную область отображения по ширине.</span><span class="sxs-lookup"><span data-stu-id="2f32f-103">In column fill mode, the <xref:System.Windows.Forms.DataGridView> control resizes its columns automatically so that they fill the width of the available display area.</span></span> <span data-ttu-id="2f32f-104">Элемент управления не отображает горизонтальную полосу прокрутки, за исключением случаев, когда необходимо сохранить ширину каждого столбца равной или большей, чем значение его свойства <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A>.</span><span class="sxs-lookup"><span data-stu-id="2f32f-104">The control does not display the horizontal scroll bar except when it is necessary to keep the width of every column equal to or greater than its <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A> property value.</span></span>  

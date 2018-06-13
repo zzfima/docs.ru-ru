@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33395165"
 ---
 # <a name="side-by-side-execution-in-the-net-framework"></a><span data-ttu-id="2d874-102">Параллельное выполнение в .NET Framework</span><span class="sxs-lookup"><span data-stu-id="2d874-102">Side-by-Side Execution in the .NET Framework</span></span>
 <span data-ttu-id="2d874-103">Параллельное выполнение представляет собой возможность запускать несколько версий приложения или компонента с одного и того же компьютера.</span><span class="sxs-lookup"><span data-stu-id="2d874-103">Side-by-side execution is the ability to run multiple versions of an application or component on the same computer.</span></span> <span data-ttu-id="2d874-104">В одно и то же время на одном компьютере можно запускать несколько версий среды CLR, а также несколько версий приложений и компонентов, использующих одну из версий среды выполнения.</span><span class="sxs-lookup"><span data-stu-id="2d874-104">You can have multiple versions of the common language runtime, and multiple versions of applications and components that use a version of the runtime, on the same computer at the same time.</span></span>  

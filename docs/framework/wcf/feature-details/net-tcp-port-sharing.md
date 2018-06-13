@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33497156"
 ---
 # <a name="nettcp-port-sharing"></a><span data-ttu-id="d15e8-102">Совместное использование портов Net.TCP</span><span class="sxs-lookup"><span data-stu-id="d15e8-102">Net.TCP Port Sharing</span></span>
 <span data-ttu-id="d15e8-103">Windows Communication Foundation (WCF) предоставляет новый протокол сети на базе TCP (net.tcp://) для высокопроизводительного обмена данными.</span><span class="sxs-lookup"><span data-stu-id="d15e8-103">Windows Communication Foundation (WCF) provides a new TCP-based network protocol (net.tcp://) for high-performance communication.</span></span> <span data-ttu-id="d15e8-104">WCF также появился новый системный компонент доступа к портам NET.TCP, позволяющая разделять порты net.tcp совместно использовать несколько пользовательских процессов.</span><span class="sxs-lookup"><span data-stu-id="d15e8-104">WCF also introduces a new system component, the Net.TCP Port Sharing Service that enables net.tcp ports to be shared across multiple user processes.</span></span>  

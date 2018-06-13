@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32760938"
 ---
 # <a name="canonical-functions"></a><span data-ttu-id="27d1f-102">Канонические функции</span><span class="sxs-lookup"><span data-stu-id="27d1f-102">Canonical Functions</span></span>
 <span data-ttu-id="27d1f-103">В этом разделе обсуждаются канонические функции, которые поддерживаются всеми поставщиками данных и могут использоваться всеми технологиями запросов.</span><span class="sxs-lookup"><span data-stu-id="27d1f-103">This section discusses canonical functions that are supported by all data providers, and can be used by all querying technologies.</span></span> <span data-ttu-id="27d1f-104">Канонические функции не могут расширяться поставщиком.</span><span class="sxs-lookup"><span data-stu-id="27d1f-104">Canonical functions cannot be extended by a provider.</span></span>  

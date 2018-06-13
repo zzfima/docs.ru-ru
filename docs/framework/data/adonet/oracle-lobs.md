@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32758780"
 ---
 # <a name="oracle-lobs"></a><span data-ttu-id="e6f0b-102">Большие двоичные объекты (LOB) Oracle</span><span class="sxs-lookup"><span data-stu-id="e6f0b-102">Oracle LOBs</span></span>
 <span data-ttu-id="e6f0b-103">Поставщик данных .NET Framework для Oracle содержит <xref:System.Data.OracleClient.OracleLob> класс, который используется для работы с Oracle **LOB** типов данных.</span><span class="sxs-lookup"><span data-stu-id="e6f0b-103">The .NET Framework Data Provider for Oracle includes the <xref:System.Data.OracleClient.OracleLob> class, which is used to work with Oracle **LOB** data types.</span></span>  

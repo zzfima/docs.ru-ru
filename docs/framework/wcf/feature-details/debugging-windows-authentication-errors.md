@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33495877"
 ---
 # <a name="debugging-windows-authentication-errors"></a><span data-ttu-id="34709-102">Отладка ошибок проверки подлинности Windows</span><span class="sxs-lookup"><span data-stu-id="34709-102">Debugging Windows Authentication Errors</span></span>
 <span data-ttu-id="34709-103">При использовании в качестве механизма обеспечения безопасности проверки подлинности Windows процессы безопасности обрабатываются интерфейсом поставщика поддержки безопасности SSPI.</span><span class="sxs-lookup"><span data-stu-id="34709-103">When using Windows authentication as a security mechanism, the Security Support Provider Interface (SSPI) handles security processes.</span></span> <span data-ttu-id="34709-104">Когда на уровне SSPI происходят ошибки безопасности, они регистрируются Windows Communication Foundation (WCF).</span><span class="sxs-lookup"><span data-stu-id="34709-104">When security errors occur at the SSPI layer, they are surfaced by Windows Communication Foundation (WCF).</span></span> <span data-ttu-id="34709-105">В этом разделе описаны общие принципы и некоторые вопросы, помогающие диагностировать такие ошибки.</span><span class="sxs-lookup"><span data-stu-id="34709-105">This topic provides a framework and set of questions to help diagnose the errors.</span></span>  
