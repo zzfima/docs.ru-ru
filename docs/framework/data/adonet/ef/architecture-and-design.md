@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32766872"
 ---
 # <a name="architecture-and-design"></a>Архитектура и разработка
 Модуль создания SQL в [образец поставщика](http://go.microsoft.com/fwlink/?LinkId=180616) реализуется в виде посетителя в дереве выражения, представляющем дерево команд. Создание кода выполняется за один проход по дереву выражения.  

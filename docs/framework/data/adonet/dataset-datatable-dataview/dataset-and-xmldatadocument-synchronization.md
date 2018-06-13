@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32759170"
 ---
 # <a name="dataset-and-xmldatadocument-synchronization"></a>Синхронизация набора данных и XmlDataDocument
 ADO.NET <xref:System.Data.DataSet> обеспечивает реляционное представление данных. Для доступа к иерархическим данным можно использовать классы XML, доступные на платформе .NET Framework. Исторически эти два представления данных использовались раздельно. Тем не менее, платформа .NET Framework обеспечивает динамический синхронный доступ в реляционном и иерархическом представлении данных с помощью **DataSet** объекта и <xref:System.Xml.XmlDataDocument> соответственно.  

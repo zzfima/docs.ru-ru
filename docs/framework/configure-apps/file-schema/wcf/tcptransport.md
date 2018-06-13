@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32751081"
 ---
 # <a name="lttcptransportgt"></a>&lt;tcpTransport&gt;
 Определяет транспорт TCP, который может использоваться каналом для передачи сообщений для пользовательской привязки.  
