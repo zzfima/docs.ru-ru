@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33644216"
 ---
 # <a name="caller-information-visual-basic"></a><span data-ttu-id="a022f-102">Сведения о вызывающем объекте (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="a022f-102">Caller Information (Visual Basic)</span></span>
 <span data-ttu-id="a022f-103">С помощью информационных атрибутов вызывающего объекта можно получить сведения о вызывающем объекте метода.</span><span class="sxs-lookup"><span data-stu-id="a022f-103">By using Caller Info attributes, you can obtain information about the caller to a method.</span></span> <span data-ttu-id="a022f-104">Можно получить путь к файлу исходного кода, номер строки в исходном коде и имя вызывающего объекта.</span><span class="sxs-lookup"><span data-stu-id="a022f-104">You can obtain file path of the source code, the line number in the source code, and the member name of the caller.</span></span> <span data-ttu-id="a022f-105">Эти сведения полезны для трассировки, отладки и создания средств диагностики.</span><span class="sxs-lookup"><span data-stu-id="a022f-105">This information is helpful for tracing, debugging, and creating diagnostic tools.</span></span>  

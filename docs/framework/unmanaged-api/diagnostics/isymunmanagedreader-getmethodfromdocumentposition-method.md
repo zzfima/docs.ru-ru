@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: f756a6e80eee0998398b4955d1d091d97b2ad73f
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33426163"
 ---
 # <a name="isymunmanagedreadergetmethodfromdocumentposition-method"></a><span data-ttu-id="497f4-102">Метод ISymUnmanagedReader::GetMethodFromDocumentPosition</span><span class="sxs-lookup"><span data-stu-id="497f4-102">ISymUnmanagedReader::GetMethodFromDocumentPosition Method</span></span>
 <span data-ttu-id="497f4-103">Возвращает метод, который содержит точку останова в заданной позиции в документе.</span><span class="sxs-lookup"><span data-stu-id="497f4-103">Returns the method that contains the breakpoint at the given position in a document.</span></span>  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33543654"
 ---
 # <a name="how-to-set-margins-of-elements-and-controls"></a><span data-ttu-id="b65c0-102">Практическое руководство. Установка полей для элементов и элементов управления</span><span class="sxs-lookup"><span data-stu-id="b65c0-102">How to: Set Margins of Elements and Controls</span></span>
 <span data-ttu-id="b65c0-103">В этом примере описывается, как задать <xref:System.Windows.FrameworkElement.Margin%2A> свойства путем изменения значения любого существующего свойства для поля в коде.</span><span class="sxs-lookup"><span data-stu-id="b65c0-103">This example describes how to set the <xref:System.Windows.FrameworkElement.Margin%2A> property, by changing any existing property value for the margin in code-behind.</span></span> <span data-ttu-id="b65c0-104"><xref:System.Windows.FrameworkElement.Margin%2A> Свойство является свойством <xref:System.Windows.FrameworkElement> элемент базового и поэтому оно наследуется различных элементов управления и других элементов.</span><span class="sxs-lookup"><span data-stu-id="b65c0-104">The <xref:System.Windows.FrameworkElement.Margin%2A> property is a property of the <xref:System.Windows.FrameworkElement> base element, and is thus inherited by a variety of controls and other elements.</span></span>  

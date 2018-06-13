@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33543544"
 ---
 # <a name="how-to-enable-text-trimming"></a><span data-ttu-id="529f0-102">Практическое руководство. Включение обрезки текста</span><span class="sxs-lookup"><span data-stu-id="529f0-102">How to: Enable Text Trimming</span></span>
 <span data-ttu-id="529f0-103">В этом примере демонстрируется использование и влияние значений, доступных в <xref:System.Windows.TextTrimming> перечисления.</span><span class="sxs-lookup"><span data-stu-id="529f0-103">This example demonstrates the usage and effects of the values available in the <xref:System.Windows.TextTrimming> enumeration.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32766817"
 ---
 # <a name="performance-considerations-entity-framework"></a><span data-ttu-id="03b4e-102">Сведения о производительности (Entity Framework)</span><span class="sxs-lookup"><span data-stu-id="03b4e-102">Performance Considerations (Entity Framework)</span></span>
 <span data-ttu-id="03b4e-103">В этом подразделе описаны характеристики производительности платформы ADO.NET Entity Framework, а также приведены соображения по повышению производительности приложений платформы Entity Framework.</span><span class="sxs-lookup"><span data-stu-id="03b4e-103">This topic describes performance characteristics of the ADO.NET Entity Framework and provides some considerations to help improve the performance of Entity Framework applications.</span></span>  

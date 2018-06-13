@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32765884"
 ---
 # <a name="identifiers-entity-sql"></a><span data-ttu-id="c4ba9-102">Идентификаторы (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="c4ba9-102">Identifiers (Entity SQL)</span></span>
 <span data-ttu-id="c4ba9-103">В языке [!INCLUDE[esql](../../../../../../includes/esql-md.md)] идентификаторы используются для представления псевдонимов выражений запросов, ссылок на переменные, свойств объектов, функций и т. д.</span><span class="sxs-lookup"><span data-stu-id="c4ba9-103">Identifiers are used in [!INCLUDE[esql](../../../../../../includes/esql-md.md)] to represent query expression aliases, variable references, properties of objects, functions, and so on.</span></span> [!INCLUDE[esql](../../../../../../includes/esql-md.md)]<span data-ttu-id="c4ba9-104"> предоставляет два вида идентификаторов: простые идентификаторы и заключенные в кавычки идентификаторы.</span><span class="sxs-lookup"><span data-stu-id="c4ba9-104"> provides two kinds of identifiers: simple identifiers and quoted identifiers.</span></span>  

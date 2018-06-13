@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33335839"
 ---
 # <a name="threading-c"></a><span data-ttu-id="141e7-102">Работа с потоками (C#)</span><span class="sxs-lookup"><span data-stu-id="141e7-102">Threading (C#)</span></span>
 <span data-ttu-id="141e7-103">Потоки позволяют программе на C# осуществлять параллельную обработку, то есть вы можете выполнять несколько операций одновременно.</span><span class="sxs-lookup"><span data-stu-id="141e7-103">Threading enables your C# program to perform concurrent processing so that you can do more than one operation at a time.</span></span> <span data-ttu-id="141e7-104">Например, потоки можно использовать для отслеживания пользовательского ввода, выполнения фоновых задач и одновременной обработки нескольких потоков ввода.</span><span class="sxs-lookup"><span data-stu-id="141e7-104">For example, you can use threading to monitor input from the user, perform background tasks, and handle simultaneous streams of input.</span></span>  

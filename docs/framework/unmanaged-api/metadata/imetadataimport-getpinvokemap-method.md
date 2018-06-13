@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 2174537e9605ad35e4f6f878954e318c7032b080
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33448352"
 ---
 # <a name="imetadataimportgetpinvokemap-method"></a><span data-ttu-id="93e51-102">Метод IMetaDataImport::GetPinvokeMap</span><span class="sxs-lookup"><span data-stu-id="93e51-102">IMetaDataImport::GetPinvokeMap Method</span></span>
 <span data-ttu-id="93e51-103">Возвращает токен ModuleRef, представляющий целевую сборку вызова PInvoke.</span><span class="sxs-lookup"><span data-stu-id="93e51-103">Gets a ModuleRef token to represent the target assembly of a PInvoke call.</span></span>  

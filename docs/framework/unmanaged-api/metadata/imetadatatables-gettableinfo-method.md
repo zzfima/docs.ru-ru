@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: ea617668a72413f3387a35fe009b37fa15d03354
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33449612"
 ---
 # <a name="imetadatatablesgettableinfo-method"></a><span data-ttu-id="a5ae6-102">Метод IMetaDataTables::GetTableInfo</span><span class="sxs-lookup"><span data-stu-id="a5ae6-102">IMetaDataTables::GetTableInfo Method</span></span>
 <span data-ttu-id="a5ae6-103">Возвращает имя, размер строки, количество строк, количество столбцов и ключевого столбца индекса указанной таблицы.</span><span class="sxs-lookup"><span data-stu-id="a5ae6-103">Gets the name, row size, number of rows, number of columns, and key column index of the specified table.</span></span>  

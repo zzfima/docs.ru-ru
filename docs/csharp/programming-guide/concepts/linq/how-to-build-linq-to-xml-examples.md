@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33329564"
 ---
 # <a name="how-to-build-linq-to-xml-examples-c"></a><span data-ttu-id="16e85-102">Практическое руководство. Сборка примеров LINQ to XML (C#)</span><span class="sxs-lookup"><span data-stu-id="16e85-102">How to: Build LINQ to XML Examples (C#)</span></span>
 <span data-ttu-id="16e85-103">В разных фрагментах кода и примерах, приведенных в этой документации, используются классы и типы из различных пространств имен.</span><span class="sxs-lookup"><span data-stu-id="16e85-103">The various snippets and examples in this documentation use classes and types from a variety of namespaces.</span></span> <span data-ttu-id="16e85-104">При компиляции кода C# необходимо указывать соответствующие директивы `using`.</span><span class="sxs-lookup"><span data-stu-id="16e85-104">When compiling C# code, you need to supply appropriate `using` directives.</span></span>  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33525521"
 ---
 # <a name="accessing-frames-in-the-managed-html-document-object-model"></a><span data-ttu-id="86f79-102">Доступ к фреймам с использованием управляемой объектной модели HTML-документов</span><span class="sxs-lookup"><span data-stu-id="86f79-102">Accessing Frames in the Managed HTML Document Object Model</span></span>
 <span data-ttu-id="86f79-103">Некоторые HTML-документы состоят из *кадров*, или windows, которые могут содержать другие документы HTML.</span><span class="sxs-lookup"><span data-stu-id="86f79-103">Some HTML documents are composed out of *frames*, or windows that can hold their own distinct HTML documents.</span></span> <span data-ttu-id="86f79-104">Использование фреймов упрощает создание HTML-страниц, в которых одна или несколько частей страницы остаются статичными, например панель навигации, а в остальных фреймах содержимое постоянно изменяется.</span><span class="sxs-lookup"><span data-stu-id="86f79-104">Using frames makes it easy to create HTML pages in which one or more pieces of the page remain static, such as a navigation bar, while other frames constantly change their content.</span></span>  

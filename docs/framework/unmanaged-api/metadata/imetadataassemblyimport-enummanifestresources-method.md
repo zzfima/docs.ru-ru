@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 707e482a6952ee1266950dc181fbc85e5d6ef398
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33448059"
 ---
 # <a name="imetadataassemblyimportenummanifestresources-method"></a><span data-ttu-id="f5b91-102">Метод IMetaDataAssemblyImport::EnumManifestResources</span><span class="sxs-lookup"><span data-stu-id="f5b91-102">IMetaDataAssemblyImport::EnumManifestResources Method</span></span>
 <span data-ttu-id="f5b91-103">Получает указатель на перечислитель для ресурсов, на которые ссылается манифест текущей сборки.</span><span class="sxs-lookup"><span data-stu-id="f5b91-103">Gets a pointer to an enumerator for the resources referenced in the current assembly manifest.</span></span>  

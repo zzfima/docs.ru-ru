@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33339661"
 ---
 # <a name="expressions-c-programming-guide"></a><span data-ttu-id="2b630-102">Выражения (Руководство по программированию в C#)</span><span class="sxs-lookup"><span data-stu-id="2b630-102">Expressions (C# Programming Guide)</span></span>
 <span data-ttu-id="2b630-103">*Выражение* представляет собой последовательность из одного или нескольких операндов и от нуля до нескольких операторов, которую можно вычислить, получив в результате одно значение, объект, метод или пространство имен.</span><span class="sxs-lookup"><span data-stu-id="2b630-103">An *expression* is a sequence of one or more operands and zero or more operators that can be evaluated to a single value, object, method, or namespace.</span></span> <span data-ttu-id="2b630-104">Выражение может состоять из литерала, вызова метода, оператора или его операндов, а также из *простого имени*.</span><span class="sxs-lookup"><span data-stu-id="2b630-104">Expressions can consist of a literal value, a method invocation, an operator and its operands, or a *simple name*.</span></span> <span data-ttu-id="2b630-105">Простые имена могут быть именами переменной, элемента типа, параметра метода, пространства имен или типа.</span><span class="sxs-lookup"><span data-stu-id="2b630-105">Simple names can be the name of a variable, type member, method parameter, namespace or type.</span></span>  

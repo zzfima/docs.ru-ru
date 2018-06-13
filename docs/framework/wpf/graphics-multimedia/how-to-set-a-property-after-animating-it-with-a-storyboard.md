@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33562272"
 ---
 # <a name="how-to-set-a-property-after-animating-it-with-a-storyboard"></a><span data-ttu-id="a5dff-102">Практическое руководство. Установка свойства после его анимации с помощью раскадровки</span><span class="sxs-lookup"><span data-stu-id="a5dff-102">How to: Set a Property After Animating It with a Storyboard</span></span>
 <span data-ttu-id="a5dff-103">В некоторых случаях может оказаться, что не удается изменить значение свойства после его анимации.</span><span class="sxs-lookup"><span data-stu-id="a5dff-103">In some cases, it might appear that you can't change the value of a property after it has been animated.</span></span>  

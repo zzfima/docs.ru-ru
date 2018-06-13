@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33337708"
 ---
 # <a name="pointer-comparison-c-programming-guide"></a><span data-ttu-id="c43a8-102">Сравнение указателей (Руководство по программированию в C#)</span><span class="sxs-lookup"><span data-stu-id="c43a8-102">Pointer Comparison (C# Programming Guide)</span></span>
 <span data-ttu-id="c43a8-103">Для сравнения указателей любого типа можно применять следующие операторы:</span><span class="sxs-lookup"><span data-stu-id="c43a8-103">You can apply the following operators to compare pointers of any type:</span></span>  

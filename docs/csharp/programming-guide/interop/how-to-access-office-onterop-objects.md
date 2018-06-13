@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33338748"
 ---
 # <a name="how-to-access-office-interop-objects-by-using-visual-c-features-c-programming-guide"></a><span data-ttu-id="b19df-102">Практическое руководство. Доступ к объектам взаимодействия Office с помощью функций Visual C# (руководство по программированию на C#)</span><span class="sxs-lookup"><span data-stu-id="b19df-102">How to: Access Office Interop Objects by Using Visual C# Features (C# Programming Guide)</span></span>
 <span data-ttu-id="b19df-103">В Visual C# предусмотрены функции, упрощающие доступ к объектам API Office.</span><span class="sxs-lookup"><span data-stu-id="b19df-103">Visual C# has features that simplify access to Office API objects.</span></span> <span data-ttu-id="b19df-104">К новым функциям относятся именованные и необязательные аргументы, новый тип `dynamic`, а также возможность передавать аргументы ссылочным параметрам в методах COM, как если бы они были параметрами значений.</span><span class="sxs-lookup"><span data-stu-id="b19df-104">The new features include named and optional arguments, a new type called `dynamic`, and the ability to pass arguments to reference parameters in COM methods as if they were value parameters.</span></span>  

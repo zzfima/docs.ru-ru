@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33552378"
 ---
 # <a name="how-to-use-the-attached-properties-of-canvas-to-position-child-elements"></a><span data-ttu-id="9dcba-102">Практическое руководство. Использование присоединенных свойств Canvas для расположения дочерних элементов</span><span class="sxs-lookup"><span data-stu-id="9dcba-102">How to: Use the Attached Properties of Canvas to Position Child Elements</span></span>
 <span data-ttu-id="9dcba-103">В этом примере показано использование вложенных свойств <xref:System.Windows.Controls.Canvas> для размещения дочерних элементов.</span><span class="sxs-lookup"><span data-stu-id="9dcba-103">This example shows how to use the attached properties of <xref:System.Windows.Controls.Canvas> to position child elements.</span></span>  

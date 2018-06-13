@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33336369"
 ---
 # <a name="performance-of-chained-queries-linq-to-xml-c"></a><span data-ttu-id="2ed99-102">Производительность связанных запросов (LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="2ed99-102">Performance of Chained Queries (LINQ to XML) (C#)</span></span>
 <span data-ttu-id="2ed99-103">Одним из наиболее важных преимуществ LINQ (и LINQ to XML) является возможность эффективного выполнения цепочек запросов наряду с одиночными большими и более сложными запросами.</span><span class="sxs-lookup"><span data-stu-id="2ed99-103">One of the most important benefits of LINQ (and LINQ to XML) is that chained queries can perform as well as a single larger, more complicated query.</span></span>  

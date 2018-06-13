@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: dc88baea130adbec3dd8e4065ac0eb14ece7b8ba
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33444855"
 ---
 # <a name="imetadataemitdeletefieldmarshal-method"></a><span data-ttu-id="55c3b-102">Метод IMetaDataEmit::DeleteFieldMarshal</span><span class="sxs-lookup"><span data-stu-id="55c3b-102">IMetaDataEmit::DeleteFieldMarshal Method</span></span>
 <span data-ttu-id="55c3b-103">Удаляет подпись метаданных для объекта, который ссылается указанный токен маршалинга PInvoke.</span><span class="sxs-lookup"><span data-stu-id="55c3b-103">Destroys the PInvoke marshaling metadata signature for the object referenced by the specified token.</span></span>  

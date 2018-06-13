@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33219249"
 ---
 # <a name="float-c-reference"></a><span data-ttu-id="58a16-102">float (Справочник по C#)</span><span class="sxs-lookup"><span data-stu-id="58a16-102">float (C# Reference)</span></span>
 <span data-ttu-id="58a16-103">Ключевое слово `float` обозначает простой тип, в котором хранятся 32-разрядные значения с плавающей запятой.</span><span class="sxs-lookup"><span data-stu-id="58a16-103">The `float` keyword signifies a simple type that stores 32-bit floating-point values.</span></span> <span data-ttu-id="58a16-104">В приведенной ниже таблице представлен точный и приблизительный диапазон значений для типа `float`.</span><span class="sxs-lookup"><span data-stu-id="58a16-104">The following table shows the precision and approximate range for the `float` type.</span></span>  

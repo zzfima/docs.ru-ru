@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33527214"
 ---
 # <a name="dialog-box-controls-and-components-windows-forms"></a><span data-ttu-id="31375-102">Элементы управления и компоненты диалоговых окон (Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="31375-102">Dialog-Box Controls and Components (Windows Forms)</span></span>
 <span data-ttu-id="31375-103">Перечисленные ниже элементы управления и компоненты Windows Forms представляют стандартные диалоговые окна.</span><span class="sxs-lookup"><span data-stu-id="31375-103">The following Windows Forms controls and components present standard dialog boxes.</span></span> <span data-ttu-id="31375-104">Чтобы получить дополнительную информацию о функциях, доступных в каждом диалоговом окне, щелкните соответствующую ссылку.</span><span class="sxs-lookup"><span data-stu-id="31375-104">Follow the links for more information about the functions available in each dialog box.</span></span>  

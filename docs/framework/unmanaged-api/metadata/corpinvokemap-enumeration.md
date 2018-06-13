@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: edb45c9ceefb242e5a72e8602dc93ecd39b2df09
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33447958"
 ---
 # <a name="corpinvokemap-enumeration"></a><span data-ttu-id="88cff-102">Перечисление CorPinvokeMap</span><span class="sxs-lookup"><span data-stu-id="88cff-102">CorPinvokeMap Enumeration</span></span>
 <span data-ttu-id="88cff-103">Задает параметры для вызова PInvoke.</span><span class="sxs-lookup"><span data-stu-id="88cff-103">Specifies options for a PInvoke call.</span></span>  

@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 8643a4d207fb570195caa00a1ac659c78c2ff2b8
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33445071"
 ---
 # <a name="imetadataassemblyemitsetexportedtypeprops-method"></a><span data-ttu-id="cb3fc-102">Метод IMetaDataAssemblyEmit::SetExportedTypeProps</span><span class="sxs-lookup"><span data-stu-id="cb3fc-102">IMetaDataAssemblyEmit::SetExportedTypeProps Method</span></span>
 <span data-ttu-id="cb3fc-103">Изменяет указанную структуру метаданных `ExportedType`.</span><span class="sxs-lookup"><span data-stu-id="cb3fc-103">Modifies the specified `ExportedType` metadata structure.</span></span>  

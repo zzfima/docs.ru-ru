@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 0810ba945c1ed5874dae79704362a399c7349604
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33445826"
 ---
 # <a name="imetadataassemblyimportgetassemblyrefprops-method"></a><span data-ttu-id="f2ff9-102">Метод IMetaDataAssemblyImport::GetAssemblyRefProps</span><span class="sxs-lookup"><span data-stu-id="f2ff9-102">IMetaDataAssemblyImport::GetAssemblyRefProps Method</span></span>
 <span data-ttu-id="f2ff9-103">Получает набор свойств для ссылки на сборку с заданной подписью метаданных.</span><span class="sxs-lookup"><span data-stu-id="f2ff9-103">Gets the set of properties for the assembly reference with the specified metadata signature.</span></span>  

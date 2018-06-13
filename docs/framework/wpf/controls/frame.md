@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33552049"
 ---
 # <a name="frame"></a><span data-ttu-id="a2c64-102">Frame</span><span class="sxs-lookup"><span data-stu-id="a2c64-102">Frame</span></span>
 <span data-ttu-id="a2c64-103"><xref:System.Windows.Controls.Frame> Элемент управления поддерживает навигацию по содержимому внутри содержимого.</span><span class="sxs-lookup"><span data-stu-id="a2c64-103">The <xref:System.Windows.Controls.Frame> control supports content navigation within content.</span></span> <span data-ttu-id="a2c64-104"><xref:System.Windows.Controls.Frame> может размещаться в корневой элемент как <xref:System.Windows.Window>, <xref:System.Windows.Navigation.NavigationWindow>, <xref:System.Windows.Controls.Page>, <xref:System.Windows.Controls.UserControl>, <xref:System.Windows.Documents.FlowDocument>, или как острова в дерево содержимого, к которому принадлежит корневой элемент.</span><span class="sxs-lookup"><span data-stu-id="a2c64-104"><xref:System.Windows.Controls.Frame> can be hosted by a root element like <xref:System.Windows.Window>, <xref:System.Windows.Navigation.NavigationWindow>, <xref:System.Windows.Controls.Page>, <xref:System.Windows.Controls.UserControl>, <xref:System.Windows.Documents.FlowDocument>, or as an island within a content tree that belongs to a root element.</span></span>  

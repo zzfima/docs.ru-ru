@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348782"
 ---
 # <a name="lttypeparamgt-c-programming-guide"></a><span data-ttu-id="3cddc-102">&lt;typeparam&gt; (руководство по программированию на C#)</span><span class="sxs-lookup"><span data-stu-id="3cddc-102">&lt;typeparam&gt; (C# Programming Guide)</span></span>
 ## <a name="syntax"></a><span data-ttu-id="3cddc-103">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="3cddc-103">Syntax</span></span>  

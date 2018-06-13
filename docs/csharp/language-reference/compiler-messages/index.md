@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33213214"
 ---
 # <a name="c-compiler-errors"></a><span data-ttu-id="fcd44-102">Ошибки компилятора C#</span><span class="sxs-lookup"><span data-stu-id="fcd44-102">C# Compiler Errors</span></span>
 <span data-ttu-id="fcd44-103">Для некоторых ошибок компилятора C# существуют отдельные статьи, которые описывают причины этих ошибок, а иногда и методы их устранения.</span><span class="sxs-lookup"><span data-stu-id="fcd44-103">Some C# compiler errors have corresponding topics that explain why the error is generated, and, in some cases, how to fix the error.</span></span> <span data-ttu-id="fcd44-104">Используйте один из следующих вариантов действий, чтобы проверить наличие справки по конкретному сообщению об ошибке.</span><span class="sxs-lookup"><span data-stu-id="fcd44-104">Use one of the following steps to see whether help is available for a particular error message.</span></span>  

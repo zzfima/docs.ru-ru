@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33213442"
 ---
 # <a name="by-c-reference"></a><span data-ttu-id="d40f0-102">by (Справочник по C#)</span><span class="sxs-lookup"><span data-stu-id="d40f0-102">by (C# Reference)</span></span>
 <span data-ttu-id="d40f0-103">Контекстное ключевое слово `by` используется в предложении `group` в выражении запроса для определения способа группировки возвращаемых элементов.</span><span class="sxs-lookup"><span data-stu-id="d40f0-103">The `by` contextual keyword is used in the `group` clause in a query expression to specify how the returned items should be grouped.</span></span> <span data-ttu-id="d40f0-104">Дополнительные сведения см. в разделе [Предложение group](../../../csharp/language-reference/keywords/group-clause.md).</span><span class="sxs-lookup"><span data-stu-id="d40f0-104">For more information, see [group clause](../../../csharp/language-reference/keywords/group-clause.md).</span></span>  

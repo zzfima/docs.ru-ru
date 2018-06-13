@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33525971"
 ---
 # <a name="using-transformations-to-scale-colors"></a><span data-ttu-id="1d433-102">Масштабирование цветов с применением преобразований</span><span class="sxs-lookup"><span data-stu-id="1d433-102">Using Transformations to Scale Colors</span></span>
 <span data-ttu-id="1d433-103">Масштабирование умножает одно или несколько из четырех компонентов цвета на число.</span><span class="sxs-lookup"><span data-stu-id="1d433-103">A scaling transformation multiplies one or more of the four color components by a number.</span></span> <span data-ttu-id="1d433-104">В следующей таблице приведены элементы матрицы цветов, соответствующие масштабированию.</span><span class="sxs-lookup"><span data-stu-id="1d433-104">The color matrix entries that represent scaling are given in the following table.</span></span>  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33604875"
 ---
 # <a name="namespace-statement"></a><span data-ttu-id="756f1-102">Оператор Namespace</span><span class="sxs-lookup"><span data-stu-id="756f1-102">Namespace Statement</span></span>
 <span data-ttu-id="756f1-103">Объявляет имя пространства имен и вызывает исходный код ниже объявления для компиляции в этом пространстве имен.</span><span class="sxs-lookup"><span data-stu-id="756f1-103">Declares the name of a namespace and causes the source code that follows the declaration to be compiled within that namespace.</span></span>  

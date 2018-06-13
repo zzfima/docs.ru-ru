@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33327741"
 ---
 # <a name="linq-and-generic-types-c"></a><span data-ttu-id="e9b0f-102">LINQ и универсальные типы (C#)</span><span class="sxs-lookup"><span data-stu-id="e9b0f-102">LINQ and Generic Types (C#)</span></span>
 <span data-ttu-id="e9b0f-103">Запросы [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] основаны на универсальных типах, которые впервые появились в версии [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 2.0.</span><span class="sxs-lookup"><span data-stu-id="e9b0f-103">[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] queries are based on generic types, which were introduced in version 2.0 of the [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].</span></span> <span data-ttu-id="e9b0f-104">Для того чтобы приступить к написанию запросов, не требуется глубокое знание универсальных типов.</span><span class="sxs-lookup"><span data-stu-id="e9b0f-104">You do not need an in-depth knowledge of generics before you can start writing queries.</span></span> <span data-ttu-id="e9b0f-105">Тем не менее необходимо понимание двух основных принципов.</span><span class="sxs-lookup"><span data-stu-id="e9b0f-105">However, you may want to understand two basic concepts:</span></span>  

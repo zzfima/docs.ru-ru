@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33339294"
 ---
 # <a name="concepts-and-terminology-functional-transformation-c"></a><span data-ttu-id="23c35-102">Основные принципы и терминология (функциональное преобразование) (C#)</span><span class="sxs-lookup"><span data-stu-id="23c35-102">Concepts and Terminology (Functional Transformation) (C#)</span></span>
 <span data-ttu-id="23c35-103">В данном разделе вводятся основные понятия и терминология чисто функциональных преобразований.</span><span class="sxs-lookup"><span data-stu-id="23c35-103">This topic introduces the concepts and terminology of pure functional transformations.</span></span> <span data-ttu-id="23c35-104">Подход с использованием функциональных преобразований для преобразования данных порождает код, который обычно быстрее для программирования, более выразительный и легче для отладки и сопровождения, чем порожденный с использованием традиционного императивного программирования.</span><span class="sxs-lookup"><span data-stu-id="23c35-104">The functional transformation approach to transforming data yields code that is often quicker to program, more expressive, and easier to debug and maintain than more traditional, imperative programming.</span></span>  
