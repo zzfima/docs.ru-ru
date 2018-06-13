@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33565916"
 ---
 # <a name="xamlservices-class-and-basic-xaml-reading-or-writing"></a>Класс XAMLServices и чтение или запись базового кода XAML
 <xref:System.Xaml.XamlServices> — это класс, предоставляемый службами XAML .NET Framework XAML, который может использоваться для сценариев  XAML, в которых не требуется отдельный доступ к потоку узлов XAML, или для информации о системе типов XAML, полученной из этих узлов. <xref:System.Xaml.XamlServices> API можно описать следующим образом: `Load` или `Parse` для поддержки пути загрузки XAML, `Save` для поддержки пути сохранения XAML, `Transform` — для предоставления метода объединения пути загрузки и пути сохранения. Можно использовать`Transform` для изменения одной схемы XAML на другую. В этом разделе собраны все классификации этих API и приведены различия между определенными перегрузками методов.  

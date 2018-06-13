@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33394424"
 ---
 # <a name="performance-counters-in-the-net-framework"></a>Счетчики производительности в .NET Framework
 В этом разделе представлен перечень счетчиков производительности, которые содержатся в [системном мониторе](http://technet.microsoft.com/library/cc749249.aspx).  

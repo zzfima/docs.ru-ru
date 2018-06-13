@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33638707"
 ---
 # <a name="specified-event-log-does-not-exist-on-this-machine"></a>Указанный журнал событий не существует на этом компьютере.
 Выполнена попытка доступа к журналу событий, который не существует на этом компьютере.  

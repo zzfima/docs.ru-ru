@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33539521"
 ---
 # <a name="mouse-pointers-in-windows-forms"></a>Указатели мыши в Windows Forms
 Мышь *указатель*, которые иногда называют курсор является точечного рисунка, который задает точку фокуса на экране для ввода данных пользователем с помощью мыши. В этом разделе содержится обзор указатель мыши в формах Windows Forms и описываются некоторые из способов изменения и управления указатель мыши.  

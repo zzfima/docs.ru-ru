@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33389256"
 ---
 # <a name="net-core-and-open-source"></a>Ядро .NET и открытый исходный код
 В этом разделе приводится краткий обзор .NET Core и указываются ресурсы с дополнительными сведениями. Полный список разделов по .NET Core см. в [Руководстве по .NET Core](../../core/index.md).

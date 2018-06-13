@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33395516"
 ---
 # <a name="security-etw-events"></a>События безопасности (трассировка событий Windows)
 <a name="top"></a> События безопасности создаются при проверке строгого имени и проверке Authenticode.  

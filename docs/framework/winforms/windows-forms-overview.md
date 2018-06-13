@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33541730"
 ---
 # <a name="windows-forms-overview"></a>Общие сведения о Windows Forms
 В этом обзоре рассматриваются преимущества интеллектуальных клиентских приложений, основные возможности программирования Windows Forms, а также использование Windows Forms для разработки интеллектуальных клиентов, удовлетворяющих запросам современных предприятий и конечных пользователей.  

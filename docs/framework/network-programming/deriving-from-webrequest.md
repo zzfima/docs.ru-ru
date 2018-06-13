@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33396822"
 ---
 # <a name="deriving-from-webrequest"></a>Наследование от WebResponse
 <xref:System.Net.WebRequest> — это абстрактный базовый класс, который предоставляет базовые методы и свойства для создания обработчика запросов определенного протокола в соответствии с требованиями модели подключаемых протоколов .NET Framework. Приложения, использующие класс **WebRequest**, могут запрашивать данные с использованием любого поддерживаемого протокола, не указывая конкретный протокол.  

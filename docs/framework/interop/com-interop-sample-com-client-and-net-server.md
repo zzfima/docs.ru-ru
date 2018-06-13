@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33389559"
 ---
 # <a name="com-interop-sample-com-client-and-net-server"></a>Пример COM-взаимодействия. COM-клиент и сервер .NET
 В этом примере демонстрируется взаимодействие [клиента COM](#cpconcominteropsamplecomclientnetserveranchor1) и [сервера .NET](#cpconcominteropsamplecomclientnetserveranchor2), в рамках которого рассчитывается величина выплат по ипотечному кредиту. В этом примере клиент создает и вызывает экземпляр управляемого класса `Loan`, передает в экземпляр четыре аргумента (один из этих аргументов равен нулю) и отображает результаты вычислений. Примеры кода из этого образца используются в рамках всего этого раздела.  

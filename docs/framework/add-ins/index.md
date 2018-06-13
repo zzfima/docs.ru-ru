@@ -19,6 +19,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32744529"
 ---
 # <a name="add-ins-and-extensibility"></a>Надстройки и расширения среды
 <a name="top"></a> Надстройки предоставляют расширенные возможности или службы для ведущего приложения. Платформа [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] предоставляет модель программирования, которую разработчики могут использовать для разработки надстроек и их активации в ведущем приложении. Для этого создается конвейер взаимодействия между ведущим приложением и надстройкой. Модель реализуется с помощью типов в пространствах имен <xref:System.AddIn>, <xref:System.AddIn.Hosting>, <xref:System.AddIn.Pipeline>и <xref:System.AddIn.Contract> .  

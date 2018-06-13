@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33537594"
 ---
 # <a name="mouse-input-in-a-windows-forms-application"></a>Ввод данных мышью в приложении Windows Forms
 Windows Forms включает разнообразные события мыши и обеспечивает дополнительную поддержку настраиваемых курсоров мыши, захвата мыши и поведения при перетаскивании.  

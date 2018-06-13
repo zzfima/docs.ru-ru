@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33641964"
 ---
 # <a name="vbstrconvwide-and-vbstrconvnarrow-are-not-applicable-to-the-locale-specified"></a>VbStrConv.Wide и VbStrConv.Narrow не могут использоваться для заданных языковых стандартов
 Приложение пытается использовать члены перечисления `VbStrConv` `Wide` или `Narrow`, которые не применимы для указанного языкового стандарта.  

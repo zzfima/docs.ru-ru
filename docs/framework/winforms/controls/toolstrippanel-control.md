@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33535432"
 ---
 # <a name="toolstrippanel-control"></a>Элемент управления ToolStripPanel
 Элемент управления `ToolStripPanel` обеспечивает совместное использование горизонтального или вертикального пространства в области инструментов при прикреплении и размещении элементов управления <xref:System.Windows.Forms.ToolStrip> в том случае, когда четыре панели и центральная панель <xref:System.Windows.Forms.ToolStripContainer> не нужны.  

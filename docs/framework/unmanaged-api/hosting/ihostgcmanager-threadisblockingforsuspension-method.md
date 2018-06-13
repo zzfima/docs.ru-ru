@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 85921156860f52eb2a898e6be356e191c2a4f02d
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33439274"
 ---
 # <a name="ihostgcmanagerthreadisblockingforsuspension-method"></a>Метод IHostGCManager::ThreadIsBlockingForSuspension
 Уведомляет хост, что поток, из которого был выполнен вызов метода готов заблокировать для сборки мусора.  

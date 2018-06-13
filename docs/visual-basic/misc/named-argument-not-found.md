@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33638876"
 ---
 # <a name="named-argument-not-found-visual-basic"></a>Именованный аргумент не найден (Visual Basic)
 Именованный аргумент не может использоваться в вызове процедуры, если он не содержится в определении процедуры. Вы указали именованный аргумент, однако процедура не была определена для принятия аргумента по этому имени.  

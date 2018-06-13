@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: db4a980929a644d2862a382f147505644313da7b
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33422241"
 ---
 # <a name="icordebugmodule-interface1"></a>ICorDebugModule интерфейс1
 Представляет общий модуль среды выполнения (CLR) языка, который представляет исполняемого файла или библиотеки динамической компоновки (DLL).  

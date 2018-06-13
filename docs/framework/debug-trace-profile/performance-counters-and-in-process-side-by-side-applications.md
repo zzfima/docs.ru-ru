@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33392022"
 ---
 # <a name="performance-counters-and-in-process-side-by-side-applications"></a>Счетчики производительности и внутрипроцессные параллельные приложения
 С помощью системного монитора (Perfmon.exe) можно различать счетчики производительности на основе среды выполнения. В этом разделе описываются изменения в реестре, необходимые для включения этой функции.  

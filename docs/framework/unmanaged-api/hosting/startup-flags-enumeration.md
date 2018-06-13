@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: bc1d3ffc34cd74d68bf10cb677b68f0a75bb7c67
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33444234"
 ---
 # <a name="startupflags-enumeration"></a>Перечисление STARTUP_FLAGS
 Содержит значения, указывающие поведение при запуске среды common language runtime (CLR). По умолчанию сборщик мусора непараллельной и только в библиотеке базовых классов загружаются в область нейтральные к домену.  
