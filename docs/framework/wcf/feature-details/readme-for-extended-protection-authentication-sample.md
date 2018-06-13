@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33495084"
 ---
 # <a name="readme-for-extended-protection-authentication-sample"></a>Файл ReadMe для образца проверки подлинности с расширенной защитой
 Расширенная защита-это технология безопасности для защиты от атак в середине (MITM), в которых злоумышленник (» в посредник»), перехватывает клиентские учетные данные и использует их для доступа к защищенным ресурсам на сервере предполагаемого клиента.  

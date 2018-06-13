@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 388b26a5559435ea57300751987d14bc5cb9d50c
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33435301"
 ---
 # <a name="iclrassemblyreferencelist-interface"></a>Интерфейс ICLRAssemblyReferenceList
 Управляет списком сборок, загружаемых средой CLR (CLR), а не приложением.  
