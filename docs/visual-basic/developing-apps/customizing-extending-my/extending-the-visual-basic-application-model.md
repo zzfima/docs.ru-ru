@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33591876"
 ---
 # <a name="extending-the-visual-basic-application-model"></a><span data-ttu-id="1a252-102">Расширение модели приложения Visual Basic</span><span class="sxs-lookup"><span data-stu-id="1a252-102">Extending the Visual Basic Application Model</span></span>
 <span data-ttu-id="1a252-103">Можно добавить функциональные возможности модели приложения путем переопределения `Overridable` члены <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> класса.</span><span class="sxs-lookup"><span data-stu-id="1a252-103">You can add functionality to the application model by overriding the `Overridable` members of the <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> class.</span></span> <span data-ttu-id="1a252-104">Этот метод позволяет настроить поведение модели приложения и добавлять вызовы собственных методов, как приложение запускается и завершает работу.</span><span class="sxs-lookup"><span data-stu-id="1a252-104">This technique allows you to customize the behavior of the application model and add calls to your own methods as the application starts up and shuts down.</span></span>  
