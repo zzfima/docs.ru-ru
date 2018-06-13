@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33567849"
 ---
 # <a name="performing-formatting-operations"></a><span data-ttu-id="276f6-102">Выполнение операций форматирования</span><span class="sxs-lookup"><span data-stu-id="276f6-102">Performing Formatting Operations</span></span>
 <span data-ttu-id="276f6-103">В перечисленных далее разделах содержатся пошаговые инструкции для выполнения конкретных операций форматирования.</span><span class="sxs-lookup"><span data-stu-id="276f6-103">The following topics provide step-by-step instructions for performing specific formatting operations.</span></span>  

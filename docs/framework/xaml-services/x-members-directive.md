@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33564140"
 ---
 # <a name="xmembers-directive"></a><span data-ttu-id="5cacb-102">Директива x:Members</span><span class="sxs-lookup"><span data-stu-id="5cacb-102">x:Members Directive</span></span>
 <span data-ttu-id="5cacb-103">Содержит набор элементов, определенные в разметке, которые применяются к x: Class родительского элемента.</span><span class="sxs-lookup"><span data-stu-id="5cacb-103">Holds a set of members that are defined in markup, which apply to the x:Class of the parent element.</span></span>  

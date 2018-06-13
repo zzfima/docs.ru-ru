@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33566773"
 ---
 # <a name="path-markup-syntax"></a><span data-ttu-id="7eb80-102">Синтаксис разметки пути</span><span class="sxs-lookup"><span data-stu-id="7eb80-102">Path Markup Syntax</span></span>
 <span data-ttu-id="7eb80-103">Пути рассматриваются в [фигур и базовых средств рисования в общие сведения о WPF](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md) и [конфигурациях](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md), однако в этом разделе подробно описываются мощное и сложное мини-язык, можно использовать для указания пути более [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].</span><span class="sxs-lookup"><span data-stu-id="7eb80-103">Paths are discussed in [Shapes and Basic Drawing in WPF Overview](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md) and the [Geometry Overview](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md), however, this topic describes in detail the powerful and complex mini-language you can use to specify path geometries more compactly using [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].</span></span>  

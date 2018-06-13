@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33561739"
 ---
 # <a name="visual-layer-programming"></a><span data-ttu-id="99acd-102">Программирование визуального слоя</span><span class="sxs-lookup"><span data-stu-id="99acd-102">Visual Layer Programming</span></span>
 <span data-ttu-id="99acd-103"><xref:System.Windows.Media.Visual> Объект — это основное [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] объекта, основная цель которого — обеспечение поддержки отрисовки.</span><span class="sxs-lookup"><span data-stu-id="99acd-103">The <xref:System.Windows.Media.Visual> object is a core [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] object, whose primary role is to provide rendering support.</span></span> <span data-ttu-id="99acd-104">Элементы управления пользовательского интерфейса, такие как <xref:System.Windows.Controls.Button> и <xref:System.Windows.Controls.TextBox>, являются производными от <xref:System.Windows.Media.Visual> класса и использовать его для сохранения своих визуализируемых данных.</span><span class="sxs-lookup"><span data-stu-id="99acd-104">User interface controls, such as <xref:System.Windows.Controls.Button> and <xref:System.Windows.Controls.TextBox>, derive from the <xref:System.Windows.Media.Visual> class, and use it for persisting their rendering data.</span></span>  

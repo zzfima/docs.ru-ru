@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33568489"
 ---
 # <a name="entity-references-are-preserved"></a><span data-ttu-id="e31e0-102">Сохраняемые ссылки на сущности</span><span class="sxs-lookup"><span data-stu-id="e31e0-102">Entity References are Preserved</span></span>
 <span data-ttu-id="e31e0-103">Если ссылки на сущности не разворачиваются, а сохраняются, модель XML DOM строит узел **XmlEntityReference**, когда обнаруживает ссылку на сущность.</span><span class="sxs-lookup"><span data-stu-id="e31e0-103">When the entity reference is not expanded, but preserved, the XML Document Object Model (DOM) builds an **XmlEntityReference** node when it encounters an entity reference.</span></span>  

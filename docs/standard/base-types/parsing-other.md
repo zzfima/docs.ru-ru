@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33568034"
 ---
 # <a name="parsing-other-strings-in-net"></a><span data-ttu-id="65af6-102">Анализ других строк в .NET</span><span class="sxs-lookup"><span data-stu-id="65af6-102">Parsing Other Strings in .NET</span></span>
 <span data-ttu-id="65af6-103">Кроме числовых строк и строк <xref:System.DateTime> вы можете преобразовать строки, представляющих типы <xref:System.Char>, <xref:System.Boolean> или <xref:System.Enum>, в соответствующие типы данных.</span><span class="sxs-lookup"><span data-stu-id="65af6-103">In addition to numeric and <xref:System.DateTime> strings, you can also parse strings that represent the types <xref:System.Char>, <xref:System.Boolean>, and <xref:System.Enum> into data types.</span></span>  

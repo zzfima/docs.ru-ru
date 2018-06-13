@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33566669"
 ---
 # <a name="functions-as-first-class-values"></a><span data-ttu-id="ec8fb-103">Функции как значения первого класса</span><span class="sxs-lookup"><span data-stu-id="ec8fb-103">Functions as First-Class Values</span></span>
 

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33567810"
 ---
 # <a name="event-based-asynchronous-pattern-eap"></a><span data-ttu-id="d44a0-102">Асинхронная модель на основе событий (EAP)</span><span class="sxs-lookup"><span data-stu-id="d44a0-102">Event-based Asynchronous Pattern (EAP)</span></span>
 <span data-ttu-id="d44a0-103">Существует несколько способов предоставить асинхронные возможности клиентскому коду.</span><span class="sxs-lookup"><span data-stu-id="d44a0-103">There are a number of ways to expose asynchronous features to client code.</span></span> <span data-ttu-id="d44a0-104">Асинхронная модель на основе событий задает для классов рекомендуемый способ работы в асинхронном режиме.</span><span class="sxs-lookup"><span data-stu-id="d44a0-104">The Event-based Asynchronous Pattern prescribes one way for classes to present asynchronous behavior.</span></span>  

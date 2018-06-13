@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33566760"
 ---
 # <a name="transforms-overview"></a><span data-ttu-id="402b0-102">Общие сведения о классах Transform</span><span class="sxs-lookup"><span data-stu-id="402b0-102">Transforms Overview</span></span>
 <span data-ttu-id="402b0-103">В этом разделе описывается использование [!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)] <xref:System.Windows.Media.Transform> классы для поворота, масштабирования, сдвига и наклона <xref:System.Windows.FrameworkElement> объектов.</span><span class="sxs-lookup"><span data-stu-id="402b0-103">This topic describes how to use the [!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)] <xref:System.Windows.Media.Transform> classes to rotate, scale, move (translate), and skew <xref:System.Windows.FrameworkElement> objects.</span></span>  

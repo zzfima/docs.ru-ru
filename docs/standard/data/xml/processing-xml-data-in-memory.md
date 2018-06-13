@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33569646"
 ---
 # <a name="processing-xml-data-in-memory"></a><span data-ttu-id="e2917-102">Обработка XML-данных в памяти</span><span class="sxs-lookup"><span data-stu-id="e2917-102">Processing XML Data In-Memory</span></span>
 <span data-ttu-id="e2917-103">Платформа Microsoft .NET Framework включает три модели обработки XML-данных: класс <xref:System.Xml.XmlDocument>, класс <xref:System.Xml.XPath.XPathDocument> и [LINQ to XML](https://msdn.microsoft.com/library/f0fe21e9-ee43-4a55-b91a-0800e5782c13).</span><span class="sxs-lookup"><span data-stu-id="e2917-103">The Microsoft .NET Framework includes three models for processing XML data: the <xref:System.Xml.XmlDocument> class, the <xref:System.Xml.XPath.XPathDocument> class, and [LINQ to XML](https://msdn.microsoft.com/library/f0fe21e9-ee43-4a55-b91a-0800e5782c13).</span></span>  
