@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33603656"
 ---
 # <a name="addhandler-statement"></a><span data-ttu-id="18258-102">Оператор AddHandler</span><span class="sxs-lookup"><span data-stu-id="18258-102">AddHandler Statement</span></span>
 <span data-ttu-id="18258-103">Связывает событие с обработчиком событий во время выполнения.</span><span class="sxs-lookup"><span data-stu-id="18258-103">Associates an event with an event handler at run time.</span></span>  

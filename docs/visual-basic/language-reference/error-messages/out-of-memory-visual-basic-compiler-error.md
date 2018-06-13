@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33598872"
 ---
 # <a name="out-of-memory-visual-basic-compiler-error"></a><span data-ttu-id="f2aea-102">Недостаточно памяти (Ошибка компилятора Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="f2aea-102">Out of memory (Visual Basic Compiler Error)</span></span>
 <span data-ttu-id="f2aea-103">Требовалось больше памяти, чем было доступно.</span><span class="sxs-lookup"><span data-stu-id="f2aea-103">More memory was required than is available.</span></span>  

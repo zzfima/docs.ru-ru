@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33585653"
 ---
 # <a name="error-saving-temporary-win32-resource-file-39ltfilenamegt39-lterror-messagegt"></a><span data-ttu-id="23a5b-102">Ошибка при сохранении файла ресурсов Win32 &#39; &lt;filename&gt;&#39;: &lt;сообщение об ошибке&gt;</span><span class="sxs-lookup"><span data-stu-id="23a5b-102">Error saving temporary Win32 resource file &#39;&lt;filename&gt;&#39;: &lt;error message&gt;</span></span>
 <span data-ttu-id="23a5b-103">Компилятор Visual Basic вызывает компоновщик сборок (Al.exe, который также называется Alink) для создания сборки с манифестом.</span><span class="sxs-lookup"><span data-stu-id="23a5b-103">The Visual Basic compiler calls the Assembly Linker (Al.exe, also known as Alink) to generate an assembly with a manifest.</span></span> <span data-ttu-id="23a5b-104">Компоновщик сообщил об ошибке получения имени файла для использования при записи ресурса, обрабатываемого в памяти.</span><span class="sxs-lookup"><span data-stu-id="23a5b-104">The linker reported an error obtaining a file name for use in writing an in-memory resource.</span></span>  

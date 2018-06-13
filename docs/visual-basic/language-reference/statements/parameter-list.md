@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33605060"
 ---
 # <a name="parameter-list-visual-basic"></a><span data-ttu-id="7fb6c-102">Список параметров (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="7fb6c-102">Parameter List (Visual Basic)</span></span>
 <span data-ttu-id="7fb6c-103">Задает параметры, ожидаемые процедурой при вызове.</span><span class="sxs-lookup"><span data-stu-id="7fb6c-103">Specifies the parameters a procedure expects when it is called.</span></span> <span data-ttu-id="7fb6c-104">Несколько параметров разделяются запятыми.</span><span class="sxs-lookup"><span data-stu-id="7fb6c-104">Multiple parameters are separated by commas.</span></span> <span data-ttu-id="7fb6c-105">Ниже приведен синтаксис для одного параметра.</span><span class="sxs-lookup"><span data-stu-id="7fb6c-105">The following is the syntax for one parameter.</span></span>  

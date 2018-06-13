@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33599051"
 ---
 # <a name="argument-39ltargumentnamegt39-cannot-be-converted-to-type-39lttypenamegt39"></a><span data-ttu-id="e60f5-102">Аргумент &#39; &lt;имя_аргумента&gt; &#39; не может быть преобразован в тип &#39; &lt;typename&gt;&#39;</span><span class="sxs-lookup"><span data-stu-id="e60f5-102">Argument &#39;&lt;argumentname&gt;&#39; cannot be converted to type &#39;&lt;typename&gt;&#39;</span></span>
 <span data-ttu-id="e60f5-103">Преобразование пытается изменить аргумент на тип, который является недопустимым.</span><span class="sxs-lookup"><span data-stu-id="e60f5-103">A conversion attempts to change an argument to a type that is not valid.</span></span>  

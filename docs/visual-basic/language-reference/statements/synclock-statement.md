@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33604982"
 ---
 # <a name="synclock-statement"></a><span data-ttu-id="859f4-102">Оператор SyncLock</span><span class="sxs-lookup"><span data-stu-id="859f4-102">SyncLock Statement</span></span>
 <span data-ttu-id="859f4-103">Получает монопольную блокировку для блока операторов перед выполнением блока.</span><span class="sxs-lookup"><span data-stu-id="859f4-103">Acquires an exclusive lock for a statement block before executing the block.</span></span>  

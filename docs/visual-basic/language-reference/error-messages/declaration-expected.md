@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33583894"
 ---
 # <a name="declaration-expected"></a><span data-ttu-id="afdd4-102">Ожидается объявление</span><span class="sxs-lookup"><span data-stu-id="afdd4-102">Declaration expected</span></span>
 <span data-ttu-id="afdd4-103">Недекларативный оператор, например оператор присваивания или цикла, находится вне процедуры.</span><span class="sxs-lookup"><span data-stu-id="afdd4-103">A nondeclarative statement, such as an assignment or loop statement, occurs outside any procedure.</span></span> <span data-ttu-id="afdd4-104">Вне процедур могут находиться только объявления.</span><span class="sxs-lookup"><span data-stu-id="afdd4-104">Only declarations are allowed outside procedures.</span></span>  

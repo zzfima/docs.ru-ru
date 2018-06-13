@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33638492"
 ---
 # <a name="the-address-for-uploadfile-needs-to-include-a-filename"></a><span data-ttu-id="59f19-102">Адрес UploadFile должен включать имя файла</span><span class="sxs-lookup"><span data-stu-id="59f19-102">The address for UploadFile needs to include a filename</span></span>
 <span data-ttu-id="59f19-103">При отправке файлов с помощью метода `UploadFile` необходимо указывать имя файла в пути назначения.</span><span class="sxs-lookup"><span data-stu-id="59f19-103">When uploading files with the `UploadFile` method, you must supply a file name in the destination path.</span></span>  

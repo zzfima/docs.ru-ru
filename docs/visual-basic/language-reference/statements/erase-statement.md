@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33601797"
 ---
 # <a name="erase-statement-visual-basic"></a><span data-ttu-id="4dc7d-102">Оператор Erase (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="4dc7d-102">Erase Statement (Visual Basic)</span></span>
 <span data-ttu-id="4dc7d-103">Используется для выпуска переменных массива и освобождения памяти, используемой для их элементов.</span><span class="sxs-lookup"><span data-stu-id="4dc7d-103">Used to release array variables and deallocate the memory used for their elements.</span></span>  

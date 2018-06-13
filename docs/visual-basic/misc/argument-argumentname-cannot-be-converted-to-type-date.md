@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33600679"
 ---
 # <a name="argument-39ltargumentnamegt39-cannot-be-converted-to-type-39date39"></a><span data-ttu-id="0dd86-102">Аргумент &#39; &lt;имя_аргумента&gt; &#39; не может быть преобразован в тип &#39;даты&#39;</span><span class="sxs-lookup"><span data-stu-id="0dd86-102">Argument &#39;&lt;argumentname&gt;&#39; cannot be converted to type &#39;Date&#39;</span></span>
 <span data-ttu-id="0dd86-103">Преобразование пыталось изменить тип переменной на `Date`, однако значение не распознано как допустимая дата.</span><span class="sxs-lookup"><span data-stu-id="0dd86-103">A conversion attempted to change a variable to type `Date`, but the value is not recognized as a valid date.</span></span>  

@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33604826"
 ---
 # <a name="orelse-operator-visual-basic"></a><span data-ttu-id="7a425-102">Оператор OrElse (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="7a425-102">OrElse Operator (Visual Basic)</span></span>
 <span data-ttu-id="7a425-103">Выполняет сокращенное вычисление логического сложения двух выражений.</span><span class="sxs-lookup"><span data-stu-id="7a425-103">Performs short-circuiting inclusive logical disjunction on two expressions.</span></span>  

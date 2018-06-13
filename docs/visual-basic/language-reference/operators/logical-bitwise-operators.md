@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33600822"
 ---
 # <a name="logicalbitwise-operators-visual-basic"></a><span data-ttu-id="503ee-102">Логические (побитовые) операторы (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="503ee-102">Logical/Bitwise Operators (Visual Basic)</span></span>
 <span data-ttu-id="503ee-103">Ниже приведены логические и побитовые операторы, определенные в Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="503ee-103">The following are the logical/bitwise operators defined in Visual Basic.</span></span>  

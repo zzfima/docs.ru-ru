@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33603565"
 ---
 # <a name="-operator"></a><span data-ttu-id="09bb2-102">\\= Оператор</span><span class="sxs-lookup"><span data-stu-id="09bb2-102">\\= Operator</span></span>
 <span data-ttu-id="09bb2-103">Делит значение переменной или свойства на значение выражения и присваивает целочисленный результат переменной или свойству.</span><span class="sxs-lookup"><span data-stu-id="09bb2-103">Divides the value of a variable or property by the value of an expression and assigns the integer result to the variable or property.</span></span>  

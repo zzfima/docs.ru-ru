@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33601999"
 ---
 # <a name="ltpermissiongt-visual-basic"></a><span data-ttu-id="486f7-102">&lt;разрешение&gt; (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="486f7-102">&lt;permission&gt; (Visual Basic)</span></span>
 <span data-ttu-id="486f7-103">Указывает разрешение, необходимые для элемента.</span><span class="sxs-lookup"><span data-stu-id="486f7-103">Specifies a required permission for the member.</span></span>  

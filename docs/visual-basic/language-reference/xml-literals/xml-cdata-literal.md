@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33603838"
 ---
 # <a name="xml-cdata-literal-visual-basic"></a><span data-ttu-id="73763-102">Литеральное представление XML-раздела CDATA (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="73763-102">XML CDATA Literal (Visual Basic)</span></span>
 <span data-ttu-id="73763-103">Объект литерал, представляющий <xref:System.Xml.Linq.XCData> объекта.</span><span class="sxs-lookup"><span data-stu-id="73763-103">A literal representing an <xref:System.Xml.Linq.XCData> object.</span></span>  

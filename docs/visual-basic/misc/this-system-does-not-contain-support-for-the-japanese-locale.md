@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33639862"
 ---
 # <a name="this-system-does-not-contain-support-for-the-japanese-locale"></a><span data-ttu-id="784e2-102">Эта система не содержит поддержки для стандартов японского языка</span><span class="sxs-lookup"><span data-stu-id="784e2-102">This system does not contain support for the Japanese locale</span></span>
 <span data-ttu-id="784e2-103">Вы пытаетесь использовать элемент перечисления `VbStrConv.Japanese` , но ваша система не поддерживает японский язык.</span><span class="sxs-lookup"><span data-stu-id="784e2-103">You are attempting to use the `VbStrConv.Japanese` enumeration member, but your system does not support the Japanese locale.</span></span>  

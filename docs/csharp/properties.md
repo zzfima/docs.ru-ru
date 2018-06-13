@@ -7,6 +7,7 @@ ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "33956242"
 ---
 # <a name="properties"></a><span data-ttu-id="b8028-103">Свойства</span><span class="sxs-lookup"><span data-stu-id="b8028-103">Properties</span></span>
 

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33598018"
 ---
 # <a name="lttypeparamgt-visual-basic"></a><span data-ttu-id="40984-102">&lt;typeparam&gt; (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="40984-102">&lt;typeparam&gt; (Visual Basic)</span></span>
 <span data-ttu-id="40984-103">Определяет имя параметра типа и описание.</span><span class="sxs-lookup"><span data-stu-id="40984-103">Defines a type parameter name and description.</span></span>  

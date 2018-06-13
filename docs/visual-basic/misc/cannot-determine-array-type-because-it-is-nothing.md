@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33637560"
 ---
 # <a name="cannot-determine-array-type-because-it-is-nothing"></a><span data-ttu-id="c4792-102">Невозможно определить тип массива, так как он равен Nothing</span><span class="sxs-lookup"><span data-stu-id="c4792-102">Cannot determine array type because it is Nothing</span></span>
 <span data-ttu-id="c4792-103">Невозможно определить тип массива, так как он был установлен в значение `Nothing`.</span><span class="sxs-lookup"><span data-stu-id="c4792-103">The type of your array cannot be determined because it has been set to the value `Nothing`.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33583083"
 ---
 # <a name="version-tolerant-serialization-technology-sample"></a><span data-ttu-id="0564a-102">Образец технологии сериализации, независимой от версии</span><span class="sxs-lookup"><span data-stu-id="0564a-102">Version Tolerant Serialization Technology Sample</span></span>
 [<span data-ttu-id="0564a-103">Скачать образец</span><span class="sxs-lookup"><span data-stu-id="0564a-103">Download Sample</span></span>](https://download.microsoft.com/download/4/7/B/47B2164C-E780-4B10-8DE4-2CB5B886E0A6/Technologies/Serialization/Runtime%20Serialization/VTS.zip.exe)  

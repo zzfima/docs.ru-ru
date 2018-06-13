@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33638100"
 ---
 # <a name="picture-is-not-valid"></a><span data-ttu-id="929cf-102">Недопустимое изображение</span><span class="sxs-lookup"><span data-stu-id="929cf-102">Picture is not valid</span></span>
 <span data-ttu-id="929cf-103">Попытка назначить свойству `Picture` формы или элемента управления графический формат, отличный от растрового изображения, значка или метафайла Windows.</span><span class="sxs-lookup"><span data-stu-id="929cf-103">You tried to assign a graphics format other than a bitmap, icon, or Windows metafile to the `Picture` property of a form or control.</span></span>  

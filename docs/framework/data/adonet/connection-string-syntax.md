@@ -7,6 +7,7 @@ ms.sourcegitcommit: 77d9a94dac4c05827ed0663d95e0f9ad35d6682e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/24/2018
+ms.locfileid: "34472754"
 ---
 # <a name="connection-string-syntax"></a><span data-ttu-id="4dc44-102">Синтаксис строки подключения</span><span class="sxs-lookup"><span data-stu-id="4dc44-102">Connection String Syntax</span></span>
 <span data-ttu-id="4dc44-103">Каждый поставщик данных платформы .NET Framework имеет объект `Connection`, наследующий из <xref:System.Data.Common.DbConnection>, а также из свойства <xref:System.Data.Common.DbConnection.ConnectionString%2A>, зависящего от поставщика.</span><span class="sxs-lookup"><span data-stu-id="4dc44-103">Each .NET Framework data provider has a `Connection` object that inherits from <xref:System.Data.Common.DbConnection> as well as a provider-specific <xref:System.Data.Common.DbConnection.ConnectionString%2A> property.</span></span> <span data-ttu-id="4dc44-104">Конкретный синтаксис строки подключения для каждого поставщика приведен в его свойстве `ConnectionString`.</span><span class="sxs-lookup"><span data-stu-id="4dc44-104">The specific connection string syntax for each provider is documented in its `ConnectionString` property.</span></span> <span data-ttu-id="4dc44-105">В следующей таблице представлен список четырех поставщиков данных, поставляемых в составе платформы .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="4dc44-105">The following table lists the four data providers that are included in the .NET Framework.</span></span>  

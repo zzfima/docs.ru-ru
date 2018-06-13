@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33598859"
 ---
 # <a name="statement-is-not-valid-inside-a-methodmultiline-lambda"></a><span data-ttu-id="60ba0-102">Оператор недопустим в теле метода/многострочного лямбда-оператора</span><span class="sxs-lookup"><span data-stu-id="60ba0-102">Statement is not valid inside a method/multiline lambda</span></span>
 <span data-ttu-id="60ba0-103">Инструкция не является допустимым в `Sub`, `Function`, свойство `Get`, или свойство `Set` процедуры.</span><span class="sxs-lookup"><span data-stu-id="60ba0-103">The statement is not valid within a `Sub`, `Function`, property `Get`, or property `Set` procedure.</span></span> <span data-ttu-id="60ba0-104">Некоторые операторы могут размещаться на уровне модуля или класса.</span><span class="sxs-lookup"><span data-stu-id="60ba0-104">Some statements can be placed at the module or class level.</span></span> <span data-ttu-id="60ba0-105">Другие, такие как `Option Strict`, должны быть на уровне пространства имен и перед всеми объявлениями.</span><span class="sxs-lookup"><span data-stu-id="60ba0-105">Others, such as `Option Strict`, must be at namespace level and precede all other declarations.</span></span>  
