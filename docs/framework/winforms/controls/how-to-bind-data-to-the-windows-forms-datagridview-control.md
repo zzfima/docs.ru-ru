@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33531135"
 ---
 # <a name="how-to-bind-data-to-the-windows-forms-datagridview-control"></a>Практическое руководство. Привязка данных к элементу управления DataGridView в Windows Forms
 Элемент управления <xref:System.Windows.Forms.DataGridView> поддерживает стандартную модель привязки данных Windows Forms, допускающую привязку к разнообразным источникам данных. Однако в большинстве случаев выполняется привязка к компоненту <xref:System.Windows.Forms.BindingSource>, который управляет деталями взаимодействия с источником данных. Компонент <xref:System.Windows.Forms.BindingSource> может представлять любой источник данных Windows Forms и обеспечивает большую гибкость при выборе или изменении расположения данных. Дополнительные сведения об источниках данных, поддерживаемых <xref:System.Windows.Forms.DataGridView> управления см. в разделе [Обзор элемента управления DataGridView](../../../../docs/framework/winforms/controls/datagridview-control-overview-windows-forms.md).  

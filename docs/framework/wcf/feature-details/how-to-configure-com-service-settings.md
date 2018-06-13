@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33490108"
 ---
 # <a name="how-to-configure-com-service-settings"></a>Практическое руководство. Настройка параметров службы COM+
 Если интерфейс приложения добавляется или удаляется с использованием средства конфигурации служб COM+, конфигурация веб-службы обновляется в файле конфигурации приложения. В режиме служб COM + файл Application.config помещается в корневую папку приложения (приложения %PROGRAMFILES%\ComPlus\\по умолчанию — {appid}). В обоих режимах размещения на веб-сервере файл Web.config помещается в заданный виртуальный корневой каталог.  

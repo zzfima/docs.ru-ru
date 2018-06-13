@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33529731"
 ---
 # <a name="controls-to-use-on-windows-forms"></a>Элементы управления для использования в формах Windows Forms
 Ниже приведен алфавитный список элементов управления и компонентов, используемых в формах Windows Forms. Помимо элементов управления Windows Forms, описанных в этом разделе, в формы Windows Forms можно добавлять элементы управления ActiveX и пользовательские элементы управления. Если вам не удается найти нужный элемент управления в этом списке, вы можете создать свой собственный. См. раздел [Создание элементов управления Windows Forms во время разработки](../../../../docs/framework/winforms/controls/developing-windows-forms-controls-at-design-time.md). Дополнительные сведения о выборе необходимого элемента управления см. в разделе [Функциональная классификация элементов управления Windows Forms](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md).  

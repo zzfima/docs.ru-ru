@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: dd8f1adee6bbcb3b57b87a2d6c85c01c624da9ec
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33421234"
 ---
 # <a name="icordebugnativeframe2-interface"></a>Интерфейс ICorDebugNativeFrame2
 Предоставляет методы, проверяющие для кадров наличие взаимоотношений типа "дочерний-родительский".  

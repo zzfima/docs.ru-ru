@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 7b4c334d82320066bf9459907660fe6b7e2acefd
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33425325"
 ---
 # <a name="isymunmanagedreadergetuserentrypoint-method"></a>Метод ISymUnmanagedReader::GetUserEntryPoint
 Возвращает метод, заданный в качестве точки входа пользователя для модуля, если таковые имеются. Например этот метод может быть основного метода пользователя, а не созданные компилятором заглушки перед основным методом.  

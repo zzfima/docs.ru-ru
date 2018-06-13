@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33538571"
 ---
 # <a name="how-to-view-multiple-lines-in-the-windows-forms-textbox-control"></a>Практическое руководство. Многострочные элементы управления TextBox в Windows Forms
 По умолчанию в Windows Forms <xref:System.Windows.Forms.TextBox> выводит одну строку текста и полос прокрутки. Если текст длиннее, чем свободное пространство, отображается только часть текста. Это поведение по умолчанию можно изменить, задав <xref:System.Windows.Forms.TextBox.Multiline%2A>, <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A>, и <xref:System.Windows.Forms.TextBox.ScrollBars%2A> соответствующие значения свойств.  

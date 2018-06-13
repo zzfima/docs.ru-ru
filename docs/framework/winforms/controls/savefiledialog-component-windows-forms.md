@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33537142"
 ---
 # <a name="savefiledialog-component-windows-forms"></a>Компонент SaveFileDialog (Windows Forms)
 Компонент Windows Forms <xref:System.Windows.Forms.SaveFileDialog> является стандартным диалоговым окном. Он аналогичен диалоговому окну сохранения файла, используемому в операционных системах Windows. Он наследуется от класса <xref:System.Windows.Forms.CommonDialog>.  

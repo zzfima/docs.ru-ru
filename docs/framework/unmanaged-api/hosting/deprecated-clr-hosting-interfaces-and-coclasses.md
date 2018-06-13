@@ -11,9 +11,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1f6c20a69894c95086dbd813601ac8811ab4f337
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33429228"
 ---
 # <a name="deprecated-clr-hosting-interfaces-and-coclasses"></a>Устаревшие интерфейсы размещения CLR и CoClasses
 В этом разделе описываются интерфейсы, которые неуправляемые узлов можно использовать для интеграции общеязыковой среды выполнения (CLR) в .NET Framework версий 1.0 и 1.1 в свои приложения. Эти интерфейсы обеспечивают методы для узла, для настройки и загрузки среды выполнения в процесс.  

@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: f3c7f7e06822f419282209ac39d4cbd46e600a66
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33424993"
 ---
 # <a name="isymencunmanagedmethodgetdocumentsformethodcount-method"></a>Метод ISymENCUnmanagedMethod::GetDocumentsForMethodCount
 Возвращает количество документов, этот метод имеет строки.  

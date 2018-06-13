@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b772de720a8c3b669bd3cbe9591637d931cb8763
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33430623"
 ---
 # <a name="getfileversion-function"></a>Функция GetFileVersion
 Возвращает общий язык среды выполнения (CLR) сведения о версии указанного файла, используя указанный буфер.  
