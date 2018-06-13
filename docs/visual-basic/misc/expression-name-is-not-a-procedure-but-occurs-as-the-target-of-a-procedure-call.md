@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33637616"
 ---
 # <a name="expression-39ltnamegt39-is-not-a-procedure-but-occurs-as-the-target-of-a-procedure-call"></a>Выражение &#39; &lt;имя&gt; &#39; не является процедурой, но используется как объект вызова процедуры
 Выполнен вызов процедуры для выражения, которое не является процедурой.  

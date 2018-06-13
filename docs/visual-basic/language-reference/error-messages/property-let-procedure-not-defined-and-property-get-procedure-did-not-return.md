@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33596610"
 ---
 # <a name="property-let-procedure-not-defined-and-property-get-procedure-did-not-return-an-object"></a>Процедура свойства let не определена, а процедура свойства get не вернула объект
 Некоторые свойства, методы и операции применимы только к `Collection` объектов. Указанные операция или свойство применимы только к коллекциям, но объект не является коллекцией.  

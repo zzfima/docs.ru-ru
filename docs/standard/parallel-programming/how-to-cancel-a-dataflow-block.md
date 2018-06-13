@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33584909"
 ---
 # <a name="how-to-cancel-a-dataflow-block"></a>Практическое руководство. Отмена блока потока данных
 В этом документе показано, как включить отмену в приложении. В этом примере используется Windows Forms для отображения позиции активности рабочих элементов в конвейере потока данных, а также последствий отмены.  

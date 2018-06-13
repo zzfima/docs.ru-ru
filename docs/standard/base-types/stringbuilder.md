@@ -23,6 +23,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579149"
 ---
 # <a name="using-the-stringbuilder-class-in-net"></a>Использование класса StringBuilder в .NET
 Объект <xref:System.String> является неизменяемым. Каждый раз при использовании одного из методов в классе <xref:System.String?displayProperty=nameWithType> вы создаете объект строки в памяти, для которого требуется выделение нового пространства. В случаях, когда необходимо выполнять повторяющиеся изменения строки, издержки, связанные с созданием объекта <xref:System.String>, могут оказаться значительными. Чтобы изменять строку без создания нового объекта, можно использовать класс <xref:System.Text.StringBuilder?displayProperty=nameWithType>. Например, использование класса <xref:System.Text.StringBuilder> может повысить производительность при соединении большого количества строк в цикле.  

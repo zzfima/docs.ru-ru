@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33582655"
 ---
 # <a name="accessing-the-keyboard-visual-basic"></a>Доступ к клавиатуре (Visual Basic)
 Объект `My.Computer.Keyboard` предоставляет свойства для доступа к текущему состоянию клавиатуры, например перечню нажатых в настоящее время клавиш, и метод для отправки сообщений о нажатиях клавиш активному окну.  

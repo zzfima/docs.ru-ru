@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33641011"
 ---
 # <a name="how-to-group-files-by-extension-linq-visual-basic"></a>Как: группировка файлов по расширению (LINQ) (Visual Basic)
 В этом примере показано, как можно использовать LINQ для выполнения расширенного группирования и сортировки списков файлов или папок. Кроме того, здесь показывается, как разбить на страницы выходные данные в окне консоли с помощью методов <xref:System.Linq.Enumerable.Skip%2A> и <xref:System.Linq.Enumerable.Take%2A>.  

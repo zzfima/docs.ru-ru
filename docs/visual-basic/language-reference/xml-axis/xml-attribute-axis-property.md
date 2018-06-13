@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33604917"
 ---
 # <a name="xml-attribute-axis-property-visual-basic"></a>Свойство оси атрибута XML (Visual Basic)
 Предоставляет доступ к значению атрибута для <xref:System.Xml.Linq.XElement> объекта или первый элемент в коллекцию <xref:System.Xml.Linq.XElement> объектов.  

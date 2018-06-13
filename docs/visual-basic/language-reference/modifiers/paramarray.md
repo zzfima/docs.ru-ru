@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33597364"
 ---
 # <a name="paramarray-visual-basic"></a>ParamArray (Visual Basic)
 Указывает, что параметр процедуры принимает необязательный массив элементов заданного типа. `ParamArray` может использоваться только для последнего параметра из списка параметров.  

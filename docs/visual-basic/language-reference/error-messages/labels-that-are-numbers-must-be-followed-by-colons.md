@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33587362"
 ---
 # <a name="labels-that-are-numbers-must-be-followed-by-colons"></a>После меток, представляющих собой числа, следует ставить двоеточие
 Номера строк подчиняются тем же правилам, как другие виды меток и должны содержать двоеточие.  

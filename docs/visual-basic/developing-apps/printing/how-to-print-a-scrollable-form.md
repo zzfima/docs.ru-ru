@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33584018"
 ---
 # <a name="how-to-print-a-scrollable-form-visual-basic"></a>Практическое руководство. Печать прокручиваемой формы (Visual Basic)
 Компонент <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> позволяет быстро напечатать изображение формы без использования компонента <xref:System.Drawing.Printing.PrintDocument> . По умолчанию печатается только видимая часть формы; если пользователь изменил размер формы во время выполнения, изображение может быть напечатано неправильно. В следующей процедуре описана печать всей клиентской области прокручиваемой формы, даже если был изменен размер формы.  

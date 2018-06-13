@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33588588"
 ---
 # <a name="how-to-copy-a-directory-to-another-directory-in-visual-basic"></a>Практическое руководство. Копирование каталога в другой каталог в Visual Basic
 Используйте метод <xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyDirectory%2A> для копирования каталога в другой каталог. Этот метод копирует и содержимое каталога, и сам каталог. Если целевой каталог не существует, он будет создан. Если каталог с тем же именем уже существует в целевом расположении, а параметр `overwrite` имеет значение `False`, содержимое двух каталогов будут объединено. Во время операции можно указать новое имя для каталога.  

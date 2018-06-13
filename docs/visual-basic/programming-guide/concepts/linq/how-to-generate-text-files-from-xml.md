@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33642783"
 ---
 # <a name="how-to-generate-text-files-from-xml-visual-basic"></a>Как: Создание текстовых файлов из XML-кода (Visual Basic)
 В этом примере показано, как создавать файл с разделителями-запятыми (csv) из XML-файла.  

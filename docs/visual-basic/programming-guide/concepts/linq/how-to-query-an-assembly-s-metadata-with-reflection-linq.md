@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33643252"
 ---
 # <a name="how-to-query-an-assembly39s-metadata-with-reflection-linq-visual-basic"></a>Как: запрос сборки&#39;метаданные с помощью отражения (LINQ) (Visual Basic)
 В следующем примере показано использование LINQ с отражением для извлечения определенных метаданных о методах, соответствующих условиям поиска. В этом примере запрос будет искать имена всех методов в сборке, которые возвращают перечислимые типы, такие как массивы.  

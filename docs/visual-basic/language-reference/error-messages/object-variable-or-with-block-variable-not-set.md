@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33597668"
 ---
 # <a name="object-variable-or-with-block-variable-not-set"></a>Не задана переменная объекта или переменная блока With
 Указан недопустимый объектной переменной.   Эта ошибка может возникать по нескольким причинам:  

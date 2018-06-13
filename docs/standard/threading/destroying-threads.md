@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33582945"
 ---
 # <a name="destroying-threads"></a>Уничтожение потоков
 Метод <xref:System.Threading.Thread.Abort%2A> используется для остановки управляемого потока без возможности возобновления. При вызове <xref:System.Threading.Thread.Abort%2A> общеязыковая среда выполнения создает в целевом потоке исключение <xref:System.Threading.ThreadAbortException>, которое целевой поток может перехватить. Дополнительные сведения см. в разделе <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33642708"
 ---
 # <a name="how-to-generate-xml-from-csv-files-visual-basic"></a>Как: Создание XML из CSV-файлов (Visual Basic)
 В этом примере показано, как [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] и [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] используются для создания XML-документа из файла с разделителями-запятыми (.csv).  

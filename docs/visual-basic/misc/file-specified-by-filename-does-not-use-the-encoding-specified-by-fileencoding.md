@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33637452"
 ---
 # <a name="file-specified-by-filename-does-not-use-the-encoding-specified-by-fileencoding"></a>Файл, указанный в параметре FileName, не использует кодировку, заданную параметром FileEncoding
 Предпринята попытка чтения из файла, но указанная кодировка не используется в этом файле.  

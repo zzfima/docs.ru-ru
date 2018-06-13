@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33596061"
 ---
 # <a name="type-of-parameter-39ltparameternamegt39-is-not-cls-compliant"></a>Тип параметра &#39; &lt;имя_параметра&gt; &#39; не является CLS-совместимым
 Процедура помечена как `<CLSCompliant(True)>` , но объявляет параметр с типом, который помечен как `<CLSCompliant(False)>`, не помечен или не квалифицирован, так как он имеет несоответствующий тип.  

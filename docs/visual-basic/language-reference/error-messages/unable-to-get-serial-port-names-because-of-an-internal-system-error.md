@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33596659"
 ---
 # <a name="unable-to-get-serial-port-names-because-of-an-internal-system-error"></a>Не удалось получить имена последовательных портов из-за внутренней системной ошибки
 При вызове свойства `My.Computer.Ports.SerialPortNames` возникла внутренняя ошибка.  

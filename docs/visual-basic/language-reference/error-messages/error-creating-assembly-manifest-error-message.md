@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33588305"
 ---
 # <a name="error-creating-assembly-manifest-lterror-messagegt"></a>Ошибка при создании манифеста сборки: &lt;сообщение об ошибке&gt;
 Компилятор Visual Basic вызывает компоновщик сборок (Al.exe, который также называется Alink) для создания сборки с манифестом. Компоновщик сообщил об ошибке на этапе предварительного выпуска процедуры создания сборки.  

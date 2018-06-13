@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33585558"
 ---
 # <a name="line-and-shape-controls-visual-studio"></a>Элементы управления Line и Shape (Visual Studio)
 Элементы управления Visual Basic Power Packs, Line и Shape, являются графическими и позволяют рисовать горизонтальные, вертикальные и диагональные линии, прямоугольники, квадраты, овалы, круги, прямоугольники и квадраты с закругленными углами в форме или контейнере.  

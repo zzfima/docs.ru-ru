@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33593643"
 ---
 # <a name="39ltname1gt39-is-ambiguous-imported-from-the-namespaces-or-types-39ltname2gt39"></a>&#39;&lt;Name1&gt; &#39; является неоднозначным, импортированный из пространств имен или типов &#39; &lt;name2&gt;&#39;
 Вы указали неоднозначное имя, которое конфликтует с другим именем. Компилятор Visual Basic не имеет правил разрешения конфликтов; Вы должны самостоятельно устранить неоднозначность имен.  

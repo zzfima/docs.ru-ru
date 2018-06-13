@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33643759"
 ---
 # <a name="how-to-list-all-nodes-in-a-tree-visual-basic"></a>Как: список всех узлов дерева (Visual Basic)
 Иногда нужно вывести список всех узлов дерева. Это полезно, если требуется узнать, как метод или свойство повлияли на дерево. Одним из подходов для вывода списка всех узлов в текстовом формате является создание выражения XPath, которое точно определяет каждый конкретный узел дерева.  

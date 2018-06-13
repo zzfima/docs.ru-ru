@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33639452"
 ---
 # <a name="specified-registry-key-is-not-valid-because-it-contains-two-or-more-consecutive-backslashes"></a>Указанный раздел реестра является недопустимым, так как он содержит подряд две или более обратные косые черты
 Раздел реестра, указанный с помощью пути, содержит две или более обратные косые черты, идущие подряд. Это может быть результатом объединения нескольких строк для формирования пути и случайного включения нескольких обратных косых черт.  

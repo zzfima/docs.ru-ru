@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803732"
 ---
 # <a name="basic-resource-service"></a>Основная служба ресурсов
 В этом примере показано, как реализовать службу на основе HTTP, с помощью модели программирования REST Windows Communication Foundation (WCF), который предоставляет доступ к коллекции клиентов, поддерживающей операции поиска, добавления, удаления и замены. Этот пример состоит из двух компонентов: резидентной службы WCF HTTP (Service.cs) и консольного приложения (program.cs), создающего службу и выполняющего вызовы к нему.  

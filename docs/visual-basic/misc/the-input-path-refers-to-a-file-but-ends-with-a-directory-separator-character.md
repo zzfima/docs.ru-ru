@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33638787"
 ---
 # <a name="the-input-path-refers-to-a-file-but-ends-with-a-directory-separator-character"></a>Входной путь ссылается на файл, но заканчивается символом разделителя каталогов
 Операция пыталась требовать указания имени файла, но указанное имя заканчивается символом разделителя каталогов (`\`). Это может быть результатом неправильного синтаксического анализа пути к файлу.  

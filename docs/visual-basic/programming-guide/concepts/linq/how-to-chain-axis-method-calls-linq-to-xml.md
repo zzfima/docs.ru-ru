@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33643306"
 ---
 # <a name="how-to-chain-axis-method-calls-linq-to-xml-visual-basic"></a>Как: связанные вызовы метода оси (LINQ to XML) (Visual Basic)
 Обычно при написании кода вы будете придерживаться схемы, по которой вызывается метод оси, после чего вызывается одна из осей метода расширений.  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33587883"
 ---
 # <a name="39line39-statements-are-no-longer-supported-visual-basic-compiler-error"></a>&#39;Строки&#39; инструкции, больше не поддерживаются (Ошибка компилятора Visual Basic)
 Операторы Line больше не поддерживаются. Функциональность файлового ввода-вывода доступна как `Microsoft.VisualBasic.FileSystem.LineInput` и графические возможности доступны в качестве `System.Drawing.Graphics.DrawLine`.  

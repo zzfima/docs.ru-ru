@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33637391"
 ---
 # <a name="class-39ltclassnamegt39-does-not-implement-the-systemcollectionsicollection-interface"></a>Класс &#39; &lt;classname&gt; &#39; не реализует интерфейс System.Collections.ICollection
 Класс не реализует интерфейс `System.Collections.ICollection` , который определяет размер, перечислители и методы синхронизации для всех коллекций. Возможно, необходимо переустановить Visual Studio.  

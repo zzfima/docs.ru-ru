@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33584775"
 ---
 # <a name="39ltfunctionnamegt39-is-not-declared-smart-devicevisual-basic-compiler-error"></a>&#39;&lt;FunctionName&gt; &#39; не объявлен (смарт-устройства или Ошибка компилятора Visual Basic)
 <`functionname`> не объявлен. Функциональные возможности файлового ввода-вывода обычно предоставляются пространством имен `Microsoft.VisualBasic` , однако целевая платформа .NET Compact Framework его не поддерживает.  

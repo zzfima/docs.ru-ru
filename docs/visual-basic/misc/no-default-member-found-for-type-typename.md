@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33637508"
 ---
 # <a name="no-default-member-found-for-type-39lttypenamegt39"></a>Найти элемент по умолчанию для типа &#39; &lt;typename&gt;&#39;
 Предпринята попытка вызова `Get` или `Set` индекса позднего связывания.  

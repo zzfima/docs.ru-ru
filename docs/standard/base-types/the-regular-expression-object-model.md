@@ -42,6 +42,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579864"
 ---
 # <a name="the-regular-expression-object-model"></a>Объектная модель регулярных выражений
 <a name="introduction"></a> В этом разделе описывается объектная модель, используемая при работе с регулярными выражениями в .NET. Он содержит следующие подразделы:  

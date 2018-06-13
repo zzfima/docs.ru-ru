@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33584961"
 ---
 # <a name="timers"></a>таймеры
 Таймеры являются простыми объектами, которые позволяют указать делегат для вызова в заданное время. Поток в пуле потоков выполняет операцию ожидания.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33645019"
 ---
 # <a name="refactoring-using-a-pure-function-visual-basic"></a>Рефакторинг с использованием чистой функции (Visual Basic)
 Следующий пример выполняет рефакторинг предыдущего примера [рефакторинг с использованием метода расширения (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-an-extension-method.md), чтобы использовать чистая функция в этом примере кода, чтобы найти текст абзаца перемещается чисто статический метод `ParagraphText`.  

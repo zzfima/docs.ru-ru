@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33578239"
 ---
 # <a name="rules-for-inferring-schema-node-types-and-structure"></a>Правила выведения структуры и типов узлов схемы
 В данном разделе описывается, как в процессе вывода схемы различные типы узлов XML-документа преобразуются в структуру языка XSD.  

@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33592422"
 ---
 # <a name="the-managed-thread-pool"></a>Пул управляемых потоков
 Класс <xref:System.Threading.ThreadPool> обеспечивает приложение пулом рабочих потоков, управляемых системой, позволяя пользователю сосредоточиться на выполнении задач приложения, а не на управлении потоками. Если имеются небольшие задачи, которые требуют фоновой обработки, пул управляемых потоков — это самый простой способ воспользоваться преимуществами нескольких потоков. Например, начиная с версии [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] можно создавать объекты <xref:System.Threading.Tasks.Task> и <xref:System.Threading.Tasks.Task%601>, выполняющие асинхронные задачи в потоках из пула потоков.  

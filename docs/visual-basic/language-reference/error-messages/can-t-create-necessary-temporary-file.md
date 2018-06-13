@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33585056"
 ---
 # <a name="can39t-create-necessary-temporary-file"></a>Можно&#39;t создать требуемый временный файл
 Диск заполнен, содержащий каталоге, указанном в переменной среды TEMP или переменной среды TEMP указывает недопустимый или только для чтения диска или каталога.  
