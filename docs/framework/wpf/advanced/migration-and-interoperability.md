@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33544857"
 ---
 # <a name="migration-and-interoperability"></a>Миграция и взаимодействие систем
 Эта страница содержит ссылки на документы, посвященные реализации взаимодействия между [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] приложений и другие виды [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] приложений.  

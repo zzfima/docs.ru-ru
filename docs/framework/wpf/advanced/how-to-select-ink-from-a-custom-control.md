@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33548372"
 ---
 # <a name="how-to-select-ink-from-a-custom-control"></a>Практическое руководство. Выбор рукописного ввода из пользовательского элемента управления
 Добавив <xref:System.Windows.Ink.IncrementalLassoHitTester> в элемент управления, можно включить элемент управления, чтобы пользователь мог выбрать рукописного ввода с помощью инструмента Лассо, аналогично тому, как <xref:System.Windows.Controls.InkCanvas> выборе рукописного ввода с помощью лассо.  

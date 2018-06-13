@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33544399"
 ---
 # <a name="how-to-flip-a-uielement-horizontally-or-vertically"></a>Как отразить объект UIElement по горизонтали или по вертикали
 В этом примере показано, как использовать <xref:System.Windows.Media.ScaleTransform> отражение <xref:System.Windows.UIElement> горизонтально или вертикально. В этом примере <xref:System.Windows.Controls.Button> управления (тип <xref:System.Windows.UIElement>) Перевернутая путем применения <xref:System.Windows.Media.ScaleTransform> для его <xref:System.Windows.UIElement.RenderTransform%2A> свойство.  

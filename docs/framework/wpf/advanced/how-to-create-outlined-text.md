@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33544969"
 ---
 # <a name="how-to-create-outlined-text"></a>Практическое руководство. Вывод текста по контуру
 В большинстве случаев при добавлении декоративных элементов в текстовые строки в вашей [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] приложение, вы используете текст в виде коллекции дискретных символов или глифов. Например, можно создать кисти линейного градиента и применить его к <xref:System.Windows.Controls.Control.Foreground%2A> свойство <xref:System.Windows.Controls.TextBox> объекта. При отображении или измените текстовое поле кисти линейного градиента автоматически применяется текущий набор символов в текстовой строке.  

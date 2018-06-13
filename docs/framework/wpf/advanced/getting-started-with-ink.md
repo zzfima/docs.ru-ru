@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33546241"
 ---
 # <a name="getting-started-with-ink"></a>Начало работы с рукописными данными
 Включение рукописного ввода в приложения проще, чем когда-либо. Рукописный ввод развивался с дополнения метод COM и Windows Forms программирования для достижения полной интеграции в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Необходимо установить отдельные пакеты SDK или библиотеки времени выполнения.  

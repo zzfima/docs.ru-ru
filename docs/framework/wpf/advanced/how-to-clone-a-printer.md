@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33544207"
 ---
 # <a name="how-to-clone-a-printer"></a>Практическое руководство. Клонирование принтера
 Большинство компаний в определенный момент купит нескольких принтеров той же модели. Как правило они все вместе устанавливаются с практически одинаковыми параметрами. Установка каждого принтера может занять много времени и подвержены ошибкам. <xref:System.Printing.IndexedProperties?displayProperty=nameWithType> Пространства имен и <xref:System.Printing.PrintServer.InstallPrintQueue%2A> класс, который предоставляется через Microsoft .NET Framework дает возможность мгновенно установить любое число дополнительных очередей печати, которые будут скопированы из существующей очереди печати.  

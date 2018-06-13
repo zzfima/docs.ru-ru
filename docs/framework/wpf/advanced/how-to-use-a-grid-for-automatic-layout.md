@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33544626"
 ---
 # <a name="how-to-use-a-grid-for-automatic-layout"></a>Практическое руководство. Использование сетки для автоматической разметки
 В этот примере описаны способы использования сетки для автоматической разметки с целью создания локализуемого приложения.  

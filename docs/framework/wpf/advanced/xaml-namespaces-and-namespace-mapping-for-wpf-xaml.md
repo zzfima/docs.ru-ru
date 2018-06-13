@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33549400"
 ---
 # <a name="xaml-namespaces-and-namespace-mapping-for-wpf-xaml"></a>Пространства имен XAML и сопоставление пространств имен для WPF XAML
 В этом разделе обосновывается наличие и рассматриваются цели сопоставления двух пространств имен XAML, обычно содержащихся в корневом теге файла WPF XAML. Также описываются способы создания аналогичных сопоставлений для использования элементов, заданных в коде и/или в отдельных сборках.  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33545286"
 ---
 # <a name="how-to-enable-a-command"></a>Практическое руководство. Включение команды
 Следующий пример демонстрирует использование команд в [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  В примере показано связывание <xref:System.Windows.Input.RoutedCommand> для <xref:System.Windows.Controls.Button>, создайте <xref:System.Windows.Input.CommandBinding>и создания обработчиков событий, которые реализуют <xref:System.Windows.Input.RoutedCommand>.  Дополнительные сведения о командах см. в разделе [Общие сведения о работе с командами](../../../../docs/framework/wpf/advanced/commanding-overview.md).  
