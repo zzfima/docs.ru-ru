@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33398255"
 ---
 # <a name="international-resource-identifier-support-in-systemuri"></a>Поддержка международного кода ресурса в System.Uri
 Класс <xref:System.Uri?displayProperty=nameWithType> был расширен за счет поддержки международного идентификатора ресурса (IRI) и международных доменных имен (IDN). Эти улучшения доступны в .NET Framework 3.5, 3.0 с пакетом обновления 1 (SP1) и 2.0 с пакетом обновления 1 (SP1).  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33398135"
 ---
 # <a name="integrated-windows-authentication-with-extended-protection"></a>Встроенная аутентификация Windows с расширенной защитой
 Были добавлены улучшения, которые влияют на обработку встроенной проверки подлинности Windows в <xref:System.Net.HttpWebRequest>, <xref:System.Net.HttpListener>, <xref:System.Net.Mail.SmtpClient>, <xref:System.Net.Security.SslStream>, <xref:System.Net.Security.NegotiateStream> и связанных классах в <xref:System.Net> и соответствующих пространствах имен. Была добавлена поддержка расширенной защиты для повышения безопасности.  

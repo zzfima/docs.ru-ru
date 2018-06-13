@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33513218"
 ---
 # <a name="creating-custom-flow-control-activities"></a>Создание пользовательских действий управления потоком
 Среда .Net Framework содержит набор действий для управления потоком данных, которые работают так же, как и абстрактные программные структуры (например, <xref:System.Activities.Statements.Flowchart>) или стандартные программные инструкции (например, <xref:System.Activities.Statements.If>). В этом разделе обсуждается архитектура одного из образцов проектов [ForEach неуниверсальные](../../../docs/framework/windows-workflow-foundation/samples/non-generic-foreach.md).  

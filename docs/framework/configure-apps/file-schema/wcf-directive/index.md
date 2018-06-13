@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33386175"
 ---
 # <a name="wcf-directive-syntax"></a>Синтаксис директив WCF
 Задает параметры, используемые для направления компиляторов директивы Windows Communication Foundation (WCF) в SVC-файлов. Каждая директива может содержать один или несколько характерных для нее атрибутов (в паре со значениями). WCF имеется только [ @ServiceHost ](../../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md) директивы.  

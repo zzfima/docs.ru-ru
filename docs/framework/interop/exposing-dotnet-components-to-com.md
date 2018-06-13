@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33387436"
 ---
 # <a name="exposing-net-framework-components-to-com"></a>Предоставление COM-клиентам доступа к компонентам .NET Framework
 Написание типа .NET и его использование из неуправляемого кода — это разные операции с точки зрения разработчика. В этом разделе приводятся советы по написанию управляемого кода, который взаимодействует с клиентами COM:  

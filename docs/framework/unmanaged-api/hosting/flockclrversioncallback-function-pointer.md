@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5c884d07fa35c053b1a3b65c04426ac0e3712621
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33429677"
 ---
 # <a name="flockclrversioncallback-function-pointer"></a>Указатель функции FLockClrVersionCallback
 Указывает на функцию, общие вызовы языка среды выполнения (CLR) чтобы указать, что инициализация либо начала или завершения.  
