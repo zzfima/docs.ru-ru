@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33359937"
 ---
 # <a name="creating-the-object-model"></a>Создание модели объектов
 Объектную модель можно создать из существующей базы данных и использовать ее в заданном по умолчанию состоянии. Кроме того, можно настроить ряд аспектов модели и ее поведение.  

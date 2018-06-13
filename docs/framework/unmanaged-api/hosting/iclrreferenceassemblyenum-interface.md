@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d66177c57acf2f41198ea37169756bc1629a2854
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33433006"
 ---
 # <a name="iclrreferenceassemblyenum-interface"></a>Интерфейс ICLRReferenceAssemblyEnum
 Предоставляет методы, позволяющие основному приложению управлять набор сборок, на который указывает файл или поток, используя данные идентификации сборки, которые являются внутренними для общеязыковой среды выполнения (CLR), без необходимости создания или интерпретации этих данных.  

@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33527778"
 ---
 # <a name="data-formatting-in-the-windows-forms-datagridview-control"></a>Форматирование данных в элементе управления DataGridView в Windows Forms
 <xref:System.Windows.Forms.DataGridView> Управления обеспечивает автоматическое преобразование между значениями ячеек и типы данных, которые отображаются в родительских столбцах. Например, столбцах текстовых полей отображаются строковые представления значений даты, времени, числа и значения перечисления и введенные пользователем строковые значения преобразуются в типы, необходимые в хранилище данных.  

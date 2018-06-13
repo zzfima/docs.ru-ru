@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33362631"
 ---
 # <a name="query-examples"></a>Примеры запросов
 В этом разделе Примеры Visual Basic и C# обычно [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] запросов. Разработчики, использующие Visual Studio можно найти гораздо больше примеров в образце решения, представленном в разделе «примеры». Дополнительные сведения см. в разделе [образцы](../../../../../../docs/framework/data/adonet/sql/linq/samples.md).  

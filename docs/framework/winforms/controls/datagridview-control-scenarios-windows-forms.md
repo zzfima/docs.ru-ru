@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33529042"
 ---
 # <a name="datagridview-control-scenarios-windows-forms"></a>Сценарии использования элементов управления DataGridView (Windows Forms)
 С <xref:System.Windows.Forms.DataGridView> элемента управления, можно отобразить табличных данных из различных источников данных. В простых случаях можно вручную заполнять <xref:System.Windows.Forms.DataGridView> и манипулировать данными напрямую через элемент управления. Как правило, однако для сохранения данных в внешнему источнику данных и привязать элемент управления к нему через <xref:System.Windows.Forms.BindingSource> компонента.  

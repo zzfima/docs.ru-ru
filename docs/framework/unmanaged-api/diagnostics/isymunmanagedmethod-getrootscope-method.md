@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 417ce67d807fddd3b99ceff4b05f1524db3044e5
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33430532"
 ---
 # <a name="isymunmanagedmethodgetrootscope-method"></a>Метод ISymUnmanagedMethod::GetRootScope
 Возвращает корневую лексическую область в этом методе. Эта область включает весь метод.  

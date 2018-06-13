@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33528379"
 ---
 # <a name="how-to-arrange-controls-with-snaplines-and-the-grid-in-windows-forms"></a>Практическое руководство. Упорядочение элементов управления с помощью линий привязки и сетки в формах Windows Forms
 Используя возможности макета элемента Visual Studio, можно точно указать расположение элементов управления на форме. Элементы управления, добавляемых на форму или перемещен в форме автоматически выравниваются в строки и столбцы сетки в конструкторе Windows Forms, или можно выравнивать элементы управления с помощью линий привязки.  
