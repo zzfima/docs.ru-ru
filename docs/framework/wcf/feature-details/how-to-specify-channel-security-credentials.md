@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33496855"
 ---
 # <a name="how-to-specify-channel-security-credentials"></a>Практическое руководство. Задание учетных данных безопасности канала
 Моникер служб Windows Communication Foundation (WCF) позволяет приложениям COM вызывать службы WCF. Большинство служб WCF потребовать от клиента указать учетные данные для проверки подлинности и авторизации. При вызове службы WCF из клиента WCF, можно указать эти учетные данные в управляемом коде или в файле конфигурации приложения. При вызове службы WCF из приложения COM, можно использовать <xref:System.ServiceModel.ComIntegration.IChannelCredentials> интерфейс, чтобы указать учетные данные. В данном разделе описаны различные способы указания учетных данных с использованием интерфейса <xref:System.ServiceModel.ComIntegration.IChannelCredentials>.  

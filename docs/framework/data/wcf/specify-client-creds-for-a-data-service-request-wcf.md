@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33363970"
 ---
 # <a name="how-to-specify-client-credentials-for-a-data-service-request-wcf-data-services"></a>Как указать учетные данные клиента для запроса службы данных (службы WCF Data Services)
 По умолчанию клиентская библиотека не поддерживает учетные данные при отправке запроса службе [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]. Тем не менее можно задать отправку учетных данных для проверки подлинности запросов службе данных, указав <xref:System.Net.NetworkCredential> для свойства <xref:System.Data.Services.Client.DataServiceContext.Credentials%2A> в контексте <xref:System.Data.Services.Client.DataServiceContext>. Дополнительные сведения см. в разделе [Securing WCF Data Services](../../../../docs/framework/data/wcf/securing-wcf-data-services.md). В примере в этом разделе показано, как явно предоставить учетные данные, используемые клиентом [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] при запросе данных из службы данных.  

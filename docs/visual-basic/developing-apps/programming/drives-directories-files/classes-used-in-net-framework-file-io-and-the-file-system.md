@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33590703"
 ---
 # <a name="classes-used-in-net-framework-file-io-and-the-file-system-visual-basic"></a>Классы, используемые при файловом вводе-выводе в .NET Framework, и файловая система (Visual Basic)
 В приведенных ниже таблицах перечислены классы, обычно используемые для файлового ввода-вывода в .NET Framework. Они разделены на классы файлового ввода-вывода, классы для создания потоков и классы для чтения и записи в поток.  

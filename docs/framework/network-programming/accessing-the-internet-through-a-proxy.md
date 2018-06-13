@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33394983"
 ---
 # <a name="accessing-the-internet-through-a-proxy"></a>Доступ к Интернету через прокси-сервер
 Если вы используете прокси-сервер для предоставления доступа к Интернету, необходимо настроить экземпляр прокси-сервера, который будет обеспечивать обмен данными между вашим приложением и веб-прокси.  

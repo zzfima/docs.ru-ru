@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32761263"
 ---
 # <a name="deployment-considerations-entity-framework"></a>Сведения о развертывании (Entity Framework)
 В этом разделе представлены сведения о развертывании приложений, использующих для доступа к данным платформу ADO.NET Entity Framework. Дополнительные сведения о платформе Entity Framework см. в разделе [Приступая к работе](../../../../../docs/framework/data/adonet/ef/getting-started.md).  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33362469"
 ---
 # <a name="sql-server-data-type-mappings"></a>Сопоставления типов данных SQL Server
 В SQL Server и .NET Framework используются различные системы типов. Например, максимальная разрядность структуры .NET Framework <xref:System.Decimal> составляет 28, в то время как максимальная разрядность десятичных и числовых типов данных SQL Server - 38. Чтобы обеспечить целостность данных при чтении и записи, объект <xref:System.Data.SqlClient.SqlDataReader> предоставляет характерные для SQL Server типизированные методы доступа, возвращающие объекты <xref:System.Data.SqlTypes>, а также методы доступа, возвращающие типы .NET Framework. Типы данных SQL Server и .NET Framework также представлены перечислениями в классах <xref:System.Data.DbType> и <xref:System.Data.SqlDbType>, которые можно использовать при указании типов данных <xref:System.Data.SqlClient.SqlParameter>.  

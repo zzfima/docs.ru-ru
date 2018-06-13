@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365297"
 ---
 # <a name="using-a-data-service-in-a-client-application-wcf-data-services"></a>Использование служб данных в клиентском приложении (службы данных WCF)
 Можно получить доступ к службу, предоставляющую [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] веб-канала, указав URI в веб-браузере. URI предоставляет адрес ресурса, и сообщения запроса отправляются по этим адресам для доступа или изменения базовых данных, представляемых ресурсом. Браузер формирует команду HTTP GET и возвращает запрошенный ресурс в виде канала [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]. Дополнительные сведения см. в разделе [доступа к службе из веб-браузер](../../../../docs/framework/data/wcf/accessing-the-service-from-a-web-browser-wcf-data-services-quickstart.md).  

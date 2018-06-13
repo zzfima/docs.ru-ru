@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33396796"
 ---
 # <a name="certificate-selection-and-validation"></a>Выбор и проверка сертификата
 Классы <xref:System.Net> поддерживают несколько способов выбора и проверки <xref:System.Security.Cryptography.X509Certificates> для подключений SSL. Клиент может выбрать один или несколько сертификатов для прохождения проверки подлинности на сервере. Сервер может потребовать наличия в сертификате клиента одного или нескольких атрибутов для проверки подлинности.  

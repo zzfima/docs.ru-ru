@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33590017"
 ---
 # <a name="how-to-print-a-form-by-using-the-printform-component-visual-basic"></a>Практическое руководство. Печать формы с помощью компонента PrintForm (Visual Basic)
 Компонент <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> позволяет быстро напечатать изображение формы точно, как на экране, без использования компонента <xref:System.Drawing.Printing.PrintDocument>. Следующие процедуры показывают, как вывести форму для печати на принтер, в окно предварительного просмотра печати и в EPS-файл.  

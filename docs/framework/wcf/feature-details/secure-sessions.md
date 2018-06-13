@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33497546"
 ---
 # <a name="secure-sessions"></a>Безопасные сеансы
 Функция Windows Communication Foundation (WCF) — надежные сеансы, которые гарантируют, что получение сообщений в порядке, в котором они были отправлены. В этом разделе рассматриваются проблемы безопасности, которые необходимо учитывать при создании надежного сеанса. Дополнительные сведения о надежных сеансов см. в разделе [с использованием сеансов](../../../../docs/framework/wcf/using-sessions.md).  

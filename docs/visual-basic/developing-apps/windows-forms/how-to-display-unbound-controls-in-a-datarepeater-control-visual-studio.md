@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33588110"
 ---
 # <a name="how-to-display-unbound-controls-in-a-datarepeater-control-visual-studio"></a>Пошаговое руководство. Отображение несвязанных элементов управления в элементе управления DataRepeater (Visual Studio)
 Помимо связанные элементы управления, вы можете добавить другие элементы управления для <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>, такие как статическая метка или изображение, которое повторяется для каждого элемента в <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> элемента управления.  

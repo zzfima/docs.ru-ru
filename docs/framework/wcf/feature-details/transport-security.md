@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33498219"
 ---
 # <a name="transport-security"></a>Безопасность транспорта
 Безопасность транспорта в Windows Communication Foundation (WCF), зависит от выбранной привязки. Транспорт, реализуемый привязкой, определяет фактический механизм безопасности. В подразделах данного раздела описываются реализуемые механизмы и их параметры.  

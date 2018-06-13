@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32762414"
 ---
 # <a name="performing-an-xpath-query-on-a-dataset"></a>Выполнение запроса XPath к набору данных
 Связь между синхронизированным <xref:System.Data.DataSet> и <xref:System.Xml.XmlDataDocument> позволяет использовать XML-служб, таких как запрос языка XML Path (XPath), которые обращаются к **XmlDataDocument** и выполнять некоторые функции более удобным, чем доступ к **DataSet** напрямую. Например, вместо использования **выберите** метод <xref:System.Data.DataTable> для перехода по связям к другим таблицам в **DataSet**, можно выполнить запрос XPath к **XmlDataDocument**  , синхронизируется с **DataSet**, чтобы получить список XML-элементов в виде <xref:System.Xml.XmlNodeList>. Узлы в **XmlNodeList**, приведенное <xref:System.Xml.XmlElement> узлов, может быть передан **GetRowFromElement** метод **XmlDataDocument**, чтобы вернуть совпадающие <xref:System.Data.DataRow> ссылки на строки таблицы в синхронизированном **набора данных**.  

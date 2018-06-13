@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33588097"
 ---
 # <a name="39ltmembernamegt39-cannot-expose-type-39lttypenamegt39-outside-the-project-through-ltcontainertypegt-39ltcontainertypenamegt39"></a>&#39;&lt;имя пользователя&gt; &#39; не может представлять тип &#39; &lt;typename&gt; &#39; вне проекта посредством &lt;containertype&gt; &#39; &lt;containertypename&gt;&#39;
 Переменная, параметр процедуры или возвращаемое функцией предоставляется вне контейнера, но он объявлен как тип, который может быть предоставлен вне контейнера.  

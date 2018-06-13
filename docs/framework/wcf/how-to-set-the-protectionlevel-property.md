@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33501537"
 ---
 # <a name="how-to-set-the-protectionlevel-property"></a>Практическое руководство. Установка свойства ProtectionLevel
 Уровень защиты можно задать, применив соответствующий атрибут и задав свойство. Защиту на уровне службы можно задать таким образом, чтобы она влияла на все части каждого сообщения, можно также задать защиту на более детализированных уровнях - от методов до частей сообщения. Дополнительные сведения о `ProtectionLevel` свойство, в разделе [уровень защиты основные сведения о](../../../docs/framework/wcf/understanding-protection-level.md).  

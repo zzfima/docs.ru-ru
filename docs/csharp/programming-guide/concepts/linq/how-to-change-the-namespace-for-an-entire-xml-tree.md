@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33328257"
 ---
 # <a name="how-to-change-the-namespace-for-an-entire-xml-tree-c"></a>Практическое руководство. Изменение пространства имен для всего дерева XML (C#)
 Иногда необходимо программно изменить пространство имен для элемента или атрибута. В LINQ to XML это делается легко. Можно установить свойство <xref:System.Xml.Linq.XElement.Name%2A?displayProperty=nameWithType>. Свойство <xref:System.Xml.Linq.XAttribute.Name%2A?displayProperty=nameWithType> не может быть установлено, но можно легко скопировать атрибуты в объект <xref:System.Collections.Generic.List%601?displayProperty=nameWithType>, заменив существующие атрибуты, а затем добавить новые атрибуты из нового пространства имен.  

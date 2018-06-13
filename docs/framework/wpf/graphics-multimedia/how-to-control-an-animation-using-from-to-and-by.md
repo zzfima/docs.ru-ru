@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33561690"
 ---
 # <a name="how-to-control-an-animation-using-from-to-and-by"></a>Практическое руководство. Управление анимацией с помощью свойств From, To, и By
 «Из/в/By» или «базовая анимация» создает переход между двумя целевыми значениями (см. [Обзор анимации](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md) основные сведения о различных типов анимации). Чтобы задать целевые значения основной анимации, используйте его <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A>, <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A>, и <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> свойства.  В следующей таблице представлены как <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A>, <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A>, и <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> свойства может быть использовано вместе или отдельно, чтобы определить анимации целевого значения.  

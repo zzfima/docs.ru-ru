@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33496053"
 ---
 # <a name="how-the-wcf-syndication-object-model-maps-to-atom-and-rss"></a>Сопоставление объектной модели синдикации WCF моделям Atom и RSS
 При разработке службы синдикации Windows Communication Foundation (WCF), вы создаете веб-каналов и элементов с помощью следующих классов:  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33508778"
 ---
 # <a name="obsolete-members-in-the-net-framework"></a>Устаревшие члены в платформе .NET Framework
 В таблицах этой статьи перечислены устаревшие в .NET Framework 4.5 и более поздних версий члены типов, упорядоченные по сборкам. Перейдите по следующим ссылкам, чтобы просмотреть список устаревших членов и рекомендованных альтернативных вариантов в каждой сборке. В этом разделе не перечисляются члены устаревших типов. Список устаревших типов см. в разделе [Устаревшие типы](../../../docs/framework/whats-new/obsolete-types.md).  

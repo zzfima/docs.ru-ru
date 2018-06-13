@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33576826"
 ---
 # <a name="building-xml-schemas"></a>Построение XML-схем
 Классы в пространстве имен <xref:System.Xml.Schema?displayProperty=nameWithType> сопоставляются со структурами, определенными в рекомендациях по схемам XML консорциума W3C, и могут использоваться для сборки схем XML в памяти.  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33590242"
 ---
 # <a name="expression-is-a-value-and-therefore-cannot-be-the-target-of-an-assignment"></a>Нельзя присвоить значение выражению, поскольку оно является значением
 Оператор пытается присвоить значение выражению. Можно назначить значение только записываемой переменной, свойства или элемента массива во время выполнения. В следующем примере показано, как эта ошибка может возникать.  

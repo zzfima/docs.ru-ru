@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33327477"
 ---
 # <a name="how-to-iterate-through-a-directory-tree-c-programming-guide"></a>Практическое руководство. Перебор дерева папок (Руководство по программированию на C#)
 Под фразой "итерация дерева каталога" подразумевается доступ к каждому файлу в каждом вложенном подкаталоге в заданной корневой папке на любую глубину. Необязательно открывать каждый файл. Можно просто извлечь имя файла или подкаталога в виде значения `string` или получить дополнительную информацию в форме объекта <xref:System.IO.FileInfo?displayProperty=nameWithType> или <xref:System.IO.DirectoryInfo?displayProperty=nameWithType>.  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365466"
 ---
 # <a name="object-materialization-wcf-data-services"></a>Материализация объектов (службы данных WCF)
 При использовании **добавить ссылку на службу** диалоговое окно, чтобы использовать [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] веб-канала в приложении клиента на основе .NET Framework, эквивалентные классы данных создаются для каждого типа сущности в модели данных, предоставляемых каналом. Дополнительные сведения см. в разделе [Создание библиотеки клиентов службы данных](../../../../docs/framework/data/wcf/generating-the-data-service-client-library-wcf-data-services.md). Данные сущности, возвращаемые запросом, материализуются в экземпляр одного из созданных классов клиентской службы данных. Сведения о параметрах слияния и разрешение идентификаторов для отслеживаемых объектов см. в разделе [управление контекстом службы данных](../../../../docs/framework/data/wcf/managing-the-data-service-context-wcf-data-services.md).  

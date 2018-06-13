@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32763057"
 ---
 # <a name="downloading-sample-databases-linq-to-dataset"></a>Загрузка примеров баз данных (LINQ to DataSet)
 Примеры и пошаговые руководства в [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] документации используется образец базы данных AdventureWorks. Этот продукт можно бесплатно загрузить с веб-сайта загрузки Майкрософт. Образцы и пошаговые руководства в документации по [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] используют в качестве хранилища данных SQL Server. Вместо SQL Server можно использовать SQL Server Express Edition, который доступен для бесплатной загрузки.  

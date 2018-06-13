@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33507370"
 ---
 # <a name="servicedescription-and-wsdl-reference"></a>ServiceDescription и справочная информация о WSDL
 В этом разделе описывается, как Windows Communication Foundation (WCF) сопоставляет документы на языке описания веб-служб (WSDL) в и из <xref:System.ServiceModel.Description.ServiceDescription> экземпляров.  

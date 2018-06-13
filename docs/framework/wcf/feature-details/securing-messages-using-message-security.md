@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33498694"
 ---
 # <a name="securing-messages-using-message-security"></a>Защита сообщений с использованием средств обеспечения безопасности сообщений
 В этом разделе рассматриваются безопасность сообщений WCF при использовании <xref:System.ServiceModel.NetMsmqBinding>.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33364227"
 ---
 # <a name="authorization-and-permissions-in-sql-server"></a>Авторизация и разрешения в SQL Server
 После создания объектов базы данных необходимо явно предоставить разрешения, чтобы сделать их доступными для пользователей. Каждый защищаемый объект имеет разрешения, которые могут быть предоставлены участнику с помощью инструкций разрешения.  

@@ -10,9 +10,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: f92b87cc2748a709361ff2c0c8129db5f7fe6046
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33460972"
 ---
 # <a name="metadata-enumerations"></a>Перечисления метаданных
 В этом разделе описываются неуправляемые перечисления, которые использует API метаданных.  

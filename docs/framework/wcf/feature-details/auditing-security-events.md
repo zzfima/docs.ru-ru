@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33496029"
 ---
 # <a name="auditing-security-events"></a>Аудит событий безопасности
 Приложения, созданные с помощью Windows Communication Foundation (WCF) может регистрировать события безопасности (либо успешно, сбой или оба) с помощью функции аудита. События записываются в журнал системных событий Windows, и их можно просматривать при помощи средства просмотра событий.  

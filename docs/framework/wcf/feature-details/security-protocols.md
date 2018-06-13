@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33508728"
 ---
 # <a name="security-protocols"></a>Протоколы безопасности
 Протоколы WS-Security предоставляют механизмы обеспечения безопасности веб-служб, охватывающие все существующие требования к безопасности обмена сообщениями на предприятии. В этом разделе описываются подробности Windows Communication Foundation (WCF) (реализованный в <xref:System.ServiceModel.Channels.SecurityBindingElement>) для следующих протоколов WS-безопасности.  

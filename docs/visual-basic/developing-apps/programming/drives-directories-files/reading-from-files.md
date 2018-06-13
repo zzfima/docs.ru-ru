@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33590803"
 ---
 # <a name="reading-from-files-in-visual-basic"></a>Чтение из файлов в Visual Basic
 В этом руководстве рассказывается, как выполнять задачи, связанные с чтением из файлов.  

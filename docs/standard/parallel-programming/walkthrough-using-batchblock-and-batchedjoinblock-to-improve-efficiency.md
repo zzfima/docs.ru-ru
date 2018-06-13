@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33591850"
 ---
 # <a name="walkthrough-using-batchblock-and-batchedjoinblock-to-improve-efficiency"></a>Пошаговое руководство. Повышение эффективности с помощью BatchBlock и BatchedJoinBlock
 Библиотека потоков данных TPL предоставляет классы <xref:System.Threading.Tasks.Dataflow.BatchBlock%601?displayProperty=nameWithType> и <xref:System.Threading.Tasks.Dataflow.BatchedJoinBlock%602?displayProperty=nameWithType>, чтобы пользователь мог получать и помещать в буфер данные из одного или нескольких источников и затем передавать эти помещенные в буфер данные в виде одной коллекции. Этот механизм пакетной обработки полезен при сборе данных из одного или нескольких источников и дальнейшей обработке различных элементов данных в пакетном режиме. Например, рассмотрим приложение, использующее поток данных для вставки записей в базу данных. Эта операция может быть эффективнее, если несколько элементов добавляются одновременно, а не последовательно по одному. В этом документе описано, как использовать класс <xref:System.Threading.Tasks.Dataflow.BatchBlock%601> для увеличения эффективности подобных операций вставки в базу данных. Также здесь приводится способ использования класса <xref:System.Threading.Tasks.Dataflow.BatchedJoinBlock%602> для перехвата и результатов, и всех исключений, возникающих при выполнении программой считывания из базы данных.

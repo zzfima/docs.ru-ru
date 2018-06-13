@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33508619"
 ---
 # <a name="serialization-and-deserialization"></a>Сериализация и десериализация
 Windows Communication Foundation (WCF) включает новый модуль сериализации, <xref:System.Runtime.Serialization.DataContractSerializer>. Сериализатор <xref:System.Runtime.Serialization.DataContractSerializer> преобразует объекты [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] в формат XML и обратно. В данном разделе объясняется, как работает сериализатор.  

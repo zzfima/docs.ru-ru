@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32762654"
 ---
 # <a name="foreign-key-property"></a>свойство внешнего ключа
 Объект *свойство внешнего ключа* в модель данных сущности (EDM) является типом-примитивом [свойство](../../../../docs/framework/data/adonet/property.md) (или набор свойств примитивного типа) на [тип сущности](../../../../docs/framework/data/adonet/entity-type.md) , содержащий [ключ сущности](../../../../docs/framework/data/adonet/entity-key.md) другого типа сущности.  
