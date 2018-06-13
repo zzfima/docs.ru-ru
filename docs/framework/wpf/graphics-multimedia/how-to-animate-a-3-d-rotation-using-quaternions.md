@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33556943"
 ---
 # <a name="how-to-animate-a-3-d-rotation-using-quaternions"></a><span data-ttu-id="6928c-102">Практическое руководство. Анимация трехмерного вращения с помощью кватернионов</span><span class="sxs-lookup"><span data-stu-id="6928c-102">How to: Animate a 3-D Rotation Using Quaternions</span></span>
 <span data-ttu-id="6928c-103">В этом примере показано, как анимация поворота трехмерного объекта с помощью кватернионов.</span><span class="sxs-lookup"><span data-stu-id="6928c-103">This example shows how to animate a rotation of a 3-D object using quaternions.</span></span>  

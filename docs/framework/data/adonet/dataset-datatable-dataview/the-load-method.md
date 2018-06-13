@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32758312"
 ---
 # <a name="the-load-method"></a><span data-ttu-id="a1f21-102">Метод Load</span><span class="sxs-lookup"><span data-stu-id="a1f21-102">The Load Method</span></span>
 <span data-ttu-id="a1f21-103">Метод <xref:System.Data.DataTable.Load%2A> используется для загрузки в таблицу <xref:System.Data.DataTable> строк из источника данных.</span><span class="sxs-lookup"><span data-stu-id="a1f21-103">You can use the <xref:System.Data.DataTable.Load%2A> method to load a <xref:System.Data.DataTable> with rows from a data source.</span></span> <span data-ttu-id="a1f21-104">Это перегруженный метод, который в самом простом принимает один параметр **DataReader**.</span><span class="sxs-lookup"><span data-stu-id="a1f21-104">This is an overloaded method which, in its simplest form, accepts a single parameter, a **DataReader**.</span></span> <span data-ttu-id="a1f21-105">В этой форме он просто загружает **DataTable** со строками.</span><span class="sxs-lookup"><span data-stu-id="a1f21-105">In this form, it simply loads the **DataTable** with rows.</span></span> <span data-ttu-id="a1f21-106">Кроме того, можно указать **LoadOption** параметра для управления как данные добавляются **DataTable**.</span><span class="sxs-lookup"><span data-stu-id="a1f21-106">Optionally, you can specify the **LoadOption** parameter to control how data is added to the **DataTable**.</span></span>  

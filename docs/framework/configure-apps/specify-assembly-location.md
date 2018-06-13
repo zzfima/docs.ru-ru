@@ -14,6 +14,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32758273"
 ---
 # <a name="specifying-an-assembly39s-location"></a><span data-ttu-id="9e7ab-102">Указание сборки&#39;расположение s</span><span class="sxs-lookup"><span data-stu-id="9e7ab-102">Specifying an Assembly&#39;s Location</span></span>
 <span data-ttu-id="9e7ab-103">Указание расположения сборки двумя способами.</span><span class="sxs-lookup"><span data-stu-id="9e7ab-103">There are two ways to specify an assembly's location:</span></span>  

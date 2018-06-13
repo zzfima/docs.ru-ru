@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33561259"
 ---
 # <a name="how-to-hit-test-using-geometry-as-a-parameter"></a><span data-ttu-id="fa201-102">Практическое руководство. Проверка нажатия с использованием геометрического объекта в качестве параметра</span><span class="sxs-lookup"><span data-stu-id="fa201-102">How to: Hit Test Using Geometry as a Parameter</span></span>
 <span data-ttu-id="fa201-103">В этом примере показано, как выполнять проверки нажатия визуального объекта при помощи <xref:System.Windows.Media.Geometry> параметра проверки нажатия.</span><span class="sxs-lookup"><span data-stu-id="fa201-103">This example shows how to perform a hit test on a visual object using a <xref:System.Windows.Media.Geometry> as a hit test parameter.</span></span>  

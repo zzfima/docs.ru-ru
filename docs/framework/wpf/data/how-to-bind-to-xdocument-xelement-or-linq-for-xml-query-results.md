@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33556696"
 ---
 # <a name="how-to-bind-to-xdocument-xelement-or-linq-for-xml-query-results"></a><span data-ttu-id="45c8f-102">Практическое руководство. Привязка к XDocument, XElement или LINQ для результатов запросов XML</span><span class="sxs-lookup"><span data-stu-id="45c8f-102">How to: Bind to XDocument, XElement, or LINQ for XML Query Results</span></span>
 <span data-ttu-id="45c8f-103">В этом примере показано, как выполнить привязку данных XML для <xref:System.Windows.Controls.ItemsControl> с помощью <xref:System.Xml.Linq.XDocument>.</span><span class="sxs-lookup"><span data-stu-id="45c8f-103">This example demonstrates how to bind XML data to an <xref:System.Windows.Controls.ItemsControl> using <xref:System.Xml.Linq.XDocument>.</span></span>  
