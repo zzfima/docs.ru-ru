@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33584286"
 ---
 # <a name="how-to-cancel-a-plinq-query"></a>Практическое руководство. Отмена запроса PLINQ
 В приведенных ниже примерах показаны два способа отмены запроса PLINQ. В первом примере отменяется запрос, который состоит в основном из обхода данных. Во втором примере отменяется запрос, который содержит ресурсоемкую функцию.  

@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33584213"
 ---
 # <a name="visual-basic-power-packs-controls"></a>Элементы управления Visual Basic Power Packs
 Элементы управления Visual Basic Power Packs представляют собой дополнительные элементы управления Windows Forms. Они не входят в состав Visual Studio.  Вы можете [загружать их](http://go.microsoft.com/fwlink/?LinkId=321343), но они предоставляются в виде-есть, без поддержки.  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33584583"
 ---
 # <a name="error-creating-win32-resources-lterror-messagegt"></a>Ошибка при создании ресурсов Win32: &lt;сообщение об ошибке&gt;
 Компилятор Visual Basic вызывает компоновщик сборок (Al.exe, который также называется Alink) для создания сборки с манифестом. Компоновщик сообщил об ошибке при создании ресурса, обрабатываемого в памяти. Причиной может быть проблема со средой или нехватка памяти на компьютере.  

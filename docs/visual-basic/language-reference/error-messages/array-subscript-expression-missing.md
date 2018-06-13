@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33583868"
 ---
 # <a name="array-subscript-expression-missing"></a>Отсутствует выражение с индексами для массива
 Инициализация массива пропущен один или несколько индексов, определяющих границы массива. Например, инструкция может содержать выражение `myArray (5,5,,10)`, который пропущен третий индекс.  
