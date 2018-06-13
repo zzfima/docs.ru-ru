@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33548319"
 ---
 # <a name="use-automatic-layout-overview"></a>Обзор использования автоматической разметки
 В этом разделе представлены рекомендации для разработчиков по написанию [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] приложений с локализуемыми [!INCLUDE[TLA#tla_ui#plural](../../../../includes/tlasharptla-uisharpplural-md.md)]. В прошлом локализации [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] было много времени. Каждый язык, [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] адаптирован для обязательного корректировку размера x. Сегодня при правом разработки и кодирования стандартов, [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)] могут создаваться таким образом, что локализаторам меньше изменений размеров и положения делать. Подход к написанию приложений, которые могут быть легко изменять размер и положение называется автоматической разметкой и может осуществляться с помощью [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] разработки приложения.  

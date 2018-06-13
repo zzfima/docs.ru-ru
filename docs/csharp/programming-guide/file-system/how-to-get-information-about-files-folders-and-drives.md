@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33338543"
 ---
 # <a name="how-to-get-information-about-files-folders-and-drives--c-programming-guide"></a>Практическое руководство. Получение сведений о файлах, папках и дисках (Руководство по программированию на C#)
 В платформе .NET Framework доступ к сведениям о файловой системе можно получить, используя следующие классы:  

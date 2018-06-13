@@ -20,9 +20,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 371768a8306c3751e7fc54b91a8583df41ad219b
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33422286"
 ---
 # <a name="icoreclrdebugtarget-interface"></a>Интерфейс ICoreClrDebugTarget
 Предоставляет методы, которые контролируют счетчики ссылок, перечисляют процессы и освобождения памяти, связанные с отладчиком, подключенным к удаленному целевому объекту Macintosh Silverlight.  

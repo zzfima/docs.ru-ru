@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33545442"
 ---
 # <a name="how-to-apply-animations-to-text"></a>Практическое руководство. Применение анимаций к тексту
 Анимации могут менять отображение и внешний вид текста в приложении. В следующих примерах используется различные виды анимации, влияющие на отображение текста в <xref:System.Windows.Controls.TextBlock> элемента управления.  

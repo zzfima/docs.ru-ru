@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32763947"
 ---
 # <a name="getschema-and-schema-collections"></a>Коллекции GetSchema и Schema
 **Подключения** классы в каждом из управляемых поставщиков .NET Framework реализует **GetSchema** метод, который используется для получения сведений о базе данных, в данный момент подключен, схеме и Возвращает сведения о схеме **GetSchema** представляются в виде <xref:System.Data.DataTable>. **GetSchema** это перегруженный метод, содержащий необязательные параметры для указания возвращаемой коллекции схем и ограничения объема возвращаемых сведений.  
