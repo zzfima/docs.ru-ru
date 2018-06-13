@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33489210"
 ---
 # <a name="data-transfer-and-serialization"></a><span data-ttu-id="faaa2-102">Передача данных и сериализация</span><span class="sxs-lookup"><span data-stu-id="faaa2-102">Data Transfer and Serialization</span></span>
 <span data-ttu-id="faaa2-103">В распределенных системах для выполнения каких-либо задач клиенты и службы обмениваются данными.</span><span class="sxs-lookup"><span data-stu-id="faaa2-103">In a connected system, services and clients depend on the exchange of data to accomplish any task.</span></span> <span data-ttu-id="faaa2-104">Как разработчик службы или клиента необходимо также понять, как Windows Communication Foundation (WCF) обрабатывает и сериализации данных для создания приложений, которые эффективны и простые в обслуживании.</span><span class="sxs-lookup"><span data-stu-id="faaa2-104">As a developer of a service or client, you must also understand how Windows Communication Foundation (WCF) handles data and data serialization in order to create applications that are efficient and easy to maintain.</span></span>  

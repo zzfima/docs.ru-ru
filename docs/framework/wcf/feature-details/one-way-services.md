@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33494378"
 ---
 # <a name="one-way-services"></a><span data-ttu-id="c98d4-102">Односторонние службы</span><span class="sxs-lookup"><span data-stu-id="c98d4-102">One-Way Services</span></span>
 <span data-ttu-id="c98d4-103">По умолчанию операция службы выполняется по шаблону "запрос-ответ".</span><span class="sxs-lookup"><span data-stu-id="c98d4-103">The default behavior of a service operation is the request-reply pattern.</span></span> <span data-ttu-id="c98d4-104">В соответствии с шаблоном "запрос-ответ" клиент ждет ответного сообщения, даже если операция службы представлена в коде в виде метода `void`.</span><span class="sxs-lookup"><span data-stu-id="c98d4-104">In a request-reply pattern, the client waits for the reply message, even if the service operation is represented in code as a `void` method.</span></span> <span data-ttu-id="c98d4-105">В случае односторонних операций передается только одно сообщение.</span><span class="sxs-lookup"><span data-stu-id="c98d4-105">With a one-way operation, only one message is transmitted.</span></span> <span data-ttu-id="c98d4-106">Получатель не отправляет ответное сообщение, а отправитель не ожидает получения этого сообщения.</span><span class="sxs-lookup"><span data-stu-id="c98d4-106">The receiver does not send a reply message, nor does the sender expect one.</span></span>  

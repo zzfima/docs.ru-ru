@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33490380"
 ---
 # <a name="how-to-configure-wcf-service-to-interoperate-with-aspnet-web-service-clients"></a><span data-ttu-id="cd2b4-102">Практическое руководство. Настройка службы WCF для взаимодействия с клиентами веб-службы ASP.NET</span><span class="sxs-lookup"><span data-stu-id="cd2b4-102">How to: Configure WCF Service to Interoperate with ASP.NET Web Service Clients</span></span>
 <span data-ttu-id="cd2b4-103">Чтобы настроить конечную точку службы Windows Communication Foundation (WCF) с [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] клиентами веб-службы, используйте <xref:System.ServiceModel.BasicHttpBinding?displayProperty=nameWithType> с типом привязки для конечной точки службы.</span><span class="sxs-lookup"><span data-stu-id="cd2b4-103">To configure a Windows Communication Foundation (WCF) service endpoint to be interoperable with [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Web service clients, use the <xref:System.ServiceModel.BasicHttpBinding?displayProperty=nameWithType> type as the binding type for your service endpoint.</span></span>  

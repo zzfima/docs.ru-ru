@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33495428"
 ---
 # <a name="exporting-and-importing-metadata"></a><span data-ttu-id="5012f-102">Экспорт и импорт метаданных</span><span class="sxs-lookup"><span data-stu-id="5012f-102">Exporting and Importing Metadata</span></span>
 <span data-ttu-id="5012f-103">В Windows Communication Foundation (WCF), экспорт метаданных — это процесс описания конечных точек службы и проецирования их в параллельное, стандартизованное представление, позволяющее клиентам понять, как использовать службу.</span><span class="sxs-lookup"><span data-stu-id="5012f-103">In Windows Communication Foundation (WCF), exporting metadata is the process of describing service endpoints and projecting them into a parallel, standardized representation that clients can use to understand how to use the service.</span></span> <span data-ttu-id="5012f-104">Импорт метаданных службы - это процесс создания экземпляров <xref:System.ServiceModel.Description.ServiceEndpoint> или частей из метаданных службы.</span><span class="sxs-lookup"><span data-stu-id="5012f-104">Importing service metadata is the process of generating <xref:System.ServiceModel.Description.ServiceEndpoint> instances or parts from service metadata.</span></span>  

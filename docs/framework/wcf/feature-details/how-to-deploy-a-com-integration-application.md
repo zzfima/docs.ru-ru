@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33490143"
 ---
 # <a name="how-to-deploy-a-com-integration-application"></a><span data-ttu-id="e4abd-102">Практическое руководство. Развертывание приложения интеграции COM+</span><span class="sxs-lookup"><span data-stu-id="e4abd-102">How to: Deploy a COM+ Integration Application</span></span>
 <span data-ttu-id="e4abd-103">Написанное приложение интеграции COM+ может понадобиться развернуть на другом компьютере.</span><span class="sxs-lookup"><span data-stu-id="e4abd-103">Once you have written a COM+ integration application, you may want to deploy it on another machine.</span></span> <span data-ttu-id="e4abd-104">В этом разделе описывается перенос приложения COM+ с одного компьютера на другой.</span><span class="sxs-lookup"><span data-stu-id="e4abd-104">This topic describes how to move a COM+ integration application from one machine to another.</span></span>  

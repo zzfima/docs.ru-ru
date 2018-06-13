@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33297372"
 ---
 # <a name="jagged-arrays-c-programming-guide"></a><span data-ttu-id="a9635-102">Массивы массивов (Руководство по программированию на C#)</span><span class="sxs-lookup"><span data-stu-id="a9635-102">Jagged Arrays (C# Programming Guide)</span></span>
 <span data-ttu-id="a9635-103">Массив массивов — это массив, элементы которого сами являются массивами.</span><span class="sxs-lookup"><span data-stu-id="a9635-103">A jagged array is an array whose elements are arrays.</span></span> <span data-ttu-id="a9635-104">Элементы массива массивов могут иметь различные измерения и размеры.</span><span class="sxs-lookup"><span data-stu-id="a9635-104">The elements of a jagged array can be of different dimensions and sizes.</span></span> <span data-ttu-id="a9635-105">Массив массивов иногда называется нерегулярным массивом.</span><span class="sxs-lookup"><span data-stu-id="a9635-105">A jagged array is sometimes called an "array of arrays."</span></span> <span data-ttu-id="a9635-106">В следующих примерах показано, как объявлять и инициализировать массивы массивов, а также получать доступ к ним.</span><span class="sxs-lookup"><span data-stu-id="a9635-106">The following examples show how to declare, initialize, and access jagged arrays.</span></span>  

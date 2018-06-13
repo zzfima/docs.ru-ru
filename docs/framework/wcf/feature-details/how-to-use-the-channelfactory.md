@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33491362"
 ---
 # <a name="how-to-use-the-channelfactory"></a><span data-ttu-id="98139-102">Практическое руководство. Использование ChannelFactory</span><span class="sxs-lookup"><span data-stu-id="98139-102">How to: Use the ChannelFactory</span></span>
 <span data-ttu-id="98139-103">Универсальный класс <xref:System.ServiceModel.ChannelFactory%601> используется в сложных сценариях, требующих создания фабрики каналов, которая может использоваться для создания нескольких каналов.</span><span class="sxs-lookup"><span data-stu-id="98139-103">The generic <xref:System.ServiceModel.ChannelFactory%601> class is used in advanced scenarios that require the creation of a channel factory that can be used to create more than one channel.</span></span>  

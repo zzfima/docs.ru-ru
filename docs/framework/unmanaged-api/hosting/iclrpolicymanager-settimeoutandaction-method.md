@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c375fdffacccb27c20878c4e6adef9dd947148e1
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33435528"
 ---
 # <a name="iclrpolicymanagersettimeoutandaction-method"></a><span data-ttu-id="3053f-102">Метод ICLRPolicyManager::SetTimeoutAndAction</span><span class="sxs-lookup"><span data-stu-id="3053f-102">ICLRPolicyManager::SetTimeoutAndAction Method</span></span>
 <span data-ttu-id="3053f-103">Задает значение времени ожидания для указанной операции и задает действие политики, которое должен выполнить общеязыковой среды выполнения (CLR), при выполнении этой операции.</span><span class="sxs-lookup"><span data-stu-id="3053f-103">Sets a timeout value for the specified operation, and specifies the policy action the common language runtime (CLR) should take when the operation occurs.</span></span>  

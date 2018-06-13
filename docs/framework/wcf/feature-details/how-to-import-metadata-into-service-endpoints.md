@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33492548"
 ---
 # <a name="how-to-import-metadata-into-service-endpoints"></a><span data-ttu-id="900fd-102">Практическое руководство. Импорт метаданных в конечные точки службы</span><span class="sxs-lookup"><span data-stu-id="900fd-102">How to: Import Metadata into Service Endpoints</span></span>
 <span data-ttu-id="900fd-103">В этом разделе объясняется, как импортировать метаданные в коллекцию конечных точек службы и использовать службы, определенные в [Приступая к работе](../../../../docs/framework/wcf/samples/getting-started-sample.md).</span><span class="sxs-lookup"><span data-stu-id="900fd-103">This topic explains how to import metadata into a collection of service endpoints and use the service defined in the [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md).</span></span> <span data-ttu-id="900fd-104">Кроме того, в этом разделе демонстрируется создание клиентского приложения, импортирующего метаданные из службы, а затем вызывающего в службе метод `Add`.</span><span class="sxs-lookup"><span data-stu-id="900fd-104">This topic show how to create a client application that imports metadata from the service and then calls the `Add` method on the service.</span></span>  

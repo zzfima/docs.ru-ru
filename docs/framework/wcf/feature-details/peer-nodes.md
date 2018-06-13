@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33491538"
 ---
 # <a name="peer-nodes"></a><span data-ttu-id="d05eb-102">Одноранговые узлы</span><span class="sxs-lookup"><span data-stu-id="d05eb-102">Peer Nodes</span></span>
 <span data-ttu-id="d05eb-103">PeerNode - единственная конечная точка в сетке одноранговых каналов.</span><span class="sxs-lookup"><span data-stu-id="d05eb-103">A PeerNode is a single endpoint in a Peer Channel mesh.</span></span> <span data-ttu-id="d05eb-104">Приложение может иметь несколько одноранговых узлов, участвующих в разных сетках.</span><span class="sxs-lookup"><span data-stu-id="d05eb-104">An application can have multiple peer nodes that participate in different meshes.</span></span> <span data-ttu-id="d05eb-105">Например, приложение однорангового разговора может быть частью двух отдельных сеток: одной - для разговора со школьными друзьями, и другой - для разговора с коллегами по работе.</span><span class="sxs-lookup"><span data-stu-id="d05eb-105">For instance, a peer-to-peer chat application can be part of two separate meshes: one mesh for chatting with high school friends; and another for chatting with work colleagues.</span></span>  

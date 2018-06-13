@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33318228"
 ---
 # <a name="members-c-programming-guide"></a><span data-ttu-id="6d3b0-102">Члены (Руководство по программированию на C#)</span><span class="sxs-lookup"><span data-stu-id="6d3b0-102">Members (C# Programming Guide)</span></span>
 <span data-ttu-id="6d3b0-103">В классах и структурах есть члены, представляющие их данные и поведение.</span><span class="sxs-lookup"><span data-stu-id="6d3b0-103">Classes and structs have members that represent their data and behavior.</span></span> <span data-ttu-id="6d3b0-104">Члены класса включают все члены, объявленные в этом классе, а также все члены (кроме конструкторов и методов завершения), объявленные во всех классах в иерархии наследования данного класса.</span><span class="sxs-lookup"><span data-stu-id="6d3b0-104">A class's members include all the members declared in the class, along with all members (except constructors and finalizers) declared in all classes in its inheritance hierarchy.</span></span> <span data-ttu-id="6d3b0-105">Закрытые члены в базовых классах наследуются, но недоступны из производных классов.</span><span class="sxs-lookup"><span data-stu-id="6d3b0-105">Private members in base classes are inherited but are not accessible from derived classes.</span></span>  

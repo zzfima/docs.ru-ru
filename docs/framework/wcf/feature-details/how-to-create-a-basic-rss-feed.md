@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33493286"
 ---
 # <a name="how-to-create-a-basic-rss-feed"></a><span data-ttu-id="0db7d-102">Практическое руководство. Создание базового RSS-канала</span><span class="sxs-lookup"><span data-stu-id="0db7d-102">How to: Create a Basic RSS Feed</span></span>
 <span data-ttu-id="0db7d-103">Windows Communication Foundation (WCF) позволяет создавать службу, предоставляющую веб-канала синдикации.</span><span class="sxs-lookup"><span data-stu-id="0db7d-103">Windows Communication Foundation (WCF) allows you to create a service that exposes a syndication feed.</span></span> <span data-ttu-id="0db7d-104">В данном разделе рассматривается процесс создания службы синдикации, предоставляющей веб-канал синдикации RSS.</span><span class="sxs-lookup"><span data-stu-id="0db7d-104">This topic discusses how to create a syndication service that exposes an RSS syndication feed.</span></span>  

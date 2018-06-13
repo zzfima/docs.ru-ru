@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33492766"
 ---
 # <a name="how-to-create-a-custom-reliable-session-binding-with-https"></a><span data-ttu-id="e43df-102">Практическое руководство. Создание пользовательской привязки надежного сеанса с использованием HTTPS</span><span class="sxs-lookup"><span data-stu-id="e43df-102">How to: Create a Custom Reliable Session Binding with HTTPS</span></span>
 

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33494326"
 ---
 # <a name="how-to-access-wcf-services-with-one-way-and-request-reply-contracts"></a><span data-ttu-id="8e57e-102">Практическое руководство. Доступ к службам WCF с односторонним контрактом и контрактом типа "запрос-ответ"</span><span class="sxs-lookup"><span data-stu-id="8e57e-102">How to: Access WCF Services with One-Way and Request-Reply Contracts</span></span>
 <span data-ttu-id="8e57e-103">Следующие процедуры описывают, как получить доступ к службе Windows Communication Foundation (WCF), который определяет односторонний контракт и контракт типа запрос ответ и не использующей дуплексный обмен данными.</span><span class="sxs-lookup"><span data-stu-id="8e57e-103">The following procedures describe how to access a Windows Communication Foundation (WCF) service that defines a one-way contract and a request-reply contract and that does not use the duplex communication pattern.</span></span>  

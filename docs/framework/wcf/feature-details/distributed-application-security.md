@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33496169"
 ---
 # <a name="distributed-application-security"></a><span data-ttu-id="f0593-102">Защита распределенных приложений</span><span class="sxs-lookup"><span data-stu-id="f0593-102">Distributed Application Security</span></span>
 <span data-ttu-id="f0593-103">Безопасность Windows Communication Foundation (WCF) делится на три основные функциональные области: безопасность передачи, управление доступом и аудита.</span><span class="sxs-lookup"><span data-stu-id="f0593-103">Windows Communication Foundation (WCF) security is broken into three major functional areas: transfer security, access control, and auditing.</span></span> <span data-ttu-id="f0593-104">Безопасность передачи обеспечивает целостность, конфиденциальность и проверку подлинности.</span><span class="sxs-lookup"><span data-stu-id="f0593-104">Transfer security provides integrity, confidentiality, and authentication.</span></span> <span data-ttu-id="f0593-105">Безопасность передачи обеспечивается одним из следующих способов: безопасность транспорта, безопасность сообщений или `TransportWithMessageCredential`.</span><span class="sxs-lookup"><span data-stu-id="f0593-105">Transfer security is provided by one of the following: transport security, message security, or `TransportWithMessageCredential`.</span></span>  

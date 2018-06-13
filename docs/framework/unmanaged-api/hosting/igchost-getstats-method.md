@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c3e0d6f68ffa5280d4616d4fa4ac60b4cb86f6a4
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33437769"
 ---
 # <a name="igchostgetstats-method"></a><span data-ttu-id="0d422-102">Метод IGCHost::GetStats</span><span class="sxs-lookup"><span data-stu-id="0d422-102">IGCHost::GetStats Method</span></span>
 <span data-ttu-id="0d422-103">Получает статистику для текущего состояния системы сборки мусора.</span><span class="sxs-lookup"><span data-stu-id="0d422-103">Gets the statistics for the current state of the garbage collection system.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33495766"
 ---
 # <a name="internet-information-services-hosting-best-practices"></a><span data-ttu-id="f7048-102">Рекомендации по размещению в службах IIS</span><span class="sxs-lookup"><span data-stu-id="f7048-102">Internet Information Services Hosting Best Practices</span></span>
 <span data-ttu-id="f7048-103">В этом разделе даются некоторые рекомендации для размещения служб Windows Communication Foundation (WCF).</span><span class="sxs-lookup"><span data-stu-id="f7048-103">This topic outlines some best practices for hosting Windows Communication Foundation (WCF) services.</span></span>  

@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33494736"
 ---
 # <a name="saml-tokens-and-claims"></a><span data-ttu-id="73609-102">Утверждения и маркеры SAML</span><span class="sxs-lookup"><span data-stu-id="73609-102">SAML Tokens and Claims</span></span>
 <span data-ttu-id="73609-103">Язык разметки утверждения безопасности (SAML) *маркеры* являются XML-представлением утверждений.</span><span class="sxs-lookup"><span data-stu-id="73609-103">Security Assertions Markup Language (SAML) *tokens* are XML representations of claims.</span></span> <span data-ttu-id="73609-104">По умолчанию, маркеры SAML, Windows Communication Foundation (WCF) используется в сценариях федеративной безопасности *выданные маркеры*.</span><span class="sxs-lookup"><span data-stu-id="73609-104">By default, SAML tokens Windows Communication Foundation (WCF) uses in federated security scenarios are *issued tokens*.</span></span>  

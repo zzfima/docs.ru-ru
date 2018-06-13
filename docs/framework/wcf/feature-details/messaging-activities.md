@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33496690"
 ---
 # <a name="messaging-activities"></a><span data-ttu-id="26dfc-102">Действия обмена сообщениями</span><span class="sxs-lookup"><span data-stu-id="26dfc-102">Messaging Activities</span></span>
 <span data-ttu-id="26dfc-103">Действия обмена сообщениями позволяют рабочим процессам отправлять или получать сообщения WCF.</span><span class="sxs-lookup"><span data-stu-id="26dfc-103">Messaging activities allow workflows to send and receive WCF messages.</span></span> <span data-ttu-id="26dfc-104">Добавляя действия обмена сообщениями в рабочий процесс, можно моделировать шаблоны обмена сообщениями любого уровня сложности.</span><span class="sxs-lookup"><span data-stu-id="26dfc-104">By adding messaging activities to a workflow you can model any arbitrarily complex message exchange patterns (MEP).</span></span>  

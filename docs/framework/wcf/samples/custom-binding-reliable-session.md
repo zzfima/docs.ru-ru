@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33500767"
 ---
 # <a name="custom-binding-reliable-session"></a><span data-ttu-id="662a1-102">Надежный сеанс с использованием пользовательской привязки</span><span class="sxs-lookup"><span data-stu-id="662a1-102">Custom Binding Reliable Session</span></span>
 <span data-ttu-id="662a1-103">Пользовательская привязка определяется упорядоченным списком отдельных элементов привязки.</span><span class="sxs-lookup"><span data-stu-id="662a1-103">A custom binding is defined by an ordered list of discrete binding elements.</span></span> <span data-ttu-id="662a1-104">В этом примере показано, как настроить пользовательскую привязку с различными элементами транспорта и кодирования сообщений, уделяя особое внимание реализации надежных сеансов.</span><span class="sxs-lookup"><span data-stu-id="662a1-104">This sample demonstrates how to configure a custom binding with various transport and message encoding elements, especially enabling reliable sessions.</span></span>  

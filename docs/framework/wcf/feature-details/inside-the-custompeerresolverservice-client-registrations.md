@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33494060"
 ---
 # <a name="inside-the-custompeerresolverservice-client-registrations"></a><span data-ttu-id="a009b-102">Подробная информация о CustomPeerResolverService: регистрация клиентов</span><span class="sxs-lookup"><span data-stu-id="a009b-102">Inside the CustomPeerResolverService: Client Registrations</span></span>
 <span data-ttu-id="a009b-103">Каждый узел в сетке публикует информацию о своей конечной точке в службе распознавателя с помощью функции `Register`.</span><span class="sxs-lookup"><span data-stu-id="a009b-103">Each node in the mesh publishes its endpoint information to the resolver service through the `Register` function.</span></span> <span data-ttu-id="a009b-104">Служба распознавателя хранит эту информацию в виде регистрационной записи.</span><span class="sxs-lookup"><span data-stu-id="a009b-104">The resolver service stores this information as a registration record.</span></span> <span data-ttu-id="a009b-105">Эта запись содержит уникальный идентификатор (RegistrationID) и информацию о конечной точке (PeerNodeAddress) для узла.</span><span class="sxs-lookup"><span data-stu-id="a009b-105">This record contains a unique identifier (RegistrationID) and endpoint information (PeerNodeAddress) for the node.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33504972"
 ---
 # <a name="unwrapped-messages"></a><span data-ttu-id="97006-102">Сообщения без оболочки</span><span class="sxs-lookup"><span data-stu-id="97006-102">Unwrapped Messages</span></span>
 <span data-ttu-id="97006-103">В этом образце показаны сообщения без оболочки.</span><span class="sxs-lookup"><span data-stu-id="97006-103">This sample demonstrates unwrapped messages.</span></span> <span data-ttu-id="97006-104">По умолчанию текст сообщения форматируется так, чтобы параметры, которые передаются операциям службы, находились в оболочке.</span><span class="sxs-lookup"><span data-stu-id="97006-104">By default, the message body is formatted such that the parameters to a service operation are wrapped.</span></span> <span data-ttu-id="97006-105">В следующем образце показано заключенное в оболочку сообщение запроса `Add` для службы `ICalculator`.</span><span class="sxs-lookup"><span data-stu-id="97006-105">The following sample shows an `Add` request message to the `ICalculator` service in wrapped mode.</span></span>  

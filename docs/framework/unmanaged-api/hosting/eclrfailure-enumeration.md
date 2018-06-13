@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ef4e12015adc3d6e67ad9c8ba8b152cd775b85e2
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33431933"
 ---
 # <a name="eclrfailure-enumeration"></a><span data-ttu-id="83100-102">Перечисление EClrFailure</span><span class="sxs-lookup"><span data-stu-id="83100-102">EClrFailure Enumeration</span></span>
 <span data-ttu-id="83100-103">Описывает набор сбоев, для которых узел может задать действия политики.</span><span class="sxs-lookup"><span data-stu-id="83100-103">Describes the set of failures for which a host can set policy actions.</span></span>  

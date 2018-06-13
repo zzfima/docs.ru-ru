@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33492988"
 ---
 # <a name="peer-channel-scenarios"></a><span data-ttu-id="95d3c-102">Сценарии одноранговых каналов</span><span class="sxs-lookup"><span data-stu-id="95d3c-102">Peer Channel Scenarios</span></span>
 <span data-ttu-id="95d3c-103">Поддержка интерфейсов API одноранговых каналов для следующих сценариев разработки.</span><span class="sxs-lookup"><span data-stu-id="95d3c-103">The Peer Channel APIs support the following development scenarios.</span></span>  

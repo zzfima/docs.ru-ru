@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 008514e3637a980f3722d0c9896a17be33d54c31
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33431692"
 ---
 # <a name="getcorsystemdirectory-function"></a><span data-ttu-id="0afdd-102">Функция GetCORSystemDirectory</span><span class="sxs-lookup"><span data-stu-id="0afdd-102">GetCORSystemDirectory Function</span></span>
 <span data-ttu-id="0afdd-103">Возвращает каталог установки среды common language runtime (CLR), который загружается процесс.</span><span class="sxs-lookup"><span data-stu-id="0afdd-103">Returns the installation directory of the common language runtime (CLR) that is loaded into the process.</span></span> <span data-ttu-id="0afdd-104">Каталог установки — полное имя, например, «c:\windows\microsoft.net\framework\v1.0.3705».</span><span class="sxs-lookup"><span data-stu-id="0afdd-104">The installation directory is fully qualified, for example, "c:\windows\microsoft.net\framework\v1.0.3705".</span></span>  

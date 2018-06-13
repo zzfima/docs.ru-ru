@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33499467"
 ---
 # <a name="securing-messages-using-transport-security"></a><span data-ttu-id="d941f-102">Защита сообщений с использованием средств обеспечения безопасности транспорта</span><span class="sxs-lookup"><span data-stu-id="d941f-102">Securing Messages Using Transport Security</span></span>
 <span data-ttu-id="d941f-103">В этом разделе рассматривается механизм безопасности транспорта очереди сообщений MSMQ, который может быть использован для защиты сообщений, отправленных в очередь.</span><span class="sxs-lookup"><span data-stu-id="d941f-103">This section discusses Message Queuing (MSMQ) transport security that you can use to secure messages sent to a queue.</span></span>  

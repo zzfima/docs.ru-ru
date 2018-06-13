@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33271033"
 ---
 # <a name="-operator-c-reference"></a><span data-ttu-id="ad560-103">.</span><span class="sxs-lookup"><span data-stu-id="ad560-103">.</span></span> <span data-ttu-id="ad560-104">Оператор (ссылка C#)</span><span class="sxs-lookup"><span data-stu-id="ad560-104">Operator (C# Reference)</span></span>
 <span data-ttu-id="ad560-105">Оператор "точка" (`.`) используется для доступа к членам.</span><span class="sxs-lookup"><span data-stu-id="ad560-105">The dot operator (`.`) is used for member access.</span></span> <span data-ttu-id="ad560-106">Он определяет член типа или пространства имен.</span><span class="sxs-lookup"><span data-stu-id="ad560-106">The dot operator specifies a member of a type or namespace.</span></span> <span data-ttu-id="ad560-107">Например, оператор "точка" используется для доступа к определенным методам в библиотеках классов .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="ad560-107">For example, the dot operator is used to access specific methods within the .NET Framework class libraries:</span></span>  

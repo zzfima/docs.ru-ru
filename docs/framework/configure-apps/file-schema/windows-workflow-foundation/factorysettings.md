@@ -8,6 +8,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32756466"
 ---
 # <a name="ltfactorysettingsgt"></a><span data-ttu-id="3c41a-102">&lt;factorySettings&gt;</span><span class="sxs-lookup"><span data-stu-id="3c41a-102">&lt;factorySettings&gt;</span></span>
 <span data-ttu-id="3c41a-103">Указывает параметры кэша фабрики канала.</span><span class="sxs-lookup"><span data-stu-id="3c41a-103">Specifies the settings of the channel factory cache.</span></span>  

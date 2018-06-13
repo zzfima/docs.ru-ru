@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33489613"
 ---
 # <a name="configuring-timeout-values-on-a-binding"></a><span data-ttu-id="a6a85-102">Настройка значений времени ожидания для привязки</span><span class="sxs-lookup"><span data-stu-id="a6a85-102">Configuring Timeout Values on a Binding</span></span>
 <span data-ttu-id="a6a85-103">Существует ряд настроек параметров времени ожидания, доступных в привязках WCF.</span><span class="sxs-lookup"><span data-stu-id="a6a85-103">There are a number of timeout settings available in WCF bindings.</span></span> <span data-ttu-id="a6a85-104">Правильная установка этих параметров времени ожидания может не только повысить производительность службы, но и внести вклад в удобство использования и безопасность службы.</span><span class="sxs-lookup"><span data-stu-id="a6a85-104">Setting these timeout settings correctly can improve not only your service’s performance but also play a role in the usability and security of your service.</span></span> <span data-ttu-id="a6a85-105">Доступны следующие значения времени ожидания для привязок WCF.</span><span class="sxs-lookup"><span data-stu-id="a6a85-105">The following timeouts are available on WCF bindings:</span></span>  

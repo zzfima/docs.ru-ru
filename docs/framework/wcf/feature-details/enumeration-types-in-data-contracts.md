@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33494521"
 ---
 # <a name="enumeration-types-in-data-contracts"></a><span data-ttu-id="7860e-102">Типы перечислений в контрактах данных</span><span class="sxs-lookup"><span data-stu-id="7860e-102">Enumeration Types in Data Contracts</span></span>
 <span data-ttu-id="7860e-103">Перечисления могут быть выражены в модели контракта данных.</span><span class="sxs-lookup"><span data-stu-id="7860e-103">Enumerations can be expressed in the data contract model.</span></span> <span data-ttu-id="7860e-104">В этом разделе представлено несколько примеров, иллюстрирующих использование модели программирования.</span><span class="sxs-lookup"><span data-stu-id="7860e-104">This topic walks through several examples that explain the programming model.</span></span>  

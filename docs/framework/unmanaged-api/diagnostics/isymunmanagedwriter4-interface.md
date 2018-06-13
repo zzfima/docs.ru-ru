@@ -6,9 +6,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5e8478aed662142b9ff4b73f9cb192f8d2306e2a
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33429690"
 ---
 # <a name="isymunmanagedwriter4-interface"></a><span data-ttu-id="f4542-102">Интерфейс ISymUnmanagedWriter4</span><span class="sxs-lookup"><span data-stu-id="f4542-102">ISymUnmanagedWriter4 Interface</span></span>
 <span data-ttu-id="f4542-103">Интерфейс ISymUnmanagedWriter4.</span><span class="sxs-lookup"><span data-stu-id="f4542-103">ISymUnmanagedWriter4 interface.</span></span>  

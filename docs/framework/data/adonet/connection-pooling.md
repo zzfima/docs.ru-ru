@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32755530"
 ---
 # <a name="connection-pooling"></a><span data-ttu-id="fdc06-102">Объединение подключений в пул</span><span class="sxs-lookup"><span data-stu-id="fdc06-102">Connection Pooling</span></span>
 <span data-ttu-id="fdc06-103">На соединение с источником данных может требоваться значительное время.</span><span class="sxs-lookup"><span data-stu-id="fdc06-103">Connecting to a data source can be time consuming.</span></span> <span data-ttu-id="fdc06-104">Чтобы свести к минимуму затраты на открытие соединения, в ADO.NET используется техника *организация пулов соединений*, которая позволяет минимизировать затраты на часто открываемые и закрываемые соединения.</span><span class="sxs-lookup"><span data-stu-id="fdc06-104">To minimize the cost of opening connections, ADO.NET uses an optimization technique called *connection pooling*, which minimizes the cost of repeatedly opening and closing connections.</span></span> <span data-ttu-id="fdc06-105">Пулы соединений обрабатываются для поставщиков данных .NET Framework по-разному.</span><span class="sxs-lookup"><span data-stu-id="fdc06-105">Connection pooling is handled differently for the .NET Framework data providers.</span></span>  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33491859"
 ---
 # <a name="claims-and-tokens"></a><span data-ttu-id="f261a-102">Утверждения и маркеры</span><span class="sxs-lookup"><span data-stu-id="f261a-102">Claims and Tokens</span></span>
 <span data-ttu-id="f261a-103">В этом разделе описываются различные типы утверждений, которые создает Windows Communication Foundation (WCF) из поддерживаемых маркеров по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="f261a-103">This topic describes the various claim types that Windows Communication Foundation (WCF) creates from the default tokens that it supports.</span></span>  

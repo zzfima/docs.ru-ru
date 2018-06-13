@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33582489"
 ---
 # <a name="the-xml-schema-definition-tool-and-xml-serialization"></a><span data-ttu-id="094a6-102">Инструмент определения схемы XML и сериализация XML</span><span class="sxs-lookup"><span data-stu-id="094a6-102">The XML Schema Definition Tool and XML Serialization</span></span>
 <span data-ttu-id="094a6-103">Средство определения схемы XML ([XML Schema Definition Tool (Xsd.exe)](../../../docs/standard/serialization/xml-schema-definition-tool-xsd-exe.md)) устанавливается вместе со средствами .NET Framework в составе пакета средств разработки Windows® (SDK).</span><span class="sxs-lookup"><span data-stu-id="094a6-103">The XML Schema Definition tool ([XML Schema Definition Tool (Xsd.exe)](../../../docs/standard/serialization/xml-schema-definition-tool-xsd-exe.md)) is installed along with the .NET Framework tools as part of the Windows® Software Development Kit (SDK).</span></span> <span data-ttu-id="094a6-104">Этот инструмент служит, главным образом, двум следующим целям.</span><span class="sxs-lookup"><span data-stu-id="094a6-104">The tool is designed primarily for two purposes:</span></span>  

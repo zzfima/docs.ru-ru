@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33491752"
 ---
 # <a name="how-to-install-and-configure-wcf-activation-components"></a><span data-ttu-id="3e915-102">Практическое руководство. Установка и настройка компонентов активации WCF</span><span class="sxs-lookup"><span data-stu-id="3e915-102">How to: Install and Configure WCF Activation Components</span></span>
 <span data-ttu-id="3e915-103">В этом разделе описываются шаги, необходимые для настройки служба активации Windows (WAS) на [!INCLUDE[wv](../../../../includes/wv-md.md)] для размещения службы Windows Communication Foundation (WCF) служб, которые не поддерживают связь по протоколу HTTP сетевых протоколов.</span><span class="sxs-lookup"><span data-stu-id="3e915-103">This topic describes the steps required to set up Windows Process Activation Service (also known as WAS) on [!INCLUDE[wv](../../../../includes/wv-md.md)] to host Windows Communication Foundation (WCF) services that do not communicate over HTTP network protocols.</span></span> <span data-ttu-id="3e915-104">Настройка предполагает следующие шаги.</span><span class="sxs-lookup"><span data-stu-id="3e915-104">The following sections outline the steps for this configuration:</span></span>  

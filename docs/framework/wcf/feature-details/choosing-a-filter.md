@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33494131"
 ---
 # <a name="choosing-a-filter"></a><span data-ttu-id="1724b-102">Выбор фильтра</span><span class="sxs-lookup"><span data-stu-id="1724b-102">Choosing a Filter</span></span>
 <span data-ttu-id="1724b-103">При настройке службы маршрутизации важно выбрать правильные фильтры сообщений и настроить их таким образом, чтобы полученное сообщение всегда определялось одним из них.</span><span class="sxs-lookup"><span data-stu-id="1724b-103">When configuring the Routing Service, it is important to select correct message filters and configure them to allow you to make exact matches against the messages you receive.</span></span> <span data-ttu-id="1724b-104">Если выбранные фильтры допускают избыточные совпадения или неверно настроены, то сообщения будут маршрутизироваться неправильно.</span><span class="sxs-lookup"><span data-stu-id="1724b-104">If the filters you select are overly broad in their matches or are incorrectly configured, messages are routed incorrectly.</span></span> <span data-ttu-id="1724b-105">Если фильтры слишком строги, то это может привести к тому, что для некоторых сообщений не окажется ни одного допустимого маршрута.</span><span class="sxs-lookup"><span data-stu-id="1724b-105">If the filters are too restrictive, you may not have any valid routes available for some of your messages.</span></span>  

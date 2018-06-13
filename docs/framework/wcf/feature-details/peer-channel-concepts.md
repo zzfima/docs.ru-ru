@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33491028"
 ---
 # <a name="peer-channel-concepts"></a><span data-ttu-id="f0b88-102">Основные понятия одноранговых каналов</span><span class="sxs-lookup"><span data-stu-id="f0b88-102">Peer Channel Concepts</span></span>
 <span data-ttu-id="f0b88-103">В этом разделе кратко описаны принципы функционирования однорангового канала Windows Communication Foundation (WCF).</span><span class="sxs-lookup"><span data-stu-id="f0b88-103">This section briefly explains the concepts that make up the Windows Communication Foundation (WCF) Peer Channel.</span></span>  

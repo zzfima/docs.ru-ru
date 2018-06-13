@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33494612"
 ---
 # <a name="peer-resolvers"></a><span data-ttu-id="17068-102">Одноранговые распознаватели</span><span class="sxs-lookup"><span data-stu-id="17068-102">Peer Resolvers</span></span>
 <span data-ttu-id="17068-103">Чтобы подключиться к сетке, одноранговому узлу требуются IP-адреса других узлов.</span><span class="sxs-lookup"><span data-stu-id="17068-103">In order to connect to a mesh, a peer node requires the IP addresses of other nodes.</span></span> <span data-ttu-id="17068-104">Получение IP-адресов обычно происходит в результате обращения к службе арбитра, которая принимает идентификатор сетки и возвращает список адресов, соответствующих узлам, зарегистрированным для конкретного идентификатора сетки.</span><span class="sxs-lookup"><span data-stu-id="17068-104">IP addresses are obtained by contacting a resolver service, which takes the mesh ID and returns a list of addresses corresponding to nodes registered with that particular mesh ID.</span></span> <span data-ttu-id="17068-105">Арбитр сохраняет список зарегистрированных адресов, которые он создает при регистрации в службе всех узлов сетки.</span><span class="sxs-lookup"><span data-stu-id="17068-105">The resolver keeps a list of registered addresses, which it creates by having each node in the mesh register with the service.</span></span>  

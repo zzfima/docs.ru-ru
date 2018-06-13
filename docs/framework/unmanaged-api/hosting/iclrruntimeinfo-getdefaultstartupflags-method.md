@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 546a26306a1faaeceb1337b79bd2d27970d9f5be
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33434217"
 ---
 # <a name="iclrruntimeinfogetdefaultstartupflags-method"></a><span data-ttu-id="5dbac-102">Метод ICLRRuntimeInfo::GetDefaultStartupFlags</span><span class="sxs-lookup"><span data-stu-id="5dbac-102">ICLRRuntimeInfo::GetDefaultStartupFlags Method</span></span>
 <span data-ttu-id="5dbac-103">Получает флаги загрузки и файл конфигурации главного узла, который будет использоваться для запуска среды выполнения.</span><span class="sxs-lookup"><span data-stu-id="5dbac-103">Gets the startup flags and host configuration file that will be used to start the runtime.</span></span>  

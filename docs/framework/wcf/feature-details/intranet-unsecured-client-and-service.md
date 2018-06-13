@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33492252"
 ---
 # <a name="intranet-unsecured-client-and-service"></a><span data-ttu-id="2f778-102">Незащищенные интранет-клиент и служба</span><span class="sxs-lookup"><span data-stu-id="2f778-102">Intranet Unsecured Client and Service</span></span>
 <span data-ttu-id="2f778-103">На следующем рисунке показана простая служба Windows Communication Foundation (WCF), разработаны для предоставления информации о защищенной частной сети для приложения WCF.</span><span class="sxs-lookup"><span data-stu-id="2f778-103">The following illustration depicts a simple Windows Communication Foundation (WCF) service developed to provide information on a secure private network to a WCF application.</span></span> <span data-ttu-id="2f778-104">Безопасность не является обязательной, так как данные имеют низкий уровень важности, должно быть в своей основе является защищенной сети или безопасность обеспечивается уровнем ниже инфраструктура WCF.</span><span class="sxs-lookup"><span data-stu-id="2f778-104">Security is not required because the data is of low importance, the network is expected to be inherently secure, or security is provided by a layer below the WCF infrastructure.</span></span>  

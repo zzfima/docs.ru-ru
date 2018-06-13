@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33489486"
 ---
 # <a name="encoding-binary-objects-with-bytestream-encoder"></a><span data-ttu-id="30799-102">Кодирование двоичных объектов при помощи кодировщика ByteStream</span><span class="sxs-lookup"><span data-stu-id="30799-102">Encoding Binary Objects with ByteStream Encoder</span></span>
 <span data-ttu-id="30799-103">Отправка и получение необработанных двоичных данных с Windows Communication Foundation (WCF) настраивается с помощью <xref:System.ServiceModel.Channels.ByteStreamMessageEncodingBindingElement>.</span><span class="sxs-lookup"><span data-stu-id="30799-103">Sending and receiving raw binary data with Windows Communication Foundation (WCF) is configured using <xref:System.ServiceModel.Channels.ByteStreamMessageEncodingBindingElement>.</span></span>  

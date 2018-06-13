@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33491190"
 ---
 # <a name="message-security-with-issued-tokens"></a><span data-ttu-id="1ce9e-102">Безопасность сообщений с использованием выданных маркеров</span><span class="sxs-lookup"><span data-stu-id="1ce9e-102">Message Security with Issued Tokens</span></span>
 <span data-ttu-id="1ce9e-103">Выданный маркер позволяет клиенту использовать Федеративный сценарий безопасности в Windows Communication Foundation (WCF).</span><span class="sxs-lookup"><span data-stu-id="1ce9e-103">The issued token client enables the federated security scenario in Windows Communication Foundation (WCF).</span></span>  

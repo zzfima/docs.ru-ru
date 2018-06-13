@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33500848"
 ---
 # <a name="discovery-samples"></a><span data-ttu-id="10763-102">Обнаружение (образцы)</span><span class="sxs-lookup"><span data-stu-id="10763-102">Discovery (Samples)</span></span>
 <span data-ttu-id="10763-103">В этом разделе приведены образцы, связанные с возможностью обнаружения.</span><span class="sxs-lookup"><span data-stu-id="10763-103">This section contains samples related to the Discovery feature.</span></span>  

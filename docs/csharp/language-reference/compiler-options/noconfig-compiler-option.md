@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33214446"
 ---
 # <a name="-noconfig-c-compiler-options"></a><span data-ttu-id="5bc5a-102">-noconfig (параметры компилятора C#)</span><span class="sxs-lookup"><span data-stu-id="5bc5a-102">-noconfig (C# Compiler Options)</span></span>
 <span data-ttu-id="5bc5a-103">Параметр **-noconfig** указывает компилятору не выполнять компиляцию с использованием файла csc.rsp, который располагается в том же каталоге, что и файл csc.exe, и загружается оттуда.</span><span class="sxs-lookup"><span data-stu-id="5bc5a-103">The **-noconfig** option tells the compiler not to compile with the csc.rsp file, which is located in and loaded from the same directory as the csc.exe file.</span></span>  

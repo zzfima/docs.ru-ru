@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33495587"
 ---
 # <a name="best-practices-for-queued-communication"></a><span data-ttu-id="af4c8-102">Рекомендации по взаимодействию с использованием очередей</span><span class="sxs-lookup"><span data-stu-id="af4c8-102">Best Practices for Queued Communication</span></span>
 <span data-ttu-id="af4c8-103">В этом разделе приведены рекомендации по взаимодействию с использованием очередей в Windows Communication Foundation (WCF).</span><span class="sxs-lookup"><span data-stu-id="af4c8-103">This topic provides recommended practices for queued communication in Windows Communication Foundation (WCF).</span></span> <span data-ttu-id="af4c8-104">В последующих разделах рассматриваются рекомендации с точки зрения сценариев.</span><span class="sxs-lookup"><span data-stu-id="af4c8-104">The following sections discuss recommended practices from a scenario perspective.</span></span>  

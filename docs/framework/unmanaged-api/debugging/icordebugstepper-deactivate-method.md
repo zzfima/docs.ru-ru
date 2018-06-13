@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: bcd7bfb52cadf740d8fe3cb92a09b071f530b7ee
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33417405"
 ---
 # <a name="icordebugstepperdeactivate-method"></a><span data-ttu-id="af3ff-102">Метод ICorDebugStepper::Deactivate</span><span class="sxs-lookup"><span data-stu-id="af3ff-102">ICorDebugStepper::Deactivate Method</span></span>
 <span data-ttu-id="af3ff-103">ICorDebugStepper для отмены последней команды шага, полученное в результате.</span><span class="sxs-lookup"><span data-stu-id="af3ff-103">Causes this ICorDebugStepper to cancel the last step command that it received.</span></span>  

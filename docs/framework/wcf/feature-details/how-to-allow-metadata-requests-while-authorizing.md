@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33489639"
 ---
 # <a name="how-to-allow-metadata-requests-while-authorizing"></a><span data-ttu-id="8ce2d-102">Практическое руководство. Разрешение запросов метаданных в процессе авторизации</span><span class="sxs-lookup"><span data-stu-id="8ce2d-102">How To: Allow Metadata Requests While Authorizing</span></span>
 <span data-ttu-id="8ce2d-103">В процессе настраиваемой авторизации может потребоваться разрешить обработку запроса для метаданных.</span><span class="sxs-lookup"><span data-stu-id="8ce2d-103">During custom authorization, it may be necessary to allow a request for metadata to be processed.</span></span> <span data-ttu-id="8ce2d-104">Следующий раздел содержит пошаговое руководство для проверки такого запроса.</span><span class="sxs-lookup"><span data-stu-id="8ce2d-104">The following topic walks through the steps to validate such a request.</span></span>  

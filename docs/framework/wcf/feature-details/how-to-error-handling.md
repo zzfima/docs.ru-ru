@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33493607"
 ---
 # <a name="how-to-error-handling"></a><span data-ttu-id="f6cde-102">Как обрабатывать ошибки</span><span class="sxs-lookup"><span data-stu-id="f6cde-102">How To: Error Handling</span></span>
 <span data-ttu-id="f6cde-103">В этом разделе описаны основные шаги по созданию конфигурации маршрутизации с применением обработки ошибок.</span><span class="sxs-lookup"><span data-stu-id="f6cde-103">This topic outlines the basic steps required to create a routing configuration that uses error handling.</span></span> <span data-ttu-id="f6cde-104">В данном примере сообщения перенаправляются в целевую конечную точку.</span><span class="sxs-lookup"><span data-stu-id="f6cde-104">In this example, messages are routed to a destination endpoint.</span></span> <span data-ttu-id="f6cde-105">Если сообщение не удается доставить из-за сбоя сети или канала связи (<xref:System.ServiceModel.CommunicationException>), оно повторно отправляется в альтернативную конечную точку.</span><span class="sxs-lookup"><span data-stu-id="f6cde-105">If a message cannot be delivered due to a network or communications-related failure (<xref:System.ServiceModel.CommunicationException>), the message is resent to an alternate endpoint.</span></span>  

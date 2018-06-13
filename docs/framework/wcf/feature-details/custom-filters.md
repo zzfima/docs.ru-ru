@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33489759"
 ---
 # <a name="custom-filters"></a><span data-ttu-id="5e83c-102">Настраиваемые фильтры</span><span class="sxs-lookup"><span data-stu-id="5e83c-102">Custom Filters</span></span>
 <span data-ttu-id="5e83c-103">Пользовательские фильтры позволяют определять логику сопоставления, которую невозможно определить с помощью фильтров системных сообщений.</span><span class="sxs-lookup"><span data-stu-id="5e83c-103">Custom filters allow you to define matching logic that cannot be accomplished using the system-provided message filters.</span></span> <span data-ttu-id="5e83c-104">Например, можно создать пользовательский фильтр, который хэширует определенный элемент сообщений, а затем выполняет проверку значения, чтобы определить значение, которое возвращается фильтром (true или false).</span><span class="sxs-lookup"><span data-stu-id="5e83c-104">For example, you might create a custom filter that hashes a particular message element and then examines the value to determine whether the filter should return true or false.</span></span>  

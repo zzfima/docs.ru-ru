@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2c2500f013584ef4722ceaaaee91d5db54991639
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33439303"
 ---
 # <a name="ihostsecuritycontext-interface"></a><span data-ttu-id="1b6d2-102">Интерфейс IHostSecurityContext</span><span class="sxs-lookup"><span data-stu-id="1b6d2-102">IHostSecurityContext Interface</span></span>
 <span data-ttu-id="1b6d2-103">Позволяет общеязыковая среда выполнения (CLR), чтобы сохранить сведения о контексте безопасности, реализуемых основным приложением.</span><span class="sxs-lookup"><span data-stu-id="1b6d2-103">Allows the common language runtime (CLR) to maintain security context information implemented by the host.</span></span>  

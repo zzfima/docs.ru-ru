@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33492711"
 ---
 # <a name="interoperability-and-integration"></a><span data-ttu-id="504c1-102">Взаимодействие и интеграция</span><span class="sxs-lookup"><span data-stu-id="504c1-102">Interoperability and Integration</span></span>
 <span data-ttu-id="504c1-103">В этом разделе описывается взаимодействие и интеграция с Windows Communication Foundation (WCF).</span><span class="sxs-lookup"><span data-stu-id="504c1-103">This section covers interoperability and integration with Windows Communication Foundation (WCF).</span></span>  

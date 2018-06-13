@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33491083"
 ---
 # <a name="how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications"></a><span data-ttu-id="e0dc7-102">Практическое руководство. Обмен сообщениями с конечными точками WCF и приложениями очереди сообщений</span><span class="sxs-lookup"><span data-stu-id="e0dc7-102">How to: Exchange Messages with WCF Endpoints and Message Queuing Applications</span></span>
 <span data-ttu-id="e0dc7-103">Существующие приложения Message Queuing (MSMQ) можно интегрировать с приложениями Windows Communication Foundation (WCF), используя привязку интеграции MSMQ для преобразования сообщений MSMQ и из сообщения WCF.</span><span class="sxs-lookup"><span data-stu-id="e0dc7-103">You can integrate existing Message Queuing (MSMQ) applications with Windows Communication Foundation (WCF) applications by using the MSMQ integration binding to convert MSMQ messages to and from WCF messages.</span></span> <span data-ttu-id="e0dc7-104">Это позволяет вызывать принимающие приложения MSMQ из клиентов WCF, а также обращаться к службам WCF из отправляющих приложений MSMQ.</span><span class="sxs-lookup"><span data-stu-id="e0dc7-104">This allows you to call into MSMQ receiver applications from WCF clients as well as call into WCF services from MSMQ sender applications.</span></span>  

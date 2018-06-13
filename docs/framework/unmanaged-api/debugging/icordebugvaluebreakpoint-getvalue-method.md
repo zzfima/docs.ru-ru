@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b8ff07c483ef1bcbf9d5141b7180cea08454ebef
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33417103"
 ---
 # <a name="icordebugvaluebreakpointgetvalue-method"></a><span data-ttu-id="f7c42-102">Метод ICorDebugValueBreakpoint::GetValue</span><span class="sxs-lookup"><span data-stu-id="f7c42-102">ICorDebugValueBreakpoint::GetValue Method</span></span>
 <span data-ttu-id="f7c42-103">Получает указатель интерфейса на объект «ICorDebugValue», который представляет значение объекта, на которой задана точка останова.</span><span class="sxs-lookup"><span data-stu-id="f7c42-103">Gets an interface pointer to an "ICorDebugValue" object that represents the value of the object on which the breakpoint is set.</span></span>  

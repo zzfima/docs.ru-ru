@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33492304"
 ---
 # <a name="metadata"></a><span data-ttu-id="eb5d4-102">Метаданные</span><span class="sxs-lookup"><span data-stu-id="eb5d4-102">Metadata</span></span>
 <span data-ttu-id="eb5d4-103">Windows Communication Foundation (WCF) предоставляет инфраструктуру для экспорта, публикации, получения и импорта метаданных служб.</span><span class="sxs-lookup"><span data-stu-id="eb5d4-103">The Windows Communication Foundation (WCF) provides an infrastructure for exporting, publishing, retrieving, and importing service metadata.</span></span> <span data-ttu-id="eb5d4-104">Службы WCF используют метаданные для описания взаимодействия с конечными точками службы, чтобы такие средства, как Svcutil.exe, можно автоматически создавать клиентский код для доступа к службе.</span><span class="sxs-lookup"><span data-stu-id="eb5d4-104">WCF services use metadata to describe how to interact with the service's endpoints so that tools, such as Svcutil.exe, can automatically generate client code for accessing the service.</span></span>  

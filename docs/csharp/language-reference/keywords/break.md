@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33215054"
 ---
 # <a name="break-c-reference"></a><span data-ttu-id="a1f78-102">break (Справочник по C#)</span><span class="sxs-lookup"><span data-stu-id="a1f78-102">break (C# Reference)</span></span>
 <span data-ttu-id="a1f78-103">Оператор `break` завершает выполнение ближайшего оператора внешнего цикла или [switch](../../../csharp/language-reference/keywords/switch.md), в котором он находится.</span><span class="sxs-lookup"><span data-stu-id="a1f78-103">The `break` statement terminates the closest enclosing loop or [switch](../../../csharp/language-reference/keywords/switch.md) statement in which it appears.</span></span> <span data-ttu-id="a1f78-104">Управление передается оператору, который расположен после завершенного оператора.</span><span class="sxs-lookup"><span data-stu-id="a1f78-104">Control is passed to the statement that follows the terminated statement, if any.</span></span>  

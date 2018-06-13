@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32750730"
 ---
 # <a name="ltserviceprincipalnamegt"></a><span data-ttu-id="67cde-102">&lt;ServicePrincipalName&gt;</span><span class="sxs-lookup"><span data-stu-id="67cde-102">&lt;servicePrincipalName&gt;</span></span>
 <span data-ttu-id="67cde-103">Указывает идентификацию службы по имени субъекта-службы (SPN).</span><span class="sxs-lookup"><span data-stu-id="67cde-103">Specifies the identity of a service by its Service Principal Name (SPN).</span></span>  

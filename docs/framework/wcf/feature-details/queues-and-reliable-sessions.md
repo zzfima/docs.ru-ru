@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33494674"
 ---
 # <a name="queues-and-reliable-sessions"></a><span data-ttu-id="e418f-102">Очереди и надежные сеансы</span><span class="sxs-lookup"><span data-stu-id="e418f-102">Queues and Reliable Sessions</span></span>
 <span data-ttu-id="e418f-103">Очереди и надежные сеансы являются компонентами Windows Communication Foundation (WCF), которые реализуют надежный обмен сообщениями.</span><span class="sxs-lookup"><span data-stu-id="e418f-103">Queues and reliable sessions are the Windows Communication Foundation (WCF) features that implement reliable messaging.</span></span> <span data-ttu-id="e418f-104">В подразделах этого раздела рассматриваются возможности надежного обмена сообщениями WCF.</span><span class="sxs-lookup"><span data-stu-id="e418f-104">The topics contained in this section discuss the WCF reliable messaging features.</span></span>  

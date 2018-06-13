@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 96e8d80e2dff88aa5a589f864278b4a4e9cc76ef
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33437018"
 ---
 # <a name="icorruntimehoststart-method"></a><span data-ttu-id="6a756-102">Метод ICorRuntimeHost::Start</span><span class="sxs-lookup"><span data-stu-id="6a756-102">ICorRuntimeHost::Start Method</span></span>
 <span data-ttu-id="6a756-103">Запускает общеязыковой среды выполнения (CLR).</span><span class="sxs-lookup"><span data-stu-id="6a756-103">Starts the common language runtime (CLR).</span></span>  

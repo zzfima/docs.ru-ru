@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33490049"
 ---
 # <a name="anticipating-adopting-the-windows-communication-foundation-easing-future-migration"></a><span data-ttu-id="ea9ae-102">Планирование перехода на платформу Windows Communication Foundation: упрощение будущей миграции</span><span class="sxs-lookup"><span data-stu-id="ea9ae-102">Anticipating Adopting the Windows Communication Foundation: Easing Future Migration</span></span>
 <span data-ttu-id="ea9ae-103">Чтобы упростить миграцию в будущем новых приложений ASP.NET в WCF, следуйте выше рекомендаций, а также следующие рекомендации.</span><span class="sxs-lookup"><span data-stu-id="ea9ae-103">To ensure an easier future migration of new ASP.NET applications to WCF, follow the preceding recommendations as well as the following recommendations.</span></span>  

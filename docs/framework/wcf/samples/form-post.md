@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33503767"
 ---
 # <a name="form-post"></a><span data-ttu-id="1f4c4-102">Передача формы</span><span class="sxs-lookup"><span data-stu-id="1f4c4-102">Form Post</span></span>
 <span data-ttu-id="1f4c4-103">Данный образец демонстрирует расширение программной модели WCF REST для поддержки новых форматов входящих запросов.</span><span class="sxs-lookup"><span data-stu-id="1f4c4-103">This sample demonstrates how to extend the WCF REST programming model to support new incoming request formats.</span></span> <span data-ttu-id="1f4c4-104">Образец также содержит реализацию модуля форматирования, который может десериализовать запрос из передачи формы HTML методом POST в тип [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)].</span><span class="sxs-lookup"><span data-stu-id="1f4c4-104">The sample also includes an implementation of a formatter that can deserialize a request from an HTML form post into a [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] type.</span></span> <span data-ttu-id="1f4c4-105">Кроме того, образец использует шаблон T4 для возврата страницы HTML, которая предоставляет форму HTML, дающую пользователям возможность возвращать данные в службу WCF REST.</span><span class="sxs-lookup"><span data-stu-id="1f4c4-105">In addition, the sample uses a T4 Template to return an HTML page, which provides the HTML form that users can post back to the WCF REST service.</span></span>  

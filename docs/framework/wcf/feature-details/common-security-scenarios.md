@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33490907"
 ---
 # <a name="common-security-scenarios"></a><span data-ttu-id="1ab6d-102">Типовые сценарии безопасности</span><span class="sxs-lookup"><span data-stu-id="1ab6d-102">Common Security Scenarios</span></span>
 <span data-ttu-id="1ab6d-103">В подразделах этого раздела рассматривается множество возможных конфигураций безопасности клиентов и служб.</span><span class="sxs-lookup"><span data-stu-id="1ab6d-103">The topics in this section catalog a number of possible client and service security configurations.</span></span> <span data-ttu-id="1ab6d-104">Конфигурация зависит от ряда факторов:</span><span class="sxs-lookup"><span data-stu-id="1ab6d-104">Configurations vary according to a number of factors.</span></span> <span data-ttu-id="1ab6d-105">например, находится ли служба или клиент в интрасети, или чем обеспечивается безопасность - Windows или транспортом (таким как HTTPS).</span><span class="sxs-lookup"><span data-stu-id="1ab6d-105">For example, whether a service or client is on an intranet, or whether the security is provided by Windows or transport (such as HTTPS).</span></span>  

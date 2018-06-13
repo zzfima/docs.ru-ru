@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33489772"
 ---
 # <a name="configuring-the-windows-process-activation-service-for-use-with-windows-communication-foundation"></a><span data-ttu-id="9f366-102">Настройка службы активации процессов Windows для использования с Windows Communication Foundation</span><span class="sxs-lookup"><span data-stu-id="9f366-102">Configuring the Windows Process Activation Service for Use with Windows Communication Foundation</span></span>
 <span data-ttu-id="9f366-103">В этом разделе описываются шаги, необходимые для настройки служба активации Windows (WAS) в [!INCLUDE[wv](../../../../includes/wv-md.md)] для размещения службы Windows Communication Foundation (WCF) служб, которые не поддерживают связь по протоколу HTTP сетевых протоколов.</span><span class="sxs-lookup"><span data-stu-id="9f366-103">This topic describes the steps required to set up Windows Process Activation Service (also known as WAS) in [!INCLUDE[wv](../../../../includes/wv-md.md)] to host Windows Communication Foundation (WCF) services that do not communicate over HTTP network protocols.</span></span> <span data-ttu-id="9f366-104">Настройка предполагает следующие шаги.</span><span class="sxs-lookup"><span data-stu-id="9f366-104">The following sections outline the steps for this configuration:</span></span>  

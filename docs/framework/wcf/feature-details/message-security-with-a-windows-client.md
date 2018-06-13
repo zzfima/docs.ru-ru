@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33494785"
 ---
 # <a name="message-security-with-a-windows-client"></a><span data-ttu-id="e3b66-102">Безопасность сообщений с клиентом Windows</span><span class="sxs-lookup"><span data-stu-id="e3b66-102">Message Security with a Windows Client</span></span>
 <span data-ttu-id="e3b66-103">Этот сценарий показывает клиента Windows Communication Foundation (WCF) и сервер защищен режима безопасности сообщений.</span><span class="sxs-lookup"><span data-stu-id="e3b66-103">This scenario shows a Windows Communication Foundation (WCF) client and server secured by message security mode.</span></span> <span data-ttu-id="e3b66-104">Клиент и служба проходят проверку подлинности с использованием учетных данных Windows.</span><span class="sxs-lookup"><span data-stu-id="e3b66-104">The client and service are authenticated using Windows credentials.</span></span>  

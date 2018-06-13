@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33495136"
 ---
 # <a name="message-security-with-a-user-name-client"></a><span data-ttu-id="4c9e7-102">Безопасность сообщений при использовании клиентом учетных данных пользователя</span><span class="sxs-lookup"><span data-stu-id="4c9e7-102">Message Security with a User Name Client</span></span>
 <span data-ttu-id="4c9e7-103">На следующем рисунке службы Windows Communication Foundation (WCF) и клиента, защищены с помощью безопасности на уровне сообщений.</span><span class="sxs-lookup"><span data-stu-id="4c9e7-103">The following illustration shows an Windows Communication Foundation (WCF) service and client secured using message-level security.</span></span> <span data-ttu-id="4c9e7-104">Служба проходит проверку подлинности с использованием сертификата X.509.</span><span class="sxs-lookup"><span data-stu-id="4c9e7-104">The service is authenticated with an X.509 certificate.</span></span> <span data-ttu-id="4c9e7-105">Подлинность клиента проверяется с помощью имени и пароля пользователя.</span><span class="sxs-lookup"><span data-stu-id="4c9e7-105">The client authenticates using a user name and password.</span></span>  

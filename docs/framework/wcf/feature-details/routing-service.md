@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33496231"
 ---
 # <a name="routing-service"></a><span data-ttu-id="23179-102">Служба маршрутизации</span><span class="sxs-lookup"><span data-stu-id="23179-102">Routing Service</span></span>
 <span data-ttu-id="23179-103">Служба маршрутизации является универсальным посредником протокола SOAP, действующим в качестве маршрутизатора сообщений.</span><span class="sxs-lookup"><span data-stu-id="23179-103">The Routing Service is a generic SOAP intermediary that acts as a message router.</span></span> <span data-ttu-id="23179-104">Основной функцией службы маршрутизации является возможность перенаправлять сообщения, исходя из их содержимого, благодаря чему сообщение можно переслать конечной точке клиента в зависимости от значения в самом сообщении, находящемся в заголовке или в тексте сообщения.</span><span class="sxs-lookup"><span data-stu-id="23179-104">The core functionality of the Routing Service is the ability to route messages based on message content, which allows a message to be forwarded to a client endpoint based on a value within the message itself, in either the header or the message body.</span></span>  

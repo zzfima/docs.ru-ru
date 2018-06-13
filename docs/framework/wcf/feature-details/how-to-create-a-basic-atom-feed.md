@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33493033"
 ---
 # <a name="how-to-create-a-basic-atom-feed"></a><span data-ttu-id="efe05-102">Практическое руководство. Создание базового канала Atom</span><span class="sxs-lookup"><span data-stu-id="efe05-102">How to: Create a Basic Atom Feed</span></span>
 <span data-ttu-id="efe05-103">Windows Communication Foundation (WCF) позволяет создавать службу, предоставляющую веб-канала синдикации.</span><span class="sxs-lookup"><span data-stu-id="efe05-103">Windows Communication Foundation (WCF) allows you to create a service that exposes a syndication feed.</span></span> <span data-ttu-id="efe05-104">В этом разделе рассматривается процесс создания службы синдикации, предоставляющей веб-канал синдикации Atom.</span><span class="sxs-lookup"><span data-stu-id="efe05-104">This topic discusses how to create a syndication service that exposes an Atom syndication feed.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33492824"
 ---
 # <a name="architecture-of-syndication"></a><span data-ttu-id="8efc5-102">Архитектура синдикации</span><span class="sxs-lookup"><span data-stu-id="8efc5-102">Architecture of Syndication</span></span>
 <span data-ttu-id="8efc5-103">API синдикации предназначен для обеспечения независимой от формата модели программирования, которая позволяет передавать сводное содержимое по каналам связи в различных форматах.</span><span class="sxs-lookup"><span data-stu-id="8efc5-103">The Syndication API is designed to provide a format-neutral programming model that allows syndicated content to be written on to the wire in a variety of formats.</span></span> <span data-ttu-id="8efc5-104">Абстрактная модель данных состоит из следующих классов:</span><span class="sxs-lookup"><span data-stu-id="8efc5-104">The abstract data model consists of the following classes:</span></span>  

@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33494713"
 ---
 # <a name="wcf-feature-details"></a><span data-ttu-id="fa10e-102">Подробные сведения о возможностях WCF</span><span class="sxs-lookup"><span data-stu-id="fa10e-102">WCF Feature Details</span></span>
 <span data-ttu-id="fa10e-103">Windows Communication Foundation (WCF) обеспечивает всеобъемлющий контроль функций отправки сообщений приложения.</span><span class="sxs-lookup"><span data-stu-id="fa10e-103">Windows Communication Foundation (WCF) allows extensive control over the messaging functions of an application.</span></span> <span data-ttu-id="fa10e-104">В подразделах этого раздела подробно описываются имеющиеся возможности.</span><span class="sxs-lookup"><span data-stu-id="fa10e-104">The topics in this section go into detail about the available features.</span></span> <span data-ttu-id="fa10e-105">Дополнительные сведения о базовое программирование в разделе [базовое Программирование WCF](../../../../docs/framework/wcf/basic-wcf-programming.md).</span><span class="sxs-lookup"><span data-stu-id="fa10e-105">For more information about basic programming, see [Basic WCF Programming](../../../../docs/framework/wcf/basic-wcf-programming.md).</span></span>  

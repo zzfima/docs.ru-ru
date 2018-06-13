@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33405581"
 ---
 # <a name="get-ui-automation-element-properties"></a><span data-ttu-id="321b1-102">Получение свойств элементов управления модели автоматизации пользовательского интерфейса</span><span class="sxs-lookup"><span data-stu-id="321b1-102">Get UI Automation Element Properties</span></span>
 > [!NOTE]

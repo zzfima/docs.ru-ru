@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33494167"
 ---
 # <a name="how-to-create-a-service-that-accepts-arbitrary-data-using-the-wcf-rest-programming-model"></a><span data-ttu-id="8a48d-102">Как создать службу, принимающую произвольные данные с использованием модели программирования WCF REST</span><span class="sxs-lookup"><span data-stu-id="8a48d-102">How to: Create a Service That Accepts Arbitrary Data using the WCF REST Programming Model</span></span>
 <span data-ttu-id="8a48d-103">Иногда разработчики должны полностью управлять тем, как данные возвращаются из операции службы.</span><span class="sxs-lookup"><span data-stu-id="8a48d-103">Sometimes developers must have full control of how data is returned from a service operation.</span></span> <span data-ttu-id="8a48d-104">Это условие выполняется, когда операция службы должна возвращать данные в формате, не поддерживается byWCF.</span><span class="sxs-lookup"><span data-stu-id="8a48d-104">This is the case when a service operation must return data in a format not supported byWCF.</span></span> <span data-ttu-id="8a48d-105">В этом разделе рассматривается использование модели программирования WCF REST для создания службы, получающей произвольные данные.</span><span class="sxs-lookup"><span data-stu-id="8a48d-105">This topic discusses using the WCF REST Programming Model to create a service that receives arbitrary data.</span></span>  

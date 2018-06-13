@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33502142"
 ---
 # <a name="basic-sample"></a><span data-ttu-id="cbf75-102">Базовый образец</span><span class="sxs-lookup"><span data-stu-id="cbf75-102">Basic Sample</span></span>
 <span data-ttu-id="cbf75-103">В этом образце показано, как сделать службу обнаруживаемой, а также как искать и вызывать обнаруживаемую службу.</span><span class="sxs-lookup"><span data-stu-id="cbf75-103">This sample shows how to make a service discoverable and how to search for and call a discoverable service.</span></span> <span data-ttu-id="cbf75-104">Этот образец состоит из двух проектов: службы и клиента.</span><span class="sxs-lookup"><span data-stu-id="cbf75-104">This sample is composed of two projects: service and client.</span></span>  

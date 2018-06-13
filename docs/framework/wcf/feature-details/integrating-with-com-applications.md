@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33491846"
 ---
 # <a name="integrating-with-com-applications"></a><span data-ttu-id="f3ac8-102">Интеграция с приложениями COM</span><span class="sxs-lookup"><span data-stu-id="f3ac8-102">Integrating with COM Applications</span></span>
 <span data-ttu-id="f3ac8-103">Службы Windows Communication Foundation (WCF) могут интегрироваться прямо в существующий код с помощью моникера службы WCF.</span><span class="sxs-lookup"><span data-stu-id="f3ac8-103">Windows Communication Foundation (WCF) services can be integrated directly into your existing code by using the WCF service moniker.</span></span> <span data-ttu-id="f3ac8-104">Моникер служб можно использовать в широком наборе сред разработки на базе модели COM, например в Office VBA, Visual Basic 6.0 и Visual C++ 6.0.</span><span class="sxs-lookup"><span data-stu-id="f3ac8-104">The service moniker can be used from a wide range of COM-based development environments, such as Office VBA, Visual Basic 6.0, or Visual C++ 6.0.</span></span>  

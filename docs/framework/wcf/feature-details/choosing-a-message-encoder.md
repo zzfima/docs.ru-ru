@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33494866"
 ---
 # <a name="choosing-a-message-encoder"></a><span data-ttu-id="40b1f-102">Выбор кодировщика сообщений</span><span class="sxs-lookup"><span data-stu-id="40b1f-102">Choosing a Message Encoder</span></span>
 <span data-ttu-id="40b1f-103">В этом разделе рассматриваются критерии выбора способа кодирования сообщений, включенные в Windows Communication Foundation (WCF): двоичный, текст и механизм оптимизации передачи сообщений (MTOM).</span><span class="sxs-lookup"><span data-stu-id="40b1f-103">This topic discusses criteria for choosing among the message encoders that are included in Windows Communication Foundation (WCF): binary, text, and Message Transmission Optimization Mechanism (MTOM).</span></span>  
