@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33352458"
 ---
 # <a name="ltpeerauthenticationgt"></a><span data-ttu-id="7c582-102">&lt;peerAuthentication&gt;</span><span class="sxs-lookup"><span data-stu-id="7c582-102">&lt;peerAuthentication&gt;</span></span>
 <span data-ttu-id="7c582-103">Задает параметры проверки подлинности для сертификата однорангового узла, используемого одноранговым узлом.</span><span class="sxs-lookup"><span data-stu-id="7c582-103">Specifies authentication settings for a peer certificate used by a peer node.</span></span>  

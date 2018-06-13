@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33356519"
 ---
 # <a name="how-to-add-modify-and-delete-entities-wcf-data-services"></a><span data-ttu-id="f5eec-102">Практическое руководство. Добавление, изменение и удаление сущностей (службы данных WCF)</span><span class="sxs-lookup"><span data-stu-id="f5eec-102">How to: Add, Modify, and Delete Entities (WCF Data Services)</span></span>
 <span data-ttu-id="f5eec-103">С [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] клиентские библиотеки можно создать, обновить и удаление данных сущности в службе данных путем выполнения эквивалентных действий над объектами в <xref:System.Data.Services.Client.DataServiceContext>.</span><span class="sxs-lookup"><span data-stu-id="f5eec-103">With the [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] client libraries, you can create, update, and delete entity data in a data service by performing equivalent actions on objects in the <xref:System.Data.Services.Client.DataServiceContext>.</span></span> <span data-ttu-id="f5eec-104">Дополнительные сведения см. в разделе [обновление службы данных](../../../../docs/framework/data/wcf/updating-the-data-service-wcf-data-services.md).</span><span class="sxs-lookup"><span data-stu-id="f5eec-104">For more information, see [Updating the Data Service](../../../../docs/framework/data/wcf/updating-the-data-service-wcf-data-services.md).</span></span>  

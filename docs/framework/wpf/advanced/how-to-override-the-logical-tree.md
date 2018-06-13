@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33542894"
 ---
 # <a name="how-to-override-the-logical-tree"></a><span data-ttu-id="35f6a-102">Как переопределить логическое дерево</span><span class="sxs-lookup"><span data-stu-id="35f6a-102">How to: Override the Logical Tree</span></span>
 <span data-ttu-id="35f6a-103">Хотя в большинстве случаев это не требуется, разработчики улучшенных элементов управления могут переопределить логическое дерево.</span><span class="sxs-lookup"><span data-stu-id="35f6a-103">Although it is not necessary in most cases, advanced control authors have the option to override the logical tree.</span></span>  

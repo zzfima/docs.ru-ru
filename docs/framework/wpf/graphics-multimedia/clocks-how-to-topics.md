@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33554811"
 ---
 # <a name="clocks-how-to-topics"></a><span data-ttu-id="a3d30-102">Разделы руководства, посвященные часам</span><span class="sxs-lookup"><span data-stu-id="a3d30-102">Clocks How-to Topics</span></span>
 <span data-ttu-id="a3d30-103">Ниже описаны способы использования <xref:System.Windows.Media.Animation.Clock> объекта для сохранения сведений о состоянии времени <xref:System.Windows.Media.Animation.Timeline>.</span><span class="sxs-lookup"><span data-stu-id="a3d30-103">The following topics describe how to use a <xref:System.Windows.Media.Animation.Clock> object to maintain timing state information for a <xref:System.Windows.Media.Animation.Timeline>.</span></span>  

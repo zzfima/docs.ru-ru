@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33531928"
 ---
 # <a name="how-to-group-controls-with-the-windows-forms-groupbox-control"></a><span data-ttu-id="0b8e8-102">Практическое руководство. Группировка элементов управления с помощью элемента управления GroupBox в формах Windows Forms</span><span class="sxs-lookup"><span data-stu-id="0b8e8-102">How to: Group Controls with the Windows Forms GroupBox Control</span></span>
 <span data-ttu-id="0b8e8-103">Windows Forms <xref:System.Windows.Forms.GroupBox> элементы управления используются для группировки других элементов управления.</span><span class="sxs-lookup"><span data-stu-id="0b8e8-103">Windows Forms <xref:System.Windows.Forms.GroupBox> controls are used to group other controls.</span></span> <span data-ttu-id="0b8e8-104">Существует три причины для группировки элементов управления.</span><span class="sxs-lookup"><span data-stu-id="0b8e8-104">There are three reasons to group controls:</span></span>  

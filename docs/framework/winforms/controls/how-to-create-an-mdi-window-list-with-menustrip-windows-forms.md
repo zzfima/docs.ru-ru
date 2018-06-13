@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33530827"
 ---
 # <a name="how-to-create-an-mdi-window-list-with-menustrip-windows-forms"></a><span data-ttu-id="d7551-102">Практическое руководство. Создание списка в окне интерфейса MDI с помощью MenuStrip (Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="d7551-102">How to: Create an MDI Window List with MenuStrip (Windows Forms)</span></span>
 <span data-ttu-id="d7551-103">Используйте многодокументного интерфейса (MDI) для создания приложений, которые могут открывать несколько документов, в то же время и копировать и вставлять содержимое из одного документа в другой.</span><span class="sxs-lookup"><span data-stu-id="d7551-103">Use the multiple-document interface (MDI) to create applications that can open several documents at the same time and copy and paste content from one document to the other.</span></span>  

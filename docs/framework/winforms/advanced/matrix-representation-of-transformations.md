@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33527288"
 ---
 # <a name="matrix-representation-of-transformations"></a><span data-ttu-id="1c783-102">Матричное представление преобразований</span><span class="sxs-lookup"><span data-stu-id="1c783-102">Matrix Representation of Transformations</span></span>
 <span data-ttu-id="1c783-103">Матрица m n × — это набор чисел, распределенных по строкам m и n столбцам.</span><span class="sxs-lookup"><span data-stu-id="1c783-103">An m×n matrix is a set of numbers arranged in m rows and n columns.</span></span> <span data-ttu-id="1c783-104">На следующем рисунке несколько матрицы.</span><span class="sxs-lookup"><span data-stu-id="1c783-104">The following illustration shows several matrices.</span></span>  

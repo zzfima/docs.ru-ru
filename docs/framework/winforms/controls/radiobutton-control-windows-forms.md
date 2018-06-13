@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33534971"
 ---
 # <a name="radiobutton-control-windows-forms"></a><span data-ttu-id="e2a91-102">Элемент управления RadioButton (Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="e2a91-102">RadioButton Control (Windows Forms)</span></span>
 <span data-ttu-id="e2a91-103">Windows Forms `RadioButton` элементы управления представляют собой набор из двух или более взаимоисключающих вариантов для пользователя.</span><span class="sxs-lookup"><span data-stu-id="e2a91-103">Windows Forms `RadioButton` controls present a set of two or more mutually exclusive choices to the user.</span></span> <span data-ttu-id="e2a91-104">Переключатели и флажки могут показаться работают так же, является важным отличием: когда пользователь выбирает переключатель, другие переключатели в той же группе, не могут быть выбраны также.</span><span class="sxs-lookup"><span data-stu-id="e2a91-104">While radio buttons and check boxes may appear to function similarly, there is an important difference: when a user selects a radio button, the other radio buttons in the same group cannot be selected as well.</span></span>  

@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33525958"
 ---
 # <a name="recoloring-images"></a><span data-ttu-id="ad472-102">Перекрашивание изображений</span><span class="sxs-lookup"><span data-stu-id="ad472-102">Recoloring Images</span></span>
 <span data-ttu-id="ad472-103">Перекрашивание — это процесс настройки цветов изображения.</span><span class="sxs-lookup"><span data-stu-id="ad472-103">Recoloring is the process of adjusting image colors.</span></span> <span data-ttu-id="ad472-104">Некоторые примеры Перекрашивание изменение одного цвета на другой, Настройка интенсивности цвета относительно другого цвета, настройка яркости или контраста всех цветов и преобразование цветов в оттенки серого.</span><span class="sxs-lookup"><span data-stu-id="ad472-104">Some examples of recoloring are changing one color to another, adjusting a color's intensity relative to another color, adjusting the brightness or contrast of all colors, and converting colors to shades of gray.</span></span>  

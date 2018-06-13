@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33528623"
 ---
 # <a name="helpprovider-component-overview-windows-forms"></a><span data-ttu-id="b7999-102">Общие сведения о компоненте HelpProvider (Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="b7999-102">HelpProvider Component Overview (Windows Forms)</span></span>
 <span data-ttu-id="b7999-103">Windows Forms [HelpProvider](../../../../docs/framework/winforms/controls/helpprovider-component-windows-forms.md) компонент используется для связывания HTML файл справки версии 1.x (CHM-файл, созданный с помощью средства HTML Help Workshop, или HTM-файл) с приложением Windows.</span><span class="sxs-lookup"><span data-stu-id="b7999-103">The Windows Forms [HelpProvider](../../../../docs/framework/winforms/controls/helpprovider-component-windows-forms.md) component is used to associate an HTML Help 1.x Help file (either a .chm file, produced with the HTML Help Workshop, or an .htm file) with your Windows application.</span></span> <span data-ttu-id="b7999-104">Можно предоставить справку в различными способами:</span><span class="sxs-lookup"><span data-stu-id="b7999-104">You can provide help in a variety of ways:</span></span>  

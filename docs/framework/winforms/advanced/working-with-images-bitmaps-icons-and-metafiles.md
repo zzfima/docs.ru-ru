@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33526840"
 ---
 # <a name="working-with-images-bitmaps-icons-and-metafiles"></a><span data-ttu-id="f54e0-102">Работа с растровыми и векторными изображениями</span><span class="sxs-lookup"><span data-stu-id="f54e0-102">Working with Images, Bitmaps, Icons, and Metafiles</span></span>
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]<span data-ttu-id="f54e0-103"> предоставляет класс `Bitmap` для работы с растровыми изображениями и класс `Metafile` для работы с векторными изображениями.</span><span class="sxs-lookup"><span data-stu-id="f54e0-103"> provides the `Bitmap` class for working with raster images and the `Metafile` class for working with vector images.</span></span> <span data-ttu-id="f54e0-104">Классы `Bitmap` и `Metafile` являются производными от класса `Image`.</span><span class="sxs-lookup"><span data-stu-id="f54e0-104">The `Bitmap` and the `Metafile` classes both inherit from the `Image` class.</span></span>  

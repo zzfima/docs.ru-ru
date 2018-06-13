@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33534418"
 ---
 # <a name="margin-and-padding-in-windows-forms-controls"></a><span data-ttu-id="2c23a-102">Поля и заполнение в элементах управления Windows Forms</span><span class="sxs-lookup"><span data-stu-id="2c23a-102">Margin and Padding in Windows Forms Controls</span></span>
 <span data-ttu-id="2c23a-103">Точное расположение элементов управления на форме является важным для многих приложений.</span><span class="sxs-lookup"><span data-stu-id="2c23a-103">Precise placement of controls on your form is a high priority for many applications.</span></span> <span data-ttu-id="2c23a-104">Пространство имен <xref:System.Windows.Forms?displayProperty=nameWithType> предоставляет множество возможностей компоновки для решения этой задачи.</span><span class="sxs-lookup"><span data-stu-id="2c23a-104">The <xref:System.Windows.Forms?displayProperty=nameWithType> namespace gives you many layout features to accomplish this.</span></span> <span data-ttu-id="2c23a-105">Свойства <xref:System.Windows.Forms.Control.Margin%2A> и <xref:System.Windows.Forms.Control.Padding%2A> — одни из наиболее важных.</span><span class="sxs-lookup"><span data-stu-id="2c23a-105">Two of the most important are the <xref:System.Windows.Forms.Control.Margin%2A> and <xref:System.Windows.Forms.Control.Padding%2A> properties.</span></span>  

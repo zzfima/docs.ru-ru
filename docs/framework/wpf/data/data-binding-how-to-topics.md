@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557697"
 ---
 # <a name="data-binding-how-to-topics"></a><span data-ttu-id="2ac3a-102">Практические руководства по привязке данных</span><span class="sxs-lookup"><span data-stu-id="2ac3a-102">Data Binding How-to Topics</span></span>
 <span data-ttu-id="2ac3a-103">В подразделах этого раздела описывается использование привязки данных для привязки элементов к данным из различных источников данных в виде объекта (CLR) среды CLR и XML.</span><span class="sxs-lookup"><span data-stu-id="2ac3a-103">The topics in this section describe how to use data binding to bind elements to data from a variety of data sources in the form of common language runtime (CLR) objects and XML.</span></span>  

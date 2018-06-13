@@ -8,6 +8,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33269704"
 ---
 # <a name="order-the-results-of-a-join-clause"></a><span data-ttu-id="ea161-103">Упорядочение результатов предложения соединения</span><span class="sxs-lookup"><span data-stu-id="ea161-103">Order the results of a join clause</span></span>
 <span data-ttu-id="ea161-104">В этом примере показано, как упорядочить результаты операции соединения.</span><span class="sxs-lookup"><span data-stu-id="ea161-104">This example shows how to order the results of a join operation.</span></span> <span data-ttu-id="ea161-105">Обратите внимание на то, что упорядочение выполняется после соединения.</span><span class="sxs-lookup"><span data-stu-id="ea161-105">Note that the ordering is performed after the join.</span></span> <span data-ttu-id="ea161-106">Несмотря на то, что предложение `orderby` с одним или несколькими исходными последовательностями использовать до соединения можно, обычно это не рекомендуется.</span><span class="sxs-lookup"><span data-stu-id="ea161-106">Although you can use an `orderby` clause with one or more of the source sequences before the join, generally we do not recommend it.</span></span> <span data-ttu-id="ea161-107">Некоторые поставщики LINQ могут не сохранять этот порядок после соединения.</span><span class="sxs-lookup"><span data-stu-id="ea161-107">Some LINQ providers might not preserve that ordering after the join.</span></span>  

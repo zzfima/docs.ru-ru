@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33526241"
 ---
 # <a name="considerations-when-hosting-an-activex-control-on-a-windows-form"></a><span data-ttu-id="62617-102">Вопросы размещения элемента управления ActiveX в форме Windows Forms</span><span class="sxs-lookup"><span data-stu-id="62617-102">Considerations When Hosting an ActiveX Control on a Windows Form</span></span>
 <span data-ttu-id="62617-103">Несмотря на то что формы Windows Forms оптимизированы для размещения элементов управления Windows Forms, в формах также можно использовать элементы управления ActiveX.</span><span class="sxs-lookup"><span data-stu-id="62617-103">Although Windows Forms have been optimized to host Windows Forms controls, you can still use ActiveX controls.</span></span> <span data-ttu-id="62617-104">При планировании приложения, использующего элементы управления ActiveX, необходимо учитывать следующие факторы:</span><span class="sxs-lookup"><span data-stu-id="62617-104">Keep the following considerations in mind when planning an application that uses ActiveX controls:</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33357120"
 ---
 # <a name="systemmath-methods"></a><span data-ttu-id="484bd-102">Методы System.Math</span><span class="sxs-lookup"><span data-stu-id="484bd-102">System.Math Methods</span></span>
 <span data-ttu-id="484bd-103">Ниже перечислены методы [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], не поддерживаемые технологией <xref:System.Math>.</span><span class="sxs-lookup"><span data-stu-id="484bd-103">[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] does not support the following <xref:System.Math> methods.</span></span>  

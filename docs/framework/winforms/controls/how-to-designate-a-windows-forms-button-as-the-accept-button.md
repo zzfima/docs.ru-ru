@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33531944"
 ---
 # <a name="how-to-designate-a-windows-forms-button-as-the-accept-button"></a><span data-ttu-id="6a96b-102">Практическое руководство. Назначение кнопок принятия в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="6a96b-102">How to: Designate a Windows Forms Button as the Accept Button</span></span>
 <span data-ttu-id="6a96b-103">В любой форме Windows Forms можно назначить <xref:System.Windows.Forms.Button> отображения элемента управления «принять», также известные как кнопка по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="6a96b-103">On any Windows Form, you can designate a <xref:System.Windows.Forms.Button> control to be the accept button, also known as the default button.</span></span> <span data-ttu-id="6a96b-104">Каждый раз, когда пользователь нажимает клавишу ВВОД, нажатии кнопки по умолчанию независимо от других элементов управления в форме имеет фокус.</span><span class="sxs-lookup"><span data-stu-id="6a96b-104">Whenever the user presses the ENTER key, the default button is clicked regardless of which other control on the form has the focus.</span></span>  

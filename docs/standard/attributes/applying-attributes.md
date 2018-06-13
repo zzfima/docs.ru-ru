@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33567371"
 ---
 # <a name="applying-attributes"></a><span data-ttu-id="a9185-102">Применение атрибутов</span><span class="sxs-lookup"><span data-stu-id="a9185-102">Applying Attributes</span></span>
 <span data-ttu-id="a9185-103">Чтобы применить атрибут к элементу кода, выполните указанные ниже действия.</span><span class="sxs-lookup"><span data-stu-id="a9185-103">Use the following process to apply an attribute to an element of your code.</span></span>  

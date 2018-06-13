@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33565693"
 ---
 # <a name="path-animations-overview"></a><span data-ttu-id="1d266-102">Общие сведения об анимация с использованием пути</span><span class="sxs-lookup"><span data-stu-id="1d266-102">Path Animations Overview</span></span>
 <a name="introduction"></a> <span data-ttu-id="1d266-103">В этом разделе представлены общие сведения об анимациях по контуру, которые позволяют использовать геометрические контуры для формирования выходных значений.</span><span class="sxs-lookup"><span data-stu-id="1d266-103">This topic introduces path animations, which enable you to use a geometric path to generate output values.</span></span> <span data-ttu-id="1d266-104">Анимации по контуру можно использовать для перемещения или вращения объектов по сложным траекториям.</span><span class="sxs-lookup"><span data-stu-id="1d266-104">Path animations are useful for moving and rotating objects along complex paths.</span></span>  

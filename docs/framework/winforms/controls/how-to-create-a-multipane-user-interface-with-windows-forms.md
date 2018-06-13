@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33532087"
 ---
 # <a name="how-to-create-a-multipane-user-interface-with-windows-forms"></a><span data-ttu-id="5b104-102">Практическое руководство. Создание пользовательского интерфейса с несколькими областями с помощью Windows Forms</span><span class="sxs-lookup"><span data-stu-id="5b104-102">How to: Create a Multipane User Interface with Windows Forms</span></span>
 <span data-ttu-id="5b104-103">В следующей процедуре вы создадите с несколькими областями пользовательского интерфейса, которая аналогична той, которая используется в Microsoft Outlook с **папки** списка, **сообщений** области и **предварительногопросмотра** области.</span><span class="sxs-lookup"><span data-stu-id="5b104-103">In the following procedure, you will create a multipane user interface that is similar to the one used in Microsoft Outlook, with a **Folder** list, a **Messages** pane, and a **Preview** pane.</span></span> <span data-ttu-id="5b104-104">Такое расположение элементов достигается главным образом за счет закрепления элементов управления формы.</span><span class="sxs-lookup"><span data-stu-id="5b104-104">This arrangement is achieved chiefly through docking controls with the form.</span></span>  

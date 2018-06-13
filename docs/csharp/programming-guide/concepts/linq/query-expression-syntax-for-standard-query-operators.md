@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33339843"
 ---
 # <a name="query-expression-syntax-for-standard-query-operators-c"></a><span data-ttu-id="80c05-102">Синтаксис выражений запроса для стандартных операторов запроса (C#)</span><span class="sxs-lookup"><span data-stu-id="80c05-102">Query Expression Syntax for Standard Query Operators (C#)</span></span>
 <span data-ttu-id="80c05-103">Некоторые из наиболее часто используемых стандартных операторов запросов имеют представление в виде ключевых слов в синтаксисе языка C#, что позволяет вызывать их как часть *выражения запроса*.</span><span class="sxs-lookup"><span data-stu-id="80c05-103">Some of the more frequently used standard query operators have dedicated C# language keyword syntax that enables them to be called as part of a *query expression*.</span></span> <span data-ttu-id="80c05-104">Выражение запроса является более удобочитаемой формой задания запроса, чем его *основанный на методах* эквивалент.</span><span class="sxs-lookup"><span data-stu-id="80c05-104">A query expression is a different, more readable form of expressing a query than its *method-based*  equivalent.</span></span> <span data-ttu-id="80c05-105">Предложения выражений запросов преобразуются в вызовы методов запросов во время компиляции.</span><span class="sxs-lookup"><span data-stu-id="80c05-105">Query expression clauses are translated into calls to the query methods at compile time.</span></span>  

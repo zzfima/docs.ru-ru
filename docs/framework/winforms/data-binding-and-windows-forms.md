@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33541665"
 ---
 # <a name="data-binding-and-windows-forms"></a><span data-ttu-id="725f9-102">Привязка данных и Windows Forms</span><span class="sxs-lookup"><span data-stu-id="725f9-102">Data Binding and Windows Forms</span></span>
 <span data-ttu-id="725f9-103">В Windows Forms можно выполнить привязку не только к традиционным источникам данных, но и к практически к любой структуре, содержащий данные.</span><span class="sxs-lookup"><span data-stu-id="725f9-103">In Windows Forms, you can bind to not just traditional data sources, but also to almost any structure that contains data.</span></span> <span data-ttu-id="725f9-104">Можно выполнить привязку к массиву значений, который рассчитывается во время выполнения, считывается из файла или является производным от значений других элементов управления.</span><span class="sxs-lookup"><span data-stu-id="725f9-104">You can bind to an array of values that you calculate at run time, read from a file, or derive from the values of other controls.</span></span>  

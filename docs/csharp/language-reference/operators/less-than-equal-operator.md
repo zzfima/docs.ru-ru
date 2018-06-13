@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33271166"
 ---
 # <a name="lt-operator-c-reference"></a><span data-ttu-id="64e0d-102">Оператор &lt;= (справочник по C#)</span><span class="sxs-lookup"><span data-stu-id="64e0d-102">&lt;= Operator (C# Reference)</span></span>
 <span data-ttu-id="64e0d-103">Все числовые типы и типы перечисления определяют оператор отношения "меньше или равно" (`<=`), который возвращает `true`, если первый операнд меньше второго или равен ему. В противном случае возвращается `false`.</span><span class="sxs-lookup"><span data-stu-id="64e0d-103">All numeric and enumeration types define a "less than or equal" relational operator (`<=`) that returns `true` if the first operand is less than or equal to the second, `false` otherwise.</span></span>  

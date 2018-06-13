@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33526631"
 ---
 # <a name="default-functionality-in-the-windows-forms-datagridview-control"></a><span data-ttu-id="d3bfe-102">Стандартная функциональность элемента управления DataGridView в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="d3bfe-102">Default Functionality in the Windows Forms DataGridView Control</span></span>
 <span data-ttu-id="d3bfe-103">Windows Forms <xref:System.Windows.Forms.DataGridView> управления предоставляет пользователям широкую функциональность по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="d3bfe-103">The Windows Forms <xref:System.Windows.Forms.DataGridView> control provides users with a significant amount of default functionality.</span></span>  

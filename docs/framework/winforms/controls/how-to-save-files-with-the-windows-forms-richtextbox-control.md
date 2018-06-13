@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33536199"
 ---
 # <a name="how-to-save-files-with-the-windows-forms-richtextbox-control"></a><span data-ttu-id="a6d82-102">Практическое руководство. Сохранение файлов с помощью элемента управления RichTextBox в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="a6d82-102">How to: Save Files with the Windows Forms RichTextBox Control</span></span>
 <span data-ttu-id="a6d82-103">Windows Forms <xref:System.Windows.Forms.RichTextBox> управления может записывать информацию, он отображается в одном из следующих форматов:</span><span class="sxs-lookup"><span data-stu-id="a6d82-103">The Windows Forms <xref:System.Windows.Forms.RichTextBox> control can write the information it displays in one of several formats:</span></span>  

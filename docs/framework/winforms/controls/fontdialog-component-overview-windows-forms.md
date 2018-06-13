@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33526882"
 ---
 # <a name="fontdialog-component-overview-windows-forms"></a><span data-ttu-id="af6d5-102">Общие сведения о компоненте FontDialog (Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="af6d5-102">FontDialog Component Overview (Windows Forms)</span></span>
 <span data-ttu-id="af6d5-103">Windows Forms <xref:System.Windows.Forms.FontDialog> компонент является стандартным диалоговым окном, то есть стандартные Windows **шрифта** диалоговым окном, используемым для предоставления шрифты, установленные в системе.</span><span class="sxs-lookup"><span data-stu-id="af6d5-103">The Windows Forms <xref:System.Windows.Forms.FontDialog> component is a pre-configured dialog box, which is the standard Windows **Font** dialog box used to expose the fonts that are currently installed on the system.</span></span> <span data-ttu-id="af6d5-104">Он используется в приложении Windows в качестве простого решения для выбора шрифтов вместо настройки собственного диалогового.</span><span class="sxs-lookup"><span data-stu-id="af6d5-104">Use it within your Windows-based application as a simple solution for font selection in lieu of configuring your own dialog box.</span></span>  

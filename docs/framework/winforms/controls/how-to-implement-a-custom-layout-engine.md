@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33531301"
 ---
 # <a name="how-to-implement-a-custom-layout-engine"></a><span data-ttu-id="b49c6-102">Практическое руководство. Реализация пользовательского механизма размещения элементов управления в форме</span><span class="sxs-lookup"><span data-stu-id="b49c6-102">How to: Implement a Custom Layout Engine</span></span>
 <span data-ttu-id="b49c6-103">В следующем примере кода демонстрируется создание пользовательского механизма размещения, выполняющий простое потоковый макет.</span><span class="sxs-lookup"><span data-stu-id="b49c6-103">The following code example demonstrates how to create a custom layout engine that performs a simple flow layout.</span></span> <span data-ttu-id="b49c6-104">Реализует элемент панели управления с именем `DemoFlowPanel`, перезаписав <xref:System.Windows.Forms.Control.LayoutEngine%2A> свойство, чтобы предоставить экземпляр `DemoFlowLayout` класса.</span><span class="sxs-lookup"><span data-stu-id="b49c6-104">It implements a panel control named `DemoFlowPanel`, which overrides the <xref:System.Windows.Forms.Control.LayoutEngine%2A> property to provide an instance of the `DemoFlowLayout` class.</span></span>  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33543378"
 ---
 # <a name="element-tree-and-serialization-how-to-topics"></a><span data-ttu-id="093ec-102">Разделы руководства по дереву элементов и сериализации</span><span class="sxs-lookup"><span data-stu-id="093ec-102">Element Tree and Serialization How-to Topics</span></span>
 <span data-ttu-id="093ec-103">В подразделах этого раздела описывается использование дерева элементов WPF.</span><span class="sxs-lookup"><span data-stu-id="093ec-103">The topics in this section describe how to use the WPF element tree.</span></span>  

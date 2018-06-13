@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33529848"
 ---
 # <a name="customizing-the-windows-forms-datagridview-control"></a><span data-ttu-id="08346-102">Настройка элементов управления DataGridView в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="08346-102">Customizing the Windows Forms DataGridView Control</span></span>
 <span data-ttu-id="08346-103">`DataGridView` Управления предоставляет несколько свойств, которые можно использовать для настройки внешнего вида и базовое поведение ячеек, строк и столбцов (Вид).</span><span class="sxs-lookup"><span data-stu-id="08346-103">The `DataGridView` control provides several properties that you can use to adjust the appearance and basic behavior (look and feel) of its cells, rows, and columns.</span></span> <span data-ttu-id="08346-104">При наличии особых требований, выходящих за рамки возможностей <xref:System.Windows.Forms.DataGridViewCellStyle> класса, однако также можно реализовать пользовательское отображение для элемента управления или расширить его возможности, создав пользовательские ячейки, строки и столбцы.</span><span class="sxs-lookup"><span data-stu-id="08346-104">If you have special needs that go beyond the capabilities of the <xref:System.Windows.Forms.DataGridViewCellStyle> class, however, you can also implement owner drawing for the control or extend its capabilities by creating custom cells, columns, and rows.</span></span>  

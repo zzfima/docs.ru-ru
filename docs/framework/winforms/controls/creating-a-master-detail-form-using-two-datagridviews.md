@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33529445"
 ---
 # <a name="walkthrough-creating-a-masterdetail-form-using-two-windows-forms-datagridview-controls"></a><span data-ttu-id="b6341-102">Пример. Создание главного и подчиненного представлений данных с использованием двух элементов управления DataGridView в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="b6341-102">Walkthrough: Creating a Master/Detail Form Using Two Windows Forms DataGridView Controls</span></span>
 <span data-ttu-id="b6341-103">Одним из наиболее распространенных сценариев использования <xref:System.Windows.Forms.DataGridView> управления *иерархического* формы, в котором отображается отношение "родители потомки" между двумя таблицами базы данных.</span><span class="sxs-lookup"><span data-stu-id="b6341-103">One of the most common scenarios for using the <xref:System.Windows.Forms.DataGridView> control is the *master/detail* form, in which a parent/child relationship between two database tables is displayed.</span></span> <span data-ttu-id="b6341-104">Выбор строк в главной таблице приводит таблицы сведений, чтобы обновить соответствующие дочерние данные.</span><span class="sxs-lookup"><span data-stu-id="b6341-104">Selecting rows in the master table causes the detail table to update with the corresponding child data.</span></span>  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33529293"
 ---
 # <a name="how-to-print-in-windows-forms-using-print-preview"></a><span data-ttu-id="3c300-102">Практическое руководство. Печать в Windows Forms с использованием предварительного просмотра</span><span class="sxs-lookup"><span data-stu-id="3c300-102">How to: Print in Windows Forms Using Print Preview</span></span>
 <span data-ttu-id="3c300-103">При программировании с использованием Windows Forms в качестве дополнения к службам печати часто предлагается возможность предварительного просмотра.</span><span class="sxs-lookup"><span data-stu-id="3c300-103">It is very common in Windows Forms programming to offer print preview in addition to printing services.</span></span> <span data-ttu-id="3c300-104">Легким способом добавления предварительного просмотра в приложение является использование элемента управления <xref:System.Windows.Forms.PrintPreviewDialog> в сочетании с логикой обработки событий <xref:System.Drawing.Printing.PrintDocument.PrintPage> для печати файла.</span><span class="sxs-lookup"><span data-stu-id="3c300-104">An easy way to add print preview services to your application is to use a <xref:System.Windows.Forms.PrintPreviewDialog> control in combination with the <xref:System.Drawing.Printing.PrintDocument.PrintPage> event-handling logic for printing a file.</span></span>  

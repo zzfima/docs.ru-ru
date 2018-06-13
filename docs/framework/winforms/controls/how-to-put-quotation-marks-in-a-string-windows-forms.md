@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33534837"
 ---
 # <a name="how-to-put-quotation-marks-in-a-string-windows-forms"></a><span data-ttu-id="25813-102">Практическое руководство. Добавление кавычек в строку (Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="25813-102">How to: Put Quotation Marks in a String (Windows Forms)</span></span>
 <span data-ttu-id="25813-103">Бывает, что в строку текста нужно вставить кавычки (" ").</span><span class="sxs-lookup"><span data-stu-id="25813-103">Sometimes you might want to place quotation marks (" ") in a string of text.</span></span> <span data-ttu-id="25813-104">Пример:</span><span class="sxs-lookup"><span data-stu-id="25813-104">For example:</span></span>  

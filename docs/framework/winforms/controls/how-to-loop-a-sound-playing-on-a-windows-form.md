@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33533761"
 ---
 # <a name="how-to-loop-a-sound-playing-on-a-windows-form"></a><span data-ttu-id="30f93-102">Практическое руководство. Циклическое воспроизведение звука в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="30f93-102">How to: Loop a Sound Playing on a Windows Form</span></span>
 <span data-ttu-id="30f93-103">В следующем примере кода выполняется повторяющееся воспроизведение звука.</span><span class="sxs-lookup"><span data-stu-id="30f93-103">The following code example plays a sound repeatedly.</span></span> <span data-ttu-id="30f93-104">Когда этот код запускается в обработчике события `stopPlayingButton_Click`, воспроизведение звука останавливается.</span><span class="sxs-lookup"><span data-stu-id="30f93-104">When the code in the `stopPlayingButton_Click` event handler runs, any sound currently playing stops.</span></span> <span data-ttu-id="30f93-105">Если звук не воспроизводится, то ничего не происходит.</span><span class="sxs-lookup"><span data-stu-id="30f93-105">If no sound is playing, nothing happens.</span></span>  

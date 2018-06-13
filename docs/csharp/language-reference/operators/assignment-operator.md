@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33269284"
 ---
 # <a name="-operator-c-reference"></a><span data-ttu-id="84c2b-102">Оператор = (Справочник по C#)</span><span class="sxs-lookup"><span data-stu-id="84c2b-102">= Operator (C# Reference)</span></span>
 <span data-ttu-id="84c2b-103">Оператор присваивания (`=`) сохраняет значение расположенного в правой части операнда в месте хранения, свойстве или индексаторе, которые указаны в операнде слева, после чего возвращает значение в виде результата.</span><span class="sxs-lookup"><span data-stu-id="84c2b-103">The assignment operator (`=`) stores the value of its right-hand operand in the storage location, property, or indexer denoted by its left-hand operand and returns the value as its result.</span></span> <span data-ttu-id="84c2b-104">Операнды должны иметь один тип (либо операнд справа должен допускать неявное преобразование в тип операнда в левой части).</span><span class="sxs-lookup"><span data-stu-id="84c2b-104">The operands must be of the same type (or the right-hand operand must be implicitly convertible to the type of the left-hand operand).</span></span>  

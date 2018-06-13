@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33269000"
 ---
 # <a name="new-constraint-c-reference"></a><span data-ttu-id="9011b-102">Ограничение new (Справочник по C#)</span><span class="sxs-lookup"><span data-stu-id="9011b-102">new Constraint (C# Reference)</span></span>
 <span data-ttu-id="9011b-103">Ограничение `new` указывает, что аргумент любого типа в объявлении универсального класса должен иметь открытый конструктор без параметров.</span><span class="sxs-lookup"><span data-stu-id="9011b-103">The `new` constraint specifies that any type argument in a generic class declaration must have a public parameterless constructor.</span></span> <span data-ttu-id="9011b-104">Использовать ограничение new можно только в том случае, если тип не является абстрактным.</span><span class="sxs-lookup"><span data-stu-id="9011b-104">To use the new constraint, the type cannot be abstract.</span></span>  

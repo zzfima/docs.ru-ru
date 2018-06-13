@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33530277"
 ---
 # <a name="how-to-copy-controls-between-windows-forms"></a><span data-ttu-id="41998-102">Практическое руководство. Копирование элементов управления между формами Windows Forms</span><span class="sxs-lookup"><span data-stu-id="41998-102">How to: Copy Controls Between Windows Forms</span></span>
 <span data-ttu-id="41998-103">Элемент управления могут быть скопированы на той же формы в другую форму в проекте или в буфер обмена для использования в других решениях.</span><span class="sxs-lookup"><span data-stu-id="41998-103">A control may be copied onto the same form, onto another form within the project, or onto the Clipboard for use in other solutions.</span></span>  

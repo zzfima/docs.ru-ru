@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557414"
 ---
 # <a name="how-to-bind-to-a-collection-and-display-information-based-on-selection"></a><span data-ttu-id="69bef-102">Практическое руководство. Выполнение привязки к коллекции и вывод сведений в зависимости от выделенного элемента</span><span class="sxs-lookup"><span data-stu-id="69bef-102">How to: Bind to a Collection and Display Information Based on Selection</span></span>
 <span data-ttu-id="69bef-103">В простом сценарии подробный имеют привязкой к данным <xref:System.Windows.Controls.ItemsControl> например <xref:System.Windows.Controls.ListBox>.</span><span class="sxs-lookup"><span data-stu-id="69bef-103">In a simple master-detail scenario, you have a data-bound <xref:System.Windows.Controls.ItemsControl> such as a <xref:System.Windows.Controls.ListBox>.</span></span> <span data-ttu-id="69bef-104">На основе выбора пользователя, можно отобразить дополнительные сведения о выбранном элементе.</span><span class="sxs-lookup"><span data-stu-id="69bef-104">Based on user selection, you display more information about the selected item.</span></span> <span data-ttu-id="69bef-105">В этом примере показано, как реализовать этот сценарий.</span><span class="sxs-lookup"><span data-stu-id="69bef-105">This example shows how to implement this scenario.</span></span>  

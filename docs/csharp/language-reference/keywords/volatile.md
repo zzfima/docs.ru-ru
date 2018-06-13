@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33272588"
 ---
 # <a name="volatile-c-reference"></a><span data-ttu-id="06277-102">volatile (Справочник по C#)</span><span class="sxs-lookup"><span data-stu-id="06277-102">volatile (C# Reference)</span></span>
 <span data-ttu-id="06277-103">Ключевое слово `volatile` означает, что поле может изменить несколько потоков, выполняемых одновременно.</span><span class="sxs-lookup"><span data-stu-id="06277-103">The `volatile` keyword indicates that a field might be modified by multiple threads that are executing at the same time.</span></span> <span data-ttu-id="06277-104">Поля, объявленные `volatile`, не участвуют в оптимизации компилятора, предполагающей доступ для одного потока.</span><span class="sxs-lookup"><span data-stu-id="06277-104">Fields that are declared `volatile` are not subject to compiler optimizations that assume access by a single thread.</span></span> <span data-ttu-id="06277-105">Это гарантирует, что в любой момент времени в поле будет содержаться актуальное значение.</span><span class="sxs-lookup"><span data-stu-id="06277-105">This ensures that the most up-to-date value is present in the field at all times.</span></span>  

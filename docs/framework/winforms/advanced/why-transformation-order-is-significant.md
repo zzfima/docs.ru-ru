@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33526081"
 ---
 # <a name="why-transformation-order-is-significant"></a><span data-ttu-id="c4d74-102">Значение порядка преобразований</span><span class="sxs-lookup"><span data-stu-id="c4d74-102">Why Transformation Order Is Significant</span></span>
 <span data-ttu-id="c4d74-103">Один <xref:System.Drawing.Drawing2D.Matrix> объект может хранить одно преобразование или последовательность преобразований.</span><span class="sxs-lookup"><span data-stu-id="c4d74-103">A single <xref:System.Drawing.Drawing2D.Matrix> object can store a single transformation or a sequence of transformations.</span></span> <span data-ttu-id="c4d74-104">Называется составное преобразование.</span><span class="sxs-lookup"><span data-stu-id="c4d74-104">The latter is called a composite transformation.</span></span> <span data-ttu-id="c4d74-105">Матрица составного преобразования вычисляется путем умножения матриц отдельных преобразований.</span><span class="sxs-lookup"><span data-stu-id="c4d74-105">The matrix of a composite transformation is obtained by multiplying the matrices of individual transformations.</span></span>  

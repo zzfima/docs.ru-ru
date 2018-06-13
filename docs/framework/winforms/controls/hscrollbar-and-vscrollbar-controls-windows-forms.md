@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33533157"
 ---
 # <a name="hscrollbar-and-vscrollbar-controls-windows-forms"></a><span data-ttu-id="ba8af-102">Элементы управления HScrollBar и VScrollBar (Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="ba8af-102">HScrollBar and VScrollBar Controls (Windows Forms)</span></span>
 <span data-ttu-id="ba8af-103">Элементы управления Windows Forms в виде полос прокрутки используются для обеспечения удобного просмотра длинных списков элементов или большого объема данных с помощью горизонтальной или вертикальной прокрутки окна приложения либо элемента управления.</span><span class="sxs-lookup"><span data-stu-id="ba8af-103">Windows Forms scroll bar controls are used to provide easy navigation through a long list of items or a large amount of information by scrolling either horizontally or vertically within an application or control.</span></span> <span data-ttu-id="ba8af-104">Полосы прокрутки — это распространенный элемент интерфейса Windows.</span><span class="sxs-lookup"><span data-stu-id="ba8af-104">Scroll bars are a common element of the Windows interface.</span></span>  
