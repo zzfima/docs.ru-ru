@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33519903"
 ---
 # <a name="modeling-cancellation-behavior-in-workflows"></a>Моделирование поведения отмены в рабочих процессах
 Действия можно отменять внутри рабочего процесса, например действием <xref:System.Activities.Statements.Parallel>, отменяющим неполные ветви, если вычисление его условия <xref:System.Activities.Statements.Parallel.CompletionCondition%2A> возвращает значение `true`, или извне рабочего процесса, если узел вызывает метод <xref:System.Activities.WorkflowApplication.Cancel%2A>. Чтобы предусмотреть выполнение отмены, разработчики рабочего процесса могут использовать действие <xref:System.Activities.Statements.CancellationScope>, действие <xref:System.Activities.Statements.CompensableActivity> или создать пользовательские действия, которые предоставляют логику отмены. В этом разделе приведены общие сведения об отмене в рабочих процессах.  

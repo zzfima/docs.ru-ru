@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33517161"
 ---
 # <a name="transaction-rollback"></a>Откат транзакции
 Этот образец показывает, как создавать пользовательское действие <xref:System.Activities.NativeActivity>, которое обращается к внешнему дескриптору <xref:System.Activities.RuntimeTransactionHandle> для получения внешней транзакции и выполнения явного ее отката.  

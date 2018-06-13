@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33523893"
 ---
 # <a name="graphics-paths-in-gdi"></a>Контуры в GDI+
 Пути сформированном путем объединения линии, прямоугольники и простейших кривых. Вспомните из [Общие сведения о векторной графике](../../../../docs/framework/winforms/advanced/vector-graphics-overview.md) , основными строительными блоками доказали подходят для рисования изображений:  

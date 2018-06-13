@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33513488"
 ---
 # <a name="pausing-and-resuming-a-workflow"></a>Приостановление и восстановление рабочего процесса
 Выполнение рабочих процессов будет приостанавливаться и возобновляться при выполнении действий с закладками и блокировками, такими как <xref:System.Activities.Statements.Delay>. Кроме того, рабочие потоки можно будет явным образом приостановить, выгрузить и возобновить с использованием механизма сохраняемости.  

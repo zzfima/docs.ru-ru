@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33516613"
 ---
 # <a name="transaction-activities-in-wf"></a>Действия транзакций в WF
 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] содержит несколько предоставляемых системой действий для моделирования транзакций, компенсации и отмены. Эти модели программирования позволяют рабочему процессу продолжаться при возникновении изменений в бизнес-логике и обработке ошибок. Дополнительные сведения о транзакциях, компенсации и отмены см. в разделе [транзакции](../../../docs/framework/windows-workflow-foundation/workflow-transactions.md), [компенсации](../../../docs/framework/windows-workflow-foundation/compensation.md), и [отмены](../../../docs/framework/windows-workflow-foundation/modeling-cancellation-behavior-in-workflows.md).  

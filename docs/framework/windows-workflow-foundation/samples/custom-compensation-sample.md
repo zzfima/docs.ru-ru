@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33514328"
 ---
 # <a name="custom-compensation-sample"></a>Образец настраиваемой компенсации
 В этом образце показано, как использовать действие <xref:System.Activities.Statements.CompensableActivity> и его обработчик компенсации для определения пользовательской логики компенсации. В этом образце моделируется «Агентство по аренде грузовиков».  

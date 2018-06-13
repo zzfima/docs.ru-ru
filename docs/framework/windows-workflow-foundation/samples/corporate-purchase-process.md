@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33520046"
 ---
 # <a name="corporate-purchase-process"></a>Процесс корпоративных закупок
 Этот образец показывает, как создать очень простой запрос предложений на основе процесса покупки с автоматическим выбором наилучшего предложения. В нем совместно применяются операторы <xref:System.Activities.Statements.Parallel>, <xref:System.Activities.Statements.ParallelForEach%601> и <xref:System.Activities.Statements.ForEach%601>, а также пользовательское действие для создания рабочего потока, который представляет процесс.  

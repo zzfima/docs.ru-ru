@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33521558"
 ---
 # <a name="cropping-and-scaling-images-in-gdi"></a>Обрезка и масштабирование изображений в GDI+
 Можно использовать <xref:System.Drawing.Graphics.DrawImage%2A> метод <xref:System.Drawing.Graphics> класса для рисования и размещения векторных и растровых изображений. <xref:System.Drawing.Graphics.DrawImage%2A> — перегружаемый метод, поэтому существует несколько способов передачи аргументов.  

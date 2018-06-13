@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32755101"
 ---
 # <a name="ltnameclaimtypegt"></a>&lt;nameClaimType&gt;
 Задает тип утверждения, который задает <xref:System.Security.Principal.IIdentity.Name%2A> свойства. Тип утверждения используется для поиска <xref:System.Security.Claims.Claim> в коллекции <xref:System.Security.Claims.ClaimsIdentity> объектов, возвращенных <xref:System.IdentityModel.Tokens.SecurityTokenHandler.ValidateToken%2A> метод данного обработчика токенов. Задайте значение утверждения сопоставления имени <xref:System.Security.Principal.IIdentity> созданные из этого обработчика токенов.  

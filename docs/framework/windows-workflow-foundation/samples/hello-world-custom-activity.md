@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33515848"
 ---
 # <a name="hello-world-custom-activity"></a>Пользовательское действие Hello World
 В этом образце показано несколько ключевых возможностей для Windows Workflow Foundation (WF), включая создание простого настраиваемого действия. Некоторые возможности, демонстрируемые в этом образце, создают пользовательское действие в C# и используют аргументы `in` и `out` (<xref:System.Activities.InArgument> и <xref:System.Activities.OutArgument>).  

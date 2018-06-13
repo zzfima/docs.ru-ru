@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33358883"
 ---
 # <a name="data-services-providers-wcf-data-services"></a>Поставщики служб данных (службы данных WCF)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] поддерживает несколько моделей поставщиков для предоставления данных в виде [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] веб-канала. Этот раздел содержит сведения, позволяющие выбрать поставщик служб [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], наилучшим образом подходящий для имеющегося источника данных.  

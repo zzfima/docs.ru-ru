@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33516417"
 ---
 # <a name="adjusting-the-size-and-scale-of-windows-forms"></a>Настройка размера и масштаба формы Windows Forms
 Этот раздел содержит ссылки на информацию об изменении размера формы Windows Forms.  

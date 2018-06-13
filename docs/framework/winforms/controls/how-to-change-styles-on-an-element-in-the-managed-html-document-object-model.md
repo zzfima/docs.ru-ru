@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33531255"
 ---
 # <a name="how-to-change-styles-on-an-element-in-the-managed-html-document-object-model"></a>Практическое руководство. Изменение стилей элемента в управляемой объектной модели HTML-документов
 Стили в формате HTML можно использовать для управления внешним видом документа и его элементов. <xref:System.Windows.Forms.HtmlDocument> и <xref:System.Windows.Forms.HtmlElement> поддерживает <xref:System.Windows.Forms.HtmlElement.Style%2A> свойств, которые принимают строки в следующем формате:  
