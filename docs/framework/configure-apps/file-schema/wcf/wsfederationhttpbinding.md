@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32759430"
 ---
 # <a name="ltwsfederationhttpbindinggt"></a><span data-ttu-id="22828-102">&lt;wsFederationHttpBinding&gt;</span><span class="sxs-lookup"><span data-stu-id="22828-102">&lt;wsFederationHttpBinding&gt;</span></span>
 <span data-ttu-id="22828-103">Определяет привязку, которая поддерживает спецификацию WS-Federation.</span><span class="sxs-lookup"><span data-stu-id="22828-103">Defines a binding that supports WS-Federation.</span></span>  

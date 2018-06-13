@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: de2a831e310ac7f770200a70cb793bc19645e31d
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33451602"
 ---
 # <a name="icorprofilercallbackremotingserverinvocationstarted-method"></a><span data-ttu-id="58036-102">Метод ICorProfilerCallback::RemotingServerInvocationStarted</span><span class="sxs-lookup"><span data-stu-id="58036-102">ICorProfilerCallback::RemotingServerInvocationStarted Method</span></span>
 <span data-ttu-id="58036-103">Уведомляет профилировщик о том, что процесс вызывает метод в ответ на запрос вызова удаленного метода.</span><span class="sxs-lookup"><span data-stu-id="58036-103">Notifies the profiler that the process is invoking a method in response to a remote method invocation request.</span></span>  

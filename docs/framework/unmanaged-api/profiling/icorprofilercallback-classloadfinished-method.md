@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 671f6743915ae4b7e7f4147f9fcddb1a623916ea
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33451273"
 ---
 # <a name="icorprofilercallbackclassloadfinished-method"></a><span data-ttu-id="996a5-102">Метод ICorProfilerCallback::ClassLoadFinished</span><span class="sxs-lookup"><span data-stu-id="996a5-102">ICorProfilerCallback::ClassLoadFinished Method</span></span>
 <span data-ttu-id="996a5-103">Уведомляет профилировщик об окончании загрузки класса.</span><span class="sxs-lookup"><span data-stu-id="996a5-103">Notifies the profiler that a class has finished loading.</span></span>  

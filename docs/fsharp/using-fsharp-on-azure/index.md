@@ -8,6 +8,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33569711"
 ---
 # <a name="using-f-on-azure"></a><span data-ttu-id="e1eaf-103">Использование языка F# в Azure</span><span class="sxs-lookup"><span data-stu-id="e1eaf-103">Using F# on Azure</span></span>
 

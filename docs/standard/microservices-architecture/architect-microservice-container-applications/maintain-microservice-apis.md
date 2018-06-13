@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33575880"
 ---
 # <a name="creating-evolving-and-versioning-microservice-apis-and-contracts"></a><span data-ttu-id="e0178-103">Создание, развитие и управление версиями API-интерфейсов и контрактов микрослужб</span><span class="sxs-lookup"><span data-stu-id="e0178-103">Creating, evolving, and versioning microservice APIs and contracts</span></span>
 

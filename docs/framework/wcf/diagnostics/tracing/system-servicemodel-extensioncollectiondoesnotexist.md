@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33480734"
 ---
 # <a name="systemservicemodelextensioncollectiondoesnotexist"></a><span data-ttu-id="b1a82-102">System.ServiceModel.ExtensionCollectionDoesNotExist</span><span class="sxs-lookup"><span data-stu-id="b1a82-102">System.ServiceModel.ExtensionCollectionDoesNotExist</span></span>
 <span data-ttu-id="b1a82-103">System.ServiceModel.ExtensionCollectionDoesNotExist</span><span class="sxs-lookup"><span data-stu-id="b1a82-103">System.ServiceModel.ExtensionCollectionDoesNotExist</span></span>  

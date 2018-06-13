@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32758585"
 ---
 # <a name="ltissuertokenresolvergt"></a><span data-ttu-id="b4ab0-102">&lt;issuerTokenResolver&gt;</span><span class="sxs-lookup"><span data-stu-id="b4ab0-102">&lt;issuerTokenResolver&gt;</span></span>
 <span data-ttu-id="b4ab0-103">Регистрирует Сопоставитель токена издателя, используемая обработчиков в коллекцию обработчиков токенов.</span><span class="sxs-lookup"><span data-stu-id="b4ab0-103">Registers the issuer token resolver that is used by handlers in the token handler collection.</span></span> <span data-ttu-id="b4ab0-104">Распознавателю маркеров издателя используется для разрешения маркера подписи для входящих токенов и сообщения.</span><span class="sxs-lookup"><span data-stu-id="b4ab0-104">The issuer token resolver is used to resolve the signing token on incoming tokens and messages.</span></span>  

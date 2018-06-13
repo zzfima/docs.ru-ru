@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33482437"
 ---
 # <a name="systemservicemodeltxreleaseserviceinstanceoncompletion"></a><span data-ttu-id="b4113-102">System.ServiceModel.TxReleaseServiceInstanceOnCompletion</span><span class="sxs-lookup"><span data-stu-id="b4113-102">System.ServiceModel.TxReleaseServiceInstanceOnCompletion</span></span>
 <span data-ttu-id="b4113-103">Экземпляр службы освобожден при завершении транзакции "{0}", так как атрибут ReleaseServiceInstanceOnTransactionComplete ServiceBehaviorAttribute было задано значение true.</span><span class="sxs-lookup"><span data-stu-id="b4113-103">The service instance was released on the completion of the transaction '{0}' because the ReleaseServiceInstanceOnTransactionComplete ServiceBehaviorAttribute was set to true.</span></span>  

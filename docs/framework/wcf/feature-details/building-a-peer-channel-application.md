@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33488304"
 ---
 # <a name="building-a-peer-channel-application"></a><span data-ttu-id="80453-102">Создание приложения одноранговых каналов</span><span class="sxs-lookup"><span data-stu-id="80453-102">Building a Peer Channel Application</span></span>
 <span data-ttu-id="80453-103">В следующих разделах представлено руководство по разработке приложений одноранговых каналов.</span><span class="sxs-lookup"><span data-stu-id="80453-103">The following sections provide guidance on developing Peer Channel applications.</span></span>  

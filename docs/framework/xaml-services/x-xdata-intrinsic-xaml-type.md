@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33565367"
 ---
 # <a name="xxdata-intrinsic-xaml-type"></a><span data-ttu-id="4446a-102">Встроенный тип XAML x:XData</span><span class="sxs-lookup"><span data-stu-id="4446a-102">x:XData Intrinsic XAML Type</span></span>
 <span data-ttu-id="4446a-103">Обеспечивает размещение острова данных XML в пределах рабочей среды XAML.</span><span class="sxs-lookup"><span data-stu-id="4446a-103">Enables placement of XML data islands within a XAML production.</span></span> <span data-ttu-id="4446a-104">XML-элементы в `x:XData` не следует обрабатывать обработчиками XAML, как если бы они были частью пространства имен XAML по умолчанию действующего или любое другое пространство имен XAML.</span><span class="sxs-lookup"><span data-stu-id="4446a-104">XML elements within `x:XData` should not be treated by XAML processors as if they are a part of the acting default XAML namespace or any other XAML namespace.</span></span> <span data-ttu-id="4446a-105">`x:XData` может содержать произвольный корректный XML.</span><span class="sxs-lookup"><span data-stu-id="4446a-105">`x:XData` can contain arbitrary well-formed XML.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33485408"
 ---
 # <a name="systemservicemodeltxsourcetxscoperequiredistransactionflow"></a><span data-ttu-id="9ae24-102">System.ServiceModel.TxSourceTxScopeRequiredIsTransactionFlow</span><span class="sxs-lookup"><span data-stu-id="9ae24-102">System.ServiceModel.TxSourceTxScopeRequiredIsTransactionFlow</span></span>
 <span data-ttu-id="9ae24-103">Заданная транзакция предназначена для заданной операции.</span><span class="sxs-lookup"><span data-stu-id="9ae24-103">The specified transaction was flowed to the specified operation.</span></span>  

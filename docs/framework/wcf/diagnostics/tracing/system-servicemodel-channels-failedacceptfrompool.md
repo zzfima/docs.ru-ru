@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33479322"
 ---
 # <a name="systemservicemodelchannelsfailedacceptfrompool"></a><span data-ttu-id="5941e-102">System.ServiceModel.Channels.FailedAcceptFromPool</span><span class="sxs-lookup"><span data-stu-id="5941e-102">System.ServiceModel.Channels.FailedAcceptFromPool</span></span>
 <span data-ttu-id="5941e-103">При попытке повторного использования подключения в пуле произошел сбой.</span><span class="sxs-lookup"><span data-stu-id="5941e-103">An attempt to reuse a pooled connection failed.</span></span> <span data-ttu-id="5941e-104">По истечении заданного промежутка времени выполнена еще одна попытка.</span><span class="sxs-lookup"><span data-stu-id="5941e-104">Another attempt is made within the specified timeout period.</span></span>  

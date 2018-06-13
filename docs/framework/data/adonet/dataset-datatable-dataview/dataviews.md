@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32758803"
 ---
 # <a name="dataviews"></a><span data-ttu-id="0ae05-102">Объекты DataView</span><span class="sxs-lookup"><span data-stu-id="0ae05-102">DataViews</span></span>
 <span data-ttu-id="0ae05-103"><xref:System.Data.DataView> позволяет создавать различные представления данных, которые хранятся в <xref:System.Data.DataTable>. Эта возможность часто используется в приложениях связывания данных.</span><span class="sxs-lookup"><span data-stu-id="0ae05-103">A <xref:System.Data.DataView> enables you to create different views of the data stored in a <xref:System.Data.DataTable>, a capability that is often used in data-binding applications.</span></span> <span data-ttu-id="0ae05-104">С помощью **DataView**, можно представить данные в таблице с различными порядками сортировки, и можно фильтровать данные по состоянию строки или на основе критерия фильтра.</span><span class="sxs-lookup"><span data-stu-id="0ae05-104">Using a **DataView**, you can expose the data in a table with different sort orders, and you can filter the data by row state or based on a filter expression.</span></span>  

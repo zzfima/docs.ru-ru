@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33489230"
 ---
 # <a name="specifying-a-custom-crypto-algorithm"></a><span data-ttu-id="652b6-102">Задание пользовательского алгоритма шифрования</span><span class="sxs-lookup"><span data-stu-id="652b6-102">Specifying a Custom Crypto Algorithm</span></span>
 <span data-ttu-id="652b6-103">WCF позволяет указывать пользовательский алгоритм шифрования для использования при шифровании данных или вычислении цифровых подписей.</span><span class="sxs-lookup"><span data-stu-id="652b6-103">WCF allows you to specify a custom crypto algorithm to use when encrypting data or computing digital signatures.</span></span> <span data-ttu-id="652b6-104">Для этого выполните следующие действия.</span><span class="sxs-lookup"><span data-stu-id="652b6-104">This is done by the following steps:</span></span>  

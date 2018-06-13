@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: cd53d74dfe8199617df47e46641b71203abf6e5e
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33452352"
 ---
 # <a name="icorprofilercallbackinitialize-method"></a><span data-ttu-id="7bef5-102">Метод ICorProfilerCallback::Initialize</span><span class="sxs-lookup"><span data-stu-id="7bef5-102">ICorProfilerCallback::Initialize Method</span></span>
 <span data-ttu-id="7bef5-103">Вызывается для инициализации профилировщика кода при запуске нового приложения среды CLR (CLR).</span><span class="sxs-lookup"><span data-stu-id="7bef5-103">Called to initialize the code profiler whenever a new common language runtime (CLR) application is started.</span></span>  

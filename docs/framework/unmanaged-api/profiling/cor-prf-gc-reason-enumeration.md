@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 63f6ea4a348b3035a1f0b1d3e00f61f689915fa2
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33450103"
 ---
 # <a name="corprfgcreason-enumeration"></a><span data-ttu-id="553e1-102">Перечисление COR_PRF_GC_REASON</span><span class="sxs-lookup"><span data-stu-id="553e1-102">COR_PRF_GC_REASON Enumeration</span></span>
 <span data-ttu-id="553e1-103">Указывает причину возникновения сборки мусора.</span><span class="sxs-lookup"><span data-stu-id="553e1-103">Indicates the reason that garbage collection is occurring.</span></span>  

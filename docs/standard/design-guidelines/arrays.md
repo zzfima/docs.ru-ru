@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33570409"
 ---
 # <a name="arrays"></a><span data-ttu-id="82928-102">Массивы</span><span class="sxs-lookup"><span data-stu-id="82928-102">Arrays</span></span>
 <span data-ttu-id="82928-103">**✓ СДЕЛАТЬ** способом с помощью коллекций на массивы в открытых интерфейсах API.</span><span class="sxs-lookup"><span data-stu-id="82928-103">**✓ DO** prefer using collections over arrays in public APIs.</span></span> <span data-ttu-id="82928-104">[Коллекций](../../../docs/standard/design-guidelines/guidelines-for-collections.md) разделе содержатся сведения о выборе между коллекциям и массивам.</span><span class="sxs-lookup"><span data-stu-id="82928-104">The [Collections](../../../docs/standard/design-guidelines/guidelines-for-collections.md) section provides details about how to choose between collections and arrays.</span></span>  

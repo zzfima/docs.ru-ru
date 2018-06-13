@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33571239"
 ---
 # <a name="how-to-copy-directories"></a><span data-ttu-id="b5f8f-102">Практическое руководство. Копирование каталогов</span><span class="sxs-lookup"><span data-stu-id="b5f8f-102">How to: Copy Directories</span></span>
 <span data-ttu-id="b5f8f-103">В этом примере демонстрируется использование классов ввода-вывода для синхронного копирования содержимого каталога в другое место.</span><span class="sxs-lookup"><span data-stu-id="b5f8f-103">This example demonstrates how to use I/O classes to synchronously copy the contents of a directory to another location.</span></span> <span data-ttu-id="b5f8f-104">В этом примере пользователь может указать, следует ли также копировать подкаталоги.</span><span class="sxs-lookup"><span data-stu-id="b5f8f-104">In this example, the user can specify whether to also copy the subdirectories.</span></span> <span data-ttu-id="b5f8f-105">Если подкаталоги копируются, метод в этом примере рекурсивно копирует их путем вызова самого себя для каждого последующего подкаталога, пока не будет скопировано все.</span><span class="sxs-lookup"><span data-stu-id="b5f8f-105">If the subdirectories are copied, the method in this example recursively copies them by calling itself on each subsequent subdirectory until there are no more to copy.</span></span>  

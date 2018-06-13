@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 15206fbd7724383b1ec6df123790d3171e58e9f7
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33411922"
 ---
 # <a name="icordebugframegetcode-method"></a><span data-ttu-id="0d966-102">Метод ICorDebugFrame::GetCode</span><span class="sxs-lookup"><span data-stu-id="0d966-102">ICorDebugFrame::GetCode Method</span></span>
 <span data-ttu-id="0d966-103">Возвращает указатель на код, связанный с данным кадром стека.</span><span class="sxs-lookup"><span data-stu-id="0d966-103">Gets a pointer to the code associated with this stack frame.</span></span>  

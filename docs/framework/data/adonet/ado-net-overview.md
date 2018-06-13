@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32757948"
 ---
 # <a name="adonet-overview"></a><span data-ttu-id="2a2c3-102">Общие сведения о ADO.NET</span><span class="sxs-lookup"><span data-stu-id="2a2c3-102">ADO.NET Overview</span></span>
 <span data-ttu-id="2a2c3-103">ADO.NET предоставляет согласованный доступ к таким источникам данных, как SQL Server и XML, а также к источникам данных, предоставляемым при помощи OLE DB и ODBC.</span><span class="sxs-lookup"><span data-stu-id="2a2c3-103">ADO.NET provides consistent access to data sources such as SQL Server and XML, and to data sources exposed through OLE DB and ODBC.</span></span> <span data-ttu-id="2a2c3-104">Пользовательские приложения, использующие общие данные, могут использовать ADO.NET для соединения с этими источниками данных и для получения, обработки и обновления имеющихся в них данных.</span><span class="sxs-lookup"><span data-stu-id="2a2c3-104">Data-sharing consumer applications can use ADO.NET to connect to these data sources and retrieve, handle, and update the data that they contain.</span></span>  

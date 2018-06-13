@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33568629"
 ---
 # <a name="ordered-node-retrieval-by-index"></a><span data-ttu-id="5644d-102">Упорядоченное извлечение узлов по индексу</span><span class="sxs-lookup"><span data-stu-id="5644d-102">Ordered Node Retrieval by Index</span></span>
 <span data-ttu-id="5644d-103">Модель DOM XML-документа консорциума W3C описывает класс NodeList, который позволяет обрабатывать упорядоченные списки узлов, в отличие от неупорядоченного набора, обрабатываемого с помощью класса **XmlNamedNodeMap**.</span><span class="sxs-lookup"><span data-stu-id="5644d-103">The World Wide Web Consortium (W3C) XML Document Object Model (DOM) also describes a NodeList, which has the ability to handle an ordered list of nodes, as opposed to the unordered set handled by the **XmlNamedNodeMap**.</span></span> <span data-ttu-id="5644d-104">Класс NodeList в платформе Microsoft .NET Framework называется **XmlNodeList**.</span><span class="sxs-lookup"><span data-stu-id="5644d-104">The NodeList in the Microsoft .NET Framework is called **XmlNodeList**.</span></span> <span data-ttu-id="5644d-105">Методы и свойства, которые возвращают класс **XmlNodeList**:</span><span class="sxs-lookup"><span data-stu-id="5644d-105">Methods and properties that return an **XmlNodeList** are:</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33480809"
 ---
 # <a name="systemservicemodelchannelstcpconnecterror"></a><span data-ttu-id="9c736-102">System.ServiceModel.Channels.TcpConnectError</span><span class="sxs-lookup"><span data-stu-id="9c736-102">System.ServiceModel.Channels.TcpConnectError</span></span>
 <span data-ttu-id="9c736-103">Ошибка операции TCP-соединения.</span><span class="sxs-lookup"><span data-stu-id="9c736-103">The TCP connect operation failed.</span></span>  

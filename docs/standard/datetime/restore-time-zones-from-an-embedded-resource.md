@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33572350"
 ---
 # <a name="how-to-restore-time-zones-from-an-embedded-resource"></a><span data-ttu-id="b1f10-102">Как: восстановление часовых поясов из внедренного ресурса</span><span class="sxs-lookup"><span data-stu-id="b1f10-102">How to: Restore time zones from an embedded resource</span></span>
 

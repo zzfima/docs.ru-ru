@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33573124"
 ---
 # <a name="comparisons-and-sorts-within-collections"></a><span data-ttu-id="c9175-102">Сравнение и сортировка в коллекциях</span><span class="sxs-lookup"><span data-stu-id="c9175-102">Comparisons and Sorts Within Collections</span></span>
 <span data-ttu-id="c9175-103">Классы <xref:System.Collections> выполняют сравнения почти во всех процессах управления коллекциями — будь то поиск элемента для удаления или возвращение значения пары "ключ-значение".</span><span class="sxs-lookup"><span data-stu-id="c9175-103">The <xref:System.Collections> classes perform comparisons in almost all the processes involved in managing collections, whether searching for the element to remove or returning the value of a key-and-value pair.</span></span>  

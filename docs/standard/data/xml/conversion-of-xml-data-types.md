@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33569371"
 ---
 # <a name="conversion-of-xml-data-types"></a><span data-ttu-id="80e6f-102">Преобразование типов XML-данных</span><span class="sxs-lookup"><span data-stu-id="80e6f-102">Conversion of XML Data Types</span></span>
 <span data-ttu-id="80e6f-103">Большая часть методов класса **XmlConvert** используются для преобразования данных в строки и строго типизированные форматы.</span><span class="sxs-lookup"><span data-stu-id="80e6f-103">The majority of the methods found in an **XmlConvert** class are used to convert data between strings and strongly-typed formats.</span></span> <span data-ttu-id="80e6f-104">Методы не зависят от языковых стандартов.</span><span class="sxs-lookup"><span data-stu-id="80e6f-104">Methods are locale independent.</span></span> <span data-ttu-id="80e6f-105">Это означает, что при преобразовании они не принимают во внимание параметры языковых стандартов.</span><span class="sxs-lookup"><span data-stu-id="80e6f-105">This means that they do not take into account any locale settings when doing conversion.</span></span>  

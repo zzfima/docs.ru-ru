@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33570622"
 ---
 # <a name="xmldocument-input-to-xsltransform"></a><span data-ttu-id="2d315-102">Ввод XmlDocument в XslTransform</span><span class="sxs-lookup"><span data-stu-id="2d315-102">XmlDocument Input to XslTransform</span></span>
 <span data-ttu-id="2d315-103">Класс <xref:System.Xml.XmlDocument> представляет возможности изменения XML-документа.</span><span class="sxs-lookup"><span data-stu-id="2d315-103">The <xref:System.Xml.XmlDocument> class provides editing capabilities for an XML document.</span></span> <span data-ttu-id="2d315-104">Если нужно изменить XML-документ перед передачей методу <xref:System.Xml.Xsl.XslTransform.Transform%2A>, загрузите XML-документ в объект <xref:System.Xml.XmlDocument>, измените его и отправьте в объект <xref:System.Xml.Xsl.XslTransform>.</span><span class="sxs-lookup"><span data-stu-id="2d315-104">If the XML needs to be edited or modified before being sent to the <xref:System.Xml.Xsl.XslTransform.Transform%2A> method, load the XML into an <xref:System.Xml.XmlDocument>, edit it, and send it in to the <xref:System.Xml.Xsl.XslTransform>.</span></span>  

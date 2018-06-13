@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33480334"
 ---
 # <a name="systemservicemodelchannelspeerchannelmessagereceived"></a><span data-ttu-id="84512-102">System.ServiceModel.Channels.PeerChannelMessageReceived</span><span class="sxs-lookup"><span data-stu-id="84512-102">System.ServiceModel.Channels.PeerChannelMessageReceived</span></span>
 <span data-ttu-id="84512-103">Было получено новое сообщение PeerChannel.</span><span class="sxs-lookup"><span data-stu-id="84512-103">A new PeerChannel message was received.</span></span>  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33559182"
 ---
 # <a name="how-to-animate-the-position-of-an-object-by-using-pointanimation"></a><span data-ttu-id="9fbea-102">Практическое руководство. Анимация расположения объекта с помощью PointAnimation</span><span class="sxs-lookup"><span data-stu-id="9fbea-102">How to: Animate the Position of an Object by Using PointAnimation</span></span>
 <span data-ttu-id="9fbea-103">В этом примере показано, как использовать <xref:System.Windows.Media.Animation.PointAnimation> класса для анимации объекта вдоль <xref:System.Windows.Shapes.Path>.</span><span class="sxs-lookup"><span data-stu-id="9fbea-103">This example shows how to use the <xref:System.Windows.Media.Animation.PointAnimation> class to animate an object along a <xref:System.Windows.Shapes.Path>.</span></span>  

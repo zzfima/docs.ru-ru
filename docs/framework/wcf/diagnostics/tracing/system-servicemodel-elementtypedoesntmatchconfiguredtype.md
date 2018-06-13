@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33480718"
 ---
 # <a name="systemservicemodelelementtypedoesntmatchconfiguredtype"></a><span data-ttu-id="caf31-102">System.ServiceModel.ElementTypeDoesntMatchConfiguredType</span><span class="sxs-lookup"><span data-stu-id="caf31-102">System.ServiceModel.ElementTypeDoesntMatchConfiguredType</span></span>
 <span data-ttu-id="caf31-103">System.ServiceModel.ElementTypeDoesntMatchConfiguredType</span><span class="sxs-lookup"><span data-stu-id="caf31-103">System.ServiceModel.ElementTypeDoesntMatchConfiguredType</span></span>  

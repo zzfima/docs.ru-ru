@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33571427"
 ---
 # <a name="implementing-retries-with-exponential-backoff"></a><span data-ttu-id="a7ad5-103">Реализация повторных попыток с экспоненциальной выдержкой</span><span class="sxs-lookup"><span data-stu-id="a7ad5-103">Implementing retries with exponential backoff</span></span>
 

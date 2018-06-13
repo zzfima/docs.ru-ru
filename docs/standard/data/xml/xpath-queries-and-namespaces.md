@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33571466"
 ---
 # <a name="xpath-queries-and-namespaces"></a><span data-ttu-id="4b753-102">Запросы XPath и пространства имен</span><span class="sxs-lookup"><span data-stu-id="4b753-102">XPath Queries and Namespaces</span></span>
 <span data-ttu-id="4b753-103">Запросы XPath учитывают наличие пространств имен в XML-документе и могут использовать префиксы пространств имен для дополнения имен элементов и атрибутов.</span><span class="sxs-lookup"><span data-stu-id="4b753-103">XPath queries are aware of namespaces in an XML document and can use namespace prefixes to qualify element and attribute names.</span></span> <span data-ttu-id="4b753-104">Добавление префикса пространства имен к именам элементов и атрибутов ограничивает набор узлов, возвращаемых запросом XPath, лишь теми узлами, которые принадлежат к определенному пространству имен.</span><span class="sxs-lookup"><span data-stu-id="4b753-104">Qualifying element and attribute names with a namespace prefix limits the nodes returned by an XPath query to only those nodes that belong to a specific namespace.</span></span>  

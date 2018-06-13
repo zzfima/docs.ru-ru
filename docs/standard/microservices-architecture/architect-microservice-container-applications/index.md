@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33573650"
 ---
 # <a name="architecting-container--and-microservice-based-applications"></a><span data-ttu-id="7ace0-103">Проектирование архитектуры приложений на основе контейнеров и микрослужб</span><span class="sxs-lookup"><span data-stu-id="7ace0-103">Architecting Container- and Microservice-Based Applications</span></span>
 
