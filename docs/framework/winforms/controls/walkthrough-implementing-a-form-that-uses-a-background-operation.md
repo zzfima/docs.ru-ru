@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33542084"
 ---
 # <a name="walkthrough-implementing-a-form-that-uses-a-background-operation"></a><span data-ttu-id="dacb0-102">Пошаговое руководство. Реализация формы, в которой выполняется фоновая операция</span><span class="sxs-lookup"><span data-stu-id="dacb0-102">Walkthrough: Implementing a Form That Uses a Background Operation</span></span>
 <span data-ttu-id="dacb0-103">Если какая-либо операция будет выполняться длительное время, и вы не хотите пользовательского интерфейса (UI) перестает отвечать на запросы или «зависнуть», можно использовать <xref:System.ComponentModel.BackgroundWorker> класс для выполнения операции в другом потоке.</span><span class="sxs-lookup"><span data-stu-id="dacb0-103">If you have an operation that will take a long time to complete, and you do not want your user interface (UI) to stop responding or "hang," you can use the <xref:System.ComponentModel.BackgroundWorker> class to execute the operation on another thread.</span></span>  

@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: de120516655c1a0578e88ecc2890701ed9fc2f6d
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33443704"
 ---
 # <a name="assemblyrefflags-enumeration"></a><span data-ttu-id="9d1b5-102">Перечисление AssemblyRefFlags</span><span class="sxs-lookup"><span data-stu-id="9d1b5-102">AssemblyRefFlags Enumeration</span></span>
 <span data-ttu-id="9d1b5-103">Содержит значения, описывающие функции ссылки на сборку.</span><span class="sxs-lookup"><span data-stu-id="9d1b5-103">Contains values that describe features of an assembly reference.</span></span>  

@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: ee808ba403a513b897134420b45ebe8cd3537571
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33442250"
 ---
 # <a name="corlocalrefpreservation-enumeration"></a><span data-ttu-id="78589-102">Перечисление CorLocalRefPreservation</span><span class="sxs-lookup"><span data-stu-id="78589-102">CorLocalRefPreservation Enumeration</span></span>
 <span data-ttu-id="78589-103">Содержит значения флага для обработки локальных ссылок.</span><span class="sxs-lookup"><span data-stu-id="78589-103">Contains flag values for the treatment of local references.</span></span>  

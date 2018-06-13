@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33491581"
 ---
 # <a name="federation-and-issued-tokens"></a><span data-ttu-id="0bfcf-102">Федерация и выданные маркеры</span><span class="sxs-lookup"><span data-stu-id="0bfcf-102">Federation and Issued Tokens</span></span>
 <span data-ttu-id="0bfcf-103">С Windows Communication Foundation (WCF), можно создать клиентов, которые безопасного обмена данными со службами, реализующими спецификации WS-Federation и WS-Trust.</span><span class="sxs-lookup"><span data-stu-id="0bfcf-103">With Windows Communication Foundation (WCF), you can create clients that communicate securely with services that implement the WS-Federation and WS-Trust specifications.</span></span> <span data-ttu-id="0bfcf-104">В этих спецификациях XML, протокол SOAP и язык WSDL используются для предоставления механизмов, позволяющих производить проверку подлинности и авторизацию в различных областях доверия.</span><span class="sxs-lookup"><span data-stu-id="0bfcf-104">The specifications use XML, SOAP, and Web Services Description Language (WSDL) to provide mechanisms that enable authentication and authorization across different trust realms.</span></span>  

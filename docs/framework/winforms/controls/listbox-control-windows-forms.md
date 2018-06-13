@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33534200"
 ---
 # <a name="listbox-control-windows-forms"></a><span data-ttu-id="18db6-102">Элемент управления ListBox (Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="18db6-102">ListBox Control (Windows Forms)</span></span>
 <span data-ttu-id="18db6-103">Windows Forms `ListBox` элемент управления отображает список элементов, из которых пользователь может выбрать один или несколько.</span><span class="sxs-lookup"><span data-stu-id="18db6-103">A Windows Forms `ListBox` control displays a list of items from which the user can select one or more.</span></span>  

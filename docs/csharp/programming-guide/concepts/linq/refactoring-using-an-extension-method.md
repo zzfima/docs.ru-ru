@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33335488"
 ---
 # <a name="refactoring-using-an-extension-method-c"></a><span data-ttu-id="acc02-102">Рефакторинг с использованием метода расширения (C#)</span><span class="sxs-lookup"><span data-stu-id="acc02-102">Refactoring Using an Extension Method (C#)</span></span>
 <span data-ttu-id="acc02-103">Этот пример основан на предыдущем примере, [Извлечение текста абзацев (C#)](../../../../csharp/programming-guide/concepts/linq/retrieving-the-text-of-the-paragraphs.md), и в нем применяется оптимизация кода объединения строк с помощью чистой функции, которая реализуется в виде метода расширения.</span><span class="sxs-lookup"><span data-stu-id="acc02-103">This example builds on the previous example, [Retrieving the Text of the Paragraphs (C#)](../../../../csharp/programming-guide/concepts/linq/retrieving-the-text-of-the-paragraphs.md), by refactoring the concatenation of strings using a pure function that is implemented as an extension method.</span></span>  

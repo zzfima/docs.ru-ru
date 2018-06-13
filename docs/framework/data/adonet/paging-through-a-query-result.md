@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33358972"
 ---
 # <a name="paging-through-a-query-result"></a><span data-ttu-id="de19a-102">Разбивка на страницы результатов запроса</span><span class="sxs-lookup"><span data-stu-id="de19a-102">Paging Through a Query Result</span></span>
 <span data-ttu-id="de19a-103">Постраничный просмотр результатов запроса - это процесс возврата результатов запроса небольшими подмножествами данных (страницами).</span><span class="sxs-lookup"><span data-stu-id="de19a-103">Paging through a query result is the process of returning the results of a query in smaller subsets of data, or pages.</span></span> <span data-ttu-id="de19a-104">Этот метод часто используется для вывода результатов пользователю в виде небольших фрагментов, с которыми легко работать.</span><span class="sxs-lookup"><span data-stu-id="de19a-104">This is a common practice for displaying results to a user in small, easy-to-manage chunks.</span></span>  

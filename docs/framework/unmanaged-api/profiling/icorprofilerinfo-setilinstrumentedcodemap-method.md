@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 8ecb80de1ae46b072df4bab8357e78e7a22ae298
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33458072"
 ---
 # <a name="icorprofilerinfosetilinstrumentedcodemap-method"></a><span data-ttu-id="ad62d-102">Метод ICorProfilerInfo::SetILInstrumentedCodeMap</span><span class="sxs-lookup"><span data-stu-id="ad62d-102">ICorProfilerInfo::SetILInstrumentedCodeMap Method</span></span>
 <span data-ttu-id="ad62d-103">Устанавливает карту кода для указанной функции с помощью указанных записей карты Microsoft промежуточного языка MSIL.</span><span class="sxs-lookup"><span data-stu-id="ad62d-103">Sets a code map for the specified function using the specified Microsoft intermediate language (MSIL) map entries.</span></span>  

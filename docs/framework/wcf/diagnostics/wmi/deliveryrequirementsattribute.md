@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33485830"
 ---
 # <a name="deliveryrequirementsattribute"></a><span data-ttu-id="62132-102">DeliveryRequirementsAttribute</span><span class="sxs-lookup"><span data-stu-id="62132-102">DeliveryRequirementsAttribute</span></span>
 <span data-ttu-id="62132-103">DeliveryRequirementsAttribute</span><span class="sxs-lookup"><span data-stu-id="62132-103">DeliveryRequirementsAttribute</span></span>  

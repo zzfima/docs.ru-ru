@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33525659"
 ---
 # <a name="how-to-add-and-remove-items-with-the-windows-forms-listview-control"></a><span data-ttu-id="2c0a4-102">Практическое руководство. Добавление и удаление элементов с помощью элемента управления ListView в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="2c0a4-102">How to: Add and Remove Items with the Windows Forms ListView Control</span></span>
 <span data-ttu-id="2c0a4-103">Процесс добавления элемента в форму Windows Forms <xref:System.Windows.Forms.ListView> управления состоит в определение элемента и назначение ему свойств.</span><span class="sxs-lookup"><span data-stu-id="2c0a4-103">The process of adding an item to a Windows Forms <xref:System.Windows.Forms.ListView> control consists primarily of specifying the item and assigning properties to it.</span></span> <span data-ttu-id="2c0a4-104">Добавление или удаление элементов списка может выполняться в любое время.</span><span class="sxs-lookup"><span data-stu-id="2c0a4-104">Adding or removing list items can be done at any time.</span></span>  

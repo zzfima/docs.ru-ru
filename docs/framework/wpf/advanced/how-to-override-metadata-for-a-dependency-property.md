@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33543723"
 ---
 # <a name="how-to-override-metadata-for-a-dependency-property"></a><span data-ttu-id="59b34-102">Практическое руководство. Переопределение метаданных для свойств зависимости</span><span class="sxs-lookup"><span data-stu-id="59b34-102">How to: Override Metadata for a Dependency Property</span></span>
 <span data-ttu-id="59b34-103">В этом примере показан способ переопределения метаданных свойства зависимостей по умолчанию, поступающие из наследованного класса путем вызова <xref:System.Windows.DependencyProperty.OverrideMetadata%2A> метод и предоставление метаданных определенного типа.</span><span class="sxs-lookup"><span data-stu-id="59b34-103">This example shows how to override default dependency property metadata that comes from an inherited class, by calling the <xref:System.Windows.DependencyProperty.OverrideMetadata%2A> method and providing type-specific metadata.</span></span>  

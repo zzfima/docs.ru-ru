@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33544926"
 ---
 # <a name="how-to-apply-transforms-to-text"></a><span data-ttu-id="05b66-102">Как применить преобразования к тексту</span><span class="sxs-lookup"><span data-stu-id="05b66-102">How to: Apply Transforms to Text</span></span>
 <span data-ttu-id="05b66-103">Преобразования могут менять отображение текста в приложении.</span><span class="sxs-lookup"><span data-stu-id="05b66-103">Transforms can alter the display of text in your application.</span></span> <span data-ttu-id="05b66-104">В следующих примерах используется различные типы преобразований подготовки отчетов влияет на отображение текста в <xref:System.Windows.Controls.TextBlock> элемента управления.</span><span class="sxs-lookup"><span data-stu-id="05b66-104">The following examples use different types of rendering transforms to affect the display of text in a <xref:System.Windows.Controls.TextBlock> control.</span></span>  

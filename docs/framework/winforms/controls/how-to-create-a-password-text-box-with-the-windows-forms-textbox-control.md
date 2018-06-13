@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33534304"
 ---
 # <a name="how-to-create-a-password-text-box-with-the-windows-forms-textbox-control"></a><span data-ttu-id="b1a86-102">Практическое руководство. Создание текстового поля для ввода пароля с помощью элемента управления TextBox в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="b1a86-102">How to: Create a Password Text Box with the Windows Forms TextBox Control</span></span>
 <span data-ttu-id="b1a86-103">Поле пароля — это текстовое поле Windows Forms, выводит заполнителем, когда пользователь вводит строку.</span><span class="sxs-lookup"><span data-stu-id="b1a86-103">A password box is a Windows Forms text box that displays placeholder characters while a user types a string.</span></span>  

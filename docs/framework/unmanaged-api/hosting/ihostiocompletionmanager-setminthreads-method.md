@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 61f1938b114aee6d9084ccc68dce123b4924d1fc
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33439472"
 ---
 # <a name="ihostiocompletionmanagersetminthreads-method"></a><span data-ttu-id="9a9a8-102">Метод IHostIoCompletionManager::SetMinThreads</span><span class="sxs-lookup"><span data-stu-id="9a9a8-102">IHostIoCompletionManager::SetMinThreads Method</span></span>
 <span data-ttu-id="9a9a8-103">Задает минимальное количество потоков, которые основное приложение должно выделить для завершения ввода-вывода.</span><span class="sxs-lookup"><span data-stu-id="9a9a8-103">Sets the minimum number of threads that the host should allot to I/O completion.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32765858"
 ---
 # <a name="entity-sql-quick-reference"></a><span data-ttu-id="0e7eb-102">Краткий справочник по Entity SQL</span><span class="sxs-lookup"><span data-stu-id="0e7eb-102">Entity SQL Quick Reference</span></span>
 <span data-ttu-id="0e7eb-103">В этом разделе содержится краткий справочник по запросам [!INCLUDE[esql](../../../../../../includes/esql-md.md)].</span><span class="sxs-lookup"><span data-stu-id="0e7eb-103">This topic provides a quick reference to [!INCLUDE[esql](../../../../../../includes/esql-md.md)] queries.</span></span> <span data-ttu-id="0e7eb-104">Запросы в этом разделе основаны на модели AdventureWorks Sales.</span><span class="sxs-lookup"><span data-stu-id="0e7eb-104">The queries in this topic are based on the AdventureWorks Sales model.</span></span>  

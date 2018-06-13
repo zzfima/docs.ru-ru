@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 269dac0f3d8a719224c177ef2c261e4c1e2e7e92
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33445171"
 ---
 # <a name="imetadataemitdeletetoken-method"></a><span data-ttu-id="62eda-102">Метод IMetaDataEmit::DeleteToken</span><span class="sxs-lookup"><span data-stu-id="62eda-102">IMetaDataEmit::DeleteToken Method</span></span>
 <span data-ttu-id="62eda-103">Удаляет указанный маркер из текущей области метаданных.</span><span class="sxs-lookup"><span data-stu-id="62eda-103">Deletes the specified token from the current metadata scope.</span></span>  

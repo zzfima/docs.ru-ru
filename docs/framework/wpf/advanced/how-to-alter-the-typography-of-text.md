@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33542933"
 ---
 # <a name="how-to-alter-the-typography-of-text"></a><span data-ttu-id="7d09c-102">Практическое руководство. Изменение оформления текста</span><span class="sxs-lookup"><span data-stu-id="7d09c-102">How-to: Alter the Typography of Text</span></span>
 <span data-ttu-id="7d09c-103">Следующий пример показывает, как задать <xref:System.Windows.Documents.TextElement.Typography%2A> атрибута с помощью <xref:System.Windows.Documents.Paragraph> как пример элемента.</span><span class="sxs-lookup"><span data-stu-id="7d09c-103">The following example shows how to set the <xref:System.Windows.Documents.TextElement.Typography%2A> attribute, using <xref:System.Windows.Documents.Paragraph> as the example element.</span></span>  

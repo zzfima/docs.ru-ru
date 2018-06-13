@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33540414"
 ---
 # <a name="componentresourcekey-markup-extension"></a><span data-ttu-id="d9c9a-102">Расширение разметки ComponentResourceKey</span><span class="sxs-lookup"><span data-stu-id="d9c9a-102">ComponentResourceKey Markup Extension</span></span>
 <span data-ttu-id="d9c9a-103">Определения и ключи для ресурсов, которые загружаются из внешних сборок ссылок.</span><span class="sxs-lookup"><span data-stu-id="d9c9a-103">Defines and references keys for resources that are loaded from external assemblies.</span></span> <span data-ttu-id="d9c9a-104">Это позволяет при поиске ресурса указать целевой тип в сборке, вместо явного словаря ресурса в сборке или в классе.</span><span class="sxs-lookup"><span data-stu-id="d9c9a-104">This enables a resource lookup to specify a target type in an assembly, rather than an explicit resource dictionary in an assembly or on a class.</span></span>  

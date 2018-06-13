@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: dc57c9465bfafde17156eeec65e52d65c8af9038
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33439989"
 ---
 # <a name="ihostsecuritymanagerimpersonateloggedonuser-method"></a><span data-ttu-id="c47e6-102">Метод IHostSecurityManager::ImpersonateLoggedOnUser</span><span class="sxs-lookup"><span data-stu-id="c47e6-102">IHostSecurityManager::ImpersonateLoggedOnUser Method</span></span>
 <span data-ttu-id="c47e6-103">Запросы на выполнение кода с использованием учетных данных удостоверения текущего пользователя.</span><span class="sxs-lookup"><span data-stu-id="c47e6-103">Requests that code be executed using the credentials of the current user identity.</span></span>  

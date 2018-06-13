@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33337760"
 ---
 # <a name="how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await-c"></a><span data-ttu-id="ff6b6-102">Практическое руководство. Параллельное выполнение нескольких веб-запросов с использованием Async и Await (C#)</span><span class="sxs-lookup"><span data-stu-id="ff6b6-102">How to: Make Multiple Web Requests in Parallel by Using async and await (C#)</span></span>
 <span data-ttu-id="ff6b6-103">В асинхронном методе задачи запускаются в момент создания.</span><span class="sxs-lookup"><span data-stu-id="ff6b6-103">In an async method, tasks are started when they’re created.</span></span> <span data-ttu-id="ff6b6-104">Оператор [Await](../../../../csharp/language-reference/keywords/await.md) применяется к задаче в той точке в методе, где обработка не может продолжаться до завершения задачи.</span><span class="sxs-lookup"><span data-stu-id="ff6b6-104">The [await](../../../../csharp/language-reference/keywords/await.md) operator is applied to the task at the point in the method where processing can’t continue until the task finishes.</span></span> <span data-ttu-id="ff6b6-105">Часто задачи ожидаются в момент создания, как показано в следующем примере.</span><span class="sxs-lookup"><span data-stu-id="ff6b6-105">Often a task is awaited as soon as it’s created, as the following example shows.</span></span>  

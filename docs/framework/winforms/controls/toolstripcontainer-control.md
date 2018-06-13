@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33538852"
 ---
 # <a name="toolstripcontainer-control"></a><span data-ttu-id="15835-102">Элемент управления ToolStripContainer</span><span class="sxs-lookup"><span data-stu-id="15835-102">ToolStripContainer Control</span></span>
 <span data-ttu-id="15835-103">Элементы управления <xref:System.Windows.Forms.ToolStrip> обладают возможностью встроенного нависания (совместного использования горизонтального или вертикального пространства в области инструментов при прикреплении) благодаря использованию <xref:System.Windows.Forms.ToolStripContainer>.</span><span class="sxs-lookup"><span data-stu-id="15835-103"><xref:System.Windows.Forms.ToolStrip> controls feature built-in rafting (sharing of horizontal or vertical space within the tool area when docked) by using the <xref:System.Windows.Forms.ToolStripContainer>.</span></span>  

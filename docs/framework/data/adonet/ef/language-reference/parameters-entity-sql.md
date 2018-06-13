@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32765078"
 ---
 # <a name="parameters-entity-sql"></a><span data-ttu-id="24b23-102">Параметры (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="24b23-102">Parameters (Entity SQL)</span></span>
 <span data-ttu-id="24b23-103">Параметры - это переменные, определенные вне [!INCLUDE[esql](../../../../../../includes/esql-md.md)] обычно через привязку API, используемую базовым языком.</span><span class="sxs-lookup"><span data-stu-id="24b23-103">Parameters are variables that are defined outside [!INCLUDE[esql](../../../../../../includes/esql-md.md)], usually through a binding API that is used by a host language.</span></span> <span data-ttu-id="24b23-104">Каждый параметр имеет имя и тип.</span><span class="sxs-lookup"><span data-stu-id="24b23-104">Each parameter has a name and a type.</span></span> <span data-ttu-id="24b23-105">Имена параметров определены в выражениях запросов с символом (@) в качестве префикса.</span><span class="sxs-lookup"><span data-stu-id="24b23-105">Parameter names are defined in query expressions with the at (@) symbol as a prefix.</span></span> <span data-ttu-id="24b23-106">Так они отличаются от имен свойств или других имен, определенных в запросе.</span><span class="sxs-lookup"><span data-stu-id="24b23-106">This disambiguates them from the names of properties or other names that are defined in the query.</span></span>  

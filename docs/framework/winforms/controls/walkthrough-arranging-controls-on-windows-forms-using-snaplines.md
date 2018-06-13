@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33541594"
 ---
 # <a name="walkthrough-arranging-controls-on-windows-forms-using-snaplines"></a><span data-ttu-id="bb8d3-102">Пример. Упорядочение элементов управления в формах Windows Forms с помощью линий привязки</span><span class="sxs-lookup"><span data-stu-id="bb8d3-102">Walkthrough: Arranging Controls on Windows Forms Using Snaplines</span></span>
 <span data-ttu-id="bb8d3-103">Точное расположение элементов управления на форме является важным для многих приложений.</span><span class="sxs-lookup"><span data-stu-id="bb8d3-103">Precise placement of controls on your form is a high priority for many applications.</span></span> <span data-ttu-id="bb8d3-104">Конструктор Windows Forms предоставляет много инструментов для выполнения этой задачи.</span><span class="sxs-lookup"><span data-stu-id="bb8d3-104">The Windows Forms Designer gives you many layout tools to accomplish this.</span></span> <span data-ttu-id="bb8d3-105">Одним из наиболее важных является <xref:System.Windows.Forms.Design.Behavior.SnapLine> компонентов.</span><span class="sxs-lookup"><span data-stu-id="bb8d3-105">One of the most important is the <xref:System.Windows.Forms.Design.Behavior.SnapLine> feature.</span></span>  

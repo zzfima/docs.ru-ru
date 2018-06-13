@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d68790cdb671efdd0761ceef59196e8646654d5f
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33439612"
 ---
 # <a name="ihostmemorymanagerregistermemorynotificationcallback-method"></a><span data-ttu-id="2fc38-102">Метод IHostMemoryManager::RegisterMemoryNotificationCallback</span><span class="sxs-lookup"><span data-stu-id="2fc38-102">IHostMemoryManager::RegisterMemoryNotificationCallback Method</span></span>
 <span data-ttu-id="2fc38-103">Регистрирует указатель на функцию обратного вызова, основное приложение вызывает для уведомления общеязыковой среды выполнения (CLR) из текущей загруженности памяти компьютера.</span><span class="sxs-lookup"><span data-stu-id="2fc38-103">Registers a pointer to a callback function that the host invokes to notify the common language runtime (CLR) of the current memory load on the computer.</span></span>  

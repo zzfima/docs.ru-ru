@@ -14,6 +14,7 @@ ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "33955970"
 ---
 # <a name="event-c-reference"></a><span data-ttu-id="950bc-102">event (Справочник по C#)</span><span class="sxs-lookup"><span data-stu-id="950bc-102">event (C# Reference)</span></span>
 <span data-ttu-id="950bc-103">Ключевое слово `event` используется для объявления события в классе Publisher.</span><span class="sxs-lookup"><span data-stu-id="950bc-103">The `event` keyword is used to declare an event in a publisher class.</span></span>  

@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33523735"
 ---
 # <a name="using-a-brush-to-fill-shapes"></a><span data-ttu-id="afe96-102">Использование кисти для заливки фигур</span><span class="sxs-lookup"><span data-stu-id="afe96-102">Using a Brush to Fill Shapes</span></span>
 <span data-ttu-id="afe96-103">Объект [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] <xref:System.Drawing.Brush> объект используется для заливки замкнутой фигуры.</span><span class="sxs-lookup"><span data-stu-id="afe96-103">A [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] <xref:System.Drawing.Brush> object is used to fill the interior of a closed shape.</span></span> [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]<span data-ttu-id="afe96-104"> определены следующие стили заливки: сплошной цвет, шаблон штриховки, текстура с изображением и цветового градиента.</span><span class="sxs-lookup"><span data-stu-id="afe96-104"> defines several fill styles: solid color, hatch pattern, image texture, and color gradient.</span></span>  

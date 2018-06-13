@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: ce94765467899ac7c906b0dfcdf0ceb78c659b5f
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33448208"
 ---
 # <a name="imetadataemitdefineevent-method"></a><span data-ttu-id="3a2f6-102">Метод IMetaDataEmit::DefineEvent</span><span class="sxs-lookup"><span data-stu-id="3a2f6-102">IMetaDataEmit::DefineEvent Method</span></span>
 <span data-ttu-id="3a2f6-103">Создает определение события с заданной подписью метаданных и получает маркер для этого определения событий.</span><span class="sxs-lookup"><span data-stu-id="3a2f6-103">Creates a definition for an event with the specified metadata signature, and gets a token to that event definition.</span></span>  

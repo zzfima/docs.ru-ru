@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33536030"
 ---
 # <a name="limitations-of-the-windows-forms-timer-component39s-interval-property"></a><span data-ttu-id="dd30a-102">Ограничения компонента Timer в Windows Forms&#39;свойства Interval s</span><span class="sxs-lookup"><span data-stu-id="dd30a-102">Limitations of the Windows Forms Timer Component&#39;s Interval Property</span></span>
 <span data-ttu-id="dd30a-103">Windows Forms <xref:System.Windows.Forms.Timer> компонент имеет <xref:System.Windows.Forms.Timer.Interval%2A> свойство, которое указывает количество миллисекунд, которое проходит между событие таймера один, а затем.</span><span class="sxs-lookup"><span data-stu-id="dd30a-103">The Windows Forms <xref:System.Windows.Forms.Timer> component has an <xref:System.Windows.Forms.Timer.Interval%2A> property that specifies the number of milliseconds that pass between one timer event and the next.</span></span> <span data-ttu-id="dd30a-104">Если компонент не отключен, таймер для получения <xref:System.Windows.Forms.Timer.Tick> событий через приблизительно равные интервалы времени.</span><span class="sxs-lookup"><span data-stu-id="dd30a-104">Unless the component is disabled, a timer continues to receive the <xref:System.Windows.Forms.Timer.Tick> event at roughly equal intervals of time.</span></span>  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33490156"
 ---
 # <a name="how-to-access-services-with-a-duplex-contract"></a><span data-ttu-id="d023e-102">Практическое руководство. Доступ к службам с дуплексным контрактом</span><span class="sxs-lookup"><span data-stu-id="d023e-102">How to: Access Services with a Duplex Contract</span></span>
 <span data-ttu-id="d023e-103">Одна из возможностей Windows Communication Foundation (WCF) является возможность создать службу, использующую дуплексный шаблон обмена сообщениями.</span><span class="sxs-lookup"><span data-stu-id="d023e-103">One feature of Windows Communication Foundation (WCF) is the ability to create a service that uses a duplex messaging pattern.</span></span> <span data-ttu-id="d023e-104">Такой шаблон позволяет службе взаимодействовать с клиентом с помощью обратного вызова.</span><span class="sxs-lookup"><span data-stu-id="d023e-104">This pattern allows a service to communicate with the client through a callback.</span></span> <span data-ttu-id="d023e-105">В этом разделе показаны шаги для создания клиента WCF в клиентском классе, который реализует интерфейс обратного вызова.</span><span class="sxs-lookup"><span data-stu-id="d023e-105">This topic shows the steps to create a WCF client in a client class that implements the callback interface.</span></span>  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33541743"
 ---
 # <a name="attached-events-overview"></a><span data-ttu-id="1ed4e-102">Общие сведения о вложенных событиях</span><span class="sxs-lookup"><span data-stu-id="1ed4e-102">Attached Events Overview</span></span>
 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]<span data-ttu-id="1ed4e-103"> определяет компонент языка и тип события, называемый *присоединенным событием*.</span><span class="sxs-lookup"><span data-stu-id="1ed4e-103"> defines a language component and type of event called an *attached event*.</span></span> <span data-ttu-id="1ed4e-104">Концепция присоединенного события позволяет добавить обработчик для конкретного события в произвольный элемент, а не в элемент, который фактически определяет или наследует событие.</span><span class="sxs-lookup"><span data-stu-id="1ed4e-104">The concept of an attached event enables you to add a handler for a particular event to an arbitrary element rather than to an element that actually defines or inherits the event.</span></span> <span data-ttu-id="1ed4e-105">В этом случае ни объект, потенциально вызывающий событие, ни конечный обрабатывающий экземпляр не определяет или иным образом не "владеет" событием.</span><span class="sxs-lookup"><span data-stu-id="1ed4e-105">In this case, neither the object potentially raising the event nor the destination handling instance defines or otherwise "owns" the event.</span></span>  

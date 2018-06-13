@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 8f9852034f6d8208bdaa9b424f689adc374bae2d
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33443684"
 ---
 # <a name="ihostthreadpoolmanagersetminthreads-method"></a><span data-ttu-id="0b555-102">Метод IHostThreadPoolManager::SetMinThreads</span><span class="sxs-lookup"><span data-stu-id="0b555-102">IHostThreadPoolManager::SetMinThreads Method</span></span>
 <span data-ttu-id="0b555-103">Задает минимальное количество свободных потоков, которые должен поддерживать узла обработки запросов.</span><span class="sxs-lookup"><span data-stu-id="0b555-103">Sets the minimum number of idle threads that the host must maintain in anticipation of requests.</span></span>  

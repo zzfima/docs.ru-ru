@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 619a28d2382aa9cc3130a3130c07fa1e283119e4
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33437919"
 ---
 # <a name="idebuggerthreadcontrol-interface"></a><span data-ttu-id="460a0-102">Интерфейс IDebuggerThreadControl</span><span class="sxs-lookup"><span data-stu-id="460a0-102">IDebuggerThreadControl Interface</span></span>
 <span data-ttu-id="460a0-103">Предоставляет методы для уведомления узла о блокировании и разблокировании потоков службами отладки.</span><span class="sxs-lookup"><span data-stu-id="460a0-103">Provides methods for notifying the host about the blocking and unblocking of threads by the debugging services.</span></span>  

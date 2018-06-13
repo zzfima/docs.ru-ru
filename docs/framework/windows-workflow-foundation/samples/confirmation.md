@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33518851"
 ---
 # <a name="confirmation"></a><span data-ttu-id="ee10e-102">Подтверждение</span><span class="sxs-lookup"><span data-stu-id="ee10e-102">Confirmation</span></span>
 <span data-ttu-id="ee10e-103">В данном образце показаны четыре общих сценария, связанных с использованием <xref:System.Activities.Statements.CompensableActivity> и подтверждением.</span><span class="sxs-lookup"><span data-stu-id="ee10e-103">This sample shows four common scenarios surrounding the use of <xref:System.Activities.Statements.CompensableActivity> and confirmation.</span></span> <span data-ttu-id="ee10e-104">Для демонстрации подтверждения в образце запускаются четыре рабочих процесса.</span><span class="sxs-lookup"><span data-stu-id="ee10e-104">The sample runs four workflows to show confirmation.</span></span> <span data-ttu-id="ee10e-105">Доступны декларативная и императивная версии образца.</span><span class="sxs-lookup"><span data-stu-id="ee10e-105">This sample is available in declarative and imperative versions.</span></span>  

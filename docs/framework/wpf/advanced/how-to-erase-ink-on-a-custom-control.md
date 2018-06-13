@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33543251"
 ---
 # <a name="how-to-erase-ink-on-a-custom-control"></a><span data-ttu-id="1d9df-102">Практическое руководство. Удаление данных рукописного ввода в настраиваемом элементе управления</span><span class="sxs-lookup"><span data-stu-id="1d9df-102">How to: Erase Ink on a Custom Control</span></span>
 <span data-ttu-id="1d9df-103"><xref:System.Windows.Ink.IncrementalStrokeHitTester> Определяет, пересекается ли текущий росчерк stroke в другой.</span><span class="sxs-lookup"><span data-stu-id="1d9df-103">The <xref:System.Windows.Ink.IncrementalStrokeHitTester> determines whether the currently drawn stroke intersects another stroke.</span></span>  <span data-ttu-id="1d9df-104">Это полезно для создания элемента управления, который позволяет пользователю стирать части штриха, способ пользователь может выполнять на <xref:System.Windows.Controls.InkCanvas> при <xref:System.Windows.Controls.InkCanvas.EditingMode%2A> равно <xref:System.Windows.Controls.InkCanvasEditingMode.EraseByPoint>.</span><span class="sxs-lookup"><span data-stu-id="1d9df-104">This is useful for creating a control that enables a user to erase parts of a stroke, the way a user can on an <xref:System.Windows.Controls.InkCanvas> when the <xref:System.Windows.Controls.InkCanvas.EditingMode%2A> is set to <xref:System.Windows.Controls.InkCanvasEditingMode.EraseByPoint>.</span></span>  

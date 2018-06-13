@@ -12,6 +12,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34171997"
 ---
 # <a name="public-c-reference"></a><span data-ttu-id="9459e-102">public (справочник по C#)</span><span class="sxs-lookup"><span data-stu-id="9459e-102">public (C# Reference)</span></span>
 <span data-ttu-id="9459e-103">Ключевое слово `public` является модификатором доступа для типов и членов типов.</span><span class="sxs-lookup"><span data-stu-id="9459e-103">The `public` keyword is an access modifier for types and type members.</span></span> <span data-ttu-id="9459e-104">Общий доступ является уровнем доступа с максимальными правами.</span><span class="sxs-lookup"><span data-stu-id="9459e-104">Public access is the most permissive access level.</span></span> <span data-ttu-id="9459e-105">Ограничений доступа к общим членам не существует, как показано в следующем примере:</span><span class="sxs-lookup"><span data-stu-id="9459e-105">There are no restrictions on accessing public members, as in this example:</span></span>  

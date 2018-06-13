@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33517395"
 ---
 # <a name="using-editing-scope"></a><span data-ttu-id="4a3f7-102">Использование области редактирования</span><span class="sxs-lookup"><span data-stu-id="4a3f7-102">Using Editing Scope</span></span>
 <span data-ttu-id="4a3f7-103">В этом образце показано, как организовать набор изменений в пакет, чтобы отменить их как одну атомарную операцию.</span><span class="sxs-lookup"><span data-stu-id="4a3f7-103">This sample demonstrates how to batch a set of changes so that they can be undone in a single atomic unit.</span></span> <span data-ttu-id="4a3f7-104">По умолчанию действия, выполняемые автором конструктора действий, автоматически интегрируются в систему отмены и повтора.</span><span class="sxs-lookup"><span data-stu-id="4a3f7-104">By default, the actions taken by an activity designer author are automatically integrated into the Undo/Redo system.</span></span>  

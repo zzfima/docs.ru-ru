@@ -19,6 +19,7 @@ ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/18/2018
+ms.locfileid: "34233955"
 ---
 # <a name="application-domains"></a><span data-ttu-id="14d3b-102">Домены приложений</span><span class="sxs-lookup"><span data-stu-id="14d3b-102">Application Domains</span></span>
 <span data-ttu-id="14d3b-103">Операционные системы и среды выполнения обычно содержат определенные средства изоляции приложений друг от друга.</span><span class="sxs-lookup"><span data-stu-id="14d3b-103">Operating systems and runtime environments typically provide some form of isolation between applications.</span></span> <span data-ttu-id="14d3b-104">Например, в ОС Windows для изоляции приложений используются процессы.</span><span class="sxs-lookup"><span data-stu-id="14d3b-104">For example, Windows uses processes to isolate applications.</span></span> <span data-ttu-id="14d3b-105">Эта изоляция необходима, чтобы гарантировать, что код, выполняемый одним приложением, не сможет нарушить работу других, не связанных с ним приложений.</span><span class="sxs-lookup"><span data-stu-id="14d3b-105">This isolation is necessary to ensure that code running in one application cannot adversely affect other, unrelated applications.</span></span>  

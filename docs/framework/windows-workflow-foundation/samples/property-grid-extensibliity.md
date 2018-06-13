@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33519598"
 ---
 # <a name="property-grid-extensibliity"></a><span data-ttu-id="56473-102">Расширяемость сетки свойств</span><span class="sxs-lookup"><span data-stu-id="56473-102">Property Grid Extensibliity</span></span>
 <span data-ttu-id="56473-103">Разработчик может настроить сетку свойств, которая будет отображаться при выборе в редакторе определенного действия.</span><span class="sxs-lookup"><span data-stu-id="56473-103">A developer can customize the property grid that is displayed when a given activity is selected within the designer.</span></span> <span data-ttu-id="56473-104">Таким образом можно реализовать расширенные возможности редактирования.</span><span class="sxs-lookup"><span data-stu-id="56473-104">This can be done to create a rich editing experience.</span></span> <span data-ttu-id="56473-105">Они показываются в данном образце.</span><span class="sxs-lookup"><span data-stu-id="56473-105">This sample shows how this can be done.</span></span>  

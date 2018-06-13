@@ -8,6 +8,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32767314"
 ---
 # <a name="ltbehaviorsgt-of-workflow"></a><span data-ttu-id="619a5-102">&lt;варианты поведения&gt; рабочего процесса</span><span class="sxs-lookup"><span data-stu-id="619a5-102">&lt;behaviors&gt; of workflow</span></span>
 <span data-ttu-id="619a5-103">Этот элемент содержит **serviceBehaviors** коллекции.</span><span class="sxs-lookup"><span data-stu-id="619a5-103">This element contains the **serviceBehaviors** collection.</span></span>  <span data-ttu-id="619a5-104">Каждый элемент в коллекции определяет элементы поведения, используемые службами рабочего процесса.</span><span class="sxs-lookup"><span data-stu-id="619a5-104">Each element in the collection defines behavior elements consumed by workflow services.</span></span> <span data-ttu-id="619a5-105">Каждый элемент поведения идентифицируется по уникальному **имя** атрибута.</span><span class="sxs-lookup"><span data-stu-id="619a5-105">Each behavior element is identified by its unique **name** attribute.</span></span>  

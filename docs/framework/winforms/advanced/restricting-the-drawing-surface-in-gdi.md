@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33523927"
 ---
 # <a name="restricting-the-drawing-surface-in-gdi"></a><span data-ttu-id="b643f-102">Ограничение поверхности для рисования в GDI+</span><span class="sxs-lookup"><span data-stu-id="b643f-102">Restricting the Drawing Surface in GDI+</span></span>
 <span data-ttu-id="b643f-103">Отсечение заключается в запрете на рисование прямоугольника или области.</span><span class="sxs-lookup"><span data-stu-id="b643f-103">Clipping involves restricting drawing to a certain rectangle or region.</span></span> <span data-ttu-id="b643f-104">Ниже показаны строки «Hello», ограничивается в область в форме основа.</span><span class="sxs-lookup"><span data-stu-id="b643f-104">The following illustration shows the string "Hello" clipped to a heart-shaped region.</span></span>  

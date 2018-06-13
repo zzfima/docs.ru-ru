@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32767405"
 ---
 # <a name="navigation-property"></a><span data-ttu-id="14a01-102">свойство навигации</span><span class="sxs-lookup"><span data-stu-id="14a01-102">navigation property</span></span>
 <span data-ttu-id="14a01-103">Объект *свойство навигации* — это необязательное свойство на [тип сущности](../../../../docs/framework/data/adonet/entity-type.md) , позволяет переходить от одной [окончания](../../../../docs/framework/data/adonet/association-end.md) из [ассоциации](../../../../docs/framework/data/adonet/association-type.md) для другой конец.</span><span class="sxs-lookup"><span data-stu-id="14a01-103">A *navigation property* is an optional property on an [entity type](../../../../docs/framework/data/adonet/entity-type.md) that allows for navigation from one [end](../../../../docs/framework/data/adonet/association-end.md) of an [association](../../../../docs/framework/data/adonet/association-type.md) to the other end.</span></span> <span data-ttu-id="14a01-104">В отличие от других [свойства](../../../../docs/framework/data/adonet/property.md), свойства навигации не содержат данных.</span><span class="sxs-lookup"><span data-stu-id="14a01-104">Unlike other [properties](../../../../docs/framework/data/adonet/property.md), navigation properties do not carry data.</span></span>  

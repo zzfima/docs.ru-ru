@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33493442"
 ---
 # <a name="metadata-formats"></a><span data-ttu-id="4b676-102">Форматы метаданных</span><span class="sxs-lookup"><span data-stu-id="4b676-102">Metadata Formats</span></span>
 <span data-ttu-id="4b676-103">Форматы метаданных, поддерживаемые Windows Communication Foundation (WCF) в таблице ниже.</span><span class="sxs-lookup"><span data-stu-id="4b676-103">Windows Communication Foundation (WCF) supports the metadata formats in the following table.</span></span>  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33334838"
 ---
 # <a name="how-to-create-a-file-or-folder-c-programming-guide"></a><span data-ttu-id="6429c-102">Практическое руководство. Создание файла или папки (Руководство по программированию на C#)</span><span class="sxs-lookup"><span data-stu-id="6429c-102">How to: Create a File or Folder (C# Programming Guide)</span></span>
 <span data-ttu-id="6429c-103">Вы можете программно создать на компьютере папку, вложенную папку и файл во вложенной папке, а затем записать данные в этот файл.</span><span class="sxs-lookup"><span data-stu-id="6429c-103">You can programmatically create a folder on your computer, create a subfolder, create a file in the subfolder, and write data to the file.</span></span>  

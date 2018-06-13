@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33520257"
 ---
 # <a name="serializing-workflows-and-activities-to-and-from-xaml"></a><span data-ttu-id="ed157-102">Сериализация рабочих процессов и действий в XAML и обратно</span><span class="sxs-lookup"><span data-stu-id="ed157-102">Serializing Workflows and Activities to and from XAML</span></span>
 <span data-ttu-id="ed157-103">Кроме компиляции в содержащиеся в сборках типы определения рабочих процессов также могут быть сериализованы в XAML.</span><span class="sxs-lookup"><span data-stu-id="ed157-103">In addition to being compiled into types that are contained in assemblies, workflow definitions can also be serialized to XAML.</span></span> <span data-ttu-id="ed157-104">Такие сериализованные определения могут быть загружены повторно для редактирования или просмотра, переданы в систему сборки для компиляции или загружены и вызваны.</span><span class="sxs-lookup"><span data-stu-id="ed157-104">These serialized definitions can be reloaded for editing or inspection, passed to a build system for compilation, or loaded and invoked.</span></span> <span data-ttu-id="ed157-105">В этом разделе представлены общие сведения о сериализации определений рабочих процессов и работе с определениями рабочих процессов языка XAML.</span><span class="sxs-lookup"><span data-stu-id="ed157-105">This topic provides an overview of serializing workflow definitions and working with XAML workflow definitions.</span></span>  

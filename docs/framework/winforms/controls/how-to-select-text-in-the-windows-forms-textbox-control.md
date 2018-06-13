@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33536698"
 ---
 # <a name="how-to-select-text-in-the-windows-forms-textbox-control"></a><span data-ttu-id="70c3a-102">Практическое руководство. Выделение текста в элементе управления TextBox в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="70c3a-102">How to: Select Text in the Windows Forms TextBox Control</span></span>
 <span data-ttu-id="70c3a-103">Выделите текст программными средствами в Windows Forms <xref:System.Windows.Forms.TextBox> элемента управления.</span><span class="sxs-lookup"><span data-stu-id="70c3a-103">You can select text programmatically in the Windows Forms <xref:System.Windows.Forms.TextBox> control.</span></span> <span data-ttu-id="70c3a-104">Например при создании функции, которая выполняет текст для определенной строки, можно выбрать текст для визуального уведомления положения найденной строки.</span><span class="sxs-lookup"><span data-stu-id="70c3a-104">For example, if you create a function that searches text for a particular string, you can select the text to visually alert the reader of the found string's position.</span></span>  

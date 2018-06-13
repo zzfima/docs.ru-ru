@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33529264"
 ---
 # <a name="bindingsource-component-architecture"></a><span data-ttu-id="92abf-102">Архитектура компонента BindingSource</span><span class="sxs-lookup"><span data-stu-id="92abf-102">BindingSource Component Architecture</span></span>
 <span data-ttu-id="92abf-103">С <xref:System.Windows.Forms.BindingSource> компонент глобально, все элементы управления Windows Forms можно привязать к источникам данных.</span><span class="sxs-lookup"><span data-stu-id="92abf-103">With the <xref:System.Windows.Forms.BindingSource> component, you can universally bind  all Windows Forms controls to data sources.</span></span>  

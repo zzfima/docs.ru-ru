@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33485369"
 ---
 # <a name="custom-tokens"></a><span data-ttu-id="6368a-102">Пользовательские маркеры</span><span class="sxs-lookup"><span data-stu-id="6368a-102">Custom Tokens</span></span>
 <span data-ttu-id="6368a-103">Несмотря на то, что Windows Communication Foundation (WCF) поддерживает сертификаты X.509, маркеры контекста безопасности, билетов Kerberos и маркеров имени пользователя в качестве учетных данных, является достаточно гибким, чтобы можно было использовать пользовательские учетные данные.</span><span class="sxs-lookup"><span data-stu-id="6368a-103">Although Windows Communication Foundation (WCF) natively supports X.509 certificates, Security Context Tokens, Kerberos tickets, and user name tokens as credentials, it is flexible enough to allow you to use your own custom credentials.</span></span>  

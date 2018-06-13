@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33533745"
 ---
 # <a name="how-to-set-the-image-displayed-by-a-windows-forms-control"></a><span data-ttu-id="5bf67-102">Практическое руководство. Определение изображения, отображаемого элементом управления Windows Forms</span><span class="sxs-lookup"><span data-stu-id="5bf67-102">How to: Set the Image Displayed by a Windows Forms Control</span></span>
 <span data-ttu-id="5bf67-103">Несколько элементов управления Windows Forms можно отображать изображения.</span><span class="sxs-lookup"><span data-stu-id="5bf67-103">Several Windows Forms controls can display images.</span></span> <span data-ttu-id="5bf67-104">Эти образы могут использоваться значки, поясняющие назначение элемента управления, например, значок дискеты на кнопке, отвечающий за **Сохранить** команды.</span><span class="sxs-lookup"><span data-stu-id="5bf67-104">These images can be icons that clarify the purpose of the control, such as a diskette icon on a button denoting the **Save** command.</span></span> <span data-ttu-id="5bf67-105">Кроме того значок может быть фоновые изображения, чтобы предоставить элемент управления, внешний вид и поведение.</span><span class="sxs-lookup"><span data-stu-id="5bf67-105">Alternatively, the icons can be background images to give the control the appearance and behavior you want.</span></span>  

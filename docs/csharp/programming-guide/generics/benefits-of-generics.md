@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33336834"
 ---
 # <a name="benefits-of-generics-c-programming-guide"></a><span data-ttu-id="52b38-102">Преимущества универсальных шаблонов (Руководство по программированию на C#)</span><span class="sxs-lookup"><span data-stu-id="52b38-102">Benefits of Generics (C# Programming Guide)</span></span>
 <span data-ttu-id="52b38-103">Универсальные шаблоны позволяют обойти ограничение, существовавшее в более ранних версиях общеязыковой среды выполнения (CLR) и языка C#, из-за которого обобщение реализовывалось путем приведения типов к универсальному базовому типу <xref:System.Object> или из него.</span><span class="sxs-lookup"><span data-stu-id="52b38-103">Generics provide the solution to a limitation in earlier versions of the common language runtime and the C# language in which generalization is accomplished by casting types to and from the universal base type <xref:System.Object>.</span></span> <span data-ttu-id="52b38-104">Создавая универсальный класс, вы можете создать коллекцию, которая будет типобезопасной во время компиляции.</span><span class="sxs-lookup"><span data-stu-id="52b38-104">By creating a generic class, you can create a collection that is type-safe at compile-time.</span></span>  

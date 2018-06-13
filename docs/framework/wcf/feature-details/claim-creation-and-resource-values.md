@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33488056"
 ---
 # <a name="claim-creation-and-resource-values"></a><span data-ttu-id="9614d-102">Создание утверждений и значения ресурсов</span><span class="sxs-lookup"><span data-stu-id="9614d-102">Claim Creation and Resource Values</span></span>
 <span data-ttu-id="9614d-103">Класс <xref:System.IdentityModel.Claims.Claim> предоставляет несколько методов для создания экземпляров встроенных типов утверждений.</span><span class="sxs-lookup"><span data-stu-id="9614d-103">The <xref:System.IdentityModel.Claims.Claim> class provides several methods for creating instances of built-in claims types.</span></span> <span data-ttu-id="9614d-104">Из этих методов следующие не выполняют проверки семантики или формата переданного ресурса:</span><span class="sxs-lookup"><span data-stu-id="9614d-104">Of these methods, the following perform no semantic or format checking on the supplied resource:</span></span>  

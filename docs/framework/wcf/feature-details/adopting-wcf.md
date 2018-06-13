@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33489135"
 ---
 # <a name="adopting-windows-communication-foundation"></a><span data-ttu-id="b0e28-102">Переход на платформу Windows Communication Foundation</span><span class="sxs-lookup"><span data-stu-id="b0e28-102">Adopting Windows Communication Foundation</span></span>
 <span data-ttu-id="b0e28-103">Можно использовать Windows Communication Foundation (WCF) для новых разработок, продолжая поддерживать существующие приложения разработки с помощью ASP.NET.</span><span class="sxs-lookup"><span data-stu-id="b0e28-103">You can choose to use Windows Communication Foundation (WCF) for new development, while continuing to maintain existing applications developed using ASP.NET.</span></span> <span data-ttu-id="b0e28-104">Поскольку WCF должно быть самым подходящим выбором для обеспечения взаимодействия с приложениями, созданными на .NET Framework в любом сценарии, его можно использовать в качестве стандартного инструмента для решения разнообразных проблем обмена данными между программного обеспечения таким образом, ASP.NET не удается.</span><span class="sxs-lookup"><span data-stu-id="b0e28-104">Because WCF is intended to be the most suitable choice for facilitating communication with applications built with the .NET Framework in any scenario, it can serve as a standard tool for solving a wide variety of software communications problems in a way that ASP.NET cannot.</span></span>  

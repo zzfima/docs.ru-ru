@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33532113"
 ---
 # <a name="how-to-define-z-ordering-of-docked-toolstrip-controls"></a><span data-ttu-id="f7cdb-102">Практическое руководство. Определение z-порядка закрепленных элементов управления ToolStrip</span><span class="sxs-lookup"><span data-stu-id="f7cdb-102">How to: Define Z-Ordering of Docked ToolStrip Controls</span></span>
 <span data-ttu-id="f7cdb-103">Чтобы правильно расположить закрепленный элемент управления <xref:System.Windows.Forms.ToolStrip>, следует правильно выбрать положение этого элемента управления в z-порядке формы.</span><span class="sxs-lookup"><span data-stu-id="f7cdb-103">To position a <xref:System.Windows.Forms.ToolStrip> control correctly with docking, you must position the control correctly in the form's z-order.</span></span>  

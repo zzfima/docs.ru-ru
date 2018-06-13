@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: fb37394799db39baa406ef332066d5ebb2dbf19d
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33441933"
 ---
 # <a name="waitoption-enumeration"></a><span data-ttu-id="c8194-102">Перечисление WAIT_OPTION</span><span class="sxs-lookup"><span data-stu-id="c8194-102">WAIT_OPTION Enumeration</span></span>
 <span data-ttu-id="c8194-103">Содержит значения, указывающие, что необходимо выполнить действия узла, если операцию, запрошенную среды выполнения (CLR) блоками выполнения.</span><span class="sxs-lookup"><span data-stu-id="c8194-103">Contains values that indicate the action a host should take if an operation requested by the common language runtime (CLR) blocks.</span></span>  

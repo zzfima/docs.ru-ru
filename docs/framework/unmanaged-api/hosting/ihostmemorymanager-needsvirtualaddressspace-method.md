@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 87c97a678fce4c25a113670a4668515a898e5251
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33438422"
 ---
 # <a name="ihostmemorymanagerneedsvirtualaddressspace-method"></a><span data-ttu-id="dfa39-102">Метод IHostMemoryManager::NeedsVirtualAddressSpace</span><span class="sxs-lookup"><span data-stu-id="dfa39-102">IHostMemoryManager::NeedsVirtualAddressSpace Method</span></span>
 <span data-ttu-id="dfa39-103">Уведомляет основное приложение, общеязыковой среды выполнения (CLR) будет пытаться использовать указанный объем памяти.</span><span class="sxs-lookup"><span data-stu-id="dfa39-103">Notifies the host that the common language runtime (CLR) is going to attempt to use the specified memory.</span></span>  

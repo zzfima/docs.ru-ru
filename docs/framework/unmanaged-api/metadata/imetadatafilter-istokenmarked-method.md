@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 5bf5149e8e42a810a6a490767638b374f66b5679
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33445868"
 ---
 # <a name="imetadatafilteristokenmarked-method"></a><span data-ttu-id="c1662-102">Метод IMetaDataFilter::IsTokenMarked</span><span class="sxs-lookup"><span data-stu-id="c1662-102">IMetaDataFilter::IsTokenMarked Method</span></span>
 <span data-ttu-id="c1662-103">Возвращает значение, указывающее, помечена ли указанный токен метаданных обработки.</span><span class="sxs-lookup"><span data-stu-id="c1662-103">Gets a value indicating whether the specified metadata token has been marked as processed.</span></span>  

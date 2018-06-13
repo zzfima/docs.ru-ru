@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33542240"
 ---
 # <a name="windows-forms-security"></a><span data-ttu-id="b2091-102">Безопасность Windows Forms</span><span class="sxs-lookup"><span data-stu-id="b2091-102">Windows Forms Security</span></span>
 <span data-ttu-id="b2091-103">Windows Forms представляют модель безопасности, основанная на коде (безопасности уровни заданы для кода, независимо от того, пользователь, запускающий код).</span><span class="sxs-lookup"><span data-stu-id="b2091-103">Windows Forms features a security model that is code-based (security levels are set for code, regardless of the user running the code).</span></span> <span data-ttu-id="b2091-104">Это дополнение всем схемам безопасности, которые могут быть выполнены уже на компьютерах пользователей.</span><span class="sxs-lookup"><span data-stu-id="b2091-104">This is in addition to any security schemas that may be in place already on your computer system.</span></span> <span data-ttu-id="b2091-105">Сюда могут относиться в браузере (например, безопасность на основе зон в Internet Explorer) или для операционной системы (например, безопасность Windows NT, основанная на учетных данных).</span><span class="sxs-lookup"><span data-stu-id="b2091-105">These can include those in the browser (such as the zone-based security available in Internet Explorer) or the operating system (such as the credential-based security of Windows NT).</span></span>  

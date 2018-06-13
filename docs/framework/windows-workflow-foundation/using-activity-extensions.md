@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33517229"
 ---
 # <a name="using-activity-extensions"></a><span data-ttu-id="bbb7c-102">Использование модулей действий</span><span class="sxs-lookup"><span data-stu-id="bbb7c-102">Using Activity Extensions</span></span>
 <span data-ttu-id="bbb7c-103">Действия могут взаимодействовать с расширениями приложений рабочих процессов. Благодаря этому узел может предоставлять дополнительные возможности, которые не были явно смоделированы в рабочем процессе.</span><span class="sxs-lookup"><span data-stu-id="bbb7c-103">Activities can interact with workflow application extensions that allow the host to provide additional functionality that is not explicitly modeled in the workflow.</span></span>  <span data-ttu-id="bbb7c-104">В этом разделе описывается создание расширений для подсчета количества выполнений действия.</span><span class="sxs-lookup"><span data-stu-id="bbb7c-104">This topic describes how to create and use an extension to count the number of times the activity executes.</span></span>  

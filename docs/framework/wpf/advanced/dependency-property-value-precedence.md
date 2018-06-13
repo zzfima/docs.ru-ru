@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33541941"
 ---
 # <a name="dependency-property-value-precedence"></a><span data-ttu-id="64f94-102">Приоритет значения свойств зависимостей</span><span class="sxs-lookup"><span data-stu-id="64f94-102">Dependency Property Value Precedence</span></span>
 <a name="introduction"></a> <span data-ttu-id="64f94-103">В этом разделе рассказывается, как работа системы свойств [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] может повлиять на значение свойства зависимости, и описывается приоритет применения аспектов системы свойств к действительному значению свойства.</span><span class="sxs-lookup"><span data-stu-id="64f94-103">This topic explains how the workings of the [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] property system can affect the value of a dependency property, and describes the precedence by which aspects of the property system apply to the effective value of a property.</span></span>  

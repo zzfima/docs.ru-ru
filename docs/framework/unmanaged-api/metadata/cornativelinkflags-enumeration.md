@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 98a83a64a692955d5627e891e7fb3a3ef6f53476
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33442573"
 ---
 # <a name="cornativelinkflags-enumeration"></a><span data-ttu-id="acfe8-102">Перечисление CorNativeLinkFlags</span><span class="sxs-lookup"><span data-stu-id="acfe8-102">CorNativeLinkFlags Enumeration</span></span>
 <span data-ttu-id="acfe8-103">Предоставляет значения флагов, используемые компоновщиком при связывании машинного кода.</span><span class="sxs-lookup"><span data-stu-id="acfe8-103">Provides flag values used by the linker when linking native code.</span></span>  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33524707"
 ---
 # <a name="lines-curves-and-shapes"></a><span data-ttu-id="abe8e-102">Прямые и кривые линии и фигуры</span><span class="sxs-lookup"><span data-stu-id="abe8e-102">Lines, Curves, and Shapes</span></span>
 <span data-ttu-id="abe8e-103">Векторной графики часть [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] используется для рисования линий, рисование кривых, а также для рисования и заливки фигур.</span><span class="sxs-lookup"><span data-stu-id="abe8e-103">The vector graphics portion of [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] is used to draw lines, draw curves, and to draw and fill shapes.</span></span>  

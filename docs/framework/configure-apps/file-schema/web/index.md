@@ -17,6 +17,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32767483"
 ---
 # <a name="web-settings-schema"></a><span data-ttu-id="5ec53-102">Схема веб-параметров</span><span class="sxs-lookup"><span data-stu-id="5ec53-102">Web Settings Schema</span></span>
 <span data-ttu-id="5ec53-103">Веб-параметры определяют настройки ЦП и настройки ASP.NET на уровне выполнения, которые относятся к поведению процессов, управляемых уровнем размещения ASP.NET.</span><span class="sxs-lookup"><span data-stu-id="5ec53-103">Web settings specify CPU and execution-level ASP.NET settings that apply to process-wide behavior managed by the ASP.NET hosting layer.</span></span> <span data-ttu-id="5ec53-104">Эти параметры отличаются от параметров типа домена приложения, которые задаются в файле Web.config приложения ASP.NET.</span><span class="sxs-lookup"><span data-stu-id="5ec53-104">These settings differ from application domain-type settings that are specified in the Web.config file of an ASP.NET application.</span></span>  

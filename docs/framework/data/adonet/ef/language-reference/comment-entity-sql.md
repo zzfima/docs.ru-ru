@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32764168"
 ---
 # <a name="---comment-entity-sql"></a><span data-ttu-id="71342-102">-- (комментарий) (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="71342-102">-- (Comment) (Entity SQL)</span></span>
 <span data-ttu-id="71342-103">Запросы[!INCLUDE[esql](../../../../../../includes/esql-md.md)] могут содержать комментарии.</span><span class="sxs-lookup"><span data-stu-id="71342-103">[!INCLUDE[esql](../../../../../../includes/esql-md.md)] queries can contain comments.</span></span> <span data-ttu-id="71342-104">Строка комментария начинается с двух дефисов (`--`).</span><span class="sxs-lookup"><span data-stu-id="71342-104">Two dashes (`--`) start a comment line.</span></span>  

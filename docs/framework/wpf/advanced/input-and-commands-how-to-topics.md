@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33544292"
 ---
 # <a name="input-and-commands-how-to-topics"></a><span data-ttu-id="74742-102">Практические руководства, посвященные входным данным и командам</span><span class="sxs-lookup"><span data-stu-id="74742-102">Input and Commands How-to Topics</span></span>
 <span data-ttu-id="74742-103">В подразделах этого раздела описывается, как использовать инфраструктуру ввода и команд в Windows Presentation Foundation (WPF).</span><span class="sxs-lookup"><span data-stu-id="74742-103">The topics in this section describe how to use the input and commanding infrastructure in Windows Presentation Foundation (WPF).</span></span>  

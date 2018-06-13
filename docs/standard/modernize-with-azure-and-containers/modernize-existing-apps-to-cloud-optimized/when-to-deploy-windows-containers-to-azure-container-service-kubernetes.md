@@ -9,6 +9,7 @@ ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "33958174"
 ---
 # <a name="when-to-deploy-windows-containers-to-azure-container-service-that-is-kubernetes"></a><span data-ttu-id="e65d8-103">Если развернуть контейнеры Windows Azure контейнер службе (то есть, Kubernetes)</span><span class="sxs-lookup"><span data-stu-id="e65d8-103">When to deploy Windows Containers to Azure Container Service (that is, Kubernetes)</span></span>
 

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33542380"
 ---
 # <a name="handwriting-recognition"></a><span data-ttu-id="7716c-102">Распознавание рукописного ввода</span><span class="sxs-lookup"><span data-stu-id="7716c-102">Handwriting Recognition</span></span>
 <span data-ttu-id="7716c-103">В этом разделе рассматриваются базовые понятия, связанные с распознаванием рукописного ввода на платформе WPF.</span><span class="sxs-lookup"><span data-stu-id="7716c-103">This section discusses the fundamentals of recognition as it pertains to digital ink in the WPF platform.</span></span>  

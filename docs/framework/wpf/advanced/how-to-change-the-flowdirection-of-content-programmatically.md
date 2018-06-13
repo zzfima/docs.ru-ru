@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33543410"
 ---
 # <a name="how-to-change-the-flowdirection-of-content-programmatically"></a><span data-ttu-id="f9c09-102">Как изменить FlowDirection содержимого программными средствами</span><span class="sxs-lookup"><span data-stu-id="f9c09-102">How to: Change the FlowDirection of Content Programmatically</span></span>
 <span data-ttu-id="f9c09-103">В этом примере показано, как программно изменить <xref:System.Windows.FrameworkElement.FlowDirection%2A> свойство <xref:System.Windows.Controls.FlowDocumentReader>.</span><span class="sxs-lookup"><span data-stu-id="f9c09-103">This example shows how to programmatically change the <xref:System.Windows.FrameworkElement.FlowDirection%2A> property of a <xref:System.Windows.Controls.FlowDocumentReader>.</span></span>  

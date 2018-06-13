@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33336060"
 ---
 # <a name="creating-and-throwing-exceptions-c-programming-guide"></a><span data-ttu-id="abef1-102">Создание и генерация исключений (Руководство по программированию C#)</span><span class="sxs-lookup"><span data-stu-id="abef1-102">Creating and Throwing Exceptions (C# Programming Guide)</span></span>
 <span data-ttu-id="abef1-103">Исключения позволяют обозначить, что во время выполнения программы произошла ошибка.</span><span class="sxs-lookup"><span data-stu-id="abef1-103">Exceptions are used to indicate that an error has occurred while running the program.</span></span> <span data-ttu-id="abef1-104">Объекты исключений, описывающие ошибку, создаются и затем *вызываются* с помощью ключевого слова [throw](../../../csharp/language-reference/keywords/throw.md).</span><span class="sxs-lookup"><span data-stu-id="abef1-104">Exception objects that describe an error are created and then *thrown* with the [throw](../../../csharp/language-reference/keywords/throw.md) keyword.</span></span> <span data-ttu-id="abef1-105">Далее среда выполнения ищет наиболее совместимый обработчик исключений.</span><span class="sxs-lookup"><span data-stu-id="abef1-105">The runtime then searches for the most compatible exception handler.</span></span>  

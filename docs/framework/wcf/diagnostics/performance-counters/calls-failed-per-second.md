@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33474458"
 ---
 # <a name="calls-failed-per-second"></a><span data-ttu-id="c0119-102">Количество сбоев вызовов в секунду</span><span class="sxs-lookup"><span data-stu-id="c0119-102">Calls Failed Per Second</span></span>
 <span data-ttu-id="c0119-103">Имя счетчика: Calls Failed Per Second</span><span class="sxs-lookup"><span data-stu-id="c0119-103">Counter Name: Calls Failed Per Second</span></span>  

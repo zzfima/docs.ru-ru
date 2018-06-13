@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33517362"
 ---
 # <a name="windows-workflow-wf-samples"></a><span data-ttu-id="bdbd5-102">Образцы Windows Workflow (WF)</span><span class="sxs-lookup"><span data-stu-id="bdbd5-102">Windows Workflow (WF) Samples</span></span>
 <span data-ttu-id="bdbd5-103">В этих примерах приведены инструкции по различным аспектам Windows Workflow Foundation (WF).</span><span class="sxs-lookup"><span data-stu-id="bdbd5-103">These samples provide instruction on various aspects of Windows Workflow Foundation (WF).</span></span>  

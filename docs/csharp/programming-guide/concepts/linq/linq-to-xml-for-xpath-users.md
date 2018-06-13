@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33337900"
 ---
 # <a name="linq-to-xml-for-xpath-users-c"></a><span data-ttu-id="88a9b-102">LINQ to XML для пользователей XPath (C#)</span><span class="sxs-lookup"><span data-stu-id="88a9b-102">LINQ to XML for XPath Users (C#)</span></span>
 <span data-ttu-id="88a9b-103">В данном ряде разделов показаны несколько выражений XPath и их эквиваленты [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].</span><span class="sxs-lookup"><span data-stu-id="88a9b-103">This set of topics show a number of XPath expressions and their [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] equivalents.</span></span>  

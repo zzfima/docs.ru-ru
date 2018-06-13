@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33537477"
 ---
 # <a name="digital-ink"></a><span data-ttu-id="3385c-102">Рукописный ввод</span><span class="sxs-lookup"><span data-stu-id="3385c-102">Digital Ink</span></span>
 <span data-ttu-id="3385c-103">В этом разделе обсуждается использование рукописного ввода в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].</span><span class="sxs-lookup"><span data-stu-id="3385c-103">This section discusses the use of digital ink in the [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].</span></span> <span data-ttu-id="3385c-104">В большинстве случаев найден только в SDK для планшетных ПК, рукописного теперь доступен в ядро Windows Presentation Foundation.</span><span class="sxs-lookup"><span data-stu-id="3385c-104">Traditionally found only in the Tablet PC SDK, digital ink is now available in the core Windows Presentation Foundation.</span></span> <span data-ttu-id="3385c-105">Это означает, что теперь можно разрабатывать полноценные приложений для планшетных ПК с помощью возможностей Windows Presentation Foundation.</span><span class="sxs-lookup"><span data-stu-id="3385c-105">This means you can now develop full-fledged Tablet PC applications by using the power of Windows Presentation Foundation.</span></span>  

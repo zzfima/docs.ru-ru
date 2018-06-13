@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33535968"
 ---
 # <a name="soundplayer-class-overview"></a><span data-ttu-id="8975d-102">Общие сведения о классе SoundPlayer</span><span class="sxs-lookup"><span data-stu-id="8975d-102">SoundPlayer Class Overview</span></span>
 <span data-ttu-id="8975d-103">Класс <xref:System.Media.SoundPlayer> позволяет облегчить добавление звуков в приложениях.</span><span class="sxs-lookup"><span data-stu-id="8975d-103">The <xref:System.Media.SoundPlayer> class enables you to easily include sounds in your applications.</span></span>  

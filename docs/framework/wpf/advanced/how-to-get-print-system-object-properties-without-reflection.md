@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33544735"
 ---
 # <a name="how-to-get-print-system-object-properties-without-reflection"></a><span data-ttu-id="8dbc0-102">Практическое руководство. Получение свойств объекта системы печати без отражения</span><span class="sxs-lookup"><span data-stu-id="8dbc0-102">How to: Get Print System Object Properties Without Reflection</span></span>
 <span data-ttu-id="8dbc0-103">Использование отражения для перечисления свойств (и типов этих свойств) в объекте может снизить производительность приложения.</span><span class="sxs-lookup"><span data-stu-id="8dbc0-103">Using reflection to itemize the properties (and the types of those properties) on an object can slow application performance.</span></span> <span data-ttu-id="8dbc0-104"><xref:System.Printing.IndexedProperties> Пространство имен служит для передачи этой информации с помощью отражения.</span><span class="sxs-lookup"><span data-stu-id="8dbc0-104">The <xref:System.Printing.IndexedProperties> namespace provides a means to getting this information with using reflection.</span></span>  

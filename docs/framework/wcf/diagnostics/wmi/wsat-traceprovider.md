@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33485354"
 ---
 # <a name="wsattraceprovider"></a><span data-ttu-id="f35c4-102">WSAT_TraceProvider</span><span class="sxs-lookup"><span data-stu-id="f35c4-102">WSAT_TraceProvider</span></span>
 <span data-ttu-id="f35c4-103">WSAT_TraceProvider</span><span class="sxs-lookup"><span data-stu-id="f35c4-103">WSAT_TraceProvider</span></span>  

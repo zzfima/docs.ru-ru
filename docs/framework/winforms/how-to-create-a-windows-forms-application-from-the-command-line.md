@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33539495"
 ---
 # <a name="how-to-create-a-windows-forms-application-from-the-command-line"></a><span data-ttu-id="dc320-102">Как: Создание приложения Windows Forms из командной строки</span><span class="sxs-lookup"><span data-stu-id="dc320-102">How to: Create a Windows Forms application from the command line</span></span>
 <span data-ttu-id="dc320-103">В процедурах ниже описаны основные шаги, которые необходимо выполнить для создания и запуска приложения Windows Forms из командной строки.</span><span class="sxs-lookup"><span data-stu-id="dc320-103">The following procedures describe the basic steps that you must complete to create and run a Windows Forms application from the command line.</span></span> <span data-ttu-id="dc320-104">Visual Studio предлагает расширенную поддержку этих процедур.</span><span class="sxs-lookup"><span data-stu-id="dc320-104">There is extensive support for these procedures in Visual Studio.</span></span>  <span data-ttu-id="dc320-105">См. также [Пошаговое руководство: создание простой формы Windows Forms](http://msdn.microsoft.com/library/z9w2f38k\(v=vs.100\)).</span><span class="sxs-lookup"><span data-stu-id="dc320-105">Also see [Walkthrough: Creating a Simple Windows Form](http://msdn.microsoft.com/library/z9w2f38k\(v=vs.100\)).</span></span>  

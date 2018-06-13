@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33493203"
 ---
 # <a name="correlation-overview"></a><span data-ttu-id="ebdd2-102">Общие сведения о корреляции</span><span class="sxs-lookup"><span data-stu-id="ebdd2-102">Correlation Overview</span></span>
 <span data-ttu-id="ebdd2-103">Корреляция - это механизм связи сообщений службы рабочего процесса друг с другом или с состоянием экземпляра приложения, таким как ответ на начальный запрос, или с определенным идентификатором запроса к сохраненному состоянию рабочего процесса обработки запросов.</span><span class="sxs-lookup"><span data-stu-id="ebdd2-103">Correlation is the mechanism for relating workflow service messages to each other or to the application instance state, such as a reply to an initial request, or a particular order ID to the persisted state of an order-processing workflow.</span></span> <span data-ttu-id="ebdd2-104">В данном разделе приведены общие сведения о корреляции.</span><span class="sxs-lookup"><span data-stu-id="ebdd2-104">This topic provides an overview of correlation.</span></span> <span data-ttu-id="ebdd2-105">В других подразделах этого раздела содержатся дополнительные сведения о каждом из видов корреляции.</span><span class="sxs-lookup"><span data-stu-id="ebdd2-105">The other topics in this section provide additional information for each type of correlation.</span></span>  

@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: e9dfd97ce5b9b192b9a2e88e3d7e4f963d929f47
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33449264"
 ---
 # <a name="imetadataemit2savedeltatostream-method"></a><span data-ttu-id="e669a-102">Метод IMetaDataEmit2::SaveDeltaToStream</span><span class="sxs-lookup"><span data-stu-id="e669a-102">IMetaDataEmit2::SaveDeltaToStream Method</span></span>
 <span data-ttu-id="e669a-103">Сохраняет изменения в текущем сеансе edit and continue в указанный поток.</span><span class="sxs-lookup"><span data-stu-id="e669a-103">Saves changes from the current edit-and-continue session to the specified stream.</span></span>  
