@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33393859"
 ---
 # <a name="exception-thrownv1-etw-event"></a><span data-ttu-id="936e3-102">Событие ExceptionThrown_V1 (трассировка событий Windows)</span><span class="sxs-lookup"><span data-stu-id="936e3-102">Exception Thrown_V1 ETW Event</span></span>
 <span data-ttu-id="936e3-103">Это событие захватывает информацию о вызванных исключениях.</span><span class="sxs-lookup"><span data-stu-id="936e3-103">This event captures information about the exceptions that are thrown.</span></span>  

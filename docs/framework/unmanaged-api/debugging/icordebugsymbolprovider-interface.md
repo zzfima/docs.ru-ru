@@ -6,9 +6,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 4e9f475ee3c46b8abb94ce7f804cc8b4a8054ec2
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33423212"
 ---
 # <a name="icordebugsymbolprovider-interface"></a><span data-ttu-id="a801a-102">Интерфейс ICorDebugSymbolProvider</span><span class="sxs-lookup"><span data-stu-id="a801a-102">ICorDebugSymbolProvider Interface</span></span>
 <span data-ttu-id="a801a-103">Предоставляет методы, которые могут использоваться для получения сведений об отладочных символах.</span><span class="sxs-lookup"><span data-stu-id="a801a-103">Provides methods that can be used to retrieve debug symbol information.</span></span>  

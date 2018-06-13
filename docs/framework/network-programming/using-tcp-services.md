@@ -24,6 +24,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33397173"
 ---
 # <a name="using-tcp-services"></a><span data-ttu-id="b6fed-102">Использование служб TCP</span><span class="sxs-lookup"><span data-stu-id="b6fed-102">Using TCP Services</span></span>
 <span data-ttu-id="b6fed-103">Класс <xref:System.Net.Sockets.TcpClient> запрашивает данные из ресурса в Интернете по протоколу TCP.</span><span class="sxs-lookup"><span data-stu-id="b6fed-103">The <xref:System.Net.Sockets.TcpClient> class requests data from an Internet resource using TCP.</span></span> <span data-ttu-id="b6fed-104">Методы и свойства **TcpClient** абстрагируют сведения для создания <xref:System.Net.Sockets.Socket> с целью запроса и получения данных по протоколу TCP.</span><span class="sxs-lookup"><span data-stu-id="b6fed-104">The methods and properties of **TcpClient** abstract the details for creating a <xref:System.Net.Sockets.Socket> for requesting and receiving data using TCP.</span></span> <span data-ttu-id="b6fed-105">Так как подключение к удаленному устройству представлено в виде потока, данные можно считывать и записывать с помощью методов работы с потоками платформы .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="b6fed-105">Because the connection to the remote device is represented as a stream, data can be read and written with .NET Framework stream-handling techniques.</span></span>  

@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33556670"
 ---
 # <a name="drawings-how-to-topics"></a><span data-ttu-id="9594f-102">Разделы руководства, посвященные изображениям</span><span class="sxs-lookup"><span data-stu-id="9594f-102">Drawings How-to Topics</span></span>
 <span data-ttu-id="9594f-103">В подразделах этого раздела описывается использование <xref:System.Windows.Media.Drawing> объектов для рисования фигур, изображений или текста.</span><span class="sxs-lookup"><span data-stu-id="9594f-103">The topics in this section describe how to use <xref:System.Windows.Media.Drawing> objects to draw shapes, images, or text.</span></span>  

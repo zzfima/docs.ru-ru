@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33556774"
 ---
 # <a name="how-to-animate-3-d-translations"></a><span data-ttu-id="42f90-102">Практическое руководство. Анимация трехмерных преобразований</span><span class="sxs-lookup"><span data-stu-id="42f90-102">How to: Animate 3-D Translations</span></span>
 <span data-ttu-id="42f90-103">В этом разделе демонстрируется анимация преобразования перевода на [!INCLUDE[TLA#tla_3d](../../../../includes/tlasharptla-3d-md.md)] модели.</span><span class="sxs-lookup"><span data-stu-id="42f90-103">This topic demonstrates how to animate a translation transformation set on a [!INCLUDE[TLA#tla_3d](../../../../includes/tlasharptla-3d-md.md)] model.</span></span>  

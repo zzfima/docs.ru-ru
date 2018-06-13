@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: bbf889aaa6a78e67d0f08758adc0bf31cd932e88
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33441352"
 ---
 # <a name="ihostmalloc-interface"></a><span data-ttu-id="7e6a3-102">Интерфейс IHostMalloc</span><span class="sxs-lookup"><span data-stu-id="7e6a3-102">IHostMalloc Interface</span></span>
 <span data-ttu-id="7e6a3-103">Предоставляет методы, позволяющие общеязыковой среды выполнения (CLR) для выделения точного количества памяти из кучи посредством узла.</span><span class="sxs-lookup"><span data-stu-id="7e6a3-103">Provides methods that allow the common language runtime (CLR) to request fine-grained allocations from the heap through the host.</span></span>  

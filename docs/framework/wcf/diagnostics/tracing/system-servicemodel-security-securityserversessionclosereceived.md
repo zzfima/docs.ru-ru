@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33484072"
 ---
 # <a name="systemservicemodelsecuritysecurityserversessionclosereceived"></a><span data-ttu-id="ad5da-102">System.ServiceModel.Security.SecurityServerSessionCloseReceived</span><span class="sxs-lookup"><span data-stu-id="ad5da-102">System.ServiceModel.Security.SecurityServerSessionCloseReceived</span></span>
 <span data-ttu-id="ad5da-103">System.ServiceModel.Security.SecurityServerSessionCloseResponseReceived</span><span class="sxs-lookup"><span data-stu-id="ad5da-103">System.ServiceModel.Security.SecurityServerSessionCloseResponseReceived</span></span>  

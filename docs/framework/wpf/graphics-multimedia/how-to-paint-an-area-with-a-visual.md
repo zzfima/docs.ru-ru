@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33559805"
 ---
 # <a name="how-to-paint-an-area-with-a-visual"></a><span data-ttu-id="6c9c4-102">Как раскрасить область с визуальным элементом</span><span class="sxs-lookup"><span data-stu-id="6c9c4-102">How to: Paint an Area with a Visual</span></span>
 <span data-ttu-id="6c9c4-103">В этом примере показано, как использовать <xref:System.Windows.Media.VisualBrush> класса Закраска области с <xref:System.Windows.Media.Visual>.</span><span class="sxs-lookup"><span data-stu-id="6c9c4-103">This example shows how to use the <xref:System.Windows.Media.VisualBrush> class to paint an area with a <xref:System.Windows.Media.Visual>.</span></span>  

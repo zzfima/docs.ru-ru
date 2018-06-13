@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33560907"
 ---
 # <a name="how-to-paint-an-area-with-a-drawing"></a><span data-ttu-id="ced05-102">Практическое руководство. Закраска области рисованием</span><span class="sxs-lookup"><span data-stu-id="ced05-102">How to: Paint an Area with a Drawing</span></span>
 <span data-ttu-id="ced05-103">Этот пример показывает, как можно закрасить область рисунком.</span><span class="sxs-lookup"><span data-stu-id="ced05-103">This example shows how to paint an area with a drawing.</span></span> <span data-ttu-id="ced05-104">Закраска области с помощью drawing, использовании <xref:System.Windows.Media.DrawingBrush> и один или несколько <xref:System.Windows.Media.Drawing> объектов.</span><span class="sxs-lookup"><span data-stu-id="ced05-104">To paint an area with a drawing, you use a <xref:System.Windows.Media.DrawingBrush> and one or more <xref:System.Windows.Media.Drawing> objects.</span></span>   <span data-ttu-id="ced05-105">В следующем примере используется <xref:System.Windows.Media.DrawingBrush> для рисования объекта рисованием двух эллипсов.</span><span class="sxs-lookup"><span data-stu-id="ced05-105">The following example uses a <xref:System.Windows.Media.DrawingBrush> to paint an object with a drawing of two ellipses.</span></span>  

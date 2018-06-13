@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33555834"
 ---
 # <a name="how-to-sort-and-group-data-using-a-view-in-xaml"></a><span data-ttu-id="a7b83-102">Практическое руководство. Сортировка и группировка данных с помощью представления в XAML</span><span class="sxs-lookup"><span data-stu-id="a7b83-102">How to: Sort and Group Data Using a View in XAML</span></span>
 <span data-ttu-id="a7b83-103">В этом примере показано, как создать представление набора данных в [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].</span><span class="sxs-lookup"><span data-stu-id="a7b83-103">This example shows how to create a view of a data collection in [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].</span></span> <span data-ttu-id="a7b83-104">Представления предоставляют функциональные возможности группирования, сортировки, фильтрации и понятие текущего элемента.</span><span class="sxs-lookup"><span data-stu-id="a7b83-104">Views allow for the functionalities of grouping, sorting, filtering, and the notion of a current item.</span></span>  

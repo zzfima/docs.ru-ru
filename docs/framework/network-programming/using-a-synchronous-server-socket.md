@@ -25,6 +25,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33398148"
 ---
 # <a name="using-a-synchronous-server-socket"></a><span data-ttu-id="cae9d-102">Использование синхронного сокета сервера</span><span class="sxs-lookup"><span data-stu-id="cae9d-102">Using a Synchronous Server Socket</span></span>
 <span data-ttu-id="cae9d-103">Синхронные сокеты сервера приостанавливают выполнение приложения до тех пор, пока сокет не получит запрос на соединение.</span><span class="sxs-lookup"><span data-stu-id="cae9d-103">Synchronous server sockets suspend the execution of the application until a connection request is received on the socket.</span></span> <span data-ttu-id="cae9d-104">Синхронные сокеты сервера не подходят для приложений, которые сильно загружают сеть своими операциями, но они могут подходить для простых сетевых приложений.</span><span class="sxs-lookup"><span data-stu-id="cae9d-104">Synchronous server sockets are not suitable for applications that make heavy use of the network in their operation, but they can be suitable for simple network applications.</span></span>  

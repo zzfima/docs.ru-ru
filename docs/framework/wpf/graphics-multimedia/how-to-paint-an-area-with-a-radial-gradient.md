@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33560646"
 ---
 # <a name="how-to-paint-an-area-with-a-radial-gradient"></a><span data-ttu-id="c4677-102">Практическое руководство. Закраска области с применением радиального градиента</span><span class="sxs-lookup"><span data-stu-id="c4677-102">How to: Paint an Area with a Radial Gradient</span></span>
 <span data-ttu-id="c4677-103">В этом примере показано, как использовать <xref:System.Windows.Media.RadialGradientBrush> класса Закраска области с применением радиального градиента.</span><span class="sxs-lookup"><span data-stu-id="c4677-103">This example shows how to use the <xref:System.Windows.Media.RadialGradientBrush> class to paint an area with a radial gradient.</span></span>  

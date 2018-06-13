@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 735ff725bc06c14da9821055a6a143f857548c30
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33434471"
 ---
 # <a name="iclrassemblyidentitymanagerisstronglynamed-method"></a><span data-ttu-id="eb505-102">Метод ICLRAssemblyIdentityManager::IsStronglyNamed</span><span class="sxs-lookup"><span data-stu-id="eb505-102">ICLRAssemblyIdentityManager::IsStronglyNamed Method</span></span>
 <span data-ttu-id="eb505-103">Возвращает значение, указывающее, является ли указанная сборка имеет строгое имя.</span><span class="sxs-lookup"><span data-stu-id="eb505-103">Gets a value that indicates whether the specified assembly is strongly named.</span></span>  

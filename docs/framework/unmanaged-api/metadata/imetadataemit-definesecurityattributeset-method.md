@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 60cb1640d374ce71d1d2fb51ba536b53ddd39b92
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33443533"
 ---
 # <a name="imetadataemitdefinesecurityattributeset-method"></a><span data-ttu-id="7816e-102">Метод IMetaDataEmit::DefineSecurityAttributeSet</span><span class="sxs-lookup"><span data-stu-id="7816e-102">IMetaDataEmit::DefineSecurityAttributeSet Method</span></span>
 <span data-ttu-id="7816e-103">Создает набор разрешений безопасности, чтобы присоединить объект, который ссылается указанный токен.</span><span class="sxs-lookup"><span data-stu-id="7816e-103">Creates a set of security permissions to attach to the object referenced by the specified token.</span></span>  

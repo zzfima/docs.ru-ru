@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33393170"
 ---
 # <a name="security-in-network-programming"></a><span data-ttu-id="b2b42-102">Безопасность в сетевом программировании</span><span class="sxs-lookup"><span data-stu-id="b2b42-102">Security in network programming</span></span>
 

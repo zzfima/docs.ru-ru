@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33398031"
 ---
 # <a name="lazy-initialization"></a><span data-ttu-id="fb67f-102">Отложенная инициализация</span><span class="sxs-lookup"><span data-stu-id="fb67f-102">Lazy Initialization</span></span>
 <span data-ttu-id="fb67f-103">*Отложенная инициализация* объекта означает, что его создание откладывается до первого использования.</span><span class="sxs-lookup"><span data-stu-id="fb67f-103">*Lazy initialization* of an object means that its creation is deferred until it is first used.</span></span> <span data-ttu-id="fb67f-104">(В этом разделе термины *отложенная инициализация* и *отложенное создание экземпляра* являются синонимами.) Отложенная инициализация в основном используется, чтобы повысить быстродействие, избежать ресурсоемких вычислений и уменьшить требования к памяти программы.</span><span class="sxs-lookup"><span data-stu-id="fb67f-104">(For this topic, the terms *lazy initialization* and *lazy instantiation* are synonymous.) Lazy initialization is primarily used to improve performance, avoid wasteful computation, and reduce program memory requirements.</span></span> <span data-ttu-id="fb67f-105">Ниже приведены наиболее распространенные сценарии.</span><span class="sxs-lookup"><span data-stu-id="fb67f-105">These are the most common scenarios:</span></span>  

@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 59b940c0dbe9462dda513e933b7360ff55a9b447
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33437353"
 ---
 # <a name="icorconfigurationadddebuggerspecialthread-method"></a><span data-ttu-id="7ab53-102">Метод ICorConfiguration::AddDebuggerSpecialThread</span><span class="sxs-lookup"><span data-stu-id="7ab53-102">ICorConfiguration::AddDebuggerSpecialThread Method</span></span>
 <span data-ttu-id="7ab53-103">Указывает службы отладки, в определенном потоке, что следует разрешить продолжить выполнение при завершении работы приложения во время отладки сценариев управляемого или неуправляемого отладчика.</span><span class="sxs-lookup"><span data-stu-id="7ab53-103">Indicates to the debugging services that a particular thread should be allowed to continue executing while the debugger has an application stopped during managed or unmanaged debugging scenarios.</span></span>  

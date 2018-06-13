@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33561213"
 ---
 # <a name="how-to-repeat-an-animation"></a><span data-ttu-id="f0032-102">Практическое руководство. Повторение анимации</span><span class="sxs-lookup"><span data-stu-id="f0032-102">How to: Repeat an Animation</span></span>
 <span data-ttu-id="f0032-103">В этом примере показано, как использовать <xref:System.Windows.Media.Animation.Timeline.RepeatBehavior%2A> свойство <xref:System.Windows.Media.Animation.Timeline> для управления повторением анимации.</span><span class="sxs-lookup"><span data-stu-id="f0032-103">This example shows how to use the <xref:System.Windows.Media.Animation.Timeline.RepeatBehavior%2A> property of a <xref:System.Windows.Media.Animation.Timeline> in order to control the repeat behavior of an animation.</span></span>  

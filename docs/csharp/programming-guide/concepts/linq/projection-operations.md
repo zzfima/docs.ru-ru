@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33335394"
 ---
 # <a name="projection-operations-c"></a><span data-ttu-id="65406-102">Операции проекции (C#)</span><span class="sxs-lookup"><span data-stu-id="65406-102">Projection Operations (C#)</span></span>
 <span data-ttu-id="65406-103">Проекцией называют операцию преобразования объекта в новую форму, которая часто состоит только из тех его свойств, которые будут использоваться впоследствии.</span><span class="sxs-lookup"><span data-stu-id="65406-103">Projection refers to the operation of transforming an object into a new form that often consists only of those properties that will be subsequently used.</span></span> <span data-ttu-id="65406-104">С помощью проекции можно создать новый тип, построенный из каждого объекта.</span><span class="sxs-lookup"><span data-stu-id="65406-104">By using projection, you can construct a new type that is built from each object.</span></span> <span data-ttu-id="65406-105">Вы можете проецировать свойство и выполнять над ним математические функции.</span><span class="sxs-lookup"><span data-stu-id="65406-105">You can project a property and perform a mathematical function on it.</span></span> <span data-ttu-id="65406-106">Также можно проецировать исходный объект, не изменяя его.</span><span class="sxs-lookup"><span data-stu-id="65406-106">You can also project the original object without changing it.</span></span>  

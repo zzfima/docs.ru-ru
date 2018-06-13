@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33560842"
 ---
 # <a name="how-to-animate-the-size-of-an-arcsegment"></a><span data-ttu-id="cf4bc-102">Практическое руководство. Анимирование размера ArcSegment</span><span class="sxs-lookup"><span data-stu-id="cf4bc-102">How to: Animate the Size of an ArcSegment</span></span>
 <span data-ttu-id="cf4bc-103">В этом примере демонстрируется анимация <xref:System.Windows.Media.ArcSegment.Size%2A> свойство <xref:System.Windows.Media.ArcSegment>.</span><span class="sxs-lookup"><span data-stu-id="cf4bc-103">This example shows how to animate the <xref:System.Windows.Media.ArcSegment.Size%2A> property of an <xref:System.Windows.Media.ArcSegment>.</span></span>  

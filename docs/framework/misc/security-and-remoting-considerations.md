@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33398174"
 ---
 # <a name="security-and-remoting-considerations"></a><span data-ttu-id="6eaae-102">Вопросы безопасности при удаленном взаимодействии</span><span class="sxs-lookup"><span data-stu-id="6eaae-102">Security and Remoting Considerations</span></span>
 <span data-ttu-id="6eaae-103">Удаленное взаимодействие позволяет установить прозрачные вызовы между доменами приложений, процессами или компьютерами.</span><span class="sxs-lookup"><span data-stu-id="6eaae-103">Remoting allows you to set up transparent calling between application domains, processes, or computers.</span></span> <span data-ttu-id="6eaae-104">Однако обход стека управления доступом для кода не может выходить за границы процесса или компьютера (применяется между доменами приложения того же процесса).</span><span class="sxs-lookup"><span data-stu-id="6eaae-104">However, the code access security stack walk cannot cross process or machine boundaries (it does apply between application domains of the same process).</span></span>  

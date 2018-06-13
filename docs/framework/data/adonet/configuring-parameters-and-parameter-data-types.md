@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32759547"
 ---
 # <a name="configuring-parameters-and-parameter-data-types"></a><span data-ttu-id="5ef19-102">Настройка параметров и типы данных параметров</span><span class="sxs-lookup"><span data-stu-id="5ef19-102">Configuring Parameters and Parameter Data Types</span></span>
 <span data-ttu-id="5ef19-103">Объекты команды используют параметры для передачи значений в выражения SQL или хранимые процедуры, обеспечивая проверку типов и правильности.</span><span class="sxs-lookup"><span data-stu-id="5ef19-103">Command objects use parameters to pass values to SQL statements or stored procedures, providing type checking and validation.</span></span> <span data-ttu-id="5ef19-104">В отличие от текста команд, входные параметры обрабатываются как буквенные значения, а не как исполняемый код.</span><span class="sxs-lookup"><span data-stu-id="5ef19-104">Unlike command text, parameter input is treated as a literal value, not as executable code.</span></span> <span data-ttu-id="5ef19-105">Это помогает защищаться от атак путем внедрения кода SQL, при которых злоумышленник вставляет в инструкцию SQL команду, ставящую под угрозу безопасность сервера.</span><span class="sxs-lookup"><span data-stu-id="5ef19-105">This helps guard against "SQL injection" attacks, in which an attacker inserts a command that compromises security on the server into an SQL statement.</span></span>  

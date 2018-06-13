@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557892"
 ---
 # <a name="wpf-walkthroughs"></a><span data-ttu-id="410ec-102">Пошаговые руководства по WPF</span><span class="sxs-lookup"><span data-stu-id="410ec-102">WPF Walkthroughs</span></span>
 <span data-ttu-id="410ec-103">В пошаговых руководствах содержатся пошаговые инструкции для типовых сценариев.</span><span class="sxs-lookup"><span data-stu-id="410ec-103">Walkthroughs give step-by-step instructions for common scenarios.</span></span> <span data-ttu-id="410ec-104">Они представляют собой удобный источник начальных сведений о продукте или определенной функциональной области.</span><span class="sxs-lookup"><span data-stu-id="410ec-104">This makes them a good place to start learning about the product or a particular feature area.</span></span>  

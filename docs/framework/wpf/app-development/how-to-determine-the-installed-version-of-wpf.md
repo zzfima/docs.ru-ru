@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33545855"
 ---
 # <a name="how-to-determine-the-installed-version-of-wpf"></a><span data-ttu-id="684bd-102">Практическое руководство. Определение установленной версии WPF</span><span class="sxs-lookup"><span data-stu-id="684bd-102">How to: Determine the Installed Version of WPF</span></span>
 <span data-ttu-id="684bd-103">Номер версии для текущей установленной версии [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] находится в папке **реестра**.</span><span class="sxs-lookup"><span data-stu-id="684bd-103">The version number for the current installed version of [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] is located in the **Registry**.</span></span>  

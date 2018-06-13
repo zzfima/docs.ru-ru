@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 4a489e05435ce160c65e936f448688d69b3a965f
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33435265"
 ---
 # <a name="iclrstrongnamegethashfromblob-method"></a><span data-ttu-id="86f1e-102">Метод ICLRStrongName::GetHashFromBlob</span><span class="sxs-lookup"><span data-stu-id="86f1e-102">ICLRStrongName::GetHashFromBlob Method</span></span>
 <span data-ttu-id="86f1e-103">Возвращает хэш сборки по указанному адресу памяти, с помощью указанного хэш-алгоритма.</span><span class="sxs-lookup"><span data-stu-id="86f1e-103">Gets a hash of the assembly at the specified memory address, using the specified hash algorithm.</span></span>  

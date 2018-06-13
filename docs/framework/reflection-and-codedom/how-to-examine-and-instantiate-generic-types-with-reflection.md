@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33397576"
 ---
 # <a name="how-to-examine-and-instantiate-generic-types-with-reflection"></a><span data-ttu-id="61685-102">Практическое руководство. Изучение универсальных типов и создание их экземпляров при помощи отражения</span><span class="sxs-lookup"><span data-stu-id="61685-102">How to: Examine and Instantiate Generic Types with Reflection</span></span>
 <span data-ttu-id="61685-103">Сведения об универсальных типах получаются аналогично сведениям о других типах: путем изучения объекта <xref:System.Type>, который представляет универсальный тип.</span><span class="sxs-lookup"><span data-stu-id="61685-103">Information about generic types is obtained in the same way as information about other types: by examining a <xref:System.Type> object that represents the generic type.</span></span> <span data-ttu-id="61685-104">Принципиальная разница заключается в том, что универсальный тип имеет список объектов <xref:System.Type>, представляющих его параметры универсального типа.</span><span class="sxs-lookup"><span data-stu-id="61685-104">The principle difference is that a generic type has a list of <xref:System.Type> objects representing its generic type parameters.</span></span> <span data-ttu-id="61685-105">В первой процедуре данного раздела изучаются универсальные типы.</span><span class="sxs-lookup"><span data-stu-id="61685-105">The first procedure in this section examines generic types.</span></span>  

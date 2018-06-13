@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33560881"
 ---
 # <a name="how-to-paint-an-area-with-a-linear-gradient"></a><span data-ttu-id="36004-102">Как закрасить область с линейным градиентом</span><span class="sxs-lookup"><span data-stu-id="36004-102">How to: Paint an Area with a Linear Gradient</span></span>
 <span data-ttu-id="36004-103">В этом примере показано, как использовать <xref:System.Windows.Media.LinearGradientBrush> класса Закраска области с линейным градиентом.</span><span class="sxs-lookup"><span data-stu-id="36004-103">This example shows how to use the <xref:System.Windows.Media.LinearGradientBrush> class to paint an area with a linear gradient.</span></span> <span data-ttu-id="36004-104">В следующем примере <xref:System.Windows.Shapes.Shape.Fill%2A> из <xref:System.Windows.Shapes.Rectangle> отрисовывается с диагонального линейного градиента, которая переходит с желтого на красный цвет на синий и зеленого.</span><span class="sxs-lookup"><span data-stu-id="36004-104">In the following example, the <xref:System.Windows.Shapes.Shape.Fill%2A> of a <xref:System.Windows.Shapes.Rectangle> is painted with a diagonal linear gradient that transitions from yellow to red to blue to lime green.</span></span>  

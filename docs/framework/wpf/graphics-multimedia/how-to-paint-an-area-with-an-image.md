@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33560962"
 ---
 # <a name="how-to-paint-an-area-with-an-image"></a><span data-ttu-id="be108-102">Инструкция по закрашиванию области с изображением</span><span class="sxs-lookup"><span data-stu-id="be108-102">How to: Paint an Area with an Image</span></span>
 <span data-ttu-id="be108-103">В этом примере показано, как использовать <xref:System.Windows.Media.ImageBrush> класса Закраска области с изображением.</span><span class="sxs-lookup"><span data-stu-id="be108-103">This example shows how to use the <xref:System.Windows.Media.ImageBrush> class to paint an area with an image.</span></span> <span data-ttu-id="be108-104"><xref:System.Windows.Media.ImageBrush> Отображает одно изображение, которое определяется его <xref:System.Windows.Media.ImageBrush.ImageSource%2A> свойство.</span><span class="sxs-lookup"><span data-stu-id="be108-104">An <xref:System.Windows.Media.ImageBrush> displays a single image, which is specified by its <xref:System.Windows.Media.ImageBrush.ImageSource%2A> property.</span></span>  

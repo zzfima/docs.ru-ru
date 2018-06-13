@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33558113"
 ---
 # <a name="hit-testing-in-the-visual-layer"></a><span data-ttu-id="2a474-102">Проверка попадания на визуальном уровне</span><span class="sxs-lookup"><span data-stu-id="2a474-102">Hit Testing in the Visual Layer</span></span>
 <span data-ttu-id="2a474-103">В этом разделе приведены общие сведения о функции проверки попадания, предоставляемой на визуальном уровне.</span><span class="sxs-lookup"><span data-stu-id="2a474-103">This topic provides an overview of hit testing functionality provided by the visual layer.</span></span> <span data-ttu-id="2a474-104">Поддержка проверки попадания позволяет определить, попадает ли геометрический объект или точка в отображаемое содержимое <xref:System.Windows.Media.Visual>, что позволяет реализовать поведение пользовательского интерфейса, например прямоугольник выделения, чтобы выбрать несколько объектов.</span><span class="sxs-lookup"><span data-stu-id="2a474-104">Hit testing support allows you to determine whether a geometry or point value falls within the rendered content of a <xref:System.Windows.Media.Visual>, allowing you to implement user interface behavior such as a selection rectangle to select multiple objects.</span></span>  

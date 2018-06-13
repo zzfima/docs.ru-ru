@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33560894"
 ---
 # <a name="how-to-create-an-elliptical-arc"></a><span data-ttu-id="716a1-102">Практическое руководство. Создание эллиптической дуги</span><span class="sxs-lookup"><span data-stu-id="716a1-102">How to: Create an Elliptical Arc</span></span>
 <span data-ttu-id="716a1-103">В этом примере показано, как рисовать эллиптической дуги. Чтобы создать эллиптическую дугу, используйте <xref:System.Windows.Media.PathGeometry>, <xref:System.Windows.Media.PathFigure>, и <xref:System.Windows.Media.ArcSegment> классы.</span><span class="sxs-lookup"><span data-stu-id="716a1-103">This example shows how to draw an elliptical arc. To create an elliptical arc, use the <xref:System.Windows.Media.PathGeometry>, <xref:System.Windows.Media.PathFigure>, and <xref:System.Windows.Media.ArcSegment> classes.</span></span>  

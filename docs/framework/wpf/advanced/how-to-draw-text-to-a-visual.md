@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33543567"
 ---
 # <a name="how-to-draw-text-to-a-visual"></a><span data-ttu-id="bd80f-102">Практическое руководство. Рисование текста в визуальном элементе</span><span class="sxs-lookup"><span data-stu-id="bd80f-102">How to: Draw Text to a Visual</span></span>
 <span data-ttu-id="bd80f-103">В следующем примере показано, как нарисовать текст <xref:System.Windows.Media.DrawingVisual> с помощью <xref:System.Windows.Media.DrawingContext> объекта.</span><span class="sxs-lookup"><span data-stu-id="bd80f-103">The following example shows how to draw text to a <xref:System.Windows.Media.DrawingVisual> using a <xref:System.Windows.Media.DrawingContext> object.</span></span> <span data-ttu-id="bd80f-104">Контекст рисования возвращается путем вызова <xref:System.Windows.Media.DrawingVisual.RenderOpen%2A> метод <xref:System.Windows.Media.DrawingVisual> объекта.</span><span class="sxs-lookup"><span data-stu-id="bd80f-104">A drawing context is returned by calling the <xref:System.Windows.Media.DrawingVisual.RenderOpen%2A> method of a <xref:System.Windows.Media.DrawingVisual> object.</span></span> <span data-ttu-id="bd80f-105">Можно нарисовать изображения и текст в контексте рисования.</span><span class="sxs-lookup"><span data-stu-id="bd80f-105">You can draw graphics and text into a drawing context.</span></span>  

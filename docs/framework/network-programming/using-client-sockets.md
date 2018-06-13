@@ -24,6 +24,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33395951"
 ---
 # <a name="using-client-sockets"></a><span data-ttu-id="4a51b-102">Использование сокетов клиента</span><span class="sxs-lookup"><span data-stu-id="4a51b-102">Using Client Sockets</span></span>
 <span data-ttu-id="4a51b-103">Перед инициацией взаимодействия через <xref:System.Net.Sockets.Socket> необходимо создать канал передачи данных между приложением и удаленным устройством.</span><span class="sxs-lookup"><span data-stu-id="4a51b-103">Before you can initiate a conversation through a <xref:System.Net.Sockets.Socket>, you must create a data pipe between your application and the remote device.</span></span> <span data-ttu-id="4a51b-104">В этом примере показано, как создать подключение TCP/IP к удаленном устройству (хотя существуют и другие семейства сетевых адресов и протоколы).</span><span class="sxs-lookup"><span data-stu-id="4a51b-104">Although other network address families and protocols exist, this example shows how to create a TCP/IP connection to a remote service.</span></span>  

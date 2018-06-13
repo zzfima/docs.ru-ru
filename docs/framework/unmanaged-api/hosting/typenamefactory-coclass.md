@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 015116e96a2fa534ecf26845c5926ddfa179df0c
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33440886"
 ---
 # <a name="typenamefactory-coclass"></a><span data-ttu-id="35d8c-102">Кокласс TypeNameFactory</span><span class="sxs-lookup"><span data-stu-id="35d8c-102">TypeNameFactory Coclass</span></span>
 <span data-ttu-id="35d8c-103">Предоставляет интерфейс для управления деконструкцией имени типа.</span><span class="sxs-lookup"><span data-stu-id="35d8c-103">Provides an interface for managing the deconstruction of a type name.</span></span>  

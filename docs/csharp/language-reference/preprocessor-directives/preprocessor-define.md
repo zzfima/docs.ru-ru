@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33286738"
 ---
 # <a name="define-c-reference"></a><span data-ttu-id="e7150-102">#define (Справочник по C#)</span><span class="sxs-lookup"><span data-stu-id="e7150-102">#define (C# Reference)</span></span>
 <span data-ttu-id="e7150-103">`#define` позволяет определить символ.</span><span class="sxs-lookup"><span data-stu-id="e7150-103">You use `#define` to define a symbol.</span></span> <span data-ttu-id="e7150-104">При использовании символа в качестве выражения, которое передается директиве [#if](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md), выражение будет иметь значение `true`, как показано в следующем примере:</span><span class="sxs-lookup"><span data-stu-id="e7150-104">When you use the symbol as the expression that's passed to the [#if](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md) directive, the expression will evaluate to `true`, as the following example shows:</span></span>  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33543710"
 ---
 # <a name="how-to-create-a-custom-routed-event"></a><span data-ttu-id="6151b-102">Практическое руководство. Создание пользовательских перенаправленных событий</span><span class="sxs-lookup"><span data-stu-id="6151b-102">How to: Create a Custom Routed Event</span></span>
 <span data-ttu-id="6151b-103">Для поддержки маршрутизации события в пользовательском событии, необходимо зарегистрировать <xref:System.Windows.RoutedEvent> с помощью <xref:System.Windows.EventManager.RegisterRoutedEvent%2A> метод.</span><span class="sxs-lookup"><span data-stu-id="6151b-103">For your custom event to support event routing, you need to register a <xref:System.Windows.RoutedEvent> using the <xref:System.Windows.EventManager.RegisterRoutedEvent%2A> method.</span></span> <span data-ttu-id="6151b-104">В этом примере демонстрируются основные принципы создания пользовательских перенаправленных событий.</span><span class="sxs-lookup"><span data-stu-id="6151b-104">This example demonstrates the basics of creating a custom routed event.</span></span>  

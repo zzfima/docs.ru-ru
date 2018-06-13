@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33397745"
 ---
 # <a name="measuring-startup-improvement-with-net-native"></a><span data-ttu-id="459e1-102">Измерение улучшения запуска с машинным кодом .NET</span><span class="sxs-lookup"><span data-stu-id="459e1-102">Measuring Startup Improvement with .NET Native</span></span>
 [!INCLUDE[net_native](../../../includes/net-native-md.md)]<span data-ttu-id="459e1-103">значительно сокращает время запуска приложений.</span><span class="sxs-lookup"><span data-stu-id="459e1-103"> significantly improves the launch time of apps.</span></span> <span data-ttu-id="459e1-104">Это улучшение особенно заметно на портативных устройствах малой мощности, а также при сложных приложениях.</span><span class="sxs-lookup"><span data-stu-id="459e1-104">This improvement is particularly noticeable on portable, low-powered devices and with complex apps.</span></span> <span data-ttu-id="459e1-105">Этот раздел поможет вам приступить к работе с основным инструментарием, который необходим для измерения данного улучшения запуска.</span><span class="sxs-lookup"><span data-stu-id="459e1-105">This topic helps you get started with the basic instrumentation needed to measure this startup improvement.</span></span>  

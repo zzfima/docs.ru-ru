@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 5caf432b5de7cb0c8ff0e6f53b3e79a64ecf802e
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33443317"
 ---
 # <a name="correftodefcheck-enumeration"></a><span data-ttu-id="2e51c-102">Перечисление CorRefToDefCheck</span><span class="sxs-lookup"><span data-stu-id="2e51c-102">CorRefToDefCheck Enumeration</span></span>
 <span data-ttu-id="2e51c-103">Задает флаги для элемента управления, на который ссылаются элементы, преобразуемые в их определения для оптимизации кода.</span><span class="sxs-lookup"><span data-stu-id="2e51c-103">Specifies flags to control which referenced items are converted to their definitions in order to optimize the code.</span></span>  

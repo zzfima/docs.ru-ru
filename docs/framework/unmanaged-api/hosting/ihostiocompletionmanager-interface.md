@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 194dcec6ea484e9cd2d3a17093c1eceb16c8f6c9
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33440220"
 ---
 # <a name="ihostiocompletionmanager-interface"></a><span data-ttu-id="bb385-102">Интерфейс IHostIoCompletionManager</span><span class="sxs-lookup"><span data-stu-id="bb385-102">IHostIoCompletionManager Interface</span></span>
 <span data-ttu-id="bb385-103">Предоставляет методы, позволяющие общеязыковой среды выполнения (CLR) для взаимодействия с порты завершения ввода-вывода, предоставленный средой размещения.</span><span class="sxs-lookup"><span data-stu-id="bb385-103">Provides methods that allow the common language runtime (CLR) to interact with I/O completion ports provided by the host.</span></span>  

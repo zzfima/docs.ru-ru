@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33394853"
 ---
 # <a name="how-to-download-files-with-ftp"></a><span data-ttu-id="69b3c-102">Практическое руководство. Скачивание файлов с использованием FTP</span><span class="sxs-lookup"><span data-stu-id="69b3c-102">How to: Download Files with FTP</span></span>
 <span data-ttu-id="69b3c-103">В этом примере показано, как скачать файл с FTP-сервера.</span><span class="sxs-lookup"><span data-stu-id="69b3c-103">This sample shows how to download a file from an FTP server.</span></span>  

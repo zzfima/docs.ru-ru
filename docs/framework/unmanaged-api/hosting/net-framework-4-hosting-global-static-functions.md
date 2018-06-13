@@ -10,9 +10,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 019a17b38eb1cfccab4537d5f27b7625fdef1268
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33441472"
 ---
 # <a name="net-framework-4-hosting-global-static-functions"></a><span data-ttu-id="0a822-102">Глобальные статические функции размещения платформы .NET Framework 4</span><span class="sxs-lookup"><span data-stu-id="0a822-102">.NET Framework 4 Hosting Global Static Functions</span></span>
 <span data-ttu-id="0a822-103">[!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)] Представляет один новый метод экспортированного в MSCorEE.dll: [CLRCreateIntstance](../../../../docs/framework/unmanaged-api/hosting/clrcreateinstance-function.md).</span><span class="sxs-lookup"><span data-stu-id="0a822-103">The [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)] introduces one new exported method in MSCorEE.dll: [CLRCreateIntstance](../../../../docs/framework/unmanaged-api/hosting/clrcreateinstance-function.md).</span></span>  

@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ab6b13c6b7dba34f5ea82d05f483b36bf96aab1d
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33437330"
 ---
 # <a name="iclrtaskmanagersetlocale-method"></a><span data-ttu-id="a7f45-102">Метод ICLRTaskManager::SetLocale</span><span class="sxs-lookup"><span data-stu-id="a7f45-102">ICLRTaskManager::SetLocale Method</span></span>
 <span data-ttu-id="a7f45-103">Уведомляет общеязыковой среды выполнения (CLR), что узел изменил значение идентификатора языкового стандарта (который сопоставляет региональные параметры и язык) в текущей выполняемой задаче.</span><span class="sxs-lookup"><span data-stu-id="a7f45-103">Notifies the common language runtime (CLR) that the host has modified the value of the locale identifier (which maps to the geographical culture and language) on the currently executing task.</span></span>  

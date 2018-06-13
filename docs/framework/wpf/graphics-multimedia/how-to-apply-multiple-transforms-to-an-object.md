@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33560547"
 ---
 # <a name="how-to-apply-multiple-transforms-to-an-object"></a><span data-ttu-id="b8ebe-102">Практическое руководство. Применение нескольких преобразований к объекту</span><span class="sxs-lookup"><span data-stu-id="b8ebe-102">How to: Apply Multiple Transforms to an Object</span></span>
 <span data-ttu-id="b8ebe-103">В этом примере показано, как использовать <xref:System.Windows.Media.TransformGroup> группу два или более <xref:System.Windows.Media.Transform> объектов в один составной <xref:System.Windows.Media.Transform>.</span><span class="sxs-lookup"><span data-stu-id="b8ebe-103">This example shows how to use a <xref:System.Windows.Media.TransformGroup> to group two or more <xref:System.Windows.Media.Transform> objects into a single composite <xref:System.Windows.Media.Transform>.</span></span>  

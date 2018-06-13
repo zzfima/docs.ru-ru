@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33395262"
 ---
 # <a name="configuring-caching-in-network-applications"></a><span data-ttu-id="1431a-102">Настройка кэширования в сетевых приложениях</span><span class="sxs-lookup"><span data-stu-id="1431a-102">Configuring Caching in Network Applications</span></span>
 <span data-ttu-id="1431a-103">Чтобы настроить кэширование, необходимо указать политику кэширования на уровне приложения или <xref:System.Net.WebRequest>.</span><span class="sxs-lookup"><span data-stu-id="1431a-103">To configure caching, you must specify a cache policy at the application or <xref:System.Net.WebRequest> level.</span></span> <span data-ttu-id="1431a-104">В следующих разделах приводятся примеры кода, которые демонстрируют настройку приложений и запросов для использования кэширования.</span><span class="sxs-lookup"><span data-stu-id="1431a-104">The following topics provide code examples that demonstrate configuring applications and requests to use caching.</span></span>  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33554928"
 ---
 # <a name="panel"></a><span data-ttu-id="cc96e-102">Panel</span><span class="sxs-lookup"><span data-stu-id="cc96e-102">Panel</span></span>
 <span data-ttu-id="cc96e-103"><xref:System.Windows.Controls.Panel> является базовым классом для всех элементов, которые поддерживают макет приложения в [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].</span><span class="sxs-lookup"><span data-stu-id="cc96e-103"><xref:System.Windows.Controls.Panel> is the base class for all elements that support application layout in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].</span></span>  

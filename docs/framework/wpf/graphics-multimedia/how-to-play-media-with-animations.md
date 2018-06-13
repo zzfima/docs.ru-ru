@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33560279"
 ---
 # <a name="how-to-play-media-with-animations"></a><span data-ttu-id="db22e-102">Практическое руководство. Воспроизведение мультимедиа с анимацией</span><span class="sxs-lookup"><span data-stu-id="db22e-102">How to: Play Media with Animations</span></span>
 <span data-ttu-id="db22e-103">В этом примере показано, как воспроизведение мультимедиа и анимации в то же время с помощью <xref:System.Windows.Media.MediaTimeline> и <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames> классы в одном <xref:System.Windows.Media.Animation.Storyboard>.</span><span class="sxs-lookup"><span data-stu-id="db22e-103">This example shows how to play media and animations at the same time by using the <xref:System.Windows.Media.MediaTimeline> and <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames> classes in the same <xref:System.Windows.Media.Animation.Storyboard>.</span></span>  
