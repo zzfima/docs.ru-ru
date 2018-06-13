@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33564525"
 ---
 # <a name="-escape-sequence--markup-extension"></a><span data-ttu-id="63882-102">{} Escape-последовательность / расширение разметки</span><span class="sxs-lookup"><span data-stu-id="63882-102">{} Escape Sequence / Markup Extension</span></span>
 <span data-ttu-id="63882-103">Предоставляет escape-последовательности XAML для значений атрибутов.</span><span class="sxs-lookup"><span data-stu-id="63882-103">Provides the XAML escape sequence for attribute values.</span></span> <span data-ttu-id="63882-104">Escape-последовательности позволяет последующие значения в атрибуте интерпретироваться как литерал.</span><span class="sxs-lookup"><span data-stu-id="63882-104">The escape sequence allows the subsequent values in the attribute to be interpreted as a literal.</span></span>  

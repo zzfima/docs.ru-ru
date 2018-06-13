@@ -16,6 +16,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32743151"
 ---
 # <a name="ltdefaultftpcachepolicygt-element-network-settings"></a><span data-ttu-id="f291f-102">&lt;defaultFtpCachePolicy&gt; элемент (параметры сети)</span><span class="sxs-lookup"><span data-stu-id="f291f-102">&lt;defaultFtpCachePolicy&gt; Element (Network Settings)</span></span>
 <span data-ttu-id="f291f-103">Описывает указывает, активна ли функция FTP-кэширования и описывает политику кэширования по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="f291f-103">Describes whether FTP caching is active and describes the default caching policy.</span></span>  

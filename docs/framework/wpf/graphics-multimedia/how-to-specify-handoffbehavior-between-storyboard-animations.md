@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33560555"
 ---
 # <a name="how-to-specify-handoffbehavior-between-storyboard-animations"></a><span data-ttu-id="63779-102">Практическое руководство. Задание значения свойства HandoffBehavior для анимаций раскадровки</span><span class="sxs-lookup"><span data-stu-id="63779-102">How to: Specify HandoffBehavior Between Storyboard Animations</span></span>
 <span data-ttu-id="63779-103">В этом примере показано, как указать поведение перемещения между анимациями раскадровки.</span><span class="sxs-lookup"><span data-stu-id="63779-103">This example shows how to specify handoff behavior between storyboard animations.</span></span> <span data-ttu-id="63779-104"><xref:System.Windows.Media.Animation.BeginStoryboard.HandoffBehavior%2A> Свойство <xref:System.Windows.Media.Animation.BeginStoryboard> указывает, как новая анимация взаимодействовать с любыми существующими анимациями, которые уже применены к свойству.</span><span class="sxs-lookup"><span data-stu-id="63779-104">The <xref:System.Windows.Media.Animation.BeginStoryboard.HandoffBehavior%2A> property of <xref:System.Windows.Media.Animation.BeginStoryboard> specifies how new animations interact with any existing ones that are already applied to a property.</span></span>  

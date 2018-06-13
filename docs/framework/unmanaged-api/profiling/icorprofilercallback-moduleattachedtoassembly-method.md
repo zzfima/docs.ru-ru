@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: e6b5281e30c48471131fa12e5106f7d0a6826e1b
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33452563"
 ---
 # <a name="icorprofilercallbackmoduleattachedtoassembly-method"></a><span data-ttu-id="5c65d-102">Метод ICorProfilerCallback::ModuleAttachedToAssembly</span><span class="sxs-lookup"><span data-stu-id="5c65d-102">ICorProfilerCallback::ModuleAttachedToAssembly Method</span></span>
 <span data-ttu-id="5c65d-103">Уведомляет профилировщик, модуль присоединяется к его родительской сборки.</span><span class="sxs-lookup"><span data-stu-id="5c65d-103">Notifies the profiler that a module is being attached to its parent assembly.</span></span>  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32743775"
 ---
 # <a name="app-settings-schema"></a><span data-ttu-id="77683-102">Схема параметров приложения</span><span class="sxs-lookup"><span data-stu-id="77683-102">App Settings schema</span></span>
 

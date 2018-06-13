@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33518568"
 ---
 # <a name="application-settings-for-custom-controls"></a><span data-ttu-id="df4d1-102">Параметры приложения для пользовательских элементов управления</span><span class="sxs-lookup"><span data-stu-id="df4d1-102">Application Settings for Custom Controls</span></span>
 <span data-ttu-id="df4d1-103">Необходимо выполнить определенные задачи, чтобы предоставить пользовательским элементам управления возможность сохранять параметры приложения, когда элементы управления размещаются в сторонних приложениях.</span><span class="sxs-lookup"><span data-stu-id="df4d1-103">You must complete certain tasks to give your custom controls the ability to persist application settings when the controls are hosted in third-party applications.</span></span>  

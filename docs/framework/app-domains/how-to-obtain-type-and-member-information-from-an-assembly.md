@@ -16,6 +16,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32744071"
 ---
 # <a name="how-to-obtain-type-and-member-information-from-an-assembly"></a><span data-ttu-id="ec930-102">Практическое руководство. Получение сведений о типах и членах из сборки</span><span class="sxs-lookup"><span data-stu-id="ec930-102">How to: Obtain Type and Member Information from an Assembly</span></span>
 <span data-ttu-id="ec930-103">Пространство имен <xref:System.Reflection> содержит много методов для получения сведений из сборки.</span><span class="sxs-lookup"><span data-stu-id="ec930-103">The <xref:System.Reflection> namespace contains many methods for obtaining information from an assembly.</span></span> <span data-ttu-id="ec930-104">В этом разделе демонстрируется один из них.</span><span class="sxs-lookup"><span data-stu-id="ec930-104">This section demonstrates one of these methods.</span></span> <span data-ttu-id="ec930-105">Дополнительные сведения см. в разделе [Общие сведения об отражении](../../../docs/framework/reflection-and-codedom/reflection.md).</span><span class="sxs-lookup"><span data-stu-id="ec930-105">For additional information, see [Reflection Overview](../../../docs/framework/reflection-and-codedom/reflection.md).</span></span>  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557645"
 ---
 # <a name="animation-and-timing-how-to-topics"></a><span data-ttu-id="afa1c-102">Разделы руководства по анимации и таймерам</span><span class="sxs-lookup"><span data-stu-id="afa1c-102">Animation and Timing How-to Topics</span></span>
 <span data-ttu-id="afa1c-103">В следующих разделах демонстрируется, как использовать [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] анимации и системы управления временем в ваших приложениях.</span><span class="sxs-lookup"><span data-stu-id="afa1c-103">The following topics demonstrate how to use the [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] animation and timing system in your applications.</span></span>  

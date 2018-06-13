@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33576316"
 ---
 # <a name="validating-an-xml-document-in-the-dom"></a><span data-ttu-id="ecefb-102">Проверка XML-документа в DOM</span><span class="sxs-lookup"><span data-stu-id="ecefb-102">Validating an XML Document in the DOM</span></span>
 <span data-ttu-id="ecefb-103">По умолчанию класс <xref:System.Xml.XmlDocument> не сверяет код XML в модели DOM ни с данными схемы XSD, ни c определением типа документа (DTD). Код XML проверяется только на правильность формата.</span><span class="sxs-lookup"><span data-stu-id="ecefb-103">The <xref:System.Xml.XmlDocument> class does not validate the XML in the Document Object Model (DOM) against an XML Schema definition language (XSD) schema or document type definition (DTD) by default; the XML is only verified to be well-formed.</span></span>  

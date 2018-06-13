@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33560015"
 ---
 # <a name="how-to-encode-and-decode-a-jpeg-image"></a><span data-ttu-id="1ba88-102">Практическое руководство. Кодирование и декодирование изображения в формате JPEG</span><span class="sxs-lookup"><span data-stu-id="1ba88-102">How to: Encode and Decode a JPEG Image</span></span>
 <span data-ttu-id="1ba88-103">Следующие примеры показывают, как декодировать и кодировать [!INCLUDE[TLA#tla_jpeg](../../../../includes/tlasharptla-jpeg-md.md)] изображения, используя заданный <xref:System.Windows.Media.Imaging.JpegBitmapDecoder> и <xref:System.Windows.Media.Imaging.JpegBitmapEncoder> объектов.</span><span class="sxs-lookup"><span data-stu-id="1ba88-103">The following examples show how to decode and encode a [!INCLUDE[TLA#tla_jpeg](../../../../includes/tlasharptla-jpeg-md.md)] image using the specific <xref:System.Windows.Media.Imaging.JpegBitmapDecoder> and <xref:System.Windows.Media.Imaging.JpegBitmapEncoder> objects.</span></span>  

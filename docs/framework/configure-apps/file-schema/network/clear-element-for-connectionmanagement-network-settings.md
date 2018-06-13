@@ -18,6 +18,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32741988"
 ---
 # <a name="ltcleargt-element-for-connectionmanagement-network-settings"></a><span data-ttu-id="e56b3-102">&lt;Очистить&gt; элемент для connectionManagement (параметры сети)</span><span class="sxs-lookup"><span data-stu-id="e56b3-102">&lt;clear&gt; Element for connectionManagement (Network Settings)</span></span>
 <span data-ttu-id="e56b3-103">Очищает список управления подключениями.</span><span class="sxs-lookup"><span data-stu-id="e56b3-103">Clears the connection management list.</span></span>  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33601050"
 ---
 # <a name="baselogname-cannot-be-nothing-or-an-empty-string"></a><span data-ttu-id="542c9-102">Значение BaseLogName не может быть Nothing или пустой строкой.</span><span class="sxs-lookup"><span data-stu-id="542c9-102">BaseLogName cannot be Nothing or an empty String</span></span>
 <span data-ttu-id="542c9-103">Значение свойства <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.BaseFileName%2A> не может быть `Nothing` или пустой строкой.</span><span class="sxs-lookup"><span data-stu-id="542c9-103">The value of the <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.BaseFileName%2A> property cannot be `Nothing` or an empty string.</span></span>  

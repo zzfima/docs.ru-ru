@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33386357"
 ---
 # <a name="illegalprepareconstrainedregion-mda"></a><span data-ttu-id="5bdc0-102">illegalPrepareConstrainedRegion MDA</span><span class="sxs-lookup"><span data-stu-id="5bdc0-102">illegalPrepareConstrainedRegion MDA</span></span>
 <span data-ttu-id="5bdc0-103">Помощник по отладке управляемого кода (MDA) `illegalPrepareConstrainedRegion` запускается, если сразу же после вызова метода <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A?displayProperty=nameWithType> не следует инструкция `try` обработчика исключений.</span><span class="sxs-lookup"><span data-stu-id="5bdc0-103">The `illegalPrepareConstrainedRegion` managed debugging assistant (MDA) is activated when a <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A?displayProperty=nameWithType> method call does not immediately precede the `try` statement of the exception handler.</span></span> <span data-ttu-id="5bdc0-104">Это ограничение используется на уровне MSIL, поэтому между вызовом и `try` можно размещать текст, не приводящий к созданию кода, например комментарии.</span><span class="sxs-lookup"><span data-stu-id="5bdc0-104">This restriction is at the MSIL level, so it is permissible to have non-code-generating source between the call and the `try`, such as comments.</span></span>  

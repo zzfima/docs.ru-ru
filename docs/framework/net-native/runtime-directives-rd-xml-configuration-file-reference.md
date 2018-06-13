@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33397277"
 ---
 # <a name="runtime-directives-rdxml-configuration-file-reference"></a><span data-ttu-id="4a154-102">Ссылка на файл конфигурации директив среды выполнения (rd.xml)</span><span class="sxs-lookup"><span data-stu-id="4a154-102">Runtime Directives (rd.xml) Configuration File Reference</span></span>
 <span data-ttu-id="4a154-103">Файл директив среды выполнения (. rd.xml) — это файл конфигурации XML, который определяет, доступны ли элементы в указанной программе для отражения.</span><span class="sxs-lookup"><span data-stu-id="4a154-103">A runtime directives (.rd.xml) file is an XML configuration file that specifies whether designated program elements are available for reflection.</span></span> <span data-ttu-id="4a154-104">Ниже приведен пример файла директив среды выполнения:</span><span class="sxs-lookup"><span data-stu-id="4a154-104">Here’s an example of a runtime directives file:</span></span>  

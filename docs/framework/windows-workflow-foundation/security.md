@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33518021"
 ---
 # <a name="security"></a><span data-ttu-id="da4b5-102">Безопасность</span><span class="sxs-lookup"><span data-stu-id="da4b5-102">Security</span></span>
 <span data-ttu-id="da4b5-103">Хранилище экземпляров рабочих процессов SQL использует следующие роли безопасности базы данных для обеспечения безопасного доступа к сведениям о состоянии экземпляров в базе данных сохраняемости.</span><span class="sxs-lookup"><span data-stu-id="da4b5-103">The SQL Workflow Instance Store uses the following database security roles to secure access to instance state information in the persistence database.</span></span>  

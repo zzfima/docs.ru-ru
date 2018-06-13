@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33561765"
 ---
 # <a name="how-to-draw-a-polyline-by-using-the-polyline-element"></a><span data-ttu-id="e22ae-102">Практическое руководство. Рисование ломаной, используя элемент Polyline</span><span class="sxs-lookup"><span data-stu-id="e22ae-102">How to: Draw a Polyline by Using the Polyline Element</span></span>
 <span data-ttu-id="e22ae-103">В этом примере показано, как рисование ломаной, которая представляет собой последовательность соединенных линий, с помощью <xref:System.Windows.Shapes.Polyline> элемента.</span><span class="sxs-lookup"><span data-stu-id="e22ae-103">This example shows how to draw a polyline, which is a series of connected lines, by using the <xref:System.Windows.Shapes.Polyline> element.</span></span>  

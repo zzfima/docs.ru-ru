@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33558817"
 ---
 # <a name="how-to-animate-in-a-style"></a><span data-ttu-id="819d9-102">Практическое руководство. Применение анимации в стиле</span><span class="sxs-lookup"><span data-stu-id="819d9-102">How to: Animate in a Style</span></span>
 <span data-ttu-id="819d9-103">В этом примере показано, как для анимации свойства в стиле.</span><span class="sxs-lookup"><span data-stu-id="819d9-103">This example shows how to animate properties within a style.</span></span> <span data-ttu-id="819d9-104">При анимации в стиле элемент framework, для которого определен стиль можно применить напрямую.</span><span class="sxs-lookup"><span data-stu-id="819d9-104">When animating within a style, only the framework element for which the style is defined can be targeted directly.</span></span> <span data-ttu-id="819d9-105">Целевой объект freezable, вам необходимо «поставить точку» из свойства элемента со стилем.</span><span class="sxs-lookup"><span data-stu-id="819d9-105">To target a freezable object, you must "dot down" from a property of the styled element.</span></span>  

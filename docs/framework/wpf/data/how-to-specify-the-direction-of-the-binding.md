@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33556826"
 ---
 # <a name="how-to-specify-the-direction-of-the-binding"></a><span data-ttu-id="d151b-102">Практическое руководство. Указание направления привязки</span><span class="sxs-lookup"><span data-stu-id="d151b-102">How to: Specify the Direction of the Binding</span></span>
 <span data-ttu-id="d151b-103">В этом примере показано, как указать, что привязка обновляет только свойство цели привязки (цель), свойство источника привязки (источник) или обновляет свойство цели и свойство источника.</span><span class="sxs-lookup"><span data-stu-id="d151b-103">This example shows how to specify whether the binding updates only the binding target (target) property, the binding source (source) property, or both the target property and the source property.</span></span>  

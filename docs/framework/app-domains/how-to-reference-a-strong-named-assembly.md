@@ -18,6 +18,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32743320"
 ---
 # <a name="how-to-reference-a-strong-named-assembly"></a><span data-ttu-id="3bf8f-102">Практическое руководство. Создание ссылки на сборку со строгим именем</span><span class="sxs-lookup"><span data-stu-id="3bf8f-102">How to: Reference a Strong-Named Assembly</span></span>
 <span data-ttu-id="3bf8f-103">Процесс использования ссылок на типы или ресурсы, находящиеся в сборке со строгим именем, обычно понятен.</span><span class="sxs-lookup"><span data-stu-id="3bf8f-103">The process for referencing types or resources in a strong-named assembly is usually transparent.</span></span> <span data-ttu-id="3bf8f-104">Создать ссылку можно в момент компиляции (ранняя привязка) или же во время выполнения.</span><span class="sxs-lookup"><span data-stu-id="3bf8f-104">You can make the reference either at compile time (early binding) or at run time.</span></span>  

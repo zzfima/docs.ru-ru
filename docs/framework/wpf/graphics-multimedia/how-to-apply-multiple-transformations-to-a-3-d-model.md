@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33558695"
 ---
 # <a name="how-to-apply-multiple-transformations-to-a-3-d-model"></a><span data-ttu-id="1050e-102">Практическое руководство. Применение множественных преобразований к трехмерной модели</span><span class="sxs-lookup"><span data-stu-id="1050e-102">How to: Apply Multiple Transformations to a 3-D Model</span></span>
 <span data-ttu-id="1050e-103">В этом примере показано, как использовать <xref:System.Windows.Media.Media3D.RotateTransform3D> и <xref:System.Windows.Media.Media3D.ScaleTransform3D> для вращения и изменения масштаба трехмерной модели.</span><span class="sxs-lookup"><span data-stu-id="1050e-103">This sample shows how to use a <xref:System.Windows.Media.Media3D.RotateTransform3D> and a <xref:System.Windows.Media.Media3D.ScaleTransform3D> to rotate and change the scale of a 3-D model.</span></span> <span data-ttu-id="1050e-104">В следующем примере кода показано применение этих преобразований, <xref:System.Windows.Media.Media3D.Model3D.Transform%2A> свойство <xref:System.Windows.Media.Media3D.GeometryModel3D> в XAML.</span><span class="sxs-lookup"><span data-stu-id="1050e-104">The code below shows how to apply these transforms to the <xref:System.Windows.Media.Media3D.Model3D.Transform%2A> property of a <xref:System.Windows.Media.Media3D.GeometryModel3D> in XAML.</span></span>  

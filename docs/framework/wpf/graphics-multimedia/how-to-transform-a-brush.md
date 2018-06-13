@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33561611"
 ---
 # <a name="how-to-transform-a-brush"></a><span data-ttu-id="b0388-102">Практическое руководство. Преобразование кисти</span><span class="sxs-lookup"><span data-stu-id="b0388-102">How to: Transform a Brush</span></span>
 <span data-ttu-id="b0388-103">В этом примере показано, как преобразовывать <xref:System.Windows.Media.Brush> объектов с помощью двух свойств преобразования: <xref:System.Windows.Media.Brush.RelativeTransform%2A> и <xref:System.Windows.Media.Brush.Transform%2A>.</span><span class="sxs-lookup"><span data-stu-id="b0388-103">This example shows how to transform <xref:System.Windows.Media.Brush> objects by using their two transformation properties: <xref:System.Windows.Media.Brush.RelativeTransform%2A> and <xref:System.Windows.Media.Brush.Transform%2A>.</span></span>  

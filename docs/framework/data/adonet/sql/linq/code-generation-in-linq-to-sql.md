@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33363384"
 ---
 # <a name="code-generation-in-linq-to-sql"></a><span data-ttu-id="5ead8-102">Создание кода в LINQ to SQL</span><span class="sxs-lookup"><span data-stu-id="5ead8-102">Code Generation in LINQ to SQL</span></span>
 <span data-ttu-id="5ead8-103">Создание кода, представляющего базу данных, можно выполнить с помощью конструктора [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] или программы командной строки SQLMetal.</span><span class="sxs-lookup"><span data-stu-id="5ead8-103">You can generate code to represent a database by using either the [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] or the SQLMetal command-line tool.</span></span> <span data-ttu-id="5ead8-104">В любом случае полный процесс создания кода включает три этапа.</span><span class="sxs-lookup"><span data-stu-id="5ead8-104">In either case, end-to-end code generation occurs in three stages:</span></span>  

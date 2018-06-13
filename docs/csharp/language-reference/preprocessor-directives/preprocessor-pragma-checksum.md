@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33285698"
 ---
 # <a name="pragma-checksum-c-reference"></a><span data-ttu-id="01347-102">#pragma checksum (Справочник по C#)</span><span class="sxs-lookup"><span data-stu-id="01347-102">#pragma checksum (C# Reference)</span></span>
 <span data-ttu-id="01347-103">Создание контрольных сумм для исходных файлов для помощи в отладке страниц [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)].</span><span class="sxs-lookup"><span data-stu-id="01347-103">Generates checksums for source files to aid with debugging [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] pages.</span></span>  

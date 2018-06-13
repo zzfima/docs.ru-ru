@@ -12,9 +12,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ad74eeb4deeae73be40b3a0bc0f6a18ec2299780
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33454754"
 ---
 # <a name="icorprofilercallback8dynamicmethodjitcompilationstarted-method"></a><span data-ttu-id="46d01-102">Метод ICorProfilerCallback8::DynamicMethodJITCompilationStarted</span><span class="sxs-lookup"><span data-stu-id="46d01-102">ICorProfilerCallback8::DynamicMethodJITCompilationStarted Method</span></span>
 <span data-ttu-id="46d01-103">[Поддерживается в .NET Framework 4.7 и более поздних версиях]</span><span class="sxs-lookup"><span data-stu-id="46d01-103">[Supported in the .NET Framework 4.7 and later versions]</span></span>  

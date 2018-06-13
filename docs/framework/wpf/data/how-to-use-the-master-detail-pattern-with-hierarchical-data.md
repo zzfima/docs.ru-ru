@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33556800"
 ---
 # <a name="how-to-use-the-master-detail-pattern-with-hierarchical-data"></a><span data-ttu-id="f1676-102">Практическое руководство. Использование шаблона "основной-подчиненный" с иерархическими данными</span><span class="sxs-lookup"><span data-stu-id="f1676-102">How to: Use the Master-Detail Pattern with Hierarchical Data</span></span>
 <span data-ttu-id="f1676-103">В этом примере показано, как реализовать сценарий основной подробности.</span><span class="sxs-lookup"><span data-stu-id="f1676-103">This example shows how to implement the master-detail scenario.</span></span>  

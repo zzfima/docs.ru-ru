@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33569633"
 ---
 # <a name="post-schema-compilation-infoset"></a><span data-ttu-id="1d826-102">Набор сведений для постсхемной компиляции</span><span class="sxs-lookup"><span data-stu-id="1d826-102">Post-Schema Compilation Infoset</span></span>
 <span data-ttu-id="1d826-103">В [документации консорциума W3C по схемам XML](https://www.w3.org/XML/Schema) рассматривается информационный набор, который должен предоставляться до и после компиляции схемы.</span><span class="sxs-lookup"><span data-stu-id="1d826-103">The [World Wide Web Consortium (W3C) XML Schema Recommendation](https://www.w3.org/XML/Schema) discusses the information set (infoset) that must be exposed for pre-schema validation and post-schema compilation.</span></span> <span data-ttu-id="1d826-104">Модель XML SOM просматривает информационные наборы до и после вызова метода <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A> объекта <xref:System.Xml.Schema.XmlSchemaSet>.</span><span class="sxs-lookup"><span data-stu-id="1d826-104">The XML Schema Object Model (SOM) views this exposure before and after the <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A> method of the <xref:System.Xml.Schema.XmlSchemaSet> is called.</span></span>  

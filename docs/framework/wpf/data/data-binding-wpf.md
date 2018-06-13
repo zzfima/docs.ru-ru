@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33555782"
 ---
 # <a name="data-binding-wpf"></a><span data-ttu-id="c79b2-102">Привязка данных (WPF)</span><span class="sxs-lookup"><span data-stu-id="c79b2-102">Data Binding (WPF)</span></span>
 <span data-ttu-id="c79b2-103">Привязка данных Windows Presentation Foundation (WPF) обеспечивает простой и надежный способ представления и работать с данными о приложениях.</span><span class="sxs-lookup"><span data-stu-id="c79b2-103">Windows Presentation Foundation (WPF) data binding provides a simple and consistent way for applications to present and interact with data.</span></span> <span data-ttu-id="c79b2-104">Элементы можно привязать к данным из различных источников данных в виде объекта (CLR) среды CLR и XML.</span><span class="sxs-lookup"><span data-stu-id="c79b2-104">Elements can be bound to data from a variety of data sources in the form of common language runtime (CLR) objects and XML.</span></span>  

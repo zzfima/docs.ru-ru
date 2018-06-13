@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33514547"
 ---
 # <a name="hosting-workflows"></a><span data-ttu-id="43531-102">Размещение рабочих процессов</span><span class="sxs-lookup"><span data-stu-id="43531-102">Hosting Workflows</span></span>
 <span data-ttu-id="43531-103">В этом разделе описывается размещение рабочих процессов.</span><span class="sxs-lookup"><span data-stu-id="43531-103">The topics in this section discuss hosting workflows.</span></span>  

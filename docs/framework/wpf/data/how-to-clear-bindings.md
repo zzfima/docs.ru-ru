@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33555861"
 ---
 # <a name="how-to-clear-bindings"></a><span data-ttu-id="5a2e7-102">Практическое руководство. Очистка привязок</span><span class="sxs-lookup"><span data-stu-id="5a2e7-102">How to: Clear Bindings</span></span>
 <span data-ttu-id="5a2e7-103">В этом примере показано, как удалять привязки к объекту.</span><span class="sxs-lookup"><span data-stu-id="5a2e7-103">This example shows how to clear bindings from an object.</span></span>  

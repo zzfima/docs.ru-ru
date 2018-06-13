@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33561597"
 ---
 # <a name="how-to-create-a-composite-drawing"></a><span data-ttu-id="39ddf-102">Как создать составной рисунок</span><span class="sxs-lookup"><span data-stu-id="39ddf-102">How to: Create a Composite Drawing</span></span>
 <span data-ttu-id="39ddf-103">В этом примере показано, как использовать <xref:System.Windows.Media.DrawingGroup> для создания сложных рисунков путем объединения нескольких <xref:System.Windows.Media.Drawing> объектов в один составной рисунок.</span><span class="sxs-lookup"><span data-stu-id="39ddf-103">This example shows how to use a <xref:System.Windows.Media.DrawingGroup> to create complex drawings by combining multiple <xref:System.Windows.Media.Drawing> objects into a single composite drawing.</span></span>  

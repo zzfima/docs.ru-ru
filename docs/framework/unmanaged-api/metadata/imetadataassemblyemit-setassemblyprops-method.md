@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 6f8132296035e9ddcdcad76d93ed05358beb0b81
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33448237"
 ---
 # <a name="imetadataassemblyemitsetassemblyprops-method"></a><span data-ttu-id="99123-102">Метод IMetaDataAssemblyEmit::SetAssemblyProps</span><span class="sxs-lookup"><span data-stu-id="99123-102">IMetaDataAssemblyEmit::SetAssemblyProps Method</span></span>
 <span data-ttu-id="99123-103">Изменяет указанную структуру метаданных `Assembly`.</span><span class="sxs-lookup"><span data-stu-id="99123-103">Modifies the specified `Assembly` metadata structure.</span></span>  

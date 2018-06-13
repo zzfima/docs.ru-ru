@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33515005"
 ---
 # <a name="cancellation-handler-on-compensable-activity"></a><span data-ttu-id="16589-102">Обработчик отмены действия, подлежащего компенсации</span><span class="sxs-lookup"><span data-stu-id="16589-102">Cancellation Handler on Compensable Activity</span></span>
 <span data-ttu-id="16589-103">В этом образце показано использование обработчика отмены в <xref:System.Activities.Statements.CompensableActivity>.</span><span class="sxs-lookup"><span data-stu-id="16589-103">This sample demonstrates the use of a cancellation handler on a <xref:System.Activities.Statements.CompensableActivity>.</span></span>  

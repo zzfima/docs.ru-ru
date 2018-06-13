@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33561411"
 ---
 # <a name="how-to-specify-the-origin-of-a-transform-by-using-relative-values"></a><span data-ttu-id="462f0-102">Практическое руководство. Задание источника преобразования с помощью относительных значений</span><span class="sxs-lookup"><span data-stu-id="462f0-102">How to: Specify the Origin of a Transform by Using Relative Values</span></span>
 <span data-ttu-id="462f0-103">В этом примере показано использование относительных значений для указания <xref:System.Windows.UIElement.RenderTransform%2A> , применяемый к <xref:System.Windows.FrameworkElement>.</span><span class="sxs-lookup"><span data-stu-id="462f0-103">This example shows how to use relative values to specify the origin of a <xref:System.Windows.UIElement.RenderTransform%2A> that is applied to a <xref:System.Windows.FrameworkElement>.</span></span>  

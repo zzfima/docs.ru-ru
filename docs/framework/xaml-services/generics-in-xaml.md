@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33563588"
 ---
 # <a name="generics-in-xaml"></a><span data-ttu-id="526a6-102">Универсальные шаблоны в XAML</span><span class="sxs-lookup"><span data-stu-id="526a6-102">Generics in XAML</span></span>
 <span data-ttu-id="526a6-103">Служб .NET Framework XAML, как он реализован в сборке System.Xaml обеспечивает поддержку с помощью универсальных типов среды CLR.</span><span class="sxs-lookup"><span data-stu-id="526a6-103">The .NET Framework XAML Services as implemented in System.Xaml provides support for using generic CLR types.</span></span> <span data-ttu-id="526a6-104">Эта поддержка включает Указание ограничений универсальных типов в качестве аргумента типа и применение ограничения путем вызова соответствующего `Add` метод для универсальных коллекций.</span><span class="sxs-lookup"><span data-stu-id="526a6-104">This support includes specifying the constraints of generics as a type argument and enforcing the constraint by calling the appropriate `Add` method for generic collection cases.</span></span> <span data-ttu-id="526a6-105">В этом разделе описываются аспекты использования и ссылки на универсальных типов в XAML.</span><span class="sxs-lookup"><span data-stu-id="526a6-105">This topic describes aspects of using and referencing generic types in XAML.</span></span>  

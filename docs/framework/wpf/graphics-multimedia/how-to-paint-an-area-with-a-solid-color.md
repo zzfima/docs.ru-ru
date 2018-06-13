@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33561336"
 ---
 # <a name="how-to-paint-an-area-with-a-solid-color"></a><span data-ttu-id="0bd74-102">Практическое руководство. Закраска области сплошным цветом</span><span class="sxs-lookup"><span data-stu-id="0bd74-102">How to: Paint an Area with a Solid Color</span></span>
 <span data-ttu-id="0bd74-103">Для рисования область сплошным цветом, можно использовать стандартную системную кисть, например <xref:System.Windows.Media.Brushes.Red%2A> или <xref:System.Windows.Media.Brushes.Blue%2A>, или можно создать новую <xref:System.Windows.Media.SolidColorBrush> и описания его <xref:System.Windows.Media.SolidColorBrush.Color%2A> с помощью значений альфа, красного, зеленого и синего.</span><span class="sxs-lookup"><span data-stu-id="0bd74-103">To paint an area with a solid color, you can use a predefined system brush, such as <xref:System.Windows.Media.Brushes.Red%2A> or <xref:System.Windows.Media.Brushes.Blue%2A>, or you can create a new <xref:System.Windows.Media.SolidColorBrush> and describe its <xref:System.Windows.Media.SolidColorBrush.Color%2A> using alpha, red, green, and blue values.</span></span> <span data-ttu-id="0bd74-104">В XAML можно также закрасить область сплошным цветом, используя шестнадцатеричную нотацию.</span><span class="sxs-lookup"><span data-stu-id="0bd74-104">In XAML, you may also paint an area with a solid color by using hexidecimal notation.</span></span>  

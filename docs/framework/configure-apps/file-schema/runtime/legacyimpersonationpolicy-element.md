@@ -15,6 +15,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32745192"
 ---
 # <a name="ltlegacyimpersonationpolicygt-element"></a><span data-ttu-id="cf6a4-102">&lt;legacyImpersonationPolicy&gt; элемент</span><span class="sxs-lookup"><span data-stu-id="cf6a4-102">&lt;legacyImpersonationPolicy&gt; Element</span></span>
 <span data-ttu-id="cf6a4-103">Указывает, что удостоверение Windows не проходит через асинхронные точки, независимо от параметров потока для контекста выполнения в текущем потоке.</span><span class="sxs-lookup"><span data-stu-id="cf6a4-103">Specifies that the Windows identity does not flow across asynchronous points, regardless of the flow settings for the execution context on the current thread.</span></span>  

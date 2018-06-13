@@ -13,6 +13,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32743957"
 ---
 # <a name="shadow-copying-assemblies"></a><span data-ttu-id="33f11-102">Теневое копирование сборок</span><span class="sxs-lookup"><span data-stu-id="33f11-102">Shadow Copying Assemblies</span></span>
 <span data-ttu-id="33f11-103">Теневое копирование позволяет обновлять используемые в домене приложения сборки без выгрузки домена приложения.</span><span class="sxs-lookup"><span data-stu-id="33f11-103">Shadow copying enables assemblies that are used in an application domain to be updated without unloading the application domain.</span></span> <span data-ttu-id="33f11-104">Это особенно полезно для приложений, которые должны быть доступны постоянно, таких как сайты ASP.NET.</span><span class="sxs-lookup"><span data-stu-id="33f11-104">This is particularly useful for applications that must be available continuously, such as ASP.NET sites.</span></span>  

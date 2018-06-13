@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32748910"
 ---
 # <a name="ltprotocolmappinggt"></a><span data-ttu-id="dbd4a-102">&lt;protocolMapping&gt;</span><span class="sxs-lookup"><span data-stu-id="dbd4a-102">&lt;protocolMapping&gt;</span></span>
 <span data-ttu-id="dbd4a-103">Представляет раздел конфигурации определяется набор сопоставления протоколов по умолчанию между схемами транспортных протоколов (например, http, net.tcp, net.pipe, т. д.) и привязками WCF.</span><span class="sxs-lookup"><span data-stu-id="dbd4a-103">Represents a configuration section for defining a set of default protocol mapping between transport protocol schemes (e.g., http, net.tcp, net.pipe, etc.) and WCF bindings.</span></span> <span data-ttu-id="dbd4a-104">При создании конечных точек по умолчанию во время выполнения, Windows Communication Foundation (WCF) просматривает заданные сопоставления и решает, какую привязку необходимо использовать для определенного базового адреса.</span><span class="sxs-lookup"><span data-stu-id="dbd4a-104">When creating default endpoints at runtime, Windows Communication Foundation (WCF) looks at the configured mappings and decides on which binding to use for a particular based address.</span></span>  

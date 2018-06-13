@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33391037"
 ---
 # <a name="guidelines-for-creating-components-for-side-by-side-execution"></a><span data-ttu-id="f34ec-102">Рекомендации по созданию компонентов для параллельного выполнения</span><span class="sxs-lookup"><span data-stu-id="f34ec-102">Guidelines for Creating Components for Side-by-Side Execution</span></span>
 <span data-ttu-id="f34ec-103">Выполните эти общие рекомендации для создания управляемых приложений или компонентов для параллельного выполнения.</span><span class="sxs-lookup"><span data-stu-id="f34ec-103">Follow these general guidelines to create managed applications or components designed for side-by-side execution:</span></span>  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557125"
 ---
 # <a name="adorners-overview"></a><span data-ttu-id="e7d69-102">Общие сведения о декоративных элементах</span><span class="sxs-lookup"><span data-stu-id="e7d69-102">Adorners Overview</span></span>
 <span data-ttu-id="e7d69-103">Графические элементы — это специальный тип <xref:System.Windows.FrameworkElement>, использующимся для предоставления пользователю визуальные подсказки.</span><span class="sxs-lookup"><span data-stu-id="e7d69-103">Adorners are a special type of <xref:System.Windows.FrameworkElement>, used to provide visual cues to a user.</span></span> <span data-ttu-id="e7d69-104">Помимо прочего, декоративные элементы можно использовать для добавления функциональных дескрипторов к элементам или предоставления информации о состоянии элемента управления.</span><span class="sxs-lookup"><span data-stu-id="e7d69-104">Among other uses, Adorners can be used to add functional handles to elements or provide state information about a control.</span></span>  

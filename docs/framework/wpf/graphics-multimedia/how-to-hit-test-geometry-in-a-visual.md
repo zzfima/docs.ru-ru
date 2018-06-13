@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33560923"
 ---
 # <a name="how-to-hit-test-geometry-in-a-visual"></a><span data-ttu-id="79977-102">Практическое руководство. Проверка попадания курсора Geometry визуальном объекте</span><span class="sxs-lookup"><span data-stu-id="79977-102">How to: Hit Test Geometry in a Visual</span></span>
 <span data-ttu-id="79977-103">В этом примере показано, как для выполнения проверки попадания на визуальный объект, который состоит из одного или нескольких <xref:System.Windows.Media.Geometry> объектов.</span><span class="sxs-lookup"><span data-stu-id="79977-103">This example shows how to perform a hit test on a visual object that is composed of one or more <xref:System.Windows.Media.Geometry> objects.</span></span>  

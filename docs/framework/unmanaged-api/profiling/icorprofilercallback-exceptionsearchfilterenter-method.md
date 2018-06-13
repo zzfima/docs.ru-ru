@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 08ac7eddf96ac54ce16696355f7d5bb5694f872b
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33450987"
 ---
 # <a name="icorprofilercallbackexceptionsearchfilterenter-method"></a><span data-ttu-id="ca080-102">Метод ICorProfilerCallback::ExceptionSearchFilterEnter</span><span class="sxs-lookup"><span data-stu-id="ca080-102">ICorProfilerCallback::ExceptionSearchFilterEnter Method</span></span>
 <span data-ttu-id="ca080-103">Уведомляет профилировщик о том, что на поисковом этапе обработки исключений начал выполняться в фильтре исключений, определяемых пользователем.</span><span class="sxs-lookup"><span data-stu-id="ca080-103">Notifies the profiler that the search phase of exception handling has begun executing a user-defined exception filter.</span></span>  

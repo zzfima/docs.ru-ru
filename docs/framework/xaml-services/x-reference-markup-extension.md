@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33562249"
 ---
 # <a name="xreference-markup-extension"></a><span data-ttu-id="5246f-102">расширение разметки x:Reference</span><span class="sxs-lookup"><span data-stu-id="5246f-102">x:Reference Markup Extension</span></span>
 <span data-ttu-id="5246f-103">Ссылается на экземпляр, который объявлен в другом месте в разметке XAML.</span><span class="sxs-lookup"><span data-stu-id="5246f-103">References an instance that is declared elsewhere in XAML markup.</span></span> <span data-ttu-id="5246f-104">Ссылка на элемент `x:Name`.</span><span class="sxs-lookup"><span data-stu-id="5246f-104">The reference refers to an element's `x:Name`.</span></span>  

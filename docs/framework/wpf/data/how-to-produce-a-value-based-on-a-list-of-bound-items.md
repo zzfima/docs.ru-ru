@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33556839"
 ---
 # <a name="how-to-produce-a-value-based-on-a-list-of-bound-items"></a><span data-ttu-id="5e59e-102">Практическое руководство. Создание значений на основе списка связанных элементов</span><span class="sxs-lookup"><span data-stu-id="5e59e-102">How to: Produce a Value Based on a List of Bound Items</span></span>
 <span data-ttu-id="5e59e-103"><xref:System.Windows.Data.MultiBinding> можно привязать к целевому свойству привязки к списку свойств источника и затем применить логику для получения значения с заданными входными данными.</span><span class="sxs-lookup"><span data-stu-id="5e59e-103"><xref:System.Windows.Data.MultiBinding> allows you to bind a binding target property to a list of source properties and then apply logic to produce a value with the given inputs.</span></span> <span data-ttu-id="5e59e-104">В этом примере демонстрируется использование <xref:System.Windows.Data.MultiBinding>.</span><span class="sxs-lookup"><span data-stu-id="5e59e-104">This example demonstrates how to use <xref:System.Windows.Data.MultiBinding>.</span></span>  

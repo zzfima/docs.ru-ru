@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 2614ad988496a22f0e6234c2f3300e22ef548308
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33452446"
 ---
 # <a name="functionleave-function"></a><span data-ttu-id="61888-102">Функция FunctionLeave</span><span class="sxs-lookup"><span data-stu-id="61888-102">FunctionLeave Function</span></span>
 <span data-ttu-id="61888-103">Уведомляет профилировщик, что функция будет возвращать вызывающему.</span><span class="sxs-lookup"><span data-stu-id="61888-103">Notifies the profiler that a function is about to return to the caller.</span></span>  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33562009"
 ---
 # <a name="path-animation-how-to-topics"></a><span data-ttu-id="09de2-102">Практические руководства, посвященные анимации пути</span><span class="sxs-lookup"><span data-stu-id="09de2-102">Path Animation How-to Topics</span></span>
 <span data-ttu-id="09de2-103">В подразделах этого раздела показано, как анимация объекта вдоль пути.</span><span class="sxs-lookup"><span data-stu-id="09de2-103">The topics in this section demonstrate how to animate an object along a path.</span></span>  

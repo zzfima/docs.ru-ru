@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557138"
 ---
 # <a name="data"></a><span data-ttu-id="f4dc1-102">Данные</span><span class="sxs-lookup"><span data-stu-id="f4dc1-102">Data</span></span>
 <span data-ttu-id="f4dc1-103">Привязка данных [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] предоставляет приложениям простой и последовательный способ представления данных и взаимодействия с ними.</span><span class="sxs-lookup"><span data-stu-id="f4dc1-103">[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] data binding provides a simple and consistent way for applications to present and interact with data.</span></span> <span data-ttu-id="f4dc1-104">Элементы можно связывать с данными из различных источников данных в виде объектов [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] и XML.</span><span class="sxs-lookup"><span data-stu-id="f4dc1-104">Elements can be bound to data from a variety of data sources in the form of [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] objects and XML.</span></span> [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]<span data-ttu-id="f4dc1-105"> также предоставляет механизм передачи данных с помощью операций перетаскивания.</span><span class="sxs-lookup"><span data-stu-id="f4dc1-105"> also provides a mechanism for the transfer of data through drag-and-drop operations.</span></span>  

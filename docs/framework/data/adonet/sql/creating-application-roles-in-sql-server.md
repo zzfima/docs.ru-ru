@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33362531"
 ---
 # <a name="creating-application-roles-in-sql-server"></a><span data-ttu-id="4dfbb-102">Создание ролей приложений в SQL Server</span><span class="sxs-lookup"><span data-stu-id="4dfbb-102">Creating Application Roles in SQL Server</span></span>
 <span data-ttu-id="4dfbb-103">Роли приложения предоставляют возможность назначать разрешения приложению, а не ролям базы данных или пользователям.</span><span class="sxs-lookup"><span data-stu-id="4dfbb-103">Application roles provide a way to assign permissions to an application instead of a database role or user.</span></span> <span data-ttu-id="4dfbb-104">Пользователи могут соединиться с базой данных, активировать роль приложения и воспользоваться разрешениями, предоставленными приложению.</span><span class="sxs-lookup"><span data-stu-id="4dfbb-104">Users can connect to the database, activate the application role, and assume the permissions granted to the application.</span></span> <span data-ttu-id="4dfbb-105">Разрешения, предоставленные роли приложения, действуют в течение всего соединения.</span><span class="sxs-lookup"><span data-stu-id="4dfbb-105">The permissions granted to the application role are in force for the duration of the connection.</span></span>  

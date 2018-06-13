@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33554856"
 ---
 # <a name="3-d-graphics-how-to-topics"></a><span data-ttu-id="7bc09-102">Практические руководства, посвященные 3-D графике</span><span class="sxs-lookup"><span data-stu-id="7bc09-102">3-D Graphics How-to Topics</span></span>
 <span data-ttu-id="7bc09-103">В этом разделе демонстрируется использование [!INCLUDE[TLA#tla_3d](../../../../includes/tlasharptla-3d-md.md)] графических изображений в [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] приложений.</span><span class="sxs-lookup"><span data-stu-id="7bc09-103">The topics in this section demonstrate how to use [!INCLUDE[TLA#tla_3d](../../../../includes/tlasharptla-3d-md.md)] graphics in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] applications.</span></span>  

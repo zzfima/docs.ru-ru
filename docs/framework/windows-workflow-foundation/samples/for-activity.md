@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33515449"
 ---
 # <a name="for-activity"></a><span data-ttu-id="cb9d4-102">Для действия</span><span class="sxs-lookup"><span data-stu-id="cb9d4-102">For Activity</span></span>
 <span data-ttu-id="cb9d4-103">В образце For демонстрируется построение пользовательского действия, которое наследует от <xref:System.Activities.NativeActivity> и используется в рабочем процессе для выполнения реального примера.</span><span class="sxs-lookup"><span data-stu-id="cb9d4-103">The For sample demonstrates how to build a custom activity that inherits from <xref:System.Activities.NativeActivity>, and use it in a workflow to execute a real world example.</span></span> <span data-ttu-id="cb9d4-104">Пользовательское действие в этом образце работает подобно инструкции `for` языка C#.</span><span class="sxs-lookup"><span data-stu-id="cb9d4-104">The custom activity included in this sample functions like the C# `for` statement.</span></span> <span data-ttu-id="cb9d4-105">T</span><span class="sxs-lookup"><span data-stu-id="cb9d4-105">T</span></span>  

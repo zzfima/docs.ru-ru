@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33559428"
 ---
 # <a name="how-to-write-metadata-to-a-bitmap"></a><span data-ttu-id="c0498-102">Практическое руководство. Запись метаданных в точечный рисунок</span><span class="sxs-lookup"><span data-stu-id="c0498-102">How to: Write Metadata to a Bitmap</span></span>
 <span data-ttu-id="c0498-103">В этом примере показано, как для записи метаданных в растровое изображение с помощью языка запросов метаданных.</span><span class="sxs-lookup"><span data-stu-id="c0498-103">This example shows how to write metadata to a bitmap using the metadata query language.</span></span>  

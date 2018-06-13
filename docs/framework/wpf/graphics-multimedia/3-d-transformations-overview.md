@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557983"
 ---
 # <a name="3-d-transformations-overview"></a><span data-ttu-id="78831-102">Общие сведения о трехмерных преобразованиях</span><span class="sxs-lookup"><span data-stu-id="78831-102">3-D Transformations Overview</span></span>
 <span data-ttu-id="78831-103">В этом разделе описывается применение преобразований к трехмерным моделям в графической системе [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].</span><span class="sxs-lookup"><span data-stu-id="78831-103">This topic describes how to apply transformations to 3-D models in the [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] graphics system.</span></span> <span data-ttu-id="78831-104">Преобразования позволяют разработчикам перемещать модели, изменять их размер и направление, при этом не затрагивая их базовые определяющие значения.</span><span class="sxs-lookup"><span data-stu-id="78831-104">Transformations allow the developer to reposition, resize, and reorient models without changing the base values that define them.</span></span>  

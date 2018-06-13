@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33215073"
 ---
 # <a name="-c-compiler-options"></a><span data-ttu-id="80fdc-102">@ (параметры компилятора C#)</span><span class="sxs-lookup"><span data-stu-id="80fdc-102">@ (C# Compiler Options)</span></span>
 <span data-ttu-id="80fdc-103">С помощью параметра @ можно указать файл, содержащий параметры компилятора и файлы исходного кода, которые требуется компилировать.</span><span class="sxs-lookup"><span data-stu-id="80fdc-103">The @ option lets you specify a file that contains compiler options and source code files to compile.</span></span>  

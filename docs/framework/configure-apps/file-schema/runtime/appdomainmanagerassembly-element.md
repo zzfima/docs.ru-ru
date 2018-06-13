@@ -12,6 +12,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32744854"
 ---
 # <a name="ltappdomainmanagerassemblygt-element"></a><span data-ttu-id="f63c2-102">&lt;appDomainManagerAssembly&gt; элемент</span><span class="sxs-lookup"><span data-stu-id="f63c2-102">&lt;appDomainManagerAssembly&gt; Element</span></span>
 <span data-ttu-id="f63c2-103">Указывает сборку, предоставляющую диспетчер домена приложения для домена приложения, по умолчанию используемого в процессе.</span><span class="sxs-lookup"><span data-stu-id="f63c2-103">Specifies the assembly that provides the application domain manager for the default application domain in the process.</span></span>  

@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557686"
 ---
 # <a name="gridview-overview"></a><span data-ttu-id="06c00-102">Общие сведения о GridView</span><span class="sxs-lookup"><span data-stu-id="06c00-102">GridView Overview</span></span>
 <span data-ttu-id="06c00-103"><xref:System.Windows.Controls.GridView> режим — один из режимов просмотра для <xref:System.Windows.Controls.ListView> элемента управления.</span><span class="sxs-lookup"><span data-stu-id="06c00-103"><xref:System.Windows.Controls.GridView> view mode is one of the view modes for a <xref:System.Windows.Controls.ListView> control.</span></span> <span data-ttu-id="06c00-104"><xref:System.Windows.Controls.GridView> Класса и его вспомогательные классы позволяют вам и пользователям для просмотра коллекций элементов в таблице, в качестве интерактивных заголовков столбцов обычно используются кнопки.</span><span class="sxs-lookup"><span data-stu-id="06c00-104">The <xref:System.Windows.Controls.GridView> class and its supporting classes enable you and your users to view item collections in a table that typically uses buttons as interactive column headers.</span></span> <span data-ttu-id="06c00-105">В этом разделе описываются <xref:System.Windows.Controls.GridView> класса и возможности его использования.</span><span class="sxs-lookup"><span data-stu-id="06c00-105">This topic introduces the <xref:System.Windows.Controls.GridView> class and outlines its use.</span></span>  

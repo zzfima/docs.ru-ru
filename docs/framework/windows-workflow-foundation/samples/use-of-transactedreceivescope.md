@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33517310"
 ---
 # <a name="use-of-transactedreceivescope"></a><span data-ttu-id="e5bf1-102">Использование TransactedReceiveScope</span><span class="sxs-lookup"><span data-stu-id="e5bf1-102">Use of TransactedReceiveScope</span></span>
 <span data-ttu-id="e5bf1-103">В этом образце показывается передача транзакции от клиента к серверу с использованием действия <xref:System.Activities.Statements.TransactionScope> для создания новой транзакции на клиенте и действия <xref:System.ServiceModel.Activities.TransactedReceiveScope> для получения сообщения с передаваемой транзакцией и определения времени ее существования на сервере.</span><span class="sxs-lookup"><span data-stu-id="e5bf1-103">This sample shows how to flow a transaction from a client to a server using <xref:System.Activities.Statements.TransactionScope> to create a new transaction on the client and a <xref:System.ServiceModel.Activities.TransactedReceiveScope> to receive a message with a flowed transaction and scope the lifetime of the transaction on the server.</span></span> <span data-ttu-id="e5bf1-104">Образец состоит из двух проектов, исполняющих роли клиента и сервера.</span><span class="sxs-lookup"><span data-stu-id="e5bf1-104">The sample consists of two projects that fill the roles of client and server.</span></span>  

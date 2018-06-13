@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557628"
 ---
 # <a name="how-to-animate-a-3-d-rotation-using-key-frames"></a><span data-ttu-id="1d3aa-102">Практическое руководство. Анимация 3-D вращения с помощью опорных кадров</span><span class="sxs-lookup"><span data-stu-id="1d3aa-102">How to: Animate a 3-D Rotation Using Key Frames</span></span>
 <span data-ttu-id="1d3aa-103">В следующем примере <xref:System.Windows.Media.Animation.Rotation3DAnimationUsingKeyFrames> используются, чтобы сделать трехмерный объект вращаться во время его ось вращения анимирует, что приводит к «Иванин».</span><span class="sxs-lookup"><span data-stu-id="1d3aa-103">In the following example, <xref:System.Windows.Media.Animation.Rotation3DAnimationUsingKeyFrames> is used to make a 3D object rotate while its axis of rotation animates resulting in a "wobble".</span></span> <span data-ttu-id="1d3aa-104">Эта анимация использует следующие ключевые кадры:</span><span class="sxs-lookup"><span data-stu-id="1d3aa-104">This animation uses the following key frames:</span></span>  

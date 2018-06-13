@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33556930"
 ---
 # <a name="how-to-animate-a-boolean-by-using-key-frames"></a><span data-ttu-id="cf735-102">Практическое руководство. Анимация логического типа с помощью ключевых кадров</span><span class="sxs-lookup"><span data-stu-id="cf735-102">How to: Animate a Boolean by Using Key Frames</span></span>
 <span data-ttu-id="cf735-103">В этом примере демонстрируется анимация значение логического свойства <xref:System.Windows.Controls.Button> элемента управления с помощью ключевых кадров.</span><span class="sxs-lookup"><span data-stu-id="cf735-103">This example shows how to animate the Boolean property value of a <xref:System.Windows.Controls.Button> control by using key frames.</span></span>  

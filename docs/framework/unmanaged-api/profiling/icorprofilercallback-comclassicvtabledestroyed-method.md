@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 30d1e80d05344448c19c9f8f2d261442e4041487
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33451721"
 ---
 # <a name="icorprofilercallbackcomclassicvtabledestroyed-method"></a><span data-ttu-id="280ec-102">Метод ICorProfilerCallback::COMClassicVTableDestroyed</span><span class="sxs-lookup"><span data-stu-id="280ec-102">ICorProfilerCallback::COMClassicVTableDestroyed Method</span></span>
 <span data-ttu-id="280ec-103">Уведомляет профилировщик уничтожение взаимодействия COM виртуальной таблицы.</span><span class="sxs-lookup"><span data-stu-id="280ec-103">Notifies the profiler that a COM interop vtable is being destroyed.</span></span>  

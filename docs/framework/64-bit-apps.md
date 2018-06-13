@@ -13,6 +13,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32744279"
 ---
 # <a name="64-bit-applications"></a><span data-ttu-id="046ef-102">64-разрядные приложения</span><span class="sxs-lookup"><span data-stu-id="046ef-102">64-bit Applications</span></span>
 <span data-ttu-id="046ef-103">При компиляции приложения можно указать, должно ли оно запускаться в 64-разрядной операционной системе Windows в качестве собственного приложения или в эмуляторе WOW64 (в 32- или 64-разрядной ОС Windows).</span><span class="sxs-lookup"><span data-stu-id="046ef-103">When you compile an application, you can specify that it should run on a Windows 64-bit operating system either as a native application or under WOW64 (Windows 32-bit on Windows 64-bit).</span></span> <span data-ttu-id="046ef-104">WOW64 — это среда совместимости, которая позволяет выполнять 32-разрядное приложение в 64-разрядной системе.</span><span class="sxs-lookup"><span data-stu-id="046ef-104">WOW64 is a compatibility environment that enables a 32-bit application to run on a 64-bit system.</span></span> <span data-ttu-id="046ef-105">Эмулятор WOW64 входит в состав всех 64-разрядных версий операционной системы Windows.</span><span class="sxs-lookup"><span data-stu-id="046ef-105">WOW64 is included in all 64-bit versions of the Windows operating system.</span></span>  

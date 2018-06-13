@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33217143"
 ---
 # <a name="dynamic-c-reference"></a><span data-ttu-id="3e239-102">dynamic (Справочник по C#)</span><span class="sxs-lookup"><span data-stu-id="3e239-102">dynamic (C# Reference)</span></span>
 <span data-ttu-id="3e239-103">Тип `dynamic` включает операции, в которых он применяется для обхода проверки типов во время компиляции.</span><span class="sxs-lookup"><span data-stu-id="3e239-103">The `dynamic` type enables the operations in which it occurs to bypass compile-time type checking.</span></span> <span data-ttu-id="3e239-104">Такие операции разрешаются во время выполнения.</span><span class="sxs-lookup"><span data-stu-id="3e239-104">Instead, these operations are resolved at run time.</span></span> <span data-ttu-id="3e239-105">Тип `dynamic` упрощает доступ к API COM, таким как API автоматизации Office, а также к динамическим API, таким как библиотеки IronPython, и к HTML-модели DOM.</span><span class="sxs-lookup"><span data-stu-id="3e239-105">The `dynamic` type simplifies access to COM APIs such as the Office Automation APIs, and also to dynamic APIs such as IronPython libraries, and to the HTML Document Object Model (DOM).</span></span>  

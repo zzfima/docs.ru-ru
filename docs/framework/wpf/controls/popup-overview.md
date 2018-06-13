@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557580"
 ---
 # <a name="popup-overview"></a><span data-ttu-id="7c53a-102">Общие сведения о контекстном меню</span><span class="sxs-lookup"><span data-stu-id="7c53a-102">Popup Overview</span></span>
 <span data-ttu-id="7c53a-103"><xref:System.Windows.Controls.Primitives.Popup> Элемент управления предоставляет способ отображения содержимого в отдельном окне, расположенном поверх текущего окна приложения относительно заданного элемента или экранных координат.</span><span class="sxs-lookup"><span data-stu-id="7c53a-103">The <xref:System.Windows.Controls.Primitives.Popup> control provides a way to display content in a separate window that floats over the current application window relative to a designated element or screen coordinate.</span></span> <span data-ttu-id="7c53a-104">В этом разделе описываются <xref:System.Windows.Controls.Primitives.Popup> управления и предоставляет сведения о его использовании.</span><span class="sxs-lookup"><span data-stu-id="7c53a-104">This topic introduces the <xref:System.Windows.Controls.Primitives.Popup> control and provides information about its use.</span></span>  

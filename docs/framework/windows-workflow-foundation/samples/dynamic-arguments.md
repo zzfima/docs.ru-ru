@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33517982"
 ---
 # <a name="dynamic-arguments"></a><span data-ttu-id="2edac-102">Динамические аргументы</span><span class="sxs-lookup"><span data-stu-id="2edac-102">Dynamic Arguments</span></span>
 <span data-ttu-id="2edac-103">В этом образце показано, как реализовать действие, аргументы которого определяются объектом-получателем, а не автором действия.</span><span class="sxs-lookup"><span data-stu-id="2edac-103">This sample demonstrates how to implement an activity for which the arguments are defined by the activity consumer rather than the activity author.</span></span> <span data-ttu-id="2edac-104">Это достигается переопределением способа построения метаданных действия в среде выполнения.</span><span class="sxs-lookup"><span data-stu-id="2edac-104">It does this by overriding the way the runtime constructs the activity’s metadata.</span></span>  

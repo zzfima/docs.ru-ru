@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33566211"
 ---
 # <a name="wpf-security-strategy---security-engineering"></a><span data-ttu-id="d3115-102">Стратегия безопасности WPF — проектирование безопасности</span><span class="sxs-lookup"><span data-stu-id="d3115-102">WPF Security Strategy - Security Engineering</span></span>
 <span data-ttu-id="d3115-103">Trustworthy Computing (защищенные информационные системы) — это инициатива корпорации Майкрософт по созданию безопасного кода.</span><span class="sxs-lookup"><span data-stu-id="d3115-103">Trustworthy Computing is a Microsoft initiative for ensuring the production of secure code.</span></span> <span data-ttu-id="d3115-104">Ключевым элементом для создания защищенных информационных систем является [!INCLUDE[TLA#tla_sdl](../../../includes/tlasharptla-sdl-md.md)].</span><span class="sxs-lookup"><span data-stu-id="d3115-104">A key element of the Trustworthy Computing initiative is the [!INCLUDE[TLA#tla_sdl](../../../includes/tlasharptla-sdl-md.md)].</span></span> <span data-ttu-id="d3115-105">

@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 761dd55d2ae48739f24a03b8ce81c571fb211a5a
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33453161"
 ---
 # <a name="icorprofilerinfogetinprocinspectioninterface-method"></a><span data-ttu-id="55ffe-102">Метод ICorProfilerInfo::GetInprocInspectionInterface</span><span class="sxs-lookup"><span data-stu-id="55ffe-102">ICorProfilerInfo::GetInprocInspectionInterface Method</span></span>
 <span data-ttu-id="55ffe-103">Возвращает объект, который может запрашиваться для интерфейса «ICorDebugProcess».</span><span class="sxs-lookup"><span data-stu-id="55ffe-103">Gets an object that can be queried for an "ICorDebugProcess" interface.</span></span> <span data-ttu-id="55ffe-104">Этот метод является устаревшим в .NET Framework версии 2.0.</span><span class="sxs-lookup"><span data-stu-id="55ffe-104">This method is obsolete in the .NET Framework version 2.0.</span></span>  

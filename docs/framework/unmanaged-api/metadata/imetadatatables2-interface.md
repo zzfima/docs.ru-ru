@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: acd51e06382502fdc2facae939212e02d3675f6a
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33450080"
 ---
 # <a name="imetadatatables2-interface"></a><span data-ttu-id="49852-102">Интерфейс IMetaDataTables2</span><span class="sxs-lookup"><span data-stu-id="49852-102">IMetaDataTables2 Interface</span></span>
 <span data-ttu-id="49852-103">Расширяет [IMetaDataTables](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md) для включения методов работы с потоками метаданных.</span><span class="sxs-lookup"><span data-stu-id="49852-103">Extends [IMetaDataTables](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md) to include methods for working with metadata streams.</span></span>  

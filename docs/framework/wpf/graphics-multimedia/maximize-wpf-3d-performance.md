@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33565442"
 ---
 # <a name="maximize-wpf-3d-performance"></a><span data-ttu-id="4dcee-102">Достижение максимальной производительности WPF 3D</span><span class="sxs-lookup"><span data-stu-id="4dcee-102">Maximize WPF 3D Performance</span></span>
 <span data-ttu-id="4dcee-103">При использовании [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] для построения трехмерных элементов управления и включения трехмерных сцен в приложении, необходимо рассмотреть вопрос оптимизации производительности.</span><span class="sxs-lookup"><span data-stu-id="4dcee-103">As you use the [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] to build 3D controls and include 3D scenes in your applications, it is important to consider performance optimization.</span></span> <span data-ttu-id="4dcee-104">Здесь представлен список 3D классов и свойств, которые влияют на производительность приложения, а также рекомендации по оптимизации производительности при их использовании.</span><span class="sxs-lookup"><span data-stu-id="4dcee-104">This topic provides a list of 3D classes and properties that have performance implications for your application, along with recommendations for optimizing performance when you use them.</span></span>  

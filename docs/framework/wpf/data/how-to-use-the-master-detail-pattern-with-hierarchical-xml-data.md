@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33555929"
 ---
 # <a name="how-to-use-the-master-detail-pattern-with-hierarchical-xml-data"></a><span data-ttu-id="3ec13-102">Практическое руководство. Использование шаблона "основной-подробности" с иерархическими данными XML</span><span class="sxs-lookup"><span data-stu-id="3ec13-102">How to: Use the Master-Detail Pattern with Hierarchical XML Data</span></span>
 <span data-ttu-id="3ec13-103">В этом примере показано, как для реализации сценария "главный подчиненный" с [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] данных.</span><span class="sxs-lookup"><span data-stu-id="3ec13-103">This example shows how to implement the master-detail scenario with [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] data.</span></span>  

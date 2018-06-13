@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33561434"
 ---
 # <a name="how-to-animate-a-rectangle"></a><span data-ttu-id="ece0c-102">Практическое руководство. Анимация прямоугольника</span><span class="sxs-lookup"><span data-stu-id="ece0c-102">How to: Animate a Rectangle</span></span>
 <span data-ttu-id="ece0c-103">В этом примере показано, как анимировать изменения размера и положения прямоугольника.</span><span class="sxs-lookup"><span data-stu-id="ece0c-103">This example shows how to animate changes to the size and position of a rectangle.</span></span>  

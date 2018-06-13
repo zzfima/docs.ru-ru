@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557333"
 ---
 # <a name="how-to-make-data-available-for-binding-in-xaml"></a><span data-ttu-id="c27c2-102">Практическое руководство. Обеспечение доступности данных для привязки в XAML</span><span class="sxs-lookup"><span data-stu-id="c27c2-102">How to: Make Data Available for Binding in XAML</span></span>
 <span data-ttu-id="c27c2-103">В этом разделе обсуждаются различные способы, вы можете сделать данные доступными для привязки в [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], в зависимости от требований приложения.</span><span class="sxs-lookup"><span data-stu-id="c27c2-103">This topic discusses the different ways you can make data available for binding in [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], depending on the needs of your application.</span></span>  

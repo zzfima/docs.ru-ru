@@ -30,6 +30,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33396394"
 ---
 # <a name="introducing-pluggable-protocols"></a><span data-ttu-id="d48bc-102">Введение в подключаемые протоколы</span><span class="sxs-lookup"><span data-stu-id="d48bc-102">Introducing Pluggable Protocols</span></span>
 <span data-ttu-id="d48bc-103">Microsoft .NET Framework обеспечивает многоуровневую, расширяемую и управляемую реализацию служб Интернета, которую можно легко и быстро интегрировать в приложения.</span><span class="sxs-lookup"><span data-stu-id="d48bc-103">The Microsoft .NET Framework provides a layered, extensible, and managed implementation of Internet services that can be integrated quickly and easily into your applications.</span></span> <span data-ttu-id="d48bc-104">Классы доступа к Интернету в пространствах имен <xref:System.Net> и <xref:System.Net.Sockets> можно использовать для реализации веб-приложений и интернет-приложений.</span><span class="sxs-lookup"><span data-stu-id="d48bc-104">The Internet access classes in the <xref:System.Net> and <xref:System.Net.Sockets> namespaces can be used to implement both Web-based and Internet-based applications.</span></span>  

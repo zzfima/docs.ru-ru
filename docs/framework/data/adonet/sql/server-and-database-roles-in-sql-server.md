@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33364802"
 ---
 # <a name="server-and-database-roles-in-sql-server"></a><span data-ttu-id="616a8-102">Роли сервера и базы данных в SQL Server</span><span class="sxs-lookup"><span data-stu-id="616a8-102">Server and Database Roles in SQL Server</span></span>
 <span data-ttu-id="616a8-103">Во всех версиях SQL Server используется безопасность на основе ролей, что позволяет назначать разрешения роли или группе пользователей, а не отдельным пользователям.</span><span class="sxs-lookup"><span data-stu-id="616a8-103">All versions of SQL Server use role-based security, which allows you to assign permissions to a role, or group of users, instead of to individual users.</span></span> <span data-ttu-id="616a8-104">Предопределенные роли сервера и предопределенные роли базы данных имеют предопределенный набор разрешений, назначенных для них.</span><span class="sxs-lookup"><span data-stu-id="616a8-104">Fixed server and fixed database roles have a fixed set of permissions assigned to them.</span></span>  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33387342"
 ---
 # <a name="mitigation-wpf-layout"></a><span data-ttu-id="151cb-102">Устранение рисков. Макет WPF</span><span class="sxs-lookup"><span data-stu-id="151cb-102">Mitigation: WPF Layout</span></span>
 <span data-ttu-id="151cb-103">Макет элементов управления WPF может немного изменяться.</span><span class="sxs-lookup"><span data-stu-id="151cb-103">The layout of WPF controls can change slightly.</span></span>  

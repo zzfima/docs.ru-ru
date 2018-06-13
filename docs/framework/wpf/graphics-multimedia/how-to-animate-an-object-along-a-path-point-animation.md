@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33558785"
 ---
 # <a name="how-to-animate-an-object-along-a-path-point-animation"></a><span data-ttu-id="74028-102">Практическое руководство. Анимация объекта вдоль пути (точечная анимация)</span><span class="sxs-lookup"><span data-stu-id="74028-102">How to: Animate an Object Along a Path (Point Animation)</span></span>
 <span data-ttu-id="74028-103">В этом примере показано, как использовать <xref:System.Windows.Media.Animation.PointAnimationUsingPath> анимируемый объект <xref:System.Windows.Point> вдоль пути кривой.</span><span class="sxs-lookup"><span data-stu-id="74028-103">This example shows how to use a <xref:System.Windows.Media.Animation.PointAnimationUsingPath> object to animate a <xref:System.Windows.Point> along a curved path.</span></span>  

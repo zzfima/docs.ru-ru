@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33561018"
 ---
 # <a name="how-to-animate-a-property-without-using-a-storyboard"></a><span data-ttu-id="aab22-102">Практическое руководство. Анимация свойства без раскадровки</span><span class="sxs-lookup"><span data-stu-id="aab22-102">How to: Animate a Property Without Using a Storyboard</span></span>
 <span data-ttu-id="aab22-103">В этом примере показан один из способов применения анимации свойства без использования <xref:System.Windows.Media.Animation.Storyboard>.</span><span class="sxs-lookup"><span data-stu-id="aab22-103">This example shows one way to apply an animation to a property without using a <xref:System.Windows.Media.Animation.Storyboard>.</span></span>  

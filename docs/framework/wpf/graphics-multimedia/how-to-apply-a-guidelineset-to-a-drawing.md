@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33559162"
 ---
 # <a name="how-to-apply-a-guidelineset-to-a-drawing"></a><span data-ttu-id="cf582-102">Практическое руководство. Применение GuidelineSet к рисованию</span><span class="sxs-lookup"><span data-stu-id="cf582-102">How to: Apply a GuidelineSet to a Drawing</span></span>
 <span data-ttu-id="cf582-103">В этом примере показано, как применить <xref:System.Windows.Media.GuidelineSet> для <xref:System.Windows.Media.DrawingGroup>.</span><span class="sxs-lookup"><span data-stu-id="cf582-103">This example shows how to apply a <xref:System.Windows.Media.GuidelineSet> to a <xref:System.Windows.Media.DrawingGroup>.</span></span>  

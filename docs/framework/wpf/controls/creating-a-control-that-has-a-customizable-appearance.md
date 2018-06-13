@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33558282"
 ---
 # <a name="creating-a-control-that-has-a-customizable-appearance"></a><span data-ttu-id="c54b4-102">Создание элемента управления с настраиваемым внешним видом</span><span class="sxs-lookup"><span data-stu-id="c54b4-102">Creating a Control That Has a Customizable Appearance</span></span>
 <a name="introduction"></a>

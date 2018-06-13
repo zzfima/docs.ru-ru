@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33515514"
 ---
 # <a name="using-a-custom-activity"></a><span data-ttu-id="7a1ac-102">Применение пользовательского действия</span><span class="sxs-lookup"><span data-stu-id="7a1ac-102">Using a custom activity</span></span>
 <span data-ttu-id="7a1ac-103">Действия, которые являются производными от <xref:System.Activities.Activity> или его подклассов, можно составить в более крупные рабочие процессы или создать непосредственно в коде.</span><span class="sxs-lookup"><span data-stu-id="7a1ac-103">Activities that derive from <xref:System.Activities.Activity> or its subclasses can be composed into larger workflows, or created directly in code.</span></span> <span data-ttu-id="7a1ac-104">В этом разделе описано, как использовать пользовательские действия в рабочих процессах, созданных в коде или в конструкторе.</span><span class="sxs-lookup"><span data-stu-id="7a1ac-104">This topic describes how to use custom activities in workflows created either in code or in the designer.</span></span>  

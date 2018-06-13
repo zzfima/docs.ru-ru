@@ -18,6 +18,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32744828"
 ---
 # <a name="walkthrough-creating-an-extensible-application"></a><span data-ttu-id="7a908-102">Пошаговое руководство. Создание расширяемого приложения</span><span class="sxs-lookup"><span data-stu-id="7a908-102">Walkthrough: Creating an Extensible Application</span></span>
 <span data-ttu-id="7a908-103">В этом пошаговом руководстве описывается создание конвейера надстройки, выполняющий функции простого калькулятора.</span><span class="sxs-lookup"><span data-stu-id="7a908-103">This walkthrough describes how to create a pipeline for an add-in that performs simple calculator functions.</span></span> <span data-ttu-id="7a908-104">Здесь не показаны реальном сценарии; Вместо этого он демонстрирует основные функциональные возможности конвейера и как надстройка может предоставлять службы для узла.</span><span class="sxs-lookup"><span data-stu-id="7a908-104">It does not demonstrate a real-world scenario; rather, it demonstrates the basic functionality of a pipeline and how an add-in can provide services for a host.</span></span>  

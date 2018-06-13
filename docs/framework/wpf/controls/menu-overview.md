@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557606"
 ---
 # <a name="menu-overview"></a><span data-ttu-id="f00ab-102">Обзор меню</span><span class="sxs-lookup"><span data-stu-id="f00ab-102">Menu Overview</span></span>
 <span data-ttu-id="f00ab-103"><xref:System.Windows.Controls.Menu> Позволяет упорядочивать элементы, связанные с командами и обработчиками событий в иерархическом порядке.</span><span class="sxs-lookup"><span data-stu-id="f00ab-103">The <xref:System.Windows.Controls.Menu> class enables you to organize elements associated with commands and event handlers in a hierarchical order.</span></span> <span data-ttu-id="f00ab-104">Каждый <xref:System.Windows.Controls.Menu> элемент содержит коллекцию <xref:System.Windows.Controls.MenuItem> элементов.</span><span class="sxs-lookup"><span data-stu-id="f00ab-104">Each <xref:System.Windows.Controls.Menu> element contains a collection of <xref:System.Windows.Controls.MenuItem> elements.</span></span>  

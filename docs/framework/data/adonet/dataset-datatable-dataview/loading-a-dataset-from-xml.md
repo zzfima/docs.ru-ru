@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32759768"
 ---
 # <a name="loading-a-dataset-from-xml"></a><span data-ttu-id="3466b-102">Загрузка набора данных из XML</span><span class="sxs-lookup"><span data-stu-id="3466b-102">Loading a DataSet from XML</span></span>
 <span data-ttu-id="3466b-103">Содержимое объекта <xref:System.Data.DataSet> технологии ADO.NET может быть создано на основе XML-потока или XML-документа.</span><span class="sxs-lookup"><span data-stu-id="3466b-103">The contents of an ADO.NET <xref:System.Data.DataSet> can be created from an XML stream or document.</span></span> <span data-ttu-id="3466b-104">Кроме того, использование .NET Framework обеспечивает большую гибкость при выборе сведений, загружаемых из XML, а также способа создания схемы или реляционной структуры <xref:System.Data.DataSet>.</span><span class="sxs-lookup"><span data-stu-id="3466b-104">In addition, with the .NET Framework you have great flexibility over what information is loaded from XML, and how the schema or relational structure of the <xref:System.Data.DataSet> is created.</span></span>  

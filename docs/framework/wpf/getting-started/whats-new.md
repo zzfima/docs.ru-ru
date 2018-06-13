@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33558100"
 ---
 # <a name="what39s-new-in-wpf-version-45"></a><span data-ttu-id="6b57b-102">Новые возможности WPF версии 4.5</span><span class="sxs-lookup"><span data-stu-id="6b57b-102">What&#39;s New in WPF Version 4.5</span></span>
 <a name="introduction"></a> <span data-ttu-id="6b57b-103">Этот раздел содержит сведения о новых и усовершенствованных возможностях [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] версии 4.5.</span><span class="sxs-lookup"><span data-stu-id="6b57b-103">This topic contains information about new and enhanced features in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] version 4.5.</span></span>  

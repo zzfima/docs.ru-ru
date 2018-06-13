@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33558895"
 ---
 # <a name="how-to-create-a-quadratic-bezier-curve"></a><span data-ttu-id="dc0fb-102">Практическое руководство. Создание кривой Безье второго порядка</span><span class="sxs-lookup"><span data-stu-id="dc0fb-102">How to: Create a Quadratic Bezier Curve</span></span>
 <span data-ttu-id="dc0fb-103">В этом примере показано, как создать кривую Безье второго порядка.</span><span class="sxs-lookup"><span data-stu-id="dc0fb-103">This example shows how to create a quadratic Bezier curve.</span></span>  <span data-ttu-id="dc0fb-104">Чтобы создать кривую Безье второго порядка, используйте <xref:System.Windows.Media.PathGeometry>, <xref:System.Windows.Media.PathFigure>, и <xref:System.Windows.Media.QuadraticBezierSegment> классы.</span><span class="sxs-lookup"><span data-stu-id="dc0fb-104">To create a quadratic Bezier curve, use the <xref:System.Windows.Media.PathGeometry>, <xref:System.Windows.Media.PathFigure>, and <xref:System.Windows.Media.QuadraticBezierSegment> classes.</span></span>  

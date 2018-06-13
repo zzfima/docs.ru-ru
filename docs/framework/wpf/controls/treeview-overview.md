@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557788"
 ---
 # <a name="treeview-overview"></a><span data-ttu-id="63a64-102">Обзор элемента управления "TreeView"</span><span class="sxs-lookup"><span data-stu-id="63a64-102">TreeView Overview</span></span>
 <span data-ttu-id="63a64-103"><xref:System.Windows.Controls.TreeView> Управления обеспечивает способ отображения данных в виде иерархической структуры с использованием свертываемых узлов.</span><span class="sxs-lookup"><span data-stu-id="63a64-103">The <xref:System.Windows.Controls.TreeView> control provides a way to display information in a hierarchical structure by using collapsible nodes.</span></span> <span data-ttu-id="63a64-104">В этом разделе описываются <xref:System.Windows.Controls.TreeView> и <xref:System.Windows.Controls.TreeViewItem> элементов управления и простые примеры их использования.</span><span class="sxs-lookup"><span data-stu-id="63a64-104">This topic introduces the <xref:System.Windows.Controls.TreeView> and <xref:System.Windows.Controls.TreeViewItem> controls, and provides simple examples of their use.</span></span>  

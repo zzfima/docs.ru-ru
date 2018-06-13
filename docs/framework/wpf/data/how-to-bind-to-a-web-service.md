@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557295"
 ---
 # <a name="how-to-bind-to-a-web-service"></a><span data-ttu-id="514c3-102">Практическое руководство. Привязка к веб-службе</span><span class="sxs-lookup"><span data-stu-id="514c3-102">How to: Bind to a Web Service</span></span>
 <span data-ttu-id="514c3-103">В этом примере показано, как выполнить привязку для объектов, возвращенных вызовы метода веб-службы.</span><span class="sxs-lookup"><span data-stu-id="514c3-103">This example shows how to bind to objects returned by Web service method calls.</span></span>  

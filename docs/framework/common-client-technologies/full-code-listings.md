@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32742027"
 ---
 # <a name="full-code-listings"></a><span data-ttu-id="a4b4f-102">Полные листинги кода</span><span class="sxs-lookup"><span data-stu-id="a4b4f-102">Full Code Listings</span></span>
 <span data-ttu-id="a4b4f-103">Этот раздел содержит полный пример кода для приложения, использующего процессы [манипуляции и инерции](../../../docs/framework/common-client-technologies/manipulations-and-inertia.md).</span><span class="sxs-lookup"><span data-stu-id="a4b4f-103">This topic contains the entire code listing for an application that uses [Manipulations and Inertia](../../../docs/framework/common-client-technologies/manipulations-and-inertia.md) processors.</span></span>  

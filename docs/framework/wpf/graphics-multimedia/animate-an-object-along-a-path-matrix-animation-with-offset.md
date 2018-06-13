@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33556813"
 ---
 # <a name="how-to-animate-an-object-along-a-path-matrix-animation-with-offset-accumulation"></a><span data-ttu-id="d8d2e-102">Практическое руководство. Анимация объектов по всему пути (Матричная анимации с накоплением смещения)</span><span class="sxs-lookup"><span data-stu-id="d8d2e-102">How to: Animate an Object Along a Path (Matrix Animation with Offset Accumulation)</span></span>
 <span data-ttu-id="d8d2e-103">В этом примере показано, как использовать <xref:System.Windows.Media.Animation.MatrixAnimationUsingPath> класса, чтобы анимация объекта вдоль пути анимации накапливаются его смещение значения при повторе его.</span><span class="sxs-lookup"><span data-stu-id="d8d2e-103">This example shows how to use the <xref:System.Windows.Media.Animation.MatrixAnimationUsingPath> class to animate an object along a path and have that animation accumulate its offset values as it repeats.</span></span>  
