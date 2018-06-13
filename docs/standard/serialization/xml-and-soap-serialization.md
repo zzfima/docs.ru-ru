@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33591522"
 ---
 # <a name="xml-and-soap-serialization"></a><span data-ttu-id="8d01f-102">Сериализация XML и SOAP</span><span class="sxs-lookup"><span data-stu-id="8d01f-102">XML and SOAP Serialization</span></span>
 <span data-ttu-id="8d01f-103">При сериализации XML открытые поля и свойства объекта или параметры и возвращаемые значения методов преобразуются (сериализуются) в поток XML в соответствии со специальным документом, составленном на языке XSD (язык определения схемы XML).</span><span class="sxs-lookup"><span data-stu-id="8d01f-103">XML serialization converts (serializes) the public fields and properties of an object, or the parameters and return values of methods, into an XML stream that conforms to a specific XML Schema definition language (XSD) document.</span></span> <span data-ttu-id="8d01f-104">XML-сериализация приводит к образованию строго типизированных классов с открытыми свойствами и полями, которые преобразуются в серийный формат (в данном случае - XML) для хранения и передачи.</span><span class="sxs-lookup"><span data-stu-id="8d01f-104">XML serialization results in strongly typed classes with public properties and fields that are converted to a serial format (in this case, XML) for storage or transport.</span></span>  

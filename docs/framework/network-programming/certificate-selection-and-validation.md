@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33396796"
 ---
 # <a name="certificate-selection-and-validation"></a><span data-ttu-id="c24c0-102">Выбор и проверка сертификата</span><span class="sxs-lookup"><span data-stu-id="c24c0-102">Certificate Selection and Validation</span></span>
 <span data-ttu-id="c24c0-103">Классы <xref:System.Net> поддерживают несколько способов выбора и проверки <xref:System.Security.Cryptography.X509Certificates> для подключений SSL.</span><span class="sxs-lookup"><span data-stu-id="c24c0-103">The <xref:System.Net> classes support several ways to select and validate <xref:System.Security.Cryptography.X509Certificates> for Secure Socket Layer (SSL) connections.</span></span> <span data-ttu-id="c24c0-104">Клиент может выбрать один или несколько сертификатов для прохождения проверки подлинности на сервере.</span><span class="sxs-lookup"><span data-stu-id="c24c0-104">A client can select one or more certificates to authenticate itself to a server.</span></span> <span data-ttu-id="c24c0-105">Сервер может потребовать наличия в сертификате клиента одного или нескольких атрибутов для проверки подлинности.</span><span class="sxs-lookup"><span data-stu-id="c24c0-105">A server can require that a client certificate have one or more specific attributes for authentication.</span></span>  

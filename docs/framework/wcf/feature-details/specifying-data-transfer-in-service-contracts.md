@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33508506"
 ---
 # <a name="specifying-data-transfer-in-service-contracts"></a><span data-ttu-id="4a488-102">Задание передачи данных в контрактах служб</span><span class="sxs-lookup"><span data-stu-id="4a488-102">Specifying Data Transfer in Service Contracts</span></span>
 <span data-ttu-id="4a488-103">Windows Communication Foundation (WCF) можно рассматривать как инфраструктуру обмена сообщениями.</span><span class="sxs-lookup"><span data-stu-id="4a488-103">The Windows Communication Foundation (WCF) can be thought of as a messaging infrastructure.</span></span> <span data-ttu-id="4a488-104">Операции служб могут получать сообщения, обрабатывать их и отправлять.</span><span class="sxs-lookup"><span data-stu-id="4a488-104">Service operations can receive messages, process them, and send them messages.</span></span> <span data-ttu-id="4a488-105">Сообщения описываются с помощью контрактов операций.</span><span class="sxs-lookup"><span data-stu-id="4a488-105">Messages are described using operation contracts.</span></span> <span data-ttu-id="4a488-106">Например, рассмотрим следующий контракт:</span><span class="sxs-lookup"><span data-stu-id="4a488-106">For example, consider the following contract.</span></span>  

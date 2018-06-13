@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33502394"
 ---
 # <a name="iis-hosting-using-inline-code"></a><span data-ttu-id="b5da5-102">Размещение в службах IIS с использованием встроенного кода</span><span class="sxs-lookup"><span data-stu-id="b5da5-102">IIS Hosting Using Inline Code</span></span>
 <span data-ttu-id="b5da5-103">Этот образец демонстрирует реализацию службы, размещенной в службах IIS, когда код службы находится в строках файла SVC и компилируется по требованию.</span><span class="sxs-lookup"><span data-stu-id="b5da5-103">This sample demonstrates how to implement a service hosted by Internet Information Services (IIS), where the service code is contained in-line in a .svc file and is compiled on demand.</span></span> <span data-ttu-id="b5da5-104">Код службы может также быть реализован непосредственно в файлах исходного кода, расположенных в каталоге \App_Code приложения, или он может быть скомпилирован в сборку, развернутую в каталоге \bin.</span><span class="sxs-lookup"><span data-stu-id="b5da5-104">Service code can also be implemented directly in source code files located in the application's \App_Code directory, or compiled into assembly deployed in \bin.</span></span> <span data-ttu-id="b5da5-105">В этом примере такие приемы не демонстрируются.</span><span class="sxs-lookup"><span data-stu-id="b5da5-105">This sample does not demonstrate these techniques.</span></span>  

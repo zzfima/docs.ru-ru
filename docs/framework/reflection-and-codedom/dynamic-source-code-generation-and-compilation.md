@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33395938"
 ---
 # <a name="dynamic-source-code-generation-and-compilation"></a><span data-ttu-id="6eab6-102">Динамическое создание и компиляция исходного кода</span><span class="sxs-lookup"><span data-stu-id="6eab6-102">Dynamic Source Code Generation and Compilation</span></span>
 <span data-ttu-id="6eab6-103">В среду .NET Framework включен механизм, который называется Code Document Object Model (CodeDOM). Он позволяет разработчикам программ, порождающих исходный код, создавать код на нескольких языках программирования во время выполнения на основе единой модели, представляющей код для визуализации.</span><span class="sxs-lookup"><span data-stu-id="6eab6-103">The .NET Framework includes a mechanism called the Code Document Object Model (CodeDOM) that enables developers of programs that emit source code to generate source code in multiple programming languages at run time, based on a single model that represents the code to render.</span></span>  

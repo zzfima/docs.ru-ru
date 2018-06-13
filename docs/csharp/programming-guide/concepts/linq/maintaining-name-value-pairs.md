@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33325582"
 ---
 # <a name="maintaining-namevalue-pairs-c"></a><span data-ttu-id="f76f5-102">Обслуживание пар "имя-значение" (C#)</span><span class="sxs-lookup"><span data-stu-id="f76f5-102">Maintaining Name/Value Pairs (C#)</span></span>
 <span data-ttu-id="f76f5-103">Множеству приложений приходится сохранять данные, которые лучше всего хранить в виде пар «имя-значение».</span><span class="sxs-lookup"><span data-stu-id="f76f5-103">Many applications have to maintain information that is best kept as name/value pairs.</span></span> <span data-ttu-id="f76f5-104">Эти данные могут представлять сведения о конфигурации или глобальные параметры.</span><span class="sxs-lookup"><span data-stu-id="f76f5-104">This information might be configuration information or global settings.</span></span> [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]<span data-ttu-id="f76f5-105"> содержит несколько методов, которые облегчают хранение пар «имя-значение».</span><span class="sxs-lookup"><span data-stu-id="f76f5-105"> contains some methods that make it easy to keep a set of name/value pairs.</span></span> <span data-ttu-id="f76f5-106">Можно либо оставить информацию в виде атрибутов, либо в виде набора дочерних элементов.</span><span class="sxs-lookup"><span data-stu-id="f76f5-106">You can either keep the information as attributes or as a set of child elements.</span></span>  

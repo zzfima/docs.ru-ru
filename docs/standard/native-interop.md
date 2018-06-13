@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33591928"
 ---
 # <a name="native-interoperability"></a><span data-ttu-id="3e96f-103">Взаимодействие на уровне машинного кода</span><span class="sxs-lookup"><span data-stu-id="3e96f-103">Native Interoperability</span></span>
 

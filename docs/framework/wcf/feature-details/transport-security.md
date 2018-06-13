@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33498219"
 ---
 # <a name="transport-security"></a><span data-ttu-id="2dd5a-102">Безопасность транспорта</span><span class="sxs-lookup"><span data-stu-id="2dd5a-102">Transport Security</span></span>
 <span data-ttu-id="2dd5a-103">Безопасность транспорта в Windows Communication Foundation (WCF), зависит от выбранной привязки.</span><span class="sxs-lookup"><span data-stu-id="2dd5a-103">Transport security in Windows Communication Foundation (WCF) depends on the binding selected.</span></span> <span data-ttu-id="2dd5a-104">Транспорт, реализуемый привязкой, определяет фактический механизм безопасности.</span><span class="sxs-lookup"><span data-stu-id="2dd5a-104">The transport that the binding implements determines the actual security mechanism.</span></span> <span data-ttu-id="2dd5a-105">В подразделах данного раздела описываются реализуемые механизмы и их параметры.</span><span class="sxs-lookup"><span data-stu-id="2dd5a-105">The topics in this section explain the mechanisms that are implemented and their options.</span></span>  

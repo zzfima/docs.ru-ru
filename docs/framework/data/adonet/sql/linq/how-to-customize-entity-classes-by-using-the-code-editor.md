@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33360495"
 ---
 # <a name="how-to-customize-entity-classes-by-using-the-code-editor"></a><span data-ttu-id="dccbf-102">Практическое руководство. Настройка классов сущностей с использованием редактора кода</span><span class="sxs-lookup"><span data-stu-id="dccbf-102">How to: Customize Entity Classes by Using the Code Editor</span></span>
 <span data-ttu-id="dccbf-103">С помощью Visual Studio разработчики могут использовать [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] для создания или настройки своих классов сущностей.</span><span class="sxs-lookup"><span data-stu-id="dccbf-103">Developers using Visual Studio can use the [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] to create or customize their entity classes.</span></span>  

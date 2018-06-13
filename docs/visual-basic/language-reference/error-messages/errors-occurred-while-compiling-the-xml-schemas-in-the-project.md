@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33588266"
 ---
 # <a name="errors-occurred-while-compiling-the-xml-schemas-in-the-project"></a><span data-ttu-id="ef411-102">При компиляции XML-схем в проекте возникли ошибки</span><span class="sxs-lookup"><span data-stu-id="ef411-102">Errors occurred while compiling the XML schemas in the project</span></span>
 <span data-ttu-id="ef411-103">При компиляции схем XML в проекте возникли ошибки.</span><span class="sxs-lookup"><span data-stu-id="ef411-103">Errors occurred while compiling the XML schemas in the project.</span></span> <span data-ttu-id="ef411-104">По этой причине недоступна технология XML IntelliSense.</span><span class="sxs-lookup"><span data-stu-id="ef411-104">Because of this, XML IntelliSense is not available.</span></span>  

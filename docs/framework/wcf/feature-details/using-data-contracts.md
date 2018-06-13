@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33503728"
 ---
 # <a name="using-data-contracts"></a><span data-ttu-id="ce9a4-102">Использование контрактов данных</span><span class="sxs-lookup"><span data-stu-id="ce9a4-102">Using Data Contracts</span></span>
 <span data-ttu-id="ce9a4-103">*Контракт данных* - формальное соглашение между службой и клиентом, абстрактно описывающее данные, обмен которыми происходит.</span><span class="sxs-lookup"><span data-stu-id="ce9a4-103">A *data contract* is a formal agreement between a service and a client that abstractly describes the data to be exchanged.</span></span> <span data-ttu-id="ce9a4-104">Это значит, что для взаимодействия клиент и служба не обязаны совместно использовать одни и те же типы, достаточно совместно использовать одни и те же контракты данных.</span><span class="sxs-lookup"><span data-stu-id="ce9a4-104">That is, to communicate, the client and the service do not have to share the same types, only the same data contracts.</span></span> <span data-ttu-id="ce9a4-105">Контракт данных для каждого параметра и возвращаемого типа четко определяет, какие данные сериализуются (превращаются в XML) для обмена.</span><span class="sxs-lookup"><span data-stu-id="ce9a4-105">A data contract precisely defines, for each parameter or return type, what data is serialized (turned into XML) to be exchanged.</span></span>  

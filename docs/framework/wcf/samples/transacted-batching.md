@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33508882"
 ---
 # <a name="transacted-batching"></a><span data-ttu-id="4bdf5-102">Пакетирование с поддержкой транзакций</span><span class="sxs-lookup"><span data-stu-id="4bdf5-102">Transacted Batching</span></span>
 <span data-ttu-id="4bdf5-103">В этом образце показано, как пакетировать операции чтения с поддержкой транзакций с помощью очереди сообщений (MSMQ).</span><span class="sxs-lookup"><span data-stu-id="4bdf5-103">This sample demonstrates how to batch transacted reads by using Message Queuing (MSMQ).</span></span> <span data-ttu-id="4bdf5-104">Пакетирование с поддержкой транзакций - это функция оптимизации производительности для чтения с поддержкой транзакций при взаимодействии с использованием очередей.</span><span class="sxs-lookup"><span data-stu-id="4bdf5-104">Transacted Batching is a performance optimization feature for transacted reads in queued communication.</span></span>  

@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33591889"
 ---
 # <a name="walkthrough-filtering-myapplicationlog-output-visual-basic"></a><span data-ttu-id="c9d35-102">Пошаговое руководство. Фильтрация вывода My.Application.Log (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="c9d35-102">Walkthrough: Filtering My.Application.Log Output (Visual Basic)</span></span>
 <span data-ttu-id="c9d35-103">В этом пошаговом руководстве демонстрируется изменение фильтрации журнала по умолчанию для объекта `My.Application.Log`, чтобы контролировать, какие данные передаются из объекта `Log` в прослушиватели и какие данные записываются прослушивателями.</span><span class="sxs-lookup"><span data-stu-id="c9d35-103">This walkthrough demonstrates how to change the default log filtering for the `My.Application.Log` object, to control what information is passed from the `Log` object to the listeners and what information is written by the listeners.</span></span> <span data-ttu-id="c9d35-104">Режим ведения журнала можно изменить даже после создания приложения, поскольку сведения о конфигурации хранятся в файле конфигурации приложения.</span><span class="sxs-lookup"><span data-stu-id="c9d35-104">You can change the logging behavior even after building the application, because the configuration information is stored in the application's configuration file.</span></span>  

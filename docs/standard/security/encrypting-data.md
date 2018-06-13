@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33589832"
 ---
 # <a name="encrypting-data"></a><span data-ttu-id="0f3cc-102">Шифрование данных</span><span class="sxs-lookup"><span data-stu-id="0f3cc-102">Encrypting Data</span></span>
 <span data-ttu-id="0f3cc-103">Симметричное и асимметричное шифрования выполняются с использованием различных процессов.</span><span class="sxs-lookup"><span data-stu-id="0f3cc-103">Symmetric encryption and asymmetric encryption are performed using different processes.</span></span> <span data-ttu-id="0f3cc-104">Симметричное шифрование выполняется в рамках потоков, поэтому его удобно применять для шифрования больших объемов данных.</span><span class="sxs-lookup"><span data-stu-id="0f3cc-104">Symmetric encryption is performed on streams and is therefore useful to encrypt large amounts of data.</span></span> <span data-ttu-id="0f3cc-105">Асимметричное шифрование выполняется в рамках небольшого числа байтов, поэтому его удобно применять для шифрования только небольших объемов данных.</span><span class="sxs-lookup"><span data-stu-id="0f3cc-105">Asymmetric encryption is performed on a small number of bytes and is therefore useful only for small amounts of data.</span></span>  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32762693"
 ---
 # <a name="how-to-call-canonical-functions"></a><span data-ttu-id="ceb4b-102">Практическое руководство. Вызов канонических функций</span><span class="sxs-lookup"><span data-stu-id="ceb4b-102">How to: Call Canonical Functions</span></span>
 <span data-ttu-id="ceb4b-103">Класс <xref:System.Data.Objects.EntityFunctions> содержит методы, предоставляющие доступ к каноническим функциям для использования в запросах LINQ to Entities.</span><span class="sxs-lookup"><span data-stu-id="ceb4b-103">The <xref:System.Data.Objects.EntityFunctions> class contains methods that expose canonical functions to use in LINQ to Entities queries.</span></span> <span data-ttu-id="ceb4b-104">Сведения о канонических функциях см. в разделе [Канонические функции](../../../../../../docs/framework/data/adonet/ef/language-reference/canonical-functions.md).</span><span class="sxs-lookup"><span data-stu-id="ceb4b-104">For information about canonical functions, see [Canonical Functions](../../../../../../docs/framework/data/adonet/ef/language-reference/canonical-functions.md).</span></span>  

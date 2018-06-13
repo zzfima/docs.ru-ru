@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32764701"
 ---
 # <a name="input-character-set-entity-sql"></a><span data-ttu-id="d289a-102">Набор символов ввода (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="d289a-102">Input Character Set (Entity SQL)</span></span>
 <span data-ttu-id="d289a-103">В [!INCLUDE[esql](../../../../../../includes/esql-md.md)] допускается использование символов Юникода в кодировке UTF-16.</span><span class="sxs-lookup"><span data-stu-id="d289a-103">[!INCLUDE[esql](../../../../../../includes/esql-md.md)] accepts UNICODE characters encoded in UTF-16.</span></span>  

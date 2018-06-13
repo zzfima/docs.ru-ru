@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33575867"
 ---
 # <a name="induced-collections"></a><span data-ttu-id="10c24-102">Индуцированные коллекции</span><span class="sxs-lookup"><span data-stu-id="10c24-102">Induced Collections</span></span>
 <span data-ttu-id="10c24-103">В большинстве случаев сборщик мусора может определить самое подходящее время для выполнения сборки мусора, поэтому следует дать ему возможность работать независимо.</span><span class="sxs-lookup"><span data-stu-id="10c24-103">In most cases, the garbage collector can determine the best time to perform a collection, and you should let it run independently.</span></span> <span data-ttu-id="10c24-104">В очень редких случаях принудительная сборка мусора может улучшить производительность приложения.</span><span class="sxs-lookup"><span data-stu-id="10c24-104">There are rare situations when a forced collection might improve your application's performance.</span></span> <span data-ttu-id="10c24-105">В этих случаях вы можете принудительно запустить сборку мусора с помощью метода <xref:System.GC.Collect%2A?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="10c24-105">In these cases, you can induce garbage collection by using the <xref:System.GC.Collect%2A?displayProperty=nameWithType> method to force a garbage collection.</span></span>  

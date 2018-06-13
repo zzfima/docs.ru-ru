@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33509220"
 ---
 # <a name="whats-new-in-accessibility-in-the-net-framework"></a><span data-ttu-id="07ca9-102">Улучшения специальных возможностей в .NET Framework</span><span class="sxs-lookup"><span data-stu-id="07ca9-102">What's new in accessibility in the .NET Framework</span></span>
 

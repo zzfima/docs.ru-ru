@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 919c746b738246d76e90730c42882bfdd3ac6edc
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33458725"
 ---
 # <a name="strongnamesignatureverificationfromimage-function"></a><span data-ttu-id="75fbd-102">Функция StrongNameSignatureVerificationFromImage</span><span class="sxs-lookup"><span data-stu-id="75fbd-102">StrongNameSignatureVerificationFromImage Function</span></span>
 <span data-ttu-id="75fbd-103">Проверяет допустимость сборки, который уже сопоставлен в памяти для связанного открытого ключа.</span><span class="sxs-lookup"><span data-stu-id="75fbd-103">Verifies that an assembly that has already been mapped to memory is valid for the associated public key.</span></span>  

@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33508728"
 ---
 # <a name="security-protocols"></a><span data-ttu-id="404fb-102">Протоколы безопасности</span><span class="sxs-lookup"><span data-stu-id="404fb-102">Security Protocols</span></span>
 <span data-ttu-id="404fb-103">Протоколы WS-Security предоставляют механизмы обеспечения безопасности веб-служб, охватывающие все существующие требования к безопасности обмена сообщениями на предприятии.</span><span class="sxs-lookup"><span data-stu-id="404fb-103">The Web Services Security Protocols provide Web services security mechanisms that cover all existing enterprise messaging security requirements.</span></span> <span data-ttu-id="404fb-104">В этом разделе описываются подробности Windows Communication Foundation (WCF) (реализованный в <xref:System.ServiceModel.Channels.SecurityBindingElement>) для следующих протоколов WS-безопасности.</span><span class="sxs-lookup"><span data-stu-id="404fb-104">This section describes the Windows Communication Foundation (WCF) details (implemented in the <xref:System.ServiceModel.Channels.SecurityBindingElement>) for the following Web services security protocols.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33507867"
 ---
 # <a name="datacontract-surrogate"></a><span data-ttu-id="e67dc-102">Суррогат DataContract</span><span class="sxs-lookup"><span data-stu-id="e67dc-102">DataContract Surrogate</span></span>
 <span data-ttu-id="e67dc-103">В этом образце показано, каким образом такие процессы, как сериализация, десериализация, экспорт и импорт схемы, могут быть настроены при помощи заменяющего класса контракта данных.</span><span class="sxs-lookup"><span data-stu-id="e67dc-103">This sample demonstrates how processes like serialization, deserialization, schema export, and schema import can be customized using a data contract surrogate class.</span></span> <span data-ttu-id="e67dc-104">В этом примере показано, как использовать суррогат в сценарии клиента и сервера где сериализуются и передаются между клиентом Windows Communication Foundation (WCF) и службы данных.</span><span class="sxs-lookup"><span data-stu-id="e67dc-104">This sample shows how to use a surrogate in a client and server scenario where data is serialized and transmitted between a Windows Communication Foundation (WCF) client and service.</span></span>  

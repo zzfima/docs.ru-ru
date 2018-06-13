@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33327757"
 ---
 # <a name="how-to-control-namespace-prefixes-c-linq-to-xml"></a><span data-ttu-id="5e87e-102">Практическое руководство. Управление префиксами пространств имен (C#) (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="5e87e-102">How to: Control Namespace Prefixes (C#) (LINQ to XML)</span></span>
 <span data-ttu-id="5e87e-103">В этом разделе описывается управление префиксами пространств имен при сериализации дерева XML.</span><span class="sxs-lookup"><span data-stu-id="5e87e-103">This topic describes how you can control namespace prefixes when serializing an XML tree.</span></span>  

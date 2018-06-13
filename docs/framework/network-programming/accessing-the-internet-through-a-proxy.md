@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33394983"
 ---
 # <a name="accessing-the-internet-through-a-proxy"></a><span data-ttu-id="243ad-102">Доступ к Интернету через прокси-сервер</span><span class="sxs-lookup"><span data-stu-id="243ad-102">Accessing the Internet Through a Proxy</span></span>
 <span data-ttu-id="243ad-103">Если вы используете прокси-сервер для предоставления доступа к Интернету, необходимо настроить экземпляр прокси-сервера, который будет обеспечивать обмен данными между вашим приложением и веб-прокси.</span><span class="sxs-lookup"><span data-stu-id="243ad-103">If your site uses a proxy to provide access to the Internet, you must configure a proxy instance to enable your application to communicate with the Web proxy.</span></span>  

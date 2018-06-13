@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33592084"
 ---
 # <a name="how-my-depends-on-project-type-visual-basic"></a><span data-ttu-id="6afeb-102">Зависимость My от типа проекта (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="6afeb-102">How My Depends on Project Type (Visual Basic)</span></span>
 <span data-ttu-id="6afeb-103">`My` предоставляет только те объекты, необходимые для конкретного типа проекта.</span><span class="sxs-lookup"><span data-stu-id="6afeb-103">`My` exposes only those objects required by a particular project type.</span></span> <span data-ttu-id="6afeb-104">Например `My.Forms` объекта, доступные в приложении Windows Forms, но не доступен в консольном приложении.</span><span class="sxs-lookup"><span data-stu-id="6afeb-104">For example, the `My.Forms` object is available in a Windows Forms application but not available in a console application.</span></span> <span data-ttu-id="6afeb-105">В этом разделе описывается, что `My` доступных объектов в различных типах проектов.</span><span class="sxs-lookup"><span data-stu-id="6afeb-105">This topic describes which `My` objects are available in different project types.</span></span>  

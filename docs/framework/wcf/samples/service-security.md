@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33500120"
 ---
 # <a name="service-security"></a><span data-ttu-id="2d383-102">Безопасность службы</span><span class="sxs-lookup"><span data-stu-id="2d383-102">Service Security</span></span>
 <span data-ttu-id="2d383-103">Этот раздел содержит образцы, демонстрирующие службы безопасности Windows Communication Foundation (WCF).</span><span class="sxs-lookup"><span data-stu-id="2d383-103">This section contains samples that demonstrate Windows Communication Foundation (WCF) service security.</span></span>  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33592474"
 ---
 # <a name="managed-threading-best-practices"></a><span data-ttu-id="ef89c-102">Рекомендации по работе с потоками</span><span class="sxs-lookup"><span data-stu-id="ef89c-102">Managed Threading Best Practices</span></span>
 <span data-ttu-id="ef89c-103">Многопоточность требует тщательного программирования.</span><span class="sxs-lookup"><span data-stu-id="ef89c-103">Multithreading requires careful programming.</span></span> <span data-ttu-id="ef89c-104">Большинство задач можно упростить, поместив запросы на выполнение в очередь по потокам пулов потоков.</span><span class="sxs-lookup"><span data-stu-id="ef89c-104">For most tasks, you can reduce complexity by queuing requests for execution by thread pool threads.</span></span> <span data-ttu-id="ef89c-105">В этом разделе рассматриваются более сложные ситуации, такие как координация работы нескольких потоков или обработка потоков, вызывающих блокировку.</span><span class="sxs-lookup"><span data-stu-id="ef89c-105">This topic addresses more difficult situations, such as coordinating the work of multiple threads, or handling threads that block.</span></span>  

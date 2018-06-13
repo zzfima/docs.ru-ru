@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33575418"
 ---
 # <a name="xslt-security-considerations"></a><span data-ttu-id="6d017-102">Рекомендации по безопасности XSLT</span><span class="sxs-lookup"><span data-stu-id="6d017-102">XSLT Security Considerations</span></span>
 <span data-ttu-id="6d017-103">Язык XSLT обладает широким набором возможностей с большими возможностями и обеспечивает гибкость применения.</span><span class="sxs-lookup"><span data-stu-id="6d017-103">The XSLT language has a rich set of features that give you a great deal of power and flexibility.</span></span> <span data-ttu-id="6d017-104">В него входит много функций, которые полезны, но могут злонамеренно использоваться внешними источниками.</span><span class="sxs-lookup"><span data-stu-id="6d017-104">It includes many features that, while useful, could also be exploited by outside sources.</span></span> <span data-ttu-id="6d017-105">Чтобы использовать XSLT безопасно, необходимо иметь представление о проблемах безопасности, сопряженных с использованием XSLT, и основных стратегиях, применяемых для снижения этих рисков.</span><span class="sxs-lookup"><span data-stu-id="6d017-105">In order to use XSLT safely, you must understand the types of security issues that arise when using XSLT, and the basic strategies that you can employ to mitigate these risks.</span></span>  

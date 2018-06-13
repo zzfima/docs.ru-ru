@@ -6,9 +6,10 @@ helpviewer_keywords:
 ms.assetid: ee6a4156-73f7-4e9b-8e01-c74c4798b65c
 ms.openlocfilehash: b48fb59f0927056c8dba75211b4fffa6f25c5c52
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33591551"
 ---
 # <a name="creating-and-using-components-in-visual-basic"></a><span data-ttu-id="8f7c7-102">Создание и использование компонентов в Visual Basic</span><span class="sxs-lookup"><span data-stu-id="8f7c7-102">Creating and Using Components in Visual Basic</span></span>
 <span data-ttu-id="8f7c7-103">*Компонент* — это класс, который реализует интерфейс <xref:System.ComponentModel.IComponent?displayProperty=nameWithType> или прямо либо косвенно наследуется из класса, реализующего <xref:System.ComponentModel.IComponent>.</span><span class="sxs-lookup"><span data-stu-id="8f7c7-103">A *component* is a class that implements the <xref:System.ComponentModel.IComponent?displayProperty=nameWithType> interface or that derives directly or indirectly from a class that implements <xref:System.ComponentModel.IComponent>.</span></span> <span data-ttu-id="8f7c7-104">Компонент [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] является объектом, допускающим повторное использование, который может взаимодействовать с другими объектами и обеспечивает контроль над внешними ресурсами и поддержку во время разработки.</span><span class="sxs-lookup"><span data-stu-id="8f7c7-104">A [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] component is an object that is reusable, can interact with other objects, and provides control over external resources and design-time support.</span></span>  

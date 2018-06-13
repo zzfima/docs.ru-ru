@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33508619"
 ---
 # <a name="serialization-and-deserialization"></a><span data-ttu-id="a6953-102">Сериализация и десериализация</span><span class="sxs-lookup"><span data-stu-id="a6953-102">Serialization and Deserialization</span></span>
 <span data-ttu-id="a6953-103">Windows Communication Foundation (WCF) включает новый модуль сериализации, <xref:System.Runtime.Serialization.DataContractSerializer>.</span><span class="sxs-lookup"><span data-stu-id="a6953-103">Windows Communication Foundation (WCF) includes a new serialization engine, the <xref:System.Runtime.Serialization.DataContractSerializer>.</span></span> <span data-ttu-id="a6953-104">Сериализатор <xref:System.Runtime.Serialization.DataContractSerializer> преобразует объекты [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] в формат XML и обратно.</span><span class="sxs-lookup"><span data-stu-id="a6953-104">The <xref:System.Runtime.Serialization.DataContractSerializer> translates between [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] objects and XML, in both directions.</span></span> <span data-ttu-id="a6953-105">В данном разделе объясняется, как работает сериализатор.</span><span class="sxs-lookup"><span data-stu-id="a6953-105">This topic explains how the serializer works.</span></span>  

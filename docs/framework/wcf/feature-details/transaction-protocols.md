@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33508446"
 ---
 # <a name="transaction-protocols"></a><span data-ttu-id="ee5d0-102">Протоколы транзакций</span><span class="sxs-lookup"><span data-stu-id="ee5d0-102">Transaction Protocols</span></span>
 <span data-ttu-id="ee5d0-103">Windows Communication Foundation (WCF) реализует протоколы WS-Atomic Transaction и WS-Coordination.</span><span class="sxs-lookup"><span data-stu-id="ee5d0-103">Windows Communication Foundation (WCF) implements WS-Atomic Transaction and WS-Coordination protocols.</span></span>  

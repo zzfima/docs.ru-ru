@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33499197"
 ---
 # <a name="workflow-services"></a><span data-ttu-id="d3c23-102">Службы рабочего процесса</span><span class="sxs-lookup"><span data-stu-id="d3c23-102">Workflow Services</span></span>
 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]<span data-ttu-id="d3c23-103"> позволяет описать службу на основе рабочего процесса полностью декларативно на языке XAML.</span><span class="sxs-lookup"><span data-stu-id="d3c23-103"> allows you to fully describe a workflow-based service declaratively in XAML.</span></span> <span data-ttu-id="d3c23-104">Рабочий процесс, реализующий службу, и описание конечных точек, предоставляемых службой, можно полностью определить на языке XAML.</span><span class="sxs-lookup"><span data-stu-id="d3c23-104">You can define a workflow that implements your service and describe endpoints the service exposes, all entirely in XAML.</span></span> <span data-ttu-id="d3c23-105">Подразделы, содержащиеся в этом разделе, подробно описывают модель программирования, декларативную поддержку создания служб.</span><span class="sxs-lookup"><span data-stu-id="d3c23-105">The topics in this section describe, in detail, the programming model that supports writing services declaratively.</span></span>  

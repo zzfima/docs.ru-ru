@@ -1,55 +1,42 @@
 ---
 title: Поддержка SqlClient LocalDB
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-ado
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: cf796898-5575-46f2-ae6e-21e5aa8c4123
-caps.latest.revision: 14
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload:
-- dotnet
-ms.openlocfilehash: e2564e49a90a1c8fd9fe2cc000ebf648cf90b4e7
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 33368ca4b2dc5397087d29e515db6c1094e350bc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33359801"
 ---
-# <a name="sqlclient-support-for-localdb"></a><span data-ttu-id="27de6-102">Поддержка SqlClient LocalDB</span><span class="sxs-lookup"><span data-stu-id="27de6-102">SqlClient Support for LocalDB</span></span>
-<span data-ttu-id="27de6-103">Начиная с SQL Server с кодовым названием Denali, облегченная версия SQL Server, называемая LocalDB, будут доступны.</span><span class="sxs-lookup"><span data-stu-id="27de6-103">Beginning in SQL Server code name Denali, a lightweight version of SQL Server, called LocalDB, will be available.</span></span> <span data-ttu-id="27de6-104">В этом разделе описывается, как установить подключение к базе данных LocalDB.</span><span class="sxs-lookup"><span data-stu-id="27de6-104">This topic discusses how to connect to a LocalDB database.</span></span>  
+# <a name="sqlclient-support-for-localdb"></a><span data-ttu-id="6120c-102">Поддержка SqlClient LocalDB</span><span class="sxs-lookup"><span data-stu-id="6120c-102">SqlClient Support for LocalDB</span></span>
+<span data-ttu-id="6120c-103">Начиная с SQL Server с кодовым названием Denali, облегченная версия SQL Server, называемая LocalDB, будут доступны.</span><span class="sxs-lookup"><span data-stu-id="6120c-103">Beginning in SQL Server code name Denali, a lightweight version of SQL Server, called LocalDB, will be available.</span></span> <span data-ttu-id="6120c-104">В этом разделе описывается, как установить подключение к базе данных LocalDB.</span><span class="sxs-lookup"><span data-stu-id="6120c-104">This topic discusses how to connect to a LocalDB database.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="27de6-105">Примечания</span><span class="sxs-lookup"><span data-stu-id="27de6-105">Remarks</span></span>  
- <span data-ttu-id="27de6-106">Дополнительные сведения о LocalDB, включая установку и настройку экземпляра LocalDB в разделе электронной документации по SQL Server.</span><span class="sxs-lookup"><span data-stu-id="27de6-106">For more information about LocalDB, including how to install LocalDB and configure your LocalDB instance, see SQL Server Books Online.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="6120c-105">Примечания</span><span class="sxs-lookup"><span data-stu-id="6120c-105">Remarks</span></span>  
+ <span data-ttu-id="6120c-106">Дополнительные сведения о LocalDB, включая установку и настройку экземпляра LocalDB в разделе электронной документации по SQL Server.</span><span class="sxs-lookup"><span data-stu-id="6120c-106">For more information about LocalDB, including how to install LocalDB and configure your LocalDB instance, see SQL Server Books Online.</span></span>  
   
- <span data-ttu-id="27de6-107">Обзор возможностей LocalDB:</span><span class="sxs-lookup"><span data-stu-id="27de6-107">To summarize what you can do with LocalDB:</span></span>  
+ <span data-ttu-id="6120c-107">Обзор возможностей LocalDB:</span><span class="sxs-lookup"><span data-stu-id="6120c-107">To summarize what you can do with LocalDB:</span></span>  
   
--   <span data-ttu-id="27de6-108">Создание и запуск экземпляров LocalDB через sqllocaldb.exe или файл app.config.</span><span class="sxs-lookup"><span data-stu-id="27de6-108">Create and start LocalDB instances with sqllocaldb.exe or your app.config file.</span></span>  
+-   <span data-ttu-id="6120c-108">Создание и запуск экземпляров LocalDB через sqllocaldb.exe или файл app.config.</span><span class="sxs-lookup"><span data-stu-id="6120c-108">Create and start LocalDB instances with sqllocaldb.exe or your app.config file.</span></span>  
   
--   <span data-ttu-id="27de6-109">Использование sqlcmd.exe для добавления и изменения базы данных в экземпляре LocalDB.</span><span class="sxs-lookup"><span data-stu-id="27de6-109">Use sqlcmd.exe to add and modify databases in a LocalDB instance.</span></span> <span data-ttu-id="27de6-110">Например, `sqlcmd -S (localdb)\myinst`.</span><span class="sxs-lookup"><span data-stu-id="27de6-110">For example, `sqlcmd -S (localdb)\myinst`.</span></span>  
+-   <span data-ttu-id="6120c-109">Использование sqlcmd.exe для добавления и изменения базы данных в экземпляре LocalDB.</span><span class="sxs-lookup"><span data-stu-id="6120c-109">Use sqlcmd.exe to add and modify databases in a LocalDB instance.</span></span> <span data-ttu-id="6120c-110">Например, `sqlcmd -S (localdb)\myinst`.</span><span class="sxs-lookup"><span data-stu-id="6120c-110">For example, `sqlcmd -S (localdb)\myinst`.</span></span>  
   
--   <span data-ttu-id="27de6-111">Чтобы добавить базу данных к своему экземпляру LocalDB, пользуйтесь ключевым словом строки подключения `AttachDBFilename` .</span><span class="sxs-lookup"><span data-stu-id="27de6-111">Use the `AttachDBFilename` connection string keyword to add a database to your LocalDB instance.</span></span> <span data-ttu-id="27de6-112">Если при использовании `AttachDBFilename`не указано имя базы данных ключевым словом строки подключения `Database` , то база данных удаляется из экземпляра LocalDB после завершения работы приложения.</span><span class="sxs-lookup"><span data-stu-id="27de6-112">When using `AttachDBFilename`, if you do not specify the name of the database with the `Database` connection string keyword, the database will be removed from the LocalDB instance when the application closes.</span></span>  
+-   <span data-ttu-id="6120c-111">Чтобы добавить базу данных к своему экземпляру LocalDB, пользуйтесь ключевым словом строки подключения `AttachDBFilename` .</span><span class="sxs-lookup"><span data-stu-id="6120c-111">Use the `AttachDBFilename` connection string keyword to add a database to your LocalDB instance.</span></span> <span data-ttu-id="6120c-112">Если при использовании `AttachDBFilename`не указано имя базы данных ключевым словом строки подключения `Database` , то база данных удаляется из экземпляра LocalDB после завершения работы приложения.</span><span class="sxs-lookup"><span data-stu-id="6120c-112">When using `AttachDBFilename`, if you do not specify the name of the database with the `Database` connection string keyword, the database will be removed from the LocalDB instance when the application closes.</span></span>  
   
--   <span data-ttu-id="27de6-113">Укажите экземпляр LocalDB в строке подключения.</span><span class="sxs-lookup"><span data-stu-id="27de6-113">Specify a LocalDB instance in your connection string.</span></span> <span data-ttu-id="27de6-114">Например, если экземпляр имеет имя `myInstance`, то строка подключения включает следующее:</span><span class="sxs-lookup"><span data-stu-id="27de6-114">For example, your instance name is `myInstance`, the connection string would include:</span></span>  
+-   <span data-ttu-id="6120c-113">Укажите экземпляр LocalDB в строке подключения.</span><span class="sxs-lookup"><span data-stu-id="6120c-113">Specify a LocalDB instance in your connection string.</span></span> <span data-ttu-id="6120c-114">Например, если экземпляр имеет имя `myInstance`, то строка подключения включает следующее:</span><span class="sxs-lookup"><span data-stu-id="6120c-114">For example, your instance name is `myInstance`, the connection string would include:</span></span>  
   
     ```  
     server=(localdb)\\myInstance  
     ```  
   
- <span data-ttu-id="27de6-115">Указание`User Instance=True` недопустимо, если производится соединение с базой данных LocalDB.</span><span class="sxs-lookup"><span data-stu-id="27de6-115">`User Instance=True` is not allowed when connecting to a LocalDB database.</span></span>  
+ <span data-ttu-id="6120c-115">Указание`User Instance=True` недопустимо, если производится соединение с базой данных LocalDB.</span><span class="sxs-lookup"><span data-stu-id="6120c-115">`User Instance=True` is not allowed when connecting to a LocalDB database.</span></span>  
   
- <span data-ttu-id="27de6-116">Базу данных LocalDB можно скачать из [пакета дополнительных компонентов Microsoft SQL Server 2012](http://www.microsoft.com/download/en/details.aspx?id=29065).</span><span class="sxs-lookup"><span data-stu-id="27de6-116">You can download LocalDB from [Microsoft SQL Server 2012 Feature Pack](http://www.microsoft.com/download/en/details.aspx?id=29065).</span></span> <span data-ttu-id="27de6-117">Если вы будете использовать sqlcmd.exe для изменения данных в экземпляре LocalDB, необходимо будет sqlcmd из SQL Server 2012 можно также получить из пакета дополнительных компонентов SQL Server 2012.</span><span class="sxs-lookup"><span data-stu-id="27de6-117">If you will use sqlcmd.exe to modify data in your LocalDB instance, you will need sqlcmd from SQL Server 2012, which you can also get from the SQL Server 2012 Feature Pack.</span></span>  
+ <span data-ttu-id="6120c-116">Базу данных LocalDB можно скачать из [пакета дополнительных компонентов Microsoft SQL Server 2012](http://www.microsoft.com/download/en/details.aspx?id=29065).</span><span class="sxs-lookup"><span data-stu-id="6120c-116">You can download LocalDB from [Microsoft SQL Server 2012 Feature Pack](http://www.microsoft.com/download/en/details.aspx?id=29065).</span></span> <span data-ttu-id="6120c-117">Если вы будете использовать sqlcmd.exe для изменения данных в экземпляре LocalDB, необходимо будет sqlcmd из SQL Server 2012 можно также получить из пакета дополнительных компонентов SQL Server 2012.</span><span class="sxs-lookup"><span data-stu-id="6120c-117">If you will use sqlcmd.exe to modify data in your LocalDB instance, you will need sqlcmd from SQL Server 2012, which you can also get from the SQL Server 2012 Feature Pack.</span></span>  
   
-## <a name="programmatically-create-a-named-instance"></a><span data-ttu-id="27de6-118">Создание именованного экземпляра программным путем</span><span class="sxs-lookup"><span data-stu-id="27de6-118">Programmatically Create a Named Instance</span></span>  
- <span data-ttu-id="27de6-119">В приложении можно создать именованный экземпляр и определить базу данных следующим образом.</span><span class="sxs-lookup"><span data-stu-id="27de6-119">An application can create a named instance and specify a database as follows:</span></span>  
+## <a name="programmatically-create-a-named-instance"></a><span data-ttu-id="6120c-118">Создание именованного экземпляра программным путем</span><span class="sxs-lookup"><span data-stu-id="6120c-118">Programmatically Create a Named Instance</span></span>  
+ <span data-ttu-id="6120c-119">В приложении можно создать именованный экземпляр и определить базу данных следующим образом.</span><span class="sxs-lookup"><span data-stu-id="6120c-119">An application can create a named instance and specify a database as follows:</span></span>  
   
--   <span data-ttu-id="27de6-120">Определите создаваемые экземпляры LocalDB в файле app.config, как показано ниже.</span><span class="sxs-lookup"><span data-stu-id="27de6-120">Specify the LocalDB instances to create in the app.config file, as follows.</span></span>  <span data-ttu-id="27de6-121">Номер версии экземпляра должен совпадать с номером версии установки LocalDB.</span><span class="sxs-lookup"><span data-stu-id="27de6-121">The version number of the instance should be the same as the version number of your LocalDB installation.</span></span>  
+-   <span data-ttu-id="6120c-120">Определите создаваемые экземпляры LocalDB в файле app.config, как показано ниже.</span><span class="sxs-lookup"><span data-stu-id="6120c-120">Specify the LocalDB instances to create in the app.config file, as follows.</span></span>  <span data-ttu-id="6120c-121">Номер версии экземпляра должен совпадать с номером версии установки LocalDB.</span><span class="sxs-lookup"><span data-stu-id="6120c-121">The version number of the instance should be the same as the version number of your LocalDB installation.</span></span>  
   
     ```xml  
     <?xml version="1.0" encoding="utf-8" ?>  
@@ -67,10 +54,10 @@ ms.lasthandoff: 04/26/2018
     </configuration>  
     ```  
   
--   <span data-ttu-id="27de6-122">Укажите имя экземпляра с помощью ключевого слова строки подключения `server` .</span><span class="sxs-lookup"><span data-stu-id="27de6-122">Specify the name of the instance using the `server` connection string keyword.</span></span>  <span data-ttu-id="27de6-123">Имя экземпляра, указанное в ключевом слове строки подключения `server` , должно соответствовать имени, указанному в файле app.config.</span><span class="sxs-lookup"><span data-stu-id="27de6-123">The instance name specified in the `server` connection string keyword must match the name specified in the app.config file.</span></span>  
+-   <span data-ttu-id="6120c-122">Укажите имя экземпляра с помощью ключевого слова строки подключения `server` .</span><span class="sxs-lookup"><span data-stu-id="6120c-122">Specify the name of the instance using the `server` connection string keyword.</span></span>  <span data-ttu-id="6120c-123">Имя экземпляра, указанное в ключевом слове строки подключения `server` , должно соответствовать имени, указанному в файле app.config.</span><span class="sxs-lookup"><span data-stu-id="6120c-123">The instance name specified in the `server` connection string keyword must match the name specified in the app.config file.</span></span>  
   
--   <span data-ttu-id="27de6-124">С помощью ключевого слова строки подключения `AttachDBFilename` укажите MDF-файл.</span><span class="sxs-lookup"><span data-stu-id="27de6-124">Use the `AttachDBFilename` connection string keyword to specify the .MDF file.</span></span>  
+-   <span data-ttu-id="6120c-124">С помощью ключевого слова строки подключения `AttachDBFilename` укажите MDF-файл.</span><span class="sxs-lookup"><span data-stu-id="6120c-124">Use the `AttachDBFilename` connection string keyword to specify the .MDF file.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="27de6-125">См. также</span><span class="sxs-lookup"><span data-stu-id="27de6-125">See Also</span></span>  
- [<span data-ttu-id="27de6-126">Возможности SQL Server и ADO.NET</span><span class="sxs-lookup"><span data-stu-id="27de6-126">SQL Server Features and ADO.NET</span></span>](../../../../../docs/framework/data/adonet/sql/sql-server-features-and-adonet.md)  
- [<span data-ttu-id="27de6-127">Центр разработчиков наборов данных и управляемых поставщиков ADO.NET</span><span class="sxs-lookup"><span data-stu-id="27de6-127">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="6120c-125">См. также</span><span class="sxs-lookup"><span data-stu-id="6120c-125">See Also</span></span>  
+ [<span data-ttu-id="6120c-126">Возможности SQL Server и ADO.NET</span><span class="sxs-lookup"><span data-stu-id="6120c-126">SQL Server Features and ADO.NET</span></span>](../../../../../docs/framework/data/adonet/sql/sql-server-features-and-adonet.md)  
+ [<span data-ttu-id="6120c-127">Центр разработчиков наборов данных и управляемых поставщиков ADO.NET</span><span class="sxs-lookup"><span data-stu-id="6120c-127">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

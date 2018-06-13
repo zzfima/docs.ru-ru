@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33326109"
 ---
 # <a name="how-to-transform-the-shape-of-an-xml-tree-c"></a><span data-ttu-id="4f6f4-102">Практическое руководство. Преобразование формы дерева XML (C#)</span><span class="sxs-lookup"><span data-stu-id="4f6f4-102">How to: Transform the Shape of an XML Tree (C#)</span></span>
 <span data-ttu-id="4f6f4-103">Понятие *форма* применительно к XML-документу обозначает совокупность имен элементов, атрибутов и характеристик его иерархии.</span><span class="sxs-lookup"><span data-stu-id="4f6f4-103">The *shape* of an XML document refers to its element names, attribute names, and the characteristics of its hierarchy.</span></span>  

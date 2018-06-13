@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: cebf5f1101abed29bc325cec2390b4fd13056e4a
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33459974"
 ---
 # <a name="icorprofilerinfo4getcodeinfo3-method"></a><span data-ttu-id="bc4d1-102">Метод ICorProfilerInfo4::GetCodeInfo3</span><span class="sxs-lookup"><span data-stu-id="bc4d1-102">ICorProfilerInfo4::GetCodeInfo3 Method</span></span>
 <span data-ttu-id="bc4d1-103">Получает экстенты машинного кода, связанного с перекомпилированной с помощью JIT-компилятора версией указанной функции.</span><span class="sxs-lookup"><span data-stu-id="bc4d1-103">Gets the extents of native code associated with the JIT-recompiled version of the specified function.</span></span>  

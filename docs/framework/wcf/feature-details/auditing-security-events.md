@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33496029"
 ---
 # <a name="auditing-security-events"></a><span data-ttu-id="3edc9-102">Аудит событий безопасности</span><span class="sxs-lookup"><span data-stu-id="3edc9-102">Auditing Security Events</span></span>
 <span data-ttu-id="3edc9-103">Приложения, созданные с помощью Windows Communication Foundation (WCF) может регистрировать события безопасности (либо успешно, сбой или оба) с помощью функции аудита.</span><span class="sxs-lookup"><span data-stu-id="3edc9-103">Applications created with Windows Communication Foundation (WCF) can log security events (either success, failure, or both) with the auditing feature.</span></span> <span data-ttu-id="3edc9-104">События записываются в журнал системных событий Windows, и их можно просматривать при помощи средства просмотра событий.</span><span class="sxs-lookup"><span data-stu-id="3edc9-104">The events are written to the Windows system event log and can be examined using the Event Viewer.</span></span>  

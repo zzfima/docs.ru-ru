@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33593692"
 ---
 # <a name="property-or-method-not-found"></a><span data-ttu-id="4e082-102">Свойство или метод не найдены</span><span class="sxs-lookup"><span data-stu-id="4e082-102">Property or method not found</span></span>
 <span data-ttu-id="4e082-103">Указанный метод или свойство объекта не определено.</span><span class="sxs-lookup"><span data-stu-id="4e082-103">The referenced object method or object property is not defined.</span></span>  

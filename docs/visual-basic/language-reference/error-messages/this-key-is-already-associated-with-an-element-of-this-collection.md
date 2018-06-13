@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33593266"
 ---
 # <a name="this-key-is-already-associated-with-an-element-of-this-collection"></a><span data-ttu-id="38aaa-102">Ключ уже связан с элементом коллекции</span><span class="sxs-lookup"><span data-stu-id="38aaa-102">This key is already associated with an element of this collection</span></span>
 <span data-ttu-id="38aaa-103">Указан ключ для элемента коллекции, уже определяет другой член коллекции.</span><span class="sxs-lookup"><span data-stu-id="38aaa-103">The specified a key for a collection member already identifies another member of the collection.</span></span> <span data-ttu-id="38aaa-104">Ключ является строкой, указанной в `Add` метод, который уникально определяет отдельный член коллекции.</span><span class="sxs-lookup"><span data-stu-id="38aaa-104">A key is a string specified in the `Add` method that uniquely identifies a specific member of a collection.</span></span>  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33362890"
 ---
 # <a name="how-to-submit-changes-to-the-database"></a><span data-ttu-id="83a32-102">Практическое руководство. Отправка изменений в базу данных</span><span class="sxs-lookup"><span data-stu-id="83a32-102">How to: Submit Changes to the Database</span></span>
 <span data-ttu-id="83a32-103">Независимо от количества изменений, произведенных над объектами, эти изменения выполняются только над репликам, содержащимся в памяти.</span><span class="sxs-lookup"><span data-stu-id="83a32-103">Regardless of how many changes you make to your objects, changes are made only to in-memory replicas.</span></span> <span data-ttu-id="83a32-104">Фактические данные в базе данных при этом не изменяются.</span><span class="sxs-lookup"><span data-stu-id="83a32-104">You have made no changes to the actual data in the database.</span></span> <span data-ttu-id="83a32-105">Изменения не передаются на сервер до тех пор, пока не будет явно вызван метод <xref:System.Data.Linq.DataContext.SubmitChanges%2A> класса <xref:System.Data.Linq.DataContext>.</span><span class="sxs-lookup"><span data-stu-id="83a32-105">Your changes are not transmitted to the server until you explicitly call <xref:System.Data.Linq.DataContext.SubmitChanges%2A> on the <xref:System.Data.Linq.DataContext>.</span></span>  

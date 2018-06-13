@@ -23,6 +23,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33590716"
 ---
 # <a name="short-data-type-visual-basic"></a><span data-ttu-id="2fa12-102">Тип данных Short (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="2fa12-102">Short data type (Visual Basic)</span></span>
 <span data-ttu-id="2fa12-103">Содержит знаком 16-разрядное (2-байтовые) целые числа в диапазоне от-32 768 до 32 767.</span><span class="sxs-lookup"><span data-stu-id="2fa12-103">Holds signed 16-bit (2-byte) integers that range in value from -32,768 through 32,767.</span></span>  

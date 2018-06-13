@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33498151"
 ---
 # <a name="serializing-in-json-with-message-level-programming"></a><span data-ttu-id="b597f-102">Сериализация в Json с помощью программирования на уровне сообщений</span><span class="sxs-lookup"><span data-stu-id="b597f-102">Serializing in Json with Message Level Programming</span></span>
 <span data-ttu-id="b597f-103">WCF поддерживает сериализацию данных в формате JSON.</span><span class="sxs-lookup"><span data-stu-id="b597f-103">WCF supports serializing data in JSON format.</span></span> <span data-ttu-id="b597f-104">В этом разделе описывается, как в WCF выполнить сериализацию типов с помощью <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>.</span><span class="sxs-lookup"><span data-stu-id="b597f-104">This topic describes how to tell WCF to serialize your types using the <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>.</span></span>  

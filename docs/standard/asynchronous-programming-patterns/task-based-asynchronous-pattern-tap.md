@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579019"
 ---
 # <a name="task-based-asynchronous-pattern-tap"></a><span data-ttu-id="33aef-102">Асинхронный шаблон, основанный на задачах (TAP)</span><span class="sxs-lookup"><span data-stu-id="33aef-102">Task-based Asynchronous Pattern (TAP)</span></span>
 <span data-ttu-id="33aef-103">Асинхронная модель на основе задач (TAP) основана на типах <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> и <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> пространства имен <xref:System.Threading.Tasks?displayProperty=nameWithType>, которые используются для представления произвольных асинхронных операций.</span><span class="sxs-lookup"><span data-stu-id="33aef-103">The Task-based Asynchronous Pattern (TAP) is based on the <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> and <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> types in the <xref:System.Threading.Tasks?displayProperty=nameWithType> namespace, which are used to represent arbitrary asynchronous operations.</span></span> <span data-ttu-id="33aef-104">TAP — это рекомендуемый асинхронный шаблон для разработки новых компонентов.</span><span class="sxs-lookup"><span data-stu-id="33aef-104">TAP is the recommended asynchronous design pattern for new development.</span></span>  

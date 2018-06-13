@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33504163"
 ---
 # <a name="fault-contract"></a><span data-ttu-id="03479-102">Контракт ошибок</span><span class="sxs-lookup"><span data-stu-id="03479-102">Fault Contract</span></span>
 <span data-ttu-id="03479-103">Этот образец демонстрирует передачу информации об ошибке из службы клиенту.</span><span class="sxs-lookup"><span data-stu-id="03479-103">The Fault Contract sample demonstrates how to communicate error information from a service to a client.</span></span> <span data-ttu-id="03479-104">Пример построен на [Приступая к работе](../../../../docs/framework/wcf/samples/getting-started-sample.md), с дополнительный программный код, добавленный в службу, чтобы преобразовывать внутреннее исключение в ошибку.</span><span class="sxs-lookup"><span data-stu-id="03479-104">The sample is based on the [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md), with some additional code added to the service to convert an internal exception to a fault.</span></span> <span data-ttu-id="03479-105">Клиент пытается выполнить операцию деления на ноль для принудительного сбоя службы.</span><span class="sxs-lookup"><span data-stu-id="03479-105">The client attempts to perform division by zero to force an error condition on the service.</span></span>  

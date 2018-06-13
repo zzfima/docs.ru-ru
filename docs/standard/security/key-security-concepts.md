@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33590924"
 ---
 # <a name="key-security-concepts"></a><span data-ttu-id="6221e-102">Основные понятия безопасности</span><span class="sxs-lookup"><span data-stu-id="6221e-102">Key Security Concepts</span></span>
 <span data-ttu-id="6221e-103">Microsoft .NET Framework предлагает безопасность на основе ролей для решения проблем безопасности, связанных с мобильным кодом, и предоставления поддержки, которая позволяет компонентам определять, какие пользователи авторизованы для выполнения действий.</span><span class="sxs-lookup"><span data-stu-id="6221e-103">The Microsoft .NET Framework offers role-based security to help address security concerns about mobile code and to provide support that enables components to determine what users are authorized to do.</span></span>  

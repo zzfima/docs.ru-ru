@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33500923"
 ---
 # <a name="service-contracts"></a><span data-ttu-id="587cb-102">Контракты служб</span><span class="sxs-lookup"><span data-stu-id="587cb-102">Service Contracts</span></span>
 <span data-ttu-id="587cb-103">В этом разделе содержатся образцы, которые демонстрируют контракты служб в Windows Communication Foundation (WCF).</span><span class="sxs-lookup"><span data-stu-id="587cb-103">This section contains samples that demonstrate service contracts in Windows Communication Foundation (WCF).</span></span>  

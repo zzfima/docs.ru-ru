@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32760912"
 ---
 # <a name="grouppartition-entity-sql"></a><span data-ttu-id="3e5c5-102">GROUPPARTITION (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="3e5c5-102">GROUPPARTITION (Entity SQL)</span></span>
 <span data-ttu-id="3e5c5-103">Возвращает коллекцию значений аргумента, проекция которых получена из текущей секции группы, с которой связано статистическое выражение.</span><span class="sxs-lookup"><span data-stu-id="3e5c5-103">Returns a collection of argument values that are projected off the current group partition to which the aggregate is related.</span></span> <span data-ttu-id="3e5c5-104">Агрегат `GroupPartition` основан на группе и не имеет формы, основанной на коллекции.</span><span class="sxs-lookup"><span data-stu-id="3e5c5-104">The `GroupPartition` aggregate is a group-based aggregate and has no collection-based form.</span></span>  

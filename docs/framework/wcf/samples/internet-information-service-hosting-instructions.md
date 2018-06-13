@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33507578"
 ---
 # <a name="internet-information-service-hosting-instructions"></a><span data-ttu-id="99c4c-102">Инструкции по размещению в службах IIS</span><span class="sxs-lookup"><span data-stu-id="99c4c-102">Internet Information Service Hosting Instructions</span></span>
 <span data-ttu-id="99c4c-103">Для выполнения примеров, размещаемых в службах IIS, следует убедиться, что службы IIS правильно установлены и запущены.</span><span class="sxs-lookup"><span data-stu-id="99c4c-103">To run the samples that are hosted by Internet Information Services (IIS), you must make sure that IIS is properly installed and is running.</span></span>  

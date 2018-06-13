@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32765637"
 ---
 # <a name="entity-data-model-key-concepts"></a><span data-ttu-id="2f311-102">Основные понятия модели EDM</span><span class="sxs-lookup"><span data-stu-id="2f311-102">Entity Data Model Key Concepts</span></span>
 <span data-ttu-id="2f311-103">Модель данных сущности (EDM) использует три основных понятия для описания структуры данных: *тип сущности*, *тип ассоциации*, и *свойства*.</span><span class="sxs-lookup"><span data-stu-id="2f311-103">The Entity Data Model (EDM) uses three key concepts to describe the structure of data: *entity type*, *association type*, and *property*.</span></span> <span data-ttu-id="2f311-104">Это самые важные основные понятия в описании структуры данных в любой реализации модели EDM.</span><span class="sxs-lookup"><span data-stu-id="2f311-104">These are the most important concepts in describing the structure of data in any implementation of the EDM.</span></span>  

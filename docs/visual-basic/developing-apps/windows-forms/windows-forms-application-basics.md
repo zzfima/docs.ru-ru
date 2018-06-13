@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33592383"
 ---
 # <a name="windows-forms-application-basics-visual-basic"></a><span data-ttu-id="a842f-102">Основы разработки приложений Windows Forms (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="a842f-102">Windows Forms Application Basics (Visual Basic)</span></span>
 <span data-ttu-id="a842f-103">Важной частью Visual Basic является возможность создания приложений Windows Forms, выполняемых локально на пользовательских компьютерах.</span><span class="sxs-lookup"><span data-stu-id="a842f-103">An important part of Visual Basic is the ability to create Windows Forms applications that run locally on users' computers.</span></span> <span data-ttu-id="a842f-104">Visual Studio можно использовать для создания приложений и пользовательский интерфейс, с помощью Windows Forms.</span><span class="sxs-lookup"><span data-stu-id="a842f-104">You can use Visual Studio to create the application and user interface using Windows Forms.</span></span> <span data-ttu-id="a842f-105">Приложение Windows Forms строится на основе классов из <xref:System.Windows.Forms> пространства имен.</span><span class="sxs-lookup"><span data-stu-id="a842f-105">A Windows Forms application is built on classes from the <xref:System.Windows.Forms> namespace.</span></span>  

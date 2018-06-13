@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33506471"
 ---
 # <a name="nettcp-port-sharing-sample"></a><span data-ttu-id="76391-102">Пример совместного использования портов Net.TCP</span><span class="sxs-lookup"><span data-stu-id="76391-102">Net.TCP Port Sharing Sample</span></span>
 <span data-ttu-id="76391-103">Протокол TCP/IP использует 16-разрядное число, называемое номером порта, чтобы различать подключения к разным сетевым приложениям, выполняющимся на одном компьютере.</span><span class="sxs-lookup"><span data-stu-id="76391-103">The TCP/IP protocol uses a 16-bit number, called a port, to differentiate connections to multiple network applications running on the same machine.</span></span> <span data-ttu-id="76391-104">Если приложение ожидает передачи данных через порт, то весь трафик TCP через этот порт перенаправляется данному приложению.</span><span class="sxs-lookup"><span data-stu-id="76391-104">If an application is listening on a port, then all TCP traffic for that port goes to that application.</span></span> <span data-ttu-id="76391-105">Другие приложения не могут одновременно ожидать передачи данных через тот же порт.</span><span class="sxs-lookup"><span data-stu-id="76391-105">Other applications cannot listen on that port at the same time.</span></span>  

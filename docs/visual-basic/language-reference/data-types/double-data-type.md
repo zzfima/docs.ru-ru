@@ -24,6 +24,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33590268"
 ---
 # <a name="double-data-type-visual-basic"></a><span data-ttu-id="ee37a-102">Тип данных Double (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="ee37a-102">Double Data Type (Visual Basic)</span></span>
 <span data-ttu-id="ee37a-103">Содержит знаком IEEE 64-разрядные (8-байтные) числа двойной точности с плавающей запятой числа, в диапазоне от - 1, 79769313486231570E + 308 до - 4, 94065645841246544E-324 для отрицательных значений и от 4, 94065645841246544E-324 до 1, 79769313486231570E + 308 положительные значения.</span><span class="sxs-lookup"><span data-stu-id="ee37a-103">Holds signed IEEE 64-bit (8-byte) double-precision floating-point numbers that range in value from -1.79769313486231570E+308 through -4.94065645841246544E-324 for negative values and from 4.94065645841246544E-324 through 1.79769313486231570E+308 for positive values.</span></span> <span data-ttu-id="ee37a-104">Числа двойной точности сохраняют приближенные значения вещественным числом.</span><span class="sxs-lookup"><span data-stu-id="ee37a-104">Double-precision numbers store an approximation of a real number.</span></span>  

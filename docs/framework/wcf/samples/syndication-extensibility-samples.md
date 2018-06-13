@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33501253"
 ---
 # <a name="syndication-extensibility-samples"></a><span data-ttu-id="41106-102">Примеры расширяемости синдикации</span><span class="sxs-lookup"><span data-stu-id="41106-102">Syndication Extensibility Samples</span></span>
 <span data-ttu-id="41106-103">Этот раздел содержит образцы, которые демонстрируют пользовательскую синдикацию в Windows Communication Foundation (WCF).</span><span class="sxs-lookup"><span data-stu-id="41106-103">This section contains samples that demonstrate custom syndication in Windows Communication Foundation (WCF).</span></span>  
