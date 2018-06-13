@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33553745"
 ---
 # <a name="stackpanel"></a><span data-ttu-id="52552-102">StackPanel</span><span class="sxs-lookup"><span data-stu-id="52552-102">StackPanel</span></span>
 <span data-ttu-id="52552-103"><xref:System.Windows.Controls.StackPanel> Элемент используется для расположения дочерних элементов по горизонтали или вертикали.</span><span class="sxs-lookup"><span data-stu-id="52552-103">The <xref:System.Windows.Controls.StackPanel> element is used to stack child elements horizontally or vertically.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32748972"
 ---
 # <a name="ltserviceauthenticationmanagergt"></a><span data-ttu-id="8d498-102">&lt;serviceAuthenticationManager&gt;</span><span class="sxs-lookup"><span data-stu-id="8d498-102">&lt;serviceAuthenticationManager&gt;</span></span>
 <span data-ttu-id="8d498-103">Обеспечивает элемент конфигурации рабочего процесса, который устанавливает на уровне службы действительность передачи, сообщения или инициатора.</span><span class="sxs-lookup"><span data-stu-id="8d498-103">Provides a workflow configuration element that establishes at the service level the validity of a transmission, message, or originator..</span></span>  

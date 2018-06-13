@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33556044"
 ---
 # <a name="drawings"></a><span data-ttu-id="e3398-102">Объекты рисования</span><span class="sxs-lookup"><span data-stu-id="e3398-102">Drawings</span></span>
 <span data-ttu-id="e3398-103"><xref:System.Windows.Media.Drawing> объекты используются для эффективного рисования фигур, изображений или текста.</span><span class="sxs-lookup"><span data-stu-id="e3398-103"><xref:System.Windows.Media.Drawing> objects are used to efficiently draw shapes, images, or text.</span></span> <span data-ttu-id="e3398-104">Объекты рисования используются при рисовании с помощью <xref:System.Windows.Media.DrawingBrush> или программирования с помощью <xref:System.Windows.Media.Visual> объектов.</span><span class="sxs-lookup"><span data-stu-id="e3398-104">Drawings are used when painting with a <xref:System.Windows.Media.DrawingBrush> or programming with <xref:System.Windows.Media.Visual> objects.</span></span>  

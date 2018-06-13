@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33553794"
 ---
 # <a name="how-to-create-a-control-that-has-an-access-key-and-text-wrapping"></a><span data-ttu-id="624be-102">Практическое руководство. Создание элемента управления, имеющего клавишу доступа и поддерживающего перенос текста</span><span class="sxs-lookup"><span data-stu-id="624be-102">How to: Create a Control That Has an Access Key and Text Wrapping</span></span>
 <span data-ttu-id="624be-103">В этом примере показано, как создать элемент управления, который имеет клавишу доступа и поддерживает обтекание текстом.</span><span class="sxs-lookup"><span data-stu-id="624be-103">This example shows how to create a control that has an access key and supports text wrapping.</span></span> <span data-ttu-id="624be-104">В этом примере <xref:System.Windows.Controls.Label> управления для иллюстрации этих основных понятий.</span><span class="sxs-lookup"><span data-stu-id="624be-104">The example uses a <xref:System.Windows.Controls.Label> control to illustrate these concepts.</span></span>  

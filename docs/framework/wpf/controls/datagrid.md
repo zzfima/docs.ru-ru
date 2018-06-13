@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557086"
 ---
 # <a name="datagrid"></a><span data-ttu-id="a147f-102">DataGrid</span><span class="sxs-lookup"><span data-stu-id="a147f-102">DataGrid</span></span>
 <span data-ttu-id="a147f-103"><xref:System.Windows.Controls.DataGrid> Элемент управления позволяет отображать и редактировать данные из множества различных источников, таких как базы данных SQL, запрос LINQ и любые другие источники данных.</span><span class="sxs-lookup"><span data-stu-id="a147f-103">The <xref:System.Windows.Controls.DataGrid> control enables you to display and edit data from many different sources, such as from a SQL database, LINQ query, or any other bindable data source.</span></span> <span data-ttu-id="a147f-104">Дополнительные сведения см. в разделе [Общие сведения об источниках привязки](../../../../docs/framework/wpf/data/binding-sources-overview.md).</span><span class="sxs-lookup"><span data-stu-id="a147f-104">For more information, see [Binding Sources Overview](../../../../docs/framework/wpf/data/binding-sources-overview.md).</span></span>  

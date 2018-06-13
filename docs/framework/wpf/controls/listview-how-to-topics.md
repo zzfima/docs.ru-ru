@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33555806"
 ---
 # <a name="listview-how-to-topics"></a><span data-ttu-id="b181e-102">Практические руководства, посвященные ListView</span><span class="sxs-lookup"><span data-stu-id="b181e-102">ListView How-to Topics</span></span>
 <span data-ttu-id="b181e-103">В подразделах этого раздела описывается использование <xref:System.Windows.Controls.ListView> элемента управления для отображения набора элементов данных.</span><span class="sxs-lookup"><span data-stu-id="b181e-103">The topics in this section describe how to use the <xref:System.Windows.Controls.ListView> control to display a set of data items.</span></span>  

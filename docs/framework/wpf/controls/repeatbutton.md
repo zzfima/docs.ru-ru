@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33555012"
 ---
 # <a name="repeatbutton"></a><span data-ttu-id="8ef15-102">RepeatButton</span><span class="sxs-lookup"><span data-stu-id="8ef15-102">RepeatButton</span></span>
 <span data-ttu-id="8ef15-103"><xref:System.Windows.Controls.Primitives.RepeatButton> Аналогичен <xref:System.Windows.Controls.Button>.</span><span class="sxs-lookup"><span data-stu-id="8ef15-103">The <xref:System.Windows.Controls.Primitives.RepeatButton> is similar to a <xref:System.Windows.Controls.Button>.</span></span> <span data-ttu-id="8ef15-104">Тем не менее <xref:System.Windows.Controls.Primitives.RepeatButton> обеспечивает элементы, можно контролировать, когда и как <xref:System.Windows.Controls.Primitives.ButtonBase.Click> событием.</span><span class="sxs-lookup"><span data-stu-id="8ef15-104">However, <xref:System.Windows.Controls.Primitives.RepeatButton> elements give you control over when and how the <xref:System.Windows.Controls.Primitives.ButtonBase.Click> event occurs.</span></span>  

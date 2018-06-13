@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33553002"
 ---
 # <a name="how-to-create-simple-or-complex-treeviews"></a><span data-ttu-id="069d1-102">Практическое руководство. Создание простых или сложных элементов TreeView</span><span class="sxs-lookup"><span data-stu-id="069d1-102">How to: Create Simple or Complex TreeViews</span></span>
 <span data-ttu-id="069d1-103">В этом примере показано, как создавать простые и сложные <xref:System.Windows.Controls.TreeView> элементов управления.</span><span class="sxs-lookup"><span data-stu-id="069d1-103">This example shows how to create simple or complex <xref:System.Windows.Controls.TreeView> controls.</span></span>  

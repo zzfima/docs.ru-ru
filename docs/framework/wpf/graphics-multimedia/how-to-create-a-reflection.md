@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33560580"
 ---
 # <a name="how-to-create-a-reflection"></a><span data-ttu-id="ebdda-102">Практическое руководство. Создание отражения</span><span class="sxs-lookup"><span data-stu-id="ebdda-102">How to: Create a Reflection</span></span>
 <span data-ttu-id="ebdda-103">В этом примере показано, как использовать <xref:System.Windows.Media.VisualBrush> будет создано отражение.</span><span class="sxs-lookup"><span data-stu-id="ebdda-103">This example shows how to use a <xref:System.Windows.Media.VisualBrush> to create a reflection.</span></span> <span data-ttu-id="ebdda-104">Поскольку <xref:System.Windows.Media.VisualBrush> может отображать существующие визуальные, эту возможность можно использовать для создания интересных визуальных эффектов, например отражения и увеличения.</span><span class="sxs-lookup"><span data-stu-id="ebdda-104">Because a <xref:System.Windows.Media.VisualBrush> can display an existing visual, you can use this capability to produce interesting visual effects, such as reflections and magnification.</span></span>  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557671"
 ---
 # <a name="how-to-accumulate-animation-values-during-repeat-cycles"></a><span data-ttu-id="b59df-102">Практическое руководство. Накапливание значений анимации в повторяющихся циклах</span><span class="sxs-lookup"><span data-stu-id="b59df-102">How to: Accumulate Animation Values During Repeat Cycles</span></span>
 <span data-ttu-id="b59df-103">В этом примере показано, как использовать <xref:System.Windows.Media.Animation.DoubleAnimation.IsCumulative%2A> свойства для накапливания значений анимации в повторяющихся циклах.</span><span class="sxs-lookup"><span data-stu-id="b59df-103">This example shows how to use the <xref:System.Windows.Media.Animation.DoubleAnimation.IsCumulative%2A> property to accumulate animation values across repeating cycles.</span></span>  

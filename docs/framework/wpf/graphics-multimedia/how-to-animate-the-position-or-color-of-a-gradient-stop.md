@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33558672"
 ---
 # <a name="how-to-animate-the-position-or-color-of-a-gradient-stop"></a><span data-ttu-id="a1a63-102">Практическое руководство. Анимация положения или цвета ограничения градиента</span><span class="sxs-lookup"><span data-stu-id="a1a63-102">How to: Animate the Position or Color of a Gradient Stop</span></span>
 <span data-ttu-id="a1a63-103">В этом примере демонстрируется анимация <xref:System.Windows.Media.GradientStop.Color%2A> и <xref:System.Windows.Media.GradientStop.Offset%2A> из <xref:System.Windows.Media.GradientStop> объектов.</span><span class="sxs-lookup"><span data-stu-id="a1a63-103">This example shows how to animate the <xref:System.Windows.Media.GradientStop.Color%2A> and <xref:System.Windows.Media.GradientStop.Offset%2A> of <xref:System.Windows.Media.GradientStop> objects.</span></span>  

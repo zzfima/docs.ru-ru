@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33555585"
 ---
 # <a name="how-to-bind-the-properties-of-two-controls"></a><span data-ttu-id="aaa89-102">Как привязать свойства двух элементов управления</span><span class="sxs-lookup"><span data-stu-id="aaa89-102">How to: Bind the Properties of Two Controls</span></span>
 <span data-ttu-id="aaa89-103">В этом примере показано, как привязать свойство одного элемента управления к другому с помощью <xref:System.Windows.Data.Binding.ElementName%2A> свойство.</span><span class="sxs-lookup"><span data-stu-id="aaa89-103">This example shows how to bind the property of one instantiated control to that of another using the <xref:System.Windows.Data.Binding.ElementName%2A> property.</span></span>  

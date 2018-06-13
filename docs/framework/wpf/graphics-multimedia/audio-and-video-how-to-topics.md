@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33556020"
 ---
 # <a name="audio-and-video-how-to-topics"></a><span data-ttu-id="df011-102">Разделы руководства, посвященные аудио и видео</span><span class="sxs-lookup"><span data-stu-id="df011-102">Audio and Video How-to Topics</span></span>
 <span data-ttu-id="df011-103">В следующих разделах демонстрируется, как использовать <xref:System.Windows.Controls.MediaElement> интегрировать содержимому аудио и видео в приложениях.</span><span class="sxs-lookup"><span data-stu-id="df011-103">The following topics demonstrate how to use the <xref:System.Windows.Controls.MediaElement> to integrate audio and video content in your applications.</span></span>  

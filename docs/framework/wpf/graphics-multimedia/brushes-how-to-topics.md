@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557541"
 ---
 # <a name="brushes-how-to-topics"></a><span data-ttu-id="1cd83-102">Разделы практического руководства, посвященные кистям</span><span class="sxs-lookup"><span data-stu-id="1cd83-102">Brushes How-to Topics</span></span>
 <span data-ttu-id="1cd83-103">В следующих разделах демонстрируется, как использовать [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] кисти для рисования содержимого экрана.</span><span class="sxs-lookup"><span data-stu-id="1cd83-103">The following topics demonstrate how to use [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] brushes in order to paint content to the screen.</span></span>  

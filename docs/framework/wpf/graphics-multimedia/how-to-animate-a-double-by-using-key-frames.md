@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557437"
 ---
 # <a name="how-to-animate-a-double-by-using-key-frames"></a><span data-ttu-id="6ace2-102">Инструкция по Анимации типа Double с помощью ключевых кадров</span><span class="sxs-lookup"><span data-stu-id="6ace2-102">How to: Animate a Double by Using Key Frames</span></span>
 <span data-ttu-id="6ace2-103">В этом примере показано, как анимация значения свойства, которое принимает <xref:System.Double> с помощью ключевых кадров.</span><span class="sxs-lookup"><span data-stu-id="6ace2-103">This example shows how to animate the value of a property that takes a <xref:System.Double> by using key frames.</span></span>  
