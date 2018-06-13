@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33596750"
 ---
 # <a name="lttype1gt39lttypenamegt39-must-implement-39ltmembernamegt39-for-interface-39ltinterfacenamegt39"></a>&lt;Тип 1&gt;&#39;&lt;typename&gt; &#39; необходимо реализовать &#39; &lt;membername&gt; &#39; для интерфейса &#39; &lt;interfacename&gt;&#39;
 "\<typename >" должен реализовывать "\<имя_члена >" для интерфейса "\<имя_интерфейса >". Свойство реализации должно иметь соответствующие «ReadOnly» или «WriteOnly» спецификаторы.  

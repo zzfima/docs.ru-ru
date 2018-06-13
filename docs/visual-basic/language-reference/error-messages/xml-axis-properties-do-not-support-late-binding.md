@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33594313"
 ---
 # <a name="xml-axis-properties-do-not-support-late-binding"></a>Свойства оси XML не поддерживают позднее связывание
 Свойство оси XML имеется ссылка на нетипизированный объект.  

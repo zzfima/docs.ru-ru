@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33599597"
 ---
 # <a name="argument-39ltargumentnamegt39-cannot-be-a-multidimensional-array"></a>Аргумент &#39; &lt;имя_аргумента&gt; &#39; не может быть многомерным массивом
 Ранг аргумента массива больше единицы, однако массив может быть только одномерным.  

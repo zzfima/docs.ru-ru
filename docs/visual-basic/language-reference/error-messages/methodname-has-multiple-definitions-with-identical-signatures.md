@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33593734"
 ---
 # <a name="39ltmethodnamegt39-has-multiple-definitions-with-identical-signatures"></a>&#39;&lt;имя_метода&gt; &#39; имеет несколько определений с одинаковыми сигнатурами
 Объект `Function` или `Sub` в объявлении процедуры используются процедуры одинаковые имя и список аргументов, как и в предыдущем объявлении. Возможной причиной этого может быть попытка перегрузки исходной процедуры. Перегруженные процедуры должны иметь разные списки аргументов.  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33600744"
 ---
 # <a name="argument-39ltargumentnamegt39-must-be-in-the-range-of--32768-to-65535"></a>Аргумент &#39; &lt;имя_аргумента&gt; &#39; должно находиться в диапазоне от -32768 до 65535
 Значение аргумента не попадает в допустимый диапазон от –32 768 до 65 535.  
