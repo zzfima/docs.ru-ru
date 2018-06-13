@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b213285b3c533488cfa48198951275925c0e37ae
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33436190"
 ---
 # <a name="iclrstrongnamestrongnamekeygenex-method"></a><span data-ttu-id="4d991-102">Метод ICLRStrongName::StrongNameKeyGenEx</span><span class="sxs-lookup"><span data-stu-id="4d991-102">ICLRStrongName::StrongNameKeyGenEx Method</span></span>
 <span data-ttu-id="4d991-103">Создает новую пару открытого и закрытого ключей с указанным размером ключа, для использования строгого имени.</span><span class="sxs-lookup"><span data-stu-id="4d991-103">Generates a new public/private key pair with the specified key size, for strong name use.</span></span>  

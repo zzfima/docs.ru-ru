@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 28e97289eda5949e6d124426eb58105e2e3ad33e
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33435046"
 ---
 # <a name="iclrassemblyidentitymanagergetbindingidentityfromfile-method"></a><span data-ttu-id="fca7c-102">Метод ICLRAssemblyIdentityManager::GetBindingIdentityFromFile</span><span class="sxs-lookup"><span data-stu-id="fca7c-102">ICLRAssemblyIdentityManager::GetBindingIdentityFromFile Method</span></span>
 <span data-ttu-id="fca7c-103">Возвращает удостоверение сборки привязки данных для сборки по указанному пути.</span><span class="sxs-lookup"><span data-stu-id="fca7c-103">Gets the assembly identity binding data for the assembly at the specified file path.</span></span>  

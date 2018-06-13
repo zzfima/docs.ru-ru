@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 7a261d9164e8714531eab1fe9fc8148304e6d5bb
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33432886"
 ---
 # <a name="econtexttype-enumeration"></a><span data-ttu-id="b14ff-102">Перечисление EContextType</span><span class="sxs-lookup"><span data-stu-id="b14ff-102">EContextType Enumeration</span></span>
 <span data-ttu-id="b14ff-103">Описывает контекст безопасности текущего потока.</span><span class="sxs-lookup"><span data-stu-id="b14ff-103">Describes the security context of the currently executing thread.</span></span>  

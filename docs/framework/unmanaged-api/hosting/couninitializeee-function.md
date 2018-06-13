@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 73fa281d28e9b5362ff386b55b07dd431f1915f4
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33429186"
 ---
 # <a name="couninitializeee-function"></a><span data-ttu-id="69630-102">Функция CoUninitializeEE</span><span class="sxs-lookup"><span data-stu-id="69630-102">CoUninitializeEE Function</span></span>
 <span data-ttu-id="69630-103">`CoUninitializeEE` является устаревшим и не добавляет новых функций.</span><span class="sxs-lookup"><span data-stu-id="69630-103">`CoUninitializeEE` is obsolete and provides no functionality.</span></span>  

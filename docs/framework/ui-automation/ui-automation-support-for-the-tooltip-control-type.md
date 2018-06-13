@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33408906"
 ---
 # <a name="ui-automation-support-for-the-tooltip-control-type"></a><span data-ttu-id="50016-102">Поддержка автоматизации пользовательского интерфейса для типа элементов управления ToolTip</span><span class="sxs-lookup"><span data-stu-id="50016-102">UI Automation Support for the ToolTip Control Type</span></span>
 > [!NOTE]

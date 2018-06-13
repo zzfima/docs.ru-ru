@@ -10,9 +10,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 01b12af8c3c3a2f834827ff14665050e07b31467
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33434690"
 ---
 # <a name="hosting-structures"></a><span data-ttu-id="d5f76-102">Структуры размещения</span><span class="sxs-lookup"><span data-stu-id="d5f76-102">Hosting Structures</span></span>
 <span data-ttu-id="d5f76-103">В этом разделе описываются неуправляемые структуры, которые использует API размещения.</span><span class="sxs-lookup"><span data-stu-id="d5f76-103">This section describes the unmanaged structures that the hosting API uses.</span></span>  

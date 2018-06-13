@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33496641"
 ---
 # <a name="messaging-protocols"></a><span data-ttu-id="9f866-102">Протоколы обмена сообщениями</span><span class="sxs-lookup"><span data-stu-id="9f866-102">Messaging Protocols</span></span>
 <span data-ttu-id="9f866-103">Стек каналов Windows Communication Foundation (WCF) использует шифрование и транспортные каналы для преобразования представления сообщений в его формат линиям связи и отправить его с помощью определенного транспорта.</span><span class="sxs-lookup"><span data-stu-id="9f866-103">The Windows Communication Foundation (WCF) channel stack employs encoding and transport channels to transform internal message representation into its wire format and send it by using a particular transport.</span></span> <span data-ttu-id="9f866-104">Для взаимодействия веб-служб чаще всего используется транспорт HTTP, а в качестве кодировок в веб-службах чаще всего используются основанные на XML протоколы SOAP 1.1, SOAP 1.2 и механизм оптимизации передачи сообщений (MTOM).</span><span class="sxs-lookup"><span data-stu-id="9f866-104">The most common transport used for Web services interoperability is HTTP, and the most common encodings used by Web services are XML-based SOAP 1.1, SOAP 1.2, and Message Transmission Optimization Mechanism (MTOM).</span></span>  

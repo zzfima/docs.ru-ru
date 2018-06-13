@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 6f4b767fe7134833ee2e404be30bb51bf1385ec9
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33437041"
 ---
 # <a name="igcthreadcontrolthreadisblockingforsuspension-method"></a><span data-ttu-id="d0d75-102">Метод IGCThreadControl::ThreadIsBlockingForSuspension</span><span class="sxs-lookup"><span data-stu-id="d0d75-102">IGCThreadControl::ThreadIsBlockingForSuspension Method</span></span>
 <span data-ttu-id="d0d75-103">Уведомляет узел, что поток, который выполняет вызов заблокирован, возможно, для сборки мусора или по другой причине.</span><span class="sxs-lookup"><span data-stu-id="d0d75-103">Notifies the host that the thread that is making the call is about to block, perhaps for a garbage collection or other suspension.</span></span>  

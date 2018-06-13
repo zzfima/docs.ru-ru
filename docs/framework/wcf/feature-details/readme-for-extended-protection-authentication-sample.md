@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33495084"
 ---
 # <a name="readme-for-extended-protection-authentication-sample"></a><span data-ttu-id="5d3d5-102">Файл ReadMe для образца проверки подлинности с расширенной защитой</span><span class="sxs-lookup"><span data-stu-id="5d3d5-102">ReadMe for Extended Protection Authentication Sample</span></span>
 <span data-ttu-id="5d3d5-103">Расширенная защита-это технология безопасности для защиты от атак в середине (MITM), в которых злоумышленник (» в посредник»), перехватывает клиентские учетные данные и использует их для доступа к защищенным ресурсам на сервере предполагаемого клиента.</span><span class="sxs-lookup"><span data-stu-id="5d3d5-103">Extended Protection is a security initiative to protect against man-in-the-middle (MITM) attacks, in which an attacker (the "man-in-the-middle") intercepts a client’s credentials and uses them to access secure resources on the client’s intended server.</span></span>  

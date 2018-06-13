@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 8bbd25909e70826f8cd29076c1eb62a4da6779cd
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33435405"
 ---
 # <a name="coinitializeee-function"></a><span data-ttu-id="d350d-102">Функция CoInitializeEE</span><span class="sxs-lookup"><span data-stu-id="d350d-102">CoInitializeEE Function</span></span>
 <span data-ttu-id="d350d-103">Обеспечивает загрузку исполняющий механизм среды выполнения в процесс.</span><span class="sxs-lookup"><span data-stu-id="d350d-103">Ensures that the common language runtime execution engine is loaded into a process.</span></span> <span data-ttu-id="d350d-104">Эта функция устарела в [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span><span class="sxs-lookup"><span data-stu-id="d350d-104">This function is deprecated in the [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span></span> <span data-ttu-id="d350d-105">Используйте [ICLRRuntimeHost::Start](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-start-method.md) метод вместо него.</span><span class="sxs-lookup"><span data-stu-id="d350d-105">Use the [ICLRRuntimeHost::Start](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-start-method.md) method instead.</span></span>  

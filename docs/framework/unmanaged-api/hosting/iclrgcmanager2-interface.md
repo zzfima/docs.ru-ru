@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: fb6cff796a6a7b866357d51350b7b026b019745e
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33436297"
 ---
 # <a name="iclrgcmanager2-interface"></a><span data-ttu-id="90167-102">Интерфейс ICLRGCManager2</span><span class="sxs-lookup"><span data-stu-id="90167-102">ICLRGCManager2 Interface</span></span>
 <span data-ttu-id="90167-103">Предоставляет методы, позволяющие ведущему приложению взаимодействовать с системой сборки мусора среды CLR.</span><span class="sxs-lookup"><span data-stu-id="90167-103">Provides methods that allow a host to interact with the common language runtime's garbage collection system.</span></span>  
