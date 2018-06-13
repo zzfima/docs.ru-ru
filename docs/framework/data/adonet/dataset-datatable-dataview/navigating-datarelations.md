@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32761432"
 ---
 # <a name="navigating-datarelations"></a>Навигация по отношениям DataRelation
 Одно из основных назначений объекта <xref:System.Data.DataRelation> состоит в обеспечении переходов от одного объекта <xref:System.Data.DataTable> к другому в пределах <xref:System.Data.DataSet>. Это позволяет получить все связанные <xref:System.Data.DataRow> объектов в одном **DataTable** при указании единственного **DataRow** из связанного **DataTable**. Например, после установления связи **DataRelation** между таблицей заказчиков и таблицей заказов, можно получить все строки заказа для конкретного клиента строки с помощью **GetChildRows**.  

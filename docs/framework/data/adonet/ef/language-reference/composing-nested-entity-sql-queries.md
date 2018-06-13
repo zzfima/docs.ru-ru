@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32760860"
 ---
 # <a name="composing-nested-entity-sql-queries"></a>Составление вложенных запросов Entity SQL
 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] - это богатый функциональный язык. Блоком построения языка [!INCLUDE[esql](../../../../../../includes/esql-md.md)] — это выражение. В отличие от обычного SQL [!INCLUDE[esql](../../../../../../includes/esql-md.md)] не ограничивается табличного результирующего набора: [!INCLUDE[esql](../../../../../../includes/esql-md.md)] поддерживает создание сложных выражений, которые могут иметь литералы, параметры или вложенные выражения. Значение в выражении может быть параметризованным или состоит из другого выражения.  

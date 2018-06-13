@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33554772"
 ---
 # <a name="printdialog"></a>PrintDialog
 <xref:System.Windows.Controls.PrintDialog> Управления используется для создания стандартных диалоговое окно печати, автоматически настраивает <xref:System.Printing.PrintTicket> и <xref:System.Printing.PrintQueue> согласно ввод данных пользователем.  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32756557"
 ---
 # <a name="applying-an-xslt-transform-to-a-dataset"></a>Применение преобразования XSLT к набору данных
 **WriteXml** метод <xref:System.Data.DataSet> дает возможность создавать содержимое **DataSet** как XML-данных. После этого типичной задачей является преобразование этого XML в другой формат с помощью XSLT-преобразования (XSLT). Однако синхронизация **набора данных** с <xref:System.Xml.XmlDataDocument> позволяет применять таблицы стилей XSLT к содержимому **DataSet** без необходимости сначала записи содержимого  **Набор данных** как XML-данных с помощью **WriteXml**.  
