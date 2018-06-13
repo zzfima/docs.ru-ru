@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33634936"
 ---
 # <a name="no-files-found-matching-39ltfilenamegt39"></a><span data-ttu-id="feaf9-102">Не удалось найти файлы сопоставления &#39; &lt;имя файла&gt;&#39;</span><span class="sxs-lookup"><span data-stu-id="feaf9-102">No files found matching &#39;&lt;filename&gt;&#39;</span></span>
 <span data-ttu-id="feaf9-103">Указано неверное имя файла или файл не существует.</span><span class="sxs-lookup"><span data-stu-id="feaf9-103">The file name is incorrect, or the file does not exist.</span></span>  

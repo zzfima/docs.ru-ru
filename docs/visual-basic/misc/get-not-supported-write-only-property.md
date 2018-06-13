@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33636769"
 ---
 # <a name="get-not-supported-write-only-property"></a><span data-ttu-id="ef019-102">Get не поддерживается (свойство доступно только для записи).</span><span class="sxs-lookup"><span data-stu-id="ef019-102">Get not supported (write-only property)</span></span>
 <span data-ttu-id="ef019-103">Не удалось прочитать свойство, поскольку оно доступно только для записи.</span><span class="sxs-lookup"><span data-stu-id="ef019-103">A property cannot be read because it is write only.</span></span>  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33636806"
 ---
 # <a name="object-doesn39t-support-current-locale-setting-visual-basic"></a><span data-ttu-id="4f90a-102">Объект&#39;t поддержки текущий параметр языкового стандарта (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="4f90a-102">Object doesn&#39;t support current locale setting (Visual Basic)</span></span>
 <span data-ttu-id="4f90a-103">Предпринята попытка доступа к объекту, который не поддерживает параметр языкового стандарта для текущего проекта.</span><span class="sxs-lookup"><span data-stu-id="4f90a-103">You tried to access an object that does not support the locale setting for the current project.</span></span>  
