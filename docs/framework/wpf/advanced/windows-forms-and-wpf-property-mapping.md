@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33549546"
 ---
 # <a name="windows-forms-and-wpf-property-mapping"></a>Сопоставление свойств Windows Forms и WPF
 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] И [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] технологии имеют две модели похожие, но различные свойства. *Сопоставление свойств* поддерживает взаимодействие между этими двумя архитектурами и предоставляет следующие возможности:  

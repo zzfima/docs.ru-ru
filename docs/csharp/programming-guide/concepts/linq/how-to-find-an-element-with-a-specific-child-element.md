@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33323892"
 ---
 # <a name="how-to-find-an-element-with-a-specific-child-element-c"></a>Практическое руководство. Поиск элементов с определенным дочерним элементом (C#)
 В этом разделе показан определенный элемент, имеющий дочерний элемент с заданным значением.  

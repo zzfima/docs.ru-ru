@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33332314"
 ---
 # <a name="using-conversion-operators-c-programming-guide"></a>Использование операторов преобразования (Руководство по программированию в C#)
 Вы можете использовать более удобные операторы преобразования `implicit` или операторы преобразования `explicit`, которые четко указывают на то, что выполняется преобразование типа. В этом разделе демонстрируется применение обоих типов операторов преобразования.  

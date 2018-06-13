@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33314331"
 ---
 # <a name="fields-c-programming-guide"></a>Поля (Руководство по программированию в C#)
 *Поле* является переменной любого типа, которая объявлена непосредственно в [классе](../../../csharp/language-reference/keywords/class.md) или [структуре](../../../csharp/language-reference/keywords/struct.md). Поля являются *членами* содержащих их типов.  

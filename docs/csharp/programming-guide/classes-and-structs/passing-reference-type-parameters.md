@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33326571"
 ---
 # <a name="passing-reference-type-parameters-c-programming-guide"></a>Передача параметров ссылочного типа (Руководство по программированию в C#)
 Переменная [ссылочного типа](../../../csharp/language-reference/keywords/reference-types.md) содержит не сами данные, а ссылку на них. При передаче параметра ссылочного типа по значению можно изменять данные, относящиеся к объекту, на который указывает ссылка, например, значение члена класса. Тем не менее изменить значение самой ссылки невозможно. Например, вы не можете использовать одну и ту же ссылку для выделения памяти для нового класса и его создания вне этого метода. Для этого необходимо передать параметр с использованием ключевого слова [ref](../../../csharp/language-reference/keywords/ref.md) или [out](../../../csharp/language-reference/keywords/out-parameter-modifier.md). В следующих примерах мы для простоты используем `ref`.  
