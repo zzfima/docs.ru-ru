@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33518624"
 ---
 # <a name="built-in-configuration"></a><span data-ttu-id="dd012-102">Встроенная конфигурация</span><span class="sxs-lookup"><span data-stu-id="dd012-102">Built-in Configuration</span></span>
 <span data-ttu-id="dd012-103">Этот образец показывает использование и настройку хранилища экземпляров рабочих процессов SQL.</span><span class="sxs-lookup"><span data-stu-id="dd012-103">This sample demonstrates the use and configuration of the SQL workflow instance store.</span></span> <span data-ttu-id="dd012-104">Хранилище экземпляров рабочих процессов SQL - это реализация хранилища экземпляров на основе SQL Server.</span><span class="sxs-lookup"><span data-stu-id="dd012-104">The SQL workflow instance store is a SQL-based implementation of an instance store.</span></span> <span data-ttu-id="dd012-105">Она позволяет экземпляру загружать свое состояние из базы данных SQL Server или SQL Server Express, либо сохранять состояние в этой базе данных.</span><span class="sxs-lookup"><span data-stu-id="dd012-105">It allows an instance to save and load its state to and from a SQL Server or SQL Server Express database.</span></span>  

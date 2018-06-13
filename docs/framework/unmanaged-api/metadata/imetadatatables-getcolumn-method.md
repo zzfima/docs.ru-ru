@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 850a97240e0a6450b4dec759a8786e0df5bffac8
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33448964"
 ---
 # <a name="imetadatatablesgetcolumn-method"></a><span data-ttu-id="b5343-102">Метод IMetaDataTables::GetColumn</span><span class="sxs-lookup"><span data-stu-id="b5343-102">IMetaDataTables::GetColumn Method</span></span>
 <span data-ttu-id="b5343-103">Возвращает указатель на значение, содержащееся в ячейке указанного столбца и строки в данной таблице.</span><span class="sxs-lookup"><span data-stu-id="b5343-103">Gets a pointer to the value contained in the cell of the specified column and row in the given table.</span></span>  

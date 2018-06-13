@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 2dcb45fcc987952ec5e84cc468dda8d8ede38bdf
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33451315"
 ---
 # <a name="icorprofilercallbackcomclassicvtablecreated-method"></a><span data-ttu-id="0afee-102">Метод ICorProfilerCallback::COMClassicVTableCreated</span><span class="sxs-lookup"><span data-stu-id="0afee-102">ICorProfilerCallback::COMClassicVTableCreated Method</span></span>
 <span data-ttu-id="0afee-103">Уведомляет профилировщик, что виртуальной таблицы взаимодействия COM для заданного IID и класса был создан.</span><span class="sxs-lookup"><span data-stu-id="0afee-103">Notifies the profiler that a COM interop vtable for the specified IID and class has been created.</span></span>  

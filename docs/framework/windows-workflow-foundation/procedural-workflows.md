@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33515233"
 ---
 # <a name="procedural-workflows"></a><span data-ttu-id="ec23f-102">Процедурные рабочие процессы</span><span class="sxs-lookup"><span data-stu-id="ec23f-102">Procedural Workflows</span></span>
 <span data-ttu-id="ec23f-103">Процедурные рабочие процессы используют методы управления потоком выполнения, аналогичные таким методам в процедурных языках.</span><span class="sxs-lookup"><span data-stu-id="ec23f-103">Procedural workflows use flow-control methods similar to those found in procedural languages.</span></span> <span data-ttu-id="ec23f-104">К этим конструкциям относятся `While` и `If`.</span><span class="sxs-lookup"><span data-stu-id="ec23f-104">These constructs include `While` and `If`.</span></span> <span data-ttu-id="ec23f-105">Такие рабочие процессы можно свободно создавать с применением других действий управления потоком выполнения, таких как <xref:System.Activities.Statements.Flowchart> и <xref:System.Activities.Statements.Sequence>.</span><span class="sxs-lookup"><span data-stu-id="ec23f-105">These workflows can be freely composed using other flow control activities such as <xref:System.Activities.Statements.Flowchart> and <xref:System.Activities.Statements.Sequence>.</span></span>  

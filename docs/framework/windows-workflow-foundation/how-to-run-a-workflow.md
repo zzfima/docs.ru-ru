@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33519523"
 ---
 # <a name="how-to-run-a-workflow"></a><span data-ttu-id="c01bb-102">Как запустить рабочий процесс</span><span class="sxs-lookup"><span data-stu-id="c01bb-102">How to: Run a Workflow</span></span>
 <span data-ttu-id="c01bb-103">Этот раздел продолжает учебник "Приступая к работе" для Windows Workflow Foundation и показывает, как создать узел рабочего процесса и выполнить рабочий процесс, описанный в предыдущем разделе [How to: Create a Workflow](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow.md) .</span><span class="sxs-lookup"><span data-stu-id="c01bb-103">This topic is a continuation of the Windows Workflow Foundation Getting Started tutorial and discusses how to create a workflow host and run the workflow defined in the previous [How to: Create a Workflow](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow.md) topic.</span></span>  

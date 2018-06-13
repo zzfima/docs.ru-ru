@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33521340"
 ---
 # <a name="how-to-draw-a-single-b233zier-spline"></a><span data-ttu-id="f4a95-102">Как: нарисовать один B&#233;сплайн Безье</span><span class="sxs-lookup"><span data-stu-id="f4a95-102">How to: Draw a Single B&#233;zier Spline</span></span>
 <span data-ttu-id="f4a95-103">Сплайн Безье, определяемый четырьмя точками: начальной точкой, две контрольные точки и конечной точки.</span><span class="sxs-lookup"><span data-stu-id="f4a95-103">A Bézier spline is defined by four points: a start point, two control points, and an endpoint.</span></span>  

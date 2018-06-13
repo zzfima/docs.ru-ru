@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33212466"
 ---
 # <a name="-optimize-c-compiler-options"></a><span data-ttu-id="44003-102">-optimize (параметры компилятора C#)</span><span class="sxs-lookup"><span data-stu-id="44003-102">-optimize (C# Compiler Options)</span></span>
 <span data-ttu-id="44003-103">Параметр **-optimize** включает или отключает оптимизацию кода компилятором, чтобы сделать код более быстрым, коротким и эффективным.</span><span class="sxs-lookup"><span data-stu-id="44003-103">The **-optimize** option enables or disables optimizations performed by the compiler to make your output file smaller, faster, and more efficient.</span></span>  

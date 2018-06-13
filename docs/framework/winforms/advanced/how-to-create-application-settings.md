@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33524174"
 ---
 # <a name="how-to-create-application-settings"></a><span data-ttu-id="afe98-102">Практическое руководство. Создание параметров приложения</span><span class="sxs-lookup"><span data-stu-id="afe98-102">How to: Create Application Settings</span></span>
 <span data-ttu-id="afe98-103">С помощью управляемого кода можно создавать параметры приложения и привязывать их к свойствам формы или ее элементов управления, чтобы эти параметры загружались и сохранялись автоматически во время выполнения.</span><span class="sxs-lookup"><span data-stu-id="afe98-103">Using managed code, you can create new application settings and bind them to properties on your form or your form's controls, so that these settings are loaded and saved automatically at run time.</span></span>  

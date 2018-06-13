@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33518956"
 ---
 # <a name="using-activity-delegates"></a><span data-ttu-id="49501-102">Использование делегатов действий</span><span class="sxs-lookup"><span data-stu-id="49501-102">Using Activity Delegates</span></span>
 <span data-ttu-id="49501-103">Делегаты действий позволяют создателям действий предоставлять обратные вызовы с определенными сигнатурами, для которых пользователи действия могут предоставить обработчики, основанные на действиях.</span><span class="sxs-lookup"><span data-stu-id="49501-103">Activity delegates enable activity authors to expose callbacks with specific signatures, for which users of the activity can provide activity-based handlers.</span></span> <span data-ttu-id="49501-104">Доступны два типа делегатов действия: <xref:System.Activities.ActivityAction%601> используется для определения делегатов действий, которые не возвращают значение, а <xref:System.Activities.ActivityFunc%601> используется для определения делегатов действий, которые возвращают значение.</span><span class="sxs-lookup"><span data-stu-id="49501-104">Two types of activity delegates are available: <xref:System.Activities.ActivityAction%601> is used to define activity delegates that do not have a return value, and <xref:System.Activities.ActivityFunc%601> is used to define activity delegates that do have a return value.</span></span>  

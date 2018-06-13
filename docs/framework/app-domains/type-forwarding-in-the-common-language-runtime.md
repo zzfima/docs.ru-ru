@@ -15,6 +15,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32742248"
 ---
 # <a name="type-forwarding-in-the-common-language-runtime"></a><span data-ttu-id="c2a38-102">Переадресация типов в общеязыковой среде CLR</span><span class="sxs-lookup"><span data-stu-id="c2a38-102">Type Forwarding in the Common Language Runtime</span></span>
 <span data-ttu-id="c2a38-103">Перенаправление типа позволяет переместить тип в другую сборку без повторной компиляции приложений, использующих исходную сборку.</span><span class="sxs-lookup"><span data-stu-id="c2a38-103">Type forwarding allows you to move a type to another assembly without having to recompile applications that use the original assembly.</span></span>  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33554545"
 ---
 # <a name="how-to-make-a-textbox-control-read-only"></a><span data-ttu-id="0f2c7-102">Практическое руководство. Перевод элемента управления TextBox в режим только для чтения</span><span class="sxs-lookup"><span data-stu-id="0f2c7-102">How to: Make a TextBox Control Read-Only</span></span>
 <span data-ttu-id="0f2c7-103">В этом примере показано, как настроить <xref:System.Windows.Controls.TextBox> допускает ввод данных пользователем или изменение элемента управления.</span><span class="sxs-lookup"><span data-stu-id="0f2c7-103">This example shows how to configure a <xref:System.Windows.Controls.TextBox> control to not allow user input or modification.</span></span>  

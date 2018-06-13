@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33486509"
 ---
 # <a name="client-channel-level-programming"></a><span data-ttu-id="e6a0c-102">Программирование клиентов на уровне канала</span><span class="sxs-lookup"><span data-stu-id="e6a0c-102">Client Channel-Level Programming</span></span>
 <span data-ttu-id="e6a0c-103">В этом разделе описывается создание клиентского приложения Windows Communication Foundation (WCF) без использования <xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType> класса и его связанной объектной модели.</span><span class="sxs-lookup"><span data-stu-id="e6a0c-103">This topic describes how to write a Windows Communication Foundation (WCF) client application without using the <xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType> class and its associated object model.</span></span>  

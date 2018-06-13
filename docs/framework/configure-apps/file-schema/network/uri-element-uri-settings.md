@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32742813"
 ---
 # <a name="lturigt-element-uri-settings"></a><span data-ttu-id="21971-102">&lt;URI&gt; элемент (параметры Uri)</span><span class="sxs-lookup"><span data-stu-id="21971-102">&lt;Uri&gt; Element (Uri Settings)</span></span>
 <span data-ttu-id="21971-103">Содержит параметры, определяющие, как платформа .NET Framework обрабатывает веб-адреса, выраженные с использованием универсальных кодов ресурсов (URI).</span><span class="sxs-lookup"><span data-stu-id="21971-103">Contains settings that specify how the .NET Framework handles web addresses expressed using uniform resource identifiers (URIs).</span></span>  

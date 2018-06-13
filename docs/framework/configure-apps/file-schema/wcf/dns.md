@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32746739"
 ---
 # <a name="ltdnsgt"></a><span data-ttu-id="3af18-102">&lt;DNS&gt;</span><span class="sxs-lookup"><span data-stu-id="3af18-102">&lt;dns&gt;</span></span>
 <span data-ttu-id="3af18-103">Задает ожидаемое удостоверение сервера.</span><span class="sxs-lookup"><span data-stu-id="3af18-103">Specifies the expected identity of the server.</span></span> <span data-ttu-id="3af18-104">Удостоверение является действительным для режима проверки подлинности сертификата X509, если сертификат сервера содержит DNS с тем же самым значением.</span><span class="sxs-lookup"><span data-stu-id="3af18-104">This identity is valid for X509 Certificate authentication mode if the server’s certificate contains a DNS with the same value.</span></span> <span data-ttu-id="3af18-105">Оно также действительно для режима проверки подлинности Windows, если SPN имеет такое же значение.</span><span class="sxs-lookup"><span data-stu-id="3af18-105">It is also valid for Windows authentication mode if the SPN has the same value.</span></span>  

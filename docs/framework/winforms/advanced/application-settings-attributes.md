@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33518353"
 ---
 # <a name="application-settings-attributes"></a><span data-ttu-id="ccec6-102">Атрибуты параметров приложения</span><span class="sxs-lookup"><span data-stu-id="ccec6-102">Application Settings Attributes</span></span>
 <span data-ttu-id="ccec6-103">Архитектура параметров приложения предоставляет множество атрибутов, которые могут быть применены к классу-оболочке параметров приложения или его отдельных свойств.</span><span class="sxs-lookup"><span data-stu-id="ccec6-103">The Application Settings architecture provides many attributes that can be applied either to the applications settings wrapper class or its individual properties.</span></span> <span data-ttu-id="ccec6-104">Эти атрибуты проверяются во время выполнения инфраструктурой параметров приложения, часто поставщиком параметров, чтобы адаптировать работу с указанными потребностям пользовательской оболочки.</span><span class="sxs-lookup"><span data-stu-id="ccec6-104">These attributes are examined at run time by the application settings infrastructure, often specifically the settings provider, in order to tailor its functioning to the stated needs of the custom wrapper.</span></span>  

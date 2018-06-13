@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33525273"
 ---
 # <a name="how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol-using-the-designer"></a><span data-ttu-id="c0c87-102">Практическое руководство. Добавление и удаление вкладок с использованием элемента управления TabControl в формах Windows Forms с помощью конструктора</span><span class="sxs-lookup"><span data-stu-id="c0c87-102">How to: Add and Remove Tabs with the Windows Forms TabControl Using the Designer</span></span>
 <span data-ttu-id="c0c87-103">При размещении <xref:System.Windows.Forms.TabControl> элемента управления в форме, оно содержит две вкладки по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="c0c87-103">When you place a <xref:System.Windows.Forms.TabControl> control on your form, it contains two tabs by default.</span></span> <span data-ttu-id="c0c87-104">Можно добавить или удалить вкладки с помощью конструктора.</span><span class="sxs-lookup"><span data-stu-id="c0c87-104">You can add or remove tabs using the designer.</span></span>  

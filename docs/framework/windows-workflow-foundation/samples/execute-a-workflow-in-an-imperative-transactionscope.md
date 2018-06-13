@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33516963"
 ---
 # <a name="execute-a-workflow-in-an-imperative-transactionscope"></a><span data-ttu-id="f8b8f-102">Выполнение рабочего процесса в императивном коде TransactionScope</span><span class="sxs-lookup"><span data-stu-id="f8b8f-102">Execute a Workflow in an Imperative TransactionScope</span></span>
 <span data-ttu-id="f8b8f-103">Этот образец демонстрирует, как выполнить рабочий процесс с использованием <xref:System.Activities.WorkflowInvoker> в рамках транзакции <xref:System.Transactions.Transaction> из императивного кода C#.</span><span class="sxs-lookup"><span data-stu-id="f8b8f-103">This sample shows how to execute a workflow using <xref:System.Activities.WorkflowInvoker> under a <xref:System.Transactions.Transaction> from imperative C# code.</span></span>  

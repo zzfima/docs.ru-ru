@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33513553"
 ---
 # <a name="binding-a-custom-activity-property-to-a-designer-control"></a><span data-ttu-id="70e36-102">Привязка пользовательского свойства действия к элементу управления конструктора</span><span class="sxs-lookup"><span data-stu-id="70e36-102">Binding a custom activity property to a designer control</span></span>
 <span data-ttu-id="70e36-103">Привязка элемента управления конструктора текстового поля к аргументу действия выполняется очень просто, однако при привязке сложного элемента управления конструктора (например, поля со списком) к аргументу действия могут возникнуть некоторые сложности.</span><span class="sxs-lookup"><span data-stu-id="70e36-103">Binding a text box designer control to an activity argument is fairly straightforward; binding a complex designer control (such as a combo box) to an activity argument may present challenges, however.</span></span> <span data-ttu-id="70e36-104">В этом разделе описан способ привязки аргумента действия к полю со списком в конструкторе пользовательских действий.</span><span class="sxs-lookup"><span data-stu-id="70e36-104">This topic discusses how to bind an activity argument to a combo box control on a custom activity designer.</span></span>  

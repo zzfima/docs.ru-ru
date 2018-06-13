@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33519877"
 ---
 # <a name="extract-wf-data-using-tracking"></a><span data-ttu-id="30645-102">Извлечение данных WF с использованием отслеживания</span><span class="sxs-lookup"><span data-stu-id="30645-102">Extract WF Data using Tracking</span></span>
 <span data-ttu-id="30645-103">Этот образец демонстрирует использование отслеживания рабочего процесса для получения переменных и аргументов рабочего процесса из действий.</span><span class="sxs-lookup"><span data-stu-id="30645-103">This sample demonstrates how to use workflow tracking to extract workflow variables and arguments from activities.</span></span> <span data-ttu-id="30645-104">Также показывается добавление заметок к записям отслеживания и извлечение полезной нагрузки данных из пользовательских записей отслеживания.</span><span class="sxs-lookup"><span data-stu-id="30645-104">It also shows the addition of annotations to tracking records and the extraction of data payload within custom tracking records.</span></span> <span data-ttu-id="30645-105">В этом образце для извлечения данных из рабочего процесса используется участник отслеживания трассировки событий Windows (ETW).</span><span class="sxs-lookup"><span data-stu-id="30645-105">The sample uses the Event Tracing for Windows (ETW) tracking participant to extract data from the workflow.</span></span>  

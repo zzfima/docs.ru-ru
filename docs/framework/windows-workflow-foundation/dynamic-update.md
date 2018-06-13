@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33520361"
 ---
 # <a name="dynamic-update"></a><span data-ttu-id="3575d-102">Динамическое обновление</span><span class="sxs-lookup"><span data-stu-id="3575d-102">Dynamic Update</span></span>
 <span data-ttu-id="3575d-103">Динамическое обновление предоставляет разработчикам приложений рабочих процессов механизм обновления определения рабочего процесса для сохраненного экземпляра рабочего процесса.</span><span class="sxs-lookup"><span data-stu-id="3575d-103">Dynamic update provides a mechanism for workflow application developers to update the workflow definition of a persisted workflow instance.</span></span> <span data-ttu-id="3575d-104">Это позволяет реализовать исправление ошибки, внедрить новые требования и внести непредвиденные изменения.</span><span class="sxs-lookup"><span data-stu-id="3575d-104">This can be to implement a bug fix, new requirements, or to accommodate unexpected changes.</span></span> <span data-ttu-id="3575d-105">В этом разделе приведены общие сведения о функциях динамического обновления, введенных в [!INCLUDE[net_v45](../../../includes/net-v45-md.md)].</span><span class="sxs-lookup"><span data-stu-id="3575d-105">This topic provides an overview of the dynamic update functionality introduced in [!INCLUDE[net_v45](../../../includes/net-v45-md.md)].</span></span>  

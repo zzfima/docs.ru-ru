@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33562028"
 ---
 # <a name="xmllang-handling-in-xaml"></a><span data-ttu-id="ba25f-102">Обработка xml:lang в XAML</span><span class="sxs-lookup"><span data-stu-id="ba25f-102">xml:lang Handling in XAML</span></span>
 <span data-ttu-id="ba25f-103">Атрибут `xml:lang` — это определенный [!INCLUDE[TLA2#tla_xml](../../../includes/tla2sharptla-xml-md.md)]атрибут, который объявляет язык и региональные параметры для элемента в XML.</span><span class="sxs-lookup"><span data-stu-id="ba25f-103">The `xml:lang` attribute is an [!INCLUDE[TLA2#tla_xml](../../../includes/tla2sharptla-xml-md.md)]-defined attribute that declares the language and culture information for an element in XML.</span></span> <span data-ttu-id="ba25f-104">Такое же значение атрибута сохраняется в XAML; однако действуют некоторые дополнительные факторы.</span><span class="sxs-lookup"><span data-stu-id="ba25f-104">This same meaning of the attribute persists in XAML; however, some additional considerations apply.</span></span>  

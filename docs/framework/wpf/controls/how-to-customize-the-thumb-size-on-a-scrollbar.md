@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33551808"
 ---
 # <a name="how-to-customize-the-thumb-size-on-a-scrollbar"></a><span data-ttu-id="1b552-102">Практическое руководство. Настройка размера ползунка в ScrollBar</span><span class="sxs-lookup"><span data-stu-id="1b552-102">How to: Customize the Thumb Size on a ScrollBar</span></span>
 <span data-ttu-id="1b552-103">В этом разделе объясняется, как задать <xref:System.Windows.Controls.Primitives.Thumb> из <xref:System.Windows.Controls.Primitives.ScrollBar> фиксированного размера и как задать минимальный размер для <xref:System.Windows.Controls.Primitives.Thumb> из <xref:System.Windows.Controls.Primitives.ScrollBar>.</span><span class="sxs-lookup"><span data-stu-id="1b552-103">This topic explains how to set the <xref:System.Windows.Controls.Primitives.Thumb> of a <xref:System.Windows.Controls.Primitives.ScrollBar> to a fixed size and how to specify a minimum size for the <xref:System.Windows.Controls.Primitives.Thumb> of a <xref:System.Windows.Controls.Primitives.ScrollBar>.</span></span>  

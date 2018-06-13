@@ -17,6 +17,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32743892"
 ---
 # <a name="retrieving-setup-information-from-an-application-domain"></a><span data-ttu-id="1c755-102">Извлечение сведений о настройке из домена приложения</span><span class="sxs-lookup"><span data-stu-id="1c755-102">Retrieving Setup Information from an Application Domain</span></span>
 <span data-ttu-id="1c755-103">Каждый экземпляр домена приложения содержит свойства и сведения <xref:System.AppDomainSetup>.</span><span class="sxs-lookup"><span data-stu-id="1c755-103">Each instance of an application domain consists of both properties and <xref:System.AppDomainSetup> information.</span></span> <span data-ttu-id="1c755-104">Сведения о настройке можно получить из домена приложения с помощью класса <xref:System.AppDomain?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="1c755-104">You can retrieve setup information from an application domain using the <xref:System.AppDomain?displayProperty=nameWithType> class.</span></span> <span data-ttu-id="1c755-105">Этот класс предоставляет несколько членов, извлекающих сведения конфигурации домена приложения.</span><span class="sxs-lookup"><span data-stu-id="1c755-105">This class provides several members that retrieve configuration information about an application domain.</span></span>  

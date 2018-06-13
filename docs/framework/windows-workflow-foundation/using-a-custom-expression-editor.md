@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33518581"
 ---
 # <a name="using-a-custom-expression-editor"></a><span data-ttu-id="2cf5e-102">Использование редактора настраиваемых выражений</span><span class="sxs-lookup"><span data-stu-id="2cf5e-102">Using a Custom Expression Editor</span></span>
 <span data-ttu-id="2cf5e-103">Чтобы получить расширенные или упрощенные возможности редактирования выражений, можно реализовать настраиваемый редактор выражений.</span><span class="sxs-lookup"><span data-stu-id="2cf5e-103">A custom expression editor can be implemented to provide a richer or simpler expression editing experience.</span></span> <span data-ttu-id="2cf5e-104">Редактор настраиваемых выражений может потребоваться в следующих случаях.</span><span class="sxs-lookup"><span data-stu-id="2cf5e-104">There are several scenarios in which you might want to use a custom expression editor:</span></span>  

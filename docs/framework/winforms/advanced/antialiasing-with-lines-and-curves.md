@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33520387"
 ---
 # <a name="antialiasing-with-lines-and-curves"></a><span data-ttu-id="27b1d-102">Сглаживание прямых и кривых линий</span><span class="sxs-lookup"><span data-stu-id="27b1d-102">Antialiasing with Lines and Curves</span></span>
 <span data-ttu-id="27b1d-103">При использовании [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] для рисования линии, предоставляют начальную и конечную точки линии, но вам не требуется задать любые сведения об отдельных точках в строке.</span><span class="sxs-lookup"><span data-stu-id="27b1d-103">When you use [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] to draw a line, you provide the starting point and ending point of the line, but you do not have to provide any information about the individual pixels on the line.</span></span> [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]<span data-ttu-id="27b1d-104"> работает в сочетании с программным обеспечением драйвера экрана, чтобы определить, какие точек будет включена для отображения в строке для каждого конкретного устройства отображения.</span><span class="sxs-lookup"><span data-stu-id="27b1d-104"> works in conjunction with the display driver software to determine which pixels will be turned on to show the line on a particular display device.</span></span>  

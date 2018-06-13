@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33522761"
 ---
 # <a name="how-to-align-drawn-text"></a><span data-ttu-id="b385e-102">Практическое руководство. Выравнивание рисуемого текста</span><span class="sxs-lookup"><span data-stu-id="b385e-102">How to: Align Drawn Text</span></span>
 <span data-ttu-id="b385e-103">При выполнении пользовательской отрисовки, часто требуется формируемого выравнивание текста по центру формы или элемента управления.</span><span class="sxs-lookup"><span data-stu-id="b385e-103">When you perform custom drawing, you may often want to center drawn text on a form or control.</span></span> <span data-ttu-id="b385e-104">Выровнять текст, отображаемый с <xref:System.Drawing.Graphics.DrawString%2A> или <xref:System.Windows.Forms.TextRenderer.DrawText%2A> методы создания нужный объект форматирования и установив соответствующие параметры форматирования.</span><span class="sxs-lookup"><span data-stu-id="b385e-104">You can easily align text drawn with the <xref:System.Drawing.Graphics.DrawString%2A> or <xref:System.Windows.Forms.TextRenderer.DrawText%2A> methods by creating the correct formatting object and setting the appropriate format flags.</span></span>  

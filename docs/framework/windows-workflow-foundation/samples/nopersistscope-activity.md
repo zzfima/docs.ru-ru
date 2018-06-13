@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33516443"
 ---
 # <a name="nopersistscope-activity"></a><span data-ttu-id="bb3cd-102">Действие NoPersistScope</span><span class="sxs-lookup"><span data-stu-id="bb3cd-102">NoPersistScope Activity</span></span>
 <span data-ttu-id="bb3cd-103">В этом образце показано, как обрабатывать несериализуемое и высвобождаемое состояние в рабочем процессе.</span><span class="sxs-lookup"><span data-stu-id="bb3cd-103">This sample shows how to manipulate a non-serializable and disposable state within a workflow.</span></span> <span data-ttu-id="bb3cd-104">Важно заметить, что попыток сохранения несериализуемого состояния в рабочих процессах не происходит. Кроме того, необходимо очищать высвобождаемые объекты после их использования в рабочем процессе.</span><span class="sxs-lookup"><span data-stu-id="bb3cd-104">It is important that workflows do not attempt to persist non-serializable state and it is also important for disposable objects to be cleaned up after they are used in workflow.</span></span>  

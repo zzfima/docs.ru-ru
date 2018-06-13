@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33519643"
 ---
 # <a name="state-machine-workflows"></a><span data-ttu-id="bf489-102">Рабочие процессы конечного автомата</span><span class="sxs-lookup"><span data-stu-id="bf489-102">State Machine Workflows</span></span>
 <span data-ttu-id="bf489-103">Конечный автомат - широко известный принцип разработки программ.</span><span class="sxs-lookup"><span data-stu-id="bf489-103">A state machine is a well-known paradigm for developing programs.</span></span> <span data-ttu-id="bf489-104">Действие <xref:System.Activities.Statements.StateMachine>, а также <xref:System.Activities.Statements.State>, <xref:System.Activities.Statements.Transition> и другие действия могут использоваться для сборки программ рабочего процесса конечных автоматов.</span><span class="sxs-lookup"><span data-stu-id="bf489-104">The <xref:System.Activities.Statements.StateMachine> activity, along with <xref:System.Activities.Statements.State>, <xref:System.Activities.Statements.Transition>, and other activities can be used to build state machine workflow programs.</span></span> <span data-ttu-id="bf489-105">В этом разделе представлены общие сведения о создании рабочих процессов конечного автомата.</span><span class="sxs-lookup"><span data-stu-id="bf489-105">This topic provides an overview of creating state machine workflows.</span></span>  

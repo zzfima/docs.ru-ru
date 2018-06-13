@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33517664"
 ---
 # <a name="declarative-constraints"></a><span data-ttu-id="b45f7-102">Декларативные ограничения</span><span class="sxs-lookup"><span data-stu-id="b45f7-102">Declarative Constraints</span></span>
 <span data-ttu-id="b45f7-103">Декларативные ограничения - это мощный метод проверки допустимости действия и его связей с другими действиями.</span><span class="sxs-lookup"><span data-stu-id="b45f7-103">Declarative constraints provide a powerful method of validation for an activity and its relationships with other activities.</span></span> <span data-ttu-id="b45f7-104">Ограничения для действий настраиваются во время процесса создания, однако дополнительные ограничения также могут задаваться ведущим приложением рабочего процесса.</span><span class="sxs-lookup"><span data-stu-id="b45f7-104">Constraints are configured for an activity during the authoring process, but additional constraints can also be specified by the workflow host.</span></span> <span data-ttu-id="b45f7-105">В этом разделе приводятся общие сведения об использовании декларативных ограничений для обеспечения проверки допустимости действий.</span><span class="sxs-lookup"><span data-stu-id="b45f7-105">This topic provides an overview of using declarative constraints to provide activity validation.</span></span>  

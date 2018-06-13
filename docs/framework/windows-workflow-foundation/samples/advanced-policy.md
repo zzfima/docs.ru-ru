@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33515559"
 ---
 # <a name="advanced-policy"></a><span data-ttu-id="f7b12-102">Дополнительная политика</span><span class="sxs-lookup"><span data-stu-id="f7b12-102">Advanced Policy</span></span>
 <span data-ttu-id="f7b12-103">Данный образец выступает как дополнение образца простой политики.</span><span class="sxs-lookup"><span data-stu-id="f7b12-103">This sample extends the Simple Policy sample.</span></span> <span data-ttu-id="f7b12-104">К правилам для скидок на жилье и коммерческих скидок, описанных в примере простой политики, добавлены несколько новых правил.</span><span class="sxs-lookup"><span data-stu-id="f7b12-104">In addition to the residential discount and business discount rules from the Simple Policy example, several new rules have been added.</span></span>  

@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: e28aef4916d06218953236e3b29e19c68822bd6b
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33451192"
 ---
 # <a name="icorprofilercallbackfunctionunloadstarted-method"></a><span data-ttu-id="aa5c5-102">Метод ICorProfilerCallback::FunctionUnloadStarted</span><span class="sxs-lookup"><span data-stu-id="aa5c5-102">ICorProfilerCallback::FunctionUnloadStarted Method</span></span>
 <span data-ttu-id="aa5c5-103">Уведомляет профилировщик о том, что среда выполнения начала выгрузку функции.</span><span class="sxs-lookup"><span data-stu-id="aa5c5-103">Notifies the profiler that the runtime has started to unload a function.</span></span>  

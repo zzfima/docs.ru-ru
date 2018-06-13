@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33550076"
 ---
 # <a name="datepicker"></a><span data-ttu-id="8c0fc-102">DatePicker</span><span class="sxs-lookup"><span data-stu-id="8c0fc-102">DatePicker</span></span>
 <span data-ttu-id="8c0fc-103"><xref:System.Windows.Controls.DatePicker> Управления позволяет пользователю выбрать дату, либо путем ввода его в текстовое поле или с помощью раскрывающегося списка <xref:System.Windows.Controls.Calendar> элемента управления.</span><span class="sxs-lookup"><span data-stu-id="8c0fc-103">The <xref:System.Windows.Controls.DatePicker> control allows the user to select a date by either typing it into a text field or by using a drop-down <xref:System.Windows.Controls.Calendar> control.</span></span>  

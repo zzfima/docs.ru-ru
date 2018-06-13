@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33515402"
 ---
 # <a name="basic-usage-of-sendparameters-and-receiveparameters-activities"></a><span data-ttu-id="f938b-102">Основное использование действий SendParameters и ReceiveParameters</span><span class="sxs-lookup"><span data-stu-id="f938b-102">Basic Usage of SendParameters and ReceiveParameters Activities</span></span>
 <span data-ttu-id="f938b-103">В этом образце показано использование действий <xref:System.ServiceModel.Activities.SendParametersContent> и <xref:System.ServiceModel.Activities.ReceiveParametersContent>.</span><span class="sxs-lookup"><span data-stu-id="f938b-103">This sample shows the use of <xref:System.ServiceModel.Activities.SendParametersContent> and <xref:System.ServiceModel.Activities.ReceiveParametersContent> activities.</span></span> <span data-ttu-id="f938b-104">Служба предоставляет одну операцию, которая принимает строковый аргумент и возвращает его клиенту.</span><span class="sxs-lookup"><span data-stu-id="f938b-104">The service exposes one operation that takes a string argument and echoes the input back to the client.</span></span> <span data-ttu-id="f938b-105">В образце показано, как установить параметры для этих действий обмена сообщениями.</span><span class="sxs-lookup"><span data-stu-id="f938b-105">The sample shows how to set up the parameters for these messaging activities.</span></span>  

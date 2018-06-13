@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33515572"
 ---
 # <a name="bookmarks"></a><span data-ttu-id="bf238-102">Закладки</span><span class="sxs-lookup"><span data-stu-id="bf238-102">Bookmarks</span></span>
 <span data-ttu-id="bf238-103">Закладки - это механизм, позволяющий действиям пассивно ожидать ввода, не останавливая поток рабочего процесса.</span><span class="sxs-lookup"><span data-stu-id="bf238-103">Bookmarks are the mechanism that enables an activity to passively wait for input without holding onto a workflow thread.</span></span> <span data-ttu-id="bf238-104">Когда действие сообщает об ожидании внешнего воздействия, оно может создать закладку.</span><span class="sxs-lookup"><span data-stu-id="bf238-104">When an activity signals that it is waiting for stimulus, it can create a bookmark.</span></span> <span data-ttu-id="bf238-105">Это сообщает среде выполнения, что выполнение действия не должно считаться завершенным даже в случае возвращения управления из выполняющегося в данный момент метода (создавшего закладку <xref:System.Activities.Bookmark>).</span><span class="sxs-lookup"><span data-stu-id="bf238-105">This indicates to the runtime that the activity’s execution should not be considered complete even when the currently executing method (which created the <xref:System.Activities.Bookmark>) returns.</span></span>  

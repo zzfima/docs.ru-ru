@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33523007"
 ---
 # <a name="how-to-print-a-multi-page-text-file-in-windows-forms"></a><span data-ttu-id="5635f-102">Практическое руководство. Печать многостраничных текстовых файлов в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="5635f-102">How to: Print a Multi-Page Text File in Windows Forms</span></span>
 <span data-ttu-id="5635f-103">В приложениях Windows очень часто используется печать текста.</span><span class="sxs-lookup"><span data-stu-id="5635f-103">It is very common for Windows-based applications to print text.</span></span> <span data-ttu-id="5635f-104">Класс <xref:System.Drawing.Graphics> предоставляет методы для рисования объектов (графических или текстовых) на таких устройствах, как экран или принтер.</span><span class="sxs-lookup"><span data-stu-id="5635f-104">The <xref:System.Drawing.Graphics> class provides methods for drawing objects (graphics or text) to a device, such as a screen or printer.</span></span>  

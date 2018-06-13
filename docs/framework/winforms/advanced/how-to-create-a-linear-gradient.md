@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33522464"
 ---
 # <a name="how-to-create-a-linear-gradient"></a><span data-ttu-id="c3c36-102">Практическое руководство. Создание линейного градиента</span><span class="sxs-lookup"><span data-stu-id="c3c36-102">How to: Create a Linear Gradient</span></span>
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]<span data-ttu-id="c3c36-103"> поддерживает горизонтальные, вертикальные и диагональные линейные градиенты.</span><span class="sxs-lookup"><span data-stu-id="c3c36-103"> provides horizontal, vertical, and diagonal linear gradients.</span></span> <span data-ttu-id="c3c36-104">По умолчанию цвет в линейном градиенте меняется равномерно.</span><span class="sxs-lookup"><span data-stu-id="c3c36-104">By default, the color in a linear gradient changes uniformly.</span></span> <span data-ttu-id="c3c36-105">Тем не менее можно настроить линейный градиент, чтобы цвет изменяется таким образом неоднородной.</span><span class="sxs-lookup"><span data-stu-id="c3c36-105">However, you can customize a linear gradient so that the color changes in a non-uniform fashion.</span></span>  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33550765"
 ---
 # <a name="checkbox"></a><span data-ttu-id="2076a-102">CheckBox</span><span class="sxs-lookup"><span data-stu-id="2076a-102">CheckBox</span></span>
 <span data-ttu-id="2076a-103">Можно использовать <xref:System.Windows.Controls.CheckBox> в [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] приложения для представления параметров, которые пользователь может выбрать или очистить.</span><span class="sxs-lookup"><span data-stu-id="2076a-103">You can use a <xref:System.Windows.Controls.CheckBox> in the [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] of your application to represent options that a user can select or clear.</span></span> <span data-ttu-id="2076a-104">Можно использовать один флажок или можно сгруппировать две или несколько флажков.</span><span class="sxs-lookup"><span data-stu-id="2076a-104">You can use a single check box or you can group two or more check boxes.</span></span>  

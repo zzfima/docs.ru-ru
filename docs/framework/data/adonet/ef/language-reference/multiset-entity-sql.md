@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32762927"
 ---
 # <a name="multiset-entity-sql"></a><span data-ttu-id="001a3-102">MULTISET (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="001a3-102">MULTISET (Entity SQL)</span></span>
 <span data-ttu-id="001a3-103">Создает экземпляр мультинабора из списка значений.</span><span class="sxs-lookup"><span data-stu-id="001a3-103">Creates an instance of a multiset from a list of values.</span></span> <span data-ttu-id="001a3-104">Все значения конструктора MULTISET должны принадлежать совместимому типу `T`.</span><span class="sxs-lookup"><span data-stu-id="001a3-104">All the values in the MULTISET constructor must be of a compatible type `T`.</span></span> <span data-ttu-id="001a3-105">Применение пустых конструкторов мультинаборов не допускается.</span><span class="sxs-lookup"><span data-stu-id="001a3-105">Empty multiset constructors are not allowed.</span></span>  

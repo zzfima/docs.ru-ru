@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33515640"
 ---
 # <a name="basic"></a><span data-ttu-id="4a9c8-102">Basic</span><span class="sxs-lookup"><span data-stu-id="4a9c8-102">Basic</span></span>
 <span data-ttu-id="4a9c8-103">В этом разделе содержатся примеры, демонстрирующие основные функциональные возможности Windows Workflow Foundation (WF).</span><span class="sxs-lookup"><span data-stu-id="4a9c8-103">This section provides samples that demonstrate basic Windows Workflow Foundation (WF) functionality.</span></span>  

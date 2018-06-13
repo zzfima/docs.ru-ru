@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33554902"
 ---
 # <a name="how-to-sort-a-gridview-column-when-a-header-is-clicked"></a><span data-ttu-id="268ff-102">Практическое руководство. Сортировка столбцов GridView при нажатии на заголовок</span><span class="sxs-lookup"><span data-stu-id="268ff-102">How to: Sort a GridView Column When a Header Is Clicked</span></span>
 <span data-ttu-id="268ff-103">В этом примере показано, как создать <xref:System.Windows.Controls.ListView> управления, который реализует <xref:System.Windows.Controls.GridView> просмотра режим и сортировка данных содержимого при щелчке заголовка столбца.</span><span class="sxs-lookup"><span data-stu-id="268ff-103">This example shows how to create a <xref:System.Windows.Controls.ListView> control that implements a <xref:System.Windows.Controls.GridView> view mode and sorts the data content when a user clicks a column header.</span></span>  

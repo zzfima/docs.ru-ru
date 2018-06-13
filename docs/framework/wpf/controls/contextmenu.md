@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33550128"
 ---
 # <a name="contextmenu"></a><span data-ttu-id="6115c-102">ContextMenu</span><span class="sxs-lookup"><span data-stu-id="6115c-102">ContextMenu</span></span>
 <span data-ttu-id="6115c-103"><xref:System.Windows.Controls.ContextMenu> Позволяет элементу управления для отображения <xref:System.Windows.Controls.Menu> , зависит от контекста элемента управления.</span><span class="sxs-lookup"><span data-stu-id="6115c-103">The <xref:System.Windows.Controls.ContextMenu> allows a control to display a <xref:System.Windows.Controls.Menu> that is specific to the context of the control.</span></span> <span data-ttu-id="6115c-104">Как правило <xref:System.Windows.Controls.ContextMenu> предоставляется в [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] через правой кнопкой мыши или клавиатуры кнопки меню.</span><span class="sxs-lookup"><span data-stu-id="6115c-104">Typically, the <xref:System.Windows.Controls.ContextMenu> is exposed in the [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] through the right mouse button or through the keyboard’s menu button.</span></span>  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33522989"
 ---
 # <a name="how-to-use-a-pen-to-draw-lines"></a><span data-ttu-id="f1b63-102">Практическое руководство. Рисование линий с помощью пера</span><span class="sxs-lookup"><span data-stu-id="f1b63-102">How to: Use a Pen to Draw Lines</span></span>
 <span data-ttu-id="f1b63-103">Чтобы нарисовать линии, нужно <xref:System.Drawing.Graphics> объекта и <xref:System.Drawing.Pen> объекта.</span><span class="sxs-lookup"><span data-stu-id="f1b63-103">To draw lines, you need a <xref:System.Drawing.Graphics> object and a <xref:System.Drawing.Pen> object.</span></span> <span data-ttu-id="f1b63-104"><xref:System.Drawing.Graphics> Объект предоставляет <xref:System.Drawing.Graphics.DrawLine%2A> метода и <xref:System.Drawing.Pen> объект сохраняет функции строки, таких как цвет и ширину.</span><span class="sxs-lookup"><span data-stu-id="f1b63-104">The <xref:System.Drawing.Graphics> object provides the <xref:System.Drawing.Graphics.DrawLine%2A> method, and the <xref:System.Drawing.Pen> object stores features of the line, such as color and width.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33515309"
 ---
 # <a name="how-to-create-a-workflow-service-that-consumes-an-existing-service-contract"></a><span data-ttu-id="00ae9-102">Как создать службу рабочего процесса, которая использует существующий контракт службы</span><span class="sxs-lookup"><span data-stu-id="00ae9-102">How to: Create a workflow service that consumes an existing service contract</span></span>
 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]<span data-ttu-id="00ae9-103"> отличается улучшенной интеграцией между веб-службами и рабочими процессами в форме разработки рабочего процесса на основе контракта.</span><span class="sxs-lookup"><span data-stu-id="00ae9-103"> features better integration between web services and workflows in the form of contract-first workflow development.</span></span> <span data-ttu-id="00ae9-104">Средство разработки рабочих процессов на основе контракта позволяет создать контракт в Code First.</span><span class="sxs-lookup"><span data-stu-id="00ae9-104">The contract-first workflow development tool allows you to design the contract in code first.</span></span> <span data-ttu-id="00ae9-105">Затем это средство автоматически создает в области элементов шаблон действия для каждой операции в контракте.</span><span class="sxs-lookup"><span data-stu-id="00ae9-105">The tool then automatically generates an activity template in the toolbox for the operations in the contract.</span></span>  

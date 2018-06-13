@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33519422"
 ---
 # <a name="order-processing-with-policy"></a><span data-ttu-id="b778b-102">Обработка заказов с помощью политики</span><span class="sxs-lookup"><span data-stu-id="b778b-102">Order Processing with Policy</span></span>
 <span data-ttu-id="b778b-103">В данном образце политики обработки заказов продемонстрированы некоторые ключевые функции, представленные в [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] платформы Windows Workflow Foundation (WF).</span><span class="sxs-lookup"><span data-stu-id="b778b-103">The Order Processing Policy sample demonstrates some of the key features introduced in the [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] of the Windows Workflow Foundation (WF).</span></span> <span data-ttu-id="b778b-104">В обработчике правил WF реализованы следующие новые функции:</span><span class="sxs-lookup"><span data-stu-id="b778b-104">The following functionality is new for the WF rules engine:</span></span>  

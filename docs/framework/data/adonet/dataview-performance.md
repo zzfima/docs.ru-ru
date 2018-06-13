@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32762784"
 ---
 # <a name="dataview-performance"></a><span data-ttu-id="2f10e-102">Производительность объекта DataView</span><span class="sxs-lookup"><span data-stu-id="2f10e-102">DataView Performance</span></span>
 <span data-ttu-id="2f10e-103">В этом разделе обсуждается повышение производительности при использования методов <xref:System.Data.DataView.Find%2A> и <xref:System.Data.DataView.FindRows%2A> класса <xref:System.Data.DataView>, а также при кэшировании объекта <xref:System.Data.DataView> в веб-приложении.</span><span class="sxs-lookup"><span data-stu-id="2f10e-103">This topic discusses the performance benefits of using the <xref:System.Data.DataView.Find%2A> and <xref:System.Data.DataView.FindRows%2A> methods of the <xref:System.Data.DataView> class, and of caching a <xref:System.Data.DataView> in a Web application.</span></span>  

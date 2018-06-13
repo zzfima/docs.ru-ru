@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33520085"
 ---
 # <a name="workflow-persistence"></a><span data-ttu-id="93e88-102">Сохраняемость рабочего процесса</span><span class="sxs-lookup"><span data-stu-id="93e88-102">Workflow Persistence</span></span>
 <span data-ttu-id="93e88-103">Сохраняемость рабочего процесса - это постоянное отслеживание состояний экземпляра рабочего процесса независимо от выполняемого процесса или данных компьютера.</span><span class="sxs-lookup"><span data-stu-id="93e88-103">Workflow persistence is the durable capture of a workflow instance's state, independent of process or computer information.</span></span> <span data-ttu-id="93e88-104">Делается это для обеспечения хорошо известной точки восстановления для экземпляра рабочего процесса в случае сбоя системы или сохранения памяти путем выгрузки экземпляров рабочих процессов, которые в настоящий момент не выполняют активных действий, или переноса состояния экземпляра рабочего процесса с одного узла на другой узел в ферме серверов.</span><span class="sxs-lookup"><span data-stu-id="93e88-104">This is done to provide a well-known point of recovery for the workflow instance in the event of system failure, or to preserve memory by unloading workflow instances that are not actively doing work, or to move the state of the workflow instance from one node to another node in a server farm.</span></span>  

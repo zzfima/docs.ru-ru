@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33517995"
 ---
 # <a name="support-for-queries"></a><span data-ttu-id="b980a-102">Поддержка запросов</span><span class="sxs-lookup"><span data-stu-id="b980a-102">Support for Queries</span></span>
 <span data-ttu-id="b980a-103">Хранилище экземпляров рабочих процессов SQL записывает набор известных свойств в хранилище.</span><span class="sxs-lookup"><span data-stu-id="b980a-103">The SQL Workflow Instance Store records a set of well-known properties in the store.</span></span> <span data-ttu-id="b980a-104">Пользователи могут выполнить запрос экземпляров на основе этих свойств.</span><span class="sxs-lookup"><span data-stu-id="b980a-104">Users can query for instances based on these properties.</span></span> <span data-ttu-id="b980a-105">В следующем списке приведены некоторые из этих известных свойств.</span><span class="sxs-lookup"><span data-stu-id="b980a-105">The following list contains some of these well-known properties:</span></span>  

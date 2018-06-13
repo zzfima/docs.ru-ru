@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33520150"
 ---
 # <a name="support-for-new-workflow-foundation-45-features-in-the-rehosted-workflow-designer"></a><span data-ttu-id="0fe82-102">Поддержка новых возможностей Workflow Foundation 4.5 во вновь размещенном конструкторе рабочих процессов</span><span class="sxs-lookup"><span data-stu-id="0fe82-102">Support for New Workflow Foundation 4.5 Features in the Rehosted Workflow Designer</span></span>
 <span data-ttu-id="0fe82-103">Windows Workflow Foundation (WF) в [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] появилось множество новых функций, в том числе некоторые улучшения работы конструктора рабочих процессов.</span><span class="sxs-lookup"><span data-stu-id="0fe82-103">Windows Workflow Foundation (WF) in [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] introduced many new features, including several enhancements to the workflow designer experience.</span></span> <span data-ttu-id="0fe82-104">В этом разделе подробно описываются те возможности, которые поддерживаются в повторно размещенном конструкторе, и те, которые в настоящее время не поддерживаются.</span><span class="sxs-lookup"><span data-stu-id="0fe82-104">This topic details which of these features are supported in the rehosted designer, and which ones are currently not supported.</span></span>  

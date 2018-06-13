@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33520660"
 ---
 # <a name="constructing-and-drawing-paths"></a><span data-ttu-id="5c4d9-102">Построение и рисование контуров</span><span class="sxs-lookup"><span data-stu-id="5c4d9-102">Constructing and Drawing Paths</span></span>
 <span data-ttu-id="5c4d9-103">Путь — это последовательность графических примитивов (линии, прямоугольники, кривых, текста и т. д.), которые обрабатываются и отображаются как один объект.</span><span class="sxs-lookup"><span data-stu-id="5c4d9-103">A path is a sequence of graphics primitives (lines, rectangles, curves, text, and the like) that can be manipulated and drawn as a single unit.</span></span> <span data-ttu-id="5c4d9-104">Путь можно разделить на *фигур* , открытые или закрытые.</span><span class="sxs-lookup"><span data-stu-id="5c4d9-104">A path can be divided into *figures* that are either open or closed.</span></span> <span data-ttu-id="5c4d9-105">Фигура может содержать несколько примитивов.</span><span class="sxs-lookup"><span data-stu-id="5c4d9-105">A figure can contain several primitives.</span></span>  

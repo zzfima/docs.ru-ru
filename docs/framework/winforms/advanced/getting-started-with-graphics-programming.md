@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33522829"
 ---
 # <a name="getting-started-with-graphics-programming"></a><span data-ttu-id="e0796-102">Приступая к программированию графики</span><span class="sxs-lookup"><span data-stu-id="e0796-102">Getting Started with Graphics Programming</span></span>
 <span data-ttu-id="e0796-103">В этом разделе показано, как приступить к использованию [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] в приложении Windows Forms.</span><span class="sxs-lookup"><span data-stu-id="e0796-103">This section shows how to get started using [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] in a Windows Forms application.</span></span> <span data-ttu-id="e0796-104">В следующих темах инструкции по решению некоторых [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] задач, таких как рисование и заливка фигур и текста.</span><span class="sxs-lookup"><span data-stu-id="e0796-104">The following topics show how to complete several [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] tasks such as drawing and filling shapes and text.</span></span>  

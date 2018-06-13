@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33521782"
 ---
 # <a name="coordinate-systems-and-transformations"></a><span data-ttu-id="b3e6d-102">Системы координат и преобразования</span><span class="sxs-lookup"><span data-stu-id="b3e6d-102">Coordinate Systems and Transformations</span></span>
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]<span data-ttu-id="b3e6d-103"> предоставляет универсальное преобразование и преобразование страницы, чтобы их можно преобразовать (поворот, масштабирование, преобразования и так далее) элементов, рисования.</span><span class="sxs-lookup"><span data-stu-id="b3e6d-103"> provides a world transformation and a page transformation so that you can transform (rotate, scale, translate, and so on) the items you draw.</span></span> <span data-ttu-id="b3e6d-104">Два преобразования также позволяют работать в различных систем координат.</span><span class="sxs-lookup"><span data-stu-id="b3e6d-104">The two transformations also allow you to work in a variety of coordinate systems.</span></span>  

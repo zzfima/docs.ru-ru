@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33565854"
 ---
 # <a name="xname-directive"></a><span data-ttu-id="136fa-102">Директива x:Name</span><span class="sxs-lookup"><span data-stu-id="136fa-102">x:Name Directive</span></span>
 <span data-ttu-id="136fa-103">Однозначно определяет элементы, определенные в XAML, в области имен XAML.</span><span class="sxs-lookup"><span data-stu-id="136fa-103">Uniquely identifies XAML-defined elements in a XAML namescope.</span></span> <span data-ttu-id="136fa-104">Области видимости имен XAML и их уникальность моделей могут применяться к экземпляры объектов при платформы предоставляют интерфейсы API или реализации поведений, которые обращаются к graph XAML-объекта, созданного во время выполнения.</span><span class="sxs-lookup"><span data-stu-id="136fa-104">XAML namescopes and their uniqueness models can be applied to the instantiated objects, when frameworks provide APIs or implement behaviors that access the XAML-created object graph at run time.</span></span>  

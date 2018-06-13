@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33572227"
 ---
 # <a name="xml-processing-options"></a><span data-ttu-id="b6d8f-102">Параметры обработки XML</span><span class="sxs-lookup"><span data-stu-id="b6d8f-102">XML Processing Options</span></span>
 <span data-ttu-id="b6d8f-103">В следующих таблицах приведен список технологий Microsoft, с помощью которых можно обрабатывать XML-данные.</span><span class="sxs-lookup"><span data-stu-id="b6d8f-103">See the following tables for a list of Microsoft technologies you can use to process XML data.</span></span>  

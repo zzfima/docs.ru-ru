@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33524658"
 ---
 # <a name="windows-forms-accessibility"></a><span data-ttu-id="30ab7-102">Поддержка специальных возможностей в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="30ab7-102">Windows Forms Accessibility</span></span>
 <span data-ttu-id="30ab7-103">Специальные возможности Windows Forms позволяют вам сделать приложение доступным самым разным пользователям.</span><span class="sxs-lookup"><span data-stu-id="30ab7-103">The accessibility functionality of Windows Forms allows you to make your application available to a wide variety of users.</span></span>  

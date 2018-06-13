@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33551971"
 ---
 # <a name="expander"></a><span data-ttu-id="a57f8-102">Expander</span><span class="sxs-lookup"><span data-stu-id="a57f8-102">Expander</span></span>
 <span data-ttu-id="a57f8-103"><xref:System.Windows.Controls.Expander> Позволяет пользователю просмотреть заголовок и развернуть заголовок, чтобы просмотреть дополнительные сведения, или свернуть раздел до заголовка.</span><span class="sxs-lookup"><span data-stu-id="a57f8-103">An <xref:System.Windows.Controls.Expander> allows a user to view a header and expand that header to see further details, or to collapse a section up to a header.</span></span>  

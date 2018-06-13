@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33523972"
 ---
 # <a name="multiple-document-interface-mdi-applications"></a><span data-ttu-id="d9a6c-102">Приложения с интерфейсом MDI</span><span class="sxs-lookup"><span data-stu-id="d9a6c-102">Multiple-Document Interface (MDI) Applications</span></span>
 <span data-ttu-id="d9a6c-103">Приложения многодокументного интерфейса (MDI) позволяют отображать несколько документов одновременно, при этом каждый документ отображается в отдельном окне.</span><span class="sxs-lookup"><span data-stu-id="d9a6c-103">Multiple-document interface (MDI) applications enable you to display multiple documents at the same time, with each document displayed in its own window.</span></span> <span data-ttu-id="d9a6c-104">MDI-приложения часто содержат элементы меню Window с вложенным меню для переключения между окнами или документами.</span><span class="sxs-lookup"><span data-stu-id="d9a6c-104">MDI applications often have a Window menu item with submenus for switching between windows or documents.</span></span>  

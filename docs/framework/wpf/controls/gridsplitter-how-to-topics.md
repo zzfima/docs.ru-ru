@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33552822"
 ---
 # <a name="gridsplitter-how-to-topics"></a><span data-ttu-id="150c8-102">Разделы практического руководства по элементу управления GridSplitter</span><span class="sxs-lookup"><span data-stu-id="150c8-102">GridSplitter How-to Topics</span></span>
 <span data-ttu-id="150c8-103">В подразделах этого раздела описывается использование <xref:System.Windows.Controls.GridSplitter> элемента управления.</span><span class="sxs-lookup"><span data-stu-id="150c8-103">The topics in this section describe how to use the <xref:System.Windows.Controls.GridSplitter> control.</span></span>  

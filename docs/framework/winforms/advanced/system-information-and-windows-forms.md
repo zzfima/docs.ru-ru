@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33524119"
 ---
 # <a name="system-information-and-windows-forms"></a><span data-ttu-id="db8c6-102">Информация о системе и Windows Forms</span><span class="sxs-lookup"><span data-stu-id="db8c6-102">System Information and Windows Forms</span></span>
 <span data-ttu-id="db8c6-103">Иногда бывает необходимо собрать сведения о компьютере, на котором приложение выполняется на для принятия решений в коде.</span><span class="sxs-lookup"><span data-stu-id="db8c6-103">Sometimes it is necessary to gather information about the computer that your application is running on in order to make decisions in your code.</span></span> <span data-ttu-id="db8c6-104">Например возможно, функция, которая применяется только при подключении к конкретному сетевому домену; в этом случае необходим способ для определения домена и отключить функцию, если домен не существует.</span><span class="sxs-lookup"><span data-stu-id="db8c6-104">For example, you might have a function that is only applicable when connected to a particular network domain; in this case you would need a way to determine the domain and disable the function if the domain is not present.</span></span>  

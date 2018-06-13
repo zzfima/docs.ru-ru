@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33521502"
 ---
 # <a name="how-to-print-graphics-in-windows-forms"></a><span data-ttu-id="f15c6-102">Практическое руководство. Печать графических изображений в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="f15c6-102">How to: Print Graphics in Windows Forms</span></span>
 <span data-ttu-id="f15c6-103">Как правило требуется печать графических изображений в приложении Windows.</span><span class="sxs-lookup"><span data-stu-id="f15c6-103">Frequently, you will want to print graphics in your Windows-based application.</span></span> <span data-ttu-id="f15c6-104"><xref:System.Drawing.Graphics> Класс предоставляет методы для рисования объектов на устройствах, таких как экран или принтер.</span><span class="sxs-lookup"><span data-stu-id="f15c6-104">The <xref:System.Drawing.Graphics> class provides methods for drawing objects to a device, such as a screen or printer.</span></span>  

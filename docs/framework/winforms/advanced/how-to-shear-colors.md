@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33522451"
 ---
 # <a name="how-to-shear-colors"></a><span data-ttu-id="d2bc8-102">Практическое руководство. Сдвиг цветов</span><span class="sxs-lookup"><span data-stu-id="d2bc8-102">How to: Shear Colors</span></span>
 <span data-ttu-id="d2bc8-103">Наклон увеличивает или уменьшает компонент цвета на сумму пропорционально другому компоненту цвета.</span><span class="sxs-lookup"><span data-stu-id="d2bc8-103">Shearing increases or decreases a color component by an amount proportional to another color component.</span></span> <span data-ttu-id="d2bc8-104">Например рассмотрим преобразование, в котором красный компонент увеличивается на половину значения синего компонента.</span><span class="sxs-lookup"><span data-stu-id="d2bc8-104">For example, consider the transformation where the red component is increased by one half the value of the blue component.</span></span> <span data-ttu-id="d2bc8-105">При таком преобразовании цвет (0,2, 0,5, 1) станут (0,7, 0,5, 1).</span><span class="sxs-lookup"><span data-stu-id="d2bc8-105">Under such a transformation, the color (0.2, 0.5, 1) would become (0.7, 0.5, 1).</span></span> <span data-ttu-id="d2bc8-106">Новое значение красного компонента равняется 0,2 + (1/2)(1) = 0,7.</span><span class="sxs-lookup"><span data-stu-id="d2bc8-106">The new red component is 0.2 + (1/2)(1) = 0.7.</span></span>  

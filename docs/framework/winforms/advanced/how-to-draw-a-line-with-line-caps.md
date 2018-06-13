@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33523225"
 ---
 # <a name="how-to-draw-a-line-with-line-caps"></a><span data-ttu-id="46f59-102">Практическое руководство. Рисование линий с наконечниками</span><span class="sxs-lookup"><span data-stu-id="46f59-102">How to: Draw a Line with Line Caps</span></span>
 <span data-ttu-id="46f59-103">В одном из нескольких фигур, называемых наконечниками можно нарисовать начала и конца строки.</span><span class="sxs-lookup"><span data-stu-id="46f59-103">You can draw the start or end of a line in one of several shapes called line caps.</span></span> [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]<span data-ttu-id="46f59-104"> поддерживает несколько отрезков, например циклический, ромб, квадрат и стрелки.</span><span class="sxs-lookup"><span data-stu-id="46f59-104"> supports several line caps, such as round, square, diamond, and arrowhead.</span></span>  

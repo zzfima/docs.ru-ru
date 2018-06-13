@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33572906"
 ---
 # <a name="how-to-create-time-zones-without-adjustment-rules"></a><span data-ttu-id="51ed8-102">Как: создание часовых поясов без правил коррекции</span><span class="sxs-lookup"><span data-stu-id="51ed8-102">How to: Create time zones without adjustment rules</span></span>
 

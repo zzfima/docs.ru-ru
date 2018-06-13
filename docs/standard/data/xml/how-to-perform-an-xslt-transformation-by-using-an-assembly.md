@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33569507"
 ---
 # <a name="how-to-perform-an-xslt-transformation-by-using-an-assembly"></a><span data-ttu-id="f29da-102">Как выполнить XSLT-преобразование с помощью сборки</span><span class="sxs-lookup"><span data-stu-id="f29da-102">How to: Perform an XSLT Transformation by Using an Assembly</span></span>
 <span data-ttu-id="f29da-103">XSLT-компилятор (xsltc.exe) компилирует таблицы стилей XSLT и создает сборку.</span><span class="sxs-lookup"><span data-stu-id="f29da-103">The XSLT compiler (xsltc.exe) compiles XSLT style sheets and generates an assembly.</span></span> <span data-ttu-id="f29da-104">Сборку можно передать непосредственно методу <xref:System.Xml.Xsl.XslCompiledTransform.Load%28System.Type%29?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="f29da-104">The assembly can be passed directly into the <xref:System.Xml.Xsl.XslCompiledTransform.Load%28System.Type%29?displayProperty=nameWithType> method.</span></span>  

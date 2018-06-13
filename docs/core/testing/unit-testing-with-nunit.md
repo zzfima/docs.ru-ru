@@ -8,6 +8,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33214410"
 ---
 # <a name="unit-testing-c-with-nunit-and-net-core"></a><span data-ttu-id="acd70-103">Модульное тестирование кода C# с использованием NUnit и .NET Core</span><span class="sxs-lookup"><span data-stu-id="acd70-103">Unit testing C# with NUnit and .NET Core</span></span>
 

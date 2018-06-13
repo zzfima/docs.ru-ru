@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33525093"
 ---
 # <a name="button-control-windows-forms"></a><span data-ttu-id="14dcd-102">Элемент управления Button (Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="14dcd-102">Button Control (Windows Forms)</span></span>
 <span data-ttu-id="14dcd-103">Элемент управления Windows Forms `Button` позволяет пользователю щелкнуть его для выполнения действия.</span><span class="sxs-lookup"><span data-stu-id="14dcd-103">The Windows Forms `Button` control allows the user to click it to perform an action.</span></span> <span data-ttu-id="14dcd-104">На элементе управления `Button` могут отображаться текст и изображения.</span><span class="sxs-lookup"><span data-stu-id="14dcd-104">The `Button` control can display both text and images.</span></span> <span data-ttu-id="14dcd-105">При щелчке кнопки мышью элемент управления выглядит так, как будто его нажимают и отпускают.</span><span class="sxs-lookup"><span data-stu-id="14dcd-105">When the button is clicked, it looks as if it is being pushed in and released.</span></span>  

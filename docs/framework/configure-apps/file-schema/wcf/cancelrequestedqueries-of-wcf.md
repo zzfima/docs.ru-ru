@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32746827"
 ---
 # <a name="ltcancelrequestedqueriesgt-of-wcf"></a><span data-ttu-id="8d3f4-102">&lt;cancelRequestedQueries&gt; (WCF)</span><span class="sxs-lookup"><span data-stu-id="8d3f4-102">&lt;cancelRequestedQueries&gt; of WCF</span></span>
 <span data-ttu-id="8d3f4-103">Представляет коллекцию запросов, используемых для отслеживания запросов по отмене дочернего действия родительским действием.</span><span class="sxs-lookup"><span data-stu-id="8d3f4-103">Represents a collection of queries that are used to track requests to cancel a child activity by the parent activity.</span></span> <span data-ttu-id="8d3f4-104">Этот запрос необходим, чтобы участник отслеживания подписался на объекты записей запросов на отмену.</span><span class="sxs-lookup"><span data-stu-id="8d3f4-104">The query is necessary for a tracking participant to subscribe to cancel request record objects.</span></span>  

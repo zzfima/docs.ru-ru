@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33517953"
 ---
 # <a name="task-1-create-a-new-windows-presentation-foundation-application"></a><span data-ttu-id="d5487-102">Задача 1. Создание нового приложения Windows Presentation Foundation</span><span class="sxs-lookup"><span data-stu-id="d5487-102">Task 1: Create a New Windows Presentation Foundation Application</span></span>
 <span data-ttu-id="d5487-103">В этой задаче будет создания пустого приложения Windows Presentation Foundation (WPF), используя шаблон WPF Application Visual Studio и добавить ссылки на соответствующие [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] сборки рабочего процесса.</span><span class="sxs-lookup"><span data-stu-id="d5487-103">In this task, you will create an empty Windows Presentation Foundation (WPF) application by using the WPF Application Visual Studio template and add references to the appropriate [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] workflow assemblies.</span></span>  

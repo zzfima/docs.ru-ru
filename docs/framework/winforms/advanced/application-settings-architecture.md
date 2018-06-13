@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33520007"
 ---
 # <a name="application-settings-architecture"></a><span data-ttu-id="c7751-102">Архитектура параметров приложения</span><span class="sxs-lookup"><span data-stu-id="c7751-102">Application Settings Architecture</span></span>
 <span data-ttu-id="c7751-103">В этом разделе описываются принципы работы архитектуры параметров приложения и рассматриваются дополнительные возможности архитектуры, такие как сгруппированные параметры и ключи параметров.</span><span class="sxs-lookup"><span data-stu-id="c7751-103">This topic describes how the Application Settings architecture works, and explores advanced features of the architecture, such as grouped settings and settings keys.</span></span>  

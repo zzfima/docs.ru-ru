@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2d9e619e4176633074242521133d42f191f140ca
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33412195"
 ---
 # <a name="icordebugdatatargetreadvirtual-method"></a><span data-ttu-id="174c1-102">Метод ICorDebugDataTarget::ReadVirtual</span><span class="sxs-lookup"><span data-stu-id="174c1-102">ICorDebugDataTarget::ReadVirtual Method</span></span>
 <span data-ttu-id="174c1-103">Получает блок непрерывной памяти, начиная с указанного адреса и возвращает его в указанный буфер.</span><span class="sxs-lookup"><span data-stu-id="174c1-103">Gets a block of contiguous memory starting at the specified address, and returns it in the supplied buffer.</span></span>  

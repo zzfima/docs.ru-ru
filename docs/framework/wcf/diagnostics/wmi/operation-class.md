@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33487572"
 ---
 # <a name="operation-class"></a><span data-ttu-id="041e1-102">Класс Operation</span><span class="sxs-lookup"><span data-stu-id="041e1-102">Operation class</span></span>
 <span data-ttu-id="041e1-103">Операция</span><span class="sxs-lookup"><span data-stu-id="041e1-103">Operation</span></span>  

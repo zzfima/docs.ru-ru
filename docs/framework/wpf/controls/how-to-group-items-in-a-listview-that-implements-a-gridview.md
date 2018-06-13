@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33551912"
 ---
 # <a name="how-to-group-items-in-a-listview-that-implements-a-gridview"></a><span data-ttu-id="9abba-102">Практическое руководство. Группировка элементов в объекте ListView, реализующем GridView</span><span class="sxs-lookup"><span data-stu-id="9abba-102">How to: Group Items in a ListView That Implements a GridView</span></span>
 <span data-ttu-id="9abba-103">В этом примере показано, как для отображения групп элементов в <xref:System.Windows.Controls.GridView> режим просмотра для <xref:System.Windows.Controls.ListView> элемента управления.</span><span class="sxs-lookup"><span data-stu-id="9abba-103">This example shows how to display groups of items in the <xref:System.Windows.Controls.GridView> view mode of a <xref:System.Windows.Controls.ListView> control.</span></span>  

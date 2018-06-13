@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33569763"
 ---
 # <a name="resolving-external-resources-during-xslt-processing"></a><span data-ttu-id="4043a-102">Разрешение внешних ресурсов в ходе обработки XSLT</span><span class="sxs-lookup"><span data-stu-id="4043a-102">Resolving External Resources During XSLT Processing</span></span>
 <span data-ttu-id="4043a-103">Во время XSLT-преобразования может понадобиться несколько раз разрешать внешние ресурсы.</span><span class="sxs-lookup"><span data-stu-id="4043a-103">There are several times during an XSLT transformation when you may need to resolve external resources.</span></span>  

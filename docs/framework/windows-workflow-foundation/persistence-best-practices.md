@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33520192"
 ---
 # <a name="persistence-best-practices"></a><span data-ttu-id="d24e1-102">Оптимальные методы сохраняемости</span><span class="sxs-lookup"><span data-stu-id="d24e1-102">Persistence Best Practices</span></span>
 <span data-ttu-id="d24e1-103">В настоящем документе приведены лучшие методики по проектированию и настройке рабочих процессов, касающиеся сохраняемости рабочих процессов.</span><span class="sxs-lookup"><span data-stu-id="d24e1-103">This document covers best practices for workflow design and configuration related to workflow persistence.</span></span>  

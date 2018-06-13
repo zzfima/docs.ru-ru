@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33517940"
 ---
 # <a name="statemachine-scenario-using-a-combination-of-flowchart-and-pick"></a><span data-ttu-id="e078a-102">Сценарий конечного автомата с использованием сочетания действий FlowChart и Pick</span><span class="sxs-lookup"><span data-stu-id="e078a-102">StateMachine Scenario Using a Combination of FlowChart and Pick</span></span>
 <span data-ttu-id="e078a-103">Этот образец показывает, как реализовать сценарий простого контрольного таймера с помощью сочетания действий <xref:System.Activities.Statements.Flowchart> и <xref:System.Activities.Statements.Pick>.</span><span class="sxs-lookup"><span data-stu-id="e078a-103">This sample demonstrates how to implement a simple stopwatch scenario using a combination of the <xref:System.Activities.Statements.Flowchart> and <xref:System.Activities.Statements.Pick> activities.</span></span> <span data-ttu-id="e078a-104">Для прослушивания событий контрольного таймера используются операции Receive и Send, заданные в действии Pick.</span><span class="sxs-lookup"><span data-stu-id="e078a-104">It uses Receive and Send within the Pick activity to listen for stopwatch events.</span></span>  

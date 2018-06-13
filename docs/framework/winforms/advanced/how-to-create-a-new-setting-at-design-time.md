@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33523771"
 ---
 # <a name="how-to-create-a-new-setting-at-design-time"></a><span data-ttu-id="6de34-102">Практическое руководство. Создание новых параметров во время разработки</span><span class="sxs-lookup"><span data-stu-id="6de34-102">How To: Create a New Setting at Design Time</span></span>
 <span data-ttu-id="6de34-103">Можно создать новый параметр во время разработки с помощью конструктора параметров.</span><span class="sxs-lookup"><span data-stu-id="6de34-103">You can create a new setting at design time by using the Settings designer.</span></span> <span data-ttu-id="6de34-104">Конструктор параметров является интерфейсом стиль сетки, который позволяет создавать новые параметры и указывать свойства для этих параметров.</span><span class="sxs-lookup"><span data-stu-id="6de34-104">The Settings designer is a grid-style interface that allows you to create new settings and specify properties for those settings.</span></span> <span data-ttu-id="6de34-105">Необходимо указать имя, значение, тип и область для новых параметров.</span><span class="sxs-lookup"><span data-stu-id="6de34-105">You must specify Name, Value, Type and Scope for your new settings.</span></span> <span data-ttu-id="6de34-106">После создания параметр становится доступен в коде.</span><span class="sxs-lookup"><span data-stu-id="6de34-106">Once a setting is created, it is accessible in code.</span></span>  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33562515"
 ---
 # <a name="how-to-make-an-element-spin-in-place"></a><span data-ttu-id="60a8b-102">Практическое руководство. Создание элемента Spin</span><span class="sxs-lookup"><span data-stu-id="60a8b-102">How to: Make an Element Spin in Place</span></span>
 <span data-ttu-id="60a8b-103">В этом примере показано, как создать элемент spin с помощью <xref:System.Windows.Media.RotateTransform> и <xref:System.Windows.Media.Animation.DoubleAnimation>.</span><span class="sxs-lookup"><span data-stu-id="60a8b-103">This example shows how to make an element spin by using a <xref:System.Windows.Media.RotateTransform> and a <xref:System.Windows.Media.Animation.DoubleAnimation>.</span></span>  

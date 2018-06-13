@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33521327"
 ---
 # <a name="how-to-fill-a-shape-with-a-solid-color"></a><span data-ttu-id="2879e-102">Практическое руководство. Заливка фигуры сплошным цветом</span><span class="sxs-lookup"><span data-stu-id="2879e-102">How to: Fill a Shape with a Solid Color</span></span>
 <span data-ttu-id="2879e-103">Чтобы заливка фигуры сплошным цветом, создайте <xref:System.Drawing.SolidBrush> , а затем передать, <xref:System.Drawing.SolidBrush> объект в качестве аргумента для одного из методов заливки класса <xref:System.Drawing.Graphics> класса.</span><span class="sxs-lookup"><span data-stu-id="2879e-103">To fill a shape with a solid color, create a <xref:System.Drawing.SolidBrush> object, and then pass that <xref:System.Drawing.SolidBrush> object as an argument to one of the fill methods of the <xref:System.Drawing.Graphics> class.</span></span> <span data-ttu-id="2879e-104">В следующем примере показано, как заливка эллипса сплошным красным цветом.</span><span class="sxs-lookup"><span data-stu-id="2879e-104">The following example shows how to fill an ellipse with the color red.</span></span>  

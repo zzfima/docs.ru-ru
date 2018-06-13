@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33552404"
 ---
 # <a name="how-to-create-a-custom-panel-element"></a><span data-ttu-id="ea2ab-102">Практическое руководство. Создание пользовательского элемента Panel</span><span class="sxs-lookup"><span data-stu-id="ea2ab-102">How to: Create a Custom Panel Element</span></span>
 ## <a name="example"></a><span data-ttu-id="ea2ab-103">Пример</span><span class="sxs-lookup"><span data-stu-id="ea2ab-103">Example</span></span>  

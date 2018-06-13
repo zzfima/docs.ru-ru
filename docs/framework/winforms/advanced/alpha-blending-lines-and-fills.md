@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33517690"
 ---
 # <a name="alpha-blending-lines-and-fills"></a><span data-ttu-id="d72f8-102">Альфа-смешение цвета для линий и заливок</span><span class="sxs-lookup"><span data-stu-id="d72f8-102">Alpha Blending Lines and Fills</span></span>
 <span data-ttu-id="d72f8-103">В [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], цвет является 32-разрядное значение с 8 бит для альфа-канал, красный, зеленый и синий.</span><span class="sxs-lookup"><span data-stu-id="d72f8-103">In [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], a color is a 32-bit value with 8 bits each for alpha, red, green, and blue.</span></span> <span data-ttu-id="d72f8-104">Значение альфа определяет прозрачность цвета, области, к которому цвет смешивается с цветами фона.</span><span class="sxs-lookup"><span data-stu-id="d72f8-104">The alpha value indicates the transparency of the color — the extent to which the color is blended with the background color.</span></span> <span data-ttu-id="d72f8-105">При значениях альфа диапазон от 0 до 255, где 0 соответствует полностью прозрачный цвет, а 255 — полностью непрозрачный цвету.</span><span class="sxs-lookup"><span data-stu-id="d72f8-105">Alpha values range from 0 through 255, where 0 represents a fully transparent color, and 255 represents a fully opaque color.</span></span>  

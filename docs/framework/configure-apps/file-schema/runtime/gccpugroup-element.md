@@ -12,6 +12,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32744022"
 ---
 # <a name="ltgccpugroupgt-element"></a><span data-ttu-id="db887-102">&lt;GCCpuGroup&gt; элемент</span><span class="sxs-lookup"><span data-stu-id="db887-102">&lt;GCCpuGroup&gt; Element</span></span>
 <span data-ttu-id="db887-103">Определяет, поддерживает ли сборка мусора несколько групп ЦП.</span><span class="sxs-lookup"><span data-stu-id="db887-103">Specifies whether garbage collection supports multiple CPU groups.</span></span>  

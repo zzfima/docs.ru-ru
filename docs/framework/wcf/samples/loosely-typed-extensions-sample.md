@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33504441"
 ---
 # <a name="loosely-typed-extensions-sample"></a><span data-ttu-id="94550-102">Пример слабо типизированных расширений</span><span class="sxs-lookup"><span data-stu-id="94550-102">Loosely-Typed Extensions Sample</span></span>
 <span data-ttu-id="94550-103">Объектная модель синдикации обеспечивает широкую поддержку работы с данными расширения - информацией, присутствующей в XML-представлении канала синдикации, но не предоставляемой в явном виде такими классами, как <xref:System.ServiceModel.Syndication.SyndicationFeed> и <xref:System.ServiceModel.Syndication.SyndicationItem>.</span><span class="sxs-lookup"><span data-stu-id="94550-103">The Syndication object model provides rich support for working with extension data—information that is present in a syndication feed's XML representation but not explicitly exposed by classes such as <xref:System.ServiceModel.Syndication.SyndicationFeed> and <xref:System.ServiceModel.Syndication.SyndicationItem>.</span></span> <span data-ttu-id="94550-104">Этот пример иллюстрирует основные приемы работы с данными расширения.</span><span class="sxs-lookup"><span data-stu-id="94550-104">This sample illustrates the basic techniques for working with extension data.</span></span>  
