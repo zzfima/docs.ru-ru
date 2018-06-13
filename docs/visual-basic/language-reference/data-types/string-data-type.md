@@ -23,6 +23,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33592123"
 ---
 # <a name="string-data-type-visual-basic"></a>Тип данных String (Visual Basic)
 Содержит последовательности точек неподписанный код 16-разрядное (2-байтовые) этого диапазона, в диапазоне от 0 до 65535. Каждый *кодовой*, или код символа, представляет один знак Юникода. Строка может содержать от нуля до двух миллиардов (2 ^ 31) знаков Юникода.  

@@ -8,11 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - this keyword [C#]
 ms.assetid: d4f827fe-4710-410b-89b8-867dad44b8a3
-ms.openlocfilehash: d26ad1565dc6faf8aba6c971b3a0023bac886775
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 04496079114be45388926993b67e8f1d3f2e9f15
+ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/15/2018
+ms.locfileid: "34172039"
 ---
 # <a name="this-c-reference"></a>this (Справочник по C#)
 Ключевое слово `this` ссылается на текущий экземпляр класса, а также используется в качестве модификатора первого параметра метода расширения.  
@@ -28,7 +29,7 @@ ms.lasthandoff: 05/04/2018
   
 -   Для передачи другим методам объекта в качестве параметра, например:  
   
-    ```  
+    ```csharp  
     CalcTax(this);  
     ```  
   

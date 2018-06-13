@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33589000"
 ---
 # <a name="constructor-39ltnamegt39-cannot-call-itself"></a>Конструктор &#39; &lt;имя&gt; &#39; может вызывать сам себя
 Объект `Sub New` процедура в классе или структуре вызывает саму себя.  

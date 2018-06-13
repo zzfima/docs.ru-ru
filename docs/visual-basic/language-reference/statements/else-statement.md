@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33597690"
 ---
 # <a name="else-statement-visual-basic"></a>Оператор Else (Visual Basic)
 Вводит группу операторов, запускать или компиляции не условного группу инструкций после запуска или компиляции.  
