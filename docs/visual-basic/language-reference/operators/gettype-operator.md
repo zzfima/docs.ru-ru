@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33603851"
 ---
 # <a name="gettype-operator-visual-basic"></a>Оператор GetType (Visual Basic)
 Возвращает <xref:System.Type> объекта для указанного типа. <xref:System.Type> Объект предоставляет сведения о типе, например его свойства, методы и события.  

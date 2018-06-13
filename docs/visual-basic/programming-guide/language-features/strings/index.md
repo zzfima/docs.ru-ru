@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33647713"
 ---
 # <a name="strings-in-visual-basic"></a>Строки в Visual Basic
 В этом разделе описываются основные принципы использования строк в Visual Basic.  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33602766"
 ---
 # <a name="value-of-type-39type139-cannot-be-converted-to-39type239"></a>Значение типа &#39;тип1&#39; не может быть преобразован &#39;тип2&#39;
 Не удается преобразовать значение типа «тип1» в «тип2». Свойство «Значение» для получения строкового значения первого элемента "\<Родительскийэлемент >".  

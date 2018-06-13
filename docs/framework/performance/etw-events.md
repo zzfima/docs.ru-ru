@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33395308"
 ---
 # <a name="etw-events-in-the-net-framework"></a>ETW Events in the .NET Framework
 Трассировка событий Windows (ETW) — это высокоэффективная масштабируемая система трассировки с минимальными затратами ресурсов, реализуемая в операционных системах Windows. Она дополняет механизмы профилирования и отладки, предоставляемые платформой .NET Framework, и может применяться для устранения неполадок в самых разных сценариях.  

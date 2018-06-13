@@ -24,6 +24,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33605489"
 ---
 # <a name="trycatchfinally-statement-visual-basic"></a>Оператор Try... Catch... Finally (Visual Basic)
 Позволяет обрабатывать некоторые или все возможные ошибки, которые могут возникать в конкретном блоке кода, не прерывая выполнение кода.  

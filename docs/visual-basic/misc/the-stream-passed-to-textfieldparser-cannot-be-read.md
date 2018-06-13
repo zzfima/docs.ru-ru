@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33639480"
 ---
 # <a name="the-stream-passed-to-textfieldparser-cannot-be-read"></a>Невозможно прочитать поток, переданный в TextFieldParser.
 [TextFieldParser Object](../../visual-basic/language-reference/objects/textfieldparser-object.md) не может прочитать поток, который был в него передан. Это может быть результатом попытки чтения файла, который не является текстовым.  

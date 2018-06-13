@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33645646"
 ---
 # <a name="preserving-white-space-while-loading-or-parsing-xml"></a>Сохранение пробелов при загрузке и анализе XML
 В этом разделе показан способ управления тем, как обрабатываются пробелы в [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].  
