@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33651587"
 ---
 # <a name="value-types-and-reference-types"></a>Value Types and Reference Types
 В Visual Basic типы данных реализуются на основе их классификации. Типы данных Visual Basic могут классифицироваться в соответствии с переменной определенного типа, хранит ли собственные данные или указатель на данные. Если она хранит свои собственные данные *тип значения*; если он содержит указатель на данные в другом месте в памяти, это *ссылочному типу*.  

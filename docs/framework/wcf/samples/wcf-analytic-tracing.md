@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33807102"
 ---
 # <a name="wcf-analytic-tracing"></a>Аналитическая трассировка WCF
 Этот образец демонстрирует способы добавления собственных событий трассировки к потоку аналитически, записывает трассировки событий Windows в Windows Communication Foundation (WCF) [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]. Аналитически отслеживаемые события предназначены для упрощения добавления видимости в службы без ущерба для производительности. В этом примере показано, как использовать <xref:System.Diagnostics.Eventing?displayProperty=nameWithType> API писать события, которые интегрируются со службами WCF.  

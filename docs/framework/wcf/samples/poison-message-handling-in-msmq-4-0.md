@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809509"
 ---
 # <a name="poison-message-handling-in-msmq-40"></a>Обработка подозрительных сообщений в MSMQ 4.0
 В этом образце демонстрируется обработка подозрительных сообщений в службе. Этот пример построен на [транзакции привязки MSMQ](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md) образца. В этом образце используется привязка `netMsmqBinding`. Служба представляет собой резидентное консольное приложение, позволяющее наблюдать за получением службой сообщений из очереди.  

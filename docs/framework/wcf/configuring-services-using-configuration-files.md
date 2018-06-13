@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33807437"
 ---
 # <a name="configuring-services-using-configuration-files"></a>Настройка служб с использованием файлов конфигурации
 Настройка службы Windows Communication Foundation (WCF), с помощью файла конфигурации обеспечивает гибкость предоставления конечной точки и данных поведение службы во время развертывания, а не во время разработки. В этой теме представлено описание основных доступных методов.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33806774"
 ---
 # <a name="using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting"></a>Использование программы Service Trace Viewer для просмотра скоррелированных трассировок и устранения неполадок
 В этом разделе описываются формат данных трассировки, способ просмотра этих данных, а также подходы, в которых используется программа Service Trace Viewer для устранения неполадок приложения.  

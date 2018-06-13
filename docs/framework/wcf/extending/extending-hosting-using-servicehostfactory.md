@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33806212"
 ---
 # <a name="extending-hosting-using-servicehostfactory"></a>Расширение размещения с использованием ServiceHostFactory
 Стандартные <xref:System.ServiceModel.ServiceHost> API для размещения служб в Windows Communication Foundation (WCF) — это точка расширяемости в архитектуре WCF. Пользователи могут наследовать свои собственные хост-классы от класса <xref:System.ServiceModel.ServiceHost>, как правило, чтобы переопределить <xref:System.ServiceModel.Channels.CommunicationObject.OnOpening> для использования <xref:System.ServiceModel.Description.ServiceDescription> с целью принудительного добавления конечных точек по умолчанию или изменения поведений до открытия службы.  

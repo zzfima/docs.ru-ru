@@ -13,6 +13,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803683"
 ---
 # <a name="guidelines-and-best-practices"></a>Правила и рекомендации
 Этот раздел содержит разделы, в которых приведены указания по созданию приложений Windows Communication Foundation (WCF).  

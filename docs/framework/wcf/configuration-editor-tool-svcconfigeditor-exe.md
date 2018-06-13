@@ -12,6 +12,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809879"
 ---
 # <a name="configuration-editor-tool-svcconfigeditorexe"></a>Средство редактирования конфигурации (SvcConfigEditor.exe)
 Редактор конфигурации служб Windows Communication Foundation (WCF) (SvcConfigEditor.exe) позволяет администраторам и разработчикам создавать и изменять параметры конфигурации служб WCF при помощи графического пользовательского интерфейса. С помощью этого средства можно управлять параметрами привязок WCF, поведений, служб и диагностики без необходимости непосредственного изменения XML-файлов конфигурации.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33807193"
 ---
 # <a name="creating-a-bindingelement"></a>Создание элемента привязки BindingElement
 Привязок и элементов привязок (объектов, которые расширяют <xref:System.ServiceModel.Channels.Binding?displayProperty=nameWithType> и <xref:System.ServiceModel.Channels.BindingElement?displayProperty=nameWithType>соответственно) — это место, где модели приложения Windows Communication Foundation (WCF) связан с фабриками каналов и прослушиватели каналов. Без привязки, с помощью пользовательских каналов требует программирования на уровне канала как описано в [программирования на уровне канала службы](../../../../docs/framework/wcf/extending/service-channel-level-programming.md) и [программирования на уровне канала клиента](../../../../docs/framework/wcf/extending/client-channel-level-programming.md). В этом разделе обсуждаются минимальным требованием для использования канала в WCF, разработка <xref:System.ServiceModel.Channels.BindingElement> для канала и включить использование из приложения, как описано в шаге 4 [разработка каналов](../../../../docs/framework/wcf/extending/developing-channels.md).  

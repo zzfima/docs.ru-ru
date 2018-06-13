@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809707"
 ---
 # <a name="configuring-tracking-for-a-workflow"></a>Настройка отслеживания рабочего процесса
 Рабочий процесс может выполняться тремя способами.  

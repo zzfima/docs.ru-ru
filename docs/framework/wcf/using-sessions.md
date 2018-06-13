@@ -12,6 +12,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33808596"
 ---
 # <a name="using-sessions"></a>Использование сеансов
 В приложениях Windows Communication Foundation (WCF) *сеанса* объединяет группу сообщений в диалог. Сеансы WCF, отличаются от объектов сеансов, имеющихся в [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] приложений, поддерживают различные виды поведения, а также управляются разными способами. В этом разделе описываются функции, обеспечиваемые сеансами WCF приложений и способы их использования.  

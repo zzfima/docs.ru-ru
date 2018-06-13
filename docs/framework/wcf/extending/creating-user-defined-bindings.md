@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33806748"
 ---
 # <a name="creating-user-defined-bindings"></a>Создание пользовательских привязок
 Существует несколько способов создания привязок, не предоставленных системой.  

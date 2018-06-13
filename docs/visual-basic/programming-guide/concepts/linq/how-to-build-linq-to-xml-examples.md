@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33641244"
 ---
 # <a name="how-to-build-linq-to-xml-examples-visual-basic"></a>Как: сборка примеров LINQ to XML (Visual Basic)
 В разных фрагментах кода и примерах, приведенных в этой документации, используются классы и типы из различных пространств имен. При компиляции кода Visual Basic необходимо указывать соответствующие инструкции `Imports`.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33807349"
 ---
 # <a name="ajax-service-with-json-and-xml-sample"></a>Пример службы AJAX с JSON и XML
 В этом примере показано, как использовать Windows Communication Foundation (WCF) для создания служб асинхронных сценариев JavaScript и XML (AJAX), возвращает JavaScript Object Notation (JSON) или XML-данные. К службе AJAX можно обращаться с помощью кода JavaScript из веб-браузера. Этот пример основан на [базовой службы AJAX](../../../../docs/framework/wcf/samples/basic-ajax-service.md) образца.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803493"
 ---
 # <a name="dynamically-enabling-analytic-tracing"></a>Динамическое включение аналитического отслеживания
 Средства, поставляемые в составе ОС Windows, позволяют включать или отключать динамическую трассировку с использованием трассировки событий Windows (ETW). Для всех [!INCLUDE[netfx_current_long](../../../../../includes/netfx-current-long-md.md)] службы Windows Communication Foundation (WCF), аналитическая трассировка может быть включена и отключена динамически, без изменения в файле Web.config или перезапуска службы. Это дает возможность не останавливать работу приложения, создающего события трассировки.  

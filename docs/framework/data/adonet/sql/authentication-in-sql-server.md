@@ -7,6 +7,7 @@ ms.sourcegitcommit: 77d9a94dac4c05827ed0663d95e0f9ad35d6682e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/24/2018
+ms.locfileid: "34472391"
 ---
 # <a name="authentication-in-sql-server"></a>Аутентификация в SQL Server
 SQL Server поддерживает два режима проверки подлинности: режим проверки подлинности Windows и режим смешанной проверки подлинности.  

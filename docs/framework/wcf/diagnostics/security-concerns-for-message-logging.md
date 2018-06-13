@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33804135"
 ---
 # <a name="security-concerns-for-message-logging"></a>Проблемы безопасности при ведении журналов сообщений
 В этом разделе описываются способы защиты конфиденциальных данных от раскрытия в журналах сообщений, а также в событиях, формируемых посредством ведения журнала сообщений.  

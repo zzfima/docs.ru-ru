@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33649117"
 ---
 # <a name="object-variables-in-visual-basic"></a>Объектные переменные в Visual Basic
 Помимо хранить значения, переменные могут ссылаться на объект. Объект присваивается переменной по тем же причинам, которые можно присвоить любое значение переменной:  

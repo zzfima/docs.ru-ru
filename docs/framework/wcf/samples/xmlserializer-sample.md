@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33805022"
 ---
 # <a name="xmlserializer-sample"></a>Пример XmlSerializer
 Данный образец демонстрирует выполнение сериализации и десериализации типов, совместимых с <xref:System.Xml.Serialization.XmlSerializer>. Модуль форматирования по умолчанию Windows Communication Foundation (WCF) — <xref:System.Runtime.Serialization.DataContractSerializer> класса. Класс <xref:System.Xml.Serialization.XmlSerializer> может быть использован для выполнения сериализации и десериализации типов в том случае, когда не может быть использован класс <xref:System.Runtime.Serialization.DataContractSerializer>. Это часто происходит, когда требуется четкий контроль над XML - например, если фрагмент данных должен быть атрибутом XML, а не XML-элементом. Кроме того <xref:System.Xml.Serialization.XmlSerializer> часто выбирается автоматически при создании клиентов для служб не WCF.  

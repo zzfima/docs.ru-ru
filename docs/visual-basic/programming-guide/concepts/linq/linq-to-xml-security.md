@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33655462"
 ---
 # <a name="linq-to-xml-security-visual-basic"></a>Безопасность LINQ to XML (Visual Basic)
 В этом разделе обсуждаются проблемы безопасности, связанные с LINQ to XML. Кроме того, в нем приводятся рекомендации по снижению рисков нарушения безопасности.  

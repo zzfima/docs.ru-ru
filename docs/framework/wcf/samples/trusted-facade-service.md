@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33807665"
 ---
 # <a name="trusted-facade-service"></a>Доверенная фасадная служба
 В этом образце сценария показано, как передать информацию удостоверения вызывающей стороны от одной службы к другой с помощью Windows Communication Foundation (WCF) инфраструктуру безопасности.  

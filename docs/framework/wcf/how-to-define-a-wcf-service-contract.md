@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809229"
 ---
 # <a name="how-to-define-a-windows-communication-foundation-service-contract"></a>Практическое руководство. Определение контракта службы Windows Communication Foundation
 Это первый из шести шагов, необходимых для создания базового приложения Windows Communication Foundation (WCF). Общие сведения обо всех шести задач см. в разделе [учебник по началу работы](../../../docs/framework/wcf/getting-started-tutorial.md) раздела.  

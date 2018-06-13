@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33648201"
 ---
 # <a name="decision-structures-visual-basic"></a>Структуры решений (Visual Basic)
 Visual Basic позволяет проверять условия и выполнять различные операции в зависимости от результатов этой проверки. Можно проверить условие true или false, для различных значений выражений или исключений, выдаваемых при выполнении ряд инструкций.  

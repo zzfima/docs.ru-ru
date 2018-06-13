@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33806787"
 ---
 # <a name="using-the-wcf-development-tools"></a>Использование средств разработки WCF
 В этом разделе описаны средства разработки Visual Studio, которые могут помочь в разработке служб WCF.  

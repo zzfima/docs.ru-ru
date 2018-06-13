@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33805698"
 ---
 # <a name="windows-communication-foundation-bindings-overview"></a>Общие сведения о привязках Windows Communication Foundation
 Привязки-это объекты, которые используются для указания сведений о связи, необходимые для подключения к конечной точке службы Windows Communication Foundation (WCF). Каждая конечная точка службы WCF требует точного задания привязки. В этом разделе описываются типы сведений о связи, определяемых привязками, элементы привязки, какие привязки включены в WCF и демонстрируется задание привязки для конечной точки.  

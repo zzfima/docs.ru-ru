@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809522"
 ---
 # <a name="soap-and-http-endpoints"></a>Конечные точки SOAP и HTTP
 Этот образец демонстрирует реализацию службы на основе RPC и предоставление ее в формате протокола SOAP и формате «Plain Old XML» (POX), с помощью модели веб-программирования WCF. В разделе [базовой службы HTTP](../../../../docs/framework/wcf/samples/basic-http-service.md) образец Дополнительные сведения о привязке HTTP для службы. В данном образце акцент сделан на особенностях предоставления одной и той же службы через протокол SOAP и HTTP с использованием разных привязок.  

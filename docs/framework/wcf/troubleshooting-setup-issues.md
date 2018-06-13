@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33806517"
 ---
 # <a name="troubleshooting-setup-issues"></a>Устранение неполадок с установкой
 В этом разделе описывается устранение неполадок Windows Communication Foundation (WCF) неполадки установки.  

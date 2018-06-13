@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33806865"
 ---
 # <a name="importing-custom-metadata-for-a-wcf-extension"></a>Импорт пользовательских метаданных для расширения WCF
 В Windows Communication Foundation (WCF), импорта метаданных — это процесс создания абстрактное представление службы или ее компонентов из ее метаданных. Например, можно импортировать WCF <xref:System.ServiceModel.Description.ServiceEndpoint> экземпляров, <xref:System.ServiceModel.Channels.Binding> экземпляров или <xref:System.ServiceModel.Description.ContractDescription> документов экземпляров из WSDL для службы. Чтобы импортировать метаданные службы в WCF, используется реализация <xref:System.ServiceModel.Description.MetadataImporter?displayProperty=nameWithType> абстрактного класса. Типы, производные от <xref:System.ServiceModel.Description.MetadataImporter> класса реализуют поддержку для импорта форматов метаданных, которые используют преимущества WS-Policy логики импорта в WCF.  

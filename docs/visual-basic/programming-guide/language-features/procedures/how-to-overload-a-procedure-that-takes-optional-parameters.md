@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33652900"
 ---
 # <a name="how-to-overload-a-procedure-that-takes-optional-parameters-visual-basic"></a>Практическое руководство. Перегрузка процедуры, которая принимает один необязательный параметр (Visual Basic)
 Если процедура имеет один или несколько [необязательно](../../../../visual-basic/language-reference/modifiers/optional.md) параметров, нельзя определить перегруженную версию, соответствующую любой из ее неявных перегрузок. Дополнительные сведения см. в разделе «Неявные перегрузки для необязательные параметры» в [вопросы, связанные с перегрузкой процедур](./considerations-in-overloading-procedures.md).  

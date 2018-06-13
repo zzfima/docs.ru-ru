@@ -10,6 +10,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33806946"
 ---
 # <a name="overriding-the-identity-of-a-service-for-authentication"></a>Переопределение идентификатора службы для проверки подлинности
 Как правило, нет необходимости задавать удостоверение в службе, поскольку выбор типа учетных данных клиента определяет тип удостоверения, предоставляемого в метаданных службы. Например, следующий код конфигурации используется [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) элемент и задает `clientCredentialType` атрибут Windows.  

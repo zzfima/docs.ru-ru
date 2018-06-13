@@ -13,6 +13,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809785"
 ---
 # <a name="understanding-protection-level"></a>Основные сведения об уровне защиты
 Свойство `ProtectionLevel` обнаруживается во многих классах, например в классах <xref:System.ServiceModel.ServiceContractAttribute> и <xref:System.ServiceModel.OperationContractAttribute>. Это свойство определяет, как защищается часть сообщения (или все сообщение). В этом разделе описывается компонент Windows Communication Foundation (WCF) и как он работает.  

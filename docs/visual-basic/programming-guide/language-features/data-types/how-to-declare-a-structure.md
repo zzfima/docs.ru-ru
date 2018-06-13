@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33650031"
 ---
 # <a name="how-to-declare-a-structure-visual-basic"></a>Практическое руководство. Объявление структуры (Visual Basic)
 Объявление структуры с начинается [оператор Structure](../../../../visual-basic/language-reference/statements/structure-statement.md), и завершается оператором `End` `Structure` инструкции. Между этими двумя операторами необходимо объявить по крайней мере один *элемент*. Элементы могут иметь любой тип данных, но по крайней мере один должен быть не общей переменной или непользовательским событий.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33805133"
 ---
 # <a name="asmx-client-with-a-wcf-service"></a>Клиент ASMX со службой WCF
 В этом примере показано, как создать службу с помощью Windows Communication Foundation (WCF) и получить доступ к службе из клиента не WCF, например из клиента ASMX.  
