@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33604592"
 ---
 # <a name="visual-basic-runtime-library-members"></a>Члены библиотеки времени выполнения Visual Basic
 `Microsoft.VisualBasic` Пространство имен содержит классы, модули, константы и перечисления, которые составляют библиотеку времени выполнения Visual Basic. Эти члены библиотеки предоставляют процедуры, свойства и значения констант, которые можно использовать в коде. Каждый модуль и класс предоставляет конкретную категорию функциональных возможностей.  

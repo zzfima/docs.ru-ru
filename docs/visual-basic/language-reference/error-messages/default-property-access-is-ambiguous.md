@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33590859"
 ---
 # <a name="default-property-access-is-ambiguous-between-the-inherited-interface-members-39ltdefaultpropertynamegt39-of-interface-39ltinterfacename1gt39-and-39ltdefaultpropertynamegt39-of-interface-39ltinterfacename2gt39"></a>Доступ к свойству по умолчанию определяется неоднозначно между наследуемые члены интерфейса &#39; &lt;defaultpropertyname&gt; &#39; интерфейса &#39; &lt;имя_интерфейса1&gt; &#39; и &#39; &lt;defaultpropertyname&gt; &#39; интерфейса &#39; &lt;имя_интерфейса2&gt;&#39;
 Интерфейс наследует от двух интерфейсов, каждый из которых объявляет свойство по умолчанию с тем же именем. Компилятор не может разрешить доступ к этому свойству по умолчанию без уточнения. Это показано в следующем примере.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33474900"
 ---
 # <a name="microsofttransactionstransactionbridgeenlistmentidentitycheckfailed"></a>Microsoft.Transactions.TransactionBridge.EnlistmentIdentityCheckFailed
 Имя отправителя входящего сообщения не совпадает с именем, полученным из ссылки на конечную точку перечисления.  

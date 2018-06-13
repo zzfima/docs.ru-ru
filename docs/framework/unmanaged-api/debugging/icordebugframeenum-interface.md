@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2c7b539ce01f7e25dba12a78b95097eebae175bc
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33414662"
 ---
 # <a name="icordebugframeenum-interface1"></a>ICorDebugFrameEnum интерфейс1
 Реализует методы ICorDebugEnum и выполняет перечисление массивов ICorDebugFrame.  

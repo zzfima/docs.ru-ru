@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33590814"
 ---
 # <a name="how-to-disable-adding-and-deleting-datarepeater-items-visual-studio"></a>Пошаговое руководство. Запрещение возможности добавления и удаления элементов DataRepeater (Visual Studio)
 По умолчанию пользователи могут добавлять и удалять элементы в <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> элемента управления. Пользователи могут добавлять новый элемент, нажав клавиши CTRL + N при <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItemEventArgs.DataRepeaterItem%2A> находится в фокусе или щелкнув **AddNewItem** кнопку <xref:System.Windows.Forms.BindingNavigator> элемента управления. Удалить элемент, нажав клавишу DELETE, когда <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItemEventArgs.DataRepeaterItem%2A> находится в фокусе или щелкнув **DeleteItem** кнопку на <xref:System.Windows.Forms.BindingNavigator> элемента управления.  

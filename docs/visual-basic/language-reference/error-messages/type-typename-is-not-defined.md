@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33595190"
 ---
 # <a name="type-39lttypenamegt39-is-not-defined"></a>Тип &#39; &lt;typename&gt; &#39; не определен
 Инструкция представляет собой ссылку на тип, который не был определен. Можно определить тип в операторе объявления например `Enum`, `Structure`, `Class`, или `Interface`.  

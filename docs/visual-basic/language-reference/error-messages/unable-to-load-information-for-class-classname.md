@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33604176"
 ---
 # <a name="unable-to-load-information-for-class-39ltclassnamegt39"></a>Не удалось загрузить сведения для класса &#39; &lt;classname&gt;&#39;
 Ссылка на класс, который недоступен.  
