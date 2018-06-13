@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33523095"
 ---
 # <a name="how-to-use-hit-testing-with-a-region"></a>Практическое руководство. Проверка нахождения указателя мыши в заданной области
 Проверка на наличие предназначено, чтобы определить, является ли курсор над данным объектом, например значок или кнопки.  

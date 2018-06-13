@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33397784"
 ---
 # <a name="migrating-your-windows-store-app-to-net-native"></a>Миграция приложения для магазина Windows в машинный код .NET
 [!INCLUDE[net_native](../../../includes/net-native-md.md)] обеспечивает статическую компиляцию приложений в магазине Windows или на компьютере разработчика. В отличие от динамической компиляции, выполняемой JIT-компилятором для приложений магазина Windows или [Генератором машинных образов (Ngen.exe)](../../../docs/framework/tools/ngen-exe-native-image-generator.md) на устройстве. Несмотря на эти различия [!INCLUDE[net_native](../../../includes/net-native-md.md)] пытается поддерживать совместимость с [приложениями .NET для магазина Windows](http://msdn.microsoft.com/library/windows/apps/br230302.aspx). В большинстве случаев все, что работает в приложении .NET для магазина Windows, также работает с [!INCLUDE[net_native](../../../includes/net-native-md.md)].  Тем не менее в некоторых случаях могут произойти изменения поведения. В этом документе рассматриваются различия между стандартными приложениями .NET для магазина Windows и [!INCLUDE[net_native](../../../includes/net-native-md.md)] в следующих областях:  

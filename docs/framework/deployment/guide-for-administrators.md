@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33394336"
 ---
 # <a name="net-framework-deployment-guide-for-administrators"></a>Руководство по развертыванию .NET Framework для администраторов
 В этой статье представлено пошаговое описание развертывания администратором платформы [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] и системных зависимостей в сети с помощью Microsoft System Center Configuration Manager. В рамках этой статьи предполагается, что все целевые клиентские компьютеры соответствуют минимальным требованиям для .NET Framework. Список требований к программному обеспечению и оборудованию для установки [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] см. в разделе [Требования к системе](../../../docs/framework/get-started/system-requirements.md).  

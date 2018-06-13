@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33522273"
 ---
 # <a name="how-to-print-a-windows-form"></a>Практическое руководство. Печать формы Windows Forms
 В рамках процесса разработки обычно требуется распечатать копию формы Windows Forms. В следующем примере кода показано, как напечатать копию текущей формы с помощью <xref:System.Drawing.Graphics.CopyFromScreen%2A> метод.  

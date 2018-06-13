@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e1cd0753b1ebcda3de33953b96e9dcedd26a2cc4
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33411691"
 ---
 # <a name="icordebugeditandcontinueerrorinfogeterrorcode-method"></a>Метод ICorDebugEditAndContinueErrorInfo::GetErrorCode
 `GetErrorCode` устарел. Не вызывайте этот метод.  
