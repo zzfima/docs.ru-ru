@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33542279"
 ---
 # <a name="how-to-open-files-using-the-openfiledialog-component"></a>Практическое руководство. Открытие файлов с помощью компонента OpenFileDialog
 <xref:System.Windows.Forms.OpenFileDialog> Компонент позволяет пользователям просматривать папки на компьютере или на любом компьютере в сети и выбрать один или несколько файлов для открытия. Диалоговое окно возвращает путь и имя файла, который пользователь выбрал в диалоговом окне.  

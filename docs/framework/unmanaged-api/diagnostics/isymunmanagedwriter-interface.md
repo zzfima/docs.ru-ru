@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 86aa8d3d23d82d51cfe4e6ce6b15b554704ad41c
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33435476"
 ---
 # <a name="isymunmanagedwriter-interface"></a>Интерфейс ISymUnmanagedWriter
 Представляет модуль записи символов и предоставляет методы для определения документов, точек следования, лексические области и переменные.  

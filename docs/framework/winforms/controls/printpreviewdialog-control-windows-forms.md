@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33538383"
 ---
 # <a name="printpreviewdialog-control-windows-forms"></a>Элемент управления PrintPreviewDialog (Windows Forms)
 Элемент управления Windows Forms `PrintPreviewDialog` является стандартным диалоговым окном, используемым для отображения документа в том виде, как он будет напечатан. Он используется в приложении Windows в качестве простого решения вместо настройки собственного диалогового окна. Элемент управления содержит кнопки для печати, увеличения масштаба, отображения одной или нескольких страниц и закрытия диалогового окна.  

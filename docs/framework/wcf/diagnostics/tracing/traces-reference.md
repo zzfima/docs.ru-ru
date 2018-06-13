@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33487939"
 ---
 # <a name="traces-reference"></a>Справочные сведения о трассировке
 В этом разделе перечислены все трассировки, созданные Windows Communication Foundation (WCF).  

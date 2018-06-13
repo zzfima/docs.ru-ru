@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33364740"
 ---
 # <a name="sqlclient-streaming-support"></a>Поддержка потоковой передачи SqlClient
 Поддержка SQL Server и приложения потоковой передачи данных (новые возможности [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]) поддерживает неструктурированные данные на сервере (документы, изображения и мультимедиа-файлы). База данных SQL Server может хранить большие двоичные объекты (BLOB), но выборки BLOB может потребоваться большой объем памяти.  

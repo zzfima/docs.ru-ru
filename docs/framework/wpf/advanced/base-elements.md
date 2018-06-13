@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33539469"
 ---
 # <a name="base-elements"></a>Базовые элементы
 Четыре основные классы--<xref:System.Windows.UIElement>, <xref:System.Windows.ContentElement>, <xref:System.Windows.FrameworkElement>, и <xref:System.Windows.FrameworkContentElement>--реализуют значительный процент общих элемент функций, доступных в программировании WPF. Эти четыре класса, называются в этом пакете SDK на базовые классы элементов.  

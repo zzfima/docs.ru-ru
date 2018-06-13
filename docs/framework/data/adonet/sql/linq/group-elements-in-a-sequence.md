@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33364507"
 ---
 # <a name="group-elements-in-a-sequence"></a>Группировка элементов последовательности
 Оператор <xref:System.Linq.Enumerable.GroupBy%2A> группирует элементы последовательности. В следующем примере используется база данных Northwind.  

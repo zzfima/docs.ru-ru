@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365375"
 ---
 # <a name="working-with-binary-data-wcf-data-services"></a>Работа с двоичными данными (службы данных WCF)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] Клиентская библиотека позволяет получать и обновлять двоичные данные из [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] веб-канала в одном из следующих способов:  

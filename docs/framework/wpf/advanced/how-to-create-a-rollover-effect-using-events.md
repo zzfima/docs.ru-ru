@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33543014"
 ---
 # <a name="how-to-create-a-rollover-effect-using-events"></a>Инструкция по Созданию Эффекта Выделения с Помощью Событий
 В этом примере показано, как изменить цвет элемента, как и покидает область, занимаемая элементом указателя мыши.  

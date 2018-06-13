@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33360482"
 ---
 # <a name="single-table-queries-linq-to-dataset"></a>Запросы к одной таблице (LINQ to DataSet)
 [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] запросы работают с источниками данных, которые реализуют <xref:System.Collections.Generic.IEnumerable%601> интерфейса или <xref:System.Linq.IQueryable%601> интерфейса. <xref:System.Data.DataTable> Класс не реализует один из этих интерфейсов, поэтому необходимо вызвать <xref:System.Data.DataTableExtensions.AsEnumerable%2A> метод, если вы хотите использовать <xref:System.Data.DataTable> в качестве источника `From` предложения [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] запроса.  

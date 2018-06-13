@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33535955"
 ---
 # <a name="using-the-managed-html-document-object-model"></a>Использование управляемой объектной модели HTML-документов
 Управляемый HTML модель объектов документов (DOM) обеспечивает оболочку, основанную на [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] для классов HTML, предоставленных Internet Explorer. Эти классы используются для управления HTML-страницами в <xref:System.Windows.Forms.WebBrowser> элемента управления, или для создания новых страниц с начала.  

@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33539907"
 ---
 # <a name="dialog-boxes-in-windows-forms"></a>Диалоговые окна в Windows Forms
 Диалоговые окна используются для взаимодействия с пользователем и получения информации. Проще говоря, диалоговое окно представляет собой форму со значением ее свойства перечисления <xref:System.Windows.Forms.FormBorderStyle>, установленным в `FixedDialog`. Можно создать собственные пользовательские диалоговые окна с помощью конструктора Windows Forms в Visual Studio. Для настройки диалоговых окон под конкретные потребности можно добавить элементы управления, такие как `Label`, `Textbox` и `Button`. [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Также включает стандартные диалоговые окна, такие как **Открытие файла** и окна сообщений, которые можно использовать для собственных приложений. Дополнительные сведения см. в разделе [диалогового окна элементы управления и компоненты](../../../docs/framework/winforms/controls/dialog-box-controls-and-components-windows-forms.md).  

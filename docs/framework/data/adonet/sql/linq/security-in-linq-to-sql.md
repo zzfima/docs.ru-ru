@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33364399"
 ---
 # <a name="security-in-linq-to-sql"></a>Безопасность в LINQ to SQL
 При соединении с базой данных всегда присутствуют риски безопасности. Хотя в LINQ to SQL включены некоторые новые способы работы с данными в SQL Server, он не предоставляет никаких дополнительных механизмов безопасности.  

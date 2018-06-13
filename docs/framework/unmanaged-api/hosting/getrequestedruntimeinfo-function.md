@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9f37be8e3d2e92147e9f13954ab64396062ade2d
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33434985"
 ---
 # <a name="getrequestedruntimeinfo-function"></a>Функция GetRequestedRuntimeInfo
 Получает сведения о версии и каталоге о общеязыковой среды выполнения (CLR), запрошенный приложением.  

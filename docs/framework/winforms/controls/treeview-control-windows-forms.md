@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33538240"
 ---
 # <a name="treeview-control-windows-forms"></a>Элемент управления TreeView (Windows Forms)
 Элемент управления `TreeView` в Windows Forms выводит на экран иерархию узлов аналогично отображению файлов и папок на левой панели проводника в операционных системах Windows.  

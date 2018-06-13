@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33363899"
 ---
 # <a name="how-to-bind-data-to-windows-presentation-foundation-elements-wcf-data-services"></a>Практическое руководство. Привязка данных к элементам Windows Presentation Foundation (службы данных WCF)
 С [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], позволяют привязывать элементы Windows Presentation Foundation (WPF), такие как <xref:System.Windows.Controls.ListBox>'' или <xref:System.Windows.Controls.ComboBox> к экземпляру <xref:System.Data.Services.Client.DataServiceCollection%601>, которая обрабатывает события, вызываемые элементами управления для сохранения <xref:System.Data.Services.Client.DataServiceContext> синхронизацию изменений внесены данные в элементах управления. Дополнительные сведения см. в разделе [привязка данных к элементам управления](../../../../docs/framework/data/wcf/binding-data-to-controls-wcf-data-services.md).  

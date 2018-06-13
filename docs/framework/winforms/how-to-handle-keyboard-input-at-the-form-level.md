@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33541100"
 ---
 # <a name="how-to-handle-keyboard-input-at-the-form-level"></a>Практическое руководство. Обработка ввода с клавиатуры на уровне формы
 Windows Forms предоставляет возможность обработки сообщений клавиатуры на уровне формы, прежде чем они достигнут элемента управления. В этом разделе показано, как выполнить данную задачу.  

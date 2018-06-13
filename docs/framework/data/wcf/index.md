@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365960"
 ---
 # <a name="wcf-data-services-45"></a>Службы WCF Data Services 4.5
 Службы [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] (которые раньше назывались ADO.NET Data Services) — это компонент платформы .NET Framework, с помощью которого можно создавать службы, использующие [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] для передачи и получения данных через Интернет или интрасеть с помощью семантики [REST](http://go.microsoft.com/fwlink/?LinkId=113919). Службы [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] предоставляют данные как ресурсы, адресуемые с помощью URI. Доступ и изменение данных производится с помощью таких стандартных команд HTTP, как GET, PUT, POST и DELETE. В службах [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] используются соглашения об отношениях сущностей из [модели EDM](../../../../docs/framework/data/adonet/entity-data-model.md) для предоставления ресурсов в виде наборов сущностей, связанных сопоставлениями.  

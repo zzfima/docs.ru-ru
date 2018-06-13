@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33364450"
 ---
 # <a name="wcf-data-services-resources"></a>Ресурсы служб данных WCF
 Вводные разделы по службам [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] можно найти в следующих местах. Во многих из них также есть ссылки на связанные разделы, содержащие более подробные сведения.  

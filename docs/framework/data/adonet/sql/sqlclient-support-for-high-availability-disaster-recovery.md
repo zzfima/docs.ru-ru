@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365713"
 ---
 # <a name="sqlclient-support-for-high-availability-disaster-recovery"></a>Поддержка SqlClient для высокого уровня доступности, аварийного восстановления
 В данном разделе рассматривается поддержка групп доступности AlwaysOn (высокая доступность, аварийное восстановление) в SqlClient, которая появилась в [!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)].  Группы доступности AlwaysOn появились в SQL Server 2012. Дополнительные сведения о группах доступности AlwaysOn см. в разделе электронной документации по SQL Server.  

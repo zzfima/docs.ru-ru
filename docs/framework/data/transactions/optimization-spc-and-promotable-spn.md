@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33363290"
 ---
 # <a name="optimization-using-single-phase-commit-and-promotable-single-phase-notification"></a>Оптимизация производительности с помощью механизмов уведомления об однофазной фиксации и повышаемого однофазного присоединения
 В этом разделе описываются предоставляемые инфраструктурой <xref:System.Transactions> механизмы для оптимизации производительности.  

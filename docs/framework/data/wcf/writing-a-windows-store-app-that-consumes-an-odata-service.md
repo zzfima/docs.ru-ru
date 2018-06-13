@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365791"
 ---
 # <a name="writing-a-windows-store-app-that-consumes-an-odata-service"></a>Создание приложения Магазина Windows, работающего со службой OData
 Windows 8 появился новый тип приложения: приложение для магазина Windows. Приложения Магазина Windows имеют новый внешний вид, выполняются на различных устройствах и доступны в Магазине Windows. В этом разделе описывается процесс создания приложения Магазина Windows, использующего службу OData, а именно, службу OData NetFlix Catalog. Дополнительные сведения о приложениях для магазина Windows, ознакомьтесь с [Приступая к работе с приложениями магазина Windows](http://msdn.microsoft.com/library/windows/apps/br211386.aspx).  

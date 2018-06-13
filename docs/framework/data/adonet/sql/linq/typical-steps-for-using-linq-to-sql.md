@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33364779"
 ---
 # <a name="typical-steps-for-using-linq-to-sql"></a>Стандартная последовательность действий при использовании LINQ to SQL
 Чтобы реализовать приложение [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], выполните действия, описанные в этом разделе. Обратите внимание, что многие их этих действий являются необязательными. В большинстве случаев можно использовать объектную модель в состоянии, установленном по умолчанию.  

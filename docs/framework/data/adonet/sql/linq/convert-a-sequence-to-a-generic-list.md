@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33361806"
 ---
 # <a name="convert-a-sequence-to-a-generic-list"></a>Преобразование последовательности в универсальный список
 Для создания универсального списка из последовательности используется <xref:System.Linq.Enumerable.ToList%2A>.  

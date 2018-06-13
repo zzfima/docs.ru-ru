@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33539829"
 ---
 # <a name="using-the-designer-with-the-windows-forms-datagridview-control"></a>Использование конструктора с элементом управления DataGridView Windows Forms
 Visual Studio обеспечивает поддержку конструктора для `DataGridView` элемент управления, который позволяет выполнять многие задачи установки без написания кода. Эти задачи включают привязки элемента управления к источнику данных, изменение столбцов, используемый для отображения данных и настройка внешнего вида и поведение элемента управления.  
