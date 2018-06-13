@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33574824"
 ---
 # <a name="inferring-schemas-from-xml-documents"></a><span data-ttu-id="41f61-102">Выведение схем из XML-документов</span><span class="sxs-lookup"><span data-stu-id="41f61-102">Inferring Schemas from XML Documents</span></span>
 <span data-ttu-id="41f61-103">В этом разделе описывается, как использовать класс <xref:System.Xml.Schema.XmlSchemaInference> для выведения схемы XSD из структуры XML-документа.</span><span class="sxs-lookup"><span data-stu-id="41f61-103">This topic describes how to use the <xref:System.Xml.Schema.XmlSchemaInference> class to infer an XML Schema definition language (XSD) schema from the structure of an XML document.</span></span>  

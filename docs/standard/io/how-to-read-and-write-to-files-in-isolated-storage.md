@@ -23,6 +23,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33573780"
 ---
 # <a name="how-to-read-and-write-to-files-in-isolated-storage"></a><span data-ttu-id="e3a23-102">Практическое руководство. Считывание из файлов и запись в файлы в изолированном хранилище</span><span class="sxs-lookup"><span data-stu-id="e3a23-102">How to: Read and Write to Files in Isolated Storage</span></span>
 <span data-ttu-id="e3a23-103">Для чтения из файла или записи в файл в изолированном хранилище используется объект <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream> с модулем чтения потока (объект <xref:System.IO.StreamReader> ) или модулем записи в поток (объект <xref:System.IO.StreamWriter>).</span><span class="sxs-lookup"><span data-stu-id="e3a23-103">To read from, or write to, a file in an isolated store, use an <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream> object with a stream reader (<xref:System.IO.StreamReader> object) or stream writer (<xref:System.IO.StreamWriter> object).</span></span>  

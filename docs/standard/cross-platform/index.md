@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33573712"
 ---
 # <a name="developing-for-multiple-platforms-with-the-net-framework"></a><span data-ttu-id="90cd5-102">Разработка для нескольких платформ с помощью .NET Framework</span><span class="sxs-lookup"><span data-stu-id="90cd5-102">Developing for Multiple Platforms with the .NET Framework</span></span>
 <span data-ttu-id="90cd5-103">Вы можете разрабатывать приложения для платформ Майкрософт и других поставщиков, используя .NET Framework и Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="90cd5-103">You can develop apps for both Microsoft and non-Microsoft platforms by using the .NET Framework and Visual Studio.</span></span>  

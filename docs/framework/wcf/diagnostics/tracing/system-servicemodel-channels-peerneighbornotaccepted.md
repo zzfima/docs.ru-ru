@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33479925"
 ---
 # <a name="systemservicemodelchannelspeerneighbornotaccepted"></a><span data-ttu-id="34ef3-102">System.ServiceModel.Channels.PeerNeighborNotAccepted</span><span class="sxs-lookup"><span data-stu-id="34ef3-102">System.ServiceModel.Channels.PeerNeighborNotAccepted</span></span>
 <span data-ttu-id="34ef3-103">Равноправный соседний узел не был принят.</span><span class="sxs-lookup"><span data-stu-id="34ef3-103">A peer neighbor was not accepted.</span></span>  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33571895"
 ---
 # <a name="using-user-filtered-exception-handlers"></a><span data-ttu-id="f1449-102">Использование обработчиков исключений с пользовательской фильтрацией</span><span class="sxs-lookup"><span data-stu-id="f1449-102">Using User-Filtered Exception Handlers</span></span>
 <span data-ttu-id="f1449-103">Сейчас Visual Basic поддерживает исключения с пользовательской фильтрацией.</span><span class="sxs-lookup"><span data-stu-id="f1449-103">Currently, Visual Basic supports user-filtered exceptions.</span></span> <span data-ttu-id="f1449-104">Обработчики исключений с пользовательской фильтрацией перехватывают и обрабатывают исключения с учетом определенных для исключения требований.</span><span class="sxs-lookup"><span data-stu-id="f1449-104">User-filtered exception handlers catch and handle exceptions based on requirements you define for the exception.</span></span> <span data-ttu-id="f1449-105">Эти обработчики используют инструкцию **Catch** с ключевым словом **When**.</span><span class="sxs-lookup"><span data-stu-id="f1449-105">These handlers use the **Catch** statement with the **When** keyword.</span></span>  

@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33575659"
 ---
 # <a name="weak-references"></a><span data-ttu-id="70a98-102">Слабые ссылки</span><span class="sxs-lookup"><span data-stu-id="70a98-102">Weak References</span></span>
 <span data-ttu-id="70a98-103">Сборщик мусора не может собрать объект, используемый приложением, пока код приложения взаимодействует с этим объектом.</span><span class="sxs-lookup"><span data-stu-id="70a98-103">The garbage collector cannot collect an object in use by an application while the application's code can reach that object.</span></span> <span data-ttu-id="70a98-104">Говорят, что приложение имеет строгую ссылку на объект.</span><span class="sxs-lookup"><span data-stu-id="70a98-104">The application is said to have a strong reference to the object.</span></span>  

@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: b3f32b9ab9b4e29dd101729dc43cde03985f5994
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33451228"
 ---
 # <a name="icorprofilercallbackremotingserverinvocationreturned-method"></a><span data-ttu-id="e0159-102">Метод ICorProfilerCallback::RemotingServerInvocationReturned</span><span class="sxs-lookup"><span data-stu-id="e0159-102">ICorProfilerCallback::RemotingServerInvocationReturned Method</span></span>
 <span data-ttu-id="e0159-103">Уведомляет профилировщик, что процесс завершил вызов метода в ответ на запрос вызова удаленного метода.</span><span class="sxs-lookup"><span data-stu-id="e0159-103">Notifies the profiler that the process has finished invoking a method in response to a remote method invocation request.</span></span>  

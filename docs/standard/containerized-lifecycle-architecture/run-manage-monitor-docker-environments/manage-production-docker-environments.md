@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33573885"
 ---
 # <a name="manage-production-docker-environments"></a><span data-ttu-id="dcba9-103">Управление Docker рабочих сред</span><span class="sxs-lookup"><span data-stu-id="dcba9-103">Manage production Docker environments</span></span>
 

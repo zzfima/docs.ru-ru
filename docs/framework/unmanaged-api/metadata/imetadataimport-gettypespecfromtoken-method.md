@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 54c35f4f7a7f933bbc06a641d9ba00c5059b5ff9
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33448309"
 ---
 # <a name="imetadataimportgettypespecfromtoken-method"></a><span data-ttu-id="62b6b-102">Метод IMetaDataImport::GetTypeSpecFromToken</span><span class="sxs-lookup"><span data-stu-id="62b6b-102">IMetaDataImport::GetTypeSpecFromToken Method</span></span>
 <span data-ttu-id="62b6b-103">Возвращает двоичную подпись метаданных для спецификации типа, представленного указанным токеном.</span><span class="sxs-lookup"><span data-stu-id="62b6b-103">Gets the binary metadata signature of the type specification represented by the specified token.</span></span>  

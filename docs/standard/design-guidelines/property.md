@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33577109"
 ---
 # <a name="property-design"></a><span data-ttu-id="eb1e9-102">Разработка свойств</span><span class="sxs-lookup"><span data-stu-id="eb1e9-102">Property Design</span></span>
 <span data-ttu-id="eb1e9-103">Несмотря на то, что свойства технически очень похожи на методы, между ними есть различия с точки зрения сценариев их использования.</span><span class="sxs-lookup"><span data-stu-id="eb1e9-103">Although properties are technically very similar to methods, they are quite different in terms of their usage scenarios.</span></span> <span data-ttu-id="eb1e9-104">Они должны рассматриваться как смарт-поля.</span><span class="sxs-lookup"><span data-stu-id="eb1e9-104">They should be seen as smart fields.</span></span> <span data-ttu-id="eb1e9-105">У них синтаксис вызова полей и гибкость методов.</span><span class="sxs-lookup"><span data-stu-id="eb1e9-105">They have the calling syntax of fields, and the flexibility of methods.</span></span>  

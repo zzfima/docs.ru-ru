@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 73866ef2dc7069708887c128f977f730519603bb
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33446027"
 ---
 # <a name="imetadatadispenserexopenscopeonitypeinfo-method"></a><span data-ttu-id="644cf-102">Метод IMetaDataDispenserEx::OpenScopeOnITypeInfo</span><span class="sxs-lookup"><span data-stu-id="644cf-102">IMetaDataDispenserEx::OpenScopeOnITypeInfo Method</span></span>
 <span data-ttu-id="644cf-103">Этот метод не реализован.</span><span class="sxs-lookup"><span data-stu-id="644cf-103">This method is not implemented.</span></span> <span data-ttu-id="644cf-104">При вызове возвращает значение E_NOTIMPL.</span><span class="sxs-lookup"><span data-stu-id="644cf-104">If called, it returns E_NOTIMPL.</span></span>  

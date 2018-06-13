@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 70e687f0645fdb68d95effe6fdd52178b92c08e7
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33452261"
 ---
 # <a name="icorprofilercallbackruntimeresumestarted-method"></a><span data-ttu-id="4bfb1-102">Метод ICorProfilerCallback::RuntimeResumeStarted</span><span class="sxs-lookup"><span data-stu-id="4bfb1-102">ICorProfilerCallback::RuntimeResumeStarted Method</span></span>
 <span data-ttu-id="4bfb1-103">Уведомляет профилировщик о том, что среда выполнения возобновляет работу всех потоков во время выполнения.</span><span class="sxs-lookup"><span data-stu-id="4bfb1-103">Notifies the profiler that the runtime is resuming all run-time threads.</span></span>  

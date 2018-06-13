@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33572779"
 ---
 # <a name="how-to-read-characters-from-a-string"></a><span data-ttu-id="15a9d-102">Практическое руководство. Считывание символов из строки</span><span class="sxs-lookup"><span data-stu-id="15a9d-102">How to: Read Characters from a String</span></span>
 <span data-ttu-id="15a9d-103">Следующий пример кода демонстрирует синхронное и асинхронное чтение символов из строки.</span><span class="sxs-lookup"><span data-stu-id="15a9d-103">The following code examples show how to read characters synchronously and asynchronously from a string.</span></span>  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33572214"
 ---
 # <a name="types-of-xml-nodes"></a><span data-ttu-id="7a626-102">Типы XML-узлов</span><span class="sxs-lookup"><span data-stu-id="7a626-102">Types of XML Nodes</span></span>
 <span data-ttu-id="7a626-103">Когда XML-документ считывается в память в виде дерева узлов, типы для узлов выбираются во время их создания.</span><span class="sxs-lookup"><span data-stu-id="7a626-103">When an XML document is read into memory as a tree of nodes, the node types for the nodes are decided when the nodes are created.</span></span> <span data-ttu-id="7a626-104">В модели XML DOM существует несколько типов узлов, определяемых консорциумом W3C и приведенных в разделе «1.1.1. Структурная модель DOM».</span><span class="sxs-lookup"><span data-stu-id="7a626-104">The XML Document Object Model (DOM) has several kinds of node types, determined by the World Wide Web Consortium (W3C) and listed in section 1.1.1 The DOM Structure Model.</span></span> <span data-ttu-id="7a626-105">В следующей таблице перечислены типы узлов, объекты, назначаемые каждому типу узла, и дано краткое описание типов.</span><span class="sxs-lookup"><span data-stu-id="7a626-105">The following table lists the node types, the object assigned to that node type, and a short description of each.</span></span>  

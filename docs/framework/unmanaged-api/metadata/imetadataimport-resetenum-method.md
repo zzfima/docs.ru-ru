@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 56fc0273fb2c1b77c74d7a1d853886f47170497e
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33447932"
 ---
 # <a name="imetadataimportresetenum-method"></a><span data-ttu-id="b2e27-102">Метод IMetaDataImport::ResetEnum</span><span class="sxs-lookup"><span data-stu-id="b2e27-102">IMetaDataImport::ResetEnum Method</span></span>
 <span data-ttu-id="b2e27-103">Возвращает заданный перечислитель в указанную позицию.</span><span class="sxs-lookup"><span data-stu-id="b2e27-103">Resets the specified enumerator to the specified position.</span></span>  

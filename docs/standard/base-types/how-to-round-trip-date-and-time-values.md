@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33573190"
 ---
 # <a name="how-to-round-trip-date-and-time-values"></a><span data-ttu-id="4328c-102">Практическое руководство. Обеспечение однозначности при сохранении и восстановлении значений даты и времени</span><span class="sxs-lookup"><span data-stu-id="4328c-102">How to: Round-trip Date and Time Values</span></span>
 <span data-ttu-id="4328c-103">Во многих приложениях значение даты и времени предназначено для однозначного определения одного момента времени.</span><span class="sxs-lookup"><span data-stu-id="4328c-103">In many applications, a date and time value is intended to unambiguously identify a single point in time.</span></span> <span data-ttu-id="4328c-104">В этой статье показано, как правильно сохранять и восстанавливать значения <xref:System.DateTime> и <xref:System.DateTimeOffset>, а также значения времени с информацией о часовом поясе, чтобы восстановленное значение определяло то же время, что и сохраненное значение.</span><span class="sxs-lookup"><span data-stu-id="4328c-104">This topic shows how to save and restore a <xref:System.DateTime> value, a <xref:System.DateTimeOffset> value, and a date and time value with time zone information so that the restored value identifies the same time as the saved value.</span></span>  

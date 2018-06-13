@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 19736d177639b00c9563462f10e33e4c122297c6
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33456017"
 ---
 # <a name="icorprofilerinfogetfunctioninfo-method"></a><span data-ttu-id="d5afc-102">Метод ICorProfilerInfo::GetFunctionInfo</span><span class="sxs-lookup"><span data-stu-id="d5afc-102">ICorProfilerInfo::GetFunctionInfo Method</span></span>
 <span data-ttu-id="d5afc-103">Получает родительский класс и токен метаданных для указанной функции.</span><span class="sxs-lookup"><span data-stu-id="d5afc-103">Gets the parent class and metadata token for the specified function.</span></span>  

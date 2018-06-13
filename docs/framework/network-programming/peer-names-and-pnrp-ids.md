@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33397589"
 ---
 # <a name="peer-names-and-pnrp-ids"></a><span data-ttu-id="472de-102">Одноранговые имена и идентификаторы PNRP</span><span class="sxs-lookup"><span data-stu-id="472de-102">Peer Names and PNRP IDs</span></span>
 <span data-ttu-id="472de-103">Имя однорангового узла представляет конечную точку для взаимодействия, в качестве которой может выступать компьютер, пользователь, группа, служба или любой другой объект, связанный с одноранговым узлом, которую можно разрешить в IPv6-адрес.</span><span class="sxs-lookup"><span data-stu-id="472de-103">A Peer Name represents an endpoint for communication, which can be a computer, a user, a group, a service, or anything associated with a Peer that can be resolved to an IPv6 address.</span></span> <span data-ttu-id="472de-104">Протокол PNRP принимает статистически уникальное имя однорангового узла для создания идентификатора PNRP, который используется для идентификации членов облака.</span><span class="sxs-lookup"><span data-stu-id="472de-104">The Peer Name Resolution Protocol (PNRP) takes the statistically unique Peer Name for the creation of a PNRP ID, which is used to identify cloud members.</span></span>  

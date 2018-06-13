@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33573637"
 ---
 # <a name="events-and-callbacks"></a><span data-ttu-id="0aef1-102">События и обратные вызовы</span><span class="sxs-lookup"><span data-stu-id="0aef1-102">Events and Callbacks</span></span>
 <span data-ttu-id="0aef1-103">Обратные вызовы являются точки расширения, обеспечивающие framework обратный вызов пользовательского кода в делегате.</span><span class="sxs-lookup"><span data-stu-id="0aef1-103">Callbacks are extensibility points that allow a framework to call back into user code through a delegate.</span></span> <span data-ttu-id="0aef1-104">Эти делегаты обычно передаются в платформе через параметр типа метода.</span><span class="sxs-lookup"><span data-stu-id="0aef1-104">These delegates are usually passed to the framework through a parameter of a method.</span></span>  

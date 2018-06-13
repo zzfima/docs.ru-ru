@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 2491b700e8fac512f0d782a42e30ae3114e93c3f
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33455550"
 ---
 # <a name="icorprofilerinfogetmodulemetadata-method"></a><span data-ttu-id="5465d-102">Метод ICorProfilerInfo::GetModuleMetaData</span><span class="sxs-lookup"><span data-stu-id="5465d-102">ICorProfilerInfo::GetModuleMetaData Method</span></span>
 <span data-ttu-id="5465d-103">Получает экземпляр интерфейса метаданных, сопоставляемый с указанным модулем.</span><span class="sxs-lookup"><span data-stu-id="5465d-103">Gets a metadata interface instance that maps to the specified module.</span></span>  

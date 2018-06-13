@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33571401"
 ---
 # <a name="member-design-guidelines"></a><span data-ttu-id="e81d4-102">Правила разработки членов</span><span class="sxs-lookup"><span data-stu-id="e81d4-102">Member Design Guidelines</span></span>
 <span data-ttu-id="e81d4-103">Методы, свойства, события, конструкторы и поля называются членами.</span><span class="sxs-lookup"><span data-stu-id="e81d4-103">Methods, properties, events, constructors, and fields are collectively referred to as members.</span></span> <span data-ttu-id="e81d4-104">Члены могут в конечном счете средства, с помощью которого framework функциональность предоставляется пользователям платформы.</span><span class="sxs-lookup"><span data-stu-id="e81d4-104">Members are ultimately the means by which framework functionality is exposed to the end users of a framework.</span></span>  

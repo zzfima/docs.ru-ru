@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 5d49ac70aceb76f69711ea4bf514f69697ac156c
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33447376"
 ---
 # <a name="imetadataemitdefineparam-method"></a><span data-ttu-id="ba916-102">Метод IMetaDataEmit::DefineParam</span><span class="sxs-lookup"><span data-stu-id="ba916-102">IMetaDataEmit::DefineParam Method</span></span>
 <span data-ttu-id="ba916-103">Создает определение параметра с заданной подписью для метода, который ссылается указанный токен и получает маркер для данного определения параметра.</span><span class="sxs-lookup"><span data-stu-id="ba916-103">Creates a parameter definition with the specified signature for the method referenced by the specified token, and gets a token for that parameter definition.</span></span>  

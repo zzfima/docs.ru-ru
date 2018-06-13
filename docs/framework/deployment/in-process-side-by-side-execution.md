@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33397459"
 ---
 # <a name="in-process-side-by-side-execution"></a><span data-ttu-id="c084b-102">Внутрипроцессное параллельное выполнение</span><span class="sxs-lookup"><span data-stu-id="c084b-102">In-Process Side-by-Side Execution</span></span>
 <span data-ttu-id="c084b-103">Начиная с [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], разработчики могут использовать внутрипроцессное параллельное размещение для запуска нескольких версий среды CLR в одном процессе.</span><span class="sxs-lookup"><span data-stu-id="c084b-103">Starting with the [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], you can use in-process side-by-side hosting to run multiple versions of the common language runtime (CLR) in a single process.</span></span> <span data-ttu-id="c084b-104">Управляемые COM-компоненты по умолчанию выполняются в той версии платформы .NET Framework, в которой они были созданы, вне зависимости от загруженной для процесса версии .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="c084b-104">By default, managed COM components run with the .NET Framework version they were built with, regardless of the .NET Framework version that is loaded for the process.</span></span>  

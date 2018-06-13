@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33571414"
 ---
 # <a name="xml-type-support-implementation-notes"></a><span data-ttu-id="863fd-102">Примечания по реализации поддержки типов XML</span><span class="sxs-lookup"><span data-stu-id="863fd-102">XML Type Support Implementation Notes</span></span>
 <span data-ttu-id="863fd-103">В этом разделе описываются определенные детали реализации, которые следует знать.</span><span class="sxs-lookup"><span data-stu-id="863fd-103">This topic describes some implementation details that you want to be aware of.</span></span>  

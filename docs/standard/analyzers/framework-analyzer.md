@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33574625"
 ---
 # <a name="the-net-framework-analyzer"></a><span data-ttu-id="ac3f3-103">Анализатор .NET Framework</span><span class="sxs-lookup"><span data-stu-id="ac3f3-103">The .NET Framework Analyzer</span></span>
 

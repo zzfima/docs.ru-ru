@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33571388"
 ---
 # <a name="designing-for-extensibility"></a><span data-ttu-id="680be-102">Разработка с обеспечением расширяемости</span><span class="sxs-lookup"><span data-stu-id="680be-102">Designing for Extensibility</span></span>
 <span data-ttu-id="680be-103">Проектирование платформу одним важным аспектом является обеспечение внимательно изучить расширяемость такой платформы.</span><span class="sxs-lookup"><span data-stu-id="680be-103">One important aspect of designing a framework is making sure the extensibility of the framework has been carefully considered.</span></span> <span data-ttu-id="680be-104">Это требует понимания издержки и прибыль, связанные с различные механизмы расширения.</span><span class="sxs-lookup"><span data-stu-id="680be-104">This requires that you understand the costs and benefits associated with various extensibility mechanisms.</span></span> <span data-ttu-id="680be-105">В этой главе помогут решить, какой из механизмов расширения — создания подкласса событий, виртуальные члены, обратные вызовы и т. д, соответствуют требованиям вашей платформы.</span><span class="sxs-lookup"><span data-stu-id="680be-105">This chapter helps you decide which of the extensibility mechanisms—subclassing, events, virtual members, callbacks, and so on—can best meet the requirements of your framework.</span></span>  

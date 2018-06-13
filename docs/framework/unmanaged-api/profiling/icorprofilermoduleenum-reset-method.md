@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 2b06001ed709c2823bfc2e3b81890fe860540530
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33454682"
 ---
 # <a name="icorprofilermoduleenumreset-method"></a><span data-ttu-id="08e5a-102">Метод ICorProfilerModuleEnum::Reset</span><span class="sxs-lookup"><span data-stu-id="08e5a-102">ICorProfilerModuleEnum::Reset Method</span></span>
 <span data-ttu-id="08e5a-103">Перемещает курсор этого перечислителя в начальную позицию последовательности.</span><span class="sxs-lookup"><span data-stu-id="08e5a-103">Moves this enumerator's cursor to the starting position of the sequence.</span></span>  

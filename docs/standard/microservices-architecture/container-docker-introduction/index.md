@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33572279"
 ---
 # <a name="introduction-to-containers-and-docker"></a><span data-ttu-id="7dc85-103">Общие сведения о контейнерах и Docker</span><span class="sxs-lookup"><span data-stu-id="7dc85-103">Introduction to Containers and Docker</span></span>
 

@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33566812"
 ---
 # <a name="xclass-directive"></a><span data-ttu-id="1c857-102">Директива x:Class</span><span class="sxs-lookup"><span data-stu-id="1c857-102">x:Class Directive</span></span>
 <span data-ttu-id="1c857-103">Настраивает компиляции разметки XAML для объединения разделяемых классов разметки и кода.</span><span class="sxs-lookup"><span data-stu-id="1c857-103">Configures XAML markup compilation to join partial classes between markup and code-behind.</span></span> <span data-ttu-id="1c857-104">Разделяемый класс кода определяется в отдельном файле кода в [!INCLUDE[TLA#tla_cls](../../../includes/tlasharptla-cls-md.md)] языка, тогда как разделяемый класс разметки обычно создается путем создания кода во время компиляции XAML.</span><span class="sxs-lookup"><span data-stu-id="1c857-104">The code partial class is defined in a separate code file in a [!INCLUDE[TLA#tla_cls](../../../includes/tlasharptla-cls-md.md)] language, whereas the markup partial class is typically created by code generation during XAML compilation.</span></span>  

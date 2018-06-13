@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33573598"
 ---
 # <a name="saving-and-writing-a-document"></a><span data-ttu-id="c70b3-102">Сохранение и запись документа</span><span class="sxs-lookup"><span data-stu-id="c70b3-102">Saving and Writing a Document</span></span>
 <span data-ttu-id="c70b3-103">При загрузке и сохранении <xref:System.Xml.XmlDocument> между сохраненным и исходным документами возможны следующие различия:</span><span class="sxs-lookup"><span data-stu-id="c70b3-103">When you load and save an <xref:System.Xml.XmlDocument>, the saved document may differ from the original in the following ways:</span></span>  

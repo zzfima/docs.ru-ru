@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33398525"
 ---
 # <a name="wif-features"></a><span data-ttu-id="f05b9-102">Возможности WIF</span><span class="sxs-lookup"><span data-stu-id="f05b9-102">WIF Features</span></span>
 -   [<span data-ttu-id="f05b9-103">Средство Identity and Access Tool для Visual Studio 2012</span><span class="sxs-lookup"><span data-stu-id="f05b9-103">Identity and Access Tool for Visual Studio 2012</span></span>](../../../docs/framework/security/identity-and-access-tool-for-vs.md)  

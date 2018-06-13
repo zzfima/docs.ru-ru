@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33573748"
 ---
 # <a name="sealing"></a><span data-ttu-id="99763-102">Запечатывание</span><span class="sxs-lookup"><span data-stu-id="99763-102">Sealing</span></span>
 <span data-ttu-id="99763-103">Одной из функций платформ объектно ориентированного — что разработчики могут расширять и настраивать их способами, непредвиденных конструкторами framework.</span><span class="sxs-lookup"><span data-stu-id="99763-103">One of the features of object-oriented frameworks is that developers can extend and customize them in ways unanticipated by the framework designers.</span></span> <span data-ttu-id="99763-104">Это возможности и опасность расширяемой архитектуры.</span><span class="sxs-lookup"><span data-stu-id="99763-104">This is both the power and danger of extensible design.</span></span> <span data-ttu-id="99763-105">При проектировании вашей платформы это, поэтому очень важно тщательно разработке для расширяемости его при необходимости и ограничить расширяемости, когда это опасно.</span><span class="sxs-lookup"><span data-stu-id="99763-105">When you design your framework, it is, therefore, very important to carefully design for extensibility when it is desired, and to limit extensibility when it is dangerous.</span></span>  

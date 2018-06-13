@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 07606bf58709f088db486e0263e5cb519ab5b4cf
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33456671"
 ---
 # <a name="icorprofilerinfo2getnotifiedexceptionclauseinfo-method"></a><span data-ttu-id="b9f81-102">Метод ICorProfilerInfo2::GetNotifiedExceptionClauseInfo</span><span class="sxs-lookup"><span data-stu-id="b9f81-102">ICorProfilerInfo2::GetNotifiedExceptionClauseInfo Method</span></span>
 <span data-ttu-id="b9f81-103">Получает собственный сведения о кадре и адрес для предложения исключения (`catch`/`finally`/`filter`), будет выполняться, или только что запущенного.</span><span class="sxs-lookup"><span data-stu-id="b9f81-103">Gets the native address and frame information for the exception clause (`catch`/`finally`/`filter`) that is about to be run or has just been run.</span></span>  

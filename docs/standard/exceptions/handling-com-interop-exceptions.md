@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33571268"
 ---
 # <a name="handling-com-interop-exceptions"></a><span data-ttu-id="6ec16-102">Обработка исключений COM-взаимодействия</span><span class="sxs-lookup"><span data-stu-id="6ec16-102">Handling COM Interop Exceptions</span></span>
 <span data-ttu-id="6ec16-103">При обработке исключений управляемый и неуправляемый код может работать совместно.</span><span class="sxs-lookup"><span data-stu-id="6ec16-103">Managed and unmanaged code can work together to handle exceptions.</span></span> <span data-ttu-id="6ec16-104">Если метод вызывает исключение в управляемом коде, то среда CLR может передать значение HRESULT в COM-объект.</span><span class="sxs-lookup"><span data-stu-id="6ec16-104">If a method throws an exception in managed code, the common language runtime can pass an HRESULT to a COM object.</span></span> <span data-ttu-id="6ec16-105">Если сбой метода происходит в неуправляемом коде и возвращается значение HRESULT, указывающее на сбой, то среда выполнения создает исключение, которое может быть перехвачено управляемым кодом.</span><span class="sxs-lookup"><span data-stu-id="6ec16-105">If a method fails in unmanaged code by returning a failure HRESULT, the runtime throws an exception that can be caught by managed code.</span></span>  

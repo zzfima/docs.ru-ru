@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32759846"
 ---
 # <a name="xml-schema-constraints-and-relationships"></a><span data-ttu-id="5bd44-102">Ограничения и отношения схемы XML</span><span class="sxs-lookup"><span data-stu-id="5bd44-102">XML Schema Constraints and Relationships</span></span>
 <span data-ttu-id="5bd44-103">Ограничения можно указать в схему языка определения схемы XML (unique, key и keyref) и связи (с помощью **msdata: Relationship** заметки).</span><span class="sxs-lookup"><span data-stu-id="5bd44-103">In an XML Schema definition language (XSD) schema, you can specify constraints (unique, key, and keyref constraints) and relationships (using the **msdata:Relationship** annotation).</span></span> <span data-ttu-id="5bd44-104">В этом разделе описана интерпретация ограничений и связей, указанных в схеме XML, при формировании набора данных <xref:System.Data.DataSet>.</span><span class="sxs-lookup"><span data-stu-id="5bd44-104">This topic explains how the constraints and relationships specified in an XML Schema are interpreted to generate the <xref:System.Data.DataSet>.</span></span>  

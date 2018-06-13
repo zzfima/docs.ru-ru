@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33469729"
 ---
 # <a name="calls"></a><span data-ttu-id="839d2-102">Вызовы</span><span class="sxs-lookup"><span data-stu-id="839d2-102">Calls</span></span>
 <span data-ttu-id="839d2-103">Имя счетчика: Calls</span><span class="sxs-lookup"><span data-stu-id="839d2-103">Counter Name: Calls</span></span>  

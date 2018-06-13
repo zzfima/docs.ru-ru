@@ -25,6 +25,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33577821"
 ---
 # <a name="comparing-strings-in-net"></a><span data-ttu-id="4d2bb-102">Сравнение строк в .NET</span><span class="sxs-lookup"><span data-stu-id="4d2bb-102">Comparing Strings in .NET</span></span>
 <span data-ttu-id="4d2bb-103">Платформа .NET обеспечивает несколько методов для сравнения значений строк.</span><span class="sxs-lookup"><span data-stu-id="4d2bb-103">.NET provides several methods to compare the values of strings.</span></span> <span data-ttu-id="4d2bb-104">В таблице ниже перечислены и описаны методы сравнения значений.</span><span class="sxs-lookup"><span data-stu-id="4d2bb-104">The following table lists and describes the value-comparison methods.</span></span>  

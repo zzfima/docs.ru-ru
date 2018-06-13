@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33574612"
 ---
 # <a name="backreference-constructs-in-regular-expressions"></a><span data-ttu-id="73c3d-102">Конструкции обратных ссылок в регулярных выражениях</span><span class="sxs-lookup"><span data-stu-id="73c3d-102">Backreference Constructs in Regular Expressions</span></span>
 <span data-ttu-id="73c3d-103">Обратные ссылки предоставляют удобный способ идентификации повторяющегося символа или подстроки в строке.</span><span class="sxs-lookup"><span data-stu-id="73c3d-103">Backreferences provide a convenient way to identify a repeated character or substring within a string.</span></span> <span data-ttu-id="73c3d-104">Например, если входная строка содержит несколько экземпляров произвольной подстроки, можно найти первое вхождение с помощью группы записи, а затем использовать обратную ссылку для поиска последующих вхождений подстроки.</span><span class="sxs-lookup"><span data-stu-id="73c3d-104">For example, if the input string contains multiple occurrences of an arbitrary substring, you can match the first occurrence with a capturing group, and then use a backreference to match subsequent occurrences of the substring.</span></span>  
