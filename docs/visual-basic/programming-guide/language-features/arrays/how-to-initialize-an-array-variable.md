@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33651574"
 ---
 # <a name="how-to-initialize-an-array-variable-in-visual-basic"></a>Практическое руководство. Инициализация переменной массива в Visual Basic
 Инициализация переменной массива, включив в литерал массива `New` предложения и указав начальные значения массива. Можно указать тип или разрешить ему выводится из значения литерала массива. Дополнительные сведения о том, как вывести тип. в разделе «Заполнение массива с начального значения» в [массивы](../../../../visual-basic/programming-guide/language-features/arrays/index.md).  

@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33654946"
 ---
 # <a name="program-structure-and-code-conventions-visual-basic"></a>Соглашения о структуре программы и коде (Visual Basic)
 В этом разделе представлены типичные структура программы Visual Basic, предоставляет простой программы на Visual Basic, «Hello, World» и описывает соглашения о написании кода Visual Basic. Соглашения о написании кода, рекомендации, которые касаются не на логику программы, а также на ее физическую структуру и внешний вид. После их делает код проще читать, понимать и поддерживать. Соглашения о коде могут включать среди прочего:  

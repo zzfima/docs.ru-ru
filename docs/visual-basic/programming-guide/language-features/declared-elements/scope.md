@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33656299"
 ---
 # <a name="scope-in-visual-basic"></a>Область видимости в Visual Basic
 *Область* объявленного элемента — это набор всех элементов кода, на него можно ссылаться без уточнения его имени или получения его с помощью [оператор Imports (пространство имен .NET и тип)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md). Элемент может иметь область на одном из следующих уровней:  

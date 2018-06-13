@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33654181"
 ---
 # <a name="passing-arguments-by-value-and-by-reference-visual-basic"></a>Передача аргументов по значению и по ссылке (Visual Basic)
 В Visual Basic можно передать аргумент в процедуру *по значению* или *по ссылке*. Это называется *механизм передачи*, и определяет, является ли процедура может изменить элемент программирования в аргументе в вызывающем коде. Объявление процедуры определяет механизм передачи для каждого параметра, указав [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) или [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) ключевое слово.  

@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33655216"
 ---
 # <a name="how-to-match-a-string-against-a-pattern-visual-basic"></a>Практическое руководство. Сравнение строки на соответствие с шаблоном (Visual Basic)
 Если вы хотите определить выражение [строкового типа данных](../../../../visual-basic/language-reference/data-types/string-data-type.md) соответствует шаблону, можно использовать [оператор Like](../../../../visual-basic/language-reference/operators/like-operator.md).  

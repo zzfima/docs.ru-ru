@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33474549"
 ---
 # <a name="endpoint-reliable-messaging-sessions-faulted"></a>Конечная точка: надежные сеансы обмена сообщениями, в которых произошел сбой
 Имя счетчика: Reliable Messaging Sessions Faulted Per Second.  

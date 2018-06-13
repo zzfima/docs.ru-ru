@@ -28,6 +28,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33654207"
 ---
 # <a name="numeric-data-types-visual-basic"></a>Числовые типы данных (Visual Basic)
 Visual Basic предоставляет несколько *числовых типов данных* для обработки чисел в различных представлениях. *Целочисленный* типам относятся только целые числа (положительные, отрицательные и ноль), и *нецелочисленным* — с целую и дробную части числа.  

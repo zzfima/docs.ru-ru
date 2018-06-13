@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33636719"
 ---
 # <a name="one-or-more-folders-in-the-target-path-do-not-exist"></a>Одна или несколько папок в целевом пути не существует.
 Один или несколько каталогов, представленных в целевом пути, не существует. Это может быть результатом неправильного синтаксического анализа пути, особенно при указании относительного пути.  

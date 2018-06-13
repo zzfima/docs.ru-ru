@@ -6,11 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - ^= operator [C#]
 ms.assetid: 3658ff9a-61cd-467e-ad6b-8fbf1cfbaae4
-ms.openlocfilehash: 0315cab66729d8169527c4b0ba7e00ab3b5ad5da
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b868f2cdbfa8a80f89a12e6194a30154481f0b07
+ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/15/2018
+ms.locfileid: "34172377"
 ---
 # <a name="-operator-c-reference"></a>Оператор ^= (справочник по C#)
 Оператор присваивания исключающего ИЛИ.  
@@ -18,13 +19,13 @@ ms.lasthandoff: 05/04/2018
 ## <a name="remarks"></a>Примечания  
  Выражение в формате  
   
-```  
+```csharp  
 x ^= y  
 ```  
   
  вычисляется как  
   
-```  
+```csharp  
 x = x ^ y  
 ```  
   

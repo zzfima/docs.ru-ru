@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33635910"
 ---
 # <a name="file39s-open-mode-wasn39t-set-to-a-valid-value"></a>Файл&#39;s открыть нельзя считать режим&#39;задано допустимое значение
 Значение, указанное для режима открытия файла, недопустимо. В следующей таблице показаны допустимые значения перечисления <xref:Microsoft.VisualBasic.OpenMode> .  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33652156"
 ---
 # <a name="main-procedure-in-visual-basic"></a>Процедура Main в Visual Basic
 Каждое приложение Visual Basic должно содержать процедуру с именем `Main`. Эта процедура служит в качестве начальной точки и общего управления для приложения. Платформа .NET Framework вызывает вашей `Main` процедуру при загрузке приложения и все готово для передачи управления. Если вы создаете приложение Windows Forms, необходимо написать `Main` процедуры для приложений, которые выполняются самостоятельно.  

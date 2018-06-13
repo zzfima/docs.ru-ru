@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33651854"
 ---
 # <a name="references-and-the-imports-statement-visual-basic"></a>Ссылки и оператор Imports (Visual Basic)
 Вы внешние объекты можно сделать доступными для проекта, выбрав **добавить ссылку** на **проекта** меню. Ссылки в Visual Basic могут указывать на сборки, которые подобны библиотеки типов, но содержат больше сведений.  

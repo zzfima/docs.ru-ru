@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33654140"
 ---
 # <a name="building-from-the-command-line-visual-basic"></a>Построение из командной строки (Visual Basic)
 Проект Visual Basic состоит из одного или нескольких отдельным файлам исходного кода. В процессе компиляции эти файлы соединяются в один пакет — исполняемый файл, который запускается как приложение.  
