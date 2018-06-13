@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33546088"
 ---
 # <a name="performance"></a><span data-ttu-id="f795f-102">Производительность</span><span class="sxs-lookup"><span data-stu-id="f795f-102">Performance</span></span>
 <span data-ttu-id="f795f-103">Достижения оптимальной производительности приложения необходимы предусмотрительность в разработке приложений и понимание советы и рекомендации по [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] разработки приложений.</span><span class="sxs-lookup"><span data-stu-id="f795f-103">Achieving optimal application performance requires forethought in application design and an understanding of best practices for [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] application development.</span></span> <span data-ttu-id="f795f-104">В этом разделе представлены дополнительные сведения о построении высокопроизводительных [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] приложений.</span><span class="sxs-lookup"><span data-stu-id="f795f-104">The topics in this section provide additional information on building high performance [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] applications.</span></span>  

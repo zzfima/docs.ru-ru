@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33539855"
 ---
 # <a name="how-to-set-the-tab-order-on-windows-forms"></a><span data-ttu-id="0dd58-102">Практическое руководство. Установка последовательности переходов в формах Windows Forms</span><span class="sxs-lookup"><span data-stu-id="0dd58-102">How to: Set the Tab Order on Windows Forms</span></span>
 <span data-ttu-id="0dd58-103">Последовательность табуляции — это порядок, в которой пользователь передвигает фокус с одного элемента управления на другой с помощью клавиши TAB.</span><span class="sxs-lookup"><span data-stu-id="0dd58-103">The tab order is the order in which a user moves focus from one control to another by pressing the TAB key.</span></span> <span data-ttu-id="0dd58-104">Каждая форма имеет свои собственные последовательности табуляции.</span><span class="sxs-lookup"><span data-stu-id="0dd58-104">Each form has its own tab order.</span></span> <span data-ttu-id="0dd58-105">По умолчанию последовательности табуляции является таким же, как порядок создания элементов управления.</span><span class="sxs-lookup"><span data-stu-id="0dd58-105">By default, the tab order is the same as the order in which you created the controls.</span></span> <span data-ttu-id="0dd58-106">Последовательность перехода нумерация начинается с нуля.</span><span class="sxs-lookup"><span data-stu-id="0dd58-106">Tab-order numbering begins with zero.</span></span>  

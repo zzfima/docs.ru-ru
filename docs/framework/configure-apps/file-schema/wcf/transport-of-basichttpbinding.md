@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32751273"
 ---
 # <a name="lttransportgt-of-ltbasichttpbindinggt"></a><span data-ttu-id="8005a-102">&lt;transport&gt; для &lt;basicHttpBinding&gt;</span><span class="sxs-lookup"><span data-stu-id="8005a-102">&lt;transport&gt; of &lt;basicHttpBinding&gt;</span></span>
 <span data-ttu-id="8005a-103">Определяет свойства, которые управляют параметрами проверки подлинности для транспорта HTTP.</span><span class="sxs-lookup"><span data-stu-id="8005a-103">Defines properties that control authentication parameters for the HTTP transport.</span></span>  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33219096"
 ---
 # <a name="building-a-complete-net-core-solution-on-macos-using-visual-studio-for-mac"></a><span data-ttu-id="702dd-103">Создание полноценного решения .NET Core на базе macOS с помощью Visual Studio для Mac</span><span class="sxs-lookup"><span data-stu-id="702dd-103">Building a complete .NET Core solution on macOS using Visual Studio for Mac</span></span>
 

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32762391"
 ---
 # <a name="nullable-structured-types-entity-sql"></a><span data-ttu-id="9968f-102">Допускающие значения null структурированные типы (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="9968f-102">Nullable Structured Types (Entity SQL)</span></span>
 <span data-ttu-id="9968f-103">Экземпляр `null` структурированного типа - несуществующий экземпляр.</span><span class="sxs-lookup"><span data-stu-id="9968f-103">A `null` instance of a structured type is an instance that does not exist.</span></span> <span data-ttu-id="9968f-104">Это отличается от существующего экземпляра, все свойства которого имеют значения `null`.</span><span class="sxs-lookup"><span data-stu-id="9968f-104">This is different from an existing instance in which all properties have `null` values.</span></span>  

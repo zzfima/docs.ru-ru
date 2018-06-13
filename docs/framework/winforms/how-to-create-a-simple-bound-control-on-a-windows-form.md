@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33538836"
 ---
 # <a name="how-to-create-a-simple-bound-control-on-a-windows-form"></a><span data-ttu-id="023d9-102">Практическое руководство. Создание элемента управления с простой привязкой в форме Windows Forms</span><span class="sxs-lookup"><span data-stu-id="023d9-102">How to: Create a Simple-Bound Control on a Windows Form</span></span>
 <span data-ttu-id="023d9-103">С *простую привязку*, одному элементу данных, например, значение столбца из таблицы набора данных, можно отобразить в элементе управления.</span><span class="sxs-lookup"><span data-stu-id="023d9-103">With *simple binding*, you can display a single data element, such as a column value from a dataset table, in a control.</span></span> <span data-ttu-id="023d9-104">Вы можете простую привязку любого свойства элемента управления к значению данных.</span><span class="sxs-lookup"><span data-stu-id="023d9-104">You can simple-bind any property of a control to a data value.</span></span>  

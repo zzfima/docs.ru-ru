@@ -8,6 +8,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33281441"
 ---
 # <a name="group-results-by-contiguous-keys"></a><span data-ttu-id="99882-103">Группирование результатов по смежным ключам</span><span class="sxs-lookup"><span data-stu-id="99882-103">Group results by contiguous keys</span></span>
 

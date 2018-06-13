@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33541552"
 ---
 # <a name="code-behind-and-xaml-in-wpf"></a><span data-ttu-id="f4017-102">Код программной части и XAML в WPF</span><span class="sxs-lookup"><span data-stu-id="f4017-102">Code-Behind and XAML in WPF</span></span>
 <a name="introduction"></a> <span data-ttu-id="f4017-103">Выделенный код — это термин, используемый для описания кода, который объединяется с объектами, определенными разметкой, при [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] страницы, скомпилированного с разметкой.</span><span class="sxs-lookup"><span data-stu-id="f4017-103">Code-behind is a term used to describe the code that is joined with markup-defined objects, when a [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] page is markup-compiled.</span></span> <span data-ttu-id="f4017-104">В этом разделе описываются требования для кода, а также альтернативный механизм встроенного кода для кода в [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].</span><span class="sxs-lookup"><span data-stu-id="f4017-104">This topic describes requirements for code-behind as well as an alternative inline code mechanism for code in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].</span></span>  

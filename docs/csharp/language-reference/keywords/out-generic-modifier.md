@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33269618"
 ---
 # <a name="out-generic-modifier-c-reference"></a><span data-ttu-id="c91d5-102">out (универсальный модификатор) (Справочник по C#)</span><span class="sxs-lookup"><span data-stu-id="c91d5-102">out (Generic Modifier) (C# Reference)</span></span>
 <span data-ttu-id="c91d5-103">Для параметров универсального типа ключевое слово `out` указывает, что параметр типа является ковариантным.</span><span class="sxs-lookup"><span data-stu-id="c91d5-103">For generic type parameters, the `out` keyword specifies that the type parameter is covariant.</span></span> <span data-ttu-id="c91d5-104">Ключевое слово `out` может применяться в универсальных интерфейсах и делегатах.</span><span class="sxs-lookup"><span data-stu-id="c91d5-104">You can use the `out` keyword in generic interfaces and delegates.</span></span>  

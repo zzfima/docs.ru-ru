@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32763934"
 ---
 # <a name="spatial-functions"></a><span data-ttu-id="67fdd-102">Пространственные функции</span><span class="sxs-lookup"><span data-stu-id="67fdd-102">Spatial Functions</span></span>
 <span data-ttu-id="67fdd-103">Форматов литералов для пространственных типов не имеется.</span><span class="sxs-lookup"><span data-stu-id="67fdd-103">There is no literal format for spatial types.</span></span> <span data-ttu-id="67fdd-104">Однако можно использовать канонические функции Entity Framework, вызываемые с помощью строк в формате известного текстового представления.</span><span class="sxs-lookup"><span data-stu-id="67fdd-104">However, you can use canonical Entity Framework functions that you call using strings in Well-Known Text format.</span></span> <span data-ttu-id="67fdd-105">Например, следующий вызов функции создает точку геометрии.</span><span class="sxs-lookup"><span data-stu-id="67fdd-105">For example, the following function call creates a geometry point:</span></span>  

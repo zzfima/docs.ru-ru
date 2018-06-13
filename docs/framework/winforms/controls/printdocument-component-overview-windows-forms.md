@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33538269"
 ---
 # <a name="printdocument-component-overview-windows-forms"></a><span data-ttu-id="e2736-102">Общие сведения о компоненте PrintDocument (Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="e2736-102">PrintDocument Component Overview (Windows Forms)</span></span>
 <span data-ttu-id="e2736-103">Компонент Windows Forms [PrintDocument](../../../../docs/framework/winforms/controls/printdocument-component-windows-forms.md) позволяет определять свойства, описывающие печатаемое содержимое, и распечатывать документы в приложениях Windows.</span><span class="sxs-lookup"><span data-stu-id="e2736-103">The Windows Forms [PrintDocument](../../../../docs/framework/winforms/controls/printdocument-component-windows-forms.md) component is used to set the properties that describe what to print and the ability to print the document within Windows-based applications.</span></span> <span data-ttu-id="e2736-104">Его можно использовать в сочетании с компонентом [PrintDialog](../../../../docs/framework/winforms/controls/printdialog-component-windows-forms.md) для управления всеми аспектами печати документов.</span><span class="sxs-lookup"><span data-stu-id="e2736-104">It can be used in conjunction with the [PrintDialog](../../../../docs/framework/winforms/controls/printdialog-component-windows-forms.md) component to be in control of all aspects of document printing.</span></span>  

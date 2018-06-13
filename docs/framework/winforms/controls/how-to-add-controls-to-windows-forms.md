@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33528481"
 ---
 # <a name="how-to-add-controls-to-windows-forms"></a><span data-ttu-id="64e8b-102">Практическое руководство. Добавление элементов управления в формы Windows Forms.</span><span class="sxs-lookup"><span data-stu-id="64e8b-102">How to: Add Controls to Windows Forms</span></span>
 <span data-ttu-id="64e8b-103">Большинство форм разрабатываются путем добавления элементов управления в область формы для создания пользовательского интерфейса (UI).</span><span class="sxs-lookup"><span data-stu-id="64e8b-103">Most forms are designed by adding controls to the surface of the form to define a user interface (UI).</span></span> <span data-ttu-id="64e8b-104">Объект *управления* — это компонент на форме, использующийся для отображения сведений или ввода пользователя.</span><span class="sxs-lookup"><span data-stu-id="64e8b-104">A *control* is a component on a form used to display information or accept user input.</span></span> <span data-ttu-id="64e8b-105">Дополнительные сведения об элементах управления см. в разделе [элементов управления Windows Forms](../../../../docs/framework/winforms/controls/index.md).</span><span class="sxs-lookup"><span data-stu-id="64e8b-105">For more information about controls, see [Windows Forms Controls](../../../../docs/framework/winforms/controls/index.md).</span></span>  

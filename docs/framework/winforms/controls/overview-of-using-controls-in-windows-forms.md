@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33537366"
 ---
 # <a name="overview-of-using-controls-in-windows-forms"></a><span data-ttu-id="6a3b6-102">Общие сведения об использовании элементов управления в формах Windows Forms</span><span class="sxs-lookup"><span data-stu-id="6a3b6-102">Overview of Using Controls in Windows Forms</span></span>
 <span data-ttu-id="6a3b6-103">В этом разделе описываются основные элементы приложения Windows Forms и предоставляет простой пример, использующий элементы управления и обработка событий в приложении Windows Forms.</span><span class="sxs-lookup"><span data-stu-id="6a3b6-103">This topic describes the essential elements of a Windows Forms application and provides a simple example that uses controls and handles events in a Windows Forms application.</span></span>  
