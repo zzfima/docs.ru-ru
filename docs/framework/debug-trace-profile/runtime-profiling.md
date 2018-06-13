@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33393059"
 ---
 # <a name="runtime-profiling"></a><span data-ttu-id="d2389-102">Профилирование среды выполнения</span><span class="sxs-lookup"><span data-stu-id="d2389-102">Runtime Profiling</span></span>
 <span data-ttu-id="d2389-103">Профилирование представляет собой метод сбора данных по производительности в любом сценарии разработки или развертывания.</span><span class="sxs-lookup"><span data-stu-id="d2389-103">Profiling is a method of gathering performance data in any development or deployment scenario.</span></span> <span data-ttu-id="d2389-104">Это раздел представляет интерес для разработчиков и системных администраторов, которые хотят получить сведения о производительности приложения.</span><span class="sxs-lookup"><span data-stu-id="d2389-104">This section is for developers and system administrators who want to gather information about application performance.</span></span>  

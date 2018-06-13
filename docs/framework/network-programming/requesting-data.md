@@ -25,6 +25,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33396302"
 ---
 # <a name="requesting-data"></a><span data-ttu-id="c8797-102">Запрос данных</span><span class="sxs-lookup"><span data-stu-id="c8797-102">Requesting Data</span></span>
 <span data-ttu-id="c8797-103">Для разработки современных интернет-приложений, выполняющихся в распределенной операционной среде, требуется простой и эффективный способ извлечения данных из ресурсов любого типа.</span><span class="sxs-lookup"><span data-stu-id="c8797-103">Developing applications that run in the distributed operating environment of today's Internet requires an efficient, easy-to-use method for retrieving data from resources of all types.</span></span> <span data-ttu-id="c8797-104">Благодаря подключаемым протоколам можно разрабатывать приложения, использующие единый интерфейс для извлечения данных из нескольких интернет-протоколов.</span><span class="sxs-lookup"><span data-stu-id="c8797-104">Pluggable protocols let you develop applications that use a single interface to retrieve data from multiple Internet protocols.</span></span>  

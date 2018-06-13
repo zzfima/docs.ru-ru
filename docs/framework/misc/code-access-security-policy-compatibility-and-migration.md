@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33393251"
 ---
 # <a name="code-access-security-policy-compatibility-and-migration"></a><span data-ttu-id="24444-102">Совместимость политики разграничения доступа кода и ее миграция</span><span class="sxs-lookup"><span data-stu-id="24444-102">Code Access Security Policy Compatibility and Migration</span></span>
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
