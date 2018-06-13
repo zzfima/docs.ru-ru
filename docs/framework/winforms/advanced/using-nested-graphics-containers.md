@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33529065"
 ---
 # <a name="using-nested-graphics-containers"></a>Использование вложенных графических контейнеров
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] предоставляет контейнеры, которые можно использовать, чтобы временно заменить или дополнить часть состояния в <xref:System.Drawing.Graphics> объекта. Создать контейнер, вызвав <xref:System.Drawing.Graphics.BeginContainer%2A> метод <xref:System.Drawing.Graphics> объекта. Можно вызвать <xref:System.Drawing.Graphics.BeginContainer%2A> несколько раз для создания вложенных контейнеров. Каждый вызов <xref:System.Drawing.Graphics.BeginContainer%2A> должны составлять пару с помощью вызова <xref:System.Drawing.Graphics.EndContainer%2A>.  

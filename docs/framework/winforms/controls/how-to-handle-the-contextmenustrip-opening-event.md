@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33531866"
 ---
 # <a name="how-to-handle-the-contextmenustrip-opening-event"></a>Практическое руководство. Обработка события Opening компонента ContextMenuStrip
 Можно настроить поведение вашей <xref:System.Windows.Forms.ContextMenuStrip> управления обработкой <xref:System.Windows.Forms.ToolStripDropDown.Opening> событий.  

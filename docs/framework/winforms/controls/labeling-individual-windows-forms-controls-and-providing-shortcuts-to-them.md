@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33535519"
 ---
 # <a name="labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them"></a>Создание меток и назначение сочетаний клавиш для элементов управления Windows Forms
 Элементы управления, добавляемые в Windows Forms, обладают свойствами и методами, которые позволяют производить более тонкую настройку пользовательского интерфейса. Для хорошо спроектированного приложения Windows очень важна настройка пользовательского интерфейса, удовлетворяющая требованиям пользователя.  

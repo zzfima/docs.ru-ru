@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33534616"
 ---
 # <a name="webbrowser-security"></a>Безопасность элемента управления WebBrowser
 <xref:System.Windows.Forms.WebBrowser> Управления предназначен для работы в режиме полного доверия. HTML-содержимое, отображаемое на элементе управления могут поступать из внешних веб-серверов и может содержать неуправляемый код в форме скриптов или веб-элементов управления. Если вы используете <xref:System.Windows.Forms.WebBrowser> управления в этом случае элемент управления не менее безопасен, чем бы Internet Explorer, но управляемый <xref:System.Windows.Forms.WebBrowser> управления не препятствует такого неуправляемого кода выполняется.  

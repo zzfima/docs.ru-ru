@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33528594"
 ---
 # <a name="how-to-align-multiple-controls-on-windows-forms"></a>Практическое руководство. Выравнивание нескольких элементов управления в формах Windows Forms
 Чтобы стандартизировать макет пользовательского интерфейса (UI) приложения на основе Windows, можно разместить группы элементов управления с помощью одной команды.  

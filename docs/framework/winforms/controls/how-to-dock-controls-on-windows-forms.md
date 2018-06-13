@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33532328"
 ---
 # <a name="how-to-dock-controls-on-windows-forms"></a>Практическое руководство. Закрепление элементов управления в формах Windows Forms.
 Можно закрепить элементы управления по границам формы или их заполнения контейнера элемента управления (форму или контейнерный элемент управления). Например, проводник закрепляет его <xref:System.Windows.Forms.TreeView> в левой части окна элемента управления и его <xref:System.Windows.Forms.ListView> элемента управления в правой части окна. Используйте <xref:System.Windows.Forms.Control.Dock%2A> свойство для всех видимых элементов управления Windows Forms для определения режима закрепления.  

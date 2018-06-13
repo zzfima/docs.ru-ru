@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33534317"
 ---
 # <a name="printpreviewcontrol-control-windows-forms"></a>Элемент управления PrintPreviewControl (Windows Forms)
 Элемент управления `PrintPreviewControl` Windows Forms служит для вывода документа на экран в том виде, как он будет выглядеть при печати. У элемента управления `PrintPreviewControl` нет кнопок и других элементов пользовательского интерфейса, поэтому обычно он используется только в том случае, если нужно реализовать собственный интерфейс предварительного просмотра. Для реализации стандартного пользовательского интерфейса используется элемент управления <xref:System.Windows.Forms.PrintPreviewDialog>.  

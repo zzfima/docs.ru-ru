@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33533608"
 ---
 # <a name="how-to-display-icons-for-the-windows-forms-listview-control"></a>Практическое руководство. Отображение значков в элементе управления ListView в Windows Forms
 Windows Forms <xref:System.Windows.Forms.ListView> элемент управления может отображать значки из трех списков изображений. Представления списка, подробности и SmallIcon отображение изображений из списка изображений, указанный в <xref:System.Windows.Forms.ListView.SmallImageList%2A> свойство. В представлении LargeIcon отображается изображений из списка изображений, указанный в <xref:System.Windows.Forms.ListView.LargeImageList%2A> свойство. Представление списка можно также отобразить дополнительный набор значков, заданных <xref:System.Windows.Forms.ListView.StateImageList%2A> свойства рядом с крупных или мелких значков. Дополнительные сведения о списках изображений см. в разделе [компонент ImageList](../../../../docs/framework/winforms/controls/imagelist-component-windows-forms.md) и [как: Добавление и удаление изображений с помощью компонента ImageList в Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-or-remove-images-with-the-windows-forms-imagelist-component.md).  

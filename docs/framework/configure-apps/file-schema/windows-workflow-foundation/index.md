@@ -8,6 +8,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33352493"
 ---
 # <a name="windows-workflow-foundation-configuration-schema"></a>Схема конфигурации Windows Workflow Foundation
 Элементы конфигурации Windows Workflow Foundation (WF) позволяют настроить приложения рабочего процесса. Помимо прочего, для приложения рабочего процесса можно настроить отслеживание и трассировку. Дополнительные сведения о трассировке и отслеживании см. в разделе [Отслеживание и трассировка рабочих процессов](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md). Для служб рабочих процессов также можно использовать элементы конфигурации Windows Communication Foundation (WCF). Дополнительные сведения о WCF см. в разделе [схем конфигурации WCF](../../../../../docs/framework/configure-apps/file-schema/wcf/index.md).  

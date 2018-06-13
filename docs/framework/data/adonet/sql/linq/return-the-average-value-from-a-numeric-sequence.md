@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33358860"
 ---
 # <a name="return-the-average-value-from-a-numeric-sequence"></a>Возврат среднего значения из числовой последовательности
 Оператор <xref:System.Linq.Enumerable.Average%2A> вычисляет среднее последовательности числовых значений.  
