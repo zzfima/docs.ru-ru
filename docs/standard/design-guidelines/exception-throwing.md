@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33573725"
 ---
 # <a name="exception-throwing"></a><span data-ttu-id="02e9f-102">Создание исключений</span><span class="sxs-lookup"><span data-stu-id="02e9f-102">Exception Throwing</span></span>
 <span data-ttu-id="02e9f-103">Правила исключения, описанные в этом разделе требуют хорошо определение значение сбоя в выполнении.</span><span class="sxs-lookup"><span data-stu-id="02e9f-103">Exception-throwing guidelines described in this section require a good definition of the meaning of execution failure.</span></span> <span data-ttu-id="02e9f-104">Сбой при выполнении происходит всякий раз, когда член не может его целью (что член названия).</span><span class="sxs-lookup"><span data-stu-id="02e9f-104">Execution failure occurs whenever a member cannot do what it was designed to do (what the member name implies).</span></span> <span data-ttu-id="02e9f-105">Например если `OpenFile` метод, не может возвращать вызывающему объекту дескриптор открытого файла, он будет считаться ошибкой выполнения.</span><span class="sxs-lookup"><span data-stu-id="02e9f-105">For example, if the `OpenFile` method cannot return an opened file handle to the caller, it would be considered an execution failure.</span></span>  

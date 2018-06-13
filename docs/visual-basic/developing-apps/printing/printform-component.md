@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33591412"
 ---
 # <a name="printform-component-visual-basic"></a><span data-ttu-id="ce64a-102">Компонент PrintForm (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="ce64a-102">PrintForm Component (Visual Basic)</span></span>
 <span data-ttu-id="ce64a-103"><xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> Компонент для Visual Basic позволяет напечатать изображение формы Windows Forms во время выполнения.</span><span class="sxs-lookup"><span data-stu-id="ce64a-103">The <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> component for Visual Basic enables you to print an image of a Windows Form at run time.</span></span> <span data-ttu-id="ce64a-104">Его поведение заменяет поведение метода `PrintForm` в более ранних версиях Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="ce64a-104">Its behavior replaces that of the `PrintForm` method in earlier versions of Visual Basic.</span></span>  

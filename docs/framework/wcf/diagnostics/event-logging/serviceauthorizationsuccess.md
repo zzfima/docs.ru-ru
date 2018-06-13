@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33473193"
 ---
 # <a name="serviceauthorizationsuccess"></a><span data-ttu-id="8acaf-102">ServiceAuthorizationSuccess</span><span class="sxs-lookup"><span data-stu-id="8acaf-102">ServiceAuthorizationSuccess</span></span>
 <span data-ttu-id="8acaf-103">Идентификатор: 176</span><span class="sxs-lookup"><span data-stu-id="8acaf-103">Id: 176</span></span>  

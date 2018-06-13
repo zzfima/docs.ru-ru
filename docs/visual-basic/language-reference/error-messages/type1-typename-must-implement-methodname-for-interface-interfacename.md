@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33594387"
 ---
 # <a name="lttype1gt39lttypenamegt39-must-implement-39ltmethodnamegt39-for-interface-39ltinterfacenamegt39"></a><span data-ttu-id="ae878-102">&lt;Тип 1&gt;&#39;&lt;typename&gt; &#39; необходимо реализовать &#39; &lt;имя_метода&gt; &#39; для интерфейса &#39; &lt;interfacename&gt;&#39;</span><span class="sxs-lookup"><span data-stu-id="ae878-102">&lt;type1&gt;&#39;&lt;typename&gt;&#39; must implement &#39;&lt;methodname&gt;&#39; for interface &#39;&lt;interfacename&gt;&#39;</span></span>
 <span data-ttu-id="ae878-103">Класс или структура объявляет о реализации интерфейса, но не реализует процедуру, определенную в интерфейсе.</span><span class="sxs-lookup"><span data-stu-id="ae878-103">A class or structure claims to implement an interface but does not implement a procedure defined by the interface.</span></span> <span data-ttu-id="ae878-104">Каждый член интерфейса должен быть реализован.</span><span class="sxs-lookup"><span data-stu-id="ae878-104">Every member of the interface must be implemented.</span></span>  

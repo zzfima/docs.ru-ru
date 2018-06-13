@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33594475"
 ---
 # <a name="nested-function-does-not-have-a-signature-that-is-compatible-with-delegate-39ltdelegatenamegt39"></a><span data-ttu-id="124f9-102">Вложенная функция не имеет сигнатуры, совместимой с делегатом &#39; &lt;имя_делегата&gt;&#39;</span><span class="sxs-lookup"><span data-stu-id="124f9-102">Nested function does not have a signature that is compatible with delegate &#39;&lt;delegatename&gt;&#39;</span></span>
 <span data-ttu-id="124f9-103">Лямбда-выражение для делегата, имеющего несовместимая сигнатура назначено.</span><span class="sxs-lookup"><span data-stu-id="124f9-103">A lambda expression has been assigned to a delegate that has an incompatible signature.</span></span> <span data-ttu-id="124f9-104">Например, в следующем коде делегат `Del` имеет два параметра целого типа.</span><span class="sxs-lookup"><span data-stu-id="124f9-104">For example, in the following code, delegate `Del` has two integer parameters.</span></span>  

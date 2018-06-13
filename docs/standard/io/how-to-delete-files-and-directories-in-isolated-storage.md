@@ -24,6 +24,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33573491"
 ---
 # <a name="how-to-delete-files-and-directories-in-isolated-storage"></a><span data-ttu-id="0bd90-102">Практическое руководство. Удаление файлов и каталогов из изолированного хранилища</span><span class="sxs-lookup"><span data-stu-id="0bd90-102">How to: Delete Files and Directories in Isolated Storage</span></span>
 <span data-ttu-id="0bd90-103">Вы можете удалять файлы и папки из файла изолированного хранилища.</span><span class="sxs-lookup"><span data-stu-id="0bd90-103">You can delete directories and files within an isolated storage file.</span></span> <span data-ttu-id="0bd90-104">В хранилище имена файлов и каталогов зависят от используемой операционной системы, а путь к ним указывается относительно корня виртуальной файловой системы.</span><span class="sxs-lookup"><span data-stu-id="0bd90-104">Within a store, file and directory names are operating-system dependent and are specified as relative to the root of the virtual file system.</span></span> <span data-ttu-id="0bd90-105">В операционных системах Windows регистр в именах файлов не учитывается.</span><span class="sxs-lookup"><span data-stu-id="0bd90-105">They are not case-sensitive on Windows operating systems.</span></span>  

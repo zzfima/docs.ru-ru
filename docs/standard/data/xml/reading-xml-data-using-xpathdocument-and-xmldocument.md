@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33575470"
 ---
 # <a name="reading-xml-data-using-xpathdocument-and-xmldocument"></a><span data-ttu-id="ecba2-102">Чтение XML-данных с помощью XPathDocument и XmlDocument</span><span class="sxs-lookup"><span data-stu-id="ecba2-102">Reading XML Data using XPathDocument and XmlDocument</span></span>
 <span data-ttu-id="ecba2-103">Существует два способа чтения XML-документа в пространстве имен <xref:System.Xml.XPath?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="ecba2-103">There are two ways to read an XML document in the <xref:System.Xml.XPath?displayProperty=nameWithType> namespace.</span></span> <span data-ttu-id="ecba2-104">Один - считывание XML-документа с использованием доступного только для чтения класса <xref:System.Xml.XPath.XPathDocument>, а другой - считывание XML-документа с использованием редактируемого класса <xref:System.Xml.XmlDocument> в пространстве имен <xref:System.Xml?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="ecba2-104">One is to read an XML document using the read-only <xref:System.Xml.XPath.XPathDocument> class and the other is to read an XML document using the editable <xref:System.Xml.XmlDocument> class in the <xref:System.Xml?displayProperty=nameWithType> namespace.</span></span>  

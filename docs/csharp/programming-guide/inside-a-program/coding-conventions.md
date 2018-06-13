@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33336941"
 ---
 # <a name="c-coding-conventions-c-programming-guide"></a><span data-ttu-id="0e7fa-102">Соглашения о написании кода на C# (Руководство по программированию на C#)</span><span class="sxs-lookup"><span data-stu-id="0e7fa-102">C# Coding Conventions (C# Programming Guide)</span></span>
  <span data-ttu-id="0e7fa-103">Соглашения о написании кода предназначены для реализации следующих целей.</span><span class="sxs-lookup"><span data-stu-id="0e7fa-103">Coding conventions serve the following purposes:</span></span>  

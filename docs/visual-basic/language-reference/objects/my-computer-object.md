@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33597351"
 ---
 # <a name="mycomputer-object"></a><span data-ttu-id="66ff3-102">Объект My.Computer</span><span class="sxs-lookup"><span data-stu-id="66ff3-102">My.Computer Object</span></span>
 <span data-ttu-id="66ff3-103">Включает свойства для управления компонентами компьютера, такими как звук, часы, клавиатура, файловая система и т. д.</span><span class="sxs-lookup"><span data-stu-id="66ff3-103">Provides properties for manipulating computer components such as audio, the clock, the keyboard, the file system, and so on.</span></span>  

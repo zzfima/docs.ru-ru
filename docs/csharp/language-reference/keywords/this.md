@@ -13,6 +13,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34172039"
 ---
 # <a name="this-c-reference"></a><span data-ttu-id="2ab01-103">this (Справочник по C#)</span><span class="sxs-lookup"><span data-stu-id="2ab01-103">this (C# Reference)</span></span>
 <span data-ttu-id="2ab01-104">Ключевое слово `this` ссылается на текущий экземпляр класса, а также используется в качестве модификатора первого параметра метода расширения.</span><span class="sxs-lookup"><span data-stu-id="2ab01-104">The `this` keyword refers to the current instance of the class and is also used as a modifier of the first parameter of an extension method.</span></span>  

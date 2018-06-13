@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33595177"
 ---
 # <a name="unable-to-emit-assembly-lterror-messagegt"></a><span data-ttu-id="50696-102">Не удается создать сборку: &lt;сообщение об ошибке&gt;</span><span class="sxs-lookup"><span data-stu-id="50696-102">Unable to emit assembly: &lt;error message&gt;</span></span>
 <span data-ttu-id="50696-103">Компилятор Visual Basic вызывает компоновщик сборок (Al.exe, который также называется Alink) для создания сборки с манифестом, при этом Компоновщик сообщает об ошибке на этапе вывода создания сборки.</span><span class="sxs-lookup"><span data-stu-id="50696-103">The Visual Basic compiler calls the Assembly Linker (Al.exe, also known as Alink) to generate an assembly with a manifest, with the linker reporting an error in the emission stage of creating the assembly.</span></span>  

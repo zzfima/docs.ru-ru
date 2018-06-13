@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33589127"
 ---
 # <a name="pausing-and-resuming-threads"></a><span data-ttu-id="cf9a5-102">Приостановка и возобновление потоков</span><span class="sxs-lookup"><span data-stu-id="cf9a5-102">Pausing and Resuming Threads</span></span>
 <span data-ttu-id="cf9a5-103">Наиболее распространенными способами синхронизации действий потоков являются блокировка и освобождение потоков или блокировка объектов или областей кода.</span><span class="sxs-lookup"><span data-stu-id="cf9a5-103">The most common ways to synchronize the activities of threads are to block and release threads, or to lock objects or regions of code.</span></span> <span data-ttu-id="cf9a5-104">Подробнее об этих механизмах фиксации и блокировки см. в разделе [Обзор примитивов синхронизации](../../../docs/standard/threading/overview-of-synchronization-primitives.md).</span><span class="sxs-lookup"><span data-stu-id="cf9a5-104">For more information on these locking and blocking mechanisms, see [Overview of Synchronization Primitives](../../../docs/standard/threading/overview-of-synchronization-primitives.md).</span></span>  

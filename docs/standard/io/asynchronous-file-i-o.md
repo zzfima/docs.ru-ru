@@ -24,6 +24,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33575522"
 ---
 # <a name="asynchronous-file-io"></a><span data-ttu-id="5f1e1-102">Асинхронный файловый ввод-вывод</span><span class="sxs-lookup"><span data-stu-id="5f1e1-102">Asynchronous File I/O</span></span>
 <span data-ttu-id="5f1e1-103">Асинхронные операции позволяют выполнять ресурсоемкие операции ввода-вывода без блокировки основного потока.</span><span class="sxs-lookup"><span data-stu-id="5f1e1-103">Asynchronous operations enable you to perform resource-intensive I/O operations without blocking the main thread.</span></span> <span data-ttu-id="5f1e1-104">Это соображение, связанное с производительностью, особенно важно в приложениях [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] и [!INCLUDE[desktop_appname](../../../includes/desktop-appname-md.md)] , где длительная потоковая операция может блокировать поток пользовательского интерфейса и создавать впечатление, что приложение не работает.</span><span class="sxs-lookup"><span data-stu-id="5f1e1-104">This performance consideration is particularly important in a [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] app or [!INCLUDE[desktop_appname](../../../includes/desktop-appname-md.md)] app where a time-consuming stream operation can block the UI thread and make your app appear as if it is not working.</span></span>  

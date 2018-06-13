@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d87627b8bb3414860d994273396dbb4e64acdea7
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33459880"
 ---
 # <a name="beginenumeration-function"></a><span data-ttu-id="58464-103">Функция BeginEnumeration</span><span class="sxs-lookup"><span data-stu-id="58464-103">BeginEnumeration function</span></span>
 <span data-ttu-id="58464-104">Начинает перечисление методов, доступных для объекта.</span><span class="sxs-lookup"><span data-stu-id="58464-104">Begins an enumeration of the methods available for the object.</span></span>  

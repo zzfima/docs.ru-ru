@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33600032"
 ---
 # <a name="a-e-statements"></a><span data-ttu-id="3482b-102">Операторы A-E</span><span class="sxs-lookup"><span data-stu-id="3482b-102">A-E Statements</span></span>
 <span data-ttu-id="3482b-103">Следующая таблица содержит список операторов языка Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="3482b-103">The following table contains a listing of Visual Basic language statements.</span></span>  

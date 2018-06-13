@@ -27,6 +27,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33575499"
 ---
 # <a name="calling-synchronous-methods-asynchronously"></a><span data-ttu-id="992f3-102">Асинхронный вызов синхронных методов</span><span class="sxs-lookup"><span data-stu-id="992f3-102">Calling Synchronous Methods Asynchronously</span></span>
 <span data-ttu-id="992f3-103">В .NET Framework можно асинхронно вызывать любой метод.</span><span class="sxs-lookup"><span data-stu-id="992f3-103">The .NET Framework enables you to call any method asynchronously.</span></span> <span data-ttu-id="992f3-104">Для этого необходимо определить делегат с той же сигнатурой, что и у вызываемого метода. Среда CLR автоматически определяет для этого делегата методы `BeginInvoke` и `EndInvoke` с нужными сигнатурами.</span><span class="sxs-lookup"><span data-stu-id="992f3-104">To do this you define a delegate with the same signature as the method you want to call; the common language runtime automatically defines `BeginInvoke` and `EndInvoke` methods for this delegate, with the appropriate signatures.</span></span>  
