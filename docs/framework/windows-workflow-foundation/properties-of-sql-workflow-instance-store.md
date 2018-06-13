@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33514441"
 ---
 # <a name="properties-of-sql-workflow-instance-store"></a>Свойства хранилища экземпляров рабочего процесса SQL
 В этом подразделе приводятся подробные сведения о свойствах хранилища экземпляров рабочих процессов SQL.  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33521411"
 ---
 # <a name="how-to-draw-a-sequence-of-b233zier-splines"></a>Как: рисование последовательности B&#233;сплайны Безье
 Можно использовать <xref:System.Drawing.Graphics.DrawBeziers%2A> метод <xref:System.Drawing.Graphics> для отрисовки последовательность связанных сплайнов Безье.  

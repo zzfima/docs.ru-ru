@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33521489"
 ---
 # <a name="how-to-create-thumbnail-images"></a>Практическое руководство. Создание эскизов изображений
 Эскиз — это уменьшенная изображения. Можно создать эскиз путем вызова <xref:System.Drawing.Image.GetThumbnailImage%2A> метод <xref:System.Drawing.Image> объекта.  

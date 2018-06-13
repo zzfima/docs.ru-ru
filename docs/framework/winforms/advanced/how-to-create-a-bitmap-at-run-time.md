@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33520644"
 ---
 # <a name="how-to-create-a-bitmap-at-run-time"></a>Практическое руководство. Создание растрового изображения во время выполнения
 Этот пример создает и отображает <xref:System.Drawing.Bitmap> объекта и отображает его в существующих форм Windows <xref:System.Windows.Forms.PictureBox> элемента управления.  

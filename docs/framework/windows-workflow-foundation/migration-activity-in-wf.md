@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33514351"
 ---
 # <a name="migration-activity-in-wf"></a>Действие «Migration» в WF
 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] предоставляет <xref:System.Activities.Statements.Interop> действия для выполнения действий, которые являются производными от действия в рабочем процессе на основе <xref:System.Activities.Activity>. Дополнительные сведения см. в разделе [руководство по миграции](../../../docs/framework/windows-workflow-foundation/migration-guidance.md) раздела.  

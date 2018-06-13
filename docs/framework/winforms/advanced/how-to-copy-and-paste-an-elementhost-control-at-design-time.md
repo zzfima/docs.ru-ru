@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33524860"
 ---
 # <a name="how-to-copy-and-paste-an-elementhost-control-at-design-time"></a>Практическое руководство. Копирование и вставка элемента управления ElementHost во время разработки
 Эта процедура показано, как скопировать элемент управления Windows Presentation Foundation (WPF) в Windows Forms.  

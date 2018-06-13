@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5db040f6db078b211043c547eed823c9b495ac97
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33431326"
 ---
 # <a name="iappdomainbindingonappdomain-method"></a>Метод IAppDomainBinding::OnAppDomain
 Вызывается общеязыковой среды выполнения (CLR) для уведомления узла, что домен приложения был создан.  

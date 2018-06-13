@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33525498"
 ---
 # <a name="basic-column-row-and-cell-features-in-the-windows-forms-datagridview-control"></a>Базовые характеристики столбцов, строк и ячеек элемента управления DataGridView в Windows Forms
 Во многих случаях basic поведение `DataGridView` ячеек, строк и столбцов можно изменить путем задания одного свойства. В этом разделе описываются некоторые из наиболее часто используемые из этих функций.  

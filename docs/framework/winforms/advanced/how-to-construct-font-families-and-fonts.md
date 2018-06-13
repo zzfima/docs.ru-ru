@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33520894"
 ---
 # <a name="how-to-construct-font-families-and-fonts"></a>Практическое руководство. Разработка шрифтов и их семейств
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] шрифты с же гарнитуры, но разными стилями группируются в семейства шрифтов. Например семейство шрифтов Arial содержит следующие шрифты:  

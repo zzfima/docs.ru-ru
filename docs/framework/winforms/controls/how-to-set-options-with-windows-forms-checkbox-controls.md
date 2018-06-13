@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33534090"
 ---
 # <a name="how-to-set-options-with-windows-forms-checkbox-controls"></a>Практическое руководство. Задание параметров с помощью элементов управления CheckBox в Windows Forms
 Windows Forms <xref:System.Windows.Forms.CheckBox> управления используются для предоставления пользователям True/False или Да/нет параметров. Элемент управления отображает флажок, при этом.  

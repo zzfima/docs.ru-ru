@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33519006"
 ---
 # <a name="brushes-and-filled-shapes-in-gdi"></a>Кисти и закрашенные фигуры в GDI+
 Замкнутые фигуры, например прямоугольник или эллипса, состоит из структуры и внутренний. Контур рисуется с помощью пера и внутренняя область заполняется с использованием кисти. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] предоставляет несколько классов кисти для заливки замкнутых фигур: <xref:System.Drawing.SolidBrush>, <xref:System.Drawing.Drawing2D.HatchBrush>, <xref:System.Drawing.TextureBrush>, <xref:System.Drawing.Drawing2D.LinearGradientBrush>, и <xref:System.Drawing.Drawing2D.PathGradientBrush>. Эти классы наследуются от <xref:System.Drawing.Brush> класса. На следующем рисунке прямоугольник с помощью сплошной кисти эллипса заливке а кистей штриховки.  

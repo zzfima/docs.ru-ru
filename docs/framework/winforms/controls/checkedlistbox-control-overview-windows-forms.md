@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33524311"
 ---
 # <a name="checkedlistbox-control-overview-windows-forms"></a>Общие сведения об элементе управления CheckedListBox (Windows Forms)
 Windows Forms <xref:System.Windows.Forms.CheckedListBox> расширяет <xref:System.Windows.Forms.ListBox> элемента управления. Это осуществляется почти все, что списка, а также может отображаться флажок рядом с элементами списка. Другие различия между двумя элементами управления являются, проверяется списки поддерживают только <xref:System.Windows.Forms.DrawMode.Normal?displayProperty=nameWithType>; и, проверять списки может иметь только один элемент или выбран ни один. Обратите внимание, что выбранный элемент выделен в форме не обязательно является помеченным элементом.  
