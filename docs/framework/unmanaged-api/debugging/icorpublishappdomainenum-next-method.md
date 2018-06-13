@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ac3c6698e4ca127257b7682f1f55acd663375280
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33423732"
 ---
 # <a name="icorpublishappdomainenumnext-method"></a>Метод ICorPublishAppDomainEnum::Next
 Возвращает заданное число доменов приложений, которые в настоящий момент находятся в процессе, начиная с текущей позиции.  

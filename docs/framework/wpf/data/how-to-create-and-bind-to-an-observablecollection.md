@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33556722"
 ---
 # <a name="how-to-create-and-bind-to-an-observablecollection"></a>Практическое руководство. Создание и привязка коллекции "ObservableCollection"
 В этом примере показано, как создать и выполнить привязку к коллекции, который является производным от <xref:System.Collections.ObjectModel.ObservableCollection%601> класса, который является классом коллекции, которая выдает уведомления при добавлении и удалении элементов.  

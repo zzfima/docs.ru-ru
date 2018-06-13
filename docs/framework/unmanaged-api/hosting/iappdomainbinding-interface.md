@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: a6761ff204d299bc2db84e2e80d988306125a110
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33430825"
 ---
 # <a name="iappdomainbinding-interface"></a>Интерфейс IAppDomainBinding
 Предоставляет метод, который вызывается общеязыковой среды выполнения (CLR) для уведомления ведущего приложения о том, что домен приложения был создан.  

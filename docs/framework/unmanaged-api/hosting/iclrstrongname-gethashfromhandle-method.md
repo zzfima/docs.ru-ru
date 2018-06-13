@@ -20,9 +20,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 97d4a6bfd7a8a7aa257ad2f52d005ccc5bcd6fb6
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33432041"
 ---
 # <a name="iclrstrongnamegethashfromhandle-method"></a>Метод ICLRStrongName::GetHashFromHandle
 Создает хэш содержимого файла, который имеет заданного дескриптора файла, с помощью указанного хэш-алгоритма.  

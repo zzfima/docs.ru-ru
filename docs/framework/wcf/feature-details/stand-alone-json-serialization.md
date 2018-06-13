@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33509122"
 ---
 # <a name="stand-alone-json-serialization"></a>Автономная сериализация JSON
 JSON (JavaScript Object Notation, объектная нотация JavaScript) - формат данных, предназначенный специально для использования JavaScript-кодом, выполняемым на веб-страницах внутри браузера. Это формат данных по умолчанию, используемый службами ASP.NET AJAX, созданные в Windows Communication Foundation (WCF).  

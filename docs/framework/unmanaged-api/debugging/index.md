@@ -10,9 +10,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 86be3e7edb7149ed42dd053156de0f649f1480b4
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33423719"
 ---
 # <a name="debugging-unmanaged-api-reference"></a>Отладка (ссылка неуправляемого API)
 API отладки позволяет отладчику производить отладку кода, который выполняется в среде CLR. Отлаживаемым кодом может быть любой тип кода, поддерживаемый средой CLR.  

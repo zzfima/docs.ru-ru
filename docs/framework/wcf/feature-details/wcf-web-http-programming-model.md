@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33498014"
 ---
 # <a name="wcf-web-http-programming-model"></a>Модель веб-программирования HTTP WCF
 Windows Communication Foundation (WCF) модель программирования Web HTTP позволяет разработчикам предоставлять операции службы WCF в конечные точки не протокола SOAP. Эта возможность подробно описана в следующих подразделах.  

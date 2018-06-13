@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33496013"
 ---
 # <a name="data-contract-known-types"></a>Известные типы контрактов данных
 Класс <xref:System.Runtime.Serialization.KnownTypeAttribute> позволяет заранее задавать типы, которые следует рассматривать при десериализации. Рабочий пример см. в разделе [Known Types](../../../../docs/framework/wcf/samples/known-types.md) .  

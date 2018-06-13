@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33334201"
 ---
 # <a name="thread-pooling-c"></a>Группировка потоков в пул (C#)
 *Пул потоков* — это коллекция потоков, которые могут использоваться для выполнения нескольких задач в фоновом режиме. (Базовые сведения см. в разделе [Работа с потоками (C#)](../../../../csharp/programming-guide/concepts/threading/index.md).) Это позволяет разгрузить главный поток для асинхронного выполнения других задач.  

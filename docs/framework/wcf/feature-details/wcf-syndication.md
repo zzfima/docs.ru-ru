@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33499171"
 ---
 # <a name="wcf-syndication"></a>Синдикация WCF
 Windows Communication Foundation (WCF) обеспечивает поддержку для удобной работы с веб-каналами синдикации в форматах Atom, RSS и других нестандартных форматах, что позволяет обрабатывать и создавать их, а также предоставлять к ним доступ в конечной точке службы. В подразделах этого раздела подробно описывается модель программирования синдикации.  

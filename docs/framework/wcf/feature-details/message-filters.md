@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33496939"
 ---
 # <a name="message-filters"></a>Фильтры сообщений
 Чтобы обеспечить маршрутизацию на основе содержимого, служба маршрутизации использует реализации класса <xref:System.ServiceModel.Dispatcher.MessageFilter>, которые проверяют такие разделы сообщения, как адрес, имя конечной точки или инструкция XPath. Если ни один из фильтров, предоставляемых платформой [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)], не подходит, можно создать пользовательский фильтр, написав реализацию базового класса <xref:System.ServiceModel.Dispatcher.MessageFilter>.  

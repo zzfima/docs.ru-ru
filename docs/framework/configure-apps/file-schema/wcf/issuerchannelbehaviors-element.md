@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32747061"
 ---
 # <a name="ltissuerchannelbehaviorsgt-element"></a>Элемент &lt;issuerChannelBehaviors&gt;
 Содержит коллекцию поведений конечной точки клиента Windows Communication Foundation (WCF), (определенных в конфигурации) для использования при взаимодействии с заданными службами маркеров. Не могут содержать заданные поведения [ \<clientCredentials >](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md) элементов.  

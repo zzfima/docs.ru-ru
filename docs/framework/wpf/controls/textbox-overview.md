@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557775"
 ---
 # <a name="textbox-overview"></a>Общие сведения о TextBox
 <xref:System.Windows.Controls.TextBox> Класс позволяет отображения или редактирования неформатированного текста. Обычно <xref:System.Windows.Controls.TextBox> редактирования неформатированного текста в форме. Например, форма запроса имени пользователя, номер телефона и т. д может использовать <xref:System.Windows.Controls.TextBox> элементы управления для ввода текста. В этом разделе описываются <xref:System.Windows.Controls.TextBox> класса и приводятся примеры того, как использовать его как [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] и C#.  

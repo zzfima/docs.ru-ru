@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33272686"
 ---
 # <a name="modifiers-c-reference"></a>Модификаторы (Справочник по C#)
 Модификаторы служат для изменения объявлений типов и их членов. В этом разделе описаны модификаторы C#.  

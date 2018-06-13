@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32753005"
 ---
 # <a name="lttimeoutsgt"></a>&lt;время ожидания&gt;
 Элемент конфигурации, который задает допустимый интервал времени для открытия или закрытия узла службы.  

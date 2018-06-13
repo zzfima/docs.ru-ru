@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33500146"
 ---
 # <a name="understanding-http-authentication"></a>Основные сведения о проверке подлинности HTTP
 Проверка подлинности - это процесс проверки наличия у клиента права доступа к ресурсу. Протокол HTTP поддерживает проверку подлинности как средство согласования доступа к защищенному ресурсу.  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557970"
 ---
 # <a name="animation-and-timing-system-overview"></a>Общие сведения об анимации и системе управления временем
 В этом разделе описывается, как система управления временем использует анимацию, <xref:System.Windows.Media.Animation.Timeline>, и <xref:System.Windows.Media.Animation.Clock> классы для анимации свойства.  

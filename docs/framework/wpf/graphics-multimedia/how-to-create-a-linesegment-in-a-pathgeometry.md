@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33559692"
 ---
 # <a name="how-to-create-a-linesegment-in-a-pathgeometry"></a>Как создать LineSegment в PathGeometry
 В этом примере показано, как создать сегмент линии. Чтобы создать отрезок линии, используйте <xref:System.Windows.Media.PathGeometry>, <xref:System.Windows.Media.PathFigure>, и <xref:System.Windows.Media.LineSegment> классы.  

@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: f452a3324365fb23e1affc11dbdb2ede15346010
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33462446"
 ---
 # <a name="icorprofilerinfo4-interface"></a>Интерфейс ICorProfilerInfo4
 Предоставляет методы, используемые профилировщиками кода для взаимодействия с CLR (CLR) и управления мониторингом событий и сведения о запросе. . `ICorProfilerInfo4` Интерфейс является расширением другого `ICorProfilerInfo` интерфейсов. Он предоставляет новые методы для поддержки перекомпиляцию just-in-time (JIT), добавленные в [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].  

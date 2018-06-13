@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: a78616ea1dccdf82c4e00d23d2ff630c98cb4e38
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33431907"
 ---
 # <a name="isymunmanagedreader-interface"></a>Интерфейс ISymUnmanagedReader
 Представляет средство чтения символов, который предоставляет доступ к документам, методам и переменным в хранилище символов.  

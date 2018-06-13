@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33504946"
 ---
 # <a name="service-endpoints-and-queue-addressing"></a>Конечные точки служб и адресация очереди
 В этом разделе рассматриваются принципы обращения клиентов к службам, выполняющим чтение из очередей, и сопоставления конечных точек служб с очередями. Напоминаем на следующем рисунке классической Windows Communication Foundation (WCF) в очереди развертывания приложения.  

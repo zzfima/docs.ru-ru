@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33460493"
 ---
 # <a name="add-service-reference-in-a-portable-subset-project"></a>Добавление ссылки на службу в проект переносного вложенного набора
 Проекты переносимого подмножества позволяют программистам сборки .NET, поддерживать одно дерево исходного кода и создавать сборки, одновременно поддерживая несколько реализаций .NET (рабочего стола, Silverlight, Windows Phone и XBOX). Проекты переносимого подмножества обращаются только к переносимым сборкам .NET framework, может использоваться в любой реализации .NET.  

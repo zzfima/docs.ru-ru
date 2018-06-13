@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 06e4e3854a850c9639e93c8db2ec8ccd567b242b
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33423173"
 ---
 # <a name="icordebugprocess-interface1"></a>ICorDebugProcess интерфейс1
 Представляет процесс, выполняющий управляемый код. Этот интерфейс является подклассом ICorDebugController.  
