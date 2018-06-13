@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33401125"
 ---
 # <a name="snexe-strong-name-tool"></a>Sn.exe (средство строгих имен)
 Программа строгих имен (Sn.exe) позволяет подписывать сборки [строгими именами](../../../docs/framework/app-domains/strong-named-assemblies.md). Программа Sn.exe предусматривает параметры для управления ключами, создания подписи и ее проверки.  

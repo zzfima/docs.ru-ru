@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33352868"
 ---
 # <a name="clr-triggers"></a>Триггеры CLR
 Триггер представляет собой специальный тип хранимой процедуры, которая запускается автоматически при возникновении определенного языкового события. Благодаря интеграции Microsoft SQL Server со средой CLR инфраструктуры .NET Framework обеспечивается возможность использовать любой язык .NET Framework для создания триггеров CLR.  

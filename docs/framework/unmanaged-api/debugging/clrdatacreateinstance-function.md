@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d9d4965751db1a70871270317a644b0acb1302f7
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33405984"
 ---
 # <a name="clrdatacreateinstance-function"></a>Функция CLRDataCreateInstance
 Создает объект интерфейса для заданного целевого элемента.  

@@ -10,9 +10,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 16c787d865313f77417093555ea0cedb72aeb042
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33402136"
 ---
 # <a name="ialink3-interface"></a>Интерфейс IALink3
 Предоставляет один метод `SetManifestFile`, что позволяет задать или сбросить файл манифеста, компоновщик будет использовать при создании сборки.  

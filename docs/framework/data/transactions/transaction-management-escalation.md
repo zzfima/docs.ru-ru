@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33356863"
 ---
 # <a name="transaction-management-escalation"></a>Передача управления транзакцией на следующий уровень иерархии
 В ОС Windows реализован набор служб и модулей, которые составляют диспетчер транзакций. В данном разделе описывается процесс переноса транзакции из одного компонента диспетчера транзакций в другой.  

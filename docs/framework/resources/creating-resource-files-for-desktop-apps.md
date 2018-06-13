@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33399825"
 ---
 # <a name="creating-resource-files-for-desktop-apps"></a>Создание файлов ресурсов для приложений для настольных систем
 Ресурсы, такие как строки, изображения или данные объектов, можно включать в файлы ресурсов, чтобы сделать их легко доступными для приложения. В платформе .NET Framework предлагается пять способов создания файлов ресурсов.  

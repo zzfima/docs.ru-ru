@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 220cd1a41ed69325b557e6498a511865b78817ec
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33404519"
 ---
 # <a name="icordebugbreakpoint-interface1"></a>ICorDebugBreakpoint интерфейс1
 Представляет точку останова в функции или контрольную точку значение.  

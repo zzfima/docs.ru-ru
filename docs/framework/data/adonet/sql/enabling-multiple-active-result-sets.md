@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33364883"
 ---
 # <a name="enabling-multiple-active-result-sets"></a>Включение нескольких активных результирующих наборов
 Режим MARS - это новая возможность, которая в SQL Server используется для выполнения нескольких пакетов по одному соединению. Если для работы с SQL Server включен режим MARS, каждый используемый объект команды добавляет сеанс к соединению.  
