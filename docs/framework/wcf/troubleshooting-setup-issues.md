@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33806517"
 ---
 # <a name="troubleshooting-setup-issues"></a><span data-ttu-id="577f6-102">Устранение неполадок с установкой</span><span class="sxs-lookup"><span data-stu-id="577f6-102">Troubleshooting Setup Issues</span></span>
 <span data-ttu-id="577f6-103">В этом разделе описывается устранение неполадок Windows Communication Foundation (WCF) неполадки установки.</span><span class="sxs-lookup"><span data-stu-id="577f6-103">This topic describes how to troubleshoot Windows Communication Foundation (WCF) set up issues.</span></span>  

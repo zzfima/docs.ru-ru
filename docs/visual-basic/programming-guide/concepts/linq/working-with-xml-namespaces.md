@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33647405"
 ---
 # <a name="working-with-xml-namespaces-visual-basic"></a><span data-ttu-id="0db67-102">Работа с пространствами имен XML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="0db67-102">Working with XML Namespaces (Visual Basic)</span></span>
 <span data-ttu-id="0db67-103">Темы в этом разделе описывают, как [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] поддерживает пространства имен.</span><span class="sxs-lookup"><span data-stu-id="0db67-103">The topics in this section describe how [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] supports namespaces.</span></span>  

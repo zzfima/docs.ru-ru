@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33656339"
 ---
 # <a name="-highentropyva-visual-basic"></a><span data-ttu-id="0e7c9-102">-highentropyva (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="0e7c9-102">-highentropyva (Visual Basic)</span></span>
 <span data-ttu-id="0e7c9-103">Указывает, 64-разрядный исполняемый файл или исполняемый файл, помеченный атрибутом [/Platform: anycpu](../../../visual-basic/reference/command-line-compiler/platform.md) параметр компилятора поддерживает технологию Address Space макета Randomization (ASLR) с высокой энтропией.</span><span class="sxs-lookup"><span data-stu-id="0e7c9-103">Indicates whether a 64-bit executable or an executable that's marked by the [/platform:anycpu](../../../visual-basic/reference/command-line-compiler/platform.md) compiler option supports high entropy Address Space Layout Randomization (ASLR).</span></span>  

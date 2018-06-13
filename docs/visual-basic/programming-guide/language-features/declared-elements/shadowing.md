@@ -23,6 +23,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33656075"
 ---
 # <a name="shadowing-in-visual-basic"></a><span data-ttu-id="715de-102">Сокрытие в Visual Basic</span><span class="sxs-lookup"><span data-stu-id="715de-102">Shadowing in Visual Basic</span></span>
 <span data-ttu-id="715de-103">Если два программных элемента имеют то же имя, один из них может скрыть, или *тени*, другой.</span><span class="sxs-lookup"><span data-stu-id="715de-103">When two programming elements share the same name, one of them can hide, or *shadow*, the other one.</span></span> <span data-ttu-id="715de-104">В таком случае скрытый элемент недоступен для обращения. Вместо этого когда ваш код использует имя элемента, компилятор Visual Basic разрешает его скрывающий элемент.</span><span class="sxs-lookup"><span data-stu-id="715de-104">In such a situation, the shadowed element is not available for reference; instead, when your code uses the element name, the Visual Basic compiler resolves it to the shadowing element.</span></span>  

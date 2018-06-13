@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33805529"
 ---
 # <a name="controlling-resource-consumption-and-improving-performance"></a><span data-ttu-id="ebecb-102">Управление потреблением ресурсов и повышение производительности</span><span class="sxs-lookup"><span data-stu-id="ebecb-102">Controlling Resource Consumption and Improving Performance</span></span>
 <span data-ttu-id="ebecb-103">В этом разделе описано несколько свойств разных областей архитектуры Windows Communication Foundation (WCF), которые работают для управления потреблением ресурсов и влияют на метрики производительности.</span><span class="sxs-lookup"><span data-stu-id="ebecb-103">This topic describes various properties in different areas of the Windows Communication Foundation (WCF) architecture that work to control resource consumption and affect performance metrics.</span></span>  

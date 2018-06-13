@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33806504"
 ---
 # <a name="specifying-and-handling-faults-in-contracts-and-services"></a><span data-ttu-id="e938c-102">Задание и обработка сбоев в контрактах и службах</span><span class="sxs-lookup"><span data-stu-id="e938c-102">Specifying and Handling Faults in Contracts and Services</span></span>
 <span data-ttu-id="e938c-103">Приложения Windows Communication Foundation (WCF) обрабатывают ошибки, сопоставляя объекты управляемых исключений объекта ошибки SOAP и ошибки SOAP для управляемые объекты исключений.</span><span class="sxs-lookup"><span data-stu-id="e938c-103">Windows Communication Foundation (WCF) applications handle error situations by mapping managed exception objects to SOAP fault objects and SOAP fault objects to managed exception objects.</span></span> <span data-ttu-id="e938c-104">В подразделах этого раздела описывается, как разрабатывать контракты, чтобы представлять ошибки в виде пользовательских ошибок SOAP, как возвращать эти ошибки в реализации службы, и как клиенты могут перехватывать такие ошибки.</span><span class="sxs-lookup"><span data-stu-id="e938c-104">The topics in this section discuss how to design contracts to expose error conditions as custom SOAP faults, how to return such faults as part of service implementation, and how clients catch such faults.</span></span>  

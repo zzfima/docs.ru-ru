@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809431"
 ---
 # <a name="durable-duplex"></a><span data-ttu-id="6b23d-102">Сохраняемый дуплекс</span><span class="sxs-lookup"><span data-stu-id="6b23d-102">Durable Duplex</span></span>
 <span data-ttu-id="6b23d-103">В этом примере показано, как установить и настроить устойчивый дуплексный обмен сообщениями с помощью действий обмена сообщениями в Windows Workflow Foundation (WF).</span><span class="sxs-lookup"><span data-stu-id="6b23d-103">This sample demonstrates how to set up and configure durable duplex message exchange using the messaging activities in Windows Workflow Foundation (WF).</span></span> <span data-ttu-id="6b23d-104">Устойчивый дуплексный обмен сообщениями - это двусторонний обмен сообщениями в течение длительного времени.</span><span class="sxs-lookup"><span data-stu-id="6b23d-104">A durable duplex message exchange is a two-way message exchange that takes place over a long period of time.</span></span> <span data-ttu-id="6b23d-105">Длительность обмена сообщениями может превышать время существования коммуникационного канала и время существования экземпляров службы в памяти.</span><span class="sxs-lookup"><span data-stu-id="6b23d-105">The lifetime of the message exchange may be longer than the lifetime of the communication channel and the in-memory lifetime of the service instances.</span></span>  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803679"
 ---
 # <a name="how-to-customize-a-system-provided-binding"></a><span data-ttu-id="e7fe2-102">Практическое руководство. Изменение привязки, предоставляемой системой</span><span class="sxs-lookup"><span data-stu-id="e7fe2-102">How to: Customize a System-Provided Binding</span></span>
 <span data-ttu-id="e7fe2-103">Windows Communication Foundation (WCF) включает в себя несколько предоставляемых системой привязок, которые позволяют настраивать некоторые свойства базовых элементов привязки, но не все свойства.</span><span class="sxs-lookup"><span data-stu-id="e7fe2-103">Windows Communication Foundation (WCF) includes several system-provided bindings that allow you to configure some of the properties of the underlying binding elements, but not all of the properties.</span></span> <span data-ttu-id="e7fe2-104">В данном разделе показано, как задать свойства в элементах привязки, чтобы создать пользовательскую привязку.</span><span class="sxs-lookup"><span data-stu-id="e7fe2-104">This topic demonstrates how to set properties on the binding elements to create a custom binding.</span></span>  

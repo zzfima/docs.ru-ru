@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809509"
 ---
 # <a name="poison-message-handling-in-msmq-40"></a><span data-ttu-id="e9aa4-102">Обработка подозрительных сообщений в MSMQ 4.0</span><span class="sxs-lookup"><span data-stu-id="e9aa4-102">Poison Message Handling in MSMQ 4.0</span></span>
 <span data-ttu-id="e9aa4-103">В этом образце демонстрируется обработка подозрительных сообщений в службе.</span><span class="sxs-lookup"><span data-stu-id="e9aa4-103">This sample demonstrates how to perform poison message handling in a service.</span></span> <span data-ttu-id="e9aa4-104">Этот пример построен на [транзакции привязки MSMQ](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md) образца.</span><span class="sxs-lookup"><span data-stu-id="e9aa4-104">This sample is based on the [Transacted MSMQ Binding](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md) sample.</span></span> <span data-ttu-id="e9aa4-105">В этом образце используется привязка `netMsmqBinding`.</span><span class="sxs-lookup"><span data-stu-id="e9aa4-105">This sample uses the `netMsmqBinding`.</span></span> <span data-ttu-id="e9aa4-106">Служба представляет собой резидентное консольное приложение, позволяющее наблюдать за получением службой сообщений из очереди.</span><span class="sxs-lookup"><span data-stu-id="e9aa4-106">The service is a self-hosted console application to enable you to observe the service receiving queued messages.</span></span>  

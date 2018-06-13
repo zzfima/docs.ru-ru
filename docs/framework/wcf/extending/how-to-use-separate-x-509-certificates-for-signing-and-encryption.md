@@ -14,6 +14,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33806186"
 ---
 # <a name="how-to-use-separate-x509-certificates-for-signing-and-encryption"></a><span data-ttu-id="d81c5-102">Практическое руководство. Использование отдельных сертификатов X.509 для подписывания и шифрования</span><span class="sxs-lookup"><span data-stu-id="d81c5-102">How to: Use Separate X.509 Certificates for Signing and Encryption</span></span>
 <span data-ttu-id="d81c5-103">В этом разделе показано, как настроить Windows Communication Foundation (WCF) на использование различных сертификатов для подписывания и шифрования на клиент и служба сообщений.</span><span class="sxs-lookup"><span data-stu-id="d81c5-103">This topic shows how to configure Windows Communication Foundation (WCF) to use different certificates for message signing and encryption on both the client and service.</span></span>  

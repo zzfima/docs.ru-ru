@@ -14,6 +14,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33808966"
 ---
 # <a name="how-to-create-a-custom-security-token-provider"></a><span data-ttu-id="27792-102">Практическое руководство. Создание пользовательского поставщика маркеров безопасности</span><span class="sxs-lookup"><span data-stu-id="27792-102">How to: Create a Custom Security Token Provider</span></span>
 <span data-ttu-id="27792-103">В этом разделе показано, как создавать новые типы маркеров с помощью поставщика пользовательских маркеров безопасности и как интегрировать поставщик с диспетчером пользовательских маркеров безопасности.</span><span class="sxs-lookup"><span data-stu-id="27792-103">This topic shows how to create new token types with a custom security token provider and how to integrate the provider with a custom security token manager.</span></span>  

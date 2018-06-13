@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33649429"
 ---
 # <a name="type-promotion-visual-basic"></a><span data-ttu-id="832ed-102">Повышение типа (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="832ed-102">Type Promotion (Visual Basic)</span></span>
 <span data-ttu-id="832ed-103">При объявлении элемента программирования в модуле Visual Basic повышает уровень его области до пространства имен, содержащего модуль.</span><span class="sxs-lookup"><span data-stu-id="832ed-103">When you declare a programming element in a module, Visual Basic promotes its scope to the namespace containing the module.</span></span> <span data-ttu-id="832ed-104">Это называется *введите рекламной акции*.</span><span class="sxs-lookup"><span data-stu-id="832ed-104">This is known as *type promotion*.</span></span>  

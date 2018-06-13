@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33806972"
 ---
 # <a name="webcontenttypemapper-sample"></a><span data-ttu-id="8a67a-102">Пример WebContentTypeMapper</span><span class="sxs-lookup"><span data-stu-id="8a67a-102">WebContentTypeMapper Sample</span></span>
 <span data-ttu-id="8a67a-103">В этом примере показано, как сопоставить новые типы содержимого для форматами тела сообщения Windows Communication Foundation (WCF).</span><span class="sxs-lookup"><span data-stu-id="8a67a-103">This sample demonstrates how to map new content types to Windows Communication Foundation (WCF) message body formats.</span></span>  

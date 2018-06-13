@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33645568"
 ---
 # <a name="how-to-write-queries-on-xml-in-namespaces-visual-basic"></a><span data-ttu-id="a7362-102">Как: создавать запросы к XML в пространствах имен (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="a7362-102">How to: Write Queries on XML in Namespaces (Visual Basic)</span></span>
 <span data-ttu-id="a7362-103">Для записи XML-запросов в пространстве имен необходимо использовать объекты <xref:System.Xml.Linq.XName> с правильно заданным пространством имен.</span><span class="sxs-lookup"><span data-stu-id="a7362-103">To write a query on XML that is in a namespace, you must use <xref:System.Xml.Linq.XName> objects that have the correct namespace.</span></span>  

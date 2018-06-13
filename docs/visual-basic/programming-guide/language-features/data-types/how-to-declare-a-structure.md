@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33650031"
 ---
 # <a name="how-to-declare-a-structure-visual-basic"></a><span data-ttu-id="0a003-102">Практическое руководство. Объявление структуры (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="0a003-102">How to: Declare a Structure (Visual Basic)</span></span>
 <span data-ttu-id="0a003-103">Объявление структуры с начинается [оператор Structure](../../../../visual-basic/language-reference/statements/structure-statement.md), и завершается оператором `End` `Structure` инструкции.</span><span class="sxs-lookup"><span data-stu-id="0a003-103">You begin a structure declaration with the [Structure Statement](../../../../visual-basic/language-reference/statements/structure-statement.md), and you end it with the `End` `Structure` statement.</span></span> <span data-ttu-id="0a003-104">Между этими двумя операторами необходимо объявить по крайней мере один *элемент*.</span><span class="sxs-lookup"><span data-stu-id="0a003-104">Between these two statements you must declare at least one *element*.</span></span> <span data-ttu-id="0a003-105">Элементы могут иметь любой тип данных, но по крайней мере один должен быть не общей переменной или непользовательским событий.</span><span class="sxs-lookup"><span data-stu-id="0a003-105">The elements can be of any data type, but at least one must be either a nonshared variable or a nonshared, noncustom event.</span></span>  

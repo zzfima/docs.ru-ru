@@ -10,6 +10,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33806653"
 ---
 # <a name="how-to-specify-client-credential-values"></a><span data-ttu-id="9874b-102">Практическое руководство. Задание значений учетных данных клиента</span><span class="sxs-lookup"><span data-stu-id="9874b-102">How to: Specify Client Credential Values</span></span>
 <span data-ttu-id="9874b-103">С помощью Windows Communication Foundation (WCF), службы можно указать способ проверки подлинности клиента в службу.</span><span class="sxs-lookup"><span data-stu-id="9874b-103">Using Windows Communication Foundation (WCF), the service can specify how a client is authenticated to the service.</span></span> <span data-ttu-id="9874b-104">Например, в службе можно указать, что клиент проходит проверку подлинности с помощью сертификата.</span><span class="sxs-lookup"><span data-stu-id="9874b-104">For example, a service can stipulate that the client be authenticated with a certificate.</span></span>  

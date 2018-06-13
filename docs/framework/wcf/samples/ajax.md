@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803431"
 ---
 # <a name="ajax"></a><span data-ttu-id="d08ce-102">AJAX</span><span class="sxs-lookup"><span data-stu-id="d08ce-102">AJAX</span></span>
 <span data-ttu-id="d08ce-103">В этом разделе содержатся образцы, демонстрирующие функциональность асинхронных сценариев JavaScript и XML (AJAX).</span><span class="sxs-lookup"><span data-stu-id="d08ce-103">This section includes samples that demonstrate Asynchronous JavaScript and XML functionality.</span></span>  

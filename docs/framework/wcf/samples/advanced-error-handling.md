@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33810087"
 ---
 # <a name="advanced-error-handling"></a><span data-ttu-id="93e36-102">Расширенная обработка ошибок</span><span class="sxs-lookup"><span data-stu-id="93e36-102">Advanced Error Handling</span></span>
 <span data-ttu-id="93e36-103">В этом примере демонстрируется служба маршрутизации Windows Communication Foundation (WCF).</span><span class="sxs-lookup"><span data-stu-id="93e36-103">This sample demonstrates the Windows Communication Foundation (WCF) routing service.</span></span> <span data-ttu-id="93e36-104">Служба маршрутизации является компонентом WCF, который упрощает Включение маршрутизатора на основе содержимого в приложении.</span><span class="sxs-lookup"><span data-stu-id="93e36-104">The routing service is a WCF component that makes it easy to include a content-based router in your application.</span></span> <span data-ttu-id="93e36-105">В этом образце показано, как служба маршрутизации выполняет интеллектуальное восстановление работы после ошибок с использованием транзакций и более сложных понятий обмена сообщениями, таких как многоадресная передача.</span><span class="sxs-lookup"><span data-stu-id="93e36-105">This sample shows how the routing service intelligently recovers from errors, using transactions and other more complex messaging concepts such as multicasting.</span></span>  

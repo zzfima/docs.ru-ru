@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33640636"
 ---
 # <a name="registry-key-39ltkeynamegt39-could-not-be-found"></a><span data-ttu-id="f18b9-102">Раздел реестра &#39; &lt;keyname&gt; &#39; не найден</span><span class="sxs-lookup"><span data-stu-id="f18b9-102">Registry key &#39;&lt;keyname&gt;&#39; could not be found</span></span>
 <span data-ttu-id="f18b9-103">Не удается найти раздел реестра.</span><span class="sxs-lookup"><span data-stu-id="f18b9-103">A registry key cannot be found.</span></span>  

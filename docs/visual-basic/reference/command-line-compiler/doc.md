@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33651561"
 ---
 # <a name="-doc"></a><span data-ttu-id="efffe-102">-doc</span><span class="sxs-lookup"><span data-stu-id="efffe-102">-doc</span></span>
 <span data-ttu-id="efffe-103">Обрабатывает комментарии к документации в XML-файл.</span><span class="sxs-lookup"><span data-stu-id="efffe-103">Processes documentation comments to an XML file.</span></span>  

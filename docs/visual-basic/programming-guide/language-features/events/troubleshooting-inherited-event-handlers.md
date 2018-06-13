@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33646335"
 ---
 # <a name="troubleshooting-inherited-event-handlers-in-visual-basic"></a><span data-ttu-id="ff8f8-102">Устранение неполадок, связанных с унаследованными обработчиками событий, в Visual Basic</span><span class="sxs-lookup"><span data-stu-id="ff8f8-102">Troubleshooting Inherited Event Handlers in Visual Basic</span></span>
 <span data-ttu-id="ff8f8-103">В этом разделе перечислены распространенные проблемы, связанные с обработчиками событий в наследуемых компонентах.</span><span class="sxs-lookup"><span data-stu-id="ff8f8-103">This topic lists common issues that arise with event handlers in inherited components.</span></span>  

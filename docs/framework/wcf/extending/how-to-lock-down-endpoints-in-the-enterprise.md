@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33806543"
 ---
 # <a name="how-to-lock-down-endpoints-in-the-enterprise"></a><span data-ttu-id="f5020-102">Практическое руководство. Блокировка конечных точек в среде предприятия</span><span class="sxs-lookup"><span data-stu-id="f5020-102">How to: Lock Down Endpoints in the Enterprise</span></span>
 <span data-ttu-id="f5020-103">Крупным предприятиям часто требуется, чтобы приложения разрабатывались в соответствии с политиками безопасности предприятия.</span><span class="sxs-lookup"><span data-stu-id="f5020-103">Large enterprises often require that applications are developed in compliance with enterprise security policies.</span></span> <span data-ttu-id="f5020-104">Следующий раздел описывает, как разработать и установить проверяющий элемент конечной точки клиента, который может использоваться для проверки все клиентские приложения Windows Communication Foundation (WCF), установленных на компьютерах.</span><span class="sxs-lookup"><span data-stu-id="f5020-104">The following topic discusses how to develop and install a client endpoint validator that can be used to validate all Windows Communication Foundation (WCF) client applications installed on computers.</span></span>  

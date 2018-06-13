@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33649231"
 ---
 # <a name="calling-a-property-or-method-using-a-string-name-visual-basic"></a><span data-ttu-id="f8895-102">Вызов свойства или метода с помощью строкового имени (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="f8895-102">Calling a Property or Method Using a String Name (Visual Basic)</span></span>
 <span data-ttu-id="f8895-103">В большинстве случаев доступ к свойствам и методам объекта во время разработки и писать код для их обработки.</span><span class="sxs-lookup"><span data-stu-id="f8895-103">In most cases, you can discover the properties and methods of an object at design time, and write code to handle them.</span></span> <span data-ttu-id="f8895-104">Однако в некоторых случаях может не известно, какие свойства и методы объекта заранее или необходима гибкость конечному пользователю для указания свойств или выполнения методов во время выполнения.</span><span class="sxs-lookup"><span data-stu-id="f8895-104">However, in some cases you may not know about an object's properties and methods in advance, or you may just want the flexibility of enabling an end user to specify properties or execute methods at run time.</span></span>  

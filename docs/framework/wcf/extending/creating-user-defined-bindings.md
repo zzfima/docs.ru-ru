@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33806748"
 ---
 # <a name="creating-user-defined-bindings"></a><span data-ttu-id="2c391-102">Создание пользовательских привязок</span><span class="sxs-lookup"><span data-stu-id="2c391-102">Creating User-Defined Bindings</span></span>
 <span data-ttu-id="2c391-103">Существует несколько способов создания привязок, не предоставленных системой.</span><span class="sxs-lookup"><span data-stu-id="2c391-103">There are several ways to create bindings not provided by the system:</span></span>  

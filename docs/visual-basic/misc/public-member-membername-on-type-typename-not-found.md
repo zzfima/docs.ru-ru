@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33637534"
 ---
 # <a name="public-member-39ltmembernamegt39-on-type-39lttypenamegt39-not-found"></a><span data-ttu-id="24c5b-102">Открытый член &#39; &lt;membername&gt; &#39; в типе &#39; &lt;typename&gt; &#39; не найден</span><span class="sxs-lookup"><span data-stu-id="24c5b-102">Public member &#39;&lt;membername&gt;&#39; on type &#39;&lt;typename&gt;&#39; not found</span></span>
 <span data-ttu-id="24c5b-103">Не удается найти член, к которому вы пытаетесь получить доступ.</span><span class="sxs-lookup"><span data-stu-id="24c5b-103">The member you are trying to access cannot be found.</span></span> <span data-ttu-id="24c5b-104">Эта ошибка может возникать при доступе к закрытым членам объектов с поздней привязкой.</span><span class="sxs-lookup"><span data-stu-id="24c5b-104">This error can occur when accessing non-public members of late-bound objects.</span></span>  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33808488"
 ---
 # <a name="walkthrough-creating-custom-client-and-service-credentials"></a><span data-ttu-id="84858-102">Пошаговое руководство. Создание пользовательских учетных данных для клиента и службы</span><span class="sxs-lookup"><span data-stu-id="84858-102">Walkthrough: Creating Custom Client and Service Credentials</span></span>
 <span data-ttu-id="84858-103">В этом разделе показано, как реализовать пользовательские учетные данные клиента и службы, и как использовать пользовательские учетные данные из кода приложения.</span><span class="sxs-lookup"><span data-stu-id="84858-103">This topic shows how to implement custom client and service credentials and how to use custom credentials from application code.</span></span>  

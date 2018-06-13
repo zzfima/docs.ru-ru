@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33807555"
 ---
 # <a name="durable-issued-token-provider"></a><span data-ttu-id="12d8c-102">Пользовательский поставщик маркеров</span><span class="sxs-lookup"><span data-stu-id="12d8c-102">Durable Issued Token Provider</span></span>
 <span data-ttu-id="12d8c-103">Этот пример демонстрирует, как реализовать пользовательский поставщик маркеров, выдаваемых клиенту.</span><span class="sxs-lookup"><span data-stu-id="12d8c-103">This sample demonstrates how to implement a custom client issued token provider.</span></span>  

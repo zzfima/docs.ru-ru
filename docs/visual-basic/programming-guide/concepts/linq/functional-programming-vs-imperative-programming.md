@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33644281"
 ---
 # <a name="functional-programming-vs-imperative-programming-visual-basic"></a><span data-ttu-id="2b652-102">Сравнение функционального и Императивного программирования (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="2b652-102">Functional Programming vs. Imperative Programming (Visual Basic)</span></span>
 <span data-ttu-id="2b652-103">В этом разделе сравнивается и противопоставляется функциональное программирование с традиционным императивным (процедурным) программированием.</span><span class="sxs-lookup"><span data-stu-id="2b652-103">This topic compares and contrasts functional programming with more traditional imperative (procedural) programming.</span></span>  

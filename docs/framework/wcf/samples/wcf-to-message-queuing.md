@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33806374"
 ---
 # <a name="windows-communication-foundation-to-message-queuing"></a><span data-ttu-id="06fed-102">Отправка сообщений из приложения Windows Communication Foundation в приложение MSMQ</span><span class="sxs-lookup"><span data-stu-id="06fed-102">Windows Communication Foundation to Message Queuing</span></span>
 <span data-ttu-id="06fed-103">В этом примере показано, как приложения Windows Communication Foundation (WCF) может отправлять сообщения приложению очереди сообщений (MSMQ).</span><span class="sxs-lookup"><span data-stu-id="06fed-103">This sample demonstrates how a Windows Communication Foundation (WCF) application can send a message to a Message Queuing (MSMQ) application.</span></span> <span data-ttu-id="06fed-104">Служба представляет собой резидентное консольное приложение, позволяющее наблюдать за получением службой сообщений из очереди.</span><span class="sxs-lookup"><span data-stu-id="06fed-104">The service is a self-hosted console application to enable you to observe the service receiving queued messages.</span></span> <span data-ttu-id="06fed-105">Одновременная работа службы и клиента не требуется.</span><span class="sxs-lookup"><span data-stu-id="06fed-105">The service and client do not have to be running at the same time.</span></span>  

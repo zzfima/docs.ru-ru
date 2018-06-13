@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33655828"
 ---
 # <a name="visual-basic-compiler-options-listed-by-category"></a><span data-ttu-id="51f58-102">Параметры компилятора Visual Basic, упорядоченные по категориям</span><span class="sxs-lookup"><span data-stu-id="51f58-102">Visual Basic compiler options listed by category</span></span>
 <span data-ttu-id="51f58-103">Компилятор командной строки Visual Basic предоставляется в качестве альтернативы компилятору в среде разработки Visual Studio (IDE).</span><span class="sxs-lookup"><span data-stu-id="51f58-103">The Visual Basic command-line compiler is provided as an alternative to compiling programs from within the Visual Studio integrated development environment (IDE).</span></span> <span data-ttu-id="51f58-104">Ниже приведен список параметров компилятора командной строки Visual Basic, отсортированных по функциональной категории.</span><span class="sxs-lookup"><span data-stu-id="51f58-104">The following is a list of the Visual Basic command-line compiler options sorted by functional category.</span></span>  

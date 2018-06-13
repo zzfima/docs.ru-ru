@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33638660"
 ---
 # <a name="file-39ltfilenamegt39-cannot-be-deleted-because-it-is-open"></a><span data-ttu-id="fbcfd-102">Файл &#39; &lt;filename&gt; &#39; нельзя удалить, поскольку он открыт</span><span class="sxs-lookup"><span data-stu-id="fbcfd-102">File &#39;&lt;filename&gt;&#39; cannot be deleted because it is open</span></span>
 <span data-ttu-id="fbcfd-103">Предпринята попытка удаления открытого файла.</span><span class="sxs-lookup"><span data-stu-id="fbcfd-103">A deletion is being attempted on an open file.</span></span>  

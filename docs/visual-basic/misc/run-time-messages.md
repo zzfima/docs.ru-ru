@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33644463"
 ---
 # <a name="visual-basic-run-time-messages"></a><span data-ttu-id="6cd77-102">Сообщения времени выполнения в Visual Basic</span><span class="sxs-lookup"><span data-stu-id="6cd77-102">Visual Basic Run-Time Messages</span></span>
 <span data-ttu-id="6cd77-103">Этот раздел содержит сообщения об ошибках Visual Basic, возникающих во время выполнения.</span><span class="sxs-lookup"><span data-stu-id="6cd77-103">This section contains the Visual Basic error messages that occur at run time.</span></span>  

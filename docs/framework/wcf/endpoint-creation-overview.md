@@ -12,6 +12,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809174"
 ---
 # <a name="endpoint-creation-overview"></a><span data-ttu-id="bebdc-102">Общие сведения о создании конечных точек</span><span class="sxs-lookup"><span data-stu-id="bebdc-102">Endpoint Creation Overview</span></span>
 <span data-ttu-id="bebdc-103">Весь обмен данными со службой Windows Communication Foundation (WCF) осуществляется через *конечные точки* службы.</span><span class="sxs-lookup"><span data-stu-id="bebdc-103">All communication with a Windows Communication Foundation (WCF) service occurs through the *endpoints* of the service.</span></span> <span data-ttu-id="bebdc-104">Конечные точки предоставляют клиентам доступ к функциям, который предлагает службы WCF.</span><span class="sxs-lookup"><span data-stu-id="bebdc-104">Endpoints provide the clients access to the functionality that a WCF service offers.</span></span> <span data-ttu-id="bebdc-105">В данном разделе приводится описание структуры конечной точки и способов определения конечной точки в конфигурации и в коде.</span><span class="sxs-lookup"><span data-stu-id="bebdc-105">This section describes the structure of an endpoint and outlines how to define an endpoint in configuration and in code.</span></span>  

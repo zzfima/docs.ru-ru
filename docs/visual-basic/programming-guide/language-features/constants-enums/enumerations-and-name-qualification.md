@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33648584"
 ---
 # <a name="enumerations-and-name-qualification-visual-basic"></a><span data-ttu-id="043cd-102">Перечисления и уточнение имен (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="043cd-102">Enumerations and Name Qualification (Visual Basic)</span></span>
 <span data-ttu-id="043cd-103">Обычно при ссылке на член перечисления необходимо уточнить имя члена перечисления.</span><span class="sxs-lookup"><span data-stu-id="043cd-103">Normally, when referring to a member of an enumeration, you must qualify the member name with the enumeration name.</span></span> <span data-ttu-id="043cd-104">Например, для обращения к `Sunday` членом вашей `Days` перечисления, используется следующий синтаксис:</span><span class="sxs-lookup"><span data-stu-id="043cd-104">For example, to refer to the `Sunday` member of your `Days` enumeration, you would use the following syntax:</span></span>  

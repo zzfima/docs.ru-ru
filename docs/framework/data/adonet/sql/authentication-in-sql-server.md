@@ -7,6 +7,7 @@ ms.sourcegitcommit: 77d9a94dac4c05827ed0663d95e0f9ad35d6682e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/24/2018
+ms.locfileid: "34472391"
 ---
 # <a name="authentication-in-sql-server"></a><span data-ttu-id="c9285-102">Аутентификация в SQL Server</span><span class="sxs-lookup"><span data-stu-id="c9285-102">Authentication in SQL Server</span></span>
 <span data-ttu-id="c9285-103">SQL Server поддерживает два режима проверки подлинности: режим проверки подлинности Windows и режим смешанной проверки подлинности.</span><span class="sxs-lookup"><span data-stu-id="c9285-103">SQL Server supports two authentication modes, Windows authentication mode and mixed mode.</span></span>  

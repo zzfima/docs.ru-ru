@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33645867"
 ---
 # <a name="how-to-write-queries-with-complex-filtering-visual-basic"></a><span data-ttu-id="341b5-102">Как: создавать запросы с комплексной фильтрацией (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="341b5-102">How to: Write Queries with Complex Filtering (Visual Basic)</span></span>
 <span data-ttu-id="341b5-103">Иногда возникает необходимость в написании запросов LINQ to XML с комплексной фильтрацией.</span><span class="sxs-lookup"><span data-stu-id="341b5-103">Sometimes you want to write LINQ to XML queries with complex filters.</span></span> <span data-ttu-id="341b5-104">Например, может потребоваться найти все элементы, имеющие дочерние элементы с определенным именем и значением.</span><span class="sxs-lookup"><span data-stu-id="341b5-104">For example, you might have to find all elements that have a child element with a particular name and value.</span></span> <span data-ttu-id="341b5-105">В этом разделе приводится пример написания запроса с комплексной фильтрацией.</span><span class="sxs-lookup"><span data-stu-id="341b5-105">This topic gives an example of writing a query with complex filtering.</span></span>  

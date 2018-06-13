@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33805201"
 ---
 # <a name="extensible-objects"></a><span data-ttu-id="9e779-102">Расширяемые объекты</span><span class="sxs-lookup"><span data-stu-id="9e779-102">Extensible Objects</span></span>
 <span data-ttu-id="9e779-103">Шаблон расширяемого объекта используется для расширения существующих классов среды выполнения при помощи новых функций или добавления нового состояния к объекту.</span><span class="sxs-lookup"><span data-stu-id="9e779-103">The extensible object pattern is used to either extend existing runtime classes with new functionality or to add new state to an object.</span></span> <span data-ttu-id="9e779-104">Расширения, привязанные к одному из расширяемых объектов, позволяют использовать поведения на различных этапах обработки для получения доступа к общему состоянию и функциональности, привязанным к общему расширяемому объекту, к которому они могут получить доступ.</span><span class="sxs-lookup"><span data-stu-id="9e779-104">Extensions, attached to one of the extensible objects, enable behaviors at very different stages in processing to access shared state and functionality attached to a common extensible object that they can access.</span></span>  

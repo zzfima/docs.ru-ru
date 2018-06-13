@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33652426"
 ---
 # <a name="-recurse"></a><span data-ttu-id="d240a-102">-recurse</span><span class="sxs-lookup"><span data-stu-id="d240a-102">-recurse</span></span>
 <span data-ttu-id="d240a-103">Компилирует файлы с исходным кодом во всех дочерних папках указанного каталога или каталога проекта.</span><span class="sxs-lookup"><span data-stu-id="d240a-103">Compiles source-code files in all child directories of either the specified directory or the project directory.</span></span>  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33807529"
 ---
 # <a name="load-balancing"></a><span data-ttu-id="83fa1-102">Балансировка нагрузки</span><span class="sxs-lookup"><span data-stu-id="83fa1-102">Load Balancing</span></span>
 <span data-ttu-id="83fa1-103">Для масштабирования их по их развертывания в ферме серверов с балансировкой нагрузки является одним из способов увеличения объема приложений Windows Communication Foundation (WCF).</span><span class="sxs-lookup"><span data-stu-id="83fa1-103">One way to increase the capacity of Windows Communication Foundation (WCF) applications is to scale them out by deploying them into a load-balanced server farm.</span></span> <span data-ttu-id="83fa1-104">Приложения WCF, можно с помощью стандартных методов распределения нагрузки, включая подсистемы балансировки нагрузки программного обеспечения Windows балансировки сетевой нагрузки, а также средств балансировки нагрузки на основе оборудования с балансировкой нагрузки.</span><span class="sxs-lookup"><span data-stu-id="83fa1-104">WCF applications can be load balanced using standard load balancing techniques, including software load balancers such as Windows Network Load Balancing as well as hardware-based load balancing appliances.</span></span>  

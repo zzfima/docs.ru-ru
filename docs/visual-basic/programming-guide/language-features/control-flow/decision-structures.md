@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33648201"
 ---
 # <a name="decision-structures-visual-basic"></a><span data-ttu-id="d25ea-102">Структуры решений (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="d25ea-102">Decision Structures (Visual Basic)</span></span>
 <span data-ttu-id="d25ea-103">Visual Basic позволяет проверять условия и выполнять различные операции в зависимости от результатов этой проверки.</span><span class="sxs-lookup"><span data-stu-id="d25ea-103">Visual Basic lets you test conditions and perform different operations depending on the results of that test.</span></span> <span data-ttu-id="d25ea-104">Можно проверить условие true или false, для различных значений выражений или исключений, выдаваемых при выполнении ряд инструкций.</span><span class="sxs-lookup"><span data-stu-id="d25ea-104">You can test for a condition being true or false, for various values of an expression, or for various exceptions generated when you execute a series of statements.</span></span>  

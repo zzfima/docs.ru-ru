@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33637547"
 ---
 # <a name="operator-is-not-valid-for-39ltname1gt39-and-39ltname2gt39"></a><span data-ttu-id="e2362-102">Недопустимый оператор для &#39; &lt;name1&gt; &#39; и &#39; &lt;name2&gt;&#39;</span><span class="sxs-lookup"><span data-stu-id="e2362-102">Operator is not valid for &#39;&lt;name1&gt;&#39; and &#39;&lt;name2&gt;&#39;</span></span>
 <span data-ttu-id="e2362-103">Оператор не является допустимым для типов, с которыми совершаются операции.</span><span class="sxs-lookup"><span data-stu-id="e2362-103">An operator is not appropriate for the types being operated on.</span></span>  

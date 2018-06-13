@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803794"
 ---
 # <a name="address-headers"></a><span data-ttu-id="3f714-102">Заголовки адресов</span><span class="sxs-lookup"><span data-stu-id="3f714-102">Address Headers</span></span>
 <span data-ttu-id="3f714-103">В образце заголовков адреса демонстрируется передача клиентами ссылочных параметров для службы с помощью Windows Communication Foundation (WCF).</span><span class="sxs-lookup"><span data-stu-id="3f714-103">The Address Headers sample demonstrates how clients can pass reference parameters to a service using Windows Communication Foundation (WCF).</span></span>  

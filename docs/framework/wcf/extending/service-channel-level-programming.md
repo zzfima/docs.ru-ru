@@ -10,6 +10,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33805864"
 ---
 # <a name="service-channel-level-programming"></a><span data-ttu-id="ecd7d-102">Программирование служб на уровне канала</span><span class="sxs-lookup"><span data-stu-id="ecd7d-102">Service Channel-Level Programming</span></span>
 <span data-ttu-id="ecd7d-103">В этом разделе описывается создание приложения службы Windows Communication Foundation (WCF) без использования <xref:System.ServiceModel.ServiceHost?displayProperty=nameWithType> и его связанной объектной модели.</span><span class="sxs-lookup"><span data-stu-id="ecd7d-103">This topic describes how to write a Windows Communication Foundation (WCF) service application without using the <xref:System.ServiceModel.ServiceHost?displayProperty=nameWithType> and its associated object model.</span></span>  
