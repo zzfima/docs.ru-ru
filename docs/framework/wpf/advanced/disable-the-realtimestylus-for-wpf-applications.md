@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33545666"
 ---
 # <a name="disable-the-realtimestylus-for-wpf-applications"></a>Отключение объекта RealTimeStylus для WPF-приложений
 Windows Presentation Foundation (WPF) содержит встроенную поддержку Windows 7 сенсорный ввод. Поддержка проходит по ввод от пера в режиме реального времени платформы планшета как <xref:System.Windows.UIElement.OnStylusDown%2A>, <xref:System.Windows.UIElement.OnStylusUp%2A>, и <xref:System.Windows.UIElement.OnStylusMove%2A> события. Windows 7 также предоставляет мультисенсорный ввод как окна WM_TOUCH Win32. Эти два API являются взаимоисключающими для того же HWND. Включение сенсорного ввода с помощью платформы планшета (по умолчанию для приложений WPF) отключает сообщения WM_TOUCH. В результате Чтобы использовать WM_TOUCH для получения сенсорных сообщений от окна WPF, необходимо отключить встроенную поддержку пера в WPF. Это применимо в сценарии, например компонент, который использует WM_TOUCH окна WPF.  

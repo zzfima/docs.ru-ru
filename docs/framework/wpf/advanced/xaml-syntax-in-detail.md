@@ -34,6 +34,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33549481"
 ---
 # <a name="xaml-syntax-in-detail"></a>Подробное описание синтаксиса XAML
 В этом разделе определяются термины, которые используются для описания элементов синтаксиса XAML. Эти термины часто используются в оставшейся части этой документации, в документации по WPF специально и для других платформ, использующих XAML или базовые понятия XAML, включаемые поддержки языка XAML на уровне System.Xaml. Этот раздел расширяет базовую терминологию, представленную в разделе [Обзор XAML (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md).  

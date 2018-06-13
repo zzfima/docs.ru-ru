@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33547620"
 ---
 # <a name="intercepting-input-from-the-stylus"></a>Перехват ввода, осуществляемого пером
 <xref:System.Windows.Input.StylusPlugIns> Архитектура предоставляет механизм для реализации низкоуровневого управления <xref:System.Windows.Input.Stylus> входных данных и создание рукописный <xref:System.Windows.Ink.Stroke> объектов. <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> Класс предоставляет механизм для реализации пользовательского поведения и применения его к потоку данных, поступающих от устройства пера, для обеспечения оптимальной производительности.  

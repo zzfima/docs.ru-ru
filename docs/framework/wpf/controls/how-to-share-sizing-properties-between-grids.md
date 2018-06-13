@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33550869"
 ---
 # <a name="how-to-share-sizing-properties-between-grids"></a>Практическое руководство. Совместное использование свойств размера между сетками
 В этом примере показано применение общего доступа к данным размера столбцов и строк для <xref:System.Windows.Controls.Grid> элементов, чтобы сохранить согласованное изменение размеров.  

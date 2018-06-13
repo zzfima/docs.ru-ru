@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33546046"
 ---
 # <a name="how-to-detect-whether-the-net-framework-35-is-installed"></a>Как: проверяет, установлена ли платформа .NET Framework 3.5
 Прежде чем развертывать приложения Windows Presentation Foundation (WPF) в системе, которая обращается [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)], необходимо сначала убедиться, [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)] наличии среды выполнения. В этом разделе содержится скрипт, написанный на языке HTML/JavaScript, администраторы могут использовать для определения ли [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)] присутствует в системе.  

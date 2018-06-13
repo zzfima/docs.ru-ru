@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33550190"
 ---
 # <a name="how-to-enable-tab-characters-in-a-textbox-control"></a>Практическое руководство. Включение знаков табуляции в элементе управления TextBox
 В этом примере показано включение принятия знаков табуляции в качестве обычных входных данных в <xref:System.Windows.Controls.TextBox> элемента управления.  

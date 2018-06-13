@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33546534"
 ---
 # <a name="how-to-refresh-a-page"></a>Как: обновление страницы
 В этом примере показано, как вызвать <xref:System.Windows.Navigation.NavigationWindow.Refresh%2A> метод для обновления текущего содержимого в <xref:System.Windows.Navigation.NavigationWindow>.  

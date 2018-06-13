@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33527503"
 ---
 # <a name="how-to-create-mdi-child-forms"></a>Практическое руководство. Создание дочерних MDI-форм
 Дочерние формы MDI являются основным элементом [приложений многодокументного интерфейса (MDI)](../../../../docs/framework/winforms/advanced/multiple-document-interface-mdi-applications.md), поскольку они находятся в центре взаимодействия с пользователем.  

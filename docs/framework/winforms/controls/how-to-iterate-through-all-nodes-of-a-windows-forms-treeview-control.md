@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33532760"
 ---
 # <a name="how-to-iterate-through-all-nodes-of-a-windows-forms-treeview-control"></a>Практическое руководство. Перебор узлов элемента управления TreeView в Windows Forms
 Иногда бывает полезно просмотреть каждый узел в Windows Forms <xref:System.Windows.Forms.TreeView> управления для выполнения некоторых вычислений для значений узлов. Выполнить эту операции можно с помощью рекурсивной процедуры (рекурсивного метода в C# и C++), которая перебирает каждый узел в каждой коллекции дерева.  

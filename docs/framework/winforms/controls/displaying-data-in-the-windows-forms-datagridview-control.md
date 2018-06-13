@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33529432"
 ---
 # <a name="displaying-data-in-the-windows-forms-datagridview-control"></a>Отображение данных с помощью элемента управления DataGridView в Windows Forms
 `DataGridView` Элемент управления используется для отображения данных из различных внешних источников данных. Кроме того можно добавить строки и столбцы в элемент управления и вручную заполнить его данными.  

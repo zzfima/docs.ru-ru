@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33524915"
 ---
 # <a name="checkbox-control-windows-forms"></a>Элемент управления CheckBox (Windows Forms)
 Элемент управления `CheckBox` Windows Forms указывает, включено или отключено какое-либо условие. Обычно он используется для предоставления пользователю выбора типа "Да/Нет" или "Истина/Ложь". Элементы управления типа "флажок" можно объединять в группы для предоставления нескольких вариантов ответа, из которых пользователь может выбрать один или несколько. Это похоже на элемент управления <xref:System.Windows.Forms.RadioButton>, но можно выбрать любое число объединенных в группу элементов `CheckBox`.  

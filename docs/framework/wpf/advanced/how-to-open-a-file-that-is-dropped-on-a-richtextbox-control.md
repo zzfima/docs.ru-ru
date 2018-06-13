@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33547766"
 ---
 # <a name="how-to-open-a-file-that-is-dropped-on-a-richtextbox-control"></a>Практическое руководство. Открытие файла, перетащенного в элемент управления RichTextBox
 В [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)], <xref:System.Windows.Controls.TextBox>, <xref:System.Windows.Controls.RichTextBox>, и <xref:System.Windows.Documents.FlowDocument> все элементы управления имеют встроенные функциональные возможности перетаскивания и вставки. Встроенные функциональные возможности позволяют перетаскивания и вставки текста внутри и между элементами управления. Однако это не позволяет открывать файл путем перетаскивания на элементе управления. Эти элементы управления также пометить события перетаскивания и вставки, как обработанное. В результате по умолчанию нельзя добавить собственные обработчики событий для обеспечения функциональных возможностей для открытия удаленных файлов.  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33529640"
 ---
 # <a name="how-to-apply-attributes-in-windows-forms-controls"></a>Практическое руководство. Применение атрибутов к элементам управления Windows Forms
 Для разработки компонентов и элементов управления, которые правильно взаимодействуют со средой разработки и привести к неправильному выполнению во время выполнения, необходимо правильно применить атрибуты к классам и членам.  

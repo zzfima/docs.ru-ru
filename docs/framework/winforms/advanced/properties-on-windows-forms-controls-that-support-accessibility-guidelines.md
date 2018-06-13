@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33524492"
 ---
 # <a name="properties-on-windows-forms-controls-that-support-accessibility-guidelines"></a>Свойства элементов управления Windows Forms, в которых соблюдены правила доступности
 Элементы управления на стандартной панели инструментов для Windows Forms поддерживают многие из специальных возможностей, включая демонстрацию фокуса клавиатуры и элементов экрана.  

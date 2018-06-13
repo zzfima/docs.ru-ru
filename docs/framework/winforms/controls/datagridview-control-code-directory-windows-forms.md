@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33529319"
 ---
 # <a name="datagridview-control-code-directory-windows-forms"></a>Примеры кода для элемента управления DataGridView (Windows Forms)
 Этот раздел содержит ссылки на <xref:System.Windows.Forms.DataGridView>-связанные с примерами кода в документации по.  

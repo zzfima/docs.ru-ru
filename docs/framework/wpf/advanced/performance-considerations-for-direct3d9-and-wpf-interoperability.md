@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33549208"
 ---
 # <a name="performance-considerations-for-direct3d9-and-wpf-interoperability"></a>Вопросы производительности, связанные с взаимодействием Direct3D9 и WPF
 Содержимое Direct3D9 можно разместить с использованием <xref:System.Windows.Interop.D3DImage> класса. Размещение содержимого Direct3D9 может повлиять на производительность приложения. В этом разделе приводятся рекомендации по оптимизации производительности при размещении содержимого Direct3D9 в приложении Windows Presentation Foundation (WPF). Эти советы и рекомендации о том, как использовать <xref:System.Windows.Interop.D3DImage> и рекомендации, когда вы используете Windows Vista, Windows XP и нескольких мониторов.  

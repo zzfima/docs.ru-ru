@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33527567"
 ---
 # <a name="how-to-bind-windows-forms-controls-with-the-bindingsource-component-using-the-designer"></a>Практическое руководство. Связывание элементов управления Windows Forms с компонентом BindingSource с помощью конструктора
 После добавления элементов управления в форму и определения пользовательского интерфейса для приложения, можно привязать элементы управления к источнику данных, чтобы во время выполнения пользователи могут изменять и сохранять данные, относящиеся к приложению.  
