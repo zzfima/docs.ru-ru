@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: fc610f4cc34b256867396a3390d5ccd0822f6454
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33450392"
 ---
 # <a name="corprfstatictype-enumeration"></a>Перечисление COR_PRF_STATIC_TYPE
 Указывает, является ли поле статическим и, если да, относящееся к этому полю статическое качество. Эти значения могут быть объединены с помощью побитовой операции или для указания, что поле имеет несколько различных статических качеств.  

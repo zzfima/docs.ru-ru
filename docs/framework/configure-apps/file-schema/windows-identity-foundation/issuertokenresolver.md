@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32758585"
 ---
 # <a name="ltissuertokenresolvergt"></a>&lt;issuerTokenResolver&gt;
 Регистрирует Сопоставитель токена издателя, используемая обработчиков в коллекцию обработчиков токенов. Распознавателю маркеров издателя используется для разрешения маркера подписи для входящих токенов и сообщения.  

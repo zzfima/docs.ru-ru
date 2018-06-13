@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33565367"
 ---
 # <a name="xxdata-intrinsic-xaml-type"></a>Встроенный тип XAML x:XData
 Обеспечивает размещение острова данных XML в пределах рабочей среды XAML. XML-элементы в `x:XData` не следует обрабатывать обработчиками XAML, как если бы они были частью пространства имен XAML по умолчанию действующего или любое другое пространство имен XAML. `x:XData` может содержать произвольный корректный XML.  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33560167"
 ---
 # <a name="how-to-encode-a-visual-to-an-image-file"></a>Инструкция по Кодированию Visual в Файл Изображения
 В этом примере показано, как кодировать <xref:System.Windows.Media.Visual> объект в файл изображения с помощью <xref:System.Windows.Media.Imaging.RenderTargetBitmap> и <xref:System.Windows.Media.Imaging.PngBitmapEncoder>.  

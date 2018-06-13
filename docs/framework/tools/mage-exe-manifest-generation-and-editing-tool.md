@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33410394"
 ---
 # <a name="mageexe-manifest-generation-and-editing-tool"></a>Mage.exe (средство создания и редактирования манифеста)
 Инструмент создания и изменения манифеста (Mage.exe) — это программа командной строки, обеспечивающая создание и изменение манифестов приложений и развертываний. Являясь программой командной строки, инструмент Mage.exe может выполняться как в пакетных скриптах, так и в других Windows-приложениях, включая приложения [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] .  
