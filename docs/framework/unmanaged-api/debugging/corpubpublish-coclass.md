@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9941a9be7d9f68255636b405db29a623be8d37e8
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33406442"
 ---
 # <a name="corpubpublish-coclass"></a><span data-ttu-id="2276e-102">Кокласс CorpubPublish</span><span class="sxs-lookup"><span data-stu-id="2276e-102">CorpubPublish Coclass</span></span>
 <span data-ttu-id="2276e-103">Предоставляет интерфейсы для публикации сведений о доменах приложений и процессах.</span><span class="sxs-lookup"><span data-stu-id="2276e-103">Provides interfaces for publishing information about application domains and processes.</span></span>  

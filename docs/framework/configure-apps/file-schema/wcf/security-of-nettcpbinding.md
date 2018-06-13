@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32751237"
 ---
 # <a name="ltsecuritygt-of-ltnettcpbindinggt"></a><span data-ttu-id="ae875-102">&lt;security&gt; для &lt;netTcpBinding&gt;</span><span class="sxs-lookup"><span data-stu-id="ae875-102">&lt;security&gt; of &lt;netTcpBinding&gt;</span></span>
 <span data-ttu-id="ae875-103">Определяет параметры безопасности для привязки.</span><span class="sxs-lookup"><span data-stu-id="ae875-103">Defines the security settings for a binding.</span></span>  

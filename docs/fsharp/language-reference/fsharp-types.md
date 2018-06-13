@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33565593"
 ---
 # <a name="f-types"></a><span data-ttu-id="3012c-103">Типы языка F#</span><span class="sxs-lookup"><span data-stu-id="3012c-103">F# Types</span></span>
 

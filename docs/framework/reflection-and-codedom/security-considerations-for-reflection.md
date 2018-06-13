@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33398708"
 ---
 # <a name="security-considerations-for-reflection"></a><span data-ttu-id="c0325-102">Соображения о безопасности для отражения</span><span class="sxs-lookup"><span data-stu-id="c0325-102">Security Considerations for Reflection</span></span>
 <span data-ttu-id="c0325-103">Отражение дает возможность получать информацию о типах и членах, а также обращаться к членам (то есть вызывать методы и конструкторы для получения и задания значений свойств, добавления и удаления обработчиков событий и т. д.).</span><span class="sxs-lookup"><span data-stu-id="c0325-103">Reflection provides the ability to obtain information about types and members, and to access members (that is, to call methods and constructors, to get and set property values, to add and remove event handlers, and so on).</span></span> <span data-ttu-id="c0325-104">Использование отражения для получения информации о типах и членах не ограничено.</span><span class="sxs-lookup"><span data-stu-id="c0325-104">The use of reflection to obtain information about types and members is not restricted.</span></span> <span data-ttu-id="c0325-105">В любом коде отражение можно использовать для выполнения следующих задач:</span><span class="sxs-lookup"><span data-stu-id="c0325-105">All code can use reflection to perform the following tasks:</span></span>  

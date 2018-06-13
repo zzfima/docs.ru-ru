@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33399773"
 ---
 # <a name="mdbgexe-net-framework-command-line-debugger"></a><span data-ttu-id="43ca0-102">MDbg.exe (отладчик командной строки для .NET Framework)</span><span class="sxs-lookup"><span data-stu-id="43ca0-102">MDbg.exe (.NET Framework Command-Line Debugger)</span></span>
 <span data-ttu-id="43ca0-103">Отладчик командной строки для платформы NET Framework помогает разработчикам программ и приложений в поиске и исправлении ошибок в программах, работающих в среде CLR платформы .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="43ca0-103">The NET Framework Command-Line Debugger helps tools vendors and application developers find and fix bugs in programs that target the .NET Framework common language runtime.</span></span> <span data-ttu-id="43ca0-104">Этот инструмент использует отладочный API-интерфейс среды выполнения.</span><span class="sxs-lookup"><span data-stu-id="43ca0-104">This tool uses the runtime debugging API to provide debugging services.</span></span> <span data-ttu-id="43ca0-105">Программа MDbg.exe может использоваться только для отладки управляемого кода, отладка неуправляемого кода не поддерживается.</span><span class="sxs-lookup"><span data-stu-id="43ca0-105">You can use MDbg.exe to debug only managed code; there is no support for debugging unmanaged code.</span></span>  

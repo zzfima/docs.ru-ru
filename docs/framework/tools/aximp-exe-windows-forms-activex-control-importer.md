@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33409597"
 ---
 # <a name="aximpexe-windows-forms-activex-control-importer"></a><span data-ttu-id="dd715-102">Aximp.exe (программа импорта элементов ActiveX форм Windows)</span><span class="sxs-lookup"><span data-stu-id="dd715-102">Aximp.exe (Windows Forms ActiveX Control Importer)</span></span>
 <span data-ttu-id="dd715-103">Программа для импорта элементов управления ActiveX преобразует определения типов в библиотеке типов COM для элемента управления ActiveX в элемент управления Windows Forms.</span><span class="sxs-lookup"><span data-stu-id="dd715-103">The ActiveX Control Importer converts type definitions in a COM type library for an ActiveX control into a Windows Forms control.</span></span>  

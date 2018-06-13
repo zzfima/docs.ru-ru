@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9fec0f4f31f45847dc092808b2d47c662213e9d2
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33402526"
 ---
 # <a name="cordebugiltonativemappingtypes-enumeration"></a><span data-ttu-id="ea050-102">Перечисление CorDebugIlToNativeMappingTypes</span><span class="sxs-lookup"><span data-stu-id="ea050-102">CorDebugIlToNativeMappingTypes Enumeration</span></span>
 <span data-ttu-id="ea050-103">Указывает, соответствует ли определенный диапазон машинных инструкций, представленного экземпляром COR_DEBUG_IL_TO_NATIVE_MAP-структура специальной области кода.</span><span class="sxs-lookup"><span data-stu-id="ea050-103">Indicates whether a particular range of native instructions, represented by an instance of the COR_DEBUG_IL_TO_NATIVE_MAP structure, corresponds to a special code region.</span></span>  

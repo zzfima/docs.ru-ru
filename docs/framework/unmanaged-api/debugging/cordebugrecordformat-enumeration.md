@@ -14,9 +14,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: a27c96a7be9b5d868e07da11f1a239b9dd5fe2f3
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33402856"
 ---
 # <a name="cordebugrecordformat-enumeration"></a><span data-ttu-id="c6093-102">Перечисление CorDebugRecordFormat</span><span class="sxs-lookup"><span data-stu-id="c6093-102">CorDebugRecordFormat Enumeration</span></span>
 <span data-ttu-id="c6093-103">Описывает формат данных в массиве байтов, который содержит информацию о событии отладки собственного исключения.</span><span class="sxs-lookup"><span data-stu-id="c6093-103">Describes the format of the data in a byte array that contains information about a native exception debug event.</span></span>  

@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 7d3b8f1e869e90fd3388cc0844e608b7ff40fc89
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33407096"
 ---
 # <a name="cordebugplatform-enumeration"></a><span data-ttu-id="ddee7-102">Перечисление CorDebugPlatform</span><span class="sxs-lookup"><span data-stu-id="ddee7-102">CorDebugPlatform Enumeration</span></span>
 <span data-ttu-id="ddee7-103">Предоставляет значения целевой платформы, которые используются в [ICorDebugDataTarget::GetPlatform](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-getplatform-method.md) метод.</span><span class="sxs-lookup"><span data-stu-id="ddee7-103">Provides target platform values that are used by the [ICorDebugDataTarget::GetPlatform](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-getplatform-method.md) method.</span></span>  

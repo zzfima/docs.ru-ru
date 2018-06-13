@@ -1,14 +1,6 @@
 ---
-title: "Структура COR_ARRAY_LAYOUT"
-ms.custom: 
+title: Структура COR_ARRAY_LAYOUT
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - COR_ARRAY_LAYOUT
 api_location:
@@ -22,22 +14,19 @@ helpviewer_keywords:
 ms.assetid: aa20ac3d-6f60-4aa2-91c5-f3a86f82eba8
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: b936b1b2187ec68db7f5fdecb0344e6cac211ab1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 7a96542ab5113311bba79cc552afd7f29e6eafa2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33406400"
 ---
-# <a name="corarraylayout-structure"></a><span data-ttu-id="24ebd-102">Структура COR_ARRAY_LAYOUT</span><span class="sxs-lookup"><span data-stu-id="24ebd-102">COR_ARRAY_LAYOUT Structure</span></span>
-<span data-ttu-id="24ebd-103">Предоставляет сведения о расположении объекта массива в памяти.</span><span class="sxs-lookup"><span data-stu-id="24ebd-103">Provides information about the layout of an array object in memory.</span></span>  
+# <a name="corarraylayout-structure"></a><span data-ttu-id="ab84e-102">Структура COR_ARRAY_LAYOUT</span><span class="sxs-lookup"><span data-stu-id="ab84e-102">COR_ARRAY_LAYOUT Structure</span></span>
+<span data-ttu-id="ab84e-103">Предоставляет сведения о расположении объекта массива в памяти.</span><span class="sxs-lookup"><span data-stu-id="ab84e-103">Provides information about the layout of an array object in memory.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="24ebd-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="24ebd-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ab84e-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="ab84e-104">Syntax</span></span>  
   
 ```  
 typedef struct COR_ARRAY_LAYOUT {  
@@ -52,33 +41,33 @@ typedef struct COR_ARRAY_LAYOUT {
 } COR_ARRAY_LAYOUT;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="24ebd-105">Участники</span><span class="sxs-lookup"><span data-stu-id="24ebd-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="ab84e-105">Участники</span><span class="sxs-lookup"><span data-stu-id="ab84e-105">Members</span></span>  
   
-|<span data-ttu-id="24ebd-106">Член</span><span class="sxs-lookup"><span data-stu-id="24ebd-106">Member</span></span>|<span data-ttu-id="24ebd-107">Описание:</span><span class="sxs-lookup"><span data-stu-id="24ebd-107">Description</span></span>|  
+|<span data-ttu-id="ab84e-106">Член</span><span class="sxs-lookup"><span data-stu-id="ab84e-106">Member</span></span>|<span data-ttu-id="ab84e-107">Описание</span><span class="sxs-lookup"><span data-stu-id="ab84e-107">Description</span></span>|  
 |------------|-----------------|  
-|`componentID`|<span data-ttu-id="24ebd-108">Идентификатор типа объектов, содержащихся в массиве.</span><span class="sxs-lookup"><span data-stu-id="24ebd-108">The identifier of the type of objects that the array contains.</span></span>|  
-|`componentType`|<span data-ttu-id="24ebd-109">Значение перечисления CorElementType, указывающее, является ли компонент ссылка на сборку мусора, класс значений или простому типу.</span><span class="sxs-lookup"><span data-stu-id="24ebd-109">A CorElementType enumeration value that indicates whether the component is a garbage collection reference, a value class, or a primitive.</span></span>|  
-|`firstElementOffset`|<span data-ttu-id="24ebd-110">Смещение для первого элемента в массиве.</span><span class="sxs-lookup"><span data-stu-id="24ebd-110">The offset to the first element in the array.</span></span>|  
-|`elementSize`|<span data-ttu-id="24ebd-111">Размер каждого элемента.</span><span class="sxs-lookup"><span data-stu-id="24ebd-111">The size of each element.</span></span>|  
-|`countOffset`|<span data-ttu-id="24ebd-112">Смещение, равное количеству элементов в массиве.</span><span class="sxs-lookup"><span data-stu-id="24ebd-112">The offset to the number of elements in the array.</span></span>|  
-|`rankSize`|<span data-ttu-id="24ebd-113">Размер ранг в байтах.</span><span class="sxs-lookup"><span data-stu-id="24ebd-113">The size of the rank, in bytes.</span></span>|  
-|`numRanks`|<span data-ttu-id="24ebd-114">Число ранги в массиве.</span><span class="sxs-lookup"><span data-stu-id="24ebd-114">The number of ranks in the array.</span></span>|  
-|`rankOffset`|<span data-ttu-id="24ebd-115">Смещение, с которой начинается ранги.</span><span class="sxs-lookup"><span data-stu-id="24ebd-115">The offset at which the ranks start.</span></span>|  
+|`componentID`|<span data-ttu-id="ab84e-108">Идентификатор типа объектов, содержащихся в массиве.</span><span class="sxs-lookup"><span data-stu-id="ab84e-108">The identifier of the type of objects that the array contains.</span></span>|  
+|`componentType`|<span data-ttu-id="ab84e-109">Значение перечисления CorElementType, указывающее, является ли компонент ссылка на сборку мусора, класс значений или простому типу.</span><span class="sxs-lookup"><span data-stu-id="ab84e-109">A CorElementType enumeration value that indicates whether the component is a garbage collection reference, a value class, or a primitive.</span></span>|  
+|`firstElementOffset`|<span data-ttu-id="ab84e-110">Смещение для первого элемента в массиве.</span><span class="sxs-lookup"><span data-stu-id="ab84e-110">The offset to the first element in the array.</span></span>|  
+|`elementSize`|<span data-ttu-id="ab84e-111">Размер каждого элемента.</span><span class="sxs-lookup"><span data-stu-id="ab84e-111">The size of each element.</span></span>|  
+|`countOffset`|<span data-ttu-id="ab84e-112">Смещение, равное количеству элементов в массиве.</span><span class="sxs-lookup"><span data-stu-id="ab84e-112">The offset to the number of elements in the array.</span></span>|  
+|`rankSize`|<span data-ttu-id="ab84e-113">Размер ранг в байтах.</span><span class="sxs-lookup"><span data-stu-id="ab84e-113">The size of the rank, in bytes.</span></span>|  
+|`numRanks`|<span data-ttu-id="ab84e-114">Число ранги в массиве.</span><span class="sxs-lookup"><span data-stu-id="ab84e-114">The number of ranks in the array.</span></span>|  
+|`rankOffset`|<span data-ttu-id="ab84e-115">Смещение, с которой начинается ранги.</span><span class="sxs-lookup"><span data-stu-id="ab84e-115">The offset at which the ranks start.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="24ebd-116">Примечания</span><span class="sxs-lookup"><span data-stu-id="24ebd-116">Remarks</span></span>  
- <span data-ttu-id="24ebd-117">`rankSize` Поле указывает размер ранг в многомерный массив.</span><span class="sxs-lookup"><span data-stu-id="24ebd-117">The `rankSize` field specifies the size of a rank in a multi-dimensional array.</span></span> <span data-ttu-id="24ebd-118">Он является точным для также одномерные массивы.</span><span class="sxs-lookup"><span data-stu-id="24ebd-118">It is accurate for single-dimensional arrays as well.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="ab84e-116">Примечания</span><span class="sxs-lookup"><span data-stu-id="ab84e-116">Remarks</span></span>  
+ <span data-ttu-id="ab84e-117">`rankSize` Поле указывает размер ранг в многомерный массив.</span><span class="sxs-lookup"><span data-stu-id="ab84e-117">The `rankSize` field specifies the size of a rank in a multi-dimensional array.</span></span> <span data-ttu-id="ab84e-118">Он является точным для также одномерные массивы.</span><span class="sxs-lookup"><span data-stu-id="ab84e-118">It is accurate for single-dimensional arrays as well.</span></span>  
   
- <span data-ttu-id="24ebd-119">Значение `numRanks` -1 для одномерного массива и `N` для многомерный массив `N` измерения.</span><span class="sxs-lookup"><span data-stu-id="24ebd-119">The value of `numRanks` is 1 for a single-dimensional array and `N` for a multi-dimensional array of `N` dimensions.</span></span>  
+ <span data-ttu-id="ab84e-119">Значение `numRanks` -1 для одномерного массива и `N` для многомерный массив `N` измерения.</span><span class="sxs-lookup"><span data-stu-id="ab84e-119">The value of `numRanks` is 1 for a single-dimensional array and `N` for a multi-dimensional array of `N` dimensions.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="24ebd-120">Требования</span><span class="sxs-lookup"><span data-stu-id="24ebd-120">Requirements</span></span>  
- <span data-ttu-id="24ebd-121">**Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="24ebd-121">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="ab84e-120">Требования</span><span class="sxs-lookup"><span data-stu-id="ab84e-120">Requirements</span></span>  
+ <span data-ttu-id="ab84e-121">**Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="ab84e-121">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="24ebd-122">**Заголовок:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="24ebd-122">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="ab84e-122">**Заголовок:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="ab84e-122">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="24ebd-123">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="24ebd-123">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="ab84e-123">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="ab84e-123">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="24ebd-124">**Версии платформы .NET framework:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="24ebd-124">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
+ <span data-ttu-id="ab84e-124">**Версии платформы .NET framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ab84e-124">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="24ebd-125">См. также</span><span class="sxs-lookup"><span data-stu-id="24ebd-125">See Also</span></span>  
- [<span data-ttu-id="24ebd-126">Структуры отладки</span><span class="sxs-lookup"><span data-stu-id="24ebd-126">Debugging Structures</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)  
- [<span data-ttu-id="24ebd-127">Отладка</span><span class="sxs-lookup"><span data-stu-id="24ebd-127">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a><span data-ttu-id="ab84e-125">См. также</span><span class="sxs-lookup"><span data-stu-id="ab84e-125">See Also</span></span>  
+ [<span data-ttu-id="ab84e-126">Структуры отладки</span><span class="sxs-lookup"><span data-stu-id="ab84e-126">Debugging Structures</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)  
+ [<span data-ttu-id="ab84e-127">Отладка</span><span class="sxs-lookup"><span data-stu-id="ab84e-127">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)

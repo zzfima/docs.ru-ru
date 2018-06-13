@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: a290ca162e5ab71b4184d166bcd00f1d0217cb94
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33402500"
 ---
 # <a name="icordebugappdomainattach-method"></a><span data-ttu-id="25f9e-102">Метод ICorDebugAppDomain::Attach</span><span class="sxs-lookup"><span data-stu-id="25f9e-102">ICorDebugAppDomain::Attach Method</span></span>
 <span data-ttu-id="25f9e-103">Присоединяет отладчик к домену приложения.</span><span class="sxs-lookup"><span data-stu-id="25f9e-103">Attaches the debugger to the application domain.</span></span>  

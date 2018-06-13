@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ed7db321b32657087b791758096c692f25f3d7f5
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33407840"
 ---
 # <a name="cordebugblockingobject-structure"></a><span data-ttu-id="ffedf-102">Структура CorDebugBlockingObject</span><span class="sxs-lookup"><span data-stu-id="ffedf-102">CorDebugBlockingObject Structure</span></span>
 <span data-ttu-id="ffedf-103">Определяет объект, блокирующий поток и конкретную причину блокировки потока.</span><span class="sxs-lookup"><span data-stu-id="ffedf-103">Defines an object that is blocking a thread and the specific reason that the thread is blocked.</span></span>  

@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: e8f9eecd6d6d74717eb7c1e389bfa24e40afc950
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33402578"
 ---
 # <a name="endmerge-method"></a><span data-ttu-id="b9381-102">Метод EndMerge</span><span class="sxs-lookup"><span data-stu-id="b9381-102">EndMerge Method</span></span>
 <span data-ttu-id="b9381-103">Указывает, что все настраиваемые атрибуты были объединены в область выдачи.</span><span class="sxs-lookup"><span data-stu-id="b9381-103">Indicates that all custom attributes have been merged into the emit scope.</span></span>  

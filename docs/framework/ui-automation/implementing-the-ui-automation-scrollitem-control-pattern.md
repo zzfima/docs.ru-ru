@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33399049"
 ---
 # <a name="implementing-the-ui-automation-scrollitem-control-pattern"></a><span data-ttu-id="dfc3d-102">Реализация шаблона элемента управления ScrollItem модели автоматизации пользовательского интерфейса</span><span class="sxs-lookup"><span data-stu-id="dfc3d-102">Implementing the UI Automation ScrollItem Control Pattern</span></span>
 > [!NOTE]

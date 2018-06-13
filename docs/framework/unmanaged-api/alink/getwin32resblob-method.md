@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: f40b99c0a81bf0f2b622c7d23157dbb5736df1ca
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33403296"
 ---
 # <a name="getwin32resblob-method"></a><span data-ttu-id="398c4-102">Метод GetWin32ResBlob</span><span class="sxs-lookup"><span data-stu-id="398c4-102">GetWin32ResBlob Method</span></span>
 <span data-ttu-id="398c4-103">Извлекает большой двоичный объект ресурсов Win32.</span><span class="sxs-lookup"><span data-stu-id="398c4-103">Retrieves Win32 resource blob.</span></span> <span data-ttu-id="398c4-104">Этот метод вызывается после задания параметров сборки.</span><span class="sxs-lookup"><span data-stu-id="398c4-104">Call this method after setting assembly options.</span></span>  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33400111"
 ---
 # <a name="client-side-ui-automation-provider-implementation"></a><span data-ttu-id="0a712-102">Реализация клиентского поставщика автоматизации пользовательского интерфейса</span><span class="sxs-lookup"><span data-stu-id="0a712-102">Client-Side UI Automation Provider Implementation</span></span>
 > [!NOTE]

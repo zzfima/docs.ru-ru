@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33399747"
 ---
 # <a name="viewing-type-information"></a><span data-ttu-id="4b9a1-102">Просмотр сведений о типах</span><span class="sxs-lookup"><span data-stu-id="4b9a1-102">Viewing Type Information</span></span>
 <span data-ttu-id="4b9a1-103">Класс <xref:System.Type?displayProperty=nameWithType> является центральной частью отражения.</span><span class="sxs-lookup"><span data-stu-id="4b9a1-103">The <xref:System.Type?displayProperty=nameWithType> class is central to reflection.</span></span> <span data-ttu-id="4b9a1-104">Среда CLR создает объект **Type** для загруженного типа, когда он запрашивается отражением.</span><span class="sxs-lookup"><span data-stu-id="4b9a1-104">The common language runtime creates the **Type** for a loaded type when reflection requests it.</span></span> <span data-ttu-id="4b9a1-105">Используя методы, поля, свойства и вложенные классы объекта **Type**, можно получить полные сведения об этом типе.</span><span class="sxs-lookup"><span data-stu-id="4b9a1-105">You can use a **Type** object's methods, fields, properties, and nested classes to find out everything about that type.</span></span>  

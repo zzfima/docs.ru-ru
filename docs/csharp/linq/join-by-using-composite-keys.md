@@ -8,6 +8,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33271218"
 ---
 # <a name="join-by-using-composite-keys"></a><span data-ttu-id="3aa0c-103">Соединение с помощью составных ключей</span><span class="sxs-lookup"><span data-stu-id="3aa0c-103">Join by using composite keys</span></span>
 

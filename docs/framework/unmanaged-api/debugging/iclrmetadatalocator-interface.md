@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: fd7a67237d89864915f8b4f1f7361d1f113d1e5d
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33404749"
 ---
 # <a name="iclrmetadatalocator-interface"></a><span data-ttu-id="a5824-102">Интерфейс ICLRMetadataLocator</span><span class="sxs-lookup"><span data-stu-id="a5824-102">ICLRMetadataLocator Interface</span></span>
 <span data-ttu-id="a5824-103">Используемый уровнем служб доступа к данным для определения местонахождения метаданных сборок в целевом процессе.</span><span class="sxs-lookup"><span data-stu-id="a5824-103">Used by the data access services layer to locate metadata of assemblies in a target process.</span></span>  

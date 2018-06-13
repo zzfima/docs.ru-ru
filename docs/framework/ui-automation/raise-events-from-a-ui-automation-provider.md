@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33404905"
 ---
 # <a name="raise-events-from-a-ui-automation-provider"></a><span data-ttu-id="ff817-102">Вызов событий из поставщика автоматизации пользовательского интерфейса</span><span class="sxs-lookup"><span data-stu-id="ff817-102">Raise Events from a UI Automation Provider</span></span>
 > [!NOTE]

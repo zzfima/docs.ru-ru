@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 3d4e07fb3d0988838fde662f4bb7d4719cc2d50f
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33408344"
 ---
 # <a name="cortypeid-structure"></a><span data-ttu-id="0c597-102">Структура COR_TYPEID</span><span class="sxs-lookup"><span data-stu-id="0c597-102">COR_TYPEID Structure</span></span>
 <span data-ttu-id="0c597-103">Содержит идентификатор типа.</span><span class="sxs-lookup"><span data-stu-id="0c597-103">Contains a type identifier.</span></span>  

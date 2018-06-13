@@ -10,9 +10,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 1eae19d592dcf5243139e11bb6662953436e45a8
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33408597"
 ---
 # <a name="ialink-interface"></a><span data-ttu-id="5785e-102">Интерфейс IALink</span><span class="sxs-lookup"><span data-stu-id="5785e-102">IALink Interface</span></span>
 <span data-ttu-id="5785e-103">Помогает при конструировании сборок платформы .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="5785e-103">Helps in constructing .NET Framework assemblies.</span></span> <span data-ttu-id="5785e-104">Помимо прочего интерфейс содержит методы, которые помогают в написании манифеста многомодульных сборок, подписывание сборок со строгими именами и создании модулей NETMODULE.</span><span class="sxs-lookup"><span data-stu-id="5785e-104">Among other things, the interface contains methods that assist in writing assembly manifests for multi-module assemblies, signing assemblies with strong names, and creating netmodules.</span></span>  

@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 4be232ab557d582f3521b8775108c004b5a3dd78
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33403309"
 ---
 # <a name="clrdebuggingversion-structure"></a><span data-ttu-id="cb7e6-102">Структура CLR_DEBUGGING_VERSION</span><span class="sxs-lookup"><span data-stu-id="cb7e6-102">CLR_DEBUGGING_VERSION Structure</span></span>
 <span data-ttu-id="cb7e6-103">Определяет версию продукта среды CLR, предназначенную для отладки.</span><span class="sxs-lookup"><span data-stu-id="cb7e6-103">Defines the product version of the common language runtime (CLR) for debugging purposes.</span></span>  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33402032"
 ---
 # <a name="developer-command-prompt-for-visual-studio"></a><span data-ttu-id="b11c4-102">Командная строка разработчика для Visual Studio</span><span class="sxs-lookup"><span data-stu-id="b11c4-102">Developer Command Prompt for Visual Studio</span></span>
 <span data-ttu-id="b11c4-103">Командная строка разработчика для Visual Studio автоматически задает переменные среды, с помощью которых можно легко использовать средства .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="b11c4-103">The Developer Command Prompt for Visual Studio automatically sets the environment variables that enable you to easily use .NET Framework tools.</span></span> <span data-ttu-id="b11c4-104">Командная строка разработчика устанавливается с полными выпусками и выпусками Community Edition Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="b11c4-104">The Developer Command Prompt is installed with full or community editions of Visual Studio.</span></span> <span data-ttu-id="b11c4-105">Она не устанавливается с версиями Visual Studio Express.</span><span class="sxs-lookup"><span data-stu-id="b11c4-105">It is not installed with the Express versions of Visual Studio.</span></span>  

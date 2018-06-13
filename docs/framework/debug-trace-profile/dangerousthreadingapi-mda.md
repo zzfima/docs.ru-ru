@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33357317"
 ---
 # <a name="dangerousthreadingapi-mda"></a><span data-ttu-id="d1d07-102">dangerousThreadingAPI MDA</span><span class="sxs-lookup"><span data-stu-id="d1d07-102">dangerousThreadingAPI MDA</span></span>
 <span data-ttu-id="d1d07-103">Помощник по отладке управляемого кода `dangerousThreadingAPI` (MDA) активируется, если метод <xref:System.Threading.Thread.Suspend%2A?displayProperty=nameWithType> вызывается не для текущего потока.</span><span class="sxs-lookup"><span data-stu-id="d1d07-103">The `dangerousThreadingAPI` managed debugging assistant (MDA) is activated when the <xref:System.Threading.Thread.Suspend%2A?displayProperty=nameWithType> method is called on a thread other than the current thread.</span></span>  

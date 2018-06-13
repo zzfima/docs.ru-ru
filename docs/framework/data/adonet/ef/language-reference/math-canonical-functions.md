@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32765104"
 ---
 # <a name="math-canonical-functions"></a><span data-ttu-id="b177c-102">Математические канонические функции</span><span class="sxs-lookup"><span data-stu-id="b177c-102">Math Canonical Functions</span></span>
 <span data-ttu-id="b177c-103">Язык [!INCLUDE[esql](../../../../../../includes/esql-md.md)] включает математические канонические функции.</span><span class="sxs-lookup"><span data-stu-id="b177c-103">[!INCLUDE[esql](../../../../../../includes/esql-md.md)] includes math canonical functions.</span></span>  

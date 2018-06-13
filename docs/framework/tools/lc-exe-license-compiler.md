@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33409082"
 ---
 # <a name="lcexe-license-compiler"></a><span data-ttu-id="37d7f-102">Lc.exe (компилятор лицензий)</span><span class="sxs-lookup"><span data-stu-id="37d7f-102">Lc.exe (License Compiler)</span></span>
 <span data-ttu-id="37d7f-103">Компилятор лицензий считывает текстовые файлы, содержащие сведения о лицензиях, и создает двоичный файл, который может быть внедрен в исполняемый файл среды CLR в качестве ресурса.</span><span class="sxs-lookup"><span data-stu-id="37d7f-103">The License Compiler reads text files that contain licensing information and produces a binary file that can be embedded in a common language runtime executable as a resource.</span></span>  

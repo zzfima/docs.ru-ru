@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d5809221f2f31bc725c6a62fa5f8f91822f1c157
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33407243"
 ---
 # <a name="cordebugsteprange-structure"></a><span data-ttu-id="29682-102">Структура COR_DEBUG_STEP_RANGE</span><span class="sxs-lookup"><span data-stu-id="29682-102">COR_DEBUG_STEP_RANGE Structure</span></span>
 <span data-ttu-id="29682-103">Содержит сведения о смещении для диапазона кода.</span><span class="sxs-lookup"><span data-stu-id="29682-103">Contains the offset information for a range of code.</span></span>  

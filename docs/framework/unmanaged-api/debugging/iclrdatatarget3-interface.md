@@ -14,9 +14,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 54d6535e2b2c4761eb3c67a990c62f2c311cf133
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33406868"
 ---
 # <a name="iclrdatatarget3-interface"></a><span data-ttu-id="8e7dd-102">Интерфейс ICLRDataTarget3</span><span class="sxs-lookup"><span data-stu-id="8e7dd-102">ICLRDataTarget3 Interface</span></span>
 <span data-ttu-id="8e7dd-103">Подкласс [ICLRDataTarget2](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget2-interface.md) , предоставляющий доступ к информации об исключении.</span><span class="sxs-lookup"><span data-stu-id="8e7dd-103">A subclass of [ICLRDataTarget2](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget2-interface.md) that provides access to exception information.</span></span>  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33400696"
 ---
 # <a name="getting-started-with-wif"></a><span data-ttu-id="30f8b-102">Приступая к работе с WIF</span><span class="sxs-lookup"><span data-stu-id="30f8b-102">Getting Started With WIF</span></span>
 -   [<span data-ttu-id="30f8b-103">Создание первого веб-приложения ASP.NET с поддержкой утверждений</span><span class="sxs-lookup"><span data-stu-id="30f8b-103">Building My First Claims-Aware ASP.NET Web Application</span></span>](../../../docs/framework/security/building-my-first-claims-aware-aspnet-web-app.md)  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33399981"
 ---
 # <a name="custom-token-handlers"></a><span data-ttu-id="81574-102">Пользовательские обработчики маркеров</span><span class="sxs-lookup"><span data-stu-id="81574-102">Custom Token Handlers</span></span>
 <span data-ttu-id="81574-103">В этом разделе описываются обработчики маркеров на платформе WIF и рассказывается о том, как использовать их для обработки маркеров.</span><span class="sxs-lookup"><span data-stu-id="81574-103">This topic discusses token handlers in WIF and how they are used to process tokens.</span></span> <span data-ttu-id="81574-104">Кроме того, здесь рассматривается, что необходимо для создания пользовательских обработчиков для типов маркеров, которые по умолчанию не поддерживаются на платформе WIF.</span><span class="sxs-lookup"><span data-stu-id="81574-104">The topic also covers what is necessary to create custom token handlers for token types that are not supported by default in WIF.</span></span>  

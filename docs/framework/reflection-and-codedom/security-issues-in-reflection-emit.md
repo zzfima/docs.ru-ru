@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33398876"
 ---
 # <a name="security-issues-in-reflection-emit"></a><span data-ttu-id="21901-102">Вопросы безопасности в порождаемом отражении</span><span class="sxs-lookup"><span data-stu-id="21901-102">Security Issues in Reflection Emit</span></span>
 <span data-ttu-id="21901-103">Платформа [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] предоставляет три способа создания кода MSIL, с каждым из которых связаны определенные вопросы безопасности.</span><span class="sxs-lookup"><span data-stu-id="21901-103">The [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] provides three ways to emit Microsoft intermediate language (MSIL), each with its own security issues:</span></span>  

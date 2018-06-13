@@ -10,9 +10,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 65925b7dafb9e89433253d68327c488365674963
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33406282"
 ---
 # <a name="constants-unmanaged-api-reference"></a><span data-ttu-id="9b806-102">Константы (справочные сведения о неуправляемых API)</span><span class="sxs-lookup"><span data-stu-id="9b806-102">Constants (Unmanaged API Reference)</span></span>
 <span data-ttu-id="9b806-103">В этом разделе описывается тип языка, поставщика языка и константы типа документа, которые определены в файле CorSym.idl.</span><span class="sxs-lookup"><span data-stu-id="9b806-103">This topic describes the language type, language vendor, and document type constants that are defined in CorSym.idl.</span></span>  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33399760"
 ---
 # <a name="walkthrough-emitting-code-in-partial-trust-scenarios"></a><span data-ttu-id="7d92f-102">Пошаговое руководство. Выпуск кода в сценариях частичного доверия</span><span class="sxs-lookup"><span data-stu-id="7d92f-102">Walkthrough: Emitting Code in Partial Trust Scenarios</span></span>
 <span data-ttu-id="7d92f-103">При порождении отражения для полного или частичного доверия используется одинаковый набор интерфейсов API, но для некоторых функциональных возможностей требуются особые разрешения в коде с частичным доверием.</span><span class="sxs-lookup"><span data-stu-id="7d92f-103">Reflection emit uses the same API set in full or partial trust, but some features require special permissions in partially trusted code.</span></span> <span data-ttu-id="7d92f-104">Кроме того, в порождении отражения имеется функциональная возможность, анонимно размещенные динамические методы, которые предназначены для использования при частичном доверии и в прозрачных с точки зрения безопасности сборках.</span><span class="sxs-lookup"><span data-stu-id="7d92f-104">In addition, reflection emit has a feature, anonymously hosted dynamic methods, that is designed to be used with partial trust and by security-transparent assemblies.</span></span>  

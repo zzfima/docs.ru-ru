@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c8936fa3d22cfde4c2536fccf9d46c1990133db1
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33445316"
 ---
 # <a name="loadlibraryshim-function"></a><span data-ttu-id="3746a-102">Функция LoadLibraryShim</span><span class="sxs-lookup"><span data-stu-id="3746a-102">LoadLibraryShim Function</span></span>
 <span data-ttu-id="3746a-103">Загружает заданную версию библиотеки DLL, которая включается в распространяемый пакет платформы .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="3746a-103">Loads a specified version of a DLL that is included in the .NET Framework redistributable package.</span></span>  

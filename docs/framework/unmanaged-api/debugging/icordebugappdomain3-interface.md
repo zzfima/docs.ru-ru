@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 7c130b92fd5114d067730da3b7cd138d98cf0577
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33407409"
 ---
 # <a name="icordebugappdomain3-interface"></a><span data-ttu-id="130a3-102">Интерфейс ICorDebugAppDomain3</span><span class="sxs-lookup"><span data-stu-id="130a3-102">ICorDebugAppDomain3 Interface</span></span>
 <span data-ttu-id="130a3-103">Предоставляет методы для получения сведений об управляемом представления [!INCLUDE[wrt](../../../../includes/wrt-md.md)] типов, загруженные в домен приложения.</span><span class="sxs-lookup"><span data-stu-id="130a3-103">Provides methods to retrieve information about the managed representations of [!INCLUDE[wrt](../../../../includes/wrt-md.md)] types currently loaded in an application domain.</span></span> <span data-ttu-id="130a3-104">Этот интерфейс является расширением ICorDebugAppDomain и ICorDebugAppDomain2 интерфейсов.</span><span class="sxs-lookup"><span data-stu-id="130a3-104">This interface is an extension of the ICorDebugAppDomain and ICorDebugAppDomain2 interfaces.</span></span>  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33276023"
 ---
 # <a name="namespace-c-reference"></a><span data-ttu-id="0a758-102">namespace (Справочник по C#)</span><span class="sxs-lookup"><span data-stu-id="0a758-102">namespace (C# Reference)</span></span>
 <span data-ttu-id="0a758-103">Ключевое слово `namespace` используется для объявления области действия, которая содержит набор связанных объектов.</span><span class="sxs-lookup"><span data-stu-id="0a758-103">The `namespace` keyword is used to declare a scope that contains a set of related objects.</span></span> <span data-ttu-id="0a758-104">Пространство имен можно использовать для организации элементов кода и для создания глобально уникальных типов.</span><span class="sxs-lookup"><span data-stu-id="0a758-104">You can use a namespace to organize code elements and to create globally unique types.</span></span>  

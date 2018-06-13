@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33566422"
 ---
 # <a name="xsubclass-directive"></a><span data-ttu-id="a76c3-102">Директива x:Subclass</span><span class="sxs-lookup"><span data-stu-id="a76c3-102">x:Subclass Directive</span></span>
 <span data-ttu-id="a76c3-103">Изменяет поведение компиляции разметки XAML при `x:Class` также предоставляется.</span><span class="sxs-lookup"><span data-stu-id="a76c3-103">Modifies XAML markup compile behavior when `x:Class` is also provided.</span></span> <span data-ttu-id="a76c3-104">Вместо создания разделяемого класса, который основан на `x:Class`, предоставленный `x:Class` создается в качестве промежуточного класса, и затем предоставленный производный класс должен быть основан на `x:Class`.</span><span class="sxs-lookup"><span data-stu-id="a76c3-104">Instead of creating a partial class that is based on `x:Class`, the provided `x:Class` is created as an intermediate class, and then your provided derived class is expected to be based on `x:Class`.</span></span>  

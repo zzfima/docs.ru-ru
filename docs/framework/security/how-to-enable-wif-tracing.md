@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33399569"
 ---
 # <a name="how-to-enable-wif-tracing"></a><span data-ttu-id="ccabb-102">Практическое руководство. Включение трассировки WIF</span><span class="sxs-lookup"><span data-stu-id="ccabb-102">How To: Enable WIF Tracing</span></span>
 ## <a name="applies-to"></a><span data-ttu-id="ccabb-103">Применение</span><span class="sxs-lookup"><span data-stu-id="ccabb-103">Applies To</span></span>  

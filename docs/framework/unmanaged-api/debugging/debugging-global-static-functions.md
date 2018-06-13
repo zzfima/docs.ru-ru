@@ -10,9 +10,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e2403d736d031aab52525fc12b5071e764a8bde1
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33406455"
 ---
 # <a name="debugging-global-static-functions"></a><span data-ttu-id="9782a-102">Глобальные статические функции отладки</span><span class="sxs-lookup"><span data-stu-id="9782a-102">Debugging Global Static Functions</span></span>
 <span data-ttu-id="9782a-103">В этом разделе описываются неуправляемые глобальные статистические функции, которые используют API отладки.</span><span class="sxs-lookup"><span data-stu-id="9782a-103">This section describes the unmanaged global static functions that the debugging API uses.</span></span>  
