@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: c78d22c6566b49e85a59e4a682fa256d2d83ea3c
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33455589"
 ---
 # <a name="icorprofilerinfo3getfunctiontailcall3info-method"></a>Метод ICorProfilerInfo3::GetFunctionTailcall3Info
 Предоставляет кадр стека функции, которая сообщается профилировщику [FunctionTailcall3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functiontailcall3withinfo-function.md) функции. Этот метод может быть вызван только во время обратного вызова `FunctionTailcall3WithInfo`.  

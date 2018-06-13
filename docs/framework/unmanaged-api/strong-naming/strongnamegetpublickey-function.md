@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c3ace4a3103231f776d4e2b034f8e18ce861ee97
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33461017"
 ---
 # <a name="strongnamegetpublickey-function"></a>Функция StrongNameGetPublicKey
 Возвращает открытый ключ из пары закрытого и открытого ключей. Пара ключей может предоставляться в виде имени контейнера ключей в поставщике служб шифрования (CSP) или как коллекция необработанных байтов.  

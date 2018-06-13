@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 78fdcb69e73bc7238972d1a6ffb37b5ba91c7953
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33459089"
 ---
 # <a name="stacksnapshotcallback-function"></a>Функция StackSnapshotCallback
 Предоставляет сведения о каждого управляемого кадра и каждом запуске неуправляемого кадра в стеке во время стека, который инициируется профилировщик [ICorProfilerInfo2::DoStackSnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md) метод.  

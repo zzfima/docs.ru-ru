@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33588951"
 ---
 # <a name="how-to-receive-strings-from-serial-ports-in-visual-basic"></a>Практическое руководство. Получение строк из последовательных портов в Visual Basic
 В этом разделе описывается, как использовать `My.Computer.Ports` для получения строк из последовательных портов компьютера в Visual Basic.  

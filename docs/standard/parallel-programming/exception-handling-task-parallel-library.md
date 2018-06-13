@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33591300"
 ---
 # <a name="exception-handling-task-parallel-library"></a>Обработка исключений (библиотека параллельных задач)
 Необработанные исключения, создаваемые пользовательским кодом, который выполняется в задаче, распространяются обратно в вызывающий поток, за исключением отдельных сценариев, описанных далее в этом разделе. Исключения распространяются, если вы вызываете один из методов <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> или <!--zz <xref:System.Threading.Tasks.Task%601.Wait%2A?displayProperty=nameWithType>  --> `Wait` (статических или методов экземпляра ), и заключаете этот вызов в инструкцию `try`/`catch`. Если задача является родительской для присоединенных дочерних задач или если вы ожидаете несколько задач, может быть создано несколько исключений.  

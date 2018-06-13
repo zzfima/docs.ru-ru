@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33548270"
 ---
 # <a name="relativesource-markupextension"></a>Расширение разметки RelativeSource
 Задает свойства <xref:System.Windows.Data.RelativeSource> источника привязки, которые должны использоваться в [расширение разметки со связыванием](../../../../docs/framework/wpf/advanced/binding-markup-extension.md), или при задании <xref:System.Windows.Data.Binding.RelativeSource%2A> свойство <xref:System.Windows.Data.Binding> элемента установлено в XAML.  

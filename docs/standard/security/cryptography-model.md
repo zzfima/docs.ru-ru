@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33587460"
 ---
 # <a name="net-framework-cryptography-model"></a>Модель криптографии .NET Framework
 Платформа .NET Framework предоставляет реализации многих стандартных алгоритмов шифрования. Эти алгоритмы просты в использовании и имеют максимально безопасные свойства по умолчанию. Кроме того, криптографическая модель наследования объектов, поточно-ориентированная структура и конфигурация платформы .NET Framework являются чрезвычайно расширяемыми.  

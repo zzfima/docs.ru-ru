@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1f9297d34b01c03075db67bd904a81e589bfcc10
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33461380"
 ---
 # <a name="createinstanceenumwmi-function"></a>Функция CreateInstanceEnumWmi
 Возвращает перечислитель, который возвращает экземпляры указанного класса, удовлетворяющих указанные критерии выбора. 

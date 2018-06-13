@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33640271"
 ---
 # <a name="example-that-outputs-office-open-xml-document-parts-visual-basic"></a>Пример, выводящий части документа Office Open XML (Visual Basic)
 В этом разделе разъясняется, как открывать документ Office Open XML и как обращаться к частям этого документа.  

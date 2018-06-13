@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33458111"
 ---
 # <a name="configuring-client-behaviors"></a>Настройка поведений клиентов
 Windows Communication Foundation (WCF) настраивает поведение двумя способами: путем ссылки на конфигурации поведения, определенных в `<behavior>` раздел файла конфигурации приложения клиента — или программно в вызывающем приложение. В этом разделе описываются оба подхода.  

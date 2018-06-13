@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 7b9662ccb854345d41bb73a5cf01a94b9949891d
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33457199"
 ---
 # <a name="icorprofilerthreadenum-interface"></a>Интерфейс ICorProfilerThreadEnum
 Предоставляет методы для последовательного перебора коллекции потоков в среде CLR.  

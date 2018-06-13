@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33525123"
 ---
 # <a name="managing-the-state-of-a-graphics-object"></a>Управление состоянием объекта Graphics
 <xref:System.Drawing.Graphics> Класс — это основа [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]. Чтобы нарисовать любой элемент, необходимо получить <xref:System.Drawing.Graphics> , задать его свойства и вызывать его методы <xref:System.Drawing.Graphics.DrawLine%2A>, <xref:System.Drawing.Graphics.DrawImage%2A>, <xref:System.Drawing.Graphics.DrawString%2A>и т. д).  

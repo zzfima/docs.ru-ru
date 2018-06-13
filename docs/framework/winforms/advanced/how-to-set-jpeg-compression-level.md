@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33525248"
 ---
 # <a name="how-to-set-jpeg-compression-level"></a>Практическое руководство. Установка уровня сжатия JPEG
 Вам может потребоваться изменить параметры изображения при сохранении на диск, чтобы уменьшить размер файла или повысить качество изображения. Качество изображения в формате JPEG можно настроить, изменив уровень сжатия. Чтобы указать уровень сжатия при сохранении изображения в формате JPEG, необходимо создать <xref:System.Drawing.Imaging.EncoderParameters> и передать его на <xref:System.Drawing.Image.Save%2A> метод <xref:System.Drawing.Image> класса. Инициализация <xref:System.Drawing.Imaging.EncoderParameters> объекта, чтобы он включал массив, который состоит из одного <xref:System.Drawing.Imaging.EncoderParameter>. При создании <xref:System.Drawing.Imaging.EncoderParameter>, укажите <xref:System.Drawing.Imaging.Encoder.Quality> кодировщик и нужный уровень сжатия.  

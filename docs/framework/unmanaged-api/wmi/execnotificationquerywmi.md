@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 4b5c26ab9c273b134915eea39078a83f569bcd32
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33462420"
 ---
 # <a name="execnotificationquerywmi-function"></a>Функция ExecNotificationQueryWmi
 Выполняет запрос для получения событий. Вызов возвращается немедленно, а вызывающий объект может выполнять опрос возвращаемый перечислитель для событий по мере их поступления. Освобождение возвращаемый перечислитель отменяет запрос.  

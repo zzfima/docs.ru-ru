@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33397459"
 ---
 # <a name="in-process-side-by-side-execution"></a>Внутрипроцессное параллельное выполнение
 Начиная с [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], разработчики могут использовать внутрипроцессное параллельное размещение для запуска нескольких версий среды CLR в одном процессе. Управляемые COM-компоненты по умолчанию выполняются в той версии платформы .NET Framework, в которой они были созданы, вне зависимости от загруженной для процесса версии .NET Framework.  

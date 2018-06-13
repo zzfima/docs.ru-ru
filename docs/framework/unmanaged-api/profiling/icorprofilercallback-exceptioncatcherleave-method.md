@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 5ea53e02cc20964a43bc4784b4354d429e238295
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33450860"
 ---
 # <a name="icorprofilercallbackexceptioncatcherleave-method"></a>Метод ICorProfilerCallback::ExceptionCatcherLeave
 Уведомляет профилировщик, управление передается за пределы соответствующего `catch` блока.  

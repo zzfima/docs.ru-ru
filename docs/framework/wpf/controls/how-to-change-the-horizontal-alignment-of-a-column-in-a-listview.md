@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33553901"
 ---
 # <a name="how-to-change-the-horizontal-alignment-of-a-column-in-a-listview"></a>Практическое руководство. Изменение порядка выравнивания столбцов в элементе управления ListView по горизонтали
 По умолчанию содержимое каждого столбца в <xref:System.Windows.Controls.ListViewItem> по левому краю. Выравнивание каждого столбца можно изменить, указав <xref:System.Windows.DataTemplate> и параметр <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A> свойства элемента в пределах <xref:System.Windows.DataTemplate>. В этом разделе показано, как <xref:System.Windows.Controls.ListView> выравнивания содержимого по умолчанию и как изменить выравнивание один столбец в <xref:System.Windows.Controls.ListView>.  

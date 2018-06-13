@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 21c2352a40d46c80e46c10a3874f911be433f37e
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33461813"
 ---
 # <a name="icorprofilerinfo3-interface"></a>Интерфейс ICorProfilerInfo3
 Предоставляет методы, используемые профилировщиками кода для обмена данными со средой CLR с целью управления мониторингом событий и запроса информации. `ICorProfilerInfo3` Интерфейс является расширением [ICorProfilerInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md) интерфейса. Он предоставляет новые методы, поддерживаемые в [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)] и более поздних версиях.  

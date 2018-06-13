@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: fd0ddda898911da2c96a53d941c4290af9028154
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33446578"
 ---
 # <a name="imetadataemitdefinefield-method"></a>Метод IMetaDataEmit::DefineField
 Создает определение для поля с заданной подписью метаданных и получает маркер для этого определения поля.  

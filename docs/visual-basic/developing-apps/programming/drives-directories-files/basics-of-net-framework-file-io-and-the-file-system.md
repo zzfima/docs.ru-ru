@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33591785"
 ---
 # <a name="basics-of-net-framework-file-io-and-the-file-system-visual-basic"></a>Основы файлового ввода-вывода и файловой системы в .NET Framework (Visual Basic)
 Классы в пространстве имен <xref:System.IO> используются для работы с дисками, файлами и каталогами.  

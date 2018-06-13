@@ -22,9 +22,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: eb8ff76da288975ef291d226bb1f205e73a64252
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33460292"
 ---
 # <a name="strongnametokenfrompublickey-function"></a>Функция StrongNameTokenFromPublicKey
 Возвращает токен, представляющий открытый ключ. Маркер строгого имени — это сокращенная форма открытого ключа.  

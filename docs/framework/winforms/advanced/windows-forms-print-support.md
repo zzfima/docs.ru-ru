@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33528558"
 ---
 # <a name="windows-forms-print-support"></a>Поддержка печати в Windows Forms
 Печать в Windows Forms состоит в основном из использования [компонент PrintDocument](../../../../docs/framework/winforms/controls/printdocument-component-windows-forms.md) компонента, чтобы пользователь мог напечатать и [управления PrintPreviewDialog](../../../../docs/framework/winforms/controls/printpreviewdialog-control-windows-forms.md) управления [PrintDialog Компонент](../../../../docs/framework/winforms/controls/printdialog-component-windows-forms.md) и [компонент PageSetupDialog](../../../../docs/framework/winforms/controls/pagesetupdialog-component-windows-forms.md) компоненты для обеспечения знакомый графический интерфейс для пользователей, привыкших к операционной системе Windows.  

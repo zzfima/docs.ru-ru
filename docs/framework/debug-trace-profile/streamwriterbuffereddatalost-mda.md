@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33389945"
 ---
 # <a name="streamwriterbuffereddatalost-mda"></a>streamWriterBufferedDataLost MDA
 Помощник по отладке управляемого кода (MDA) `streamWriterBufferedDataLost` активируется при записи в <xref:System.IO.StreamWriter>, если методы <xref:System.IO.StreamWriter.Flush%2A> или <xref:System.IO.StreamWriter.Close%2A> после этого не вызываются до уничтожения экземпляра <xref:System.IO.StreamWriter>. Если этот помощник по отладке управляемого кода включен, среда выполнения определяет, существуют ли до сих пор какие-либо буферизованные данные в <xref:System.IO.StreamWriter>. Если буферизованные данные существуют, помощник по отладке управляемого кода активируется. Вызов методов <xref:System.GC.Collect%2A> и <xref:System.GC.WaitForPendingFinalizers%2A> может принудительно вызвать методы завершения. В противном случае методы завершения будут выполняться в произвольные моменты времени и, возможно, вовсе не в момент завершения работы процесса. Выполнение методов завершения явным образом, когда данный помощник по отладке управляемого кода включен, способствует более надежному воспроизведению проблемы такого типа.  

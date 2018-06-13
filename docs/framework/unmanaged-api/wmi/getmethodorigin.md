@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 35e56494d0082db970afce21da8e63a597f0a535
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33458154"
 ---
 # <a name="getmethodorigin-function"></a>Функция GetMethodOrigin
 Определяет класс, в котором объявлен метод.

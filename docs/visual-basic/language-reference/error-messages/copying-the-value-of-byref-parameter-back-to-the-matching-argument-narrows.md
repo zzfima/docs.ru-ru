@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33591811"
 ---
 # <a name="copying-the-value-of-39byref39-parameter-39ltparameternamegt39-back-to-the-matching-argument-narrows-from-type-39lttypename1gt39-to-type-39lttypename2gt39"></a>Копирование значения &#39;ByRef&#39; параметр &#39; &lt;имя_параметра&gt; &#39; обратно в соответствующий аргумент сводит тип &#39; &lt;Имя_типа1&gt; &#39; типу &#39; &lt;имя_типа2&gt;&#39;
 Процедура вызывается с аргументом, который расширяется до соответствующего параметра типа и сужающие преобразования из параметра к аргументу.  

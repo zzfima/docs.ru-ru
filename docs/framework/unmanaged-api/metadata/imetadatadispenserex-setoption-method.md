@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: cfe600b54eb03a07ea01375355c5ff94190e5d9d
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33449472"
 ---
 # <a name="imetadatadispenserexsetoption-method"></a>Метод IMetaDataDispenserEx::SetOption
 Устанавливает для указанного параметра заданное значение для текущей области метаданных. Параметр определяет способ обработки вызовов текущей области метаданных.  

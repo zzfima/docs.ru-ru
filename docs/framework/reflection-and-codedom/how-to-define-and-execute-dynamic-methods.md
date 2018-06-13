@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33397030"
 ---
 # <a name="how-to-define-and-execute-dynamic-methods"></a>Практическое руководство. Определение и выполнение динамических методов
 В следующих процедурах показаны способы определения и выполнения простого динамического метода и динамического метода, привязанного к экземпляру класса. Дополнительные сведения о динамических методах см. в описании класса <xref:System.Reflection.Emit.DynamicMethod> и в разделе [Сценарии динамических методов порождаемого отражения](http://msdn.microsoft.com/library/7c27ea3d-0f24-4bf3-8ceb-f49d33faca5e).  

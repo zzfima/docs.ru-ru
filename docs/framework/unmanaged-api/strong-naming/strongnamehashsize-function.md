@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 92b9d9b5baee856f09dd24a62767aff604728997
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33454086"
 ---
 # <a name="strongnamehashsize-function"></a>Функция StrongNameHashSize
 Возвращает размер буфера, необходимый для хэша, с помощью указанного хэш-алгоритма.  

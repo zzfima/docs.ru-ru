@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 6956d73be0380baef96d94584f007e0683331784
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33446096"
 ---
 # <a name="lockclrversion-function"></a>Функция LockClrVersion
 Предоставляет узлу возможность определить, какая версия среды common language runtime (CLR), которая будет использоваться в процессе до явной инициализации среды CLR.  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33589435"
 ---
 # <a name="how-to-write-text-to-files-in-visual-basic"></a>Практическое руководство. Запись текста в файлы в Visual Basic
 Метод <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A> можно использовать для записи текста в файлы. Если заданный файл не существует, он будет создан.  

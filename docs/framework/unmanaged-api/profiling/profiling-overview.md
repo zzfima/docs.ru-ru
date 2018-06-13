@@ -31,9 +31,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: b38b64e1c86174bea11086e722ed86b0a0046e2c
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33461917"
 ---
 # <a name="profiling-overview"></a>Общие сведения о профилировании
 <a name="top"></a> Профилировщик — это средство, которое наблюдает за выполнением другого приложения. Профилировщик среды CLR — это библиотека DLL, содержащая функции, которые получают сообщения из среды CLR и отправляют сообщения в среду CLR с помощью API профилирования. Библиотека DLL профилировщика загружается средой CLR во время выполнения.  

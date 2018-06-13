@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33578226"
 ---
 # <a name="app-resources-for-libraries-that-target-multiple-platforms"></a>Ресурсы приложений для библиотек, предназначенных для нескольких платформ
 Можно использовать .NET Framework [переносимой библиотеки классов](../../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md) тип, чтобы убедиться, что ресурсы в библиотеках классов может осуществляться из нескольких платформ проекта. Проект этого типа доступен в [!INCLUDE[vs_dev11_long](../../../includes/vs-dev11-long-md.md)] и нацелен на переносимое подмножество библиотеки классов .NET Framework. Использование [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] гарантирует доступность библиотеки из настольных приложений, приложений Silverlight, Windows Phone и [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)].  

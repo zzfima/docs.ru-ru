@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33541902"
 ---
 # <a name="more-secure-file-and-data-access-in-windows-forms"></a>Более безопасный доступ к файлам и данным в Windows Forms
 В [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] для защиты ресурсов и данных используются разрешения. То, какие данные может считывать или записывать приложение, зависит от предоставленных ему разрешений. Когда приложение работает в среде с частичным доверием, то доступ к данным может быть запрещен или может быть необходимо изменить способ доступа к данным.  

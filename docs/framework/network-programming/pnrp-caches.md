@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33397485"
 ---
 # <a name="pnrp-caches"></a>Кэши PNRP
 Кэши протокола однорангового разрешения имен (PNRP) представляют собой локальные коллекции выбираемых по определенному алгоритму одноранговых конечных точек, которые хранятся на одноранговом узле.  

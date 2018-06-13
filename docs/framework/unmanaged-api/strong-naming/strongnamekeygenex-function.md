@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5e65e962d099e944fe243b3acc0a7c25a3bb960c
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33458674"
 ---
 # <a name="strongnamekeygenex-function"></a>Функция StrongNameKeyGenEx
 Создает новую пару открытого и закрытого ключей с указанным размером ключа, для использования строгого имени.  
