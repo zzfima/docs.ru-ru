@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33642855"
 ---
 # <a name="how-to-query-an-arraylist-with-linq-visual-basic"></a>Как: запроса к ArrayList с помощью LINQ (Visual Basic)
 При использовании LINQ для запросов к неуниверсальным коллекциям <xref:System.Collections.IEnumerable>, таким как <xref:System.Collections.ArrayList>, необходимо явно объявить тип переменной диапазона, чтобы отразить конкретный тип объектов в коллекции. Например, если у вас есть <xref:System.Collections.ArrayList> из `Student` объектов, к [предложения From](../../../../visual-basic/language-reference/queries/from-clause.md) должен выглядеть следующим образом:  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/23/2018
+ms.locfileid: "34457804"
 ---
 # <a name="-and--null-conditional-operators-c-and-visual-basic"></a>?. и ?[]: операторы с условием NULL (C# и Visual Basic)
 Проверяет значение левого операнда на наличие значения NULL перед выполнением операции доступа к элементу (`?.`) или индексу (`?[]`). Возвращает `null`, если левый операнд имеет значение `null`. 

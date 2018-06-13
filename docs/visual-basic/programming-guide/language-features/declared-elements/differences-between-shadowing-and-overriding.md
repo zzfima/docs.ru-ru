@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33649637"
 ---
 # <a name="differences-between-shadowing-and-overriding-visual-basic"></a>Различия между сокрытием и переопределением (Visual Basic)
 При определении класса, который наследует от базового класса, иногда требуется переопределить один или несколько элементов базового класса в производном классе. Сокрытием и переопределением будут доступны для этой цели.  

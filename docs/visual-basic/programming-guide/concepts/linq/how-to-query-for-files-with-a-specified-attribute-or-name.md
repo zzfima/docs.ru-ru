@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33642915"
 ---
 # <a name="how-to-query-for-files-with-a-specified-attribute-or-name-visual-basic"></a>Как: запрос файлов с помощью указанного атрибута или имени (Visual Basic)
 В этом примере показано, как обнаружить все файлы с указанным расширением (например, TXT) в заданном дереве каталогов. Кроме того, он показывает, как обнаружить самый новый или самый старый файл в дереве, используя время создания.  

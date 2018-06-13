@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809892"
 ---
 # <a name="controlling-auto-launching-of-wcf-service-host"></a>Управление автозапуском узла службы WCF
 Можно управлять возможностью автозапуска узла службы Windows Communication Foundation (WCF) (WcfSvcHost.exe) для проекта библиотеки службы WCF при отладке другого проекта того же решения Visual Studio содержит несколько проектов.  

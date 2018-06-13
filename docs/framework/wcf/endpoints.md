@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803398"
 ---
 # <a name="windows-communication-foundation-endpoints"></a>Конечные точки Windows Communication Foundation
 Весь обмен данными со службой Windows Communication Foundation (WCF) осуществляется через *конечные точки* службы. Конечные точки предоставляют клиентам доступ к функциям, который предлагает службы WCF.  

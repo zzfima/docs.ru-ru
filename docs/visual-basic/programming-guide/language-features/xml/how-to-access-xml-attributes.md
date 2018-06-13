@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33649036"
 ---
 # <a name="how-to-access-xml-attributes-visual-basic"></a>Практическое руководство. Доступ к XML-атрибутам (Visual Basic)
 В этом примере показано, как использовать свойство оси атрибута для доступа к XML-атрибуты в XML-элемента по имени. В частности, он использует `type` свойство оси для доступа к атрибуту с именем атрибута `type` в `phone` объекта.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: ff1d40507b3eb6e2185478e37c66c66be6de46f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/11/2018
+ms.locfileid: "34059034"
 ---
 # <a name="ltservicegt"></a>&lt;Службы&gt;
 Элемент `service` содержит параметры для службы Windows Communication Foundation (WCF). Он также содержит конечные точки, предоставляющие доступ к службе.  

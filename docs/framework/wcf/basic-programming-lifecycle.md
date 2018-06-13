@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803696"
 ---
 # <a name="basic-programming-lifecycle"></a>Базовый жизненный цикл программирования
 Windows Communication Foundation (WCF) позволяет приложениям обмениваться информацией, ли они на том же компьютере через Интернет или на других платформах приложений. В этом разделе описаны задачи, которые необходимы для построения приложения WCF. Рабочий пример приложения см. в разделе [учебник по началу работы](../../../docs/framework/wcf/getting-started-tutorial.md).  

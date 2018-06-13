@@ -13,6 +13,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803745"
 ---
 # <a name="basic-wcf-programming"></a>Базовое программирование WCF
 В этом разделе описываются основные принципы создания приложений Windows Communication Foundation (WCF).  

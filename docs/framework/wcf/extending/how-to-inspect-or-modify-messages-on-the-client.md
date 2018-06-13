@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33804174"
 ---
 # <a name="how-to-inspect-or-modify-messages-on-the-client"></a>Практическое руководство. Проверка или изменение сообщений на клиенте
 Может проверять или изменять входящие или исходящие сообщения между клиентом WCF путем реализации <xref:System.ServiceModel.Dispatcher.IClientMessageInspector?displayProperty=nameWithType> и их вставка в среду выполнения клиента. Дополнительные сведения см. в разделе [расширение клиентов](../../../../docs/framework/wcf/extending/extending-clients.md). Эквивалентную функцию в службе выполняет интерфейс <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector?displayProperty=nameWithType>. Полный пример кода см. [инспекторы сообщений](../../../../docs/framework/wcf/samples/message-inspectors.md) образца.  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33636136"
 ---
 # <a name="format-not-valid-in-resource-file"></a>Недопустимый формат в файле ресурсов
 Файл ресурсов в проекте не соответствует стандартному формату для файла ресурса Windows или существует несоответствие между файлом ресурсов и проекта Visual Basic.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33641171"
 ---
 # <a name="how-to-retrieve-a-collection-of-attributes-linq-to-xml-visual-basic"></a>Как: извлечение коллекции атрибутов (LINQ to XML) (Visual Basic)
 В этом разделе представлен метод <xref:System.Xml.Linq.XElement.Attributes%2A>. Этот метод извлекает атрибуты того или иного элемента.  

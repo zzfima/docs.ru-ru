@@ -7,6 +7,7 @@ ms.sourcegitcommit: e5bb395ec86f536e114314184288f40a8c745e2e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/12/2018
+ms.locfileid: "34149027"
 ---
 # <a name="signatures"></a>Сигнатуры
 
