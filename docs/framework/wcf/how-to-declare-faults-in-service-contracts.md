@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33500240"
 ---
 # <a name="how-to-declare-faults-in-service-contracts"></a>Практическое руководство. Объявление сбоев в контрактах служб
 В управляемом коде исключения создаются в случае возникновения ошибки. В приложениях Windows Communication Foundation (WCF) Однако контракты служб указывают, какие сведения об ошибке возвращаются клиенту объявляются ошибки SOAP в контракте службы. Общие сведения о связи между исключений и ошибок в разделе [указание и обработка сбоев в контрактах и службах](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md).  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33339583"
 ---
 # <a name="type-relationships-in-linq-query-operations-c"></a>Отношения между типами в операциях запросов LINQ (C#)
 Для эффективного написания запросов следует понимать, как типы переменных связаны друг с другом в полной операции запроса. Понимание этих связей облегчит усвоение примеров [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] и примеров кода в документации. Более того, можно будет представить, что происходит в фоновом режиме при неявном типизировании переменных с помощью `var`.  

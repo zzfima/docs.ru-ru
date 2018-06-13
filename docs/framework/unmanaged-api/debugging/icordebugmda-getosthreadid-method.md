@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 20833624b4b853a1a56964e11a25f446c6b39053
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33414717"
 ---
 # <a name="icordebugmdagetosthreadid-method"></a>Метод ICorDebugMDA::GetOSThreadId
 Получает идентификатор потока операционной системы (ОС), на котором помощник по отладке управляемого (кода MDA), представленного параметром [ICorDebugMDA](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md) выполняется.  
