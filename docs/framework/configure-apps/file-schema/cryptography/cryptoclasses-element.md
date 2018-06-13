@@ -16,6 +16,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32743008"
 ---
 # <a name="ltcryptoclassesgt-element"></a><span data-ttu-id="3a922-102">&lt;cryptoClasses&gt; элемент</span><span class="sxs-lookup"><span data-stu-id="3a922-102">&lt;cryptoClasses&gt; Element</span></span>
 <span data-ttu-id="3a922-103">Содержит список криптографических классов, сопоставленных с понятными именами, указанными в элементе [\<nameEntry>](../../../../../docs/framework/configure-apps/file-schema/cryptography/nameentry-element.md).</span><span class="sxs-lookup"><span data-stu-id="3a922-103">Contains a list of cryptography classes that have a mapping to a friendly name in the [\<nameEntry>](../../../../../docs/framework/configure-apps/file-schema/cryptography/nameentry-element.md) element.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32748868"
 ---
 # <a name="ltscopedcertificatesgt-element"></a><span data-ttu-id="b86dc-102">Элемент &lt;scopedCertificates&gt;</span><span class="sxs-lookup"><span data-stu-id="b86dc-102">&lt;scopedCertificates&gt; Element</span></span>
 <span data-ttu-id="b86dc-103">Представляет коллекцию сертификатов X.509, предоставленную конкретными службами (в области действия) для проверки подлинности.</span><span class="sxs-lookup"><span data-stu-id="b86dc-103">Represents a collection of X.509 certificates provided by specific services (scoped) for authentication.</span></span> <span data-ttu-id="b86dc-104">Эта коллекция обычно используется, чтобы задать сертификаты служб для служб маркеров безопасности в федеративной инфраструктуре.</span><span class="sxs-lookup"><span data-stu-id="b86dc-104">This collection is typically used to specify the service certificates for Security Token Services in a federated scenario.</span></span>  

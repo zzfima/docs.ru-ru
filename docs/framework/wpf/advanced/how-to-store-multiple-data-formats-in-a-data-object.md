@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33543472"
 ---
 # <a name="how-to-store-multiple-data-formats-in-a-data-object"></a><span data-ttu-id="01171-102">Практическое руководство. Хранение данных в нескольких форматах в объекте данных</span><span class="sxs-lookup"><span data-stu-id="01171-102">How to: Store Multiple Data Formats in a Data Object</span></span>
 <span data-ttu-id="01171-103">В следующем примере показано, как использовать <xref:System.Windows.DataObject.SetData%28System.String%2CSystem.Object%29> метод для добавления данных в объект данных в нескольких форматах.</span><span class="sxs-lookup"><span data-stu-id="01171-103">The following example shows how to use the <xref:System.Windows.DataObject.SetData%28System.String%2CSystem.Object%29> method to add data to a data object in multiple formats.</span></span>  

@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33544857"
 ---
 # <a name="migration-and-interoperability"></a><span data-ttu-id="e2068-102">Миграция и взаимодействие систем</span><span class="sxs-lookup"><span data-stu-id="e2068-102">Migration and Interoperability</span></span>
 <span data-ttu-id="e2068-103">Эта страница содержит ссылки на документы, посвященные реализации взаимодействия между [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] приложений и другие виды [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] приложений.</span><span class="sxs-lookup"><span data-stu-id="e2068-103">This page contains links to documents that discuss how to implement interoperation between [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] applications and other types of [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] applications.</span></span>  

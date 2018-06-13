@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33543989"
 ---
 # <a name="how-to-animate-the-size-of-a-frameworkelement"></a><span data-ttu-id="8811a-102">Практическое руководство. Анимация размера элемента FrameworkElement</span><span class="sxs-lookup"><span data-stu-id="8811a-102">How to: Animate the Size of a FrameworkElement</span></span>
 <span data-ttu-id="8811a-103">Для анимации размера <xref:System.Windows.FrameworkElement>, можно анимировать его <xref:System.Windows.FrameworkElement.Width%2A> и <xref:System.Windows.FrameworkElement.Height%2A> свойства или использовать анимированное <xref:System.Windows.Media.ScaleTransform>.</span><span class="sxs-lookup"><span data-stu-id="8811a-103">To animate the size of a <xref:System.Windows.FrameworkElement>, you can either animate its <xref:System.Windows.FrameworkElement.Width%2A> and <xref:System.Windows.FrameworkElement.Height%2A> properties or use an animated <xref:System.Windows.Media.ScaleTransform>.</span></span>  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33544399"
 ---
 # <a name="how-to-flip-a-uielement-horizontally-or-vertically"></a><span data-ttu-id="f65e3-102">Как отразить объект UIElement по горизонтали или по вертикали</span><span class="sxs-lookup"><span data-stu-id="f65e3-102">How to: Flip a UIElement Horizontally or Vertically</span></span>
 <span data-ttu-id="f65e3-103">В этом примере показано, как использовать <xref:System.Windows.Media.ScaleTransform> отражение <xref:System.Windows.UIElement> горизонтально или вертикально.</span><span class="sxs-lookup"><span data-stu-id="f65e3-103">This example shows how to use a <xref:System.Windows.Media.ScaleTransform> to flip a <xref:System.Windows.UIElement> horizontally or vertically.</span></span> <span data-ttu-id="f65e3-104">В этом примере <xref:System.Windows.Controls.Button> управления (тип <xref:System.Windows.UIElement>) Перевернутая путем применения <xref:System.Windows.Media.ScaleTransform> для его <xref:System.Windows.UIElement.RenderTransform%2A> свойство.</span><span class="sxs-lookup"><span data-stu-id="f65e3-104">In this example, a <xref:System.Windows.Controls.Button> control (a type of <xref:System.Windows.UIElement>) is flipped by applying a <xref:System.Windows.Media.ScaleTransform> to its <xref:System.Windows.UIElement.RenderTransform%2A> property.</span></span>  

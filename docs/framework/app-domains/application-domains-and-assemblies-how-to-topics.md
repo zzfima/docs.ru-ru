@@ -12,6 +12,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32743099"
 ---
 # <a name="application-domains-and-assemblies-how-to-topics"></a><span data-ttu-id="dfff8-102">Руководства по работе с доменами приложений и сборками</span><span class="sxs-lookup"><span data-stu-id="dfff8-102">Application Domains and Assemblies How-to Topics</span></span>
 <span data-ttu-id="dfff8-103">В следующих разделах содержатся ссылки на все разделы практического руководства базовой документации по программированию с использованием доменов приложений и сборок.</span><span class="sxs-lookup"><span data-stu-id="dfff8-103">The following sections contain links to all How-to topics found in the conceptual documentation for programming with application domains and assemblies.</span></span>  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33544236"
 ---
 # <a name="input-wpf"></a><span data-ttu-id="faa4d-102">Ввод (WPF)</span><span class="sxs-lookup"><span data-stu-id="faa4d-102">Input (WPF)</span></span>
 <span data-ttu-id="faa4d-103">Windows Presentation Foundation (WPF) поддерживает несколько типов входных данных.</span><span class="sxs-lookup"><span data-stu-id="faa4d-103">Windows Presentation Foundation (WPF) includes support for several types of input.</span></span> <span data-ttu-id="faa4d-104">Этот входной включает текст, сенсорный ввод, мыши, команды, фокус, сенсорный ввод, и перетащите и рукописного ввода.</span><span class="sxs-lookup"><span data-stu-id="faa4d-104">This input includes text, touch, mouse, commands, focus, touch, drag-and-drop, and digital ink.</span></span> <span data-ttu-id="faa4d-105">В этом разделе описываются темы, связанные с входных данных в WPF.</span><span class="sxs-lookup"><span data-stu-id="faa4d-105">This section describes topics related to input in WPF.</span></span>  

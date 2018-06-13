@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33546573"
 ---
 # <a name="markup-compatibility-mc-language-features"></a><span data-ttu-id="cb4ba-102">Совместимость разметки (mc:) языковые компоненты</span><span class="sxs-lookup"><span data-stu-id="cb4ba-102">Markup Compatibility (mc:) Language Features</span></span>
 ## <a name="in-this-section"></a><span data-ttu-id="cb4ba-103">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="cb4ba-103">In This Section</span></span>  

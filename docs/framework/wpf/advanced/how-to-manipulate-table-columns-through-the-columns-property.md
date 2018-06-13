@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33545302"
 ---
 # <a name="how-to-manipulate-a-table39s-columns-through-the-columns-property"></a><span data-ttu-id="f3edb-102">Как: управлять таблицы&#39;s столбцов с помощью свойства столбцов</span><span class="sxs-lookup"><span data-stu-id="f3edb-102">How to: Manipulate a Table&#39;s Columns through the Columns Property</span></span>
 <span data-ttu-id="f3edb-103">В этом примере показаны некоторые из наиболее распространенных операций, которые могут выполняться над столбцами таблицы с помощью <xref:System.Windows.Documents.Table.Columns%2A> свойство.</span><span class="sxs-lookup"><span data-stu-id="f3edb-103">This example demonstrates some of the more common operations that can be performed on a table's columns through the <xref:System.Windows.Documents.Table.Columns%2A> property.</span></span>  

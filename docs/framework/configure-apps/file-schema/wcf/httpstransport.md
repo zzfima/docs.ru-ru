@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32750119"
 ---
 # <a name="lthttpstransportgt"></a><span data-ttu-id="16904-102">&lt;httpsTransport&gt;</span><span class="sxs-lookup"><span data-stu-id="16904-102">&lt;httpsTransport&gt;</span></span>
 <span data-ttu-id="16904-103">Задает транспорт HTTP для передачи сообщений протокола SOAP для пользовательской привязки.</span><span class="sxs-lookup"><span data-stu-id="16904-103">Specifies an HTTP transport for transmitting SOAP messages for a custom binding.</span></span>  

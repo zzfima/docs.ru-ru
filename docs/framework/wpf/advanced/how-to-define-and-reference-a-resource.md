@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33543498"
 ---
 # <a name="how-to-define-and-reference-a-resource"></a><span data-ttu-id="96c6e-102">Практическое руководство. Определение и создание ссылки на ресурс</span><span class="sxs-lookup"><span data-stu-id="96c6e-102">How to: Define and Reference a Resource</span></span>
 <span data-ttu-id="96c6e-103">В этом примере показано, как определить ресурс и ссылки на него с помощью атрибута в [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].</span><span class="sxs-lookup"><span data-stu-id="96c6e-103">This example shows how to define a resource and reference it by using an attribute in [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].</span></span>  

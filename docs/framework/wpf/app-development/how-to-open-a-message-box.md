@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33545640"
 ---
 # <a name="how-to-open-a-message-box"></a><span data-ttu-id="0f8f5-102">Как: окна сообщения</span><span class="sxs-lookup"><span data-stu-id="0f8f5-102">How to: Open a Message Box</span></span>
 <span data-ttu-id="0f8f5-103">В этом примере показано, как открыть окно сообщения.</span><span class="sxs-lookup"><span data-stu-id="0f8f5-103">This example shows how to open a message box.</span></span>  

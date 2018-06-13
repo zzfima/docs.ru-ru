@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33546241"
 ---
 # <a name="getting-started-with-ink"></a><span data-ttu-id="e4e60-102">Начало работы с рукописными данными</span><span class="sxs-lookup"><span data-stu-id="e4e60-102">Getting Started with Ink</span></span>
 <span data-ttu-id="e4e60-103">Включение рукописного ввода в приложения проще, чем когда-либо.</span><span class="sxs-lookup"><span data-stu-id="e4e60-103">Incorporating digital ink into your applications is easier than ever.</span></span> <span data-ttu-id="e4e60-104">Рукописный ввод развивался с дополнения метод COM и Windows Forms программирования для достижения полной интеграции в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].</span><span class="sxs-lookup"><span data-stu-id="e4e60-104">Ink has evolved from being a corollary to the COM and Windows Forms method of programming to achieving full integration into the [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].</span></span> <span data-ttu-id="e4e60-105">Необходимо установить отдельные пакеты SDK или библиотеки времени выполнения.</span><span class="sxs-lookup"><span data-stu-id="e4e60-105">You do not need to install separate SDKs or runtime libraries.</span></span>  

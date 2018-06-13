@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33544161"
 ---
 # <a name="how-to-use-application-resources"></a><span data-ttu-id="733bd-102">Практическое руководство. Использование ресурсов приложения</span><span class="sxs-lookup"><span data-stu-id="733bd-102">How to: Use Application Resources</span></span>
 <span data-ttu-id="733bd-103">В этом примере показаны способы использования ресурсов приложения.</span><span class="sxs-lookup"><span data-stu-id="733bd-103">This example shows how to use application resources.</span></span>  

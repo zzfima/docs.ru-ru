@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33546283"
 ---
 # <a name="printing-how-to-topics"></a><span data-ttu-id="113bc-102">Разделы руководства по печати</span><span class="sxs-lookup"><span data-stu-id="113bc-102">Printing How-to Topics</span></span>
 <span data-ttu-id="113bc-103">В подразделах этого раздела демонстрируют использование печати и включенные функции управления системы печати с [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] а также новый [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] путь печати.</span><span class="sxs-lookup"><span data-stu-id="113bc-103">The topics in this section demonstrate how to use the printing and print system management features included with [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] as well as the new [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] print path.</span></span>  

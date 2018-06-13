@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33543593"
 ---
 # <a name="how-to-enumerate-a-subset-of-print-queues"></a><span data-ttu-id="17d42-102">Практическое руководство. Перечисление подмножества очередей печати</span><span class="sxs-lookup"><span data-stu-id="17d42-102">How to: Enumerate a Subset of Print Queues</span></span>
 <span data-ttu-id="17d42-103">Распространенные ситуации, сталкиваются ИТ-специалистов в области информационных управление всей компании набор принтеры заключается в создании списка принтеров, имеющих определенные характеристики.</span><span class="sxs-lookup"><span data-stu-id="17d42-103">A common situation faced by information technology (IT) professionals managing a company-wide set of printers is to generate a list of printers having certain characteristics.</span></span> <span data-ttu-id="17d42-104">Эта функциональность обеспечивается <xref:System.Printing.PrintServer.GetPrintQueues%2A> метод <xref:System.Printing.PrintServer> объекта и <xref:System.Printing.EnumeratedPrintQueueTypes> перечисления.</span><span class="sxs-lookup"><span data-stu-id="17d42-104">This functionality is provided by the <xref:System.Printing.PrintServer.GetPrintQueues%2A> method of a <xref:System.Printing.PrintServer> object and the <xref:System.Printing.EnumeratedPrintQueueTypes> enumeration.</span></span>  

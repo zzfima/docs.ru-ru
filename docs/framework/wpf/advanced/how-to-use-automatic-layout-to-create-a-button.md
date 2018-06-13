@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33545218"
 ---
 # <a name="how-to-use-automatic-layout-to-create-a-button"></a><span data-ttu-id="e0e01-102">Практическое руководство. Использование автоматической разметки для создания кнопки</span><span class="sxs-lookup"><span data-stu-id="e0e01-102">How to: Use Automatic Layout to Create a Button</span></span>
 <span data-ttu-id="e0e01-103">В этом примере описывается, как использовать автоматическую разметку для создания кнопки в локализуемом приложении.</span><span class="sxs-lookup"><span data-stu-id="e0e01-103">This example describes how to use the automatic layout approach to create a button in a localizable application.</span></span>  

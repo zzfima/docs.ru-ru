@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33548355"
 ---
 # <a name="walkthrough-creating-your-first-touch-application"></a><span data-ttu-id="fd6f0-102">Пошаговое руководство. Создание первого приложения для обработки касаний</span><span class="sxs-lookup"><span data-stu-id="fd6f0-102">Walkthrough: Creating Your First Touch Application</span></span>
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]<span data-ttu-id="fd6f0-103"> позволяет приложениям реагировать на сенсорный ввод.</span><span class="sxs-lookup"><span data-stu-id="fd6f0-103"> enables applications to respond to touch.</span></span> <span data-ttu-id="fd6f0-104">Например может взаимодействовать с приложением с помощью одного или несколько пальцев на сенсорные устройства, например сенсорный экран, в данном пошаговом руководстве создается приложение, которое позволяет пользователю перемещать, изменять размер или поворот объекта с использованием сенсорного ввода.</span><span class="sxs-lookup"><span data-stu-id="fd6f0-104">For example, you can interact with an application by using one or more fingers on a touch-sensitive device, such as a touchscreen This walkthrough creates an application that enables the user to move, resize, or rotate a single object by using touch.</span></span>  

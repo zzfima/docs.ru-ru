@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33524391"
 ---
 # <a name="how-to-autogenerate-columns-in-a-data-bound-windows-forms-datagridview-control"></a><span data-ttu-id="169b0-102">Практическое руководство. Автоматическое создание столбцов связанного с данными элемента управления DataGridView в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="169b0-102">How to: Autogenerate Columns in a Data-Bound Windows Forms DataGridView Control</span></span>
 <span data-ttu-id="169b0-103">В следующем примере кода показано, как отобразить столбцы из связанного источника данных в <xref:System.Windows.Forms.DataGridView> элемента управления.</span><span class="sxs-lookup"><span data-stu-id="169b0-103">The following code example demonstrates how to display columns from a bound data source in a <xref:System.Windows.Forms.DataGridView> control.</span></span> <span data-ttu-id="169b0-104">Когда <xref:System.Windows.Forms.DataGridView.AutoGenerateColumns%2A> значение свойства `true` (по умолчанию), <xref:System.Windows.Forms.DataGridViewColumn> создается для каждого столбца в исходной таблице данных.</span><span class="sxs-lookup"><span data-stu-id="169b0-104">When the <xref:System.Windows.Forms.DataGridView.AutoGenerateColumns%2A> property value is `true` (the default), a <xref:System.Windows.Forms.DataGridViewColumn> is created for each column in the data source table.</span></span>  

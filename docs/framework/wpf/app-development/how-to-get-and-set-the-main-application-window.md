@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33547986"
 ---
 # <a name="how-to-get-and-set-the-main-application-window"></a><span data-ttu-id="4dcbc-102">Как: Get и Set в главное окно приложения</span><span class="sxs-lookup"><span data-stu-id="4dcbc-102">How to: Get and Set the Main Application Window</span></span>
 <span data-ttu-id="4dcbc-103">В этом примере показано, как получить и задать главного окна приложения.</span><span class="sxs-lookup"><span data-stu-id="4dcbc-103">This example shows how to get and set the main application window.</span></span>  

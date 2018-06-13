@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33546365"
 ---
 # <a name="how-to-open-a-dialog-box"></a><span data-ttu-id="41a86-102">Как: открывает диалоговое окно</span><span class="sxs-lookup"><span data-stu-id="41a86-102">How to: Open a Dialog Box</span></span>
 <span data-ttu-id="41a86-103">В этом примере показано, как открыть диалоговое окно.</span><span class="sxs-lookup"><span data-stu-id="41a86-103">This example shows how to open a dialog box.</span></span>  

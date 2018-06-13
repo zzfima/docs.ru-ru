@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33543759"
 ---
 # <a name="how-to-enumerate-system-fonts"></a><span data-ttu-id="14eec-102">Инструкция по перечислению системных шрифтов</span><span class="sxs-lookup"><span data-stu-id="14eec-102">How to: Enumerate System Fonts</span></span>
 ## <a name="example"></a><span data-ttu-id="14eec-103">Пример</span><span class="sxs-lookup"><span data-stu-id="14eec-103">Example</span></span>  

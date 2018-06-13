@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33549400"
 ---
 # <a name="xaml-namespaces-and-namespace-mapping-for-wpf-xaml"></a><span data-ttu-id="c8cfc-102">Пространства имен XAML и сопоставление пространств имен для WPF XAML</span><span class="sxs-lookup"><span data-stu-id="c8cfc-102">XAML Namespaces and Namespace Mapping for WPF XAML</span></span>
 <span data-ttu-id="c8cfc-103">В этом разделе обосновывается наличие и рассматриваются цели сопоставления двух пространств имен XAML, обычно содержащихся в корневом теге файла WPF XAML.</span><span class="sxs-lookup"><span data-stu-id="c8cfc-103">This topic further explains the presence and purpose of the two XAML namespace mappings as often found in the root tag of a WPF XAML file.</span></span> <span data-ttu-id="c8cfc-104">Также описываются способы создания аналогичных сопоставлений для использования элементов, заданных в коде и/или в отдельных сборках.</span><span class="sxs-lookup"><span data-stu-id="c8cfc-104">It also describes how to produce similar mappings for using elements that are defined in your own code, and/or within separate assemblies.</span></span>  

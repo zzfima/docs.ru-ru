@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33544876"
 ---
 # <a name="how-to-automatically-size-a-window-to-fit-its-content"></a><span data-ttu-id="f5950-102">Как: автоматическое изменение размера окна в соответствии с содержимым</span><span class="sxs-lookup"><span data-stu-id="f5950-102">How to: Automatically Size a Window to Fit Its Content</span></span>
 <span data-ttu-id="f5950-103">В этом примере показано, как задать <xref:System.Windows.Window.SizeToContent%2A> свойство, чтобы указать, изменение размера окна в соответствии с содержимым.</span><span class="sxs-lookup"><span data-stu-id="f5950-103">This example shows how to set the <xref:System.Windows.Window.SizeToContent%2A> property to specify how a window resizes to fit its content.</span></span>  

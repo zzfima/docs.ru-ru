@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32746713"
 ---
 # <a name="ltentriesgt"></a><span data-ttu-id="726fa-102">&lt;Записи&gt;</span><span class="sxs-lookup"><span data-stu-id="726fa-102">&lt;entries&gt;</span></span>
 <span data-ttu-id="726fa-103">Запись маршрутизации, содержащая сопоставление между фильтрами маршрутизации и целевыми конечными точками (которые будут использованы при отправке сообщений при условии совпадения с критериями фильтров).</span><span class="sxs-lookup"><span data-stu-id="726fa-103">A routing entry that contain mappings between the routing filters and the target endpoints to send messages to when the filter matches.</span></span>  

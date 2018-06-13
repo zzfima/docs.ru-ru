@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33545495"
 ---
 # <a name="how-to-get-all-windows-in-an-application"></a><span data-ttu-id="f24a1-102">Как: получение всех окон в приложении</span><span class="sxs-lookup"><span data-stu-id="f24a1-102">How to: Get all Windows in an Application</span></span>
 <span data-ttu-id="f24a1-103">В этом примере показано, как получить все <xref:System.Windows.Window> объектов в приложении.</span><span class="sxs-lookup"><span data-stu-id="f24a1-103">This example shows how to get all <xref:System.Windows.Window> objects in an application.</span></span>  

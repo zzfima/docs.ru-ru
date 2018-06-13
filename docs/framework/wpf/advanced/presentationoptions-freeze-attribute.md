@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33546075"
 ---
 # <a name="presentationoptionsfreeze-attribute"></a><span data-ttu-id="ab59c-102">Атрибут PresentationOptions:Freeze</span><span class="sxs-lookup"><span data-stu-id="ab59c-102">PresentationOptions:Freeze Attribute</span></span>
 <span data-ttu-id="ab59c-103">Наборы <xref:System.Windows.Freezable.IsFrozen%2A> состояние `true` в содержащем <xref:System.Windows.Freezable> элемента.</span><span class="sxs-lookup"><span data-stu-id="ab59c-103">Sets the <xref:System.Windows.Freezable.IsFrozen%2A> state to `true` on the containing <xref:System.Windows.Freezable> element.</span></span> <span data-ttu-id="ab59c-104">Поведение по умолчанию для <xref:System.Windows.Freezable> без `PresentationOptions:Freeze` указан атрибут звучит <xref:System.Windows.Freezable.IsFrozen%2A> — `false` во время загрузки и в зависимости от Общие <xref:System.Windows.Freezable> поведение во время выполнения.</span><span class="sxs-lookup"><span data-stu-id="ab59c-104">Default behavior for a <xref:System.Windows.Freezable> without the `PresentationOptions:Freeze` attribute specified is that <xref:System.Windows.Freezable.IsFrozen%2A> is `false` at load time, and dependent on general <xref:System.Windows.Freezable> behavior at runtime.</span></span>  
