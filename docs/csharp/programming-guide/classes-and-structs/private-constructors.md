@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33315793"
 ---
 # <a name="private-constructors-c-programming-guide"></a><span data-ttu-id="4f9f8-102">Закрытые конструкторы (Руководство по программированию на C#)</span><span class="sxs-lookup"><span data-stu-id="4f9f8-102">Private Constructors (C# Programming Guide)</span></span>
 <span data-ttu-id="4f9f8-103">Закрытый конструктор — это особый конструктор экземпляров.</span><span class="sxs-lookup"><span data-stu-id="4f9f8-103">A private constructor is a special instance constructor.</span></span> <span data-ttu-id="4f9f8-104">Обычно он используется в классах, содержащих только статические элементы.</span><span class="sxs-lookup"><span data-stu-id="4f9f8-104">It is generally used in classes that contain static members only.</span></span> <span data-ttu-id="4f9f8-105">Если в классе один или несколько закрытых конструкторов и ни одного открытого конструктора, то прочие классы (за исключением вложенных классов) не смогут создавать экземпляры этого класса.</span><span class="sxs-lookup"><span data-stu-id="4f9f8-105">If a class has one or more private constructors and no public constructors, other classes (except nested classes) cannot create instances of this class.</span></span> <span data-ttu-id="4f9f8-106">Пример:</span><span class="sxs-lookup"><span data-stu-id="4f9f8-106">For example:</span></span>  

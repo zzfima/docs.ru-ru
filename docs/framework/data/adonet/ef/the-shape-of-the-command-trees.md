@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32766040"
 ---
 # <a name="the-shape-of-the-command-trees"></a><span data-ttu-id="6621d-102">Форма деревьев команд</span><span class="sxs-lookup"><span data-stu-id="6621d-102">The Shape of the Command Trees</span></span>
 <span data-ttu-id="6621d-103">Модуль создания кода SQL отвечает за создание кода SQL, зависящего от конкретного сервера запроса, на основе данного входного выражения дерева команд запроса.</span><span class="sxs-lookup"><span data-stu-id="6621d-103">The SQL generation module is responsible for generating a backend specific SQL query based on a given input query command tree expression.</span></span> <span data-ttu-id="6621d-104">В этом разделе описываются характеристики, свойства и структура деревьев команд запроса.</span><span class="sxs-lookup"><span data-stu-id="6621d-104">This section discusses the characteristics, properties, and structure of the query command trees.</span></span>  

@@ -16,9 +16,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2fbf9a24c350dd4c33bb50b0add8817c8922925f
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33436011"
 ---
 # <a name="writeablemetadataupdatemode-enumeration"></a><span data-ttu-id="9e416-102">Перечисление WriteableMetadataUpdateMode</span><span class="sxs-lookup"><span data-stu-id="9e416-102">WriteableMetadataUpdateMode Enumeration</span></span>
 <span data-ttu-id="9e416-103">[Поддерживается в .NET Framework 4.5.2 и более поздних версиях.]</span><span class="sxs-lookup"><span data-stu-id="9e416-103">[Supported in the .NET Framework 4.5.2 and later versions]</span></span>  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33329872"
 ---
 # <a name="generic-methods-c-programming-guide"></a><span data-ttu-id="b0f9b-102">Универсальные методы (Руководство по программированию на C#)</span><span class="sxs-lookup"><span data-stu-id="b0f9b-102">Generic Methods (C# Programming Guide)</span></span>
 <span data-ttu-id="b0f9b-103">Универсальным называется метод, объявленный с использованием параметров типа, как показано ниже:</span><span class="sxs-lookup"><span data-stu-id="b0f9b-103">A generic method is a method that is declared with type parameters, as follows:</span></span>  

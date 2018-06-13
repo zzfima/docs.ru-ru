@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33366038"
 ---
 # <a name="what39s-new-in-adonet"></a><span data-ttu-id="52f00-102">Что&#39;новые возможности ADO.NET</span><span class="sxs-lookup"><span data-stu-id="52f00-102">What&#39;s New in ADO.NET</span></span>
 <span data-ttu-id="52f00-103">В [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] в [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] предоставляются следующие новые возможности.</span><span class="sxs-lookup"><span data-stu-id="52f00-103">The following features are new in [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] in the [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].</span></span>  

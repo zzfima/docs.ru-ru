@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 0898d554a2602a1139f2e37eb67f3aa00c5bd79e
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33436089"
 ---
 # <a name="isymunmanagedmethodgetscopefromoffset-method"></a><span data-ttu-id="132c5-102">Метод ISymUnmanagedMethod::GetScopeFromOffset</span><span class="sxs-lookup"><span data-stu-id="132c5-102">ISymUnmanagedMethod::GetScopeFromOffset Method</span></span>
 <span data-ttu-id="132c5-103">Возвращает наиболее узкая Внешняя лексическая область в этом методе, содержащую данное смещение.</span><span class="sxs-lookup"><span data-stu-id="132c5-103">Gets the most enclosing lexical scope within this method that encloses the given offset.</span></span> <span data-ttu-id="132c5-104">Может быть использован для запуска поиска локальной переменной.</span><span class="sxs-lookup"><span data-stu-id="132c5-104">This can be used to start local variable searches.</span></span>  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32754919"
 ---
 # <a name="ltcleargt"></a><span data-ttu-id="2f2c8-102">&lt;clear&gt;</span><span class="sxs-lookup"><span data-stu-id="2f2c8-102">&lt;clear&gt;</span></span>
 <span data-ttu-id="2f2c8-103">Удаляет все обработчики маркеров безопасности из текущей коллекции обработчика токенов.</span><span class="sxs-lookup"><span data-stu-id="2f2c8-103">Clears all security token handlers from the current token handler collection.</span></span>  

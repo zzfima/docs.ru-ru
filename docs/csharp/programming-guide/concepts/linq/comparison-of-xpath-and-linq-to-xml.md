@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33326437"
 ---
 # <a name="comparison-of-xpath-and-linq-to-xml"></a><span data-ttu-id="a253a-102">Сравнительные характеристики XPath и LINQ to XML</span><span class="sxs-lookup"><span data-stu-id="a253a-102">Comparison of XPath and LINQ to XML</span></span>
 <span data-ttu-id="a253a-103">XPath и [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] имеют некоторые сходные функциональные возможности.</span><span class="sxs-lookup"><span data-stu-id="a253a-103">XPath and [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] offer some similar functionality.</span></span> <span data-ttu-id="a253a-104">И то и другое можно использовать, чтобы запрашивать XML-дерево для возвращения таких результатов, как коллекция элементов, коллекция атрибутов, коллекция узлов или значение элемента или атрибута.</span><span class="sxs-lookup"><span data-stu-id="a253a-104">Both can be used to query an XML tree, returning such results as a collection of elements, a collection of attributes, a collection of nodes, or the value of an element or attribute.</span></span> <span data-ttu-id="a253a-105">Однако между ними также есть некоторые различия.</span><span class="sxs-lookup"><span data-stu-id="a253a-105">However, there are also some differences.</span></span>  

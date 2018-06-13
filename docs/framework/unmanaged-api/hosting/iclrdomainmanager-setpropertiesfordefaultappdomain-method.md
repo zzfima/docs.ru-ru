@@ -17,9 +17,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 18db77b42af47b76bf1b3b66748d586c4c41dbd7
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33433558"
 ---
 # <a name="iclrdomainmanagersetpropertiesfordefaultappdomain-method"></a><span data-ttu-id="73c45-102">Метод ICLRDomainManager::SetPropertiesForDefaultAppDomain</span><span class="sxs-lookup"><span data-stu-id="73c45-102">ICLRDomainManager::SetPropertiesForDefaultAppDomain Method</span></span>
 <span data-ttu-id="73c45-103">Задает свойства, которые будут использоваться для инициализации домена приложения по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="73c45-103">Sets properties that will be used to initialize the default application domain.</span></span>  

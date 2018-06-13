@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 0cefd47d3c7298f9cc4b15eb2946f3d95aeae759
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33438003"
 ---
 # <a name="iclrvalidator-interface"></a><span data-ttu-id="e2497-102">Интерфейс ICLRValidator</span><span class="sxs-lookup"><span data-stu-id="e2497-102">ICLRValidator Interface</span></span>
 <span data-ttu-id="e2497-103">Предоставляет методы для проверки переносимого исполняемого (PE) образа и возврат ошибок проверки.</span><span class="sxs-lookup"><span data-stu-id="e2497-103">Provides methods for validating portable executable (PE) images and reporting validation errors.</span></span>  

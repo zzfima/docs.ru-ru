@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33322017"
 ---
 # <a name="how-to-write-a-query-that-finds-elements-based-on-context-c"></a><span data-ttu-id="ee719-102">Практическое руководство. Написание запроса, ищущего элементы на основании контекста (C#)</span><span class="sxs-lookup"><span data-stu-id="ee719-102">How to: Write a Query that Finds Elements Based on Context (C#)</span></span>
 <span data-ttu-id="ee719-103">Иногда требуется написать запрос, который выбирает элементы, исходя из их контекста.</span><span class="sxs-lookup"><span data-stu-id="ee719-103">Sometimes you might have to write a query that selects elements based on their context.</span></span> <span data-ttu-id="ee719-104">Может потребоваться использовать фильтрацию с учетом предыдущих или следующих одноуровневых элементов.</span><span class="sxs-lookup"><span data-stu-id="ee719-104">You might want to filter based on preceding or following sibling elements.</span></span> <span data-ttu-id="ee719-105">Может потребоваться использовать фильтрацию с учетом дочерних или родительских элементов.</span><span class="sxs-lookup"><span data-stu-id="ee719-105">You might want to filter based on child or ancestor elements.</span></span>  

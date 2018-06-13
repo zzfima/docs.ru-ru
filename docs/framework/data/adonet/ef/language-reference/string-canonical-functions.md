@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32766508"
 ---
 # <a name="string-canonical-functions"></a><span data-ttu-id="b6957-102">Строковые канонические функции</span><span class="sxs-lookup"><span data-stu-id="b6957-102">String Canonical Functions</span></span>
 <span data-ttu-id="b6957-103">Язык [!INCLUDE[esql](../../../../../../includes/esql-md.md)] включает строковые канонические функции.</span><span class="sxs-lookup"><span data-stu-id="b6957-103">[!INCLUDE[esql](../../../../../../includes/esql-md.md)] includes string canonical functions.</span></span>  

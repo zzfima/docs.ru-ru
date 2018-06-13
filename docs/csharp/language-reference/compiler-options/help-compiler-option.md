@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33210981"
 ---
 # <a name="-help---c-compiler-options"></a><span data-ttu-id="48c13-103">-help, -?</span><span class="sxs-lookup"><span data-stu-id="48c13-103">-help, -?</span></span> <span data-ttu-id="48c13-104">(параметры компилятора C#)</span><span class="sxs-lookup"><span data-stu-id="48c13-104">(C# Compiler Options)</span></span>
 <span data-ttu-id="48c13-105">Этот параметр отправляет список параметров компилятора и краткое описание каждого параметра в stdout.</span><span class="sxs-lookup"><span data-stu-id="48c13-105">This option sends a listing of compiler options, and a brief description of each option, to stdout.</span></span>  

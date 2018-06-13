@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32751458"
 ---
 # <a name="ltserviceauthorizationgt-element"></a><span data-ttu-id="ed581-102">Элемент &lt;serviceAuthorization&gt;</span><span class="sxs-lookup"><span data-stu-id="ed581-102">&lt;serviceAuthorization&gt; element</span></span>
 <span data-ttu-id="ed581-103">Задает параметры авторизации доступа к операциям службы.</span><span class="sxs-lookup"><span data-stu-id="ed581-103">Specifies settings that authorize access to service operations</span></span>  

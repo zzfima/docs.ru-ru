@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32765520"
 ---
 # <a name="variables-entity-sql"></a><span data-ttu-id="5c87f-102">Переменные (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="5c87f-102">Variables (Entity SQL)</span></span>
 ## <a name="variable"></a><span data-ttu-id="5c87f-103">Переменная</span><span class="sxs-lookup"><span data-stu-id="5c87f-103">Variable</span></span>  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33332859"
 ---
 # <a name="how-to-convert-a-string-to-a-number-c-programming-guide"></a><span data-ttu-id="7d35e-102">Практическое руководство. Преобразование строки в число (руководство по программированию в C#)</span><span class="sxs-lookup"><span data-stu-id="7d35e-102">How to: Convert a String to a Number (C# Programming Guide)</span></span>
 <span data-ttu-id="7d35e-103">Вы можете преобразовывать [строку](../../../csharp/language-reference/keywords/string.md) в число с помощью методов в классе <xref:System.Convert> или с помощью метода `TryParse`, который можно найти в различных числовых типах (int, long, float и т. д.).</span><span class="sxs-lookup"><span data-stu-id="7d35e-103">You can convert a [string](../../../csharp/language-reference/keywords/string.md) to a number by using methods in the <xref:System.Convert> class or by using the `TryParse` method found on the various numeric types (int, long, float, etc.).</span></span>  
