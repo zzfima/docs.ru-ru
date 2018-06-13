@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33655815"
 ---
 # <a name="references-to-declared-elements-visual-basic"></a><span data-ttu-id="c5896-102">Ссылки на объявленные элементы (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="c5896-102">References to Declared Elements (Visual Basic)</span></span>
 <span data-ttu-id="c5896-103">Когда код ссылается на объявленный элемент, компилятор Visual Basic соответствует имени в ссылке соответствующему объявлению с тем же именем.</span><span class="sxs-lookup"><span data-stu-id="c5896-103">When your code refers to a declared element, the Visual Basic compiler matches the name in your reference to the appropriate declaration of that name.</span></span> <span data-ttu-id="c5896-104">Если с тем же именем объявлено несколько элементов, можно управлять, какой из этих элементов — для ссылки на *соответствующие* его имя.</span><span class="sxs-lookup"><span data-stu-id="c5896-104">If more than one element is declared with the same name, you can control which of those elements is to be referenced by *qualifying* its name.</span></span>  

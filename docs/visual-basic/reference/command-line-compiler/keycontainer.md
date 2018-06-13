@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33655314"
 ---
 # <a name="-keycontainer"></a><span data-ttu-id="3e67c-102">-keycontainer</span><span class="sxs-lookup"><span data-stu-id="3e67c-102">-keycontainer</span></span>
 <span data-ttu-id="3e67c-103">Указывает имя контейнера для пары ключей, чтобы задать для сборки строгое имя.</span><span class="sxs-lookup"><span data-stu-id="3e67c-103">Specifies a key container name for a key pair to give an assembly a strong name.</span></span>  

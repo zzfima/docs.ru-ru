@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33605281"
 ---
 # <a name="exit-statement-visual-basic"></a><span data-ttu-id="421c7-102">Оператор Exit (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="421c7-102">Exit Statement (Visual Basic)</span></span>
 <span data-ttu-id="421c7-103">Выходит из процедуры или блока и немедленно передает управление оператору после вызова процедуры или определения блока.</span><span class="sxs-lookup"><span data-stu-id="421c7-103">Exits a procedure or block and transfers control immediately to the statement following the procedure call or the block definition.</span></span>  

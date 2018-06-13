@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33599756"
 ---
 # <a name="ltcodegt-visual-basic"></a><span data-ttu-id="475a0-102">&lt;код&gt; (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="475a0-102">&lt;code&gt; (Visual Basic)</span></span>
 <span data-ttu-id="475a0-103">Указывает, что текст является нескольких строк кода.</span><span class="sxs-lookup"><span data-stu-id="475a0-103">Indicates that the text is multiple lines of code.</span></span>  

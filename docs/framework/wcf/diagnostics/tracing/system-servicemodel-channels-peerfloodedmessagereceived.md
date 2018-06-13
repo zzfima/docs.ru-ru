@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33478115"
 ---
 # <a name="systemservicemodelchannelspeerfloodedmessagereceived"></a><span data-ttu-id="486e6-102">System.ServiceModel.Channels.PeerFloodedMessageReceived</span><span class="sxs-lookup"><span data-stu-id="486e6-102">System.ServiceModel.Channels.PeerFloodedMessageReceived</span></span>
 <span data-ttu-id="486e6-103">Равноправный узел получил переполняющее сообщение.</span><span class="sxs-lookup"><span data-stu-id="486e6-103">A PeerNode received a flooded message.</span></span>  

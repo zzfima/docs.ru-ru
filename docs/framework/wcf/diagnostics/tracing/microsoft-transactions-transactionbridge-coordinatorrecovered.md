@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33473864"
 ---
 # <a name="microsofttransactionstransactionbridgecoordinatorrecovered"></a><span data-ttu-id="8fe91-102">Microsoft.Transactions.TransactionBridge.CoordinatorRecovered</span><span class="sxs-lookup"><span data-stu-id="8fe91-102">Microsoft.Transactions.TransactionBridge.CoordinatorRecovered</span></span>
 <span data-ttu-id="8fe91-103">Перечисление координатора восстановлено из журнала диспетчера транзакций.</span><span class="sxs-lookup"><span data-stu-id="8fe91-103">A coordinator enlistment was recovered from the Transaction Manager log.</span></span>  

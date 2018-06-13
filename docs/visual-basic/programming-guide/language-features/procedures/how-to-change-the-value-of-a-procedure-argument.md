@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33655841"
 ---
 # <a name="how-to-change-the-value-of-a-procedure-argument-visual-basic"></a><span data-ttu-id="6dcef-102">Практическое руководство. Изменение значения аргумента процедуры (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="6dcef-102">How to: Change the Value of a Procedure Argument (Visual Basic)</span></span>
 <span data-ttu-id="6dcef-103">При вызове процедуры каждый аргумент соответствует одному из параметров, определенных в процедуре.</span><span class="sxs-lookup"><span data-stu-id="6dcef-103">When you call a procedure, each argument you supply corresponds to one of the parameters defined in the procedure.</span></span> <span data-ttu-id="6dcef-104">В некоторых случаях код процедуры можно изменить значение базового аргумента в вызывающем коде.</span><span class="sxs-lookup"><span data-stu-id="6dcef-104">In some cases, the procedure code can change the value underlying an argument in the calling code.</span></span> <span data-ttu-id="6dcef-105">В других случаях процедура может изменять только его локальную копию аргумента.</span><span class="sxs-lookup"><span data-stu-id="6dcef-105">In other cases, the procedure can change only its local copy of an argument.</span></span>  

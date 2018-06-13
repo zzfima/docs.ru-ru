@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33468069"
 ---
 # <a name="57393---appdomainunload"></a><span data-ttu-id="1c9e6-102">57393 - AppDomainUnload</span><span class="sxs-lookup"><span data-stu-id="1c9e6-102">57393 - AppDomainUnload</span></span>
 ## <a name="properties"></a><span data-ttu-id="1c9e6-103">Свойства</span><span class="sxs-lookup"><span data-stu-id="1c9e6-103">Properties</span></span>  

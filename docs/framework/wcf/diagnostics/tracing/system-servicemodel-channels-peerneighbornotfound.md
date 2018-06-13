@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33478684"
 ---
 # <a name="systemservicemodelchannelspeerneighbornotfound"></a><span data-ttu-id="a0681-102">System.ServiceModel.Channels.PeerNeighborNotFound</span><span class="sxs-lookup"><span data-stu-id="a0681-102">System.ServiceModel.Channels.PeerNeighborNotFound</span></span>
 <span data-ttu-id="a0681-103">Не удалось выполнить операцию, связанную с соседним узлом, поскольку этот соседний узел не обнаружился в списке соседних узлов.</span><span class="sxs-lookup"><span data-stu-id="a0681-103">An operation on a neighbor could not be performed because that neighbor could not be found in the neighbor list.</span></span>  
