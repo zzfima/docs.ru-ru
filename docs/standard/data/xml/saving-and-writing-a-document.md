@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33573598"
 ---
 # <a name="saving-and-writing-a-document"></a>Сохранение и запись документа
 При загрузке и сохранении <xref:System.Xml.XmlDocument> между сохраненным и исходным документами возможны следующие различия:  

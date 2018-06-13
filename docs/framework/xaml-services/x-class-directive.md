@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33566812"
 ---
 # <a name="xclass-directive"></a>Директива x:Class
 Настраивает компиляции разметки XAML для объединения разделяемых классов разметки и кода. Разделяемый класс кода определяется в отдельном файле кода в [!INCLUDE[TLA#tla_cls](../../../includes/tlasharptla-cls-md.md)] языка, тогда как разделяемый класс разметки обычно создается путем создания кода во время компиляции XAML.  
