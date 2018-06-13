@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32750779"
 ---
 # <a name="ltbindingextensionsgt"></a><span data-ttu-id="86d22-102">&lt;bindingExtensions&gt;</span><span class="sxs-lookup"><span data-stu-id="86d22-102">&lt;bindingExtensions&gt;</span></span>
 <span data-ttu-id="86d22-103">В этом разделе описывается использование пользовательской привязки из файла конфигурации компьютера или приложения.</span><span class="sxs-lookup"><span data-stu-id="86d22-103">This section enables the use of a user defined binding from a machine or application configuration file.</span></span> <span data-ttu-id="86d22-104">Добавить пользовательскую привязку в эту коллекцию можно с помощью ключевого слова `add`, установив атрибут `type` элемента равным пользовательской привязке, а атрибут `name` равным имени пользовательской привязки.</span><span class="sxs-lookup"><span data-stu-id="86d22-104">You can add a user defined binding to this collection by using the `add` keyword, and setting the `type` attribute of the element to a user defined binding, as well as the `name` attribute to the name of the user defined binding.</span></span>  

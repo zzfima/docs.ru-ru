@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32749235"
 ---
 # <a name="ltservicesgt"></a><span data-ttu-id="b9b2b-102">&lt;Службы&gt;</span><span class="sxs-lookup"><span data-stu-id="b9b2b-102">&lt;services&gt;</span></span>
 <span data-ttu-id="b9b2b-103">Службы задаются в разделе `services` файла конфигурации.</span><span class="sxs-lookup"><span data-stu-id="b9b2b-103">Services are defined in the `services` section of the configuration file.</span></span> <span data-ttu-id="b9b2b-104">Для каждой службы используется собственный раздел конфигурации `service`.</span><span class="sxs-lookup"><span data-stu-id="b9b2b-104">Each service has its own `service` configuration section.</span></span>  

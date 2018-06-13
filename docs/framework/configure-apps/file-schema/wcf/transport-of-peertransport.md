@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32756427"
 ---
 # <a name="lttransportgt-of-ltpeertransportgt"></a><span data-ttu-id="f10c7-102">&lt;transport&gt; для &lt;peerTransport&gt;</span><span class="sxs-lookup"><span data-stu-id="f10c7-102">&lt;transport&gt; of &lt;peerTransport&gt;</span></span>
 <span data-ttu-id="f10c7-103">Задает тип транспорта для безопасных сообщений, отправленных одноранговыми узлами, настроенными с помощью этой привязки.</span><span class="sxs-lookup"><span data-stu-id="f10c7-103">Specifies the transport type for secured messages sent by peers configured with this binding.</span></span>  

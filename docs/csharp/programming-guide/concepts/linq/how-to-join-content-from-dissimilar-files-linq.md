@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33319173"
 ---
 # <a name="how-to-join-content-from-dissimilar-files-linq-c"></a><span data-ttu-id="b5a12-102">Практическое руководство. Объединение содержимого из файлов разных форматов (LINQ) (C#)</span><span class="sxs-lookup"><span data-stu-id="b5a12-102">How to: Join Content from Dissimilar Files (LINQ) (C#)</span></span>
 <span data-ttu-id="b5a12-103">В этом примере показано, как объединить данные из двух файлов с разделителями-запятыми, которые имеют общее значение, используемое в качестве совпадающего ключа.</span><span class="sxs-lookup"><span data-stu-id="b5a12-103">This example shows how to join data from two comma-delimited files that share a common value that is used as a matching key.</span></span> <span data-ttu-id="b5a12-104">Этот способ может оказаться полезным, если необходимо объединить данные из двух электронных таблиц или из электронной таблицы и файла, имеющего другой формат, в новый файл.</span><span class="sxs-lookup"><span data-stu-id="b5a12-104">This technique can be useful if you have to combine data from two spreadsheets, or from a spreadsheet and from a file that has another format, into a new file.</span></span> <span data-ttu-id="b5a12-105">Можно изменить пример для обработки любого типа структурированного текста.</span><span class="sxs-lookup"><span data-stu-id="b5a12-105">You can modify the example to work with any kind of structured text.</span></span>  

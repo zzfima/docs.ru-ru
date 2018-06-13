@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32751601"
 ---
 # <a name="ltsecureconversationbootstrapgt"></a><span data-ttu-id="c34e5-102">&lt;secureConversationBootstrap&gt;</span><span class="sxs-lookup"><span data-stu-id="c34e5-102">&lt;secureConversationBootstrap&gt;</span></span>
 <span data-ttu-id="c34e5-103">Задает значения по умолчанию, используемые для инициализации службы безопасного обмена данными.</span><span class="sxs-lookup"><span data-stu-id="c34e5-103">Specifies the default values used for initiating a secure conversation service.</span></span>  

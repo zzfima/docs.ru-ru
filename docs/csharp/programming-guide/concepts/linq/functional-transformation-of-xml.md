@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33322553"
 ---
 # <a name="functional-transformation-of-xml-c"></a><span data-ttu-id="6499a-102">Функциональное преобразование XML (C#)</span><span class="sxs-lookup"><span data-stu-id="6499a-102">Functional Transformation of XML (C#)</span></span>
 <span data-ttu-id="6499a-103">В этом разделе описан подход с использованием чисто функционального преобразования для изменения XML-документов и производится сравнение его с процедурным подходом.</span><span class="sxs-lookup"><span data-stu-id="6499a-103">This topic discusses the pure functional transformation approach to modifying XML documents, and contrasts it with a procedural approach.</span></span>  

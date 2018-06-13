@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32750197"
 ---
 # <a name="ltaddgt-of-ltcontracttypenamesgt"></a><span data-ttu-id="a6168-102">&lt;add&gt; для &lt;contractTypeNames&gt;</span><span class="sxs-lookup"><span data-stu-id="a6168-102">&lt;add&gt; of &lt;contractTypeNames&gt;</span></span>
 <span data-ttu-id="a6168-103">Элемент конфигурации, указывающий имя контракта искомых служб, а также критерии, обычно используемые при поиске служб.</span><span class="sxs-lookup"><span data-stu-id="a6168-103">A configuration element that specifies the contract name of the services being searched for, and the criteria typically used when searching for a service.</span></span> <span data-ttu-id="a6168-104">Если указано несколько имен контрактов, будет получен ответ только от конечных точек службы, совпадающих со ВСЕМИ контрактами.</span><span class="sxs-lookup"><span data-stu-id="a6168-104">If more than one contract name is specified, only service endpoints matching ALL contracts will reply.</span></span> <span data-ttu-id="a6168-105">Обратите внимание, что в Windows Communication Foundation (WCF), конечная точка поддерживает только один контракт.</span><span class="sxs-lookup"><span data-stu-id="a6168-105">Note that in Windows Communication Foundation (WCF), an endpoint can only support one contract.</span></span>  

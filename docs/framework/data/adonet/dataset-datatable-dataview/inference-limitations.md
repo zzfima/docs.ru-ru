@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32760054"
 ---
 # <a name="inference-limitations"></a><span data-ttu-id="78f56-102">Ограничения определения</span><span class="sxs-lookup"><span data-stu-id="78f56-102">Inference Limitations</span></span>
 <span data-ttu-id="78f56-103">Процесс вывода схемы <xref:System.Data.DataSet> из XML-кода может приводиться в различных схемах в зависимости от XML-элементов в каждом документе.</span><span class="sxs-lookup"><span data-stu-id="78f56-103">The process of inferring a <xref:System.Data.DataSet> schema from XML can result in different schemas depending on the XML elements in each document.</span></span> <span data-ttu-id="78f56-104">Например, рассмотрим следующие XML-документы.</span><span class="sxs-lookup"><span data-stu-id="78f56-104">For example, consider the following XML documents.</span></span>  

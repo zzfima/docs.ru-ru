@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32757909"
 ---
 # <a name="managing-dataviews"></a><span data-ttu-id="5957a-102">Управление объектами DataView</span><span class="sxs-lookup"><span data-stu-id="5957a-102">Managing DataViews</span></span>
 <span data-ttu-id="5957a-103">С помощью класса <xref:System.Data.DataViewManager> можно управлять параметрами представлений во всех таблицах <xref:System.Data.DataView>.</span><span class="sxs-lookup"><span data-stu-id="5957a-103">You can use a <xref:System.Data.DataViewManager> to manage view settings for all the tables in a <xref:System.Data.DataView>.</span></span> <span data-ttu-id="5957a-104">Если имеется элемент управления, который требуется связать с несколькими таблицами, например сеткой перехода по связям, **DataViewManager** идеально.</span><span class="sxs-lookup"><span data-stu-id="5957a-104">If you have a control that you want to bind to multiple tables, such as a grid that navigates relationships, a **DataViewManager** is ideal.</span></span>  

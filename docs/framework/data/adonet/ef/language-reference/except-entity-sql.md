@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32760210"
 ---
 # <a name="except-entity-sql"></a><span data-ttu-id="ca03f-102">EXCEPT (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="ca03f-102">EXCEPT (Entity SQL)</span></span>
 <span data-ttu-id="ca03f-103">Возвращает коллекцию различных значений из выражения запроса, расположенного левее операнда EXCEPT, за исключением тех, которые были возвращены выражением запроса, расположенного правее операнда EXCEPT.</span><span class="sxs-lookup"><span data-stu-id="ca03f-103">Returns a collection of any distinct values from the query expression to the left of the EXCEPT operand that are not also returned from the query expression to the right of the EXCEPT operand.</span></span> <span data-ttu-id="ca03f-104">Все выражения должны иметь тот же тип, что и аргумент `expression`, или принадлежать к базовому или производному типу для типа этого аргумента.</span><span class="sxs-lookup"><span data-stu-id="ca03f-104">All expressions must be of the same type or of a common base or derived type as `expression`.</span></span>  

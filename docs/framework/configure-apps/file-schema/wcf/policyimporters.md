@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32749102"
 ---
 # <a name="ltpolicyimportersgt"></a><span data-ttu-id="9ca67-102">&lt;policyImporters&gt;</span><span class="sxs-lookup"><span data-stu-id="9ca67-102">&lt;policyImporters&gt;</span></span>
 <span data-ttu-id="9ca67-103">Этот элемент конфигурации задает все средства импорта политики, контролирующие импорт утверждений пользовательской политики о привязках.</span><span class="sxs-lookup"><span data-stu-id="9ca67-103">This configuration element specifies all the policy importers that control the import of custom policy assertions about bindings.</span></span> <span data-ttu-id="9ca67-104">Каждый дочерний элемент является <`policyImporter`>, используемым для поиска утверждений пользовательской политики о свойствах привязки, а также для подключения элемента пользовательской привязки, реализующей свойства, необходимые для утверждения.</span><span class="sxs-lookup"><span data-stu-id="9ca67-104">Each child element is a <`policyImporter`> that is used to search custom policy assertions about binding features, as well as attach a custom binding element that implements the features the assertion requires.</span></span>  

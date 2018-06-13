@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32766872"
 ---
 # <a name="architecture-and-design"></a><span data-ttu-id="87e90-102">Архитектура и разработка</span><span class="sxs-lookup"><span data-stu-id="87e90-102">Architecture and Design</span></span>
 <span data-ttu-id="87e90-103">Модуль создания SQL в [образец поставщика](http://go.microsoft.com/fwlink/?LinkId=180616) реализуется в виде посетителя в дереве выражения, представляющем дерево команд.</span><span class="sxs-lookup"><span data-stu-id="87e90-103">The SQL generation module in the [Sample Provider](http://go.microsoft.com/fwlink/?LinkId=180616) is implemented as a visitor on the expression tree that represents the command tree.</span></span> <span data-ttu-id="87e90-104">Создание кода выполняется за один проход по дереву выражения.</span><span class="sxs-lookup"><span data-stu-id="87e90-104">The generation is done in a single pass over the expression tree.</span></span>  

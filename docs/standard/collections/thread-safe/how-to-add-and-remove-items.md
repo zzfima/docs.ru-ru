@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33569750"
 ---
 # <a name="how-to-add-and-remove-items-from-a-concurrentdictionary"></a><span data-ttu-id="4df5f-102">Практическое руководство. Добавление элементов в коллекцию ConcurrentDictionary и их удаление из этой коллекции</span><span class="sxs-lookup"><span data-stu-id="4df5f-102">How to: Add and Remove Items from a ConcurrentDictionary</span></span>
 <span data-ttu-id="4df5f-103">В этом примере показано, как добавлять, получать, обновлять и удалять элементы класса <xref:System.Collections.Concurrent.ConcurrentDictionary%602?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="4df5f-103">This example shows how to add, retrieve, update, and remove items from a <xref:System.Collections.Concurrent.ConcurrentDictionary%602?displayProperty=nameWithType>.</span></span> <span data-ttu-id="4df5f-104">Этот класс коллекций является потокобезопасной реализацией.</span><span class="sxs-lookup"><span data-stu-id="4df5f-104">This collection class is a thread-safe implementation.</span></span> <span data-ttu-id="4df5f-105">Рекомендуется использовать его каждый раз, когда множество потоков одновременно могут пытаться получить доступ к элементам.</span><span class="sxs-lookup"><span data-stu-id="4df5f-105">We recommend that you use it whenever multiple threads might be attempting to access the elements concurrently.</span></span>  

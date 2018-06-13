@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32750964"
 ---
 # <a name="ltsecuritygt-of-ltnetmsmqbindinggt"></a><span data-ttu-id="e1d39-102">&lt;security&gt; для &lt;netMsmqBinding&gt;</span><span class="sxs-lookup"><span data-stu-id="e1d39-102">&lt;security&gt; of &lt;netMsmqBinding&gt;</span></span>
 <span data-ttu-id="e1d39-103">Определяет параметры безопасности для привязки MSMQ.</span><span class="sxs-lookup"><span data-stu-id="e1d39-103">Defines the security settings for a MSMQ binding.</span></span> <span data-ttu-id="e1d39-104">Он указывает, включена ли поддержка транспорта или безопасности SOAP и, если поддержка включена, указывает используемые уровни защиты и режим проверки подлинности.</span><span class="sxs-lookup"><span data-stu-id="e1d39-104">It specifies whether transport or SOAP security is enabled and, if so, what authentication mode and protection levels are in use.</span></span>  

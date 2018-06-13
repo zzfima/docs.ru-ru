@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32749846"
 ---
 # <a name="ltsecuritygt-of-ltpeertransportgt"></a><span data-ttu-id="2451e-102">&lt;security&gt; для &lt;peerTransport&gt;</span><span class="sxs-lookup"><span data-stu-id="2451e-102">&lt;security&gt; of &lt;peerTransport&gt;</span></span>
 <span data-ttu-id="2451e-103">Содержит параметры безопасности, связанные с одноранговым каналом, включая используемый тип проверки подлинности и механизм безопасности, применяемый при транспортировке сообщений.</span><span class="sxs-lookup"><span data-stu-id="2451e-103">Contains the security settings associated with a peer channel, including the type of authentication used and the security used for the message transport.</span></span>  

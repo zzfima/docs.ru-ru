@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33604020"
 ---
 # <a name="-operator-visual-basic"></a><span data-ttu-id="ae6c2-102">Оператор += (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="ae6c2-102">+= Operator (Visual Basic)</span></span>
 <span data-ttu-id="ae6c2-103">Добавляет значение числового выражения к значению числовой переменной или свойства и присваивает результат переменной или свойству.</span><span class="sxs-lookup"><span data-stu-id="ae6c2-103">Adds the value of a numeric expression to the value of a numeric variable or property and assigns the result to the variable or property.</span></span> <span data-ttu-id="ae6c2-104">Можно также использовать для объединения `String` выражение `String` переменной или свойства и присвоить его результат переменной или свойству.</span><span class="sxs-lookup"><span data-stu-id="ae6c2-104">Can also be used to concatenate a `String` expression to a `String` variable or property and assign the result to the variable or property.</span></span>  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32759001"
 ---
 # <a name="ltidentityconfigurationgt"></a><span data-ttu-id="509dd-102">&lt;identityConfiguration&gt;</span><span class="sxs-lookup"><span data-stu-id="509dd-102">&lt;identityConfiguration&gt;</span></span>
 <span data-ttu-id="509dd-103">Указывает параметры уровня службы удостоверений.</span><span class="sxs-lookup"><span data-stu-id="509dd-103">Specifies service-level identity settings.</span></span>  

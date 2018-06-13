@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33603721"
 ---
 # <a name="handles-clause-visual-basic"></a><span data-ttu-id="432c1-102">Предложение Handles (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="432c1-102">Handles Clause (Visual Basic)</span></span>
 <span data-ttu-id="432c1-103">Заявляет, что процедура обрабатывает указанное событие.</span><span class="sxs-lookup"><span data-stu-id="432c1-103">Declares that a procedure handles a specified event.</span></span>  

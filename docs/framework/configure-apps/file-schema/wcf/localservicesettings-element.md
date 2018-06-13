@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32751159"
 ---
 # <a name="ltlocalservicesettingsgt-element"></a><span data-ttu-id="fa23a-102">Элемент &lt;localServiceSettings&gt;</span><span class="sxs-lookup"><span data-stu-id="fa23a-102">&lt;localServiceSettings&gt; element</span></span>
 <span data-ttu-id="fa23a-103">Задает параметры безопасности локальной службы для этой привязки.</span><span class="sxs-lookup"><span data-stu-id="fa23a-103">Specifies the security settings of a local service for this binding.</span></span>  

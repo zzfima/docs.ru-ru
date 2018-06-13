@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32760275"
 ---
 # <a name="summary-of-the-dataset-schema-inference-process"></a><span data-ttu-id="a4b1e-102">Общие сведения о процессе определения схемы набора данных</span><span class="sxs-lookup"><span data-stu-id="a4b1e-102">Summary of the DataSet Schema Inference Process</span></span>
 <span data-ttu-id="a4b1e-103">Процесс вывода схемы из XML-документа вначале определяет, какие элементы будут выведены как таблицы.</span><span class="sxs-lookup"><span data-stu-id="a4b1e-103">The inference process first determines, from the XML document, which elements will be inferred as tables.</span></span> <span data-ttu-id="a4b1e-104">Из оставшегося XML процесс вывода схемы определяет столбцы этих таблиц.</span><span class="sxs-lookup"><span data-stu-id="a4b1e-104">From the remaining XML, the inference process determines the columns for those tables.</span></span> <span data-ttu-id="a4b1e-105">Для вложенных таблиц процесс вывода формирует вложенные объекты <xref:System.Data.DataRelation> и <xref:System.Data.ForeignKeyConstraint>.</span><span class="sxs-lookup"><span data-stu-id="a4b1e-105">For nested tables, the inference process generates nested <xref:System.Data.DataRelation> and <xref:System.Data.ForeignKeyConstraint> objects.</span></span>  

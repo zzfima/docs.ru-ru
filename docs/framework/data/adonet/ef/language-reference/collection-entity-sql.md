@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32761637"
 ---
 # <a name="collection-entity-sql"></a><span data-ttu-id="7a988-102">COLLECTION (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="7a988-102">COLLECTION (Entity SQL)</span></span>
 <span data-ttu-id="7a988-103">Ключевое слово COLLECTION используется только в определении встроенной функции.</span><span class="sxs-lookup"><span data-stu-id="7a988-103">The COLLECTION keyword is only used in the definition of an inline function.</span></span> <span data-ttu-id="7a988-104">Функции коллекций — это функции, которые работают с коллекциями значений и возвращают скалярное значение.</span><span class="sxs-lookup"><span data-stu-id="7a988-104">Collection functions are functions that operate on a collection of values and produce a scalar output.</span></span>  

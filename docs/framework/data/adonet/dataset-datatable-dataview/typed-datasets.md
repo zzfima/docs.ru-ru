@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32762459"
 ---
 # <a name="typed-datasets"></a><span data-ttu-id="8c5fa-102">Типизированные наборы данных</span><span class="sxs-lookup"><span data-stu-id="8c5fa-102">Typed DataSets</span></span>
 <span data-ttu-id="8c5fa-103">Наряду с доступом к значениям с поздним связыванием через слабо типизированные переменные, в объекте <xref:System.Data.DataSet> предоставляется доступ к данным на основе принципа строгой типизации.</span><span class="sxs-lookup"><span data-stu-id="8c5fa-103">Along with late bound access to values through weakly typed variables, the <xref:System.Data.DataSet> provides access to data through a strongly typed metaphor.</span></span> <span data-ttu-id="8c5fa-104">Таблицы и столбцы, которые являются частью **набора данных** может осуществляться с использованием понятных имен и строго типизированных переменных.</span><span class="sxs-lookup"><span data-stu-id="8c5fa-104">Tables and columns that are part of the **DataSet** can be accessed using user-friendly names and strongly typed variables.</span></span>  

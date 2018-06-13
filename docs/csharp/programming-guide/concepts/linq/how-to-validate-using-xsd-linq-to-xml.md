@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33321601"
 ---
 # <a name="how-to-validate-using-xsd-linq-to-xml-c"></a><span data-ttu-id="d08e6-102">Практическое руководство. Проверка с использованием XSD (LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="d08e6-102">How to: Validate Using XSD (LINQ to XML) (C#)</span></span>
 <span data-ttu-id="d08e6-103">Пространство имен <xref:System.Xml.Schema> содержит методы расширения, облегчающие проверку правильности XML-дерева по XSD-файлу.</span><span class="sxs-lookup"><span data-stu-id="d08e6-103">The <xref:System.Xml.Schema> namespace contains extension methods that make it easy to validate an XML tree against an XML Schema Definition Language (XSD) file.</span></span> <span data-ttu-id="d08e6-104">Дополнительные сведения см. в документации метода <xref:System.Xml.Schema.Extensions.Validate%2A>.</span><span class="sxs-lookup"><span data-stu-id="d08e6-104">For more information, see the <xref:System.Xml.Schema.Extensions.Validate%2A> method documentation.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33322186"
 ---
 # <a name="how-to-retrieve-paragraphs-from-an-office-open-xml-document-c"></a><span data-ttu-id="8d21a-102">Практическое руководство. Извлечение абзацев из документа в формате Office Open XML (C#)</span><span class="sxs-lookup"><span data-stu-id="8d21a-102">How to: Retrieve Paragraphs from an Office Open XML Document (C#)</span></span>
 <span data-ttu-id="8d21a-103">В этом разделе представлен пример, открывающий документ Office Open XML и получающий коллекцию всех абзацев документа.</span><span class="sxs-lookup"><span data-stu-id="8d21a-103">This topic presents an example that opens an Office Open XML document, and retrieves a collection of all of the paragraphs in the document.</span></span>  

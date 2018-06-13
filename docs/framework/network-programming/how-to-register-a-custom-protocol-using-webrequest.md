@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33394596"
 ---
 # <a name="how-to-register-a-custom-protocol-using-webrequest"></a><span data-ttu-id="b0552-102">Практическое руководство. Регистрация пользовательского протокола с помощью WebRequest</span><span class="sxs-lookup"><span data-stu-id="b0552-102">How to: Register a Custom Protocol Using WebRequest</span></span>
 <span data-ttu-id="b0552-103">В этом примере показано, как зарегистрировать класс для конкретного протокола, который определен в другом месте.</span><span class="sxs-lookup"><span data-stu-id="b0552-103">This example shows how to register a protocol specific classthat is defined elsewhere.</span></span> <span data-ttu-id="b0552-104">В этом примере `CustomWebRequestCreator` — пользовательский объект, который реализует метод **Create**, возвращающий объект `CustomWebRequest`.</span><span class="sxs-lookup"><span data-stu-id="b0552-104">In this example, `CustomWebRequestCreator` is the user-implemented object that implements the **Create** method that returns the `CustomWebRequest` object.</span></span> <span data-ttu-id="b0552-105">В примере кода предполагается, что вы написали код `CustomWebRequest`, который реализует пользовательский протокол.</span><span class="sxs-lookup"><span data-stu-id="b0552-105">The code example assumes that you have written the `CustomWebRequest` code that implements the custom protocol.</span></span>  

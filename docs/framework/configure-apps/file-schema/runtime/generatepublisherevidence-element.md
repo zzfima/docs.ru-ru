@@ -12,6 +12,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32746024"
 ---
 # <a name="ltgeneratepublisherevidencegt-element"></a><span data-ttu-id="f07c8-102">&lt;generatePublisherEvidence&gt; элемент</span><span class="sxs-lookup"><span data-stu-id="f07c8-102">&lt;generatePublisherEvidence&gt; Element</span></span>
 <span data-ttu-id="f07c8-103">Указывает, будет ли среда выполнения создает <xref:System.Security.Policy.Publisher> свидетельство для управления доступом для кода (CAS).</span><span class="sxs-lookup"><span data-stu-id="f07c8-103">Specifies whether the runtime creates <xref:System.Security.Policy.Publisher> evidence for code access security (CAS).</span></span>  

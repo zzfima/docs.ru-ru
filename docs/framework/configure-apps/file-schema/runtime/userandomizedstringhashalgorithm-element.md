@@ -15,6 +15,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32746089"
 ---
 # <a name="ltuserandomizedstringhashalgorithmgt-element"></a><span data-ttu-id="c2a48-102">&lt;UseRandomizedStringHashAlgorithm&gt; элемент</span><span class="sxs-lookup"><span data-stu-id="c2a48-102">&lt;UseRandomizedStringHashAlgorithm&gt; Element</span></span>
 <span data-ttu-id="c2a48-103">Определяет, вычисляет ли среда хэш-кодов для строк для каждого домена приложения.</span><span class="sxs-lookup"><span data-stu-id="c2a48-103">Determines whether the common language runtime calculates hash codes for strings on a per application domain basis.</span></span>  

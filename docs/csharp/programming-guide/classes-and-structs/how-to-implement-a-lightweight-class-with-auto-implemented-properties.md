@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33321526"
 ---
 # <a name="how-to-implement-a-lightweight-class-with-auto-implemented-properties-c-programming-guide"></a><span data-ttu-id="ab8c9-102">Практическое руководство. Реализация облегченного класса с автоматически реализуемыми свойствами (Руководство по программированию в C#)</span><span class="sxs-lookup"><span data-stu-id="ab8c9-102">How to: Implement a Lightweight Class with Auto-Implemented Properties (C# Programming Guide)</span></span>
 <span data-ttu-id="ab8c9-103">В этом примере показано, как создать неизменяемый упрощенный класс, служащий исключительно для инкапсуляции набора автоматически реализуемых свойств.</span><span class="sxs-lookup"><span data-stu-id="ab8c9-103">This example shows how to create an immutable lightweight class that serves only to encapsulate a set of auto-implemented properties.</span></span> <span data-ttu-id="ab8c9-104">Используйте такую конструкцию вместо структуры, когда требуется использовать семантику ссылочного типа.</span><span class="sxs-lookup"><span data-stu-id="ab8c9-104">Use this kind of construct instead of a struct when you must use reference type semantics.</span></span>  
