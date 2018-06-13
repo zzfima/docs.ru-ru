@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33808641"
 ---
 # <a name="analytic-trace-event-reference"></a>Ссылка на событие аналитического отслеживания
 Следующая таблица определяет уровни событий, идентификаторы и сообщений, связанных с WCF аналитической трассировки.  

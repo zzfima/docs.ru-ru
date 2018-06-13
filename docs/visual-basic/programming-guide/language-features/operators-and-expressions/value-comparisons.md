@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33649611"
 ---
 # <a name="value-comparisons-visual-basic"></a>Сравнение значений (Visual Basic)
 Операторы сравнения можно использовать для создания выражений, которые сравнивают значения числовых переменных. Эти выражения возвращают `Boolean` значение на основании результат сравнения-ИСТИНА или ЛОЖЬ. Ниже приводятся примеры таких выражений.  

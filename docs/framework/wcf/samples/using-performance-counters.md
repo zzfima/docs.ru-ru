@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33807323"
 ---
 # <a name="using-performance-counters"></a>Использование счетчиков производительности
 Этот образец демонстрирует способы доступа к счетчикам производительности службы Windows Communication Foundation (WCF) и создать пользовательские счетчики. Этот пример построен на [Приступая к работе](../../../../docs/framework/wcf/samples/getting-started-sample.md).  

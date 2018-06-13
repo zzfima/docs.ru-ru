@@ -10,6 +10,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33806137"
 ---
 # <a name="windows-communication-foundation-tools"></a>Средства Windows Communication Foundation
 Средства Microsoft Windows Communication Foundation (WCF) призваны облегчить создание, развертывание и управление приложениями WCF. Данный раздел содержит подробные сведения об этих средствах. Обратите внимание, что некоторые средства могут не поддерживаться.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33804408"
 ---
 # <a name="aspnetrouteintegration"></a>AspNetRouteIntegration
 Этот образец демонстрирует размещение службы REST Windows Communication Foundation (WCF), с помощью маршрутов ASP.NET. [Базовой службы ресурсов](../../../../docs/framework/wcf/samples/basic-resource-service.md) образца показано резидентной версию этого сценария и обсуждается реализация service в глубину. В этом разделе основное внимание уделено возможности интеграции с ASP.NET. Дополнительные сведения о маршрутизации ASP.NET см. в разделе <xref:System.Web.Routing>.  

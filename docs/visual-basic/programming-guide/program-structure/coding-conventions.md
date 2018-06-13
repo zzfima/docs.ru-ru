@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33655365"
 ---
 # <a name="visual-basic-coding-conventions"></a>Соглашения о написании кода в Visual Basic
 Корпорация Майкрософт разрабатывает примеров и документации, следуйте указаниям, изложенным в этом разделе. При таком же соглашения о написании кода, может получить следующие преимущества:  

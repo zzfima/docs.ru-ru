@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33805568"
 ---
 # <a name="custom-demux"></a>Пользовательское демультиплексирование
 В этом примере показано, как заголовки сообщений MSMQ можно сопоставлять с различными операциями служб, чтобы служб Windows Communication Foundation (WCF), использующих <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> не ограничены использованием одной операции службы, как показано в [ Очередь на Windows Communication Foundation сообщений](../../../../docs/framework/wcf/samples/message-queuing-to-wcf.md) и [Windows Communication Foundation для Message Queuing](../../../../docs/framework/wcf/samples/wcf-to-message-queuing.md) образцов.  
