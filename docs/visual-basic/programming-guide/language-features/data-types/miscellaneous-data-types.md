@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33647340"
 ---
 # <a name="miscellaneous-data-types-visual-basic"></a><span data-ttu-id="4f54e-102">Прочие типы данных (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="4f54e-102">Miscellaneous Data Types (Visual Basic)</span></span>
 <span data-ttu-id="4f54e-103">Visual Basic предоставляет несколько типов данных, не предназначенных для чисел или символов.</span><span class="sxs-lookup"><span data-stu-id="4f54e-103">Visual Basic supplies several data types that are not oriented toward numbers or characters.</span></span> <span data-ttu-id="4f54e-104">Они предусмотрены для настраиваемых данных, таких как Да/нет значений, значений даты и времени и адресов объектов.</span><span class="sxs-lookup"><span data-stu-id="4f54e-104">Instead, they deal with specialized data such as yes/no values, date/time values, and object addresses.</span></span>  

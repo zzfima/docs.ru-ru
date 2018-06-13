@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33655725"
 ---
 # <a name="statements-in-visual-basic"></a><span data-ttu-id="ed434-102">Операторы в Visual Basic</span><span class="sxs-lookup"><span data-stu-id="ed434-102">Statements in Visual Basic</span></span>
 <span data-ttu-id="ed434-103">Инструкции в Visual Basic — это полная инструкция.</span><span class="sxs-lookup"><span data-stu-id="ed434-103">A statement in Visual Basic is a complete instruction.</span></span> <span data-ttu-id="ed434-104">Он может содержать ключевые слова, операторы, переменные, константы и выражения.</span><span class="sxs-lookup"><span data-stu-id="ed434-104">It can contain keywords, operators, variables, constants, and expressions.</span></span> <span data-ttu-id="ed434-105">Каждая инструкция принадлежит к одной из следующих категорий:</span><span class="sxs-lookup"><span data-stu-id="ed434-105">Each statement belongs to one of the following categories:</span></span>  

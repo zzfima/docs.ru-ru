@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33649754"
 ---
 # <a name="white-space-in-xml-literals-visual-basic"></a><span data-ttu-id="cc146-102">Пробелы в XML-литералах (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="cc146-102">White Space in XML Literals (Visual Basic)</span></span>
 <span data-ttu-id="cc146-103">Компилятор Visual Basic включает только значимые пробелы символы из XML-литерала при создании [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] объекта.</span><span class="sxs-lookup"><span data-stu-id="cc146-103">The Visual Basic compiler incorporates only the significant white space characters from an XML literal when it creates a [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] object.</span></span> <span data-ttu-id="cc146-104">Незначащие пробелы не включены.</span><span class="sxs-lookup"><span data-stu-id="cc146-104">The insignificant white space characters are not incorporated.</span></span>  

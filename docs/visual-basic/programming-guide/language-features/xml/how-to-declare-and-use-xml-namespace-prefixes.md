@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33648802"
 ---
 # <a name="how-to-declare-and-use-xml-namespace-prefixes-visual-basic"></a><span data-ttu-id="abc2a-102">Практическое руководство. Объявление и использование префиксов пространств имен XML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="abc2a-102">How to: Declare and Use XML Namespace Prefixes (Visual Basic)</span></span>
 <span data-ttu-id="abc2a-103">В этом примере показано, как импортировать префикс пространства имен XML `ns` и использовать его в XML-литерал и свойства оси XML.</span><span class="sxs-lookup"><span data-stu-id="abc2a-103">This example shows how to import the XML namespace prefix `ns` and use it in an XML literal and XML axis properties.</span></span>  

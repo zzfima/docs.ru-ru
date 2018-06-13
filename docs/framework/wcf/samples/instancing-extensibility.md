@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33804594"
 ---
 # <a name="instancing-extensibility"></a><span data-ttu-id="739b3-102">Образцы расширяемости создания экземпляров</span><span class="sxs-lookup"><span data-stu-id="739b3-102">Instancing Extensibility</span></span>
 <span data-ttu-id="739b3-103">В этом разделе содержатся образцы, демонстрирующие настраиваемое создание экземпляров.</span><span class="sxs-lookup"><span data-stu-id="739b3-103">This section contains samples that demonstrate custom instancing.</span></span>  

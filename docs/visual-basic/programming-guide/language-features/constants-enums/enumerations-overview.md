@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33647583"
 ---
 # <a name="enumerations-overview-visual-basic"></a><span data-ttu-id="84768-102">Общие сведения о перечислениях (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="84768-102">Enumerations Overview (Visual Basic)</span></span>
 <span data-ttu-id="84768-103">Перечисления предоставляют удобный способ работы с наборами связанных констант и связывания постоянных значений с именами.</span><span class="sxs-lookup"><span data-stu-id="84768-103">Enumerations provide a convenient way to work with sets of related constants and to associate constant values with names.</span></span> <span data-ttu-id="84768-104">Например, вы можете объявить перечисление для набора целочисленных констант, связанных с днями недели, а затем использовать в коде названия дней, а не числа.</span><span class="sxs-lookup"><span data-stu-id="84768-104">For example, you can declare an enumeration for a set of integer constants associated with the days of the week, and then use the names of the days rather than their integer values in your code.</span></span>  

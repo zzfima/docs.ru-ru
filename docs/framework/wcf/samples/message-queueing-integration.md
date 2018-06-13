@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33804837"
 ---
 # <a name="message-queueing-integration"></a><span data-ttu-id="74eea-102">Интеграция очередей сообщений</span><span class="sxs-lookup"><span data-stu-id="74eea-102">Message Queueing Integration</span></span>
 <span data-ttu-id="74eea-103">Этот раздел содержит образцы, демонстрирующие интеграции очереди сообщений и Windows Communication Foundation (WCF).</span><span class="sxs-lookup"><span data-stu-id="74eea-103">This section contains samples that demonstrate integration between Message Queuing and Windows Communication Foundation (WCF).</span></span>  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33807857"
 ---
 # <a name="hosting-services"></a><span data-ttu-id="bb831-102">Размещение служб</span><span class="sxs-lookup"><span data-stu-id="bb831-102">Hosting Services</span></span>
 <span data-ttu-id="bb831-103">Для активации службы ее необходимо разместить в среде выполнения, которая создает эту службу и управляет ее контекстом и временем существования.</span><span class="sxs-lookup"><span data-stu-id="bb831-103">To become active, a service must be hosted within a run-time environment that creates it and controls its context and lifetime.</span></span> <span data-ttu-id="bb831-104">Службы Windows Communication Foundation (WCF) предназначены для выполнения в любом процессе Windows, который поддерживает управляемый код.</span><span class="sxs-lookup"><span data-stu-id="bb831-104">Windows Communication Foundation (WCF) services are designed to run in any Windows process that supports managed code.</span></span>  

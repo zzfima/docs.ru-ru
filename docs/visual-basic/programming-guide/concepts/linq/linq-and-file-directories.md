@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33646170"
 ---
 # <a name="linq-and-file-directories-visual-basic"></a><span data-ttu-id="bbd74-102">LINQ и каталоги файлов (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="bbd74-102">LINQ and File Directories (Visual Basic)</span></span>
 <span data-ttu-id="bbd74-103">Многие операции файловой системы по существу являются запросами и, следовательно, соответствуют принципам LINQ.</span><span class="sxs-lookup"><span data-stu-id="bbd74-103">Many file system operations are essentially queries and are therefore well-suited to the LINQ approach.</span></span>  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33649598"
 ---
 # <a name="accessing-xml-in-visual-basic"></a><span data-ttu-id="250fe-102">Доступ к XML в Visual Basic</span><span class="sxs-lookup"><span data-stu-id="250fe-102">Accessing XML in Visual Basic</span></span>
 <span data-ttu-id="250fe-103">Visual Basic предоставляет свойства оси XML для доступа и перемещения по [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] структуры.</span><span class="sxs-lookup"><span data-stu-id="250fe-103">Visual Basic provides XML axis properties for accessing and navigating [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] structures.</span></span> <span data-ttu-id="250fe-104">Эти свойства используют специальный синтаксис для доступа к элементам и атрибутам, указав имена XML.</span><span class="sxs-lookup"><span data-stu-id="250fe-104">These properties use a special syntax to enable you to access elements and attributes by specifying the XML names.</span></span>  

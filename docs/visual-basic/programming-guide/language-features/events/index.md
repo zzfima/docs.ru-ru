@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33655275"
 ---
 # <a name="events-visual-basic"></a><span data-ttu-id="03bf8-102">События (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="03bf8-102">Events (Visual Basic)</span></span>
 <span data-ttu-id="03bf8-103">Хотя проект Visual Studio может представить как набор процедур, выполняемых в определенной последовательности, на самом деле, большинство программ управляются событиями, то есть поток выполнения определяется внешнего события, возникающие в вызове *события*.</span><span class="sxs-lookup"><span data-stu-id="03bf8-103">While you might visualize a Visual Studio project as a series of procedures that execute in a sequence, in reality, most programs are event driven—meaning the flow of execution is determined by external occurrences called *events*.</span></span>  

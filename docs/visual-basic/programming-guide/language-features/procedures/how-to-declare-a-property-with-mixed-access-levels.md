@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33651415"
 ---
 # <a name="how-to-declare-a-property-with-mixed-access-levels-visual-basic"></a><span data-ttu-id="83e91-102">Практическое руководство. Объявление свойства со смешанным уровнем доступа (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="83e91-102">How to: Declare a Property with Mixed Access Levels (Visual Basic)</span></span>
 <span data-ttu-id="83e91-103">Если вы хотите `Get` и `Set` процедуры свойства для имеют разные уровни доступа, можно использовать менее строгий уровень в `Property` инструкции и более строгий уровень в любом `Get` или `Set` инструкция.</span><span class="sxs-lookup"><span data-stu-id="83e91-103">If you want the `Get` and `Set` procedures on a property to have different access levels, you can use the more permissive level in the `Property` statement and the more restrictive level in either the `Get` or `Set` statement.</span></span> <span data-ttu-id="83e91-104">Смешанные уровни доступа используются в свойстве, когда некоторые части кода, чтобы иметь возможность получить значение свойства, а другие части кода, чтобы иметь возможность изменить значение.</span><span class="sxs-lookup"><span data-stu-id="83e91-104">You use mixed access levels on a property when you want certain parts of the code to be able to get the property's value, and certain other parts of the code to be able to change the value.</span></span>  

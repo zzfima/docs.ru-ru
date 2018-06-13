@@ -11,6 +11,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809405"
 ---
 # <a name="extending-security"></a><span data-ttu-id="cf98c-102">Расширение безопасности</span><span class="sxs-lookup"><span data-stu-id="cf98c-102">Extending Security</span></span>
 <span data-ttu-id="cf98c-103">Для размещения новых типов утверждений и пользовательских маркеров, можно расширить инфраструктуру безопасности Windows Communication Foundation (WCF).</span><span class="sxs-lookup"><span data-stu-id="cf98c-103">To accommodate new claim types and custom tokens, you can extend the security infrastructure of Windows Communication Foundation (WCF).</span></span> <span data-ttu-id="cf98c-104">Это подробно описывается в следующих подразделах.</span><span class="sxs-lookup"><span data-stu-id="cf98c-104">The topics in this section show you how this is done.</span></span>  

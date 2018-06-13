@@ -25,6 +25,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33656169"
 ---
 # <a name="implicit-and-explicit-conversions-visual-basic"></a><span data-ttu-id="ceb96-102">Явные и неявные преобразования (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="ceb96-102">Implicit and Explicit Conversions (Visual Basic)</span></span>
 <span data-ttu-id="ceb96-103">*Неявное преобразование* не требует специального синтаксиса в исходном коде.</span><span class="sxs-lookup"><span data-stu-id="ceb96-103">An *implicit conversion* does not require any special syntax in the source code.</span></span> <span data-ttu-id="ceb96-104">В следующем примере Visual Basic неявно преобразует значение `k` значение с плавающей запятой одиночной точности перед назначением их `q`.</span><span class="sxs-lookup"><span data-stu-id="ceb96-104">In the following example, Visual Basic implicitly converts the value of `k` to a single-precision floating-point value before assigning it to `q`.</span></span>  

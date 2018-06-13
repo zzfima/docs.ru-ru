@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33654064"
 ---
 # <a name="string-basics-in-visual-basic"></a><span data-ttu-id="0289c-102">Основы работы со строками в Visual Basic</span><span class="sxs-lookup"><span data-stu-id="0289c-102">String Basics in Visual Basic</span></span>
 <span data-ttu-id="0289c-103">Тип данных `String` представляет последовательность символов (каждый из которых, в свою очередь, представляет экземпляр типа данных `Char`).</span><span class="sxs-lookup"><span data-stu-id="0289c-103">The `String` data type represents a series of characters (each representing in turn an instance of the `Char` data type).</span></span> <span data-ttu-id="0289c-104">В этом разделе представлены основные понятия строк в Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="0289c-104">This topic introduces the basic concepts of strings in Visual Basic.</span></span>  

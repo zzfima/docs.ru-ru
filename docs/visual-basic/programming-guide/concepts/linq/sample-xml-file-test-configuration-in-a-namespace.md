@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33644632"
 ---
 # <a name="sample-xml-file-test-configuration-in-a-namespace"></a><span data-ttu-id="86aa2-102">Пример XML-файла. Конфигурация тестирования в пространстве имен</span><span class="sxs-lookup"><span data-stu-id="86aa2-102">Sample XML File: Test Configuration in a Namespace</span></span>
 <span data-ttu-id="86aa2-103">Следующий XML-файл используется в различных примерах в документации [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].</span><span class="sxs-lookup"><span data-stu-id="86aa2-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="86aa2-104">Это тестовый файл конфигурации.</span><span class="sxs-lookup"><span data-stu-id="86aa2-104">This is a test configuration file.</span></span> <span data-ttu-id="86aa2-105">XML располагается в пространстве имен.</span><span class="sxs-lookup"><span data-stu-id="86aa2-105">The XML is in a namespace.</span></span>  

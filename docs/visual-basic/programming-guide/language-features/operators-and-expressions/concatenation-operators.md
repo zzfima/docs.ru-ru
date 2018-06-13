@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33650622"
 ---
 # <a name="concatenation-operators-in-visual-basic"></a><span data-ttu-id="9f9f1-102">Операторы объединения в Visual Basic</span><span class="sxs-lookup"><span data-stu-id="9f9f1-102">Concatenation Operators in Visual Basic</span></span>
 <span data-ttu-id="9f9f1-103">Операторы объединения объединяют несколько строк в одну.</span><span class="sxs-lookup"><span data-stu-id="9f9f1-103">Concatenation operators join multiple strings into a single string.</span></span> <span data-ttu-id="9f9f1-104">Существует два оператора объединения: `+` и `&`.</span><span class="sxs-lookup"><span data-stu-id="9f9f1-104">There are two concatenation operators, `+` and `&`.</span></span> <span data-ttu-id="9f9f1-105">Оба они выполняют базовую операцию объединения, как показано в следующем примере.</span><span class="sxs-lookup"><span data-stu-id="9f9f1-105">Both carry out the basic concatenation operation, as the following example shows.</span></span>  

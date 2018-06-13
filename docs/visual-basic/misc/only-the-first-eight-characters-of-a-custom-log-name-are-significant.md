@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33639406"
 ---
 # <a name="only-the-first-eight-characters-of-a-custom-log-name-are-significant"></a><span data-ttu-id="7656a-102">Учитываются только первые восемь знаков имени пользовательского журнала</span><span class="sxs-lookup"><span data-stu-id="7656a-102">Only the first eight characters of a custom log name are significant</span></span>
 <span data-ttu-id="7656a-103">При проверке имен журналов событий на уникальность учитываются только первые восемь символов.</span><span class="sxs-lookup"><span data-stu-id="7656a-103">When checking event log names for uniqueness, only the first eight characters are considered.</span></span> <span data-ttu-id="7656a-104">Конфликт может возникнуть в результате совпадения первых восьми символов.</span><span class="sxs-lookup"><span data-stu-id="7656a-104">A conflict may result from event logs that share their first eight characters.</span></span>  

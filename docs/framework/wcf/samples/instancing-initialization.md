@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33807926"
 ---
 # <a name="instancing-initialization"></a><span data-ttu-id="77325-102">Инициализация создания экземпляров</span><span class="sxs-lookup"><span data-stu-id="77325-102">Instancing Initialization</span></span>
 <span data-ttu-id="77325-103">В этом примере расширяет [Pooling](../../../../docs/framework/wcf/samples/pooling.md) образец путем определения интерфейса `IObjectControl`, который настраивает инициализации объекта, активация и деактивация его.</span><span class="sxs-lookup"><span data-stu-id="77325-103">This sample extends the [Pooling](../../../../docs/framework/wcf/samples/pooling.md) sample by defining an interface, `IObjectControl`, which customizes the initialization of an object by activating and deactivating it.</span></span> <span data-ttu-id="77325-104">Клиент вызывает методы, которые возвращают объект в пул и не возвращают объект в пул.</span><span class="sxs-lookup"><span data-stu-id="77325-104">The client invokes methods that return the object to the pool and that do not return the object to the pool.</span></span>  

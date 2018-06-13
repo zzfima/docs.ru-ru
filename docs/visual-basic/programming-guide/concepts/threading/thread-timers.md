@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33646901"
 ---
 # <a name="thread-timers-visual-basic"></a><span data-ttu-id="e9894-102">Таймеры потоков (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e9894-102">Thread Timers (Visual Basic)</span></span>
 <span data-ttu-id="e9894-103">Класс <xref:System.Threading.Timer?displayProperty=nameWithType> полезно использовать для периодического выполнения задачи в отдельном потоке.</span><span class="sxs-lookup"><span data-stu-id="e9894-103">The <xref:System.Threading.Timer?displayProperty=nameWithType> class is useful for periodically running a task on a separate thread.</span></span> <span data-ttu-id="e9894-104">Например, можно использовать таймер потока для проверки состояния и целостности базы данных или для создания резервных копий важных файлов.</span><span class="sxs-lookup"><span data-stu-id="e9894-104">For example, you could use a thread timer to check the status and integrity of a database or to back up critical files.</span></span>  

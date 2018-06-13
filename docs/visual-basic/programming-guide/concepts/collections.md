@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33644320"
 ---
 # <a name="collections-visual-basic"></a><span data-ttu-id="62466-102">Коллекции (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="62466-102">Collections (Visual Basic)</span></span>
 <span data-ttu-id="62466-103">Во многих приложениях требуется создавать группы связанных объектов и управлять ими.</span><span class="sxs-lookup"><span data-stu-id="62466-103">For many applications, you want to create and manage groups of related objects.</span></span> <span data-ttu-id="62466-104">Существует два способа группировки объектов: создать массив объектов и создать коллекцию.</span><span class="sxs-lookup"><span data-stu-id="62466-104">There are two ways to group objects: by creating arrays of objects, and by creating collections of objects.</span></span>  

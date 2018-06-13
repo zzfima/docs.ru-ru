@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33639328"
 ---
 # <a name="how-to-create-hierarchy-using-grouping-visual-basic"></a><span data-ttu-id="36e8d-102">Как: создать иерархию с помощью группирования (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="36e8d-102">How to: Create Hierarchy Using Grouping (Visual Basic)</span></span>
 <span data-ttu-id="36e8d-103">Этот пример показывает, как группировать данные и затем создавать код XML на основе группирования.</span><span class="sxs-lookup"><span data-stu-id="36e8d-103">This example shows how to group data, and then generate XML based on the grouping.</span></span>  

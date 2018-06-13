@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33637654"
 ---
 # <a name="late-bound-assignment-to-a-field-of-value-type-39lttypenamegt39-is-not-valid-when-39ltnamegt39-is-the-result-of-a-late-bound-expression"></a><span data-ttu-id="934c3-102">Присвоение полю значения типа &#39; &lt;typename&gt; &#39; является недействительным при &#39; &lt;имя&gt; &#39; является результатом выражения с поздним связыванием</span><span class="sxs-lookup"><span data-stu-id="934c3-102">Late-bound assignment to a field of value type &#39;&lt;typename&gt;&#39; is not valid when &#39;&lt;name&gt;&#39; is the result of a late-bound expression</span></span>
 <span data-ttu-id="934c3-103">Вы попытались выполнить присвоение с поздним связыванием, что недопустимо.</span><span class="sxs-lookup"><span data-stu-id="934c3-103">You attempted a late-bound assignment that is not valid.</span></span>  

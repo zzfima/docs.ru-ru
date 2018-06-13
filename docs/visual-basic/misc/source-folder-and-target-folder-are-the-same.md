@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33640496"
 ---
 # <a name="source-folder-and-target-folder-are-the-same"></a><span data-ttu-id="afaa5-102">Исходная и целевая папки совпадают</span><span class="sxs-lookup"><span data-stu-id="afaa5-102">Source folder and target folder are the same</span></span>
 <span data-ttu-id="afaa5-103">Была предпринята попытка скопировать или переместить файл, но указанные исходный и конечный каталоги совпадают.</span><span class="sxs-lookup"><span data-stu-id="afaa5-103">An attempt has been made to copy or move a file, but the specified source directory and target directory are the same.</span></span> <span data-ttu-id="afaa5-104">Это может быть результатом неправильного разбора пути к файлу.</span><span class="sxs-lookup"><span data-stu-id="afaa5-104">This may be a result of incorrectly parsing a file path.</span></span>  

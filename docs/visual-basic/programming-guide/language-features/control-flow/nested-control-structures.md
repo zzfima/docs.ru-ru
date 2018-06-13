@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33648076"
 ---
 # <a name="nested-control-structures-visual-basic"></a><span data-ttu-id="a5b44-102">Вложенные структуры управления (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="a5b44-102">Nested Control Structures (Visual Basic)</span></span>
 <span data-ttu-id="a5b44-103">Можно разместить операторы управления внутри других операторов управления, например `If...Then...Else` блок `For...Next` цикла.</span><span class="sxs-lookup"><span data-stu-id="a5b44-103">You can place control statements inside other control statements, for example an `If...Then...Else` block within a `For...Next` loop.</span></span> <span data-ttu-id="a5b44-104">Операторы управления, расположенных внутри другого оператора управления считается *вложенных*.</span><span class="sxs-lookup"><span data-stu-id="a5b44-104">A control statement placed inside another control statement is said to be *nested*.</span></span>  

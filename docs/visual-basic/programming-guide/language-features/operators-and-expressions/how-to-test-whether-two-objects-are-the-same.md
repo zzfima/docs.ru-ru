@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33647609"
 ---
 # <a name="how-to-test-whether-two-objects-are-the-same-visual-basic"></a><span data-ttu-id="10697-102">Практическое руководство. Проверка совпадения двух объектов (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="10697-102">How to: Test Whether Two Objects Are the Same (Visual Basic)</span></span>
 <span data-ttu-id="10697-103">Если у вас есть две переменные, которые ссылаются на объекты, можно использовать любой `Is` или `IsNot` оператор, или оба, чтобы определить, ссылаются ли они на один экземпляр.</span><span class="sxs-lookup"><span data-stu-id="10697-103">If you have two variables that refer to objects, you can use either the `Is` or `IsNot` operator, or both, to determine whether they refer to the same instance.</span></span>  

@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33656273"
 ---
 # <a name="-link-visual-basic"></a><span data-ttu-id="5db53-102">-связь (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="5db53-102">-link (Visual Basic)</span></span>
 <span data-ttu-id="5db53-103">Дает компилятору указание сделать всю информацию о типах COM из указанных сборок доступной компилируемому проекту.</span><span class="sxs-lookup"><span data-stu-id="5db53-103">Causes the compiler to make COM type information in the specified assemblies available to the project that you are currently compiling.</span></span>  

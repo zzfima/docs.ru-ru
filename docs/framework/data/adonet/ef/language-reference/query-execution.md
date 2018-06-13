@@ -10,6 +10,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33804824"
 ---
 # <a name="query-execution"></a><span data-ttu-id="a55ff-102">Выполнение запроса</span><span class="sxs-lookup"><span data-stu-id="a55ff-102">Query Execution</span></span>
 <span data-ttu-id="a55ff-103">После создания пользователем запрос LINQ преобразуется в дерево команд.</span><span class="sxs-lookup"><span data-stu-id="a55ff-103">After a LINQ query is created by a user, it is converted to a command tree.</span></span> <span data-ttu-id="a55ff-104">Дерево команд является представлением запроса, совместимым с платформой Entity Framework.</span><span class="sxs-lookup"><span data-stu-id="a55ff-104">A command tree is a representation of a query that is compatible with the Entity Framework.</span></span> <span data-ttu-id="a55ff-105">Затем дерево команд выполняется в источнике данных.</span><span class="sxs-lookup"><span data-stu-id="a55ff-105">The command tree is then executed against the data source.</span></span> <span data-ttu-id="a55ff-106">Во время выполнения запроса вычисляются все включенные в него выражения (компоненты запроса), в том числе выражения для материализации запроса.</span><span class="sxs-lookup"><span data-stu-id="a55ff-106">At query execution time, all query expressions (that is, all components of the query) are evaluated, including those expressions that are used in result materialization.</span></span>  

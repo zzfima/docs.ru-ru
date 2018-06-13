@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33646543"
 ---
 # <a name="visual-basic-programming-guide"></a><span data-ttu-id="5a86f-102">Руководство по программированию на Visual Basic</span><span class="sxs-lookup"><span data-stu-id="5a86f-102">Visual Basic Programming Guide</span></span>
 <span data-ttu-id="5a86f-103">Как и любой современный язык программирования Visual Basic поддерживает множество общих программных конструкций и элементов языка.</span><span class="sxs-lookup"><span data-stu-id="5a86f-103">As with any modern programming language, Visual Basic supports many common programming constructs and language elements.</span></span> <span data-ttu-id="5a86f-104">В этом руководстве описаны все основные элементы программирования в Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="5a86f-104">This guide describes all the major elements of programming with Visual Basic.</span></span>  

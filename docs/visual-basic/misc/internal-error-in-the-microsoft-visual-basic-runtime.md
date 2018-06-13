@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33634986"
 ---
 # <a name="internal-error-in-the-microsoft-visual-basic-runtime"></a><span data-ttu-id="c6ee5-102">Внутренняя ошибка в выполняемом модуле Microsoft Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="c6ee5-102">Internal error in the Microsoft Visual Basic runtime</span></span>
 <span data-ttu-id="c6ee5-103">Внутренняя ошибка во время выполнения Microsoft Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="c6ee5-103">An internal error has occurred in the Microsoft Visual Basic runtime.</span></span>  

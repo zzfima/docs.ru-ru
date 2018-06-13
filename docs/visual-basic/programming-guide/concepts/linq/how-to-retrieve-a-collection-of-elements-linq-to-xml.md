@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33640174"
 ---
 # <a name="how-to-retrieve-a-collection-of-elements-linq-to-xml-visual-basic"></a><span data-ttu-id="42984-102">Как: извлечение коллекции элементов (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="42984-102">How to: Retrieve a Collection of Elements (LINQ to XML) (Visual Basic)</span></span>
 <span data-ttu-id="42984-103">В этом разделе показан метод <xref:System.Xml.Linq.XContainer.Elements%2A>.</span><span class="sxs-lookup"><span data-stu-id="42984-103">This topic demonstrates the <xref:System.Xml.Linq.XContainer.Elements%2A> method.</span></span> <span data-ttu-id="42984-104">Этот метод получает коллекцию дочерних элементов того или иного элемента.</span><span class="sxs-lookup"><span data-stu-id="42984-104">This method retrieves a collection of the child elements of an element.</span></span>  

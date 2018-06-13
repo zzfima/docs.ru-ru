@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33643195"
 ---
 # <a name="how-to-find-descendants-with-a-specific-element-name-visual-basic"></a><span data-ttu-id="d4a1c-102">Как: поиск потомков с определенным именем элемента (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="d4a1c-102">How to: Find Descendants with a Specific Element Name (Visual Basic)</span></span>
 <span data-ttu-id="d4a1c-103">Иногда возникает необходимость найти всех потомков с определенным именем.</span><span class="sxs-lookup"><span data-stu-id="d4a1c-103">Sometimes you want to find all descendants with a particular name.</span></span> <span data-ttu-id="d4a1c-104">В таких случаях можно написать код для просмотра всех потомков, но проще использовать ось <xref:System.Xml.Linq.XContainer.Descendants%2A>.</span><span class="sxs-lookup"><span data-stu-id="d4a1c-104">You could write code to iterate through all of the descendants, but it is easier to use the <xref:System.Xml.Linq.XContainer.Descendants%2A> axis.</span></span>  

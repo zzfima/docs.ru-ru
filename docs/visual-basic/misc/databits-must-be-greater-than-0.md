@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33635022"
 ---
 # <a name="databits-must-be-greater-than-0"></a><span data-ttu-id="e68ad-102">Значение DataBits должно быть больше 0</span><span class="sxs-lookup"><span data-stu-id="e68ad-102">DataBits must be greater than 0</span></span>
 <span data-ttu-id="e68ad-103">Аргумент `DataBits` , указанный для метода `My.Computer.Ports.OpenSerialPort` , должен быть больше нуля.</span><span class="sxs-lookup"><span data-stu-id="e68ad-103">The `DataBits` argument specified for the `My.Computer.Ports.OpenSerialPort` method must be greater than zero.</span></span>  

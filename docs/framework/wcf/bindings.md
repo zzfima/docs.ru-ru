@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803599"
 ---
 # <a name="windows-communication-foundation-bindings"></a><span data-ttu-id="cd21e-102">Привязки Windows Communication Foundation</span><span class="sxs-lookup"><span data-stu-id="cd21e-102">Windows Communication Foundation Bindings</span></span>
 <span data-ttu-id="cd21e-103">Привязки указывают, как конечную точку службы Windows Communication Foundation (WCF) взаимодействует с другими конечными точками.</span><span class="sxs-lookup"><span data-stu-id="cd21e-103">Bindings specify how a Windows Communication Foundation (WCF) service endpoint communicates with other endpoints.</span></span> <span data-ttu-id="cd21e-104">В привязке должен быть указан как минимум используемый транспорт (например, HTTP или TCP).</span><span class="sxs-lookup"><span data-stu-id="cd21e-104">At its most basic, a binding must specify the transport (for example, HTTP or TCP) to use.</span></span> <span data-ttu-id="cd21e-105">Через привязки также можно задать другие характеристики, такие как поддержка безопасности и транзакций.</span><span class="sxs-lookup"><span data-stu-id="cd21e-105">You can also set other characteristics, such as security and transaction support, through bindings.</span></span>  

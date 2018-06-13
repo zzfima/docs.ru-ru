@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33643956"
 ---
 # <a name="how-to-reference-com-objects-from-visual-basic"></a><span data-ttu-id="c4833-102">Практическое руководство. Ссылка на COM-объект в Visual Basic</span><span class="sxs-lookup"><span data-stu-id="c4833-102">How to: Reference COM Objects from Visual Basic</span></span>
 <span data-ttu-id="c4833-103">В Visual Basic Добавление ссылок на COM-объекты, имеющие библиотеки типов требует создания сборки взаимодействия для COM-библиотеки.</span><span class="sxs-lookup"><span data-stu-id="c4833-103">In Visual Basic, adding references to COM objects that have type libraries requires the creation of an interop assembly for the COM library.</span></span> <span data-ttu-id="c4833-104">Ссылки на члены объекта COM направляются в сборку взаимодействия и пересылаются на фактическое COM-объект.</span><span class="sxs-lookup"><span data-stu-id="c4833-104">References to the members of the COM object are routed to the interop assembly and then forwarded to the actual COM object.</span></span> <span data-ttu-id="c4833-105">Ответы из COM-объекта направляются в сборку взаимодействия и пересылаются в вашей [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] приложения.</span><span class="sxs-lookup"><span data-stu-id="c4833-105">Responses from the COM object are routed to the interop assembly and forwarded to your [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] application.</span></span>  

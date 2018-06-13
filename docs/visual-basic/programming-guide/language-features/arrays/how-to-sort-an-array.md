@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33646318"
 ---
 # <a name="how-to-sort-an-array-in-visual-basic"></a><span data-ttu-id="eab13-102">Практическое руководство. Сортировка массива в Visual Basic</span><span class="sxs-lookup"><span data-stu-id="eab13-102">How to: Sort An Array in Visual Basic</span></span>
 <span data-ttu-id="eab13-103">В этом примере объявляется массив `String` объектов с именем `zooAnimals`, заполняет ее и сортируется по алфавиту.</span><span class="sxs-lookup"><span data-stu-id="eab13-103">This example declares an array of `String` objects named `zooAnimals`, populates it, and then sorts it alphabetically.</span></span>  

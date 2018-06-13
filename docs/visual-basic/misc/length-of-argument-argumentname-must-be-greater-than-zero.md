@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33635623"
 ---
 # <a name="length-of-argument-39ltargumentnamegt39-must-be-greater-than-zero"></a><span data-ttu-id="84129-102">Длина аргумента &#39; &lt;имя_аргумента&gt; &#39; должно быть больше нуля</span><span class="sxs-lookup"><span data-stu-id="84129-102">Length of argument &#39;&lt;argumentname&gt;&#39; must be greater than zero</span></span>
 <span data-ttu-id="84129-103">Аргумент имеет значение, которое меньше или равно нулю.</span><span class="sxs-lookup"><span data-stu-id="84129-103">An argument has a value that is equal to or less than zero.</span></span>  

@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33647210"
 ---
 # <a name="how-to-declare-custom-events-to-conserve-memory-visual-basic"></a><span data-ttu-id="19fbc-102">Практическое руководство. Объявление пользовательских событий для экономии памяти (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="19fbc-102">How to: Declare Custom Events To Conserve Memory (Visual Basic)</span></span>
 <span data-ttu-id="19fbc-103">Существует несколько случаев, когда важно, что приложение свести использование памяти.</span><span class="sxs-lookup"><span data-stu-id="19fbc-103">There are several circumstances when it is important that an application keep its memory usage low.</span></span> <span data-ttu-id="19fbc-104">Пользовательские события позволяют приложению использовать память только для событий, которые он обрабатывает.</span><span class="sxs-lookup"><span data-stu-id="19fbc-104">Custom events allow the application to use memory only for the events that it handles.</span></span>  

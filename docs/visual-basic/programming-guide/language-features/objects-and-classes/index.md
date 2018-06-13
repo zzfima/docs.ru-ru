@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33655867"
 ---
 # <a name="objects-and-classes-in-visual-basic"></a><span data-ttu-id="094ff-102">Объекты и классы Visual Basic</span><span class="sxs-lookup"><span data-stu-id="094ff-102">Objects and classes in Visual Basic</span></span>
 <span data-ttu-id="094ff-103">*Объект* представляет собой сочетание кода и данных, которое рассматривается как единое целое.</span><span class="sxs-lookup"><span data-stu-id="094ff-103">An *object* is a combination of code and data that can be treated as a unit.</span></span> <span data-ttu-id="094ff-104">Объект может быть частью приложения, как, например, элемент управления или форма.</span><span class="sxs-lookup"><span data-stu-id="094ff-104">An object can be a piece of an application, like a control or a form.</span></span> <span data-ttu-id="094ff-105">Также объектом может являться само приложение в целом.</span><span class="sxs-lookup"><span data-stu-id="094ff-105">An entire application can also be an object.</span></span>

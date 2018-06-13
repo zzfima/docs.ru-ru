@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33643735"
 ---
 # <a name="how-to-perform-streaming-transform-of-large-xml-documents-visual-basic"></a><span data-ttu-id="0a75e-102">Как: выполнение потокового преобразования крупных XML-документов (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="0a75e-102">How to: Perform Streaming Transform of Large XML Documents (Visual Basic)</span></span>
 <span data-ttu-id="0a75e-103">Иногда необходимо преобразовывать большие XML-файлы, при этом приложение должно быть написано так, чтобы используемый им объем памяти был прогнозируемым.</span><span class="sxs-lookup"><span data-stu-id="0a75e-103">Sometimes you have to transform large XML files, and write your application so that the memory footprint of the application is predictable.</span></span> <span data-ttu-id="0a75e-104">Если вставить в XML-дерево очень большой XML-файл, то объем используемой памяти будет пропорциональным размеру файла (то есть чрезмерным).</span><span class="sxs-lookup"><span data-stu-id="0a75e-104">If you try to populate an XML tree with a very large XML file, your memory usage will be proportional to the size of the file (that is, excessive).</span></span> <span data-ttu-id="0a75e-105">Поэтому следует вместо этого использовать потоки.</span><span class="sxs-lookup"><span data-stu-id="0a75e-105">Therefore, you should use a streaming technique instead.</span></span>  

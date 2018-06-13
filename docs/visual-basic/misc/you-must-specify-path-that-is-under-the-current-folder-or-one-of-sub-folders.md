@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33639501"
 ---
 # <a name="you-must-specify-a-path-that-is-under-the-current-folder-or-one-of-its-sub-folders"></a><span data-ttu-id="6f527-102">Необходимо указать путь, который находится в текущей папке или в одной из ее вложенных папок</span><span class="sxs-lookup"><span data-stu-id="6f527-102">You must specify a path that is under the current folder or one of its sub-folders</span></span>
 <span data-ttu-id="6f527-103">Указанный путь не находится в текущем каталоге.</span><span class="sxs-lookup"><span data-stu-id="6f527-103">The specified path is not under the current directory.</span></span> <span data-ttu-id="6f527-104">Это может быть результатом неправильного анализа пути к файлу при указании относительного пути.</span><span class="sxs-lookup"><span data-stu-id="6f527-104">This may be a result of incorrectly parsing file paths when supplying a relative path.</span></span>  

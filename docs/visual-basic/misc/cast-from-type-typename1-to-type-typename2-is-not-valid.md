@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33636097"
 ---
 # <a name="cast-from-type-39lttypename1gt39-to-type-39lttypename2gt39-is-not-valid"></a><span data-ttu-id="014fe-102">Преобразование из типа &#39; &lt;Имя_типа1&gt; &#39; ввода &#39; &lt;имя_типа2&gt; &#39; является недопустимым</span><span class="sxs-lookup"><span data-stu-id="014fe-102">Cast from type &#39;&lt;typename1&gt;&#39; to type &#39;&lt;typename2&gt;&#39; is not valid</span></span>
 <span data-ttu-id="014fe-103">Предпринята попытка недопустимого преобразования переменной из одного типа в другой.</span><span class="sxs-lookup"><span data-stu-id="014fe-103">An attempt to convert a variable from one type to another is not valid.</span></span>  

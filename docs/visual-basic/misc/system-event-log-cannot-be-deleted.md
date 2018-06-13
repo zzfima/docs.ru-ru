@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33639302"
 ---
 # <a name="system-event-log-cannot-be-deleted"></a><span data-ttu-id="1702c-102">Невозможно удалить журнал системных событий</span><span class="sxs-lookup"><span data-stu-id="1702c-102">System event log cannot be deleted</span></span>
 <span data-ttu-id="1702c-103">Предпринята попытка удаления журнала системных событий, который не может быть удален.</span><span class="sxs-lookup"><span data-stu-id="1702c-103">An attempt has been made to delete the system event log, which cannot be deleted.</span></span> <span data-ttu-id="1702c-104">В системном журнале отслеживаются системные события, такие как запуск системы и сбой оборудования.</span><span class="sxs-lookup"><span data-stu-id="1702c-104">The system log tracks system events such as system startup and hardware failures.</span></span>  

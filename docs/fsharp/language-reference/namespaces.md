@@ -7,6 +7,7 @@ ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "33957766"
 ---
 # <a name="namespaces"></a><span data-ttu-id="9fb89-103">Пространства имен</span><span class="sxs-lookup"><span data-stu-id="9fb89-103">Namespaces</span></span>
 

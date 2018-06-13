@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33645838"
 ---
 # <a name="quantifier-operations-visual-basic"></a><span data-ttu-id="e11dc-102">Операции, использующие кванторы (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e11dc-102">Quantifier Operations (Visual Basic)</span></span>
 <span data-ttu-id="e11dc-103">Квантификаторы возвращают значение <xref:System.Boolean>, которое указывает, удовлетворяют ли условию некоторые или все элементы в последовательности.</span><span class="sxs-lookup"><span data-stu-id="e11dc-103">Quantifier operations return a <xref:System.Boolean> value that indicates whether some or all of the elements in a sequence satisfy a condition.</span></span>  

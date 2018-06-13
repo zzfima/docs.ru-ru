@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33634850"
 ---
 # <a name="device-unavailable"></a><span data-ttu-id="89d37-102">Устройство недоступно</span><span class="sxs-lookup"><span data-stu-id="89d37-102">Device unavailable</span></span>
 <span data-ttu-id="89d37-103">Сетевое подключение разорвано или устройство, к которому вы пытаетесь получить доступ, отключено либо не существует.</span><span class="sxs-lookup"><span data-stu-id="89d37-103">Either you have lost your network connection, or the device that you are trying to access is offline or does not exist.</span></span>  

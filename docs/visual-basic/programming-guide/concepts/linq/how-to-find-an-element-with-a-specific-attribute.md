@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33643004"
 ---
 # <a name="how-to-find-an-element-with-a-specific-attribute-visual-basic"></a><span data-ttu-id="a99ce-102">Как: найти элемент с определенным атрибутом (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="a99ce-102">How to: Find an Element with a Specific Attribute (Visual Basic)</span></span>
 <span data-ttu-id="a99ce-103">В этом разделе показан поиск элемента, имеющего атрибут с определенным значением.</span><span class="sxs-lookup"><span data-stu-id="a99ce-103">This topic shows how to find an element that has an attribute that has a specific value.</span></span>  

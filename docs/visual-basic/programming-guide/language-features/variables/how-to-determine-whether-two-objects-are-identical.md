@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33650102"
 ---
 # <a name="how-to-determine-whether-two-objects-are-identical-visual-basic"></a><span data-ttu-id="92fcb-102">Практическое руководство. Определение идентичности двух объектов (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="92fcb-102">How to: Determine Whether Two Objects Are Identical (Visual Basic)</span></span>
 <span data-ttu-id="92fcb-103">В Visual Basic две ссылки на переменные считаются идентичными, если их указатели совпадают, то есть, если обе переменные указывают на один и тот же экземпляр класса в памяти.</span><span class="sxs-lookup"><span data-stu-id="92fcb-103">In Visual Basic, two variable references are considered identical if their pointers are the same, that is, if both variables point to the same class instance in memory.</span></span> <span data-ttu-id="92fcb-104">Например, в приложении Windows Forms, может потребоваться провести сравнение для определения ли текущий экземпляр (`Me`) совпадает со значением конкретного экземпляра, такие как `Form2`.</span><span class="sxs-lookup"><span data-stu-id="92fcb-104">For example, in a Windows Forms application, you might want to make a comparison to determine whether the current instance (`Me`) is the same as a particular instance, such as `Form2`.</span></span>  

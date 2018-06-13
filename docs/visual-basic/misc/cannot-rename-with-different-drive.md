@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33633179"
 ---
 # <a name="cannot-rename-with-different-drive"></a><span data-ttu-id="1ef80-102">Невозможно переименовать с указанием другого диска</span><span class="sxs-lookup"><span data-stu-id="1ef80-102">Cannot rename with different drive</span></span>
 <span data-ttu-id="1ef80-103">Оператор `Rename` не может указывать букву диска в пути файла.</span><span class="sxs-lookup"><span data-stu-id="1ef80-103">The `Rename` statement cannot specify a drive letter in the file path.</span></span>  

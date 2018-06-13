@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33649400"
 ---
 # <a name="generic-procedures-in-visual-basic"></a><span data-ttu-id="087eb-102">Generic Procedures in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="087eb-102">Generic Procedures in Visual Basic</span></span>
 <span data-ttu-id="087eb-103">Объект *универсальной процедуры*, который также называется *универсальный метод*, — это процедура, определенная с помощью по крайней мере один тип параметра.</span><span class="sxs-lookup"><span data-stu-id="087eb-103">A *generic procedure*, also called a *generic method*, is a procedure defined with at least one type parameter.</span></span> <span data-ttu-id="087eb-104">Это позволяет вызывающий код, чтобы адаптировать типы данных к его требованиям при каждом вызове процедуры.</span><span class="sxs-lookup"><span data-stu-id="087eb-104">This allows the calling code to tailor the data types to its requirements each time it calls the procedure.</span></span>  

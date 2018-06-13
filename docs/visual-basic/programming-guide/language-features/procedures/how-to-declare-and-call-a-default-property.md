@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33650999"
 ---
 # <a name="how-to-declare-and-call-a-default-property-in-visual-basic"></a><span data-ttu-id="944e4-102">Практическое руководство. Объявление и вызов свойства по умолчанию в Visual Basic</span><span class="sxs-lookup"><span data-stu-id="944e4-102">How to: Declare and Call a Default Property in Visual Basic</span></span>
 <span data-ttu-id="944e4-103">Объект *свойство по умолчанию* свойство класса или структуры, ваш код может получить доступ без указания ее.</span><span class="sxs-lookup"><span data-stu-id="944e4-103">A *default property* is a class or structure property that your code can access without specifying it.</span></span> <span data-ttu-id="944e4-104">Если вызывающий код задает класс или структуру, но не свойство и контекст разрешает доступ к свойству, Visual Basic разрешает доступ к этого класса или структуры свойство по умолчанию, если он существует.</span><span class="sxs-lookup"><span data-stu-id="944e4-104">When calling code names a class or structure but not a property, and the context allows access to a property, Visual Basic resolves the access to that class or structure's default property if one exists.</span></span>  

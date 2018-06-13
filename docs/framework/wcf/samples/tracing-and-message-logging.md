@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33807987"
 ---
 # <a name="tracing-and-message-logging"></a><span data-ttu-id="9d0aa-102">Трассировка и ведение журнала сообщений</span><span class="sxs-lookup"><span data-stu-id="9d0aa-102">Tracing and Message Logging</span></span>
 <span data-ttu-id="9d0aa-103">В этом образце показано, как включить трассировку и ведение журнала сообщений.</span><span class="sxs-lookup"><span data-stu-id="9d0aa-103">This sample demonstrates how to enable tracing and message logging.</span></span> <span data-ttu-id="9d0aa-104">Полученный трассировки и журналы сообщений просматриваются с помощью [программы Service Trace Viewer (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md).</span><span class="sxs-lookup"><span data-stu-id="9d0aa-104">The resulting traces and message logs are viewed using the [Service Trace Viewer Tool (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md).</span></span> <span data-ttu-id="9d0aa-105">Этот пример построен на [Приступая к работе](../../../../docs/framework/wcf/samples/getting-started-sample.md).</span><span class="sxs-lookup"><span data-stu-id="9d0aa-105">This sample is based on the [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md).</span></span>  

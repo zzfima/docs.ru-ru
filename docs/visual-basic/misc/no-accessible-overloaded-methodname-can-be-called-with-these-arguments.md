@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33636187"
 ---
 # <a name="no-accessible-overloaded-39ltmethodnamegt39-can-be-called-with-these-arguments-without-a-narrowing-conversion"></a><span data-ttu-id="19cfc-102">Ни один из доступных перегруженных &#39; &lt;имя_метода&gt; &#39; может вызываться с этими аргументами без преобразования с сужением</span><span class="sxs-lookup"><span data-stu-id="19cfc-102">No accessible overloaded &#39;&lt;methodname&gt;&#39; can be called with these arguments without a narrowing conversion</span></span>
 <span data-ttu-id="19cfc-103">Вызван перегруженный метод, однако ни один метод не может быть сопоставлен со списком предоставленных аргументов без сужающего преобразования.</span><span class="sxs-lookup"><span data-stu-id="19cfc-103">An overloaded method was called, but no method was matched with the list of provided arguments without a narrowing conversion.</span></span>  

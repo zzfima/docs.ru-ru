@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33646930"
 ---
 # <a name="how-to-declare-custom-events-to-avoid-blocking-visual-basic"></a><span data-ttu-id="97eaa-102">Практическое руководство. Объявление пользовательских событий для предотвращения блокировки (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="97eaa-102">How to: Declare Custom Events To Avoid Blocking (Visual Basic)</span></span>
 <span data-ttu-id="97eaa-103">Существует несколько случаев, когда важно, что один обработчик событий не блокировал последующие.</span><span class="sxs-lookup"><span data-stu-id="97eaa-103">There are several circumstances when it is important that one event handler not block subsequent event handlers.</span></span> <span data-ttu-id="97eaa-104">Пользовательские события позволяют событий для асинхронного вызова соответствующих обработчиков событий.</span><span class="sxs-lookup"><span data-stu-id="97eaa-104">Custom events allow the event to call its event handlers asynchronously.</span></span>  

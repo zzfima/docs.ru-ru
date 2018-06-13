@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33651760"
 ---
 # <a name="array-dimensions-in-visual-basic"></a><span data-ttu-id="1a3c7-102">Array Dimensions in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="1a3c7-102">Array Dimensions in Visual Basic</span></span>
 <span data-ttu-id="1a3c7-103">Объект *измерения* направление, в котором можно изменять спецификацию элементов массива.</span><span class="sxs-lookup"><span data-stu-id="1a3c7-103">A *dimension* is a direction in which you can vary the specification of an array's elements.</span></span> <span data-ttu-id="1a3c7-104">Массив, содержащий суммы продаж за каждый день месяца, имеет одного измерения (день месяца).</span><span class="sxs-lookup"><span data-stu-id="1a3c7-104">An array that holds the sales total for each day of the month has one dimension (the day of the month).</span></span> <span data-ttu-id="1a3c7-105">Массив, содержащий суммы по отделу продаж за каждый день месяца, имеет два измерения (номер отдела и день месяца).</span><span class="sxs-lookup"><span data-stu-id="1a3c7-105">An array that holds the sales total by department for each day of the month has two dimensions (the department number and the day of the month).</span></span> <span data-ttu-id="1a3c7-106">Размерность массива не вызывается его *ранг*.</span><span class="sxs-lookup"><span data-stu-id="1a3c7-106">The number of dimensions an array has is called its *rank*.</span></span>  

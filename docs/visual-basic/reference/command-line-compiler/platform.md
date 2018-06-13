@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33656182"
 ---
 # <a name="-platform-visual-basic"></a><span data-ttu-id="43925-102">-platform (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="43925-102">-platform (Visual Basic)</span></span>
 <span data-ttu-id="43925-103">Указывает, на какой версии платформы среды CLR может запускаться выходной файл.</span><span class="sxs-lookup"><span data-stu-id="43925-103">Specifies which platform version of common language runtime (CLR) can run the output file.</span></span>  

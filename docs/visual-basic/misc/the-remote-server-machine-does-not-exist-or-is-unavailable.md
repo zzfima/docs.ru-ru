@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33639264"
 ---
 # <a name="the-remote-server-machine-does-not-exist-or-is-unavailable-visual-basic"></a><span data-ttu-id="78c96-102">Удаленный сервер не существует или недоступен (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="78c96-102">The remote server machine does not exist or is unavailable (Visual Basic)</span></span>
 <span data-ttu-id="78c96-103">Вы пытаетесь подключиться к удаленному серверу, который недоступен или не существует.</span><span class="sxs-lookup"><span data-stu-id="78c96-103">You are trying to connect to a remote server that is unavailable or does not exist.</span></span> <span data-ttu-id="78c96-104">Эта ошибка может быть вызвана потерей сетевого подключения.</span><span class="sxs-lookup"><span data-stu-id="78c96-104">This error may be caused by your network connection being lost.</span></span>  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33647392"
 ---
 # <a name="character-data-types-visual-basic"></a><span data-ttu-id="b2b58-102">Символьные типы данных (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b2b58-102">Character Data Types (Visual Basic)</span></span>
 <span data-ttu-id="b2b58-103">Visual Basic предоставляет *символьные типы данных* работать с печатными отображаемую символами и.</span><span class="sxs-lookup"><span data-stu-id="b2b58-103">Visual Basic provides *character data types* to deal with printable and displayable characters.</span></span> <span data-ttu-id="b2b58-104">Оба они работают с символами Юникода, `Char` содержит один символ, в то время как `String` содержит неопределенное число символов.</span><span class="sxs-lookup"><span data-stu-id="b2b58-104">While they both deal with Unicode characters, `Char` holds a single character whereas `String` contains an indefinite number of characters.</span></span>  

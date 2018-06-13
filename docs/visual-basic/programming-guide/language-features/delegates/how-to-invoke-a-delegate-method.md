@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33646956"
 ---
 # <a name="how-to-invoke-a-delegate-method-visual-basic"></a><span data-ttu-id="e82b4-102">Практическое руководство. Вызов метода делегата (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e82b4-102">How to: Invoke a Delegate Method (Visual Basic)</span></span>
 <span data-ttu-id="e82b4-103">В этом примере показано, как связать метод с помощью делегата, а затем вызвать метод через делегата.</span><span class="sxs-lookup"><span data-stu-id="e82b4-103">This example shows how to associate a method with a delegate and then invoke that method through the delegate.</span></span>  

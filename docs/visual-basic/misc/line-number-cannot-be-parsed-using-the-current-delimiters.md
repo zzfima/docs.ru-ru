@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33639140"
 ---
 # <a name="line-ltnumbergt-cannot-be-parsed-using-the-current-delimiters"></a><span data-ttu-id="cd175-102">Строки &lt;номер&gt; не может быть проанализирована с помощью текущих разделителей</span><span class="sxs-lookup"><span data-stu-id="cd175-102">Line &lt;number&gt; cannot be parsed using the current Delimiters</span></span>
 <span data-ttu-id="cd175-103">Указанная строка не может быть проанализирована, так использует разделители, отличные от указанных.</span><span class="sxs-lookup"><span data-stu-id="cd175-103">The specified line cannot be parsed because it uses delimiters other than those specified.</span></span>  

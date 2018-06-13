@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33649104"
 ---
 # <a name="zero-based-vs-one-based-string-access-in-visual-basic"></a><span data-ttu-id="3c8fa-102">Отсчитываемый от нуля vs. Строка с индексацией доступ в Visual Basic</span><span class="sxs-lookup"><span data-stu-id="3c8fa-102">Zero-based vs. One-based String Access in Visual Basic</span></span>
 <span data-ttu-id="3c8fa-103">В этом разделе сравнивается как Visual Basic и [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] предоставляют доступ к символам в строке.</span><span class="sxs-lookup"><span data-stu-id="3c8fa-103">This topic compares how Visual Basic and the [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] provide access to the characters in a string.</span></span> <span data-ttu-id="3c8fa-104">[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Всегда обеспечивает (с нуля) доступ к символам в строке, а Visual Basic предоставляет доступ, отсчитываемый от нуля и от единицы, в зависимости от функции.</span><span class="sxs-lookup"><span data-stu-id="3c8fa-104">The [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] always provides zero-based access to the characters in a string, whereas Visual Basic provides zero-based and one-based access, depending on the function.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33639380"
 ---
 # <a name="39redim39-preserve-operand-cannot-be-nothing"></a><span data-ttu-id="ba817-102">&#39;Оператор reDim&#39; операнд Preserve не может быть пустым</span><span class="sxs-lookup"><span data-stu-id="ba817-102">&#39;ReDim&#39; Preserve operand cannot be Nothing</span></span>
 <span data-ttu-id="ba817-103">Оператор `ReDim` пытается использовать ключевое слово `Preserve` для изменения измерения массива, которое не является последним измерением, но не предоставляет допустимое значение для своего операнда.</span><span class="sxs-lookup"><span data-stu-id="ba817-103">A `ReDim` statement attempts to use the `Preserve` keyword to change a dimension of an array that is not the last dimension, but does not supply a valid value for its operand.</span></span>  

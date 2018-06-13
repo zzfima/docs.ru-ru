@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33635581"
 ---
 # <a name="disk-full-visual-basic"></a><span data-ttu-id="f04df-102">Диск заполнен (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="f04df-102">Disk full (Visual Basic)</span></span>
 <span data-ttu-id="f04df-103">Не хватает места на диске для завершения операции `Print`, `Write`или `FileClose` либо для создания необходимых файлов.</span><span class="sxs-lookup"><span data-stu-id="f04df-103">There is not enough room on the disk to either complete a `Print`, `Write`, or `FileClose` operation, or to create required files.</span></span>  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33646388"
 ---
 # <a name="elementary-data-types-visual-basic"></a><span data-ttu-id="68827-102">Простые типы данных (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="68827-102">Elementary Data Types (Visual Basic)</span></span>
 <span data-ttu-id="68827-103">Visual Basic предоставляет набор стандартных типов данных, которые можно использовать для многих элементов программирования.</span><span class="sxs-lookup"><span data-stu-id="68827-103">Visual Basic supplies a set of predefined data types, which you can use for many of your programming elements.</span></span> <span data-ttu-id="68827-104">В этом разделе описываются эти типы и способы их использования.</span><span class="sxs-lookup"><span data-stu-id="68827-104">This section describes these types and how to use them.</span></span>  

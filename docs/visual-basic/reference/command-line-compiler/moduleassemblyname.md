@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33650794"
 ---
 # <a name="-moduleassemblyname"></a><span data-ttu-id="ba9a3-102">-moduleassemblyname</span><span class="sxs-lookup"><span data-stu-id="ba9a3-102">-moduleassemblyname</span></span>
 <span data-ttu-id="ba9a3-103">Задает имя сборки, частью которой будет этот модуль.</span><span class="sxs-lookup"><span data-stu-id="ba9a3-103">Specifies the name of the assembly that this module will be a part of.</span></span>  

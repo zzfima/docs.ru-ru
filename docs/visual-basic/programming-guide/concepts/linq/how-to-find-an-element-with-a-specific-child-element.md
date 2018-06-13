@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33644018"
 ---
 # <a name="how-to-find-an-element-with-a-specific-child-element-visual-basic"></a><span data-ttu-id="e485b-102">Как: найти элемент с определенным дочерним элементом (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e485b-102">How to: Find an Element with a Specific Child Element (Visual Basic)</span></span>
 <span data-ttu-id="e485b-103">В этом разделе показан определенный элемент, имеющий дочерний элемент с заданным значением.</span><span class="sxs-lookup"><span data-stu-id="e485b-103">This topic shows how to find a particular element that has a child element with a specific value.</span></span>  

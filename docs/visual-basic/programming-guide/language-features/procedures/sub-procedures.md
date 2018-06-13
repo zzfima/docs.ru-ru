@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33652569"
 ---
 # <a name="sub-procedures-visual-basic"></a><span data-ttu-id="ac4db-102">Подпрограммы (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="ac4db-102">Sub Procedures (Visual Basic)</span></span>
 <span data-ttu-id="ac4db-103">Объект `Sub` процедура — это последовательность операторов Visual Basic, заключенным в `Sub` и `End Sub` инструкции.</span><span class="sxs-lookup"><span data-stu-id="ac4db-103">A `Sub` procedure is a series of Visual Basic statements enclosed by the `Sub` and `End Sub` statements.</span></span> <span data-ttu-id="ac4db-104">`Sub` Процедура выполняет задачу и возвращает управление вызывающему коду, но не возвращает значение вызывающему коду.</span><span class="sxs-lookup"><span data-stu-id="ac4db-104">The `Sub` procedure performs a task and then returns control to the calling code, but it does not return a value to the calling code.</span></span>  
