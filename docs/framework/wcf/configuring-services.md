@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803284"
 ---
 # <a name="configuring-services"></a><span data-ttu-id="f8810-102">Настройка служб</span><span class="sxs-lookup"><span data-stu-id="f8810-102">Configuring Services</span></span>
 <span data-ttu-id="f8810-103">После разработки и реализации контракта службы можно переходить к настройке службы.</span><span class="sxs-lookup"><span data-stu-id="f8810-103">Once you have designed and implemented your service contract, you are ready to configure your service.</span></span> <span data-ttu-id="f8810-104">В ходе этого определяется и настраивается способ представления службы клиентам, включая задание адреса, по которому ее можно найти, транспорт и кодирование сообщений, используемые для отправки и получения сообщений, а также требуемый тип безопасности.</span><span class="sxs-lookup"><span data-stu-id="f8810-104">This is where you define and customize how your service is exposed to clients, including specifying the address where it can be found, the transport and message encoding it uses to send and receive messages, and the type of security it requires.</span></span>  

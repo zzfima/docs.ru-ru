@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33652172"
 ---
 # <a name="how-to-control-the-availability-of-a-variable-visual-basic"></a><span data-ttu-id="754af-102">Практическое руководство. Управление доступностью переменной (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="754af-102">How to: Control the Availability of a Variable (Visual Basic)</span></span>
 <span data-ttu-id="754af-103">Управление доступностью переменной, указав его *уровень доступа*.</span><span class="sxs-lookup"><span data-stu-id="754af-103">You control the availability of a variable by specifying its *access level*.</span></span> <span data-ttu-id="754af-104">Уровень доступа определяет, какой код имеет разрешение на чтение или запись в переменную.</span><span class="sxs-lookup"><span data-stu-id="754af-104">The access level determines what code has permission to read or write to the variable.</span></span>  

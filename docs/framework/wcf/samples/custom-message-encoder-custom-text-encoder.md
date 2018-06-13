@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33808069"
 ---
 # <a name="custom-message-encoder-custom-text-encoder"></a><span data-ttu-id="3a7ca-102">Пользовательский кодировщик сообщений: кодировщик пользовательских текстовых сообщений</span><span class="sxs-lookup"><span data-stu-id="3a7ca-102">Custom Message Encoder: Custom Text Encoder</span></span>
 <span data-ttu-id="3a7ca-103">В этом примере показано, как реализовать пользовательский кодировщик текстовых сообщений с помощью Windows Communication Foundation (WCF).</span><span class="sxs-lookup"><span data-stu-id="3a7ca-103">This sample demonstrates how to implement a custom text message encoder using Windows Communication Foundation (WCF).</span></span>  

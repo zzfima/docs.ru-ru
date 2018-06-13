@@ -5,6 +5,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33658321"
 ---
 | <span data-ttu-id="af01b-101">Требуемые версии .NET Framework</span><span class="sxs-lookup"><span data-stu-id="af01b-101">Target Frameworks</span></span> | <span data-ttu-id="af01b-102">Символы</span><span class="sxs-lookup"><span data-stu-id="af01b-102">Symbols</span></span> |
 | ------------------| ------- |

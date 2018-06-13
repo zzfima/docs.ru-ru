@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33805893"
 ---
 # <a name="choosing-a-message-exchange-pattern"></a><span data-ttu-id="44f43-102">Выбор шаблона обмена сообщениями</span><span class="sxs-lookup"><span data-stu-id="44f43-102">Choosing a Message Exchange Pattern</span></span>
 <span data-ttu-id="44f43-103">Первым шагом в создании пользовательского транспорта является необходимо решить, какие *шаблоны обмена сообщениями* (или шаблонов обмена сообщениями) требуются для канала, вы разрабатываете.</span><span class="sxs-lookup"><span data-stu-id="44f43-103">The first step in writing a custom transport is to decide which *message exchange patterns* (or MEPs) are required for the channel you are developing.</span></span> <span data-ttu-id="44f43-104">В этом разделе описаны возможные варианты и различные требования.</span><span class="sxs-lookup"><span data-stu-id="44f43-104">This topic describes the options available and discusses the various requirements.</span></span> <span data-ttu-id="44f43-105">Это первая задача в списке задач разработки канала, описанной в [разработка каналов](../../../../docs/framework/wcf/extending/developing-channels.md).</span><span class="sxs-lookup"><span data-stu-id="44f43-105">This is the first task in the channel development task list described in [Developing Channels](../../../../docs/framework/wcf/extending/developing-channels.md).</span></span>  

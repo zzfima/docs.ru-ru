@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33656247"
 ---
 # <a name="how-to-create-a-property-visual-basic"></a><span data-ttu-id="d0cb4-102">Практическое руководство. Создание свойства (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="d0cb4-102">How to: Create a Property (Visual Basic)</span></span>
 <span data-ttu-id="d0cb4-103">Заключите определение свойства между `Property` инструкции и `End Property` инструкции.</span><span class="sxs-lookup"><span data-stu-id="d0cb4-103">You enclose a property definition between a `Property` statement and an `End Property` statement.</span></span> <span data-ttu-id="d0cb4-104">В этом определении вы определяете `Get` процедуре `Set` или обе.</span><span class="sxs-lookup"><span data-stu-id="d0cb4-104">Within this definition you define a `Get` procedure, a `Set` procedure, or both.</span></span> <span data-ttu-id="d0cb4-105">Код свойства находится в этих процедурах.</span><span class="sxs-lookup"><span data-stu-id="d0cb4-105">All the property's code lies within these procedures.</span></span>  

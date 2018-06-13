@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33655365"
 ---
 # <a name="visual-basic-coding-conventions"></a><span data-ttu-id="57c9c-102">Соглашения о написании кода в Visual Basic</span><span class="sxs-lookup"><span data-stu-id="57c9c-102">Visual Basic Coding Conventions</span></span>
 <span data-ttu-id="57c9c-103">Корпорация Майкрософт разрабатывает примеров и документации, следуйте указаниям, изложенным в этом разделе.</span><span class="sxs-lookup"><span data-stu-id="57c9c-103">Microsoft develops samples and documentation that follow the guidelines in this topic.</span></span> <span data-ttu-id="57c9c-104">При таком же соглашения о написании кода, может получить следующие преимущества:</span><span class="sxs-lookup"><span data-stu-id="57c9c-104">If you follow the same coding conventions, you may gain the following benefits:</span></span>  

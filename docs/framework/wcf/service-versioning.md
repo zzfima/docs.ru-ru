@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809694"
 ---
 # <a name="service-versioning"></a><span data-ttu-id="98880-102">Управление версиями службы</span><span class="sxs-lookup"><span data-stu-id="98880-102">Service Versioning</span></span>
 <span data-ttu-id="98880-103">После первоначального развертывания служб и, возможно, несколько раз на протяжении времени их существования возникает потребность в изменении этих служб (и предоставляемых ими конечных точек). Причин тому немало: изменяющиеся потребности бизнеса, требования информационных технологий или необходимость решить какие-либо другие проблемы.</span><span class="sxs-lookup"><span data-stu-id="98880-103">After initial deployment, and potentially several times during their lifetime, services (and the endpoints they expose) may need to be changed for a variety of reasons, such as changing business needs, information technology requirements, or to address other issues.</span></span> <span data-ttu-id="98880-104">В результате каждого изменения создается новая версия службы.</span><span class="sxs-lookup"><span data-stu-id="98880-104">Each change introduces a new version of the service.</span></span> <span data-ttu-id="98880-105">В этом разделе описываются принципы управления версиями в Windows Communication Foundation (WCF).</span><span class="sxs-lookup"><span data-stu-id="98880-105">This topic explains how to consider versioning in Windows Communication Foundation (WCF).</span></span>  

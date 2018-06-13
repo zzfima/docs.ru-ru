@@ -15,6 +15,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809720"
 ---
 # <a name="walkthrough-my-first-wpf-desktop-application"></a><span data-ttu-id="5239b-102">Пошаговое руководство. Создание первого классического приложения WPF</span><span class="sxs-lookup"><span data-stu-id="5239b-102">Walkthrough: My first WPF desktop application</span></span>
 

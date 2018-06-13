@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33805412"
 ---
 # <a name="aspnet-caching-integration"></a><span data-ttu-id="9c0e7-102">Интеграция кэширования ASP.NET</span><span class="sxs-lookup"><span data-stu-id="9c0e7-102">ASP.NET Caching Integration</span></span>
 <span data-ttu-id="9c0e7-103">В этом образце демонстрируется использование выходного кэша ASP.NET в модели веб-программирования WCF HTTP .</span><span class="sxs-lookup"><span data-stu-id="9c0e7-103">This sample demonstrates how to utilize the ASP.NET output cache with the WCF WEB HTTP programming model.</span></span> <span data-ttu-id="9c0e7-104">См. в разделе [базовой службы ресурсов](../../../../docs/framework/wcf/samples/basic-resource-service.md) образец резидентной версию этого сценария, которое обсуждается реализация service в глубину.</span><span class="sxs-lookup"><span data-stu-id="9c0e7-104">Please see the [Basic Resource Service](../../../../docs/framework/wcf/samples/basic-resource-service.md) sample for a self-hosted version of this scenario that discusses the service implementation in depth.</span></span> <span data-ttu-id="9c0e7-105">В этом разделе основное внимание уделено возможности интеграции выходного кэша ASP.NET.</span><span class="sxs-lookup"><span data-stu-id="9c0e7-105">This topic focuses on the ASP.NET output cache integration feature.</span></span>  

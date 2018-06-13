@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33805172"
 ---
 # <a name="wcf-performance-counters"></a><span data-ttu-id="484fd-102">Счетчики производительности WCF</span><span class="sxs-lookup"><span data-stu-id="484fd-102">WCF Performance Counters</span></span>
 <span data-ttu-id="484fd-103">Windows Communication Foundation (WCF) содержит большой набор счетчиков производительности с помощью которых можно измерять производительность приложения.</span><span class="sxs-lookup"><span data-stu-id="484fd-103">Windows Communication Foundation (WCF) includes a large set of performance counters to help you gauge your application's performance.</span></span>  

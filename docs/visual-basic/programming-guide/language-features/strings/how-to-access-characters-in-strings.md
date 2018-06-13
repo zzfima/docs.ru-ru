@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33649156"
 ---
 # <a name="how-to-access-characters-in-strings-in-visual-basic"></a><span data-ttu-id="b09aa-102">Практическое руководство. Доступ к символам строк в Visual Basic</span><span class="sxs-lookup"><span data-stu-id="b09aa-102">How to: Access Characters in Strings in Visual Basic</span></span>
 <span data-ttu-id="b09aa-103">В этом примере демонстрируется использование <xref:System.String.Chars%2A> свойство для доступа к знаку в указанном месте в строке.</span><span class="sxs-lookup"><span data-stu-id="b09aa-103">This example demonstrates how to use the <xref:System.String.Chars%2A> property to access the character at the specified location in a string.</span></span>  

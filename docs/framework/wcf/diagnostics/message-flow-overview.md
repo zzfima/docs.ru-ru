@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809798"
 ---
 # <a name="message-flow-overview"></a><span data-ttu-id="20ebc-102">Общие сведения о потоках сообщений</span><span class="sxs-lookup"><span data-stu-id="20ebc-102">Message Flow Overview</span></span>
 <span data-ttu-id="20ebc-103">В распределенной системе со связанными между собой службами необходимо определять причинные взаимоотношения между службами.</span><span class="sxs-lookup"><span data-stu-id="20ebc-103">In a distributed system containing interconnected services, it is necessary to determine causal relationships between the services.</span></span> <span data-ttu-id="20ebc-104">Понимать, какие из различных компонентов входили в путь потока запроса, необходимо для решения таких важнейших задач, как наблюдения за работоспособностью, устранение неполадок и анализ первопричин.</span><span class="sxs-lookup"><span data-stu-id="20ebc-104">It is important to understand the various components that were part of a request flow to support critical scenarios such as health monitoring, troubleshooting, and root cause analysis.</span></span> <span data-ttu-id="20ebc-105">Для поддержки трассировки в различных службах в .NET Framework 4 была добавлена поддержка следующих функций.</span><span class="sxs-lookup"><span data-stu-id="20ebc-105">To enable the correlation of traces between various services, in the .NET Framework 4 we added support through the following features:</span></span>  

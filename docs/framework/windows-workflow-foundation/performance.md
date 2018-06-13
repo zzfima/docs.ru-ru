@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33808729"
 ---
 # <a name="windows-workflow-foundation-4-performance"></a><span data-ttu-id="eeb35-102">Производительность Windows Workflow Foundation 4</span><span class="sxs-lookup"><span data-stu-id="eeb35-102">Windows Workflow Foundation 4 Performance</span></span>
 <span data-ttu-id="eeb35-103">Дастин Метцгар (Dustin Metzgar)</span><span class="sxs-lookup"><span data-stu-id="eeb35-103">Dustin Metzgar</span></span>  

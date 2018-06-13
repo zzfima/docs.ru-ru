@@ -11,6 +11,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803709"
 ---
 # <a name="extending-wcf"></a><span data-ttu-id="17878-102">Расширение WCF</span><span class="sxs-lookup"><span data-stu-id="17878-102">Extending WCF</span></span>
 <span data-ttu-id="17878-103">Windows Communication Foundation (WCF) позволяет изменять и расширять компоненты времени выполнения для точного управления и расширения приложений на основе служб.</span><span class="sxs-lookup"><span data-stu-id="17878-103">Windows Communication Foundation (WCF) allows you to modify and extend run time components to precisely control and extend service-based applications.</span></span> <span data-ttu-id="17878-104">Статьи данного раздела подробно описывают архитектуру расширяемости.</span><span class="sxs-lookup"><span data-stu-id="17878-104">The topics in this section go in depth about the extensibility architecture.</span></span> <span data-ttu-id="17878-105">Дополнительные сведения о базовое программирование в разделе [базовое Программирование WCF](../../../../docs/framework/wcf/basic-wcf-programming.md).</span><span class="sxs-lookup"><span data-stu-id="17878-105">For more information about basic programming, see [Basic WCF Programming](../../../../docs/framework/wcf/basic-wcf-programming.md).</span></span>  

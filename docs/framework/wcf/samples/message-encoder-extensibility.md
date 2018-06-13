@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33804203"
 ---
 # <a name="message-encoder-extensibility"></a><span data-ttu-id="07e4f-102">Расширяемость кодировщика сообщений</span><span class="sxs-lookup"><span data-stu-id="07e4f-102">Message Encoder Extensibility</span></span>
 <span data-ttu-id="07e4f-103">В этом разделе содержатся образцы, демонстрирующие настраиваемое кодирование сообщений.</span><span class="sxs-lookup"><span data-stu-id="07e4f-103">This section contains samples that demonstrate custom message encoding.</span></span>  

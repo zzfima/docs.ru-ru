@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33653164"
 ---
 # <a name="-rootnamespace"></a><span data-ttu-id="79b42-102">-rootnamespace</span><span class="sxs-lookup"><span data-stu-id="79b42-102">-rootnamespace</span></span>
 <span data-ttu-id="79b42-103">Задает пространство имен для всех объявлений типов.</span><span class="sxs-lookup"><span data-stu-id="79b42-103">Specifies a namespace for all type declarations.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33649091"
 ---
 # <a name="linq-to-xml-overview-visual-basic"></a><span data-ttu-id="f7c4b-102">LINQ to XML Обзор (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="f7c4b-102">LINQ to XML Overview (Visual Basic)</span></span>
 <span data-ttu-id="f7c4b-103">XML широко используется для форматирования данных в целом ряде контекстов.</span><span class="sxs-lookup"><span data-stu-id="f7c4b-103">XML has been widely adopted as a way to format data in many contexts.</span></span> <span data-ttu-id="f7c4b-104">Примеры XML можно обнаружить в веб-среде, в файлах конфигурации, в файлах Microsoft Office Word и в базах данных.</span><span class="sxs-lookup"><span data-stu-id="f7c4b-104">For example, you can find XML on the Web, in configuration files, in Microsoft Office Word files, and in databases.</span></span>  

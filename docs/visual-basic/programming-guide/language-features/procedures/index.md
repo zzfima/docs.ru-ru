@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33655141"
 ---
 # <a name="procedures-in-visual-basic"></a><span data-ttu-id="007d4-102">Процедуры в Visual Basic</span><span class="sxs-lookup"><span data-stu-id="007d4-102">Procedures in Visual Basic</span></span>
 <span data-ttu-id="007d4-103">Объект *процедура* — это блок операторов Visual Basic, заключенным в операторе объявления (`Function`, `Sub`, `Operator`, `Get`, `Set`) и соответствующим `End` объявления.</span><span class="sxs-lookup"><span data-stu-id="007d4-103">A *procedure* is a block of Visual Basic statements enclosed by a declaration statement (`Function`, `Sub`, `Operator`, `Get`, `Set`) and a matching `End` declaration.</span></span> <span data-ttu-id="007d4-104">Все исполняемые операторы в Visual Basic должен быть в пределах некоторой процедуры.</span><span class="sxs-lookup"><span data-stu-id="007d4-104">All executable statements in Visual Basic must be within some procedure.</span></span>  

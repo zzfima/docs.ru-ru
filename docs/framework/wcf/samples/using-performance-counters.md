@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33807323"
 ---
 # <a name="using-performance-counters"></a><span data-ttu-id="46c5a-102">Использование счетчиков производительности</span><span class="sxs-lookup"><span data-stu-id="46c5a-102">Using Performance Counters</span></span>
 <span data-ttu-id="46c5a-103">Этот образец демонстрирует способы доступа к счетчикам производительности службы Windows Communication Foundation (WCF) и создать пользовательские счетчики.</span><span class="sxs-lookup"><span data-stu-id="46c5a-103">This sample demonstrates how to access Windows Communication Foundation (WCF) performance counters and how to create user-defined performance counters.</span></span> <span data-ttu-id="46c5a-104">Этот пример построен на [Приступая к работе](../../../../docs/framework/wcf/samples/getting-started-sample.md).</span><span class="sxs-lookup"><span data-stu-id="46c5a-104">This sample is based on the [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md).</span></span>  

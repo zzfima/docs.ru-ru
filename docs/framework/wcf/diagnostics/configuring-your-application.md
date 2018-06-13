@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803654"
 ---
 # <a name="configuring-your-application"></a><span data-ttu-id="4f75c-102">Настройка приложения</span><span class="sxs-lookup"><span data-stu-id="4f75c-102">Configuring Your Application</span></span>
 <span data-ttu-id="4f75c-103">Windows Communication Foundation (WCF) использует систему конфигурации .NET и позволяет настраивать службы в пределах компьютера и приложения.</span><span class="sxs-lookup"><span data-stu-id="4f75c-103">Windows Communication Foundation (WCF) uses the .NET configuration system and allows you to configure services at both the machine and application scope.</span></span>  
