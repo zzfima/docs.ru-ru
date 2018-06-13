@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33545273"
 ---
 # <a name="how-to-get-the-return-value-of-a-page-function"></a><span data-ttu-id="6637d-102">Практическое руководство. Получение возвращаемого значения функции страницы</span><span class="sxs-lookup"><span data-stu-id="6637d-102">How to: Get the Return Value of a Page Function</span></span>
 <span data-ttu-id="6637d-103">В этом примере показано, как получить результат, возвращаемый функцией страницы.</span><span class="sxs-lookup"><span data-stu-id="6637d-103">This example shows how to get the result that is returned by a page function.</span></span>  

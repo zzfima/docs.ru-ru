@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33546679"
 ---
 # <a name="how-to-navigate-back-through-navigation-history"></a><span data-ttu-id="3a3dc-102">Как: перейти назад по истории навигации</span><span class="sxs-lookup"><span data-stu-id="3a3dc-102">How to: Navigate Back Through Navigation History</span></span>
 <span data-ttu-id="3a3dc-103">В этом примере показано, как перейти к записям журнала переходов.</span><span class="sxs-lookup"><span data-stu-id="3a3dc-103">This example illustrates how to navigate to entries in back navigation history.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33335930"
 ---
 # <a name="deferred-execution-example-c"></a><span data-ttu-id="198b0-102">Пример отложенного выполнения (C#)</span><span class="sxs-lookup"><span data-stu-id="198b0-102">Deferred Execution Example (C#)</span></span>
 <span data-ttu-id="198b0-103">В данном разделе показано влияние отложенного выполнения и отложенного вычисления на запросы LINQ to XML.</span><span class="sxs-lookup"><span data-stu-id="198b0-103">This topic shows how deferred execution and lazy evaluation affect the execution of your LINQ to XML queries.</span></span>  

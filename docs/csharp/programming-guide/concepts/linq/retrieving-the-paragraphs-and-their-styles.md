@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33335352"
 ---
 # <a name="retrieving-the-paragraphs-and-their-styles-c"></a><span data-ttu-id="4d195-102">Извлечение абзацев и стилей (C#)</span><span class="sxs-lookup"><span data-stu-id="4d195-102">Retrieving the Paragraphs and Their Styles (C#)</span></span>
 <span data-ttu-id="4d195-103">В этом примере составляется запрос, при котором получаются узлы абзацев из документа WordprocessingML.</span><span class="sxs-lookup"><span data-stu-id="4d195-103">In this example, we write a query that retrieves the paragraph nodes from a WordprocessingML document.</span></span> <span data-ttu-id="4d195-104">Также идентифицируется стиль каждого абзаца.</span><span class="sxs-lookup"><span data-stu-id="4d195-104">It also identifies the style of each paragraph.</span></span>  

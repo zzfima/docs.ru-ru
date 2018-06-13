@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33359453"
 ---
 # <a name="c-walkthroughs"></a><span data-ttu-id="1a657-102">Пошаговые руководства по C#</span><span class="sxs-lookup"><span data-stu-id="1a657-102">C# Walkthroughs</span></span>
 <span data-ttu-id="1a657-103">В пошаговых руководствах содержатся инструкции по выполнению стандартных сценариев, что делает их удобным инструментом для начала изучения продукта в целом или его отдельных возможностей.</span><span class="sxs-lookup"><span data-stu-id="1a657-103">Walkthroughs give step-by-step instructions for common scenarios, which makes them a good place to start learning about the product or a particular feature area.</span></span>  

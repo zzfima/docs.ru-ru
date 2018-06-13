@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33328868"
 ---
 # <a name="how-to-use-operator-overloading-to-create-a-complex-number-class-c-programming-guide"></a><span data-ttu-id="187b7-102">Практическое руководство. Перегрузка операторов для реализации класса комплексных чисел (Руководство по программированию в C#)</span><span class="sxs-lookup"><span data-stu-id="187b7-102">How to: Use Operator Overloading to Create a Complex Number Class (C# Programming Guide)</span></span>
 <span data-ttu-id="187b7-103">В этом примере показывается, как использовать перегрузку оператора для создания класса комплексных чисел `Complex`, определяющего сложение комплексных чисел.</span><span class="sxs-lookup"><span data-stu-id="187b7-103">This example shows how you can use operator overloading to create a complex number class `Complex` that defines complex addition.</span></span> <span data-ttu-id="187b7-104">Программа выводит мнимую и реальную части чисел, а также результат сложения, используя переопределение метода `ToString`.</span><span class="sxs-lookup"><span data-stu-id="187b7-104">The program displays the imaginary and the real parts of the numbers and the addition result using an override of the `ToString` method.</span></span>  

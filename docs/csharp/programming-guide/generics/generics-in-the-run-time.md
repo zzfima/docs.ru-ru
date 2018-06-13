@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33334539"
 ---
 # <a name="generics-in-the-run-time-c-programming-guide"></a><span data-ttu-id="73505-102">Универсальные типы во время выполнения (Руководство по программированию в C#)</span><span class="sxs-lookup"><span data-stu-id="73505-102">Generics in the Run Time (C# Programming Guide)</span></span>
 <span data-ttu-id="73505-103">Универсальный тип или метод, компилируемый на языке MSIL, будет содержать метаданные, определяющие наличие в нем параметров типа.</span><span class="sxs-lookup"><span data-stu-id="73505-103">When a generic type or method is compiled into Microsoft intermediate language (MSIL), it contains metadata that identifies it as having type parameters.</span></span> <span data-ttu-id="73505-104">Способ использования MSIL для универсального типа зависит от того, является ли предоставленный параметр типа ссылочным типом или типом значения.</span><span class="sxs-lookup"><span data-stu-id="73505-104">How the MSIL for a generic type is used differs based on whether the supplied type parameter is a value type or reference type.</span></span>  

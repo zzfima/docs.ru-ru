@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 0bcb0efab3b61f55bd5fdd3405799c7ac78ee521
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33424655"
 ---
 # <a name="isymunmanagedreadergetdocuments-method"></a><span data-ttu-id="baa4c-102">Метод ISymUnmanagedReader::GetDocuments</span><span class="sxs-lookup"><span data-stu-id="baa4c-102">ISymUnmanagedReader::GetDocuments Method</span></span>
 <span data-ttu-id="baa4c-103">Возвращает массив всех документов, определенных в хранилище символов.</span><span class="sxs-lookup"><span data-stu-id="baa4c-103">Returns an array of all the documents defined in the symbol store.</span></span>  

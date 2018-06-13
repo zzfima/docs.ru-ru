@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33340597"
 ---
 # <a name="object-oriented-programming-c"></a><span data-ttu-id="f8c50-102">Объектно ориентированное программирование (C#)</span><span class="sxs-lookup"><span data-stu-id="f8c50-102">Object-Oriented Programming (C#)</span></span>
 <span data-ttu-id="f8c50-103">C# обеспечивает полную поддержку объектно ориентированного программирования, включая инкапсуляцию, наследование и полиморфизм.</span><span class="sxs-lookup"><span data-stu-id="f8c50-103">C# provides full support for object-oriented programming including encapsulation, inheritance, and polymorphism.</span></span>  

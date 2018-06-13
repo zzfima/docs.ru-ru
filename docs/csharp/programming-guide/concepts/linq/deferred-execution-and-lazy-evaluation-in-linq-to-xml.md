@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33340376"
 ---
 # <a name="deferred-execution-and-lazy-evaluation-in-linq-to-xml-c"></a><span data-ttu-id="bf275-102">Отложенное выполнение и отложенное вычисление в LINQ to XML (C#)</span><span class="sxs-lookup"><span data-stu-id="bf275-102">Deferred Execution and Lazy Evaluation in LINQ to XML (C#)</span></span>
 <span data-ttu-id="bf275-103">Операции по обработке запросов и осей часто реализуются с использованием отложенного выполнения.</span><span class="sxs-lookup"><span data-stu-id="bf275-103">Query and axis operations are often implemented to use deferred execution.</span></span> <span data-ttu-id="bf275-104">В этом разделе разъясняются требования и достоинства отложенного выполнения, а также содержатся некоторые соображения относительно реализации.</span><span class="sxs-lookup"><span data-stu-id="bf275-104">This topic explains the requirements and advantages of deferred execution, and some implementation considerations.</span></span>  

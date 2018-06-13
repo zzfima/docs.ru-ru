@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33545627"
 ---
 # <a name="how-to-enable-visual-styles-in-a-hybrid-application"></a><span data-ttu-id="8206c-102">Практическое руководство. Включение визуальных стилей в гибридном приложении</span><span class="sxs-lookup"><span data-stu-id="8206c-102">How to: Enable Visual Styles in a Hybrid Application</span></span>
 <span data-ttu-id="8206c-103">В этом разделе показано, как включить [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)] визуальные стили на [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] размещение элементов управления в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-приложения.</span><span class="sxs-lookup"><span data-stu-id="8206c-103">This topic shows how to enable [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)] visual styles on a [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] control hosted in a [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-based application.</span></span>  

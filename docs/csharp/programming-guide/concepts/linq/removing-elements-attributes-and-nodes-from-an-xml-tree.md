@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33339973"
 ---
 # <a name="removing-elements-attributes-and-nodes-from-an-xml-tree-c"></a><span data-ttu-id="3e8f1-102">Удаление элементов, атрибутов и узлов из дерева XML (C#)</span><span class="sxs-lookup"><span data-stu-id="3e8f1-102">Removing Elements, Attributes, and Nodes from an XML Tree (C#)</span></span>
 <span data-ttu-id="3e8f1-103">Можно вносить изменения в XML-дерево, удаляя элементы, атрибуты и узлы других типов.</span><span class="sxs-lookup"><span data-stu-id="3e8f1-103">You can modify an XML tree, removing elements, attributes, and other types of nodes.</span></span>  

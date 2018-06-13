@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33545351"
 ---
 # <a name="ienumrawinputdevicclone"></a><span data-ttu-id="af564-102">IEnumRAWINPUTDEVIC:Clone</span><span class="sxs-lookup"><span data-stu-id="af564-102">IEnumRAWINPUTDEVIC:Clone</span></span>
 <span data-ttu-id="af564-103">Создает другой перечислитель устройств необработанного ввода с же состоянием, что и текущий перечислитель, для прохода по тому же списку.</span><span class="sxs-lookup"><span data-stu-id="af564-103">Creates another raw input device enumerator with the same state as the current enumerator to iterate over the same list.</span></span>  

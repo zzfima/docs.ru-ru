@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33545130"
 ---
 # <a name="how-to-use-the-fontsizeconverter-class"></a><span data-ttu-id="24c49-102">Как Использовать класс FontSizeConverter</span><span class="sxs-lookup"><span data-stu-id="24c49-102">How to: Use the FontSizeConverter Class</span></span>
 ## <a name="example"></a><span data-ttu-id="24c49-103">Пример</span><span class="sxs-lookup"><span data-stu-id="24c49-103">Example</span></span>  

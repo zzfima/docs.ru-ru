@@ -6,9 +6,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 3f5bf8252986ffa90ea5380d5342595cb91e5419
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33424945"
 ---
 # <a name="isymunmanagedasyncmethodisasyncmethod-method"></a><span data-ttu-id="71653-102">Метод ISymUnmanagedAsyncMethod::IsAsyncMethod</span><span class="sxs-lookup"><span data-stu-id="71653-102">ISymUnmanagedAsyncMethod::IsAsyncMethod Method</span></span>
 <span data-ttu-id="71653-103">Проверяет, метод async сведения или нет.</span><span class="sxs-lookup"><span data-stu-id="71653-103">Checks if the method has async information or not.</span></span>  
