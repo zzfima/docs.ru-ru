@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33507379"
 ---
 # <a name="wcf-web-http-programming-object-model"></a>Объектная модель программирования WCF Web HTTP
 Модель программирования HTTP WCF WEB позволяет разработчикам предоставлять веб-службы Windows Communication Foundation (WCF) службы через базовые HTTP-запросы, не требуя использования SOAP. Модель программирования HTTP WCF WEB построено на основе существующей модели расширяемости WCF. Она определяет следующие классы.  

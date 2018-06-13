@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33500956"
 ---
 # <a name="wcf-web-http-service-help-page"></a>Страница справки веб-службы HTTP WCF
 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] предоставляет автоматическую справочную страницу для службы WCF WEB HTTP. На этой странице справки приводится описание каждой операции, форматов запроса и ответа, а также схем. По умолчанию эта функциональная возможность отключена. Когда пользователь переходит к службе WCF WEB HTTP и добавляет «/ Help» в конце URL-адрес, например http://localhost:8000/Customers/Help, страницу справки, как отображается следующая информация.  

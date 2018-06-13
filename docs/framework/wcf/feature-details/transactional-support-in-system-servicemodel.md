@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33497923"
 ---
 # <a name="transactional-support-in-systemservicemodel"></a>Поддержка транзакций в System.ServiceModel
 В этом разделе описываются функции транзакций, предоставляемых Windows Communication Foundation (WCF).  

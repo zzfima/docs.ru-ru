@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33555767"
 ---
 # <a name="textbox-how-to-topics"></a>Разделы руководства, посвященные TextBox
 В этом разделе содержатся примеры, демонстрирующие способы выполнения типичных задач с помощью <xref:System.Windows.Controls.TextBox> элемента управления.  

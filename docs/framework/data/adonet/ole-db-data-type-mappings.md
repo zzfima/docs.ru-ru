@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32758936"
 ---
 # <a name="ole-db-data-type-mappings"></a>Сопоставления типов данных OLE DB
 В приведенной ниже таблице показаны выводимые типы [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] для типов данных поставщика данных .NET Framework для ADO и OLE DB (<xref:System.Data.OleDb>). Приведены также типизированные методы доступа для <xref:System.Data.OleDb.OleDbDataReader>.  

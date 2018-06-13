@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33541863"
 ---
 # <a name="how-to-make-thread-safe-calls-to-windows-forms-controls"></a>Практическое руководство. Осуществление потокобезопасных вызовов элементов управления Windows Forms.
 При использовании многопоточности для улучшения производительности приложений Windows Forms во время вызова элементов управления необходимо соблюдать принципы безопасности потоков.  

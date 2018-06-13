@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33549468"
 ---
 # <a name="drag-and-drop-overview"></a>Общие сведения о перетаскивании
 В этой статье приведены общие сведения о поддержке перетаскивания в приложениях [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. Перетаскиванием обычно называют метод передачи данных, который реализуется с помощью мыши (или другого указывающего устройства) для выбора одного или нескольких объектов и перетаскивания их в цель перетаскивания в [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)].  

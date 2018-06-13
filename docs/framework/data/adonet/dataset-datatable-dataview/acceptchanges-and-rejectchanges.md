@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32756609"
 ---
 # <a name="acceptchanges-and-rejectchanges"></a>AcceptChanges и RejectChanges
 После проверки изменений, внесенных в данные в точности <xref:System.Data.DataTable>, можно принять изменения с помощью <xref:System.Data.DataRow.AcceptChanges%2A> метод <xref:System.Data.DataRow>, <xref:System.Data.DataTable>, или <xref:System.Data.DataSet>, задающий **текущей** строки значения были **исходного** значения и задаст **RowState** свойства **Unchanged**. Принятие или отклонение изменений удаление всех **RowError** сведения и наборы **HasErrors** свойства **false**. Принятие или отклонение изменений также может затрагивать обновление данных в источнике данных. Дополнительные сведения см. в разделе [обновление источников данных с помощью DataAdapter](../../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md).  

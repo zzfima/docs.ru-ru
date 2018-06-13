@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33509083"
 ---
 # <a name="security-considerations-for-data"></a>Вопросы безопасности для данных
 При работе с данными в Windows Communication Foundation (WCF), необходимо учитывать ряд категорий угроз. В следующей таблице представлен список наиболее важных классов угроз, относящихся к обработке данных. WCF предоставляет средства для борьбы с такими угрозами.  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33502281"
 ---
 # <a name="default-nettcpbinding"></a>Привязка NetTcpBinding по умолчанию
 В этом образце демонстрируется использование привязки <xref:System.ServiceModel.NetTcpBinding>. Этот пример построен на [Приступая к работе](../../../../docs/framework/wcf/samples/getting-started-sample.md) , реализующий службу калькулятора. В этом образце служба является резидентной. И клиент, и служба являются консольными приложениями.  

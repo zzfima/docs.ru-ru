@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33537194"
 ---
 # <a name="how-to-move-through-a-dataset-with-the-windows-forms-bindingnavigator-control"></a>Практическое руководство. Перемещение по набору данных с помощью элемента управления BindingNavigator в Windows Forms
 При создании управляемых данными приложений часто необходимо показывать коллекции данных пользователям. Элемент управления <xref:System.Windows.Forms.BindingNavigator> в сочетании с компонентом <xref:System.Windows.Forms.BindingSource> обеспечивает удобное и расширяемое решение для перемещения по коллекции и последовательного отображения элементов.  

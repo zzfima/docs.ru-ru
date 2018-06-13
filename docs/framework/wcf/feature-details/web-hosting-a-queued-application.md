@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33505053"
 ---
 # <a name="web-hosting-a-queued-application"></a>Размещение веб-узлов в приложении, использующем очереди
 Служба активации процессов Windows (WAS) управляет активацией и временем существования рабочих процессов, содержащих приложения, службы Windows Communication Foundation (WCF) узла. Модель процесса WAS обобщает модель процесса [!INCLUDE[iis601](../../../../includes/iis601-md.md)] для HTTP-сервера путем устранения зависимости от HTTP. Это позволяет службам WCF использовать HTTP и отличные от HTTP протоколы, такие как net.msmq и msmq.formatname, в среде размещения, которая поддерживает активацию на основе сообщений и предоставляет возможность размещать большое количество приложений на данном компьютере.  

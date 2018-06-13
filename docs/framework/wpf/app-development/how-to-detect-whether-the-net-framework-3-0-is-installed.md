@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33546495"
 ---
 # <a name="how-to-detect-whether-the-net-framework-30-is-installed"></a>Практическое руководство. Проверка наличия установленной платформы .NET Framework 3.0
 Прежде чем развертывать приложения Microsoft .NET Framework в системе, их необходимо сначала убедиться, что присутствует в среде выполнения .NET Framework. В этом разделе содержится скрипт, написанный на языке HTML/JavaScript, администраторы могут использовать для определения наличия .NET Framework в системе.  

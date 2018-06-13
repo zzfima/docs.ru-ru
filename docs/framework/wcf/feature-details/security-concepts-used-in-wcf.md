@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33497637"
 ---
 # <a name="security-concepts-used-in-wcf"></a>Основные понятия безопасности, используемые в WCF
 Безопасность Windows Communication Foundation (WCF) основана на принципах уже заняты и развернутых в различных инфраструктурах безопасности.  

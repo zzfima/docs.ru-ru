@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33340116"
 ---
 # <a name="tutorial-manipulating-content-in-a-wordprocessingml-document-c"></a>Учебник. Управление содержимым в документе WordprocessingML (C#)
 В этом учебнике рассказывается, как применять функциональное преобразование и LINQ to XML для обработки XML-документов. В примерах на C# запрашивается и обрабатывается информация в документах WordprocessingML в формате Office Open XML, сохраненных программой Microsoft Word.  

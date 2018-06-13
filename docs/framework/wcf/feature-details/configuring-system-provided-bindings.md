@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33496842"
 ---
 # <a name="configuring-system-provided-bindings"></a>Настройка привязок, предоставляемых системой
 Привязки указывают, какой механизм связи использовать при взаимодействии с конечной точкой, а также способ подключения к конечной точке. Привязки состоят из элементов, определяющих способ деления каналов Windows Communication Foundation (WCF) для предоставления требуемых функций связи. Привязка содержит три типа элементов.  

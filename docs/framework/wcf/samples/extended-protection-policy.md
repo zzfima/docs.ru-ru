@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33504362"
 ---
 # <a name="extended-protection-policy"></a>Расширенная политика защиты
 Расширенная защита - это инициатива, направленная на отражение атак типа «злоумышленник в середине» (MITM). Атака MITM - это угроза безопасности, при которой злоумышленник перехватывает учетные данные клиента и переправляет их на сервер.  

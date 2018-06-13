@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33506167"
 ---
 # <a name="wcf-services-and-aspnet"></a>Службы WCF и ASP.NET
 В этом разделе рассматриваются размещения Windows Communication Foundation (WCF) служб side-by-side с ASP.NET и их размещение в режиме совместимости с ASP.NET.  

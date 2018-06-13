@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33538161"
 ---
 # <a name="event-handlers-overview-windows-forms"></a>Обзор обработчиков событий (Windows Forms)
 Обработчик событий — метод, связанный с событием. При возникновении события выполняется код в обработчик событий. Каждый обработчик событий предоставляет два параметра, которые дают возможность правильно обработать событие. В примере показан обработчик событий для <xref:System.Windows.Forms.Button> элемента управления <xref:System.Windows.Forms.Control.Click> событий.  

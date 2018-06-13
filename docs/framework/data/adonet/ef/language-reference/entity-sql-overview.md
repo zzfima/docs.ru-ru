@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32760743"
 ---
 # <a name="entity-sql-overview"></a>Общие сведения об Entity SQL
 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] представляет собой язык, подобный языку SQL, который позволяет выполнять запросы к концептуальным моделям в [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)]. Концептуальные модели представляют данные в виде сущностей и связей, и [!INCLUDE[esql](../../../../../../includes/esql-md.md)] позволяет выполнять запросы этим сущностям и связям в формате, который хорошо знаком тем, кто использовал SQL.  

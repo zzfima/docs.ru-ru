@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33541074"
 ---
 # <a name="collecting-ink"></a>Сбор рукописных данных
 Платформа [Windows Presentation Foundation](../../../../docs/framework/wpf/index.md) выполняет сбор цифровых рукописных фрагментов, что является одной из основных ее функций. В этом разделе обсуждаются методы сбора рукописного ввода в Windows Presentation Foundation (WPF).  

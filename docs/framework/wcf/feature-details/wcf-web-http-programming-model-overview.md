@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33507117"
 ---
 # <a name="wcf-web-http-programming-model-overview"></a>Общие сведения о модели программирования WCF Web HTTP
 Модель программирования WEB HTTP Windows Communication Foundation (WCF) предоставляет основные элементы, необходимые для построения веб-службы HTTP с использованием WCF. Службы WCF WEB HTTP рассчитаны доступ со стороны широкого диапазона возможных клиентов, включая веб-браузеры и обладают следующими уникальными требованиями:  

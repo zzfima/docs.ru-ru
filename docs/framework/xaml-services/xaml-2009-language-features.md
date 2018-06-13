@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33563562"
 ---
 # <a name="xaml-2009-language-features"></a>Возможности языка XAML 2009
 XAML 2009 — это сокращение для новых компонентов языка XAML, которые расширяют существующую спецификацию языка XAML. XAML 2009 содержит ряд новых директив и конструкций. В частности, это[x:Arguments Directive](../../../docs/framework/xaml-services/x-arguments-directive.md); [x:FactoryMethod Directive](../../../docs/framework/xaml-services/x-factorymethod-directive.md); [x:Reference Markup Extension](../../../docs/framework/xaml-services/x-reference-markup-extension.md); [x:TypeArguments Directive](../../../docs/framework/xaml-services/x-typearguments-directive.md); и встроенные типы для общих примитивов языка (например `x:Char`).  

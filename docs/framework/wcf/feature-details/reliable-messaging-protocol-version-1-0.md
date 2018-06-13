@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33497056"
 ---
 # <a name="reliable-messaging-protocol-version-10"></a>Протокол надежного обмена сообщениями, версия 1.0
 В этом разделе рассматриваются сведения о реализации Windows Communication Foundation (WCF) для протокола WS-Reliable Messaging protocol февраля 2005 г. (версия 1.0), необходимые для взаимодействия с использованием транспорта HTTP. WCF соответствует спецификации WS-Reliable Messaging с определенными ограничениями и пояснениями, описанными далее в этом разделе. Обратите внимание, что протокол WS-ReliableMessaging версии 1.0 реализуется начиная с версии [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)].  

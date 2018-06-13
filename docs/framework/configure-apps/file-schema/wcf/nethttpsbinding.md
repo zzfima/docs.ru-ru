@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32751312"
 ---
 # <a name="ltnethttpsbindinggt"></a>&lt;Привязка netHttpsBinding&gt;
 Представляет привязку, службы Windows Communication Foundation (WCF) можно использовать для настройки и предоставления конечных точек, которые могут взаимодействовать по протоколу HTTPS. При использовании с дуплексным контрактом будут использоваться веб-сокеты, в противном случае будет использоваться протокол HTTPS.  

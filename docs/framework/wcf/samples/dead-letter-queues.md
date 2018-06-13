@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33507985"
 ---
 # <a name="dead-letter-queues"></a>Очереди недоставленных сообщений
 В этом образце показано, как обрабатывать недоставленные сообщения. Он основан на [транзакции привязки MSMQ](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md) образца. В этом примере используется привязка `netMsmqBinding`. Служба представляет собой резидентное консольное приложение, позволяющее наблюдать за получением службой сообщений из очереди.  

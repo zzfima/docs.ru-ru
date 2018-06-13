@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33506216"
 ---
 # <a name="knownassemblyattribute"></a>Атрибут KnownAssemblyAttribute
 В этом образце показано, как можно настроить процессы сериализации и десериализации с помощью класса <xref:System.Runtime.Serialization.DataContractResolver>. В этом образце показано, как динамически добавлять известные типы во время сериализации и десериализации.  

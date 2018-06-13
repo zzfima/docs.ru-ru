@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33536277"
 ---
 # <a name="how-to-specify-the-edit-mode-for-the-windows-forms-datagridview-control"></a>Практическое руководство. Определение режима редактирования для элемента управления DataGridView в Windows Forms
 По умолчанию пользователи могут редактировать содержимое текущего <xref:System.Windows.Forms.DataGridView> ячейки текстового поля, введя в него или нажав клавишу F2. Ячейка переключается в режим редактирования при выполнении всех следующих условий:  

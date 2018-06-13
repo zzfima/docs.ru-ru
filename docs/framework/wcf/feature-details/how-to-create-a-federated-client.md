@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33496975"
 ---
 # <a name="how-to-create-a-federated-client"></a>Практическое руководство. Создание федеративного клиента
 В Windows Communication Foundation (WCF), создает клиент для *федеративной службы* состоит из трех основных этапов:  

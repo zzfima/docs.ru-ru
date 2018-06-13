@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33542780"
 ---
 # <a name="how-to-add-an-owner-type-for-a-dependency-property"></a>Практическое руководство. Добавление типа владельца для свойства зависимости
 В этом примере показано, как добавить класс в качестве владельца свойства зависимостей, зарегистрированного для другого типа. Таким образом, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] чтения и система свойств способны распознать класс в качестве дополнительного владельца свойства. Добавление в качестве владельца при необходимости позволяет добавлять класс для предоставления метаданных определенного типа.  

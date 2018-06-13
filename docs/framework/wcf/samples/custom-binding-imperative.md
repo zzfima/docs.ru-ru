@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33500673"
 ---
 # <a name="custom-binding-imperative"></a>Императивные пользовательские привязки
 В образце показано, как писать императивный код для определения и использования пользовательских привязок, без использования файла конфигурации или клиента Windows Communication Foundation (WCF) создан. Этот образец объединяет возможности, предоставляемые транспортом HTTP, и канал надежного сеанса, создавая надежную привязку на основе HTTP. Этот пример построен на [Приступая к работе](../../../../docs/framework/wcf/samples/getting-started-sample.md) , реализующий службу калькулятора.  

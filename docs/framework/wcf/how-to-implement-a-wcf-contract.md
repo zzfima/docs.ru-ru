@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33499315"
 ---
 # <a name="how-to-implement-a-windows-communication-foundation-service-contract"></a>Практическое руководство. Реализация контракта службы Windows Communication Foundation
 Это вторая из шести шагов, необходимых для создания базовой службы Windows Communication Foundation (WCF) и клиента, который может вызывать службу. Обзор всех шести задач см. в разделе [учебник по началу работы](../../../docs/framework/wcf/getting-started-tutorial.md) раздела.  

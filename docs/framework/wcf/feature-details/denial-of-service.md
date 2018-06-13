@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33496117"
 ---
 # <a name="denial-of-service"></a>Отказ в обслуживании
 Если система перегружена так, что не удается обрабатывать сообщения, или сообщения обрабатываются слишком медленно, происходит отказ в обслуживании.  

@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33535565"
 ---
 # <a name="how-to-set-and-return-numeric-values-with-the-windows-forms-numericupdown-control"></a>Практическое руководство. Ввод числовых значений с помощью элемента управления NumericUpDown в Windows Forms
 Числовое значение в Windows Forms <xref:System.Windows.Forms.NumericUpDown> управления определяется его <xref:System.Windows.Forms.NumericUpDown.Value%2A> свойство. Как и в случае с любым другим свойством, можно написать проверки условий для значения элемента управления. Один раз <xref:System.Windows.Forms.NumericUpDown.Value%2A> свойство задано, его можно настроить непосредственно, путем написания кода для выполнения над ним операций или можно вызвать <xref:System.Windows.Forms.NumericUpDown.UpButton%2A> и <xref:System.Windows.Forms.NumericUpDown.DownButton%2A> методы.  

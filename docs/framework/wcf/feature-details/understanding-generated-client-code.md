@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33501360"
 ---
 # <a name="understanding-generated-client-code"></a>Основные сведения о созданном коде клиента
 [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) создает код клиента и файл конфигурации клиентского приложения для использования при сборке клиентских приложений. В этом разделе содержатся примеры созданного кода для стандартных сценариев контрактов служб. Дополнительные сведения о создании клиентского приложения с помощью созданного кода см. в разделе [Общие сведения о клиенте WCF](../../../../docs/framework/wcf/wcf-client-overview.md).  

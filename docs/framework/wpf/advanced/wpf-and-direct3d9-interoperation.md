@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33549439"
 ---
 # <a name="wpf-and-direct3d9-interoperation"></a>Взаимодействие WPF и Direct3D9
 Содержимое Direct3D9 можно включить в приложении Windows Presentation Foundation (WPF). В этом разделе описывается создание содержимого Direct3D9, чтобы эффективно взаимодействовать с WPF.  

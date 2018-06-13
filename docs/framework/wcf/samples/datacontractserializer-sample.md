@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33501498"
 ---
 # <a name="datacontractserializer-sample"></a>Пример DataContractSerializer
 В образце DataContractSerializer показывается сериализатор <xref:System.Runtime.Serialization.DataContractSerializer>, выполняющий службы общей сериализации и десериализации для классов контракта данных. В этом примере создается `Record` объект, сериализует его в поток памяти и десериализуется в другой `Record` объекта, чтобы продемонстрировать использование <xref:System.Runtime.Serialization.DataContractSerializer>. Затем в образце объект `Record` сериализуется с помощью модуля записи двоичных данных, чтобы продемонстрировать, как этот модуль влияет на сериализацию.  

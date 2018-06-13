@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33497559"
 ---
 # <a name="securing-peer-channel-applications"></a>Защита приложений одноранговых каналов
 Как и другие привязки в [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)], привязка `NetPeerTcpBinding` имеет включенную по умолчанию безопасность и предлагает безопасность как на основе транспорта, так и на основе сообщения (или оба типа безопасности). В данном разделе обсуждаются два этих типа безопасности. Тип безопасности задается тегом режима безопасности в спецификации привязки (<xref:System.ServiceModel.NetPeerTcpBinding.Security%2A>`Mode`).  

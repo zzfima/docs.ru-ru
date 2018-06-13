@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33563471"
 ---
 # <a name="xmlspace-handling-in-xaml"></a>Обработка xml:space в языке XAML
 `xml:space` Атрибут является атрибутом, определенные в XML, который объявляет поведение обработки значимых пробелов внутри элемента объекта. Такое поведение применимо для всего содержимого (внутренний текст), содержащихся в элементе где `xml:space` объявляется, а также фокусирует на дочерние элементы.  

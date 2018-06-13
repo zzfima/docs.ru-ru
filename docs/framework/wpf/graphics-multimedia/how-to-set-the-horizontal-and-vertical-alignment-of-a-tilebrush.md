@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33563601"
 ---
 # <a name="how-to-set-the-horizontal-and-vertical-alignment-of-a-tilebrush"></a>Практическое руководство. Установка горизонтального и вертикального выравнивания объекта TileBrush
 В этом примере показано, как управлять горизонтальным и вертикальным выравниванием содержимого фрагмента мозаики. Для управления выравниванием по горизонтали и вертикали <xref:System.Windows.Media.TileBrush>, использовать его <xref:System.Windows.Media.TileBrush.AlignmentX%2A> и <xref:System.Windows.Media.TileBrush.AlignmentY%2A> свойства.  

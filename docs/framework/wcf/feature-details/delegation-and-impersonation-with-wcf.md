@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33496923"
 ---
 # <a name="delegation-and-impersonation-with-wcf"></a>Делегирование и олицетворение с использованием WCF
 *Олицетворение* - это стандартная техника, которую службы используют для ограничения клиентского доступа к ресурсам домена службы. В роли ресурсов домена службы могут выступать ресурсы компьютера, например локальные файлы (олицетворение), или ресурсы, расположенные на другом компьютере, например общая папка (делегирование). Пример приложения см. в разделе [Impersonating the Client](../../../../docs/framework/wcf/samples/impersonating-the-client.md). Пример использования олицетворения см. в разделе [Практическое руководство. Олицетворение клиента в рамках службы](../../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md).  

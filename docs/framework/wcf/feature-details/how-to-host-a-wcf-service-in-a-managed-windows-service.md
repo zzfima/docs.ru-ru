@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33497221"
 ---
 # <a name="how-to-host-a-wcf-service-in-a-managed-windows-service"></a>Практическое руководство. Размещение службы WCF в управляемой службе Windows
 В этом разделе описаны основные шаги, необходимые для создания службы Windows Communication Foundation (WCF), размещенной в службе Windows. Сценарий реализуется с помощью управляемой службе Windows, является долго выполняющихся службы WCF, размещенных за пределами Internet Information Services (IIS) в защищенной среде, которая не является сообщением активации вариант размещения. Вместо этого время существования службы контролируется операционной системой. Данный вариант размещения доступен во всех версиях Windows.  

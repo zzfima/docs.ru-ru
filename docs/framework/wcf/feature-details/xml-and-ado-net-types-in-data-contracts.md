@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33509111"
 ---
 # <a name="xml-and-adonet-types-in-data-contracts"></a>Типы XML и ADO.NET в контрактах данных
 Модель контракта данных Windows Communication Foundation (WCF) поддерживает определенные типы, которые непосредственно представляют XML. При сериализации данных типов в XML сериализатор сохраняет содержимое таких типов XML без какой-либо дополнительной обработки. Поддерживаемые типы: <xref:System.Xml.XmlElement>, массивы <xref:System.Xml.XmlNode> (но не сами типы `XmlNode`), а также типы, реализующие <xref:System.Xml.Serialization.IXmlSerializable>. Типы <xref:System.Data.DataSet> и <xref:System.Data.DataTable>, а также типизированные наборы данных, чаще всего используются в программировании баз данных. Данные типы реализуют интерфейс `IXmlSerializable`, и, следовательно, сериализуются в модели контракта данных. Некоторые специальные рекомендации, относящиеся к данным типам, приведены в конце данного раздела.  
