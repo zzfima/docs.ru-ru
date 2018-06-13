@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33325686"
 ---
 # <a name="delimiters-for-documentation-tags-c-programming-guide"></a>Разделители для тегов в документации (Руководство по программированию на C#)
 Для создания комментариев в документах XML необходимо использовать разделители, по которым компилятор определяет начало и конец комментария. С тегами в XML-документации можно использовать следующие виды разделителей:  

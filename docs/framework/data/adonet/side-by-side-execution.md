@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365453"
 ---
 # <a name="side-by-side-execution-in-adonet"></a>Одновременное выполнение в ADO.NET
 Параллельное выполнение в платформе [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] - это возможность выполнять приложение на компьютере, на котором установлено несколько версий [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], используя только ту версию, для которой приложение скомпилировано. Подробные сведения о настройке side-by-side выполнения см. в разделе [выполнения Side-by-Side](../../../../docs/framework/deployment/side-by-side-execution.md).  

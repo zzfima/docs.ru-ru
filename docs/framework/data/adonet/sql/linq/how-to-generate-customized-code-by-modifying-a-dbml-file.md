@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33354576"
 ---
 # <a name="how-to-generate-customized-code-by-modifying-a-dbml-file"></a>Практическое руководство. Создание настраиваемого кода за счет изменения файла DBML
 Можно создать исходный код Visual Basic или C# из файла метаданных DBML-разметки базы данных. Этот способ предоставляет возможность настройки заданного по умолчанию DBML-файла до создания кода сопоставления приложений. Данная возможность является дополнительной.  

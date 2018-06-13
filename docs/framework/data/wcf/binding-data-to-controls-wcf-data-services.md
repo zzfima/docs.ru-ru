@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365570"
 ---
 # <a name="binding-data-to-controls-wcf-data-services"></a>Привязка данных к элементам управления (службы данных WCF)
 С помощью служб [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] можно привязывать элементы управления, такие как `ComboBox` и `ListView`, к экземпляру класса <xref:System.Data.Services.Client.DataServiceCollection%601>. Эта коллекция, наследуемая от класса <xref:System.Collections.ObjectModel.ObservableCollection%601>, содержит данные из канала [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]. Этот класс представляет коллекцию динамических данных, обеспечивающих выдачу уведомлений при добавлении и удалении элементов. При использовании экземпляра <xref:System.Data.Services.Client.DataServiceCollection%601> для привязки к данным, [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] клиентские библиотеки обрабатывают эти события объектов, отслеживаемых контекстом <xref:System.Data.Services.Client.DataServiceContext> будут синхронизированы с данными в привязанном элементе пользовательского интерфейса.  

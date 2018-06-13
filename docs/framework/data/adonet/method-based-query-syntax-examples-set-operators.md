@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32764818"
 ---
 # <a name="method-based-query-syntax-examples-set-operators-linq-to-dataset"></a>Примеры синтаксиса запросов на основе методов. Операторы набора (LINQ to DataSet)
 Примеры в этом разделе демонстрируют, как использовать <xref:System.Linq.Enumerable.Distinct%2A>, <xref:System.Linq.Enumerable.Except%2A>, <xref:System.Linq.Enumerable.Intersect%2A>, и <xref:System.Linq.Enumerable.Union%2A> операторов для выполнения операций сравнения на основе значений наборов строк данных.[ Загрузка данных в наборе данных](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md) разделе [сравнение объектов DataRow](../../../../docs/framework/data/adonet/comparing-datarows-linq-to-dataset.md) Дополнительные сведения о <xref:System.Data.DataRowComparer>.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32766274"
 ---
 # <a name="edm-generator-edmgenexe"></a>Генератор модели EDM (EdmGen.exe)
 EdmGen.exe - программа командной строки, предназначенная для работы с файлами моделей и сопоставлениями [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. Средство EdmGen.exe применяется для следующих целей.  

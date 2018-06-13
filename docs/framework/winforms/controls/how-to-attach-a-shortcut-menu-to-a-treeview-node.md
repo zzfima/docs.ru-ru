@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33528224"
 ---
 # <a name="how-to-attach-a-shortcut-menu-to-a-treeview-node"></a>Практическое руководство. Подключение контекстного меню к узлу элемента управления TreeView
 Windows Forms <xref:System.Windows.Forms.TreeView> элемент управления выводит на экран иерархию узлов аналогично отображения файлов и папок в левой области окна проводника. Установив <xref:System.Windows.Forms.Control.ContextMenuStrip%2A> свойства, можно предоставить контекстно-зависимые операции для пользователя при их правой кнопкой мыши <xref:System.Windows.Forms.TreeView> элемента управления. Связав <xref:System.Windows.Forms.ContextMenuStrip> компонента с отдельными <xref:System.Windows.Forms.TreeNode> элементы, можно добавить настраиваемый уровень функциональности контекстное меню для вашего <xref:System.Windows.Forms.TreeView> элементов управления.  

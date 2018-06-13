@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33357213"
 ---
 # <a name="how-to-attach-an-existing-entity-to-the-dataservicecontext-wcf-data-services"></a>Практическое руководство. Присоединение существующей сущности к контексту DataServiceContext (службы данных WCF)
 Если сущность уже существует в службе данных, [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] клиентская библиотека позволяет присоединить объект, представляющий сущность непосредственно <xref:System.Data.Services.Client.DataServiceContext> без предварительного выполнения запроса. Дополнительные сведения см. в разделе [обновление службы данных](../../../../docs/framework/data/wcf/updating-the-data-service-wcf-data-services.md).  

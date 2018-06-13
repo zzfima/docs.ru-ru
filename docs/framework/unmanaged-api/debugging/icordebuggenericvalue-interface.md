@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 0081f020da673023e2c35f9599e9682215e2c9d4
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33415068"
 ---
 # <a name="icordebuggenericvalue-interface1"></a>ICorDebugGenericValue интерфейс1
 Подкласс «ICorDebugValue», которая применяется ко всем значениям. Этот интерфейс предоставляет для значения методы Get и Set.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33318803"
 ---
 # <a name="how-to-find-an-attribute-of-the-parent-xpath-linq-to-xml-c"></a>Практическое руководство. Поиск атрибута родительского элемента (XPath-LINQ to XML) (C#)
 Данный раздел показывает способ перехода к родительскому элементу и нахождения его атрибута.  

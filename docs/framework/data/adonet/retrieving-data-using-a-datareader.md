@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33353264"
 ---
 # <a name="retrieving-data-using-a-datareader"></a>Извлечение данных с помощью объекта DataReader
 Получение данных с помощью **DataReader** включает в себя создание экземпляра **команда** объекта, а затем создать **DataReader** путем вызова  **Command.ExecuteReader** для получения строк из источника данных. В следующем примере демонстрируется использование **DataReader** где `reader` представляет допустимый DataReader и `command` представляет допустимый объект Command.  

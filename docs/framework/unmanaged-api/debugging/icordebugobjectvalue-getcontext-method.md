@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 61e8a8d1a923a52b678771f79122e5ab36a99706
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33415320"
 ---
 # <a name="icordebugobjectvaluegetcontext-method"></a>Метод ICorDebugObjectValue::GetContext
 `GetContext` в этой версии платформы .NET Framework не реализован.  
