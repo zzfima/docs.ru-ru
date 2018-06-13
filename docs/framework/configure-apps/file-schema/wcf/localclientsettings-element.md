@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32750951"
 ---
 # <a name="ltlocalclientsettingsgt-element"></a>Элемент &lt;localClientSettings&gt;
 Задает параметры безопасности локального клиента для этой привязки.  

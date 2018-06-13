@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33550223"
 ---
 # <a name="how-to-adorn-the-children-of-a-panel"></a>Практическое руководство. Оформление дочерних объектов панели
 В этом примере показано, как программным способом привязки графического элемента к дочерним элементам указанного <xref:System.Windows.Controls.Panel>.  
