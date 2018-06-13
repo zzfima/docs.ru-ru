@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33578863"
 ---
 # <a name="guidelines-for-collections"></a>Рекомендации по использованию коллекций
 Любой тип, разработанные специально для использования группы объектов, содержащих некоторыми общими характеристиками можно рассматривать как коллекцию. Почти всегда это подходит для таких типов, для реализации <xref:System.Collections.IEnumerable> или <xref:System.Collections.Generic.IEnumerable%601>, поэтому в этом разделе мы только рассмотрите возможность реализации одного или обоих этих интерфейсов подлежащих типов коллекций.  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33577180"
 ---
 # <a name="xslt-stylesheet-scripting-using-ltmsxslscriptgt"></a>Создание скриптов таблиц стилей XSLT с помощью &lt;msxsl:script&gt;
 Класс <xref:System.Xml.Xsl.XslTransform> поддерживает внедрение скриптов с помощью элемента `script`.  

@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33580888"
 ---
 # <a name="how-to-use-parallelinvoke-to-execute-parallel-operations"></a>Практическое руководство. Использование метода Parallel.Invoke для выполнения параллельных операций
 В этом примере показывается, как параллелизовать операции с помощью метода <xref:System.Threading.Tasks.Parallel.Invoke%2A> в библиотеке параллельных задач. В общем источнике данных выполняются три операции. Поскольку ни одна из этих операций не изменяет источник, они могут выполняться параллельно простым способом.  

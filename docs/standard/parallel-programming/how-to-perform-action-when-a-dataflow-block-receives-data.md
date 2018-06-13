@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33583023"
 ---
 # <a name="how-to-perform-action-when-a-dataflow-block-receives-data"></a>Практическое руководство. Выполнение действий при получении данных блоком потоков данных
 Типы *блоков выполнения потоков данных* вызывают предоставленный пользователем делегат при получении данных. Классы <xref:System.Threading.Tasks.Dataflow.ActionBlock%601?displayProperty=nameWithType>, <xref:System.Threading.Tasks.Dataflow.TransformBlock%602?displayProperty=nameWithType> и <xref:System.Threading.Tasks.Dataflow.TransformManyBlock%602?displayProperty=nameWithType> являются типами блоков выполнения потока данных. При предоставлении рабочей функции блоку выполнения потока данных можно использовать ключевое слово `delegate` (`Sub` в Visual Basic), <xref:System.Action%601>, <xref:System.Func%602> или лямбда-выражение. В этом документе описано, как использовать <xref:System.Func%602> и лямбда-выражения для выполнения действий в блоках выполнения.  

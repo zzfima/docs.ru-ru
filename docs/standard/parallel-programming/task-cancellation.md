@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33582692"
 ---
 # <a name="task-cancellation"></a>Отмена задач
 Классы <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> и <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> поддерживают отмену с помощью токенов отмены в .NET Framework. См. дополнительные сведения об [отмене в управляемых потоках](../../../docs/standard/threading/cancellation-in-managed-threads.md). В классах задач отмена включает взаимодействие между пользовательским делегатом, который представляет операцию отмены, и кодом, который запросил отмену.  Успешная отмена включает запрашивающий код, который вызывает метод <xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=nameWithType>, и пользовательский делегат, который своевременно завершает операцию. Операцию можно завершить одним из следующих способов.  

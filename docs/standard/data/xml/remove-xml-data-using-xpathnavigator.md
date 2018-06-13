@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33577037"
 ---
 # <a name="remove-xml-data-using-xpathnavigator"></a>Удаление XML-данных с помощью XPathNavigator
 Класс <xref:System.Xml.XPath.XPathNavigator> располагает набором методов, используемых для удаления узлов и значений из XML-документа. Для использования этих методов необходимо сделать редактируемым объект <xref:System.Xml.XPath.XPathNavigator>, то есть установить для свойства <xref:System.Xml.XPath.XPathNavigator.CanEdit%2A> значение `true`.  

@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579695"
 ---
 # <a name="character-classes-in-regular-expressions"></a>Классы знаков в регулярных выражениях
 <a name="Top"></a> Класс символов определяет набор символов, любой из которых может присутствовать во входной строке для успешного сопоставления. Язык регулярных выражений в .NET поддерживает следующие классы символов:  

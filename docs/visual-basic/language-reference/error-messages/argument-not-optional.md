@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33585120"
 ---
 # <a name="argument-not-optional-visual-basic"></a>Аргумент не является обязательным (Visual Basic)
 Количество и типы аргументов должны совпадать ожидалось. Неправильное число аргументов является либо пропущенный аргумент не является необязательным. Аргумент может быть опущен в вызове процедуры, определенной пользователем если он был объявлен `Optional` в определении процедуры.  

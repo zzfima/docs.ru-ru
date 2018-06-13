@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33583751"
 ---
 # <a name="how-to-listen-for-cancellation-requests-by-polling"></a>Практическое руководство. Прослушивание запросов на отмену посредством опросов
 В примере ниже показан один из способов для регулярного опроса маркера отмены из пользовательского кода, чтобы отслеживать запросы на отмену из вызывающего потока. Мы применили здесь тип <xref:System.Threading.Tasks.Task?displayProperty=nameWithType>, но вы можете использовать такой же подход и к асинхронным операциям, для которых прямо указан тип <xref:System.Threading.ThreadPool?displayProperty=nameWithType> или <xref:System.Threading.Thread?displayProperty=nameWithType>.  
