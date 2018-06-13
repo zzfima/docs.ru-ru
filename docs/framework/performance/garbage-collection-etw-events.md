@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33396939"
 ---
 # <a name="garbage-collection-etw-events"></a>События сборки мусора (трассировка событий Windows)
 <a name="top"></a> Эти события собирают сведения, относящиеся к сборке мусора. Они помогают при диагностике и отладке, в том числе позволяют определить, сколько раз осуществлялась сборка мусора, какой объем памяти был освобожден в ходе сборки мусора и т. д.  

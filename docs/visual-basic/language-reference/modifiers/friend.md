@@ -15,6 +15,7 @@ ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34234593"
 ---
 # <a name="friend-visual-basic"></a>Friend (Visual Basic)
 Указывает, что один или несколько объявленных программных элементов доступны только из внутри сборки, содержащей их объявления.  
