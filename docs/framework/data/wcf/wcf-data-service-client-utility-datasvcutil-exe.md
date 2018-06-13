@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33364530"
 ---
 # <a name="wcf-data-service-client-utility-datasvcutilexe"></a>Служебная программа клиента служб данных WCF (DataSvcUtil.exe)
 DataSvcUtil.exe является средством командной строки, предоставляемые [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] , которые используют [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] канала и создает клиентские классы службы данных, которые необходимы для доступа к службе данных из клиентского приложения .NET Framework. Эта программа формирует классы данных с использованием следующих источников метаданных.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33358616"
 ---
 # <a name="oracle-sequences"></a>Последовательности Oracle
 Поставщик данных .NET Framework для Oracle поддерживает получение сформированных на сервере ключевых значений последовательности Oracle после выполнения вставок с помощью <xref:System.Data.OracleClient.OracleDataAdapter>.  

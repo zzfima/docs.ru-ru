@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365388"
 ---
 # <a name="the-linq-to-sql-object-model"></a>Модель объектов LINQ to SQL
 В [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], в модель данных реляционной базы данных сопоставляется объектной модели, выраженной в языке программирования разработчика. После этого операции с данными выполняются в соответствии с объектной моделью.  

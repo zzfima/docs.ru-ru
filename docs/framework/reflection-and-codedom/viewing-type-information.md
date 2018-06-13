@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33399747"
 ---
 # <a name="viewing-type-information"></a>Просмотр сведений о типах
 Класс <xref:System.Type?displayProperty=nameWithType> является центральной частью отражения. Среда CLR создает объект **Type** для загруженного типа, когда он запрашивается отражением. Используя методы, поля, свойства и вложенные классы объекта **Type**, можно получить полные сведения об этом типе.  

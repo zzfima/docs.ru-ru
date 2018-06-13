@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33399250"
 ---
 # <a name="wif-configuration-reference"></a>Справочник по конфигурации WIF
 Платформу Windows Identity Foundation (WIF) можно настраивать в приложениях, добавляя элементы в файл конфигурации. В этом разделе приводятся ссылки на справочные статьи по элементам конфигурации WIF.  

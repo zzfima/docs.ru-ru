@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e2668e36debebb5ba71277912f37833eba584fde
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33403283"
 ---
 # <a name="corversion-structure"></a>Структура COR_VERSION
 Содержит стандартный номер версии среды CLR, состоящий из четырех частей.  

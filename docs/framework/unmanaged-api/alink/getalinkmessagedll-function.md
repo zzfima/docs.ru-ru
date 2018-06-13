@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 395dc85ad638e8a790962a4aa38019612c360ce1
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33402221"
 ---
 # <a name="getalinkmessagedll-function"></a>Функция GetALinkMessageDll
 Находит и загружает библиотеку DLL сообщений. Возвращает 0, если сообщение DLL невозможно найти или загрузить. Сообщений DLL должна быть либо в подкаталоге, имя которого совпадает с Идентификатором языка, либо в текущем каталоге.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33359716"
 ---
 # <a name="clr-user-defined-functions"></a>Пользовательские функции CLR
 Определяемые пользователем функции представляют собой подпрограммы, которые могут принимать параметры, выполнять вычисления или другие действия и возвращать результат. Определяемую пользователем функцию можно написать на любом языке программирования Microsoft .NET Framework, например на Microsoft Visual Basic .NET или Microsoft Visual C#.  

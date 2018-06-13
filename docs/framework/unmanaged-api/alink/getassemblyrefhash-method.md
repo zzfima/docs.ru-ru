@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: ccf60d067af356dda1870a2fb1dcca21966f16a6
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33401490"
 ---
 # <a name="getassemblyrefhash-method"></a>Метод GetAssemblyRefHash
 Извлекает хэш-blob для данной сборки.  

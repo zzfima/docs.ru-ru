@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 7fe2fcf10b517f4eb7b1c7e87142afb386821246
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33404124"
 ---
 # <a name="cordebugexceptionunwindcallbacktype-enumeration"></a>Перечисление CorDebugExceptionUnwindCallbackType
 Указывает событие, о котором сообщает обратный вызов во время фазы перемотки.  

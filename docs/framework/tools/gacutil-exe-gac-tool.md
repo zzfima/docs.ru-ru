@@ -24,6 +24,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33399598"
 ---
 # <a name="gacutilexe-global-assembly-cache-tool"></a>Gacutil.exe (программа глобального кэша сборок)
 С помощью программы глобального кэша сборок можно просматривать содержимое глобального кэша сборок и кэша загрузки, а также управлять им.  

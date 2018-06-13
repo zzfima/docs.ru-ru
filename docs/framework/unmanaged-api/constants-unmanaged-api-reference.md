@@ -10,9 +10,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 65925b7dafb9e89433253d68327c488365674963
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33406282"
 ---
 # <a name="constants-unmanaged-api-reference"></a>Константы (справочные сведения о неуправляемых API)
 В этом разделе описывается тип языка, поставщика языка и константы типа документа, которые определены в файле CorSym.idl.  

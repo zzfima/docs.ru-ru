@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 749ec14af7bffee87afbe5c0705a6ddf68da5fd8
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33406498"
 ---
 # <a name="iclrdatatargetgetpointersize-method"></a>Метод ICLRDataTarget::GetPointerSize
 Возвращает размер в байтах, типа указателя, использующего целевой процесс. Этот метод вызывается службами доступа к данным среды выполнения.  

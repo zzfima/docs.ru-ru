@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 6e3d138700ef06da7b40a88a768a41f3ffcb38eb
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33403244"
 ---
 # <a name="codechunkinfo-structure1"></a>CodeChunkInfo Structure1
 Представляет одинарный блок кода в памяти.  

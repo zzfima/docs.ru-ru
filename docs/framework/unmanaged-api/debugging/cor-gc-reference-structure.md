@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 732bc9d38ca0d6c2dc3f30603a722b7370034b80
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33408194"
 ---
 # <a name="corgcreference-structure"></a>Структура COR_GC_REFERENCE
 Содержит сведения об объекте, в котором должна быть выполнена сборка мусора.  

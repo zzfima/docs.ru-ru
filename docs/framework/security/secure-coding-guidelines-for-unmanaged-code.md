@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33408155"
 ---
 # <a name="secure-coding-guidelines-for-unmanaged-code"></a>Защита правил кодирования для неуправляемого кода
 Части библиотечного кода необходимо осуществлять вызовы неуправляемого кода (например, интерфейсов API машинного кода, таких как Win32). Так как при этом не работает система безопасности управляемого кода, необходимо соблюдать соответствующие меры предосторожности. Если код является нейтральным с точки зрения безопасности, то он, как и любой вызывающий его код, должен иметь разрешение неуправляемого кода (<xref:System.Security.Permissions.SecurityPermission> с указанием флага <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode> ).  

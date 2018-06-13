@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33404957"
 ---
 # <a name="mageuiexe-manifest-generation-and-editing-tool-graphical-client"></a>MageUI.exe (средство создания и редактирования манифестов, графический клиент)
 Средство MageUI.exe поддерживает те же функциональные возможности, что и средство командной строки Mage.exe, но имеет пользовательский интерфейс Windows. С его помощью можно создавать, редактировать и подписывать манифесты развертывания и приложения. Целевой платформой новых манифестов, созданных с помощью MageUI.exe, является [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)]. Для предыдущих версий .NET Framework следует использовать предыдущие версии MageUI.exe. При добавлении и удалении сборок из манифеста, а также повторной подписи существующих манифестов MageUI.exe не обновляет манифест, чтобы его целевой платформой стала [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)]. Дополнительные сведения см. в разделе [Mage.exe (средство создания и редактирования манифеста)](../../../docs/framework/tools/mage-exe-manifest-generation-and-editing-tool.md).  
