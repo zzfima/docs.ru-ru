@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33593945"
 ---
 # <a name="unable-to-write-output-to-memory"></a>Не удается выполнить запись выходных данных в память
 Возникла проблема с выводом в память.  

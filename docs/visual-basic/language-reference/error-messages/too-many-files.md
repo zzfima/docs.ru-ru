@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33593971"
 ---
 # <a name="too-many-files"></a>Слишком много файлов
 Дополнительные файлы были созданы в корневом каталоге превышает операционной системы либо открытых файлов превышает число, заданное в **файлов =** в файле CONFIG. Файл SYS.  

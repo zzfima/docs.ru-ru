@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33520569"
 ---
 # <a name="control-help-using-tooltips"></a>Отображение справки по элементам управления с помощью всплывающих подсказок
 Можно использовать <xref:System.Windows.Forms.ToolTip> компонент на отображение кратких специализированных справочных сообщений для отдельных элементов управления в формах Windows Forms. <xref:System.Windows.Forms.ToolTip> Компонент предоставляет свойство, указывающее текст, отображаемый для каждого элемента управления в форме. Дополнительные сведения о работе с <xref:System.Windows.Forms.ToolTip> компонент таким образом, в разделе [как: задайте подсказки для элементов управления формы Windows Forms во время разработки](../../../../docs/framework/winforms/controls/how-to-set-tooltips-for-controls-on-a-windows-form-at-design-time.md). Кроме того, можно настроить <xref:System.Windows.Forms.ToolTip> компонента, таким образом, отсутствует задержка перед его отображением. Дополнительные сведения см. в разделе [как: изменение значения задержки для компонента ToolTip в Windows Forms](../../../../docs/framework/winforms/controls/how-to-change-the-delay-of-the-windows-forms-tooltip-component.md).  

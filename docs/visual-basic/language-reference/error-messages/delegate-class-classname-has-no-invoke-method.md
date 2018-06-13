@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33588834"
 ---
 # <a name="delegate-class-39ltclassnamegt39-has-no-invoke-method-so-an-expression-of-this-type-cannot-be-the-target-of-a-method-call"></a>Класс делегата &#39; &lt;classname&gt; &#39; не содержит метода Invoke, поэтому выражение этого типа не может быть результатом вызова метода
 Вызов `Invoke` в делегате не выполнено, поскольку `Invoke` не реализован в классе делегата.  

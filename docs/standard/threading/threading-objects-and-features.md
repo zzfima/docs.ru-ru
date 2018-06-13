@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33591332"
 ---
 # <a name="threading-objects-and-features"></a>Объекты и функциональные возможности работы с потоками
 Платформа .NET Framework предоставляет ряд объектов, которые помогают создавать многопоточные приложения и управлять ими. Управляемые потоки представлены классом <xref:System.Threading.Thread>. Класс <xref:System.Threading.ThreadPool> позволяет легко создавать многопоточные фоновые задачи и управлять ими. Класс <xref:System.ComponentModel.BackgroundWorker> используется в тех же целях для задач, которые взаимодействуют с пользовательским интерфейсом. Класс <xref:System.Threading.Timer> выполняет фоновые задачи через определенные интервалы.  

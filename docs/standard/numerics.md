@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33588701"
 ---
 # <a name="numerics-in-the-net-framework"></a>Числовые значения в платформе .NET Framework
 Платформа .NET Framework поддерживает стандартные числовые примитивные типы (целочисленные и с плавающей запятой), а также <xref:System.Numerics.BigInteger> (целочисленный тип, не имеющий теоретических верхних и нижних границ), <xref:System.Numerics.Complex> (тип для представления комплексных чисел), а также набор векторных типов с поддержкой SIMD в пространстве имен <xref:System.Numerics>.  

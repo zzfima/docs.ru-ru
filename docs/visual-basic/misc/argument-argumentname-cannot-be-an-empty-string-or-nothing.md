@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33598131"
 ---
 # <a name="argument-ltargumentnamegt-cannot-be-an-empty-string-or-nothing"></a>Аргумент &lt;имя_аргумента&gt; не может быть пустой строкой или Nothing
 Этот аргумент требует значение, отличное от пустой строки ("") или `Nothing`. Это может быть результатом неправильного вычисления значения.  

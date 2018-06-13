@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33524788"
 ---
 # <a name="how-to-draw-text-on-a-windows-form"></a>Практическое руководство. Отрисовка текста в Windows Forms
 В следующем примере кода показано, как использовать <xref:System.Drawing.Graphics.DrawString%2A> метод <xref:System.Drawing.Graphics> для рисования текста в форме. Кроме того, можно использовать <xref:System.Windows.Forms.TextRenderer> для рисования текста в форме. Дополнительные сведения см. в разделе [как: рисование текста с использованием GDI](../../../../docs/framework/winforms/advanced/how-to-draw-text-with-gdi.md).  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33588627"
 ---
 # <a name="how-to-delete-a-file-in-visual-basic"></a>Практическое руководство. Удаление файла в Visual Basic
 Метод `DeleteFile` объекта `My.Computer.FileSystem` позволяет удалить файл. Параметры метода позволяют указать, следует ли отправлять удаленный файл в **корзину**, следует ли запрашивать у пользователя подтверждение удаления файла и что делать при отмене пользователем операции.  

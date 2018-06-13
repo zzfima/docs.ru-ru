@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33589871"
 ---
 # <a name="how-to-display-bound-data-in-a-datarepeater-control-visual-studio"></a>Пошаговое руководство. Отображение связанных данных в элементе управления DataRepeater (Visual Studio)
 Чаще всего используют <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> — элемент управления для отображения связанных данных из базы данных или другого источника данных.  

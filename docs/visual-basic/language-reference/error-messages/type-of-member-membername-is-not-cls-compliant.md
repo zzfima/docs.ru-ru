@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33595986"
 ---
 # <a name="type-of-member-39ltmembernamegt39-is-not-cls-compliant"></a>Тип члена &#39; &lt;membername&gt; &#39; не является CLS-совместимым
 Тип данных, указанный для этого элемента не является частью [независимость от языка и независимые от языка компоненты](../../../standard/language-independence-and-language-independent-components.md) (CLS). Это не ошибка в компоненте, поскольку [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] и Visual Basic поддерживает этот тип данных. Тем не менее другой компонент, написанный в строго CLS-совместимого кода может не поддерживает этот тип данных. Такой компонент может оказаться невозможным успешно взаимодействовать с данным компонентом.  

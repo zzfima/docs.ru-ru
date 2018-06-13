@@ -8,16 +8,17 @@ helpviewer_keywords:
 - DllImport attribute
 - extern keyword [C#]
 ms.assetid: 9c3f02c4-51b8-4d80-9cb2-f2b6e1ae15c7
-ms.openlocfilehash: f4fd42505937b2623ab9460489f5277364550d71
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 996888a585f8355bdda14e09b6bb9544257ae824
+ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/15/2018
+ms.locfileid: "34172297"
 ---
 # <a name="extern-c-reference"></a>extern (справочник по C#)
 Модификатор `extern` используется для объявления метода с внешней реализацией. При применении служб взаимодействия для вызова неуправляемого кода модификатор `extern` обычно используется с атрибутом `DllImport`. В этом случае также необходимо объявить метод как `static` в соответствии со следующим примером:  
   
-```  
+```csharp  
 [DllImport("avifil32.dll")]  
 private static extern void AVIFileInit();  
 ```  
@@ -52,7 +53,7 @@ int __declspec(dllexport) SampleMethod(int i)
   
  3. В том же каталоге создайте следующий файл C# и назовите его `cm.cs`.  
   
-```  
+```csharp  
 // cm.cs  
 using System;  
 using System.Runtime.InteropServices;  

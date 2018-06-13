@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33506892"
 ---
 # <a name="xmlreader-sample"></a>Пример XmlReader
 Образец XmlReader демонстрирует обработку тела сообщения с помощью <xref:System.Xml.XmlReader>. Пример построен на [Приступая к работе](../../../../docs/framework/wcf/samples/getting-started-sample.md), который реализует службу калькулятора. Добавлена дополнительная операция службы `Sum`, которая принимает сообщение, содержащее массив складываемых значений. Служба считывает сообщение с использованием <xref:System.Xml.XmlReader>.  

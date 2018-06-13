@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33525769"
 ---
 # <a name="how-to-change-the-order-of-columns-in-the-windows-forms-datagridview-control-using-the-designer"></a>Практическое руководство. Изменение порядка столбцов элемента управления DataGridView в формах Windows Forms с помощью конструктора
 При привязке Windows Forms <xref:System.Windows.Forms.DataGridView> элемента управления к источнику данных, порядок отображения столбцов, автоматически созданный определяется источником данных. Если вас не устраивает этот порядок можно изменить порядок столбцов, с помощью конструктора. Можно также добавить к элементу управления несвязанные столбцы и изменить порядок их отображения. Сведения о способах изменения порядка столбцов программным путем см. в разделе [как: изменить порядок столбцов в элементе управления DataGridView Windows Forms](../../../../docs/framework/winforms/controls/how-to-change-the-order-of-columns-in-the-windows-forms-datagridview-control.md).  

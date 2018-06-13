@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33588058"
 ---
 # <a name="how-to-search-data-in-a-datarepeater-control-visual-studio"></a>Практическое руководство. Поиск данных в элементе управления DataRepeater (Visual Studio)
 При использовании <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> управления, который содержит много записей, может потребоваться предоставить пользователям возможность поиска определенной записи. Вместо того, чтобы искать данные в самом элементе управления, можно реализовать поиск, запрашивая базовый <xref:System.Windows.Forms.BindingSource>. Если элемент найден, можно использовать <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.CurrentItemIndex%2A> свойство, чтобы выбрать элемент и его прокрутку и отобразить.  

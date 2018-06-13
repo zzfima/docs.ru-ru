@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33519819"
 ---
 # <a name="persistence-participants"></a>Участники сохраняемости
 Участник сохраняемости может участвовать в операции сохраняемости («Сохранение» или «Загрузка»), запущенной узлом приложения. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] Поставляется с двумя абстрактными классами: **PersistenceParticipant** и **PersistenceIOParticipant**, который можно использовать для создания участника сохраняемости. Участник сохраняемости создается как производное от одного из этих классов, реализует методы, представляющие интерес, а затем добавляет экземпляр класса в коллекцию <xref:System.ServiceModel.Activities.WorkflowServiceHost.WorkflowExtensions%2A> узла <xref:System.ServiceModel.Activities.WorkflowServiceHost>. Узел приложения может искать такие расширения рабочих процессов при сохранении экземпляра рабочего процесса и в нужное время вызывать соответствующие методы для участников сохраняемости.  

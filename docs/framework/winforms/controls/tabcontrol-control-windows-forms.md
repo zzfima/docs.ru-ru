@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33536765"
 ---
 # <a name="tabcontrol-control-windows-forms"></a>Элемент управления TabControl (Windows Forms)
 Элемент управления `TabControl` Windows Forms используется для отображения нескольких вкладок, аналогичных разделителям в записной книжке или меткам в наборе папок в картотеке. Вкладки могут содержать изображения и другие элементы управления. Используйте элемент управления `TabControl` для создания страниц свойств.  

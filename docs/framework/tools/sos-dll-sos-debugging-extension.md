@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33409910"
 ---
 # <a name="sosdll-sos-debugging-extension"></a>SOS.dll (расширение отладки SOS)
 Расширение отладки SOS (SOS.dll) позволяет выполнять отладку управляемых программ в Visual Studio и отладчике Windows (WinDbg.exe), предоставляя информацию о внутренней среде CLR. Для работы этой программы в проекте необходимо включить отладку неуправляемого кода. Библиотека "SOS.dll" автоматически устанавливается с .NET Framework. Для работы с библиотекой SOS.dll в Visual Studio установите [Комплект разработки драйверов для Windows (WDK)](http://msdn.microsoft.com/windows/hardware/hh852362).  

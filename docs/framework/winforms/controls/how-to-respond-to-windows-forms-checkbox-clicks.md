@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33539741"
 ---
 # <a name="how-to-respond-to-windows-forms-checkbox-clicks"></a>Практическое руководство. Обработка события щелчка элемента управления CheckBox в Windows Forms
 Каждый раз, когда пользователь нажимает кнопку Windows Forms <xref:System.Windows.Forms.CheckBox> управления <xref:System.Windows.Forms.Control.Click> событием. Можно запрограммировать приложение для выполнения некоторых операций, в зависимости от состояния флажка.  
