@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33603890"
 ---
 # <a name="error-statement"></a><span data-ttu-id="537c0-102">Оператор Error</span><span class="sxs-lookup"><span data-stu-id="537c0-102">Error Statement</span></span>
 <span data-ttu-id="537c0-103">Имитирует возникновение ошибки.</span><span class="sxs-lookup"><span data-stu-id="537c0-103">Simulates the occurrence of an error.</span></span>  

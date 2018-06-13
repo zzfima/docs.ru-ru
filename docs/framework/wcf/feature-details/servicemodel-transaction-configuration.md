@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33498349"
 ---
 # <a name="servicemodel-transaction-configuration"></a><span data-ttu-id="7fe49-102">Конфигурация транзакции ServiceModel</span><span class="sxs-lookup"><span data-stu-id="7fe49-102">ServiceModel Transaction Configuration</span></span>
 <span data-ttu-id="7fe49-103">Windows Communication Foundation (WCF) предоставляет три атрибута для настройки транзакций для службы: `transactionFlow`, `transactionProtocol`, и `transactionTimeout`.</span><span class="sxs-lookup"><span data-stu-id="7fe49-103">Windows Communication Foundation (WCF) provides three attributes for configuring transactions for a service: `transactionFlow`, `transactionProtocol`, and `transactionTimeout`.</span></span>  

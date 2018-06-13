@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33504388"
 ---
 # <a name="security-validation"></a><span data-ttu-id="1b11d-102">Проверка безопасности</span><span class="sxs-lookup"><span data-stu-id="1b11d-102">Security Validation</span></span>
 <span data-ttu-id="1b11d-103">Этот образец показывает, как с помощью пользовательского поведения проверять службы на компьютере на соответствие определенным условиям.</span><span class="sxs-lookup"><span data-stu-id="1b11d-103">This sample demonstrates how to use a custom behavior to validate services on a computer to ensure they meet specific criteria.</span></span> <span data-ttu-id="1b11d-104">В этом образце службы проверяются с помощью пользовательского поведения путем сканирования каждой конечной точки службы и проверки, содержат ли они безопасные элементы привязки.</span><span class="sxs-lookup"><span data-stu-id="1b11d-104">In this sample, services are validated by the custom behavior by scanning through each endpoint on the service and checking to see whether they contain secure binding elements.</span></span> <span data-ttu-id="1b11d-105">Этот пример построен на [Приступая к работе](../../../../docs/framework/wcf/samples/getting-started-sample.md).</span><span class="sxs-lookup"><span data-stu-id="1b11d-105">This sample is based on the [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md).</span></span>  

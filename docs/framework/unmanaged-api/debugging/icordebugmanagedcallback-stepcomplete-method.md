@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 3cd6cce73a96cf522521d7cd8d0cc8024e95b93c
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33413261"
 ---
 # <a name="icordebugmanagedcallbackstepcomplete-method"></a><span data-ttu-id="4f04f-102">Метод ICorDebugManagedCallback::StepComplete</span><span class="sxs-lookup"><span data-stu-id="4f04f-102">ICorDebugManagedCallback::StepComplete Method</span></span>
 <span data-ttu-id="4f04f-103">Уведомляет отладчик о выполнении шага.</span><span class="sxs-lookup"><span data-stu-id="4f04f-103">Notifies the debugger that a step has completed.</span></span>  

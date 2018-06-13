@@ -15,6 +15,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32744386"
 ---
 # <a name="how-to-install-an-assembly-into-the-global-assembly-cache"></a><span data-ttu-id="014cf-102">Практическое руководство. Установка сборки в глобальный кэш сборок</span><span class="sxs-lookup"><span data-stu-id="014cf-102">How to: Install an Assembly into the Global Assembly Cache</span></span>
 <span data-ttu-id="014cf-103">Существует два способа установки сборки со строгим именем в глобальный кэш сборок:</span><span class="sxs-lookup"><span data-stu-id="014cf-103">There are two ways to install a strong-named assembly into the global assembly cache (GAC):</span></span>  

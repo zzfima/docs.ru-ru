@@ -16,6 +16,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32745007"
 ---
 # <a name="ltprobinggt-element"></a><span data-ttu-id="ad1ad-102">&lt;Проверка&gt; элемент</span><span class="sxs-lookup"><span data-stu-id="ad1ad-102">&lt;probing&gt; Element</span></span>
 <span data-ttu-id="ad1ad-103">Задает базовые вложенные папки приложения для поиска при загрузке сборки среда.</span><span class="sxs-lookup"><span data-stu-id="ad1ad-103">Specifies application base subdirectories for the common language runtime to search when loading assemblies.</span></span>  

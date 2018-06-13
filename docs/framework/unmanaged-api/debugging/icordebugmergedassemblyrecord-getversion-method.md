@@ -6,9 +6,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: eb206d1bf39307852dd317613eb81028b777514d
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33414603"
 ---
 # <a name="icordebugmergedassemblyrecordgetversion-method"></a><span data-ttu-id="1493e-102">Метод ICorDebugMergedAssemblyRecord::GetVersion</span><span class="sxs-lookup"><span data-stu-id="1493e-102">ICorDebugMergedAssemblyRecord::GetVersion Method</span></span>
 <span data-ttu-id="1493e-103">Возвращает сведения о версии сборки.</span><span class="sxs-lookup"><span data-stu-id="1493e-103">Gets the assembly's version information.</span></span>  

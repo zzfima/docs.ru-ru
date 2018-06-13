@@ -14,6 +14,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32745101"
 ---
 # <a name="startup-settings-schema"></a><span data-ttu-id="6eae1-102">Схема параметров запуска</span><span class="sxs-lookup"><span data-stu-id="6eae1-102">Startup Settings Schema</span></span>
 <span data-ttu-id="6eae1-103">Параметры запуска определяют версию среды CLR, в которой должно выполняться приложение.</span><span class="sxs-lookup"><span data-stu-id="6eae1-103">Startup settings specify the version of the common language runtime that should run the application.</span></span>  

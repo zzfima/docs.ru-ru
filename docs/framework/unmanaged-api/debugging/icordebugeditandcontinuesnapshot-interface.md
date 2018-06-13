@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 27bec505df1db4ccbba862e81d9407d11245d449
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33412377"
 ---
 # <a name="icordebugeditandcontinuesnapshot-interface1"></a><span data-ttu-id="91fc7-102">Интерфейс1 ICorDebugEditAndContinueSnapshot</span><span class="sxs-lookup"><span data-stu-id="91fc7-102">ICorDebugEditAndContinueSnapshot Interface1</span></span>
 <span data-ttu-id="91fc7-103">`ICorDebugEditAndContinueSnapshot` устарел.</span><span class="sxs-lookup"><span data-stu-id="91fc7-103">`ICorDebugEditAndContinueSnapshot` is obsolete.</span></span> <span data-ttu-id="91fc7-104">Не следует использовать данный интерфейс.</span><span class="sxs-lookup"><span data-stu-id="91fc7-104">Do not use this interface.</span></span>  

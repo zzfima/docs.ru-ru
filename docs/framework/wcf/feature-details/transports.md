@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33498128"
 ---
 # <a name="transports-in-windows-communication-foundation"></a><span data-ttu-id="072c0-102">Транспорты в Windows Communication Foundation</span><span class="sxs-lookup"><span data-stu-id="072c0-102">Transports in Windows Communication Foundation</span></span>
 <span data-ttu-id="072c0-103">Транспортный уровень является самым нижним уровнем стека каналов.</span><span class="sxs-lookup"><span data-stu-id="072c0-103">The transport layer is at the lowest level of the channel stack.</span></span> <span data-ttu-id="072c0-104">Основными транспортами, используемыми в Windows Communication Foundation (WCF), HTTP, HTTPS, TCP и именованные каналы.</span><span class="sxs-lookup"><span data-stu-id="072c0-104">The main transports used in Windows Communication Foundation (WCF) are HTTP, HTTPS, TCP, and named pipes.</span></span> <span data-ttu-id="072c0-105">В подразделах данного раздела рассматриваются выбор типа транспорта среди названных выше типов, настройка транспорта и задание свойств настройки.</span><span class="sxs-lookup"><span data-stu-id="072c0-105">The topics in this section discuss choosing among these transports, configuring the transport, and setting tuning properties.</span></span>  

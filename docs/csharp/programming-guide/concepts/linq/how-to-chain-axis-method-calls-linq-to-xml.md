@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33333782"
 ---
 # <a name="how-to-chain-axis-method-calls-linq-to-xml-c"></a><span data-ttu-id="5cbdb-102">Практическое руководство. Связанные вызовы метода оси (LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="5cbdb-102">How to: Chain Axis Method Calls (LINQ to XML) (C#)</span></span>
 <span data-ttu-id="5cbdb-103">Обычно при написании кода вы будете придерживаться схемы, по которой вызывается метод оси, после чего вызывается одна из осей метода расширений.</span><span class="sxs-lookup"><span data-stu-id="5cbdb-103">A common pattern that you will use in your code is to call an axis method, then call one of the extension method axes.</span></span>  

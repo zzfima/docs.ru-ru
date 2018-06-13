@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: bdac4b5b7a4a64a5fc939a7d35718ef276717fe7
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33415432"
 ---
 # <a name="icordebugmanagedcallbackcreateappdomain-method"></a><span data-ttu-id="907d4-102">Метод ICorDebugManagedCallback::CreateAppDomain</span><span class="sxs-lookup"><span data-stu-id="907d4-102">ICorDebugManagedCallback::CreateAppDomain Method</span></span>
 <span data-ttu-id="907d4-103">Уведомляет отладчик, что домен приложения был создан.</span><span class="sxs-lookup"><span data-stu-id="907d4-103">Notifies the debugger that an application domain has been created.</span></span>  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33338800"
 ---
 # <a name="statements-expressions-and-operators-c-programming-guide"></a><span data-ttu-id="82cbd-102">Операторы и выражения (Руководство по программированию на C#)</span><span class="sxs-lookup"><span data-stu-id="82cbd-102">Statements, Expressions, and Operators (C# Programming Guide)</span></span>
 <span data-ttu-id="82cbd-103">Код приложения на C# состоит из операторов, которые включают ключевые слова, выражения и символьные операторы.</span><span class="sxs-lookup"><span data-stu-id="82cbd-103">The C# code that comprises an application consists of statements made up of keywords, expressions and operators.</span></span> <span data-ttu-id="82cbd-104">В этом разделе содержатся сведения об этих базовых элементах программы на C#.</span><span class="sxs-lookup"><span data-stu-id="82cbd-104">This section contains information regarding these fundamental elements of a C# program.</span></span>  

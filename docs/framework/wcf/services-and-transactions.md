@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33504323"
 ---
 # <a name="services-and-transactions"></a><span data-ttu-id="aa2db-102">Службы и транзакции</span><span class="sxs-lookup"><span data-stu-id="aa2db-102">Services and Transactions</span></span>
 <span data-ttu-id="aa2db-103">Приложения Windows Communication Foundation (WCF) могут инициировать транзакцию из клиента и координировать ее в пределах операции службы.</span><span class="sxs-lookup"><span data-stu-id="aa2db-103">Windows Communication Foundation (WCF) applications can initiate a transaction from within a client and coordinate the transaction within the service operation.</span></span> <span data-ttu-id="aa2db-104">Клиенты могут инициировать транзакцию, вызвать несколько операций службы и обеспечить, чтобы операции службы либо фиксировались, либо откатывались как единый блок.</span><span class="sxs-lookup"><span data-stu-id="aa2db-104">Clients can initiate a transaction and invoke several service operations and ensure that the service operations are either committed or rolled back as a single unit.</span></span>  
