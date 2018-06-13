@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 82b81ec29dece182548ead046edc7cb754fbf00e
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33430665"
 ---
 # <a name="assemblycomparisonresult-enumeration"></a><span data-ttu-id="92376-102">Перечисление AssemblyComparisonResult</span><span class="sxs-lookup"><span data-stu-id="92376-102">AssemblyComparisonResult Enumeration</span></span>
 <span data-ttu-id="92376-103">Указывает на эквивалентность два идентификатора сборки, что определяется [CompareAssemblyIdentity](../../../../docs/framework/unmanaged-api/fusion/compareassemblyidentity-function.md) функции.</span><span class="sxs-lookup"><span data-stu-id="92376-103">Indicates the equivalence of two assembly identities, as determined by the [CompareAssemblyIdentity](../../../../docs/framework/unmanaged-api/fusion/compareassemblyidentity-function.md) function.</span></span>  

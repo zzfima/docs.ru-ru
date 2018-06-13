@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33336402"
 ---
 # <a name="methods-c-programming-guide"></a><span data-ttu-id="d2b7d-102">Методы (Руководство по программированию на C#)</span><span class="sxs-lookup"><span data-stu-id="d2b7d-102">Methods (C# Programming Guide)</span></span>
 <span data-ttu-id="d2b7d-103">Метод — это блок кода, содержащий ряд инструкций.</span><span class="sxs-lookup"><span data-stu-id="d2b7d-103">A method is a code block that contains a series of statements.</span></span> <span data-ttu-id="d2b7d-104">Программа инициирует выполнение инструкций, вызывая метод и указывая все аргументы, необходимые для этого метода.</span><span class="sxs-lookup"><span data-stu-id="d2b7d-104">A program causes the statements to be executed by calling the method and specifying any required method arguments.</span></span> <span data-ttu-id="d2b7d-105">В C# все инструкции выполняются в контексте метода.</span><span class="sxs-lookup"><span data-stu-id="d2b7d-105">In C#, every executed instruction is performed in the context of a method.</span></span> <span data-ttu-id="d2b7d-106">Метод Main является точкой входа для каждого приложения C#, и он вызывается общеязыковой средой выполнения (CLR) при запуске программы.</span><span class="sxs-lookup"><span data-stu-id="d2b7d-106">The Main method is the entry point for every C# application and it is called by the common language runtime (CLR) when the program is started.</span></span>  

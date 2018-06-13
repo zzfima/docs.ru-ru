@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33212424"
 ---
 # <a name="-main-c-compiler-options"></a><span data-ttu-id="53937-102">-main (параметры компилятора C#)</span><span class="sxs-lookup"><span data-stu-id="53937-102">-main (C# Compiler Options)</span></span>
 <span data-ttu-id="53937-103">Этот параметр определяет класс, который содержит точку входа в программу, если метод **Main** содержит сразу несколько классов.</span><span class="sxs-lookup"><span data-stu-id="53937-103">This option specifies the class that contains the entry point to the program, if more than one class contains a **Main** method.</span></span>  

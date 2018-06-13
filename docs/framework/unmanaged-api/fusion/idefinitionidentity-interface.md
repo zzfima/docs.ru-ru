@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 401c23e44cc473d0a27a82a00343852693cb0f2e
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33429349"
 ---
 # <a name="idefinitionidentity-interface"></a><span data-ttu-id="ab7dd-102">Интерфейс IDefinitionIdentity</span><span class="sxs-lookup"><span data-stu-id="ab7dd-102">IDefinitionIdentity Interface</span></span>
 <span data-ttu-id="ab7dd-103">Представляет уникальную подпись кода, определяющего приложение в текущей области.</span><span class="sxs-lookup"><span data-stu-id="ab7dd-103">Represents the unique signature of the code that defines the application in the current scope.</span></span>  

@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1f5ddd352d027365e02366e9aa779053da3bdc2f
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33434808"
 ---
 # <a name="iclrprobingassemblyenumget-method"></a><span data-ttu-id="512f4-102">Метод ICLRProbingAssemblyEnum::Get</span><span class="sxs-lookup"><span data-stu-id="512f4-102">ICLRProbingAssemblyEnum::Get Method</span></span>
 <span data-ttu-id="512f4-103">Возвращает удостоверение сборки по указанному индексу.</span><span class="sxs-lookup"><span data-stu-id="512f4-103">Gets the assembly identity at the specified index.</span></span>  

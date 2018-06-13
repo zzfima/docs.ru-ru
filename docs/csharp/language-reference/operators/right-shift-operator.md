@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33285893"
 ---
 # <a name="gtgt-operator-c-reference"></a><span data-ttu-id="56593-102">Оператор &gt;&gt; (справочник по C#)</span><span class="sxs-lookup"><span data-stu-id="56593-102">&gt;&gt; Operator (C# Reference)</span></span>
 <span data-ttu-id="56593-103">Оператор сдвига вправо (`>>`) сдвигает первый операнд вправо на число битов, задаваемое вторым операндом.</span><span class="sxs-lookup"><span data-stu-id="56593-103">The right-shift operator (`>>`) shifts its first operand right by the number of bits specified by its second operand.</span></span>  

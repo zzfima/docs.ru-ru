@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33511417"
 ---
 # <a name="1124---invokemethodisstatic"></a><span data-ttu-id="c0a2f-102">1124 - InvokeMethodIsStatic</span><span class="sxs-lookup"><span data-stu-id="c0a2f-102">1124 - InvokeMethodIsStatic</span></span>
 ## <a name="properties"></a><span data-ttu-id="c0a2f-103">Свойства</span><span class="sxs-lookup"><span data-stu-id="c0a2f-103">Properties</span></span>  

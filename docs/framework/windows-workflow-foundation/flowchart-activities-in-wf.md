@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33511620"
 ---
 # <a name="flowchart-activities-in-wf"></a><span data-ttu-id="f87cc-102">Действия «Flowchart» в WF</span><span class="sxs-lookup"><span data-stu-id="f87cc-102">Flowchart Activities in WF</span></span>
 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)]<span data-ttu-id="f87cc-103"> содержит несколько действий, предоставляемых системой для управления выполнением и ветвлением внутри Flowchart.</span><span class="sxs-lookup"><span data-stu-id="f87cc-103"> provides several system-provided activities for controlling execution and branching within a Flowchart.</span></span>  

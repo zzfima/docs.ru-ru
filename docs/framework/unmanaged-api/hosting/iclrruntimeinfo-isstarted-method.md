@@ -17,9 +17,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 8934a2a51ea4bc86166bf99a6087124d03ab11d9
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33434120"
 ---
 # <a name="iclrruntimeinfoisstarted-method"></a><span data-ttu-id="6daa9-102">Метод ICLRRuntimeInfo::IsStarted</span><span class="sxs-lookup"><span data-stu-id="6daa9-102">ICLRRuntimeInfo::IsStarted Method</span></span>
 <span data-ttu-id="6daa9-103">Указывает, была ли запущена среда выполнения (есть ли [ICLRRuntimeHost::Start-метод](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-start-method.md) был вызван и успешно).</span><span class="sxs-lookup"><span data-stu-id="6daa9-103">Indicates whether the runtime has been started (that is, whether the [ICLRRuntimeHost::Start method](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-start-method.md) has been called and has succeeded).</span></span>  

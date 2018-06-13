@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f3a3cc21dbbcfa99ddcecb534bd2e337da005597
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33431182"
 ---
 # <a name="createhistoryreader-function"></a><span data-ttu-id="ed22c-102">Функция CreateHistoryReader</span><span class="sxs-lookup"><span data-stu-id="ed22c-102">CreateHistoryReader Function</span></span>
 <span data-ttu-id="ed22c-103">Создает средство чтения журнала для указанного файла.</span><span class="sxs-lookup"><span data-stu-id="ed22c-103">Creates a history reader for the specified file.</span></span>  

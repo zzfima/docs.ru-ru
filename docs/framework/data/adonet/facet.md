@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32762427"
 ---
 # <a name="facet"></a><span data-ttu-id="aba15-102">facet</span><span class="sxs-lookup"><span data-stu-id="aba15-102">facet</span></span>
 <span data-ttu-id="aba15-103">Объект *аспекта* используется для добавления сведений в определение свойства примитивного типа.</span><span class="sxs-lookup"><span data-stu-id="aba15-103">A *facet* is used to add detail to a primitive type property definition.</span></span> <span data-ttu-id="aba15-104">Объект [свойство](../../../../docs/framework/data/adonet/property.md) определение содержит сведения о типе свойства, но часто требуется больше сведений.</span><span class="sxs-lookup"><span data-stu-id="aba15-104">A [property](../../../../docs/framework/data/adonet/property.md) definition contains information about the property type, but often more detail is necessary.</span></span> <span data-ttu-id="aba15-105">Например, тип сущности в концептуальной модели может иметь свойство типа `String`, значение которого не может быть равно NULL.</span><span class="sxs-lookup"><span data-stu-id="aba15-105">For example, an entity type in a conceptual model might have a property of type `String` whose value cannot be set to null.</span></span> <span data-ttu-id="aba15-106">Аспекты позволяют задавать такой уровень сведений.</span><span class="sxs-lookup"><span data-stu-id="aba15-106">Facets allow you to specify this level of detail.</span></span>  

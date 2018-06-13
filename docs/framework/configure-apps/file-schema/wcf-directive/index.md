@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33386175"
 ---
 # <a name="wcf-directive-syntax"></a><span data-ttu-id="33051-102">Синтаксис директив WCF</span><span class="sxs-lookup"><span data-stu-id="33051-102">WCF Directive Syntax</span></span>
 <span data-ttu-id="33051-103">Задает параметры, используемые для направления компиляторов директивы Windows Communication Foundation (WCF) в SVC-файлов.</span><span class="sxs-lookup"><span data-stu-id="33051-103">Specifies settings used by the Windows Communication Foundation (WCF) directives in the .svc files to direct the compilers.</span></span> <span data-ttu-id="33051-104">Каждая директива может содержать один или несколько характерных для нее атрибутов (в паре со значениями).</span><span class="sxs-lookup"><span data-stu-id="33051-104">Each directive can contain one or more attributes (paired with values) that are specific to that directive.</span></span> <span data-ttu-id="33051-105">WCF имеется только [ @ServiceHost ](../../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md) директивы.</span><span class="sxs-lookup"><span data-stu-id="33051-105">WCF has only the [@ServiceHost](../../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md) directive.</span></span>  

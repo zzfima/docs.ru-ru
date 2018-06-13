@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32763778"
 ---
 # <a name="model-defined-function"></a><span data-ttu-id="d0fb2-102">функция определенной модели</span><span class="sxs-lookup"><span data-stu-id="d0fb2-102">model-defined function</span></span>
 <span data-ttu-id="d0fb2-103">Объект *определяемой моделью функции* — это функция, которая определена в концептуальной модели.</span><span class="sxs-lookup"><span data-stu-id="d0fb2-103">A *model-defined function* is a function that is defined in a conceptual model.</span></span> <span data-ttu-id="d0fb2-104">Тело функции, определенной модели представляется в формате [Entity SQL](../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-language.md), что позволяет выполнять функцию должна быть представлена независимо от правил или языков, поддерживаемых в источнике данных.</span><span class="sxs-lookup"><span data-stu-id="d0fb2-104">The body of a model-defined function is expressed in [Entity SQL](../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-language.md), which allows for the function to be expressed independently of rules or languages supported in the data source.</span></span>  

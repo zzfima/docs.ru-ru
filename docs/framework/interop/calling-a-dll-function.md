@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33387137"
 ---
 # <a name="calling-a-dll-function"></a><span data-ttu-id="ea9a6-102">Вызов функции DLL</span><span class="sxs-lookup"><span data-stu-id="ea9a6-102">Calling a DLL Function</span></span>
 <span data-ttu-id="ea9a6-103">Хотя вызов неуправляемых функций DLL почти идентичен вызову другого управляемого кода, все же существуют отличия, которые поначалу могут вызвать некоторые сложности в освоении функций DLL.</span><span class="sxs-lookup"><span data-stu-id="ea9a6-103">Although calling unmanaged DLL functions is nearly identical to calling other managed code, there are differences that can make DLL functions seem confusing at first.</span></span> <span data-ttu-id="ea9a6-104">В этом разделе представлены статьи, касающиеся некоторых особенностей вызовов.</span><span class="sxs-lookup"><span data-stu-id="ea9a6-104">This section introduces topics that describe some of the unusual calling-related issues.</span></span>  

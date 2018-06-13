@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33213227"
 ---
 # <a name="exception-handling-statements-c-reference"></a><span data-ttu-id="7713e-102">Операторы обработки исключений (Справочник по C#)</span><span class="sxs-lookup"><span data-stu-id="7713e-102">Exception Handling Statements (C# Reference)</span></span>
 <span data-ttu-id="7713e-103">Язык C# обеспечивает встроенную поддержку для обработки нестандартных ситуаций, называемых исключениями, которые могут происходить во время выполнения программы.</span><span class="sxs-lookup"><span data-stu-id="7713e-103">C# provides built-in support for handling anomalous situations, known as exceptions, which may occur during the execution of your program.</span></span> <span data-ttu-id="7713e-104">Эти исключения обрабатываются кодом, выходящим за пределы обычного потока управления.</span><span class="sxs-lookup"><span data-stu-id="7713e-104">These exceptions are handled by code that is outside the normal flow of control.</span></span>  

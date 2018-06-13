@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: fce759877ad5e3c9041344647781da07ad19a45a
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33430898"
 ---
 # <a name="hosttype-enumeration"></a><span data-ttu-id="a8ec5-102">Перечисление HOST_TYPE</span><span class="sxs-lookup"><span data-stu-id="a8ec5-102">HOST_TYPE Enumeration</span></span>
 <span data-ttu-id="a8ec5-103">Содержит значения, указывающие тип узла, которое запускает приложение.</span><span class="sxs-lookup"><span data-stu-id="a8ec5-103">Contains values that specify the type of host that is launching an application.</span></span>  

@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 6b9c3899c4319c623bc991d0775945f0a4dc09e6
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33434759"
 ---
 # <a name="iclrgcmanagercollect-method"></a><span data-ttu-id="cca46-102">Метод ICLRGCManager::Collect</span><span class="sxs-lookup"><span data-stu-id="cca46-102">ICLRGCManager::Collect Method</span></span>
 <span data-ttu-id="cca46-103">Принудительная сборка мусора для заданного поколения.</span><span class="sxs-lookup"><span data-stu-id="cca46-103">Forces a garbage collection for the specified generation.</span></span>  

@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 53f02499bbc64f1502951ff9fbf16a848e77f0ca
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33430812"
 ---
 # <a name="isymunmanagedwriter2definelocalvariable2-method"></a><span data-ttu-id="d773b-102">Метод ISymUnmanagedWriter2::DefineLocalVariable2</span><span class="sxs-lookup"><span data-stu-id="d773b-102">ISymUnmanagedWriter2::DefineLocalVariable2 Method</span></span>
 <span data-ttu-id="d773b-103">Определяет одну переменную в текущей лексической области видимости.</span><span class="sxs-lookup"><span data-stu-id="d773b-103">Defines a single variable in the current lexical scope.</span></span> <span data-ttu-id="d773b-104">Этот метод может вызываться несколько раз для переменной с тем же именем, имеющей несколько корневых в пределах области.</span><span class="sxs-lookup"><span data-stu-id="d773b-104">This method can be called multiple times for a variable of the same name that has multiple homes throughout a scope.</span></span> <span data-ttu-id="d773b-105">В этом случае, однако значения `startOffset` и `endOffset` параметров не должны перекрываться.</span><span class="sxs-lookup"><span data-stu-id="d773b-105">In this case, however, the values of the `startOffset` and `endOffset` parameters must not overlap.</span></span>  

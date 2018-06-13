@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33333275"
 ---
 # <a name="c-programming-guide"></a><span data-ttu-id="274d0-102">Руководство по программированию на C#</span><span class="sxs-lookup"><span data-stu-id="274d0-102">C# programming guide</span></span>
 <span data-ttu-id="274d0-103">Этот раздел содержит подробные сведения о ключевых функциях языка C# и возможностях, которые платформа .NET Framework предоставляет для C#.</span><span class="sxs-lookup"><span data-stu-id="274d0-103">This section provides detailed information on key C# language features and features accessible to C# through the .NET Framework.</span></span>  
