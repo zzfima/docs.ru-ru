@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33492015"
 ---
 # <a name="partial-trust"></a>Частичное доверие
 Начиная с версии [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] частично доверенные вызывающие пользователи могут обращаться к открытым типам и методам, реализованным в классах <xref:System.ServiceModel>, <xref:System.Runtime.Serialization> и <xref:System.ServiceModel.Web>. В этом разделе описываются сценарии использования Windows Communication Foundation (WCF) в приложения с частичным доверием, а также ограниченное подмножество функций WCF, доступных приложениям, работающим с ограниченной безопасностью доступа (CAS) разрешения.  

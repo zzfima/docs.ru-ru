@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33492327"
 ---
 # <a name="context-exchange-correlation"></a>Корреляция обмена контекстом
 Корреляция контекста основан на механизме обмена контекстом, описанной в [спецификации протокола обмена контекстом .NET](http://go.microsoft.com/fwlink/?LinkId=166059). Для связывания сообщений с нужным экземпляром корреляция контекста использует известный заголовок контекста или файл cookie. Для реализации корреляции контекста необходимо использование привязки на основе контекста, например <xref:System.ServiceModel.BasicHttpContextBinding>, <xref:System.ServiceModel.WSHttpContextBinding> или <xref:System.ServiceModel.NetTcpContextBinding> для конечных точек, предоставляемых для <xref:System.ServiceModel.Activities.WorkflowServiceHost>. В этом разделе описана работа корреляции контекста с действиями обмена сообщениями в службе рабочего процесса.  

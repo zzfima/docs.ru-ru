@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33494674"
 ---
 # <a name="queues-and-reliable-sessions"></a>Очереди и надежные сеансы
 Очереди и надежные сеансы являются компонентами Windows Communication Foundation (WCF), которые реализуют надежный обмен сообщениями. В подразделах этого раздела рассматриваются возможности надежного обмена сообщениями WCF.  

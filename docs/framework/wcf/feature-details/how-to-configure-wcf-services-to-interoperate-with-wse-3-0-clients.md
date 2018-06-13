@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33495113"
 ---
 # <a name="how-to-configure-wcf-services-to-interoperate-with-wse-30-clients"></a>Практическое руководство. Настройка служб WCF для взаимодействия с клиентами WSE 3.0
 Службы Windows Communication Foundation (WCF) совместимы транспортного уровня с веб-служб версии 3.0 для клиентов Microsoft .NET (WSE) службы WCF настроены для использования версии спецификации WS-Addressing августа 2004 г.  

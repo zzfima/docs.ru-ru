@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33492824"
 ---
 # <a name="architecture-of-syndication"></a>Архитектура синдикации
 API синдикации предназначен для обеспечения независимой от формата модели программирования, которая позволяет передавать сводное содержимое по каналам связи в различных форматах. Абстрактная модель данных состоит из следующих классов:  

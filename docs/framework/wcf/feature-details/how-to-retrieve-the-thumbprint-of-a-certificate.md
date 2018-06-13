@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33492438"
 ---
 # <a name="how-to-retrieve-the-thumbprint-of-a-certificate"></a>Практическое руководство. Извлечение отпечатка сертификата
 При написании приложения Windows Communication Foundation (WCF), использующий сертификат X.509 для проверки подлинности, часто бывает необходимо указать утверждения, найденных в сертификате. Например, при использовании перечисления <xref:System.Security.Cryptography.X509Certificates.X509FindType.FindByThumbprint> в методе <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A> необходимо указать утверждение отпечатка. Чтобы найти значение утверждения, необходимо выполнить два действия. Сначала необходимо открыть оснастку сертификатов консоли управления (MMC). (См. раздел [Практическое руководство. Просмотр сертификатов с помощью оснастки консоли MMC](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md)). После этого, как описано в этом разделе, необходимо найти соответствующий сертификат и скопировать его отпечаток (или другие значения утверждений).  

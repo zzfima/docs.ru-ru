@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33493135"
 ---
 # <a name="client-configuration"></a>Конфигурация клиента
 Конфигурация клиента Windows Communication Foundation (WCF) можно использовать для указания адреса, привязки, поведения и контракта, «ABC» свойства конечной точки клиента, которые используются клиентами для подключения к конечным точкам службы. [ \<Клиента >](../../../../docs/framework/configure-apps/file-schema/wcf/client.md) элемент имеет [ \<endpoint >](http://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) элемент, атрибуты которого используются для настройки основополагающих свойств конечной точки. Эти атрибуты обсуждаются в подразделе "Настройка конечных точек" данного раздела.  

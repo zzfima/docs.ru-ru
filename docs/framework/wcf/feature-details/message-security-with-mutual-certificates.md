@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33494180"
 ---
 # <a name="message-security-with-mutual-certificates"></a>Безопасность сообщений с использованием взаимных сертификатов
 В следующем сценарии показаны службы Windows Communication Foundation (WCF) и клиента, защищены с помощью режима безопасности сообщений. Проверка подлинности клиента и службы выполняется с помощью сертификатов.  

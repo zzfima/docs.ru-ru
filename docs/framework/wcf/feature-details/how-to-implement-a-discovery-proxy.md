@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33496716"
 ---
 # <a name="how-to-implement-a-discovery-proxy"></a>Как реализовать прокси-сервера обнаружения
 В этом разделе приведены сведения о реализации прокси-сервера обнаружения. Дополнительные сведения о функции обнаружения в Windows Communication Foundation (WCF) см. в разделе [Общие сведения об обнаружении WCF](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md). Прокси-сервер обнаружения реализуется созданием класса, расширяющего абстрактный класс <xref:System.ServiceModel.Discovery.DiscoveryProxy>. В этом образце определены и использованы несколько других вспомогательных классов. `OnResolveAsyncResult`, `OnFindAsyncResult` и `AsyncResult`. Эти классы реализуют интерфейс <xref:System.IAsyncResult>. Дополнительные сведения о <xref:System.IAsyncResult> разделе [System.IAsyncResult интерфейс](xref:System.IAsyncResult).

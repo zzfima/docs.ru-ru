@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33494785"
 ---
 # <a name="message-security-with-a-windows-client"></a>Безопасность сообщений с клиентом Windows
 Этот сценарий показывает клиента Windows Communication Foundation (WCF) и сервер защищен режима безопасности сообщений. Клиент и служба проходят проверку подлинности с использованием учетных данных Windows.  

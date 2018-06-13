@@ -6,9 +6,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 7975ca3da16be10285e618752981249602371c43
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33418595"
 ---
 # <a name="icordebugsymbolprovidergetassemblyimagebytes-method"></a>Метод ICorDebugSymbolProvider::GetAssemblyImageBytes
 Считывает данные из объединенной сборки для указанного относительного виртуального адреса (RVA) в объединенной сборке.  

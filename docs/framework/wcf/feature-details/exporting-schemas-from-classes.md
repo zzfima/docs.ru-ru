@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33494549"
 ---
 # <a name="exporting-schemas-from-classes"></a>Экспорт схем из классов
 Чтобы создать схемы языка определения схемы XML (XSD) из классов, используемых в модели контракта данных, используйте класс <xref:System.Runtime.Serialization.XsdDataContractExporter> . В данном разделе описывается процесс создания схем.  

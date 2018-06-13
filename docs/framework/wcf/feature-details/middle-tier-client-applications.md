@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33493502"
 ---
 # <a name="middle-tier-client-applications"></a>Клиентские приложения среднего уровня
 В этом разделе описываются различные вопросы, относящиеся к среднего уровня клиентских приложений, использующих Windows Communication Foundation (WCF).  

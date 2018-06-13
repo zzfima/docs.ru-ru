@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33494154"
 ---
 # <a name="how-to-expose-a-contract-to-soap-and-web-clients"></a>Практическое руководство. Предоставление контрактов SOAP- и веб-клиентам
 По умолчанию Windows Communication Foundation (WCF) делает конечные точки доступны только клиентам SOAP. В [как: Создание базовой службы WCF Web HTTP](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-wcf-web-http-service.md), конечной точки становится доступным для клиентов, не использующие протокол SOAP. Иногда может потребоваться сделать один и тот же контракт доступным обоими способами: в качестве сетевой конечной точки и в качестве конечной точки SOAP. В данном разделе приводится пример того, как это сделать.  

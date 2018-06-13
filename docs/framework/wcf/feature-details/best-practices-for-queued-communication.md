@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33495587"
 ---
 # <a name="best-practices-for-queued-communication"></a>Рекомендации по взаимодействию с использованием очередей
 В этом разделе приведены рекомендации по взаимодействию с использованием очередей в Windows Communication Foundation (WCF). В последующих разделах рассматриваются рекомендации с точки зрения сценариев.  

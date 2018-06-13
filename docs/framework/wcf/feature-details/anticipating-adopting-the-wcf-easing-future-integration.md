@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33489600"
 ---
 # <a name="anticipating-adopting-the-windows-communication-foundation-easing-future-integration"></a>Планирование перехода на платформу Windows Communication Foundation: упрощение будущей интеграции
 Настоящее время использует ASP.NET, и планирует в будущем с помощью WCF, этот раздел содержит рекомендации для обеспечения работу нового веб-служб ASP.NET также вместе с приложениями WCF.  

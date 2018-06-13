@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33491720"
 ---
 # <a name="configuring-internet-information-services-70-for-windows-communication-foundation"></a>Настройка IIS 7.0 для Windows Communication Foundation
 Службы IIS 7.0 имеют модульную архитектуру, что позволяет выборочно устанавливать необходимые компоненты. Эта архитектура основана на построенной на базе манифестов технологии разбиения на компоненты, появившейся в [!INCLUDE[wv](../../../../includes/wv-md.md)]. Имеется более 40 отдельных функциональных компонентов [!INCLUDE[iisver](../../../../includes/iisver-md.md)], которые можно устанавливать независимо друг от друга. Это позволяет ИТ-специалистам легко настраивать службы в соответствии с конкретными требованиями. В этом разделе описывается настройка [!INCLUDE[iisver](../../../../includes/iisver-md.md)] для использования с Windows Communication Foundation (WCF) и определить, какие компоненты не требуются.  

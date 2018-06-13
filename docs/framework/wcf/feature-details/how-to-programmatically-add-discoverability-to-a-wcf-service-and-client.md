@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33495487"
 ---
 # <a name="how-to-programmatically-add-discoverability-to-a-wcf-service-and-client"></a>Как программно добавить возможность обнаружения к службе и клиенту WCF
 В этом разделе объясняется, как сделать обнаруживаемой службы Windows Communication Foundation (WCF). Он основан на [резидентной](http://go.microsoft.com/fwlink/?LinkId=145523) образца.  

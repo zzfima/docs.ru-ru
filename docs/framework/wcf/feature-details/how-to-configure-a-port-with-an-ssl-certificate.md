@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33494833"
 ---
 # <a name="how-to-configure-a-port-with-an-ssl-certificate"></a>Практическое руководство. Настройка порта с использованием SSL-сертификата
 При создании резидентной службы Windows Communication Foundation (WCF) с <xref:System.ServiceModel.WSHttpBinding> класса, использующим безопасность транспорта, необходимо также настроить порт с сертификатом X.509. При создании нерезидентной службы можно разместить ее в службах IIS. Дополнительные сведения см. в разделе [безопасности транспорта HTTP](../../../../docs/framework/wcf/feature-details/http-transport-security.md).  

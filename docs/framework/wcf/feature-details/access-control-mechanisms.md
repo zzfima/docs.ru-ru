@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33493169"
 ---
 # <a name="access-control-mechanisms"></a>Механизмы управления доступом
 Можно контролировать доступ несколькими способами с Windows Communication Foundation (WCF). В настоящем разделе кратко описываются различные механизмы и приводятся рассуждения о том, когда и какой способ использовать; раздел должен помочь пользователю выбрать правильный механизм использования. Технологии доступа перечислены в порядке сложности. Самым простым является <xref:System.Security.Permissions.PrincipalPermissionAttribute>; самым сложным - модель удостоверения.  

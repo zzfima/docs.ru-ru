@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33496169"
 ---
 # <a name="distributed-application-security"></a>Защита распределенных приложений
 Безопасность Windows Communication Foundation (WCF) делится на три основные функциональные области: безопасность передачи, управление доступом и аудита. Безопасность передачи обеспечивает целостность, конфиденциальность и проверку подлинности. Безопасность передачи обеспечивается одним из следующих способов: безопасность транспорта, безопасность сообщений или `TransportWithMessageCredential`.  

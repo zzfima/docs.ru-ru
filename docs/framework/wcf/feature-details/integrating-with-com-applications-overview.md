@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33493400"
 ---
 # <a name="integrating-with-com-applications-overview"></a>Общие сведения об интеграции с приложениями COM
 Windows Communication Foundation (WCF) предоставляет разработчику управляемого кода среду с широкими возможностями для создания подключаемых приложений. Тем не менее если уже вложены существенные средства в неуправляемый код на основе COM, не нужно выполнять миграцию можно интегрировать веб-служб WCF прямо в существующий код с помощью моникера службы WCF. Моникер служб можно использовать в широком наборе сред разработки на базе модели COM, например в Office VBA, Visual Basic 6.0 и Visual C++ 6.0.  

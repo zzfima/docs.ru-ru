@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33492402"
 ---
 # <a name="how-to-use-svcutilexe-to-download-metadata-documents"></a>Практическое руководство. Использование Svcutil.exe для загрузки документов метаданных
 Средство Svcutil.exe позволяет загружать метаданные из выполняющихся служб и сохранять эти метаданные в локальных файлах. Для схем HTTP и HTTPS URL-адрес Svcutil.exe предпринимает попытку получить метаданные с помощью WS-MetadataExchange и [обнаружения веб-службы XML](http://go.microsoft.com/fwlink/?LinkId=94950). Для всех остальных URL-схем средство Svcutil.exe использует только протокол WS-MetadataExchange.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33492548"
 ---
 # <a name="how-to-import-metadata-into-service-endpoints"></a>Практическое руководство. Импорт метаданных в конечные точки службы
 В этом разделе объясняется, как импортировать метаданные в коллекцию конечных точек службы и использовать службы, определенные в [Приступая к работе](../../../../docs/framework/wcf/samples/getting-started-sample.md). Кроме того, в этом разделе демонстрируется создание клиентского приложения, импортирующего метаданные из службы, а затем вызывающего в службе метод `Add`.  

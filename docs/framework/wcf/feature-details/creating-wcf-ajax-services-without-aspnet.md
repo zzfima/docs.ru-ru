@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33490361"
 ---
 # <a name="creating-wcf-ajax-services-without-aspnet"></a>Создание служб WCF AJAX без использования ASP.NET
 Службы Windows Communication Foundation (WCF) AJAX может осуществляться из любого JavaScript веб-страницы, без использования ASP.NET AJAX. В этом разделе описывается создание службы WCF.  

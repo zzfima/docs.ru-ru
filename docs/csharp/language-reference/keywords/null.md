@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33268124"
 ---
 # <a name="null-c-reference"></a>null (справочник по C#)
 Ключевое слово `null` является литералом, представляющим пустую ссылку, которая не ссылается на объект. `null` является значением по умолчанию для переменных ссылочного типа. Обычные типы значений не могут принимать значение NULL. Однако в C# 2.0 представлены типы значений, допускающие значение NULL. См. раздел [Типы, допускающие значения NULL](../../../csharp/programming-guide/nullable-types/index.md).  

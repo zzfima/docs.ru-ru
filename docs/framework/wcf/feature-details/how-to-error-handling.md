@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33493607"
 ---
 # <a name="how-to-error-handling"></a>Как обрабатывать ошибки
 В этом разделе описаны основные шаги по созданию конфигурации маршрутизации с применением обработки ошибок. В данном примере сообщения перенаправляются в целевую конечную точку. Если сообщение не удается доставить из-за сбоя сети или канала связи (<xref:System.ServiceModel.CommunicationException>), оно повторно отправляется в альтернативную конечную точку.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33489402"
 ---
 # <a name="hosting"></a>Размещение
 В подразделах этого раздела описано размещение служб. Служба может размещаться Internet Information Services (IIS), служба активации Windows (WAS), Windows Server AppFabric, службе Windows или управляемом приложении — этот параметр часто называют *себя размещение*.  

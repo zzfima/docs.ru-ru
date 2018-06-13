@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33496654"
 ---
 # <a name="comparing-aspnet-web-services-to-wcf-based-on-development"></a>Сравнение веб-служб ASP.NET с веб-службами на основе WCF по процессу разработки
 Windows Communication Foundation (WCF) имеется параметр режима совместимости ASP.NET позволяет программировать и настраивать как веб-служб ASP.NET в WCF приложения и имитировать их поведение. В следующих разделах сравниваются веб-служб ASP.NET и WCF зависимости от того, что необходимо для разработки приложений с использованием обеих технологий.  

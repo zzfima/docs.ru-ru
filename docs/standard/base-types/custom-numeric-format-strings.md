@@ -23,6 +23,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579240"
 ---
 # <a name="custom-numeric-format-strings"></a>Строки настраиваемых числовых форматов
 Чтобы определить способ форматирования числовых данных, можно создать строку настраиваемого числового формата, состоящую из одного или нескольких описателей настраиваемого формата. Строка настраиваемого числового формата — это любая строка формата, не являющаяся [строкой стандартного числового формата](../../../docs/standard/base-types/standard-numeric-format-strings.md).  

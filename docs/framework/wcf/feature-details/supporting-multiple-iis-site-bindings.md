@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33497624"
 ---
 # <a name="supporting-multiple-iis-site-bindings"></a>Поддержка нескольких привязок узла IIS
 При размещении службы Windows Communication Foundation (WCF) в Internet Information Services (IIS) 7.0, может потребоваться предоставить несколько базовых адресов, использующих тот же протокол на одном сайте. Это позволяет одной и той же службе отвечать на несколько разных URI. Это полезно, если вы хотите разместить службу, прослушивает http://www.contoso.com и http://contoso.com. Также может использоваться при создании службы, имеющей базовый адрес для внутренних пользователей и отдельный базовый адрес для внешних пользователей. Например: http://internal.contoso.com и http://www.contoso.com.  

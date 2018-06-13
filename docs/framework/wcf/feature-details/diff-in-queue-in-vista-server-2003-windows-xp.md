@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33492028"
 ---
 # <a name="differences-in-queuing-features-in-windows-vista-windows-server-2003-and-windows-xp"></a>Различия в возможностях очередей в Windows Vista, Windows Server 2003 и Windows XP
 В этом разделе обобщаются отличия функции очередей Windows Communication Foundation (WCF) между [!INCLUDE[wv](../../../../includes/wv-md.md)], [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)], и [!INCLUDE[wxp](../../../../includes/wxp-md.md)].  

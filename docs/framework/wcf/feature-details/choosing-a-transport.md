@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33495539"
 ---
 # <a name="choosing-a-transport"></a>Выбор транспортов
 В этом разделе рассматриваются критерии выбора одного из трех основных транспортов, включенные в Windows Communication Foundation (WCF): HTTP, TCP и именованных каналов. WCF также включает транспорт очереди сообщений (MSMQ), но в этом документе не описываются очереди сообщений.  
