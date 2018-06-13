@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33603851"
 ---
 # <a name="gettype-operator-visual-basic"></a><span data-ttu-id="80d6e-102">Оператор GetType (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="80d6e-102">GetType Operator (Visual Basic)</span></span>
 <span data-ttu-id="80d6e-103">Возвращает <xref:System.Type> объекта для указанного типа.</span><span class="sxs-lookup"><span data-stu-id="80d6e-103">Returns a <xref:System.Type> object for the specified type.</span></span> <span data-ttu-id="80d6e-104"><xref:System.Type> Объект предоставляет сведения о типе, например его свойства, методы и события.</span><span class="sxs-lookup"><span data-stu-id="80d6e-104">The <xref:System.Type> object provides information about the type such as its properties, methods, and events.</span></span>  

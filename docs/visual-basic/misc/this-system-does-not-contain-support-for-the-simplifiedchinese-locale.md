@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33639237"
 ---
 # <a name="this-system-does-not-contain-support-for-the-simplifiedchinese-locale"></a><span data-ttu-id="a4b0b-102">Эта система не предусматривает поддержку стандартов упрощенного китайского языка</span><span class="sxs-lookup"><span data-stu-id="a4b0b-102">This system does not contain support for the SimplifiedChinese locale</span></span>
 <span data-ttu-id="a4b0b-103">Вы пытаетесь использовать член перечисления `VbStrConv.SimplifiedChinese` , но ваша система не поддерживает упрощенный китайский язык.</span><span class="sxs-lookup"><span data-stu-id="a4b0b-103">You are attempting to use the `VbStrConv.SimplifiedChinese` enumeration member, but your system does not support the Simplified Chinese locale.</span></span>  

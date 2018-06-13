@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 7c4b6780b9784c5d02499224e6787f2cda6cc8e9
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33442856"
 ---
 # <a name="ihosttaskmanagerswitchtotask-method"></a><span data-ttu-id="fdd89-102">Метод IHostTaskManager::SwitchToTask</span><span class="sxs-lookup"><span data-stu-id="fdd89-102">IHostTaskManager::SwitchToTask Method</span></span>
 <span data-ttu-id="fdd89-103">Уведомляет узел, что необходимости отключения текущей задачи.</span><span class="sxs-lookup"><span data-stu-id="fdd89-103">Notifies the host that it should switch out the current task.</span></span>  

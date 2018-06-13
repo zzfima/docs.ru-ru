@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33647736"
 ---
 # <a name="how-to-create-strings-using-a-stringbuilder-in-visual-basic"></a><span data-ttu-id="c9627-102">Практическое руководство. Создание строки с помощью StringBuilder в Visual Basic</span><span class="sxs-lookup"><span data-stu-id="c9627-102">How to: Create Strings Using a StringBuilder in Visual Basic</span></span>
 <span data-ttu-id="c9627-103">В этом примере создается длинная строка из множества маленьких строк с помощью <xref:System.Text.StringBuilder> класса.</span><span class="sxs-lookup"><span data-stu-id="c9627-103">This example constructs a long string from many smaller strings using the <xref:System.Text.StringBuilder> class.</span></span> <span data-ttu-id="c9627-104"><xref:System.Text.StringBuilder> Класс является более эффективным, чем `&=` оператора для сложения нескольких строк.</span><span class="sxs-lookup"><span data-stu-id="c9627-104">The <xref:System.Text.StringBuilder> class is more efficient than the `&=` operator for concatenating many strings.</span></span>  

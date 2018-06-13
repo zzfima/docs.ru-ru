@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33642900"
 ---
 # <a name="how-to-retrieve-the-shallow-value-of-an-element-visual-basic"></a><span data-ttu-id="9068e-102">Как: получить Неглубокое значение элемента (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="9068e-102">How to: Retrieve the Shallow Value of an Element (Visual Basic)</span></span>
 <span data-ttu-id="9068e-103">В этом разделе показано, как получить неглубокое значение элемента.</span><span class="sxs-lookup"><span data-stu-id="9068e-103">This topic shows how to get the shallow value of an element.</span></span> <span data-ttu-id="9068e-104">Неглубокое значение - это значение только конкретного элемента, в отличие от глубокого значения, которое содержит значения всех элементов-потомков, объединенные в одной строке.</span><span class="sxs-lookup"><span data-stu-id="9068e-104">The shallow value is the value of the specific element only, as opposed to the deep value, which includes the values of all descendent elements concatenated into a single string.</span></span>  

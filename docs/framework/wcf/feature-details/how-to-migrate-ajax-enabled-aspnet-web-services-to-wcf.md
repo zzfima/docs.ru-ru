@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33495555"
 ---
 # <a name="how-to-migrate-ajax-enabled-aspnet-web-services-to-wcf"></a><span data-ttu-id="3b5a4-102">Практическое руководство. Миграция веб-служб ASP.NET с поддержкой AJAX на платформу WCF</span><span class="sxs-lookup"><span data-stu-id="3b5a4-102">How to: Migrate AJAX-Enabled ASP.NET Web Services to WCF</span></span>
 <span data-ttu-id="3b5a4-103">В этом разделе описаны процедуры по переносу базовой службы ASP.NET AJAX для службы с поддержкой AJAX Windows Communication Foundation (WCF).</span><span class="sxs-lookup"><span data-stu-id="3b5a4-103">This topic outlines procedures to migrate a basic ASP.NET AJAX service to an equivalent AJAX-enabled Windows Communication Foundation (WCF) service.</span></span> <span data-ttu-id="3b5a4-104">В этом примере показано создание функционально эквивалентны версии WCF-служб ASP.NET AJAX.</span><span class="sxs-lookup"><span data-stu-id="3b5a4-104">It shows how to create a functionally equivalent WCF version of an ASP.NET AJAX service.</span></span> <span data-ttu-id="3b5a4-105">Две службы затем могут использоваться параллельно, или службы WCF можно использовать для замены службы ASP.NET AJAX.</span><span class="sxs-lookup"><span data-stu-id="3b5a4-105">The two services can then be used side by side, or the WCF service can be used to replace the ASP.NET AJAX service.</span></span>  

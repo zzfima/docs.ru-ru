@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33495162"
 ---
 # <a name="configuring-ws-atomic-transaction-support"></a><span data-ttu-id="7a360-102">Настройка поддержки транзакций WS-Atomic</span><span class="sxs-lookup"><span data-stu-id="7a360-102">Configuring WS-Atomic Transaction Support</span></span>
 <span data-ttu-id="7a360-103">В этой теме описывается, как можно настроить поддержку WS-AtomicTransaction (WS-AT) с помощью программы конфигурации WS-AT.</span><span class="sxs-lookup"><span data-stu-id="7a360-103">This topic describes how you can configure WS-AtomicTransaction (WS-AT) support by using the WS-AT Configuration Utility.</span></span>  

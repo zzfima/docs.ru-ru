@@ -7,6 +7,7 @@ ms.sourcegitcommit: e5bb395ec86f536e114314184288f40a8c745e2e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/12/2018
+ms.locfileid: "34149079"
 ---
 # <a name="discriminated-unions"></a><span data-ttu-id="64bb0-103">Размеченные объединения</span><span class="sxs-lookup"><span data-stu-id="64bb0-103">Discriminated Unions</span></span>
 

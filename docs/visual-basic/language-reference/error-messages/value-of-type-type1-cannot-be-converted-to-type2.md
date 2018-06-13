@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33602766"
 ---
 # <a name="value-of-type-39type139-cannot-be-converted-to-39type239"></a><span data-ttu-id="f9402-102">Значение типа &#39;тип1&#39; не может быть преобразован &#39;тип2&#39;</span><span class="sxs-lookup"><span data-stu-id="f9402-102">Value of type &#39;type1&#39; cannot be converted to &#39;type2&#39;</span></span>
 <span data-ttu-id="f9402-103">Не удается преобразовать значение типа «тип1» в «тип2».</span><span class="sxs-lookup"><span data-stu-id="f9402-103">Value of type 'type1' cannot be converted to 'type2'.</span></span> <span data-ttu-id="f9402-104">Свойство «Значение» для получения строкового значения первого элемента "\<Родительскийэлемент >".</span><span class="sxs-lookup"><span data-stu-id="f9402-104">You can use the 'Value' property to get the string value of the first element of '\<parentElement>'.</span></span>  

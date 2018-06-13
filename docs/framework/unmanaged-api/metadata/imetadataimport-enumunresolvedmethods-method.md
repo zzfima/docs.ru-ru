@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: cfd53309b2b5e96e28e9e063a8adfda430864115
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33447462"
 ---
 # <a name="imetadataimportenumunresolvedmethods-method"></a><span data-ttu-id="d6b9a-102">Метод IMetaDataImport::EnumUnresolvedMethods</span><span class="sxs-lookup"><span data-stu-id="d6b9a-102">IMetaDataImport::EnumUnresolvedMethods Method</span></span>
 <span data-ttu-id="d6b9a-103">Перечисляет токены MemberDef, представляющие неразрешенные методы в текущей области метаданных.</span><span class="sxs-lookup"><span data-stu-id="d6b9a-103">Enumerates MemberDef tokens representing the unresolved methods in the current metadata scope.</span></span>  

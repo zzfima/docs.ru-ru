@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33603916"
 ---
 # <a name="join-clause-visual-basic"></a><span data-ttu-id="3ad8c-102">Предложение Join (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="3ad8c-102">Join Clause (Visual Basic)</span></span>
 <span data-ttu-id="3ad8c-103">Объединяет две коллекции в одну.</span><span class="sxs-lookup"><span data-stu-id="3ad8c-103">Combines two collections into a single collection.</span></span> <span data-ttu-id="3ad8c-104">Операция соединения основана на сопоставлении ключей и использует `Equals` оператор.</span><span class="sxs-lookup"><span data-stu-id="3ad8c-104">The join operation is based on matching keys and uses the `Equals` operator.</span></span>  

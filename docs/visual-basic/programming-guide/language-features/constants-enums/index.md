@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33646396"
 ---
 # <a name="constants-and-enumerations-in-visual-basic"></a><span data-ttu-id="fcf04-102">Константы и перечисления в Visual Basic</span><span class="sxs-lookup"><span data-stu-id="fcf04-102">Constants and Enumerations in Visual Basic</span></span>
 <span data-ttu-id="fcf04-103">Константы позволяют использовать наглядные имена вместо неизменяемых значений.</span><span class="sxs-lookup"><span data-stu-id="fcf04-103">Constants are a way to use meaningful names in place of a value that does not change.</span></span> <span data-ttu-id="fcf04-104">Как можно понять из их названия, константы хранят значения, которые остаются постоянными в ходе выполнения приложения.</span><span class="sxs-lookup"><span data-stu-id="fcf04-104">Constants store values that, as the name implies, remain constant throughout the execution of an application.</span></span> <span data-ttu-id="fcf04-105">С константами вы можете использовать значимые имена вместо чисел, чтобы сделать свой код более удобочитаемым.</span><span class="sxs-lookup"><span data-stu-id="fcf04-105">You can use constants to provide meaningful names, instead of numbers, making your code more readable.</span></span>  

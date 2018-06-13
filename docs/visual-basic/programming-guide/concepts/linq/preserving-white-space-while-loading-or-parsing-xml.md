@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33645646"
 ---
 # <a name="preserving-white-space-while-loading-or-parsing-xml"></a><span data-ttu-id="f3cd0-102">Сохранение пробелов при загрузке и анализе XML</span><span class="sxs-lookup"><span data-stu-id="f3cd0-102">Preserving White Space while Loading or Parsing XML</span></span>
 <span data-ttu-id="f3cd0-103">В этом разделе показан способ управления тем, как обрабатываются пробелы в [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].</span><span class="sxs-lookup"><span data-stu-id="f3cd0-103">This topic describes how to control the white space behavior of [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].</span></span>  

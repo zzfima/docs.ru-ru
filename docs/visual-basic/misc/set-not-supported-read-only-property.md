@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33639419"
 ---
 # <a name="set-not-supported-read-only-property"></a><span data-ttu-id="5aa00-102">Set не поддерживается (свойство доступно только для чтения)</span><span class="sxs-lookup"><span data-stu-id="5aa00-102">Set not supported (read-only property)</span></span>
 <span data-ttu-id="5aa00-103">Вы попытались задать или изменить свойство, доступное только для чтения.</span><span class="sxs-lookup"><span data-stu-id="5aa00-103">You tried to set or change a property that is read only.</span></span>  

@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33601918"
 ---
 # <a name="overloads-visual-basic"></a><span data-ttu-id="bf282-102">Overloads (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="bf282-102">Overloads (Visual Basic)</span></span>
 <span data-ttu-id="bf282-103">Указывает, что свойство или процедура повторно определяет одно или несколько существующих свойств или процедур с таким же именем.</span><span class="sxs-lookup"><span data-stu-id="bf282-103">Specifies that a property or procedure redeclares one or more existing properties or procedures with the same name.</span></span>  

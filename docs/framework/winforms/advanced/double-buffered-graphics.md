@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33524070"
 ---
 # <a name="double-buffered-graphics"></a><span data-ttu-id="88691-102">Двойная буферизация графики</span><span class="sxs-lookup"><span data-stu-id="88691-102">Double Buffered Graphics</span></span>
 <span data-ttu-id="88691-103">Мерцание является распространенной проблемой при программировании графики.</span><span class="sxs-lookup"><span data-stu-id="88691-103">Flicker is a common problem when programming graphics.</span></span> <span data-ttu-id="88691-104">Графические операции, требующие нескольких сложных операций рисования, могут вызвать мерцание отображаемых изображений или иным образом нарушить их восприятие.</span><span class="sxs-lookup"><span data-stu-id="88691-104">Graphics operations that require multiple complex painting operations can cause the rendered images to appear to flicker or have an otherwise unacceptable appearance.</span></span> <span data-ttu-id="88691-105">Чтобы устранить эти проблемы, .NET Framework предоставляет доступ к двойной буферизации.</span><span class="sxs-lookup"><span data-stu-id="88691-105">To address these problems, the .NET Framework provides access to double buffering.</span></span>  

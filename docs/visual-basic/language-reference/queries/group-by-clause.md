@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33605034"
 ---
 # <a name="group-by-clause-visual-basic"></a><span data-ttu-id="bdb1c-102">Предложение Group By (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="bdb1c-102">Group By Clause (Visual Basic)</span></span>
 <span data-ttu-id="bdb1c-103">Группирует элементы результата запроса.</span><span class="sxs-lookup"><span data-stu-id="bdb1c-103">Groups the elements of a query result.</span></span> <span data-ttu-id="bdb1c-104">Может также использоваться для применения агрегатных функций к каждой группе.</span><span class="sxs-lookup"><span data-stu-id="bdb1c-104">Can also be used to apply aggregate functions to each group.</span></span> <span data-ttu-id="bdb1c-105">Операция группирования основана на одном или нескольких ключах.</span><span class="sxs-lookup"><span data-stu-id="bdb1c-105">The grouping operation is based on one or more keys.</span></span>  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33639543"
 ---
 # <a name="unable-to-obtain-a-stream-for-the-log"></a><span data-ttu-id="7936b-102">Невозможно получить поток для журнала</span><span class="sxs-lookup"><span data-stu-id="7936b-102">Unable to obtain a stream for the log</span></span>
 <span data-ttu-id="7936b-103">Невозможно получить поток для журнала.</span><span class="sxs-lookup"><span data-stu-id="7936b-103">Unable to obtain a stream for the log.</span></span> <span data-ttu-id="7936b-104">Потенциальные имена файлов на основе \<имя > уже используются.</span><span class="sxs-lookup"><span data-stu-id="7936b-104">Potential file names based on \<name> are already in use.</span></span>  
