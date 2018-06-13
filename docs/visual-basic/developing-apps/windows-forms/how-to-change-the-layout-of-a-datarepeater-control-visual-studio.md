@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33590846"
 ---
 # <a name="how-to-change-the-layout-of-a-datarepeater-control-visual-studio"></a>Практическое руководство. Изменение структуры элемента управления DataRepeater (Visual Studio)
 <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> Управления могут быть отображены в либо вертикально (элементы прокрутки по вертикали), либо горизонтально (элементы прокрутки по горизонтали) ориентации. Вы можете изменить ориентацию во время разработки или во время выполнения, изменив <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.LayoutStyle%2A> свойство. При изменении <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.LayoutStyle%2A> свойства во время выполнения можно также для изменения размера <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemTemplate%2A> и положение дочерних элементов управления.  

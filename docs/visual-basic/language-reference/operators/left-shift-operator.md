@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33604462"
 ---
 # <a name="ltlt-operator-visual-basic"></a>&lt;&lt; Оператор (Visual Basic)
 Выполняет арифметическое смещение влево для битового шаблона.  

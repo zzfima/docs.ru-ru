@@ -25,6 +25,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33590790"
 ---
 # <a name="single-data-type-visual-basic"></a>Тип данных Single (Visual Basic)
 Содержит знаком IEEE 32 бита (4-байтовое) число одинарной точности числа с плавающей запятой в диапазоне от - 3, 4028235E + 38 до - 1, 401298E-45 для отрицательных значений и от 1, 401298E-45 до 3, 4028235E + 38 для положительных значений. Числа одинарной точности сохраняют приближенные значения вещественным числом.  

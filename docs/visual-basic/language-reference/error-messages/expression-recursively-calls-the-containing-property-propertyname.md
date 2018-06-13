@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33588847"
 ---
 # <a name="expression-recursively-calls-the-containing-property-39ltpropertynamegt39"></a>Выражение рекурсивно вызывает содержащееся свойство &#39; &lt;propertyname&gt;&#39;
 Оператор в `Set` процедура определения свойства сохраняет значение в имени свойства.  

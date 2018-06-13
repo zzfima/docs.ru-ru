@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33591316"
 ---
 # <a name="semaphore-and-semaphoreslim"></a>Классы Semaphore и SemaphoreSlim
 <xref:System.Threading.Semaphore?displayProperty=nameWithType> Класс представляет собой именованный (общесистемный) или локальный семафор. Он является тонкой оболочкой вокруг объекта семафора Win32. Семафоры Win32 являются семафорами счета, которые могут быть использованы для управления доступом к пулу ресурсов.  

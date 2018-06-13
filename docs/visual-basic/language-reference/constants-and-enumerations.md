@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33591746"
 ---
 # <a name="constants-and-enumerations-visual-basic"></a>Константы и перечисления (Visual Basic)
 В Visual Basic предусмотрен ряд предопределенных констант и перечислений для разработчиков. Константы хранят значения, которые остаются неизменными во время выполнения приложения. Перечисления — это удобный способ работать с наборами связанных констант и связывать постоянные значения с именами.  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33587388"
 ---
 # <a name="bad-file-mode"></a>Недопустимый режим файла
 Операторы, используемые для управления содержимым файла должны соответствовать режим, в котором открыт файл. Возможные причины:  

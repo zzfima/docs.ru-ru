@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33593237"
 ---
 # <a name="39region39-and-39end-region39-statements-are-not-valid-within-method-bodiesmultiline-lambdas"></a>&#39;#Region&#39; и &#39;#End Region&#39; недопустимы в телах/многострочной лямбде метод
 `#Region` Блок должен быть объявлен на уровне класса, модуля или пространства имен. Сворачиваемой области может включать один или несколько процедур, но не может начинаться или заканчиваться внутри процедуры.  

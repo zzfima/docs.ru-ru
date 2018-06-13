@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33592344"
 ---
 # <a name="version-tolerant-serialization"></a>Независимая от версий сериализация
 В платформе .NET Framework версий 1.0 и 1.1 создание сериализуемых типов, которые можно повторно использовать от одной версии приложения к другой, было проблематичным. Если тип был изменен путем добавления дополнительных полей, возникала следующая проблема:  

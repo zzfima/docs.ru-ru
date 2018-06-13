@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33589013"
 ---
 # <a name="expression-of-type-lttypegt-is-not-queryable"></a>Выражение типа &lt;тип&gt; не поддерживает запросы
 Выражение типа \<тип > не поддерживает запросы. Убедитесь, что не пропущена сборки ссылки или импорт пространства имен для поставщика LINQ.  

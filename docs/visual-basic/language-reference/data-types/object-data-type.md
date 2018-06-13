@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33591633"
 ---
 # <a name="object-data-type"></a>Object Data Type
 Содержит адреса, которые ссылаются на объекты. Можно назначить любой ссылочный тип (строка, массив, класс или интерфейс) `Object` переменной. `Object` Переменная также может ссылаться на данные любого типа значения (числовые, `Boolean`, `Char`, `Date`, структуры или перечисления).  

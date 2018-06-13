@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33592006"
 ---
 # <a name="controlling-xml-serialization-using-attributes"></a>Управление сериализацией XML с использованием атрибутов
 Атрибуты можно использовать для управления сериализацией XML объекта или для создания альтернативного потока XML из того же набора классов. Дополнительные сведения о создании альтернативного потока XML см. в разделе [Практическое руководство. Указание имени альтернативного элемента для потока XML](../../../docs/standard/serialization/how-to-specify-an-alternate-element-name-for-an-xml-stream.md).  

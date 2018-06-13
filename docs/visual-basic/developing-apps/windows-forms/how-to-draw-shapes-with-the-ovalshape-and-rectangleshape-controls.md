@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33592279"
 ---
 # <a name="how-to-draw-shapes-with-the-ovalshape-and-rectangleshape-controls-visual-studio"></a>Пошаговое руководство. Рисование фигур при помощи элементов управления OvalShape и RectangleShape (Visual Studio)
 Можно использовать элемент управления <xref:Microsoft.VisualBasic.PowerPacks.OvalShape> для рисования окружностей и овалов на формах и контейнерах и во время создания, и во время выполнения. Можно использовать элемент управления <xref:Microsoft.VisualBasic.PowerPacks.RectangleShape> для рисования квадратов, прямоугольников и прямоугольников со скругленными углами на формах и контейнерах. С помощью этого элемента управления также можно рисовать фигуры и во время создания, и во время выполнения.  

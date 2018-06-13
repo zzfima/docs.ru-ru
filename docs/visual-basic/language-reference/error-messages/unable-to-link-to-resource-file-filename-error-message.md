@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33604332"
 ---
 # <a name="unable-to-link-to-resource-file-39ltfilenamegt39-lterror-messagegt"></a>Не удалось скомпоновать с файлом ресурсов &#39; &lt;filename&gt;&#39;: &lt;сообщение об ошибке&gt;
 Компилятор Visual Basic вызывает компоновщик сборок (Al.exe, который также называется Alink) для создания сборки с манифестом. Компоновщик сообщил об ошибке связывания с файлом машинного ресурса COM+ из сборки.  

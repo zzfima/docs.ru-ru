@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33590030"
 ---
 # <a name="mutexes"></a>Mutexes
 Объект <xref:System.Threading.Mutex> можно использовать для получения монопольного доступа к ресурсу. Класс <xref:System.Threading.Mutex> использует больше системных ресурсов, чем класс <xref:System.Threading.Monitor>, но он может маршалироваться между доменами приложений, использоваться с несколькими ожиданиями и синхронизировать потоки в нескольких процессах. Сравнение механизмов управляемой синхронизации см. в разделе [Обзор примитивов синхронизации](../../../docs/standard/threading/overview-of-synchronization-primitives.md).  
