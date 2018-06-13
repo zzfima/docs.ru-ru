@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33587600"
 ---
 # <a name="39isnot39-operand-of-type-39typename39-can-only-be-compared-to-39nothing39-because-39typename39-is-a-nullable-type"></a>&#39;IsNot&#39; операнд типа &#39;typename&#39; можно сравнивать только с &#39;ничего&#39;, так как &#39;typename&#39; — это тип, допускающий значение NULL
 Переменная, объявленная как допускающая значение NULL, сравнивалась с выражением отличный от `Nothing` с помощью `IsNot` оператор.  

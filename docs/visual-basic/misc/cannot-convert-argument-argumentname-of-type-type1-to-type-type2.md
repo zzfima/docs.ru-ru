@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33635137"
 ---
 # <a name="cannot-convert-argument-39ltargumentnamegt39-of-type-39lttype1gt39-to-type-39lttype2gt39"></a>Не удается преобразовать аргумент &#39; &lt;имя_аргумента&gt; &#39; типа &#39; &lt;тип1&gt; &#39; ввода &#39; &lt;тип2&gt;&#39;
 Операция преобразования пытается преобразовать аргумент в несовместимый тип.  

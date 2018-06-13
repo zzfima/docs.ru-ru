@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33637462"
 ---
 # <a name="loop-control-variable-of-type-39lttypenamegt39-does-not-implement-the-39systemicomparable39-interface"></a>Переменная управления циклом типа &#39; &lt;typename&gt; &#39; не реализует &#39;System.IComparable&#39; интерфейса
 Переменная имеет тип, который не реализует интерфейс `System.IComparable` . `System.IComparable` должен быть реализован типом значения или классом.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33599152"
 ---
 # <a name="baudrate-must-be-greater-than-0"></a>Значение BaudRate должно быть больше нуля
 Аргумент `BaudRate` , указанный для метода `My.Computer.Ports.OpenSerialPort` , должен быть больше нуля.  

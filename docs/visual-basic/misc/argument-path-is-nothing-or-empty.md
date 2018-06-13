@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33599484"
 ---
 # <a name="argument-39path39-is-nothing-or-empty"></a>Аргумент &#39;путь&#39; имеет значение Nothing или пуст.
 Имя пути является недопустимым, поскольку оно инициализируется значением `Nothing` или является пустым. Путь должен иметь определенный тип данных и допустимое имя.  

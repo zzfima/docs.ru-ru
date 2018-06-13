@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33597325"
 ---
 # <a name="my-reference-visual-basic"></a>Ссылка My (Visual Basic)
 `My` Программирование быстрее и проще благодаря функции, предоставляя интуитивно понятный доступ к часто используемые методы, свойства и события. В этой таблице перечислены объекты, содержащиеся в `My`и действия, которые могут быть выполнены с каждым.  

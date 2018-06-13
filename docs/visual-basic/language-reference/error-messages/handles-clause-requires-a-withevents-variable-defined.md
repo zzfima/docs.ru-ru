@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33587437"
 ---
 # <a name="handles-clause-requires-a-withevents-variable-defined-in-the-containing-type-or-one-of-its-base-types"></a>Для предложения Handles требуется переменная WithEvents, определенная в содержащем типе или одном из его базовых типов
 Не была предоставлена `WithEvents` переменных в вашей `Handles` предложения. `Handles` Вызывает обработки событий, вызванных объектной переменной, объявленной с помощью ключевого слова в конце объявления процедуры `WithEvents` ключевое слово.  

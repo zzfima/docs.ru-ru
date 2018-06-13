@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33583335"
 ---
 # <a name="how-to-decrypt-xml-elements-with-x509-certificates"></a>Практическое руководство. Расшифровка XML-элементов с помощью сертификатов X.509
 Классы можно использовать в пространстве имен <xref:System.Security.Cryptography.Xml> для шифрования и расшифровки элемента XML-документа.  Шифрование XML-данных — это стандартный способ обмена зашифрованными XML-данными и их хранения, позволяющий не беспокоиться о том, что эти данные могут быть прочитаны.  Дополнительные сведения о стандарте XML-шифрования см. в разделе спецификации консорциума World Wide Web (W3C) для XML-шифрования, расположенный http://www.w3.org/TR/xmldsig-core/.  
