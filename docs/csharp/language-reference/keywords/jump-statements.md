@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33265224"
 ---
 # <a name="jump-statements-c-reference"></a>Операторы перехода (Справочник по C#)
 Ветвление реализуется с помощью операторов перехода, которые выполняют немедленную передачу управления программой. В операторах перехода используются следующие ключевые слова:  

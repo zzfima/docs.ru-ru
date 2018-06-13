@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32753330"
 ---
 # <a name="ltknowntypegt"></a>&lt;knownType&gt;
 Задает тип, используемый <xref:System.Runtime.Serialization.DataContractSerializer> во время десериализации. Элемент задает «известный тип», возвращаемый полем или свойством «объявленного типа». Дополнительные сведения см. в разделе [известные типы контрактов данных](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md).  

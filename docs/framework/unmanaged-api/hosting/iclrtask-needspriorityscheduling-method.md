@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 36403abcae4d4e691fe6362e61cf7fa979ec7f5e
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33435742"
 ---
 # <a name="iclrtaskneedspriorityscheduling-method"></a>Метод ICLRTask::NeedsPriorityScheduling
 Возвращает значение, указывающее, нужно ли текущую задачу, которая была отключена, помечается как с высоким приоритетом для изменения расписания.  

@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33529595"
 ---
 # <a name="how-to-add-a-control-to-a-tab-page-using-the-designer"></a>Практическое руководство. Добавление элемента управления на вкладку с помощью конструктора
 Использование Windows Forms <xref:System.Windows.Forms.TabControl> — отображение других элементов управления в структуру предприятия. Эти инструкции можно использовать для отображения рисунков в основной части вкладки. Сведения о добавлении значка в часть метки страницу вкладки см [как: изменение внешнего вида элемента управления TabControl в Windows Forms](../../../../docs/framework/winforms/controls/how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md).  

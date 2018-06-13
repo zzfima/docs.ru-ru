@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33527665"
 ---
 # <a name="how-to-access-the-managed-html-document-object-model"></a>Практическое руководство. Доступ к управляемой объектной модели HTML-документов
 Получить доступ к управляемой объектной модели HTML-документа (DOM) можно из двух типов приложений.  

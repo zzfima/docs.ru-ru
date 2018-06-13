@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33393433"
 ---
 # <a name="ipv6-auto-configuration"></a>Автоматическая настройка IPv6
 Одна из важнейших целей IPv6 заключается в поддержке самонастраивающегося узла. То есть можно подключить узел к сети IPv6 и автоматически настроить его без вмешательства человека.  

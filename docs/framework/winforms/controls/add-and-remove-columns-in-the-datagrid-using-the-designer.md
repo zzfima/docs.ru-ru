@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33528149"
 ---
 # <a name="how-to-add-and-remove-columns-in-the-windows-forms-datagridview-control-using-the-designer"></a>Практическое руководство. Добавление и удаление столбцов элемента управления DataGridView в формах Windows Forms с помощью конструктора
 Windows Forms <xref:System.Windows.Forms.DataGridView> элемент управления должен содержать столбцы для отображения данных. Если вы планируете вручную заполнить элемент управления, необходимо добавить столбцы самостоятельно. Кроме того можно привязать элемент управления к источнику данных, который создает и заполняет столбцы автоматически. Если источник данных содержит больше столбцов, чем требуется отобразить, можно удалить ненужные столбцы.  

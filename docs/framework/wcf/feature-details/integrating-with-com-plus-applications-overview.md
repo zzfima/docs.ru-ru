@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33496329"
 ---
 # <a name="integrating-with-com-applications-overview"></a>Общие сведения об интеграции с приложениями COM+
 Windows Communication Foundation (WCF) предоставляет среду с широкими возможностями для создания распределенных приложений. Если вы уже используете логики компонентно ориентированного приложения, размещенного в COM +, WCF можно использовать для расширения существующей логики вместо ее переписывания. Стандартный сценарий - предоставление доступа существующему приложению COM+ или бизнес-логике Enterprise Services службы через веб-службы.  

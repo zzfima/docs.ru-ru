@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 4725feff4645ec207be6e6afc7d1e1d38eca36ec
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33435214"
 ---
 # <a name="iclrsyncmanagergetrwlockownernext-method"></a>Метод ICLRSyncManager::GetRWLockOwnerNext
 Получает следующий [IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md) экземпляр, который блокируется блокировки чтения и записи.  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33496910"
 ---
 # <a name="collection-types-in-data-contracts"></a>Типы коллекций в контрактах данных
 Под *коллекцией* понимается список элементов определенного типа. В [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]такие списки могут быть представлены с помощью массивов или других типов (универсальный список, универсальные <xref:System.ComponentModel.BindingList%601>, <xref:System.Collections.Specialized.StringCollection>или <xref:System.Collections.ArrayList>). Например, в коллекции может содержаться список адресов конкретного клиента. Такие коллекции называются *коллекциями списков*, независимо от их фактического типа.  
