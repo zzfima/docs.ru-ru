@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33569633"
 ---
 # <a name="post-schema-compilation-infoset"></a>Набор сведений для постсхемной компиляции
 В [документации консорциума W3C по схемам XML](https://www.w3.org/XML/Schema) рассматривается информационный набор, который должен предоставляться до и после компиляции схемы. Модель XML SOM просматривает информационные наборы до и после вызова метода <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A> объекта <xref:System.Xml.Schema.XmlSchemaSet>.  

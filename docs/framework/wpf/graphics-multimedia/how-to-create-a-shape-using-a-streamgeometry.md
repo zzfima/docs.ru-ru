@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33560374"
 ---
 # <a name="how-to-create-a-shape-using-a-streamgeometry"></a>Как создать фигуру с помощью StreamGeometry
 <xref:System.Windows.Media.StreamGeometry> Упрощенная альтернатива <xref:System.Windows.Media.PathGeometry> для создания геометрических фигур. Используйте <xref:System.Windows.Media.StreamGeometry> для описания сложной геометрии, но не требуется для поддержки привязки данных, анимацию или изменения. Например, из-за его эффективности <xref:System.Windows.Media.StreamGeometry> класса лучше всего подойдет для описания графических элементов.  

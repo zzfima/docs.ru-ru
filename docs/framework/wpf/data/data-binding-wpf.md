@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33555782"
 ---
 # <a name="data-binding-wpf"></a>Привязка данных (WPF)
 Привязка данных Windows Presentation Foundation (WPF) обеспечивает простой и надежный способ представления и работать с данными о приложениях. Элементы можно привязать к данным из различных источников данных в виде объекта (CLR) среды CLR и XML.  

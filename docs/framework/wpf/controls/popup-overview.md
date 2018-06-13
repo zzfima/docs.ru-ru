@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557580"
 ---
 # <a name="popup-overview"></a>Общие сведения о контекстном меню
 <xref:System.Windows.Controls.Primitives.Popup> Элемент управления предоставляет способ отображения содержимого в отдельном окне, расположенном поверх текущего окна приложения относительно заданного элемента или экранных координат. В этом разделе описываются <xref:System.Windows.Controls.Primitives.Popup> управления и предоставляет сведения о его использовании.  

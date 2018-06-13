@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557686"
 ---
 # <a name="gridview-overview"></a>Общие сведения о GridView
 <xref:System.Windows.Controls.GridView> режим — один из режимов просмотра для <xref:System.Windows.Controls.ListView> элемента управления. <xref:System.Windows.Controls.GridView> Класса и его вспомогательные классы позволяют вам и пользователям для просмотра коллекций элементов в таблице, в качестве интерактивных заголовков столбцов обычно используются кнопки. В этом разделе описываются <xref:System.Windows.Controls.GridView> класса и возможности его использования.  

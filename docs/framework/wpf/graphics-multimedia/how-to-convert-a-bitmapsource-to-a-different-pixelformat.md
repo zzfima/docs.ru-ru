@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33558804"
 ---
 # <a name="how-to-convert-a-bitmapsource-to-a-different-pixelformat"></a>Практическое руководство. Преобразование BitmapSource в другой индексированный формат точек PixelFormat
 В этом примере показано, как преобразовать <xref:System.Windows.Media.Imaging.BitmapSource> объекта (<xref:System.Windows.Media.Imaging.BitmapImage>) с другим <xref:System.Windows.Media.PixelFormat> с помощью <xref:System.Windows.Media.Imaging.FormatConvertedBitmap>.  

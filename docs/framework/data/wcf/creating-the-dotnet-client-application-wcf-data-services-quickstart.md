@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365359"
 ---
 # <a name="creating-the-net-framework-client-application-wcf-data-services-quickstart"></a>Создание клиентского приложения .NET Framework (краткое руководство по службам данных WCF)
 Это последняя задача [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] краткое руководство. В этой задаче будет добавить в решение консольное приложение, добавьте ссылку на [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] веб-канала в новое клиентское приложение, а доступ [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] веб-канала из клиентского приложения с помощью сформированных клиентских классов службы данных и клиента библиотеки.  

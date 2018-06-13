@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365739"
 ---
 # <a name="walkthrough-simple-object-model-and-query-visual-basic"></a>Пошаговое руководство. Простая модель объектов и простой запрос (Visual Basic)
 В данном пошаговом руководстве представлен основной и полный сценарий [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] с подробным объяснением выполняемых действий. В нем создается класс сущностей, который моделирует таблицу Customers в учебной базе данных Northwind. После этого создается простой запрос на получение списка клиентов, находящихся в Лондоне.  

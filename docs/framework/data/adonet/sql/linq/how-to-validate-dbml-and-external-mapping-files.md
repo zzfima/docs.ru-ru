@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33362166"
 ---
 # <a name="how-to-validate-dbml-and-external-mapping-files"></a>Практическое руководство. Проверка внешних файлов сопоставления и DBML-файлов
 После внесения изменений во внешние файлы сопоставлений и DBML-файлы их необходимо проверить на соответствие определениям схемы. Этот раздел предоставляет пользователям Visual Studio шаги по реализации процесса проверки.  

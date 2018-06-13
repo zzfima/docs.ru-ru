@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33558817"
 ---
 # <a name="how-to-animate-in-a-style"></a>Практическое руководство. Применение анимации в стиле
 В этом примере показано, как для анимации свойства в стиле. При анимации в стиле элемент framework, для которого определен стиль можно применить напрямую. Целевой объект freezable, вам необходимо «поставить точку» из свойства элемента со стилем.  

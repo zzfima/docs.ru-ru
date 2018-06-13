@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33559818"
 ---
 # <a name="how-to-test-point4d-structures-for-equality-and-inequality"></a>Практическое руководство. Проверка структур Point4D на равенство и неравенство
 В этом примере показано, как проверить <xref:System.Windows.Media.Media3D.Point4D> структуры на равенство и неравенство.  

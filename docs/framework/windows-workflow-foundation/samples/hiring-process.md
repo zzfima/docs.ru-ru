@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33519767"
 ---
 # <a name="hiring-process"></a>Процесс найма
 Этот образец демонстрирует, как реализовать бизнес-процесс, используя действия обмена сообщениями и два рабочих процесса, размещенные как службы рабочих процессов. Эти рабочие процессы входят в ИT-инфраструктуру вымышленной компании Contoso, Inc.  

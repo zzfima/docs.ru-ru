@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33560473"
 ---
 # <a name="how-to-create-a-line-using-a-linegeometry"></a>Практическое руководство. Создание отрезка с помощью LineGeometry
 В этом примере показано, как использовать <xref:System.Windows.Media.LineGeometry> класса для описания строки. Объект <xref:System.Windows.Media.LineGeometry> определяется его начальную и конечную точки.  

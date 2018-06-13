@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557034"
 ---
 # <a name="how-to-group-sort-and-filter-data-in-the-datagrid-control"></a>Практическое руководство. Группировка, сортировка и фильтрация данных в элементе управления DataGrid
 Часто полезно просматривать данные в <xref:System.Windows.Controls.DataGrid> путем группирования, сортировки и фильтрации данных различными способами. Группировать, сортировать и фильтровать данные в <xref:System.Windows.Controls.DataGrid>, привяжите его к <xref:System.Windows.Data.CollectionView> который поддерживает эти функции. Вы можете работать с данными в <xref:System.Windows.Data.CollectionView> без изменения базового источника данных. Изменения в представлении коллекции отражены в <xref:System.Windows.Controls.DataGrid> пользовательского интерфейса (UI).  

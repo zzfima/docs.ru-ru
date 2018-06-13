@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33566211"
 ---
 # <a name="wpf-security-strategy---security-engineering"></a>Стратегия безопасности WPF — проектирование безопасности
 Trustworthy Computing (защищенные информационные системы) — это инициатива корпорации Майкрософт по созданию безопасного кода. Ключевым элементом для создания защищенных информационных систем является [!INCLUDE[TLA#tla_sdl](../../../includes/tlasharptla-sdl-md.md)]. 
