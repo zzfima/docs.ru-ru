@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 24efa08e9c4b2e242af95112b7f055e9173aaa7c
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33414681"
 ---
 # <a name="icordebugmanagedcallbackcreateprocess-method"></a><span data-ttu-id="0adab-102">Метод ICorDebugManagedCallback::CreateProcess</span><span class="sxs-lookup"><span data-stu-id="0adab-102">ICorDebugManagedCallback::CreateProcess Method</span></span>
 <span data-ttu-id="0adab-103">Уведомляет отладчик о присоединенного процесс или работы в первый раз.</span><span class="sxs-lookup"><span data-stu-id="0adab-103">Notifies the debugger when a process has been attached or started for the first time.</span></span>  

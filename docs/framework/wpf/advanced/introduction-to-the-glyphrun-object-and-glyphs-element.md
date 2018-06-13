@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33547385"
 ---
 # <a name="introduction-to-the-glyphrun-object-and-glyphs-element"></a><span data-ttu-id="757da-102">Знакомство с объектом GlyphRun и элементом Glyphs</span><span class="sxs-lookup"><span data-stu-id="757da-102">Introduction to the GlyphRun Object and Glyphs Element</span></span>
 <span data-ttu-id="757da-103">В этом разделе описывается <xref:System.Windows.Media.GlyphRun> объекта и <xref:System.Windows.Documents.Glyphs> элемента.</span><span class="sxs-lookup"><span data-stu-id="757da-103">This topic describes the <xref:System.Windows.Media.GlyphRun> object and the <xref:System.Windows.Documents.Glyphs> element.</span></span>  

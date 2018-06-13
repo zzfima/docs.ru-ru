@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33530631"
 ---
 # <a name="how-to-determine-which-treeview-node-was-clicked-windows-forms"></a><span data-ttu-id="cdcf5-102">Практическое руководство. Определение узла TreeView, выбранного щелчком мыши (Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="cdcf5-102">How to: Determine Which TreeView Node Was Clicked (Windows Forms)</span></span>
 <span data-ttu-id="cdcf5-103">При работе с Windows Forms <xref:System.Windows.Forms.TreeView> является управление, общие задачи для определения узла, выбранного щелчком мыши и реагировать соответствующим образом.</span><span class="sxs-lookup"><span data-stu-id="cdcf5-103">When working with the Windows Forms <xref:System.Windows.Forms.TreeView> control, a common task is to determine which node was clicked, and respond appropriately.</span></span>  

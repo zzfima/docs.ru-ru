@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33550223"
 ---
 # <a name="how-to-adorn-the-children-of-a-panel"></a><span data-ttu-id="0479a-102">Практическое руководство. Оформление дочерних объектов панели</span><span class="sxs-lookup"><span data-stu-id="0479a-102">How to: Adorn the Children of a Panel</span></span>
 <span data-ttu-id="0479a-103">В этом примере показано, как программным способом привязки графического элемента к дочерним элементам указанного <xref:System.Windows.Controls.Panel>.</span><span class="sxs-lookup"><span data-stu-id="0479a-103">This example shows how to programmatically bind an adorner to the children of a specified <xref:System.Windows.Controls.Panel>.</span></span>  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33550071"
 ---
 # <a name="how-to-add-a-watermark-to-a-textbox"></a><span data-ttu-id="73a00-102">Практическое руководство. Добавление предела в элемент TextBox</span><span class="sxs-lookup"><span data-stu-id="73a00-102">How to: Add a Watermark to a TextBox</span></span>
 <span data-ttu-id="73a00-103">В следующем примере показано, как расширение полезности элемента <xref:System.Windows.Controls.TextBox> путем отображения пояснительного фонового изображение внутри <xref:System.Windows.Controls.TextBox> до введения текста пользователем, после чего соответствующий образ будет удален.</span><span class="sxs-lookup"><span data-stu-id="73a00-103">The following example shows how to aid usability of a <xref:System.Windows.Controls.TextBox> by displaying an explanatory background image inside of the <xref:System.Windows.Controls.TextBox> until the user inputs text, at which point the image is removed.</span></span> <span data-ttu-id="73a00-104">Кроме того фоновое изображение восстанавливается, если пользователь удаляет входные данные.</span><span class="sxs-lookup"><span data-stu-id="73a00-104">In addition, the background image is restored again if the user removes their input.</span></span> <span data-ttu-id="73a00-105">См. на рисунке ниже.</span><span class="sxs-lookup"><span data-stu-id="73a00-105">See illustration below.</span></span>  

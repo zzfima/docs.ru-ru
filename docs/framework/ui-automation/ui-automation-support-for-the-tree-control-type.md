@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33410232"
 ---
 # <a name="ui-automation-support-for-the-tree-control-type"></a><span data-ttu-id="22f3c-102">Поддержка автоматизации пользовательского интерфейса для древовидного типа элемента управления</span><span class="sxs-lookup"><span data-stu-id="22f3c-102">UI Automation Support for the Tree Control Type</span></span>
 > [!NOTE]

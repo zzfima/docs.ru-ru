@@ -29,6 +29,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33549533"
 ---
 # <a name="input-overview"></a><span data-ttu-id="2edfa-102">Общие сведения о входных данных</span><span class="sxs-lookup"><span data-stu-id="2edfa-102">Input Overview</span></span>
 <span data-ttu-id="2edfa-103">Подсистема <a name="introduction"></a>[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] предоставляет мощный [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] для получения входных данных от разнообразных устройств, включая мышь, клавиатуру, сенсорный экран и перо.</span><span class="sxs-lookup"><span data-stu-id="2edfa-103"><a name="introduction"></a> The[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] subsystem provides a powerful [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] for obtaining input from a variety of devices, including the mouse, keyboard, touch, and stylus.</span></span> <span data-ttu-id="2edfa-104">В этом разделе описываются службы, предоставляемые [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], и объясняется архитектура систем ввода.</span><span class="sxs-lookup"><span data-stu-id="2edfa-104">This topic describes the services provided by [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] and explains the architecture of the input systems.</span></span>  

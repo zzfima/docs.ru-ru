@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33546956"
 ---
 # <a name="planning-for-application-performance"></a><span data-ttu-id="27e2d-102">Планирование производительности приложения</span><span class="sxs-lookup"><span data-stu-id="27e2d-102">Planning for Application Performance</span></span>
 <span data-ttu-id="27e2d-103">Успех достижения целей по производительности зависит от того, насколько хорошо при разработке стратегии производительности.</span><span class="sxs-lookup"><span data-stu-id="27e2d-103">The success of achieving your performance goals depends on how well you develop your performance strategy.</span></span> <span data-ttu-id="27e2d-104">Планирование является первым этапом разработки любого продукта.</span><span class="sxs-lookup"><span data-stu-id="27e2d-104">Planning is the first stage in developing any product.</span></span> <span data-ttu-id="27e2d-105">В этом разделе описывается несколько очень простых правил разработки стратегии хорошую производительность.</span><span class="sxs-lookup"><span data-stu-id="27e2d-105">This topic describes a few very simple rules for developing a good performance strategy.</span></span>  

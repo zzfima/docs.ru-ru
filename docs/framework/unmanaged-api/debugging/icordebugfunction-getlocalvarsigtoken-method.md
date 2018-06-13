@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9a09741ed778436f1cb35d094885bd3effa813a5
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33411598"
 ---
 # <a name="icordebugfunctiongetlocalvarsigtoken-method"></a><span data-ttu-id="5e2c3-102">Метод ICorDebugFunction::GetLocalVarSigToken</span><span class="sxs-lookup"><span data-stu-id="5e2c3-102">ICorDebugFunction::GetLocalVarSigToken Method</span></span>
 <span data-ttu-id="5e2c3-103">Получает маркер метаданных для подписи локальной переменной функции, представленной данным экземпляром ICorDebugFunction.</span><span class="sxs-lookup"><span data-stu-id="5e2c3-103">Gets the metadata token for the local variable signature of the function that is represented by this ICorDebugFunction instance.</span></span>  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33313226"
 ---
 # <a name="how-to-define-constants-in-c"></a><span data-ttu-id="417e7-102">Практическое руководство. Объявление констант в C#</span><span class="sxs-lookup"><span data-stu-id="417e7-102">How to: Define Constants in C#</span></span>
 <span data-ttu-id="417e7-103">Константы — это поля, значения которых устанавливаются во время компиляции и не изменяются.</span><span class="sxs-lookup"><span data-stu-id="417e7-103">Constants are fields whose values are set at compile time and can never be changed.</span></span> <span data-ttu-id="417e7-104">С помощью констант можно присвоить особым значениям значащие имена вместо числовых литералов.</span><span class="sxs-lookup"><span data-stu-id="417e7-104">Use constants to provide meaningful names instead of numeric literals ("magic numbers") for special values.</span></span>  

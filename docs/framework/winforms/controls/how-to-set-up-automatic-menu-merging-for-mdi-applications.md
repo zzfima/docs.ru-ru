@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33533465"
 ---
 # <a name="how-to-set-up-automatic-menu-merging-for-mdi-applications"></a><span data-ttu-id="c70d8-102">Практическое руководство. Автоматическое слияние меню в приложениях MDI</span><span class="sxs-lookup"><span data-stu-id="c70d8-102">How to: Set Up Automatic Menu Merging for MDI Applications</span></span>
 <span data-ttu-id="c70d8-103">Ниже приведены основные шаги по настройке автоматического слияния в приложении многодокументного интерфейса (MDI) с <xref:System.Windows.Forms.MenuStrip>.</span><span class="sxs-lookup"><span data-stu-id="c70d8-103">The following procedure gives the basic steps for setting up automatic merging in a multiple-document interface (MDI) application with <xref:System.Windows.Forms.MenuStrip>.</span></span>  

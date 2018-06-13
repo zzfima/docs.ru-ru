@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 683457c249915708becadaeda9dec265666e2023
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33412111"
 ---
 # <a name="icordebugeval2createvaluefortype-method"></a><span data-ttu-id="11822-102">Метод ICorDebugEval2::CreateValueForType</span><span class="sxs-lookup"><span data-stu-id="11822-102">ICorDebugEval2::CreateValueForType Method</span></span>
 <span data-ttu-id="11822-103">Возвращает указатель на новый ICorDebugValue заданного типа с начальным значением, равным нулю или null.</span><span class="sxs-lookup"><span data-stu-id="11822-103">Gets a pointer to a new ICorDebugValue of the specified type, with an initial value of zero or null.</span></span>  

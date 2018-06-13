@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 02ca9ed57e62d2c066de2d7c1a1e4b57094dbc0f
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33413359"
 ---
 # <a name="icordebugmanagedcallbackunloadmodule-method"></a><span data-ttu-id="dd87e-102">Метод ICorDebugManagedCallback::UnloadModule</span><span class="sxs-lookup"><span data-stu-id="dd87e-102">ICorDebugManagedCallback::UnloadModule Method</span></span>
 <span data-ttu-id="dd87e-103">Уведомляет отладчик о выгрузке общих модуля среды CLR (DLL).</span><span class="sxs-lookup"><span data-stu-id="dd87e-103">Notifies the debugger that a common language runtime module (DLL) has been unloaded.</span></span>  

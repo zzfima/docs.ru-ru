@@ -6,9 +6,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: caf95e0b5c8d4ae942bb428f53d4e58313e0e78e
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33414756"
 ---
 # <a name="icordebugmemorybuffergetsize-method"></a><span data-ttu-id="b8aef-102">Метод ICorDebugMemoryBuffer::GetSize</span><span class="sxs-lookup"><span data-stu-id="b8aef-102">ICorDebugMemoryBuffer::GetSize Method</span></span>
 <span data-ttu-id="b8aef-103">Возвращает размер буфера памяти в байтах.</span><span class="sxs-lookup"><span data-stu-id="b8aef-103">Gets the size of the memory buffer in bytes.</span></span>  

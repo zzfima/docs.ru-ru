@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c7a95f09d1baebed65bae994550431d88ba0dfc9
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33412475"
 ---
 # <a name="icordebugcontrollerterminate-method"></a><span data-ttu-id="0368e-102">Метод ICorDebugController::Terminate</span><span class="sxs-lookup"><span data-stu-id="0368e-102">ICorDebugController::Terminate Method</span></span>
 <span data-ttu-id="0368e-103">Завершает процесс с помощью указанного кода выхода.</span><span class="sxs-lookup"><span data-stu-id="0368e-103">Terminates the process with the specified exit code.</span></span>  

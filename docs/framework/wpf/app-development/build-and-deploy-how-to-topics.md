@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33548342"
 ---
 # <a name="build-and-deploy-how-to-topics"></a><span data-ttu-id="7380f-102">Разделы практического руководства, посвященные построению и развертыванию</span><span class="sxs-lookup"><span data-stu-id="7380f-102">Build and Deploy How-to Topics</span></span>
 <span data-ttu-id="7380f-103">Следующие разделы показывают, как создать файлы проекта для различных [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] типов приложений.</span><span class="sxs-lookup"><span data-stu-id="7380f-103">The following topics show how to create project files for the various [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] application types.</span></span>  

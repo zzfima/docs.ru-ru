@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1653913ca7410728f0f90a546f613a9d8b88be7a
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33414057"
 ---
 # <a name="icordebugilframegetargument-method"></a><span data-ttu-id="78333-102">Метод ICorDebugILFrame::GetArgument</span><span class="sxs-lookup"><span data-stu-id="78333-102">ICorDebugILFrame::GetArgument Method</span></span>
 <span data-ttu-id="78333-103">Возвращает значение указанного аргумента в кадре стека промежуточного языка MSIL.</span><span class="sxs-lookup"><span data-stu-id="78333-103">Gets the value of the specified argument in this Microsoft intermediate language (MSIL) stack frame.</span></span>  
