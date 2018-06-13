@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5605f7b2ad9ba42a340906559838de22ac79f789
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33416684"
 ---
 # <a name="icordebugnativeframegetlocalregistermemoryvalue-method"></a><span data-ttu-id="87ea0-102">Метод ICorDebugNativeFrame::GetLocalRegisterMemoryValue</span><span class="sxs-lookup"><span data-stu-id="87ea0-102">ICorDebugNativeFrame::GetLocalRegisterMemoryValue Method</span></span>
 <span data-ttu-id="87ea0-103">Возвращает значение аргумента или локальной переменной, из которых младшее слово и старшее слово хранятся в расположении памяти, а указанный регистр, соответственно, для данного кадра машинного кода.</span><span class="sxs-lookup"><span data-stu-id="87ea0-103">Gets the value of an argument or local variable, of which the low word and high word are stored in the memory location and specified register, respectively, for this native frame.</span></span>  

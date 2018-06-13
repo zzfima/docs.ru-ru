@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c3847ec6df2e4c6f0cd7116e8219f194792c8b78
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33433051"
 ---
 # <a name="iclrdebugmanagersetdacl-method"></a><span data-ttu-id="24cbd-102">Метод ICLRDebugManager::SetDacl</span><span class="sxs-lookup"><span data-stu-id="24cbd-102">ICLRDebugManager::SetDacl Method</span></span>
 <span data-ttu-id="24cbd-103">Этот метод не реализован.</span><span class="sxs-lookup"><span data-stu-id="24cbd-103">This method is not implemented.</span></span>  

@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33537964"
 ---
 # <a name="toolstripstatuslabel-control"></a><span data-ttu-id="59262-102">Элемент управления ToolStripStatusLabel</span><span class="sxs-lookup"><span data-stu-id="59262-102">ToolStripStatusLabel Control</span></span>
 <span data-ttu-id="59262-103"><xref:System.Windows.Forms.ToolStripStatusLabel> Содержит область отображения <xref:System.Windows.Forms.StatusStrip> для текста и изображений.</span><span class="sxs-lookup"><span data-stu-id="59262-103">The <xref:System.Windows.Forms.ToolStripStatusLabel> provides a display area in a <xref:System.Windows.Forms.StatusStrip> for text, images, or both.</span></span>  

@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ada120b9cb4100bfadff83d96e0226f911958bf7
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33420769"
 ---
 # <a name="icordebugthreadsetdebugstate-method"></a><span data-ttu-id="4ad6a-102">Метод ICorDebugThread::SetDebugState</span><span class="sxs-lookup"><span data-stu-id="4ad6a-102">ICorDebugThread::SetDebugState Method</span></span>
 <span data-ttu-id="4ad6a-103">Задает флаги, описывающие состояние отладки ICorDebugThread.</span><span class="sxs-lookup"><span data-stu-id="4ad6a-103">Sets flags that describe the debugging state of this ICorDebugThread.</span></span>  

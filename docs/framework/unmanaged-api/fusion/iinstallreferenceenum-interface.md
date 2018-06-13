@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: cac9f9db0b7527a80671c825a4435e8ea2d135b8
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33429664"
 ---
 # <a name="iinstallreferenceenum-interface"></a><span data-ttu-id="d5961-102">Интерфейс IInstallReferenceEnum</span><span class="sxs-lookup"><span data-stu-id="d5961-102">IInstallReferenceEnum Interface</span></span>
 <span data-ttu-id="d5961-103">Представляет перечислитель для сборок, установленные в глобальном кэше сборок.</span><span class="sxs-lookup"><span data-stu-id="d5961-103">Represents an enumerator for the referenced assemblies installed in the global assembly cache.</span></span>  

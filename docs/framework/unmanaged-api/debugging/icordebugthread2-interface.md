@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c348cf28a6330523d1a490c136a3214e37d13f4c
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33423053"
 ---
 # <a name="icordebugthread2-interface1"></a><span data-ttu-id="3ac18-102">ICorDebugThread2 интерфейс1</span><span class="sxs-lookup"><span data-stu-id="3ac18-102">ICorDebugThread2 Interface1</span></span>
 <span data-ttu-id="3ac18-103">Служит логическим расширением интерфейса ICorDebugThread-интерфейс.</span><span class="sxs-lookup"><span data-stu-id="3ac18-103">Serves as a logical extension to the ICorDebugThread interface.</span></span>  

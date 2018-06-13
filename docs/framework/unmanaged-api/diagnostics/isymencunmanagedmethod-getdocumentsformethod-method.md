@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 8efcd62f39a7de397ef93231fd125a17c7e513e9
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33425081"
 ---
 # <a name="isymencunmanagedmethodgetdocumentsformethod-method"></a><span data-ttu-id="5d71c-102">Метод ISymENCUnmanagedMethod::GetDocumentsForMethod</span><span class="sxs-lookup"><span data-stu-id="5d71c-102">ISymENCUnmanagedMethod::GetDocumentsForMethod Method</span></span>
 <span data-ttu-id="5d71c-103">Возвращает документы, которые этот метод имеет строки.</span><span class="sxs-lookup"><span data-stu-id="5d71c-103">Gets the documents that this method has lines in.</span></span>  

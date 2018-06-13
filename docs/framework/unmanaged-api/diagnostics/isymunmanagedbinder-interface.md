@@ -1,14 +1,6 @@
 ---
-title: "Интерфейс ISymUnmanagedBinder"
-ms.custom: 
+title: Интерфейс ISymUnmanagedBinder
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ISymUnmanagedBinder
 api_location:
@@ -22,35 +14,32 @@ helpviewer_keywords:
 ms.assetid: b22fbe19-b30f-4696-8175-e6b91da9edab
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 79d3758f57976d08d4599de500e2e12e4d67cb4b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 7bbdc4b1f15c8dbb154ed7b967bb21c61d11782a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33425556"
 ---
-# <a name="isymunmanagedbinder-interface"></a><span data-ttu-id="606c0-102">Интерфейс ISymUnmanagedBinder</span><span class="sxs-lookup"><span data-stu-id="606c0-102">ISymUnmanagedBinder Interface</span></span>
-<span data-ttu-id="606c0-103">Представляет модуль привязки символов для неуправляемого кода.</span><span class="sxs-lookup"><span data-stu-id="606c0-103">Represents a symbol binder for unmanaged code.</span></span>  
+# <a name="isymunmanagedbinder-interface"></a><span data-ttu-id="73763-102">Интерфейс ISymUnmanagedBinder</span><span class="sxs-lookup"><span data-stu-id="73763-102">ISymUnmanagedBinder Interface</span></span>
+<span data-ttu-id="73763-103">Представляет модуль привязки символов для неуправляемого кода.</span><span class="sxs-lookup"><span data-stu-id="73763-103">Represents a symbol binder for unmanaged code.</span></span>  
   
 > [!IMPORTANT]
->  <span data-ttu-id="606c0-104">Он представляет угрозу безопасности, чтобы открыть файл программы (PDB) из ненадежного источника.</span><span class="sxs-lookup"><span data-stu-id="606c0-104">It is a security risk to open a program database (PDB) file from an untrusted source.</span></span>  
+>  <span data-ttu-id="73763-104">Он представляет угрозу безопасности, чтобы открыть файл программы (PDB) из ненадежного источника.</span><span class="sxs-lookup"><span data-stu-id="73763-104">It is a security risk to open a program database (PDB) file from an untrusted source.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="606c0-105">Методы</span><span class="sxs-lookup"><span data-stu-id="606c0-105">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="73763-105">Методы</span><span class="sxs-lookup"><span data-stu-id="73763-105">Methods</span></span>  
   
-|<span data-ttu-id="606c0-106">Метод</span><span class="sxs-lookup"><span data-stu-id="606c0-106">Method</span></span>|<span data-ttu-id="606c0-107">Описание:</span><span class="sxs-lookup"><span data-stu-id="606c0-107">Description</span></span>|  
+|<span data-ttu-id="73763-106">Метод</span><span class="sxs-lookup"><span data-stu-id="73763-106">Method</span></span>|<span data-ttu-id="73763-107">Описание</span><span class="sxs-lookup"><span data-stu-id="73763-107">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="606c0-108">Метод GetReaderForFile</span><span class="sxs-lookup"><span data-stu-id="606c0-108">GetReaderForFile Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder-getreaderforfile-method.md)|<span data-ttu-id="606c0-109">Данный интерфейс метаданных и имя файла, возвращает правильную [ISymUnmanagedReader](isymunmanagedreader-interface.md) структуру, которая будет считывать символы отладки, связанные с модулем.</span><span class="sxs-lookup"><span data-stu-id="606c0-109">Given a metadata interface and a file name, returns the correct [ISymUnmanagedReader](isymunmanagedreader-interface.md) structure that will read the debugging symbols associated with the module.</span></span>|  
-|[<span data-ttu-id="606c0-110">Метод GetReaderFromStream</span><span class="sxs-lookup"><span data-stu-id="606c0-110">GetReaderFromStream Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder-getreaderfromstream-method.md)|<span data-ttu-id="606c0-111">Данный интерфейс метаданных и поток, содержащий хранилище символов, возвращает правильную [ISymUnmanagedReader](isymunmanagedreader-interface.md) структуру, которая будет считывать отладочных символов из данного хранилища символов.</span><span class="sxs-lookup"><span data-stu-id="606c0-111">Given a metadata interface and a stream that contains the symbol store, returns the correct [ISymUnmanagedReader](isymunmanagedreader-interface.md) structure that will read the debugging symbols from the given symbol store.</span></span>|  
+|[<span data-ttu-id="73763-108">Метод GetReaderForFile</span><span class="sxs-lookup"><span data-stu-id="73763-108">GetReaderForFile Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder-getreaderforfile-method.md)|<span data-ttu-id="73763-109">Данный интерфейс метаданных и имя файла, возвращает правильную [ISymUnmanagedReader](isymunmanagedreader-interface.md) структуру, которая будет считывать символы отладки, связанные с модулем.</span><span class="sxs-lookup"><span data-stu-id="73763-109">Given a metadata interface and a file name, returns the correct [ISymUnmanagedReader](isymunmanagedreader-interface.md) structure that will read the debugging symbols associated with the module.</span></span>|  
+|[<span data-ttu-id="73763-110">Метод GetReaderFromStream</span><span class="sxs-lookup"><span data-stu-id="73763-110">GetReaderFromStream Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder-getreaderfromstream-method.md)|<span data-ttu-id="73763-111">Данный интерфейс метаданных и поток, содержащий хранилище символов, возвращает правильную [ISymUnmanagedReader](isymunmanagedreader-interface.md) структуру, которая будет считывать отладочных символов из данного хранилища символов.</span><span class="sxs-lookup"><span data-stu-id="73763-111">Given a metadata interface and a stream that contains the symbol store, returns the correct [ISymUnmanagedReader](isymunmanagedreader-interface.md) structure that will read the debugging symbols from the given symbol store.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="606c0-112">Требования</span><span class="sxs-lookup"><span data-stu-id="606c0-112">Requirements</span></span>  
- <span data-ttu-id="606c0-113">**Заголовок:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="606c0-113">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="73763-112">Требования</span><span class="sxs-lookup"><span data-stu-id="73763-112">Requirements</span></span>  
+ <span data-ttu-id="73763-113">**Заголовок:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="73763-113">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="606c0-114">См. также</span><span class="sxs-lookup"><span data-stu-id="606c0-114">See Also</span></span>  
- [<span data-ttu-id="606c0-115">Интерфейсы хранилища символов диагностики</span><span class="sxs-lookup"><span data-stu-id="606c0-115">Diagnostics Symbol Store Interfaces</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)  
- [<span data-ttu-id="606c0-116">Интерфейс ISymUnmanagedBinder2</span><span class="sxs-lookup"><span data-stu-id="606c0-116">ISymUnmanagedBinder2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder2-interface.md)  
- [<span data-ttu-id="606c0-117">Интерфейс ISymUnmanagedBinder3</span><span class="sxs-lookup"><span data-stu-id="606c0-117">ISymUnmanagedBinder3 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder3-interface.md)
+## <a name="see-also"></a><span data-ttu-id="73763-114">См. также</span><span class="sxs-lookup"><span data-stu-id="73763-114">See Also</span></span>  
+ [<span data-ttu-id="73763-115">Интерфейсы хранилища символов диагностики</span><span class="sxs-lookup"><span data-stu-id="73763-115">Diagnostics Symbol Store Interfaces</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)  
+ [<span data-ttu-id="73763-116">Интерфейс ISymUnmanagedBinder2</span><span class="sxs-lookup"><span data-stu-id="73763-116">ISymUnmanagedBinder2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder2-interface.md)  
+ [<span data-ttu-id="73763-117">Интерфейс ISymUnmanagedBinder3</span><span class="sxs-lookup"><span data-stu-id="73763-117">ISymUnmanagedBinder3 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder3-interface.md)

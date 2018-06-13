@@ -6,9 +6,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1657ed4d8326b573fe081b98c1fc414e231ac465
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33420626"
 ---
 # <a name="icordebugvariablesymbolgetslotindex-method"></a><span data-ttu-id="a81bd-102">Метод ICorDebugVariableSymbol::GetSlotIndex</span><span class="sxs-lookup"><span data-stu-id="a81bd-102">ICorDebugVariableSymbol::GetSlotIndex Method</span></span>
 <span data-ttu-id="a81bd-103">Возвращает управляемый индекс слота локальной переменной.</span><span class="sxs-lookup"><span data-stu-id="a81bd-103">Gets the managed slot index of a local variable.</span></span>  

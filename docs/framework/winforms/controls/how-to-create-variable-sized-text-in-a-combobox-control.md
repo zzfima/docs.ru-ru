@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33533235"
 ---
 # <a name="how-to-create-variable-sized-text-in-a-combobox-control"></a><span data-ttu-id="27ba1-102">Практическое руководство. Индивидуальное форматирование строк, отображаемых в элементе управления ComboBox</span><span class="sxs-lookup"><span data-stu-id="27ba1-102">How to: Create Variable Sized Text in a ComboBox Control</span></span>
 <span data-ttu-id="27ba1-103">В этом примере показано пользовательское рисование текста в <xref:System.Windows.Forms.ComboBox> элемента управления.</span><span class="sxs-lookup"><span data-stu-id="27ba1-103">This example demonstrates custom drawing of text in a <xref:System.Windows.Forms.ComboBox> control.</span></span> <span data-ttu-id="27ba1-104">Если элемент удовлетворяет определенным критериям, он рисуется более крупным шрифтом и красным.</span><span class="sxs-lookup"><span data-stu-id="27ba1-104">When an item meets a certain criteria, it is drawn in a larger font and turned red.</span></span>  

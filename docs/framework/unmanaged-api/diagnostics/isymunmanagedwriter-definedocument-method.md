@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 532f69afd949971fbb4f56a8fdbcc6eab159446f
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33427711"
 ---
 # <a name="isymunmanagedwriterdefinedocument-method"></a><span data-ttu-id="adb26-102">Метод ISymUnmanagedWriter::DefineDocument</span><span class="sxs-lookup"><span data-stu-id="adb26-102">ISymUnmanagedWriter::DefineDocument Method</span></span>
 <span data-ttu-id="adb26-103">Определяет исходный документ.</span><span class="sxs-lookup"><span data-stu-id="adb26-103">Defines a source document.</span></span> <span data-ttu-id="adb26-104">Для известных языков, поставщиков и типов документов предоставляются идентификаторы GUID.</span><span class="sxs-lookup"><span data-stu-id="adb26-104">GUIDs are provided for known languages, vendors, and document types.</span></span>  

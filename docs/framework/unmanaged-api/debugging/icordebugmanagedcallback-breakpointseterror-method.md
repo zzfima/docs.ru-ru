@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 8cc437f63621c451c0af796513d4646fe0668c00
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33418384"
 ---
 # <a name="icordebugmanagedcallbackbreakpointseterror-method"></a><span data-ttu-id="5ead3-102">Метод ICorDebugManagedCallback::BreakpointSetError</span><span class="sxs-lookup"><span data-stu-id="5ead3-102">ICorDebugManagedCallback::BreakpointSetError Method</span></span>
 <span data-ttu-id="5ead3-103">Уведомляет отладчик, общеязыковая среда выполнения не удалось точно привязать точку останова, который был установлен до функции just-in-time (JIT) компиляции.</span><span class="sxs-lookup"><span data-stu-id="5ead3-103">Notifies the debugger that the common language runtime was unable to accurately bind a breakpoint that was set before a function was just-in-time (JIT) compiled.</span></span>  

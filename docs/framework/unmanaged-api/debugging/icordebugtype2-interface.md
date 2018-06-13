@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 038598e6fa8c0f7d47a161783d21f03b3c87af0c
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33420333"
 ---
 # <a name="icordebugtype2-interface"></a><span data-ttu-id="d53d4-102">Интерфейс ICorDebugType2</span><span class="sxs-lookup"><span data-stu-id="d53d4-102">ICorDebugType2 Interface</span></span>
 <span data-ttu-id="d53d4-103">Расширяет интерфейс ICorDebugType для извлечения идентификатора типа для базового типа или сложного типа (определяемый пользователем).</span><span class="sxs-lookup"><span data-stu-id="d53d4-103">Extends the ICorDebugType interface to retrieve the type identifier  of a base type or complex (user-defined) type.</span></span>  

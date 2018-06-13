@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: fe360a50038f49fdea1528c8c520dc893b258057
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33427090"
 ---
 # <a name="isymunmanagedvariablegetaddressfield2-method"></a><span data-ttu-id="5709b-102">Метод ISymUnmanagedVariable::GetAddressField2</span><span class="sxs-lookup"><span data-stu-id="5709b-102">ISymUnmanagedVariable::GetAddressField2 Method</span></span>
 <span data-ttu-id="5709b-103">Получает поле второго адреса для данной переменной.</span><span class="sxs-lookup"><span data-stu-id="5709b-103">Gets the second address field for this variable.</span></span> <span data-ttu-id="5709b-104">Его значение зависит от типа адреса.</span><span class="sxs-lookup"><span data-stu-id="5709b-104">Its meaning depends on the kind of address.</span></span>  

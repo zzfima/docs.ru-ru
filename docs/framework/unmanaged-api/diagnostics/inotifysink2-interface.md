@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 52246ac531853eea87464e265f731ece0d350e22
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33426040"
 ---
 # <a name="inotifysink2-interface"></a><span data-ttu-id="9cf3c-102">Интерфейс INotifySink2</span><span class="sxs-lookup"><span data-stu-id="9cf3c-102">INotifySink2 Interface</span></span>
 <span data-ttu-id="9cf3c-103">Объявляет методы для уведомления приемника.</span><span class="sxs-lookup"><span data-stu-id="9cf3c-103">Declares methods for sink notification.</span></span>  

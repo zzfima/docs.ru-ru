@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1c3f879e04a710d65f812a5165c3edbfa31f8542
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33419072"
 ---
 # <a name="icordebugprocessgethelperthreadid-method"></a><span data-ttu-id="a77a7-102">Метод ICorDebugProcess::GetHelperThreadID</span><span class="sxs-lookup"><span data-stu-id="a77a7-102">ICorDebugProcess::GetHelperThreadID Method</span></span>
 <span data-ttu-id="a77a7-103">Получает идентификатор потока операционной системы (ОС) вспомогательный внутренний поток отладчика.</span><span class="sxs-lookup"><span data-stu-id="a77a7-103">Gets the operating system (OS) thread ID of the debugger's internal helper thread.</span></span>  

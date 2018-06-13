@@ -6,9 +6,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 419e7bae5998679fafac48ebfd5b0673e0e4bac5
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33419085"
 ---
 # <a name="icordebugsymbolprovider2getframeprops-method"></a><span data-ttu-id="04edf-102">Метод ICorDebugSymbolProvider2::GetFrameProps</span><span class="sxs-lookup"><span data-stu-id="04edf-102">ICorDebugSymbolProvider2::GetFrameProps Method</span></span>
 <span data-ttu-id="04edf-103">Возвращает начальный относительный виртуальный адрес метода и родительского фрейма для указанного относительного виртуального адреса кода.</span><span class="sxs-lookup"><span data-stu-id="04edf-103">Returns the method starting relative virtual address of a method and the parent frame given a code relative virtual address.</span></span>  

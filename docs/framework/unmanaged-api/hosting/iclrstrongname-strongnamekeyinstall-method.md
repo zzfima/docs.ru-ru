@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 572afc5eb9ec3cf52199e5ad74406c876485461c
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33434094"
 ---
 # <a name="iclrstrongnamestrongnamekeyinstall-method"></a><span data-ttu-id="adf60-102">Метод ICLRStrongName::StrongNameKeyInstall</span><span class="sxs-lookup"><span data-stu-id="adf60-102">ICLRStrongName::StrongNameKeyInstall Method</span></span>
 <span data-ttu-id="adf60-103">Импортирует пару открытого и закрытого ключей в контейнере.</span><span class="sxs-lookup"><span data-stu-id="adf60-103">Imports a public/private key pair into a container.</span></span>  

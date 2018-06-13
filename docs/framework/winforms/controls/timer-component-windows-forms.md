@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33537854"
 ---
 # <a name="timer-component-windows-forms"></a><span data-ttu-id="b95c5-102">Компонент Timer (Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="b95c5-102">Timer Component (Windows Forms)</span></span>
 <span data-ttu-id="b95c5-103">Компонент Windows Forms <xref:System.Windows.Forms.Timer> вызывает событие через определенные интервалы времени.</span><span class="sxs-lookup"><span data-stu-id="b95c5-103">The Windows Forms <xref:System.Windows.Forms.Timer> is a component that raises an event at regular intervals.</span></span> <span data-ttu-id="b95c5-104">Этот компонент предназначен для работы в среде Windows Forms.</span><span class="sxs-lookup"><span data-stu-id="b95c5-104">This component is designed for a Windows Forms environment.</span></span>  

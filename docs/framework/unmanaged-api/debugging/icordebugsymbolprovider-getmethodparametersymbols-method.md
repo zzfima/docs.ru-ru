@@ -6,9 +6,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 0c128a7dd832376f492573ded49c499232d2bcff
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33419976"
 ---
 # <a name="icordebugsymbolprovidergetmethodparametersymbols-method"></a><span data-ttu-id="d7036-102">Метод ICorDebugSymbolProvider::GetMethodParameterSymbols</span><span class="sxs-lookup"><span data-stu-id="d7036-102">ICorDebugSymbolProvider::GetMethodParameterSymbols Method</span></span>
 <span data-ttu-id="d7036-103">Получает символы параметров метода с учетом относительного виртуального адреса (RVA) этого метода.</span><span class="sxs-lookup"><span data-stu-id="d7036-103">Gets a method's parameter symbols given the relative virtual address (RVA) of that method.</span></span>  

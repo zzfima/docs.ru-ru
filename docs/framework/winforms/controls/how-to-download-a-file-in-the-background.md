@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33536573"
 ---
 # <a name="how-to-download-a-file-in-the-background"></a><span data-ttu-id="cdf42-102">Практическое руководство. Фоновая загрузка файла</span><span class="sxs-lookup"><span data-stu-id="cdf42-102">How to: Download a File in the Background</span></span>
 <span data-ttu-id="cdf42-103">Загрузка файла — это обычная задача, и было бы разумным запускать эту потенциально длительную операцию в отдельном потоке.</span><span class="sxs-lookup"><span data-stu-id="cdf42-103">Downloading a file is a common task, and it is often useful to run this potentially time-consuming operation on a separate thread.</span></span> <span data-ttu-id="cdf42-104">С помощью компонента <xref:System.ComponentModel.BackgroundWorker> и небольшого фрагмента кода эта задача легко решается.</span><span class="sxs-lookup"><span data-stu-id="cdf42-104">Use the <xref:System.ComponentModel.BackgroundWorker> component to accomplish this task with very little code.</span></span>  

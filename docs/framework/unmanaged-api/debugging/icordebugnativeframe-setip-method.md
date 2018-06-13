@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ed8b6bf60790c10b9869dcc41678be050b8979dd
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33420229"
 ---
 # <a name="icordebugnativeframesetip-method"></a><span data-ttu-id="e9050-102">Метод ICorDebugNativeFrame::SetIP</span><span class="sxs-lookup"><span data-stu-id="e9050-102">ICorDebugNativeFrame::SetIP Method</span></span>
 <span data-ttu-id="e9050-103">Задает указатель инструкций заданное расположение смещения в машинном коде.</span><span class="sxs-lookup"><span data-stu-id="e9050-103">Sets the instruction pointer to the specified offset location in native code.</span></span>  

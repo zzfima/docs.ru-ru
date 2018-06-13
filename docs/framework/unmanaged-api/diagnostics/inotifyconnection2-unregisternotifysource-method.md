@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: c4b4f90f918c872f3227ac22f4cccadcbf3194a0
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33425484"
 ---
 # <a name="inotifyconnection2unregisternotifysource-method"></a><span data-ttu-id="072f4-102">Метод INotifyConnection2::UnregisterNotifySource</span><span class="sxs-lookup"><span data-stu-id="072f4-102">INotifyConnection2::UnregisterNotifySource Method</span></span>
 <span data-ttu-id="072f4-103">Удаляет заданный объект источника уведомлений из соединения.</span><span class="sxs-lookup"><span data-stu-id="072f4-103">Removes a specified notification source object from the connection.</span></span>  

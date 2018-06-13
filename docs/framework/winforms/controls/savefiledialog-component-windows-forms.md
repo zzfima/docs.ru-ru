@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33537142"
 ---
 # <a name="savefiledialog-component-windows-forms"></a><span data-ttu-id="68e28-102">Компонент SaveFileDialog (Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="68e28-102">SaveFileDialog Component (Windows Forms)</span></span>
 <span data-ttu-id="68e28-103">Компонент Windows Forms <xref:System.Windows.Forms.SaveFileDialog> является стандартным диалоговым окном.</span><span class="sxs-lookup"><span data-stu-id="68e28-103">The Windows Forms <xref:System.Windows.Forms.SaveFileDialog> component is a pre-configured dialog box.</span></span> <span data-ttu-id="68e28-104">Он аналогичен диалоговому окну сохранения файла, используемому в операционных системах Windows.</span><span class="sxs-lookup"><span data-stu-id="68e28-104">It is the same as the standard Save File dialog box used by Windows.</span></span> <span data-ttu-id="68e28-105">Он наследуется от класса <xref:System.Windows.Forms.CommonDialog>.</span><span class="sxs-lookup"><span data-stu-id="68e28-105">It inherits from the <xref:System.Windows.Forms.CommonDialog> class.</span></span>  

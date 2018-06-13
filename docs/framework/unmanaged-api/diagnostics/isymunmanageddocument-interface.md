@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: f75e517890275b90523dc42cdac3a83d871beac7
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33427206"
 ---
 # <a name="isymunmanageddocument-interface"></a><span data-ttu-id="c3561-102">Интерфейс ISymUnmanagedDocument</span><span class="sxs-lookup"><span data-stu-id="c3561-102">ISymUnmanagedDocument Interface</span></span>
 <span data-ttu-id="c3561-103">Представляет документ, на который ссылается хранилище символов.</span><span class="sxs-lookup"><span data-stu-id="c3561-103">Represents a document referenced by a symbol store.</span></span> <span data-ttu-id="c3561-104">Документ определяется локатора универсальный код ресурса (URL) и идентификатором GUID типа документа.</span><span class="sxs-lookup"><span data-stu-id="c3561-104">A document is defined by a uniform resource locator (URL) and a document type GUID.</span></span> <span data-ttu-id="c3561-105">Можно найти документ, независимо от того, как оно хранится с использованием URL-адрес и идентификатор GUID типа документа.</span><span class="sxs-lookup"><span data-stu-id="c3561-105">You can locate the document regardless of how it is stored by using the URL and document type GUID.</span></span> <span data-ttu-id="c3561-106">Можно сохранить в хранилище символов источник документа и получение через этот интерфейс.</span><span class="sxs-lookup"><span data-stu-id="c3561-106">You can store the document source in the symbol store and retrieve it through this interface.</span></span>  

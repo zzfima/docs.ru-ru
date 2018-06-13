@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c2d282e27ec5068fa6fe7f58ba95458fdc219972
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33419228"
 ---
 # <a name="icordebugstepperstep-method"></a><span data-ttu-id="65671-102">Метод ICorDebugStepper::Step</span><span class="sxs-lookup"><span data-stu-id="65671-102">ICorDebugStepper::Step Method</span></span>
 <span data-ttu-id="65671-103">Принуждает ICorDebugStepper выполнить один шаг через содержащую и, при необходимости, чтобы продолжить, при пошаговом выполнении функций, которые вызываются в потоке.</span><span class="sxs-lookup"><span data-stu-id="65671-103">Causes this ICorDebugStepper to single-step through its containing thread, and optionally, to continue single-stepping through functions that are called within the thread.</span></span>  

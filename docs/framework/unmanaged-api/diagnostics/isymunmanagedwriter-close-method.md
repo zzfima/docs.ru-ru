@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 30747fa25528f5679264ebfb67addf401b7d01d9
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33426333"
 ---
 # <a name="isymunmanagedwriterclose-method"></a><span data-ttu-id="93e51-102">Метод ISymUnmanagedWriter::Close</span><span class="sxs-lookup"><span data-stu-id="93e51-102">ISymUnmanagedWriter::Close Method</span></span>
 <span data-ttu-id="93e51-103">Закрывает средство записи символов после передачи символов в хранилище символов.</span><span class="sxs-lookup"><span data-stu-id="93e51-103">Closes the symbol writer after committing the symbols to the symbol store.</span></span>  

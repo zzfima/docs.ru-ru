@@ -6,9 +6,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 07d6dcc1873e24f84f97c877e8198c27eceef0c6
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33420795"
 ---
 # <a name="icordebugloadedmodule-interface"></a><span data-ttu-id="7a33e-102">Интерфейс ICorDebugLoadedModule</span><span class="sxs-lookup"><span data-stu-id="7a33e-102">ICorDebugLoadedModule Interface</span></span>
 <span data-ttu-id="7a33e-103">Предоставляет сведения о загруженном модуле.</span><span class="sxs-lookup"><span data-stu-id="7a33e-103">Provides information about a loaded module.</span></span>  

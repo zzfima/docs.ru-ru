@@ -11,9 +11,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1f6c20a69894c95086dbd813601ac8811ab4f337
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33429228"
 ---
 # <a name="deprecated-clr-hosting-interfaces-and-coclasses"></a><span data-ttu-id="9807f-102">Устаревшие интерфейсы размещения CLR и CoClasses</span><span class="sxs-lookup"><span data-stu-id="9807f-102">Deprecated CLR Hosting Interfaces and Coclasses</span></span>
 <span data-ttu-id="9807f-103">В этом разделе описываются интерфейсы, которые неуправляемые узлов можно использовать для интеграции общеязыковой среды выполнения (CLR) в .NET Framework версий 1.0 и 1.1 в свои приложения.</span><span class="sxs-lookup"><span data-stu-id="9807f-103">This section describes the interfaces that unmanaged hosts can use to integrate the common language runtime (CLR) in the .NET Framework versions 1.0 and 1.1 into their applications.</span></span> <span data-ttu-id="9807f-104">Эти интерфейсы обеспечивают методы для узла, для настройки и загрузки среды выполнения в процесс.</span><span class="sxs-lookup"><span data-stu-id="9807f-104">These interfaces provide methods for a host to configure and load the runtime into a process.</span></span>  
