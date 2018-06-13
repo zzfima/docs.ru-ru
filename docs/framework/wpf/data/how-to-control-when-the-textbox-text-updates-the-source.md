@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557229"
 ---
 # <a name="how-to-control-when-the-textbox-text-updates-the-source"></a><span data-ttu-id="c23ff-102">Практическое руководство. Управление обновлением источника из поля TextBox</span><span class="sxs-lookup"><span data-stu-id="c23ff-102">How to: Control When the TextBox Text Updates the Source</span></span>
 <span data-ttu-id="c23ff-103">В этом разделе описывается использование <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> свойства для управления синхронизацией обновлений источника привязки.</span><span class="sxs-lookup"><span data-stu-id="c23ff-103">This topic describes how to use the <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> property to control the timing of binding source updates.</span></span> <span data-ttu-id="c23ff-104">В этом разделе используются <xref:System.Windows.Controls.TextBox> элемента управления в качестве примера.</span><span class="sxs-lookup"><span data-stu-id="c23ff-104">The topic uses the <xref:System.Windows.Controls.TextBox> control as an example.</span></span>  

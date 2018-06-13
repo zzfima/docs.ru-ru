@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33503201"
 ---
 # <a name="netnamedpipebinding"></a><span data-ttu-id="0ccc5-102">NetNamedPipeBinding</span><span class="sxs-lookup"><span data-stu-id="0ccc5-102">NetNamedPipeBinding</span></span>
 <span data-ttu-id="0ccc5-103">В этом образце показана привязка `netNamedPipeBinding`, обеспечивающая обмен данными между процессами одного компьютера.</span><span class="sxs-lookup"><span data-stu-id="0ccc5-103">This sample demonstrates the `netNamedPipeBinding` binding, which provides cross-process communication on the same machine.</span></span> <span data-ttu-id="0ccc5-104">Использование именованных каналов для обмена данными между компьютерами не поддерживается.</span><span class="sxs-lookup"><span data-stu-id="0ccc5-104">Named pipes do not work across machines.</span></span> <span data-ttu-id="0ccc5-105">Этот пример построен на [Приступая к работе](../../../../docs/framework/wcf/samples/getting-started-sample.md) службы калькулятора.</span><span class="sxs-lookup"><span data-stu-id="0ccc5-105">This sample is based on The [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md) calculator service.</span></span>  

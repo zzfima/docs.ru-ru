@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33508219"
 ---
 # <a name="stream"></a><span data-ttu-id="c2a12-102">Поток</span><span class="sxs-lookup"><span data-stu-id="c2a12-102">Stream</span></span>
 <span data-ttu-id="c2a12-103">Образец потока демонстрирует использование взаимодействия в режиме потоковой передачи.</span><span class="sxs-lookup"><span data-stu-id="c2a12-103">The Stream sample demonstrates the use of streaming transfer mode communication.</span></span> <span data-ttu-id="c2a12-104">Служба предоставляет несколько операций, которые отправляют и принимают потоки.</span><span class="sxs-lookup"><span data-stu-id="c2a12-104">The service exposes several operations that send and receive streams.</span></span> <span data-ttu-id="c2a12-105">Этот образец размещается резидентно.</span><span class="sxs-lookup"><span data-stu-id="c2a12-105">This sample is self-hosted.</span></span> <span data-ttu-id="c2a12-106">Как клиент, так и служба являются консольными программами.</span><span class="sxs-lookup"><span data-stu-id="c2a12-106">Both the client and service are console programs.</span></span>  

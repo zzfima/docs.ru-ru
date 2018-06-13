@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33500420"
 ---
 # <a name="tool-samples"></a><span data-ttu-id="0e2aa-102">Образцы средств</span><span class="sxs-lookup"><span data-stu-id="0e2aa-102">Tool Samples</span></span>
 <span data-ttu-id="0e2aa-103">Этот раздел содержит средства Windows Communication Foundation (WCF).</span><span class="sxs-lookup"><span data-stu-id="0e2aa-103">This section contains Windows Communication Foundation (WCF) tools.</span></span>  

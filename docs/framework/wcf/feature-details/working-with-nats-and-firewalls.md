@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33508107"
 ---
 # <a name="working-with-nats-and-firewalls"></a><span data-ttu-id="c4cfc-102">Работа со средствами NAT и брандмауэрами</span><span class="sxs-lookup"><span data-stu-id="c4cfc-102">Working with NATs and Firewalls</span></span>
 <span data-ttu-id="c4cfc-103">Зачастую в сетевом подключении между клиентом и сервером отсутствует прямой и открытый путь для взаимодействия.</span><span class="sxs-lookup"><span data-stu-id="c4cfc-103">The client and server of a network connection frequently do not have a direct and open path for communication.</span></span> <span data-ttu-id="c4cfc-104">Пакеты фильтруются, перенаправляются, анализируются и преобразуются как на конечных, так и на промежуточных компьютерах в сети.</span><span class="sxs-lookup"><span data-stu-id="c4cfc-104">Packets are filtered, routed, analyzed, and transformed both on the endpoint machines and by intermediate machines on the network.</span></span> <span data-ttu-id="c4cfc-105">Типичными примерами промежуточных приложений, участвующих в сетевом взаимодействии, служат средства преобразования сетевых адресов (NAT) и брандмауэры.</span><span class="sxs-lookup"><span data-stu-id="c4cfc-105">Network address translations (NATs) and firewalls are common examples of intermediate applications that can participate in network communication.</span></span>  

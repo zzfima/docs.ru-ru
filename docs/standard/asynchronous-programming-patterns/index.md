@@ -13,6 +13,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32768779"
 ---
 # <a name="asynchronous-programming-patterns"></a><span data-ttu-id="2ad6d-102">Шаблоны асинхронного программирования</span><span class="sxs-lookup"><span data-stu-id="2ad6d-102">Asynchronous Programming Patterns</span></span>
 
