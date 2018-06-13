@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33278813"
 ---
 # <a name="pragma-c-reference"></a><span data-ttu-id="b31c2-102">#pragma (Справочник по C#)</span><span class="sxs-lookup"><span data-stu-id="b31c2-102">#pragma (C# Reference)</span></span>
 <span data-ttu-id="b31c2-103">Директива `#pragma` предоставляет компилятору специальные инструкции для компиляции файла, в котором она появляется.</span><span class="sxs-lookup"><span data-stu-id="b31c2-103">`#pragma` gives the compiler special instructions for the compilation of the file in which it appears.</span></span> <span data-ttu-id="b31c2-104">Компилятор должен поддерживать эти инструкции.</span><span class="sxs-lookup"><span data-stu-id="b31c2-104">The instructions must be supported by the compiler.</span></span> <span data-ttu-id="b31c2-105">Другими словами, директиву `#pragma` нельзя использовать для создания настраиваемых инструкций предварительной обработки.</span><span class="sxs-lookup"><span data-stu-id="b31c2-105">In other words, you cannot use `#pragma` to create custom preprocessing instructions.</span></span> <span data-ttu-id="b31c2-106">Компилятор Microsoft C# поддерживает следующие две инструкции `#pragma`:</span><span class="sxs-lookup"><span data-stu-id="b31c2-106">The Microsoft C# compiler supports the following two `#pragma` instructions:</span></span>  

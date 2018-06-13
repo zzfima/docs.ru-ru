@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33551057"
 ---
 # <a name="separator"></a><span data-ttu-id="e932a-102">Separator</span><span class="sxs-lookup"><span data-stu-id="e932a-102">Separator</span></span>
 <span data-ttu-id="e932a-103">Объект <xref:System.Windows.Controls.Separator> управления Рисование линии, по горизонтали или вертикали, между элементами, такие как <xref:System.Windows.Controls.ListBox>, <xref:System.Windows.Controls.Menu>, и <xref:System.Windows.Controls.ToolBar>.</span><span class="sxs-lookup"><span data-stu-id="e932a-103">A <xref:System.Windows.Controls.Separator> control draws a line, horizontal or vertical, between items in controls, such as <xref:System.Windows.Controls.ListBox>, <xref:System.Windows.Controls.Menu>, and <xref:System.Windows.Controls.ToolBar>.</span></span>  

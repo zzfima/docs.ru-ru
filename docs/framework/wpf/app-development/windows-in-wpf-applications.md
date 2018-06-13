@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33550781"
 ---
 # <a name="windows-in-wpf-applications"></a><span data-ttu-id="86858-102">Окна в приложениях WPF</span><span class="sxs-lookup"><span data-stu-id="86858-102">Windows in WPF Applications</span></span>
 <span data-ttu-id="86858-103">Пользователи взаимодействуют с приложениями при помощи окон.</span><span class="sxs-lookup"><span data-stu-id="86858-103">Users interact with applications through windows.</span></span> <span data-ttu-id="86858-104">Основным предназначением окна является размещение и отображение содержимого.</span><span class="sxs-lookup"><span data-stu-id="86858-104">The fundamental purpose of a window is to host and display content.</span></span> <span data-ttu-id="86858-105">Тип содержимого, размещаемого в окне зависит от типа данных, что приложение работает по, которые могут включать мультимедиа, страницы расширяемого языка разметки приложений (XAML), веб-страницы, документы, таблицы базы данных и записи и сведения о системе.</span><span class="sxs-lookup"><span data-stu-id="86858-105">The type of content that a window hosts depends on the type of data that an application operates over, which can include media, Extensible Application Markup Language (XAML) pages, Web pages, documents, database tables and records, and system information.</span></span>  

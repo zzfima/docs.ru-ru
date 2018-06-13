@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33551847"
 ---
 # <a name="how-to-remove-an-adorner-from-an-element"></a><span data-ttu-id="e40a8-102">Практическое руководство. Удаление объекта класса Adorner из элемента</span><span class="sxs-lookup"><span data-stu-id="e40a8-102">How to: Remove an Adorner from an Element</span></span>
 <span data-ttu-id="e40a8-103">В этом примере показано, как программно удалить определенный декоративный элемент из указанного <xref:System.Windows.UIElement>.</span><span class="sxs-lookup"><span data-stu-id="e40a8-103">This example shows how to programmatically remove a specific adorner from a specified <xref:System.Windows.UIElement>.</span></span>  

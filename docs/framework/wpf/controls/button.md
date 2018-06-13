@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33551704"
 ---
 # <a name="button"></a><span data-ttu-id="e688c-102">Кнопка</span><span class="sxs-lookup"><span data-stu-id="e688c-102">Button</span></span>
 <span data-ttu-id="e688c-103">Объект <xref:System.Windows.Controls.Button> управления реагирует на ввод данных пользователем от мыши, клавиатуры, перо, или другое устройство ввода и вызывает <xref:System.Windows.Controls.Primitives.ButtonBase.Click> событий.</span><span class="sxs-lookup"><span data-stu-id="e688c-103">A <xref:System.Windows.Controls.Button> control reacts to user input from a mouse, keyboard, stylus, or other input device and raises a <xref:System.Windows.Controls.Primitives.ButtonBase.Click> event.</span></span> <span data-ttu-id="e688c-104">Объект <xref:System.Windows.Controls.Button> простой [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] компонент, который может содержать простым содержимым, такие как текст и может также содержать сложного содержимого, такие как изображения и <xref:System.Windows.Controls.Panel> элементов управления.</span><span class="sxs-lookup"><span data-stu-id="e688c-104">A <xref:System.Windows.Controls.Button> is a basic [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] component that can contain simple content, such as text, and can also contain complex content, such as images and <xref:System.Windows.Controls.Panel> controls.</span></span>  

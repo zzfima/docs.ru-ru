@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33548968"
 ---
 # <a name="read-only-dependency-properties"></a><span data-ttu-id="9dfa7-102">Свойства зависимости "только для чтения"</span><span class="sxs-lookup"><span data-stu-id="9dfa7-102">Read-Only Dependency Properties</span></span>
 <span data-ttu-id="9dfa7-103">В этом разделе описываются свойства зависимостей "только для чтения", включая существующие свойства зависимостей "только для чтения", а также сценарии и методы создания настраиваемого свойства зависимостей "только для чтения".</span><span class="sxs-lookup"><span data-stu-id="9dfa7-103">This topic describes read-only dependency properties, including existing read-only dependency properties and the scenarios and techniques for creating a custom read-only dependency property.</span></span>  

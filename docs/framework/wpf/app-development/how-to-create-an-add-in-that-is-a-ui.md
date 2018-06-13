@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33549595"
 ---
 # <a name="how-to-create-an-add-in-that-is-a-ui"></a><span data-ttu-id="725ed-102">Практическое руководство. Создание надстройки, являющейся пользовательским интерфейсом</span><span class="sxs-lookup"><span data-stu-id="725ed-102">How to: Create an Add-In That Is a UI</span></span>
 <span data-ttu-id="725ed-103">В этом примере показано, как создать надстройку, Windows Presentation Foundation (WPF), размещаемый в [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] автономное приложение.</span><span class="sxs-lookup"><span data-stu-id="725ed-103">This example shows how to create an add-in that is a Windows Presentation Foundation (WPF) which is hosted by a [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] standalone application.</span></span>  

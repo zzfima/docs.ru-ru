@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33549105"
 ---
 # <a name="optimizing-performance-2d-graphics-and-imaging"></a><span data-ttu-id="b2404-102">Оптимизация производительности: двумерная графика и обработка изображений</span><span class="sxs-lookup"><span data-stu-id="b2404-102">Optimizing Performance: 2D Graphics and Imaging</span></span>
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]<span data-ttu-id="b2404-103"> предоставляет широкий спектр функциональных возможностей двумерной графики и изображений, которые можно оптимизировать для требований приложения.</span><span class="sxs-lookup"><span data-stu-id="b2404-103"> provides a wide range of 2D graphics and imaging functionality that can be optimized for your application requirements.</span></span> <span data-ttu-id="b2404-104">Этот раздел содержит сведения об оптимизации производительности в этих областях.</span><span class="sxs-lookup"><span data-stu-id="b2404-104">This topic provides information about performance optimization in those areas.</span></span>  

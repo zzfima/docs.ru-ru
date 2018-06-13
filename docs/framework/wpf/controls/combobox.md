@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33551195"
 ---
 # <a name="combobox"></a><span data-ttu-id="2564b-102">ComboBox</span><span class="sxs-lookup"><span data-stu-id="2564b-102">ComboBox</span></span>
 <span data-ttu-id="2564b-103"><xref:System.Windows.Controls.ComboBox> Управления предоставляет пользователям список параметров.</span><span class="sxs-lookup"><span data-stu-id="2564b-103">The <xref:System.Windows.Controls.ComboBox> control presents users with a list of options.</span></span> <span data-ttu-id="2564b-104">Список отображения или скрытия как элемент управления развернут и свернут.</span><span class="sxs-lookup"><span data-stu-id="2564b-104">The list is shown and hidden as the control expands and collapses.</span></span> <span data-ttu-id="2564b-105">В состоянии по умолчанию список свернут, отображая только один вариант.</span><span class="sxs-lookup"><span data-stu-id="2564b-105">In its default state, the list is collapsed, displaying only one choice.</span></span> <span data-ttu-id="2564b-106">Пользователь нажимает кнопку, чтобы увидеть полный список параметров.</span><span class="sxs-lookup"><span data-stu-id="2564b-106">The user clicks a button to see the complete list of options.</span></span>  

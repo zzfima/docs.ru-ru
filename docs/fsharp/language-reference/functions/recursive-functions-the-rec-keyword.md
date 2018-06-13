@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33562925"
 ---
 # <a name="recursive-functions-the-rec-keyword"></a><span data-ttu-id="b8d77-103">Рекурсивные функции. Ключевое слово rec</span><span class="sxs-lookup"><span data-stu-id="b8d77-103">Recursive Functions: The rec Keyword</span></span>
 

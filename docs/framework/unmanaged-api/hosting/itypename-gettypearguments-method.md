@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 77b3a898dd929a6eeadc466a04a0fdb10571ed7b
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33440165"
 ---
 # <a name="itypenamegettypearguments-method"></a><span data-ttu-id="3c962-102">Метод ITypeName::GetTypeArguments</span><span class="sxs-lookup"><span data-stu-id="3c962-102">ITypeName::GetTypeArguments Method</span></span>
 <span data-ttu-id="3c962-103">Этот метод поддерживает инфраструктуру .NET Framework и не предназначен для использования непосредственно из программного кода.</span><span class="sxs-lookup"><span data-stu-id="3c962-103">This method supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>  

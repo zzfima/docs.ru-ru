@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33543459"
 ---
 # <a name="globalization-and-localization"></a><span data-ttu-id="51822-102">Глобализация и локализация</span><span class="sxs-lookup"><span data-stu-id="51822-102">Globalization and Localization</span></span>
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]<span data-ttu-id="51822-103"> предоставляет широкие возможности для разработки международных приложений.</span><span class="sxs-lookup"><span data-stu-id="51822-103"> provides extensive support for the development of world-ready applications.</span></span>  

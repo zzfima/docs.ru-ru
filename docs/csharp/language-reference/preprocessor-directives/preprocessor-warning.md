@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33268187"
 ---
 # <a name="warning-c-reference"></a><span data-ttu-id="16999-102">#warning (справочник по C#)</span><span class="sxs-lookup"><span data-stu-id="16999-102">#warning (C# Reference)</span></span>
 <span data-ttu-id="16999-103">`#warning` позволяет создать предупреждение первого уровня из определенного места в коде.</span><span class="sxs-lookup"><span data-stu-id="16999-103">`#warning` lets you generate a level one warning from a specific location in your code.</span></span> <span data-ttu-id="16999-104">Пример:</span><span class="sxs-lookup"><span data-stu-id="16999-104">For example:</span></span>  

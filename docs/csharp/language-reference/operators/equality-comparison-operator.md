@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33273391"
 ---
 # <a name="-operator-c-reference"></a><span data-ttu-id="fc7df-102">Оператор == (справочник по C#)</span><span class="sxs-lookup"><span data-stu-id="fc7df-102">== Operator (C# Reference)</span></span>
 <span data-ttu-id="fc7df-103">Для предопределенных типов значений оператор равенства (`==`) возвращает значение true, если значения его операндов равны, и `false` в любых остальных случаях.</span><span class="sxs-lookup"><span data-stu-id="fc7df-103">For predefined value types, the equality operator (`==`) returns true if the values of its operands are equal, `false` otherwise.</span></span> <span data-ttu-id="fc7df-104">Для ссылочных типов (кроме [string](../../../csharp/language-reference/keywords/string.md)) оператор `==` возвращает `true`, если оба его операнда ссылаются на один и тот же объект.</span><span class="sxs-lookup"><span data-stu-id="fc7df-104">For reference types other than [string](../../../csharp/language-reference/keywords/string.md), `==` returns `true` if its two operands refer to the same object.</span></span> <span data-ttu-id="fc7df-105">Для типа `string` оператор `==` сравнивает значения строк.</span><span class="sxs-lookup"><span data-stu-id="fc7df-105">For the `string` type, `==` compares the values of the strings.</span></span>  

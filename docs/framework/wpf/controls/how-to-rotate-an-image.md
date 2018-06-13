@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33551899"
 ---
 # <a name="how-to-rotate-an-image"></a><span data-ttu-id="e601e-102">Практическое руководство. Поворот изображения</span><span class="sxs-lookup"><span data-stu-id="e601e-102">How to: Rotate an Image</span></span>
 <span data-ttu-id="e601e-103">В этом примере показано, как поворот изображения на 90 градусов с помощью <xref:System.Windows.Media.Imaging.BitmapImage.Rotation%2A> свойство <xref:System.Windows.Media.Imaging.BitmapImage>.</span><span class="sxs-lookup"><span data-stu-id="e601e-103">This example shows how to rotate an image 90 degrees by using a <xref:System.Windows.Media.Imaging.BitmapImage.Rotation%2A> property of a <xref:System.Windows.Media.Imaging.BitmapImage>.</span></span>  

@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33549160"
 ---
 # <a name="dialog-boxes-overview"></a><span data-ttu-id="27050-102">Общие сведения о диалоговых окнах</span><span class="sxs-lookup"><span data-stu-id="27050-102">Dialog Boxes Overview</span></span>
 <span data-ttu-id="27050-103">Автономные приложения обычно имеют главного окна, что оба отображает основных данных, по которому приложение работает и предоставляет функциональные возможности для обработки этих данных через [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] механизмы, такие как строки меню, панелей инструментов и строки состояния.</span><span class="sxs-lookup"><span data-stu-id="27050-103">Standalone applications typically have a main window that both displays the main data over which the application operates and exposes the functionality to process that data through [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] mechanisms like menu bars, tool bars, and status bars.</span></span> <span data-ttu-id="27050-104">Нетривиальное приложение может также отображать дополнительные окна для следующих целей:</span><span class="sxs-lookup"><span data-stu-id="27050-104">A non-trivial application may also display additional windows to do the following:</span></span>  

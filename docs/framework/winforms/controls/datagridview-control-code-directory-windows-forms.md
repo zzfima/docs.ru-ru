@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33529319"
 ---
 # <a name="datagridview-control-code-directory-windows-forms"></a><span data-ttu-id="cf87f-102">Примеры кода для элемента управления DataGridView (Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="cf87f-102">DataGridView Control Code Directory (Windows Forms)</span></span>
 <span data-ttu-id="cf87f-103">Этот раздел содержит ссылки на <xref:System.Windows.Forms.DataGridView>-связанные с примерами кода в документации по.</span><span class="sxs-lookup"><span data-stu-id="cf87f-103">This topic provides links to <xref:System.Windows.Forms.DataGridView>-related code examples available in the documentation.</span></span>  

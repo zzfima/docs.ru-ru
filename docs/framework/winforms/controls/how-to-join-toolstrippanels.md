@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33531847"
 ---
 # <a name="how-to-join-toolstrippanels"></a><span data-ttu-id="f3c87-102">Практическое руководство. Присоединение ToolStrip к ToolStripPanel</span><span class="sxs-lookup"><span data-stu-id="f3c87-102">How to: Join ToolStripPanels</span></span>
 <span data-ttu-id="f3c87-103">Элементы управления <xref:System.Windows.Forms.ToolStrip> можно подключать к <xref:System.Windows.Forms.ToolStripPanel> во время выполнения, благодаря чему обеспечивается гибкость приложений с интерфейсом MDI.</span><span class="sxs-lookup"><span data-stu-id="f3c87-103">You can join <xref:System.Windows.Forms.ToolStrip> controls to a <xref:System.Windows.Forms.ToolStripPanel> at run time, which provides the flexibility of multiple-document interface (MDI) applications.</span></span>  

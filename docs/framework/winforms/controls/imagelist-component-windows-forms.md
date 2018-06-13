@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33532942"
 ---
 # <a name="imagelist-component-windows-forms"></a><span data-ttu-id="47ecb-102">Компонент ImageList (Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="47ecb-102">ImageList Component (Windows Forms)</span></span>
 <span data-ttu-id="47ecb-103">Компонент `ImageList` в Windows Forms используется для хранения изображений, которые затем будут отображаться элементами управления.</span><span class="sxs-lookup"><span data-stu-id="47ecb-103">The Windows Forms `ImageList` component is used to store images, which can then be displayed by controls.</span></span> <span data-ttu-id="47ecb-104">Список изображений позволяет написать код для создания единого согласованного каталога изображений.</span><span class="sxs-lookup"><span data-stu-id="47ecb-104">An image list allows you to write code for a single, consistent catalog of images.</span></span>  

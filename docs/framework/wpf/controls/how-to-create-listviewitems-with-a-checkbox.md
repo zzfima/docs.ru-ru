@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33552679"
 ---
 # <a name="how-to-create-listviewitems-with-a-checkbox"></a><span data-ttu-id="91fbd-102">Практическое руководство. Создание ListViewItems с CheckBox</span><span class="sxs-lookup"><span data-stu-id="91fbd-102">How to: Create ListViewItems with a CheckBox</span></span>
 <span data-ttu-id="91fbd-103">В этом примере показано, как отобразить столбец <xref:System.Windows.Controls.CheckBox> элементы управления в <xref:System.Windows.Controls.ListView> элемент управления, использующий <xref:System.Windows.Controls.GridView>.</span><span class="sxs-lookup"><span data-stu-id="91fbd-103">This example shows how to display a column of <xref:System.Windows.Controls.CheckBox> controls in a <xref:System.Windows.Controls.ListView> control that uses a <xref:System.Windows.Controls.GridView>.</span></span>  

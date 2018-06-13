@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33552705"
 ---
 # <a name="how-to-handle-the-scrollchanged-event"></a><span data-ttu-id="4204c-102">Практическое руководство. Обработка события ScrollChanged</span><span class="sxs-lookup"><span data-stu-id="4204c-102">How to: Handle the ScrollChanged Event</span></span>
 ## <a name="example"></a><span data-ttu-id="4204c-103">Пример</span><span class="sxs-lookup"><span data-stu-id="4204c-103">Example</span></span>  

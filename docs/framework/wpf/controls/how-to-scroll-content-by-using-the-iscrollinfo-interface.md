@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33552887"
 ---
 # <a name="how-to-scroll-content-by-using-the-iscrollinfo-interface"></a><span data-ttu-id="4a408-102">Практическое руководство. Прокручивание содержимого с помощью интерфейса IScrollInfo</span><span class="sxs-lookup"><span data-stu-id="4a408-102">How to: Scroll Content by Using the IScrollInfo Interface</span></span>
 <span data-ttu-id="4a408-103">В этом примере показано, как выполнять прокрутку содержимого с помощью <xref:System.Windows.Controls.Primitives.IScrollInfo> интерфейса.</span><span class="sxs-lookup"><span data-stu-id="4a408-103">This example shows how to scroll content by using the <xref:System.Windows.Controls.Primitives.IScrollInfo> interface.</span></span>  

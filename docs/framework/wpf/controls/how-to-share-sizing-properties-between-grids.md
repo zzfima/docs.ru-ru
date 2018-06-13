@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33550869"
 ---
 # <a name="how-to-share-sizing-properties-between-grids"></a><span data-ttu-id="f201f-102">Практическое руководство. Совместное использование свойств размера между сетками</span><span class="sxs-lookup"><span data-stu-id="f201f-102">How to: Share Sizing Properties Between Grids</span></span>
 <span data-ttu-id="f201f-103">В этом примере показано применение общего доступа к данным размера столбцов и строк для <xref:System.Windows.Controls.Grid> элементов, чтобы сохранить согласованное изменение размеров.</span><span class="sxs-lookup"><span data-stu-id="f201f-103">This example shows how to share the sizing data of columns and rows between <xref:System.Windows.Controls.Grid> elements in order to keep sizing consistent.</span></span>  

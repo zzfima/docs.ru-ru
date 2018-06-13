@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33526742"
 ---
 # <a name="contextmenustrip-control-overview"></a><span data-ttu-id="a1759-102">Общие сведения об элементе управления ContextMenuStrip</span><span class="sxs-lookup"><span data-stu-id="a1759-102">ContextMenuStrip Control Overview</span></span>
 > [!NOTE]

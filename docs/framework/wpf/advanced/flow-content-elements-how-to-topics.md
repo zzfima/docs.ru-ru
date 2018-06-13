@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33546378"
 ---
 # <a name="flow-content-elements-how-to-topics"></a><span data-ttu-id="35145-102">Разделы пошагового руководства, посвященные элементам содержимого нефиксированного формата</span><span class="sxs-lookup"><span data-stu-id="35145-102">Flow Content Elements How-to Topics</span></span>
 <span data-ttu-id="35145-103">В этом разделе описываются способы выполнения типичных задач с использованием различных элементов содержимого нефиксированного формата и связанных функций.</span><span class="sxs-lookup"><span data-stu-id="35145-103">The topics in this section describe how to accomplish common tasks using various flow content elements and related features.</span></span>  

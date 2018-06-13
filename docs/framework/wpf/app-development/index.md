@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33548890"
 ---
 # <a name="application-development"></a><span data-ttu-id="8e2e4-102">Разработка приложений</span><span class="sxs-lookup"><span data-stu-id="8e2e4-102">Application Development</span></span>
 <a name="introduction"></a> <span data-ttu-id="8e2e4-103">Windows Presentation Foundation (WPF) — это платформа представления, который может использоваться для разработки следующих типов приложений:</span><span class="sxs-lookup"><span data-stu-id="8e2e4-103">Windows Presentation Foundation (WPF) is a presentation framework that can be used to develop the following types of applications:</span></span>  

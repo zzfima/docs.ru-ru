@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33551064"
 ---
 # <a name="listview-overviews"></a><span data-ttu-id="103b9-102">Общие сведения о ListView</span><span class="sxs-lookup"><span data-stu-id="103b9-102">ListView Overviews</span></span>
 <span data-ttu-id="103b9-103">В подразделах этого раздела показано, как использовать <xref:System.Windows.Controls.ListView> элемента управления.</span><span class="sxs-lookup"><span data-stu-id="103b9-103">The topics in this section show you how to use a <xref:System.Windows.Controls.ListView> control.</span></span>  

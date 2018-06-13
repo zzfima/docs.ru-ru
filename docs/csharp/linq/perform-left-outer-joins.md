@@ -8,6 +8,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33284281"
 ---
 # <a name="perform-left-outer-joins"></a><span data-ttu-id="f13bd-103">Выполнение левых внешних соединений</span><span class="sxs-lookup"><span data-stu-id="f13bd-103">Perform left outer joins</span></span>
 <span data-ttu-id="f13bd-104">Левое внешнее соединение — это соединение, при котором каждый элемент первой коллекции возвращается независимо от наличия взаимосвязанных элементов во второй коллекции.</span><span class="sxs-lookup"><span data-stu-id="f13bd-104">A left outer join is a join in which each element of the first collection is returned, regardless of whether it has any correlated elements in the second collection.</span></span> <span data-ttu-id="f13bd-105">LINQ можно использовать для левого внешнего соединения, вызвав метод <xref:System.Linq.Enumerable.DefaultIfEmpty%2A> на основании результатов группового соединения.</span><span class="sxs-lookup"><span data-stu-id="f13bd-105">You can use LINQ to perform a left outer join by calling the <xref:System.Linq.Enumerable.DefaultIfEmpty%2A> method on the results of a group join.</span></span>  

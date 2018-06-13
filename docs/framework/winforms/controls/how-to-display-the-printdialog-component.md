@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33532191"
 ---
 # <a name="how-to-display-the-printdialog-component"></a><span data-ttu-id="e2f02-102">Практическое руководство. Отображение компонента PrintDialog</span><span class="sxs-lookup"><span data-stu-id="e2f02-102">How to: Display the PrintDialog Component</span></span>
 <span data-ttu-id="e2f02-103"><xref:System.Windows.Forms.PrintDialog> Компонент является стандартной Windows диалоговое окно печати, многие ваши пользователи будут знакомы с.</span><span class="sxs-lookup"><span data-stu-id="e2f02-103">The <xref:System.Windows.Forms.PrintDialog> component is the standard Windows print dialog box that many of your users will be familiar with.</span></span> <span data-ttu-id="e2f02-104">Поскольку пользователям будет удобно работать с ней, он может оказаться эффективным для использования <xref:System.Windows.Forms.PrintDialog> компонента.</span><span class="sxs-lookup"><span data-stu-id="e2f02-104">Because your users will be immediately comfortable with it, it would be beneficial for you to use the <xref:System.Windows.Forms.PrintDialog> component.</span></span>  

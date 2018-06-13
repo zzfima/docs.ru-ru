@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33525540"
 ---
 # <a name="contextmenustrip-control"></a><span data-ttu-id="8e207-102">Элемент управления ContextMenuStrip</span><span class="sxs-lookup"><span data-stu-id="8e207-102">ContextMenuStrip Control</span></span>
 <span data-ttu-id="8e207-103">Элемент управления <xref:System.Windows.Forms.ContextMenuStrip> предоставляет контекстное меню, связываемое с каким-либо элементом управления.</span><span class="sxs-lookup"><span data-stu-id="8e207-103">The <xref:System.Windows.Forms.ContextMenuStrip> control provides a shortcut menu that you associate with a control.</span></span>  

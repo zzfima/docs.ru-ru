@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33547239"
 ---
 # <a name="optimizing-performance-other-recommendations"></a><span data-ttu-id="dd52a-102">Оптимизация производительности. Дополнительные рекомендации</span><span class="sxs-lookup"><span data-stu-id="dd52a-102">Optimizing Performance: Other Recommendations</span></span>
 <a name="introduction"></a> <span data-ttu-id="dd52a-103">В этом разделе содержатся рекомендации по улучшению производительности в дополнение к описанным в разделах статьи [Улучшение производительности приложений WPF](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md).</span><span class="sxs-lookup"><span data-stu-id="dd52a-103">This topic provides performance recommendations in addition to the ones covered by the topics in the [Optimizing WPF Application Performance](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md) section.</span></span>  

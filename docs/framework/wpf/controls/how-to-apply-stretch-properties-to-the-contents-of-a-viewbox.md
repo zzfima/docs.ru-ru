@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33552809"
 ---
 # <a name="how-to-apply-stretch-properties-to-the-contents-of-a-viewbox"></a><span data-ttu-id="0b149-102">Практическое руководство. Применение свойства Stretch к содержимому элемента Viewbox</span><span class="sxs-lookup"><span data-stu-id="0b149-102">How to: Apply Stretch Properties to the Contents of a Viewbox</span></span>
 ## <a name="example"></a><span data-ttu-id="0b149-103">Пример</span><span class="sxs-lookup"><span data-stu-id="0b149-103">Example</span></span>  

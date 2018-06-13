@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33550102"
 ---
 # <a name="how-to-persist-and-restore-application-scope-properties-across-application-sessions"></a><span data-ttu-id="d9934-102">Практическое руководство. Сохранение и восстановление свойств области определения приложения в сеансах приложения</span><span class="sxs-lookup"><span data-stu-id="d9934-102">How to: Persist and Restore Application-Scope Properties Across Application Sessions</span></span>
 <span data-ttu-id="d9934-103">В этом примере показано, как для сохранения свойств области приложения, когда приложение завершает работу и как для восстановления запустите свойств области приложения, когда приложение Далее.</span><span class="sxs-lookup"><span data-stu-id="d9934-103">This example shows how to persist application-scope properties when an application shuts down, and how to restore application-scope properties when an application is next launch.</span></span>  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33561918"
 ---
 # <a name="transformations"></a><span data-ttu-id="232b5-102">Преобразования</span><span class="sxs-lookup"><span data-stu-id="232b5-102">Transformations</span></span>
 <span data-ttu-id="232b5-103">Преобразования используются для поворота, масштабирования, преобразования и наклонять <xref:System.Windows.FrameworkElement> объектов.</span><span class="sxs-lookup"><span data-stu-id="232b5-103">Transforms are used to rotate, scale, translate, or skew <xref:System.Windows.FrameworkElement> objects.</span></span>  

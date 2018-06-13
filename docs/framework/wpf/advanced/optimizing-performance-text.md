@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33548874"
 ---
 # <a name="optimizing-performance-text"></a><span data-ttu-id="42e0d-102">Оптимизация производительности: отображение текста</span><span class="sxs-lookup"><span data-stu-id="42e0d-102">Optimizing Performance: Text</span></span>
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]<span data-ttu-id="42e0d-103">включает поддержку представления текстового контента с помощью многофункциональных элементов управления [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)].</span><span class="sxs-lookup"><span data-stu-id="42e0d-103"> includes support for the presentation of text content through the use of feature-rich [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] controls.</span></span> <span data-ttu-id="42e0d-104">В целом можно разделить отрисовку текста на три уровня.</span><span class="sxs-lookup"><span data-stu-id="42e0d-104">In general you can divide text rendering in three layers:</span></span>  

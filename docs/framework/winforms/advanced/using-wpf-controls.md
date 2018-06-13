@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33526608"
 ---
 # <a name="using-wpf-controls"></a><span data-ttu-id="6ce50-102">Использование элементов управления WPF</span><span class="sxs-lookup"><span data-stu-id="6ce50-102">Using WPF Controls</span></span>
 <span data-ttu-id="6ce50-103">Элементы управления Windows Presentation Foundation (WPF) можно использовать в приложениях Windows Forms.</span><span class="sxs-lookup"><span data-stu-id="6ce50-103">You can use Windows Presentation Foundation (WPF) controls in your Windows Forms-based applications.</span></span> <span data-ttu-id="6ce50-104">Хотя эти две различные технологии, они взаимодействуют.</span><span class="sxs-lookup"><span data-stu-id="6ce50-104">Although these are two different view technologies, they interoperate smoothly.</span></span>  

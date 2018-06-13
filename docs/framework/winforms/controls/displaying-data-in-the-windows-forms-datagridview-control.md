@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33529432"
 ---
 # <a name="displaying-data-in-the-windows-forms-datagridview-control"></a><span data-ttu-id="dfebe-102">Отображение данных с помощью элемента управления DataGridView в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="dfebe-102">Displaying Data in the Windows Forms DataGridView Control</span></span>
 <span data-ttu-id="dfebe-103">`DataGridView` Элемент управления используется для отображения данных из различных внешних источников данных.</span><span class="sxs-lookup"><span data-stu-id="dfebe-103">The `DataGridView` control is used to display data from a variety of external data sources.</span></span> <span data-ttu-id="dfebe-104">Кроме того можно добавить строки и столбцы в элемент управления и вручную заполнить его данными.</span><span class="sxs-lookup"><span data-stu-id="dfebe-104">Alternatively, you can add rows and columns to the control and manually populate it with data.</span></span>  

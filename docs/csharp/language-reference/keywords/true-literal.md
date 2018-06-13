@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33268987"
 ---
 # <a name="true-literal-c-reference"></a><span data-ttu-id="cd0df-102">Литерал true (Справочник по C#)</span><span class="sxs-lookup"><span data-stu-id="cd0df-102">true Literal (C# Reference)</span></span>
 <span data-ttu-id="cd0df-103">Представляет логическое значение true.</span><span class="sxs-lookup"><span data-stu-id="cd0df-103">Represents the boolean value true.</span></span>  

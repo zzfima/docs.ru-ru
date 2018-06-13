@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33547424"
 ---
 # <a name="printing-and-print-system-management"></a><span data-ttu-id="0815c-102">Печать и управление печатью</span><span class="sxs-lookup"><span data-stu-id="0815c-102">Printing and Print System Management</span></span>
 [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)]<span data-ttu-id="0815c-103"> и Microsoft .NET Framework вводит новый способ печати — это альтернатива [!INCLUDE[TLA#tla_gdi](../../../../includes/tlasharptla-gdi-md.md)] печати — и значительно расширенный набор управления системой печати [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)].</span><span class="sxs-lookup"><span data-stu-id="0815c-103"> and Microsoft .NET Framework introduce a new print path — an alternative to [!INCLUDE[TLA#tla_gdi](../../../../includes/tlasharptla-gdi-md.md)] printing — and a vastly expanded set of print system management [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)].</span></span>  

@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33531197"
 ---
 # <a name="how-to-display-images-in-cells-of-the-windows-forms-datagridview-control"></a><span data-ttu-id="2a975-102">Практическое руководство. Вывод изображений в ячейках элемента управления DataGridView в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="2a975-102">How to: Display Images in Cells of the Windows Forms DataGridView Control</span></span>
 <span data-ttu-id="2a975-103">Рисунок или изображение — одно из значений, которые могут быть отображены в строке данных.</span><span class="sxs-lookup"><span data-stu-id="2a975-103">A picture or graphic is one of the values that you can display in a row of data.</span></span> <span data-ttu-id="2a975-104">Как правило эти графики принимать форму фотография сотрудника или логотип компании.</span><span class="sxs-lookup"><span data-stu-id="2a975-104">Frequently, these graphics take the form of an employee's photograph or a company logo.</span></span>  

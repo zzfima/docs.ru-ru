@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33533719"
 ---
 # <a name="how-to-set-the-toolstrip-renderer-for-an-application"></a><span data-ttu-id="39807-102">Практическое руководство. Задание средства визуализации компонента ToolStrip для приложения</span><span class="sxs-lookup"><span data-stu-id="39807-102">How to: Set the ToolStrip Renderer for an Application</span></span>
 <span data-ttu-id="39807-103">Настройка внешнего вида элементов управления <xref:System.Windows.Forms.ToolStrip> может производиться отдельно для каждого из них или для всех элементов управления <xref:System.Windows.Forms.ToolStrip>, используемых в приложении.</span><span class="sxs-lookup"><span data-stu-id="39807-103">You can customize the appearance of your <xref:System.Windows.Forms.ToolStrip> controls individually or for all the <xref:System.Windows.Forms.ToolStrip> controls in your application.</span></span>  

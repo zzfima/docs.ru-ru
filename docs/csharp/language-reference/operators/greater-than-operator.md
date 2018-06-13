@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33273502"
 ---
 # <a name="gt-operator-c-reference"></a><span data-ttu-id="8c463-102">Оператор &gt; (справочник по C#)</span><span class="sxs-lookup"><span data-stu-id="8c463-102">&gt; Operator (C# Reference)</span></span>
 <span data-ttu-id="8c463-103">Все числовые типы и типы перечисления определяют оператор отношения "больше" (`>`), который возвращает `true`, если первый операнд больше второго. В противном случае возвращается `false`.</span><span class="sxs-lookup"><span data-stu-id="8c463-103">All numeric and enumeration types define a "greater than" relational operator (`>`) that returns `true` if the first operand is greater than the second, `false` otherwise.</span></span>  

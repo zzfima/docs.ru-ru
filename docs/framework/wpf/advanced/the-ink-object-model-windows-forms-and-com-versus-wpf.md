@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33548952"
 ---
 # <a name="the-ink-object-model-windows-forms-and-com-versus-wpf"></a><span data-ttu-id="a0d9f-102">Объектная модель рукописного ввода: Windows Forms и COM по сравнению с WPF</span><span class="sxs-lookup"><span data-stu-id="a0d9f-102">The Ink Object Model: Windows Forms and COM versus WPF</span></span>
 

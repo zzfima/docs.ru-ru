@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33525100"
 ---
 # <a name="metafiles-in-gdi"></a><span data-ttu-id="bf6d5-102">Метафайлы в GDI+</span><span class="sxs-lookup"><span data-stu-id="bf6d5-102">Metafiles in GDI+</span></span>
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]<span data-ttu-id="bf6d5-103"> предоставляет <xref:System.Drawing.Imaging.Metafile> класса, можно записывать и отображать метафайлы.</span><span class="sxs-lookup"><span data-stu-id="bf6d5-103"> provides the <xref:System.Drawing.Imaging.Metafile> class so that you can record and display metafiles.</span></span> <span data-ttu-id="bf6d5-104">Метафайл, также называемый векторным рисунком, — это изображение, сохраненное в виде последовательности команд и параметров рисования.</span><span class="sxs-lookup"><span data-stu-id="bf6d5-104">A metafile, also called a vector image, is an image that is stored as a sequence of drawing commands and settings.</span></span> <span data-ttu-id="bf6d5-105">Команды и параметры, сохраненные в <xref:System.Drawing.Imaging.Metafile> объекта можно хранить в памяти или сохранить файл или поток.</span><span class="sxs-lookup"><span data-stu-id="bf6d5-105">The commands and settings recorded in a <xref:System.Drawing.Imaging.Metafile> object can be stored in memory or saved to a file or stream.</span></span>  

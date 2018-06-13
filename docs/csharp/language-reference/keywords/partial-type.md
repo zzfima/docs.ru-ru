@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33266693"
 ---
 # <a name="partial-type-c-reference"></a><span data-ttu-id="9e12d-102">разделяемый (тип) (Справочник по C#)</span><span class="sxs-lookup"><span data-stu-id="9e12d-102">partial (Type) (C# Reference)</span></span>
 <span data-ttu-id="9e12d-103">Определения разделяемых типов позволяют разделять определения классов, структур и интерфейсов на несколько файлов.</span><span class="sxs-lookup"><span data-stu-id="9e12d-103">Partial type definitions allow for the definition of a class, struct, or interface to be split into multiple files.</span></span>  

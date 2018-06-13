@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33524538"
 ---
 # <a name="combobox-control-windows-forms"></a><span data-ttu-id="f6342-102">Элемент управления ComboBox (Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="f6342-102">ComboBox Control (Windows Forms)</span></span>
 <span data-ttu-id="f6342-103">Windows Forms `ComboBox` элемент управления используется для отображения данных в раскрывающемся поле со списком.</span><span class="sxs-lookup"><span data-stu-id="f6342-103">The Windows Forms `ComboBox` control is used to display data in a drop-down combo box.</span></span> <span data-ttu-id="f6342-104">По умолчанию `ComboBox` элемент управления состоит из двух частей: верхняя часть представляет собой текстовое поле, которое пользователь может ввести элемент списка.</span><span class="sxs-lookup"><span data-stu-id="f6342-104">By default, the `ComboBox` control appears in two parts: the top part is a text box that allows the user to type a list item.</span></span> <span data-ttu-id="f6342-105">Вторая часть представляет собой список, отображающий список элементов, из которых пользователь может выбрать один.</span><span class="sxs-lookup"><span data-stu-id="f6342-105">The second part is a list box that displays a list of items from which the user can select one.</span></span>  

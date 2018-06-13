@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33266114"
 ---
 # <a name="return-c-reference"></a><span data-ttu-id="82e58-102">return (Справочник по C#)</span><span class="sxs-lookup"><span data-stu-id="82e58-102">return (C# Reference)</span></span>
 <span data-ttu-id="82e58-103">Оператор `return` завершает выполнение метода, в котором он присутствует, и возвращает управление вызывавшему методу.</span><span class="sxs-lookup"><span data-stu-id="82e58-103">The `return` statement terminates execution of the method in which it appears and returns control to the calling method.</span></span> <span data-ttu-id="82e58-104">Он также возвращает необязательное значение.</span><span class="sxs-lookup"><span data-stu-id="82e58-104">It can also return an optional value.</span></span> <span data-ttu-id="82e58-105">Если метод имеет тип `void`, оператор `return` можно опустить.</span><span class="sxs-lookup"><span data-stu-id="82e58-105">If the method is a `void` type, the `return` statement can be omitted.</span></span>  

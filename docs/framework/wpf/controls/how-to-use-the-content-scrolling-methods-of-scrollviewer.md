@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33552770"
 ---
 # <a name="how-to-use-the-content-scrolling-methods-of-scrollviewer"></a><span data-ttu-id="1a6e3-102">Практическое руководство. Использование методов прокрутки содержимого ScrollViewer</span><span class="sxs-lookup"><span data-stu-id="1a6e3-102">How to: Use the Content-Scrolling Methods of ScrollViewer</span></span>
 <span data-ttu-id="1a6e3-103">В этом примере показано использование методов прокрутки <xref:System.Windows.Controls.ScrollViewer> элемента.</span><span class="sxs-lookup"><span data-stu-id="1a6e3-103">This example shows how to use the scrolling methods of the <xref:System.Windows.Controls.ScrollViewer> element.</span></span> <span data-ttu-id="1a6e3-104">Эти методы предоставляют добавочное прокрутку содержимого по строкам или по странице, в <xref:System.Windows.Controls.ScrollViewer>.</span><span class="sxs-lookup"><span data-stu-id="1a6e3-104">These methods provide incremental scrolling of content, either by line or by page, in a <xref:System.Windows.Controls.ScrollViewer>.</span></span>  

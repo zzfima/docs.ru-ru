@@ -8,6 +8,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33282396"
 ---
 # <a name="query-a-collection-of-objects"></a><span data-ttu-id="d472a-103">Запрос коллекции объектов</span><span class="sxs-lookup"><span data-stu-id="d472a-103">Query a collection of objects</span></span>
 <span data-ttu-id="d472a-104">В этом примере показано, как выполнить простой запрос к списку объектов `Student`.</span><span class="sxs-lookup"><span data-stu-id="d472a-104">This example shows how to perform a simple query over a list of `Student` objects.</span></span> <span data-ttu-id="d472a-105">Каждый объект `Student` содержит некоторые основные сведения об учащемся, а также список, отражающий баллы, которые он набрал по результатам четырех экзаменов.</span><span class="sxs-lookup"><span data-stu-id="d472a-105">Each `Student` object contains some basic information about the student, and a list that represents the student's scores on four examinations.</span></span>  

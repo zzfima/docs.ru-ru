@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33529744"
 ---
 # <a name="walkthrough-creating-a-windows-forms-control-that-takes-advantage-of-visual-studio-design-time-features"></a><span data-ttu-id="d3e55-102">Пошаговое руководство: Создание элемента управления Windows Forms, в котором используются преимущества возможностей Visual Studio, применяемых во время разработки</span><span class="sxs-lookup"><span data-stu-id="d3e55-102">Walkthrough: Creating a Windows Forms Control That Takes Advantage of Visual Studio Design-Time Features</span></span>
 <span data-ttu-id="d3e55-103">Возможности разработки для пользовательского элемента управления можно улучшить путем создания и настройки связанного с ним пользовательский конструктор.</span><span class="sxs-lookup"><span data-stu-id="d3e55-103">The design-time experience for a custom control can be enhanced by authoring an associated custom designer.</span></span>  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33529251"
 ---
 # <a name="controls-with-built-in-owner-drawing-support"></a><span data-ttu-id="a478c-102">Элементы управления Windows Forms со встроенной поддержки рисования владельцем</span><span class="sxs-lookup"><span data-stu-id="a478c-102">Controls with Built-In Owner-Drawing Support</span></span>
 <span data-ttu-id="a478c-103">Рисование владельцем в Windows Forms, иначе называемое пользовательским рисованием, — это способ изменения внешнего вида определенных элементов управления.</span><span class="sxs-lookup"><span data-stu-id="a478c-103">Owner drawing in Windows Forms, which is also known as custom drawing, is a technique for changing the visual appearance of certain controls.</span></span>  

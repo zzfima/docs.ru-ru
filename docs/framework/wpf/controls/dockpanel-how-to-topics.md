@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33550658"
 ---
 # <a name="dockpanel-how-to-topics"></a><span data-ttu-id="c6b64-102">Разделы руководства DockPanel</span><span class="sxs-lookup"><span data-stu-id="c6b64-102">DockPanel How-to Topics</span></span>
 <span data-ttu-id="c6b64-103">В подразделах этого раздела описывается использование <xref:System.Windows.Controls.DockPanel> элемент для размещения дочерних элементов вдоль края контейнера макета.</span><span class="sxs-lookup"><span data-stu-id="c6b64-103">The topics in this section describe how to use the <xref:System.Windows.Controls.DockPanel> element to position child elements along the edge of a layout container.</span></span>  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33546534"
 ---
 # <a name="how-to-refresh-a-page"></a><span data-ttu-id="d61d1-102">Как: обновление страницы</span><span class="sxs-lookup"><span data-stu-id="d61d1-102">How to: Refresh a Page</span></span>
 <span data-ttu-id="d61d1-103">В этом примере показано, как вызвать <xref:System.Windows.Navigation.NavigationWindow.Refresh%2A> метод для обновления текущего содержимого в <xref:System.Windows.Navigation.NavigationWindow>.</span><span class="sxs-lookup"><span data-stu-id="d61d1-103">This example shows how to call the <xref:System.Windows.Navigation.NavigationWindow.Refresh%2A> method to refresh the current content in a <xref:System.Windows.Navigation.NavigationWindow>.</span></span>  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33551140"
 ---
 # <a name="how-to-define-a-groupbox-template"></a><span data-ttu-id="49714-102">Практическое руководство. Определение шаблона GroupBox</span><span class="sxs-lookup"><span data-stu-id="49714-102">How to: Define a GroupBox Template</span></span>
 <span data-ttu-id="49714-103">В этом примере показано, как создать шаблон для <xref:System.Windows.Controls.GroupBox> элемента управления.</span><span class="sxs-lookup"><span data-stu-id="49714-103">This example shows how to create a template for a <xref:System.Windows.Controls.GroupBox> control.</span></span>  
