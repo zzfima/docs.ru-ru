@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579383"
 ---
 # <a name="insert-xml-data-using-xpathnavigator"></a><span data-ttu-id="a21bf-102">Вставка XML-данных с помощью XPathNavigator</span><span class="sxs-lookup"><span data-stu-id="a21bf-102">Insert XML Data using XPathNavigator</span></span>
 <span data-ttu-id="a21bf-103">Класс <xref:System.Xml.XPath.XPathNavigator> предоставляет набор методов для вставки в XML-документ одноуровневых узлов, дочерних узлов и узлов атрибутов.</span><span class="sxs-lookup"><span data-stu-id="a21bf-103">The <xref:System.Xml.XPath.XPathNavigator> class provides a set of methods used to insert sibling, child, and attribute nodes in an XML document.</span></span> <span data-ttu-id="a21bf-104">Для использования этих методов необходимо сделать редактируемым объект <xref:System.Xml.XPath.XPathNavigator>, то есть установить для свойства <xref:System.Xml.XPath.XPathNavigator.CanEdit%2A> значение `true`.</span><span class="sxs-lookup"><span data-stu-id="a21bf-104">In order to use these methods, the <xref:System.Xml.XPath.XPathNavigator> object must be editable, that is, its <xref:System.Xml.XPath.XPathNavigator.CanEdit%2A> property must be `true`.</span></span>  

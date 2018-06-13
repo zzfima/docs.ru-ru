@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579253"
 ---
 # <a name="enum-design"></a><span data-ttu-id="b7f2a-102">Разработка перечислений</span><span class="sxs-lookup"><span data-stu-id="b7f2a-102">Enum Design</span></span>
 <span data-ttu-id="b7f2a-103">Перечислимые типы — это особая разновидность типа значения.</span><span class="sxs-lookup"><span data-stu-id="b7f2a-103">Enums are a special kind of value type.</span></span> <span data-ttu-id="b7f2a-104">Существует два типа перечислений: простые перечисления и флага перечисления.</span><span class="sxs-lookup"><span data-stu-id="b7f2a-104">There are two kinds of enums: simple enums and flag enums.</span></span>  

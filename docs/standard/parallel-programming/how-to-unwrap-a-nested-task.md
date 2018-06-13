@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33580735"
 ---
 # <a name="how-to-unwrap-a-nested-task"></a><span data-ttu-id="581dd-102">Практическое руководство. Извлечение вложенной задачи из оболочки</span><span class="sxs-lookup"><span data-stu-id="581dd-102">How to: Unwrap a Nested Task</span></span>
 <span data-ttu-id="581dd-103">Вы можете вернуть задачу из метода, и затем ожидать ее выполнения или продолжить работу после нее, как показано в следующем примере.</span><span class="sxs-lookup"><span data-stu-id="581dd-103">You can return a task from a method, and then wait on or continue from that task, as shown in the following example:</span></span>  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33576397"
 ---
 # <a name="rules-for-inferring-simple-types"></a><span data-ttu-id="75dd0-102">Правила выведения простых типов</span><span class="sxs-lookup"><span data-stu-id="75dd0-102">Rules for Inferring Simple Types</span></span>
 <span data-ttu-id="75dd0-103">Описывает, как класс <xref:System.Xml.Schema.XmlSchemaInference> выводит тип данных для атрибутов и элементов.</span><span class="sxs-lookup"><span data-stu-id="75dd0-103">Describes how the <xref:System.Xml.Schema.XmlSchemaInference> class infers the data type for attributes and elements.</span></span>  

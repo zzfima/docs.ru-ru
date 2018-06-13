@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33580527"
 ---
 # <a name="parallel-diagnostic-tools"></a><span data-ttu-id="a5795-102">Средства диагностики параллельного выполнения</span><span class="sxs-lookup"><span data-stu-id="a5795-102">Parallel Diagnostic Tools</span></span>
 <span data-ttu-id="a5795-103">Visual Studio предоставляет расширенную поддержку отладки и профилирования многопоточных приложений.</span><span class="sxs-lookup"><span data-stu-id="a5795-103">Visual Studio provides extensive support for debugging and profiling multi-threaded applications.</span></span>  

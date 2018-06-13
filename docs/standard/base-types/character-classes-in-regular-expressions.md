@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579695"
 ---
 # <a name="character-classes-in-regular-expressions"></a><span data-ttu-id="df49b-102">Классы знаков в регулярных выражениях</span><span class="sxs-lookup"><span data-stu-id="df49b-102">Character Classes in Regular Expressions</span></span>
 <a name="Top"></a> <span data-ttu-id="df49b-103">Класс символов определяет набор символов, любой из которых может присутствовать во входной строке для успешного сопоставления.</span><span class="sxs-lookup"><span data-stu-id="df49b-103">A character class defines a set of characters, any one of which can occur in an input string for a match to succeed.</span></span> <span data-ttu-id="df49b-104">Язык регулярных выражений в .NET поддерживает следующие классы символов:</span><span class="sxs-lookup"><span data-stu-id="df49b-104">The regular expression language in .NET supports the following character classes:</span></span>  

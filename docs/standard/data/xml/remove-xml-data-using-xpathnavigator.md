@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33577037"
 ---
 # <a name="remove-xml-data-using-xpathnavigator"></a><span data-ttu-id="d24d6-102">Удаление XML-данных с помощью XPathNavigator</span><span class="sxs-lookup"><span data-stu-id="d24d6-102">Remove XML Data using XPathNavigator</span></span>
 <span data-ttu-id="d24d6-103">Класс <xref:System.Xml.XPath.XPathNavigator> располагает набором методов, используемых для удаления узлов и значений из XML-документа.</span><span class="sxs-lookup"><span data-stu-id="d24d6-103">The <xref:System.Xml.XPath.XPathNavigator> class provides a set of methods used to remove nodes and values from an XML document.</span></span> <span data-ttu-id="d24d6-104">Для использования этих методов необходимо сделать редактируемым объект <xref:System.Xml.XPath.XPathNavigator>, то есть установить для свойства <xref:System.Xml.XPath.XPathNavigator.CanEdit%2A> значение `true`.</span><span class="sxs-lookup"><span data-stu-id="d24d6-104">In order to use these methods, the <xref:System.Xml.XPath.XPathNavigator> object must be editable, that is, its <xref:System.Xml.XPath.XPathNavigator.CanEdit%2A> property must be `true`.</span></span>  

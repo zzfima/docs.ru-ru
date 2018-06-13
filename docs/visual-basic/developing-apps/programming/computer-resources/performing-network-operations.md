@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33583439"
 ---
 # <a name="performing-network-operations-visual-basic"></a><span data-ttu-id="01249-102">Выполнение сетевых операций (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="01249-102">Performing Network Operations (Visual Basic)</span></span>
 <span data-ttu-id="01249-103">В следующих таблицах перечислены задачи, связанные с объектом `My.Computer.Network`.</span><span class="sxs-lookup"><span data-stu-id="01249-103">The following tables list tasks associated with the `My.Computer.Network` object.</span></span>  

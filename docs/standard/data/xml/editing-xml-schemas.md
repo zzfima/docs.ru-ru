@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33577219"
 ---
 # <a name="editing-xml-schemas"></a><span data-ttu-id="2a653-102">Изменение XML-схем</span><span class="sxs-lookup"><span data-stu-id="2a653-102">Editing XML Schemas</span></span>
 <span data-ttu-id="2a653-103">Изменение схем XML является одной из самых важных возможностей модели SOM.</span><span class="sxs-lookup"><span data-stu-id="2a653-103">Editing an XML schema is one of the most important features of the Schema Object Model (SOM).</span></span> <span data-ttu-id="2a653-104">Все свойства модели SOM, относящиеся к работе перед компиляцией схемы, можно использовать для изменения существующих значений в схеме XML.</span><span class="sxs-lookup"><span data-stu-id="2a653-104">All of the pre-schema-compilation properties of the SOM can be used to change the existing values in an XML schema.</span></span> <span data-ttu-id="2a653-105">Затем можно повторно скомпилировать схему XML, чтобы изменения вступили в силу.</span><span class="sxs-lookup"><span data-stu-id="2a653-105">The XML schema can then be recompiled to reflect the changes.</span></span>  

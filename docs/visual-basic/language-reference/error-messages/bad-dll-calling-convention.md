@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33583842"
 ---
 # <a name="bad-dll-calling-convention"></a><span data-ttu-id="7820e-102">Недопустимое соглашение о вызовах DLL</span><span class="sxs-lookup"><span data-stu-id="7820e-102">Bad DLL calling convention</span></span>
 <span data-ttu-id="7820e-103">Аргументы, передаваемые в библиотеке динамической компоновки (DLL) должна в точности совпадать с ожидаемый подпрограммы.</span><span class="sxs-lookup"><span data-stu-id="7820e-103">Arguments passed to a dynamic-link library (DLL) must exactly match those expected by the routine.</span></span> <span data-ttu-id="7820e-104">Соглашения о вызовах содержат число, тип и порядок аргументов.</span><span class="sxs-lookup"><span data-stu-id="7820e-104">Calling conventions deal with number, type, and order of arguments.</span></span> <span data-ttu-id="7820e-105">Программа вызывает другую программу в DLL, которая передается неправильный тип или количество аргументов.</span><span class="sxs-lookup"><span data-stu-id="7820e-105">Your program may be calling a routine in a DLL that is being passed the wrong type or number of arguments.</span></span>  

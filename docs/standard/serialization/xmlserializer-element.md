@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33583257"
 ---
 # <a name="ltxmlserializergt-element"></a><span data-ttu-id="a7df1-102">Элемент &lt;xmlSerializer&gt;</span><span class="sxs-lookup"><span data-stu-id="a7df1-102">&lt;xmlSerializer&gt; Element</span></span>
 <span data-ttu-id="a7df1-103">Указывает, выполнена ли дополнительная проверка хода выполнения <xref:System.Xml.Serialization.XmlSerializer>.</span><span class="sxs-lookup"><span data-stu-id="a7df1-103">Specifies whether an additional check of progress of the <xref:System.Xml.Serialization.XmlSerializer> is done.</span></span>  

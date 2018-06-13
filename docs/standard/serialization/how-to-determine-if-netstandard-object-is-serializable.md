@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33580992"
 ---
 # <a name="how-to-determine-if-a-net-standard-object-is-serializable"></a><span data-ttu-id="21b89-103">Как: определить, является ли сериализуемый объект .NET Standard</span><span class="sxs-lookup"><span data-stu-id="21b89-103">How to: Determine if a .NET Standard object is serializable</span></span>
 

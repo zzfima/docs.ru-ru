@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33578863"
 ---
 # <a name="guidelines-for-collections"></a><span data-ttu-id="5abc5-102">Рекомендации по использованию коллекций</span><span class="sxs-lookup"><span data-stu-id="5abc5-102">Guidelines for Collections</span></span>
 <span data-ttu-id="5abc5-103">Любой тип, разработанные специально для использования группы объектов, содержащих некоторыми общими характеристиками можно рассматривать как коллекцию.</span><span class="sxs-lookup"><span data-stu-id="5abc5-103">Any type designed specifically to manipulate a group of objects having some common characteristic can be considered a collection.</span></span> <span data-ttu-id="5abc5-104">Почти всегда это подходит для таких типов, для реализации <xref:System.Collections.IEnumerable> или <xref:System.Collections.Generic.IEnumerable%601>, поэтому в этом разделе мы только рассмотрите возможность реализации одного или обоих этих интерфейсов подлежащих типов коллекций.</span><span class="sxs-lookup"><span data-stu-id="5abc5-104">It is almost always appropriate for such types to implement <xref:System.Collections.IEnumerable> or <xref:System.Collections.Generic.IEnumerable%601>, so in this section we only consider types implementing one or both of those interfaces to be collections.</span></span>  

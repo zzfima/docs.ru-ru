@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33581473"
 ---
 # <a name="serialization-samples-for-the-net-framework"></a><span data-ttu-id="7e92c-102">Образцы сериализации для платформы .NET Framework</span><span class="sxs-lookup"><span data-stu-id="7e92c-102">Serialization Samples for the .NET Framework</span></span>
 <span data-ttu-id="7e92c-103">В этом разделе показана сериализация объектов на платформе .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="7e92c-103">This section demonstrates serializing objects in the .NET Framework.</span></span>  

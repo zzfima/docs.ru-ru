@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33582903"
 ---
 # <a name="choose-between-traditional-web-apps-and-single-page-apps-spas"></a><span data-ttu-id="90815-103">Выбор между традиционными веб-приложениями и одностраничными приложениями</span><span class="sxs-lookup"><span data-stu-id="90815-103">Choose Between Traditional Web Apps and Single Page Apps (SPAs)</span></span>
 

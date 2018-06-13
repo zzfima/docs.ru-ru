@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33578928"
 ---
 # <a name="communication-in-a-microservice-architecture"></a><span data-ttu-id="d7d78-103">Взаимодействие в архитектуре микрослужб</span><span class="sxs-lookup"><span data-stu-id="d7d78-103">Communication in a microservice architecture</span></span>
 

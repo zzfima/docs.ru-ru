@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33577659"
 ---
 # <a name="common-io-tasks"></a><span data-ttu-id="3c57f-102">Распространенные задачи ввода-вывода</span><span class="sxs-lookup"><span data-stu-id="3c57f-102">Common I/O Tasks</span></span>
 <span data-ttu-id="3c57f-103">Пространство имен <xref:System.IO> предоставляет несколько классов, которые позволяют выполнять с файлами, каталогами и потоками различные действия, такие как чтение и запись.</span><span class="sxs-lookup"><span data-stu-id="3c57f-103">The <xref:System.IO> namespace provides several classes that allow for various actions, such as reading and writing, to be performed on files, directories, and streams.</span></span> <span data-ttu-id="3c57f-104">Дополнительные сведения см. в разделе [Файловый и потоковый ввод-вывод](../../../docs/standard/io/index.md).</span><span class="sxs-lookup"><span data-stu-id="3c57f-104">For more information, see [File and Stream I/O](../../../docs/standard/io/index.md).</span></span>  

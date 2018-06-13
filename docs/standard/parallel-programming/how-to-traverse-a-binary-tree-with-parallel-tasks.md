@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33580368"
 ---
 # <a name="how-to-traverse-a-binary-tree-with-parallel-tasks"></a><span data-ttu-id="fac83-102">Практическое руководство. Переход по двоичному дереву с помощью параллельных задач</span><span class="sxs-lookup"><span data-stu-id="fac83-102">How to: Traverse a Binary Tree with Parallel Tasks</span></span>
 <span data-ttu-id="fac83-103">В следующем примере представлено два способа применить параллельные задачи для обхода древовидной структуры данных.</span><span class="sxs-lookup"><span data-stu-id="fac83-103">The following example shows two ways in which parallel tasks can be used to traverse a tree data structure.</span></span> <span data-ttu-id="fac83-104">Создание такого дерева остается вам в качестве упражнения.</span><span class="sxs-lookup"><span data-stu-id="fac83-104">The creation of the tree itself is left as an exercise.</span></span>  

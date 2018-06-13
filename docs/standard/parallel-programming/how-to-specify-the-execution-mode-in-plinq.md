@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33580943"
 ---
 # <a name="how-to-specify-the-execution-mode-in-plinq"></a><span data-ttu-id="ae57a-102">Практическое руководство. Задание режима выполнения в PLINQ</span><span class="sxs-lookup"><span data-stu-id="ae57a-102">How to: Specify the Execution Mode in PLINQ</span></span>
 <span data-ttu-id="ae57a-103">В этом примере показано, как принудительно отключить эвристический анализ PLINQ по умолчанию, чтобы параллелизовать запрос независимо от его формы.</span><span class="sxs-lookup"><span data-stu-id="ae57a-103">This example shows how to force PLINQ to bypass its default heuristics and parallelize a query regardless of the query's shape.</span></span>  

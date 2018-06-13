@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33580901"
 ---
 # <a name="how-to-implement-a-producer-consumer-dataflow-pattern"></a><span data-ttu-id="21497-102">Практическое руководство. Реализация шаблона потока данных "производитель-получатель"</span><span class="sxs-lookup"><span data-stu-id="21497-102">How to: Implement a Producer-Consumer Dataflow Pattern</span></span>
 <span data-ttu-id="21497-103">В этом документе описан способ использования библиотеки потоков данных TPL для реализации шаблона "производитель-получатель".</span><span class="sxs-lookup"><span data-stu-id="21497-103">This document describes how to use the TPL Dataflow Library to implement a producer-consumer pattern.</span></span> <span data-ttu-id="21497-104">В этом шаблоне *производитель* отправляет сообщения в блок сообщений, а *потребитель* считывает сообщения из этого блока.</span><span class="sxs-lookup"><span data-stu-id="21497-104">In this pattern, the *producer* sends messages to a message block, and the *consumer* reads messages from that block.</span></span>  
