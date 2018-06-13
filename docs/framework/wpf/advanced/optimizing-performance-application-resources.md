@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33546599"
 ---
 # <a name="optimizing-performance-application-resources"></a>Оптимизация производительности: ресурсы приложения
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] позволяет совместно использовать ресурсы приложения, чтобы можно поддерживать согласованный внешний вид или поведение с помощью элементов одинакового типа. Этот раздел содержит несколько рекомендаций в этой области, которые могут помочь повысить производительность приложений.  

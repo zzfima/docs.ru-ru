@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33332534"
 ---
 # <a name="common-attributes-c"></a>Общие атрибуты (C#)
 В этом разделе описываются атрибуты, которые чаще всего используются в программах C#.  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33548991"
 ---
 # <a name="propertypath-xaml-syntax"></a>Синтаксис PropertyPath XAML
 <xref:System.Windows.PropertyPath> Поддерживает сложные встроенный объект [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] синтаксис для настройки различных свойств, которые принимают <xref:System.Windows.PropertyPath> тип со своим значением. Этот раздел документы <xref:System.Windows.PropertyPath> синтаксис применительно к синтаксисы привязки и анимации.  

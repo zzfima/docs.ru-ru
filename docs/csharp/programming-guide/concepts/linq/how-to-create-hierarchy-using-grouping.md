@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33327516"
 ---
 # <a name="how-to-create-hierarchy-using-grouping-c"></a>Практическое руководство. Создание иерархии с помощью группировки (C#)
 Этот пример показывает, как группировать данные и затем создавать код XML на основе группирования.  
