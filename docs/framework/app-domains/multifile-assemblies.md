@@ -17,6 +17,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32742514"
 ---
 # <a name="multifile-assemblies"></a><span data-ttu-id="107b5-102">Многофайловые сборки</span><span class="sxs-lookup"><span data-stu-id="107b5-102">Multifile Assemblies</span></span>
 <span data-ttu-id="107b5-103">Многофайловые сборки можно создавать с помощью компилятора командной строки или в [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)], используя Visual C++.</span><span class="sxs-lookup"><span data-stu-id="107b5-103">You can create multifile assemblies using command-line compilers or [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)] with Visual C++.</span></span> <span data-ttu-id="107b5-104">Один из файлов сборки обязательно должен содержать ее манифест.</span><span class="sxs-lookup"><span data-stu-id="107b5-104">One file in the assembly must contain the assembly manifest.</span></span> <span data-ttu-id="107b5-105">Кроме того, сборка, запускающая приложение, должна содержать точку входа, такую как метод Main или WinMain.</span><span class="sxs-lookup"><span data-stu-id="107b5-105">An assembly that starts an application must also contain an entry point, such as a Main or WinMain method.</span></span>  

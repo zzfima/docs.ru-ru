@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33482012"
 ---
 # <a name="microsofttransactionstransactionbridgeenlisttransactionfailure"></a><span data-ttu-id="ebd6a-102">Microsoft.Transactions.TransactionBridge.EnlistTransactionFailure</span><span class="sxs-lookup"><span data-stu-id="ebd6a-102">Microsoft.Transactions.TransactionBridge.EnlistTransactionFailure</span></span>
 <span data-ttu-id="ebd6a-103">Службе протокола WS-AT не удалось включить в список транзакцию, используя предоставленный контекст координации.</span><span class="sxs-lookup"><span data-stu-id="ebd6a-103">The WS-AT protocol service failed to enlist on a transaction using the provided coordination context.</span></span>  
