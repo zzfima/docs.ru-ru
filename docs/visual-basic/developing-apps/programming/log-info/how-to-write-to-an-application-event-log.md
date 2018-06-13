@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33590690"
 ---
 # <a name="how-to-write-to-an-application-event-log-visual-basic"></a><span data-ttu-id="b7183-102">Практическое руководство. Запись в журнал событий приложения (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b7183-102">How to: Write to an Application Event Log (Visual Basic)</span></span>
 <span data-ttu-id="b7183-103">Для записи информации о событиях, возникающих в приложении, можно использовать объекты `My.Application.Log` и `My.Log` .</span><span class="sxs-lookup"><span data-stu-id="b7183-103">You can use the `My.Application.Log` and `My.Log` objects to write information about events that occur in your application.</span></span> <span data-ttu-id="b7183-104">В этом примере показано, как настроить прослушиватель журнала событий, чтобы объект `My.Application.Log` записывал данные трассировки в журнал событий приложения.</span><span class="sxs-lookup"><span data-stu-id="b7183-104">This example shows how to configure an event log listener so `My.Application.Log` writes tracing information to the Application event log.</span></span>  

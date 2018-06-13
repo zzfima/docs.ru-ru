@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33589988"
 ---
 # <a name="function-39ltprocedurenamegt39-doesn39t-return-a-value-on-all-code-paths"></a><span data-ttu-id="458cd-102">Функция &#39; &lt;имя_процедуры&gt; &#39; &#39;t возвращает значение во всех путях кода</span><span class="sxs-lookup"><span data-stu-id="458cd-102">Function &#39;&lt;procedurename&gt;&#39; doesn&#39;t return a value on all code paths</span></span>
 <span data-ttu-id="458cd-103">Функция "\<procedurename >" не возвращает значение во всех путях кода.</span><span class="sxs-lookup"><span data-stu-id="458cd-103">Function '\<procedurename>' doesn't return a value on all code paths.</span></span> <span data-ttu-id="458cd-104">Отсутствует оператор «Return»?</span><span class="sxs-lookup"><span data-stu-id="458cd-104">Are you missing a 'Return' statement?</span></span>  

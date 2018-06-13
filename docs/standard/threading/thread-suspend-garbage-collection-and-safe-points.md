@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33582165"
 ---
 # <a name="threadsuspend-garbage-collection-and-safe-points"></a><span data-ttu-id="375cb-102">Метод Thread.Suspend, сборка мусора и безопасные точки</span><span class="sxs-lookup"><span data-stu-id="375cb-102">Thread.Suspend, Garbage Collection, and Safe Points</span></span>
 <span data-ttu-id="375cb-103">Когда вы вызываете для потока <xref:System.Threading.Thread.Suspend%2A?displayProperty=nameWithType>, система фиксирует запрос на приостановку потока и позволяет ему продолжить работу до безопасной точки, а лишь затем выполняет приостановку.</span><span class="sxs-lookup"><span data-stu-id="375cb-103">When you call <xref:System.Threading.Thread.Suspend%2A?displayProperty=nameWithType> on a thread, the system notes that a thread suspension has been requested and allows the thread to execute until it has reached a safe point before actually suspending the thread.</span></span> <span data-ttu-id="375cb-104">Безопасной точкой для потока считается такой этап выполнения, в котором можно безопасно выполнять сборку мусора.</span><span class="sxs-lookup"><span data-stu-id="375cb-104">A safe point for a thread is a point in its execution at which garbage collection can be performed.</span></span>  

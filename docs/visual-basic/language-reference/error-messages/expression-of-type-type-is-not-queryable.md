@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33589013"
 ---
 # <a name="expression-of-type-lttypegt-is-not-queryable"></a><span data-ttu-id="011b9-102">Выражение типа &lt;тип&gt; не поддерживает запросы</span><span class="sxs-lookup"><span data-stu-id="011b9-102">Expression of type &lt;type&gt; is not queryable</span></span>
 <span data-ttu-id="011b9-103">Выражение типа \<тип > не поддерживает запросы.</span><span class="sxs-lookup"><span data-stu-id="011b9-103">Expression of type \<type> is not queryable.</span></span> <span data-ttu-id="011b9-104">Убедитесь, что не пропущена сборки ссылки или импорт пространства имен для поставщика LINQ.</span><span class="sxs-lookup"><span data-stu-id="011b9-104">Make sure you are not missing an assembly reference and/or namespace import for the LINQ provider.</span></span>  

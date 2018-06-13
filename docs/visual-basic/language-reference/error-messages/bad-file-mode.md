@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33587388"
 ---
 # <a name="bad-file-mode"></a><span data-ttu-id="8a4dd-102">Недопустимый режим файла</span><span class="sxs-lookup"><span data-stu-id="8a4dd-102">Bad file mode</span></span>
 <span data-ttu-id="8a4dd-103">Операторы, используемые для управления содержимым файла должны соответствовать режим, в котором открыт файл.</span><span class="sxs-lookup"><span data-stu-id="8a4dd-103">Statements used in manipulating file contents must be appropriate to the mode in which the file was opened.</span></span> <span data-ttu-id="8a4dd-104">Возможные причины:</span><span class="sxs-lookup"><span data-stu-id="8a4dd-104">Possible causes include:</span></span>  

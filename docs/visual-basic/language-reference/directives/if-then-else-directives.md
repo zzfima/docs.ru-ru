@@ -25,6 +25,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33591085"
 ---
 # <a name="ifthenelse-directives"></a><span data-ttu-id="6b406-102">Директивы #If...Then...#Else</span><span class="sxs-lookup"><span data-stu-id="6b406-102">#If...Then...#Else Directives</span></span>
 <span data-ttu-id="6b406-103">Условно компилирует выбранные блоки кода Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="6b406-103">Conditionally compiles selected blocks of Visual Basic code.</span></span>  

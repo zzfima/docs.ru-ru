@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33600650"
 ---
 # <a name="argument-39ltargumentnamegt39-must-be-greater-than-or-equal-to--1"></a><span data-ttu-id="b7faf-102">Аргумент &#39; &lt;имя_аргумента&gt; &#39; должно быть больше или равен -1</span><span class="sxs-lookup"><span data-stu-id="b7faf-102">Argument &#39;&lt;argumentname&gt;&#39; must be greater than or equal to -1</span></span>
 <span data-ttu-id="b7faf-103">Значение аргумента меньше -1.</span><span class="sxs-lookup"><span data-stu-id="b7faf-103">An argument's value is less than -1.</span></span>  

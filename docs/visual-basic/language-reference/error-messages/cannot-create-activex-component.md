@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33585961"
 ---
 # <a name="cannot-create-activex-component"></a><span data-ttu-id="d62e3-102">Не удается создать компонент ActiveX</span><span class="sxs-lookup"><span data-stu-id="d62e3-102">Cannot create ActiveX Component</span></span>
 <span data-ttu-id="d62e3-103">Вы попытались разместить элемент управления ActiveX на форме во время разработки или добавить в проект форму с элементом управления ActiveX, однако в реестре не удалось найти соответствующие сведения.</span><span class="sxs-lookup"><span data-stu-id="d62e3-103">You tried to place an ActiveX control on a form at design time or add a form to a project with an ActiveX control on it, but the associated information in the registry could not be found.</span></span>  

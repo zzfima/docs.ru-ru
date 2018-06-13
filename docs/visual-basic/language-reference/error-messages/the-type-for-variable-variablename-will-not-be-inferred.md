@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33594287"
 ---
 # <a name="the-type-for-variable-39ltvariablenamegt39-will-not-be-inferred-because-it-is-bound-to-a-field-in-an-enclosing-scope"></a><span data-ttu-id="7f6d9-102">Тип для переменной &#39; &lt;variablename&gt; &#39; не будет определен, так как она привязана к полю во включающей области</span><span class="sxs-lookup"><span data-stu-id="7f6d9-102">The type for variable &#39;&lt;variablename&gt;&#39; will not be inferred because it is bound to a field in an enclosing scope</span></span>
 <span data-ttu-id="7f6d9-103">Тип для переменной "\<variablename >" не будет определен, так как она привязана к полю во включающей области.</span><span class="sxs-lookup"><span data-stu-id="7f6d9-103">The type for variable '\<variablename>' will not be inferred because it is bound to a field in an enclosing scope.</span></span> <span data-ttu-id="7f6d9-104">Измените имя "\<variablename >", или используйте полное доменное имя (например, «Me.variablename» или «MyBase.variablename»).</span><span class="sxs-lookup"><span data-stu-id="7f6d9-104">Either change the name of '\<variablename>', or use the fully qualified name (for example, 'Me.variablename' or 'MyBase.variablename').</span></span>  

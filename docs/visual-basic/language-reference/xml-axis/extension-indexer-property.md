@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33603474"
 ---
 # <a name="extension-indexer-property-visual-basic"></a><span data-ttu-id="485b7-102">Свойство-индексатор расширения (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="485b7-102">Extension Indexer Property (Visual Basic)</span></span>
 <span data-ttu-id="485b7-103">Обеспечивает доступ к отдельным элементам коллекции.</span><span class="sxs-lookup"><span data-stu-id="485b7-103">Provides access to individual elements in a collection.</span></span>  

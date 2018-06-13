@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33585532"
 ---
 # <a name="device-io-error"></a><span data-ttu-id="20ba3-102">Ошибка ввода-вывода устройства</span><span class="sxs-lookup"><span data-stu-id="20ba3-102">Device I/O error</span></span>
 <span data-ttu-id="20ba3-103">Программа использует устройство, такое как принтер или дисковый накопитель, произошла ошибка ввода-вывода.</span><span class="sxs-lookup"><span data-stu-id="20ba3-103">An input or output error occurred while your program was using a device such as a printer or disk drive.</span></span>  

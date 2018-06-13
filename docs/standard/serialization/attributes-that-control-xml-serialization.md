@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33585043"
 ---
 # <a name="attributes-that-control-xml-serialization"></a><span data-ttu-id="5e6c0-102">Атрибуты управления сериализацией XML</span><span class="sxs-lookup"><span data-stu-id="5e6c0-102">Attributes That Control XML Serialization</span></span>
 <span data-ttu-id="5e6c0-103">Для управления способом, с помощью которого <xref:System.Xml.Serialization.XmlSerializer> сериализует или десериализует экземпляр класса, к классам и членам класса можно применять атрибуты, указанные в следующей таблице.</span><span class="sxs-lookup"><span data-stu-id="5e6c0-103">You can apply the attributes in the following table to classes and class members to control the way in which the <xref:System.Xml.Serialization.XmlSerializer> serializes or deserializes an instance of the class.</span></span> <span data-ttu-id="5e6c0-104">Сведения о том, как эти атрибуты управляют XML-сериализацией, см. в разделе [Управление сериализацией XML с использованием атрибутов](../../../docs/standard/serialization/controlling-xml-serialization-using-attributes.md).</span><span class="sxs-lookup"><span data-stu-id="5e6c0-104">To understand how these attributes control XML serialization, see [Controlling XML Serialization Using Attributes](../../../docs/standard/serialization/controlling-xml-serialization-using-attributes.md).</span></span>  

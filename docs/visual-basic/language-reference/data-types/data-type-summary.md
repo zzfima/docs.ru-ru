@@ -42,6 +42,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33591798"
 ---
 # <a name="data-type-summary-visual-basic"></a><span data-ttu-id="9a838-102">Сводка типов данных (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="9a838-102">Data Type Summary (Visual Basic)</span></span>
 <span data-ttu-id="9a838-103">В следующей таблице показаны типы данных Visual Basic, их вспомогательные типами среды CLR, их выделение номинальный хранилища и их диапазоны значений.</span><span class="sxs-lookup"><span data-stu-id="9a838-103">The following table shows the Visual Basic data types, their supporting common language runtime types, their nominal storage allocation, and their value ranges.</span></span>  

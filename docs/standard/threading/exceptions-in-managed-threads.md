@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33591577"
 ---
 # <a name="exceptions-in-managed-threads"></a><span data-ttu-id="1fe02-102">Исключения в управляемых потоках</span><span class="sxs-lookup"><span data-stu-id="1fe02-102">Exceptions in Managed Threads</span></span>
 <span data-ttu-id="1fe02-103">Начиная с .NET Framework версии 2.0, среда CLR позволяет большинству необработанных исключений выполняться в потоках.</span><span class="sxs-lookup"><span data-stu-id="1fe02-103">Starting with the .NET Framework version 2.0, the common language runtime allows most unhandled exceptions in threads to proceed naturally.</span></span> <span data-ttu-id="1fe02-104">Как правило, это означает, что необработанное исключение будет вызывать завершение работы приложения.</span><span class="sxs-lookup"><span data-stu-id="1fe02-104">In most cases this means that the unhandled exception causes the application to terminate.</span></span>  

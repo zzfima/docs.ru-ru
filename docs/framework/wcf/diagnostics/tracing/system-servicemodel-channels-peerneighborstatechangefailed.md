@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33478723"
 ---
 # <a name="systemservicemodelchannelspeerneighborstatechangefailed"></a><span data-ttu-id="361dd-102">System.ServiceModel.Channels.PeerNeighborStateChangeFailed</span><span class="sxs-lookup"><span data-stu-id="361dd-102">System.ServiceModel.Channels.PeerNeighborStateChangeFailed</span></span>
 <span data-ttu-id="361dd-103">Сбой состояния соседнего узла.</span><span class="sxs-lookup"><span data-stu-id="361dd-103">A neighbor's state was corrupted.</span></span>  

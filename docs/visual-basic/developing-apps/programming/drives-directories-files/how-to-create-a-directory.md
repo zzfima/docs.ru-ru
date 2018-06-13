@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33583959"
 ---
 # <a name="how-to-create-a-directory-in-visual-basic"></a><span data-ttu-id="b9fa1-102">Практическое руководство. Создание каталога в Visual Basic</span><span class="sxs-lookup"><span data-stu-id="b9fa1-102">How to: Create a Directory in Visual Basic</span></span>
 <span data-ttu-id="b9fa1-103">Для создания каталога используйте метод `CreateDirectory` объекта `My.Computer.FileSystem`.</span><span class="sxs-lookup"><span data-stu-id="b9fa1-103">Use the `CreateDirectory` method of the `My.Computer.FileSystem` object to create directories.</span></span>  

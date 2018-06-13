@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33591746"
 ---
 # <a name="constants-and-enumerations-visual-basic"></a><span data-ttu-id="530be-102">Константы и перечисления (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="530be-102">Constants and Enumerations (Visual Basic)</span></span>
 <span data-ttu-id="530be-103">В Visual Basic предусмотрен ряд предопределенных констант и перечислений для разработчиков.</span><span class="sxs-lookup"><span data-stu-id="530be-103">Visual Basic supplies a number of predefined constants and enumerations for developers.</span></span> <span data-ttu-id="530be-104">Константы хранят значения, которые остаются неизменными во время выполнения приложения.</span><span class="sxs-lookup"><span data-stu-id="530be-104">Constants store values that remain constant throughout the execution of an application.</span></span> <span data-ttu-id="530be-105">Перечисления — это удобный способ работать с наборами связанных констант и связывать постоянные значения с именами.</span><span class="sxs-lookup"><span data-stu-id="530be-105">Enumerations provide a convenient way to work with sets of related constants, and to associate constant values with names.</span></span>  

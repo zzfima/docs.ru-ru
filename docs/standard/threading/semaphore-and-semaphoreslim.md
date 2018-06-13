@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33591316"
 ---
 # <a name="semaphore-and-semaphoreslim"></a><span data-ttu-id="0409b-102">Классы Semaphore и SemaphoreSlim</span><span class="sxs-lookup"><span data-stu-id="0409b-102">Semaphore and SemaphoreSlim</span></span>
 <span data-ttu-id="0409b-103"><xref:System.Threading.Semaphore?displayProperty=nameWithType> Класс представляет собой именованный (общесистемный) или локальный семафор.</span><span class="sxs-lookup"><span data-stu-id="0409b-103">The <xref:System.Threading.Semaphore?displayProperty=nameWithType> class represents a named (systemwide) or local semaphore.</span></span> <span data-ttu-id="0409b-104">Он является тонкой оболочкой вокруг объекта семафора Win32.</span><span class="sxs-lookup"><span data-stu-id="0409b-104">It is a thin wrapper around the Win32 semaphore object.</span></span> <span data-ttu-id="0409b-105">Семафоры Win32 являются семафорами счета, которые могут быть использованы для управления доступом к пулу ресурсов.</span><span class="sxs-lookup"><span data-stu-id="0409b-105">Win32 semaphores are counting semaphores, which can be used to control access to a pool of resources.</span></span>  

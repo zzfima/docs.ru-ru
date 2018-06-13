@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33592019"
 ---
 # <a name="overview-of-synchronization-primitives"></a><span data-ttu-id="dde42-102">Обзор примитивов синхронизации</span><span class="sxs-lookup"><span data-stu-id="dde42-102">Overview of Synchronization Primitives</span></span>
 <a name="top"></a> <span data-ttu-id="dde42-103">Платформа .NET Framework предоставляет ряд примитивов синхронизации для управления взаимодействием потоков и предотвращения состояний гонки.</span><span class="sxs-lookup"><span data-stu-id="dde42-103">The .NET Framework provides a range of synchronization primitives for controlling the interactions of threads and avoiding race conditions.</span></span> <span data-ttu-id="dde42-104">Их можно условно разделить на три категории: блокировка, сигнал и блокированные операции.</span><span class="sxs-lookup"><span data-stu-id="dde42-104">These can be roughly divided into three categories: locking, signaling, and interlocked operations.</span></span>  

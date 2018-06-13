@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33595096"
 ---
 # <a name="variable-39ltvariablenamegt39-hides-a-variable-in-an-enclosing-block"></a><span data-ttu-id="f2eb8-102">Переменная &#39; &lt;variablename&gt; &#39; скрывает переменную во внешнем блоке</span><span class="sxs-lookup"><span data-stu-id="f2eb8-102">Variable &#39;&lt;variablename&gt;&#39; hides a variable in an enclosing block</span></span>
 <span data-ttu-id="f2eb8-103">Переменная, заключенном в блоке имеет имя, совпадающее с именем другой локальной переменной.</span><span class="sxs-lookup"><span data-stu-id="f2eb8-103">A variable enclosed in a block has the same name as another local variable.</span></span>  

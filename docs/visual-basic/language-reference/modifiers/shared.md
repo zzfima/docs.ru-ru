@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33604553"
 ---
 # <a name="shared-visual-basic"></a><span data-ttu-id="d06d6-102">Shared (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="d06d6-102">Shared (Visual Basic)</span></span>
 <span data-ttu-id="d06d6-103">Указывает, что один или несколько объявленных программных элементов связаны с классом или структурой целиком, а не с определенным экземпляром класса или структуры.</span><span class="sxs-lookup"><span data-stu-id="d06d6-103">Specifies that one or more declared programming elements are associated with a class or structure at large, and not with a specific instance of the class or structure.</span></span>  

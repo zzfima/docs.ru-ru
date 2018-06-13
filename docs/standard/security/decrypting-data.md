@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33589101"
 ---
 # <a name="decrypting-data"></a><span data-ttu-id="a49c1-102">Расшифровка данных</span><span class="sxs-lookup"><span data-stu-id="a49c1-102">Decrypting Data</span></span>
 <span data-ttu-id="a49c1-103">Расшифровка представляет собой операцию, обратную операции шифрования.</span><span class="sxs-lookup"><span data-stu-id="a49c1-103">Decryption is the reverse operation of encryption.</span></span> <span data-ttu-id="a49c1-104">Для шифрования с секретным ключом необходимо знать как ключ, так и вектор инициализации, которые использовались при шифровании данных.</span><span class="sxs-lookup"><span data-stu-id="a49c1-104">For secret-key encryption, you must know both the key and IV that were used to encrypt the data.</span></span> <span data-ttu-id="a49c1-105">Для шифрования с открытым ключом необходимо знать либо открытый ключ (если данные были зашифрованы при помощи закрытого ключа), либо закрытый ключ (если данные были зашифрованы при помощи открытого ключа).</span><span class="sxs-lookup"><span data-stu-id="a49c1-105">For public-key encryption, you must know either the public key (if the data was encrypted using the private key) or the private key (if the data was encrypted using the public key).</span></span>  

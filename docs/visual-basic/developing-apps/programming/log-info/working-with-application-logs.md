@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33592045"
 ---
 # <a name="working-with-application-logs-in-visual-basic"></a><span data-ttu-id="bdc4d-102">Работа с журналами приложения в Visual Basic</span><span class="sxs-lookup"><span data-stu-id="bdc4d-102">Working with Application Logs in Visual Basic</span></span>
 <span data-ttu-id="bdc4d-103">Объекты `My.Applicaton.Log` и `My.Log` упрощают запись сообщений и данных трассировки в журналы.</span><span class="sxs-lookup"><span data-stu-id="bdc4d-103">The `My.Applicaton.Log` and `My.Log` objects make it easy to write logging and tracing information to logs.</span></span>  

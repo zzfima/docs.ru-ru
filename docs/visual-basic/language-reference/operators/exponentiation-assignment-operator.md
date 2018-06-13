@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33603500"
 ---
 # <a name="-operator-visual-basic"></a><span data-ttu-id="02a45-102">Оператор ^= (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="02a45-102">^= Operator (Visual Basic)</span></span>
 <span data-ttu-id="02a45-103">Возводит значение переменной или свойства в степень выражения и присваивает результат переменной или свойству.</span><span class="sxs-lookup"><span data-stu-id="02a45-103">Raises the value of a variable or property to the power of an expression and assigns the result back to the variable or property.</span></span>  

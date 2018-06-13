@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33589045"
 ---
 # <a name="how-to-call-a-web-service-asynchronously-visual-basic"></a><span data-ttu-id="86be9-102">Практическое руководство. Асинхронный вызов веб-службы (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="86be9-102">How to: Call a Web Service Asynchronously (Visual Basic)</span></span>
 <span data-ttu-id="86be9-103">В этом примере обработчик присоединяется к асинхронному обработчику событий веб-службы таким образом, чтобы получать результаты вызова асинхронного метода.</span><span class="sxs-lookup"><span data-stu-id="86be9-103">This example attaches a handler to a Web service's asynchronous handler event, so that it can retrieve the result of an asynchronous method call.</span></span> <span data-ttu-id="86be9-104">В этом примере используется веб-служба DemoTemperatureService, которая находится на веб-сайте http://www.xmethods.net.</span><span class="sxs-lookup"><span data-stu-id="86be9-104">This example used the DemoTemperatureService Web service at http://www.xmethods.net.</span></span>  

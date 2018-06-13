@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33590187"
 ---
 # <a name="cannot-refer-to-an-instance-member-of-a-class-from-within-a-shared-method-or-shared-member-initializer-without-an-explicit-instance-of-the-class"></a><span data-ttu-id="73ce8-102">Не удается обратиться к члену экземпляра класса из совместно используемого метода или совместно используемого инициализатора без явного указания экземпляра этого класса</span><span class="sxs-lookup"><span data-stu-id="73ce8-102">Cannot refer to an instance member of a class from within a shared method or shared member initializer without an explicit instance of the class</span></span>
 <span data-ttu-id="73ce8-103">Вы попытались ссылается на член, не являющийся общим класса из общей процедуры.</span><span class="sxs-lookup"><span data-stu-id="73ce8-103">You have tried to refer to a non-shared member of a class from within a shared procedure.</span></span> <span data-ttu-id="73ce8-104">Ниже приведен пример такой ситуации.</span><span class="sxs-lookup"><span data-stu-id="73ce8-104">The following example demonstrates such a situation.</span></span>  

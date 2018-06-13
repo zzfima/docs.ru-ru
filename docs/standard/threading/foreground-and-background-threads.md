@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33583082"
 ---
 # <a name="foreground-and-background-threads"></a><span data-ttu-id="6075c-102">Основные и фоновые потоки</span><span class="sxs-lookup"><span data-stu-id="6075c-102">Foreground and Background Threads</span></span>
 <span data-ttu-id="6075c-103">Управляемый поток может быть основным или фоновым.</span><span class="sxs-lookup"><span data-stu-id="6075c-103">A managed thread is either a background thread or a foreground thread.</span></span> <span data-ttu-id="6075c-104">Фоновые потоки отличаются от основных только в одном аспекте: фоновый поток не поддерживает управляемое выполнение среды выполнения.</span><span class="sxs-lookup"><span data-stu-id="6075c-104">Background threads are identical to foreground threads with one exception: a background thread does not keep the managed execution environment running.</span></span> <span data-ttu-id="6075c-105">После того, как в управляемом процессе (где управляемой сборкой является файл EXE) остановятся все основные потоки, система принудительно останавливает все фоновые потоки и завершает работу процесса.</span><span class="sxs-lookup"><span data-stu-id="6075c-105">Once all foreground threads have been stopped in a managed process (where the .exe file is a managed assembly), the system stops all background threads and shuts down.</span></span>  

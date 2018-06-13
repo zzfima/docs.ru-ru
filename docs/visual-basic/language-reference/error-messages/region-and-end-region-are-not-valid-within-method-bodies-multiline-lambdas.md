@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33593237"
 ---
 # <a name="39region39-and-39end-region39-statements-are-not-valid-within-method-bodiesmultiline-lambdas"></a><span data-ttu-id="8d862-102">&#39;#Region&#39; и &#39;#End Region&#39; недопустимы в телах/многострочной лямбде метод</span><span class="sxs-lookup"><span data-stu-id="8d862-102">&#39;#Region&#39; and &#39;#End Region&#39; statements are not valid within method bodies/multiline lambdas</span></span>
 <span data-ttu-id="8d862-103">`#Region` Блок должен быть объявлен на уровне класса, модуля или пространства имен.</span><span class="sxs-lookup"><span data-stu-id="8d862-103">The `#Region` block must be declared at a class, module, or namespace level.</span></span> <span data-ttu-id="8d862-104">Сворачиваемой области может включать один или несколько процедур, но не может начинаться или заканчиваться внутри процедуры.</span><span class="sxs-lookup"><span data-stu-id="8d862-104">A collapsible region can include one or more procedures, but it cannot begin or end inside of a procedure.</span></span>  

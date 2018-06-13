@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33584863"
 ---
 # <a name="attribute-39ltattributenamegt39-cannot-be-applied-multiple-times"></a><span data-ttu-id="1bc4d-102">Атрибут &#39; &lt;attributename&gt; &#39; не может применяться несколько раз</span><span class="sxs-lookup"><span data-stu-id="1bc4d-102">Attribute &#39;&lt;attributename&gt;&#39; cannot be applied multiple times</span></span>
 <span data-ttu-id="1bc4d-103">Атрибут может применяться только один раз.</span><span class="sxs-lookup"><span data-stu-id="1bc4d-103">The attribute can only be applied once.</span></span> <span data-ttu-id="1bc4d-104">`AttributeUsage` Атрибут определяет, может ли атрибут применяться более одного раза.</span><span class="sxs-lookup"><span data-stu-id="1bc4d-104">The `AttributeUsage` attribute determines whether an attribute can be applied more than once.</span></span>  

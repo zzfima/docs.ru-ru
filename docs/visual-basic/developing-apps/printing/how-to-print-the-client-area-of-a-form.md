@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33583995"
 ---
 # <a name="how-to-print-the-client-area-of-a-form-visual-basic"></a><span data-ttu-id="f5970-102">Практическое руководство. Печать клиентской области формы (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="f5970-102">How to: Print the Client Area of a Form (Visual Basic)</span></span>
 <span data-ttu-id="f5970-103">Компонент <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> позволяет быстро напечатать изображение формы без использования компонента <xref:System.Drawing.Printing.PrintDocument> .</span><span class="sxs-lookup"><span data-stu-id="f5970-103">The <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> component enables you to quickly print an image of a form without using a <xref:System.Drawing.Printing.PrintDocument> component.</span></span> <span data-ttu-id="f5970-104">Ниже показано, как напечатать клиентскую область формы без строки заголовка, границ и полос прокрутки.</span><span class="sxs-lookup"><span data-stu-id="f5970-104">The following procedure shows how to print just the client area of a form, without the title bar, borders, and scroll bars.</span></span>  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33604488"
 ---
 # <a name="imports-statement-net-namespace-and-type"></a><span data-ttu-id="7f294-102">Оператор Imports (пространство имен .NET и тип)</span><span class="sxs-lookup"><span data-stu-id="7f294-102">Imports Statement (.NET Namespace and Type)</span></span>
 <span data-ttu-id="7f294-103">Разрешает типа ссылаться на них без указания полного имени пространства имен.</span><span class="sxs-lookup"><span data-stu-id="7f294-103">Enables type names to be referenced without namespace qualification.</span></span>  

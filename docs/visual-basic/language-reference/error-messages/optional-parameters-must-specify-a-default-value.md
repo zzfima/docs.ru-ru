@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33593920"
 ---
 # <a name="optional-parameters-must-specify-a-default-value"></a><span data-ttu-id="a483c-102">Для необязательных параметров должно быть задано значение по умолчанию</span><span class="sxs-lookup"><span data-stu-id="a483c-102">Optional parameters must specify a default value</span></span>
 <span data-ttu-id="a483c-103">Необязательные параметры необходимо указать значения по умолчанию, которые можно использовать, если параметр не указан в вызывающей процедуре.</span><span class="sxs-lookup"><span data-stu-id="a483c-103">Optional parameters must provide default values that can be used if no parameter is supplied by a calling procedure.</span></span>  

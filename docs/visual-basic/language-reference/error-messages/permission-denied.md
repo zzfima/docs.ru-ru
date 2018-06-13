@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33595999"
 ---
 # <a name="permission-denied-visual-basic"></a><span data-ttu-id="54e3b-102">Доступ запрещен (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="54e3b-102">Permission denied (Visual Basic)</span></span>
 <span data-ttu-id="54e3b-103">Была предпринята попытка записи на диск защищен от записи или доступа к заблокированному файлу.</span><span class="sxs-lookup"><span data-stu-id="54e3b-103">An attempt was made to write to a write-protected disk or to access a locked file.</span></span>  

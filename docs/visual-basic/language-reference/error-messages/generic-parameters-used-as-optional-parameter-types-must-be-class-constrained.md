@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33590043"
 ---
 # <a name="generic-parameters-used-as-optional-parameter-types-must-be-class-constrained"></a><span data-ttu-id="60b8b-102">Универсальные параметры, используемые как типы необязательных параметров, должны быть ограничены классом</span><span class="sxs-lookup"><span data-stu-id="60b8b-102">Generic parameters used as optional parameter types must be class constrained</span></span>
 <span data-ttu-id="60b8b-103">Процедура объявлена с необязательным параметром, который использует параметр типа, который не обязательно должен быть ссылочным типом.</span><span class="sxs-lookup"><span data-stu-id="60b8b-103">A procedure is declared with an optional parameter that uses a type parameter that is not constrained to be a reference type.</span></span>  

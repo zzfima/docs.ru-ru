@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33588230"
 ---
 # <a name="39as-any39-is-not-supported-in-39declare39-statements"></a><span data-ttu-id="4976b-102">&#39;As Any&#39; не поддерживается в &#39;Declare&#39; инструкций</span><span class="sxs-lookup"><span data-stu-id="4976b-102">&#39;As Any&#39; is not supported in &#39;Declare&#39; statements</span></span>
 <span data-ttu-id="4976b-103">`Any` Использование типа данных с `Declare` операторы в Visual Basic 6.0 и более ранних версий, чтобы разрешить использование аргументов, которые могут содержать любой тип данных.</span><span class="sxs-lookup"><span data-stu-id="4976b-103">The `Any` data type was used with `Declare` statements in Visual Basic 6.0 and earlier versions to permit the use of arguments that could contain any type of data.</span></span> <span data-ttu-id="4976b-104">Visual Basic поддерживает перегрузку, однако и это делает `Any` устаревший тип данных.</span><span class="sxs-lookup"><span data-stu-id="4976b-104">Visual Basic supports overloading, however, and so makes the `Any` data type obsolete.</span></span>  

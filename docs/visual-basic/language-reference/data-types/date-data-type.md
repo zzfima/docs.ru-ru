@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33591824"
 ---
 # <a name="date-data-type-visual-basic"></a><span data-ttu-id="824e2-102">Тип данных Date (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="824e2-102">Date Data Type (Visual Basic)</span></span>
 <span data-ttu-id="824e2-103">Содержит 64-разрядные (8-байтные) значения IEEE, представляющие даты в диапазоне от 1 января 0001 года до 31 декабря 9999 года и время от 00:00:00 (полночь) до 23:59:9999999.</span><span class="sxs-lookup"><span data-stu-id="824e2-103">Holds IEEE 64-bit (8-byte) values that represent dates ranging from January 1 of the year 0001 through December 31 of the year 9999, and times from 12:00:00 AM (midnight) through 11:59:59.9999999 PM.</span></span> <span data-ttu-id="824e2-104">Каждое приращение представляет 100 наносекунд затраченного времени с начала 1 января 1 года по григорианскому календарю.</span><span class="sxs-lookup"><span data-stu-id="824e2-104">Each increment represents 100 nanoseconds of elapsed time since the beginning of January 1 of the year 1 in the Gregorian calendar.</span></span> <span data-ttu-id="824e2-105">Максимальное значение представляет 100 наносекунд перед началом 1 января 10 000 года.</span><span class="sxs-lookup"><span data-stu-id="824e2-105">The maximum value represents 100 nanoseconds before the beginning of January 1 of the year 10000.</span></span>  

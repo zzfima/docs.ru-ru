@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33592344"
 ---
 # <a name="version-tolerant-serialization"></a><span data-ttu-id="43984-102">Независимая от версий сериализация</span><span class="sxs-lookup"><span data-stu-id="43984-102">Version tolerant serialization</span></span>
 <span data-ttu-id="43984-103">В платформе .NET Framework версий 1.0 и 1.1 создание сериализуемых типов, которые можно повторно использовать от одной версии приложения к другой, было проблематичным.</span><span class="sxs-lookup"><span data-stu-id="43984-103">In version 1.0 and 1.1 of the .NET Framework, creating serializable types that would be reusable from one version of an application to the next was problematic.</span></span> <span data-ttu-id="43984-104">Если тип был изменен путем добавления дополнительных полей, возникала следующая проблема:</span><span class="sxs-lookup"><span data-stu-id="43984-104">If a type was modified by adding extra fields, the following problems would occur:</span></span>  

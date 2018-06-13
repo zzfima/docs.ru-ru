@@ -25,6 +25,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33590790"
 ---
 # <a name="single-data-type-visual-basic"></a><span data-ttu-id="41db1-102">Тип данных Single (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="41db1-102">Single Data Type (Visual Basic)</span></span>
 <span data-ttu-id="41db1-103">Содержит знаком IEEE 32 бита (4-байтовое) число одинарной точности числа с плавающей запятой в диапазоне от - 3, 4028235E + 38 до - 1, 401298E-45 для отрицательных значений и от 1, 401298E-45 до 3, 4028235E + 38 для положительных значений.</span><span class="sxs-lookup"><span data-stu-id="41db1-103">Holds signed IEEE 32-bit (4-byte) single-precision floating-point numbers ranging in value from -3.4028235E+38 through -1.401298E-45 for negative values and from 1.401298E-45 through 3.4028235E+38 for positive values.</span></span> <span data-ttu-id="41db1-104">Числа одинарной точности сохраняют приближенные значения вещественным числом.</span><span class="sxs-lookup"><span data-stu-id="41db1-104">Single-precision numbers store an approximation of a real number.</span></span>  
