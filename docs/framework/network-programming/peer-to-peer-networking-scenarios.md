@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33395457"
 ---
 # <a name="peer-to-peer-networking-scenarios"></a><span data-ttu-id="824c3-102">Сценарии организации одноранговой сети</span><span class="sxs-lookup"><span data-stu-id="824c3-102">Peer-to-Peer Networking Scenarios</span></span>
 <span data-ttu-id="824c3-103">Одноранговые сети обеспечивают реализацию или расширение следующих сценариев:</span><span class="sxs-lookup"><span data-stu-id="824c3-103">Peer-to-peer networking enables or enhances the following scenarios:</span></span>  

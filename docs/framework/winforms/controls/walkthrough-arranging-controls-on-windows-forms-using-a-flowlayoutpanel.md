@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33541772"
 ---
 # <a name="walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel"></a><span data-ttu-id="cf2cf-102">Пример. Упорядочение элементов управления в формах Windows Forms с помощью элемента FlowLayoutPanel</span><span class="sxs-lookup"><span data-stu-id="cf2cf-102">Walkthrough: Arranging Controls on Windows Forms Using a FlowLayoutPanel</span></span>
 <span data-ttu-id="cf2cf-103">В некоторых приложениях требуется форма, макет которой изменяется надлежащим образом при изменении размера формы или содержимого.</span><span class="sxs-lookup"><span data-stu-id="cf2cf-103">Some applications require a form with a layout that arranges itself appropriately as the form is resized or as the contents change in size.</span></span> <span data-ttu-id="cf2cf-104">Если необходим динамический макет и вы не хотите обрабатывать события <xref:System.Windows.Forms.Control.Layout> явно в коде, рассмотрите возможность использования панели макета.</span><span class="sxs-lookup"><span data-stu-id="cf2cf-104">When you need a dynamic layout and you do not want to handle <xref:System.Windows.Forms.Control.Layout> events explicitly in your code, consider using a layout panel.</span></span>  

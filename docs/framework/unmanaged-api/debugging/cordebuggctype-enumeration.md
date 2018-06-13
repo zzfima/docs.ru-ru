@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e74f564a483d80fd6312cf015802750d48e73ca7
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33403999"
 ---
 # <a name="cordebuggctype-enumeration"></a><span data-ttu-id="dccf2-102">Перечисление CorDebugGCType</span><span class="sxs-lookup"><span data-stu-id="dccf2-102">CorDebugGCType Enumeration</span></span>
 <span data-ttu-id="dccf2-103">Указывает, где выполняется сборщик мусора: на рабочей станции или на сервере.</span><span class="sxs-lookup"><span data-stu-id="dccf2-103">Indicates whether the garbage collector is running on a workstation or a server.</span></span>  

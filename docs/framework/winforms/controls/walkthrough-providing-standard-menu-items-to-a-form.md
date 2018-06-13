@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33541490"
 ---
 # <a name="walkthrough-providing-standard-menu-items-to-a-form"></a><span data-ttu-id="523f6-102">Пошаговое руководство. Создание стандартных пунктов меню для формы</span><span class="sxs-lookup"><span data-stu-id="523f6-102">Walkthrough: Providing Standard Menu Items to a Form</span></span>
 <span data-ttu-id="523f6-103">С помощью элемента управления <xref:System.Windows.Forms.MenuStrip> можно создавать стандартные меню для форм.</span><span class="sxs-lookup"><span data-stu-id="523f6-103">You can provide a standard menu for your forms with the <xref:System.Windows.Forms.MenuStrip> control.</span></span>  

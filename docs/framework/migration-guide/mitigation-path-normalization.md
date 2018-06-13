@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33389540"
 ---
 # <a name="mitigation-path-normalization"></a><span data-ttu-id="8ba52-102">Устранение рисков. Нормализация путей</span><span class="sxs-lookup"><span data-stu-id="8ba52-102">Mitigation: Path Normalization</span></span>
 <span data-ttu-id="8ba52-103">Начиная с приложений, ориентированных на [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], нормализация путей в .NET Framework изменилась.</span><span class="sxs-lookup"><span data-stu-id="8ba52-103">Starting with apps the target  the [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], path normalization in the .NET Framework has changed.</span></span>  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33543876"
 ---
 # <a name="how-to-make-an-object-follow-the-mouse-pointer"></a><span data-ttu-id="1512f-102">Практическое руководство. Создание объекта, следующего за указателем мыши</span><span class="sxs-lookup"><span data-stu-id="1512f-102">How to: Make an Object Follow the Mouse Pointer</span></span>
 <span data-ttu-id="1512f-103">В этом примере показано, как изменить размеры объекта, когда указатель мыши перемещается на экране.</span><span class="sxs-lookup"><span data-stu-id="1512f-103">This example shows how to change the dimensions of an object when the mouse pointer moves on the screen.</span></span>  

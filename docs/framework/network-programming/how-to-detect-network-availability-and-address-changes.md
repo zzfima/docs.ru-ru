@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33396263"
 ---
 # <a name="how-to-detect-network-availability-and-address-changes"></a><span data-ttu-id="53415-102">Практическое руководство. Определение доступности сети и изменений адреса</span><span class="sxs-lookup"><span data-stu-id="53415-102">How to: Detect Network Availability and Address Changes</span></span>
 <span data-ttu-id="53415-103">В этом примере показано, как обнаружить изменения в сетевом адресе интерфейса.</span><span class="sxs-lookup"><span data-stu-id="53415-103">This sample shows how to detect changes in the network address of an interface.</span></span>  

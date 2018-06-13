@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33542162"
 ---
 # <a name="toolstrip-control-architecture"></a><span data-ttu-id="879d0-102">Архитектура элемента управления ToolStrip</span><span class="sxs-lookup"><span data-stu-id="879d0-102">ToolStrip Control Architecture</span></span>
 <span data-ttu-id="879d0-103"><xref:System.Windows.Forms.ToolStrip> И <xref:System.Windows.Forms.ToolStripItem> классы предоставляют гибкую расширяемую систему для отображения элементов на панели инструментов, меню и строки состояния.</span><span class="sxs-lookup"><span data-stu-id="879d0-103">The <xref:System.Windows.Forms.ToolStrip> and <xref:System.Windows.Forms.ToolStripItem> classes provide a flexible, extensible system for displaying toolbar, status, and menu items.</span></span> <span data-ttu-id="879d0-104">Эти классы содержатся в <xref:System.Windows.Forms> пространство имен и они обычно именуются с префиксом «ToolStrip» (такие как <xref:System.Windows.Forms.ToolStripOverflow>) или с суффиксом «Полосы» (например, <xref:System.Windows.Forms.MenuStrip>).</span><span class="sxs-lookup"><span data-stu-id="879d0-104">These classes are all contained in the <xref:System.Windows.Forms> namespace and they are all typically named with the "ToolStrip" prefix (such as <xref:System.Windows.Forms.ToolStripOverflow>) or with the "Strip" suffix (such as <xref:System.Windows.Forms.MenuStrip>).</span></span>  

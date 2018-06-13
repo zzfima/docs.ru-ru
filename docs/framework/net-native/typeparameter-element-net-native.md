@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33393872"
 ---
 # <a name="lttypeparametergt-element-net-native"></a><span data-ttu-id="993e4-102">Элемент &lt;TypeParameter&gt; (машинный код .NET)</span><span class="sxs-lookup"><span data-stu-id="993e4-102">&lt;TypeParameter&gt; Element (.NET Native)</span></span>
 <span data-ttu-id="993e4-103">Применяет политику к типу, представленному аргументом типа , переданным методу.</span><span class="sxs-lookup"><span data-stu-id="993e4-103">Applies policy to the type represented by a Type argument passed to a method.</span></span>  

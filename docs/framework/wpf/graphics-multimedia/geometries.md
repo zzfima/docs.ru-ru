@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33556059"
 ---
 # <a name="geometries"></a><span data-ttu-id="694c9-102">Геометрия</span><span class="sxs-lookup"><span data-stu-id="694c9-102">Geometries</span></span>
 <span data-ttu-id="694c9-103"><xref:System.Windows.Media.Geometry> — Это универсальный класс, используемый для отрисовки [!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)] графики, объектов проверки нажатия и определения области отсечения</span><span class="sxs-lookup"><span data-stu-id="694c9-103"><xref:System.Windows.Media.Geometry> is a versatile class, used to render [!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)] graphics, hit-test objects, and define clipping regions</span></span>  

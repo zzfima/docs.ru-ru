@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33540677"
 ---
 # <a name="listview-control-overview-windows-forms"></a><span data-ttu-id="ece57-102">Общие сведения об элементе управления ListView (Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="ece57-102">ListView Control Overview (Windows Forms)</span></span>
 <span data-ttu-id="ece57-103">Элемент управления <xref:System.Windows.Forms.ListView> Windows Forms отображает список элементов со значками.</span><span class="sxs-lookup"><span data-stu-id="ece57-103">The Windows Forms <xref:System.Windows.Forms.ListView> control displays a list of items with icons.</span></span> <span data-ttu-id="ece57-104">Представление списка можно использовать для создания пользовательского интерфейса, аналогичного правой области окна проводника.</span><span class="sxs-lookup"><span data-stu-id="ece57-104">You can use a list view to create a user interface like the right pane of Windows Explorer.</span></span> <span data-ttu-id="ece57-105">Элемент управления имеет четыре режима представления: LargeIcon, SmallIcon, списка и сведений.</span><span class="sxs-lookup"><span data-stu-id="ece57-105">The control has four view modes: LargeIcon, SmallIcon, List, and Details.</span></span>  

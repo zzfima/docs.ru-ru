@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33553795"
 ---
 # <a name="panel-how-to-topics"></a><span data-ttu-id="130bb-102">Разделы руководства по Panel</span><span class="sxs-lookup"><span data-stu-id="130bb-102">Panel How-to Topics</span></span>
 <span data-ttu-id="130bb-103">В подразделах этого раздела описывается использование <xref:System.Windows.Controls.Panel> элемент и связанных [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)].</span><span class="sxs-lookup"><span data-stu-id="130bb-103">The topics in this section describe how to use the <xref:System.Windows.Controls.Panel> element and related [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)].</span></span>  

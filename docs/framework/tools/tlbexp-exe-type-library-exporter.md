@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33408822"
 ---
 # <a name="tlbexpexe-type-library-exporter"></a><span data-ttu-id="cd15e-102">Tlbexp.exe (программа экспорта библиотек типов)</span><span class="sxs-lookup"><span data-stu-id="cd15e-102">Tlbexp.exe (Type Library Exporter)</span></span>
 <span data-ttu-id="cd15e-103">Программа экспорта библиотек типов создает библиотеку типов, описывающую типы, определенные в сборке среды CLR.</span><span class="sxs-lookup"><span data-stu-id="cd15e-103">The Type Library Exporter generates a type library that describes the types defined in a common language runtime assembly.</span></span>  

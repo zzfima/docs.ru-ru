@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33541785"
 ---
 # <a name="how-to-simulate-mouse-and-keyboard-events-in-code"></a><span data-ttu-id="2d3df-102">Практическое руководство. Имитация событий мыши и клавиатуры в коде</span><span class="sxs-lookup"><span data-stu-id="2d3df-102">How to: Simulate Mouse and Keyboard Events in Code</span></span>
 <span data-ttu-id="2d3df-103">В Windows Forms предоставляется несколько возможностей для программной имитации ввода данных с помощью мыши и клавиатуры.</span><span class="sxs-lookup"><span data-stu-id="2d3df-103">Windows Forms provides several options for programmatically simulating mouse and keyboard input.</span></span> <span data-ttu-id="2d3df-104">В этом разделе приведен обзор этих возможностей.</span><span class="sxs-lookup"><span data-stu-id="2d3df-104">This topic provides an overview of these options.</span></span>  

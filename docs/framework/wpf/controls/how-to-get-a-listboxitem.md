@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33552731"
 ---
 # <a name="how-to-get-a-listboxitem"></a><span data-ttu-id="e78e4-102">Практическое руководство. Получение элемента ListBoxItem</span><span class="sxs-lookup"><span data-stu-id="e78e4-102">How to: Get a ListBoxItem</span></span>
 <span data-ttu-id="e78e4-103">Если нужно получить определенный <xref:System.Windows.Controls.ListBoxItem> с определенного индекса в <xref:System.Windows.Controls.ListBox>, можно использовать <xref:System.Windows.Controls.ItemContainerGenerator>.</span><span class="sxs-lookup"><span data-stu-id="e78e4-103">If you need to get a specific <xref:System.Windows.Controls.ListBoxItem> at a particular index in a <xref:System.Windows.Controls.ListBox>, you can use an <xref:System.Windows.Controls.ItemContainerGenerator>.</span></span>  

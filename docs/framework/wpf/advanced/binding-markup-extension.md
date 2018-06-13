@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33541889"
 ---
 # <a name="binding-markup-extension"></a><span data-ttu-id="04f8b-102">Привязка расширения разметки</span><span class="sxs-lookup"><span data-stu-id="04f8b-102">Binding Markup Extension</span></span>
 <span data-ttu-id="04f8b-103">Определяет значение свойства на значение с привязкой к данным, создавая объект промежуточного выражения и интерпретируя контекст данных, который применяется к элементу и его привязке во время выполнения.</span><span class="sxs-lookup"><span data-stu-id="04f8b-103">Defers a property value to be a data-bound value, creating an intermediate expression object and interpreting the data context that applies to the element and its binding at run time.</span></span>  

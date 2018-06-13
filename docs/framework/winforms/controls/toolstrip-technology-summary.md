@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33541915"
 ---
 # <a name="toolstrip-technology-summary"></a><span data-ttu-id="e6313-102">Технологии, положенные в основу работы элемента управления ToolStrip</span><span class="sxs-lookup"><span data-stu-id="e6313-102">ToolStrip Technology Summary</span></span>
 <span data-ttu-id="e6313-103">В этом разделе содержится сводная информация о системе управления `ToolStrip` и классах, поддерживающих ее использование.</span><span class="sxs-lookup"><span data-stu-id="e6313-103">This topic summarizes information about the `ToolStrip` control and the classes that support its use.</span></span>  

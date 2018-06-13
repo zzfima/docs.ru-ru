@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 4b985aeb97621e552e9e97581e67cae029d019ef
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33405897"
 ---
 # <a name="setpekind-method"></a><span data-ttu-id="64876-102">Метод SetPEKind</span><span class="sxs-lookup"><span data-stu-id="64876-102">SetPEKind Method</span></span>
 <span data-ttu-id="64876-103">Определяет переносимый исполняемый тип, зависящий от компьютера или конкретного компьютера.</span><span class="sxs-lookup"><span data-stu-id="64876-103">Determines the portable executable type, either machine-specific or machine-agnostic.</span></span>  

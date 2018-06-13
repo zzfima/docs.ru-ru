@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33396289"
 ---
 # <a name="net-native-general-troubleshooting"></a><span data-ttu-id="c942a-102">Машинный код .NET: Устранение общих неполадок</span><span class="sxs-lookup"><span data-stu-id="c942a-102">.NET Native General Troubleshooting</span></span>
 <span data-ttu-id="c942a-103">В этом разделе описаны способы устранения возможных проблем, с которыми можно столкнуться при разработке приложения с помощью [!INCLUDE[net_native](../../../includes/net-native-md.md)].</span><span class="sxs-lookup"><span data-stu-id="c942a-103">This topic describes how to troubleshoot potential issues that you might encounter when developing apps with [!INCLUDE[net_native](../../../includes/net-native-md.md)].</span></span>  

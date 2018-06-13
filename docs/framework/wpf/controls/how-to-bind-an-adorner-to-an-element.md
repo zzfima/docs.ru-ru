@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33552556"
 ---
 # <a name="how-to-bind-an-adorner-to-an-element"></a><span data-ttu-id="9924b-102">Практическое руководство. Привязка графического элемента к элементу</span><span class="sxs-lookup"><span data-stu-id="9924b-102">How to: Bind an Adorner to an Element</span></span>
 <span data-ttu-id="9924b-103">В этом примере показано, как программным способом привязки графического элемента с заданным <xref:System.Windows.UIElement>.</span><span class="sxs-lookup"><span data-stu-id="9924b-103">This example shows how to programmatically bind an adorner to a specified <xref:System.Windows.UIElement>.</span></span>  

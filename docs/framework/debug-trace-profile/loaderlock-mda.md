@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33388203"
 ---
 # <a name="loaderlock-mda"></a><span data-ttu-id="7248a-102">Помощник по отладке управляемого кода loaderLock</span><span class="sxs-lookup"><span data-stu-id="7248a-102">loaderLock MDA</span></span>
 <span data-ttu-id="7248a-103">Помощник по отладке управляемого кода `loaderLock` (MDA) определяет попытки выполнения управляемого кода в потоке, который удерживает блокировку загрузчика операционной системы Microsoft Windows.</span><span class="sxs-lookup"><span data-stu-id="7248a-103">The `loaderLock` managed debugging assistant (MDA) detects attempts to execute managed code on a thread that holds the Microsoft Windows operating system loader lock.</span></span>  <span data-ttu-id="7248a-104">Любое подобное выполнение кода недопустимо, поскольку оно может привести к взаимоблокировке и использованию библиотек DLL до того, как они будут инициализированы загрузчиком операционной системы.</span><span class="sxs-lookup"><span data-stu-id="7248a-104">Any such execution is illegal because it can lead to deadlocks and to use of DLLs before they have been initialized by the operating system's loader.</span></span>  

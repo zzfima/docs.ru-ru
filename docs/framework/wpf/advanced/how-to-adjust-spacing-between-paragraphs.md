@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33542952"
 ---
 # <a name="how-to-adjust-spacing-between-paragraphs"></a><span data-ttu-id="2ec55-102">Практическое руководство. Изменение интервалов между абзацами</span><span class="sxs-lookup"><span data-stu-id="2ec55-102">How to: Adjust Spacing Between Paragraphs</span></span>
 <span data-ttu-id="2ec55-103">В этом примере показано, как Настройка или устранение интервалов между абзацами в содержимом нефиксированного формата.</span><span class="sxs-lookup"><span data-stu-id="2ec55-103">This example shows how to adjust or eliminate spacing between paragraphs in flow content.</span></span>  

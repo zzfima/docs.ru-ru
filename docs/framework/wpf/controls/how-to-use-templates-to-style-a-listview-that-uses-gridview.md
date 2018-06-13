@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33553836"
 ---
 # <a name="how-to-use-templates-to-style-a-listview-that-uses-gridview"></a><span data-ttu-id="8585a-102">Практическое руководство. Использование шаблонов для настройки представления ListView, использующего GridView</span><span class="sxs-lookup"><span data-stu-id="8585a-102">How to: Use Templates to Style a ListView That Uses GridView</span></span>
 <span data-ttu-id="8585a-103">В этом примере показано, как использовать <xref:System.Windows.DataTemplate> и <xref:System.Windows.Style> объектов для определения внешнего вида <xref:System.Windows.Controls.ListView> управления, который использует <xref:System.Windows.Controls.GridView> режим просмотра.</span><span class="sxs-lookup"><span data-stu-id="8585a-103">This example shows how to use the <xref:System.Windows.DataTemplate> and <xref:System.Windows.Style> objects to specify the appearance of a <xref:System.Windows.Controls.ListView> control that uses a <xref:System.Windows.Controls.GridView> view mode.</span></span>  

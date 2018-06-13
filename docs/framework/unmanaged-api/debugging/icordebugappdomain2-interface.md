@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ff6ffdd733cf6e7b923d88d057d7cd230c8d8541
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33407119"
 ---
 # <a name="icordebugappdomain2-interface1"></a><span data-ttu-id="047fa-102">Интерфейс1 ICorDebugAppDomain2</span><span class="sxs-lookup"><span data-stu-id="047fa-102">ICorDebugAppDomain2 Interface1</span></span>
 <span data-ttu-id="047fa-103">Предоставляет методы для работы с массивами, указателями, указатели на функции и ссылочные типы.</span><span class="sxs-lookup"><span data-stu-id="047fa-103">Provides methods to work with arrays, pointers, function pointers, and reference types.</span></span> <span data-ttu-id="047fa-104">Этот интерфейс является расширением интерфейса ICorDebugAppDomain.</span><span class="sxs-lookup"><span data-stu-id="047fa-104">This interface is an extension of the ICorDebugAppDomain interface.</span></span>  

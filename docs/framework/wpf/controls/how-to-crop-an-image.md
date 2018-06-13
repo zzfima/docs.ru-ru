@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33553810"
 ---
 # <a name="how-to-crop-an-image"></a><span data-ttu-id="ad090-102">Практическое руководство. Обрезка изображения</span><span class="sxs-lookup"><span data-stu-id="ad090-102">How to: Crop an Image</span></span>
 <span data-ttu-id="ad090-103">В этом примере показано, как обрезать изображение с помощью <xref:System.Windows.Media.Imaging.CroppedBitmap>.</span><span class="sxs-lookup"><span data-stu-id="ad090-103">This example shows how to crop an image using <xref:System.Windows.Media.Imaging.CroppedBitmap>.</span></span>  
