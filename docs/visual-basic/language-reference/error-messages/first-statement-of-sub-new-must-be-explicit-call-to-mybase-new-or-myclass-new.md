@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33589897"
 ---
 # <a name="first-statement-of-this-39sub-new39-must-be-an-explicit-call-to-39mybasenew39-or-39myclassnew39-because-the-39ltconstructornamegt39-in-the-base-class-39ltbaseclassnamegt39-of-39ltderivedclassnamegt39-is-marked-obsolete-39lterrormessagegt39"></a>Первый оператор &#39;Sub New&#39; должен быть явным вызовом &#39;MyBase.New&#39; или &#39;MyClass.New&#39; из-за &#39; &lt;имя_конструктора&gt; &#39; в базовом классе &#39; &lt;имя_базового_класса&gt; &#39; из &#39; &lt;имя_производного_класса&gt; &#39; помечен как устаревший: &#39; &lt;errormessage&gt;&#39;
 Конструктор класса не вызывает явно конструктор базового класса, а вызванный неявно конструктор базового класса помечается атрибутом <xref:System.ObsoleteAttribute> , что является причиной возникновения ошибки.  

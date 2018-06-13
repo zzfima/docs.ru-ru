@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33589858"
 ---
 # <a name="thread-local-storage-thread-relative-static-fields-and-data-slots"></a>Локальное хранилище потока: статические поля потока и области данных
 Вы можете использовать управляемую локальную память потока для хранения данных, которые являются уникальными для потока и домена приложения. Платформа .NET Framework предоставляет два способа работы с локальной памятью: статические поля потоков и ячейки данных.  

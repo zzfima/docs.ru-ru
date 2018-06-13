@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33568021"
 ---
 # <a name="copying-document-fragments"></a>Копирование фрагментов документа
 Можно создать узел **XmlDocumentFragment**, а затем добавлять к нему нижележащие узлы. При вставке узла **XmlDocumentFragment** с помощью метода **InsertNode** узел **XmlDocumentFragment** не копируется, но его дочерние узлы вставляются в модель XML DOM.  

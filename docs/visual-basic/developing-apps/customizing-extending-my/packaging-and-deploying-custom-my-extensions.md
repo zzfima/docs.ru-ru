@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33591863"
 ---
 # <a name="packaging-and-deploying-custom-my-extensions-visual-basic"></a>Упаковка и развертывание пользовательских расширений пространства имен My (Visual Basic)
 Visual Basic предоставляет удобный способ развертывания пользовательских `My` расширений пространства имен с помощью шаблонов Visual Studio. Если вы создаете шаблон проекта, для которого вашей `My` расширения являются неотъемлемой частью, можно просто включить пользовательский `My` расширение кода в проект при экспорте шаблона. Дополнительные сведения об экспорте шаблонов проекта см. в разделе [как: создание шаблонов проектов](/visualstudio/ide/how-to-create-project-templates).  

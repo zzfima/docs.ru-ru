@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e7fcf5cff9f95b06a834d73df4090bd1edfca61b
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33460247"
 ---
 # <a name="delete-function"></a>Удаление функции
 Удаляет указанное свойство и все его квалификаторов из определения класса CIM.
