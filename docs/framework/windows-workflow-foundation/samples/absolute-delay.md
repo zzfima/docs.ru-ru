@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33518389"
 ---
 # <a name="absolute-delay"></a>Абсолютная задержка
 Основной сценарий в этом образце - задержка до указанного значения <xref:System.DateTime> с помощью устойчивых таймеров в приложении рабочего процесса. Эффект будет отличаться от применения встроенного действия <xref:System.Activities.Statements.Delay>, так как в этом случае задержка возможна только в течение заданного значения <xref:System.TimeSpan> (или количества минут и секунд).  

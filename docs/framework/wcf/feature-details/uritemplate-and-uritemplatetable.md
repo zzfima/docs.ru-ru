@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33508833"
 ---
 # <a name="uritemplate-and-uritemplatetable"></a>UriTemplate и UriTemplateTable
 Веб-разработчикам необходима возможность описания формы и структуры универсальных кодов ресурса (URI), на которые отвечают их службы. Windows Communication Foundation (WCF) появились два новых класса, чтобы предоставить разработчикам контролировать свои URI. <xref:System.UriTemplate> и <xref:System.UriTemplateTable> формируют основу модуля отправки данных на основе URI в WCF. Эти классы также может использоваться на собственные, благодаря чему разработчики могут воспользоваться преимуществами шаблонов и URI механизм сопоставления без реализации службы WCF.  

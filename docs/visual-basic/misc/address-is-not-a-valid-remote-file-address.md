@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33599903"
 ---
 # <a name="ltaddressgt-is-not-a-valid-remote-file-address"></a>&lt;адрес&gt; не является недопустимым адресом удаленного файла
 \<адрес > не является недопустимым адресом удаленного файла. Допустимый адрес должен включать протокол, путь и имя файла.  

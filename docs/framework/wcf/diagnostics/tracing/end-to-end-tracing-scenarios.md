@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33474751"
 ---
 # <a name="end-to-end-tracing-scenarios"></a>Сценарии сквозной трассировки
 В данном разделе содержатся подразделы, в которых описываются различные сценарии использования трассировки.  

@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 31e42b9e39ddb43025e18888572c394d742e38cf
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33457910"
 ---
 # <a name="resetsecurity-function"></a>Функция ResetSecurity
 Присваивает указанный олицетворения текущего потока.   

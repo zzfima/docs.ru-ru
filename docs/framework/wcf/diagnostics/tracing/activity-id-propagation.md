@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33474302"
 ---
 # <a name="activity-id-propagation"></a>Распространение ИД действия
 Распространение происходит при включении трассировки действий ServiceModel (распространение ServiceModel) или ее выключении (распространение действий от пользователя к пользователю).  

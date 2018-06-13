@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: bd1a55d4100d74b769b2bc1b8fe33d2042f5e739
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33428305"
 ---
 # <a name="isymunmanagedwritersetsymattribute-method"></a>Метод ISymUnmanagedWriter::SetSymAttribute
 Определяет настраиваемый атрибут на основе его имени. Эти атрибуты хранятся в хранилище символов, в отличие от настраиваемых атрибутов метаданных.  

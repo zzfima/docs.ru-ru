@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33561076"
 ---
 # <a name="how-to-animate-a-property-by-using-a-storyboard"></a>Практическое руководство. Анимирование свойства с помощью раскадровки (класс Storyboard)
 В этом примере показано, как использовать <xref:System.Windows.Media.Animation.Storyboard> для анимации свойства. Для анимации свойства с помощью <xref:System.Windows.Media.Animation.Storyboard>, создайте анимацию для каждого свойства, которое необходимо анимировать, а также для создания <xref:System.Windows.Media.Animation.Storyboard> для хранения анимации.  

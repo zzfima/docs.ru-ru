@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 076666f920a5a6fcac3b4b75bb23717751ae1438
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33453506"
 ---
 # <a name="functiontailcall3withinfo-function"></a>Функция FunctionTailcall3WithInfo
 Уведомляет профилировщик, который должен выполнить вызов с префиксом tail в другую функцию текущей выполняемой функции и предоставляет маркер, который может быть передан [метод ICorProfilerInfo3::GetFunctionTailcall3Info](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getfunctiontailcall3info-method.md) для извлечения кадр стека.  

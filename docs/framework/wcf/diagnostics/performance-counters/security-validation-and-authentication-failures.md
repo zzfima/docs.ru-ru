@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33474263"
 ---
 # <a name="security-validation-and-authentication-failures"></a>Сбои при проверке безопасности и проверке подлинности
 Имя счетчика: Security Validation and Authentication Failures  

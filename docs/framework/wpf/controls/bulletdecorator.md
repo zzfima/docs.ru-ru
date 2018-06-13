@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33551153"
 ---
 # <a name="bulletdecorator"></a>BulletDecorator
 <xref:System.Windows.Controls.Primitives.BulletDecorator> имеет два свойства содержимого: <xref:System.Windows.Controls.Primitives.BulletDecorator.Bullet%2A> и <xref:System.Windows.Controls.Decorator.Child%2A>. <xref:System.Windows.Controls.Primitives.BulletDecorator.Bullet%2A> Свойство определяет <xref:System.Windows.UIElement> для использования в качестве маркера. <xref:System.Windows.Controls.Decorator.Child%2A> Свойство определяет <xref:System.Windows.UIElement> , визуально выравнивается с маркером.  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33596688"
 ---
 # <a name="statement-cannot-end-a-block-outside-of-a-line-39if39-statement"></a>Оператор не может завершить блок за пределами &#39;Если&#39; инструкции
 Однострочный `If` инструкция содержит несколько операторов, разделенных двоеточием (:), один из которых является `End` инструкции для блока управления за пределами однострочного `If`. Однострочный `If` не используйте инструкции `End If` инструкции.  

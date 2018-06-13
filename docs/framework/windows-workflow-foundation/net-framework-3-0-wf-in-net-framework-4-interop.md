@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33518415"
 ---
 # <a name="using-net-framework-30-wf-activities-in-net-framework-4-with-the-interop-activity"></a>Использование действий .NET Framework 3.0 WF на платформе .NET Framework 4 с действием «Interop»
 Действие <xref:System.Activities.Statements.Interop> - это действие [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] (WF 4.5), служащее оболочкой для действия [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] (WF 3.5) в рабочем процессе [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]. Действие WF 3 может быть отдельным действием или целым деревом действий. Выполнение (включая отмену и обработку исключений) и сохраняемость действий [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] происходят в контексте выполняющегося экземпляра рабочего процесса [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)].  

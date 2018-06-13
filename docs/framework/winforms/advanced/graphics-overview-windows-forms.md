@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33521761"
 ---
 # <a name="graphics-overview-windows-forms"></a>Общие сведения о графике (Windows Forms)
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] Представляет интерфейс графических устройств, который дает программистам возможность создавать аппаратно независимые приложения. В службах [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] , предоставляются через набор управляемых классов.  

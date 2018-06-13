@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33523388"
 ---
 # <a name="networking-in-windows-forms-applications"></a>Использование сети в приложениях Windows Forms
 .NET Framework предоставляет классы для отображения веб-страниц, загрузки веб-содержимого, взаимодействия с узлами протокол FTP передачи файла и использование веб-служб, что позволяет легко встраивать сетевые функции в приложении. Следующие ресурсы помогут понять сетевые технологии .NET Framework и как интегрировать их в Windows Forms.  

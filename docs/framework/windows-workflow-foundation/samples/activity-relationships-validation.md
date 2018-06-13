@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33515112"
 ---
 # <a name="activity-relationships-validation"></a>Проверка связей действий
 Этот образец состоит из трех действий: `CreateCity`, `CreateState` и `CreateCountry`. Действие `CreateCity` должно быть внутри действия `CreateState`, а `CreateState` должно быть внутри действия `CreateCountry`. Для этого образца логика проверки реализуется в коде для действия `CreateState` и в XAML для действия `CreateCity`. Оба ограничения имеют одинаковое поведение.  

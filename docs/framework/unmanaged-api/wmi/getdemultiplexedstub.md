@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 6b195d3a512c537ca409bd2039add9e69abaf4df
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33456366"
 ---
 # <a name="getdemultiplexedstub-function"></a>Функция GetDemultiplexedStub
 Создает приемник объект сервера пересылки для клиента при получении асинхронные вызовы от управления Windows.

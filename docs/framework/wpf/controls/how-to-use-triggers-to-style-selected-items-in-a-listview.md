@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33554915"
 ---
 # <a name="how-to-use-triggers-to-style-selected-items-in-a-listview"></a>Практическое руководство. Применение триггеров для определения стиля выбранных элементов в ListView
 В этом примере показан способ определения <xref:System.Windows.Style.Triggers%2A> для <xref:System.Windows.Controls.ListViewItem> управления, чтобы при изменении значения свойства из <xref:System.Windows.Controls.ListViewItem> изменений, <xref:System.Windows.Style> из <xref:System.Windows.Controls.ListViewItem> изменениях в ответ.  

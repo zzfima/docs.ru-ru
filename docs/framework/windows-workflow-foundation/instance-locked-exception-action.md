@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33517287"
 ---
 # <a name="instance-locked-exception-action"></a>Действие в случае исключения «Экземпляр заблокирован»
 Свойство <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore.InstanceLockedExceptionAction%2A> хранилища экземпляров рабочего процесса SQL позволяет указать, какое действие должен выполнить поставщик сохраняемости SQL при получении <xref:System.Runtime.DurableInstancing.InstanceLockedException>. Поставщик сохраняемости получает это исключение, когда пытается заблокировать экземпляр службы рабочего процесса, который в настоящий момент заблокирован другим узлом службы. Возможные значения этого свойства: <xref:System.Activities.DurableInstancing.InstanceLockedExceptionAction.NoRetry>, <xref:System.Activities.DurableInstancing.InstanceLockedExceptionAction.BasicRetry> и <xref:System.Activities.DurableInstancing.InstanceLockedExceptionAction.AggressiveRetry>. Значение по умолчанию — <xref:System.Activities.DurableInstancing.InstanceLockedExceptionAction.NoRetry>. В следующем списке приводится описание этих трех параметров.  

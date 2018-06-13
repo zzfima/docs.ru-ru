@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33474224"
 ---
 # <a name="end-to-end-tracing"></a>Сквозная трассировка
 Сквозная (e2e) Трассировка позволяет разработчикам следить за выполнением кода в инфраструктуре Windows Communication Foundation (WCF) для изучения причин сбоя в ветви кода, или для получения подробной трассировки для анализ производительности и планирования емкости. Windows Communication Foundation (WCF) обеспечивает три механизма корреляции для определения причины ошибки: действия, перенаправления и распространение.  

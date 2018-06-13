@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33521164"
 ---
 # <a name="how-to-fill-open-figures"></a>Практическое руководство. Заливка открытых фигур
 Можно ввести путь, передав <xref:System.Drawing.Drawing2D.GraphicsPath> объект <xref:System.Drawing.Graphics.FillPath%2A> метод. <xref:System.Drawing.Graphics.FillPath%2A> Метод заливку пути в соответствии с режимом заполнения (чередование или поворот) в настоящее время, заданное для пути. Если путь содержит незамкнутые фигуры, контур заполняется, как если бы фигуры были замкнутыми. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] Рисование прямой линии в конечной точке для начальной точкой замыкает фигуру.  

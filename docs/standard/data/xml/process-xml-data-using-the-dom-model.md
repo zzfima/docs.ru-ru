@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33570368"
 ---
 # <a name="process-xml-data-using-the-dom-model"></a>Обработка XML-данных с использованием модели DOM
 Модель DOM рассматривает XML-данные как стандартный набор объектов и используется для обработки XML-данных в памяти. Пространство имен `System.Xml` обеспечивает программное представление XML-документов, фрагментов, узлов и наборов узлов. Оно основывается на рекомендациях базовой модели DOM уровня 1 и модели DOM уровня 2 консорциума W3C.  
